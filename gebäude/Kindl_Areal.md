@@ -1,7 +1,6 @@
 ---
 id:
 name: Kindl Areal
-type:
 status: seed
 aliases: []
 tags: []
@@ -26,6 +25,7 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+type: Gebäude
 ---
 
 # Kindl Areal
