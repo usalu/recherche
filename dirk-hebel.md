@@ -1,4 +1,7 @@
 ---
+related_to: "[[kerstin-müller]]"
+---
+---
 type: Person
 has: "[[nachhaltiges-bauen]]"
 ---
