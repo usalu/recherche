@@ -1,5 +1,7 @@
 ---
 type: Norm
+dokument: ["[[dokument/LCA]]"]
+verwandt: ["[[norm/DIN_EN_15804]]", "[[norm/DIN_EN_15978]]", "[[norm/ISO_20887]]", "[[norm/Wiederverwendungskriterien]]"]
 ---
 
 # EU-Taxonomie

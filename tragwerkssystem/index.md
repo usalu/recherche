@@ -1,5 +1,8 @@
 ---
 type: Tragwerkssystem
+bauteil: ["[[bauteil/Brettsperrholzdecke]]"]
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[tragwerkssystem/Holz_Skelettbau]]"]
 ---
 
 # Tragwerkssysteme – Index

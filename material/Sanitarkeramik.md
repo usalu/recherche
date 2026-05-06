@@ -1,5 +1,10 @@
 ---
 type: Material
+bauteil: ["[[bauteil/Sanitaerobjekt]]"]
+leistungsanforderung: ["[[leistungsanforderung/Schallschutz]]"]
+pruefung: ["[[pruefung/Sichtpruefung]]"]
+schadstoff: ["[[schadstoff/Asbest]]"]
+verwandt: ["[[material/Keramik]]"]
 ---
 
 # Sanitärkeramik

@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
+verwandt: ["[[werkzeug/Loopfront]]", "[[werkzeug/Maconda_Materialpass]]", "[[werkzeug/Pre_Demolition_Audit_Tools]]", "[[werkzeug/Qflow]]", "[[werkzeug/Upcyclea]]"]
 ---
 
 ## Verknüpfungen

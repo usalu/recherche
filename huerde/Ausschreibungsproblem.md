@@ -1,5 +1,7 @@
 ---
 type: Hürde
+recht: ["[[recht/Vergaberecht]]"]
+verwandt: ["[[huerde/Brandschutzkonflikt]]", "[[huerde/Fehlende_Datenstandards]]", "[[huerde/Logistikproblem]]"]
 ---
 
 ## Verknüpfungen

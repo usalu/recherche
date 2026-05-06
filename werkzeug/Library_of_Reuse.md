@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/ReUse_Toolkit]]", "[[werkzeug/Rhino]]", "[[werkzeug/RotorDB]]"]
 ---
 
 # Library of Reuse

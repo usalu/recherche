@@ -1,5 +1,8 @@
 ---
 type: Leistungsanforderung
+material: ["[[material/Glas]]", "[[material/Lehm]]", "[[material/Sanitarkeramik]]", "[[material/Stroh]]"]
+recht: ["[[recht/Bauordnungsrecht]]"]
+verwandt: ["[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/Waermeschutz]]"]
 ---
 
 # Schallschutz

@@ -1,5 +1,6 @@
 ---
 type: Tragwerkssystem
+verwandt: ["[[tragwerkssystem/Betonfertigteil_System]]", "[[tragwerkssystem/Holz_Skelettbau]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]", "[[tragwerkssystem/Stahl_Skelettbau]]"]
 ---
 
 ## Verknüpfungen

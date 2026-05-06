@@ -1,5 +1,8 @@
 ---
 type: Ort
+fallstudie: ["[[fallstudie/CRCLR_House]]"]
+recht: ["[[recht/Vergaberecht]]"]
+verwandt: ["[[ort/Deutschland]]", "[[ort/Europa]]"]
 ---
 
 # Berlin

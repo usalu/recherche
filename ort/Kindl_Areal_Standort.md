@@ -1,7 +1,7 @@
 ---
+type: Ort
 id:
 name: Kindl Areal Standort
-type: Ort
 status: seed
 aliases: []
 tags: []

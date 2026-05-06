@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Urban_Mining]]"]
+verwandt: ["[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/RotorDC]]"]
 ---
 
 # SalvoWEB

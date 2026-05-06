@@ -1,5 +1,8 @@
 ---
 type: Prozessphase
+dokument: ["[[dokument/Materialpass]]"]
+verwandt: ["[[prozessphase/Bestandserfassung]]", "[[prozessphase/Entwurf]]", "[[prozessphase/Rueckbau]]", "[[prozessphase/Wiedereinbau]]"]
+wirtschaft: ["[[wirtschaft/Lebenszykluskosten]]"]
 ---
 
 ## Verknüpfungen

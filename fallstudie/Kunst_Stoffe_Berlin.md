@@ -1,5 +1,6 @@
 ---
 type: Fallstudie
+verwandt: ["[[fallstudie/CRCLR_House]]", "[[fallstudie/Haus_der_Materialisierung]]", "[[fallstudie/Opalis]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,6 @@
 ---
 type: Gebäude
+ort: ["[[ort/Bruessel]]", "[[ort/Evere]]"]
 ---
 
 ## Verknüpfungen

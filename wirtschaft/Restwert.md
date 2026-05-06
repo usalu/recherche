@@ -1,5 +1,9 @@
 ---
 type: Wirtschaft
+huerde: ["[[huerde/Fehlende_Lagerflaeche]]", "[[huerde/Haftung]]"]
+kennwert: ["[[kennwert/Materialwert]]"]
+logistik: ["[[logistik/Lagerung]]"]
+verwandt: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Lebenszykluskosten]]", "[[wirtschaft/Preisbildung]]"]
 ---
 
 ## Verknüpfungen

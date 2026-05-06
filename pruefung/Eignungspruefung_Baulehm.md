@@ -1,5 +1,8 @@
 ---
 type: Prüfung
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Tragfaehigkeit]]"]
+norm: ["[[norm/DIN_18940]]"]
+verwandt: ["[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,7 @@
 ---
 type: Prozessphase
+aufbereitungsmethode: ["[[aufbereitungsmethode/Reparatur]]"]
+verwandt: ["[[prozessphase/Ausschreibung]]", "[[prozessphase/Bestandserfassung]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Rueckbau]]", "[[prozessphase/Transport]]", "[[prozessphase/Wiedereinbau]]"]
 ---
 
 ## Verknüpfungen

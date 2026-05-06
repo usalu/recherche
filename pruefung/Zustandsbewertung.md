@@ -1,5 +1,7 @@
 ---
 type: Prüfung
+bauteil: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Deckenplatte]]", "[[bauteil/Wand]]"]
+verwandt: ["[[pruefung/Geometrische_Vermessung]]", "[[pruefung/Materialpruefung]]", "[[pruefung/Schadstoffscreening]]", "[[pruefung/Sichtpruefung]]"]
 ---
 
 ## Verknüpfungen

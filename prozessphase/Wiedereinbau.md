@@ -1,5 +1,8 @@
 ---
 type: Prozessphase
+dokument: ["[[dokument/index]]"]
+recht: ["[[recht/Gewaehrleistung]]"]
+verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Ausschreibung]]", "[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Entwurf]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Transport]]"]
 ---
 
 ## Verknüpfungen

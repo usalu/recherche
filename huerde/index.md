@@ -1,5 +1,6 @@
 ---
 type: Hürde
+wirtschaft: ["[[wirtschaft/Finanzierung]]"]
 ---
 
 # Hürden – Index

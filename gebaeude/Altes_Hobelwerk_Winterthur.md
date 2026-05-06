@@ -1,5 +1,7 @@
 ---
 type: Gebäude
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[gebaeude/Hobelwerk_Haus_D_Oberwinterthur]]"]
 ---
 
 # Altes Hobelwerk, Winterthur

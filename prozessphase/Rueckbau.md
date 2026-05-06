@@ -1,5 +1,7 @@
 ---
 type: Prozessphase
+abbruchmethode: ["[[abbruchmethode/Ausbau_von_Bauteilen]]", "[[abbruchmethode/Demontage]]", "[[abbruchmethode/Selektiver_Rueckbau]]", "[[abbruchmethode/Zerstoerungsarme_Bergung]]"]
+verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Ausschreibung]]", "[[prozessphase/Bestandserfassung]]", "[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Transport]]"]
 ---
 
 ## Verknüpfungen

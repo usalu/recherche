@@ -1,5 +1,7 @@
 ---
 type: Prozessphase
+dokument: ["[[dokument/Bauteilkatalog]]", "[[dokument/Materialpass]]"]
+verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Ausschreibung]]", "[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Entwurf]]", "[[prozessphase/Rueckbau]]"]
 ---
 
 ## Verknüpfungen

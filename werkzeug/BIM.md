@@ -1,5 +1,9 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Materialpass_Schema]]", "[[datenmodell/Ontologie]]", "[[datenmodell/Taxonomie]]"]
+dokument: ["[[dokument/Materialpass]]"]
+methode: ["[[methode/Bauteilkatalogisierung]]"]
+verwandt: ["[[werkzeug/Bonsai_BlenderBIM]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/Dataview]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/IfcOpenShell]]", "[[werkzeug/Library_of_Reuse]]", "[[werkzeug/Loopfront]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Material_Index]]", "[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Rhino]]", "[[werkzeug/Speckle]]", "[[werkzeug/Upcyclea]]"]
 ---
 
 ## Verknüpfungen

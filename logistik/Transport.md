@@ -1,5 +1,10 @@
 ---
 type: Logistik
+fallstudie: ["[[fallstudie/Opalis]]"]
+huerde: ["[[huerde/Fehlende_Lagerflaeche]]", "[[huerde/Logistikproblem]]"]
+verwandt: ["[[logistik/Lagerflaeche]]", "[[logistik/Lagerung]]", "[[logistik/Materialmatching]]", "[[logistik/Materialverfuegbarkeit]]", "[[logistik/ReUse_Centre]]", "[[logistik/Zwischenlagerung]]"]
+werkzeug: ["[[werkzeug/Excess_Materials_Exchange]]", "[[werkzeug/Globechain]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/QR_RFID_Materialtracking]]", "[[werkzeug/RotorDC]]", "[[werkzeug/Superyard]]"]
+wirtschaft: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Preisbildung]]"]
 ---
 
 # Transport

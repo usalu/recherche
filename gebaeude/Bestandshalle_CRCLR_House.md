@@ -1,5 +1,10 @@
 ---
 type: Gebäude
+fallstudie: ["[[fallstudie/CRCLR_House]]"]
+material: ["[[material/Holz]]"]
+methode: ["[[methode/Design_for_Disassembly]]", "[[methode/Materialpass]]"]
+ort: ["[[ort/Berlin_Neukoelln]]"]
+verwandt: ["[[gebaeude/Kindl_Areal]]"]
 ---
 
 ## Verknüpfungen

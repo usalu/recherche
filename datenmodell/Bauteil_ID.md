@@ -1,5 +1,7 @@
 ---
 type: Datenmodell
+verwandt: ["[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Materialpass_Schema]]", "[[datenmodell/Ontologie]]", "[[datenmodell/Taxonomie]]"]
+werkzeug: ["[[werkzeug/BIM]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/Dataview]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]"]
 ---
 
 # Bauteil_ID

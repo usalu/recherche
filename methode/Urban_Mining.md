@@ -1,5 +1,10 @@
 ---
 type: Methode
+foerderprogramm: ["[[foerderprogramm/BBSM]]"]
+ort: ["[[ort/Deutschland]]", "[[ort/Europa]]"]
+reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]", "[[reuse_strategie/Direkte_Wiederverwendung]]", "[[reuse_strategie/index]]"]
+verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialinventur]]", "[[methode/Materialpass]]", "[[methode/ReUse_Assessment]]", "[[methode/Reversibilitaet]]"]
+werkzeug: ["[[werkzeug/CMEx]]", "[[werkzeug/Globechain]]", "[[werkzeug/Loopfront]]", "[[werkzeug/Maconda_ROMULUS]]", "[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/Rheaply]]", "[[werkzeug/SalvoWEB]]", "[[werkzeug/Upcyclea]]"]
 ---
 
 ## Verknüpfungen

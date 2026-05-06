@@ -1,5 +1,9 @@
 ---
 type: Dokument
+kennwert: ["[[kennwert/CO2_Einsparung]]", "[[kennwert/Demontagegrad]]", "[[kennwert/Graue_Energie]]", "[[kennwert/Materialwert]]", "[[kennwert/Wiederverwendungsquote]]"]
+methode: ["[[methode/index]]"]
+norm: ["[[norm/DIN_18940]]", "[[norm/DIN_EN_15804]]", "[[norm/DIN_EN_15978]]", "[[norm/EN_15804]]", "[[norm/EU_Taxonomie]]", "[[norm/ISO_14040]]", "[[norm/ISO_14044]]", "[[norm/ISO_20887]]", "[[norm/Wiederverwendungskriterien]]", "[[norm/index]]"]
+reuse_strategie: ["[[reuse_strategie/index]]"]
 ---
 
 ﻿## Verknüpfungen
@@ -150,4 +154,3 @@ links:
 ## Evidenz / Beispiele
 
 ## Offene Fragen
-

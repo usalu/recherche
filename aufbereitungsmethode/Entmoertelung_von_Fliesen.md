@@ -1,5 +1,9 @@
 ---
 type: Aufbereitungsmethode
+logistik: ["[[logistik/Lagerung]]"]
+material: ["[[material/Keramik]]"]
+pruefung: ["[[pruefung/Sichtpruefung]]"]
+reuse_strategie: ["[[reuse_strategie/Refurbishment]]"]
 ---
 
 ## Verknüpfungen

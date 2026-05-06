@@ -1,5 +1,9 @@
 ---
 type: Prüfung
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Tragfaehigkeit]]"]
+material: ["[[material/Brettschichtholz]]", "[[material/Brettsperrholz]]", "[[material/Holz]]"]
+tragwerkssystem: ["[[tragwerkssystem/Holztragwerk]]"]
+verwandt: ["[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
 ---
 
 ## Verknüpfungen

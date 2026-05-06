@@ -1,7 +1,7 @@
 ---
+type: Bericht
 id:
 name: Ueberblick Entwerfen mit Bestand Kurzfassung
-type: Bericht
 status: seed
 aliases: []
 tags: []

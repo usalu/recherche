@@ -1,5 +1,7 @@
 ---
 type: Datenmodell
+verwandt: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Ontologie]]", "[[datenmodell/Taxonomie]]"]
+werkzeug: ["[[werkzeug/BIM]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/Dataview]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]"]
 ---
 
 # Materialpass_Schema

@@ -1,5 +1,9 @@
 ---
 type: Werkzeug
+logistik: ["[[logistik/Transport]]"]
+methode: ["[[methode/Urban_Mining]]"]
+recht: ["[[recht/Produkthaftung]]"]
+verwandt: ["[[werkzeug/Excess_Materials_Exchange]]", "[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/Rheaply]]", "[[werkzeug/Superyard]]"]
 ---
 
 # Globechain

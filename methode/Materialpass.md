@@ -1,7 +1,7 @@
 ---
+type: Methode
 id:
 name: Materialpass
-type: Methode
 status: seed
 aliases: []
 tags: []
@@ -26,6 +26,10 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+gebaeude: ["[[gebaeude/Bestandshalle_CRCLR_House]]"]
+ort: ["[[ort/Barcelona]]", "[[ort/Europa]]", "[[ort/Scwheiz]]"]
+reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]", "[[reuse_strategie/Direkte_Wiederverwendung]]", "[[reuse_strategie/Refurbishment]]", "[[reuse_strategie/Umnutzung]]"]
+verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialinventur]]", "[[methode/ReUse_Assessment]]", "[[methode/Reversibilitaet]]", "[[methode/Urban_Mining]]"]
 ---
 
 # Materialpass
@@ -1168,7 +1172,6 @@ Ein Leuchtturmprojekt für zirkuläre Wertschöpfung unter Nutzung von Recycling
 Der Material- und Gebäuderessourcenpass ist kein bürokratisches Add-on, sondern ein strategisches Asset für die Immobilienbewertung und Risikominimierung. Bis 2040 wird die Vollintegration dieser Pässe in den Planungsalltag erwartet, wobei Gebäude konsequent als Materialbanken bewertet werden.
 
 Die Bauwende benötigt diese digitale Transparenz, um den Wert von Materialien über den ersten Nutzungszyklus hinaus zu sichern. Standardisierte Qualitätssicherungsverfahren und eine klare gesetzliche Regelung von Haftungsfragen werden die nächsten Meilensteine sein, um die Wiederverwendung vom Pionierprojekt zum industriellen Standard zu führen. Digitale Transparenz ist die unverzichtbare Basis für die Zukunftsfähigkeit der Bauwirtschaft.
-
 
 
 

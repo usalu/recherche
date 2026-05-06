@@ -1,5 +1,9 @@
 ---
 type: Wirtschaft
+huerde: ["[[huerde/Haftung]]"]
+prozessphase: ["[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Entwurf]]"]
+recht: ["[[recht/Vergaberecht]]"]
+verwandt: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Preisbildung]]", "[[wirtschaft/Restwert]]"]
 ---
 
 ## Verknüpfungen

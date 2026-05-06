@@ -519,4 +519,3 @@ Für „Entwerfen mit Bestand“ liegt die besondere Stärke des Falls darin, da
 5. Wie hoch waren die Mehrkosten für Logistik, Lagerung und Aufbereitung im Vergleich zu Neumaterial?
 6. Welche Projektteile waren wirklich einfach demontierbar und welche nur konzeptionell darauf ausgelegt?
 7. Welche Erkenntnisse aus CRCLR House wurden in spätere Projekte oder Toolentwicklungen überführt?
-

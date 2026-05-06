@@ -1,5 +1,7 @@
 ---
 type: Dokument
+verwandt: ["[[dokument/Auditbericht]]", "[[dokument/Bauwerksdiagnose]]", "[[dokument/Bestandsaufnahme]]", "[[dokument/Materialinventar]]", "[[dokument/Materialpass]]", "[[dokument/Rueckbaukataster]]"]
+werkzeug: ["[[werkzeug/Cycle_Up]]", "[[werkzeug/Material_Index]]", "[[werkzeug/Restado]]", "[[werkzeug/RotorDB]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/IFC]]"]
+methode: ["[[methode/Bauteilkatalogisierung]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Bonsai_BlenderBIM]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Library_of_Reuse]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Speckle]]"]
 ---
 
 ## Verknüpfungen

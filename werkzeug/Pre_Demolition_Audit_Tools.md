@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+dokument: ["[[dokument/Materialinventar]]"]
+verwandt: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/GIS_Urban_Mining]]", "[[werkzeug/Maconda_Materialpass]]", "[[werkzeug/Platform_CB23]]", "[[werkzeug/QR_RFID_Materialtracking]]", "[[werkzeug/Qflow]]", "[[werkzeug/Upcyclea]]"]
 ---
 
 ## Verknüpfungen

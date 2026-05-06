@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+dokument: ["[[dokument/Pre_Demolition_Audit]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]"]
 ---
 
 # Material Index

@@ -623,4 +623,3 @@ Für das Forschungsvorhaben Entwerfen mit Bestand ist der Fall deshalb besonders
 5. Welche langfristigen Betriebs- und Geschäftsmodelle entstehen aus dem Reallabor?
 6. Gibt es weitere dokumentierte Fallbeispiele außerhalb der vier aktuell sichtbaren Anwendungsfälle?
 7. Wie werden Gewährleistung, technische Aufbereitung und Produktverantwortung in komplexeren Fällen geregelt?
-

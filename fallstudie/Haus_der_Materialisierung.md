@@ -1,5 +1,7 @@
 ---
 type: Fallstudie
+logistik: ["[[logistik/Zwischenlagerung]]"]
+verwandt: ["[[fallstudie/CRCLR_House]]", "[[fallstudie/Kunst_Stoffe_Berlin]]", "[[fallstudie/Opalis]]"]
 ---
 
 ## Verknüpfungen

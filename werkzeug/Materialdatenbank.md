@@ -1,5 +1,9 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Materialpass_Schema]]", "[[datenmodell/Ontologie]]", "[[datenmodell/Taxonomie]]"]
+dokument: ["[[dokument/Materialpass]]"]
+norm: ["[[norm/EN_15804]]", "[[norm/ISO_14040]]", "[[norm/ISO_14044]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/CMEx]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/Cycle_Up]]", "[[werkzeug/Dataview]]", "[[werkzeug/Excess_Materials_Exchange]]", "[[werkzeug/GIS_Urban_Mining]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Library_of_Reuse]]", "[[werkzeug/Loopfront]]", "[[werkzeug/Maconda_ROMULUS]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Material_Index]]", "[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/One_Click_LCA_Building_Circularity]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/ReUse_Toolkit]]", "[[werkzeug/Reusefully_LINK]]", "[[werkzeug/Rhino]]", "[[werkzeug/RotorDB]]", "[[werkzeug/RotorDC]]", "[[werkzeug/SalvoWEB]]", "[[werkzeug/Upcyclea]]"]
 ---
 
 ## Verknüpfungen

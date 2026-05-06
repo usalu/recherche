@@ -1,5 +1,7 @@
 ---
 type: Abbruchmethode
+prozessphase: ["[[prozessphase/Entwurf]]", "[[prozessphase/Rueckbau]]"]
+verwandt: ["[[abbruchmethode/Ausbau_von_Bauteilen]]", "[[abbruchmethode/Demontage]]", "[[abbruchmethode/Zerstoerungsarme_Bergung]]"]
 ---
 
 ## Verknüpfungen

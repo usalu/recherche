@@ -1,5 +1,11 @@
 ---
 type: Material
+aufbereitungsmethode: ["[[aufbereitungsmethode/Entmoertelung_von_Fliesen]]"]
+bauteil: ["[[bauteil/Fassade]]"]
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]"]
+pruefung: ["[[pruefung/Sichtpruefung]]"]
+schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/PAK]]"]
+verwandt: ["[[material/Lehm]]", "[[material/Sanitarkeramik]]"]
 ---
 
 # Keramik

@@ -1,5 +1,11 @@
 ---
 type: Prüfung
+leistungsanforderung: ["[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/index]]"]
+material: ["[[material/Holz]]", "[[material/Sekundaerstahl]]"]
+norm: ["[[norm/index]]"]
+tragwerkssystem: ["[[tragwerkssystem/Holztragwerk]]"]
+verbindung: ["[[verbindung/Klemmverbindung]]"]
+verwandt: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Brandnachweis]]", "[[pruefung/Eignungspruefung_Baulehm]]", "[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Zugversuch]]"]
 ---
 
 ## Verknüpfungen

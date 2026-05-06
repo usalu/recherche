@@ -1,5 +1,8 @@
 ---
 type: Aufbereitungsmethode
+bauteil: ["[[bauteil/Fenster]]"]
+reuse_strategie: ["[[reuse_strategie/Refurbishment]]"]
+verwandt: ["[[aufbereitungsmethode/Qualitaetssicherung]]", "[[aufbereitungsmethode/Reparatur]]"]
 ---
 
 ## Verknüpfungen

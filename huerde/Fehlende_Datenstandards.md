@@ -1,5 +1,6 @@
 ---
 type: Hürde
+verwandt: ["[[huerde/Ausschreibungsproblem]]", "[[huerde/Datenluecke]]"]
 ---
 
 ## Verknüpfungen

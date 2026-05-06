@@ -1,5 +1,8 @@
 ---
 type: Recht
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]"]
+pruefung: ["[[pruefung/Materialpruefung]]"]
+verwandt: ["[[recht/Bauordnungsrecht]]", "[[recht/Gewaehrleistung]]", "[[recht/Produkthaftung]]"]
 ---
 
 ## Verknüpfungen

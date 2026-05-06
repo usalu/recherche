@@ -1,5 +1,9 @@
 ---
 type: Prüfung
+leistungsanforderung: ["[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Tragfaehigkeit]]"]
+material: ["[[material/Sekundaerstahl]]"]
+verbindung: ["[[verbindung/Klemmverbindung]]"]
+verwandt: ["[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]", "[[pruefung/Zugversuch]]"]
 ---
 
 ## Verknüpfungen

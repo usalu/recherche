@@ -1,5 +1,9 @@
 ---
 type: Schadstoff
+huerde: ["[[huerde/Schadstoffbelastung]]"]
+leistungsanforderung: ["[[leistungsanforderung/Schadstofffreiheit]]"]
+pruefung: ["[[pruefung/Schadstoffscreening]]"]
+verwandt: ["[[schadstoff/Holzschutzmittel]]", "[[schadstoff/PAK]]", "[[schadstoff/PCB]]"]
 ---
 
 ## Verknüpfungen

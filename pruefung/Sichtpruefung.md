@@ -1,5 +1,8 @@
 ---
 type: Prüfung
+aufbereitungsmethode: ["[[aufbereitungsmethode/Entmoertelung_von_Fliesen]]", "[[aufbereitungsmethode/Qualitaetssicherung]]"]
+material: ["[[material/Glas]]", "[[material/Keramik]]", "[[material/Sanitarkeramik]]"]
+verwandt: ["[[pruefung/Zustandsbewertung]]"]
 ---
 
 ## Verknüpfungen

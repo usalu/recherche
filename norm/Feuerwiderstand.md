@@ -1,5 +1,10 @@
 ---
 type: Norm
+huerde: ["[[huerde/Brandschutzkonflikt]]"]
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]"]
+pruefung: ["[[pruefung/Brandnachweis]]"]
+recht: ["[[recht/Bauordnungsrecht]]"]
+verwandt: ["[[norm/Brandschutzanforderung]]", "[[norm/F90]]", "[[norm/R90]]", "[[norm/REI90]]"]
 ---
 
 # Feuerwiderstand

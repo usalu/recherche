@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/IFC]]"]
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/IfcOpenShell]]", "[[werkzeug/Rhino]]", "[[werkzeug/Speckle]]"]
 ---
 
 ## Verknüpfungen

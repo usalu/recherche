@@ -1,5 +1,11 @@
 ---
 type: Material
+bauteil: ["[[bauteil/Wand]]"]
+gebaeude: ["[[gebaeude/K118_Kopfbau_Halle_118_Winterthur]]"]
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/Waermeschutz]]"]
+norm: ["[[norm/DIN_18940]]"]
+schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/Holzschutzmittel]]"]
+verwandt: ["[[material/Keramik]]", "[[material/Stroh]]"]
 ---
 
 # Lehm

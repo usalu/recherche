@@ -1,5 +1,8 @@
 ---
 type: Gebäude
+fallstudie: ["[[fallstudie/CRCLR_House]]"]
+ort: ["[[ort/Berlin_Neukoelln]]"]
+verwandt: ["[[gebaeude/Bestandshalle_CRCLR_House]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,9 @@
 ---
 type: Recht
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]"]
+prozessphase: ["[[prozessphase/Wiedereinbau]]"]
+pruefung: ["[[pruefung/Materialpruefung]]"]
+verwandt: ["[[recht/Bauordnungsrecht]]", "[[recht/Produkthaftung]]", "[[recht/Vergaberecht]]", "[[recht/Zulassung_im_Einzelfall]]"]
 ---
 
 ## Verknüpfungen

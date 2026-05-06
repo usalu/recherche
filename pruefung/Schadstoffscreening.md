@@ -1,5 +1,7 @@
 ---
 type: Prüfung
+schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/Bleifarbe]]", "[[schadstoff/Holzschutzmittel]]", "[[schadstoff/PAK]]", "[[schadstoff/PCB]]"]
+verwandt: ["[[pruefung/Zustandsbewertung]]"]
 ---
 
 ## Verknüpfungen

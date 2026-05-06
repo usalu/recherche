@@ -1,5 +1,10 @@
 ---
 type: Material
+aufbereitungsmethode: ["[[aufbereitungsmethode/Leuchten_Refurbishment]]"]
+bauteil: ["[[bauteil/Fassade]]", "[[bauteil/Fenster]]", "[[bauteil/Wand]]"]
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Waermeschutz]]"]
+pruefung: ["[[pruefung/Brandnachweis]]", "[[pruefung/Sichtpruefung]]"]
+schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/PAK]]", "[[schadstoff/PCB]]"]
 ---
 
 # Glas

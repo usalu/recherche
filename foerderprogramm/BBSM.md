@@ -1,5 +1,7 @@
 ---
 type: Förderprogramm
+methode: ["[[methode/Urban_Mining]]"]
+norm: ["[[norm/EN_15804]]", "[[norm/ISO_14040]]", "[[norm/ISO_14044]]"]
 ---
 
 # BBSM – Le Bâti Bruxellois, Source de nouveaux Matériaux

@@ -1,5 +1,7 @@
 ---
 type: Bauteil
+material: ["[[material/Holz]]"]
+verwandt: ["[[bauteil/Brettschichtholzstuetze]]", "[[bauteil/Dachtragwerk]]", "[[bauteil/Fachwerktrager]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
 ---
 
 ## Verknüpfungen

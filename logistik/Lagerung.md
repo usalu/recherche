@@ -1,5 +1,10 @@
 ---
 type: Logistik
+aufbereitungsmethode: ["[[aufbereitungsmethode/Entmoertelung_von_Fliesen]]", "[[aufbereitungsmethode/Qualitaetssicherung]]", "[[aufbereitungsmethode/Reparatur]]"]
+huerde: ["[[huerde/Fehlende_Lagerflaeche]]", "[[huerde/Logistikproblem]]"]
+verwandt: ["[[logistik/Lagerflaeche]]", "[[logistik/Materialmatching]]", "[[logistik/ReUse_Centre]]", "[[logistik/Transport]]", "[[logistik/Zwischenlagerung]]"]
+werkzeug: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/Cycle_Up]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/QR_RFID_Materialtracking]]", "[[werkzeug/Restado]]", "[[werkzeug/Superyard]]"]
+wirtschaft: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Preisbildung]]", "[[wirtschaft/Restwert]]"]
 ---
 
 # Lagerung

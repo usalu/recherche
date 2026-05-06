@@ -1,5 +1,6 @@
 ---
 type: Gebäude
+methode: ["[[methode/Design_for_Disassembly]]"]
 ---
 
 # ReUseBox, Heilbronn

@@ -631,4 +631,3 @@ Für das Forschungsvorhaben Entwerfen mit Bestand ist das HdM deshalb besonders 
 5. Welche Rolle spielt das HdM für professionelle Planungs- und Bauakteure im Vergleich zur Stadtgesellschaft?
 6. Wie lässt sich die stark soziale Beratungsarbeit digital unterstützen, ohne sie zu verdrängen?
 7. Welche Aspekte des HdM-Modells sind ortsgebunden, welche prinzipiell auf andere Städte übertragbar?
-

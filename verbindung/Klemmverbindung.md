@@ -1,5 +1,10 @@
 ---
 type: Verbindung
+methode: ["[[methode/Reversibilitaet]]"]
+pruefung: ["[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
+reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]", "[[reuse_strategie/Direkte_Wiederverwendung]]"]
+tragwerkssystem: ["[[tragwerkssystem/Reversible_Fuegung]]"]
+verwandt: ["[[verbindung/Steckverbindung]]", "[[verbindung/Verleimung]]", "[[verbindung/Vermoertelung]]", "[[verbindung/Verschraubung]]", "[[verbindung/Verschweissung]]"]
 ---
 
 ## Verknüpfungen

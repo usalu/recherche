@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+dokument: ["[[dokument/Materialinventar]]"]
+verwandt: ["[[werkzeug/DGNB_Gebaeuderessourcenpass]]", "[[werkzeug/Maconda_ROMULUS]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Pre_Demolition_Audit_Tools]]", "[[werkzeug/QR_RFID_Materialtracking]]", "[[werkzeug/Upcyclea]]"]
 ---
 
 ## Verknüpfungen

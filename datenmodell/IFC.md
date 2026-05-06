@@ -1,5 +1,7 @@
 ---
 type: Datenmodell
+verwandt: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Materialpass_Schema]]", "[[datenmodell/Ontologie]]", "[[datenmodell/Taxonomie]]"]
+werkzeug: ["[[werkzeug/BIM]]", "[[werkzeug/Bonsai_BlenderBIM]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/IfcOpenShell]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Rhino]]", "[[werkzeug/Speckle]]"]
 ---
 
 # IFC

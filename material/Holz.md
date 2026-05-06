@@ -1,5 +1,11 @@
 ---
 type: Material
+aufbereitungsmethode: ["[[aufbereitungsmethode/Holzaufbereitung]]"]
+bauteil: ["[[bauteil/Brettsperrholzdecke]]", "[[bauteil/Fenster]]", "[[bauteil/Holzrahmenelement]]", "[[bauteil/Pfette]]", "[[bauteil/Wand]]"]
+gebaeude: ["[[gebaeude/BOELL_LAB_Berlin]]", "[[gebaeude/Bestandshalle_CRCLR_House]]"]
+huerde: ["[[huerde/Brandschutzkonflikt]]"]
+pruefung: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
+verwandt: ["[[material/Brettschichtholz]]", "[[material/Brettsperrholz]]", "[[material/Stroh]]"]
 ---
 
 ## Verknüpfungen

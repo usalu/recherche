@@ -1,5 +1,6 @@
 ---
 type: Logistik
+verwandt: ["[[logistik/Lagerung]]", "[[logistik/Materialverfuegbarkeit]]", "[[logistik/ReUse_Centre]]", "[[logistik/Transport]]", "[[logistik/Zwischenlagerung]]"]
 ---
 
 # Materialmatching

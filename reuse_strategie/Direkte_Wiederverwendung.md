@@ -1,5 +1,10 @@
 ---
 type: Reuse-Strategie
+bauteil: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Brettsperrholzdecke]]", "[[bauteil/Deckenplatte]]", "[[bauteil/Wand]]"]
+huerde: ["[[huerde/Gewaehrleistung]]"]
+methode: ["[[methode/Materialpass]]", "[[methode/Urban_Mining]]"]
+tragwerkssystem: ["[[tragwerkssystem/Holztragwerk]]"]
+verbindung: ["[[verbindung/Klemmverbindung]]"]
 ---
 
 # Direkte Wiederverwendung

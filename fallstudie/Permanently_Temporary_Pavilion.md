@@ -1,7 +1,7 @@
 ---
+type: Fallstudie
 id:
 name: Permanently Temporary Pavilion
-type: Fallstudie
 status: seed
 aliases: []
 tags: []

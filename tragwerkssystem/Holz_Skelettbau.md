@@ -1,5 +1,6 @@
 ---
 type: Tragwerkssystem
+verwandt: ["[[tragwerkssystem/Aufstockung_in_Holzbauweise]]", "[[tragwerkssystem/Dachtragwerk_und_Fachwerk]]", "[[tragwerkssystem/Design_for_Disassembly]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]", "[[tragwerkssystem/index]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,8 @@
 ---
 type: Gebäude
+material: ["[[material/Holz]]"]
+methode: ["[[methode/Design_for_Disassembly]]"]
+tragwerkssystem: ["[[tragwerkssystem/Holztragwerk]]"]
 ---
 
 # BOELL.LAB, Berlin

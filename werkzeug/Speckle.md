@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/IFC]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Bonsai_BlenderBIM]]", "[[werkzeug/GIS_Urban_Mining]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/IfcOpenShell]]", "[[werkzeug/Rhino]]", "[[werkzeug/Urban_Mining_Index]]"]
 ---
 
 ## Verknüpfungen

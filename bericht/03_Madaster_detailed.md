@@ -727,4 +727,3 @@ Madaster ist somit weniger die Antwort auf „Wo finde ich ein konkretes wiederv
 4. Welche Rechte- und Governance-Fragen entstehen, wenn Supplier- und Customer-Datenbanken kombiniert werden?
 5. Wie lässt sich ein Materialpass in Vorentwurfswerkzeuge rückkoppeln, statt nur im Nachweis zu enden?
 6. Wie könnten zeitliche Verfügbarkeit, Lagerstatus und Re-Use-Reservierungen in Madaster-artige Datenmodelle integriert werden?
-

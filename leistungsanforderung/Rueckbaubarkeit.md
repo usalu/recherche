@@ -1,5 +1,6 @@
 ---
 type: Leistungsanforderung
+verwandt: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/Waermeschutz]]"]
 ---
 
 # Rueckbaubarkeit

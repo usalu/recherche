@@ -1,5 +1,6 @@
 ---
 type: Dokument
+verwandt: ["[[dokument/Auditbericht]]", "[[dokument/Bestandsaufnahme]]", "[[dokument/Materialinventar]]", "[[dokument/Materialpass]]", "[[dokument/Pre_Demolition_Audit]]", "[[dokument/Rueckbaukataster]]"]
 ---
 
 ## Verknüpfungen

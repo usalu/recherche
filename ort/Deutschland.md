@@ -1,5 +1,9 @@
 ---
 type: Ort
+methode: ["[[methode/Urban_Mining]]"]
+norm: ["[[norm/EN_15804]]"]
+recht: ["[[recht/Vergaberecht]]"]
+verwandt: ["[[ort/Berlin]]", "[[ort/Europa]]"]
 ---
 
 # Deutschland

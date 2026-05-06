@@ -1,5 +1,7 @@
 ---
 type: Reuse-Strategie
+methode: ["[[methode/Design_for_Disassembly]]"]
+projekt: ["[[projekt/Aufstockung]]"]
 ---
 
 # Weiterbauen im Bestand

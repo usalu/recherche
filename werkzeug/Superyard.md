@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
+verwandt: ["[[werkzeug/Globechain]]", "[[werkzeug/Rheaply]]"]
 ---
 
 # Superyard

@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Urban_Mining]]"]
+verwandt: ["[[werkzeug/Maconda_Materialpass]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Upcyclea]]"]
 ---
 
 # Maconda ROMULUS

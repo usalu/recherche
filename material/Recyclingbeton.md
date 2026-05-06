@@ -1,5 +1,6 @@
 ---
 type: Material
+verwandt: ["[[material/Beton]]", "[[material/Sekundaerstahl]]"]
 ---
 
 ## Verknüpfungen

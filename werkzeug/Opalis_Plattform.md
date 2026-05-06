@@ -1,5 +1,9 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/Klassifikation]]"]
+logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
+methode: ["[[methode/Bauteilkatalogisierung]]"]
+verwandt: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/Cycle_Up]]", "[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/ReUse_Toolkit]]", "[[werkzeug/RotorDB]]", "[[werkzeug/RotorDC]]", "[[werkzeug/SalvoWEB]]"]
 ---
 
 ## Verknüpfungen

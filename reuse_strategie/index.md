@@ -1,5 +1,8 @@
 ---
 type: Reuse-Strategie
+dokument: ["[[dokument/LCA]]"]
+methode: ["[[methode/Urban_Mining]]"]
+projekt: ["[[projekt/Temporarer_Wiedereinbau]]"]
 ---
 
 # Reuse-Strategien – Index

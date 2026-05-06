@@ -1,5 +1,9 @@
 ---
 type: Hürde
+material: ["[[material/Holz]]", "[[material/Stahl]]"]
+norm: ["[[norm/Brandschutzanforderung]]", "[[norm/F90]]", "[[norm/Feuerwiderstand]]", "[[norm/R90]]", "[[norm/REI90]]"]
+recht: ["[[recht/Bauordnungsrecht]]"]
+verwandt: ["[[huerde/Ausschreibungsproblem]]", "[[huerde/Datenluecke]]"]
 ---
 
 ## Verknüpfungen

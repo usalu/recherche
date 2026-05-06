@@ -1,5 +1,7 @@
 ---
 type: Prozessphase
+recht: ["[[recht/Vergaberecht]]"]
+verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Bestandserfassung]]", "[[prozessphase/Entwurf]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Rueckbau]]", "[[prozessphase/Transport]]", "[[prozessphase/Wiedereinbau]]"]
 ---
 
 ## Verknüpfungen

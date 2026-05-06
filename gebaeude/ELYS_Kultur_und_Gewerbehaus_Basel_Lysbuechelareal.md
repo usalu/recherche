@@ -1,5 +1,6 @@
 ---
 type: Gebäude
+verwandt: ["[[gebaeude/K118_Kopfbau_Halle_118_Winterthur]]", "[[gebaeude/LysP8_Basel_Lysbuechelareal]]"]
 ---
 
 # ELYS Kultur- und Gewerbehaus, Basel / Lysbüchelareal

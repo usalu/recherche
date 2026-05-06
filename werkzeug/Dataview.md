@@ -1,5 +1,9 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/Materialpass_Schema]]", "[[datenmodell/Ontologie]]", "[[datenmodell/Taxonomie]]"]
+dokument: ["[[dokument/Materialpass]]"]
+methode: ["[[methode/Bauteilkatalogisierung]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Materialdatenbank]]"]
 ---
 
 ## Verknüpfungen

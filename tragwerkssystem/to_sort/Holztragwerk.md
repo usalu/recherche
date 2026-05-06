@@ -1,6 +1,9 @@
 ---
 type: Tragwerkssystem
 title: Wiederverwendung in Holztragwerken
+gebaeude: ["[[gebaeude/BOELL_LAB_Berlin]]"]
+pruefung: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
+reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]", "[[reuse_strategie/Direkte_Wiederverwendung]]"]
 ---
 
 ---

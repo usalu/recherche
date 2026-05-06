@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/Maconda_Materialpass]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/One_Click_LCA_Building_Circularity]]", "[[werkzeug/Platform_CB23]]", "[[werkzeug/Urban_Mining_Index]]"]
 ---
 
 ## Verknüpfungen

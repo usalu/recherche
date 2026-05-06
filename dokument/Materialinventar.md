@@ -1,5 +1,7 @@
 ---
 type: Dokument
+verwandt: ["[[dokument/Auditbericht]]", "[[dokument/Bauwerksdiagnose]]", "[[dokument/Bestandsaufnahme]]", "[[dokument/Materialpass]]", "[[dokument/Pre_Demolition_Audit]]", "[[dokument/Rueckbaukataster]]"]
+werkzeug: ["[[werkzeug/Maconda_Materialpass]]", "[[werkzeug/Pre_Demolition_Audit_Tools]]"]
 ---
 
 ## Verknüpfungen

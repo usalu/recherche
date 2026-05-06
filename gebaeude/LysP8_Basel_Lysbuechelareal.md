@@ -1,5 +1,7 @@
 ---
 type: Gebäude
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[gebaeude/ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal]]", "[[gebaeude/Lysbuechel_Parkhaus]]"]
 ---
 
 # LysP8, Basel / Lysbüchelareal

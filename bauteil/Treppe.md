@@ -1,7 +1,7 @@
 ---
+type: Bauteil
 id:
 name: Treppe
-type: Bauteil
 status: seed
 aliases: []
 tags: []
@@ -26,6 +26,7 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+material: ["[[material/Beton]]"]
 ---
 
 # Treppe

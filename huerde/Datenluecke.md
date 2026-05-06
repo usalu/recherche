@@ -1,5 +1,6 @@
 ---
 type: Hürde
+verwandt: ["[[huerde/Brandschutzkonflikt]]", "[[huerde/Fehlende_Datenstandards]]", "[[huerde/Logistikproblem]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,9 @@
 ---
 type: Ort
+methode: ["[[methode/Materialpass]]", "[[methode/Urban_Mining]]"]
+norm: ["[[norm/EN_15804]]", "[[norm/ISO_14040]]", "[[norm/ISO_14044]]"]
+recht: ["[[recht/Vergaberecht]]"]
+verwandt: ["[[ort/Barcelona]]", "[[ort/Basel]]", "[[ort/Berlin]]", "[[ort/Deutschland]]", "[[ort/Scwheiz]]"]
 ---
 
 # Europa

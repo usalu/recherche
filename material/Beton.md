@@ -1,5 +1,8 @@
 ---
 type: Material
+bauteil: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Deckenplatte]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]", "[[bauteil/Treppe]]", "[[bauteil/Wand]]"]
+gebaeude: ["[[gebaeude/Areal_Walkeweg_Nord]]", "[[gebaeude/Lysbuechel_Parkhaus]]"]
+verwandt: ["[[material/Recyclingbeton]]", "[[material/Sekundaerstahl]]"]
 ---
 
 ## Verknüpfungen

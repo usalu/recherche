@@ -1,5 +1,8 @@
 ---
 type: Bauteil
+material: ["[[material/Holz]]"]
+reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]"]
+verwandt: ["[[bauteil/Brettsperrholzdecke]]", "[[bauteil/Deckenplatte]]", "[[bauteil/Wand]]"]
 ---
 
 ## Verknüpfungen

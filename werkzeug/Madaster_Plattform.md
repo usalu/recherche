@@ -1,5 +1,9 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Materialpass_Schema]]", "[[datenmodell/Taxonomie]]"]
+dokument: ["[[dokument/Materialpass]]"]
+methode: ["[[methode/Bauteilkatalogisierung]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/Cycle_Up]]", "[[werkzeug/DGNB_Gebaeuderessourcenpass]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Maconda_Materialpass]]", "[[werkzeug/Maconda_ROMULUS]]", "[[werkzeug/Material_Index]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/One_Click_LCA_Building_Circularity]]", "[[werkzeug/Platform_CB23]]", "[[werkzeug/Qflow]]", "[[werkzeug/Upcyclea]]", "[[werkzeug/Urban_Mining_Index]]"]
 ---
 
 ## Verknüpfungen

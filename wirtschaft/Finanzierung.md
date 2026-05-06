@@ -1,5 +1,8 @@
 ---
 type: Wirtschaft
+huerde: ["[[huerde/Haftung]]", "[[huerde/index]]"]
+logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
+verwandt: ["[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Lebenszykluskosten]]", "[[wirtschaft/Preisbildung]]", "[[wirtschaft/Restwert]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,7 @@
 ---
 type: Hürde
+logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
+verwandt: ["[[huerde/Ausschreibungsproblem]]", "[[huerde/Datenluecke]]", "[[huerde/Fehlende_Lagerflaeche]]"]
 ---
 
 ## Verknüpfungen

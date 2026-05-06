@@ -1,5 +1,8 @@
 ---
 type: Hürde
+logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
+verwandt: ["[[huerde/Logistikproblem]]"]
+wirtschaft: ["[[wirtschaft/Restwert]]"]
 ---
 
 ## Verknüpfungen

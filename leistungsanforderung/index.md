@@ -1,5 +1,7 @@
 ---
 type: Leistungsanforderung
+pruefung: ["[[pruefung/Statische_Nachweisfuehrung]]"]
+verwandt: ["[[leistungsanforderung/Schadstofffreiheit]]"]
 ---
 
 # Leistungsanforderungen – Index

@@ -1,5 +1,8 @@
 ---
 type: Material
+bauteil: ["[[bauteil/Brettsperrholzdecke]]", "[[bauteil/Deckenplatte]]"]
+pruefung: ["[[pruefung/Abbrandbemessung]]"]
+verwandt: ["[[material/Brettschichtholz]]", "[[material/Holz]]"]
 ---
 
 ## Verknüpfungen

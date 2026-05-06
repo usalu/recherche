@@ -1,5 +1,7 @@
 ---
 type: Ort
+methode: ["[[methode/Materialpass]]"]
+verwandt: ["[[ort/Basel]]", "[[ort/Europa]]"]
 ---
 
 # Schweiz

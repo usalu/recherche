@@ -1,7 +1,7 @@
 ---
+type: Ort
 id:
 name: Berlin Neukoelln
-type: Ort
 status: seed
 aliases: []
 tags: []
@@ -26,6 +26,7 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+gebaeude: ["[[gebaeude/Bestandshalle_CRCLR_House]]", "[[gebaeude/Kindl_Areal]]"]
 ---
 
 # Berlin Neukoelln

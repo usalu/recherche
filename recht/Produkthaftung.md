@@ -1,5 +1,9 @@
 ---
 type: Recht
+huerde: ["[[huerde/Haftung]]"]
+pruefung: ["[[pruefung/Materialpruefung]]"]
+verwandt: ["[[recht/Bauordnungsrecht]]", "[[recht/Gewaehrleistung]]", "[[recht/Zulassung_im_Einzelfall]]"]
+werkzeug: ["[[werkzeug/Globechain]]", "[[werkzeug/RotorDC]]"]
 ---
 
 ## Verknüpfungen

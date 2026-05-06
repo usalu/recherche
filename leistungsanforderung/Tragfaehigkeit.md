@@ -1,5 +1,8 @@
 ---
 type: Leistungsanforderung
+material: ["[[material/Lehm]]"]
+pruefung: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Eignungspruefung_Baulehm]]", "[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]", "[[pruefung/Zugversuch]]"]
+verwandt: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Schallschutz]]"]
 ---
 
 # Tragfaehigkeit

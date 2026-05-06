@@ -1,5 +1,8 @@
 ---
 type: Gebäude
+material: ["[[material/Beton]]"]
+ort: ["[[ort/Basel]]"]
+verwandt: ["[[gebaeude/Areal_Walkeweg_Nord]]", "[[gebaeude/LysP8_Basel_Lysbuechelareal]]"]
 ---
 
 ## Verknüpfungen

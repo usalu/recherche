@@ -1,5 +1,7 @@
 ---
 type: Leistungsanforderung
+schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/Bleifarbe]]", "[[schadstoff/Holzschutzmittel]]", "[[schadstoff/PAK]]", "[[schadstoff/PCB]]"]
+verwandt: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/Waermeschutz]]", "[[leistungsanforderung/index]]"]
 ---
 
 # Schadstofffreiheit

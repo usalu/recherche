@@ -1,5 +1,8 @@
 ---
 type: Ort
+fallstudie: ["[[fallstudie/ELEMENTA]]"]
+gebaeude: ["[[gebaeude/Areal_Walkeweg_Nord]]", "[[gebaeude/Lysbuechel_Parkhaus]]"]
+verwandt: ["[[ort/Europa]]", "[[ort/Scwheiz]]"]
 ---
 
 # Basel

@@ -1,5 +1,8 @@
 ---
 type: Verbindung
+methode: ["[[methode/Reversibilitaet]]"]
+reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]", "[[reuse_strategie/Refurbishment]]"]
+verwandt: ["[[verbindung/Klemmverbindung]]", "[[verbindung/Verleimung]]", "[[verbindung/Vermoertelung]]", "[[verbindung/Verschraubung]]", "[[verbindung/Verschweissung]]"]
 ---
 
 ## Verknüpfungen

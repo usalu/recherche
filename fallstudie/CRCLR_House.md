@@ -1,5 +1,9 @@
 ---
 type: Fallstudie
+gebaeude: ["[[gebaeude/Bestandshalle_CRCLR_House]]", "[[gebaeude/Kindl_Areal]]"]
+logistik: ["[[logistik/Zwischenlagerung]]"]
+ort: ["[[ort/Berlin]]"]
+verwandt: ["[[fallstudie/Haus_der_Materialisierung]]", "[[fallstudie/Kunst_Stoffe_Berlin]]", "[[fallstudie/Opalis]]"]
 ---
 
 ## Verknüpfungen

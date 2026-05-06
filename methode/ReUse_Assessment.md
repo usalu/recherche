@@ -1,5 +1,7 @@
 ---
 type: Methode
+kennwert: ["[[kennwert/CO2_Einsparung]]", "[[kennwert/Demontagegrad]]", "[[kennwert/Graue_Energie]]", "[[kennwert/Materialwert]]", "[[kennwert/Wiederverwendungsquote]]"]
+verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialinventur]]", "[[methode/Materialpass]]", "[[methode/Reversibilitaet]]", "[[methode/Urban_Mining]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,7 @@
 ---
 type: Verbindung
+methode: ["[[methode/Reversibilitaet]]"]
+verwandt: ["[[verbindung/Klemmverbindung]]", "[[verbindung/Steckverbindung]]", "[[verbindung/Verleimung]]", "[[verbindung/Verschraubung]]"]
 ---
 
 ## Verknüpfungen

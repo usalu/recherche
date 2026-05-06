@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+logistik: ["[[logistik/Transport]]"]
+recht: ["[[recht/Produkthaftung]]"]
+verwandt: ["[[werkzeug/Materialdatenbank]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/RotorDB]]", "[[werkzeug/SalvoWEB]]"]
 ---
 
 # RotorDC

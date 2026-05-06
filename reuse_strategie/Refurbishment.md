@@ -1,5 +1,9 @@
 ---
 type: Reuse-Strategie
+aufbereitungsmethode: ["[[aufbereitungsmethode/Entmoertelung_von_Fliesen]]", "[[aufbereitungsmethode/Holzaufbereitung]]", "[[aufbereitungsmethode/Leuchten_Refurbishment]]", "[[aufbereitungsmethode/Qualitaetssicherung]]", "[[aufbereitungsmethode/Rekonditionierung]]", "[[aufbereitungsmethode/Reparatur]]"]
+huerde: ["[[huerde/Gewaehrleistung]]"]
+methode: ["[[methode/Materialpass]]"]
+verbindung: ["[[verbindung/Steckverbindung]]"]
 ---
 
 # Refurbishment

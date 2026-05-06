@@ -447,4 +447,3 @@ Für das Forschungsvorhaben Entwerfen mit Bestand ist ZRS deshalb besonders rele
 5. Welche regulatorischen Hürden sind im Alltag am gravierendsten?
 6. Wie wird in Projekten entschieden, wann Laborprüfungen nötig sind und wann Erfahrungswissen genügt?
 7. Welche Benutzeroberfläche oder Datenstruktur würde Ingenieur:innen in frühen Entwurfsphasen wirklich helfen?
-

@@ -1,5 +1,6 @@
 ---
 type: Werkzeug
+verwandt: ["[[werkzeug/Loopfront]]", "[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/Materialdatenbank]]"]
 ---
 
 # Reusefully LINK

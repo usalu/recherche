@@ -1,5 +1,6 @@
 ---
 type: Prüfung
+verwandt: ["[[pruefung/Zustandsbewertung]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,8 @@
 ---
 type: Material
+bauteil: ["[[bauteil/Dachtragwerk]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
+pruefung: ["[[pruefung/Abbrandbemessung]]"]
+verwandt: ["[[material/Brettsperrholz]]", "[[material/Holz]]"]
 ---
 
 ## Verknüpfungen

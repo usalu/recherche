@@ -1,5 +1,7 @@
 ---
 type: Tragwerkssystem
+bauteil: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Wand]]"]
+verwandt: ["[[tragwerkssystem/Design_for_Disassembly]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]", "[[tragwerkssystem/Tragende_Wand]]"]
 ---
 
 ## Verknüpfungen

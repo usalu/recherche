@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[werkzeug/DGNB_Gebaeuderessourcenpass]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Platform_CB23]]", "[[werkzeug/Qflow]]", "[[werkzeug/Urban_Mining_Index]]"]
 ---
 
 ## Verknüpfungen

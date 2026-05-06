@@ -1,5 +1,6 @@
 ---
 type: Abbruchmethode
+aufbereitungsmethode: ["[[aufbereitungsmethode/Drahtglasschneiden]]"]
 ---
 
 # Abbruchmethoden – Index

@@ -1,7 +1,7 @@
 ---
+type: Ort
 id:
 name: Walkeweg
-type: Ort
 status: seed
 aliases: []
 tags: []
@@ -26,6 +26,7 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+fallstudie: ["[[fallstudie/ELEMENTA]]"]
 ---
 
 # Walkeweg

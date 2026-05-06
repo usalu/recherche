@@ -1,5 +1,10 @@
 ---
 type: Bauteil
+material: ["[[material/Beton]]"]
+pruefung: ["[[pruefung/Zustandsbewertung]]"]
+reuse_strategie: ["[[reuse_strategie/Direkte_Wiederverwendung]]"]
+tragwerkssystem: ["[[tragwerkssystem/Betonfertigteil_System]]"]
+verwandt: ["[[bauteil/Deckenplatte]]", "[[bauteil/Wand]]"]
 ---
 
 ## Verknüpfungen

@@ -1,7 +1,7 @@
 ---
+type: Bauteil
 id:
 name: Fassade
-type: Bauteil
 status: seed
 aliases: []
 tags: []
@@ -26,6 +26,8 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+material: ["[[material/Glas]]", "[[material/Keramik]]"]
+tragwerkssystem: ["[[tragwerkssystem/Aufstockung_in_Holzbauweise]]", "[[tragwerkssystem/Skelettbauweise]]"]
 ---
 
 # Fassade

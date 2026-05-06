@@ -1,5 +1,9 @@
 ---
 type: Prozessphase
+abbruchmethode: ["[[abbruchmethode/Selektiver_Rueckbau]]"]
+dokument: ["[[dokument/Bauteilkatalog]]", "[[dokument/Materialpass]]"]
+verwandt: ["[[prozessphase/Ausschreibung]]", "[[prozessphase/Bestandserfassung]]", "[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Wiedereinbau]]"]
+wirtschaft: ["[[wirtschaft/Lebenszykluskosten]]"]
 ---
 
 ## Verknüpfungen

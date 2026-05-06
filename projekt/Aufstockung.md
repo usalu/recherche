@@ -1,5 +1,7 @@
 ---
 type: Projekt
+reuse_strategie: ["[[reuse_strategie/Weiterbauen_im_Bestand]]"]
+tragwerkssystem: ["[[tragwerkssystem/Aufstockung_in_Holzbauweise]]"]
 ---
 
 ## Verknüpfungen

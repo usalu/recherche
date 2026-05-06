@@ -1,5 +1,9 @@
 ---
 type: Tragwerkssystem
+bauteil: ["[[bauteil/Fassade]]"]
+projekt: ["[[projekt/Aufstockung]]"]
+reuse_strategie: ["[[reuse_strategie/Umnutzung]]"]
+verwandt: ["[[tragwerkssystem/Holz_Skelettbau]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]"]
 ---
 
 ## Verknüpfungen

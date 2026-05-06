@@ -1,7 +1,7 @@
 ---
+type: Bauteil
 id:
 name: Fenster
-type: Bauteil
 status: seed
 aliases: []
 tags: []
@@ -26,6 +26,8 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+aufbereitungsmethode: ["[[aufbereitungsmethode/Holzaufbereitung]]", "[[aufbereitungsmethode/Rekonditionierung]]", "[[aufbereitungsmethode/Reparatur]]"]
+material: ["[[material/Glas]]", "[[material/Holz]]"]
 ---
 
 # Fenster

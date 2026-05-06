@@ -1,5 +1,7 @@
 ---
 type: Reuse-Strategie
+methode: ["[[methode/Materialpass]]"]
+tragwerkssystem: ["[[tragwerkssystem/Aufstockung_in_Holzbauweise]]", "[[tragwerkssystem/Skelettbauweise]]", "[[tragwerkssystem/Tragende_Wand]]"]
 ---
 
 # Umnutzung

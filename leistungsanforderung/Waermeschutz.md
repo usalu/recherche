@@ -1,5 +1,7 @@
 ---
 type: Leistungsanforderung
+material: ["[[material/Glas]]", "[[material/Lehm]]", "[[material/Stroh]]"]
+verwandt: ["[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Schallschutz]]"]
 ---
 
 # Waermeschutz

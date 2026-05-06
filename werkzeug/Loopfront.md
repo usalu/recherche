@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+dokument: ["[[dokument/Bestandsaufnahme]]"]
+methode: ["[[methode/Urban_Mining]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/QR_RFID_Materialtracking]]", "[[werkzeug/Reusefully_LINK]]", "[[werkzeug/Rheaply]]"]
 ---
 
 # Loopfront

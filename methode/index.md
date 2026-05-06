@@ -1,5 +1,6 @@
 ---
 type: Methode
+dokument: ["[[dokument/LCA]]"]
 ---
 
 # Methoden – Index

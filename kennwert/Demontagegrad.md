@@ -1,5 +1,8 @@
 ---
 type: Kennwert
+dokument: ["[[dokument/LCA]]"]
+methode: ["[[methode/ReUse_Assessment]]"]
+verwandt: ["[[kennwert/CO2_Einsparung]]", "[[kennwert/Graue_Energie]]", "[[kennwert/Materialwert]]", "[[kennwert/Wiederverwendungsquote]]"]
 ---
 
 # Demontagegrad

@@ -1,5 +1,8 @@
 ---
 type: Logistik
+fallstudie: ["[[fallstudie/CRCLR_House]]", "[[fallstudie/Haus_der_Materialisierung]]", "[[fallstudie/Opalis]]"]
+huerde: ["[[huerde/Gewaehrleistung]]", "[[huerde/Terminunsicherheit]]"]
+verwandt: ["[[logistik/Lagerflaeche]]", "[[logistik/Lagerung]]", "[[logistik/Materialmatching]]", "[[logistik/Materialverfuegbarkeit]]", "[[logistik/ReUse_Centre]]", "[[logistik/Transport]]"]
 ---
 
 # Zwischenlagerung

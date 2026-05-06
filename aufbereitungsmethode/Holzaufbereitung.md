@@ -1,5 +1,8 @@
 ---
 type: Aufbereitungsmethode
+bauteil: ["[[bauteil/Fenster]]"]
+material: ["[[material/Holz]]"]
+reuse_strategie: ["[[reuse_strategie/Refurbishment]]"]
 ---
 
 ## Verknüpfungen

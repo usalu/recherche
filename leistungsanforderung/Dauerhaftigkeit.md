@@ -1,5 +1,8 @@
 ---
 type: Leistungsanforderung
+material: ["[[material/Glas]]", "[[material/Keramik]]", "[[material/Stroh]]"]
+pruefung: ["[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
+verwandt: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/Waermeschutz]]"]
 ---
 
 # Dauerhaftigkeit

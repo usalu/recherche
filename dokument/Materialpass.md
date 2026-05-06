@@ -1,5 +1,9 @@
 ---
 type: Dokument
+norm: ["[[norm/ISO_20887]]", "[[norm/Wiederverwendungskriterien]]"]
+prozessphase: ["[[prozessphase/Bestandserfassung]]", "[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Entwurf]]"]
+verwandt: ["[[dokument/Auditbericht]]", "[[dokument/Bauwerksdiagnose]]", "[[dokument/Bestandsaufnahme]]", "[[dokument/Materialinventar]]", "[[dokument/Pre_Demolition_Audit]]", "[[dokument/Rueckbaukataster]]"]
+werkzeug: ["[[werkzeug/BIM]]", "[[werkzeug/Dataview]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]"]
 ---
 
 ## Verknüpfungen

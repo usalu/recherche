@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/IFC]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Bonsai_BlenderBIM]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Speckle]]"]
 ---
 
 ## Verknüpfungen

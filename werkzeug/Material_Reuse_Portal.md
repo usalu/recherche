@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Urban_Mining]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/CMEx]]", "[[werkzeug/Excess_Materials_Exchange]]", "[[werkzeug/Globechain]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/Restado]]", "[[werkzeug/Reusefully_LINK]]", "[[werkzeug/SalvoWEB]]"]
 ---
 
 # Material Reuse Portal

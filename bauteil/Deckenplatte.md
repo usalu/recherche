@@ -1,5 +1,9 @@
 ---
 type: Bauteil
+material: ["[[material/Beton]]", "[[material/Brettsperrholz]]", "[[material/Stahl]]"]
+pruefung: ["[[pruefung/Zustandsbewertung]]"]
+reuse_strategie: ["[[reuse_strategie/Direkte_Wiederverwendung]]"]
+verwandt: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Brettsperrholzdecke]]", "[[bauteil/Holzrahmenelement]]", "[[bauteil/Wand]]"]
 ---
 
 ## Verknüpfungen

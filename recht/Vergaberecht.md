@@ -1,5 +1,10 @@
 ---
 type: Recht
+huerde: ["[[huerde/Ausschreibungsproblem]]"]
+ort: ["[[ort/Berlin]]", "[[ort/Deutschland]]", "[[ort/Europa]]"]
+prozessphase: ["[[prozessphase/Ausschreibung]]"]
+verwandt: ["[[recht/Bauordnungsrecht]]", "[[recht/Gewaehrleistung]]"]
+wirtschaft: ["[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Lebenszykluskosten]]"]
 ---
 
 ## Verknüpfungen

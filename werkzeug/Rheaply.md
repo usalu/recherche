@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Urban_Mining]]"]
+verwandt: ["[[werkzeug/Excess_Materials_Exchange]]", "[[werkzeug/Globechain]]", "[[werkzeug/Loopfront]]", "[[werkzeug/Superyard]]"]
 ---
 
 # Rheaply

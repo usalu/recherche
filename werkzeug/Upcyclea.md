@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Urban_Mining]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Maconda_Materialpass]]", "[[werkzeug/Maconda_ROMULUS]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Pre_Demolition_Audit_Tools]]", "[[werkzeug/QR_RFID_Materialtracking]]"]
 ---
 
 # Upcyclea

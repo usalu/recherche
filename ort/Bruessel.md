@@ -1,7 +1,7 @@
 ---
+type: Ort
 id:
 name: Bruessel
-type: Ort
 status: seed
 aliases: []
 tags: []
@@ -26,6 +26,7 @@ links:
   related_werkzeuge: []
   related_interviews: []
   related_berichte: []
+gebaeude: ["[[gebaeude/Da_Vinci_Business_District]]"]
 ---
 
 # Bruessel

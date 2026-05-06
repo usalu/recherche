@@ -1,5 +1,8 @@
 ---
 type: Hürde
+logistik: ["[[logistik/Zwischenlagerung]]"]
+reuse_strategie: ["[[reuse_strategie/Direkte_Wiederverwendung]]", "[[reuse_strategie/Refurbishment]]"]
+verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Haftung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Terminunsicherheit]]", "[[huerde/Verfuegbarkeitsproblem]]"]
 ---
 
 # Gewährleistung

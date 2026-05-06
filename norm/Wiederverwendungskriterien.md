@@ -1,5 +1,7 @@
 ---
 type: Norm
+dokument: ["[[dokument/LCA]]", "[[dokument/Materialpass]]"]
+verwandt: ["[[norm/DIN_EN_15804]]", "[[norm/DIN_EN_15978]]", "[[norm/EN_15804]]", "[[norm/EU_Taxonomie]]", "[[norm/ISO_14040]]", "[[norm/ISO_14044]]", "[[norm/ISO_20887]]"]
 ---
 
 # Wiederverwendungskriterien

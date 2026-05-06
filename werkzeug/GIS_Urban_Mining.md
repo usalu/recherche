@@ -1,5 +1,6 @@
 ---
 type: Werkzeug
+verwandt: ["[[werkzeug/Materialdatenbank]]", "[[werkzeug/Pre_Demolition_Audit_Tools]]", "[[werkzeug/Speckle]]", "[[werkzeug/Urban_Mining_Index]]"]
 ---
 
 ## Verknüpfungen

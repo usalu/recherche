@@ -1,5 +1,9 @@
 ---
 type: Gebäude
+material: ["[[material/Beton]]"]
+methode: ["[[methode/Bauteilkatalogisierung]]"]
+ort: ["[[ort/Basel]]"]
+verwandt: ["[[gebaeude/Lysbuechel_Parkhaus]]"]
 ---
 
 ## Verknüpfungen

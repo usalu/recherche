@@ -1,5 +1,10 @@
 ---
 type: Leistungsanforderung
+material: ["[[material/Glas]]", "[[material/Keramik]]", "[[material/Lehm]]", "[[material/Stroh]]"]
+norm: ["[[norm/Brandschutzanforderung]]", "[[norm/F90]]", "[[norm/Feuerwiderstand]]", "[[norm/R90]]", "[[norm/REI90]]", "[[norm/index]]"]
+pruefung: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Brandnachweis]]", "[[pruefung/Eignungspruefung_Baulehm]]"]
+recht: ["[[recht/Bauordnungsrecht]]", "[[recht/Gewaehrleistung]]", "[[recht/Zulassung_im_Einzelfall]]"]
+verwandt: ["[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Tragfaehigkeit]]"]
 ---
 
 # Brandschutz

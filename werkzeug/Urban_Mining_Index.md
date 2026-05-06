@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[werkzeug/DGNB_Gebaeuderessourcenpass]]", "[[werkzeug/GIS_Urban_Mining]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/One_Click_LCA_Building_Circularity]]", "[[werkzeug/Platform_CB23]]", "[[werkzeug/Speckle]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,6 @@
 ---
 type: Werkzeug
+verwandt: ["[[werkzeug/Madaster_Plattform]]", "[[werkzeug/One_Click_LCA_Building_Circularity]]", "[[werkzeug/Pre_Demolition_Audit_Tools]]", "[[werkzeug/QR_RFID_Materialtracking]]"]
 ---
 
 ## Verknüpfungen

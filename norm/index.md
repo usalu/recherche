@@ -1,5 +1,8 @@
 ---
 type: Norm
+dokument: ["[[dokument/LCA]]"]
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]"]
+pruefung: ["[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
 ---
 
 # Standards und Normen – Index

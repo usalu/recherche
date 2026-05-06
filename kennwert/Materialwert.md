@@ -1,5 +1,9 @@
 ---
 type: Kennwert
+dokument: ["[[dokument/LCA]]"]
+methode: ["[[methode/ReUse_Assessment]]"]
+verwandt: ["[[kennwert/CO2_Einsparung]]", "[[kennwert/Demontagegrad]]", "[[kennwert/Graue_Energie]]", "[[kennwert/Wiederverwendungsquote]]"]
+wirtschaft: ["[[wirtschaft/Restwert]]"]
 ---
 
 # Materialwert

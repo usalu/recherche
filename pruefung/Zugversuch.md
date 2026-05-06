@@ -1,5 +1,8 @@
 ---
 type: Prüfung
+leistungsanforderung: ["[[leistungsanforderung/Tragfaehigkeit]]"]
+material: ["[[material/Sekundaerstahl]]"]
+verwandt: ["[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,6 @@
 ---
 type: Aufbereitungsmethode
+material: ["[[material/Sekundaerstahl]]"]
 ---
 
 # Aufbereitungsmethoden – Index

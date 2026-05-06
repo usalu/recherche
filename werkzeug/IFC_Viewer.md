@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Ontologie]]"]
+methode: ["[[methode/Bauteilkatalogisierung]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Bonsai_BlenderBIM]]", "[[werkzeug/IfcOpenShell]]", "[[werkzeug/Loopfront]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Material_Index]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Rhino]]", "[[werkzeug/Speckle]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,7 @@
 ---
 type: Aufbereitungsmethode
+material: ["[[material/Glas]]"]
+reuse_strategie: ["[[reuse_strategie/Refurbishment]]"]
 ---
 
 ## Verknüpfungen

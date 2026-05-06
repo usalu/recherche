@@ -1,5 +1,7 @@
 ---
 type: Hürde
+logistik: ["[[logistik/Zwischenlagerung]]"]
+verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Gewaehrleistung]]", "[[huerde/Haftung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Verfuegbarkeitsproblem]]"]
 ---
 
 # Terminunsicherheit

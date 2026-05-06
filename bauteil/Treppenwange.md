@@ -1,7 +1,7 @@
 ---
+type: Bauteil
 id:
 name: Treppenwange
-type: Bauteil
 status: seed
 aliases: []
 tags: []

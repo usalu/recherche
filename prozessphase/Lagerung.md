@@ -1,5 +1,6 @@
 ---
 type: Prozessphase
+verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Ausschreibung]]", "[[prozessphase/Rueckbau]]", "[[prozessphase/Transport]]", "[[prozessphase/Wiedereinbau]]"]
 ---
 
 ## Verknüpfungen

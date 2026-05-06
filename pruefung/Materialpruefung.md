@@ -1,5 +1,8 @@
 ---
 type: Prüfung
+aufbereitungsmethode: ["[[aufbereitungsmethode/Qualitaetssicherung]]"]
+recht: ["[[recht/Bauordnungsrecht]]", "[[recht/Gewaehrleistung]]", "[[recht/Produkthaftung]]", "[[recht/Zulassung_im_Einzelfall]]"]
+verwandt: ["[[pruefung/Zustandsbewertung]]"]
 ---
 
 ## Verknüpfungen

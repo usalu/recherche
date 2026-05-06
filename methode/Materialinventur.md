@@ -1,5 +1,6 @@
 ---
 type: Methode
+verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialpass]]", "[[methode/ReUse_Assessment]]", "[[methode/Reversibilitaet]]", "[[methode/Urban_Mining]]"]
 ---
 
 ## Verknüpfungen

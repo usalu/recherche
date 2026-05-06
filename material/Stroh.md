@@ -1,5 +1,8 @@
 ---
 type: Material
+gebaeude: ["[[gebaeude/K118_Kopfbau_Halle_118_Winterthur]]"]
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Waermeschutz]]"]
+verwandt: ["[[material/Holz]]", "[[material/Lehm]]"]
 ---
 
 # Stroh

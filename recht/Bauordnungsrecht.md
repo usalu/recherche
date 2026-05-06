@@ -1,5 +1,10 @@
 ---
 type: Recht
+huerde: ["[[huerde/Brandschutzkonflikt]]", "[[huerde/Haftung]]"]
+leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Schallschutz]]"]
+norm: ["[[norm/Brandschutzanforderung]]", "[[norm/F90]]", "[[norm/Feuerwiderstand]]", "[[norm/R90]]", "[[norm/REI90]]"]
+pruefung: ["[[pruefung/Materialpruefung]]"]
+verwandt: ["[[recht/Gewaehrleistung]]", "[[recht/Produkthaftung]]", "[[recht/Vergaberecht]]", "[[recht/Zulassung_im_Einzelfall]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,6 @@
 ---
 type: Dokument
+prozessphase: ["[[prozessphase/Bestandserfassung]]", "[[prozessphase/Entwurf]]"]
 ---
 
 ## Verknüpfungen

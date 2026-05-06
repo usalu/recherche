@@ -1,5 +1,10 @@
 ---
 type: Aufbereitungsmethode
+bauteil: ["[[bauteil/Fenster]]"]
+logistik: ["[[logistik/Lagerung]]"]
+prozessphase: ["[[prozessphase/Aufbereitung]]"]
+reuse_strategie: ["[[reuse_strategie/Refurbishment]]"]
+verwandt: ["[[aufbereitungsmethode/Qualitaetssicherung]]", "[[aufbereitungsmethode/Rekonditionierung]]"]
 ---
 
 ## Verknüpfungen

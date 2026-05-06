@@ -1,5 +1,8 @@
 ---
 type: Tragwerkssystem
+bauteil: ["[[bauteil/Wand]]"]
+reuse_strategie: ["[[reuse_strategie/Umnutzung]]"]
+verwandt: ["[[tragwerkssystem/Betonfertigteil_System]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]"]
 ---
 
 ## Verknüpfungen

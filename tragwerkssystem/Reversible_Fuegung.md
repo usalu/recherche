@@ -1,5 +1,7 @@
 ---
 type: Tragwerkssystem
+verbindung: ["[[verbindung/Klemmverbindung]]"]
+verwandt: ["[[tragwerkssystem/Aufstockung_in_Holzbauweise]]", "[[tragwerkssystem/Betonfertigteil_System]]", "[[tragwerkssystem/Dachtragwerk_und_Fachwerk]]", "[[tragwerkssystem/Design_for_Disassembly]]", "[[tragwerkssystem/Holz_Skelettbau]]", "[[tragwerkssystem/Skelettbauweise]]", "[[tragwerkssystem/Stahl_Skelettbau]]", "[[tragwerkssystem/Tragende_Wand]]"]
 ---
 
 ## Verknüpfungen

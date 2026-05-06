@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+dokument: ["[[dokument/Pre_Demolition_Audit]]"]
+logistik: ["[[logistik/Lagerung]]"]
+verwandt: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/ReUse_Toolkit]]"]
 ---
 
 # Cycle Up

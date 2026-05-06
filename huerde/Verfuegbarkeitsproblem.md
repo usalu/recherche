@@ -1,5 +1,6 @@
 ---
 type: Hürde
+verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Gewaehrleistung]]", "[[huerde/Haftung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Terminunsicherheit]]"]
 ---
 
 # Verfügbarkeitsproblem

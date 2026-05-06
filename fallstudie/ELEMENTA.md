@@ -1,5 +1,6 @@
 ---
 type: Fallstudie
+ort: ["[[ort/Basel]]", "[[ort/Walkeweg]]"]
 ---
 
 # ELEMENTA – ReUse-Wohnungsbau Walkeweg Basel

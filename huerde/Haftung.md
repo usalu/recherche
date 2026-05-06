@@ -1,5 +1,8 @@
 ---
 type: Hürde
+recht: ["[[recht/Bauordnungsrecht]]", "[[recht/Produkthaftung]]"]
+verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Gewaehrleistung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Terminunsicherheit]]", "[[huerde/Verfuegbarkeitsproblem]]"]
+wirtschaft: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Lebenszykluskosten]]", "[[wirtschaft/Preisbildung]]", "[[wirtschaft/Restwert]]"]
 ---
 
 # Haftung

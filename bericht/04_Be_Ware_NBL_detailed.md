@@ -610,4 +610,3 @@ Für das Forschungsvorhaben Entwerfen mit Bestand ist der Fall deshalb außergew
 5. Welche Nachweispfade für Holz und Stahl wurden in den Pilotprojekten konkret angewandt?
 6. Wie unterscheiden sich die Anforderungen zwischen TULIUM, Friedrichshagen und Jugendbauhütte?
 7. Welche wirtschaftlichen und zeitlichen Kennzahlen liegen aus der Konzeptphase bereits vor?
-

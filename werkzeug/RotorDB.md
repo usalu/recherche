@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+dokument: ["[[dokument/Pre_Demolition_Audit]]"]
+methode: ["[[methode/Design_for_Disassembly]]"]
+verwandt: ["[[werkzeug/Library_of_Reuse]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/ReUse_Toolkit]]", "[[werkzeug/RotorDC]]"]
 ---
 
 # RotorDB

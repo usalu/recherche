@@ -1,5 +1,7 @@
 ---
 type: Gebäude
+material: ["[[material/Lehm]]", "[[material/Stroh]]"]
+verwandt: ["[[gebaeude/ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal]]"]
 ---
 
 # K.118 – Kopfbau Halle 118, Winterthur

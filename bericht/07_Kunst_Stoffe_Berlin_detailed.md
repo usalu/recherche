@@ -587,4 +587,3 @@ Für das Forschungsvorhaben Entwerfen mit Bestand ist der Fall deshalb besonders
 5. Welche Ausschlusskriterien gelten praktisch für problematische oder schwer vermittelbare Materialien?
 6. Welche digitale Unterstützung würde den Alltag wirklich erleichtern, ohne den kuratorischen Charakter zu zerstören?
 7. Wie könnte man den Übergang von physischer Verfügbarkeit zu planbarer Verwendbarkeit besser unterstützen?
-

@@ -1,5 +1,7 @@
 ---
 type: Hürde
+schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/Bleifarbe]]", "[[schadstoff/Holzschutzmittel]]", "[[schadstoff/PAK]]", "[[schadstoff/PCB]]"]
+verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Gewaehrleistung]]", "[[huerde/Haftung]]", "[[huerde/Terminunsicherheit]]", "[[huerde/Verfuegbarkeitsproblem]]"]
 ---
 
 # Schadstoffbelastung

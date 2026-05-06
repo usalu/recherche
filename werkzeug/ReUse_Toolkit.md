@@ -1,5 +1,6 @@
 ---
 type: Werkzeug
+verwandt: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/Cycle_Up]]", "[[werkzeug/Library_of_Reuse]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/RotorDB]]"]
 ---
 
 ## Verknüpfungen

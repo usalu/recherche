@@ -1,5 +1,7 @@
 ---
 type: Methode
+gebaeude: ["[[gebaeude/Areal_Walkeweg_Nord]]"]
+werkzeug: ["[[werkzeug/BIM]]", "[[werkzeug/Dataview]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/Rhino]]"]
 ---
 
 ## Verknüpfungen

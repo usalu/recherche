@@ -1,5 +1,10 @@
 ---
 type: Schadstoff
+huerde: ["[[huerde/Schadstoffbelastung]]"]
+leistungsanforderung: ["[[leistungsanforderung/Schadstofffreiheit]]"]
+material: ["[[material/Glas]]", "[[material/Keramik]]"]
+pruefung: ["[[pruefung/Schadstoffscreening]]"]
+verwandt: ["[[schadstoff/Asbest]]", "[[schadstoff/Bleifarbe]]", "[[schadstoff/Holzschutzmittel]]", "[[schadstoff/PCB]]"]
 ---
 
 ## Verknüpfungen

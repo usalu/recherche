@@ -252,4 +252,3 @@ Zentrale Barrieren bleiben der massive Zeitdruck bei Abbruchvorhaben, rechtliche
 
 --------------------------------------------------------------------------------
 
-

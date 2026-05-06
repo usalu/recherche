@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+datenmodell: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Materialpass_Schema]]", "[[datenmodell/Taxonomie]]"]
+logistik: ["[[logistik/Lagerung]]"]
+verwandt: ["[[werkzeug/BIM]]", "[[werkzeug/Cycle_Up]]", "[[werkzeug/DGNB_Gebaeuderessourcenpass]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Material_Index]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/Pre_Demolition_Audit_Tools]]", "[[werkzeug/ReUse_Toolkit]]", "[[werkzeug/Restado]]"]
 ---
 
 ## Verknüpfungen

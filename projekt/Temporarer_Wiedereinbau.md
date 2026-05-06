@@ -1,5 +1,6 @@
 ---
 type: Projekt
+reuse_strategie: ["[[reuse_strategie/index]]"]
 ---
 
 ## Verknüpfungen

@@ -1,5 +1,7 @@
 ---
 type: Leistungsanforderung
+pruefung: ["[[pruefung/Eignungspruefung_Baulehm]]"]
+verwandt: ["[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/Waermeschutz]]"]
 ---
 
 # Feuchteschutz

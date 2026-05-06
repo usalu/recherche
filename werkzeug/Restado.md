@@ -1,5 +1,8 @@
 ---
 type: Werkzeug
+dokument: ["[[dokument/Pre_Demolition_Audit]]"]
+logistik: ["[[logistik/Lagerung]]"]
+verwandt: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/Material_Reuse_Portal]]"]
 ---
 
 # restado

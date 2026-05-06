@@ -1,5 +1,7 @@
 ---
 type: Werkzeug
+logistik: ["[[logistik/Transport]]"]
+verwandt: ["[[werkzeug/CMEx]]", "[[werkzeug/Globechain]]", "[[werkzeug/Material_Reuse_Portal]]", "[[werkzeug/Materialdatenbank]]", "[[werkzeug/Rheaply]]"]
 ---
 
 # Excess Materials Exchange

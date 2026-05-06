@@ -1,7 +1,7 @@
 ---
+type: Bericht
 id:
 name: Research Prompts Entities Obsidian
-type: Bericht
 status: seed
 aliases: []
 tags: []
