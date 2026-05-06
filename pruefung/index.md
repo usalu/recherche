@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 # Prüfungen – Index
 
 ## Verknüpfungen

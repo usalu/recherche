@@ -1,7 +1,7 @@
 ---
 id:
 name: Walkeweg
-type:
+type: Ort
 status: seed
 aliases: []
 tags: []

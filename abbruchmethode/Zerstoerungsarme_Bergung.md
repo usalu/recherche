@@ -1,3 +1,7 @@
+---
+type: Abbruchmethode
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen**

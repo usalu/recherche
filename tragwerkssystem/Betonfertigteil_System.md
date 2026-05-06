@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; industrielles Bauen; Betonbau; zirkulärer Rückbau; Bauteilwiederverwendung; Urban Mining.

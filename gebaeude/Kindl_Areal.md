@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Industriebestand; Brauereiareale; gemeinwohlorientierte Arealentwicklung; Kultur- und Gewerbenutzung im Bestand; zirkuläres Bauen; soziale Infrastruktur; Erbbaurecht.

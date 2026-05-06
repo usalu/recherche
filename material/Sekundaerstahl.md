@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Stahlbau; Sekundärrohstoffe; Wiederverwendung tragender Bauteile; Stahlrecycling; Urban Mining; Produktnachweis; Kreislaufwirtschaft; Materialmärkte.

@@ -1,3 +1,7 @@
+---
+type: Fallstudie
+---
+
 # ELEMENTA – ReUse-Wohnungsbau Walkeweg Basel
 
 ## Verknüpfungen

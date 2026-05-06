@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Open Data, AEC-Datenplattform, BIM-Interoperabilität, Modell-zu-Datenbank-Workflows, Materialpass-Schnittstellen, digitale Planungskoordination.

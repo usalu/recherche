@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Bestandserfassung, Pre-Demolition-Audit, Bauteilpass, digitale Dokumentation, Qualitätskontrolle vor Rückbau und Wiedereinbau.

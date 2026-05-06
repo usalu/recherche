@@ -1,3 +1,7 @@
+---
+type: Reuse-Strategie
+---
+
 # Adaptives ReUse
 
 ## Verknüpfungen

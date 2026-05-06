@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Wiederverwendung tragender Bauteile; Urban Mining; Bestandserfassung; selektiver Rückbau; zirkuläre Tragwerksplanung; Abfallhierarchie: Wiederverwendung vor Recycling.

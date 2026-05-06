@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 # Allgemeines Tragwerk – Wiederverwendung im Bauwesen
 
 > Forschungssammlung zur zirkulären Tragwerksplanung.  

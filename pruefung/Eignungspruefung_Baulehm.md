@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Prüfung; Materialbewertung; Lehmbau; mineralische Sekundärbaustoffe; Bauökologie; Tragfähigkeit; Feuchte- und Dauerhaftigkeit.

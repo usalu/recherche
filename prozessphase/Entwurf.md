@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** zirkuläres Entwerfen; Design for Disassembly; Design for Adaptability; bauteilgetriebener Entwurf; Bestandserhalt; Urban Mining; Low-Carbon-Design; Suffizienz.

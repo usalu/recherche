@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Entwerfen mit Bestand; Umbau statt Ersatzneubau; Kreislaufwirtschaft im Bauwesen; Suffizienz; Lebenszyklusbetrachtung; graue Energie / verkörperte Emissionen; Baukultur.

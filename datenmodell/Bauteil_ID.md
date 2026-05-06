@@ -1,3 +1,7 @@
+---
+type: Datenmodell
+---
+
 # Bauteil_ID
 
 ## Verknüpfungen

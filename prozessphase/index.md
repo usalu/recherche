@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 # Prozessphasen – Index
 
 ## Verknüpfungen

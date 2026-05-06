@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** selektiver Rückbau, Urban Mining, Wiederverwendung, Rückbauplanung, Stoffstrommanagement, Kreislaufwirtschaft, Rückbau- und Entsorgungskonzept, Logistik, Bauteilvermittlung.

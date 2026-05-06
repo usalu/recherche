@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** zirkulärer Gebäudebetrieb; Materialpass; Design for Disassembly; Adaptability; Instandhaltung; Facility Management; Rückbauplanung; Lebenszyklusmanagement.

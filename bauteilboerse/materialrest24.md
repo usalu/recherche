@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Materialrest24
 
 ## Kurzbeschreibung

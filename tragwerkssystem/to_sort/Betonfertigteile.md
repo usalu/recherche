@@ -1,4 +1,5 @@
 ---
+type: Tragwerkssystem
 title: Wiederverwendung von Betonfertigteilen
 ---
 

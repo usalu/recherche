@@ -1,3 +1,7 @@
+---
+type: Aufbereitungsmethode
+---
+
 # Aufbereitungsmethoden – Index
 
 ## Verknüpfungen

@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** digitale Materialpässe, digitale Produktpässe, Gebäuderessourcenpässe, Circular Economy, Urban Mining, Rückbauinventar, Wiederverwendungsnachweis.

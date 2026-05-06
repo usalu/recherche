@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # RotorDC
 
 ## Kurzbeschreibung

@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** ReUse-Wertschöpfungskette; Urban Mining; Pre-Demolition-Audit; Materialpass; selektiver Rückbau; Bestandserhalt; Kreislaufwirtschaft im Bauwesen.

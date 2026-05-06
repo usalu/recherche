@@ -1,4 +1,5 @@
 ---
+type: Gebäude
 name: ELEMENTA
 links: [https://www.beta-architecture.com/elementa-parabase, https://www.archdaily.com/1008183/parabase-reuses-prefabricated-concrete-elements-for-a-radical-housing-development-in-basel-switzerland]
 beziehungen:

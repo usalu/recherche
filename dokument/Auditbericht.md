@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Dokumentation, Qualitätssicherung, Nachweisführung, zirkuläres Bauen, Rückbauplanung, Wiederverwendung, Genehmigungs- und Vergabeprozesse.

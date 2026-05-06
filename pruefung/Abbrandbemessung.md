@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Prüfung; Brandschutz; Holzbau; Tragfähigkeitsnachweis unter außergewöhnlicher Einwirkung Brand; Bauteilwiederverwendung.

@@ -1,3 +1,7 @@
+---
+type: Hürde
+---
+
 # Schadstoffbelastung
 
 ## Verknüpfungen

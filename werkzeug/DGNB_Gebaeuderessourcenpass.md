@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Gebäuderessourcenpass, Materialpass, Zirkularitätsbewertung, DGNB-Zertifizierung, Bestandserfassung, Rückbauplanung, Ressourcendokumentation.

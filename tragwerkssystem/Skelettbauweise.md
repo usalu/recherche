@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; Open Building; flexible Grundrisse; adaptive Tragwerke; Entwerfen mit Bestand; Bauteilwiederverwendung.

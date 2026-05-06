@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Building Spares Market
 
 ## Kurzbeschreibung

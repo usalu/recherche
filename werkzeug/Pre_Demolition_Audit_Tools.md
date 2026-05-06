@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Pre-Demolition Audit, Reclamation Audit, Rückbauinventar, selektiver Rückbau, Schadstofferkundung, Materialkataster, Wiederverwendungsvorbereitung.

@@ -1,3 +1,7 @@
+---
+type: Reuse-Strategie
+---
+
 # Direkte Wiederverwendung
 
 ## Verknüpfungen

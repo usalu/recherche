@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Prüfung; Brandschutz; Bauordnungsrecht; Bauteilwiederverwendung; Bestandserhalt; Nachweisführung.

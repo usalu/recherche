@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Design for Disassembly; Design for Adaptability; zirkuläres Konstruieren; Bauteilwiederverwendung; reversible Verbindungen; Anpassungsfähigkeit; Lebenszyklusplanung.

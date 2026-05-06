@@ -1,3 +1,7 @@
+---
+type: Projekt
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Adaptive Reuse; Nutzungswandel; Bestandserhalt; Transformation von Gewerbe-, Industrie-, Büro-, Schul-, Kirchen-, Infrastruktur- und Wohngebäuden; graue und goldene Energie.

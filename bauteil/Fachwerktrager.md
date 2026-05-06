@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Primärtragwerk; Tragwerksprinzipien; Dach- und Hallentragwerke; Holzbau; Stahlbau; hybride Tragwerke; Knoten und Verbindungsmittel; Bauteilprüfung; Rückbauplanung; Systemwiederverwendung.

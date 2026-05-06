@@ -1,3 +1,7 @@
+---
+type: Recht
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Bauordnungsrecht; Bauprodukte; Bauarten; Verwendbarkeitsnachweis; Anwendbarkeitsnachweis; Einzelfallnachweis; Sonderkonstruktionen; Bestand; Innovation; technische Nachweise; Behördenverfahren.

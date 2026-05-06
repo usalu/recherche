@@ -1,3 +1,7 @@
+---
+type: Projekt
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** temporäre Architektur; Zwischen- und Übergangsnutzung; Testfeld / Mock-up / Reallabor; reversible Konstruktion; zirkuläre Nutzungsketten; Bauteile in Nutzung halten statt lagern oder entsorgen.

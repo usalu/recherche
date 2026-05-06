@@ -1,3 +1,7 @@
+---
+type: Verbindung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Verbindungstechnik; mineralische Fügung; Mauerwerk; Fertigteilbau; Ausbau; Rückbau; sortenreine Trennung; Bauteilwiederverwendung; Denkmalpflege; Kreislaufwirtschaft im Bestand.

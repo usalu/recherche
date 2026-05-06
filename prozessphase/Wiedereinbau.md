@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Wiederverwendung; Einbauqualität; Bauproduktnachweis; Abnahme; Gewährleistung; Design for Disassembly; Bauausführung; Materialpass.

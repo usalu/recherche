@@ -1,3 +1,7 @@
+---
+type: Wirtschaft
+---
+
 ## Verknüpfungen
 
 ### Übergeordnete Themen

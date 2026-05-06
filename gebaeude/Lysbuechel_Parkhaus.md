@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Spendergebäude; Bauteilernte; Rückbau statt Abbruch; Wiederverwendung von Stahlbetonfertigteilen; Parkhäuser als Materialbanken; kommunale Stoffstromsteuerung.

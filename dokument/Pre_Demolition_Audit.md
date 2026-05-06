@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** selektiver Rückbau, Pre-Renovation Audit, Abfallhierarchie, Wiederverwendung, Vorbereitung zur Wiederverwendung, Recycling, Schadstofferkundung, Rückbau- und Entsorgungskonzept, zirkuläre Beschaffung.

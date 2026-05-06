@@ -1,3 +1,7 @@
+---
+type: Aufbereitungsmethode
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Aufbereitungsmethoden; zirkulärer Holzbau; Bauteilwiederverwendung; selektiver Rückbau; Vorbereitung zur Wiederverwendung.

@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 # Index
 
 ## Zweck

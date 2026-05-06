@@ -1,3 +1,7 @@
+---
+type: Tool
+---
+
 # ReCreate Studio
 
 ## Research positioning

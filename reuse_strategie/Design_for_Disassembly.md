@@ -1,3 +1,7 @@
+---
+type: Reuse-Strategie
+---
+
 # Design for Disassembly
 
 ## Verknüpfungen

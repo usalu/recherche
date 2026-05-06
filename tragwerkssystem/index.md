@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 # Tragwerkssysteme – Index
 
 ## Verknüpfungen

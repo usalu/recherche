@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Wiederverwendungsentscheidung, Risikobewertung, Restnutzungsdauer, Bauwerksdiagnostik, Bauteilfreigabe, Nachweisführung, zirkuläre Planung, Rückbau- und Wiedereinbaukonzept.

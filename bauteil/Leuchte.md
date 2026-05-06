@@ -1,7 +1,7 @@
 ---
 id:
 name: Leuchte
-type:
+type: Bauteil
 status: seed
 aliases: []
 tags: []

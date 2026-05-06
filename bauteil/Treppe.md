@@ -1,7 +1,7 @@
 ---
 id:
 name: Treppe
-type:
+type: Bauteil
 status: seed
 aliases: []
 tags: []

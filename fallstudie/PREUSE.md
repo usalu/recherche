@@ -1,3 +1,7 @@
+---
+type: Fallstudie
+---
+
 # PREUSE – Public Responses to Enable the Use of Salvaged Building Elements
 
 ## Verknüpfungen

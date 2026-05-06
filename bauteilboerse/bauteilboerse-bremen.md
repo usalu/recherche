@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Bauteilbörse Bremen
 
 ## Kurzbeschreibung

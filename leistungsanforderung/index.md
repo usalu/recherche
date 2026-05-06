@@ -1,3 +1,7 @@
+---
+type: Leistungsanforderung
+---
+
 # Leistungsanforderungen – Index
 
 ## Verknüpfungen

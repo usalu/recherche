@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** OpenBIM, IFC-native Modellierung, offene Planungswerkzeuge, Datenhoheit, digitale Bestandsmodelle, Materialpass-Authoring.

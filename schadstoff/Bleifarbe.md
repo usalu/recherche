@@ -1,3 +1,7 @@
+---
+type: Schadstoff
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Gebäudeschadstoffe; Oberflächen und Beschichtungen im Bestand; Arbeitsschutz; Denkmalschutz; Abfall- und Bodenschutz; ReUse-Freigabe von Holz-, Metall- und Ausbauoberflächen.

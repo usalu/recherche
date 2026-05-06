@@ -1,7 +1,7 @@
 ---
 id:
 name: Fenster
-type:
+type: Bauteil
 status: seed
 aliases: []
 tags: []

@@ -1,3 +1,7 @@
+---
+type: Aufbereitungsmethode
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Aufbereitungsmethoden; Prüf- und Nachweissysteme; Wiederverwendungsstrategie; Rückbauaudit; Produkt- und Bauwerksverantwortung.

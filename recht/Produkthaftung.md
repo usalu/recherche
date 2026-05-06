@@ -1,3 +1,7 @@
+---
+type: Recht
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Produktsicherheit; gesetzliche Haftung; Produzentenhaftung; Inverkehrbringen; Bauproduktrecht; Marktüberwachung; Risiko- und Qualitätsmanagement; Kreislaufwirtschaft.

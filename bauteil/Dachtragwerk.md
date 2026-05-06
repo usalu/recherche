@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Primärtragwerk; Dachkonstruktion; Holzbau; Stahlbau; Bestandserhaltung; Rückbauplanung; Bauteilgewinnung; Design for Disassembly; Bauphysik; Brandschutz; Ressourcenerfassung.

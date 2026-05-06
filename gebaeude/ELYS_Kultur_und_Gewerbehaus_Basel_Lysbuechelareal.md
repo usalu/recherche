@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 # ELYS Kultur- und Gewerbehaus, Basel / Lysbüchelareal
 
 ## Verknüpfungen

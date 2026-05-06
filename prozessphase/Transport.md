@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** ReUse-Logistik; Baustellenlogistik; Lieferketten; CO₂-Bilanz; Ladungssicherung; Qualitäts- und Wertschutz; regionale Kreisläufe.

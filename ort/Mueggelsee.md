@@ -1,7 +1,7 @@
 ---
 id:
 name: Mueggelsee
-type:
+type: Ort
 status: seed
 aliases: []
 tags: []

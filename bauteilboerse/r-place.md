@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # R-Place
 
 ## Kurzbeschreibung

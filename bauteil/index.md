@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 # Bauteile – Index
 
 ## Verknüpfungen

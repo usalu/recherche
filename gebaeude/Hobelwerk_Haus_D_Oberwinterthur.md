@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 # Hobelwerk Haus D, Oberwinterthur
 
 ## Verknüpfungen

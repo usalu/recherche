@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Re-Use-Plattformen; Händlerverzeichnis; Sekundärbaustoffmarkt; Materialwissen; Fallstudien; FCRBE; europäische Wiederverwendungspraxis.

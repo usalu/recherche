@@ -1,3 +1,7 @@
+---
+type: Projekt
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Bauen im Bestand; Nachverdichtung ohne zusätzliche Flächenversiegelung; Lebensdauerverlängerung von Tragwerk, Fundamenten und Erschließung; zirkuläre Ergänzung bestehender Gebäude; Ressourcenschutz durch Bestandserhalt.

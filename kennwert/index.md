@@ -1,3 +1,7 @@
+---
+type: Kennwert
+---
+
 # Kennwerte – Index
 
 ## Verknüpfungen

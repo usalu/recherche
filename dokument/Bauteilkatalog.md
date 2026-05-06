@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen**

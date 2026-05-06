@@ -1,3 +1,7 @@
+---
+type: Verbindung
+---
+
 # Verbindungen – Index
 
 ## Verknüpfungen

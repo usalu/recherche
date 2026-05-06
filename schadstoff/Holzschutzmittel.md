@@ -1,3 +1,7 @@
+---
+type: Schadstoff
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Gebäudeschadstoffe; Holzbau im Bestand; Innenraumhygiene; Rückbau und Bauteilernte; Denkmalschutz; Abfallrecht; Materialpass und Bauteilfreigabe.

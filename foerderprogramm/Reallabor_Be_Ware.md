@@ -1,3 +1,7 @@
+---
+type: Förderprogramm
+---
+
 # Reallabor B(e) Ware – Gebäudetragwerke aus Sekundärmaterialien Made in Berlin
 
 ## Verknüpfungen

@@ -1,3 +1,7 @@
+---
+type: Aufbereitungsmethode
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Aufbereitungsmethoden; Werterhalt; Bauteilinstandsetzung; ReUse-Prozess; Qualitätssicherung.

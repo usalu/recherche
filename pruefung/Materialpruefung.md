@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Werkstoffkennwerte, Tragfähigkeit, Dauerhaftigkeit, Restnutzungsdauer, Qualitätssicherung, bauordnungsrechtliche Verwendbarkeit, Bauteilfreigabe.

@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Gebruiktebouwmaterialen.com / GBM
 
 ## Kurzbeschreibung

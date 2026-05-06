@@ -1,3 +1,7 @@
+---
+type: Verbindung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Verbindungstechnik; rückbauorientiertes Entwerfen; Design for Disassembly; Bauteilwiederverwendung; zirkuläre Tragwerks- und Ausbauplanung.

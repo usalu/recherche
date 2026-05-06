@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Urban Mining, Ressourcenerfassung, Materialflüsse, Kreislaufwirtschaft, Bestandsdaten, Rückbauplanung, Wiederverwendung, Recycling, Ökobilanzierung.

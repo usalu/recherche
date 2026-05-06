@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 # Material Reuse Portal
 
 ## Verknüpfungen

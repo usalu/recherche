@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 # K.118 – Kopfbau Halle 118, Winterthur
 
 ## Verknüpfungen

@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Skop Marketplace
 
 ## Kurzbeschreibung

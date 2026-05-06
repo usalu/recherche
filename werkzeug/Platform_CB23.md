@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Circular Construction, Messmethodik, Materialpässe, Beschaffung, Wiederverwendung, Standards, Niederlande, zirkuläre Bauwirtschaft.

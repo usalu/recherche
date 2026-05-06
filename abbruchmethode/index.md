@@ -1,3 +1,7 @@
+---
+type: Abbruchmethode
+---
+
 # Abbruchmethoden – Index
 
 ## Verknüpfungen

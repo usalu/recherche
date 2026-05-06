@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Prüfung; Tragwerksplanung; Bestandserhalt; Bauteilwiederverwendung; Sicherheit; Gebrauchstauglichkeit; Dauerhaftigkeit; Dokumentation.

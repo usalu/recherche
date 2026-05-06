@@ -1,7 +1,7 @@
 ---
 id:
 name: Feuerschuetztuer
-type:
+type: Bauteil
 status: seed
 aliases: []
 tags: []

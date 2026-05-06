@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; zirkuläres Bauen; Entwerfen mit Bestand; Kreislaufwirtschaft; Materialpass; Open Building; Lebenszyklusplanung.

@@ -1,3 +1,7 @@
+---
+type: Projekt
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Forschung und Praxisübertragung; Reallabor; Demonstrationsbau; Innovation in Beschaffung, Genehmigung und Nachweisführung; Skalierung von Wiederverwendung.

@@ -1,3 +1,7 @@
+---
+type: Schadstoff
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Entwerfen mit Bestand; kreislaufgerechter Rückbau; Gebäudeschadstoffe; Arbeitsschutz; Abfallrecht; Bauteilfreigabe für ReUse.

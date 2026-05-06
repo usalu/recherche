@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Bestandsaufnahme; Urban Mining; Pre-Demolition-Audit; Bauteilwiederverwendung; Rückbauplanung; Materialkataster; digitale Gebäudedokumentation.

@@ -1,3 +1,7 @@
+---
+type: Kennwert
+---
+
 # Materialwert
 
 ## Verknüpfungen

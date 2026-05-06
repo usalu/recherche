@@ -1,3 +1,7 @@
+---
+type: Schadstoff
+---
+
 # Schadstoffe – Index
 
 ## Verknüpfungen

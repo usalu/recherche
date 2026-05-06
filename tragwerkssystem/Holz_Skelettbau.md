@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; Holzbau; Skelettbauweise; adaptive Tragwerke; reversible Konstruktion; biobasierte Baustoffe.

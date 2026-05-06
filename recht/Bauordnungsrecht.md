@@ -1,3 +1,7 @@
+---
+type: Recht
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** öffentliches Baurecht; Landesbauordnungen; Bauprodukte und Bauarten; Technische Baubestimmungen; Bauproduktrecht; Brandschutz, Standsicherheit, Schallschutz, Hygiene/Gesundheit/Umwelt, Barrierefreiheit, Wärmeschutz; Bauen im Bestand; zirkuläres Bauen.

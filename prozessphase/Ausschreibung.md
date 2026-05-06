@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Vergabe; Leistungsbeschreibung; Beschaffung wiederverwendeter Bauteile; Green Public Procurement; Qualitätssicherung; Nachweisführung; Risikoverteilung; Kreislaufwirtschaft.

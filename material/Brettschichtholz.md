@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Ingenieurholzbau; tragende Holzprodukte; lange Spannweiten; zirkulärer Hallenbau; demontierbare Tragwerke; Produktnachweise; Kaskadennutzung.

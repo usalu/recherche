@@ -1,7 +1,7 @@
 ---
 id:
 name: Evere
-type:
+type: Ort
 status: seed
 aliases: []
 tags: []

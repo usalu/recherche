@@ -1,3 +1,7 @@
+---
+type: Recht
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** öffentliche Beschaffung; Bauvergabe; nachhaltige Beschaffung; Kreislaufwirtschaft; Leistungsbeschreibung; Lebenszykluskosten; Eignungs- und Zuschlagskriterien; VOB/A; GWB; VgV; UVgO; EU-Vergaberecht.

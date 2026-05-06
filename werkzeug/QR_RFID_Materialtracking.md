@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Track & Trace, digitale Materialpässe, Bauteilidentifikation, QR-Code, RFID, NFC, Direct Product Marking, Lieferkette, Reuse-Logistik.

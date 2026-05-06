@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 # Materialien – Index
 
 ## Verknüpfungen

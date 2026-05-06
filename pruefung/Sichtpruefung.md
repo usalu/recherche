@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Erstaufnahme, Gebäudeerkundung, Schadensaufnahme, Bauteilinventar, Rückbauplanung, Vorselektion, Qualitätssicherung, Bauteilpass.

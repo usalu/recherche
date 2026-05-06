@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Primärtragwerk; vertikale Lastabtragung; Skelettbau; Holzbau; Stahlbau; Stahlbetonbau; Mauerwerk; Bauteilprüfung; Rückbauplanung; Bauproduktrecht; Brandschutz; Wiederverwendung tragender Bauteile.

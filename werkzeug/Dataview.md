@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Wissensmanagement; Markdown-Datenbank; Forschungsrepo; Metadaten; Abfragen; Obsidian-Workflow; Dokumentation.

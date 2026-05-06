@@ -1,3 +1,7 @@
+---
+type: Wirtschaft
+---
+
 # Wirtschaft – Index
 
 ## Verknüpfungen

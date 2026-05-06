@@ -1,3 +1,7 @@
+---
+type: Aufbereitungsmethode
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Aufbereitungsmethoden; Vorbereitung zur Wiederverwendung; Kreislaufwirtschaft; Bauteilprüfung; Werterhalt.

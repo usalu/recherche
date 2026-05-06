@@ -1,3 +1,7 @@
+---
+type: Verbindung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Verbindungstechnik; reversible Fügung; modulare Bauweisen; Holzbau; Stahlbau; Ausbau- und Fassadensysteme; Design for Disassembly; Bauteilwiederverwendung.

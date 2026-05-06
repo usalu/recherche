@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 # Dokumente – Index
 
 ## Verknüpfungen

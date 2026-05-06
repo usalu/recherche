@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** digitale Plattformen; zirkuläres Bauen; Urban Mining; Re-Use-Markt; Pre-Demolition Audit; Gebäuderessourcenpass; Materialvermittlung.

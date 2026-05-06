@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 # Methoden – Index
 
 ## Verknüpfungen

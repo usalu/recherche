@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Umbau statt Abriss; zirkuläres Bauen; Reallabor im Bestand; Mischnutzung; Holzaufstockung; reversible Innenausbauten; Materialpässe.

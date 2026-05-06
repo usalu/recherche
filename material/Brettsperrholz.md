@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Massivholzbau; flächige Holztragwerke; modulare Holzbauweise; Design for Disassembly; Gebäudepässe; zirkulärer Holzbau; Produktnormung.

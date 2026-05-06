@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Bauen im Bestand, Bestandsanalyse, technische Prüfung, Substanzerhalt, Tragfähigkeit, Dauerhaftigkeit, Schadensanalyse, Wiederverwendung tragender und nichttragender Bauteile.

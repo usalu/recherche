@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; Massivbau; Wandtragwerke; Bestandserhalt; Umbau; Bauteilwiederverwendung.

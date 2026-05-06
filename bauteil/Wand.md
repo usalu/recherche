@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen**

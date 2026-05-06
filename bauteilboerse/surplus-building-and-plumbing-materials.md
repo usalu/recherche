@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Surplus Building & Plumbing Materials
 
 ## Kurzbeschreibung

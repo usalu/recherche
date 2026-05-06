@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 - `../reuse_strategie/`: Urban Mining, direkte Wiederverwendung, selektiver Rückbau, Materialbank, Bauteilhandel, Reuse before Recycling.

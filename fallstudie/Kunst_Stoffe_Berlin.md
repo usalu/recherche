@@ -1,3 +1,7 @@
+---
+type: Fallstudie
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen**

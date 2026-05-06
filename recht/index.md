@@ -1,3 +1,7 @@
+---
+type: Recht
+---
+
 # Recht – Index
 
 ## Verknüpfungen

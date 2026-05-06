@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 # Maconda ROMULUS
 
 ## Verknüpfungen

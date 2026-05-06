@@ -1,3 +1,7 @@
+---
+type: Projekt
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Umbaukultur; Bauen im Bestand; Bestandserhalt vor Ersatzneubau; Reparatur, Sanierung, Erweiterung und Anpassung; zirkuläre Projektentwicklung.

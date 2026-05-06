@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** ReUse-Logistik; Zwischenlager; Materialbank; Bauteilbörse; Baustellenlogistik; Bestand als Lager; Urban Mining; Wert- und Qualitätserhalt.

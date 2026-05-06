@@ -1,3 +1,7 @@
+---
+type: Aufbereitungsmethode
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Aufbereitungsmethoden; technische Gebäudeausrüstung; Innenausbau; elektrische Sicherheit; Refurbishment als ReUse-Strategie.

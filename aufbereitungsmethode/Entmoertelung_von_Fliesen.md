@@ -1,3 +1,7 @@
+---
+type: Aufbereitungsmethode
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Aufbereitungsmethoden; Ausbau- und Sekundärbauteile; Boden- und Wandbeläge; selektiver Rückbau; Vorbereitung zur Wiederverwendung.

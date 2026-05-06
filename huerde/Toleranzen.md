@@ -1,4 +1,5 @@
 ---
+type: Hürde
 name: Toleranzen
 beziehungen:
  abbruchmethode: [betonfräsen]

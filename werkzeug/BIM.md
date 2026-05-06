@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** digitale Werkzeuge; Informationsmanagement; Gebäuderessourcenpass; Materialpass; zirkuläre Planung; Rückbauplanung; Bestandsaufnahme.

@@ -1,3 +1,7 @@
+---
+type: Verbindung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Verbindungstechnik; mechanische Verbindung; lösbare Verbindung; Tragwerksanschlüsse; Holzbau; Stahlbau; Modulbau; Fassadenbau; Design for Disassembly; Bauteilwiederverwendung.

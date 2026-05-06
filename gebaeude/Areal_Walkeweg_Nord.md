@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Entwerfen mit Bestand; Bauteilwiederverwendung im Neubau; sozialer Wohnungsbau; kommunale Arealentwicklung; ressourcenschonender Betonbau; Re-Use-Wettbewerbe.

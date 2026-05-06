@@ -1,7 +1,7 @@
 ---
 id:
 name: Fassade
-type:
+type: Bauteil
 status: seed
 aliases: []
 tags: []

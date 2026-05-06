@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; Bauen im Bestand; Nachverdichtung; Ressourcenschonung durch Bestandserhalt; leichte, vorgefertigte Tragwerke; Design for Disassembly.

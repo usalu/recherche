@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Bauteilladen Winterthur
 
 ## Kurzbeschreibung

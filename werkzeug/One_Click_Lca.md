@@ -1,4 +1,5 @@
 ---
+type: Werkzeug
 name: OneClickLCA
 homepage: https://oneclicklca.com
 beschreibung: One Click LCA ist ein Software-Ökosystem für Lebenszyklusanalysen (Life Cycle Assessment, LCA) und Umweltproduktdeklarationen (Environmental Product Declarations, EPD) im Bau- und Industriesektor.

@@ -1,3 +1,7 @@
+---
+type: Kennwert
+---
+
 # CO2-Einsparung
 
 ## Verknüpfungen

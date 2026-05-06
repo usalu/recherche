@@ -1,4 +1,5 @@
 ---
+type: Material
 title: Verbindungen im Verbundbau
 ---
 

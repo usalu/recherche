@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Vorbereitung zur Wiederverwendung; Qualitätssicherung; Remanufacturing; Reparatur; Reinigung; Sortierung; Bauproduktnachweis; Sekundärbauteilmarkt.

@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Prüfung; Sekundärstahl; Verbindungstechnik; Tragwerksplanung; Ausführungskontrolle; Materialwiederverwendung.

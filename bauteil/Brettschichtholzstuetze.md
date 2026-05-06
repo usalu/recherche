@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Primärtragwerk; Holzbau; Ingenieurholzbau; Stützen; wiederverwendbare lineare Bauteile; Design for Disassembly; Bauteilprüfung; Bauprodukt- und Bauordnungsrecht; Brandschutz im Holzbau.

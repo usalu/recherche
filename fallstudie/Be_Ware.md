@@ -1,3 +1,7 @@
+---
+type: Fallstudie
+---
+
 # B(e) Ware – Gebäudetragwerke aus Sekundärmaterialien Made in Berlin
 
 ## Verknüpfungen

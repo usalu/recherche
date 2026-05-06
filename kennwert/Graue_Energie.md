@@ -1,3 +1,7 @@
+---
+type: Kennwert
+---
+
 # Graue Energie
 
 ## Verknüpfungen

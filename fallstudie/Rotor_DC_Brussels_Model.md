@@ -1,7 +1,7 @@
 ---
 id:
 name: Rotor DC Brussels Model
-type:
+type: Fallstudie
 status: seed
 aliases: []
 tags: []

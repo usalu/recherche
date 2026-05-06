@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Leitfäden; Wiederverwendungspraxis; Materialblätter; Reclamation Audit; Beschaffung; FCRBE; zirkuläre Planung.

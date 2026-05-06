@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # re:store / HarvestMAP Vienna
 
 ## Kurzbeschreibung

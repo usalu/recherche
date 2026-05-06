@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** IFC-Verarbeitung, OpenBIM, Automatisierung, Datenextraktion, Geometrieauswertung, Materialpass-Datenpipelines.

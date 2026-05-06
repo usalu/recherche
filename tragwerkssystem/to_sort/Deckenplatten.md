@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 Strategischer Leitfaden zur Wiederverwendung von Deckentragwerken: Fertigdecken, Hohlkörper- und Spannbetonelemente
 
 1. Strategische Einordnung: Kreislaufwirtschaft im Sektor der Deckensysteme

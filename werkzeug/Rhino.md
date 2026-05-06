@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** parametrische Planung; Geometrie; digitale Entwurfswerkzeuge; Bestandserfassung; Bauteilvarianten; Design for Disassembly; Schnittstellen.

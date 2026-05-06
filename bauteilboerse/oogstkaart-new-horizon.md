@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Oogstkaart / New Horizon
 
 ## Kurzbeschreibung

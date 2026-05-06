@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Rückbauplanung, Arbeitsschutz, Gesundheitsschutz, Abfallrecht, Freigabe, Sanierung, Bauteilpass, Pre-Demolition-Audit, Risiko- und Kostenbewertung.

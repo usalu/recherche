@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # ReUse and Trade
 
 ## Kurzbeschreibung

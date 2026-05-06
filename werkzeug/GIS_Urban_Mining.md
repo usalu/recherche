@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Urban Mining, GIS, Materialkataster, Gebäudebestand, räumliche Materialflussanalyse, regionale Kreislaufwirtschaft, Rückbauprognose.

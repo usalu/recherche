@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 # Altes Hobelwerk, Winterthur
 
 ## Verknüpfungen

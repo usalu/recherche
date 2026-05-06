@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 - `../reuse_strategie/`: Direkte Wiederverwendung, selektiver Rückbau, Urban Mining, Recycling nach Wiederverwendung, Rücknahme- und Leasingmodelle.

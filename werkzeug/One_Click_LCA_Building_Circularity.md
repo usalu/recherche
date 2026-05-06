@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Building Circularity, LCA, zirkuläre Entwurfsbewertung, Design for Disassembly, Design for Adaptability, Materialwahl, End-of-Life-Szenarien.

@@ -1,3 +1,7 @@
+---
+type: Reuse-Strategie
+---
+
 # Weiterbauen im Bestand
 
 ## Verknüpfungen

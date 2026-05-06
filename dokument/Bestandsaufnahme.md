@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Bestandsanalyse, Bauen im Bestand, Datengrundlage, Gebäudedokumentation, Umbauplanung, Erhalt, Rückbauvorbereitung, Urban Mining.

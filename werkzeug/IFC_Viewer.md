@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** openBIM; IFC; Modellprüfung; Bestandsmodell; Datenqualität; Materialpass; Kollaboration.

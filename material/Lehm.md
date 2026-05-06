@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 # Lehm
 
 ## Verknüpfungen

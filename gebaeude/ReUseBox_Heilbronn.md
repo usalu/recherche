@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 # ReUseBox, Heilbronn
 
 ## Verknüpfungen

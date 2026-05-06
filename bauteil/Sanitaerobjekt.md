@@ -1,7 +1,7 @@
 ---
 id:
 name: Sanitaerobjekt
-type:
+type: Bauteil
 status: seed
 aliases: []
 tags: []

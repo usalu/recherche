@@ -1,3 +1,7 @@
+---
+type: Verbindung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Verbindungstechnik; stoffschlüssige Metallverbindung; Stahlbau; Metallbau; Tragwerksanschlüsse; Rückbauhemmnisse; Prüfung; Design for Disassembly; Wiederverwendung von Stahlbauteilen.

@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; Stahlbau; Skelettbauweise; Hallenbau; Bauteilwiederverwendung; Design for Disassembly.

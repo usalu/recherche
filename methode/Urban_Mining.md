@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Kreislaufwirtschaft; anthropogenes Lager; Sekundärrohstoffe; Materialkataster; Gebäudebestand; Stoffstrommanagement; Rohstoffsicherung; Bau- und Abbruchabfälle.

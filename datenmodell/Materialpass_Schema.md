@@ -1,3 +1,7 @@
+---
+type: Datenmodell
+---
+
 # Materialpass_Schema
 
 ## Verknüpfungen

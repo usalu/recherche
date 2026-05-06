@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Insert Marketplace
 
 ## Kurzbeschreibung

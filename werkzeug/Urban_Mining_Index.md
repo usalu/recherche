@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Urban Mining, Zirkularitätsbewertung, Recyclingpotenzial, Reuse-Potenzial, Materialflussanalyse, Entwurfsbewertung, Kreislaufgerechtes Bauen.

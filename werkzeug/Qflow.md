@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Baustellendaten, Materialflussmanagement, Abfallmanagement, Carbon Tracking, Lieferkettenkontrolle, Rückbau- und Neubauprozesse.

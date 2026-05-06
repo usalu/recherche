@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; Dächer; Fachwerke; weitgespannte Tragwerke; Rückbauplanung; Bauteilwiederverwendung.

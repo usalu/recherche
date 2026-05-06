@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 # RotorDC
 
 ## Verknüpfungen

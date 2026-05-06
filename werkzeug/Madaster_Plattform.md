@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Materialpass; Gebäuderessourcenpass; digitale Gebäudedaten; zirkuläre Bewertung; Portfolioanalyse; ESG; LCA; Restwert.

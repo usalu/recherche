@@ -1,3 +1,7 @@
+---
+type: Werkzeug
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Dateninfrastruktur; Ökobilanzierung; Materialpass; Produktdaten; LCA; zirkuläre Bewertung; Kennwerte.

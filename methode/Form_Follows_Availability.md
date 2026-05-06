@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 - `../reuse_strategie/`: Direkte Wiederverwendung, Urban Mining, Adaptive Reuse, Reuse before Recycling, Entwerfen aus Bestand, Bauteilwiederverwendung.

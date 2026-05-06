@@ -1,3 +1,7 @@
+---
+type: Fallstudie
+---
+
 # BIZH – Reallabor Zirkuläres Bauen / Drahtglasscheiben Halle 2
 
 ## Verknüpfungen

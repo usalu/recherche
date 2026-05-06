@@ -1,3 +1,7 @@
+---
+type: Tool
+---
+
 # MIRAKEL — Mixed Reality and AI for urban mining and reuse assessment
 
 ## Research positioning

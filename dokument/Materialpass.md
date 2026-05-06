@@ -1,3 +1,7 @@
+---
+type: Dokument
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Kreislauffähigkeit, Materialidentität, Gebäuderessourcenpass, digitaler Produktpass, Urban Mining, Rückverfolgbarkeit, Lebenszyklusdaten, Wiederverwendungsnachweis.

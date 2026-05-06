@@ -1,3 +1,7 @@
+---
+type: Recht
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Bauvertragsrecht; Werkvertragsrecht; Kaufrecht; VOB/B; Mängelrechte; Beschaffenheitsvereinbarung; Abnahme; anerkannte Regeln der Technik; Qualitätssicherung; Risikoverteilung.

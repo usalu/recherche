@@ -1,3 +1,7 @@
+---
+type: Gebäude
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Gewerbebestand als urbane Ressource; Re-Use-Logistik; Bauteilhandel; urban production; Kreislaufwirtschaft in Wirtschaftsgebieten; adaptive reuse von 1980er-Jahre-Gewerbebauten.

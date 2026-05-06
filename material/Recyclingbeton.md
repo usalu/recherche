@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Stoffliches Recycling mineralischer Bauabfälle; Ressourcenschonung; zirkuläre Baustoffproduktion; Abfallhierarchie; Betontechnologie; öffentliche Beschaffung; Urban Mining.

@@ -1,3 +1,7 @@
+---
+type: Förderprogramm
+---
+
 # Index
 
 ## Zweck

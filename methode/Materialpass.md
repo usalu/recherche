@@ -1,7 +1,7 @@
 ---
 id:
 name: Materialpass
-type:
+type: Methode
 status: seed
 aliases: []
 tags: []

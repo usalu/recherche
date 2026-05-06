@@ -1,3 +1,7 @@
+---
+type: Schadstoff
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Gebäudeschadstoffe; Innenraumhygiene; Schadstoffsanierung; selektiver Rückbau; Abfallrecht; ReUse-Freigabe und Materialpass.

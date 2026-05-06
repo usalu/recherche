@@ -1,3 +1,7 @@
+---
+type: Logistik
+---
+
 # ReUse Centre
 
 ## Verknüpfungen

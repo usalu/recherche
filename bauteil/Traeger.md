@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Primärtragwerk; horizontale Lastabtragung; lineare Bauteile; Holzbau; Stahlbau; Stahlbetonbau; Hybridbau; Bauteilwiederverwendung; Tragwerksprüfung; Design for Disassembly; Bauproduktrecht.

@@ -1,3 +1,7 @@
+---
+type: Bauteilbörse
+---
+
 # Cycle Up
 
 ## Kurzbeschreibung

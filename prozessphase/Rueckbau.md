@@ -1,3 +1,7 @@
+---
+type: Prozessphase
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** selektiver Rückbau; Urban Mining; Abfallvermeidung; Bauteilgewinnung; Arbeitsschutz; Schadstoffsanierung; Rückbauplanung; Ressourcensicherung.

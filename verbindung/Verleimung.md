@@ -1,3 +1,7 @@
+---
+type: Verbindung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Verbindungstechnik; stoffschlüssige Verbindungen; Holzbau; Ausbau; Fassadenbau; Verbundwerkstoffe; Rückbauhemmnisse; Schadstoff- und Materialtrennung; Design for Disassembly.

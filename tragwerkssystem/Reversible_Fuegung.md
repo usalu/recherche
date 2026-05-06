@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Tragwerkssysteme; Design for Disassembly; Verbindungstechnik; Rückbauplanung; Bauteilwiederverwendung; Reparaturfähigkeit.

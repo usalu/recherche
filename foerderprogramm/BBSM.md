@@ -1,3 +1,7 @@
+---
+type: Förderprogramm
+---
+
 # BBSM – Le Bâti Bruxellois, Source de nouveaux Matériaux
 
 ## Verknüpfungen

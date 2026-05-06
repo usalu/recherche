@@ -1,3 +1,7 @@
+---
+type: Schadstoff
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Gebäudeschadstoffe; Boden- und Belagsrückbau; Teerprodukte im Bestand; Arbeitsschutz; Abfallrecht; Innenraumhygiene; ReUse-Freigabe mineralischer, hölzerner und ausbautechnischer Bauteile.

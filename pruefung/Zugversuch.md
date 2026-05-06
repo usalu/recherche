@@ -1,3 +1,7 @@
+---
+type: Prüfung
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Prüfung; Materialkennwerte; Sekundärstahl; Verbindungsmittel; Tragfähigkeitsnachweis; Qualitätssicherung.

@@ -1,3 +1,7 @@
+---
+type: Methode
+---
+
 ## Verknüpfungen
 
 **Übergeordnete Themen:** Wiederverwendung; Bauteilbewertung; selektiver Rückbau; Qualitätssicherung; Kreislaufwirtschaft; Lebenszyklusbewertung; ReUse-Logistik.

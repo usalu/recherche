@@ -1,3 +1,7 @@
+---
+type: Material
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Biogene Baustoffe; Kaskadennutzung; Kohlenstoffspeicherung; Bestandserfassung; selektiver Rückbau; Schadstofferkundung; zirkulärer Holzbau.

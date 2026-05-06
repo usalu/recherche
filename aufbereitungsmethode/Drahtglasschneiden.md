@@ -1,4 +1,5 @@
 ---
+type: Aufbereitungsmethode
 name: Drahtglasschneiden
 homepage: https://www.bizh.berlin/reallaborzirkulaeresbauen
 beziehungen:

@@ -1,7 +1,7 @@
 ---
 id:
 name: Berlin Neukoelln
-type:
+type: Ort
 status: seed
 aliases: []
 tags: []

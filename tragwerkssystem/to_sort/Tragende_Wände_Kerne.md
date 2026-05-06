@@ -1,3 +1,7 @@
+---
+type: Tragwerkssystem
+---
+
 Strategischer Fachbericht: Tragende Wände und Kerne in der zirkulären Bauwirtschaft
 
 1. Einleitung: Die strategische Bedeutung der Bestandserhaltung und Wiederverwendung

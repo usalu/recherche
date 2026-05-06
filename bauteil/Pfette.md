@@ -1,3 +1,7 @@
+---
+type: Bauteil
+---
+
 ## Verknüpfungen
 
 - **Übergeordnete Themen:** Dachtragwerk; Sekundär- und Primärtragwerk; Holzbau; Stahlbau; lineare Bauteile; Rückbau und Bauteilgewinnung; Wiederverwendung von Dachbauteilen; Verbindungsmittel; Bauteilprüfung.
