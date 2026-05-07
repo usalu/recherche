@@ -2,7 +2,7 @@
 type: Bauteil
 material: ["[[material/Beton]]", "[[material/Brettschichtholz]]"]
 tragwerkssystem: ["[[tragwerkssystem/Skelettbauweise]]"]
-verwandt: ["[[bauteil/Brettschichtholzstuetze]]", "[[bauteil/Dachtragwerk]]", "[[bauteil/Fachwerktrager]]", "[[bauteil/Pfette]]", "[[bauteil/Traeger]]"]
+verwandt: ["[[bauteil/Brettschichtholzstuetze]]", "[[bauteil/Dachtragwerk]]", "[[bauteil/Fachwerktraeger]]", "[[bauteil/Pfette]]", "[[bauteil/Traeger]]"]
 ---
 
 ## Verknüpfungen

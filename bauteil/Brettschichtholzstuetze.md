@@ -1,6 +1,6 @@
 ---
 type: Bauteil
-verwandt: ["[[bauteil/Dachtragwerk]]", "[[bauteil/Fachwerktrager]]", "[[bauteil/Pfette]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
+verwandt: ["[[bauteil/Dachtragwerk]]", "[[bauteil/Fachwerktraeger]]", "[[bauteil/Pfette]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
 ---
 
 ## Verknüpfungen

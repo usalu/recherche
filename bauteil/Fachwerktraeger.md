@@ -1,5 +1,6 @@
 ---
 type: Bauteil
+material: ["[[material/Sekundaerstahl]]"]
 verwandt: ["[[bauteil/Brettschichtholzstuetze]]", "[[bauteil/Dachtragwerk]]", "[[bauteil/Pfette]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
 ---
 

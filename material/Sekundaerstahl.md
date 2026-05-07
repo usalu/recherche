@@ -1,6 +1,7 @@
 ---
 type: Material
 aufbereitungsmethode: ["[[aufbereitungsmethode/index]]"]
+bauteil: ["[[bauteil/Fachwerktraeger]]"]
 pruefung: ["[[pruefung/Brandnachweis]]", "[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]", "[[pruefung/Zugversuch]]"]
 verwandt: ["[[material/Beton]]", "[[material/Recyclingbeton]]"]
 ---

@@ -1173,5 +1173,3 @@ Der Material- und Gebäuderessourcenpass ist kein bürokratisches Add-on, sonder
 
 Die Bauwende benötigt diese digitale Transparenz, um den Wert von Materialien über den ersten Nutzungszyklus hinaus zu sichern. Standardisierte Qualitätssicherungsverfahren und eine klare gesetzliche Regelung von Haftungsfragen werden die nächsten Meilensteine sein, um die Wiederverwendung vom Pionierprojekt zum industriellen Standard zu führen. Digitale Transparenz ist die unverzichtbare Basis für die Zukunftsfähigkeit der Bauwirtschaft.
 
-
-
