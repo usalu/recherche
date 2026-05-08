@@ -1,6 +1,9 @@
 ---
 type: Material
 title: Verbindungen im Holzbau
+n_files: 12
+aliases_korpus: ["Holz", "Stahl, Holz, Stein, Glas, Recyclingmaterialien", "Dämmung, Betonblöcke, Holzrahmen", "Holz, Stroh, Lehm", "Holz, tropisches Hartholz / Pier decking", "Stahl, Beton, Holz, Glas, Ausbau-/TGA-Materialien", "Holz, Stroh, Erde, BTC, Granit, Gussradiatoren", "Ziegel / Mauerwerk", "Holz sekundär möglich", "Beton, Aluminium, Holz/Fensterrahmen, Metall, Plattenmaterial", "Holz, massive Holzbalken/Platten Verbiest", "Stahl, Holz, Polystyrol, Werbetafeln, weitere lokale Reststoffe"]
+verwendet_in_fallstudien: ["[[Gebäude/BOELL_LAB_Berlin]]", "[[Gebäude/BedZED_London_Hackbridge]]", "[[Gebäude/Bestandshalle_CRCLR_House]]", "[[Gebäude/Chiro_d_Itterbeek_Dilbeek]]", "[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/Hastings_Pier_Visitor_Centre]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/Resilience_La_Ferme_des_Possibles_Stains]]", "[[Gebäude/Resource_Rows_Copenhagen]]", "[[Gebäude/Superlocal_Expogebouw_Bleijerheide]]", "[[Gebäude/Verbiest_Karreveld_Brussels]]", "[[Gebäude/Villa_Welpeloo_Enschede]]"]
 ---
 
 ---

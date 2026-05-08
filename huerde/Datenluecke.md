@@ -1,6 +1,9 @@
 ---
 type: Hürde
 verwandt: ["[[huerde/Brandschutzkonflikt]]", "[[huerde/Fehlende_Datenstandards]]", "[[huerde/Logistikproblem]]"]
+n_files: 1
+aliases_korpus: ["Normen/Altgebäude/Materialprüfung"]
+verwendet_in_fallstudien: ["[[Gebäude/Lycee_Michel_Lucius_Conversion_Luxembourg]]"]
 ---
 
 ## Verknüpfungen

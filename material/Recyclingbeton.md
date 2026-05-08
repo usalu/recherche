@@ -1,6 +1,9 @@
 ---
 type: Material
 verwandt: ["[[material/Beton]]", "[[material/Sekundaerstahl]]"]
+n_files: 5
+aliases_korpus: ["Mauerwerkspuin / Abbruchschutt", "rezyklierter Beton-Zuschlag", "Recyclingbeton", "recycled/upcycled concrete from Copenhagen Metro", "Rezyklate"]
+verwendet_in_fallstudien: ["[[Gebäude/BOELL_LAB_Berlin]]", "[[Gebäude/BioPartner_5_Leiden_Oegstgeest]]", "[[Gebäude/Lycee_Michel_Lucius_Conversion_Luxembourg]]", "[[Gebäude/Recyclinghaus_Hannover]]", "[[Gebäude/Upcycle_Studios_Copenhagen]]"]
 ---
 
 ## Verknüpfungen

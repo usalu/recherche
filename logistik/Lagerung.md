@@ -5,6 +5,9 @@ huerde: ["[[huerde/Fehlende_Lagerflaeche]]", "[[huerde/Logistikproblem]]"]
 verwandt: ["[[logistik/Lagerflaeche]]", "[[logistik/Materialmatching]]", "[[logistik/ReUse_Centre]]", "[[logistik/Transport]]", "[[logistik/Zwischenlagerung]]"]
 werkzeug: ["[[werkzeug/Concular_Plattform]]", "[[werkzeug/Cycle_Up]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/QR_RFID_Materialtracking]]", "[[werkzeug/Restado]]", "[[werkzeug/Superyard]]"]
 wirtschaft: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Preisbildung]]", "[[wirtschaft/Restwert]]"]
+n_files: 4
+aliases_korpus: ["Vorausbeschaffung, Lagerung bei Cleveland", "Bauteiljäger*innen, Katalog, städtische Occasionslager", "Lagerung in Nivelles", "on-site storage / temporäres Materialdepot"]
+verwendet_in_fallstudien: ["[[Gebäude/55_Great_Suffolk_Street_London]]", "[[Gebäude/Kindergarten_Moeoeslistrasse_Manegg_Zuerich]]", "[[Gebäude/Recypark_Demets_Anderlecht]]", "[[Gebäude/Svanen_Kindergarten_Gladsaxe]]"]
 ---
 
 # Lagerung

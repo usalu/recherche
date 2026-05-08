@@ -1,5 +1,8 @@
 ---
 type: Reuse-Strategie
+n_files: 5
+aliases_korpus: ["Reuse von Stahlrohren / stockholder procurement", "Abfall als Ressource / on-site reuse / living lab", "adaptive reuse + partielle Bauteil-/Materialwiederverwendung", "on-site selective deconstruction and reuse", "Upcycling / reuse of existing materials"]
+verwendet_in_fallstudien: ["[[Gebäude/Brent_Cross_Town_Primary_Substation_London]]", "[[Gebäude/Brighton_Waste_House_Brighton]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/Lycee_Michel_Lucius_Conversion_Luxembourg]]", "[[Gebäude/Upcycle_Studios_Copenhagen]]"]
 ---
 
 # Adaptives ReUse

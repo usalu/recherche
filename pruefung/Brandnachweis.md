@@ -5,6 +5,9 @@ material: ["[[material/Glas]]", "[[material/Holz]]", "[[material/Sekundaerstahl]
 norm: ["[[norm/Brandschutzanforderung]]", "[[norm/F90]]", "[[norm/Feuerwiderstand]]", "[[norm/R90]]", "[[norm/REI90]]", "[[norm/index]]"]
 tragwerkssystem: ["[[tragwerkssystem/Holztragwerk]]"]
 verwandt: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Eignungspruefung_Baulehm]]", "[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
+n_files: 2
+aliases_korpus: ["fire testing, acoustics, insurance, vibration performance at scale", "Full-scale fire tests / DBI-Tests"]
+verwendet_in_fallstudien: ["[[Gebäude/TRAE_High_Rise_Aarhus]]", "[[Gebäude/Timber_Square_London]]"]
 ---
 
 ## Verknüpfungen

@@ -3,6 +3,9 @@ type: Material
 gebaeude: ["[[gebaeude/K118_Kopfbau_Halle_118_Winterthur]]"]
 leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Waermeschutz]]"]
 verwandt: ["[[material/Holz]]", "[[material/Lehm]]"]
+n_files: 8
+aliases_korpus: ["Hanfkalksteine, Lehm, Akustikbaffeln, Teppich", "Holz, Stroh, Lehm", "Holz, Stroh, Hanf-Kalk, Naturputz", "Jutedämmung aus Kakaosäcken", "Holz, Stroh, Erde, BTC, Granit, Gussradiatoren", "PET-Filz, Textilien, Papiergranulat, Hanf/Seegras", "Hanf", "Strohplatten", "Stroh"]
+verwendet_in_fallstudien: ["[[Gebäude/AWM_Muenster_Circular_Office]]", "[[Gebäude/Bestandshalle_CRCLR_House]]", "[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]", "[[Gebäude/Maison_Vignette_Auderghem]]", "[[Gebäude/Recyclinghaus_Hannover]]", "[[Gebäude/Resilience_La_Ferme_des_Possibles_Stains]]", "[[Gebäude/TRAE_High_Rise_Aarhus]]"]
 ---
 
 # Stroh

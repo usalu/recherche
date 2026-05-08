@@ -4,6 +4,9 @@ gebaeude: ["[[gebaeude/Altes_Hobelwerk_Winterthur]]", "[[gebaeude/BOELL_LAB_Berl
 reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]", "[[reuse_strategie/Weiterbauen_im_Bestand]]"]
 tragwerkssystem: ["[[tragwerkssystem/index]]"]
 werkzeug: ["[[werkzeug/Bonsai_BlenderBIM]]", "[[werkzeug/DGNB_Gebaeuderessourcenpass]]", "[[werkzeug/Library_of_Reuse]]", "[[werkzeug/One_Click_LCA_Building_Circularity]]", "[[werkzeug/RotorDB]]", "[[werkzeug/Urban_Mining_Index]]"]
+n_files: 10
+aliases_korpus: ["Design_for_Disassembly", "Kit-of-parts, demontierbare modulare Struktur", "Design for Disassembly", "Circular Design / Materialwiederverwendung / adaptive reuse", "Co-design / Co-execution mit technischer Crew"]
+verwendet_in_fallstudien: ["[[Gebäude/Altes_Hobelwerk_Winterthur]]", "[[Gebäude/BOELL_LAB_Berlin]]", "[[Gebäude/Bestandshalle_CRCLR_House]]", "[[Gebäude/CascadeUp_London_secondary_timber_glulam_demonstrator]]", "[[Gebäude/Hobelwerk_Haus_D_Oberwinterthur]]", "[[Gebäude/Impact_Hub_Berlin_CRCLR_Fitout]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/LysP8_Basel_Lysbuechelareal]]", "[[Gebäude/ReUseBox_Heilbronn]]", "[[Gebäude/Zinneke_Feder_Masui4ever_Brussels]]"]
 ---
 
 ## Verknüpfungen

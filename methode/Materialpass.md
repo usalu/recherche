@@ -30,6 +30,9 @@ gebaeude: ["[[gebaeude/Bestandshalle_CRCLR_House]]"]
 ort: ["[[ort/Barcelona]]", "[[ort/Europa]]", "[[ort/Scwheiz]]"]
 reuse_strategie: ["[[reuse_strategie/Design_for_Disassembly]]", "[[reuse_strategie/Direkte_Wiederverwendung]]", "[[reuse_strategie/Refurbishment]]", "[[reuse_strategie/Umnutzung]]"]
 verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialinventur]]", "[[methode/ReUse_Assessment]]", "[[methode/Reversibilitaet]]", "[[methode/Urban_Mining]]"]
+n_files: 1
+aliases_korpus: ["Materialpass"]
+verwendet_in_fallstudien: ["[[Gebäude/Bestandshalle_CRCLR_House]]"]
 ---
 
 # Materialpass

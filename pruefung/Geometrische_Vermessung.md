@@ -1,6 +1,9 @@
 ---
 type: Prüfung
 verwandt: ["[[pruefung/Zustandsbewertung]]"]
+n_files: 1
+aliases_korpus: ["Vermessung, Inventarisierung, Katalogisierung"]
+verwendet_in_fallstudien: ["[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]"]
 ---
 
 ## Verknüpfungen

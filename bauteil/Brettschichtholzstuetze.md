@@ -1,6 +1,9 @@
 ---
 type: Bauteil
 verwandt: ["[[bauteil/Dachtragwerk]]", "[[bauteil/Fachwerktraeger]]", "[[bauteil/Pfette]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
+n_files: 3
+aliases_korpus: ["Holzpfetten / Holzstücke", "Brettschichtholzbögen / glulam arches", "Holz-Dachspanten / Brettschichtholz-Kniespanten"]
+verwendet_in_fallstudien: ["[[Gebäude/Grande_Halle_de_Colombelles]]", "[[Gebäude/Recypark_Demets_Anderlecht]]", "[[Gebäude/Woongroep_Boschgaard_Den_Bosch]]"]
 ---
 
 ## Verknüpfungen

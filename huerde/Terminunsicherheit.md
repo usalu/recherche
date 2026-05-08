@@ -2,6 +2,9 @@
 type: Hürde
 logistik: ["[[logistik/Zwischenlagerung]]"]
 verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Gewaehrleistung]]", "[[huerde/Haftung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Verfuegbarkeitsproblem]]"]
+n_files: 4
+aliases_korpus: ["Verfügbarkeit passender Profile", "lange Vorlaufzeiten", "gebogene Profile nicht reused", "Budgetverschiebung nach Sturmschäden", "enger Zeitplan", "Marktilliquidität / Timing / Zertifizierung"]
+verwendet_in_fallstudien: ["[[Gebäude/BedZED_London_Hackbridge]]", "[[Gebäude/Hastings_Pier_Visitor_Centre]]", "[[Gebäude/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki]]", "[[Gebäude/Roots_in_the_Sky_Blackfriars_Crown_Court]]"]
 ---
 
 # Terminunsicherheit

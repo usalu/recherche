@@ -3,6 +3,9 @@ type: Prüfung
 aufbereitungsmethode: ["[[aufbereitungsmethode/Entmoertelung_von_Fliesen]]", "[[aufbereitungsmethode/Qualitaetssicherung]]"]
 material: ["[[material/Glas]]", "[[material/Keramik]]", "[[material/Sanitarkeramik]]"]
 verwandt: ["[[pruefung/Zustandsbewertung]]"]
+n_files: 1
+aliases_korpus: ["Sichtprüfung, Herstellungsdatum, Zustand, vorhandene Verbindungen, Fabrikationseignung"]
+verwendet_in_fallstudien: ["[[Gebäude/BedZED_London_Hackbridge]]"]
 ---
 
 ## Verknüpfungen

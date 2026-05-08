@@ -5,6 +5,9 @@ pruefung: ["[[pruefung/Zustandsbewertung]]"]
 reuse_strategie: ["[[reuse_strategie/Direkte_Wiederverwendung]]"]
 tragwerkssystem: ["[[tragwerkssystem/Betonfertigteil_System]]"]
 verwandt: ["[[bauteil/Deckenplatte]]", "[[bauteil/Wand]]"]
+n_files: 6
+aliases_korpus: ["279 Betonfertigteile + 159 WBS70-Paneele", "Betonfertigteil-Paneele", "50 Deckenplatten", "13 WBS70-Betonfertigteile, v. a. Wand- und Deckenelemente", "TT-Decken / Betondecken", "ReUse_Betonfertigteile"]
+verwendet_in_fallstudien: ["[[Gebäude/Areal_Walkeweg_Nord]]", "[[Gebäude/Association_house_Groeditz]]", "[[Gebäude/Bestandverplanzung_Pavilion_Muenchen]]", "[[Gebäude/Broethen_Twin_House_Hoyerswerda]]", "[[Gebäude/Plattenpalast_Berlin]]", "[[Gebäude/Thoravej_29_Copenhagen]]"]
 ---
 
 ## Verknüpfungen

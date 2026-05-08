@@ -4,6 +4,9 @@ material: ["[[material/Holz]]", "[[material/Stahl]]"]
 norm: ["[[norm/Brandschutzanforderung]]", "[[norm/F90]]", "[[norm/Feuerwiderstand]]", "[[norm/R90]]", "[[norm/REI90]]"]
 recht: ["[[recht/Bauordnungsrecht]]"]
 verwandt: ["[[huerde/Ausschreibungsproblem]]", "[[huerde/Datenluecke]]"]
+n_files: 4
+aliases_korpus: ["Bauvorschriften / Dauerhaftigkeit", "Zulassung / Brandschutz / Anforderungen", "Reuse-Ziegel und Energieanforderungen", "Bauphysik, Schall, Ausführung"]
+verwendet_in_fallstudien: ["[[Gebäude/Brighton_Waste_House_Brighton]]", "[[Gebäude/Impact_Hub_Berlin_CRCLR_Fitout]]", "[[Gebäude/Maison_DnA_Asse]]", "[[Gebäude/Woongroep_Boschgaard_Den_Bosch]]"]
 ---
 
 ## Verknüpfungen

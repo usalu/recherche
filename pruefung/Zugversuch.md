@@ -3,6 +3,9 @@ type: Prüfung
 leistungsanforderung: ["[[leistungsanforderung/Tragfaehigkeit]]"]
 material: ["[[material/Sekundaerstahl]]"]
 verwandt: ["[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
+n_files: 4
+aliases_korpus: ["Festigkeitstests / Belastungs-, Schneid-, Bohrversuche im IEMB-Kontext", "Belastungs-/Festigkeitsprüfung allgemein im IEMB-Kontext", "Zugversuche, chemische Analyse, Schweißbarkeit, Korrosionsschutz", "Zugversuche / chemische Analysen für Stahl"]
+verwendet_in_fallstudien: ["[[Gebäude/Berlin_Schildow_Pilot_House]]", "[[Gebäude/Berlin_Schildow_Pilot_House_2]]", "[[Gebäude/CRCLR_House_Impact_Hub_Berlin]]", "[[Gebäude/Impact_Hub_Berlin_CRCLR_Fitout]]"]
 ---
 
 ## Verknüpfungen

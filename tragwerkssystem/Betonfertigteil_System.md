@@ -2,6 +2,9 @@
 type: Tragwerkssystem
 bauteil: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Wand]]"]
 verwandt: ["[[tragwerkssystem/Design_for_Disassembly]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]", "[[tragwerkssystem/Tragende_Wand]]"]
+n_files: 7
+aliases_korpus: ["Stützen_Träger_System", "Fertigteil-Wand-/Deckensystem", "Plattenbau-/Wandbau-System mit Fertigteilplatten", "modulares, demontier- und wieder zusammensetzbares System", "bestehendes Stahlstützensystem + donor HCS/Steel", "demontables Stahlrahmen-System aus galvanisierten Profilen"]
+verwendet_in_fallstudien: ["[[Gebäude/Areal_Walkeweg_Nord]]", "[[Gebäude/Association_house_Groeditz]]", "[[Gebäude/Association_house_Plauen]]", "[[Gebäude/Christ_Pavilion_Volkenroda]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]", "[[Gebäude/Lysbuechel_Parkhaus]]", "[[Gebäude/The_Green_House_Utrecht]]"]
 ---
 
 ## Verknüpfungen

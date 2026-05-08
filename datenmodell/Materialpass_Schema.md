@@ -2,6 +2,9 @@
 type: Datenmodell
 verwandt: ["[[datenmodell/Bauteil_ID]]", "[[datenmodell/IFC]]", "[[datenmodell/Klassifikation]]", "[[datenmodell/Ontologie]]", "[[datenmodell/Taxonomie]]"]
 werkzeug: ["[[werkzeug/BIM]]", "[[werkzeug/Concular_Plattform]]", "[[werkzeug/Dataview]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Materialdatenbank]]"]
+n_files: 2
+aliases_korpus: ["Material Passport / Turntoo/Madaster-Kontext möglich", "Madaster Material Passport / Building Circularity Passport"]
+verwendet_in_fallstudien: ["[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/Multi_Brussels_Reuse_in_MULTI]]"]
 ---
 
 # Materialpass_Schema

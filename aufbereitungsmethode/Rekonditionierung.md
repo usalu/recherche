@@ -3,6 +3,9 @@ type: Aufbereitungsmethode
 bauteil: ["[[bauteil/Fenster]]"]
 reuse_strategie: ["[[reuse_strategie/Refurbishment]]"]
 verwandt: ["[[aufbereitungsmethode/Qualitaetssicherung]]", "[[aufbereitungsmethode/Reparatur]]"]
+n_files: 4
+aliases_korpus: ["abschleifen, restaurieren, lackieren, in Edelstahlrahmen setzen", "Prüfung, Verstärkung, Anpassung, Verdopplung einzelner Bögen", "möglichst ohne Bearbeitung", "Repair/Remanufacturing als Lehre", "geringe Veränderung / Anpassung", "Fassadenreserve angelegt"]
+verwendet_in_fallstudien: ["[[Gebäude/Europa_Building_Brussels]]", "[[Gebäude/Recypark_Demets_Anderlecht]]", "[[Gebäude/Superlocal_Expogebouw_Bleijerheide]]", "[[Gebäude/Villa_Welpeloo_Enschede]]"]
 ---
 
 ## Verknüpfungen

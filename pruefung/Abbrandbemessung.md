@@ -4,6 +4,9 @@ leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanfor
 material: ["[[material/Brettschichtholz]]", "[[material/Brettsperrholz]]", "[[material/Holz]]"]
 tragwerkssystem: ["[[tragwerkssystem/Holztragwerk]]"]
 verwandt: ["[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
+n_files: 2
+aliases_korpus: ["fire testing, acoustics, insurance, vibration performance at scale", "Full-scale fire tests / DBI-Tests"]
+verwendet_in_fallstudien: ["[[Gebäude/TRAE_High_Rise_Aarhus]]", "[[Gebäude/Timber_Square_London]]"]
 ---
 
 ## Verknüpfungen

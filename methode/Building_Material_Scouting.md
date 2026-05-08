@@ -1,5 +1,8 @@
 ---
 type: Methode
+n_files: 12
+aliases_korpus: ["Bauteiljagd", "Bauteilernte", "Relocate and reuse/recycle infrastructural materials as building components", "Materialjagd, Materialpässe, reversible Fügung, sichtbare TGA", "Materialsammlung vor/parallel zur Planung", "Materialenpaspoort", "Bauteiljagd / component hunting", "Circular Design / Materialwiederverwendung / adaptive reuse", "Materiallager"]
+verwendet_in_fallstudien: ["[[Gebäude/Big_Dig_Building_Boston]]", "[[Gebäude/CRCLR_House_Impact_Hub_Berlin]]", "[[Gebäude/Da_Vinci_Business_District]]", "[[Gebäude/ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal]]", "[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/Hobelwerk_Haus_D_Oberwinterthur]]", "[[Gebäude/Jeugdkliniek_Ithaka_Emergis_Kloetinge]]", "[[Gebäude/Juch_Areal_Recyclingzentrum_Zuerich]]", "[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/LysP8_Basel_Lysbuechelareal]]", "[[Gebäude/Recyclinghaus_Hannover]]"]
 ---
 
 ## Verknüpfungen

@@ -3,6 +3,9 @@ type: Kennwert
 dokument: ["[[dokument/LCA]]"]
 methode: ["[[methode/ReUse_Assessment]]"]
 verwandt: ["[[kennwert/CO2_Einsparung]]", "[[kennwert/Demontagegrad]]", "[[kennwert/Graue_Energie]]", "[[kennwert/Materialwert]]"]
+n_files: 1
+aliases_korpus: ["14 % Wiederverwendungsrate nach Gewicht", "41 % Wiederverwendungsrate nach Volumen"]
+verwendet_in_fallstudien: ["[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]"]
 ---
 
 # Wiederverwendungsquote

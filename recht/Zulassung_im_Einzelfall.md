@@ -3,6 +3,9 @@ type: Recht
 leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]"]
 pruefung: ["[[pruefung/Materialpruefung]]"]
 verwandt: ["[[recht/Bauordnungsrecht]]", "[[recht/Gewaehrleistung]]", "[[recht/Produkthaftung]]"]
+n_files: 1
+aliases_korpus: ["Bauordnung/Zulassung"]
+verwendet_in_fallstudien: ["[[Gebäude/Recyclinghaus_Hannover]]"]
 ---
 
 ## Verknüpfungen

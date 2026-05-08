@@ -6,6 +6,9 @@ leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanfor
 pruefung: ["[[pruefung/Sichtpruefung]]"]
 schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/PAK]]"]
 verwandt: ["[[material/Lehm]]", "[[material/Sanitarkeramik]]"]
+n_files: 2
+aliases_korpus: ["Glas- und Keramikscherben", "Holz, Fliesen/Keramik, Metall, Sanitärkeramik, Textil/Beläge"]
+verwendet_in_fallstudien: ["[[Gebäude/Kamikatsu_Zero_Waste_Center_Hotel_WHY]]", "[[Gebäude/Maison_des_Canaux_Paris]]"]
 ---
 
 # Keramik

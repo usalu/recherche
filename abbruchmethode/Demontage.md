@@ -2,6 +2,9 @@
 type: Abbruchmethode
 prozessphase: ["[[prozessphase/Rueckbau]]"]
 verwandt: ["[[abbruchmethode/Ausbau_von_Bauteilen]]", "[[abbruchmethode/Selektiver_Rueckbau]]", "[[abbruchmethode/Zerstoerungsarme_Bergung]]"]
+n_files: 8
+aliases_korpus: ["Deconstruction / Demolition donor site 1 Broadgate", "Demontage / demolition of I-93 elevated highway components", "Deconstruction statt demolition", "keine Gebäudedemontage", "zirkuläre Demontage / remolition", "careful deconstruction / Demontage statt Schrott", "sorgfältige Demontage der Reithalle", "selektive Demontage / Heraussägen / Herausheben"]
+verwendet_in_fallstudien: ["[[Gebäude/55_Great_Suffolk_Street_London]]", "[[Gebäude/Big_Dig_House_Lexington_Massachusetts]]", "[[Gebäude/Boulder_Fire_Station_3]]", "[[Gebäude/Brent_Cross_Town_Primary_Substation_London]]", "[[Gebäude/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot]]", "[[Gebäude/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain]]", "[[Gebäude/Recypark_Demets_Anderlecht]]", "[[Gebäude/Superlocal_Expogebouw_Bleijerheide]]"]
 ---
 
 ## Verknüpfungen

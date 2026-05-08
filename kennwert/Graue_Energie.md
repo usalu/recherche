@@ -3,6 +3,9 @@ type: Kennwert
 dokument: ["[[dokument/LCA]]"]
 methode: ["[[methode/ReUse_Assessment]]"]
 verwandt: ["[[kennwert/CO2_Einsparung]]", "[[kennwert/Demontagegrad]]", "[[kennwert/Materialwert]]", "[[kennwert/Wiederverwendungsquote]]"]
+n_files: 5
+aliases_korpus: ["248 kg CO₂-eq/m² embodied carbon", "ca. 40 % Reduktion embodied carbon", "ca. 30 % graue THG-Einsparung", "BREEAM / Energiekennwerte publiziert, Direct-Reuse-Mengen unbekannt", "75.4 % embodied carbon reduction", "30–50% embodied-carbon reduction"]
+verwendet_in_fallstudien: ["[[Gebäude/BioPartner_5_Leiden_Oegstgeest]]", "[[Gebäude/Kindergarten_Moeoeslistrasse_Manegg_Zuerich]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/PLP_London_HQ_Circular_Studio_Fitout]]", "[[Gebäude/TRAE_High_Rise_Aarhus]]"]
 ---
 
 # Graue Energie

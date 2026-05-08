@@ -2,6 +2,9 @@
 type: Prozessphase
 abbruchmethode: ["[[abbruchmethode/Ausbau_von_Bauteilen]]", "[[abbruchmethode/Demontage]]", "[[abbruchmethode/Selektiver_Rueckbau]]", "[[abbruchmethode/Zerstoerungsarme_Bergung]]"]
 verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Ausschreibung]]", "[[prozessphase/Bestandserfassung]]", "[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Transport]]"]
+n_files: 5
+aliases_korpus: ["Rückbau, Transport, Wiedereinbau", "Rückbau Herbst 2023, Einbau Oktober/Herbst 2024", "Umbau, Rückbau, Aufbereitung, Wiedereinbau", "Rückbau 2023, Refurbishment, Einbau 2025", "Materialinventar / selektiver Rückbau"]
+verwendet_in_fallstudien: ["[[Gebäude/Bestandverplanzung_Pavilion_Muenchen]]", "[[Gebäude/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]", "[[Gebäude/Lokomotion_Technology_Centre_mini_pilot_Tampere]]", "[[Gebäude/Lycee_Michel_Lucius_Conversion_Luxembourg]]"]
 ---
 
 ## Verknüpfungen

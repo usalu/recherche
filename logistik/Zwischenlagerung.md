@@ -3,6 +3,9 @@ type: Logistik
 fallstudie: ["[[fallstudie/CRCLR_House]]", "[[fallstudie/Haus_der_Materialisierung]]", "[[fallstudie/Opalis]]"]
 huerde: ["[[huerde/Gewaehrleistung]]", "[[huerde/Terminunsicherheit]]"]
 verwandt: ["[[logistik/Lagerflaeche]]", "[[logistik/Lagerung]]", "[[logistik/Materialmatching]]", "[[logistik/Materialverfuegbarkeit]]", "[[logistik/ReUse_Centre]]", "[[logistik/Transport]]"]
+n_files: 2
+aliases_korpus: ["Bauteiljäger*innen, Katalog, städtische Occasionslager", "on-site storage / temporäres Materialdepot"]
+verwendet_in_fallstudien: ["[[Gebäude/Kindergarten_Moeoeslistrasse_Manegg_Zuerich]]", "[[Gebäude/Svanen_Kindergarten_Gladsaxe]]"]
 ---
 
 # Zwischenlagerung

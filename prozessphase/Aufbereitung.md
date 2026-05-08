@@ -2,6 +2,9 @@
 type: Prozessphase
 aufbereitungsmethode: ["[[aufbereitungsmethode/Reparatur]]"]
 verwandt: ["[[prozessphase/Ausschreibung]]", "[[prozessphase/Bestandserfassung]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Rueckbau]]", "[[prozessphase/Transport]]", "[[prozessphase/Wiedereinbau]]"]
+n_files: 1
+aliases_korpus: ["Umbau, Rückbau, Aufbereitung, Wiedereinbau"]
+verwendet_in_fallstudien: ["[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]"]
 ---
 
 ## Verknüpfungen

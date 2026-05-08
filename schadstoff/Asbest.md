@@ -5,6 +5,9 @@ leistungsanforderung: ["[[leistungsanforderung/Schadstofffreiheit]]"]
 material: ["[[material/Glas]]", "[[material/Keramik]]", "[[material/Lehm]]", "[[material/Sanitarkeramik]]"]
 pruefung: ["[[pruefung/Schadstoffscreening]]"]
 verwandt: ["[[schadstoff/PAK]]", "[[schadstoff/PCB]]"]
+n_files: 1
+aliases_korpus: ["Asbest in Fensterrahmen"]
+verwendet_in_fallstudien: ["[[Gebäude/Superlocal_Expogebouw_Bleijerheide]]"]
 ---
 
 ## Verknüpfungen

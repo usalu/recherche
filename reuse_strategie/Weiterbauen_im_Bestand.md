@@ -2,6 +2,9 @@
 type: Reuse-Strategie
 methode: ["[[methode/Design_for_Disassembly]]"]
 projekt: ["[[projekt/Aufstockung]]"]
+n_files: 3
+aliases_korpus: ["Donorskelet / ex-situ structural reuse", "Ex-situ steel reuse + in-project self-reuse", "Großmaßstäbliche Bauteilwiederverwendung + Transformation"]
+verwendet_in_fallstudien: ["[[Gebäude/BioPartner_5_Leiden_Oegstgeest]]", "[[Gebäude/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]"]
 ---
 
 # Weiterbauen im Bestand

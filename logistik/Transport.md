@@ -5,6 +5,9 @@ huerde: ["[[huerde/Fehlende_Lagerflaeche]]", "[[huerde/Logistikproblem]]"]
 verwandt: ["[[logistik/Lagerflaeche]]", "[[logistik/Lagerung]]", "[[logistik/Materialmatching]]", "[[logistik/Materialverfuegbarkeit]]", "[[logistik/ReUse_Centre]]", "[[logistik/Zwischenlagerung]]"]
 werkzeug: ["[[werkzeug/Excess_Materials_Exchange]]", "[[werkzeug/Globechain]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/QR_RFID_Materialtracking]]", "[[werkzeug/RotorDC]]", "[[werkzeug/Superyard]]"]
 wirtschaft: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Preisbildung]]"]
+n_files: 7
+aliases_korpus: ["ca. 2,5 km Transportdistanz", "ca. 7 km Transportdistanz", "ca. 33 km Distanz", "Transport per Tieflader/Kran im Pressekontext", "Tieflader, Kran, just-in-time-Anlieferung", "33 km laut PRECS", "Transport von Big Dig Bauteilen nach Lexington", "Tieflader", "30 km von Leinefelde nach Mühlhausen", "Rückbau, Zuschnitt, Transport, Montage von Modulen"]
+verwendet_in_fallstudien: ["[[Gebäude/Association_house_Groeditz]]", "[[Gebäude/Association_house_Plauen]]", "[[Gebäude/Berlin_Schildow_Pilot_House]]", "[[Gebäude/Berlin_Schildow_Pilot_House_2]]", "[[Gebäude/Big_Dig_House_Lexington_Massachusetts]]", "[[Gebäude/Haus_HOS_Mehrfamilienhaus_Muehlhausen]]", "[[Gebäude/Resource_Rows_Copenhagen]]"]
 ---
 
 # Transport

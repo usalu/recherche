@@ -1,6 +1,9 @@
 ---
 type: Methode
 verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialpass]]", "[[methode/ReUse_Assessment]]", "[[methode/Reversibilitaet]]", "[[methode/Urban_Mining]]"]
+n_files: 4
+aliases_korpus: ["harvesting / Oogstkaart-Logik", "Material mapping vor Abbruch", "Harvest Map / Materialscouting", "Bauteilpass"]
+verwendet_in_fallstudien: ["[[Gebäude/BlueCity_Offices_Rotterdam]]", "[[Gebäude/ReUseBox_Heilbronn]]", "[[Gebäude/Svanen_Kindergarten_Gladsaxe]]", "[[Gebäude/Villa_Welpeloo_Enschede]]"]
 ---
 
 ## Verknüpfungen

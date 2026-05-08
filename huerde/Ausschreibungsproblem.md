@@ -2,6 +2,9 @@
 type: Hürde
 recht: ["[[recht/Vergaberecht]]"]
 verwandt: ["[[huerde/Brandschutzkonflikt]]", "[[huerde/Fehlende_Datenstandards]]", "[[huerde/Logistikproblem]]"]
+n_files: 3
+aliases_korpus: ["öffentliche Ausschreibung und Bauordnung nicht angepasst", "nachhaltiger Rückbau als neuer Ausschreibungsprozess", "öffentliche Beschaffung vs. Wiederverwendungsflexibilität"]
+verwendet_in_fallstudien: ["[[Gebäude/Recypark_Demets_Anderlecht]]", "[[Gebäude/Svanen_Kindergarten_Gladsaxe]]", "[[Gebäude/Zinneke_Feder_Masui4ever_Brussels]]"]
 ---
 
 ## Verknüpfungen

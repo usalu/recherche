@@ -238,37 +238,40 @@ def parse_number(s: str) -> float | None:
     except ValueError:
         return None
 
-# Kennwert-Routing: (unit_match, context_keywords, target_node)
+# Kennwert-Routing: (unit_match, context_keywords, target_user_knoten)
+# Targets sind User-Knoten aus kennwert/-Ordner. Auto-Kennwerte (Bauzeit etc.)
+# werden in Schritt I als neue User-Knoten ergänzt — bis dahin Datenluecke.
 KENNWERT_ROUTING = [
-    ("%", ["co2", "treibhausgas", "embodied"], "CO2_Reduktion_prozent"),
-    ("%", ["gewicht", "weight", "kg-rate", "kg rate"], "Wiederverwendungsrate_Gewicht"),
-    ("%", ["volumen", "volume", "m3"], "Wiederverwendungsrate_Volumen"),
-    ("%", ["kosten", "cost", "saving"], "Kostenersparnis_prozent"),
-    ("%", ["wiederverwend", "reuse"], "Wiederverwendungsrate_Gewicht"),
-    ("t", ["co2", "treibhausgas"], "CO2_Reduktion_absolut"),
-    ("t", ["primaer", "primary"], "Eingespartes_Primaermaterial"),
-    ("t", ["wiederverwend", "reused", "reclaim", "salvaged", "stahl", "steel", "beton", "holz"], "Wiederverwendete_Masse"),
-    ("kg", ["co2"], "CO2_Reduktion_absolut"),
-    ("kg", ["wiederverwend", "reused"], "Wiederverwendete_Masse"),
-    ("kgco2e", [], "Embodied_Carbon"),
-    ("kgco2", [], "Embodied_Carbon"),
-    ("m2", ["flaeche", "fläche", "area", "embodied"], "Embodied_Carbon"),
-    ("m3", ["volumen", "volume"], "Wiederverwendungsrate_Volumen"),
-    ("km", ["transport", "distanz", "distance", "haul"], "Transportdistanz"),
-    ("m", ["transport", "distanz"], "Transportdistanz"),
-    ("eur", [], "Kosten_absolut"),
-    ("euro", [], "Kosten_absolut"),
-    ("chf", [], "Kosten_absolut"),
-    ("gbp", [], "Kosten_absolut"),
-    ("pfund", [], "Kosten_absolut"),
-    ("jahre", ["lebensdauer", "service life"], "Lebensdauer_Jahre"),
-    ("years", ["service life", "lifetime"], "Lebensdauer_Jahre"),
-    ("monate", ["bauzeit", "construction"], "Bauzeit"),
-    ("months", ["construction", "build"], "Bauzeit"),
-    ("stk", ["bauteil", "fertigteil", "elemente", "components"], "Anzahl_Bauteile"),
-    ("stueck", ["bauteil", "fertigteil"], "Anzahl_Bauteile"),
-    ("kwh", ["energie", "energy"], "U_Wert"),
+    # CO2-bezogen — User-Knoten: CO2_Einsparung (umfasst absolut + prozent)
+    ("%", ["co2", "treibhausgas"], "CO2_Einsparung"),
+    ("t", ["co2", "treibhausgas"], "CO2_Einsparung"),
+    ("kg", ["co2"], "CO2_Einsparung"),
+    ("kgco2e", [], "CO2_Einsparung"),
+    ("kgco2", [], "CO2_Einsparung"),
+    # Embodied Carbon / Graue Energie
+    ("m2", ["co2", "embodied", "graue energie", "emboldied"], "Graue_Energie"),
+    ("kwh", ["energie", "energy", "graue"], "Graue_Energie"),
+    # Wiederverwendungsquote (Gewicht, Volumen, Anteil) — User-Knoten Wiederverwendungsquote
+    ("%", ["gewicht", "weight", "kg-rate"], "Wiederverwendungsquote"),
+    ("%", ["volumen", "volume", "m3"], "Wiederverwendungsquote"),
+    ("%", ["wiederverwend", "reuse", "reused", "ombruk"], "Wiederverwendungsquote"),
+    ("t", ["wiederverwend", "reused", "reclaim", "salvaged", "stahl", "steel", "beton", "holz", "primaer", "primary"], "Wiederverwendungsquote"),
+    ("kg", ["wiederverwend", "reused"], "Wiederverwendungsquote"),
+    ("m3", ["volumen", "volume", "wiederverwend"], "Wiederverwendungsquote"),
+    # Kosten/Geld — User-Knoten Materialwert
+    ("%", ["kosten", "cost", "saving", "ersparnis"], "Materialwert"),
+    ("eur", [], "Materialwert"),
+    ("euro", [], "Materialwert"),
+    ("chf", [], "Materialwert"),
+    ("gbp", [], "Materialwert"),
+    ("pfund", [], "Materialwert"),
+    # Demontagegrad — User-Knoten
+    ("%", ["demontage", "disassembly", "demountable"], "Demontagegrad"),
 ]
+
+# Spread-Schwelle für Pseudo-Quellenkonflikte: Faktor max/min.
+# > 30× heißt typischerweise verschiedene Bilanzgrenzen, kein Quellenwiderspruch.
+PSEUDO_KONFLIKT_SPREAD_THRESHOLD = 30.0
 
 
 def route_kennwert(unit: str, context: str) -> str:
@@ -320,8 +323,10 @@ URL_RE = re.compile(r"https?://[^\s\)\]]+")
 
 
 def derive_quellen():
-    items = []
-    seen_urls: set[str] = set()
+    """Eine Quelle pro unique URL/Label, mit Liste aller verwendenden Fallstudien.
+    Wenn dieselbe URL in mehreren Fallstudien auftaucht: ein Knoten, mehrere
+    Verweise — statt N Duplikate."""
+    raw_entries: list[dict] = []
     for d in GEBAEUDE_DIRS:
         if not d.exists():
             continue
@@ -341,7 +346,6 @@ def derive_quellen():
                 line = line.lstrip("-*").strip()
                 if not line:
                     continue
-                # Entferne führende [S1]/[S2]-Marker
                 line = re.sub(r"^\[?S\d+\]?\s*[:\.\-]?\s*", "", line)
                 url_match = URL_RE.search(line)
                 url = url_match.group(0).rstrip(".,;)") if url_match else ""
@@ -350,21 +354,53 @@ def derive_quellen():
                     label = label.replace(url, "").strip(" ,.;:-")
                 if not label and not url:
                     continue
-                # Dedup über URL (oder Label, falls keine URL)
-                key = url or label
-                short_label = label[:60] if label else url[:60]
-                items.append({
-                    "id": safe_id(f"{file_id}__{short_label}", 90),
+                raw_entries.append({
                     "fallstudie": file_id,
                     "label": label,
                     "url": url,
                 })
-    return items
+
+    # Dedup-Key: URL bevorzugt, sonst Label (genormt).
+    by_key: dict[str, dict] = {}
+    for e in raw_entries:
+        key = e["url"] if e["url"] else e["label"].lower().strip()
+        if key not in by_key:
+            short_label = (e["label"] or e["url"])[:60]
+            by_key[key] = {
+                "id": safe_id(short_label, 90),
+                "label": e["label"],
+                "url": e["url"],
+                "fallstudien": set(),
+            }
+        by_key[key]["fallstudien"].add(e["fallstudie"])
+
+    # IDs auf eindeutigkeit prüfen (gleicher safe_id-Output bei unterschiedlichen URLs möglich)
+    seen_ids: set[str] = set()
+    result = []
+    for q in by_key.values():
+        base_id = q["id"]
+        suffix = 1
+        unique_id = base_id
+        while unique_id in seen_ids:
+            suffix += 1
+            unique_id = f"{base_id}_{suffix}"
+        seen_ids.add(unique_id)
+        result.append({
+            "id": unique_id,
+            "label": q["label"],
+            "url": q["url"],
+            "fallstudien": sorted(q["fallstudien"]),
+            "n_fallstudien": len(q["fallstudien"]),
+        })
+    return result
 
 
 # === 5. Quellenkonflikt ===
 
 def derive_quellenkonflikt(datenpunkte):
+    """Echte Konflikte = mehrere Datenpunkte mit gleichem Kennwert+Einheit aber
+    unterschiedlichen Werten. Spread > 30× wird als Pseudo-Konflikt geflaggt
+    (verschiedene Bilanzgrenzen, kein Quellenwiderspruch)."""
     by_key = defaultdict(list)
     for dp in datenpunkte:
         if dp["kennwertdefinition"] == "Datenluecke":
@@ -374,16 +410,21 @@ def derive_quellenkonflikt(datenpunkte):
     items = []
     for (fs, kw, unit), dps in by_key.items():
         values = sorted({d["wert"] for d in dps})
-        if len(values) >= 2:
-            items.append({
-                "id": safe_id(f"{fs}__{kw}__conflict_{values[0]}_vs_{values[-1]}", 100),
-                "fallstudie": fs,
-                "kennwertdefinition": kw,
-                "einheit": unit,
-                "werte": values,
-                "datenpunkte": [d["id"] for d in dps],
-                "n_datenpunkte": len(dps),
-            })
+        if len(values) < 2:
+            continue
+        spread = max(values) / min(values) if min(values) > 0 else float("inf")
+        if spread > PSEUDO_KONFLIKT_SPREAD_THRESHOLD:
+            continue  # Pseudo — verschiedene Bilanzgrenzen
+        items.append({
+            "id": safe_id(f"{fs}__{kw}__conflict_{values[0]}_vs_{values[-1]}", 100),
+            "fallstudie": fs,
+            "kennwertdefinition": kw,
+            "einheit": unit,
+            "werte": values,
+            "spread": round(spread, 1),
+            "datenpunkte": [d["id"] for d in dps],
+            "n_datenpunkte": len(dps),
+        })
     return items
 
 
@@ -437,7 +478,8 @@ def write_full_yamls(file_controlled, name_canonicals, derived):
         dp_per_file[it["fallstudie"]].append(it["id"])
     q_per_file = defaultdict(list)
     for it in derived["quellen"]:
-        q_per_file[it["fallstudie"]].append(it["id"])
+        for fs in it.get("fallstudien", []):
+            q_per_file[fs].append(it["id"])
     qk_per_file = defaultdict(list)
     for it in derived["quellenkonflikte"]:
         qk_per_file[it["fallstudie"]].append(it["id"])
@@ -533,9 +575,9 @@ def main() -> int:
     write_csv("datenpunkt.csv", datenpunkte,
               ["id", "fallstudie", "kennwertdefinition", "wert", "einheit", "raw_kontext"])
     write_csv("quelle.csv", quellen,
-              ["id", "fallstudie", "label", "url"])
+              ["id", "label", "url", "fallstudien", "n_fallstudien"])
     write_csv("quellenkonflikt.csv", quellenkonflikte,
-              ["id", "fallstudie", "kennwertdefinition", "einheit", "werte", "datenpunkte", "n_datenpunkte"])
+              ["id", "fallstudie", "kennwertdefinition", "einheit", "werte", "spread", "datenpunkte", "n_datenpunkte"])
     write_csv("offene_frage.csv", offene_fragen,
               ["id", "fallstudie", "entity_type", "frage"])
 

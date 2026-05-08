@@ -5,6 +5,9 @@ pruefung: ["[[pruefung/Zustandsbewertung]]"]
 reuse_strategie: ["[[reuse_strategie/Direkte_Wiederverwendung]]"]
 tragwerkssystem: ["[[tragwerkssystem/Betonfertigteil_System]]", "[[tragwerkssystem/Tragende_Wand]]"]
 verwandt: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Brettsperrholzdecke]]", "[[bauteil/Deckenplatte]]", "[[bauteil/Holzrahmenelement]]"]
+n_files: 13
+aliases_korpus: ["200 zugeschnittene Teile aus 60 Decken- und 50 Innenwandplatten", "279 Betonfertigteile + 159 WBS70-Paneele", "145 Decken-/Bodenplatten, 19 Außenwandelemente, 14 Innenwände, 11 Kellerwände", "Wandverkleidung aus alten Holzstühlen", "26 Wandplatten", "glulamST-Tragwerksrahmen", "CLST-Wand- und Bodenplatten", "Boden- und Wandfliesen", "Sanitär, ducts, pipes, office fronts, doors", "wiederverwendete Ziegelmauern", "Wandfliesen aus Solvay-Gebäude", "22 Wandplatten, 27 Deckenplatten", "Ziegelfassadenmodule / Mauerwerksausschnitte"]
+verwendet_in_fallstudien: ["[[Gebäude/AWM_Muenster_Circular_Office]]", "[[Gebäude/Association_house_Groeditz]]", "[[Gebäude/Association_house_Plauen]]", "[[Gebäude/Berlin_Schildow_Pilot_House]]", "[[Gebäude/Berlin_Schildow_Pilot_House_2]]", "[[Gebäude/Broethen_Twin_House_Hoyerswerda]]", "[[Gebäude/CascadeUp_London_secondary_timber_glulam_demonstrator]]", "[[Gebäude/Chiro_d_Itterbeek_Dilbeek]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]", "[[Gebäude/Maison_DnA_Asse]]", "[[Gebäude/Maison_Vignette_Auderghem]]", "[[Gebäude/Mehrow_Pilot_House]]", "[[Gebäude/Resource_Rows_Copenhagen]]"]
 ---
 
 ## Verknüpfungen

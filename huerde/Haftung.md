@@ -3,6 +3,9 @@ type: Hürde
 recht: ["[[recht/Bauordnungsrecht]]", "[[recht/Produkthaftung]]"]
 verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Gewaehrleistung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Terminunsicherheit]]", "[[huerde/Verfuegbarkeitsproblem]]"]
 wirtschaft: ["[[wirtschaft/Finanzierung]]", "[[wirtschaft/Geschaeftsmodell]]", "[[wirtschaft/Kostenvergleich]]", "[[wirtschaft/Lebenszykluskosten]]", "[[wirtschaft/Preisbildung]]", "[[wirtschaft/Restwert]]"]
+n_files: 1
+aliases_korpus: ["Versicherung / assurabilité"]
+verwendet_in_fallstudien: ["[[Gebäude/Grande_Halle_de_Colombelles]]"]
 ---
 
 # Haftung

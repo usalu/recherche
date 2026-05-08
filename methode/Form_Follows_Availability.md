@@ -1,5 +1,8 @@
 ---
 type: Methode
+n_files: 1
+aliases_korpus: ["ReUse first / Design follows availability"]
+verwendet_in_fallstudien: ["[[Gebäude/AWM_Muenster_Circular_Office]]"]
 ---
 
 ## Verknüpfungen

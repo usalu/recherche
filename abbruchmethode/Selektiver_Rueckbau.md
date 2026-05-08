@@ -2,6 +2,9 @@
 type: Abbruchmethode
 prozessphase: ["[[prozessphase/Entwurf]]", "[[prozessphase/Rueckbau]]"]
 verwandt: ["[[abbruchmethode/Ausbau_von_Bauteilen]]", "[[abbruchmethode/Demontage]]", "[[abbruchmethode/Zerstoerungsarme_Bergung]]"]
+n_files: 9
+aliases_korpus: ["selektiver Rückbau/Demontage", "selektiver Rückbau / Demontage", "selektiver Rückbau / Demontage von Platten", "Diamantsägen im Pressekontext", "stufenweiser, separierender Rückbau", "Rückbauprojekte / Bauteiljagd", "Rückbau/Demontage", "selektive Demontage / schonender Rückbau", "zerstörungsfreier Rückbau", "sehr begrenzte Demolition / selective deconstruction"]
+verwendet_in_fallstudien: ["[[Gebäude/Association_house_Groeditz]]", "[[Gebäude/Association_house_Plauen]]", "[[Gebäude/Berlin_Schildow_Pilot_House_2]]", "[[Gebäude/BioPartner_5_Leiden_Oegstgeest]]", "[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/Haus_HOS_Mehrfamilienhaus_Muehlhausen]]", "[[Gebäude/Mehrow_Pilot_House]]", "[[Gebäude/Peoples_Pavilion_Eindhoven]]", "[[Gebäude/Verbiest_Karreveld_Brussels]]"]
 ---
 
 ## Verknüpfungen

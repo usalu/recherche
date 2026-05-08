@@ -2,6 +2,9 @@
 type: Methode
 verbindung: ["[[verbindung/Klemmverbindung]]", "[[verbindung/Steckverbindung]]", "[[verbindung/Verleimung]]", "[[verbindung/Vermoertelung]]", "[[verbindung/Verschraubung]]", "[[verbindung/Verschweissung]]"]
 verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialinventur]]", "[[methode/Materialpass]]", "[[methode/ReUse_Assessment]]", "[[methode/Urban_Mining]]"]
+n_files: 1
+aliases_korpus: ["Kit-of-parts, demontierbare modulare Struktur"]
+verwendet_in_fallstudien: ["[[Gebäude/CascadeUp_London_secondary_timber_glulam_demonstrator]]"]
 ---
 
 ## Verknüpfungen

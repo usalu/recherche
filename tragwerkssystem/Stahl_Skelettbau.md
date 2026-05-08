@@ -1,6 +1,9 @@
 ---
 type: Tragwerkssystem
 verwandt: ["[[tragwerkssystem/Dachtragwerk_und_Fachwerk]]", "[[tragwerkssystem/Design_for_Disassembly]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]"]
+n_files: 7
+aliases_korpus: ["Stahlskelett", "Stahl- und Betontragwerk aus Big-Dig-Komponenten", "formaktive, gekrümmte Ziegelschale + Stahl-/Holz-Infill", "bestehendes Stahlstützensystem + donor HCS/Steel", "demontables Stahlrahmen-System aus galvanisierten Profilen", "Skelettbau"]
+verwendet_in_fallstudien: ["[[Gebäude/Areal_Walkeweg_Nord]]", "[[Gebäude/Big_Dig_House_Lexington_Massachusetts]]", "[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]", "[[Gebäude/ReUseBox_Heilbronn]]", "[[Gebäude/The_Green_House_Utrecht]]", "[[Gebäude/gjG_House_Gentbrugge]]"]
 ---
 
 ## Verknüpfungen

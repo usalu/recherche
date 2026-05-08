@@ -3,6 +3,9 @@ type: Hürde
 logistik: ["[[logistik/Zwischenlagerung]]"]
 reuse_strategie: ["[[reuse_strategie/Direkte_Wiederverwendung]]", "[[reuse_strategie/Refurbishment]]"]
 verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Haftung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Terminunsicherheit]]", "[[huerde/Verfuegbarkeitsproblem]]"]
+n_files: 4
+aliases_korpus: ["Gewährleistung, Prüfung, Logistik, Toleranzen", "fehlende Gewährleistung/Skalierung/Supply Chain für Sekundärholz", "Gewährleistung / fehlendes Werkszeugnis", "Versicherung / assurabilité"]
+verwendet_in_fallstudien: ["[[Gebäude/Association_house_Plauen]]", "[[Gebäude/CRCLR_House_Impact_Hub_Berlin]]", "[[Gebäude/CascadeUp_London_secondary_timber_glulam_demonstrator]]", "[[Gebäude/Grande_Halle_de_Colombelles]]"]
 ---
 
 # Gewährleistung

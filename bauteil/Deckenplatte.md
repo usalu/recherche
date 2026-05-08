@@ -4,6 +4,9 @@ material: ["[[material/Beton]]", "[[material/Brettsperrholz]]", "[[material/Stah
 pruefung: ["[[pruefung/Zustandsbewertung]]"]
 reuse_strategie: ["[[reuse_strategie/Direkte_Wiederverwendung]]"]
 verwandt: ["[[bauteil/Betonfertigteil]]", "[[bauteil/Brettsperrholzdecke]]", "[[bauteil/Holzrahmenelement]]", "[[bauteil/Wand]]"]
+n_files: 8
+aliases_korpus: ["Hohlkörperdecken", "50 Deckenplatten", "Hohlkörperdecken / kanaalplaatvloeren", "Hohlkörperdecken / hollow-core slabs", "27 Hohlkörperdecken / hollow-core slabs", "reused hollow core slabs", "TT-Decken / Betondecken"]
+verwendet_in_fallstudien: ["[[Gebäude/Broethen_Twin_House_Hoyerswerda]]", "[[Gebäude/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot]]", "[[Gebäude/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]", "[[Gebäude/Lokomotion_Technology_Centre_mini_pilot_Tampere]]", "[[Gebäude/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki]]", "[[Gebäude/Montessori_Maassluis]]", "[[Gebäude/Thoravej_29_Copenhagen]]"]
 ---
 
 ## Verknüpfungen

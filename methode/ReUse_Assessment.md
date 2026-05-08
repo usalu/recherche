@@ -2,6 +2,9 @@
 type: Methode
 kennwert: ["[[kennwert/CO2_Einsparung]]", "[[kennwert/Demontagegrad]]", "[[kennwert/Graue_Energie]]", "[[kennwert/Materialwert]]", "[[kennwert/Wiederverwendungsquote]]"]
 verwandt: ["[[methode/Bestandserhalt]]", "[[methode/Materialinventur]]", "[[methode/Materialpass]]", "[[methode/Reversibilitaet]]", "[[methode/Urban_Mining]]"]
+n_files: 6
+aliases_korpus: ["ReUse_LCA", "frühe Reuse-Beschaffungsentscheidung", "Demolition audit / pre-demolition audit", "ReUse_Logistik"]
+verwendet_in_fallstudien: ["[[Gebäude/Da_Vinci_Business_District]]", "[[Gebäude/Hobelwerk_Haus_D_Oberwinterthur]]", "[[Gebäude/Holbein_Gardens_London]]", "[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]", "[[Gebäude/LysP8_Basel_Lysbuechelareal]]", "[[Gebäude/Roots_in_the_Sky_Blackfriars_Crown_Court]]"]
 ---
 
 ## Verknüpfungen

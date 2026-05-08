@@ -49,10 +49,20 @@ NAME_STOPS = {
     "ag", "gmbh", "kg", "ev", "bv", "ltd", "sa", "sarl", "spa", "inc",
     "co", "company", "corp", "studio", "office", "buero", "buros",
     "stadt", "city", "ville",
+    # Organisationsformen — sind keine distinktiven Tokens für Akteursnamen
+    "stiftung", "vorsorgestiftung", "foundation", "fondation", "fund",
+    "society", "gesellschaft", "verein", "kammer", "chamber", "association",
+    "group", "groupe", "groep", "ngo", "trust", "fonds",
+    "architects", "architekten", "architectes", "architecten", "architecture",
+    "architektur", "architecte",
+    "engineering", "engineers", "ingenieure", "ingenieurs", "consulting",
+    "associates", "partners", "partnership", "consultants",
+    "construction", "bauen", "bouwbedrijf",
+    "limited", "private", "public",
 }
 SKIP_VALUES = {"unbekannt", "unknown", "unklar", "fehlt", "n a", "tbd"}
 
-JACCARD_THRESHOLD = 0.66
+JACCARD_THRESHOLD = 0.50
 MIN_TOKEN_LEN = 3
 SINGLE_TOKEN_MIN_CHARS = 5
 

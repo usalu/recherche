@@ -3,6 +3,9 @@ type: Leistungsanforderung
 material: ["[[material/Glas]]", "[[material/Keramik]]", "[[material/Stroh]]"]
 pruefung: ["[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
 verwandt: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Tragfaehigkeit]]", "[[leistungsanforderung/Waermeschutz]]"]
+n_files: 1
+aliases_korpus: ["Marine Außenklima, Dauerhaftigkeit, Brandschutz"]
+verwendet_in_fallstudien: ["[[Gebäude/Hastings_Pier_Visitor_Centre]]"]
 ---
 
 # Dauerhaftigkeit

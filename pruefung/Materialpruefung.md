@@ -3,6 +3,9 @@ type: Prüfung
 aufbereitungsmethode: ["[[aufbereitungsmethode/Qualitaetssicherung]]"]
 recht: ["[[recht/Bauordnungsrecht]]", "[[recht/Gewaehrleistung]]", "[[recht/Produkthaftung]]", "[[recht/Zulassung_im_Einzelfall]]"]
 verwandt: ["[[pruefung/Zustandsbewertung]]"]
+n_files: 2
+aliases_korpus: ["Zugversuche, chemische Analyse, Schweißbarkeit, Korrosionsschutz", "Zugversuche / chemische Analysen für Stahl"]
+verwendet_in_fallstudien: ["[[Gebäude/CRCLR_House_Impact_Hub_Berlin]]", "[[Gebäude/Impact_Hub_Berlin_CRCLR_Fitout]]"]
 ---
 
 ## Verknüpfungen

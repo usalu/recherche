@@ -3,6 +3,9 @@ type: Leistungsanforderung
 material: ["[[material/Lehm]]"]
 pruefung: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Eignungspruefung_Baulehm]]", "[[pruefung/Schweissbarkeitspruefung]]", "[[pruefung/Statische_Nachweisfuehrung]]", "[[pruefung/Zugversuch]]"]
 verwandt: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Feuchteschutz]]", "[[leistungsanforderung/Rueckbaubarkeit]]", "[[leistungsanforderung/Schadstofffreiheit]]", "[[leistungsanforderung/Schallschutz]]"]
+n_files: 2
+aliases_korpus: ["Tragfähigkeit, Zertifizierung, Brandschutz, Erschließung", "Tragfähigkeit PV-Dach, Wind/Lateral System"]
+verwendet_in_fallstudien: ["[[Gebäude/55_Great_Suffolk_Street_London]]", "[[Gebäude/Saxum_Vineyard_Equipment_Barn_Paso_Robles]]"]
 ---
 
 # Tragfaehigkeit

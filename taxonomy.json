@@ -1,486 +1,10 @@
 {
   "_meta": {
-    "schema_version": "0.2",
-    "stand": "2026-05-07",
-    "purpose": "Kuratierte Seed-Knoten pro Entitätstyp. Substring-Match: jedes Keyword das im normalisierten Roh-Wert vorkommt, bringt len(keyword) Punkte. Längere Keywords schlagen kürzere (z.B. 'stahlbeton' > 'stahl').",
-    "abdeckung": "Kontrollierte Vokabulare. Name-basierte Typen (Akteur, Ort, Projekt, Gebaeude, Fallstudie, Foerderprogramm, Bauteilboerse, Werkzeug, Dokument) werden separat per Dedup-Skript verarbeitet."
+    "schema_version": "0.3",
+    "stand": "2026-05-08",
+    "purpose": "User-aligned: Knoten-IDs entsprechen den Datei-Namen in den Wurzelordnern bauteil/, material/, methode/, etc. Keywords aus Synonym-Mapping zur alten Taxonomie + Auto-Generation aus Namen."
   },
   "Bauteil": {
-    "Stahltraeger": {
-      "kategorie": "Tragwerk",
-      "definition": "Lastabtragender Stahlprofil-Querträger (H-, I-, U-Profil, Hohlprofil, Verbundträger).",
-      "keywords": [
-        "stahlträger",
-        "stahlbalken",
-        "stahlrahmen",
-        "h-profil",
-        "i-profil",
-        "i-träger",
-        "wide-flange",
-        "stahlprofil",
-        "stahlprofile",
-        "steel beam",
-        "steel girder",
-        "boxbeam",
-        "stahlrohrprofil",
-        "u-profil",
-        "u-träger",
-        "hohlprofil",
-        "verbundträger"
-      ]
-    },
-    "Stahlstuetze": {
-      "kategorie": "Tragwerk",
-      "definition": "Lastabtragende Stahlsäule.",
-      "keywords": [
-        "stahlstütze",
-        "stahlsäule",
-        "stahlpfeiler",
-        "steel column",
-        "tubular column",
-        "stahlrohrstütze"
-      ]
-    },
-    "Holz_Tragelement": {
-      "kategorie": "Tragwerk",
-      "definition": "Tragender Holzbalken, Holzstütze, Brettschichtholzträger oder Pfette (alle linienförmigen Holzbauteile).",
-      "keywords": [
-        "holzträger",
-        "holzbalken",
-        "holzstütze",
-        "holzpfosten",
-        "holzsäule",
-        "brettschichtholzträger",
-        "brettschichtholzbogen",
-        "glulam beam",
-        "glulam arch",
-        "leimbinder",
-        "houten balken",
-        "timber beam",
-        "timber column",
-        "pfette",
-        "stahlpfette",
-        "purlin",
-        "bsh-träger",
-        "brettschichtholz-kniespanten"
-      ]
-    },
-    "Holz_Dachtragwerk": {
-      "kategorie": "Tragwerk",
-      "definition": "Holzdachstuhl, Holzdachbinder, Sparren als zusammenhängendes Dachtragwerk.",
-      "keywords": [
-        "holzdach",
-        "dachstuhl",
-        "dachsparren",
-        "holzspanten",
-        "holz-dachspanten",
-        "holz-dachbinder",
-        "holzdachelement",
-        "timber roof truss",
-        "roof truss",
-        "rafters",
-        "dachbinder"
-      ]
-    },
-    "Hohlkoerperdecke": {
-      "kategorie": "Tragwerk",
-      "definition": "Hohlkörper-Stahlbetondecke (oft Spannbeton, kanaalplaatvloer).",
-      "keywords": [
-        "hohlkörperdecke",
-        "hollow-core slab",
-        "hollow core slab",
-        "kanaalplaatvloer"
-      ]
-    },
-    "Betonfertigteil_Decke": {
-      "kategorie": "Tragwerk",
-      "definition": "Vorgefertigte Stahlbeton-Deckenplatte (TT, Massivplatte, Plattenbau-Decke, Verbunddecke).",
-      "keywords": [
-        "tt-decke",
-        "betondecke",
-        "deckenplatte",
-        "betonfertigteil-paneel",
-        "concrete slab",
-        "precast slab",
-        "fertigteildecke",
-        "massivplatte",
-        "wbs70-deckenplatte",
-        "iw73 deckenplatte",
-        "p2 deckenplatte",
-        "ddr-deckenplatte",
-        "verbunddecke"
-      ]
-    },
-    "Plattenbau_Aussenwand": {
-      "kategorie": "Tragwerk",
-      "definition": "Tragende Außenwand aus DDR-Plattenbau-Systemen (WBS70, IW73/6, P2, Schultyp).",
-      "keywords": [
-        "außenwandelement",
-        "außenwandelemente",
-        "wbs70-paneel",
-        "ddr-fertigteil-außenwand",
-        "fassadenplatte plattenbau",
-        "kellerwand"
-      ]
-    },
-    "Plattenbau_Innenwand": {
-      "kategorie": "Tragwerk",
-      "definition": "Tragende oder nichttragende Innenwand aus Plattenbau-Systemen.",
-      "keywords": [
-        "wandplatte",
-        "wandplatten",
-        "innenwandplatte",
-        "ddr-innenwand",
-        "innenwand wbs70"
-      ]
-    },
-    "Aussenwand_Mauerwerk": {
-      "kategorie": "Hülle",
-      "definition": "Tragende oder selbsttragende Außenwand aus Mauerwerk (als Wandsystem).",
-      "keywords": [
-        "ziegelwand",
-        "ziegelmauer",
-        "klinkerwand",
-        "ziegelmodul",
-        "ziegelfassadenmodul",
-        "mauerwerksmodul",
-        "mauerwerksausschnitt",
-        "brick facade module",
-        "ziegel-fassadenmodul"
-      ]
-    },
-    "Ziegel": {
-      "kategorie": "Hülle",
-      "definition": "Einzelner gebrannter Tonziegel als Mauerwerksbaustein.",
-      "keywords": [
-        "ziegel",
-        "klinker",
-        "backstein",
-        "brick",
-        "btc-ziegel",
-        "boomse steen",
-        "abbruchziegel",
-        "straßenklinker",
-        "pflasterklinker",
-        "fassadenziegel"
-      ]
-    },
-    "Dachziegel": {
-      "kategorie": "Hülle",
-      "definition": "Gebrannter Tonziegel als Dachdeckung.",
-      "keywords": [
-        "dachziegel",
-        "roof tile",
-        "dakpan",
-        "vingetegl",
-        "dachpfanne"
-      ]
-    },
-    "Fenster": {
-      "kategorie": "Hülle",
-      "definition": "Verglastes Wandöffnungsbauteil mit Rahmen.",
-      "keywords": [
-        "fenster",
-        "holzfenster",
-        "aluminiumfenster",
-        "kunststofffenster",
-        "exterior window",
-        "double-glazed window",
-        "kastenfenster",
-        "outsidefenster",
-        "glazed window",
-        "sash window"
-      ]
-    },
-    "Fensterrahmen": {
-      "kategorie": "Hülle",
-      "definition": "Rahmen ohne Verglasung (oder mit ggf. Neuverglasung).",
-      "keywords": [
-        "fensterrahmen",
-        "kozijn",
-        "buitenkozijn",
-        "außenkozijn",
-        "window frame",
-        "holzfensterrahmen"
-      ]
-    },
-    "Tuer": {
-      "kategorie": "Hülle/Innenausbau",
-      "definition": "Tür innen oder außen (Holz, Metall, Glas, Brandschutz, Eingang).",
-      "keywords": [
-        "tür",
-        "türen",
-        "innentür",
-        "außentür",
-        "haustür",
-        "holztür",
-        "brandschutztür",
-        "feuerschutztür",
-        "fire door",
-        "interior door",
-        "exterior door",
-        "front door",
-        "buitendeur",
-        "shoji-schirm",
-        "garagentor",
-        "innentüren"
-      ]
-    },
-    "Fassadenblech": {
-      "kategorie": "Hülle",
-      "definition": "Metallblech als Fassadenbekleidung (Trapez, Welle, Profil, glatt).",
-      "keywords": [
-        "fassadenblech",
-        "metallblech",
-        "profilblech",
-        "trapezblech",
-        "wellblech",
-        "stahlblechfassade",
-        "stahlfassadenpaneel",
-        "stahlfassadenelement",
-        "aluminium-trapezblech",
-        "aluminium-fassadenplatte",
-        "aluminium-fassadensystem",
-        "aluminiumblech",
-        "blechfassade"
-      ]
-    },
-    "Fassadenpaneel": {
-      "kategorie": "Hülle",
-      "definition": "Vorgefertigtes Fassadenelement (Verbund, Beton, Holz, Mineral, nicht reines Glas/Blech).",
-      "keywords": [
-        "fassadenpaneel",
-        "fassadenelement",
-        "vorhangfassadenelement",
-        "gevelelement",
-        "façade panel",
-        "fassadenbekleidung"
-      ]
-    },
-    "Holzfassade": {
-      "kategorie": "Hülle",
-      "definition": "Holzschindeln, Holzbretter, Holzlatten als Fassadenbekleidung.",
-      "keywords": [
-        "holzfassade",
-        "holzschindel",
-        "holz-fassade",
-        "azobé shingles",
-        "azobé-hardwood shingles",
-        "weather boarding",
-        "timber cladding",
-        "wood cladding"
-      ]
-    },
-    "Daemmung": {
-      "kategorie": "Hülle",
-      "definition": "Wärme-/Schalldämmstoff in Hülle, Wand oder Decke (als eingebautes Bauteil).",
-      "keywords": [
-        "dämmung",
-        "dämmplatte",
-        "dämmstoff",
-        "eps-dämmung",
-        "mineralwolle",
-        "steinwolle",
-        "steinwolle-dämmplatte",
-        "steinwolledämmung",
-        "mineralische dämmung",
-        "jutedämmung",
-        "hanf-dämmung",
-        "insulation",
-        "rockwool",
-        "stein-/mineralwolle"
-      ]
-    },
-    "Glasfassade": {
-      "kategorie": "Hülle",
-      "definition": "Glas als flächige Fassadenfüllung (Vorhangfassade, Glasdach, Pyramide).",
-      "keywords": [
-        "glasfassade",
-        "glas-fassade",
-        "glasdach",
-        "marmor-glas-hülle",
-        "vorhangfassade glas",
-        "glass facade"
-      ]
-    },
-    "Glaselement": {
-      "kategorie": "Hülle",
-      "definition": "Einzelne Glasplatte/-paneel im Innen- oder Außenbau.",
-      "keywords": [
-        "glastrennwand",
-        "glaspaneel",
-        "glas-pv-modul",
-        "profilbauglas",
-        "glastüre",
-        "glas-element"
-      ]
-    },
-    "Innenwand": {
-      "kategorie": "Innenausbau",
-      "definition": "Nichttragende Trennwand im Innenausbau.",
-      "keywords": [
-        "innenwand",
-        "trennwand",
-        "wc-trennwand",
-        "partition wall",
-        "modulare innenwand",
-        "office front",
-        "trockenbauwand"
-      ]
-    },
-    "Bodenbelag": {
-      "kategorie": "Innenausbau",
-      "definition": "Bodenoberfläche generisch (Holzfußboden, Fliese, Industrieboden, Pflaster, Linoleum, Teppich).",
-      "keywords": [
-        "bodenbelag",
-        "holzfußboden",
-        "holzfussboden",
-        "floorboards",
-        "discarded floorboards",
-        "parkett",
-        "bodenfliese",
-        "wandfliese",
-        "fliesen/fayence",
-        "teppichfliese",
-        "linoleum",
-        "industrieboden",
-        "pflasterklinker",
-        "bodenmaterial",
-        "bodenpflaster",
-        "bruseleye tile",
-        "boden- und wandfliese"
-      ]
-    },
-    "Naturstein_Belag": {
-      "kategorie": "Innenausbau",
-      "definition": "Natursteinplatte als Boden-, Wand- oder Fassadenbelag.",
-      "keywords": [
-        "naturstein",
-        "granitfassadenplatte",
-        "blaustein",
-        "blaustein-fassadenblock",
-        "blaustein-fassadenplatte",
-        "marmor-arbeitsfläche",
-        "terrazzo-arbeitsfläche",
-        "terrazzo",
-        "blue stone",
-        "marmor",
-        "granitplatte",
-        "granitbordstein",
-        "natursteinplatte",
-        "kalkstein",
-        "blausteinplatte",
-        "natural stone"
-      ]
-    },
-    "Treppe": {
-      "kategorie": "Innenausbau",
-      "definition": "Treppe oder Treppenstufen (innen oder außen).",
-      "keywords": [
-        "treppe",
-        "treppen",
-        "stahltreppe",
-        "treppenelement",
-        "außentreppe",
-        "stahlaußentreppe",
-        "external stair",
-        "stair",
-        "stairs",
-        "treppenwange"
-      ]
-    },
-    "Gelaender": {
-      "kategorie": "Innenausbau",
-      "definition": "Brüstungs- oder Treppengeländer.",
-      "keywords": [
-        "geländer",
-        "brüstungsgeländer",
-        "brüstung",
-        "balustrade",
-        "railing",
-        "gitterrost",
-        "brüstungsgitter"
-      ]
-    },
-    "Akustikelement": {
-      "kategorie": "Innenausbau",
-      "definition": "Akustikdecke, -baffel, -paneel.",
-      "keywords": [
-        "akustikbaffel",
-        "akustikpaneel",
-        "gips-akustikpaneel",
-        "akustikelement",
-        "troldtekt",
-        "akustikdecke"
-      ]
-    },
-    "Sanitaerobjekt": {
-      "kategorie": "TGA",
-      "definition": "WC, Waschbecken, Lavabo, Urinal, Sanitärarmatur.",
-      "keywords": [
-        "sanitär",
-        "sanitärobjekt",
-        "sanitärapparat",
-        "sanitärausstattung",
-        "sanitaerkeramik",
-        "waschbecken",
-        "lavabo",
-        "wc",
-        "toilette",
-        "urinal",
-        "armatur"
-      ]
-    },
-    "Radiator": {
-      "kategorie": "TGA",
-      "definition": "Heizkörper / Radiator.",
-      "keywords": [
-        "radiator",
-        "heizkörper",
-        "gussradiator"
-      ]
-    },
-    "Leuchte": {
-      "kategorie": "TGA",
-      "definition": "Beleuchtungskörper (Hängelampe, Strahler, Industrieleuchte).",
-      "keywords": [
-        "leuchte",
-        "lampe",
-        "light fixture",
-        "luminaire",
-        "beleuchtung"
-      ]
-    },
-    "TGA_Sonstiges": {
-      "kategorie": "TGA",
-      "definition": "Lüftung, Kabeltrasse, Aufzug, sonstige technische Bauteile.",
-      "keywords": [
-        "lüftung",
-        "lüftungsverbund",
-        "lüftungsgerät",
-        "ventilator",
-        "ahu",
-        "ductwork",
-        "kabeltrasse",
-        "cable tray",
-        "aufzug",
-        "lift",
-        "aufzugsmotor",
-        "heizung",
-        "fahrradständer"
-      ]
-    },
-    "PV_Modul": {
-      "kategorie": "TGA",
-      "definition": "Photovoltaik-Modul.",
-      "keywords": [
-        "pv",
-        "photovoltaik",
-        "pv-modul",
-        "solar",
-        "glas-pv-modul"
-      ]
-    },
     "Datenluecke": {
       "kategorie": "Datenluecke",
       "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
@@ -495,129 +19,508 @@
         "to be determined"
       ]
     },
-    "Stahlfachwerk": {
+    "Betonfertigteil": {
+      "kategorie": "Tragwerk",
+      "definition": "Vorgefertigte Stahlbeton-Deckenplatte (TT, Massivplatte, Plattenbau-Decke, Verbunddecke).",
+      "keywords": [
+        "betondecke",
+        "betonfertigteil",
+        "betonfertigteil-paneel",
+        "concrete slab",
+        "ddr-deckenplatte",
+        "deckenplatte",
+        "fertigteildecke",
+        "iw73 deckenplatte",
+        "massivplatte",
+        "p2 deckenplatte",
+        "precast slab",
+        "tt-decke",
+        "verbunddecke",
+        "wbs70-deckenplatte"
+      ],
+      "synonym_to_old": [
+        "Betonfertigteil_Decke"
+      ]
+    },
+    "Brettschichtholzstuetze": {
+      "kategorie": "Tragwerk",
+      "definition": "Tragender Holzbalken, Holzstütze, Brettschichtholzträger oder Pfette (alle linienförmigen Holzbauteile).",
+      "keywords": [
+        "brettschichtholz-kniespanten",
+        "brettschichtholzbogen",
+        "brettschichtholzstuetze",
+        "brettschichtholzstütze",
+        "brettschichtholzträger",
+        "bsh-träger",
+        "glulam arch",
+        "glulam beam",
+        "holzbalken",
+        "holzpfosten",
+        "holzstütze",
+        "holzsäule",
+        "holzträger",
+        "houten balken",
+        "leimbinder",
+        "pfette",
+        "purlin",
+        "stahlpfette",
+        "timber beam",
+        "timber column"
+      ],
+      "synonym_to_old": [
+        "Holz_Tragelement"
+      ]
+    },
+    "Brettsperrholzdecke": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "brettsperrholzdecke"
+      ],
+      "synonym_to_old": []
+    },
+    "Dachtragwerk": {
+      "kategorie": "Tragwerk",
+      "definition": "Holzdachstuhl, Holzdachbinder, Sparren als zusammenhängendes Dachtragwerk.",
+      "keywords": [
+        "dachbinder",
+        "dachsparren",
+        "dachstuhl",
+        "dachtragwerk",
+        "holz-dachbinder",
+        "holz-dachspanten",
+        "holzdach",
+        "holzdachelement",
+        "holzspanten",
+        "rafters",
+        "roof truss",
+        "timber roof truss"
+      ],
+      "synonym_to_old": [
+        "Holz_Dachtragwerk"
+      ]
+    },
+    "Deckenplatte": {
+      "kategorie": "Tragwerk",
+      "definition": "Vorgefertigte Stahlbeton-Deckenplatte (TT, Massivplatte, Plattenbau-Decke, Verbunddecke).",
+      "keywords": [
+        "betondecke",
+        "betonfertigteil-paneel",
+        "concrete slab",
+        "ddr-deckenplatte",
+        "deckenplatte",
+        "fertigteildecke",
+        "hohlkörperdecke",
+        "hollow core slab",
+        "hollow-core slab",
+        "iw73 deckenplatte",
+        "kanaalplaatvloer",
+        "massivplatte",
+        "p2 deckenplatte",
+        "precast slab",
+        "tt-decke",
+        "verbunddecke",
+        "wbs70-deckenplatte"
+      ],
+      "synonym_to_old": [
+        "Betonfertigteil_Decke",
+        "Hohlkoerperdecke"
+      ]
+    },
+    "Fachwerktraeger": {
       "kategorie": "Tragwerk",
       "definition": "Stahltragwerk in Fachwerkbauweise.",
       "keywords": [
-        "stahlfachwerk",
-        "stahlfachwerkträger",
+        "fachwerktraeger",
         "fachwerkträger",
-        "lattice girder"
+        "lattice girder",
+        "stahlfachwerk",
+        "stahlfachwerkträger"
+      ],
+      "synonym_to_old": [
+        "Stahlfachwerk"
       ]
     },
-    "Doppelboden": {
-      "kategorie": "Innenausbau",
-      "definition": "Doppelboden / Hohlboden für Installationen.",
+    "Fassade": {
+      "kategorie": "Hülle",
+      "definition": "Vorgefertigtes Fassadenelement (Verbund, Beton, Holz, Mineral, nicht reines Glas/Blech).",
       "keywords": [
-        "doppelboden",
-        "raised floor",
-        "false floor",
-        "hohlboden"
+        "aluminium-fassadenplatte",
+        "aluminium-fassadensystem",
+        "aluminium-trapezblech",
+        "aluminiumblech",
+        "azobé shingles",
+        "azobé-hardwood shingles",
+        "blechfassade",
+        "fassade",
+        "fassadenbekleidung",
+        "fassadenblech",
+        "fassadenelement",
+        "fassadenpaneel",
+        "faßade",
+        "façade panel",
+        "gevelelement",
+        "glas-fassade",
+        "glasdach",
+        "glasfassade",
+        "glass facade",
+        "holz-fassade",
+        "holzfassade",
+        "holzschindel",
+        "marmor-glas-hülle",
+        "metallblech",
+        "profilblech",
+        "stahlblechfassade",
+        "stahlfassadenelement",
+        "stahlfassadenpaneel",
+        "timber cladding",
+        "trapezblech",
+        "vorhangfassade glas",
+        "vorhangfassadenelement",
+        "weather boarding",
+        "wellblech",
+        "wood cladding"
+      ],
+      "synonym_to_old": [
+        "Fassadenpaneel",
+        "Fassadenblech",
+        "Holzfassade",
+        "Glasfassade"
+      ]
+    },
+    "Fenster": {
+      "kategorie": "Hülle",
+      "definition": "Verglastes Wandöffnungsbauteil mit Rahmen.",
+      "keywords": [
+        "aluminiumfenster",
+        "außenkozijn",
+        "buitenkozijn",
+        "double-glazed window",
+        "exterior window",
+        "fenster",
+        "fensterrahmen",
+        "glazed window",
+        "holzfenster",
+        "holzfensterrahmen",
+        "kastenfenster",
+        "kozijn",
+        "kunststofffenster",
+        "outsidefenster",
+        "sash window",
+        "window frame"
+      ],
+      "synonym_to_old": [
+        "Fenster",
+        "Fensterrahmen"
+      ]
+    },
+    "Feuerschutztuer": {
+      "kategorie": "Hülle/Innenausbau",
+      "definition": "Tür innen oder außen (Holz, Metall, Glas, Brandschutz, Eingang).",
+      "keywords": [
+        "außentür",
+        "brandschutztür",
+        "buitendeur",
+        "exterior door",
+        "feuerschutztuer",
+        "feuerschutztür",
+        "feürschutztür",
+        "fire door",
+        "front door",
+        "garagentor",
+        "haustür",
+        "holztür",
+        "innentür",
+        "innentüren",
+        "interior door",
+        "shoji-schirm",
+        "tür",
+        "türen"
+      ],
+      "synonym_to_old": [
+        "Tuer"
+      ]
+    },
+    "Holzrahmenelement": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "holzrahmenelement"
+      ],
+      "synonym_to_old": []
+    },
+    "Leuchte": {
+      "kategorie": "TGA",
+      "definition": "Beleuchtungskörper (Hängelampe, Strahler, Industrieleuchte).",
+      "keywords": [
+        "beleuchtung",
+        "lampe",
+        "leuchte",
+        "light fixture",
+        "luminaire"
+      ],
+      "synonym_to_old": [
+        "Leuchte"
+      ]
+    },
+    "Pfette": {
+      "kategorie": "Tragwerk",
+      "definition": "Tragender Holzbalken, Holzstütze, Brettschichtholzträger oder Pfette (alle linienförmigen Holzbauteile).",
+      "keywords": [
+        "brettschichtholz-kniespanten",
+        "brettschichtholzbogen",
+        "brettschichtholzträger",
+        "bsh-träger",
+        "glulam arch",
+        "glulam beam",
+        "holzbalken",
+        "holzpfosten",
+        "holzstütze",
+        "holzsäule",
+        "holzträger",
+        "houten balken",
+        "leimbinder",
+        "pfette",
+        "purlin",
+        "stahlpfette",
+        "timber beam",
+        "timber column"
+      ],
+      "synonym_to_old": [
+        "Holz_Tragelement"
+      ]
+    },
+    "Sanitaerobjekt": {
+      "kategorie": "TGA",
+      "definition": "WC, Waschbecken, Lavabo, Urinal, Sanitärarmatur.",
+      "keywords": [
+        "armatur",
+        "lavabo",
+        "sanitaerkeramik",
+        "sanitaerobjekt",
+        "sanitär",
+        "sanitärapparat",
+        "sanitärausstattung",
+        "sanitärobjekt",
+        "toilette",
+        "urinal",
+        "waschbecken",
+        "wc"
+      ],
+      "synonym_to_old": [
+        "Sanitaerobjekt"
+      ]
+    },
+    "Stuetze": {
+      "kategorie": "Tragwerk",
+      "definition": "Lastabtragende Stahlsäule.",
+      "keywords": [
+        "brettschichtholz-kniespanten",
+        "brettschichtholzbogen",
+        "brettschichtholzträger",
+        "bsh-träger",
+        "glulam arch",
+        "glulam beam",
+        "holzbalken",
+        "holzpfosten",
+        "holzstütze",
+        "holzsäule",
+        "holzträger",
+        "houten balken",
+        "leimbinder",
+        "pfette",
+        "purlin",
+        "stahlpfeiler",
+        "stahlpfette",
+        "stahlrohrstütze",
+        "stahlstütze",
+        "stahlsäule",
+        "steel column",
+        "stuetze",
+        "stütze",
+        "timber beam",
+        "timber column",
+        "tubular column"
+      ],
+      "synonym_to_old": [
+        "Stahlstuetze",
+        "Stahlbetonstuetze",
+        "Holz_Tragelement"
+      ]
+    },
+    "Traeger": {
+      "kategorie": "Tragwerk",
+      "definition": "Lastabtragender Stahlprofil-Querträger (H-, I-, U-Profil, Hohlprofil, Verbundträger).",
+      "keywords": [
+        "boxbeam",
+        "brettschichtholz-kniespanten",
+        "brettschichtholzbogen",
+        "brettschichtholzträger",
+        "bsh-träger",
+        "glulam arch",
+        "glulam beam",
+        "h-profil",
+        "hohlprofil",
+        "holzbalken",
+        "holzpfosten",
+        "holzstütze",
+        "holzsäule",
+        "holzträger",
+        "houten balken",
+        "i-profil",
+        "i-träger",
+        "leimbinder",
+        "pfette",
+        "purlin",
+        "stahlbalken",
+        "stahlpfette",
+        "stahlprofil",
+        "stahlprofile",
+        "stahlrahmen",
+        "stahlrohrprofil",
+        "stahlträger",
+        "steel beam",
+        "steel girder",
+        "timber beam",
+        "timber column",
+        "traeger",
+        "träger",
+        "u-profil",
+        "u-träger",
+        "verbundträger",
+        "wide-flange"
+      ],
+      "synonym_to_old": [
+        "Stahltraeger",
+        "Stahlbetontraeger",
+        "Holz_Tragelement"
+      ]
+    },
+    "Treppe": {
+      "kategorie": "Innenausbau",
+      "definition": "Treppe oder Treppenstufen (innen oder außen).",
+      "keywords": [
+        "außentreppe",
+        "external stair",
+        "stahlaußentreppe",
+        "stahltreppe",
+        "stair",
+        "stairs",
+        "treppe",
+        "treppen",
+        "treppenelement",
+        "treppenwange"
+      ],
+      "synonym_to_old": [
+        "Treppe"
+      ]
+    },
+    "Treppenwange": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "treppenwange"
+      ],
+      "synonym_to_old": []
+    },
+    "Wand": {
+      "kategorie": "Tragwerk",
+      "definition": "Tragende Außenwand aus DDR-Plattenbau-Systemen (WBS70, IW73/6, P2, Schultyp).",
+      "keywords": [
+        "außenwandelement",
+        "außenwandelemente",
+        "brick facade module",
+        "ddr-fertigteil-außenwand",
+        "ddr-innenwand",
+        "fassadenplatte plattenbau",
+        "innenwand",
+        "innenwand wbs70",
+        "innenwandplatte",
+        "kellerwand",
+        "klinkerwand",
+        "mauerwerksausschnitt",
+        "mauerwerksmodul",
+        "modulare innenwand",
+        "office front",
+        "partition wall",
+        "trennwand",
+        "trockenbauwand",
+        "wand",
+        "wandplatte",
+        "wandplatten",
+        "wbs70-paneel",
+        "wc-trennwand",
+        "ziegel-fassadenmodul",
+        "ziegelfassadenmodul",
+        "ziegelmauer",
+        "ziegelmodul",
+        "ziegelwand"
+      ],
+      "synonym_to_old": [
+        "Plattenbau_Aussenwand",
+        "Plattenbau_Innenwand",
+        "Innenwand",
+        "Aussenwand_Mauerwerk"
       ]
     }
   },
   "Material": {
-    "Baustahl": {
-      "kategorie": "Eisenmetall",
-      "definition": "Walzstahl in Hochbau-Gütegruppen (S235, S355, ältere Sorten ohne Werkszeugnis).",
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
       "keywords": [
-        "baustahl",
-        "stahl",
-        "steel",
-        "structural steel",
-        "salvaged steel",
-        "reused steel",
-        "1930s steel",
-        "wide-flange steel",
-        "stahlrohr",
-        "reuse_stahl"
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
       ]
     },
-    "Edelstahl": {
-      "kategorie": "Eisenmetall",
-      "definition": "Korrosionsbeständiger Stahl.",
-      "keywords": [
-        "edelstahl",
-        "edelstahlrahmen",
-        "stainless steel",
-        "v2a",
-        "v4a"
-      ]
-    },
-    "Aluminium": {
-      "kategorie": "Eisenmetall",
-      "definition": "Aluminium als Bau- oder Profilmaterial.",
-      "keywords": [
-        "aluminium",
-        "aluminiumprofil"
-      ]
-    },
-    "Stahlbeton": {
-      "kategorie": "Mineralisch_gebunden",
-      "definition": "Bewehrter Beton inklusive Spannbeton.",
-      "keywords": [
-        "stahlbeton",
-        "reinforced concrete",
-        "spannbeton",
-        "fertigbeton",
-        "prestressed concrete",
-        "post-tensioned concrete"
-      ]
-    },
-    "Beton_Ortbeton": {
+    "Beton": {
       "kategorie": "Mineralisch_gebunden",
       "definition": "Vor Ort gegossener Beton, unbewehrt oder schwach bewehrt.",
       "keywords": [
-        "ortbeton",
         "beton",
-        "concrete",
-        "sichtbeton",
-        "betonbestand"
-      ]
-    },
-    "Stahlbetonfertigteil": {
-      "kategorie": "Mineralisch_gebunden",
-      "definition": "Industriell vorgefertigtes Stahlbetonbauteil als Materialklasse (DDR-Plattenbau, TT, Hohlkörper).",
-      "keywords": [
-        "stahlbetonfertigteil",
+        "betonbestand",
         "betonfertigteil",
-        "precast concrete",
-        "precast",
-        "fertigteil-beton",
-        "wbs70",
-        "iw73",
-        "p2-pc",
+        "concrete",
         "ddr-fertigteil",
+        "fertigbeton",
+        "fertigteil-beton",
+        "iw73",
+        "ortbeton",
+        "p2-pc",
         "plattenbauteil",
-        "reuse_betonfertigteil"
+        "post-tensioned concrete",
+        "precast",
+        "precast concrete",
+        "prestressed concrete",
+        "reinforced concrete",
+        "reuse_betonfertigteil",
+        "sichtbeton",
+        "spannbeton",
+        "stahlbeton",
+        "stahlbetonfertigteil",
+        "wbs70"
+      ],
+      "synonym_to_old": [
+        "Beton_Ortbeton",
+        "Stahlbeton",
+        "Stahlbetonfertigteil"
       ]
     },
-    "Recyclingbeton": {
-      "kategorie": "Mineralisch_gebunden",
-      "definition": "Beton mit rezyklierter Gesteinskörnung (RC-Beton, Mauerwerksbruch-Zuschlag).",
+    "Beton-Fertigteile_Verbindungen": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "recyclingbeton",
-        "rc-beton",
-        "rezyklierter beton",
-        "recycled concrete",
-        "upcycled concrete",
-        "mauerwerkspuin",
-        "abbruchschutt",
-        "rezyklat"
-      ]
-    },
-    "Vollholz": {
-      "kategorie": "Holz",
-      "definition": "Massivholz / Konstruktionsvollholz / Bauholz.",
-      "keywords": [
-        "vollholz",
-        "massivholz",
-        "bauholz",
-        "konstruktionsholz",
-        "solid timber",
-        "europäisches konstruktionsholz",
-        "holzbau"
-      ]
+        "beton-fertigteile",
+        "beton-fertigteile verbindungen",
+        "verbindungen"
+      ],
+      "synonym_to_old": []
     },
     "Brettschichtholz": {
       "kategorie": "Holz",
@@ -625,777 +528,461 @@
       "keywords": [
         "brettschichtholz",
         "bsh",
+        "engineered timber",
         "glulam",
         "leimbinder",
-        "engineered timber",
         "reuse_brettschichtholz"
+      ],
+      "synonym_to_old": [
+        "Brettschichtholz"
       ]
     },
-    "Brettsperrholz_CLT": {
+    "Brettsperrholz": {
       "kategorie": "Holz",
       "definition": "Kreuzverleimte Massivholzplatte (CLT/CLST).",
       "keywords": [
         "brettsperrholz",
+        "clst",
         "clt",
         "cross-laminated timber",
-        "clst",
         "kreuzlagenholz"
+      ],
+      "synonym_to_old": [
+        "Brettsperrholz_CLT"
       ]
     },
-    "Sekundaerholz": {
-      "kategorie": "Holz",
-      "definition": "Reclaimed timber, Abbruchholz, Sekundärholz aus früherer Nutzung.",
+    "Composite_Verbindungen": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "altholz",
-        "reclaimed timber",
-        "reclaimed wood",
-        "sekundäres abbruchholz",
-        "abbruchholz",
-        "secondary timber",
-        "vorkonsumiertes holz",
-        "pre-used wood",
-        "reuse_holz"
-      ]
+        "composite",
+        "composite verbindungen",
+        "verbindungen"
+      ],
+      "synonym_to_old": []
     },
-    "Ziegel_Klinker": {
-      "kategorie": "Mineralisch_gebrannt",
-      "definition": "Gebrannter Tonziegel als Material (Mauerwerk, Klinker, Backstein).",
-      "keywords": [
-        "ziegel",
-        "klinker",
-        "backstein",
-        "brick",
-        "mauerwerk",
-        "reuse_mauerwerk"
-      ]
-    },
-    "Naturstein_Material": {
-      "kategorie": "Mineralisch_gebrannt",
-      "definition": "Naturstein als Material (Granit, Marmor, Blaustein, Kalkstein).",
-      "keywords": [
-        "naturstein",
-        "granit",
-        "marmor",
-        "blaustein",
-        "kalkstein",
-        "stein",
-        "bluestone",
-        "natural stone"
-      ]
-    },
-    "Glas_Material": {
+    "Glas": {
       "kategorie": "Mineralisch_gebrannt",
       "definition": "Glas als Material (Float, ESG, VSG, Isolierglas).",
       "keywords": [
+        "esg",
+        "float glass",
         "glas",
         "glass",
-        "float glass",
-        "esg",
-        "vsg",
-        "isolierglas"
+        "isolierglas",
+        "vsg"
+      ],
+      "synonym_to_old": [
+        "Glas_Material"
       ]
+    },
+    "Holz": {
+      "kategorie": "Holz",
+      "definition": "Massivholz / Konstruktionsvollholz / Bauholz.",
+      "keywords": [
+        "abbruchholz",
+        "altholz",
+        "bauholz",
+        "europäisches konstruktionsholz",
+        "holz",
+        "holzbau",
+        "konstruktionsholz",
+        "massivholz",
+        "pre-used wood",
+        "reclaimed timber",
+        "reclaimed wood",
+        "reuse_holz",
+        "secondary timber",
+        "sekundäres abbruchholz",
+        "solid timber",
+        "vollholz",
+        "vorkonsumiertes holz"
+      ],
+      "synonym_to_old": [
+        "Vollholz",
+        "Sekundaerholz"
+      ]
+    },
+    "Holz_Verbindungen": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "holz",
+        "holz verbindungen",
+        "verbindungen"
+      ],
+      "synonym_to_old": []
     },
     "Keramik": {
       "kategorie": "Mineralisch_gebrannt",
       "definition": "Gebrannte Keramik (Fliesen, Fayence, Sanitärkeramik).",
       "keywords": [
-        "keramik",
         "ceramic",
-        "sanitärkeramik",
-        "fayence"
-      ]
-    },
-    "Daemmstoff_Mineral": {
-      "kategorie": "Bio_Sonderstoff",
-      "definition": "Mineralischer Dämmstoff (Mineralwolle, Steinwolle, Glaswolle, EPS, Polystyrol).",
-      "keywords": [
-        "mineralwolle",
-        "steinwolle",
-        "glaswolle",
-        "eps",
-        "polystyrol",
-        "stein-/mineralwolle"
-      ]
-    },
-    "Daemmstoff_Bio": {
-      "kategorie": "Bio_Sonderstoff",
-      "definition": "Biogener Dämmstoff (Hanf, Stroh, Jute, Cellulose, Holzfaser, Schafwolle).",
-      "keywords": [
-        "hanf",
-        "hanf-kalk",
-        "hanfkalkstein",
-        "stroh",
-        "strohplatte",
-        "jute",
-        "jutedämmung",
-        "cellulose",
-        "holzfaser",
-        "schafwolle",
-        "seegras"
+        "fayence",
+        "keramik",
+        "sanitärkeramik"
+      ],
+      "synonym_to_old": [
+        "Keramik"
       ]
     },
     "Lehm": {
       "kategorie": "Bio_Sonderstoff",
       "definition": "Erdmaterial (Lehm, Stampflehm, Lehmestrich, BTC-Lehmstein).",
       "keywords": [
-        "lehm",
-        "lehmestrich",
-        "stampflehm",
         "btc",
         "earth",
+        "lehm",
+        "lehmestrich",
+        "naturputz",
         "rammed earth",
-        "naturputz"
+        "stampflehm"
+      ],
+      "synonym_to_old": [
+        "Lehm"
       ]
     },
-    "Sonstige_Reststoffe": {
-      "kategorie": "Bio_Sonderstoff",
-      "definition": "Branchenfremde Sekundärmaterialien (Textil, Verpackung, Reststoffe).",
-      "keywords": [
-        "denim",
-        "pet-filz",
-        "teppich",
-        "papiergranulat",
-        "videokassette",
-        "videokassetten",
-        "textilien",
-        "textil/beläge",
-        "kaffeesatz",
-        "fahrradschlauch",
-        "zahnbürste",
-        "zahnbürsten"
-      ]
-    },
-    "Kunststoff": {
-      "kategorie": "Bio_Sonderstoff",
-      "definition": "Bauwerksrelevanter Kunststoff (PVC, PE, PP, MDF).",
-      "keywords": [
-        "kunststoff",
-        "pvc",
-        "polyethylen",
-        "polypropylen",
-        "pretty plastic",
-        "mdf",
-        "laminat",
-        "laminatfurnier",
-        "reuse_mdf"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    },
-    "Asphalt": {
+    "Recyclingbeton": {
       "kategorie": "Mineralisch_gebunden",
-      "definition": "Asphalt als Material.",
+      "definition": "Beton mit rezyklierter Gesteinskörnung (RC-Beton, Mauerwerksbruch-Zuschlag).",
       "keywords": [
-        "asphalt",
-        "bitumen",
-        "asphaltic"
+        "abbruchschutt",
+        "mauerwerkspuin",
+        "rc-beton",
+        "recycled concrete",
+        "recyclingbeton",
+        "rezyklat",
+        "rezyklierter beton",
+        "upcycled concrete"
+      ],
+      "synonym_to_old": [
+        "Recyclingbeton"
       ]
     },
-    "Sanitaerkeramik_Material": {
+    "Sanitarkeramik": {
       "kategorie": "Mineralisch_gebrannt",
       "definition": "Spezifische Sanitärkeramik als Material.",
       "keywords": [
-        "sanitärkeramik",
+        "sanitarkeramik",
         "sanitary ceramic",
+        "sanitärkeramik",
         "wc-keramik"
-      ]
-    }
-  },
-  "Reuse_Strategie": {
-    "Tragwerk_Wiederverwendung_Gesamt": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Komplettes Donor-Tragwerk wird als zusammenhängendes System wiedereingebaut (Donorskelet).",
-      "keywords": [
-        "donorskelet",
-        "donor skelet",
-        "structural reuse gesamt",
-        "ex-situ structural reuse",
-        "ex-situ steel reuse",
-        "großmaßstäbliche bauteilwiederverwendung",
-        "donor-skelet"
+      ],
+      "synonym_to_old": [
+        "Sanitaerkeramik_Material"
       ]
     },
-    "Tragend_Bauteil_Wiederverwendung": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Einzelne tragende Bauteile (Träger, Stützen, Hohlkörperdecken) ex-situ in neue Tragstruktur integriert.",
+    "Sekundaerstahl": {
+      "kategorie": "Eisenmetall",
+      "definition": "Walzstahl in Hochbau-Gütegruppen (S235, S355, ältere Sorten ohne Werkszeugnis).",
       "keywords": [
-        "ex-situ bauteilwiederverwendung",
-        "bauteilwiederverwendung",
-        "salvaged structural steel",
-        "strukturelle wiederverwendung",
-        "ex-situ wiederverwendung",
-        "in-situ transformiert",
-        "in-situ-transformation",
-        "self-reuse",
-        "ex-situ remontage"
+        "1930s steel",
+        "baustahl",
+        "reuse_stahl",
+        "reused steel",
+        "salvaged steel",
+        "sekundaerstahl",
+        "sekundärstahl",
+        "stahl",
+        "stahlrohr",
+        "steel",
+        "structural steel",
+        "wide-flange steel"
+      ],
+      "synonym_to_old": [
+        "Baustahl"
       ]
     },
-    "Huelle_Bauteil_Wiederverwendung": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Fenster, Fassadenelemente, Klinker/Backstein, Dämmung in neuer Hülle wiederverwendet.",
+    "Stahl": {
+      "kategorie": "Eisenmetall",
+      "definition": "Walzstahl in Hochbau-Gütegruppen (S235, S355, ältere Sorten ohne Werkszeugnis).",
       "keywords": [
-        "bauteil-/materialwiederverwendung in gebäudehülle",
-        "ziegelwand-module aus rückbau",
-        "wiederverwendung von ziegeln in fassade",
-        "wiederverwendung in fassade",
-        "partielle hüllbauteil-wiederverwendung",
-        "huellbauteil"
+        "1930s steel",
+        "baustahl",
+        "edelstahl",
+        "edelstahlrahmen",
+        "reuse_stahl",
+        "reused steel",
+        "salvaged steel",
+        "stahl",
+        "stahlrohr",
+        "stainless steel",
+        "steel",
+        "structural steel",
+        "v2a",
+        "v4a",
+        "wide-flange steel"
+      ],
+      "synonym_to_old": [
+        "Baustahl",
+        "Edelstahl"
       ]
     },
-    "Innenausbau_Wiederverwendung": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Innentüren, Bodenbelag, Trennwände, Geländer wiederverwendet.",
+    "Stahl_Verbindungen": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "circular fit-out",
-        "fit-out reuse",
-        "circular fitout",
-        "innenausbau wiederverwendung",
-        "reuse-first interior",
-        "interior reuse"
-      ]
+        "stahl",
+        "stahl verbindungen",
+        "verbindungen"
+      ],
+      "synonym_to_old": []
     },
-    "TGA_Wiederverwendung": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Sanitärobjekte, Leuchten, Heizkörper, Lüftungstechnik wiederverwendet.",
+    "Stroh": {
+      "kategorie": "Bio_Sonderstoff",
+      "definition": "Biogener Dämmstoff (Hanf, Stroh, Jute, Cellulose, Holzfaser, Schafwolle).",
       "keywords": [
-        "technische bauteil-wiederverwendung",
-        "tga-wiederverwendung",
-        "reuse hvac",
-        "reuse sanitary",
-        "fest installierte technische ausstattung"
-      ]
-    },
-    "Material_Wiederverwendung": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Material (nicht Bauteil) wiederverwendet — Sekundärrohstoff, Zerlegung in Material.",
-      "keywords": [
-        "materialwiederverwendung",
-        "material- und bauteilwiederverwendung",
-        "bauteil-/materialwiederverwendung",
-        "oogsten",
-        "material harvesting",
-        "harvest map"
-      ]
-    },
-    "Gebaeudeversetzung_Translokation": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Ganzes Gebäude an neuem Standort wieder errichtet.",
-      "keywords": [
-        "gebäudeversetzung",
-        "translocation",
-        "translozierung",
-        "gebäudeverpflanzung",
-        "versetzte hallenkonstruktion",
-        "moving building"
-      ]
-    },
-    "Adaptive_Reuse_Bestand": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Bestand wird angepasst weitergenutzt; oft kombiniert mit Bauteilwiederverwendung.",
-      "keywords": [
-        "adaptive reuse",
-        "in-situ transformation",
-        "bestandstransformation",
-        "umnutzung"
-      ]
-    },
-    "Remanufacturing": {
-      "kategorie": "Reuse_Niveau",
-      "definition": "Material wird zerlegt und in neues Bauteil refabriziert (Sekundärholz → Glulam, Mauerwerksbruch → neuer Mörtel).",
-      "keywords": [
-        "remanufacturing",
-        "remanufactured",
-        "upcycling-produkt",
-        "secondary timber glulam",
-        "refabrikation",
-        "upcycled product"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
+        "cellulose",
+        "hanf",
+        "hanf-kalk",
+        "hanfkalkstein",
+        "holzfaser",
+        "jute",
+        "jutedämmung",
+        "schafwolle",
+        "seegras",
+        "stroh",
+        "strohplatte"
+      ],
+      "synonym_to_old": [
+        "Daemmstoff_Bio"
       ]
     }
   },
   "Methode": {
-    "Pre_Demolition_Audit": {
-      "kategorie": "Erfassung",
-      "definition": "Systematische Bestandsaufnahme vor Rückbau zur Identifikation reuse-fähiger Bauteile.",
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
       "keywords": [
-        "pre-demolition audit",
-        "predemolition audit",
-        "materialaudit",
-        "materialinventar",
-        "rückbauaudit",
-        "audit",
-        "auditbericht",
-        "abbruchaudit"
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
       ]
     },
-    "Material_Mapping": {
+    "Bauteilkatalogisierung": {
       "kategorie": "Erfassung",
       "definition": "Kartierung verfügbarer Bauteile (Harvest Map, Oogstkaart, Materialatlas).",
       "keywords": [
+        "bauteilkatalog",
+        "bauteilkatalogisierung",
+        "bauteilpass",
+        "datenbank",
         "harvest map",
-        "oogstkaart",
+        "inventar",
+        "katalog",
+        "katalogisieren",
+        "material inventory",
         "material mapping",
         "materialatlas",
-        "qr-materialatlas",
+        "materialdatenbank",
         "materialherkunftsseite",
         "materialscout",
-        "bauteilkatalog",
-        "bauteilpass"
+        "oogstkaart",
+        "qr-materialatlas"
+      ],
+      "synonym_to_old": [
+        "Material_Mapping",
+        "Kataloge_Datenbank"
       ]
     },
-    "Component_Hunting": {
+    "Bestandserhalt": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "bestandserhalt"
+      ],
+      "synonym_to_old": []
+    },
+    "Building_Material_Scouting": {
       "kategorie": "Beschaffung",
       "definition": "Aktive Suche nach verfügbaren Bauteilen für ein konkretes Projekt.",
       "keywords": [
-        "bauteilsuche",
-        "component hunting",
-        "bauteiljäger",
-        "bauteiljagd",
-        "bauteilernte",
         "bauteil-ernte",
+        "bauteilernte",
+        "bauteiljagd",
+        "bauteiljäger",
+        "bauteilsuche",
+        "building",
+        "building material scouting",
+        "city mining",
+        "component hunting",
+        "matching-algorithmus",
+        "material",
         "reclaim",
-        "sourcing",
-        "matching-algorithmus"
-      ]
-    },
-    "Urban_Mining": {
-      "kategorie": "Beschaffung",
-      "definition": "Stadt als Materiallager — systematische Materialgewinnung aus Bestand.",
-      "keywords": [
-        "urban mining",
         "same-site urban mining",
+        "scouting",
+        "sourcing",
         "stadt-als-mine",
-        "city mining"
-      ]
-    },
-    "Reversed_Planning": {
-      "kategorie": "Planung",
-      "definition": "Entwurf folgt Verfügbarkeit verfügbarer Bauteile (catch-of-the-day, materialgetriebener Entwurf).",
-      "keywords": [
-        "reversed planning",
-        "umgekehrter entwurfsprozess",
-        "materialgetriebener entwurf",
-        "design follows availability",
-        "superuse",
-        "catch of the day",
-        "entwurf aus verfügbarkeit",
-        "bauteilverfügbarkeit / entwurf"
+        "urban mining"
+      ],
+      "synonym_to_old": [
+        "Component_Hunting",
+        "Urban_Mining"
       ]
     },
     "Design_for_Disassembly": {
       "kategorie": "Planung",
       "definition": "Entwurf so, dass Bauteile später zerstörungsfrei demontierbar sind.",
       "keywords": [
-        "design for disassembly",
-        "dfd",
-        "kit-of-parts",
-        "demontabel",
-        "reversible construction",
         "borrowed building",
+        "demontabel",
+        "design",
+        "design for disassembly",
+        "design for disaßembly",
+        "dfd",
+        "disassembly",
+        "disaßembly",
+        "kit-of-parts",
         "reversible bauweise",
+        "reversible construction",
         "temporäre wiederaufbaubarkeit"
+      ],
+      "synonym_to_old": [
+        "Design_for_Disassembly"
       ]
     },
-    "BIM_CAD_Modellierung": {
+    "Form_Follows_Availability": {
       "kategorie": "Planung",
-      "definition": "Digitales Modell mit Bauteildaten (BIM, CAD, FE-Modell).",
+      "definition": "Entwurf folgt Verfügbarkeit verfügbarer Bauteile (catch-of-the-day, materialgetriebener Entwurf).",
       "keywords": [
-        "bim",
-        "cad",
-        "fe-modell",
-        "fem",
-        "risa-3d",
-        "digital twin",
-        "bim-modell",
-        "computertomographie"
+        "availability",
+        "bauteilverfügbarkeit / entwurf",
+        "catch of the day",
+        "design follows availability",
+        "entwurf aus verfügbarkeit",
+        "follows",
+        "form",
+        "form follows availability",
+        "materialgetriebener entwurf",
+        "reversed planning",
+        "superuse",
+        "umgekehrter entwurfsprozess"
+      ],
+      "synonym_to_old": [
+        "Reversed_Planning"
       ]
     },
-    "Materialpruefung_als_Methode": {
-      "kategorie": "Verifikation",
-      "definition": "Methodische Materialprüfung im Reuse-Prozess (siehe auch Pruefung-Entitäten).",
-      "keywords": [
-        "materialprüfung",
-        "lasttest",
-        "destruktive untersuchung",
-        "ndt",
-        "non-destructive testing",
-        "zugversuch"
-      ]
-    },
-    "Lagermanagement": {
-      "kategorie": "Logistik",
-      "definition": "Verwaltung von Bauteildepots, Lagerverwaltungssystem.",
-      "keywords": [
-        "lagermanagement",
-        "lagerverwaltung",
-        "materialdepot",
-        "depot management",
-        "stockholder management",
-        "bauteildepot"
-      ]
-    },
-    "Kataloge_Datenbank": {
+    "Materialinventur": {
       "kategorie": "Erfassung",
-      "definition": "Kataloge, Datenbanken, Materialinventare als Methode.",
+      "definition": "Kartierung verfügbarer Bauteile (Harvest Map, Oogstkaart, Materialatlas).",
       "keywords": [
-        "katalogisieren",
-        "katalog",
-        "datenbank",
-        "materialdatenbank",
-        "inventar",
-        "material inventory"
+        "bauteilkatalog",
+        "bauteilpass",
+        "harvest map",
+        "material mapping",
+        "materialatlas",
+        "materialherkunftsseite",
+        "materialinventur",
+        "materialscout",
+        "oogstkaart",
+        "qr-materialatlas"
+      ],
+      "synonym_to_old": [
+        "Material_Mapping"
       ]
     },
-    "Refurbishment_Aufbereitung_Methode": {
-      "kategorie": "Aufbereitung",
-      "definition": "Methodisch organisierte Bauteilaufbereitung (siehe auch Aufbereitungsmethode-Entitäten).",
-      "keywords": [
-        "refurbishment",
-        "remanufacturing methode",
-        "aufbereitung methode",
-        "rekonditionierung"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    },
-    "LCA_Oekobilanz": {
-      "kategorie": "Verifikation",
-      "definition": "Lebenszyklus-Analyse / Ökobilanz.",
-      "keywords": [
-        "lca",
-        "ökobilanz",
-        "oekobilanz",
-        "life-cycle assessment",
-        "lifecycle assessment"
-      ]
-    },
-    "Stockmatcher": {
+    "Materialpass": {
       "kategorie": "Beschaffung",
       "definition": "Plattform-basiertes Matching von Donor-Beständen mit Empfänger-Bedarfen.",
       "keywords": [
-        "stockmatcher",
-        "stock matcher",
         "matching algorithmus",
-        "platform matching"
+        "materialpass",
+        "materialpaß",
+        "platform matching",
+        "stock matcher",
+        "stockmatcher"
+      ],
+      "synonym_to_old": [
+        "Stockmatcher"
       ]
     },
-    "Specification_Method": {
+    "ReUse_Assessment": {
+      "kategorie": "Erfassung",
+      "definition": "Systematische Bestandsaufnahme vor Rückbau zur Identifikation reuse-fähiger Bauteile.",
+      "keywords": [
+        "abbruchaudit",
+        "assessment",
+        "audit",
+        "auditbericht",
+        "aßeßment",
+        "lca",
+        "life-cycle assessment",
+        "lifecycle assessment",
+        "materialaudit",
+        "materialinventar",
+        "oekobilanz",
+        "pre-demolition audit",
+        "predemolition audit",
+        "reuse",
+        "reuse assessment",
+        "reuse aßeßment",
+        "rückbauaudit",
+        "ökobilanz"
+      ],
+      "synonym_to_old": [
+        "Pre_Demolition_Audit",
+        "LCA_Oekobilanz"
+      ]
+    },
+    "Reversibilitaet": {
+      "kategorie": "Planung",
+      "definition": "Entwurf so, dass Bauteile später zerstörungsfrei demontierbar sind.",
+      "keywords": [
+        "borrowed building",
+        "demontabel",
+        "design for disassembly",
+        "dfd",
+        "kit-of-parts",
+        "reversibilitaet",
+        "reversibilität",
+        "reversible bauweise",
+        "reversible construction",
+        "temporäre wiederaufbaubarkeit"
+      ],
+      "synonym_to_old": [
+        "Design_for_Disassembly"
+      ]
+    },
+    "Urban_Mining": {
+      "kategorie": "Beschaffung",
+      "definition": "Stadt als Materiallager — systematische Materialgewinnung aus Bestand.",
+      "keywords": [
+        "city mining",
+        "mining",
+        "same-site urban mining",
+        "stadt-als-mine",
+        "urban",
+        "urban mining"
+      ],
+      "synonym_to_old": [
+        "Urban_Mining"
+      ]
+    },
+    "Zirkulaere_Ausschreibung": {
       "kategorie": "Planung",
       "definition": "Reuse-spezifische Ausschreibungs-/Spezifikationsmethode.",
       "keywords": [
-        "spezifikation reuse",
+        "ausschreibung",
+        "ausschreibungsmethode reuse",
+        "außchreibung",
         "specification method",
-        "ausschreibungsmethode reuse"
-      ]
-    },
-    "Fotodokumentation": {
-      "kategorie": "Erfassung",
-      "definition": "Fotografische Dokumentation für Inventar und Zustand.",
-      "keywords": [
-        "fotodokumentation",
-        "photo documentation",
-        "photographic survey"
+        "spezifikation reuse",
+        "zirkulaere",
+        "zirkulaere ausschreibung",
+        "zirkuläre",
+        "zirkuläre außchreibung"
+      ],
+      "synonym_to_old": [
+        "Specification_Method"
       ]
     }
   },
-  "Tragwerkssystem": {
-    "Stahl_Skelettbau": {
-      "kategorie": "Stahl",
-      "definition": "Tragwerk aus Stahlträgern und -stützen als räumliches Skelett.",
-      "keywords": [
-        "stahl-skelettbau",
-        "stahlskelett",
-        "stahl skelett",
-        "steel frame",
-        "steel skeleton",
-        "stahlrahmenbau",
-        "steel skeletal"
-      ]
-    },
-    "Stahl_Rohrtragwerk": {
-      "kategorie": "Stahl",
-      "definition": "Tragwerk aus Stahlrohren (Pole-Barn, Schedule-40-Rohre).",
-      "keywords": [
-        "pole barn",
-        "stahlrohrtragwerk",
-        "drill-stem-pipe",
-        "schedule-40",
-        "tubular structure"
-      ]
-    },
-    "Holz_Rahmenbau": {
-      "kategorie": "Holz",
-      "definition": "Holzrahmen-/Holzständerbauweise als Tragwerkssystem.",
-      "keywords": [
-        "holzrahmenbau",
-        "holzrahmenbauweise",
-        "holzrahmen",
-        "timber frame",
-        "softwood walling studs",
-        "innerer holzrahmen"
-      ]
-    },
-    "Holz_Skelettbau_BSH": {
-      "kategorie": "Holz",
-      "definition": "Holz-Skelettbau aus Brettschichtholz (BSH, Glulam) oder Vollholz.",
-      "keywords": [
-        "holzskelett",
-        "glulam frame",
-        "bsh-tragwerk",
-        "bsh-skelett",
-        "glulamst-tragwerksrahmen",
-        "holzskelettbau"
-      ]
-    },
-    "CLT_Massivbau": {
-      "kategorie": "Holz",
-      "definition": "Tragsystem aus Brettsperrholz (CLT-Wände, CLT-Decken).",
-      "keywords": [
-        "clt-tragwerk",
-        "clt-massivbau",
-        "brettsperrholz-tragwerk",
-        "clst-wand",
-        "cross-laminated timber structure"
-      ]
-    },
-    "Stahlbeton_Skelettbau": {
-      "kategorie": "Beton",
-      "definition": "Tragwerk aus Stahlbetonstützen und -trägern (Skelett).",
-      "keywords": [
-        "stahlbeton-skelettbau",
-        "betonskelett",
-        "concrete frame",
-        "reinforced concrete frame"
-      ]
-    },
-    "Stahlbeton_Massivbau": {
-      "kategorie": "Beton",
-      "definition": "Tragwerk aus Ortbeton-Wänden und -Decken.",
-      "keywords": [
-        "ortbeton-tragwerk",
-        "betonmassiv",
-        "stahlbeton-massivbau",
-        "rc wall structure"
-      ]
-    },
-    "Plattenbau_DDR": {
-      "kategorie": "Beton",
-      "definition": "DDR-Plattenbausysteme als Tragwerk (WBS70, IW73, P2, Schultyp).",
-      "keywords": [
-        "plattenbau",
-        "wbs70-system",
-        "iw73-system",
-        "p2-system",
-        "schultyp dresden",
-        "ddr plattenbau",
-        "großtafelbau",
-        "plattenbau-typologie"
-      ]
-    },
-    "Stahlbeton_Fertigteil_System": {
-      "kategorie": "Beton",
-      "definition": "Tragwerk komplett aus Stahlbetonfertigteilen (modern Westbau).",
-      "keywords": [
-        "fertigteil-tragwerk",
-        "fertigteilsystem",
-        "precast concrete system",
-        "betonfertigteilbau"
-      ]
-    },
-    "Mauerwerksbau": {
-      "kategorie": "Mauerwerk",
-      "definition": "Tragwerk aus Mauerwerk (Ziegel, Klinker, Naturstein).",
-      "keywords": [
-        "mauerwerksbau",
-        "mauerwerkstragwerk",
-        "tragende ziegelmauer",
-        "load-bearing masonry"
-      ]
-    },
-    "Hybrid_Stahl_Holz": {
-      "kategorie": "Hybrid",
-      "definition": "Hybrid-Tragwerk Stahl + Holz.",
-      "keywords": [
-        "hybrid stahl holz",
-        "stahl-holz-hybrid",
-        "stahl-clt",
-        "clt und stahl",
-        "steel-timber hybrid"
-      ]
-    },
-    "Hybrid_Stahl_Beton": {
-      "kategorie": "Hybrid",
-      "definition": "Hybrid-Tragwerk Stahl + Beton (Verbundtragwerk).",
-      "keywords": [
-        "hybrid stahl beton",
-        "verbundtragwerk",
-        "steel-concrete composite",
-        "stahl-beton-hybrid"
-      ]
-    },
-    "Hybrid_Holz_Beton": {
-      "kategorie": "Hybrid",
-      "definition": "Hybrid-Tragwerk Holz + Beton (Holz-Beton-Verbund).",
-      "keywords": [
-        "holz-beton-verbund",
-        "hbv",
-        "timber-concrete composite",
-        "hybrid holz beton"
-      ]
-    },
-    "Formaktive_Schale": {
-      "kategorie": "Sonstiges",
-      "definition": "Formaktive Tragstruktur (gebogene Wand, Schale, Bogen).",
-      "keywords": [
-        "formaktive schale",
-        "formaktive struktur",
-        "schalentragwerk",
-        "ziegelschale",
-        "gewölbe",
-        "shell structure"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    }
-  },
-  "Verbindung": {
-    "Schraubverbindung": {
-      "kategorie": "Reversibel",
-      "definition": "Geschraubte Verbindung — reversibel, demontierbar.",
-      "keywords": [
-        "geschraubt",
-        "schraubverbindung",
-        "verschraubung",
-        "bolted",
-        "bolted connection",
-        "lösbar",
-        "schrauben"
-      ]
-    },
-    "Stahlbau_Schweissverbindung": {
-      "kategorie": "Permanent",
-      "definition": "Geschweißte Stahlverbindung — irreversibel.",
-      "keywords": [
-        "geschweißt",
-        "schweißverbindung",
-        "schweißung",
-        "welded",
-        "weld",
-        "verschweißung",
-        "stahl-schweißung"
-      ]
-    },
-    "Holz_Stabduebel": {
-      "kategorie": "Reversibel",
-      "definition": "Holzverbindung mit Stahlstabdübeln, Holzdübeln, Schrauben.",
-      "keywords": [
-        "stabdübel",
-        "stahllaschen",
-        "holzdübel",
-        "holzverbindung",
-        "zimmermannsverbindung",
-        "holznagelung",
-        "schrauben holz"
-      ]
-    },
-    "Klebeverbindung": {
-      "kategorie": "Permanent",
-      "definition": "Geklebte Verbindung (BSH-Klebfuge, Klebstoff, Verleimung).",
-      "keywords": [
-        "geklebt",
-        "klebstoff",
-        "verleimt",
-        "verleimung",
-        "klebfuge",
-        "adhesive",
-        "geleimt"
-      ]
-    },
-    "Moertelverbund": {
-      "kategorie": "Permanent",
-      "definition": "Mörtelverbund / Bettung (Mauerwerk, Klinker).",
-      "keywords": [
-        "mörtelverbund",
-        "bettung",
-        "zementmörtel",
-        "mauermörtel",
-        "mortar bond",
-        "mörtelfuge"
-      ]
-    },
-    "Anschlussdetail_Toleranz": {
-      "kategorie": "Sonstiges",
-      "definition": "Anschlussdetails mit Toleranzausgleich für Reuse-Bauteile.",
-      "keywords": [
-        "anschlussdetail",
-        "toleranzausgleich",
-        "höhenausgleich",
-        "passverstopfung",
-        "flexible anschluss",
-        "ausgleichsschicht"
-      ]
-    },
-    "Reversible_Verbindung": {
-      "kategorie": "Reversibel",
-      "definition": "Allgemein für reversible Fügung (DfD-konform).",
-      "keywords": [
-        "reversible verbindung",
-        "lösbare verbindung",
-        "demontierbare fügung",
-        "trockene verbindung",
-        "reversible joint",
-        "wiederaufbau in gleicher fügung"
-      ]
-    },
+  "Prozessphase": {
     "Datenluecke": {
       "kategorie": "Datenluecke",
       "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
@@ -1410,312 +997,137 @@
         "to be determined"
       ]
     },
-    "Gesteckte_Verbindung": {
-      "kategorie": "Reversibel",
-      "definition": "Steckverbindung — reversibel, ohne Werkzeug.",
+    "Aufbereitung": {
+      "kategorie": "Verarbeitung",
+      "definition": "Aufbereitung / Refurbishment als Prozessphase.",
       "keywords": [
-        "gesteckt",
-        "plug connection",
-        "stecksystem",
-        "snap-fit"
+        "aufbereitung",
+        "aufbereitungsphase",
+        "reconditioning phase",
+        "refurbishment phase"
+      ],
+      "synonym_to_old": [
+        "Aufbereitung_Phase"
       ]
     },
-    "Geklemmte_Verbindung": {
-      "kategorie": "Reversibel",
-      "definition": "Klemmverbindung über Kraftschluss.",
+    "Ausschreibung": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "geklemmt",
-        "klemmverbindung",
-        "clamped connection"
+        "ausschreibung",
+        "außchreibung"
+      ],
+      "synonym_to_old": []
+    },
+    "Bestandserfassung": {
+      "kategorie": "Vorbereitung",
+      "definition": "Erfassung des Bestandes (Vermessung, Dokumentation, Materialinventar).",
+      "keywords": [
+        "as-built",
+        "bauteilinventar",
+        "bestandsanalyse",
+        "bestandsaufnahme",
+        "bestandserfassung",
+        "bestandserfaßung",
+        "component inventory",
+        "inventaraufnahme",
+        "site survey",
+        "stocktake",
+        "vermessung"
+      ],
+      "synonym_to_old": [
+        "Bestandsaufnahme",
+        "Bauteilinventar_Phase"
       ]
     },
-    "Holz_Stahl_Anschluss": {
-      "kategorie": "Hybrid",
-      "definition": "Hybrid-Verbindung Holz an Stahlbauteil.",
+    "Betrieb_und_Rueckbauplanung": {
+      "kategorie": "Betrieb",
+      "definition": "Betrieb / Monitoring nach Inbetriebnahme.",
       "keywords": [
-        "holz-stahl",
-        "timber-steel connection",
-        "holz an stahl"
+        "betrieb",
+        "betrieb und rueckbauplanung",
+        "betrieb und rückbauplanung",
+        "betriebsphase",
+        "monitoring phase",
+        "nutzungsphase",
+        "operation phase",
+        "rueckbauplanung",
+        "rückbauplanung"
+      ],
+      "synonym_to_old": [
+        "Nutzungsphase"
       ]
     },
-    "Moertelfuge": {
-      "kategorie": "Permanent",
-      "definition": "Mörtelfuge zwischen Mauerwerksbauteilen.",
+    "Entwurf": {
+      "kategorie": "Planung",
+      "definition": "Planungs-/Entwurfsphase mit Reuse-Spezifika.",
       "keywords": [
-        "mörtelfuge",
-        "mortar joint",
-        "mauerfuge"
-      ]
-    }
-  },
-  "Pruefung": {
-    "Materialpruefung_Stahl": {
-      "kategorie": "Material",
-      "definition": "Zugversuch, Schweißbarkeitsprüfung, Werkszeugnis-Ersatz für Reuse-Stahl.",
-      "keywords": [
-        "zugversuch",
-        "schweißbarkeitsprüfung",
-        "stahlprüfung",
-        "materialprüfung stahl",
-        "pre-1940s steel testing",
-        "concrete encasement",
-        "stahlnachweis",
-        "steel testing"
+        "design phase",
+        "entwurf",
+        "entwurfsphase",
+        "planungsphase",
+        "reuse-planung"
+      ],
+      "synonym_to_old": [
+        "Planung_Design_Phase"
       ]
     },
-    "Materialpruefung_Beton": {
-      "kategorie": "Material",
-      "definition": "Druckfestigkeit, Karbonatisierung, Bewehrungsortung, Chloridgehalt.",
+    "Lagerung": {
+      "kategorie": "Logistik",
+      "definition": "Lagerung als Prozessphase.",
       "keywords": [
-        "betondruckfestigkeit",
-        "karbonatisierung",
-        "bewehrungsortung",
-        "chloridgehalt",
-        "ferroscan",
-        "volantis",
-        "betonprüfung",
-        "concrete testing"
+        "lagerphase",
+        "lagerung",
+        "storage phase"
+      ],
+      "synonym_to_old": [
+        "Lagerung_Phase"
       ]
     },
-    "Materialpruefung_Holz": {
-      "kategorie": "Material",
-      "definition": "Festigkeitssortierung, Holzfeuchtemessung, Klebfugenbewertung.",
+    "Rueckbau": {
+      "kategorie": "Ausführung",
+      "definition": "Rückbau / Demontage als Prozessphase.",
       "keywords": [
-        "festigkeitssortierung",
-        "holzfeuchte",
-        "klebfugenbewertung",
-        "delamination",
-        "holzprüfung",
-        "timber testing"
+        "deconstruction phase",
+        "demontage phase",
+        "rueckbau",
+        "rückbau",
+        "rückbau phase",
+        "rückbauausführung"
+      ],
+      "synonym_to_old": [
+        "Rueckbau_Phase"
       ]
     },
-    "Sichtpruefung": {
-      "kategorie": "Visuell",
-      "definition": "Visuelle Inspektion vor Wiedereinbau.",
+    "Transport": {
+      "kategorie": "Logistik",
+      "definition": "Transport als Prozessphase.",
       "keywords": [
-        "sichtprüfung",
-        "visual inspection",
-        "visuelle prüfung",
-        "ocular inspection"
+        "shipping phase",
+        "transport",
+        "transport phase",
+        "transportausführung"
+      ],
+      "synonym_to_old": [
+        "Transport_Phase"
       ]
     },
-    "Tragwerksnachweis": {
-      "kategorie": "Statik",
-      "definition": "Statischer Nachweis für Wiederverwendung (Lastansatz, Bemessung).",
+    "Wiedereinbau": {
+      "kategorie": "Ausführung",
+      "definition": "Wiedereinbau / Montage als Prozessphase.",
       "keywords": [
-        "tragwerksnachweis",
-        "statischer nachweis",
-        "lastansatz",
-        "bemessung reuse",
-        "structural verification",
-        "stabilitätsprüfung",
-        "historische profilbemessung"
-      ]
-    },
-    "Lasttest": {
-      "kategorie": "Statik",
-      "definition": "Belastungstest am Bauteil (in-situ oder im Labor).",
-      "keywords": [
-        "lasttest",
-        "belastungstest",
-        "load test",
-        "labortest",
-        "laborversuch"
-      ]
-    },
-    "Schadstoffpruefung": {
-      "kategorie": "Schadstoff",
-      "definition": "Asbest-, PCB-, Blei-, sonstige Schadstoff-Screening.",
-      "keywords": [
-        "schadstoffprüfung",
-        "asbestprüfung",
-        "pcb-prüfung",
-        "schadstoffscreening",
-        "altlastenprüfung",
-        "hazardous substance testing"
-      ]
-    },
-    "Hygiene_Dichtheitspruefung": {
-      "kategorie": "Sonstiges",
-      "definition": "Dichtheits-, Hygiene-, Legionellen-Prüfung (Sanitärobjekte).",
-      "keywords": [
-        "dichtheitsprüfung",
-        "hygieneprüfung",
-        "legionellenprüfung",
-        "leakage test"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    },
-    "Massaufnahme": {
-      "kategorie": "Geometrisch",
-      "definition": "Geometrische Vermessung des Donor-Bauteils.",
-      "keywords": [
-        "massaufnahme",
-        "vermessung",
-        "geometric survey",
-        "as-built survey"
-      ]
-    },
-    "Festigkeitspruefung": {
-      "kategorie": "Statik",
-      "definition": "Prüfung der mechanischen Festigkeit.",
-      "keywords": [
-        "festigkeitsprüfung",
-        "festigkeitstest",
-        "strength test",
-        "belastungstest"
-      ]
-    },
-    "Zustandsbewertung": {
-      "kategorie": "Visuell",
-      "definition": "Systematische Bewertung des Bauteilzustands.",
-      "keywords": [
-        "zustandsbewertung",
-        "condition assessment",
-        "zustandsklassifikation"
-      ]
-    },
-    "Pruefdossier": {
-      "kategorie": "Dokumentation",
-      "definition": "Dokumentationsmappe aller Prüfungen.",
-      "keywords": [
-        "prüfdossier",
-        "test dossier",
-        "test record"
-      ]
-    },
-    "Brandschutzpruefung": {
-      "kategorie": "Bauphysik",
-      "definition": "Brandschutzprüfung für Reuse-Bauteile.",
-      "keywords": [
-        "brandschutzprüfung",
-        "fire test",
-        "feuerwiderstandsprüfung",
-        "f30 prüfung"
-      ]
-    },
-    "CE_Kennzeichnung_Problem": {
-      "kategorie": "Konformität",
-      "definition": "Probleme mit CE-Kennzeichnung für Gebrauchtbauteile.",
-      "keywords": [
-        "ce-kennzeichnung problem",
-        "ce mark issue",
-        "ce-fehlend",
-        "ce ukca marked"
+        "installation phase",
+        "montage",
+        "reassembly",
+        "remontage phase",
+        "wiedereinbau"
+      ],
+      "synonym_to_old": [
+        "Wiedereinbau_Phase"
       ]
     }
   },
   "Aufbereitungsmethode": {
-    "Reinigung_Strahlen": {
-      "kategorie": "Reinigung",
-      "definition": "Reinigung durch Sandstrahlen, Hochdruck, mechanische Reinigung.",
-      "keywords": [
-        "reinigung",
-        "sandstrahlen",
-        "strahlen",
-        "hochdruckreinigung",
-        "abreinigen",
-        "blasting",
-        "cleaning"
-      ]
-    },
-    "Entmoertelung_Klinker": {
-      "kategorie": "Trennung",
-      "definition": "Entfernung von Mörtel von Mauerwerksbausteinen.",
-      "keywords": [
-        "entmörtelung",
-        "mörtel entfernen",
-        "ziegel entmörteln",
-        "klinker reinigen",
-        "demortar",
-        "ontvoegen"
-      ]
-    },
-    "Zuschnitt_Saegen": {
-      "kategorie": "Bearbeitung",
-      "definition": "Zuschnitt von Bauteilen (Säge, Brennschnitt, Trennscheibe).",
-      "keywords": [
-        "zuschnitt",
-        "sägen",
-        "brennschnitt",
-        "betonsägen",
-        "trennen",
-        "saw cutting",
-        "bauteilzuschnitt"
-      ]
-    },
-    "Beschichtung_Korrosionsschutz": {
-      "kategorie": "Schutz",
-      "definition": "Neubeschichtung zur Korrosionsverhinderung (Stahlbauteile).",
-      "keywords": [
-        "beschichtung",
-        "korrosionsschutz",
-        "anstrich",
-        "recoating",
-        "coating",
-        "neuverzinkung",
-        "primer"
-      ]
-    },
-    "Refurbishment_Holz": {
-      "kategorie": "Refurbishment",
-      "definition": "Aufbereitung Holz: Entnageln, Schleifen, Trocknen, Schädlingsbehandlung.",
-      "keywords": [
-        "entnageln",
-        "schleifen",
-        "trocknen",
-        "schädlingsbehandlung",
-        "holzaufbereitung",
-        "boktor-behandlung"
-      ]
-    },
-    "Refurbishment_Sanitaer": {
-      "kategorie": "Refurbishment",
-      "definition": "Aufbereitung Sanitärobjekte: Reinigung, Dichtung, Hygiene.",
-      "keywords": [
-        "sanitär refurbishment",
-        "wc-reinigung",
-        "armaturen aufbereitung",
-        "leuchten-refurbishment"
-      ]
-    },
-    "Lochverschluss_Reparatur": {
-      "kategorie": "Bearbeitung",
-      "definition": "Verfüllen von Schraubbohrlöchern, Reparatur kleiner Schäden.",
-      "keywords": [
-        "lochverschluss",
-        "bohrloch",
-        "schraubbohrloch",
-        "verfüllen",
-        "patch repair",
-        "lochfüller"
-      ]
-    },
-    "Anpassung_Bearbeitung": {
-      "kategorie": "Bearbeitung",
-      "definition": "Generelle mechanische Anpassung (Bohren, Schweißen, Nachbearbeiten).",
-      "keywords": [
-        "anpassung",
-        "bearbeitung",
-        "nachbearbeiten",
-        "umarbeitung",
-        "mechanical adaptation",
-        "oberflächenbearbeitung"
-      ]
-    },
     "Datenluecke": {
       "kategorie": "Datenluecke",
       "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
@@ -1728,37 +1140,6 @@
         "unspezifiziert",
         "tbd",
         "to be determined"
-      ]
-    },
-    "Entrostung": {
-      "kategorie": "Reinigung",
-      "definition": "Entfernung von Rost und Korrosion an Stahlbauteilen.",
-      "keywords": [
-        "entrostung",
-        "rust removal",
-        "entrosten",
-        "derust"
-      ]
-    },
-    "Sortierung_Gradierung": {
-      "kategorie": "Bearbeitung",
-      "definition": "Sortierung und Klassifizierung nach Qualität, Größe, Zustand.",
-      "keywords": [
-        "sortierung",
-        "gradierung",
-        "grading",
-        "sorting",
-        "sortenrein"
-      ]
-    },
-    "Pruefung_Freigabe": {
-      "kategorie": "Verifikation",
-      "definition": "Prüfung mit anschließender Freigabe für Wiedereinbau.",
-      "keywords": [
-        "prüfung freigabe",
-        "release inspection",
-        "freigabeprozess",
-        "qa release"
       ]
     },
     "Drahtglasschneiden": {
@@ -1766,321 +1147,120 @@
       "definition": "Spezielle Schnitttechnik für Drahtglasplatten.",
       "keywords": [
         "drahtglas",
-        "wire glass cut",
-        "drahtglasschneiden"
+        "drahtglasschneiden",
+        "drahtglaßchneiden",
+        "wire glass cut"
+      ],
+      "synonym_to_old": [
+        "Drahtglasschneiden"
       ]
     },
-    "Remanufacturing_Bauholz_Glulam": {
+    "Entmoertelung_von_Fliesen": {
+      "kategorie": "Trennung",
+      "definition": "Entfernung von Mörtel von Mauerwerksbausteinen.",
+      "keywords": [
+        "demortar",
+        "entmoertelung",
+        "entmoertelung von fliesen",
+        "entmörtelung",
+        "entmörtelung von fliesen",
+        "fliesen",
+        "klinker reinigen",
+        "mörtel entfernen",
+        "ontvoegen",
+        "ziegel entmörteln"
+      ],
+      "synonym_to_old": [
+        "Entmoertelung_Klinker"
+      ]
+    },
+    "Holzaufbereitung": {
       "kategorie": "Refurbishment",
-      "definition": "Refabrikation von Sekundärholz zu neuem Glulam.",
+      "definition": "Aufbereitung Holz: Entnageln, Schleifen, Trocknen, Schädlingsbehandlung.",
       "keywords": [
-        "bauholz zu glulam",
-        "secondary timber to glulam",
-        "glulam-remanufacturing",
-        "sekundärholz glulam"
+        "boktor-behandlung",
+        "entnageln",
+        "holzaufbereitung",
+        "schleifen",
+        "schädlingsbehandlung",
+        "trocknen"
+      ],
+      "synonym_to_old": [
+        "Refurbishment_Holz"
       ]
     },
-    "Neubeschichtung": {
-      "kategorie": "Schutz",
-      "definition": "Erneuerung der Oberflächenbeschichtung.",
+    "Leuchten_Refurbishment": {
+      "kategorie": "Refurbishment",
+      "definition": "Aufbereitung Sanitärobjekte: Reinigung, Dichtung, Hygiene.",
       "keywords": [
-        "neubeschichtung",
-        "recoating",
-        "umlackierung",
-        "powder coating"
-      ]
-    }
-  },
-  "Abbruchmethode": {
-    "Selektiver_Rueckbau": {
-      "kategorie": "Reuse-Konform",
-      "definition": "Selektiver, sortierender Rückbau zur Bauteilbergung.",
-      "keywords": [
-        "selektiver rückbau",
-        "sortierender rückbau",
-        "selective demolition",
-        "selective deconstruction",
-        "sortenrein"
+        "armaturen aufbereitung",
+        "leuchten",
+        "leuchten refurbishment",
+        "leuchten-refurbishment",
+        "refurbishment",
+        "sanitär refurbishment",
+        "wc-reinigung"
+      ],
+      "synonym_to_old": [
+        "Refurbishment_Sanitaer"
       ]
     },
-    "Demontage_Lift_off": {
-      "kategorie": "Reuse-Konform",
-      "definition": "Demontage durch Abheben (Lift-off) ganzer Bauteile / Baugruppen.",
+    "Qualitaetssicherung": {
+      "kategorie": "Verifikation",
+      "definition": "Prüfung mit anschließender Freigabe für Wiedereinbau.",
       "keywords": [
-        "demontage",
-        "lift-off",
-        "abheben",
-        "abbau",
-        "deconstruction",
-        "remontage"
+        "freigabeprozess",
+        "prüfung freigabe",
+        "qa release",
+        "qualitaetssicherung",
+        "qualitätßicherung",
+        "release inspection"
+      ],
+      "synonym_to_old": [
+        "Pruefung_Freigabe"
       ]
     },
-    "Saegen_Beton": {
+    "Rekonditionierung": {
+      "kategorie": "Refurbishment",
+      "definition": "Aufbereitung Holz: Entnageln, Schleifen, Trocknen, Schädlingsbehandlung.",
+      "keywords": [
+        "anpassung",
+        "bearbeitung",
+        "boktor-behandlung",
+        "entnageln",
+        "holzaufbereitung",
+        "mechanical adaptation",
+        "nachbearbeiten",
+        "oberflächenbearbeitung",
+        "rekonditionierung",
+        "schleifen",
+        "schädlingsbehandlung",
+        "trocknen",
+        "umarbeitung"
+      ],
+      "synonym_to_old": [
+        "Refurbishment_Holz",
+        "Anpassung_Bearbeitung"
+      ]
+    },
+    "Reparatur": {
       "kategorie": "Bearbeitung",
-      "definition": "Diamantsäge oder Wasserstrahl zum Trennen von Beton-Bauteilen.",
+      "definition": "Verfüllen von Schraubbohrlöchern, Reparatur kleiner Schäden.",
       "keywords": [
-        "betonsäge",
-        "diamantsäge",
-        "wasserstrahl",
-        "concrete cutting",
-        "saw demolition"
-      ]
-    },
-    "Sprengen_Konventionell": {
-      "kategorie": "Reuse-Inkompatibel",
-      "definition": "Konventioneller Abbruch durch Sprengung oder Bagger — keine Bauteilbergung.",
-      "keywords": [
-        "sprengung",
-        "abriss bagger",
-        "konventioneller abbruch",
-        "wrecking ball",
-        "uncontrolled demolition"
-      ]
-    },
-    "Stueckweise_Demontage": {
-      "kategorie": "Reuse-Konform",
-      "definition": "Stückweise Zerlegung mit Werkzeug (Schraubendreher, Hammer, Schneidbrenner).",
-      "keywords": [
-        "stückweise demontage",
-        "manual deconstruction",
-        "hand-demontage",
-        "screw removal"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    }
-  },
-  "Logistik": {
-    "Direkt_Wiederverwendung_ohne_Lager": {
-      "kategorie": "Just-in-Time",
-      "definition": "Donor-Bauteile gehen direkt zum Empfänger — kein Zwischenlager.",
-      "keywords": [
-        "direkt-wiederverwendung",
-        "just-in-time",
-        "ohne zwischenlager",
-        "kein lager",
-        "direct reuse logistics",
-        "in-project self-reuse"
-      ]
-    },
-    "Zwischenlagerung": {
-      "kategorie": "Lagerung",
-      "definition": "Bauteile werden zwischengelagert vor Wiedereinbau.",
-      "keywords": [
-        "zwischenlagerung",
-        "zwischenlager",
-        "materialdepot",
-        "interim storage",
-        "buffer storage",
-        "lagerung mit schutz",
-        "occasionslager",
-        "material stockpile"
-      ]
-    },
-    "Stockholder_Reuse_Lieferant": {
-      "kategorie": "Lagerung",
-      "definition": "Externe Stockholder oder Reuse-Lieferanten verwalten Lager.",
-      "keywords": [
-        "stockholder",
-        "reuse-stockholder",
-        "reuse-lieferant",
-        "cleveland steel",
-        "external stockholder"
-      ]
-    },
-    "Schwertransport": {
-      "kategorie": "Transport",
-      "definition": "Großbauteile auf Schwerlast-LKW.",
-      "keywords": [
-        "schwertransport",
-        "tieflader",
-        "heavy haul",
-        "abnormal load",
-        "großtransport"
-      ]
-    },
-    "Regionale_Beschaffung": {
-      "kategorie": "Transport",
-      "definition": "Beschaffung innerhalb der Region — kurze Transportwege.",
-      "keywords": [
-        "regionale beschaffung",
-        "kurze transportwege",
-        "lokale materialkreisläufe",
-        "short-distance reuse",
-        "regional sourcing"
-      ]
-    },
-    "Long_Distance_Reuse": {
-      "kategorie": "Transport",
-      "definition": "Reuse über lange Distanzen (cross-border, transkontinental).",
-      "keywords": [
-        "long-distance reuse",
-        "cross-border",
-        "transkontinental",
-        "international reuse",
-        "long-haul"
-      ]
-    },
-    "Campus_interne_Logistik": {
-      "kategorie": "Just-in-Time",
-      "definition": "Donor-Empfänger auf demselben Campus / Areal.",
-      "keywords": [
-        "campus-interne logistik",
-        "areal-intern",
-        "same-site",
-        "on-site reuse",
-        "on-site depot",
-        "circular building site"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    },
-    "Verpackung": {
-      "kategorie": "Transport",
-      "definition": "Verpackung der Bauteile für Transport und Lagerung.",
-      "keywords": [
-        "verpackung",
-        "packaging",
-        "umverpackung"
-      ]
-    },
-    "Sortierung_Logistik": {
-      "kategorie": "Lagerung",
-      "definition": "Sortierung und Kategorisierung im Lager.",
-      "keywords": [
-        "lagersortierung",
-        "sortenrein lagern",
-        "inventory sorting"
-      ]
-    },
-    "Kennzeichnung_Tagging": {
-      "kategorie": "Lagerung",
-      "definition": "Bauteilkennzeichnung mit ID, QR-Code, RFID.",
-      "keywords": [
-        "kennzeichnung",
-        "labeling",
-        "tagging",
-        "qr-code",
-        "rfid",
-        "bauteil-id"
-      ]
-    },
-    "Rueckverfolgbarkeit_Tracability": {
-      "kategorie": "Lagerung",
-      "definition": "Rückverfolgbarkeit durch alle Prozessphasen.",
-      "keywords": [
-        "rückverfolgbarkeit",
-        "traceability",
-        "chain of custody"
+        "bohrloch",
+        "lochfüller",
+        "lochverschluss",
+        "patch repair",
+        "reparatur",
+        "schraubbohrloch",
+        "verfüllen"
+      ],
+      "synonym_to_old": [
+        "Lochverschluss_Reparatur"
       ]
     }
   },
   "Wirtschaft": {
-    "Kostenparitaet_Neubau": {
-      "kategorie": "Kosten",
-      "definition": "Kosten vergleichbar mit Standard-Neubau.",
-      "keywords": [
-        "kostenparität",
-        "kosten vergleichbar",
-        "comparable cost",
-        "kosten ähnlich neubau",
-        "kosten neutral"
-      ]
-    },
-    "Kostenersparnis_Material": {
-      "kategorie": "Kosten",
-      "definition": "Materialkosten sinken durch Reuse.",
-      "keywords": [
-        "kostenersparnis",
-        "materialkostensenkung",
-        "günstiger als neubau",
-        "cost savings",
-        "rohbaukostenvorteil"
-      ]
-    },
-    "Kostenmehraufwand_Arbeit": {
-      "kategorie": "Kosten",
-      "definition": "Höhere Arbeitskosten (Suche, Prüfung, Aufbereitung).",
-      "keywords": [
-        "mehrkosten arbeit",
-        "kostenmehraufwand",
-        "labor cost premium",
-        "arbeit teurer",
-        "höhere arbeitskosten"
-      ]
-    },
-    "Versicherung_Gewaehrleistung_Modell": {
-      "kategorie": "Risiko",
-      "definition": "Versicherungs- oder Gewährleistungsmodell für Reuse-Bauteile.",
-      "keywords": [
-        "versicherung",
-        "gewährleistung",
-        "warranty model",
-        "insurance model",
-        "gewährleistungsersatzfonds"
-      ]
-    },
-    "Free_Issue_Material": {
-      "kategorie": "Beschaffung",
-      "definition": "Bauteile werden als Free-Issue/Donation gestellt.",
-      "keywords": [
-        "free-issue",
-        "free issue",
-        "spende",
-        "weitergabe",
-        "donation",
-        "gemeindespende",
-        "leihmodell"
-      ]
-    },
-    "Procurement_Reuse_Modell": {
-      "kategorie": "Beschaffung",
-      "definition": "Spezialisiertes Beschaffungsmodell für Reuse (CCTP-Variante, Lot-Réemploi).",
-      "keywords": [
-        "procurement reuse",
-        "cctp",
-        "cctp à trous",
-        "lot réemploi",
-        "öffentliche beschaffung",
-        "vorabkauf"
-      ]
-    },
-    "Marktbarriere_Illiquid": {
-      "kategorie": "Markt",
-      "definition": "Markt für Reuse-Bauteile illiquide oder fragmentiert.",
-      "keywords": [
-        "marktbarriere",
-        "marktilliquidität",
-        "kein liquider markt",
-        "market illiquidity",
-        "marktiliquid",
-        "fragmentierter markt"
-      ]
-    },
     "Datenluecke": {
       "kategorie": "Datenluecke",
       "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
@@ -2095,86 +1275,76 @@
         "to be determined"
       ]
     },
-    "Direktbeschaffung_vom_Donor": {
-      "kategorie": "Beschaffung",
-      "definition": "Direkte Beschaffung von einem benannten Donor-Gebäude/Akteur ohne Marktplatz.",
+    "Finanzierung": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "direktbeschaffung",
-        "direkt vom donor",
-        "direktdeal",
-        "direct procurement"
-      ]
+        "finanzierung"
+      ],
+      "synonym_to_old": []
     },
-    "Bauteilboerse_Beschaffung": {
-      "kategorie": "Beschaffung",
-      "definition": "Beschaffung über Bauteilbörse / Marktplatz / Online-Plattform.",
+    "Geschaeftsmodell": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "bauteilbörse beschaffung",
-        "marktplatz",
-        "plattform-beschaffung",
-        "reuse marketplace"
-      ]
+        "geschaeftsmodell",
+        "geschäftsmodell"
+      ],
+      "synonym_to_old": []
     },
-    "Vergabe_Reuse": {
-      "kategorie": "Beschaffung",
-      "definition": "Vergabeverfahren mit Reuse-Komponenten.",
-      "keywords": [
-        "vergabe",
-        "vergabeverfahren",
-        "tender reuse",
-        "ausschreibungsverfahren"
-      ]
-    },
-    "Aufbereitungskosten": {
+    "Kostenvergleich": {
       "kategorie": "Kosten",
-      "definition": "Kosten der Bauteilaufbereitung.",
+      "definition": "Kosten vergleichbar mit Standard-Neubau.",
       "keywords": [
-        "aufbereitungskosten",
-        "refurbishment cost",
-        "kosten aufbereitung",
-        "reconditioning cost"
+        "comparable cost",
+        "kosten neutral",
+        "kosten vergleichbar",
+        "kosten ähnlich neubau",
+        "kostenparität",
+        "kostenvergleich"
+      ],
+      "synonym_to_old": [
+        "Kostenparitaet_Neubau"
       ]
     },
-    "Lagerkosten": {
-      "kategorie": "Kosten",
-      "definition": "Lagerhaltungskosten für zwischengelagerte Reuse-Bauteile.",
+    "Lebenszykluskosten": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "lagerkosten",
-        "storage cost",
-        "lagergebühr"
-      ]
+        "lebenszykluskosten"
+      ],
+      "synonym_to_old": []
     },
-    "Rueckbaukosten": {
-      "kategorie": "Kosten",
-      "definition": "Kosten des selektiven Rückbaus.",
+    "Preisbildung": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "rückbaukosten",
-        "demolition cost",
-        "deconstruction cost",
-        "demontagekosten"
-      ]
+        "preisbildung"
+      ],
+      "synonym_to_old": []
     },
-    "Zeitwirkung": {
-      "kategorie": "Zeit",
-      "definition": "Zeitliche Auswirkung von Reuse auf den Bauablauf.",
+    "Restwert": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "zeitwirkung",
-        "schedule impact",
-        "bauzeitverlängerung",
-        "time impact reuse"
-      ]
+        "restwert"
+      ],
+      "synonym_to_old": []
     }
   },
   "Leistungsanforderung": {
-    "Tragfaehigkeit": {
-      "kategorie": "Statik",
-      "definition": "Statische Tragfähigkeit / Lastabtragung.",
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
       "keywords": [
-        "tragfähigkeit",
-        "statik",
-        "lastabtragung",
-        "structural capacity",
-        "load capacity"
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
       ]
     },
     "Brandschutz": {
@@ -2182,46 +1352,16 @@
       "definition": "Brandschutz / Feuerwiderstand.",
       "keywords": [
         "brandschutz",
-        "feuerwiderstand",
-        "fire safety",
-        "fire rating",
         "f30",
         "f60",
         "f90",
+        "feuerwiderstand",
+        "fire rating",
+        "fire safety",
         "rei"
-      ]
-    },
-    "Schallschutz": {
-      "kategorie": "Bauphysik",
-      "definition": "Schallschutz (Luftschall, Trittschall).",
-      "keywords": [
-        "schallschutz",
-        "luftschall",
-        "trittschall",
-        "acoustic insulation",
-        "soundproofing"
-      ]
-    },
-    "Waermeschutz_U_Wert": {
-      "kategorie": "Bauphysik",
-      "definition": "Wärmeschutz / U-Wert / Energiestandard.",
-      "keywords": [
-        "wärmeschutz",
-        "u-wert",
-        "k-wert",
-        "energieeffizienz",
-        "thermal insulation",
-        "thermal performance"
-      ]
-    },
-    "Luftdichtheit": {
-      "kategorie": "Bauphysik",
-      "definition": "Luftdichtheit / Blower-Door-Test.",
-      "keywords": [
-        "luftdichtheit",
-        "luftdichtigkeit",
-        "airtightness",
-        "blower door"
+      ],
+      "synonym_to_old": [
+        "Brandschutz"
       ]
     },
     "Dauerhaftigkeit": {
@@ -2229,22 +1369,88 @@
       "definition": "Dauerhaftigkeit / Lebensdauer / Restlebensdauer.",
       "keywords": [
         "dauerhaftigkeit",
+        "daürhaftigkeit",
+        "durability",
         "lebensdauer",
         "restlebensdauer",
-        "durability",
         "service life"
+      ],
+      "synonym_to_old": [
+        "Dauerhaftigkeit"
       ]
     },
-    "Marine_Exposition": {
-      "kategorie": "Sonstiges",
-      "definition": "Marine Exposition / Aussenklima-Anforderung.",
+    "Feuchteschutz": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "marine exposition",
-        "marine exposure",
-        "exterior exposure",
-        "freibewitterung"
+        "feuchteschutz"
+      ],
+      "synonym_to_old": []
+    },
+    "Rueckbaubarkeit": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "rueckbaubarkeit",
+        "rückbaubarkeit"
+      ],
+      "synonym_to_old": []
+    },
+    "Schadstofffreiheit": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "schadstofffreiheit"
+      ],
+      "synonym_to_old": []
+    },
+    "Schallschutz": {
+      "kategorie": "Bauphysik",
+      "definition": "Schallschutz (Luftschall, Trittschall).",
+      "keywords": [
+        "acoustic insulation",
+        "luftschall",
+        "schallschutz",
+        "soundproofing",
+        "trittschall"
+      ],
+      "synonym_to_old": [
+        "Schallschutz"
       ]
     },
+    "Tragfaehigkeit": {
+      "kategorie": "Statik",
+      "definition": "Statische Tragfähigkeit / Lastabtragung.",
+      "keywords": [
+        "lastabtragung",
+        "load capacity",
+        "statik",
+        "structural capacity",
+        "tragfaehigkeit",
+        "tragfähigkeit"
+      ],
+      "synonym_to_old": [
+        "Tragfaehigkeit"
+      ]
+    },
+    "Waermeschutz": {
+      "kategorie": "Bauphysik",
+      "definition": "Wärmeschutz / U-Wert / Energiestandard.",
+      "keywords": [
+        "energieeffizienz",
+        "k-wert",
+        "thermal insulation",
+        "thermal performance",
+        "u-wert",
+        "waermeschutz",
+        "wärmeschutz"
+      ],
+      "synonym_to_old": [
+        "Waermeschutz_U_Wert"
+      ]
+    }
+  },
+  "Tragwerkssystem": {
     "Datenluecke": {
       "kategorie": "Datenluecke",
       "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
@@ -2259,67 +1465,1324 @@
         "to be determined"
       ]
     },
-    "Wartung_Instandhaltung": {
-      "kategorie": "Sonstiges",
-      "definition": "Wartungs- und Instandhaltungsanforderungen.",
+    "Aufstockung_in_Holzbauweise": {
+      "kategorie": "Holz",
+      "definition": "Holz-Skelettbau aus Brettschichtholz (BSH, Glulam) oder Vollholz.",
       "keywords": [
-        "wartung",
-        "instandhaltung",
-        "maintenance",
-        "pflege"
+        "aufstockung",
+        "aufstockung in holzbauweise",
+        "bsh-skelett",
+        "bsh-tragwerk",
+        "glulam frame",
+        "glulamst-tragwerksrahmen",
+        "holzbauweise",
+        "holzskelett",
+        "holzskelettbau"
+      ],
+      "synonym_to_old": [
+        "Holz_Skelettbau_BSH"
       ]
     },
-    "Barrierefreiheit": {
-      "kategorie": "Sonstiges",
-      "definition": "Barrierefreiheits-Anforderungen.",
+    "Betonfertigteil_System": {
+      "kategorie": "Beton",
+      "definition": "Tragwerk komplett aus Stahlbetonfertigteilen (modern Westbau).",
       "keywords": [
-        "barrierefreiheit",
-        "accessibility",
-        "rollstuhlgerecht"
+        "betonfertigteil",
+        "betonfertigteil system",
+        "betonfertigteilbau",
+        "fertigteil-tragwerk",
+        "fertigteilsystem",
+        "precast concrete system",
+        "system"
+      ],
+      "synonym_to_old": [
+        "Stahlbeton_Fertigteil_System"
       ]
     },
-    "Hygiene_Anforderung": {
-      "kategorie": "Sonstiges",
-      "definition": "Hygiene-Anforderungen.",
+    "Dachtragwerk_und_Fachwerk": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "hygiene",
-        "sanitärhygiene",
-        "hospital hygiene"
+        "dachtragwerk",
+        "dachtragwerk und fachwerk",
+        "fachwerk"
+      ],
+      "synonym_to_old": []
+    },
+    "Design_for_Disassembly": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "design",
+        "design for disassembly",
+        "design for disaßembly",
+        "disassembly",
+        "disaßembly"
+      ],
+      "synonym_to_old": []
+    },
+    "Holz_Skelettbau": {
+      "kategorie": "Holz",
+      "definition": "Holz-Skelettbau aus Brettschichtholz (BSH, Glulam) oder Vollholz.",
+      "keywords": [
+        "bsh-skelett",
+        "bsh-tragwerk",
+        "glulam frame",
+        "glulamst-tragwerksrahmen",
+        "holz",
+        "holz skelettbau",
+        "holzrahmen",
+        "holzrahmenbau",
+        "holzrahmenbauweise",
+        "holzskelett",
+        "holzskelettbau",
+        "innerer holzrahmen",
+        "skelettbau",
+        "softwood walling studs",
+        "timber frame"
+      ],
+      "synonym_to_old": [
+        "Holz_Skelettbau_BSH",
+        "Holz_Rahmenbau"
       ]
     },
-    "Rutschhemmung": {
-      "kategorie": "Sonstiges",
-      "definition": "Rutschfestigkeit von Bodenbelägen.",
+    "Reversible_Fuegung": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "rutschhemmung",
-        "slip resistance",
-        "r9",
-        "r10",
-        "r11"
+        "fuegung",
+        "fügung",
+        "reversible",
+        "reversible fuegung",
+        "reversible fügung"
+      ],
+      "synonym_to_old": []
+    },
+    "Skelettbauweise": {
+      "kategorie": "Stahl",
+      "definition": "Tragwerk aus Stahlträgern und -stützen als räumliches Skelett.",
+      "keywords": [
+        "betonskelett",
+        "concrete frame",
+        "reinforced concrete frame",
+        "skelettbauweise",
+        "stahl skelett",
+        "stahl-skelettbau",
+        "stahlbeton-skelettbau",
+        "stahlrahmenbau",
+        "stahlskelett",
+        "steel frame",
+        "steel skeletal",
+        "steel skeleton"
+      ],
+      "synonym_to_old": [
+        "Stahl_Skelettbau",
+        "Stahlbeton_Skelettbau"
       ]
     },
-    "Witterungsbestaendigkeit": {
-      "kategorie": "Sonstiges",
-      "definition": "Außenklima-Beständigkeit.",
+    "Stahl_Skelettbau": {
+      "kategorie": "Stahl",
+      "definition": "Tragwerk aus Stahlträgern und -stützen als räumliches Skelett.",
       "keywords": [
-        "witterungsbeständigkeit",
-        "weather resistance",
-        "wetterfest",
-        "außenklima"
+        "skelettbau",
+        "stahl",
+        "stahl skelett",
+        "stahl skelettbau",
+        "stahl-skelettbau",
+        "stahlrahmenbau",
+        "stahlskelett",
+        "steel frame",
+        "steel skeletal",
+        "steel skeleton"
+      ],
+      "synonym_to_old": [
+        "Stahl_Skelettbau"
       ]
     },
-    "Gebrauchstauglichkeit": {
-      "kategorie": "Statik",
-      "definition": "Gebrauchstauglichkeitsanforderungen (Verformung, Rissbreite).",
+    "Tragende_Wand": {
+      "kategorie": "Mauerwerk",
+      "definition": "Tragwerk aus Mauerwerk (Ziegel, Klinker, Naturstein).",
       "keywords": [
-        "gebrauchstauglichkeit",
-        "serviceability",
-        "sls",
-        "verformungsbegrenzung"
+        "load-bearing masonry",
+        "mauerwerksbau",
+        "mauerwerkstragwerk",
+        "tragende",
+        "tragende wand",
+        "tragende ziegelmauer",
+        "wand"
+      ],
+      "synonym_to_old": [
+        "Mauerwerksbau"
       ]
     }
   },
+  "Verbindung": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
+    "Klemmverbindung": {
+      "kategorie": "Reversibel",
+      "definition": "Klemmverbindung über Kraftschluss.",
+      "keywords": [
+        "clamped connection",
+        "geklemmt",
+        "klemmverbindung"
+      ],
+      "synonym_to_old": [
+        "Geklemmte_Verbindung"
+      ]
+    },
+    "Stahlseil": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "stahlseil"
+      ],
+      "synonym_to_old": []
+    },
+    "Steckverbindung": {
+      "kategorie": "Reversibel",
+      "definition": "Steckverbindung — reversibel, ohne Werkzeug.",
+      "keywords": [
+        "gesteckt",
+        "plug connection",
+        "snap-fit",
+        "stecksystem",
+        "steckverbindung"
+      ],
+      "synonym_to_old": [
+        "Gesteckte_Verbindung"
+      ]
+    },
+    "Verleimung": {
+      "kategorie": "Permanent",
+      "definition": "Geklebte Verbindung (BSH-Klebfuge, Klebstoff, Verleimung).",
+      "keywords": [
+        "adhesive",
+        "geklebt",
+        "geleimt",
+        "klebfuge",
+        "klebstoff",
+        "verleimt",
+        "verleimung"
+      ],
+      "synonym_to_old": [
+        "Klebeverbindung"
+      ]
+    },
+    "Vermoertelung": {
+      "kategorie": "Permanent",
+      "definition": "Mörtelfuge zwischen Mauerwerksbauteilen.",
+      "keywords": [
+        "mauerfuge",
+        "mortar joint",
+        "mörtelfuge",
+        "vermoertelung",
+        "vermörtelung"
+      ],
+      "synonym_to_old": [
+        "Moertelfuge"
+      ]
+    },
+    "Verschraubung": {
+      "kategorie": "Reversibel",
+      "definition": "Geschraubte Verbindung — reversibel, demontierbar.",
+      "keywords": [
+        "bolted",
+        "bolted connection",
+        "geschraubt",
+        "lösbar",
+        "schrauben",
+        "schraubverbindung",
+        "verschraubung"
+      ],
+      "synonym_to_old": [
+        "Schraubverbindung"
+      ]
+    },
+    "Verschweissung": {
+      "kategorie": "Permanent",
+      "definition": "Geschweißte Stahlverbindung — irreversibel.",
+      "keywords": [
+        "geschweißt",
+        "schweißung",
+        "schweißverbindung",
+        "stahl-schweißung",
+        "verschweissung",
+        "verschweißung",
+        "weld",
+        "welded"
+      ],
+      "synonym_to_old": [
+        "Stahlbau_Schweissverbindung"
+      ]
+    }
+  },
+  "Norm_Recht": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
+    "Bauordnungsrecht": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "bauordnungsrecht"
+      ],
+      "synonym_to_old": [
+        "Bauordnung_nicht_angepasst"
+      ]
+    },
+    "Brandschutzanforderung": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "brandschutzanforderung"
+      ],
+      "synonym_to_old": []
+    },
+    "DIN_18940": {
+      "kategorie": "Norm_Sonstige",
+      "definition": "DIN 18940 — Lehmbaustoffe.",
+      "keywords": [
+        "18940",
+        "din 18940",
+        "lehmbaustoffe norm",
+        "lehmnorm"
+      ],
+      "synonym_to_old": [
+        "DIN_18940_Lehm"
+      ]
+    },
+    "DIN_EN_15804": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "15804",
+        "din en 15804"
+      ],
+      "synonym_to_old": []
+    },
+    "DIN_EN_15978": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "15978",
+        "din en 15978"
+      ],
+      "synonym_to_old": []
+    },
+    "EN_15804": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "15804",
+        "en 15804"
+      ],
+      "synonym_to_old": []
+    },
+    "EU_Taxonomie": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "eu taxonomie",
+        "taxonomie"
+      ],
+      "synonym_to_old": []
+    },
+    "F90": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "f90"
+      ],
+      "synonym_to_old": []
+    },
+    "Feuerwiderstand": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "feuerwiderstand",
+        "feürwiderstand"
+      ],
+      "synonym_to_old": []
+    },
+    "Gewaehrleistung": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "gewaehrleistung",
+        "gewährleistung"
+      ],
+      "synonym_to_old": [
+        "Haftung_Gewaehrleistung"
+      ]
+    },
+    "ISO_14040": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "14040",
+        "iso 14040"
+      ],
+      "synonym_to_old": []
+    },
+    "ISO_14044": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "14044",
+        "iso 14044"
+      ],
+      "synonym_to_old": []
+    },
+    "ISO_20887": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "20887",
+        "iso 20887"
+      ],
+      "synonym_to_old": []
+    },
+    "Produkthaftung": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "produkthaftung"
+      ],
+      "synonym_to_old": [
+        "Haftung_Gewaehrleistung"
+      ]
+    },
+    "R90": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "r90"
+      ],
+      "synonym_to_old": []
+    },
+    "REI90": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "rei90"
+      ],
+      "synonym_to_old": []
+    },
+    "Vergaberecht": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "vergaberecht"
+      ],
+      "synonym_to_old": []
+    },
+    "Wiederverwendungskriterien": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "wiederverwendungskriterien"
+      ],
+      "synonym_to_old": []
+    },
+    "Zulassung_im_Einzelfall": {
+      "kategorie": "Konformität",
+      "definition": "Werkszeugnis / EN 10204 / Konformitätserklärung als rechtliche Grundlage.",
+      "keywords": [
+        "abz",
+        "einzelfall",
+        "en 10204",
+        "konformitätserklärung",
+        "manufacturer certificate",
+        "werkszeugnis",
+        "zulassung",
+        "zulassung im einzelfall",
+        "zulaßung",
+        "zulaßung im einzelfall"
+      ],
+      "synonym_to_old": [
+        "Werkszeugnis_Konformitaetserklaerung"
+      ]
+    }
+  },
+  "Pruefung": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
+    "Abbrandbemessung": {
+      "kategorie": "Bauphysik",
+      "definition": "Brandschutzprüfung für Reuse-Bauteile.",
+      "keywords": [
+        "abbrandbemessung",
+        "abbrandbemeßung",
+        "brandschutzprüfung",
+        "f30 prüfung",
+        "feuerwiderstandsprüfung",
+        "fire test"
+      ],
+      "synonym_to_old": [
+        "Brandschutzpruefung"
+      ]
+    },
+    "Brandnachweis": {
+      "kategorie": "Bauphysik",
+      "definition": "Brandschutzprüfung für Reuse-Bauteile.",
+      "keywords": [
+        "brandnachweis",
+        "brandschutzprüfung",
+        "f30 prüfung",
+        "feuerwiderstandsprüfung",
+        "fire test"
+      ],
+      "synonym_to_old": [
+        "Brandschutzpruefung"
+      ]
+    },
+    "Eignungspruefung_Baulehm": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "baulehm",
+        "eignungspruefung",
+        "eignungspruefung baulehm",
+        "eignungsprüfung",
+        "eignungsprüfung baulehm"
+      ],
+      "synonym_to_old": []
+    },
+    "Geometrische_Vermessung": {
+      "kategorie": "Geometrisch",
+      "definition": "Geometrische Vermessung des Donor-Bauteils.",
+      "keywords": [
+        "as-built survey",
+        "geometric survey",
+        "geometrische",
+        "geometrische vermessung",
+        "geometrische vermeßung",
+        "massaufnahme",
+        "vermessung",
+        "vermeßung"
+      ],
+      "synonym_to_old": [
+        "Massaufnahme"
+      ]
+    },
+    "Materialpruefung": {
+      "kategorie": "Material",
+      "definition": "Druckfestigkeit, Karbonatisierung, Bewehrungsortung, Chloridgehalt.",
+      "keywords": [
+        "betondruckfestigkeit",
+        "betonprüfung",
+        "bewehrungsortung",
+        "chloridgehalt",
+        "concrete encasement",
+        "concrete testing",
+        "delamination",
+        "ferroscan",
+        "festigkeitssortierung",
+        "holzfeuchte",
+        "holzprüfung",
+        "karbonatisierung",
+        "klebfugenbewertung",
+        "materialpruefung",
+        "materialprüfung",
+        "materialprüfung stahl",
+        "pre-1940s steel testing",
+        "schweißbarkeitsprüfung",
+        "stahlnachweis",
+        "stahlprüfung",
+        "steel testing",
+        "timber testing",
+        "volantis",
+        "zugversuch"
+      ],
+      "synonym_to_old": [
+        "Materialpruefung_Beton",
+        "Materialpruefung_Stahl",
+        "Materialpruefung_Holz"
+      ]
+    },
+    "Schadstoffscreening": {
+      "kategorie": "Schadstoff",
+      "definition": "Asbest-, PCB-, Blei-, sonstige Schadstoff-Screening.",
+      "keywords": [
+        "altlastenprüfung",
+        "asbestprüfung",
+        "hazardous substance testing",
+        "pcb-prüfung",
+        "schadstoffprüfung",
+        "schadstoffscreening"
+      ],
+      "synonym_to_old": [
+        "Schadstoffpruefung"
+      ]
+    },
+    "Schweissbarkeitspruefung": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "schweissbarkeitspruefung",
+        "schweißbarkeitsprüfung"
+      ],
+      "synonym_to_old": []
+    },
+    "Sichtpruefung": {
+      "kategorie": "Visuell",
+      "definition": "Visuelle Inspektion vor Wiedereinbau.",
+      "keywords": [
+        "ocular inspection",
+        "sichtpruefung",
+        "sichtprüfung",
+        "visual inspection",
+        "visuelle prüfung"
+      ],
+      "synonym_to_old": [
+        "Sichtpruefung"
+      ]
+    },
+    "Statische_Nachweisfuehrung": {
+      "kategorie": "Statik",
+      "definition": "Statischer Nachweis für Wiederverwendung (Lastansatz, Bemessung).",
+      "keywords": [
+        "bemessung reuse",
+        "historische profilbemessung",
+        "lastansatz",
+        "nachweisfuehrung",
+        "nachweisführung",
+        "stabilitätsprüfung",
+        "statische",
+        "statische nachweisfuehrung",
+        "statische nachweisführung",
+        "statischer nachweis",
+        "structural verification",
+        "tragwerksnachweis"
+      ],
+      "synonym_to_old": [
+        "Tragwerksnachweis"
+      ]
+    },
+    "Zugversuch": {
+      "kategorie": "Statik",
+      "definition": "Prüfung der mechanischen Festigkeit.",
+      "keywords": [
+        "belastungstest",
+        "festigkeitsprüfung",
+        "festigkeitstest",
+        "strength test",
+        "zugversuch"
+      ],
+      "synonym_to_old": [
+        "Festigkeitspruefung"
+      ]
+    },
+    "Zustandsbewertung": {
+      "kategorie": "Visuell",
+      "definition": "Systematische Bewertung des Bauteilzustands.",
+      "keywords": [
+        "condition assessment",
+        "zustandsbewertung",
+        "zustandsklassifikation"
+      ],
+      "synonym_to_old": [
+        "Zustandsbewertung"
+      ]
+    }
+  },
+  "Huerde": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "datenluecke",
+        "datenlücke",
+        "fehlt",
+        "n/a",
+        "nicht angegeben",
+        "tbd",
+        "to be determined",
+        "unbekannt",
+        "unklar",
+        "unspezifiziert"
+      ],
+      "synonym_to_old": [
+        "Datenluecke"
+      ]
+    },
+    "Ausschreibungsproblem": {
+      "kategorie": "Wirtschaftlich",
+      "definition": "Standardisierte Ausschreibung/Beschaffung passt nicht zu Reuse.",
+      "keywords": [
+        "ausschreibung",
+        "ausschreibungsproblem",
+        "außchreibungsproblem",
+        "beschaffung heterogen",
+        "beschaffungsmodell",
+        "kosten, programm",
+        "procurement",
+        "öffentliche ausschreibung",
+        "öffentliche beschaffung"
+      ],
+      "synonym_to_old": [
+        "Beschaffungsmodell_fehlt"
+      ]
+    },
+    "Brandschutzkonflikt": {
+      "kategorie": "Technisch",
+      "definition": "Brandschutz, Schallschutz, Wärmeschutz, Feuchteschutz, Luftdichtheit erschwert mit Gebrauchtbauteilen.",
+      "keywords": [
+        "bauphysik",
+        "brandschutz",
+        "brandschutzkonflikt",
+        "dauerhaftigkeit",
+        "energieanforderung",
+        "feuchteschutz",
+        "luftdichtheit",
+        "reuse-ziegel und energieanforderungen",
+        "schallschutz",
+        "u-wert",
+        "wärmeschutz"
+      ],
+      "synonym_to_old": [
+        "Bauphysik_Hinderung"
+      ]
+    },
+    "Fehlende_Datenstandards": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "datenstandards",
+        "fehlende",
+        "fehlende datenstandards"
+      ],
+      "synonym_to_old": []
+    },
+    "Fehlende_Lagerflaeche": {
+      "kategorie": "Logistisch",
+      "definition": "Lagerflächen, Lagerkosten, Lagerschutz fehlen.",
+      "keywords": [
+        "depot",
+        "fehlende",
+        "fehlende lagerflaeche",
+        "fehlende lagerfläche",
+        "grundstücksgröße",
+        "lagerflaeche",
+        "lagerfläche",
+        "lagerkosten",
+        "lagerung",
+        "lagerverwaltung",
+        "logistikunsicherheit",
+        "logistisch-organisatorische hindernisse",
+        "stockpiling",
+        "zwischenlagerung"
+      ],
+      "synonym_to_old": [
+        "Lagerung_Hinderung"
+      ]
+    },
+    "Fehlende_Standardisierung": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "fehlende",
+        "fehlende standardisierung",
+        "standardisierung"
+      ],
+      "synonym_to_old": []
+    },
+    "Gewaehrleistung": {
+      "kategorie": "Rechtlich",
+      "definition": "Haftung, Gewährleistung, Versicherung für gebrauchte Bauteile rechtlich ungeklärt.",
+      "keywords": [
+        "gewaehrleistung",
+        "gewährleistung",
+        "haftung",
+        "haftungsmodell",
+        "liability",
+        "versicherung",
+        "warranty"
+      ],
+      "synonym_to_old": [
+        "Haftung_Gewaehrleistung"
+      ]
+    },
+    "Haftung": {
+      "kategorie": "Rechtlich",
+      "definition": "Haftung, Gewährleistung, Versicherung für gebrauchte Bauteile rechtlich ungeklärt.",
+      "keywords": [
+        "gewährleistung",
+        "haftung",
+        "haftungsmodell",
+        "liability",
+        "versicherung",
+        "warranty"
+      ],
+      "synonym_to_old": [
+        "Haftung_Gewaehrleistung"
+      ]
+    },
+    "Logistikproblem": {
+      "kategorie": "Logistisch",
+      "definition": "Transportkosten, -risiken, Schwertransport.",
+      "keywords": [
+        "depot",
+        "grundstücksgröße",
+        "lagerfläche",
+        "lagerkosten",
+        "lagerung",
+        "lagerverwaltung",
+        "logistikproblem",
+        "logistikunsicherheit",
+        "logistisch-organisatorische hindernisse",
+        "schwertransport",
+        "shipping cost",
+        "stockpiling",
+        "transport hindern",
+        "transportdistanz",
+        "transportkosten",
+        "transportrisiko",
+        "zwischenlagerung"
+      ],
+      "synonym_to_old": [
+        "Transport_Hinderung",
+        "Lagerung_Hinderung"
+      ]
+    },
+    "Schadstoffbelastung": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "schadstoffbelastung"
+      ],
+      "synonym_to_old": []
+    },
+    "Terminunsicherheit": {
+      "kategorie": "Logistisch",
+      "definition": "Zeitliches Auseinanderlaufen von Donor-Rückbau und Empfänger-Bau.",
+      "keywords": [
+        "budgetverschiebung",
+        "design changes",
+        "donor-empfänger",
+        "enger zeitplan",
+        "synchronisation",
+        "terminunsicherheit",
+        "timing",
+        "vorlaufzeit",
+        "zeitliche koordination"
+      ],
+      "synonym_to_old": [
+        "Donor_Empfaenger_Timing"
+      ]
+    },
+    "Toleranzen": {
+      "kategorie": "Technisch",
+      "definition": "Anschluss-/Toleranzprobleme weil Altbauteile nicht zu neuen Maßen passen.",
+      "keywords": [
+        "abmessungen",
+        "anschlussdetail",
+        "begrenzte längen",
+        "begrenzte mengen",
+        "eignung der abmessungen",
+        "heterogener kleinmengen",
+        "kleinmengen",
+        "maßabgleich",
+        "maßausgleich",
+        "passung",
+        "passung geernteter",
+        "passungenauigkeit",
+        "toleranz",
+        "toleranzausgleich",
+        "toleranzen"
+      ],
+      "synonym_to_old": [
+        "Toleranz_Massabgleich"
+      ]
+    },
+    "Verfuegbarkeitsproblem": {
+      "kategorie": "Logistisch",
+      "definition": "Passendes Bauteil/Profil/Menge nicht verfügbar wenn benötigt.",
+      "keywords": [
+        "bauteilverfügbarkeit",
+        "limited availability",
+        "marktverfügbarkeit",
+        "matching",
+        "mengenverfügbarkeit",
+        "profilverfügbarkeit",
+        "reservation mismatch",
+        "verfuegbarkeitsproblem",
+        "verfügbare bestände",
+        "verfügbarkeit",
+        "verfügbarkeitsproblem"
+      ],
+      "synonym_to_old": [
+        "Verfuegbarkeit_Profile"
+      ]
+    }
+  },
+  "Abbruchmethode": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
+    "Ausbau_von_Bauteilen": {
+      "kategorie": "Reuse-Konform",
+      "definition": "Stückweise Zerlegung mit Werkzeug (Schraubendreher, Hammer, Schneidbrenner).",
+      "keywords": [
+        "ausbau",
+        "ausbau von bauteilen",
+        "bauteilen",
+        "hand-demontage",
+        "manual deconstruction",
+        "screw removal",
+        "stückweise demontage"
+      ],
+      "synonym_to_old": [
+        "Stueckweise_Demontage"
+      ]
+    },
+    "Betonfräsen": {
+      "kategorie": "Bearbeitung",
+      "definition": "Diamantsäge oder Wasserstrahl zum Trennen von Beton-Bauteilen.",
+      "keywords": [
+        "betonfräsen",
+        "betonsäge",
+        "concrete cutting",
+        "diamantsäge",
+        "saw demolition",
+        "wasserstrahl"
+      ],
+      "synonym_to_old": [
+        "Saegen_Beton"
+      ]
+    },
+    "Demontage": {
+      "kategorie": "Reuse-Konform",
+      "definition": "Demontage durch Abheben (Lift-off) ganzer Bauteile / Baugruppen.",
+      "keywords": [
+        "abbau",
+        "abheben",
+        "deconstruction",
+        "demontage",
+        "lift-off",
+        "remontage"
+      ],
+      "synonym_to_old": [
+        "Demontage_Lift_off"
+      ]
+    },
+    "Selektiver_Rueckbau": {
+      "kategorie": "Reuse-Konform",
+      "definition": "Selektiver, sortierender Rückbau zur Bauteilbergung.",
+      "keywords": [
+        "rueckbau",
+        "rückbau",
+        "selective deconstruction",
+        "selective demolition",
+        "selektiver",
+        "selektiver rueckbau",
+        "selektiver rückbau",
+        "sortenrein",
+        "sortierender rückbau"
+      ],
+      "synonym_to_old": [
+        "Selektiver_Rueckbau"
+      ]
+    },
+    "Zerstoerungsarme_Bergung": {
+      "kategorie": "Reuse-Konform",
+      "definition": "Selektiver, sortierender Rückbau zur Bauteilbergung.",
+      "keywords": [
+        "bergung",
+        "selective deconstruction",
+        "selective demolition",
+        "selektiver rückbau",
+        "sortenrein",
+        "sortierender rückbau",
+        "zerstoerungsarme",
+        "zerstoerungsarme bergung",
+        "zerstörungsarme",
+        "zerstörungsarme bergung"
+      ],
+      "synonym_to_old": [
+        "Selektiver_Rueckbau"
+      ]
+    }
+  },
+  "Logistik": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
+    "Lagerflaeche": {
+      "kategorie": "Lagerung",
+      "definition": "Externe Stockholder oder Reuse-Lieferanten verwalten Lager.",
+      "keywords": [
+        "cleveland steel",
+        "external stockholder",
+        "lagerflaeche",
+        "lagerfläche",
+        "reuse-lieferant",
+        "reuse-stockholder",
+        "stockholder"
+      ],
+      "synonym_to_old": [
+        "Stockholder_Reuse_Lieferant"
+      ]
+    },
+    "Lagerung": {
+      "kategorie": "Lagerung",
+      "definition": "Bauteile werden zwischengelagert vor Wiedereinbau.",
+      "keywords": [
+        "buffer storage",
+        "interim storage",
+        "lagerung",
+        "lagerung mit schutz",
+        "material stockpile",
+        "materialdepot",
+        "occasionslager",
+        "zwischenlager",
+        "zwischenlagerung"
+      ],
+      "synonym_to_old": [
+        "Zwischenlagerung"
+      ]
+    },
+    "Materialmatching": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "materialmatching"
+      ],
+      "synonym_to_old": []
+    },
+    "Materialverfuegbarkeit": {
+      "kategorie": "Transport",
+      "definition": "Beschaffung innerhalb der Region — kurze Transportwege.",
+      "keywords": [
+        "kurze transportwege",
+        "lokale materialkreisläufe",
+        "materialverfuegbarkeit",
+        "materialverfügbarkeit",
+        "regional sourcing",
+        "regionale beschaffung",
+        "short-distance reuse"
+      ],
+      "synonym_to_old": [
+        "Regionale_Beschaffung"
+      ]
+    },
+    "ReUse_Centre": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "centre",
+        "reuse",
+        "reuse centre"
+      ],
+      "synonym_to_old": []
+    },
+    "Transport": {
+      "kategorie": "Transport",
+      "definition": "Großbauteile auf Schwerlast-LKW.",
+      "keywords": [
+        "abnormal load",
+        "cross-border",
+        "großtransport",
+        "heavy haul",
+        "international reuse",
+        "long-distance reuse",
+        "long-haul",
+        "schwertransport",
+        "tieflader",
+        "transkontinental",
+        "transport"
+      ],
+      "synonym_to_old": [
+        "Schwertransport",
+        "Long_Distance_Reuse"
+      ]
+    },
+    "Zwischenlagerung": {
+      "kategorie": "Lagerung",
+      "definition": "Bauteile werden zwischengelagert vor Wiedereinbau.",
+      "keywords": [
+        "buffer storage",
+        "interim storage",
+        "lagerung mit schutz",
+        "material stockpile",
+        "materialdepot",
+        "occasionslager",
+        "zwischenlager",
+        "zwischenlagerung"
+      ],
+      "synonym_to_old": [
+        "Zwischenlagerung"
+      ]
+    }
+  },
+  "Kennwert": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
+    "CO2_Einsparung": {
+      "kategorie": "Klima",
+      "definition": "CO₂-Reduktion absolut in t/kg CO₂e.",
+      "keywords": [
+        "% co2",
+        "% co2 saved",
+        "% co2-reduktion",
+        "absolute co2",
+        "co2 einsparung",
+        "co2 in tonnen",
+        "co2 reduktion prozent",
+        "co2 saving %",
+        "co2-einsparung in %",
+        "co2-einsparung in t",
+        "co2-reduktion %",
+        "einsparung",
+        "kg co2",
+        "t co2",
+        "tco2e",
+        "tonnen co2"
+      ],
+      "synonym_to_old": [
+        "CO2_Reduktion_absolut",
+        "CO2_Reduktion_prozent"
+      ]
+    },
+    "Demontagegrad": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "demontagegrad"
+      ],
+      "synonym_to_old": []
+    },
+    "Graue_Energie": {
+      "kategorie": "Klima",
+      "definition": "Embodied Carbon kg CO₂e/m².",
+      "keywords": [
+        "co2/m²",
+        "co2e per m2",
+        "embodied carbon",
+        "embodied co2",
+        "energie",
+        "graue",
+        "graue energie",
+        "graü",
+        "graü energie"
+      ],
+      "synonym_to_old": [
+        "Embodied_Carbon"
+      ]
+    },
+    "Materialwert": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "materialwert"
+      ],
+      "synonym_to_old": []
+    },
+    "Wiederverwendungsquote": {
+      "kategorie": "Reuse_Rate",
+      "definition": "Wiederverwendungsrate nach Gewicht (% kg).",
+      "keywords": [
+        "% gewicht",
+        "% kg",
+        "% m3",
+        "% volumen",
+        "by volume reuse",
+        "by weight reuse",
+        "ombruksgrad",
+        "reuse-by-weight",
+        "wiederverwendungsquote",
+        "wiederverwendungsrate gewicht",
+        "wiederverwendungsrate volumen"
+      ],
+      "synonym_to_old": [
+        "Wiederverwendungsrate_Gewicht",
+        "Wiederverwendungsrate_Volumen"
+      ]
+    }
+  },
+  "Datenmodell": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
+    "Bauteil_ID": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "bauteil",
+        "bauteil id"
+      ],
+      "synonym_to_old": []
+    },
+    "IFC": {
+      "kategorie": "BIM",
+      "definition": "IFC / openBIM-basierte Datenmodelle.",
+      "keywords": [
+        "bim datenmodell",
+        "ifc",
+        "industry foundation classes",
+        "openbim"
+      ],
+      "synonym_to_old": [
+        "IFC_BIM"
+      ]
+    },
+    "Klassifikation": {
+      "kategorie": "Klassifikation",
+      "definition": "Bauteil-Klassifikationssysteme (Uniclass, Omniclass, eCl@ss).",
+      "keywords": [
+        "classification",
+        "ecl@ss",
+        "klassifikation",
+        "klaßifikation",
+        "omniclass",
+        "sfb",
+        "uniclass"
+      ],
+      "synonym_to_old": [
+        "Klassifikation_System"
+      ]
+    },
+    "Materialpass_Schema": {
+      "kategorie": "Materialpass",
+      "definition": "Madaster-basierter Materialpass.",
+      "keywords": [
+        "madaster",
+        "madaster-pass",
+        "materialenpas",
+        "materialenpaspoort",
+        "materialpass",
+        "materialpass madaster",
+        "materialpass schema",
+        "materialpaß",
+        "materialpaß schema",
+        "nl materialpass",
+        "schema"
+      ],
+      "synonym_to_old": [
+        "Madaster_Materialpass",
+        "Materialenpaspoort_NL"
+      ]
+    },
+    "Ontologie": {
+      "kategorie": "Klassifikation",
+      "definition": "Bauwerks-/Reuse-Ontologie (RDF/OWL/SPARQL).",
+      "keywords": [
+        "ontologie",
+        "ontology",
+        "owl",
+        "rdf",
+        "semantic web",
+        "sparql"
+      ],
+      "synonym_to_old": [
+        "Ontologie_RDF"
+      ]
+    },
+    "Taxonomie": {
+      "kategorie": "",
+      "definition": "",
+      "keywords": [
+        "taxonomie"
+      ],
+      "synonym_to_old": []
+    }
+  },
   "Schadstoff": {
+    "Datenluecke": {
+      "kategorie": "Datenluecke",
+      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
+      "keywords": [
+        "unbekannt",
+        "unklar",
+        "nicht angegeben",
+        "n/a",
+        "fehlt",
+        "unspezifiziert",
+        "tbd",
+        "to be determined"
+      ]
+    },
     "Asbest": {
       "kategorie": "Mineral_Faserstoff",
       "definition": "Asbestfasern in Dämmungen, Spritzasbest, Asbestzement.",
@@ -2328,407 +2791,67 @@
         "asbestos",
         "asbestzement",
         "spritzasbest"
+      ],
+      "synonym_to_old": [
+        "Asbest"
       ]
     },
-    "PCB": {
-      "kategorie": "Organisch",
-      "definition": "Polychlorierte Biphenyle (Fugendichtstoffe, Kondensatoren, Anstriche).",
-      "keywords": [
-        "pcb",
-        "polychlorierte biphenyle",
-        "fugendichtstoff pcb"
-      ]
-    },
-    "Blei": {
+    "Bleifarbe": {
       "kategorie": "Schwermetall",
       "definition": "Bleihaltige Anstriche, Bleirohre, Bleiglasurkeramik.",
       "keywords": [
         "blei",
         "bleifarbe",
         "bleirohre",
-        "lead paint",
-        "lead glaze"
+        "lead glaze",
+        "lead paint"
+      ],
+      "synonym_to_old": [
+        "Blei"
       ]
     },
     "Holzschutzmittel": {
       "kategorie": "Organisch",
       "definition": "Holzschutzmittel (Lindan, PCP, DDT in altem Bauholz).",
       "keywords": [
+        "ddt",
         "holzschutzmittel",
         "lindan",
         "pcp",
-        "ddt",
         "wood preservative"
+      ],
+      "synonym_to_old": [
+        "Holzschutzmittel"
       ]
     },
-    "PAK_Klebstoff": {
+    "PAK": {
       "kategorie": "Organisch",
       "definition": "Polyzyklische aromatische Kohlenwasserstoffe in Klebern, Bitumen, Teer.",
       "keywords": [
+        "bitumen-kleber",
+        "klebstoffe schadstoff",
         "pak",
         "polyzyklische aromatische kohlenwasserstoffe",
-        "teer",
-        "bitumen-kleber",
-        "klebstoffe schadstoff"
+        "teer"
+      ],
+      "synonym_to_old": [
+        "PAK_Klebstoff"
       ]
     },
-    "HBCD_in_EPS": {
+    "PCB": {
       "kategorie": "Organisch",
-      "definition": "HBCD-Flammschutzmittel in altem EPS.",
+      "definition": "Polychlorierte Biphenyle (Fugendichtstoffe, Kondensatoren, Anstriche).",
       "keywords": [
-        "hbcd",
-        "hexabromcyclododecan",
-        "eps schadstoff",
-        "flammschutzmittel eps"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
+        "fugendichtstoff pcb",
+        "pcb",
+        "polychlorierte biphenyle"
+      ],
+      "synonym_to_old": [
+        "PCB"
       ]
     }
   },
-  "Prozessphase": {
-    "Bestandsaufnahme": {
-      "kategorie": "Vorbereitung",
-      "definition": "Erfassung des Bestandes (Vermessung, Dokumentation, Materialinventar).",
-      "keywords": [
-        "bestandsaufnahme",
-        "bestandsanalyse",
-        "vermessung",
-        "as-built",
-        "site survey"
-      ]
-    },
-    "Schadstoffpruefung_Phase": {
-      "kategorie": "Vorbereitung",
-      "definition": "Schadstoff-Screening als Prozessphase vor Rückbau.",
-      "keywords": [
-        "schadstoffphase",
-        "schadstoffscreening phase",
-        "hazardous survey"
-      ]
-    },
-    "Bauteilinventar_Phase": {
-      "kategorie": "Vorbereitung",
-      "definition": "Erstellung des Bauteilinventars als Prozessphase.",
-      "keywords": [
-        "bauteilinventar",
-        "component inventory",
-        "inventaraufnahme",
-        "stocktake"
-      ]
-    },
-    "Rueckbau_Phase": {
-      "kategorie": "Ausführung",
-      "definition": "Rückbau / Demontage als Prozessphase.",
-      "keywords": [
-        "rückbau phase",
-        "demontage phase",
-        "deconstruction phase",
-        "rückbauausführung"
-      ]
-    },
-    "Transport_Phase": {
-      "kategorie": "Logistik",
-      "definition": "Transport als Prozessphase.",
-      "keywords": [
-        "transport phase",
-        "transportausführung",
-        "shipping phase"
-      ]
-    },
-    "Lagerung_Phase": {
-      "kategorie": "Logistik",
-      "definition": "Lagerung als Prozessphase.",
-      "keywords": [
-        "lagerphase",
-        "lagerung",
-        "storage phase"
-      ]
-    },
-    "Aufbereitung_Phase": {
-      "kategorie": "Verarbeitung",
-      "definition": "Aufbereitung / Refurbishment als Prozessphase.",
-      "keywords": [
-        "aufbereitungsphase",
-        "refurbishment phase",
-        "reconditioning phase"
-      ]
-    },
-    "Planung_Design_Phase": {
-      "kategorie": "Planung",
-      "definition": "Planungs-/Entwurfsphase mit Reuse-Spezifika.",
-      "keywords": [
-        "planungsphase",
-        "design phase",
-        "entwurfsphase",
-        "reuse-planung"
-      ]
-    },
-    "Genehmigung_Phase": {
-      "kategorie": "Planung",
-      "definition": "Genehmigungs- und Zulassungsphase.",
-      "keywords": [
-        "genehmigungsphase",
-        "zulassungsphase",
-        "permitting phase",
-        "regelwerks-pilot"
-      ]
-    },
-    "Wiedereinbau_Phase": {
-      "kategorie": "Ausführung",
-      "definition": "Wiedereinbau / Montage als Prozessphase.",
-      "keywords": [
-        "wiedereinbau",
-        "montage",
-        "remontage phase",
-        "reassembly",
-        "installation phase"
-      ]
-    },
-    "Nutzungsphase": {
-      "kategorie": "Betrieb",
-      "definition": "Betrieb / Monitoring nach Inbetriebnahme.",
-      "keywords": [
-        "nutzungsphase",
-        "betriebsphase",
-        "monitoring phase",
-        "operation phase"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    }
-  },
-  "Norm_Recht": {
-    "EN_1090_Stahlbau": {
-      "kategorie": "Norm_Stahl",
-      "definition": "EN 1090 — Ausführung von Stahltragwerken / CE-Kennzeichnung.",
-      "keywords": [
-        "en 1090",
-        "en1090",
-        "ce-kennzeichnung",
-        "ce-konformität",
-        "ce zertifikat",
-        "cen/ts 1090",
-        "stahlbaukennzeichnung"
-      ]
-    },
-    "SCI_Steel_Reuse_Protocol": {
-      "kategorie": "Norm_Stahl",
-      "definition": "SCI P427/P440 — Steel Reuse Protocol (UK).",
-      "keywords": [
-        "sci",
-        "p427",
-        "p440",
-        "steel reuse protocol",
-        "structural steel reuse",
-        "historic sections book",
-        "sci steel reuse"
-      ]
-    },
-    "EN_1168_Hohlkoerperdecken": {
-      "kategorie": "Norm_Beton",
-      "definition": "EN 1168 — Hohlkörperdecken Standard.",
-      "keywords": [
-        "en 1168",
-        "en1168",
-        "hohlkörperdecken-standard",
-        "hollow-core slab standard"
-      ]
-    },
-    "Eurocode_DIN_EN_1990_ff": {
-      "kategorie": "Norm_Statik",
-      "definition": "Eurocode-Reihe für Tragwerke (EN 1990 ff).",
-      "keywords": [
-        "eurocode",
-        "en 1990",
-        "en 1991",
-        "en 1992",
-        "en 1993",
-        "en 1995",
-        "en 1999",
-        "din en 1990"
-      ]
-    },
-    "DIN_EN_206_Beton": {
-      "kategorie": "Norm_Beton",
-      "definition": "DIN EN 206 — Beton-Festlegung, Eigenschaften.",
-      "keywords": [
-        "din en 206",
-        "en 206",
-        "betonnorm",
-        "din 4226"
-      ]
-    },
-    "DIN_18940_Lehm": {
-      "kategorie": "Norm_Sonstige",
-      "definition": "DIN 18940 — Lehmbaustoffe.",
-      "keywords": [
-        "din 18940",
-        "lehmnorm",
-        "lehmbaustoffe norm"
-      ]
-    },
-    "BREEAM": {
-      "kategorie": "Zertifikat",
-      "definition": "Building Research Establishment Environmental Assessment Method.",
-      "keywords": [
-        "breeam",
-        "breeam excellent",
-        "breeam outstanding"
-      ]
-    },
-    "DGNB_Paris_Proof": {
-      "kategorie": "Zertifikat",
-      "definition": "DGNB / Paris Proof / NIBE Bilanzrahmen.",
-      "keywords": [
-        "dgnb",
-        "paris proof",
-        "nibe",
-        "paris-proof-bilanz",
-        "co2-budget"
-      ]
-    },
-    "WELL_Zertifikat": {
-      "kategorie": "Zertifikat",
-      "definition": "WELL Building Standard.",
-      "keywords": [
-        "well",
-        "well platinum",
-        "well certification"
-      ]
-    },
-    "Nordic_Swan": {
-      "kategorie": "Zertifikat",
-      "definition": "Nordic Swan Ecolabel.",
-      "keywords": [
-        "nordic swan",
-        "swan ecolabel",
-        "schwan-zertifikat"
-      ]
-    },
-    "Building_Code_Lokal": {
-      "kategorie": "Recht",
-      "definition": "Lokale Bauordnung / Building Code (Land-spezifisch).",
-      "keywords": [
-        "bauordnung",
-        "building code",
-        "tek",
-        "sia norm",
-        "nen norm",
-        "belgian code",
-        "brussels code",
-        "deconstruction ordinance",
-        "bauproduktrecht"
-      ]
-    },
-    "Werkszeugnis_Konformitaetserklaerung": {
-      "kategorie": "Konformität",
-      "definition": "Werkszeugnis / EN 10204 / Konformitätserklärung als rechtliche Grundlage.",
-      "keywords": [
-        "werkszeugnis",
-        "en 10204",
-        "konformitätserklärung",
-        "abz",
-        "zulassung",
-        "manufacturer certificate"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    }
-  },
-  "Datenmodell": {
-    "Madaster_Materialpass": {
-      "kategorie": "Materialpass",
-      "definition": "Madaster-basierter Materialpass.",
-      "keywords": [
-        "madaster",
-        "madaster-pass",
-        "materialpass madaster"
-      ]
-    },
-    "Materialenpaspoort_NL": {
-      "kategorie": "Materialpass",
-      "definition": "Niederländisches Materialenpaspoort.",
-      "keywords": [
-        "materialenpaspoort",
-        "materialenpas",
-        "nl materialpass"
-      ]
-    },
-    "Concular_Datenmodell": {
-      "kategorie": "Materialpass",
-      "definition": "Concular-basiertes Materialdatenmodell.",
-      "keywords": [
-        "concular",
-        "concular-pass",
-        "concular datenmodell"
-      ]
-    },
-    "IFC_BIM": {
-      "kategorie": "BIM",
-      "definition": "IFC / openBIM-basierte Datenmodelle.",
-      "keywords": [
-        "ifc",
-        "industry foundation classes",
-        "openbim",
-        "bim datenmodell"
-      ]
-    },
-    "Produktpass": {
-      "kategorie": "Sonstiges",
-      "definition": "Generischer Produkt- oder Bauteilpass.",
-      "keywords": [
-        "produktpass",
-        "bauteilpass",
-        "product passport",
-        "digital product passport"
-      ]
-    },
-    "Qualitaetsbericht_ReCreate": {
-      "kategorie": "Sonstiges",
-      "definition": "ReCreate-Projekt-Qualitätsbericht für Beton-Reuse.",
-      "keywords": [
-        "recreate",
-        "qualitätsbericht recreate",
-        "recreate report",
-        "recreate qualitätsdokumentation"
-      ]
-    },
+  "Reuse_Strategie": {
     "Datenluecke": {
       "kategorie": "Datenluecke",
       "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
@@ -2743,516 +2866,128 @@
         "to be determined"
       ]
     },
-    "Bauteilpass": {
-      "kategorie": "Materialpass",
-      "definition": "Bauteilbezogener Pass mit Stammdaten und Historie.",
+    "Adaptives_ReUse": {
+      "kategorie": "Reuse_Niveau",
+      "definition": "Bestand wird angepasst weitergenutzt; oft kombiniert mit Bauteilwiederverwendung.",
       "keywords": [
-        "bauteilpass",
-        "component passport",
-        "component pass"
+        "adaptive reuse",
+        "adaptives",
+        "adaptives reuse",
+        "bestandstransformation",
+        "in-situ transformation",
+        "reuse",
+        "umnutzung"
+      ],
+      "synonym_to_old": [
+        "Adaptive_Reuse_Bestand"
       ]
     },
-    "Klassifikation_System": {
-      "kategorie": "Klassifikation",
-      "definition": "Bauteil-Klassifikationssysteme (Uniclass, Omniclass, eCl@ss).",
+    "Design_for_Disassembly": {
+      "kategorie": "",
+      "definition": "",
       "keywords": [
-        "klassifikation",
-        "classification",
-        "uniclass",
-        "omniclass",
-        "ecl@ss",
-        "sfb"
+        "design",
+        "design for disassembly",
+        "design for disaßembly",
+        "disassembly",
+        "disaßembly"
+      ],
+      "synonym_to_old": []
+    },
+    "Direkte_Wiederverwendung": {
+      "kategorie": "Reuse_Niveau",
+      "definition": "Einzelne tragende Bauteile (Träger, Stützen, Hohlkörperdecken) ex-situ in neue Tragstruktur integriert.",
+      "keywords": [
+        "bauteil-/materialwiederverwendung in gebäudehülle",
+        "bauteilwiederverwendung",
+        "circular fit-out",
+        "circular fitout",
+        "direkte",
+        "direkte wiederverwendung",
+        "ex-situ bauteilwiederverwendung",
+        "ex-situ remontage",
+        "ex-situ wiederverwendung",
+        "fest installierte technische ausstattung",
+        "fit-out reuse",
+        "huellbauteil",
+        "in-situ transformiert",
+        "in-situ-transformation",
+        "innenausbau wiederverwendung",
+        "interior reuse",
+        "partielle hüllbauteil-wiederverwendung",
+        "reuse hvac",
+        "reuse sanitary",
+        "reuse-first interior",
+        "salvaged structural steel",
+        "self-reuse",
+        "strukturelle wiederverwendung",
+        "technische bauteil-wiederverwendung",
+        "tga-wiederverwendung",
+        "wiederverwendung",
+        "wiederverwendung in fassade",
+        "wiederverwendung von ziegeln in fassade",
+        "ziegelwand-module aus rückbau"
+      ],
+      "synonym_to_old": [
+        "Tragend_Bauteil_Wiederverwendung",
+        "Huelle_Bauteil_Wiederverwendung",
+        "Innenausbau_Wiederverwendung",
+        "TGA_Wiederverwendung"
       ]
     },
-    "Ontologie_RDF": {
-      "kategorie": "Klassifikation",
-      "definition": "Bauwerks-/Reuse-Ontologie (RDF/OWL/SPARQL).",
+    "Refurbishment": {
+      "kategorie": "Reuse_Niveau",
+      "definition": "Material wird zerlegt und in neues Bauteil refabriziert (Sekundärholz → Glulam, Mauerwerksbruch → neuer Mörtel).",
       "keywords": [
-        "ontologie",
-        "ontology",
-        "rdf",
-        "owl",
-        "sparql",
-        "semantic web"
+        "refabrikation",
+        "refurbishment",
+        "remanufactured",
+        "remanufacturing",
+        "secondary timber glulam",
+        "upcycled product",
+        "upcycling-produkt"
+      ],
+      "synonym_to_old": [
+        "Remanufacturing"
       ]
     },
-    "Rueckbaukataster_Modell": {
-      "kategorie": "Inventar",
-      "definition": "Datenmodell für strukturiertes Rückbaukataster.",
+    "Umnutzung": {
+      "kategorie": "Reuse_Niveau",
+      "definition": "Bestand wird angepasst weitergenutzt; oft kombiniert mit Bauteilwiederverwendung.",
       "keywords": [
-        "rückbaukataster",
-        "demolition register",
-        "rückbau-datenmodell"
-      ]
-    }
-  },
-  "Kennwert": {
-    "CO2_Reduktion_prozent": {
-      "kategorie": "Klima",
-      "definition": "CO₂-Reduktion in Prozent gegenüber Vergleichsmodell.",
-      "keywords": [
-        "co2-reduktion %",
-        "co2 reduktion prozent",
-        "% co2",
-        "co2 saving %",
-        "co2-einsparung in %",
-        "% co2-reduktion",
-        "% co2 saved"
+        "adaptive reuse",
+        "bestandstransformation",
+        "in-situ transformation",
+        "umnutzung"
+      ],
+      "synonym_to_old": [
+        "Adaptive_Reuse_Bestand"
       ]
     },
-    "CO2_Reduktion_absolut": {
-      "kategorie": "Klima",
-      "definition": "CO₂-Reduktion absolut in t/kg CO₂e.",
+    "Weiterbauen_im_Bestand": {
+      "kategorie": "Reuse_Niveau",
+      "definition": "Komplettes Donor-Tragwerk wird als zusammenhängendes System wiedereingebaut (Donorskelet).",
       "keywords": [
-        "t co2",
-        "kg co2",
-        "tonnen co2",
-        "tco2e",
-        "co2-einsparung in t",
-        "absolute co2",
-        "co2 in tonnen"
-      ]
-    },
-    "Embodied_Carbon": {
-      "kategorie": "Klima",
-      "definition": "Embodied Carbon kg CO₂e/m².",
-      "keywords": [
-        "embodied carbon",
-        "graue energie",
-        "co2/m²",
-        "co2e per m2",
-        "embodied co2"
-      ]
-    },
-    "Wiederverwendungsrate_Gewicht": {
-      "kategorie": "Reuse_Rate",
-      "definition": "Wiederverwendungsrate nach Gewicht (% kg).",
-      "keywords": [
-        "wiederverwendungsrate gewicht",
-        "% gewicht",
-        "ombruksgrad",
-        "reuse-by-weight",
-        "by weight reuse",
-        "% kg"
-      ]
-    },
-    "Wiederverwendungsrate_Volumen": {
-      "kategorie": "Reuse_Rate",
-      "definition": "Wiederverwendungsrate nach Volumen (% m³).",
-      "keywords": [
-        "wiederverwendungsrate volumen",
-        "% volumen",
-        "% m3",
-        "by volume reuse"
-      ]
-    },
-    "Eingespartes_Primaermaterial": {
-      "kategorie": "Material",
-      "definition": "Eingespartes Primärmaterial in t / kg / m³.",
-      "keywords": [
-        "eingespartes primärmaterial",
-        "primärmaterial gespart",
-        "primary material saved",
-        "ressourceneinsparung",
-        "saved resources"
-      ]
-    },
-    "Wiederverwendete_Masse": {
-      "kategorie": "Material",
-      "definition": "Wiederverwendete Masse in t / kg.",
-      "keywords": [
-        "wiederverwendete masse",
-        "reuse mass",
-        "tons reused",
-        "kg reused",
-        "reuse-tonnage"
-      ]
-    },
-    "Anzahl_Bauteile": {
-      "kategorie": "Stueckzahl",
-      "definition": "Anzahl wiederverwendeter Bauteile.",
-      "keywords": [
-        "anzahl bauteile",
-        "stückzahl",
-        "n_components",
-        "reused units",
-        "anzahl fertigteile"
-      ]
-    },
-    "Transportdistanz": {
-      "kategorie": "Logistik",
-      "definition": "Transportdistanz Donor → Empfänger in km/m.",
-      "keywords": [
-        "transportdistanz",
-        "transportweg",
-        "km transport",
-        "transport distance",
-        "haul distance"
-      ]
-    },
-    "Bauzeit": {
-      "kategorie": "Zeit",
-      "definition": "Bauzeit / Bauablauf in Monaten oder als Beschleunigung.",
-      "keywords": [
-        "bauzeit",
-        "bauablauf",
-        "construction time",
-        "schedule acceleration",
-        "monate bauzeit"
-      ]
-    },
-    "Kosten_absolut": {
-      "kategorie": "Wirtschaft",
-      "definition": "Bau- oder Reuse-Kosten absolut in EUR / EUR/m².",
-      "keywords": [
-        "kosten in eur",
-        "€/m²",
-        "construction cost",
-        "kosten absolut",
-        "baukosten"
-      ]
-    },
-    "Kostenersparnis_prozent": {
-      "kategorie": "Wirtschaft",
-      "definition": "Kostenersparnis in % gegenüber Vergleichsneubau.",
-      "keywords": [
-        "kostenersparnis %",
-        "cost saving %",
-        "% cost reduction",
-        "kosten gespart %"
-      ]
-    },
-    "U_Wert": {
-      "kategorie": "Bauphysik",
-      "definition": "Wärmedurchgangskoeffizient U-Wert (W/m²K).",
-      "keywords": [
-        "u-wert",
-        "u value",
-        "w/m2k",
-        "w/m²k",
-        "wärmedurchgang"
-      ]
-    },
-    "Lebensdauer_Jahre": {
-      "kategorie": "Sonstiges",
-      "definition": "Erwartete Lebensdauer / Restnutzungsdauer in Jahren.",
-      "keywords": [
-        "lebensdauer jahre",
-        "service life",
-        "nutzungsdauer",
-        "restnutzungsdauer"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
-      ]
-    }
-  },
-  "Huerde": {
-    "Nachweis_fehlt": {
-      "kategorie": "Technisch",
-      "definition": "Werkszeugnis, CE-Kennzeichnung oder Materialzertifikat fehlt.",
-      "keywords": [
-        "nachweis",
-        "werkszeugnis",
-        "ce-kennzeichnung",
-        "ce-konformität",
-        "ce-zertifikat",
-        "konformitätserklärung",
-        "zertifikat fehlt",
-        "fehlende industriestandards",
-        "industriestandard",
-        "pre-1940s steel testing",
-        "rivets testing",
-        "concrete encasement"
-      ]
-    },
-    "Materialvariabilitaet": {
-      "kategorie": "Technisch",
-      "definition": "Heterogenität von Materialgüte, Festigkeit, Maße bei Gebrauchtbauteilen.",
-      "keywords": [
-        "materialvariabilität",
-        "stahlqualität unbekannt",
-        "betongüte unbekannt",
-        "festigkeit unbekannt",
-        "heterogenität materialqualität",
-        "material variability",
-        "stabilitäts-",
-        "testaufwand",
-        "materialprüfung"
-      ]
-    },
-    "Toleranz_Massabgleich": {
-      "kategorie": "Technisch",
-      "definition": "Anschluss-/Toleranzprobleme weil Altbauteile nicht zu neuen Maßen passen.",
-      "keywords": [
-        "toleranz",
-        "toleranzausgleich",
-        "maßausgleich",
-        "maßabgleich",
-        "anschlussdetail",
-        "passungenauigkeit",
-        "passung",
-        "eignung der abmessungen",
-        "abmessungen",
-        "passung geernteter",
-        "begrenzte längen",
-        "begrenzte mengen",
-        "kleinmengen",
-        "heterogener kleinmengen"
-      ]
-    },
-    "Bauphysik_Hinderung": {
-      "kategorie": "Technisch",
-      "definition": "Brandschutz, Schallschutz, Wärmeschutz, Feuchteschutz, Luftdichtheit erschwert mit Gebrauchtbauteilen.",
-      "keywords": [
-        "brandschutz",
-        "schallschutz",
-        "wärmeschutz",
-        "luftdichtheit",
-        "feuchteschutz",
-        "u-wert",
-        "bauphysik",
-        "energieanforderung",
-        "reuse-ziegel und energieanforderungen",
-        "dauerhaftigkeit"
-      ]
-    },
-    "Haftung_Gewaehrleistung": {
-      "kategorie": "Rechtlich",
-      "definition": "Haftung, Gewährleistung, Versicherung für gebrauchte Bauteile rechtlich ungeklärt.",
-      "keywords": [
-        "haftung",
-        "gewährleistung",
-        "versicherung",
-        "liability",
-        "warranty",
-        "haftungsmodell"
-      ]
-    },
-    "Bauordnung_nicht_angepasst": {
-      "kategorie": "Rechtlich",
-      "definition": "Bauordnung, Bauvorschriften, Genehmigungspraxis oder Standards nicht für Reuse ausgelegt.",
-      "keywords": [
-        "bauordnung",
-        "bauvorschrift",
-        "bauproduktrecht",
-        "zulassung",
-        "genehmigung",
-        "building code",
-        "bauvorgabe",
-        "regelwerk",
-        "regelwerks-pilot",
-        "normen/altgebäude",
-        "bauvorschriften / dauerhaftigkeit",
-        "großmaßstäblicher hochkodifizierter hochbau"
-      ]
-    },
-    "Verfuegbarkeit_Profile": {
-      "kategorie": "Logistisch",
-      "definition": "Passendes Bauteil/Profil/Menge nicht verfügbar wenn benötigt.",
-      "keywords": [
-        "verfügbarkeit",
-        "verfügbarkeitsproblem",
-        "mengenverfügbarkeit",
-        "profilverfügbarkeit",
-        "matching",
-        "limited availability",
-        "bauteilverfügbarkeit",
-        "marktverfügbarkeit",
-        "reservation mismatch",
-        "verfügbare bestände"
-      ]
-    },
-    "Donor_Empfaenger_Timing": {
-      "kategorie": "Logistisch",
-      "definition": "Zeitliches Auseinanderlaufen von Donor-Rückbau und Empfänger-Bau.",
-      "keywords": [
-        "timing",
-        "synchronisation",
-        "donor-empfänger",
-        "vorlaufzeit",
-        "terminunsicherheit",
-        "zeitliche koordination",
-        "enger zeitplan",
-        "design changes",
-        "budgetverschiebung"
-      ]
-    },
-    "Lagerung_Hinderung": {
-      "kategorie": "Logistisch",
-      "definition": "Lagerflächen, Lagerkosten, Lagerschutz fehlen.",
-      "keywords": [
-        "lagerung",
-        "zwischenlagerung",
-        "lagerkosten",
-        "lagerverwaltung",
-        "depot",
-        "stockpiling",
-        "lagerfläche",
-        "grundstücksgröße",
-        "logistisch-organisatorische hindernisse",
-        "logistikunsicherheit"
-      ]
-    },
-    "Transport_Hinderung": {
-      "kategorie": "Logistisch",
-      "definition": "Transportkosten, -risiken, Schwertransport.",
-      "keywords": [
-        "transportkosten",
-        "schwertransport",
-        "transportdistanz",
-        "transportrisiko",
-        "shipping cost",
-        "transport hindern"
-      ]
-    },
-    "Mehrarbeit_Handarbeit": {
-      "kategorie": "Wirtschaftlich",
-      "definition": "Höherer Arbeitsaufwand für Suche, Prüfung, Aufbereitung, Anpassung; höhere Kosten.",
-      "keywords": [
-        "mehrarbeit",
-        "handarbeit",
-        "arbeitsaufwand",
-        "labor cost",
-        "labour-intensive",
-        "arbeitsintensiv",
-        "front-end-kosten",
-        "rückbaukosten",
-        "kosten-/verfahrenslogik",
-        "kosten und nutzen",
-        "höhere kosten"
-      ]
-    },
-    "Marktilliquiditaet": {
-      "kategorie": "Wirtschaftlich",
-      "definition": "Kein flüssiger Markt für Gebrauchtbauteile, kein standardisierter Marktplatz.",
-      "keywords": [
-        "marktilliquidität",
-        "kein liquider markt",
-        "marktiliquid",
-        "market illiquidity",
-        "kein reuse-markt",
-        "marktbarriere",
-        "marktverfügbarkeit",
-        "fragmentiert"
-      ]
-    },
-    "Beschaffungsmodell_fehlt": {
-      "kategorie": "Wirtschaftlich",
-      "definition": "Standardisierte Ausschreibung/Beschaffung passt nicht zu Reuse.",
-      "keywords": [
-        "beschaffungsmodell",
-        "ausschreibung",
-        "öffentliche ausschreibung",
-        "procurement",
-        "öffentliche beschaffung",
-        "beschaffung heterogen",
-        "kosten, programm"
-      ]
-    },
-    "Heterogenitaet_Patina": {
-      "kategorie": "Gestalterisch",
-      "definition": "Heterogenität von Maßen/Patina/Farbton erschwert visuelle Einheit.",
-      "keywords": [
-        "heterogenität",
-        "patina",
-        "patina akzeptanz",
-        "akzeptanz patina",
-        "visuelle einheit",
-        "farbton heterogenität",
-        "materialspuren",
-        "einpassung in historischen kontext",
-        "historische einbettung",
-        "kontextanpassung"
-      ]
-    },
-    "Akzeptanz_Gebrauchtbauteile": {
-      "kategorie": "Gestalterisch",
-      "definition": "Vorbehalte von Nutzern, Installateuren, Bauherrschaft gegenüber Gebrauchtbauteilen.",
-      "keywords": [
-        "akzeptanz",
-        "akzeptanzproblem",
-        "vorbehalte",
-        "installer reluctance",
-        "user acceptance",
-        "akzeptanz gebraucht"
-      ]
-    },
-    "Entwurf_folgt_Verfuegbarkeit": {
-      "kategorie": "Gestalterisch",
-      "definition": "Entwurfsfreiheit eingeschränkt durch verfügbares Material.",
-      "keywords": [
-        "entwurf folgt verfügbarkeit",
-        "design follows availability",
-        "entwurfsfreiheit",
-        "planung mit vorhandenen elementen",
-        "entwurf nach bestand",
-        "instandhaltung der",
-        "vitrinen instandhaltung"
-      ]
-    },
-    "Abgrenzung_Bestand_Reuse": {
-      "kategorie": "Methodisch",
-      "definition": "Unklare Abgrenzung zwischen Bestandserhalt und Direct Reuse, oder Möbel/Dekoration, oder Sanierung.",
-      "keywords": [
-        "abgrenzung bestand",
-        "bestandserhalt vs",
-        "möbelreuse abgrenzung",
-        "abgrenzung möbel",
-        "circularity-claim",
-        "abgrenzung sanierung",
-        "abgrenzung direct reuse"
-      ]
-    },
-    "Kennwert_Bilanzgrenzen": {
-      "kategorie": "Methodisch",
-      "definition": "Kennwert-Bilanzgrenzen / Methodik nicht standardisiert.",
-      "keywords": [
-        "bilanzgrenze",
-        "methodik kennwert",
-        "lca-grenze",
-        "co2-bilanzgrenze",
-        "kennwertkonflikt",
-        "geringe quellenlage",
-        "embodied-carbon-wertekonflikt"
-      ]
-    },
-    "Projektrisiko_Programmaenderung": {
-      "kategorie": "Methodisch",
-      "definition": "Projekt wird abgebrochen, verschoben oder Programm geändert.",
-      "keywords": [
-        "projektabbruch",
-        "nicht gebaut",
-        "strategiewechsel",
-        "programmänderung",
-        "verworfen",
-        "sturmschaden",
-        "brandereignis"
-      ]
-    },
-    "Datenluecke": {
-      "kategorie": "Datenluecke",
-      "definition": "Datenlücke — Wert nicht angegeben oder unbekannt.",
-      "keywords": [
-        "unbekannt",
-        "unklar",
-        "nicht angegeben",
-        "n/a",
-        "fehlt",
-        "unspezifiziert",
-        "tbd",
-        "to be determined"
+        "adaptive reuse",
+        "bestand",
+        "bestandstransformation",
+        "donor skelet",
+        "donor-skelet",
+        "donorskelet",
+        "ex-situ steel reuse",
+        "ex-situ structural reuse",
+        "großmaßstäbliche bauteilwiederverwendung",
+        "in-situ transformation",
+        "structural reuse gesamt",
+        "umnutzung",
+        "weiterbauen",
+        "weiterbauen im bestand",
+        "weiterbaün",
+        "weiterbaün im bestand"
+      ],
+      "synonym_to_old": [
+        "Tragwerk_Wiederverwendung_Gesamt",
+        "Adaptive_Reuse_Bestand"
       ]
     }
   }

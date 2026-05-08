@@ -2,6 +2,9 @@
 type: Abbruchmethode
 prozessphase: ["[[prozessphase/Rueckbau]]"]
 verwandt: ["[[abbruchmethode/Ausbau_von_Bauteilen]]", "[[abbruchmethode/Demontage]]", "[[abbruchmethode/Selektiver_Rueckbau]]"]
+n_files: 2
+aliases_korpus: ["Bergung aus Brandruine", "sehr begrenzte Demolition / selective deconstruction"]
+verwendet_in_fallstudien: ["[[Gebäude/Hastings_Pier_Visitor_Centre]]", "[[Gebäude/Verbiest_Karreveld_Brussels]]"]
 ---
 
 ## Verknüpfungen

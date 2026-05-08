@@ -3,6 +3,9 @@ type: Prozessphase
 dokument: ["[[dokument/index]]"]
 recht: ["[[recht/Gewaehrleistung]]"]
 verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Ausschreibung]]", "[[prozessphase/Betrieb_und_Rueckbauplanung]]", "[[prozessphase/Entwurf]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Transport]]"]
+n_files: 3
+aliases_korpus: ["Rückbau, Transport, Wiedereinbau", "Umbau, Rückbau, Aufbereitung, Wiedereinbau", "Demontage / Remanufacturing / Wiedereinbau"]
+verwendet_in_fallstudien: ["[[Gebäude/Bestandverplanzung_Pavilion_Muenchen]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]", "[[Gebäude/Multi_Brussels_Reuse_in_MULTI]]"]
 ---
 
 ## Verknüpfungen

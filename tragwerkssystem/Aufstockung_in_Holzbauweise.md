@@ -4,6 +4,9 @@ bauteil: ["[[bauteil/Fassade]]"]
 projekt: ["[[projekt/Aufstockung]]"]
 reuse_strategie: ["[[reuse_strategie/Umnutzung]]"]
 verwandt: ["[[tragwerkssystem/Holz_Skelettbau]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]"]
+n_files: 3
+aliases_korpus: ["Bestand + verstärktes Stützenraster + neue Holz-/Stroh-/Lehm-Aufstockung", "Holzaufstockung", "Aufstockung"]
+verwendet_in_fallstudien: ["[[Gebäude/Bestandshalle_CRCLR_House]]", "[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]"]
 ---
 
 ## Verknüpfungen

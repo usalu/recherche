@@ -3,6 +3,9 @@ type: Bauteil
 material: ["[[material/Beton]]", "[[material/Brettschichtholz]]"]
 tragwerkssystem: ["[[tragwerkssystem/Skelettbauweise]]"]
 verwandt: ["[[bauteil/Brettschichtholzstuetze]]", "[[bauteil/Dachtragwerk]]", "[[bauteil/Fachwerktraeger]]", "[[bauteil/Pfette]]", "[[bauteil/Traeger]]"]
+n_files: 8
+aliases_korpus: ["Stahlträger und Stahlstützen", "Reclaimed tubular steel columns", "Stahltragwerk / neun kreuzförmige Stützen", "Holzpfetten / Holzstücke", "Steel columns lower floors 318 Oxford Street", "Vordach / Pergola / Holzstützen", "Brettschichtholzbögen / glulam arches", "Holz-Dachspanten / Brettschichtholz-Kniespanten"]
+verwendet_in_fallstudien: ["[[Gebäude/Big_Dig_House_Lexington_Massachusetts]]", "[[Gebäude/Brent_Cross_Town_Primary_Substation_London]]", "[[Gebäude/Christ_Pavilion_Volkenroda]]", "[[Gebäude/Grande_Halle_de_Colombelles]]", "[[Gebäude/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain]]", "[[Gebäude/Kindergarten_Moeoeslistrasse_Manegg_Zuerich]]", "[[Gebäude/Recypark_Demets_Anderlecht]]", "[[Gebäude/Woongroep_Boschgaard_Den_Bosch]]"]
 ---
 
 ## Verknüpfungen

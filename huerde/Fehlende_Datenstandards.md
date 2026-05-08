@@ -1,6 +1,9 @@
 ---
 type: Hürde
 verwandt: ["[[huerde/Ausschreibungsproblem]]", "[[huerde/Datenluecke]]"]
+n_files: 1
+aliases_korpus: ["fehlende Industriestandards für Prüfung reclaimed steel"]
+verwendet_in_fallstudien: ["[[Gebäude/Boulder_Fire_Station_3]]"]
 ---
 
 ## Verknüpfungen

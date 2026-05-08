@@ -3,6 +3,9 @@ type: Aufbereitungsmethode
 bauteil: ["[[bauteil/Fenster]]"]
 material: ["[[material/Holz]]"]
 reuse_strategie: ["[[reuse_strategie/Refurbishment]]"]
+n_files: 1
+aliases_korpus: ["abschleifen, restaurieren, lackieren, in Edelstahlrahmen setzen"]
+verwendet_in_fallstudien: ["[[Gebäude/Europa_Building_Brussels]]"]
 ---
 
 ## Verknüpfungen

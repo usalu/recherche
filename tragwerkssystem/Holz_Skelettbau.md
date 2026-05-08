@@ -1,6 +1,9 @@
 ---
 type: Tragwerkssystem
 verwandt: ["[[tragwerkssystem/Aufstockung_in_Holzbauweise]]", "[[tragwerkssystem/Dachtragwerk_und_Fachwerk]]", "[[tragwerkssystem/Design_for_Disassembly]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]", "[[tragwerkssystem/index]]"]
+n_files: 12
+aliases_korpus: ["Holzbau", "formaktive, gekrümmte Ziegelschale + Stahl-/Holz-Infill", "Holzbau mit lokalem Holz", "Holzstruktur im Neubau", "autonome äußere Ziegelstruktur + innerer Holzrahmen", "Holzrahmen / Holzstützen und -träger, Strohballen-Füllung", "Hybrid aus Holzstützen und reused hollow core slabs", "Massivholzstützen, CLT-Decken, Betonkerne", "Skelettbau", "Holztragwerk"]
+verwendet_in_fallstudien: ["[[Gebäude/Areal_Walkeweg_Nord]]", "[[Gebäude/BOELL_LAB_Berlin]]", "[[Gebäude/Hobelwerk_Haus_D_Oberwinterthur]]", "[[Gebäude/Kamikatsu_Zero_Waste_Center_Hotel_WHY]]", "[[Gebäude/Lo_Reninge_Town_Hall_Facade]]", "[[Gebäude/LysP8_Basel_Lysbuechelareal]]", "[[Gebäude/Maison_DnA_Asse]]", "[[Gebäude/Maison_Vignette_Auderghem]]", "[[Gebäude/Montessori_Maassluis]]", "[[Gebäude/ReUseBox_Heilbronn]]", "[[Gebäude/TRAE_High_Rise_Aarhus]]", "[[Gebäude/gjG_House_Gentbrugge]]"]
 ---
 
 ## Verknüpfungen

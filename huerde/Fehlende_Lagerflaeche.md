@@ -3,6 +3,9 @@ type: Hürde
 logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
 verwandt: ["[[huerde/Logistikproblem]]"]
 wirtschaft: ["[[wirtschaft/Restwert]]"]
+n_files: 3
+aliases_korpus: ["fehlende Industriestandards für Prüfung reclaimed steel", "hohe Front-End-Kosten und Logistikunsicherheit", "logistisch-organisatorische Hindernisse", "geringe Grundstücksgröße / keine Lagerfläche"]
+verwendet_in_fallstudien: ["[[Gebäude/Boulder_Fire_Station_3]]", "[[Gebäude/Chiro_d_Itterbeek_Dilbeek]]", "[[Gebäude/Ferme_du_Rail_Paris]]"]
 ---
 
 ## Verknüpfungen

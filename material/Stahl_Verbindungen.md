@@ -1,6 +1,9 @@
 ---
 type: Material
 title: Verbindungen im Stahlbau
+n_files: 9
+aliases_korpus: ["Stahl", "Stahl und Beton", "Stahl, Holz, Stein, Glas, Recyclingmaterialien", "Stahl, Beton, Holz, Glas, Ausbau-/TGA-Materialien", "CLT und Stahl", "Stahl, Holz, Polystyrol, Werbetafeln, weitere lokale Reststoffe"]
+verwendet_in_fallstudien: ["[[Gebäude/BedZED_London_Hackbridge]]", "[[Gebäude/Big_Dig_Building_Boston]]", "[[Gebäude/Big_Dig_House_Lexington_Massachusetts]]", "[[Gebäude/Boulder_Fire_Station_3]]", "[[Gebäude/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/Roots_in_the_Sky_Blackfriars_Crown_Court]]", "[[Gebäude/Timber_Square_London]]", "[[Gebäude/Villa_Welpeloo_Enschede]]"]
 ---
 
 ---

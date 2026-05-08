@@ -1,6 +1,9 @@
 ---
 type: Hürde
 verwandt: ["[[huerde/Gewaehrleistung]]", "[[huerde/Haftung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Terminunsicherheit]]", "[[huerde/Verfuegbarkeitsproblem]]"]
+n_files: 1
+aliases_korpus: ["fehlende Industriestandards für Prüfung reclaimed steel"]
+verwendet_in_fallstudien: ["[[Gebäude/Boulder_Fire_Station_3]]"]
 ---
 
 # Fehlende Standardisierung

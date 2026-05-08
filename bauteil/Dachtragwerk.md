@@ -2,6 +2,9 @@
 type: Bauteil
 material: ["[[material/Brettschichtholz]]"]
 verwandt: ["[[bauteil/Brettschichtholzstuetze]]", "[[bauteil/Fachwerktraeger]]", "[[bauteil/Pfette]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
+n_files: 2
+aliases_korpus: ["Holzdachelemente / Holzwerkstoffe / Türen / Dreischichtplatten", "Holz-Dachbinder / timber roof trusses / rafters"]
+verwendet_in_fallstudien: ["[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]", "[[Gebäude/Svanen_Kindergarten_Gladsaxe]]"]
 ---
 
 ## Verknüpfungen

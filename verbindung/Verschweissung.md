@@ -2,6 +2,9 @@
 type: Verbindung
 methode: ["[[methode/Reversibilitaet]]"]
 verwandt: ["[[verbindung/Klemmverbindung]]", "[[verbindung/Steckverbindung]]", "[[verbindung/Verleimung]]", "[[verbindung/Verschraubung]]"]
+n_files: 1
+aliases_korpus: ["geschweißt"]
+verwendet_in_fallstudien: ["[[Gebäude/Saxum_Vineyard_Equipment_Barn_Paso_Robles]]"]
 ---
 
 ## Verknüpfungen

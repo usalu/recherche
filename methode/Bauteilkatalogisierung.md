@@ -2,6 +2,9 @@
 type: Methode
 gebaeude: ["[[gebaeude/Areal_Walkeweg_Nord]]"]
 werkzeug: ["[[werkzeug/BIM]]", "[[werkzeug/Dataview]]", "[[werkzeug/IFC_Viewer]]", "[[werkzeug/Madaster_Plattform]]", "[[werkzeug/Opalis_Plattform]]", "[[werkzeug/Rhino]]"]
+n_files: 8
+aliases_korpus: ["Bauteilkatalogisierung", "Bauteilkatalog", "harvesting / Oogstkaart-Logik", "Katalogisieren, Prüfen, Lagermanagement", "Material mapping vor Abbruch", "Harvest Map / Materialscouting", "Bauteilpass"]
+verwendet_in_fallstudien: ["[[Gebäude/Areal_Walkeweg_Nord]]", "[[Gebäude/BlueCity_Offices_Rotterdam]]", "[[Gebäude/ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal]]", "[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]", "[[Gebäude/Lysbuechel_Parkhaus]]", "[[Gebäude/ReUseBox_Heilbronn]]", "[[Gebäude/Svanen_Kindergarten_Gladsaxe]]", "[[Gebäude/Villa_Welpeloo_Enschede]]"]
 ---
 
 ## Verknüpfungen

@@ -2,6 +2,9 @@
 type: Hürde
 logistik: ["[[logistik/Lagerung]]", "[[logistik/Transport]]"]
 verwandt: ["[[huerde/Ausschreibungsproblem]]", "[[huerde/Datenluecke]]", "[[huerde/Fehlende_Lagerflaeche]]"]
+n_files: 2
+aliases_korpus: ["hohe Front-End-Kosten und Logistikunsicherheit", "logistisch-organisatorische Hindernisse"]
+verwendet_in_fallstudien: ["[[Gebäude/Boulder_Fire_Station_3]]", "[[Gebäude/Chiro_d_Itterbeek_Dilbeek]]"]
 ---
 
 ## Verknüpfungen

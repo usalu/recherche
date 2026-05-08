@@ -3,6 +3,9 @@ type: Material
 bauteil: ["[[bauteil/Dachtragwerk]]", "[[bauteil/Stuetze]]", "[[bauteil/Traeger]]"]
 pruefung: ["[[pruefung/Abbrandbemessung]]"]
 verwandt: ["[[material/Brettsperrholz]]", "[[material/Holz]]"]
+n_files: 1
+aliases_korpus: ["Holz / Brettschichtholz"]
+verwendet_in_fallstudien: ["[[Gebäude/Recypark_Demets_Anderlecht]]"]
 ---
 
 ## Verknüpfungen

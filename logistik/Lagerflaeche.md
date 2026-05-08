@@ -1,6 +1,9 @@
 ---
 type: Logistik
 verwandt: ["[[logistik/Lagerung]]", "[[logistik/Materialverfuegbarkeit]]", "[[logistik/ReUse_Centre]]", "[[logistik/Transport]]", "[[logistik/Zwischenlagerung]]"]
+n_files: 2
+aliases_korpus: ["early engagement with Cleveland Steel", "reused steel sourced from Cleveland Steel & Tubes laut Timber Development UK"]
+verwendet_in_fallstudien: ["[[Gebäude/Brent_Cross_Town_Primary_Substation_London]]", "[[Gebäude/Timber_Square_London]]"]
 ---
 
 # Lagerfläche

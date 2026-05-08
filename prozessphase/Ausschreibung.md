@@ -2,6 +2,9 @@
 type: Prozessphase
 recht: ["[[recht/Vergaberecht]]"]
 verwandt: ["[[prozessphase/Aufbereitung]]", "[[prozessphase/Bestandserfassung]]", "[[prozessphase/Entwurf]]", "[[prozessphase/Lagerung]]", "[[prozessphase/Rueckbau]]", "[[prozessphase/Transport]]", "[[prozessphase/Wiedereinbau]]"]
+n_files: 1
+aliases_korpus: ["Beschaffung / Ausschreibung"]
+verwendet_in_fallstudien: ["[[Gebäude/Zinneke_Feder_Masui4ever_Brussels]]"]
 ---
 
 ## Verknüpfungen

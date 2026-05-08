@@ -6,6 +6,9 @@ gebaeude: ["[[gebaeude/BOELL_LAB_Berlin]]", "[[gebaeude/Bestandshalle_CRCLR_Hous
 huerde: ["[[huerde/Brandschutzkonflikt]]"]
 pruefung: ["[[pruefung/Abbrandbemessung]]", "[[pruefung/Brandnachweis]]", "[[pruefung/Statische_Nachweisfuehrung]]"]
 verwandt: ["[[material/Brettschichtholz]]", "[[material/Brettsperrholz]]", "[[material/Stroh]]"]
+n_files: 17
+aliases_korpus: ["Holz", "Stahl, Holz, Stein, Glas, Recyclingmaterialien", "europäisches Konstruktionsholz", "sekundäres Abbruchholz / reclaimed solid timber", "Dämmung, Betonblöcke, Holzrahmen", "Holz, Stroh, Lehm", "Holz, tropisches Hartholz / Pier decking", "Holz, vermutlich reclaimed timber", "Stahl, Beton, Holz, Glas, Ausbau-/TGA-Materialien", "Holz, Stroh, Erde, BTC, Granit, Gussradiatoren", "Ziegel / Mauerwerk", "Holz sekundär möglich", "Beton, Aluminium, Holz/Fensterrahmen, Metall, Plattenmaterial", "Holz, massive Holzbalken/Platten Verbiest", "Stahl, Holz, Polystyrol, Werbetafeln, weitere lokale Reststoffe", "Holzbau", "Altholz"]
+verwendet_in_fallstudien: ["[[Gebäude/BOELL_LAB_Berlin]]", "[[Gebäude/BedZED_London_Hackbridge]]", "[[Gebäude/Bestandshalle_CRCLR_House]]", "[[Gebäude/BlueCity_Offices_Rotterdam]]", "[[Gebäude/CascadeUp_London_secondary_timber_glulam_demonstrator]]", "[[Gebäude/Chiro_d_Itterbeek_Dilbeek]]", "[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/Hastings_Pier_Visitor_Centre]]", "[[Gebäude/Hobelwerk_Haus_D_Oberwinterthur]]", "[[Gebäude/Institut_de_Botanique_ULg_Liege]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]", "[[Gebäude/ReUseBox_Heilbronn]]", "[[Gebäude/Resilience_La_Ferme_des_Possibles_Stains]]", "[[Gebäude/Resource_Rows_Copenhagen]]", "[[Gebäude/Superlocal_Expogebouw_Bleijerheide]]", "[[Gebäude/Verbiest_Karreveld_Brussels]]", "[[Gebäude/Villa_Welpeloo_Enschede]]"]
 ---
 
 ## Verknüpfungen

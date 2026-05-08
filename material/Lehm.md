@@ -6,6 +6,9 @@ leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanfor
 norm: ["[[norm/DIN_18940]]"]
 schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/Holzschutzmittel]]"]
 verwandt: ["[[material/Keramik]]", "[[material/Stroh]]"]
+n_files: 3
+aliases_korpus: ["Holz, Stroh, Lehm", "Lehm", "Lehmestrich_Oxacrete"]
+verwendet_in_fallstudien: ["[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/K118_Kopfbau_Halle_118_Winterthur]]", "[[Gebäude/LysP8_Basel_Lysbuechelareal]]"]
 ---
 
 # Lehm

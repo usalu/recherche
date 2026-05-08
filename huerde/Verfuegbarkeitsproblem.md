@@ -1,6 +1,9 @@
 ---
 type: Hürde
 verwandt: ["[[huerde/Fehlende_Standardisierung]]", "[[huerde/Gewaehrleistung]]", "[[huerde/Haftung]]", "[[huerde/Schadstoffbelastung]]", "[[huerde/Terminunsicherheit]]"]
+n_files: 7
+aliases_korpus: ["Profilverfügbarkeit, Services, Profilhöhen, Zertifizierung", "Verfügbarkeit passender Profile", "lange Vorlaufzeiten", "gebogene Profile nicht reused", "Reservation mismatch / design changes", "Bauteilverfügbarkeit / Entwurf nach Bestand", "Kosten, Programm, verfügbare Bestände", "Regelwerk, Dokumentation, Marktverfügbarkeit, Rückbaukosten", "Materialverfügbarkeit vor Bauplanung"]
+verwendet_in_fallstudien: ["[[Gebäude/55_Great_Suffolk_Street_London]]", "[[Gebäude/BedZED_London_Hackbridge]]", "[[Gebäude/Brent_Cross_Town_Primary_Substation_London]]", "[[Gebäude/Grubenstrasse_29_Werkhof_29_Zuerich]]", "[[Gebäude/Holbein_Gardens_London]]", "[[Gebäude/KA13_Kristian_Augusts_gate_13_Oslo]]", "[[Gebäude/Woongroep_Boschgaard_Den_Bosch]]"]
 ---
 
 # Verfügbarkeitsproblem

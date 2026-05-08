@@ -3,6 +3,9 @@ type: Tragwerkssystem
 bauteil: ["[[bauteil/Wand]]"]
 reuse_strategie: ["[[reuse_strategie/Umnutzung]]"]
 verwandt: ["[[tragwerkssystem/Betonfertigteil_System]]", "[[tragwerkssystem/Reversible_Fuegung]]", "[[tragwerkssystem/Skelettbauweise]]"]
+n_files: 2
+aliases_korpus: ["Fertigteil-Wand-/Deckensystem", "Plattenbau-/Wandbau-System mit Fertigteilplatten"]
+verwendet_in_fallstudien: ["[[Gebäude/Association_house_Groeditz]]", "[[Gebäude/Association_house_Plauen]]"]
 ---
 
 ## Verknüpfungen

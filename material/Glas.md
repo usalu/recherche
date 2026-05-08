@@ -5,6 +5,9 @@ bauteil: ["[[bauteil/Fassade]]", "[[bauteil/Fenster]]", "[[bauteil/Wand]]"]
 leistungsanforderung: ["[[leistungsanforderung/Brandschutz]]", "[[leistungsanforderung/Dauerhaftigkeit]]", "[[leistungsanforderung/Schallschutz]]", "[[leistungsanforderung/Waermeschutz]]"]
 pruefung: ["[[pruefung/Brandnachweis]]", "[[pruefung/Sichtpruefung]]"]
 schadstoff: ["[[schadstoff/Asbest]]", "[[schadstoff/PAK]]", "[[schadstoff/PCB]]"]
+n_files: 2
+aliases_korpus: ["Stahl, Holz, Stein, Glas, Recyclingmaterialien", "Stahl, Beton, Holz, Glas, Ausbau-/TGA-Materialien"]
+verwendet_in_fallstudien: ["[[Gebäude/BedZED_London_Hackbridge]]", "[[Gebäude/Liander_Alliander_HQ_Duiven]]"]
 ---
 
 # Glas
