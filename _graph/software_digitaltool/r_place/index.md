@@ -1,0 +1,95 @@
+---
+id: "r_place"
+entity: "software_digitaltool"
+node_kind: "core"
+migration_status: "migrated_phase3_core_entities"
+title: "R-Place"
+source_count: 1
+legacy_paths:
+  - "bauteilboerse\\r-place.md"
+raw_targets:
+  - "software_digitaltool/r_place"
+migration_actions:
+  - "split_platform_profile"
+risk_flags:
+  - "duplicate_with_akteur_or_werkzeug"
+---
+# R-Place
+
+## Migration
+
+- Canonical target: software_digitaltool/r_place
+- Legacy source count: 1
+- Semantic note: Digitales Werkzeug oder Plattform. Bauteilboersen werden hier als Plattformprofile gefuehrt, nicht als eigene Entitaet.
+
+## Legacy Content
+
+### Legacy Source: bauteilboerse\r-place.md
+
+- Map action: split_platform_profile
+- Target role in map: primary
+- Raw mapped target: software_digitaltool/r_place
+- Original primary target: software_digitaltool/r_place
+- Original secondary targets: akteur/<operator_if_named>; beschaffungsweg/Digitale_Plattform; ressourcenquelle/Bauteilboerse; plattformfunktion/Material_Matching
+
+---
+type: Bauteilbörse
+---
+
+# R-Place
+
+## Kurzbeschreibung
+R-Place ist ein(e) B2B-Plattform für Wiederverwendung von Baumaterialien mit Bezug zu Frankreich; Occitanie und B2B-Reichweite. Im Reuse-Kontext liegt der Schwerpunkt auf: B2B-Handel und Vermittlung von re-use Materialien und Restbeständen.
+
+## Land / Region
+Frankreich; Occitanie und B2B-Reichweite
+
+## Betreiber
+R-Place
+
+## Zielgruppe
+B2B: Bauunternehmen, Projektträger, Händler, Planende
+
+## Plattformtyp
+B2B-Plattform für Wiederverwendung von Baumaterialien
+
+## Bauteilkategorien
+Baumaterialien aus Wiederverwendung, Überbestände und Baustellenreste; genaue Kategorien je Plattform
+
+## Art der Wiederverwendung
+B2B-Handel und Vermittlung von re-use Materialien und Restbeständen
+
+## Funktionen
+Marktplatz; Anzeigen; Angebot/Nachfrage; Kontakt zwischen Unternehmen
+
+## Daten je Bauteil
+nicht einheitlich angegeben; Produktbeschreibung, Menge, Standort und Preis je Anzeige wahrscheinlich, aber Pflichtfelder nicht angegeben
+
+## Qualität / Prüfung
+nicht angegeben
+
+## Logistik / Lagerung
+nicht angegeben; B2B-Abwicklung je Anbieter
+
+## Geschäftsmodell
+B2B-Marktplatz; Gebühren/Provisionen nicht angegeben
+
+## Ökologische Bewertung
+unterstützt die Vermeidung von Bauabfall und die Substitution von Neumaterial; quantitative Bewertung nicht angegeben
+
+## Stärken
+klarer professioneller Fokus; regionale Verankerung; geeignet für größere Mengen als P2P-Apps
+
+## Schwächen / Hemmnisse
+wenige öffentliche Detailinformationen; Qualität und Gewährleistung je Verkäufer
+
+## Relevanz für zirkuläres Bauen
+hoch für B2B-zirkuläre Beschaffung im französischen Markt.
+
+## Quellen und Links
+- https://r-place.fr/
+- https://www.cycl-op.org/initiative/h/r-place-plateforme-b2b-du-reemploi-des-materiaux-de-construction.html
+- https://www.envirobat-oc.fr/R-Place
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.
