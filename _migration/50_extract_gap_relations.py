@@ -10,6 +10,9 @@ Current batch:
     Reads the explicit "Reuse-Strategie" rows in the Gebaeude Entitaeten-
     Mapping tables and adds has_reuse_strategie edges from concrete
     reuse_einsatz nodes to the existing Direkte_Wiederverwendung knot.
+  50b_fuegung_verbindung
+    Reads the "Verbindung" row text already promoted into reuse_einsatz
+    index.md files and adds high-precision has_fuegung_verbindung edges.
 """
 
 from __future__ import annotations
@@ -177,6 +180,110 @@ NON_DIRECT_ABGRENZUNG_TARGETS = (
     "bewertungslogik_abgrenzung/Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung",
 )
 
+CONNECTION_UNCERTAIN_TOKENS = (
+    "unbekannt",
+    "nicht relevant",
+    "nicht zutreffend",
+    "n/a",
+    "entfallt",
+    "entfaellt",
+    "details unbekannt",
+    "vermutet",
+    "vermutlich",
+    "geplant",
+    "genaue details",
+    "beschlage unbekannt",
+    "einbau unbekannt",
+    "mortel/kleber unbekannt",
+    "moertel/kleber unbekannt",
+    "mortel unbekannt",
+    "moertel unbekannt",
+    "kleber unbekannt",
+    "standardanschlusse",
+    "future reuse",
+)
+
+CONNECTION_RULES = [
+    (
+        "fuegung_verbindung/Verschraubung",
+        (
+            "geschraubt",
+            "verschraubt",
+            "schrauben",
+            "schraub-",
+            "schraub/",
+            "bolzen",
+            "dubel",
+            "flansch",
+            "flansche",
+        ),
+    ),
+    (
+        "fuegung_verbindung/Verschweissung",
+        (
+            "schweiss",
+            "geschweisst",
+            "verschweisst",
+        ),
+    ),
+    (
+        "fuegung_verbindung/Verleimung",
+        (
+            "kleber",
+            "geklebt",
+            "verklebt",
+            "leim",
+            "verleim",
+        ),
+    ),
+    (
+        "fuegung_verbindung/Vermoertelung",
+        (
+            "mortel",
+            "moertel",
+            "kalkmortel",
+            "kalkmoertel",
+            "mauerwerk",
+            "mauerverband",
+            "ziegelverband",
+            "ziegelschicht",
+            "vermortel",
+            "vermoertel",
+        ),
+    ),
+    (
+        "fuegung_verbindung/Steckverbindung",
+        (
+            "steck",
+            "stabdubel",
+            "buchenholzdubel",
+            "dubel",
+        ),
+    ),
+    (
+        "fuegung_verbindung/Klemmverbindung",
+        (
+            "klemm",
+            "spannband",
+            "spannbander",
+            "umreifungsband",
+            "kabelbinder",
+        ),
+    ),
+    (
+        "fuegung_verbindung/Reversible_Fuegung",
+        (
+            "demontierbar",
+            "losbar",
+            "loesbar",
+            "reversibel",
+            "reversible",
+            "kit-of-parts",
+            "trockenmauer",
+        ),
+    ),
+]
+
 
 def normalized(value: str) -> str:
     value = value or ""
@@ -316,6 +423,21 @@ def load_reuse_frontmatter(node_row: dict[str, str]) -> dict[str, str]:
     if not index_path.exists():
         return {}
     return parse_simple_frontmatter(index_path.read_text(encoding="utf-8", errors="replace"))
+
+
+def load_reuse_markdown(node_row: dict[str, str]) -> str:
+    index_path = ROOT / node_row["markdown_path"]
+    if not index_path.exists():
+        return ""
+    return index_path.read_text(encoding="utf-8", errors="replace")
+
+
+def extract_markdown_bullet(markdown: str, label: str) -> str:
+    pattern = re.compile(rf"^- \*\*{re.escape(label)}:\*\*\s*(.*)$", flags=re.MULTILINE)
+    match = pattern.search(markdown)
+    if not match:
+        return ""
+    return match.group(1).strip()
 
 
 def extract_strategy_rows() -> dict[str, dict[str, str]]:
@@ -492,6 +614,120 @@ def build_reuse_strategy_edges(
     return edge_rows + additions, additions, stats, skipped
 
 
+def map_connection_targets(raw_label: str, existing_nodes: set[str]) -> list[str]:
+    label = normalized(raw_label)
+    if not label or label in UNCERTAIN_VALUES:
+        return []
+    if any(token in label for token in CONNECTION_UNCERTAIN_TOKENS):
+        return []
+    if "ohne mortel" in label or "ohne moertel" in label:
+        # This is an explicit negative clue, not a Vermoertelung edge.
+        return []
+
+    targets: list[str] = []
+    for target, tokens in CONNECTION_RULES:
+        if target not in existing_nodes:
+            continue
+        if any(token in label for token in tokens) and target not in targets:
+            targets.append(target)
+    return targets
+
+
+def connection_confidence(raw_label: str) -> str:
+    label = normalized(raw_label)
+    if any(token in label for token in ("laut quelle", "laut quellen", "je quelle", "erwahnt", "allgemein")):
+        return "rule_medium"
+    return "rule_high"
+
+
+def build_connection_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    existing_keys = existing_edge_keys(edge_rows)
+    excluded_sources = direct_reuse_exclusion_sources(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    reuse_rows = [
+        row for row in load_csv(NODE_INVENTORY)
+        if row["entity"] == "reuse_einsatz"
+    ]
+
+    for node_row in sorted(reuse_rows, key=lambda row: row["typed_path"]):
+        markdown = load_reuse_markdown(node_row)
+        raw_label = extract_markdown_bullet(markdown, "Verbindung")
+        if not raw_label:
+            stats["rows_without_connection_label"] += 1
+            continue
+
+        if node_row["typed_path"] in excluded_sources:
+            stats["connection_rows_skipped_by_abgrenzung"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "legacy_path": "",
+                "raw_label": raw_label,
+                "reason": "non_direct_reuse_abgrenzung",
+            })
+            continue
+
+        frontmatter = parse_simple_frontmatter(markdown)
+        if not reusable_enough(frontmatter):
+            stats["connection_rows_skipped_not_reusable"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "legacy_path": "",
+                "raw_label": raw_label,
+                "reason": "not_reusable_enough_for_connection_edge",
+            })
+            continue
+
+        targets = map_connection_targets(raw_label, existing_nodes)
+        if not targets:
+            stats["connection_labels_skipped"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "legacy_path": "",
+                "raw_label": raw_label,
+                "reason": "no_precise_connection_target",
+            })
+            continue
+
+        confidence = connection_confidence(raw_label)
+        for target in targets:
+            key = (node_row["typed_path"], "has_fuegung_verbindung", target)
+            if key in existing_keys:
+                stats["duplicates_skipped"] += 1
+                continue
+            target_entity, target_id = target.split("/", 1)
+            addition = {
+                "source": node_row["typed_path"],
+                "source_entity": "reuse_einsatz",
+                "source_id": node_row["id"],
+                "relation": "has_fuegung_verbindung",
+                "target": target,
+                "target_entity": target_entity,
+                "target_id": target_id,
+                "field": "BAUTEIL-INVENTAR:Verbindung",
+                "raw_label": raw_label,
+                "confidence": confidence,
+                "resolution_rule": "table_50b_fuegung_verbindung_label",
+                "legacy_path": "",
+                "original_source": node_row["typed_path"],
+                "original_relation": "has_fuegung_verbindung",
+                "original_target": target,
+                "edge_cleaning": "added_gap_50b",
+            }
+            additions.append(addition)
+            existing_keys.add(key)
+
+    stats["reuse_rows_scanned"] = len(reuse_rows)
+    stats["additions"] = len(additions)
+    stats["sources_with_additions"] = len({row["source"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
 def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[dict[str, str]], stats: Counter[str]) -> None:
     diff_path = REPORT_DIR / f"50_gap_relation_diff_{batch_name}.csv"
     with diff_path.open("w", encoding="utf-8", newline="") as handle:
@@ -521,8 +757,8 @@ def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[d
         writer = csv.DictWriter(
             handle,
             fieldnames=[
-                "case_id", "legacy_path", "value", "relationship",
-                "confidence_source", "note", "reason",
+                "source", "case_id", "legacy_path", "value", "relationship",
+                "confidence_source", "note", "raw_label", "reason",
             ],
             quoting=csv.QUOTE_ALL,
             lineterminator="\n",
@@ -530,12 +766,14 @@ def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[d
         writer.writeheader()
         for row in skipped:
             writer.writerow({
+                "source": row.get("source", ""),
                 "case_id": row.get("case_id", ""),
                 "legacy_path": row.get("legacy_path", ""),
                 "value": row.get("value", ""),
                 "relationship": row.get("relationship", ""),
                 "confidence_source": row.get("confidence_source", ""),
                 "note": row.get("note", ""),
+                "raw_label": row.get("raw_label", ""),
                 "reason": row.get("reason", ""),
             })
 
@@ -548,14 +786,18 @@ def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[d
         "## Result",
         "",
         f"- Added edges: {stats['additions']}",
-        f"- Cases with added edges: {stats['cases_with_additions']}",
-        f"- Source Reuse-Strategie rows found: {stats['strategy_rows']}",
-        f"- Reuse rows skipped as not reusable/unclear: {stats['reuse_nodes_skipped_not_reusable']}",
         f"- Duplicate edges skipped: {stats['duplicates_skipped']}",
+        "",
+        "## Batch Stats",
+        "",
+    ]
+    for key, value in sorted(stats.items()):
+        lines.append(f"- `{key}`: {value}")
+    lines.extend([
         "",
         "## Target Counts",
         "",
-    ]
+    ])
     if target_counts:
         lines.extend(f"- `{target}`: {count}" for target, count in sorted(target_counts.items()))
     else:
@@ -584,6 +826,7 @@ def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[d
 
 BATCHES = {
     "50a_reuse_strategie": build_reuse_strategy_edges,
+    "50b_fuegung_verbindung": build_connection_edges,
 }
 
 

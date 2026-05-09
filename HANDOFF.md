@@ -38,8 +38,8 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 
 ## 3. State at handoff
 
-- 2,987 nodes, 7,944 edges, 0 dangling endpoints, 0 type mismatches.
-- 20 relation labels. First Step-1 gap batch is done: 248 `has_reuse_strategie` edges from `reuse_einsatz` to `reuse_strategie/Direkte_Wiederverwendung` (batch 50a).
+- 2,987 nodes, 7,965 edges, 0 dangling endpoints, 0 type mismatches.
+- 21 relation labels. Step-1 gap batches done: 248 `has_reuse_strategie` edges from `reuse_einsatz` to `reuse_strategie/Direkte_Wiederverwendung` (50a), plus 21 `has_fuegung_verbindung` edges from direct-reuse component connection labels (50b).
 - 0 edges in the review queue, 0 `rule_low` edges, 0 mojibake titles.
 - `bauteiltyp` = 15 canonical types (matches schema §5 exactly).
 - `material` = 15 (matches schema §6 + Recyclingbeton + Gusseisen).
@@ -53,6 +53,7 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 In order of recent commits (newest → oldest):
 
 ```
+Add Connection Edges
 0855c706 Add Strategy Edges
 0751877d Add Handoff Guide
 f9390dac Update Schema Status
@@ -74,7 +75,7 @@ If you want to know what each batch did: read the commit message + the diff CSV 
 
 ### Step 1: Extract gap relations from `Gebäude/` tables (BIG, highest value)
 
-**WHAT.** The graph carries 20 relation types. The Entitäten-Mapping tables in `Gebäude/<case>.md` imply ~35. Most case-context relations are still missing as edges:
+**WHAT.** The graph carries 21 relation types. The Entitäten-Mapping tables in `Gebäude/<case>.md` imply ~35. Most case-context relations are still missing as edges:
 
 ```
 Missing relations (from SCHEMA.md §9):
@@ -82,7 +83,7 @@ has_reuse_einsatzstatus, has_ressourcenquelle,
 has_beschaffungsweg, has_prozessphase, has_rueckbauverfahren,
 has_aufbereitungsverfahren, has_logistik, has_funktionswechsel,
 has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
-has_tragwerksprinzip, has_fuegung_verbindung,
+has_tragwerksprinzip,
 has_bauobjektklasse, has_bauobjektrolle, has_bauobjektstatus, has_nutzung,
 has_bauaufgabe_intervention, located_in_ort,
 has_rechtliche_bedingung, has_schadstoff, has_kontextmerkmal,
@@ -94,6 +95,8 @@ has_methode, has_wirtschaft
 ```
 
 Done in batch 50a: `has_reuse_strategie` for high-precision direct-reuse rows (248 edges). Remaining strategy variants such as adaptive reuse, Bestandserhalt, DfD, upcycling, and refurbishment still need a more careful row-level pass before adding edges.
+
+Done in batch 50b: `has_fuegung_verbindung` for high-precision direct-reuse component rows (21 edges). Most connection labels are `unbekannt` or ambiguous and intentionally remain unlinked in the skip report.
 
 **WHY.** This is what turns "consolidated graph" into the "interconnected readable map" the user described. Right now you can ask "which cases use Holz?" but not "which Holz reuse cases happened in Wohnungsbau in Switzerland with Direct Reuse strategy?" — that needs the case-context edges.
 
