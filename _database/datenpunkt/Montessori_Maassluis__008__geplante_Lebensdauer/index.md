@@ -1,20 +1,25 @@
-﻿---
-id: "Montessori_Maassluis__008__geplante_Lebensdauer"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "geplante Lebensdauer - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# geplante Lebensdauer - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Montessori_Maassluis__008__geplante_Lebensdauer"
+title: "geplante Lebensdauer - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "Kraaijvanger project page"
+node_kind: "core"
+wert: "mindestens 50"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# geplante Lebensdauer - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Montessori_Maassluis__008__geplante_Lebensdauer
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Montessori_Maassluis__008__geplante_Lebensdauer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** geplante Lebensdauer
+- **Wert:** mindestens 50
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** Kraaijvanger project page
+- **Vertrauensgrad:** belegt

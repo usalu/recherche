@@ -1,20 +1,25 @@
-﻿---
-id: "TRAE_High_Rise_Aarhus__001__H_he"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "HÃ¶he - TRÃ† High-Rise, Aarhus"
 ---
-# HÃ¶he - TRÃ† High-Rise, Aarhus
+entity: "datenpunkt"
+id: "TRAE_High_Rise_Aarhus__001__H_he"
+title: "Höhe - TRÆ High-Rise, Aarhus"
+build_status: "promoted_phase42"
+einheit: "m"
+quelle_label: "[S1], [S2], [S4]"
+node_kind: "core"
+wert: "78"
+fallstudie: "fallstudie/TRAE_High_Rise_Aarhus"
+bauobjekt:
+  - "TRAE_High_Rise_Aarhus"
+projekt:
+  - "TRAE_High_Rise_Aarhus"
+---
 
-## Clean Node
+# Höhe - TRÆ High-Rise, Aarhus
 
-- Final path: _database/datenpunkt/TRAE_High_Rise_Aarhus__001__H_he
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/TRAE_High_Rise_Aarhus__001__H_he
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Höhe
+- **Wert:** 78
+- **Einheit:** m
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S1], [S2], [S4]
+- **Vertrauensgrad:** belegt

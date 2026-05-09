@@ -1,20 +1,22 @@
-﻿---
-id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__001__Hiroshi_Nakamura_NAP"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Hiroshi Nakamura & NAP - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
 ---
+entity: "akteur_beteiligung"
+id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__001__Hiroshi_Nakamura_NAP"
+title: "Hiroshi Nakamura & NAP - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
+build_status: "promoted_phase42"
+quelle_label: "Q2, Q3"
+node_kind: "relation"
+fallstudie: "fallstudie/Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+bauobjekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+projekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+---
+
 # Hiroshi Nakamura & NAP - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/Kamikatsu_Zero_Waste_Center_Hotel_WHY__001__Hiroshi_Nakamura_NAP
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Kamikatsu_Zero_Waste_Center_Hotel_WHY__001__Hiroshi_Nakamura_NAP
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Hiroshi Nakamura & NAP
+- **Beziehung zur Fallstudie:** Architektur
+- **Quelle/Beleg:** Q2, Q3
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Entwurfsbüro

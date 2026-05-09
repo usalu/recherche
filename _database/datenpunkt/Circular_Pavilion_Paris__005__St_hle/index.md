@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Pavilion_Paris__005__St_hle"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "StÃ¼hle - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# StÃ¼hle - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Pavilion_Paris__005__St_hle"
+title: "Stühle - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "Encore Heureux"
+node_kind: "core"
+wert: "50"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Stühle - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Pavilion_Paris__005__St_hle
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Pavilion_Paris__005__St_hle
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Stühle
+- **Wert:** 50
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Bauteilangabe
+- **Bilanzgrenze:** lose Möbel, nicht score-relevant
+- **Quelle:** Encore Heureux
+- **Vertrauensgrad:** belegt

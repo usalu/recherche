@@ -1,20 +1,25 @@
-﻿---
-id: "Ferme_du_Rail_Paris__003__SDP"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "SDP - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# SDP - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Ferme_du_Rail_Paris__003__SDP"
+title: "SDP - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "830"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# SDP - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Ferme_du_Rail_Paris__003__SDP
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Ferme_du_Rail_Paris__003__SDP
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** SDP
+- **Wert:** 830
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Surface de plancher
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

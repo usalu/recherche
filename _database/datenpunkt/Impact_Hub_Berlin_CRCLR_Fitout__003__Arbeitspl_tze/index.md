@@ -1,20 +1,25 @@
-﻿---
-id: "Impact_Hub_Berlin_CRCLR_Fitout__003__Arbeitspl_tze"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "ArbeitsplÃ¤tze - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# ArbeitsplÃ¤tze - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Impact_Hub_Berlin_CRCLR_Fitout__003__Arbeitspl_tze"
+title: "Arbeitsplätze - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "S1"
+node_kind: "core"
+wert: "100+"
+fallstudie: "fallstudie/Impact_Hub_Berlin_CRCLR_Fitout"
+bauobjekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+projekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+---
 
-## Clean Node
+# Arbeitsplätze - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Impact_Hub_Berlin_CRCLR_Fitout__003__Arbeitspl_tze
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Impact_Hub_Berlin_CRCLR_Fitout__003__Arbeitspl_tze
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Arbeitsplätze
+- **Wert:** 100+
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Case-Study-Angabe
+- **Bilanzgrenze:** Nutzung
+- **Quelle:** S1
+- **Vertrauensgrad:** belegt

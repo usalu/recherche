@@ -1,20 +1,25 @@
-﻿---
-id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__004__Treppen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Treppen - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Treppen - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__004__Treppen"
+title: "Treppen - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "[S1], [S3]"
+node_kind: "core"
+wert: "7"
+fallstudie: "fallstudie/Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+bauobjekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+projekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+---
 
-## Clean Node
+# Treppen - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__004__Treppen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__004__Treppen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Treppen
+- **Wert:** 7
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** PRECS-Datenbank
+- **Bilanzgrenze:** Bauteile
+- **Quelle:** [S1], [S3]
+- **Vertrauensgrad:** belegt

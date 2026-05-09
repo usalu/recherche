@@ -1,20 +1,37 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "bauobjekt"
+id: "Superlocal_Expogebouw_Bleijerheide"
+title: "SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Superlocal_Expogebouw_Bleijerheide.md"
+node_kind: "core"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/bauobjekt/Superlocal_Expogebouw_Bleijerheide
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Superlocal_Expogebouw_Bleijerheide.md
 
-- Source: _graph/bauobjekt/Superlocal_Expogebouw_Bleijerheide
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** SUPERLOCAL Expogebouw / Superlocal Pavilion  
+- **Ort:** Bleijerheide, Kerkrade, Niederlande  
+- **Gebäude:** Expogebouw / Infogebäude, wind- und wasserdicht, mit wesentlichen Elementen einer Wohnung  
+- **Projekt:** SUPERLOCAL – Super Circular Estate  
+- **Beteiligte People / Akteure:** HEEMwonen, Gemeinde Kerkrade, IBA Parkstad, Dusseldorp, Bouwbedrijven Jongen, Volantis, Maurer United, Zuyd Hogeschool u. a.  
+- **Architekt:** Maurer United; Designteam laut Projektseite Marc Maurer, Nicole Maurer, Alan Frijns, Annika Frencken  
+- **Tragwerksplaner:** Volantis als Konstrukteur genannt; genaue Tragwerksplanung unbekannt  
+- **Bauherr:** HEEMwonen / Projektpartnerschaft; genaue Bauherrschaft für Expogebouw unbekannt  
+- **Zeitraum:** Rückbau/Entnahme ab Juni/November 2017; Lieferung/Eröffnung 22. Februar 2018  
+- **Ursprüngliche Nutzung:** Wohnungsteile und Bauteile aus einer ca. 50 Jahre alten Hochhausflat an der Ursulastraat  
+- **Neue Nutzung:** Infogebäude / Demonstrator / Test für zirkuläre Wohnungsentwicklung  
+- **Fläche / Maßstab:** klein; genaue Fläche unbekannt  
+- **Schutzstatus / Denkmalstatus:** unbekannt  
+- **Quellenlage:** gut für Prozess, Beteiligte und Hauptbauteile; begrenzt für Normen, Prüfwerte, Kosten, CO₂
+
+---

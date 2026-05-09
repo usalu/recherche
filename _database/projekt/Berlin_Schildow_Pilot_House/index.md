@@ -1,20 +1,35 @@
-﻿---
-id: "Berlin_Schildow_Pilot_House"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "Berlin-Schildow Pilot House â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Berlin-Schildow Pilot House â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "projekt"
+id: "Berlin_Schildow_Pilot_House"
+title: "Berlin-Schildow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Berlin_Schildow_Pilot_House.md"
+node_kind: "core"
+fallstudie: "fallstudie/Berlin_Schildow_Pilot_House"
+bauobjekt:
+  - "Berlin_Schildow_Pilot_House"
+---
 
-## Clean Node
+# Berlin-Schildow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/projekt/Berlin_Schildow_Pilot_House
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\Berlin_Schildow_Pilot_House.md
 
-- Source: _graph/projekt/Berlin_Schildow_Pilot_House
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Berlin-Schildow Pilot House / Berlin-Schildow 2nd pilot house; Ausgangslistename: Berlin-Schildow pilot house 1
+- **Ort:** Schildow, nördlich von Berlin, Deutschland
+- **Gebäude:** Einfamilienhaus / Pilotwohnhaus
+- **Projekt:** Wiederverwendung von WBS70-Plattenbauteilen aus Berliner/Marzahner Plattenbau
+- **Beteiligte People / Akteure:** Claus Asam, IEMB/TU Berlin; Architekturbüro Conclus; Hervé/Joel Biele laut Presse; Bauherr unbekannt
+- **Architekt:** Architekturbüro Conclus laut Pressekontext; konkrete Projektverantwortung prüfen
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** unbekannt; Presse nennt Bauherr als Unternehmensberater aus Westdeutschland, Name unbekannt
+- **Zeitraum:** 2005 laut PRECS; Presseberichte 2005/2006
+- **Ursprüngliche Nutzung:** WBS70-Plattenbau / Elfgeschosser in Berlin-Marzahn
+- **Neue Nutzung:** Einfamilienhaus
+- **Fläche / Maßstab:** Fläche unbekannt; 200 zugeschnittene Teile / 245 m³ Beton
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** Wissenschaftliche Sekundärquelle plus zeitgenössische Presse; Nummerierung und Detailplanung müssen geprüft werden

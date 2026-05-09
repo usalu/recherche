@@ -1,20 +1,25 @@
-﻿---
-id: "Charles_Malis_Molenbeek__002__Anzahl_Schalter"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anzahl Schalter - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse"
 ---
-# Anzahl Schalter - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Charles_Malis_Molenbeek__002__Anzahl_Schalter"
+title: "Anzahl Schalter - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "WBA / Mamout"
+node_kind: "core"
+wert: "12"
+fallstudie: "fallstudie/Charles_Malis_Molenbeek"
+bauobjekt:
+  - "Charles_Malis_Molenbeek"
+projekt:
+  - "Charles_Malis_Molenbeek"
+---
 
-## Clean Node
+# Anzahl Schalter - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Charles_Malis_Molenbeek__002__Anzahl_Schalter
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Charles_Malis_Molenbeek__002__Anzahl_Schalter
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anzahl Schalter
+- **Wert:** 12
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektprogramm
+- **Bilanzgrenze:** Nutzung
+- **Quelle:** WBA / Mamout
+- **Vertrauensgrad:** belegt

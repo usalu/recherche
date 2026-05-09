@@ -1,20 +1,22 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__005__Weidlinger_Associates"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Weidlinger Associates - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Weidlinger Associates - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Big_Dig_House_Lexington_Massachusetts__005__Weidlinger_Associates"
+title: "Weidlinger Associates - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "ECO Industrial House / sekundär"
+node_kind: "relation"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Weidlinger Associates - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Big_Dig_House_Lexington_Massachusetts__005__Weidlinger_Associates
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Big_Dig_House_Lexington_Massachusetts__005__Weidlinger_Associates
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Weidlinger Associates
+- **Beziehung zur Fallstudie:** in einigen Quellen als engineer/architect erwähnt
+- **Quelle/Beleg:** ECO Industrial House / sekundär
+- **Vertrauensgrad:** unklar
+- **Anmerkung:** genaue Rolle prüfen

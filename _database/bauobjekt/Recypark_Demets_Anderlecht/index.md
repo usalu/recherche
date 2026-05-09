@@ -1,20 +1,37 @@
-﻿---
-id: "Recypark_Demets_Anderlecht"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "bauobjekt"
+id: "Recypark_Demets_Anderlecht"
+title: "Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Recypark_Demets_Anderlecht.md"
+node_kind: "core"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/bauobjekt/Recypark_Demets_Anderlecht
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Recypark_Demets_Anderlecht.md
 
-- Source: _graph/bauobjekt/Recypark_Demets_Anderlecht
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Recypark Demets / Recypark Anderlecht
+- **Ort:** Quai Fernand Demets 22, 1070 Anderlecht, Brüssel, Belgien
+- **Gebäude:** öffentlicher Recypark mit Skatepark und Gemeinschafts-/öffentlichem Raum unter einer Hallenstruktur
+- **Projekt:** Recyclingzentrum und public space entlang des Kanals
+- **Beteiligte People / Akteure:** Bruxelles-Propreté / Net Brussel; 51N4E; Witteveen+Bos; Rotor; Bureau Greisch; Détang; SecuriSan; Les Marneurs / Janne Saario; Art Valens
+- **Architekt:** 51N4E; in einigen Architekturpreisquellen in Zusammenarbeit mit Les Marneurs für den öffentlichen Raum
+- **Tragwerksplaner:** Witteveen+Bos allgemein; Bureau Greisch für Holzexpertise / reused arches
+- **Bauherr:** Bruxelles-Propreté / Net Brussel
+- **Zeitraum:** Wettbewerb 2016; Design 2016–2019; Konstruktion 2021–2024; Fertigstellung/Eröffnung 2024
+- **Ursprüngliche Nutzung:** Reithalle / equestrian centre / riding arena bei Liège/Bierset
+- **Neue Nutzung:** Dach- und Tragstruktur eines Recyclingzentrums, Skateparks und öffentlichen Raums
+- **Fläche / Maßstab:** 5.000 m² built surface
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** sehr gut für Reuse-Strategie, Akteure und Tragwerksprüfung; mittel für Detailnormen, exakte Bauteilabmessungen und Verträge
+
+---

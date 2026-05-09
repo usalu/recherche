@@ -1,20 +1,16 @@
-﻿---
-id: "ReCrete_footbridge_reused_concrete_blocks__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Re:Crete footbridge â€” Fallstudie Direct Reuse"
 ---
-# Receiver - Re:Crete footbridge â€” Fallstudie Direct Reuse
+entity: "reuse_kettenstation"
+id: "ReCrete_footbridge_reused_concrete_blocks__Receiver"
+title: "Receiver - Re:Crete footbridge — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\ReCrete_footbridge_reused_concrete_blocks.md"
+node_kind: "core"
+fallstudie: "fallstudie/ReCrete_footbridge_reused_concrete_blocks"
+---
 
-## Clean Node
+# Receiver - Re:Crete footbridge — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kettenstation/ReCrete_footbridge_reused_concrete_blocks__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/ReCrete_footbridge_reused_concrete_blocks__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

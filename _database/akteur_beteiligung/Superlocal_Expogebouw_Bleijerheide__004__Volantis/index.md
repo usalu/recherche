@@ -1,20 +1,22 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__004__Volantis"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Volantis - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Volantis - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Superlocal_Expogebouw_Bleijerheide__004__Volantis"
+title: "Volantis - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "SUPERLOCAL"
+node_kind: "relation"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Volantis - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__004__Volantis
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__004__Volantis
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Volantis
+- **Beziehung zur Fallstudie:** Konstrukteur
+- **Quelle/Beleg:** SUPERLOCAL
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** bestimmte wiederverwendbare Materialien/Elemente

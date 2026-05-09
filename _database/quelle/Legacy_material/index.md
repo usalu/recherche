@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_material"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Material"
 ---
+entity: "quelle"
+id: "Legacy_material"
+title: "Material"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Material
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_material
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_material
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Material

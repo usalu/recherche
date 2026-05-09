@@ -1,20 +1,25 @@
-﻿---
-id: "Lo_Reninge_Town_Hall_Facade__003__Projektfl_che_alternative_Quelle"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "ProjektflÃ¤che alternative Quelle - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse"
 ---
-# ProjektflÃ¤che alternative Quelle - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Lo_Reninge_Town_Hall_Facade__003__Projektfl_che_alternative_Quelle"
+title: "Projektfläche alternative Quelle - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S5]"
+node_kind: "core"
+wert: "940"
+fallstudie: "fallstudie/Lo_Reninge_Town_Hall_Facade"
+bauobjekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+projekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+---
 
-## Clean Node
+# Projektfläche alternative Quelle - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Lo_Reninge_Town_Hall_Facade__003__Projektfl_che_alternative_Quelle
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lo_Reninge_Town_Hall_Facade__003__Projektfl_che_alternative_Quelle
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Projektfläche alternative Quelle
+- **Wert:** 940
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** gesamtes Projekt laut Sekundärpublikation
+- **Quelle:** [S5]
+- **Vertrauensgrad:** teilweise belegt

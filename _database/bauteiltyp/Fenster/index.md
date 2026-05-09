@@ -1,20 +1,24 @@
-﻿---
-id: "Fenster"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Fenster"
 ---
+entity: "bauteiltyp"
+id: "Fenster"
+title: "Fenster"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteil\Fenster.md"
+node_kind: "knot"
+legacy_type: "Bauteil"
+---
+
 # Fenster
 
-## Clean Node
+# Fenster
 
-- Final path: _database/bauteiltyp/Fenster
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/bauteiltyp/Fenster
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

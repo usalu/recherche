@@ -1,15 +1,66 @@
-﻿---
-id: "bauteilboerse_raedificare_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteilboerse/raedificare.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteilboerse_raedificare_md"
+title: "bauteilboerse_raedificare_md"
+build_status: "promoted_phase42"
+source_filename: "raedificare.md"
+legacy_type: "Bauteilbörse"
+---
+
 # bauteilboerse_raedificare_md
 
-## Source Archive
+## Kurzbeschreibung
+RAEDIFICARE ist ein(e) Marketplace für Materialien aus Bau, öffentlichem Bauwesen und Landschaftsbau mit Bezug zu Frankreich. Im Reuse-Kontext liegt der Schwerpunkt auf: Spenden oder Verkauf von wiederverwendbaren Materialien.
 
-- Original path: bauteilboerse/raedificare.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: split_platform_profile; old target: software_digitaltool/raedificare
+## Land / Region
+Frankreich
+
+## Betreiber
+RAEDIFICARE
+
+## Zielgruppe
+Bauakteure, Unternehmen, Planende, Vereine/Empfänger je Angebot
+
+## Plattformtyp
+Marketplace für Materialien aus Bau, öffentlichem Bauwesen und Landschaftsbau
+
+## Bauteilkategorien
+Baustoffe und Bauteile aus BTP-Kontext; genaue Kategorien je Marketplace
+
+## Art der Wiederverwendung
+Spenden oder Verkauf von wiederverwendbaren Materialien; Vermittlung an neue Nutzer
+
+## Funktionen
+Marketplace; Angebote; Materialvermittlung; eventuell Projekt-/Sourcing-Kontext
+
+## Daten je Bauteil
+nicht einheitlich angegeben; Listings enthalten üblicherweise Beschreibung, Fotos, Mengen, Standort/Preis
+
+## Qualität / Prüfung
+nicht angegeben
+
+## Logistik / Lagerung
+nicht angegeben; angebots- und projektabhängig
+
+## Geschäftsmodell
+Marketplace für Verkauf und Spenden; Gebühren nicht angegeben
+
+## Ökologische Bewertung
+zielt auf Wiederverwendung und Abfallvermeidung; quantitative Bewertung nicht angegeben
+
+## Stärken
+ermöglicht auch Spendenlogik; Bau- und Landschaftsbezug
+
+## Schwächen / Hemmnisse
+öffentliche Detailinformationen begrenzt; Qualität/Logistik je Angebot klären
+
+## Relevanz für zirkuläres Bauen
+hoch bis mittel: relevant, wenn Materialvermittlung und soziale/ökologische Wiederverwendung zusammenkommen.
+
+## Quellen und Links
+- https://raedificare.com/marketplace/
+- https://raedificare.com/
+- https://www.climate-chance.org/bonne-pratique/plateforme-raedificare/
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

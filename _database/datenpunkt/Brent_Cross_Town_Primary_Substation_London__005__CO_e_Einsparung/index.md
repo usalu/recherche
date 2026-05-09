@@ -1,20 +1,25 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__005__CO_e_Einsparung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚e-Einsparung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# COâ‚‚e-Einsparung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Brent_Cross_Town_Primary_Substation_London__005__CO_e_Einsparung"
+title: "CO₂e-Einsparung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t CO₂e"
+quelle_label: "ASBP"
+node_kind: "core"
+wert: "66"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# CO₂e-Einsparung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Brent_Cross_Town_Primary_Substation_London__005__CO_e_Einsparung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brent_Cross_Town_Primary_Substation_London__005__CO_e_Einsparung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂e-Einsparung
+- **Wert:** 66
+- **Einheit:** t CO₂e
+- **Methode/Datenmodell/Software:** ASBP
+- **Bilanzgrenze:** embodied carbon steel reuse
+- **Quelle:** ASBP
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__011__Gesamtgr_e"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "GesamtgrÃ¶ÃŸe - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# GesamtgrÃ¶ÃŸe - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__011__Gesamtgr_e"
+title: "Gesamtgröße - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "sq ft"
+quelle_label: "S7, S10"
+node_kind: "core"
+wert: "380.000"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Gesamtgröße - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__011__Gesamtgr_e
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__011__Gesamtgr_e
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gesamtgröße
+- **Wert:** 380.000
+- **Einheit:** sq ft
+- **Methode/Datenmodell/Software:** Mace/Medien
+- **Bilanzgrenze:** Büro/Retail/Public Space
+- **Quelle:** S7, S10
+- **Vertrauensgrad:** teilweise belegt

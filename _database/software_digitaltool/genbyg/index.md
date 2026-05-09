@@ -1,20 +1,79 @@
-﻿---
-id: "genbyg"
-entity: "software_digitaltool"
-build_status: "clean_phase20"
-title: "Genbyg"
 ---
+entity: "software_digitaltool"
+id: "genbyg"
+title: "Genbyg"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteilboerse\\genbyg.md"
+node_kind: "core"
+---
+
 # Genbyg
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/software_digitaltool/genbyg
-- Build rule: typed path IDs only.
+### Legacy Source: bauteilboerse\genbyg.md
 
-## Imported Staging Nodes
+- Map action: split_platform_profile
+- Target role in map: primary
+- Raw mapped target: software_digitaltool/genbyg
+- Original primary target: software_digitaltool/genbyg
+- Original secondary targets: akteur/<operator_if_named>; beschaffungsweg/Digitale_Plattform; ressourcenquelle/Bauteilboerse; plattformfunktion/Material_Matching
 
-- Source: _graph/software_digitaltool/genbyg
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# Genbyg
 
+## Kurzbeschreibung
+Genbyg ist ein(e) Webshop und Markt für gebrauchte Baumaterialien mit physischem Lager mit Bezug zu Dänemark. Im Reuse-Kontext liegt der Schwerpunkt auf: Bergung und Verkauf gebrauchter Bauprodukte und historischer/zeitgenössischer Bauteile.
+
+## Land / Region
+Dänemark
+
+## Betreiber
+Genbyg A/S
+
+## Zielgruppe
+private und professionelle Käufer, Sanierung, Design, Bauhandwerk
+
+## Plattformtyp
+Webshop und Markt für gebrauchte Baumaterialien mit physischem Lager
+
+## Bauteilkategorien
+gebrauchte Türen, Fenster, Holzböden, Ziegel/Backsteine, Sanitär, Leuchten, Beschläge, Holz, Möbel und architektonische Bauteile
+
+## Art der Wiederverwendung
+Bergung und Verkauf gebrauchter Bauprodukte und historischer/zeitgenössischer Bauteile
+
+## Funktionen
+Online-Shop; Kategorien; Verkauf aus Lagerbestand; teils projektbezogene Beschaffung
+
+## Daten je Bauteil
+Produktseiten mit Fotos, Preisen und Beschreibungen; genaue technische Daten je Produkt unterschiedlich
+
+## Qualität / Prüfung
+nicht einheitlich angegeben; Käufer müssen Zustand und technische Eignung prüfen
+
+## Logistik / Lagerung
+physisches Lager/Shop in Dänemark; Versand/Abholung je Produkt nicht pauschal angegeben
+
+## Geschäftsmodell
+Verkauf gebrauchter Baumaterialien; Preise pro Artikel; Gebührenmodell nicht angegeben
+
+## Ökologische Bewertung
+vermeidet Abfall und bewahrt Materialien mit grauer Energie; quantitative Bewertung je Produkt nicht angegeben
+
+## Stärken
+langjährige Reuse-Praxis; sehr direkter Webshop; breite Materialpalette
+
+## Schwächen / Hemmnisse
+Bestände sind Einzelstücke; Normen, Brandschutz und Energieanforderungen müssen geprüft werden
+
+## Relevanz für zirkuläres Bauen
+hoch als nordisches Beispiel einer professionellen Bauteilbörse mit Webshop.
+
+## Quellen und Links
+- https://genbyg.dk/
+- https://pub.norden.org/temanord2021-508/
+- https://www.salvoweb.com/directory/24044-genbyg-as
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

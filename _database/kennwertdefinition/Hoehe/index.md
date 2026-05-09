@@ -1,20 +1,11 @@
-﻿---
-id: "Hoehe"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Hoehe"
 ---
+entity: "kennwertdefinition"
+id: "Hoehe"
+title: "Hoehe"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Hoehe
 
-## Clean Node
-
-- Final path: _database/kennwertdefinition/Hoehe
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Hoehe
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

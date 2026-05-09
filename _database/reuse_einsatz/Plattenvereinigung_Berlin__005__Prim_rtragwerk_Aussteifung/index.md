@@ -1,20 +1,43 @@
-﻿---
-id: "Plattenvereinigung_Berlin__005__Prim_rtragwerk_Aussteifung"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "PrimÃ¤rtragwerk / Aussteifung - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse"
 ---
-# PrimÃ¤rtragwerk / Aussteifung - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Plattenvereinigung_Berlin__005__Prim_rtragwerk_Aussteifung"
+title: "Primärtragwerk / Aussteifung - Plattenvereinigung Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "technische Detaildaten fehlen"
+quelle_label: "S6"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Plattenvereinigung_Berlin"
+bauobjekt:
+  - "Plattenvereinigung_Berlin"
+neue_funktion: "tragender Rahmen/Aussteifung"
+bauteil_label: "Primärtragwerk / Aussteifung"
+projekt:
+  - "Plattenvereinigung_Berlin"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Primärtragwerk / Aussteifung - Plattenvereinigung Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Plattenvereinigung_Berlin__005__Prim_rtragwerk_Aussteifung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Plattenvereinigung_Berlin__005__Prim_rtragwerk_Aussteifung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Primärtragwerk / Aussteifung
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** tragender Rahmen/Aussteifung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Standsicherheit, Demontierbarkeit
+- **Norm/Recht:** unbekannt
+- **Hürde:** technische Detaildaten fehlen
+- **Quelle:** S6
+- **unbekannt:** ja

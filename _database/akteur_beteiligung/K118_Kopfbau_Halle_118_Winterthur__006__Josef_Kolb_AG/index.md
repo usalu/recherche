@@ -1,20 +1,22 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__006__Josef_Kolb_AG"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Josef Kolb AG - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# Josef Kolb AG - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "akteur_beteiligung"
+id: "K118_Kopfbau_Halle_118_Winterthur__006__Josef_Kolb_AG"
+title: "Josef Kolb AG - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# Josef Kolb AG - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/akteur_beteiligung/K118_Kopfbau_Halle_118_Winterthur__006__Josef_Kolb_AG
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/K118_Kopfbau_Halle_118_Winterthur__006__Josef_Kolb_AG
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Josef Kolb AG
+- **Beziehung zur Fallstudie:** Holzbauingenieur
+- **Quelle/Beleg:** [S2], [S4]
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Quelle ArchDaily/Arch2O

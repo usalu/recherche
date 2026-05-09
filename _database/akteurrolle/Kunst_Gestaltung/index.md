@@ -1,20 +1,13 @@
-﻿---
-id: "Kunst_Gestaltung"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Kunst / Gestaltung"
 ---
+entity: "akteurrolle"
+id: "Kunst_Gestaltung"
+title: "Kunst / Gestaltung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Kunst / Gestaltung
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Kunst_Gestaltung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Kunst_Gestaltung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Kunst-, Grafik-, Illustration-, Szenografie- oder Skatepark-Design-Rolle.

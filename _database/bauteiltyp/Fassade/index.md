@@ -1,20 +1,24 @@
-﻿---
-id: "Fassade"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Fassade"
 ---
+entity: "bauteiltyp"
+id: "Fassade"
+title: "Fassade"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteil\Fassade.md"
+node_kind: "knot"
+legacy_type: "Bauteil"
+---
+
 # Fassade
 
-## Clean Node
+# Fassade
 
-- Final path: _database/bauteiltyp/Fassade
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/bauteiltyp/Fassade
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

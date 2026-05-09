@@ -1,20 +1,25 @@
-﻿---
-id: "Berlin_Schildow_Pilot_House_2__006__Bauteilalter_bei_Wiederverwendung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauteilalter bei Wiederverwendung - Berlin-Schildow Pilot House 2 â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Bauteilalter bei Wiederverwendung - Berlin-Schildow Pilot House 2 â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Berlin_Schildow_Pilot_House_2__006__Bauteilalter_bei_Wiederverwendung"
+title: "Bauteilalter bei Wiederverwendung - Berlin-Schildow Pilot House 2 — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "18"
+fallstudie: "fallstudie/Berlin_Schildow_Pilot_House_2"
+bauobjekt:
+  - "Berlin_Schildow_Pilot_House_2"
+projekt:
+  - "Berlin_Schildow_Pilot_House_2"
+---
 
-## Clean Node
+# Bauteilalter bei Wiederverwendung - Berlin-Schildow Pilot House 2 — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Berlin_Schildow_Pilot_House_2__006__Bauteilalter_bei_Wiederverwendung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Berlin_Schildow_Pilot_House_2__006__Bauteilalter_bei_Wiederverwendung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauteilalter bei Wiederverwendung
+- **Wert:** 18
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** PRECS-Falldatenbank
+- **Bilanzgrenze:** Betonfertigteile
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,22 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__003__Maconda"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Maconda - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# Maconda - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "PLP_London_HQ_Circular_Studio_Fitout__003__Maconda"
+title: "Maconda - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "PLP News"
+node_kind: "relation"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# Maconda - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/PLP_London_HQ_Circular_Studio_Fitout__003__Maconda
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/PLP_London_HQ_Circular_Studio_Fitout__003__Maconda
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Maconda
+- **Beziehung zur Fallstudie:** Material passporting / reuse data
+- **Quelle/Beleg:** PLP News
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** In News explizit als material passporting consultancy genannt.

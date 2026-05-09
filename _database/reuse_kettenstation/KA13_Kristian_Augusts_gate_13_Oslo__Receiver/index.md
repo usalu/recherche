@@ -1,20 +1,16 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Receiver - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "reuse_kettenstation"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__Receiver"
+title: "Receiver - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\KA13_Kristian_Augusts_gate_13_Oslo.md"
+node_kind: "core"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+---
 
-## Clean Node
+# Receiver - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/reuse_kettenstation/KA13_Kristian_Augusts_gate_13_Oslo__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/KA13_Kristian_Augusts_gate_13_Oslo__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

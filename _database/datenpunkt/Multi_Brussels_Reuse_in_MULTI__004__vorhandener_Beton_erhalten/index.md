@@ -1,20 +1,25 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__004__vorhandener_Beton_erhalten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "vorhandener Beton erhalten - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# vorhandener Beton erhalten - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Multi_Brussels_Reuse_in_MULTI__004__vorhandener_Beton_erhalten"
+title: "vorhandener Beton erhalten - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S4, S7"
+node_kind: "core"
+wert: "89"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# vorhandener Beton erhalten - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Multi_Brussels_Reuse_in_MULTI__004__vorhandener_Beton_erhalten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Multi_Brussels_Reuse_in_MULTI__004__vorhandener_Beton_erhalten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** vorhandener Beton erhalten
+- **Wert:** 89
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Building Circularity Passport / Projektangabe
+- **Bilanzgrenze:** Bestand
+- **Quelle:** S4, S7
+- **Vertrauensgrad:** belegt, aber Bestandserhalt

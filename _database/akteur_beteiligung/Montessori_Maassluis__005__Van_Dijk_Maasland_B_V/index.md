@@ -1,20 +1,22 @@
-﻿---
-id: "Montessori_Maassluis__005__Van_Dijk_Maasland_B_V"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Van Dijk Maasland B.V. - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Van Dijk Maasland B.V. - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Montessori_Maassluis__005__Van_Dijk_Maasland_B_V"
+title: "Van Dijk Maasland B.V. - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "Kraaijvanger news"
+node_kind: "relation"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# Van Dijk Maasland B.V. - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Montessori_Maassluis__005__Van_Dijk_Maasland_B_V
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Montessori_Maassluis__005__Van_Dijk_Maasland_B_V
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Van Dijk Maasland B.V.
+- **Beziehung zur Fallstudie:** Bauunternehmen / Partner
+- **Quelle/Beleg:** Kraaijvanger news
+- **Vertrauensgrad:** belegt
+- **Anmerkung:**

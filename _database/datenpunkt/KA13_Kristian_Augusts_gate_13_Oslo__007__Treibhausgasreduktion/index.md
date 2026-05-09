@@ -1,20 +1,25 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__007__Treibhausgasreduktion"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Treibhausgasreduktion - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Treibhausgasreduktion - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__007__Treibhausgasreduktion"
+title: "Treibhausgasreduktion - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S1, S4"
+node_kind: "core"
+wert: "70"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+bauobjekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+projekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+---
 
-## Clean Node
+# Treibhausgasreduktion - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__007__Treibhausgasreduktion
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__007__Treibhausgasreduktion
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Treibhausgasreduktion
+- **Wert:** 70
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Vergleich Neubau; Methode im Kurztext nicht vollständig
+- **Bilanzgrenze:** Materialien/Gebäude
+- **Quelle:** S1, S4
+- **Vertrauensgrad:** teilweise belegt

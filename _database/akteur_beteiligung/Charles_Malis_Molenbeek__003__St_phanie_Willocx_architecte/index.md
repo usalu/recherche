@@ -1,20 +1,22 @@
-﻿---
-id: "Charles_Malis_Molenbeek__003__St_phanie_Willocx_architecte"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "StÃ©phanie Willocx architecte - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse"
 ---
-# StÃ©phanie Willocx architecte - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Charles_Malis_Molenbeek__003__St_phanie_Willocx_architecte"
+title: "Stéphanie Willocx architecte - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "WBA / Mamout"
+node_kind: "relation"
+fallstudie: "fallstudie/Charles_Malis_Molenbeek"
+bauobjekt:
+  - "Charles_Malis_Molenbeek"
+projekt:
+  - "Charles_Malis_Molenbeek"
+---
 
-## Clean Node
+# Stéphanie Willocx architecte - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Charles_Malis_Molenbeek__003__St_phanie_Willocx_architecte
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Charles_Malis_Molenbeek__003__St_phanie_Willocx_architecte
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Stéphanie Willocx architecte
+- **Beziehung zur Fallstudie:** Architektin
+- **Quelle/Beleg:** WBA / Mamout
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Arbeitsgemeinschaft.

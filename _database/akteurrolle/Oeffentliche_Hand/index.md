@@ -1,20 +1,13 @@
-﻿---
-id: "Oeffentliche_Hand"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Oeffentliche Hand"
 ---
+entity: "akteurrolle"
+id: "Oeffentliche_Hand"
+title: "Oeffentliche Hand"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Oeffentliche Hand
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Oeffentliche_Hand
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Oeffentliche_Hand
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kommunale, staatliche oder oeffentliche Projektrolle als Bauherr, Verwaltung, Amt oder Gemeinde.

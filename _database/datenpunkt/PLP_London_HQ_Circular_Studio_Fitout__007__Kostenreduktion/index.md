@@ -1,20 +1,25 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__007__Kostenreduktion"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kostenreduktion - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# Kostenreduktion - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "PLP_London_HQ_Circular_Studio_Fitout__007__Kostenreduktion"
+title: "Kostenreduktion - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "PLP"
+node_kind: "core"
+wert: "68"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# Kostenreduktion - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__007__Kostenreduktion
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__007__Kostenreduktion
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kostenreduktion
+- **Wert:** 68
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Vergleich mit typischem Londoner Fit-out
+- **Bilanzgrenze:** nicht unabhängig verifiziert
+- **Quelle:** PLP
+- **Vertrauensgrad:** teilweise belegt

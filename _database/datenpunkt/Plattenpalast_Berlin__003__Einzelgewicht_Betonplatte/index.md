@@ -1,20 +1,25 @@
-﻿---
-id: "Plattenpalast_Berlin__003__Einzelgewicht_Betonplatte"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Einzelgewicht Betonplatte - Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# Einzelgewicht Betonplatte - Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Plattenpalast_Berlin__003__Einzelgewicht_Betonplatte"
+title: "Einzelgewicht Betonplatte - Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "t je Platte laut Beschreibung mehrerer Platten"
+quelle_label: "S2"
+node_kind: "core"
+wert: "5,4"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+bauobjekt:
+  - "Plattenpalast_Berlin"
+projekt:
+  - "Plattenpalast_Berlin"
+---
 
-## Clean Node
+# Einzelgewicht Betonplatte - Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Plattenpalast_Berlin__003__Einzelgewicht_Betonplatte
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Plattenpalast_Berlin__003__Einzelgewicht_Betonplatte
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Einzelgewicht Betonplatte
+- **Wert:** 5,4
+- **Einheit:** t je Platte laut Beschreibung mehrerer Platten
+- **Methode/Datenmodell/Software:** Projektbeschreibung
+- **Bilanzgrenze:** Betonplattenmontage
+- **Quelle:** S2
+- **Vertrauensgrad:** teilweise belegt

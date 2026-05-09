@@ -1,20 +1,16 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Reuse-Kette - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "reuse_kette"
+id: "Verbiest_Karreveld_Brussels"
+title: "Reuse-Kette - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Verbiest_Karreveld_Brussels.md"
+node_kind: "core"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Reuse-Kette - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/reuse_kette/Verbiest_Karreveld_Brussels
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Verbiest_Karreveld_Brussels
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

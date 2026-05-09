@@ -1,20 +1,25 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__007__Dachziegel_Reuse_Rest"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Dachziegel Reuse/Rest - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# Dachziegel Reuse/Rest - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Chiro_d_Itterbeek_Dilbeek__007__Dachziegel_Reuse_Rest"
+title: "Dachziegel Reuse/Rest - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S2], [S4]"
+node_kind: "core"
+wert: "20"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# Dachziegel Reuse/Rest - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Chiro_d_Itterbeek_Dilbeek__007__Dachziegel_Reuse_Rest
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Chiro_d_Itterbeek_Dilbeek__007__Dachziegel_Reuse_Rest
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Dachziegel Reuse/Rest
+- **Wert:** 20
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Dach
+- **Quelle:** [S2], [S4]
+- **Vertrauensgrad:** belegt

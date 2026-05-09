@@ -1,20 +1,16 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Superlocal_Expogebouw_Bleijerheide"
+title: "Reuse-Kette - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Superlocal_Expogebouw_Bleijerheide.md"
+node_kind: "core"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Reuse-Kette - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Superlocal_Expogebouw_Bleijerheide
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Superlocal_Expogebouw_Bleijerheide
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

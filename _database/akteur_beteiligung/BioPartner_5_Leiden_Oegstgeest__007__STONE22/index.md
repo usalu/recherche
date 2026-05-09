@@ -1,20 +1,22 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest__007__STONE22"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "STONE22 - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# STONE22 - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "akteur_beteiligung"
+id: "BioPartner_5_Leiden_Oegstgeest__007__STONE22"
+title: "STONE22 - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "[S6], [S10]"
+node_kind: "relation"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+bauobjekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# STONE22 - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__007__STONE22
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__007__STONE22
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** STONE22
+- **Beziehung zur Fallstudie:** Projektmanagement / Entwicklung
+- **Quelle/Beleg:** [S6], [S10]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Entwicklung und Realisierung

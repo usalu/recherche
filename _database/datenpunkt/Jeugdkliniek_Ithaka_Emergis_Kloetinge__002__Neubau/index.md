@@ -1,20 +1,25 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Neubau"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Neubau - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
+entity: "datenpunkt"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Neubau"
+title: "Neubau - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S5]"
+node_kind: "core"
+wert: "ca. 2.000"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+---
+
 # Neubau - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-## Clean Node
-
-- Final path: _database/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Neubau
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Neubau
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Neubau
+- **Wert:** ca. 2.000
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektbericht
+- **Bilanzgrenze:** neues Klinikteil
+- **Quelle:** [S5]
+- **Vertrauensgrad:** teilweise belegt

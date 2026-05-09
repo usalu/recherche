@@ -1,20 +1,22 @@
-﻿---
-id: "55_Great_Suffolk_Street_London__002__Hawkins_Brown"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Hawkins\\Brown - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Hawkins\\Brown - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "55_Great_Suffolk_Street_London__002__Hawkins_Brown"
+title: "Hawkins\\Brown - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "ASBP, NLA, Hawkins\\Brown"
+node_kind: "relation"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+bauobjekt:
+  - "55_Great_Suffolk_Street_London"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+---
 
-## Clean Node
+# Hawkins\\Brown - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/55_Great_Suffolk_Street_London__002__Hawkins_Brown
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/55_Great_Suffolk_Street_London__002__Hawkins_Brown
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Hawkins\Brown
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** ASBP, NLA, Hawkins\Brown
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Schreibweise in Quellen Hawkins Brown / Hawkins\Brown

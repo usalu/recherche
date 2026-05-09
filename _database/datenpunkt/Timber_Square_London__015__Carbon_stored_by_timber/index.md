@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__015__Carbon_stored_by_timber"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Carbon stored by timber - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Carbon stored by timber - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__015__Carbon_stored_by_timber"
+title: "Carbon stored by timber - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "tCO₂e"
+quelle_label: "S1, S7"
+node_kind: "core"
+wert: "5.300 oder 4.999"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Carbon stored by timber - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__015__Carbon_stored_by_timber
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__015__Carbon_stored_by_timber
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Carbon stored by timber
+- **Wert:** 5.300 oder 4.999
+- **Einheit:** tCO₂e
+- **Methode/Datenmodell/Software:** HTS
+- **Bilanzgrenze:** timber storage
+- **Quelle:** S1, S7
+- **Vertrauensgrad:** unklar

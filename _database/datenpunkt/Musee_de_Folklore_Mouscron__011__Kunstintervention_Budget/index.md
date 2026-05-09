@@ -1,20 +1,25 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__011__Kunstintervention_Budget"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kunstintervention Budget - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Kunstintervention Budget - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Musee_de_Folklore_Mouscron__011__Kunstintervention_Budget"
+title: "Kunstintervention Budget - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "€"
+quelle_label: "[S4]"
+node_kind: "core"
+wert: "55.788"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# Kunstintervention Budget - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Musee_de_Folklore_Mouscron__011__Kunstintervention_Budget
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Musee_de_Folklore_Mouscron__011__Kunstintervention_Budget
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kunstintervention Budget
+- **Wert:** 55.788
+- **Einheit:** €
+- **Methode/Datenmodell/Software:** Cellule architecture
+- **Bilanzgrenze:** Kunstintegration
+- **Quelle:** [S4]
+- **Vertrauensgrad:** belegt

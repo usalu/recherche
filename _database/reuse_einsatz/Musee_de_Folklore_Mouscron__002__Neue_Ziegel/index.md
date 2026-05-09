@@ -1,20 +1,43 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__002__Neue_Ziegel"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Neue Ziegel - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Neue Ziegel - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Musee_de_Folklore_Mouscron__002__Neue_Ziegel"
+title: "Neue Ziegel - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "nötig zur Begrenzung von Tests/Stabilitätsaufwand"
+quelle_label: "[S7]"
+material_label: "Ziegel"
+node_kind: "core"
+herkunft_label: "neu"
+menge_umfang: "Anteil ca. 75 % laut Sekundärangabe"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+neue_funktion: "Fassadenmauerwerk, gemischt mit Reuse-Ziegeln"
+bauteil_label: "Neue Ziegel"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+alte_funktion: "neu"
+---
 
-## Clean Node
+# Neue Ziegel - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Musee_de_Folklore_Mouscron__002__Neue_Ziegel
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Musee_de_Folklore_Mouscron__002__Neue_Ziegel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Neue Ziegel
+- **Material:** Ziegel
+- **Herkunft:** neu
+- **alte Funktion:** neu
+- **neue Funktion:** Fassadenmauerwerk, gemischt mit Reuse-Ziegeln
+- **Menge/Umfang:** Anteil ca. 75 % laut Sekundärangabe
+- **tragend?:** unbekannt
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** neu
+- **Verbindung:** Mauerwerk
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Fassade/Stabilität
+- **Norm/Recht:** unbekannt
+- **Hürde:** nötig zur Begrenzung von Tests/Stabilitätsaufwand
+- **Quelle:** [S7]
+- **unbekannt:** Menge

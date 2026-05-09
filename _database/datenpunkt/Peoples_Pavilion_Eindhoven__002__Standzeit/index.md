@@ -1,20 +1,25 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven__002__Standzeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Standzeit - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# Standzeit - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Peoples_Pavilion_Eindhoven__002__Standzeit"
+title: "Standzeit - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Tage"
+quelle_label: "bureau SLA"
+node_kind: "core"
+wert: "9"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+bauobjekt:
+  - "Peoples_Pavilion_Eindhoven"
+projekt:
+  - "Peoples_Pavilion_Eindhoven"
+---
 
-## Clean Node
+# Standzeit - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Peoples_Pavilion_Eindhoven__002__Standzeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Peoples_Pavilion_Eindhoven__002__Standzeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Standzeit
+- **Wert:** 9
+- **Einheit:** Tage
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Dutch Design Week 2017
+- **Quelle:** bureau SLA
+- **Vertrauensgrad:** belegt

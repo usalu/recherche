@@ -1,20 +1,17 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Donor - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kettenstation"
+id: "Big_Dig_House_Lexington_Massachusetts__Donor"
+title: "Donor - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Big_Dig_House_Lexington_Massachusetts.md"
+node_kind: "core"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Donor - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kettenstation/Big_Dig_House_Lexington_Massachusetts__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Big_Dig_House_Lexington_Massachusetts__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Big_Dig_House_Lexington_Massachusetts.md: | Donor-Infrastruktur | Herkunft ist kein Gebäude, sondern Verkehrsinfrastruktur | Boston Big Dig / dismantled I-93 | Gebäude, Projekt, Bauteil |
+Gebäude\Big_Dig_House_Lexington_Massachusetts.md: - **Welche neuen Entitäten wären sinnvoll?** Donor-Infrastruktur, Infrastrukturbauteil, As-found-Komponente, Reuse-Materialyard.

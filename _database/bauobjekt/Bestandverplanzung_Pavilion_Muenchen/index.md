@@ -1,20 +1,37 @@
-﻿---
-id: "Bestandverplanzung_Pavilion_Muenchen"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "bauobjekt"
+id: "Bestandverplanzung_Pavilion_Muenchen"
+title: "Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Bestandverplanzung_Pavilion_Muenchen.md"
+node_kind: "core"
+fallstudie: "fallstudie/Bestandverplanzung_Pavilion_Muenchen"
+projekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+---
 
-## Clean Node
+# Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/bauobjekt/Bestandverplanzung_Pavilion_Muenchen
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Bestandverplanzung_Pavilion_Muenchen.md
 
-- Source: _graph/bauobjekt/Bestandverplanzung_Pavilion_Muenchen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Bestandverplanzung Pavilion, München  
+- **Ort:** München, Deutschland  
+- **Gebäude:** Pavillon / kleine wiederaufgebaute Bungalow-Struktur; genaue Gebäudebezeichnung unbekannt  
+- **Projekt:** Wiederverwendung von Paneelen aus drei Bungalows des Münchner Olympischen Dorfes  
+- **Beteiligte People / Akteure:** unbekannt; PRECS nennt als Literatur u. a. Huber und zukunftsgeraeusche, aber die konkrete Projektorganisation ist öffentlich nicht belastbar auffindbar  
+- **Architekt:** unbekannt  
+- **Tragwerksplaner:** unbekannt  
+- **Bauherr:** unbekannt  
+- **Zeitraum:** 2008 laut PRECS; Donor-Bungalows aus Olympiadorf-Kontext ca. 1972  
+- **Ursprüngliche Nutzung:** Studentische bzw. olympische Bungalows im Olympischen Dorf München  
+- **Neue Nutzung:** Pavillon / Demonstrator; genaue Nutzung unbekannt  
+- **Fläche / Maßstab:** unbekannt; kleiner Pavillon/Demonstrator  
+- **Schutzstatus / Denkmalstatus:** Olympisches Dorf München steht als Ensemble seit 1998 unter Schutz und seit 2018 als Einzeldenkmal; ob der Pavillon selbst Schutzstatus hat: unbekannt  
+- **Quellenlage:** knapp; belastbar nur als Fall in PRECS/JCP-Datenbank plus allgemeine Quellen zum Olympischen Dorf
+
+---

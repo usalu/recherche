@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__004__Fertigstellung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Fertigstellung - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__004__Fertigstellung"
+title: "Fertigstellung - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "NREP; EMF"
+node_kind: "core"
+wert: "2018"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Fertigstellung - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__004__Fertigstellung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__004__Fertigstellung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung
+- **Wert:** 2018
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Projekt
+- **Quelle:** NREP; EMF
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "BedZED_London_Hackbridge__006__Gesamte_wiederverwendete_recycelte_Materialien"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Gesamte wiederverwendete/recycelte Materialien - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Gesamte wiederverwendete/recycelte Materialien - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "BedZED_London_Hackbridge__006__Gesamte_wiederverwendete_recycelte_Materialien"
+title: "Gesamte wiederverwendete/recycelte Materialien - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "S3"
+node_kind: "core"
+wert: "3.404"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+projekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# Gesamte wiederverwendete/recycelte Materialien - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/BedZED_London_Hackbridge__006__Gesamte_wiederverwendete_recycelte_Materialien
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BedZED_London_Hackbridge__006__Gesamte_wiederverwendete_recycelte_Materialien
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gesamte wiederverwendete/recycelte Materialien
+- **Wert:** 3.404
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** BioRegional Materials Report
+- **Bilanzgrenze:** Gesamtprojekt; enthält Reuse + Recycling + subgrade fill
+- **Quelle:** S3
+- **Vertrauensgrad:** belegt

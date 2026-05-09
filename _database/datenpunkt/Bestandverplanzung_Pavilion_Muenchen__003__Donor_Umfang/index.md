@@ -1,20 +1,25 @@
-﻿---
-id: "Bestandverplanzung_Pavilion_Muenchen__003__Donor_Umfang"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Donor-Umfang - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Donor-Umfang - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Bestandverplanzung_Pavilion_Muenchen__003__Donor_Umfang"
+title: "Donor-Umfang - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Bungalows"
+quelle_label: "PRECS/JCP"
+node_kind: "core"
+wert: "3"
+fallstudie: "fallstudie/Bestandverplanzung_Pavilion_Muenchen"
+bauobjekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+projekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+---
 
-## Clean Node
+# Donor-Umfang - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Bestandverplanzung_Pavilion_Muenchen__003__Donor_Umfang
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Bestandverplanzung_Pavilion_Muenchen__003__Donor_Umfang
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Donor-Umfang
+- **Wert:** 3
+- **Einheit:** Bungalows
+- **Methode/Datenmodell/Software:** PRECS-Fallstudiendatenbank
+- **Bilanzgrenze:** Donorgebäude
+- **Quelle:** PRECS/JCP
+- **Vertrauensgrad:** belegt

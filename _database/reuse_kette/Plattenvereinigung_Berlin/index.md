@@ -1,20 +1,16 @@
-﻿---
-id: "Plattenvereinigung_Berlin"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse"
 ---
-# Reuse-Kette - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse
+entity: "reuse_kette"
+id: "Plattenvereinigung_Berlin"
+title: "Reuse-Kette - Plattenvereinigung Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Plattenvereinigung_Berlin.md"
+node_kind: "core"
+fallstudie: "fallstudie/Plattenvereinigung_Berlin"
+projekt:
+  - "Plattenvereinigung_Berlin"
+---
 
-## Clean Node
+# Reuse-Kette - Plattenvereinigung Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kette/Plattenvereinigung_Berlin
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Plattenvereinigung_Berlin
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

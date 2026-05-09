@@ -1,20 +1,22 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__001__Administration_des_b_timents_publics"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Administration des bÃ¢timents publics - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Administration des bÃ¢timents publics - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__001__Administration_des_b_timents_publics"
+title: "Administration des bâtiments publics - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+---
 
-## Clean Node
+# Administration des bâtiments publics - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Lycee_Michel_Lucius_Conversion_Luxembourg__001__Administration_des_b_timents_publics
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lycee_Michel_Lucius_Conversion_Luxembourg__001__Administration_des_b_timents_publics
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Administration des bâtiments publics
+- **Beziehung zur Fallstudie:** Bauherr / öffentlicher Auftraggeber
+- **Quelle/Beleg:** [S2], [S4]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Staat Luxemburg

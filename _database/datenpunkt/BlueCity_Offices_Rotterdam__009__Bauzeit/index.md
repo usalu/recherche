@@ -1,20 +1,25 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam__009__Bauzeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Bauzeit - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "BlueCity_Offices_Rotterdam__009__Bauzeit"
+title: "Bauzeit - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Zeitraum"
+quelle_label: "S1"
+node_kind: "core"
+wert: "innerhalb eines Jahres transformiert"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+bauobjekt:
+  - "BlueCity_Offices_Rotterdam"
+projekt:
+  - "BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# Bauzeit - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/BlueCity_Offices_Rotterdam__009__Bauzeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BlueCity_Offices_Rotterdam__009__Bauzeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit
+- **Wert:** innerhalb eines Jahres transformiert
+- **Einheit:** Zeitraum
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Büroflügel
+- **Quelle:** S1
+- **Vertrauensgrad:** teilweise belegt

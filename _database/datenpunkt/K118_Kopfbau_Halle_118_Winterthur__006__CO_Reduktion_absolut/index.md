@@ -1,20 +1,25 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__006__CO_Reduktion_absolut"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Reduktion absolut - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# COâ‚‚-Reduktion absolut - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "datenpunkt"
+id: "K118_Kopfbau_Halle_118_Winterthur__006__CO_Reduktion_absolut"
+title: "CO₂-Reduktion absolut - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+einheit: "t CO₂"
+quelle_label: "[S3], [S7]"
+node_kind: "core"
+wert: "494"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# CO₂-Reduktion absolut - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__006__CO_Reduktion_absolut
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__006__CO_Reduktion_absolut
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Reduktion absolut
+- **Wert:** 494
+- **Einheit:** t CO₂
+- **Methode/Datenmodell/Software:** Vergleichsmodell
+- **Bilanzgrenze:** Erstellungsphase / Bauteile
+- **Quelle:** [S3], [S7]
+- **Vertrauensgrad:** belegt

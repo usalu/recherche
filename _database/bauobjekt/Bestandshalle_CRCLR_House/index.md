@@ -1,20 +1,18 @@
-﻿---
-id: "Bestandshalle_CRCLR_House"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Bestandshalle CRCLR House"
 ---
+entity: "bauobjekt"
+id: "Bestandshalle_CRCLR_House"
+title: "Bestandshalle CRCLR House"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\Bestandshalle_CRCLR_House.md"
+node_kind: "core"
+fallstudie: "fallstudie/Bestandshalle_CRCLR_House"
+projekt:
+  - "Bestandshalle_CRCLR_House"
+---
+
 # Bestandshalle CRCLR House
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/Bestandshalle_CRCLR_House
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/Bestandshalle_CRCLR_House
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

@@ -1,20 +1,16 @@
-﻿---
-id: "Plattenpalast_Berlin__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# Receiver - Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "reuse_kettenstation"
+id: "Plattenpalast_Berlin__Receiver"
+title: "Receiver - Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Plattenpalast_Berlin.md"
+node_kind: "core"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+---
 
-## Clean Node
+# Receiver - Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kettenstation/Plattenpalast_Berlin__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Plattenpalast_Berlin__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

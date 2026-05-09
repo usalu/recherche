@@ -1,20 +1,43 @@
-﻿---
-id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__004__TGA"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TGA - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# TGA - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "reuse_einsatz"
+id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__004__TGA"
+title: "TGA - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "unbekannt"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere"
+bauobjekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+neue_funktion: "technische Ausstattung"
+bauteil_label: "TGA"
+projekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# TGA - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/reuse_einsatz/Lokomotion_Technology_Centre_mini_pilot_Tampere__004__TGA
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Lokomotion_Technology_Centre_mini_pilot_Tampere__004__TGA
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** TGA
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** technische Ausstattung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** unbekannt
+- **unbekannt:** ja

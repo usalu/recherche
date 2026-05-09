@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_fallstudie"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Fallstudie"
 ---
+entity: "quelle"
+id: "Legacy_fallstudie"
+title: "Fallstudie"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Fallstudie
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_fallstudie
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_fallstudie
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Fallstudie

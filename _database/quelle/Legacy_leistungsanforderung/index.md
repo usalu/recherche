@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_leistungsanforderung"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Leistungsanforderung"
 ---
+entity: "quelle"
+id: "Legacy_leistungsanforderung"
+title: "Leistungsanforderung"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Leistungsanforderung
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_leistungsanforderung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_leistungsanforderung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Leistungsanforderung

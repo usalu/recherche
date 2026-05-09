@@ -1,20 +1,25 @@
-﻿---
-id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Energiebedarf_Erzeugung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Energiebedarf / Erzeugung - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Energiebedarf / Erzeugung - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Energiebedarf_Erzeugung"
+title: "Energiebedarf / Erzeugung - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "kWh/a"
+quelle_label: "[S1], [S3]"
+node_kind: "core"
+wert: "ca. 87.000–88.700"
+fallstudie: "fallstudie/Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+bauobjekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+projekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+---
 
-## Clean Node
+# Energiebedarf / Erzeugung - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Energiebedarf_Erzeugung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Energiebedarf_Erzeugung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Energiebedarf / Erzeugung
+- **Wert:** ca. 87.000–88.700
+- **Einheit:** kWh/a
+- **Methode/Datenmodell/Software:** PV-Ertragsangabe; kein Reuse-Kennwert
+- **Bilanzgrenze:** Winery/Irrigation/Barn
+- **Quelle:** [S1], [S3]
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,34 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "projekt"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+title: "Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md"
+node_kind: "core"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+bauobjekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+---
 
-## Clean Node
+# Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/projekt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md
 
-- Source: _graph/projekt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+## 3. FALLSTUDIE
+- **Name:** Melkinlaituri elementary school and daycare centre / Primary School and Day-care Centre
+- **Ort:** Jätkäsaari, Helsinki, Finnland
+- **Gebäude:** Grundschule und Kita
+- **Projekt:** kommerzielle Replikation der ReCreate-Hohlkörperdecken-Wiederverwendung
+- **Beteiligte People / Akteure:** City of Helsinki, YIT, Umacon, Ramboll Finland, Consolis Parma, ReCreate Finnish cluster
+- **Architekt:** unbekannt
+- **Tragwerksplaner:** unbekannt; Ramboll für Donor-/Reuse-Nachweis belegt
+- **Bauherr:** City of Helsinki
+- **Zeitraum:** Rückbauplanung März 2025; Ausbau ab Mai 2025; Refurbishment Mai/Juni 2025; Einbau Ende Juni 2025; Fertigstellung spät Frühjahr 2027 geplant
+- **Ursprüngliche Nutzung:** Donor Suutarila community centre, Helsinki, Baujahr 1981
+- **Neue Nutzung:** Schule und Kita; reused Hohlkörperdecken im Erdgeschoss-/Unterbodenbereich
+- **Fläche / Maßstab:** ca. 350 m² reused hollow-core slabs nach YIT; fast 400 m² nach Consolis LinkedIn; 64 Stück nach ReCreate
+- **Schutzstatus / Denkmalstatus:** Donor/Receiver unbekannt
+- **Quellenlage:** sehr gut für Prozesskette, Menge, Donor und Einbauzeit; begrenzt für Architektur, Normdetails, Kosten und genaue LCA

@@ -1,20 +1,24 @@
-﻿---
-id: "Treppe"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Treppe"
 ---
+entity: "bauteiltyp"
+id: "Treppe"
+title: "Treppe"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteil\Treppe.md"
+node_kind: "knot"
+legacy_type: "Bauteil"
+---
+
 # Treppe
 
-## Clean Node
+# Treppe
 
-- Final path: _database/bauteiltyp/Treppe
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/bauteiltyp/Treppe
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

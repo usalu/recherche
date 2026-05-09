@@ -1,20 +1,17 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Donor - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "reuse_kettenstation"
+id: "Svanen_Kindergarten_Gladsaxe__Donor"
+title: "Donor - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Svanen_Kindergarten_Gladsaxe.md"
+node_kind: "core"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# Donor - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/reuse_kettenstation/Svanen_Kindergarten_Gladsaxe__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Svanen_Kindergarten_Gladsaxe__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Svanen_Kindergarten_Gladsaxe.md: | Gebäude | ehemalige Gladsaxe School | Donorgebäude | [S1], [S2], [S6] | belegt | 2020 abgebrochen |
+Gebäude\Svanen_Kindergarten_Gladsaxe.md: | Same-site urban mining | Donor und Empfänger sind dasselbe Grundstück | Gladsaxe School → Svanen | Ort, Donorgebäude, Logistik |

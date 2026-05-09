@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__006__Christusraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__006__Christusraum"
+title: "Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m"
+quelle_label: "gmp"
+node_kind: "core"
+wert: "ca. 24 × 24 × 18"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__006__Christusraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__006__Christusraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Christusraum
+- **Wert:** ca. 24 × 24 × 18
+- **Einheit:** m
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Hauptkirchenraum
+- **Quelle:** gmp
+- **Vertrauensgrad:** belegt

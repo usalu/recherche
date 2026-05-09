@@ -1,20 +1,16 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Big_Dig_House_Lexington_Massachusetts"
+title: "Reuse-Kette - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Big_Dig_House_Lexington_Massachusetts.md"
+node_kind: "core"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Reuse-Kette - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Big_Dig_House_Lexington_Massachusetts
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Big_Dig_House_Lexington_Massachusetts
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

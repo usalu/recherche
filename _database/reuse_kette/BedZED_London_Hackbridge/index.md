@@ -1,20 +1,16 @@
-﻿---
-id: "BedZED_London_Hackbridge"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Reuse-Kette - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "reuse_kette"
+id: "BedZED_London_Hackbridge"
+title: "Reuse-Kette - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\BedZED_London_Hackbridge.md"
+node_kind: "core"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+projekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# Reuse-Kette - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/reuse_kette/BedZED_London_Hackbridge
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/BedZED_London_Hackbridge
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

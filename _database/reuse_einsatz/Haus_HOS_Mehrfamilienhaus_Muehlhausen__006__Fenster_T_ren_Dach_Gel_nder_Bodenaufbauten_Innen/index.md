@@ -1,20 +1,43 @@
-﻿---
-id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__006__Fenster_T_ren_Dach_Gel_nder_Bodenaufbauten_Innen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fenster/TÃ¼ren/Dach/GelÃ¤nder/Bodenaufbauten/InnenwÃ¤nde/TGA/DÃ¤mmung/SanitÃ¤r/Beleuchtung/feste Einbauten - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Fenster/TÃ¼ren/Dach/GelÃ¤nder/Bodenaufbauten/InnenwÃ¤nde/TGA/DÃ¤mmung/SanitÃ¤r/Beleuchtung/feste Einbauten - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "reuse_einsatz"
+id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__006__Fenster_T_ren_Dach_Gel_nder_Bodenaufbauten_Innen"
+title: "Fenster/Türen/Dach/Geländer/Bodenaufbauten/Innenwände/TGA/Dämmung/Sanitär/Beleuchtung/feste Einbauten - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "keine Quelle"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+bauobjekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+neue_funktion: "unbekannt"
+bauteil_label: "Fenster/Türen/Dach/Geländer/Bodenaufbauten/Innenwände/TGA/Dämmung/Sanitär/Beleuchtung/feste Einbauten"
+projekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Fenster/Türen/Dach/Geländer/Bodenaufbauten/Innenwände/TGA/Dämmung/Sanitär/Beleuchtung/feste Einbauten - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/reuse_einsatz/Haus_HOS_Mehrfamilienhaus_Muehlhausen__006__Fenster_T_ren_Dach_Gel_nder_Bodenaufbauten_Innen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Haus_HOS_Mehrfamilienhaus_Muehlhausen__006__Fenster_T_ren_Dach_Gel_nder_Bodenaufbauten_Innen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fenster/Türen/Dach/Geländer/Bodenaufbauten/Innenwände/TGA/Dämmung/Sanitär/Beleuchtung/feste Einbauten
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** unbekannt
+- **tragend?:** unbekannt
+- **räumlich?:** unbekannt
+- **Hülle?:** unbekannt
+- **technisch?:** unbekannt
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** keine Quelle
+- **unbekannt:** ja

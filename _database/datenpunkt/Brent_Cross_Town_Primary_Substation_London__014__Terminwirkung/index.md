@@ -1,20 +1,25 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__014__Terminwirkung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Terminwirkung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Terminwirkung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Brent_Cross_Town_Primary_Substation_London__014__Terminwirkung"
+title: "Terminwirkung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "qualitativ"
+quelle_label: "ASBP"
+node_kind: "core"
+wert: "keine"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# Terminwirkung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Brent_Cross_Town_Primary_Substation_London__014__Terminwirkung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brent_Cross_Town_Primary_Substation_London__014__Terminwirkung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Terminwirkung
+- **Wert:** keine
+- **Einheit:** qualitativ
+- **Methode/Datenmodell/Software:** Interview / case study
+- **Bilanzgrenze:** project timeline
+- **Quelle:** ASBP
+- **Vertrauensgrad:** teilweise belegt

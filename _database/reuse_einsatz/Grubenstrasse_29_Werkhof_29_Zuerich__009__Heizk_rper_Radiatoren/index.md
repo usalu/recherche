@@ -1,20 +1,43 @@
-﻿---
-id: "Grubenstrasse_29_Werkhof_29_Zuerich__009__Heizk_rper_Radiatoren"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "HeizkÃ¶rper / Radiatoren - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# HeizkÃ¶rper / Radiatoren - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Grubenstrasse_29_Werkhof_29_Zuerich__009__Heizk_rper_Radiatoren"
+title: "Heizkörper / Radiatoren - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Kompatibilität"
+quelle_label: "Zirkular; Bauwende"
+material_label: "Metall"
+node_kind: "core"
+herkunft_label: "Bestand und/oder andere Gebäude"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Grubenstrasse_29_Werkhof_29_Zuerich"
+bauobjekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+neue_funktion: "technische Gebäudeausrüstung"
+bauteil_label: "Heizkörper / Radiatoren"
+projekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+alte_funktion: "Heizen"
+---
 
-## Clean Node
+# Heizkörper / Radiatoren - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Grubenstrasse_29_Werkhof_29_Zuerich__009__Heizk_rper_Radiatoren
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Grubenstrasse_29_Werkhof_29_Zuerich__009__Heizk_rper_Radiatoren
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Heizkörper / Radiatoren
+- **Material:** Metall
+- **Herkunft:** Bestand und/oder andere Gebäude
+- **alte Funktion:** Heizen
+- **neue Funktion:** technische Gebäudeausrüstung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** Prüfung/Reinigung unbekannt
+- **Verbindung:** hydraulisch
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Heizleistung, Dichtheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Kompatibilität
+- **Quelle:** Zirkular; Bauwende
+- **unbekannt:** Anzahl, Leistung

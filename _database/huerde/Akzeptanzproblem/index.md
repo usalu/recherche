@@ -1,20 +1,13 @@
-﻿---
-id: "Akzeptanzproblem"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Akzeptanzproblem"
 ---
+entity: "huerde"
+id: "Akzeptanzproblem"
+title: "Akzeptanzproblem"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Akzeptanzproblem
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Akzeptanzproblem
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Akzeptanzproblem
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akzeptanz durch Bauherrschaft, Installateur, Ausfuehrende, Behoerden oder Markt als Huerde.

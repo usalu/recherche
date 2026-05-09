@@ -1,20 +1,22 @@
-﻿---
-id: "Ferme_du_Rail_Paris__006__Pouget_Consultants"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Pouget Consultants - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Pouget Consultants - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Ferme_du_Rail_Paris__006__Pouget_Consultants"
+title: "Pouget Consultants - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# Pouget Consultants - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Ferme_du_Rail_Paris__006__Pouget_Consultants
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Ferme_du_Rail_Paris__006__Pouget_Consultants
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Pouget Consultants
+- **Beziehung zur Fallstudie:** Thermik
+- **Quelle/Beleg:** [S1], [S3]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Ingenieur Thermik

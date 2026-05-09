@@ -1,20 +1,43 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__007__T_ren_Tore"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TÃ¼ren / Tore - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# TÃ¼ren / Tore - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "reuse_einsatz"
+id: "Recypark_Demets_Anderlecht__007__T_ren_Tore"
+title: "Türen / Tore - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "—"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+bauobjekt:
+  - "Recypark_Demets_Anderlecht"
+neue_funktion: "Zugang / Betrieb"
+bauteil_label: "Türen / Tore"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Türen / Tore - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/reuse_einsatz/Recypark_Demets_Anderlecht__007__T_ren_Tore
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Recypark_Demets_Anderlecht__007__T_ren_Tore
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Türen / Tore
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Zugang / Betrieb
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Sicherheit/Betrieb
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** —
+- **unbekannt:** ja

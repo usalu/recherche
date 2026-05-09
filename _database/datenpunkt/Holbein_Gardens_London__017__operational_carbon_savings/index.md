@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__017__operational_carbon_savings"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "operational carbon savings - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# operational carbon savings - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__017__operational_carbon_savings"
+title: "operational carbon savings - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S7]"
+node_kind: "core"
+wert: "69"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# operational carbon savings - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__017__operational_carbon_savings
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__017__operational_carbon_savings
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** operational carbon savings
+- **Wert:** 69
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** ASBP
+- **Bilanzgrenze:** Betrieb
+- **Quelle:** [S7]
+- **Vertrauensgrad:** belegt

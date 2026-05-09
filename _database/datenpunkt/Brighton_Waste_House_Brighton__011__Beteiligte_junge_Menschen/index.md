@@ -1,20 +1,25 @@
-﻿---
-id: "Brighton_Waste_House_Brighton__011__Beteiligte_junge_Menschen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Beteiligte junge Menschen - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung"
 ---
-# Beteiligte junge Menschen - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung
+entity: "datenpunkt"
+id: "Brighton_Waste_House_Brighton__011__Beteiligte_junge_Menschen"
+title: "Beteiligte junge Menschen - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Personen"
+quelle_label: "University of Brighton; Research Brighton"
+node_kind: "core"
+wert: "300–365"
+fallstudie: "fallstudie/Brighton_Waste_House_Brighton"
+bauobjekt:
+  - "Brighton_Waste_House_Brighton"
+projekt:
+  - "Brighton_Waste_House_Brighton"
+---
 
-## Clean Node
+# Beteiligte junge Menschen - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung
 
-- Final path: _database/datenpunkt/Brighton_Waste_House_Brighton__011__Beteiligte_junge_Menschen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brighton_Waste_House_Brighton__011__Beteiligte_junge_Menschen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Beteiligte junge Menschen
+- **Wert:** 300–365
+- **Einheit:** Personen
+- **Methode/Datenmodell/Software:** Projektangaben
+- **Bilanzgrenze:** Bauprozess
+- **Quelle:** University of Brighton; Research Brighton
+- **Vertrauensgrad:** teilweise belegt

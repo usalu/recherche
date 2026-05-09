@@ -1,20 +1,43 @@
-﻿---
-id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Purlins"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Purlins - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Purlins - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Purlins"
+title: "Purlins - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Anschluss an Rohrgeometrie"
+quelle_label: "[S1], [S4]"
+material_label: "Holz und WT-Stahl"
+node_kind: "core"
+herkunft_label: "teils neu, teils unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "RISA-3D"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+bauobjekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+neue_funktion: "Auflager für Glas-PV-Module"
+bauteil_label: "Purlins"
+projekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Purlins - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Purlins
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Purlins
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Purlins
+- **Material:** Holz und WT-Stahl
+- **Herkunft:** teils neu, teils unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Auflager für Glas-PV-Module
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja
+- **räumlich?:** nein
+- **Hülle?:** Dach
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** an Rohrträger angeschweißt/angeschlossen
+- **Prüfung:** RISA-3D
+- **Leistungsanforderung:** PV-Dach tragen
+- **Norm/Recht:** unbekannt
+- **Hürde:** Anschluss an Rohrgeometrie
+- **Quelle:** [S1], [S4]
+- **unbekannt:** Wiederverwendungsstatus

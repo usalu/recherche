@@ -1,20 +1,25 @@
-﻿---
-id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Fl_che_Ma_stab"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che / MaÃŸstab - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
 ---
-# FlÃ¤che / MaÃŸstab - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu
+entity: "datenpunkt"
+id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Fl_che_Ma_stab"
+title: "Fläche / Maßstab - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Q3"
+node_kind: "core"
+wert: "5.557"
+fallstudie: "fallstudie/Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+bauobjekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+projekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+---
 
-## Clean Node
+# Fläche / Maßstab - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu
 
-- Final path: _database/datenpunkt/Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Fl_che_Ma_stab
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Fl_che_Ma_stab
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche / Maßstab
+- **Wert:** 5.557
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Architekturprojekt
+- **Quelle:** Q3
+- **Vertrauensgrad:** belegt

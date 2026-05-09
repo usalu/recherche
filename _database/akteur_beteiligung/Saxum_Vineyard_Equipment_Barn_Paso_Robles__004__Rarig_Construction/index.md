@@ -1,20 +1,22 @@
-﻿---
-id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__004__Rarig_Construction"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Rarig Construction - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Rarig Construction - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__004__Rarig_Construction"
+title: "Rarig Construction - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S2], [S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+bauobjekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+projekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+---
 
-## Clean Node
+# Rarig Construction - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Saxum_Vineyard_Equipment_Barn_Paso_Robles__004__Rarig_Construction
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Saxum_Vineyard_Equipment_Barn_Paso_Robles__004__Rarig_Construction
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Rarig Construction
+- **Beziehung zur Fallstudie:** General Contractor
+- **Quelle/Beleg:** [S1], [S2], [S3]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Bauausführung

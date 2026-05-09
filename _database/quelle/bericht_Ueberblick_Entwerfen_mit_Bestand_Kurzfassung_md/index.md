@@ -1,15 +1,20 @@
-﻿---
-id: "bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bericht/Ueberblick_Entwerfen_mit_Bestand_Kurzfassung.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung_md"
+title: "bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung_md"
+build_status: "promoted_phase42"
+source_filename: "Ueberblick_Entwerfen_mit_Bestand_Kurzfassung.md"
+legacy_type: "Bericht"
+---
+
 # bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung_md
 
-## Source Archive
+## Kurzdefinition
 
-- Original path: bericht/Ueberblick_Entwerfen_mit_Bestand_Kurzfassung.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: archive_or_source; old target: quelle/Ueberblick_Entwerfen_mit_Bestand_Kurzfassung
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

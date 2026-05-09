@@ -1,20 +1,43 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__002__Aluminium_Fassadensystem"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Aluminium-Fassadensystem - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Aluminium-Fassadensystem - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "reuse_einsatz"
+id: "Woongroep_Boschgaard_Den_Bosch__002__Aluminium_Fassadensystem"
+title: "Aluminium-Fassadensystem - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Maßanpassung, Gestaltung, Gewährleistung"
+quelle_label: "Boschgaard, Duurzame Metaalbouw"
+material_label: "Aluminium, Glas"
+node_kind: "core"
+herkunft_label: "Stadskantoor Roosendaal"
+menge_umfang: "Umfang unbekannt; 50 Jahre alte Fassade belegt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+neue_funktion: "Fassade im Wohnprojekt"
+bauteil_label: "Aluminium-Fassadensystem"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+alte_funktion: "Fassadensystem"
+---
 
-## Clean Node
+# Aluminium-Fassadensystem - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/reuse_einsatz/Woongroep_Boschgaard_Den_Bosch__002__Aluminium_Fassadensystem
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Woongroep_Boschgaard_Den_Bosch__002__Aluminium_Fassadensystem
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Aluminium-Fassadensystem
+- **Material:** Aluminium, Glas
+- **Herkunft:** Stadskantoor Roosendaal
+- **alte Funktion:** Fassadensystem
+- **neue Funktion:** Fassade im Wohnprojekt
+- **Menge/Umfang:** Umfang unbekannt; 50 Jahre alte Fassade belegt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Demontage, Anpassung an neuen Entwurf
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Witterung, Dichtigkeit, Wärme, Befestigung
+- **Norm/Recht:** unbekannt
+- **Hürde:** Maßanpassung, Gestaltung, Gewährleistung
+- **Quelle:** Boschgaard, Duurzame Metaalbouw
+- **unbekannt:** Menge, U-Wert

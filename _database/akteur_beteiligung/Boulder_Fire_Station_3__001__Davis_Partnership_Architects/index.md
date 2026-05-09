@@ -1,20 +1,22 @@
-﻿---
-id: "Boulder_Fire_Station_3__001__Davis_Partnership_Architects"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Davis Partnership Architects - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Davis Partnership Architects - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Boulder_Fire_Station_3__001__Davis_Partnership_Architects"
+title: "Davis Partnership Architects - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "AISC"
+node_kind: "relation"
+fallstudie: "fallstudie/Boulder_Fire_Station_3"
+bauobjekt:
+  - "Boulder_Fire_Station_3"
+projekt:
+  - "Boulder_Fire_Station_3"
+---
 
-## Clean Node
+# Davis Partnership Architects - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Boulder_Fire_Station_3__001__Davis_Partnership_Architects
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Boulder_Fire_Station_3__001__Davis_Partnership_Architects
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Davis Partnership Architects
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** AISC
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Denver

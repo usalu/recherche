@@ -1,15 +1,20 @@
-﻿---
-id: "bauteil_Fassade_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteil/Fassade.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteil_Fassade_md"
+title: "bauteil_Fassade_md"
+build_status: "promoted_phase42"
+source_filename: "Fassade.md"
+legacy_type: "Bauteil"
+---
+
 # bauteil_Fassade_md
 
-## Source Archive
+## Kurzdefinition
 
-- Original path: bauteil/Fassade.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: bauteiltyp/Fassade
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

@@ -1,20 +1,43 @@
-﻿---
-id: "Montessori_Maassluis__002__Holzst_tzen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "HolzstÃ¼tzen - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# HolzstÃ¼tzen - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Montessori_Maassluis__002__Holzst_tzen"
+title: "Holzstützen - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "nicht Direct Reuse"
+quelle_label: "Kraaijvanger"
+material_label: "Holz"
+node_kind: "core"
+herkunft_label: "neu/unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+neue_funktion: "Tragwerk"
+bauteil_label: "Holzstützen"
+projekt:
+  - "Montessori_Maassluis"
+alte_funktion: "nicht anwendbar"
+---
 
-## Clean Node
+# Holzstützen - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Montessori_Maassluis__002__Holzst_tzen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Montessori_Maassluis__002__Holzst_tzen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Holzstützen
+- **Material:** Holz
+- **Herkunft:** neu/unbekannt
+- **alte Funktion:** nicht anwendbar
+- **neue Funktion:** Tragwerk
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** neu
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Tragfähigkeit, Brandschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht Direct Reuse
+- **Quelle:** Kraaijvanger
+- **unbekannt:** Menge

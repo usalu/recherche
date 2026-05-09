@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Pavilion_Paris__002__Materialien_mit_erster_Lebensdauer"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Materialien mit erster Lebensdauer - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# Materialien mit erster Lebensdauer - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Pavilion_Paris__002__Materialien_mit_erster_Lebensdauer"
+title: "Materialien mit erster Lebensdauer - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "Encore Heureux / e-architect"
+node_kind: "core"
+wert: "60"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Materialien mit erster Lebensdauer - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Pavilion_Paris__002__Materialien_mit_erster_Lebensdauer
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Pavilion_Paris__002__Materialien_mit_erster_Lebensdauer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Materialien mit erster Lebensdauer
+- **Wert:** 60
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Materialien im Pavillon
+- **Quelle:** Encore Heureux / e-architect
+- **Vertrauensgrad:** belegt

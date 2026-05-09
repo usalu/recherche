@@ -1,20 +1,25 @@
-﻿---
-id: "ELYS_Kultur_Gewerbehaus_Basel__007__PV_Anlage"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "PV-Anlage - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse"
 ---
-# PV-Anlage - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "ELYS_Kultur_Gewerbehaus_Basel__007__PV_Anlage"
+title: "PV-Anlage - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Kanton BS"
+node_kind: "core"
+wert: "6.000"
+fallstudie: "fallstudie/ELYS_Kultur_Gewerbehaus_Basel"
+bauobjekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+projekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+---
 
-## Clean Node
+# PV-Anlage - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__007__PV_Anlage
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__007__PV_Anlage
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** PV-Anlage
+- **Wert:** 6.000
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Dach
+- **Quelle:** Kanton BS
+- **Vertrauensgrad:** belegt; nicht Direct Reuse

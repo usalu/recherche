@@ -1,20 +1,16 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Donor - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kettenstation"
+id: "BlueCity_Offices_Rotterdam__Donor"
+title: "Donor - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\BlueCity_Offices_Rotterdam.md"
+node_kind: "core"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# Donor - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kettenstation/BlueCity_Offices_Rotterdam__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/BlueCity_Offices_Rotterdam__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\BlueCity_Offices_Rotterdam.md: | Rückbau | Fensterrahmen aus Donor-Kontext gewinnen | unbekannt | selektive Ernte | unbekannt | unbekannt | unbekannt | unbekannt | unbekannt | Beschädigungsrisiko | unbekannt | S1 |

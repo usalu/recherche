@@ -1,20 +1,22 @@
-﻿---
-id: "Hastings_Pier_Visitor_Centre__003__Ramboll"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Ramboll - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
 ---
+entity: "akteur_beteiligung"
+id: "Hastings_Pier_Visitor_Centre__003__Ramboll"
+title: "Ramboll - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
+build_status: "promoted_phase42"
+quelle_label: "Q1, Q3, Q6"
+node_kind: "relation"
+fallstudie: "fallstudie/Hastings_Pier_Visitor_Centre"
+bauobjekt:
+  - "Hastings_Pier_Visitor_Centre"
+projekt:
+  - "Hastings_Pier_Visitor_Centre"
+---
+
 # Ramboll - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/Hastings_Pier_Visitor_Centre__003__Ramboll
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Hastings_Pier_Visitor_Centre__003__Ramboll
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Ramboll
+- **Beziehung zur Fallstudie:** Tragwerks-/Multidisciplinary Engineering
+- **Quelle/Beleg:** Q1, Q3, Q6
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Marine, Struktur, Building Services

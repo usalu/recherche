@@ -1,20 +1,43 @@
-﻿---
-id: "Charles_Malis_Molenbeek__004__Ornamentale_Fassade"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Ornamentale Fassade - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse"
 ---
-# Ornamentale Fassade - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Charles_Malis_Molenbeek__004__Ornamentale_Fassade"
+title: "Ornamentale Fassade - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "zählt nicht als Direct Reuse"
+quelle_label: "WBA / Mamout"
+material_label: "Ziegel / Blaustein"
+node_kind: "core"
+herkunft_label: "bestehendes Gebäude"
+menge_umfang: "Bestand"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Charles_Malis_Molenbeek"
+bauobjekt:
+  - "Charles_Malis_Molenbeek"
+neue_funktion: "Fassade bleibt"
+bauteil_label: "Ornamentale Fassade"
+projekt:
+  - "Charles_Malis_Molenbeek"
+alte_funktion: "Fassade"
+---
 
-## Clean Node
+# Ornamentale Fassade - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Charles_Malis_Molenbeek__004__Ornamentale_Fassade
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Charles_Malis_Molenbeek__004__Ornamentale_Fassade
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Ornamentale Fassade
+- **Material:** Ziegel / Blaustein
+- **Herkunft:** bestehendes Gebäude
+- **alte Funktion:** Fassade
+- **neue Funktion:** Fassade bleibt
+- **Menge/Umfang:** Bestand
+- **tragend?:** nein/teilweise
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** erhalten/saniert
+- **Verbindung:** Bestand
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Witterung, Wärmeschutz nach Sanierung
+- **Norm/Recht:** unbekannt
+- **Hürde:** zählt nicht als Direct Reuse
+- **Quelle:** WBA / Mamout
+- **unbekannt:** Details

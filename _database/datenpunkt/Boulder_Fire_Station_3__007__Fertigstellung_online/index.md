@@ -1,20 +1,25 @@
-﻿---
-id: "Boulder_Fire_Station_3__007__Fertigstellung_online"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung / online - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fertigstellung / online - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Boulder_Fire_Station_3__007__Fertigstellung_online"
+title: "Fertigstellung / online - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Datum"
+quelle_label: "City of Boulder"
+node_kind: "core"
+wert: "November 2024"
+fallstudie: "fallstudie/Boulder_Fire_Station_3"
+bauobjekt:
+  - "Boulder_Fire_Station_3"
+projekt:
+  - "Boulder_Fire_Station_3"
+---
 
-## Clean Node
+# Fertigstellung / online - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Boulder_Fire_Station_3__007__Fertigstellung_online
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Boulder_Fire_Station_3__007__Fertigstellung_online
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung / online
+- **Wert:** November 2024
+- **Einheit:** Datum
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** City of Boulder
+- **Vertrauensgrad:** belegt

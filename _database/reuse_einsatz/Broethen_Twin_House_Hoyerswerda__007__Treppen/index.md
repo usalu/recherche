@@ -1,20 +1,43 @@
-﻿---
-id: "Broethen_Twin_House_Hoyerswerda__007__Treppen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Treppen - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
 ---
-# Treppen - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
+entity: "reuse_einsatz"
+id: "Broethen_Twin_House_Hoyerswerda__007__Treppen"
+title: "Treppen - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "unbekannt"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Broethen_Twin_House_Hoyerswerda"
+bauobjekt:
+  - "Broethen_Twin_House_Hoyerswerda"
+neue_funktion: "Erschließung"
+bauteil_label: "Treppen"
+projekt:
+  - "Broethen_Twin_House_Hoyerswerda"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Treppen - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
 
-- Final path: _database/reuse_einsatz/Broethen_Twin_House_Hoyerswerda__007__Treppen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Broethen_Twin_House_Hoyerswerda__007__Treppen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Treppen
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Erschließung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Tragfähigkeit
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** unbekannt
+- **unbekannt:** alle Daten

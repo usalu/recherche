@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__007__Upcycled_recycled_Anteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Upcycled/recycled Anteil - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Upcycled/recycled Anteil - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__007__Upcycled_recycled_Anteil"
+title: "Upcycled/recycled Anteil - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Anteil Gebäude"
+quelle_label: "NREP"
+node_kind: "core"
+wert: "> 2/3"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Upcycled/recycled Anteil - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__007__Upcycled_recycled_Anteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__007__Upcycled_recycled_Anteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Upcycled/recycled Anteil
+- **Wert:** > 2/3
+- **Einheit:** Anteil Gebäude
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Gesamtgebäude
+- **Quelle:** NREP
+- **Vertrauensgrad:** teilweise belegt

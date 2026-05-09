@@ -1,20 +1,22 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__006__Terraterre"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Terraterre - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Terraterre - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Resilience_La_Ferme_des_Possibles_Stains__006__Terraterre"
+title: "Terraterre - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1]"
+node_kind: "relation"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# Terraterre - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Resilience_La_Ferme_des_Possibles_Stains__006__Terraterre
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Resilience_La_Ferme_des_Possibles_Stains__006__Terraterre
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Terraterre
+- **Beziehung zur Fallstudie:** BTC
+- **Quelle/Beleg:** [S1]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Erdbaustoff

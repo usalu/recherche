@@ -1,20 +1,13 @@
-﻿---
-id: "Bauherr_Auftraggeber"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Bauherr / Auftraggeber"
 ---
+entity: "akteurrolle"
+id: "Bauherr_Auftraggeber"
+title: "Bauherr / Auftraggeber"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Bauherr / Auftraggeber
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Bauherr_Auftraggeber
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Bauherr_Auftraggeber
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Auftraggeber-, Bauherrschafts-, Client-, Developer- oder Eigentuemerrolle im Projekt.

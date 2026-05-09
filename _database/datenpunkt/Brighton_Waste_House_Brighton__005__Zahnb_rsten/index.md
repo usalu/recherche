@@ -1,20 +1,25 @@
-﻿---
-id: "Brighton_Waste_House_Brighton__005__Zahnb_rsten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "ZahnbÃ¼rsten - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung"
 ---
-# ZahnbÃ¼rsten - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung
+entity: "datenpunkt"
+id: "Brighton_Waste_House_Brighton__005__Zahnb_rsten"
+title: "Zahnbürsten - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "University of Brighton"
+node_kind: "core"
+wert: "19.800–20.000"
+fallstudie: "fallstudie/Brighton_Waste_House_Brighton"
+bauobjekt:
+  - "Brighton_Waste_House_Brighton"
+projekt:
+  - "Brighton_Waste_House_Brighton"
+---
 
-## Clean Node
+# Zahnbürsten - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung
 
-- Final path: _database/datenpunkt/Brighton_Waste_House_Brighton__005__Zahnb_rsten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brighton_Waste_House_Brighton__005__Zahnb_rsten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Zahnbürsten
+- **Wert:** 19.800–20.000
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Materialzählung
+- **Bilanzgrenze:** Wandfüllung
+- **Quelle:** University of Brighton
+- **Vertrauensgrad:** belegt, Mengenstreuung

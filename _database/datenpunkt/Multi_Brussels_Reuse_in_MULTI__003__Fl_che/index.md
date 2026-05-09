@@ -1,20 +1,25 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__003__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Multi_Brussels_Reuse_in_MULTI__003__Fl_che"
+title: "Fläche - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S4"
+node_kind: "core"
+wert: "45.800"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# Fläche - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Multi_Brussels_Reuse_in_MULTI__003__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Multi_Brussels_Reuse_in_MULTI__003__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 45.800
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Immobel/Madaster-Angabe
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** S4
+- **Vertrauensgrad:** belegt

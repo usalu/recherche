@@ -1,20 +1,16 @@
-﻿---
-id: "CascadeUp_London_secondary_timber_glulam_demonstrator"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - CascadeUp / London secondary-timber glulam demonstrator â€” Fallstudie Direct Reuse"
 ---
-# Reuse-Kette - CascadeUp / London secondary-timber glulam demonstrator â€” Fallstudie Direct Reuse
+entity: "reuse_kette"
+id: "CascadeUp_London_secondary_timber_glulam_demonstrator"
+title: "Reuse-Kette - CascadeUp / London secondary-timber glulam demonstrator — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\CascadeUp_London_secondary_timber_glulam_demonstrator.md"
+node_kind: "core"
+fallstudie: "fallstudie/CascadeUp_London_secondary_timber_glulam_demonstrator"
+projekt:
+  - "CascadeUp_London_secondary_timber_glulam_demonstrator"
+---
 
-## Clean Node
+# Reuse-Kette - CascadeUp / London secondary-timber glulam demonstrator — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kette/CascadeUp_London_secondary_timber_glulam_demonstrator
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/CascadeUp_London_secondary_timber_glulam_demonstrator
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

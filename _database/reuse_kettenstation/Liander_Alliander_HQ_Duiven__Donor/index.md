@@ -1,20 +1,17 @@
-﻿---
-id: "Liander_Alliander_HQ_Duiven__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Donor - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kettenstation"
+id: "Liander_Alliander_HQ_Duiven__Donor"
+title: "Donor - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Liander_Alliander_HQ_Duiven.md"
+node_kind: "core"
+fallstudie: "fallstudie/Liander_Alliander_HQ_Duiven"
+---
 
-## Clean Node
+# Donor - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kettenstation/Liander_Alliander_HQ_Duiven__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Liander_Alliander_HQ_Duiven__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Liander_Alliander_HQ_Duiven.md: | wiederverwendete Innenausbau-Elemente | unbekannt | Bestand / Donor unbekannt | Innenausbau | Innenausbau | unbekannt | nein | ja | nein | ggf. | unbekannt | unbekannt | unbekannt | Brandschutz, Nutzung, Akustik | unbekannt | Möbel nicht zählen | S1/S2 zu prüfen | konkrete Bauteile |
+Gebäude\Liander_Alliander_HQ_Duiven.md: | Fassaden-/Hüllbauteile | unbekannt | Bestand / Donor unbekannt | Fassade | Hülle | unbekannt | nein | nein | ja | nein | unbekannt | unbekannt | unbekannt | Wärmeschutz, Luftdichtheit | unbekannt | Erhalt vs. Reuse unklar | S1/S2 | genaue Rolle |

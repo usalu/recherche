@@ -1,20 +1,37 @@
-﻿---
-id: "Boulder_Fire_Station_3"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "bauobjekt"
+id: "Boulder_Fire_Station_3"
+title: "Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Boulder_Fire_Station_3.md"
+node_kind: "core"
+fallstudie: "fallstudie/Boulder_Fire_Station_3"
+projekt:
+  - "Boulder_Fire_Station_3"
+---
 
-## Clean Node
+# Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/bauobjekt/Boulder_Fire_Station_3
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Boulder_Fire_Station_3.md
 
-- Source: _graph/bauobjekt/Boulder_Fire_Station_3
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Boulder Fire Station 3 / City of Boulder Fire Rescue Station #3
+- **Ort:** Boulder, Colorado, USA; City page nennt 2967 Bluff Street, Boulder, CO 80301
+- **Gebäude:** Feuerwache und Fire Administration
+- **Projekt:** Neubau / Ersatzbau für alte Fire Station 3
+- **Beteiligte People / Akteure:** City of Boulder; Davis Partnership Architects; KL&A Engineers and Builders; Mark Young Construction (sekundär belegt); Boulder Community Hospital/Health als Donor-Kontext; Full Metal Iron als Fabricator laut SE2050-Snippet, Details nicht weiter geprüft
+- **Architekt:** Davis Partnership Architects
+- **Tragwerksplaner:** KL&A Engineers and Builders
+- **Bauherr:** City of Boulder
+- **Zeitraum:** Planung vor/um 2023–2024; completed/brought online November 2024; Completion Date Q4 2024 laut City project page
+- **Ursprüngliche Nutzung:** Donor-Stahl: Krankenhausstruktur des dekommissionierten Boulder Community Hospital
+- **Neue Nutzung:** tragende Stahlbauteile in Feuerwache / öffentliche Sicherheitsinfrastruktur
+- **Fläche / Maßstab:** 28.300 sq ft laut AISC Modern Steel; 28.370 sq ft laut AISC Awards
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** sehr gut für Stahlmenge, Anzahl Bauteile, Akteure, Status und Hürden; mittel für detaillierte Prüfmethoden, Kosten, Normen und CO₂
+
+---

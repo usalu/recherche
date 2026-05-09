@@ -1,20 +1,25 @@
-﻿---
-id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__008__Wiederverwendungsgrad_Rohbau_Substanz"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wiederverwendungsgrad Rohbau-Substanz - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Wiederverwendungsgrad Rohbau-Substanz - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__008__Wiederverwendungsgrad_Rohbau_Substanz"
+title: "Wiederverwendungsgrad Rohbau-Substanz - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S7], [S8]"
+node_kind: "core"
+wert: "ca. 75"
+fallstudie: "fallstudie/Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+bauobjekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+projekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+---
 
-## Clean Node
+# Wiederverwendungsgrad Rohbau-Substanz - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__008__Wiederverwendungsgrad_Rohbau_Substanz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__008__Wiederverwendungsgrad_Rohbau_Substanz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wiederverwendungsgrad Rohbau-Substanz
+- **Wert:** ca. 75
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Architektenquelle
+- **Bilanzgrenze:** Rohbau
+- **Quelle:** [S7], [S8]
+- **Vertrauensgrad:** belegt

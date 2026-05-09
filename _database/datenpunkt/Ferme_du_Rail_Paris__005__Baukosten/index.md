@@ -1,20 +1,25 @@
-﻿---
-id: "Ferme_du_Rail_Paris__005__Baukosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Baukosten - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Baukosten - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Ferme_du_Rail_Paris__005__Baukosten"
+title: "Baukosten - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Mio. € HT"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "3,3"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# Baukosten - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Ferme_du_Rail_Paris__005__Baukosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Ferme_du_Rail_Paris__005__Baukosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Baukosten
+- **Wert:** 3,3
+- **Einheit:** Mio. € HT
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** travaux
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,35 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "projekt"
+id: "Woongroep_Boschgaard_Den_Bosch"
+title: "Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Woongroep_Boschgaard_Den_Bosch.md"
+node_kind: "core"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/projekt/Woongroep_Boschgaard_Den_Bosch
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\Woongroep_Boschgaard_Den_Bosch.md
 
-- Source: _graph/projekt/Woongroep_Boschgaard_Den_Bosch
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Woongroep Boschgaard / Collectief Ecosysteem Boschgaard
+- **Ort:** ’s-Hertogenbosch / Den Bosch, Niederlande
+- **Gebäude:** ehemaliges Nachbarschaftszentrum De Patio; neue Wohn- und Gemeinschaftsbauten
+- **Projekt:** 19 soziale Mietwohnungen mit Nachbarschaftszentrum und kollektivem Wohnen
+- **Beteiligte People / Akteure:** Bewohnerinitiative Boschgaard, Wohnungsbaugesellschaft Zayaz, Superuse Studios, Bouwbedrijf Versteegden, Transfarmers, VanNimwegen; weitere Materiallieferanten / Rückbauakteure
+- **Architekt:** Superuse Studios
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** Zayaz / Projektstruktur mit Bewohnerinitiative; genaue Eigentums-/Bauherrschaftsrolle je Projektphase unbekannt
+- **Zeitraum:** Entwicklung vor 2024; Fertigstellung / Inbetriebnahme Anfang 2024; Eröffnung 1. Juni 2024 laut Boschgaard-Fassadenartikel
+- **Ursprüngliche Nutzung:** Nachbarschaftszentrum / ehemaliges buurthuis De Patio
+- **Neue Nutzung:** 19 soziale Mietwohnungen, kollektive Wohnfunktionen, Nachbarschaftszentrum
+- **Fläche / Maßstab:** unbekannt; 19 Wohneinheiten belegt
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Grunddaten und Reuse-Anspruch; mittel für genaue Bauteilprüfungen, Mengen je Bauteil und Normen

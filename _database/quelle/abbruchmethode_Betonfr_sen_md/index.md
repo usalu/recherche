@@ -1,15 +1,12 @@
-﻿---
-id: "abbruchmethode_Betonfr_sen_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "abbruchmethode/Betonfräsen.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "abbruchmethode_Betonfr_sen_md"
+title: "abbruchmethode_Betonfr_sen_md"
+build_status: "promoted_phase42"
+source_filename: "Betonfräsen.md"
+legacy_type: "Abbruchmethode"
+---
+
 # abbruchmethode_Betonfr_sen_md
 
-## Source Archive
 
-- Original path: abbruchmethode/Betonfräsen.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: rueckbauverfahren/Betonfraesen

@@ -1,20 +1,25 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__001__Karreveld_wiederverwendete_Innenw_nde"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Karreveld wiederverwendete InnenwÃ¤nde - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Karreveld wiederverwendete InnenwÃ¤nde - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "datenpunkt"
+id: "Verbiest_Karreveld_Brussels__001__Karreveld_wiederverwendete_Innenw_nde"
+title: "Karreveld wiederverwendete Innenwände - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Q4"
+node_kind: "core"
+wert: "ca. 450"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Karreveld wiederverwendete Innenwände - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/datenpunkt/Verbiest_Karreveld_Brussels__001__Karreveld_wiederverwendete_Innenw_nde
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Verbiest_Karreveld_Brussels__001__Karreveld_wiederverwendete_Innenw_nde
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Karreveld wiederverwendete Innenwände
+- **Wert:** ca. 450
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Opalis-Projektangabe
+- **Bilanzgrenze:** Phase 1, in-situ
+- **Quelle:** Q4
+- **Vertrauensgrad:** belegt

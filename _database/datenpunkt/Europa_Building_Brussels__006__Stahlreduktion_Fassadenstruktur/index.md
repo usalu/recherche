@@ -1,20 +1,25 @@
-﻿---
-id: "Europa_Building_Brussels__006__Stahlreduktion_Fassadenstruktur"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Stahlreduktion Fassadenstruktur - Europa Building, Brussels â€“ Fallstudie Direct Reuse"
 ---
-# Stahlreduktion Fassadenstruktur - Europa Building, Brussels â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Europa_Building_Brussels__006__Stahlreduktion_Fassadenstruktur"
+title: "Stahlreduktion Fassadenstruktur - Europa Building, Brussels – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "Council story; Jan De Nul"
+node_kind: "core"
+wert: "30"
+fallstudie: "fallstudie/Europa_Building_Brussels"
+bauobjekt:
+  - "Europa_Building_Brussels"
+projekt:
+  - "Europa_Building_Brussels"
+---
 
-## Clean Node
+# Stahlreduktion Fassadenstruktur - Europa Building, Brussels – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Europa_Building_Brussels__006__Stahlreduktion_Fassadenstruktur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Europa_Building_Brussels__006__Stahlreduktion_Fassadenstruktur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Stahlreduktion Fassadenstruktur
+- **Wert:** 30
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Projekt-/Ausführungsangabe
+- **Bilanzgrenze:** Fassadenstruktur
+- **Quelle:** Council story; Jan De Nul
+- **Vertrauensgrad:** teilweise belegt

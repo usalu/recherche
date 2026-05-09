@@ -1,15 +1,20 @@
-﻿---
-id: "bauteil_Feuerschutztuer_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteil/Feuerschutztuer.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteil_Feuerschutztuer_md"
+title: "bauteil_Feuerschutztuer_md"
+build_status: "promoted_phase42"
+source_filename: "Feuerschutztuer.md"
+legacy_type: "Bauteil"
+---
+
 # bauteil_Feuerschutztuer_md
 
-## Source Archive
+## Kurzdefinition
 
-- Original path: bauteil/Feuerschutztuer.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: bauteiltyp/Feuerschutztuer
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

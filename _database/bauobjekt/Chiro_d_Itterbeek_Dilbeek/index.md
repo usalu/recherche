@@ -1,20 +1,37 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "bauobjekt"
+id: "Chiro_d_Itterbeek_Dilbeek"
+title: "Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Chiro_d_Itterbeek_Dilbeek.md"
+node_kind: "core"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/bauobjekt/Chiro_d_Itterbeek_Dilbeek
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Chiro_d_Itterbeek_Dilbeek.md
 
-- Source: _graph/bauobjekt/Chiro_d_Itterbeek_Dilbeek
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Chiro d’Itterbeek / Sanitary block for the Itterbeek Chiro / Pavillon de sanitaires du Chiro d’Itterbeek
+- **Ort:** Plankenstraat 23, 1701 Dilbeek, Belgien
+- **Gebäude:** kleiner Sanitärpavillon neben alter Farm
+- **Projekt:** Neubau/Anbau eines Sanitärblocks für Chiro d’Itterbeek und Festival-/Besucherbedarf
+- **Beteiligte People / Akteure:** Commune de Dilbeek; Rotor asbl-vzw; CC Autrement; RotorDC; Franck; Gebruiktebouwmaterialen; Namur Croisade pauvreté; Bouwstocks
+- **Architekt:** Rotor asbl-vzw
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** Commune de Dilbeek; Farm im Eigentum der kirchlichen Verwaltung von Itterbeek
+- **Zeitraum:** Baujahr 2018; Lieferung 2019
+- **Ursprüngliche Nutzung:** neben bestehender Farm; kein vorheriger Sanitärpavillon belegt
+- **Neue Nutzung:** Sanitärblock / WC-Anlage für Chiro und Besucher
+- **Fläche / Maßstab:** 15 m² Nettofläche; 1 funktionale Einheit
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** sehr gut für Mengen, Lieferquellen, Kosten, Umweltkennwerte; begrenzt für Norm-/Prüfdetails und konkrete Tragwerksnachweise
+
+---

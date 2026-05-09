@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__010__CO_Einsparung_Stahlreuse"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Einsparung Stahlreuse - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# COâ‚‚-Einsparung Stahlreuse - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__010__CO_Einsparung_Stahlreuse"
+title: "CO₂-Einsparung Stahlreuse - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "t CO₂e"
+quelle_label: "[S3], [S5]"
+node_kind: "core"
+wert: "35"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# CO₂-Einsparung Stahlreuse - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__010__CO_Einsparung_Stahlreuse
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__010__CO_Einsparung_Stahlreuse
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Einsparung Stahlreuse
+- **Wert:** 35
+- **Einheit:** t CO₂e
+- **Methode/Datenmodell/Software:** IStructE / ASBP DISRUPT
+- **Bilanzgrenze:** Vergleich zu neuem Stahl
+- **Quelle:** [S3], [S5]
+- **Vertrauensgrad:** belegt

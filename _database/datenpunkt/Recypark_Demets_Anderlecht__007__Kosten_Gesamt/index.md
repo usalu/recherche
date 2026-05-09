@@ -1,20 +1,25 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__007__Kosten_Gesamt"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten Gesamt - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Kosten Gesamt - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Recypark_Demets_Anderlecht__007__Kosten_Gesamt"
+title: "Kosten Gesamt - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "€ excl. VAT"
+quelle_label: "[S8]"
+node_kind: "core"
+wert: "8,11 Mio."
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+bauobjekt:
+  - "Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Kosten Gesamt - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Recypark_Demets_Anderlecht__007__Kosten_Gesamt
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recypark_Demets_Anderlecht__007__Kosten_Gesamt
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten Gesamt
+- **Wert:** 8,11 Mio.
+- **Einheit:** € excl. VAT
+- **Methode/Datenmodell/Software:** Greisch-Projektseite
+- **Bilanzgrenze:** Works cost
+- **Quelle:** [S8]
+- **Vertrauensgrad:** teilweise belegt

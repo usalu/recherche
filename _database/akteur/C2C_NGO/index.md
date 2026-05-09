@@ -1,20 +1,97 @@
-﻿---
-id: "C2C_NGO"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "C2C NGO"
 ---
+entity: "akteur"
+id: "C2C_NGO"
+title: "C2C NGO"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "akteur\\02_kammern_verbaende_ngos_netzwerke\\C2C_NGO.md"
+node_kind: "core"
+---
+
 # C2C NGO
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/akteur/C2C_NGO
-- Build rule: typed path IDs only.
+### Legacy Source: akteur\02_kammern_verbaende_ngos_netzwerke\C2C_NGO.md
 
-## Imported Staging Nodes
+- Map action: move_as_core
+- Target role in map: primary
+- Raw mapped target: akteur/C2C_NGO
+- Original primary target: akteur/C2C_NGO
+- Original secondary targets: akteurtyp/kammern_verbaende_ngos_netzwerke
 
-- Source: _graph/akteur/C2C_NGO
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Verknüpfungen
 
+**Übergeordnete Themen**
+- Cradle to Cradle in Bildung und Politik
+- Materialgesundheit und Kreislauffähigkeit
+- C2C LAB und Netzwerkformate
+
+**Verwandte Dateien**
+- `akteur/EPEA.md`
+- `methode/Cradle_to_Cradle.md`
+- `material/Schadstofffreiheit.md`
+- `standard/Materialpass.md`
+- `wirtschaft/Herstellerverantwortung.md`
+
+**Akteurstyp**
+- Zivilgesellschaftlicher Bildungs- und Netzwerkakteur
+
+## Kurzüberblick zur Kategorie
+
+**Cradle to Cradle NGO** ist im Kontext „Entwerfen mit Bestand“ / Wiederverwendung in der Architektur ein Zivilgesellschaftlicher Bildungs- und Netzwerkakteur. Cradle to Cradle NGO ist eine zivilgesellschaftliche Organisation, die das Cradle-to-Cradle-Prinzip verbreitet. Für ReUse ist sie relevant als Bildungs-, Netzwerk- und Diskursakteur, der gesunde, kreislauffähige und dokumentierte Produkte als Voraussetzung zukünftiger Wiederverwendung beschreibt.
+
+Für das Repo ist dieser Akteur besonders wichtig, weil die Wiederverwendung von Bauteilen nicht nur durch einzelne Produkte entsteht, sondern durch ein Zusammenspiel aus politischem Rahmen, Planungskultur, Daten, Materiallogistik, Rückbau, Qualitätssicherung und Nachfrage. Die Datei ist als Akteursprofil zu lesen: Sie beschreibt Rolle, Nutzen, Grenzen und sinnvolle Querverbindungen, ersetzt aber keine projektspezifische Prüfung von Recht, Technik, Schadstoffen, Kosten oder Verfügbarkeit.
+
+## Zentrale Unterthemen
+
+- C2C LAB Berlin
+- Bildungs- und Netzwerkformate
+- biologische und technische Kreisläufe
+- Schadstofffreiheit und positive Materialauswahl
+- Abgrenzung zu Bestandserhalt und Suffizienz
+
+## Wichtige Dateien dieser Kategorie mit je 1–3 Sätzen Einordnung
+
+- methode/Cradle_to_Cradle.md — ordnet C2C als Leitbild für Produkt- und Gebäudekreisläufe ein.
+- material/Schadstofffreiheit.md — behandelt Inhaltsstoffe als Voraussetzung für Wiederverwendung.
+- wirtschaft/Herstellerverantwortung.md — verknüpft C2C mit Rücknahme- und Kreislaufmodellen.
+
+Weitere Anschlussdateien sollten den Akteur nicht nur erwähnen, sondern prüfen, welche konkrete Funktion er im ReUse-Prozess übernimmt: politischer Druck, technische Bewertung, Marktplatz, physisches Lager, Planungskompetenz, Forschung, Zertifizierung oder kommunale Infrastruktur.
+
+## Relevanz für Wiederverwendung / Entwerfen mit Bestand
+
+- Macht Materialgesundheit und Kreislauffähigkeit als positive Qualitätsziele bekannt.
+- Stärkt Design for Disassembly und Produkttransparenz als Voraussetzung künftiger ReUse-Systeme.
+- Verbindet Politik, Wirtschaft, Planung, Bildung und Zivilgesellschaft.
+
+Die Einordnung ist bewusst nicht auf „Bauteile kaufen“ reduziert. Gerade in Deutschland entstehen ReUse-Potenziale häufig vor dem eigentlichen Materialhandel: durch Erhaltungsentscheidungen, frühe Zielvereinbarungen, selektiven Rückbau, Gebäuderessourcenpässe, kommunale Beschaffung, lokale Materialorte und eine Planungskultur, die mit Verfügbarkeit, Patina und Unregelmäßigkeit umgehen kann.
+
+## Querverbindungen zu anderen Kategorien
+
+- Zu EPEA: NGO und Beratungspraxis ergänzen sich, haben aber unterschiedliche Rollen.
+- Zu DGNB: C2C kann in Gebäudebewertung und Materialpässe übersetzt werden.
+- Zu ReUse-Projekten: C2C-Neuprodukte dürfen Abriss und Mehrbau nicht legitimieren.
+
+Für die Arbeit im Repo sollte der Akteur mit Methoden-, Werkzeug-, Material-, Rechts- und Wirtschaftlichkeitsdateien verknüpft werden. Besonders wichtig ist die Unterscheidung zwischen:
+- **Diskurs / Policy**: schafft Legitimation und politische Forderungen.
+- **Daten / Bewertung**: macht Ressourcen sichtbar und vergleichbar.
+- **Markt / Logistik**: bringt Angebot und Nachfrage zusammen.
+- **Planung / Entwurf**: integriert verfügbare Bauteile in Räume, Tragwerke und Details.
+- **Nachweis / Recht**: entscheidet, ob ein Bauteil genehmigungs- und haftungsfähig wiederverwendet werden kann.
+
+## Offene Lücken / Ausbaufelder
+
+- C2C-Fokus auf Produktoptimierung kann Suffizienz und Bestandserhalt überdecken.
+- Zertifizierte oder C2C-orientierte Produkte sind nicht automatisch wiederverwendet.
+- Für alte Bestandsmaterialien fehlen häufig Inhaltsstoffdaten.
+
+Zusätzlich sollte bei jeder späteren Vertiefung geprüft werden, ob die Angaben auf offiziellen Quellen, unabhängigen Evaluationen, Projektpublikationen oder Eigenkommunikation beruhen. Eigenangaben von Plattformen, Büros und Herstellern sind nützlich, müssen aber bei CO₂-Einsparungen, Wiederverwendungsquoten, Preisen und Skalierbarkeit kritisch markiert werden.
+
+## Quellen / Bezugslogik
+
+- https://c2c.ngo/
+- https://c2c.ngo/c2c-lab/
+- https://c2ccertified.org/
+- https://epea.com/
+- https://www.dgnb.de/de/nachhaltiges-bauen/zirkulaeres-bauen

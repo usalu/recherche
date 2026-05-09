@@ -1,20 +1,22 @@
-﻿---
-id: "Charles_Malis_Molenbeek__006__GTD_Consulting_GTD_Engineering"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "GTD Consulting / GTD Engineering - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse"
 ---
-# GTD Consulting / GTD Engineering - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Charles_Malis_Molenbeek__006__GTD_Consulting_GTD_Engineering"
+title: "GTD Consulting / GTD Engineering - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Mamout / igloo"
+node_kind: "relation"
+fallstudie: "fallstudie/Charles_Malis_Molenbeek"
+bauobjekt:
+  - "Charles_Malis_Molenbeek"
+projekt:
+  - "Charles_Malis_Molenbeek"
+---
 
-## Clean Node
+# GTD Consulting / GTD Engineering - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Charles_Malis_Molenbeek__006__GTD_Consulting_GTD_Engineering
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Charles_Malis_Molenbeek__006__GTD_Consulting_GTD_Engineering
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** GTD Consulting / GTD Engineering
+- **Beziehung zur Fallstudie:** Technik/Energie
+- **Quelle/Beleg:** Mamout / igloo
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Schreibweise variiert.

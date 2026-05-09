@@ -1,20 +1,43 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__005__Szenografie"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Szenografie - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Szenografie - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Musee_de_Folklore_Mouscron__005__Szenografie"
+title: "Szenografie - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "nicht als Reuse belegt"
+quelle_label: "[S3], [S5]"
+material_label: "Ausstellungsbau"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+neue_funktion: "Museumsszenografie"
+bauteil_label: "Szenografie"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Szenografie - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Musee_de_Folklore_Mouscron__005__Szenografie
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Musee_de_Folklore_Mouscron__005__Szenografie
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Szenografie
+- **Material:** Ausstellungsbau
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Museumsszenografie
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** evtl.
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Ausstellungsfunktion
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht als Reuse belegt
+- **Quelle:** [S3], [S5]
+- **unbekannt:** alles

@@ -1,20 +1,43 @@
-﻿---
-id: "Bestandverplanzung_Pavilion_Muenchen__005__Treppen_Gel_nder"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Treppen/GelÃ¤nder - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Treppen/GelÃ¤nder - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Bestandverplanzung_Pavilion_Muenchen__005__Treppen_Gel_nder"
+title: "Treppen/Geländer - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "nicht belegt"
+quelle_label: "—"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Bestandverplanzung_Pavilion_Muenchen"
+bauobjekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+neue_funktion: "unbekannt"
+bauteil_label: "Treppen/Geländer"
+projekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Treppen/Geländer - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Bestandverplanzung_Pavilion_Muenchen__005__Treppen_Gel_nder
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Bestandverplanzung_Pavilion_Muenchen__005__Treppen_Gel_nder
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Treppen/Geländer
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** unbekannt
+- **tragend?:** unbekannt
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Absturzsicherung
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht belegt
+- **Quelle:** —
+- **unbekannt:** alle Details

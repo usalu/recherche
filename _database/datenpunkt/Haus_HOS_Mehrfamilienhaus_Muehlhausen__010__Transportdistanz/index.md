@@ -1,20 +1,25 @@
-﻿---
-id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__010__Transportdistanz"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Transportdistanz - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Transportdistanz - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__010__Transportdistanz"
+title: "Transportdistanz - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "km"
+quelle_label: "[S7], [S1]"
+node_kind: "core"
+wert: "ca. 30 / 28"
+fallstudie: "fallstudie/Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+bauobjekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+projekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+---
 
-## Clean Node
+# Transportdistanz - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__010__Transportdistanz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__010__Transportdistanz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Transportdistanz
+- **Wert:** ca. 30 / 28
+- **Einheit:** km
+- **Methode/Datenmodell/Software:** Architektenquelle / PRECS
+- **Bilanzgrenze:** Leinefelde–Mühlhausen
+- **Quelle:** [S7], [S1]
+- **Vertrauensgrad:** belegt

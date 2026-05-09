@@ -1,20 +1,13 @@
-﻿---
-id: "Bauteilanzahl"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Bauteilanzahl"
 ---
+entity: "kennwertdefinition"
+id: "Bauteilanzahl"
+title: "Bauteilanzahl"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Bauteilanzahl
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Bauteilanzahl
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Bauteilanzahl
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Anzahl von Bauteilen, Komponenten, Produkten oder Elementen.

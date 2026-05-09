@@ -1,20 +1,43 @@
-﻿---
-id: "The_Green_House_Utrecht__006__Innenw_nde"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "InnenwÃ¤nde - The Green House, Utrecht"
 ---
-# InnenwÃ¤nde - The Green House, Utrecht
+entity: "reuse_einsatz"
+id: "The_Green_House_Utrecht__006__Innenw_nde"
+title: "Innenwände - The Green House, Utrecht"
+build_status: "promoted_phase42"
+huerde_label: "unklare Herkunft"
+quelle_label: "Q3"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "laut Q3 wiederverwendet"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/The_Green_House_Utrecht"
+bauobjekt:
+  - "The_Green_House_Utrecht"
+neue_funktion: "raumbildende Innenwände"
+bauteil_label: "Innenwände"
+projekt:
+  - "The_Green_House_Utrecht"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Innenwände - The Green House, Utrecht
 
-- Final path: _database/reuse_einsatz/The_Green_House_Utrecht__006__Innenw_nde
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/The_Green_House_Utrecht__006__Innenw_nde
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Innenwände
+- **Material:** unbekannt
+- **Herkunft:** laut Q3 wiederverwendet
+- **alte Funktion:** unbekannt
+- **neue Funktion:** raumbildende Innenwände
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Schallschutz, Brand
+- **Norm/Recht:** unbekannt
+- **Hürde:** unklare Herkunft
+- **Quelle:** Q3
+- **unbekannt:** Details

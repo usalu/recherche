@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__007__Retained_Print_Building_structure"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Retained Print Building structure - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Retained Print Building structure - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__007__Retained_Print_Building_structure"
+title: "Retained Print Building structure - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S1, S2, S4"
+node_kind: "core"
+wert: "ca. 80"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Retained Print Building structure - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__007__Retained_Print_Building_structure
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__007__Retained_Print_Building_structure
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Retained Print Building structure
+- **Wert:** ca. 80
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** HTS/Bennetts/Mace
+- **Bilanzgrenze:** Bestandserhalt Print Building
+- **Quelle:** S1, S2, S4
+- **Vertrauensgrad:** belegt

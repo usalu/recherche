@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__016__Gesamt_embodied_carbon"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Gesamt embodied carbon - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# Gesamt embodied carbon - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__016__Gesamt_embodied_carbon"
+title: "Gesamt embodied carbon - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "kgCO₂e/m²"
+quelle_label: "[S1], [S7], [S11]"
+node_kind: "core"
+wert: "267,9 / 300"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# Gesamt embodied carbon - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__016__Gesamt_embodied_carbon
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__016__Gesamt_embodied_carbon
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gesamt embodied carbon
+- **Wert:** 267,9 / 300
+- **Einheit:** kgCO₂e/m²
+- **Methode/Datenmodell/Software:** Grosvenor/ASBP/TFT
+- **Bilanzgrenze:** Gesamtprojekt
+- **Quelle:** [S1], [S7], [S11]
+- **Vertrauensgrad:** belegt, abweichend

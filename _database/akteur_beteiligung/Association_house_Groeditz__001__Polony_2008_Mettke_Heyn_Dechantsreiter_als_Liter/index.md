@@ -1,20 +1,22 @@
-﻿---
-id: "Association_house_Groeditz__001__Polony_2008_Mettke_Heyn_Dechantsreiter_als_Liter"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Polony 2008; Mettke/Heyn/Dechantsreiter als Literaturquellen - Association house, GrÃ¶ditz â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
 ---
-# Polony 2008; Mettke/Heyn/Dechantsreiter als Literaturquellen - Association house, GrÃ¶ditz â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
+entity: "akteur_beteiligung"
+id: "Association_house_Groeditz__001__Polony_2008_Mettke_Heyn_Dechantsreiter_als_Liter"
+title: "Polony 2008; Mettke/Heyn/Dechantsreiter als Literaturquellen - Association house, Gröditz — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
+build_status: "promoted_phase42"
+quelle_label: "[S1]"
+node_kind: "relation"
+fallstudie: "fallstudie/Association_house_Groeditz"
+bauobjekt:
+  - "Association_house_Groeditz"
+projekt:
+  - "Association_house_Groeditz"
+---
 
-## Clean Node
+# Polony 2008; Mettke/Heyn/Dechantsreiter als Literaturquellen - Association house, Gröditz — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
 
-- Final path: _database/akteur_beteiligung/Association_house_Groeditz__001__Polony_2008_Mettke_Heyn_Dechantsreiter_als_Liter
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Association_house_Groeditz__001__Polony_2008_Mettke_Heyn_Dechantsreiter_als_Liter
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Polony 2008; Mettke/Heyn/Dechantsreiter als Literaturquellen
+- **Beziehung zur Fallstudie:** Quellenbezug
+- **Quelle/Beleg:** [S1]
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Konkrete Projektrollen unbekannt.

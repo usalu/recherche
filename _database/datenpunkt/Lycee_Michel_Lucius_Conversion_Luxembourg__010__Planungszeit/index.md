@@ -1,20 +1,25 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__010__Planungszeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Planungszeit - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Planungszeit - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__010__Planungszeit"
+title: "Planungszeit - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Zeitraum"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "01.2018–12.2019"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+---
 
-## Clean Node
+# Planungszeit - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__010__Planungszeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__010__Planungszeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Planungszeit
+- **Wert:** 01.2018–12.2019
+- **Einheit:** Zeitraum
+- **Methode/Datenmodell/Software:** Daedalus-Projektdaten
+- **Bilanzgrenze:** Planung
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

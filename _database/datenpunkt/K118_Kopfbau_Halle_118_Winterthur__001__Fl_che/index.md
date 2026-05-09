@@ -1,20 +1,25 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__001__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# FlÃ¤che - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "datenpunkt"
+id: "K118_Kopfbau_Halle_118_Winterthur__001__Fl_che"
+title: "Fläche - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S2], [S4]"
+node_kind: "core"
+wert: "1.100"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# Fläche - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__001__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__001__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 1.100
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Aufstockung
+- **Quelle:** [S2], [S4]
+- **Vertrauensgrad:** belegt

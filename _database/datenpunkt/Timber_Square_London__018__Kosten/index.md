@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__018__Kosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Kosten - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__018__Kosten"
+title: "Kosten - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "-"
+quelle_label: "-"
+node_kind: "core"
+wert: "unbekannt reuse-spezifisch"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Kosten - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__018__Kosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__018__Kosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten
+- **Wert:** unbekannt reuse-spezifisch
+- **Einheit:** -
+- **Methode/Datenmodell/Software:** -
+- **Bilanzgrenze:** -
+- **Quelle:** -
+- **Vertrauensgrad:** unbekannt

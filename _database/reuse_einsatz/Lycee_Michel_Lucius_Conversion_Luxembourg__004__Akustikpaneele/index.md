@@ -1,20 +1,43 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__004__Akustikpaneele"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Akustikpaneele - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Akustikpaneele - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__004__Akustikpaneele"
+title: "Akustikpaneele - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Zustand/Brandschutz"
+quelle_label: "[S1]"
+material_label: "Gips-Akustikpaneele"
+node_kind: "core"
+herkunft_label: "abgehängte Decken Block 3000"
+menge_umfang: "419 m²"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+neue_funktion: "Akustikelemente in Block 6000"
+bauteil_label: "Akustikpaneele"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+alte_funktion: "Decken-/Akustikelement"
+---
 
-## Clean Node
+# Akustikpaneele - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Lycee_Michel_Lucius_Conversion_Luxembourg__004__Akustikpaneele
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Lycee_Michel_Lucius_Conversion_Luxembourg__004__Akustikpaneele
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Akustikpaneele
+- **Material:** Gips-Akustikpaneele
+- **Herkunft:** abgehängte Decken Block 3000
+- **alte Funktion:** Decken-/Akustikelement
+- **neue Funktion:** Akustikelemente in Block 6000
+- **Menge/Umfang:** 419 m²
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Demontage, Wiedereinbau
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Akustik, Brandschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** Zustand/Brandschutz
+- **Quelle:** [S1]
+- **unbekannt:** genaue Position

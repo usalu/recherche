@@ -1,20 +1,16 @@
-﻿---
-id: "Roots_in_the_Sky_Blackfriars_Crown_Court__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Roots in the Sky / Blackfriars Crown Court, London"
 ---
+entity: "reuse_kettenstation"
+id: "Roots_in_the_Sky_Blackfriars_Crown_Court__Receiver"
+title: "Receiver - Roots in the Sky / Blackfriars Crown Court, London"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Roots_in_the_Sky_Blackfriars_Crown_Court.md"
+node_kind: "core"
+fallstudie: "fallstudie/Roots_in_the_Sky_Blackfriars_Crown_Court"
+---
+
 # Receiver - Roots in the Sky / Blackfriars Crown Court, London
 
-## Clean Node
+## Extracted Clues
 
-- Final path: _database/reuse_kettenstation/Roots_in_the_Sky_Blackfriars_Crown_Court__Receiver
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Roots_in_the_Sky_Blackfriars_Crown_Court__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

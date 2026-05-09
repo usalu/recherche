@@ -1,20 +1,25 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__011__Regenwasserspeicher"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Regenwasserspeicher - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Regenwasserspeicher - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Woongroep_Boschgaard_Den_Bosch__011__Regenwasserspeicher"
+title: "Regenwasserspeicher - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m³"
+quelle_label: "Boschgaard"
+node_kind: "core"
+wert: "bis 80"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# Regenwasserspeicher - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Woongroep_Boschgaard_Den_Bosch__011__Regenwasserspeicher
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Woongroep_Boschgaard_Den_Bosch__011__Regenwasserspeicher
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Regenwasserspeicher
+- **Wert:** bis 80
+- **Einheit:** m³
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Betrieb Wasser
+- **Quelle:** Boschgaard
+- **Vertrauensgrad:** belegt

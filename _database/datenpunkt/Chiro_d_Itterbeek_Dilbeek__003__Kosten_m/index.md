@@ -1,20 +1,25 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__003__Kosten_m"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten/mÂ² - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# Kosten/mÂ² - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Chiro_d_Itterbeek_Dilbeek__003__Kosten_m"
+title: "Kosten/m² - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "€/m²"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "3.666,67"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# Kosten/m² - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Chiro_d_Itterbeek_Dilbeek__003__Kosten_m
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Chiro_d_Itterbeek_Dilbeek__003__Kosten_m
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten/m²
+- **Wert:** 3.666,67
+- **Einheit:** €/m²
+- **Methode/Datenmodell/Software:** Construction21
+- **Bilanzgrenze:** Projekt
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

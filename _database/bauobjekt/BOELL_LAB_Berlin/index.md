@@ -1,20 +1,18 @@
-﻿---
-id: "BOELL_LAB_Berlin"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "BOELL.LAB, Berlin"
 ---
+entity: "bauobjekt"
+id: "BOELL_LAB_Berlin"
+title: "BOELL.LAB, Berlin"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\BOELL_LAB_Berlin.md"
+node_kind: "core"
+fallstudie: "fallstudie/BOELL_LAB_Berlin"
+projekt:
+  - "BOELL_LAB_Berlin"
+---
+
 # BOELL.LAB, Berlin
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/BOELL_LAB_Berlin
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/BOELL_LAB_Berlin
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

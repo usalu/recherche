@@ -1,15 +1,66 @@
-﻿---
-id: "bauteilboerse_batrecup_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteilboerse/batrecup.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteilboerse_batrecup_md"
+title: "bauteilboerse_batrecup_md"
+build_status: "promoted_phase42"
+source_filename: "batrecup.md"
+legacy_type: "Bauteilbörse"
+---
+
 # bauteilboerse_batrecup_md
 
-## Source Archive
+## Kurzbeschreibung
+BatRecup ist ein(e) Community-Plattform / App für gebrauchte Bau- und Renovierungsmaterialien mit Bezug zu Frankreich; Ursprung Baskenland, digitale Reichweite darüber hinaus. Im Reuse-Kontext liegt der Schwerpunkt auf: Kauf, Verkauf oder Weitergabe von Materialien aus Bau- und Renovierungsprojekten.
 
-- Original path: bauteilboerse/batrecup.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: split_platform_profile; old target: software_digitaltool/batrecup
+## Land / Region
+Frankreich; Ursprung Baskenland, digitale Reichweite darüber hinaus
+
+## Betreiber
+BatRecup
+
+## Zielgruppe
+Privatpersonen, Handwerk, Bau-/Renovierungsprojekte
+
+## Plattformtyp
+Community-Plattform / App für gebrauchte Bau- und Renovierungsmaterialien
+
+## Bauteilkategorien
+second-hand Baumaterialien und Bauartikel; genaue Kategorien je App/Website
+
+## Art der Wiederverwendung
+Kauf, Verkauf oder Weitergabe von Materialien aus Bau- und Renovierungsprojekten
+
+## Funktionen
+App/Plattform; Anzeigen; Suche; Kontakt zwischen Anbietern und Interessenten
+
+## Daten je Bauteil
+nicht einheitlich angegeben; Anzeige mit Beschreibung, Fotos, Standort und Preis naheliegend, aber Pflichtfelder nicht angegeben
+
+## Qualität / Prüfung
+nicht angegeben
+
+## Logistik / Lagerung
+peer-to-peer; Abholung/Transport nicht standardisiert angegeben
+
+## Geschäftsmodell
+Marktplatz/App; Gebühren nicht angegeben
+
+## Ökologische Bewertung
+fördert lokale Weiterverwendung und reduziert Baustellen-/Renovierungsabfälle; quantitative Bewertung nicht angegeben
+
+## Stärken
+niedrige Zugangshürde; P2P-Logik; gut für kleinere Mengen
+
+## Schwächen / Hemmnisse
+Qualität, Normen und Gewährleistung stark listingabhängig; keine zentrale Prüfung ersichtlich
+
+## Relevanz für zirkuläres Bauen
+mittel bis hoch: wertvoll für kleinteilige, lokale Wiederverwendung von Baumaterialien.
+
+## Quellen und Links
+- https://www.batrecup.com/
+- https://play.google.com/store/apps/details?id=com.batrecup
+- https://www.batrecup.com/batrecup-lappli-cest-parti/
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

@@ -1,20 +1,25 @@
-﻿---
-id: "Impact_Hub_Berlin_CRCLR_Fitout__001__Impact_Hub_Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Impact Hub FlÃ¤che - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Impact Hub FlÃ¤che - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Impact_Hub_Berlin_CRCLR_Fitout__001__Impact_Hub_Fl_che"
+title: "Impact Hub Fläche - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S4"
+node_kind: "core"
+wert: "3.500"
+fallstudie: "fallstudie/Impact_Hub_Berlin_CRCLR_Fitout"
+bauobjekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+projekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+---
 
-## Clean Node
+# Impact Hub Fläche - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Impact_Hub_Berlin_CRCLR_Fitout__001__Impact_Hub_Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Impact_Hub_Berlin_CRCLR_Fitout__001__Impact_Hub_Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Impact Hub Fläche
+- **Wert:** 3.500
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Eigenangabe Impact Hub
+- **Bilanzgrenze:** Coworking-Space
+- **Quelle:** S4
+- **Vertrauensgrad:** belegt

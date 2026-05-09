@@ -1,20 +1,43 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__006__Glas_Zedernfassade"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Glas-/Zedernfassade - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Glas-/Zedernfassade - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Big_Dig_House_Lexington_Massachusetts__006__Glas_Zedernfassade"
+title: "Glas-/Zedernfassade - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "nicht zählen"
+quelle_label: "Britannica, New Yorker"
+material_label: "Glas / cedar"
+node_kind: "core"
+herkunft_label: "vermutlich neu"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+neue_funktion: "Hülle"
+bauteil_label: "Glas-/Zedernfassade"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+alte_funktion: "keine"
+---
 
-## Clean Node
+# Glas-/Zedernfassade - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Big_Dig_House_Lexington_Massachusetts__006__Glas_Zedernfassade
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Big_Dig_House_Lexington_Massachusetts__006__Glas_Zedernfassade
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Glas-/Zedernfassade
+- **Material:** Glas / cedar
+- **Herkunft:** vermutlich neu
+- **alte Funktion:** keine
+- **neue Funktion:** Hülle
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** nicht Reuse belegt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Hülle / Witterung
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht zählen
+- **Quelle:** Britannica, New Yorker
+- **unbekannt:** Reuse-Anteil

@@ -1,20 +1,25 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich__003__Ausf_hrungskredit_neue_einmalige_Ausgaben"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "AusfÃ¼hrungskredit / neue einmalige Ausgaben - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# AusfÃ¼hrungskredit / neue einmalige Ausgaben - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "datenpunkt"
+id: "Juch_Areal_Recyclingzentrum_Zuerich__003__Ausf_hrungskredit_neue_einmalige_Ausgaben"
+title: "Ausführungskredit / neue einmalige Ausgaben - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+einheit: "Mio. CHF"
+quelle_label: "[S2], [S3]"
+node_kind: "core"
+wert: "33,1"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+bauobjekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+projekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# Ausführungskredit / neue einmalige Ausgaben - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/datenpunkt/Juch_Areal_Recyclingzentrum_Zuerich__003__Ausf_hrungskredit_neue_einmalige_Ausgaben
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Juch_Areal_Recyclingzentrum_Zuerich__003__Ausf_hrungskredit_neue_einmalige_Ausgaben
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Ausführungskredit / neue einmalige Ausgaben
+- **Wert:** 33,1
+- **Einheit:** Mio. CHF
+- **Methode/Datenmodell/Software:** Stadt Zürich
+- **Bilanzgrenze:** Projektierung + Erstellung + Grundstücksübertrag
+- **Quelle:** [S2], [S3]
+- **Vertrauensgrad:** belegt für Planung

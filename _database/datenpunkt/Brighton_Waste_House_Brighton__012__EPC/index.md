@@ -1,20 +1,25 @@
-﻿---
-id: "Brighton_Waste_House_Brighton__012__EPC"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "EPC - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung"
 ---
-# EPC - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung
+entity: "datenpunkt"
+id: "Brighton_Waste_House_Brighton__012__EPC"
+title: "EPC - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Klasse"
+quelle_label: "University Alliance; LABC"
+node_kind: "core"
+wert: "A"
+fallstudie: "fallstudie/Brighton_Waste_House_Brighton"
+bauobjekt:
+  - "Brighton_Waste_House_Brighton"
+projekt:
+  - "Brighton_Waste_House_Brighton"
+---
 
-## Clean Node
+# EPC - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung
 
-- Final path: _database/datenpunkt/Brighton_Waste_House_Brighton__012__EPC
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brighton_Waste_House_Brighton__012__EPC
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** EPC
+- **Wert:** A
+- **Einheit:** Klasse
+- **Methode/Datenmodell/Software:** Energieausweis
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** University Alliance; LABC
+- **Vertrauensgrad:** belegt

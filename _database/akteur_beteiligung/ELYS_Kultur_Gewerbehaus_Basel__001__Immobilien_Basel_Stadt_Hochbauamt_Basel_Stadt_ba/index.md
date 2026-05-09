@@ -1,20 +1,22 @@
-﻿---
-id: "ELYS_Kultur_Gewerbehaus_Basel__001__Immobilien_Basel_Stadt_Hochbauamt_Basel_Stadt_ba"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Immobilien Basel-Stadt; Hochbauamt Basel-Stadt; baubÃ¼ro in situ; S+B; Jauslin Stebler; Pro Engineering; Haustec; Rapp AG; Husner AG Holzbau; Zirkular - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse"
 ---
-# Immobilien Basel-Stadt; Hochbauamt Basel-Stadt; baubÃ¼ro in situ; S+B; Jauslin Stebler; Pro Engineering; Haustec; Rapp AG; Husner AG Holzbau; Zirkular - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "ELYS_Kultur_Gewerbehaus_Basel__001__Immobilien_Basel_Stadt_Hochbauamt_Basel_Stadt_ba"
+title: "Immobilien Basel-Stadt; Hochbauamt Basel-Stadt; baubüro in situ; S+B; Jauslin Stebler; Pro Engineering; Haustec; Rapp AG; Husner AG Holzbau; Zirkular - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Kanton Basel-Stadt; Zirkular; Husner"
+node_kind: "relation"
+fallstudie: "fallstudie/ELYS_Kultur_Gewerbehaus_Basel"
+bauobjekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+projekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+---
 
-## Clean Node
+# Immobilien Basel-Stadt; Hochbauamt Basel-Stadt; baubüro in situ; S+B; Jauslin Stebler; Pro Engineering; Haustec; Rapp AG; Husner AG Holzbau; Zirkular - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/ELYS_Kultur_Gewerbehaus_Basel__001__Immobilien_Basel_Stadt_Hochbauamt_Basel_Stadt_ba
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/ELYS_Kultur_Gewerbehaus_Basel__001__Immobilien_Basel_Stadt_Hochbauamt_Basel_Stadt_ba
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Immobilien Basel-Stadt; Hochbauamt Basel-Stadt; baubüro in situ; S+B; Jauslin Stebler; Pro Engineering; Haustec; Rapp AG; Husner AG Holzbau; Zirkular
+- **Beziehung zur Fallstudie:** Akteure
+- **Quelle/Beleg:** Kanton Basel-Stadt; Zirkular; Husner
+- **Vertrauensgrad:** belegt
+- **Anmerkung:**

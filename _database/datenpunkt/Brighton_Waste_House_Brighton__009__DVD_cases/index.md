@@ -1,20 +1,25 @@
-﻿---
-id: "Brighton_Waste_House_Brighton__009__DVD_cases"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "DVD cases - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung"
 ---
-# DVD cases - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung
+entity: "datenpunkt"
+id: "Brighton_Waste_House_Brighton__009__DVD_cases"
+title: "DVD cases - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "University of Brighton 2018"
+node_kind: "core"
+wert: "4.000"
+fallstudie: "fallstudie/Brighton_Waste_House_Brighton"
+bauobjekt:
+  - "Brighton_Waste_House_Brighton"
+projekt:
+  - "Brighton_Waste_House_Brighton"
+---
 
-## Clean Node
+# DVD cases - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung
 
-- Final path: _database/datenpunkt/Brighton_Waste_House_Brighton__009__DVD_cases
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brighton_Waste_House_Brighton__009__DVD_cases
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** DVD cases
+- **Wert:** 4.000
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Materialzählung
+- **Bilanzgrenze:** Wandfüllung
+- **Quelle:** University of Brighton 2018
+- **Vertrauensgrad:** belegt

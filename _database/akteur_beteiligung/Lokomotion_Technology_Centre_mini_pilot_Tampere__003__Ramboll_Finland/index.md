@@ -1,20 +1,22 @@
-﻿---
-id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__003__Ramboll_Finland"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Ramboll Finland - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Ramboll Finland - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__003__Ramboll_Finland"
+title: "Ramboll Finland - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "ReCreate 2026"
+node_kind: "relation"
+fallstudie: "fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere"
+bauobjekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+projekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+---
 
-## Clean Node
+# Ramboll Finland - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__003__Ramboll_Finland
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__003__Ramboll_Finland
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Ramboll Finland
+- **Beziehung zur Fallstudie:** Tragwerksplanung und Dokumentation für standortspezifische Zulassung
+- **Quelle/Beleg:** ReCreate 2026
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** technische Schlüsselrolle

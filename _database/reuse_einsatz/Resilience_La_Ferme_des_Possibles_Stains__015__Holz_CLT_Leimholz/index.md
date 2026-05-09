@@ -1,20 +1,43 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__015__Holz_CLT_Leimholz"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Holz/CLT/Leimholz - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Holz/CLT/Leimholz - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Resilience_La_Ferme_des_Possibles_Stains__015__Holz_CLT_Leimholz"
+title: "Holz/CLT/Leimholz - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "nicht Direct Reuse"
+quelle_label: "[S2]"
+material_label: "Holz neu, französische Wälder"
+node_kind: "core"
+herkunft_label: "neu"
+menge_umfang: "Hauptstruktur"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+neue_funktion: "Primärstruktur"
+bauteil_label: "Holz/CLT/Leimholz"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+alte_funktion: "—"
+---
 
-## Clean Node
+# Holz/CLT/Leimholz - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__015__Holz_CLT_Leimholz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__015__Holz_CLT_Leimholz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Holz/CLT/Leimholz
+- **Material:** Holz neu, französische Wälder
+- **Herkunft:** neu
+- **alte Funktion:** —
+- **neue Funktion:** Primärstruktur
+- **Menge/Umfang:** Hauptstruktur
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Neubau
+- **Verbindung:** Holzbau
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Tragwerk, Brandschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht Direct Reuse
+- **Quelle:** [S2]
+- **unbekannt:** nicht Reuse

@@ -1,20 +1,22 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__001__V_Projectiles"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "V+ / Projectiles - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# V+ / Projectiles - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Musee_de_Folklore_Mouscron__001__V_Projectiles"
+title: "V+ / Projectiles - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S3], [S6]"
+node_kind: "relation"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# V+ / Projectiles - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Musee_de_Folklore_Mouscron__001__V_Projectiles
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Musee_de_Folklore_Mouscron__001__V_Projectiles
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** V+ / Projectiles
+- **Beziehung zur Fallstudie:** Architekt / Szenografie
+- **Quelle/Beleg:** [S3], [S6]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** V+ Projectiles laut V+.

@@ -1,20 +1,25 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__004__ffnung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Ã–ffnung - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Ã–ffnung - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Svanen_Kindergarten_Gladsaxe__004__ffnung"
+title: "Öffnung - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Monat/Jahr"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "April 2022"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+bauobjekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+projekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# Öffnung - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Svanen_Kindergarten_Gladsaxe__004__ffnung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Svanen_Kindergarten_Gladsaxe__004__ffnung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Öffnung
+- **Wert:** April 2022
+- **Einheit:** Monat/Jahr
+- **Methode/Datenmodell/Software:** State of Green
+- **Bilanzgrenze:** Inbetriebnahme geplant/erfolgt
+- **Quelle:** [S2]
+- **Vertrauensgrad:** teilweise belegt

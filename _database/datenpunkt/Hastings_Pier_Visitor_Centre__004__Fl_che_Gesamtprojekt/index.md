@@ -1,20 +1,25 @@
-﻿---
-id: "Hastings_Pier_Visitor_Centre__004__Fl_che_Gesamtprojekt"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che Gesamtprojekt - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
 ---
-# FlÃ¤che Gesamtprojekt - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings
+entity: "datenpunkt"
+id: "Hastings_Pier_Visitor_Centre__004__Fl_che_Gesamtprojekt"
+title: "Fläche Gesamtprojekt - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Q3"
+node_kind: "core"
+wert: "11.720"
+fallstudie: "fallstudie/Hastings_Pier_Visitor_Centre"
+bauobjekt:
+  - "Hastings_Pier_Visitor_Centre"
+projekt:
+  - "Hastings_Pier_Visitor_Centre"
+---
 
-## Clean Node
+# Fläche Gesamtprojekt - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings
 
-- Final path: _database/datenpunkt/Hastings_Pier_Visitor_Centre__004__Fl_che_Gesamtprojekt
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Hastings_Pier_Visitor_Centre__004__Fl_che_Gesamtprojekt
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche Gesamtprojekt
+- **Wert:** 11.720
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Pier/Gesamtprojekt, nicht Reuse-Fläche
+- **Quelle:** Q3
+- **Vertrauensgrad:** belegt

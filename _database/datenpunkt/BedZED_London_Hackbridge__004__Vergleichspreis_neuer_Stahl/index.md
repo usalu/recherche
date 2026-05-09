@@ -1,20 +1,25 @@
-﻿---
-id: "BedZED_London_Hackbridge__004__Vergleichspreis_neuer_Stahl"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Vergleichspreis neuer Stahl - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Vergleichspreis neuer Stahl - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "BedZED_London_Hackbridge__004__Vergleichspreis_neuer_Stahl"
+title: "Vergleichspreis neuer Stahl - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "£/t"
+quelle_label: "S4"
+node_kind: "core"
+wert: "313"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+projekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# Vergleichspreis neuer Stahl - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/BedZED_London_Hackbridge__004__Vergleichspreis_neuer_Stahl
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BedZED_London_Hackbridge__004__Vergleichspreis_neuer_Stahl
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Vergleichspreis neuer Stahl
+- **Wert:** 313
+- **Einheit:** £/t
+- **Methode/Datenmodell/Software:** Kostenvergleich
+- **Bilanzgrenze:** Stahlbeschaffung
+- **Quelle:** S4
+- **Vertrauensgrad:** belegt

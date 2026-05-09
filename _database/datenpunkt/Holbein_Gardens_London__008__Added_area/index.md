@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__008__Added_area"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Added area - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# Added area - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__008__Added_area"
+title: "Added area - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S8]"
+node_kind: "core"
+wert: "2.322"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# Added area - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__008__Added_area
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__008__Added_area
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Added area
+- **Wert:** 2.322
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Optoppen
+- **Bilanzgrenze:** Aufstockung/Erweiterung
+- **Quelle:** [S8]
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,22 @@
-﻿---
-id: "gjG_House_Gentbrugge__001__BLAF_Architecten"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "BLAF Architecten - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# BLAF Architecten - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "gjG_House_Gentbrugge__001__BLAF_Architecten"
+title: "BLAF Architecten - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S2]"
+node_kind: "relation"
+fallstudie: "fallstudie/gjG_House_Gentbrugge"
+bauobjekt:
+  - "gjG_House_Gentbrugge"
+projekt:
+  - "gjG_House_Gentbrugge"
+---
 
-## Clean Node
+# BLAF Architecten - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/gjG_House_Gentbrugge__001__BLAF_Architecten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/gjG_House_Gentbrugge__001__BLAF_Architecten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** BLAF Architecten
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** [S1], [S2]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Designteam

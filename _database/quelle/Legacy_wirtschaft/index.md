@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_wirtschaft"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Wirtschaft"
 ---
+entity: "quelle"
+id: "Legacy_wirtschaft"
+title: "Wirtschaft"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Wirtschaft
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_wirtschaft
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_wirtschaft
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Wirtschaft

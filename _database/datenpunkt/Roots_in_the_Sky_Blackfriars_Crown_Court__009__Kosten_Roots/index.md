@@ -1,20 +1,25 @@
-﻿---
-id: "Roots_in_the_Sky_Blackfriars_Crown_Court__009__Kosten_Roots"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten Roots - Roots in the Sky / Blackfriars Crown Court, London"
 ---
+entity: "datenpunkt"
+id: "Roots_in_the_Sky_Blackfriars_Crown_Court__009__Kosten_Roots"
+title: "Kosten Roots - Roots in the Sky / Blackfriars Crown Court, London"
+build_status: "promoted_phase42"
+einheit: "Mio. £"
+quelle_label: "[S10]"
+node_kind: "core"
+wert: "180"
+fallstudie: "fallstudie/Roots_in_the_Sky_Blackfriars_Crown_Court"
+bauobjekt:
+  - "Roots_in_the_Sky_Blackfriars_Crown_Court"
+projekt:
+  - "Roots_in_the_Sky_Blackfriars_Crown_Court"
+---
+
 # Kosten Roots - Roots in the Sky / Blackfriars Crown Court, London
 
-## Clean Node
-
-- Final path: _database/datenpunkt/Roots_in_the_Sky_Blackfriars_Crown_Court__009__Kosten_Roots
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Roots_in_the_Sky_Blackfriars_Crown_Court__009__Kosten_Roots
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten Roots
+- **Wert:** 180
+- **Einheit:** Mio. £
+- **Methode/Datenmodell/Software:** Medienangabe
+- **Bilanzgrenze:** ursprüngliches Projekt
+- **Quelle:** [S10]
+- **Vertrauensgrad:** teilweise belegt

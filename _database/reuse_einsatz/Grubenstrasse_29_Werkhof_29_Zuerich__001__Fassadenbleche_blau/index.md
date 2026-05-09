@@ -1,20 +1,43 @@
-﻿---
-id: "Grubenstrasse_29_Werkhof_29_Zuerich__001__Fassadenbleche_blau"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fassadenbleche, blau - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fassadenbleche, blau - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Grubenstrasse_29_Werkhof_29_Zuerich__001__Fassadenbleche_blau"
+title: "Fassadenbleche, blau - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Beschaffung, Maße, Zustand"
+quelle_label: "Zirkular; Werkhof29"
+material_label: "Stahlblech"
+node_kind: "core"
+herkunft_label: "externe Industriehalle / Rückbauprojekt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Grubenstrasse_29_Werkhof_29_Zuerich"
+bauobjekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+neue_funktion: "Fassadenverkleidung der Aufstockung"
+bauteil_label: "Fassadenbleche, blau"
+projekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+alte_funktion: "Hallen-/Fassadenblech"
+---
 
-## Clean Node
+# Fassadenbleche, blau - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Grubenstrasse_29_Werkhof_29_Zuerich__001__Fassadenbleche_blau
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Grubenstrasse_29_Werkhof_29_Zuerich__001__Fassadenbleche_blau
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fassadenbleche, blau
+- **Material:** Stahlblech
+- **Herkunft:** externe Industriehalle / Rückbauprojekt
+- **alte Funktion:** Hallen-/Fassadenblech
+- **neue Funktion:** Fassadenverkleidung der Aufstockung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Demontage, Zuschnitt/Anpassung unbekannt
+- **Verbindung:** mechanisch vermutet
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Witterung, Befestigung, Brandschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** Beschaffung, Maße, Zustand
+- **Quelle:** Zirkular; Werkhof29
+- **unbekannt:** Menge, Prüfungen

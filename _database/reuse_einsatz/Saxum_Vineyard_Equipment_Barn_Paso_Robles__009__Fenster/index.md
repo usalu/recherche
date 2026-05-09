@@ -1,20 +1,43 @@
-﻿---
-id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Fenster"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fenster - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fenster - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Fenster"
+title: "Fenster - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "keine Quelle"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+bauobjekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+neue_funktion: "unbekannt"
+bauteil_label: "Fenster"
+projekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Fenster - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Fenster
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Saxum_Vineyard_Equipment_Barn_Paso_Robles__009__Fenster
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fenster
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** unbekannt
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** keine Quelle
+- **unbekannt:** ja

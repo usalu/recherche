@@ -1,20 +1,13 @@
-﻿---
-id: "Technische_Freigabe"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Technische Freigabe"
 ---
+entity: "huerde"
+id: "Technische_Freigabe"
+title: "Technische Freigabe"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Technische Freigabe
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Technische_Freigabe
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Technische_Freigabe
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Projektbezogene technische Freigabe, Zulassung oder bauaufsichtliche Akzeptanz als Huerde.

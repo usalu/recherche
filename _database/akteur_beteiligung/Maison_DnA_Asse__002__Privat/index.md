@@ -1,20 +1,22 @@
-﻿---
-id: "Maison_DnA_Asse__002__Privat"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Privat - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Privat - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Maison_DnA_Asse__002__Privat"
+title: "Privat - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Maison_DnA_Asse"
+bauobjekt:
+  - "Maison_DnA_Asse"
+projekt:
+  - "Maison_DnA_Asse"
+---
 
-## Clean Node
+# Privat - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Maison_DnA_Asse__002__Privat
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Maison_DnA_Asse__002__Privat
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Privat
+- **Beziehung zur Fallstudie:** Bauherr
+- **Quelle/Beleg:** [S3]
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** nicht namentlich genannt

@@ -1,20 +1,12 @@
-﻿---
-id: "Legacy_beispiel"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "beispiel.md"
 ---
+entity: "quelle"
+id: "Legacy_beispiel"
+title: "beispiel.md"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: ""
+---
+
 # beispiel.md
 
-## Clean Node
-
-- Final path: _database/quelle/Legacy_beispiel
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_beispiel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+## Legacy Content

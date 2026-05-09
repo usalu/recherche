@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__011__Montagezeit_Frame_Floors"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Montagezeit Frame/Floors - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Montagezeit Frame/Floors - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_House_Lexington_Massachusetts__011__Montagezeit_Frame_Floors"
+title: "Montagezeit Frame/Floors - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Zeit"
+quelle_label: "Inhabitat, Busyboo"
+node_kind: "core"
+wert: "4 days / 12 hours claim"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Montagezeit Frame/Floors - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_House_Lexington_Massachusetts__011__Montagezeit_Frame_Floors
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_House_Lexington_Massachusetts__011__Montagezeit_Frame_Floors
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Montagezeit Frame/Floors
+- **Wert:** 4 days / 12 hours claim
+- **Einheit:** Zeit
+- **Methode/Datenmodell/Software:** Inhabitat / Busyboo
+- **Bilanzgrenze:** frame/floors
+- **Quelle:** Inhabitat, Busyboo
+- **Vertrauensgrad:** unklar

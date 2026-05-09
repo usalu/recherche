@@ -1,20 +1,25 @@
-﻿---
-id: "Boulder_Fire_Station_3__001__wiederverwendete_Stahlmember"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete Stahlmember - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# wiederverwendete Stahlmember - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Boulder_Fire_Station_3__001__wiederverwendete_Stahlmember"
+title: "wiederverwendete Stahlmember - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Anzahl"
+quelle_label: "AISC Modern Steel; AISC Awards"
+node_kind: "core"
+wert: "89"
+fallstudie: "fallstudie/Boulder_Fire_Station_3"
+bauobjekt:
+  - "Boulder_Fire_Station_3"
+projekt:
+  - "Boulder_Fire_Station_3"
+---
 
-## Clean Node
+# wiederverwendete Stahlmember - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Boulder_Fire_Station_3__001__wiederverwendete_Stahlmember
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Boulder_Fire_Station_3__001__wiederverwendete_Stahlmember
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Stahlmember
+- **Wert:** 89
+- **Einheit:** Anzahl
+- **Methode/Datenmodell/Software:** stockpile catalog / Auswahl
+- **Bilanzgrenze:** Fire Station 3
+- **Quelle:** AISC Modern Steel; AISC Awards
+- **Vertrauensgrad:** belegt

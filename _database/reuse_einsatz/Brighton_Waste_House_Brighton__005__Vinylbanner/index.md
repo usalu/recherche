@@ -1,20 +1,43 @@
-﻿---
-id: "Brighton_Waste_House_Brighton__005__Vinylbanner"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Vinylbanner - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung"
 ---
-# Vinylbanner - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung
+entity: "reuse_einsatz"
+id: "Brighton_Waste_House_Brighton__005__Vinylbanner"
+title: "Vinylbanner - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+build_status: "promoted_phase42"
+huerde_label: "Eignung als Baufolie"
+quelle_label: "University of Brighton; University Alliance"
+material_label: "Kunststoff/Textil"
+node_kind: "core"
+herkunft_label: "alte Veranstaltungsbanner"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Brighton_Waste_House_Brighton"
+bauobjekt:
+  - "Brighton_Waste_House_Brighton"
+neue_funktion: "Dampfbremse / internal vapour control layer"
+bauteil_label: "Vinylbanner"
+projekt:
+  - "Brighton_Waste_House_Brighton"
+alte_funktion: "Werbebanner"
+---
 
-## Clean Node
+# Vinylbanner - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung
 
-- Final path: _database/reuse_einsatz/Brighton_Waste_House_Brighton__005__Vinylbanner
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Brighton_Waste_House_Brighton__005__Vinylbanner
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Vinylbanner
+- **Material:** Kunststoff/Textil
+- **Herkunft:** alte Veranstaltungsbanner
+- **alte Funktion:** Werbebanner
+- **neue Funktion:** Dampfbremse / internal vapour control layer
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** bauphysikalisch
+- **Eingriff/Aufbereitung:** Zuschnitt, Verlegung
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Dampfdiffusion, Dichtheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Eignung als Baufolie
+- **Quelle:** University of Brighton; University Alliance
+- **unbekannt:** sd-Wert

@@ -1,20 +1,22 @@
-﻿---
-id: "Big_Dig_Building_Boston__001__Single_Speed_Design_SsD"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Single Speed Design / SsD - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Single Speed Design / SsD - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Big_Dig_Building_Boston__001__Single_Speed_Design_SsD"
+title: "Single Speed Design / SsD - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "SsD / ArchDaily / Holcim"
+node_kind: "relation"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+bauobjekt:
+  - "Big_Dig_Building_Boston"
+projekt:
+  - "Big_Dig_Building_Boston"
+---
 
-## Clean Node
+# Single Speed Design / SsD - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Big_Dig_Building_Boston__001__Single_Speed_Design_SsD
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Big_Dig_Building_Boston__001__Single_Speed_Design_SsD
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Single Speed Design / SsD
+- **Beziehung zur Fallstudie:** Architektur
+- **Quelle/Beleg:** SsD / ArchDaily / Holcim
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** John Hong und Jinhee Park genannt

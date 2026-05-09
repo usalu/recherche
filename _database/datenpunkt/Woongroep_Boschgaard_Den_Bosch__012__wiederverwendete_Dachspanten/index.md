@@ -1,20 +1,25 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__012__wiederverwendete_Dachspanten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete Dachspanten - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# wiederverwendete Dachspanten - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Woongroep_Boschgaard_Den_Bosch__012__wiederverwendete_Dachspanten"
+title: "wiederverwendete Dachspanten - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "ED.nl"
+node_kind: "core"
+wert: "24"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# wiederverwendete Dachspanten - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Woongroep_Boschgaard_Den_Bosch__012__wiederverwendete_Dachspanten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Woongroep_Boschgaard_Den_Bosch__012__wiederverwendete_Dachspanten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Dachspanten
+- **Wert:** 24
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Presseangabe
+- **Bilanzgrenze:** Bauteile aus Bibliothek
+- **Quelle:** ED.nl
+- **Vertrauensgrad:** teilweise belegt

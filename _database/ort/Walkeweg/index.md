@@ -1,20 +1,24 @@
-﻿---
-id: "Walkeweg"
-entity: "ort"
-build_status: "clean_phase20"
-title: "Walkeweg"
 ---
+entity: "ort"
+id: "Walkeweg"
+title: "Walkeweg"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "ort\Walkeweg.md"
+node_kind: "knot"
+legacy_type: "Ort"
+---
+
 # Walkeweg
 
-## Clean Node
+# Walkeweg
 
-- Final path: _database/ort/Walkeweg
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/ort/Walkeweg
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

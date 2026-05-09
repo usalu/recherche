@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_reuse-strategie"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Reuse-Strategie"
 ---
+entity: "quelle"
+id: "Legacy_reuse-strategie"
+title: "Reuse-Strategie"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Reuse-Strategie
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_reuse-strategie
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_reuse-strategie
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Reuse-Strategie

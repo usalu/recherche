@@ -1,20 +1,22 @@
-﻿---
-id: "cepezed"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "cepezed"
 ---
+entity: "akteur"
+id: "cepezed"
+title: "cepezed"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot.md"
+  - "Gebäude\\The_Green_House_Utrecht.md"
+node_kind: "core"
+---
+
 # cepezed
 
-## Clean Node
+## Observed Roles
 
-- Final path: _database/akteur/cepezed
-- Build rule: typed path IDs only.
+- Architekt des circular center
+- Architektur
 
-## Imported Staging Nodes
+## Observed Fallstudien
 
-- Source: _graph/akteur/cepezed
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- fallstudie/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot
+- fallstudie/The_Green_House_Utrecht

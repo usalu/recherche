@@ -1,20 +1,43 @@
-﻿---
-id: "gjG_House_Gentbrugge__010__D_mmung"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "DÃ¤mmung - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# DÃ¤mmung - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "gjG_House_Gentbrugge__010__D_mmung"
+title: "Dämmung - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "[S1] nur Kontext"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "EPB ohne Nummer"
+fallstudie: "fallstudie/gjG_House_Gentbrugge"
+bauobjekt:
+  - "gjG_House_Gentbrugge"
+neue_funktion: "Energieperformance"
+bauteil_label: "Dämmung"
+projekt:
+  - "gjG_House_Gentbrugge"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Dämmung - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/gjG_House_Gentbrugge__010__D_mmung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/gjG_House_Gentbrugge__010__D_mmung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Dämmung
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Energieperformance
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** EPB
+- **Norm/Recht:** EPB ohne Nummer
+- **Hürde:** unbekannt
+- **Quelle:** [S1] nur Kontext
+- **unbekannt:** Material/Werte

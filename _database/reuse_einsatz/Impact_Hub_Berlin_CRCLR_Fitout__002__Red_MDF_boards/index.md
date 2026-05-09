@@ -1,20 +1,43 @@
-﻿---
-id: "Impact_Hub_Berlin_CRCLR_Fitout__002__Red_MDF_boards"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Red MDF boards - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Red MDF boards - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Impact_Hub_Berlin_CRCLR_Fitout__002__Red_MDF_boards"
+title: "Red MDF boards - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Funktion nicht vollständig klar"
+quelle_label: "S3"
+material_label: "MDF"
+node_kind: "core"
+herkunft_label: "andere Baustelle"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Impact_Hub_Berlin_CRCLR_Fitout"
+bauobjekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+neue_funktion: "Rezeption / Treffpunktzone"
+bauteil_label: "Red MDF boards"
+projekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Red MDF boards - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Impact_Hub_Berlin_CRCLR_Fitout__002__Red_MDF_boards
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Impact_Hub_Berlin_CRCLR_Fitout__002__Red_MDF_boards
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Red MDF boards
+- **Material:** MDF
+- **Herkunft:** andere Baustelle
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Rezeption / Treffpunktzone
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Oberflächen/Brandschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** Funktion nicht vollständig klar
+- **Quelle:** S3
+- **unbekannt:** Menge

@@ -1,20 +1,25 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__008__Reuse_Anteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Reuse-Anteil - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Anteil - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Resilience_La_Ferme_des_Possibles_Stains__008__Reuse_Anteil"
+title: "Reuse-Anteil - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "12,67"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# Reuse-Anteil - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__008__Reuse_Anteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__008__Reuse_Anteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Reuse-Anteil
+- **Wert:** 12,67
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Masse
+- **Bilanzgrenze:** gleiche Bilanzgrenze
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

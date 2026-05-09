@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__001__demontierte_Bodenelemente"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "demontierte Bodenelemente - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# demontierte Bodenelemente - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__001__demontierte_Bodenelemente"
+title: "demontierte Bodenelemente - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "Lagemaat"
+node_kind: "core"
+wert: "550"
+fallstudie: "fallstudie/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+bauobjekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+projekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+---
 
-## Clean Node
+# demontierte Bodenelemente - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__001__demontierte_Bodenelemente
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__001__demontierte_Bodenelemente
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** demontierte Bodenelemente
+- **Wert:** 550
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Lagemaat-Projektbericht
+- **Bilanzgrenze:** Prinsenhof A Demontage
+- **Quelle:** Lagemaat
+- **Vertrauensgrad:** belegt als Projektangabe

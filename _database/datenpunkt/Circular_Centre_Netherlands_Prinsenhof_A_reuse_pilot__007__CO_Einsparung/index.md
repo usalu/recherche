@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__007__CO_Einsparung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Einsparung - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# COâ‚‚-Einsparung - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__007__CO_Einsparung"
+title: "CO₂-Einsparung - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "t CO₂"
+quelle_label: "Lagemaat"
+node_kind: "core"
+wert: "3.500"
+fallstudie: "fallstudie/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+bauobjekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+projekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+---
 
-## Clean Node
+# CO₂-Einsparung - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__007__CO_Einsparung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__007__CO_Einsparung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Einsparung
+- **Wert:** 3.500
+- **Einheit:** t CO₂
+- **Methode/Datenmodell/Software:** Lagemaat, Methode nicht vollständig offengelegt
+- **Bilanzgrenze:** Demontage/Wiederverwendung
+- **Quelle:** Lagemaat
+- **Vertrauensgrad:** teilweise belegt; nicht unabhängig verifiziert

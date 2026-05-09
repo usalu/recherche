@@ -1,20 +1,25 @@
-﻿---
-id: "Consolis_Parma"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "Consolis Parma"
 ---
+entity: "akteur"
+id: "Consolis_Parma"
+title: "Consolis Parma"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere.md"
+  - "Gebäude\\Lokomotion_Technology_Centre_mini_pilot_Tampere.md"
+  - "Gebäude\\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md"
+node_kind: "core"
+---
+
 # Consolis Parma
 
-## Clean Node
+## Observed Roles
 
-- Final path: _database/akteur/Consolis_Parma
-- Build rule: typed path IDs only.
+- Aufbereitung der Hohlkörperdecken
+- Prüfung, Refurbishment, Produkt-Redesign
+- Qualitätskontrolle und Aufbereitung
 
-## Imported Staging Nodes
+## Observed Fallstudien
 
-- Source: _graph/akteur/Consolis_Parma
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- fallstudie/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere
+- fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere
+- fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki

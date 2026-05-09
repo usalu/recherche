@@ -1,20 +1,35 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "bauobjekt"
+id: "Upcycle_Studios_Copenhagen"
+title: "Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Upcycle_Studios_Copenhagen.md"
+node_kind: "core"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/bauobjekt/Upcycle_Studios_Copenhagen
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Upcycle_Studios_Copenhagen.md
 
-- Source: _graph/bauobjekt/Upcycle_Studios_Copenhagen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Upcycle Studios
+- **Ort:** Ørestad / Orestad, Copenhagen, Denmark
+- **Gebäude:** Reihenhausensemble / 20 terraced houses
+- **Projekt:** kommerziell skaliertes zirkuläres Wohnprojekt mit Wohn-/Arbeitsnutzung
+- **Beteiligte People / Akteure:** NREP, AG Gruppen, Lendager, MOE, Artelia, BOGL; a:gain/Lendager UP als Materialakteur in späterer Referenzkommunikation
+- **Architekt:** Lendager / Lendager Group
+- **Tragwerksplaner:** MOE laut NREP; konkrete Prüf-/Tragwerksdetails unbekannt
+- **Bauherr:** NREP / AG Gruppen
+- **Zeitraum:** 2015–2018 laut Lendager; Fertigstellung 2018 laut NREP; a:gain nennt 2019
+- **Ursprüngliche Nutzung:** nicht zutreffend als Neubauprojekt; Spenderquellen u. a. öffentliche Wohnbauten in Nordjütland, Copenhagen Metro, Dinesen-Produktionsreste
+- **Neue Nutzung:** Wohnen mit Möglichkeit zur Arbeit im Haus
+- **Fläche / Maßstab:** 3.440 m² laut NREP; 3.909 m² laut Lendager; Quellenkonflikt
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Projektbasis und Hauptmaterialien; mittel für technische Nachweise und genaue Mengen

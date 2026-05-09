@@ -1,20 +1,25 @@
-﻿---
-id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete HohlkÃ¶rperdecken - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# wiederverwendete HohlkÃ¶rperdecken - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken"
+title: "wiederverwendete Hohlkörperdecken - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "ReCreate 2026"
+node_kind: "core"
+wert: "27"
+fallstudie: "fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere"
+bauobjekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+projekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+---
 
-## Clean Node
+# wiederverwendete Hohlkörperdecken - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Lokomotion_Technology_Centre_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lokomotion_Technology_Centre_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Hohlkörperdecken
+- **Wert:** 27
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** ReCreate Projektdokumentation
+- **Bilanzgrenze:** Lokomotion-Mini-Pilot
+- **Quelle:** ReCreate 2026
+- **Vertrauensgrad:** belegt

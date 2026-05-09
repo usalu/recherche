@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__017__Lebensdauer"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Lebensdauer - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Lebensdauer - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__017__Lebensdauer"
+title: "Lebensdauer - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "NREP"
+node_kind: "core"
+wert: "50"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Lebensdauer - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__017__Lebensdauer
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__017__Lebensdauer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Lebensdauer
+- **Wert:** 50
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** LCA-Annahme
+- **Bilanzgrenze:** Betrachtungszeitraum
+- **Quelle:** NREP
+- **Vertrauensgrad:** teilweise belegt

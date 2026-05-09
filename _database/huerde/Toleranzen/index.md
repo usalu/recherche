@@ -1,20 +1,14 @@
-﻿---
-id: "Toleranzen"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Toleranzen"
 ---
+entity: "huerde"
+id: "Toleranzen"
+title: "Toleranzen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "huerde\Toleranzen.md"
+node_kind: "knot"
+legacy_type: "Hürde"
+---
+
 # Toleranzen
 
-## Clean Node
-
-- Final path: _database/huerde/Toleranzen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Toleranzen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

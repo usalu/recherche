@@ -1,20 +1,22 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich__004__Weber_Br_nnimann_AG"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Weber + BrÃ¶nnimann AG - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# Weber + BrÃ¶nnimann AG - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "akteur_beteiligung"
+id: "Juch_Areal_Recyclingzentrum_Zuerich__004__Weber_Br_nnimann_AG"
+title: "Weber + Brönnimann AG - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+quelle_label: "[S2]"
+node_kind: "relation"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+bauobjekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+projekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# Weber + Brönnimann AG - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/akteur_beteiligung/Juch_Areal_Recyclingzentrum_Zuerich__004__Weber_Br_nnimann_AG
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Juch_Areal_Recyclingzentrum_Zuerich__004__Weber_Br_nnimann_AG
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Weber + Brönnimann AG
+- **Beziehung zur Fallstudie:** Bauingenieurwesen
+- **Quelle/Beleg:** [S2]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Tragwerksplanung laut Stadt Zürich

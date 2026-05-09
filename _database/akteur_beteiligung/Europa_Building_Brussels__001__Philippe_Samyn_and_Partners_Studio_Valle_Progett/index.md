@@ -1,20 +1,22 @@
-﻿---
-id: "Europa_Building_Brussels__001__Philippe_Samyn_and_Partners_Studio_Valle_Progett"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Philippe Samyn and Partners; Studio Valle Progettazioni; Buro Happold; Belgian Buildings Agency / Regie der Gebouwen - Europa Building, Brussels â€“ Fallstudie Direct Reuse"
 ---
-# Philippe Samyn and Partners; Studio Valle Progettazioni; Buro Happold; Belgian Buildings Agency / Regie der Gebouwen - Europa Building, Brussels â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Europa_Building_Brussels__001__Philippe_Samyn_and_Partners_Studio_Valle_Progett"
+title: "Philippe Samyn and Partners; Studio Valle Progettazioni; Buro Happold; Belgian Buildings Agency / Regie der Gebouwen - Europa Building, Brussels – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Council; Jan De Nul; Bopro"
+node_kind: "relation"
+fallstudie: "fallstudie/Europa_Building_Brussels"
+bauobjekt:
+  - "Europa_Building_Brussels"
+projekt:
+  - "Europa_Building_Brussels"
+---
 
-## Clean Node
+# Philippe Samyn and Partners; Studio Valle Progettazioni; Buro Happold; Belgian Buildings Agency / Regie der Gebouwen - Europa Building, Brussels – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Europa_Building_Brussels__001__Philippe_Samyn_and_Partners_Studio_Valle_Progett
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Europa_Building_Brussels__001__Philippe_Samyn_and_Partners_Studio_Valle_Progett
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Philippe Samyn and Partners; Studio Valle Progettazioni; Buro Happold; Belgian Buildings Agency / Regie der Gebouwen
+- **Beziehung zur Fallstudie:** Akteure
+- **Quelle/Beleg:** Council; Jan De Nul; Bopro
+- **Vertrauensgrad:** belegt
+- **Anmerkung:**

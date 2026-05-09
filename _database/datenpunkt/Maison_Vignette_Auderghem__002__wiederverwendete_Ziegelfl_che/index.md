@@ -1,20 +1,25 @@
-﻿---
-id: "Maison_Vignette_Auderghem__002__wiederverwendete_Ziegelfl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete ZiegelflÃ¤che - Maison Vignette, Auderghem â€“ Fallstudie Direct Reuse"
 ---
-# wiederverwendete ZiegelflÃ¤che - Maison Vignette, Auderghem â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Maison_Vignette_Auderghem__002__wiederverwendete_Ziegelfl_che"
+title: "wiederverwendete Ziegelfläche - Maison Vignette, Auderghem – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S2], [S3]"
+node_kind: "core"
+wert: "36"
+fallstudie: "fallstudie/Maison_Vignette_Auderghem"
+bauobjekt:
+  - "Maison_Vignette_Auderghem"
+projekt:
+  - "Maison_Vignette_Auderghem"
+---
 
-## Clean Node
+# wiederverwendete Ziegelfläche - Maison Vignette, Auderghem – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Maison_Vignette_Auderghem__002__wiederverwendete_Ziegelfl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Maison_Vignette_Auderghem__002__wiederverwendete_Ziegelfl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Ziegelfläche
+- **Wert:** 36
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Fassade
+- **Quelle:** [S2], [S3]
+- **Vertrauensgrad:** belegt

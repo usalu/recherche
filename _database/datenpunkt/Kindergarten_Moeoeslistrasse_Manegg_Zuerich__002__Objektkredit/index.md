@@ -1,20 +1,25 @@
-﻿---
-id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__002__Objektkredit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Objektkredit - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Objektkredit - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__002__Objektkredit"
+title: "Objektkredit - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Mio. CHF"
+quelle_label: "Stadt Zürich"
+node_kind: "core"
+wert: "1,9"
+fallstudie: "fallstudie/Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+bauobjekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+projekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+---
 
-## Clean Node
+# Objektkredit - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__002__Objektkredit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__002__Objektkredit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Objektkredit
+- **Wert:** 1,9
+- **Einheit:** Mio. CHF
+- **Methode/Datenmodell/Software:** Stadtratsbeschluss / Projektkredit
+- **Bilanzgrenze:** BKP 1–9 inkl. MwSt. und Reserven
+- **Quelle:** Stadt Zürich
+- **Vertrauensgrad:** belegt

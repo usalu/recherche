@@ -1,20 +1,25 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__001__Wohneinheiten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wohneinheiten - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Wohneinheiten - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Woongroep_Boschgaard_Den_Bosch__001__Wohneinheiten"
+title: "Wohneinheiten - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Einheiten"
+quelle_label: "Superuse; Zayaz"
+node_kind: "core"
+wert: "19"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# Wohneinheiten - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Woongroep_Boschgaard_Den_Bosch__001__Wohneinheiten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Woongroep_Boschgaard_Den_Bosch__001__Wohneinheiten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wohneinheiten
+- **Wert:** 19
+- **Einheit:** Einheiten
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Projekt
+- **Quelle:** Superuse; Zayaz
+- **Vertrauensgrad:** belegt

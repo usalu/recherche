@@ -1,20 +1,22 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__003__John_Hong"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "John Hong - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# John Hong - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Big_Dig_House_Lexington_Massachusetts__003__John_Hong"
+title: "John Hong - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "Britannica, New Yorker"
+node_kind: "relation"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# John Hong - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Big_Dig_House_Lexington_Massachusetts__003__John_Hong
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Big_Dig_House_Lexington_Massachusetts__003__John_Hong
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** John Hong
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** Britannica, New Yorker
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Single Speed Design

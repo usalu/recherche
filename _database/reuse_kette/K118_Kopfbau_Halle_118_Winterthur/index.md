@@ -1,20 +1,17 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# Reuse-Kette - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "reuse_kette"
+id: "K118_Kopfbau_Halle_118_Winterthur"
+title: "Reuse-Kette - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\K118_Kopfbau_Halle_118_Winterthur.md"
+  - "Gebäude\\K118_Kopfbau_Halle_118_Winterthur.md"
+node_kind: "core"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# Reuse-Kette - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/reuse_kette/K118_Kopfbau_Halle_118_Winterthur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/K118_Kopfbau_Halle_118_Winterthur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

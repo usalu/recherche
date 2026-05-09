@@ -1,20 +1,22 @@
-﻿---
-id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__008__McLaren_Construction"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "McLaren Construction - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette"
 ---
-# McLaren Construction - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette
+entity: "akteur_beteiligung"
+id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__008__McLaren_Construction"
+title: "McLaren Construction - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+build_status: "promoted_phase42"
+quelle_label: "Construction Index, Civic"
+node_kind: "relation"
+fallstudie: "fallstudie/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+bauobjekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+projekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+---
 
-## Clean Node
+# McLaren Construction - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette
 
-- Final path: _database/akteur_beteiligung/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__008__McLaren_Construction
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__008__McLaren_Construction
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** McLaren Construction
+- **Beziehung zur Fallstudie:** Contractor am House-of-Fraser site
+- **Quelle/Beleg:** Construction Index, Civic
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Beteiligung donor side

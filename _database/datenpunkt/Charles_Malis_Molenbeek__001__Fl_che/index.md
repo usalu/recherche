@@ -1,20 +1,25 @@
-﻿---
-id: "Charles_Malis_Molenbeek__001__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse"
 ---
-# FlÃ¤che - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Charles_Malis_Molenbeek__001__Fl_che"
+title: "Fläche - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "igloo"
+node_kind: "core"
+wert: "1,000"
+fallstudie: "fallstudie/Charles_Malis_Molenbeek"
+bauobjekt:
+  - "Charles_Malis_Molenbeek"
+projekt:
+  - "Charles_Malis_Molenbeek"
+---
 
-## Clean Node
+# Fläche - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Charles_Malis_Molenbeek__001__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Charles_Malis_Molenbeek__001__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 1,000
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektbeschreibung
+- **Bilanzgrenze:** Gesamtprojekt
+- **Quelle:** igloo
+- **Vertrauensgrad:** teilweise belegt

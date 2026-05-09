@@ -1,20 +1,37 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "projekt"
+id: "Brent_Cross_Town_Primary_Substation_London"
+title: "Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Brent_Cross_Town_Primary_Substation_London.md"
+node_kind: "core"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/projekt/Brent_Cross_Town_Primary_Substation_London
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\Brent_Cross_Town_Primary_Substation_London.md
 
-- Source: _graph/projekt/Brent_Cross_Town_Primary_Substation_London
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Brent Cross Town Primary Substation / Brent Cross Town Substation
+- **Ort:** Brent Cross, London, Vereinigtes Königreich
+- **Gebäude:** elektrische Primär-Substation mit ovalem Stahl-Screen / Kunstwerk-Hülle
+- **Projekt:** Substation und öffentliche Landmarke für Brent Cross Town
+- **Beteiligte People / Akteure:** Brent Cross South Limited Partnership; Related Argent; London Borough of Barnet; IF_DO; Arup; Whitby Wood; Bourne Special Projects / Bourne Group; Galldris Group; Cleveland Steel and Tubes; Gillespies; Power On; Lakwena
+- **Architekt:** IF_DO
+- **Tragwerksplaner:** Arup als concept structural engineer; Whitby Wood als structural engineer; Bourne als steel structure designer/fabricator
+- **Bauherr:** Brent Cross South Limited Partnership / Related Argent + London Borough of Barnet
+- **Zeitraum:** Stahlbau Juli–November 2022; weitere Projektdaten unbekannt
+- **Ursprüngliche Nutzung:** Stahlrohre: ungenutzte/überschüssige oil-and-gas pipeline projects; Grundstück: brownfield/ex-industrial land laut Arup
+- **Neue Nutzung:** tragende Stützen und Aussteifungen des Substation-Screens
+- **Fläche / Maßstab:** 21 m hoch; 115 m Umfang laut ASBP; Arup beschreibt 52 m lang und 21 m hoch; 80 MVA Substation
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** sehr gut für Stahlreuse, Akteure, Mengen, Prüfprotokoll und Hürden; eingeschränkt für genaue Verbindung, Brandschutz, detaillierte Statik, Wartung
+
+---

@@ -1,20 +1,43 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__005__Karreveld_technische_Sch_chte"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Karreveld technische SchÃ¤chte - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Karreveld technische SchÃ¤chte - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "reuse_einsatz"
+id: "Verbiest_Karreveld_Brussels__005__Karreveld_technische_Sch_chte"
+title: "Karreveld technische Schächte - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+huerde_label: "Bestandserhalt"
+quelle_label: "Q5"
+material_label: "Bestand"
+node_kind: "core"
+herkunft_label: "Bürogebäude"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+neue_funktion: "technische Versorgung"
+bauteil_label: "Karreveld technische Schächte"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+alte_funktion: "technische Versorgung"
+---
 
-## Clean Node
+# Karreveld technische Schächte - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/reuse_einsatz/Verbiest_Karreveld_Brussels__005__Karreveld_technische_Sch_chte
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Verbiest_Karreveld_Brussels__005__Karreveld_technische_Sch_chte
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Karreveld technische Schächte
+- **Material:** Bestand
+- **Herkunft:** Bürogebäude
+- **alte Funktion:** technische Versorgung
+- **neue Funktion:** technische Versorgung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** erhalten
+- **Verbindung:** Bestand
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** TGA, Brandschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** Bestandserhalt
+- **Quelle:** Q5
+- **unbekannt:** nicht gezählt

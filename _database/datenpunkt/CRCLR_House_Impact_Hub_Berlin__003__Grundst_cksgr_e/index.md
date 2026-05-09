@@ -1,20 +1,25 @@
-﻿---
-id: "CRCLR_House_Impact_Hub_Berlin__003__Grundst_cksgr_e"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "GrundstÃ¼cksgrÃ¶ÃŸe - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse"
 ---
-# GrundstÃ¼cksgrÃ¶ÃŸe - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "CRCLR_House_Impact_Hub_Berlin__003__Grundst_cksgr_e"
+title: "Grundstücksgröße - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "ZRS"
+node_kind: "core"
+wert: "2.158"
+fallstudie: "fallstudie/CRCLR_House_Impact_Hub_Berlin"
+bauobjekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+projekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+---
 
-## Clean Node
+# Grundstücksgröße - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/CRCLR_House_Impact_Hub_Berlin__003__Grundst_cksgr_e
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/CRCLR_House_Impact_Hub_Berlin__003__Grundst_cksgr_e
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Grundstücksgröße
+- **Wert:** 2.158
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Grundstück
+- **Quelle:** ZRS
+- **Vertrauensgrad:** belegt

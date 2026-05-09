@@ -1,20 +1,25 @@
-﻿---
-id: "CascadeUp_London_secondary_timber_glulam_demonstrator__005__Ausstellungen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Ausstellungen - CascadeUp / London secondary-timber glulam demonstrator â€” Fallstudie Direct Reuse"
 ---
-# Ausstellungen - CascadeUp / London secondary-timber glulam demonstrator â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "CascadeUp_London_secondary_timber_glulam_demonstrator__005__Ausstellungen"
+title: "Ausstellungen - CascadeUp / London secondary-timber glulam demonstrator — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stationen/Jahre"
+quelle_label: "S1, S2"
+node_kind: "core"
+wert: "UCL Festival of Engineering 2024; London Design Festival 2024; Futurebuild 2025"
+fallstudie: "fallstudie/CascadeUp_London_secondary_timber_glulam_demonstrator"
+bauobjekt:
+  - "CascadeUp_London_secondary_timber_glulam_demonstrator"
+projekt:
+  - "CascadeUp_London_secondary_timber_glulam_demonstrator"
+---
 
-## Clean Node
+# Ausstellungen - CascadeUp / London secondary-timber glulam demonstrator — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/CascadeUp_London_secondary_timber_glulam_demonstrator__005__Ausstellungen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/CascadeUp_London_secondary_timber_glulam_demonstrator__005__Ausstellungen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Ausstellungen
+- **Wert:** UCL Festival of Engineering 2024; London Design Festival 2024; Futurebuild 2025
+- **Einheit:** Stationen/Jahre
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Dissemination des Pilots
+- **Quelle:** S1, S2
+- **Vertrauensgrad:** belegt

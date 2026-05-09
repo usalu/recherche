@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__004__Donor_Fl_che_alternative_Quelle"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Donor-FlÃ¤che alternative Quelle - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Donor-FlÃ¤che alternative Quelle - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__004__Donor_Fl_che_alternative_Quelle"
+title: "Donor-Fläche alternative Quelle - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "ReCreate"
+node_kind: "core"
+wert: ">8.000"
+fallstudie: "fallstudie/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+bauobjekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+projekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+---
 
-## Clean Node
+# Donor-Fläche alternative Quelle - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__004__Donor_Fl_che_alternative_Quelle
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__004__Donor_Fl_che_alternative_Quelle
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Donor-Fläche alternative Quelle
+- **Wert:** >8.000
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** ReCreate
+- **Bilanzgrenze:** Prinsenhof A
+- **Quelle:** ReCreate
+- **Vertrauensgrad:** Quellenkonflikt

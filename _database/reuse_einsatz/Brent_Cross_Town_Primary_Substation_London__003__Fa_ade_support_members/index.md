@@ -1,20 +1,43 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__003__Fa_ade_support_members"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "FaÃ§ade support members - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FaÃ§ade support members - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Brent_Cross_Town_Primary_Substation_London__003__Fa_ade_support_members"
+title: "Façade support members - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Reused tubes wären hier laut Arup weniger effizient"
+quelle_label: "ASBP, Arup"
+material_label: "Stahl, überwiegend neu"
+node_kind: "core"
+herkunft_label: "nicht reused"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+neue_funktion: "Träger der farbigen Hülle / artwork"
+bauteil_label: "Façade support members"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+alte_funktion: "keine"
+---
 
-## Clean Node
+# Façade support members - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Brent_Cross_Town_Primary_Substation_London__003__Fa_ade_support_members
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Brent_Cross_Town_Primary_Substation_London__003__Fa_ade_support_members
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Façade support members
+- **Material:** Stahl, überwiegend neu
+- **Herkunft:** nicht reused
+- **alte Funktion:** keine
+- **neue Funktion:** Träger der farbigen Hülle / artwork
+- **Menge/Umfang:** unbekannt
+- **tragend?:** teilweise
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** neu
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** effiziente Anschlüsse
+- **Norm/Recht:** unbekannt
+- **Hürde:** Reused tubes wären hier laut Arup weniger effizient
+- **Quelle:** ASBP, Arup
+- **unbekannt:** Menge

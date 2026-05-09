@@ -1,20 +1,25 @@
-﻿---
-id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete HohlkÃ¶rperdecken - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# wiederverwendete HohlkÃ¶rperdecken - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken"
+title: "wiederverwendete Hohlkörperdecken - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "ReCreate, Skanska, Uusiouutiset"
+node_kind: "core"
+wert: "25"
+fallstudie: "fallstudie/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+bauobjekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+projekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+---
 
-## Clean Node
+# wiederverwendete Hohlkörperdecken - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__001__wiederverwendete_Hohlk_rperdecken
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Hohlkörperdecken
+- **Wert:** 25
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektmeldung
+- **Bilanzgrenze:** Mini-Pilot
+- **Quelle:** ReCreate, Skanska, Uusiouutiset
+- **Vertrauensgrad:** belegt; eine ReCreate-Folgequelle nennt 24

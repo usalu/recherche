@@ -1,20 +1,22 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Burobas"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Burobas - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
+entity: "akteur_beteiligung"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Burobas"
+title: "Burobas - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S8]"
+node_kind: "relation"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+---
+
 # Burobas - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Burobas
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Jeugdkliniek_Ithaka_Emergis_Kloetinge__002__Burobas
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Burobas
+- **Beziehung zur Fallstudie:** Innenarchitektur / feste Einrichtung
+- **Quelle/Beleg:** [S1], [S8]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Möbel nur zählen, wenn feste Einrichtung

@@ -1,20 +1,16 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Donor - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kettenstation"
+id: "Christ_Pavilion_Volkenroda__Donor"
+title: "Donor - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Christ_Pavilion_Volkenroda.md"
+node_kind: "core"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Donor - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kettenstation/Christ_Pavilion_Volkenroda__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Christ_Pavilion_Volkenroda__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Christ_Pavilion_Volkenroda.md: | Ort | Hannover EXPO 2000; Kloster Volkenroda, Thüringen | Donor-/erster Standort und Empfängerort | gmp / Kloster | belegt | Standortwechsel nach Expo |

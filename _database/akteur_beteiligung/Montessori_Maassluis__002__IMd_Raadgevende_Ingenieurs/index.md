@@ -1,20 +1,22 @@
-﻿---
-id: "Montessori_Maassluis__002__IMd_Raadgevende_Ingenieurs"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "IMd Raadgevende Ingenieurs - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# IMd Raadgevende Ingenieurs - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Montessori_Maassluis__002__IMd_Raadgevende_Ingenieurs"
+title: "IMd Raadgevende Ingenieurs - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "Kraaijvanger"
+node_kind: "relation"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# IMd Raadgevende Ingenieurs - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Montessori_Maassluis__002__IMd_Raadgevende_Ingenieurs
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Montessori_Maassluis__002__IMd_Raadgevende_Ingenieurs
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** IMd Raadgevende Ingenieurs
+- **Beziehung zur Fallstudie:** Design team / Tragwerksbezug
+- **Quelle/Beleg:** Kraaijvanger
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** genaue Rolle als Tragwerksplaner naheliegend, aber in Quelle „design team“

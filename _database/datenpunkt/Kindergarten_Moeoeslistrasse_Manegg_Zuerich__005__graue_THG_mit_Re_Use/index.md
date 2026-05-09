@@ -1,20 +1,25 @@
-﻿---
-id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__005__graue_THG_mit_Re_Use"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "graue THG mit Re-Use - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# graue THG mit Re-Use - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__005__graue_THG_mit_Re_Use"
+title: "graue THG mit Re-Use - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "kg CO₂e/m²a"
+quelle_label: "Stadt Zürich Studie"
+node_kind: "core"
+wert: "1,9"
+fallstudie: "fallstudie/Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+bauobjekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+projekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+---
 
-## Clean Node
+# graue THG mit Re-Use - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__005__graue_THG_mit_Re_Use
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__005__graue_THG_mit_Re_Use
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** graue THG mit Re-Use
+- **Wert:** 1,9
+- **Einheit:** kg CO₂e/m²a
+- **Methode/Datenmodell/Software:** Fachstudie
+- **Bilanzgrenze:** gleiche Bilanzgrenze
+- **Quelle:** Stadt Zürich Studie
+- **Vertrauensgrad:** belegt

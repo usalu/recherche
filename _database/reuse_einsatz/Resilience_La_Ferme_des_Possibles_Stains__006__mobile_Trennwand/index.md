@@ -1,20 +1,43 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__006__mobile_Trennwand"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "mobile Trennwand - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# mobile Trennwand - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Resilience_La_Ferme_des_Possibles_Stains__006__mobile_Trennwand"
+title: "mobile Trennwand - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Produktdaten"
+quelle_label: "[S2]"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "ENGIE-Baustelle Saint-Denis via Métabolisme Urbain"
+menge_umfang: "11 m²"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+neue_funktion: "mobile Trennwand"
+bauteil_label: "mobile Trennwand"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+alte_funktion: "Trennwand"
+---
 
-## Clean Node
+# mobile Trennwand - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__006__mobile_Trennwand
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__006__mobile_Trennwand
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** mobile Trennwand
+- **Material:** unbekannt
+- **Herkunft:** ENGIE-Baustelle Saint-Denis via Métabolisme Urbain
+- **alte Funktion:** Trennwand
+- **neue Funktion:** mobile Trennwand
+- **Menge/Umfang:** 11 m²
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Stabilität, Akustik, Brandschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** Produktdaten
+- **Quelle:** [S2]
+- **unbekannt:** teilweise

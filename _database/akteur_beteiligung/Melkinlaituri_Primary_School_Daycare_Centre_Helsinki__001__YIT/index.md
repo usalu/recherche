@@ -1,20 +1,22 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__YIT"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "YIT - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# YIT - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__YIT"
+title: "YIT - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "YIT"
+node_kind: "relation"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+bauobjekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+projekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+---
 
-## Clean Node
+# YIT - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__YIT
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__YIT
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** YIT
+- **Beziehung zur Fallstudie:** Projektseite / Bauausführung im Lebenszyklusmodell
+- **Quelle/Beleg:** YIT
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** genaue Rolle als Hauptunternehmer aus Quelle naheliegend

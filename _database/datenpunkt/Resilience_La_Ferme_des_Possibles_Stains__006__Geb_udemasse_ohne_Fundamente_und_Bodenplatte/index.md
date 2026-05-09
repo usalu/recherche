@@ -1,20 +1,25 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__006__Geb_udemasse_ohne_Fundamente_und_Bodenplatte"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "GebÃ¤udemasse ohne Fundamente und Bodenplatte - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# GebÃ¤udemasse ohne Fundamente und Bodenplatte - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Resilience_La_Ferme_des_Possibles_Stains__006__Geb_udemasse_ohne_Fundamente_und_Bodenplatte"
+title: "Gebäudemasse ohne Fundamente und Bodenplatte - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "570,1"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# Gebäudemasse ohne Fundamente und Bodenplatte - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__006__Geb_udemasse_ohne_Fundamente_und_Bodenplatte
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__006__Geb_udemasse_ohne_Fundamente_und_Bodenplatte
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gebäudemasse ohne Fundamente und Bodenplatte
+- **Wert:** 570,1
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude ohne Fundamente/Plancher bas béton
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

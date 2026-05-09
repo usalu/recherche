@@ -1,20 +1,25 @@
-﻿---
-id: "ELYS_Kultur_Gewerbehaus_Basel__004__CO_Einsparung_durch_Wiederverwendung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Einsparung durch Wiederverwendung - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse"
 ---
-# COâ‚‚-Einsparung durch Wiederverwendung - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "ELYS_Kultur_Gewerbehaus_Basel__004__CO_Einsparung_durch_Wiederverwendung"
+title: "CO₂-Einsparung durch Wiederverwendung - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "t CO₂"
+quelle_label: "DETAIL; ZAB"
+node_kind: "core"
+wert: "91"
+fallstudie: "fallstudie/ELYS_Kultur_Gewerbehaus_Basel"
+bauobjekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+projekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+---
 
-## Clean Node
+# CO₂-Einsparung durch Wiederverwendung - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__004__CO_Einsparung_durch_Wiederverwendung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__004__CO_Einsparung_durch_Wiederverwendung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Einsparung durch Wiederverwendung
+- **Wert:** 91
+- **Einheit:** t CO₂
+- **Methode/Datenmodell/Software:** Projekt-/Architektenangabe
+- **Bilanzgrenze:** Reuse-Materialien
+- **Quelle:** DETAIL; ZAB
+- **Vertrauensgrad:** belegt

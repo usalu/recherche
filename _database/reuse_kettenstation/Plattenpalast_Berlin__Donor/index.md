@@ -1,20 +1,18 @@
-﻿---
-id: "Plattenpalast_Berlin__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# Donor - Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "reuse_kettenstation"
+id: "Plattenpalast_Berlin__Donor"
+title: "Donor - Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Plattenpalast_Berlin.md"
+node_kind: "core"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+---
 
-## Clean Node
+# Donor - Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kettenstation/Plattenpalast_Berlin__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Plattenpalast_Berlin__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Plattenpalast_Berlin.md: | Wand-/Deckenelemente / Großflächenplatten | Stahlbetonfertigteile WBS70 | rückgebaute Plattenbauten; genaue Donoradresse unbekannt | Wand-/Deckenelement im Plattenbau | tragende/raumbildende Struktur | 13 Platten | ja/teilweise | ja | ja/teilweise | nein | sorgfältig abgetragen, gereinigt, gesägt/gekürzt/gebohrt | Stahllaschen, Bolzen, reversible Dübel | Funktionsfähigkeit und Materialqualität | Standsicherheit, Demontierbarkeit | unbekannt | Gewicht, Toleranzen, Zulassung | S2, S5, S6 | nein |
+Gebäude\Plattenpalast_Berlin.md: - **Nicht gefunden:** Tragwerksplaner, Normen, Genehmigung, Kosten, CO₂, Transportdistanzen, genaue Donoradressen.
+Gebäude\Plattenpalast_Berlin.md:   1. Welche Donorgebäude lieferten die WBS70-Platten?

@@ -1,20 +1,25 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__005__Ziel_Reuse_Anteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Ziel Reuse-Anteil - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Ziel Reuse-Anteil - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__005__Ziel_Reuse_Anteil"
+title: "Ziel Reuse-Anteil - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S1"
+node_kind: "core"
+wert: "mindestens 50"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+bauobjekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+projekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+---
 
-## Clean Node
+# Ziel Reuse-Anteil - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__005__Ziel_Reuse_Anteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__005__Ziel_Reuse_Anteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Ziel Reuse-Anteil
+- **Wert:** mindestens 50
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** FutureBuilt-Kriterium/Ziel
+- **Bilanzgrenze:** Materialien
+- **Quelle:** S1
+- **Vertrauensgrad:** belegt

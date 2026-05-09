@@ -1,20 +1,25 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__006__Abfall_vermieden_wiederverwendet"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Abfall vermieden / wiederverwendet - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Abfall vermieden / wiederverwendet - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grande_Halle_de_Colombelles__006__Abfall_vermieden_wiederverwendet"
+title: "Abfall vermieden / wiederverwendet - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "19"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Abfall vermieden / wiederverwendet - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grande_Halle_de_Colombelles__006__Abfall_vermieden_wiederverwendet
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grande_Halle_de_Colombelles__006__Abfall_vermieden_wiederverwendet
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Abfall vermieden / wiederverwendet
+- **Wert:** 19
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Reuse-Lot
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

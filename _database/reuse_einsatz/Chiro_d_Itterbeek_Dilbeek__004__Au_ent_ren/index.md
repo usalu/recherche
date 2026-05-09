@@ -1,20 +1,43 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__004__Au_ent_ren"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "AuÃŸentÃ¼ren - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# AuÃŸentÃ¼ren - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Chiro_d_Itterbeek_Dilbeek__004__Au_ent_ren"
+title: "Außentüren - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Maße/Kompatibilität"
+quelle_label: "[S2], [S4]"
+material_label: "Holz"
+node_kind: "core"
+herkunft_label: "Namur Croisade pauvreté / Gebruiktebouwmaterialen"
+menge_umfang: "2 Stück"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+neue_funktion: "Außentüren"
+bauteil_label: "Außentüren"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+alte_funktion: "Türen"
+---
 
-## Clean Node
+# Außentüren - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__004__Au_ent_ren
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__004__Au_ent_ren
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Außentüren
+- **Material:** Holz
+- **Herkunft:** Namur Croisade pauvreté / Gebruiktebouwmaterialen
+- **alte Funktion:** Türen
+- **neue Funktion:** Außentüren
+- **Menge/Umfang:** 2 Stück
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Anpassung unbekannt
+- **Verbindung:** Türbänder/Rahmen
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Zugang, Sicherheit, Wetter
+- **Norm/Recht:** unbekannt
+- **Hürde:** Maße/Kompatibilität
+- **Quelle:** [S2], [S4]
+- **unbekannt:** Prüfung

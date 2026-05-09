@@ -1,20 +1,25 @@
-﻿---
-id: "55_Great_Suffolk_Street_London__006__Gesamtstahlkauf_Fabrix"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Gesamtstahlkauf Fabrix - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Gesamtstahlkauf Fabrix - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "55_Great_Suffolk_Street_London__006__Gesamtstahlkauf_Fabrix"
+title: "Gesamtstahlkauf Fabrix - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "NLA, Architects’ Journal"
+node_kind: "core"
+wert: "139"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+bauobjekt:
+  - "55_Great_Suffolk_Street_London"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+---
 
-## Clean Node
+# Gesamtstahlkauf Fabrix - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/55_Great_Suffolk_Street_London__006__Gesamtstahlkauf_Fabrix
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/55_Great_Suffolk_Street_London__006__Gesamtstahlkauf_Fabrix
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gesamtstahlkauf Fabrix
+- **Wert:** 139
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** Urban-mining purchase
+- **Bilanzgrenze:** mehrere Fabrix-Projekte
+- **Quelle:** NLA, Architects’ Journal
+- **Vertrauensgrad:** belegt

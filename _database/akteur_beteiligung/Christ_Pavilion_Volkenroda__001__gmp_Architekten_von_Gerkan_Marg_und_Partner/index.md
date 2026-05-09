@@ -1,20 +1,22 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__001__gmp_Architekten_von_Gerkan_Marg_und_Partner"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "gmp Â· Architekten von Gerkan, Marg und Partner - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# gmp Â· Architekten von Gerkan, Marg und Partner - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Christ_Pavilion_Volkenroda__001__gmp_Architekten_von_Gerkan_Marg_und_Partner"
+title: "gmp · Architekten von Gerkan, Marg und Partner - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "gmp / Structurae"
+node_kind: "relation"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# gmp · Architekten von Gerkan, Marg und Partner - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Christ_Pavilion_Volkenroda__001__gmp_Architekten_von_Gerkan_Marg_und_Partner
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Christ_Pavilion_Volkenroda__001__gmp_Architekten_von_Gerkan_Marg_und_Partner
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** gmp · Architekten von Gerkan, Marg und Partner
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** gmp / Structurae
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Entwurf Meinhard von Gerkan, Joachim Zais

@@ -1,20 +1,22 @@
-﻿---
-id: "Arup"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "Arup"
 ---
+entity: "akteur"
+id: "Arup"
+title: "Arup"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Brent_Cross_Town_Primary_Substation_London.md"
+  - "Gebäude\\Peoples_Pavilion_Eindhoven.md"
+node_kind: "core"
+---
+
 # Arup
 
-## Clean Node
+## Observed Roles
 
-- Final path: _database/akteur/Arup
-- Build rule: typed path IDs only.
+- Concept structural engineer / design lead
+- structural engineering
 
-## Imported Staging Nodes
+## Observed Fallstudien
 
-- Source: _graph/akteur/Arup
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- fallstudie/Brent_Cross_Town_Primary_Substation_London
+- fallstudie/Peoples_Pavilion_Eindhoven

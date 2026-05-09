@@ -1,20 +1,25 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__003__wiederverwendete_Akustikpaneele"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete Akustikpaneele - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# wiederverwendete Akustikpaneele - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__003__wiederverwendete_Akustikpaneele"
+title: "wiederverwendete Akustikpaneele - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "419"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+---
 
-## Clean Node
+# wiederverwendete Akustikpaneele - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__003__wiederverwendete_Akustikpaneele
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__003__wiederverwendete_Akustikpaneele
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Akustikpaneele
+- **Wert:** 419
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Materialinventar
+- **Bilanzgrenze:** abgehängte Decken Block 3000 zu Block 6000
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

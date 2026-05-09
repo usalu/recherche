@@ -1,20 +1,16 @@
-﻿---
-id: "Maison_des_Canaux_Paris"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Maison_des_Canaux_Paris"
+title: "Reuse-Kette - Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Maison_des_Canaux_Paris.md"
+node_kind: "core"
+fallstudie: "fallstudie/Maison_des_Canaux_Paris"
+projekt:
+  - "Maison_des_Canaux_Paris"
+---
 
-## Clean Node
+# Reuse-Kette - Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Maison_des_Canaux_Paris
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Maison_des_Canaux_Paris
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

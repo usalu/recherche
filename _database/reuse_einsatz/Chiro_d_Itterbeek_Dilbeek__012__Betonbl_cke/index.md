@@ -1,20 +1,43 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__012__Betonbl_cke"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "BetonblÃ¶cke - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# BetonblÃ¶cke - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Chiro_d_Itterbeek_Dilbeek__012__Betonbl_cke"
+title: "Betonblöcke - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "nicht gebrauchte Reuse-Bauteile"
+quelle_label: "[S2], [S4], [S7]"
+material_label: "Beton"
+node_kind: "core"
+herkunft_label: "Bouwstocks Surplus/B-Qualität"
+menge_umfang: "48 m²; Adokin 6,7 m³"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+neue_funktion: "Rohbau/Wand"
+bauteil_label: "Betonblöcke"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+alte_funktion: "unbenutzt / Restposten"
+---
 
-## Clean Node
+# Betonblöcke - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__012__Betonbl_cke
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__012__Betonbl_cke
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Betonblöcke
+- **Material:** Beton
+- **Herkunft:** Bouwstocks Surplus/B-Qualität
+- **alte Funktion:** unbenutzt / Restposten
+- **neue Funktion:** Rohbau/Wand
+- **Menge/Umfang:** 48 m²; Adokin 6,7 m³
+- **tragend?:** evtl. ja
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** neu/restposten
+- **Verbindung:** Mauerwerk
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Last/Wand
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht gebrauchte Reuse-Bauteile
+- **Quelle:** [S2], [S4], [S7]
+- **unbekannt:** Prüfung

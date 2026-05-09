@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__014__embodied_carbon_virgin_steel_Vergleich"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "embodied carbon virgin steel Vergleich - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# embodied carbon virgin steel Vergleich - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__014__embodied_carbon_virgin_steel_Vergleich"
+title: "embodied carbon virgin steel Vergleich - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "kgCO₂e/kg"
+quelle_label: "[S5]"
+node_kind: "core"
+wert: "1,7"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# embodied carbon virgin steel Vergleich - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__014__embodied_carbon_virgin_steel_Vergleich
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__014__embodied_carbon_virgin_steel_Vergleich
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** embodied carbon virgin steel Vergleich
+- **Wert:** 1,7
+- **Einheit:** kgCO₂e/kg
+- **Methode/Datenmodell/Software:** ASBP DISRUPT
+- **Bilanzgrenze:** virgin steel incl. fabrication
+- **Quelle:** [S5]
+- **Vertrauensgrad:** belegt

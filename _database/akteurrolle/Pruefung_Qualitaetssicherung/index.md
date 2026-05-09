@@ -1,20 +1,13 @@
-﻿---
-id: "Pruefung_Qualitaetssicherung"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Pruefung / Qualitaetssicherung"
 ---
+entity: "akteurrolle"
+id: "Pruefung_Qualitaetssicherung"
+title: "Pruefung / Qualitaetssicherung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Pruefung / Qualitaetssicherung
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Pruefung_Qualitaetssicherung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Pruefung_Qualitaetssicherung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Test-, Zertifizierungs-, QA-, Zulassungs- oder technischer Kontrollrolle.

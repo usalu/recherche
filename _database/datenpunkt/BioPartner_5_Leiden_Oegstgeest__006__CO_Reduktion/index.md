@@ -1,20 +1,25 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest__006__CO_Reduktion"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Reduktion - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# COâ‚‚-Reduktion - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "BioPartner_5_Leiden_Oegstgeest__006__CO_Reduktion"
+title: "CO₂-Reduktion - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S2], [S11]"
+node_kind: "core"
+wert: "ca. 40"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+bauobjekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# CO₂-Reduktion - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/BioPartner_5_Leiden_Oegstgeest__006__CO_Reduktion
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BioPartner_5_Leiden_Oegstgeest__006__CO_Reduktion
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Reduktion
+- **Wert:** ca. 40
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Vergleich traditionelle Ausführung
+- **Bilanzgrenze:** nicht nur Stahlreuse
+- **Quelle:** [S2], [S11]
+- **Vertrauensgrad:** teilweise belegt

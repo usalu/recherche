@@ -1,20 +1,43 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__002__Bodenbretter_Dinesen_Restholz"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Bodenbretter / Dinesen-Restholz - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Bodenbretter / Dinesen-Restholz - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "reuse_einsatz"
+id: "Upcycle_Studios_Copenhagen__002__Bodenbretter_Dinesen_Restholz"
+title: "Bodenbretter / Dinesen-Restholz - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Reststrom statt direct reuse"
+quelle_label: "Lendager; a:gain; EMF"
+material_label: "Holz"
+node_kind: "core"
+herkunft_label: "Dinesen floor production offcuts / surplus wood"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+neue_funktion: "Böden, Wände, Fassaden"
+bauteil_label: "Bodenbretter / Dinesen-Restholz"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+alte_funktion: "Produktionsrest / Bodenholz"
+---
 
-## Clean Node
+# Bodenbretter / Dinesen-Restholz - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/reuse_einsatz/Upcycle_Studios_Copenhagen__002__Bodenbretter_Dinesen_Restholz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Upcycle_Studios_Copenhagen__002__Bodenbretter_Dinesen_Restholz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Bodenbretter / Dinesen-Restholz
+- **Material:** Holz
+- **Herkunft:** Dinesen floor production offcuts / surplus wood
+- **alte Funktion:** Produktionsrest / Bodenholz
+- **neue Funktion:** Böden, Wände, Fassaden
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein/teilweise unbekannt
+- **räumlich?:** ja
+- **Hülle?:** teilweise
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Remanufacturing / Zuschnitt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Dauerhaftigkeit, Brandschutz, Feuchte
+- **Norm/Recht:** unbekannt
+- **Hürde:** Reststrom statt direct reuse
+- **Quelle:** Lendager; a:gain; EMF
+- **unbekannt:** Mengen, Schichten

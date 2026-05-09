@@ -1,20 +1,25 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__004__Herkunftsquellen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Herkunftsquellen - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Herkunftsquellen - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Musee_de_Folklore_Mouscron__004__Herkunftsquellen"
+title: "Herkunftsquellen - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Abbruchorte"
+quelle_label: "[S2], [S4]"
+node_kind: "core"
+wert: "8"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# Herkunftsquellen - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Musee_de_Folklore_Mouscron__004__Herkunftsquellen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Musee_de_Folklore_Mouscron__004__Herkunftsquellen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Herkunftsquellen
+- **Wert:** 8
+- **Einheit:** Abbruchorte
+- **Methode/Datenmodell/Software:** Projektdokumentation
+- **Bilanzgrenze:** Ziegellieferung
+- **Quelle:** [S2], [S4]
+- **Vertrauensgrad:** belegt

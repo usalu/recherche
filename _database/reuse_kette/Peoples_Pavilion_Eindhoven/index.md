@@ -1,20 +1,16 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# Reuse-Kette - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "reuse_kette"
+id: "Peoples_Pavilion_Eindhoven"
+title: "Reuse-Kette - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Peoples_Pavilion_Eindhoven.md"
+node_kind: "core"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+projekt:
+  - "Peoples_Pavilion_Eindhoven"
+---
 
-## Clean Node
+# Reuse-Kette - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kette/Peoples_Pavilion_Eindhoven
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Peoples_Pavilion_Eindhoven
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

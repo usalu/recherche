@@ -1,20 +1,25 @@
-﻿---
-id: "Plattenpalast_Berlin__002__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# FlÃ¤che - Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Plattenpalast_Berlin__002__Fl_che"
+title: "Fläche - Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S4, S5, S6"
+node_kind: "core"
+wert: "30 / 35 / 39"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+bauobjekt:
+  - "Plattenpalast_Berlin"
+projekt:
+  - "Plattenpalast_Berlin"
+---
 
-## Clean Node
+# Fläche - Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Plattenpalast_Berlin__002__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Plattenpalast_Berlin__002__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 30 / 35 / 39
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Quellenkonflikt
+- **Bilanzgrenze:** Kleinsthaus/Galerie/Wohnprojekt
+- **Quelle:** S4, S5, S6
+- **Vertrauensgrad:** teilweise belegt

@@ -1,15 +1,65 @@
-﻿---
-id: "bauteilboerse_insert_marketplace_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteilboerse/insert-marketplace.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteilboerse_insert_marketplace_md"
+title: "bauteilboerse_insert_marketplace_md"
+build_status: "promoted_phase42"
+source_filename: "insert-marketplace.md"
+legacy_type: "Bauteilbörse"
+---
+
 # bauteilboerse_insert_marketplace_md
 
-## Source Archive
+## Kurzbeschreibung
+Insert Marketplace ist ein(e) Online-Marktplatz für wiederverwendbare Materialien aus Bau und öffentlichem Raum mit Bezug zu Niederlande. Im Reuse-Kontext liegt der Schwerpunkt auf: Teilen und Handeln wiederverwendbarer Materialien zwischen Projekten/Akteuren.
 
-- Original path: bauteilboerse/insert-marketplace.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: split_platform_profile; old target: software_digitaltool/insert_marketplace
+## Land / Region
+Niederlande
+
+## Betreiber
+Insert; genaue Betreiberstruktur nicht angegeben
+
+## Zielgruppe
+Bau- und öffentliche Auftraggeber, Infrastruktur-/Stadtprojekte, Planende, Unternehmen
+
+## Plattformtyp
+Online-Marktplatz für wiederverwendbare Materialien aus Bau und öffentlichem Raum
+
+## Bauteilkategorien
+wiederverwendbare Baumaterialien und öffentliche-Raum-Elemente; genaue Kategorien je Plattform
+
+## Art der Wiederverwendung
+Teilen und Handeln wiederverwendbarer Materialien zwischen Projekten/Akteuren
+
+## Funktionen
+Materialangebote; Such-/Marktplatzfunktion; Kontakt/Vermittlung; Reuse-Datenbank-Kontext
+
+## Daten je Bauteil
+nicht einheitlich angegeben; Angebotsdaten je Material
+
+## Qualität / Prüfung
+nicht angegeben
+
+## Logistik / Lagerung
+nicht angegeben; projekt- und angebotsabhängig
+
+## Geschäftsmodell
+Marktplatz/Sharing-Plattform; Gebühren nicht angegeben
+
+## Ökologische Bewertung
+fördert direkte Wiederverwendung und reduziert Primärmaterialbedarf; quantitative Bewertung nicht angegeben
+
+## Stärken
+gute Passung für öffentliche Räume und Bauinfrastruktur; digitaler Sharing-Fokus
+
+## Schwächen / Hemmnisse
+öffentliche Details begrenzt; keine pauschale Prüfung/Logistik erkennbar
+
+## Relevanz für zirkuläres Bauen
+hoch, wenn öffentliche Bau- und Stadtmaterialien in Kreisläufe zurückgeführt werden sollen.
+
+## Quellen und Links
+- https://www.cinderela.eu/Cinderela-One-Stop-Shop/Database/Insert-Marketplace
+- https://www.interregeurope.eu/good-practices/insert-platform-for-sharing-re-useable-building-materials
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

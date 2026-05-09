@@ -1,20 +1,43 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__012__Granitpflaster"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Granitpflaster - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Granitpflaster - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Resilience_La_Ferme_des_Possibles_Stains__012__Granitpflaster"
+title: "Granitpflaster - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Logistik Gewicht"
+quelle_label: "[S2]"
+material_label: "Granit"
+node_kind: "core"
+herkunft_label: "Stadt Paris"
+menge_umfang: "140 m²"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+neue_funktion: "Außenterrassen"
+bauteil_label: "Granitpflaster"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+alte_funktion: "Pflaster"
+---
 
-## Clean Node
+# Granitpflaster - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__012__Granitpflaster
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__012__Granitpflaster
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Granitpflaster
+- **Material:** Granit
+- **Herkunft:** Stadt Paris
+- **alte Funktion:** Pflaster
+- **neue Funktion:** Außenterrassen
+- **Menge/Umfang:** 140 m²
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** außen
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** Bettung/Verlegung
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Rutsch, Frost, Entwässerung
+- **Norm/Recht:** unbekannt
+- **Hürde:** Logistik Gewicht
+- **Quelle:** [S2]
+- **unbekannt:** teilweise

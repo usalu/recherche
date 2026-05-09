@@ -1,20 +1,25 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__010__Architektur_Budget"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Architektur-Budget - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Architektur-Budget - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Musee_de_Folklore_Mouscron__010__Architektur_Budget"
+title: "Architektur-Budget - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "€"
+quelle_label: "[S3]"
+node_kind: "core"
+wert: "2.976.107"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# Architektur-Budget - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Musee_de_Folklore_Mouscron__010__Architektur_Budget
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Musee_de_Folklore_Mouscron__010__Architektur_Budget
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Architektur-Budget
+- **Wert:** 2.976.107
+- **Einheit:** €
+- **Methode/Datenmodell/Software:** V+ Projektangabe
+- **Bilanzgrenze:** Architektur
+- **Quelle:** [S3]
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__008__Blausteinbl_cke"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "BlausteinblÃ¶cke - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# BlausteinblÃ¶cke - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Multi_Brussels_Reuse_in_MULTI__008__Blausteinbl_cke"
+title: "Blausteinblöcke - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "S2"
+node_kind: "core"
+wert: "82"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# Blausteinblöcke - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Multi_Brussels_Reuse_in_MULTI__008__Blausteinbl_cke
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Multi_Brussels_Reuse_in_MULTI__008__Blausteinbl_cke
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Blausteinblöcke
+- **Wert:** 82
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Rotor
+- **Bilanzgrenze:** Naturstein
+- **Quelle:** S2
+- **Vertrauensgrad:** belegt

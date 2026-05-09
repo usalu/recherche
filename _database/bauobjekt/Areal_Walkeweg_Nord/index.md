@@ -1,20 +1,18 @@
-﻿---
-id: "Areal_Walkeweg_Nord"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Areal Walkeweg Nord"
 ---
+entity: "bauobjekt"
+id: "Areal_Walkeweg_Nord"
+title: "Areal Walkeweg Nord"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\Areal_Walkeweg_Nord.md"
+node_kind: "core"
+fallstudie: "fallstudie/Areal_Walkeweg_Nord"
+projekt:
+  - "Areal_Walkeweg_Nord"
+---
+
 # Areal Walkeweg Nord
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/Areal_Walkeweg_Nord
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/Areal_Walkeweg_Nord
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

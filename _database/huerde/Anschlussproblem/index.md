@@ -1,20 +1,13 @@
-﻿---
-id: "Anschlussproblem"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Anschlussproblem"
 ---
+entity: "huerde"
+id: "Anschlussproblem"
+title: "Anschlussproblem"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Anschlussproblem
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Anschlussproblem
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Anschlussproblem
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Probleme bei Anschluessen, Schnittstellen, Fugen, Integration oder Alt-Neu-Verbindungen.

@@ -1,20 +1,22 @@
-﻿---
-id: "55_Great_Suffolk_Street_London__004__AKT_II"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "AKT II - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# AKT II - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "55_Great_Suffolk_Street_London__004__AKT_II"
+title: "AKT II - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "ASBP, Architects’ Journal"
+node_kind: "relation"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+bauobjekt:
+  - "55_Great_Suffolk_Street_London"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+---
 
-## Clean Node
+# AKT II - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/55_Great_Suffolk_Street_London__004__AKT_II
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/55_Great_Suffolk_Street_London__004__AKT_II
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** AKT II
+- **Beziehung zur Fallstudie:** Engineering consultant / Mitwirkung Reuse-Initiative
+- **Quelle/Beleg:** ASBP, Architects’ Journal
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Nicht als Haupttragwerksplaner des Projekts eindeutig

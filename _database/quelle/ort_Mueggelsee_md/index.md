@@ -1,15 +1,20 @@
-﻿---
-id: "ort_Mueggelsee_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "ort/Mueggelsee.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "ort_Mueggelsee_md"
+title: "ort_Mueggelsee_md"
+build_status: "promoted_phase42"
+source_filename: "Mueggelsee.md"
+legacy_type: "Ort"
+---
+
 # ort_Mueggelsee_md
 
-## Source Archive
+## Kurzdefinition
 
-- Original path: ort/Mueggelsee.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: ort/Mueggelsee
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

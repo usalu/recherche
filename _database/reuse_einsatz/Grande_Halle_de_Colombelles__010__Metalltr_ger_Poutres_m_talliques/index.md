@@ -1,20 +1,43 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__010__Metalltr_ger_Poutres_m_talliques"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "MetalltrÃ¤ger / Poutres mÃ©talliques - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# MetalltrÃ¤ger / Poutres mÃ©talliques - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Grande_Halle_de_Colombelles__010__Metalltr_ger_Poutres_m_talliques"
+title: "Metallträger / Poutres métalliques - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "zu wenig Detail"
+quelle_label: "[S1]"
+material_label: "Stahl"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "„des poutres métalliques“"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+neue_funktion: "unbekannt"
+bauteil_label: "Metallträger / Poutres métalliques"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+alte_funktion: "Trag-/Metallbauteil"
+---
 
-## Clean Node
+# Metallträger / Poutres métalliques - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Grande_Halle_de_Colombelles__010__Metalltr_ger_Poutres_m_talliques
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Grande_Halle_de_Colombelles__010__Metalltr_ger_Poutres_m_talliques
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Metallträger / Poutres métalliques
+- **Material:** Stahl
+- **Herkunft:** unbekannt
+- **alte Funktion:** Trag-/Metallbauteil
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** „des poutres métalliques“
+- **tragend?:** unbekannt
+- **räumlich?:** unbekannt
+- **Hülle?:** unbekannt
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** zu wenig Detail
+- **Quelle:** [S1]
+- **unbekannt:** ja

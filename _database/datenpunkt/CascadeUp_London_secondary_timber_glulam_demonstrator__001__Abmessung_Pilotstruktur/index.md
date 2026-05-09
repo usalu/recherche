@@ -1,20 +1,25 @@
-﻿---
-id: "CascadeUp_London_secondary_timber_glulam_demonstrator__001__Abmessung_Pilotstruktur"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Abmessung Pilotstruktur - CascadeUp / London secondary-timber glulam demonstrator â€” Fallstudie Direct Reuse"
 ---
-# Abmessung Pilotstruktur - CascadeUp / London secondary-timber glulam demonstrator â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "CascadeUp_London_secondary_timber_glulam_demonstrator__001__Abmessung_Pilotstruktur"
+title: "Abmessung Pilotstruktur - CascadeUp / London secondary-timber glulam demonstrator — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m"
+quelle_label: "S4"
+node_kind: "core"
+wert: "ca. 3,5 m hoch, 2,5 m breit, 2,0 m tief"
+fallstudie: "fallstudie/CascadeUp_London_secondary_timber_glulam_demonstrator"
+bauobjekt:
+  - "CascadeUp_London_secondary_timber_glulam_demonstrator"
+projekt:
+  - "CascadeUp_London_secondary_timber_glulam_demonstrator"
+---
 
-## Clean Node
+# Abmessung Pilotstruktur - CascadeUp / London secondary-timber glulam demonstrator — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/CascadeUp_London_secondary_timber_glulam_demonstrator__001__Abmessung_Pilotstruktur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/CascadeUp_London_secondary_timber_glulam_demonstrator__001__Abmessung_Pilotstruktur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Abmessung Pilotstruktur
+- **Wert:** ca. 3,5 m hoch, 2,5 m breit, 2,0 m tief
+- **Einheit:** m
+- **Methode/Datenmodell/Software:** Presse-/Projektangabe
+- **Bilanzgrenze:** physischer Demonstrator
+- **Quelle:** S4
+- **Vertrauensgrad:** belegt

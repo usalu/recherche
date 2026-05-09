@@ -1,20 +1,25 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__009__Gesamtfl_che_alternative_Quelle"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "GesamtflÃ¤che alternative Quelle - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# GesamtflÃ¤che alternative Quelle - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Musee_de_Folklore_Mouscron__009__Gesamtfl_che_alternative_Quelle"
+title: "Gesamtfläche alternative Quelle - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S6]"
+node_kind: "core"
+wert: "1.560"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# Gesamtfläche alternative Quelle - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Musee_de_Folklore_Mouscron__009__Gesamtfl_che_alternative_Quelle
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Musee_de_Folklore_Mouscron__009__Gesamtfl_che_alternative_Quelle
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gesamtfläche alternative Quelle
+- **Wert:** 1.560
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** d’a/Architectura
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S6]
+- **Vertrauensgrad:** teilweise belegt

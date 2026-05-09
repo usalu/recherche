@@ -1,20 +1,25 @@
-﻿---
-id: "Boulder_Fire_Station_3__011__PV_Stromanteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "PV-Stromanteil - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# PV-Stromanteil - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Boulder_Fire_Station_3__011__PV_Stromanteil"
+title: "PV-Stromanteil - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "% annual electric consumption offset"
+quelle_label: "AISC Awards"
+node_kind: "core"
+wert: "ca. 65"
+fallstudie: "fallstudie/Boulder_Fire_Station_3"
+bauobjekt:
+  - "Boulder_Fire_Station_3"
+projekt:
+  - "Boulder_Fire_Station_3"
+---
 
-## Clean Node
+# PV-Stromanteil - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Boulder_Fire_Station_3__011__PV_Stromanteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Boulder_Fire_Station_3__011__PV_Stromanteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** PV-Stromanteil
+- **Wert:** ca. 65
+- **Einheit:** % annual electric consumption offset
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Betrieb Fire Station
+- **Quelle:** AISC Awards
+- **Vertrauensgrad:** teilweise belegt

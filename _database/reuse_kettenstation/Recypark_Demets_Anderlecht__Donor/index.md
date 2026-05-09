@@ -1,20 +1,22 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Donor - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "reuse_kettenstation"
+id: "Recypark_Demets_Anderlecht__Donor"
+title: "Donor - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Recypark_Demets_Anderlecht.md"
+node_kind: "core"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Donor - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/reuse_kettenstation/Recypark_Demets_Anderlecht__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Recypark_Demets_Anderlecht__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Recypark_Demets_Anderlecht.md: | Gebäude | ehemalige Reithalle / riding arena / horse riding school | Donorgebäude | [S1], [S2], [S6] | belegt | bei Liège/Bierset, zum Abbruch bestimmt |
+Gebäude\Recypark_Demets_Anderlecht.md: | Donorstruktur | nicht nur Einzelbauteil, sondern zusammenhängende Halle | Reithallen-Brettschichtholzbögen | Bauteil, Tragwerkssystem, Logistik |
+Gebäude\Recypark_Demets_Anderlecht.md: | Bauteilinventar | Reithallenstruktur bewertet | Rotor, Greisch, Team | Identifikation von Bögen | unbekannt | — | — | Vor-Ort-Inspektion | Donor bei Liège/Bierset | fehlende Standarddaten | Auswahl geeigneter Struktur | [S1], [S7] |
+Gebäude\Recypark_Demets_Anderlecht.md: | Rückbau | Reithallenstruktur gekauft und sorgfältig demontiert | Bauherr, Rückbauakteure, Rotor | selektive Demontage | unbekannt | vorsichtige Demontage | Erhaltung der Bögen | Zustand kontrolliert | Donorstandort → Lager | öffentliche Kauf-/Beschaffungslogik | atypischer Vorabkauf | [S1], [S7] |
+Gebäude\Recypark_Demets_Anderlecht.md: | Transportdistanz | unbekannt | — | — | Donor → Nivelles → Anderlecht | — | unklar |
+Gebäude\Recypark_Demets_Anderlecht.md: - **Denkmal- oder Bestandswert:** Schutzstatus der Donorhalle unbekannt.
+Gebäude\Recypark_Demets_Anderlecht.md: - **Welche neuen Entitäten wären sinnvoll?** Donorstruktur; Vorabkauf; Worst-Case-Design; Reuse-Roadmap.

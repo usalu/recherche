@@ -1,20 +1,25 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__012__Kosten_HCS_gegen_ber_neu"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten HCS gegenÃ¼ber neu - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Kosten HCS gegenÃ¼ber neu - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__012__Kosten_HCS_gegen_ber_neu"
+title: "Kosten HCS gegenüber neu - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Faktor"
+quelle_label: "S6, S8"
+node_kind: "core"
+wert: "5–6×"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+bauobjekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+projekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+---
 
-## Clean Node
+# Kosten HCS gegenüber neu - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__012__Kosten_HCS_gegen_ber_neu
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__012__Kosten_HCS_gegen_ber_neu
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten HCS gegenüber neu
+- **Wert:** 5–6×
+- **Einheit:** Faktor
+- **Methode/Datenmodell/Software:** Thesis/Sekundärliteratur
+- **Bilanzgrenze:** Hohlkörperdecken
+- **Quelle:** S6, S8
+- **Vertrauensgrad:** teilweise belegt

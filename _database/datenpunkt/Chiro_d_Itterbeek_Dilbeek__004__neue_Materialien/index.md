@@ -1,20 +1,25 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__004__neue_Materialien"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "neue Materialien - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# neue Materialien - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Chiro_d_Itterbeek_Dilbeek__004__neue_Materialien"
+title: "neue Materialien - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "% Masse"
+quelle_label: "[S2], [S3]"
+node_kind: "core"
+wert: "weniger als 1/3"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# neue Materialien - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Chiro_d_Itterbeek_Dilbeek__004__neue_Materialien
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Chiro_d_Itterbeek_Dilbeek__004__neue_Materialien
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** neue Materialien
+- **Wert:** weniger als 1/3
+- **Einheit:** % Masse
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** gesamte Materialmasse
+- **Quelle:** [S2], [S3]
+- **Vertrauensgrad:** belegt

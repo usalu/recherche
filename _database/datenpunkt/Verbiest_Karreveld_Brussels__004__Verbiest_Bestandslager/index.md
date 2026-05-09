@@ -1,20 +1,25 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__004__Verbiest_Bestandslager"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Verbiest Bestandslager - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Verbiest Bestandslager - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "datenpunkt"
+id: "Verbiest_Karreveld_Brussels__004__Verbiest_Bestandslager"
+title: "Verbiest Bestandslager - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Q1"
+node_kind: "core"
+wert: "fast 1000"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Verbiest Bestandslager - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/datenpunkt/Verbiest_Karreveld_Brussels__004__Verbiest_Bestandslager
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Verbiest_Karreveld_Brussels__004__Verbiest_Bestandslager
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Verbiest Bestandslager
+- **Wert:** fast 1000
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** AgwA-Text
+- **Bilanzgrenze:** ursprüngliches Lagerhaus
+- **Quelle:** Q1
+- **Vertrauensgrad:** belegt

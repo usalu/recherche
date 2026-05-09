@@ -1,20 +1,25 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__007__Prim_rmaterial_eingespart"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "PrimÃ¤rmaterial eingespart - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# PrimÃ¤rmaterial eingespart - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "datenpunkt"
+id: "K118_Kopfbau_Halle_118_Winterthur__007__Prim_rmaterial_eingespart"
+title: "Primärmaterial eingespart - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "[S3], [S4]"
+node_kind: "core"
+wert: "ca. 500"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# Primärmaterial eingespart - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__007__Prim_rmaterial_eingespart
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__007__Prim_rmaterial_eingespart
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Primärmaterial eingespart
+- **Wert:** ca. 500
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** Vergleichsmodell
+- **Bilanzgrenze:** Bauteile / Primärmaterial
+- **Quelle:** [S3], [S4]
+- **Vertrauensgrad:** teilweise belegt

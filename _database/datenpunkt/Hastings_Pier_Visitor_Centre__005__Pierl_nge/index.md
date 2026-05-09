@@ -1,20 +1,25 @@
-﻿---
-id: "Hastings_Pier_Visitor_Centre__005__Pierl_nge"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "PierlÃ¤nge - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
 ---
-# PierlÃ¤nge - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings
+entity: "datenpunkt"
+id: "Hastings_Pier_Visitor_Centre__005__Pierl_nge"
+title: "Pierlänge - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
+build_status: "promoted_phase42"
+einheit: "m"
+quelle_label: "Q5"
+node_kind: "core"
+wert: "280"
+fallstudie: "fallstudie/Hastings_Pier_Visitor_Centre"
+bauobjekt:
+  - "Hastings_Pier_Visitor_Centre"
+projekt:
+  - "Hastings_Pier_Visitor_Centre"
+---
 
-## Clean Node
+# Pierlänge - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings
 
-- Final path: _database/datenpunkt/Hastings_Pier_Visitor_Centre__005__Pierl_nge
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Hastings_Pier_Visitor_Centre__005__Pierl_nge
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Pierlänge
+- **Wert:** 280
+- **Einheit:** m
+- **Methode/Datenmodell/Software:** Projektbeschreibung
+- **Bilanzgrenze:** Gesamtpier
+- **Quelle:** Q5
+- **Vertrauensgrad:** belegt

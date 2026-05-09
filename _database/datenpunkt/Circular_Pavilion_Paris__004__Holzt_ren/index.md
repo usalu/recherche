@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Pavilion_Paris__004__Holzt_ren"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "HolztÃ¼ren - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# HolztÃ¼ren - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Pavilion_Paris__004__Holzt_ren"
+title: "Holztüren - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "Encore Heureux"
+node_kind: "core"
+wert: "180"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Holztüren - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Pavilion_Paris__004__Holzt_ren
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Pavilion_Paris__004__Holzt_ren
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Holztüren
+- **Wert:** 180
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Bauteilangabe
+- **Bilanzgrenze:** Fassade
+- **Quelle:** Encore Heureux
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,43 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__002__Materialbibliothek_Oberfl_chen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Materialbibliothek-OberflÃ¤chen - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# Materialbibliothek-OberflÃ¤chen - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "PLP_London_HQ_Circular_Studio_Fitout__002__Materialbibliothek_Oberfl_chen"
+title: "Materialbibliothek-Oberflächen - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Abgrenzung Materialreuse vs. Recycling"
+quelle_label: "PLP"
+material_label: "Terrazzo / Samplefragmente"
+node_kind: "core"
+herkunft_label: "frühere Projektmuster"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+neue_funktion: "feste Oberfläche / Bibliothek"
+bauteil_label: "Materialbibliothek-Oberflächen"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+alte_funktion: "Materialproben"
+---
 
-## Clean Node
+# Materialbibliothek-Oberflächen - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/PLP_London_HQ_Circular_Studio_Fitout__002__Materialbibliothek_Oberfl_chen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/PLP_London_HQ_Circular_Studio_Fitout__002__Materialbibliothek_Oberfl_chen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Materialbibliothek-Oberflächen
+- **Material:** Terrazzo / Samplefragmente
+- **Herkunft:** frühere Projektmuster
+- **alte Funktion:** Materialproben
+- **neue Funktion:** feste Oberfläche / Bibliothek
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Aufbereitung und Einbettung
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Nutzung als Arbeitsplatz-/Bibliotheksfläche
+- **Norm/Recht:** unbekannt
+- **Hürde:** Abgrenzung Materialreuse vs. Recycling
+- **Quelle:** PLP
+- **unbekannt:** Menge, Bauteilstatus

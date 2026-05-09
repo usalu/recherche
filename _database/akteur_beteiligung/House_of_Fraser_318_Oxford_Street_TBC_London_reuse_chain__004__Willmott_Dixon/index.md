@@ -1,20 +1,22 @@
-﻿---
-id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__004__Willmott_Dixon"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Willmott Dixon - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette"
 ---
-# Willmott Dixon - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette
+entity: "akteur_beteiligung"
+id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__004__Willmott_Dixon"
+title: "Willmott Dixon - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+build_status: "promoted_phase42"
+quelle_label: "Willmott Dixon, NSC"
+node_kind: "relation"
+fallstudie: "fallstudie/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+bauobjekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+projekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+---
 
-## Clean Node
+# Willmott Dixon - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette
 
-- Final path: _database/akteur_beteiligung/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__004__Willmott_Dixon
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__004__Willmott_Dixon
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Willmott Dixon
+- **Beziehung zur Fallstudie:** Main contractor TBC.London
+- **Quelle/Beleg:** Willmott Dixon, NSC
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Umsetzung reuse

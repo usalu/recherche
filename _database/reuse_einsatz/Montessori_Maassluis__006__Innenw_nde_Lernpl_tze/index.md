@@ -1,20 +1,43 @@
-﻿---
-id: "Montessori_Maassluis__006__Innenw_nde_Lernpl_tze"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "InnenwÃ¤nde/LernplÃ¤tze - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# InnenwÃ¤nde/LernplÃ¤tze - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Montessori_Maassluis__006__Innenw_nde_Lernpl_tze"
+title: "Innenwände/Lernplätze - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "keine Reuse-Angabe"
+quelle_label: "Kraaijvanger"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+neue_funktion: "flexible Räume"
+bauteil_label: "Innenwände/Lernplätze"
+projekt:
+  - "Montessori_Maassluis"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Innenwände/Lernplätze - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Montessori_Maassluis__006__Innenw_nde_Lernpl_tze
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Montessori_Maassluis__006__Innenw_nde_Lernpl_tze
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Innenwände/Lernplätze
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** flexible Räume
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Akustik, Nutzung
+- **Norm/Recht:** unbekannt
+- **Hürde:** keine Reuse-Angabe
+- **Quelle:** Kraaijvanger
+- **unbekannt:** Material

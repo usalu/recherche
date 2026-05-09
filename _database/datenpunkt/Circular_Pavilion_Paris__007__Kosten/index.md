@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Pavilion_Paris__007__Kosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# Kosten - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Pavilion_Paris__007__Kosten"
+title: "Kosten - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "€ HT"
+quelle_label: "Encore Heureux"
+node_kind: "core"
+wert: "80,000"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Kosten - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Pavilion_Paris__007__Kosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Pavilion_Paris__007__Kosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten
+- **Wert:** 80,000
+- **Einheit:** € HT
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** travaux
+- **Quelle:** Encore Heureux
+- **Vertrauensgrad:** belegt

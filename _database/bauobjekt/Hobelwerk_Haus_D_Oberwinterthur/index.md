@@ -1,20 +1,18 @@
-﻿---
-id: "Hobelwerk_Haus_D_Oberwinterthur"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Hobelwerk Haus D, Oberwinterthur"
 ---
+entity: "bauobjekt"
+id: "Hobelwerk_Haus_D_Oberwinterthur"
+title: "Hobelwerk Haus D, Oberwinterthur"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\Hobelwerk_Haus_D_Oberwinterthur.md"
+node_kind: "core"
+fallstudie: "fallstudie/Hobelwerk_Haus_D_Oberwinterthur"
+projekt:
+  - "Hobelwerk_Haus_D_Oberwinterthur"
+---
+
 # Hobelwerk Haus D, Oberwinterthur
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/Hobelwerk_Haus_D_Oberwinterthur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/Hobelwerk_Haus_D_Oberwinterthur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

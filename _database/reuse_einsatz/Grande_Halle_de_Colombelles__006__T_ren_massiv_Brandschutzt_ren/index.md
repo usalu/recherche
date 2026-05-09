@@ -1,20 +1,43 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__006__T_ren_massiv_Brandschutzt_ren"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TÃ¼ren massiv / BrandschutztÃ¼ren - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# TÃ¼ren massiv / BrandschutztÃ¼ren - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Grande_Halle_de_Colombelles__006__T_ren_massiv_Brandschutzt_ren"
+title: "Türen massiv / Brandschutztüren - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Brandschutznachweis"
+quelle_label: "[S1], [S2], [S3], [S5]"
+material_label: "Holz, teils Brandschutz"
+node_kind: "core"
+herkunft_label: "Wohnungs-/Sanierungsbaustellen Region Caen"
+menge_umfang: "10, 18, 33 oder 50 je Quelle; mind. teils 2 Brandschutztüren"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+neue_funktion: "Innentür / WC-Tür / Brandschutztür"
+bauteil_label: "Türen massiv / Brandschutztüren"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+alte_funktion: "Tür"
+---
 
-## Clean Node
+# Türen massiv / Brandschutztüren - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Grande_Halle_de_Colombelles__006__T_ren_massiv_Brandschutzt_ren
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Grande_Halle_de_Colombelles__006__T_ren_massiv_Brandschutzt_ren
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Türen massiv / Brandschutztüren
+- **Material:** Holz, teils Brandschutz
+- **Herkunft:** Wohnungs-/Sanierungsbaustellen Region Caen
+- **alte Funktion:** Tür
+- **neue Funktion:** Innentür / WC-Tür / Brandschutztür
+- **Menge/Umfang:** 10, 18, 33 oder 50 je Quelle; mind. teils 2 Brandschutztüren
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Maßanpassung / Sonderzargen
+- **Verbindung:** Zargen auf Maß laut C21
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Gebrauchstauglichkeit, Brandschutz bei Feuerschutztüren
+- **Norm/Recht:** unbekannt
+- **Hürde:** Brandschutznachweis
+- **Quelle:** [S1], [S2], [S3], [S5]
+- **unbekannt:** teilweise

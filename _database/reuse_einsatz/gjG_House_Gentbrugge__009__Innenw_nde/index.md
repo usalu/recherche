@@ -1,20 +1,43 @@
-﻿---
-id: "gjG_House_Gentbrugge__009__Innenw_nde"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "InnenwÃ¤nde - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# InnenwÃ¤nde - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "gjG_House_Gentbrugge__009__Innenw_nde"
+title: "Innenwände - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "[S1]"
+material_label: "Stahl-/Holzrahmen / unbekannt"
+node_kind: "core"
+herkunft_label: "neu / unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/gjG_House_Gentbrugge"
+bauobjekt:
+  - "gjG_House_Gentbrugge"
+neue_funktion: "Räume / Infill"
+bauteil_label: "Innenwände"
+projekt:
+  - "gjG_House_Gentbrugge"
+alte_funktion: "nicht zutreffend"
+---
 
-## Clean Node
+# Innenwände - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/gjG_House_Gentbrugge__009__Innenw_nde
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/gjG_House_Gentbrugge__009__Innenw_nde
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Innenwände
+- **Material:** Stahl-/Holzrahmen / unbekannt
+- **Herkunft:** neu / unbekannt
+- **alte Funktion:** nicht zutreffend
+- **neue Funktion:** Räume / Infill
+- **Menge/Umfang:** unbekannt
+- **tragend?:** teilweise
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** nicht Reuse belegt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Wohnnutzung
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** [S1]
+- **unbekannt:** Reuse-Status

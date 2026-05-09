@@ -1,20 +1,22 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__001__Rothuizen_Architecten_Taco_Tuinhof"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Rothuizen Architecten / Taco Tuinhof - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
+entity: "akteur_beteiligung"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__001__Rothuizen_Architecten_Taco_Tuinhof"
+title: "Rothuizen Architecten / Taco Tuinhof - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S5], [S7]"
+node_kind: "relation"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+---
+
 # Rothuizen Architecten / Taco Tuinhof - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/Jeugdkliniek_Ithaka_Emergis_Kloetinge__001__Rothuizen_Architecten_Taco_Tuinhof
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Jeugdkliniek_Ithaka_Emergis_Kloetinge__001__Rothuizen_Architecten_Taco_Tuinhof
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Rothuizen Architecten / Taco Tuinhof
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** [S2], [S5], [S7]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Entwurf aus verfügbaren Materialien

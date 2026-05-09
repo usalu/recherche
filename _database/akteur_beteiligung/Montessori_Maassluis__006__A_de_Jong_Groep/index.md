@@ -1,20 +1,22 @@
-﻿---
-id: "Montessori_Maassluis__006__A_de_Jong_Groep"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "A. de Jong Groep - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# A. de Jong Groep - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Montessori_Maassluis__006__A_de_Jong_Groep"
+title: "A. de Jong Groep - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "Kraaijvanger news"
+node_kind: "relation"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# A. de Jong Groep - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Montessori_Maassluis__006__A_de_Jong_Groep
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Montessori_Maassluis__006__A_de_Jong_Groep
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** A. de Jong Groep
+- **Beziehung zur Fallstudie:** Projektpartner
+- **Quelle/Beleg:** Kraaijvanger news
+- **Vertrauensgrad:** belegt
+- **Anmerkung:**

@@ -1,20 +1,25 @@
-﻿---
-id: "Grubenstrasse_29_Werkhof_29_Zuerich__004__Projektzeitraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Projektzeitraum - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Projektzeitraum - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grubenstrasse_29_Werkhof_29_Zuerich__004__Projektzeitraum"
+title: "Projektzeitraum - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "Zirkular"
+node_kind: "core"
+wert: "2023–2025"
+fallstudie: "fallstudie/Grubenstrasse_29_Werkhof_29_Zuerich"
+bauobjekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+projekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+---
 
-## Clean Node
+# Projektzeitraum - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grubenstrasse_29_Werkhof_29_Zuerich__004__Projektzeitraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grubenstrasse_29_Werkhof_29_Zuerich__004__Projektzeitraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Projektzeitraum
+- **Wert:** 2023–2025
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Umbau/Aufstockung
+- **Quelle:** Zirkular
+- **Vertrauensgrad:** belegt

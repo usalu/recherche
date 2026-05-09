@@ -1,20 +1,43 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__003__Cartels_Nummern"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Cartels / Nummern - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Cartels / Nummern - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Musee_de_Folklore_Mouscron__003__Cartels_Nummern"
+title: "Cartels / Nummern - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "nicht Direct Reuse"
+quelle_label: "[S4], [S7]"
+material_label: "Email / unbekannt"
+node_kind: "core"
+herkunft_label: "neu"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "Kunstintegration"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+neue_funktion: "Herkunftshinweise an Fassade"
+bauteil_label: "Cartels / Nummern"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+alte_funktion: "neu"
+---
 
-## Clean Node
+# Cartels / Nummern - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Musee_de_Folklore_Mouscron__003__Cartels_Nummern
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Musee_de_Folklore_Mouscron__003__Cartels_Nummern
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Cartels / Nummern
+- **Material:** Email / unbekannt
+- **Herkunft:** neu
+- **alte Funktion:** neu
+- **neue Funktion:** Herkunftshinweise an Fassade
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** neu
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Lesbarkeit
+- **Norm/Recht:** Kunstintegration
+- **Hürde:** nicht Direct Reuse
+- **Quelle:** [S4], [S7]
+- **unbekannt:** Details

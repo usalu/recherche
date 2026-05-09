@@ -1,20 +1,35 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "projekt"
+id: "Peoples_Pavilion_Eindhoven"
+title: "People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Peoples_Pavilion_Eindhoven.md"
+node_kind: "core"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+bauobjekt:
+  - "Peoples_Pavilion_Eindhoven"
+---
 
-## Clean Node
+# People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/projekt/Peoples_Pavilion_Eindhoven
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\Peoples_Pavilion_Eindhoven.md
 
-- Source: _graph/projekt/Peoples_Pavilion_Eindhoven
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** People’s Pavilion
+- **Ort:** Ketelhuisplein, Eindhoven, Niederlande
+- **Gebäude:** temporärer Pavillon
+- **Projekt:** Meeting space / Veranstaltungs- und Begegnungsraum während Dutch Design Week 2017
+- **Beteiligte People / Akteure:** bureau SLA, Overtreders W, Dutch Design Foundation, Arup, Ham & Sybesma, New Horizon, IJB groep, Stiho group, Govaplast, Tetris, Elektroned, DEGO, Morssinkhof, Vitra, Keizersgrachtkerk
+- **Architekt:** bureau SLA + Overtreders W
+- **Tragwerksplaner:** Arup
+- **Bauherr:** Dutch Design Foundation
+- **Zeitraum:** 2017; temporär für 9 Tage während Dutch Design Week
+- **Ursprüngliche Nutzung:** Bauteile stammten von Lieferanten, Unternehmen und Bürger:innen; alte Nutzungen je Bauteil nur teilweise belegt
+- **Neue Nutzung:** Pavillon / Meeting Space
+- **Fläche / Maßstab:** 250 m²
+- **Schutzstatus / Denkmalstatus:** entfällt / unbekannt
+- **Quellenlage:** sehr gut zur Gesamtstrategie; begrenzt zu Einzelprüfungen, Normen und statischen Detailnachweisen

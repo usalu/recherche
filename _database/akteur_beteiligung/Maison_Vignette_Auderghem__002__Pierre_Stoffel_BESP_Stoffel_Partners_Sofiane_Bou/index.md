@@ -1,20 +1,22 @@
-﻿---
-id: "Maison_Vignette_Auderghem__002__Pierre_Stoffel_BESP_Stoffel_Partners_Sofiane_Bou"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Pierre Stoffel / BESP Stoffel & Partners; Sofiane Boudahri - Maison Vignette, Auderghem â€“ Fallstudie Direct Reuse"
 ---
-# Pierre Stoffel / BESP Stoffel & Partners; Sofiane Boudahri - Maison Vignette, Auderghem â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Maison_Vignette_Auderghem__002__Pierre_Stoffel_BESP_Stoffel_Partners_Sofiane_Bou"
+title: "Pierre Stoffel / BESP Stoffel & Partners; Sofiane Boudahri - Maison Vignette, Auderghem – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Maison_Vignette_Auderghem"
+bauobjekt:
+  - "Maison_Vignette_Auderghem"
+projekt:
+  - "Maison_Vignette_Auderghem"
+---
 
-## Clean Node
+# Pierre Stoffel / BESP Stoffel & Partners; Sofiane Boudahri - Maison Vignette, Auderghem – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Maison_Vignette_Auderghem__002__Pierre_Stoffel_BESP_Stoffel_Partners_Sofiane_Bou
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Maison_Vignette_Auderghem__002__Pierre_Stoffel_BESP_Stoffel_Partners_Sofiane_Bou
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Pierre Stoffel / BESP Stoffel & Partners; Sofiane Boudahri
+- **Beziehung zur Fallstudie:** Tragwerks-/Engineering-Unterstützung
+- **Quelle/Beleg:** [S2], [S3]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Unterschiedliche Quellen nennen Pierre Stoffel bzw. BESP/Sofiane Boudahri.

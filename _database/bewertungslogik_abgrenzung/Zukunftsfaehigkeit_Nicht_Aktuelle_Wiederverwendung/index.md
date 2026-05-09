@@ -1,20 +1,13 @@
-﻿---
-id: "Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung"
-entity: "bewertungslogik_abgrenzung"
-build_status: "clean_phase20"
-title: "Design for Disassembly ist nicht automatisch aktuelle Wiederverwendung"
 ---
+entity: "bewertungslogik_abgrenzung"
+id: "Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung"
+title: "Design for Disassembly ist nicht automatisch aktuelle Wiederverwendung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Design for Disassembly ist nicht automatisch aktuelle Wiederverwendung
 
-## Clean Node
+## Definition
 
-- Final path: _database/bewertungslogik_abgrenzung/Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bewertungslogik_abgrenzung/Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Abgrenzung fuer future DfD, Demontierbarkeit oder spaetere Austauschplanung ohne aktuell belegten Reuse-Einsatz.

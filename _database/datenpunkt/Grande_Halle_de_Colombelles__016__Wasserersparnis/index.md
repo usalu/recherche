@@ -1,20 +1,25 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__016__Wasserersparnis"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wasserersparnis - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Wasserersparnis - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grande_Halle_de_Colombelles__016__Wasserersparnis"
+title: "Wasserersparnis - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Liter"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "120.529"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Wasserersparnis - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grande_Halle_de_Colombelles__016__Wasserersparnis
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grande_Halle_de_Colombelles__016__Wasserersparnis
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wasserersparnis
+- **Wert:** 120.529
+- **Einheit:** Liter
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Reuse-Effekt
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt nach Quelle

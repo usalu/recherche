@@ -1,20 +1,25 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__016__Holzrahmen_Surplus"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Holzrahmen Surplus - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# Holzrahmen Surplus - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Chiro_d_Itterbeek_Dilbeek__016__Holzrahmen_Surplus"
+title: "Holzrahmen Surplus - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "lfm"
+quelle_label: "[S2], [S4]"
+node_kind: "core"
+wert: "49,2"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# Holzrahmen Surplus - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Chiro_d_Itterbeek_Dilbeek__016__Holzrahmen_Surplus
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Chiro_d_Itterbeek_Dilbeek__016__Holzrahmen_Surplus
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Holzrahmen Surplus
+- **Wert:** 49,2
+- **Einheit:** lfm
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Charpente
+- **Quelle:** [S2], [S4]
+- **Vertrauensgrad:** belegt

@@ -1,15 +1,12 @@
-﻿---
-id: "h_rde_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "hürde.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "h_rde_md"
+title: "h_rde_md"
+build_status: "promoted_phase42"
+source_filename: "hürde.md"
+legacy_type: "Type"
+---
+
 # h_rde_md
 
-## Source Archive
 
-- Original path: hürde.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: merge_into_index; old target: huerde/index

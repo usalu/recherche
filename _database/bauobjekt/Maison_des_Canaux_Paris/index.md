@@ -1,20 +1,35 @@
-﻿---
-id: "Maison_des_Canaux_Paris"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "bauobjekt"
+id: "Maison_des_Canaux_Paris"
+title: "Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Maison_des_Canaux_Paris.md"
+node_kind: "core"
+fallstudie: "fallstudie/Maison_des_Canaux_Paris"
+projekt:
+  - "Maison_des_Canaux_Paris"
+---
 
-## Clean Node
+# Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/bauobjekt/Maison_des_Canaux_Paris
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Maison_des_Canaux_Paris.md
 
-- Source: _graph/bauobjekt/Maison_des_Canaux_Paris
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Maison des Canaux
+- **Ort:** Paris, Frankreich; genaue Adresse zu prüfen, häufig 19. Arrondissement / Canal de l’Ourcq-Kontext
+- **Gebäude:** Bestandsgebäude, saniert / umgebaut
+- **Projekt:** Haus / Plattform für solidarische und innovative Ökonomien, zirkuläre Sanierung
+- **Beteiligte People / Akteure:** Les Canaux; Ville de Paris; weitere Bau-/Sozialunternehmen unbekannt bzw. zu prüfen
+- **Architekt:** unbekannt
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** unbekannt; öffentliche / städtische Rolle wahrscheinlich, aber Vertrag unbekannt
+- **Zeitraum:** gebaut; Jahr unbekannt / zu prüfen
+- **Ursprüngliche Nutzung:** unbekannt
+- **Neue Nutzung:** Büro-/Veranstaltungs-/Netzwerkhaus für solidarische, soziale und zirkuläre Ökonomien
+- **Fläche / Maßstab:** unbekannt
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** mittel für Projektidee, schwach für technische Bauteildetails.

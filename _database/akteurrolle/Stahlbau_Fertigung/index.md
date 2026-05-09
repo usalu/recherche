@@ -1,20 +1,13 @@
-﻿---
-id: "Stahlbau_Fertigung"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Stahlbau / Fertigung"
 ---
+entity: "akteurrolle"
+id: "Stahlbau_Fertigung"
+title: "Stahlbau / Fertigung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Stahlbau / Fertigung
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Stahlbau_Fertigung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Stahlbau_Fertigung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Stahlbau-, Holzbau-, Fabricator-, Erector-, Konstrukteur- oder spezifischer Fertigungsrolle.

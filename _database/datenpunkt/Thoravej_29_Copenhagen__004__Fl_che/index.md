@@ -1,20 +1,25 @@
-﻿---
-id: "Thoravej_29_Copenhagen__004__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - Thoravej 29, Copenhagen â€“ Fallstudie Direct Reuse"
 ---
-# FlÃ¤che - Thoravej 29, Copenhagen â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Thoravej_29_Copenhagen__004__Fl_che"
+title: "Fläche - Thoravej 29, Copenhagen – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Pihlmann / Illustrarch-HIC"
+node_kind: "core"
+wert: "6.224 / 6.336"
+fallstudie: "fallstudie/Thoravej_29_Copenhagen"
+bauobjekt:
+  - "Thoravej_29_Copenhagen"
+projekt:
+  - "Thoravej_29_Copenhagen"
+---
 
-## Clean Node
+# Fläche - Thoravej 29, Copenhagen – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Thoravej_29_Copenhagen__004__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Thoravej_29_Copenhagen__004__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 6.224 / 6.336
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangaben
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** Pihlmann / Illustrarch-HIC
+- **Vertrauensgrad:** unklar

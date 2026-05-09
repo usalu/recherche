@@ -1,20 +1,25 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__008__Anteil_an_Baukosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anteil an Baukosten - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Anteil an Baukosten - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Woongroep_Boschgaard_Den_Bosch__008__Anteil_an_Baukosten"
+title: "Anteil an Baukosten - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Anteil"
+quelle_label: "Superuse"
+node_kind: "core"
+wert: "1/5"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# Anteil an Baukosten - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Woongroep_Boschgaard_Den_Bosch__008__Anteil_an_Baukosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Woongroep_Boschgaard_Den_Bosch__008__Anteil_an_Baukosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anteil an Baukosten
+- **Wert:** 1/5
+- **Einheit:** Anteil
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Vergleich zu Baukosten
+- **Quelle:** Superuse
+- **Vertrauensgrad:** teilweise belegt

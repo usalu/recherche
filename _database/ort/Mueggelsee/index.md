@@ -1,20 +1,24 @@
-﻿---
-id: "Mueggelsee"
-entity: "ort"
-build_status: "clean_phase20"
-title: "Mueggelsee"
 ---
+entity: "ort"
+id: "Mueggelsee"
+title: "Mueggelsee"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "ort\Mueggelsee.md"
+node_kind: "knot"
+legacy_type: "Ort"
+---
+
 # Mueggelsee
 
-## Clean Node
+# Mueggelsee
 
-- Final path: _database/ort/Mueggelsee
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/ort/Mueggelsee
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

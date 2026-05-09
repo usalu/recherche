@@ -1,20 +1,43 @@
-﻿---
-id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__005__Fassaden"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fassaden - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Fassaden - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "reuse_einsatz"
+id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__005__Fassaden"
+title: "Fassaden - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "keine Quelle"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+bauobjekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+neue_funktion: "Hülle"
+bauteil_label: "Fassaden"
+projekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Fassaden - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/reuse_einsatz/Haus_HOS_Mehrfamilienhaus_Muehlhausen__005__Fassaden
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Haus_HOS_Mehrfamilienhaus_Muehlhausen__005__Fassaden
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fassaden
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Hülle
+- **Menge/Umfang:** unbekannt
+- **tragend?:** unbekannt
+- **räumlich?:** unbekannt
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Wärmeschutz/Feuchte
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** keine Quelle
+- **unbekannt:** ja

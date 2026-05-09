@@ -1,20 +1,35 @@
-﻿---
-id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "bauobjekt"
+id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+title: "Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Haus_HOS_Mehrfamilienhaus_Muehlhausen.md"
+node_kind: "core"
+fallstudie: "fallstudie/Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+projekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+---
 
-## Clean Node
+# Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/bauobjekt/Haus_HOS_Mehrfamilienhaus_Muehlhausen
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Haus_HOS_Mehrfamilienhaus_Muehlhausen.md
 
-- Source: _graph/bauobjekt/Haus_HOS_Mehrfamilienhaus_Muehlhausen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** „HAUS HOS“ / Neubau eines Mehrfamilienhauses aus demontierten Plattenbauteilen, Mühlhausen
+- **Ort:** Mühlhausen, Thüringen, Deutschland
+- **Gebäude:** Mehrfamilienhaus
+- **Projekt:** Neubau mit 58 demontierten Stahlbeton-Wand- und Deckenelementen aus Leinefelde
+- **Beteiligte People / Akteure:** Seidl + Seidl Architekten; Architekturbüro Hose, Mühlhausen; BTU Cottbus, Lehrstuhl Altlasten / Dr. Angelika Mettke
+- **Architekt:** Seidl + Seidl Architekten, in Zusammenarbeit mit Architekturbüro Hose
+- **Tragwerksplaner:** unbekannt; Auswahl mit Statiker laut Stern-Bericht, Name unbekannt
+- **Bauherr:** Privat
+- **Zeitraum:** PRECS-Fallstudie 2007; Fertigstellung 2008 laut Architektenquelle
+- **Ursprüngliche Nutzung:** Plattenbau-/Wohnungsbaukontext in Leinefelde; genaue Spendergebäudeadresse unbekannt
+- **Neue Nutzung:** Mehrfamilienhaus
+- **Fläche / Maßstab:** ca. 250 m² Nutzfläche
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** relativ gut: Architektenseite/PDF plus wissenschaftliche PRECS-Datenbank und Presseberichte

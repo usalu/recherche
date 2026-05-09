@@ -1,20 +1,22 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__007__Bourne_Special_Projects_Bourne_Group"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Bourne Special Projects / Bourne Group - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Bourne Special Projects / Bourne Group - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Brent_Cross_Town_Primary_Substation_London__007__Bourne_Special_Projects_Bourne_Group"
+title: "Bourne Special Projects / Bourne Group - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "ASBP, Bourne"
+node_kind: "relation"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# Bourne Special Projects / Bourne Group - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Brent_Cross_Town_Primary_Substation_London__007__Bourne_Special_Projects_Bourne_Group
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Brent_Cross_Town_Primary_Substation_London__007__Bourne_Special_Projects_Bourne_Group
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Bourne Special Projects / Bourne Group
+- **Beziehung zur Fallstudie:** steel structure designer, fabricator, erector / wrap contractor
+- **Quelle/Beleg:** ASBP, Bourne
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Stahlbau

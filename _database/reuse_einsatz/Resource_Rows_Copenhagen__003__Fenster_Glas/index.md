@@ -1,20 +1,43 @@
-﻿---
-id: "Resource_Rows_Copenhagen__003__Fenster_Glas"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fenster / Glas - Resource Rows, Copenhagen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fenster / Glas - Resource Rows, Copenhagen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Resource_Rows_Copenhagen__003__Fenster_Glas"
+title: "Fenster / Glas - Resource Rows, Copenhagen — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Reuse nicht gesichert"
+quelle_label: "unbekannt"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Resource_Rows_Copenhagen"
+bauobjekt:
+  - "Resource_Rows_Copenhagen"
+neue_funktion: "Hülle / Raumabschluss"
+bauteil_label: "Fenster / Glas"
+projekt:
+  - "Resource_Rows_Copenhagen"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Fenster / Glas - Resource Rows, Copenhagen — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Resource_Rows_Copenhagen__003__Fenster_Glas
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Resource_Rows_Copenhagen__003__Fenster_Glas
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fenster / Glas
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Hülle / Raumabschluss
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** U-Wert, Luftdichtheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Reuse nicht gesichert
+- **Quelle:** unbekannt
+- **unbekannt:** alle Detaildaten

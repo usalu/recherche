@@ -1,20 +1,16 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Christ_Pavilion_Volkenroda"
+title: "Reuse-Kette - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Christ_Pavilion_Volkenroda.md"
+node_kind: "core"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Reuse-Kette - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Christ_Pavilion_Volkenroda
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Christ_Pavilion_Volkenroda
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

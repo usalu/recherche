@@ -1,20 +1,25 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__wiederverwendete_Hohlk_rperdecken"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete HohlkÃ¶rperdecken - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# wiederverwendete HohlkÃ¶rperdecken - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__wiederverwendete_Hohlk_rperdecken"
+title: "wiederverwendete Hohlkörperdecken - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "ReCreate"
+node_kind: "core"
+wert: "64"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+bauobjekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+projekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+---
 
-## Clean Node
+# wiederverwendete Hohlkörperdecken - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__wiederverwendete_Hohlk_rperdecken
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__001__wiederverwendete_Hohlk_rperdecken
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Hohlkörperdecken
+- **Wert:** 64
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** ReCreate-Projektdokumentation
+- **Bilanzgrenze:** Melkinlaituri commercial replication
+- **Quelle:** ReCreate
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Roots_in_the_Sky_Blackfriars_Crown_Court__007__Rooftop_Forest"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Rooftop Forest - Roots in the Sky / Blackfriars Crown Court, London"
 ---
+entity: "datenpunkt"
+id: "Roots_in_the_Sky_Blackfriars_Crown_Court__007__Rooftop_Forest"
+title: "Rooftop Forest - Roots in the Sky / Blackfriars Crown Court, London"
+build_status: "promoted_phase42"
+einheit: "Anzahl / t"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "125 Bäume / 10.000 Pflanzen / 1.000 t Boden"
+fallstudie: "fallstudie/Roots_in_the_Sky_Blackfriars_Crown_Court"
+bauobjekt:
+  - "Roots_in_the_Sky_Blackfriars_Crown_Court"
+projekt:
+  - "Roots_in_the_Sky_Blackfriars_Crown_Court"
+---
+
 # Rooftop Forest - Roots in the Sky / Blackfriars Crown Court, London
 
-## Clean Node
-
-- Final path: _database/datenpunkt/Roots_in_the_Sky_Blackfriars_Crown_Court__007__Rooftop_Forest
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Roots_in_the_Sky_Blackfriars_Crown_Court__007__Rooftop_Forest
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Rooftop Forest
+- **Wert:** 125 Bäume / 10.000 Pflanzen / 1.000 t Boden
+- **Einheit:** Anzahl / t
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Dachlandschaft, nicht Direct Reuse
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt für Planung

@@ -1,20 +1,17 @@
-﻿---
-id: "Plattenvereinigung_Berlin__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse"
 ---
-# Donor - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse
+entity: "reuse_kettenstation"
+id: "Plattenvereinigung_Berlin__Donor"
+title: "Donor - Plattenvereinigung Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Plattenvereinigung_Berlin.md"
+node_kind: "core"
+fallstudie: "fallstudie/Plattenvereinigung_Berlin"
+---
 
-## Clean Node
+# Donor - Plattenvereinigung Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kettenstation/Plattenvereinigung_Berlin__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Plattenvereinigung_Berlin__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Plattenvereinigung_Berlin.md: | Bauteilherkünfte | Olympisches Dorf München; PH12-Punkthochhaus Frankfurt/Oder | Orte/Donorquellen | Projektangabe | Fertigbetonteile | S3, S4 | belegt |
+Gebäude\Plattenvereinigung_Berlin.md: - **Fehlende Daten:** Bauteilpass, Donorbauteilliste, Statik, Genehmigung, Materialprüfungen, TGA.

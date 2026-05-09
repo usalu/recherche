@@ -1,20 +1,25 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__001__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# FlÃ¤che - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "PLP_London_HQ_Circular_Studio_Fitout__001__Fl_che"
+title: "Fläche - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "sq ft / m²"
+quelle_label: "PLP"
+node_kind: "core"
+wert: "22,850 / 2,122"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# Fläche - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__001__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__001__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 22,850 / 2,122
+- **Einheit:** sq ft / m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Fit-out-Fläche
+- **Quelle:** PLP
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__009__Kosteneinsparung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosteneinsparung - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Kosteneinsparung - Haus HOS / Mehrfamilienhaus MÃ¼hlhausen â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Haus_HOS_Mehrfamilienhaus_Muehlhausen__009__Kosteneinsparung"
+title: "Kosteneinsparung - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S7], [S8]"
+node_kind: "core"
+wert: "ca. 25"
+fallstudie: "fallstudie/Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+bauobjekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+projekt:
+  - "Haus_HOS_Mehrfamilienhaus_Muehlhausen"
+---
 
-## Clean Node
+# Kosteneinsparung - Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__009__Kosteneinsparung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Haus_HOS_Mehrfamilienhaus_Muehlhausen__009__Kosteneinsparung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosteneinsparung
+- **Wert:** ca. 25
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Architektenquelle
+- **Bilanzgrenze:** nicht näher definierte Kostenbasis
+- **Quelle:** [S7], [S8]
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,11 @@
-﻿---
-id: "Aluminium"
-entity: "material"
-build_status: "clean_phase20"
-title: "Aluminium"
 ---
+entity: "material"
+id: "Aluminium"
+title: "Aluminium"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Aluminium
 
-## Clean Node
-
-- Final path: _database/material/Aluminium
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/material/Aluminium
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

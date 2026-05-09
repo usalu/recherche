@@ -1,20 +1,43 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam__005__T_ren"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TÃ¼ren - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# TÃ¼ren - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "BlueCity_Offices_Rotterdam__005__T_ren"
+title: "Türen - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "keine Reuse-Belege"
+quelle_label: "unbekannt"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+bauobjekt:
+  - "BlueCity_Offices_Rotterdam"
+neue_funktion: "Büros"
+bauteil_label: "Türen"
+projekt:
+  - "BlueCity_Offices_Rotterdam"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Türen - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/BlueCity_Offices_Rotterdam__005__T_ren
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/BlueCity_Offices_Rotterdam__005__T_ren
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Türen
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Büros
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Brandschutz unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** keine Reuse-Belege
+- **Quelle:** unbekannt
+- **unbekannt:** alles

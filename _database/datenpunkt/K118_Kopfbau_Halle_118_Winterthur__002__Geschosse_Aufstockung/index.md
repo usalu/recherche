@@ -1,20 +1,25 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__002__Geschosse_Aufstockung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Geschosse Aufstockung - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# Geschosse Aufstockung - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "datenpunkt"
+id: "K118_Kopfbau_Halle_118_Winterthur__002__Geschosse_Aufstockung"
+title: "Geschosse Aufstockung - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+einheit: "Geschosse"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "3"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# Geschosse Aufstockung - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__002__Geschosse_Aufstockung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__002__Geschosse_Aufstockung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Geschosse Aufstockung
+- **Wert:** 3
+- **Einheit:** Geschosse
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Erweiterung
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

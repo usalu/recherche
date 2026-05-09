@@ -1,20 +1,25 @@
-﻿---
-id: "BedZED_London_Hackbridge__009__Durchschnittliche_Bezugsdistanz"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Durchschnittliche Bezugsdistanz - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Durchschnittliche Bezugsdistanz - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "BedZED_London_Hackbridge__009__Durchschnittliche_Bezugsdistanz"
+title: "Durchschnittliche Bezugsdistanz - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "miles"
+quelle_label: "S3"
+node_kind: "core"
+wert: "66,5"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+projekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# Durchschnittliche Bezugsdistanz - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/BedZED_London_Hackbridge__009__Durchschnittliche_Bezugsdistanz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BedZED_London_Hackbridge__009__Durchschnittliche_Bezugsdistanz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Durchschnittliche Bezugsdistanz
+- **Wert:** 66,5
+- **Einheit:** miles
+- **Methode/Datenmodell/Software:** BioRegional
+- **Bilanzgrenze:** Gesamtmaterial
+- **Quelle:** S3
+- **Vertrauensgrad:** belegt

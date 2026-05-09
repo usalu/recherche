@@ -1,20 +1,22 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__002__Evangelisches_B_ro_f_r_die_Weltausstellung_Expo"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Evangelisches BÃ¼ro fÃ¼r die Weltausstellung Expo 2000 - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Evangelisches BÃ¼ro fÃ¼r die Weltausstellung Expo 2000 - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Christ_Pavilion_Volkenroda__002__Evangelisches_B_ro_f_r_die_Weltausstellung_Expo"
+title: "Evangelisches Büro für die Weltausstellung Expo 2000 - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "gmp"
+node_kind: "relation"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Evangelisches Büro für die Weltausstellung Expo 2000 - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Christ_Pavilion_Volkenroda__002__Evangelisches_B_ro_f_r_die_Weltausstellung_Expo
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Christ_Pavilion_Volkenroda__002__Evangelisches_B_ro_f_r_die_Weltausstellung_Expo
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Evangelisches Büro für die Weltausstellung Expo 2000
+- **Beziehung zur Fallstudie:** Auftraggeber
+- **Quelle/Beleg:** gmp
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Kirchenprojekt

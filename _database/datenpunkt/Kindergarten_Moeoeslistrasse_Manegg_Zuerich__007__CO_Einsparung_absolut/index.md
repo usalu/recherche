@@ -1,20 +1,25 @@
-﻿---
-id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__007__CO_Einsparung_absolut"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Einsparung absolut - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# COâ‚‚-Einsparung absolut - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__007__CO_Einsparung_absolut"
+title: "CO₂-Einsparung absolut - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "t CO₂e"
+quelle_label: "ZAB"
+node_kind: "core"
+wert: "ca. 12,5"
+fallstudie: "fallstudie/Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+bauobjekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+projekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+---
 
-## Clean Node
+# CO₂-Einsparung absolut - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__007__CO_Einsparung_absolut
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__007__CO_Einsparung_absolut
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Einsparung absolut
+- **Wert:** ca. 12,5
+- **Einheit:** t CO₂e
+- **Methode/Datenmodell/Software:** ZAB-Zusammenfassung
+- **Bilanzgrenze:** Projektvergleich; enthält auch Mobiliar/Küche/Vordächer/Pergolen
+- **Quelle:** ZAB
+- **Vertrauensgrad:** teilweise belegt

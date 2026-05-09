@@ -1,20 +1,43 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__007__Concrete_block_garage_wing"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Concrete-block garage wing - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Concrete-block garage wing - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Big_Dig_House_Lexington_Massachusetts__007__Concrete_block_garage_wing"
+title: "Concrete-block garage wing - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "nicht zählen"
+quelle_label: "New Yorker"
+material_label: "Betonblock"
+node_kind: "core"
+herkunft_label: "vermutlich neu"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+neue_funktion: "Gebäudeteil"
+bauteil_label: "Concrete-block garage wing"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+alte_funktion: "keine"
+---
 
-## Clean Node
+# Concrete-block garage wing - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Big_Dig_House_Lexington_Massachusetts__007__Concrete_block_garage_wing
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Big_Dig_House_Lexington_Massachusetts__007__Concrete_block_garage_wing
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Concrete-block garage wing
+- **Material:** Betonblock
+- **Herkunft:** vermutlich neu
+- **alte Funktion:** keine
+- **neue Funktion:** Gebäudeteil
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** nicht Reuse belegt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht zählen
+- **Quelle:** New Yorker
+- **unbekannt:** Reuse-Anteil

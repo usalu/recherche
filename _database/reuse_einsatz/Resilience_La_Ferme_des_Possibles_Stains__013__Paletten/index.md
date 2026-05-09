@@ -1,20 +1,43 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__013__Paletten"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Paletten - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Paletten - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Resilience_La_Ferme_des_Possibles_Stains__013__Paletten"
+title: "Paletten - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "lose Möbel nicht zählen"
+quelle_label: "[S2]"
+material_label: "Holz"
+node_kind: "core"
+herkunft_label: "in situ Baustelle"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+neue_funktion: "Bänke und Außentische"
+bauteil_label: "Paletten"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+alte_funktion: "Verpackung/Transport"
+---
 
-## Clean Node
+# Paletten - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__013__Paletten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__013__Paletten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Paletten
+- **Material:** Holz
+- **Herkunft:** in situ Baustelle
+- **alte Funktion:** Verpackung/Transport
+- **neue Funktion:** Bänke und Außentische
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** Grenzfall Möbel
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Umnutzung
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Dauerhaftigkeit außen
+- **Norm/Recht:** unbekannt
+- **Hürde:** lose Möbel nicht zählen
+- **Quelle:** [S2]
+- **unbekannt:** ja

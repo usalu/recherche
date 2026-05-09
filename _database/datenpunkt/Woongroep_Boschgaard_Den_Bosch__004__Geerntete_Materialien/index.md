@@ -1,20 +1,25 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__004__Geerntete_Materialien"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Geerntete Materialien - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Geerntete Materialien - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Woongroep_Boschgaard_Den_Bosch__004__Geerntete_Materialien"
+title: "Geerntete Materialien - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "Houtbouw Lente; Boschgaard"
+node_kind: "core"
+wert: "ca. 85"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# Geerntete Materialien - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Woongroep_Boschgaard_Den_Bosch__004__Geerntete_Materialien
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Woongroep_Boschgaard_Den_Bosch__004__Geerntete_Materialien
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Geerntete Materialien
+- **Wert:** ca. 85
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude, laut Houtbouw Lente/Boschgaard
+- **Quelle:** Houtbouw Lente; Boschgaard
+- **Vertrauensgrad:** teilweise belegt

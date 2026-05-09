@@ -1,20 +1,25 @@
-﻿---
-id: "Zinneke_Feder_Masui4ever_Brussels__007__Azob_Terrassendielen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "AzobÃ©-Terrassendielen - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# AzobÃ©-Terrassendielen - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Zinneke_Feder_Masui4ever_Brussels__007__Azob_Terrassendielen"
+title: "Azobé-Terrassendielen - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S1], [S4]"
+node_kind: "core"
+wert: "90"
+fallstudie: "fallstudie/Zinneke_Feder_Masui4ever_Brussels"
+bauobjekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+projekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+---
 
-## Clean Node
+# Azobé-Terrassendielen - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__007__Azob_Terrassendielen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__007__Azob_Terrassendielen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Azobé-Terrassendielen
+- **Wert:** 90
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Terrasse
+- **Quelle:** [S1], [S4]
+- **Vertrauensgrad:** belegt

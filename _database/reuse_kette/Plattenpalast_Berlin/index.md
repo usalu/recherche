@@ -1,20 +1,16 @@
-﻿---
-id: "Plattenpalast_Berlin"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# Reuse-Kette - Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "reuse_kette"
+id: "Plattenpalast_Berlin"
+title: "Reuse-Kette - Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Plattenpalast_Berlin.md"
+node_kind: "core"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+projekt:
+  - "Plattenpalast_Berlin"
+---
 
-## Clean Node
+# Reuse-Kette - Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kette/Plattenpalast_Berlin
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Plattenpalast_Berlin
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

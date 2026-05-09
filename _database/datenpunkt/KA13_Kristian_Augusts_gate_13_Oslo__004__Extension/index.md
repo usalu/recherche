@@ -1,20 +1,25 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__004__Extension"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Extension - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Extension - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__004__Extension"
+title: "Extension - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S1"
+node_kind: "core"
+wert: "855"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+bauobjekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+projekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+---
 
-## Clean Node
+# Extension - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__004__Extension
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__004__Extension
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Extension
+- **Wert:** 855
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe FutureBuilt
+- **Bilanzgrenze:** Erweiterung
+- **Quelle:** S1
+- **Vertrauensgrad:** belegt

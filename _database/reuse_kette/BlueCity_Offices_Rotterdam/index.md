@@ -1,20 +1,16 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "BlueCity_Offices_Rotterdam"
+title: "Reuse-Kette - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\BlueCity_Offices_Rotterdam.md"
+node_kind: "core"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+projekt:
+  - "BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# Reuse-Kette - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/BlueCity_Offices_Rotterdam
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/BlueCity_Offices_Rotterdam
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

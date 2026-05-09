@@ -1,20 +1,25 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__011__Transportdistanz"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Transportdistanz - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Transportdistanz - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Superlocal_Expogebouw_Bleijerheide__011__Transportdistanz"
+title: "Transportdistanz - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "km"
+quelle_label: "SUPERLOCAL"
+node_kind: "core"
+wert: "lokal, genaue km unbekannt"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Transportdistanz - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Superlocal_Expogebouw_Bleijerheide__011__Transportdistanz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Superlocal_Expogebouw_Bleijerheide__011__Transportdistanz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Transportdistanz
+- **Wert:** lokal, genaue km unbekannt
+- **Einheit:** km
+- **Methode/Datenmodell/Software:** —
+- **Bilanzgrenze:** Projektgebiet
+- **Quelle:** SUPERLOCAL
+- **Vertrauensgrad:** teilweise belegt

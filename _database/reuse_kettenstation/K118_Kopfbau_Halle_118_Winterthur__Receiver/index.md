@@ -1,20 +1,17 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# Receiver - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "reuse_kettenstation"
+id: "K118_Kopfbau_Halle_118_Winterthur__Receiver"
+title: "Receiver - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\K118_Kopfbau_Halle_118_Winterthur.md"
+  - "Gebäude\\K118_Kopfbau_Halle_118_Winterthur.md"
+node_kind: "core"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# Receiver - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/reuse_kettenstation/K118_Kopfbau_Halle_118_Winterthur__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/K118_Kopfbau_Halle_118_Winterthur__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

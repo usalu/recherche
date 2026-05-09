@@ -1,20 +1,43 @@
-﻿---
-id: "Maison_DnA_Asse__011__feste_Einbauten"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "feste Einbauten - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# feste Einbauten - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Maison_DnA_Asse__011__feste_Einbauten"
+title: "feste Einbauten - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "keine Quelle"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Maison_DnA_Asse"
+bauobjekt:
+  - "Maison_DnA_Asse"
+neue_funktion: "unbekannt"
+bauteil_label: "feste Einbauten"
+projekt:
+  - "Maison_DnA_Asse"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# feste Einbauten - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Maison_DnA_Asse__011__feste_Einbauten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Maison_DnA_Asse__011__feste_Einbauten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** feste Einbauten
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** keine Quelle
+- **unbekannt:** ja

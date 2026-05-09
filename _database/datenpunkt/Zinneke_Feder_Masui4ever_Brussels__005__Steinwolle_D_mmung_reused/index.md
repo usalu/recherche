@@ -1,20 +1,25 @@
-﻿---
-id: "Zinneke_Feder_Masui4ever_Brussels__005__Steinwolle_D_mmung_reused"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Steinwolle-DÃ¤mmung reused - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Steinwolle-DÃ¤mmung reused - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Zinneke_Feder_Masui4ever_Brussels__005__Steinwolle_D_mmung_reused"
+title: "Steinwolle-Dämmung reused - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S1], [S4]"
+node_kind: "core"
+wert: "450"
+fallstudie: "fallstudie/Zinneke_Feder_Masui4ever_Brussels"
+bauobjekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+projekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+---
 
-## Clean Node
+# Steinwolle-Dämmung reused - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__005__Steinwolle_D_mmung_reused
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__005__Steinwolle_D_mmung_reused
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Steinwolle-Dämmung reused
+- **Wert:** 450
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Dämmplatten
+- **Quelle:** [S1], [S4]
+- **Vertrauensgrad:** belegt

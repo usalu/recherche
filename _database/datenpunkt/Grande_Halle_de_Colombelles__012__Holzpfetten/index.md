@@ -1,20 +1,25 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__012__Holzpfetten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Holzpfetten - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Holzpfetten - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grande_Halle_de_Colombelles__012__Holzpfetten"
+title: "Holzpfetten - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück / ml"
+quelle_label: "[S3]"
+node_kind: "core"
+wert: "21 / 63"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Holzpfetten - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grande_Halle_de_Colombelles__012__Holzpfetten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grande_Halle_de_Colombelles__012__Holzpfetten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Holzpfetten
+- **Wert:** 21 / 63
+- **Einheit:** Stück / ml
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Balkon / große Nave
+- **Quelle:** [S3]
+- **Vertrauensgrad:** belegt

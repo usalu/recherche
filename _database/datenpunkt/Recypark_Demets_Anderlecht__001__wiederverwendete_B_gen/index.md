@@ -1,20 +1,25 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__001__wiederverwendete_B_gen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete BÃ¶gen - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# wiederverwendete BÃ¶gen - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Recypark_Demets_Anderlecht__001__wiederverwendete_B_gen"
+title: "wiederverwendete Bögen - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "[S1], [S7]"
+node_kind: "core"
+wert: "20"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+bauobjekt:
+  - "Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# wiederverwendete Bögen - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Recypark_Demets_Anderlecht__001__wiederverwendete_B_gen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recypark_Demets_Anderlecht__001__wiederverwendete_B_gen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Bögen
+- **Wert:** 20
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektdokumentation Rotor
+- **Bilanzgrenze:** gebrauchte Brettschichtholzbögen
+- **Quelle:** [S1], [S7]
+- **Vertrauensgrad:** belegt

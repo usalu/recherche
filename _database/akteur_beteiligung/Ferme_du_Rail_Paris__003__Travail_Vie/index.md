@@ -1,20 +1,22 @@
-﻿---
-id: "Ferme_du_Rail_Paris__003__Travail_Vie"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Travail & Vie - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Travail & Vie - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Ferme_du_Rail_Paris__003__Travail_Vie"
+title: "Travail & Vie - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# Travail & Vie - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Ferme_du_Rail_Paris__003__Travail_Vie
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Ferme_du_Rail_Paris__003__Travail_Vie
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Travail & Vie
+- **Beziehung zur Fallstudie:** Betreiber / soziale Integration
+- **Quelle/Beleg:** [S2], [S4]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Integration durch Arbeit

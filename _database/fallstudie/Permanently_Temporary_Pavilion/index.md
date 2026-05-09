@@ -1,20 +1,34 @@
-﻿---
-id: "Permanently_Temporary_Pavilion"
-entity: "fallstudie"
-build_status: "clean_phase20"
-title: "Permanently Temporary Pavilion"
 ---
+entity: "fallstudie"
+id: "Permanently_Temporary_Pavilion"
+title: "Permanently Temporary Pavilion"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "fallstudie\\Permanently_Temporary_Pavilion.md"
+node_kind: "core"
+bauobjekt:
+projekt:
+---
+
 # Permanently Temporary Pavilion
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/fallstudie/Permanently_Temporary_Pavilion
-- Build rule: typed path IDs only.
+### Legacy Source: fallstudie\Permanently_Temporary_Pavilion.md
 
-## Imported Staging Nodes
+- Map action: keep_or_split_case
+- Primary target: fallstudie/Permanently_Temporary_Pavilion
+- Secondary targets: 
+- Risk flags: 
 
-- Source: _graph/fallstudie/Permanently_Temporary_Pavilion
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# Permanently Temporary Pavilion
 
+## Kurzdefinition
+
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

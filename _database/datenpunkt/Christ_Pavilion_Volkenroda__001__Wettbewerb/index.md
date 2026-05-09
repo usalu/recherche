@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__001__Wettbewerb"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wettbewerb - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Wettbewerb - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__001__Wettbewerb"
+title: "Wettbewerb - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "gmp"
+node_kind: "core"
+wert: "1997"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Wettbewerb - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__001__Wettbewerb
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__001__Wettbewerb
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wettbewerb
+- **Wert:** 1997
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Entwurf
+- **Quelle:** gmp
+- **Vertrauensgrad:** belegt

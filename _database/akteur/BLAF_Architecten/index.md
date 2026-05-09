@@ -1,20 +1,21 @@
-﻿---
-id: "BLAF_Architecten"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "BLAF Architecten"
 ---
+entity: "akteur"
+id: "BLAF_Architecten"
+title: "BLAF Architecten"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\gjG_House_Gentbrugge.md"
+  - "Gebäude\\Maison_DnA_Asse.md"
+node_kind: "core"
+---
+
 # BLAF Architecten
 
-## Clean Node
+## Observed Roles
 
-- Final path: _database/akteur/BLAF_Architecten
-- Build rule: typed path IDs only.
+- Architekt
 
-## Imported Staging Nodes
+## Observed Fallstudien
 
-- Source: _graph/akteur/BLAF_Architecten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- fallstudie/gjG_House_Gentbrugge
+- fallstudie/Maison_DnA_Asse

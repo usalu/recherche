@@ -1,20 +1,13 @@
-﻿---
-id: "U_Wert"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "U-Wert"
 ---
+entity: "kennwertdefinition"
+id: "U_Wert"
+title: "U-Wert"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # U-Wert
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/U_Wert
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/U_Wert
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Waermedurchgangskoeffizient von Bauteilen, Fenstern oder Huellenelementen.

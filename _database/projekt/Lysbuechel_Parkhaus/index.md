@@ -1,20 +1,18 @@
-﻿---
-id: "Lysbuechel_Parkhaus"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "Lysbuechel Parkhaus"
 ---
+entity: "projekt"
+id: "Lysbuechel_Parkhaus"
+title: "Lysbuechel Parkhaus"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\Lysbuechel_Parkhaus.md"
+node_kind: "core"
+fallstudie: "fallstudie/Lysbuechel_Parkhaus"
+bauobjekt:
+  - "Lysbuechel_Parkhaus"
+---
+
 # Lysbuechel Parkhaus
 
-## Clean Node
+## Extracted Project Context
 
-- Final path: _database/projekt/Lysbuechel_Parkhaus
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/projekt/Lysbuechel_Parkhaus
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Projektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

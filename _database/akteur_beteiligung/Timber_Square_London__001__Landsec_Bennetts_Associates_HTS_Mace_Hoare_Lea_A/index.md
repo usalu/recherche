@@ -1,20 +1,22 @@
-﻿---
-id: "Timber_Square_London__001__Landsec_Bennetts_Associates_HTS_Mace_Hoare_Lea_A"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Landsec, Bennetts Associates, HTS, Mace, Hoare Lea, Alinea/T+T Alinea, Opera, Stora Enso, Hybrid Structures, Cleveland Steel & Tubes - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Landsec, Bennetts Associates, HTS, Mace, Hoare Lea, Alinea/T+T Alinea, Opera, Stora Enso, Hybrid Structures, Cleveland Steel & Tubes - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "akteur_beteiligung"
+id: "Timber_Square_London__001__Landsec_Bennetts_Associates_HTS_Mace_Hoare_Lea_A"
+title: "Landsec, Bennetts Associates, HTS, Mace, Hoare Lea, Alinea/T+T Alinea, Opera, Stora Enso, Hybrid Structures, Cleveland Steel & Tubes - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "S1, S4, S8, S10"
+node_kind: "relation"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Landsec, Bennetts Associates, HTS, Mace, Hoare Lea, Alinea/T+T Alinea, Opera, Stora Enso, Hybrid Structures, Cleveland Steel & Tubes - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/akteur_beteiligung/Timber_Square_London__001__Landsec_Bennetts_Associates_HTS_Mace_Hoare_Lea_A
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Timber_Square_London__001__Landsec_Bennetts_Associates_HTS_Mace_Hoare_Lea_A
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People/Akteure
+- **Wert:** Landsec, Bennetts Associates, HTS, Mace, Hoare Lea, Alinea/T+T Alinea, Opera, Stora Enso, Hybrid Structures, Cleveland Steel & Tubes
+- **Beziehung zur Fallstudie:** Projektteam / Lieferkette
+- **Quelle/Beleg:** S1, S4, S8, S10
+- **Vertrauensgrad:** belegt/teilweise
+- **Anmerkung:** Rollen je Quelle

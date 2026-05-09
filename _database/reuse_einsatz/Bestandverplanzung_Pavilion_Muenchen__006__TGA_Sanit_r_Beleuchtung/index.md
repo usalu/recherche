@@ -1,20 +1,43 @@
-﻿---
-id: "Bestandverplanzung_Pavilion_Muenchen__006__TGA_Sanit_r_Beleuchtung"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TGA / SanitÃ¤r / Beleuchtung - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# TGA / SanitÃ¤r / Beleuchtung - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Bestandverplanzung_Pavilion_Muenchen__006__TGA_Sanit_r_Beleuchtung"
+title: "TGA / Sanitär / Beleuchtung - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "nicht belegt"
+quelle_label: "—"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Bestandverplanzung_Pavilion_Muenchen"
+bauobjekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+neue_funktion: "unbekannt"
+bauteil_label: "TGA / Sanitär / Beleuchtung"
+projekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# TGA / Sanitär / Beleuchtung - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Bestandverplanzung_Pavilion_Muenchen__006__TGA_Sanit_r_Beleuchtung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Bestandverplanzung_Pavilion_Muenchen__006__TGA_Sanit_r_Beleuchtung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** TGA / Sanitär / Beleuchtung
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Betriebssicherheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht belegt
+- **Quelle:** —
+- **unbekannt:** alle Details

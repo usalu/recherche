@@ -1,20 +1,25 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__005__wiederverwendete_Pflasterplatten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete Pflasterplatten - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# wiederverwendete Pflasterplatten - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__005__wiederverwendete_Pflasterplatten"
+title: "wiederverwendete Pflasterplatten - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "135"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+---
 
-## Clean Node
+# wiederverwendete Pflasterplatten - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__005__wiederverwendete_Pflasterplatten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__005__wiederverwendete_Pflasterplatten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Pflasterplatten
+- **Wert:** 135
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Liefer-/Wiedereinbauprozess
+- **Bilanzgrenze:** Außenanlagen/Fahrradbereich
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

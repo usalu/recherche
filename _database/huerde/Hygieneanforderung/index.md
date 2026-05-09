@@ -1,20 +1,13 @@
-﻿---
-id: "Hygieneanforderung"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Hygieneanforderung"
 ---
+entity: "huerde"
+id: "Hygieneanforderung"
+title: "Hygieneanforderung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Hygieneanforderung
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Hygieneanforderung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Hygieneanforderung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Hygiene, Sauberkeit oder Nutzungssicherheit als Huerde fuer gebrauchte Bauteile.

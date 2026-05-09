@@ -1,20 +1,25 @@
-﻿---
-id: "gjG_House_Gentbrugge__003__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "gjG_House_Gentbrugge__003__Fl_che"
+title: "Fläche - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S1], [S2]"
+node_kind: "core"
+wert: "190"
+fallstudie: "fallstudie/gjG_House_Gentbrugge"
+bauobjekt:
+  - "gjG_House_Gentbrugge"
+projekt:
+  - "gjG_House_Gentbrugge"
+---
 
-## Clean Node
+# Fläche - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/gjG_House_Gentbrugge__003__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/gjG_House_Gentbrugge__003__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 190
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S1], [S2]
+- **Vertrauensgrad:** belegt

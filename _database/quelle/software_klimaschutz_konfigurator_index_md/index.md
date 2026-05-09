@@ -1,15 +1,12 @@
-﻿---
-id: "software_klimaschutz_konfigurator_index_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "software/klimaschutz-konfigurator/index.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "software_klimaschutz_konfigurator_index_md"
+title: "software_klimaschutz_konfigurator_index_md"
+build_status: "promoted_phase42"
+source_filename: "index.md"
+legacy_type: "Software"
+---
+
 # software_klimaschutz_konfigurator_index_md
 
-## Source Archive
 
-- Original path: software/klimaschutz-konfigurator/index.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_core; old target: software_digitaltool/klimaschutz_konfigurator

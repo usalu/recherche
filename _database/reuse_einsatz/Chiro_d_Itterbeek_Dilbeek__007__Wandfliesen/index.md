@@ -1,20 +1,43 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__007__Wandfliesen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Wandfliesen - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# Wandfliesen - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Chiro_d_Itterbeek_Dilbeek__007__Wandfliesen"
+title: "Wandfliesen - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Menge/Passung"
+quelle_label: "[S2], [S4]"
+material_label: "Keramik"
+node_kind: "core"
+herkunft_label: "RotorDC"
+menge_umfang: "11 m²"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+neue_funktion: "Nassbereich Wand"
+bauteil_label: "Wandfliesen"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+alte_funktion: "Wandbekleidung"
+---
 
-## Clean Node
+# Wandfliesen - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__007__Wandfliesen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__007__Wandfliesen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Wandfliesen
+- **Material:** Keramik
+- **Herkunft:** RotorDC
+- **alte Funktion:** Wandbekleidung
+- **neue Funktion:** Nassbereich Wand
+- **Menge/Umfang:** 11 m²
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Reinigung
+- **Verbindung:** Fliesenbelag
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Wasser/Reinigung
+- **Norm/Recht:** unbekannt
+- **Hürde:** Menge/Passung
+- **Quelle:** [S2], [S4]
+- **unbekannt:** Herkunft

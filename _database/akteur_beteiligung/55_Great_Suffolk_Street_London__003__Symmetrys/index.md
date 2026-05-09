@@ -1,20 +1,22 @@
-﻿---
-id: "55_Great_Suffolk_Street_London__003__Symmetrys"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Symmetrys - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Symmetrys - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "55_Great_Suffolk_Street_London__003__Symmetrys"
+title: "Symmetrys - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "ASBP, NLA"
+node_kind: "relation"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+bauobjekt:
+  - "55_Great_Suffolk_Street_London"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+---
 
-## Clean Node
+# Symmetrys - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/55_Great_Suffolk_Street_London__003__Symmetrys
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/55_Great_Suffolk_Street_London__003__Symmetrys
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Symmetrys
+- **Beziehung zur Fallstudie:** Structural engineer
+- **Quelle/Beleg:** ASBP, NLA
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Tragwerksplanung

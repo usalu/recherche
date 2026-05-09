@@ -1,20 +1,43 @@
-﻿---
-id: "CRCLR_House_Impact_Hub_Berlin__004__Sanit_robjekte_Duschtassen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "SanitÃ¤robjekte / Duschtassen - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse"
 ---
-# SanitÃ¤robjekte / Duschtassen - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "CRCLR_House_Impact_Hub_Berlin__004__Sanit_robjekte_Duschtassen"
+title: "Sanitärobjekte / Duschtassen - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "geringer als Fenster/Türen"
+quelle_label: "CMS; nbau"
+material_label: "Keramik/Sanitärmaterial"
+node_kind: "core"
+herkunft_label: "Standardisierte Rückbauware"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/CRCLR_House_Impact_Hub_Berlin"
+bauobjekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+neue_funktion: "Sanitär"
+bauteil_label: "Sanitärobjekte / Duschtassen"
+projekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+alte_funktion: "Sanitär"
+---
 
-## Clean Node
+# Sanitärobjekte / Duschtassen - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/CRCLR_House_Impact_Hub_Berlin__004__Sanit_robjekte_Duschtassen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/CRCLR_House_Impact_Hub_Berlin__004__Sanit_robjekte_Duschtassen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Sanitärobjekte / Duschtassen
+- **Material:** Keramik/Sanitärmaterial
+- **Herkunft:** Standardisierte Rückbauware
+- **alte Funktion:** Sanitär
+- **neue Funktion:** Sanitär
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** Reinigung/Aufbereitung unbekannt
+- **Verbindung:** Standardanschlüsse vermutet
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Hygiene, Funktion
+- **Norm/Recht:** unbekannt
+- **Hürde:** geringer als Fenster/Türen
+- **Quelle:** CMS; nbau
+- **unbekannt:** Anzahl

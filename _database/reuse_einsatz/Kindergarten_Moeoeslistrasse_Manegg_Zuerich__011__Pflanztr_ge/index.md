@@ -1,20 +1,43 @@
-﻿---
-id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__011__Pflanztr_ge"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "PflanztrÃ¶ge - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# PflanztrÃ¶ge - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "reuse_einsatz"
+id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__011__Pflanztr_ge"
+title: "Pflanztröge - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Transport/Gewicht"
+quelle_label: "ZAB; Swiss-Architects"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "Re-Use"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+bauobjekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+neue_funktion: "Außenraum"
+bauteil_label: "Pflanztröge"
+projekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+alte_funktion: "Pflanztröge"
+---
 
-## Clean Node
+# Pflanztröge - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/reuse_einsatz/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__011__Pflanztr_ge
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__011__Pflanztr_ge
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Pflanztröge
+- **Material:** unbekannt
+- **Herkunft:** Re-Use
+- **alte Funktion:** Pflanztröge
+- **neue Funktion:** Außenraum
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** räumlich außen
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Einbau
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Dauerhaftigkeit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Transport/Gewicht
+- **Quelle:** ZAB; Swiss-Architects
+- **unbekannt:** Menge

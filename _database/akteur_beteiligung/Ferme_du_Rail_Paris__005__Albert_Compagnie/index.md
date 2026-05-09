@@ -1,20 +1,22 @@
-﻿---
-id: "Ferme_du_Rail_Paris__005__Albert_Compagnie"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Albert & Compagnie - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Albert & Compagnie - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Ferme_du_Rail_Paris__005__Albert_Compagnie"
+title: "Albert & Compagnie - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# Albert & Compagnie - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Ferme_du_Rail_Paris__005__Albert_Compagnie
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Ferme_du_Rail_Paris__005__Albert_Compagnie
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Albert & Compagnie
+- **Beziehung zur Fallstudie:** Nachhaltigkeitsberatung
+- **Quelle/Beleg:** [S1], [S3]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Nachhaltigkeit / Reuse-Beteiligung

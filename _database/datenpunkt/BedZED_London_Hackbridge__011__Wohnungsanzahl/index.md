@@ -1,20 +1,25 @@
-﻿---
-id: "BedZED_London_Hackbridge__011__Wohnungsanzahl"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wohnungsanzahl - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Wohnungsanzahl - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "BedZED_London_Hackbridge__011__Wohnungsanzahl"
+title: "Wohnungsanzahl - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "S5, S6"
+node_kind: "core"
+wert: "82"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+projekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# Wohnungsanzahl - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/BedZED_London_Hackbridge__011__Wohnungsanzahl
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BedZED_London_Hackbridge__011__Wohnungsanzahl
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wohnungsanzahl
+- **Wert:** 82
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektbeschreibung
+- **Bilanzgrenze:** Gesamtprojekt
+- **Quelle:** S5, S6
+- **Vertrauensgrad:** belegt

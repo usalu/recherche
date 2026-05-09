@@ -1,20 +1,43 @@
-﻿---
-id: "gjG_House_Gentbrugge__004__Innenoberfl_chen_der_Schale"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "InnenoberflÃ¤chen der Schale - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# InnenoberflÃ¤chen der Schale - gjG House, Gentbrugge / Ghent â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "gjG_House_Gentbrugge__004__Innenoberfl_chen_der_Schale"
+title: "Innenoberflächen der Schale - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "[S1], [S2]"
+material_label: "gleiche wiederverwendete Ziegel"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/gjG_House_Gentbrugge"
+bauobjekt:
+  - "gjG_House_Gentbrugge"
+neue_funktion: "Innenraumoberfläche / Außenraumgefühl"
+bauteil_label: "Innenoberflächen der Schale"
+projekt:
+  - "gjG_House_Gentbrugge"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Innenoberflächen der Schale - gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/gjG_House_Gentbrugge__004__Innenoberfl_chen_der_Schale
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/gjG_House_Gentbrugge__004__Innenoberfl_chen_der_Schale
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Innenoberflächen der Schale
+- **Material:** gleiche wiederverwendete Ziegel
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Innenraumoberfläche / Außenraumgefühl
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein/Teil der Schale
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** Mauerwerk
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Raumwirkung
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** [S1], [S2]
+- **unbekannt:** Details

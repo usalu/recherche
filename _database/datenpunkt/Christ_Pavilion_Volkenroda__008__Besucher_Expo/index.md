@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__008__Besucher_Expo"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Besucher Expo - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Besucher Expo - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__008__Besucher_Expo"
+title: "Besucher Expo - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Personen"
+quelle_label: "ntv"
+node_kind: "core"
+wert: "1,8 Mio."
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Besucher Expo - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__008__Besucher_Expo
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__008__Besucher_Expo
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Besucher Expo
+- **Wert:** 1,8 Mio.
+- **Einheit:** Personen
+- **Methode/Datenmodell/Software:** ntv/dpa-Bericht
+- **Bilanzgrenze:** Expo-Nutzung
+- **Quelle:** ntv
+- **Vertrauensgrad:** teilweise belegt

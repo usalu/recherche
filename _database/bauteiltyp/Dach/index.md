@@ -1,30 +1,21 @@
-﻿---
-id: "Dach"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Dach"
 ---
+entity: "bauteiltyp"
+id: "Dach"
+title: "Dach"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Dach
 
-## Clean Node
+## Quelle: bauteiltyp_Dachziegel.staging_index
 
-- Final path: _database/bauteiltyp/Dach
-- Build rule: typed path IDs only.
+## Definition
 
-## Imported Staging Nodes
+Dachziegel oder roof tiles als eigene Bauteilgruppe.
 
-- Source: _graph/bauteiltyp/Dach
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Quelle: bauteiltyp_Vordach_Ueberdachung.staging_index
 
-- Source: _graph/bauteiltyp/Dachziegel
-  - Action: split_to_clean_targets
-  - Status: CONFIDENT
-  - Reason: Roof tile is roof component plus brick/clay material.
+## Definition
 
-- Source: _graph/bauteiltyp/Vordach_Ueberdachung
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: Canopy/covering is roof-family component.
-
+Vordaecher, Pergolen, Atriumhuellen, Ueberdachungen oder Dachrand-Ueberdeckungen.

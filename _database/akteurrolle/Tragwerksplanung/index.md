@@ -1,20 +1,13 @@
-﻿---
-id: "Tragwerksplanung"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Tragwerksplanung"
 ---
+entity: "akteurrolle"
+id: "Tragwerksplanung"
+title: "Tragwerksplanung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Tragwerksplanung
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Tragwerksplanung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Tragwerksplanung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Tragwerks-, Bauingenieur-, Statik- oder Structural-Engineering-Rolle.

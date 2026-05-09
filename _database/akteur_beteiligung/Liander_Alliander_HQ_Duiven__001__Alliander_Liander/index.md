@@ -1,20 +1,22 @@
-﻿---
-id: "Liander_Alliander_HQ_Duiven__001__Alliander_Liander"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Alliander / Liander - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Alliander / Liander - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Liander_Alliander_HQ_Duiven__001__Alliander_Liander"
+title: "Alliander / Liander - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "S1, S2"
+node_kind: "relation"
+fallstudie: "fallstudie/Liander_Alliander_HQ_Duiven"
+bauobjekt:
+  - "Liander_Alliander_HQ_Duiven"
+projekt:
+  - "Liander_Alliander_HQ_Duiven"
+---
 
-## Clean Node
+# Alliander / Liander - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Liander_Alliander_HQ_Duiven__001__Alliander_Liander
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Liander_Alliander_HQ_Duiven__001__Alliander_Liander
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Alliander / Liander
+- **Beziehung zur Fallstudie:** Bauherr / Nutzer
+- **Quelle/Beleg:** S1, S2
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Netzbetreiber / Energiewirtschaft

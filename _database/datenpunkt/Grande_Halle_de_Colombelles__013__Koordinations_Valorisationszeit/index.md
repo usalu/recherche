@@ -1,20 +1,25 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__013__Koordinations_Valorisationszeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Koordinations-/Valorisationszeit - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Koordinations-/Valorisationszeit - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grande_Halle_de_Colombelles__013__Koordinations_Valorisationszeit"
+title: "Koordinations-/Valorisationszeit - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stunden"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "2.790"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Koordinations-/Valorisationszeit - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grande_Halle_de_Colombelles__013__Koordinations_Valorisationszeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grande_Halle_de_Colombelles__013__Koordinations_Valorisationszeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Koordinations-/Valorisationszeit
+- **Wert:** 2.790
+- **Einheit:** Stunden
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Reuse-Koordination
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

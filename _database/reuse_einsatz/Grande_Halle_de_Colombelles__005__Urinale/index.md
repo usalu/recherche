@@ -1,20 +1,43 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__005__Urinale"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Urinale - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Urinale - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Grande_Halle_de_Colombelles__005__Urinale"
+title: "Urinale - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Zustand"
+quelle_label: "[S2], [S3]"
+material_label: "Keramik"
+node_kind: "core"
+herkunft_label: "Rückbau"
+menge_umfang: "5"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+neue_funktion: "Urinal"
+bauteil_label: "Urinale"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+alte_funktion: "Urinal"
+---
 
-## Clean Node
+# Urinale - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Grande_Halle_de_Colombelles__005__Urinale
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Grande_Halle_de_Colombelles__005__Urinale
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Urinale
+- **Material:** Keramik
+- **Herkunft:** Rückbau
+- **alte Funktion:** Urinal
+- **neue Funktion:** Urinal
+- **Menge/Umfang:** 5
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** Reinigung
+- **Verbindung:** Sanitäranschluss
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Hygiene
+- **Norm/Recht:** unbekannt
+- **Hürde:** Zustand
+- **Quelle:** [S2], [S3]
+- **unbekannt:** teilweise

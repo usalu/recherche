@@ -1,20 +1,22 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__003__Sweco_Sweco_Architects"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Sweco / Sweco Architects - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Sweco / Sweco Architects - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "akteur_beteiligung"
+id: "Svanen_Kindergarten_Gladsaxe__003__Sweco_Sweco_Architects"
+title: "Sweco / Sweco Architects - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S3], [S5]"
+node_kind: "relation"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+bauobjekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+projekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# Sweco / Sweco Architects - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/akteur_beteiligung/Svanen_Kindergarten_Gladsaxe__003__Sweco_Sweco_Architects
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Svanen_Kindergarten_Gladsaxe__003__Sweco_Sweco_Architects
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Sweco / Sweco Architects
+- **Beziehung zur Fallstudie:** Kollaborateur / Architekt
+- **Quelle/Beleg:** [S1], [S3], [S5]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Quellen nennen Sweco/NIRAS bzw. Sweco Architects

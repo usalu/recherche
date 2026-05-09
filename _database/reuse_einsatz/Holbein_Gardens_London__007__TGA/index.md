@@ -1,20 +1,43 @@
-﻿---
-id: "Holbein_Gardens_London__007__TGA"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TGA - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# TGA - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "reuse_einsatz"
+id: "Holbein_Gardens_London__007__TGA"
+title: "TGA - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+huerde_label: "Energie-/Komfortanforderungen"
+quelle_label: "[S7]"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "WELL/NABERS-Anforderungen"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+neue_funktion: "Büro-TGA"
+bauteil_label: "TGA"
+projekt:
+  - "Holbein_Gardens_London"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# TGA - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/reuse_einsatz/Holbein_Gardens_London__007__TGA
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Holbein_Gardens_London__007__TGA
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** TGA
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Büro-TGA
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** WELL/NABERS-Anforderungen
+- **Leistungsanforderung:** Betrieb, Luftqualität, Komfort
+- **Norm/Recht:** unbekannt
+- **Hürde:** Energie-/Komfortanforderungen
+- **Quelle:** [S7]
+- **unbekannt:** reused? nein/unbekannt

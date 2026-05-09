@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__001__wiederverwendeter_Stahl"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendeter Stahl - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# wiederverwendeter Stahl - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__001__wiederverwendeter_Stahl"
+title: "wiederverwendeter Stahl - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "[S3], [S5]"
+node_kind: "core"
+wert: "25"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# wiederverwendeter Stahl - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__001__wiederverwendeter_Stahl
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__001__wiederverwendeter_Stahl
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendeter Stahl
+- **Wert:** 25
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** IStructE / TERC
+- **Bilanzgrenze:** im Projekt verbaute reclaimed steel members
+- **Quelle:** [S3], [S5]
+- **Vertrauensgrad:** belegt

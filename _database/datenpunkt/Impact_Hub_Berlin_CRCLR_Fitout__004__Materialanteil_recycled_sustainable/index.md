@@ -1,20 +1,25 @@
-﻿---
-id: "Impact_Hub_Berlin_CRCLR_Fitout__004__Materialanteil_recycled_sustainable"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Materialanteil recycled/sustainable - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Materialanteil recycled/sustainable - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Impact_Hub_Berlin_CRCLR_Fitout__004__Materialanteil_recycled_sustainable"
+title: "Materialanteil recycled/sustainable - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S2, S3"
+node_kind: "core"
+wert: "ca. 70"
+fallstudie: "fallstudie/Impact_Hub_Berlin_CRCLR_Fitout"
+bauobjekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+projekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+---
 
-## Clean Node
+# Materialanteil recycled/sustainable - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Impact_Hub_Berlin_CRCLR_Fitout__004__Materialanteil_recycled_sustainable
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Impact_Hub_Berlin_CRCLR_Fitout__004__Materialanteil_recycled_sustainable
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Materialanteil recycled/sustainable
+- **Wert:** ca. 70
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** LXSY/UBM-Angabe
+- **Bilanzgrenze:** Innenausbau
+- **Quelle:** S2, S3
+- **Vertrauensgrad:** belegt, nicht Direct Reuse

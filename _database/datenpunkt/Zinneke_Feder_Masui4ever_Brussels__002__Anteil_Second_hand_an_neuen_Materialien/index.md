@@ -1,20 +1,25 @@
-﻿---
-id: "Zinneke_Feder_Masui4ever_Brussels__002__Anteil_Second_hand_an_neuen_Materialien"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anteil Second-hand an neuen Materialien - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Anteil Second-hand an neuen Materialien - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Zinneke_Feder_Masui4ever_Brussels__002__Anteil_Second_hand_an_neuen_Materialien"
+title: "Anteil Second-hand an neuen Materialien - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "% Masse"
+quelle_label: "[S1], [S3], [S4]"
+node_kind: "core"
+wert: "12"
+fallstudie: "fallstudie/Zinneke_Feder_Masui4ever_Brussels"
+bauobjekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+projekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+---
 
-## Clean Node
+# Anteil Second-hand an neuen Materialien - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__002__Anteil_Second_hand_an_neuen_Materialien
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__002__Anteil_Second_hand_an_neuen_Materialien
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anteil Second-hand an neuen Materialien
+- **Wert:** 12
+- **Einheit:** % Masse
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** neue Entwicklungen / neue Einbauten
+- **Quelle:** [S1], [S3], [S4]
+- **Vertrauensgrad:** belegt

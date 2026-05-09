@@ -1,20 +1,22 @@
-﻿---
-id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__002__Provincie_Gelderland"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Provincie Gelderland - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Provincie Gelderland - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__002__Provincie_Gelderland"
+title: "Provincie Gelderland - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Lagemaat/Tektoniek"
+node_kind: "relation"
+fallstudie: "fallstudie/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+bauobjekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+projekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+---
 
-## Clean Node
+# Provincie Gelderland - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__002__Provincie_Gelderland
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__002__Provincie_Gelderland
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Provincie Gelderland
+- **Beziehung zur Fallstudie:** Auftraggeber/Eigentümer Donor-Kontext
+- **Quelle/Beleg:** Lagemaat/Tektoniek
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** beauftragte zirkuläre Demontage

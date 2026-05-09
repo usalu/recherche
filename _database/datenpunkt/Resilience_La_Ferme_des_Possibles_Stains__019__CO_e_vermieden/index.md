@@ -1,20 +1,25 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__019__CO_e_vermieden"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚e vermieden - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# COâ‚‚e vermieden - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Resilience_La_Ferme_des_Possibles_Stains__019__CO_e_vermieden"
+title: "CO₂e vermieden - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t CO₂e"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "69,22"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# CO₂e vermieden - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__019__CO_e_vermieden
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__019__CO_e_vermieden
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂e vermieden
+- **Wert:** 69,22
+- **Einheit:** t CO₂e
+- **Methode/Datenmodell/Software:** INIES
+- **Bilanzgrenze:** Materialien: WC, Lavabos, Fenster, Türen, Radiatoren, Leuchten, Ziegel, Solives, Pflaster, Trennwand
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

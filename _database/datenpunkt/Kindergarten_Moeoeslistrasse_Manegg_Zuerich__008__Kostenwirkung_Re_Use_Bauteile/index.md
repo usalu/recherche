@@ -1,20 +1,25 @@
-﻿---
-id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__008__Kostenwirkung_Re_Use_Bauteile"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kostenwirkung Re-Use-Bauteile - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Kostenwirkung Re-Use-Bauteile - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__008__Kostenwirkung_Re_Use_Bauteile"
+title: "Kostenwirkung Re-Use-Bauteile - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "Stadt Zürich Kostenstudie"
+node_kind: "core"
+wert: "-9"
+fallstudie: "fallstudie/Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+bauobjekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+projekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+---
 
-## Clean Node
+# Kostenwirkung Re-Use-Bauteile - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__008__Kostenwirkung_Re_Use_Bauteile
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__008__Kostenwirkung_Re_Use_Bauteile
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kostenwirkung Re-Use-Bauteile
+- **Wert:** -9
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Kostenauswertung
+- **Bilanzgrenze:** Gesamtkosten Re-Use-Bauteile inkl. Honorare/MwSt. ggü. Kostenvoranschlag
+- **Quelle:** Stadt Zürich Kostenstudie
+- **Vertrauensgrad:** belegt

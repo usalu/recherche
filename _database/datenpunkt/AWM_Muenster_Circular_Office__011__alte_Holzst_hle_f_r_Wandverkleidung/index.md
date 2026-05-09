@@ -1,20 +1,25 @@
-﻿---
-id: "AWM_Muenster_Circular_Office__011__alte_Holzst_hle_f_r_Wandverkleidung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "alte HolzstÃ¼hle fÃ¼r Wandverkleidung - AWM MÃ¼nster â€“ ZirkulÃ¤rer BÃ¼roausbau 3. OG â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# alte HolzstÃ¼hle fÃ¼r Wandverkleidung - AWM MÃ¼nster â€“ ZirkulÃ¤rer BÃ¼roausbau 3. OG â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "AWM_Muenster_Circular_Office__011__alte_Holzst_hle_f_r_Wandverkleidung"
+title: "alte Holzstühle für Wandverkleidung - AWM Münster – Zirkulärer Büroausbau 3. OG – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "S1, S4"
+node_kind: "core"
+wert: ">500 / 550"
+fallstudie: "fallstudie/AWM_Muenster_Circular_Office"
+bauobjekt:
+  - "AWM_Muenster_Circular_Office"
+projekt:
+  - "AWM_Muenster_Circular_Office"
+---
 
-## Clean Node
+# alte Holzstühle für Wandverkleidung - AWM Münster – Zirkulärer Büroausbau 3. OG – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/AWM_Muenster_Circular_Office__011__alte_Holzst_hle_f_r_Wandverkleidung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/AWM_Muenster_Circular_Office__011__alte_Holzst_hle_f_r_Wandverkleidung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** alte Holzstühle für Wandverkleidung
+- **Wert:** >500 / 550
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** AWM / Drittportfolio
+- **Bilanzgrenze:** Wandverkleidung
+- **Quelle:** S1, S4
+- **Vertrauensgrad:** teilweise belegt

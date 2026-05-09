@@ -1,20 +1,43 @@
-﻿---
-id: "Recyclinghaus_Hannover__006__Holzleisten_alte_Saunab_nke"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Holzleisten / alte SaunabÃ¤nke - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Holzleisten / alte SaunabÃ¤nke - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Recyclinghaus_Hannover__006__Holzleisten_alte_Saunab_nke"
+title: "Holzleisten / alte Saunabänke - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Holzschutz"
+quelle_label: "Detail; ZAB"
+material_label: "Holz"
+node_kind: "core"
+herkunft_label: "Sportzentrum/Sauna"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Recyclinghaus_Hannover"
+bauobjekt:
+  - "Recyclinghaus_Hannover"
+neue_funktion: "Fassadenholz / Bekleidung"
+bauteil_label: "Holzleisten / alte Saunabänke"
+projekt:
+  - "Recyclinghaus_Hannover"
+alte_funktion: "Sitzbänke"
+---
 
-## Clean Node
+# Holzleisten / alte Saunabänke - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Recyclinghaus_Hannover__006__Holzleisten_alte_Saunab_nke
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Recyclinghaus_Hannover__006__Holzleisten_alte_Saunab_nke
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Holzleisten / alte Saunabänke
+- **Material:** Holz
+- **Herkunft:** Sportzentrum/Sauna
+- **alte Funktion:** Sitzbänke
+- **neue Funktion:** Fassadenholz / Bekleidung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Demontage, Zuschnitt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Witterung, Dauerhaftigkeit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Holzschutz
+- **Quelle:** Detail; ZAB
+- **unbekannt:** genaue Behandlung

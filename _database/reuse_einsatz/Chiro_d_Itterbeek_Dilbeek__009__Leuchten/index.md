@@ -1,20 +1,43 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__009__Leuchten"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Leuchten - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# Leuchten - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Chiro_d_Itterbeek_Dilbeek__009__Leuchten"
+title: "Leuchten - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Zulassung/Prüfung"
+quelle_label: "[S2], [S4]"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "RotorDC"
+menge_umfang: "5 Stück"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+neue_funktion: "Beleuchtung"
+bauteil_label: "Leuchten"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+alte_funktion: "Beleuchtung"
+---
 
-## Clean Node
+# Leuchten - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__009__Leuchten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Chiro_d_Itterbeek_Dilbeek__009__Leuchten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Leuchten
+- **Material:** unbekannt
+- **Herkunft:** RotorDC
+- **alte Funktion:** Beleuchtung
+- **neue Funktion:** Beleuchtung
+- **Menge/Umfang:** 5 Stück
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** Elektroanschluss
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** elektrische Sicherheit, Beleuchtung
+- **Norm/Recht:** unbekannt
+- **Hürde:** Zulassung/Prüfung
+- **Quelle:** [S2], [S4]
+- **unbekannt:** Prüfung

@@ -1,20 +1,25 @@
-﻿---
-id: "Villa_Welpeloo_Enschede__004__Fertigstellung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Fertigstellung - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Villa_Welpeloo_Enschede__004__Fertigstellung"
+title: "Fertigstellung - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "S1, S4"
+node_kind: "core"
+wert: "2009"
+fallstudie: "fallstudie/Villa_Welpeloo_Enschede"
+bauobjekt:
+  - "Villa_Welpeloo_Enschede"
+projekt:
+  - "Villa_Welpeloo_Enschede"
+---
 
-## Clean Node
+# Fertigstellung - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Villa_Welpeloo_Enschede__004__Fertigstellung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Villa_Welpeloo_Enschede__004__Fertigstellung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung
+- **Wert:** 2009
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** Projektseite
+- **Bilanzgrenze:** Projekt
+- **Quelle:** S1, S4
+- **Vertrauensgrad:** belegt

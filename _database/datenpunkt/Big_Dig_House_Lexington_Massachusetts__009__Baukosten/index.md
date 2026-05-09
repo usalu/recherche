@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__009__Baukosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Baukosten - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Baukosten - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_House_Lexington_Massachusetts__009__Baukosten"
+title: "Baukosten - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "USD/sq ft"
+quelle_label: "Inhabitat"
+node_kind: "core"
+wert: "150"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Baukosten - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_House_Lexington_Massachusetts__009__Baukosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_House_Lexington_Massachusetts__009__Baukosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Baukosten
+- **Wert:** 150
+- **Einheit:** USD/sq ft
+- **Methode/Datenmodell/Software:** Inhabitat
+- **Bilanzgrenze:** Projektkosten
+- **Quelle:** Inhabitat
+- **Vertrauensgrad:** teilweise belegt

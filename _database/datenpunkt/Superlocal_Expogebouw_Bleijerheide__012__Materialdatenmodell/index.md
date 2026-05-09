@@ -1,20 +1,25 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__012__Materialdatenmodell"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Materialdatenmodell - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Materialdatenmodell - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Superlocal_Expogebouw_Bleijerheide__012__Materialdatenmodell"
+title: "Materialdatenmodell - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "—"
+quelle_label: "SUPERLOCAL"
+node_kind: "core"
+wert: "Track-and-trace, STABU-/QR-Code, Materialpass"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Materialdatenmodell - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Superlocal_Expogebouw_Bleijerheide__012__Materialdatenmodell
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Superlocal_Expogebouw_Bleijerheide__012__Materialdatenmodell
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Materialdatenmodell
+- **Wert:** Track-and-trace, STABU-/QR-Code, Materialpass
+- **Einheit:** —
+- **Methode/Datenmodell/Software:** Tool im Gesamtprojekt
+- **Bilanzgrenze:** Gesamtprojekt
+- **Quelle:** SUPERLOCAL
+- **Vertrauensgrad:** belegt, spezifische Anwendung auf Expogebouw unklar

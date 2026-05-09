@@ -1,20 +1,22 @@
-﻿---
-id: "Skanska_Finland"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "Skanska Finland"
 ---
+entity: "akteur"
+id: "Skanska_Finland"
+title: "Skanska Finland"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere.md"
+  - "Gebäude\\Lokomotion_Technology_Centre_mini_pilot_Tampere.md"
+node_kind: "core"
+---
+
 # Skanska Finland
 
-## Clean Node
+## Observed Roles
 
-- Final path: _database/akteur/Skanska_Finland
-- Build rule: typed path IDs only.
+- Bauausführung / Contractor
+- Bauunternehmen
 
-## Imported Staging Nodes
+## Observed Fallstudien
 
-- Source: _graph/akteur/Skanska_Finland
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- fallstudie/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere
+- fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere

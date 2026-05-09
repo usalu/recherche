@@ -1,20 +1,25 @@
-﻿---
-id: "Recyclinghaus_Hannover__007__Anteil_Innenmaterialien_aus_recycelten_gebraucht"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anteil Innenmaterialien aus recycelten/gebrauchten BestÃ¤nden - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Anteil Innenmaterialien aus recycelten/gebrauchten BestÃ¤nden - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Recyclinghaus_Hannover__007__Anteil_Innenmaterialien_aus_recycelten_gebraucht"
+title: "Anteil Innenmaterialien aus recycelten/gebrauchten Beständen - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "DAB"
+node_kind: "core"
+wert: ">50"
+fallstudie: "fallstudie/Recyclinghaus_Hannover"
+bauobjekt:
+  - "Recyclinghaus_Hannover"
+projekt:
+  - "Recyclinghaus_Hannover"
+---
 
-## Clean Node
+# Anteil Innenmaterialien aus recycelten/gebrauchten Beständen - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Recyclinghaus_Hannover__007__Anteil_Innenmaterialien_aus_recycelten_gebraucht
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recyclinghaus_Hannover__007__Anteil_Innenmaterialien_aus_recycelten_gebraucht
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anteil Innenmaterialien aus recycelten/gebrauchten Beständen
+- **Wert:** >50
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Innenausbau
+- **Quelle:** DAB
+- **Vertrauensgrad:** teilweise belegt; Abgrenzung Reuse/Recycling unklar

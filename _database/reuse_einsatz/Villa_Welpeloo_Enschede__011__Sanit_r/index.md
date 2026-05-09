@@ -1,20 +1,43 @@
-﻿---
-id: "Villa_Welpeloo_Enschede__011__Sanit_r"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "SanitÃ¤r - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# SanitÃ¤r - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "reuse_einsatz"
+id: "Villa_Welpeloo_Enschede__011__Sanit_r"
+title: "Sanitär - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "-"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Villa_Welpeloo_Enschede"
+bauobjekt:
+  - "Villa_Welpeloo_Enschede"
+neue_funktion: "Sanitär"
+bauteil_label: "Sanitär"
+projekt:
+  - "Villa_Welpeloo_Enschede"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Sanitär - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/reuse_einsatz/Villa_Welpeloo_Enschede__011__Sanit_r
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Villa_Welpeloo_Enschede__011__Sanit_r
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Sanitär
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Sanitär
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Hygiene
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** -
+- **unbekannt:** alles

@@ -1,20 +1,25 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__010__Erdw_rmesonden"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "ErdwÃ¤rmesonden - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# ErdwÃ¤rmesonden - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Woongroep_Boschgaard_Den_Bosch__010__Erdw_rmesonden"
+title: "Erdwärmesonden - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m Länge"
+quelle_label: "Boschgaard"
+node_kind: "core"
+wert: "80"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# Erdwärmesonden - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Woongroep_Boschgaard_Den_Bosch__010__Erdw_rmesonden
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Woongroep_Boschgaard_Den_Bosch__010__Erdw_rmesonden
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Erdwärmesonden
+- **Wert:** 80
+- **Einheit:** m Länge
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** TGA
+- **Quelle:** Boschgaard
+- **Vertrauensgrad:** belegt

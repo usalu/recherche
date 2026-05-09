@@ -1,20 +1,25 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__004__Embodied_carbon_reduction"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Embodied-carbon reduction - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# Embodied-carbon reduction - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "PLP_London_HQ_Circular_Studio_Fitout__004__Embodied_carbon_reduction"
+title: "Embodied-carbon reduction - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "PLP"
+node_kind: "core"
+wert: "75.4"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# Embodied-carbon reduction - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__004__Embodied_carbon_reduction
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__004__Embodied_carbon_reduction
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Embodied-carbon reduction
+- **Wert:** 75.4
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** unbekannt; Maconda-Daten erwähnt
+- **Bilanzgrenze:** Vergleich zu konventionellem Fit-out
+- **Quelle:** PLP
+- **Vertrauensgrad:** teilweise belegt

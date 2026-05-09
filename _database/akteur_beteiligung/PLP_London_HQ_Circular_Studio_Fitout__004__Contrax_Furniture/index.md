@@ -1,20 +1,22 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__004__Contrax_Furniture"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Contrax Furniture - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# Contrax Furniture - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "PLP_London_HQ_Circular_Studio_Fitout__004__Contrax_Furniture"
+title: "Contrax Furniture - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "PLP"
+node_kind: "relation"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# Contrax Furniture - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/PLP_London_HQ_Circular_Studio_Fitout__004__Contrax_Furniture
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/PLP_London_HQ_Circular_Studio_Fitout__004__Contrax_Furniture
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Contrax Furniture
+- **Beziehung zur Fallstudie:** Joinery/Furniture
+- **Quelle/Beleg:** PLP
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Möbelanteile nicht als Reuse-Bauteile werten, außer fest eingebaut.

@@ -1,20 +1,22 @@
-﻿---
-id: "Berlin_Schildow_Pilot_House_2__002__Detlev_Lange_Familie_Lange"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Detlev Lange / Familie Lange - Berlin-Schildow Pilot House 2 â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Detlev Lange / Familie Lange - Berlin-Schildow Pilot House 2 â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "akteur_beteiligung"
+id: "Berlin_Schildow_Pilot_House_2__002__Detlev_Lange_Familie_Lange"
+title: "Detlev Lange / Familie Lange - Berlin-Schildow Pilot House 2 — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+quelle_label: "[S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Berlin_Schildow_Pilot_House_2"
+bauobjekt:
+  - "Berlin_Schildow_Pilot_House_2"
+projekt:
+  - "Berlin_Schildow_Pilot_House_2"
+---
 
-## Clean Node
+# Detlev Lange / Familie Lange - Berlin-Schildow Pilot House 2 — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/akteur_beteiligung/Berlin_Schildow_Pilot_House_2__002__Detlev_Lange_Familie_Lange
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Berlin_Schildow_Pilot_House_2__002__Detlev_Lange_Familie_Lange
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Detlev Lange / Familie Lange
+- **Beziehung zur Fallstudie:** Bauherr laut Deutschlandfunk-Kontext
+- **Quelle/Beleg:** [S3]
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Zuordnung zur exakten PRECS-Fallnummer nicht vollständig gesichert.

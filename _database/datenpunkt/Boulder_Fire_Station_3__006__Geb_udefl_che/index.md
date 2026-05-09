@@ -1,20 +1,25 @@
-﻿---
-id: "Boulder_Fire_Station_3__006__Geb_udefl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "GebÃ¤udeflÃ¤che - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# GebÃ¤udeflÃ¤che - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Boulder_Fire_Station_3__006__Geb_udefl_che"
+title: "Gebäudefläche - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "sq ft"
+quelle_label: "AISC Awards"
+node_kind: "core"
+wert: "28.370"
+fallstudie: "fallstudie/Boulder_Fire_Station_3"
+bauobjekt:
+  - "Boulder_Fire_Station_3"
+projekt:
+  - "Boulder_Fire_Station_3"
+---
 
-## Clean Node
+# Gebäudefläche - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Boulder_Fire_Station_3__006__Geb_udefl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Boulder_Fire_Station_3__006__Geb_udefl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gebäudefläche
+- **Wert:** 28.370
+- **Einheit:** sq ft
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Fire Station
+- **Quelle:** AISC Awards
+- **Vertrauensgrad:** belegt; Quellenabweichung

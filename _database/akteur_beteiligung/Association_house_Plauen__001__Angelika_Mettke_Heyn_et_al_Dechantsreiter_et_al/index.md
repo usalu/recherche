@@ -1,20 +1,22 @@
-﻿---
-id: "Association_house_Plauen__001__Angelika_Mettke_Heyn_et_al_Dechantsreiter_et_al"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Angelika Mettke / Heyn et al. / Dechantsreiter et al. / Fischer et al. - Association house, Plauen â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
 ---
-# Angelika Mettke / Heyn et al. / Dechantsreiter et al. / Fischer et al. - Association house, Plauen â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
+entity: "akteur_beteiligung"
+id: "Association_house_Plauen__001__Angelika_Mettke_Heyn_et_al_Dechantsreiter_et_al"
+title: "Angelika Mettke / Heyn et al. / Dechantsreiter et al. / Fischer et al. - Association house, Plauen — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
+build_status: "promoted_phase42"
+quelle_label: "[S1]"
+node_kind: "relation"
+fallstudie: "fallstudie/Association_house_Plauen"
+bauobjekt:
+  - "Association_house_Plauen"
+projekt:
+  - "Association_house_Plauen"
+---
 
-## Clean Node
+# Angelika Mettke / Heyn et al. / Dechantsreiter et al. / Fischer et al. - Association house, Plauen — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
 
-- Final path: _database/akteur_beteiligung/Association_house_Plauen__001__Angelika_Mettke_Heyn_et_al_Dechantsreiter_et_al
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Association_house_Plauen__001__Angelika_Mettke_Heyn_et_al_Dechantsreiter_et_al
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Angelika Mettke / Heyn et al. / Dechantsreiter et al. / Fischer et al.
+- **Beziehung zur Fallstudie:** Literatur- und Forschungsbezug
+- **Quelle/Beleg:** [S1]
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Beteiligung am konkreten Projekt nicht vollständig belegbar; in Referenzen genannt.

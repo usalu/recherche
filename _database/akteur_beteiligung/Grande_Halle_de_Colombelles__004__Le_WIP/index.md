@@ -1,20 +1,22 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__004__Le_WIP"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Le WIP - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Le WIP - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Grande_Halle_de_Colombelles__004__Le_WIP"
+title: "Le WIP - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S2]"
+node_kind: "relation"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Le WIP - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Grande_Halle_de_Colombelles__004__Le_WIP
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Grande_Halle_de_Colombelles__004__Le_WIP
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Le WIP
+- **Beziehung zur Fallstudie:** Betreiber und Inhaber Lot 01 Reuse
+- **Quelle/Beleg:** [S1], [S2]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Sourcing, Lagerung, Bereitstellung

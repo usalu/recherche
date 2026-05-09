@@ -1,20 +1,22 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest__002__Popma_ter_Steege_Architecten_PTSA"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Popma ter Steege Architecten / PTSA - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Popma ter Steege Architecten / PTSA - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "akteur_beteiligung"
+id: "BioPartner_5_Leiden_Oegstgeest__002__Popma_ter_Steege_Architecten_PTSA"
+title: "Popma ter Steege Architecten / PTSA - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S5], [S8]"
+node_kind: "relation"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+bauobjekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# Popma ter Steege Architecten / PTSA - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__002__Popma_ter_Steege_Architecten_PTSA
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__002__Popma_ter_Steege_Architecten_PTSA
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Popma ter Steege Architecten / PTSA
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** [S2], [S5], [S8]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Entwurf circular / Paris Proof

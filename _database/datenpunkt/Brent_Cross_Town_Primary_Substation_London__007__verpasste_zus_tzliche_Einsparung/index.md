@@ -1,20 +1,25 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__007__verpasste_zus_tzliche_Einsparung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "verpasste zusÃ¤tzliche Einsparung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# verpasste zusÃ¤tzliche Einsparung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Brent_Cross_Town_Primary_Substation_London__007__verpasste_zus_tzliche_Einsparung"
+title: "verpasste zusätzliche Einsparung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t embodied carbon"
+quelle_label: "ASBP"
+node_kind: "core"
+wert: "22"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# verpasste zusätzliche Einsparung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Brent_Cross_Town_Primary_Substation_London__007__verpasste_zus_tzliche_Einsparung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brent_Cross_Town_Primary_Substation_London__007__verpasste_zus_tzliche_Einsparung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** verpasste zusätzliche Einsparung
+- **Wert:** 22
+- **Einheit:** t embodied carbon
+- **Methode/Datenmodell/Software:** ASBP
+- **Bilanzgrenze:** nicht realisierte reuse steel substitution
+- **Quelle:** ASBP
+- **Vertrauensgrad:** teilweise belegt

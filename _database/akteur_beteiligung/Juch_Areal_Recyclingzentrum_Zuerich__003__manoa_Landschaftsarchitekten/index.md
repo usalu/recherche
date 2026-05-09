@@ -1,20 +1,22 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich__003__manoa_Landschaftsarchitekten"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "manoa Landschaftsarchitekten - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# manoa Landschaftsarchitekten - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "akteur_beteiligung"
+id: "Juch_Areal_Recyclingzentrum_Zuerich__003__manoa_Landschaftsarchitekten"
+title: "manoa Landschaftsarchitekten - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+quelle_label: "[S5]"
+node_kind: "relation"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+bauobjekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+projekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# manoa Landschaftsarchitekten - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/akteur_beteiligung/Juch_Areal_Recyclingzentrum_Zuerich__003__manoa_Landschaftsarchitekten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Juch_Areal_Recyclingzentrum_Zuerich__003__manoa_Landschaftsarchitekten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** manoa Landschaftsarchitekten
+- **Beziehung zur Fallstudie:** Landschaft
+- **Quelle/Beleg:** [S5]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** nicht Direct Reuse

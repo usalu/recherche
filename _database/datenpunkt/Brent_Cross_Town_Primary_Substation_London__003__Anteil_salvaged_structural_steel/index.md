@@ -1,20 +1,25 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__003__Anteil_salvaged_structural_steel"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anteil salvaged structural steel - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Anteil salvaged structural steel - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Brent_Cross_Town_Primary_Substation_London__003__Anteil_salvaged_structural_steel"
+title: "Anteil salvaged structural steel - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "Arup"
+node_kind: "core"
+wert: "42.5"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# Anteil salvaged structural steel - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Brent_Cross_Town_Primary_Substation_London__003__Anteil_salvaged_structural_steel
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brent_Cross_Town_Primary_Substation_London__003__Anteil_salvaged_structural_steel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anteil salvaged structural steel
+- **Wert:** 42.5
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** structural steel
+- **Quelle:** Arup
+- **Vertrauensgrad:** belegt

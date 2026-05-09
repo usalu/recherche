@@ -1,20 +1,22 @@
-﻿---
-id: "The_Green_House_Utrecht__007__Kampstaal"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Kampstaal - The Green House, Utrecht"
 ---
+entity: "akteur_beteiligung"
+id: "The_Green_House_Utrecht__007__Kampstaal"
+title: "Kampstaal - The Green House, Utrecht"
+build_status: "promoted_phase42"
+quelle_label: "Q1, Q5"
+node_kind: "relation"
+fallstudie: "fallstudie/The_Green_House_Utrecht"
+bauobjekt:
+  - "The_Green_House_Utrecht"
+projekt:
+  - "The_Green_House_Utrecht"
+---
+
 # Kampstaal - The Green House, Utrecht
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/The_Green_House_Utrecht__007__Kampstaal
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/The_Green_House_Utrecht__007__Kampstaal
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Kampstaal
+- **Beziehung zur Fallstudie:** Stahlbau
+- **Quelle/Beleg:** Q1, Q5
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** neues demontables Stahltragwerk

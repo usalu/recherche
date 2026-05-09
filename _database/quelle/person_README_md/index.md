@@ -1,15 +1,22 @@
-﻿---
-id: "person_README_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "person/README.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "person_README_md"
+title: "person_README_md"
+build_status: "promoted_phase42"
+source_filename: "README.md"
+---
+
 # person_README_md
 
-## Source Archive
+This ZIP contains one separate Markdown file per extracted personal name from the PDF.
 
-- Original path: person/README.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: archive_as_source; old target: quelle/README
+## Files
+- `Patrick_Teuffel.md` — Patrick Teuffel
+- `Bart_van_den_Brink.md` — Bart van den Brink
+- `Fred_Mudge.md` — Fred Mudge
+- `Desiree_Mann.md` — Désirée Mann
+- `Ellen_MacArthur.md` — Ellen MacArthur
+- `John_Orr.md` — John Orr
+
+## Note
+The extraction is based on the PDF text layer and indexed snippets available during analysis. Image-only names or names embedded only in diagrams may require manual PDF rendering/OCR verification.

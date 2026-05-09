@@ -1,20 +1,25 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__008__Kosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Kosten - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__008__Kosten"
+title: "Kosten - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "EUR ohne MwSt"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "6.500.000"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+---
 
-## Clean Node
+# Kosten - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__008__Kosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lycee_Michel_Lucius_Conversion_Luxembourg__008__Kosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten
+- **Wert:** 6.500.000
+- **Einheit:** EUR ohne MwSt
+- **Methode/Datenmodell/Software:** Daedalus-Projektdaten
+- **Bilanzgrenze:** Gesamtauftragskosten, nicht Reuse-only
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

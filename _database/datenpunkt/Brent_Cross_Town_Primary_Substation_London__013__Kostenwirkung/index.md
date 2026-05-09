@@ -1,20 +1,25 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__013__Kostenwirkung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kostenwirkung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Kostenwirkung - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Brent_Cross_Town_Primary_Substation_London__013__Kostenwirkung"
+title: "Kostenwirkung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "ASBP"
+node_kind: "core"
+wert: "25 % lower than new steel inkl. Zusatzkosten / 50 % lower material per tonne"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# Kostenwirkung - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Brent_Cross_Town_Primary_Substation_London__013__Kostenwirkung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brent_Cross_Town_Primary_Substation_London__013__Kostenwirkung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kostenwirkung
+- **Wert:** 25 % lower than new steel inkl. Zusatzkosten / 50 % lower material per tonne
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** 2021 cost analysis
+- **Bilanzgrenze:** Reclaimed steel vs new
+- **Quelle:** ASBP
+- **Vertrauensgrad:** teilweise belegt

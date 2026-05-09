@@ -1,20 +1,18 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Receiver - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "reuse_kettenstation"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__Receiver"
+title: "Receiver - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md"
+node_kind: "core"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+---
 
-## Clean Node
+# Receiver - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/reuse_kettenstation/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md: | Fallstudie | Melkinlaituri elementary school and daycare centre | Receiver-Projekt für kommerzielle Hohlkörperdecken-Wiederverwendung | ReCreate; YIT; Consolis | belegt | kein reiner Forschungsmini-Pilot, sondern kommerzielle Replikation |
+Gebäude\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md: | Ort | Jätkäsaari, Helsinki, Finnland | Receiver-Standort | YIT; ReCreate | belegt | Melkinlaituri |
+Gebäude\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md: - **Schutzstatus / Denkmalstatus:** Donor/Receiver unbekannt

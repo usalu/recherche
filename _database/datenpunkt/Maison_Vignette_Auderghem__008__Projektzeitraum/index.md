@@ -1,20 +1,25 @@
-﻿---
-id: "Maison_Vignette_Auderghem__008__Projektzeitraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Projektzeitraum - Maison Vignette, Auderghem â€“ Fallstudie Direct Reuse"
 ---
-# Projektzeitraum - Maison Vignette, Auderghem â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Maison_Vignette_Auderghem__008__Projektzeitraum"
+title: "Projektzeitraum - Maison Vignette, Auderghem – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "[S3]"
+node_kind: "core"
+wert: "2018–2020"
+fallstudie: "fallstudie/Maison_Vignette_Auderghem"
+bauobjekt:
+  - "Maison_Vignette_Auderghem"
+projekt:
+  - "Maison_Vignette_Auderghem"
+---
 
-## Clean Node
+# Projektzeitraum - Maison Vignette, Auderghem – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Maison_Vignette_Auderghem__008__Projektzeitraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Maison_Vignette_Auderghem__008__Projektzeitraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Projektzeitraum
+- **Wert:** 2018–2020
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** FCRBE
+- **Bilanzgrenze:** Projekt
+- **Quelle:** [S3]
+- **Vertrauensgrad:** belegt

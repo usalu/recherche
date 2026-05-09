@@ -1,20 +1,25 @@
-﻿---
-id: "Association_house_Plauen__002__Decken_Bodenplatten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Decken-/Bodenplatten - Association house, Plauen â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
 ---
-# Decken-/Bodenplatten - Association house, Plauen â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
+entity: "datenpunkt"
+id: "Association_house_Plauen__002__Decken_Bodenplatten"
+title: "Decken-/Bodenplatten - Association house, Plauen — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "145"
+fallstudie: "fallstudie/Association_house_Plauen"
+bauobjekt:
+  - "Association_house_Plauen"
+projekt:
+  - "Association_house_Plauen"
+---
 
-## Clean Node
+# Decken-/Bodenplatten - Association house, Plauen — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
 
-- Final path: _database/datenpunkt/Association_house_Plauen__002__Decken_Bodenplatten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Association_house_Plauen__002__Decken_Bodenplatten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Decken-/Bodenplatten
+- **Wert:** 145
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** PRECS-Fallstudienliste
+- **Bilanzgrenze:** Bauteile
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

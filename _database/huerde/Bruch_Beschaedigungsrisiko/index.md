@@ -1,20 +1,13 @@
-﻿---
-id: "Bruch_Beschaedigungsrisiko"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Bruch- und Beschaedigungsrisiko"
 ---
+entity: "huerde"
+id: "Bruch_Beschaedigungsrisiko"
+title: "Bruch- und Beschaedigungsrisiko"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Bruch- und Beschaedigungsrisiko
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Bruch_Beschaedigungsrisiko
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Bruch_Beschaedigungsrisiko
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Risiko von Bruch, Beschaedigung oder Verlust beim Ausbau, Transport, Bearbeiten oder Leihen.

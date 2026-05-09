@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__003__Wiederverwendeter_Stahl"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wiederverwendeter Stahl - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Wiederverwendeter Stahl - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__003__Wiederverwendeter_Stahl"
+title: "Wiederverwendeter Stahl - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "S7"
+node_kind: "core"
+wert: "116"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Wiederverwendeter Stahl - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__003__Wiederverwendeter_Stahl
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__003__Wiederverwendeter_Stahl
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wiederverwendeter Stahl
+- **Wert:** 116
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** Mace
+- **Bilanzgrenze:** reused steel
+- **Quelle:** S7
+- **Vertrauensgrad:** belegt

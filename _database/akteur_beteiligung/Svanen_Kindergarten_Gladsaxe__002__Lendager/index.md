@@ -1,20 +1,22 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__002__Lendager"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Lendager - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Lendager - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "akteur_beteiligung"
+id: "Svanen_Kindergarten_Gladsaxe__002__Lendager"
+title: "Lendager - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S2]"
+node_kind: "relation"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+bauobjekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+projekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# Lendager - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/akteur_beteiligung/Svanen_Kindergarten_Gladsaxe__002__Lendager
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Svanen_Kindergarten_Gladsaxe__002__Lendager
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Lendager
+- **Beziehung zur Fallstudie:** Architekturberatung, Nachhaltigkeitsberatung, Demolition tender
+- **Quelle/Beleg:** [S1], [S2]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Design / circular process

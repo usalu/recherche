@@ -1,20 +1,35 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "projekt"
+id: "Resilience_La_Ferme_des_Possibles_Stains"
+title: "Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Resilience_La_Ferme_des_Possibles_Stains.md"
+node_kind: "core"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/projekt/Resilience_La_Ferme_des_Possibles_Stains
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\Resilience_La_Ferme_des_Possibles_Stains.md
 
-- Source: _graph/projekt/Resilience_La_Ferme_des_Possibles_Stains
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Résilience / La Ferme des Possibles.
+- **Ort:** 29 Rue d’Amiens, 93240 Stains, Frankreich.
+- **Gebäude:** Neubau für Logistik, Produktion, Küche/Labor, Cafeteria, Büros, Schulung und Besprechung.
+- **Projekt:** Sitz von Novaedia auf der Ferme des Possibles.
+- **Beteiligte People / Akteure:** Novaedia, Frédéric Denise / Archipel Zéro, Bellastock, SOCOTEC, Depuis 1920, Terraterre, Halage, Réavie, Métabolisme Urbain, Mairie de Paris, Albingia laut Ekopolis als Versicherer MOA.
+- **Architekt:** Frédéric Denise / Archipel Zéro.
+- **Tragwerksplaner:** unbekannt.
+- **Bauherr:** Novaedia / Novædia.
+- **Zeitraum:** Baubeginn 2018 laut materiauxreemploi.com; Baujahr 2019; Lieferung/Inauguration 2020.
+- **Ursprüngliche Nutzung:** Neubau auf Farm-/Agrarstandort; vorherige gebaute Nutzung unbekannt.
+- **Neue Nutzung:** Sitz, Produktions-/Logistikräume, Küche, Restaurant/Cafeteria, Büros, Schulung, urbane Landwirtschaft.
+- **Fläche / Maßstab:** 1.883 m² SHON / netto laut Construction21 und Socotec; Grundstück ca. 13.000 m² laut Construction21.
+- **Schutzstatus / Denkmalstatus:** unbekannt.
+- **Quellenlage:** sehr gut für Reuse-Mengen und Umweltkennwerte; mittel für Prüfberichte, Normen, Detailkosten.

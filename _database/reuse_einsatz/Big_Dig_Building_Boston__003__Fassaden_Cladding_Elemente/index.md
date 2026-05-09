@@ -1,20 +1,43 @@
-﻿---
-id: "Big_Dig_Building_Boston__003__Fassaden_Cladding_Elemente"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fassaden-/Cladding-Elemente - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fassaden-/Cladding-Elemente - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Big_Dig_Building_Boston__003__Fassaden_Cladding_Elemente"
+title: "Fassaden-/Cladding-Elemente - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "ungebaut"
+quelle_label: "SsD"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "Big Dig-Materialstrom"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+bauobjekt:
+  - "Big_Dig_Building_Boston"
+neue_funktion: "geplant als Hülle/Cladding"
+bauteil_label: "Fassaden-/Cladding-Elemente"
+projekt:
+  - "Big_Dig_Building_Boston"
+alte_funktion: "Infrastrukturmaterial"
+---
 
-## Clean Node
+# Fassaden-/Cladding-Elemente - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Big_Dig_Building_Boston__003__Fassaden_Cladding_Elemente
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Big_Dig_Building_Boston__003__Fassaden_Cladding_Elemente
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fassaden-/Cladding-Elemente
+- **Material:** unbekannt
+- **Herkunft:** Big Dig-Materialstrom
+- **alte Funktion:** Infrastrukturmaterial
+- **neue Funktion:** geplant als Hülle/Cladding
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein/teilweise
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Anpassung geplant
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Wetterdichtheit, Befestigung
+- **Norm/Recht:** unbekannt
+- **Hürde:** ungebaut
+- **Quelle:** SsD
+- **unbekannt:** Material, Menge

@@ -1,20 +1,22 @@
-﻿---
-id: "Brighton_Waste_House_Brighton__001__Duncan_Baker_Brown_Cat_Fletcher_Freegle_Mears_Gr"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Duncan Baker-Brown, Cat Fletcher/Freegle, Mears Group, Greater Brighton Metropolitan College, Studierende - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung"
 ---
-# Duncan Baker-Brown, Cat Fletcher/Freegle, Mears Group, Greater Brighton Metropolitan College, Studierende - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung
+entity: "akteur_beteiligung"
+id: "Brighton_Waste_House_Brighton__001__Duncan_Baker_Brown_Cat_Fletcher_Freegle_Mears_Gr"
+title: "Duncan Baker-Brown, Cat Fletcher/Freegle, Mears Group, Greater Brighton Metropolitan College, Studierende - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "University of Brighton; University Alliance"
+node_kind: "relation"
+fallstudie: "fallstudie/Brighton_Waste_House_Brighton"
+bauobjekt:
+  - "Brighton_Waste_House_Brighton"
+projekt:
+  - "Brighton_Waste_House_Brighton"
+---
 
-## Clean Node
+# Duncan Baker-Brown, Cat Fletcher/Freegle, Mears Group, Greater Brighton Metropolitan College, Studierende - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung
 
-- Final path: _database/akteur_beteiligung/Brighton_Waste_House_Brighton__001__Duncan_Baker_Brown_Cat_Fletcher_Freegle_Mears_Gr
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Brighton_Waste_House_Brighton__001__Duncan_Baker_Brown_Cat_Fletcher_Freegle_Mears_Gr
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Duncan Baker-Brown, Cat Fletcher/Freegle, Mears Group, Greater Brighton Metropolitan College, Studierende
+- **Beziehung zur Fallstudie:** Beteiligte
+- **Quelle/Beleg:** University of Brighton; University Alliance
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Beteiligung von hunderten Studierenden

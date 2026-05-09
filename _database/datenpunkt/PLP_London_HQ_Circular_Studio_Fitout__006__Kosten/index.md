@@ -1,20 +1,25 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__006__Kosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# Kosten - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "PLP_London_HQ_Circular_Studio_Fitout__006__Kosten"
+title: "Kosten - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "£/sq ft"
+quelle_label: "PLP"
+node_kind: "core"
+wert: "64"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# Kosten - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__006__Kosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/PLP_London_HQ_Circular_Studio_Fitout__006__Kosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten
+- **Wert:** 64
+- **Einheit:** £/sq ft
+- **Methode/Datenmodell/Software:** Kostenvergleich
+- **Bilanzgrenze:** Fit-out
+- **Quelle:** PLP
+- **Vertrauensgrad:** teilweise belegt

@@ -1,30 +1,19 @@
-﻿---
-id: "Boden"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Bodenbelag"
 ---
+entity: "bauteiltyp"
+id: "Boden"
+title: "Bodenbelag"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Bodenbelag
 
-## Clean Node
+## Definition
 
-- Final path: _database/bauteiltyp/Boden
-- Build rule: typed path IDs only.
+Bodenbelag, Parkett, Dielen, Terrassen- oder Bodenaufbauten, wenn nicht als Fliese klassifiziert.
 
-## Imported Staging Nodes
+## Quelle: bauteiltyp_Pflaster_Bodenplatte.staging_index
 
-- Source: _graph/bauteiltyp/Bodenbelag
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: Floor finish is part of the Boden component family.
+## Definition
 
-- Source: _graph/bauteiltyp/Bodenfliese
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: Floor tile is Boden plus material/raw label.
-
-- Source: _graph/bauteiltyp/Pflaster_Bodenplatte
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: Paving/floor plates belong to Boden for this ontology; keep exact raw label.
-
+Pflasterplatten, Flagstones, paving slabs, Aussenbodenplatten oder aehnliche feste Bodenplatten.

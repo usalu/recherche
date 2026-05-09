@@ -1,20 +1,11 @@
-﻿---
-id: "Daemmstoff"
-entity: "material"
-build_status: "clean_phase20"
-title: "Daemmstoff"
 ---
+entity: "material"
+id: "Daemmstoff"
+title: "Daemmstoff"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Daemmstoff
 
-## Clean Node
-
-- Final path: _database/material/Daemmstoff
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/material/Daemmstoff
-  - Action: keep_or_merge
-  - Status: CONFIDENT
-  - Reason: Correct broad material family.
 

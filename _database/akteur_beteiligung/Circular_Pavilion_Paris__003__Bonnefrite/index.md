@@ -1,20 +1,22 @@
-﻿---
-id: "Circular_Pavilion_Paris__003__Bonnefrite"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Bonnefrite - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# Bonnefrite - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Circular_Pavilion_Paris__003__Bonnefrite"
+title: "Bonnefrite - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Encore Heureux"
+node_kind: "relation"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Bonnefrite - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Circular_Pavilion_Paris__003__Bonnefrite
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Circular_Pavilion_Paris__003__Bonnefrite
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Bonnefrite
+- **Beziehung zur Fallstudie:** Illustration
+- **Quelle/Beleg:** Encore Heureux
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Team.

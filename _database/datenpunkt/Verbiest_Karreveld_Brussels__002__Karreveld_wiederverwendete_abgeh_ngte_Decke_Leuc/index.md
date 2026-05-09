@@ -1,20 +1,25 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__002__Karreveld_wiederverwendete_abgeh_ngte_Decke_Leuc"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Karreveld wiederverwendete abgehÃ¤ngte Decke + Leuchten - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Karreveld wiederverwendete abgehÃ¤ngte Decke + Leuchten - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "datenpunkt"
+id: "Verbiest_Karreveld_Brussels__002__Karreveld_wiederverwendete_abgeh_ngte_Decke_Leuc"
+title: "Karreveld wiederverwendete abgehängte Decke + Leuchten - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Q4"
+node_kind: "core"
+wert: "ca. 400"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Karreveld wiederverwendete abgehängte Decke + Leuchten - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/datenpunkt/Verbiest_Karreveld_Brussels__002__Karreveld_wiederverwendete_abgeh_ngte_Decke_Leuc
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Verbiest_Karreveld_Brussels__002__Karreveld_wiederverwendete_abgeh_ngte_Decke_Leuc
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Karreveld wiederverwendete abgehängte Decke + Leuchten
+- **Wert:** ca. 400
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Opalis-Projektangabe
+- **Bilanzgrenze:** Phase 1, in-situ
+- **Quelle:** Q4
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "ELYS_Kultur_Gewerbehaus_Basel__006__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse"
 ---
-# FlÃ¤che - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "ELYS_Kultur_Gewerbehaus_Basel__006__Fl_che"
+title: "Fläche - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Kanton BS / ZAB"
+node_kind: "core"
+wert: "20.000 / 25.000"
+fallstudie: "fallstudie/ELYS_Kultur_Gewerbehaus_Basel"
+bauobjekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+projekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+---
 
-## Clean Node
+# Fläche - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__006__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__006__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 20.000 / 25.000
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangaben verschiedener Quellen
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** Kanton BS / ZAB
+- **Vertrauensgrad:** unklar

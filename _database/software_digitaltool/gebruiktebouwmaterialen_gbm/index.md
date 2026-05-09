@@ -1,20 +1,80 @@
-﻿---
-id: "gebruiktebouwmaterialen_gbm"
-entity: "software_digitaltool"
-build_status: "clean_phase20"
-title: "Gebruiktebouwmaterialen.com / GBM"
 ---
+entity: "software_digitaltool"
+id: "gebruiktebouwmaterialen_gbm"
+title: "Gebruiktebouwmaterialen.com / GBM"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteilboerse\\gebruiktebouwmaterialen-gbm.md"
+node_kind: "core"
+---
+
 # Gebruiktebouwmaterialen.com / GBM
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/software_digitaltool/gebruiktebouwmaterialen_gbm
-- Build rule: typed path IDs only.
+### Legacy Source: bauteilboerse\gebruiktebouwmaterialen-gbm.md
 
-## Imported Staging Nodes
+- Map action: split_platform_profile
+- Target role in map: primary
+- Raw mapped target: software_digitaltool/gebruiktebouwmaterialen_gbm
+- Original primary target: software_digitaltool/gebruiktebouwmaterialen_gbm
+- Original secondary targets: akteur/<operator_if_named>; beschaffungsweg/Digitale_Plattform; ressourcenquelle/Bauteilboerse; plattformfunktion/Material_Matching
 
-- Source: _graph/software_digitaltool/gebruiktebouwmaterialen_gbm
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# Gebruiktebouwmaterialen.com / GBM
 
+## Kurzbeschreibung
+Gebruiktebouwmaterialen.com / GBM ist ein(e) Online-Shop für gebrauchte und zirkuläre Baumaterialien mit Bezug zu Niederlande. Im Reuse-Kontext liegt der Schwerpunkt auf: Rückgewonnene Baumaterialien werden sortiert, angeboten und wieder verkauft.
+
+## Land / Region
+Niederlande
+
+## Betreiber
+Gebruiktebouwmaterialen.com / GBM
+
+## Zielgruppe
+Bauunternehmen, Handwerk, private Renovierende, Planende
+
+## Plattformtyp
+Online-Shop für gebrauchte und zirkuläre Baumaterialien
+
+## Bauteilkategorien
+gebrauchte Baumaterialien; Sortiment je Shop, u. a. Ziegel, Holz, Dach-/Fassaden-/Innenausbaumaterialien und weitere Baustoffe
+
+## Art der Wiederverwendung
+Rückgewonnene Baumaterialien werden sortiert, angeboten und wieder verkauft
+
+## Funktionen
+Webshop; Sortiment; Materialverkauf; teils Kooperation zu Materialdaten/-pässen
+
+## Daten je Bauteil
+Produktseiten mit Beschreibung, Fotos, Preis/Verfügbarkeit; technische Details je Produkt unterschiedlich
+
+## Qualität / Prüfung
+nicht einheitlich angegeben; Qualität und technische Nachweise je Produkt prüfen
+
+## Logistik / Lagerung
+nicht angegeben; shopabhängige Lieferung/Abholung
+
+## Geschäftsmodell
+Online-Verkauf von gebrauchten Baustoffen; Gebühren nicht angegeben
+
+## Ökologische Bewertung
+ersetzt Neumaterial und reduziert Abfall; quantitative Bewertung je Material nicht angegeben
+
+## Stärken
+sehr direkter Shopzugang; niederländischer Reuse-Fokus; gut für konkrete Beschaffung
+
+## Schwächen / Hemmnisse
+Verfügbarkeit und Dokumentation je Material; Herkunft/Nachweis prüfen
+
+## Relevanz für zirkuläres Bauen
+hoch als niederländische Bezugsquelle für gebrauchte Baumaterialien.
+
+## Quellen und Links
+- https://gebruiktebouwmaterialen.com/
+- https://gebruiktebouwmaterialen.com/over-ons
+- https://gebruiktebouwmaterialen.com/assortiment.html
+- https://madaster.com/inspiration/madaster-and-gebruiktebouwmaterialen-com-collaborate-on-the-reuse-of-building-materials/
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

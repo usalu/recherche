@@ -1,20 +1,22 @@
-﻿---
-id: "Circular_Pavilion_Paris__005__Ville_de_Paris_Pavillon_de_l_Arsenal"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Ville de Paris â€“ Pavillon de lâ€™Arsenal - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# Ville de Paris â€“ Pavillon de lâ€™Arsenal - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Circular_Pavilion_Paris__005__Ville_de_Paris_Pavillon_de_l_Arsenal"
+title: "Ville de Paris – Pavillon de l’Arsenal - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Encore Heureux"
+node_kind: "relation"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Ville de Paris – Pavillon de l’Arsenal - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Circular_Pavilion_Paris__005__Ville_de_Paris_Pavillon_de_l_Arsenal
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Circular_Pavilion_Paris__005__Ville_de_Paris_Pavillon_de_l_Arsenal
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Ville de Paris – Pavillon de l’Arsenal
+- **Beziehung zur Fallstudie:** Auftraggeber
+- **Quelle/Beleg:** Encore Heureux
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** commanditaire.

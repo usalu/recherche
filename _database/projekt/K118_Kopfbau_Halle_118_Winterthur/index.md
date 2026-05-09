@@ -1,20 +1,38 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "projekt"
+id: "K118_Kopfbau_Halle_118_Winterthur"
+title: "K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\K118_Kopfbau_Halle_118_Winterthur.md"
+  - "Gebäude\\K118_Kopfbau_Halle_118_Winterthur.md"
+node_kind: "core"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/projekt/K118_Kopfbau_Halle_118_Winterthur
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\K118_Kopfbau_Halle_118_Winterthur.md
 
-- Source: _graph/projekt/K118_Kopfbau_Halle_118_Winterthur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** K.118 / Kopfbau Halle 118
+- **Ort:** Lagerplatz, Winterthur, Schweiz
+- **Gebäude:** Aufstockung des Kopfbaus einer bestehenden Industriehalle
+- **Projekt:** Erweiterung um drei Etagen mit Studios, Werkstätten und Arbeitsräumen
+- **Beteiligte People / Akteure:** Stiftung Abendrot; baubüro in situ; Zirkular; ZHAW IKE; Oberli Ingenieurbau; Josef Kolb AG; Wetter AG
+- **Architekt:** baubüro in situ
+- **Tragwerksplaner:** Oberli Ingenieurbau AG laut Arch2O; weitere Zuständigkeiten in Quellen nicht vollständig aufgeschlüsselt
+- **Bauherr:** Stiftung Abendrot / Vorsorgestiftung Abendrot
+- **Zeitraum:** Auftrag 2018; Fertigstellung März 2021 / 2021
+- **Ursprüngliche Nutzung:** Bestand: Industriehalle; Donor-Stahl: Halle aus ELYS-Projekt Basel; Donor-Treppe: Orion-Bürogebäude Zürich
+- **Neue Nutzung:** Studios, Werkstätten, Denk-/Arbeitsräume, Labor-/Tüftelraum
+- **Fläche / Maßstab:** 1.100 m²
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** sehr gut für Grundstrategie, Bauteilgruppen, Kennwerte; mittel für detaillierte Normen, Prüfprotokolle und Verträge
+
+---

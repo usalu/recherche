@@ -1,20 +1,43 @@
-﻿---
-id: "Montessori_Maassluis__008__Sanit_r"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "SanitÃ¤r - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# SanitÃ¤r - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Montessori_Maassluis__008__Sanit_r"
+title: "Sanitär - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "keine Reuse-Angabe"
+quelle_label: "unbekannt"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+neue_funktion: "Schulbetrieb"
+bauteil_label: "Sanitär"
+projekt:
+  - "Montessori_Maassluis"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Sanitär - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Montessori_Maassluis__008__Sanit_r
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Montessori_Maassluis__008__Sanit_r
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Sanitär
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Schulbetrieb
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Hygiene/Barrierefreiheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** keine Reuse-Angabe
+- **Quelle:** unbekannt
+- **unbekannt:** alles

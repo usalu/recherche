@@ -1,20 +1,14 @@
-﻿---
-id: "Betonfraesen"
-entity: "rueckbauverfahren"
-build_status: "clean_phase20"
-title: "Betonfraesen"
 ---
+entity: "rueckbauverfahren"
+id: "Betonfraesen"
+title: "Betonfraesen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "abbruchmethode\Betonfräsen.md"
+node_kind: "knot"
+legacy_type: "Abbruchmethode"
+---
+
 # Betonfraesen
 
-## Clean Node
-
-- Final path: _database/rueckbauverfahren/Betonfraesen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/rueckbauverfahren/Betonfraesen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

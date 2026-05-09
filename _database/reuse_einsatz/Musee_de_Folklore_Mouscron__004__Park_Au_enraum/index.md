@@ -1,20 +1,43 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__004__Park_Au_enraum"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Park / AuÃŸenraum - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Park / AuÃŸenraum - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Musee_de_Folklore_Mouscron__004__Park_Au_enraum"
+title: "Park / Außenraum - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "nicht Reuse belegt"
+quelle_label: "[S3]"
+material_label: "Vegetation / Außenanlagen"
+node_kind: "core"
+herkunft_label: "neu/unbekannt"
+menge_umfang: "10.200 m²"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+neue_funktion: "Park"
+bauteil_label: "Park / Außenraum"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Park / Außenraum - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Musee_de_Folklore_Mouscron__004__Park_Au_enraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Musee_de_Folklore_Mouscron__004__Park_Au_enraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Park / Außenraum
+- **Material:** Vegetation / Außenanlagen
+- **Herkunft:** neu/unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Park
+- **Menge/Umfang:** 10.200 m²
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Landschaft
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht Reuse belegt
+- **Quelle:** [S3]
+- **unbekannt:** Reuse-Anteil

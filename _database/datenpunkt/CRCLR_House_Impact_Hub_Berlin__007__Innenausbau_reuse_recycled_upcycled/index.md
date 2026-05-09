@@ -1,20 +1,25 @@
-﻿---
-id: "CRCLR_House_Impact_Hub_Berlin__007__Innenausbau_reuse_recycled_upcycled"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Innenausbau reuse/recycled/upcycled - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse"
 ---
-# Innenausbau reuse/recycled/upcycled - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "CRCLR_House_Impact_Hub_Berlin__007__Innenausbau_reuse_recycled_upcycled"
+title: "Innenausbau reuse/recycled/upcycled - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "CMS"
+node_kind: "core"
+wert: "ca. 70"
+fallstudie: "fallstudie/CRCLR_House_Impact_Hub_Berlin"
+bauobjekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+projekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+---
 
-## Clean Node
+# Innenausbau reuse/recycled/upcycled - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/CRCLR_House_Impact_Hub_Berlin__007__Innenausbau_reuse_recycled_upcycled
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/CRCLR_House_Impact_Hub_Berlin__007__Innenausbau_reuse_recycled_upcycled
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Innenausbau reuse/recycled/upcycled
+- **Wert:** ca. 70
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Innenausbau Impact Hub
+- **Quelle:** CMS
+- **Vertrauensgrad:** teilweise belegt

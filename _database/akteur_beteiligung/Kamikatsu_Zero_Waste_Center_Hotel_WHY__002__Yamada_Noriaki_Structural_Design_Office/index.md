@@ -1,20 +1,22 @@
-﻿---
-id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__002__Yamada_Noriaki_Structural_Design_Office"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Yamada Noriaki Structural Design Office - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
 ---
+entity: "akteur_beteiligung"
+id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__002__Yamada_Noriaki_Structural_Design_Office"
+title: "Yamada Noriaki Structural Design Office - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
+build_status: "promoted_phase42"
+quelle_label: "Q3"
+node_kind: "relation"
+fallstudie: "fallstudie/Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+bauobjekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+projekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+---
+
 # Yamada Noriaki Structural Design Office - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/Kamikatsu_Zero_Waste_Center_Hotel_WHY__002__Yamada_Noriaki_Structural_Design_Office
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Kamikatsu_Zero_Waste_Center_Hotel_WHY__002__Yamada_Noriaki_Structural_Design_Office
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Yamada Noriaki Structural Design Office
+- **Beziehung zur Fallstudie:** Tragwerksplanung
+- **Quelle/Beleg:** Q3
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Strukturdesign

@@ -1,20 +1,18 @@
-﻿---
-id: "LysP8_Basel_Lysbuechelareal"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "LysP8, Basel / LysbÃ¼chelareal"
 ---
-# LysP8, Basel / LysbÃ¼chelareal
+entity: "bauobjekt"
+id: "LysP8_Basel_Lysbuechelareal"
+title: "LysP8, Basel / Lysbüchelareal"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\LysP8_Basel_Lysbuechelareal.md"
+node_kind: "core"
+fallstudie: "fallstudie/LysP8_Basel_Lysbuechelareal"
+projekt:
+  - "LysP8_Basel_Lysbuechelareal"
+---
 
-## Clean Node
+# LysP8, Basel / Lysbüchelareal
 
-- Final path: _database/bauobjekt/LysP8_Basel_Lysbuechelareal
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/LysP8_Basel_Lysbuechelareal
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

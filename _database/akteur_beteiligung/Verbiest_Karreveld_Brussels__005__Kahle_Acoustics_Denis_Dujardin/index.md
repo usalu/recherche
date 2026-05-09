@@ -1,20 +1,22 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__005__Kahle_Acoustics_Denis_Dujardin"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Kahle Acoustics, Denis Dujardin - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Kahle Acoustics, Denis Dujardin - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "akteur_beteiligung"
+id: "Verbiest_Karreveld_Brussels__005__Kahle_Acoustics_Denis_Dujardin"
+title: "Kahle Acoustics, Denis Dujardin - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+quelle_label: "Q3"
+node_kind: "relation"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Kahle Acoustics, Denis Dujardin - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/akteur_beteiligung/Verbiest_Karreveld_Brussels__005__Kahle_Acoustics_Denis_Dujardin
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Verbiest_Karreveld_Brussels__005__Kahle_Acoustics_Denis_Dujardin
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Kahle Acoustics, Denis Dujardin
+- **Beziehung zur Fallstudie:** Subcontractors Karreveld 2
+- **Quelle/Beleg:** Q3
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Akustik/Landschaft vermutlich, Details unbekannt

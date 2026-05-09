@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__009__Area"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Area - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Area - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__009__Area"
+title: "Area - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S4"
+node_kind: "core"
+wert: "33.910"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Area - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__009__Area
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__009__Area
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Area
+- **Wert:** 33.910
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Bennetts
+- **Bilanzgrenze:** Projektfläche, genaue Definition unklar
+- **Quelle:** S4
+- **Vertrauensgrad:** belegt

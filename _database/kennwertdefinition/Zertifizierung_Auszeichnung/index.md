@@ -1,20 +1,13 @@
-﻿---
-id: "Zertifizierung_Auszeichnung"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Zertifizierung / Auszeichnung"
 ---
+entity: "kennwertdefinition"
+id: "Zertifizierung_Auszeichnung"
+title: "Zertifizierung / Auszeichnung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Zertifizierung / Auszeichnung
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Zertifizierung_Auszeichnung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Zertifizierung_Auszeichnung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Projektbezogene Zertifizierung, Auszeichnung, Rating oder Award.

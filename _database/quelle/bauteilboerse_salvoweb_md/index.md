@@ -1,15 +1,66 @@
-﻿---
-id: "bauteilboerse_salvoweb_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteilboerse/salvoweb.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteilboerse_salvoweb_md"
+title: "bauteilboerse_salvoweb_md"
+build_status: "promoted_phase42"
+source_filename: "salvoweb.md"
+legacy_type: "Bauteilbörse"
+---
+
 # bauteilboerse_salvoweb_md
 
-## Source Archive
+## Kurzbeschreibung
+SalvoWEB ist ein(e) Marktplatz und Händlerverzeichnis für Architectural Salvage und reclaimed building materials mit Bezug zu Vereinigtes Königreich; international. Im Reuse-Kontext liegt der Schwerpunkt auf: Wiederverkauf und Vermittlung geborgener Bauteile, historischer Bauelemente und architektonischer Salvage-Produkte.
 
-- Original path: bauteilboerse/salvoweb.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: split_platform_profile; old target: software_digitaltool/salvoweb
+## Land / Region
+Vereinigtes Königreich; international
+
+## Betreiber
+Salvo
+
+## Zielgruppe
+Architektursalvage-Händler, Planende, Restaurierung, Bauherrschaft, private Käufer
+
+## Plattformtyp
+Marktplatz und Händlerverzeichnis für Architectural Salvage und reclaimed building materials
+
+## Bauteilkategorien
+reclaimed bricks, flooring, stone, timber, architectural antiques, garden salvage, demolition items, recrafted/upcycled items
+
+## Art der Wiederverwendung
+Wiederverkauf und Vermittlung geborgener Bauteile, historischer Bauelemente und architektonischer Salvage-Produkte
+
+## Funktionen
+Listings; Händlerverzeichnis; Suchfunktion; Wanted-/Demolition-Kontext; Kontakt zu Verkäufern
+
+## Daten je Bauteil
+Listingdaten je Anbieter; Fotos, Beschreibung, Preis/Anfrage und Kontakt; technische Daten unterschiedlich
+
+## Qualität / Prüfung
+Salvo ist Marktplatz/Verzeichnis; Prüfung und Garantien liegen beim Händler/Anbieter
+
+## Logistik / Lagerung
+direkt über Händler/Anbieter; Versand/Abholung je Angebot
+
+## Geschäftsmodell
+Marketplace/Directory; Gebühren nicht angegeben
+
+## Ökologische Bewertung
+hält reclaimed materials und architektonische Bauteile im Umlauf; quantitative Bewertung nicht angegeben
+
+## Stärken
+lange Marktpräsenz; großes internationales Netzwerk; stark für historische und architektonische Bauteile
+
+## Schwächen / Hemmnisse
+nicht bautechnisch standardisiert; Norm- und Leistungsnachweise müssen je Produkt geprüft werden
+
+## Relevanz für zirkuläres Bauen
+hoch für Wiederverwendung im Bestand, Restaurierung und materialbewusstes zirkuläres Design.
+
+## Quellen und Links
+- https://www.salvoweb.com/
+- https://www.salvoweb.com/antique-reclaimed
+- https://www.thehousedirectory.com/salvo-truly-reclaimed-sustainability/
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

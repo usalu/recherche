@@ -1,20 +1,43 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Holzfu_b_den_vloerdelen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "HolzfuÃŸbÃ¶den / vloerdelen - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
-# HolzfuÃŸbÃ¶den / vloerdelen - Jeugdkliniek Ithaka / Emergis, Kloetinge
+entity: "reuse_einsatz"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Holzfu_b_den_vloerdelen"
+title: "Holzfußböden / vloerdelen - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+huerde_label: "Healthcare-Nutzung"
+quelle_label: "[S2], [S5], [S11]"
+material_label: "Holz"
+node_kind: "core"
+herkunft_label: "RWS Terneuzen"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+neue_funktion: "Bodenbelag Klinik"
+bauteil_label: "Holzfußböden / vloerdelen"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+alte_funktion: "Bodenbelag"
+---
 
-## Clean Node
+# Holzfußböden / vloerdelen - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-- Final path: _database/reuse_einsatz/Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Holzfu_b_den_vloerdelen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Holzfu_b_den_vloerdelen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Holzfußböden / vloerdelen
+- **Material:** Holz
+- **Herkunft:** RWS Terneuzen
+- **alte Funktion:** Bodenbelag
+- **neue Funktion:** Bodenbelag Klinik
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Ausbau, ggf. Aufbereitung
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Abrieb, Hygiene, Brand
+- **Norm/Recht:** unbekannt
+- **Hürde:** Healthcare-Nutzung
+- **Quelle:** [S2], [S5], [S11]
+- **unbekannt:** ja

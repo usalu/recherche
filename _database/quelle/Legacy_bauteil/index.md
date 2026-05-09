@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_bauteil"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Bauteil"
 ---
+entity: "quelle"
+id: "Legacy_bauteil"
+title: "Bauteil"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Bauteil
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_bauteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_bauteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Bauteil

@@ -1,20 +1,25 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__011__mobile_Trennwand"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "mobile Trennwand - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# mobile Trennwand - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Resilience_La_Ferme_des_Possibles_Stains__011__mobile_Trennwand"
+title: "mobile Trennwand - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "11"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# mobile Trennwand - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__011__mobile_Trennwand
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__011__mobile_Trennwand
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** mobile Trennwand
+- **Wert:** 11
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Innenausbau
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

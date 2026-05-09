@@ -1,20 +1,22 @@
-﻿---
-id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__003__IMd_raadgevende_ingenieurs"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "IMd raadgevende ingenieurs - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# IMd raadgevende ingenieurs - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__003__IMd_raadgevende_ingenieurs"
+title: "IMd raadgevende ingenieurs - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Tektoniek"
+node_kind: "relation"
+fallstudie: "fallstudie/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+bauobjekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+projekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+---
 
-## Clean Node
+# IMd raadgevende ingenieurs - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__003__IMd_raadgevende_ingenieurs
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__003__IMd_raadgevende_ingenieurs
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** IMd raadgevende ingenieurs
+- **Beziehung zur Fallstudie:** Konstrukteur im Prinsenhof-Projekt
+- **Quelle/Beleg:** Tektoniek
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** genaue Rolle im CCN unbekannt

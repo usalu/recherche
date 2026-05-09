@@ -1,20 +1,37 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "bauobjekt"
+id: "BioPartner_5_Leiden_Oegstgeest"
+title: "BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\BioPartner_5_Leiden_Oegstgeest.md"
+node_kind: "core"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/bauobjekt/BioPartner_5_Leiden_Oegstgeest
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\BioPartner_5_Leiden_Oegstgeest.md
 
-- Source: _graph/bauobjekt/BioPartner_5_Leiden_Oegstgeest
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** BioPartner 5
+- **Ort:** Limes 7, Leiden Bio Science Park, Oegstgeest/Leiden, Niederlande
+- **Gebäude:** Labor-, Büro- und Begegnungsgebäude für Life-Sciences-Startups
+- **Projekt:** fünftes Gebäude von BioPartner Center Leiden
+- **Beteiligte People / Akteure:** BioPartner Center Leiden; Popma ter Steege Architecten; IMd Raadgevende Ingenieurs; De Vries en Verburg; Vic Obdam Staalbouw; Deerns; STONE22; Leiden University / Gorlaeus-Donorquelle
+- **Architekt:** Popma ter Steege Architecten
+- **Tragwerksplaner:** IMd Raadgevende Ingenieurs
+- **Bauherr:** BioPartner Center Leiden
+- **Zeitraum:** Entwurfsstart Juni 2018; Realisierung 2020–2021; Fertigstellung / Übergabe 2021
+- **Ursprüngliche Nutzung:** Donor: Universitätslabor / Gorlaeus-Hochhaus, Fakultät Naturwissenschaften
+- **Neue Nutzung:** Labor, Büro, Restaurant, Meetingcenter, Wintergarten, Terrasse
+- **Fläche / Maßstab:** 6.200 m² nach mehreren Quellen; 7.000 m² nach STONE22; Quellenabweichung, daher **6.200–7.000 m²**
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für zentrale Stahlwiederverwendung, Akteure, Kennwerte; mittel für detaillierte Prüfungen, Kosten, Bauteilliste
+
+---

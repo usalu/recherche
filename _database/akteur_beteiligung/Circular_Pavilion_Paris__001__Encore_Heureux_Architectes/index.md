@@ -1,20 +1,22 @@
-﻿---
-id: "Circular_Pavilion_Paris__001__Encore_Heureux_Architectes"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Encore Heureux Architectes - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# Encore Heureux Architectes - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Circular_Pavilion_Paris__001__Encore_Heureux_Architectes"
+title: "Encore Heureux Architectes - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Encore Heureux"
+node_kind: "relation"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Encore Heureux Architectes - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Circular_Pavilion_Paris__001__Encore_Heureux_Architectes
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Circular_Pavilion_Paris__001__Encore_Heureux_Architectes
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Encore Heureux Architectes
+- **Beziehung zur Fallstudie:** Architekt / mandataire
+- **Quelle/Beleg:** Encore Heureux
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Entwurf und Projektleitung.

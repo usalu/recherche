@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_Building_Boston__010__Bauzeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Bauzeit - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_Building_Boston__010__Bauzeit"
+title: "Bauzeit - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "—"
+quelle_label: "JCP/PRECS"
+node_kind: "core"
+wert: "nicht gebaut"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+bauobjekt:
+  - "Big_Dig_Building_Boston"
+projekt:
+  - "Big_Dig_Building_Boston"
+---
 
-## Clean Node
+# Bauzeit - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_Building_Boston__010__Bauzeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_Building_Boston__010__Bauzeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit
+- **Wert:** nicht gebaut
+- **Einheit:** —
+- **Methode/Datenmodell/Software:** Projektstatus
+- **Bilanzgrenze:** —
+- **Quelle:** JCP/PRECS
+- **Vertrauensgrad:** teilweise belegt

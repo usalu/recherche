@@ -1,20 +1,11 @@
-﻿---
-id: "Naturstein"
-entity: "material"
-build_status: "clean_phase20"
-title: "Naturstein"
 ---
+entity: "material"
+id: "Naturstein"
+title: "Naturstein"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Naturstein
 
-## Clean Node
-
-- Final path: _database/material/Naturstein
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/material/Naturstein
-  - Action: keep_or_merge
-  - Status: CONFIDENT
-  - Reason: Correct broad material.
 

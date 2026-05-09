@@ -1,20 +1,13 @@
-﻿---
-id: "Aufbereitung_Refurbishment"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Aufbereitung / Refurbishment"
 ---
+entity: "akteurrolle"
+id: "Aufbereitung_Refurbishment"
+title: "Aufbereitung / Refurbishment"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Aufbereitung / Refurbishment
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Aufbereitung_Refurbishment
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Aufbereitung_Refurbishment
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur, der Bauteile reinigt, prueft, repariert, refabriziert, redesigned oder montagefertig macht.

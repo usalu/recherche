@@ -1,20 +1,25 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__012__Stahlbauzeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Stahlbauzeit - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Stahlbauzeit - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Brent_Cross_Town_Primary_Substation_London__012__Stahlbauzeit"
+title: "Stahlbauzeit - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Zeitraum"
+quelle_label: "ASBP"
+node_kind: "core"
+wert: "Juli–November 2022"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# Stahlbauzeit - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Brent_Cross_Town_Primary_Substation_London__012__Stahlbauzeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brent_Cross_Town_Primary_Substation_London__012__Stahlbauzeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Stahlbauzeit
+- **Wert:** Juli–November 2022
+- **Einheit:** Zeitraum
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** steel works
+- **Quelle:** ASBP
+- **Vertrauensgrad:** belegt

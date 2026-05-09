@@ -1,20 +1,25 @@
-﻿---
-id: "CRCLR_House_Impact_Hub_Berlin__005__Stahltr_ger_aus_Dachr_ckbau"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "StahltrÃ¤ger aus DachrÃ¼ckbau - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse"
 ---
-# StahltrÃ¤ger aus DachrÃ¼ckbau - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "CRCLR_House_Impact_Hub_Berlin__005__Stahltr_ger_aus_Dachr_ckbau"
+title: "Stahlträger aus Dachrückbau - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück / m"
+quelle_label: "BauNetz Wissen"
+node_kind: "core"
+wert: "120; bis 18 m Länge"
+fallstudie: "fallstudie/CRCLR_House_Impact_Hub_Berlin"
+bauobjekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+projekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+---
 
-## Clean Node
+# Stahlträger aus Dachrückbau - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/CRCLR_House_Impact_Hub_Berlin__005__Stahltr_ger_aus_Dachr_ckbau
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/CRCLR_House_Impact_Hub_Berlin__005__Stahltr_ger_aus_Dachr_ckbau
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Stahlträger aus Dachrückbau
+- **Wert:** 120; bis 18 m Länge
+- **Einheit:** Stück / m
+- **Methode/Datenmodell/Software:** Fallbericht
+- **Bilanzgrenze:** Dachstahl
+- **Quelle:** BauNetz Wissen
+- **Vertrauensgrad:** teilweise belegt

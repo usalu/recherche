@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_tragwerkssystem"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Tragwerkssystem"
 ---
+entity: "quelle"
+id: "Legacy_tragwerkssystem"
+title: "Tragwerkssystem"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Tragwerkssystem
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_tragwerkssystem
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_tragwerkssystem
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Tragwerkssystem

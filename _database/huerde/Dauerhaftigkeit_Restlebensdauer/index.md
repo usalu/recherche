@@ -1,20 +1,13 @@
-﻿---
-id: "Dauerhaftigkeit_Restlebensdauer"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Dauerhaftigkeit / Restlebensdauer"
 ---
+entity: "huerde"
+id: "Dauerhaftigkeit_Restlebensdauer"
+title: "Dauerhaftigkeit / Restlebensdauer"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Dauerhaftigkeit / Restlebensdauer
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Dauerhaftigkeit_Restlebensdauer
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Dauerhaftigkeit_Restlebensdauer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Unklare Dauerhaftigkeit, Restlebensdauer, Feuer-/Witterungsbestaendigkeit oder langfristige Robustheit.

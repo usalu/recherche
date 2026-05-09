@@ -1,20 +1,43 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__Fassaden_Fenster_T_ren_Sanit_r"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fassaden/Fenster/TÃ¼ren/SanitÃ¤r - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Fassaden/Fenster/TÃ¼ren/SanitÃ¤r - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "reuse_einsatz"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__Fassaden_Fenster_T_ren_Sanit_r"
+title: "Fassaden/Fenster/Türen/Sanitär - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "nicht belegt"
+quelle_label: "keine Quelle"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+bauobjekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+neue_funktion: "Gebäudehülle/Ausbau"
+bauteil_label: "Fassaden/Fenster/Türen/Sanitär"
+projekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Fassaden/Fenster/Türen/Sanitär - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/reuse_einsatz/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__Fassaden_Fenster_T_ren_Sanit_r
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__Fassaden_Fenster_T_ren_Sanit_r
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fassaden/Fenster/Türen/Sanitär
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Gebäudehülle/Ausbau
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** möglich
+- **Hülle?:** möglich
+- **technisch?:** möglich
+- **Eingriff/Aufbereitung:** keine Reuse-Belege
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht belegt
+- **Quelle:** keine Quelle
+- **unbekannt:** ja

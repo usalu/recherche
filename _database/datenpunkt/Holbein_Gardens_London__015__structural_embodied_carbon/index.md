@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__015__structural_embodied_carbon"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "structural embodied carbon - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# structural embodied carbon - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__015__structural_embodied_carbon"
+title: "structural embodied carbon - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "kgCO₂e/m²"
+quelle_label: "[S2], [S3], [S7]"
+node_kind: "core"
+wert: "62 / 65 / 67,5"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# structural embodied carbon - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__015__structural_embodied_carbon
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__015__structural_embodied_carbon
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** structural embodied carbon
+- **Wert:** 62 / 65 / 67,5
+- **Einheit:** kgCO₂e/m²
+- **Methode/Datenmodell/Software:** HTS / IStructE / ASBP
+- **Bilanzgrenze:** Struktur, teilweise ohne Fassade
+- **Quelle:** [S2], [S3], [S7]
+- **Vertrauensgrad:** belegt, abweichend

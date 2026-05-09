@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__004__BGF"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "BGF - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# BGF - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__004__BGF"
+title: "BGF - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "gmp / Structurae"
+node_kind: "core"
+wert: "2.004"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# BGF - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__004__BGF
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__004__BGF
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** BGF
+- **Wert:** 2.004
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Pavillon
+- **Quelle:** gmp / Structurae
+- **Vertrauensgrad:** belegt

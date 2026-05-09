@@ -1,20 +1,25 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Energie"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Energie - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
+entity: "datenpunkt"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Energie"
+title: "Energie - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+einheit: "qualitativ"
+quelle_label: "[S3], [S6]"
+node_kind: "core"
+wert: "Neubau energieneutral; Renovation Energielabel A"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+---
+
 # Energie - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-## Clean Node
-
-- Final path: _database/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Energie
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__009__Energie
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Energie
+- **Wert:** Neubau energieneutral; Renovation Energielabel A
+- **Einheit:** qualitativ
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Betrieb, nicht Direct Reuse
+- **Quelle:** [S3], [S6]
+- **Vertrauensgrad:** teilweise belegt

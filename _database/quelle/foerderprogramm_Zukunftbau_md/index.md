@@ -1,15 +1,12 @@
-﻿---
-id: "foerderprogramm_Zukunftbau_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "foerderprogramm/Zukunftbau.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "foerderprogramm_Zukunftbau_md"
+title: "foerderprogramm_Zukunftbau_md"
+build_status: "promoted_phase42"
+source_filename: "Zukunftbau.md"
+legacy_type: "Förderprogramm"
+---
+
 # foerderprogramm_Zukunftbau_md
 
-## Source Archive
 
-- Original path: foerderprogramm/Zukunftbau.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_core_or_context; old target: foerderprogramm/Zukunftbau

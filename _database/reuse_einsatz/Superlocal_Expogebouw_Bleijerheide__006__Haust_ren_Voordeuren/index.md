@@ -1,20 +1,43 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__006__Haust_ren_Voordeuren"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "HaustÃ¼ren / Voordeuren - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# HaustÃ¼ren / Voordeuren - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Superlocal_Expogebouw_Bleijerheide__006__Haust_ren_Voordeuren"
+title: "Haustüren / Voordeuren - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Zustand/Maße"
+quelle_label: "SUPERLOCAL"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "Donorflat"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+neue_funktion: "Tür"
+bauteil_label: "Haustüren / Voordeuren"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+alte_funktion: "Wohnungseingang"
+---
 
-## Clean Node
+# Haustüren / Voordeuren - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Superlocal_Expogebouw_Bleijerheide__006__Haust_ren_Voordeuren
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Superlocal_Expogebouw_Bleijerheide__006__Haust_ren_Voordeuren
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Haustüren / Voordeuren
+- **Material:** unbekannt
+- **Herkunft:** Donorflat
+- **alte Funktion:** Wohnungseingang
+- **neue Funktion:** Tür
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** möglich
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Ausbau/Wiedereinbau
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Sicherheit, Dichtheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Zustand/Maße
+- **Quelle:** SUPERLOCAL
+- **unbekannt:** Anzahl

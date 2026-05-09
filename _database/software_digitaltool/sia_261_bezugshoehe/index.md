@@ -1,20 +1,23 @@
-﻿---
-id: "sia_261_bezugshoehe"
-entity: "software_digitaltool"
-build_status: "clean_phase20"
-title: "sia 261 bezugshoehe"
 ---
+entity: "software_digitaltool"
+id: "sia_261_bezugshoehe"
+title: "sia 261 bezugshoehe"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "software\\sia-261-bezugshöhe\\index.md"
+node_kind: "core"
+---
+
 # sia 261 bezugshoehe
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/software_digitaltool/sia_261_bezugshoehe
-- Build rule: typed path IDs only.
+### Legacy Source: software\sia-261-bezugshöhe\index.md
 
-## Imported Staging Nodes
+- Map action: move_as_core
+- Target role in map: primary
+- Raw mapped target: software_digitaltool/sia_261_bezugshoehe
+- Original primary target: software_digitaltool/sia_261_bezugshoehe
+- Original secondary targets: 
 
-- Source: _graph/software_digitaltool/sia_261_bezugshoehe
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+https://261.sia.ch

@@ -1,20 +1,22 @@
-﻿---
-id: "Cleveland_Steel_and_Tubes"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "Cleveland Steel and Tubes"
 ---
+entity: "akteur"
+id: "Cleveland_Steel_and_Tubes"
+title: "Cleveland Steel and Tubes"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\55_Great_Suffolk_Street_London.md"
+  - "Gebäude\\Brent_Cross_Town_Primary_Substation_London.md"
+node_kind: "core"
+---
+
 # Cleveland Steel and Tubes
 
-## Clean Node
+## Observed Roles
 
-- Final path: _database/akteur/Cleveland_Steel_and_Tubes
-- Build rule: typed path IDs only.
+- reclaimed steel stockholder / supplier
+- Reclaimed steel stockholder / supplier
 
-## Imported Staging Nodes
+## Observed Fallstudien
 
-- Source: _graph/akteur/Cleveland_Steel_and_Tubes
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- fallstudie/55_Great_Suffolk_Street_London
+- fallstudie/Brent_Cross_Town_Primary_Substation_London

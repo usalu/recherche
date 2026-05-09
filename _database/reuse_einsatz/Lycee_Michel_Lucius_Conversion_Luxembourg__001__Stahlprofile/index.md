@@ -1,20 +1,43 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__001__Stahlprofile"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Stahlprofile - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Stahlprofile - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__001__Stahlprofile"
+title: "Stahlprofile - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Nachweis Altstahl"
+quelle_label: "[S1]"
+material_label: "Stahl"
+node_kind: "core"
+herkunft_label: "Block 3000, Metallrahmen"
+menge_umfang: "11,8 t"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+neue_funktion: "Überdachung neben Esplanade"
+bauteil_label: "Stahlprofile"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+alte_funktion: "Tragstruktur Schulflügel"
+---
 
-## Clean Node
+# Stahlprofile - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Lycee_Michel_Lucius_Conversion_Luxembourg__001__Stahlprofile
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Lycee_Michel_Lucius_Conversion_Luxembourg__001__Stahlprofile
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Stahlprofile
+- **Material:** Stahl
+- **Herkunft:** Block 3000, Metallrahmen
+- **alte Funktion:** Tragstruktur Schulflügel
+- **neue Funktion:** Überdachung neben Esplanade
+- **Menge/Umfang:** 11,8 t
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** ja/Überdachung
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** selektiver Rückbau, Zuschnitt/Anpassung unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Tragfähigkeit, Witterung, Sicherheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Nachweis Altstahl
+- **Quelle:** [S1]
+- **unbekannt:** Prüfungen, Verbindungen

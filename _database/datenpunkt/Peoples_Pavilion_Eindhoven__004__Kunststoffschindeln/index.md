@@ -1,20 +1,25 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven__004__Kunststoffschindeln"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kunststoffschindeln - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# Kunststoffschindeln - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Peoples_Pavilion_Eindhoven__004__Kunststoffschindeln"
+title: "Kunststoffschindeln - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "MaterialDistrict"
+node_kind: "core"
+wert: "9,500"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+bauobjekt:
+  - "Peoples_Pavilion_Eindhoven"
+projekt:
+  - "Peoples_Pavilion_Eindhoven"
+---
 
-## Clean Node
+# Kunststoffschindeln - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Peoples_Pavilion_Eindhoven__004__Kunststoffschindeln
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Peoples_Pavilion_Eindhoven__004__Kunststoffschindeln
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kunststoffschindeln
+- **Wert:** 9,500
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Sekundärquelle
+- **Bilanzgrenze:** Fassade / Pretty Plastic
+- **Quelle:** MaterialDistrict
+- **Vertrauensgrad:** teilweise belegt

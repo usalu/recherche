@@ -1,20 +1,25 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam__003__Circularity_Reuse_Anteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Circularity / Reuse-Anteil - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Circularity / Reuse-Anteil - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "BlueCity_Offices_Rotterdam__003__Circularity_Reuse_Anteil"
+title: "Circularity / Reuse-Anteil - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S1, S3"
+node_kind: "core"
+wert: "90"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+bauobjekt:
+  - "BlueCity_Offices_Rotterdam"
+projekt:
+  - "BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# Circularity / Reuse-Anteil - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/BlueCity_Offices_Rotterdam__003__Circularity_Reuse_Anteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BlueCity_Offices_Rotterdam__003__Circularity_Reuse_Anteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Circularity / Reuse-Anteil
+- **Wert:** 90
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** erster Transformationsabschnitt / Büros
+- **Quelle:** S1, S3
+- **Vertrauensgrad:** teilweise belegt

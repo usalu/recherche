@@ -1,20 +1,18 @@
-﻿---
-id: "Legacy_bericht_2021-Schweiz"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "bericht\\2021-Schweiz.md"
 ---
+entity: "quelle"
+id: "Legacy_bericht_2021-Schweiz"
+title: "bericht\\2021-Schweiz.md"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Bericht"
+---
+
 # bericht\\2021-Schweiz.md
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_bericht_2021-Schweiz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_bericht_2021-Schweiz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+---
+type: Bericht
+name: Selektiver Rückbau - Rückbaubare Konstruktion: Studie zur Förderung der Abfallreduktion und der Wiederverwendung in der Baubranche
+doi: http://doi.org/10.5281/zenodo.5131243
+---

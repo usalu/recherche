@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__006__Fertigstellung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fertigstellung - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_House_Lexington_Massachusetts__006__Fertigstellung"
+title: "Fertigstellung - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "Britannica, Project Architecture"
+node_kind: "core"
+wert: "2006"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Fertigstellung - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_House_Lexington_Massachusetts__006__Fertigstellung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_House_Lexington_Massachusetts__006__Fertigstellung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung
+- **Wert:** 2006
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** publizierte Projektangabe
+- **Bilanzgrenze:** Projekt
+- **Quelle:** Britannica, Project Architecture
+- **Vertrauensgrad:** belegt

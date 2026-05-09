@@ -1,20 +1,13 @@
-﻿---
-id: "Wasserkennwert"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Wasserkennwert"
 ---
+entity: "kennwertdefinition"
+id: "Wasserkennwert"
+title: "Wasserkennwert"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Wasserkennwert
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Wasserkennwert
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Wasserkennwert
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Wasserbezogene Kennwerte wie Wassereinsparung, Regenwasserspeicher oder wasserbezogene Umweltwirkung.

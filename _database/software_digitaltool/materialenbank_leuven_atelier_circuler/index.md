@@ -1,20 +1,81 @@
-﻿---
-id: "materialenbank_leuven_atelier_circuler"
-entity: "software_digitaltool"
-build_status: "clean_phase20"
-title: "Materialenbank Leuven / Atelier Circuler"
 ---
+entity: "software_digitaltool"
+id: "materialenbank_leuven_atelier_circuler"
+title: "Materialenbank Leuven / Atelier Circuler"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteilboerse\\materialenbank-leuven-atelier-circuler.md"
+node_kind: "core"
+---
+
 # Materialenbank Leuven / Atelier Circuler
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/software_digitaltool/materialenbank_leuven_atelier_circuler
-- Build rule: typed path IDs only.
+### Legacy Source: bauteilboerse\materialenbank-leuven-atelier-circuler.md
 
-## Imported Staging Nodes
+- Map action: split_platform_profile
+- Target role in map: primary
+- Raw mapped target: software_digitaltool/materialenbank_leuven_atelier_circuler
+- Original primary target: software_digitaltool/materialenbank_leuven_atelier_circuler
+- Original secondary targets: akteur/<operator_if_named>; beschaffungsweg/Digitale_Plattform; ressourcenquelle/Bauteilboerse; plattformfunktion/Material_Matching
 
-- Source: _graph/software_digitaltool/materialenbank_leuven_atelier_circuler
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# Materialenbank Leuven / Atelier Circuler
 
+## Kurzbeschreibung
+Materialenbank Leuven / Atelier Circuler ist ein(e) Materialbank mit Online-Katalog und physischem Lager mit Bezug zu Belgien; Leuven/Herent. Im Reuse-Kontext liegt der Schwerpunkt auf: Rückgewinnung und Verkauf/Weitergabe gebrauchter Baumaterialien aus regionalen Quellen.
+
+## Land / Region
+Belgien; Leuven/Herent
+
+## Betreiber
+Atelier Circuler vzw; auf Initiative und mit Unterstützung der Stadt Leuven; Zusammenarbeit mit Wonen en Werken
+
+## Zielgruppe
+Privatpersonen und professionelle Nutzer
+
+## Plattformtyp
+Materialbank mit Online-Katalog und physischem Lager
+
+## Bauteilkategorien
+rekupiertes Holz, Steinfraktionen, Schreinerarbeiten, Dämmung, Sanitär; darunter Konstruktionsholz, Plattenmaterial, tropisches/rustikales Holz, lokales Holz, Kunst- und Naturstein
+
+## Art der Wiederverwendung
+Rückgewinnung und Verkauf/Weitergabe gebrauchter Baumaterialien aus regionalen Quellen
+
+## Funktionen
+Online-Katalog; Materialannahme; physische Materialbank; Kooperationen mit Rückbau- und Stadtprojekten
+
+## Daten je Bauteil
+Online-Katalog; genaue Pflichtdaten je Material nicht angegeben
+
+## Qualität / Prüfung
+nicht angegeben; Materialien werden als zurückgewonnen/rekupiert beschrieben
+
+## Logistik / Lagerung
+physische Materialbank in Herent; Abholung vor Ort naheliegend; Transportdetails nicht angegeben
+
+## Geschäftsmodell
+Materialbank/Verkauf; Unterstützung durch Stadt Leuven; Preis-/Gebührenmodell nicht angegeben
+
+## Ökologische Bewertung
+Materialenbank rettet Bau­materialien vor Entsorgung und bringt sie wieder in Nutzung; quantitative CO2-Daten je Artikel nicht angegeben
+
+## Stärken
+regionaler Kreislauf; für Profis und Privatpersonen offen; Online-Katalog; klarer sozial-ökologischer Kontext
+
+## Schwächen / Hemmnisse
+regional begrenzter Lagerbestand; Qualität und technische Dokumente je Bauteil prüfen
+
+## Relevanz für zirkuläres Bauen
+hoch für regionale Kreislaufwirtschaft und zirkuläre Renovierungen im Raum Leuven.
+
+## Quellen und Links
+- https://ateliercirculer.be/materialenbank/
+- https://ateliercirculer.be/
+- https://ateliercirculer.be/materialenbank/catalogus
+- https://www.vvsg.be/kennis/praktijken/praktijkendatabank/materialenbank-leuven
+- https://pers.leuven.be/de-leuvense-materialenbank-redt-470-ton-materialen-in-2025-recordjaar-voor-circulaire-economie
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

@@ -1,20 +1,16 @@
-﻿---
-id: "Europa_Building_Brussels"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Europa Building, Brussels â€“ Fallstudie Direct Reuse"
 ---
-# Reuse-Kette - Europa Building, Brussels â€“ Fallstudie Direct Reuse
+entity: "reuse_kette"
+id: "Europa_Building_Brussels"
+title: "Reuse-Kette - Europa Building, Brussels – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Europa_Building_Brussels.md"
+node_kind: "core"
+fallstudie: "fallstudie/Europa_Building_Brussels"
+projekt:
+  - "Europa_Building_Brussels"
+---
 
-## Clean Node
+# Reuse-Kette - Europa Building, Brussels – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kette/Europa_Building_Brussels
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Europa_Building_Brussels
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

@@ -1,20 +1,22 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__002__CC_Autrement"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "CC Autrement - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# CC Autrement - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Chiro_d_Itterbeek_Dilbeek__002__CC_Autrement"
+title: "CC Autrement - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# CC Autrement - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Chiro_d_Itterbeek_Dilbeek__002__CC_Autrement
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Chiro_d_Itterbeek_Dilbeek__002__CC_Autrement
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** CC Autrement
+- **Beziehung zur Fallstudie:** Konstrukteur / Ausführung
+- **Quelle/Beleg:** [S2], [S4]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Partner im Design-Build.

@@ -1,20 +1,25 @@
-﻿---
-id: "Bestandverplanzung_Pavilion_Muenchen__002__Alter_der_wiederverwendeten_Komponenten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Alter der wiederverwendeten Komponenten - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Alter der wiederverwendeten Komponenten - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Bestandverplanzung_Pavilion_Muenchen__002__Alter_der_wiederverwendeten_Komponenten"
+title: "Alter der wiederverwendeten Komponenten - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "PRECS/JCP"
+node_kind: "core"
+wert: "ca. 36"
+fallstudie: "fallstudie/Bestandverplanzung_Pavilion_Muenchen"
+bauobjekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+projekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+---
 
-## Clean Node
+# Alter der wiederverwendeten Komponenten - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Bestandverplanzung_Pavilion_Muenchen__002__Alter_der_wiederverwendeten_Komponenten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Bestandverplanzung_Pavilion_Muenchen__002__Alter_der_wiederverwendeten_Komponenten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Alter der wiederverwendeten Komponenten
+- **Wert:** ca. 36
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** PRECS-Fallstudiendatenbank
+- **Bilanzgrenze:** Bauteile aus 1972-Kontext
+- **Quelle:** PRECS/JCP
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,13 @@
-﻿---
-id: "Materialqualitaet_Unklar"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Materialqualitaet unklar"
 ---
+entity: "huerde"
+id: "Materialqualitaet_Unklar"
+title: "Materialqualitaet unklar"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Materialqualitaet unklar
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Materialqualitaet_Unklar
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Materialqualitaet_Unklar
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Unklare oder schwankende Materialqualitaet, Herkunft, Zusammensetzung oder Materialdetails.

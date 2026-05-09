@@ -1,20 +1,25 @@
-﻿---
-id: "Villa_Welpeloo_Enschede__002__Anteil_Innenausbau_reused"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anteil Innenausbau reused - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Anteil Innenausbau reused - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Villa_Welpeloo_Enschede__002__Anteil_Innenausbau_reused"
+title: "Anteil Innenausbau reused - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S5, S7"
+node_kind: "core"
+wert: "ca. 90"
+fallstudie: "fallstudie/Villa_Welpeloo_Enschede"
+bauobjekt:
+  - "Villa_Welpeloo_Enschede"
+projekt:
+  - "Villa_Welpeloo_Enschede"
+---
 
-## Clean Node
+# Anteil Innenausbau reused - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Villa_Welpeloo_Enschede__002__Anteil_Innenausbau_reused
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Villa_Welpeloo_Enschede__002__Anteil_Innenausbau_reused
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anteil Innenausbau reused
+- **Wert:** ca. 90
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Sekundärquelle
+- **Bilanzgrenze:** Innenausbau
+- **Quelle:** S5, S7
+- **Vertrauensgrad:** teilweise belegt

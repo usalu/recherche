@@ -1,20 +1,22 @@
-﻿---
-id: "Thoravej_29_Copenhagen__001__Bikubenfonden_Pihlmann_Architects_Hoffmann_A_S_A"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Bikubenfonden; Pihlmann Architects; Hoffmann A/S; ABC RÃ¥dgivende IngeniÃ¸rer; Sara Martinsen; DTU Kristoffer Negendahl/Negeldahl - Thoravej 29, Copenhagen â€“ Fallstudie Direct Reuse"
 ---
-# Bikubenfonden; Pihlmann Architects; Hoffmann A/S; ABC RÃ¥dgivende IngeniÃ¸rer; Sara Martinsen; DTU Kristoffer Negendahl/Negeldahl - Thoravej 29, Copenhagen â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Thoravej_29_Copenhagen__001__Bikubenfonden_Pihlmann_Architects_Hoffmann_A_S_A"
+title: "Bikubenfonden; Pihlmann Architects; Hoffmann A/S; ABC Rådgivende Ingeniører; Sara Martinsen; DTU Kristoffer Negendahl/Negeldahl - Thoravej 29, Copenhagen – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Thoravej 29; Pihlmann"
+node_kind: "relation"
+fallstudie: "fallstudie/Thoravej_29_Copenhagen"
+bauobjekt:
+  - "Thoravej_29_Copenhagen"
+projekt:
+  - "Thoravej_29_Copenhagen"
+---
 
-## Clean Node
+# Bikubenfonden; Pihlmann Architects; Hoffmann A/S; ABC Rådgivende Ingeniører; Sara Martinsen; DTU Kristoffer Negendahl/Negeldahl - Thoravej 29, Copenhagen – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Thoravej_29_Copenhagen__001__Bikubenfonden_Pihlmann_Architects_Hoffmann_A_S_A
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Thoravej_29_Copenhagen__001__Bikubenfonden_Pihlmann_Architects_Hoffmann_A_S_A
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Bikubenfonden; Pihlmann Architects; Hoffmann A/S; ABC Rådgivende Ingeniører; Sara Martinsen; DTU Kristoffer Negendahl/Negeldahl
+- **Beziehung zur Fallstudie:** Akteure
+- **Quelle/Beleg:** Thoravej 29; Pihlmann
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Schreibweise DTU-Name in Quelle prüfen

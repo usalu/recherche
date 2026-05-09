@@ -1,15 +1,20 @@
-﻿---
-id: "ort_Walkeweg_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "ort/Walkeweg.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "ort_Walkeweg_md"
+title: "ort_Walkeweg_md"
+build_status: "promoted_phase42"
+source_filename: "Walkeweg.md"
+legacy_type: "Ort"
+---
+
 # ort_Walkeweg_md
 
-## Source Archive
+## Kurzdefinition
 
-- Original path: ort/Walkeweg.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: ort/Walkeweg
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

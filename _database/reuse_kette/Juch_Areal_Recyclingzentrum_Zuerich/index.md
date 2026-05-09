@@ -1,20 +1,16 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# Reuse-Kette - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "reuse_kette"
+id: "Juch_Areal_Recyclingzentrum_Zuerich"
+title: "Reuse-Kette - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Juch_Areal_Recyclingzentrum_Zuerich.md"
+node_kind: "core"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+projekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# Reuse-Kette - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/reuse_kette/Juch_Areal_Recyclingzentrum_Zuerich
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Juch_Areal_Recyclingzentrum_Zuerich
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

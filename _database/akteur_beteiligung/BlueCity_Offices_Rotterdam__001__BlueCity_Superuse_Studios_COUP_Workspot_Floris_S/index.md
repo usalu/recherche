@@ -1,20 +1,22 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam__001__BlueCity_Superuse_Studios_COUP_Workspot_Floris_S"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "BlueCity, Superuse Studios, COUP, Workspot, Floris Schiferli - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# BlueCity, Superuse Studios, COUP, Workspot, Floris Schiferli - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "BlueCity_Offices_Rotterdam__001__BlueCity_Superuse_Studios_COUP_Workspot_Floris_S"
+title: "BlueCity, Superuse Studios, COUP, Workspot, Floris Schiferli - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "S1, S2, S5"
+node_kind: "relation"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+bauobjekt:
+  - "BlueCity_Offices_Rotterdam"
+projekt:
+  - "BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# BlueCity, Superuse Studios, COUP, Workspot, Floris Schiferli - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/BlueCity_Offices_Rotterdam__001__BlueCity_Superuse_Studios_COUP_Workspot_Floris_S
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/BlueCity_Offices_Rotterdam__001__BlueCity_Superuse_Studios_COUP_Workspot_Floris_S
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** BlueCity, Superuse Studios, COUP, Workspot, Floris Schiferli
+- **Beziehung zur Fallstudie:** Auftraggeber, Architektur/Design/Partner
+- **Quelle/Beleg:** S1, S2, S5
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Bauunternehmen Bik Bouw laut Rotterdam Architekturprijs

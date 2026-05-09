@@ -1,20 +1,16 @@
-﻿---
-id: "Maison_des_Canaux_Paris__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Donor - Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kettenstation"
+id: "Maison_des_Canaux_Paris__Donor"
+title: "Donor - Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Maison_des_Canaux_Paris.md"
+node_kind: "core"
+fallstudie: "fallstudie/Maison_des_Canaux_Paris"
+---
 
-## Clean Node
+# Donor - Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kettenstation/Maison_des_Canaux_Paris__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Maison_des_Canaux_Paris__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Maison_des_Canaux_Paris.md: | Rückbau / Ausbau | von Donor-Bauteilen unbekannt | unbekannt | selektiver Rückbau möglich | unbekannt | unbekannt | unbekannt | unbekannt | unbekannt | keine Lieferkette dokumentiert | Quelle prüfen | unbekannt |

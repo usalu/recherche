@@ -1,20 +1,25 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest__007__Energie"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Energie - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Energie - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "BioPartner_5_Leiden_Oegstgeest__007__Energie"
+title: "Energie - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "qualitativ / Label"
+quelle_label: "[S2], [S7]"
+node_kind: "core"
+wert: "energie-neutral / energiepositiv; A++++ genannt"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+bauobjekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# Energie - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/BioPartner_5_Leiden_Oegstgeest__007__Energie
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BioPartner_5_Leiden_Oegstgeest__007__Energie
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Energie
+- **Wert:** energie-neutral / energiepositiv; A++++ genannt
+- **Einheit:** qualitativ / Label
+- **Methode/Datenmodell/Software:** nicht detailliert
+- **Bilanzgrenze:** Betrieb
+- **Quelle:** [S2], [S7]
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,16 @@
-﻿---
-id: "Resource_Rows_Copenhagen__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Resource Rows, Copenhagen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Receiver - Resource Rows, Copenhagen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kettenstation"
+id: "Resource_Rows_Copenhagen__Receiver"
+title: "Receiver - Resource Rows, Copenhagen — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Resource_Rows_Copenhagen.md"
+node_kind: "core"
+fallstudie: "fallstudie/Resource_Rows_Copenhagen"
+---
 
-## Clean Node
+# Receiver - Resource Rows, Copenhagen — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kettenstation/Resource_Rows_Copenhagen__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Resource_Rows_Copenhagen__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

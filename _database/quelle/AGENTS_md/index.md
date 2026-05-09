@@ -1,15 +1,21 @@
-﻿---
-id: "AGENTS_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "AGENTS.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "AGENTS_md"
+title: "AGENTS_md"
+build_status: "promoted_phase42"
+source_filename: "AGENTS.md"
+---
+
 # AGENTS_md
 
-## Source Archive
+Sie sind ein Assistent, der hilft Wissen zu strukturieren und zu vernetzen.
 
-- Original path: AGENTS.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: keep_meta; old target: meta/repo_instruction
+Daraus wird anschließend eine Datenbank in SQLite erstellt.
+
+Ordnerstruktur:
+
+- ENTITÄT
+  - ID
+    - index.md # Alle Informationen zu der Entität
+      - # UNTERTHEMA // Titel des Unterthemas mit Inhalt
+    - DATEIEN

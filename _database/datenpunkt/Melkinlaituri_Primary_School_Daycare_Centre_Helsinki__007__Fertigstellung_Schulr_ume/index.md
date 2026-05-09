@@ -1,20 +1,25 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__007__Fertigstellung_Schulr_ume"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung SchulrÃ¤ume - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Fertigstellung SchulrÃ¤ume - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__007__Fertigstellung_Schulr_ume"
+title: "Fertigstellung Schulräume - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Datum"
+quelle_label: "YIT"
+node_kind: "core"
+wert: "spätes Frühjahr 2027"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+bauobjekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+projekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+---
 
-## Clean Node
+# Fertigstellung Schulräume - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__007__Fertigstellung_Schulr_ume
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__007__Fertigstellung_Schulr_ume
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung Schulräume
+- **Wert:** spätes Frühjahr 2027
+- **Einheit:** Datum
+- **Methode/Datenmodell/Software:** YIT
+- **Bilanzgrenze:** Gesamtgebäude
+- **Quelle:** YIT
+- **Vertrauensgrad:** belegt/angekündigt

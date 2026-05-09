@@ -1,20 +1,43 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__012__Dachbegr_nung_blau_gr_ne_L_sungen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "DachbegrÃ¼nung / blau-grÃ¼ne LÃ¶sungen - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# DachbegrÃ¼nung / blau-grÃ¼ne LÃ¶sungen - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "reuse_einsatz"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__012__Dachbegr_nung_blau_gr_ne_L_sungen"
+title: "Dachbegrünung / blau-grüne Lösungen - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+huerde_label: "nicht Direct Reuse"
+quelle_label: "S1"
+material_label: "Substrat/Pflanzen"
+node_kind: "core"
+herkunft_label: "neu/vermutlich nicht reused"
+menge_umfang: "über 50 norwegisch produzierte Arten laut FutureBuilt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+bauobjekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+neue_funktion: "Regenwasser/Biodiversität"
+bauteil_label: "Dachbegrünung / blau-grüne Lösungen"
+projekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+alte_funktion: "Dachökologie"
+---
 
-## Clean Node
+# Dachbegrünung / blau-grüne Lösungen - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/reuse_einsatz/KA13_Kristian_Augusts_gate_13_Oslo__012__Dachbegr_nung_blau_gr_ne_L_sungen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/KA13_Kristian_Augusts_gate_13_Oslo__012__Dachbegr_nung_blau_gr_ne_L_sungen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Dachbegrünung / blau-grüne Lösungen
+- **Material:** Substrat/Pflanzen
+- **Herkunft:** neu/vermutlich nicht reused
+- **alte Funktion:** Dachökologie
+- **neue Funktion:** Regenwasser/Biodiversität
+- **Menge/Umfang:** über 50 norwegisch produzierte Arten laut FutureBuilt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** ja
+- **technisch?:** technisch
+- **Eingriff/Aufbereitung:** neu
+- **Verbindung:** -
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Regenwasser/Biodiversität
+- **Norm/Recht:** unbekannt
+- **Hürde:** nicht Direct Reuse
+- **Quelle:** S1
+- **unbekannt:** Details

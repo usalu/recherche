@@ -1,20 +1,25 @@
-﻿---
-id: "Broethen_Twin_House_Hoyerswerda__005__Bauteilalter"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauteilalter - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
 ---
-# Bauteilalter - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
+entity: "datenpunkt"
+id: "Broethen_Twin_House_Hoyerswerda__005__Bauteilalter"
+title: "Bauteilalter - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "32"
+fallstudie: "fallstudie/Broethen_Twin_House_Hoyerswerda"
+bauobjekt:
+  - "Broethen_Twin_House_Hoyerswerda"
+projekt:
+  - "Broethen_Twin_House_Hoyerswerda"
+---
 
-## Clean Node
+# Bauteilalter - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Broethen_Twin_House_Hoyerswerda__005__Bauteilalter
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Broethen_Twin_House_Hoyerswerda__005__Bauteilalter
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauteilalter
+- **Wert:** 32
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** PRECS-Falldatenbank
+- **Bilanzgrenze:** Plattenbauteile
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

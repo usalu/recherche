@@ -1,20 +1,22 @@
-﻿---
-id: "AWM_Muenster_Circular_Office__001__Abfallwirtschaftsbetriebe_M_nster_urselmann_inte"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Abfallwirtschaftsbetriebe MÃ¼nster, urselmann interior, Concular, Petra JablonickÃ¡, Sven Urselmann - AWM MÃ¼nster â€“ ZirkulÃ¤rer BÃ¼roausbau 3. OG â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Abfallwirtschaftsbetriebe MÃ¼nster, urselmann interior, Concular, Petra JablonickÃ¡, Sven Urselmann - AWM MÃ¼nster â€“ ZirkulÃ¤rer BÃ¼roausbau 3. OG â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "AWM_Muenster_Circular_Office__001__Abfallwirtschaftsbetriebe_M_nster_urselmann_inte"
+title: "Abfallwirtschaftsbetriebe Münster, urselmann interior, Concular, Petra Jablonická, Sven Urselmann - AWM Münster – Zirkulärer Büroausbau 3. OG – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "S1–S5"
+node_kind: "relation"
+fallstudie: "fallstudie/AWM_Muenster_Circular_Office"
+bauobjekt:
+  - "AWM_Muenster_Circular_Office"
+projekt:
+  - "AWM_Muenster_Circular_Office"
+---
 
-## Clean Node
+# Abfallwirtschaftsbetriebe Münster, urselmann interior, Concular, Petra Jablonická, Sven Urselmann - AWM Münster – Zirkulärer Büroausbau 3. OG – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/AWM_Muenster_Circular_Office__001__Abfallwirtschaftsbetriebe_M_nster_urselmann_inte
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/AWM_Muenster_Circular_Office__001__Abfallwirtschaftsbetriebe_M_nster_urselmann_inte
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Abfallwirtschaftsbetriebe Münster, urselmann interior, Concular, Petra Jablonická, Sven Urselmann
+- **Beziehung zur Fallstudie:** Bauherr/Nutzer, Entwurf/Innenausbau, Materialplattform/Ökobilanz
+- **Quelle/Beleg:** S1–S5
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** genaue Vertragsrollen nicht vollständig

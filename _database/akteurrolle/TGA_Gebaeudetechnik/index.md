@@ -1,20 +1,13 @@
-﻿---
-id: "TGA_Gebaeudetechnik"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "TGA / Gebaeudetechnik"
 ---
+entity: "akteurrolle"
+id: "TGA_Gebaeudetechnik"
+title: "TGA / Gebaeudetechnik"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # TGA / Gebaeudetechnik
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/TGA_Gebaeudetechnik
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/TGA_Gebaeudetechnik
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Gebäudetechnik-, TGA-, Energie-, Installations- oder Services-Planungsrolle.

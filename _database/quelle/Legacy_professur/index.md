@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_professur"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Professur"
 ---
+entity: "quelle"
+id: "Legacy_professur"
+title: "Professur"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Professur
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_professur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_professur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Professur

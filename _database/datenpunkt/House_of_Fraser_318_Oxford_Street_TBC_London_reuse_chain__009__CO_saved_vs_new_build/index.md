@@ -1,20 +1,25 @@
-﻿---
-id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__009__CO_saved_vs_new_build"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚ saved vs new build - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette"
 ---
-# COâ‚‚ saved vs new build - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette
+entity: "datenpunkt"
+id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__009__CO_saved_vs_new_build"
+title: "CO₂ saved vs new build - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+build_status: "promoted_phase42"
+einheit: "t CO₂"
+quelle_label: "Willmott Dixon"
+node_kind: "core"
+wert: "6,365"
+fallstudie: "fallstudie/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+bauobjekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+projekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+---
 
-## Clean Node
+# CO₂ saved vs new build - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette
 
-- Final path: _database/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__009__CO_saved_vs_new_build
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__009__CO_saved_vs_new_build
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂ saved vs new build
+- **Wert:** 6,365
+- **Einheit:** t CO₂
+- **Methode/Datenmodell/Software:** Willmott Dixon claim
+- **Bilanzgrenze:** TBC overall vs new build
+- **Quelle:** Willmott Dixon
+- **Vertrauensgrad:** belegt, aber nicht Direct-Reuse-only

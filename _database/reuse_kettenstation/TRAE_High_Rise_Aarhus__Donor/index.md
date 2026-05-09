@@ -1,20 +1,18 @@
-﻿---
-id: "TRAE_High_Rise_Aarhus__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - TRÃ† High-Rise, Aarhus"
 ---
-# Donor - TRÃ† High-Rise, Aarhus
+entity: "reuse_kettenstation"
+id: "TRAE_High_Rise_Aarhus__Donor"
+title: "Donor - TRÆ High-Rise, Aarhus"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\TRAE_High_Rise_Aarhus.md"
+node_kind: "core"
+fallstudie: "fallstudie/TRAE_High_Rise_Aarhus"
+---
 
-## Clean Node
+# Donor - TRÆ High-Rise, Aarhus
 
-- Final path: _database/reuse_kettenstation/TRAE_High_Rise_Aarhus__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/TRAE_High_Rise_Aarhus__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\TRAE_High_Rise_Aarhus.md: | Bestandsaufnahme | verfügbare Reuse-/Upcycling-Materialien vor Formfindung identifiziert | Lendager, Kilden & Hindby, Lieferanten | form follows availability | unbekannt | selektiver Rückbau bei Donoren | Materialscreening | Qualitätschecks | Lieferantenketten | Materialverfügbarkeit | Entwurf aus Verfügbarkeit | [S3], [S9] |
+Gebäude\TRAE_High_Rise_Aarhus.md: - **Bauteilbörse / Quelle:** GreenDozer für Akustikplatten genannt; a:gain als Upcycling-/Reuse-Produktlieferant; weitere Donorquellen unbekannt.
+Gebäude\TRAE_High_Rise_Aarhus.md: - **Nicht gefunden:** Gesamtmasse Direct-Reuse-Bauteile, genaue Donorstandorte aller Bauteile, Prüfberichte, Kosten, Transportdistanzen, Zulassungsdetails.

@@ -1,20 +1,25 @@
-﻿---
-id: "Grubenstrasse_29_Werkhof_29_Zuerich__005__Fertigstellung_Vermietung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung / Vermietung - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fertigstellung / Vermietung - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grubenstrasse_29_Werkhof_29_Zuerich__005__Fertigstellung_Vermietung"
+title: "Fertigstellung / Vermietung - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "Werkhof29; BauNetz Wissen"
+node_kind: "core"
+wert: "2025"
+fallstudie: "fallstudie/Grubenstrasse_29_Werkhof_29_Zuerich"
+bauobjekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+projekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+---
 
-## Clean Node
+# Fertigstellung / Vermietung - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grubenstrasse_29_Werkhof_29_Zuerich__005__Fertigstellung_Vermietung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grubenstrasse_29_Werkhof_29_Zuerich__005__Fertigstellung_Vermietung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung / Vermietung
+- **Wert:** 2025
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** Werkhof29; BauNetz Wissen
+- **Vertrauensgrad:** belegt

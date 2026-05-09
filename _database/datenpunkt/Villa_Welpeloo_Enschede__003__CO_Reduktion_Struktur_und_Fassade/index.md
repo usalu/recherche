@@ -1,20 +1,25 @@
-﻿---
-id: "Villa_Welpeloo_Enschede__003__CO_Reduktion_Struktur_und_Fassade"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Reduktion Struktur und Fassade - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# COâ‚‚-Reduktion Struktur und Fassade - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Villa_Welpeloo_Enschede__003__CO_Reduktion_Struktur_und_Fassade"
+title: "CO₂-Reduktion Struktur und Fassade - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S1, S6"
+node_kind: "core"
+wert: "ca. 90"
+fallstudie: "fallstudie/Villa_Welpeloo_Enschede"
+bauobjekt:
+  - "Villa_Welpeloo_Enschede"
+projekt:
+  - "Villa_Welpeloo_Enschede"
+---
 
-## Clean Node
+# CO₂-Reduktion Struktur und Fassade - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Villa_Welpeloo_Enschede__003__CO_Reduktion_Struktur_und_Fassade
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Villa_Welpeloo_Enschede__003__CO_Reduktion_Struktur_und_Fassade
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Reduktion Struktur und Fassade
+- **Wert:** ca. 90
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** nicht offengelegte Methodik
+- **Bilanzgrenze:** Konstruktion und Fassade
+- **Quelle:** S1, S6
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,22 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven__006__New_Horizon"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "New Horizon - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# New Horizon - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Peoples_Pavilion_Eindhoven__006__New_Horizon"
+title: "New Horizon - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "bureau SLA / Overtreders W"
+node_kind: "relation"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+bauobjekt:
+  - "Peoples_Pavilion_Eindhoven"
+projekt:
+  - "Peoples_Pavilion_Eindhoven"
+---
 
-## Clean Node
+# New Horizon - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Peoples_Pavilion_Eindhoven__006__New_Horizon
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Peoples_Pavilion_Eindhoven__006__New_Horizon
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** New Horizon
+- **Beziehung zur Fallstudie:** urban mining advice
+- **Quelle/Beleg:** bureau SLA / Overtreders W
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Quelle/Koordination Materialströme.

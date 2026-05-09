@@ -1,20 +1,25 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven__001__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# FlÃ¤che - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Peoples_Pavilion_Eindhoven__001__Fl_che"
+title: "Fläche - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "bureau SLA / Overtreders W"
+node_kind: "core"
+wert: "250"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+bauobjekt:
+  - "Peoples_Pavilion_Eindhoven"
+projekt:
+  - "Peoples_Pavilion_Eindhoven"
+---
 
-## Clean Node
+# Fläche - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Peoples_Pavilion_Eindhoven__001__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Peoples_Pavilion_Eindhoven__001__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 250
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Pavillon
+- **Quelle:** bureau SLA / Overtreders W
+- **Vertrauensgrad:** belegt

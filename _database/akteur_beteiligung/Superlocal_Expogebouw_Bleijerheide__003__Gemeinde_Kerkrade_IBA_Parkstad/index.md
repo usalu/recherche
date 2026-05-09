@@ -1,20 +1,22 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__003__Gemeinde_Kerkrade_IBA_Parkstad"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Gemeinde Kerkrade, IBA Parkstad - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Gemeinde Kerkrade, IBA Parkstad - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Superlocal_Expogebouw_Bleijerheide__003__Gemeinde_Kerkrade_IBA_Parkstad"
+title: "Gemeinde Kerkrade, IBA Parkstad - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "SUPERLOCAL"
+node_kind: "relation"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Gemeinde Kerkrade, IBA Parkstad - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__003__Gemeinde_Kerkrade_IBA_Parkstad
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__003__Gemeinde_Kerkrade_IBA_Parkstad
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Gemeinde Kerkrade, IBA Parkstad
+- **Beziehung zur Fallstudie:** Partner / Koordination
+- **Quelle/Beleg:** SUPERLOCAL
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Ambitionen und Koordination

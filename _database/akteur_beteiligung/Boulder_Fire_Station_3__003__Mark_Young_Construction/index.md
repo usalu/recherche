@@ -1,20 +1,22 @@
-﻿---
-id: "Boulder_Fire_Station_3__003__Mark_Young_Construction"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Mark Young Construction - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Mark Young Construction - Boulder Fire Station 3, Boulder, Colorado â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Boulder_Fire_Station_3__003__Mark_Young_Construction"
+title: "Mark Young Construction - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "SE2050/AISC PDF-Snippet; sekundär"
+node_kind: "relation"
+fallstudie: "fallstudie/Boulder_Fire_Station_3"
+bauobjekt:
+  - "Boulder_Fire_Station_3"
+projekt:
+  - "Boulder_Fire_Station_3"
+---
 
-## Clean Node
+# Mark Young Construction - Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Boulder_Fire_Station_3__003__Mark_Young_Construction
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Boulder_Fire_Station_3__003__Mark_Young_Construction
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Mark Young Construction
+- **Beziehung zur Fallstudie:** Builder
+- **Quelle/Beleg:** SE2050/AISC PDF-Snippet; sekundär
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** nicht aus AISC-Seite selbst detailliert übernommen

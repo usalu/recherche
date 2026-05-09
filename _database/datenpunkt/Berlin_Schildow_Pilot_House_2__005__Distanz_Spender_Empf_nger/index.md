@@ -1,20 +1,25 @@
-﻿---
-id: "Berlin_Schildow_Pilot_House_2__005__Distanz_Spender_Empf_nger"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Distanz Spenderâ€“EmpfÃ¤nger - Berlin-Schildow Pilot House 2 â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Distanz Spenderâ€“EmpfÃ¤nger - Berlin-Schildow Pilot House 2 â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Berlin_Schildow_Pilot_House_2__005__Distanz_Spender_Empf_nger"
+title: "Distanz Spender–Empfänger - Berlin-Schildow Pilot House 2 — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "km"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "33"
+fallstudie: "fallstudie/Berlin_Schildow_Pilot_House_2"
+bauobjekt:
+  - "Berlin_Schildow_Pilot_House_2"
+projekt:
+  - "Berlin_Schildow_Pilot_House_2"
+---
 
-## Clean Node
+# Distanz Spender–Empfänger - Berlin-Schildow Pilot House 2 — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Berlin_Schildow_Pilot_House_2__005__Distanz_Spender_Empf_nger
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Berlin_Schildow_Pilot_House_2__005__Distanz_Spender_Empf_nger
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Distanz Spender–Empfänger
+- **Wert:** 33
+- **Einheit:** km
+- **Methode/Datenmodell/Software:** PRECS-Falldatenbank
+- **Bilanzgrenze:** Projektlogistik
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt, aber mit Presseangaben abzugleichen

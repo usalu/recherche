@@ -1,20 +1,25 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__001__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Resilience_La_Ferme_des_Possibles_Stains__001__Fl_che"
+title: "Fläche - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m² SHON / Nettofläche"
+quelle_label: "[S2], [S3], [S5]"
+node_kind: "core"
+wert: "1.883"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# Fläche - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__001__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Resilience_La_Ferme_des_Possibles_Stains__001__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 1.883
+- **Einheit:** m² SHON / Nettofläche
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S2], [S3], [S5]
+- **Vertrauensgrad:** belegt

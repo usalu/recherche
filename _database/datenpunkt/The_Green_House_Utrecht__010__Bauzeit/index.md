@@ -1,20 +1,25 @@
-﻿---
-id: "The_Green_House_Utrecht__010__Bauzeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit - The Green House, Utrecht"
 ---
+entity: "datenpunkt"
+id: "The_Green_House_Utrecht__010__Bauzeit"
+title: "Bauzeit - The Green House, Utrecht"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "Q4, Q6"
+node_kind: "core"
+wert: "2016–2018 ungefähr"
+fallstudie: "fallstudie/The_Green_House_Utrecht"
+bauobjekt:
+  - "The_Green_House_Utrecht"
+projekt:
+  - "The_Green_House_Utrecht"
+---
+
 # Bauzeit - The Green House, Utrecht
 
-## Clean Node
-
-- Final path: _database/datenpunkt/The_Green_House_Utrecht__010__Bauzeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/The_Green_House_Utrecht__010__Bauzeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit
+- **Wert:** 2016–2018 ungefähr
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** Projekt-/News-Angaben
+- **Bilanzgrenze:** Planung/Bau gesamt
+- **Quelle:** Q4, Q6
+- **Vertrauensgrad:** teilweise belegt

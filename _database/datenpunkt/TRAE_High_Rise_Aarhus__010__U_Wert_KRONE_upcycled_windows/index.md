@@ -1,20 +1,25 @@
-﻿---
-id: "TRAE_High_Rise_Aarhus__010__U_Wert_KRONE_upcycled_windows"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "U-Wert KRONE upcycled windows - TRÃ† High-Rise, Aarhus"
 ---
-# U-Wert KRONE upcycled windows - TRÃ† High-Rise, Aarhus
+entity: "datenpunkt"
+id: "TRAE_High_Rise_Aarhus__010__U_Wert_KRONE_upcycled_windows"
+title: "U-Wert KRONE upcycled windows - TRÆ High-Rise, Aarhus"
+build_status: "promoted_phase42"
+einheit: "W/m²K"
+quelle_label: "[S8]"
+node_kind: "core"
+wert: "0,85"
+fallstudie: "fallstudie/TRAE_High_Rise_Aarhus"
+bauobjekt:
+  - "TRAE_High_Rise_Aarhus"
+projekt:
+  - "TRAE_High_Rise_Aarhus"
+---
 
-## Clean Node
+# U-Wert KRONE upcycled windows - TRÆ High-Rise, Aarhus
 
-- Final path: _database/datenpunkt/TRAE_High_Rise_Aarhus__010__U_Wert_KRONE_upcycled_windows
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/TRAE_High_Rise_Aarhus__010__U_Wert_KRONE_upcycled_windows
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** U-Wert KRONE upcycled windows
+- **Wert:** 0,85
+- **Einheit:** W/m²K
+- **Methode/Datenmodell/Software:** Herstellerangabe
+- **Bilanzgrenze:** Fensterprodukt
+- **Quelle:** [S8]
+- **Vertrauensgrad:** teilweise belegt

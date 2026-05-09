@@ -1,20 +1,22 @@
-﻿---
-id: "Broethen_Twin_House_Hoyerswerda__001__unbekannt"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "unbekannt - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
 ---
-# unbekannt - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
+entity: "akteur_beteiligung"
+id: "Broethen_Twin_House_Hoyerswerda__001__unbekannt"
+title: "unbekannt - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
+build_status: "promoted_phase42"
+quelle_label: "unbekannt"
+node_kind: "relation"
+fallstudie: "fallstudie/Broethen_Twin_House_Hoyerswerda"
+bauobjekt:
+  - "Broethen_Twin_House_Hoyerswerda"
+projekt:
+  - "Broethen_Twin_House_Hoyerswerda"
+---
 
-## Clean Node
+# unbekannt - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
 
-- Final path: _database/akteur_beteiligung/Broethen_Twin_House_Hoyerswerda__001__unbekannt
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Broethen_Twin_House_Hoyerswerda__001__unbekannt
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** unbekannt
+- **Beziehung zur Fallstudie:** Akteure
+- **Quelle/Beleg:** unbekannt
+- **Vertrauensgrad:** unklar
+- **Anmerkung:** keine öffentlich verifizierte Projektliste gefunden.

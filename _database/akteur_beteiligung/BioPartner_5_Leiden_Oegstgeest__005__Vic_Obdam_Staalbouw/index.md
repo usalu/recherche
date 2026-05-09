@@ -1,20 +1,22 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest__005__Vic_Obdam_Staalbouw"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Vic Obdam Staalbouw - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Vic Obdam Staalbouw - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "akteur_beteiligung"
+id: "BioPartner_5_Leiden_Oegstgeest__005__Vic_Obdam_Staalbouw"
+title: "Vic Obdam Staalbouw - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S10]"
+node_kind: "relation"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+bauobjekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# Vic Obdam Staalbouw - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__005__Vic_Obdam_Staalbouw
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__005__Vic_Obdam_Staalbouw
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Vic Obdam Staalbouw
+- **Beziehung zur Fallstudie:** Stahlbau
+- **Quelle/Beleg:** [S2], [S10]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Montage / Stahlbau

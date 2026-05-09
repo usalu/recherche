@@ -1,20 +1,25 @@
-﻿---
-id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__014__Energiebedarf"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Energiebedarf - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette"
 ---
-# Energiebedarf - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette
+entity: "datenpunkt"
+id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__014__Energiebedarf"
+title: "Energiebedarf - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+build_status: "promoted_phase42"
+einheit: "kWh/m² GIA/year"
+quelle_label: "Willmott Dixon"
+node_kind: "core"
+wert: "<48"
+fallstudie: "fallstudie/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+bauobjekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+projekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+---
 
-## Clean Node
+# Energiebedarf - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette
 
-- Final path: _database/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__014__Energiebedarf
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__014__Energiebedarf
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Energiebedarf
+- **Wert:** <48
+- **Einheit:** kWh/m² GIA/year
+- **Methode/Datenmodell/Software:** Willmott Dixon
+- **Bilanzgrenze:** base build net lettable area
+- **Quelle:** Willmott Dixon
+- **Vertrauensgrad:** teilweise belegt

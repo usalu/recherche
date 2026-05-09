@@ -1,20 +1,16 @@
-﻿---
-id: "Montessori_Maassluis"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Montessori_Maassluis"
+title: "Reuse-Kette - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Montessori_Maassluis.md"
+node_kind: "core"
+fallstudie: "fallstudie/Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# Reuse-Kette - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Montessori_Maassluis
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Montessori_Maassluis
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

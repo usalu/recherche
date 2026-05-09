@@ -1,20 +1,22 @@
-﻿---
-id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__002__Skanska_Finland"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Skanska Finland - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Skanska Finland - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__002__Skanska_Finland"
+title: "Skanska Finland - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "ReCreate; Skanska"
+node_kind: "relation"
+fallstudie: "fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere"
+bauobjekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+projekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+---
 
-## Clean Node
+# Skanska Finland - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__002__Skanska_Finland
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__002__Skanska_Finland
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Skanska Finland
+- **Beziehung zur Fallstudie:** Bauausführung / Contractor
+- **Quelle/Beleg:** ReCreate; Skanska
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** baut für Metso

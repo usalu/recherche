@@ -1,20 +1,25 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__009__Aluminiumprofile"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Aluminiumprofile - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Aluminiumprofile - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Multi_Brussels_Reuse_in_MULTI__009__Aluminiumprofile"
+title: "Aluminiumprofile - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m"
+quelle_label: "S3, S4"
+node_kind: "core"
+wert: "1.300"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# Aluminiumprofile - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Multi_Brussels_Reuse_in_MULTI__009__Aluminiumprofile
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Multi_Brussels_Reuse_in_MULTI__009__Aluminiumprofile
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Aluminiumprofile
+- **Wert:** 1.300
+- **Einheit:** m
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Reuse-Bauteile
+- **Quelle:** S3, S4
+- **Vertrauensgrad:** belegt

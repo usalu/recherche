@@ -1,20 +1,25 @@
-﻿---
-id: "Maison_DnA_Asse__003__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Maison_DnA_Asse__003__Fl_che"
+title: "Fläche - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "260"
+fallstudie: "fallstudie/Maison_DnA_Asse"
+bauobjekt:
+  - "Maison_DnA_Asse"
+projekt:
+  - "Maison_DnA_Asse"
+---
 
-## Clean Node
+# Fläche - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Maison_DnA_Asse__003__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Maison_DnA_Asse__003__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 260
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

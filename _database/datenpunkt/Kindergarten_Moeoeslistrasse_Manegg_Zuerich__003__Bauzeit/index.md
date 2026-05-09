@@ -1,20 +1,25 @@
-﻿---
-id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__003__Bauzeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Bauzeit - Kindergarten MÃ¶Ã¶slistrasse / Manegg, ZÃ¼rich â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Kindergarten_Moeoeslistrasse_Manegg_Zuerich__003__Bauzeit"
+title: "Bauzeit - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "Stadt Zürich 2023"
+node_kind: "core"
+wert: "ca. 1"
+fallstudie: "fallstudie/Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+bauobjekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+projekt:
+  - "Kindergarten_Moeoeslistrasse_Manegg_Zuerich"
+---
 
-## Clean Node
+# Bauzeit - Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__003__Bauzeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Kindergarten_Moeoeslistrasse_Manegg_Zuerich__003__Bauzeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit
+- **Wert:** ca. 1
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** Medienmitteilung
+- **Bilanzgrenze:** Herbst 2022 bis Mitte August 2023
+- **Quelle:** Stadt Zürich 2023
+- **Vertrauensgrad:** belegt

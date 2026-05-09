@@ -1,20 +1,22 @@
-﻿---
-id: "Hastings_Pier_Visitor_Centre__002__Hastings_Pier_Charity"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Hastings Pier Charity - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
 ---
+entity: "akteur_beteiligung"
+id: "Hastings_Pier_Visitor_Centre__002__Hastings_Pier_Charity"
+title: "Hastings Pier Charity - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
+build_status: "promoted_phase42"
+quelle_label: "Q1, Q4, Q6"
+node_kind: "relation"
+fallstudie: "fallstudie/Hastings_Pier_Visitor_Centre"
+bauobjekt:
+  - "Hastings_Pier_Visitor_Centre"
+projekt:
+  - "Hastings_Pier_Visitor_Centre"
+---
+
 # Hastings Pier Charity - Hastings Pier Visitor Centre / Pavilion Cladding, Hastings
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/Hastings_Pier_Visitor_Centre__002__Hastings_Pier_Charity
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Hastings_Pier_Visitor_Centre__002__Hastings_Pier_Charity
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Hastings Pier Charity
+- **Beziehung zur Fallstudie:** Bauherr / Projektträger
+- **Quelle/Beleg:** Q1, Q4, Q6
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Charity ging später in Administration; nicht reuse-relevant

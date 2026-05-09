@@ -1,20 +1,25 @@
-﻿---
-id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__007__total_steel_tonnage_TBC"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "total steel tonnage TBC - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette"
 ---
-# total steel tonnage TBC - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette
+entity: "datenpunkt"
+id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__007__total_steel_tonnage_TBC"
+title: "total steel tonnage TBC - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "NSC"
+node_kind: "core"
+wert: "640"
+fallstudie: "fallstudie/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+bauobjekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+projekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+---
 
-## Clean Node
+# total steel tonnage TBC - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette
 
-- Final path: _database/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__007__total_steel_tonnage_TBC
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__007__total_steel_tonnage_TBC
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** total steel tonnage TBC
+- **Wert:** 640
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** NSC fact file
+- **Bilanzgrenze:** steelwork project
+- **Quelle:** NSC
+- **Vertrauensgrad:** belegt

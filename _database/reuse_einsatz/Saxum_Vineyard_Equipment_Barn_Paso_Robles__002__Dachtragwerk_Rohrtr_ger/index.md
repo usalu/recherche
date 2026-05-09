@@ -1,20 +1,43 @@
-﻿---
-id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__002__Dachtragwerk_Rohrtr_ger"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Dachtragwerk / RohrtrÃ¤ger - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Dachtragwerk / RohrtrÃ¤ger - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__002__Dachtragwerk_Rohrtr_ger"
+title: "Dachtragwerk / Rohrträger - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Torsion/Deflection"
+quelle_label: "[S1], [S4]"
+material_label: "Stahlrohr"
+node_kind: "core"
+herkunft_label: "Ölindustrie / Drill-Stem-Pipe"
+menge_umfang: "unbekannt"
+pruefung_label: "RISA-3D"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+bauobjekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+neue_funktion: "Dachrahmen / Space-Frame-Anteile"
+bauteil_label: "Dachtragwerk / Rohrträger"
+projekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+alte_funktion: "Bohrrohr"
+---
 
-## Clean Node
+# Dachtragwerk / Rohrträger - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Saxum_Vineyard_Equipment_Barn_Paso_Robles__002__Dachtragwerk_Rohrtr_ger
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Saxum_Vineyard_Equipment_Barn_Paso_Robles__002__Dachtragwerk_Rohrtr_ger
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Dachtragwerk / Rohrträger
+- **Material:** Stahlrohr
+- **Herkunft:** Ölindustrie / Drill-Stem-Pipe
+- **alte Funktion:** Bohrrohr
+- **neue Funktion:** Dachrahmen / Space-Frame-Anteile
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Zuschnitt/Schweißen
+- **Verbindung:** geschweißt; Purlins angeschlossen
+- **Prüfung:** RISA-3D
+- **Leistungsanforderung:** Dachlasten, PV-Module, Verformung
+- **Norm/Recht:** unbekannt
+- **Hürde:** Torsion/Deflection
+- **Quelle:** [S1], [S4]
+- **unbekannt:** Mengen, Prüfungen

@@ -1,20 +1,25 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__013__Lebensdauer"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Lebensdauer - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Lebensdauer - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Recypark_Demets_Anderlecht__013__Lebensdauer"
+title: "Lebensdauer - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "—"
+quelle_label: "[S6]"
+node_kind: "core"
+wert: "„über traditionelle Standards hinaus“ qualitativ erwähnt"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+bauobjekt:
+  - "Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Lebensdauer - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Recypark_Demets_Anderlecht__013__Lebensdauer
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recypark_Demets_Anderlecht__013__Lebensdauer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Lebensdauer
+- **Wert:** „über traditionelle Standards hinaus“ qualitativ erwähnt
+- **Einheit:** —
+- **Methode/Datenmodell/Software:** Greisch
+- **Bilanzgrenze:** Holztragwerk
+- **Quelle:** [S6]
+- **Vertrauensgrad:** teilweise belegt

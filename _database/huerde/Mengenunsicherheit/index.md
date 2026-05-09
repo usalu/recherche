@@ -1,20 +1,13 @@
-﻿---
-id: "Mengenunsicherheit"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Mengenunsicherheit"
 ---
+entity: "huerde"
+id: "Mengenunsicherheit"
+title: "Mengenunsicherheit"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Mengenunsicherheit
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Mengenunsicherheit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Mengenunsicherheit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Unklare, widerspruechliche oder nicht passende Mengen fuer den Wiedereinsatz.

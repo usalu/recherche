@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_dokument"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Dokument"
 ---
+entity: "quelle"
+id: "Legacy_dokument"
+title: "Dokument"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Dokument
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_dokument
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_dokument
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Dokument

@@ -1,20 +1,25 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__003__Fertigstellung_Lieferung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung/Lieferung - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fertigstellung/Lieferung - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Superlocal_Expogebouw_Bleijerheide__003__Fertigstellung_Lieferung"
+title: "Fertigstellung/Lieferung - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Datum"
+quelle_label: "SUPERLOCAL"
+node_kind: "core"
+wert: "22.02.2018"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Fertigstellung/Lieferung - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Superlocal_Expogebouw_Bleijerheide__003__Fertigstellung_Lieferung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Superlocal_Expogebouw_Bleijerheide__003__Fertigstellung_Lieferung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung/Lieferung
+- **Wert:** 22.02.2018
+- **Einheit:** Datum
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Expogebouw
+- **Quelle:** SUPERLOCAL
+- **Vertrauensgrad:** belegt

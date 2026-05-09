@@ -1,20 +1,11 @@
-﻿---
-id: "Daemmung"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Daemmung"
 ---
+entity: "bauteiltyp"
+id: "Daemmung"
+title: "Daemmung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Daemmung
 
-## Clean Node
-
-- Final path: _database/bauteiltyp/Daemmung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauteiltyp/Daemmung
-  - Action: keep_or_merge
-  - Status: CONFIDENT
-  - Reason: Insulation is a reusable product/layer category; link material separately to `Daemmstoff`, `Mineralwolle`, etc.
 

@@ -1,20 +1,25 @@
-﻿---
-id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__005__Materialmenge"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Materialmenge - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Materialmenge - Circular Centre Netherlands / Prinsenhof A reuse pilot â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__005__Materialmenge"
+title: "Materialmenge - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "Lagemaat"
+node_kind: "core"
+wert: "17.000"
+fallstudie: "fallstudie/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+bauobjekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+projekt:
+  - "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"
+---
 
-## Clean Node
+# Materialmenge - Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__005__Materialmenge
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot__005__Materialmenge
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Materialmenge
+- **Wert:** 17.000
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** Lagemaat
+- **Bilanzgrenze:** Demontage Prinsenhof A
+- **Quelle:** Lagemaat
+- **Vertrauensgrad:** teilweise belegt, Bilanzgrenze prüfen

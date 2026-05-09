@@ -1,20 +1,25 @@
-﻿---
-id: "BedZED_London_Hackbridge__010__Transportbedingte_CO_Einsparung_durch_lokale_Bes"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Transportbedingte COâ‚‚-Einsparung durch lokale Beschaffung - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Transportbedingte COâ‚‚-Einsparung durch lokale Beschaffung - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "BedZED_London_Hackbridge__010__Transportbedingte_CO_Einsparung_durch_lokale_Bes"
+title: "Transportbedingte CO₂-Einsparung durch lokale Beschaffung - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "t CO₂"
+quelle_label: "S3"
+node_kind: "core"
+wert: "120"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+projekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# Transportbedingte CO₂-Einsparung durch lokale Beschaffung - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/BedZED_London_Hackbridge__010__Transportbedingte_CO_Einsparung_durch_lokale_Bes
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BedZED_London_Hackbridge__010__Transportbedingte_CO_Einsparung_durch_lokale_Bes
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Transportbedingte CO₂-Einsparung durch lokale Beschaffung
+- **Wert:** 120
+- **Einheit:** t CO₂
+- **Methode/Datenmodell/Software:** Vergleich zu Durchschnittsdistanzen
+- **Bilanzgrenze:** Transport / Materialien
+- **Quelle:** S3
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich__002__THG_Reduktion"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "THG-Reduktion - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# THG-Reduktion - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "datenpunkt"
+id: "Juch_Areal_Recyclingzentrum_Zuerich__002__THG_Reduktion"
+title: "THG-Reduktion - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S1], [S2], [S3]"
+node_kind: "core"
+wert: "gut 40 / über 40"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+bauobjekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+projekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# THG-Reduktion - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/datenpunkt/Juch_Areal_Recyclingzentrum_Zuerich__002__THG_Reduktion
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Juch_Areal_Recyclingzentrum_Zuerich__002__THG_Reduktion
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** THG-Reduktion
+- **Wert:** gut 40 / über 40
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Treibhausgasbilanzvergleich
+- **Bilanzgrenze:** Gesamtprojekt
+- **Quelle:** [S1], [S2], [S3]
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__009__Hohlk_rperdeckenfl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "HohlkÃ¶rperdeckenflÃ¤che - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# HohlkÃ¶rperdeckenflÃ¤che - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__009__Hohlk_rperdeckenfl_che"
+title: "Hohlkörperdeckenfläche - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S6"
+node_kind: "core"
+wert: "ca. 160"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+bauobjekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+projekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+---
 
-## Clean Node
+# Hohlkörperdeckenfläche - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__009__Hohlk_rperdeckenfl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__009__Hohlk_rperdeckenfl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Hohlkörperdeckenfläche
+- **Wert:** ca. 160
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Thesis-/Sekundärquelle
+- **Bilanzgrenze:** HCS aus R4
+- **Quelle:** S6
+- **Vertrauensgrad:** teilweise belegt

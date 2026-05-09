@@ -1,20 +1,16 @@
-﻿---
-id: "Broethen_Twin_House_Hoyerswerda__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
 ---
-# Donor - BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
+entity: "reuse_kettenstation"
+id: "Broethen_Twin_House_Hoyerswerda__Donor"
+title: "Donor - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Broethen_Twin_House_Hoyerswerda.md"
+node_kind: "core"
+fallstudie: "fallstudie/Broethen_Twin_House_Hoyerswerda"
+---
 
-## Clean Node
+# Donor - Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
 
-- Final path: _database/reuse_kettenstation/Broethen_Twin_House_Hoyerswerda__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Broethen_Twin_House_Hoyerswerda__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Broethen_Twin_House_Hoyerswerda.md: | Spendergebäude | Herkunft der Platten ist nicht ausreichend erfasst | mass-housing donor, 6 km entfernt | Gebäude, Logistik, Bauteil |

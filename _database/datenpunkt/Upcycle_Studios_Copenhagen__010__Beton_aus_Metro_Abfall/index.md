@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__010__Beton_aus_Metro_Abfall"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Beton aus Metro-Abfall - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Beton aus Metro-Abfall - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__010__Beton_aus_Metro_Abfall"
+title: "Beton aus Metro-Abfall - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "tons/t"
+quelle_label: "EMF"
+node_kind: "core"
+wert: "1400 tons / ca. 1270 t"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Beton aus Metro-Abfall - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__010__Beton_aus_Metro_Abfall
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__010__Beton_aus_Metro_Abfall
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Beton aus Metro-Abfall
+- **Wert:** 1400 tons / ca. 1270 t
+- **Einheit:** tons/t
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Betonmaterial
+- **Quelle:** EMF
+- **Vertrauensgrad:** Konflikt

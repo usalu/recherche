@@ -1,20 +1,43 @@
-﻿---
-id: "Lo_Reninge_Town_Hall_Facade__001__Fassadenziegel"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fassadenziegel - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse"
 ---
-# Fassadenziegel - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Lo_Reninge_Town_Hall_Facade__001__Fassadenziegel"
+title: "Fassadenziegel - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Farb-/Formatpassung, technische Nachweisführung unbekannt"
+quelle_label: "[S2], [S4]"
+material_label: "Ziegel"
+node_kind: "core"
+herkunft_label: "unbekannt; Reuse-Ziegel, vermutlich über Reuse-Markt"
+menge_umfang: "205 m²"
+pruefung_label: "unbekannt"
+norm_recht_label: "Denkmal-/Kontextanforderung; konkrete Norm unbekannt"
+fallstudie: "fallstudie/Lo_Reninge_Town_Hall_Facade"
+bauobjekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+neue_funktion: "Fassadenmauerwerk / Hülle der Erweiterung"
+bauteil_label: "Fassadenziegel"
+projekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+alte_funktion: "Mauerwerk/Fassade unbekannt"
+---
 
-## Clean Node
+# Fassadenziegel - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Lo_Reninge_Town_Hall_Facade__001__Fassadenziegel
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Lo_Reninge_Town_Hall_Facade__001__Fassadenziegel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fassadenziegel
+- **Material:** Ziegel
+- **Herkunft:** unbekannt; Reuse-Ziegel, vermutlich über Reuse-Markt
+- **alte Funktion:** Mauerwerk/Fassade unbekannt
+- **neue Funktion:** Fassadenmauerwerk / Hülle der Erweiterung
+- **Menge/Umfang:** 205 m²
+- **tragend?:** unbekannt / eher nein
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Auswahl, Reinigung und Vermauerung wahrscheinlich; projektspezifisch nicht detailliert
+- **Verbindung:** Kalkmörtel, Fugen, Kalkwash
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Witterung, Dauerhaftigkeit, Gestaltung
+- **Norm/Recht:** Denkmal-/Kontextanforderung; konkrete Norm unbekannt
+- **Hürde:** Farb-/Formatpassung, technische Nachweisführung unbekannt
+- **Quelle:** [S2], [S4]
+- **unbekannt:** Herkunft, Prüfung, Norm, Kosten

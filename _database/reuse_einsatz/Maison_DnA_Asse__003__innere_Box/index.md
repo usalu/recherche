@@ -1,20 +1,43 @@
-﻿---
-id: "Maison_DnA_Asse__003__innere_Box"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "innere Box - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# innere Box - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Maison_DnA_Asse__003__innere_Box"
+title: "innere Box - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Energieanforderungen"
+quelle_label: "[S1], [S2]"
+material_label: "Holzrahmen"
+node_kind: "core"
+herkunft_label: "neu / unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "EPB-Kontext ohne Nummer"
+fallstudie: "fallstudie/Maison_DnA_Asse"
+bauobjekt:
+  - "Maison_DnA_Asse"
+neue_funktion: "gedämmte, luftdichte Nutzungsstruktur"
+bauteil_label: "innere Box"
+projekt:
+  - "Maison_DnA_Asse"
+alte_funktion: "nicht zutreffend"
+---
 
-## Clean Node
+# innere Box - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Maison_DnA_Asse__003__innere_Box
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Maison_DnA_Asse__003__innere_Box
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** innere Box
+- **Material:** Holzrahmen
+- **Herkunft:** neu / unbekannt
+- **alte Funktion:** nicht zutreffend
+- **neue Funktion:** gedämmte, luftdichte Nutzungsstruktur
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** nicht Reuse
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Dämmung, Luftdichtheit
+- **Norm/Recht:** EPB-Kontext ohne Nummer
+- **Hürde:** Energieanforderungen
+- **Quelle:** [S1], [S2]
+- **unbekannt:** U-Wert, Details

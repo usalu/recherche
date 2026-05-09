@@ -1,20 +1,35 @@
-﻿---
-id: "Broethen_Twin_House_Hoyerswerda"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
 ---
-# BrÃ¶then Twin-House, Hoyerswerda â€” Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
+entity: "bauobjekt"
+id: "Broethen_Twin_House_Hoyerswerda"
+title: "Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Broethen_Twin_House_Hoyerswerda.md"
+node_kind: "core"
+fallstudie: "fallstudie/Broethen_Twin_House_Hoyerswerda"
+projekt:
+  - "Broethen_Twin_House_Hoyerswerda"
+---
 
-## Clean Node
+# Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen
 
-- Final path: _database/bauobjekt/Broethen_Twin_House_Hoyerswerda
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Broethen_Twin_House_Hoyerswerda.md
 
-- Source: _graph/bauobjekt/Broethen_Twin_House_Hoyerswerda
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Bröthen twin-house / Bröthen twin-house, Hoyerswerda
+- **Ort:** Bröthen / Hoyerswerda, Deutschland
+- **Gebäude:** Doppelhaus / Wohnhaus
+- **Projekt:** Wiederverwendung von P2-Fertigteilen aus Massenwohnungsbau
+- **Beteiligte People / Akteure:** unbekannt
+- **Architekt:** unbekannt
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** unbekannt
+- **Zeitraum:** 2001 laut PRECS
+- **Ursprüngliche Nutzung:** Massenwohnungsbau / Plattenbau im P2-System
+- **Neue Nutzung:** Doppelhaus / Wohnnutzung
+- **Fläche / Maßstab:** 76 wiederverwendete Platten; Fläche und Volumen unbekannt
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** hauptsächlich wissenschaftliche Sekundärquelle; Primärdokumente nicht öffentlich gefunden

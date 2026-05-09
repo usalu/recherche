@@ -1,20 +1,22 @@
-﻿---
-id: "TRAE_High_Rise_Aarhus__002__Artelia_Group"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Artelia Group - TRÃ† High-Rise, Aarhus"
 ---
-# Artelia Group - TRÃ† High-Rise, Aarhus
+entity: "akteur_beteiligung"
+id: "TRAE_High_Rise_Aarhus__002__Artelia_Group"
+title: "Artelia Group - TRÆ High-Rise, Aarhus"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S5]"
+node_kind: "relation"
+fallstudie: "fallstudie/TRAE_High_Rise_Aarhus"
+bauobjekt:
+  - "TRAE_High_Rise_Aarhus"
+projekt:
+  - "TRAE_High_Rise_Aarhus"
+---
 
-## Clean Node
+# Artelia Group - TRÆ High-Rise, Aarhus
 
-- Final path: _database/akteur_beteiligung/TRAE_High_Rise_Aarhus__002__Artelia_Group
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/TRAE_High_Rise_Aarhus__002__Artelia_Group
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Artelia Group
+- **Beziehung zur Fallstudie:** Tragwerk, TGA, Brandschutz, Barrierefreiheit
+- **Quelle/Beleg:** [S2], [S5]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** zentrale technische Rolle

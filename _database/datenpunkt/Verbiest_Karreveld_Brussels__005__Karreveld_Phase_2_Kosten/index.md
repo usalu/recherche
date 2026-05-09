@@ -1,20 +1,25 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__005__Karreveld_Phase_2_Kosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Karreveld Phase-2-Kosten - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Karreveld Phase-2-Kosten - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "datenpunkt"
+id: "Verbiest_Karreveld_Brussels__005__Karreveld_Phase_2_Kosten"
+title: "Karreveld Phase-2-Kosten - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+einheit: "EUR exkl. MwSt."
+quelle_label: "Q3"
+node_kind: "core"
+wert: "6.000.000"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Karreveld Phase-2-Kosten - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/datenpunkt/Verbiest_Karreveld_Brussels__005__Karreveld_Phase_2_Kosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Verbiest_Karreveld_Brussels__005__Karreveld_Phase_2_Kosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Karreveld Phase-2-Kosten
+- **Wert:** 6.000.000
+- **Einheit:** EUR exkl. MwSt.
+- **Methode/Datenmodell/Software:** AgwA-Projektangabe
+- **Bilanzgrenze:** Gesamtprojektphase, nicht Reuse-Kosten
+- **Quelle:** Q3
+- **Vertrauensgrad:** belegt, nicht reuse-spezifisch

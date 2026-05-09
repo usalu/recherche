@@ -1,20 +1,25 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__010__Granitfliesen_Terrasse"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Granitfliesen Terrasse - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Granitfliesen Terrasse - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Multi_Brussels_Reuse_in_MULTI__010__Granitfliesen_Terrasse"
+title: "Granitfliesen Terrasse - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "S3"
+node_kind: "core"
+wert: "400"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# Granitfliesen Terrasse - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Multi_Brussels_Reuse_in_MULTI__010__Granitfliesen_Terrasse
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Multi_Brussels_Reuse_in_MULTI__010__Granitfliesen_Terrasse
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Granitfliesen Terrasse
+- **Wert:** 400
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Cordeel
+- **Bilanzgrenze:** Reuse-Bodenbelag
+- **Quelle:** S3
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,24 @@
-﻿---
-id: "Berlin_Neukoelln"
-entity: "ort"
-build_status: "clean_phase20"
-title: "Berlin Neukoelln"
 ---
+entity: "ort"
+id: "Berlin_Neukoelln"
+title: "Berlin Neukoelln"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "ort\Berlin_Neukoelln.md"
+node_kind: "knot"
+legacy_type: "Ort"
+---
+
 # Berlin Neukoelln
 
-## Clean Node
+# Berlin Neukoelln
 
-- Final path: _database/ort/Berlin_Neukoelln
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/ort/Berlin_Neukoelln
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

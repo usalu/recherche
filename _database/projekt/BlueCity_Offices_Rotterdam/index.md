@@ -1,20 +1,37 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "projekt"
+id: "BlueCity_Offices_Rotterdam"
+title: "BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\BlueCity_Offices_Rotterdam.md"
+node_kind: "core"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+bauobjekt:
+  - "BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/projekt/BlueCity_Offices_Rotterdam
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\BlueCity_Offices_Rotterdam.md
 
-- Source: _graph/projekt/BlueCity_Offices_Rotterdam
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** BlueCity Offices / Blue City 010 Offices
+- **Ort:** Rotterdam, Niederlande
+- **Gebäude:** ehemaliges Tropicana / Club Tropicana
+- **Projekt:** Büroflügel in ehemaliger Discothek als erster Transformationsabschnitt von BlueCity
+- **Beteiligte People / Akteure:** BlueCity, Superuse Studios, COUP, Workspot, Bik Bouw laut Rotterdam Architekturpreis; weitere Akteure unbekannt
+- **Architekt:** Superuse Studios / Floris Schiferli
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** BlueCity / Blue City 010 BV
+- **Zeitraum:** eröffnet 31.03.2017; Fertigstellung März 2017
+- **Ursprüngliche Nutzung:** subtropisches Schwimmbad / Discothek Club Tropicana
+- **Neue Nutzung:** Büro- und Arbeitsplätze für zirkuläre Unternehmen, Coworking, private und flexible Offices
+- **Fläche / Maßstab:** 1.300 m², 100 Arbeitsplätze; Gesamtgebäude ca. 10.500 m² laut älterer Superuse-Projektseite
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Konzept, Fläche, Hauptbauteil und CO₂-Angaben; schwächer für Mengen, technische Prüfungen und Kosten
+
+---

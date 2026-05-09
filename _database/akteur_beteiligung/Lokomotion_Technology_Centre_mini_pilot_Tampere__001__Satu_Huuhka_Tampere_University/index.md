@@ -1,20 +1,22 @@
-﻿---
-id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__001__Satu_Huuhka_Tampere_University"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Satu Huuhka / Tampere University - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Satu Huuhka / Tampere University - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__001__Satu_Huuhka_Tampere_University"
+title: "Satu Huuhka / Tampere University - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "ReCreate"
+node_kind: "relation"
+fallstudie: "fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere"
+bauobjekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+projekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+---
 
-## Clean Node
+# Satu Huuhka / Tampere University - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__001__Satu_Huuhka_Tampere_University
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__001__Satu_Huuhka_Tampere_University
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Satu Huuhka / Tampere University
+- **Beziehung zur Fallstudie:** ReCreate-Koordinatorin/Finnish cluster lead
+- **Quelle/Beleg:** ReCreate
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Projekt-/Forschungsrolle

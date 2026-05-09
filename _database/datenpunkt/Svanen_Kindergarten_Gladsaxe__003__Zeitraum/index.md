@@ -1,20 +1,25 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__003__Zeitraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Zeitraum - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Zeitraum - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Svanen_Kindergarten_Gladsaxe__003__Zeitraum"
+title: "Zeitraum - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "2019–2022"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+bauobjekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+projekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# Zeitraum - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Svanen_Kindergarten_Gladsaxe__003__Zeitraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Svanen_Kindergarten_Gladsaxe__003__Zeitraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Zeitraum
+- **Wert:** 2019–2022
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Planung/Bau
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

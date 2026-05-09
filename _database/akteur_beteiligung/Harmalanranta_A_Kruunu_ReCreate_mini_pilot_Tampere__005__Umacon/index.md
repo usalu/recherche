@@ -1,20 +1,22 @@
-﻿---
-id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__005__Umacon"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Umacon - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Umacon - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__005__Umacon"
+title: "Umacon - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Uusiouutiset; ReCreate"
+node_kind: "relation"
+fallstudie: "fallstudie/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+bauobjekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+projekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+---
 
-## Clean Node
+# Umacon - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__005__Umacon
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__005__Umacon
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Umacon
+- **Beziehung zur Fallstudie:** selektiver Rückbau
+- **Quelle/Beleg:** Uusiouutiset; ReCreate
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Hohlkörperdecken ganz ausgebaut

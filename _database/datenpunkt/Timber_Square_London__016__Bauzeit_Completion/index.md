@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__016__Bauzeit_Completion"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit/Completion - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Bauzeit/Completion - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__016__Bauzeit_Completion"
+title: "Bauzeit/Completion - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Jahr/Quartal"
+quelle_label: "S4, S7, S10"
+node_kind: "core"
+wert: "Q4 2025 / 2026"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# Bauzeit/Completion - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__016__Bauzeit_Completion
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__016__Bauzeit_Completion
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit/Completion
+- **Wert:** Q4 2025 / 2026
+- **Einheit:** Jahr/Quartal
+- **Methode/Datenmodell/Software:** Quellenvergleich
+- **Bilanzgrenze:** Projektstatus
+- **Quelle:** S4, S7, S10
+- **Vertrauensgrad:** unklar

@@ -1,20 +1,22 @@
-﻿---
-id: "Recyclinghaus_Hannover__001__Nils_Nolting_CITYF_RSTER"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Nils Nolting / CITYFÃ–RSTER - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Nils Nolting / CITYFÃ–RSTER - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Recyclinghaus_Hannover__001__Nils_Nolting_CITYF_RSTER"
+title: "Nils Nolting / CITYFÖRSTER - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "DAB; ELEMENTE"
+node_kind: "relation"
+fallstudie: "fallstudie/Recyclinghaus_Hannover"
+bauobjekt:
+  - "Recyclinghaus_Hannover"
+projekt:
+  - "Recyclinghaus_Hannover"
+---
 
-## Clean Node
+# Nils Nolting / CITYFÖRSTER - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Recyclinghaus_Hannover__001__Nils_Nolting_CITYF_RSTER
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Recyclinghaus_Hannover__001__Nils_Nolting_CITYF_RSTER
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Nils Nolting / CITYFÖRSTER
+- **Beziehung zur Fallstudie:** Architektur/Projektkommunikation
+- **Quelle/Beleg:** DAB; ELEMENTE
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** weitere Teamdetails unbekannt

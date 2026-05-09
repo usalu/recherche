@@ -1,20 +1,34 @@
-﻿---
-id: "Rotor_DC_Brussels_Model"
-entity: "fallstudie"
-build_status: "clean_phase20"
-title: "Rotor DC Brussels Model"
 ---
+entity: "fallstudie"
+id: "Rotor_DC_Brussels_Model"
+title: "Rotor DC Brussels Model"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "fallstudie\\Rotor_DC_Brussels_Model.md"
+node_kind: "core"
+bauobjekt:
+projekt:
+---
+
 # Rotor DC Brussels Model
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/fallstudie/Rotor_DC_Brussels_Model
-- Build rule: typed path IDs only.
+### Legacy Source: fallstudie\Rotor_DC_Brussels_Model.md
 
-## Imported Staging Nodes
+- Map action: keep_or_split_case
+- Primary target: fallstudie/Rotor_DC_Brussels_Model
+- Secondary targets: 
+- Risk flags: 
 
-- Source: _graph/fallstudie/Rotor_DC_Brussels_Model
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# Rotor DC Brussels Model
 
+## Kurzdefinition
+
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

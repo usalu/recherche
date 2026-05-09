@@ -1,20 +1,22 @@
-﻿---
-id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__002__Tampere_University_Satu_Huuhka"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Tampere University / Satu Huuhka - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Tampere University / Satu Huuhka - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__002__Tampere_University_Satu_Huuhka"
+title: "Tampere University / Satu Huuhka - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "ReCreate"
+node_kind: "relation"
+fallstudie: "fallstudie/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+bauobjekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+projekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+---
 
-## Clean Node
+# Tampere University / Satu Huuhka - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__002__Tampere_University_Satu_Huuhka
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__002__Tampere_University_Satu_Huuhka
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Tampere University / Satu Huuhka
+- **Beziehung zur Fallstudie:** ReCreate-Koordination
+- **Quelle/Beleg:** ReCreate
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Forschungscluster

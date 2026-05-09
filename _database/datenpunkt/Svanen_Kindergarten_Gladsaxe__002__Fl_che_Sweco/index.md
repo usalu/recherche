@@ -1,20 +1,25 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__002__Fl_che_Sweco"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che Sweco - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# FlÃ¤che Sweco - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Svanen_Kindergarten_Gladsaxe__002__Fl_che_Sweco"
+title: "Fläche Sweco - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S5]"
+node_kind: "core"
+wert: "1.270"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+bauobjekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+projekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# Fläche Sweco - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Svanen_Kindergarten_Gladsaxe__002__Fl_che_Sweco
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Svanen_Kindergarten_Gladsaxe__002__Fl_che_Sweco
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche Sweco
+- **Wert:** 1.270
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S5]
+- **Vertrauensgrad:** teilweise belegt

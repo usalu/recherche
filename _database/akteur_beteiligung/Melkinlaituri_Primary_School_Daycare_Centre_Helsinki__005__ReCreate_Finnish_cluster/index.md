@@ -1,20 +1,22 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__ReCreate_Finnish_cluster"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "ReCreate Finnish cluster - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# ReCreate Finnish cluster - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__ReCreate_Finnish_cluster"
+title: "ReCreate Finnish cluster - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "ReCreate"
+node_kind: "relation"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+bauobjekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+projekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+---
 
-## Clean Node
+# ReCreate Finnish cluster - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__ReCreate_Finnish_cluster
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__005__ReCreate_Finnish_cluster
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** ReCreate Finnish cluster
+- **Beziehung zur Fallstudie:** Prozess- und QA-Grundlage
+- **Quelle/Beleg:** ReCreate
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Forschung führte zur Marktreplikation

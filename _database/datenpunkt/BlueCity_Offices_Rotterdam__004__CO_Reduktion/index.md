@@ -1,20 +1,25 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam__004__CO_Reduktion"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Reduktion - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# COâ‚‚-Reduktion - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "BlueCity_Offices_Rotterdam__004__CO_Reduktion"
+title: "CO₂-Reduktion - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S1, S2"
+node_kind: "core"
+wert: "68"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+bauobjekt:
+  - "BlueCity_Offices_Rotterdam"
+projekt:
+  - "BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# CO₂-Reduktion - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/BlueCity_Offices_Rotterdam__004__CO_Reduktion
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BlueCity_Offices_Rotterdam__004__CO_Reduktion
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Reduktion
+- **Wert:** 68
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Vergleich konventioneller Büroausbau
+- **Bilanzgrenze:** Büroausbau
+- **Quelle:** S1, S2
+- **Vertrauensgrad:** belegt, Methode unbekannt

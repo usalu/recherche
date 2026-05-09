@@ -1,20 +1,25 @@
-﻿---
-id: "BedZED_London_Hackbridge__003__Kosten_reclaimed_steel"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kosten reclaimed steel - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Kosten reclaimed steel - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "BedZED_London_Hackbridge__003__Kosten_reclaimed_steel"
+title: "Kosten reclaimed steel - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "£/t"
+quelle_label: "S4"
+node_kind: "core"
+wert: "300"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+projekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# Kosten reclaimed steel - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/BedZED_London_Hackbridge__003__Kosten_reclaimed_steel
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BedZED_London_Hackbridge__003__Kosten_reclaimed_steel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kosten reclaimed steel
+- **Wert:** 300
+- **Einheit:** £/t
+- **Methode/Datenmodell/Software:** Kostenvergleich
+- **Bilanzgrenze:** Stahlbeschaffung
+- **Quelle:** S4
+- **Vertrauensgrad:** belegt

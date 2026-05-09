@@ -1,20 +1,13 @@
-﻿---
-id: "Planungsaufwand"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Planungsaufwand"
 ---
+entity: "kennwertdefinition"
+id: "Planungsaufwand"
+title: "Planungsaufwand"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Planungsaufwand
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Planungsaufwand
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Planungsaufwand
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Planungszeit, Mehrhonorar, Zusatzaufwand oder sonstiger Aufwand zur Reuse-Integration.

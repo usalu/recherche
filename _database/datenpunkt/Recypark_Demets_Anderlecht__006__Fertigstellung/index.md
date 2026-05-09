@@ -1,20 +1,25 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__006__Fertigstellung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Fertigstellung - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Fertigstellung - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Recypark_Demets_Anderlecht__006__Fertigstellung"
+title: "Fertigstellung - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "2024"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+bauobjekt:
+  - "Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Fertigstellung - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Recypark_Demets_Anderlecht__006__Fertigstellung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recypark_Demets_Anderlecht__006__Fertigstellung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fertigstellung
+- **Wert:** 2024
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** Rotor
+- **Bilanzgrenze:** Projekt inkl. 20 Bögen
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

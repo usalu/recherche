@@ -1,20 +1,43 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__002__doppeltverglaste_Holzfenster"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "doppeltverglaste Holzfenster - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# doppeltverglaste Holzfenster - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Resilience_La_Ferme_des_Possibles_Stains__002__doppeltverglaste_Holzfenster"
+title: "doppeltverglaste Holzfenster - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Herkunft heterogen"
+quelle_label: "[S2]"
+material_label: "Holz/Glas"
+node_kind: "core"
+herkunft_label: "diverse Reinigungen / Le Bon Coin / Unternehmen"
+menge_umfang: "60 m²"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+neue_funktion: "Innenfenster zwischen Puffer und beheizten Räumen"
+bauteil_label: "doppeltverglaste Holzfenster"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+alte_funktion: "Fenster"
+---
 
-## Clean Node
+# doppeltverglaste Holzfenster - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__002__doppeltverglaste_Holzfenster
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Resilience_La_Ferme_des_Possibles_Stains__002__doppeltverglaste_Holzfenster
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** doppeltverglaste Holzfenster
+- **Material:** Holz/Glas
+- **Herkunft:** diverse Reinigungen / Le Bon Coin / Unternehmen
+- **alte Funktion:** Fenster
+- **neue Funktion:** Innenfenster zwischen Puffer und beheizten Räumen
+- **Menge/Umfang:** 60 m²
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** innen/Hülle thermisch
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Wärmetrennung
+- **Norm/Recht:** unbekannt
+- **Hürde:** Herkunft heterogen
+- **Quelle:** [S2]
+- **unbekannt:** teilweise

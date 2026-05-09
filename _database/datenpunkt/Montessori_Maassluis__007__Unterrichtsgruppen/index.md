@@ -1,20 +1,25 @@
-﻿---
-id: "Montessori_Maassluis__007__Unterrichtsgruppen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Unterrichtsgruppen - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Unterrichtsgruppen - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Montessori_Maassluis__007__Unterrichtsgruppen"
+title: "Unterrichtsgruppen - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Anzahl"
+quelle_label: "Kraaijvanger news"
+node_kind: "core"
+wert: "10"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# Unterrichtsgruppen - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Montessori_Maassluis__007__Unterrichtsgruppen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Montessori_Maassluis__007__Unterrichtsgruppen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Unterrichtsgruppen
+- **Wert:** 10
+- **Einheit:** Anzahl
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Programm
+- **Quelle:** Kraaijvanger news
+- **Vertrauensgrad:** belegt

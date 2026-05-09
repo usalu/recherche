@@ -1,20 +1,22 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__002__HEEMwonen"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "HEEMwonen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# HEEMwonen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Superlocal_Expogebouw_Bleijerheide__002__HEEMwonen"
+title: "HEEMwonen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "SUPERLOCAL / Maurer United"
+node_kind: "relation"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# HEEMwonen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__002__HEEMwonen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__002__HEEMwonen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** HEEMwonen
+- **Beziehung zur Fallstudie:** Auftraggeber / Partner
+- **Quelle/Beleg:** SUPERLOCAL / Maurer United
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Wohnungsbaugesellschaft

@@ -1,20 +1,43 @@
-﻿---
-id: "Montessori_Maassluis__005__Fassade_Fenster"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fassade/Fenster - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fassade/Fenster - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Montessori_Maassluis__005__Fassade_Fenster"
+title: "Fassade/Fenster - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "keine Reuse-Angabe"
+quelle_label: "Kraaijvanger"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+neue_funktion: "Hülle"
+bauteil_label: "Fassade/Fenster"
+projekt:
+  - "Montessori_Maassluis"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Fassade/Fenster - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Montessori_Maassluis__005__Fassade_Fenster
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Montessori_Maassluis__005__Fassade_Fenster
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fassade/Fenster
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Hülle
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Tageslicht, Wärmeschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** keine Reuse-Angabe
+- **Quelle:** Kraaijvanger
+- **unbekannt:** Details

@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__009__Gewicht"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Gewicht - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Gewicht - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__009__Gewicht"
+title: "Gewicht - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "ntv"
+node_kind: "core"
+wert: "800"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Gewicht - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__009__Gewicht
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__009__Gewicht
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gewicht
+- **Wert:** 800
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** ntv/dpa-Bericht
+- **Bilanzgrenze:** Pavillon
+- **Quelle:** ntv
+- **Vertrauensgrad:** teilweise belegt

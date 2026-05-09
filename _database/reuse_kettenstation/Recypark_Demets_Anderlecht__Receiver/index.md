@@ -1,20 +1,16 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Receiver - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "reuse_kettenstation"
+id: "Recypark_Demets_Anderlecht__Receiver"
+title: "Receiver - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Recypark_Demets_Anderlecht.md"
+node_kind: "core"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Receiver - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/reuse_kettenstation/Recypark_Demets_Anderlecht__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Recypark_Demets_Anderlecht__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

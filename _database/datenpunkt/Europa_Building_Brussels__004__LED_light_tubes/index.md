@@ -1,20 +1,25 @@
-﻿---
-id: "Europa_Building_Brussels__004__LED_light_tubes"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "LED light tubes - Europa Building, Brussels â€“ Fallstudie Direct Reuse"
 ---
-# LED light tubes - Europa Building, Brussels â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Europa_Building_Brussels__004__LED_light_tubes"
+title: "LED light tubes - Europa Building, Brussels – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "Council"
+node_kind: "core"
+wert: "374"
+fallstudie: "fallstudie/Europa_Building_Brussels"
+bauobjekt:
+  - "Europa_Building_Brussels"
+projekt:
+  - "Europa_Building_Brussels"
+---
 
-## Clean Node
+# LED light tubes - Europa Building, Brussels – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Europa_Building_Brussels__004__LED_light_tubes
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Europa_Building_Brussels__004__LED_light_tubes
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** LED light tubes
+- **Wert:** 374
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** TGA/Beleuchtung
+- **Quelle:** Council
+- **Vertrauensgrad:** belegt

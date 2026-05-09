@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_verbindung"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Verbindung"
 ---
+entity: "quelle"
+id: "Legacy_verbindung"
+title: "Verbindung"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Verbindung
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_verbindung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_verbindung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Verbindung

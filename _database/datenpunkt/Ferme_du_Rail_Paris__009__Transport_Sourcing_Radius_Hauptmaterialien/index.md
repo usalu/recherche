@@ -1,20 +1,25 @@
-﻿---
-id: "Ferme_du_Rail_Paris__009__Transport_Sourcing_Radius_Hauptmaterialien"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Transport-/Sourcing-Radius Hauptmaterialien - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Transport-/Sourcing-Radius Hauptmaterialien - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Ferme_du_Rail_Paris__009__Transport_Sourcing_Radius_Hauptmaterialien"
+title: "Transport-/Sourcing-Radius Hauptmaterialien - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "km"
+quelle_label: "[S3]"
+node_kind: "core"
+wert: "65"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# Transport-/Sourcing-Radius Hauptmaterialien - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Ferme_du_Rail_Paris__009__Transport_Sourcing_Radius_Hauptmaterialien
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Ferme_du_Rail_Paris__009__Transport_Sourcing_Radius_Hauptmaterialien
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Transport-/Sourcing-Radius Hauptmaterialien
+- **Wert:** 65
+- **Einheit:** km
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Hauptmaterialien laut CMS
+- **Quelle:** [S3]
+- **Vertrauensgrad:** belegt

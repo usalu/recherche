@@ -1,20 +1,22 @@
-﻿---
-id: "Resilience_La_Ferme_des_Possibles_Stains__005__Depuis_1920"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Depuis 1920 - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Depuis 1920 - RÃ©silience / La Ferme des Possibles, Stains â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Resilience_La_Ferme_des_Possibles_Stains__005__Depuis_1920"
+title: "Depuis 1920 - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1]"
+node_kind: "relation"
+fallstudie: "fallstudie/Resilience_La_Ferme_des_Possibles_Stains"
+bauobjekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+projekt:
+  - "Resilience_La_Ferme_des_Possibles_Stains"
+---
 
-## Clean Node
+# Depuis 1920 - Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Resilience_La_Ferme_des_Possibles_Stains__005__Depuis_1920
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Resilience_La_Ferme_des_Possibles_Stains__005__Depuis_1920
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Depuis 1920
+- **Beziehung zur Fallstudie:** Reuse-Fenster / Prototyping und Montage
+- **Quelle/Beleg:** [S1]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Fensterelemente

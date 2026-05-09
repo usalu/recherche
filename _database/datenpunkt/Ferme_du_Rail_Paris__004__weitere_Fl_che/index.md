@@ -1,20 +1,25 @@
-﻿---
-id: "Ferme_du_Rail_Paris__004__weitere_Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "weitere FlÃ¤che - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# weitere FlÃ¤che - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Ferme_du_Rail_Paris__004__weitere_Fl_che"
+title: "weitere Fläche - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "1.466"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# weitere Fläche - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Ferme_du_Rail_Paris__004__weitere_Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Ferme_du_Rail_Paris__004__weitere_Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** weitere Fläche
+- **Wert:** 1.466
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Quelle „Non précisé“
+- **Quelle:** [S2]
+- **Vertrauensgrad:** teilweise

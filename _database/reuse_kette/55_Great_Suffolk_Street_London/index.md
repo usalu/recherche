@@ -1,20 +1,16 @@
-﻿---
-id: "55_Great_Suffolk_Street_London"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "55_Great_Suffolk_Street_London"
+title: "Reuse-Kette - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\55_Great_Suffolk_Street_London.md"
+node_kind: "core"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+---
 
-## Clean Node
+# Reuse-Kette - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/55_Great_Suffolk_Street_London
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/55_Great_Suffolk_Street_London
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

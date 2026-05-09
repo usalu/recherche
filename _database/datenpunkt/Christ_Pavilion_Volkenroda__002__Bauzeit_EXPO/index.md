@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__002__Bauzeit_EXPO"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit EXPO - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Bauzeit EXPO - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__002__Bauzeit_EXPO"
+title: "Bauzeit EXPO - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Zeitraum"
+quelle_label: "gmp"
+node_kind: "core"
+wert: "1999–April 2000 / 1999–2000"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Bauzeit EXPO - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__002__Bauzeit_EXPO
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__002__Bauzeit_EXPO
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit EXPO
+- **Wert:** 1999–April 2000 / 1999–2000
+- **Einheit:** Zeitraum
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Ersterrichtung Hannover
+- **Quelle:** gmp
+- **Vertrauensgrad:** belegt

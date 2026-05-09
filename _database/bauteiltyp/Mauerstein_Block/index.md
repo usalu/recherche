@@ -1,25 +1,15 @@
-﻿---
-id: "Mauerstein_Block"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Betonblock"
 ---
+entity: "bauteiltyp"
+id: "Mauerstein_Block"
+title: "Betonblock"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Betonblock
 
-## Clean Node
+## Quelle: bauteiltyp_Mauerstein_Block.staging_index
 
-- Final path: _database/bauteiltyp/Mauerstein_Block
-- Build rule: typed path IDs only.
+## Definition
 
-## Imported Staging Nodes
-
-- Source: _graph/bauteiltyp/Betonblock
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: A concrete block is a block component; keep `material/Beton` as separate fact.
-
-- Source: _graph/bauteiltyp/Mauerstein_Block
-  - Action: keep_or_merge
-  - Status: CONFIDENT
-  - Reason: Correct component family for brick/block units; material is linked separately.
-
+Mauersteine, Bau- oder Blockelemente, wenn sie keine spezifische Betonblock- oder Ziegelklassifikation haben.

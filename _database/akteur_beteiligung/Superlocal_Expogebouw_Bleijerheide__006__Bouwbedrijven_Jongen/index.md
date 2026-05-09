@@ -1,20 +1,22 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__006__Bouwbedrijven_Jongen"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Bouwbedrijven Jongen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Bouwbedrijven Jongen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Superlocal_Expogebouw_Bleijerheide__006__Bouwbedrijven_Jongen"
+title: "Bouwbedrijven Jongen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "SUPERLOCAL / Maurer United"
+node_kind: "relation"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Bouwbedrijven Jongen - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__006__Bouwbedrijven_Jongen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Superlocal_Expogebouw_Bleijerheide__006__Bouwbedrijven_Jongen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Bouwbedrijven Jongen
+- **Beziehung zur Fallstudie:** Bauunternehmen
+- **Quelle/Beleg:** SUPERLOCAL / Maurer United
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Realisierung

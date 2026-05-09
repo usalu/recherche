@@ -1,20 +1,80 @@
-﻿---
-id: "useagain_bauteilclick"
-entity: "software_digitaltool"
-build_status: "clean_phase20"
-title: "useagain / Bauteilclick"
 ---
+entity: "software_digitaltool"
+id: "useagain_bauteilclick"
+title: "useagain / Bauteilclick"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteilboerse\\useagain-bauteilclick.md"
+node_kind: "core"
+---
+
 # useagain / Bauteilclick
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/software_digitaltool/useagain_bauteilclick
-- Build rule: typed path IDs only.
+### Legacy Source: bauteilboerse\useagain-bauteilclick.md
 
-## Imported Staging Nodes
+- Map action: split_platform_profile
+- Target role in map: primary
+- Raw mapped target: software_digitaltool/useagain_bauteilclick
+- Original primary target: software_digitaltool/useagain_bauteilclick
+- Original secondary targets: akteur/<operator_if_named>; beschaffungsweg/Digitale_Plattform; ressourcenquelle/Bauteilboerse; plattformfunktion/Material_Matching
 
-- Source: _graph/software_digitaltool/useagain_bauteilclick
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# useagain / Bauteilclick
 
+## Kurzbeschreibung
+useagain / Bauteilclick ist ein(e) digitale Vermittlungs- und Austauschplattform für gebrauchte Bauteile, Materialien und Möbel mit Bezug zu Schweiz. Im Reuse-Kontext liegt der Schwerpunkt auf: direkte Wiederverwendung intakter Bauteile und Materialien durch Kauf/Verkauf zwischen Nutzern.
+
+## Land / Region
+Schweiz
+
+## Betreiber
+useagain; genaue Rechtsform nicht angegeben
+
+## Zielgruppe
+Käufer und Verkäufer gebrauchter Bauteile; Planende, Handwerk, Privatpersonen, Projektträger
+
+## Plattformtyp
+digitale Vermittlungs- und Austauschplattform für gebrauchte Bauteile, Materialien und Möbel
+
+## Bauteilkategorien
+Ausbau; Gebäudehülle und Konstruktion; Gebäudetechnik und Sanitär; Baustoffe und Werkzeuge; Umgebung; Sonstiges; Beispiele: Backöfen, Dachfenster, Stahlträger, Türen, Fenster
+
+## Art der Wiederverwendung
+direkte Wiederverwendung intakter Bauteile und Materialien durch Kauf/Verkauf zwischen Nutzern
+
+## Funktionen
+Inserate erstellen; Kategorien/eBKP-H-Suche; Kaufen/Verkaufen; Projektverwaltung; mehrsprachige Plattform
+
+## Daten je Bauteil
+Listings mit Kategorien; Detailfelder nicht vollständig angegeben; meist Beschreibung, Fotos, Preis/Standort zu erwarten
+
+## Qualität / Prüfung
+Vertrauensfunktionen wie Video-Uploads wurden in Quellen erwähnt; formale Prüfung/Zertifizierung nicht angegeben
+
+## Logistik / Lagerung
+Transport, Lagerung und Abwicklung können projektspezifisch sein; standardisierte Logistik nicht angegeben
+
+## Geschäftsmodell
+Vermittlungsplattform; Gebühren/Provisionen nicht angegeben
+
+## Ökologische Bewertung
+Ziel ist Abfallreduktion und Wiederverwendung intakter Bauteile; quantitative Ökobilanz je Bauteil nicht angegeben
+
+## Stärken
+schweizweite digitale Sichtbarkeit; bauspezifische Kategorien; mehrsprachig; breite Bauteilpalette
+
+## Schwächen / Hemmnisse
+Qualität und technische Nachweise liegen bei Anbieter/Käufer; Verfügbarkeit opportunistisch
+
+## Relevanz für zirkuläres Bauen
+hoch als zentrale Schweizer Plattform für Bauteilwiederverwendung.
+
+## Quellen und Links
+- https://www.useagain.ch/de/
+- https://library-of-reuse.ch/pioneers/useagain
+- https://www.bauwende.tools/en/werkzeuge/use-again
+- https://www.useagain.ch/de/kaufen
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

@@ -1,20 +1,13 @@
-﻿---
-id: "Kompatibilitaetsproblem"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Kompatibilitaetsproblem"
 ---
+entity: "huerde"
+id: "Kompatibilitaetsproblem"
+title: "Kompatibilitaetsproblem"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Kompatibilitaetsproblem
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Kompatibilitaetsproblem
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Kompatibilitaetsproblem
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Probleme der Passung, Systemkompatibilitaet, Formate, Hoehen, Raster oder Schnittstellen zwischen gefundenen Bauteilen und neuem Entwurf.

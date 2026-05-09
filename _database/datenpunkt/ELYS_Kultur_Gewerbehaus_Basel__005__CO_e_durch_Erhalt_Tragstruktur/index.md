@@ -1,20 +1,25 @@
-﻿---
-id: "ELYS_Kultur_Gewerbehaus_Basel__005__CO_e_durch_Erhalt_Tragstruktur"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚e durch Erhalt Tragstruktur - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse"
 ---
-# COâ‚‚e durch Erhalt Tragstruktur - ELYS Kultur- & Gewerbehaus, Basel â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "ELYS_Kultur_Gewerbehaus_Basel__005__CO_e_durch_Erhalt_Tragstruktur"
+title: "CO₂e durch Erhalt Tragstruktur - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "t CO₂e"
+quelle_label: "DETAIL; ZAB"
+node_kind: "core"
+wert: "7.000"
+fallstudie: "fallstudie/ELYS_Kultur_Gewerbehaus_Basel"
+bauobjekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+projekt:
+  - "ELYS_Kultur_Gewerbehaus_Basel"
+---
 
-## Clean Node
+# CO₂e durch Erhalt Tragstruktur - ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__005__CO_e_durch_Erhalt_Tragstruktur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/ELYS_Kultur_Gewerbehaus_Basel__005__CO_e_durch_Erhalt_Tragstruktur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂e durch Erhalt Tragstruktur
+- **Wert:** 7.000
+- **Einheit:** t CO₂e
+- **Methode/Datenmodell/Software:** Architektenangabe
+- **Bilanzgrenze:** Bestandserhalt / Umnutzung
+- **Quelle:** DETAIL; ZAB
+- **Vertrauensgrad:** teilweise belegt; nicht Direct Reuse

@@ -1,20 +1,43 @@
-﻿---
-id: "BedZED_London_Hackbridge__010__D_mmung"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "DÃ¤mmung - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# DÃ¤mmung - BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "reuse_einsatz"
+id: "BedZED_London_Hackbridge__010__D_mmung"
+title: "Dämmung - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "-"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+neue_funktion: "Dämmung"
+bauteil_label: "Dämmung"
+projekt:
+  - "BedZED_London_Hackbridge"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Dämmung - BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/reuse_einsatz/BedZED_London_Hackbridge__010__D_mmung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/BedZED_London_Hackbridge__010__D_mmung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Dämmung
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Dämmung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Wärmeschutz
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** -
+- **unbekannt:** alles

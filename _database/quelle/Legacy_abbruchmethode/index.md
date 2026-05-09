@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_abbruchmethode"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Abbruchmethode"
 ---
+entity: "quelle"
+id: "Legacy_abbruchmethode"
+title: "Abbruchmethode"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Abbruchmethode
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_abbruchmethode
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_abbruchmethode
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Abbruchmethode

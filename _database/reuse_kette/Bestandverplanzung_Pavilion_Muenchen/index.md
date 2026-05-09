@@ -1,20 +1,16 @@
-﻿---
-id: "Bestandverplanzung_Pavilion_Muenchen"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Bestandverplanzung_Pavilion_Muenchen"
+title: "Reuse-Kette - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Bestandverplanzung_Pavilion_Muenchen.md"
+node_kind: "core"
+fallstudie: "fallstudie/Bestandverplanzung_Pavilion_Muenchen"
+projekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+---
 
-## Clean Node
+# Reuse-Kette - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Bestandverplanzung_Pavilion_Muenchen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Bestandverplanzung_Pavilion_Muenchen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

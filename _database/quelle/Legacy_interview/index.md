@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_interview"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Interview"
 ---
+entity: "quelle"
+id: "Legacy_interview"
+title: "Interview"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Interview
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_interview
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_interview
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Interview

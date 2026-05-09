@@ -1,20 +1,22 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__001__Rotor_asbl_vzw"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Rotor asbl-vzw - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# Rotor asbl-vzw - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Chiro_d_Itterbeek_Dilbeek__001__Rotor_asbl_vzw"
+title: "Rotor asbl-vzw - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S3], [S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# Rotor asbl-vzw - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Chiro_d_Itterbeek_Dilbeek__001__Rotor_asbl_vzw
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Chiro_d_Itterbeek_Dilbeek__001__Rotor_asbl_vzw
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Rotor asbl-vzw
+- **Beziehung zur Fallstudie:** Entwurf / Design-Build
+- **Quelle/Beleg:** [S2], [S3], [S4]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Designer-contractor laut Construction21.

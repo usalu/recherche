@@ -1,20 +1,22 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__001__Normandie_Am_nagement"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Normandie AmÃ©nagement - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Normandie AmÃ©nagement - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Grande_Halle_de_Colombelles__001__Normandie_Am_nagement"
+title: "Normandie Aménagement - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S3], [S6]"
+node_kind: "relation"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Normandie Aménagement - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Grande_Halle_de_Colombelles__001__Normandie_Am_nagement
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Grande_Halle_de_Colombelles__001__Normandie_Am_nagement
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Normandie Aménagement
+- **Beziehung zur Fallstudie:** Bauherr / Commanditaire
+- **Quelle/Beleg:** [S3], [S6]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** SEM / öffentliche Auftraggeberrolle

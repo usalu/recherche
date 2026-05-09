@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__018__site_waste_eliminated"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "site waste eliminated - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# site waste eliminated - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__018__site_waste_eliminated"
+title: "site waste eliminated - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S11]"
+node_kind: "core"
+wert: "99"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# site waste eliminated - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__018__site_waste_eliminated
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__018__site_waste_eliminated
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** site waste eliminated
+- **Wert:** 99
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** TFT
+- **Bilanzgrenze:** Baustelle
+- **Quelle:** [S11]
+- **Vertrauensgrad:** teilweise belegt

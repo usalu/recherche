@@ -1,20 +1,25 @@
-﻿---
-id: "CRCLR_House_Impact_Hub_Berlin__002__Nutzfl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "NutzflÃ¤che - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse"
 ---
-# NutzflÃ¤che - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "CRCLR_House_Impact_Hub_Berlin__002__Nutzfl_che"
+title: "Nutzfläche - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "ZRS"
+node_kind: "core"
+wert: "4.690; davon 2.521 Bestand, 2.169 Aufstockung"
+fallstudie: "fallstudie/CRCLR_House_Impact_Hub_Berlin"
+bauobjekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+projekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+---
 
-## Clean Node
+# Nutzfläche - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/CRCLR_House_Impact_Hub_Berlin__002__Nutzfl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/CRCLR_House_Impact_Hub_Berlin__002__Nutzfl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Nutzfläche
+- **Wert:** 4.690; davon 2.521 Bestand, 2.169 Aufstockung
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** ZRS
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,22 @@
-﻿---
-id: "Grubenstrasse_29_Werkhof_29_Zuerich__001__Marc_Angst_This_Alder_Oliver_Zbinden_u_a"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Marc Angst, This Alder, Oliver Zbinden u. a. - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Marc Angst, This Alder, Oliver Zbinden u. a. - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Grubenstrasse_29_Werkhof_29_Zuerich__001__Marc_Angst_This_Alder_Oliver_Zbinden_u_a"
+title: "Marc Angst, This Alder, Oliver Zbinden u. a. - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "Zirkular; baubüro in situ; Open House"
+node_kind: "relation"
+fallstudie: "fallstudie/Grubenstrasse_29_Werkhof_29_Zuerich"
+bauobjekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+projekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+---
 
-## Clean Node
+# Marc Angst, This Alder, Oliver Zbinden u. a. - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Grubenstrasse_29_Werkhof_29_Zuerich__001__Marc_Angst_This_Alder_Oliver_Zbinden_u_a
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Grubenstrasse_29_Werkhof_29_Zuerich__001__Marc_Angst_This_Alder_Oliver_Zbinden_u_a
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Marc Angst, This Alder, Oliver Zbinden u. a.
+- **Beziehung zur Fallstudie:** Projektteam / Bauteiljagd / Führung
+- **Quelle/Beleg:** Zirkular; baubüro in situ; Open House
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Rollen je nach Quelle verschieden detailliert

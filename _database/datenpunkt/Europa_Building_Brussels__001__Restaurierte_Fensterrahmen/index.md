@@ -1,20 +1,25 @@
-﻿---
-id: "Europa_Building_Brussels__001__Restaurierte_Fensterrahmen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Restaurierte Fensterrahmen - Europa Building, Brussels â€“ Fallstudie Direct Reuse"
 ---
-# Restaurierte Fensterrahmen - Europa Building, Brussels â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Europa_Building_Brussels__001__Restaurierte_Fensterrahmen"
+title: "Restaurierte Fensterrahmen - Europa Building, Brussels – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "Council; Visit Brussels; Jan De Nul"
+node_kind: "core"
+wert: "3.750"
+fallstudie: "fallstudie/Europa_Building_Brussels"
+bauobjekt:
+  - "Europa_Building_Brussels"
+projekt:
+  - "Europa_Building_Brussels"
+---
 
-## Clean Node
+# Restaurierte Fensterrahmen - Europa Building, Brussels – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Europa_Building_Brussels__001__Restaurierte_Fensterrahmen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Europa_Building_Brussels__001__Restaurierte_Fensterrahmen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Restaurierte Fensterrahmen
+- **Wert:** 3.750
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Fassade
+- **Quelle:** Council; Visit Brussels; Jan De Nul
+- **Vertrauensgrad:** belegt

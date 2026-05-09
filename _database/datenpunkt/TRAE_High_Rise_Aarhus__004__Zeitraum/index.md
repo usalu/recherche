@@ -1,20 +1,25 @@
-﻿---
-id: "TRAE_High_Rise_Aarhus__004__Zeitraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Zeitraum - TRÃ† High-Rise, Aarhus"
 ---
-# Zeitraum - TRÃ† High-Rise, Aarhus
+entity: "datenpunkt"
+id: "TRAE_High_Rise_Aarhus__004__Zeitraum"
+title: "Zeitraum - TRÆ High-Rise, Aarhus"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "2018–2025"
+fallstudie: "fallstudie/TRAE_High_Rise_Aarhus"
+bauobjekt:
+  - "TRAE_High_Rise_Aarhus"
+projekt:
+  - "TRAE_High_Rise_Aarhus"
+---
 
-## Clean Node
+# Zeitraum - TRÆ High-Rise, Aarhus
 
-- Final path: _database/datenpunkt/TRAE_High_Rise_Aarhus__004__Zeitraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/TRAE_High_Rise_Aarhus__004__Zeitraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Zeitraum
+- **Wert:** 2018–2025
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** Lendager
+- **Bilanzgrenze:** Projekt
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,37 @@
-﻿---
-id: "BedZED_London_Hackbridge"
-entity: "projekt"
-build_status: "clean_phase20"
-title: "BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# BedZED, London / Hackbridge â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "projekt"
+id: "BedZED_London_Hackbridge"
+title: "BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\BedZED_London_Hackbridge.md"
+node_kind: "core"
+fallstudie: "fallstudie/BedZED_London_Hackbridge"
+bauobjekt:
+  - "BedZED_London_Hackbridge"
+---
 
-## Clean Node
+# BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/projekt/BedZED_London_Hackbridge
-- Build rule: typed path IDs only.
+## Extracted Project Context
 
-## Imported Staging Nodes
+### Gebäude\BedZED_London_Hackbridge.md
 
-- Source: _graph/projekt/BedZED_London_Hackbridge
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** BedZED / Beddington Zero Energy Development
+- **Ort:** Hackbridge / Wallington, London Borough of Sutton, UK
+- **Gebäude:** Gemischt genutztes Quartier mit Wohnungen, Arbeits-/Gewerbeflächen und Gemeinschaftseinrichtungen
+- **Projekt:** Neubau eines Nullenergie-/Ökoquartiers mit Direct Reuse einzelner Bauteile
+- **Beteiligte People / Akteure:** Peabody Trust, Bill Dunster / ZEDfactory bzw. Bill Dunster Architects, BioRegional, Arup, Ellis & Moore Consulting Engineers, Gardiner & Theobald
+- **Architekt:** Bill Dunster / ZEDfactory bzw. Bill Dunster Architects
+- **Tragwerksplaner:** Ellis & Moore Consulting Engineers
+- **Bauherr:** Peabody Trust
+- **Zeitraum:** gebaut 2000–2002; Eröffnung/Nutzung ab 2002
+- **Ursprüngliche Nutzung:** Brownfield / ehemals für Klärschlamm bzw. sewage works genutzt; genaue Vornutzung der Bauteilquellen: lokale Abbruch-/Refurbishment-Standorte, u. a. Brighton Railway Station für Stahl laut BioRegional
+- **Neue Nutzung:** Wohnen, Arbeiten, Gemeinschaftsnutzung
+- **Fläche / Maßstab:** 82 Wohnungen; Arbeitsflächenangaben uneinheitlich: 1.405 m² bis 2.500 m² je Quelle; Maßstab Quartier / gemischt genutzt
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Stahl, Materialmengen, Kosten-/Prozesshinweise; mittel für genaue Einbaupositionen einzelner Nebenbauteile; Norm-/Genehmigungsdetails unbekannt
+
+---

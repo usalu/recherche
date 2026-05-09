@@ -1,20 +1,13 @@
-﻿---
-id: "Innenausbau"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Innenausbau-Element"
 ---
+entity: "bauteiltyp"
+id: "Ausbau"
+title: "Innenausbau-Element"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Innenausbau-Element
 
-## Clean Node
+## Definition
 
-- Final path: _database/bauteiltyp/Innenausbau
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauteiltyp/Innenausbau_Element
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: Generic fit-out element belongs to the interior-fit-out family.
-
+Wiederverwendete Innenausbau-, Ausstattungs- oder Oberflaechenelemente, wenn fest eingebaut.

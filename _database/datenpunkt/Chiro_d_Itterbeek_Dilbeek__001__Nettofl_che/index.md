@@ -1,20 +1,25 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__001__Nettofl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "NettoflÃ¤che - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# NettoflÃ¤che - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Chiro_d_Itterbeek_Dilbeek__001__Nettofl_che"
+title: "Nettofläche - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "15"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# Nettofläche - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Chiro_d_Itterbeek_Dilbeek__001__Nettofl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Chiro_d_Itterbeek_Dilbeek__001__Nettofl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Nettofläche
+- **Wert:** 15
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Construction21
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

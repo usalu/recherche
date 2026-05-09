@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__003__Wiederaufbau"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wiederaufbau - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Wiederaufbau - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__003__Wiederaufbau"
+title: "Wiederaufbau - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Zeitraum"
+quelle_label: "gmp"
+node_kind: "core"
+wert: "Februar–August 2001 / Fertigstellung August 2001"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Wiederaufbau - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__003__Wiederaufbau
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__003__Wiederaufbau
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wiederaufbau
+- **Wert:** Februar–August 2001 / Fertigstellung August 2001
+- **Einheit:** Zeitraum
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Volkenroda
+- **Quelle:** gmp
+- **Vertrauensgrad:** belegt

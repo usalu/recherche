@@ -1,20 +1,43 @@
-﻿---
-id: "Institut_de_Botanique_ULg_Liege__005__TGA"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TGA - Institut de Botanique de lâ€™ULg, LiÃ¨ge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# TGA - Institut de Botanique de lâ€™ULg, LiÃ¨ge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Institut_de_Botanique_ULg_Liege__005__TGA"
+title: "TGA - Institut de Botanique de l’ULg, Liège — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "keine Reuse-Belege"
+quelle_label: "unbekannt"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Institut_de_Botanique_ULg_Liege"
+bauobjekt:
+  - "Institut_de_Botanique_ULg_Liege"
+neue_funktion: "unbekannt"
+bauteil_label: "TGA"
+projekt:
+  - "Institut_de_Botanique_ULg_Liege"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# TGA - Institut de Botanique de l’ULg, Liège — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Institut_de_Botanique_ULg_Liege__005__TGA
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Institut_de_Botanique_ULg_Liege__005__TGA
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** TGA
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Betrieb, Wartung
+- **Norm/Recht:** unbekannt
+- **Hürde:** keine Reuse-Belege
+- **Quelle:** unbekannt
+- **unbekannt:** alle Detaildaten

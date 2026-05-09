@@ -1,20 +1,13 @@
-﻿---
-id: "Projektmanagement_Koordination"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Projektmanagement / Koordination"
 ---
+entity: "akteurrolle"
+id: "Projektmanagement_Koordination"
+title: "Projektmanagement / Koordination"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Projektmanagement / Koordination
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Projektmanagement_Koordination
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Projektmanagement_Koordination
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Projektmanagement-, Koordinations-, Partner- oder Kollaborationsrolle.

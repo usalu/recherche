@@ -1,20 +1,43 @@
-﻿---
-id: "Liander_Alliander_HQ_Duiven__004__Fassaden_H_llbauteile"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fassaden-/HÃ¼llbauteile - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fassaden-/HÃ¼llbauteile - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Liander_Alliander_HQ_Duiven__004__Fassaden_H_llbauteile"
+title: "Fassaden-/Hüllbauteile - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Erhalt vs. Reuse unklar"
+quelle_label: "S1/S2"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "Bestand / Donor unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Liander_Alliander_HQ_Duiven"
+bauobjekt:
+  - "Liander_Alliander_HQ_Duiven"
+neue_funktion: "Hülle"
+bauteil_label: "Fassaden-/Hüllbauteile"
+projekt:
+  - "Liander_Alliander_HQ_Duiven"
+alte_funktion: "Fassade"
+---
 
-## Clean Node
+# Fassaden-/Hüllbauteile - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Liander_Alliander_HQ_Duiven__004__Fassaden_H_llbauteile
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Liander_Alliander_HQ_Duiven__004__Fassaden_H_llbauteile
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fassaden-/Hüllbauteile
+- **Material:** unbekannt
+- **Herkunft:** Bestand / Donor unbekannt
+- **alte Funktion:** Fassade
+- **neue Funktion:** Hülle
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Wärmeschutz, Luftdichtheit
+- **Norm/Recht:** unbekannt
+- **Hürde:** Erhalt vs. Reuse unklar
+- **Quelle:** S1/S2
+- **unbekannt:** genaue Rolle

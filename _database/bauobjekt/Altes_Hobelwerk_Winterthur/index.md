@@ -1,20 +1,18 @@
-﻿---
-id: "Altes_Hobelwerk_Winterthur"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Altes Hobelwerk, Winterthur"
 ---
+entity: "bauobjekt"
+id: "Altes_Hobelwerk_Winterthur"
+title: "Altes Hobelwerk, Winterthur"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\Altes_Hobelwerk_Winterthur.md"
+node_kind: "core"
+fallstudie: "fallstudie/Altes_Hobelwerk_Winterthur"
+projekt:
+  - "Altes_Hobelwerk_Winterthur"
+---
+
 # Altes Hobelwerk, Winterthur
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/Altes_Hobelwerk_Winterthur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/Altes_Hobelwerk_Winterthur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

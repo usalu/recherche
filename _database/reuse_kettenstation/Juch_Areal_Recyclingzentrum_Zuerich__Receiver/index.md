@@ -1,20 +1,16 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# Receiver - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "reuse_kettenstation"
+id: "Juch_Areal_Recyclingzentrum_Zuerich__Receiver"
+title: "Receiver - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Juch_Areal_Recyclingzentrum_Zuerich.md"
+node_kind: "core"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# Receiver - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/reuse_kettenstation/Juch_Areal_Recyclingzentrum_Zuerich__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Juch_Areal_Recyclingzentrum_Zuerich__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

@@ -1,15 +1,12 @@
-﻿---
-id: "aufbereitungsmethode_Drahtglasschneiden_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "aufbereitungsmethode/Drahtglasschneiden.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "aufbereitungsmethode_Drahtglasschneiden_md"
+title: "aufbereitungsmethode_Drahtglasschneiden_md"
+build_status: "promoted_phase42"
+source_filename: "Drahtglasschneiden.md"
+legacy_type: "Aufbereitungsmethode"
+---
+
 # aufbereitungsmethode_Drahtglasschneiden_md
 
-## Source Archive
 
-- Original path: aufbereitungsmethode/Drahtglasschneiden.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: aufbereitungsverfahren/Drahtglasschneiden

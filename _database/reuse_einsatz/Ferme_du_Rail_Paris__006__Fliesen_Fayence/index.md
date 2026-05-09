@@ -1,20 +1,43 @@
-﻿---
-id: "Ferme_du_Rail_Paris__006__Fliesen_Fayence"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Fliesen / Fayence - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Fliesen / Fayence - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Ferme_du_Rail_Paris__006__Fliesen_Fayence"
+title: "Fliesen / Fayence - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Bodenanwendung zu komplex wegen Abdichtung"
+quelle_label: "[S2]"
+material_label: "Keramik"
+node_kind: "core"
+herkunft_label: "Restbestand eines Handwerkers"
+menge_umfang: "unbekannt"
+pruefung_label: "PV und Produktdaten vorhanden"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+neue_funktion: "Badwandbelag"
+bauteil_label: "Fliesen / Fayence"
+projekt:
+  - "Ferme_du_Rail_Paris"
+alte_funktion: "Fliesen"
+---
 
-## Clean Node
+# Fliesen / Fayence - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Ferme_du_Rail_Paris__006__Fliesen_Fayence
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Ferme_du_Rail_Paris__006__Fliesen_Fayence
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Fliesen / Fayence
+- **Material:** Keramik
+- **Herkunft:** Restbestand eines Handwerkers
+- **alte Funktion:** Fliesen
+- **neue Funktion:** Badwandbelag
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Calepinage, Umnutzung von Boden zu Wand
+- **Verbindung:** Kleber/Untergrund unbekannt
+- **Prüfung:** PV und Produktdaten vorhanden
+- **Leistungsanforderung:** Feuchte, Haftung, ggf. Rutsch bei Boden
+- **Norm/Recht:** unbekannt
+- **Hürde:** Bodenanwendung zu komplex wegen Abdichtung
+- **Quelle:** [S2]
+- **unbekannt:** teilweise

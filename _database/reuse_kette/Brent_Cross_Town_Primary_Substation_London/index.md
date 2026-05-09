@@ -1,20 +1,16 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Brent_Cross_Town_Primary_Substation_London"
+title: "Reuse-Kette - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Brent_Cross_Town_Primary_Substation_London.md"
+node_kind: "core"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# Reuse-Kette - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Brent_Cross_Town_Primary_Substation_London
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Brent_Cross_Town_Primary_Substation_London
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

@@ -1,20 +1,11 @@
-﻿---
-id: "Kostenwirkung"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Kostenwirkung"
 ---
+entity: "kennwertdefinition"
+id: "Kostenwirkung"
+title: "Kostenwirkung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Kostenwirkung
 
-## Clean Node
-
-- Final path: _database/kennwertdefinition/Kostenwirkung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Kostenwirkung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

@@ -1,20 +1,25 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven__003__borrowed_materials"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "borrowed materials - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# borrowed materials - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Peoples_Pavilion_Eindhoven__003__borrowed_materials"
+title: "borrowed materials - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "Overtreders W / bureau SLA"
+node_kind: "core"
+wert: "100"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+bauobjekt:
+  - "Peoples_Pavilion_Eindhoven"
+projekt:
+  - "Peoples_Pavilion_Eindhoven"
+---
 
-## Clean Node
+# borrowed materials - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Peoples_Pavilion_Eindhoven__003__borrowed_materials
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Peoples_Pavilion_Eindhoven__003__borrowed_materials
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** borrowed materials
+- **Wert:** 100
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Projektclaim
+- **Bilanzgrenze:** gesamter Pavillon; umfasst auch nicht-zählbare Elemente
+- **Quelle:** Overtreders W / bureau SLA
+- **Vertrauensgrad:** belegt als Claim

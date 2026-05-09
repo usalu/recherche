@@ -1,20 +1,25 @@
-﻿---
-id: "CRCLR_House_Impact_Hub_Berlin__008__Eingesparter_Beton"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Eingesparter Beton - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse"
 ---
-# Eingesparter Beton - CRCLR House / Impact Hub Berlin â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "CRCLR_House_Impact_Hub_Berlin__008__Eingesparter_Beton"
+title: "Eingesparter Beton - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m³"
+quelle_label: "BauNetz Wissen"
+node_kind: "core"
+wert: "120"
+fallstudie: "fallstudie/CRCLR_House_Impact_Hub_Berlin"
+bauobjekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+projekt:
+  - "CRCLR_House_Impact_Hub_Berlin"
+---
 
-## Clean Node
+# Eingesparter Beton - CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/CRCLR_House_Impact_Hub_Berlin__008__Eingesparter_Beton
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/CRCLR_House_Impact_Hub_Berlin__008__Eingesparter_Beton
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Eingesparter Beton
+- **Wert:** 120
+- **Einheit:** m³
+- **Methode/Datenmodell/Software:** Fallbericht
+- **Bilanzgrenze:** neue Hallendecke
+- **Quelle:** BauNetz Wissen
+- **Vertrauensgrad:** teilweise belegt

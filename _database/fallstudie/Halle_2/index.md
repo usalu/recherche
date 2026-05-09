@@ -1,20 +1,30 @@
-﻿---
-id: "Halle_2"
-entity: "fallstudie"
-build_status: "clean_phase20"
-title: "Halle 2"
 ---
+entity: "fallstudie"
+id: "Halle_2"
+title: "Halle 2"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "fallstudie\\Halle_2.md"
+node_kind: "core"
+bauobjekt:
+projekt:
+---
+
 # Halle 2
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/fallstudie/Halle_2
-- Build rule: typed path IDs only.
+### Legacy Source: fallstudie\Halle_2.md
 
-## Imported Staging Nodes
+- Map action: keep_or_split_case
+- Primary target: fallstudie/Halle_2
+- Secondary targets: 
+- Risk flags: 
 
-- Source: _graph/fallstudie/Halle_2
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+---
+type: Fallstudie
+name: Halle 2
+homepage: https://www.bizh.berlin/reallaborzirkulaeresbauen
+beziehungen:
+ aufbereitungsmethode: [drahtglasschneiden]
+---

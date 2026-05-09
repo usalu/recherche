@@ -1,20 +1,43 @@
-﻿---
-id: "Big_Dig_Building_Boston__002__Stra_en_Rampenelemente"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "StraÃŸen-/Rampenelemente - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# StraÃŸen-/Rampenelemente - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Big_Dig_Building_Boston__002__Stra_en_Rampenelemente"
+title: "Straßen-/Rampenelemente - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "ungebaut"
+quelle_label: "SsD / Holcim"
+material_label: "Beton/Stahl"
+node_kind: "core"
+herkunft_label: "Big Dig"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+bauobjekt:
+  - "Big_Dig_Building_Boston"
+neue_funktion: "geplant als Decken/Wände/Struktur"
+bauteil_label: "Straßen-/Rampenelemente"
+projekt:
+  - "Big_Dig_Building_Boston"
+alte_funktion: "temporäre Fahrbahn/Rampe"
+---
 
-## Clean Node
+# Straßen-/Rampenelemente - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Big_Dig_Building_Boston__002__Stra_en_Rampenelemente
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Big_Dig_Building_Boston__002__Stra_en_Rampenelemente
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Straßen-/Rampenelemente
+- **Material:** Beton/Stahl
+- **Herkunft:** Big Dig
+- **alte Funktion:** temporäre Fahrbahn/Rampe
+- **neue Funktion:** geplant als Decken/Wände/Struktur
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja, geplant
+- **räumlich?:** ja
+- **Hülle?:** möglich
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Tragfähigkeit, Gebrauchstauglichkeit
+- **Norm/Recht:** unbekannt
+- **Hürde:** ungebaut
+- **Quelle:** SsD / Holcim
+- **unbekannt:** alle Ausführungsdaten

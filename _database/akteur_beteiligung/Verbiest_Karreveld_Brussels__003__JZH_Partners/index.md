@@ -1,20 +1,22 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__003__JZH_Partners"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "JZH & Partners - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# JZH & Partners - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "akteur_beteiligung"
+id: "Verbiest_Karreveld_Brussels__003__JZH_Partners"
+title: "JZH & Partners - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+quelle_label: "Q1, Q2, Q3"
+node_kind: "relation"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# JZH & Partners - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/akteur_beteiligung/Verbiest_Karreveld_Brussels__003__JZH_Partners
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Verbiest_Karreveld_Brussels__003__JZH_Partners
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** JZH & Partners
+- **Beziehung zur Fallstudie:** Tragwerksplanung / Subcontractor
+- **Quelle/Beleg:** Q1, Q2, Q3
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** bei beiden Projekten

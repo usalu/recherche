@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_aufbereitungsmethode"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Aufbereitungsmethode"
 ---
+entity: "quelle"
+id: "Legacy_aufbereitungsmethode"
+title: "Aufbereitungsmethode"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Aufbereitungsmethode
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_aufbereitungsmethode
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_aufbereitungsmethode
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Aufbereitungsmethode

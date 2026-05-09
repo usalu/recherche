@@ -1,20 +1,22 @@
-﻿---
-id: "Villa_Welpeloo_Enschede__001__Jan_Jongert_Jeroen_Bergsma_Team_Superuse_2012Arc"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Jan Jongert, Jeroen Bergsma, Team Superuse/2012Architecten - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# Jan Jongert, Jeroen Bergsma, Team Superuse/2012Architecten - Villa Welpeloo, Enschede â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "akteur_beteiligung"
+id: "Villa_Welpeloo_Enschede__001__Jan_Jongert_Jeroen_Bergsma_Team_Superuse_2012Arc"
+title: "Jan Jongert, Jeroen Bergsma, Team Superuse/2012Architecten - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "S4, S7"
+node_kind: "relation"
+fallstudie: "fallstudie/Villa_Welpeloo_Enschede"
+bauobjekt:
+  - "Villa_Welpeloo_Enschede"
+projekt:
+  - "Villa_Welpeloo_Enschede"
+---
 
-## Clean Node
+# Jan Jongert, Jeroen Bergsma, Team Superuse/2012Architecten - Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/akteur_beteiligung/Villa_Welpeloo_Enschede__001__Jan_Jongert_Jeroen_Bergsma_Team_Superuse_2012Arc
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Villa_Welpeloo_Enschede__001__Jan_Jongert_Jeroen_Bergsma_Team_Superuse_2012Arc
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Jan Jongert, Jeroen Bergsma, Team Superuse/2012Architecten
+- **Beziehung zur Fallstudie:** Entwurf und Materialstrategie
+- **Quelle/Beleg:** S4, S7
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Büro firmierte auch als 2012Architecten

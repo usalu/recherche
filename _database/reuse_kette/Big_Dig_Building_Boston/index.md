@@ -1,20 +1,16 @@
-﻿---
-id: "Big_Dig_Building_Boston"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Big_Dig_Building_Boston"
+title: "Reuse-Kette - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Big_Dig_Building_Boston.md"
+node_kind: "core"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+projekt:
+  - "Big_Dig_Building_Boston"
+---
 
-## Clean Node
+# Reuse-Kette - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Big_Dig_Building_Boston
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Big_Dig_Building_Boston
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

@@ -1,20 +1,25 @@
-﻿---
-id: "Montessori_Maassluis__004__geplante_Nutzung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "geplante Nutzung - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# geplante Nutzung - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Montessori_Maassluis__004__geplante_Nutzung"
+title: "geplante Nutzung - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Zeitraum"
+quelle_label: "Kraaijvanger news"
+node_kind: "core"
+wert: "Anfang 2027"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# geplante Nutzung - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Montessori_Maassluis__004__geplante_Nutzung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Montessori_Maassluis__004__geplante_Nutzung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** geplante Nutzung
+- **Wert:** Anfang 2027
+- **Einheit:** Zeitraum
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Projekt
+- **Quelle:** Kraaijvanger news
+- **Vertrauensgrad:** belegt

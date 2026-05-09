@@ -1,20 +1,22 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest__006__Deerns"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Deerns - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Deerns - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "akteur_beteiligung"
+id: "BioPartner_5_Leiden_Oegstgeest__006__Deerns"
+title: "Deerns - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "[S10]"
+node_kind: "relation"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+bauobjekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# Deerns - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__006__Deerns
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/BioPartner_5_Leiden_Oegstgeest__006__Deerns
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Deerns
+- **Beziehung zur Fallstudie:** Installationen, Nachhaltigkeit, Bauphysik
+- **Quelle/Beleg:** [S10]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** TGA-/Nachhaltigkeitsberatung

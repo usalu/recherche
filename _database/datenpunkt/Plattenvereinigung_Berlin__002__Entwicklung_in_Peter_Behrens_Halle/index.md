@@ -1,20 +1,25 @@
-﻿---
-id: "Plattenvereinigung_Berlin__002__Entwicklung_in_Peter_Behrens_Halle"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Entwicklung in Peter-Behrens-Halle - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse"
 ---
-# Entwicklung in Peter-Behrens-Halle - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Plattenvereinigung_Berlin__002__Entwicklung_in_Peter_Behrens_Halle"
+title: "Entwicklung in Peter-Behrens-Halle - Plattenvereinigung Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Zeitraum"
+quelle_label: "S4"
+node_kind: "core"
+wert: "Jan 2010–Mai 2011"
+fallstudie: "fallstudie/Plattenvereinigung_Berlin"
+bauobjekt:
+  - "Plattenvereinigung_Berlin"
+projekt:
+  - "Plattenvereinigung_Berlin"
+---
 
-## Clean Node
+# Entwicklung in Peter-Behrens-Halle - Plattenvereinigung Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Plattenvereinigung_Berlin__002__Entwicklung_in_Peter_Behrens_Halle
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Plattenvereinigung_Berlin__002__Entwicklung_in_Peter_Behrens_Halle
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Entwicklung in Peter-Behrens-Halle
+- **Wert:** Jan 2010–Mai 2011
+- **Einheit:** Zeitraum
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Projektphase
+- **Quelle:** S4
+- **Vertrauensgrad:** belegt

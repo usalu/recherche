@@ -1,20 +1,25 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__003__wiederverwendetes_Ziegelvolumen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendetes Ziegelvolumen - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# wiederverwendetes Ziegelvolumen - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Musee_de_Folklore_Mouscron__003__wiederverwendetes_Ziegelvolumen"
+title: "wiederverwendetes Ziegelvolumen - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m³"
+quelle_label: "[S7]"
+node_kind: "core"
+wert: "ca. 34"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# wiederverwendetes Ziegelvolumen - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Musee_de_Folklore_Mouscron__003__wiederverwendetes_Ziegelvolumen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Musee_de_Folklore_Mouscron__003__wiederverwendetes_Ziegelvolumen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendetes Ziegelvolumen
+- **Wert:** ca. 34
+- **Einheit:** m³
+- **Methode/Datenmodell/Software:** Sekundärquelle
+- **Bilanzgrenze:** Fassaden
+- **Quelle:** [S7]
+- **Vertrauensgrad:** teilweise belegt

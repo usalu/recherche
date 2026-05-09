@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__012__Roof_capacity_claim"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Roof capacity claim - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Roof capacity claim - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_House_Lexington_Massachusetts__012__Roof_capacity_claim"
+title: "Roof capacity claim - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "psf"
+quelle_label: "Britannica"
+node_kind: "core"
+wert: "250"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Roof capacity claim - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_House_Lexington_Massachusetts__012__Roof_capacity_claim
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_House_Lexington_Massachusetts__012__Roof_capacity_claim
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Roof capacity claim
+- **Wert:** 250
+- **Einheit:** psf
+- **Methode/Datenmodell/Software:** Britannica
+- **Bilanzgrenze:** Dachtragfähigkeit
+- **Quelle:** Britannica
+- **Vertrauensgrad:** teilweise belegt

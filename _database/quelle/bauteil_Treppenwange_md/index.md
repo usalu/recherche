@@ -1,15 +1,20 @@
-﻿---
-id: "bauteil_Treppenwange_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteil/Treppenwange.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteil_Treppenwange_md"
+title: "bauteil_Treppenwange_md"
+build_status: "promoted_phase42"
+source_filename: "Treppenwange.md"
+legacy_type: "Bauteil"
+---
+
 # bauteil_Treppenwange_md
 
-## Source Archive
+## Kurzdefinition
 
-- Original path: bauteil/Treppenwange.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: bauteiltyp/Treppenwange
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

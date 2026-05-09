@@ -1,20 +1,27 @@
-﻿---
-id: "Zukunftbau"
-entity: "foerderprogramm"
-build_status: "clean_phase20"
-title: "Zukunftbau"
 ---
+entity: "foerderprogramm"
+id: "Zukunftbau"
+title: "Zukunftbau"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "foerderprogramm\\Zukunftbau.md"
+node_kind: "core"
+---
+
 # Zukunftbau
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/foerderprogramm/Zukunftbau
-- Build rule: typed path IDs only.
+### Legacy Source: foerderprogramm\Zukunftbau.md
 
-## Imported Staging Nodes
+- Map action: move_as_core_or_context
+- Target role in map: primary
+- Raw mapped target: foerderprogramm/Zukunftbau
+- Original primary target: foerderprogramm/Zukunftbau
+- Original secondary targets: 
 
-- Source: _graph/foerderprogramm/Zukunftbau
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+---
+type: Förderprogramm
+name: Zukunft Bau
+homepage: https://www.zukunftbau.de
+---

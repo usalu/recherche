@@ -1,20 +1,13 @@
-﻿---
-id: "Heterogenitaet_Chargen"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Heterogenitaet / Chargenvarianz"
 ---
+entity: "huerde"
+id: "Heterogenitaet_Chargen"
+title: "Heterogenitaet / Chargenvarianz"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Heterogenitaet / Chargenvarianz
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Heterogenitaet_Chargen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Heterogenitaet_Chargen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Heterogene Chargen, unterschiedliche Staerken, Masse, Zustaende oder fehlende Homogenitaet.

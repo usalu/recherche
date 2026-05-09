@@ -1,20 +1,25 @@
-﻿---
-id: "KA13_Kristian_Augusts_gate_13_Oslo__010__HCS_Abmessung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "HCS-Abmessung - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# HCS-Abmessung - KA13 / Kristian Augusts gate 13, Oslo â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "KA13_Kristian_Augusts_gate_13_Oslo__010__HCS_Abmessung"
+title: "HCS-Abmessung - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "m"
+quelle_label: "S6"
+node_kind: "core"
+wert: "6,5 × 1,2"
+fallstudie: "fallstudie/KA13_Kristian_Augusts_gate_13_Oslo"
+bauobjekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+projekt:
+  - "KA13_Kristian_Augusts_gate_13_Oslo"
+---
 
-## Clean Node
+# HCS-Abmessung - KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__010__HCS_Abmessung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/KA13_Kristian_Augusts_gate_13_Oslo__010__HCS_Abmessung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** HCS-Abmessung
+- **Wert:** 6,5 × 1,2
+- **Einheit:** m
+- **Methode/Datenmodell/Software:** Thesis-/Sekundärquelle
+- **Bilanzgrenze:** HCS
+- **Quelle:** S6
+- **Vertrauensgrad:** teilweise belegt

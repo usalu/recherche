@@ -1,20 +1,25 @@
-﻿---
-id: "55_Great_Suffolk_Street_London__007__CO_Einsparung_Stahlreuse"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Einsparung Stahlreuse - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# COâ‚‚-Einsparung Stahlreuse - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "55_Great_Suffolk_Street_London__007__CO_Einsparung_Stahlreuse"
+title: "CO₂-Einsparung Stahlreuse - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t CO₂ / CO₂e"
+quelle_label: "ASBP, NLA"
+node_kind: "core"
+wert: "ca. 50"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+bauobjekt:
+  - "55_Great_Suffolk_Street_London"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+---
 
-## Clean Node
+# CO₂-Einsparung Stahlreuse - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/55_Great_Suffolk_Street_London__007__CO_Einsparung_Stahlreuse
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/55_Great_Suffolk_Street_London__007__CO_Einsparung_Stahlreuse
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Einsparung Stahlreuse
+- **Wert:** ca. 50
+- **Einheit:** t CO₂ / CO₂e
+- **Methode/Datenmodell/Software:** Vergleich zu A1-A3 2.5 kgCO₂e/kg steel
+- **Bilanzgrenze:** Stahl des externen Kerns
+- **Quelle:** ASBP, NLA
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Recyclinghaus_Hannover__006__gebundener_CO_Anteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "gebundener COâ‚‚-Anteil - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# gebundener COâ‚‚-Anteil - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Recyclinghaus_Hannover__006__gebundener_CO_Anteil"
+title: "gebundener CO₂-Anteil - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t CO₂"
+quelle_label: "ZAB"
+node_kind: "core"
+wert: "ca. 100"
+fallstudie: "fallstudie/Recyclinghaus_Hannover"
+bauobjekt:
+  - "Recyclinghaus_Hannover"
+projekt:
+  - "Recyclinghaus_Hannover"
+---
 
-## Clean Node
+# gebundener CO₂-Anteil - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Recyclinghaus_Hannover__006__gebundener_CO_Anteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recyclinghaus_Hannover__006__gebundener_CO_Anteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** gebundener CO₂-Anteil
+- **Wert:** ca. 100
+- **Einheit:** t CO₂
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude / Materialbindung
+- **Quelle:** ZAB
+- **Vertrauensgrad:** teilweise belegt; nicht Direct-Reuse-Einsparung

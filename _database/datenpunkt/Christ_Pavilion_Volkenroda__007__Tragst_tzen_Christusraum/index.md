@@ -1,20 +1,25 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__007__Tragst_tzen_Christusraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "TragstÃ¼tzen Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# TragstÃ¼tzen Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Christ_Pavilion_Volkenroda__007__Tragst_tzen_Christusraum"
+title: "Tragstützen Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "gmp"
+node_kind: "core"
+wert: "9"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Tragstützen Christusraum - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Christ_Pavilion_Volkenroda__007__Tragst_tzen_Christusraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Christ_Pavilion_Volkenroda__007__Tragst_tzen_Christusraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Tragstützen Christusraum
+- **Wert:** 9
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektbeschreibung
+- **Bilanzgrenze:** Dachtragwerk
+- **Quelle:** gmp
+- **Vertrauensgrad:** belegt

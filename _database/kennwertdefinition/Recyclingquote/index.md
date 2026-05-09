@@ -1,20 +1,13 @@
-﻿---
-id: "Recyclingquote"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Recyclingquote"
 ---
+entity: "kennwertdefinition"
+id: "Recyclingquote"
+title: "Recyclingquote"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Recyclingquote
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Recyclingquote
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Recyclingquote
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Anteil von Recyclingmaterial, Upcycling/Recycling-Anteil oder Recyclingrate.

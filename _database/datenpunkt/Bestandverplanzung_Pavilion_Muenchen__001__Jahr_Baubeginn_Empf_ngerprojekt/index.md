@@ -1,20 +1,25 @@
-﻿---
-id: "Bestandverplanzung_Pavilion_Muenchen__001__Jahr_Baubeginn_Empf_ngerprojekt"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Jahr / Baubeginn EmpfÃ¤ngerprojekt - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Jahr / Baubeginn EmpfÃ¤ngerprojekt - Bestandverplanzung Pavilion, MÃ¼nchen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Bestandverplanzung_Pavilion_Muenchen__001__Jahr_Baubeginn_Empf_ngerprojekt"
+title: "Jahr / Baubeginn Empfängerprojekt - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "PRECS/JCP"
+node_kind: "core"
+wert: "2008"
+fallstudie: "fallstudie/Bestandverplanzung_Pavilion_Muenchen"
+bauobjekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+projekt:
+  - "Bestandverplanzung_Pavilion_Muenchen"
+---
 
-## Clean Node
+# Jahr / Baubeginn Empfängerprojekt - Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Bestandverplanzung_Pavilion_Muenchen__001__Jahr_Baubeginn_Empf_ngerprojekt
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Bestandverplanzung_Pavilion_Muenchen__001__Jahr_Baubeginn_Empf_ngerprojekt
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Jahr / Baubeginn Empfängerprojekt
+- **Wert:** 2008
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** PRECS-Fallstudiendatenbank
+- **Bilanzgrenze:** Projekt
+- **Quelle:** PRECS/JCP
+- **Vertrauensgrad:** belegt

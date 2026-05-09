@@ -1,20 +1,25 @@
-﻿---
-id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__006__Einbau"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Einbau - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Einbau - Melkinlaituri Primary School and Day-care Centre, Helsinki â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__006__Einbau"
+title: "Einbau - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Datum"
+quelle_label: "ReCreate"
+node_kind: "core"
+wert: "Ende Juni 2025"
+fallstudie: "fallstudie/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+bauobjekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+projekt:
+  - "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"
+---
 
-## Clean Node
+# Einbau - Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__006__Einbau
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki__006__Einbau
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Einbau
+- **Wert:** Ende Juni 2025
+- **Einheit:** Datum
+- **Methode/Datenmodell/Software:** ReCreate
+- **Bilanzgrenze:** Baustelle Jätkäsaari
+- **Quelle:** ReCreate
+- **Vertrauensgrad:** belegt

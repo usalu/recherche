@@ -1,15 +1,66 @@
-﻿---
-id: "bauteilboerse_genbyg_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteilboerse/genbyg.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteilboerse_genbyg_md"
+title: "bauteilboerse_genbyg_md"
+build_status: "promoted_phase42"
+source_filename: "genbyg.md"
+legacy_type: "Bauteilbörse"
+---
+
 # bauteilboerse_genbyg_md
 
-## Source Archive
+## Kurzbeschreibung
+Genbyg ist ein(e) Webshop und Markt für gebrauchte Baumaterialien mit physischem Lager mit Bezug zu Dänemark. Im Reuse-Kontext liegt der Schwerpunkt auf: Bergung und Verkauf gebrauchter Bauprodukte und historischer/zeitgenössischer Bauteile.
 
-- Original path: bauteilboerse/genbyg.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: split_platform_profile; old target: software_digitaltool/genbyg
+## Land / Region
+Dänemark
+
+## Betreiber
+Genbyg A/S
+
+## Zielgruppe
+private und professionelle Käufer, Sanierung, Design, Bauhandwerk
+
+## Plattformtyp
+Webshop und Markt für gebrauchte Baumaterialien mit physischem Lager
+
+## Bauteilkategorien
+gebrauchte Türen, Fenster, Holzböden, Ziegel/Backsteine, Sanitär, Leuchten, Beschläge, Holz, Möbel und architektonische Bauteile
+
+## Art der Wiederverwendung
+Bergung und Verkauf gebrauchter Bauprodukte und historischer/zeitgenössischer Bauteile
+
+## Funktionen
+Online-Shop; Kategorien; Verkauf aus Lagerbestand; teils projektbezogene Beschaffung
+
+## Daten je Bauteil
+Produktseiten mit Fotos, Preisen und Beschreibungen; genaue technische Daten je Produkt unterschiedlich
+
+## Qualität / Prüfung
+nicht einheitlich angegeben; Käufer müssen Zustand und technische Eignung prüfen
+
+## Logistik / Lagerung
+physisches Lager/Shop in Dänemark; Versand/Abholung je Produkt nicht pauschal angegeben
+
+## Geschäftsmodell
+Verkauf gebrauchter Baumaterialien; Preise pro Artikel; Gebührenmodell nicht angegeben
+
+## Ökologische Bewertung
+vermeidet Abfall und bewahrt Materialien mit grauer Energie; quantitative Bewertung je Produkt nicht angegeben
+
+## Stärken
+langjährige Reuse-Praxis; sehr direkter Webshop; breite Materialpalette
+
+## Schwächen / Hemmnisse
+Bestände sind Einzelstücke; Normen, Brandschutz und Energieanforderungen müssen geprüft werden
+
+## Relevanz für zirkuläres Bauen
+hoch als nordisches Beispiel einer professionellen Bauteilbörse mit Webshop.
+
+## Quellen und Links
+- https://genbyg.dk/
+- https://pub.norden.org/temanord2021-508/
+- https://www.salvoweb.com/directory/24044-genbyg-as
+
+---
+Hinweis: Verfügbarkeit, Zustand, Maße, Normen- und Brandschutzanforderungen müssen vor Spezifikation oder Kauf direkt mit Anbieter/Betreiber geprüft werden.

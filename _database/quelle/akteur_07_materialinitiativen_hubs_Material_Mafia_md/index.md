@@ -1,15 +1,55 @@
-﻿---
-id: "akteur_07_materialinitiativen_hubs_Material_Mafia_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "akteur/07_materialinitiativen_hubs/Material_Mafia.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "akteur_07_materialinitiativen_hubs_Material_Mafia_md"
+title: "akteur_07_materialinitiativen_hubs_Material_Mafia_md"
+build_status: "promoted_phase42"
+source_filename: "Material_Mafia.md"
+---
+
 # akteur_07_materialinitiativen_hubs_Material_Mafia_md
 
-## Source Archive
+## Verknüpfungen
 
-- Original path: akteur/07_materialinitiativen_hubs/Material_Mafia.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_core; old target: akteur/Material_Mafia
+- **Übergeordnete Themen:** [[akteur/index]], [[reuse_strategie/Bauteilwiederverwendung]], [[reuse_strategie/Zirkulaeres_Bauen]], [[reuse_strategie/Urban_Mining]]
+- **Verwandte Dateien:** [[akteur/Haus_der_Materialisierung]], [[akteur/Kunst_Stoffe_Berlin]], [[akteur/ReUse_Berlin]], [[akteur/IfM_Initiativen_fuer_Materialkreislaeufe]], [[fallstudie/Haus_der_Statistik]]
+- **Relevante Akteure / Fallstudien / Materialien / Standards / Methoden:** regionale Wiederverwendungsakteure, Materialinventar, selektiver Rückbau, Bauteilkatalog, Gebäuderessourcenpass, zirkuläre Planung, Rückbau- und Reuse-Logistik
+
+## Kurzdefinition
+
+Material Mafia ist ein Berliner Akteur, der Restmaterialien aus Industrie, Messebau, Kultur, Kreativproduktion und anderen Quellen rettet, sortiert und für neue Nutzungen verfügbar macht.
+
+**Akteurstyp:** Berliner Materialvermittler und sozial-ökologischer Reuse-Akteur.
+
+## Relevanz für Wiederverwendung im Bauwesen
+
+Material Mafia ist für das Bauwesen relevant, weil viele baunahe Materialien nicht über klassische Baustoffmärkte zirkulieren. Der Akteur zeigt Materialannahme, Sortierung, Lagerung, kreative Umnutzung und Vermittlung im urbanen Maßstab. Besonders wichtig ist er für Innenausbau, temporäre Architektur, Ausstellung, Möbel, Bildung und Kulturorte.
+
+## Fachinhalt
+
+Der Schwerpunkt liegt eher auf Material-ReUse als auf bauaufsichtlich geregelten Bauprodukten. Damit ist Material Mafia kein Ersatz für technische Reuse-Fachplanung, aber ein wichtiger Praxisort.
+
+Typische Materialien können Platten, Holz, Textilien, Requisiten, Möbelteile, Messebau- und Ausstellungselemente, Industrie- und Kreativmaterialien sein.
+
+Die Arbeit verbindet ökologische Abfallvermeidung mit sozialer und kultureller Bildung. Materialien werden nicht nur verkauft, sondern als Ressource neu gedeutet.
+
+Im Kontext des Hauses der Materialisierung und Berliner Materialinitiativen ist Material Mafia Teil einer lokalen Reuse-Infrastruktur.
+
+## Praxisbezug / Beispiele
+
+Besonders geeignet für Prototypen, Workshops, temporäre Einbauten, Ausstellungssysteme, Möbelbau, soziale Infrastruktur, Kultur- und Bildungsprojekte. Für dauerhafte Bauwerke müssen Brandschutz, Schadstoffe, Hygiene, Tragfähigkeit und Haftung gesondert geprüft werden.
+
+## Herausforderungen / offene Fragen
+
+- fehlende Produktdaten und Prüfzeugnisse
+- begrenzter Einsatz in genehmigungspflichtigen Bauprodukten
+- kleinteilige Materialmengen
+- abhängig von Lagerflächen und Projektfinanzierung
+- Schnittstelle zur professionellen Bauplanung muss aktiv organisiert werden
+
+## Quellen
+
+- https://www.material-mafia.net/
+- https://material-initiativen.org/material-mafia-berlin/
+- https://material-mafia.com/
+- https://hausdermaterialisierung.org/wp-content/uploads/2022/01/Pressespiegel-Haus-der-Materialisierung_Langversion.pdf
+- https://material-initiativen.org/

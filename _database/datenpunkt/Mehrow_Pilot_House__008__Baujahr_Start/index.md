@@ -1,20 +1,25 @@
-﻿---
-id: "Mehrow_Pilot_House__008__Baujahr_Start"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Baujahr / Start - Mehrow Pilot House â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Baujahr / Start - Mehrow Pilot House â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Mehrow_Pilot_House__008__Baujahr_Start"
+title: "Baujahr / Start - Mehrow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "2005"
+fallstudie: "fallstudie/Mehrow_Pilot_House"
+bauobjekt:
+  - "Mehrow_Pilot_House"
+projekt:
+  - "Mehrow_Pilot_House"
+---
 
-## Clean Node
+# Baujahr / Start - Mehrow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Mehrow_Pilot_House__008__Baujahr_Start
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Mehrow_Pilot_House__008__Baujahr_Start
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Baujahr / Start
+- **Wert:** 2005
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** PRECS-Falldatenbank
+- **Bilanzgrenze:** Empfängerprojekt
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

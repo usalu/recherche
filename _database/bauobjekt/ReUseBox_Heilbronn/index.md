@@ -1,20 +1,18 @@
-﻿---
-id: "ReUseBox_Heilbronn"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "ReUseBox, Heilbronn"
 ---
+entity: "bauobjekt"
+id: "ReUseBox_Heilbronn"
+title: "ReUseBox, Heilbronn"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\ReUseBox_Heilbronn.md"
+node_kind: "core"
+fallstudie: "fallstudie/ReUseBox_Heilbronn"
+projekt:
+  - "ReUseBox_Heilbronn"
+---
+
 # ReUseBox, Heilbronn
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/ReUseBox_Heilbronn
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/ReUseBox_Heilbronn
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

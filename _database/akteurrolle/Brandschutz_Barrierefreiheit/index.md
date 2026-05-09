@@ -1,20 +1,13 @@
-﻿---
-id: "Brandschutz_Barrierefreiheit"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Brandschutz / Barrierefreiheit"
 ---
+entity: "akteurrolle"
+id: "Brandschutz_Barrierefreiheit"
+title: "Brandschutz / Barrierefreiheit"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Brandschutz / Barrierefreiheit
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Brandschutz_Barrierefreiheit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Brandschutz_Barrierefreiheit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Brandschutz-, Sicherheits-, Barrierefreiheits- oder Sicherheitskoordination-Rolle.

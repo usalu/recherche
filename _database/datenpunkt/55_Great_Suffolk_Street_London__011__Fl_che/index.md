@@ -1,20 +1,25 @@
-﻿---
-id: "55_Great_Suffolk_Street_London__011__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "55_Great_Suffolk_Street_London__011__Fl_che"
+title: "Fläche - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "ASBP, NLA"
+node_kind: "core"
+wert: "1412"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+bauobjekt:
+  - "55_Great_Suffolk_Street_London"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+---
 
-## Clean Node
+# Fläche - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/55_Great_Suffolk_Street_London__011__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/55_Great_Suffolk_Street_London__011__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 1412
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektdaten
+- **Bilanzgrenze:** Gebäude/Projekt
+- **Quelle:** ASBP, NLA
+- **Vertrauensgrad:** belegt

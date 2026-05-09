@@ -1,20 +1,43 @@
-﻿---
-id: "Liander_Alliander_HQ_Duiven__006__Materialpass_dokumentierte_Materialien"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Materialpass / dokumentierte Materialien - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Materialpass / dokumentierte Materialien - Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Liander_Alliander_HQ_Duiven__006__Materialpass_dokumentierte_Materialien"
+title: "Materialpass / dokumentierte Materialien - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Daten nicht als Reuse zählen"
+quelle_label: "S1/S3 zu prüfen"
+material_label: "diverse"
+node_kind: "core"
+herkunft_label: "Projektinventar"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Liander_Alliander_HQ_Duiven"
+bauobjekt:
+  - "Liander_Alliander_HQ_Duiven"
+neue_funktion: "Datenbasis"
+bauteil_label: "Materialpass / dokumentierte Materialien"
+projekt:
+  - "Liander_Alliander_HQ_Duiven"
+alte_funktion: "Materialinformation"
+---
 
-## Clean Node
+# Materialpass / dokumentierte Materialien - Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Liander_Alliander_HQ_Duiven__006__Materialpass_dokumentierte_Materialien
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Liander_Alliander_HQ_Duiven__006__Materialpass_dokumentierte_Materialien
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Materialpass / dokumentierte Materialien
+- **Material:** diverse
+- **Herkunft:** Projektinventar
+- **alte Funktion:** Materialinformation
+- **neue Funktion:** Datenbasis
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** digitale Dokumentation
+- **Verbindung:** entfällt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Rückbaubarkeit / Dokumentation
+- **Norm/Recht:** unbekannt
+- **Hürde:** Daten nicht als Reuse zählen
+- **Quelle:** S1/S3 zu prüfen
+- **unbekannt:** Datenmodell, Software

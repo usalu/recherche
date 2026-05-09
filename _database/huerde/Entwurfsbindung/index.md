@@ -1,20 +1,13 @@
-﻿---
-id: "Entwurfsbindung"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Entwurfsbindung durch vorhandene Bauteile"
 ---
+entity: "huerde"
+id: "Entwurfsbindung"
+title: "Entwurfsbindung durch vorhandene Bauteile"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Entwurfsbindung durch vorhandene Bauteile
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Entwurfsbindung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Entwurfsbindung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gefundene Bauteile bestimmen Entwurf, Raster, Hoehen, Grundriss oder Lastannahmen.

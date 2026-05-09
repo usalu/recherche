@@ -1,20 +1,22 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__007__Albert_Co"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Albert & Co - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Albert & Co - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Grande_Halle_de_Colombelles__007__Albert_Co"
+title: "Albert & Co - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S6]"
+node_kind: "relation"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Albert & Co - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Grande_Halle_de_Colombelles__007__Albert_Co
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Grande_Halle_de_Colombelles__007__Albert_Co
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Albert & Co
+- **Beziehung zur Fallstudie:** Umwelt/HQE/technische Leitung
+- **Quelle/Beleg:** [S6]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Reuse-Lot-Konzeption / Carbon-Bilanz

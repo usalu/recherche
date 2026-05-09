@@ -1,20 +1,25 @@
-﻿---
-id: "ReCrete_footbridge_reused_concrete_blocks__001__Anzahl_Betonbl_cke"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anzahl BetonblÃ¶cke - Re:Crete footbridge â€” Fallstudie Direct Reuse"
 ---
-# Anzahl BetonblÃ¶cke - Re:Crete footbridge â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "ReCrete_footbridge_reused_concrete_blocks__001__Anzahl_Betonbl_cke"
+title: "Anzahl Betonblöcke - Re:Crete footbridge — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "S1, S2"
+node_kind: "core"
+wert: "25"
+fallstudie: "fallstudie/ReCrete_footbridge_reused_concrete_blocks"
+bauobjekt:
+  - "ReCrete_footbridge_reused_concrete_blocks"
+projekt:
+  - "ReCrete_footbridge_reused_concrete_blocks"
+---
 
-## Clean Node
+# Anzahl Betonblöcke - Re:Crete footbridge — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/ReCrete_footbridge_reused_concrete_blocks__001__Anzahl_Betonbl_cke
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/ReCrete_footbridge_reused_concrete_blocks__001__Anzahl_Betonbl_cke
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anzahl Betonblöcke
+- **Wert:** 25
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Publikationsangabe
+- **Bilanzgrenze:** Bogenstruktur
+- **Quelle:** S1, S2
+- **Vertrauensgrad:** belegt

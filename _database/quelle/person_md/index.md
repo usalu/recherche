@@ -1,15 +1,12 @@
-﻿---
-id: "person_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "person.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "person_md"
+title: "person_md"
+build_status: "promoted_phase42"
+source_filename: "person.md"
+legacy_type: "Type"
+---
+
 # person_md
 
-## Source Archive
 
-- Original path: person.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: merge_into_index; old target: akteur/index

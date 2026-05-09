@@ -1,20 +1,25 @@
-﻿---
-id: "Montessori_Maassluis__001__Entwurf"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Entwurf - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Entwurf - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Montessori_Maassluis__001__Entwurf"
+title: "Entwurf - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "Kraaijvanger project page"
+node_kind: "core"
+wert: "2024"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# Entwurf - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Montessori_Maassluis__001__Entwurf
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Montessori_Maassluis__001__Entwurf
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Entwurf
+- **Wert:** 2024
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Projekt
+- **Quelle:** Kraaijvanger project page
+- **Vertrauensgrad:** belegt

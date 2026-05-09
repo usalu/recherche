@@ -1,20 +1,22 @@
-﻿---
-id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__006__LIIKE_Oy_Arkkitehtistudio"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "LIIKE Oy Arkkitehtistudio - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# LIIKE Oy Arkkitehtistudio - HÃ¤rmÃ¤lÃ¤nranta / A-Kruunu ReCreate mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__006__LIIKE_Oy_Arkkitehtistudio"
+title: "LIIKE Oy Arkkitehtistudio - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Uusiouutiset"
+node_kind: "relation"
+fallstudie: "fallstudie/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+bauobjekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+projekt:
+  - "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"
+---
 
-## Clean Node
+# LIIKE Oy Arkkitehtistudio - Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__006__LIIKE_Oy_Arkkitehtistudio
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere__006__LIIKE_Oy_Arkkitehtistudio
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** LIIKE Oy Arkkitehtistudio
+- **Beziehung zur Fallstudie:** ReCreate-Finnish cluster
+- **Quelle/Beleg:** Uusiouutiset
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Rolle am Gebäude unbekannt

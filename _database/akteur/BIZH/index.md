@@ -1,20 +1,496 @@
-﻿---
-id: "BIZH"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "BIZH"
 ---
+entity: "akteur"
+id: "BIZH"
+title: "BIZH"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "akteur\\07_materialinitiativen_hubs\\BIZH.md"
+node_kind: "core"
+---
+
 # BIZH
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/akteur/BIZH
-- Build rule: typed path IDs only.
+### Legacy Source: akteur\07_materialinitiativen_hubs\BIZH.md
 
-## Imported Staging Nodes
+- Map action: move_as_core
+- Target role in map: primary
+- Raw mapped target: akteur/BIZH
+- Original primary target: akteur/BIZH
+- Original secondary targets: akteurtyp/materialinitiativen_hubs
 
-- Source: _graph/akteur/BIZH
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# BIZH
 
+## Verknüpfungen
+
+**Übergeordnete Themen**
+- Akteure / Praxis, Handel, Netzwerke
+- Reallabore und Transformationsorte für zirkuläres Bauen
+- Handwerk, Baupraxis und neue Geschäftsmodelle im Bestand
+- Urban Mining, selektiver Rückbau, Wiederverwendung und prototypische Erprobung
+
+**Verwandte Dateien**
+- `fallstudie/` – Modell-Campus ringberlin, Wiederverwendung von Stahlträgern, Trennwänden, Drahtglas und gebäudetechnischen Komponenten
+- `werkzeug/` – Materialaudit, Bauteilkataster, Reuse-Assessment, Matchmaking, Dokumentation, Prototyping
+- `foerderprogramm/` – Reallaborförderung, Bauwende-/Innovationsprogramme, Berliner Transformations- und Handwerksförderung
+- `logistik/` – Ausbau, Zwischenlager, Sortierung, Transport, Wiedereinbau, Rückbaukoordination
+- `reuse_strategie/` – Bestandserhalt, Bauteilwiederverwendung, „form follows availability“, Wiedereinbaufähigkeit, Design for Disassembly
+
+**Relevante Akteure / Fallstudien / Materialien / Standards / Methoden**
+- Handwerkskammer Berlin / BIZH-Kontakt, KOIMO, ringberlin / Modell-Campus ringberlin, Innungen, Handwerksbetriebe, Start-ups, Hochschulen, Verwaltung
+- Materialien: feuerverzinkte Stahlträger HEA 160 / HEA 200, Trennwandsysteme, historische Drahtglasscheiben, technische Komponenten wie Lufterhitzer
+- Methoden: Reallabor, Prototypen-Workshop, Ideenwerkstatt, Matchmaking, reale 1:1-Erprobung, Variantenvergleich, Rückbau- und Wiedereinbauplanung
+
+## Kurzdefinition
+
+BIZH steht im hier relevanten Kontext für das **Berliner Innovationszentrum Handwerk**. Für die Wiederverwendung im Bauwesen ist besonders das **Reallabor Zirkuläres Bauen** relevant, das auf dem Modell-Campus ringberlin Zirkularität als Fokusthema setzt und sich gezielt an das Bauhandwerk richtet. Es ist kein klassischer Bauteilhändler und auch kein reines Forschungsinstitut, sondern eine praxisnahe Innovations- und Erprobungsinfrastruktur an der Schnittstelle von Handwerk, Projektentwicklung, Forschung, Verwaltung und Materialströmen.
+
+Die öffentlich zugänglichen Projektinformationen beschreiben das Reallabor als Ort, an dem Prototypen mit realen Materialien, echten Bauprozessen und unmittelbarer Nähe zu aktiven oder geplanten Bauprojekten getestet werden. Es soll Hindernisse sichtbar machen, Varianten vergleichen und neue Geschäftsfelder für zirkuläres Bauen im Handwerk entwickeln.
+
+**Einordnung im Akteursfeld:** BIZH ist vor allem ein **Reallabor-, Vermittlungs- und Transformationsakteur**. Es ersetzt keine Materialbörse, kein Lager und keine Fachplanung, kann aber die Schnittstelle bilden, an der Bauteile aus konkreten Rückbau- oder Bestandsprojekten in handwerklich tragfähige Anwendungen übersetzt werden.
+
+## Relevanz für Wiederverwendung im Bauwesen
+
+Die zentrale Relevanz liegt darin, dass Wiederverwendung nicht nur als planerisches Ziel, sondern als **handwerklich umsetzbarer Prozess** verstanden wird. Viele Wiederverwendungsstrategien scheitern nicht an der Idee, sondern an praktischen Fragen: Wer baut aus? Wer prüft? Wer lagert? Wer übernimmt Gewährleistung? Wer passt Bauteile an? Wer koordiniert Terminfenster zwischen Rückbau und Neubau? BIZH adressiert genau diese Lücke, indem es Handwerksbetriebe und mittelständische Bauunternehmen früh in die Erprobung einbindet.
+
+Für Forschungsrepo-Zwecke ist BIZH besonders wichtig, weil hier die Wiederverwendung von Bauteilen nicht abstrakt, sondern an realen Fallbeispielen mit klaren Materialtypen gezeigt wird. Die Beispiele mit Stahlträgern, Trennwänden und Drahtglasscheiben zeigen unterschiedliche Reuse-Logiken:
+- **Stahlträger**: tragwerksnahe Wiederverwendung mit hohen Anforderungen an Herkunft, Zustand, Statik, Korrosionsschutz, Transport und Nachweisführung.
+- **Trennwände**: innenausbaunahe Wiederverwendung, bei der Demontierbarkeit, Raster, Brandschutz, Akustik, Anschlussdetails und Adaptierbarkeit entscheidend sind.
+- **Drahtglasscheiben**: historisches Bestandsmaterial mit hoher gestalterischer und materieller Qualität, aber potenziell schwierigen Norm-, Sicherheits- und Zulassungsfragen.
+- **Technische Komponenten**: Wiederverwendung muss mit Funktion, Wartung, Energieeffizienz, Hygiene, Ersatzteilen und Betreiberverantwortung abgeglichen werden.
+
+Damit ist BIZH ein Beispiel für den Übergang von „Reuse als Einzelfall“ zu „Reuse als Handwerks- und Prozessinnovation“.
+
+## Fachinhalt
+
+### Rolle im Ökosystem
+
+BIZH bündelt mehrere Funktionen:
+- **Vermittlung** zwischen Handwerksbetrieben, Planenden, Start-ups, Hochschulen, Projektentwicklern, Innungen, Kammern und öffentlicher Hand.
+- **Anwendungsorientierte Erprobung** von Bauteilwiederverwendung im Maßstab 1:1.
+- **Prototypisierung** von Bauteilen, Anschlüssen, Prozessen und Geschäftsmodellen.
+- **Wissenstransfer** in Richtung Handwerk, Mittelstand und Baupraxis.
+- **Sichtbarmachung** wiederverwendbarer Materialien als Ressource, nicht als Abfall.
+- **Vorbereitung neuer Dienstleistungen** wie Rückbauprüfung, Bauteilaufbereitung, Montage gebrauchter Bauteile, Reuse-Beratung oder mobile Werkstattprozesse.
+
+### Abgrenzung zu anderen Akteursarten
+
+- Gegenüber **Wiederverwendungshändlern** wie RotorDC oder bauteilorientierten Börsen ist BIZH nicht primär Verkaufs- und Lagerort.
+- Gegenüber **Beratungsakteuren** liegt der Schwerpunkt weniger auf Gutachten, sondern auf handwerklicher Umsetzung und Erprobung.
+- Gegenüber **Forschungsinstituten** steht nicht Publikation, sondern Anwendung und betriebliche Übersetzung im Vordergrund.
+- Gegenüber **Planungsbüros** liegt die Stärke nicht im Entwurf eines einzelnen Gebäudes, sondern in der Aktivierung eines Netzwerks für zirkuläre Baupraxis.
+
+### Typische Arbeitsfragen
+
+Für eine BIZH-nahe Reuse-Erprobung sind folgende Fragen entscheidend:
+1. Welche Bauteile sind verfügbar, in welcher Menge, welchem Zustand und welchem Zeitfenster?
+2. Welche handwerklichen Schritte sind nötig: Ausbau, Reinigung, Sortierung, Zuschnitt, Ertüchtigung, Montage?
+3. Welche Nachweise werden gebraucht: Herkunft, Materialqualität, Brandschutz, Tragfähigkeit, Schadstofffreiheit, CE-/Produktnormen, Dokumentation?
+4. Welche neuen Details entstehen, wenn gebrauchte Bauteile nicht exakt den Neuproduktmaßen entsprechen?
+5. Welche Betriebe können die Arbeiten realistisch übernehmen?
+6. Wie wird die Wirtschaftlichkeit berechnet: vermiedene Entsorgung, Materialkosten, Arbeitszeit, Lagerkosten, Prüfkosten, Risikoaufschläge?
+7. Wie werden Erkenntnisse so dokumentiert, dass sie für weitere Projekte nutzbar sind?
+
+### Kriterien für die Aufnahme in das Forschungsrepo
+
+BIZH sollte in diesem Repo nicht als allgemeine Nachhaltigkeitsinitiative geführt werden, sondern als Beispiel für:
+- **handwerkszentrierte Reuse-Infrastruktur**
+- **Reallabor als Methode zur Prozessentwicklung**
+- **Verknüpfung von Materialverfügbarkeit und praktischer Bauausführung**
+- **Fallstudienorientierung statt abstrakter Kreislaufwirtschaft**
+- **Transfer zwischen Forschung, Projektentwicklung, Verwaltung und Betrieb**
+
+## Praxisbezug / Beispiele
+
+### Reallabor Zirkuläres Bauen am Modell-Campus ringberlin
+
+Das Reallabor ist direkt auf dem Modell-Campus ringberlin verortet. Diese räumliche Nähe ist wesentlich, weil wiederverwendbare Bauteile und zukünftige Einbauorte nicht nur theoretisch abgeglichen, sondern vor Ort geprüft werden können. Dadurch lassen sich Demontage, Lagerung, Bearbeitung und Wiedereinbau als zusammenhängender Prozess betrachten.
+
+### Zirkuläre Trennwände
+
+Ein dokumentiertes Beispiel ist die Wiederverwendung von 37 gebrauchten Trennwandsystemen aus dem ehemaligen ZÜBLIN-Haus in Stuttgart für den zukünftigen Makerspace Halle 2 des Modell-Campus ringberlin. Dieses Beispiel zeigt die Notwendigkeit, Angebot und Nachfrage frühzeitig abzugleichen: Trennwände sind nur dann gut wiederverwendbar, wenn Raster, Höhen, Anschlussdetails, Brandschutz- und Akustikanforderungen sowie optische Toleranzen in die Planung integriert werden.
+
+### Zirkuläre Stahlträger
+
+Ein weiteres Beispiel betrifft 44 Tonnen feuerverzinkte Stahlträger der Typen HEA 160 und HEA 200, die aus dem Berliner Ostbahnhof ausgebaut wurden und im zukünftigen Makerspace Halle 2 wieder eingebaut werden sollen. Das Beispiel ist besonders relevant, weil Stahl als materialintensives und emissionsrelevantes Bauteil hohe ökologische Einsparpotenziale bietet, aber tragwerksnahe Nachweis- und Haftungsfragen auslöst.
+
+### Drahtglasscheiben
+
+Die Drahtglasscheiben des Sheddachs der Halle 2, Baujahr 1938, werden als Wiederverwendungspotenzial beschrieben. Hier geht es weniger um Standardisierung als um die Frage, wie ein historisches Bestandsbauteil von „Bauschutt“ zu einem marktfähigen Produkt werden kann. Relevant sind dabei Sicherheitsanforderungen, Glasnormen, mögliche Sekundärnutzungen, Reinigungs- und Einfassungsdetails.
+
+### Nutzen für Handwerksbetriebe
+
+Für Handwerksbetriebe kann ein Reallabor folgende Nutzen erzeugen:
+- Entwicklung neuer Leistungen im Rückbau, in der Bauteilprüfung und in der Montage gebrauchter Komponenten.
+- Sichtbarkeit als Kompetenzträger der Bauwende.
+- Zugang zu Start-ups, Forschung und öffentlicher Förderung.
+- Reduktion von Unsicherheit durch gemeinsame Prototypen und dokumentierte Lernerfahrungen.
+- Erprobung neuer Preis- und Vertragsmodelle für Arbeiten mit gebrauchten Bauteilen.
+
+## Herausforderungen / offene Fragen
+
+- **Nachweisführung:** Besonders bei tragenden und sicherheitsrelevanten Bauteilen ist offen, welche Nachweise wirtschaftlich und rechtlich tragfähig sind.
+- **Gewährleistung und Haftung:** Handwerksbetriebe benötigen klare Vertrags- und Risikoregeln, wenn sie gebrauchte Bauteile bearbeiten oder einbauen.
+- **Zeitlogik:** Rückbau- und Neubauzeitpläne passen häufig nicht zusammen. Ohne Zwischenlager oder flexible Planung entsteht Materialverlust.
+- **Skalierung:** Reallabore zeigen Machbarkeit, ersetzen aber noch keine flächendeckenden Märkte, Normprozesse und Ausschreibungsroutinen.
+- **Kostenstruktur:** Reuse kann Materialkosten sparen, aber Arbeits-, Prüf-, Reinigungs-, Lager- und Koordinationskosten erhöhen.
+- **Datenqualität:** Für jedes Bauteil braucht es belastbare Angaben zu Herkunft, Zustand, Maßen, Material, Schadstoffen und möglicher Verwendung.
+- **Übertragbarkeit:** Erkenntnisse aus ringberlin sind wertvoll, aber nicht automatisch auf andere Regionen, Bauordnungen, Akteurskonstellationen oder Materialtypen übertragbar.
+- **Unklare Rollenverteilung:** Bei neuen Reuse-Prozessen muss früh geklärt werden, wer die Rollen Materialeigentümer, Prüfer, Planer, Logistiker, Händler und Einbauer übernimmt.
+
+## Quellen
+
+- BIZH Berliner Innovationszentrum Handwerk: „Reallabor Zirkuläres Bauen“, https://www.bizh.berlin/reallaborzirkulaeresbauen, abgerufen am 27.04.2026.
+- BIZH: „Zirkuläre Trennwände“, https://www.bizh.berlin/trennwand, abgerufen am 27.04.2026.
+- BIZH: „Zirkuläre Stahlträger“, https://www.bizh.berlin/stahltraeger, abgerufen am 27.04.2026.
+- BIZH: „Drahtglasscheiben / Reallabor zirkuläres Bauen“, https://www.bizh.berlin/drahtglasscheiben, abgerufen am 27.04.2026.
+- Handwerkskammer Berlin: „Auftakt zum Berliner Innovationszentrum Handwerk (BIZH)“, https://www.hwk-berlin.de/termine/auftakt-zum-berliner-innovationszentrum-handwerk-bizh-91,0,evedetail.html?eve=577, abgerufen am 27.04.2026.
+- ringberlin / Projektkommunikation: Informationen zum Modell-Campus ringberlin und BIZH-Pop-up, https://ringberlin.de/, abgerufen am 27.04.2026.
+
+tags:
+  - bizh
+  - reallabor
+  - handwerk
+  - koimo
+  - ringberlin
+  - zirkulaeres-bauen
+  - reuse
+aliases:
+  - BIZ Berlin
+  - BIZH
+  - Reallabor Zirkuläres Bauen
+status: draft-researched
+entity-type: Innovationszentrum / Reallabor / Handwerksplattform
+research-depth: very-deep
+based-on: 05_BIZH_Reallabor.md
+last-updated: 2026-04-23
+
+## 2. Institutionelle Einordnung: Was ist das BIZH?
+
+Das BIZH ist das **Berliner Innovations Zentrum Handwerk**. Laut BIZH ist sein Ziel, einen praxisnahen Ort zu schaffen, an dem Berliner Handwerksbetriebe Zugang zu Ergebnissen aus Wissenschaft und Forschung erhalten und gemeinsam mit Startups, Studierenden und Wissenschaftler:innen Ideen weiterentwickeln. In der aktuellen Umsetzungsphase ist das BIZH physisch auf dem **Modell-Campus ringberlin** verortet.
+
+### Rechtlich-organisatorische Hinweise
+Das Impressum nennt die **KOIMO Development GmbH** als Geschäftsadresse bzw. Betreiberkontext; zugleich werden die **Handwerkskammer Berlin**, **MotionLab ML GmbH** und **ringberlin Projektentwicklungsgesellschaft mbH** als Kooperationspartner benannt. Das ist wichtig, weil der Fall dadurch nicht als rein kommunale oder rein universitäre Struktur erscheint, sondern als **plattformförmige Kooperation zwischen Handwerk, Projektentwicklung und Innovationsökosystem**.
+
+### Historischer Vorlauf
+BIZH beschreibt einen längeren Vorlauf:
+- 2018 formulierte die Handwerkskammer Berlin den Wunsch, Innovation im Handwerk gezielt zu fördern.
+- Daraus entstand eine enge Partnerschaft mit MotionLab.Berlin.
+- In einer Anlaufphase wurden u. a. Workshops, Seminarreihen, Accelerator-/Ideenwerkstattformate und Markt-/Kundenanalysen durchgeführt.
+- 2025 begann die sichtbare Pop-up- bzw. Umsetzungsphase auf ringberlin.
+
+### Warum das für die Forschung relevant ist
+Das Reallabor ist damit kein isolierter Pilot, sondern Teil einer länger aufgebauten Infrastruktur, die Handwerksinnovation systematischer fördern soll. Für das Forschungsvorhaben Entwerfen mit Bestand ist das wichtig, weil Circular Construction hier nicht als Sonderaktion erscheint, sondern als **strukturierte Innovationsaufgabe für das Handwerk**.
+
+## 4. Warum BIZH für Entwerfen mit Bestand besonders relevant ist
+
+BIZH ist aus mindestens sieben Gründen besonders nützlich:
+
+### 4.1 Es verschiebt den Fokus von Daten zu Machbarkeit
+Viele Akteure fragen: Was ist vorhanden? BIZH fragt zusätzlich: **Was davon ist praktisch ausbaubar, bearbeitbar und wieder montierbar?**
+
+### 4.2 Es bindet Handwerk früh ein
+BIZH formuliert ausdrücklich, dass der Schlüssel in der frühen und aktiven Einbindung des Handwerks liegt. Das ist für Entwerfen mit Bestand zentral.
+
+### 4.3 Es arbeitet im Maßstab 1:1
+Die Erprobung erfolgt nicht nur modellhaft oder in Tabellen, sondern mit realen Bauteilen und realen Einbausituationen.
+
+### 4.4 Es macht Zwischenschritte sichtbar
+Ausbau, Reinigung, Zuschnitt, Lagerung, Marktsondierung, Prototyping und Planungseinbindung werden als eigene Schritte sichtbar.
+
+### 4.5 Es verbindet Circularity mit Variantenvergleich und Ökobilanz
+In mehreren Fallbeispielen werden Alternativen nicht nur behauptet, sondern mit Variantenvergleichen und Ökobilanzen begründet.
+
+### 4.6 Es zeigt verschiedene Reuse-Typologien
+BIZH bearbeitet Fälle mit sehr unterschiedlicher Logik:
+- direkte 1:1-Wiederverwendung,
+- externe Weitervermittlung,
+- Upcycling / Produkttransformation,
+- Re-Use mit planerischer Re-Integration,
+- Tragwerk mit rechtlich-technischen Fragen.
+
+### 4.7 Es ergänzt digital dominierte Akteure
+BIZH ist eine hervorragende Ergänzung zu Concular, Madaster, BIM Berlin oder B(e) Ware, weil es die **Werkstatt- und Handwerksrealität** stärker sichtbar macht.
+
+## 6. KOIMO als Schlüsselakteur
+
+In allen Kernfällen erscheint **KOIMO Development GmbH** als Projektentwicklung, Leitung, Steuerung und Netzwerkmanagement.
+
+### Was das nahelegt
+KOIMO scheint im Reallabor die Rolle eines **Integrations- und Übersetzungsakteurs** zu übernehmen. Also nicht nur Projektsteuerung im klassischen Sinne, sondern auch:
+- Partner zusammenbringen,
+- Fallbeispiele entwickeln,
+- Entscheidungsprozesse strukturieren,
+- Schnittstellen zwischen Planung, Handwerk und Nachhaltigkeit moderieren.
+
+### Warum das wichtig ist
+Für das Forschungsvorhaben Entwerfen mit Bestand heißt das: Ein funktionierendes Re-Use-System braucht oft einen Akteur, der nicht nur Daten liefert, sondern **Entscheidungs- und Umsetzungsprozesse orchestriert**. BIZH zeigt genau diese Rolle sehr deutlich.
+
+## 8. Drahtglasscheiben: vom Problemstoff zum Prototyp
+
+Der Fall der Drahtglasscheiben ist besonders aufschlussreich, weil hier klassische Kreislaufpfade versagen.
+
+### Ausgangslage
+Die Drahtglasscheiben des Sheddachs in Halle 2 stammen aus dem Baujahr 1938. Laut BIZH weisen sie ein hohes Wiederverwendungspotenzial auf.
+
+### Warum 1:1 nicht funktioniert
+BIZH betont ausdrücklich:
+- Eine 1:1-Wiederverwendung im ursprünglichen Fenstereinsatz ist ausgeschlossen, weil heutige Standards höher sind.
+- Recycling ist wegen des Drahtkerns ebenfalls nicht möglich.
+
+### Was stattdessen passiert
+- vier Probegläser werden zerstörungsfrei ausgebaut,
+- zunächst händisch vor Ort gereinigt,
+- dann maschinell im Glasereiwerk bearbeitet,
+- Zuschnitte werden getestet,
+- Concular erstellt Variantenvergleiche und Ökobilanzierungen,
+- Glasfischer entwickelt einen Prototypen als Zweischeiben-Isolierverglasung,
+- Gibbins plant die Integration in Halle 2.
+
+### Warum der Fall so wichtig ist
+Dieser Fall zeigt beispielhaft, dass Re-Use nicht immer in direkter Wiederverwendung endet. Stattdessen entsteht ein **produktiver Transformationspfad**, der technische Ertüchtigung, handwerkliche Bearbeitung und Produktentwicklung kombiniert.
+
+### Forschungsrelevanz
+Für Entwerfen mit Bestand ist das ein Schlüsselbeispiel dafür, dass Materialdaten allein nicht reichen. Man braucht auch Informationen zu:
+- Ausbauweise,
+- Reinigung,
+- Bearbeitbarkeit,
+- Zuschnittsfähigkeit,
+- Ertüchtigungsoptionen,
+- Normkonflikten,
+- Prototypstatus.
+
+## 10. Lufterhitzer: Re-Use über Projektgrenzen hinweg
+
+Die Lufterhitzer sind als Fall interessant, weil sie zeigen, dass Circularity nicht immer in demselben Projekt endet.
+
+### Prozesslogik
+- Wiederverwendungs-Check der Halle 2 durch Concular,
+- Potenzialerkennung bei 26 Kampmann-Lufterhitzern,
+- interne Weiterverwendung auf dem Campus nicht möglich,
+- zerstörungsfreier Ausbau,
+- Reinigung,
+- Zwischenlagerung im Urban Mining Hub Berlin,
+- Angebot über Concular-Marktplatz,
+- Verkauf an externe Nutzer:innen.
+
+### Besondere Erkenntnis
+Dieser Fall macht sichtbar, dass Wiederverwendung auch **projektüberschreitend** organisiert werden muss. Nicht jedes gefundene Bauteil passt in die eigene Planung, kann aber andernorts hoch sinnvoll sein.
+
+### Warum das für Entwerfen mit Bestand wichtig ist
+Ein Tool zum „Entwerfen mit Bestand“ muss eigentlich auch wissen,
+- ob ein Material intern weitergenutzt wird,
+- extern vermittelt wird,
+- eingelagert ist,
+- bereits reserviert oder verkauft wurde.
+
+BIZH zeigt hier, dass Bestandsressourcen nicht nur entwurfsbezogen, sondern auch **netzwerk- und marktbezogen** gedacht werden müssen.
+
+## 12. Das Reallabor als Interface zwischen Planung und Handwerk
+
+Vielleicht die wichtigste Erkenntnis aus dem BIZH-Fall ist, dass hier die oft abstrakte Schnittstelle **Planung ↔ Handwerk** konkret bearbeitet wird.
+
+### Was BIZH sichtbar macht
+Planerische Annahmen über Wiederverwendung müssen im Handwerk bestehen können. Das betrifft unter anderem:
+- zerstörungsfreien Ausbau,
+- Reinigung und Aufbereitung,
+- Toleranzen,
+- Zuschnitte,
+- Kompatibilität mit aktuellen Systemen,
+- Montageabläufe,
+- Lager- und Transportfragen.
+
+### Warum das für dein Thema so wichtig ist
+Viele digitale oder konzeptionelle Ansätze unterschätzen genau diese Übergänge. BIZH zeigt, dass ein Bauteil nicht nur „vorhanden“ sein muss, sondern **verarbeitbar**. Das ist ein qualitativer Unterschied.
+
+### Forschungsthese
+BIZH könnte daher als Fall gelesen werden, in dem Circular Design weniger durch Datenfülle als durch **Machbarkeitswissen des Handwerks** stabilisiert wird.
+
+## 14. Variantenvergleich und Ökobilanz als Entscheidungsinstrumente
+
+Mehrere BIZH-Fälle nennen explizit Variantenvergleiche und materialbezogene Ökobilanzierungen — oft erstellt von Concular.
+
+### Was diese Instrumente im Reallabor leisten
+- ökologische Vorteile argumentierbar machen,
+- unterschiedliche Lösungswege vergleichen,
+- Kommunikation mit Partnern erleichtern,
+- Circularity nicht nur qualitativ, sondern metrisch darstellen.
+
+### Sichtbare Kennzahlen in den Fallbeispielen
+#### Drahtglasscheiben
+- 5.720 kg CO2eq vermieden
+- 23.850 l Wasserverbrauch vermieden
+
+#### Trennwandsysteme
+- 17.190,2 kg CO2eq vermieden
+- 295.970 l Wasserverbrauch vermieden
+
+#### Lufterhitzer
+- 16.684,84 kg CO2eq vermieden
+- 95.980 l Wasserverbrauch vermieden
+
+#### Stahlträger
+- 126.142 kg CO2eq vermieden
+- 274.980 l Wasserverbrauch vermieden
+
+### Forschungsperspektive
+Diese Kennzahlen sind wichtig, aber nicht der ganze Punkt. BIZH zeigt, dass LCA im Reallabor vor allem dann relevant wird, wenn bereits eine konkrete handwerkliche und planerische Option im Raum steht. Ökobilanz ist hier nicht der Ursprung der Idee, sondern ein **Entscheidungs- und Kommunikationsverstärker**.
+
+## 16. Entwurfsrelevanz: Was der Fall über „Entwerfen mit Bestand“ lehrt
+
+BIZH ist für deinen Entwurfsdiskurs deshalb so stark, weil hier sichtbar wird, dass Entwerfen mit Bestand nicht bei der Auswahl eines Objekts endet.
+
+### Entwurfsrelevante Lehren
+- Ein vorhandenes Bauteil ist noch keine einsetzbare Lösung.
+- Wiederverwendung hängt stark von Ausbau- und Werkstattfähigkeit ab.
+- Toleranzen und Bearbeitungsschritte können planerische Annahmen massiv verändern.
+- Zwischenlagerung und Zeitlichkeit sind entwurfsrelevant.
+- Manche Lösungen entstehen erst über Prototyping und Kooperation mit Fachpartnern.
+
+### Zentrale These
+Ein entwurfsunterstützendes Re-Use-Tool müsste nicht nur anzeigen, **was existiert**, sondern auch, **wie wahrscheinlich und mit welchem Bearbeitungsaufwand** eine reale Integration ist.
+
+### Was BIZH besonders gut zeigt
+Der Fall macht die Verschiebung von einer theoretischen Verfügbarkeitslogik zu einer **praktischen Machbarkeitslogik** sichtbar.
+
+## 18. Kritische Lücken und offene Fragen
+
+Trotz der guten Fallbeschreibungen bleiben wesentliche Punkte offen.
+
+### 18.1 Governance und Finanzierung
+Öffentlich begrenzt sichtbar bleiben die genaue Trägerstruktur, Finanzierung des Reallabors und die langfristige Verstetigung jenseits des Pop-up-/Testfeldcharakters.
+
+### 18.2 Teamgröße und Rollenmodell
+Nicht klar offen dokumentiert sind personelle Ausstattung, Entscheidungswege und Rollenverteilung zwischen BIZH, KOIMO, Partnerbetrieben und Planungsbüros.
+
+### 18.3 Digitales Datenmodell
+Öffentlich fehlen strukturierte Informationen darüber, wie Prototypen, Materialien, Status und LCA-Daten intern dokumentiert werden.
+
+### 18.4 Kosten- und Zeitdaten
+Es fehlen belastbare Angaben dazu, welche Aufwände, Taktungen, Bearbeitungszeiten und wirtschaftlichen Schwellenwerte bei den Prototypen tatsächlich auftreten.
+
+### 18.5 Normative / technische Freigabe
+Bei den tragwerksnahen Fällen — insbesondere Stahl — bleiben Gewährleistung, baurechtliche Freigabe und technische Aufbereitung öffentlich nur angerissen.
+
+---
+
+## 19. Konkrete Forschungsableitungen für Entwerfen mit Bestand
+
+## 19.1 BIZH als Schlüsselfall für Handwerksintegration
+Wenn das Forschungsziel von Entwerfen mit Bestand ist, digitale oder entwurfsbezogene Re-Use-Ansätze näher an die Baustellen- und Werkstattrealität zu bringen, ist BIZH ein Kernfall.
+
+## 19.2 BIZH als Korrektiv zu rein datenorientierten Modellen
+Der Fall zeigt, dass gute Circularity-Daten allein nicht reichen. Man braucht Informationen zur Bearbeitbarkeit und Montagefähigkeit.
+
+## 19.3 BIZH als Typologie-Labor
+Die vier dokumentierten Fälle liefern eine kleine, aber sehr nützliche Typologie zirkulärer Prozessmuster.
+
+## 19.4 BIZH als Hinweis für Tooldesign
+Ein gutes Tool müsste stärker berücksichtigen:
+- Ausbau- und Bearbeitungsschritte,
+- Toleranzen,
+- Prototypstatus,
+- projektinterne vs. externe Nutzung,
+- Zwischenlagerung,
+- Einbauwahrscheinlichkeit,
+- handwerkliche Komplexität.
+
+---
+
+## 20. Präzisierte Interviewfragen
+
+### Zur Organisation
+1. Wie ist das Reallabor organisatorisch zwischen BIZH, KOIMO, ringberlin und den Partnerbetrieben aufgeteilt?
+2. Welche Rolle spielt die Handwerkskammer Berlin heute konkret im Reallaborbetrieb?
+3. Welche Strukturen bleiben nach der Pop-up-Phase bestehen?
+
+### Zum Handwerk
+4. Welche Daten fehlen Handwerksbetrieben in Re-Use-Projekten am häufigsten?
+5. Welche Unterschiede bestehen zwischen planerischer Wiederverwendungslogik und handwerklicher Machbarkeitslogik?
+6. Welche Toleranzen oder Bearbeitungsschritte werden in frühen Planungen typischerweise unterschätzt?
+
+### Zu Prototypen und Fällen
+7. Wie werden Prototypen dokumentiert und ausgewertet?
+8. Welche der vier dokumentierten Falltypen waren am aufwendigsten und warum?
+9. Welche Bauteilgruppen eignen sich besonders gut für direkte 1:1-Wiederverwendung?
+10. Welche Fälle führen eher zu Produktinnovation statt direkter Re-Use-Anwendung?
+
+### Zu Daten und Tools
+11. Gibt es intern feste Statusmodelle für identifiziert / ausgebaut / gereinigt / getestet / eingebaut?
+12. Wie werden Variantenvergleiche, LCA-Ergebnisse und handwerkliche Befunde zusammengeführt?
+13. Welche digitalen Plattformen oder Tabellen werden real genutzt?
+14. Was müsste eine Re-Use-Plattform liefern, damit das Handwerk früher und wirksamer eingebunden werden kann?
+
+### Zu Skalierung
+15. Welche Teile des Reallabor-Ansatzes sind gut skalierbar, welche stark projektspezifisch?
+16. Wo liegen die größten Kosten-, Zeit- oder Haftungshemmnisse?
+17. Welche Geschäftsmodelle könnten aus den erprobten Fällen langfristig entstehen?
+
+---
+
+## 21. Arbeits-Hypothesen für die weitere Forschung
+
+1. **BIZH macht deutlicher als viele andere Akteure, dass Wiederverwendung im Bau ein Handwerks- und nicht nur ein Datenproblem ist.**
+2. **Die frühe Einbindung des Handwerks verbessert nicht nur Ausführbarkeit, sondern verändert bereits die Entwurfslogik.**
+3. **Die dokumentierten Fälle zeigen mindestens vier unterschiedliche Re-Use-Typen, die nicht mit einem einzigen Datenmodell ausreichend beschrieben werden können.**
+4. **Variantenvergleich und Ökobilanz sind im Reallabor vor allem dann wirksam, wenn bereits eine praktisch plausible Lösung identifiziert wurde.**
+5. **Ein künftiges Tool zum Entwerfen mit Bestand müsste Bearbeitbarkeit, Toleranzen, Zwischenlagerung und Prototypstatus explizit modellieren.**
+6. **BIZH ist ein Schlüsselfall dafür, wie aus Circularity-Diskursen reale handwerkliche Innovationen und marktfähige Produkte werden können.**
+
+---
+
+## 22. Priorisierung für Entwerfen mit Bestand
+
+### Priorität: sehr hoch
+BIZH / Reallabor Zirkuläres Bauen sollte **sehr hoch priorisiert** werden, wenn fur Entwerfen mit Bestand folgende Fragen zentral sind:
+- handwerkliche Machbarkeit,
+- reale Ausbau- und Wiedereinbauprozesse,
+- Prototyping,
+- 1:1-Erprobung,
+- frühe Handwerkseinbindung,
+- Unterschiede zwischen theoretischer und praktischer Re-Use-Fähigkeit.
+
+### Etwas geringer priorisiert, wenn …
+… der Fokus von Entwerfen mit Bestand sehr stark auf offenen Datenmodellen, APIs, Passsystemen oder formaler Standardisierung liegt. Dort liefern andere Akteure tiefere Einsichten.
+
+### Warum BIZH trotzdem unverzichtbar bleibt
+Weil das Forschungsvorhaben Entwerfen mit Bestand sonst Gefahr läuft, Entwerfen mit Bestand zu stark als Informations- oder Katalogproblem zu denken. BIZH erinnert daran, dass Wiederverwendung immer auch eine **Werkstatt-, Montage- und Handlungsfrage** ist.
+
+---
+
+## 23. Kompakte Schlussfolgerung
+
+Das Reallabor Zirkuläres Bauen des BIZH ist ein Schlüsselfall für die praktische Übersetzung zirkulärer Planungslogiken in handwerkliche Realität. Die Fallbeispiele zu Drahtglasscheiben, Trennwänden, Lufterhitzern und Stahlträgern zeigen unterschiedliche Tiefen und Typen von Wiederverwendung — von direkter 1:1-Übernahme über externe Vermittlung bis hin zu produktiver Transformation und rechtlich-technisch komplexer Re-Integration.
+
+Für das Forschungsvorhaben Entwerfen mit Bestand ist der Fall deshalb besonders wichtig, weil er die blinden Flecken vieler daten- und entwurfsorientierter Circularity-Ansätze offenlegt: Ausbau, Reinigung, Toleranzen, Zuschnitt, Zwischenlagerung, Prototyping, Montage und Handwerkswissen sind keine Randthemen, sondern zentrale Bedingungen dafür, dass Entwerfen mit Bestand überhaupt praktisch tragfähig wird.
+
+---
+
+## 24. Primärquellen / Links
+
+### BIZH allgemein
+- Startseite: https://www.bizh.berlin/
+- BIZH Übersicht: https://www.bizh.berlin/bizh
+- Impressum: https://www.bizh.berlin/impressum
+
+### Reallabor Zirkuläres Bauen
+- Reallabor: https://www.bizh.berlin/reallaborzirkulaeresbauen
+
+### Fallbeispiele
+- Drahtglasscheiben: https://www.bizh.berlin/drahtglasscheiben
+- Trennwandsysteme: https://www.bizh.berlin/trennwand
+- Lufterhitzer: https://www.bizh.berlin/lufterhitzer-1
+- Stahlträger: https://www.bizh.berlin/stahltraeger
+
+---
+
+## 25. Noch gezielt nachzurecherchieren
+
+1. Wie werden die Fallbeispiele intern dokumentiert — tabellarisch, BIM-basiert, über Pässe oder in Projektakten?
+2. Welche Kosten-, Zeit- und Bearbeitungsdaten liegen zu den Prototypen vor?
+3. Welche Rolle spielt das Handwerk in frühen Entwurfsphasen konkret?
+4. Wie wird über Eignung, Ausschluss oder Weiterentwicklung eines Materials entschieden?
+5. Welche langfristigen Betriebs- und Geschäftsmodelle entstehen aus dem Reallabor?
+6. Gibt es weitere dokumentierte Fallbeispiele außerhalb der vier aktuell sichtbaren Anwendungsfälle?
+7. Wie werden Gewährleistung, technische Aufbereitung und Produktverantwortung in komplexeren Fällen geregelt?

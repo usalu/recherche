@@ -1,20 +1,35 @@
-﻿---
-id: "Liander_Alliander_HQ_Duiven"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Liander / Alliander HQ, Duiven â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "bauobjekt"
+id: "Liander_Alliander_HQ_Duiven"
+title: "Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Liander_Alliander_HQ_Duiven.md"
+node_kind: "core"
+fallstudie: "fallstudie/Liander_Alliander_HQ_Duiven"
+projekt:
+  - "Liander_Alliander_HQ_Duiven"
+---
 
-## Clean Node
+# Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/bauobjekt/Liander_Alliander_HQ_Duiven
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Liander_Alliander_HQ_Duiven.md
 
-- Source: _graph/bauobjekt/Liander_Alliander_HQ_Duiven
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Liander / Alliander HQ, Duiven
+- **Ort:** Duiven, Niederlande
+- **Gebäude:** Büro-/Campuskomplex / Hauptquartier
+- **Projekt:** Transformation eines bestehenden Büro-/Betriebsgeländes zu einem zirkulären, energieeffizienten Hauptquartier
+- **Beteiligte People / Akteure:** Alliander / Liander; RAU Architects; weitere Planer, Baupartner, Material-/Circularity-Akteure zu prüfen
+- **Architekt:** RAU Architects
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** Alliander / Liander
+- **Zeitraum:** gebaut; häufig Mitte der 2010er Jahre publiziert, exaktes Fertigstellungsjahr im Detail zu prüfen
+- **Ursprüngliche Nutzung:** Büro-/Betriebsgebäude
+- **Neue Nutzung:** Hauptquartier / Büroarbeitsplätze / Campus
+- **Fläche / Maßstab:** unbekannt in dieser Auswertung; Quellen nennen unterschiedliche Projektgrößen, daher hier nicht festgelegt
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Nachhaltigkeits- und Architekturkonzept, schwächer für konkrete Direct-Reuse-Bauteilnachweise.

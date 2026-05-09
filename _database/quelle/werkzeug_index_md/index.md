@@ -1,15 +1,22 @@
-﻿---
-id: "werkzeug_index_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "werkzeug/index.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "werkzeug_index_md"
+title: "werkzeug_index_md"
+build_status: "promoted_phase42"
+source_filename: "index.md"
+legacy_type: "Werkzeug"
+---
+
 # werkzeug_index_md
 
-## Source Archive
+## Zweck
+<!-- Short explanation of what this folder contains. -->
 
-- Original path: werkzeug/index.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: merge_into_index; old target: software_digitaltool/index
+## Enthaltene Entitaeten
+- [[...]]
+
+## Wichtigste Cluster
+- 
+
+## Fehlende Entitaeten
+-

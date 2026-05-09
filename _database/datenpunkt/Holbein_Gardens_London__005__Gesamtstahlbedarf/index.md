@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__005__Gesamtstahlbedarf"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Gesamtstahlbedarf - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# Gesamtstahlbedarf - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__005__Gesamtstahlbedarf"
+title: "Gesamtstahlbedarf - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "[S1], [S12]"
+node_kind: "core"
+wert: "ca. 70"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# Gesamtstahlbedarf - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__005__Gesamtstahlbedarf
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__005__Gesamtstahlbedarf
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gesamtstahlbedarf
+- **Wert:** ca. 70
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** Grosvenor/IOM3
+- **Bilanzgrenze:** Aufstockung / Stahlwork
+- **Quelle:** [S1], [S12]
+- **Vertrauensgrad:** belegt

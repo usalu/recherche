@@ -1,20 +1,25 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__010__Sanit_robjekte"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "SanitÃ¤robjekte - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# SanitÃ¤robjekte - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grande_Halle_de_Colombelles__010__Sanit_robjekte"
+title: "Sanitärobjekte - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "[S1], [S2], [S5]"
+node_kind: "core"
+wert: "20 / 30"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Sanitärobjekte - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grande_Halle_de_Colombelles__010__Sanit_robjekte
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grande_Halle_de_Colombelles__010__Sanit_robjekte
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Sanitärobjekte
+- **Wert:** 20 / 30
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** WC, Urinale, Waschbecken
+- **Quelle:** [S1], [S2], [S5]
+- **Vertrauensgrad:** teilweise

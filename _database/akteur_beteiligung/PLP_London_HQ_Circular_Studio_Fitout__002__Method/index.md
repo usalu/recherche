@@ -1,20 +1,22 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout__002__Method"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Method - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# Method - PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "PLP_London_HQ_Circular_Studio_Fitout__002__Method"
+title: "Method - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "PLP"
+node_kind: "relation"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+bauobjekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# Method - PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/PLP_London_HQ_Circular_Studio_Fitout__002__Method
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/PLP_London_HQ_Circular_Studio_Fitout__002__Method
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Method
+- **Beziehung zur Fallstudie:** Contractor
+- **Quelle/Beleg:** PLP
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Ausführung/Fit-out.

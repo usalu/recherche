@@ -1,20 +1,13 @@
-﻿---
-id: "Gebaeudemasse"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Gebaeudemasse"
 ---
+entity: "kennwertdefinition"
+id: "Gebaeudemasse"
+title: "Gebaeudemasse"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Gebaeudemasse
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Gebaeudemasse
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Gebaeudemasse
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Erhaltene, gebundene oder bilanzierte Gebaeudemasse.

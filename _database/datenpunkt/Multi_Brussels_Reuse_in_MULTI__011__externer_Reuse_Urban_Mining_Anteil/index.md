@@ -1,20 +1,25 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__011__externer_Reuse_Urban_Mining_Anteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "externer Reuse-/Urban-Mining-Anteil - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# externer Reuse-/Urban-Mining-Anteil - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Multi_Brussels_Reuse_in_MULTI__011__externer_Reuse_Urban_Mining_Anteil"
+title: "externer Reuse-/Urban-Mining-Anteil - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "S4, S7"
+node_kind: "core"
+wert: "2 bzw. 3"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# externer Reuse-/Urban-Mining-Anteil - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Multi_Brussels_Reuse_in_MULTI__011__externer_Reuse_Urban_Mining_Anteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Multi_Brussels_Reuse_in_MULTI__011__externer_Reuse_Urban_Mining_Anteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** externer Reuse-/Urban-Mining-Anteil
+- **Wert:** 2 bzw. 3
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Materialpass/Projektangaben
+- **Bilanzgrenze:** neue Materialien / Gesamtprojekt
+- **Quelle:** S4, S7
+- **Vertrauensgrad:** Quellenkonflikt

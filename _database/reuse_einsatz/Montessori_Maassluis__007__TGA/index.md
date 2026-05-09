@@ -1,20 +1,43 @@
-﻿---
-id: "Montessori_Maassluis__007__TGA"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TGA - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# TGA - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Montessori_Maassluis__007__TGA"
+title: "TGA - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "keine Reuse-Angabe"
+quelle_label: "Kraaijvanger"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+neue_funktion: "Schulbetrieb"
+bauteil_label: "TGA"
+projekt:
+  - "Montessori_Maassluis"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# TGA - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Montessori_Maassluis__007__TGA
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Montessori_Maassluis__007__TGA
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** TGA
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Schulbetrieb
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Lüftung/Heizung/Komfort
+- **Norm/Recht:** unbekannt
+- **Hürde:** keine Reuse-Angabe
+- **Quelle:** Kraaijvanger
+- **unbekannt:** Details

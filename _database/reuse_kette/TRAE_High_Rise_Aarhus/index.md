@@ -1,20 +1,16 @@
-﻿---
-id: "TRAE_High_Rise_Aarhus"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - TRÃ† High-Rise, Aarhus"
 ---
-# Reuse-Kette - TRÃ† High-Rise, Aarhus
+entity: "reuse_kette"
+id: "TRAE_High_Rise_Aarhus"
+title: "Reuse-Kette - TRÆ High-Rise, Aarhus"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\TRAE_High_Rise_Aarhus.md"
+node_kind: "core"
+fallstudie: "fallstudie/TRAE_High_Rise_Aarhus"
+projekt:
+  - "TRAE_High_Rise_Aarhus"
+---
 
-## Clean Node
+# Reuse-Kette - TRÆ High-Rise, Aarhus
 
-- Final path: _database/reuse_kette/TRAE_High_Rise_Aarhus
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/TRAE_High_Rise_Aarhus
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

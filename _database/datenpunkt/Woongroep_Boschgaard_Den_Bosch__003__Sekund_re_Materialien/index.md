@@ -1,20 +1,25 @@
-﻿---
-id: "Woongroep_Boschgaard_Den_Bosch__003__Sekund_re_Materialien"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "SekundÃ¤re Materialien - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# SekundÃ¤re Materialien - Woongroep Boschgaard, Den Bosch â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Woongroep_Boschgaard_Den_Bosch__003__Sekund_re_Materialien"
+title: "Sekundäre Materialien - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "Superuse"
+node_kind: "core"
+wert: "84"
+fallstudie: "fallstudie/Woongroep_Boschgaard_Den_Bosch"
+bauobjekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+projekt:
+  - "Woongroep_Boschgaard_Den_Bosch"
+---
 
-## Clean Node
+# Sekundäre Materialien - Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Woongroep_Boschgaard_Den_Bosch__003__Sekund_re_Materialien
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Woongroep_Boschgaard_Den_Bosch__003__Sekund_re_Materialien
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Sekundäre Materialien
+- **Wert:** 84
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** alle Materialien / Gebäude, laut Superuse
+- **Quelle:** Superuse
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_Building_Boston__002__Site_Area"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Site Area - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Site Area - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_Building_Boston__002__Site_Area"
+title: "Site Area - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "ArchDaily"
+node_kind: "core"
+wert: "2.335"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+bauobjekt:
+  - "Big_Dig_Building_Boston"
+projekt:
+  - "Big_Dig_Building_Boston"
+---
 
-## Clean Node
+# Site Area - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_Building_Boston__002__Site_Area
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_Building_Boston__002__Site_Area
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Site Area
+- **Wert:** 2.335
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** ArchDaily-Projektdaten
+- **Bilanzgrenze:** Entwurf
+- **Quelle:** ArchDaily
+- **Vertrauensgrad:** belegt

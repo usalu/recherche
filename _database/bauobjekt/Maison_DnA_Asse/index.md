@@ -1,20 +1,34 @@
-﻿---
-id: "Maison_DnA_Asse"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "bauobjekt"
+id: "Maison_DnA_Asse"
+title: "Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Maison_DnA_Asse.md"
+node_kind: "core"
+fallstudie: "fallstudie/Maison_DnA_Asse"
+projekt:
+  - "Maison_DnA_Asse"
+---
 
-## Clean Node
+# Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/bauobjekt/Maison_DnA_Asse
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Maison_DnA_Asse.md
 
-- Source: _graph/bauobjekt/Maison_DnA_Asse
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+## 3. FALLSTUDIE
+- **Name:** dnA House / Maison DnA / Woning dnA
+- **Ort:** Asse, Belgien
+- **Gebäude:** Einfamilienhaus mit Home Office
+- **Projekt:** Neubau mit wiederverwendeter, autonomer Ziegel-Außenstruktur und innerem Holzrahmen
+- **Beteiligte People / Akteure:** BLAF Architecten; privater Bauherr; Fotograf Stijn Bollaert
+- **Architekt:** BLAF Architecten
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** privat / unbekannt
+- **Zeitraum:** 2013; genaue Planungs-/Bauzeit unbekannt
+- **Ursprüngliche Nutzung:** Ziegel aus unbekannter Herkunft; alte Funktion unbekannt
+- **Neue Nutzung:** äußere, dauerhafte Ziegelmauerstruktur / räumliche und tragende Hülle
+- **Fläche / Maßstab:** 260 m²
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Konzept, Fläche, Architekt und wiederverwendete Ziegel; schwach für Herkunft, Mengen, Prüfungen, Kosten, Normen

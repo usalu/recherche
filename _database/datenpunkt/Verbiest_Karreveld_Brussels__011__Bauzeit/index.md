@@ -1,20 +1,25 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__011__Bauzeit"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Bauzeit - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "datenpunkt"
+id: "Verbiest_Karreveld_Brussels__011__Bauzeit"
+title: "Bauzeit - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "Q1, Q3, Q5"
+node_kind: "core"
+wert: "Verbiest bis 2020; Karreveld Phasen bis 2022/2023"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Bauzeit - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/datenpunkt/Verbiest_Karreveld_Brussels__011__Bauzeit
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Verbiest_Karreveld_Brussels__011__Bauzeit
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit
+- **Wert:** Verbiest bis 2020; Karreveld Phasen bis 2022/2023
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** Projektquellen
+- **Bilanzgrenze:** Projektstatus
+- **Quelle:** Q1, Q3, Q5
+- **Vertrauensgrad:** teilweise belegt

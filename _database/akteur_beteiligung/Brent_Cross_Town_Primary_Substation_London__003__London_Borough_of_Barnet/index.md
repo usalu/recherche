@@ -1,20 +1,22 @@
-﻿---
-id: "Brent_Cross_Town_Primary_Substation_London__003__London_Borough_of_Barnet"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "London Borough of Barnet - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# London Borough of Barnet - Brent Cross Town Primary Substation, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Brent_Cross_Town_Primary_Substation_London__003__London_Borough_of_Barnet"
+title: "London Borough of Barnet - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "ASBP, Arup"
+node_kind: "relation"
+fallstudie: "fallstudie/Brent_Cross_Town_Primary_Substation_London"
+bauobjekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+projekt:
+  - "Brent_Cross_Town_Primary_Substation_London"
+---
 
-## Clean Node
+# London Borough of Barnet - Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Brent_Cross_Town_Primary_Substation_London__003__London_Borough_of_Barnet
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Brent_Cross_Town_Primary_Substation_London__003__London_Borough_of_Barnet
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** London Borough of Barnet
+- **Beziehung zur Fallstudie:** Joint venture partner
+- **Quelle/Beleg:** ASBP, Arup
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** öffentlicher Partner

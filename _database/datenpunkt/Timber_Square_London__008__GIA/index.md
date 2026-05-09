@@ -1,20 +1,25 @@
-﻿---
-id: "Timber_Square_London__008__GIA"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "GIA - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung"
 ---
-# GIA - Timber Square, London â€” Fallstudie Direct Reuse / Bauteilwiederverwendung
+entity: "datenpunkt"
+id: "Timber_Square_London__008__GIA"
+title: "GIA - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S1, S2"
+node_kind: "core"
+wert: "52.026"
+fallstudie: "fallstudie/Timber_Square_London"
+bauobjekt:
+  - "Timber_Square_London"
+projekt:
+  - "Timber_Square_London"
+---
 
-## Clean Node
+# GIA - Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung
 
-- Final path: _database/datenpunkt/Timber_Square_London__008__GIA
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Timber_Square_London__008__GIA
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** GIA
+- **Wert:** 52.026
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** HTS
+- **Bilanzgrenze:** Gesamtprojekt
+- **Quelle:** S1, S2
+- **Vertrauensgrad:** belegt

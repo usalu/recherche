@@ -1,20 +1,22 @@
-﻿---
-id: "Lo_Reninge_Town_Hall_Facade__001__noAarchitecten"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "noAarchitecten - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse"
 ---
-# noAarchitecten - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Lo_Reninge_Town_Hall_Facade__001__noAarchitecten"
+title: "noAarchitecten - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Lo_Reninge_Town_Hall_Facade"
+bauobjekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+projekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+---
 
-## Clean Node
+# noAarchitecten - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Lo_Reninge_Town_Hall_Facade__001__noAarchitecten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lo_Reninge_Town_Hall_Facade__001__noAarchitecten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** noAarchitecten
+- **Beziehung zur Fallstudie:** Architekturbüro
+- **Quelle/Beleg:** [S2], [S3]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Entwurf.

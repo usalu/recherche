@@ -1,20 +1,22 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__001__Whitewood_Immobel_CONIX_RDBM_Cordeel_Rotor_Rotor"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Whitewood, Immobel, CONIX RDBM, Cordeel, Rotor, RotorDC, Madaster/EPEA - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Whitewood, Immobel, CONIX RDBM, Cordeel, Rotor, RotorDC, Madaster/EPEA - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Multi_Brussels_Reuse_in_MULTI__001__Whitewood_Immobel_CONIX_RDBM_Cordeel_Rotor_Rotor"
+title: "Whitewood, Immobel, CONIX RDBM, Cordeel, Rotor, RotorDC, Madaster/EPEA - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "S1–S6"
+node_kind: "relation"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# Whitewood, Immobel, CONIX RDBM, Cordeel, Rotor, RotorDC, Madaster/EPEA - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Multi_Brussels_Reuse_in_MULTI__001__Whitewood_Immobel_CONIX_RDBM_Cordeel_Rotor_Rotor
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Multi_Brussels_Reuse_in_MULTI__001__Whitewood_Immobel_CONIX_RDBM_Cordeel_Rotor_Rotor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Whitewood, Immobel, CONIX RDBM, Cordeel, Rotor, RotorDC, Madaster/EPEA
+- **Beziehung zur Fallstudie:** Bauherr/Entwickler, Architektur, Ausführung, Reuse-Beratung, Materialpass
+- **Quelle/Beleg:** S1–S6
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Rollen je Quelle

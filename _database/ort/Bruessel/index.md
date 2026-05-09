@@ -1,20 +1,24 @@
-﻿---
-id: "Bruessel"
-entity: "ort"
-build_status: "clean_phase20"
-title: "Bruessel"
 ---
+entity: "ort"
+id: "Bruessel"
+title: "Bruessel"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "ort\Bruessel.md"
+node_kind: "knot"
+legacy_type: "Ort"
+---
+
 # Bruessel
 
-## Clean Node
+# Bruessel
 
-- Final path: _database/ort/Bruessel
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/ort/Bruessel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

@@ -1,20 +1,24 @@
-﻿---
-id: "Legacy_bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Ueberblick Entwerfen mit Bestand Kurzfassung"
 ---
+entity: "quelle"
+id: "Legacy_bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung"
+title: "Ueberblick Entwerfen mit Bestand Kurzfassung"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Bericht"
+---
+
 # Ueberblick Entwerfen mit Bestand Kurzfassung
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung
-- Build rule: typed path IDs only.
+# Ueberblick Entwerfen mit Bestand Kurzfassung
 
-## Imported Staging Nodes
+## Kurzdefinition
 
-- Source: _graph/quelle/Legacy_bericht_Ueberblick_Entwerfen_mit_Bestand_Kurzfassung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Warum relevant fuer Reuse
 
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

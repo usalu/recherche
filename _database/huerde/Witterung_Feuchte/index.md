@@ -1,20 +1,13 @@
-﻿---
-id: "Witterung_Feuchte"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Witterung / Feuchte"
 ---
+entity: "huerde"
+id: "Witterung_Feuchte"
+title: "Witterung / Feuchte"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Witterung / Feuchte
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Witterung_Feuchte
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Witterung_Feuchte
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Probleme mit Witterung, Feuchte, Abdichtung, Waermebruecken oder bauphysikalischer Integration.

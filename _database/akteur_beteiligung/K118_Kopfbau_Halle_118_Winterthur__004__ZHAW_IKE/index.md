@@ -1,20 +1,22 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__004__ZHAW_IKE"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "ZHAW IKE - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# ZHAW IKE - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "akteur_beteiligung"
+id: "K118_Kopfbau_Halle_118_Winterthur__004__ZHAW_IKE"
+title: "ZHAW IKE - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+quelle_label: "[S5], [S6]"
+node_kind: "relation"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# ZHAW IKE - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/akteur_beteiligung/K118_Kopfbau_Halle_118_Winterthur__004__ZHAW_IKE
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/K118_Kopfbau_Halle_118_Winterthur__004__ZHAW_IKE
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** ZHAW IKE
+- **Beziehung zur Fallstudie:** Forschung / Dokumentation
+- **Quelle/Beleg:** [S5], [S6]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Kompendium / Case Study

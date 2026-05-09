@@ -1,20 +1,25 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__004__Baukosten_alternative"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Baukosten alternative - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Baukosten alternative - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grande_Halle_de_Colombelles__004__Baukosten_alternative"
+title: "Baukosten alternative - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Mio. € HT"
+quelle_label: "[S6]"
+node_kind: "core"
+wert: "5,5"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Baukosten alternative - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grande_Halle_de_Colombelles__004__Baukosten_alternative
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grande_Halle_de_Colombelles__004__Baukosten_alternative
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Baukosten alternative
+- **Wert:** 5,5
+- **Einheit:** Mio. € HT
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** travaux
+- **Quelle:** [S6]
+- **Vertrauensgrad:** belegt, abweichende Kostenbasis

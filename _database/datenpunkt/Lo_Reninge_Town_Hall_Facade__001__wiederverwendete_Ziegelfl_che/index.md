@@ -1,20 +1,25 @@
-﻿---
-id: "Lo_Reninge_Town_Hall_Facade__001__wiederverwendete_Ziegelfl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete ZiegelflÃ¤che - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse"
 ---
-# wiederverwendete ZiegelflÃ¤che - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Lo_Reninge_Town_Hall_Facade__001__wiederverwendete_Ziegelfl_che"
+title: "wiederverwendete Ziegelfläche - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S4]"
+node_kind: "core"
+wert: "205"
+fallstudie: "fallstudie/Lo_Reninge_Town_Hall_Facade"
+bauobjekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+projekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+---
 
-## Clean Node
+# wiederverwendete Ziegelfläche - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Lo_Reninge_Town_Hall_Facade__001__wiederverwendete_Ziegelfl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lo_Reninge_Town_Hall_Facade__001__wiederverwendete_Ziegelfl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Ziegelfläche
+- **Wert:** 205
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Fassade / Gebäudehülle
+- **Quelle:** [S4]
+- **Vertrauensgrad:** teilweise belegt

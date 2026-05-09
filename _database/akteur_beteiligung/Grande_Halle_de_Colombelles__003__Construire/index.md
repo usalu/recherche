@@ -1,20 +1,22 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__003__Construire"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Construire - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Construire - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Grande_Halle_de_Colombelles__003__Construire"
+title: "Construire - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S3], [S6]"
+node_kind: "relation"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Construire - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Grande_Halle_de_Colombelles__003__Construire
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Grande_Halle_de_Colombelles__003__Construire
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Construire
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** [S3], [S6]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** mandataire in manchen Quellen

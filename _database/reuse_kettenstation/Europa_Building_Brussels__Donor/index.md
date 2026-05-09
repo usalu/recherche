@@ -1,20 +1,16 @@
-﻿---
-id: "Europa_Building_Brussels__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Europa Building, Brussels â€“ Fallstudie Direct Reuse"
 ---
-# Donor - Europa Building, Brussels â€“ Fallstudie Direct Reuse
+entity: "reuse_kettenstation"
+id: "Europa_Building_Brussels__Donor"
+title: "Donor - Europa Building, Brussels – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Europa_Building_Brussels.md"
+node_kind: "core"
+fallstudie: "fallstudie/Europa_Building_Brussels"
+---
 
-## Clean Node
+# Donor - Europa Building, Brussels – Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kettenstation/Europa_Building_Brussels__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Europa_Building_Brussels__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Europa_Building_Brussels.md: | Bauteil-Archiv / Herkunftsmix | Bauteile stammen aus vielen Ländern und Quellen, nicht aus einem einzelnen Donor-Gebäude. | 3.750 Fensterrahmen aus EU-Ländern | Logistik, Bauteilbörse, Ort |

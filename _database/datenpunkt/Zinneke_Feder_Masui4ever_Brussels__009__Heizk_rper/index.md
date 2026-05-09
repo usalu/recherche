@@ -1,20 +1,25 @@
-﻿---
-id: "Zinneke_Feder_Masui4ever_Brussels__009__Heizk_rper"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "HeizkÃ¶rper - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# HeizkÃ¶rper - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Zinneke_Feder_Masui4ever_Brussels__009__Heizk_rper"
+title: "Heizkörper - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "[S1], [S4]"
+node_kind: "core"
+wert: "ca. 20"
+fallstudie: "fallstudie/Zinneke_Feder_Masui4ever_Brussels"
+bauobjekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+projekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+---
 
-## Clean Node
+# Heizkörper - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__009__Heizk_rper
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Zinneke_Feder_Masui4ever_Brussels__009__Heizk_rper
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Heizkörper
+- **Wert:** ca. 20
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** TGA
+- **Quelle:** [S1], [S4]
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__001__Reihenh_user"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "ReihenhÃ¤user - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# ReihenhÃ¤user - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__001__Reihenh_user"
+title: "Reihenhäuser - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "NREP; a:gain; EMF"
+node_kind: "core"
+wert: "20"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Reihenhäuser - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__001__Reihenh_user
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__001__Reihenh_user
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Reihenhäuser
+- **Wert:** 20
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Projekt
+- **Quelle:** NREP; a:gain; EMF
+- **Vertrauensgrad:** belegt

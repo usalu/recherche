@@ -1,20 +1,16 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Reuse-Kette - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "reuse_kette"
+id: "BioPartner_5_Leiden_Oegstgeest"
+title: "Reuse-Kette - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\BioPartner_5_Leiden_Oegstgeest.md"
+node_kind: "core"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# Reuse-Kette - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/reuse_kette/BioPartner_5_Leiden_Oegstgeest
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/BioPartner_5_Leiden_Oegstgeest
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

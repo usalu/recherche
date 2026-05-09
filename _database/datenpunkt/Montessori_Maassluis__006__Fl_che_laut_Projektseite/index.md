@@ -1,20 +1,25 @@
-﻿---
-id: "Montessori_Maassluis__006__Fl_che_laut_Projektseite"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che laut Projektseite - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che laut Projektseite - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Montessori_Maassluis__006__Fl_che_laut_Projektseite"
+title: "Fläche laut Projektseite - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m² GFA"
+quelle_label: "Kraaijvanger project page"
+node_kind: "core"
+wert: "1.534"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# Fläche laut Projektseite - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Montessori_Maassluis__006__Fl_che_laut_Projektseite
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Montessori_Maassluis__006__Fl_che_laut_Projektseite
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche laut Projektseite
+- **Wert:** 1.534
+- **Einheit:** m² GFA
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** Kraaijvanger project page
+- **Vertrauensgrad:** belegt; Quellenabweichung

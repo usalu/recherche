@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__007__Baukosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Baukosten - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Baukosten - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_House_Lexington_Massachusetts__007__Baukosten"
+title: "Baukosten - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "USD, excl. land"
+quelle_label: "Britannica"
+node_kind: "core"
+wert: "645,000"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+---
 
-## Clean Node
+# Baukosten - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_House_Lexington_Massachusetts__007__Baukosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_House_Lexington_Massachusetts__007__Baukosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Baukosten
+- **Wert:** 645,000
+- **Einheit:** USD, excl. land
+- **Methode/Datenmodell/Software:** Britannica
+- **Bilanzgrenze:** Projektkosten
+- **Quelle:** Britannica
+- **Vertrauensgrad:** teilweise belegt

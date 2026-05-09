@@ -1,20 +1,22 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__002__Simon_Boudvin"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Simon Boudvin - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Simon Boudvin - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Musee_de_Folklore_Mouscron__002__Simon_Boudvin"
+title: "Simon Boudvin - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S2], [S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# Simon Boudvin - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Musee_de_Folklore_Mouscron__002__Simon_Boudvin
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Musee_de_Folklore_Mouscron__002__Simon_Boudvin
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Simon Boudvin
+- **Beziehung zur Fallstudie:** Künstler / Reuse-Konzept
+- **Quelle/Beleg:** [S2], [S4]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Initiierte Dokumentation und Ziegelintegration.

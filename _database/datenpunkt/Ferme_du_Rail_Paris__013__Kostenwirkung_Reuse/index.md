@@ -1,20 +1,25 @@
-﻿---
-id: "Ferme_du_Rail_Paris__013__Kostenwirkung_Reuse"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Kostenwirkung Reuse - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Kostenwirkung Reuse - La Ferme du Rail, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Ferme_du_Rail_Paris__013__Kostenwirkung_Reuse"
+title: "Kostenwirkung Reuse - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "—"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "ohne Mehrkosten insgesamt behauptet"
+fallstudie: "fallstudie/Ferme_du_Rail_Paris"
+bauobjekt:
+  - "Ferme_du_Rail_Paris"
+projekt:
+  - "Ferme_du_Rail_Paris"
+---
 
-## Clean Node
+# Kostenwirkung Reuse - La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Ferme_du_Rail_Paris__013__Kostenwirkung_Reuse
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Ferme_du_Rail_Paris__013__Kostenwirkung_Reuse
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kostenwirkung Reuse
+- **Wert:** ohne Mehrkosten insgesamt behauptet
+- **Einheit:** —
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Reuse vs. neu
+- **Quelle:** [S2]
+- **Vertrauensgrad:** teilweise; keine Zahl

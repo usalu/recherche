@@ -1,20 +1,13 @@
-﻿---
-id: "Betreiber_Nutzer"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Betreiber / Nutzer"
 ---
+entity: "akteurrolle"
+id: "Betreiber_Nutzer"
+title: "Betreiber / Nutzer"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Betreiber / Nutzer
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Betreiber_Nutzer
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Betreiber_Nutzer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit Betreiber-, Nutzer-, Schultraeger-, sozialer Integrations- oder Nutzungskontextrolle.

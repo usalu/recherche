@@ -1,20 +1,25 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__006__CO_Einsparung"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Einsparung - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# COâ‚‚-Einsparung - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Svanen_Kindergarten_Gladsaxe__006__CO_Einsparung"
+title: "CO₂-Einsparung - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "kg / t CO₂"
+quelle_label: "[S7], [S9], [S10]"
+node_kind: "core"
+wert: "177.668 kg / ca. 178 t"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+bauobjekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+projekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# CO₂-Einsparung - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Svanen_Kindergarten_Gladsaxe__006__CO_Einsparung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Svanen_Kindergarten_Gladsaxe__006__CO_Einsparung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Einsparung
+- **Wert:** 177.668 kg / ca. 178 t
+- **Einheit:** kg / t CO₂
+- **Methode/Datenmodell/Software:** Award-/Presseangabe
+- **Bilanzgrenze:** Gesamtprojekt; Bilanzgrenze unklar
+- **Quelle:** [S7], [S9], [S10]
+- **Vertrauensgrad:** teilweise belegt

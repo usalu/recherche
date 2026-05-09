@@ -1,20 +1,14 @@
-﻿---
-id: "Legacy_projekt"
-entity: "quelle"
-build_status: "clean_phase20"
-title: "Projekt"
 ---
+entity: "quelle"
+id: "Legacy_projekt"
+title: "Projekt"
+build_status: "promoted_phase42"
+node_kind: "source"
+legacy_type: "Type"
+---
+
 # Projekt
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/quelle/Legacy_projekt
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/quelle/Legacy_projekt
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+# Projekt

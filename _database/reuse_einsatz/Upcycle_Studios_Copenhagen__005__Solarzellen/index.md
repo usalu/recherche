@@ -1,20 +1,43 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__005__Solarzellen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Solarzellen - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Solarzellen - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "reuse_einsatz"
+id: "Upcycle_Studios_Copenhagen__005__Solarzellen"
+title: "Solarzellen - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "kein Reuse-Beleg"
+quelle_label: "NREP/EMF"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "neu oder unbekannt"
+menge_umfang: "vorhanden, Menge unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+neue_funktion: "Energieerzeugung"
+bauteil_label: "Solarzellen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+alte_funktion: "-"
+---
 
-## Clean Node
+# Solarzellen - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/reuse_einsatz/Upcycle_Studios_Copenhagen__005__Solarzellen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Upcycle_Studios_Copenhagen__005__Solarzellen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Solarzellen
+- **Material:** unbekannt
+- **Herkunft:** neu oder unbekannt
+- **alte Funktion:** -
+- **neue Funktion:** Energieerzeugung
+- **Menge/Umfang:** vorhanden, Menge unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** elektrische Leistung
+- **Norm/Recht:** unbekannt
+- **Hürde:** kein Reuse-Beleg
+- **Quelle:** NREP/EMF
+- **unbekannt:** Reuse nein

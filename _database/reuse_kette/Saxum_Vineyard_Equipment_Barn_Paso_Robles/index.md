@@ -1,20 +1,16 @@
-﻿---
-id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+title: "Reuse-Kette - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Saxum_Vineyard_Equipment_Barn_Paso_Robles.md"
+node_kind: "core"
+fallstudie: "fallstudie/Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+projekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+---
 
-## Clean Node
+# Reuse-Kette - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Saxum_Vineyard_Equipment_Barn_Paso_Robles
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Saxum_Vineyard_Equipment_Barn_Paso_Robles
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

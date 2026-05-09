@@ -1,20 +1,25 @@
-﻿---
-id: "Kerstin_Mueller"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "Kerstin MÃ¼ller"
 ---
-# Kerstin MÃ¼ller
+entity: "akteur"
+id: "Kerstin_Mueller"
+title: "Kerstin Müller"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "kerstin-müller.md"
+node_kind: "core"
+---
 
-## Clean Node
+# Kerstin Müller
 
-- Final path: _database/akteur/Kerstin_Mueller
-- Build rule: typed path IDs only.
+## Legacy Content
 
-## Imported Staging Nodes
+### Legacy Source: kerstin-müller.md
 
-- Source: _graph/akteur/Kerstin_Mueller
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+- Map action: move_as_core
+- Target role in map: primary
+- Raw mapped target: akteur/Kerstin_Mueller
+- Original primary target: akteur/Kerstin_Mueller
+- Original secondary targets: akteurtyp/Person
 
+# Kerstin Müller
+
+knows [[C:\git\semio\reuse\research\untitled-person-1777905612]]

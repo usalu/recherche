@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__009__Beton_aus_Metro_Abfall"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Beton aus Metro-Abfall - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Beton aus Metro-Abfall - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__009__Beton_aus_Metro_Abfall"
+title: "Beton aus Metro-Abfall - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "a:gain"
+node_kind: "core"
+wert: "1000"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Beton aus Metro-Abfall - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__009__Beton_aus_Metro_Abfall
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__009__Beton_aus_Metro_Abfall
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Beton aus Metro-Abfall
+- **Wert:** 1000
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** interne Berechnung
+- **Bilanzgrenze:** Betonmaterial
+- **Quelle:** a:gain
+- **Vertrauensgrad:** Konflikt

@@ -1,20 +1,25 @@
-﻿---
-id: "Montessori_Maassluis__002__Bauvertrag_unterzeichnet"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauvertrag unterzeichnet - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Bauvertrag unterzeichnet - Montessori Maassluis â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Montessori_Maassluis__002__Bauvertrag_unterzeichnet"
+title: "Bauvertrag unterzeichnet - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Datum"
+quelle_label: "Kraaijvanger news"
+node_kind: "core"
+wert: "02.02.2026"
+fallstudie: "fallstudie/Montessori_Maassluis"
+bauobjekt:
+  - "Montessori_Maassluis"
+projekt:
+  - "Montessori_Maassluis"
+---
 
-## Clean Node
+# Bauvertrag unterzeichnet - Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Montessori_Maassluis__002__Bauvertrag_unterzeichnet
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Montessori_Maassluis__002__Bauvertrag_unterzeichnet
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauvertrag unterzeichnet
+- **Wert:** 02.02.2026
+- **Einheit:** Datum
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Projekt
+- **Quelle:** Kraaijvanger news
+- **Vertrauensgrad:** belegt

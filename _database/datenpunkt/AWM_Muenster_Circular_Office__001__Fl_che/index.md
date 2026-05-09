@@ -1,20 +1,25 @@
-﻿---
-id: "AWM_Muenster_Circular_Office__001__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - AWM MÃ¼nster â€“ ZirkulÃ¤rer BÃ¼roausbau 3. OG â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che - AWM MÃ¼nster â€“ ZirkulÃ¤rer BÃ¼roausbau 3. OG â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "AWM_Muenster_Circular_Office__001__Fl_che"
+title: "Fläche - AWM Münster – Zirkulärer Büroausbau 3. OG – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S2, S4"
+node_kind: "core"
+wert: "250"
+fallstudie: "fallstudie/AWM_Muenster_Circular_Office"
+bauobjekt:
+  - "AWM_Muenster_Circular_Office"
+projekt:
+  - "AWM_Muenster_Circular_Office"
+---
 
-## Clean Node
+# Fläche - AWM Münster – Zirkulärer Büroausbau 3. OG – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/AWM_Muenster_Circular_Office__001__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/AWM_Muenster_Circular_Office__001__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 250
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe urselmann/AWM
+- **Bilanzgrenze:** Büroetage
+- **Quelle:** S2, S4
+- **Vertrauensgrad:** belegt

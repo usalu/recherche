@@ -1,20 +1,25 @@
-﻿---
-id: "Plattenpalast_Berlin__001__wiederverwendete_Betonplatten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "wiederverwendete Betonplatten - Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# wiederverwendete Betonplatten - Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Plattenpalast_Berlin__001__wiederverwendete_Betonplatten"
+title: "wiederverwendete Betonplatten - Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "S2, S5"
+node_kind: "core"
+wert: "13"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+bauobjekt:
+  - "Plattenpalast_Berlin"
+projekt:
+  - "Plattenpalast_Berlin"
+---
 
-## Clean Node
+# wiederverwendete Betonplatten - Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Plattenpalast_Berlin__001__wiederverwendete_Betonplatten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Plattenpalast_Berlin__001__wiederverwendete_Betonplatten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** wiederverwendete Betonplatten
+- **Wert:** 13
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Projekt-/Sekundärquelle
+- **Bilanzgrenze:** Plattenpalast
+- **Quelle:** S2, S5
+- **Vertrauensgrad:** belegt

@@ -1,20 +1,22 @@
-﻿---
-id: "Charles_Malis_Molenbeek__007__Gillion_Construct"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Gillion Construct - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse"
 ---
-# Gillion Construct - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Charles_Malis_Molenbeek__007__Gillion_Construct"
+title: "Gillion Construct - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Mamout / igloo"
+node_kind: "relation"
+fallstudie: "fallstudie/Charles_Malis_Molenbeek"
+bauobjekt:
+  - "Charles_Malis_Molenbeek"
+projekt:
+  - "Charles_Malis_Molenbeek"
+---
 
-## Clean Node
+# Gillion Construct - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Charles_Malis_Molenbeek__007__Gillion_Construct
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Charles_Malis_Molenbeek__007__Gillion_Construct
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Gillion Construct
+- **Beziehung zur Fallstudie:** Contractor
+- **Quelle/Beleg:** Mamout / igloo
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Ausführung.

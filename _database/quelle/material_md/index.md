@@ -1,15 +1,12 @@
-﻿---
-id: "material_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "material.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "material_md"
+title: "material_md"
+build_status: "promoted_phase42"
+source_filename: "material.md"
+legacy_type: "Type"
+---
+
 # material_md
 
-## Source Archive
 
-- Original path: material.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: merge_into_index; old target: material/index

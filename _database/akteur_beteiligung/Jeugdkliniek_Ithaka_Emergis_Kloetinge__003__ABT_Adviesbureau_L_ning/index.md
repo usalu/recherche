@@ -1,20 +1,22 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__003__ABT_Adviesbureau_L_ning"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "ABT + Adviesbureau LÃ¼ning - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
-# ABT + Adviesbureau LÃ¼ning - Jeugdkliniek Ithaka / Emergis, Kloetinge
+entity: "akteur_beteiligung"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__003__ABT_Adviesbureau_L_ning"
+title: "ABT + Adviesbureau Lüning - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+quelle_label: "[S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+---
 
-## Clean Node
+# ABT + Adviesbureau Lüning - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-- Final path: _database/akteur_beteiligung/Jeugdkliniek_Ithaka_Emergis_Kloetinge__003__ABT_Adviesbureau_L_ning
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Jeugdkliniek_Ithaka_Emergis_Kloetinge__003__ABT_Adviesbureau_L_ning
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** ABT + Adviesbureau Lüning
+- **Beziehung zur Fallstudie:** Holz-/Tragwerksberatung
+- **Quelle/Beleg:** [S4]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Holzstruktur spielt wichtige Rolle

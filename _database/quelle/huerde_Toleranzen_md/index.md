@@ -1,15 +1,12 @@
-﻿---
-id: "huerde_Toleranzen_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "huerde/Toleranzen.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "huerde_Toleranzen_md"
+title: "huerde_Toleranzen_md"
+build_status: "promoted_phase42"
+source_filename: "Toleranzen.md"
+legacy_type: "Hürde"
+---
+
 # huerde_Toleranzen_md
 
-## Source Archive
 
-- Original path: huerde/Toleranzen.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: huerde/Toleranzen

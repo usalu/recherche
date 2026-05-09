@@ -1,20 +1,22 @@
-﻿---
-id: "Christ_Pavilion_Volkenroda__003__Kloster_Volkenroda_Jesus_Bruderschaft"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Kloster Volkenroda / Jesus-Bruderschaft - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Kloster Volkenroda / Jesus-Bruderschaft - Christus-Pavillon / Christ Pavilion, Volkenroda â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Christ_Pavilion_Volkenroda__003__Kloster_Volkenroda_Jesus_Bruderschaft"
+title: "Kloster Volkenroda / Jesus-Bruderschaft - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "Kloster / Bauhaus Uni"
+node_kind: "relation"
+fallstudie: "fallstudie/Christ_Pavilion_Volkenroda"
+bauobjekt:
+  - "Christ_Pavilion_Volkenroda"
+projekt:
+  - "Christ_Pavilion_Volkenroda"
+---
 
-## Clean Node
+# Kloster Volkenroda / Jesus-Bruderschaft - Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Christ_Pavilion_Volkenroda__003__Kloster_Volkenroda_Jesus_Bruderschaft
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Christ_Pavilion_Volkenroda__003__Kloster_Volkenroda_Jesus_Bruderschaft
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Kloster Volkenroda / Jesus-Bruderschaft
+- **Beziehung zur Fallstudie:** heutiger Betreiber/Kontext
+- **Quelle/Beleg:** Kloster / Bauhaus Uni
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Betreiberkontext genannt

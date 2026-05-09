@@ -1,20 +1,22 @@
-﻿---
-id: "TRAE_High_Rise_Aarhus__001__Lendager"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Lendager - TRÃ† High-Rise, Aarhus"
 ---
-# Lendager - TRÃ† High-Rise, Aarhus
+entity: "akteur_beteiligung"
+id: "TRAE_High_Rise_Aarhus__001__Lendager"
+title: "Lendager - TRÆ High-Rise, Aarhus"
+build_status: "promoted_phase42"
+quelle_label: "[S1], [S2], [S4]"
+node_kind: "relation"
+fallstudie: "fallstudie/TRAE_High_Rise_Aarhus"
+bauobjekt:
+  - "TRAE_High_Rise_Aarhus"
+projekt:
+  - "TRAE_High_Rise_Aarhus"
+---
 
-## Clean Node
+# Lendager - TRÆ High-Rise, Aarhus
 
-- Final path: _database/akteur_beteiligung/TRAE_High_Rise_Aarhus__001__Lendager
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/TRAE_High_Rise_Aarhus__001__Lendager
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Lendager
+- **Beziehung zur Fallstudie:** Architekt / zirkuläres Design
+- **Quelle/Beleg:** [S1], [S2], [S4]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Anders Lendager als Autor bei EUmies genannt

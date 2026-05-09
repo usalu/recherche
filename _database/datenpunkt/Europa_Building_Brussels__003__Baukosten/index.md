@@ -1,20 +1,25 @@
-﻿---
-id: "Europa_Building_Brussels__003__Baukosten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Baukosten - Europa Building, Brussels â€“ Fallstudie Direct Reuse"
 ---
-# Baukosten - Europa Building, Brussels â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Europa_Building_Brussels__003__Baukosten"
+title: "Baukosten - Europa Building, Brussels – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Euro"
+quelle_label: "Council"
+node_kind: "core"
+wert: "312 Mio."
+fallstudie: "fallstudie/Europa_Building_Brussels"
+bauobjekt:
+  - "Europa_Building_Brussels"
+projekt:
+  - "Europa_Building_Brussels"
+---
 
-## Clean Node
+# Baukosten - Europa Building, Brussels – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Europa_Building_Brussels__003__Baukosten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Europa_Building_Brussels__003__Baukosten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Baukosten
+- **Wert:** 312 Mio.
+- **Einheit:** Euro
+- **Methode/Datenmodell/Software:** Endkosten in Preisen März 2016
+- **Bilanzgrenze:** Gesamtprojekt, nicht Reuse
+- **Quelle:** Council
+- **Vertrauensgrad:** belegt

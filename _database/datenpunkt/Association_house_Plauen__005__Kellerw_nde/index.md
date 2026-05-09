@@ -1,20 +1,25 @@
-﻿---
-id: "Association_house_Plauen__005__Kellerw_nde"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "KellerwÃ¤nde - Association house, Plauen â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
 ---
-# KellerwÃ¤nde - Association house, Plauen â€” Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
+entity: "datenpunkt"
+id: "Association_house_Plauen__005__Kellerw_nde"
+title: "Kellerwände - Association house, Plauen — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "11"
+fallstudie: "fallstudie/Association_house_Plauen"
+bauobjekt:
+  - "Association_house_Plauen"
+projekt:
+  - "Association_house_Plauen"
+---
 
-## Clean Node
+# Kellerwände - Association house, Plauen — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen
 
-- Final path: _database/datenpunkt/Association_house_Plauen__005__Kellerw_nde
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Association_house_Plauen__005__Kellerw_nde
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Kellerwände
+- **Wert:** 11
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** PRECS-Fallstudienliste
+- **Bilanzgrenze:** Bauteile
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

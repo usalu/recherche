@@ -1,25 +1,24 @@
-﻿---
-id: "Tuer"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Feuerschuetztuer"
 ---
+entity: "bauteiltyp"
+id: "Tuer"
+title: "Feuerschuetztuer"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "bauteil\Feuerschutztuer.md"
+node_kind: "knot"
+legacy_type: "Bauteil"
+---
+
 # Feuerschuetztuer
 
-## Clean Node
+# Feuerschuetztuer
 
-- Final path: _database/bauteiltyp/Tuer
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/bauteiltyp/Feuerschutztuer
-  - Action: split_to_clean_targets
-  - Status: CONFIDENT
-  - Reason: It is a door with fire-safety requirement, not a separate top-level component family.
+## Wichtige Verbindungen
 
-- Source: _graph/bauteiltyp/Tuer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Evidenz / Beispiele
 
+## Offene Fragen

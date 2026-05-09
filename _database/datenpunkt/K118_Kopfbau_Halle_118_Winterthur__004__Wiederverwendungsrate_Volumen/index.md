@@ -1,20 +1,25 @@
-﻿---
-id: "K118_Kopfbau_Halle_118_Winterthur__004__Wiederverwendungsrate_Volumen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Wiederverwendungsrate Volumen - K.118 â€“ Kopfbau Halle 118, Winterthur"
 ---
-# Wiederverwendungsrate Volumen - K.118 â€“ Kopfbau Halle 118, Winterthur
+entity: "datenpunkt"
+id: "K118_Kopfbau_Halle_118_Winterthur__004__Wiederverwendungsrate_Volumen"
+title: "Wiederverwendungsrate Volumen - K.118 – Kopfbau Halle 118, Winterthur"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S6]"
+node_kind: "core"
+wert: "41"
+fallstudie: "fallstudie/K118_Kopfbau_Halle_118_Winterthur"
+bauobjekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+projekt:
+  - "K118_Kopfbau_Halle_118_Winterthur"
+---
 
-## Clean Node
+# Wiederverwendungsrate Volumen - K.118 – Kopfbau Halle 118, Winterthur
 
-- Final path: _database/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__004__Wiederverwendungsrate_Volumen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/K118_Kopfbau_Halle_118_Winterthur__004__Wiederverwendungsrate_Volumen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Wiederverwendungsrate Volumen
+- **Wert:** 41
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Case Study K.118
+- **Bilanzgrenze:** Bauteilvolumen
+- **Quelle:** [S6]
+- **Vertrauensgrad:** belegt

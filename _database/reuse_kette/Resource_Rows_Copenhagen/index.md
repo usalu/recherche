@@ -1,20 +1,16 @@
-﻿---
-id: "Resource_Rows_Copenhagen"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Resource Rows, Copenhagen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Reuse-Kette - Resource Rows, Copenhagen â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_kette"
+id: "Resource_Rows_Copenhagen"
+title: "Reuse-Kette - Resource Rows, Copenhagen — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Resource_Rows_Copenhagen.md"
+node_kind: "core"
+fallstudie: "fallstudie/Resource_Rows_Copenhagen"
+projekt:
+  - "Resource_Rows_Copenhagen"
+---
 
-## Clean Node
+# Reuse-Kette - Resource Rows, Copenhagen — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_kette/Resource_Rows_Copenhagen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Resource_Rows_Copenhagen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

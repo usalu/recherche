@@ -1,20 +1,25 @@
-﻿---
-id: "Grubenstrasse_29_Werkhof_29_Zuerich__001__Projektfl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "ProjektflÃ¤che - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# ProjektflÃ¤che - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grubenstrasse_29_Werkhof_29_Zuerich__001__Projektfl_che"
+title: "Projektfläche - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "baubüro in situ"
+node_kind: "core"
+wert: "2.600"
+fallstudie: "fallstudie/Grubenstrasse_29_Werkhof_29_Zuerich"
+bauobjekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+projekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+---
 
-## Clean Node
+# Projektfläche - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grubenstrasse_29_Werkhof_29_Zuerich__001__Projektfl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grubenstrasse_29_Werkhof_29_Zuerich__001__Projektfl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Projektfläche
+- **Wert:** 2.600
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Gebäude/Projekt
+- **Quelle:** baubüro in situ
+- **Vertrauensgrad:** belegt

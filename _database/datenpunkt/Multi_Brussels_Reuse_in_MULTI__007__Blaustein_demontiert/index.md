@@ -1,20 +1,25 @@
-﻿---
-id: "Multi_Brussels_Reuse_in_MULTI__007__Blaustein_demontiert"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Blaustein demontiert - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Blaustein demontiert - Multi Brussels / Reuse in MULTI â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Multi_Brussels_Reuse_in_MULTI__007__Blaustein_demontiert"
+title: "Blaustein demontiert - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m² / t"
+quelle_label: "S6"
+node_kind: "core"
+wert: "ca. 280 / 140"
+fallstudie: "fallstudie/Multi_Brussels_Reuse_in_MULTI"
+bauobjekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+projekt:
+  - "Multi_Brussels_Reuse_in_MULTI"
+---
 
-## Clean Node
+# Blaustein demontiert - Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Multi_Brussels_Reuse_in_MULTI__007__Blaustein_demontiert
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Multi_Brussels_Reuse_in_MULTI__007__Blaustein_demontiert
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Blaustein demontiert
+- **Wert:** ca. 280 / 140
+- **Einheit:** m² / t
+- **Methode/Datenmodell/Software:** Rotor Salvage-Bericht
+- **Bilanzgrenze:** Naturstein-Fassade
+- **Quelle:** S6
+- **Vertrauensgrad:** teilweise belegt

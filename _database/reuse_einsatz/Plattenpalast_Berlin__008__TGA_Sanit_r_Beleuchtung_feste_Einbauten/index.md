@@ -1,20 +1,43 @@
-﻿---
-id: "Plattenpalast_Berlin__008__TGA_Sanit_r_Beleuchtung_feste_Einbauten"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "TGA/SanitÃ¤r/Beleuchtung/feste Einbauten - Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# TGA/SanitÃ¤r/Beleuchtung/feste Einbauten - Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Plattenpalast_Berlin__008__TGA_Sanit_r_Beleuchtung_feste_Einbauten"
+title: "TGA/Sanitär/Beleuchtung/feste Einbauten - Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "keine belastbare Quelle gefunden"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+bauobjekt:
+  - "Plattenpalast_Berlin"
+neue_funktion: "unbekannt"
+bauteil_label: "TGA/Sanitär/Beleuchtung/feste Einbauten"
+projekt:
+  - "Plattenpalast_Berlin"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# TGA/Sanitär/Beleuchtung/feste Einbauten - Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Plattenpalast_Berlin__008__TGA_Sanit_r_Beleuchtung_feste_Einbauten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Plattenpalast_Berlin__008__TGA_Sanit_r_Beleuchtung_feste_Einbauten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** TGA/Sanitär/Beleuchtung/feste Einbauten
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** unbekannt
+- **Menge/Umfang:** unbekannt
+- **tragend?:** unbekannt
+- **räumlich?:** unbekannt
+- **Hülle?:** nein
+- **technisch?:** unbekannt
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** keine belastbare Quelle gefunden
+- **unbekannt:** ja

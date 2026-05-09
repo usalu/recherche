@@ -1,20 +1,25 @@
-﻿---
-id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Fl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che - Saxum Vineyard Equipment Barn, Paso Robles â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Fl_che"
+title: "Fläche - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "ft²"
+quelle_label: "[S5]"
+node_kind: "core"
+wert: "2.340"
+fallstudie: "fallstudie/Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+bauobjekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+projekt:
+  - "Saxum_Vineyard_Equipment_Barn_Paso_Robles"
+---
 
-## Clean Node
+# Fläche - Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Fl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Saxum_Vineyard_Equipment_Barn_Paso_Robles__003__Fl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche
+- **Wert:** 2.340
+- **Einheit:** ft²
+- **Methode/Datenmodell/Software:** Projektpublikation/Sekundärquelle
+- **Bilanzgrenze:** Gebäude
+- **Quelle:** [S5]
+- **Vertrauensgrad:** teilweise belegt

@@ -1,20 +1,25 @@
-﻿---
-id: "Brighton_Waste_House_Brighton__008__Teppichfliesen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Teppichfliesen - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung"
 ---
-# Teppichfliesen - Brighton Waste House / Wild House, Brighton â€” Fallstudie Bauteil- und Materialwiederverwendung
+entity: "datenpunkt"
+id: "Brighton_Waste_House_Brighton__008__Teppichfliesen"
+title: "Teppichfliesen - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Stück"
+quelle_label: "University of Brighton"
+node_kind: "core"
+wert: "2.000"
+fallstudie: "fallstudie/Brighton_Waste_House_Brighton"
+bauobjekt:
+  - "Brighton_Waste_House_Brighton"
+projekt:
+  - "Brighton_Waste_House_Brighton"
+---
 
-## Clean Node
+# Teppichfliesen - Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung
 
-- Final path: _database/datenpunkt/Brighton_Waste_House_Brighton__008__Teppichfliesen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Brighton_Waste_House_Brighton__008__Teppichfliesen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Teppichfliesen
+- **Wert:** 2.000
+- **Einheit:** Stück
+- **Methode/Datenmodell/Software:** Materialzählung
+- **Bilanzgrenze:** Fassade/Dämmung
+- **Quelle:** University of Brighton
+- **Vertrauensgrad:** belegt

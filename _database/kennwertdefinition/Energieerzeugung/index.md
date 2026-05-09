@@ -1,20 +1,13 @@
-﻿---
-id: "Energieerzeugung"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Energieerzeugung"
 ---
+entity: "kennwertdefinition"
+id: "Energieerzeugung"
+title: "Energieerzeugung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Energieerzeugung
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Energieerzeugung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Energieerzeugung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Erzeugungsbezogene Energiewerte wie PV-Stromanteil oder Erdwärmesonden.

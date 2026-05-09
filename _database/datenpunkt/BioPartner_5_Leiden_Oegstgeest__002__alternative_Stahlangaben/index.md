@@ -1,20 +1,25 @@
-﻿---
-id: "BioPartner_5_Leiden_Oegstgeest__002__alternative_Stahlangaben"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "alternative Stahlangaben - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# alternative Stahlangaben - BioPartner 5, Leiden / Oegstgeest â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "BioPartner_5_Leiden_Oegstgeest__002__alternative_Stahlangaben"
+title: "alternative Stahlangaben - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "[S1], [S7], [S10]"
+node_kind: "core"
+wert: "ca. 150 / 160 / 170"
+fallstudie: "fallstudie/BioPartner_5_Leiden_Oegstgeest"
+bauobjekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+projekt:
+  - "BioPartner_5_Leiden_Oegstgeest"
+---
 
-## Clean Node
+# alternative Stahlangaben - BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/BioPartner_5_Leiden_Oegstgeest__002__alternative_Stahlangaben
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BioPartner_5_Leiden_Oegstgeest__002__alternative_Stahlangaben
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** alternative Stahlangaben
+- **Wert:** ca. 150 / 160 / 170
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** Quellenvergleich
+- **Bilanzgrenze:** gleiches Stahlthema, abweichende Quellen
+- **Quelle:** [S1], [S7], [S10]
+- **Vertrauensgrad:** teilweise belegt

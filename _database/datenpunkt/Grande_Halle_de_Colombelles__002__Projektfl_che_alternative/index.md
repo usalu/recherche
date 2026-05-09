@@ -1,20 +1,25 @@
-﻿---
-id: "Grande_Halle_de_Colombelles__002__Projektfl_che_alternative"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "ProjektflÃ¤che alternative - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# ProjektflÃ¤che alternative - Grande Halle de Colombelles / Le WIP â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Grande_Halle_de_Colombelles__002__Projektfl_che_alternative"
+title: "Projektfläche alternative - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "[S6]"
+node_kind: "core"
+wert: "3.080"
+fallstudie: "fallstudie/Grande_Halle_de_Colombelles"
+bauobjekt:
+  - "Grande_Halle_de_Colombelles"
+projekt:
+  - "Grande_Halle_de_Colombelles"
+---
 
-## Clean Node
+# Projektfläche alternative - Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Grande_Halle_de_Colombelles__002__Projektfl_che_alternative
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Grande_Halle_de_Colombelles__002__Projektfl_che_alternative
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Projektfläche alternative
+- **Wert:** 3.080
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Surface bei Albert & Co
+- **Quelle:** [S6]
+- **Vertrauensgrad:** teilweise, abweichend

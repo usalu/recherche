@@ -1,20 +1,16 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Receiver - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "reuse_kettenstation"
+id: "Verbiest_Karreveld_Brussels__Receiver"
+title: "Receiver - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Verbiest_Karreveld_Brussels.md"
+node_kind: "core"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Receiver - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/reuse_kettenstation/Verbiest_Karreveld_Brussels__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Verbiest_Karreveld_Brussels__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Keine explizite Receiver-Zeile gefunden; Station wurde wegen erkannter Reuse-Kette als Strukturplatzhalter angelegt.

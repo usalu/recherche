@@ -1,20 +1,35 @@
-﻿---
-id: "Plattenpalast_Berlin"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Plattenpalast Berlin â€” Fallstudie Direct Reuse"
 ---
-# Plattenpalast Berlin â€” Fallstudie Direct Reuse
+entity: "bauobjekt"
+id: "Plattenpalast_Berlin"
+title: "Plattenpalast Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Plattenpalast_Berlin.md"
+node_kind: "core"
+fallstudie: "fallstudie/Plattenpalast_Berlin"
+projekt:
+  - "Plattenpalast_Berlin"
+---
 
-## Clean Node
+# Plattenpalast Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/bauobjekt/Plattenpalast_Berlin
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Plattenpalast_Berlin.md
 
-- Source: _graph/bauobjekt/Plattenpalast_Berlin
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Plattenpalast Berlin
+- **Ort:** Wolliner Straße 50, Berlin
+- **Gebäude:** Kleinsthaus / Galerie / experimenteller Wohnraum aus wiederverwendeten Plattenbauteilen
+- **Projekt:** Forschungs-/Prototyp-Projekt zur Wiederverwendung von WBS70-Betonfertigteilen
+- **Beteiligte People / Akteure:** Wiewiorra Hopp Architekten; TU Berlin/IEMB; Claus Asam im IEMB-Kontext; Carsten Wiewiorra
+- **Architekt:** Wiewiorra Hopp Architekten / Anna Hopp und Carsten Wiewiorra
+- **Tragwerksplaner:** unbekannt
+- **Bauherr:** Carsten Wiewiorra
+- **Zeitraum:** 2009 als Eröffnung/Galerienutzung belegt; ältere Test-/Entwicklungsdaten in Sekundärquellen abweichend
+- **Ursprüngliche Nutzung:** WBS70-Großtafel-Platten aus rückgebauten Plattenbauten; Fenster aus Palast der Republik
+- **Neue Nutzung:** Kleinsthaus, Galerie, später experimentelles Wohnprojekt
+- **Fläche / Maßstab:** 30–39 m² je nach Quelle; Quellenkonflikt
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Grundprinzip, Bauteile, Standort; schwach/konfliktbehaftet für Fläche, Datum, technische Nachweise und Wirtschaft

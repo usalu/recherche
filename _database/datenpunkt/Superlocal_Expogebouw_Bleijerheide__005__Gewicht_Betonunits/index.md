@@ -1,20 +1,25 @@
-﻿---
-id: "Superlocal_Expogebouw_Bleijerheide__005__Gewicht_Betonunits"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Gewicht Betonunits - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Gewicht Betonunits - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Superlocal_Expogebouw_Bleijerheide__005__Gewicht_Betonunits"
+title: "Gewicht Betonunits - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "t je Element"
+quelle_label: "SUPERLOCAL"
+node_kind: "core"
+wert: "ca. 45 / ca. 40"
+fallstudie: "fallstudie/Superlocal_Expogebouw_Bleijerheide"
+bauobjekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+projekt:
+  - "Superlocal_Expogebouw_Bleijerheide"
+---
 
-## Clean Node
+# Gewicht Betonunits - SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Superlocal_Expogebouw_Bleijerheide__005__Gewicht_Betonunits
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Superlocal_Expogebouw_Bleijerheide__005__Gewicht_Betonunits
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Gewicht Betonunits
+- **Wert:** ca. 45 / ca. 40
+- **Einheit:** t je Element
+- **Methode/Datenmodell/Software:** Projektmeldungen
+- **Bilanzgrenze:** Großbauteile
+- **Quelle:** SUPERLOCAL
+- **Vertrauensgrad:** teilweise belegt; Quellenkonflikt

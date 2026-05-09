@@ -1,20 +1,13 @@
-﻿---
-id: "Unkonventionelles_Material"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Unkonventionelles Material"
 ---
+entity: "huerde"
+id: "Unkonventionelles_Material"
+title: "Unkonventionelles Material"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Unkonventionelles Material
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Unkonventionelles_Material
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Unkonventionelles_Material
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Experimentelle, ungewoehnliche oder nicht standardisierte Materialanwendungen als Huerde.

@@ -1,20 +1,25 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__010__Materialpass"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Materialpass - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
+entity: "datenpunkt"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__010__Materialpass"
+title: "Materialpass - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+einheit: "ja/nein"
+quelle_label: "[S5], [S14]"
+node_kind: "core"
+wert: "vorhanden"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+---
+
 # Materialpass - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-## Clean Node
-
-- Final path: _database/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__010__Materialpass
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__010__Materialpass
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Materialpass
+- **Wert:** vorhanden
+- **Einheit:** ja/nein
+- **Methode/Datenmodell/Software:** Materialenpaspoort mit Fotos
+- **Bilanzgrenze:** Dokumentation für zukünftige Reuse
+- **Quelle:** [S5], [S14]
+- **Vertrauensgrad:** belegt

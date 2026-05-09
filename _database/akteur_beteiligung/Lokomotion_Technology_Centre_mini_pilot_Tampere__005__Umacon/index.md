@@ -1,20 +1,22 @@
-﻿---
-id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__005__Umacon"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Umacon - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse"
 ---
-# Umacon - Lokomotion Technology Centre mini-pilot, Tampere â€” Fallstudie Wiederverwendung / Direct Reuse
+entity: "akteur_beteiligung"
+id: "Lokomotion_Technology_Centre_mini_pilot_Tampere__005__Umacon"
+title: "Umacon - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "ReCreate / Finnish cluster"
+node_kind: "relation"
+fallstudie: "fallstudie/Lokomotion_Technology_Centre_mini_pilot_Tampere"
+bauobjekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+projekt:
+  - "Lokomotion_Technology_Centre_mini_pilot_Tampere"
+---
 
-## Clean Node
+# Umacon - Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__005__Umacon
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lokomotion_Technology_Centre_mini_pilot_Tampere__005__Umacon
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Umacon
+- **Beziehung zur Fallstudie:** Rückbaupartner
+- **Quelle/Beleg:** ReCreate / Finnish cluster
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** nicht alle Handlungen projektgenau beschrieben

@@ -1,20 +1,22 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__006__Pouvoir_Organisateur_Pluriel_POP"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Pouvoir Organisateur Pluriel / POP - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Pouvoir Organisateur Pluriel / POP - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "akteur_beteiligung"
+id: "Verbiest_Karreveld_Brussels__006__Pouvoir_Organisateur_Pluriel_POP"
+title: "Pouvoir Organisateur Pluriel / POP - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+quelle_label: "Q7"
+node_kind: "relation"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Pouvoir Organisateur Pluriel / POP - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/akteur_beteiligung/Verbiest_Karreveld_Brussels__006__Pouvoir_Organisateur_Pluriel_POP
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Verbiest_Karreveld_Brussels__006__Pouvoir_Organisateur_Pluriel_POP
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Pouvoir Organisateur Pluriel / POP
+- **Beziehung zur Fallstudie:** Schulträger / Bauherr-Kontext Karreveld
+- **Quelle/Beleg:** Q7
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** BMA-Ausschreibung

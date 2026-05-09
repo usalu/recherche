@@ -1,20 +1,22 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__003__Bureau_Bouwtechniek_Greisch_Daidalos_Peutz_Takty"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Bureau Bouwtechniek, Greisch, Daidalos Peutz, Taktyk - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Bureau Bouwtechniek, Greisch, Daidalos Peutz, Taktyk - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Musee_de_Folklore_Mouscron__003__Bureau_Bouwtechniek_Greisch_Daidalos_Peutz_Takty"
+title: "Bureau Bouwtechniek, Greisch, Daidalos Peutz, Taktyk - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S3]"
+node_kind: "relation"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# Bureau Bouwtechniek, Greisch, Daidalos Peutz, Taktyk - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Musee_de_Folklore_Mouscron__003__Bureau_Bouwtechniek_Greisch_Daidalos_Peutz_Takty
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Musee_de_Folklore_Mouscron__003__Bureau_Bouwtechniek_Greisch_Daidalos_Peutz_Takty
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Bureau Bouwtechniek, Greisch, Daidalos Peutz, Taktyk
+- **Beziehung zur Fallstudie:** Partner / Ingenieurwesen / Landschaft
+- **Quelle/Beleg:** [S3]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Rollen teils mit st/ts, ac/en, pay.

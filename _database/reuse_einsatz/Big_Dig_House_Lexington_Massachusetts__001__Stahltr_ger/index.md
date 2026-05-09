@@ -1,20 +1,43 @@
-﻿---
-id: "Big_Dig_House_Lexington_Massachusetts__001__Stahltr_ger"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "StahltrÃ¤ger - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# StahltrÃ¤ger - Big Dig House, Lexington, Massachusetts â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Big_Dig_House_Lexington_Massachusetts__001__Stahltr_ger"
+title: "Stahlträger - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Transport, Gewicht, Einpassung"
+quelle_label: "Britannica, Project Architecture, Inhabitat"
+material_label: "Stahl"
+node_kind: "core"
+herkunft_label: "dismantled I-93 / Big Dig"
+menge_umfang: "Teil von 300 tons / 600,000+ lb"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Big_Dig_House_Lexington_Massachusetts"
+bauobjekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+neue_funktion: "Hausrahmen / beams"
+bauteil_label: "Stahlträger"
+projekt:
+  - "Big_Dig_House_Lexington_Massachusetts"
+alte_funktion: "highway/ramp/temporary infrastructure"
+---
 
-## Clean Node
+# Stahlträger - Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Big_Dig_House_Lexington_Massachusetts__001__Stahltr_ger
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Big_Dig_House_Lexington_Massachusetts__001__Stahltr_ger
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Stahlträger
+- **Material:** Stahl
+- **Herkunft:** dismantled I-93 / Big Dig
+- **alte Funktion:** highway/ramp/temporary infrastructure
+- **neue Funktion:** Hausrahmen / beams
+- **Menge/Umfang:** Teil von 300 tons / 600,000+ lb
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** largely as found / Zuschnitt unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** sehr hohe Tragfähigkeit laut Quellen
+- **Norm/Recht:** unbekannt
+- **Hürde:** Transport, Gewicht, Einpassung
+- **Quelle:** Britannica, Project Architecture, Inhabitat
+- **unbekannt:** Profile

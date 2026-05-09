@@ -1,20 +1,43 @@
-﻿---
-id: "Grubenstrasse_29_Werkhof_29_Zuerich__002__Dachbleche"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Dachbleche - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Dachbleche - Grubenstrasse 29 / Werkhof 29, ZÃ¼rich â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Grubenstrasse_29_Werkhof_29_Zuerich__002__Dachbleche"
+title: "Dachbleche - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Dichtheit, Befestigung"
+quelle_label: "Bauwende"
+material_label: "Metall/Aluminium/Stahl unbekannt"
+node_kind: "core"
+herkunft_label: "Rückbauprojekte"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Grubenstrasse_29_Werkhof_29_Zuerich"
+bauobjekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+neue_funktion: "Dach/Shed-/Dachbereich"
+bauteil_label: "Dachbleche"
+projekt:
+  - "Grubenstrasse_29_Werkhof_29_Zuerich"
+alte_funktion: "Dach-/Blechdeckung"
+---
 
-## Clean Node
+# Dachbleche - Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Grubenstrasse_29_Werkhof_29_Zuerich__002__Dachbleche
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Grubenstrasse_29_Werkhof_29_Zuerich__002__Dachbleche
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Dachbleche
+- **Material:** Metall/Aluminium/Stahl unbekannt
+- **Herkunft:** Rückbauprojekte
+- **alte Funktion:** Dach-/Blechdeckung
+- **neue Funktion:** Dach/Shed-/Dachbereich
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** nein
+- **Hülle?:** ja
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Witterung, Abdichtung
+- **Norm/Recht:** unbekannt
+- **Hürde:** Dichtheit, Befestigung
+- **Quelle:** Bauwende
+- **unbekannt:** Material, Menge

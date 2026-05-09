@@ -1,20 +1,13 @@
-﻿---
-id: "Nutzungsumfang"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Nutzungsumfang"
 ---
+entity: "kennwertdefinition"
+id: "Nutzungsumfang"
+title: "Nutzungsumfang"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Nutzungsumfang
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Nutzungsumfang
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Nutzungsumfang
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Nutzungsbezogene Mengen wie Wohneinheiten, Betten, Unterrichtsgruppen, Workspace oder geplante Nutzung.

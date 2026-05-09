@@ -1,20 +1,25 @@
-﻿---
-id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__012__GIA_office"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "GIA office - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette"
 ---
-# GIA office - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette
+entity: "datenpunkt"
+id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__012__GIA_office"
+title: "GIA office - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Open House"
+node_kind: "core"
+wert: "10,616"
+fallstudie: "fallstudie/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+bauobjekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+projekt:
+  - "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+---
 
-## Clean Node
+# GIA office - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette
 
-- Final path: _database/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__012__GIA_office
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__012__GIA_office
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** GIA office
+- **Wert:** 10,616
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Open House
+- **Bilanzgrenze:** TBC office
+- **Quelle:** Open House
+- **Vertrauensgrad:** belegt

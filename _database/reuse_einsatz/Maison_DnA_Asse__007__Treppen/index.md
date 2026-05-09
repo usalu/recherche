@@ -1,20 +1,43 @@
-﻿---
-id: "Maison_DnA_Asse__007__Treppen"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Treppen - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Treppen - Maison DnA / dnA House, Asse â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Maison_DnA_Asse__007__Treppen"
+title: "Treppen - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "unbekannt"
+quelle_label: "keine Quelle"
+material_label: "unbekannt"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Maison_DnA_Asse"
+bauobjekt:
+  - "Maison_DnA_Asse"
+neue_funktion: "Erschließung"
+bauteil_label: "Treppen"
+projekt:
+  - "Maison_DnA_Asse"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Treppen - Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Maison_DnA_Asse__007__Treppen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Maison_DnA_Asse__007__Treppen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Treppen
+- **Material:** unbekannt
+- **Herkunft:** unbekannt
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Erschließung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** unbekannt
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** unbekannt
+- **Quelle:** keine Quelle
+- **unbekannt:** ja

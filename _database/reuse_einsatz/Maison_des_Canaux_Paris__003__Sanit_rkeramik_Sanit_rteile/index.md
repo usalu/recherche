@@ -1,20 +1,43 @@
-﻿---
-id: "Maison_des_Canaux_Paris__003__Sanit_rkeramik_Sanit_rteile"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "SanitÃ¤rkeramik / SanitÃ¤rteile - Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# SanitÃ¤rkeramik / SanitÃ¤rteile - Maison des Canaux, Paris â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Maison_des_Canaux_Paris__003__Sanit_rkeramik_Sanit_rteile"
+title: "Sanitärkeramik / Sanitärteile - Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Gewährleistung / Hygiene"
+quelle_label: "S1/S2 zu prüfen"
+material_label: "Keramik / Metall"
+node_kind: "core"
+herkunft_label: "unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Maison_des_Canaux_Paris"
+bauobjekt:
+  - "Maison_des_Canaux_Paris"
+neue_funktion: "Sanitärinstallation"
+bauteil_label: "Sanitärkeramik / Sanitärteile"
+projekt:
+  - "Maison_des_Canaux_Paris"
+alte_funktion: "Sanitärobjekt"
+---
 
-## Clean Node
+# Sanitärkeramik / Sanitärteile - Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Maison_des_Canaux_Paris__003__Sanit_rkeramik_Sanit_rteile
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Maison_des_Canaux_Paris__003__Sanit_rkeramik_Sanit_rteile
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Sanitärkeramik / Sanitärteile
+- **Material:** Keramik / Metall
+- **Herkunft:** unbekannt
+- **alte Funktion:** Sanitärobjekt
+- **neue Funktion:** Sanitärinstallation
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** ja
+- **Eingriff/Aufbereitung:** Reinigung / Prüfung möglich
+- **Verbindung:** Sanitäranschlüsse
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Hygiene, Dichtheit, Trinkwasser
+- **Norm/Recht:** unbekannt
+- **Hürde:** Gewährleistung / Hygiene
+- **Quelle:** S1/S2 zu prüfen
+- **unbekannt:** genaue Bauteile

@@ -1,20 +1,24 @@
-﻿---
-id: "Kindl_Areal_Standort"
-entity: "ort"
-build_status: "clean_phase20"
-title: "Kindl Areal Standort"
 ---
+entity: "ort"
+id: "Kindl_Areal_Standort"
+title: "Kindl Areal Standort"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "ort\Kindl_Areal_Standort.md"
+node_kind: "knot"
+legacy_type: "Ort"
+---
+
 # Kindl Areal Standort
 
-## Clean Node
+# Kindl Areal Standort
 
-- Final path: _database/ort/Kindl_Areal_Standort
-- Build rule: typed path IDs only.
+## Kurzdefinition
 
-## Imported Staging Nodes
+## Warum relevant fuer Reuse
 
-- Source: _graph/ort/Kindl_Areal_Standort
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## Wichtige Verbindungen
 
+## Evidenz / Beispiele
+
+## Offene Fragen

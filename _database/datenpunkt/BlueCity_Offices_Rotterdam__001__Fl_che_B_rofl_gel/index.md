@@ -1,20 +1,25 @@
-﻿---
-id: "BlueCity_Offices_Rotterdam__001__Fl_che_B_rofl_gel"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "FlÃ¤che BÃ¼roflÃ¼gel - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# FlÃ¤che BÃ¼roflÃ¼gel - BlueCity Offices Rotterdam â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "BlueCity_Offices_Rotterdam__001__Fl_che_B_rofl_gel"
+title: "Fläche Büroflügel - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "S1, S2"
+node_kind: "core"
+wert: "1.300"
+fallstudie: "fallstudie/BlueCity_Offices_Rotterdam"
+bauobjekt:
+  - "BlueCity_Offices_Rotterdam"
+projekt:
+  - "BlueCity_Offices_Rotterdam"
+---
 
-## Clean Node
+# Fläche Büroflügel - BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/BlueCity_Offices_Rotterdam__001__Fl_che_B_rofl_gel
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/BlueCity_Offices_Rotterdam__001__Fl_che_B_rofl_gel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Fläche Büroflügel
+- **Wert:** 1.300
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** erster Büroabschnitt
+- **Quelle:** S1, S2
+- **Vertrauensgrad:** belegt

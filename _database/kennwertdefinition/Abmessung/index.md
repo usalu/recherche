@@ -1,20 +1,13 @@
-﻿---
-id: "Abmessung"
-entity: "kennwertdefinition"
-build_status: "clean_phase20"
-title: "Abmessung"
 ---
+entity: "kennwertdefinition"
+id: "Abmessung"
+title: "Abmessung"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Abmessung
 
-## Clean Node
+## Definition
 
-- Final path: _database/kennwertdefinition/Abmessung
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/kennwertdefinition/Abmessung
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Geometrische Groesse wie Laenge, Breite, Spannweite, Stich, Winkel oder Einzelabmessung.

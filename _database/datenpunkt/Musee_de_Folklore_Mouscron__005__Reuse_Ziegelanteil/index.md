@@ -1,20 +1,25 @@
-﻿---
-id: "Musee_de_Folklore_Mouscron__005__Reuse_Ziegelanteil"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Reuse-Ziegelanteil - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse"
 ---
-# Reuse-Ziegelanteil - MusÃ©e de Folklore Vie FrontaliÃ¨re / MUSEF, Mouscron â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Musee_de_Folklore_Mouscron__005__Reuse_Ziegelanteil"
+title: "Reuse-Ziegelanteil - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S7]"
+node_kind: "core"
+wert: "25"
+fallstudie: "fallstudie/Musee_de_Folklore_Mouscron"
+bauobjekt:
+  - "Musee_de_Folklore_Mouscron"
+projekt:
+  - "Musee_de_Folklore_Mouscron"
+---
 
-## Clean Node
+# Reuse-Ziegelanteil - Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Musee_de_Folklore_Mouscron__005__Reuse_Ziegelanteil
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Musee_de_Folklore_Mouscron__005__Reuse_Ziegelanteil
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Reuse-Ziegelanteil
+- **Wert:** 25
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Sekundärquelle
+- **Bilanzgrenze:** Fassadenmauerwerk
+- **Quelle:** [S7]
+- **Vertrauensgrad:** teilweise belegt

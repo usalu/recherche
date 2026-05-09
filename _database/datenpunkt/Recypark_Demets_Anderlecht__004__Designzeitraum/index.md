@@ -1,20 +1,25 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__004__Designzeitraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Designzeitraum - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Designzeitraum - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Recypark_Demets_Anderlecht__004__Designzeitraum"
+title: "Designzeitraum - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "2016–2019"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+bauobjekt:
+  - "Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Designzeitraum - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Recypark_Demets_Anderlecht__004__Designzeitraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recypark_Demets_Anderlecht__004__Designzeitraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Designzeitraum
+- **Wert:** 2016–2019
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** 51N4E
+- **Bilanzgrenze:** Planung
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

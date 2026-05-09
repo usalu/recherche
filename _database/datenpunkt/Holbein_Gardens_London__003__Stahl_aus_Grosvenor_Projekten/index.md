@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__003__Stahl_aus_Grosvenor_Projekten"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Stahl aus Grosvenor-Projekten - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# Stahl aus Grosvenor-Projekten - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__003__Stahl_aus_Grosvenor_Projekten"
+title: "Stahl aus Grosvenor-Projekten - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "t"
+quelle_label: "[S1], [S5]"
+node_kind: "core"
+wert: "9"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# Stahl aus Grosvenor-Projekten - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__003__Stahl_aus_Grosvenor_Projekten
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__003__Stahl_aus_Grosvenor_Projekten
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Stahl aus Grosvenor-Projekten
+- **Wert:** 9
+- **Einheit:** t
+- **Methode/Datenmodell/Software:** Projekt-/Fallstudienangabe
+- **Bilanzgrenze:** donor sites im Portfolio
+- **Quelle:** [S1], [S5]
+- **Vertrauensgrad:** belegt

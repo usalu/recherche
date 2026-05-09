@@ -1,20 +1,43 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__008__Palettenholz_B_nke"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Palettenholz-BÃ¤nke - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Palettenholz-BÃ¤nke - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__008__Palettenholz_B_nke"
+title: "Palettenholz-Bänke - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "Witterung"
+quelle_label: "[S1]"
+material_label: "Holz"
+node_kind: "core"
+herkunft_label: "Palettenholz"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+neue_funktion: "Außenbank"
+bauteil_label: "Palettenholz-Bänke"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+alte_funktion: "Verpackung/Transport"
+---
 
-## Clean Node
+# Palettenholz-Bänke - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Lycee_Michel_Lucius_Conversion_Luxembourg__008__Palettenholz_B_nke
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Lycee_Michel_Lucius_Conversion_Luxembourg__008__Palettenholz_B_nke
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Palettenholz-Bänke
+- **Material:** Holz
+- **Herkunft:** Palettenholz
+- **alte Funktion:** Verpackung/Transport
+- **neue Funktion:** Außenbank
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Oberflächenbehandlungen getestet: Flamme + Schutzschicht/Farbe
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** Dauerhaftigkeit außen
+- **Norm/Recht:** unbekannt
+- **Hürde:** Witterung
+- **Quelle:** [S1]
+- **unbekannt:** ob fest eingebaut

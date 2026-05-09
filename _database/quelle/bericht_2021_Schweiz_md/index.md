@@ -1,15 +1,12 @@
-﻿---
-id: "bericht_2021_Schweiz_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bericht/2021-Schweiz.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bericht_2021_Schweiz_md"
+title: "bericht_2021_Schweiz_md"
+build_status: "promoted_phase42"
+source_filename: "2021-Schweiz.md"
+legacy_type: "Bericht"
+---
+
 # bericht_2021_Schweiz_md
 
-## Source Archive
 
-- Original path: bericht/2021-Schweiz.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: archive_or_source; old target: quelle/2021_Schweiz

@@ -1,20 +1,13 @@
-﻿---
-id: "Zustand_Unklar"
-entity: "huerde"
-build_status: "clean_phase20"
-title: "Zustand unklar"
 ---
+entity: "huerde"
+id: "Zustand_Unklar"
+title: "Zustand unklar"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Zustand unklar
 
-## Clean Node
+## Definition
 
-- Final path: _database/huerde/Zustand_Unklar
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/huerde/Zustand_Unklar
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Unklarer Zustand, Alter, Restzustand, Glaszustand oder Verschleiss eines gebrauchten Bauteils.

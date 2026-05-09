@@ -1,20 +1,43 @@
-﻿---
-id: "Peoples_Pavilion_Eindhoven__001__Betonpf_hle_concrete_elements"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "BetonpfÃ¤hle / concrete elements - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse"
 ---
-# BetonpfÃ¤hle / concrete elements - Peopleâ€™s Pavilion, Eindhoven â€” Fallstudie Direct Reuse
+entity: "reuse_einsatz"
+id: "Peoples_Pavilion_Eindhoven__001__Betonpf_hle_concrete_elements"
+title: "Betonpfähle / concrete elements - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+huerde_label: "Leihe ohne Beschädigung"
+quelle_label: "bureau SLA / Overtreders W"
+material_label: "Beton"
+node_kind: "core"
+herkunft_label: "IJB groep / Lieferanten, Details unbekannt"
+menge_umfang: "unbekannt"
+pruefung_label: "Arup-Berechnung belegt, Detailprüfung unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Peoples_Pavilion_Eindhoven"
+bauobjekt:
+  - "Peoples_Pavilion_Eindhoven"
+neue_funktion: "Fundament/Konstruktion"
+bauteil_label: "Betonpfähle / concrete elements"
+projekt:
+  - "Peoples_Pavilion_Eindhoven"
+alte_funktion: "unbekannt / gelagerte Bauteile"
+---
 
-## Clean Node
+# Betonpfähle / concrete elements - People’s Pavilion, Eindhoven — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_einsatz/Peoples_Pavilion_Eindhoven__001__Betonpf_hle_concrete_elements
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Peoples_Pavilion_Eindhoven__001__Betonpf_hle_concrete_elements
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Betonpfähle / concrete elements
+- **Material:** Beton
+- **Herkunft:** IJB groep / Lieferanten, Details unbekannt
+- **alte Funktion:** unbekannt / gelagerte Bauteile
+- **neue Funktion:** Fundament/Konstruktion
+- **Menge/Umfang:** unbekannt
+- **tragend?:** ja/teilweise
+- **räumlich?:** nein
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** keine Beschädigung, kein Schneiden
+- **Verbindung:** Spann-/Klemmprinzip unbekannt
+- **Prüfung:** Arup-Berechnung belegt, Detailprüfung unbekannt
+- **Leistungsanforderung:** Standsicherheit temporär
+- **Norm/Recht:** unbekannt
+- **Hürde:** Leihe ohne Beschädigung
+- **Quelle:** bureau SLA / Overtreders W
+- **unbekannt:** Menge, Maße

@@ -1,20 +1,13 @@
-﻿---
-id: "Architektur"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Architektur"
 ---
+entity: "akteurrolle"
+id: "Architektur"
+title: "Architektur"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Architektur
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Architektur
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Architektur
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Akteur mit architektonischer Entwurfs-, Planungs- oder Designverantwortung.

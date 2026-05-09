@@ -1,20 +1,25 @@
-﻿---
-id: "Chiro_d_Itterbeek_Dilbeek__006__Au_enst_rze_Reuse"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "AuÃŸenstÃ¼rze Reuse - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse"
 ---
-# AuÃŸenstÃ¼rze Reuse - Chiro dâ€™Itterbeek / Sanitary block, Dilbeek â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Chiro_d_Itterbeek_Dilbeek__006__Au_enst_rze_Reuse"
+title: "Außenstürze Reuse - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "lfm"
+quelle_label: "[S2], [S4]"
+node_kind: "core"
+wert: "5"
+fallstudie: "fallstudie/Chiro_d_Itterbeek_Dilbeek"
+bauobjekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+projekt:
+  - "Chiro_d_Itterbeek_Dilbeek"
+---
 
-## Clean Node
+# Außenstürze Reuse - Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Chiro_d_Itterbeek_Dilbeek__006__Au_enst_rze_Reuse
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Chiro_d_Itterbeek_Dilbeek__006__Au_enst_rze_Reuse
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Außenstürze Reuse
+- **Wert:** 5
+- **Einheit:** lfm
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Fassade
+- **Quelle:** [S2], [S4]
+- **Vertrauensgrad:** belegt

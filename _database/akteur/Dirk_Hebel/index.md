@@ -1,20 +1,29 @@
-﻿---
-id: "Dirk_Hebel"
-entity: "akteur"
-build_status: "clean_phase20"
-title: "Dirk Hebel"
 ---
+entity: "akteur"
+id: "Dirk_Hebel"
+title: "Dirk Hebel"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "dirk-hebel.md"
+node_kind: "core"
+---
+
 # Dirk Hebel
 
-## Clean Node
+## Legacy Content
 
-- Final path: _database/akteur/Dirk_Hebel
-- Build rule: typed path IDs only.
+### Legacy Source: dirk-hebel.md
 
-## Imported Staging Nodes
+- Map action: move_as_core
+- Target role in map: primary
+- Raw mapped target: akteur/Dirk_Hebel
+- Original primary target: akteur/Dirk_Hebel
+- Original secondary targets: akteurtyp/Person
 
-- Source: _graph/akteur/Dirk_Hebel
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+# Dirk Hebel
 
+## Role
+
+## Contact
+
+## Notes

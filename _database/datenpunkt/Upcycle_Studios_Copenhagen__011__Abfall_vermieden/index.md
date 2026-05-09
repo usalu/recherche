@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__011__Abfall_vermieden"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Abfall vermieden - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# Abfall vermieden - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__011__Abfall_vermieden"
+title: "Abfall vermieden - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "kg"
+quelle_label: "a:gain"
+node_kind: "core"
+wert: "914.000"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# Abfall vermieden - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__011__Abfall_vermieden
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__011__Abfall_vermieden
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Abfall vermieden
+- **Wert:** 914.000
+- **Einheit:** kg
+- **Methode/Datenmodell/Software:** interne Berechnung
+- **Bilanzgrenze:** Projekt
+- **Quelle:** a:gain
+- **Vertrauensgrad:** teilweise belegt

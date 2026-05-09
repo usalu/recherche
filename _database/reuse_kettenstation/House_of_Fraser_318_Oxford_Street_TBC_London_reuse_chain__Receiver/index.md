@@ -1,20 +1,27 @@
-﻿---
-id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__Receiver"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Receiver - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette"
 ---
-# Receiver - House of Fraser / 318 Oxford Street â†’ TBC.London / Tower Bridge Court â€” Fallstudie Reuse-Kette
+entity: "reuse_kettenstation"
+id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__Receiver"
+title: "Receiver - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md"
+node_kind: "core"
+fallstudie: "fallstudie/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"
+---
 
-## Clean Node
+# Receiver - House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette
 
-- Final path: _database/reuse_kettenstation/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__Receiver
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain__Receiver
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: **Hinweis zum Falltyp:** Dies ist keine einzelne Gebäude-Fallstudie, sondern eine **Reuse-Kette**: 318 Oxford Street / ehemaliges House of Fraser / The Elephant ist Donor- und teilweise Self-Reuse-Projekt; TBC.London / Tower Bridge Court ist Receiver-Projekt.  
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: | Fallstudie | House of Fraser / 318 Oxford Street → TBC.London | Urban-Mining-Stahlreuse-Kette | NLA, Willmott Dixon, Open House, Civic | belegt | Donor und Receiver getrennt erfassen |
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: | Gebäude | TBC.London / Tower Bridge Court | Receiver-Gebäude | Open House, Willmott Dixon, NSC | belegt | 224–226 Tower Bridge Road |
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: | People | FORE Partnership | Developer TBC.London | Willmott Dixon, Open House, BD | belegt | Receiver client |
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: | Logistik | Cross-project steel transfer | Donor Oxford Street → Receiver Tower Bridge | Civic, Construction Index | belegt | Projektübergreifende Koordination |
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: | Donor-Projekt | Herkunft muss separat vom Receiver verwaltet werden | House of Fraser / The Elephant | Gebäude, Bauteil, Abbruchmethode |
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: | Receiver-Projekt | Einbauort des Bauteils | TBC.London | Gebäude, Bauteil, Reuse-Strategie |
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md:   - Receiver: TBC.London / Tower Bridge Court, 224–226 Tower Bridge Road
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: | Bauteilinventar | Surplus beams identified for TBC | Civic, FORE, Webb Yates, McLaren, Willmott Dixon | matchmaking donor–receiver | unbekannt | removal instead of recycling | unbekannt | preliminary assessment | cross-project transfer | Stahl war bereits fürs Recycling verkauft | Entscheidung rückgängig gemacht | Civic |
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: - **Marktbarrieren:** fehlender Standardprozess für pre-1940s steel, donor-receiver timing, vertragliche Bindung an Recycling, unklare Daten/Traceability.
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md: - **Welche neuen Entitäten wären sinnvoll?** Reuse-Kette, Donor-Projekt, Receiver-Projekt, Self-Reuse, Quellenkonflikt-Kennwert, Material-Traceability-ID.
+Gebäude\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md:   5. Donor- und Receiver-Projekte müssen getrennt modelliert werden.

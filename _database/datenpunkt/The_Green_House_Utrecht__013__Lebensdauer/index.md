@@ -1,20 +1,25 @@
-﻿---
-id: "The_Green_House_Utrecht__013__Lebensdauer"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Lebensdauer - The Green House, Utrecht"
 ---
+entity: "datenpunkt"
+id: "The_Green_House_Utrecht__013__Lebensdauer"
+title: "Lebensdauer - The Green House, Utrecht"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "Q1"
+node_kind: "core"
+wert: "Standort 15; Bauteillebensdauer unbekannt"
+fallstudie: "fallstudie/The_Green_House_Utrecht"
+bauobjekt:
+  - "The_Green_House_Utrecht"
+projekt:
+  - "The_Green_House_Utrecht"
+---
+
 # Lebensdauer - The Green House, Utrecht
 
-## Clean Node
-
-- Final path: _database/datenpunkt/The_Green_House_Utrecht__013__Lebensdauer
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/The_Green_House_Utrecht__013__Lebensdauer
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Lebensdauer
+- **Wert:** Standort 15; Bauteillebensdauer unbekannt
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Gebäude/Standort
+- **Quelle:** Q1
+- **Vertrauensgrad:** teilweise belegt

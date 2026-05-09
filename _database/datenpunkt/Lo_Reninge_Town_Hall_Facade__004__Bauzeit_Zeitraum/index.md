@@ -1,20 +1,25 @@
-﻿---
-id: "Lo_Reninge_Town_Hall_Facade__004__Bauzeit_Zeitraum"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bauzeit / Zeitraum - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse"
 ---
-# Bauzeit / Zeitraum - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Lo_Reninge_Town_Hall_Facade__004__Bauzeit_Zeitraum"
+title: "Bauzeit / Zeitraum - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Jahre"
+quelle_label: "[S2]"
+node_kind: "core"
+wert: "2008–2011"
+fallstudie: "fallstudie/Lo_Reninge_Town_Hall_Facade"
+bauobjekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+projekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+---
 
-## Clean Node
+# Bauzeit / Zeitraum - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Lo_Reninge_Town_Hall_Facade__004__Bauzeit_Zeitraum
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Lo_Reninge_Town_Hall_Facade__004__Bauzeit_Zeitraum
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bauzeit / Zeitraum
+- **Wert:** 2008–2011
+- **Einheit:** Jahre
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Projekt
+- **Quelle:** [S2]
+- **Vertrauensgrad:** belegt

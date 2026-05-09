@@ -1,20 +1,25 @@
-﻿---
-id: "Berlin_Schildow_Pilot_House__004__Betonvolumen"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Betonvolumen - Berlin-Schildow Pilot House â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
 ---
-# Betonvolumen - Berlin-Schildow Pilot House â€” Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
+entity: "datenpunkt"
+id: "Berlin_Schildow_Pilot_House__004__Betonvolumen"
+title: "Betonvolumen - Berlin-Schildow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+build_status: "promoted_phase42"
+einheit: "m³"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "245"
+fallstudie: "fallstudie/Berlin_Schildow_Pilot_House"
+bauobjekt:
+  - "Berlin_Schildow_Pilot_House"
+projekt:
+  - "Berlin_Schildow_Pilot_House"
+---
 
-## Clean Node
+# Betonvolumen - Berlin-Schildow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen
 
-- Final path: _database/datenpunkt/Berlin_Schildow_Pilot_House__004__Betonvolumen
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Berlin_Schildow_Pilot_House__004__Betonvolumen
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Betonvolumen
+- **Wert:** 245
+- **Einheit:** m³
+- **Methode/Datenmodell/Software:** PRECS-Fallstudienliste
+- **Bilanzgrenze:** wiederverwendetes Betonvolumen
+- **Quelle:** [S1]
+- **Vertrauensgrad:** belegt

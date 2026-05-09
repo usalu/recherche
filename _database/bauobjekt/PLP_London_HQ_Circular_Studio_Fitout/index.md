@@ -1,20 +1,35 @@
-﻿---
-id: "PLP_London_HQ_Circular_Studio_Fitout"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse"
 ---
-# PLP Architecture HQ / Circular Studio Fit-out, London â€” Fallstudie Direct Reuse
+entity: "bauobjekt"
+id: "PLP_London_HQ_Circular_Studio_Fitout"
+title: "PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\PLP_London_HQ_Circular_Studio_Fitout.md"
+node_kind: "core"
+fallstudie: "fallstudie/PLP_London_HQ_Circular_Studio_Fitout"
+projekt:
+  - "PLP_London_HQ_Circular_Studio_Fitout"
+---
 
-## Clean Node
+# PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse
 
-- Final path: _database/bauobjekt/PLP_London_HQ_Circular_Studio_Fitout
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\PLP_London_HQ_Circular_Studio_Fitout.md
 
-- Source: _graph/bauobjekt/PLP_London_HQ_Circular_Studio_Fitout
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** PLP Architecture HQ / Circular Studio Fit-out
+- **Ort:** London, UK; The White Chapel Building, 10 Whitechapel High St
+- **Gebäude:** bestehendes Bürogebäude; The White Chapel Building
+- **Projekt:** zirkulärer Studio-/Büro-Innenausbau für PLP Architecture
+- **Beteiligte People / Akteure:** PLP Architecture, Method, Maconda, Contrax Furniture, Solus, Grants of Shoreditch
+- **Architekt:** PLP Architecture
+- **Tragwerksplaner:** unbekannt / nicht relevant für öffentlich belegten Reuse-Teil
+- **Bauherr:** PLP Architecture
+- **Zeitraum:** abgeschlossen; Quellen 2025 zur Veröffentlichung; genaues Bauzeitfenster unbekannt
+- **Ursprüngliche Nutzung:** Bürofläche / vorhandene Gebäudestruktur
+- **Neue Nutzung:** Architekturstudio / Büro
+- **Fläche / Maßstab:** 22,850 sq ft / 2,122 m²
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Gesamt-Fit-out-Strategie und Kennwerte; unzureichend für genaue Liste der zählbaren festen Bauteile

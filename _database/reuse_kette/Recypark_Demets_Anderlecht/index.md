@@ -1,20 +1,16 @@
-﻿---
-id: "Recypark_Demets_Anderlecht"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Reuse-Kette - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "reuse_kette"
+id: "Recypark_Demets_Anderlecht"
+title: "Reuse-Kette - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Recypark_Demets_Anderlecht.md"
+node_kind: "core"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Reuse-Kette - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/reuse_kette/Recypark_Demets_Anderlecht
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Recypark_Demets_Anderlecht
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

@@ -1,20 +1,22 @@
-﻿---
-id: "Charles_Malis_Molenbeek__001__MAMOUT_architectes"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "MAMOUT architectes - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse"
 ---
-# MAMOUT architectes - Charles Malis / Antenne administrative Molenbeek-Saint-Jean â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Charles_Malis_Molenbeek__001__MAMOUT_architectes"
+title: "MAMOUT architectes - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "WBA / Mamout"
+node_kind: "relation"
+fallstudie: "fallstudie/Charles_Malis_Molenbeek"
+bauobjekt:
+  - "Charles_Malis_Molenbeek"
+projekt:
+  - "Charles_Malis_Molenbeek"
+---
 
-## Clean Node
+# MAMOUT architectes - Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Charles_Malis_Molenbeek__001__MAMOUT_architectes
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Charles_Malis_Molenbeek__001__MAMOUT_architectes
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** MAMOUT architectes
+- **Beziehung zur Fallstudie:** Architekt
+- **Quelle/Beleg:** WBA / Mamout
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Arbeitsgemeinschaft.

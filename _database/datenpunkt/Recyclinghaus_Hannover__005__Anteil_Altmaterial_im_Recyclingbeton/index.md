@@ -1,20 +1,25 @@
-﻿---
-id: "Recyclinghaus_Hannover__005__Anteil_Altmaterial_im_Recyclingbeton"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anteil Altmaterial im Recyclingbeton - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Anteil Altmaterial im Recyclingbeton - Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Recyclinghaus_Hannover__005__Anteil_Altmaterial_im_Recyclingbeton"
+title: "Anteil Altmaterial im Recyclingbeton - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "ZAB"
+node_kind: "core"
+wert: "42"
+fallstudie: "fallstudie/Recyclinghaus_Hannover"
+bauobjekt:
+  - "Recyclinghaus_Hannover"
+projekt:
+  - "Recyclinghaus_Hannover"
+---
 
-## Clean Node
+# Anteil Altmaterial im Recyclingbeton - Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Recyclinghaus_Hannover__005__Anteil_Altmaterial_im_Recyclingbeton
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Recyclinghaus_Hannover__005__Anteil_Altmaterial_im_Recyclingbeton
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anteil Altmaterial im Recyclingbeton
+- **Wert:** 42
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** unbekannt
+- **Bilanzgrenze:** Fundament/Bodenplatte
+- **Quelle:** ZAB
+- **Vertrauensgrad:** belegt, aber Recycling, nicht Reuse

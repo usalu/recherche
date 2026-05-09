@@ -1,20 +1,18 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich__Donor"
-entity: "reuse_kettenstation"
-build_status: "clean_phase20"
-title: "Donor - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# Donor - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "reuse_kettenstation"
+id: "Juch_Areal_Recyclingzentrum_Zuerich__Donor"
+title: "Donor - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Juch_Areal_Recyclingzentrum_Zuerich.md"
+node_kind: "core"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# Donor - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/reuse_kettenstation/Juch_Areal_Recyclingzentrum_Zuerich__Donor
-- Build rule: typed path IDs only.
+## Extracted Clues
 
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kettenstation/Juch_Areal_Recyclingzentrum_Zuerich__Donor
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Gebäude\Juch_Areal_Recyclingzentrum_Zuerich.md: - **Ursprüngliche Nutzung:** Donor-Halle: ehemalige städtische Recyclinghalle Hagenholz; Betonplatten: Kerenzerbergtunnel; weitere Beton-Pilzstützen/Deckenelemente: Schellinghalle Rümlang
+Gebäude\Juch_Areal_Recyclingzentrum_Zuerich.md: | Ausbau | Betonplatten aus Kerenzerbergtunnel und Beton-Pilzstützen/Deckenelemente beschaffen | Zirkular, Stadt, Donorakteure | Bauteilernte | digitaler Bauteilkatalog | Rückbau/Entnahme | Sortierung/Reinigung | Eignung geprüft | Schwertransport | Gewicht/Beschädigung | koordinierte Bauteiljagd | [S2], [S3], [S4] |
+Gebäude\Juch_Areal_Recyclingzentrum_Zuerich.md: - **Marktbarrieren:** fehlende Routine im öffentlichen Beschaffungswesen, bauteilspezifische Nachweise, zeitliche Synchronisation von Donor- und Empfängerprojekt.

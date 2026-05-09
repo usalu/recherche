@@ -1,20 +1,22 @@
-﻿---
-id: "Big_Dig_Building_Boston__002__John_Hong_Jinhee_Park_Paul_Pedini"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "John Hong, Jinhee Park, Paul Pedini - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# John Hong, Jinhee Park, Paul Pedini - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Big_Dig_Building_Boston__002__John_Hong_Jinhee_Park_Paul_Pedini"
+title: "John Hong, Jinhee Park, Paul Pedini - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "Holcim / New Yorker / SsD"
+node_kind: "relation"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+bauobjekt:
+  - "Big_Dig_Building_Boston"
+projekt:
+  - "Big_Dig_Building_Boston"
+---
 
-## Clean Node
+# John Hong, Jinhee Park, Paul Pedini - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Big_Dig_Building_Boston__002__John_Hong_Jinhee_Park_Paul_Pedini
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Big_Dig_Building_Boston__002__John_Hong_Jinhee_Park_Paul_Pedini
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** John Hong, Jinhee Park, Paul Pedini
+- **Beziehung zur Fallstudie:** Projektteam / Autoren
+- **Quelle/Beleg:** Holcim / New Yorker / SsD
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Paul Pedini als Ingenieur/Initiator aus Big-Dig-Kontext belegt

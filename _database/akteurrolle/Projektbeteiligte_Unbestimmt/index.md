@@ -1,20 +1,13 @@
-﻿---
-id: "Projektbeteiligte_Unbestimmt"
-entity: "akteurrolle"
-build_status: "clean_phase20"
-title: "Projektbeteiligte, unbestimmt"
 ---
+entity: "akteurrolle"
+id: "Projektbeteiligte_Unbestimmt"
+title: "Projektbeteiligte, unbestimmt"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Projektbeteiligte, unbestimmt
 
-## Clean Node
+## Definition
 
-- Final path: _database/akteurrolle/Projektbeteiligte_Unbestimmt
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteurrolle/Projektbeteiligte_Unbestimmt
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Unspezifische Sammelrolle, wenn Quellen nur allgemeine Beteiligung, Projektteam oder Akteurskreis nennen.

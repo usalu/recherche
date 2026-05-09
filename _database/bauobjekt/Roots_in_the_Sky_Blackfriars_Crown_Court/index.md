@@ -1,20 +1,34 @@
-﻿---
-id: "Roots_in_the_Sky_Blackfriars_Crown_Court"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Roots in the Sky / Blackfriars Crown Court, London"
 ---
+entity: "bauobjekt"
+id: "Roots_in_the_Sky_Blackfriars_Crown_Court"
+title: "Roots in the Sky / Blackfriars Crown Court, London"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Roots_in_the_Sky_Blackfriars_Crown_Court.md"
+node_kind: "core"
+fallstudie: "fallstudie/Roots_in_the_Sky_Blackfriars_Crown_Court"
+projekt:
+  - "Roots_in_the_Sky_Blackfriars_Crown_Court"
+---
+
 # Roots in the Sky / Blackfriars Crown Court, London
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/Roots_in_the_Sky_Blackfriars_Crown_Court
-- Build rule: typed path IDs only.
+### Gebäude\Roots_in_the_Sky_Blackfriars_Crown_Court.md
 
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/Roots_in_the_Sky_Blackfriars_Crown_Court
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+## 3. FALLSTUDIE
+- **Name:** Roots in the Sky / Blackfriars Crown Court
+- **Ort:** 1 Pocock Street / Loman Street, Southwark, London, UK
+- **Gebäude:** ehemaliges Blackfriars Crown Court; ursprünglich 1950er/1960er Printworks, später Crown Court
+- **Projekt:** geplante Büro-/Community-Transformation mit Rooftop Forest; aktuell durch iQ-Studentenwohnprojekt ersetzt bzw. überplant
+- **Beteiligte People / Akteure:** Fabrix, Sheppard Robson, Studio RHE, AKT II, Symmetrys, Atelier Ten, Harris Bugg Studio, Mace, Erith; neues Projekt: iQ Student Accommodation, Howells, Southwark Council, Stace, Turley
+- **Architekt:** ursprüngliches Konzept Studio RHE; Delivery-Phase nach Mace/Fabrix: Sheppard Robson; neues iQ-Projekt: Howells
+- **Tragwerksplaner:** AKT II / Symmetrys nach Quellenlage; neues Projekt unbekannt
+- **Bauherr:** ursprüngliches Projekt Fabrix London; neues Projekt iQ Student Accommodation
+- **Zeitraum:** Fabrix-Planung 2020–2025/2027 geplant; iQ-Planung ab 2025, Baustart 2026 erwartet
+- **Ursprüngliche Nutzung:** Printworks / später Crown Court
+- **Neue Nutzung:** Roots: Büro, Community, Retail, Freizeit, Rooftop Forest; iQ: Studierendenwohnen, soziale Mietwohnungen, Café/Gewerbe
+- **Fläche / Maßstab:** Roots: Quellen nennen ca. 385.000 sq ft, 430.000 sq ft bzw. ca. 38.666 m²; iQ: 600 student bedrooms + 71 social rent units
+- **Schutzstatus / Denkmalstatus:** unbekannt; Standort nahe Conservation Area erwähnt, Gebäude selbst nicht als Denkmal belegt
+- **Quellenlage:** gute Quellen für geplantes Reuse-Konzept; starke aktuelle Quellen für Strategiewechsel; keine gebaute Reuse-Ausführung belegt

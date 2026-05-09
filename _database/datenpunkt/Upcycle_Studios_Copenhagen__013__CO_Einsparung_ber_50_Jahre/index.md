@@ -1,20 +1,25 @@
-﻿---
-id: "Upcycle_Studios_Copenhagen__013__CO_Einsparung_ber_50_Jahre"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "COâ‚‚-Einsparung Ã¼ber 50 Jahre - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse"
 ---
-# COâ‚‚-Einsparung Ã¼ber 50 Jahre - Upcycle Studios, Copenhagen â€” Fallstudie Bauteilwiederverwendung / Direct Reuse
+entity: "datenpunkt"
+id: "Upcycle_Studios_Copenhagen__013__CO_Einsparung_ber_50_Jahre"
+title: "CO₂-Einsparung über 50 Jahre - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "NREP; Lendager"
+node_kind: "core"
+wert: "45"
+fallstudie: "fallstudie/Upcycle_Studios_Copenhagen"
+bauobjekt:
+  - "Upcycle_Studios_Copenhagen"
+projekt:
+  - "Upcycle_Studios_Copenhagen"
+---
 
-## Clean Node
+# CO₂-Einsparung über 50 Jahre - Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse
 
-- Final path: _database/datenpunkt/Upcycle_Studios_Copenhagen__013__CO_Einsparung_ber_50_Jahre
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Upcycle_Studios_Copenhagen__013__CO_Einsparung_ber_50_Jahre
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** CO₂-Einsparung über 50 Jahre
+- **Wert:** 45
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** LCA/LCC
+- **Bilanzgrenze:** embodied + operation, 50 Jahre
+- **Quelle:** NREP; Lendager
+- **Vertrauensgrad:** teilweise belegt

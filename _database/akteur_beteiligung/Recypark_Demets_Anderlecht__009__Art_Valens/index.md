@@ -1,20 +1,22 @@
-﻿---
-id: "Recypark_Demets_Anderlecht__009__Art_Valens"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Art Valens - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Art Valens - Recypark Demets / Recypark Anderlecht, BrÃ¼ssel â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "akteur_beteiligung"
+id: "Recypark_Demets_Anderlecht__009__Art_Valens"
+title: "Art Valens - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+quelle_label: "[S6]"
+node_kind: "relation"
+fallstudie: "fallstudie/Recypark_Demets_Anderlecht"
+bauobjekt:
+  - "Recypark_Demets_Anderlecht"
+projekt:
+  - "Recypark_Demets_Anderlecht"
+---
 
-## Clean Node
+# Art Valens - Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/akteur_beteiligung/Recypark_Demets_Anderlecht__009__Art_Valens
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Recypark_Demets_Anderlecht__009__Art_Valens
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Art Valens
+- **Beziehung zur Fallstudie:** Builder
+- **Quelle/Beleg:** [S6]
+- **Vertrauensgrad:** teilweise belegt
+- **Anmerkung:** Quelle Greisch

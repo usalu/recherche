@@ -1,15 +1,20 @@
-﻿---
-id: "bauteil_Treppe_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteil/Treppe.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteil_Treppe_md"
+title: "bauteil_Treppe_md"
+build_status: "promoted_phase42"
+source_filename: "Treppe.md"
+legacy_type: "Bauteil"
+---
+
 # bauteil_Treppe_md
 
-## Source Archive
+## Kurzdefinition
 
-- Original path: bauteil/Treppe.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: move_as_knot; old target: bauteiltyp/Treppe
+## Warum relevant fuer Reuse
+
+## Wichtige Verbindungen
+
+## Evidenz / Beispiele
+
+## Offene Fragen

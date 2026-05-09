@@ -1,20 +1,25 @@
-﻿---
-id: "Svanen_Kindergarten_Gladsaxe__011__Transportdistanz"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Transportdistanz - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung"
 ---
-# Transportdistanz - Svanen / The Swan Kindergarten, Gladsaxe â€” Fallstudie Direct Reuse / Wiederverwendung
+entity: "datenpunkt"
+id: "Svanen_Kindergarten_Gladsaxe__011__Transportdistanz"
+title: "Transportdistanz - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+build_status: "promoted_phase42"
+einheit: "—"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "sehr gering / same-site, exakte Distanz unbekannt"
+fallstudie: "fallstudie/Svanen_Kindergarten_Gladsaxe"
+bauobjekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+projekt:
+  - "Svanen_Kindergarten_Gladsaxe"
+---
 
-## Clean Node
+# Transportdistanz - Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung
 
-- Final path: _database/datenpunkt/Svanen_Kindergarten_Gladsaxe__011__Transportdistanz
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Svanen_Kindergarten_Gladsaxe__011__Transportdistanz
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Transportdistanz
+- **Wert:** sehr gering / same-site, exakte Distanz unbekannt
+- **Einheit:** —
+- **Methode/Datenmodell/Software:** Projektlogik
+- **Bilanzgrenze:** alte Schule → Neubau auf gleichem Gelände
+- **Quelle:** [S1]
+- **Vertrauensgrad:** teilweise belegt

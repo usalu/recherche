@@ -1,20 +1,25 @@
-﻿---
-id: "Juch_Areal_Recyclingzentrum_Zuerich__005__Bausumme_Perita"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Bausumme Perita - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten"
 ---
-# Bausumme Perita - Juch-Areal Recyclingzentrum, ZÃ¼rich-Altstetten
+entity: "datenpunkt"
+id: "Juch_Areal_Recyclingzentrum_Zuerich__005__Bausumme_Perita"
+title: "Bausumme Perita - Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+build_status: "promoted_phase42"
+einheit: "Mio. CHF"
+quelle_label: "[S6]"
+node_kind: "core"
+wert: "25"
+fallstudie: "fallstudie/Juch_Areal_Recyclingzentrum_Zuerich"
+bauobjekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+projekt:
+  - "Juch_Areal_Recyclingzentrum_Zuerich"
+---
 
-## Clean Node
+# Bausumme Perita - Juch-Areal Recyclingzentrum, Zürich-Altstetten
 
-- Final path: _database/datenpunkt/Juch_Areal_Recyclingzentrum_Zuerich__005__Bausumme_Perita
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Juch_Areal_Recyclingzentrum_Zuerich__005__Bausumme_Perita
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Bausumme Perita
+- **Wert:** 25
+- **Einheit:** Mio. CHF
+- **Methode/Datenmodell/Software:** Perita-Angabe
+- **Bilanzgrenze:** Projekt-/Baumanagement
+- **Quelle:** [S6]
+- **Vertrauensgrad:** teilweise belegt / Quellenkonflikt

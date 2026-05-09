@@ -1,20 +1,25 @@
-﻿---
-id: "Big_Dig_Building_Boston__001__Projektjahr"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Projektjahr - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Projektjahr - Big Dig Building, Boston/Cambridge â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "datenpunkt"
+id: "Big_Dig_Building_Boston__001__Projektjahr"
+title: "Projektjahr - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+einheit: "Jahr"
+quelle_label: "ArchDaily"
+node_kind: "core"
+wert: "2008"
+fallstudie: "fallstudie/Big_Dig_Building_Boston"
+bauobjekt:
+  - "Big_Dig_Building_Boston"
+projekt:
+  - "Big_Dig_Building_Boston"
+---
 
-## Clean Node
+# Projektjahr - Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/datenpunkt/Big_Dig_Building_Boston__001__Projektjahr
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Big_Dig_Building_Boston__001__Projektjahr
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Projektjahr
+- **Wert:** 2008
+- **Einheit:** Jahr
+- **Methode/Datenmodell/Software:** ArchDaily-Projektdaten
+- **Bilanzgrenze:** Entwurf
+- **Quelle:** ArchDaily
+- **Vertrauensgrad:** belegt

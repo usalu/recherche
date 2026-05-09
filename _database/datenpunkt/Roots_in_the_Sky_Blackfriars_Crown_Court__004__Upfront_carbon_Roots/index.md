@@ -1,20 +1,25 @@
-﻿---
-id: "Roots_in_the_Sky_Blackfriars_Crown_Court__004__Upfront_carbon_Roots"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Upfront carbon Roots - Roots in the Sky / Blackfriars Crown Court, London"
 ---
+entity: "datenpunkt"
+id: "Roots_in_the_Sky_Blackfriars_Crown_Court__004__Upfront_carbon_Roots"
+title: "Upfront carbon Roots - Roots in the Sky / Blackfriars Crown Court, London"
+build_status: "promoted_phase42"
+einheit: "kgCO₂e/m²"
+quelle_label: "[S1]"
+node_kind: "core"
+wert: "767"
+fallstudie: "fallstudie/Roots_in_the_Sky_Blackfriars_Crown_Court"
+bauobjekt:
+  - "Roots_in_the_Sky_Blackfriars_Crown_Court"
+projekt:
+  - "Roots_in_the_Sky_Blackfriars_Crown_Court"
+---
+
 # Upfront carbon Roots - Roots in the Sky / Blackfriars Crown Court, London
 
-## Clean Node
-
-- Final path: _database/datenpunkt/Roots_in_the_Sky_Blackfriars_Crown_Court__004__Upfront_carbon_Roots
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Roots_in_the_Sky_Blackfriars_Crown_Court__004__Upfront_carbon_Roots
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Upfront carbon Roots
+- **Wert:** 767
+- **Einheit:** kgCO₂e/m²
+- **Methode/Datenmodell/Software:** UKGBC-Angabe
+- **Bilanzgrenze:** A1–A5
+- **Quelle:** [S1]
+- **Vertrauensgrad:** teilweise belegt

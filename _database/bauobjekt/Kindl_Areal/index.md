@@ -1,20 +1,18 @@
-﻿---
-id: "Kindl_Areal"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Kindl Areal"
 ---
+entity: "bauobjekt"
+id: "Kindl_Areal"
+title: "Kindl Areal"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\Kindl_Areal.md"
+node_kind: "core"
+fallstudie: "fallstudie/Kindl_Areal"
+projekt:
+  - "Kindl_Areal"
+---
+
 # Kindl Areal
 
-## Clean Node
+## Extracted Object Context
 
-- Final path: _database/bauobjekt/Kindl_Areal
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/Kindl_Areal
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

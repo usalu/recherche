@@ -1,20 +1,22 @@
-﻿---
-id: "Lycee_Michel_Lucius_Conversion_Luxembourg__003__Daedalus_Engineering"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Daedalus Engineering - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Daedalus Engineering - LycÃ©e Michel Lucius Conversion, Luxembourg â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Lycee_Michel_Lucius_Conversion_Luxembourg__003__Daedalus_Engineering"
+title: "Daedalus Engineering - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S2]"
+node_kind: "relation"
+fallstudie: "fallstudie/Lycee_Michel_Lucius_Conversion_Luxembourg"
+bauobjekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+projekt:
+  - "Lycee_Michel_Lucius_Conversion_Luxembourg"
+---
 
-## Clean Node
+# Daedalus Engineering - Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Lycee_Michel_Lucius_Conversion_Luxembourg__003__Daedalus_Engineering
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lycee_Michel_Lucius_Conversion_Luxembourg__003__Daedalus_Engineering
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Daedalus Engineering
+- **Beziehung zur Fallstudie:** Ingenieur / Projektbeteiligter
+- **Quelle/Beleg:** [S2]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Quelle mit Projektkosten und Zeitraum

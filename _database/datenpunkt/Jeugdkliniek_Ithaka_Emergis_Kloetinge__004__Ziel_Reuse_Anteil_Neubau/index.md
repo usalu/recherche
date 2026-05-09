@@ -1,20 +1,25 @@
-﻿---
-id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__004__Ziel_Reuse_Anteil_Neubau"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Ziel Reuse-Anteil Neubau - Jeugdkliniek Ithaka / Emergis, Kloetinge"
 ---
+entity: "datenpunkt"
+id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge__004__Ziel_Reuse_Anteil_Neubau"
+title: "Ziel Reuse-Anteil Neubau - Jeugdkliniek Ithaka / Emergis, Kloetinge"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S13]"
+node_kind: "core"
+wert: "50"
+fallstudie: "fallstudie/Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+bauobjekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+projekt:
+  - "Jeugdkliniek_Ithaka_Emergis_Kloetinge"
+---
+
 # Ziel Reuse-Anteil Neubau - Jeugdkliniek Ithaka / Emergis, Kloetinge
 
-## Clean Node
-
-- Final path: _database/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__004__Ziel_Reuse_Anteil_Neubau
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Jeugdkliniek_Ithaka_Emergis_Kloetinge__004__Ziel_Reuse_Anteil_Neubau
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Ziel Reuse-Anteil Neubau
+- **Wert:** 50
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Planungsziel
+- **Bilanzgrenze:** neues Gebäude
+- **Quelle:** [S13]
+- **Vertrauensgrad:** teilweise belegt

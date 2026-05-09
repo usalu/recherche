@@ -1,15 +1,145 @@
-﻿---
-id: "gebaeude_geb_ude3_wiederverwendung_direct_reuse_examples_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "gebaeude/gebäude3_wiederverwendung_direct_reuse_examples.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "gebaeude_geb_ude3_wiederverwendung_direct_reuse_examples_md"
+title: "gebaeude_geb_ude3_wiederverwendung_direct_reuse_examples_md"
+build_status: "promoted_phase42"
+source_filename: "gebäude3_wiederverwendung_direct_reuse_examples.md"
+legacy_type: "Gebäude"
+---
+
 # gebaeude_geb_ude3_wiederverwendung_direct_reuse_examples_md
 
-## Source Archive
+**Scope:** 1:1 reuse / **Bauteil-Wiederverwendung** in architecture and building construction. The list prioritises projects where reclaimed components are reused directly as components, especially where they affect **structure**, **façade/envelope**, access cores, or services. Pure recycling, generic renovation/Sanierung, and design-for-disassembly-only projects are kept low or placed in the watchlist.
 
-- Original path: gebaeude/gebäude3_wiederverwendung_direct_reuse_examples.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: archive_as_source; old target: 90_import_rohdaten/gebaeude3_wiederverwendung_direct_reuse_examples
+**Triple-check logic used for this consolidation**
+
+1. **Reuse test:** is there direct 1:1 reuse of a component or building element, not just recycled-content material?
+2. **Building/status test:** built projects outrank proposals, competitions, demonstrators, and future concepts.
+3. **Priority test:** load-bearing structure and substantial envelope reuse outrank fit-out, furniture, finishes, and generic circular-design claims.
+
+**Evidence key**
+
+- **High** = checked against accessible project/source pages during consolidation.
+- **Medium** = plausible and sourced, but not fully primary-verified here.
+- **Verify** = keep in list, but do not cite as a main precedent until status, actors, or quantities are confirmed.
+
+## Rating logic
+
+- **★★★★★** = complex built reuse with structural/envelope relevance and a documented design → sourcing/testing → construction chain.
+- **★★★★☆** = strong built reuse, but smaller, less structural, partly transformation-based, or not fully verified as complete.
+- **★★★☆☆** = built reuse, but mostly façade/envelope, non-structural components, fit-out, pilot, or limited source certainty.
+- **★★☆☆☆** = pavilion, prototype, demonstrator, proposal, competition, non-building infrastructure, or very small reuse.
+- **★☆☆☆☆** = very small built reuse relevance, mostly interior/fit-out.
+
+## B. High-priority built / near-built examples — strong structural or envelope relevance
+
+| Rank | Example | Rating | Country | Status | Actors / teams to map | Reuse focus | Reused elements / relevance | Evidence | Sources |
+|---:|---|---:|---|---|---|---|---|---|---|
+| 9 | **Timber Square, Southwark, London** | ★★★★☆ | UK | Near completion / handover to verify | Landsec; Bennetts Associates; Heyne Tillett Steel; Hoare Lea | Retained structure + reused steel + components | Retains/reuses large existing structure and incorporates more than 500 reused steel beams, approx. 115 tonnes, with reported 276 tCO₂e saving; strong commercial-scale precedent, held below five stars until final handover is verified. | High | [UKGBC](https://ukgbc.org/resources/timber-square/) |
+| 10 | **National Tube / Cleveland Steel reused warehouse, Thirsk** | ★★★★☆ | UK | Built / erected, 2018 | Cleveland Steel & Tubes; National Tube Stockholders | Whole structural steel portal frame | Approx. 12,000 m² single-storey warehouse bought at auction and re-erected; 520-tonne steel frame reused at industrial scale. | High | [ASBP](https://asbp.org.uk/case-studies/cleveland-steel-warehouse); [Designing Buildings](https://www.designingbuildings.co.uk/wiki/Reuse_of_structural_steel_in_construction) |
+| 11 | **Udden student apartments, Linköping** | ★★★★☆ | SE | Built, 1997 | Swedish project team; sources cite Eklund / Roth references | Structural concrete | Approx. 1,850 t of cast-in-place concrete wall elements, floor beams and foundations from two large buildings reused in a 22-apartment building. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 12 | **Nya Udden apartments, Linköping** | ★★★★☆ | SE | Built, 2002 | Swedish project team to verify | Structural precast concrete | Approx. 400 concrete components, including partition walls, external walls, beams and staircases, reused in 54 new flats. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 13 | **Five Cottbus urban houses** | ★★★★☆ | DE | Built, 2001 | German precast-panel reuse research / project team to verify | Structural precast concrete + envelope | 274 P2-system precast panels from mass housing reused in five new three-storey houses. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 14 | **Gröditz association house** | ★★★★☆ | DE | Built, 2007 | Dechantsreiter / Heyn / Mettke references; team to verify | Structural precast concrete + envelope | 279 concrete components from a Dresden-type school and 159 WBS70 panels reused in a new sport-association house. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 15 | **Plauen association house** | ★★★★☆ | DE | Built, 2007 | German project team to verify | Structural precast concrete | Reused floor, external-wall, internal-wall and basement-wall panels from the IW73/6 system in a new sport-association house. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 16 | **Mühlhausen two-storey multi-housing building** | ★★★★☆ | DE | Built, 2007 | German project team to verify | Structural precast concrete + stairs | Reused WBS70 wall panels, slab panels and staircases in a multi-family housing building. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 17 | **Big Dig House, Lexington / Boston area** | ★★★★☆ | USA | Built, 2006–2009 documentation | Single Speed Design; John Hong; Jinhee Park; Paul Pedini | Structural steel + structural concrete | Salvaged steel and concrete highway components from Boston’s Big Dig/I-93 infrastructure reused as the house’s frame, floor/slab and long-span/cantilevering elements. | Medium | [Project Architecture](https://projectarchitecture.com/big-dig-house/); [Arch2O](https://www.arch2o.com/big-dig-house-single-speed-design/); [Apartment Therapy](https://www.apartmenttherapy.com/house-tour-insi-2-74811) |
+| 18 | **Berlin-Schildow second pilot house** | ★★★★☆ | DE | Built, 2005 | German WBS70 reuse research / team to verify | Structural precast concrete | Approx. 200 pieces sawn from 60 floor panels and 50 internal-wall panels reused in a pitched-roof house with two-storey atrium. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 19 | **Mehrow first pilot house** | ★★★★☆ | DE | Built, 2005 | German WBS70 reuse research / team to verify | Structural precast concrete | 22 wall panels and 27 slab panels from WBS70 reused in a new flat-roof house. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 20 | **Bröthen twin-house, Hoyerswerda** | ★★★★☆ | DE | Built, 2001 | German project team to verify | Structural precast concrete | 26 wall panels and 50 slab panels of the P2 system reused in a new twin-house. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 21 | **CRCLR House / Impact Hub Berlin** | ★★★★☆ | DE | Built transformation | Christian Schöningh; Maria Lorenz; Johanna Baier; Kim Le Roux; Margit Sichrovsky; Wiebke Ahues | Structure + envelope + fit-out | Reused steel, windows, sanitary components, timber and interior components; strong real project, partly adaptive reuse / transformation and fit-out. | Medium | [CRCLR](https://crclr.org/); [Impact Hub Berlin](https://impacthub.net/) |
+| 22 | **Holbein Gardens, London** | ★★★★☆ | UK | Built | Barr Gazetas; Heyne Tillett Steel; Grosvenor; Cleveland Steel & Tubes | Structural steel in retrofit/extension | Approx. 24–25 tonnes reused steel, about 35% of designed steelwork, in a one-storey extension/retrofit; strong testing and procurement chain. | High | [ASBP](https://asbp.org.uk/case-studies/holbein-gardens-disrupt); [IStructE](https://www.istructe.org/structural-awards/projects/2023/holbein-gardens/); [Grosvenor](https://www.grosvenor.com/news-insights/some-of-uk%E2%80%99s-first-salvaged-steelwork-reused-in-holbein-gardens-retrofit) |
+| 23 | **55 Great Suffolk Street, London** | ★★★★☆ | UK | Built / retrofit | Fabrix; Hawkins\Brown; Cleveland Steel & Tubes; 1 Broadgate donor chain | Structural steel external core | New external core uses 20.35 tonnes reused steel out of 20.98 tonnes steelwork, i.e. 97%; partly sourced from 1 Broadgate and partly from Cleveland Steel stock. | High | [ASBP](https://asbp.org.uk/case-studies/55-great-suffolk-street); [UKGBC](https://ukgbc.org/resources/55-great-suffolk-street/); [Hawkins\Brown](https://www.hawkinsbrown.com/projects/55-great-suffolk-street/) |
+| 24 | **Brent Cross Town Primary / Electrical Substation, London** | ★★★★☆ | UK | Built | Related Argent; IF_DO; Waterman / Arup context; Cleveland Steel & Tubes | Structural reclaimed steel | Around 45–50% of total designed steelwork reused; reclaimed tubular steel from unused oil-and-gas pipeline stock used for long columns; approx. 40% carbon saving reported. | High | [ASBP](https://asbp.org.uk/case-studies/brent-cross-town-primary-substation); [IF_DO](https://www.ifdo.co/projects/brent-cross-town-substation); [Arup](https://www.arup.com/projects/brent-cross-town-substation/) |
+| 25 | **House of Fraser / 318 Oxford Street + Tower Bridge Court steel reuse stream** | ★★★★☆ | UK | Built reuse chain, 2024 | Make Architects / project team; Webb Yates / TBC.London context; Civic Engineers / ECE to verify | Structural steel urban mining | 1930s steel beams audited, dismantled, tested/refabricated and reused in the 318 Oxford Street extension; remaining members reused by third parties including Tower Bridge Court / TBC.London. Quantity around 20 t at 318 Oxford Street plus 16–20 t at TBC according to sources. | High | [Opalis](https://opalis.eu/en/projects/house-fraser-318-oxf-street); [Construction Management PDF](https://constructionmanagement.co.uk/wp-content/uploads/2024/10/CM-October-2024-combined.pdf) |
+| 26 | **Lycée Michel Lucius conversion, Luxembourg** | ★★★★☆ | LU | Built | Schmets Architectes; Administration des Bâtiments publics; Daedalus Engineering | Structural steel canopy + envelope/components | 11.8 t steel sections reused for a new canopy; 61 m² sheet metal reused as façade cladding; façade panels reused as railings, plus lighting, acoustic panels, paving slabs and furniture. | High | [Opalis](https://opalis.eu/en/projects/conversion-two-wings-lycee-michel-lucius) |
+| 27 | **Grubenstrasse 29 / Werkhof 29, Zürich** | ★★★★☆ | CH | Built / 2025 | Zirkular; baubüro in situ context | Envelope + stairs + components | Reused blue steel façade, stair towers, railings, windows, doors, insulation panels and sanitary fixtures; strong envelope/access-core reuse. | High | [Zirkular](https://zirkular.net/en/project/grubenstrasse-29/) |
+| 28 | **Recyclinghaus Hannover** | ★★★★☆ | DE | Built | Cityförster; Nils Nolting; Arne Hansen | Components + envelope + material strategy | Built housing project using many reused components and materials; strong German residential precedent, but primary structure is not mainly reused. | Medium | [Cityförster](https://www.cityfoerster.net/projects/recyclinghaus-203.html); [DETAIL](https://www.detail.de/de_de/recyclinghaus-in-hannover) |
+| 29 | **Maison DnA, Asse** | ★★★★☆ | BE | Built | BLAF architecten; Bart Vanden Driessche; Lieven Nijs | Load-bearing masonry / envelope | Reused bricks in a structurally relevant brick-wall logic; small house, but direct masonry reuse is central. | Medium | [BLAF](https://blaf.be/) |
+| 30 | **gjG House, Gentbrugge** | ★★★★☆ | BE | Built | BLAF architecten; Bart Vanden Driessche; Lieven Nijs | Load-bearing masonry / envelope | Reused bricks form a structurally autonomous curved brick shell supporting the roof; single-house scale, but very relevant to structural/envelope reuse. | Medium | [BLAF](https://blaf.be/) |
+| 31 | **Europa Building, Brussels** | ★★★★☆ | BE | Built | Philippe Samyn and Partners; Studio Valle; Buro Happold; Jan De Nul | Envelope | Major institutional envelope reuse: double façade with thousands of reused oak window frames sourced across Europe; mainly façade, not primary structure. | Medium | [Samyn and Partners](https://samynandpartners.com/portfolio/europa-building/); [European Council](https://www.consilium.europa.eu/en/contact/address/council-buildings/europa-building/) |
+| 32 | **Institut de Botanique de l’ULg, Liège** | ★★★★☆ | BE | Built renovation | ULiège ARI; Anne-Françoise Marique; Michel Prégardien; Biemar Bois | Envelope | Large reclaimed timber cladding façade renovation, plus reused metal cladding and concrete slabs; mostly envelope. | Medium | [Opalis](https://opalis.eu/en/projects) |
+| 33 | **Maison des Canaux, Paris** | ★★★★☆ | FR | Built refurbishment | Grand Huit / Grand 8; Bellastock; General Metal | Envelope + fit-out + metal reuse | Circular public refurbishment with many reclaimed materials and reused metal/steel components; strong procurement-chain relevance. | Medium | [Grand Huit](https://www.grandhuit.eu/); [Maison des Canaux](https://www.maisondescanaux.paris/) |
+| 34 | **Stuttgart 210 / Living Lab Ingersheim** | ★★★★☆ | DE | Built demonstrator | Andreas Kretzer; Stefan Krötsch; Roman Kreuzer; Katharina Raabe; Maximilian Stemmler; Thomas Stark | Structural/spatial reuse | Stuttgart 21 formwork panels reused as spatial and constructive elements; high 1:1 component relevance, but experimental/smaller scale. | Medium | [University / project page to verify](https://www.iba27.de/projekt/living-lab/) |
+| 35 | **Liander / Alliander HQ, Duiven** | ★★★☆☆ / ★★★★☆ | NL | Built transformation | RAU Architects; Turntoo; Liander / Alliander | Existing-building transformation + reused components | Large circular office transformation with reuse/remounting strategies and reused materials; important circular reference, but direct ex-situ structural-component reuse is less clear than top cases. | Medium | [ArchDaily](https://www.archdaily.com/777783/liander-hq-rau-architects); [RAU](https://www.rau.eu/portfolio/liander/) |
+| 36 | **Thoravej 29, Copenhagen** | ★★★★☆ | DK | Built transformation | Søren Pihlmann | Self-reuse / transformation | Existing building components and materials reused in new functions; strong self-reuse / transformation, less ex-situ Bauteilbörse logic. | Medium | [Pihlmann Architects](https://pihlmann.com/); [Danish Architecture Center](https://dac.dk/) |
+| 37 | **Saxum Vineyard Equipment Barn, Paso Robles** | ★★★★☆ | USA | Built | Clayton Korte; Buehler Engineering; Rarig Construction | Structural steel | Reclaimed oil-field drill-stem pipe used as structural system, plus steel off-cuts for doors; small but structurally strong. | Medium | [Clayton Korte](https://claytonkorte.com/projects/saxum-vineyard-equipment-barn/) |
+| 38 | **Boulder Fire Station 3** | ★★★★☆ / verify | USA | Built | Davis Partnership Architects; KL&A; City of Boulder | Structural steel | Reclaimed structural steel from a decommissioned hospital reused in a new public building; verify exact quantity and component role before main citation. | Verify | [KL&A](https://www.klaa.com/); [City of Boulder](https://bouldercolorado.gov/) |
+| 39 | **Montessori Maassluis** | ★★★★☆ / verify | NL | Completion/status to verify | Kraaijvanger; project partners to verify | Structural slabs | Reported/announced use of reused hollow-core slabs with timber columns; keep high only if completion and actual installed reuse are confirmed. | Verify | [Kraaijvanger](https://www.kraaijvanger.nl/) |
+
+## D. Lower-priority pavilions, demonstrators, proposals and small-scale reuse
+
+| Rank | Example | Rating | Country | Status | Actors / teams to map | Reuse focus | Reused elements / relevance | Evidence | Sources |
+|---:|---|---:|---|---|---|---|---|---|---|
+| 68 | **CIRCuIT retail-unit structural-frame reuse / Leadenhall demonstrator** | ★★☆☆☆ | UK | Demonstrator / option study | CIRCuIT London partners | Structural frame proposal | Proposal/study to dismantle and re-erect an entire retail-unit structural frame; structurally interesting but not a confirmed full building. | Medium | [CIRCuIT](https://www.circuit-project.eu/) |
+| 69 | **Juch-Areal Recyclingzentrum** | ★★☆☆☆ / provisional | CH | In development / future | Marco Graber; Thomas Pulver; Zirkular actors | Components + reassembly | Potential public building with reused components and reassembly logic; lower until built completion and final component scope are confirmed. | Verify | [Zirkular](https://zirkular.net/en/projects/) |
+| 70 | **People’s Pavilion, Eindhoven** | ★★☆☆☆ | NL | Built temporary pavilion | bureau SLA; Overtreders W; Peter van Assche; Hester van Dijk; Reinder Bakker | Structure + façade / borrowed components | Very clear borrowed/reused components, including structural and façade parts; downgraded because temporary pavilion scale. | Medium | [bureau SLA](https://www.bureausla.nl/project/peoples-pavilion/) |
+| 71 | **Circular Pavilion, Paris** | ★★☆☆☆ | FR | Built temporary pavilion | Encore Heureux; Nicola Delon; Julien Choppin | Materials + envelope | Built from reused materials such as timber doors, insulation and secondary materials; temporary, small, mostly non-structural. | Medium | [Encore Heureux](https://encoreheureux.org/projets/pavillon-circulaire/) |
+| 72 | **Pavilion Circl, Amsterdam** | ★★☆☆☆ | NL | Built pavilion | de Architekten Cie.; ABN AMRO; Hans Hammink | DfD + second-life materials | Circular pavilion with second-life/reused materials; stronger in DfD/system logic than in direct structural reuse. | Medium | [Circl](https://circl.nl/) |
+| 73 | **Reused Construction Materials / component-reuse prototypes** | ★★☆☆☆ | DK | Prototype/test | Søren Nielsen; Katrine West Kristensen | Component prototypes | 1:1 component reuse prototypes/tests; useful proof-of-concept, not a full building. | Medium | Source to confirm |
+| 74 | **Multi Brussels / Reuse in Multi** | ★★☆☆☆ | BE | Built transformation | Conix RDBM; 51N4E; Rotor; Maarten Gielen; Michaël Ghyoot; Lionel Devlieger | Fit-out/material strategy | Real transformation with urban mining and material reuse; more Bestand/fit-out/material strategy than structural component reuse. | Medium | [Rotor](https://rotordb.org/); [Multi](https://multi.eu/) |
+| 75 | **BlueCity Offices, Rotterdam** | ★★☆☆☆ | NL | Built interior | Superuse Studios; Jan Jongert; Jeroen Bergsma | Interior/fit-out | Direct reuse in office/interior project; mostly fit-out/interior scale. | Medium | [Superuse Studios](https://www.superuse-studios.com/) |
+| 76 | **Impact Hub Berlin interior / CRCLR fit-out** | ★★☆☆☆ | DE | Built interior | Kim Le Roux; Margit Sichrovsky; Wiebke Ahues | Interior/fit-out | Direct reuse and circular interior practice inside CRCLR context; mostly interior/non-structural. | Medium | [Impact Hub Berlin](https://berlin.impacthub.net/) |
+| 77 | **Tree House, Amsterdam** | ★★☆☆☆ | NL | Built cabin / small structure | Studio ACTE | Small structure + materials | Reclaimed structural timber, plywood, acrylic panels and corrugated metal; downgraded because very small scale. | Medium | [Studio ACTE](https://studioacte.com/) |
+| 78 | **Tikkurila School Warehouse, Vantaa / Helsinki region** | ★★☆☆☆ | FI | Built demonstrator | CIRCuIT / Vantaa partners | Masonry/material demonstrator | Reclaimed red clay bricks reused in a storage building; small-scale demonstrator. | Medium | [CIRCuIT](https://www.circuit-project.eu/) |
+| 79 | **FLO:RE reused concrete + steel floor prototype** | ★★☆☆☆ | CH | Full-scale prototype | EPFL Structural Xploration Lab; Célia Küpfer; Corentin Fivet; Numa Bertola | Structural prototype | Load-bearing office-floor prototype using reused saw-cut reinforced-concrete elements and reused steel profiles; very relevant technically, but prototype scale. | High | [EPFL Infoscience](https://infoscience.epfl.ch/entities/publication/14383f26-a99f-4d3a-8ca9-7a361376ef54); [EPFL news](https://actu.epfl.ch/news/the-flore-system-presented-at-iabse-2024/) |
+| 80 | **London secondary-timber glulam demonstrator** | ★★☆☆☆ | UK | Demonstrator | UCL / CIRCuIT / research partners | Structural timber demonstrator | Reclaimed timber remanufactured into structural glulam/CLT-type components and tested at building scale; not a full building. | Medium | [RIBAJ](https://www.ribaj.com/spec/structural-timber-prototype-uses-waste-from-demolition-ucl-circular-economy/) |
+| 81 | **Re:Crete footbridge** | ★★☆☆☆ | CH / FR | Research prototype | EPFL Structural Xploration Lab; Corentin Fivet team | Structural concrete prototype | Direct reuse of concrete blocks/elements in a structural footbridge prototype; infrastructure/prototype rather than building. | High | [Construction21](https://www.construction21.org/france/case-studies/h/re-crete-footbridge-en.html); [EPFL Infoscience](https://infoscience.epfl.ch/entities/publication/2539acac-140d-4914-8306-c1f540294152) |
+| 82 | **Plattenpalast prototype, Berlin** | ★★☆☆☆ | DE | Built prototype, 2004 | zukunftsgeraeusche / team to verify | Structural/envelope precast concrete | WBS70 precast panels reused in a design-for-disassembly exhibition prototype; important but exhibition-scale. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 83 | **Plattenvereinigung pavilion, Berlin** | ★★☆☆☆ | DE | Built pavilion, 2010 | zukunftsgeraeusche / team to verify | Structural/envelope precast concrete | Reused slabs, internal/external wall panels and stair components from East- and West-German precast systems; pavilion/prototype scale. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 84 | **Bestandverplanzung pavilion, Munich** | ★★☆☆☆ | DE | Built / relocated pavilion, 2008 | zukunftsgeraeusche / team to verify | Whole-building / precast panel reuse | Reuse/relocation of panels from Olympic-village bungalows into relocated bungalows/pavilion; clear but small/prototype. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 85 | **Superlocal exhibition building, Bleijerheide** | ★★☆☆☆ | NL | Built exhibition building, 2017 | SUPERLOCAL; Bremen Bouwadviseurs / team to verify | Large concrete cut-outs / room modules | Large cast-in-place building pieces reused as a new exhibition building; methodologically relevant but exhibition/prototype scale. | Medium | [77 concrete-reuse precedents review](https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents) |
+| 86 | **Big Dig Building, Boston** | ★★☆☆☆ | USA | Aborted / proposal | Single Speed Design | Structural steel-concrete proposal | Proposed reuse of “Inverset” steel-concrete bridge-deck elements from highway infrastructure in a multi-unit building; not built. | Medium | [ArchDaily](https://www.archdaily.com/30050/big-dig-building-single-speed-design); [Holcim Foundation](https://www.holcimfoundation.org/projects/big-dig-building-boston-massachusetts-usa) |
+| 87 | **Christ Pavilion relocated to Volkenroda Monastery** | ★★☆☆☆ | DE | Built / relocated after Expo 2000 | gmp / von Gerkan, Marg and Partners | Whole pavilion relocation | Expo 2000 church pavilion reconstructed at Volkenroda Monastery; whole-building/pavilion relocation rather than complex permanent building reuse. | Medium | [Structurae](https://structurae.net/en/structures/expo-2000); [PROGRESS steel reuse report](https://www.steelconstruct.com/wp-content/uploads/PROGRESS-D1.2-Reuse-potential.pdf) |
+| 88 | **FarmHouse / Parckfarm, Brussels** | ★★☆☆☆ | BE | Built small public/community project | 1010 Architecture Urbanism; Parckdesign context | Greenhouse structure + envelope | Second-hand greenhouse moved from the Netherlands to Brussels; reused greenhouse structure and concrete tiles; small/lightweight. | Medium | [1010au](https://1010au.net/projects/farmhouse-parckdesign-2014); [Living the City](https://livingthecity.eu/en/2020/09/07/parckfarm/) |
+| 89 | **Extending the Cycle / Elvetia, Switzerland** | ★★☆☆☆ | CH | Awarded concept / built status to verify | baubüro in situ; Holcim Foundation context | Proposed structure/envelope components | Proposed/direct component palette includes external steel staircase, aluminium windows, corrugated metal sheets, insulation, PV modules, steel beams and stone cladding. | Verify | [Holcim Foundation](https://www.holcimfoundation.org/projects/extending-the-cycle); [e-zeppelin](https://e-zeppelin.ro/en/how-to-build-from-scraps-bauburo-in-situ-extending-the-cycle/) |
+| 90 | **Mercury / Merkuria-to-Mercury, Prague** | ★★☆☆☆ | CZ | Planned / under development | Skanska | Material stream / circular office | Planned office development using materials from the 1971 Merkuria building and other demolished buildings; large ambition, but not completed direct component reuse yet. | Verify | [Skanska](https://www.skanska.cz/en-us/Expertise/development/commercial-development/projects-in-pipeline/mercury/mercury-story-cz/) |
+| 91 | **Brummen Town Hall** | ★★☆☆☆ | NL | Built | RAU; Turntoo | DfD / future reuse | Important circular-building precedent, but mostly future reuse/material passport rather than direct installed second-life components. | Medium | [RAU](https://www.rau.eu/portfolio/townhall-brummen/) |
+| 92 | **Moringa Hamburg HafenCity** | ★★☆☆☆ | DE | In construction / planned | kadawittfeldarchitektur; Landmarken; Drees & Sommer context | DfD / material bank | Mostly DfD/material-bank relevance; keep low unless actual reused installed components are confirmed. | Verify | [Moringa](https://moringa.eco/) |
+| 93 | **Charles Malis project** | ★★☆☆☆ | BE | Built transformation | Mamout; Nijs | Interior/flooring | Reused paving stones as interior floor; built direct reuse, but low structural relevance. | Medium | [Opalis](https://opalis.eu/en/projects) |
+
+## Watchlist / not main-ranked unless more evidence appears
+
+These are useful search leads, but they should not be used as headline **Wiederverwendung** references without further project-specific verification.
+
+| Example | Current treatment | Reason |
+|---|---|---|
+| **London Olympic Stadium, London 2012** | Watchlist / verify | Reuse of gas pipes in structure is often cited, but the exact donor chain and component role need project-level confirmation before ranking. |
+| **Boxberg office building** | Watchlist / verify | Reported/planned precast-panel reuse; built status needs confirmation. |
+| **Ditch crossings using German precast slabs** | Exclude from architecture main list | Structurally relevant but infrastructure rather than building architecture. |
+| **Low silos and bulk-material storage walls** | Exclude from architecture main list | Agricultural/storage reuse; useful for structural reuse research but not strong architectural precedent. |
+| **Waltershausen car shelters** | Low / appendix only | Structurally clear service typology; too small for main architecture ranking. |
+| **Raahe garage and garden pavilions** | Low / appendix only | Useful Finnish concrete-component precedent, but unheated service-building scale. |
+| **Tree House / very small cabins** | Keep low | Direct reuse can be high but architectural/structural scale is too small for top ranking. |
+
+---
+
+## Practical shortlist for presentations / thesis argument
+
+Use these first if the topic is **complex built reuse with structural/envelope relevance**:
+
+1. KA13, Oslo
+2. BioPartner 5, Leiden
+3. K.118, Winterthur
+4. Recypark Demets, Brussels
+5. Svanen Kindergarten, Gladsaxe
+6. BedZED, London
+7. Villa Welpeloo, Enschede
+8. ELYS, Basel
+9. Timber Square, London
+10. Cleveland Steel reused warehouse, Thirsk
+11. Udden / Nya Udden / Cottbus / Gröditz / Plauen / Mühlhausen concrete-panel reuse cases
+12. Holbein Gardens, 55 Great Suffolk Street, Brent Cross Substation, and 318 Oxford Street / TBC.London steel reuse stream
+13. Lycée Michel Lucius, Luxembourg
+14. Recyclinghaus Hannover
+15. Resource Rows and Woongroep Boschgaard as strong but less structural housing references
+
+## Main corrections made in this version
+
+- **KA13 moved to the top band** because it combines structural hollow-core slab reuse, reused steel, façade/components and strong regulatory/procurement learning.
+- **BioPartner 5 kept at five stars** because the reused donor steel forms the main supporting structure.
+- **Recypark Demets upgraded/kept at five stars** because the reused glulam/timber hall is the structural roof identity of a public facility.
+- **Timber Square remains four stars** until final handover/completion is verified, despite its very strong reused-steel quantity.
+- **House of Fraser / 318 Oxford Street steel reuse moved to four stars** because it is a very important steel-reuse chain, but the reused quantities are smaller than the top full-building structural examples.
+- **Proposals, competitions, DfD-only projects and pavilions are capped low** unless they are built and show meaningful direct component reuse.
+- **Interior-only cases stay at one or two stars** because they have low structural/envelope relevance.

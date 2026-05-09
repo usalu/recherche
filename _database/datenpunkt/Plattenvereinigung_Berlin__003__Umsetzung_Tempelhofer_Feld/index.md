@@ -1,20 +1,25 @@
-﻿---
-id: "Plattenvereinigung_Berlin__003__Umsetzung_Tempelhofer_Feld"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Umsetzung Tempelhofer Feld - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse"
 ---
-# Umsetzung Tempelhofer Feld - Plattenvereinigung Berlin â€” Fallstudie Direct Reuse
+entity: "datenpunkt"
+id: "Plattenvereinigung_Berlin__003__Umsetzung_Tempelhofer_Feld"
+title: "Umsetzung Tempelhofer Feld - Plattenvereinigung Berlin — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+einheit: "Datum/Monat"
+quelle_label: "S3, S4"
+node_kind: "core"
+wert: "Mai 2011"
+fallstudie: "fallstudie/Plattenvereinigung_Berlin"
+bauobjekt:
+  - "Plattenvereinigung_Berlin"
+projekt:
+  - "Plattenvereinigung_Berlin"
+---
 
-## Clean Node
+# Umsetzung Tempelhofer Feld - Plattenvereinigung Berlin — Fallstudie Direct Reuse
 
-- Final path: _database/datenpunkt/Plattenvereinigung_Berlin__003__Umsetzung_Tempelhofer_Feld
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Plattenvereinigung_Berlin__003__Umsetzung_Tempelhofer_Feld
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Umsetzung Tempelhofer Feld
+- **Wert:** Mai 2011
+- **Einheit:** Datum/Monat
+- **Methode/Datenmodell/Software:** Projektangabe
+- **Bilanzgrenze:** Standortwechsel
+- **Quelle:** S3, S4
+- **Vertrauensgrad:** belegt

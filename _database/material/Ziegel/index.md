@@ -1,25 +1,19 @@
-﻿---
-id: "Ziegel"
-entity: "material"
-build_status: "clean_phase20"
-title: "Dachziegel"
 ---
+entity: "material"
+id: "Ziegel"
+title: "Dachziegel"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Dachziegel
 
-## Clean Node
+## Definition
 
-- Final path: _database/material/Ziegel
-- Build rule: typed path IDs only.
+Dachziegel oder roof tiles als eigene Bauteilgruppe.
 
-## Imported Staging Nodes
+## Quelle: bauteiltyp_Ziegel.staging_index
 
-- Source: _graph/bauteiltyp/Dachziegel
-  - Action: split_to_clean_targets
-  - Status: CONFIDENT
-  - Reason: Roof tile is roof component plus brick/clay material.
+## Definition
 
-- Source: _graph/bauteiltyp/Ziegel
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: Ziegel is primarily what something is made of; component cases use `bauteiltyp/Mauerstein_Block` plus raw label.
-
+Ziegel, Backstein, Klinker oder Brick-Elemente als wiederverwendeter Bauteiltyp.

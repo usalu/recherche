@@ -1,20 +1,16 @@
-﻿---
-id: "Circular_Pavilion_Paris"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# Reuse-Kette - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "reuse_kette"
+id: "Circular_Pavilion_Paris"
+title: "Reuse-Kette - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Circular_Pavilion_Paris.md"
+node_kind: "core"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# Reuse-Kette - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kette/Circular_Pavilion_Paris
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/Circular_Pavilion_Paris
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

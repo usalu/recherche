@@ -1,20 +1,43 @@
-﻿---
-id: "55_Great_Suffolk_Street_London__002__Stahl_aus_1_Broadgate"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Stahl aus 1 Broadgate - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Stahl aus 1 Broadgate - 55 Great Suffolk Street, London â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "55_Great_Suffolk_Street_London__002__Stahl_aus_1_Broadgate"
+title: "Stahl aus 1 Broadgate - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "timing donor/receiver, Profilverfügbarkeit"
+quelle_label: "ASBP, Architects’ Journal"
+material_label: "Baustahl"
+node_kind: "core"
+herkunft_label: "donor site 1 Broadgate, City of London"
+menge_umfang: "8.3 t / ca. 43 % des reused steel"
+pruefung_label: "getestet / CE"
+norm_recht_label: "EN 1090"
+fallstudie: "fallstudie/55_Great_Suffolk_Street_London"
+bauobjekt:
+  - "55_Great_Suffolk_Street_London"
+neue_funktion: "Teil des neuen Kerntragwerks"
+bauteil_label: "Stahl aus 1 Broadgate"
+projekt:
+  - "55_Great_Suffolk_Street_London"
+alte_funktion: "Stahlrahmen eines abgebrochenen Bürogebäudes"
+---
 
-## Clean Node
+# Stahl aus 1 Broadgate - 55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/55_Great_Suffolk_Street_London__002__Stahl_aus_1_Broadgate
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/55_Great_Suffolk_Street_London__002__Stahl_aus_1_Broadgate
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Stahl aus 1 Broadgate
+- **Material:** Baustahl
+- **Herkunft:** donor site 1 Broadgate, City of London
+- **alte Funktion:** Stahlrahmen eines abgebrochenen Bürogebäudes
+- **neue Funktion:** Teil des neuen Kerntragwerks
+- **Menge/Umfang:** 8.3 t / ca. 43 % des reused steel
+- **tragend?:** ja
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** Concrete casings entfernt, hot-cut ends; Weiterbearbeitung
+- **Verbindung:** unbekannt
+- **Prüfung:** getestet / CE
+- **Leistungsanforderung:** strukturelle Verwendung
+- **Norm/Recht:** EN 1090
+- **Hürde:** timing donor/receiver, Profilverfügbarkeit
+- **Quelle:** ASBP, Architects’ Journal
+- **unbekannt:** exakte Profile

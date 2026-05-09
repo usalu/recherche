@@ -1,20 +1,22 @@
-﻿---
-id: "Lo_Reninge_Town_Hall_Facade__002__Dexia_Lo_Reninge_town_council"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Dexia / Lo-Reninge town council - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse"
 ---
-# Dexia / Lo-Reninge town council - Lo-Reninge Town Hall faÃ§ade / Stadhuis Lo â€“ Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Lo_Reninge_Town_Hall_Facade__002__Dexia_Lo_Reninge_town_council"
+title: "Dexia / Lo-Reninge town council - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "[S2]"
+node_kind: "relation"
+fallstudie: "fallstudie/Lo_Reninge_Town_Hall_Facade"
+bauobjekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+projekt:
+  - "Lo_Reninge_Town_Hall_Facade"
+---
 
-## Clean Node
+# Dexia / Lo-Reninge town council - Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Lo_Reninge_Town_Hall_Facade__002__Dexia_Lo_Reninge_town_council
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Lo_Reninge_Town_Hall_Facade__002__Dexia_Lo_Reninge_town_council
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** Bauherr / Akteur
+- **Wert:** Dexia / Lo-Reninge town council
+- **Beziehung zur Fallstudie:** Auftraggeber / Nutzer
+- **Quelle/Beleg:** [S2]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** noA nennt Dexia / Lo-Reninge town council.

@@ -1,20 +1,25 @@
-﻿---
-id: "Holbein_Gardens_London__006__Anteil_reused_steel_an_Stahltonnage"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Anteil reused steel an Stahltonnage - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
 ---
-# Anteil reused steel an Stahltonnage - Holbein Gardens, London â€” Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
+entity: "datenpunkt"
+id: "Holbein_Gardens_London__006__Anteil_reused_steel_an_Stahltonnage"
+title: "Anteil reused steel an Stahltonnage - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+build_status: "promoted_phase42"
+einheit: "%"
+quelle_label: "[S9], [S11]"
+node_kind: "core"
+wert: "34 / ca. ein Drittel"
+fallstudie: "fallstudie/Holbein_Gardens_London"
+bauobjekt:
+  - "Holbein_Gardens_London"
+projekt:
+  - "Holbein_Gardens_London"
+---
 
-## Clean Node
+# Anteil reused steel an Stahltonnage - Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl
 
-- Final path: _database/datenpunkt/Holbein_Gardens_London__006__Anteil_reused_steel_an_Stahltonnage
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Holbein_Gardens_London__006__Anteil_reused_steel_an_Stahltonnage
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Anteil reused steel an Stahltonnage
+- **Wert:** 34 / ca. ein Drittel
+- **Einheit:** %
+- **Methode/Datenmodell/Software:** Fach-/Projektquellen
+- **Bilanzgrenze:** Stahlstruktur
+- **Quelle:** [S9], [S11]
+- **Vertrauensgrad:** belegt

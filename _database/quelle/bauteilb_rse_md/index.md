@@ -1,15 +1,12 @@
-﻿---
-id: "bauteilb_rse_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "bauteilbörse.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "bauteilb_rse_md"
+title: "bauteilb_rse_md"
+build_status: "promoted_phase42"
+source_filename: "bauteilbörse.md"
+legacy_type: "Type"
+---
+
 # bauteilb_rse_md
 
-## Source Archive
 
-- Original path: bauteilbörse.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: merge_into_index; old target: software_digitaltool/index

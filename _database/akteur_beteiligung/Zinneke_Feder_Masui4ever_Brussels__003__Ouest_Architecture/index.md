@@ -1,20 +1,22 @@
-﻿---
-id: "Zinneke_Feder_Masui4ever_Brussels__003__Ouest_Architecture"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Ouest Architecture - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Ouest Architecture - Zinneke / FEDER Masui4ever, BrÃ¼ssel â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "akteur_beteiligung"
+id: "Zinneke_Feder_Masui4ever_Brussels__003__Ouest_Architecture"
+title: "Ouest Architecture - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+quelle_label: "[S1]"
+node_kind: "relation"
+fallstudie: "fallstudie/Zinneke_Feder_Masui4ever_Brussels"
+bauobjekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+projekt:
+  - "Zinneke_Feder_Masui4ever_Brussels"
+---
 
-## Clean Node
+# Ouest Architecture - Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/akteur_beteiligung/Zinneke_Feder_Masui4ever_Brussels__003__Ouest_Architecture
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Zinneke_Feder_Masui4ever_Brussels__003__Ouest_Architecture
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Ouest Architecture
+- **Beziehung zur Fallstudie:** Architekturbüro
+- **Quelle/Beleg:** [S1]
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Projektpartner

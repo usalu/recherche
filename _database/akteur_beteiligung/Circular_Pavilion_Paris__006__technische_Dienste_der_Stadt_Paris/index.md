@@ -1,20 +1,22 @@
-﻿---
-id: "Circular_Pavilion_Paris__006__technische_Dienste_der_Stadt_Paris"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "technische Dienste der Stadt Paris - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse"
 ---
-# technische Dienste der Stadt Paris - Pavillon Circulaire / Circular Pavilion, Paris â€” Fallstudie Direct Reuse
+entity: "akteur_beteiligung"
+id: "Circular_Pavilion_Paris__006__technische_Dienste_der_Stadt_Paris"
+title: "technische Dienste der Stadt Paris - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+quelle_label: "Encore Heureux"
+node_kind: "relation"
+fallstudie: "fallstudie/Circular_Pavilion_Paris"
+bauobjekt:
+  - "Circular_Pavilion_Paris"
+projekt:
+  - "Circular_Pavilion_Paris"
+---
 
-## Clean Node
+# technische Dienste der Stadt Paris - Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse
 
-- Final path: _database/akteur_beteiligung/Circular_Pavilion_Paris__006__technische_Dienste_der_Stadt_Paris
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Circular_Pavilion_Paris__006__technische_Dienste_der_Stadt_Paris
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** technische Dienste der Stadt Paris
+- **Beziehung zur Fallstudie:** second œuvre
+- **Quelle/Beleg:** Encore Heureux
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Details STGCAI/SABA/SALPA.

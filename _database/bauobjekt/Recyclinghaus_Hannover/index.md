@@ -1,20 +1,37 @@
-﻿---
-id: "Recyclinghaus_Hannover"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Recyclinghaus Hannover â€” Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "bauobjekt"
+id: "Recyclinghaus_Hannover"
+title: "Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\Recyclinghaus_Hannover.md"
+node_kind: "core"
+fallstudie: "fallstudie/Recyclinghaus_Hannover"
+projekt:
+  - "Recyclinghaus_Hannover"
+---
 
-## Clean Node
+# Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/bauobjekt/Recyclinghaus_Hannover
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
+### Gebäude\Recyclinghaus_Hannover.md
 
-- Source: _graph/bauobjekt/Recyclinghaus_Hannover
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+## 3. FALLSTUDIE
 
+- **Name:** Recyclinghaus Hannover / Recyclinghouse Hanover
+- **Ort:** Hannover-Kronsberg, Deutschland
+- **Gebäude:** experimentelles Wohnhaus / Einfamilienhaus
+- **Projekt:** Prototyp für Reuse, Recyclingmaterialien und recyclinggerechte Bauweise
+- **Beteiligte People / Akteure:** CITYFÖRSTER architecture + urbanism; Gundlach GmbH & Co. KG; DREWES + SPETH; H2A; weitere unbekannt
+- **Architekt:** CITYFÖRSTER architecture + urbanism
+- **Tragwerksplaner:** DREWES + SPETH Beratende Ingenieure
+- **Bauherr:** Gundlach GmbH & Co. KG Wohnungsunternehmen, Hannover
+- **Zeitraum:** Fertigstellung/Bezug 2019; Veröffentlichungen 2020–2022
+- **Ursprüngliche Nutzung:** nicht anwendbar für Neubau; einzelne Bauteile stammen aus Jugendzentrum, Lackiererei, Sportzentrum/Sauna, Messebau u. a.
+- **Neue Nutzung:** Wohnen
+- **Fläche / Maßstab:** 285 m² BGF laut ZAB; 160 m² Wohnfläche laut DAB
+- **Schutzstatus / Denkmalstatus:** unbekannt
+- **Quellenlage:** gut für Bauteilarten, Fläche, Akteure und Fassadenanteil; mittel/schwach für Normen, Kosten, Mengen, Prüfungen und CO₂-Methode
+
+---

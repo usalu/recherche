@@ -1,20 +1,43 @@
-﻿---
-id: "Impact_Hub_Berlin_CRCLR_Fitout__003__Ziegel_im_Empfang"
-entity: "reuse_einsatz"
-build_status: "clean_phase20"
-title: "Ziegel im Empfang - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen"
 ---
-# Ziegel im Empfang - Impact Hub Berlin Interior / CRCLR Fit-out â€“ Fallstudie Direct Reuse / zirkulÃ¤res Bauen
+entity: "reuse_einsatz"
+id: "Impact_Hub_Berlin_CRCLR_Fitout__003__Ziegel_im_Empfang"
+title: "Ziegel im Empfang - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen"
+build_status: "promoted_phase42"
+huerde_label: "bauliche Funktion unklar"
+quelle_label: "S3"
+material_label: "Ziegel"
+node_kind: "core"
+herkunft_label: "andere Baustelle"
+menge_umfang: "unbekannt"
+pruefung_label: "unbekannt"
+norm_recht_label: "unbekannt"
+fallstudie: "fallstudie/Impact_Hub_Berlin_CRCLR_Fitout"
+bauobjekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+neue_funktion: "Empfangs-/Treffpunktgestaltung"
+bauteil_label: "Ziegel im Empfang"
+projekt:
+  - "Impact_Hub_Berlin_CRCLR_Fitout"
+alte_funktion: "unbekannt"
+---
 
-## Clean Node
+# Ziegel im Empfang - Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen
 
-- Final path: _database/reuse_einsatz/Impact_Hub_Berlin_CRCLR_Fitout__003__Ziegel_im_Empfang
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_einsatz/Impact_Hub_Berlin_CRCLR_Fitout__003__Ziegel_im_Empfang
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Bauteil:** Ziegel im Empfang
+- **Material:** Ziegel
+- **Herkunft:** andere Baustelle
+- **alte Funktion:** unbekannt
+- **neue Funktion:** Empfangs-/Treffpunktgestaltung
+- **Menge/Umfang:** unbekannt
+- **tragend?:** nein
+- **räumlich?:** ja
+- **Hülle?:** nein
+- **technisch?:** nein
+- **Eingriff/Aufbereitung:** unbekannt
+- **Verbindung:** unbekannt
+- **Prüfung:** unbekannt
+- **Leistungsanforderung:** unbekannt
+- **Norm/Recht:** unbekannt
+- **Hürde:** bauliche Funktion unklar
+- **Quelle:** S3
+- **unbekannt:** Menge

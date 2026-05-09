@@ -1,20 +1,18 @@
-﻿---
-id: "ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal"
-entity: "bauobjekt"
-build_status: "clean_phase20"
-title: "ELYS Kultur- und Gewerbehaus, Basel / LysbÃ¼chelareal"
 ---
-# ELYS Kultur- und Gewerbehaus, Basel / LysbÃ¼chelareal
+entity: "bauobjekt"
+id: "ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal"
+title: "ELYS Kultur- und Gewerbehaus, Basel / Lysbüchelareal"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "gebaeude\\ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal.md"
+node_kind: "core"
+fallstudie: "fallstudie/ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal"
+projekt:
+  - "ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal"
+---
 
-## Clean Node
+# ELYS Kultur- und Gewerbehaus, Basel / Lysbüchelareal
 
-- Final path: _database/bauobjekt/ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal
-- Build rule: typed path IDs only.
+## Extracted Object Context
 
-## Imported Staging Nodes
-
-- Source: _graph/bauobjekt/ELYS_Kultur_und_Gewerbehaus_Basel_Lysbuechelareal
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+Kein eigener Bauobjektabschnitt automatisch erkannt. Vollstaendige Quelle liegt in DATEIEN und in der Fallstudie.

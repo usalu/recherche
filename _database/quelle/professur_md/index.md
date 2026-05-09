@@ -1,15 +1,12 @@
-﻿---
-id: "professur_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "professur.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "professur_md"
+title: "professur_md"
+build_status: "promoted_phase42"
+source_filename: "professur.md"
+legacy_type: "Type"
+---
+
 # professur_md
 
-## Source Archive
 
-- Original path: professur.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: merge_into_index; old target: akteurtyp/Professur

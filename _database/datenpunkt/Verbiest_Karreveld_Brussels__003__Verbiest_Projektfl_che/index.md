@@ -1,20 +1,25 @@
-﻿---
-id: "Verbiest_Karreveld_Brussels__003__Verbiest_Projektfl_che"
-entity: "datenpunkt"
-build_status: "clean_phase20"
-title: "Verbiest ProjektflÃ¤che - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek"
 ---
-# Verbiest ProjektflÃ¤che - Verbiest + Karreveld, BrÃ¼ssel / Molenbeek
+entity: "datenpunkt"
+id: "Verbiest_Karreveld_Brussels__003__Verbiest_Projektfl_che"
+title: "Verbiest Projektfläche - Verbiest + Karreveld, Brüssel / Molenbeek"
+build_status: "promoted_phase42"
+einheit: "m²"
+quelle_label: "Q1"
+node_kind: "core"
+wert: "610"
+fallstudie: "fallstudie/Verbiest_Karreveld_Brussels"
+bauobjekt:
+  - "Verbiest_Karreveld_Brussels"
+projekt:
+  - "Verbiest_Karreveld_Brussels"
+---
 
-## Clean Node
+# Verbiest Projektfläche - Verbiest + Karreveld, Brüssel / Molenbeek
 
-- Final path: _database/datenpunkt/Verbiest_Karreveld_Brussels__003__Verbiest_Projektfl_che
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/datenpunkt/Verbiest_Karreveld_Brussels__003__Verbiest_Projektfl_che
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Kennwert:** Verbiest Projektfläche
+- **Wert:** 610
+- **Einheit:** m²
+- **Methode/Datenmodell/Software:** AgwA-Projektangabe
+- **Bilanzgrenze:** Verbiest
+- **Quelle:** Q1
+- **Vertrauensgrad:** belegt

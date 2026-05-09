@@ -1,20 +1,16 @@
-﻿---
-id: "ReCrete_footbridge_reused_concrete_blocks"
-entity: "reuse_kette"
-build_status: "clean_phase20"
-title: "Reuse-Kette - Re:Crete footbridge â€” Fallstudie Direct Reuse"
 ---
-# Reuse-Kette - Re:Crete footbridge â€” Fallstudie Direct Reuse
+entity: "reuse_kette"
+id: "ReCrete_footbridge_reused_concrete_blocks"
+title: "Reuse-Kette - Re:Crete footbridge — Fallstudie Direct Reuse"
+build_status: "promoted_phase42"
+legacy_paths:
+  - "Gebäude\\ReCrete_footbridge_reused_concrete_blocks.md"
+node_kind: "core"
+fallstudie: "fallstudie/ReCrete_footbridge_reused_concrete_blocks"
+projekt:
+  - "ReCrete_footbridge_reused_concrete_blocks"
+---
 
-## Clean Node
+# Reuse-Kette - Re:Crete footbridge — Fallstudie Direct Reuse
 
-- Final path: _database/reuse_kette/ReCrete_footbridge_reused_concrete_blocks
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/reuse_kette/ReCrete_footbridge_reused_concrete_blocks
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
 

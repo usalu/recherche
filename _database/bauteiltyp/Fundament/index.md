@@ -1,20 +1,13 @@
-﻿---
-id: "Fundament"
-entity: "bauteiltyp"
-build_status: "clean_phase20"
-title: "Fundament / Bodenplatte"
 ---
+entity: "bauteiltyp"
+id: "Fundament"
+title: "Fundament / Bodenplatte"
+build_status: "promoted_phase42"
+node_kind: "knot"
+---
+
 # Fundament / Bodenplatte
 
-## Clean Node
+## Definition
 
-- Final path: _database/bauteiltyp/Fundament
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/bauteiltyp/Fundament_Bodenplatte
-  - Action: move_to_clean_target
-  - Status: CONFIDENT
-  - Reason: Foundation is a real component family missing from the current canonical list.
-
+Fundamente, Bodenplatten, erste Geschosse oder grundungsnahe massive Bauteile.

@@ -1,20 +1,22 @@
-﻿---
-id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Kitajima_Corporation"
-entity: "akteur_beteiligung"
-build_status: "clean_phase20"
-title: "Kitajima Corporation - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
 ---
+entity: "akteur_beteiligung"
+id: "Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Kitajima_Corporation"
+title: "Kitajima Corporation - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
+build_status: "promoted_phase42"
+quelle_label: "Q3"
+node_kind: "relation"
+fallstudie: "fallstudie/Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+bauobjekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+projekt:
+  - "Kamikatsu_Zero_Waste_Center_Hotel_WHY"
+---
+
 # Kitajima Corporation - Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu
 
-## Clean Node
-
-- Final path: _database/akteur_beteiligung/Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Kitajima_Corporation
-- Build rule: typed path IDs only.
-
-## Imported Staging Nodes
-
-- Source: _graph/akteur_beteiligung/Kamikatsu_Zero_Waste_Center_Hotel_WHY__003__Kitajima_Corporation
-  - Action: keep_default
-  - Status: CONFIDENT
-  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
-
+- **Entität:** People
+- **Wert:** Kitajima Corporation
+- **Beziehung zur Fallstudie:** Main contractor
+- **Quelle/Beleg:** Q3
+- **Vertrauensgrad:** belegt
+- **Anmerkung:** Ausführung

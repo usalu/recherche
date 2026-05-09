@@ -1,15 +1,128 @@
-﻿---
-id: "Geb_ude_Boulder_Fire_Station_3_md"
-entity: "quelle"
-build_status: "clean_phase20_source_archive"
-source_path: "Gebäude/Boulder_Fire_Station_3.md"
-source_exists: "True"
 ---
+entity: "quelle"
+id: "Geb_ude_Boulder_Fire_Station_3_md"
+title: "Geb_ude_Boulder_Fire_Station_3_md"
+build_status: "promoted_phase42"
+source_filename: "Boulder_Fire_Station_3.md"
+---
+
 # Geb_ude_Boulder_Fire_Station_3_md
 
-## Source Archive
+**Stand:** 2026-05-07  
+**Sprache:** Deutsch  
+**Arbeitsregel:** Gewertet werden nur wiederverwendete Bau-, Tragwerks-, Hüll-, Raum-, Technik- oder fest eingebaute Konstruktionselemente. Recycling des Krankenhauses und gespendete lose Innenausstattung zählen nicht für diese Fallstudie, außer sie wurden fest in Fire Station 3 eingebaut.
 
-- Original path: Gebäude/Boulder_Fire_Station_3.md
-- Archive action: archive_source_once
-- Source copied: True
-- Reason: Archive original old knowledge file once as source evidence; old action: split_into_case_graph; old target: fallstudie/Boulder_Fire_Station_3
+## 2. ENTITÄTEN-MAPPING
+
+| Entität | Wert | Beziehung zur Fallstudie | Quelle/Beleg | Vertrauensgrad | Anmerkung |
+|---|---|---|---|---|---|
+| Fallstudie | Boulder Fire Station 3 / City of Boulder Fire Rescue, Station #3 | untersuchter Fall | AISC; City of Boulder | belegt | öffentlicher Neubau mit reclaimed steel |
+| Gebäude | Fire Station 3 & Fire Administration | neues Feuerwehr-/Verwaltungsgebäude | City of Boulder | belegt | 2967 Bluff Street laut City location page |
+| Projekt | New Boulder Fire-Rescue Station 3 | Ersatz für alte, ineffiziente Station | City of Boulder | belegt | alte Station lag im 100-year flood plain |
+| Ort | Boulder, Colorado, USA | Standort | City of Boulder; AISC | belegt | USA |
+| People | Davis Partnership Architects | Architekt | AISC | belegt | Denver |
+| People | KL&A Engineers and Builders | Tragwerksplanung / Stahlreuse-Koordination | AISC; Greenbuild/STRUCTURE | belegt | prüfte/selektierte Wiederverwendungsstahl |
+| Projekt | City of Boulder | Bauherr / Eigentümer / Initiator | AISC; City of Boulder | belegt | Stadt hatte Krankenhaus-Stahlstockpile |
+| People | Mark Young Construction | Builder | SE2050/AISC PDF-Snippet; sekundär | teilweise belegt | nicht aus AISC-Seite selbst detailliert übernommen |
+| Bauteil | 89 salvaged wide-flange steel members | wiederverwendete Tragwerksbauteile | AISC Modern Steel; AISC Awards | belegt | ca. 25 tons |
+| Material | Stahl | tragendes Material | AISC | belegt | aus Boulder Community Hospital |
+| Gebäude | Boulder Community Hospital / Boulder Community Health hospital | Donor Building | AISC; AHA; Colorado Sun | belegt | 30-year-old decommissioned hospital laut AISC |
+| Abbruchmethode | Deconstruction statt demolition | selektive Rückgewinnung | AISC; STRUCTURE; AHA | belegt | durch Boulder Deconstruction Ordinance beeinflusst |
+| Recht | Boulder Deconstruction Ordinance 8366 / 2020 | 75 % Materialdiversion nach Gewicht | AISC; STRUCTURE | belegt | lokale Verordnung |
+| Kennwert | 28.300 / 28.370 sq ft | Gebäudegröße | AISC Modern Steel / AISC Awards | belegt | Rundungs-/Quellenabweichung |
+| Kennwert | 25 tons reused structural steel | Direct-Reuse-Masse Stahl | AISC Modern Steel | belegt | US tons; metrisch nicht umgerechnet im Quellenwert |
+| Kennwert | 89 members | Anzahl wiederverwendeter Stahlprofile | AISC Modern Steel; AISC Awards | belegt | strukturelle Mitglieder |
+| Kennwert | 161 tons salvaged structural steel from hospital | Gesamtstockpile Krankenhausstahl | AISC Modern Steel | belegt | davon 25 tons in Fire Station 3 |
+| Kennwert | 21 other projects reused members from stockpile | Reuse-Kette | AISC Modern Steel | belegt | zusätzliche Projekte außerhalb dieser Fallstudie |
+| Kennwert | 60.8 million pounds diverted from landfill | Deconstruction-Ergebnis Krankenhaus | AHA | belegt | bezieht sich auf Donor-Gelände, nicht nur Fire Station |
+| Kennwert | 75 % diversion requirement | regulatorischer Grenzwert | AISC; STRUCTURE | belegt | Boulder-Verordnung |
+| Reuse-Strategie | ex-situ Bauteilwiederverwendung | Stahl aus Krankenhaus in Feuerwache | AISC | belegt | tragend |
+| Tragwerkssystem | Hybrid aus Glulam-Timber Columns und reclaimed steel beams | neues Tragwerk | AISC Awards | belegt | Beton/Deckensysteme zusätzlich |
+| Prüfung | Auswahl, Dokumentation, Testing/Verification von reclaimed steel | technischer Nachweis | AISC; Greenbuild; STRUCTURE | belegt | Detailwerte unbekannt |
+| Hürde | fehlende Industriestandards für Prüfung reclaimed steel | technische/rechtliche Hürde | AISC Awards | belegt | Testing/Documentation/Cleanup erforderlich |
+| Hürde | hohe Front-End-Kosten und Logistikunsicherheit | Wirtschaft/Prozess | AISC Awards | belegt | Wiederverwendung trotzdem als machbar/finanziell vorteilhaft dargestellt |
+| Software/Tool | stockpile catalog / member identification | Dokumentation | AISC Modern Steel; Colorado Sun | teilweise belegt | konkrete Software unbekannt |
+| Schadstoff | unbekannt | Donor Hospital / Stahl | unbekannt | unbekannt | keine belastbare Angabe |
+| Norm | unbekannt | Stahlprüfung/Code | unbekannt | unbekannt | keine Normnummern öffentlich im herangezogenen Material |
+
+### Vorgeschlagene neue Entität
+
+| Neue Entität | Warum nötig? | Beispiel aus dem Fall | Beziehung zu bestehenden Entitäten |
+|---|---|---|---|
+| Donor Building | Reuse-Ketten brauchen ein Herkunftsgebäude als eigene Entität. | Boulder Community Hospital als Stahlquelle. | Gebäude, Bauteil, Logistik |
+| Material Stockpile | Geborgene Bauteile werden katalogisiert und später mehreren Projekten zugeordnet. | 161 tons structural steel stockpile. | Bauteil, Logistik, Tool |
+| Deconstruction Ordinance | Lokales Recht kann Reuse auslösen. | Boulder Ordinance 8366 / 75 % diversion. | Recht, Abbruchmethode |
+| Essential Facility / Risk Category | Feuerwachen haben höhere Anforderungen als normale Gebäude. | Fire Station 3 als kritische Infrastruktur. | Leistungsanforderung, Recht, Prüfung |
+
+## 4. REUSE-STRATEGIE
+
+- **Art der Wiederverwendung:** partiell; ex-situ; Bauteilwiederverwendung; tragende Stahlwiederverwendung
+- **Hauptniveau:** Tragwerk
+- **Unterschied zu Sanierung, Recycling oder Bestandserhalt:** Der Fall zählt, weil Stahlträger/-profile aus dem Krankenhaus als tragende Elemente in einem neuen Gebäude wieder eingebaut wurden. Das Recycling von Beton/Backstein auf dem Krankenhausareal, die Spende/Veräußerung von Türen, Toiletten, Leuchten oder medizinischer Ausstattung und der generelle Krankenhaus-Rückbau zählen nicht für die Bewertung der Feuerwache, sofern nicht fest dort eingebaut.
+- **Warum ist der Fall relevant?** Öffentliche kritische Infrastruktur demonstriert, dass strukturelle Wiederverwendung von Stahl auch bei hohen Anforderungen möglich ist, wenn Donor-Bauteile katalogisiert, ausgewählt, geprüft, gereinigt und neu bemessen werden.
+
+## 6. PROZESS UND LOGISTIK
+
+| Prozessphase | Handlung | Akteure | Methode | Werkzeug/Tool/Software | Abbruchmethode | Aufbereitungsmethode | Prüfung | Logistik | Hürde | Lösung | Quelle |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Bestandsaufnahme | Hospital-Stahl identifizieren | City of Boulder, KL&A, Rückbauteam | Deconstruction survey | stockpile catalog, konkrete Software unbekannt | deconstruction | Markieren/Katalogisieren | Maße/Specs aufgezeichnet | Hospitalareal | Stahl später passend einsetzen | jedes Bauteil labeln | AISC; Colorado Sun |
+| Bauteilinventar | Stahlprofile dokumentieren | KL&A/Team | Fotos, Maße, Bolt-hole patterns laut sekundären Quellen | Katalog | selektiver Rückbau | unbekannt | Dokumentation | On-site stockpile | keine Standardprodukte | Katalogisierung | AISC; Colorado Sun |
+| Schadstoffprüfung | unbekannt | unbekannt | unbekannt | unbekannt | Hospitaldeconstruction | unbekannt | unbekannt | unbekannt | Krankenhausaltbau | unbekannt | unbekannt |
+| Rückbau | Krankenhaus nicht demolieren, sondern dekonstruieren | City/Boulder Community Health/Rückbauakteure | Deconstruction | unbekannt | Deconstruction Ordinance | Stahl schonend ausbauen | unbekannt | vor Ort | Arbeitsschutz/Planung | selektiver Ausbau | AHA; STRUCTURE |
+| Ausbau | Stahlträger schneiden/entnehmen | Rückbau-/Stahlteam | beam removal | unbekannt | selektiv | Zuschneiden am Ende laut Colorado Sun | unbekannt | Kran/Transport | Beschädigung, Markierung | Labeling | Colorado Sun |
+| Transport | vom Hospital-Stockpile zur Feuerwache | City/Contractor | lokale Logistik | unbekannt | unbekannt | unbekannt | unbekannt | Boulder lokal | Timing, Lager | Stockpile bis Verwendung | AISC |
+| Lagerung | Stahl auf Hospitalgelände/Stockpile | City of Boulder | stockpiling | Katalog | unbekannt | cleanup | unbekannt | on-site storage | Lagerplatz/Kosten | Lager am Donor-Ort | Colorado Sun; AISC |
+| Aufbereitung | reinigen, dokumentieren, für Einbau vorbereiten | KL&A, Fabricator, Contractor | refabrication/prep | unbekannt | unbekannt | cleanup, preparation | Testing/verification | Werkstatt/Baustelle | front-end costs | koordinierte Aufbereitung | AISC Awards |
+| Planung | Design nach neuem Entwurf, Ersatz geeigneter Neuprofile durch Salvage | Davis Partnership; KL&A | member matching | stockpile catalog | unbekannt | unbekannt | Auswahl potenzieller Mitglieder | zwischen Planung und Lager | Design war schon genehmigt | neue Bauteile durch passende gebrauchte ersetzen | AISC Modern Steel |
+| Genehmigung | Nachweis gebrauchter Stahlteile | Planer/Behörden | unbekannt | unbekannt | unbekannt | unbekannt | Prüfung erforderlich | unbekannt | keine Industriestandards | detaillierte Dokumentation und Tests | AISC Awards |
+| Wiedereinbau | Wiederverwendung als strukturelle Rahmen-/Trägerbauteile | Contractor/Fabricator | Montage im Hybridtragwerk | unbekannt | unbekannt | vorbereitet | statischer Nachweis | Baustelle | Konsistenz/Dimensionen | strategische Auswahl | AISC Awards |
+| Monitoring | Prototype für Circular Design | City/Davis/KL&A | lessons learned | unbekannt | unbekannt | unbekannt | unbekannt | unbekannt | Skalierung | Veröffentlichung/Auszeichnung | AISC Awards |
+
+## 8. KENNWERTE
+
+| Kennwert | Wert | Einheit | Methode/Datenmodell/Software | Bilanzgrenze | Quelle | Vertrauensgrad |
+|---|---:|---|---|---|---|---|
+| wiederverwendete Stahlmember | 89 | Anzahl | stockpile catalog / Auswahl | Fire Station 3 | AISC Modern Steel; AISC Awards | belegt |
+| wiederverwendete Stahlmasse | 25 | tons | unbekannt | Fire Station 3 | AISC Modern Steel | belegt |
+| Gesamtmenge salvaged structural steel Hospital | 161 | tons | unbekannt | Donor Building / Stockpile | AISC Modern Steel | belegt |
+| weitere Projekte mit Hospital-Stahl | 21 | Anzahl | unbekannt | Stockpile-Reuse-Kette | AISC Modern Steel | belegt |
+| Gebäudefläche | 28.300 | sq ft | unbekannt | Fire Station | AISC Modern Steel | belegt |
+| Gebäudefläche | 28.370 | sq ft | unbekannt | Fire Station | AISC Awards | belegt; Quellenabweichung |
+| Fertigstellung / online | November 2024 | Datum | unbekannt | Gebäude | City of Boulder | belegt |
+| Completion Date | Q4 2024 | Zeitraum | unbekannt | Projekt | City of Boulder | belegt |
+| Diversion requirement | 75 | % by weight | Boulder Ordinance | Deconstruction projects | AISC; STRUCTURE | belegt |
+| Hospitalmaterial vom Deponieren vermieden | 60.8 million | pounds | unbekannt | Hospital-Deconstruction, nicht Fire Station allein | AHA | belegt |
+| PV-Stromanteil | ca. 65 | % annual electric consumption offset | unbekannt | Betrieb Fire Station | AISC Awards | teilweise belegt |
+| CO₂-Einsparung Direct Reuse | unbekannt | kg CO₂e | unbekannt | Fire Station 3 | unbekannt | unbekannt |
+| Kostenwirkung | unbekannt | USD | unbekannt | Projekt | AISC nennt Kosten-/Front-End-Hürden, keine Zahl | unbekannt |
+
+## 10. WIRTSCHAFT UND BESCHAFFUNG
+
+- **Beschaffungsmodell:** städtisch initiierte Wiederverwendung aus eigenem Donor-Building/Stockpile.
+- **Bauteilbörse / Quelle:** Boulder Community Hospital Steel Stockpile; keine kommerzielle Bauteilbörse belegt.
+- **Kostenwirkung:** AISC nennt hohe Front-End-Kosten für Design, Vorbereitung und Dokumentation; konkrete Kostenwirkung unbekannt.
+- **Zeitwirkung:** unbekannt; Planung war bereits fortgeschritten, als Reuse-Stahl integriert wurde.
+- **Versicherung / Haftung:** unbekannt.
+- **Gewährleistung:** unbekannt.
+- **Arbeitsaufwand:** erhöht durch Katalogisierung, Auswahl, Tests, Cleanup und Re-Fabrication; konkrete Stunden unbekannt.
+- **Lagerung:** Stahl wurde im Stockpile gelagert; Colorado Sun nennt on-site storage bis zur Verwendung, Details/Kosten unbekannt.
+- **Marktbarrieren:** fehlende Prüfnormen/Standards, Materialmatching, Lagerlogistik, Kostenunsicherheit, Dokumentationsbedarf.
+
+## 12. OFFENE ENTITÄTEN UND DATENLÜCKEN
+
+- **Nicht gefunden:** konkrete Stahlprofile, Materialgüten, Prüfergebnisse, Norm-/Code-Pfade, CO₂-Bilanz, vollständiges Kostenmodell, Versicherungs-/Haftungsmodell.
+- **Sinnvolle neue Entitäten:** Donor Building; Material Stockpile; Deconstruction Ordinance; Essential Facility.
+- **Fehlende Daten:** genaue Anschlüsse, Re-Fabrication-Prozess, Brandschutznachweise, Gewährleistung, Transportdistanzen.
+- **Zu prüfende Quellen:** STRUCTURE-Magazine-Fallstudie im Volltext, SE2050 PDF, KL&A-Projektdaten, City-of-Boulder-Bid/permit documents, AISC detail drawings.
+
+## Quellen und Links
+
+- AISC Modern Steel – Inside Davis Partnership's reuse of steel in a new fire station: https://www.aisc.org/modern-steel/news/inside-davis-partnerships-reuse-of-steel-in-a-new-fire-station/
+- AISC IDEAS Awards – City of Boulder Fire Rescue, Station #3: https://www.aisc.org/awards-and-honors/ideas-awards-archive/city-of-boulder-fire-rescue-station-3/
+- City of Boulder – Fire Station 3 & Fire Administration: https://bouldercolorado.gov/locations/fire-station-3-fire-administration
+- City of Boulder – New Fire Station 3: https://bouldercolorado.gov/projects/new-fire-station-3
+- AHA – What do you do with an old hospital? In Boulder, you recycle it.: https://www.aha.org/role-hospitals-boulder-community-health-hospital-recycled
+- STRUCTURE Magazine – Circular Construction: https://www.structuremag.org/article/circular-construction-2/
+- Colorado Sun – Boulder deconstructs and recycles an entire old hospital: https://coloradosun.com/2023/10/29/boulder-community-hospital-deconstruction-recycled/
+- Greenbuild 2025 – Circularity in Action: https://attend.greenbuild.informaconnect.com/event/greenbuild2025/planning/UGxhbm5pbmdfMjY4OTQ1OQ%3D%3D
+- SE2050 / SEI Circular Economy Case Study PDF – Boulder Fire Station 3: https://se2050.org/wp-content/uploads/2025/11/SEI-CE-WG-Circular-Economy-Case-Studies_15-Boulder-Fire-Station-3_2025.pdf
