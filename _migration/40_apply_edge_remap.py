@@ -73,11 +73,107 @@ def batch_40a_stahlbeton_remap(row: dict) -> dict | None:
 
 
 # ---------------------------------------------------------------------------
+# Batch 40b: bauteiltyp consolidation (schema §5 mechanical part)
+# ---------------------------------------------------------------------------
+
+BAUTEILTYP_MAP = {
+    # renames (folder also renamed in a separate folder-cleanup phase)
+    "bauteiltyp/Innenausbau":            "bauteiltyp/Ausbau",
+    "bauteiltyp/Technik_TGA":            "bauteiltyp/Technik",
+    # merges into Ausbau
+    "bauteiltyp/Festes_Einbauteil":      "bauteiltyp/Ausbau",
+    "bauteiltyp/Akustikelement":         "bauteiltyp/Ausbau",
+    # merges into Technik
+    "bauteiltyp/Sanitaerobjekt":         "bauteiltyp/Technik",
+    "bauteiltyp/Leuchte":                "bauteiltyp/Technik",
+    "bauteiltyp/PV_Anlage":              "bauteiltyp/Technik",
+    # other mechanical merges
+    "bauteiltyp/Gitterrost":             "bauteiltyp/Boden",
+    "bauteiltyp/Beschattung_Sonnenschutz": "bauteiltyp/Fassade",
+}
+
+
+def batch_40b_bauteiltyp_consolidation(row: dict) -> dict | None:
+    if row["target"] not in BAUTEILTYP_MAP:
+        return None
+    new_target = BAUTEILTYP_MAP[row["target"]]
+    new = dict(row)
+    new["target"] = new_target
+    _, new_id = new_target.split("/", 1)
+    new["target_id"] = new_id
+    new["resolution_rule"] = f"manual_40b_consolidate_{row['target_id']}"
+    new["edge_cleaning"] = "manual_remap_40b"
+    # confidence policy: only bump if it was a low/medium auto-rule
+    if row["confidence"] in ("rule_low", "rule_medium"):
+        new["confidence"] = "manual_high"
+    return new
+
+
+# ---------------------------------------------------------------------------
+# Batch 40c: material consolidation (schema §6 mechanical part)
+# ---------------------------------------------------------------------------
+
+MATERIAL_MAP = {
+    "material/Brettschichtholz": "material/Holz",
+    "material/Brettsperrholz":   "material/Holz",
+    "material/Sekundaerstahl":   "material/Stahl",
+    "material/Mineralwolle":     "material/Daemmstoff",
+    "material/Polystyrol":       "material/Daemmstoff",
+    "material/Sanitarkeramik":   "material/Keramik",
+    "material/Granit":           "material/Naturstein",
+    "material/Marmor":           "material/Naturstein",
+    "material/Faserzement":      "material/Beton",
+}
+
+
+def batch_40c_material_consolidation(row: dict) -> dict | None:
+    if row["target"] not in MATERIAL_MAP:
+        return None
+    new_target = MATERIAL_MAP[row["target"]]
+    new = dict(row)
+    new["target"] = new_target
+    _, new_id = new_target.split("/", 1)
+    new["target_id"] = new_id
+    new["resolution_rule"] = f"manual_40c_consolidate_{row['target_id']}"
+    new["edge_cleaning"] = "manual_remap_40c"
+    if row["confidence"] in ("rule_low", "rule_medium"):
+        new["confidence"] = "manual_high"
+    return new
+
+
+# ---------------------------------------------------------------------------
+# Post-batch dedup
+# ---------------------------------------------------------------------------
+
+def dedup(rows: list[dict]) -> tuple[list[dict], int]:
+    """Drop exact (source, relation, target) duplicates that may arise after
+    merges. Keep the row with the strongest confidence; otherwise the first."""
+    confidence_rank = {
+        "exact": 5, "manual_high": 4, "structural": 3,
+        "rule_high": 2, "manual_split": 2,
+        "rule_medium": 1, "rule_low": 0,
+    }
+    keep: dict[tuple, dict] = {}
+    for row in rows:
+        key = (row["source"], row["relation"], row["target"])
+        if key not in keep:
+            keep[key] = row
+        else:
+            existing = keep[key]
+            if confidence_rank.get(row["confidence"], 0) > confidence_rank.get(existing["confidence"], 0):
+                keep[key] = row
+    out = list(keep.values())
+    return out, len(rows) - len(out)
+
+
+# ---------------------------------------------------------------------------
 # Driver
 # ---------------------------------------------------------------------------
 
 BATCHES = {
     "40a_stahlbeton": batch_40a_stahlbeton_remap,
+    "40b_bauteiltyp": batch_40b_bauteiltyp_consolidation,
+    "40c_material":   batch_40c_material_consolidation,
 }
 
 
@@ -158,6 +254,11 @@ def main(argv: list[str]) -> int:
     if total_changes == 0:
         print("No changes; not rewriting the edge file.")
         return 0
+
+    # Dedup post-merge
+    rows, dropped = dedup(rows)
+    if dropped:
+        print(f"  Deduped {dropped} duplicate edges created by merges")
 
     # Backup before write
     backup = EDGES.with_suffix(".csv.before_40")
