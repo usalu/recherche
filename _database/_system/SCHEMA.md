@@ -282,32 +282,31 @@ Do **not** edit:
 
 ---
 
-## 11. Known integrity issues (to fix in the next remediation pass)
+## 11. Integrity status
 
-### 11.1 Wrong edges — example pattern
+### 11.1 Wrong edges — RESOLVED
 
-47 edges with `confidence: rule_low` map raw label `"Stahlbetonfertigteil"` → `material/Stahl`. Correct mapping: `material/Stahlbeton` + a bausystem/Betonfertigteil_System edge (for the manufacturing aspect) + a bauteiltyp/Träger|Decke|Stütze edge. The label resolver matched on substring "Stahl" and missed the Beton.
+47 `rule_low` edges with Stahlbeton-flavored labels routed to `material/Stahl` were re-resolved to `material/Stahlbeton` (batch 40a). Resolver bug `material_reinforced_concrete_contains_stahl` no longer in use. 0 `rule_low` edges remain.
 
-This pattern (substring match wins, semantic best-fit lost) likely affects more cases. A targeted re-resolution pass should:
-1. Re-read every `rule_low` edge.
-2. Re-read every `rule_medium` edge whose `raw_label` is a multi-word compound.
-3. Use the Entitäten-Mapping table in the source `Gebäude/<case>.md` as ground truth.
+### 11.2 Sparse relations — STILL OPEN
 
-### 11.2 Sparse relations
+The graph has 7,696 edges across 19 relations. Many entities exist as folders but are not yet wired into the graph (see §9 gaps). The Entitäten-Mapping tables in `Gebäude/` contain most of this missing information; it just hasn't been promoted to edges yet. Highest-value next pass.
 
-The graph has 7,695 edges across 19 relations. Many entities exist as folders but are not yet wired into the graph (see §9 gaps). The Entitäten-Mapping tables in `Gebäude/` contain most of this missing information; it just hasn't been promoted to edges yet.
+### 11.3 Encoding — RESOLVED
 
-### 11.3 Encoding
+Promoted `index.md` files (batch 42) are UTF-8 without BOM. 0 mojibake titles remain. The legacy build script that introduced the regression should still be patched if it's ever rerun, but the live tree no longer carries the bug.
 
-The Phase-20 build introduced UTF-8 BOM + mojibake into `_database/<entity>/<id>/index.md` titles (`Hürde` → `HÃ¼rde`, `—` → `â€"`). The repair script [_migration/repair_phase13_encoding_mojibake.ps1](../../_migration/repair_phase13_encoding_mojibake.ps1) fixes the symptoms in `_graph` only; the underlying build script must be patched to write UTF-8 without BOM before the next rebuild, otherwise the regression recurs.
+### 11.4 Path length — WORKAROUND IN PLACE
 
-### 11.4 Path length
+Some generated paths under `_database/akteur_beteiligung/` and `_database/reuse_einsatz/` exceed Windows MAX_PATH (260 chars). Use `git -c core.longpaths=true` for any git operation that touches them, or set `core.longpaths = true` once in your git config.
 
-10+ generated paths exceed Windows `MAX_PATH` (260 chars). Cap node IDs at 80 chars (with hash suffix to preserve uniqueness) before the next rebuild. Affected files are mostly long actor names in `akteur_beteiligung/` and long bauteil descriptions in `reuse_einsatz/`.
+### 11.5 Index.md stub — RESOLVED
 
-### 11.5 Index.md is a stub, not knowledge
+Batch 42 lifted German prose from `DATEIEN/*.staging_index.md` into `index.md` for 2,986 of 2,987 nodes. 1 canonical knot (`prozessphase/Pruefung`) is a stub awaiting human-written content. Tolaria now shows real knowledge when you open a node.
 
-`_database/<entity>/<id>/index.md` currently holds 20 lines of build metadata; the German prose lives in `DATEIEN/*.staging_index.md`. Tolaria browsing shows the stub. Option A in the next-step plan promotes prose into `index.md`.
+### 11.6 Manual-review queue — RESOLVED
+
+All 27 manual-review nodes have been processed (batch 43): 95 edges deleted (target dropped per schema), 19 single-target moves applied, 114 edges split per case via raw_label heuristics. `clean_edge_review_queue.csv` is empty; `_manual_review/nodes/` retains only entries whose decision was `keep_review`.
 
 ---
 
