@@ -22,6 +22,11 @@ Current batch:
   50e_rueckbauverfahren
     Reads the same component-level label and adds precise
     has_rueckbauverfahren edges for named dismantling methods.
+  50f_located_in_ort
+    Reads the "Ort" row from each Gebaeude Entitaeten-Mapping table,
+    derives a canonical city slug, creates the ort node folder + index.md
+    if it doesn't yet exist, and emits one fallstudie -> located_in_ort
+    -> ort edge per case. Bad/non-location Ort values are skipped.
 """
 
 from __future__ import annotations
@@ -1363,6 +1368,325 @@ def build_rueckbauverfahren_edges(
     return edge_rows + additions, additions, stats, skipped
 
 
+# ---------------------------------------------------------------------------
+# 50f helpers — located_in_ort
+# ---------------------------------------------------------------------------
+
+# Raw Ort values that are not usable location strings.
+ORT_SKIP_TOKENS = (
+    "reuse stammt",
+    "nicht aus fertigteilen",
+    "ortbeton",
+    "gesagte",
+    "keine angabe",
+    "unbekannt",
+    "unklar",
+)
+
+# Country suffixes (lowercased) to strip when extracting the city name.
+COUNTRY_SUFFIXES_LOW = (
+    ", uk", ", gb", ", deutschland", ", germany", ", schweiz",
+    ", switzerland", ", belgien", ", belgium", ", frankreich",
+    ", france", ", niederlande", ", netherlands", ", finnland",
+    ", finland", ", norwegen", ", norway", ", japan", ", usa",
+    ", luxemburg", ", luxembourg", ", danemark", ", dk",
+)
+
+
+def slugify_ort(city_name: str) -> str:
+    """Turn a city display name into a safe folder-name slug."""
+    slug = city_name.strip()
+    replacements = [
+        ("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss"),
+        ("Ä", "Ae"), ("Ö", "Oe"), ("Ü", "Ue"),
+        ("é", "e"), ("è", "e"), ("ê", "e"), ("ë", "e"),
+        ("à", "a"), ("â", "a"), ("á", "a"),
+        ("î", "i"), ("ï", "i"), ("í", "i"),
+        ("ô", "o"), ("ó", "o"), ("ø", "oe"), ("Ø", "Oe"),
+        ("û", "u"), ("ú", "u"),
+        ("ñ", "n"), ("ç", "c"),
+        ("æ", "ae"), ("Æ", "Ae"),
+        ("ł", "l"), ("ğ", "g"),
+    ]
+    for src, dst in replacements:
+        slug = slug.replace(src, dst)
+    slug = unicodedata.normalize("NFKD", slug)
+    slug = "".join(ch for ch in slug if not unicodedata.combining(ch))
+    slug = re.sub(r"[\s\-]+", "_", slug)
+    slug = re.sub(r"[^A-Za-z0-9_]", "", slug)
+    slug = re.sub(r"_+", "_", slug).strip("_")
+    return slug
+
+
+# City override map for cases where automatic extraction gives wrong results.
+# Key = case_id (Gebaeude filename stem), value = (display_name, slug).
+ORT_OVERRIDES: dict[str, tuple[str, str]] = {
+    "CRCLR_House_Impact_Hub_Berlin":                           ("Berlin", "Berlin"),
+    "Circular_Pavilion_Paris":                                 ("Paris", "Paris"),
+    "Ferme_du_Rail_Paris":                                     ("Paris", "Paris"),
+    "Resilience_La_Ferme_des_Possibles_Stains":                ("Stains", "Stains"),
+    "Grande_Halle_de_Colombelles":                             ("Colombelles", "Colombelles"),
+    "Recypark_Demets_Anderlecht":                              ("Bruessel", "Bruessel"),
+    "Musee_de_Folklore_Mouscron":                              ("Mouscron", "Mouscron"),
+    "Lo_Reninge_Town_Hall_Facade":                             ("Lo_Reninge", "Lo_Reninge"),
+    "Grubenstrasse_29_Werkhof_29_Zuerich":                     ("Zuerich", "Zuerich"),
+    "Juch_Areal_Recyclingzentrum_Zuerich":                     ("Zuerich", "Zuerich"),
+    "Kindergarten_Moeoeslistrasse_Manegg_Zuerich":             ("Zuerich", "Zuerich"),
+    "KA13_Kristian_Augusts_gate_13_Oslo":                      ("Oslo", "Oslo"),
+    "PLP_London_HQ_Circular_Studio_Fitout":                    ("London", "London"),
+    "BioPartner_5_Leiden_Oegstgeest":                          ("Leiden", "Leiden"),
+    "Plattenpalast_Berlin":                                    ("Berlin", "Berlin"),
+    "Plattenvereinigung_Berlin":                               ("Berlin", "Berlin"),
+    "Europa_Building_Brussels":                                ("Bruessel", "Bruessel"),
+    "Multi_Brussels_Reuse_in_MULTI":                           ("Bruessel", "Bruessel"),
+    "Charles_Malis_Molenbeek":                                 ("Bruessel", "Bruessel"),
+    "Zinneke_Feder_Masui4ever_Brussels":                       ("Bruessel", "Bruessel"),
+    "Verbiest_Karreveld_Brussels":                             ("Bruessel", "Bruessel"),
+    "Maison_Vignette_Auderghem":                               ("Bruessel", "Bruessel"),
+    "Chiro_d_Itterbeek_Dilbeek":                               ("Dilbeek", "Dilbeek"),
+    "Holbein_Gardens_London":                                  ("London", "London"),
+    "Brighton_Waste_House_Brighton":                           ("Brighton", "Brighton"),
+    "Timber_Square_London":                                    ("London", "London"),
+    "Maison_des_Canaux_Paris":                                 ("Paris", "Paris"),
+    "BlueCity_Offices_Rotterdam":                              ("Rotterdam", "Rotterdam"),
+    "CascadeUp_London_secondary_timber_glulam_demonstrator":   ("London", "London"),
+    "Christ_Pavilion_Volkenroda":                              ("Volkenroda", "Volkenroda"),
+    "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere":      ("Tampere", "Tampere"),
+    "Lokomotion_Technology_Centre_mini_pilot_Tampere":         ("Tampere", "Tampere"),
+    "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki":    ("Helsinki", "Helsinki"),
+    "ELYS_Kultur_Gewerbehaus_Basel":                           ("Basel", "Basel"),
+    "K118_Kopfbau_Halle_118_Winterthur":                      ("Winterthur", "Winterthur"),
+    "Brent_Cross_Town_Primary_Substation_London":              ("London", "London"),
+    "Recyclinghaus_Hannover":                                  ("Hannover", "Hannover"),
+    "Upcycle_Studios_Copenhagen":                              ("Copenhagen", "Copenhagen"),
+    "Thoravej_29_Copenhagen":                                  ("Copenhagen", "Copenhagen"),
+    "Resource_Rows_Copenhagen":                                ("Copenhagen", "Copenhagen"),
+    "Villa_Welpeloo_Enschede":                                 ("Enschede", "Enschede"),
+    "Peoples_Pavilion_Eindhoven":                              ("Eindhoven", "Eindhoven"),
+}
+
+
+def extract_city_from_ort(raw_ort: str, case_id: str = "") -> tuple[str, str]:
+    """Return (city_display_name, city_slug) or ('', '') if unusable."""
+    # Check manual override first.
+    if case_id in ORT_OVERRIDES:
+        return ORT_OVERRIDES[case_id]
+
+    raw = raw_ort.strip()
+    if not raw or raw in ("-", "\u2014", "\u2013"):
+        return "", ""
+
+    low = normalized(raw)
+    if any(token in low for token in ORT_SKIP_TOKENS):
+        return "", ""
+
+    # For multi-event strings separated by ";" take the last segment
+    # (permanent location is usually listed last).
+    if ";" in raw:
+        raw = raw.split(";")[-1].strip()
+
+    # Strip trailing country suffix so it doesn't end up in the city name.
+    working = raw
+    low_working = normalized(working)
+    for suffix in COUNTRY_SUFFIXES_LOW:
+        if low_working.endswith(suffix):
+            working = working[:len(working) - len(suffix)].strip().rstrip(",")
+            break
+
+    # Walk through comma/slash segments and pick the first that looks like a city.
+    segments = [s.strip() for s in re.split(r"\s*/\s*|,", working) if s.strip()]
+    city = ""
+    for seg in segments:
+        seg_low = normalized(seg)
+        # Skip segments that start with a digit (street number or postal code).
+        if re.match(r"^\d", seg):
+            continue
+        # Skip postal-code-like segments.
+        if re.match(r"^[A-Z]{1,2}\d", seg):
+            continue
+        # Skip segments containing street-type words.
+        if any(word in seg_low for word in (
+            " strasse", " strase", " straat", " street", " rue ",
+            " avenue", " boulevard", " laan", " weg ", " allee",
+            " gasse", " gate ", " road", " drive", " lane",
+        )):
+            continue
+        # Skip event / venue / campus strings.
+        if any(word in seg_low for word in (
+            "festival", "expo ", "design festival", "futurebuild",
+            "university of", "campus", "plein", "parvis", "feld ",
+            "bio science park",
+        )):
+            continue
+        city = seg
+        break
+
+    if not city or len(city) < 2:
+        return "", ""
+
+    slug = slugify_ort(city)
+    if not slug:
+        return "", ""
+
+    return city, slug
+
+
+def ensure_ort_node(slug: str, display_name: str, raw_ort: str, case_id: str) -> bool:
+    """Create ort/<slug>/index.md if it doesn't exist. Returns True if created."""
+    node_dir = DATABASE / "ort" / slug
+    index_path = node_dir / "index.md"
+    if index_path.exists():
+        return False
+    node_dir.mkdir(parents=True, exist_ok=True)
+    content = (
+        f"---\n"
+        f'entity: "ort"\n'
+        f'id: "{slug}"\n'
+        f'title: "{display_name}"\n'
+        f'build_status: "created_50f"\n'
+        f'node_kind: "knot"\n'
+        f'legacy_type: "Ort"\n'
+        f"---\n"
+        f"\n"
+        f"# {display_name}\n"
+        f"\n"
+        f"## Herkunft\n"
+        f"\n"
+        f"Dieser Ort-Knoten wurde automatisch aus dem Fallstudien-Datenbestand\n"
+        f"extrahiert (Batch 50f, Quelle: `Geb\u00e4ude/{case_id}.md`).\n"
+        f"\n"
+        f"**Roher Ort-Wert aus der Quelle:** {raw_ort}\n"
+        f"\n"
+        f"## Inhalt\n"
+        f"\n"
+        f"<!-- Bitte erg\u00e4nze hier einen deutschen Flie\u00dftext zur Bedeutung dieses\n"
+        f"     Standorts im Kontext der Bauteil-Wiederverwendung. -->\n"
+    )
+    index_path.write_text(content, encoding="utf-8")
+    return True
+
+
+def extract_ort_rows() -> dict[str, dict[str, str]]:
+    """Return {case_id: {'raw_ort': ..., 'legacy_path': ...}} for each Gebaeude case."""
+    source_dir = gebaeude_dir()
+    ort_rows: dict[str, dict[str, str]] = {}
+    for path in sorted(source_dir.glob("*.md")):
+        md = path.read_text(encoding="utf-8", errors="replace")
+        section = markdown_section(md, "ENTIT")
+        for row in parse_markdown_tables(section):
+            entity_cell = get_cell(row, "Entitat")
+            if normalized(entity_cell).startswith("ort"):
+                ort_rows[path.stem] = {
+                    "case_id": path.stem,
+                    "legacy_path": str(path.relative_to(ROOT)),
+                    "raw_ort": get_cell(row, "Wert"),
+                }
+                break
+    return ort_rows
+
+
+def build_located_in_ort_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    ort_rows = extract_ort_rows()
+    existing_keys = existing_edge_keys(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    # Supplement existing_nodes with ort folders already on disk.
+    # The node_inventory.csv can be stale (e.g. after a previous dry-run
+    # already created some ort/ folders but didn't rebuild the inventory).
+    ort_dir = DATABASE / "ort"
+    if ort_dir.exists():
+        for ort_folder in ort_dir.iterdir():
+            if ort_folder.is_dir() and (ort_folder / "index.md").exists():
+                existing_nodes.add(f"ort/{ort_folder.name}")
+
+    # Map case_id -> typed_path for fallstudie nodes
+    fallstudie_by_id: dict[str, str] = {}
+    for inv_row in load_csv(NODE_INVENTORY):
+        if inv_row["entity"] == "fallstudie":
+            fallstudie_by_id[inv_row["id"]] = inv_row["typed_path"]
+
+
+    for case_id, ort_row in sorted(ort_rows.items()):
+        raw_ort = ort_row["raw_ort"]
+        city_name, slug = extract_city_from_ort(raw_ort, case_id)
+
+        if not slug:
+            stats["ort_rows_skipped_unusable"] += 1
+            skipped.append({
+                "case_id": case_id,
+                "legacy_path": ort_row["legacy_path"],
+                "raw_label": raw_ort,
+                "reason": "unusable_ort_value",
+            })
+            continue
+
+        fallstudie_path = fallstudie_by_id.get(case_id)
+        if not fallstudie_path:
+            stats["cases_without_fallstudie_node"] += 1
+            skipped.append({
+                "case_id": case_id,
+                "legacy_path": ort_row["legacy_path"],
+                "raw_label": raw_ort,
+                "reason": "no_fallstudie_node",
+            })
+            continue
+
+        target = f"ort/{slug}"
+        # Create the ort node if it doesn't exist yet.
+        was_created = ensure_ort_node(slug, city_name, raw_ort, case_id)
+        if was_created:
+            existing_nodes.add(target)
+            stats["ort_nodes_created"] += 1
+
+        if target not in existing_nodes:
+            stats["ort_target_not_found"] += 1
+            skipped.append({
+                "case_id": case_id,
+                "legacy_path": ort_row["legacy_path"],
+                "raw_label": raw_ort,
+                "reason": "ort_node_not_found_after_creation",
+            })
+            continue
+
+        source = fallstudie_path
+        key = (source, "located_in_ort", target)
+        if key in existing_keys:
+            stats["duplicates_skipped"] += 1
+            continue
+
+        target_entity, target_id = target.split("/", 1)
+        addition = {
+            "source": source,
+            "source_entity": "fallstudie",
+            "source_id": case_id,
+            "relation": "located_in_ort",
+            "target": target,
+            "target_entity": target_entity,
+            "target_id": target_id,
+            "field": "Entitaeten-Mapping:Ort",
+            "raw_label": raw_ort,
+            "confidence": "rule_high",
+            "resolution_rule": "table_50f_located_in_ort_entity_mapping",
+            "legacy_path": ort_row["legacy_path"],
+            "original_source": source,
+            "original_relation": "located_in_ort",
+            "original_target": target,
+            "edge_cleaning": "added_gap_50f",
+        }
+        additions.append(addition)
+        existing_keys.add(key)
+
+    stats["ort_rows_scanned"] = len(ort_rows)
+    stats["additions"] = len(additions)
+    stats["cases_with_additions"] = len({row["legacy_path"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
 def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[dict[str, str]], stats: Counter[str]) -> None:
     diff_path = REPORT_DIR / f"50_gap_relation_diff_{batch_name}.csv"
     with diff_path.open("w", encoding="utf-8", newline="") as handle:
@@ -1465,6 +1789,7 @@ BATCHES = {
     "50c_reuse_einsatzstatus": build_status_edges,
     "50d_prozessphase": build_process_phase_edges,
     "50e_rueckbauverfahren": build_rueckbauverfahren_edges,
+    "50f_located_in_ort": build_located_in_ort_edges,
 }
 
 
