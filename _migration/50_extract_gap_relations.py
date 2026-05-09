@@ -1783,6 +1783,329 @@ def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[d
     print(f"  Summary: {summary_path.relative_to(ROOT)}")
 
 
+# ---------------------------------------------------------------------------
+# Generic factory for frontmatter-label → knot batches (50g, 50h, 50i, 50j)
+# ---------------------------------------------------------------------------
+
+def build_label_to_knot_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+    *,
+    frontmatter_key: str,
+    relation: str,
+    rules: list[tuple[str, tuple[str, ...]]],
+    batch_tag: str,
+    field_label: str,
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    """Generic batch: reads `frontmatter_key` from each reuse_einsatz index.md,
+    applies token-match rules to map to existing knot targets, emits edges."""
+    existing_keys = existing_edge_keys(edge_rows)
+    excluded_sources = direct_reuse_exclusion_sources(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    reuse_rows = [
+        row for row in load_csv(NODE_INVENTORY)
+        if row["entity"] == "reuse_einsatz"
+    ]
+
+    for node_row in sorted(reuse_rows, key=lambda r: r["typed_path"]):
+        markdown = load_reuse_markdown(node_row)
+        frontmatter = parse_simple_frontmatter(markdown)
+        raw_label = frontmatter.get(frontmatter_key, "").strip().strip('"')
+
+        if not raw_label or is_uncertain(raw_label):
+            stats["rows_without_label"] += 1
+            continue
+
+        if not reusable_enough(frontmatter):
+            stats["rows_skipped_not_reusable"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "raw_label": raw_label,
+                "reason": f"not_reusable_enough_for_{relation}",
+            })
+            continue
+
+        if node_row["typed_path"] in excluded_sources:
+            stats["rows_skipped_by_abgrenzung"] += 1
+            continue
+
+        # Match tokens in each comma/semicolon segment
+        targets: list[str] = []
+        for segment in re.split(r"[,;]+", raw_label):
+            seg = normalized(segment)
+            if not seg or seg in UNCERTAIN_VALUES:
+                continue
+            for target, tokens in rules:
+                if target not in existing_nodes:
+                    continue
+                if any(token in seg for token in tokens) and target not in targets:
+                    targets.append(target)
+
+        if not targets:
+            stats["labels_without_match"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "raw_label": raw_label,
+                "reason": "no_token_match",
+            })
+            continue
+
+        for target in targets:
+            key = (node_row["typed_path"], relation, target)
+            if key in existing_keys:
+                stats["duplicates_skipped"] += 1
+                continue
+            target_entity, target_id = target.split("/", 1)
+            addition = {
+                "source": node_row["typed_path"],
+                "source_entity": "reuse_einsatz",
+                "source_id": node_row["id"],
+                "relation": relation,
+                "target": target,
+                "target_entity": target_entity,
+                "target_id": target_id,
+                "field": field_label,
+                "raw_label": raw_label,
+                "confidence": "rule_high",
+                "resolution_rule": f"label_{batch_tag}_{relation}_frontmatter",
+                "legacy_path": "",
+                "original_source": node_row["typed_path"],
+                "original_relation": relation,
+                "original_target": target,
+                "edge_cleaning": f"added_gap_{batch_tag}",
+            }
+            additions.append(addition)
+            existing_keys.add(key)
+
+    stats["reuse_rows_scanned"] = len(reuse_rows)
+    stats["additions"] = len(additions)
+    stats["sources_with_additions"] = len({row["source"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
+# ---------------------------------------------------------------------------
+# 50g — has_huerde (28 knots, frontmatter: huerde_label)
+# ---------------------------------------------------------------------------
+
+HUERDE_RULES: list[tuple[str, tuple[str, ...]]] = [
+    ("huerde/Akzeptanzproblem",         ("akzeptanz", "ablehnung", "vorbehalte", "skeptisch", "kulturell", "bedenken")),
+    ("huerde/Anschlussproblem",         ("anschluss", "kompatibel", "anpassen", "toleranz", "passt nicht", "mass", "abmessung", "detail")),
+    ("huerde/Aufbereitungsaufwand",     ("aufbereitung", "reinigen", "reinigung", "behandlung", "aufwand", "nachbearbeitung", "instandsetzung", "arbeitsaufwand")),
+    ("huerde/Ausschreibungsproblem",    ("ausschreibung", "vergabe", "vob", "oeffentlich", "offentlich", "bieter", "ausschreib")),
+    ("huerde/Bauproduktstatus",         ("bauproduktstatus", "bauprodukt", "ce-markierung", "ce markierung", "marktreife", "zulassung", "zertifikat", "ce")),
+    ("huerde/Brandschutzkonflikt",      ("brandschutz", "brand", "feuerwiderstand", "feuerbestandigkeit", "f30", "f60", "f90", "rei")),
+    ("huerde/Bruch_Beschaedigungsrisiko", ("bruch", "beschadigung", "beschaedigung", "risiko", "fragil", "sprode", "sproede", "verlust")),
+    ("huerde/Datenluecke",              ("datenluecke", "datenlucke", "dokumentation", "nachweis", "belege", "fehlende daten", "unbekannt", "nicht dokumentiert")),
+    ("huerde/Dauerhaftigkeit_Restlebensdauer", ("dauerhaft", "restlebensdauer", "lebensdauer", "restnutzung", "alterung", "verschleiss", "ermudung", "ermuedung")),
+    ("huerde/Entwurfsbindung",          ("entwurf", "planung", "mass", "geometrie", "format", "sonderanfertigung", "spezifisch", "individuell")),
+    ("huerde/Fehlende_Datenstandards",  ("standard", "normen", "datenstandard", "format", "bim", "schnittstelle", "interoperabilitat")),
+    ("huerde/Fehlende_Lagerflaeche",    ("lager", "lagerflache", "lagerflaeche", "lagerung", "zwischenlager", "platz", "flache", "flaeche")),
+    ("huerde/Fehlende_Standardisierung",("standardisierung", "standard", "normierung", "norm", "serienmaßig", "serienmaessig")),
+    ("huerde/Gewaehrleistung",          ("gewahrleisung", "gewahrleistung", "gewaehrleistung", "haftung", "garantie", "mangel")),
+    ("huerde/Haftung",                  ("haftung", "verantwortung", "gewahrleisung", "gewahrleistung", "gewaehrleistung", "rechtlich")),
+    ("huerde/Heterogenitaet_Chargen",   ("heterogen", "chargen", "charge", "varianz", "variation", "unterschiedlich", "chargen")),
+    ("huerde/Hygieneanforderung",       ("hygiene", "sanitar", "sanitaer", "gesundheit", "kontamination", "schadstoff", "reinheit")),
+    ("huerde/Kompatibilitaetsproblem",  ("kompatibel", "kompatibilitat", "kompatibilitaet", "verbindung", "anschluss", "schnittstelle", "system")),
+    ("huerde/Materialqualitaet_Unklar", ("qualitat", "qualitaet", "zustand", "unbekannt", "unklar", "nicht gepruft", "ungepruft")),
+    ("huerde/Mengenunsicherheit",       ("menge", "verfugbar", "verfuegbar", "bestand", "vorrat", "unsicherheit", "schwankung")),
+    ("huerde/Schadstoffbelastung",      ("schadstoff", "kontamination", "asbest", "pcb", "blei", "kvoc", "voc", "schadstoffe")),
+    ("huerde/Technische_Freigabe",      ("freigabe", "zulassung", "zertifizierung", "prufung", "pruefung", "gutachten", "statik")),
+    ("huerde/Terminunsicherheit",       ("termin", "timing", "zeitplan", "verzogerung", "verzoegerung", "verfugbar", "verfuegbar", "lieferfenster")),
+    ("huerde/Toleranzen",               ("toleranz", "mass", "abmessung", "passung", "spielraum", "fertigungs")),
+    ("huerde/Unkonventionelles_Material",("unkonventionell", "sonder", "selten", "exotisch", "ungewohnt", "unbekannt material")),
+    ("huerde/Verfuegbarkeitsproblem",   ("verfugbar", "verfuegbar", "verfugbarkeit", "verfuegbarkeit", "beschaffung", "markt", "angebot", "mangel")),
+    ("huerde/Witterung_Feuchte",        ("witterung", "feuchte", "feuchtigkeit", "wasser", "regen", "frost", "temperatur", "klima")),
+    ("huerde/Zustand_Unklar",           ("zustand", "unklar", "unbekannt", "nicht gepruft", "ungepruft", "bewertung fehlt")),
+]
+
+
+def build_huerde_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    return build_label_to_knot_edges(
+        edge_rows, existing_nodes,
+        frontmatter_key="huerde_label",
+        relation="has_huerde",
+        rules=HUERDE_RULES,
+        batch_tag="50g",
+        field_label="FRONTMATTER:huerde_label",
+    )
+
+
+# ---------------------------------------------------------------------------
+# 50h — has_pruefung_nachweis (frontmatter: pruefung_label)
+# ---------------------------------------------------------------------------
+
+PRUEFUNG_RULES: list[tuple[str, tuple[str, ...]]] = [
+    # Actual nodes: Abbrandbemessung, Brandschutznachweis, Eignungspruefung_Baulehm,
+    #   Geometrische_Vermessung, Materialpruefung, Schadstoffscreening,
+    #   Schweissbarkeitspruefung, Sichtpruefung, Statische_Nachweisfuehrung,
+    #   Zugversuch, Zustandsbewertung
+    ("pruefung_nachweis/Abbrandbemessung",            ("abbrandbemessung", "abbrand", "charring")),
+    ("pruefung_nachweis/Brandschutznachweis",         ("brandschutz", "brandnachweis", "feuerwiderstand", "brand", "fire")),
+    ("pruefung_nachweis/Eignungspruefung_Baulehm",    ("baulehm", "lehm", "earthen", "stampflehm")),
+    ("pruefung_nachweis/Geometrische_Vermessung",     ("vermessung", "vermessen", "geometr", "scan", "3d scan", "aufmas", "aufmass")),
+    ("pruefung_nachweis/Materialpruefung",            ("materialpruefung", "materialprufung", "materialtest", "werkstoff", "analyse",
+                                                        "materialanalyse", "ce marking", "ce-marking", "ce markierung", "en 1090",
+                                                        "getestet", "tested", "testing", "certificate", "zertifikat")),
+    ("pruefung_nachweis/Schadstoffscreening",         ("schadstoff", "screening", "asbest", "pcb", "blei", "voc", "kontamination",
+                                                        "umweltanalyse", "chemisch")),
+    ("pruefung_nachweis/Schweissbarkeitspruefung",    ("schweissbarkeit", "schweissbarkeitsprufung", "weldability")),
+    ("pruefung_nachweis/Sichtpruefung",               ("sichtprufung", "sichtpruefung", "visuelle prufung", "visual inspection",
+                                                        "sichtbar", "augenschein", "inspection", "assessment")),
+    ("pruefung_nachweis/Statische_Nachweisfuehrung",  ("statisch", "statiknachweis", "structural", "tragfahigkeit", "ingenieurburo",
+                                                        "engineering", "statik", "ingenieur")),
+    ("pruefung_nachweis/Zugversuch",                  ("zugversuch", "zugtest", "pull-off", "tensile")),
+    ("pruefung_nachweis/Zustandsbewertung",           ("zustandsbewertung", "zustandsbewert", "condition assessment", "zustand",
+                                                        "bewertung", "evaluierung", "gutachten", "befund")),
+]
+
+
+def build_pruefung_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    return build_label_to_knot_edges(
+        edge_rows, existing_nodes,
+        frontmatter_key="pruefung_label",
+        relation="has_pruefung_nachweis",
+        rules=PRUEFUNG_RULES,
+        batch_tag="50h",
+        field_label="FRONTMATTER:pruefung_label",
+    )
+
+
+# ---------------------------------------------------------------------------
+# 50i — has_beschaffungsweg (frontmatter: no direct field — use herkunft_label)
+# ---------------------------------------------------------------------------
+
+BESCHAFFUNGSWEG_RULES: list[tuple[str, tuple[str, ...]]] = [
+    ("beschaffungsweg/Ausschreibung",      ("ausschreibung", "vergabe", "offentliche", "oeffentliche", "tender", "ausgeschrieben")),
+    ("beschaffungsweg/Bauteilboerse",      ("boerse", "bauteilboerse", "bauteilborse", "marktplatz", "opalis", "rotor", "second hand laden", "secondhand", "restposten")),
+    ("beschaffungsweg/Digitale_Plattform", ("plattform", "digital", "online", "datenbank", "matching", "material passort", "materialpass", "bim", "software")),
+]
+
+
+def build_beschaffungsweg_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    return build_label_to_knot_edges(
+        edge_rows, existing_nodes,
+        frontmatter_key="herkunft_label",
+        relation="has_beschaffungsweg",
+        rules=BESCHAFFUNGSWEG_RULES,
+        batch_tag="50i",
+        field_label="FRONTMATTER:herkunft_label",
+    )
+
+
+# ---------------------------------------------------------------------------
+# 50j — has_aufbereitungsverfahren (frontmatter: no direct field —
+#        use the BAUTEIL-INVENTAR bullet "Eingriff/Aufbereitung" already parsed)
+# ---------------------------------------------------------------------------
+
+AUFBEREITUNG_RULES: list[tuple[str, tuple[str, ...]]] = [
+    ("aufbereitungsverfahren/Drahtglasschneiden",       ("drahtglas", "glasschneiden", "glasschnitt")),
+    ("aufbereitungsverfahren/Entmoertelung_von_Fliesen",("entmoertelung", "entmortelung", "mortel entfernen", "moertel entfernen", "fliesen", "tile")),
+    ("aufbereitungsverfahren/Holzaufbereitung",         ("holzaufbereitung", "holz", "hobeln", "schleifen", "sagen", "saegen", "trocknen", "holzbearbeitung")),
+    ("aufbereitungsverfahren/Leuchten_Refurbishment",   ("leuchten", "lampe", "beleuchtung", "licht", "refurbishment", "refurbishing")),
+    ("aufbereitungsverfahren/Qualitaetssicherung",      ("qualitaetssicherung", "qualitassicherung", "qualitats", "ce", "prufung", "pruefung", "testing", "test")),
+    ("aufbereitungsverfahren/Rekonditionierung",        ("rekonditionierung", "recondition", "instandsetzung", "generaluberholung", "generalueberholung")),
+    ("aufbereitungsverfahren/Reparatur",                ("reparatur", "repair", "ausbesserung", "flicken", "schweissen", "schweissung", "lochen gefult", "locher gefuellt")),
+]
+
+
+def build_aufbereitungsverfahren_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    """Reads the 'Eingriff/Aufbereitung' markdown bullet (same source as 50d/50e)."""
+    existing_keys = existing_edge_keys(edge_rows)
+    excluded_sources = direct_reuse_exclusion_sources(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    reuse_rows = [
+        row for row in load_csv(NODE_INVENTORY)
+        if row["entity"] == "reuse_einsatz"
+    ]
+
+    for node_row in sorted(reuse_rows, key=lambda r: r["typed_path"]):
+        markdown = load_reuse_markdown(node_row)
+        raw_label = extract_markdown_bullet(markdown, "Eingriff/Aufbereitung")
+
+        if not raw_label or is_uncertain(raw_label):
+            stats["rows_without_label"] += 1
+            continue
+
+        frontmatter = parse_simple_frontmatter(markdown)
+        if not reusable_enough(frontmatter):
+            stats["rows_skipped_not_reusable"] += 1
+            continue
+
+        if node_row["typed_path"] in excluded_sources:
+            stats["rows_skipped_by_abgrenzung"] += 1
+            continue
+
+        targets: list[str] = []
+        for segment in re.split(r"[,;/]+", raw_label):
+            seg = normalized(segment)
+            if not seg or seg in UNCERTAIN_VALUES:
+                continue
+            for target, tokens in AUFBEREITUNG_RULES:
+                if target not in existing_nodes:
+                    continue
+                if any(token in seg for token in tokens) and target not in targets:
+                    targets.append(target)
+
+        if not targets:
+            stats["labels_without_match"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "raw_label": raw_label,
+                "reason": "no_aufbereitung_token_match",
+            })
+            continue
+
+        for target in targets:
+            key = (node_row["typed_path"], "has_aufbereitungsverfahren", target)
+            if key in existing_keys:
+                stats["duplicates_skipped"] += 1
+                continue
+            target_entity, target_id = target.split("/", 1)
+            addition = {
+                "source": node_row["typed_path"],
+                "source_entity": "reuse_einsatz",
+                "source_id": node_row["id"],
+                "relation": "has_aufbereitungsverfahren",
+                "target": target,
+                "target_entity": target_entity,
+                "target_id": target_id,
+                "field": "BAUTEIL-INVENTAR:Eingriff/Aufbereitung",
+                "raw_label": raw_label,
+                "confidence": "rule_high",
+                "resolution_rule": "label_50j_has_aufbereitungsverfahren_eingriff",
+                "legacy_path": "",
+                "original_source": node_row["typed_path"],
+                "original_relation": "has_aufbereitungsverfahren",
+                "original_target": target,
+                "edge_cleaning": "added_gap_50j",
+            }
+            additions.append(addition)
+            existing_keys.add(key)
+
+    stats["reuse_rows_scanned"] = len(reuse_rows)
+    stats["additions"] = len(additions)
+    stats["sources_with_additions"] = len({row["source"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
 BATCHES = {
     "50a_reuse_strategie": build_reuse_strategy_edges,
     "50b_fuegung_verbindung": build_connection_edges,
@@ -1790,6 +2113,10 @@ BATCHES = {
     "50d_prozessphase": build_process_phase_edges,
     "50e_rueckbauverfahren": build_rueckbauverfahren_edges,
     "50f_located_in_ort": build_located_in_ort_edges,
+    "50g_has_huerde": build_huerde_edges,
+    "50h_has_pruefung_nachweis": build_pruefung_edges,
+    "50i_has_beschaffungsweg": build_beschaffungsweg_edges,
+    "50j_has_aufbereitungsverfahren": build_aufbereitungsverfahren_edges,
 }
 
 
