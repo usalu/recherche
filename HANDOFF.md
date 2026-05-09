@@ -53,7 +53,7 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 In order of recent commits (newest → oldest):
 
 ```
-Add Connection Edges
+8be3ba73 Add Connection Edges
 0855c706 Add Strategy Edges
 0751877d Add Handoff Guide
 f9390dac Update Schema Status
