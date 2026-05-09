@@ -6,9 +6,9 @@
 
 ## Counts
 
-- Nodes: 2983
-- Clean edges: 7575
-- Edge-review rows: 228
+- Nodes: 2987
+- Clean edges: 7696
+- Edge-review rows: 0
 - Dangling edge sources: 0
 - Dangling edge targets: 0
 
