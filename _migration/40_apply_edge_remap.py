@@ -170,10 +170,182 @@ def dedup(rows: list[dict]) -> tuple[list[dict], int]:
 # Driver
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Batch 40d: per-case dispatch for deferred bauteiltyp/material targets
+# ---------------------------------------------------------------------------
+
+import re as _re
+
+# Cache for source-node frontmatter lookup
+_FM_CACHE: dict[str, dict] = {}
+
+
+def _lookup_label(source_entity: str, source_id: str) -> str:
+    cache_key = f"{source_entity}/{source_id}"
+    if cache_key in _FM_CACHE:
+        return _FM_CACHE[cache_key].get("bauteil_label", "") or _FM_CACHE[cache_key].get("material_label", "")
+    idx = ROOT / "_database" / source_entity / source_id / "index.md"
+    if not idx.exists():
+        _FM_CACHE[cache_key] = {}
+        return ""
+    text = idx.read_text(encoding="utf-8", errors="replace")
+    fm = {}
+    if text.startswith("---"):
+        for line in text.split("\n")[1:]:
+            if line.strip() == "---":
+                break
+            if ":" in line and not line.startswith(" "):
+                k, _, v = line.partition(":")
+                fm[k.strip()] = v.strip().strip('"')
+    _FM_CACHE[cache_key] = fm
+    return fm.get("bauteil_label", "") or fm.get("material_label", "")
+
+
+def _dispatch_platte_paneel(label: str) -> str | None:
+    """Route a Platte_Paneel edge based on the source's bauteil_label."""
+    lo = label.lower()
+    # Order matters: more specific rules first
+    if "wand" in lo and "deck" not in lo:
+        return "bauteiltyp/Wand"
+    if "deck" in lo or "verbunddecke" in lo or "tt-decken" in lo or "clt floor" in lo or "cross-laminated" in lo:
+        return "bauteiltyp/Decke"
+    if "fassade" in lo or "vorhangfass" in lo or "curtain" in lo or "stahlfassade" in lo or "fassadenbleche" in lo or "fassadenpaneele" in lo or "fassadenelement" in lo or "fassadenplatte" in lo or "eternit" in lo or "faserzement" in lo or "profilbauglas" in lo:
+        return "bauteiltyp/Fassade"
+    if "dach" in lo or "shingle" in lo or "azob" in lo:
+        return "bauteiltyp/Dach"
+    if "boden" in lo or "pflaster" in lo or "paving" in lo or "gehweg" in lo or "stra" in lo or "terrasse" in lo or "kerenzerbergtunnel" in lo:
+        return "bauteiltyp/Boden"
+    if "dämm" in lo or "daemm" in lo or "polystyrol" in lo or "steinwolle" in lo or "wolle-d" in lo:
+        return "bauteiltyp/Daemmung"
+    if "akustik" in lo or "filz" in lo or "troldtekt" in lo or "mdf" in lo or "sperrholz" in lo or "sideboard" in lo or "arbeitsplatte" in lo or "werbetafel" in lo or "billboard" in lo or "messebau" in lo or "dreischichtplatte" in lo or "ausstellungspaneele" in lo:
+        return "bauteiltyp/Ausbau"
+    if "trapezblech" in lo or "wellblech" in lo or "wellstahl" in lo or "blech" in lo:
+        if "fass" in lo: return "bauteiltyp/Fassade"
+        if "dach" in lo: return "bauteiltyp/Dach"
+        return "bauteiltyp/Fassade"
+    if "naturstein" in lo or "granit" in lo or "marmor" in lo or "blaustein" in lo:
+        return "bauteiltyp/Boden"
+    if "wbs70" in lo or "plattenbau" in lo or "plattenbauteil" in lo or "sockel" in lo or "plinth" in lo:
+        return "bauteiltyp/Wand"
+    if "fertigteil-paneele" in lo or "fertigteilpaneele" in lo:
+        return "bauteiltyp/Wand"  # default for prefab-panel context
+    if "inverset" in lo or "dallette" in lo:
+        return "bauteiltyp/Decke"  # cast slabs
+    if "filz" in lo or "kaffeesatz" in lo:
+        return "bauteiltyp/Ausbau"
+    if "cassette" in lo or ("panel" in lo and "facade" in lo):
+        return "bauteiltyp/Fassade"
+    return None  # ambiguous; leave for review
+
+
+def _dispatch_betonfertigteil(label: str) -> str | None:
+    lo = label.lower()
+    if "wand" in lo and "deck" not in lo:
+        return "bauteiltyp/Wand"
+    if "deck" in lo or "zwischendecke" in lo:
+        return "bauteiltyp/Decke"
+    if "treppe" in lo:
+        return "bauteiltyp/Treppe"
+    if "fassade" in lo:
+        return "bauteiltyp/Fassade"
+    if "wohnungsteil" in lo or "betonunit" in lo:
+        return "bauteiltyp/Wand"  # wall-dominant prefab modules
+    if "rinne" in lo:
+        return "bauteiltyp/Technik"  # drainage = TGA-adjacent
+    if "sichtbeton" in lo:
+        return "bauteiltyp/Wand"  # default for visible concrete
+    if "paneele" in lo or "fertigteile" in lo or "plattenbau" in lo:
+        return "bauteiltyp/Wand"  # WBS70 etc. are wall-dominant
+    return None
+
+
+def _dispatch_mauerstein_block(label: str) -> str | None:
+    lo = label.lower()
+    # Catch-all: any masonry-block-like label routes to Wand
+    if any(tok in lo for tok in ["block", "stein", "ziegel", "klinker", "hanf", "bitumen", "beton"]):
+        return "bauteiltyp/Wand"
+    return None
+
+
+def _dispatch_composite(label: str) -> str | None:
+    lo = label.lower()
+    if "ziegel" in lo or "mauer" in lo:
+        return "material/Ziegel"
+    if "kaffeesatz" in lo or "windturbine" in lo or "billboard" in lo or "werbetafel" in lo:
+        return "material/Kunststoff"
+    if "tür" in lo or "tuer" in lo or "t�r" in lo:
+        return "material/Holz"  # most door composites are wood-dominant
+    if "beton" in lo:
+        return "material/Beton"
+    if "stahl" in lo:
+        return "material/Stahl"
+    if "holz" in lo:
+        return "material/Holz"
+    return None
+
+
+def _dispatch_textil(label: str) -> str | None:
+    lo = label.lower()
+    if "filz" in lo or "akustik" in lo:
+        return "material/Daemmstoff"
+    return "material/Kunststoff"
+
+
+PER_CASE_DISPATCHERS = {
+    "bauteiltyp/Platte_Paneel":     _dispatch_platte_paneel,
+    "bauteiltyp/Betonfertigteil":   _dispatch_betonfertigteil,
+    "bauteiltyp/Mauerstein_Block":  _dispatch_mauerstein_block,
+    "material/Composite":           _dispatch_composite,
+    "material/Textil":              _dispatch_textil,
+}
+
+# Last-mile fallbacks for the handful of edges where labels are too generic
+# to dispatch by keyword. Each entry: source_id -> new_target.
+# Defaults chosen by reading the source case context.
+EXPLICIT_ID_OVERRIDES = {
+    # generic "Plattenauflager" — bearing surface for wall panels in a Plattenbau context
+    "Plattenpalast_Berlin__004__Plattenauflager": "bauteiltyp/Wand",
+    # generic "Plattenmaterial" — Superlocal case uses concrete panels for walls
+    "Superlocal_Expogebouw_Bleijerheide__004__Plattenmaterial": "bauteiltyp/Wand",
+    # massive timber plates AND beams — plates are the dominant element (timber decks)
+    "Verbiest_Karreveld_Brussels__012__Verbiest_massive_Holzplatten_tr_ger": "bauteiltyp/Decke",
+    # generic "Betonplatten / Bestand" in renovation context — wall-dominant
+    "Woongroep_Boschgaard_Den_Bosch__004__Betonplatten_Bestand": "bauteiltyp/Wand",
+}
+
+
+def batch_40d_per_case_dispatch(row: dict) -> dict | None:
+    if row["target"] not in PER_CASE_DISPATCHERS:
+        return None
+    # Explicit ID overrides win over label heuristics
+    if row["source_id"] in EXPLICIT_ID_OVERRIDES:
+        new_target = EXPLICIT_ID_OVERRIDES[row["source_id"]]
+        rule_suffix = "explicit_override"
+    else:
+        label = _lookup_label(row["source_entity"], row["source_id"])
+        if not label:
+            return None
+        new_target = PER_CASE_DISPATCHERS[row["target"]](label)
+        if not new_target:
+            return None
+        rule_suffix = f"per_case_{row['target_id']}"
+    new = dict(row)
+    new["target"] = new_target
+    new_ent, new_id = new_target.split("/", 1)
+    new["target_entity"] = new_ent
+    new["target_id"] = new_id
+    new["resolution_rule"] = f"manual_40d_{rule_suffix}"
+    new["edge_cleaning"] = "manual_remap_40d"
+    if row["confidence"] in ("rule_low", "rule_medium"):
+        new["confidence"] = "manual_high"
+    return new
+
+
 BATCHES = {
     "40a_stahlbeton": batch_40a_stahlbeton_remap,
     "40b_bauteiltyp": batch_40b_bauteiltyp_consolidation,
     "40c_material":   batch_40c_material_consolidation,
+    "40d_per_case":   batch_40d_per_case_dispatch,
 }
 
 

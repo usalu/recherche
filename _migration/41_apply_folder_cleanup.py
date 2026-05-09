@@ -53,6 +53,12 @@ FOLDER_OPS = [
     ("material", "Granit",           "Naturstein"),
     ("material", "Marmor",           "Naturstein"),
     ("material", "Faserzement",      "Beton"),
+    # Per-case dispatch results (matches batch_40d) — folders now empty of edges
+    ("bauteiltyp", "Platte_Paneel",       "Wand"),  # archive after dispatch
+    ("bauteiltyp", "Betonfertigteil",     "Wand"),
+    ("bauteiltyp", "Mauerstein_Block",    "Wand"),
+    ("material",   "Composite",           "Kunststoff"),
+    ("material",   "Textil",              "Kunststoff"),
 ]
 
 
