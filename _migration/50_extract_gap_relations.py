@@ -13,6 +13,9 @@ Current batch:
   50b_fuegung_verbindung
     Reads the "Verbindung" row text already promoted into reuse_einsatz
     index.md files and adds high-precision has_fuegung_verbindung edges.
+  50c_reuse_einsatzstatus
+    Reads the case-level "Projektstatus" bullet and adds one conservative
+    has_reuse_einsatzstatus edge to substantive reuse_einsatz nodes.
 """
 
 from __future__ import annotations
@@ -284,6 +287,91 @@ CONNECTION_RULES = [
     ),
 ]
 
+STATUS_TARGETS = {
+    "Realisiert": "reuse_einsatzstatus/Realisiert",
+    "Geplant": "reuse_einsatzstatus/Geplant",
+    "Verworfen": "reuse_einsatzstatus/Verworfen",
+    "Vorgeschlagen": "reuse_einsatzstatus/Vorgeschlagen",
+    "Unklar": "reuse_einsatzstatus/Unklar",
+    "Temporaer": "reuse_einsatzstatus/Temporaer",
+    "Prototypisch": "reuse_einsatzstatus/Prototypisch",
+}
+
+STATUS_DISCARDED_TOKENS = (
+    "aborted",
+    "ungebaut",
+    "ersetzt",
+    "nicht gebaut",
+    "abgebrochen",
+    "projektabbruch",
+    "gestoppt",
+)
+
+STATUS_TEMPORARY_TOKENS = (
+    "temporar",
+    "temporaer",
+    "demontiert",
+    "mobil",
+)
+
+STATUS_PROTOTYPE_TOKENS = (
+    "prototyp",
+    "demonstrator",
+    "forschungsdemonstrator",
+    "mini-pilot",
+    "mock-up",
+    "mockup",
+)
+
+STATUS_REALIZED_TOKENS = (
+    "gebaut",
+    "fertiggestellt",
+    "completed",
+    "brought online",
+    "eroffnet",
+    "wiedereroffnung",
+    "bezogen",
+    "in nutzung",
+    "abgeschlossen",
+    "eingebaut",
+    "umgesetzt",
+    "practical completion",
+    "geliefert",
+    "transloziert",
+)
+
+STATUS_PLANNED_TOKENS = (
+    "geplant",
+    "in entwicklung",
+    "im bau",
+    "ausfuhrung vorgesehen",
+    "angekundigt",
+    "scheduled",
+    "expected",
+    "construction",
+    "on site",
+    "live-projekt",
+    "live",
+)
+
+STATUS_PROPOSED_TOKENS = (
+    "proposal",
+    "vorschlag",
+    "vorgeschlagen",
+    "konzept",
+)
+
+STATUS_MEDIUM_CONFIDENCE_TOKENS = (
+    "unbekannt",
+    "zu verifizieren",
+    "vorgesehen",
+    "angekundigt",
+    "expected",
+    "scheduled",
+    "laut",
+    "bzw",
+)
+
 
 def normalized(value: str) -> str:
     value = value or ""
@@ -459,6 +547,25 @@ def extract_strategy_rows() -> dict[str, dict[str, str]]:
                 }
                 break
     return strategy_rows
+
+
+def extract_project_status_rows() -> dict[str, dict[str, str]]:
+    source_dir = gebaeude_dir()
+    status_rows: dict[str, dict[str, str]] = {}
+    for path in sorted(source_dir.glob("*.md")):
+        markdown = path.read_text(encoding="utf-8", errors="replace")
+        value = extract_markdown_bullet(markdown, "Projektstatus")
+        if not value:
+            continue
+        status_rows[path.stem] = {
+            "case_id": path.stem,
+            "legacy_path": str(path.relative_to(ROOT)),
+            "value": value,
+            "relationship": "",
+            "confidence_source": "",
+            "note": "",
+        }
+    return status_rows
 
 
 def map_strategy_targets(strategy_row: dict[str, str], existing_nodes: set[str]) -> list[str]:
@@ -640,6 +747,42 @@ def connection_confidence(raw_label: str) -> str:
     return "rule_high"
 
 
+def map_status_targets(raw_label: str, existing_nodes: set[str]) -> list[str]:
+    label = normalized(raw_label)
+    if not label or label in UNCERTAIN_VALUES:
+        return []
+
+    target_id = "Unklar"
+    if any(token in label for token in STATUS_DISCARDED_TOKENS):
+        target_id = "Verworfen"
+    elif label.startswith("unklar") or "projektstatus unsicher" in label:
+        target_id = "Unklar"
+    elif any(token in label for token in STATUS_TEMPORARY_TOKENS):
+        target_id = "Temporaer"
+    elif any(token in label for token in STATUS_PROTOTYPE_TOKENS):
+        target_id = "Prototypisch"
+    elif any(token in label for token in STATUS_REALIZED_TOKENS):
+        target_id = "Realisiert"
+    elif any(token in label for token in STATUS_PLANNED_TOKENS):
+        target_id = "Geplant"
+    elif any(token in label for token in STATUS_PROPOSED_TOKENS):
+        target_id = "Vorgeschlagen"
+
+    target = STATUS_TARGETS[target_id]
+    if target in existing_nodes:
+        return [target]
+    return []
+
+
+def status_confidence(raw_label: str, target: str) -> str:
+    if target.endswith("/Unklar"):
+        return "rule_high"
+    label = normalized(raw_label)
+    if any(token in label for token in STATUS_MEDIUM_CONFIDENCE_TOKENS):
+        return "rule_medium"
+    return "rule_high"
+
+
 def build_connection_edges(
     edge_rows: list[dict[str, str]],
     existing_nodes: set[str],
@@ -725,6 +868,81 @@ def build_connection_edges(
     stats["reuse_rows_scanned"] = len(reuse_rows)
     stats["additions"] = len(additions)
     stats["sources_with_additions"] = len({row["source"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
+def build_status_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    status_rows = extract_project_status_rows()
+    reuse_by_case = load_reuse_nodes()
+    existing_keys = existing_edge_keys(edge_rows)
+    excluded_sources = direct_reuse_exclusion_sources(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    for case_id, status_row in sorted(status_rows.items()):
+        targets = map_status_targets(status_row["value"], existing_nodes)
+        if not targets:
+            stats["cases_without_target"] += 1
+            skipped.append({**status_row, "reason": "no_existing_status_target"})
+            continue
+
+        reuse_rows = reuse_by_case.get(case_id, [])
+        if not reuse_rows:
+            stats["cases_without_reuse_nodes"] += 1
+            skipped.append({**status_row, "reason": "no_reuse_einsatz_nodes"})
+            continue
+
+        reusable_rows = []
+        for node_row in reuse_rows:
+            frontmatter = load_reuse_frontmatter(node_row)
+            if reusable_enough(frontmatter):
+                reusable_rows.append((node_row, frontmatter))
+                if node_row["typed_path"] in excluded_sources:
+                    stats["status_rows_kept_with_abgrenzung"] += 1
+            else:
+                stats["status_rows_skipped_not_reusable"] += 1
+
+        if not reusable_rows:
+            stats["cases_without_reusable_rows"] += 1
+            skipped.append({**status_row, "reason": "no_reusable_inventory_rows"})
+            continue
+
+        for node_row, _frontmatter in reusable_rows:
+            source = node_row["typed_path"]
+            for target in targets:
+                key = (source, "has_reuse_einsatzstatus", target)
+                if key in existing_keys:
+                    stats["duplicates_skipped"] += 1
+                    continue
+                target_entity, target_id = target.split("/", 1)
+                addition = {
+                    "source": source,
+                    "source_entity": "reuse_einsatz",
+                    "source_id": node_row["id"],
+                    "relation": "has_reuse_einsatzstatus",
+                    "target": target,
+                    "target_entity": target_entity,
+                    "target_id": target_id,
+                    "field": "Projektstatus",
+                    "raw_label": status_row["value"],
+                    "confidence": status_confidence(status_row["value"], target),
+                    "resolution_rule": "case_50c_reuse_einsatzstatus_project_status",
+                    "legacy_path": status_row["legacy_path"],
+                    "original_source": source,
+                    "original_relation": "has_reuse_einsatzstatus",
+                    "original_target": target,
+                    "edge_cleaning": "added_gap_50c",
+                }
+                additions.append(addition)
+                existing_keys.add(key)
+
+    stats["project_status_rows"] = len(status_rows)
+    stats["additions"] = len(additions)
+    stats["cases_with_additions"] = len({row["legacy_path"] for row in additions})
     return edge_rows + additions, additions, stats, skipped
 
 
@@ -827,6 +1045,7 @@ def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[d
 BATCHES = {
     "50a_reuse_strategie": build_reuse_strategy_edges,
     "50b_fuegung_verbindung": build_connection_edges,
+    "50c_reuse_einsatzstatus": build_status_edges,
 }
 
 
