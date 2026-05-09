@@ -16,6 +16,9 @@ Current batch:
   50c_reuse_einsatzstatus
     Reads the case-level "Projektstatus" bullet and adds one conservative
     has_reuse_einsatzstatus edge to substantive reuse_einsatz nodes.
+  50d_prozessphase
+    Reads the promoted "Eingriff/Aufbereitung" label and adds broad
+    process-phase edges such as Rueckbau, Aufbereitung, and Wiedereinbau.
 """
 
 from __future__ import annotations
@@ -370,6 +373,160 @@ STATUS_MEDIUM_CONFIDENCE_TOKENS = (
     "scheduled",
     "laut",
     "bzw",
+)
+
+PROCESS_PHASE_RULES = [
+    (
+        "prozessphase/Rueckbau",
+        (
+            "demontage",
+            "demontiert",
+            "ausbau",
+            "ruckbau",
+            "rueckbau",
+            "abbau",
+            "ernte",
+            "ruckgewinnung",
+            "rueckgewinnung",
+            "ruckgewonnen",
+            "rueckgewonnen",
+            "zuruckgewonnen",
+            "zurueckgewonnen",
+            "geborgen",
+            "ausgebaut",
+        ),
+    ),
+    (
+        "prozessphase/Transport",
+        (
+            "transport",
+            "transportiert",
+            "trailer",
+        ),
+    ),
+    (
+        "prozessphase/Lagerung",
+        (
+            "lagerung",
+            "einlagerung",
+            "stockpile",
+            "zwischengelager",
+        ),
+    ),
+    (
+        "prozessphase/Identifikation",
+        (
+            "katalogisierung",
+            "katalog",
+            "auswahl",
+            "erfassung",
+            "identifikation",
+            "sortierung",
+            "sortieren",
+        ),
+    ),
+    (
+        "prozessphase/Aufbereitung",
+        (
+            "reinigung",
+            "reinigen",
+            "gereinigt",
+            "aufbereitung",
+            "anpassung",
+            "zuschnitt",
+            "zuschneiden",
+            "sagen",
+            "saegen",
+            "gesagt",
+            "gesaegt",
+            "reparatur",
+            "instandsetzung",
+            "restaurierung",
+            "beschichtung",
+            "lackierung",
+            "behandlung",
+            "remanufacturing",
+            "re-fabrication",
+            "refabrication",
+            "bearbeitung",
+            "vorbereitung",
+            "vorbereitet",
+            "aufgearbeitet",
+            "umfunktioniert",
+            "umnutzung",
+            "reaktivierung",
+            "locher gefullt",
+            "loecher gefuellt",
+            "hot-cut",
+            "casings entfernt",
+            "sichten",
+            "einfullen",
+            "einfuellen",
+            "verarbeitung",
+            "ersetzt",
+            "einpassung",
+            "verstarkung",
+            "verdopplung",
+            "primerentfernung",
+        ),
+    ),
+    (
+        "prozessphase/Pruefung",
+        (
+            "getestet",
+            "test",
+            "tests",
+            "rezertifizierung",
+            "re-zertifizierung",
+            "zertifiziert",
+            "funktionsprufung",
+            "funktionspruefung",
+            "prufung",
+            "pruefung",
+            "ce markiert",
+        ),
+    ),
+    (
+        "prozessphase/Wiedereinbau",
+        (
+            "wiedereinbau",
+            "wiedermontage",
+            "montage",
+            "einbau",
+            "wiederaufbau",
+            "wiederaufgebaut",
+            "eingebaut",
+            "neuverlegung",
+            "verlegung",
+            "wandmontage",
+            "befestigung",
+            "vermauerung",
+            "integriert",
+            "integration",
+        ),
+    ),
+]
+
+PROCESS_SKIP_SEGMENT_TOKENS = (
+    "unbekannt",
+    "nicht bewertet",
+    "nicht detailliert",
+    "keine",
+    "neu/restposten",
+    "neu restposten",
+    "as found",
+    "largely as found",
+)
+
+PROCESS_MEDIUM_CONFIDENCE_TOKENS = (
+    "unbekannt",
+    "geplant",
+    "wahrscheinlich",
+    "ggf",
+    "moglich",
+    "moeglich",
+    "nicht detailliert",
+    "details unbekannt",
 )
 
 
@@ -783,6 +940,52 @@ def status_confidence(raw_label: str, target: str) -> str:
     return "rule_high"
 
 
+def process_segments(raw_label: str) -> list[str]:
+    label = normalized(raw_label)
+    if not label or label in UNCERTAIN_VALUES:
+        return []
+    if "/" in raw_label and "," not in raw_label and ";" not in raw_label and label.endswith("unbekannt"):
+        return []
+
+    segments: list[str] = []
+    for segment in re.split(r"[,;/]+", raw_label):
+        normalized_segment = normalized(segment)
+        if not normalized_segment or normalized_segment in UNCERTAIN_VALUES:
+            continue
+        if any(token in normalized_segment for token in PROCESS_SKIP_SEGMENT_TOKENS):
+            continue
+        segments.append(normalized_segment)
+    return segments
+
+
+def process_token_matches(segment: str, token: str) -> bool:
+    if token == "montage":
+        return bool(re.search(r"(?<![a-z])montage(?![a-z])", segment))
+    if token == "lagerung" and "auflagerung" in segment:
+        return False
+    return token in segment
+
+
+def map_process_targets(raw_label: str, existing_nodes: set[str]) -> list[str]:
+    targets: list[str] = []
+    for segment in process_segments(raw_label):
+        for target, tokens in PROCESS_PHASE_RULES:
+            if target not in existing_nodes:
+                continue
+            if target == "prozessphase/Lagerung" and "auflagerung" in segment:
+                continue
+            if any(process_token_matches(segment, token) for token in tokens) and target not in targets:
+                targets.append(target)
+    return targets
+
+
+def process_confidence(raw_label: str) -> str:
+    label = normalized(raw_label)
+    if any(token in label for token in PROCESS_MEDIUM_CONFIDENCE_TOKENS):
+        return "rule_medium"
+    return "rule_high"
+
+
 def build_connection_edges(
     edge_rows: list[dict[str, str]],
     existing_nodes: set[str],
@@ -946,6 +1149,83 @@ def build_status_edges(
     return edge_rows + additions, additions, stats, skipped
 
 
+def build_process_phase_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    existing_keys = existing_edge_keys(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    reuse_rows = [
+        row for row in load_csv(NODE_INVENTORY)
+        if row["entity"] == "reuse_einsatz"
+    ]
+
+    for node_row in sorted(reuse_rows, key=lambda row: row["typed_path"]):
+        markdown = load_reuse_markdown(node_row)
+        raw_label = extract_markdown_bullet(markdown, "Eingriff/Aufbereitung")
+        if not raw_label:
+            stats["rows_without_process_label"] += 1
+            continue
+
+        frontmatter = parse_simple_frontmatter(markdown)
+        if not reusable_enough(frontmatter):
+            stats["process_rows_skipped_not_reusable"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "legacy_path": "",
+                "raw_label": raw_label,
+                "reason": "not_reusable_enough_for_process_phase_edge",
+            })
+            continue
+
+        targets = map_process_targets(raw_label, existing_nodes)
+        if not targets:
+            stats["process_labels_skipped"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "legacy_path": "",
+                "raw_label": raw_label,
+                "reason": "no_precise_process_phase_target",
+            })
+            continue
+
+        confidence = process_confidence(raw_label)
+        for target in targets:
+            key = (node_row["typed_path"], "has_prozessphase", target)
+            if key in existing_keys:
+                stats["duplicates_skipped"] += 1
+                continue
+            target_entity, target_id = target.split("/", 1)
+            addition = {
+                "source": node_row["typed_path"],
+                "source_entity": "reuse_einsatz",
+                "source_id": node_row["id"],
+                "relation": "has_prozessphase",
+                "target": target,
+                "target_entity": target_entity,
+                "target_id": target_id,
+                "field": "BAUTEIL-INVENTAR:Eingriff/Aufbereitung",
+                "raw_label": raw_label,
+                "confidence": confidence,
+                "resolution_rule": "label_50d_prozessphase_eingriff_aufbereitung",
+                "legacy_path": "",
+                "original_source": node_row["typed_path"],
+                "original_relation": "has_prozessphase",
+                "original_target": target,
+                "edge_cleaning": "added_gap_50d",
+            }
+            additions.append(addition)
+            existing_keys.add(key)
+
+    stats["reuse_rows_scanned"] = len(reuse_rows)
+    stats["additions"] = len(additions)
+    stats["sources_with_additions"] = len({row["source"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
 def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[dict[str, str]], stats: Counter[str]) -> None:
     diff_path = REPORT_DIR / f"50_gap_relation_diff_{batch_name}.csv"
     with diff_path.open("w", encoding="utf-8", newline="") as handle:
@@ -1046,6 +1326,7 @@ BATCHES = {
     "50a_reuse_strategie": build_reuse_strategy_edges,
     "50b_fuegung_verbindung": build_connection_edges,
     "50c_reuse_einsatzstatus": build_status_edges,
+    "50d_prozessphase": build_process_phase_edges,
 }
 
 
