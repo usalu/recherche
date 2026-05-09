@@ -1,0 +1,59 @@
+---
+id: "Legacy_person_cirkla_akteure_hohe_mittlere_relevanz."
+entity: "quelle"
+node_kind: "source"
+migration_status: "migrated_phase5_legacy_source"
+title: "Wiederverwendung – zusätzliche Cirkla-Akteure mit hoher und mittlerer Relevanz"
+legacy_path: "person\\cirkla_akteure_hohe_mittlere_relevanz.md"
+migration_action: "archive_as_source"
+legacy_type: ""
+target_primary: "quelle/cirkla_akteure_hohe_mittlere_relevanz"
+target_secondary: ""
+risk_flags: "contains_many_people_do_not_import_as_one_person"
+---
+# Wiederverwendung – zusätzliche Cirkla-Akteure mit hoher und mittlerer Relevanz
+
+## Migration
+
+- Legacy path: person\cirkla_akteure_hohe_mittlere_relevanz.md
+- Action in migration map: archive_as_source
+- Reason: not already consumed by phase 1-4, so preserved as source/meta node.
+- Original primary target: quelle/cirkla_akteure_hohe_mittlere_relevanz
+- Original secondary targets: 
+
+## Legacy Content
+
+# Wiederverwendung – zusätzliche Cirkla-Akteure mit hoher und mittlerer Relevanz
+
+## Hohe Relevanz
+
+| Name | Land | Mail | Kontakt | Warum interessant | Projektlinks |
+|---|---|---|---|---|---|
+| Graber Pulver Architekt:innen AG | Schweiz | arch@graberpulver.ch | [Büro](https://www.graberpulver.ch/buero) | Juch-Areal: öffentlicher Neubau mit sichtbarer Bauteil-Wiederverwendung; relevant für Entwurf aus Bauteil-Minen und Re-Assembly. | [Juch-Areal Cirkla](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/projets/recyclingzentrum-juch-areal/) · [Juch-Areal Graber Pulver](https://www.graberpulver.ch/projekt/recyclingzentrum-juch-areal) · [Juch-Areal Zirkular](https://zirkular.net/en/project/recycling-center-juch-areal/) |
+| Trachsler Hoffmann Architekten | Schweiz | info@trachslerhoffmann.ch | [Kontakt](https://www.trachslerhoffmann.ch/) | Schärenmoosstrasse: direkte Reuse-Umsetzung im Gebäude; relevant für Umbau/Neubau-Schnittstelle, Bauteilsuche und konstruktive Integration. | [Schärenmoosstrasse Cirkla](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/projets/scharenmoosstrasse/) · [ZH-Projekte Cirkla](https://www.cirkla.ch/en/canton/zh/) |
+| Bischof Föhn Architektur | Schweiz | info@bf-architekten.ch | [Kontakt/Info](https://www.bf-architekten.ch/info) | Kindergarten Manegg/Mööslistrasse: realisierte Kreislauf-Praxis mit wiederverwendeten Bauteilen; relevant für öffentliche Bauaufgabe mit tragwerksnaher Anpassung. | [Kindergarten Manegg](https://www.bf-architekten.ch/projects/kindergarten-manegg) · [Zukunft Bau](https://www.zukunft-bau.at/en/project/education-health/conversion-kindergarten-mooslistrasse) |
+| Loeliger Strub Architektur | Schweiz | mail@loeligerstrub.ch | [Kontakt](https://loeligerstrub.ch/kontakt/) | LYSP8: Wohn-/Gewerbebau mit Reuse als Entwurfsprinzip; Fassade, Bauteile, Deckenaufbauten und CO₂-Ziel als integrierter Prozess. | [LYSP8 Cirkla](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/projets/lysp8/) · [LYSP8 Zirkular](https://zirkular.net/en/project/lysp8/) · [LYSP8 Loeliger Strub](https://loeligerstrub.ch/nproject/lysp8-neubau-wohnhaus-mit-gewerbe-basel/) |
+| Gruner ReUse / Gruner AG | Schweiz | info@gruner.ch | [Gruner ReUse Kontakt](https://www.gruner-reuse.ch/kontakt) | Ingenieur- und Prozessperspektive: Inventar, Statik, Ausbau, Logistik, Vermittlung und Wiedereinbau; sehr relevant für tragende ReUse-Bauteile. | [Gruner ReUse](https://www.gruner-reuse.ch/) · [Planen mit ReUse](https://www.gruner-reuse.ch/projekt) · [Gruner Cirkla](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/gruner-ag/) |
+| Structural Xploration Lab / Corentin Fivet | Schweiz | corentin.fivet@epfl.ch | [SXL EPFL](https://sxl.epfl.ch/) | Stark für tragende Wiederverwendung: Forschung und Demonstratoren zu wiederverwendeten Beton-/Stahltragwerken, Prüfung, Re-Design und digitaler Bauteilzuordnung. | [SXL](https://sxl.epfl.ch/) · [EPFL Profil](https://people.epfl.ch/corentin.fivet) |
+| Circular Engineering for Architecture / Catherine De Wolf | Schweiz | catherine.dewolf@ethz.ch | [CEA ETH](https://cea.ethz.ch/) | Reuse, LCA, Materialpässe und digitale Circular-Workflows; interessant für energetische/ökologische Bewertung und projektbasierte Wiederverwendung. | [CEA ETH](https://cea.ethz.ch/) · [ETH Circular Construction News](https://ethz.ch/en/news-and-events/eth-news/news/2026/04/students-breathe-new-life-into-old-building-materials.html) |
+| NEST / Empa | Schweiz | info@empa.ch | [NEST](https://www.nest.empa.ch/) | Reallabor für gebaute Prototypen; relevant für Prüfung, Monitoring, Energie und Bauteilkreisläufe in 1:1-Umsetzung. | [NEST Cirkla](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/nest-empa/) · [NEST Empa](https://www.nest.empa.ch/) |
+| PIRMIN JUNG Schweiz AG | Schweiz | info@pirminjung.ch | [Kontakt](https://www.pirminjung.ch/kontakt) | Tragwerksplanung, Bauphysik, Brandschutz und zirkulärer Holzbau; relevant für technische Nachweise und Wiederverwendung tragender Holzbauteile. | [PIRMIN JUNG Cirkla](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/pirmin-jung-schweiz-ag/) · [Rückbau/Wiederverwendung Holzbauten](https://www.pirminjung.ch/files/allgemein/220502_PJ_Rueckbau-Wiederverwendung-Holzbauten.pdf) · [Think Earth Holz](https://www.bfh.ch/de/forschung/forschungsprojekte/2024-924-713-513/) |
+
+## Mittlere Relevanz
+
+| Name | Land | Mail | Kontakt | Warum interessant | Projektlinks |
+|---|---|---|---|---|---|
+| Pascal Flammer Architekten AG | Schweiz | info@pascalflammer.com | [Kontakt](https://www.pascalflammer.com/) | Cirkla-Akteur mit Wiederverwendung als Teil der architektonischen Haltung; relevant als Entwurfsbüro, aber weniger klar tragwerksbezogen als die hohe Priorität. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/pascal-flammer-architekten-ag/) · [Büro](https://www.pascalflammer.com/) |
+| Kocher Minder Architekten GmbH | Schweiz | info@kmar.ch | [Kontakt](https://www.kmar.ch/) | Büro mit Analyse bestehender Materialien/Konstruktionen und Integration in Projekte; relevant für regionale Praxis, aber bisher weniger belegte Großmaßstäblichkeit. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/kocher-minder-architekten-gmbh/) · [KMAR](https://www.kmar.ch/) |
+| ETH Digital Creativity / Gramazio Kohler Research | Schweiz | — | [GKR ETH](https://gramaziokohler.arch.ethz.ch/) | Wiederverwendung in gebauten Lehr-/Forschungsstrukturen; interessant für digitale Erfassung, Entwurf und robotische/algorithmische Re-Konfiguration. | [ETH News Reuse](https://ethz.ch/en/news-and-events/eth-news/news/2026/04/students-breathe-new-life-into-old-building-materials.html) · [GKR](https://gramaziokohler.arch.ethz.ch/) |
+| Urban Bricolage / Madlen Kobi | Schweiz | — | [Urban Bricolage](https://urbanbricolage.ch/) | Forschung nah an realen Akteuren der Wiederverwendung; gut für Logistik, Akteursketten und Praxisbarrieren, weniger direkt für Tragwerksplanung. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/urban-bricolage/) · [Urban Bricolage](https://urbanbricolage.ch/) · [Reuse Logistics](https://urbanbricolage.ch/projects/reuse-logistics) |
+| Useagain | Schweiz | info@useagain.ch | [Useagain](https://www.useagain.ch/) | Plattform/Netzwerk für Bauteile und Know-how; nützlich für Bauteilquellen, Matching und Marktlogik, aber nicht primär Entwurf/Tragwerk. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/useagain/) · [Useagain](https://www.useagain.ch/) |
+| Re-Win | Schweiz | info@re-win.ch | [Re-Win](https://re-win.ch/) | Netzwerk für Reuse-Kultur und Wiederverwendung von Bauelementen; interessant als Vermittler, nicht primär als tragwerksplanender Akteur. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/re-win/) · [Re-Win](https://re-win.ch/) |
+| Overall Baubetriebe | Schweiz | info@overall.ch | [Kontakt](https://www.overall.ch/) | Dismantling-/Ausbaukompetenz und Prozesskoordination; relevant für Bauteilernte vor Wiederverwendung, weniger für Entwurf. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/overall-baubetriebe/) · [Overall](https://www.overall.ch/) |
+| Stiftung Chance | Schweiz | info@chance.ch | [Kontakt](https://www.chance.ch/) | Praktischer Rückbau und Ausbau von Bauteilen; wichtig für die frühe Reuse-Kette, aber nicht für Tragwerksentwurf. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/stiftung-chance/) · [Stiftung Chance](https://www.chance.ch/) |
+| Materiuum | Schweiz | info@materiuum.ch | [Materiuum](https://www.materiuum.ch/) | Genfer Reuse-Akteur für Materialsuche, Sensibilisierung und Wiedereinbringung; gut für lokale Kreislaufpraxis. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/materiuum/) · [Materiuum](https://www.materiuum.ch/) |
+| La Ressourcerie / Smart Living Lab | Schweiz | — | [La Ressourcerie](https://www.smartlivinglab.ch/en/reuse-rewarded-in-fribourg/) | Reuse-Praxis und Materialkreisläufe in Fribourg; relevant als lokaler Hub und Praxispartner, nicht primär strukturell. | [Reuse rewarded](https://www.smartlivinglab.ch/en/reuse-rewarded-in-fribourg/) · [Urban Bricolage](https://urbanbricolage.ch/) |
+| Wiederverwerkle / Wick Upcycling GmbH | Schweiz | info@wiederverwerkle.ch | [Kontakt](https://www.wiederverwerkle.ch/) | Restholz- und Holzbauteilquelle; interessant für Holz-Wiederverwendung und Beschaffung, weniger für komplexe Gebäudeplanung. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/wiederverwerkle-wick-upcycling-gmbh/) · [Wiederverwerkle](https://www.wiederverwerkle.ch/) |
+| Sumami / bauteilclick.ch | Schweiz | info@sumami.ch | [Sumami](https://www.sumami.ch/) | Digitaler Bauteilmarktplatz; relevant für Matching und Bauteilverfügbarkeit, aber keine direkte Tragwerks-/Baupraxis. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/sumami/) · [Sumami](https://www.sumami.ch/) |
+| ReWinner | Schweiz | info@rewinner.ch | [ReWinner](https://www.rewinner.ch/) | Wiederverkauf gebrauchter Bauteile und Materialien; relevant als Quelle, weniger als Planungsakteur. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/rewinner/) · [ReWinner](https://www.rewinner.ch/) |
+| SBB Resale Shop | Schweiz | — | [SBB Resale](https://sbbresale.ch/) | Große institutionelle Bauteil-/Objektquelle; interessant für Materialflüsse und Beschaffung, nicht spezifisch Hochbau-Tragwerk. | [Cirkla Profil](https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/sbb-resale-shop/) · [SBB Resale](https://sbbresale.ch/) |

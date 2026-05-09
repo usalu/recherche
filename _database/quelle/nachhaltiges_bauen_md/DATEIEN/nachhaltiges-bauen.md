@@ -1,0 +1,4 @@
+---
+type: Professur
+---
+# Nachhaltiges Bauen

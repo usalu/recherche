@@ -1,0 +1,20 @@
+﻿---
+id: "Geschaeftsmodell"
+entity: "wirtschaft"
+build_status: "clean_phase20"
+title: "Geschaeftsmodell"
+---
+# Geschaeftsmodell
+
+## Clean Node
+
+- Final path: _database/wirtschaft/Geschaeftsmodell
+- Build rule: typed path IDs only.
+
+## Imported Staging Nodes
+
+- Source: _graph/wirtschaft/Geschaeftsmodell
+  - Action: keep_default
+  - Status: CONFIDENT
+  - Reason: Folder is included in clean ontology and node has no conflict-specific normalization rule.
+

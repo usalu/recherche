@@ -1,0 +1,5 @@
+---
+type: Datenmodell
+---
+
+﻿# index

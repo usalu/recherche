@@ -1,0 +1,20 @@
+﻿---
+id: "Legacy_meta_Dataview_Abfragen"
+entity: "meta"
+build_status: "clean_phase20"
+title: "Dataview Abfragen"
+---
+# Dataview Abfragen
+
+## Clean Node
+
+- Final path: _manual_review/excluded/meta/Legacy_meta_Dataview_Abfragen
+- Build rule: typed path IDs only.
+
+## Imported Staging Nodes
+
+- Source: _graph/meta/Legacy_meta_Dataview_Abfragen
+  - Action: hold_out_of_final
+  - Status: EXCLUDED
+  - Reason: do not include in first final database
+
