@@ -53,16 +53,17 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 In order of recent commits (newest → oldest):
 
 ```
-50a add direct reuse strategy gap edges from Gebaeude tables
-8ae0e93 update schema integrity-status: 5 of 6 issues resolved
-34b29fb apply 27 manual-review decisions; close held-back edge queue
-4ed2213 finish edge consolidation: per-case dispatch (40d) + folder archive (41)
-140d00d promote German prose into _database/<entity>/<id>/index.md (Option A)
-8714a80 consolidate bauteiltyp + material per canonical schema (40b, 40c, 41)
-3ce7427 remap 47 rule_low Stahlbeton edges to material/Stahlbeton
-9584a32 add canonical schema doc
-34d267d build clean _database from _graph
-5ab18f2 fix mojibake encoding in _graph legacy_type fields
+0855c706 Add Strategy Edges
+0751877d Add Handoff Guide
+f9390dac Update Schema Status
+c8f9887e Apply Review Decisions
+fca38656 Consolidate Edge Targets
+bf0bcd7e Promote German Prose
+23ecbd5e Consolidate Taxonomy Nodes
+b9257f08 Remap Stahlbeton Edges
+71e3073e Add Canonical Schema
+94c9ca60 Build Clean Database
+5b761442 Fix Encoding Fields
 ```
 
 If you want to know what each batch did: read the commit message + the diff CSV in `_migration/40_remap_diff_*.csv` + `_migration/43_decision_log.csv`.
