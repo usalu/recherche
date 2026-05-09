@@ -324,6 +324,7 @@ Query center is `reuse_einsatz`; expand from there to `fallstudie → projekt �
 
 ## 13. Notes for other agents
 
+- **First read [HANDOFF.md](../../HANDOFF.md) at the repo root.** It tells you what's done, what's next, and the conventions you must follow.
 - This file is the canonical schema. If it conflicts with `_migration/00_Migration_Strategy.md`, this file wins.
 - Do not propose a new entity type without a §3.x update.
 - Do not promote a raw label into a new knot if it can be expressed as `material_label` / `bauteil_label` on the `reuse_einsatz` frontmatter — see §4.
