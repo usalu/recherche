@@ -217,7 +217,7 @@ This separation prevents the "Direct Reuse overcounting" failure: temporary, pla
 
 ## 9. Relation vocabulary (edges)
 
-Current confirmed edges use 23 relation labels, every relation has exactly one target entity type (verified — 0 mismatches in the 8,766 confirmed edges):
+Current confirmed edges use 24 relation labels, every relation has exactly one target entity type (verified — 0 mismatches in the 8,850 confirmed edges):
 
 | Relation | Source → Target | Count |
 |---|---|---:|
@@ -237,6 +237,7 @@ Current confirmed edges use 23 relation labels, every relation has exactly one t
 | `has_bewertungslogik_abgrenzung` | `reuse_einsatz` → `bewertungslogik_abgrenzung` | 164 |
 | `has_projekt` | `fallstudie` → `projekt` | 89 |
 | `has_bauobjekt` | `fallstudie` → `bauobjekt` | 88 |
+| `has_rueckbauverfahren` | `reuse_einsatz` → `rueckbauverfahren` | 84 |
 | `part_of_reuse_kette` | `reuse_kettenstation` → `reuse_kette` | 84 |
 | `has_pruefung_nachweis` | `reuse_einsatz` → `pruefung_nachweis` | 48 |
 | `involves_akteur` | `akteur_beteiligung` → `akteur` | 44 |
@@ -248,8 +249,8 @@ Current confirmed edges use 23 relation labels, every relation has exactly one t
 **Gaps to fill** (relations the case data implies but the graph doesn't yet carry — see §11):
 
 ```
-has_ressourcenquelle, has_beschaffungsweg, has_rueckbauverfahren,
-has_aufbereitungsverfahren, has_logistik, has_funktionswechsel,
+has_ressourcenquelle, has_beschaffungsweg, has_aufbereitungsverfahren,
+has_logistik, has_funktionswechsel,
 has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
 has_tragwerksprinzip,
 has_bauobjektklasse, has_bauobjektrolle, has_bauobjektstatus, has_nutzung,
@@ -293,7 +294,7 @@ Do **not** edit:
 
 ### 11.2 Sparse relations — STILL OPEN
 
-The graph has 8,766 edges across 23 relations. Batch 50a promoted 248 high-precision `has_reuse_strategie` edges for direct reuse from the `Gebäude/` Entitäten-Mapping tables. Batch 50b promoted 21 high-precision `has_fuegung_verbindung` edges from the BAUTEIL-INVENTAR connection labels. Batch 50c promoted 407 conservative `has_reuse_einsatzstatus` edges from project-status bullets to substantive reuse_einsatz nodes. Batch 50d promoted 394 `has_prozessphase` edges from explicit Eingriff/Aufbereitung labels. Many other case-context relations remain sparse (see §9 gaps); continue one relation at a time so each batch stays reviewable.
+The graph has 8,850 edges across 24 relations. Batch 50a promoted 248 high-precision `has_reuse_strategie` edges for direct reuse from the `Gebäude/` Entitäten-Mapping tables. Batch 50b promoted 21 high-precision `has_fuegung_verbindung` edges from the BAUTEIL-INVENTAR connection labels. Batch 50c promoted 407 conservative `has_reuse_einsatzstatus` edges from project-status bullets to substantive reuse_einsatz nodes. Batch 50d promoted 394 `has_prozessphase` edges from explicit Eingriff/Aufbereitung labels. Batch 50e promoted 84 `has_rueckbauverfahren` edges from explicit dismantling-method labels. Many other case-context relations remain sparse (see §9 gaps); continue one relation at a time so each batch stays reviewable.
 
 ### 11.3 Encoding — RESOLVED
 

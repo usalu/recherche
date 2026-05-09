@@ -38,8 +38,8 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 
 ## 3. State at handoff
 
-- 2,993 nodes, 8,766 edges, 0 dangling endpoints, 0 type mismatches.
-- 23 relation labels. Step-1 gap batches done: 248 `has_reuse_strategie` edges from `reuse_einsatz` to `reuse_strategie/Direkte_Wiederverwendung` (50a), 21 `has_fuegung_verbindung` edges from direct-reuse component connection labels (50b), 407 `has_reuse_einsatzstatus` edges from project-status bullets to substantive reuse_einsatz nodes (50c), and 394 `has_prozessphase` edges from Eingriff/Aufbereitung labels (50d).
+- 2,993 nodes, 8,850 edges, 0 dangling endpoints, 0 type mismatches.
+- 24 relation labels. Step-1 gap batches done: 248 `has_reuse_strategie` edges from `reuse_einsatz` to `reuse_strategie/Direkte_Wiederverwendung` (50a), 21 `has_fuegung_verbindung` edges from direct-reuse component connection labels (50b), 407 `has_reuse_einsatzstatus` edges from project-status bullets to substantive reuse_einsatz nodes (50c), 394 `has_prozessphase` edges from Eingriff/Aufbereitung labels (50d), and 84 `has_rueckbauverfahren` edges from explicit dismantling-method labels (50e).
 - 0 edges in the review queue, 0 `rule_low` edges, 0 mojibake titles.
 - `bauteiltyp` = 15 canonical types (matches schema §5 exactly).
 - `material` = 15 (matches schema §6 + Recyclingbeton + Gusseisen).
@@ -53,6 +53,7 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 In order of recent commits (newest → oldest):
 
 ```
+Add Dismantling Edges
 Add Process Edges
 Add Status Edges
 8be3ba73 Add Connection Edges
@@ -77,12 +78,12 @@ If you want to know what each batch did: read the commit message + the diff CSV 
 
 ### Step 1: Extract gap relations from `Gebäude/` tables (BIG, highest value)
 
-**WHAT.** The graph carries 23 relation types. The Entitäten-Mapping tables in `Gebäude/<case>.md` imply ~35. Most case-context relations are still missing as edges:
+**WHAT.** The graph carries 24 relation types. The Entitäten-Mapping tables in `Gebäude/<case>.md` imply ~35. Most case-context relations are still missing as edges:
 
 ```
 Missing relations (from SCHEMA.md §9):
-has_ressourcenquelle, has_beschaffungsweg, has_rueckbauverfahren,
-has_aufbereitungsverfahren, has_logistik, has_funktionswechsel,
+has_ressourcenquelle, has_beschaffungsweg, has_aufbereitungsverfahren,
+has_logistik, has_funktionswechsel,
 has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
 has_tragwerksprinzip,
 has_bauobjektklasse, has_bauobjektrolle, has_bauobjektstatus, has_nutzung,
@@ -103,6 +104,8 @@ Done in batch 50c: `has_reuse_einsatzstatus` from the case-level `Projektstatus`
 
 Done in batch 50d: `has_prozessphase` from explicit `Eingriff/Aufbereitung` labels (394 edges). The extractor maps broad phases such as `Rueckbau`, `Aufbereitung`, `Wiedereinbau`, `Transport`, `Lagerung`, `Pruefung`, and `Identifikation`; labels that are only unknown or not substantive remain skipped.
 
+Done in batch 50e: `has_rueckbauverfahren` from explicit `Eingriff/Aufbereitung` labels (84 edges). Generic `Rueckgewinnung`, plain `Rueckbau`, and `Innenausbau` are intentionally skipped unless the label names a concrete method such as Demontage, Ausbau, selektiver Rueckbau, Bergung, or schonender Rueckbau.
+
 **WHY.** This is what turns "consolidated graph" into the "interconnected readable map" the user described. Right now you can ask "which cases use Holz?" but not "which Holz reuse cases happened in Wohnungsbau in Switzerland with Direct Reuse strategy?" — that needs the case-context edges.
 
 **HOW.**
@@ -111,7 +114,7 @@ Done in batch 50d: `has_prozessphase` from explicit `Eingriff/Aufbereitung` labe
 3. Match each row to its `_database/reuse_einsatz/<case>__NNN__<bauteil>` source (already extracted).
 4. Emit an edge per row-cell using the relation vocabulary.
 5. Write an extractor at `_migration/50_extract_gap_relations.py` modeled on `40_apply_edge_remap.py`.
-6. Continue **one relation at a time** so each batch is reviewable. Good next candidates: process-context relations such as `has_rueckbauverfahren`, `has_aufbereitungsverfahren`, and `has_logistik` from the PROZESS UND LOGISTIK table, or source/procurement relations such as `has_ressourcenquelle` and `has_beschaffungsweg`.
+6. Continue **one relation at a time** so each batch is reviewable. Good next candidates: `has_logistik` from explicit Transport/Lagerung/Materialmatching cues, `has_aufbereitungsverfahren` from stronger Aufbereitung labels, or source/procurement relations such as `has_ressourcenquelle` and `has_beschaffungsweg`.
 7. After each batch: rebuild SQLite, spot-check 3-5 cases against the source `.md`, commit.
 
 **BLAST RADIUS.** Adds new edges only — won't break existing ones if you dedup. You'll roughly double the edge count when this is fully done.

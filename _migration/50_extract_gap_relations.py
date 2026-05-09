@@ -19,6 +19,9 @@ Current batch:
   50d_prozessphase
     Reads the promoted "Eingriff/Aufbereitung" label and adds broad
     process-phase edges such as Rueckbau, Aufbereitung, and Wiedereinbau.
+  50e_rueckbauverfahren
+    Reads the same component-level label and adds precise
+    has_rueckbauverfahren edges for named dismantling methods.
 """
 
 from __future__ import annotations
@@ -529,7 +532,6 @@ PROCESS_MEDIUM_CONFIDENCE_TOKENS = (
     "details unbekannt",
 )
 
-
 def normalized(value: str) -> str:
     value = value or ""
     value = value.replace("\u00df", "ss").replace("\u00f8", "o").replace("\u00d8", "O")
@@ -966,6 +968,10 @@ def process_token_matches(segment: str, token: str) -> bool:
     return token in segment
 
 
+def word_matches(segment: str, token: str) -> bool:
+    return bool(re.search(rf"(?<![a-z]){re.escape(token)}(?![a-z])", segment))
+
+
 def map_process_targets(raw_label: str, existing_nodes: set[str]) -> list[str]:
     targets: list[str] = []
     for segment in process_segments(raw_label):
@@ -984,6 +990,60 @@ def process_confidence(raw_label: str) -> str:
     if any(token in label for token in PROCESS_MEDIUM_CONFIDENCE_TOKENS):
         return "rule_medium"
     return "rule_high"
+
+
+def map_rueckbauverfahren_targets(raw_label: str, existing_nodes: set[str]) -> list[str]:
+    targets: list[str] = []
+    for segment in process_segments(raw_label):
+        if (
+            "selektiver ruckbau" in segment
+            or "selektiver rueckbau" in segment
+            or "selektive demontage" in segment
+            or "selektiver ausbau" in segment
+            or word_matches(segment, "selektiv")
+        ):
+            target = "rueckbauverfahren/Selektiver_Rueckbau"
+            if target in existing_nodes and target not in targets:
+                targets.append(target)
+            continue
+
+        if (
+            "demontage" in segment
+            or "demontiert" in segment
+            or "demontier" in segment
+            or word_matches(segment, "abbau")
+        ):
+            target = "rueckbauverfahren/Demontage"
+            if target in existing_nodes and target not in targets:
+                targets.append(target)
+
+        if (
+            word_matches(segment, "ausbau")
+            or "ausgebaut" in segment
+            or word_matches(segment, "entnahme")
+        ):
+            target = "rueckbauverfahren/Ausbau_von_Bauteilen"
+            if target in existing_nodes and target not in targets:
+                targets.append(target)
+
+        if (
+            "schonender ruckbau" in segment
+            or "schonender rueckbau" in segment
+            or "zerstoerungsarme bergung" in segment
+            or "zerstorungsarme bergung" in segment
+            or "bergung" in segment
+            or "geborgen" in segment
+            or "bergen" in segment
+            or "harvesting" in segment
+            or "oogsten" in segment
+            or "geerntet" in segment
+            or word_matches(segment, "ernte")
+        ):
+            target = "rueckbauverfahren/Zerstoerungsarme_Bergung"
+            if target in existing_nodes and target not in targets:
+                targets.append(target)
+
+    return targets
 
 
 def build_connection_edges(
@@ -1226,6 +1286,83 @@ def build_process_phase_edges(
     return edge_rows + additions, additions, stats, skipped
 
 
+def build_rueckbauverfahren_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    existing_keys = existing_edge_keys(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    reuse_rows = [
+        row for row in load_csv(NODE_INVENTORY)
+        if row["entity"] == "reuse_einsatz"
+    ]
+
+    for node_row in sorted(reuse_rows, key=lambda row: row["typed_path"]):
+        markdown = load_reuse_markdown(node_row)
+        raw_label = extract_markdown_bullet(markdown, "Eingriff/Aufbereitung")
+        if not raw_label:
+            stats["rows_without_process_label"] += 1
+            continue
+
+        frontmatter = parse_simple_frontmatter(markdown)
+        if not reusable_enough(frontmatter):
+            stats["rueckbau_rows_skipped_not_reusable"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "legacy_path": "",
+                "raw_label": raw_label,
+                "reason": "not_reusable_enough_for_rueckbauverfahren_edge",
+            })
+            continue
+
+        targets = map_rueckbauverfahren_targets(raw_label, existing_nodes)
+        if not targets:
+            stats["rueckbau_labels_skipped"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "legacy_path": "",
+                "raw_label": raw_label,
+                "reason": "no_precise_rueckbauverfahren_target",
+            })
+            continue
+
+        confidence = process_confidence(raw_label)
+        for target in targets:
+            key = (node_row["typed_path"], "has_rueckbauverfahren", target)
+            if key in existing_keys:
+                stats["duplicates_skipped"] += 1
+                continue
+            target_entity, target_id = target.split("/", 1)
+            addition = {
+                "source": node_row["typed_path"],
+                "source_entity": "reuse_einsatz",
+                "source_id": node_row["id"],
+                "relation": "has_rueckbauverfahren",
+                "target": target,
+                "target_entity": target_entity,
+                "target_id": target_id,
+                "field": "BAUTEIL-INVENTAR:Eingriff/Aufbereitung",
+                "raw_label": raw_label,
+                "confidence": confidence,
+                "resolution_rule": "label_50e_rueckbauverfahren_eingriff_aufbereitung",
+                "legacy_path": "",
+                "original_source": node_row["typed_path"],
+                "original_relation": "has_rueckbauverfahren",
+                "original_target": target,
+                "edge_cleaning": "added_gap_50e",
+            }
+            additions.append(addition)
+            existing_keys.add(key)
+
+    stats["reuse_rows_scanned"] = len(reuse_rows)
+    stats["additions"] = len(additions)
+    stats["sources_with_additions"] = len({row["source"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
 def write_diff(batch_name: str, additions: list[dict[str, str]], skipped: list[dict[str, str]], stats: Counter[str]) -> None:
     diff_path = REPORT_DIR / f"50_gap_relation_diff_{batch_name}.csv"
     with diff_path.open("w", encoding="utf-8", newline="") as handle:
@@ -1327,6 +1464,7 @@ BATCHES = {
     "50b_fuegung_verbindung": build_connection_edges,
     "50c_reuse_einsatzstatus": build_status_edges,
     "50d_prozessphase": build_process_phase_edges,
+    "50e_rueckbauverfahren": build_rueckbauverfahren_edges,
 }
 
 
