@@ -38,12 +38,13 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 
 ## 3. State at handoff
 
-- 2,987 nodes, 7,696 edges, 0 dangling endpoints, 0 type mismatches.
+- 2,987 nodes, 7,944 edges, 0 dangling endpoints, 0 type mismatches.
+- 20 relation labels. First Step-1 gap batch is done: 248 `has_reuse_strategie` edges from `reuse_einsatz` to `reuse_strategie/Direkte_Wiederverwendung` (batch 50a).
 - 0 edges in the review queue, 0 `rule_low` edges, 0 mojibake titles.
 - `bauteiltyp` = 15 canonical types (matches schema §5 exactly).
 - `material` = 15 (matches schema §6 + Recyclingbeton + Gusseisen).
 - Every node `index.md` carries the German prose (Option A is done — Tolaria browsing shows real content).
-- Branch: `wip/kinan2`. ~10 commits ahead of `main`. Not pushed.
+- Branch: `wip/kinan2`. Not pushed.
 
 ---
 
@@ -52,6 +53,7 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 In order of recent commits (newest → oldest):
 
 ```
+50a add direct reuse strategy gap edges from Gebaeude tables
 8ae0e93 update schema integrity-status: 5 of 6 issues resolved
 34b29fb apply 27 manual-review decisions; close held-back edge queue
 4ed2213 finish edge consolidation: per-case dispatch (40d) + folder archive (41)
@@ -71,11 +73,11 @@ If you want to know what each batch did: read the commit message + the diff CSV 
 
 ### Step 1: Extract gap relations from `Gebäude/` tables (BIG, highest value)
 
-**WHAT.** The graph carries 19 relation types. The Entitäten-Mapping tables in `Gebäude/<case>.md` imply ~35. Most case-context relations are missing as edges:
+**WHAT.** The graph carries 20 relation types. The Entitäten-Mapping tables in `Gebäude/<case>.md` imply ~35. Most case-context relations are still missing as edges:
 
 ```
 Missing relations (from SCHEMA.md §9):
-has_reuse_strategie, has_reuse_einsatzstatus, has_ressourcenquelle,
+has_reuse_einsatzstatus, has_ressourcenquelle,
 has_beschaffungsweg, has_prozessphase, has_rueckbauverfahren,
 has_aufbereitungsverfahren, has_logistik, has_funktionswechsel,
 has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
@@ -90,6 +92,8 @@ involves_foerderprogramm, has_programm_kontext,
 has_methode, has_wirtschaft
 ```
 
+Done in batch 50a: `has_reuse_strategie` for high-precision direct-reuse rows (248 edges). Remaining strategy variants such as adaptive reuse, Bestandserhalt, DfD, upcycling, and refurbishment still need a more careful row-level pass before adding edges.
+
 **WHY.** This is what turns "consolidated graph" into the "interconnected readable map" the user described. Right now you can ask "which cases use Holz?" but not "which Holz reuse cases happened in Wohnungsbau in Switzerland with Direct Reuse strategy?" — that needs the case-context edges.
 
 **HOW.**
@@ -98,7 +102,7 @@ has_methode, has_wirtschaft
 3. Match each row to its `_database/reuse_einsatz/<case>__NNN__<bauteil>` source (already extracted).
 4. Emit an edge per row-cell using the relation vocabulary.
 5. Write an extractor at `_migration/50_extract_gap_relations.py` modeled on `40_apply_edge_remap.py`.
-6. Suggest doing **one relation at a time** so each batch is reviewable: e.g. start with `has_reuse_strategie` (column "Reuse-Strategie" in BAUTEIL-INVENTAR? or inferred from "Eingriff/Aufbereitung"?) — pick whichever has the cleanest column mapping.
+6. Continue **one relation at a time** so each batch is reviewable. Good next candidates: `has_reuse_einsatzstatus` from project status / unbuilt / temporary wording, or process-context relations such as `has_prozessphase`, `has_rueckbauverfahren`, `has_aufbereitungsverfahren`, and `has_logistik` from the PROZESS UND LOGISTIK table.
 7. After each batch: rebuild SQLite, spot-check 3-5 cases against the source `.md`, commit.
 
 **BLAST RADIUS.** Adds new edges only — won't break existing ones if you dedup. You'll roughly double the edge count when this is fully done.

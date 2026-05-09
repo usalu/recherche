@@ -217,34 +217,35 @@ This separation prevents the "Direct Reuse overcounting" failure: temporary, pla
 
 ## 9. Relation vocabulary (edges)
 
-Current confirmed edges use 19 relation labels, every relation has exactly one target entity type (verified — 0 mismatches in the 7,695 confirmed edges):
+Current confirmed edges use 20 relation labels, every relation has exactly one target entity type (verified — 0 mismatches in the 7,944 confirmed edges):
 
 | Relation | Source → Target | Count |
 |---|---|---:|
 | `belongs_to_fallstudie` | `*` → `fallstudie` | 1,618 |
 | `belongs_to_projekt` | `*` → `projekt` | 1,492 |
-| `has_bauteiltyp` | `reuse_einsatz` → `bauteiltyp` | 700 |
+| `has_bauteiltyp` | `reuse_einsatz` → `bauteiltyp` | 637 |
 | `installed_in_bauobjekt` | `reuse_einsatz` → `bauobjekt` | 637 |
 | `measured_on_bauobjekt` | `datenpunkt` → `bauobjekt` | 617 |
 | `measures_kennwertdefinition` | `datenpunkt` → `kennwertdefinition` | 609 |
-| `uses_material` | `reuse_einsatz` → `material` | 554 |
-| `has_huerde` | `reuse_einsatz` → `huerde` | 391 |
+| `uses_material` | `reuse_einsatz` → `material` | 553 |
+| `has_huerde` | `reuse_einsatz` → `huerde` | 442 |
 | `has_akteurrolle` | `akteur_beteiligung` → `akteurrolle` | 298 |
+| `has_reuse_strategie` | `reuse_einsatz` → `reuse_strategie` | 248 |
 | `relates_to_bauobjekt` | `akteur_beteiligung` → `bauobjekt` | 238 |
-| `has_bewertungslogik_abgrenzung` | `reuse_einsatz` → `bewertungslogik_abgrenzung` | 170 |
+| `has_bewertungslogik_abgrenzung` | `reuse_einsatz` → `bewertungslogik_abgrenzung` | 164 |
 | `has_projekt` | `fallstudie` → `projekt` | 89 |
-| `has_bauobjekt` | `projekt` → `bauobjekt` | 88 |
+| `has_bauobjekt` | `fallstudie` → `bauobjekt` | 88 |
 | `part_of_reuse_kette` | `reuse_kettenstation` → `reuse_kette` | 84 |
 | `has_pruefung_nachweis` | `reuse_einsatz` → `pruefung_nachweis` | 48 |
 | `involves_akteur` | `akteur_beteiligung` → `akteur` | 44 |
+| `has_tragwerkstyp` | `reuse_einsatz` → `tragwerkstyp` | 26 |
 | `references_norm` | `reuse_einsatz` → `norm` | 9 |
-| `has_tragwerkstyp` | `reuse_einsatz` → `tragwerkstyp` | 6 |
 | `has_leistungsanforderung` | `reuse_einsatz` → `leistungsanforderung` | 3 |
 
 **Gaps to fill** (relations the case data implies but the graph doesn't yet carry — see §11):
 
 ```
-has_reuse_strategie, has_reuse_einsatzstatus, has_ressourcenquelle,
+has_reuse_einsatzstatus, has_ressourcenquelle,
 has_beschaffungsweg, has_prozessphase, has_rueckbauverfahren,
 has_aufbereitungsverfahren, has_logistik, has_funktionswechsel,
 has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
@@ -290,7 +291,7 @@ Do **not** edit:
 
 ### 11.2 Sparse relations — STILL OPEN
 
-The graph has 7,696 edges across 19 relations. Many entities exist as folders but are not yet wired into the graph (see §9 gaps). The Entitäten-Mapping tables in `Gebäude/` contain most of this missing information; it just hasn't been promoted to edges yet. Highest-value next pass.
+The graph has 7,944 edges across 20 relations. Batch 50a promoted 248 high-precision `has_reuse_strategie` edges for direct reuse from the `Gebäude/` Entitäten-Mapping tables. Many other case-context relations remain sparse (see §9 gaps); continue one relation at a time so each batch stays reviewable.
 
 ### 11.3 Encoding — RESOLVED
 
