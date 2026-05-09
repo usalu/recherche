@@ -5,7 +5,7 @@ node_kind: "knot"
 migration_status: "migrated_phase1_stable_knots"
 migration_action: "move_as_knot"
 title: "Brandschutzkonflikt"
-legacy_type: "HÃ¼rde"
+legacy_type: "Hürde"
 legacy_paths:
   - "huerde\Brandschutzkonflikt.md"
 target_primary: "huerde/Brandschutzkonflikt"
@@ -18,7 +18,7 @@ risk_flags: ""
 
 - Target: huerde/Brandschutzkonflikt
 - Legacy source count: 1
-- Legacy types: HÃ¼rde
+- Legacy types: Hürde
 - Migration actions: move_as_knot
 - Secondary targets: 
 - Risk flags: 

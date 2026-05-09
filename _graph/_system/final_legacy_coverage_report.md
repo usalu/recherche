@@ -7,10 +7,10 @@
 
 ## Entity Counts
 
-- akteur: 56
+- akteur: 65
 - akteur_beteiligung: 238
 - akteurleistung: 0
-- akteurrolle: 0
+- akteurrolle: 21
 - akteurtyp: 0
 - aufbereitungsverfahren: 7
 - bauaufgabe_intervention: 3
@@ -21,12 +21,12 @@
 - bauobjektstatus: 0
 - bausystem: 3
 - bauteilebene: 0
-- bauteiltyp: 20
+- bauteiltyp: 53
 - bauteilzustand: 0
 - bauweise: 2
 - beleg: 0
 - beschaffungsweg: 2
-- bewertungslogik_abgrenzung: 0
+- bewertungslogik_abgrenzung: 7
 - datenmodell: 9
 - datenpunkt: 619
 - datenqualitaet: 0
@@ -36,15 +36,15 @@
 - fuegung_verbindung: 12
 - funktionswechsel: 0
 - gebaeudetypologie: 0
-- huerde: 13
-- kennwertdefinition: 5
+- huerde: 30
+- kennwertdefinition: 31
 - kontextmerkmal: 2
 - leistungsanforderung: 13
 - logistik: 6
-- material: 14
+- material: 27
 - meta: 6
 - methode: 11
-- norm: 8
+- norm: 9
 - nutzung: 0
 - ort: 12
 - plattformfunktion: 0

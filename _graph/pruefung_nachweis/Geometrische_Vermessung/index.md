@@ -5,7 +5,7 @@ node_kind: "knot"
 migration_status: "migrated_phase1_stable_knots"
 migration_action: "move_as_knot"
 title: "Geometrische Vermessung"
-legacy_type: "PrÃ¼fung"
+legacy_type: "Prüfung"
 legacy_paths:
   - "pruefung\Geometrische_Vermessung.md"
 target_primary: "pruefung_nachweis/Geometrische_Vermessung"
@@ -18,7 +18,7 @@ risk_flags: ""
 
 - Target: pruefung_nachweis/Geometrische_Vermessung
 - Legacy source count: 1
-- Legacy types: PrÃ¼fung
+- Legacy types: Prüfung
 - Migration actions: move_as_knot
 - Secondary targets: 
 - Risk flags: 
