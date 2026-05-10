@@ -26,24 +26,36 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 | `_database/_system/reuse_ontology.sqlite` | Derived | Built from the folder tree |
 | `_database/_edges/clean_confirmed_edges.csv` | Derived | The graph as a CSV |
 | `Gebäude/` | **LIVE — extraction source** | 76 hand-written case-study `.md` files with structured Entitäten-Mapping tables. New cases get added here, then extracted into `_database/`. |
-| `_graph/` | Frozen | Earlier migration staging. Provenance only. **Do not edit.** |
-| `_manual_review/` | Frozen | What's left of held-back nodes. Mostly emptied. |
-| `_extract/` | Frozen | One-shot extraction snapshot from 2026-05-08 |
-| `_migration/` | Frozen tooling | All build/repair/migration scripts and decision logs. **Do not run the `migrate_phase*.ps1` scripts** — those built the original tree, which already ran. The scripts you might run are listed in §6. |
-| `_archive/dropped_knots/` | Provenance | Knot folders dropped during consolidation; original prose preserved in case it should be folded back later. |
-| Top-level legacy folders (`akteur/`, `projekt/`, `material/`, …) | Frozen | Original Tolaria knowledge before migration. **Do not edit.** Possible archive candidate but Tolaria may need them — confirm with user first. |
-| Top-level `*.md` (`projekt.md`, `material.md`, `interview.md`, …) | Tolaria type stubs | Define Tolaria's UI types (icon/color). Names mostly don't match the new ontology — needs cleanup but Tolaria-impact unknown. |
+| `gebaeude/` | User-managed | Separate from `Gebäude/`. User will update independently. |
+| `_migration/` | Frozen tooling | All build/repair/migration scripts, batch reports, and decision logs. The scripts you might run are listed in §6. |
+| `_archive/legacy/` | Frozen | 35 original Tolaria knowledge folders (akteur/, material/, _graph/, etc.) moved here during cleanup. Provenance only. |
+| `_archive/dropped_knots/` | Provenance | Knot folders dropped during consolidation; original prose preserved. |
+| Top-level `*.md` | Tolaria type stubs | 27 files, each named after a canonical entity type (e.g. `material.md`, `bauteiltyp.md`). Define Tolaria's UI types (icon/color). All names now match the ontology. |
 
 ---
 
 ## 3. State at handoff
 
-- 2,993 nodes, 8,850 edges, 0 dangling endpoints, 0 type mismatches.
-- 24 relation labels. Step-1 gap batches done: 248 `has_reuse_strategie` edges from `reuse_einsatz` to `reuse_strategie/Direkte_Wiederverwendung` (50a), 21 `has_fuegung_verbindung` edges from direct-reuse component connection labels (50b), 407 `has_reuse_einsatzstatus` edges from project-status bullets to substantive reuse_einsatz nodes (50c), 394 `has_prozessphase` edges from Eingriff/Aufbereitung labels (50d), and 84 `has_rueckbauverfahren` edges from explicit dismantling-method labels (50e).
+- **3,043 nodes, 9,256 edges, 0 dangling endpoints, 0 type mismatches.**
+- 30 relation labels populated. Gap batches completed:
+  - **50a** `has_reuse_strategie`: 248 edges
+  - **50b** `has_fuegung_verbindung`: 21 edges
+  - **50c** `has_reuse_einsatzstatus`: 407 edges
+  - **50d** `has_prozessphase`: 394 edges
+  - **50e** `has_rueckbauverfahren`: 84 edges
+  - **50f** `located_in_ort`: 74 edges (53 city-level ort nodes auto-created)
+  - **50g** `has_huerde`: 284 edges (28 hürde knots matched via token rules)
+  - **50h** `has_pruefung_nachweis`: 4 edges
+  - **50i** `has_beschaffungsweg`: 17 edges
+  - **50j** `has_aufbereitungsverfahren`: 27 edges
 - 0 edges in the review queue, 0 `rule_low` edges, 0 mojibake titles.
 - `bauteiltyp` = 15 canonical types (matches schema §5 exactly).
 - `material` = 15 (matches schema §6 + Recyclingbeton + Gusseisen).
-- Every node `index.md` carries the German prose (Option A is done — Tolaria browsing shows real content).
+- Every node `index.md` carries the German prose.
+- **Root is clean:** 5 directories + 29 `.md` files (27 type stubs + AGENTS.md + HANDOFF.md).
+- 35 legacy root folders archived to `_archive/legacy/`.
+- All root `.md` stubs renamed to canonical entity names.
+- Person entries (`dirk-hebel.md`, `kerstin-müller.md`) promoted to `_database/akteur/`.
 - Branch: `wip/kinan2`. Not pushed.
 
 ---
@@ -76,18 +88,17 @@ If you want to know what each batch did: read the commit message + the diff CSV 
 
 ## 5. What to do next — in priority order
 
-### Step 1: Extract gap relations from `Gebäude/` tables (BIG, highest value)
+### Step 1: Extract remaining gap relations (CONTINUING)
 
-**WHAT.** The graph carries 24 relation types. The Entitäten-Mapping tables in `Gebäude/<case>.md` imply ~35. Most case-context relations are still missing as edges:
+**WHAT.** The graph now carries 30 populated relation types. Several are still missing:
 
 ```
-Missing relations (from SCHEMA.md §9):
-has_ressourcenquelle, has_beschaffungsweg, has_aufbereitungsverfahren,
-has_logistik, has_funktionswechsel,
+Remaining missing relations (from SCHEMA.md §9):
+has_ressourcenquelle, has_logistik, has_funktionswechsel,
 has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
 has_tragwerksprinzip,
 has_bauobjektklasse, has_bauobjektrolle, has_bauobjektstatus, has_nutzung,
-has_bauaufgabe_intervention, located_in_ort,
+has_bauaufgabe_intervention,
 has_rechtliche_bedingung, has_schadstoff, has_kontextmerkmal,
 has_zertifizierung_bewertungssystem, has_datenmodell, has_dokumenttyp,
 has_tooltyp, uses_software_digitaltool,
