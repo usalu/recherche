@@ -1,12 +1,12 @@
 ---
 name: Neo4j schema catalogue
-overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. Six instance Labels (:Fallbeispiel, :Bauteilgruppe, :Akteur, :Quelle, :SoftwareDigitaltool, :Wiederverwendungskette) and 37 vocabulary Labels (covering every folder under _database/). Five generic edges (IST, HAT, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes.
+overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. Six instance Labels (:Fallbeispiel, :Bauteilgruppe, :Akteur, :Quelle, :SoftwareDigitaltool, :Wiederverwendungskette) and 38 vocabulary Labels (covering every folder under _database/). Five generic edges (IST, HAT, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes.
 todos:
   - id: spec-skeleton
     content: "Create _database/_system/NEO4J_SCHEMA.md with the 4-section structure: §1 Node-type catalogue, §2 Nodes (per-Label property tables), §3 Edge-type catalogue, §4 Edges (per-edge-type property tables). Plus appendices for principles, constraints, coverage (every folder → Label/drop), renamings."
     status: pending
   - id: write-1
-    content: "Write §1 Node-type catalogue: 6 instance Labels and the 37 vocabulary Labels, with one-line purpose each. Confirm against _database/ folder list."
+    content: "Write §1 Node-type catalogue: 6 instance Labels and the 38 vocabulary Labels, with one-line purpose each. Confirm against _database/ folder list."
     status: pending
   - id: write-2
     content: "Write §2 Nodes: per-Label property tables. ONLY metadata properties — no body, no legacy_paths, no raw labels, no build_status."
@@ -164,9 +164,15 @@ Neo4j_Schema
 ├── KNOTENTYP :Kontextmerkmal:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bestandserhalt_Policy, Pilotprojekt
-├── KNOTENTYP :Ort:Vokabular
-│   ├── Knoteneigenschaften: id (Pflicht), iso_country?, koordinaten? (string)
-│   └── Knoten: Aarhus, Arnhem, Asse, Barcelona, Basel, Berlin, Berlin_Neukoelln, Bleijerheide, Boston, Boulder, Brighton, Broethen, Bruessel, Colombelles, Copenhagen, Den_Bosch, Deutschland, Dilbeek, Duiven, Eindhoven, Enschede, Europa, Evere, Gentbrugge, Gladsaxe, Groeditz, Hackbridge, Hannover, Hastings, Helsinki, Kamikatsu, Kindl_Areal_Standort, Kloetinge, Leiden, Lexington, Liege, London, Lo_Reninge, Luxembourg_Limpertsberg, Maassluis, Mehrow, Mouscron, Mueggelsee, Muehlhausen, Muenchen, Muenster, Oslo, Paris, Paso_Robles, Plauen, Rotterdam, Schildow, Schweiz, Southwark, Stains, Tampere, Utrecht, Volkenroda, Walkeweg, Winterthur, Zuerich
+├── KNOTENTYP :Entwurfsentscheidung:Vokabular
+│   ├── Knoteneigenschaften: id (Pflicht), beschreibung? (string)
+│   └── Knoten: Etagenhoehe_durch_Bauteilmass, Fassadenschicht_als_Toleranzpuffer, Doppelfenster_als_Kastenfenster, Achsraster_nach_Bestand, Grundriss_nach_Bauteillaenge, Deckenhoehe_nach_Traegerhoehe, Anschlussdetail_angepasst, Erschliessungskern_verschoben
+├── KNOTENTYP :Land:Vokabular
+│   ├── Knoteneigenschaften: id (Pflicht), iso_country? (string)
+│   └── Knoten: (keine Aufzählung im Plan — aus `ort/` klassifiziert)
+├── KNOTENTYP :Stadt:Vokabular
+│   ├── Knoteneigenschaften: id (Pflicht), koordinaten? (string)
+│   └── Knoten: (keine Aufzählung im Plan — aus `ort/` klassifiziert)
 ├── KNOTENTYP :Akteurrolle:Vokabular (nur Wörterbuch; Rolle als Property auf HAT, nicht als IST-Ziel)
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Architektur, Aufbereitung_Refurbishment, Bauausfuehrung, Bauherr_Auftraggeber, Betreiber_Nutzer, Brandschutz_Barrierefreiheit, Fassade, Forschung_Dokumentation, Kunst_Gestaltung, Landschaftsplanung, Materiallieferant, Nachhaltigkeitsberatung, Oeffentliche_Hand, Projektbeteiligte_Unbestimmt, Projektmanagement_Koordination, Pruefung_Qualitaetssicherung, Reuse_Beratung, Rueckbau_Demontage, Stahlbau_Fertigung, TGA_Gebaeudetechnik, Tragwerksplanung
@@ -200,7 +206,8 @@ KANTEN (alle fünf Typen; jede Kante ist eine Instanz zwischen zwei Knoten)
 │   ├── Kanteneigenschaften: art (Pflicht), rolle? (Pflicht wenn art=akteur), anzahl?, intensitaet?, seit?, bis?
 │   └── Kante (Beispielmuster)
 │       ├── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: huerde|prozessphase|pruefung|norm|…}]-> (:Huerde|:Prozessphase|:Norm|…)
-│       └── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: akteur, rolle: "<Akteurrolle.id>"}]-> (:Akteur)
+│       ├── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: akteur, rolle: "<Akteurrolle.id>"}]-> (:Akteur)
+│       └── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: entwurf}]-> (:Entwurfsentscheidung)
 │
 ├── KANTENTYP BENUTZT
 │   ├── Kanteneigenschaften: anzahl?, einheit?, anteil_prozent?, funktion_alt?, funktion_neu?, aufbereitung?
@@ -212,7 +219,8 @@ KANTEN (alle fünf Typen; jede Kante ist eine Instanz zwischen zwei Knoten)
 │   └── Kante (Beispielmuster)
 │       ├── (:Bauteilgruppe) -[GEHÖRT_ZU {rolle: einbauort|herkunft|zwischenlager|verarbeitung|transport}]-> (:Fallbeispiel)
 │       ├── (:Bauteilgruppe) -[GEHÖRT_ZU {rolle: kette, position}]-> (:Wiederverwendungskette)
-│       ├── (:Fallbeispiel) -[GEHÖRT_ZU {rolle: ort}]-> (:Ort)
+│       ├── (:Fallbeispiel) -[GEHÖRT_ZU {rolle: land}]-> (:Land)
+│       ├── (:Fallbeispiel) -[GEHÖRT_ZU {rolle: stadt}]-> (:Stadt)
 │       ├── (:Fallbeispiel) -[GEHÖRT_ZU {rolle: programm}]-> (:Programm)
 │       └── (weitere) je nach Export-Regeln
 │
@@ -753,68 +761,11 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:Kontextmerkmal:Vokabular {id: "Bestandserhalt_Policy"})
   (:Kontextmerkmal:Vokabular {id: "Pilotprojekt"})
 
-:Ort
-  (:Ort:Vokabular {id: "Aarhus"})
-  (:Ort:Vokabular {id: "Arnhem"})
-  (:Ort:Vokabular {id: "Asse"})
-  (:Ort:Vokabular {id: "Barcelona"})
-  (:Ort:Vokabular {id: "Basel"})
-  (:Ort:Vokabular {id: "Berlin"})
-  (:Ort:Vokabular {id: "Berlin_Neukoelln"})
-  (:Ort:Vokabular {id: "Bleijerheide"})
-  (:Ort:Vokabular {id: "Boston"})
-  (:Ort:Vokabular {id: "Boulder"})
-  (:Ort:Vokabular {id: "Brighton"})
-  (:Ort:Vokabular {id: "Broethen"})
-  (:Ort:Vokabular {id: "Bruessel"})
-  (:Ort:Vokabular {id: "Colombelles"})
-  (:Ort:Vokabular {id: "Copenhagen"})
-  (:Ort:Vokabular {id: "Den_Bosch"})
-  (:Ort:Vokabular {id: "Deutschland"})
-  (:Ort:Vokabular {id: "Dilbeek"})
-  (:Ort:Vokabular {id: "Duiven"})
-  (:Ort:Vokabular {id: "Eindhoven"})
-  (:Ort:Vokabular {id: "Enschede"})
-  (:Ort:Vokabular {id: "Europa"})
-  (:Ort:Vokabular {id: "Evere"})
-  (:Ort:Vokabular {id: "Gentbrugge"})
-  (:Ort:Vokabular {id: "Gladsaxe"})
-  (:Ort:Vokabular {id: "Groeditz"})
-  (:Ort:Vokabular {id: "Hackbridge"})
-  (:Ort:Vokabular {id: "Hannover"})
-  (:Ort:Vokabular {id: "Hastings"})
-  (:Ort:Vokabular {id: "Helsinki"})
-  (:Ort:Vokabular {id: "Kamikatsu"})
-  (:Ort:Vokabular {id: "Kindl_Areal_Standort"})
-  (:Ort:Vokabular {id: "Kloetinge"})
-  (:Ort:Vokabular {id: "Leiden"})
-  (:Ort:Vokabular {id: "Lexington"})
-  (:Ort:Vokabular {id: "Liege"})
-  (:Ort:Vokabular {id: "London"})
-  (:Ort:Vokabular {id: "Lo_Reninge"})
-  (:Ort:Vokabular {id: "Luxembourg_Limpertsberg"})
-  (:Ort:Vokabular {id: "Maassluis"})
-  (:Ort:Vokabular {id: "Mehrow"})
-  (:Ort:Vokabular {id: "Mouscron"})
-  (:Ort:Vokabular {id: "Mueggelsee"})
-  (:Ort:Vokabular {id: "Muehlhausen"})
-  (:Ort:Vokabular {id: "Muenchen"})
-  (:Ort:Vokabular {id: "Muenster"})
-  (:Ort:Vokabular {id: "Oslo"})
-  (:Ort:Vokabular {id: "Paris"})
-  (:Ort:Vokabular {id: "Paso_Robles"})
-  (:Ort:Vokabular {id: "Plauen"})
-  (:Ort:Vokabular {id: "Rotterdam"})
-  (:Ort:Vokabular {id: "Schildow"})
-  (:Ort:Vokabular {id: "Schweiz"})
-  (:Ort:Vokabular {id: "Southwark"})
-  (:Ort:Vokabular {id: "Stains"})
-  (:Ort:Vokabular {id: "Tampere"})
-  (:Ort:Vokabular {id: "Utrecht"})
-  (:Ort:Vokabular {id: "Volkenroda"})
-  (:Ort:Vokabular {id: "Walkeweg"})
-  (:Ort:Vokabular {id: "Winterthur"})
-  (:Ort:Vokabular {id: "Zuerich"})
+:Land
+  — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Plan
+
+:Stadt
+  — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Plan
 
 :Akteurrolle
   (:Akteurrolle:Vokabular {id: "Architektur"})
@@ -912,6 +863,8 @@ Same rule for every folder: `_database/material/<x>/` produces `(:Material {id: 
 
 Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they merge into another Label, get renamed, or are dropped.
 
+**Geography exception:** `_database/ort/<id>/` is not mapped to a single `:Ort` Label. On export, each slug becomes either `(:Land:Vokabular {id})` or `(:Stadt:Vokabular {id})` according to a classification rule (country/region vs city/district/site). The plan does not enumerate those node ids.
+
 ## §1.A Instance Labels (6)
 
 | Label | Purpose | Replaces (legacy folders) |
@@ -923,7 +876,7 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | `:SoftwareDigitaltool` | Concrete platform | `software_digitaltool/` |
 | `:Wiederverwendungskette` | OPTIONAL named multi-Bauteilgruppe reuse program | `reuse_kette/` (renamed; `reuse_kettenstation/` dropped) |
 
-## §1.B Vocabulary Labels (37 — every controlled-knot folder mapped)
+## §1.B Vocabulary Labels (38 — every controlled-knot folder mapped; `ort/` splits into two Labels)
 
 Grouped only for reading.
 
@@ -969,9 +922,11 @@ Grouped only for reading.
 - `:Nutzung` ← `nutzung/`
 - `:BauaufgabeIntervention` ← `bauaufgabe_intervention/`
 - `:Kontextmerkmal` ← `kontextmerkmal/`
+- `:Entwurfsentscheidung` ← **new** — no legacy folder; created fresh. Vocabulary Label capturing design adaptations forced by reuse constraints. Connected via `HAT {art:'entwurf'}` from `:Bauteilgruppe` (component-specific) or `:Fallbeispiel` (project-wide). Initial values defined from K.118 example and generalised across all case data.
 
 **Geographie:**
-- `:Ort` ← `ort/`
+- `:Land` ← each qualifying entry from `ort/` (export classification: country / macro-region)
+- `:Stadt` ← each qualifying entry from `ort/` (export classification: city, borough, or project-scale site id)
 
 **Akteure:**
 - `:Akteurrolle` ← `akteurrolle/` (dictionary only — value carried as `rolle` property on HAT edges, no IST edges point here)
@@ -1008,7 +963,7 @@ Grouped only for reading.
 | `bewertungslogik_abgrenzung/` | renamed to `:WiederverwendungsArt` |
 | `reuse_kette/` | renamed to `:Wiederverwendungskette` |
 
-Total: 54 folders → 6 instance Labels + 37 vocabulary Labels + 11 dropped + 4 merged-or-renamed.
+Total: 54 folders → 6 instance Labels + 38 vocabulary Labels + 11 dropped + 4 merged-or-renamed (`ort/` yields two Labels, not two folders).
 
 ---
 
@@ -1135,7 +1090,8 @@ Special additions per vocab Label:
 
 | Label | extra property | notes |
 |---|---|---|
-| `:Ort` | `iso_country: string?`, `koordinaten: string?` | optional geographic metadata |
+| `:Land` | `iso_country: string?` | optional ISO country code |
+| `:Stadt` | `koordinaten: string?` | optional coordinates string |
 | `:Programm` | `programm_typ: string` (req) | `"foerderung"` or `"forschungskontext"` |
 | `:WiederverwendungsArt` | `axis: string` (req) | `"einordnung"` (legacy bewertungslogik values) or `"grundtyp"` (wiederverwendet/original/hybrid — absorbed from dropped :Bauteilgruppentyp) |
 
@@ -1150,15 +1106,15 @@ All vocab Labels carry the second Label `:Vokabular`.
 | `IST` | `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` | vocab | N:1 per axis | classification / status |
 | `HAT` | `:Fallbeispiel`, `:Bauteilgruppe` | vocab (rich) **or** `:Akteur` (with `art:'akteur', rolle:...`) | N:M | qualitative attribute / actor participation |
 | `BENUTZT` | `:Bauteilgruppe`, `:Fallbeispiel` | `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:SoftwareDigitaltool`, `:Datenmodell` | N:M | instrumental usage; quantitative carrier |
-| `GEHÖRT_ZU` | any | `:Fallbeispiel`, `:Wiederverwendungskette`, `:Ort`, `:Programm` | N:1 / N:M | membership / containment / location / chain station / origin |
+| `GEHÖRT_ZU` | any | `:Fallbeispiel`, `:Wiederverwendungskette`, `:Land`, `:Stadt`, `:Programm` | N:1 / N:M | membership / containment / location / chain station / origin |
 | `BELEGT_IN` | any node carrying a citable claim | `:Quelle` | N:M | citation / evidence — the only place source attribution lives |
 
 ## Legacy relations folded in
 
 - **IST:** `has_bauteiltyp`, `has_reuse_einsatzstatus`, `has_reuse_strategie`, `has_bewertungslogik_abgrenzung` (→ `:WiederverwendungsArt`), `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_bauobjektstatus`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`.
-- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung`, `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`.
+- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung`, `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:Bauteilgruppe` or `:Fallbeispiel` to `:Entwurfsentscheidung:Vokabular`.
 - **BENUTZT:** `uses_material`, `uses_software_digitaltool`, `has_methode`, `has_rueckbauverfahren`, `has_aufbereitungsverfahren`.
-- **GEHÖRT_ZU:** `installed_in_bauobjekt` → `rolle:'einbauort'`; new `sourced_from_bauobjekt` → `rolle:'herkunft'`; `part_of_reuse_kette` → `rolle:'kette'` (to `:Wiederverwendungskette`); `located_in_ort` → `rolle:'ort'`; `relates_to_bauobjekt` → `rolle:'fallbeispiel'`; `involves_foerderprogramm` / `has_programm_kontext` → `rolle:'programm'` (to `:Programm`).
+- **GEHÖRT_ZU:** `installed_in_bauobjekt` → `rolle:'einbauort'`; new `sourced_from_bauobjekt` → `rolle:'herkunft'`; `part_of_reuse_kette` → `rolle:'kette'` (to `:Wiederverwendungskette`); `located_in_ort` → split: `rolle:'land'` (to `:Land`) and/or `rolle:'stadt'` (to `:Stadt`) depending on classified target; `relates_to_bauobjekt` → `rolle:'fallbeispiel'`; `involves_foerderprogramm` / `has_programm_kontext` → `rolle:'programm'` (to `:Programm`).
 - **BELEGT_IN:** replaces unresolved `quelle_label` shorthand on every node and every `quelle_id` previously planned as edge property. Replaces the gap relation `documented_in_quelle`. Direction: claim → `:Quelle`.
 
 Dropped legacy relations (no destination): `belongs_to_fallstudie`, `belongs_to_projekt`, `has_projekt`, `has_bauobjekt`, `has_bauobjektklasse`, `has_bauobjektrolle`, `has_tragwerkstyp`, `has_dokumenttyp`, `has_akteurrolle` (target dropped), `measured_on_bauobjekt`, `measures_kennwertdefinition`, `involves_akteur` (collapsed into HAT).
@@ -1181,7 +1137,7 @@ Dropped legacy relations (no destination): `belongs_to_fallstudie`, `belongs_to_
 
 | name | type | req | notes |
 |---|---|---|---|
-| `art` | string | ✓ | one of `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"leistung"`, `"schadstoff"`, `"kontext"`, `"recht"`, `"nutzung"`, `"intervention"`, `"fuegung"`, `"logistik"`, `"wirtschaft"`, `"zertifizierung"`, `"akteur"` |
+| `art` | string | ✓ | one of `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"leistung"`, `"schadstoff"`, `"kontext"`, `"recht"`, `"nutzung"`, `"intervention"`, `"fuegung"`, `"logistik"`, `"wirtschaft"`, `"zertifizierung"`, `"akteur"`, `"entwurf"` |
 | `rolle` | string? | – | required when `art='akteur'`; e.g. `"Architektur"`, `"Tragwerksplanung"`, `"Bauherr_Auftraggeber"`; validates against `:Akteurrolle.id` |
 | `anzahl` | int? | – | multiplicity |
 | `intensitaet` | string? | – | qualitative strength |
@@ -1203,7 +1159,7 @@ Dropped legacy relations (no destination): `belongs_to_fallstudie`, `belongs_to_
 
 | name | type | req | notes |
 |---|---|---|---|
-| `rolle` | string | ✓ | one of `"fallbeispiel"`, `"einbauort"`, `"herkunft"`, `"zwischenlager"`, `"verarbeitung"`, `"transport"`, `"kette"`, `"ort"`, `"programm"` |
+| `rolle` | string | ✓ | one of `"fallbeispiel"`, `"einbauort"`, `"herkunft"`, `"zwischenlager"`, `"verarbeitung"`, `"transport"`, `"kette"`, `"land"`, `"stadt"`, `"programm"` |
 | `position` | int? | – | order in sequence (e.g., chain station number) |
 | `seit` | date? | – | |
 | `bis` | date? | – | |
@@ -1271,7 +1227,7 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 | `:BELEGT` (Quelle → claim) | reversed and renamed to `:BELEGT_IN` (claim → Quelle) |
 | All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties anywhere | dropped — replaced exclusively by `:BELEGT_IN` edges |
 | `Moebelsepearat` value in WiederverwendungsArt | renamed to `Moebel_separat` |
-| `ort/Scwheiz` | renamed to `ort/Schweiz` |
+| `ort/Scwheiz` | renamed to `ort/Schweiz`; export classifies the node as `:Land` or `:Stadt` (no `:Ort`) |
 | Bauteiltyp drop-and-remap (SCHEMA.md §5) | already applied — noted in spec |
 | Material drop-and-merge (SCHEMA.md §6) | already applied — noted in spec |
 
@@ -1280,7 +1236,7 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 ## Final counts
 
 - **6** instance Labels
-- **37** vocabulary Labels
+- **38** vocabulary Labels
 - **5** edge types
 - **0** body / legacy / prose properties (metadata-only)
 
