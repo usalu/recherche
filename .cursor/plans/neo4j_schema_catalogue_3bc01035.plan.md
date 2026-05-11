@@ -1,203 +1,347 @@
 ---
 name: Neo4j schema catalogue
-overview: Design a clean, native property-graph schema for Neo4j that captures all information currently spread across the SQLite database, the edge CSV, and the YAML frontmatter under `_database/`. This first deliverable is the schema catalogue (Labels + Relationships + properties + constraints) as a Markdown spec; the export script and runtime are deferred.
+overview: Design a clean, native Neo4j property-graph schema with a *minimal generic edge vocabulary* (IST, HAT, BENUTZT, GEHÖRT_ZU) and explicit hybrid-modeling rules so the same fact can live as a property, as a node, or as an edge depending on richness. Captures every piece of information currently in `_database/` + `clean_confirmed_edges.csv` + YAML frontmatter. First deliverable is the schema spec as Markdown; export tooling and Neo4j runtime are deferred.
 todos:
   - id: spec-skeleton
-    content: "Create _database/_system/NEO4J_SCHEMA.md with the section skeleton: Design decisions, Node Labels (Families A–D), Relationship Types (Groups G1–G8), Constraints & indexes, Coverage checklist, Renamings appendix."
+    content: "Create _database/_system/NEO4J_SCHEMA.md with the new section skeleton: 1 Modeling philosophy, 2 Generic edge predicates, 3 Hybrid modeling rules, 4 Node Labels + properties, 5 Edge mapping table (legacy relation → generic edge + props), 6 Constraints/indexes, 7 Coverage checklist, 8 Renamings appendix."
     status: pending
-  - id: design-section
-    content: "Write the 'Design decisions' section: naming, one-label-per-entity, fallstudie/projekt/bauobjekt split, reified relations kept vs lifted, :Vokabular super-label, free-text label promotion strategy, Datenpunkt typing, Tragwerkstyp axis split, Quelle redesign, :Einheit vocab, typo fixes."
+  - id: philosophy-section
+    content: "Write §1 'Modeling philosophy': three coexisting modes (Property-only / Edge-only / Reified-node), the principle 'narrow predicate vocabulary, expressive target labels + edge properties', when to use which mode."
+    status: pending
+  - id: predicates-section
+    content: "Write §2 'Generic edge predicates'. Define the 4 core predicates (IST, HAT, BENUTZT, GEHÖRT_ZU) with allowed source/target labels, edge-property schema, and inverse-direction conventions."
+    status: pending
+  - id: hybrid-rules-section
+    content: "Write §3 'Hybrid modeling rules'. For every YAML frontmatter field on ReuseEinsatz / Datenpunkt / Fallstudie / Bauobjekt / AkteurBeteiligung, state which of the three modes is used, with rationale."
     status: pending
   - id: labels-section
-    content: "Enumerate every Node Label across the 4 families. For each Label list: id key, title, properties (with origin in YAML frontmatter or SQLite), uniqueness constraint, indicative node count."
+    content: "Write §4 'Node Labels'. Enumerate Labels across 4 families (Instance / Reified-relation / Vokabular / Auxiliary). For each Label list: id, title, properties (with origin), uniqueness constraint."
     status: pending
-  - id: rels-section
-    content: "Enumerate every Relationship Type across the 8 groups. For each rel-type list: source label(s) → target label, direction, cardinality, edge properties (raw_label, confidence, resolution_rule, seite, excerpt), populated-vs-gap status with current count."
+  - id: edge-mapping-section
+    content: "Write §5 'Edge mapping table'. Map every legacy relation (24 populated + ~30 gap) from clean_confirmed_edges.csv to one of the 4 generic predicates with the required edge property values (art, rolle, anzahl, einheit, ...)."
     status: pending
   - id: constraints-section
-    content: List all UNIQUE constraints, range/text indexes, and the full-text index over German body_md fields.
+    content: "Write §6 'Constraints & indexes'. UNIQUE constraint per Label.id, range indexes on heavy filterable properties, full-text index over German body_md."
     status: pending
   - id: coverage-section
-    content: "Write the coverage checklist: a table mapping every source artefact (folder under _database/<entity>/, every relation in clean_confirmed_edges.csv, every frontmatter field on ReuseEinsatz/Datenpunkt/Fallstudie/Bauobjekt) to its destination in the new schema. Explicitly list the ~30 gap relations from SCHEMA.md §9 as schema-present, data-empty."
+    content: "Write §7 'Coverage checklist'. Verification table proving no source artefact is lost: every folder under _database/<entity>/, every relation in clean_confirmed_edges.csv, every YAML field has a destination."
     status: pending
   - id: renamings-appendix
-    content: "Renamings appendix: Moebelsepearat → Moebel_separat, ort/Scwheiz → ort/Schweiz, tragwerkstyp split (wiederverwendetes_Tragwerk, demontierbares_Tragwerk → ReuseEinsatz.reuse_property), and the bauteiltyp/material drop-and-remap table from SCHEMA.md §5/§6 marked as 'already applied'."
+    content: "Write §8 'Renamings & taxonomy fixes': Moebelsepearat→Moebel_separat, ort/Scwheiz→ort/Schweiz, tragwerkstyp axis split (wiederverwendetes/demontierbares lifted to ReuseEinsatz property), bauteiltyp/material drop-and-remap table from SCHEMA.md §5/§6."
     status: pending
-isProject: false
 ---
 
 ## Goal
 
-Produce one authoritative Markdown spec at `_database/_system/NEO4J_SCHEMA.md` that:
+Produce one authoritative Markdown spec at `_database/_system/NEO4J_SCHEMA.md` that defines a native Neo4j property-graph schema using **only 4 generic edge types** (extensible if absolutely needed) and **three coexisting modeling modes** so each fact lands in its most natural shape — sometimes a property, sometimes only an edge to a node, sometimes a fully reified node with its own edges.
 
-- Lists every Neo4j **Node Label** (with properties + uniqueness keys) we will create.
-- Lists every Neo4j **Relationship Type** (with direction, endpoint labels, properties, cardinality).
-- Spells out the design decisions that fix the inconsistencies flagged in [DATABASE_REVIEW_2026-05-11.md](DATABASE_REVIEW_2026-05-11.md).
-- Maps every source artefact (folder under `_database/<entity>/`, edge row in `_database/_edges/clean_confirmed_edges.csv`, YAML frontmatter field) to where it lives in the new schema, so we can verify nothing is lost.
-
-No code, no Neo4j instance, no export tooling — those come after the schema is signed off.
+No code, no Neo4j instance — just the schema spec.
 
 ---
 
-## Design decisions (will be the first section of the spec)
+## §1 Modeling philosophy — three coexisting modes
 
-1. **Naming conventions.** Domain is German → keep German labels in PascalCase (`:Fallstudie`, `:ReuseEinsatz`, `:Bauteiltyp`). Relationships in SCREAMING_SNAKE following current edge names (`HAS_BAUTEILTYP`, `USES_MATERIAL`). This is also Neo4j idiom and lets the existing `clean_confirmed_edges.csv` be uppercase-mapped 1:1.
+The spec will codify these three modes as legitimate choices, **not** mistakes:
 
-2. **One Label per entity type, not a generic `:Node`.** The current SQLite table `nodes` carries `entity` as a column; Neo4j gets that for free via labels. Unique constraint per label: `CREATE CONSTRAINT FOR (n:<Label>) REQUIRE n.id IS UNIQUE`.
+- **Mode A — Property on the node.** Used when the value is intrinsic, unshared, and has no internal structure. Example: `:ReuseEinsatz.bauteil_label = "Stahlträger / Stützen"`, `:Datenpunkt.wert_raw = "250 / 312 / 400"`.
 
-3. **Resolve the "Fallstudie / Projekt / Bauobjekt share the same id" problem.** Keep them as three distinct nodes (they model three different things: research container, architectural project, physical building) joined by `(:Fallstudie)-[:HAS_PROJEKT]->(:Projekt)-[:REALIZES_BAUOBJEKT]->(:Bauobjekt)`. The shared id stops being a problem because Neo4j scopes uniqueness by label.
+- **Mode B — Edge to a vocab node (no edge properties).** Used when the value is a shared taxonomy term carrying its own knowledge body (German prose in `_database/<vocab>/<id>/index.md`). Example: `(:ReuseEinsatz)-[:HAT]->(:Huerde {id: 'Toleranzen'})`. Multiple `:ReuseEinsatz` nodes share the same `:Huerde` node.
 
-4. **Reified relationships kept where they carry context, lifted to edges where they don't.**
-   - `:AkteurBeteiligung` stays as a node — it carries the 3-way relation `actor × case × role` plus optional time/phase, which a plain edge would lose.
-   - `:BauobjektBeteiligung` stays for the same reason in `reuse_kette` context.
-   - `:Datenpunkt` stays as a node — it's a measurement with `wert`, `einheit`, `bilanzgrenze`, `vertrauensgrad`, multiple source citations.
-   - `:ReuseKettenstation` stays.
-   - Edge-as-edge for `:HAS_BAUTEILTYP` etc.
+- **Mode C — Reified node with edges and properties.** Used when the relation itself has structure (quantity, role, time, multiple participants). Example: `(:ReuseEinsatz)-[:BENUTZT]->(:Materialeinsatz {anzahl: 98, einheit: "t", anteil_prozent: 95})-[:IST]->(:Material {id: "Stahl"})`. Or the existing `:AkteurBeteiligung` for actor × case × role.
 
-5. **Super-label `:Vokabular` on all controlled-knot Labels.** Lets queries do `MATCH (v:Vokabular)` to enumerate the taxonomy without listing every label. Heavy/instance nodes do NOT get `:Vokabular`.
+**Decision rule (will be in §1):**
 
-6. **Promote free-text `_label` fields to explicit edges where the target exists; keep as properties otherwise.**
-   - `quelle_label` "S4, S2" → split, resolve against `:Quelle` nodes (which need to be created from each case's source register), create `[:CITES {raw_label: 'S4'}]` edges. Where resolution fails, retain `quelle_label_raw` as a property on the node.
-   - `herkunft_label` → if a `:Bauobjekt` with that name exists, create `[:SOURCED_FROM_BAUOBJEKT]`. Otherwise keep `herkunft_label` as a property.
-   - `alte_funktion` / `neue_funktion` → keep as properties on `:ReuseEinsatz` for now; future enhancement is `(:ReuseEinsatz)-[:FUNKTIONSWECHSEL_FROM]->(:Funktion)` + `[:FUNKTIONSWECHSEL_TO]`.
-   - `bauteil_label`, `material_label` → keep as properties on `:ReuseEinsatz` in parallel with the canonical `[:HAS_BAUTEILTYP]` / `[:USES_MATERIAL]` edges (preserves the fine-grained label per the §4 granularity principle).
-
-7. **Datenpunkt becomes a typed measurement.**
-   - `wert_raw` (string, as-is, e.g. `"250 / 312 / 400"`)
-   - `wert_values` (list of floats, parsed from German number format)
-   - `einheit_raw` (string), `einheit_normalized` (controlled — see vocab `:Einheit`)
-   - `vertrauensgrad` → edge `[:HAS_DATENQUALITAET]->(:Datenqualitaet)` plus property
-   - `bilanzgrenze`, `methode_text` as properties
-   - Multiple `quelle_label` entries → multiple `[:CITES]` edges
-   - Add `:CONTRADICTS` self-relationship between datenpunkt nodes with the same `kennwertdefinition` but different values, when explicitly flagged.
-
-8. **Split the `:Tragwerkstyp` axis mixing.** Per [SCHEMA.md §3.3 / DATABASE_REVIEW §7.8](_database/_system/SCHEMA.md): `Holztragwerk`, `Stahltragwerk`, `Betontragwerk` stay as `:Tragwerkstyp:Vokabular`. `wiederverwendetes_Tragwerk` and `demontierbares_Tragwerk` move to a property `reuse_property` on the `:ReuseEinsatz` (since they're really reuse-strategy flags). Documented as a one-time migration mapping in the spec.
-
-9. **Fix taxonomy typos in the schema doc.** `Moebelsepearat` → `Moebel_separat`; `ort/Scwheiz` → `ort/Schweiz`. Recorded in a "renamings" appendix so the export script can apply them.
-
-10. **Add a new `:Quelle` model that actually works.** Properties: `id`, `case_id` (since `[S1]` is case-local), `citation_short` (`S1`), `citation_full` (free text from `Gebäude/<case>.md` source register), `quelle_typ` (Publikation, Pre_Demolition_Audit, Materialpass, …), `url`, `seite`. Linked via `[:CITES]` from `:ReuseEinsatz`, `:Datenpunkt`, `:Fallstudie`, `:AkteurBeteiligung`. This becomes a separate Label group "Evidence layer".
-
-11. **Add `:Einheit` controlled vocab** (`m2`, `t`, `kg`, `kgCO2e`, `tCO2e`, `m3`, `Stueck`, `EUR`, …) so `einheit` becomes queryable.
+```
+Is the value a shared taxonomy term?       → at least Mode B
+Does the relation carry quantity/role/time? → consider Mode C
+Otherwise                                   → Mode A
+Always allow Mode A in parallel ("shadow property")
+  for fast property-equality filtering even when Mode B exists.
+```
 
 ---
 
-## Node Labels — to be enumerated in the spec
+## §2 Generic edge predicates — 4 core (extensible)
 
-Grouped into 4 families. Counts are indicative based on §9 of the review.
+Per your direction, only four base predicates. Direction is `(subject)-[:PREDICATE]->(object)`. Edge properties carry the role/quantity/quality.
 
-### Family A — Core instance nodes (~10 Labels, ~2.0k nodes)
+### 2.1 `IST` — classification, identity, status, role
 
-- `:Fallstudie`, `:Projekt`, `:Bauobjekt`, `:Akteur`, `:ReuseEinsatz`, `:ReuseKette`, `:ReuseKettenstation`, `:Datenpunkt`, `:Quelle`, `:SoftwareDigitaltool`
+Says "this thing IS (an instance of / classified as / currently in the state of) the target".
 
-For each Label, the spec will list:
-- `id` (unique key)
-- `title`
-- Properties (e.g. for `:ReuseEinsatz`: `bauteil_label`, `material_label`, `menge_umfang_raw`, `menge_umfang_value`, `menge_umfang_unit`, `alte_funktion`, `neue_funktion`, `herkunft_label`, `pruefung_label`, `norm_recht_label`, `huerde_label`, `body_md`, `legacy_paths`)
-- Source: which folder + frontmatter fields it draws from.
+| Property | Type | Meaning |
+|---|---|---|
+| `seit` | date? | optional start of validity |
+| `bis` | date? | optional end of validity |
+| `gewichtung` | float? | 0..1 confidence if the classification is uncertain |
+| `quelle_id` | string? | source identifier |
 
-### Family B — Reified relation nodes (~3 Labels)
+Typical use:
+- `(:ReuseEinsatz)-[:IST]->(:Bauteiltyp {id: "Stuetze"})` — IS-A a column
+- `(:ReuseEinsatz)-[:IST]->(:ReuseEinsatzstatus {id: "realisiert"})` — IS in state realised
+- `(:ReuseEinsatz)-[:IST]->(:ReuseStrategie {id: "Direkte_Wiederverwendung"})` — IS classified as direct reuse
+- `(:Bauobjekt)-[:IST]->(:Bauobjektklasse {id: "Wohngebaeude"})`
+- `(:AkteurBeteiligung)-[:IST]->(:Akteurrolle {id: "Architektur"})`
+- `(:Datenpunkt)-[:IST]->(:Datenqualitaet {id: "belegt"})`
 
-- `:AkteurBeteiligung` (actor × case × role × optional phase)
-- `:BauobjektBeteiligung` (building × reuse_kette × role)
-- (Possibly future) `:Funktionswechsel` once mining `alte_funktion`/`neue_funktion` is done — flagged as v2.
+### 2.2 `HAT` — possession, manifestation of a qualitative attribute
 
-### Family C — Controlled vocabulary nodes (~40 Labels, all `:<Label>:Vokabular`)
+Says "this thing HAS / exhibits the target as one of its features". Target is typically a vocab term with its own knowledge body.
 
-Bauteil/Material/Tragwerk:
-- `:Bauteiltyp`, `:Material`, `:Bauteilebene`, `:Bauteilzustand`, `:Funktionswechsel`, `:Tragwerkstyp`, `:Tragwerksprinzip`, `:Bauweise`, `:Bausystem`, `:FuegungVerbindung`
+| Property | Type | Meaning |
+|---|---|---|
+| `art` | string? | optional discriminator if the same predicate name covers several axes (e.g., `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"schadstoff"`) |
+| `anzahl` | int? | how many times / multiplicity |
+| `intensitaet` | string? | qualitative strength (`"gering"`, `"mittel"`, `"hoch"`) |
+| `quelle_id` | string? | source |
 
-Reuse semantics:
-- `:ReuseStrategie`, `:ReuseEinsatzstatus`, `:BewertungslogikAbgrenzung`, `:Ressourcenquelle`, `:Beschaffungsweg`
+Typical use:
+- `(:ReuseEinsatz)-[:HAT {art: "huerde"}]->(:Huerde {id: "Toleranzen"})`
+- `(:ReuseEinsatz)-[:HAT {art: "prozessphase"}]->(:Prozessphase {id: "Rueckbau"})`
+- `(:ReuseEinsatz)-[:HAT {art: "pruefung"}]->(:PruefungNachweis {id: "Sichtpruefung"})`
+- `(:ReuseEinsatz)-[:HAT {art: "norm"}]->(:Norm {id: "ISO_20887"})`
+- `(:ReuseEinsatz)-[:HAT {art: "schadstoff"}]->(:Schadstoff {id: "Asbest"})`
+- `(:Bauobjekt)-[:HAT {art: "nutzung"}]->(:Nutzung {id: "Wohnen"})`
 
-Process & methods:
-- `:Prozessphase`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Logistik`, `:Methode`
+### 2.3 `BENUTZT` — instrumental usage
 
-Requirements & barriers:
-- `:Huerde`, `:PruefungNachweis`, `:Leistungsanforderung`, `:Norm`, `:RechtlicheBedingung`, `:Schadstoff`
+Says "this thing USES the target as a material, tool, method, or process to achieve its purpose". The defining predicate for quantitative material/process facts.
 
-Bauobjekt context:
-- `:Bauobjektklasse`, `:Bauobjektrolle`, `:Bauobjektstatus`, `:Nutzung`, `:BauaufgabeIntervention`, `:Kontextmerkmal`
+| Property | Type | Meaning |
+|---|---|---|
+| `anzahl` | float? | quantity used |
+| `einheit` | string? | unit (`"t"`, `"m2"`, `"Stueck"`, …) |
+| `anteil_prozent` | float? | share-of-total in percent (e.g., 95 for "95 % des tragenden Stahls") |
+| `funktion_alt` | string? | original role of the used thing |
+| `funktion_neu` | string? | new role |
+| `aufbereitung` | string? | processing applied (free text, e.g. "Sandstrahlen") |
+| `quelle_id` | string? | source |
 
-Geography:
-- `:Ort` (with self-loop `[:PART_OF]` for hierarchy — Stadt → Land)
+Typical use:
+- `(:ReuseEinsatz)-[:BENUTZT {anzahl: 98, einheit: "t", anteil_prozent: 95}]->(:Material {id: "Stahl"})`
+- `(:ReuseEinsatz)-[:BENUTZT]->(:Methode {id: "Materialpass"})`
+- `(:ReuseEinsatz)-[:BENUTZT]->(:Rueckbauverfahren {id: "Demontage"})`
+- `(:ReuseEinsatz)-[:BENUTZT]->(:Aufbereitungsverfahren {id: "Sandstrahlen"})`
+- `(:ReuseEinsatz)-[:BENUTZT]->(:SoftwareDigitaltool {id: "Madaster"})`
 
-Data & evaluation:
-- `:Kennwertdefinition`, `:Datenqualitaet`, `:ZertifizierungBewertungssystem`, `:Datenmodell`, `:Dokumenttyp`, `:Tooltyp`, `:Einheit` (new)
+### 2.4 `GEHÖRT_ZU` — membership, containment, location, provenance
 
-Actors & roles:
-- `:Akteurrolle`
+Says "this thing BELONGS TO a larger thing", in the broadest sense (parent case, project, building, chain, geographic location, donor source, citing source).
 
-Programs / context:
-- `:Wirtschaft`, `:Foerderprogramm`, `:ProgrammKontext`
+| Property | Type | Meaning |
+|---|---|---|
+| `rolle` | string? | the kind of belonging: `"fallstudie"`, `"projekt"`, `"einbauort"`, `"messung_objekt"`, `"misst"`, `"herkunft"`, `"kette"`, `"ort"`, `"beleg"`, `"foerderprogramm"`, `"kontext"`, `"akteur"`, `"kennwert"` |
+| `position` | int? | ordering when part of a sequence (e.g., chain station number) |
+| `seit` | date? | optional |
+| `bis` | date? | optional |
+| `quelle_id` | string? | source |
 
-### Family D — Auxiliary / housekeeping
+Typical use:
+- `(:ReuseEinsatz)-[:GEHÖRT_ZU {rolle: "fallstudie"}]->(:Fallstudie {id: "K118_..."})`
+- `(:ReuseEinsatz)-[:GEHÖRT_ZU {rolle: "projekt"}]->(:Projekt {id: "K118_..."})`
+- `(:ReuseEinsatz)-[:GEHÖRT_ZU {rolle: "einbauort"}]->(:Bauobjekt {id: "K118_..."})` ← installed_in_bauobjekt
+- `(:ReuseEinsatz)-[:GEHÖRT_ZU {rolle: "herkunft"}]->(:Bauobjekt {id: "ELYS_Basel"})` ← sourced_from (donor)
+- `(:Datenpunkt)-[:GEHÖRT_ZU {rolle: "messung_objekt"}]->(:Bauobjekt)` ← measured_on
+- `(:Datenpunkt)-[:GEHÖRT_ZU {rolle: "misst"}]->(:Kennwertdefinition)` ← measures_kennwertdefinition
+- `(:ReuseEinsatz)-[:GEHÖRT_ZU {rolle: "beleg"}]->(:Quelle {id: "..."})` ← documented_in_quelle / citation (no separate BELEGT_DURCH predicate, per your instruction)
+- `(:Bauobjekt)-[:GEHÖRT_ZU {rolle: "ort"}]->(:Ort {id: "Berlin"})` ← located_in_ort
+- `(:Ort {id: "Berlin"})-[:GEHÖRT_ZU {rolle: "ort"}]->(:Ort {id: "Deutschland"})` ← Stadt-Land hierarchy
+- `(:ReuseKettenstation)-[:GEHÖRT_ZU {rolle: "kette", position: 3}]->(:ReuseKette)`
+- `(:AkteurBeteiligung)-[:GEHÖRT_ZU {rolle: "akteur"}]->(:Akteur)`
+- `(:AkteurBeteiligung)-[:GEHÖRT_ZU {rolle: "fallstudie"}]->(:Fallstudie)`
 
-- `:BuildBatch` (one node per migration batch, with `[:CREATED_BY_BATCH]` from every node — preserves the `build_status: promoted_phase42` traceability without polluting every node).
-- `:LegacyPath` (one node per legacy file path; `[:LEGACY_PATH]` from the canonical node) — optional; can be a property if not needed for queries.
+### 2.5 Extension policy
+
+Add a new predicate **only when** the relation:
+1. cannot be naturally read as IST / HAT / BENUTZT / GEHÖRT_ZU even with a `rolle` / `art` property, and
+2. is queried frequently enough that the discriminator-property pattern hurts.
+
+The spec will explicitly flag any extension and provide rationale. Initial candidates flagged as "not added in v1" per your decision: `BELEGT_DURCH` (folded into `GEHÖRT_ZU {rolle: "beleg"}`), `WIDERSPRICHT` (folded into a property `widerspricht_id` on `:Datenpunkt`).
 
 ---
 
-## Relationship Types — to be enumerated in the spec
+## §3 Hybrid modeling rules — per field
 
-Grouped into 8 families. Direction, endpoint labels, cardinality, and properties listed for each.
+For each frontmatter field on the heavy nodes, state which of Mode A / B / C is used and why.
 
-### G1 — Containment & structural
-`BELONGS_TO_FALLSTUDIE`, `BELONGS_TO_PROJEKT`, `HAS_PROJEKT`, `HAS_BAUOBJEKT`, `REALIZES_BAUOBJEKT`, `PART_OF_REUSE_KETTE`, `PART_OF` (Ort→Ort)
+### 3.1 `:ReuseEinsatz`
 
-### G2 — ReuseEinsatz → canonical taxonomies (the ~30 `HAS_*` relations)
-All 24 populated + the ~30 gap relations enumerated in [SCHEMA.md §9](_database/_system/SCHEMA.md). The spec will tag each as `populated` / `gap` so we know where the data is currently dense vs sparse.
+| Field | Mode | Reason |
+|---|---|---|
+| `bauteil_label` (`"Stahlträger / Stützen"`) | A property | Free-text label, kept verbatim for fine granularity (per SCHEMA.md §4) |
+| canonical `bauteiltyp` (e.g. `Traeger`) | B edge `IST→:Bauteiltyp` | Shared taxonomy with prose body |
+| `material_label` (`"Brettschichtholz"`) | A property | Fine variant |
+| canonical `material` (`Holz`) | B edge `BENUTZT→:Material` | Shared taxonomy |
+| `menge_umfang` (`"98 t; 95 % des tragenden Stahls"`) | A property `menge_raw` + parsed Mode C onto the `BENUTZT` edge `{anzahl: 98, einheit: "t", anteil_prozent: 95}` | Raw kept, parsed values queryable |
+| `alte_funktion` / `neue_funktion` | A properties | No taxonomy of functions exists yet; promote later if needed |
+| `herkunft_label` | A property + (when donor exists as a `:Bauobjekt`) Mode C-light edge `GEHÖRT_ZU {rolle:"herkunft"}` | Donor edge if resolvable, free text otherwise |
+| `pruefung_label` | A property (raw) + multiple Mode B `HAT {art:"pruefung"}` edges | Both: free-text composite + atomic linkable terms |
+| `norm_recht_label` | Same pattern: A + multiple `HAT {art:"norm"}` |
+| `huerde_label` | Same: A + multiple `HAT {art:"huerde"}` |
+| `quelle_label` (`"[S1], [S6]"`) | A property (raw) + multiple Mode B edges `GEHÖRT_ZU {rolle:"beleg"}` to case-scoped `:Quelle` nodes | Splits and resolves shorthand |
+| `reuse_einsatzstatus` | B edge `IST→:ReuseEinsatzstatus` + Mode A shadow property `status` | Edge for vocab linkage, property for fast filter |
+| `reuse_strategie` | B edge `IST→:ReuseStrategie` |
+| `bewertungslogik_abgrenzung` | B edge `IST→:BewertungslogikAbgrenzung` |
+| `prozessphase` (list) | multiple B edges `HAT {art:"prozessphase"}` |
+| `tragwerkstyp` (only material-typed values) | B edge `IST→:Tragwerkstyp` |
+| `tragwerkstyp` (reuse-typed values like `wiederverwendetes_Tragwerk`) | A property `reuse_property: "wiederverwendetes_Tragwerk"` | Axis fix from review §7.8 |
+| `body` (German prose) | A property `body_md` | Full-text index target |
+| `legacy_paths`, `build_status` | A properties | Provenance metadata |
 
-### G3 — Reuse provenance / building-to-building
-`INSTALLED_IN_BAUOBJEKT`, `SOURCED_FROM_BAUOBJEKT`, `DONATES_TO` (Bauobjekt→Bauobjekt, derived).
+### 3.2 `:Datenpunkt`
 
-### G4 — Actor participation
-`INVOLVES_AKTEUR`, `RELATES_TO_BAUOBJEKT` (from AkteurBeteiligung), `HAS_AKTEURROLLE`, optional shortcut `PARTICIPATED_IN` (Akteur→Projekt).
+| Field | Mode | Reason |
+|---|---|---|
+| `wert` raw (`"1.100"`, `"250 / 312 / 400"`) | A property `wert_raw` | Preserve verbatim |
+| parsed numeric values | A property `wert_values: [1100]` or `[250, 312, 400]` | German-number-aware parsing |
+| `einheit` raw | A property `einheit_raw` |
+| canonical `einheit` | B edge `IST→:Einheit` + A shadow `einheit_norm` |
+| `Vertrauensgrad` (`belegt`, `unklar`, …) | B edge `IST→:Datenqualitaet` + A shadow `vertrauensgrad` |
+| `Bilanzgrenze`, `Methode/Datenmodell/Software` | A properties (free text) + optional B edge to `:Methode` / `:Datenmodell` / `:SoftwareDigitaltool` when value matches a known vocab term |
+| `quelle_label` | same as `:ReuseEinsatz` |
+| `kennwertdefinition` link | B edge `GEHÖRT_ZU {rolle:"misst"}->:Kennwertdefinition` |
+| `bauobjekt` link | B edge `GEHÖRT_ZU {rolle:"messung_objekt"}->:Bauobjekt` |
+| Conflicting values across datenpunkten | A property `widerspricht_id` (id of contradicting `:Datenpunkt`) | No separate edge type per your instruction |
 
-### G5 — Measurement
-`MEASURED_ON_BAUOBJEKT`, `MEASURES_KENNWERTDEFINITION`, `HAS_DATENQUALITAET`, `HAS_EINHEIT`, `CONTRADICTS` (Datenpunkt→Datenpunkt).
+### 3.3 `:Fallstudie` / `:Projekt` / `:Bauobjekt`
 
-### G6 — Geography
-`LOCATED_IN_ORT` (Bauobjekt → Ort), `PART_OF` (Ort → Ort).
+These three keep their separate identity even when sharing an id. Edges between them:
+- `(:Fallstudie)-[:GEHÖRT_ZU {rolle:"projekt"}]->(:Projekt)` (inverse direction of `has_projekt` — direction normalised so all `GEHÖRT_ZU` point upward to container; alternative: keep as Mode-A property `projekt_id` on `:Fallstudie`. Decision in spec: edge, because navigation queries are bidirectional in Cypher.)
+- `(:Projekt)-[:GEHÖRT_ZU {rolle:"bauobjekt"}]->(:Bauobjekt)` (`has_bauobjekt`)
+- `(:Bauobjekt)-[:GEHÖRT_ZU {rolle:"ort"}]->(:Ort)` (geography)
 
-### G7 — Evidence / citation
-`CITES` (ReuseEinsatz | Datenpunkt | Fallstudie | AkteurBeteiligung → Quelle), with edge properties `raw_label` (`"[S1]"`), `seite`, `excerpt`.
+Bauobjekt body fields (`nutzung`, `bauobjektklasse`, `bauobjektrolle`, `bauobjektstatus`, `bauaufgabe_intervention`) → B edges `IST→:<Label>`.
 
-### G8 — Programme / context
-`INVOLVES_FOERDERPROGRAMM`, `HAS_PROGRAMM_KONTEXT`, `USES_SOFTWARE_DIGITALTOOL`.
+### 3.4 `:AkteurBeteiligung` (reified — Mode C)
 
-For each relationship the spec will state:
-- Allowed source label(s) and target label
-- Cardinality (1:1 / N:1 / N:M)
-- Edge properties (currently mostly empty, but `field`, `raw_label`, `confidence`, `resolution_rule` from [clean_confirmed_edges.csv](_database/_edges/clean_confirmed_edges.csv) carry over)
-- Current populated count vs gap (per review §3)
+Always Mode C. Properties: `id`. Edges:
+- `GEHÖRT_ZU {rolle:"akteur"} → :Akteur`
+- `GEHÖRT_ZU {rolle:"fallstudie"} → :Fallstudie`
+- `GEHÖRT_ZU {rolle:"projekt"} → :Projekt`
+- `GEHÖRT_ZU {rolle:"bauobjekt"} → :Bauobjekt`
+- `IST → :Akteurrolle`
 
 ---
 
-## Constraints & indexes (last section of the spec)
+## §4 Node Labels — to be enumerated in the spec
+
+### 4.1 Family — Instance nodes (heavy)
+
+`:Fallstudie`, `:Projekt`, `:Bauobjekt`, `:Akteur`, `:ReuseEinsatz`, `:ReuseKette`, `:ReuseKettenstation`, `:Datenpunkt`, `:Quelle`, `:SoftwareDigitaltool`.
+
+For each: id (unique key), title, body_md, plus the Mode-A properties enumerated in §3.
+
+### 4.2 Family — Reified relation nodes
+
+`:AkteurBeteiligung`, `:BauobjektBeteiligung`, `:Materialeinsatz` (new; optional Mode-C extraction of `BENUTZT` edges when the same Material is used in several quantities at the same `:ReuseEinsatz`).
+
+### 4.3 Family — Controlled vocabulary nodes
+
+All carry the **multi-label** `:<Label>:Vokabular` so taxonomy can be enumerated via one query. Roughly 35–40 vocab labels, grouped: Bauteil/Material/Tragwerk, Reuse-Semantik, Prozess, Anforderungen/Barrieren, Bauobjekt-Kontext, Geographie, Daten/Bewertung, Akteur-Rollen, Programme.
+
+Each vocab node has at minimum: `id`, `title`, `body_md`.
+
+### 4.4 Family — Auxiliary
+
+`:BuildBatch` (one per migration batch, edge `(:Node)-[:GEHÖRT_ZU {rolle:"batch"}]->(:BuildBatch)` so `build_status: promoted_phase42` becomes queryable provenance).
+
+---
+
+## §5 Edge mapping table — legacy relation → generic
+
+The spec will contain one table that maps every legacy relation name in [clean_confirmed_edges.csv](_database/_edges/clean_confirmed_edges.csv) and [SCHEMA.md §9](_database/_system/SCHEMA.md) to its new generic-predicate form, so the export can be rule-driven. Sketch (excerpt):
+
+| Legacy relation | Generic | Edge properties | Notes |
+|---|---|---|---|
+| `belongs_to_fallstudie` | GEHÖRT_ZU | `rolle: "fallstudie"` | |
+| `belongs_to_projekt` | GEHÖRT_ZU | `rolle: "projekt"` | |
+| `has_bauteiltyp` | IST | — | |
+| `installed_in_bauobjekt` | GEHÖRT_ZU | `rolle: "einbauort"` | |
+| `measured_on_bauobjekt` | GEHÖRT_ZU | `rolle: "messung_objekt"` | |
+| `measures_kennwertdefinition` | GEHÖRT_ZU | `rolle: "misst"` | |
+| `uses_material` | BENUTZT | `anzahl`, `einheit`, `anteil_prozent` parsed from `menge_umfang` | |
+| `has_huerde` | HAT | `art: "huerde"` | |
+| `has_reuse_einsatzstatus` | IST | — | + shadow prop `status` on subject |
+| `has_prozessphase` | HAT | `art: "prozessphase"` | |
+| `has_akteurrolle` | IST | — | on `:AkteurBeteiligung` |
+| `has_reuse_strategie` | IST | — | |
+| `relates_to_bauobjekt` | GEHÖRT_ZU | `rolle: "bauobjekt"` | |
+| `has_bewertungslogik_abgrenzung` | IST | — | |
+| `has_projekt` (fallstudie→projekt) | GEHÖRT_ZU | `rolle: "projekt"` | direction normalised |
+| `has_bauobjekt` (fallstudie→bauobjekt) | GEHÖRT_ZU | `rolle: "bauobjekt"` | |
+| `has_rueckbauverfahren` | BENUTZT | — | |
+| `part_of_reuse_kette` | GEHÖRT_ZU | `rolle: "kette"`, `position` | |
+| `has_pruefung_nachweis` | HAT | `art: "pruefung"` | |
+| `involves_akteur` | GEHÖRT_ZU | `rolle: "akteur"` | on `:AkteurBeteiligung` |
+| `has_tragwerkstyp` | IST | — | only material-typed values; rest become property |
+| `has_fuegung_verbindung` | HAT | `art: "fuegung"` | |
+| `references_norm` | HAT | `art: "norm"` | |
+| `has_leistungsanforderung` | HAT | `art: "leistung"` | |
+| `has_aufbereitungsverfahren` *(gap)* | BENUTZT | — | |
+| `has_logistik` *(gap)* | HAT | `art: "logistik"` | |
+| `has_methode` *(gap)* | BENUTZT | — | |
+| `has_funktionswechsel` *(gap)* | HAT | `art: "funktionswechsel"` + property `funktion_alt`/`funktion_neu` | |
+| `has_bauteilzustand` *(gap)* | IST | — | |
+| `has_bauteilebene` *(gap)* | IST | — | |
+| `has_bauweise` *(gap)* | IST | — | |
+| `has_bausystem` *(gap)* | IST | — | |
+| `has_tragwerksprinzip` *(gap)* | IST | — | |
+| `has_bauobjektklasse` *(gap)* | IST | — | |
+| `has_bauobjektrolle` *(gap)* | IST | — | |
+| `has_bauobjektstatus` *(gap)* | IST | — | |
+| `has_nutzung` *(gap)* | HAT | `art: "nutzung"` | |
+| `has_bauaufgabe_intervention` *(gap)* | HAT | `art: "intervention"` | |
+| `located_in_ort` *(partly populated)* | GEHÖRT_ZU | `rolle: "ort"` | |
+| `has_rechtliche_bedingung` *(gap)* | HAT | `art: "recht"` | |
+| `has_schadstoff` *(gap)* | HAT | `art: "schadstoff"` | |
+| `has_kontextmerkmal` *(gap)* | HAT | `art: "kontext"` | |
+| `has_zertifizierung_bewertungssystem` *(gap)* | HAT | `art: "zertifizierung"` | |
+| `has_datenmodell` *(gap)* | BENUTZT | — | |
+| `has_dokumenttyp` *(gap)* | IST | — | (on `:Quelle`) |
+| `has_tooltyp` *(gap)* | IST | — | (on `:SoftwareDigitaltool`) |
+| `uses_software_digitaltool` *(gap)* | BENUTZT | — | |
+| `documented_in_quelle` *(gap)* | GEHÖRT_ZU | `rolle: "beleg"` | replaces a hypothetical BELEGT_DURCH |
+| `has_datenqualitaet` *(gap)* | IST | — | on `:Datenpunkt` |
+| `involves_foerderprogramm` *(gap)* | GEHÖRT_ZU | `rolle: "foerderprogramm"` | |
+| `has_programm_kontext` *(gap)* | GEHÖRT_ZU | `rolle: "kontext"` | |
+| `has_wirtschaft` *(gap)* | HAT | `art: "wirtschaft"` | |
+| donor link (currently only `herkunft_label`) | GEHÖRT_ZU | `rolle: "herkunft"` | new edge derived from labels |
+
+This table is the export's rewrite rules.
+
+---
+
+## §6 Constraints & indexes
 
 - `CREATE CONSTRAINT FOR (n:<Label>) REQUIRE n.id IS UNIQUE` for every Label.
-- `CREATE INDEX FOR (n:ReuseEinsatz) ON (n.bauteil_label)` and similar text-search indexes on heavy nodes.
-- Full-text index `body_text` covering `:Fallstudie`, `:Bauobjekt`, `:Akteur`, `:ReuseEinsatz`, `:Huerde`, `:Material`, `:Bauteiltyp` for German prose search.
-- Composite uniqueness for `:Datenpunkt` is provided by `id` (already `<case>__<NNN>__<metric>`).
+- Range index on `:ReuseEinsatz.bauteil_label`, `:ReuseEinsatz.material_label`, `:Datenpunkt.wert_values`, `:Datenpunkt.einheit_norm`, `:Bauobjekt.title`.
+- Full-text index `body_de` over `body_md` on `:Fallstudie`, `:Bauobjekt`, `:Akteur`, `:ReuseEinsatz`, `:Huerde`, `:Material`, `:Bauteiltyp` etc.
 
 ---
 
-## Verification / coverage checklist (also in the spec)
+## §7 Coverage checklist
 
-A table that maps each source artefact to where it ends up:
+Table proving no information is lost:
+- Every folder under `_database/<entity>/` → maps to one Label (Mode B/C) or to a property (Mode A).
+- Every relation in `clean_confirmed_edges.csv` → mapped in §5.
+- Every YAML frontmatter field on `:Fallstudie` / `:ReuseEinsatz` / `:Datenpunkt` / `:Bauobjekt` / `:AkteurBeteiligung` → mapped in §3.
+- Every gap relation in [SCHEMA.md §9](_database/_system/SCHEMA.md) → listed in §5 with the generic predicate that will carry it once data is mined.
 
-- Every folder under `_database/<entity>/` → maps to one Label (or to a property if collapsed).
-- Every relation in `_database/_edges/clean_confirmed_edges.csv` → maps to one `:HAS_*` or `:USES_*` relationship type.
-- Every YAML frontmatter field on `:ReuseEinsatz` / `:Datenpunkt` / `:Fallstudie` → maps to a property or an edge.
-- Every gap relation in [SCHEMA.md §9](_database/_system/SCHEMA.md) → listed in the relationship catalogue as `gap`, so they exist in the graph schema even before they have data.
+---
 
-This ensures we don't lose information on the way to Neo4j.
+## §8 Renamings & taxonomy fixes appendix
+
+- `Moebelsepearat` → `Moebel_separat`
+- `ort/Scwheiz` → `ort/Schweiz`
+- `tragwerkstyp` split: keep `Holztragwerk` / `Stahltragwerk` / `Betontragwerk` as `:Tragwerkstyp` vocab; lift `wiederverwendetes_Tragwerk` / `demontierbares_Tragwerk` to `:ReuseEinsatz.reuse_property`.
+- Bauteiltyp drop-and-remap from SCHEMA.md §5 (marked "already applied").
+- Material drop-and-merge from SCHEMA.md §6 (marked "already applied").
 
 ---
 
 ## Out of scope (this plan)
 
-- Writing the export script (Python loader vs neo4j-admin import — to be decided once schema is signed off).
-- Running a Neo4j instance (Docker / Aura / Desktop — to be decided).
-- Filling the ~30 gap relations from prose — that is a separate data-mining task, not a schema task.
+- Writing the export script (CSV via `neo4j-admin import` vs Python loader — to be decided after schema is signed off).
+- Running a Neo4j instance.
+- Filling the ~30 gap relations from prose — that's data mining, not schema work.
 - Translating German labels to English — schema stays German.
