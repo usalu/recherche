@@ -1,363 +1,329 @@
 ---
 name: Neo4j schema catalogue
-overview: Explicit catalogue of all Node Labels (with their property schemas) and Edge Types (with their property schemas) for the Neo4j export. Reuse-Einsatz is reified as :Bauteilgruppe; :Fallstudie and :Projekt are removed and replaced by a :Bauwerk super-label with physical-type sub-Labels (:Gebaeude, :Pavillon, …); Datenpunkten are replaced by one Label per Kennwert; :Quelle is kept and cited via :BELEGT. Five generic edge types only — IST, HAT, BENUTZT, GEHÖRT_ZU, BELEGT.
+overview: Cleaned Neo4j schema. One Label :Fallbeispiel per case (art property distinguishes Gebäude/Brücke/Pavillon/etc.). :Bauteilgruppe is the reified reuse-Einsatz. Measurements are properties on whichever node owns them (Fallbeispiel, Bauteilgruppe, or BENUTZT-edge). All source attribution is via :BELEGT_IN edges (claim → :Quelle) — no quelle properties anywhere. Five generic edges (IST, HAT, BENUTZT, GEHÖRT_ZU, BELEGT_IN). Cleanups — drop :Tragwerkstyp / :Bauteilgruppentyp / :Bauobjektklasse / :Einheit / :Kennwertdefinition / :AkteurBeteiligung / :ReuseKettenstation / all measurement Labels; merge :Foerderprogramm+:ProgrammKontext → :Programm; rename :BewertungslogikAbgrenzung → :WiederverwendungsArt; rename :ReuseKette → :Wiederverwendungskette.
 todos:
   - id: spec-skeleton
     content: "Create _database/_system/NEO4J_SCHEMA.md with the 4-section structure: §1 Node-type catalogue, §2 Nodes (per-Label property tables), §3 Edge-type catalogue, §4 Edges (per-edge-type property tables). Plus appendices for principles, constraints, coverage, renamings."
     status: pending
   - id: write-1
-    content: "Write §1 Node-type catalogue: enumerate every Label across the four families with one-line purpose."
+    content: "Write §1 Node-type catalogue: the 6 instance Labels and the ~30 vocab Labels with one-line purpose each."
     status: pending
   - id: write-2
-    content: "Write §2 Nodes: per-Label property table (name | type | required | source field | notes)."
+    content: "Write §2 Nodes: per-Label property table (name | type | required | source field | notes). Property placement rules — building-level on :Fallbeispiel, component-level on :Bauteilgruppe, relational on edges."
     status: pending
   - id: write-3
-    content: "Write §3 Edge-type catalogue: enumerate the 5 edge types with one-line purpose, source/target Label families, legacy relations folded in."
+    content: "Write §3 Edge-type catalogue: 5 generic edges with source/target Label families and the legacy relations folded in."
     status: pending
   - id: write-4
-    content: "Write §4 Edges: per-edge-type property table (name | type | required | description)."
+    content: "Write §4 Edges: per-edge-type property table. None of IST/HAT/BENUTZT/GEHÖRT_ZU carry a quelle_id; the only citation edge is :BELEGT_IN with optional `eigenschaft` to scope citation to a specific property of the source node."
     status: pending
   - id: appendices
-    content: "Write the appendices: A modeling principles (hybrid A/B/C, naming, multi-label), B constraints & indexes, C coverage checklist (every folder + every legacy relation + every YAML field accounted for), D renamings (fallstudie/projekt merge, reuse_einsatz→:Bauteilgruppe, typo fixes, tragwerkstyp axis split)."
+    content: "Write the appendices: A modeling principles, B constraints & indexes, C coverage checklist, D renamings & dropped/merged vocabs."
     status: pending
 ---
 
 # Goal
 
-Author `_database/_system/NEO4J_SCHEMA.md` as the single source of truth for the Neo4j model, organized in the four-part order requested:
+Author `_database/_system/NEO4J_SCHEMA.md` in this exact four-part order:
 
 1. **§1 Node-type catalogue** — the list of all Labels.
-2. **§2 Nodes** — for each Label, its complete property table.
-3. **§3 Edge-type catalogue** — the list of all 5 edge types.
-4. **§4 Edges** — for each edge type, its complete property table.
+2. **§2 Nodes** — for each Label, complete property table.
+3. **§3 Edge-type catalogue** — the list of 5 edge types.
+4. **§4 Edges** — for each edge type, complete property table.
 
-Plus appendices (principles, constraints, coverage, renamings) that don't get in the way of the catalogue.
+Plus appendices for principles, constraints, coverage, renamings.
 
-The rest of this plan is the **concrete content draft** for those four sections so you can confirm before I write the file.
+Below is the concrete content draft for those four sections so you can confirm before I write the file.
 
 ---
 
 # §1 Node-type catalogue
 
-## §1.A Physical objects (multi-label hierarchy)
+## §1.A Instance Labels (6)
 
-Every physical object carries `:Bauwerk` plus one or more type sub-Labels.
+| Label | Purpose | Replaces |
+|---|---|---|
+| `:Fallbeispiel` | A single case study — one physical object plus the surrounding research narrative. The `art` property distinguishes Gebäude / Brücke / Pavillon / Halle / Lager / Innenausbau / Anlage. | legacy :Fallstudie + :Projekt + :Bauobjekt (merged into one) |
+| `:Bauteilgruppe` | A group of components in a Fallbeispiel — the reified reuse-Einsatz (when reused) or original-construction group (when not). | legacy :ReuseEinsatz |
+| `:Akteur` | Office / company / authority / institution / person | unchanged |
+| `:Quelle` | Source / citation / document. Replaces unresolved `quelle_label` shorthand by becoming a real node per case. | unchanged (but now reachable via :BELEGT) |
+| `:SoftwareDigitaltool` | Concrete platform (Madaster, Concular, …) | unchanged |
+| `:Wiederverwendungskette` | OPTIONAL named multi-Bauteilgruppe reuse program. Only used when a documented chain orchestrates several Bauteilgruppen; for single-component chains the stations live as GEHÖRT_ZU edges directly on the Bauteilgruppe. | renamed from :ReuseKette; :ReuseKettenstation dropped |
 
-| Label | Purpose |
-|---|---|
-| `:Bauwerk` | Super-label for every built physical thing |
-| `:Gebaeude` | Ordinary building |
-| `:Pavillon` | Pavilion / demonstration / temporary structure |
-| `:Bruecke` | Bridge |
-| `:Halle` | Large hall / shed |
-| `:Lager` | Warehouse / depot / material storage |
-| `:Innenausbau` | Interior fit-out as the case-study unit |
-| `:Anlage` | Infrastructure / external facility |
+## §1.B Vocabulary Labels (all multi-labelled `:<Label>:Vokabular`)
 
-## §1.B Reified relations & instance nodes
+Grouped here only for reading; in the spec they're listed alphabetically.
 
-| Label | Purpose |
-|---|---|
-| `:Bauteilgruppe` | A group of components in a Bauwerk — replaces legacy `:ReuseEinsatz` |
-| `:Akteur` | Office / company / authority / institution |
-| `:AkteurBeteiligung` | Actor × Bauwerk × role (reified Mode-C) |
-| `:ReuseKette` | Full reuse chain |
-| `:ReuseKettenstation` | Station in a reuse chain |
-| `:BauwerkBeteiligung` | Bauwerk × ReuseKette × role (reified) |
-| `:Quelle` | Source / citation / document |
-| `:SoftwareDigitaltool` | Concrete platform (Madaster, Concular, …) |
+**Bauteil & Material:**
+- `:Bauteiltyp` — 15 canonical component families (Stütze, Träger, Decke, Wand, Fassade, Fenster, Tür, Treppe, Dach, Boden, Ausbau, Technik, Fundament, Geländer, Dämmung)
+- `:Material` — 15 substances (Beton, Stahlbeton, Recyclingbeton, Stahl, Aluminium, Gusseisen, Holz, Glas, Ziegel, Naturstein, Keramik, Kunststoff, Dämmstoff, Lehm, Stroh)
+- `:Bauteilebene`
+- `:Bauteilzustand`
+- `:Funktionswechsel`
+- `:FuegungVerbindung`
 
-## §1.C Measurement Labels (one per Kennwert)
+**Konstruktion:**
+- `:Bauweise`
+- `:Bausystem`
+- `:Tragwerksprinzip`
 
-Replaces legacy `:Datenpunkt`. All share a common property shape (see §2.C).
+**Reuse:**
+- `:ReuseStrategie` (Direct Reuse, Same-Site Reuse, Urban Mining, DfD, Bestandserhalt, Recycling, Upcycling, Remanufacturing)
+- `:ReuseEinsatzstatus` (realisiert, geplant, verworfen, vorgeschlagen, unklar, temporär, prototypisch)
+- `:WiederverwendungsArt` *(renamed from :BewertungslogikAbgrenzung; absorbs the dropped :Bauteilgruppentyp)* — zaehlt_als_Direct_Reuse, zaehlt_nicht, Bestandserhalt_separat, Recycling_separat, Moebel_separat, geplant_aber_nicht_realisiert, unklar, plus wiederverwendet, original, hybrid
 
-| Label | Kennwert covered |
-|---|---|
-| `:Flaeche` | Fläche, Projektfläche, Gebäudefläche |
-| `:CO2_Einsparung` | CO₂-Einsparung (relativ / absolut) |
-| `:CO2_Footprint` | CO₂-Footprint, GWP |
-| `:CO2_Reduktion` | CO₂-Reduktion Materialien |
-| `:Reuse_Anteil` | Anteil reused/upcycled/secondary in % |
-| `:Sekundaere_Materialien` | Menge sekundärer Materialien |
-| `:Geerntete_Materialien` | Menge geernteter Materialien |
-| `:Masse` | Masse in t, kg |
-| `:Volumen` | Volumen in m³ |
-| `:Kosten` | Kosten gesamt |
-| `:Budget` | Budget gesamt |
-| `:Anteil_an_Baukosten` | Anteil an Baukosten in % |
-| `:Wohneinheiten` | Anzahl Wohneinheiten |
-| `:Lebensdauer` | Lebensdauer in Jahren |
-| `:Bauzeit` | Bauzeit in Monaten |
-| `:Fertigstellung` | Fertigstellungsjahr |
-| `:Entwurfsbeginn` | Entwurfsbeginnjahr |
-| `:Energieverbrauch` | Energieverbrauch |
-| `:Wassereinsparung` | Wassereinsparung |
-| `:Restlebensdauer` | Restlebensdauer |
-| `:Abfall_vermieden` | vermiedener Abfall |
-| `:Vermiedene_Umweltschaeden` | vermiedene Umweltschäden |
-| `:Zielwert_Reuse` | Reuse-Zielwert |
-| `:Stueckzahl` | Stückzahlen (Fenster, Stahlträger, …) |
-| `:Gebaeudemasse` | erhaltene Gebäudemasse |
-| `:Bestandslager` | Bestandslager-Volumen |
+**Beschaffung:**
+- `:Ressourcenquelle`
+- `:Beschaffungsweg`
 
-Final list comes from enumerating `_database/kennwertdefinition/`.
+**Prozess:**
+- `:Prozessphase` (Rueckbau, Aufbereitung, Wiedereinbau, Transport, Lagerung, Pruefung, Identifikation, Entwurf, Ausschreibung, Bestandserfassung, Betrieb_und_Rueckbauplanung)
+- `:Rueckbauverfahren`
+- `:Aufbereitungsverfahren`
+- `:Logistik`
+- `:Methode`
 
-## §1.D Vocabulary Labels (all multi-labelled `:<Label>:Vokabular`)
+**Anforderungen & Hürden:**
+- `:Huerde` (27 hurdle types)
+- `:PruefungNachweis`
+- `:Leistungsanforderung`
+- `:Norm`
+- `:RechtlicheBedingung`
+- `:Schadstoff`
 
-| Label | Domain |
-|---|---|
-| `:Bauteiltyp` | Stütze, Träger, Decke, Wand, Fassade, Fenster, Tür, Treppe, Dach, Boden, Ausbau, Technik, Fundament, Geländer, Dämmung (15) |
-| `:Bauteilgruppentyp` | wiederverwendet, original, hybrid (new — 3) |
-| `:Material` | Beton, Stahlbeton, Recyclingbeton, Stahl, Aluminium, Gusseisen, Holz, Glas, Ziegel, Naturstein, Keramik, Kunststoff, Dämmstoff, Lehm, Stroh (15) |
-| `:Bauteilebene` | Bauteil-Skalenebene |
-| `:Bauteilzustand` | Zustandsbewertung |
-| `:Funktionswechsel` | Art der Funktionsänderung |
-| `:Tragwerkstyp` | Holztragwerk, Stahltragwerk, Betontragwerk (material-typed only — 3) |
-| `:Tragwerksprinzip` | Skelett, Massiv, Fachwerk, Rahmen, Plattentragwerk |
-| `:Bauweise` | Holzbauweise, Massivbauweise, Stahlbauweise, Hybridbauweise, Fertigteilbauweise |
-| `:Bausystem` | Named systems (Betonfertigteil-System, Holzrahmenbau, …) |
-| `:FuegungVerbindung` | geschraubt, gesteckt, geschweißt, geklebt, vergossen, reversibel, irreversibel |
-| `:ReuseStrategie` | Direct Reuse, Same-Site Reuse, Urban Mining, DfD, Bestandserhalt, Recycling, Upcycling, Remanufacturing (canonical 8) |
-| `:ReuseEinsatzstatus` | realisiert, geplant, verworfen, vorgeschlagen, unklar, temporär, prototypisch (7) |
-| `:BewertungslogikAbgrenzung` | zählt als Direct Reuse, zählt nicht, Bestandserhalt separat, Recycling separat, Möbel separat, geplant aber nicht realisiert, unklar (7) |
-| `:Ressourcenquelle` | Herkunftstyp (Recycling-Hof, Direktabbruch, …) |
-| `:Beschaffungsweg` | Beschaffungs-Route |
-| `:Prozessphase` | Rückbau, Aufbereitung, Wiedereinbau, Transport, Lagerung, Prüfung, Identifikation, Entwurf, Ausschreibung, Bestandserfassung, Betrieb_und_Rückbauplanung (11) |
-| `:Rueckbauverfahren` | Demontage, Selektiver_Rückbau, Ausbau, Zerstoerungsarme_Bergung, schonender_Rückbau |
-| `:Aufbereitungsverfahren` | Sandstrahlen, Entmörtelung, Holzaufbereitung, Rekonditionierung, Reparatur, Qualitätssicherung, Leuchten_Refurbishment, Drahtglasschneiden |
-| `:Logistik` | Transport, Lagerung, Materialmatching, Materialverfügbarkeit, Lagerfläche, ReUse_Centre |
-| `:Methode` | Materialpass, DfD, Urban_Mining, Form_Follows_Availability, Materialinventur, Building_Material_Scouting, Bauteilkatalogisierung, ReUse_Assessment, Reversibilitaet, Zirkulaere_Ausschreibung, Bestandserhalt |
-| `:Huerde` | 27 hurdle types (Toleranzen, Datenlücke, Brandschutzkonflikt, …) |
-| `:PruefungNachweis` | Sichtprüfung, Statische_Nachweisführung, Materialprüfung, Schadstoffscreening, Geometrische_Vermessung, Zugversuch, Brandnachweis, Abbrandbemessung, Schweissbarkeitsprüfung, Eignungsprüfung_Baulehm, Zustandsbewertung |
-| `:Leistungsanforderung` | Tragfähigkeit, Brandschutz, Schallschutz, Wärmeschutz, Dauerhaftigkeit, Schadstofffreiheit, Rückbaubarkeit, Feuchteschutz |
-| `:Norm` | DIN_EN_15804, DIN_EN_15978, ISO_14040, ISO_14044, ISO_20887, F90, R90, REI90, … |
-| `:RechtlicheBedingung` | Rechtliche Rahmenbedingungen |
-| `:Schadstoff` | Asbest, PCB, PAK, Bleifarbe, Holzschutzmittel |
-| `:Bauobjektklasse` | Wohngebäude, Bürogebäude, Industriegebäude, Pavillon, … |
-| `:Bauobjektrolle` | Donor / Receiver / Stand-Alone |
-| `:Bauobjektstatus` | bestehend, abgerissen, geplant, … |
-| `:Nutzung` | Wohnen, Büro, Produktion, Kultur, … |
-| `:BauaufgabeIntervention` | Neubau, Umbau, Sanierung, Aufstockung, Rückbau, … |
-| `:Kontextmerkmal` | freie Kontextmerkmale |
-| `:Ort` | 53+ Städte mit Self-Loop GEHÖRT_ZU für Stadt → Land |
-| `:Akteurrolle` | Architektur, Tragwerksplanung, Bauherr_Auftraggeber, Nachhaltigkeitsberatung, Reuse_Beratung, Materiallieferant, Projektmanagement_Koordination |
-| `:Datenqualitaet` | belegt, teilweise_belegt, unbekannt, umstritten |
-| `:Datenmodell` | benutztes Datenmodell |
-| `:Dokumenttyp` | Publikation, Pre_Demolition_Audit, Materialpass, Materialinventar, Bauteilkatalog, … |
-| `:Tooltyp` | Tool-Kategorie |
-| `:ZertifizierungBewertungssystem` | DGNB, BREEAM, LEED, … |
-| `:Wirtschaft` | Kostenvergleich, Lebenszykluskosten, Geschäftsmodell, Finanzierung, Preisbildung, Restwert |
-| `:Foerderprogramm` | FCRBE, PREUSE, BBSM, Reallabor_Be_Ware, Zukunftbau |
-| `:ProgrammKontext` | Forschungsprogramm-Kontext |
-| `:Einheit` (new) | m², t, kg, kgCO₂e, tCO₂e, m³, Stück, EUR, Jahre, Monate, % |
-| `:Kennwertdefinition` | Kennwert-Taxonomie (Fläche, CO₂-Einsparung, …) — bleibt parallel zu den Measurement-Labels als Grouping-Vokabular |
+**Fallbeispiel-Kontext:** (former :Bauobjektklasse is dropped — its info lives in `Fallbeispiel.art`)
+- `:Bauobjektrolle` (donor / receiver / standalone)
+- `:Bauobjektstatus` (bestehend / abgerissen / geplant)
+- `:Nutzung` (Wohnen / Büro / Produktion / Kultur / …)
+- `:BauaufgabeIntervention` (Neubau / Umbau / Sanierung / Aufstockung / Rückbau)
+- `:Kontextmerkmal`
 
-## §1.E Auxiliary
+**Geographie:**
+- `:Ort` (with self-loop GEHÖRT_ZU for Stadt → Land)
 
-| Label | Purpose |
-|---|---|
-| `:BuildBatch` | One node per migration batch (e.g. `phase42`, `phase50a`) for provenance |
+**Akteure:**
+- `:Akteurrolle` (kept as dictionary; the role is carried on the edge property `rolle`, not as an outgoing edge)
+
+**Daten & Bewertung:**
+- `:Datenqualitaet`
+- `:Datenmodell`
+- `:Dokumenttyp`
+- `:Tooltyp`
+- `:ZertifizierungBewertungssystem`
+
+**Wirtschaft & Programme:**
+- `:Wirtschaft`
+- `:Programm` *(merged :Foerderprogramm + :ProgrammKontext, with `programm_typ` property: `foerderung` / `forschungskontext`)*
+
+## §1.C Dropped Labels (none in the final schema)
+
+- `:Bauwerk`, `:Gebaeude`, `:Pavillon`, `:Halle`, `:Lager`, `:Innenausbau`, `:Anlage`, `:Bruecke` — all collapsed into `:Fallbeispiel.art`.
+- `:Fallstudie`, `:Projekt`, `:Bauobjekt` — merged into `:Fallbeispiel`.
+- `:ReuseEinsatz` → `:Bauteilgruppe`.
+- `:Datenpunkt` and ~26 typed measurement Labels (Flaeche, CO2_Einsparung, Masse, …) — replaced by direct properties on the most relevant node.
+- `:AkteurBeteiligung` — collapsed to a `HAT {art:'akteur', rolle:...}` edge.
+- `:BauwerkBeteiligung` — same pattern.
+- `:ReuseKettenstation` — collapsed to GEHÖRT_ZU edges from `:Bauteilgruppe` to `:Fallbeispiel` with `rolle ∈ {herkunft, zwischenlager, verarbeitung, transport, einbauort}` and `position`.
+- `:Bauobjektklasse` — collapsed into `:Fallbeispiel.art` (same Halle/Lager-pattern: all values were really kinds of one parent concept).
+- `:Tragwerkstyp` — dropped (review §7.8: mixed axis with Material; reuse-typed values moved to :WiederverwendungsArt).
+- `:Bauteilgruppentyp` — merged into `:WiederverwendungsArt`.
+- `:Einheit` — kept as a property string only.
+- `:Kennwertdefinition` — kept as documentation in the spec, not as a Neo4j Label.
+- `:BuildBatch` — provenance lives as `build_status` and `legacy_paths` properties on each node.
 
 ---
 
 # §2 Nodes — properties per Label
 
-Property table columns: **name** | **type** | **req** | **source / mode** | **notes**.
+Property table columns: **name** | **type** | **req** | **source field / origin** | **notes**.
 
-`A` = Mode A (property only); `B` = Mode B (also has an outgoing edge to a vocab node); `C` = part of Mode C (reified node).
+## §2.A `:Fallbeispiel`
 
-## §2.A Physical-object Labels
-
-All physical-object Labels share the same property schema; the differentiator is the multi-Label tag.
-
-### `:Bauwerk` (and its sub-Labels `:Gebaeude` / `:Pavillon` / `:Bruecke` / `:Halle` / `:Lager` / `:Innenausbau` / `:Anlage`)
+The central case-study node. One per case; replaces the legacy fallstudie + projekt + bauobjekt triple sharing the same id.
 
 | name | type | req | source | notes |
 |---|---|---|---|---|
-| `id` | string | ✓ | folder slug under `_database/bauobjekt/<id>/` | UNIQUE per Label |
+| `id` | string | ✓ | folder slug | UNIQUE |
 | `title` | string | ✓ | YAML `title` | |
-| `body_md` | string | ✓ | merged from legacy bauobjekt + fallstudie + projekt body | concatenated under `## Fallstudie` / `## Projekt` / `## Bauobjekt` subheaders |
-| `fertigstellung_jahr` | int? | – | parsed from prose or YAML | A |
-| `legacy_paths` | list&lt;string&gt; | – | provenance | A |
-| `build_status` | string? | – | YAML `build_status` | A |
+| `art` | string | ✓ | derived from legacy `bauobjektklasse` | one of `"Gebaeude"`, `"Bruecke"`, `"Pavillon"`, `"Halle"`, `"Lager"`, `"Innenausbau"`, `"Anlage"` |
+| `body_md` | string | ✓ | merged from legacy fallstudie + projekt + bauobjekt body | concatenated under `## Fallstudie` / `## Projekt` / `## Bauobjekt` subheaders |
+| `legacy_paths` | list&lt;string&gt; | – | provenance | |
+| `build_status` | string? | – | YAML | |
 
-## §2.B Reified-relation Labels
+**Building-level measurement properties** (each scalar; conflicting values stored in `*_alt` list and `*_quelle` parallel property):
 
-### `:Bauteilgruppe`
+| name | type | source kennwert |
+|---|---|---|
+| `flaeche_m2` | float? | Fläche |
+| `projektflaeche_m2` | float? | Projektflaeche |
+| `gebaeudemasse_t` | float? | Gebaeudemasse erhalten |
+| `wohneinheiten` | int? | Wohneinheiten |
+| `fertigstellung_jahr` | int? | Fertigstellung |
+| `entwurfsbeginn_jahr` | int? | Entwurfsbeginn |
+| `bauzeit_monate` | int? | Bauzeit |
+| `lebensdauer_jahre` | int? | Lebensdauer |
+| `restlebensdauer_jahre` | float? | Restlebensdauer |
+| `kosten_eur` | float? | Kosten |
+| `budget_eur` | float? | Budget |
+| `co2_footprint_kg` | float? | CO₂-Footprint |
+| `energieverbrauch_kwh_a` | float? | Energieverbrauch |
+| `wassereinsparung_m3` | float? | Wassereinsparung |
+| `bestandslager_m3` | float? | Bestandslager |
+
+For each measurement property, the export creates parallel:
+- `<name>_alt: list<float>?` — alternate values from conflicting sources
+- `<name>_einheit: string?` — only if the unit isn't already in the name
+- `<name>_vertrauensgrad: string?` — `belegt` / `teilweise_belegt` / `unklar` / `umstritten`
+- `<name>_bilanzgrenze: string?` — boundary qualifier
+
+**No source attribution as properties.** Every citation is a `:BELEGT_IN` edge to a `:Quelle` node, optionally scoped to a specific property via the edge property `eigenschaft` (see §4.E).
+
+## §2.B `:Bauteilgruppe`
+
+The reified reuse-Einsatz. One per group of related components in a Fallbeispiel.
 
 | name | type | req | source | notes |
 |---|---|---|---|---|
-| `id` | string | ✓ | legacy `reuse_einsatz` id, e.g. `K118_Kopfbau__001__Stahltr_ger_St_tzen` | UNIQUE |
-| `title` | string | ✓ | YAML `title` | |
-| `bauteil_label` | string | ✓ | YAML `bauteil_label` (`"Stahlträger / Stützen"`) | A — fine label kept verbatim |
-| `material_label` | string | ✓ | YAML `material_label` (`"Brettschichtholz"`) | A — fine label kept verbatim |
-| `menge_umfang_raw` | string | – | YAML `menge_umfang` verbatim | A |
-| `alte_funktion` | string? | – | YAML | A |
-| `neue_funktion` | string? | – | YAML | A |
-| `herkunft_label` | string? | – | YAML `herkunft_label` verbatim | A |
-| `pruefung_label_raw` | string? | – | YAML `pruefung_label` verbatim | A |
-| `norm_recht_label_raw` | string? | – | YAML `norm_recht_label` verbatim | A |
-| `huerde_label_raw` | string? | – | YAML `huerde_label` verbatim | A |
-| `quelle_label_raw` | string? | – | YAML `quelle_label` verbatim (e.g. `"S4, S2"`) | A |
-| `body_md` | string | ✓ | German prose | A |
-| `legacy_paths` | list&lt;string&gt; | – | provenance | A |
-| `build_status` | string? | – | YAML | A |
-
-### `:Akteur`
-
-| name | type | req | source | notes |
-|---|---|---|---|---|
-| `id` | string | ✓ | folder slug under `_database/akteur/<id>/` | UNIQUE |
+| `id` | string | ✓ | legacy reuse_einsatz id | UNIQUE |
 | `title` | string | ✓ | YAML | |
-| `body_md` | string | ✓ | German prose | A |
-| `legacy_paths` | list&lt;string&gt; | – | | A |
+| `bauteil_label` | string | ✓ | YAML | raw fine label (`"Stahlträger / Stützen"`) |
+| `material_label` | string | ✓ | YAML | raw fine label (`"Brettschichtholz"`) — canonical material is the `BENUTZT→:Material` edge |
+| `alte_funktion` | string? | – | YAML | |
+| `neue_funktion` | string? | – | YAML | |
+| `herkunft_label` | string? | – | YAML | raw donor description; resolved donor is the `GEHÖRT_ZU {rolle:'herkunft'}→:Fallbeispiel` edge |
+| `pruefung_label_raw` | string? | – | YAML | |
+| `norm_recht_label_raw` | string? | – | YAML | |
+| `huerde_label_raw` | string? | – | YAML | |
+| `body_md` | string | ✓ | German prose | |
+| `legacy_paths` | list&lt;string&gt; | – | | |
+| `build_status` | string? | – | YAML | |
+| `menge_umfang_raw` | string? | – | YAML | verbatim, e.g. `"98 t; 95 % des tragenden Stahls"` |
 
-### `:AkteurBeteiligung`
+**Component-group measurement properties** (parallel `*_alt`/`*_quelle`/`*_vertrauensgrad` as for Fallbeispiel):
 
-| name | type | req | source | notes |
-|---|---|---|---|---|
-| `id` | string | ✓ | slug `<case>__<NNN>__<akteur>` | UNIQUE |
-| `legacy_paths` | list&lt;string&gt; | – | | A |
+| name | type | source kennwert |
+|---|---|---|
+| `masse_t` | float? | Masse |
+| `anzahl_stueck` | int? | Stückzahl |
+| `volumen_m3` | float? | Volumen |
+| `flaeche_m2` | float? | Komponentenfläche |
+| `anteil_prozent` | float? | Reuse_Anteil / Anteil an Baukosten |
+| `co2_einsparung_kg` | float? | CO₂-Einsparung |
+| `co2_reduktion_kg` | float? | CO₂-Reduktion Materialien |
+| `geerntete_materialien_t` | float? | Geerntete Materialien |
+| `sekundaere_materialien_t` | float? | Sekundäre Materialien |
+| `abfall_vermieden_t` | float? | Abfall vermieden |
+| `zielwert_reuse_prozent` | float? | Zielwert Reuse |
 
-(All other content lives on outgoing edges — see §4.)
+Note: when the measurement is **inherently relational** (e.g. "98 t of steel reused" — a property of the BENUTZT relation between this Bauteilgruppe and `:Material/Stahl`), it lives on the `BENUTZT` edge (`anzahl`, `einheit`, `anteil_prozent` — see §4.C), NOT on the Bauteilgruppe node.
 
-### `:ReuseKette`
+**Source attribution.** The legacy `quelle_label_raw` ("S4, S2") is not kept as a property. Each shorthand resolves to a `:Quelle` node (case-scoped, e.g. `K118_Kopfbau__S4`); a `:BELEGT_IN` edge connects this Bauteilgruppe to that `:Quelle`. Multiple sources → multiple edges. Edge property `eigenschaft` optionally scopes which Bauteilgruppe property the source supports.
+
+## §2.C `:Akteur`
 
 | name | type | req | source | notes |
 |---|---|---|---|---|
 | `id` | string | ✓ | folder slug | UNIQUE |
 | `title` | string | ✓ | YAML | |
-| `body_md` | string | ✓ | | A |
+| `body_md` | string | ✓ | | |
+| `legacy_paths` | list&lt;string&gt; | – | | |
 
-### `:ReuseKettenstation`
+## §2.D `:Quelle`
+
+These are descriptive properties of the source itself, not citations *to* another source — so they stay as properties on the `:Quelle` node.
+
+| name | type | req | source | notes |
+|---|---|---|---|---|
+| `id` | string | ✓ | folder slug, or case-scoped derived (e.g. `K118_Kopfbau__S4`) | UNIQUE |
+| `title` | string | ✓ | YAML | |
+| `body_md` | string | ✓ | | |
+| `case_id` | string? | – | case the shorthand was scoped to | |
+| `citation_short` | string? | – | `"S4"` — the within-case shorthand | |
+| `citation_full` | string? | – | full reference text (Autor, Jahr, Titel, Verlag, …) | |
+| `url` | string? | – | | |
+| `seite_default` | string? | – | default page if the BELEGT_IN edge has none | |
+| `quelle_typ` | string? | – | optional, prefer `IST→:Dokumenttyp` edge | redundant; can be omitted |
+
+## §2.E `:SoftwareDigitaltool`
 
 | name | type | req | source | notes |
 |---|---|---|---|---|
 | `id` | string | ✓ | folder slug | UNIQUE |
 | `title` | string | ✓ | YAML | |
-| `body_md` | string | – | | A |
-| `position` | int | ✓ | parsed | A |
+| `body_md` | string | ✓ | | |
+| `url` | string? | – | | |
 
-### `:BauwerkBeteiligung` (renamed from :BauobjektBeteiligung)
-
-| name | type | req | source | notes |
-|---|---|---|---|---|
-| `id` | string | ✓ | slug | UNIQUE |
-
-### `:Quelle`
-
-| name | type | req | source | notes |
-|---|---|---|---|---|
-| `id` | string | ✓ | folder slug under `_database/quelle/<id>/` OR derived per-case for resolved shorthand | UNIQUE |
-| `title` | string | ✓ | YAML | |
-| `body_md` | string | ✓ | | A |
-| `case_id` | string? | – | case the shorthand was scoped to | A |
-| `citation_short` | string? | – | `"S4"` | A |
-| `citation_full` | string? | – | full reference text | A |
-| `quelle_typ` | string? | – | Publikation, Pre_Demolition_Audit, Materialpass, … | A (parallel `IST→:Dokumenttyp` edge) |
-| `url` | string? | – | | A |
-| `seite` | string? | – | optional default page | A |
-
-### `:SoftwareDigitaltool`
+## §2.F `:Wiederverwendungskette` (optional)
 
 | name | type | req | source | notes |
 |---|---|---|---|---|
 | `id` | string | ✓ | folder slug | UNIQUE |
 | `title` | string | ✓ | YAML | |
-| `body_md` | string | ✓ | | A |
-| `url` | string? | – | | A |
+| `body_md` | string | ✓ | | |
+| `start_jahr` | int? | – | | |
+| `end_jahr` | int? | – | | |
 
-## §2.C Measurement Labels (shared property shape)
+## §2.G Vocabulary Labels (shared property shape)
 
-All measurement Labels (`:Flaeche`, `:CO2_Einsparung`, `:Reuse_Anteil`, `:Masse`, `:Kosten`, `:Wohneinheiten`, `:Volumen`, `:Lebensdauer`, `:Bauzeit`, `:Fertigstellung`, `:Energieverbrauch`, `:Wassereinsparung`, `:Restlebensdauer`, `:Abfall_vermieden`, `:Vermiedene_Umweltschaeden`, `:Zielwert_Reuse`, `:Stueckzahl`, `:Gebaeudemasse`, `:Bestandslager`, `:Budget`, `:Anteil_an_Baukosten`, `:CO2_Footprint`, `:CO2_Reduktion`, `:Sekundaere_Materialien`, `:Geerntete_Materialien`, `:Entwurfsbeginn`) carry the same properties:
-
-| name | type | req | source | notes |
-|---|---|---|---|---|
-| `id` | string | ✓ | legacy datenpunkt id | UNIQUE |
-| `title` | string | ✓ | YAML | |
-| `wert_raw` | string | ✓ | YAML `wert` verbatim (`"1.100"`, `"250 / 312 / 400"`) | A — preserves original notation |
-| `wert_values` | list&lt;float&gt; | – | parsed German-number-aware | A |
-| `einheit_raw` | string | ✓ | YAML `einheit` | A |
-| `einheit_norm` | string | – | canonical | A (parallel `IST→:Einheit` edge) |
-| `bilanzgrenze` | string? | – | body | A |
-| `methode_text` | string? | – | body | A |
-| `vertrauensgrad` | string? | – | body | A (parallel `IST→:Datenqualitaet` edge) |
-| `widerspricht_id` | string? | – | id of contradicting measurement | A |
-| `body_md` | string | ✓ | | A |
-| `quelle_label_raw` | string? | – | YAML `quelle_label` verbatim | A |
-| `legacy_paths` | list&lt;string&gt; | – | | A |
-
-## §2.D Vocabulary Labels (shared property shape)
-
-All vocab Labels (every Label in §1.D) carry `:<Label>:Vokabular` and share:
+All vocab Labels — every entry in §1.B — carry the second Label `:Vokabular` and share:
 
 | name | type | req | source | notes |
 |---|---|---|---|---|
 | `id` | string | ✓ | folder slug under `_database/<vocab>/<id>/` | UNIQUE |
 | `title` | string | ✓ | YAML | |
-| `body_md` | string | ✓ | German prose of the knot | A |
-| `legacy_paths` | list&lt;string&gt; | – | | A |
+| `body_md` | string | ✓ | German prose | |
+| `legacy_paths` | list&lt;string&gt; | – | | |
 
-`:Ort` has additionally:
+Special additions:
 
-| name | type | req | notes |
-|---|---|---|---|
-| `iso_country` | string? | – | when target node is a country |
-| `koordinaten` | string? | – | optional lat/lon |
-
-## §2.E Auxiliary
-
-### `:BuildBatch`
-
-| name | type | req | source | notes |
-|---|---|---|---|---|
-| `id` | string | ✓ | e.g. `phase42`, `phase50a` | UNIQUE |
-| `description` | string? | – | | A |
-| `datum` | date? | – | | A |
+- `:Ort`: optional `iso_country` (string), `koordinaten` (string).
+- `:Programm`: required `programm_typ` (string, `"foerderung"` or `"forschungskontext"`).
+- `:WiederverwendungsArt`: required `axis` (string, `"einordnung"` for legacy BewertungslogikAbgrenzung values, `"grundtyp"` for wiederverwendet/original/hybrid).
 
 ---
 
 # §3 Edge-type catalogue
 
-Five generic predicates. No edge-as-edge from reuse_einsatz.
-
-| Edge | Subject Labels | Object Labels | Cardinality | Purpose |
+| Edge | Subject Labels | Object Labels | Card. | Purpose |
 |---|---|---|---|---|
-| `IST` | any | vocab | N:1 per axis | classification / identity / status / role |
-| `HAT` | `:Bauteilgruppe`, `:Bauwerk`, measurement, `:AkteurBeteiligung` | vocab (rich body) | N:M | qualitative attribute / feature |
-| `BENUTZT` | `:Bauteilgruppe`, `:Bauwerk` | `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:SoftwareDigitaltool`, `:Datenmodell` | N:M | instrumental usage / quantitative consumption |
-| `GEHÖRT_ZU` | any | container Labels | N:1 / N:M | membership / containment / location / scope / origin |
-| `BELEGT` | `:Quelle` | any cited node | N:M | citation / evidence |
+| `IST` | `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` | vocab | N:1 per axis | classification / identity / status |
+| `HAT` | `:Fallbeispiel`, `:Bauteilgruppe` | vocab (rich body) **or** `:Akteur` (with `art:'akteur', rolle:...`) | N:M | qualitative attribute / actor participation |
+| `BENUTZT` | `:Bauteilgruppe`, `:Fallbeispiel` | `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:SoftwareDigitaltool`, `:Datenmodell` | N:M | instrumental usage; quantitative carrier (anzahl, einheit, anteil_prozent) for material |
+| `GEHÖRT_ZU` | any | `:Fallbeispiel`, `:Wiederverwendungskette`, `:Ort`, `:Programm` | N:1 / N:M | membership / containment / location / station-in-chain / origin |
+| `BELEGT_IN` | any node carrying a citable claim (`:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Wiederverwendungskette`) | `:Quelle` | N:M | citation / evidence — the only place where source attribution lives |
 
-**Legacy relations folded into each edge type:**
+## Legacy relations folded in
 
-- **IST:** `has_bauteiltyp`, `has_reuse_einsatzstatus`, `has_reuse_strategie`, `has_bewertungslogik_abgrenzung`, `has_tragwerkstyp`, `has_akteurrolle`, `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_bauobjektklasse`, `has_bauobjektrolle`, `has_bauobjektstatus`, `has_dokumenttyp`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`, plus new `has_bauteilgruppentyp` and new `has_einheit`.
-- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung`, `has_logistik`, `has_wirtschaft`.
+- **IST:** `has_bauteiltyp`, `has_reuse_einsatzstatus`, `has_reuse_strategie`, `has_bewertungslogik_abgrenzung` (→ now `:WiederverwendungsArt`), `has_akteurrolle` (dropped — role is edge property), `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_bauobjektrolle`, `has_bauobjektstatus`, `has_dokumenttyp`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`.
+- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung`, `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` collapsed onto `HAT {art:'akteur', rolle:...}`.
 - **BENUTZT:** `uses_material`, `uses_software_digitaltool`, `has_methode`, `has_rueckbauverfahren`, `has_aufbereitungsverfahren`.
-- **GEHÖRT_ZU:** `installed_in_bauobjekt`, new `sourced_from_bauobjekt`, `part_of_reuse_kette`, `located_in_ort`, `relates_to_bauobjekt`, `involves_akteur`, `involves_foerderprogramm`, `has_programm_kontext`, `measured_on_bauobjekt`, `measures_kennwertdefinition`. (Legacy `belongs_to_fallstudie`, `belongs_to_projekt`, `has_projekt`, `has_bauobjekt` are **dropped** because `:Fallstudie` and `:Projekt` no longer exist as Labels.)
-- **BELEGT:** new — replaces unresolved `quelle_label` shorthand and the planned `documented_in_quelle` gap relation.
+- **GEHÖRT_ZU:** `installed_in_bauobjekt` → `rolle:'einbauort'`; new `sourced_from_bauobjekt` → `rolle:'herkunft'`; `part_of_reuse_kette` → `rolle:'kette'` (now to `:Wiederverwendungskette`); `located_in_ort` → `rolle:'ort'`; `relates_to_bauobjekt` → `rolle:'fallbeispiel'`; `involves_akteur` (dropped; folded into HAT); `involves_foerderprogramm` → `rolle:'programm'` to `:Programm`; `has_programm_kontext` → `rolle:'programm'` to `:Programm`; `measured_on_bauobjekt`, `measures_kennwertdefinition` → both dropped (measurements are properties now).
+- **BELEGT_IN:** replaces unresolved `quelle_label` shorthand on every node and every `quelle_id` previously stored as edge property. Replaces the planned `documented_in_quelle` gap relation. Direction is **(claim) → (:Quelle)**.
 
 ---
 
 # §4 Edges — properties per edge type
 
+**Note:** None of the four edges below carry a `quelle_id` or `quelle_label`. Source attribution lives exclusively on `:BELEGT_IN` edges from the source node (§4.E). When a claim made by an edge needs citation, the citation hangs off the edge's source node, optionally scoped via the `eigenschaft` property on `:BELEGT_IN`.
+
 ## §4.A `:IST`
 
 | name | type | req | notes |
 |---|---|---|---|
-| `seit` | date? | – | optional start of validity |
-| `bis` | date? | – | optional end of validity |
+| `seit` | date? | – | start of validity |
+| `bis` | date? | – | end of validity |
 | `gewichtung` | float? | – | 0..1 confidence |
-| `quelle_id` | string? | – | source ref shorthand (parallel to `:BELEGT` edge) |
 
 ## §4.B `:HAT`
 
 | name | type | req | notes |
 |---|---|---|---|
-| `art` | string | ✓ | discriminator: `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"leistung"`, `"schadstoff"`, `"kontext"`, `"recht"`, `"nutzung"`, `"intervention"`, `"fuegung"`, `"logistik"`, `"wirtschaft"`, `"zertifizierung"` |
+| `art` | string | ✓ | one of `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"leistung"`, `"schadstoff"`, `"kontext"`, `"recht"`, `"nutzung"`, `"intervention"`, `"fuegung"`, `"logistik"`, `"wirtschaft"`, `"zertifizierung"`, `"akteur"` |
+| `rolle` | string? | – | required when `art='akteur'` — e.g. `"Architektur"`, `"Tragwerksplanung"`, `"Bauherr_Auftraggeber"`. Validated against `:Akteurrolle.id` |
 | `anzahl` | int? | – | multiplicity |
-| `intensitaet` | string? | – | qualitative strength (`"gering"`, `"mittel"`, `"hoch"`) |
-| `quelle_id` | string? | – | source ref |
+| `intensitaet` | string? | – | qualitative strength |
+| `seit` | date? | – | |
+| `bis` | date? | – | |
 
 ## §4.C `:BENUTZT`
 
@@ -365,26 +331,27 @@ Five generic predicates. No edge-as-edge from reuse_einsatz.
 |---|---|---|---|
 | `anzahl` | float? | – | quantity used |
 | `einheit` | string? | – | unit (`"t"`, `"m2"`, `"Stueck"`, …) |
-| `anteil_prozent` | float? | – | share-of-total in % |
+| `anteil_prozent` | float? | – | share-of-total |
 | `funktion_alt` | string? | – | original role of the consumed thing |
 | `funktion_neu` | string? | – | new role |
-| `aufbereitung` | string? | – | processing applied (free text, e.g. `"Sandstrahlen"`) |
-| `quelle_id` | string? | – | source ref |
+| `aufbereitung` | string? | – | processing applied (free text) |
 
 ## §4.D `:GEHÖRT_ZU`
 
 | name | type | req | notes |
 |---|---|---|---|
-| `rolle` | string | ✓ | one of `"einbauort"`, `"herkunft"`, `"bauwerk"`, `"kette"`, `"ort"`, `"kontext"`, `"foerderprogramm"`, `"akteur"`, `"misst"`, `"messung_objekt"`, `"batch"` |
-| `position` | int? | – | ordering in a sequence (chain station number) |
-| `seit` | date? | – | start of validity |
-| `bis` | date? | – | end of validity |
-| `quelle_id` | string? | – | source ref |
+| `rolle` | string | ✓ | one of `"fallbeispiel"`, `"einbauort"`, `"herkunft"`, `"zwischenlager"`, `"verarbeitung"`, `"transport"`, `"kette"`, `"ort"`, `"programm"` |
+| `position` | int? | – | ordering in a sequence (e.g., station number in a chain) |
+| `seit` | date? | – | |
+| `bis` | date? | – | |
 
-## §4.E `:BELEGT`
+## §4.E `:BELEGT_IN`
+
+The only place source attribution lives. Direction: **(claim) → (:Quelle)**.
 
 | name | type | req | notes |
 |---|---|---|---|
+| `eigenschaft` | string? | – | scopes the citation to a specific property/aspect of the source node, e.g. `"flaeche_m2"`, `"co2_einsparung_kg"`, `"strategie"`, `"huerden"`. If omitted, the citation is at node level — "this whole Fallbeispiel/Bauteilgruppe is documented in this source". |
 | `seite` | string? | – | page number |
 | `excerpt` | string? | – | quoted excerpt |
 | `raw_label` | string? | – | original shorthand, e.g. `"S4"`, `"[S1]"` |
@@ -393,40 +360,56 @@ Five generic predicates. No edge-as-edge from reuse_einsatz.
 
 # Appendix A — Modeling principles
 
-- **Hybrid Modes A/B/C** coexist. Many fields use A + B (raw label as property AND canonical taxonomy as edge).
-- **German PascalCase Labels**, **SCREAMING_SNAKE edges**, **snake_case properties**.
-- **Multi-label** physical-object hierarchy (`:Bauwerk:Gebaeude`).
-- **Reuse-Einsatz is reified** as `:Bauteilgruppe`; no dedicated WIEDERVERWENDET edge.
-- **Vocab nodes carry `:Vokabular`** super-label for taxonomy enumeration.
-- Every Label has UNIQUE constraint on `id`.
+- Three modes coexist:
+  - **Mode A** — node property (intrinsic scalar/list value).
+  - **Mode B** — edge to a vocab node (taxonomy term with body).
+  - **Mode C** — reified node (the relation has internal structure — used only for `:Bauteilgruppe`).
+- **Measurement placement rule:** a measurement belongs to whichever node naturally owns it. Building-level → `:Fallbeispiel`. Component-group-level → `:Bauteilgruppe`. Inherently relational quantities (material reused in t) → on the `BENUTZT` edge.
+- **Role placement rule:** a role IS a property of an attachment edge, not its own node. `:HAT {art:'akteur', rolle:'Architektur'}->(:Akteur)`. Vocab `:Akteurrolle` is kept as dictionary, not as an edge target.
+- **Citation placement rule:** source attribution NEVER lives as a property. Every citation is a `:BELEGT_IN` edge from the claim-bearing node to a `:Quelle` node, with optional `eigenschaft` to scope which property/aspect of the source node is being cited.
+- Naming: German PascalCase Labels, SCREAMING_SNAKE edges, snake_case properties.
+- Every Label: `CREATE CONSTRAINT FOR (n:<Label>) REQUIRE n.id IS UNIQUE`.
 
 # Appendix B — Constraints & indexes
 
-- `CREATE CONSTRAINT FOR (n:<Label>) REQUIRE n.id IS UNIQUE` per Label.
-- Range indexes on `:Bauteilgruppe(bauteil_label)`, `:Bauteilgruppe(material_label)`, `:Bauwerk(title)`, every measurement Label `(wert_values, einheit_norm)`.
-- Full-text index `body_de` over `body_md` on all instance + vocab + measurement Labels.
+- UNIQUE id per Label.
+- Range indexes on `:Fallbeispiel(art)`, `:Fallbeispiel(flaeche_m2)`, `:Fallbeispiel(fertigstellung_jahr)`, `:Bauteilgruppe(bauteil_label)`, `:Bauteilgruppe(material_label)`, `:Bauteilgruppe(masse_t)`, `:Bauteilgruppe(co2_einsparung_kg)`.
+- Full-text index `body_de` on all instance + vocab Labels.
 
 # Appendix C — Coverage checklist
 
-Verification table (in the final spec) showing every:
+Verification table proving every:
+- folder under `_database/<entity>/` → destination Label (or merged into a property);
+- legacy relation in `clean_confirmed_edges.csv` → one of the 5 edge types (mapping in §3);
+- YAML frontmatter field on legacy `fallstudie` / `projekt` / `bauobjekt` / `reuse_einsatz` / `datenpunkt` / `akteur_beteiligung` → destination property in §2.
 
-- folder under `_database/<entity>/` → destination Label
-- legacy relation in `clean_confirmed_edges.csv` → one of the 5 edge types (via the legacy-mapping table in §3)
-- YAML frontmatter field on legacy `fallstudie` / `projekt` / `bauobjekt` / `reuse_einsatz` / `datenpunkt` / `akteur_beteiligung` → destination property in §2
+Items explicitly not preserved: legacy `belongs_to_fallstudie` / `belongs_to_projekt` edges (no separate target Label); legacy `measured_on_bauobjekt` (measurement is now a property); legacy `:AkteurBeteiligung` / `:BauwerkBeteiligung` / `:ReuseKettenstation` / `:Datenpunkt` / `:Bauobjektklasse` / `:Tragwerkstyp` / `:Bauteilgruppentyp` / `:Einheit` / `:Kennwertdefinition` nodes (information preserved via edges, properties, or vocab merges).
 
-Items explicitly not preserved: `build_status` free-text values keep as A property but are not modeled as edges/relations; legacy `belongs_to_fallstudie` / `belongs_to_projekt` edges are dropped (no target Label).
+# Appendix D — Renamings, drops, merges
 
-# Appendix D — Renamings & taxonomy fixes
-
-- Legacy `fallstudie/<id>/` + `projekt/<id>/` + `bauobjekt/<id>/` records sharing an id → merged into one `:Bauwerk` node.
-- Legacy `reuse_einsatz/<id>/` → `:Bauteilgruppe` node.
-- New vocab `:Bauteilgruppentyp` (`wiederverwendet`, `original`, `hybrid`).
-- New vocab `:Einheit`.
-- `:Tragwerkstyp` axis split — material-typed values kept; reuse-typed values (`wiederverwendetes_Tragwerk`, `demontierbares_Tragwerk`) lifted to `:Bauteilgruppentyp`.
-- `Moebelsepearat` → `Moebel_separat`.
-- `ort/Scwheiz` → `ort/Schweiz`.
-- Bauteiltyp drop-and-remap from [SCHEMA.md §5](_database/_system/SCHEMA.md) (already applied).
-- Material drop-and-merge from [SCHEMA.md §6](_database/_system/SCHEMA.md) (already applied).
+| Change | Action |
+|---|---|
+| `:Fallstudie` + `:Projekt` + `:Bauobjekt` (shared id) | merge into `:Fallbeispiel` with `art` property |
+| `:ReuseEinsatz` | rename to `:Bauteilgruppe` |
+| `:ReuseKette` | rename to `:Wiederverwendungskette` (kept) |
+| `:ReuseKettenstation` | drop — stations become GEHÖRT_ZU edges on `:Bauteilgruppe` |
+| `:BewertungslogikAbgrenzung` | rename to `:WiederverwendungsArt` (absorbs `:Bauteilgruppentyp` values) |
+| `:Bauteilgruppentyp` | merge into `:WiederverwendungsArt` |
+| `:Tragwerkstyp` | drop (axis mix per review §7.8) |
+| `:Bauobjektklasse` | drop (Halle/Lager-pattern: values collapse into `:Fallbeispiel.art`) |
+| `:Einheit` | drop as Label; remains as property strings |
+| `:Kennwertdefinition` | drop as Label; remains in spec as documentation of kennwert names |
+| `:AkteurBeteiligung` | drop; role goes on `HAT {art:'akteur', rolle:...}` edge |
+| `:BauwerkBeteiligung` | drop; same pattern |
+| `:Datenpunkt` and ~26 measurement Labels (`:Flaeche`, `:CO2_Einsparung`, …) | drop; measurements become properties on `:Fallbeispiel` / `:Bauteilgruppe` / `BENUTZT` edge |
+| `:BuildBatch` | drop; `build_status` and `legacy_paths` stay as properties |
+| `:Foerderprogramm` + `:ProgrammKontext` | merge into `:Programm` with `programm_typ` property |
+| `:BELEGT` (Quelle → claim) | rename + reverse to `:BELEGT_IN` (claim → Quelle) |
+| All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties on any node or edge | drop — replaced exclusively by `:BELEGT_IN` edges with optional `eigenschaft` property to scope which property/aspect of the source node is being cited |
+| `Moebelsepearat` | rename to `Moebel_separat` |
+| `ort/Scwheiz` | rename to `ort/Schweiz` |
+| Bauteiltyp drop-and-remap (SCHEMA.md §5) | already applied — noted in spec |
+| Material drop-and-merge (SCHEMA.md §6) | already applied — noted in spec |
 
 ---
 
