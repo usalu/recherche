@@ -1,12 +1,12 @@
 ---
 name: Neo4j schema catalogue
-overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. Six instance Labels (:Fallbeispiel, :Bauteilgruppe, :Akteur, :Quelle, :SoftwareDigitaltool, :Wiederverwendungskette) and 38 vocabulary Labels (covering every folder under _database/). Five generic edges (IST, HAT, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes.
+overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. Six instance Labels (:Fallbeispiel, :Bauteilgruppe, :Akteur, :Quelle, :SoftwareDigitaltool, :Wiederverwendungskette) and 39 vocabulary Labels (covering every folder under _database/). Five generic edges (IST, HAT, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes.
 todos:
   - id: spec-skeleton
     content: "Create _database/_system/NEO4J_SCHEMA.md with the 4-section structure: §1 Node-type catalogue, §2 Nodes (per-Label property tables), §3 Edge-type catalogue, §4 Edges (per-edge-type property tables). Plus appendices for principles, constraints, coverage (every folder → Label/drop), renamings."
     status: pending
   - id: write-1
-    content: "Write §1 Node-type catalogue: 6 instance Labels and the 38 vocabulary Labels, with one-line purpose each. Confirm against _database/ folder list."
+    content: "Write §1 Node-type catalogue: 6 instance Labels and the 39 vocabulary Labels, with one-line purpose each. Confirm against _database/ folder list."
     status: pending
   - id: write-2
     content: "Write §2 Nodes: per-Label property tables. ONLY metadata properties — no body, no legacy_paths, no raw labels, no build_status."
@@ -20,6 +20,7 @@ todos:
   - id: appendices
     content: "Write the appendices: A modeling principles (metadata-only, hybrid modes), B constraints & indexes, C complete coverage checklist (every folder under _database/ accounted for), D renamings / drops / merges."
     status: pending
+isProject: false
 ---
 
 # Goal
@@ -92,9 +93,12 @@ Neo4j_Schema
 ├── KNOTENTYP :Funktionswechsel:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Dekorative_Funktion, Gleiche_Funktion, Konstruktive_Funktion, Neue_Funktion, Technische_Funktion, Unbekannt
-├── KNOTENTYP :FuegungVerbindung:Vokabular
+├── KNOTENTYP :Verbindungstechnik:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
-│   └── Knoten: Klemmverbindung, Reversible_Fuegung, Steckverbindung, Verleimung, Vermoertelung, Verschraubung, Verschweissung
+│   └── Knoten: Geschraubt, Geschweisst, Gesteckt, Geklebt, Vergossen, Klemmverbindung
+├── KNOTENTYP :Reversibilitaet:Vokabular
+│   ├── Knoteneigenschaften: id (Pflicht)
+│   └── Knoten: Reversibel, Teilweise_reversibel, Irreversibel, Unbekannt
 ├── KNOTENTYP :Bauweise:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Fertigteilbauweise, Holzbauweise, Hybridbauweise, Massivbauweise, Ortbetonbauweise, Stahlbauweise
@@ -107,9 +111,9 @@ Neo4j_Schema
 ├── KNOTENTYP :ReuseStrategie:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Adaptives_ReUse, Bestandserhalt, Design_for_Disassembly, Direkte_Wiederverwendung, Recycling, Refurbishment, Remanufacturing, Same_Site_ReUse, Upcycling, Urban_Mining, Weiterbauen_im_Bestand
-├── KNOTENTYP :ReuseEinsatzstatus:Vokabular
+├── KNOTENTYP :Status:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
-│   └── Knoten: Geplant, Prototypisch, Realisiert, Temporaer, Unklar, Verworfen, Vorgeschlagen
+│   └── Knoten: Vorschlag, Geplant, Realisiert, Nicht_Realisiert
 ├── KNOTENTYP :WiederverwendungsArt:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht), axis (Pflicht: einordnung | grundtyp)
 │   └── Knoten: Bestandserhalt_Nicht_Direct_Reuse, Kein_Direct_Reuse_Nachweis, Moebel_Dekoration_Nicht_Direct_Reuse, Recycling_Nicht_Direct_Reuse, Reuse_Anteil_Unklar, Ungebaut_Nicht_Realisierte_Wiederverwendung, Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung
@@ -206,6 +210,8 @@ KANTEN (alle fünf Typen; jede Kante ist eine Instanz zwischen zwei Knoten)
 │   ├── Kanteneigenschaften: art (Pflicht), rolle? (Pflicht wenn art=akteur), anzahl?, intensitaet?, seit?, bis?
 │   └── Kante (Beispielmuster)
 │       ├── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: huerde|prozessphase|pruefung|norm|…}]-> (:Huerde|:Prozessphase|:Norm|…)
+│       ├── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: verbindungstechnik}]-> (:Verbindungstechnik)
+│       ├── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: reversibilitaet}]-> (:Reversibilitaet)
 │       ├── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: akteur, rolle: "<Akteurrolle.id>"}]-> (:Akteur)
 │       └── (:Fallbeispiel|:Bauteilgruppe) -[HAT {art: entwurf}]-> (:Entwurfsentscheidung)
 │
@@ -498,14 +504,19 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:Funktionswechsel:Vokabular {id: "Technische_Funktion"})
   (:Funktionswechsel:Vokabular {id: "Unbekannt"})
 
-:FuegungVerbindung
-  (:FuegungVerbindung:Vokabular {id: "Klemmverbindung"})
-  (:FuegungVerbindung:Vokabular {id: "Reversible_Fuegung"})
-  (:FuegungVerbindung:Vokabular {id: "Steckverbindung"})
-  (:FuegungVerbindung:Vokabular {id: "Verleimung"})
-  (:FuegungVerbindung:Vokabular {id: "Vermoertelung"})
-  (:FuegungVerbindung:Vokabular {id: "Verschraubung"})
-  (:FuegungVerbindung:Vokabular {id: "Verschweissung"})
+:Verbindungstechnik
+  (:Verbindungstechnik:Vokabular {id: "Geschraubt"})
+  (:Verbindungstechnik:Vokabular {id: "Geschweisst"})
+  (:Verbindungstechnik:Vokabular {id: "Gesteckt"})
+  (:Verbindungstechnik:Vokabular {id: "Geklebt"})
+  (:Verbindungstechnik:Vokabular {id: "Vergossen"})
+  (:Verbindungstechnik:Vokabular {id: "Klemmverbindung"})
+
+:Reversibilitaet
+  (:Reversibilitaet:Vokabular {id: "Reversibel"})
+  (:Reversibilitaet:Vokabular {id: "Teilweise_reversibel"})
+  (:Reversibilitaet:Vokabular {id: "Irreversibel"})
+  (:Reversibilitaet:Vokabular {id: "Unbekannt"})
 
 :Bauweise
   (:Bauweise:Vokabular {id: "Fertigteilbauweise"})
@@ -541,14 +552,11 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:ReuseStrategie:Vokabular {id: "Urban_Mining"})
   (:ReuseStrategie:Vokabular {id: "Weiterbauen_im_Bestand"})
 
-:ReuseEinsatzstatus
-  (:ReuseEinsatzstatus:Vokabular {id: "Geplant"})
-  (:ReuseEinsatzstatus:Vokabular {id: "Prototypisch"})
-  (:ReuseEinsatzstatus:Vokabular {id: "Realisiert"})
-  (:ReuseEinsatzstatus:Vokabular {id: "Temporaer"})
-  (:ReuseEinsatzstatus:Vokabular {id: "Unklar"})
-  (:ReuseEinsatzstatus:Vokabular {id: "Verworfen"})
-  (:ReuseEinsatzstatus:Vokabular {id: "Vorgeschlagen"})
+:Status
+  (:Status:Vokabular {id: "Vorschlag"})
+  (:Status:Vokabular {id: "Geplant"})
+  (:Status:Vokabular {id: "Realisiert"})
+  (:Status:Vokabular {id: "Nicht_Realisiert"})
 
 :WiederverwendungsArt
   (:WiederverwendungsArt:Vokabular {id: "Bestandserhalt_Nicht_Direct_Reuse", axis: "einordnung"})
@@ -762,8 +770,7 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:Kontextmerkmal:Vokabular {id: "Pilotprojekt"})
 
 :Land
-  — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Plan
-
+  — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Pla
 :Stadt
   — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Plan
 
@@ -781,7 +788,7 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:Akteurrolle:Vokabular {id: "Materiallieferant"})
   (:Akteurrolle:Vokabular {id: "Nachhaltigkeitsberatung"})
   (:Akteurrolle:Vokabular {id: "Oeffentliche_Hand"})
-  (:Akteurrolle:Vokabular {id: "Projektbeteiligte_Unbestimmt"})
+  (:Akteurrolle:Vokabular {id: "Projekteteiligte_Unbestimmt"})
   (:Akteurrolle:Vokabular {id: "Projektmanagement_Koordination"})
   (:Akteurrolle:Vokabular {id: "Pruefung_Qualitaetssicherung"})
   (:Akteurrolle:Vokabular {id: "Reuse_Beratung"})
@@ -865,44 +872,75 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 
 **Geography exception:** `_database/ort/<id>/` is not mapped to a single `:Ort` Label. On export, each slug becomes either `(:Land:Vokabular {id})` or `(:Stadt:Vokabular {id})` according to a classification rule (country/region vs city/district/site). The plan does not enumerate those node ids.
 
+**Reuse-Einsatz-Status exception:** Legacy folder `reuse_einsatzstatus/` has **seven** subfolders, but the graph exposes **four** vocabulary nodes under the Label **`:Status`** (not `:ReuseEinsatzstatus`). `(:Bauteilgruppe)-[:IST]->(:Status:Vokabular)` carries the lifecycle; fine-grained legacy values are merged on import:
+
+| Legacy `reuse_einsatzstatus/<id>/` | `(:Status:Vokabular {id})` |
+|---|---|
+| `Vorgeschlagen`, `Prototypisch` | `Vorschlag` |
+| `Geplant` | `Geplant` |
+| `Realisiert`, `Temporaer` | `Realisiert` |
+| `Verworfen`, `Unklar` | `Nicht_Realisiert` |
+
+**Fügung/Verbindung axis split:** Legacy folder `fuegung_verbindung/` mixes **Verbindungstechnik** (how parts are joined) and **Reversibilität** (how detachable) in one flat list. The graph uses two vocabulary Labels — **`:Verbindungstechnik`** and **`:Reversibilitaet`** — never a combined `:FuegungVerbindung`. From `:Fallbeispiel` / `:Bauteilgruppe` use `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` and `HAT {art:'reversibilitaet'}` → `:Reversibilitaet` (orthogonal values; do not encode reversibility as a “technique” node).
+
+| Legacy `fuegung_verbindung/<id>/` | Target Label | Canonical node `id` |
+|---|---|---|
+| `Verschraubung` | `:Verbindungstechnik` | `Geschraubt` |
+| `Verschweissung` | `:Verbindungstechnik` | `Geschweisst` |
+| `Steckverbindung` | `:Verbindungstechnik` | `Gesteckt` |
+| `Verleimung` | `:Verbindungstechnik` | `Geklebt` |
+| `Vermoertelung` | `:Verbindungstechnik` | `Vergossen` |
+| `Klemmverbindung` | `:Verbindungstechnik` | `Klemmverbindung` |
+| `Reversible_Fuegung` | `:Reversibilitaet` | `Reversibel` |
+
+The four **`:Reversibilitaet`** vocabulary nodes are always `Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt` (only `Reversibel` is populated directly from a legacy subfolder name; the others come from explicit source fields or future curation — no silent defaulting from technique in this plan).
+
 ## §1.A Instance Labels (6)
 
-| Label | Purpose | Replaces (legacy folders) |
-|---|---|---|
-| `:Fallbeispiel` | One physical case-study object | `fallstudie/` + `projekt/` + `bauobjekt/` (merged where ids match) |
-| `:Bauteilgruppe` | A group of components in a Fallbeispiel — the reuse-Einsatz | `reuse_einsatz/` |
-| `:Akteur` | Office / company / authority / institution / person | `akteur/` |
-| `:Quelle` | Source / citation target | `quelle/` |
-| `:SoftwareDigitaltool` | Concrete platform | `software_digitaltool/` |
-| `:Wiederverwendungskette` | OPTIONAL named multi-Bauteilgruppe reuse program | `reuse_kette/` (renamed; `reuse_kettenstation/` dropped) |
 
-## §1.B Vocabulary Labels (38 — every controlled-knot folder mapped; `ort/` splits into two Labels)
+| Label                     | Purpose                                                     | Replaces (legacy folders)                                          |
+| ------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
+| `:Fallbeispiel`           | One physical case-study object                              | `fallstudie/` + `projekt/` + `bauobjekt/` (merged where ids match) |
+| `:Bauteilgruppe`          | A group of components in a Fallbeispiel — the reuse-Einsatz | `reuse_einsatz/`                                                   |
+| `:Akteur`                 | Office / company / authority / institution / person         | `akteur/`                                                          |
+| `:Quelle`                 | Source / citation target                                    | `quelle/`                                                          |
+| `:SoftwareDigitaltool`    | Concrete platform                                           | `software_digitaltool/`                                            |
+| `:Wiederverwendungskette` | OPTIONAL named multi-Bauteilgruppe reuse program            | `reuse_kette/` (renamed; `reuse_kettenstation/` dropped)           |
+
+
+## §1.B Vocabulary Labels (39 — every controlled-knot folder mapped; `ort/` splits into two Labels; `fuegung_verbindung/` splits into two Labels)
 
 Grouped only for reading.
 
 **Bauteil & Material:**
+
 - `:Bauteiltyp` ← `bauteiltyp/`
 - `:Material` ← `material/`
 - `:Bauteilebene` ← `bauteilebene/`
 - `:Bauteilzustand` ← `bauteilzustand/`
 - `:Funktionswechsel` ← `funktionswechsel/`
-- `:FuegungVerbindung` ← `fuegung_verbindung/`
+- `:Verbindungstechnik` ← `fuegung_verbindung/` (technique rows only — canonical ids; see axis-split table)
+- `:Reversibilitaet` ← **new axis** — four nodes; legacy `Reversible_Fuegung/` maps to `Reversibel`; other ids from explicit data (see axis-split table)
 
 **Konstruktion:**
+
 - `:Bauweise` ← `bauweise/`
 - `:Bausystem` ← `bausystem/`
 - `:Tragwerksprinzip` ← `tragwerksprinzip/`
 
 **Reuse:**
+
 - `:ReuseStrategie` ← `reuse_strategie/`
-- `:ReuseEinsatzstatus` ← `reuse_einsatzstatus/`
+- `:Status` ← `reuse_einsatzstatus/` (seven legacy folders → **four** nodes; Label renamed from `:ReuseEinsatzstatus`; see exception table above)
 - `:WiederverwendungsArt` ← `bewertungslogik_abgrenzung/` (renamed)
 
 **Beschaffung:**
+
 - `:Ressourcenquelle` ← `ressourcenquelle/`
 - `:Beschaffungsweg` ← `beschaffungsweg/`
 
 **Prozess & Methode:**
+
 - `:Prozessphase` ← `prozessphase/`
 - `:Rueckbauverfahren` ← `rueckbauverfahren/`
 - `:Aufbereitungsverfahren` ← `aufbereitungsverfahren/`
@@ -910,6 +948,7 @@ Grouped only for reading.
 - `:Methode` ← `methode/`
 
 **Anforderungen & Hürden:**
+
 - `:Huerde` ← `huerde/`
 - `:PruefungNachweis` ← `pruefung_nachweis/`
 - `:Leistungsanforderung` ← `leistungsanforderung/`
@@ -918,6 +957,7 @@ Grouped only for reading.
 - `:Schadstoff` ← `schadstoff/`
 
 **Fallbeispiel-Kontext:**
+
 - `:Bauobjektstatus` ← `bauobjektstatus/` (bestehend / abgerissen / geplant)
 - `:Nutzung` ← `nutzung/`
 - `:BauaufgabeIntervention` ← `bauaufgabe_intervention/`
@@ -925,45 +965,51 @@ Grouped only for reading.
 - `:Entwurfsentscheidung` ← **new** — no legacy folder; created fresh. Vocabulary Label capturing design adaptations forced by reuse constraints. Connected via `HAT {art:'entwurf'}` from `:Bauteilgruppe` (component-specific) or `:Fallbeispiel` (project-wide). Initial values defined from K.118 example and generalised across all case data.
 
 **Geographie:**
+
 - `:Land` ← each qualifying entry from `ort/` (export classification: country / macro-region)
 - `:Stadt` ← each qualifying entry from `ort/` (export classification: city, borough, or project-scale site id)
 
 **Akteure:**
+
 - `:Akteurrolle` ← `akteurrolle/` (dictionary only — value carried as `rolle` property on HAT edges, no IST edges point here)
 
 **Daten & Bewertung:**
+
 - `:Datenqualitaet` ← `datenqualitaet/`
 - `:Datenmodell` ← `datenmodell/`
 - `:Tooltyp` ← `tooltyp/`
 - `:ZertifizierungBewertungssystem` ← `zertifizierung_bewertungssystem/`
 
 **Wirtschaft & Programme:**
+
 - `:Wirtschaft` ← `wirtschaft/`
 - `:Programm` ← `foerderprogramm/` + `programm_kontext/` (merged; `programm_typ` property: `"foerderung"` / `"forschungskontext"`)
 
 ## §1.C Folders mapped but NOT a Label
 
-| Folder | Disposition |
-|---|---|
-| `fallstudie/` | merged into `:Fallbeispiel` |
-| `projekt/` | merged into `:Fallbeispiel` |
-| `bauobjekt/` | merged into `:Fallbeispiel` |
-| `reuse_einsatz/` | renamed to `:Bauteilgruppe` |
-| `reuse_kettenstation/` | dropped — stations become GEHÖRT_ZU edges from `:Bauteilgruppe` |
-| `akteur_beteiligung/` | dropped — collapsed to `HAT {art:'akteur', rolle:...}` edge |
-| `bauobjekt_beteiligung/` | dropped — same pattern |
-| `datenpunkt/` | dropped — measurements as node properties |
-| `kennwertdefinition/` | dropped — kennwert-names live as property names |
-| `bauobjektklasse/` | dropped — values collapse into `:Fallbeispiel.art` |
-| `bauobjektrolle/` | dropped — donor/receiver/standalone derivable from incoming GEHÖRT_ZU edges (`rolle:'herkunft'` / `rolle:'einbauort'`) |
-| `dokumenttyp/` | dropped — replaced by `:Quelle.art` |
-| `tragwerkstyp/` | dropped — axis-mix (review §7.8); material values derivable from `:Material`, reuse values folded into `:WiederverwendungsArt` |
-| `foerderprogramm/` | merged into `:Programm` |
-| `programm_kontext/` | merged into `:Programm` |
-| `bewertungslogik_abgrenzung/` | renamed to `:WiederverwendungsArt` |
-| `reuse_kette/` | renamed to `:Wiederverwendungskette` |
 
-Total: 54 folders → 6 instance Labels + 38 vocabulary Labels + 11 dropped + 4 merged-or-renamed (`ort/` yields two Labels, not two folders).
+| Folder                        | Disposition                                                                                                                    |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `fallstudie/`                 | merged into `:Fallbeispiel`                                                                                                    |
+| `projekt/`                    | merged into `:Fallbeispiel`                                                                                                    |
+| `bauobjekt/`                  | merged into `:Fallbeispiel`                                                                                                    |
+| `reuse_einsatz/`              | renamed to `:Bauteilgruppe`                                                                                                    |
+| `reuse_kettenstation/`        | dropped — stations become GEHÖRT_ZU edges from `:Bauteilgruppe`                                                                |
+| `akteur_beteiligung/`         | dropped — collapsed to `HAT {art:'akteur', rolle:...}` edge                                                                    |
+| `bauobjekt_beteiligung/`      | dropped — same pattern                                                                                                         |
+| `datenpunkt/`                 | dropped — measurements as node properties                                                                                      |
+| `kennwertdefinition/`         | dropped — kennwert-names live as property names                                                                                |
+| `bauobjektklasse/`            | dropped — values collapse into `:Fallbeispiel.art`                                                                             |
+| `bauobjektrolle/`             | dropped — donor/receiver/standalone derivable from incoming GEHÖRT_ZU edges (`rolle:'herkunft'` / `rolle:'einbauort'`)         |
+| `dokumenttyp/`                | dropped — replaced by `:Quelle.art`                                                                                            |
+| `tragwerkstyp/`               | dropped — axis-mix (review §7.8); material values derivable from `:Material`, reuse values folded into `:WiederverwendungsArt` |
+| `foerderprogramm/`            | merged into `:Programm`                                                                                                        |
+| `programm_kontext/`           | merged into `:Programm`                                                                                                        |
+| `bewertungslogik_abgrenzung/` | renamed to `:WiederverwendungsArt`                                                                                             |
+| `reuse_kette/`                | renamed to `:Wiederverwendungskette`                                                                                           |
+
+
+Total: 54 folders → 6 instance Labels + 39 vocabulary Labels + 11 dropped + 4 merged-or-renamed (`ort/` yields two Labels; `fuegung_verbindung/` yields two Labels).
 
 ---
 
@@ -975,32 +1021,37 @@ Property table columns: **name** | **type** | **req** | **notes**.
 
 ## §2.A `:Fallbeispiel`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `id` | string | ✓ | UNIQUE; folder slug |
-| `art` | string | ✓ | one of `"Gebaeude"`, `"Bruecke"`, `"Pavillon"`, `"Halle"`, `"Lager"`, `"Innenausbau"`, `"Anlage"` |
+
+| name  | type   | req | notes                                                                                             |
+| ----- | ------ | --- | ------------------------------------------------------------------------------------------------- |
+| `id`  | string | ✓   | UNIQUE; folder slug                                                                               |
+| `art` | string | ✓   | one of `"Gebaeude"`, `"Bruecke"`, `"Pavillon"`, `"Halle"`, `"Lager"`, `"Innenausbau"`, `"Anlage"` |
+
 
 **Building-level measurement properties** (all optional; missing = unknown):
 
-| name | type | notes |
-|---|---|---|
-| `flaeche_m2` | float? | |
-| `projektflaeche_m2` | float? | |
-| `gebaeudemasse_t` | float? | |
-| `wohneinheiten` | int? | |
-| `fertigstellung_jahr` | int? | |
-| `entwurfsbeginn_jahr` | int? | |
-| `bauzeit_monate` | int? | |
-| `lebensdauer_jahre` | int? | |
-| `restlebensdauer_jahre` | float? | |
-| `kosten_eur` | float? | |
-| `budget_eur` | float? | |
-| `co2_footprint_kg` | float? | |
-| `energieverbrauch_kwh_a` | float? | |
-| `wassereinsparung_m3` | float? | |
-| `bestandslager_m3` | float? | |
+
+| name                     | type   | notes |
+| ------------------------ | ------ | ----- |
+| `flaeche_m2`             | float? |       |
+| `projektflaeche_m2`      | float? |       |
+| `gebaeudemasse_t`        | float? |       |
+| `wohneinheiten`          | int?   |       |
+| `fertigstellung_jahr`    | int?   |       |
+| `entwurfsbeginn_jahr`    | int?   |       |
+| `bauzeit_monate`         | int?   |       |
+| `lebensdauer_jahre`      | int?   |       |
+| `restlebensdauer_jahre`  | float? |       |
+| `kosten_eur`             | float? |       |
+| `budget_eur`             | float? |       |
+| `co2_footprint_kg`       | float? |       |
+| `energieverbrauch_kwh_a` | float? |       |
+| `wassereinsparung_m3`    | float? |       |
+| `bestandslager_m3`       | float? |       |
+
 
 For each measurement property, optional parallel:
+
 - `<name>_alt: list<float>?` — alternate values from conflicting sources
 - `<name>_vertrauensgrad: string?` — `belegt` / `teilweise_belegt` / `unklar` / `umstritten`
 
@@ -1008,31 +1059,36 @@ Source attribution: `:BELEGT_IN` edges with `eigenschaft:'<name>'`.
 
 ## §2.B `:Bauteilgruppe`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `id` | string | ✓ | UNIQUE |
+
+| name | type   | req | notes  |
+| ---- | ------ | --- | ------ |
+| `id` | string | ✓   | UNIQUE |
+
 
 **Component-group measurement properties:**
 
-| name | type | notes |
-|---|---|---|
-| `masse_t` | float? | |
-| `anzahl_stueck` | int? | |
-| `volumen_m3` | float? | |
-| `flaeche_m2` | float? | component area |
-| `anteil_prozent` | float? | share of receiver's total |
-| `co2_einsparung_kg` | float? | |
-| `co2_reduktion_kg` | float? | |
-| `geerntete_materialien_t` | float? | |
-| `sekundaere_materialien_t` | float? | |
-| `abfall_vermieden_t` | float? | |
-| `zielwert_reuse_prozent` | float? | |
+
+| name                       | type   | notes                     |
+| -------------------------- | ------ | ------------------------- |
+| `masse_t`                  | float? |                           |
+| `anzahl_stueck`            | int?   |                           |
+| `volumen_m3`               | float? |                           |
+| `flaeche_m2`               | float? | component area            |
+| `anteil_prozent`           | float? | share of receiver's total |
+| `co2_einsparung_kg`        | float? |                           |
+| `co2_reduktion_kg`         | float? |                           |
+| `geerntete_materialien_t`  | float? |                           |
+| `sekundaere_materialien_t` | float? |                           |
+| `abfall_vermieden_t`       | float? |                           |
+| `zielwert_reuse_prozent`   | float? |                           |
+
 
 Same `_alt` and `_vertrauensgrad` shadow properties as on `:Fallbeispiel`.
 
 **No properties for:** bauteil_label, material_label, alte_funktion, neue_funktion, herkunft_label, pruefung_label_raw, norm_recht_label_raw, huerde_label_raw, menge_umfang_raw, quelle_label_raw, body, title.
 
 Where each of those previously lived in the graph (and now lives as an edge or is lost):
+
 - `bauteil_label` (`"Stahlträger / Stützen"`) → canonical `IST→:Bauteiltyp` edge only; fine variant lost at graph level (still in source Markdown).
 - `material_label` (`"Brettschichtholz"`) → canonical `BENUTZT→:Material` edge; fine variant lost at graph level.
 - `menge_umfang_raw` (`"98 t; 95 %"`) → parsed onto `BENUTZT` edge: `anzahl: 98, einheit: "t", anteil_prozent: 95`.
@@ -1043,57 +1099,72 @@ Where each of those previously lived in the graph (and now lives as an edge or i
 
 ## §2.C `:Akteur`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `id` | string | ✓ | UNIQUE |
-| `art` | string? | – | optional: `"Firma"`, `"Buero"`, `"Behoerde"`, `"Institution"`, `"Person"`, `"Verband"`, `"Bauherrschaft"`, `"Sonstige"` |
-| `url` | string? | – | website / firm page |
+
+| name  | type    | req | notes                                                                                                                   |
+| ----- | ------- | --- | ----------------------------------------------------------------------------------------------------------------------- |
+| `id`  | string  | ✓   | UNIQUE                                                                                                                  |
+| `art` | string? | –   | optional: `"Firma"`, `"Buero"`, `"Behoerde"`, `"Institution"`, `"Person"`, `"Verband"`, `"Bauherrschaft"`, `"Sonstige"` |
+| `url` | string? | –   | website / firm page                                                                                                     |
+
 
 ## §2.D `:Quelle`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `id` | string | ✓ | UNIQUE; folder slug or case-scoped derived (`K118_Kopfbau__S4`) |
-| `art` | string | ✓ | one of `"Website"`, `"Interview"`, `"Paper"`, `"Buch"`, `"Bericht"`, `"Datenbank"`, `"Vortrag"`, `"Norm"`, `"Sonstige"` |
-| `url` | string? | – | source URL or DOI |
+
+| name  | type    | req | notes                                                                                                                   |
+| ----- | ------- | --- | ----------------------------------------------------------------------------------------------------------------------- |
+| `id`  | string  | ✓   | UNIQUE; folder slug or case-scoped derived (`K118_Kopfbau__S4`)                                                         |
+| `art` | string  | ✓   | one of `"Website"`, `"Interview"`, `"Paper"`, `"Buch"`, `"Bericht"`, `"Datenbank"`, `"Vortrag"`, `"Norm"`, `"Sonstige"` |
+| `url` | string? | –   | source URL or DOI                                                                                                       |
+
 
 No outgoing edges from `:Quelle`. All metadata about a citation (page, excerpt, raw shorthand, scoped property) lives on the incoming `:BELEGT_IN` edge.
 
 ## §2.E `:SoftwareDigitaltool`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `id` | string | ✓ | UNIQUE |
-| `url` | string? | – | |
+
+| name  | type    | req | notes  |
+| ----- | ------- | --- | ------ |
+| `id`  | string  | ✓   | UNIQUE |
+| `url` | string? | –   |        |
+
 
 ## §2.F `:Wiederverwendungskette`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `id` | string | ✓ | UNIQUE |
-| `start_jahr` | int? | – | |
-| `end_jahr` | int? | – | |
+
+| name         | type   | req | notes  |
+| ------------ | ------ | --- | ------ |
+| `id`         | string | ✓   | UNIQUE |
+| `start_jahr` | int?   | –   |        |
+| `end_jahr`   | int?   | –   |        |
+
 
 ## §2.G Vocabulary Labels (shared shape — every label in §1.B)
 
-Each Label in §1.B has **as many nodes as there are subfolders** under its corresponding `_database/<vocab>/` directory. For instance: `_database/material/` has subfolders for `Stahl`, `Holz`, `Beton`, `Stahlbeton`, … — each becomes a `(:Material {id: "..."})` node. Same for every other vocab Label.
+Most Labels in §1.B have **as many nodes as there are subfolders** under the corresponding `_database/<vocab>/` directory. For instance: `_database/material/` has subfolders for `Stahl`, `Holz`, `Beton`, `Stahlbeton`, … — each becomes a `(:Material {id: "..."})` node. **Exceptions:** `:Land` / `:Stadt` (see geography exception); `:Status` (seven legacy `reuse_einsatzstatus/` folders consolidate to **four** canonical ids — see §1 exception table); `:Verbindungstechnik` / `:Reversibilitaet` (one legacy `fuegung_verbindung/` folder tree split across two axes — see §1 Fügung/Verbindung table).
 
 Each vocab node has only:
 
-| name | type | req | notes |
-|---|---|---|---|
-| `id` | string | ✓ | UNIQUE within the Label; the subfolder name under `_database/<vocab>/<id>/` |
+
+| name | type   | req | notes                                                                       |
+| ---- | ------ | --- | --------------------------------------------------------------------------- |
+| `id` | string | ✓   | UNIQUE within the Label; the subfolder name under `_database/<vocab>/<id>/` |
+
 
 The id is the queryable identifier. The German prose body explaining the term remains in the source Markdown `_database/<vocab>/<id>/index.md`, outside the graph.
 
 Special additions per vocab Label:
 
-| Label | extra property | notes |
-|---|---|---|
-| `:Land` | `iso_country: string?` | optional ISO country code |
-| `:Stadt` | `koordinaten: string?` | optional coordinates string |
-| `:Programm` | `programm_typ: string` (req) | `"foerderung"` or `"forschungskontext"` |
-| `:WiederverwendungsArt` | `axis: string` (req) | `"einordnung"` (legacy bewertungslogik values) or `"grundtyp"` (wiederverwendet/original/hybrid — absorbed from dropped :Bauteilgruppentyp) |
+
+| Label                   | extra property               | notes                                                                                                                                       |
+| ----------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `:Land`                 | `iso_country: string?`       | optional ISO country code                                                                                                                   |
+| `:Stadt`                | `koordinaten: string?`       | optional coordinates string                                                                                                                 |
+| `:Programm`             | `programm_typ: string` (req) | `"foerderung"` or `"forschungskontext"`                                                                                                     |
+| `:WiederverwendungsArt` | `axis: string` (req)         | `"einordnung"` (legacy bewertungslogik values) or `"grundtyp"` (wiederverwendet/original/hybrid — absorbed from dropped :Bauteilgruppentyp) |
+| `:Status`               | —                            | exactly **four** nodes (`Vorschlag`, `Geplant`, `Realisiert`, `Nicht_Realisiert`); legacy subfolder slug maps to canonical `id` per §1 exception table |
+| `:Verbindungstechnik`  | —                            | six canonical technique ids (see §1); legacy `fuegung_verbindung/` technique folders remap to these `id` values |
+| `:Reversibilitaet`      | —                            | exactly **four** nodes (`Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt`); only `Reversibel` is tied to legacy folder `Reversible_Fuegung/` |
+
 
 All vocab Labels carry the second Label `:Vokabular`.
 
@@ -1101,18 +1172,20 @@ All vocab Labels carry the second Label `:Vokabular`.
 
 # §3 Edge-type catalogue
 
-| Edge | Subject Labels | Object Labels | Cardinality | Purpose |
-|---|---|---|---|---|
-| `IST` | `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` | vocab | N:1 per axis | classification / status |
-| `HAT` | `:Fallbeispiel`, `:Bauteilgruppe` | vocab (rich) **or** `:Akteur` (with `art:'akteur', rolle:...`) | N:M | qualitative attribute / actor participation |
-| `BENUTZT` | `:Bauteilgruppe`, `:Fallbeispiel` | `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:SoftwareDigitaltool`, `:Datenmodell` | N:M | instrumental usage; quantitative carrier |
-| `GEHÖRT_ZU` | any | `:Fallbeispiel`, `:Wiederverwendungskette`, `:Land`, `:Stadt`, `:Programm` | N:1 / N:M | membership / containment / location / chain station / origin |
-| `BELEGT_IN` | any node carrying a citable claim | `:Quelle` | N:M | citation / evidence — the only place source attribution lives |
+
+| Edge        | Subject Labels                                                                                             | Object Labels                                                                                                    | Cardinality  | Purpose                                                       |
+| ----------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------- |
+| `IST`       | `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` | vocab                                                                                                            | N:1 per axis | classification / status                                       |
+| `HAT`       | `:Fallbeispiel`, `:Bauteilgruppe`                                                                          | vocab (rich) **or** `:Akteur` (with `art:'akteur', rolle:...`)                                                   | N:M          | qualitative attribute / actor participation                   |
+| `BENUTZT`   | `:Bauteilgruppe`, `:Fallbeispiel`                                                                          | `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:SoftwareDigitaltool`, `:Datenmodell` | N:M          | instrumental usage; quantitative carrier                      |
+| `GEHÖRT_ZU` | any                                                                                                        | `:Fallbeispiel`, `:Wiederverwendungskette`, `:Land`, `:Stadt`, `:Programm`                                       | N:1 / N:M    | membership / containment / location / chain station / origin  |
+| `BELEGT_IN` | any node carrying a citable claim                                                                          | `:Quelle`                                                                                                        | N:M          | citation / evidence — the only place source attribution lives |
+
 
 ## Legacy relations folded in
 
-- **IST:** `has_bauteiltyp`, `has_reuse_einsatzstatus`, `has_reuse_strategie`, `has_bewertungslogik_abgrenzung` (→ `:WiederverwendungsArt`), `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_bauobjektstatus`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`.
-- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung`, `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:Bauteilgruppe` or `:Fallbeispiel` to `:Entwurfsentscheidung:Vokabular`.
+- **IST:** `has_bauteiltyp`, `has_reuse_einsatzstatus` (→ `:Status`, values consolidated to max four), `has_reuse_strategie`, `has_bewertungslogik_abgrenzung` (→ `:WiederverwendungsArt`), `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_bauobjektstatus`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`.
+- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung` → split: `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` and/or `HAT {art:'reversibilitaet'}` → `:Reversibilitaet` (see §1 axis-split table), `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:Bauteilgruppe` or `:Fallbeispiel` to `:Entwurfsentscheidung:Vokabular`.
 - **BENUTZT:** `uses_material`, `uses_software_digitaltool`, `has_methode`, `has_rueckbauverfahren`, `has_aufbereitungsverfahren`.
 - **GEHÖRT_ZU:** `installed_in_bauobjekt` → `rolle:'einbauort'`; new `sourced_from_bauobjekt` → `rolle:'herkunft'`; `part_of_reuse_kette` → `rolle:'kette'` (to `:Wiederverwendungskette`); `located_in_ort` → split: `rolle:'land'` (to `:Land`) and/or `rolle:'stadt'` (to `:Stadt`) depending on classified target; `relates_to_bauobjekt` → `rolle:'fallbeispiel'`; `involves_foerderprogramm` / `has_programm_kontext` → `rolle:'programm'` (to `:Programm`).
 - **BELEGT_IN:** replaces unresolved `quelle_label` shorthand on every node and every `quelle_id` previously planned as edge property. Replaces the gap relation `documented_in_quelle`. Direction: claim → `:Quelle`.
@@ -1127,53 +1200,63 @@ Dropped legacy relations (no destination): `belongs_to_fallstudie`, `belongs_to_
 
 ## §4.A `:IST`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `seit` | date? | – | start of validity |
-| `bis` | date? | – | end of validity |
-| `gewichtung` | float? | – | 0..1 confidence |
+
+| name         | type   | req | notes             |
+| ------------ | ------ | --- | ----------------- |
+| `seit`       | date?  | –   | start of validity |
+| `bis`        | date?  | –   | end of validity   |
+| `gewichtung` | float? | –   | 0..1 confidence   |
+
 
 ## §4.B `:HAT`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `art` | string | ✓ | one of `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"leistung"`, `"schadstoff"`, `"kontext"`, `"recht"`, `"nutzung"`, `"intervention"`, `"fuegung"`, `"logistik"`, `"wirtschaft"`, `"zertifizierung"`, `"akteur"`, `"entwurf"` |
-| `rolle` | string? | – | required when `art='akteur'`; e.g. `"Architektur"`, `"Tragwerksplanung"`, `"Bauherr_Auftraggeber"`; validates against `:Akteurrolle.id` |
-| `anzahl` | int? | – | multiplicity |
-| `intensitaet` | string? | – | qualitative strength |
-| `seit` | date? | – | |
-| `bis` | date? | – | |
+
+| name          | type    | req | notes                                                                                                                                                                                                                                    |
+| ------------- | ------- | --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `art`         | string  | ✓   | one of `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"leistung"`, `"schadstoff"`, `"kontext"`, `"recht"`, `"nutzung"`, `"intervention"`, `"verbindungstechnik"`, `"reversibilitaet"`, `"logistik"`, `"wirtschaft"`, `"zertifizierung"`, `"akteur"`, `"entwurf"` |
+| `rolle`       | string? | –   | required when `art='akteur'`; e.g. `"Architektur"`, `"Tragwerksplanung"`, `"Bauherr_Auftraggeber"`; validates against `:Akteurrolle.id`                                                                                                  |
+| `anzahl`      | int?    | –   | multiplicity                                                                                                                                                                                                                             |
+| `intensitaet` | string? | –   | qualitative strength                                                                                                                                                                                                                     |
+| `seit`        | date?   | –   |                                                                                                                                                                                                                                          |
+| `bis`         | date?   | –   |                                                                                                                                                                                                                                          |
+
 
 ## §4.C `:BENUTZT`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `anzahl` | float? | – | quantity used |
-| `einheit` | string? | – | unit (`"t"`, `"m2"`, `"Stueck"`, …) |
-| `anteil_prozent` | float? | – | share-of-total |
-| `funktion_alt` | string? | – | original role |
-| `funktion_neu` | string? | – | new role |
-| `aufbereitung` | string? | – | processing applied (free text) |
+
+| name             | type    | req | notes                               |
+| ---------------- | ------- | --- | ----------------------------------- |
+| `anzahl`         | float?  | –   | quantity used                       |
+| `einheit`        | string? | –   | unit (`"t"`, `"m2"`, `"Stueck"`, …) |
+| `anteil_prozent` | float?  | –   | share-of-total                      |
+| `funktion_alt`   | string? | –   | original role                       |
+| `funktion_neu`   | string? | –   | new role                            |
+| `aufbereitung`   | string? | –   | processing applied (free text)      |
+
 
 ## §4.D `:GEHÖRT_ZU`
 
-| name | type | req | notes |
-|---|---|---|---|
-| `rolle` | string | ✓ | one of `"fallbeispiel"`, `"einbauort"`, `"herkunft"`, `"zwischenlager"`, `"verarbeitung"`, `"transport"`, `"kette"`, `"land"`, `"stadt"`, `"programm"` |
-| `position` | int? | – | order in sequence (e.g., chain station number) |
-| `seit` | date? | – | |
-| `bis` | date? | – | |
+
+| name       | type   | req | notes                                                                                                                                                  |
+| ---------- | ------ | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `rolle`    | string | ✓   | one of `"fallbeispiel"`, `"einbauort"`, `"herkunft"`, `"zwischenlager"`, `"verarbeitung"`, `"transport"`, `"kette"`, `"land"`, `"stadt"`, `"programm"` |
+| `position` | int?   | –   | order in sequence (e.g., chain station number)                                                                                                         |
+| `seit`     | date?  | –   |                                                                                                                                                        |
+| `bis`      | date?  | –   |                                                                                                                                                        |
+
 
 ## §4.E `:BELEGT_IN`
 
 Direction: **(claim) → (:Quelle)**.
 
-| name | type | req | notes |
-|---|---|---|---|
-| `eigenschaft` | string? | – | scopes citation to a specific property of the source node (e.g. `"flaeche_m2"`, `"co2_einsparung_kg"`); omit for node-level citation |
-| `seite` | string? | – | page number |
-| `excerpt` | string? | – | quoted excerpt |
-| `raw_label` | string? | – | original shorthand (`"S4"`, `"[S1]"`) |
+
+| name          | type    | req | notes                                                                                                                                |
+| ------------- | ------- | --- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `eigenschaft` | string? | –   | scopes citation to a specific property of the source node (e.g. `"flaeche_m2"`, `"co2_einsparung_kg"`); omit for node-level citation |
+| `seite`       | string? | –   | page number                                                                                                                          |
+| `excerpt`     | string? | –   | quoted excerpt                                                                                                                       |
+| `raw_label`   | string? | –   | original shorthand (`"S4"`, `"[S1]"`)                                                                                                |
+
 
 ---
 
@@ -1185,6 +1268,8 @@ Direction: **(claim) → (:Quelle)**.
 - **Role placement.** A role IS an edge property, never a node target. `:HAT {art:'akteur', rolle:'Architektur'}->(:Akteur)`. Vocab `:Akteurrolle` is a dictionary.
 - **Citation placement.** Source attribution NEVER lives as a property. Always `:BELEGT_IN → :Quelle` with optional `eigenschaft` to scope.
 - **Naming.** German PascalCase Labels, SCREAMING_SNAKE edges, snake_case properties.
+- **:Status vs :Bauobjektstatus.** `:Status` is the reuse-**Einsatz** lifecycle only (`IST` from `:Bauteilgruppe`). Building-level construction state stays `:Bauobjektstatus` on `:Fallbeispiel` — different semantics; do not merge.
+- **Verbindungstechnik vs Reversibilität.** Joining method (`:Verbindungstechnik`) and detachability (`:Reversibilitaet`) are separate `HAT` axes (`art:'verbindungstechnik'` vs `art:'reversibilitaet'`). A value like “geschraubt” is not a reversibility class and must not be modeled as such.
 - **Constraint.** Every Label has `CREATE CONSTRAINT FOR (n:<Label>) REQUIRE n.id IS UNIQUE`.
 
 # Appendix B — Constraints & indexes
@@ -1198,6 +1283,7 @@ Direction: **(claim) → (:Quelle)**.
 The Labels in §1.A + §1.B + the drop/merge table in §1.C account for every folder under `_database/` (54 folders + `_edges` + `_system`).
 
 YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reuse_einsatz` / `datenpunkt` / `akteur_beteiligung`:
+
 - structural relations (`fallstudie:`, `projekt:`, `bauobjekt:`) → resolved or collapsed
 - measurement fields (`wert:`, `einheit:`) → properties on `:Fallbeispiel` / `:Bauteilgruppe`
 - canonical-axis fields (`bauteiltyp:`, `material:`, …) → IST / BENUTZT edges to vocab
@@ -1208,35 +1294,39 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 
 # Appendix D — Renamings, drops, merges
 
-| Change | Action |
-|---|---|
-| `fallstudie/` + `projekt/` + `bauobjekt/` (shared id) | merged into `:Fallbeispiel` with `art` property |
-| `reuse_einsatz/` | renamed to `:Bauteilgruppe` |
-| `reuse_kette/` | renamed to `:Wiederverwendungskette` (kept; optional grouping) |
-| `reuse_kettenstation/` | dropped — stations become GEHÖRT_ZU edges from `:Bauteilgruppe` |
-| `bewertungslogik_abgrenzung/` | renamed to `:WiederverwendungsArt`, absorbed values of dropped Bauteilgruppentyp via `axis` property |
-| `foerderprogramm/` + `programm_kontext/` | merged into `:Programm` with `programm_typ` property |
-| `akteur_beteiligung/` + `bauobjekt_beteiligung/` | dropped — role lives as edge property on `HAT` |
-| `bauobjektklasse/` | dropped — values collapse into `:Fallbeispiel.art` |
-| `bauobjektrolle/` | dropped — derivable from incoming GEHÖRT_ZU edges |
-| `dokumenttyp/` | dropped — replaced by `:Quelle.art` (general values: Website / Interview / Paper / Buch / Bericht / Datenbank / Vortrag / Norm / Sonstige) |
-| `tragwerkstyp/` | dropped — axis-mix; values folded into `:Material` or `:WiederverwendungsArt` |
-| `kennwertdefinition/` | dropped — kennwert-names become property names |
-| `datenpunkt/` | dropped — measurements become node properties |
-| All `body_md`, `legacy_paths`, `build_status`, `title`, raw-label properties on any node | dropped — graph is metadata-only |
-| `:BELEGT` (Quelle → claim) | reversed and renamed to `:BELEGT_IN` (claim → Quelle) |
-| All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties anywhere | dropped — replaced exclusively by `:BELEGT_IN` edges |
-| `Moebelsepearat` value in WiederverwendungsArt | renamed to `Moebel_separat` |
-| `ort/Scwheiz` | renamed to `ort/Schweiz`; export classifies the node as `:Land` or `:Stadt` (no `:Ort`) |
-| Bauteiltyp drop-and-remap (SCHEMA.md §5) | already applied — noted in spec |
-| Material drop-and-merge (SCHEMA.md §6) | already applied — noted in spec |
+
+| Change                                                                                   | Action                                                                                                                                     |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `fallstudie/` + `projekt/` + `bauobjekt/` (shared id)                                    | merged into `:Fallbeispiel` with `art` property                                                                                            |
+| `reuse_einsatz/`                                                                         | renamed to `:Bauteilgruppe`                                                                                                                |
+| `reuse_kette/`                                                                           | renamed to `:Wiederverwendungskette` (kept; optional grouping)                                                                             |
+| `reuse_kettenstation/`                                                                   | dropped — stations become GEHÖRT_ZU edges from `:Bauteilgruppe`                                                                            |
+| `bewertungslogik_abgrenzung/`                                                            | renamed to `:WiederverwendungsArt`, absorbed values of dropped Bauteilgruppentyp via `axis` property                                       |
+| `foerderprogramm/` + `programm_kontext/`                                                 | merged into `:Programm` with `programm_typ` property                                                                                       |
+| `akteur_beteiligung/` + `bauobjekt_beteiligung/`                                         | dropped — role lives as edge property on `HAT`                                                                                             |
+| `bauobjektklasse/`                                                                       | dropped — values collapse into `:Fallbeispiel.art`                                                                                         |
+| `bauobjektrolle/`                                                                        | dropped — derivable from incoming GEHÖRT_ZU edges                                                                                          |
+| `dokumenttyp/`                                                                           | dropped — replaced by `:Quelle.art` (general values: Website / Interview / Paper / Buch / Bericht / Datenbank / Vortrag / Norm / Sonstige) |
+| `tragwerkstyp/`                                                                          | dropped — axis-mix; values folded into `:Material` or `:WiederverwendungsArt`                                                              |
+| `kennwertdefinition/`                                                                    | dropped — kennwert-names become property names                                                                                             |
+| `datenpunkt/`                                                                            | dropped — measurements become node properties                                                                                              |
+| All `body_md`, `legacy_paths`, `build_status`, `title`, raw-label properties on any node | dropped — graph is metadata-only                                                                                                           |
+| `:BELEGT` (Quelle → claim)                                                               | reversed and renamed to `:BELEGT_IN` (claim → Quelle)                                                                                      |
+| All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties anywhere         | dropped — replaced exclusively by `:BELEGT_IN` edges                                                                                       |
+| `Moebelsepearat` value in WiederverwendungsArt                                           | renamed to `Moebel_separat`                                                                                                                |
+| `ort/Scwheiz`                                                                            | renamed to `ort/Schweiz`; export classifies the node as `:Land` or `:Stadt` (no `:Ort`)                                                    |
+| `reuse_einsatzstatus/`                                                                   | Label `:ReuseEinsatzstatus` → **`:Status`**; **seven** legacy folders → **four** graph nodes (mapping table in §1)                           |
+| `fuegung_verbindung/`                                                                     | Label `:FuegungVerbindung` dropped → **`:Verbindungstechnik`** + **`:Reversibilitaet`**; `HAT.art` uses `verbindungstechnik` / `reversibilitaet` (mapping table in §1) |
+| Bauteiltyp drop-and-remap (SCHEMA.md §5)                                                 | already applied — noted in spec                                                                                                            |
+| Material drop-and-merge (SCHEMA.md §6)                                                   | already applied — noted in spec                                                                                                            |
+
 
 ---
 
 ## Final counts
 
 - **6** instance Labels
-- **38** vocabulary Labels
+- **39** vocabulary Labels
 - **5** edge types
 - **0** body / legacy / prose properties (metadata-only)
 
@@ -1246,3 +1336,4 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 - Running a Neo4j instance.
 - Filling the ~30 gap relations from prose.
 - Translating German labels to English.
+
