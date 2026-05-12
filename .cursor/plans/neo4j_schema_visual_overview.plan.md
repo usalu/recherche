@@ -1,10 +1,10 @@
 ---
 name: Neo4j schema visual probe
-overview: "Visualisierungs-Plan mit **vollständiger Inventur**: alle **45** Labels und alle **6** Kantentypen inkl. `GEHÖRT_ZU`-Tripel (Appendix F), `HAT.art`→Ziel, `IST`-Ziele, `BENUTZT`, `HAT_STATUS`, `BELEGT_IN` (Abschnitt „Vollständige Inventur“). Modus A = Typgraph; Modus B = Spielinstanzen mit max. 10 Knoten pro Primär-Label unter {Fallbeispiel, Bauwerk, ReuseEinsatz, Akteur, Quelle, Software, Tool}."
+overview: "Visualisierungs-Plan mit **vollständiger Inventur**: alle **6** Kantentypen inkl. `GEHÖRT_ZU`-Tripel (Appendix F), `HAT.art`→Ziel, `IST`-Ziele, `BENUTZT`, `HAT_STATUS`, `BELEGT_IN`. **Modus A (Typgraph):** ein UI-Knoten pro **konkreter** `(:Label {…})`-Zeile in [neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md) — nicht nur die **45** Label-Namen aus Abschnitt A. Modus B = Spielinstanzen mit max. 10 Knoten pro Primär-Label unter {Fallbeispiel, Bauwerk, ReuseEinsatz, Akteur, Quelle, Software, Tool}."
 todos:
 
 - id: viz-typegraph
-  content: "Typgraph erzeugen: **45** UI-Knoten (Liste Abschnitt A); Kanten **exakt** nach Abschnitt B.1–B.7 — keine weiteren Kantentypen. Ausgabe z. B. Mermaid/GraphML; optional 4 Dateien nach Cluster."
+  content: "Typgraph erzeugen: **ein** UI-Knoten pro `(:Label {…})`-Zeile in neo4j_schema_visual_nodes_attachment.md (Abschnitt C / Anhang); Kanten **exakt** nach B.1–B.7 zwischen diesen Vertices (Label+id-Paar), keine weiteren Kantentypen. Ausgabe z. B. Mermaid/GraphML; optional 4 Dateien nach Cluster."
   status: pending
 - id: viz-sample-data
   content: "Spielgraph (Modus B): Cypher oder JSON mit capped Instanzen — pro Label aus {Fallbeispiel, Bauwerk, ReuseEinsatz, Akteur, Quelle, Software, Tool} max 10 `id`s; alle anderen Labels mindestens 1 Repräsentant wo sinnvoll (Taxonomien vollständig wenn ≤20 Knoten laut Hauptplan)."
@@ -19,15 +19,19 @@ todos:
 
 Ein **separates** Visualisierungs-Artefakt erzeugen, um den Entwurf aus [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) **nur als Graphen** (Knoten + Kanten) zu prüfen — **ohne** `NEO4J_SCHEMA.md` zu schreiben und **ohne** reale Datenbankgröße.
 
-Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **die wichtigsten Verknüpfungen** stimmig wirken; Abweichungen fließen als Feedback in den Hauptplan zurück.
+Erfolg: Du erkennst auf einen Blick, ob die **konkrete Knotenmenge** (Instanz-Muster aus dem Hauptplan), **Kantentypen** und **die wichtigsten Verknüpfungen** stimmig wirken; Abweichungen fließen als Feedback in den Hauptplan zurück.
 
 ---
 
 # Vollständige Inventur — alle Knoten (Labels) und Kanten
 
-> Spiegelung von [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) §1.A/B, §3, Appendix F/G. **Typgraph:** je **ein** UI-Knoten pro Eintrag unten. **Spielgraph:** pro Label-**Typ** Instanzen nach Capping-Regeln (Modus B).
+> Spiegelung von [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) §1.A/B, §3, Appendix F/G. **Typgraph (Modus A):** je **ein** UI-Knoten pro **konkreter** `(:Label { id: …, … })`-Zeile im Anhang [neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md) — **Abschnitt A** hier ist nur die **Typ-Inventur** (45 Label-Namen), nicht die Vertex-Zählung des Typgraphen. **Spielgraph (Modus B):** Instanzen nach Capping-Regeln.
 
-## A) Alle Neo4j-Labels — **45** Knoten im Typgraph
+## C) Konkrete Knoten für Modus A (Vertex-Liste)
+
+Siehe **[neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md)** — dort steht der vertikale Block aus dem Hauptplan (eine Zeile = ein geplanter Knoten mit Properties). `:Entwurfsentscheidung` (8 Kanon-`id`s), `:Land` / `:Stadt` (Demo-Instanzen statt Platzhaltertext) sind mitenthalten.
+
+## A) Alle Neo4j-Labels — **45** Label-Typen (Referenz, nicht Typgraph-Knotenzahl)
 
 ### §1.A Primär-Labels (**9**)
 
