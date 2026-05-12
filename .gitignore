@@ -9,8 +9,20 @@
 # Thumbnails
 ._*
 
+# Local Neo4j password for import scripts (never commit)
+.neo4j_password
+_database/_system/.neo4j_password
+
 # Editors
 .vscode/
 .idea/
 *.swp
 *.swo
+
+# Python bytecode (never commit)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Optional local SQLite rebuild (not part of the Neo4j plan deliverable)
+_database/_system/reuse_ontology.sqlite

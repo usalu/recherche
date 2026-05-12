@@ -6,12 +6,13 @@
 
 ## 1. What this repo is
 
-A **knowledge base + graph** of building-component reuse research, in German.
+A **knowledge base + research graph** for building-component reuse (German prose + typed links), aligned with the **Neo4j schema plan** (source of truth for labels, five relationship types, and folding rules):
 
-- The user is doing PhD-level research on Wiederverwendung im Bauwesen.
-- He works in **Tolaria** (a Markdown/wikilinks tool, similar to Obsidian).
-- Each entity (`material`, `bauteiltyp`, `akteur`, `fallstudie`, `reuse_einsatz`, …) is a folder; each instance is a sub-folder with `index.md` containing the German prose.
-- A SQLite graph layer is built from the folder tree as a derived artifact.
+[`.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md`](.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md)
+
+- **Knowledge:** Markdown under `_database/<entity>/<id>/index.md` (wikilinks welcome; any Markdown editor works).
+- **Graph in Neo4j:** Import from `_database/` via `_scripts/import_database_folder_to_neo4j.py` (see `_database/_system/NEO4J_SCHEMA.md`).
+- **Optional local SQLite:** `_migration/build_phase24_sqlite_database.py` can still materialize `reuse_ontology.sqlite` for ad-hoc SQL; the file is **not committed** (see `.gitignore`). Do not treat SQLite as co-equal with the plan—Neo4j semantics win.
 
 The user's goal, in his own words: *"an interconnected clear system that acts as a readable map without getting overwhelmed with unnecessary connections and wrong unclear ones."*
 
@@ -21,21 +22,24 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 
 | Path | Status | What |
 |---|---|---|
-| `_database/` | **LIVE — edit here** | Canonical knowledge + edges + SQLite |
-| `_database/_system/SCHEMA.md` | **Canonical reference** | Entity model, vocabulary, editing rules. **Read second.** |
-| `_database/_system/reuse_ontology.sqlite` | Derived | Built from the folder tree |
-| `_database/_edges/clean_confirmed_edges.csv` | Derived | The graph as a CSV |
+| `_database/` | **LIVE — edit here** | Canonical Markdown knowledge + edge CSV |
+| `_database/_system/SCHEMA.md` | **Canonical reference** | Ontology folder layout, vocabulary, editing rules. **Read second.** |
+| `_database/_edges/clean_confirmed_edges.csv` | Derived | Canonical typed edges (folded on Neo4j import). |
+| `_database/_system/NEO4J_SCHEMA.md` | **Normative (narrative)** | Mirrors the Neo4j plan; import tooling implements the same rules. |
+| `_database/_system/reuse_ontology.sqlite` | Optional local | Rebuild with `_migration/build_phase24_sqlite_database.py` if needed; **not tracked in git**. |
 | `Gebäude/` | **LIVE — extraction source** | 76 hand-written case-study `.md` files with structured Entitäten-Mapping tables. New cases get added here, then extracted into `_database/`. |
 | `gebaeude/` | User-managed | Separate from `Gebäude/`. User will update independently. |
 | `_migration/` | Frozen tooling | All build/repair/migration scripts, batch reports, and decision logs. The scripts you might run are listed in §6. |
-| `_archive/legacy/` | Frozen | 35 original Tolaria knowledge folders (akteur/, material/, _graph/, etc.) moved here during cleanup. Provenance only. |
+| `_archive/legacy/` | **Pointer** | Only `README.md`: the old mirrored trees were **removed from git** in 2026-05 after consolidation into `_database/` (recover via git history). |
 | `_archive/dropped_knots/` | Provenance | Knot folders dropped during consolidation; original prose preserved. |
-| Top-level `*.md` | Tolaria type stubs | 27 files, each named after a canonical entity type (e.g. `material.md`, `bauteiltyp.md`). Define Tolaria's UI types (icon/color). All names now match the ontology. |
+| Top-level `*.md` | Optional stubs | Short entity-type stubs at repo root; safe to delete if your editor does not need them. |
 
 ---
 
 ## 3. State at handoff
 
+- **Repo hygiene (2026-05-12 — second pass):** Removed the entire **`_archive/legacy/`** working tree from git (~500+ duplicate/staging files: old `_graph/`, `_extract/`, `_manual_review/`, flat entity stubs). Added **`_archive/legacy/README.md`** explaining recovery via git history. Removed **`clean_confirmed_edges.csv.before_*`** backups and duplicate **`_database/_system/clean_import_readiness_report.md`** (keep `_migration/22_*` as the frozen report). Added **`_scripts/verify_plan_coverage.py`** — run after structural changes; it must exit 0 before you assume Neo4j import safety.
+- **Repo hygiene (2026-05-12):** Earlier pass removed committed SQLite, phase6 CSV copies under `_database/_edges/`, Tolaria-only system docs, and tracked `__pycache__/`.
 - **3,043 nodes, 9,256 edges, 0 dangling endpoints, 0 type mismatches.**
 - 30 relation labels populated. Gap batches completed:
   - **50a** `has_reuse_strategie`: 248 edges
@@ -53,7 +57,7 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 - `material` = 15 (matches schema §6 + Recyclingbeton + Gusseisen).
 - Every node `index.md` carries the German prose.
 - **Root is clean:** 5 directories + 29 `.md` files (27 type stubs + AGENTS.md + HANDOFF.md).
-- 35 legacy root folders archived to `_archive/legacy/`.
+- 35 legacy root folders had been moved to `_archive/legacy/` during consolidation; the **contents** of that archive were later **removed from git** (2026-05) once `_database/` was verified as the single live tree — see `_archive/legacy/README.md`.
 - All root `.md` stubs renamed to canonical entity names.
 - Person entries (`dirk-hebel.md`, `kerstin-müller.md`) promoted to `_database/akteur/`.
 - Branch: `wip/kinan2`. Not pushed.
@@ -126,13 +130,14 @@ Done in batch 50e: `has_rueckbauverfahren` from explicit `Eingriff/Aufbereitung`
 4. Emit an edge per row-cell using the relation vocabulary.
 5. Write an extractor at `_migration/50_extract_gap_relations.py` modeled on `40_apply_edge_remap.py`.
 6. Continue **one relation at a time** so each batch is reviewable. Good next candidates: `has_logistik` from explicit Transport/Lagerung/Materialmatching cues, `has_aufbereitungsverfahren` from stronger Aufbereitung labels, or source/procurement relations such as `has_ressourcenquelle` and `has_beschaffungsweg`.
-7. After each batch: rebuild SQLite, spot-check 3-5 cases against the source `.md`, commit.
+7. After each batch: run `python _scripts/verify_plan_coverage.py`, re-import Neo4j, optionally rebuild local SQLite, spot-check 3-5 cases against the source `.md`, commit.
 
 **BLAST RADIUS.** Adds new edges only — won't break existing ones if you dedup. You'll roughly double the edge count when this is fully done.
 
 **VERIFY.**
 - `wc -l _database/_edges/clean_confirmed_edges.csv` should grow.
-- For relation R: `sqlite> SELECT count(*) FROM edges WHERE relation='has_R'` should be plausible vs the case data.
+- `python _scripts/verify_plan_coverage.py` must exit 0.
+- For relation R: optional local SQLite → `SELECT count(*) FROM edges WHERE relation='has_R'` should be plausible vs the case data.
 - For one case, count edges from its `reuse_einsatz/*` and compare against the case's BAUTEIL-INVENTAR table size.
 
 **ESTIMATE.** 2-3 sessions. Per-relation script work is 30-60 min each.
@@ -141,7 +146,7 @@ Done in batch 50e: `has_rueckbauverfahren` from explicit `Eingriff/Aufbereitung`
 
 ### Step 2: Map the 5 unmapped `gebaeude/*` files
 
-**WHAT.** Per `_extract/Gebaeude_Entity_Extraction.md:23-29`, these files were never mapped:
+**WHAT.** The original extraction report was archived into `_database/quelle/` (see `extract_Gebaeude_Entity_Extraction_md` / `Legacy_extract_Gebaeude_Entity_Extraction` and `DATEIEN/Gebaeude_Entity_Extraction.md`). Per that report, these `gebaeude/*` files were never mapped:
 ```
 gebaeude/Elementa.md
 gebaeude/gebäude2_wiederverwendung_direct_reuse_examples.md
@@ -159,26 +164,15 @@ gebaeude/index.md
 
 ---
 
-### Step 3: Surface cleanup — DECIDE WITH USER FIRST
+### Step 3: Surface cleanup — optional
 
-**WHAT.**
-1. Move legacy top-level folders to `_archive/legacy/` (one of: `akteur/`, `projekt/`, `material/`, …).
-2. Update or delete the loose root `*.md` files (Tolaria type stubs).
-3. Delete or fill the empty root `schema.sql`.
-4. Move helper scripts (`cluster_values.py`, `test_extract.py`) into `_migration/`.
+**WHAT.** (1) Root `*.md` type stubs — keep only if your Markdown tool still needs them; otherwise delete for a cleaner root. (2) Empty or obsolete root files (`schema.sql`, etc.).
 
-**WHY.** Removes editing temptation. Right now the user could open `material/Stahl.md` (legacy) instead of `_database/material/Stahl/index.md` (canonical) and not notice. After archive, only the canonical is visible.
+**NOTE.** Legacy **`_archive/legacy/_graph/`** was removed from git to shrink the repo; do not try to “restore” it from docs—use `_database/` + `_migration/` logs if you need migration history.
 
-**RISK.**
-- Tolaria may need the root `*.md` type stubs to render entity types in the UI. Confirm with user before deleting any.
-- The legacy folders are still referenced from old wikilinks in some places. Search before moving.
+**RISK.** Some editors expect certain root files; delete stubs only when you are sure.
 
-**HOW.**
-1. **Ask the user:** "Can I move `akteur/`, `projekt/`, `material/`, etc. to `_archive/legacy/`? Tolaria currently sees them — does it need to?"
-2. If yes → batch-move with `git mv`, verify no broken links.
-3. For root stubs: list which Tolaria types match new ontology names; rename what matches, delete what doesn't, ask about the rest.
-
-**ESTIMATE.** 1 session, low effort but high coordination cost.
+**ESTIMATE.** Low effort.
 
 ---
 
@@ -205,15 +199,23 @@ gebaeude/index.md
 
 ## 6. Tooling — what each script does
 
-All in `_migration/`. Run from repo root.
+**`_scripts/`** (Neo4j + catalog helpers; run from repo root with `python _scripts/<file>.py`):
 
 | Script | Purpose | Idempotent? |
 |---|---|---|
-| `40_apply_edge_remap.py` | Extensible edge-remap engine. Add a batch by writing a function and registering in `BATCHES`. Backups to `clean_confirmed_edges.csv.before_40`. | Yes per-batch |
+| `verify_plan_coverage.py` | **Read-only gate.** Confirms every `node_inventory.csv` entity maps to the Neo4j importer and every CSV `relation` token folds to a rel type or explicit `SKIP_RELATIONS`. | Yes |
+| `import_database_folder_to_neo4j.py` | Loads inventory + folded edges into Neo4j. | Yes |
+| `extract_database_relations.py` | Regenerates `_database/_system/RELATION_CATALOG_NEO4J.md`. | Yes |
+
+**`_migration/`** (historical / maintenance; run only when you intend to):
+
+| Script | Purpose | Idempotent? |
+|---|---|---|
+| `40_apply_edge_remap.py` | Extensible edge-remap engine. Add a batch by writing a function and registering in `BATCHES`. (Older runs wrote `clean_confirmed_edges.csv.before_*` backups; those are no longer kept in git.) | Yes per-batch |
 | `41_apply_folder_cleanup.py` | Folder rename/archive engine. Drives the `FOLDER_OPS` list. Regenerates `node_inventory.csv`. | Yes |
 | `42_promote_prose_to_index.py` | Lifts `DATEIEN/*.staging_index.md` body into `index.md`. Run on all entities or specific ones (`python ... material bauteiltyp`). | Yes |
 | `43_apply_manual_review_decisions.py` | Already run; processes the held-back edge queue. Don't rerun unless the queue refills. | One-shot |
-| `build_phase24_sqlite_database.py` | Rebuilds `reuse_ontology.sqlite` from the folder tree. Run after any edge or node change. | Yes |
+| `build_phase24_sqlite_database.py` | **Optional.** Rebuilds local `reuse_ontology.sqlite` from the folder tree (file gitignored). | Yes |
 | `migrate_phase*.ps1` | **Frozen historical builders.** Do not run. They built the original `_graph/` and `_database/`. |  |
 | `repair_phase13_encoding_mojibake.ps1` | Symptom fix; no longer needed since promotion fixed the root cause. |  |
 
@@ -221,6 +223,21 @@ Diff reports / logs:
 - `_migration/40_remap_diff_*.csv` — each remap batch's before/after
 - `_migration/43_decision_log.csv` — full decision audit for the 27 manual reviews
 - `_migration/24_SQLite_Build_Report.md` — generated each rebuild
+
+### Neo4j import preflight (run in this order)
+
+1. **`python _scripts/verify_plan_coverage.py`** — must print `OK` and exit `0`. If it fails, fix `node_inventory.csv` / edge folding before touching Neo4j.
+2. **`python _scripts/extract_database_relations.py`** — regenerates `_database/_system/RELATION_CATALOG_NEO4J.md`; commit if git shows a change.
+3. **`pip install -r requirements-neo4j.txt`** — installs the Neo4j Python driver (`neo4j` 5.x).
+4. **Configure auth** — set `NEO4J_URI` (default `neo4j://127.0.0.1:7687`), `NEO4J_USER`, `NEO4J_DATABASE` (must match the DB selected in Browser; often `neo4j`), and **`NEO4J_PASSWORD`**, *or* pass **`--password-file`** to a local one-line secret file. Never commit secrets (`.neo4j_password` and `_database/_system/.neo4j_password` are gitignored).
+5. **Wipe + reload in one run** (destroys all nodes/relationships in that database, then imports from `_database/`):
+
+   ```text
+   python _scripts/import_database_folder_to_neo4j.py --confirm-wipe --wipe
+   ```
+
+   Use this when the graph has stale labels (e.g. old experiments). The current importer maps both `fallstudie` and `projekt` inventory rows to **`Fallbeispiel`** — it does **not** create an English `Project` label.
+6. **Smoke test in Neo4j Browser** — e.g. `CALL db.labels() YIELD label RETURN label ORDER BY label` and spot-check counts vs script stdout.
 
 ---
 
@@ -234,17 +251,13 @@ Diff reports / logs:
 - **Never push** unless explicitly asked.
 - **Never change git config** (the user has a rule about this — use per-command `-c`).
 - **Never use** `--no-verify` or `--force` unless explicitly asked.
-- If a file is locked by another process: `git update-index --assume-unchanged <file>` and note it. Don't fight it. The user has Tolaria/VSCode open.
+- If a file is locked by another process: `git update-index --assume-unchanged <file>` and note it. Don't fight it. The user may have editors open on the vault.
 
 ### Editing
 
-- **Edit only `_database/`** for content/structure. `_graph/`, `_archive/`, top-level legacy = read-only.
-- **Edit `_database/_system/SCHEMA.md`** when introducing new entities, relations, or vocabulary changes. The schema doc is canonical — it wins over older migration docs.
-- **Update `node_inventory.csv` and rebuild SQLite** after any structural change. Run the two scripts in order:
-  ```
-  python _migration/41_apply_folder_cleanup.py        # regenerates inventory
-  python _migration/build_phase24_sqlite_database.py  # rebuilds SQLite
-  ```
+- **Edit only `_database/`** for content/structure. `_archive/` (except intentional housekeeping) and `_migration/` batch outputs = read-only unless you are running a documented migration step.
+- **Edit `_database/_system/SCHEMA.md`** when introducing new entities, relations, or vocabulary changes. The schema doc is canonical for the **folder ontology** — the **Neo4j plan** is canonical for graph typing and import folding (`NEO4J_SCHEMA.md`, `neo4j_relation_fold.py`).
+- **After structural folder changes:** regenerate `node_inventory.csv` (e.g. `python _migration/41_apply_folder_cleanup.py` when that workflow applies), then **Neo4j import** if you maintain a database: `python _scripts/import_database_folder_to_neo4j.py`. Optionally rebuild local SQLite for SQL-only exploration: `python _migration/build_phase24_sqlite_database.py` (artifact not committed).
 
 ### Encoding
 
@@ -255,7 +268,7 @@ Diff reports / logs:
 
 - **Read SCHEMA.md before proposing a new entity or relation.**
 - **Use `Gebäude/<case>.md` as ground truth** — the auto-extracted edges may have errors; the human-written tables are authoritative.
-- **Check with user before:** moving folders that Tolaria might depend on, deleting legacy content, pushing, force-pushing, doing anything destructive.
+- **Check with user before:** deleting large archived trees, pushing, force-pushing, or other destructive git operations.
 
 ---
 
@@ -271,7 +284,7 @@ Fix: use `git -c core.longpaths=true` per command. Long IDs are mostly in `_data
 
 Symptom: `error: open(...): Permission denied` even though ACL is fine.
 
-Fix: another process (Tolaria, VSCode, Codex) holds it. Ask user to close or use `git update-index --assume-unchanged` to skip. Currently affected: `_migration/migrate_phase8_promote_repeated_actors.ps1` and `_migration/migrate_phase1_stable_knots.ps1`.
+Fix: another process (editor, VSCode, Codex) holds it. Ask user to close or use `git update-index --assume-unchanged` to skip. Currently affected: `_migration/migrate_phase8_promote_repeated_actors.ps1` and `_migration/migrate_phase1_stable_knots.ps1`.
 
 ### Resolver substring bias
 
@@ -293,8 +306,8 @@ Fix: run `41_apply_folder_cleanup.py` to regenerate inventory; ensure edge remap
 
 These need user input before some next steps proceed:
 
-1. **Can legacy top-level folders move to `_archive/legacy/`?** (Tolaria dependency unclear.)
-2. **Are root `*.md` Tolaria type stubs needed?** (e.g. `projekt.md`, `material.md`.)
+1. **Can legacy top-level folders move to `_archive/legacy/`?** (Only if any still exist at repo root; most are already archived.)
+2. **Are root `*.md` type stubs still needed for your editor?** (e.g. `projekt.md`, `material.md`.)
 3. **`material/Lehm` and `material/Recyclingbeton` weren't in the user's listed canonical material set** but were kept as distinct (per schema). Confirm at next checkpoint.
 4. **5 unmapped `gebaeude/*` files** — are they single cases (extract) or aggregates (archive)?
 
