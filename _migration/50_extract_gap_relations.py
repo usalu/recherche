@@ -27,9 +27,10 @@ Current batch:
     derives a canonical city slug, creates the ort node folder + index.md
     if it doesn't yet exist, and emits one fallstudie -> located_in_ort
     -> ort edge per case. Bad/non-location Ort values are skipped.
-  50k_has_logistik
-    Reads component labels plus the Gebaeude "PROZESS UND LOGISTIK" tables
-    and adds direct has_logistik edges to concrete logistik knots.
+  50s_has_ressourcenquelle
+    Maps the reuse_einsatz frontmatter `herkunft_label` to concrete `ressourcenquelle/`
+    knots (physical source pools: Baustelle, Lager, Donorgebaeude, …). Kept separate from
+    50i `has_beschaffungsweg`, which encodes procurement channels on `beschaffungsweg/`.
   50l_has_wirtschaft
     Reads economic labels from Gebaeude mapping, kennwerte, hurdles, and
     "WIRTSCHAFT UND BESCHAFFUNG" sections and maps them to wirtschaft knots.
@@ -2025,6 +2026,131 @@ def build_beschaffungsweg_edges(
         relation="has_beschaffungsweg",
         rules=BESCHAFFUNGSWEG_RULES,
         batch_tag="50i",
+        field_label="FRONTMATTER:herkunft_label",
+    )
+
+
+# ---------------------------------------------------------------------------
+# 50s — has_ressourcenquelle (frontmatter herkunft_label → ressourcenquelle/)
+# ---------------------------------------------------------------------------
+
+RESSOURCENQUELLE_RULES: list[tuple[str, tuple[str, ...]]] = [
+    (
+        "ressourcenquelle/Baustelle",
+        (
+            "baustelle",
+            "abbruchbaustelle",
+            "demolition site",
+            "spenderstandort",
+            "abbruchort",
+            "herkunftsort",
+            "quellort",
+            "ehemalige baustelle",
+        ),
+    ),
+    (
+        "ressourcenquelle/Bauteilboerse",
+        (
+            "bauteilboerse",
+            "bauteilbörse",
+            "bauteilborse",
+            "marktplatz",
+            "opalis",
+            "rotor dc",
+            "second hand laden",
+            "secondhand laden",
+        ),
+    ),
+    (
+        "ressourcenquelle/Donorgebaeude",
+        (
+            "donorgebaeude",
+            "donorgebäude",
+            "spendergebaude",
+            "spendergebäude",
+            "donor building",
+            "quellgebaeude",
+            "quellgebäude",
+            "spenderhochhaus",
+            "spender-skelett",
+            "spenderskelett",
+        ),
+    ),
+    (
+        "ressourcenquelle/Donor_Infrastruktur",
+        (
+            "bruecken",
+            "brücken",
+            "tunnel",
+            "viadukt",
+            "gleisanlage",
+            "infrastrukturabbruch",
+            "highway",
+            "autobahnbruecke",
+            "autobahnbrücke",
+        ),
+    ),
+    (
+        "ressourcenquelle/Haendler",
+        (
+            "handler",
+            "haendler",
+            "händler",
+            "handelslager",
+            "haendlerlager",
+            "handlerlager",
+        ),
+    ),
+    (
+        "ressourcenquelle/Lager",
+        (
+            "zwischenlager",
+            "material lager",
+            "lagerhaltung",
+            "lagerbestand",
+            "einlagerung",
+            "warehouse",
+            "lagerflaeche",
+            "lagerfläche",
+        ),
+    ),
+    (
+        "ressourcenquelle/Materialstockpile",
+        (
+            "materialstockpile",
+            "stockpile",
+            "materialpool",
+            "fehlbestell",
+            "fehlbestellung",
+            "restmaterial",
+        ),
+    ),
+    (
+        "ressourcenquelle/Produktionsueberschuss",
+        (
+            "produktionsueberschuss",
+            "produktionsüberschuss",
+            "produktionsrest",
+            "uberschuss",
+            "überschuss",
+            "surplus",
+            "restposten",
+        ),
+    ),
+]
+
+
+def build_ressourcenquelle_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    return build_label_to_knot_edges(
+        edge_rows,
+        existing_nodes,
+        frontmatter_key="herkunft_label",
+        relation="has_ressourcenquelle",
+        rules=RESSOURCENQUELLE_RULES,
+        batch_tag="50s",
         field_label="FRONTMATTER:herkunft_label",
     )
 
@@ -5820,6 +5946,7 @@ BATCHES = {
     "50g_has_huerde": build_huerde_edges,
     "50h_has_pruefung_nachweis": build_pruefung_edges,
     "50i_has_beschaffungsweg": build_beschaffungsweg_edges,
+    "50s_has_ressourcenquelle": build_ressourcenquelle_edges,
     "50j_has_aufbereitungsverfahren": build_aufbereitungsverfahren_edges,
     "50k_has_logistik": build_logistik_edges,
     "50l_has_wirtschaft": build_wirtschaft_edges,

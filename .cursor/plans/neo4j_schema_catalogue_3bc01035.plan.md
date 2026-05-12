@@ -479,8 +479,9 @@ Allowed triples `(sourceLabel, rolle, targetLabel)`:
 
 Allowed values for `HAT.art` (sorted):
 
-`akteur`, `entwurf`, `huerde`, `intervention`, `logistik`, `norm`, `nutzung`, `person`, `pruefung`, `prozessphase`, `recht`, `reversibilitaet`, `schadstoff`, `status`, `verbindungstechnik`, `wirtschaft`, `wiederverwendungsart`, `zertifizierung`
+`akteur`, `entwurf`, `huerde`, `intervention`, `logistik`, `norm`, `nutzung`, `person`, `pruefung`, `prozessphase`, `recht`, `ressourcenquelle`, `reversibilitaet`, `schadstoff`, `status`, `verbindungstechnik`, `wirtschaft`, `wiederverwendungsart`, `zertifizierung`
 
+- Physical **resource pools** from `ressourcenquelle/` (Baustelle, Lager, Donorgebaeude, …): CSV `has_ressourcenquelle` → target `(:Ressourcenquelle)`, edge `HAT { art: "ressourcenquelle" }` (distinct from `has_beschaffungsweg`, which encodes procurement **channels** on `beschaffungsweg/`).
 - Chemical substance Stammdaten from `schadstoff/`: target `(:Schadstoff)`, edge `HAT { art: "schadstoff" }` (not `art: "huerde"`). Generic hurdle “Schadstoffbelastung” under `huerde/`: target `(:Huerde)` with `HAT { art: "huerde" }`.
 - Participant edges: `HAT { art: "akteur", rolle: … }` → organisation-actor node (§6.1, including `:Akteur` fallback); `HAT { art: "person", rolle: … }` → `(:Person)` (natural persons). `rolle` uses the eight canonical `(:Akteurrolle).id` values in both cases (§5.5). Organisation kind is the **primary Neo4j label**, not a property and not a separate type vertex.
 

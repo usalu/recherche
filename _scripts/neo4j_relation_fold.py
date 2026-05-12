@@ -102,6 +102,9 @@ def fold_csv_relation(row: dict[str, str]) -> tuple[str | None, dict[str, str]]:
     if rel == "has_logistik":
         extra["art"] = "logistik"
         return "HAT", extra
+    if rel == "has_ressourcenquelle":
+        extra["art"] = "ressourcenquelle"
+        return "HAT", extra
     if rel == "has_wirtschaft":
         extra["art"] = "wirtschaft"
         return "HAT", extra
