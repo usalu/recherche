@@ -96,9 +96,6 @@ Neo4j_Schema
 ├── KNOTENTYP :Verbindungstechnik:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Geschraubt, Geschweisst, Gesteckt, Geklebt, Vergossen, Klemmverbindung
-├── KNOTENTYP :Reversibilitaet:Vokabular
-│   ├── Knoteneigenschaften: id (Pflicht)
-│   └── Knoten: Reversibel, Teilweise_reversibel, Irreversibel, Unbekannt
 ├── KNOTENTYP :Bauweise:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Fertigteilbauweise, Holzbauweise, Hybridbauweise, Massivbauweise, Ortbetonbauweise, Stahlbauweise
@@ -108,12 +105,15 @@ Neo4j_Schema
 ├── KNOTENTYP :Tragwerksprinzip:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Fachwerk, Skeletttragwerk, Wandtragwerk, Wand_Kern_Tragwerk
+├── KNOTENTYP :Reversibilitaet:Vokabular
+│   ├── Knoteneigenschaften: id (Pflicht)
+│   └── Knoten: Reversibel, Teilweise_reversibel, Irreversibel, Unbekannt
 ├── KNOTENTYP :ReuseStrategie:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
-│   └── Knoten: Adaptives_ReUse, Bestandserhalt, Design_for_Disassembly, Direkte_Wiederverwendung, Recycling, Refurbishment, Remanufacturing, Same_Site_ReUse, Upcycling, Urban_Mining, Weiterbauen_im_Bestand
+│   └── Knoten: Bestandserhalt_Weiterbauen, In_situ_Wiederverwendung, Direkte_Wiederverwendung, Wiederverwendung_nach_Aufarbeitung, Umnutzung_Repurposing, Kaskade_Downcycling_Bauteilebene
 ├── KNOTENTYP :Status:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht)
-│   └── Knoten: Vorschlag, Geplant, Realisiert, Nicht_Realisiert
+│   └── Knoten: Gebaut, Geplant, Realisiert, Nicht_Realisiert
 ├── KNOTENTYP :WiederverwendungsArt:Vokabular
 │   ├── Knoteneigenschaften: id (Pflicht), axis (Pflicht: einordnung | grundtyp)
 │   └── Knoten: Bestandserhalt_Nicht_Direct_Reuse, Kein_Direct_Reuse_Nachweis, Moebel_Dekoration_Nicht_Direct_Reuse, Recycling_Nicht_Direct_Reuse, Reuse_Anteil_Unklar, Ungebaut_Nicht_Realisierte_Wiederverwendung, Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung
@@ -512,12 +512,6 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:Verbindungstechnik:Vokabular {id: "Vergossen"})
   (:Verbindungstechnik:Vokabular {id: "Klemmverbindung"})
 
-:Reversibilitaet
-  (:Reversibilitaet:Vokabular {id: "Reversibel"})
-  (:Reversibilitaet:Vokabular {id: "Teilweise_reversibel"})
-  (:Reversibilitaet:Vokabular {id: "Irreversibel"})
-  (:Reversibilitaet:Vokabular {id: "Unbekannt"})
-
 :Bauweise
   (:Bauweise:Vokabular {id: "Fertigteilbauweise"})
   (:Bauweise:Vokabular {id: "Holzbauweise"})
@@ -539,21 +533,22 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:Tragwerksprinzip:Vokabular {id: "Wandtragwerk"})
   (:Tragwerksprinzip:Vokabular {id: "Wand_Kern_Tragwerk"})
 
+:Reversibilitaet
+  (:Reversibilitaet:Vokabular {id: "Reversibel"})
+  (:Reversibilitaet:Vokabular {id: "Teilweise_reversibel"})
+  (:Reversibilitaet:Vokabular {id: "Irreversibel"})
+  (:Reversibilitaet:Vokabular {id: "Unbekannt"})
+
 :ReuseStrategie
-  (:ReuseStrategie:Vokabular {id: "Adaptives_ReUse"})
-  (:ReuseStrategie:Vokabular {id: "Bestandserhalt"})
-  (:ReuseStrategie:Vokabular {id: "Design_for_Disassembly"})
+  (:ReuseStrategie:Vokabular {id: "Bestandserhalt_Weiterbauen"})
+  (:ReuseStrategie:Vokabular {id: "In_situ_Wiederverwendung"})
   (:ReuseStrategie:Vokabular {id: "Direkte_Wiederverwendung"})
-  (:ReuseStrategie:Vokabular {id: "Recycling"})
-  (:ReuseStrategie:Vokabular {id: "Refurbishment"})
-  (:ReuseStrategie:Vokabular {id: "Remanufacturing"})
-  (:ReuseStrategie:Vokabular {id: "Same_Site_ReUse"})
-  (:ReuseStrategie:Vokabular {id: "Upcycling"})
-  (:ReuseStrategie:Vokabular {id: "Urban_Mining"})
-  (:ReuseStrategie:Vokabular {id: "Weiterbauen_im_Bestand"})
+  (:ReuseStrategie:Vokabular {id: "Wiederverwendung_nach_Aufarbeitung"})
+  (:ReuseStrategie:Vokabular {id: "Umnutzung_Repurposing"})
+  (:ReuseStrategie:Vokabular {id: "Kaskade_Downcycling_Bauteilebene"})
 
 :Status
-  (:Status:Vokabular {id: "Vorschlag"})
+  (:Status:Vokabular {id: "Gebaut"})
   (:Status:Vokabular {id: "Geplant"})
   (:Status:Vokabular {id: "Realisiert"})
   (:Status:Vokabular {id: "Nicht_Realisiert"})
@@ -876,12 +871,32 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 
 | Legacy `reuse_einsatzstatus/<id>/` | `(:Status:Vokabular {id})` |
 |---|---|
-| `Vorgeschlagen`, `Prototypisch` | `Vorschlag` |
+| `Vorgeschlagen`, `Prototypisch` | `Gebaut` |
 | `Geplant` | `Geplant` |
 | `Realisiert`, `Temporaer` | `Realisiert` |
 | `Verworfen`, `Unklar` | `Nicht_Realisiert` |
 
-**Fügung/Verbindung axis split:** Legacy folder `fuegung_verbindung/` mixes **Verbindungstechnik** (how parts are joined) and **Reversibilität** (how detachable) in one flat list. The graph uses two vocabulary Labels — **`:Verbindungstechnik`** and **`:Reversibilitaet`** — never a combined `:FuegungVerbindung`. From `:Fallbeispiel` / `:Bauteilgruppe` use `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` and `HAT {art:'reversibilitaet'}` → `:Reversibilitaet` (orthogonal values; do not encode reversibility as a “technique” node).
+**Reuse-Strategie-Konsolidierung (verbindlich — 6 Kanon-Knoten):** Legacy `reuse_strategie/` hat **elf** Unterordner; im Graphen gibt es **genau sechs** `:ReuseStrategie:Vokabular`-Knoten nach **Art der Wiederverwendung** (Gebäude-/Bauteilnutzung, nicht Marketing-Vokabular). `(:Bauteilgruppe|:Fallbeispiel)-[:IST]->(:ReuseStrategie)` zielt immer auf einen dieser Kanon-`id`-Werte. Ausführliche Beispiele bleiben in den Markdown-Quellen; im Graphen nur `id`.
+
+| Nr. | Kanon-`id` (`:ReuseStrategie`) | Leitidee (Kurz) |
+|-----|----------------|----------------|
+| **1** | `Bestandserhalt_Weiterbauen` | Gebäude oder große Gebäudeteile bleiben erhalten und werden angepasst. |
+| **2** | `In_situ_Wiederverwendung` | Bauteile bleiben am ursprünglichen Ort und werden weitergenutzt. |
+| **3** | `Direkte_Wiederverwendung` | Bauteil wird ausgebaut und an anderer Stelle mit **gleicher Funktion** wieder eingebaut. |
+| **4** | `Wiederverwendung_nach_Aufarbeitung` | Bauteil wird gereinigt, repariert, geprüft oder angepasst (inkl. konstruktive **Vorbereitung** auf spätere Demontage / DfD-Logik). |
+| **5** | `Umnutzung_Repurposing` | Bauteil erhält eine **neue Funktion**. |
+| **6** | `Kaskade_Downcycling_Bauteilebene` | Bauteil wird in einer **weniger anspruchsvollen** Funktion weitergenutzt (inkl. stofflicher Rückführung / Bestandserschließung aus Altbestand). |
+
+| Legacy `reuse_strategie/<id>/` | → Kanon-`id` |
+|---|---|
+| `Bestandserhalt`, `Weiterbauen_im_Bestand`, `Refurbishment`, `Adaptives_ReUse` | `Bestandserhalt_Weiterbauen` |
+| `Same_Site_ReUse` | `In_situ_Wiederverwendung` |
+| `Direkte_Wiederverwendung` | `Direkte_Wiederverwendung` |
+| `Remanufacturing`, `Design_for_Disassembly` | `Wiederverwendung_nach_Aufarbeitung` |
+| `Upcycling` | `Umnutzung_Repurposing` |
+| `Recycling`, `Urban_Mining` | `Kaskade_Downcycling_Bauteilebene` |
+
+**Fügung/Verbindung → nur Verbindungstechnik:** Legacy folder `fuegung_verbindung/` enthielt gemischte Begriffe; im Graphen wird **ausschließlich die Verbindungs-/Fügetechnik** über **`:Verbindungstechnik`** abgebildet (`HAT {art:'verbindungstechnik'}`). **`:Reversibilitaet` gehört nicht zu „Verbindungen“** in diesem Sinne: kein Import aus `fuegung_verbindung/` für dieses Label, keine Zeile in der folgenden Tabelle.
 
 | Legacy `fuegung_verbindung/<id>/` | Target Label | Canonical node `id` |
 |---|---|---|
@@ -891,9 +906,12 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | `Verleimung` | `:Verbindungstechnik` | `Geklebt` |
 | `Vermoertelung` | `:Verbindungstechnik` | `Vergossen` |
 | `Klemmverbindung` | `:Verbindungstechnik` | `Klemmverbindung` |
-| `Reversible_Fuegung` | `:Reversibilitaet` | `Reversibel` |
 
-The four **`:Reversibilitaet`** vocabulary nodes are always `Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt` (only `Reversibel` is populated directly from a legacy subfolder name; the others come from explicit source fields or future curation — no silent defaulting from technique in this plan).
+| Legacy `fuegung_verbindung/Reversible_Fuegung/` | Graph (dieser Plan) |
+|---|---|
+| (gesamter Ordner) | **Kein** automatischer Export zu `:Verbindungstechnik` oder `:Reversibilitaet`; Inhalt bleibt in Markdown / spätere eigenständige Kuratierung außerhalb der Verbindungs-Pipeline. |
+
+**`:Reversibilitaet` — nur eigener Knotentyp:** Eigenes Vokabular-Label **`:Reversibilitaet:Vokabular`** mit genau vier Knoten (`Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt`), eigene **UNIQUE-Constraint** auf `(n:Reversibilitaet).id`, ausschließlich **`HAT {art:'reversibilitaet'}`** von `:Fallbeispiel` / `:Bauteilgruppe`. Datenquelle: **explizite** Metadaten (z. B. künftiges Feld / Kuratierung) — **nicht** `fuegung_verbindung/`, **nicht** `IST`, keine Einbettung unter `:Verbindungstechnik`.
 
 ## §1.A Instance Labels (6)
 
@@ -908,7 +926,7 @@ The four **`:Reversibilitaet`** vocabulary nodes are always `Reversibel`, `Teilw
 | `:Wiederverwendungskette` | OPTIONAL named multi-Bauteilgruppe reuse program            | `reuse_kette/` (renamed; `reuse_kettenstation/` dropped)           |
 
 
-## §1.B Vocabulary Labels (39 — every controlled-knot folder mapped; `ort/` splits into two Labels; `fuegung_verbindung/` splits into two Labels)
+## §1.B Vocabulary Labels (39 — every controlled-knot folder mapped; `ort/` splits into two Labels; `fuegung_verbindung/` → **`:Verbindungstechnik`** only; **`:Reversibilitaet`** is a separate node type without `fuegung_verbindung/` provenance; `reuse_strategie/` → **six** `:ReuseStrategie` nodes — see exception table)
 
 Grouped only for reading.
 
@@ -919,8 +937,14 @@ Grouped only for reading.
 - `:Bauteilebene` ← `bauteilebene/`
 - `:Bauteilzustand` ← `bauteilzustand/`
 - `:Funktionswechsel` ← `funktionswechsel/`
-- `:Verbindungstechnik` ← `fuegung_verbindung/` (technique rows only — canonical ids; see axis-split table)
-- `:Reversibilitaet` ← **new axis** — four nodes; legacy `Reversible_Fuegung/` maps to `Reversibel`; other ids from explicit data (see axis-split table)
+
+**Verbindung (Technik):**
+
+- `:Verbindungstechnik` ← `fuegung_verbindung/` **nur** die sechs Technik-Ordner (siehe Tabelle); Ordner `Reversible_Fuegung/` **kein** Ziel dieses Labels.
+
+**Lösbarkeit (eigenständiger Knotentyp — nicht unter Verbindungen):**
+
+- `:Reversibilitaet` ← **kein** `fuegung_verbindung/`-Bezug; **vier feste** Vokabular-Knoten; nur `HAT {art:'reversibilitaet'}`; Daten nur aus **expliziten** Quellen (nicht aus der Verbindungs-Migration). **Nicht** dasselbe wie `methode/Reversibilitaet/` → weiterhin `(:Methode:Vokabular {id: "Reversibilitaet"})` per **`BENUTZT`**.
 
 **Konstruktion:**
 
@@ -930,7 +954,7 @@ Grouped only for reading.
 
 **Reuse:**
 
-- `:ReuseStrategie` ← `reuse_strategie/`
+- `:ReuseStrategie` ← `reuse_strategie/` (**eleven** legacy folders → **six** canonical `id`s — **Art der Wiederverwendung**; `IST` from `:Bauteilgruppe` / `:Fallbeispiel` — see **Reuse-Strategie-Konsolidierung** in §1)
 - `:Status` ← `reuse_einsatzstatus/` (seven legacy folders → **four** nodes; Label renamed from `:ReuseEinsatzstatus`; see exception table above)
 - `:WiederverwendungsArt` ← `bewertungslogik_abgrenzung/` (renamed)
 
@@ -1009,7 +1033,7 @@ Grouped only for reading.
 | `reuse_kette/`                | renamed to `:Wiederverwendungskette`                                                                                           |
 
 
-Total: 54 folders → 6 instance Labels + 39 vocabulary Labels + 11 dropped + 4 merged-or-renamed (`ort/` yields two Labels; `fuegung_verbindung/` yields two Labels).
+Total: 54 folders → 6 instance Labels + 39 vocabulary Labels + 11 dropped + 4 merged-or-renamed (`ort/` yields two Labels; `fuegung_verbindung/` → `:Verbindungstechnik` only — `:Reversibilitaet` has no folder provenance; `reuse_strategie/` → **six** `:ReuseStrategie` nodes).
 
 ---
 
@@ -1140,7 +1164,7 @@ No outgoing edges from `:Quelle`. All metadata about a citation (page, excerpt, 
 
 ## §2.G Vocabulary Labels (shared shape — every label in §1.B)
 
-Most Labels in §1.B have **as many nodes as there are subfolders** under the corresponding `_database/<vocab>/` directory. For instance: `_database/material/` has subfolders for `Stahl`, `Holz`, `Beton`, `Stahlbeton`, … — each becomes a `(:Material {id: "..."})` node. **Exceptions:** `:Land` / `:Stadt` (see geography exception); `:Status` (seven legacy `reuse_einsatzstatus/` folders consolidate to **four** canonical ids — see §1 exception table); `:Verbindungstechnik` / `:Reversibilitaet` (one legacy `fuegung_verbindung/` folder tree split across two axes — see §1 Fügung/Verbindung table).
+Most Labels in §1.B have **as many nodes as there are subfolders** under the corresponding `_database/<vocab>/` directory. For instance: `_database/material/` has subfolders for `Stahl`, `Holz`, `Beton`, `Stahlbeton`, … — each becomes a `(:Material {id: "..."})` node. **Exceptions:** `:Land` / `:Stadt` (see geography exception); `:Status` (seven legacy `reuse_einsatzstatus/` folders consolidate to **four** canonical ids — see §1 exception table); `:ReuseStrategie` (**eleven** legacy `reuse_strategie/` folders consolidate to **six** canonical ids — see §1); `:Verbindungstechnik` (six technique folders under `fuegung_verbindung/` remap to canonical ids — see §1 table; `Reversible_Fuegung/` excluded); `:Reversibilitaet` (**four** fixed nodes, **no** `fuegung_verbindung/` mapping — see §1).
 
 Each vocab node has only:
 
@@ -1161,9 +1185,10 @@ Special additions per vocab Label:
 | `:Stadt`                | `koordinaten: string?`       | optional coordinates string                                                                                                                 |
 | `:Programm`             | `programm_typ: string` (req) | `"foerderung"` or `"forschungskontext"`                                                                                                     |
 | `:WiederverwendungsArt` | `axis: string` (req)         | `"einordnung"` (legacy bewertungslogik values) or `"grundtyp"` (wiederverwendet/original/hybrid — absorbed from dropped :Bauteilgruppentyp) |
-| `:Status`               | —                            | exactly **four** nodes (`Vorschlag`, `Geplant`, `Realisiert`, `Nicht_Realisiert`); legacy subfolder slug maps to canonical `id` per §1 exception table |
+| `:Status`               | —                            | exactly **four** nodes (`Gebaut`, `Geplant`, `Realisiert`, `Nicht_Realisiert`); legacy subfolder slug maps to canonical `id` per §1 exception table |
+| `:ReuseStrategie`       | —                            | exactly **six** canonical `id`s (see §1 **Reuse-Strategie-Konsolidierung**); **eleven** legacy `reuse_strategie/` folders map to those ids |
 | `:Verbindungstechnik`  | —                            | six canonical technique ids (see §1); legacy `fuegung_verbindung/` technique folders remap to these `id` values |
-| `:Reversibilitaet`      | —                            | exactly **four** nodes (`Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt`); only `Reversibel` is tied to legacy folder `Reversible_Fuegung/` |
+| `:Reversibilitaet`      | —                            | exactly **four** nodes (`Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt`); **not** sourced from `fuegung_verbindung/` (see §1) |
 
 
 All vocab Labels carry the second Label `:Vokabular`.
@@ -1184,8 +1209,8 @@ All vocab Labels carry the second Label `:Vokabular`.
 
 ## Legacy relations folded in
 
-- **IST:** `has_bauteiltyp`, `has_reuse_einsatzstatus` (→ `:Status`, values consolidated to max four), `has_reuse_strategie`, `has_bewertungslogik_abgrenzung` (→ `:WiederverwendungsArt`), `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_bauobjektstatus`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`.
-- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung` → split: `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` and/or `HAT {art:'reversibilitaet'}` → `:Reversibilitaet` (see §1 axis-split table), `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:Bauteilgruppe` or `:Fallbeispiel` to `:Entwurfsentscheidung:Vokabular`.
+- **IST:** `has_bauteiltyp`, `has_reuse_einsatzstatus` (→ `:Status`, values consolidated to max four), `has_reuse_strategie` (→ `:ReuseStrategie`, **eleven** legacy folders → **six** canonical `id`s — see §1), `has_bewertungslogik_abgrenzung` (→ `:WiederverwendungsArt`), `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_bauobjektstatus`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`.
+- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung` → **only** `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` per §1 Verbindungstabelle (technique subfolders); **`HAT {art:'reversibilitaet'}`** → `:Reversibilitaet` is **independent** (explicit metadata — not from `fuegung_verbindung/`), `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:Bauteilgruppe` or `:Fallbeispiel` to `:Entwurfsentscheidung:Vokabular`.
 - **BENUTZT:** `uses_material`, `uses_software_digitaltool`, `has_methode`, `has_rueckbauverfahren`, `has_aufbereitungsverfahren`.
 - **GEHÖRT_ZU:** `installed_in_bauobjekt` → `rolle:'einbauort'`; new `sourced_from_bauobjekt` → `rolle:'herkunft'`; `part_of_reuse_kette` → `rolle:'kette'` (to `:Wiederverwendungskette`); `located_in_ort` → split: `rolle:'land'` (to `:Land`) and/or `rolle:'stadt'` (to `:Stadt`) depending on classified target; `relates_to_bauobjekt` → `rolle:'fallbeispiel'`; `involves_foerderprogramm` / `has_programm_kontext` → `rolle:'programm'` (to `:Programm`).
 - **BELEGT_IN:** replaces unresolved `quelle_label` shorthand on every node and every `quelle_id` previously planned as edge property. Replaces the gap relation `documented_in_quelle`. Direction: claim → `:Quelle`.
@@ -1269,7 +1294,9 @@ Direction: **(claim) → (:Quelle)**.
 - **Citation placement.** Source attribution NEVER lives as a property. Always `:BELEGT_IN → :Quelle` with optional `eigenschaft` to scope.
 - **Naming.** German PascalCase Labels, SCREAMING_SNAKE edges, snake_case properties.
 - **:Status vs :Bauobjektstatus.** `:Status` is the reuse-**Einsatz** lifecycle only (`IST` from `:Bauteilgruppe`). Building-level construction state stays `:Bauobjektstatus` on `:Fallbeispiel` — different semantics; do not merge.
-- **Verbindungstechnik vs Reversibilität.** Joining method (`:Verbindungstechnik`) and detachability (`:Reversibilitaet`) are separate `HAT` axes (`art:'verbindungstechnik'` vs `art:'reversibilitaet'`). A value like “geschraubt” is not a reversibility class and must not be modeled as such.
+- **Homonym `Gebaut`.** The canonical `:Status` node `id:"Gebaut"` (legacy `Vorgeschlagen` + `Prototypisch`) is **not** the same concept as `:Bauobjektstatus {id:"Gebaut"}` on a `:Fallbeispiel`. Queries must always constrain the Label (`:Status` vs `:Bauobjektstatus`).
+- **Verbindungstechnik vs Reversibilität.** Joining method (`:Verbindungstechnik`) comes only from **`fuegung_verbindung/`** technique folders. **`:Reversibilitaet`** is a separate `HAT` axis (`art:'reversibilitaet'`) with **no** `fuegung_verbindung/` provenance — not a “Verbindung” import. A value like “geschraubt” is not a reversibility class.
+- **:Reversibilitaet vs :Methode `id:"Reversibilitaet"`.** The Label **`:Reversibilitaet`** holds the **detachability scale** (`Reversibel`, …) and is reached only via `HAT {art:'reversibilitaet'}`. The folder `_database/methode/Reversibilitaet/` is a **different concept** (a methodological approach) and remains a **`:Methode`** node, typically linked with **`BENUTZT`**. Never merge these into one Label.
 - **Constraint.** Every Label has `CREATE CONSTRAINT FOR (n:<Label>) REQUIRE n.id IS UNIQUE`.
 
 # Appendix B — Constraints & indexes
@@ -1316,10 +1343,31 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 | `Moebelsepearat` value in WiederverwendungsArt                                           | renamed to `Moebel_separat`                                                                                                                |
 | `ort/Scwheiz`                                                                            | renamed to `ort/Schweiz`; export classifies the node as `:Land` or `:Stadt` (no `:Ort`)                                                    |
 | `reuse_einsatzstatus/`                                                                   | Label `:ReuseEinsatzstatus` → **`:Status`**; **seven** legacy folders → **four** graph nodes (mapping table in §1)                           |
-| `fuegung_verbindung/`                                                                     | Label `:FuegungVerbindung` dropped → **`:Verbindungstechnik`** + **`:Reversibilitaet`**; `HAT.art` uses `verbindungstechnik` / `reversibilitaet` (mapping table in §1) |
+| `reuse_strategie/`                                                                       | **Eleven** legacy folders → **six** `:ReuseStrategie` canonical `id`s — *Art der Wiederverwendung* (§1 + Appendix E)                         |
+| `fuegung_verbindung/`                                                                     | Label `:FuegungVerbindung` dropped → **`:Verbindungstechnik`** only (six technique folders; `Reversible_Fuegung/` not mapped to graph in this pipeline — see §1) |
+| `:Reversibilitaet` (detachability scale)                                                  | **Not** sourced from `fuegung_verbindung/`; own four nodes; `HAT { art: 'reversibilitaet' }` from explicit metadata only |
 | Bauteiltyp drop-and-remap (SCHEMA.md §5)                                                 | already applied — noted in spec                                                                                                            |
 | Material drop-and-merge (SCHEMA.md §6)                                                   | already applied — noted in spec                                                                                                            |
 
+
+---
+
+# Appendix E — `ReuseStrategie`: sechs Kanon-Knoten — *Art der Wiederverwendung* (verbindlich)
+
+**Status:** Es gelten **genau sechs** `:ReuseStrategie`-Knoten (Kanon-`id`s in §1). Legacy `reuse_strategie/` (**elf** Ordner) mappt beim Export auf diese `id`s. Frühere 7er-Varianten sind **ersetzt**.
+
+**Normative Tabelle (fachlich; Beispiele nur in Markdown-Quellen, nicht im Graphen):**
+
+| Nr. | Art der Wiederverwendung (`id`) | Erklärung | Beispiel |
+|-----|-----------------------------------|-----------|----------|
+| **1** | `Bestandserhalt_Weiterbauen` | Gebäude oder große Gebäudeteile bleiben erhalten und werden angepasst. | Fabrik wird zu Wohnhaus, Tragwerk bleibt bestehen |
+| **2** | `In_situ_Wiederverwendung` | Bauteile bleiben am ursprünglichen Ort und werden weitergenutzt. | Treppe, Decke, Fassade oder Wand bleibt im Gebäude |
+| **3** | `Direkte_Wiederverwendung` | Bauteil wird ausgebaut und an anderer Stelle mit gleicher Funktion wieder eingebaut. | Tür bleibt Tür, Fenster bleibt Fenster |
+| **4** | `Wiederverwendung_nach_Aufarbeitung` | Bauteil wird gereinigt, repariert, geprüft oder angepasst (inkl. DfD / Remanufacturing als Aufbereitung). | Ziegel reinigen, Parkett schleifen, Stahlträger prüfen |
+| **5** | `Umnutzung_Repurposing` | Bauteil erhält eine neue Funktion. | Fenster wird Innenwand, Tür wird Tischplatte |
+| **6** | `Kaskade_Downcycling_Bauteilebene` | Bauteil wird in einer weniger anspruchsvollen Funktion weitergenutzt. | tragendes Holz wird Innenausbau, Fassadenplatten werden Gartenbelag |
+
+**Technische Umsetzung:** Legacy→Kanon-Mapping in **§1** unter **Reuse-Strategie-Konsolidierung**. *Hinweis Export:* `Upcycling` → `Umnutzung_Repurposing` ist eine **Heuristik** (häufig funktionale Neuausrichtung); bei reinem Qualitäts-/Aufarbeitungspfad kann der Export alternativ `Wiederverwendung_nach_Aufarbeitung` setzen, wenn die Fallakte das trägt.
 
 ---
 
