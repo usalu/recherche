@@ -919,7 +919,7 @@ Grouped only for reading.
 
 **Akteure:**
 
-- `:Akteurrolle` ← `akteurrolle/` (dictionary only — value carried as `rolle` property on HAT edges, no IST edges point here)
+- `:Akteurrolle` ← `akteurrolle/` (**kein** 1:1 Ordner→Knoten): im Graphen **genau acht** `(:Akteurrolle {id})` nach §1.D; **`HAT { art: 'akteur' }.rolle`** trägt **immer** die **kanonische** `id` (Bund), nicht den Roh-Unterordnernamen. Keine `IST`-Kanten auf `:Akteurrolle`.
 
 **Daten & Bewertung:**
 
@@ -957,6 +957,38 @@ Grouped only for reading.
 | `reuse_kette/`                | renamed to `:Wiederverwendungskette`                                                                                                                                                                                     |
 | `kontextmerkmal/`             | **Kein Label `:Kontextmerkmal`:** `Pilotprojekt` → derselbe Knoten wie **`(:Programm { id: "Pilotprojekt" })`** aus `programm_kontext/` (Legacy **`has_kontextmerkmal`** → **`GEHÖRT_ZU { rolle: 'programm' }` → `:Programm`** je Exportregel); **`Bestandserhalt_Policy`** → **kein** eigener Taxonomie-Knoten (fachliche Einordnung über **`reuse_strategie/Bestandserhalt`** → **`WiederverwendungsArt`** / **`HAT { art: "wiederverwendungsart" }`** wo sinnvoll; sonst nur Markdown / **`BELEGT_IN`**) |
 Total: 54 folders → **44** Neo4j Labels (**8** in §1.A + **36** in §1.B) + 10 dropped + 5 merged-or-renamed (`ort/` yields two Labels; `fuegung_verbindung/` → `:Verbindungstechnik` only — `:Reversibilitaet` has no folder provenance; **`bauobjekt/`** → **`:Bauwerk`** (Primär-Label — **not** listed in §1.C); **`kontextmerkmal/`** → **`:Programm`** + Strategie-Vokabular — **not** a separate Label; `reuse_einsatz/` → **`:ReuseEinsatz`**; `reuse_strategie/` folds into `**:WiederverwendungsArt`** as `**axis: "reuse_strategie"**` (**six** canonical `id`s — not a separate Label; `bauobjektstatus/` + `reuse_einsatzstatus/` → **one** `:Status` Label with **seven** canonical nodes).
+
+## §1.D `:Akteurrolle` — Kanon-Bündel (8 Knoten)
+
+**Ziel:** weniger Begriffsknoten, stabilere Abfragen. Die **21** Legacy-Unterordner unter `_database/akteurrolle/<id>/` werden beim Export auf **acht** Kanon-`id`s abgebildet. Feingliederung bleibt in den jeweiligen `index.md`-Quellen, nicht im Graphen.
+
+**Kanon-`id` (`:Akteurrolle`) — genau diese acht Knoten:** `Bauherrschaft_Nutzung`, `Planung_Gestaltung`, `Tragwerk_Fassade`, `TGA_Sicherheit`, `Ausfuehrung_Logistik`, `Beratung_Forschung`, `Qualitaetssicherung`, `Koordination`.
+
+
+| Legacy-Ordner `akteurrolle/<id>/` | Kanon-`:Akteurrolle.id`     |
+| --------------------------------- | ---------------------------- |
+| `Bauherr_Auftraggeber`            | `Bauherrschaft_Nutzung`      |
+| `Betreiber_Nutzer`              | `Bauherrschaft_Nutzung`      |
+| `Oeffentliche_Hand`               | `Bauherrschaft_Nutzung`      |
+| `Architektur`                     | `Planung_Gestaltung`         |
+| `Landschaftsplanung`              | `Planung_Gestaltung`         |
+| `Kunst_Gestaltung`                | `Planung_Gestaltung`         |
+| `Tragwerksplanung`                | `Tragwerk_Fassade`           |
+| `Fassade`                         | `Tragwerk_Fassade`           |
+| `Stahlbau_Fertigung`              | `Tragwerk_Fassade`           |
+| `TGA_Gebaeudetechnik`             | `TGA_Sicherheit`             |
+| `Brandschutz_Barrierefreiheit`    | `TGA_Sicherheit`             |
+| `Bauausfuehrung`                  | `Ausfuehrung_Logistik`       |
+| `Rueckbau_Demontage`              | `Ausfuehrung_Logistik`       |
+| `Materiallieferant`               | `Ausfuehrung_Logistik`       |
+| `Aufbereitung_Refurbishment`      | `Ausfuehrung_Logistik`       |
+| `Reuse_Beratung`                  | `Beratung_Forschung`         |
+| `Nachhaltigkeitsberatung`         | `Beratung_Forschung`         |
+| `Forschung_Dokumentation`         | `Beratung_Forschung`         |
+| `Pruefung_Qualitaetssicherung`    | `Qualitaetssicherung`        |
+| `Projektmanagement_Koordination`  | `Koordination`               |
+| `Projektbeteiligte_Unbestimmt`    | `Koordination`               |
+
 
 ---
 
@@ -1208,7 +1240,7 @@ Same optional properties as `**IST`** (temporal validity / confidence).
 | name          | type    | req | notes                                                                                                                                                                                                                                                                                                                                                             |
 | ------------- | ------- | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `art`         | string  | ✓   | one of `"huerde"`, `"prozessphase"`, `"pruefung"`, `"norm"`, `"leistung"`, `"schadstoff"`, `"recht"`, `"nutzung"`, `"intervention"`, `"verbindungstechnik"`, `"reversibilitaet"`, `"logistik"`, `"wirtschaft"`, `"zertifizierung"`, `"akteur"`, `"entwurf"`, `**"wiederverwendungsart"**` (→ `:WiederverwendungsArt` with `axis: "reuse_strategie"`) |
-| `rolle`       | string? | –   | required when `art='akteur'`; e.g. `"Architektur"`, `"Tragwerksplanung"`, `"Bauherr_Auftraggeber"`; validates against `:Akteurrolle.id`                                                                                                                                                                                                                           |
+| `rolle`       | string? | –   | required when `art='akteur'`; **must** be one of the **eight** canonical `:Akteurrolle.id` values in §1.D (e.g. `Planung_Gestaltung`, `Ausfuehrung_Logistik`) — **not** the raw legacy folder name under `akteurrolle/` |
 | `anzahl`      | int?    | –   | multiplicity                                                                                                                                                                                                                                                                                                                                                      |
 | `intensitaet` | string? | –   | qualitative strength                                                                                                                                                                                                                                                                                                                                              |
 | `seit`        | date?   | –   |                                                                                                                                                                                                                                                                                                                                                                   |
@@ -1259,7 +1291,7 @@ Direction: **(claim) → (:Quelle)**.
 - **Metadata-only graph.** German prose, raw labels, legacy paths, batch tags do not enter the graph. They stay in the source Markdown.
 - **Modes A/B/C coexist** but Mode A (property) is reserved for: identifiers, type discriminators (`art`, `programm_typ`, `axis`), and quantitative measurements (with `_alt`/`_vertrauensgrad` shadows).
 - **Measurement placement.** Building-level → **`:Bauwerk`**. Fall-/Projektakte ohne separates Bauwerk → Messwerte nur auf `:Fallbeispiel`, wenn der Export kein `:Bauwerk` materialisiert (Ausnahme; Zielzustand: **`:Bauwerk`**). **Physical** component-group quantities → `:Bauteilgruppe`. **Reuse-action** KPIs (share, CO₂ impact, reuse targets) → `:ReuseEinsatz`. Inherently relational quantities → on the `BENUTZT` edge.
-- **Role placement.** A role IS an edge property, never a node target. `:HAT {art:'akteur', rolle:'Architektur'}->(:Akteur)`. `:Akteurrolle` is a dictionary of allowed `rolle` strings, not an IST target.
+- **Role placement.** A role IS an edge property, never a node target. `:HAT {art:'akteur', rolle:'Planung_Gestaltung'}->(:Akteur)`. `:Akteurrolle` supplies **exactly eight** dictionary nodes (§1.D); `rolle` on the edge is **always** one of those canonical ids, mapped from legacy `akteurrolle/` folder names at export.
 - **Citation placement.** Source attribution NEVER lives as a property. Always `:BELEGT_IN → :Quelle` with optional `eigenschaft` to scope.
 - **Naming.** German PascalCase Labels, SCREAMING_SNAKE edges, snake_case properties.
 - **`**:Status` (einheitlich).** Genau **sieben** Kanon-Knoten (§1). **`HAT_STATUS`** von **`:Bauwerk`** (Gebäude-/Anlagen-Lebenszyklus — kanonisch für `bauobjektstatus/`), **`(:ReuseEinsatz)`** (Einsatz-Lebenszyklus — kanonisch), optional **`(:Fallbeispiel)`** / **`(:Bauteilgruppe)`** → `:Status`. Label **`:Bauobjektstatus`** entfällt; Ordner `bauobjektstatus/` mappt auf dieselben Knoten.
@@ -1276,7 +1308,7 @@ Direction: **(claim) → (:Quelle)**.
 
 # Appendix C — Coverage checklist
 
-The Labels in §1.A + §1.B + the drop/merge table in §1.C account for every folder under `_database/` (54 folders + `_edges` + `_system`). Ordner **`kontextmerkmal/`** bleibt im Dateibaum, hat aber **kein** eigenes Neo4j-Label (§1.C).
+The Labels in §1.A + §1.B + the drop/merge table in §1.C account for every folder under `_database/` (54 folders + `_edges` + `_system`). Ordner **`kontextmerkmal/`** bleibt im Dateibaum, hat aber **kein** eigenes Neo4j-Label (§1.C). Ordner **`akteurrolle/`** bleibt mit vielen Unterordnern; im Graphen gibt es dafür nur **acht** `:Akteurrolle`-Knoten (§1.D).
 
 YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reuse_einsatz` / `datenpunkt` / `akteur_beteiligung`:
 
@@ -1287,10 +1319,12 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 - prose `body` → NOT in the graph
 - `quelle_label:` → resolved to `:Quelle` nodes + `:BELEGT_IN` edges
 - `legacy_paths:`, `build_status:` → NOT in the graph
+- **`akteurrolle/`** (viele Legacy-Unterordner) → **acht** kanonische **`(:Akteurrolle)`**-Knoten; `HAT.rolle` = Bund-`id` (§1.D)
 - **`kontextmerkmal/`** (zwei Stubs) → **kein** `:Kontextmerkmal`-Knoten: **`Pilotprojekt`** → **`(:Programm { id: "Pilotprojekt" })`**; **`Bestandserhalt_Policy`** → kein Taxonomie-Knoten (§1.C)
 
+# Appendix D — Renamings, drops, merges
 
-| Change                                                                                                                   | Action                                                                                                                                                                       |
+
 | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fallstudie/` + `projekt/` (shared id)                                                                                 | merged into **`:Fallbeispiel`** — **Fall-/Projektakte**                                                                                                                      |
 | `bauobjekt/` (pro physisches Bauwerk)                                                                                  | **`(:Bauwerk)`**; `GEHÖRT_ZU {rolle: 'fallbeispiel'}` → **`(:Fallbeispiel)`** bei gleicher Fall-ID                                                                           |
@@ -1300,6 +1334,7 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 | `bewertungslogik_abgrenzung/`                                                                                            | renamed to `:WiederverwendungsArt`, absorbed values of dropped Bauteilgruppentyp via `axis` property                                                                         |
 | `foerderprogramm/` + `programm_kontext/`                                                                                 | merged into `:Programm` with `programm_typ` property; **`kontextmerkmal/Pilotprojekt`** teilt denselben **`(:Programm { id: "Pilotprojekt" })`**-Knoten (§1.C)                                                                              |
 | `kontextmerkmal/`                                                                                                        | **Label `:Kontextmerkmal` removed** — `Pilotprojekt` → `:Programm`; `Bestandserhalt_Policy` → keine Knoteninstanz (§1.C)                                                                 |
+| `akteurrolle/`                                                                                                           | **21** Legacy-Unterordner → **acht** kanonische **`(:Akteurrolle)`**-Knoten; `HAT.rolle` nur Bund-`id` (§1.D)                                                                               |
 | `akteur_beteiligung/` + `bauobjekt_beteiligung/`                                                                         | dropped — role lives as edge property on `HAT`                                                                                                                               |
 | `bauobjektklasse/`                                                                                                       | dropped — values attach to **`:Bauwerk`** or **`:Fallbeispiel`** per export rule                                                                                                                           |
 | `bauobjektrolle/`                                                                                                        | dropped — derivable from incoming `GEHÖRT_ZU` edges **to `:Bauwerk`**                                                                                                                                       |
