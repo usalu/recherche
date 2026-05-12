@@ -1,6 +1,6 @@
 ﻿# Neo4j-Visualisierung — konkreter Knotenkatalog (Modus A)
 
-Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{...}` trägt (siehe [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) § „Autoritativer vertikaler Gesamtbaum“). Abschnitt **A** des Visual-Plans listet nur die **44** Label-Typen; **dieses Dokument** ist die Vertex-Menge für den Typgraphen mit **Instanz**-Mustern.
+Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{...}` trägt (siehe [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) § „Autoritativer vertikaler Gesamtbaum“). Abschnitt **A** des Visual-Plans listet nur die **45** Label-Typen; **dieses Dokument** ist die Vertex-Menge für den Typgraphen mit **Instanz**-Mustern.
 
 ```text
 :Fallbeispiel
@@ -380,6 +380,10 @@ Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{
   (:Entwurfsentscheidung {id: "Deckenhoehe_nach_Traegerhoehe"})
   (:Entwurfsentscheidung {id: "Anschlussdetail_angepasst"})
   (:Entwurfsentscheidung {id: "Erschliessungskern_verschoben"})
+
+:Messpunkt
+  (:Messpunkt {id: "DEMO_Messpunkt_Gebaeudeflaeche", wert: 1200, einheit: "m2", kennwert_schluessel: "flaeche"})
+  (:Messpunkt {id: "DEMO_Messpunkt_CO2", wert: 42, einheit: "t", kennwert_schluessel: "co2"})
 
 :Land
   (:Land {id: "Schweiz", iso_country: "CH"})

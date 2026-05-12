@@ -27,7 +27,7 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 
 > Spiegelung von [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) §1.A/B, §3, Appendix F/G. **Typgraph:** je **ein** UI-Knoten pro Eintrag unten. **Spielgraph:** pro Label-**Typ** Instanzen nach Capping-Regeln (Modus B).
 
-## A) Alle Neo4j-Labels — **44** Label-Typen (Referenz)
+## A) Alle Neo4j-Labels — **45** Label-Typen (Referenz)
 
 ### §1.A Primär-Labels (**9**)
 
@@ -41,7 +41,7 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 8. `:Tool`  
 9. `:Wiederverwendungskette`  
 
-### §1.B Weitere Labels (**35**)
+### §1.B Weitere Labels (**36**)
 
 10. `:Bauteiltyp`  
 11. `:Material`  
@@ -70,14 +70,15 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 34. `:Nutzung`  
 35. `:BauaufgabeIntervention`  
 36. `:Entwurfsentscheidung`  
-37. `:Land`  
-38. `:Stadt`  
-39. `:Akteurrolle`  
-40. `:Datenqualitaet`  
-41. `:Tooltyp`  
-42. `:ZertifizierungBewertungssystem`  
-43. `:Wirtschaft`  
-44. `:Programm`  
+37. `:Messpunkt`  
+38. `:Land`  
+39. `:Stadt`  
+40. `:Akteurrolle`  
+41. `:Datenqualitaet`  
+42. `:Tooltyp`  
+43. `:ZertifizierungBewertungssystem`  
+44. `:Wirtschaft`  
+45. `:Programm`  
 
 ---
 
@@ -102,11 +103,11 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 **Ziel-Labels („Klassifikation“; im Typgraph je eine gerichtete Kante Subjekt → Ziel, sofern fachlich möglich):**  
 alle **§1.B**-Labels **außer** `:Status` und **außer** `:Akteurrolle` (**kein** `IST` aufs Wörterbuch `Akteurrolle`, Hauptplan §1.B).
 
-Also **32** Ziel-Labels für `IST` (alle §1.B **außer** `:Status`, `:Akteurrolle`, `:Entwurfsentscheidung` — letzteres nur per `HAT { art: "entwurf" }`):
+Also **32** Ziel-Labels für `IST` (alle §1.B **außer** `:Status`, `:Akteurrolle`, `:Entwurfsentscheidung`, `:Messpunkt` — `Entwurfsentscheidung` nur per `HAT { art: "entwurf" }`, `Messpunkt` nur per `GEHÖRT_ZU { rolle: "messung" }`):
 
 `:Bauteiltyp`, `:Material`, `:Bauteilebene`, `:Bauteilzustand`, `:Funktionswechsel`, `:Verbindungstechnik`, `:Reversibilitaet`, `:Bauweise`, `:Bausystem`, `:Tragwerksprinzip`, `:WiederverwendungsArt`, `:Ressourcenquelle`, `:Beschaffungsweg`, `:Prozessphase`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Logistik`, `:Methode`, `:Huerde`, `:PruefungNachweis`, `:Leistungsanforderung`, `:Norm`, `:RechtlicheBedingung`, `:Nutzung`, `:BauaufgabeIntervention`, `:Land`, `:Stadt`, `:Datenqualitaet`, `:Tooltyp`, `:ZertifizierungBewertungssystem`, `:Wirtschaft`, `:Programm`
 
-**Hinweis:** `:Entwurfsentscheidung` **nur** über `HAT` mit `art: "entwurf"` (Hauptplan Legacy-Folding), **nicht** über `IST`.
+**Hinweis:** `:Entwurfsentscheidung` **nur** über `HAT` mit `art: "entwurf"` (Hauptplan Legacy-Folding), **nicht** über `IST`. **`:Messpunkt`** **nur** über **`GEHÖRT_ZU { rolle: "messung" }`**, **nicht** über `IST`.
 
 **Verboten (explizit Hauptplan §3):**  
 Von **`:Fallbeispiel`**, **`:Bauwerk`** oder **`:ReuseEinsatz`** **kein** `IST` zu **`(:WiederverwendungsArt { axis: "reuse_strategie" })`** — diese Achse nur **`HAT { art: "wiederverwendungsart" }`**.
@@ -185,6 +186,10 @@ Von **`:Fallbeispiel`**, **`:Bauwerk`** oder **`:ReuseEinsatz`** **kein** `IST` 
 | `:Software` | `programm` | `:Programm` |
 | `:Tool` | `programm` | `:Programm` |
 | `:Tool` | `software` | `:Software` |
+| `:Messpunkt` | `messung` | `:Bauwerk` |
+| `:Messpunkt` | `messung` | `:Fallbeispiel` |
+| `:Messpunkt` | `messung` | `:Bauteilgruppe` |
+| `:Messpunkt` | `messung` | `:ReuseEinsatz` |
 
 ---
 
@@ -202,7 +207,7 @@ Von **`:Fallbeispiel`**, **`:Bauwerk`** oder **`:ReuseEinsatz`** **kein** `IST` 
 
 **Subjekt-Labels (laut Hauptplan §3, zuzüglich Kuratierung):**
 
-- Immer: `:Fallbeispiel`, `:Bauwerk`, `:Bauteilgruppe`, `:ReuseEinsatz`, `:Akteur`, `:Quelle`, `:Software`, `:Tool`, `:Wiederverwendungskette`, `:Entwurfsentscheidung`
+- Immer: `:Fallbeispiel`, `:Bauwerk`, `:Bauteilgruppe`, `:ReuseEinsatz`, `:Akteur`, `:Quelle`, `:Software`, `:Tool`, `:Wiederverwendungskette`, `:Entwurfsentscheidung`, `:Messpunkt`
 - Zusätzlich **§1.B**-Klassifikationsknoten **nur**, wenn die Quelle den **Taxonomieeintrag** belegt (nicht nur Fließtext) — im Typgraph optional als gestrichelte Kante „nur wenn Export-Flag“ kennzeichnen.
 
 **Ziel:** ausschließlich `:Quelle`. **Keine** Kante ohne auflösbares `(:Quelle)` (Hauptplan §4.F).
