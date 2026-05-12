@@ -1,12 +1,12 @@
 ---
 name: Neo4j schema catalogue
-overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. Six instance Labels (:Fallbeispiel, :Bauteilgruppe, :Akteur, :Quelle, :SoftwareDigitaltool, :Wiederverwendungskette) and 38 vocabulary Labels (covering every folder under _database/). Seven edge types (IST, HAT, HAT_STATUS, HAT_WIEDERVERWENDUNGSART, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes.
+overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. **44** Neo4j Labels total (six primary case / component / source types plus thirty-eight folder-backed classification types). **Each node has exactly one Label** — no umbrella or secondary label on nodes. Seven edge types (IST, HAT, HAT_STATUS, HAT_WIEDERVERWENDUNGSART, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes.
 todos:
   - id: spec-skeleton
-    content: "Create _database/_system/NEO4J_SCHEMA.md with the 4-section structure: §1 Node-type catalogue, §2 Nodes (per-Label property tables), §3 Edge-type catalogue, §4 Edges (per-edge-type property tables). Plus appendices for principles, constraints, coverage (every folder → Label/drop), renamings."
+    content: "Create _database/_system/NEO4J_SCHEMA.md (full spec) and _database/_system/NEO4J_SCHEMA_MAP.md (compact map: all Labels + properties, all edge types + properties). Same 4+appendix content order in the main spec; the map is a flattened reference."
     status: pending
   - id: write-1
-    content: "Write §1 Node-type catalogue: 6 instance Labels and the 38 vocabulary Labels, with one-line purpose each. Confirm against _database/ folder list."
+    content: "Write §1 Node-type catalogue: all **44** Labels (six primary + thirty-eight folder-backed types), one-line purpose each. Confirm against _database/ folder list."
     status: pending
   - id: write-2
     content: "Write §2 Nodes: per-Label property tables. ONLY metadata properties — no body, no legacy_paths, no raw labels, no build_status."
@@ -17,8 +17,8 @@ todos:
   - id: write-4
     content: "Write §4 Edges: per-edge-type property table. :BELEGT_IN is the only citation edge."
     status: pending
-  - id: appendices
-    content: "Write the appendices: A modeling principles (metadata-only, hybrid modes), B constraints & indexes, C complete coverage checklist (every folder under _database/ accounted for), D renamings / drops / merges."
+  - id: schema-map
+    content: "Write _database/_system/NEO4J_SCHEMA_MAP.md: (A) every Label with full property table, (B) every relationship type with source/target Label patterns, cardinality, and full edge-property table. Mirror §2–§4; update whenever NEO4J_SCHEMA.md changes."
     status: pending
 isProject: false
 ---
@@ -26,6 +26,13 @@ isProject: false
 # Goal
 
 Author `_database/_system/NEO4J_SCHEMA.md` in the four-part order: §1 Node-type catalogue → §2 Nodes (properties) → §3 Edge-type catalogue → §4 Edges (properties). Plus appendices.
+
+Author a **separate compact map** [`_database/_system/NEO4J_SCHEMA_MAP.md`](_database/_system/NEO4J_SCHEMA_MAP.md) that duplicates nothing narratively but **lists the full machine-oriented catalogue** in one place:
+
+1. **Nodes:** every Neo4j **Label** (all **44** types), each with its **complete property list** (name, type, required, notes) as in §2.
+2. **Edges:** every **relationship type** (all **seven**), each with **allowed source Labels → target Labels**, cardinality, and **complete edge property list** (name, type, required, notes) as in §3–§4.
+
+The map must stay **in lockstep** with `NEO4J_SCHEMA.md` when the schema changes. Optional later: generate the map from a single YAML/JSON source of truth — not required for the first authoring pass.
 
 **Key principle: the graph carries metadata only.** German prose, raw labels, legacy file paths, build-batch status — none of this is in the graph. It stays in the Markdown source under `_database/`. The graph carries identifiers (ids), classifications (edges), and quantitative facts (measurement properties).
 
@@ -35,7 +42,7 @@ Author `_database/_system/NEO4J_SCHEMA.md` in the four-part order: §1 Node-type
 
 Lesen: **Knotentyp** = Neo4j-Label. **Knoten** = eine Instanz (ein Unterordner oder ein zusammengeführter Datensatz). **Knoteneigenschaften** = Properties auf diesem Knoten. **Kantentyp** = Relationship-Typ. **Kante** = eine konkrete Relationship zwischen zwei Knoten. **Kanteneigenschaften** = Properties auf der Kante.
 
-Vokabular-Knoten: jedes `id` entspricht dem Ordnernamen unter `_database/<vocab>/<id>/` (Prosa nur in `index.md`, nicht im Graphen).
+Kontrollierte Begriffsknoten (z. B. `:Material`, `:Status`): jedes `id` entspricht in der Regel dem Unterordnernamen unter dem passenden `_database/<label>/<id>/` (Prosa nur in `index.md`, nicht im Graphen). Jeder solche Knoten hat **genau ein** Label — seinen Typnamen.
 
 ```
 Neo4j_Schema
@@ -78,121 +85,121 @@ Neo4j_Schema
 │   ├── Knoteneigenschaften: id (Pflicht), start_jahr?, end_jahr? (int)
 │   └── Knoten: je ./_database/reuse_kette/<id>/ (umbenanntes Konzept)
 │
-├── KNOTENTYP :Bauteiltyp:Vokabular
+├── KNOTENTYP :Bauteiltyp
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Ausbau, Boden, Dach, Daemmung, Decke, Fassade, Fenster, Fundament, Gelaender, Stuetze, Technik, Traeger, Treppe, Tuer, Wand
-├── KNOTENTYP :Material:Vokabular
+├── KNOTENTYP :Material
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Aluminium, Beton, Daemmstoff, Glas, Gusseisen, Holz, Keramik, Kunststoff, Lehm, Naturstein, Recyclingbeton, Stahl, Stahlbeton, Stroh, Ziegel
-├── KNOTENTYP :Bauteilebene:Vokabular
+├── KNOTENTYP :Bauteilebene
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bauteilgruppe, Einzelbauteil, Gebaeudeteil, Materialcharge, Oberflaechenschicht, System
-├── KNOTENTYP :Bauteilzustand:Vokabular
+├── KNOTENTYP :Bauteilzustand
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Beschaedigt, Geprueft, Intakt, Kontaminiert, Korrodiert, Patiniert, Restlebensdauer_Bekannt, Restlebensdauer_Unklar, Ungeprueft
-├── KNOTENTYP :Funktionswechsel:Vokabular
+├── KNOTENTYP :Funktionswechsel
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Dekorative_Funktion, Gleiche_Funktion, Konstruktive_Funktion, Neue_Funktion, Technische_Funktion, Unbekannt
-├── KNOTENTYP :Verbindungstechnik:Vokabular
+├── KNOTENTYP :Verbindungstechnik
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Geschraubt, Geschweisst, Gesteckt, Geklebt, Vergossen, Klemmverbindung
-├── KNOTENTYP :Bauweise:Vokabular
+├── KNOTENTYP :Bauweise
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Fertigteilbauweise, Holzbauweise, Hybridbauweise, Massivbauweise, Ortbetonbauweise, Stahlbauweise
-├── KNOTENTYP :Bausystem:Vokabular
+├── KNOTENTYP :Bausystem
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Betonfertigteil_System, Holzrahmenbau, Holz_Skelettbau, Plattenbau, Stahl_Skelettbau
-├── KNOTENTYP :Tragwerksprinzip:Vokabular
+├── KNOTENTYP :Tragwerksprinzip
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Fachwerk, Skeletttragwerk, Wandtragwerk, Wand_Kern_Tragwerk
-├── KNOTENTYP :Reversibilitaet:Vokabular
+├── KNOTENTYP :Reversibilitaet
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Reversibel, Teilweise_reversibel, Irreversibel, Unbekannt
-├── KNOTENTYP :ReuseStrategie:Vokabular
+├── KNOTENTYP :ReuseStrategie
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bestandserhalt_Weiterbauen, In_situ_Wiederverwendung, Direkte_Wiederverwendung, Wiederverwendung_nach_Aufarbeitung, Umnutzung_Repurposing, Kaskade_Downcycling_Bauteilebene
-├── KNOTENTYP :Status:Vokabular
+├── KNOTENTYP :Status
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Geplant, In_Bau, Realisiert, Prototyp, Rueckgebaut, Nicht_Realisiert, Unklar
-├── KNOTENTYP :WiederverwendungsArt:Vokabular
+├── KNOTENTYP :WiederverwendungsArt
 │   ├── Knoteneigenschaften: id (Pflicht), axis (Pflicht: einordnung | grundtyp)
 │   └── Knoten: Bestandserhalt_Nicht_Direct_Reuse, Kein_Direct_Reuse_Nachweis, Moebel_Dekoration_Nicht_Direct_Reuse, Recycling_Nicht_Direct_Reuse, Reuse_Anteil_Unklar, Ungebaut_Nicht_Realisierte_Wiederverwendung, Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung
-├── KNOTENTYP :Ressourcenquelle:Vokabular
+├── KNOTENTYP :Ressourcenquelle
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Baustelle, Bauteilboerse, Donorgebaeude, Donor_Infrastruktur, Haendler, Lager, Materialstockpile, Produktionsueberschuss, Unbekannt
-├── KNOTENTYP :Beschaffungsweg:Vokabular
+├── KNOTENTYP :Beschaffungsweg
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Ausschreibung, Bauteilboerse, Digitale_Plattform, Direktvermittlung, Eigenbestand, Informelles_Netzwerk, Rueckbauprojekt, Spende
-├── KNOTENTYP :Prozessphase:Vokabular
+├── KNOTENTYP :Prozessphase
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Aufbereitung, Betrieb, Dokumentation, Identifikation, Lagerung, Planung, Pruefung, Rueckbau, Transport, Wiedereinbau
-├── KNOTENTYP :Rueckbauverfahren:Vokabular
+├── KNOTENTYP :Rueckbauverfahren
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Ausbau_von_Bauteilen, Betonfraesen, Demontage, Selektiver_Rueckbau, Zerstoerungsarme_Bergung
-├── KNOTENTYP :Aufbereitungsverfahren:Vokabular
+├── KNOTENTYP :Aufbereitungsverfahren
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Drahtglasschneiden, Entmoertelung_von_Fliesen, Holzaufbereitung, Leuchten_Refurbishment, Qualitaetssicherung, Reinigung, Rekonditionierung, Remanufacturing, Reparatur, Verstaerkung, Zuschnitt
-├── KNOTENTYP :Logistik:Vokabular
+├── KNOTENTYP :Logistik
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bauteiltracking, Just_in_Time, Lagerflaeche, Lagerung, Lokale_Wiederverwendung, Materialmatching, Materialverfuegbarkeit, Transport, Transportdistanz, Zwischenlagerung
-├── KNOTENTYP :Methode:Vokabular
+├── KNOTENTYP :Methode
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Abrissmonitoring, Bauteilkatalogisierung, Building_Material_Scouting, Design_for_Disassembly, Form_Follows_Availability, Materialinventur, Pre_Deconstruction_Audit, ReUse_Assessment, ReUse_Ausschreibung, Reversibilitaet, Urban_Mining, Wiederverwendungskriterien, Zirkulaere_Ausschreibung
-├── KNOTENTYP :Huerde:Vokabular
+├── KNOTENTYP :Huerde
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Akzeptanzproblem, Anschlussproblem, Aufbereitungsaufwand, Ausschreibungsproblem, Bauproduktstatus, Brandschutzkonflikt, Bruch_Beschaedigungsrisiko, Datenluecke, Dauerhaftigkeit_Restlebensdauer, Entwurfsbindung, Fehlende_Datenstandards, Fehlende_Lagerflaeche, Fehlende_Standardisierung, Gewaehrleistung, Haftung, Heterogenitaet_Chargen, Hygieneanforderung, Kompatibilitaetsproblem, Materialqualitaet_Unklar, Mengenunsicherheit, Schadstoffbelastung, Technische_Freigabe, Terminunsicherheit, Toleranzen, Unkonventionelles_Material, Verfuegbarkeitsproblem, Witterung_Feuchte, Zustand_Unklar
-├── KNOTENTYP :PruefungNachweis:Vokabular
+├── KNOTENTYP :PruefungNachweis
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Abbrandbemessung, Brandschutznachweis, Eignungspruefung_Baulehm, Geometrische_Vermessung, Materialpruefung, Schadstoffscreening, Schweissbarkeitspruefung, Sichtpruefung, Statische_Nachweisfuehrung, Zugversuch, Zustandsbewertung
-├── KNOTENTYP :Leistungsanforderung:Vokabular
+├── KNOTENTYP :Leistungsanforderung
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Brandschutz, Brandschutzanforderung, Dauerhaftigkeit, F90, Feuchteschutz, Feuerwiderstand, R90, REI90, Rueckbaubarkeit, Schadstofffreiheit, Schallschutz, Tragfaehigkeit, Waermeschutz
-├── KNOTENTYP :Norm:Vokabular
+├── KNOTENTYP :Norm
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: DIN_18940, DIN_EN_15804, DIN_EN_15978, EN_1090, ISO_14040, ISO_14044, ISO_20887
-├── KNOTENTYP :RechtlicheBedingung:Vokabular
+├── KNOTENTYP :RechtlicheBedingung
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bauordnungsrecht, EU_Taxonomie, Gewaehrleistung, Produkthaftung, Vergaberecht, Zulassung_im_Einzelfall
-├── KNOTENTYP :Schadstoff:Vokabular
+├── KNOTENTYP :Schadstoff
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Asbest, Bleifarbe, Holzschutzmittel, PAK, PCB
-├── KNOTENTYP :Nutzung:Vokabular
+├── KNOTENTYP :Nutzung
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Buero, Gewerbe, Infrastruktur, Kultur, Lager_Depot, Mischnutzung, Schule_Bildung, Sozialbau, Wohnen
-├── KNOTENTYP :BauaufgabeIntervention:Vokabular
+├── KNOTENTYP :BauaufgabeIntervention
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Aufstockung, Erweiterung, Fit_out, Neubau, Rueckbau, Sanierung, Translozierung, Umbau, Umnutzung, Wiederaufbau
-├── KNOTENTYP :Kontextmerkmal:Vokabular
+├── KNOTENTYP :Kontextmerkmal
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bestandserhalt_Policy, Pilotprojekt
-├── KNOTENTYP :Entwurfsentscheidung:Vokabular
+├── KNOTENTYP :Entwurfsentscheidung
 │   ├── Knoteneigenschaften: id (Pflicht), beschreibung? (string)
 │   └── Knoten: Etagenhoehe_durch_Bauteilmass, Fassadenschicht_als_Toleranzpuffer, Doppelfenster_als_Kastenfenster, Achsraster_nach_Bestand, Grundriss_nach_Bauteillaenge, Deckenhoehe_nach_Traegerhoehe, Anschlussdetail_angepasst, Erschliessungskern_verschoben
-├── KNOTENTYP :Land:Vokabular
+├── KNOTENTYP :Land
 │   ├── Knoteneigenschaften: id (Pflicht), iso_country? (string)
 │   └── Knoten: (keine Aufzählung im Plan — aus `ort/` klassifiziert)
-├── KNOTENTYP :Stadt:Vokabular
+├── KNOTENTYP :Stadt
 │   ├── Knoteneigenschaften: id (Pflicht), koordinaten? (string)
 │   └── Knoten: (keine Aufzählung im Plan — aus `ort/` klassifiziert)
-├── KNOTENTYP :Akteurrolle:Vokabular (nur Wörterbuch; Rolle als Property auf HAT, nicht als IST-Ziel)
+├── KNOTENTYP :Akteurrolle (nur Wörterbuch; Rolle als Property auf HAT, nicht als IST-Ziel)
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Architektur, Aufbereitung_Refurbishment, Bauausfuehrung, Bauherr_Auftraggeber, Betreiber_Nutzer, Brandschutz_Barrierefreiheit, Fassade, Forschung_Dokumentation, Kunst_Gestaltung, Landschaftsplanung, Materiallieferant, Nachhaltigkeitsberatung, Oeffentliche_Hand, Projektbeteiligte_Unbestimmt, Projektmanagement_Koordination, Pruefung_Qualitaetssicherung, Reuse_Beratung, Rueckbau_Demontage, Stahlbau_Fertigung, TGA_Gebaeudetechnik, Tragwerksplanung
-├── KNOTENTYP :Datenqualitaet:Vokabular
+├── KNOTENTYP :Datenqualitaet
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Belegt, Geschaetzt, Nicht_Belegt, Primaerquelle, Sekundaerquelle, Unbekannt, Widerspruechlich
-├── KNOTENTYP :Datenmodell:Vokabular
+├── KNOTENTYP :Datenmodell
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bauteil_ID, IFC, Klassifikation, Materialdatenbank, Materialpass_Schema, Ontologie, Taxonomie
-├── KNOTENTYP :Tooltyp:Vokabular
+├── KNOTENTYP :Tooltyp
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Bauteilboerse, Materialdatenbank, Materialkataster
-├── KNOTENTYP :ZertifizierungBewertungssystem:Vokabular
+├── KNOTENTYP :ZertifizierungBewertungssystem
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: BREEAM, DGNB, LEED, Paris_Proof, WELL
-├── KNOTENTYP :Wirtschaft:Vokabular
+├── KNOTENTYP :Wirtschaft
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Finanzierung, Geschaeftsmodell, Kostenvergleich, Lebenszykluskosten, Preisbildung, Restwert
-└── KNOTENTYP :Programm:Vokabular
+└── KNOTENTYP :Programm
     ├── Knoteneigenschaften: id (Pflicht), programm_typ (Pflicht: foerderung | forschungskontext)
     └── Knoten: BBSM, FCRBE, PREUSE, Reallabor_Be_Ware, Zukunftbau, Foerderprogramm, Forschungsprojekt, Kommunales_Programm, Pilotprojekt, Reallabor, Wettbewerb
 
@@ -201,7 +208,7 @@ KANTEN (alle sieben Typen; jede Kante ist eine Instanz zwischen zwei Knoten)
 ├── KANTENTYP IST
 │   ├── Kanteneigenschaften: seit?, bis?, gewichtung?
 │   └── Kante (Beispielmuster)
-│       └── (:Fallbeispiel|:Bauteilgruppe|:Akteur|:Quelle|:SoftwareDigitaltool|:Wiederverwendungskette) -[IST]-> (:<Vokabular-Knotentyp> {id})   (nicht :Status / :ReuseStrategie auf :Fallbeispiel oder :Bauteilgruppe — siehe HAT_STATUS / HAT_WIEDERVERWENDUNGSART)
+│       └── (:Fallbeispiel|:Bauteilgruppe|:Akteur|:Quelle|:SoftwareDigitaltool|:Wiederverwendungskette) -[IST]-> (:<KlassifikationsLabel> {id})   (nicht :Status / :ReuseStrategie auf :Fallbeispiel oder :Bauteilgruppe — siehe HAT_STATUS / HAT_WIEDERVERWENDUNGSART)
 │
 ├── KANTENTYP HAT
 │   ├── Kanteneigenschaften: art (Pflicht), rolle? (Pflicht wenn art=akteur), anzahl?, intensitaet?, seit?, bis?
@@ -215,12 +222,12 @@ KANTEN (alle sieben Typen; jede Kante ist eine Instanz zwischen zwei Knoten)
 ├── KANTENTYP HAT_STATUS
 │   ├── Kanteneigenschaften: seit?, bis?, gewichtung? (optional — gleiche Semantik wie bei IST)
 │   └── Kante (Beispielmuster)
-│       └── (:Fallbeispiel|:Bauteilgruppe) -[HAT_STATUS]-> (:Status:Vokabular {id})   Hinweis: historisch „Bauobjekt“ = :Fallbeispiel. Beispiel: (:Fallbeispiel)-[:HAT_STATUS]->(:Status:Vokabular {id: "Realisiert"})
+│       └── (:Fallbeispiel|:Bauteilgruppe) -[HAT_STATUS]-> (:Status {id})   Hinweis: historisch „Bauobjekt“ = :Fallbeispiel. Beispiel: (:Fallbeispiel)-[:HAT_STATUS]->(:Status {id: "Realisiert"})
 │
 ├── KANTENTYP HAT_WIEDERVERWENDUNGSART
 │   ├── Kanteneigenschaften: seit?, bis?, gewichtung? (optional)
 │   └── Kante (Beispielmuster)
-│       └── (:Fallbeispiel)-[HAT_WIEDERVERWENDUNGSART]-> (:ReuseStrategie:Vokabular {id})   Ziel-Label :ReuseStrategie (sechs Kanon-ids, §1). Kurz „Umnutzung“ -> id Umnutzung_Repurposing. Nicht :WiederverwendungsArt (Einordnung). Beispiel: (:Fallbeispiel)-[:HAT_WIEDERVERWENDUNGSART]->(:ReuseStrategie:Vokabular {id: "Umnutzung_Repurposing"})
+│       └── (:Fallbeispiel)-[HAT_WIEDERVERWENDUNGSART]-> (:ReuseStrategie {id})   Ziel-Label :ReuseStrategie (sechs Kanon-ids, §1). Kurz „Umnutzung“ -> id Umnutzung_Repurposing. Nicht :WiederverwendungsArt (Einordnung). Beispiel: (:Fallbeispiel)-[:HAT_WIEDERVERWENDUNGSART]->(:ReuseStrategie {id: "Umnutzung_Repurposing"})
 │
 ├── KANTENTYP BENUTZT
 │   ├── Kanteneigenschaften: anzahl?, einheit?, anteil_prozent?, funktion_alt?, funktion_neu?, aufbereitung?
@@ -299,318 +306,318 @@ Die folgenden Blöcke zeigen **Muster** (nicht die vollständige Knotenzahl). Di
   ... (typisch an Fallbeispiel gebunden; gleiches Kurz-Muster wie zugehöriges `(:Fallbeispiel {id:…})` wenn 1:1)
 
 :Bauteiltyp
-  (:Bauteiltyp:Vokabular {id: "Ausbau"})
-  (:Bauteiltyp:Vokabular {id: "Boden"})
-  (:Bauteiltyp:Vokabular {id: "Dach"})
-  (:Bauteiltyp:Vokabular {id: "Daemmung"})
-  (:Bauteiltyp:Vokabular {id: "Decke"})
-  (:Bauteiltyp:Vokabular {id: "Fassade"})
-  (:Bauteiltyp:Vokabular {id: "Fenster"})
-  (:Bauteiltyp:Vokabular {id: "Fundament"})
-  (:Bauteiltyp:Vokabular {id: "Gelaender"})
-  (:Bauteiltyp:Vokabular {id: "Stuetze"})
-  (:Bauteiltyp:Vokabular {id: "Technik"})
-  (:Bauteiltyp:Vokabular {id: "Traeger"})
-  (:Bauteiltyp:Vokabular {id: "Treppe"})
-  (:Bauteiltyp:Vokabular {id: "Tuer"})
-  (:Bauteiltyp:Vokabular {id: "Wand"})
+  (:Bauteiltyp {id: "Ausbau"})
+  (:Bauteiltyp {id: "Boden"})
+  (:Bauteiltyp {id: "Dach"})
+  (:Bauteiltyp {id: "Daemmung"})
+  (:Bauteiltyp {id: "Decke"})
+  (:Bauteiltyp {id: "Fassade"})
+  (:Bauteiltyp {id: "Fenster"})
+  (:Bauteiltyp {id: "Fundament"})
+  (:Bauteiltyp {id: "Gelaender"})
+  (:Bauteiltyp {id: "Stuetze"})
+  (:Bauteiltyp {id: "Technik"})
+  (:Bauteiltyp {id: "Traeger"})
+  (:Bauteiltyp {id: "Treppe"})
+  (:Bauteiltyp {id: "Tuer"})
+  (:Bauteiltyp {id: "Wand"})
 
 :Material
-  (:Material:Vokabular {id: "Aluminium"})
-  (:Material:Vokabular {id: "Beton"})
-  (:Material:Vokabular {id: "Daemmstoff"})
-  (:Material:Vokabular {id: "Glas"})
-  (:Material:Vokabular {id: "Gusseisen"})
-  (:Material:Vokabular {id: "Holz"})
-  (:Material:Vokabular {id: "Keramik"})
-  (:Material:Vokabular {id: "Kunststoff"})
-  (:Material:Vokabular {id: "Lehm"})
-  (:Material:Vokabular {id: "Naturstein"})
-  (:Material:Vokabular {id: "Recyclingbeton"})
-  (:Material:Vokabular {id: "Stahl"})
-  (:Material:Vokabular {id: "Stahlbeton"})
-  (:Material:Vokabular {id: "Stroh"})
-  (:Material:Vokabular {id: "Ziegel"})
+  (:Material {id: "Aluminium"})
+  (:Material {id: "Beton"})
+  (:Material {id: "Daemmstoff"})
+  (:Material {id: "Glas"})
+  (:Material {id: "Gusseisen"})
+  (:Material {id: "Holz"})
+  (:Material {id: "Keramik"})
+  (:Material {id: "Kunststoff"})
+  (:Material {id: "Lehm"})
+  (:Material {id: "Naturstein"})
+  (:Material {id: "Recyclingbeton"})
+  (:Material {id: "Stahl"})
+  (:Material {id: "Stahlbeton"})
+  (:Material {id: "Stroh"})
+  (:Material {id: "Ziegel"})
 
 :Bauteilebene
-  (:Bauteilebene:Vokabular {id: "Bauteilgruppe"})
-  (:Bauteilebene:Vokabular {id: "Einzelbauteil"})
-  (:Bauteilebene:Vokabular {id: "Gebaeudeteil"})
-  (:Bauteilebene:Vokabular {id: "Materialcharge"})
-  (:Bauteilebene:Vokabular {id: "Oberflaechenschicht"})
-  (:Bauteilebene:Vokabular {id: "System"})
+  (:Bauteilebene {id: "Bauteilgruppe"})
+  (:Bauteilebene {id: "Einzelbauteil"})
+  (:Bauteilebene {id: "Gebaeudeteil"})
+  (:Bauteilebene {id: "Materialcharge"})
+  (:Bauteilebene {id: "Oberflaechenschicht"})
+  (:Bauteilebene {id: "System"})
 
 :Bauteilzustand
-  (:Bauteilzustand:Vokabular {id: "Beschaedigt"})
-  (:Bauteilzustand:Vokabular {id: "Geprueft"})
-  (:Bauteilzustand:Vokabular {id: "Intakt"})
-  (:Bauteilzustand:Vokabular {id: "Kontaminiert"})
-  (:Bauteilzustand:Vokabular {id: "Korrodiert"})
-  (:Bauteilzustand:Vokabular {id: "Patiniert"})
-  (:Bauteilzustand:Vokabular {id: "Restlebensdauer_Bekannt"})
-  (:Bauteilzustand:Vokabular {id: "Restlebensdauer_Unklar"})
-  (:Bauteilzustand:Vokabular {id: "Ungeprueft"})
+  (:Bauteilzustand {id: "Beschaedigt"})
+  (:Bauteilzustand {id: "Geprueft"})
+  (:Bauteilzustand {id: "Intakt"})
+  (:Bauteilzustand {id: "Kontaminiert"})
+  (:Bauteilzustand {id: "Korrodiert"})
+  (:Bauteilzustand {id: "Patiniert"})
+  (:Bauteilzustand {id: "Restlebensdauer_Bekannt"})
+  (:Bauteilzustand {id: "Restlebensdauer_Unklar"})
+  (:Bauteilzustand {id: "Ungeprueft"})
 
 :Funktionswechsel
-  (:Funktionswechsel:Vokabular {id: "Dekorative_Funktion"})
-  (:Funktionswechsel:Vokabular {id: "Gleiche_Funktion"})
-  (:Funktionswechsel:Vokabular {id: "Konstruktive_Funktion"})
-  (:Funktionswechsel:Vokabular {id: "Neue_Funktion"})
-  (:Funktionswechsel:Vokabular {id: "Technische_Funktion"})
-  (:Funktionswechsel:Vokabular {id: "Unbekannt"})
+  (:Funktionswechsel {id: "Dekorative_Funktion"})
+  (:Funktionswechsel {id: "Gleiche_Funktion"})
+  (:Funktionswechsel {id: "Konstruktive_Funktion"})
+  (:Funktionswechsel {id: "Neue_Funktion"})
+  (:Funktionswechsel {id: "Technische_Funktion"})
+  (:Funktionswechsel {id: "Unbekannt"})
 
 :Verbindungstechnik
-  (:Verbindungstechnik:Vokabular {id: "Geschraubt"})
-  (:Verbindungstechnik:Vokabular {id: "Geschweisst"})
-  (:Verbindungstechnik:Vokabular {id: "Gesteckt"})
-  (:Verbindungstechnik:Vokabular {id: "Geklebt"})
-  (:Verbindungstechnik:Vokabular {id: "Vergossen"})
-  (:Verbindungstechnik:Vokabular {id: "Klemmverbindung"})
+  (:Verbindungstechnik {id: "Geschraubt"})
+  (:Verbindungstechnik {id: "Geschweisst"})
+  (:Verbindungstechnik {id: "Gesteckt"})
+  (:Verbindungstechnik {id: "Geklebt"})
+  (:Verbindungstechnik {id: "Vergossen"})
+  (:Verbindungstechnik {id: "Klemmverbindung"})
 
 :Bauweise
-  (:Bauweise:Vokabular {id: "Fertigteilbauweise"})
-  (:Bauweise:Vokabular {id: "Holzbauweise"})
-  (:Bauweise:Vokabular {id: "Hybridbauweise"})
-  (:Bauweise:Vokabular {id: "Massivbauweise"})
-  (:Bauweise:Vokabular {id: "Ortbetonbauweise"})
-  (:Bauweise:Vokabular {id: "Stahlbauweise"})
+  (:Bauweise {id: "Fertigteilbauweise"})
+  (:Bauweise {id: "Holzbauweise"})
+  (:Bauweise {id: "Hybridbauweise"})
+  (:Bauweise {id: "Massivbauweise"})
+  (:Bauweise {id: "Ortbetonbauweise"})
+  (:Bauweise {id: "Stahlbauweise"})
 
 :Bausystem
-  (:Bausystem:Vokabular {id: "Betonfertigteil_System"})
-  (:Bausystem:Vokabular {id: "Holzrahmenbau"})
-  (:Bausystem:Vokabular {id: "Holz_Skelettbau"})
-  (:Bausystem:Vokabular {id: "Plattenbau"})
-  (:Bausystem:Vokabular {id: "Stahl_Skelettbau"})
+  (:Bausystem {id: "Betonfertigteil_System"})
+  (:Bausystem {id: "Holzrahmenbau"})
+  (:Bausystem {id: "Holz_Skelettbau"})
+  (:Bausystem {id: "Plattenbau"})
+  (:Bausystem {id: "Stahl_Skelettbau"})
 
 :Tragwerksprinzip
-  (:Tragwerksprinzip:Vokabular {id: "Fachwerk"})
-  (:Tragwerksprinzip:Vokabular {id: "Skeletttragwerk"})
-  (:Tragwerksprinzip:Vokabular {id: "Wandtragwerk"})
-  (:Tragwerksprinzip:Vokabular {id: "Wand_Kern_Tragwerk"})
+  (:Tragwerksprinzip {id: "Fachwerk"})
+  (:Tragwerksprinzip {id: "Skeletttragwerk"})
+  (:Tragwerksprinzip {id: "Wandtragwerk"})
+  (:Tragwerksprinzip {id: "Wand_Kern_Tragwerk"})
 
 :Reversibilitaet
-  (:Reversibilitaet:Vokabular {id: "Reversibel"})
-  (:Reversibilitaet:Vokabular {id: "Teilweise_reversibel"})
-  (:Reversibilitaet:Vokabular {id: "Irreversibel"})
-  (:Reversibilitaet:Vokabular {id: "Unbekannt"})
+  (:Reversibilitaet {id: "Reversibel"})
+  (:Reversibilitaet {id: "Teilweise_reversibel"})
+  (:Reversibilitaet {id: "Irreversibel"})
+  (:Reversibilitaet {id: "Unbekannt"})
 
 :ReuseStrategie
-  (:ReuseStrategie:Vokabular {id: "Bestandserhalt_Weiterbauen"})
-  (:ReuseStrategie:Vokabular {id: "In_situ_Wiederverwendung"})
-  (:ReuseStrategie:Vokabular {id: "Direkte_Wiederverwendung"})
-  (:ReuseStrategie:Vokabular {id: "Wiederverwendung_nach_Aufarbeitung"})
-  (:ReuseStrategie:Vokabular {id: "Umnutzung_Repurposing"})
-  (:ReuseStrategie:Vokabular {id: "Kaskade_Downcycling_Bauteilebene"})
+  (:ReuseStrategie {id: "Bestandserhalt_Weiterbauen"})
+  (:ReuseStrategie {id: "In_situ_Wiederverwendung"})
+  (:ReuseStrategie {id: "Direkte_Wiederverwendung"})
+  (:ReuseStrategie {id: "Wiederverwendung_nach_Aufarbeitung"})
+  (:ReuseStrategie {id: "Umnutzung_Repurposing"})
+  (:ReuseStrategie {id: "Kaskade_Downcycling_Bauteilebene"})
 
 :Status
-  (:Status:Vokabular {id: "Geplant"})
-  (:Status:Vokabular {id: "In_Bau"})
-  (:Status:Vokabular {id: "Realisiert"})
-  (:Status:Vokabular {id: "Prototyp"})
-  (:Status:Vokabular {id: "Rueckgebaut"})
-  (:Status:Vokabular {id: "Nicht_Realisiert"})
-  (:Status:Vokabular {id: "Unklar"})
+  (:Status {id: "Geplant"})
+  (:Status {id: "In_Bau"})
+  (:Status {id: "Realisiert"})
+  (:Status {id: "Prototyp"})
+  (:Status {id: "Rueckgebaut"})
+  (:Status {id: "Nicht_Realisiert"})
+  (:Status {id: "Unklar"})
 
 :WiederverwendungsArt
-  (:WiederverwendungsArt:Vokabular {id: "Bestandserhalt_Nicht_Direct_Reuse", axis: "einordnung"})
-  (:WiederverwendungsArt:Vokabular {id: "Kein_Direct_Reuse_Nachweis", axis: "einordnung"})
-  (:WiederverwendungsArt:Vokabular {id: "Moebel_Dekoration_Nicht_Direct_Reuse", axis: "einordnung"})
-  (:WiederverwendungsArt:Vokabular {id: "Recycling_Nicht_Direct_Reuse", axis: "einordnung"})
-  (:WiederverwendungsArt:Vokabular {id: "Reuse_Anteil_Unklar", axis: "einordnung"})
-  (:WiederverwendungsArt:Vokabular {id: "Ungebaut_Nicht_Realisierte_Wiederverwendung", axis: "einordnung"})
-  (:WiederverwendungsArt:Vokabular {id: "Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung", axis: "einordnung"})
-  (:WiederverwendungsArt:Vokabular {id: "wiederverwendet", axis: "grundtyp"})
-  (:WiederverwendungsArt:Vokabular {id: "original", axis: "grundtyp"})
-  (:WiederverwendungsArt:Vokabular {id: "hybrid", axis: "grundtyp"})
+  (:WiederverwendungsArt {id: "Bestandserhalt_Nicht_Direct_Reuse", axis: "einordnung"})
+  (:WiederverwendungsArt {id: "Kein_Direct_Reuse_Nachweis", axis: "einordnung"})
+  (:WiederverwendungsArt {id: "Moebel_Dekoration_Nicht_Direct_Reuse", axis: "einordnung"})
+  (:WiederverwendungsArt {id: "Recycling_Nicht_Direct_Reuse", axis: "einordnung"})
+  (:WiederverwendungsArt {id: "Reuse_Anteil_Unklar", axis: "einordnung"})
+  (:WiederverwendungsArt {id: "Ungebaut_Nicht_Realisierte_Wiederverwendung", axis: "einordnung"})
+  (:WiederverwendungsArt {id: "Zukunftsfaehigkeit_Nicht_Aktuelle_Wiederverwendung", axis: "einordnung"})
+  (:WiederverwendungsArt {id: "wiederverwendet", axis: "grundtyp"})
+  (:WiederverwendungsArt {id: "original", axis: "grundtyp"})
+  (:WiederverwendungsArt {id: "hybrid", axis: "grundtyp"})
 
 :Ressourcenquelle
-  (:Ressourcenquelle:Vokabular {id: "Baustelle"})
-  (:Ressourcenquelle:Vokabular {id: "Bauteilboerse"})
-  (:Ressourcenquelle:Vokabular {id: "Donorgebaeude"})
-  (:Ressourcenquelle:Vokabular {id: "Donor_Infrastruktur"})
-  (:Ressourcenquelle:Vokabular {id: "Haendler"})
-  (:Ressourcenquelle:Vokabular {id: "Lager"})
-  (:Ressourcenquelle:Vokabular {id: "Materialstockpile"})
-  (:Ressourcenquelle:Vokabular {id: "Produktionsueberschuss"})
-  (:Ressourcenquelle:Vokabular {id: "Unbekannt"})
+  (:Ressourcenquelle {id: "Baustelle"})
+  (:Ressourcenquelle {id: "Bauteilboerse"})
+  (:Ressourcenquelle {id: "Donorgebaeude"})
+  (:Ressourcenquelle {id: "Donor_Infrastruktur"})
+  (:Ressourcenquelle {id: "Haendler"})
+  (:Ressourcenquelle {id: "Lager"})
+  (:Ressourcenquelle {id: "Materialstockpile"})
+  (:Ressourcenquelle {id: "Produktionsueberschuss"})
+  (:Ressourcenquelle {id: "Unbekannt"})
 
 :Beschaffungsweg
-  (:Beschaffungsweg:Vokabular {id: "Ausschreibung"})
-  (:Beschaffungsweg:Vokabular {id: "Bauteilboerse"})
-  (:Beschaffungsweg:Vokabular {id: "Digitale_Plattform"})
-  (:Beschaffungsweg:Vokabular {id: "Direktvermittlung"})
-  (:Beschaffungsweg:Vokabular {id: "Eigenbestand"})
-  (:Beschaffungsweg:Vokabular {id: "Informelles_Netzwerk"})
-  (:Beschaffungsweg:Vokabular {id: "Rueckbauprojekt"})
-  (:Beschaffungsweg:Vokabular {id: "Spende"})
+  (:Beschaffungsweg {id: "Ausschreibung"})
+  (:Beschaffungsweg {id: "Bauteilboerse"})
+  (:Beschaffungsweg {id: "Digitale_Plattform"})
+  (:Beschaffungsweg {id: "Direktvermittlung"})
+  (:Beschaffungsweg {id: "Eigenbestand"})
+  (:Beschaffungsweg {id: "Informelles_Netzwerk"})
+  (:Beschaffungsweg {id: "Rueckbauprojekt"})
+  (:Beschaffungsweg {id: "Spende"})
 
 :Prozessphase
-  (:Prozessphase:Vokabular {id: "Aufbereitung"})
-  (:Prozessphase:Vokabular {id: "Betrieb"})
-  (:Prozessphase:Vokabular {id: "Dokumentation"})
-  (:Prozessphase:Vokabular {id: "Identifikation"})
-  (:Prozessphase:Vokabular {id: "Lagerung"})
-  (:Prozessphase:Vokabular {id: "Planung"})
-  (:Prozessphase:Vokabular {id: "Pruefung"})
-  (:Prozessphase:Vokabular {id: "Rueckbau"})
-  (:Prozessphase:Vokabular {id: "Transport"})
-  (:Prozessphase:Vokabular {id: "Wiedereinbau"})
+  (:Prozessphase {id: "Aufbereitung"})
+  (:Prozessphase {id: "Betrieb"})
+  (:Prozessphase {id: "Dokumentation"})
+  (:Prozessphase {id: "Identifikation"})
+  (:Prozessphase {id: "Lagerung"})
+  (:Prozessphase {id: "Planung"})
+  (:Prozessphase {id: "Pruefung"})
+  (:Prozessphase {id: "Rueckbau"})
+  (:Prozessphase {id: "Transport"})
+  (:Prozessphase {id: "Wiedereinbau"})
 
 :Rueckbauverfahren
-  (:Rueckbauverfahren:Vokabular {id: "Ausbau_von_Bauteilen"})
-  (:Rueckbauverfahren:Vokabular {id: "Betonfraesen"})
-  (:Rueckbauverfahren:Vokabular {id: "Demontage"})
-  (:Rueckbauverfahren:Vokabular {id: "Selektiver_Rueckbau"})
-  (:Rueckbauverfahren:Vokabular {id: "Zerstoerungsarme_Bergung"})
+  (:Rueckbauverfahren {id: "Ausbau_von_Bauteilen"})
+  (:Rueckbauverfahren {id: "Betonfraesen"})
+  (:Rueckbauverfahren {id: "Demontage"})
+  (:Rueckbauverfahren {id: "Selektiver_Rueckbau"})
+  (:Rueckbauverfahren {id: "Zerstoerungsarme_Bergung"})
 
 :Aufbereitungsverfahren
-  (:Aufbereitungsverfahren:Vokabular {id: "Drahtglasschneiden"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Entmoertelung_von_Fliesen"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Holzaufbereitung"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Leuchten_Refurbishment"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Qualitaetssicherung"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Reinigung"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Rekonditionierung"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Remanufacturing"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Reparatur"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Verstaerkung"})
-  (:Aufbereitungsverfahren:Vokabular {id: "Zuschnitt"})
+  (:Aufbereitungsverfahren {id: "Drahtglasschneiden"})
+  (:Aufbereitungsverfahren {id: "Entmoertelung_von_Fliesen"})
+  (:Aufbereitungsverfahren {id: "Holzaufbereitung"})
+  (:Aufbereitungsverfahren {id: "Leuchten_Refurbishment"})
+  (:Aufbereitungsverfahren {id: "Qualitaetssicherung"})
+  (:Aufbereitungsverfahren {id: "Reinigung"})
+  (:Aufbereitungsverfahren {id: "Rekonditionierung"})
+  (:Aufbereitungsverfahren {id: "Remanufacturing"})
+  (:Aufbereitungsverfahren {id: "Reparatur"})
+  (:Aufbereitungsverfahren {id: "Verstaerkung"})
+  (:Aufbereitungsverfahren {id: "Zuschnitt"})
 
 :Logistik
-  (:Logistik:Vokabular {id: "Bauteiltracking"})
-  (:Logistik:Vokabular {id: "Just_in_Time"})
-  (:Logistik:Vokabular {id: "Lagerflaeche"})
-  (:Logistik:Vokabular {id: "Lagerung"})
-  (:Logistik:Vokabular {id: "Lokale_Wiederverwendung"})
-  (:Logistik:Vokabular {id: "Materialmatching"})
-  (:Logistik:Vokabular {id: "Materialverfuegbarkeit"})
-  (:Logistik:Vokabular {id: "Transport"})
-  (:Logistik:Vokabular {id: "Transportdistanz"})
-  (:Logistik:Vokabular {id: "Zwischenlagerung"})
+  (:Logistik {id: "Bauteiltracking"})
+  (:Logistik {id: "Just_in_Time"})
+  (:Logistik {id: "Lagerflaeche"})
+  (:Logistik {id: "Lagerung"})
+  (:Logistik {id: "Lokale_Wiederverwendung"})
+  (:Logistik {id: "Materialmatching"})
+  (:Logistik {id: "Materialverfuegbarkeit"})
+  (:Logistik {id: "Transport"})
+  (:Logistik {id: "Transportdistanz"})
+  (:Logistik {id: "Zwischenlagerung"})
 
 :Methode
-  (:Methode:Vokabular {id: "Abrissmonitoring"})
-  (:Methode:Vokabular {id: "Bauteilkatalogisierung"})
-  (:Methode:Vokabular {id: "Building_Material_Scouting"})
-  (:Methode:Vokabular {id: "Design_for_Disassembly"})
-  (:Methode:Vokabular {id: "Form_Follows_Availability"})
-  (:Methode:Vokabular {id: "Materialinventur"})
-  (:Methode:Vokabular {id: "Pre_Deconstruction_Audit"})
-  (:Methode:Vokabular {id: "ReUse_Assessment"})
-  (:Methode:Vokabular {id: "ReUse_Ausschreibung"})
-  (:Methode:Vokabular {id: "Reversibilitaet"})
-  (:Methode:Vokabular {id: "Urban_Mining"})
-  (:Methode:Vokabular {id: "Wiederverwendungskriterien"})
-  (:Methode:Vokabular {id: "Zirkulaere_Ausschreibung"})
+  (:Methode {id: "Abrissmonitoring"})
+  (:Methode {id: "Bauteilkatalogisierung"})
+  (:Methode {id: "Building_Material_Scouting"})
+  (:Methode {id: "Design_for_Disassembly"})
+  (:Methode {id: "Form_Follows_Availability"})
+  (:Methode {id: "Materialinventur"})
+  (:Methode {id: "Pre_Deconstruction_Audit"})
+  (:Methode {id: "ReUse_Assessment"})
+  (:Methode {id: "ReUse_Ausschreibung"})
+  (:Methode {id: "Reversibilitaet"})
+  (:Methode {id: "Urban_Mining"})
+  (:Methode {id: "Wiederverwendungskriterien"})
+  (:Methode {id: "Zirkulaere_Ausschreibung"})
 
 :Huerde
-  (:Huerde:Vokabular {id: "Akzeptanzproblem"})
-  (:Huerde:Vokabular {id: "Anschlussproblem"})
-  (:Huerde:Vokabular {id: "Aufbereitungsaufwand"})
-  (:Huerde:Vokabular {id: "Ausschreibungsproblem"})
-  (:Huerde:Vokabular {id: "Bauproduktstatus"})
-  (:Huerde:Vokabular {id: "Brandschutzkonflikt"})
-  (:Huerde:Vokabular {id: "Bruch_Beschaedigungsrisiko"})
-  (:Huerde:Vokabular {id: "Datenluecke"})
-  (:Huerde:Vokabular {id: "Dauerhaftigkeit_Restlebensdauer"})
-  (:Huerde:Vokabular {id: "Entwurfsbindung"})
-  (:Huerde:Vokabular {id: "Fehlende_Datenstandards"})
-  (:Huerde:Vokabular {id: "Fehlende_Lagerflaeche"})
-  (:Huerde:Vokabular {id: "Fehlende_Standardisierung"})
-  (:Huerde:Vokabular {id: "Gewaehrleistung"})
-  (:Huerde:Vokabular {id: "Haftung"})
-  (:Huerde:Vokabular {id: "Heterogenitaet_Chargen"})
-  (:Huerde:Vokabular {id: "Hygieneanforderung"})
-  (:Huerde:Vokabular {id: "Kompatibilitaetsproblem"})
-  (:Huerde:Vokabular {id: "Materialqualitaet_Unklar"})
-  (:Huerde:Vokabular {id: "Mengenunsicherheit"})
-  (:Huerde:Vokabular {id: "Schadstoffbelastung"})
-  (:Huerde:Vokabular {id: "Technische_Freigabe"})
-  (:Huerde:Vokabular {id: "Terminunsicherheit"})
-  (:Huerde:Vokabular {id: "Toleranzen"})
-  (:Huerde:Vokabular {id: "Unkonventionelles_Material"})
-  (:Huerde:Vokabular {id: "Verfuegbarkeitsproblem"})
-  (:Huerde:Vokabular {id: "Witterung_Feuchte"})
-  (:Huerde:Vokabular {id: "Zustand_Unklar"})
+  (:Huerde {id: "Akzeptanzproblem"})
+  (:Huerde {id: "Anschlussproblem"})
+  (:Huerde {id: "Aufbereitungsaufwand"})
+  (:Huerde {id: "Ausschreibungsproblem"})
+  (:Huerde {id: "Bauproduktstatus"})
+  (:Huerde {id: "Brandschutzkonflikt"})
+  (:Huerde {id: "Bruch_Beschaedigungsrisiko"})
+  (:Huerde {id: "Datenluecke"})
+  (:Huerde {id: "Dauerhaftigkeit_Restlebensdauer"})
+  (:Huerde {id: "Entwurfsbindung"})
+  (:Huerde {id: "Fehlende_Datenstandards"})
+  (:Huerde {id: "Fehlende_Lagerflaeche"})
+  (:Huerde {id: "Fehlende_Standardisierung"})
+  (:Huerde {id: "Gewaehrleistung"})
+  (:Huerde {id: "Haftung"})
+  (:Huerde {id: "Heterogenitaet_Chargen"})
+  (:Huerde {id: "Hygieneanforderung"})
+  (:Huerde {id: "Kompatibilitaetsproblem"})
+  (:Huerde {id: "Materialqualitaet_Unklar"})
+  (:Huerde {id: "Mengenunsicherheit"})
+  (:Huerde {id: "Schadstoffbelastung"})
+  (:Huerde {id: "Technische_Freigabe"})
+  (:Huerde {id: "Terminunsicherheit"})
+  (:Huerde {id: "Toleranzen"})
+  (:Huerde {id: "Unkonventionelles_Material"})
+  (:Huerde {id: "Verfuegbarkeitsproblem"})
+  (:Huerde {id: "Witterung_Feuchte"})
+  (:Huerde {id: "Zustand_Unklar"})
 
 :PruefungNachweis
-  (:PruefungNachweis:Vokabular {id: "Abbrandbemessung"})
-  (:PruefungNachweis:Vokabular {id: "Brandschutznachweis"})
-  (:PruefungNachweis:Vokabular {id: "Eignungspruefung_Baulehm"})
-  (:PruefungNachweis:Vokabular {id: "Geometrische_Vermessung"})
-  (:PruefungNachweis:Vokabular {id: "Materialpruefung"})
-  (:PruefungNachweis:Vokabular {id: "Schadstoffscreening"})
-  (:PruefungNachweis:Vokabular {id: "Schweissbarkeitspruefung"})
-  (:PruefungNachweis:Vokabular {id: "Sichtpruefung"})
-  (:PruefungNachweis:Vokabular {id: "Statische_Nachweisfuehrung"})
-  (:PruefungNachweis:Vokabular {id: "Zugversuch"})
-  (:PruefungNachweis:Vokabular {id: "Zustandsbewertung"})
+  (:PruefungNachweis {id: "Abbrandbemessung"})
+  (:PruefungNachweis {id: "Brandschutznachweis"})
+  (:PruefungNachweis {id: "Eignungspruefung_Baulehm"})
+  (:PruefungNachweis {id: "Geometrische_Vermessung"})
+  (:PruefungNachweis {id: "Materialpruefung"})
+  (:PruefungNachweis {id: "Schadstoffscreening"})
+  (:PruefungNachweis {id: "Schweissbarkeitspruefung"})
+  (:PruefungNachweis {id: "Sichtpruefung"})
+  (:PruefungNachweis {id: "Statische_Nachweisfuehrung"})
+  (:PruefungNachweis {id: "Zugversuch"})
+  (:PruefungNachweis {id: "Zustandsbewertung"})
 
 :Leistungsanforderung
-  (:Leistungsanforderung:Vokabular {id: "Brandschutz"})
-  (:Leistungsanforderung:Vokabular {id: "Brandschutzanforderung"})
-  (:Leistungsanforderung:Vokabular {id: "Dauerhaftigkeit"})
-  (:Leistungsanforderung:Vokabular {id: "F90"})
-  (:Leistungsanforderung:Vokabular {id: "Feuchteschutz"})
-  (:Leistungsanforderung:Vokabular {id: "Feuerwiderstand"})
-  (:Leistungsanforderung:Vokabular {id: "R90"})
-  (:Leistungsanforderung:Vokabular {id: "REI90"})
-  (:Leistungsanforderung:Vokabular {id: "Rueckbaubarkeit"})
-  (:Leistungsanforderung:Vokabular {id: "Schadstofffreiheit"})
-  (:Leistungsanforderung:Vokabular {id: "Schallschutz"})
-  (:Leistungsanforderung:Vokabular {id: "Tragfaehigkeit"})
-  (:Leistungsanforderung:Vokabular {id: "Waermeschutz"})
+  (:Leistungsanforderung {id: "Brandschutz"})
+  (:Leistungsanforderung {id: "Brandschutzanforderung"})
+  (:Leistungsanforderung {id: "Dauerhaftigkeit"})
+  (:Leistungsanforderung {id: "F90"})
+  (:Leistungsanforderung {id: "Feuchteschutz"})
+  (:Leistungsanforderung {id: "Feuerwiderstand"})
+  (:Leistungsanforderung {id: "R90"})
+  (:Leistungsanforderung {id: "REI90"})
+  (:Leistungsanforderung {id: "Rueckbaubarkeit"})
+  (:Leistungsanforderung {id: "Schadstofffreiheit"})
+  (:Leistungsanforderung {id: "Schallschutz"})
+  (:Leistungsanforderung {id: "Tragfaehigkeit"})
+  (:Leistungsanforderung {id: "Waermeschutz"})
 
 :Norm
-  (:Norm:Vokabular {id: "DIN_18940"})
-  (:Norm:Vokabular {id: "DIN_EN_15804"})
-  (:Norm:Vokabular {id: "DIN_EN_15978"})
-  (:Norm:Vokabular {id: "EN_1090"})
-  (:Norm:Vokabular {id: "ISO_14040"})
-  (:Norm:Vokabular {id: "ISO_14044"})
-  (:Norm:Vokabular {id: "ISO_20887"})
+  (:Norm {id: "DIN_18940"})
+  (:Norm {id: "DIN_EN_15804"})
+  (:Norm {id: "DIN_EN_15978"})
+  (:Norm {id: "EN_1090"})
+  (:Norm {id: "ISO_14040"})
+  (:Norm {id: "ISO_14044"})
+  (:Norm {id: "ISO_20887"})
 
 :RechtlicheBedingung
-  (:RechtlicheBedingung:Vokabular {id: "Bauordnungsrecht"})
-  (:RechtlicheBedingung:Vokabular {id: "EU_Taxonomie"})
-  (:RechtlicheBedingung:Vokabular {id: "Gewaehrleistung"})
-  (:RechtlicheBedingung:Vokabular {id: "Produkthaftung"})
-  (:RechtlicheBedingung:Vokabular {id: "Vergaberecht"})
-  (:RechtlicheBedingung:Vokabular {id: "Zulassung_im_Einzelfall"})
+  (:RechtlicheBedingung {id: "Bauordnungsrecht"})
+  (:RechtlicheBedingung {id: "EU_Taxonomie"})
+  (:RechtlicheBedingung {id: "Gewaehrleistung"})
+  (:RechtlicheBedingung {id: "Produkthaftung"})
+  (:RechtlicheBedingung {id: "Vergaberecht"})
+  (:RechtlicheBedingung {id: "Zulassung_im_Einzelfall"})
 
 :Schadstoff
-  (:Schadstoff:Vokabular {id: "Asbest"})
-  (:Schadstoff:Vokabular {id: "Bleifarbe"})
-  (:Schadstoff:Vokabular {id: "Holzschutzmittel"})
-  (:Schadstoff:Vokabular {id: "PAK"})
-  (:Schadstoff:Vokabular {id: "PCB"})
+  (:Schadstoff {id: "Asbest"})
+  (:Schadstoff {id: "Bleifarbe"})
+  (:Schadstoff {id: "Holzschutzmittel"})
+  (:Schadstoff {id: "PAK"})
+  (:Schadstoff {id: "PCB"})
 
 :Nutzung
-  (:Nutzung:Vokabular {id: "Buero"})
-  (:Nutzung:Vokabular {id: "Gewerbe"})
-  (:Nutzung:Vokabular {id: "Infrastruktur"})
-  (:Nutzung:Vokabular {id: "Kultur"})
-  (:Nutzung:Vokabular {id: "Lager_Depot"})
-  (:Nutzung:Vokabular {id: "Mischnutzung"})
-  (:Nutzung:Vokabular {id: "Schule_Bildung"})
-  (:Nutzung:Vokabular {id: "Sozialbau"})
-  (:Nutzung:Vokabular {id: "Wohnen"})
+  (:Nutzung {id: "Buero"})
+  (:Nutzung {id: "Gewerbe"})
+  (:Nutzung {id: "Infrastruktur"})
+  (:Nutzung {id: "Kultur"})
+  (:Nutzung {id: "Lager_Depot"})
+  (:Nutzung {id: "Mischnutzung"})
+  (:Nutzung {id: "Schule_Bildung"})
+  (:Nutzung {id: "Sozialbau"})
+  (:Nutzung {id: "Wohnen"})
 
 :BauaufgabeIntervention
-  (:BauaufgabeIntervention:Vokabular {id: "Aufstockung"})
-  (:BauaufgabeIntervention:Vokabular {id: "Erweiterung"})
-  (:BauaufgabeIntervention:Vokabular {id: "Fit_out"})
-  (:BauaufgabeIntervention:Vokabular {id: "Neubau"})
-  (:BauaufgabeIntervention:Vokabular {id: "Rueckbau"})
-  (:BauaufgabeIntervention:Vokabular {id: "Sanierung"})
-  (:BauaufgabeIntervention:Vokabular {id: "Translozierung"})
-  (:BauaufgabeIntervention:Vokabular {id: "Umbau"})
-  (:BauaufgabeIntervention:Vokabular {id: "Umnutzung"})
-  (:BauaufgabeIntervention:Vokabular {id: "Wiederaufbau"})
+  (:BauaufgabeIntervention {id: "Aufstockung"})
+  (:BauaufgabeIntervention {id: "Erweiterung"})
+  (:BauaufgabeIntervention {id: "Fit_out"})
+  (:BauaufgabeIntervention {id: "Neubau"})
+  (:BauaufgabeIntervention {id: "Rueckbau"})
+  (:BauaufgabeIntervention {id: "Sanierung"})
+  (:BauaufgabeIntervention {id: "Translozierung"})
+  (:BauaufgabeIntervention {id: "Umbau"})
+  (:BauaufgabeIntervention {id: "Umnutzung"})
+  (:BauaufgabeIntervention {id: "Wiederaufbau"})
 
 :Kontextmerkmal
-  (:Kontextmerkmal:Vokabular {id: "Bestandserhalt_Policy"})
-  (:Kontextmerkmal:Vokabular {id: "Pilotprojekt"})
+  (:Kontextmerkmal {id: "Bestandserhalt_Policy"})
+  (:Kontextmerkmal {id: "Pilotprojekt"})
 
 :Land
   — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Pla
@@ -618,78 +625,78 @@ Die folgenden Blöcke zeigen **Muster** (nicht die vollständige Knotenzahl). Di
   — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Plan
 
 :Akteurrolle
-  (:Akteurrolle:Vokabular {id: "Architektur"})
-  (:Akteurrolle:Vokabular {id: "Aufbereitung_Refurbishment"})
-  (:Akteurrolle:Vokabular {id: "Bauausfuehrung"})
-  (:Akteurrolle:Vokabular {id: "Bauherr_Auftraggeber"})
-  (:Akteurrolle:Vokabular {id: "Betreiber_Nutzer"})
-  (:Akteurrolle:Vokabular {id: "Brandschutz_Barrierefreiheit"})
-  (:Akteurrolle:Vokabular {id: "Fassade"})
-  (:Akteurrolle:Vokabular {id: "Forschung_Dokumentation"})
-  (:Akteurrolle:Vokabular {id: "Kunst_Gestaltung"})
-  (:Akteurrolle:Vokabular {id: "Landschaftsplanung"})
-  (:Akteurrolle:Vokabular {id: "Materiallieferant"})
-  (:Akteurrolle:Vokabular {id: "Nachhaltigkeitsberatung"})
-  (:Akteurrolle:Vokabular {id: "Oeffentliche_Hand"})
-  (:Akteurrolle:Vokabular {id: "Projektbeteiligte_Unbestimmt"})
-  (:Akteurrolle:Vokabular {id: "Projektmanagement_Koordination"})
-  (:Akteurrolle:Vokabular {id: "Pruefung_Qualitaetssicherung"})
-  (:Akteurrolle:Vokabular {id: "Reuse_Beratung"})
-  (:Akteurrolle:Vokabular {id: "Rueckbau_Demontage"})
-  (:Akteurrolle:Vokabular {id: "Stahlbau_Fertigung"})
-  (:Akteurrolle:Vokabular {id: "TGA_Gebaeudetechnik"})
-  (:Akteurrolle:Vokabular {id: "Tragwerksplanung"})
+  (:Akteurrolle {id: "Architektur"})
+  (:Akteurrolle {id: "Aufbereitung_Refurbishment"})
+  (:Akteurrolle {id: "Bauausfuehrung"})
+  (:Akteurrolle {id: "Bauherr_Auftraggeber"})
+  (:Akteurrolle {id: "Betreiber_Nutzer"})
+  (:Akteurrolle {id: "Brandschutz_Barrierefreiheit"})
+  (:Akteurrolle {id: "Fassade"})
+  (:Akteurrolle {id: "Forschung_Dokumentation"})
+  (:Akteurrolle {id: "Kunst_Gestaltung"})
+  (:Akteurrolle {id: "Landschaftsplanung"})
+  (:Akteurrolle {id: "Materiallieferant"})
+  (:Akteurrolle {id: "Nachhaltigkeitsberatung"})
+  (:Akteurrolle {id: "Oeffentliche_Hand"})
+  (:Akteurrolle {id: "Projektbeteiligte_Unbestimmt"})
+  (:Akteurrolle {id: "Projektmanagement_Koordination"})
+  (:Akteurrolle {id: "Pruefung_Qualitaetssicherung"})
+  (:Akteurrolle {id: "Reuse_Beratung"})
+  (:Akteurrolle {id: "Rueckbau_Demontage"})
+  (:Akteurrolle {id: "Stahlbau_Fertigung"})
+  (:Akteurrolle {id: "TGA_Gebaeudetechnik"})
+  (:Akteurrolle {id: "Tragwerksplanung"})
 
 :Datenqualitaet
-  (:Datenqualitaet:Vokabular {id: "Belegt"})
-  (:Datenqualitaet:Vokabular {id: "Geschaetzt"})
-  (:Datenqualitaet:Vokabular {id: "Nicht_Belegt"})
-  (:Datenqualitaet:Vokabular {id: "Primaerquelle"})
-  (:Datenqualitaet:Vokabular {id: "Sekundaerquelle"})
-  (:Datenqualitaet:Vokabular {id: "Unbekannt"})
-  (:Datenqualitaet:Vokabular {id: "Widerspruechlich"})
+  (:Datenqualitaet {id: "Belegt"})
+  (:Datenqualitaet {id: "Geschaetzt"})
+  (:Datenqualitaet {id: "Nicht_Belegt"})
+  (:Datenqualitaet {id: "Primaerquelle"})
+  (:Datenqualitaet {id: "Sekundaerquelle"})
+  (:Datenqualitaet {id: "Unbekannt"})
+  (:Datenqualitaet {id: "Widerspruechlich"})
 
 :Datenmodell
-  (:Datenmodell:Vokabular {id: "Bauteil_ID"})
-  (:Datenmodell:Vokabular {id: "IFC"})
-  (:Datenmodell:Vokabular {id: "Klassifikation"})
-  (:Datenmodell:Vokabular {id: "Materialdatenbank"})
-  (:Datenmodell:Vokabular {id: "Materialpass_Schema"})
-  (:Datenmodell:Vokabular {id: "Ontologie"})
-  (:Datenmodell:Vokabular {id: "Taxonomie"})
+  (:Datenmodell {id: "Bauteil_ID"})
+  (:Datenmodell {id: "IFC"})
+  (:Datenmodell {id: "Klassifikation"})
+  (:Datenmodell {id: "Materialdatenbank"})
+  (:Datenmodell {id: "Materialpass_Schema"})
+  (:Datenmodell {id: "Ontologie"})
+  (:Datenmodell {id: "Taxonomie"})
 
 :Tooltyp
-  (:Tooltyp:Vokabular {id: "Bauteilboerse"})
-  (:Tooltyp:Vokabular {id: "Materialdatenbank"})
-  (:Tooltyp:Vokabular {id: "Materialkataster"})
+  (:Tooltyp {id: "Bauteilboerse"})
+  (:Tooltyp {id: "Materialdatenbank"})
+  (:Tooltyp {id: "Materialkataster"})
 
 :ZertifizierungBewertungssystem
-  (:ZertifizierungBewertungssystem:Vokabular {id: "BREEAM"})
-  (:ZertifizierungBewertungssystem:Vokabular {id: "DGNB"})
-  (:ZertifizierungBewertungssystem:Vokabular {id: "LEED"})
-  (:ZertifizierungBewertungssystem:Vokabular {id: "Paris_Proof"})
-  (:ZertifizierungBewertungssystem:Vokabular {id: "WELL"})
+  (:ZertifizierungBewertungssystem {id: "BREEAM"})
+  (:ZertifizierungBewertungssystem {id: "DGNB"})
+  (:ZertifizierungBewertungssystem {id: "LEED"})
+  (:ZertifizierungBewertungssystem {id: "Paris_Proof"})
+  (:ZertifizierungBewertungssystem {id: "WELL"})
 
 :Wirtschaft
-  (:Wirtschaft:Vokabular {id: "Finanzierung"})
-  (:Wirtschaft:Vokabular {id: "Geschaeftsmodell"})
-  (:Wirtschaft:Vokabular {id: "Kostenvergleich"})
-  (:Wirtschaft:Vokabular {id: "Lebenszykluskosten"})
-  (:Wirtschaft:Vokabular {id: "Preisbildung"})
-  (:Wirtschaft:Vokabular {id: "Restwert"})
+  (:Wirtschaft {id: "Finanzierung"})
+  (:Wirtschaft {id: "Geschaeftsmodell"})
+  (:Wirtschaft {id: "Kostenvergleich"})
+  (:Wirtschaft {id: "Lebenszykluskosten"})
+  (:Wirtschaft {id: "Preisbildung"})
+  (:Wirtschaft {id: "Restwert"})
 
 :Programm
-  (:Programm:Vokabular {id: "BBSM", programm_typ: "foerderung"})
-  (:Programm:Vokabular {id: "FCRBE", programm_typ: "foerderung"})
-  (:Programm:Vokabular {id: "PREUSE", programm_typ: "foerderung"})
-  (:Programm:Vokabular {id: "Reallabor_Be_Ware", programm_typ: "foerderung"})
-  (:Programm:Vokabular {id: "Zukunftbau", programm_typ: "foerderung"})
-  (:Programm:Vokabular {id: "Foerderprogramm", programm_typ: "forschungskontext"})
-  (:Programm:Vokabular {id: "Forschungsprojekt", programm_typ: "forschungskontext"})
-  (:Programm:Vokabular {id: "Kommunales_Programm", programm_typ: "forschungskontext"})
-  (:Programm:Vokabular {id: "Pilotprojekt", programm_typ: "forschungskontext"})
-  (:Programm:Vokabular {id: "Reallabor", programm_typ: "forschungskontext"})
-  (:Programm:Vokabular {id: "Wettbewerb", programm_typ: "forschungskontext"})
+  (:Programm {id: "BBSM", programm_typ: "foerderung"})
+  (:Programm {id: "FCRBE", programm_typ: "foerderung"})
+  (:Programm {id: "PREUSE", programm_typ: "foerderung"})
+  (:Programm {id: "Reallabor_Be_Ware", programm_typ: "foerderung"})
+  (:Programm {id: "Zukunftbau", programm_typ: "foerderung"})
+  (:Programm {id: "Foerderprogramm", programm_typ: "forschungskontext"})
+  (:Programm {id: "Forschungsprojekt", programm_typ: "forschungskontext"})
+  (:Programm {id: "Kommunales_Programm", programm_typ: "forschungskontext"})
+  (:Programm {id: "Pilotprojekt", programm_typ: "forschungskontext"})
+  (:Programm {id: "Reallabor", programm_typ: "forschungskontext"})
+  (:Programm {id: "Wettbewerb", programm_typ: "forschungskontext"})
 ```
 
 ---
@@ -711,7 +718,7 @@ _database/norm/ISO_20887/index.md        → node (:Norm {id: "ISO_20887"})
 
 Same rule for every folder: `_database/material/<x>/` produces `(:Material {id: "<x>"})`, `_database/huerde/<x>/` produces `(:Huerde {id: "<x>"})`, etc.
 
-**Instanz-`id` vs. Ordnername:** Für **Vokabular-Labels** (§1.B) ist `id` in der Regel **gleich** dem Unterordnernamen (ggf. ASCII nach derselben Tabelle). Für **`:Bauteilgruppe`** im kanonischen Ordner **`bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/`** ist Graph-`id` **gleich** dem Unterordner-Slug (verbindliches Muster — siehe Tabelle unten). Für die übrigen Instanz-Labels (`:Fallbeispiel`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette`) ist `id` der **vom Export normalisierte** Slug nach der folgenden Tabelle — der Quellordnername ist nur Eingabe, nicht zwingend 1:1 der Graph-`id`.
+**`id` vs. Ordnername:** Für die **38** folder-gestützten Labels in §1.B ist `id` in der Regel **gleich** dem Unterordnernamen (ggf. ASCII nach derselben Tabelle). Für **`:Bauteilgruppe`** im kanonischen Ordner **`bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/`** ist Graph-`id` **gleich** dem Unterordner-Slug (verbindliches Muster — siehe Tabelle unten). Für die übrigen **fünf** Primär-Labels in §1.A (`:Fallbeispiel`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette`) ist `id` der **vom Export normalisierte** Slug nach der folgenden Tabelle — der Quellordnername ist nur Eingabe, nicht zwingend 1:1 der Graph-`id`.
 
 **ID- und Namenskonvention (Lesbarkeit)**
 
@@ -727,13 +734,13 @@ Same rule for every folder: `_database/material/<x>/` produces `(:Material {id: 
 | `:Quelle` | `id` = **kurzer Zitations-Slug**, z. B. `Circular_Berlin_marktstudie_2023` — **nicht** gespiegelte Dateipfade wie `akteur_04_planung_..._md`. |
 | `:SoftwareDigitaltool` | Produkt- oder Plattformname lesbar (`Concular_Plattform`, `IfcOpenShell`); einheitliche Groß-/Kleinschreibung pro Eintrag. |
 | `:Wiederverwendungskette` | `id` an Fallbeispiel anbindbar (`K118_Halle_118_Winterthur`) oder eigener kurzer Kettenname — ohne URL-artige Monsterstrings. |
-| Vokabular (§1.B) | `id` = stabiler Term-Slug; gleiche ASCII-/Trennerregeln; Ordner unter `_database/<vocab>/` möglichst schon so benannt, damit Import trivial bleibt. |
+| Weitere `_database`-Labels (§1.B) | `id` = stabiler Term-Slug; gleiche ASCII-/Trennerregeln; Ordner unter `_database/<label>/` möglichst schon so benannt, damit Import trivial bleibt. |
 
 Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they merge into another Label, get renamed, or are dropped.
 
-**Geography exception:** `_database/ort/<id>/` is not mapped to a single `:Ort` Label. On export, each slug becomes either `(:Land:Vokabular {id})` or `(:Stadt:Vokabular {id})` according to a classification rule (country/region vs city/district/site). The plan does not enumerate those node ids.
+**Geography exception:** `_database/ort/<id>/` is not mapped to a single `:Ort` Label. On export, each slug becomes either `(:Land {id})` or `(:Stadt {id})` according to a classification rule (country/region vs city/district/site). The plan does not enumerate those node ids.
 
-**`:Status` — vereinheitlicht (Gebäude- + Einsatz-Lebenszyklus):** Label **`:ReuseEinsatzstatus`** und **`:Bauobjektstatus`** entfallen. Es gibt **genau sieben** `:Status:Vokabular`-Knoten. Anbindung nur über **`HAT_STATUS`** (nicht `IST`) von **`(:Fallbeispiel)`** und **`(:Bauteilgruppe)`** an `:Status`.
+**`:Status` — vereinheitlicht (Gebäude- + Einsatz-Lebenszyklus):** Label **`:ReuseEinsatzstatus`** und **`:Bauobjektstatus`** entfallen. Es gibt **genau sieben** `:Status`-Knoten. Anbindung nur über **`HAT_STATUS`** (nicht `IST`) von **`(:Fallbeispiel)`** und **`(:Bauteilgruppe)`** an `:Status`.
 
 | Kanon-`id` (`:Status`) | Kurzbedeutung |
 |--------|---------------|
@@ -745,7 +752,7 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | `Nicht_Realisiert` | nicht umgesetzt / verworfen |
 | `Unklar` | nicht eindeutig zuordenbar |
 
-**Legacy `reuse_einsatzstatus/<id>/` → `(:Status:Vokabular {id})`:**
+**Legacy `reuse_einsatzstatus/<id>/` → `(:Status {id})`:**
 
 | Legacy `reuse_einsatzstatus/<id>/` | → Kanon-`id` |
 |---|---|
@@ -757,7 +764,7 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | `Verworfen` | `Nicht_Realisiert` |
 | `Unklar` | `Unklar` |
 
-**Legacy `bauobjektstatus/<id>/` → `(:Status:Vokabular {id})`:** (Ordner `bauobjektstatus/` mappt auf dieselben sieben Knoten; Label `:Bauobjektstatus` entfällt.)
+**Legacy `bauobjektstatus/<id>/` → `(:Status {id})`:** (Ordner `bauobjektstatus/` mappt auf dieselben sieben Knoten; Label `:Bauobjektstatus` entfällt.)
 
 | Legacy `bauobjektstatus/<id>/` | → Kanon-`id` |
 |---|---|
@@ -770,7 +777,7 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | `Unklar` | `Unklar` |
 | `Wettbewerb` | `Geplant` |
 
-**Reuse-Strategie-Konsolidierung (verbindlich — 6 Kanon-Knoten):** Legacy `reuse_strategie/` hat **elf** Unterordner; im Graphen gibt es **genau sechs** `:ReuseStrategie:Vokabular`-Knoten nach **Art der Wiederverwendung** (Gebäude-/Bauteilnutzung, nicht Marketing-Vokabular). **`(:Fallbeispiel)`** (synonym historisch **Bauobjekt**) und optional **`(:Bauteilgruppe)`** verbinden die Strategie über **`HAT_WIEDERVERWENDUNGSART`** → `:ReuseStrategie` — **nicht** über `IST`. Ausführliche Beispiele bleiben in den Markdown-Quellen; im Graphen nur Kanon-`id`.
+**Reuse-Strategie-Konsolidierung (verbindlich — 6 Kanon-Knoten):** Legacy `reuse_strategie/` hat **elf** Unterordner; im Graphen gibt es **genau sechs** `:ReuseStrategie`-Knoten nach **Art der Wiederverwendung** (Gebäude-/Bauteilnutzung, nicht Marketing-Jargon). **`(:Fallbeispiel)`** (synonym historisch **Bauobjekt**) und optional **`(:Bauteilgruppe)`** verbinden die Strategie über **`HAT_WIEDERVERWENDUNGSART`** → `:ReuseStrategie` — **nicht** über `IST`. Ausführliche Beispiele bleiben in den Markdown-Quellen; im Graphen nur Kanon-`id`.
 
 | Nr. | Kanon-`id` (`:ReuseStrategie`) | Leitidee (Kurz) |
 |-----|----------------|----------------|
@@ -805,9 +812,9 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 |---|---|
 | (gesamter Ordner) | **Kein** automatischer Export zu `:Verbindungstechnik` oder `:Reversibilitaet`; Inhalt bleibt in Markdown / spätere eigenständige Kuratierung außerhalb der Verbindungs-Pipeline. |
 
-**`:Reversibilitaet` — nur eigener Knotentyp:** Eigenes Vokabular-Label **`:Reversibilitaet:Vokabular`** mit genau vier Knoten (`Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt`), eigene **UNIQUE-Constraint** auf `(n:Reversibilitaet).id`, ausschließlich **`HAT {art:'reversibilitaet'}`** von `:Fallbeispiel` / `:Bauteilgruppe`. Datenquelle: **explizite** Metadaten (z. B. künftiges Feld / Kuratierung) — **nicht** `fuegung_verbindung/`, **nicht** `IST`, keine Einbettung unter `:Verbindungstechnik`.
+**`:Reversibilitaet` — nur eigener Knotentyp:** Label **`:Reversibilitaet`** mit genau vier Knoten (`Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt`), eigene **UNIQUE-Constraint** auf `(n:Reversibilitaet).id`, ausschließlich **`HAT {art:'reversibilitaet'}`** von `:Fallbeispiel` / `:Bauteilgruppe`. Datenquelle: **explizite** Metadaten (z. B. künftiges Feld / Kuratierung) — **nicht** `fuegung_verbindung/`, **nicht** `IST`, keine Einbettung unter `:Verbindungstechnik`.
 
-## §1.A Instance Labels (6)
+## §1.A Primär-Labels (6)
 
 
 | Label                     | Purpose                                                     | Replaces (legacy folders)                                          |
@@ -820,7 +827,7 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | `:Wiederverwendungskette` | OPTIONAL named multi-Bauteilgruppe reuse program            | `reuse_kette/` (renamed; `reuse_kettenstation/` dropped)           |
 
 
-## §1.B Vocabulary Labels (38 — every controlled-knot folder mapped; `ort/` splits into two Labels; `fuegung_verbindung/` → **`:Verbindungstechnik`** only; **`:Reversibilitaet`** is a separate node type without `fuegung_verbindung/` provenance; `reuse_strategie/` → **six** `:ReuseStrategie` nodes — see exception table; **`bauobjektstatus/`** merged into **`:Status`** — see §1 Status tables)
+## §1.B Weitere Labels (38 — jeder `_database/<label>/`-Ordner; `ort/` splits into two Labels; `fuegung_verbindung/` → **`:Verbindungstechnik`** only; **`:Reversibilitaet`** is a separate node type without `fuegung_verbindung/` provenance; `reuse_strategie/` → **six** `:ReuseStrategie` nodes — see exception table; **`bauobjektstatus/`** merged into **`:Status`** — see §1 Status tables)
 
 Grouped only for reading.
 
@@ -838,7 +845,7 @@ Grouped only for reading.
 
 **Lösbarkeit (eigenständiger Knotentyp — nicht unter Verbindungen):**
 
-- `:Reversibilitaet` ← **kein** `fuegung_verbindung/`-Bezug; **vier feste** Vokabular-Knoten; nur `HAT {art:'reversibilitaet'}`; Daten nur aus **expliziten** Quellen (nicht aus der Verbindungs-Migration). **Nicht** dasselbe wie `methode/Reversibilitaet/` → weiterhin `(:Methode:Vokabular {id: "Reversibilitaet"})` per **`BENUTZT`**.
+- `:Reversibilitaet` ← **kein** `fuegung_verbindung/`-Bezug; **vier feste** Knoten; nur `HAT {art:'reversibilitaet'}`; Daten nur aus **expliziten** Quellen (nicht aus der Verbindungs-Migration). **Nicht** dasselbe wie `methode/Reversibilitaet/` → weiterhin `(:Methode {id: "Reversibilitaet"})` per **`BENUTZT`**.
 
 **Konstruktion:**
 
@@ -848,7 +855,7 @@ Grouped only for reading.
 
 **Reuse:**
 
-- `:ReuseStrategie` ← `reuse_strategie/` (**eleven** legacy folders → **six** canonical `id`s — **Art der Wiederverwendung**; `IST` from `:Bauteilgruppe` / `:Fallbeispiel` — see **Reuse-Strategie-Konsolidierung** in §1)
+- `:ReuseStrategie` ← `reuse_strategie/` (**eleven** legacy folders → **six** canonical `id`s — **Art der Wiederverwendung**; **`HAT_WIEDERVERWENDUNGSART`** from `:Fallbeispiel` / `:Bauteilgruppe` — see **Reuse-Strategie-Konsolidierung** in §1)
 - `:Status` ← `reuse_einsatzstatus/` + **`bauobjektstatus/`** (**merged** — **seven** canonical nodes; **Label `:Bauobjektstatus` dropped**; see §1 Status tables; edges **`HAT_STATUS`** from `:Fallbeispiel` / `:Bauteilgruppe`)
 - `:WiederverwendungsArt` ← `bewertungslogik_abgrenzung/` (renamed)
 
@@ -879,7 +886,7 @@ Grouped only for reading.
 - `:Nutzung` ← `nutzung/`
 - `:BauaufgabeIntervention` ← `bauaufgabe_intervention/`
 - `:Kontextmerkmal` ← `kontextmerkmal/`
-- `:Entwurfsentscheidung` ← **new** — no legacy folder; created fresh. Vocabulary Label capturing design adaptations forced by reuse constraints. Connected via `HAT {art:'entwurf'}` from `:Bauteilgruppe` (component-specific) or `:Fallbeispiel` (project-wide). Initial values defined from K.118 example and generalised across all case data.
+- `:Entwurfsentscheidung` ← **new** — no legacy folder; created fresh. Label capturing design adaptations forced by reuse constraints. Connected via `HAT {art:'entwurf'}` from `:Bauteilgruppe` (component-specific) or `:Fallbeispiel` (project-wide). Initial values defined from K.118 example and generalised across all case data.
 
 **Geographie:**
 
@@ -927,7 +934,7 @@ Grouped only for reading.
 | `reuse_kette/`                | renamed to `:Wiederverwendungskette`                                                                                           |
 
 
-Total: 54 folders → 6 instance Labels + **38** vocabulary Labels + 11 dropped + 4 merged-or-renamed (`ort/` yields two Labels; `fuegung_verbindung/` → `:Verbindungstechnik` only — `:Reversibilitaet` has no folder provenance; `reuse_strategie/` → **six** `:ReuseStrategie` nodes; `bauobjektstatus/` + `reuse_einsatzstatus/` → **one** `:Status` vocabulary with **seven** nodes).
+Total: 54 folders → **44** Neo4j Labels (§1.A + §1.B) + 11 dropped + 4 merged-or-renamed (`ort/` yields two Labels; `fuegung_verbindung/` → `:Verbindungstechnik` only — `:Reversibilitaet` has no folder provenance; `reuse_strategie/` → **six** `:ReuseStrategie` nodes; `bauobjektstatus/` + `reuse_einsatzstatus/` → **one** `:Status` Label with **seven** canonical nodes).
 
 ---
 
@@ -1056,21 +1063,21 @@ No outgoing edges from `:Quelle`. All metadata about a citation (page, excerpt, 
 | `end_jahr`   | int?   | –   |        |
 
 
-## §2.G Vocabulary Labels (shared shape — every label in §1.B)
+## §2.G Weitere Labels — gemeinsame Minimal-Properties (§1.B)
 
-Most Labels in §1.B have **as many nodes as there are subfolders** under the corresponding `_database/<vocab>/` directory. For instance: `_database/material/` has subfolders for `Stahl`, `Holz`, `Beton`, `Stahlbeton`, … — each becomes a `(:Material {id: "..."})` node. **Exceptions:** `:Land` / `:Stadt` (see geography exception); `:Status` (**seven** fixed canonical `id`s from **merged** `reuse_einsatzstatus/` + `bauobjektstatus/` — see §1; **`HAT_STATUS`** edges only); `:ReuseStrategie` (**eleven** legacy `reuse_strategie/` folders consolidate to **six** canonical ids — see §1); `:Verbindungstechnik` (six technique folders under `fuegung_verbindung/` remap to canonical ids — see §1 table; `Reversible_Fuegung/` excluded); `:Reversibilitaet` (**four** fixed nodes, **no** `fuegung_verbindung/` mapping — see §1).
+Die meisten Labels in §1.B haben **so viele Knoten wie Unterordner** unter dem jeweiligen `_database/<label>/`-Pfad. Beispiel: `_database/material/` mit `Stahl`, `Holz`, `Beton`, … → je ein `(:Material {id: "…"})`. **Ausnahmen:** `:Land` / `:Stadt` (Geographie-Exception); `:Status` (**sieben** feste Kanon-`id`s aus **zusammengeführtem** `reuse_einsatzstatus/` + `bauobjektstatus/` — §1; nur **`HAT_STATUS`**); `:ReuseStrategie` (**elf** Legacy-Ordner → **sechs** Kanon-`id`s — §1); `:Verbindungstechnik` (Technik-Ordner unter `fuegung_verbindung/` — §1; `Reversible_Fuegung/` ausgeschlossen); `:Reversibilitaet` (**vier** feste Knoten, **kein** `fuegung_verbindung/` — §1).
 
-Each vocab node has only:
+Jeder dieser Knoten hat standardmäßig nur:
 
 
 | name | type   | req | notes                                                                       |
 | ---- | ------ | --- | --------------------------------------------------------------------------- |
-| `id` | string | ✓   | UNIQUE within the Label; in der Regel der Unterordnername unter `_database/<vocab>/<id>/`, normalisiert nach §1 (ASCII, ein `_` zwischen Wortteilen) |
+| `id` | string | ✓   | UNIQUE within the Label; in der Regel der Unterordnername unter `_database/<label>/<id>/`, normalisiert nach §1 (ASCII, ein `_` zwischen Wortteilen) |
 
 
-The id is the queryable identifier. The German prose body explaining the term remains in the source Markdown `_database/<vocab>/<id>/index.md`, outside the graph.
+The id is the queryable identifier. The German prose body explaining the term remains in the source Markdown `_database/<label>/<id>/index.md`, outside the graph.
 
-Special additions per vocab Label:
+Zusätzliche Properties nur bei ausgewählten Labels:
 
 
 | Label                   | extra property               | notes                                                                                                                                       |
@@ -1085,8 +1092,6 @@ Special additions per vocab Label:
 | `:Reversibilitaet`      | —                            | exactly **four** nodes (`Reversibel`, `Teilweise_reversibel`, `Irreversibel`, `Unbekannt`); **not** sourced from `fuegung_verbindung/` (see §1) |
 
 
-All vocab Labels carry the second Label `:Vokabular`.
-
 ---
 
 # §3 Edge-type catalogue
@@ -1094,10 +1099,10 @@ All vocab Labels carry the second Label `:Vokabular`.
 
 | Edge                     | Subject Labels                                                                                             | Object Labels                                                                                                    | Cardinality  | Purpose                                                       |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------- |
-| `IST`                    | `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` | vocab **except** `:Status` and `:ReuseStrategie` when subject is **`:Fallbeispiel` or `:Bauteilgruppe`** (use `HAT_STATUS` / `HAT_WIEDERVERWENDUNGSART`) | N:1 per axis | classification (not lifecycle / not reuse-strategy on case or component) |
-| `HAT`                    | `:Fallbeispiel`, `:Bauteilgruppe`                                                                          | vocab (rich) **or** `:Akteur` (with `art:'akteur', rolle:...`)                                                   | N:M          | qualitative attribute / actor participation                   |
-| `HAT_STATUS`             | `:Fallbeispiel`, `:Bauteilgruppe`                                                                          | `:Status:Vokabular`                                                                                              | N:1 typical  | lifecycle / realisation state (seven canonical `id`s — §1)   |
-| `HAT_WIEDERVERWENDUNGSART` | `:Fallbeispiel`, `:Bauteilgruppe` (optional)                                                             | `:ReuseStrategie:Vokabular`                                                                                      | N:1 typical  | *Art der Wiederverwendung* — six canonical `id`s (§1)        |
+| `IST`                    | `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` | andere **Klassifikations-Labels** als Ziel — **ausgenommen** `:Status` und `:ReuseStrategie`, wenn Subjekt **`:Fallbeispiel` oder `:Bauteilgruppe`** (dann `HAT_STATUS` / `HAT_WIEDERVERWENDUNGSART`) | N:1 typical | classification (not lifecycle / not reuse-strategy on case or component) |
+| `HAT`                    | `:Fallbeispiel`, `:Bauteilgruppe`                                                                          | weitere **Klassifikations-Labels** **oder** `:Akteur` (mit `art:'akteur', rolle:...`)                                                   | N:M          | qualitative attribute / actor participation                   |
+| `HAT_STATUS`             | `:Fallbeispiel`, `:Bauteilgruppe`                                                                          | `:Status`                                                                                              | N:1 typical  | lifecycle / realisation state (seven canonical `id`s — §1)   |
+| `HAT_WIEDERVERWENDUNGSART` | `:Fallbeispiel`, `:Bauteilgruppe` (optional)                                                             | `:ReuseStrategie`                                                                                      | N:1 typical  | *Art der Wiederverwendung* — six canonical `id`s (§1)        |
 | `BENUTZT`                | `:Bauteilgruppe`, `:Fallbeispiel`                                                                          | `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:SoftwareDigitaltool`, `:Datenmodell` | N:M          | instrumental usage; quantitative carrier                      |
 | `GEHÖRT_ZU`              | any                                                                                                        | `:Fallbeispiel`, `:Wiederverwendungskette`, `:Land`, `:Stadt`, `:Programm`                                       | N:1 / N:M    | membership / containment / location / chain station / origin  |
 | `BELEGT_IN`              | any node carrying a citable claim                                                                          | `:Quelle`                                                                                                        | N:M          | citation / evidence — the only place source attribution lives |
@@ -1108,7 +1113,7 @@ All vocab Labels carry the second Label `:Vokabular`.
 - **IST:** `has_bauteiltyp`, `has_bewertungslogik_abgrenzung` (→ `:WiederverwendungsArt`), `has_datenqualitaet`, `has_bauteilebene`, `has_bauteilzustand`, `has_funktionswechsel`, `has_bauweise`, `has_bausystem`, `has_tragwerksprinzip`, `has_tooltyp`, `has_datenmodell`, `has_zertifizierung_bewertungssystem`. ( **`has_reuse_einsatzstatus` / `has_bauobjektstatus` → `HAT_STATUS` → `:Status`**. **`has_reuse_strategie` → `HAT_WIEDERVERWENDUNGSART` → `:ReuseStrategie`**.)
 - **HAT_STATUS:** `has_reuse_einsatzstatus`, `has_bauobjektstatus` (legacy) — **seven** canonical `:Status` `id`s (§1).
 - **HAT_WIEDERVERWENDUNGSART:** `has_reuse_strategie` — **six** canonical `:ReuseStrategie` `id`s (§1).
-- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung` → **only** `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` per §1 Verbindungstabelle (technique subfolders); **`HAT {art:'reversibilitaet'}`** → `:Reversibilitaet` is **independent** (explicit metadata — not from `fuegung_verbindung/`), `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:Bauteilgruppe` or `:Fallbeispiel` to `:Entwurfsentscheidung:Vokabular`.
+- **HAT:** `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff`, `has_kontextmerkmal`, `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung` → **only** `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` per §1 Verbindungstabelle (technique subfolders); **`HAT {art:'reversibilitaet'}`** → `:Reversibilitaet` is **independent** (explicit metadata — not from `fuegung_verbindung/`), `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:Bauteilgruppe` or `:Fallbeispiel` to `:Entwurfsentscheidung`.
 - **BENUTZT:** `uses_material`, `uses_software_digitaltool`, `has_methode`, `has_rueckbauverfahren`, `has_aufbereitungsverfahren`.
 - **GEHÖRT_ZU:** `installed_in_bauobjekt` → `rolle:'einbauort'`; new `sourced_from_bauobjekt` → `rolle:'herkunft'`; `part_of_reuse_kette` → `rolle:'kette'` (to `:Wiederverwendungskette`); `located_in_ort` → split: `rolle:'land'` (to `:Land`) and/or `rolle:'stadt'` (to `:Stadt`) depending on classified target; `relates_to_bauobjekt` → `rolle:'fallbeispiel'`; `involves_foerderprogramm` / `has_programm_kontext` → `rolle:'programm'` (to `:Programm`).
 - **BELEGT_IN:** replaces unresolved `quelle_label` shorthand on every node and every `quelle_id` previously planned as edge property. Replaces the gap relation `documented_in_quelle`. Direction: claim → `:Quelle`.
@@ -1210,7 +1215,7 @@ Direction: **(claim) → (:Quelle)**.
 - **Metadata-only graph.** German prose, raw labels, legacy paths, batch tags do not enter the graph. They stay in the source Markdown.
 - **Modes A/B/C coexist** but Mode A (property) is reserved for: identifiers, type discriminators (`art`, `programm_typ`, `axis`), and quantitative measurements (with `_alt`/`_vertrauensgrad` shadows).
 - **Measurement placement.** Building-level → `:Fallbeispiel`. Component-group-level → `:Bauteilgruppe`. Inherently relational quantities → on the `BENUTZT` edge.
-- **Role placement.** A role IS an edge property, never a node target. `:HAT {art:'akteur', rolle:'Architektur'}->(:Akteur)`. Vocab `:Akteurrolle` is a dictionary.
+- **Role placement.** A role IS an edge property, never a node target. `:HAT {art:'akteur', rolle:'Architektur'}->(:Akteur)`. `:Akteurrolle` is a dictionary of allowed `rolle` strings, not an IST target.
 - **Citation placement.** Source attribution NEVER lives as a property. Always `:BELEGT_IN → :Quelle` with optional `eigenschaft` to scope.
 - **Naming.** German PascalCase Labels, SCREAMING_SNAKE edges, snake_case properties.
 - **`:Status` (einheitlich).** Genau **sieben** Kanon-Knoten (§1). **`HAT_STATUS`** von `:Fallbeispiel` (historisch „Bauobjekt“) und `:Bauteilgruppe` → `:Status`. Label **`:Bauobjektstatus`** entfällt; Ordner `bauobjektstatus/` mappt auf dieselben Knoten.
@@ -1233,7 +1238,7 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 
 - structural relations (`fallstudie:`, `projekt:`, `bauobjekt:`) → resolved or collapsed
 - measurement fields (`wert:`, `einheit:`) → properties on `:Fallbeispiel` / `:Bauteilgruppe`
-- canonical-axis fields (`bauteiltyp:`, `material:`, …) → IST / BENUTZT edges to vocab
+- canonical-axis fields (`bauteiltyp:`, `material:`, …) → IST / BENUTZT edges to classification nodes
 - raw labels (`bauteil_label:`, `material_label:`, `pruefung_label:`, `huerde_label:`, …) → NOT in the graph; remain only in the source Markdown
 - prose `body` → NOT in the graph
 - `quelle_label:` → resolved to `:Quelle` nodes + `:BELEGT_IN` edges
@@ -1297,14 +1302,22 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 
 ## Final counts
 
-- **6** instance Labels
-- **38** vocabulary Labels
+- **44** Labels total (**6** primär in §1.A + **38** in §1.B)
 - **7** edge types (`IST`, `HAT`, `HAT_STATUS`, `HAT_WIEDERVERWENDUNGSART`, `BENUTZT`, `GEHÖRT_ZU`, `BELEGT_IN`)
 - **0** body / legacy / prose properties (metadata-only)
 
+## Deliverable: schema map file
+
+| File | Purpose |
+|------|---------|
+| [`_database/_system/NEO4J_SCHEMA.md`](_database/_system/NEO4J_SCHEMA.md) | Vollständige Spezifikation inkl. Erklärungen, Hierarchie, Legacy-Mappings, Anhänge |
+| [`_database/_system/NEO4J_SCHEMA_MAP.md`](_database/_system/NEO4J_SCHEMA_MAP.md) | **Kompakte Gesamtlandkarte:** alle **Knotentypen (Labels)** mit **allen Knoten-Properties**; alle **Kantentypen** mit **allen Kanten-Properties** und erlaubten Quell-/Ziel-Labels (kein erzählender Doppeltext — tabellarisch / flach) |
+
+Die Map dient Lesern und Tools als **einzige Checkliste** „was gibt es im Graphen als Typ + Property“. Änderungen am Schema **immer** in beiden Dateien nachziehen (oder später aus einer gemeinsamen Quelle generieren — siehe Goal).
+
 ## Out of scope (this plan)
 
-- Writing the export script.
+- Writing the **data** export script (Markdown → Neo4j bulk-load).
 - Running a Neo4j instance.
 - Filling the ~30 gap relations from prose.
 - Translating German labels to English.
