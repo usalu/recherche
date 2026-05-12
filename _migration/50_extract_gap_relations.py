@@ -25,12 +25,13 @@ Current batch:
   50f_located_in_ort
     Reads the "Ort" row from each Gebaeude Entitaeten-Mapping table,
     derives a canonical city slug, creates the ort node folder + index.md
-    if it doesn't yet exist, and emits one fallstudie -> located_in_ort
+    if it doesn't yet exist,     and emits one fallstudie -> located_in_ort
     -> ort edge per case. Bad/non-location Ort values are skipped.
   50s_has_ressourcenquelle
     Maps the reuse_einsatz frontmatter `herkunft_label` to concrete `ressourcenquelle/`
-    knots (physical source pools: Baustelle, Lager, Donorgebaeude, …). Kept separate from
-    50i `has_beschaffungsweg`, which encodes procurement channels on `beschaffungsweg/`.
+    knots (physical source pools). Kept separate from 50i `has_beschaffungsweg`.
+  50u_has_methode
+    Maps the Eingriff/Aufbereitung bullet to `methode/*` knots (Urban Mining, audits, …).
   50l_has_wirtschaft
     Reads economic labels from Gebaeude mapping, kennwerte, hurdles, and
     "WIRTSCHAFT UND BESCHAFFUNG" sections and maps them to wirtschaft knots.
@@ -2247,6 +2248,157 @@ def build_aufbereitungsverfahren_edges(
                 "original_relation": "has_aufbereitungsverfahren",
                 "original_target": target,
                 "edge_cleaning": "added_gap_50j",
+            }
+            additions.append(addition)
+            existing_keys.add(key)
+
+    stats["reuse_rows_scanned"] = len(reuse_rows)
+    stats["additions"] = len(additions)
+    stats["sources_with_additions"] = len({row["source"] for row in additions})
+    return edge_rows + additions, additions, stats, skipped
+
+
+# ---------------------------------------------------------------------------
+# 50u — has_methode (Eingriff/Aufbereitung bullet → methode/)
+# ---------------------------------------------------------------------------
+
+METHODE_RULES: list[tuple[str, tuple[str, ...]]] = [
+    ("methode/Abrissmonitoring", ("abbrissmonitoring", "abbruchmonitoring", "monitoring abriss", "abriss-monitoring")),
+    ("methode/Bauteilkatalogisierung", ("bauteilkatalog", "katalogisierung", "bestandskatalog", "inventarkatalog")),
+    (
+        "methode/Building_Material_Scouting",
+        ("material scouting", "bauteilsuche", "component hunting", "material scout"),
+    ),
+    (
+        "methode/Design_for_Disassembly",
+        ("design for disassembly", "dfd", "disassembly design", "demontierbares konstruktiv", "demontierbare konstrukt"),
+    ),
+    (
+        "methode/Form_Follows_Availability",
+        (
+            "form follows availability",
+            "entwurf aus verfugbarkeit",
+            "entwurf aus verfügbarkeit",
+            "design from stock",
+            "design from availability",
+        ),
+    ),
+    (
+        "methode/Materialinventur",
+        ("materialinventur", "materialinventar", "bestandsaufnahme", "inventur", "as-built inventar"),
+    ),
+    (
+        "methode/Pre_Deconstruction_Audit",
+        (
+            "pre-deconstruction",
+            "predeconstruction",
+            "pre deconstruction",
+            "abbruchaudit",
+            "deconstruction audit",
+            "vorabbruch",
+            "preabbruch",
+        ),
+    ),
+    (
+        "methode/ReUse_Assessment",
+        ("reuse assessment", "re-use assessment", "reuse-bewertung", "bewertung wiederverwend"),
+    ),
+    (
+        "methode/ReUse_Ausschreibung",
+        ("reuse-ausschreibung", "reuse ausschreibung", "ausschreibung reuse"),
+    ),
+    (
+        "methode/Reversibilitaet",
+        ("reversibilitaet", "reversibilität", "reversible konstruktion", "wiederausbaubar", "rueckbaubar geplant"),
+    ),
+    ("methode/Urban_Mining", ("urban mining", "urban-mining", "materialpass", "material passport")),
+    (
+        "methode/Wiederverwendungskriterien",
+        ("wiederverwendungskriterien", "reuse kriterien", "kriterien wiederverwend"),
+    ),
+    (
+        "methode/Zirkulaere_Ausschreibung",
+        ("zirkulaere ausschreibung", "zirkuläre ausschreibung", "kreislauf ausschreibung", "circular tender"),
+    ),
+]
+
+
+def build_methode_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    """Reads the Eingriff/Aufbereitung bullet (same source as 50d/50e/50j)."""
+    existing_keys = existing_edge_keys(edge_rows)
+    excluded_sources = direct_reuse_exclusion_sources(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    reuse_rows = [
+        row for row in load_csv(NODE_INVENTORY)
+        if row["entity"] == "reuse_einsatz"
+    ]
+
+    for node_row in sorted(reuse_rows, key=lambda r: r["typed_path"]):
+        markdown = load_reuse_markdown(node_row)
+        raw_label = extract_markdown_bullet(markdown, "Eingriff/Aufbereitung")
+
+        if not raw_label or is_uncertain(raw_label):
+            stats["rows_without_label"] += 1
+            continue
+
+        frontmatter = parse_simple_frontmatter(markdown)
+        if not reusable_enough(frontmatter):
+            stats["rows_skipped_not_reusable"] += 1
+            continue
+
+        if node_row["typed_path"] in excluded_sources:
+            stats["rows_skipped_by_abgrenzung"] += 1
+            continue
+
+        targets: list[str] = []
+        for segment in re.split(r"[,;/]+", raw_label):
+            seg = normalized(segment)
+            if not seg or seg in UNCERTAIN_VALUES:
+                continue
+            for target, tokens in METHODE_RULES:
+                if target not in existing_nodes:
+                    continue
+                if any(token in seg for token in tokens) and target not in targets:
+                    targets.append(target)
+
+        if not targets:
+            stats["labels_without_match"] += 1
+            skipped.append({
+                "source": node_row["typed_path"],
+                "raw_label": raw_label,
+                "reason": "no_methode_token_match",
+            })
+            continue
+
+        for target in targets:
+            key = (node_row["typed_path"], "has_methode", target)
+            if key in existing_keys:
+                stats["duplicates_skipped"] += 1
+                continue
+            target_entity, target_id = target.split("/", 1)
+            addition = {
+                "source": node_row["typed_path"],
+                "source_entity": "reuse_einsatz",
+                "source_id": node_row["id"],
+                "relation": "has_methode",
+                "target": target,
+                "target_entity": target_entity,
+                "target_id": target_id,
+                "field": "BAUTEIL-INVENTAR:Eingriff/Aufbereitung",
+                "raw_label": raw_label,
+                "confidence": "rule_high",
+                "resolution_rule": "label_50u_has_methode_eingriff",
+                "legacy_path": "",
+                "original_source": node_row["typed_path"],
+                "original_relation": "has_methode",
+                "original_target": target,
+                "edge_cleaning": "added_gap_50u",
             }
             additions.append(addition)
             existing_keys.add(key)
@@ -5948,6 +6100,7 @@ BATCHES = {
     "50i_has_beschaffungsweg": build_beschaffungsweg_edges,
     "50s_has_ressourcenquelle": build_ressourcenquelle_edges,
     "50j_has_aufbereitungsverfahren": build_aufbereitungsverfahren_edges,
+    "50u_has_methode": build_methode_edges,
     "50k_has_logistik": build_logistik_edges,
     "50l_has_wirtschaft": build_wirtschaft_edges,
     "50m_has_rechtliche_bedingung": build_rechtliche_bedingung_edges,
