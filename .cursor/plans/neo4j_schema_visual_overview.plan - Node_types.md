@@ -27,7 +27,7 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 
 > Spiegelung von [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) §1.A/B, §3, Appendix F/G. **Typgraph:** je **ein** UI-Knoten pro Eintrag unten. **Spielgraph:** pro Label-**Typ** Instanzen nach Capping-Regeln (Modus B).
 
-## A) Alle Neo4j-Labels — **45** Knoten im Typgraph
+## A) Alle Neo4j-Labels — **44** Label-Typen (Referenz)
 
 ### §1.A Primär-Labels (**9**)
 
@@ -41,7 +41,7 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 8. `:Tool`  
 9. `:Wiederverwendungskette`  
 
-### §1.B Weitere Labels (**36**)
+### §1.B Weitere Labels (**35**)
 
 10. `:Bauteiltyp`  
 11. `:Material`  
@@ -74,11 +74,10 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 38. `:Stadt`  
 39. `:Akteurrolle`  
 40. `:Datenqualitaet`  
-41. `:Datenmodell`  
-42. `:Tooltyp`  
-43. `:ZertifizierungBewertungssystem`  
-44. `:Wirtschaft`  
-45. `:Programm`  
+41. `:Tooltyp`  
+42. `:ZertifizierungBewertungssystem`  
+43. `:Wirtschaft`  
+44. `:Programm`  
 
 ---
 
@@ -103,9 +102,9 @@ Erfolg: Du erkennst auf einen Blick, ob **Label-Menge**, **Kantentypen** und **d
 **Ziel-Labels („Klassifikation“; im Typgraph je eine gerichtete Kante Subjekt → Ziel, sofern fachlich möglich):**  
 alle **§1.B**-Labels **außer** `:Status` und **außer** `:Akteurrolle` (**kein** `IST` aufs Wörterbuch `Akteurrolle`, Hauptplan §1.B).
 
-Also **33** Ziel-Labels für `IST` (alle §1.B **außer** `:Status`, `:Akteurrolle`, `:Entwurfsentscheidung` — letzteres nur per `HAT { art: "entwurf" }`):
+Also **32** Ziel-Labels für `IST` (alle §1.B **außer** `:Status`, `:Akteurrolle`, `:Entwurfsentscheidung` — letzteres nur per `HAT { art: "entwurf" }`):
 
-`:Bauteiltyp`, `:Material`, `:Bauteilebene`, `:Bauteilzustand`, `:Funktionswechsel`, `:Verbindungstechnik`, `:Reversibilitaet`, `:Bauweise`, `:Bausystem`, `:Tragwerksprinzip`, `:WiederverwendungsArt`, `:Ressourcenquelle`, `:Beschaffungsweg`, `:Prozessphase`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Logistik`, `:Methode`, `:Huerde`, `:PruefungNachweis`, `:Leistungsanforderung`, `:Norm`, `:RechtlicheBedingung`, `:Nutzung`, `:BauaufgabeIntervention`, `:Land`, `:Stadt`, `:Datenqualitaet`, `:Datenmodell`, `:Tooltyp`, `:ZertifizierungBewertungssystem`, `:Wirtschaft`, `:Programm`
+`:Bauteiltyp`, `:Material`, `:Bauteilebene`, `:Bauteilzustand`, `:Funktionswechsel`, `:Verbindungstechnik`, `:Reversibilitaet`, `:Bauweise`, `:Bausystem`, `:Tragwerksprinzip`, `:WiederverwendungsArt`, `:Ressourcenquelle`, `:Beschaffungsweg`, `:Prozessphase`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Logistik`, `:Methode`, `:Huerde`, `:PruefungNachweis`, `:Leistungsanforderung`, `:Norm`, `:RechtlicheBedingung`, `:Nutzung`, `:BauaufgabeIntervention`, `:Land`, `:Stadt`, `:Datenqualitaet`, `:Tooltyp`, `:ZertifizierungBewertungssystem`, `:Wirtschaft`, `:Programm`
 
 **Hinweis:** `:Entwurfsentscheidung` **nur** über `HAT` mit `art: "entwurf"` (Hauptplan Legacy-Folding), **nicht** über `IST`.
 
@@ -155,7 +154,7 @@ Von **`:Fallbeispiel`**, **`:Bauwerk`** oder **`:ReuseEinsatz`** **kein** `IST` 
 ## B.4) `BENUTZT`
 
 **Subjekt-Labels:** `:Bauteilgruppe`, `:ReuseEinsatz`, `:Bauwerk`, `:Fallbeispiel`  
-**Ziel-Labels:** `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Software`, `:Tool`, `:Datenmodell`
+**Ziel-Labels:** `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Software`, `:Tool`
 
 ---
 

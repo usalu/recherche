@@ -1,6 +1,6 @@
 ﻿# Neo4j-Visualisierung — konkreter Knotenkatalog (Modus A)
 
-Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{...}` trägt (siehe [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) § „Autoritativer vertikaler Gesamtbaum“). Abschnitt **A** des Visual-Plans listet nur die **45 Label-Typen**; **dieses Dokument** ist die Vertex-Menge für den Typgraphen mit **Instanz**-Mustern.
+Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{...}` trägt (siehe [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) § „Autoritativer vertikaler Gesamtbaum“). Abschnitt **A** des Visual-Plans listet nur die **44** Label-Typen; **dieses Dokument** ist die Vertex-Menge für den Typgraphen mit **Instanz**-Mustern.
 
 ```text
 :Fallbeispiel
@@ -407,15 +407,6 @@ Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{
   (:Datenqualitaet {id: "Sekundaerquelle"})
   (:Datenqualitaet {id: "Unbekannt"})
   (:Datenqualitaet {id: "Widerspruechlich"})
-
-:Datenmodell
-  (:Datenmodell {id: "Bauteil_ID"})
-  (:Datenmodell {id: "IFC"})
-  (:Datenmodell {id: "Klassifikation"})
-  (:Datenmodell {id: "Materialdatenbank"})
-  (:Datenmodell {id: "Materialpass_Schema"})
-  (:Datenmodell {id: "Ontologie"})
-  (:Datenmodell {id: "Taxonomie"})
 
 :Tooltyp
   (:Tooltyp {id: "Bauteilboerse"})

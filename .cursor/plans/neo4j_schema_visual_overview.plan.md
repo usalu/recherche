@@ -1,6 +1,6 @@
 ---
 name: Neo4j schema visual probe
-overview: "Visualisierungs-Plan mit **vollständiger Inventur**: alle **6** Kantentypen inkl. `GEHÖRT_ZU`-Tripel (Appendix F), `HAT.art`→Ziel, `IST`-Ziele, `BENUTZT`, `HAT_STATUS`, `BELEGT_IN`. **Modus A (Typgraph):** ein UI-Knoten pro **konkreter** `(:Label {…})`-Zeile in [neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md) — nicht nur die **45** Label-Namen aus Abschnitt A. Modus B = Spielinstanzen mit max. 10 Knoten pro Primär-Label unter {Fallbeispiel, Bauwerk, ReuseEinsatz, Akteur, Quelle, Software, Tool}."
+overview: "Visualisierungs-Plan mit **vollständiger Inventur**: alle **6** Kantentypen inkl. `GEHÖRT_ZU`-Tripel (Appendix F), `HAT.art`→Ziel, `IST`-Ziele, `BENUTZT`, `HAT_STATUS`, `BELEGT_IN`. **Modus A (Typgraph):** ein UI-Knoten pro **konkreter** `(:Label {…})`-Zeile in [neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md) — nicht nur die **44** Label-Namen aus Abschnitt A. Modus B = Spielinstanzen mit max. 10 Knoten pro Primär-Label unter {Fallbeispiel, Bauwerk, ReuseEinsatz, Akteur, Quelle, Software, Tool}."
 todos:
 
 - id: viz-typegraph
@@ -25,13 +25,13 @@ Erfolg: Du erkennst auf einen Blick, ob die **konkrete Knotenmenge** (Instanz-Mu
 
 # Vollständige Inventur — alle Knoten (Labels) und Kanten
 
-> Spiegelung von [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) §1.A/B, §3, Appendix F/G. **Typgraph (Modus A):** je **ein** UI-Knoten pro **konkreter** `(:Label { id: …, … })`-Zeile im Anhang [neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md) — **Abschnitt A** hier ist nur die **Typ-Inventur** (45 Label-Namen), nicht die Vertex-Zählung des Typgraphen. **Spielgraph (Modus B):** Instanzen nach Capping-Regeln.
+> Spiegelung von [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) §1.A/B, §3, Appendix F/G. **Typgraph (Modus A):** je **ein** UI-Knoten pro **konkreter** `(:Label { id: …, … })`-Zeile im Anhang [neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md) — **Abschnitt A** hier ist nur die **Typ-Inventur** (44 Label-Namen), nicht die Vertex-Zählung des Typgraphen. **Spielgraph (Modus B):** Instanzen nach Capping-Regeln.
 
 ## C) Konkrete Knoten für Modus A (Vertex-Liste)
 
 Siehe **[neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md)** — dort steht der vertikale Block aus dem Hauptplan (eine Zeile = ein geplanter Knoten mit Properties). `:Entwurfsentscheidung` (8 Kanon-`id`s), `:Land` / `:Stadt` (Demo-Instanzen statt Platzhaltertext) sind mitenthalten.
 
-## A) Alle Neo4j-Labels — **45** Label-Typen (Referenz, nicht Typgraph-Knotenzahl)
+## A) Alle Neo4j-Labels — **44** Label-Typen (Referenz, nicht Typgraph-Knotenzahl)
 
 ### §1.A Primär-Labels (**9**)
 
@@ -45,7 +45,7 @@ Siehe **[neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo
 8. `:Tool`  
 9. `:Wiederverwendungskette`  
 
-### §1.B Weitere Labels (**36**)
+### §1.B Weitere Labels (**35**)
 
 10. `:Bauteiltyp`  
 11. `:Material`  
@@ -78,11 +78,10 @@ Siehe **[neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo
 38. `:Stadt`  
 39. `:Akteurrolle`  
 40. `:Datenqualitaet`  
-41. `:Datenmodell`  
-42. `:Tooltyp`  
-43. `:ZertifizierungBewertungssystem`  
-44. `:Wirtschaft`  
-45. `:Programm`  
+41. `:Tooltyp`  
+42. `:ZertifizierungBewertungssystem`  
+43. `:Wirtschaft`  
+44. `:Programm`  
 
 ---
 
@@ -107,9 +106,9 @@ Siehe **[neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo
 **Ziel-Labels („Klassifikation“; im Typgraph je eine gerichtete Kante Subjekt → Ziel, sofern fachlich möglich):**  
 alle **§1.B**-Labels **außer** `:Status` und **außer** `:Akteurrolle` (**kein** `IST` aufs Wörterbuch `Akteurrolle`, Hauptplan §1.B).
 
-Also **33** Ziel-Labels für `IST` (alle §1.B **außer** `:Status`, `:Akteurrolle`, `:Entwurfsentscheidung` — letzteres nur per `HAT { art: "entwurf" }`):
+Also **32** Ziel-Labels für `IST` (alle §1.B **außer** `:Status`, `:Akteurrolle`, `:Entwurfsentscheidung` — letzteres nur per `HAT { art: "entwurf" }`):
 
-`:Bauteiltyp`, `:Material`, `:Bauteilebene`, `:Bauteilzustand`, `:Funktionswechsel`, `:Verbindungstechnik`, `:Reversibilitaet`, `:Bauweise`, `:Bausystem`, `:Tragwerksprinzip`, `:WiederverwendungsArt`, `:Ressourcenquelle`, `:Beschaffungsweg`, `:Prozessphase`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Logistik`, `:Methode`, `:Huerde`, `:PruefungNachweis`, `:Leistungsanforderung`, `:Norm`, `:RechtlicheBedingung`, `:Nutzung`, `:BauaufgabeIntervention`, `:Land`, `:Stadt`, `:Datenqualitaet`, `:Datenmodell`, `:Tooltyp`, `:ZertifizierungBewertungssystem`, `:Wirtschaft`, `:Programm`
+`:Bauteiltyp`, `:Material`, `:Bauteilebene`, `:Bauteilzustand`, `:Funktionswechsel`, `:Verbindungstechnik`, `:Reversibilitaet`, `:Bauweise`, `:Bausystem`, `:Tragwerksprinzip`, `:WiederverwendungsArt`, `:Ressourcenquelle`, `:Beschaffungsweg`, `:Prozessphase`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Logistik`, `:Methode`, `:Huerde`, `:PruefungNachweis`, `:Leistungsanforderung`, `:Norm`, `:RechtlicheBedingung`, `:Nutzung`, `:BauaufgabeIntervention`, `:Land`, `:Stadt`, `:Datenqualitaet`, `:Tooltyp`, `:ZertifizierungBewertungssystem`, `:Wirtschaft`, `:Programm`
 
 **Hinweis:** `:Entwurfsentscheidung` **nur** über `HAT` mit `art: "entwurf"` (Hauptplan Legacy-Folding), **nicht** über `IST`.
 
@@ -159,7 +158,7 @@ Von **`:Fallbeispiel`**, **`:Bauwerk`** oder **`:ReuseEinsatz`** **kein** `IST` 
 ## B.4) `BENUTZT`
 
 **Subjekt-Labels:** `:Bauteilgruppe`, `:ReuseEinsatz`, `:Bauwerk`, `:Fallbeispiel`  
-**Ziel-Labels:** `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Software`, `:Tool`, `:Datenmodell`
+**Ziel-Labels:** `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Software`, `:Tool`
 
 ---
 
@@ -218,7 +217,7 @@ Von **`:Fallbeispiel`**, **`:Bauwerk`** oder **`:ReuseEinsatz`** **kein** `IST` 
 
 **Implementierung:** 1:1 aus Abschnitt **„Vollständige Inventur“** oben — keine weiteren Labels oder Kantenmuster hinzufügen.
 
-**Knoten:** genau **45** Knoten, je einer pro **Neo4j-Label** (Abschnitt **A**).
+**Knoten:** wie Abschnitt **C**: eine UI-Vertex pro **`(:Label {…})`-Zeile** im Anhang [neo4j_schema_visual_nodes_attachment.md](e:/recherche/.cursor/plans/neo4j_schema_visual_nodes_attachment.md). Abschnitt **A** listet nur die **44** Label-Typen zur Referenz (keine 1:1-Knotenzahl des Typgraphen).
 
 **Kanten:** die **sechs** Neo4j-Relationship-Typen mit den **exakten** Endpunkt-Regeln aus **B.1–B.7** (keine abstrakten `*_typ`-Namen nötig — im Diagramm z. B. Farbe pro Kantentyp).
 
@@ -268,7 +267,7 @@ Kein Zwang zu Neo4j-Installation: Mermaid reicht für Modus A; Modus B optional 
 
 # Abgleich mit Hauptplan (Checkliste)
 
-- [ ] Alle **45** Labels im Typgraph vorhanden
+- [ ] Knoten-Anhang vollständig gegen Hauptplan § „Autoritativer vertikaler Gesamtbaum“; **44** Label-Typen in Abschnitt A mit Hauptplan §1.B konsistent
 - [ ] Alle **6** Kantentypen durch mindestens eine **Instanz**-Kante in Modus B abgedeckt
 - [ ] **Appendix F** vollständig als erlaubte `GEHÖRT_ZU`-Kanten modellierbar (kein „Phantom-Tripel“)
 - [ ] **`reuse_strategie`** nur über `HAT`+`wiederverwendungsart`, nie über `IST`
