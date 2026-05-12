@@ -1,13 +1,13 @@
 ---
 name: Neo4j schema catalogue
-overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. **Each node has exactly one Label.** **`title`** is allowed **only** on **`(:Software)`** and **`(:Tool)`** (short display name, §1.E); otherwise `body_md` / `legacy_paths` / `build_status` / raw labels stay only in source Markdown. **44** Neo4j Labels total (**nine** primary types: **case/project record** `:Fallbeispiel`, **built work** `:Bauwerk`, component group, reuse action, actors, sources, **`:Software`** (platforms/apps), **`:Tool`** (modules/scripts), chains, plus **thirty-five** folder-backed classification types). **:Software** = vollständiges digitales Ökosystem/Plattform/Anwendung; **:Tool** = kleineres Modul/Plug-in/Skript/etc., **kein** Synonym für Software (§1.E). **Six** edge types (`IST`, `HAT`, `HAT_STATUS`, `BENUTZT`, `GEHÖRT_ZU`, `BELEGT_IN`). **Deliverables:** `_database/_system/NEO4J_SCHEMA.md` + `_database/_system/NEO4J_SCHEMA_MAP.md`.
+overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. **Each node has exactly one Label.** **`title`** is allowed **only** on **`(:Software)`** and **`(:Tool)`** (short display name, §1.E); otherwise `body_md` / `legacy_paths` / `build_status` / raw labels stay only in source Markdown. **45** Neo4j Labels total (**nine** primary types: **case/project record** `:Fallbeispiel`, **built work** `:Bauwerk`, component group, reuse action, actors, sources, **`:Software`** (platforms/apps), **`:Tool`** (modules/scripts), chains, plus **thirty-six** further Labels: **thirty-five** folder-backed classification types + **`:Entwurfsentscheidung`** as a new curated Label). **:Software** = vollständiges digitales Ökosystem/Plattform/Anwendung; **:Tool** = kleineres Modul/Plug-in/Skript/etc., **kein** Synonym für Software (§1.E). **Six** edge types (`IST`, `HAT`, `HAT_STATUS`, `BENUTZT`, `GEHÖRT_ZU`, `BELEGT_IN`). **Deliverables:** `_database/_system/NEO4J_SCHEMA.md` + `_database/_system/NEO4J_SCHEMA_MAP.md`.
 todos:
 
 - id: spec-skeleton
 content: "Create _database/_system/NEO4J_SCHEMA.md (full spec) and _database/_system/NEO4J_SCHEMA_MAP.md (compact map: all Labels + properties, all edge types + properties). Same 4+appendix content order in the main spec; the map is a flattened reference."
 status: pending
 - id: write-1
-content: "Write §1 Node-type catalogue: all **44** Labels (nine primary + thirty-five folder-backed types), one-line purpose each. Confirm against _database/ folder list."
+content: "Write §1 Node-type catalogue: all **45** Labels (nine primary + thirty-six further Labels: thirty-five folder-backed + :Entwurfsentscheidung), one-line purpose each. Confirm against _database/ folder list."
 status: pending
 - id: write-2
 content: "Write §2 Nodes: per-Label property tables. ONLY metadata properties — no body, no legacy_paths, no raw labels, no build_status."
@@ -33,7 +33,7 @@ Author `_database/_system/NEO4J_SCHEMA.md` in the four-part order: §1 Node-type
 
 Author a **separate compact map** `[_database/_system/NEO4J_SCHEMA_MAP.md](_database/_system/NEO4J_SCHEMA_MAP.md)` that duplicates nothing narratively but **lists the full machine-oriented catalogue** in one place:
 
-1. **Nodes:** every Neo4j **Label** (all **44** types), each with its **complete property list** (name, type, required, notes) as in §2.
+1. **Nodes:** every Neo4j **Label** (all **45** types), each with its **complete property list** (name, type, required, notes) as in §2.
 2. **Edges:** every **relationship type** (all **six**), each with **allowed source Labels → target Labels**, cardinality, and **complete edge property list** (name, type, required, notes) as in §3–§4.
 
 The map must stay **in lockstep** with `NEO4J_SCHEMA.md` when the schema changes. Optional later: generate the map from a single YAML/JSON source of truth — not required for the first authoring pass.
@@ -46,7 +46,7 @@ The map must stay **in lockstep** with `NEO4J_SCHEMA.md` when the schema changes
 
 Lesen: **Knotentyp** = Neo4j-Label. **Knoten** = eine Instanz (ein Unterordner oder ein zusammengeführter Datensatz). **Knoteneigenschaften** = Properties auf diesem Knoten. **Kantentyp** = Relationship-Typ. **Kante** = eine konkrete Relationship zwischen zwei Knoten. **Kanteneigenschaften** = Properties auf der Kante.
 
-Kontrollierte Begriffsknoten (z. B. `:Material`, `:Status`): jedes `id` entspricht in der Regel dem Unterordnernamen unter dem passenden `_database/<label>/<id>/` (Prosa nur in `index.md`, nicht im Graphen). Jeder solche Knoten hat **genau ein** Label — seinen Typnamen.
+Kontrollierte Begriffsknoten (z. B. `:Material`, `:Status`): jedes `id` entspricht in der Regel dem Unterordnernamen unter dem passenden `_database/<label>/<id>/` (Prosa nur in `index.md`, nicht im Graphen). Jeder solche Knoten hat **genau ein** Label — seinen Typnamen. **Ausnahmen:** **`:Bauteilgruppe`** kann aus Einsatz-/Inventardaten materialisiert werden (**kein** Pflicht-Live-Ordner `_database/bauteilgruppe/`); **`:Entwurfsentscheidung`** ist kuratiert (kein `_database/`-Ordner).
 
 ```
 Neo4j_Schema
@@ -164,7 +164,7 @@ Neo4j_Schema
 │   └── Knoten: Abrissmonitoring, Bauteilkatalogisierung, Building_Material_Scouting, Design_for_Disassembly, Form_Follows_Availability, Materialinventur, Pre_Deconstruction_Audit, ReUse_Assessment, ReUse_Ausschreibung, Reversibilitaet, Urban_Mining, Wiederverwendungskriterien, Zirkulaere_Ausschreibung
 ├── KNOTENTYP :Huerde
 │   ├── Knoteneigenschaften: id (Pflicht), kategorie? (string) — für Stoff-Stammdaten aus **`schadstoff/`**: `kategorie: "Schadstoff"` (Pflicht bei diesem Import); für `huerde/`-Allgemeinhürden weglassen oder anderes Enum nach Export
-│   └── Knoten: Akzeptanzproblem, Anschlussproblem, Aufbereitungsaufwand, Ausschreibungsproblem, Bauproduktstatus, Brandschutzkonflikt, Bruch_Beschaedigungsrisiko, Datenluecke, Dauerhaftigkeit_Restlebensdauer, Entwurfsbindung, Fehlende_Datenstandards, Fehlende_Lagerflaeche, Fehlende_Standardisierung, Gewaehrleistung, Haftung, Heterogenitaet_Chargen, Hygieneanforderung, Kompatibilitaetsproblem, Materialqualitaet_Unklar, Mengenunsicherheit, Schadstoffbelastung, Technische_Freigabe, Terminunsicherheit, Toleranzen, Unkonventionelles_Material, Verfuegbarkeitsproblem, Witterung_Feuchte, Zustand_Unklar (Ordner `huerde/`) **sowie** Asbest, Bleifarbe, Holzschutzmittel, PAK, PCB (Ordner `schadstoff/` — jeweils **`kategorie: "Schadstoff"`**)
+│   └── Knoten: Akzeptanzproblem, Anschlussproblem, Aufbereitungsaufwand, Ausschreibungsproblem, Bauproduktstatus, Brandschutzkonflikt, Bruch_Beschaedigungsrisiko, Datenluecke, Dauerhaftigkeit_Restlebensdauer, Entwurfsbindung, Fehlende_Datenstandards, Fehlende_Lagerflaeche, Fehlende_Standardisierung, Haftung, Heterogenitaet_Chargen, Hygieneanforderung, Kompatibilitaetsproblem, Materialqualitaet_Unklar, Mengenunsicherheit, Schadstoffbelastung, Technische_Freigabe, Terminunsicherheit, Toleranzen, Unkonventionelles_Material, Verfuegbarkeitsproblem, Witterung_Feuchte, Zustand_Unklar (Ordner `huerde/` — **ohne** `Gewaehrleistung`: siehe **`(:RechtlicheBedingung)`**) **sowie** Asbest, Bleifarbe, Holzschutzmittel, PAK, PCB (Ordner `schadstoff/` — jeweils **`kategorie: "Schadstoff"`**)
 ├── KNOTENTYP :PruefungNachweis
 │   ├── Knoteneigenschaften: id (Pflicht)
 │   └── Knoten: Abbrandbemessung, Brandschutznachweis, Eignungspruefung_Baulehm, Geometrische_Vermessung, Materialpruefung, Schadstoffscreening, Schweissbarkeitspruefung, Sichtpruefung, Statische_Nachweisfuehrung, Zugversuch, Zustandsbewertung
@@ -298,7 +298,7 @@ Die folgenden Blöcke zeigen **Muster** (nicht die vollständige Knotenzahl). Di
   (:Bauteilgruppe {id: "55GSS_C01_Traeger_Stuetzen"})
   (:Bauteilgruppe {id: "CRCLR_C02_Wandpaneele"})
   (:Bauteilgruppe {id: "Werkhof29_C01_Fassadenbleche"})
-  ... (Muster `_database/bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/` — Graph-`id` = Ordner-Slug)
+  ... (materialisierte Gruppe aus `reuse_einsatz/` / BAUTEIL-INVENTAR — Graph-`id` folgt `<CASE>_C<NN>_<ELEMENT>`, kein Live-Ordner nötig)
 
 :ReuseEinsatz
   (:ReuseEinsatz {id: "K118_C01_Traeger_Stuetzen"})
@@ -565,7 +565,6 @@ Die folgenden Blöcke zeigen **Muster** (nicht die vollständige Knotenzahl). Di
   (:Huerde {id: "Fehlende_Datenstandards"})
   (:Huerde {id: "Fehlende_Lagerflaeche"})
   (:Huerde {id: "Fehlende_Standardisierung"})
-  (:Huerde {id: "Gewaehrleistung"})
   (:Huerde {id: "Haftung"})
   (:Huerde {id: "Heterogenitaet_Chargen"})
   (:Huerde {id: "Hygieneanforderung"})
@@ -655,7 +654,7 @@ Die folgenden Blöcke zeigen **Muster** (nicht die vollständige Knotenzahl). Di
   (:BauaufgabeIntervention {id: "Wiederaufbau"})
 
 :Land
-  — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Pla
+  — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Plan
 :Stadt
   — Knoten aus `ort/` nach Klassifikation; keine Aufzählung im Plan
 
@@ -741,7 +740,7 @@ _database/norm/ISO_20887/index.md        → node (:Norm {id: "ISO_20887"})
 
 Same rule for every folder: `_database/material/<x>/` produces `(:Material {id: "<x>"})`, `_database/huerde/<x>/` produces `(:Huerde {id: "<x>"})`, `_database/schadstoff/<x>/` produces `(:Huerde {id: "<x>", kategorie: "Schadstoff"})`, etc.
 
-`**id` vs. Ordnername:** Für die **35** folder-gestützten Labels in §1.B ist `id` in der Regel **gleich** dem Unterordnernamen (ggf. ASCII nach derselben Tabelle). Für `**:Bauteilgruppe`** im Ordner `**bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/`** und für `**:ReuseEinsatz`** in `**reuse_einsatz/<id>/`** ist Graph-`id` **gleich** dem jeweiligen Unterordner-Slug (bzw. verbindliches `<CASE>_C<NN>_<ELEMENT>`-Muster für `:Bauteilgruppe` — siehe Tabelle unten). Für die übrigen **sieben** Primär-Labels in §1.A (`:Fallbeispiel`, `:Bauwerk`, `:Akteur`, `:Quelle`, `:Software`, `:Tool`, `:Wiederverwendungskette`) ist `id` der **vom Export normalisierte** Slug nach der folgenden Tabelle — der Quellordnername ist nur Eingabe, nicht zwingend 1:1 der Graph-`id` (**`:Bauwerk`** typisch aus Legacy `bauobjekt/<id>/` oder abgeleitet und mit `(:Fallbeispiel)` verknüpft; **`:Software`** / **`:Tool`** typisch aus `software_digitaltool/<id>/` nach §1.E-Klassifikation).
+`**id` vs. Ordnername:** Für die **35** folder-gestützten Labels in §1.B ist `id` in der Regel **gleich** dem Unterordnernamen (ggf. ASCII nach derselben Tabelle). **`:Entwurfsentscheidung`** ist zusätzliches kuratiertes Label ohne Legacy-Ordner. **`:Bauteilgruppe`** wird beim Export aus `reuse_einsatz/` / BAUTEIL-INVENTAR materialisiert; Graph-`id` folgt dem verbindlichen `<CASE>_C<NN>_<ELEMENT>`-Muster, auch wenn kein Live-Ordner `_database/bauteilgruppe/` existiert. Für **`:ReuseEinsatz`** in `**reuse_einsatz/<id>/`** ist Graph-`id` **gleich** dem jeweiligen Unterordner-Slug. Für die übrigen **sieben** Primär-Labels in §1.A (`:Fallbeispiel`, `:Bauwerk`, `:Akteur`, `:Quelle`, `:Software`, `:Tool`, `:Wiederverwendungskette`) ist `id` der **vom Export normalisierte** Slug nach der folgenden Tabelle — der Quellordnername ist nur Eingabe, nicht zwingend 1:1 der Graph-`id` (**`:Bauwerk`** typisch aus Legacy `bauobjekt/<id>/` oder abgeleitet und mit `(:Fallbeispiel)` verknüpft; **`:Software`** / **`:Tool`** typisch aus `software_digitaltool/<id>/` nach §1.E-Klassifikation).
 
 **ID- und Namenskonvention (Lesbarkeit)**
 
@@ -873,7 +872,7 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | `:Wiederverwendungskette` | OPTIONAL named multi-Bauteilgruppe reuse program            | `reuse_kette/` (renamed; `reuse_kettenstation/` dropped)                                                                               |
 
 
-## §1.B Weitere Labels (35 — jeder `_database/<label>/`-Ordner **mit eigenem Neo4j-Label** **außer** `**:Akteurrolle**` (siehe §1.D: viele Legacy-Unterordner → **acht** Kanon-Knoten); `ort/` splits into two Labels; `fuegung_verbindung/` → `**:Verbindungstechnik`** only; `**:Reversibilitaet**` is a separate node type without `fuegung_verbindung/` provenance; `**reuse_strategie/**` + `**bewertungslogik_abgrenzung/**` → `**:WiederverwendungsArt**` mit `axis` (`einordnung` | `grundtyp` | `reuse_strategie`); `**bauobjektstatus/**` merged into `**:Status**` — see §1 Status tables; **`kontextmerkmal/`** → **kein** `:Kontextmerkmal`-Label — siehe §1.C; **`schadstoff/`** → **kein** `:Schadstoff`-Label — Stoff-Knoten sind **`:Huerde`** mit **`kategorie: "Schadstoff"`** — siehe §1.C)
+## §1.B Weitere Labels (36 — **35** folder-backed Labels + **1** neues kuratiertes Label `:Entwurfsentscheidung`; jeder `_database/<label>/`-Ordner **mit eigenem Neo4j-Label** **außer** `**:Akteurrolle**` (siehe §1.D: viele Legacy-Unterordner → **acht** Kanon-Knoten); `ort/` splits into two Labels; `fuegung_verbindung/` → `**:Verbindungstechnik`** only; `**:Reversibilitaet**` is a separate node type without `fuegung_verbindung/` provenance; `**reuse_strategie/**` + `**bewertungslogik_abgrenzung/**` → `**:WiederverwendungsArt**` mit `axis` (`einordnung` | `grundtyp` | `reuse_strategie`); `**bauobjektstatus/**` merged into `**:Status**` — see §1 Status tables; **`kontextmerkmal/`** → **kein** `:Kontextmerkmal`-Label — siehe §1.C; **`schadstoff/`** → **kein** `:Schadstoff`-Label — Stoff-Knoten sind **`:Huerde`** mit **`kategorie: "Schadstoff"`** — siehe §1.C)
 
 Grouped only for reading.
 
@@ -976,7 +975,7 @@ Grouped only for reading.
 | `reuse_kette/`                | renamed to `:Wiederverwendungskette`                                                                                                                                                                                     |
 | `kontextmerkmal/`             | **Kein Label `:Kontextmerkmal`:** `Pilotprojekt` → derselbe Knoten wie **`(:Programm { id: "Pilotprojekt" })`** aus `programm_kontext/` (Legacy **`has_kontextmerkmal`** → **`GEHÖRT_ZU { rolle: 'programm' }` → `:Programm`** je Exportregel); **`Bestandserhalt_Policy`** → **kein** eigener Taxonomie-Knoten (fachliche Einordnung über **`reuse_strategie/Bestandserhalt`** → **`WiederverwendungsArt`** / **`HAT { art: "wiederverwendungsart" }`** wo sinnvoll; sonst nur Markdown / **`BELEGT_IN`**) |
 | `schadstoff/`                 | **Kein Label `:Schadstoff`:** Unterordner → **`(:Huerde { id, kategorie: "Schadstoff" })`**; Kanten weiterhin **`HAT { art: "huerde" }`** (nicht mehr `art: "schadstoff"`). Legacy **`has_schadstoff`** → **`HAT { art: "huerde" }` → `:Huerde`** |
-Total: 54 folders → **44** Neo4j Labels (**9** in §1.A + **35** in §1.B) + 10 dropped + **6** merged-or-renamed (`ort/` yields two Labels; `fuegung_verbindung/` → `:Verbindungstechnik` only — `:Reversibilitaet` has no folder provenance; **`bauobjekt/`** → **`:Bauwerk`** (Primär-Label — **not** listed in §1.C); **`software_digitaltool/`** → **`:Software`** **or** **`:Tool`** per §1.E (split of former single primary **`:SoftwareDigitaltool`**); **`schadstoff/`** → **`:Huerde`** with `kategorie: "Schadstoff"` — **not** a separate Label; **`kontextmerkmal/`** → **`:Programm`** + Strategie-Vokabular — **not** a separate Label; `reuse_einsatz/` → **`:ReuseEinsatz`**; `reuse_strategie/` folds into `**:WiederverwendungsArt`** as `**axis: "reuse_strategie"**` (**six** canonical `id`s — not a separate Label; `bauobjektstatus/` + `reuse_einsatzstatus/` → **one** `:Status` Label with **seven** canonical nodes).
+Total: live folders → **45** Neo4j Labels (**9** in §1.A + **36** in §1.B: **35** folder-backed + **`:Entwurfsentscheidung`** as curated new Label) + dropped / merged folders as listed above (`ort/` yields two Labels; `fuegung_verbindung/` → `:Verbindungstechnik` only — `:Reversibilitaet` has no folder provenance; **`bauobjekt/`** → **`:Bauwerk`** (Primär-Label — **not** listed in §1.C); **`software_digitaltool/`** → **`:Software`** **or** **`:Tool`** per §1.E (split of former single primary **`:SoftwareDigitaltool`**); **`schadstoff/`** → **`:Huerde`** with `kategorie: "Schadstoff"` — **not** a separate Label; **`kontextmerkmal/`** → **`:Programm`** + Strategie-Vokabular — **not** a separate Label; `reuse_einsatz/` → **`:ReuseEinsatz`**; `reuse_strategie/` folds into `**:WiederverwendungsArt`** as `**axis: "reuse_strategie"**` (**six** canonical `id`s — not a separate Label; `bauobjektstatus/` + `reuse_einsatzstatus/` → **one** `:Status` Label with **seven** canonical nodes).
 
 ## §1.D `:Akteurrolle` — Kanon-Bündel (8 Knoten)
 
@@ -1154,7 +1153,7 @@ Where each of those previously lived in the graph (and now lives as an edge or i
 - `alte_funktion` / `neue_funktion` → on the `BENUTZT` edge: `funktion_alt`, `funktion_neu`.
 - `herkunft_label` → resolved to `GEHÖRT_ZU {rolle:'herkunft'}→:Bauwerk` (subject `:ReuseEinsatz` or `:Bauteilgruppe` per §3); if unresolvable, lost at graph level.
 - `pruefung_label`, `norm_recht_label`, `huerde_label` → broken into atomic `HAT` edges to `:PruefungNachweis` / `:Norm` / `:Huerde` (subject typically `:ReuseEinsatz`, `:Bauwerk`, or `:Fallbeispiel`).
-- `quelle_label` → broken into `:BELEGT_IN` edges to `:Quelle` nodes.
+- `quelle_label` → when resolvable, `:BELEGT_IN` edges to `:Quelle` nodes; otherwise remains in Markdown only (§4.F).
 
 ## §2.D `:ReuseEinsatz`
 
@@ -1273,7 +1272,7 @@ Zusätzliche Properties nur bei ausgewählten Labels:
 | `HAT_STATUS` | `:Bauwerk`, `:ReuseEinsatz`, `:Fallbeispiel` (optional), `:Bauteilgruppe` (optional)                                                                         | `:Status`                                                                                                                                                                                                                                                                                                                                      | N:1 typical | lifecycle — **Gebäude/Anlage** kanonisch **`(:Bauwerk)`** (`bauobjektstatus/`); **Einsatz** (`:ReuseEinsatz`); optional Fallakte (`:Fallbeispiel`) / Gruppe (`:Bauteilgruppe`)                                                       |
 | `BENUTZT`    | `:Bauteilgruppe`, `:ReuseEinsatz`, `:Bauwerk`, `:Fallbeispiel`                                                                                    | `:Material`, `:Methode`, `:Rueckbauverfahren`, `:Aufbereitungsverfahren`, `:Software`, `:Tool`, `:Datenmodell`                                                                                                                                                                                                                                | N:M         | instrumental usage; quantitative carrier                                                                                                                      |
 | `GEHÖRT_ZU`  | `:Bauwerk`, `:ReuseEinsatz`, `:Bauteilgruppe`, `:Fallbeispiel`, `:Software`, `:Tool`                                                   | `:Fallbeispiel`, `:Bauwerk`, `:Bauteilgruppe`, `:Wiederverwendungskette`, `:Land`, `:Stadt`, `:Programm`, `:Software`                                                                                                                                                                                                                                                    | N:1 / N:M   | membership / **Bauwerk → Fallakte** (`rolle: 'fallbeispiel'`) / **ReuseEinsatz → Fallakte** (`rolle: 'fallbeispiel'`) / **ReuseEinsatz → Bauteilgruppe** (`rolle: 'bauteilgruppe'`) / **Tool → Software** (`rolle: 'software'`) / chain / location / origin                                                           |
-| `BELEGT_IN`  | any node carrying a citable claim                                                                                                   | `:Quelle`                                                                                                                                                                                                                                                                                                                                      | N:M         | citation / evidence — the only place source attribution lives                                                                                                    |
+| `BELEGT_IN`  | **§1.A**-Instanzknoten (`:Fallbeispiel`, `:Bauwerk`, `:Bauteilgruppe`, `:ReuseEinsatz`, `:Akteur`, `:Quelle`, `:Software`, `:Tool`, `:Wiederverwendungskette`) **plus** **`(:Entwurfsentscheidung)`**; **§1.B**-Klassifikationsknoten **nur**, wenn die Quelle den **Taxonomieeintrag** (nicht bloße Erwähnung im Fließtext) belegt | `:Quelle`                                                                                                                                                                                                                                                                                                                                      | N:M         | citation / evidence — the only place source attribution lives; **keine** Kante ohne auflösbares Ziel-`(:Quelle)` (§4.F)                                                                                                    |
 
 
 ## Legacy relations folded in
@@ -1283,7 +1282,7 @@ Zusätzliche Properties nur bei ausgewählten Labels:
 - **HAT:** `has_reuse_strategie` → **`HAT { art: "wiederverwendungsart" }`** → `:WiederverwendungsArt` (`axis: "reuse_strategie"`); `has_huerde`, `has_prozessphase`, `has_pruefung_nachweis`, `references_norm`, `has_leistungsanforderung`, `has_schadstoff` → **`HAT { art: "huerde" }` → `:Huerde`** (Zielknoten aus `schadstoff/` mit `kategorie: "Schadstoff"`), `has_rechtliche_bedingung`, `has_nutzung`, `has_bauaufgabe_intervention`, `has_fuegung_verbindung` → **only** `HAT {art:'verbindungstechnik'}` → `:Verbindungstechnik` per §1 Verbindungstabelle (technique subfolders); `**HAT {art:'reversibilitaet'}`** → `:Reversibilitaet` is **independent** (explicit metadata — not from `fuegung_verbindung/`), `has_logistik`, `has_wirtschaft`, plus actor participation `has_akteurrolle` → `HAT {art:'akteur', rolle:...}`, plus `has_entwurfsentscheidung` → `HAT {art:'entwurf'}` from `:ReuseEinsatz`, `:Bauteilgruppe`, `:Bauwerk`, or `:Fallbeispiel` to `:Entwurfsentscheidung`.
 - **BENUTZT:** `uses_material`, `uses_software_digitaltool` → **`BENUTZT`** → **`(:Software)`** oder **`(:Tool)`** je §1.E, `has_methode`, `has_rueckbauverfahren`, `has_aufbereitungsverfahren`.
 - **GEHÖRT_ZU:** `belongs_to_fallstudie` / `belongs_to_projekt` (Legacy, soweit sie den Fall-/Projekt-Datensatz des Einsatzes meinen) → **`:ReuseEinsatz` → `:Fallbeispiel`** mit `rolle:'fallbeispiel'`; `installed_in_bauobjekt` → `rolle:'einbauort'` → Ziel **`(:Bauwerk)`** (subject often **`:ReuseEinsatz`** oder `:Bauteilgruppe`); `sourced_from_bauobjekt` → `rolle:'herkunft'` → **`(:Bauwerk)`**; **`:ReuseEinsatz` → `:Bauteilgruppe`** → `rolle:'bauteilgruppe'`; **`:Bauwerk` → `:Fallbeispiel`** → `rolle:'fallbeispiel'` (Fallakte); `part_of_reuse_kette` → `rolle:'kette'` (to `:Wiederverwendungskette`); **`:Tool` → `:Software`** → `rolle:'software'` (Host-Plattform, optional); `located_in_ort` → split: `rolle:'land'` (to `:Land`) and/or `rolle:'stadt'` (to `:Stadt`) depending on classified target; `involves_foerderprogramm` / `has_programm_kontext` → `rolle:'programm'` (to `:Programm`). Ehemaliges **`has_kontextmerkmal` (Pilotprojekt)** → **`GEHÖRT_ZU { rolle: 'programm' }` → `(:Programm { id: "Pilotprojekt" })`** auch von Subjekten wie **`:Software`** / **`:Tool`** (§1.C). **Achtung:** Legacy `relates_to_bauobjekt` von `akteur_beteiligung` ist **nicht** automatisch `Bauwerk→Fallbeispiel`; es wird beim Actor-Fold nur zur Bestimmung des Subjektkontexts verwendet.
-- **BELEGT_IN:** replaces resolved `quelle_label` shorthand on every node and every `quelle_id` previously planned as edge property. Replaces the gap relation `documented_in_quelle`. Direction: claim → `:Quelle`. If a shorthand (`"[S1]"`, `"S4"`) cannot be resolved to a stable `:Quelle`, do **not** invent a source node; keep it only as `raw_label` on `BELEGT_IN` if an evidence edge is still created, otherwise leave it in Markdown provenance.
+- **BELEGT_IN:** replaces resolved `quelle_label` shorthand on claim-holding nodes and every `quelle_id` previously planned as edge property. Replaces the gap relation `documented_in_quelle`. Direction: claim → `:Quelle`. If a shorthand (`"[S1]"`, `"S4"`) cannot be resolved to a stable `(:Quelle)`, do **not** invent a source node and do **not** create `BELEGT_IN`; leave the shorthand in source Markdown only. When `BELEGT_IN` exists, `raw_label` may repeat the shorthand for audit (§4.F).
 
 Dropped legacy relations (no direct destination after folding): `has_projekt`, `has_bauobjekt`, `has_bauobjektklasse`, `has_bauobjektrolle`, `has_tragwerkstyp`, `has_dokumenttyp`, `has_akteurrolle` (target dropped), `measured_on_bauobjekt`, `measures_kennwertdefinition`, `involves_akteur` (collapsed into HAT). Legacy `belongs_to_fallstudie` / `belongs_to_projekt` are **not dropped** when they identify the Einsatz-Fallakte; they fold into `GEHÖRT_ZU {rolle:'fallbeispiel'}`.
 
@@ -1291,7 +1290,7 @@ Dropped legacy relations (no direct destination after folding): `has_projekt`, `
 
 # §4 Edges — properties per edge type
 
-**Note:** None of IST / HAT / HAT_STATUS / BENUTZT / GEHÖRT_ZU carry a `quelle_id` or `quelle_label`. Source attribution lives exclusively on `:BELEGT_IN` edges from the edge's source node, optionally scoped via the `eigenschaft` property.
+**Note:** None of IST / HAT / HAT_STATUS / BENUTZT / GEHÖRT_ZU carry a `quelle_id` or `quelle_label`. Source attribution lives exclusively on `:BELEGT_IN` edges **from the claim-holding node** (the node asserting the fact), optionally scoped via the `eigenschaft` property — **not** “from the subject of another relationship” as a substitute for a missing node-level citation.
 
 ## §4.A `:IST`
 
@@ -1365,7 +1364,7 @@ Direction: **(claim) → (:Quelle)**.
 | `raw_label`   | string? | –   | original shorthand (`"S4"`, `"[S1]"`)                                                                                                |
 
 
-**Resolution rule:** `quelle_label` / `quelle_id` is never stored on nodes or on non-evidence edges. If the source shorthand resolves to a stable `(:Quelle)`, create `BELEGT_IN` and keep the shorthand in `raw_label` if useful for audit. If the shorthand is case-local or unresolved, do **not** create a fake `:Quelle`; either create a scoped `BELEGT_IN` only when the target source is known, or leave the unresolved shorthand in the source Markdown.
+**Resolution rule:** `quelle_label` / `quelle_id` is never stored on nodes or on non-evidence edges. **Create `BELEGT_IN` only** when the shorthand resolves to a stable `(:Quelle)`; then optionally copy the shorthand into `raw_label` for audit. If the shorthand is case-local or unresolved, do **not** create a fake `:Quelle` and do **not** create `BELEGT_IN`; leave the shorthand in the source Markdown only.
 
 ---
 
@@ -1375,7 +1374,7 @@ Direction: **(claim) → (:Quelle)**.
 - **Modes A/B/C coexist** but Mode A (property) is reserved for: identifiers, type discriminators (`art`, `programm_typ`, `axis`), and quantitative measurements (with `_alt`/`_vertrauensgrad` shadows).
 - **Measurement placement.** Building-level → **`:Bauwerk`**. Fall-/Projektakte ohne separates Bauwerk → Messwerte nur auf `:Fallbeispiel`, wenn der Export kein `:Bauwerk` materialisiert (Ausnahme; Zielzustand: **`:Bauwerk`**). **Physical** component-group quantities → `:Bauteilgruppe`. **Reuse-action** KPIs (share, CO₂ impact, reuse targets) → `:ReuseEinsatz`. Inherently relational quantities → on the `BENUTZT` edge.
 - **Role placement.** A role IS an edge property, never a node target. `:HAT {art:'akteur', rolle:'Planung_Gestaltung'}->(:Akteur)`. `:Akteurrolle` supplies **exactly eight** dictionary nodes (§1.D); `rolle` on the edge is **always** one of those canonical ids, mapped from legacy `akteurrolle/` folder names at export.
-- **Citation placement.** Source attribution NEVER lives as a property. Always `:BELEGT_IN → :Quelle` with optional `eigenschaft` to scope.
+- **Citation placement.** Source attribution NEVER lives as a property. **`BELEGT_IN` → `:Quelle`** only when the shorthand resolves to a stable `(:Quelle)`; optional `eigenschaft` scopes the cited field. Unresolved shorthands stay in Markdown only.
 - **Naming.** German PascalCase Labels, SCREAMING_SNAKE edges, snake_case properties.
 - **`**:Status` (einheitlich).** Genau **sieben** Kanon-Knoten (§1). **`HAT_STATUS`** von **`:Bauwerk`** (Gebäude-/Anlagen-Lebenszyklus — kanonisch für `bauobjektstatus/`), **`(:ReuseEinsatz)`** (Einsatz-Lebenszyklus — kanonisch), optional **`(:Fallbeispiel)`** / **`(:Bauteilgruppe)`** → `:Status`. Label **`:Bauobjektstatus`** entfällt; Ordner `bauobjektstatus/` mappt auf dieselben Knoten.
 - **`**:WiederverwendungsArt` — drei Achsen (`axis`).** *Art der Wiederverwendung* (Direkt, Umnutzung, …) ist **`axis: "reuse_strategie"`** auf **`(:WiederverwendungsArt)`** — **sechs** Kanon-`id`s (§1). **`(:Fallbeispiel)`**, **`(:Bauwerk)`** und **`(:ReuseEinsatz)`** verbinden diese Knoten nur per **`HAT { art: "wiederverwendungsart" }`** (kein eigener Kantentyp). **Einordnung** und **Grundtyp** bleiben **`axis: "einordnung"`** / **`"grundtyp"`** und werden von Fall/**Bauwerk**/**Einsatz**/Gruppe weiter über **`IST`** erreicht (Subjekt je nach Achse).
@@ -1391,27 +1390,28 @@ Direction: **(claim) → (:Quelle)**.
 
 # Appendix C — Coverage checklist
 
-The Labels in §1.A + §1.B + the drop/merge table in §1.C account for every folder under `_database/` (54 folders + `_edges` + `_system`). **Gesamt: 44 Neo4j-Labels** (§1.A + §1.B). Ordner **`kontextmerkmal/`** bleibt im Dateibaum, hat aber **kein** eigenes Neo4j-Label (§1.C). Ordner **`akteurrolle/`** bleibt mit vielen Unterordnern; im Graphen gibt es dafür nur **acht** `:Akteurrolle`-Knoten (§1.D).
+The Labels in §1.A + §1.B + the drop/merge table in §1.C account for every folder under `_database/` (live folder count may differ from Neo4j label count by design; `_edges` + `_system` are system folders, and several entity folders collapse into properties/roles/edges). **Gesamt: 45 Neo4j-Labels** (**9** Primär-Labels + **36** weitere Labels; davon **35** folder-backed und **`:Entwurfsentscheidung`** als neues kuratiertes Label). Ordner **`kontextmerkmal/`** bleibt im Dateibaum, hat aber **kein** eigenes Neo4j-Label (§1.C). Ordner **`akteurrolle/`** bleibt mit vielen Unterordnern; im Graphen gibt es dafür nur **acht** `:Akteurrolle`-Knoten (§1.D).
 
 YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reuse_einsatz` / `datenpunkt` / `akteur_beteiligung`:
 
 - structural relations (`fallstudie:`, `projekt:`, `bauobjekt:`) → resolved or collapsed
+- direct Einsatz membership (`belongs_to_fallstudie`, `belongs_to_projekt` when used as case anchor) → `(:ReuseEinsatz)-[:GEHÖRT_ZU {rolle:'fallbeispiel'}]->(:Fallbeispiel)`
 - measurement fields (`wert:`, `einheit:`) → properties on **`:Bauwerk`** (Gebäudeebene), `:Bauteilgruppe` / `:ReuseEinsatz` (siehe §2 Messplatzierung), optional `:Fallbeispiel` nur wenn kein `:Bauwerk`-Knoten exportiert wird
 - canonical-axis fields (`bauteiltyp:`, `material:`, …) → IST / BENUTZT edges to classification nodes
 - raw labels (`bauteil_label:`, `material_label:`, `pruefung_label:`, `huerde_label:`, …) → NOT in the graph; remain only in the source Markdown
 - prose `body` → NOT in the graph
-- `quelle_label:` → resolved to `:Quelle` nodes + `:BELEGT_IN` edges
+- `quelle_label:` → resolved to `:Quelle` nodes + `:BELEGT_IN` edges; unresolved local shorthands remain **only** in Markdown (no orphan `BELEGT_IN`, no `raw_label` without a real edge to `(:Quelle)`)
 - `legacy_paths:`, `build_status:` → NOT in the graph
 - **`akteurrolle/`** (viele Legacy-Unterordner) → **acht** kanonische **`(:Akteurrolle)`**-Knoten; `HAT.rolle` = Bund-`id` (§1.D)
 - **`kontextmerkmal/`** (zwei Stubs) → **kein** `:Kontextmerkmal`-Knoten: **`Pilotprojekt`** → **`(:Programm { id: "Pilotprojekt" })`**; **`Bestandserhalt_Policy`** → kein Taxonomie-Knoten (§1.C)
 
 # Appendix D — Renamings, drops, merges
 
-
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Topic / legacy source | Destination / rule |
+| --------------------- | ------------------ |
 | `fallstudie/` + `projekt/` (shared id)                                                                                 | merged into **`:Fallbeispiel`** — **Fall-/Projektakte**                                                                                                                      |
 | `bauobjekt/` (pro physisches Bauwerk)                                                                                  | **`(:Bauwerk)`**; `GEHÖRT_ZU {rolle: 'fallbeispiel'}` → **`(:Fallbeispiel)`** bei gleicher Fall-ID                                                                           |
-| `reuse_einsatz/`                                                                                                         | **`(:ReuseEinsatz)`** — eine Instanz pro Ordner; `GEHÖRT_ZU {rolle: 'bauteilgruppe'}` → **`(:Bauteilgruppe)`** wenn physische Gruppe materialisiert; kanonische physische Pfade weiterhin `**bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/**` |
+| `reuse_einsatz/`                                                                                                         | **`(:ReuseEinsatz)`** — eine Instanz pro Ordner; immer `GEHÖRT_ZU {rolle: 'fallbeispiel'}` → **`(:Fallbeispiel)`**; zusätzlich `GEHÖRT_ZU {rolle: 'bauteilgruppe'}` → **`(:Bauteilgruppe)`** wenn physische Gruppe materialisiert; `:Bauteilgruppe` kann aus Inventar/Einsatzdaten entstehen und benötigt keinen Live-Ordner |
 | `reuse_kette/`                                                                                                           | renamed to `:Wiederverwendungskette` (kept; optional grouping)                                                                                                               |
 | `reuse_kettenstation/`                                                                                                   | dropped — stations become GEHÖRT_ZU edges from `:ReuseEinsatz` (preferred) or `:Bauteilgruppe`                                                                               |
 | `bewertungslogik_abgrenzung/`                                                                                            | renamed to `:WiederverwendungsArt`, absorbed values of dropped Bauteilgruppentyp via `axis` property                                                                         |
@@ -1427,12 +1427,13 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 | `datenpunkt/`                                                                                                            | dropped — measurements become node properties                                                                                                                                |
 | `software_digitaltool/` (früher monolithisch `:SoftwareDigitaltool`) | Split in **`(:Software)`** und **`(:Tool)`** nach §1.E; Legacy **`uses_software_digitaltool`** → **`BENUTZT`** → `:Software` \| `:Tool` |
 | `schadstoff/`                                                                                                            | **Label `:Schadstoff` removed** — Unterordner → **`(:Huerde { id, kategorie: "Schadstoff" })`**; **`HAT { art: "huerde" }`** (§1.C) |
+| `huerde/Gewaehrleistung` (Legacy-Doppelung)                                                                               | **`(:RechtlicheBedingung { id: "Gewaehrleistung" })`** — **kein** zweiter Knoten unter `:Huerde` mit derselben `id` |
 | All `body_md`, `legacy_paths`, `build_status`, `title`, raw-label properties on any node                                 | dropped — graph is metadata-only **except** `title` (and optional fields §1.E) on **`(:Software)`** / **`(:Tool)`** only                                                                                                                                             |
 | Graph-`id` auf Instanz-Labels (`:Fallbeispiel`, `:Bauwerk`, `:ReuseEinsatz`, `:Akteur`, `:Quelle`, `:Software`, `:Tool`, `:Wiederverwendungskette`) | nicht zwingend 1:1 alter Ordner-/Dateiname — **Normalisierung** nach §1 **ID- und Namenskonvention (Lesbarkeit)** (ASCII, ein `_`, keine Listen/`_`_-Padding-Slugs)          |
-| `:Bauteilgruppe` unter `bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/`                                                           | Graph-`id` **=** Ordner-Slug (verbindliches Muster §1) — **physische** Gruppe                                                                                                                        |
+| `:Bauteilgruppe` unter `<CASE>_C<NN>_<ELEMENT>`                                                                           | Graph-`id` folgt dem verbindlichen Muster §1 — **physische** Gruppe; kann beim Export aus `reuse_einsatz/` / BAUTEIL-INVENTAR materialisiert werden, auch ohne `_database/bauteilgruppe/` live folder                                                                                                                        |
 | `:ReuseEinsatz` aus `reuse_einsatz/<id>/`                                                                              | Graph-`id` **=** Ordner-Slug; Verknüpfung zur Gruppe per `GEHÖRT_ZU {rolle: 'bauteilgruppe'}` — **Aktion** getrennt von **`:Bauteilgruppe`**                                                                 |
 | `:BELEGT` (Quelle → claim)                                                                                               | reversed and renamed to `:BELEGT_IN` (claim → Quelle)                                                                                                                        |
-| All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties anywhere                                         | dropped — replaced exclusively by `:BELEGT_IN` edges                                                                                                                         |
+| All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties anywhere                                         | dropped — replaced exclusively by `:BELEGT_IN` edges when resolvable; unresolved local shorthands are not promoted to fake `:Quelle` nodes                                                                                                                         |
 | `Moebelsepearat` value in WiederverwendungsArt                                                                           | renamed to `Moebel_separat`                                                                                                                                                  |
 | `ort/Scwheiz`                                                                                                            | renamed to `ort/Schweiz`; export classifies the node as `:Land` or `:Stadt` (no `:Ort`)                                                                                      |
 | `reuse_einsatzstatus/`                                                                                                   | merged into `**:Status`** — **seven** canonical `id`s + legacy mapping (§1); edges `**HAT_STATUS`** (not `IST`)                                                              |
@@ -1470,7 +1471,7 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 
 ## Final counts
 
-- **44** Labels total (**9** primär in §1.A + **35** in §1.B)
+- **45** Labels total (**9** primär in §1.A + **36** in §1.B: **35** folder-backed + **`:Entwurfsentscheidung`**)
 - **6** edge types (`IST`, `HAT`, `HAT_STATUS`, `BENUTZT`, `GEHÖRT_ZU`, `BELEGT_IN`)
 - **0** body / legacy / prose on nodes **except** `title` (+ optional §1.E fields) on **`(:Software)`** / **`(:Tool)`** only
 
