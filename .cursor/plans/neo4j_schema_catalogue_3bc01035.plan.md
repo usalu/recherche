@@ -242,206 +242,51 @@ Hinweis: Ordner ohne eigenen Knotentyp (z. B. `datenpunkt/`, `kennwertdefinition
 
 Diese Liste ist die gewünschte Zielform für die finale Schema-Datei: **ein Knotentyp, darunter jeder Knoten einzeln vertikal, mit seinen Properties direkt daneben**. Keine horizontalen Kommalisten in der finalen Fassung.
 
-Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` beginnt, definiert **genau einen** Knoten. Diese Zeile enthält alle Knoten-Properties **im selben Zeilen-Block** (keine zweizeiligen Node-Definitionen). Die Properties stehen als genau ein `{...}`-Block (z. B. `{id: "Stahl", axis: "grundtyp"}`).
+Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` beginnt, definiert **genau einen** Knoten. Diese Zeile enthält alle Knoten-Properties **im selben Zeilen-Block** (keine zweizeiligen Node-Definitionen). Die Properties stehen als genau ein `{...}`-Block (z. B. `{id: "Stahl", axis: "grundtyp"}`). **Alle `id`-Werte** folgen zusätzlich der Tabelle **„ID- und Namenskonvention (Lesbarkeit)“** in §1 (ASCII, keine Listenzeichen, keine `__`-Monster-Slugs).
+
+Die folgenden Blöcke zeigen **Muster** (nicht die vollständige Knotenzahl). Die endgültige Exportliste folgt §1 **ID- und Namenskonvention (Lesbarkeit)**.
 
 ```text
 :Fallbeispiel
+  (:Fallbeispiel {id: "Berlin_Schildow_Pilot_Haus", art: "Gebaeude"})
   (:Fallbeispiel {id: "55_Great_Suffolk_Street_London", art: "Lager"})
-  (:Fallbeispiel {id: "Altes_Hobelwerk_Winterthur", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Areal_Walkeweg_Nord", art: "Anlage"})
-  (:Fallbeispiel {id: "Association_house_Groeditz", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Association_house_Plauen", art: "Gebaeude"})
+  (:Fallbeispiel {id: "K118_Halle_118_Winterthur", art: "Halle"})
   (:Fallbeispiel {id: "AWM_Muenster_Circular_Office", art: "Innenausbau"})
-  (:Fallbeispiel {id: "BedZED_London_Hackbridge", art: "Anlage"})
-  (:Fallbeispiel {id: "Berlin_Schildow_Pilot_House", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Berlin_Schildow_Pilot_House_2", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Bestandshalle_CRCLR_House", art: "Innenausbau"})
-  (:Fallbeispiel {id: "Bestandverplanzung_Pavilion_Muenchen", art: "Pavillon"})
-  (:Fallbeispiel {id: "Big_Dig_Building_Boston", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Big_Dig_House_Lexington_Massachusetts", art: "Gebaeude"})
-  (:Fallbeispiel {id: "BioPartner_5_Leiden_Oegstgeest", art: "Gebaeude"})
-  (:Fallbeispiel {id: "BlueCity_Offices_Rotterdam", art: "Gebaeude"})
-  (:Fallbeispiel {id: "BOELL_LAB_Berlin", art: "Pavillon"})
-  (:Fallbeispiel {id: "Boulder_Fire_Station_3", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Brent_Cross_Town_Primary_Substation_London", art: "Anlage"})
-  (:Fallbeispiel {id: "Brighton_Waste_House_Brighton", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Broethen_Twin_House_Hoyerswerda", art: "Gebaeude"})
-  (:Fallbeispiel {id: "CascadeUp_London_secondary_timber_glulam_demonstrator", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Charles_Malis_Molenbeek", art: "Gebaeude"})
-  (:Fallbeispiel {id: "Chiro_d_Itterbeek_Dilbeek", art: "Pavillon"})
-  (:Fallbeispiel {id: "Christ_Pavilion_Volkenroda", art: "Pavillon"})
-  (:Fallbeispiel {id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot", art: "Anlage"})
-  (:Fallbeispiel {id: "Circular_Pavilion_Paris", art: "Pavillon"})
-  (:Fallbeispiel {id: "CRCLR_House_Impact_Hub_Berlin", art: "Anlage"})
-  (:Fallbeispiel {id: "Da_Vinci_Business_District", art: "Anlage"})
-  (:Fallbeispiel {id: "Elementa", art: "Gebaeude"})
-  (:Fallbeispiel {id: "ELYS_Kultur_Gewerbehaus_Basel", art: "Gebaeude"})
-  ... (weitere :Fallbeispiel-Knoten)
+  ... (alle weiteren Fallbeispiele: ASCII, logische Wortfolge, keine Sonderzeichen-Mojibake)
 
 :Bauteilgruppe
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London__001__Stahlprofile_f_r_neuen_externen_Kern"})
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London__002__Stahl_aus_1_Broadgate"})
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London__003__Reclaimed_stock_von_Cleveland"})
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London__004__Bestandslagerhaus"})
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London__005__Br_ckenlinks_zum_Kern"})
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London__006__Fassadenbekleidung_externer_Kern"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__001__Au_enwand_Fertigteile"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__002__Innenwand_Fertigteile"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__003__Innenwandrahmen"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__004__Deckenelemente"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__005__Sockel_Plinthenplatten"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__006__Treppen"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__007__WBS70_Paneele"})
-  (:Bauteilgruppe {id: "Association_house_Groeditz__008__Fenster_T_ren_Dach_Gel_nder_Bodenaufbauten_TGA_D"})
-  (:Bauteilgruppe {id: "Association_house_Plauen__001__Decken_Bodenplatten"})
-  (:Bauteilgruppe {id: "Association_house_Plauen__002__Au_enwandelemente"})
-  (:Bauteilgruppe {id: "Association_house_Plauen__003__Innenwandelemente"})
-  (:Bauteilgruppe {id: "Association_house_Plauen__004__Kellerwandelemente"})
-  (:Bauteilgruppe {id: "Association_house_Plauen__005__Tr_ger"})
-  (:Bauteilgruppe {id: "Association_house_Plauen__006__St_tzen"})
-  (:Bauteilgruppe {id: "Association_house_Plauen__007__Fenster_T_ren_Dach_Treppen_Gel_nder_TGA_D_mmung"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__001__Glastrennw_nde_und_T_ren"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__002__WC_Trennw_nde"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__003__Kabeltrassen_als_Regale"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__004__Kabeltrassen_und_LED_Leuchten"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__005__Wandverkleidung_aus_Stuhllehnen_sitzen"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__006__Sideboard_Holzeinbauten"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__007__Hanfkalksteine"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__008__Lehmbauw_nde"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office__009__Akustik_Baffeln"})
-  ... (weitere :Bauteilgruppe-Knoten)
+  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London_stahlprofil_externer_kern"})
+  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London_stahl_aus_Broadgate"})
+  (:Bauteilgruppe {id: "Association_house_Plauen_traeger"})
+  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office_glastrennwaende"})
+  ... (Muster `{fallbeispiel_id}_{gruppe_kurz}` — kein `__001__`-Padding, keine `_r`-/`_nd`-Fragmente aus kaputter Kodierung)
 
 :Akteur
-  (:Akteur {id: "Architects_for_Future_Deutschland"})
-  (:Akteur {id: "Architektenkammer_Berlin_A_Wie_Zirkulaer"})
-  (:Akteur {id: "Arup"})
-  (:Akteur {id: "baubuero_in_situ_zirkular"})
-  (:Akteur {id: "Bauhaus_Erde"})
-  (:Akteur {id: "Bauteilboerse_Bremen"})
-  (:Akteur {id: "Bauteilboerse_Hannover"})
-  (:Akteur {id: "Bauteilnetz_Deutschland"})
-  (:Akteur {id: "BBSR_Zukunft_Bau"})
-  (:Akteur {id: "BDA_Bund_Deutscher_Architektinnen_Architekten"})
-  (:Akteur {id: "Bellastock"})
-  (:Akteur {id: "BIM_Berlin"})
-  (:Akteur {id: "BIZH"})
-  (:Akteur {id: "BLAF_Architecten"})
-  (:Akteur {id: "Bundesstiftung_Bauakademie"})
-  (:Akteur {id: "Bundesstiftung_Baukultur"})
-  (:Akteur {id: "C2C_NGO"})
-  (:Akteur {id: "cepezed"})
   (:Akteur {id: "Circular_Berlin"})
   (:Akteur {id: "Circular_Structural_Design"})
-  (:Akteur {id: "CITYFOERSTER"})
-  (:Akteur {id: "Cleveland_Steel_and_Tubes"})
-  (:Akteur {id: "Concular"})
-  (:Akteur {id: "Consolis_Parma"})
-  (:Akteur {id: "CRCLR_House"})
-  (:Akteur {id: "desiree_mann"})
-  (:Akteur {id: "DGNB"})
+  (:Akteur {id: "Bellastock"})
+  (:Akteur {id: "Arup"})
   (:Akteur {id: "Dirk_Hebel"})
-  (:Akteur {id: "Drees_und_Sommer"})
-  (:Akteur {id: "ellen_macarthur"})
-  ... (weitere :Akteur-Knoten)
+  ... (eine Organisation oder Person pro Knoten — keine `A;B,C`-Listen in `id`)
 
 :Quelle
-  (:Quelle {id: "abbruchmethode_Ausbau_von_Bauteilen_md", art: "Paper"})
-  (:Quelle {id: "abbruchmethode_Betonfr_sen_md", art: "Paper"})
-  (:Quelle {id: "abbruchmethode_Demontage_md", art: "Paper"})
-  (:Quelle {id: "abbruchmethode_index_md", art: "Paper"})
-  (:Quelle {id: "abbruchmethode_md", art: "Paper"})
-  (:Quelle {id: "abbruchmethode_Selektiver_Rueckbau_md", art: "Paper"})
-  (:Quelle {id: "abbruchmethode_Zerstoerungsarme_Bergung_md", art: "Paper"})
-  (:Quelle {id: "AGENTS_md", art: "Paper"})
-  (:Quelle {id: "akteur_01_oeffentliche_institutionen_foerderung_BBSR_Zukunft_Bau_md", art: "Paper"})
-  (:Quelle {id: "akteur_01_oeffentliche_institutionen_foerderung_BIM_Berlin_md", art: "Paper"})
-  (:Quelle {id: "akteur_01_oeffentliche_institutionen_foerderung_Bundesstiftung_Bauakademie_md", art: "Paper"})
-  (:Quelle {id: "akteur_01_oeffentliche_institutionen_foerderung_Bundesstiftung_Baukultur_md", art: "Paper"})
-  (:Quelle {id: "akteur_01_oeffentliche_institutionen_foerderung_ReUse_Berlin_md", art: "Paper"})
-  (:Quelle {id: "akteur_01_oeffentliche_institutionen_foerderung_Umweltbundesamt_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_Architects_for_Future_Deutschland_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_Architektenkammer_Berlin_A_Wie_Zirkulaer_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_BDA_Bund_Deutscher_Architektinnen_Architekten_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_C2C_NGO_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_Circular_Berlin_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_DGNB_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_Phase_Nachhaltigkeit_md", art: "Paper"})
-  (:Quelle {id: "akteur_02_kammern_verbaende_ngos_netzwerke_re_source_Stiftung_md", art: "Paper"})
-  (:Quelle {id: "akteur_03_forschung_lehre_wissenstransfer_Bauhaus_Erde_md", art: "Paper"})
-  (:Quelle {id: "akteur_03_forschung_lehre_wissenstransfer_Natural_Building_Lab_md", art: "Paper"})
-  (:Quelle {id: "akteur_03_forschung_lehre_wissenstransfer_VDI_ZRE_md", art: "Paper"})
-  (:Quelle {id: "akteur_03_forschung_lehre_wissenstransfer_Wuppertal_Institut_md", art: "Paper"})
-  (:Quelle {id: "akteur_04_planung_architektur_ingenieurwesen_baubuero_in_situ_zirkular_md", art: "Paper"})
-  (:Quelle {id: "akteur_04_planung_architektur_ingenieurwesen_Bellastock_md", art: "Paper"})
-  (:Quelle {id: "akteur_04_planung_architektur_ingenieurwesen_Circular_Structural_Design_md", art: "Paper"})
-  (:Quelle {id: "akteur_04_planung_architektur_ingenieurwesen_CITYFOERSTER_md", art: "Paper"})
-  ... (weitere :Quelle-Knoten)
+  (:Quelle {id: "BBSR_Zukunft_Bau_foerderprogramm", art: "Website"})
+  (:Quelle {id: "Circular_Berlin_marktstudie_wiederverwendung", art: "Bericht"})
+  (:Quelle {id: "Bellastock_research_note", art: "Paper"})
+  ... (kurze Zitations-Slugs — nicht `akteur_04_..._md` oder Roh-Dateinamen)
 
 :SoftwareDigitaltool
-  (:SoftwareDigitaltool {id: "Abriss_Atlas"})
-  (:SoftwareDigitaltool {id: "articonnex"})
-  (:SoftwareDigitaltool {id: "backacia"})
-  (:SoftwareDigitaltool {id: "baticycle"})
-  (:SoftwareDigitaltool {id: "batiterre"})
-  (:SoftwareDigitaltool {id: "batrecup"})
-  (:SoftwareDigitaltool {id: "baukarussell"})
-  (:SoftwareDigitaltool {id: "Bauteilboerse_Bremen"})
-  (:SoftwareDigitaltool {id: "Bauteilboerse_Hannover"})
-  (:SoftwareDigitaltool {id: "bauteilladen_winterthur"})
-  (:SoftwareDigitaltool {id: "Bauteilnetz_Deutschland"})
-  (:SoftwareDigitaltool {id: "BIM"})
-  (:SoftwareDigitaltool {id: "Bonsai_BlenderBIM"})
-  (:SoftwareDigitaltool {id: "building_spares_market"})
-  (:SoftwareDigitaltool {id: "CMEx"})
   (:SoftwareDigitaltool {id: "Concular_Plattform"})
-  (:SoftwareDigitaltool {id: "cornermat_retrival"})
-  (:SoftwareDigitaltool {id: "Cycle_Up"})
-  (:SoftwareDigitaltool {id: "cycle_zero"})
-  (:SoftwareDigitaltool {id: "Dataview"})
-  (:SoftwareDigitaltool {id: "enviromate"})
-  (:SoftwareDigitaltool {id: "Excess_Materials_Exchange"})
-  (:SoftwareDigitaltool {id: "gebruiktebouwmaterialen_gbm"})
-  (:SoftwareDigitaltool {id: "genbyg"})
-  (:SoftwareDigitaltool {id: "GIS_Urban_Mining"})
-  (:SoftwareDigitaltool {id: "Globechain"})
-  (:SoftwareDigitaltool {id: "IFC_Viewer"})
   (:SoftwareDigitaltool {id: "IfcOpenShell"})
-  (:SoftwareDigitaltool {id: "insert_marketplace"})
-  (:SoftwareDigitaltool {id: "Klimaschutz_Konfigurator"})
-  ... (weitere :SoftwareDigitaltool-Knoten)
+  (:SoftwareDigitaltool {id: "BIM"})
+  (:SoftwareDigitaltool {id: "Globechain"})
+  ... (Produkt- oder Markenname lesbar; einheitliche Schreibweise pro Eintrag)
 
 :Wiederverwendungskette
   (:Wiederverwendungskette {id: "55_Great_Suffolk_Street_London"})
-  (:Wiederverwendungskette {id: "AWM_Muenster_Circular_Office"})
-  (:Wiederverwendungskette {id: "BedZED_London_Hackbridge"})
-  (:Wiederverwendungskette {id: "Bestandverplanzung_Pavilion_Muenchen"})
-  (:Wiederverwendungskette {id: "Big_Dig_Building_Boston"})
-  (:Wiederverwendungskette {id: "Big_Dig_House_Lexington_Massachusetts"})
-  (:Wiederverwendungskette {id: "BioPartner_5_Leiden_Oegstgeest"})
-  (:Wiederverwendungskette {id: "BlueCity_Offices_Rotterdam"})
-  (:Wiederverwendungskette {id: "Boulder_Fire_Station_3"})
-  (:Wiederverwendungskette {id: "Brent_Cross_Town_Primary_Substation_London"})
-  (:Wiederverwendungskette {id: "Broethen_Twin_House_Hoyerswerda"})
-  (:Wiederverwendungskette {id: "CascadeUp_London_secondary_timber_glulam_demonstrator"})
-  (:Wiederverwendungskette {id: "Christ_Pavilion_Volkenroda"})
-  (:Wiederverwendungskette {id: "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot"})
-  (:Wiederverwendungskette {id: "Circular_Pavilion_Paris"})
-  (:Wiederverwendungskette {id: "Europa_Building_Brussels"})
-  (:Wiederverwendungskette {id: "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere"})
-  (:Wiederverwendungskette {id: "Holbein_Gardens_London"})
-  (:Wiederverwendungskette {id: "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain"})
-  (:Wiederverwendungskette {id: "Jeugdkliniek_Ithaka_Emergis_Kloetinge"})
-  (:Wiederverwendungskette {id: "Juch_Areal_Recyclingzentrum_Zuerich"})
-  (:Wiederverwendungskette {id: "K118_Kopfbau_Halle_118_Winterthur"})
-  (:Wiederverwendungskette {id: "KA13_Kristian_Augusts_gate_13_Oslo"})
-  (:Wiederverwendungskette {id: "Liander_Alliander_HQ_Duiven"})
-  (:Wiederverwendungskette {id: "Lokomotion_Technology_Centre_mini_pilot_Tampere"})
-  (:Wiederverwendungskette {id: "Maison_des_Canaux_Paris"})
-  (:Wiederverwendungskette {id: "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki"})
-  (:Wiederverwendungskette {id: "Montessori_Maassluis"})
-  (:Wiederverwendungskette {id: "Musee_de_Folklore_Mouscron"})
-  (:Wiederverwendungskette {id: "Peoples_Pavilion_Eindhoven"})
-  ... (weitere :Wiederverwendungskette-Knoten)
+  (:Wiederverwendungskette {id: "K118_Halle_118_Winterthur"})
+  (:Wiederverwendungskette {id: "House_of_Fraser_Oxford_Street_London_reuse_chain"})
+  ... (typisch an Fallbeispiel gebunden; gleiches Kurz-Muster wie zugehöriges `(:Fallbeispiel {id:…})` wenn 1:1)
 
 :Bauteiltyp
   (:Bauteiltyp:Vokabular {id: "Ausbau"})
@@ -783,7 +628,7 @@ Format-Regel (wichtig für die Lesbarkeit): Jede Zeile, die mit `(:<Label>` begi
   (:Akteurrolle:Vokabular {id: "Materiallieferant"})
   (:Akteurrolle:Vokabular {id: "Nachhaltigkeitsberatung"})
   (:Akteurrolle:Vokabular {id: "Oeffentliche_Hand"})
-  (:Akteurrolle:Vokabular {id: "Projekteteiligte_Unbestimmt"})
+  (:Akteurrolle:Vokabular {id: "Projektbeteiligte_Unbestimmt"})
   (:Akteurrolle:Vokabular {id: "Projektmanagement_Koordination"})
   (:Akteurrolle:Vokabular {id: "Pruefung_Qualitaetssicherung"})
   (:Akteurrolle:Vokabular {id: "Reuse_Beratung"})
@@ -862,6 +707,24 @@ _database/norm/ISO_20887/index.md        → node (:Norm {id: "ISO_20887"})
 ```
 
 Same rule for every folder: `_database/material/<x>/` produces `(:Material {id: "<x>"})`, `_database/huerde/<x>/` produces `(:Huerde {id: "<x>"})`, etc.
+
+**Instanz-`id` vs. Ordnername:** Für **Vokabular-Labels** (§1.B) ist `id` in der Regel **gleich** dem Unterordnernamen (ggf. ASCII nach derselben Tabelle). Für die **sechs Instanz-Labels** `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` ist `id` der **vom Export normalisierte** Slug nach der folgenden Tabelle — der Quellordnername ist nur Eingabe, nicht zwingend 1:1 der Graph-`id`.
+
+**ID- und Namenskonvention (Lesbarkeit)**
+
+| Regel | Vorgabe |
+|-------|---------|
+| Zeichensatz | **ASCII** in `id`. Umlaute als `ae`, `oe`, `ue`, `ss` (keine kaputten Fragmente wie `Tr_ger`, `T_ren`). |
+| Trenner | Nur **einfaches** `_` zwischen Wortteilen. **Keine** doppelten `__` als Padding, **keine** `;` oder `,` innerhalb einer `id`. |
+| Ein Knoten | **Eine** reale Entität pro Knoten — **keine** Listen (`A;B,C`) in einer `id`. Mehrere Akteure → mehrere `:Akteur`-Knoten + mehrere Kanten. |
+| Länge | Kurz halten: bevorzugt **≤ 48** Zeichen pro `id` (harte Grenze im Export z. B. 96). |
+| `:Fallbeispiel` | `id` = erkennbarer **Projekt- oder Orts-Slug**, z. B. `Berlin_Schildow_Pilot_Haus`, `55_Great_Suffolk_Street_London` — Wortfolge logisch lesbar. |
+| `:Bauteilgruppe` | `id` = `{fallbeispiel_id}_{gruppe_kurz}` mit **menschenlesbarem** `gruppe_kurz` (ASCII), z. B. `55_Great_Suffolk_Street_London_stahlprofil_externer_kern` — **nicht** `__001__` + transliterierter Romantext. Reihenfolge mehrerer Gruppen optional über `GEHÖRT_ZU.position` / eigene Zählung im Slug (`_gruppe_01` nur wenn nötig). |
+| `:Akteur` | `id` = **Organisationskurzname** in konsistentem Wortbild (`Circular_Berlin`, `Circular_Structural_Design`, `Bellastock`) oder **Person** `Vorname_Nachname`. Keine technischen Pfad-Präfixe. |
+| `:Quelle` | `id` = **kurzer Zitations-Slug**, z. B. `Circular_Berlin_marktstudie_2023` — **nicht** gespiegelte Dateipfade wie `akteur_04_planung_..._md`. |
+| `:SoftwareDigitaltool` | Produkt- oder Plattformname lesbar (`Concular_Plattform`, `IfcOpenShell`); einheitliche Groß-/Kleinschreibung pro Eintrag. |
+| `:Wiederverwendungskette` | `id` an Fallbeispiel anbindbar (`K118_Halle_118_Winterthur`) oder eigener kurzer Kettenname — ohne URL-artige Monsterstrings. |
+| Vokabular (§1.B) | `id` = stabiler Term-Slug; gleiche ASCII-/Trennerregeln; Ordner unter `_database/<vocab>/` möglichst schon so benannt, damit Import trivial bleibt. |
 
 Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they merge into another Label, get renamed, or are dropped.
 
@@ -1048,7 +911,7 @@ Property table columns: **name** | **type** | **req** | **notes**.
 
 | name  | type   | req | notes                                                                                             |
 | ----- | ------ | --- | ------------------------------------------------------------------------------------------------- |
-| `id`  | string | ✓   | UNIQUE; folder slug                                                                               |
+| `id`  | string | ✓   | UNIQUE; nach §1 **ID-Konvention** normalisierter Slug (Export), lesbar; nicht zwingend 1:1 alter Ordnername |
 | `art` | string | ✓   | one of `"Gebaeude"`, `"Bruecke"`, `"Pavillon"`, `"Halle"`, `"Lager"`, `"Innenausbau"`, `"Anlage"` |
 
 
@@ -1086,7 +949,7 @@ Source attribution: `:BELEGT_IN` edges with `eigenschaft:'<name>'`.
 
 | name | type   | req | notes  |
 | ---- | ------ | --- | ------ |
-| `id` | string | ✓   | UNIQUE |
+| `id` | string | ✓   | UNIQUE; Muster `{fallbeispiel_id}_{gruppe_kurz}` (ASCII, lesbar — §1 ID-Konvention) |
 
 
 **Component-group measurement properties:**
@@ -1126,7 +989,7 @@ Where each of those previously lived in the graph (and now lives as an edge or i
 
 | name  | type    | req | notes                                                                                                                   |
 | ----- | ------- | --- | ----------------------------------------------------------------------------------------------------------------------- |
-| `id`  | string  | ✓   | UNIQUE                                                                                                                  |
+| `id`  | string  | ✓   | UNIQUE; lesbarer Organisations- oder Personen-Slug (§1 ID-Konvention); **keine** Listen in einem `id` |
 | `art` | string? | –   | optional: `"Firma"`, `"Buero"`, `"Behoerde"`, `"Institution"`, `"Person"`, `"Verband"`, `"Bauherrschaft"`, `"Sonstige"` |
 | `url` | string? | –   | website / firm page                                                                                                     |
 
@@ -1136,7 +999,7 @@ Where each of those previously lived in the graph (and now lives as an edge or i
 
 | name  | type    | req | notes                                                                                                                   |
 | ----- | ------- | --- | ----------------------------------------------------------------------------------------------------------------------- |
-| `id`  | string  | ✓   | UNIQUE; folder slug or case-scoped derived (`K118_Kopfbau__S4`)                                                         |
+| `id`  | string  | ✓   | UNIQUE; kurzer Zitations-Slug (§1 ID-Konvention), z. B. `Circular_Berlin_marktstudie_2023` — nicht Roh-Dateipfad |
 | `art` | string  | ✓   | one of `"Website"`, `"Interview"`, `"Paper"`, `"Buch"`, `"Bericht"`, `"Datenbank"`, `"Vortrag"`, `"Norm"`, `"Sonstige"` |
 | `url` | string? | –   | source URL or DOI                                                                                                       |
 
@@ -1148,7 +1011,7 @@ No outgoing edges from `:Quelle`. All metadata about a citation (page, excerpt, 
 
 | name  | type    | req | notes  |
 | ----- | ------- | --- | ------ |
-| `id`  | string  | ✓   | UNIQUE |
+| `id`  | string  | ✓   | UNIQUE; Produkt-/Plattform-Slug (§1 ID-Konvention), z. B. `Concular_Plattform`, `IfcOpenShell` |
 | `url` | string? | –   |        |
 
 
@@ -1157,7 +1020,7 @@ No outgoing edges from `:Quelle`. All metadata about a citation (page, excerpt, 
 
 | name         | type   | req | notes  |
 | ------------ | ------ | --- | ------ |
-| `id`         | string | ✓   | UNIQUE |
+| `id`         | string | ✓   | UNIQUE; typisch gleiches Kurz-Muster wie zugehöriges `:Fallbeispiel` oder eigener Kettenname (§1 ID-Konvention) |
 | `start_jahr` | int?   | –   |        |
 | `end_jahr`   | int?   | –   |        |
 
@@ -1171,7 +1034,7 @@ Each vocab node has only:
 
 | name | type   | req | notes                                                                       |
 | ---- | ------ | --- | --------------------------------------------------------------------------- |
-| `id` | string | ✓   | UNIQUE within the Label; the subfolder name under `_database/<vocab>/<id>/` |
+| `id` | string | ✓   | UNIQUE within the Label; in der Regel der Unterordnername unter `_database/<vocab>/<id>/`, normalisiert nach §1 (ASCII, ein `_` zwischen Wortteilen) |
 
 
 The id is the queryable identifier. The German prose body explaining the term remains in the source Markdown `_database/<vocab>/<id>/index.md`, outside the graph.
@@ -1338,6 +1201,7 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 | `kennwertdefinition/`                                                                    | dropped — kennwert-names become property names                                                                                             |
 | `datenpunkt/`                                                                            | dropped — measurements become node properties                                                                                              |
 | All `body_md`, `legacy_paths`, `build_status`, `title`, raw-label properties on any node | dropped — graph is metadata-only                                                                                                           |
+| Graph-`id` auf Instanz-Labels (`:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette`) | nicht 1:1 alter Ordner-/Dateiname — **Normalisierung** nach §1 **ID- und Namenskonvention (Lesbarkeit)** (ASCII, ein `_`, keine Listen/`__`-Padding-Slugs) |
 | `:BELEGT` (Quelle → claim)                                                               | reversed and renamed to `:BELEGT_IN` (claim → Quelle)                                                                                      |
 | All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties anywhere         | dropped — replaced exclusively by `:BELEGT_IN` edges                                                                                       |
 | `Moebelsepearat` value in WiederverwendungsArt                                           | renamed to `Moebel_separat`                                                                                                                |
