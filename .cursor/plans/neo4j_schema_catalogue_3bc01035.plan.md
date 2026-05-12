@@ -60,7 +60,7 @@ Neo4j_Schema
 │   │   ├── zielwert_reuse_prozent: float? (optional)
 │   │   └── je Messgröße optional: <name>_alt, <name>_vertrauensgrad (wie :Fallbeispiel)
 │   └── Knoten (Instanzen)
-│       └── je ein Knoten pro legacy reuse_einsatz/<id>/
+│       └── je ein Knoten pro `_database/bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/` (siehe §1 ID-Konvention `:Bauteilgruppe`)
 │
 ├── KNOTENTYP :Akteur
 │   ├── Knoteneigenschaften: id (Pflicht), art? (string), url? (string)
@@ -255,11 +255,14 @@ Die folgenden Blöcke zeigen **Muster** (nicht die vollständige Knotenzahl). Di
   ... (alle weiteren Fallbeispiele: ASCII, logische Wortfolge, keine Sonderzeichen-Mojibake)
 
 :Bauteilgruppe
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London_stahlprofil_externer_kern"})
-  (:Bauteilgruppe {id: "55_Great_Suffolk_Street_London_stahl_aus_Broadgate"})
-  (:Bauteilgruppe {id: "Association_house_Plauen_traeger"})
-  (:Bauteilgruppe {id: "AWM_Muenster_Circular_Office_glastrennwaende"})
-  ... (Muster `{fallbeispiel_id}_{gruppe_kurz}` — kein `__001__`-Padding, keine `_r`-/`_nd`-Fragmente aus kaputter Kodierung)
+  (:Bauteilgruppe {id: "K118_C01_Traeger_Stuetzen"})
+  (:Bauteilgruppe {id: "K118_C02_Treppe"})
+  (:Bauteilgruppe {id: "ELYS_C01_Fenster"})
+  (:Bauteilgruppe {id: "Plattenpalast_C01_Wandplatten"})
+  (:Bauteilgruppe {id: "55GSS_C01_Traeger_Stuetzen"})
+  (:Bauteilgruppe {id: "CRCLR_C02_Wandpaneele"})
+  (:Bauteilgruppe {id: "Werkhof29_C01_Fassadenbleche"})
+  ... (Muster `_database/bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/` — Graph-`id` = Ordner-Slug)
 
 :Akteur
   (:Akteur {id: "Circular_Berlin"})
@@ -708,7 +711,7 @@ _database/norm/ISO_20887/index.md        → node (:Norm {id: "ISO_20887"})
 
 Same rule for every folder: `_database/material/<x>/` produces `(:Material {id: "<x>"})`, `_database/huerde/<x>/` produces `(:Huerde {id: "<x>"})`, etc.
 
-**Instanz-`id` vs. Ordnername:** Für **Vokabular-Labels** (§1.B) ist `id` in der Regel **gleich** dem Unterordnernamen (ggf. ASCII nach derselben Tabelle). Für die **sechs Instanz-Labels** `:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette` ist `id` der **vom Export normalisierte** Slug nach der folgenden Tabelle — der Quellordnername ist nur Eingabe, nicht zwingend 1:1 der Graph-`id`.
+**Instanz-`id` vs. Ordnername:** Für **Vokabular-Labels** (§1.B) ist `id` in der Regel **gleich** dem Unterordnernamen (ggf. ASCII nach derselben Tabelle). Für **`:Bauteilgruppe`** im kanonischen Ordner **`bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/`** ist Graph-`id` **gleich** dem Unterordner-Slug (verbindliches Muster — siehe Tabelle unten). Für die übrigen Instanz-Labels (`:Fallbeispiel`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette`) ist `id` der **vom Export normalisierte** Slug nach der folgenden Tabelle — der Quellordnername ist nur Eingabe, nicht zwingend 1:1 der Graph-`id`.
 
 **ID- und Namenskonvention (Lesbarkeit)**
 
@@ -719,7 +722,7 @@ Same rule for every folder: `_database/material/<x>/` produces `(:Material {id: 
 | Ein Knoten | **Eine** reale Entität pro Knoten — **keine** Listen (`A;B,C`) in einer `id`. Mehrere Akteure → mehrere `:Akteur`-Knoten + mehrere Kanten. |
 | Länge | Kurz halten: bevorzugt **≤ 48** Zeichen pro `id` (harte Grenze im Export z. B. 96). |
 | `:Fallbeispiel` | `id` = erkennbarer **Projekt- oder Orts-Slug**, z. B. `Berlin_Schildow_Pilot_Haus`, `55_Great_Suffolk_Street_London` — Wortfolge logisch lesbar. |
-| `:Bauteilgruppe` | `id` = `{fallbeispiel_id}_{gruppe_kurz}` mit **menschenlesbarem** `gruppe_kurz` (ASCII), z. B. `55_Great_Suffolk_Street_London_stahlprofil_externer_kern` — **nicht** `__001__` + transliterierter Romantext. Reihenfolge mehrerer Gruppen optional über `GEHÖRT_ZU.position` / eigene Zählung im Slug (`_gruppe_01` nur wenn nötig). |
+| `:Bauteilgruppe` | **Verbindliches Muster** (Ordner + Graph-`id`): `_database/bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/` → `(:Bauteilgruppe {id: "<CASE>_C<NN>_<ELEMENT>"})`. **`CASE`**: kurzer, stabiler Projektcode (ASCII, oft Kürzel des `:Fallbeispiel`, z. B. `K118`, `ELYS`, `55GSS`, `CRCLR`, `Werkhof29`, `Plattenpalast`). **`<NN>`**: zweistellige laufende Nummer pro Fall (`01`…`99`). **`<ELEMENT>`**: snake_case-Bauteilgruppenname (ASCII, lesbar). Beispiele: `K118_C01_Traeger_Stuetzen`, `K118_C02_Treppe`, `ELYS_C01_Fenster`, `Plattenpalast_C01_Wandplatten`, `55GSS_C01_Traeger_Stuetzen`, `CRCLR_C02_Wandpaneele`, `Werkhof29_C01_Fassadenbleche`. Anbindung an `:Fallbeispiel` über `GEHÖRT_ZU {rolle:'einbauort'}` (o. ä.); `CASE` muss nicht 1:1 dem langen `Fallbeispiel.id` entsprechen. Legacy `reuse_einsatz/` wird beim Export auf dieses Muster **gemappt oder umbenannt**. |
 | `:Akteur` | `id` = **Organisationskurzname** in konsistentem Wortbild (`Circular_Berlin`, `Circular_Structural_Design`, `Bellastock`) oder **Person** `Vorname_Nachname`. Keine technischen Pfad-Präfixe. |
 | `:Quelle` | `id` = **kurzer Zitations-Slug**, z. B. `Circular_Berlin_marktstudie_2023` — **nicht** gespiegelte Dateipfade wie `akteur_04_planung_..._md`. |
 | `:SoftwareDigitaltool` | Produkt- oder Plattformname lesbar (`Concular_Plattform`, `IfcOpenShell`); einheitliche Groß-/Kleinschreibung pro Eintrag. |
@@ -782,7 +785,7 @@ Exceptions (folders that are NOT 1:1 a node type) are listed in §1.C — they m
 | Label                     | Purpose                                                     | Replaces (legacy folders)                                          |
 | ------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------ |
 | `:Fallbeispiel`           | One physical case-study object                              | `fallstudie/` + `projekt/` + `bauobjekt/` (merged where ids match) |
-| `:Bauteilgruppe`          | A group of components in a Fallbeispiel — the reuse-Einsatz | `reuse_einsatz/`                                                   |
+| `:Bauteilgruppe`          | A group of components in a Fallbeispiel — the reuse-Einsatz | `bauteilgruppe/` (Zielordner; `id`-Muster `<CASE>_C<NN>_<ELEMENT>` — siehe §1); Legacy: `reuse_einsatz/` → Migration auf dieses Muster |
 | `:Akteur`                 | Office / company / authority / institution / person         | `akteur/`                                                          |
 | `:Quelle`                 | Source / citation target                                    | `quelle/`                                                          |
 | `:SoftwareDigitaltool`    | Concrete platform                                           | `software_digitaltool/`                                            |
@@ -880,7 +883,7 @@ Grouped only for reading.
 | `fallstudie/`                 | merged into `:Fallbeispiel`                                                                                                    |
 | `projekt/`                    | merged into `:Fallbeispiel`                                                                                                    |
 | `bauobjekt/`                  | merged into `:Fallbeispiel`                                                                                                    |
-| `reuse_einsatz/`              | renamed to `:Bauteilgruppe`                                                                                                    |
+| `reuse_einsatz/`              | renamed to `:Bauteilgruppe`; Zielablage **`bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/`** mit Graph-`id` = Ordner-Slug (§1 ID-Konvention)                                                              |
 | `reuse_kettenstation/`        | dropped — stations become GEHÖRT_ZU edges from `:Bauteilgruppe`                                                                |
 | `akteur_beteiligung/`         | dropped — collapsed to `HAT {art:'akteur', rolle:...}` edge                                                                    |
 | `bauobjekt_beteiligung/`      | dropped — same pattern                                                                                                         |
@@ -949,7 +952,7 @@ Source attribution: `:BELEGT_IN` edges with `eigenschaft:'<name>'`.
 
 | name | type   | req | notes  |
 | ---- | ------ | --- | ------ |
-| `id` | string | ✓   | UNIQUE; Muster `{fallbeispiel_id}_{gruppe_kurz}` (ASCII, lesbar — §1 ID-Konvention) |
+| `id` | string | ✓   | UNIQUE; verbindlich `<CASE>_C<NN>_<ELEMENT>` wie in §1 (Ordner `bauteilgruppe/<id>/`) |
 
 
 **Component-group measurement properties:**
@@ -1188,7 +1191,7 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 | Change                                                                                   | Action                                                                                                                                     |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `fallstudie/` + `projekt/` + `bauobjekt/` (shared id)                                    | merged into `:Fallbeispiel` with `art` property                                                                                            |
-| `reuse_einsatz/`                                                                         | renamed to `:Bauteilgruppe`                                                                                                                |
+| `reuse_einsatz/`                                                                         | renamed to `:Bauteilgruppe`; kanonische Pfade **`bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/`** (siehe §1)                                                                                                                |
 | `reuse_kette/`                                                                           | renamed to `:Wiederverwendungskette` (kept; optional grouping)                                                                             |
 | `reuse_kettenstation/`                                                                   | dropped — stations become GEHÖRT_ZU edges from `:Bauteilgruppe`                                                                            |
 | `bewertungslogik_abgrenzung/`                                                            | renamed to `:WiederverwendungsArt`, absorbed values of dropped Bauteilgruppentyp via `axis` property                                       |
@@ -1201,7 +1204,8 @@ YAML frontmatter fields on legacy `fallstudie` / `projekt` / `bauobjekt` / `reus
 | `kennwertdefinition/`                                                                    | dropped — kennwert-names become property names                                                                                             |
 | `datenpunkt/`                                                                            | dropped — measurements become node properties                                                                                              |
 | All `body_md`, `legacy_paths`, `build_status`, `title`, raw-label properties on any node | dropped — graph is metadata-only                                                                                                           |
-| Graph-`id` auf Instanz-Labels (`:Fallbeispiel`, `:Bauteilgruppe`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette`) | nicht 1:1 alter Ordner-/Dateiname — **Normalisierung** nach §1 **ID- und Namenskonvention (Lesbarkeit)** (ASCII, ein `_`, keine Listen/`__`-Padding-Slugs) |
+| Graph-`id` auf Instanz-Labels (`:Fallbeispiel`, `:Akteur`, `:Quelle`, `:SoftwareDigitaltool`, `:Wiederverwendungskette`) | nicht zwingend 1:1 alter Ordner-/Dateiname — **Normalisierung** nach §1 **ID- und Namenskonvention (Lesbarkeit)** (ASCII, ein `_`, keine Listen/`__`-Padding-Slugs) |
+| `:Bauteilgruppe` unter `bauteilgruppe/<CASE>_C<NN>_<ELEMENT>/` | Graph-`id` **=** Ordner-Slug (verbindliches Muster §1); Migration von Legacy `reuse_einsatz/` mappt auf dieses Muster |
 | `:BELEGT` (Quelle → claim)                                                               | reversed and renamed to `:BELEGT_IN` (claim → Quelle)                                                                                      |
 | All `*_quelle`, `*_quellen`, `quelle_id`, `quelle_label_raw` properties anywhere         | dropped — replaced exclusively by `:BELEGT_IN` edges                                                                                       |
 | `Moebelsepearat` value in WiederverwendungsArt                                           | renamed to `Moebel_separat`                                                                                                                |
