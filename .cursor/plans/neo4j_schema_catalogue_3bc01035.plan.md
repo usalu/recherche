@@ -1,6 +1,6 @@
 ---
 name: Neo4j schema catalogue
-overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. **44** Neo4j Labels total (six primary case / component / source types plus thirty-eight folder-backed classification types). **Each node has exactly one Label** — no umbrella or secondary label on nodes. Seven edge types (IST, HAT, HAT_STATUS, HAT_WIEDERVERWENDUNGSART, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes.
+overview: Metadata-only Neo4j schema. The graph carries identifiers, classifications, measurements, and relationships — NOT German prose. body_md / legacy_paths / build_status / raw labels live only in the source Markdown, never in the graph. **44** Neo4j Labels total (six primary case / component / source types plus thirty-eight folder-backed classification types). **Each node has exactly one Label** — no umbrella or secondary label on nodes. Seven edge types (IST, HAT, HAT_STATUS, HAT_WIEDERVERWENDUNGSART, BENUTZT, GEHÖRT_ZU, BELEGT_IN). All source attribution is via :BELEGT_IN edges to :Quelle nodes. **Deliverables:** `_database/_system/NEO4J_SCHEMA.md` (full spec) + `_database/_system/NEO4J_SCHEMA_MAP.md` (flat map: all Labels/properties + all edge types/properties).
 todos:
   - id: spec-skeleton
     content: "Create _database/_system/NEO4J_SCHEMA.md (full spec) and _database/_system/NEO4J_SCHEMA_MAP.md (compact map: all Labels + properties, all edge types + properties). Same 4+appendix content order in the main spec; the map is a flattened reference."
@@ -20,7 +20,9 @@ todos:
   - id: schema-map
     content: "Write _database/_system/NEO4J_SCHEMA_MAP.md: (A) every Label with full property table, (B) every relationship type with source/target Label patterns, cardinality, and full edge-property table. Mirror §2–§4; update whenever NEO4J_SCHEMA.md changes."
     status: pending
-isProject: false
+  - id: appendices
+    content: "Write the appendices: A modeling principles (metadata-only, hybrid modes), B constraints & indexes, C complete coverage checklist (every folder under _database/ accounted for), D renamings / drops / merges."
+    status: pending
 ---
 
 # Goal
