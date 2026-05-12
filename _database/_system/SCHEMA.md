@@ -1,7 +1,7 @@
 ---
 title: "Canonical Schema — Reuse Knowledge Base + Graph"
 status: "live"
-last_updated: "2026-05-09"
+last_updated: "2026-05-12"
 supersedes:
   - "_migration/00_Migration_Strategy.md (frozen, kept as history)"
   - "_database/_system/migration_notes.md (frozen, kept as history)"
@@ -19,9 +19,9 @@ Future agents and reviewers should read **only this file** to understand the sys
 A **knowledge base** + a **graph** in one repository.
 
 - **Knowledge base** = filled `.md` files in German under `_database/<entity>/<id>/index.md`.
-- **Graph** = typed edges in `_database/_edges/clean_confirmed_edges.csv`, materialized as `_database/_system/reuse_ontology.sqlite`.
+- **Graph** = typed edges in `_database/_edges/clean_confirmed_edges.csv`, folded into **Neo4j** on import (normative typing: `.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md`). Optional local **SQLite** rebuild from the same tree is supported but not authoritative (see §12).
 
-Editing happens in `_database/`. The SQLite is rebuilt from the folder tree.
+Editing happens in `_database/`.
 
 ---
 
@@ -31,11 +31,9 @@ Editing happens in `_database/`. The SQLite is rebuilt from the folder tree.
 |---|---|---|
 | `_database/` | **LIVE — edit here** | Canonical knowledge + graph |
 | `Gebäude/` | **LIVE — extraction source** | Hand-curated case-study Markdown with structured Entitäten-Mapping tables. Read-only for the schema; new cases get added here, then extracted into `_database/`. |
-| `_graph/` | Frozen staging | First migration attempt. Provenance only. Do not edit. |
-| `_manual_review/` | Frozen pending | Held-back nodes; emptied as the 27 review decisions in [_migration/39](../../_migration/39_Manual_Review_All_Decisions_Worksheet.md) are applied. |
-| `_extract/` | Frozen output | Programmatic entity extraction snapshot (2026-05-08). |
-| `_migration/` | Frozen tooling | Build/repair/validate scripts and decision logs. Do not run automatically. |
-| Top-level legacy folders (`akteur/`, `projekt/`, `material/`, …) | **Archive candidate** — see §10 | Original Tolaria knowledge base before migration. Will be moved to `_archive/` once `_database` consolidation is signed off. |
+| `_migration/` | Frozen tooling | Build/repair/validate scripts and decision logs. Do not run automatically unless you know which script you need. |
+| `_archive/legacy/` | **Pointer only** | Contains `README.md`: the old mirrored trees (`_graph/`, `_extract/`, `_manual_review/`, flat entity stubs) were **removed from git** after migration into `_database/` (recover from git history if needed). |
+| `_archive/dropped_knots/` | Provenance | Knot folders dropped during consolidation; original prose preserved. |
 
 ---
 
@@ -217,34 +215,15 @@ This separation prevents the "Direct Reuse overcounting" failure: temporary, pla
 
 ## 9. Relation vocabulary (edges)
 
-Current confirmed edges use 24 relation labels, every relation has exactly one target entity type (verified — 0 mismatches in the 8,850 confirmed edges):
+**Authoritative inventory:** [_database/_system/RELATION_CATALOG_NEO4J.md](RELATION_CATALOG_NEO4J.md) lists every distinct `relation` token present in the edge CSVs (row counts per file) and how each maps to Neo4j relationship types under the research-graph plan (§7.1). Regenerate that file after edge changes:
 
-| Relation | Source → Target | Count |
-|---|---|---:|
-| `belongs_to_fallstudie` | `*` → `fallstudie` | 1,618 |
-| `belongs_to_projekt` | `*` → `projekt` | 1,492 |
-| `has_bauteiltyp` | `reuse_einsatz` → `bauteiltyp` | 637 |
-| `installed_in_bauobjekt` | `reuse_einsatz` → `bauobjekt` | 637 |
-| `measured_on_bauobjekt` | `datenpunkt` → `bauobjekt` | 617 |
-| `measures_kennwertdefinition` | `datenpunkt` → `kennwertdefinition` | 609 |
-| `uses_material` | `reuse_einsatz` → `material` | 553 |
-| `has_huerde` | `reuse_einsatz` → `huerde` | 442 |
-| `has_reuse_einsatzstatus` | `reuse_einsatz` → `reuse_einsatzstatus` | 407 |
-| `has_prozessphase` | `reuse_einsatz` → `prozessphase` | 394 |
-| `has_akteurrolle` | `akteur_beteiligung` → `akteurrolle` | 298 |
-| `has_reuse_strategie` | `reuse_einsatz` → `reuse_strategie` | 248 |
-| `relates_to_bauobjekt` | `akteur_beteiligung` → `bauobjekt` | 238 |
-| `has_bewertungslogik_abgrenzung` | `reuse_einsatz` → `bewertungslogik_abgrenzung` | 164 |
-| `has_projekt` | `fallstudie` → `projekt` | 89 |
-| `has_bauobjekt` | `fallstudie` → `bauobjekt` | 88 |
-| `has_rueckbauverfahren` | `reuse_einsatz` → `rueckbauverfahren` | 84 |
-| `part_of_reuse_kette` | `reuse_kettenstation` → `reuse_kette` | 84 |
-| `has_pruefung_nachweis` | `reuse_einsatz` → `pruefung_nachweis` | 48 |
-| `involves_akteur` | `akteur_beteiligung` → `akteur` | 44 |
-| `has_tragwerkstyp` | `reuse_einsatz` → `tragwerkstyp` | 26 |
-| `has_fuegung_verbindung` | `reuse_einsatz` → `fuegung_verbindung` | 21 |
-| `references_norm` | `reuse_einsatz` → `norm` | 9 |
-| `has_leistungsanforderung` | `reuse_einsatz` → `leistungsanforderung` | 3 |
+```text
+python _scripts/extract_database_relations.py
+```
+
+As of the last catalog run, **`clean_confirmed_edges.csv`** carries **13,746** rows with a non-empty `relation` value across **46** distinct predicates. The older paragraph below counted **8,850** edges across **24** predicates; that snapshot is superseded by the growth of the confirmed edge set and additional `has_*` relations promoted from case material.
+
+**Ontology semantics (source → target entity types)** remain as documented in the per-entity rules elsewhere in this file; the catalogue focuses on **coverage and Neo4j folding**, not on re-stating every allowed endpoint pair here.
 
 **Gaps to fill** (relations the case data implies but the graph doesn't yet carry — see §11):
 
@@ -275,14 +254,14 @@ These should be added per case from the Gebäude Entitäten-Mapping tables; curr
 | Add a new case study | New `Gebäude/<Case_Name>.md` with the Entitäten-Mapping table; then run extractor (TBD script) to fold into `_database/` |
 | Add a new entity type | This file (§3) → then create the folder under `_database/` |
 | Add a new bauteiltyp / material / etc. | This file (§5/§6) → then create the folder under `_database/<entity>/<new_id>/` |
-| Fix a wrong edge | `_database/_edges/clean_confirmed_edges.csv` (then rebuild SQLite) |
+| Fix a wrong edge | `_database/_edges/clean_confirmed_edges.csv` (then re-run Neo4j import; optional local SQLite rebuild) |
 | Define a new relation | This file (§9) → then add edges manually or via extractor |
 
 Do **not** edit:
-- `_graph/` (frozen)
-- `_manual_review/` (frozen pending decisions)
-- `_extract/` (frozen output)
-- top-level legacy folders (archive candidates)
+- `_migration/` batch outputs and frozen decision logs (unless you intentionally rerun a documented migration step).
+- `_archive/dropped_knots/` except deliberate provenance housekeeping.
+
+The `_archive/legacy/README.md` file explains removed legacy trees; do not resurrect old paths as a second live source.
 
 ---
 
@@ -294,7 +273,7 @@ Do **not** edit:
 
 ### 11.2 Sparse relations — STILL OPEN
 
-The graph has 8,850 edges across 24 relations. Batch 50a promoted 248 high-precision `has_reuse_strategie` edges for direct reuse from the `Gebäude/` Entitäten-Mapping tables. Batch 50b promoted 21 high-precision `has_fuegung_verbindung` edges from the BAUTEIL-INVENTAR connection labels. Batch 50c promoted 407 conservative `has_reuse_einsatzstatus` edges from project-status bullets to substantive reuse_einsatz nodes. Batch 50d promoted 394 `has_prozessphase` edges from explicit Eingriff/Aufbereitung labels. Batch 50e promoted 84 `has_rueckbauverfahren` edges from explicit dismantling-method labels. Many other case-context relations remain sparse (see §9 gaps); continue one relation at a time so each batch stays reviewable.
+The confirmed edge CSV now carries many more rows and predicates than the early migration snapshot (see §9 and `RELATION_CATALOG_NEO4J.md`). Batch 50a promoted 248 high-precision `has_reuse_strategie` edges for direct reuse from the `Gebäude/` Entitäten-Mapping tables. Batch 50b promoted 21 high-precision `has_fuegung_verbindung` edges from the BAUTEIL-INVENTAR connection labels. Batch 50c promoted 407 conservative `has_reuse_einsatzstatus` edges from project-status bullets to substantive reuse_einsatz nodes. Batch 50d promoted 394 `has_prozessphase` edges from explicit Eingriff/Aufbereitung labels. Batch 50e promoted 84 `has_rueckbauverfahren` edges from explicit dismantling-method labels. Many other case-context relations remain sparse (see §9 gaps); continue one relation at a time so each batch stays reviewable.
 
 ### 11.3 Encoding — RESOLVED
 
@@ -306,23 +285,28 @@ Some generated paths under `_database/akteur_beteiligung/` and `_database/reuse_
 
 ### 11.5 Index.md stub — RESOLVED
 
-Batch 42 lifted German prose from `DATEIEN/*.staging_index.md` into `index.md` for 2,986 of 2,987 nodes. 1 canonical knot (`prozessphase/Pruefung`) is a stub awaiting human-written content. Tolaria now shows real knowledge when you open a node.
+Batch 42 lifted German prose from `DATEIEN/*.staging_index.md` into `index.md` for 2,986 of 2,987 nodes. 1 canonical knot (`prozessphase/Pruefung`) is a stub awaiting human-written content. Editors opening `index.md` now see real knowledge instead of empty stubs.
 
 ### 11.6 Manual-review queue — RESOLVED
 
-All 27 manual-review nodes have been processed (batch 43): 95 edges deleted (target dropped per schema), 19 single-target moves applied, 114 edges split per case via raw_label heuristics. `clean_edge_review_queue.csv` is empty; `_manual_review/nodes/` retains only entries whose decision was `keep_review`.
+All 27 manual-review nodes have been processed (batch 43): 95 edges deleted (target dropped per schema), 19 single-target moves applied, 114 edges split per case via raw_label heuristics. `clean_edge_review_queue.csv` is empty. Historical `_manual_review/` copies that lived under `_archive/legacy/` were removed from the repository in 2026-05 (see `_archive/legacy/README.md`); use git history if you need the exact staging files.
 
 ---
 
 ## 12. Build & query
 
+**Research graph (normative per plan).** Load `_database/` into Neo4j with `_scripts/import_database_folder_to_neo4j.py` (see `_database/_system/NEO4J_SCHEMA.md` and `.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md`).
+
+**Optional local SQLite (not tracked in git).** If you want a file-based SQL mirror for one-off queries, rebuild locally:
+
 ```text
-# Rebuild SQLite from the folder tree
 python _migration/build_phase24_sqlite_database.py
-# Output: _database/_system/reuse_ontology.sqlite
+# Writes: _database/_system/reuse_ontology.sqlite (ignored by git — see repo .gitignore)
 ```
 
-Query center is `reuse_einsatz`; expand from there to `fallstudie → projekt → bauobjekt`, `material`, `bauteiltyp`, `huerde`, `pruefung_nachweis`, `norm`, `kennwertdefinition`, `quelle`.
+Do not treat SQLite schema or queries as authoritative for Neo4j typing; the plan and `neo4j_relation_fold.py` are.
+
+Query center in the **folder model** is still `reuse_einsatz`; expand from there to `fallstudie → projekt → bauobjekt`, `material`, `bauteiltyp`, `huerde`, `pruefung_nachweis`, `norm`, `kennwertdefinition`, `quelle`.
 
 ---
 

@@ -1,8 +1,10 @@
 # Phase 24 SQLite Build Report
 
+> **Note (2026-05-12):** The committed `reuse_ontology.sqlite` was removed from git to keep the repository aligned with the Neo4j plan (SQLite is an optional local mirror only). Regenerate with `_migration/build_phase24_sqlite_database.py` if you still want this file on disk.
+
 ## Output
 
-- SQLite file: `_database/_system/reuse_ontology.sqlite`
+- SQLite file: `_database/_system/reuse_ontology.sqlite` (local only; gitignored)
 
 ## Counts
 

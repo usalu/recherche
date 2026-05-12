@@ -2,11 +2,15 @@
 Import nodes and relationships from _database into Neo4j.
 
 Sources (under repo _database/ by default):
-  - _system/node_inventory.csv  → MERGE nodes keyed by typed_path
-  - _edges/clean_confirmed_edges.csv → MERGE directed relationships
+  - _system/node_inventory.csv  -> MERGE nodes keyed by typed_path
+  - _edges/clean_confirmed_edges.csv -> MERGE directed relationships (CSV `relation` folded to the five Neo4j types per plan §7.1; see `neo4j_relation_fold.py`)
 
-Nodes with entity `datenmodell` are skipped (no :Datenmodell vertices); edges touching
-`datenmodell` are skipped so MATCH endpoints always exist.
+Nodes with entity `datenmodell` or `tooltyp` are skipped (no `:Datenmodell` / `:Tooltyp` vertices); edges touching
+those entities are skipped so MATCH endpoints always exist. Tool categories from `tooltyp/` are represented as
+optional `tooltyp` / `softwaretyp` properties on `:Tool` / `:Software` in a dedicated export—not as inventory nodes here.
+Rows with `entity=akteur` become `:Person` or a §6.1 organisation-actor label (see `akteur_org_neo4j_label.py`; no `akteurtyp` property).
+Rows with `entity=ort` become `:Land` or `:Stadt` from folder `id` (see `ort_geo_label.py`; no `:Ort` label).
+Rows with `entity=software_digitaltool` become `:Software` or `:Tool` (see `software_tool_label.py`).
 
 Environment (same as export_visual_attachment_to_neo4j.py):
   NEO4J_URI, NEO4J_USER, NEO4J_DATABASE, NEO4J_PASSWORD
@@ -17,6 +21,10 @@ Examples:
   python _scripts/import_database_folder_to_neo4j.py
   python _scripts/import_database_folder_to_neo4j.py --edges-only
   python _scripts/import_database_folder_to_neo4j.py --confirm-wipe --wipe
+  python _scripts/import_database_folder_to_neo4j.py --confirm-wipe --wipe-only
+  python _scripts/import_database_folder_to_neo4j.py --nodes-only --entities material ort
+  python _scripts/import_database_folder_to_neo4j.py --nodes-only --entities akteur
+  python _scripts/import_database_folder_to_neo4j.py --nodes-only --entities akteur --password-file .neo4j_password
 """
 
 from __future__ import annotations
@@ -24,67 +32,76 @@ from __future__ import annotations
 import argparse
 import csv
 import os
-import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-# Entity slug (SQLite / CSV) → single Neo4j label (PascalCase, ASCII).
+from akteur_org_neo4j_label import neo4j_label_for_akteur_folder
+from neo4j_relation_fold import NEO4J_REL_TYPES, fold_csv_relation
+from ort_geo_label import neo4j_label_for_ort_id
+from software_tool_label import neo4j_label_for_software_digitaltool_id
+
+# Inventory `entity` → Neo4j label for rows that do not need custom logic in
+# `label_for_inventory_row` (plan `.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md` §5.2 / §5.4).
 ENTITY_LABEL: dict[str, str] = {
-    "akteur": "Akteur",
-    "akteur_beteiligung": "AkteurBeteiligung",
     "akteurrolle": "Akteurrolle",
     "aufbereitungsverfahren": "Aufbereitungsverfahren",
     "bauaufgabe_intervention": "BauaufgabeIntervention",
-    "bauobjekt": "Bauobjekt",
-    "bauobjektklasse": "Bauobjektklasse",
-    "bauobjektrolle": "Bauobjektrolle",
-    "bauobjektstatus": "Bauobjektstatus",
+    "bauobjekt": "Bauwerk",
+    "bauobjektstatus": "Status",
     "bausystem": "Bausystem",
     "bauteilebene": "Bauteilebene",
+    "bauteilgruppe": "Bauteilgruppe",
     "bauteiltyp": "Bauteiltyp",
     "bauteilzustand": "Bauteilzustand",
     "bauweise": "Bauweise",
     "beschaffungsweg": "Beschaffungsweg",
-    "bewertungslogik_abgrenzung": "BewertungslogikAbgrenzung",
-    "datenpunkt": "Messpunkt",
+    "bewertungslogik_abgrenzung": "WiederverwendungsArt",
     "datenqualitaet": "Datenqualitaet",
-    "dokumenttyp": "Dokumenttyp",
-    "fallstudie": "Fallstudie",
-    "foerderprogramm": "Foerderprogramm",
-    "fuegung_verbindung": "FuegungVerbindung",
+    "fallstudie": "Fallbeispiel",
+    "foerderprogramm": "Programm",
+    "fuegung_verbindung": "Verbindungstechnik",
     "funktionswechsel": "Funktionswechsel",
     "huerde": "Huerde",
-    "kennwertdefinition": "Kennwertdefinition",
-    "kontextmerkmal": "Kontextmerkmal",
+    "kontextmerkmal": "Programm",
     "leistungsanforderung": "Leistungsanforderung",
     "logistik": "Logistik",
     "material": "Material",
     "methode": "Methode",
     "norm": "Norm",
     "nutzung": "Nutzung",
-    "ort": "Ort",
-    "programm_kontext": "ProgrammKontext",
-    "projekt": "Projekt",
+    "programm_kontext": "Programm",
+    "projekt": "Fallbeispiel",
+    "person": "Person",
     "prozessphase": "Prozessphase",
     "pruefung_nachweis": "PruefungNachweis",
     "quelle": "Quelle",
     "rechtliche_bedingung": "RechtlicheBedingung",
     "ressourcenquelle": "Ressourcenquelle",
-    "reuse_einsatz": "ReuseEinsatz",
-    "reuse_einsatzstatus": "ReuseEinsatzstatus",
-    "reuse_kette": "ReuseKette",
-    "reuse_kettenstation": "ReuseKettenstation",
-    "reuse_strategie": "ReuseStrategie",
+    "reuse_einsatz": "Bauteilgruppe",
+    "reuse_einsatzstatus": "Status",
+    "reuse_kette": "Wiederverwendungskette",
+    "reuse_strategie": "WiederverwendungsArt",
     "rueckbauverfahren": "Rueckbauverfahren",
     "schadstoff": "Schadstoff",
-    "software_digitaltool": "SoftwareDigitaltool",
-    "tooltyp": "Tooltyp",
     "tragwerksprinzip": "Tragwerksprinzip",
-    "tragwerkstyp": "Tragwerkstyp",
     "wirtschaft": "Wirtschaft",
     "zertifizierung_bewertungssystem": "ZertifizierungBewertungssystem",
 }
+
+# §5.4 — no standalone graph nodes for these inventory `entity` values.
+SKIP_NODE_ENTITIES: frozenset[str] = frozenset(
+    {
+        "akteur_beteiligung",
+        "bauobjektklasse",
+        "bauobjektrolle",
+        "datenpunkt",
+        "dokumenttyp",
+        "kennwertdefinition",
+        "reuse_kettenstation",
+        "tragwerkstyp",
+    }
+)
 
 REL_PROP_KEYS = (
     "field",
@@ -97,9 +114,6 @@ REL_PROP_KEYS = (
     "original_target",
     "edge_cleaning",
 )
-
-VALID_REL_TYPE = re.compile(r"^[A-Za-z][A-Za-z0-9_]*$")
-
 
 def repo_root() -> Path:
     return Path(__file__).resolve().parents[1]
@@ -116,6 +130,29 @@ def label_for_entity(entity: str) -> str:
     if not lab.isalnum():
         raise ValueError(f"Label must be alphanumeric: {lab!r}")
     return lab
+
+
+def label_for_inventory_row(row: dict[str, str], database_dir: Path) -> str:
+    """Map inventory `entity` to the Neo4j label name (plan neo4j_schema_catalogue)."""
+    ent = row["entity"]
+    if ent == "person":
+        return label_for_entity("person")
+    if ent == "akteur":
+        lab = neo4j_label_for_akteur_folder(database_dir, row["id"])
+        if not lab.isalnum():
+            raise ValueError(f"Label must be alphanumeric: {lab!r}")
+        return lab
+    if ent == "ort":
+        lab = neo4j_label_for_ort_id(row["id"])
+        if not lab.isalnum():
+            raise ValueError(f"Label must be alphanumeric: {lab!r}")
+        return lab
+    if ent == "software_digitaltool":
+        lab = neo4j_label_for_software_digitaltool_id(row["id"])
+        if not lab.isalnum():
+            raise ValueError(f"Label must be alphanumeric: {lab!r}")
+        return lab
+    return label_for_entity(ent)
 
 
 def int_or_none(s: str) -> int | None:
@@ -135,7 +172,7 @@ def merge_nodes_batch(tx, label: str, rows: list[dict]):
 
 
 def merge_edges_batch(tx, rel_type: str, rows: list[dict]):
-    if not VALID_REL_TYPE.match(rel_type):
+    if rel_type not in NEO4J_REL_TYPES:
         raise ValueError(f"Unsafe relationship type {rel_type!r}")
     q = f"""
     UNWIND $rows AS row
@@ -160,16 +197,15 @@ def load_edge_rows(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
-def row_to_node_props(row: dict[str, str]) -> dict:
+def row_to_node_props(row: dict[str, str], neo4j_label: str) -> dict:
+    """Metadata-only props (plan §4): no build_status / markdown_path; title only on Software/Tool."""
     dfc = int_or_none(row.get("dateien_file_count", ""))
     isc = int_or_none(row.get("imported_source_count", ""))
-    props: dict = {
-        "entity": row["entity"],
-        "id": row["id"],
-        "title": row.get("title") or "",
-        "build_status": row.get("build_status") or "",
-        "markdown_path": row.get("markdown_path") or "",
-    }
+    props: dict = {"id": row["id"]}
+    if neo4j_label in ("Software", "Tool"):
+        title = (row.get("title") or "").strip()
+        if title:
+            props["title"] = title
     if dfc is not None:
         props["dateien_file_count"] = dfc
     if isc is not None:
@@ -187,6 +223,15 @@ def row_to_rel_props(row: dict[str, str]) -> dict:
 
 
 def main() -> int:
+    # Neo4j relationship types include non-ASCII (e.g. GEHÖRT_ZU); avoid mojibake on Windows cp1252 consoles.
+    for stream in (sys.stdout, sys.stderr):
+        reconf = getattr(stream, "reconfigure", None)
+        if reconf is not None:
+            try:
+                reconf(encoding="utf-8")
+            except (OSError, ValueError, AttributeError):
+                pass
+
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument(
         "--database-dir",
@@ -202,33 +247,75 @@ def main() -> int:
         help="DETACH DELETE all nodes before import (destructive).",
     )
     ap.add_argument(
+        "--wipe-only",
+        action="store_true",
+        help="DETACH DELETE all nodes and relationships, then exit (no CSV import). "
+        "Requires --confirm-wipe. Does not read node_inventory or edges.",
+    )
+    ap.add_argument(
         "--confirm-wipe",
         action="store_true",
-        help="Required together with --wipe.",
+        help="Required together with --wipe or --wipe-only.",
     )
     ap.add_argument("--batch-size", type=int, default=400)
+    ap.add_argument(
+        "--entities",
+        nargs="+",
+        metavar="ENTITY",
+        help="Only import inventory rows whose `entity` column is in this list (e.g. material ort akteur).",
+    )
+    ap.add_argument(
+        "--password-file",
+        type=Path,
+        default=None,
+        help="Read Neo4j password from the first non-empty line of this file (UTF-8). "
+        "Skipped if NEO4J_PASSWORD is already set.",
+    )
     args = ap.parse_args()
 
     if args.nodes_only and args.edges_only:
         print("Choose at most one of --nodes-only / --edges-only", file=sys.stderr)
         return 1
+    if args.wipe and args.wipe_only:
+        print("Choose at most one of --wipe / --wipe-only", file=sys.stderr)
+        return 1
     if args.wipe and not args.confirm_wipe:
         print("Refusing --wipe without --confirm-wipe", file=sys.stderr)
+        return 1
+    if args.wipe_only and not args.confirm_wipe:
+        print("Refusing --wipe-only without --confirm-wipe", file=sys.stderr)
+        return 1
+    if args.wipe_only and (args.nodes_only or args.edges_only):
+        print("--wipe-only cannot be combined with --nodes-only / --edges-only", file=sys.stderr)
         return 1
 
     base: Path = args.database_dir
     inv_path = base / "_system" / "node_inventory.csv"
     edge_path = base / "_edges" / "clean_confirmed_edges.csv"
-    if not inv_path.is_file():
-        print(f"Missing {inv_path}", file=sys.stderr)
-        return 1
-    if not args.nodes_only and not edge_path.is_file():
-        print(f"Missing {edge_path}", file=sys.stderr)
-        return 1
+    if not args.wipe_only:
+        if not inv_path.is_file():
+            print(f"Missing {inv_path}", file=sys.stderr)
+            return 1
+        if not args.nodes_only and not edge_path.is_file():
+            print(f"Missing {edge_path}", file=sys.stderr)
+            return 1
 
     password = (os.environ.get("NEO4J_PASSWORD") or "").strip()
+    if not password and args.password_file is not None:
+        if not args.password_file.is_file():
+            print(f"--password-file not found: {args.password_file}", file=sys.stderr)
+            return 1
+        for line in args.password_file.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#"):
+                password = line
+                break
     if not password:
-        print("NEO4J_PASSWORD is not set.", file=sys.stderr)
+        print(
+            "NEO4J_PASSWORD is not set. Export it in the shell or pass --password-file <path> "
+            "(first non-empty, non-# line).",
+            file=sys.stderr,
+        )
         return 1
     uri = os.environ.get("NEO4J_URI", "neo4j://127.0.0.1:7687").strip()
     user = os.environ.get("NEO4J_USER", "neo4j").strip()
@@ -237,15 +324,25 @@ def main() -> int:
     try:
         from neo4j import GraphDatabase
     except ImportError:
-        print("Install the driver: pip install neo4j", file=sys.stderr)
+        print("Install the driver: pip install -r requirements-neo4j.txt", file=sys.stderr)
         return 1
 
-    inv_rows = load_inventory_rows(inv_path)
-    entities_in_file = {r["entity"] for r in inv_rows}
-    missing_map = entities_in_file - set(ENTITY_LABEL.keys()) - {"datenmodell"}
-    if missing_map:
-        print(f"node_inventory.csv uses unknown entities (add ENTITY_LABEL): {sorted(missing_map)}", file=sys.stderr)
-        return 1
+    inv_rows: list[dict[str, str]] = []
+    if not args.wipe_only:
+        inv_rows = load_inventory_rows(inv_path)
+        entities_in_file = {r["entity"] for r in inv_rows}
+        allowed_entities = (
+            set(ENTITY_LABEL.keys())
+            | {"ort", "akteur", "software_digitaltool", "datenmodell", "tooltyp"}
+            | SKIP_NODE_ENTITIES
+        )
+        missing_map = entities_in_file - allowed_entities
+        if missing_map:
+            print(
+                f"node_inventory.csv uses unknown entities (add ENTITY_LABEL): {sorted(missing_map)}",
+                file=sys.stderr,
+            )
+            return 1
 
     driver = GraphDatabase.driver(uri, auth=(user, password))
     try:
@@ -256,21 +353,43 @@ def main() -> int:
             return driver.session(database=database)
 
         with session() as sess:
-            if args.wipe:
+            if args.wipe or args.wipe_only:
                 sess.execute_write(wipe_graph)
                 print("Wiped graph (all nodes and relationships removed).")
+
+            if args.wipe_only:
+                rec = sess.run("MATCH (n) RETURN count(n) AS c").single()
+                relc = sess.run("MATCH ()-[r]->() RETURN count(r) AS c").single()
+                print(f"Totals now: {rec['c']} nodes, {relc['c']} relationships.")
+                print("Done (wipe-only).")
+                return 0
 
             if not args.edges_only:
                 by_label: dict[str, list[dict]] = defaultdict(list)
                 skipped_dm = 0
+                skipped_tt = 0
+                skipped_plan = 0
+                skipped_fuegung = 0
                 for row in inv_rows:
                     ent = row["entity"]
+                    if args.entities and ent not in args.entities:
+                        continue
+                    if ent in SKIP_NODE_ENTITIES:
+                        skipped_plan += 1
+                        continue
                     if ent == "datenmodell":
                         skipped_dm += 1
                         continue
-                    lab = label_for_entity(ent)
+                    if ent == "tooltyp":
+                        skipped_tt += 1
+                        continue
+                    if ent == "fuegung_verbindung" and row["id"] == "Reversible_Fuegung":
+                        skipped_fuegung += 1
+                        continue
+                    lab = label_for_inventory_row(row, base)
                     tp = row["typed_path"]
-                    by_label[lab].append({"typed_path": tp, "props": row_to_node_props(row)})
+                    props = row_to_node_props(row, lab)
+                    by_label[lab].append({"typed_path": tp, "props": props})
 
                 for lab, rows in sorted(by_label.items(), key=lambda x: x[0]):
                     for i in range(0, len(rows), args.batch_size):
@@ -278,26 +397,47 @@ def main() -> int:
                         sess.execute_write(merge_nodes_batch, lab, chunk)
                     print(f"  Nodes :{lab}  count={len(rows)}")
 
-                print(f"Imported {sum(len(v) for v in by_label.values())} nodes (skipped datenmodell rows: {skipped_dm}).")
+                print(
+                    f"Imported {sum(len(v) for v in by_label.values())} nodes "
+                    f"(skipped datenmodell={skipped_dm}, tooltyp={skipped_tt}, "
+                    f"plan_dropped_entities={skipped_plan}, reversible_fuegung={skipped_fuegung})."
+                )
 
             if not args.nodes_only:
                 edge_rows = load_edge_rows(edge_path)
                 skipped_edges = 0
+                skipped_fold = 0
                 by_rel: dict[str, list[dict]] = defaultdict(list)
                 for row in edge_rows:
                     if row["source_entity"] == "datenmodell" or row["target_entity"] == "datenmodell":
                         skipped_edges += 1
                         continue
-                    rt = row["relation"]
-                    if not VALID_REL_TYPE.match(rt):
-                        print(f"Skipping edge with invalid relation type {rt!r}", file=sys.stderr)
+                    if row["source_entity"] == "tooltyp" or row["target_entity"] == "tooltyp":
                         skipped_edges += 1
                         continue
-                    by_rel[rt].append(
+                    if (
+                        row["source_entity"] in SKIP_NODE_ENTITIES
+                        or row["target_entity"] in SKIP_NODE_ENTITIES
+                    ):
+                        skipped_edges += 1
+                        continue
+                    if (
+                        row["source"] == "fuegung_verbindung/Reversible_Fuegung"
+                        or row["target"] == "fuegung_verbindung/Reversible_Fuegung"
+                    ):
+                        skipped_edges += 1
+                        continue
+                    neo_rel, fold_props = fold_csv_relation(row)
+                    if neo_rel is None:
+                        skipped_fold += 1
+                        continue
+                    props = row_to_rel_props(row)
+                    props.update(fold_props)
+                    by_rel[neo_rel].append(
                         {
                             "source": row["source"],
                             "target": row["target"],
-                            "props": row_to_rel_props(row),
+                            "props": props,
                         }
                     )
 
@@ -310,7 +450,8 @@ def main() -> int:
 
                 print(
                     f"Imported {sum(len(v) for v in by_rel.values())} relationships "
-                    f"(skipped {skipped_edges} datenmodell / invalid rows)."
+                    f"(skipped {skipped_edges} datenmodell / tooltyp / skip-entities / reversible_fuegung; "
+                    f"skipped {skipped_fold} folded-away CSV rows)."
                 )
 
             rec = sess.run("MATCH (n) RETURN count(n) AS c").single()

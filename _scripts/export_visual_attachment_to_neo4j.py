@@ -11,7 +11,7 @@ Environment (optional defaults in parentheses):
   NEO4J_PASSWORD  (required unless --dry-run)
 
 Usage:
-  pip install neo4j
+  pip install -r requirements-neo4j.txt
   set NEO4J_PASSWORD=...
   python _scripts/export_visual_attachment_to_neo4j.py
   python _scripts/export_visual_attachment_to_neo4j.py --dry-run
@@ -126,7 +126,7 @@ def merge_batch(tx, label: str, batch: list[dict]):
     tx.run(cypher, rows=rows)
 
 
-# Sample Fallbeispiel → Bauwerk links from neo4j_schema_visual_nodes_attachment.md (optional --demo-edges)
+# Sample Bauwerk → Fallbeispiel links (plan Appendix F: rolle `fallbeispiel`) from visual attachment ids.
 DEMO_FALL_BAU = [
     ("Berlin_Schildow_Pilot_Haus", "Berlin_Schildow_Pilot_Haus_Gebaeude"),
     ("55_Great_Suffolk_Street_London", "55_Great_Suffolk_Street_London_Lager"),
@@ -139,8 +139,8 @@ def merge_demo_edges(tx):
     """A few GEHÖRT_ZU edges so Explorer mode is not empty (catalogue file has vertices only)."""
     q = """
     UNWIND $pairs AS p
-    MATCH (f:Fallbeispiel {id: p.fid}), (b:Bauwerk {id: p.bid})
-    MERGE (f)-[:GEHÖRT_ZU {rolle: 'gebaeude'}]->(b)
+    MATCH (b:Bauwerk {id: p.bid}), (f:Fallbeispiel {id: p.fid})
+    MERGE (b)-[:GEHÖRT_ZU {rolle: 'fallbeispiel'}]->(f)
     """
     rows = [{"fid": a, "bid": b} for a, b in DEMO_FALL_BAU]
     tx.run(q, pairs=rows)
@@ -169,7 +169,7 @@ def main() -> int:
     ap.add_argument(
         "--demo-edges",
         action="store_true",
-        help="After import, MERGE four Fallbeispiel→Bauwerk GEHÖRT_ZU edges from the sample catalogue rows.",
+        help="After import, MERGE four Bauwerk->Fallbeispiel GEHÖRT_ZU {rolle: 'fallbeispiel'} edges (plan Appendix F).",
     )
     ap.add_argument("--batch-size", type=int, default=200)
     args = ap.parse_args()
@@ -201,7 +201,7 @@ def main() -> int:
     try:
         from neo4j import GraphDatabase
     except ImportError:
-        print("Install the driver: pip install neo4j", file=sys.stderr)
+        print("Install the driver: pip install -r requirements-neo4j.txt", file=sys.stderr)
         return 1
 
     driver = GraphDatabase.driver(uri, auth=(user, password))
@@ -249,7 +249,7 @@ def main() -> int:
 
             if args.demo_edges:
                 session.execute_write(merge_demo_edges)
-                print("  Merged demo :GEHÖRT_ZU edges (Fallbeispiel → Bauwerk, 4 pairs)")
+                print("  Merged demo :GEHÖRT_ZU edges (Bauwerk -> Fallbeispiel, 4 pairs)")
 
             n1, r1 = count_snapshot(session)
             print(f"After import: {n1} nodes, {r1} relationships in database `{database}`")

@@ -21,22 +21,27 @@
   (:Bauteilgruppe {id: "55GSS_C01_Traeger_Stuetzen"})
   (:Bauteilgruppe {id: "CRCLR_C02_Wandpaneele"})
   (:Bauteilgruppe {id: "Werkhof29_C01_Fassadenbleche"})
-  ... (materialisierte Gruppe aus `reuse_einsatz/` / BAUTEIL-INVENTAR — Graph-`id` folgt `<CASE>_C<NN>_<ELEMENT>`, kein Live-Ordner nötig)
+  ... (materialisierte Gruppe aus `reuse_einsatz/` / BAUTEIL-INVENTAR — **ein** Label `:Bauteilgruppe`; Graph-`id` = Ordner-Slug unter `reuse_einsatz/<id>/` oder `<CASE>_C<NN>_<ELEMENT>` §5.8)
 
-:ReuseEinsatz
-  (:ReuseEinsatz {id: "K118_C01_Traeger_Stuetzen"})
-  (:ReuseEinsatz {id: "K118_C02_Treppe"})
-  ... (je `_database/reuse_einsatz/<id>/` **oder** gleicher Slug wie zugehörige `:Bauteilgruppe`, wenn 1:1 materialisiert — Graph-`id` = Export-Slug §1)
-
+:KammernVerbaendeNgosNetzwerke
+  (:KammernVerbaendeNgosNetzwerke {id: "Circular_Berlin"})
+:PlanungArchitekturIngenieurwesen
+  (:PlanungArchitekturIngenieurwesen {id: "Bellastock"})
+  (:PlanungArchitekturIngenieurwesen {id: "Circular_Structural_Design"})
+:OeffentlicheInstitutionenFoerderung
+  (:OeffentlicheInstitutionenFoerderung {id: "BBSR_Zukunft_Bau"})
+  (:OeffentlicheInstitutionenFoerderung {id: "BIM_Berlin"})
+:ReuseBeratungProzessdienstleister
+  (:ReuseBeratungProzessdienstleister {id: "Zirkular_GmbH"})
 :Akteur
-  (:Akteur {id: "Circular_Berlin"})
-  (:Akteur {id: "Circular_Structural_Design"})
-  (:Akteur {id: "Bellastock"})
   (:Akteur {id: "Arup"})
-  (:Akteur {id: "Dirk_Hebel"})
   (:Akteur {id: "Bauteilboerse_Hannover"})
   (:Akteur {id: "Bauteilboerse_Bremen"})
-  ... (eine Organisation oder Person pro Knoten — keine `A;B,C`-Listen in `id`; **Bauteilbörse** als Konzept-Knoten → **`id: "Bauteilboerse"`** auf `:Ressourcenquelle` / `:Beschaffungsweg` / `:Tooltyp`, siehe §1 ID-Tabelle)
+  ... (§6.1 **Organisation** primaries + `:Akteur` **nur** Fallback ohne erkanntes `akteurtyp/<slug>` — **keine** natürlichen Personen; **Bauteilbörse** als Konzept → `id: "Bauteilboerse"` auf `:Ressourcenquelle` / `:Beschaffungsweg`, nicht hier)
+
+:Person
+  (:Person {id: "Dirk_Hebel"})
+  ... (`person/` oder `akteur/` mit Person-Markdown; siehe Plan §5.2 / §6.1)
 
 :Quelle
   (:Quelle {id: "BBSR_Zukunft_Bau_foerderprogramm", art: "Website"})
@@ -50,13 +55,13 @@
   (:Software {id: "Restado", title: "Restado"})
   (:Software {id: "Loopfront", title: "Loopfront"})
   (:Software {id: "Revit", title: "Autodesk Revit", softwaretyp: "CAD"})
-  (:Software {id: "Rhino", title: "Rhino", softwaretyp: "CAD"})
   (:Software {id: "OneClickLCA", title: "One Click LCA", softwaretyp: "LCA_Software"})
   (:Software {id: "Excel", title: "Microsoft Excel", softwaretyp: "Tabellenkalkulation"})
   (:Software {id: "QGIS", title: "QGIS", softwaretyp: "GIS"})
   ... (vollständige **Plattform/Anwendung**; `title` = Kurzname; `softwaretyp` optional enum §1.E)
 
 :Tool
+  (:Tool {id: "Rhino", title: "Rhino", tooltyp: "CAD"})
   (:Tool {id: "Grasshopper_Material_Matching_Skript", title: "Grasshopper-Skript Material-Matching", tooltyp: "Skript", funktion: "Matching"})
   (:Tool {id: "Revit_Materialpass_Plugin", title: "Revit-Materialpass-Plug-in", tooltyp: "Plugin"})
   (:Tool {id: "CO2_Rechner_Spreadsheet", title: "CO2-Rechner (Tabellenblatt)", tooltyp: "Rechner"})
@@ -302,11 +307,13 @@
   (:Huerde {id: "Verfuegbarkeitsproblem"})
   (:Huerde {id: "Witterung_Feuchte"})
   (:Huerde {id: "Zustand_Unklar"})
-  (:Huerde {id: "Asbest", kategorie: "Schadstoff"})
-  (:Huerde {id: "Bleifarbe", kategorie: "Schadstoff"})
-  (:Huerde {id: "Holzschutzmittel", kategorie: "Schadstoff"})
-  (:Huerde {id: "PAK", kategorie: "Schadstoff"})
-  (:Huerde {id: "PCB", kategorie: "Schadstoff"})
+
+:Schadstoff
+  (:Schadstoff {id: "Asbest"})
+  (:Schadstoff {id: "Bleifarbe"})
+  (:Schadstoff {id: "Holzschutzmittel"})
+  (:Schadstoff {id: "PAK"})
+  (:Schadstoff {id: "PCB"})
 
 :PruefungNachweis
   (:PruefungNachweis {id: "Abbrandbemessung"})
@@ -409,11 +416,6 @@
   (:Datenmodell {id: "Materialpass_Schema"})
   (:Datenmodell {id: "Ontologie"})
   (:Datenmodell {id: "Taxonomie"})
-
-:Tooltyp
-  (:Tooltyp {id: "Bauteilboerse"})
-  (:Tooltyp {id: "Materialdatenbank"})
-  (:Tooltyp {id: "Materialkataster"})
 
 :ZertifizierungBewertungssystem
   (:ZertifizierungBewertungssystem {id: "BREEAM"})

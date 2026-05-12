@@ -1,6 +1,6 @@
 ﻿# Neo4j-Visualisierung — konkreter Knotenkatalog (Modus A)
 
-Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{...}` trägt (siehe [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) § „Autoritativer vertikaler Gesamtbaum“). Abschnitt **A** des Visual-Plans listet nur die **45** Label-Typen; **dieses Dokument** ist die Vertex-Menge für den Typgraphen mit **Instanz**-Mustern.
+Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{...}` trägt (siehe [neo4j_schema_catalogue_3bc01035.plan.md](e:/recherche/.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md), Abschnitt **5.2**). **Dieses Dokument** folgt der **52-Label**-Kataloglogik des Plans (kein `:Tooltyp`—Kategorien liegen als Property `tooltyp` / `softwaretyp` an `:Tool` / `:Software`); es dient dem **Syntax-/Visualisierungs**-Mustergarten neben dem normativen Plan.
 
 ```text
 :Fallbeispiel
@@ -24,18 +24,30 @@ Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{
   (:Bauteilgruppe {id: "CRCLR_C02_Wandpaneele"})
   (:Bauteilgruppe {id: "Werkhof29_C01_Fassadenbleche"})
 
-:ReuseEinsatz
-  (:ReuseEinsatz {id: "K118_C01_Traeger_Stuetzen"})
-  (:ReuseEinsatz {id: "K118_C02_Treppe"})
+:KammernVerbaendeNgosNetzwerke
+  (:KammernVerbaendeNgosNetzwerke {id: "Circular_Berlin"})
+
+:PlanungArchitekturIngenieurwesen
+  (:PlanungArchitekturIngenieurwesen {id: "Bellastock"})
+  (:PlanungArchitekturIngenieurwesen {id: "Circular_Structural_Design"})
+
+:OeffentlicheInstitutionenFoerderung
+  (:OeffentlicheInstitutionenFoerderung {id: "BBSR_Zukunft_Bau"})
+  (:OeffentlicheInstitutionenFoerderung {id: "BIM_Berlin"})
+
+:ReuseBeratungProzessdienstleister
+  (:ReuseBeratungProzessdienstleister {id: "Zirkular_GmbH"})
 
 :Akteur
-  (:Akteur {id: "Circular_Berlin"})
-  (:Akteur {id: "Circular_Structural_Design"})
-  (:Akteur {id: "Bellastock"})
   (:Akteur {id: "Arup"})
-  (:Akteur {id: "Dirk_Hebel"})
   (:Akteur {id: "Bauteilboerse_Hannover"})
   (:Akteur {id: "Bauteilboerse_Bremen"})
+
+:Person
+  (:Person {id: "Dirk_Hebel"})
+  (:Person {id: "Kerstin_Mueller"})
+  (:Person {id: "ellen_macarthur"})
+  (:Person {id: "patrick_teuffel"})
 
 :Quelle
   (:Quelle {id: "BBSR_Zukunft_Bau_foerderprogramm", art: "Website"})
@@ -48,12 +60,12 @@ Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{
   (:Software {id: "Restado", title: "Restado"})
   (:Software {id: "Loopfront", title: "Loopfront"})
   (:Software {id: "Revit", title: "Autodesk Revit", softwaretyp: "CAD"})
-  (:Software {id: "Rhino", title: "Rhino", softwaretyp: "CAD"})
   (:Software {id: "OneClickLCA", title: "One Click LCA", softwaretyp: "LCA_Software"})
   (:Software {id: "Excel", title: "Microsoft Excel", softwaretyp: "Tabellenkalkulation"})
   (:Software {id: "QGIS", title: "QGIS", softwaretyp: "GIS"})
 
 :Tool
+  (:Tool {id: "Rhino", title: "Rhino", tooltyp: "CAD"})
   (:Tool {id: "Grasshopper_Material_Matching_Skript", title: "Grasshopper-Skript Material-Matching", tooltyp: "Skript", funktion: "Matching"})
   (:Tool {id: "Revit_Materialpass_Plugin", title: "Revit-Materialpass-Plug-in", tooltyp: "Plugin"})
   (:Tool {id: "CO2_Rechner_Spreadsheet", title: "CO2-Rechner (Tabellenblatt)", tooltyp: "Rechner"})
@@ -297,11 +309,13 @@ Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{
   (:Huerde {id: "Verfuegbarkeitsproblem"})
   (:Huerde {id: "Witterung_Feuchte"})
   (:Huerde {id: "Zustand_Unklar"})
-  (:Huerde {id: "Asbest", kategorie: "Schadstoff"})
-  (:Huerde {id: "Bleifarbe", kategorie: "Schadstoff"})
-  (:Huerde {id: "Holzschutzmittel", kategorie: "Schadstoff"})
-  (:Huerde {id: "PAK", kategorie: "Schadstoff"})
-  (:Huerde {id: "PCB", kategorie: "Schadstoff"})
+
+:Schadstoff
+  (:Schadstoff {id: "Asbest"})
+  (:Schadstoff {id: "Bleifarbe"})
+  (:Schadstoff {id: "Holzschutzmittel"})
+  (:Schadstoff {id: "PAK"})
+  (:Schadstoff {id: "PCB"})
 
 :PruefungNachweis
   (:PruefungNachweis {id: "Abbrandbemessung"})
@@ -381,10 +395,6 @@ Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{
   (:Entwurfsentscheidung {id: "Anschlussdetail_angepasst"})
   (:Entwurfsentscheidung {id: "Erschliessungskern_verschoben"})
 
-:Messpunkt
-  (:Messpunkt {id: "DEMO_Messpunkt_Gebaeudeflaeche", wert: 1200, einheit: "m2", kennwert_schluessel: "flaeche"})
-  (:Messpunkt {id: "DEMO_Messpunkt_CO2", wert: 42, einheit: "t", kennwert_schluessel: "co2"})
-
 :Land
   (:Land {id: "Schweiz", iso_country: "CH"})
   (:Land {id: "Deutschland", iso_country: "DE"})
@@ -411,11 +421,6 @@ Eine geplante **Graph-Vertex** pro Zeile, die mit `(:<Label>` beginnt und ein `{
   (:Datenqualitaet {id: "Sekundaerquelle"})
   (:Datenqualitaet {id: "Unbekannt"})
   (:Datenqualitaet {id: "Widerspruechlich"})
-
-:Tooltyp
-  (:Tooltyp {id: "Bauteilboerse"})
-  (:Tooltyp {id: "Materialdatenbank"})
-  (:Tooltyp {id: "Materialkataster"})
 
 :ZertifizierungBewertungssystem
   (:ZertifizierungBewertungssystem {id: "BREEAM"})

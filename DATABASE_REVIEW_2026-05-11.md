@@ -8,10 +8,10 @@ Generated: 2026-05-11
 
 **Name:** Reuse Knowledge Base + Graph (working title in files: *reuse_ontology*)
 **Location:** `e:\recherche\_database\`
-**Canonical schema:** `_database/_system/SCHEMA.md`
-**SQLite artifact:** `_database/_system/reuse_ontology.sqlite`
-**Edge CSV:** `_database/_edges/clean_confirmed_edges.csv`
-**Tool used by user:** Tolaria (Markdown/wikilinks editor, similar to Obsidian)
+**Canonical schema (folders + CSV):** `_database/_system/SCHEMA.md`  
+**Normative research graph:** Neo4j per [`.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md`](.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md) — import `_scripts/import_database_folder_to_neo4j.py`  
+**Edge CSV:** `_database/_edges/clean_confirmed_edges.csv`  
+**Optional local SQLite:** rebuild with `_migration/build_phase24_sqlite_database.py` (not tracked in git)
 
 **Purpose:** PhD-level research on Wiederverwendung (reuse) of building components, materials, and systems in architecture and construction. Combines general domain knowledge with structured built case studies, all navigable as a knowledge graph.
 
@@ -26,7 +26,7 @@ Generated: 2026-05-11
 - Digital tools, platforms, software
 - Economics, funding programs
 
-**Organization logic:** Folder-per-instance. Every entity is a folder under `_database/<entity_type>/<instance_id>/index.md`. The folder name is the node ID. YAML frontmatter = structured metadata. Body = German prose knowledge. Typed edges are stored separately in `_edges/clean_confirmed_edges.csv` and materialized to SQLite.
+**Organization logic:** Folder-per-instance. Every entity is a folder under `_database/<entity_type>/<instance_id>/index.md`. The folder name is the node ID. YAML frontmatter = structured metadata. Body = German prose knowledge. Typed edges are stored separately in `_edges/clean_confirmed_edges.csv` and folded into Neo4j on import (optional local SQLite mirror if you run the legacy build script).
 
 **Key naming conventions:**
 - Node IDs are ASCII-slugified German/English titles, e.g. `K118_Kopfbau_Halle_118_Winterthur__001__Stahltr_ger_St_tzen`

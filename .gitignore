@@ -1,3 +1,10 @@
+# Neo4j credentials (local only; never commit)
+.neo4j_password
+_database/_system/.neo4j_password
+
+# Optional local SQLite rebuild (not part of the Neo4j plan deliverable)
+_database/_system/reuse_ontology.sqlite
+
 # Tolaria app files (machine-specific, never commit)
 .laputa/settings.json
 
@@ -14,3 +21,8 @@
 .idea/
 *.swp
 *.swo
+
+# Python bytecode (never commit)
+__pycache__/
+*.py[cod]
+*$py.class
