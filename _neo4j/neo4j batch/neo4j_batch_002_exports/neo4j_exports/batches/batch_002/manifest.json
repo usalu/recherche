@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_002",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "BioPartner_5_Leiden_Oegstgeest.md",
+    "BlueCity_Offices_Rotterdam.md",
+    "Boulder_Fire_Station_3.md",
+    "Brent_Cross_Town_Primary_Substation_London.md",
+    "Brighton_Waste_House_Brighton.md"
+  ],
+  "project_files": [
+    "p_biopartner_5_leiden_oegstgeest.kg.jsonl",
+    "p_bluecity_offices_rotterdam.kg.jsonl",
+    "p_boulder_fire_station_3.kg.jsonl",
+    "p_brent_cross_town_primary_substation_london.kg.jsonl",
+    "p_brighton_waste_house_brighton.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 002 keeps Projekt as the only central case node, keeps Bewertung as a scalar, stores metrics as properties, models Stadt/Land/Bauwerk/Bauobjektrolle/Bauobjektklasse/Akteurrolle as connected nodes, and routes all BELEGT_IN relationships to the case-markdown Quelle nodes. External URLs are stored as external_sources arrays on each markdown Quelle to avoid one-edge source nodes."
+}

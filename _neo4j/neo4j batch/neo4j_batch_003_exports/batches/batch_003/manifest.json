@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_003",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Broethen_Twin_House_Hoyerswerda.md",
+    "CascadeUp_London_secondary_timber_glulam_demonstrator.md",
+    "Charles_Malis_Molenbeek.md",
+    "Christ_Pavilion_Volkenroda.md",
+    "Chiro_d_Itterbeek_Dilbeek.md"
+  ],
+  "project_files": [
+    "p_broethen_twin_house_hoyerswerda.kg.jsonl",
+    "p_cascadeup_london_secondary_timber_glulam_demonstrator.kg.jsonl",
+    "p_charles_malis_molenbeek.kg.jsonl",
+    "p_christ_pavilion_volkenroda.kg.jsonl",
+    "p_chiro_d_itterbeek_dilbeek.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 003 preserves the remodeled contract: Projekt is the central case node; Bewertung is a scalar; Stadt/Land/Bauwerk/Bauobjektrolle/Bauobjektklasse/Akteurrolle/Akteurtyp/Bauteiltyp/HuerdeKategorie remain connected nodes; Kennwerte are properties on the relevant Projekt or Bauteilgruppe; each BELEGT_IN points to the case-markdown Quelle with datenqualitaet=Belegt. Surplus and Bestandserhalt components are kept but marked counts_as_direct_reuse=false where applicable."
+}

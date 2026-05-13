@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_005",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Ferme_du_Rail_Paris.md",
+    "gjG_House_Gentbrugge.md",
+    "Grande_Halle_de_Colombelles.md",
+    "Grubenstrasse_29_Werkhof_29_Zuerich.md",
+    "Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere.md"
+  ],
+  "project_files": [
+    "p_ferme_du_rail_paris.kg.jsonl",
+    "p_gjg_house_gentbrugge.kg.jsonl",
+    "p_grande_halle_de_colombelles.kg.jsonl",
+    "p_grubenstrasse_29_werkhof_29_zuerich.kg.jsonl",
+    "p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 005 follows the remodeled contract: Projekt is the central node; Bewertung and metrics are scalar properties; Stadt/Land/Bauwerk/Bauobjektrolle/Bauobjektklasse/Akteurrolle/Akteurtyp/Bauteiltyp/HuerdeKategorie are connected nodes; Kennwerte are properties; each BELEGT_IN has datenqualitaet=Belegt. Bestandserhalt, uncertain reuse, and context Bauteilgruppen are explicitly separated from score-relevant direct reuse using boolean properties."
+}
