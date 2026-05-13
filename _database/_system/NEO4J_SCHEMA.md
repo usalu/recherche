@@ -6,6 +6,8 @@ Diese Datei ist die geplante **narrative** Spiegelung des Plans (Knotentypen, Ei
 
 **Import:** `_scripts/import_database_folder_to_neo4j.py` (Inventar + Kanten), optional `_scripts/export_visual_attachment_to_neo4j.py` (Demo-Knoten aus `neo4j_schema_visual_nodes_attachment.md`). **Preflight-Reihenfolge:** siehe `HANDOFF.md` Abschnitt *Neo4j import preflight*. Label-Helfer: `_scripts/akteur_org_neo4j_label.py`, `_scripts/ort_geo_label.py`, `_scripts/software_tool_label.py`.
 
+**Live-Schema-Export (Labels, Kantentypen, Constraints, Indizes, Knotenzähler):** `python _scripts/export_neo4j_schema.py --password-file .neo4j_password` → `_database/_system/neo4j_schema_export.json` (gleiche Verbindungsvariablen wie der Import).
+
 **Abhängigkeiten:** `requirements-neo4j.txt` im Repository-Root.
 
 ## CSV-Ontologie vs. Neo4j-Kantentypen

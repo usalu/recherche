@@ -1,0 +1,354 @@
+{
+  "exported_at": "2026-05-13T07:53:19.288581+00:00",
+  "connection": {
+    "uri": "neo4j://127.0.0.1:7687",
+    "user": "neo4j",
+    "database": "neo4j"
+  },
+  "normative_plan": ".cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md",
+  "inventory_entity_to_neo4j_label": {
+    "akteurrolle": "Akteurrolle",
+    "aufbereitungsverfahren": "Aufbereitungsverfahren",
+    "bauaufgabe_intervention": "BauaufgabeIntervention",
+    "bauobjekt": "Bauwerk",
+    "bauobjektstatus": "Status",
+    "bausystem": "Bausystem",
+    "bauteilebene": "Bauteilebene",
+    "bauteilgruppe": "Bauteilgruppe",
+    "bauteiltyp": "Bauteiltyp",
+    "bauteilzustand": "Bauteilzustand",
+    "bauweise": "Bauweise",
+    "beschaffungsweg": "Beschaffungsweg",
+    "bewertungslogik_abgrenzung": "WiederverwendungsArt",
+    "datenqualitaet": "Datenqualitaet",
+    "fallstudie": "Fallbeispiel",
+    "foerderprogramm": "Programm",
+    "fuegung_verbindung": "Verbindungstechnik",
+    "funktionswechsel": "Funktionswechsel",
+    "huerde": "Huerde",
+    "kontextmerkmal": "Programm",
+    "leistungsanforderung": "Leistungsanforderung",
+    "logistik": "Logistik",
+    "material": "Material",
+    "methode": "Methode",
+    "norm": "Norm",
+    "nutzung": "Nutzung",
+    "person": "Person",
+    "programm_kontext": "Programm",
+    "projekt": "Fallbeispiel",
+    "prozessphase": "Prozessphase",
+    "pruefung_nachweis": "PruefungNachweis",
+    "quelle": "Quelle",
+    "rechtliche_bedingung": "RechtlicheBedingung",
+    "ressourcenquelle": "Ressourcenquelle",
+    "reuse_einsatz": "Bauteilgruppe",
+    "reuse_einsatzstatus": "Status",
+    "reuse_kette": "Wiederverwendungskette",
+    "reuse_strategie": "WiederverwendungsArt",
+    "rueckbauverfahren": "Rueckbauverfahren",
+    "schadstoff": "Schadstoff",
+    "tragwerksprinzip": "Tragwerksprinzip",
+    "wirtschaft": "Wirtschaft",
+    "zertifizierung_bewertungssystem": "ZertifizierungBewertungssystem"
+  },
+  "folded_relationship_types": [
+    "BELEGT_IN",
+    "BENUTZT",
+    "GEHÖRT_ZU",
+    "HAT",
+    "IST"
+  ],
+  "live_graph": {
+    "node_labels": [
+      "Akteur",
+      "Akteurrolle",
+      "Aufbereitungsverfahren",
+      "BauaufgabeIntervention",
+      "Bausystem",
+      "Bauteilebene",
+      "Bauteilgruppe",
+      "Bauteiltyp",
+      "Bauteilzustand",
+      "Bauweise",
+      "Bauwerk",
+      "Beschaffungsweg",
+      "Datenqualitaet",
+      "Fallbeispiel",
+      "ForschungLehreWissenstransfer",
+      "Funktionswechsel",
+      "Huerde",
+      "KammernVerbaendeNgosNetzwerke",
+      "Land",
+      "Leistungsanforderung",
+      "Logistik",
+      "Material",
+      "MaterialinitiativenHubs",
+      "Methode",
+      "Norm",
+      "Nutzung",
+      "OeffentlicheInstitutionenFoerderung",
+      "Person",
+      "PlanungArchitekturIngenieurwesen",
+      "Professur",
+      "Programm",
+      "Prozessphase",
+      "PruefungNachweis",
+      "Quelle",
+      "RechtlicheBedingung",
+      "Ressourcenquelle",
+      "ReuseBeratungProzessdienstleister",
+      "Rueckbauverfahren",
+      "Schadstoff",
+      "Software",
+      "Stadt",
+      "Status",
+      "Tool",
+      "Tragwerksprinzip",
+      "UnternehmerverbandHistorischeBaustoffeUHBMd",
+      "Verbindungstechnik",
+      "WiederverwendungsArt",
+      "Wiederverwendungskette",
+      "Wirtschaft",
+      "ZertifizierungBewertungssystem"
+    ],
+    "relationship_types": [
+      "BENUTZT",
+      "GEHÖRT_ZU",
+      "HAT",
+      "IST"
+    ],
+    "constraints": [],
+    "indexes": [
+      {
+        "id": 1,
+        "name": "index_1b9dcc97",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "LOOKUP",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": null,
+        "properties": null,
+        "indexProvider": "token-lookup-1.0",
+        "owningConstraint": null,
+        "lastRead": "2026-05-13T06:40:04.373000000+00:00",
+        "readCount": 7
+      },
+      {
+        "id": 0,
+        "name": "index_460996c0",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "LOOKUP",
+        "entityType": "NODE",
+        "labelsOrTypes": null,
+        "properties": null,
+        "indexProvider": "token-lookup-1.0",
+        "owningConstraint": null,
+        "lastRead": "2026-05-13T07:51:51.075000000+00:00",
+        "readCount": 20072
+      }
+    ],
+    "node_counts_by_label": [
+      {
+        "label": "Akteur",
+        "node_count": 17
+      },
+      {
+        "label": "Akteurrolle",
+        "node_count": 21
+      },
+      {
+        "label": "Aufbereitungsverfahren",
+        "node_count": 11
+      },
+      {
+        "label": "BauaufgabeIntervention",
+        "node_count": 10
+      },
+      {
+        "label": "Bausystem",
+        "node_count": 5
+      },
+      {
+        "label": "Bauteilebene",
+        "node_count": 6
+      },
+      {
+        "label": "Bauteilgruppe",
+        "node_count": 637
+      },
+      {
+        "label": "Bauteiltyp",
+        "node_count": 15
+      },
+      {
+        "label": "Bauteilzustand",
+        "node_count": 9
+      },
+      {
+        "label": "Bauweise",
+        "node_count": 6
+      },
+      {
+        "label": "Bauwerk",
+        "node_count": 88
+      },
+      {
+        "label": "Beschaffungsweg",
+        "node_count": 8
+      },
+      {
+        "label": "Datenqualitaet",
+        "node_count": 7
+      },
+      {
+        "label": "Fallbeispiel",
+        "node_count": 187
+      },
+      {
+        "label": "ForschungLehreWissenstransfer",
+        "node_count": 4
+      },
+      {
+        "label": "Funktionswechsel",
+        "node_count": 6
+      },
+      {
+        "label": "Huerde",
+        "node_count": 28
+      },
+      {
+        "label": "KammernVerbaendeNgosNetzwerke",
+        "node_count": 8
+      },
+      {
+        "label": "Land",
+        "node_count": 3
+      },
+      {
+        "label": "Leistungsanforderung",
+        "node_count": 13
+      },
+      {
+        "label": "Logistik",
+        "node_count": 10
+      },
+      {
+        "label": "Material",
+        "node_count": 15
+      },
+      {
+        "label": "MaterialinitiativenHubs",
+        "node_count": 6
+      },
+      {
+        "label": "Methode",
+        "node_count": 13
+      },
+      {
+        "label": "Norm",
+        "node_count": 7
+      },
+      {
+        "label": "Nutzung",
+        "node_count": 9
+      },
+      {
+        "label": "OeffentlicheInstitutionenFoerderung",
+        "node_count": 6
+      },
+      {
+        "label": "Person",
+        "node_count": 8
+      },
+      {
+        "label": "PlanungArchitekturIngenieurwesen",
+        "node_count": 12
+      },
+      {
+        "label": "Professur",
+        "node_count": 1
+      },
+      {
+        "label": "Programm",
+        "node_count": 13
+      },
+      {
+        "label": "Prozessphase",
+        "node_count": 10
+      },
+      {
+        "label": "PruefungNachweis",
+        "node_count": 11
+      },
+      {
+        "label": "Quelle",
+        "node_count": 663
+      },
+      {
+        "label": "RechtlicheBedingung",
+        "node_count": 6
+      },
+      {
+        "label": "Ressourcenquelle",
+        "node_count": 9
+      },
+      {
+        "label": "ReuseBeratungProzessdienstleister",
+        "node_count": 3
+      },
+      {
+        "label": "Rueckbauverfahren",
+        "node_count": 5
+      },
+      {
+        "label": "Schadstoff",
+        "node_count": 5
+      },
+      {
+        "label": "Software",
+        "node_count": 54
+      },
+      {
+        "label": "Stadt",
+        "node_count": 58
+      },
+      {
+        "label": "Status",
+        "node_count": 15
+      },
+      {
+        "label": "Tool",
+        "node_count": 20
+      },
+      {
+        "label": "Tragwerksprinzip",
+        "node_count": 4
+      },
+      {
+        "label": "UnternehmerverbandHistorischeBaustoffeUHBMd",
+        "node_count": 1
+      },
+      {
+        "label": "Verbindungstechnik",
+        "node_count": 6
+      },
+      {
+        "label": "WiederverwendungsArt",
+        "node_count": 18
+      },
+      {
+        "label": "Wiederverwendungskette",
+        "node_count": 42
+      },
+      {
+        "label": "Wirtschaft",
+        "node_count": 6
+      },
+      {
+        "label": "ZertifizierungBewertungssystem",
+        "node_count": 5
+      }
+    ]
+  }
+}
