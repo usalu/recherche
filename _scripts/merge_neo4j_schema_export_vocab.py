@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Merge controlled vocabulary from node_inventory into neo4j_schema_export.json.
+"""Merge controlled taxonomy vocabulary into neo4j_schema_export.json (compact).
 
-Run from repo root after inventory or taxonomy changes:
+Only Stammdaten / bounded knot folders — excludes case instances, actors, sources,
+components, metrics, etc. Format: one sorted list of typed_path strings.
+
+Run from repo root:
   python _scripts/merge_neo4j_schema_export_vocab.py
 
 Reads:
   _database/_system/node_inventory.csv
-  _database/_system/neo4j_schema_export.json (must exist; preserves live_graph etc.)
+  _database/_system/neo4j_schema_export.json
+  _database/_edges/clean_confirmed_edges.csv (relation tokens only)
 
-Writes the same JSON path with added/updated keys:
-  controlled_vocabulary, hat_art_allowlist, gehoert_zu_rolle_allowlist,
-  csv_relations_skipped_from_graph, inventory_entity_graph_policy
+Removes legacy verbose keys if present (controlled_vocabulary, inventory_entity_graph_policy, …).
 """
 
 from __future__ import annotations
@@ -18,7 +20,6 @@ from __future__ import annotations
 import csv
 import json
 import sys
-from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -31,6 +32,50 @@ ROOT = Path(__file__).resolve().parents[1]
 INVENTORY = ROOT / "_database" / "_system" / "node_inventory.csv"
 EDGES = ROOT / "_database" / "_edges" / "clean_confirmed_edges.csv"
 EXPORT = ROOT / "_database" / "_system" / "neo4j_schema_export.json"
+
+# Inventory `entity` values that are bounded taxonomy / knot vocabulary (not cases, actors, quellen, …).
+CONTROLLED_VOCAB_ENTITIES: frozenset[str] = frozenset(
+    {
+        "akteurrolle",
+        "aufbereitungsverfahren",
+        "bauaufgabe_intervention",
+        "bauobjektklasse",
+        "bauobjektrolle",
+        "bauobjektstatus",
+        "bausystem",
+        "bauteilebene",
+        "bauteiltyp",
+        "bauteilzustand",
+        "bauweise",
+        "beschaffungsweg",
+        "bewertungslogik_abgrenzung",
+        "datenqualitaet",
+        "foerderprogramm",
+        "fuegung_verbindung",
+        "funktionswechsel",
+        "huerde",
+        "kontextmerkmal",
+        "leistungsanforderung",
+        "logistik",
+        "material",
+        "methode",
+        "norm",
+        "nutzung",
+        "programm_kontext",
+        "prozessphase",
+        "pruefung_nachweis",
+        "rechtliche_bedingung",
+        "ressourcenquelle",
+        "reuse_einsatzstatus",
+        "reuse_kette",
+        "reuse_strategie",
+        "rueckbauverfahren",
+        "schadstoff",
+        "tragwerksprinzip",
+        "wirtschaft",
+        "zertifizierung_bewertungssystem",
+    }
+)
 
 HAT_ART_ALLOWLIST = sorted(
     {
@@ -74,74 +119,23 @@ GEHOERT_ZU_ROLLE_ALLOWLIST = sorted(
 )
 
 
-def load_inventory_by_entity() -> dict[str, list[dict[str, str]]]:
-    by_ent: dict[str, list[dict[str, str]]] = defaultdict(list)
+def load_controlled_paths() -> tuple[list[str], dict[str, int]]:
+    """Return sorted typed_path list + per-entity counts (controlled entities only)."""
+    by_ent: dict[str, list[str]] = {e: [] for e in sorted(CONTROLLED_VOCAB_ENTITIES)}
     with INVENTORY.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             ent = (row.get("entity") or "").strip()
-            if not ent:
+            if ent not in CONTROLLED_VOCAB_ENTITIES:
                 continue
-            by_ent[ent].append(
-                {
-                    "id": (row.get("id") or "").strip(),
-                    "typed_path": (row.get("typed_path") or "").strip(),
-                    "title": (row.get("title") or "").strip(),
-                }
-            )
-    for ent in by_ent:
-        by_ent[ent].sort(key=lambda x: x["id"].lower())
-    return dict(sorted(by_ent.items(), key=lambda kv: kv[0].lower()))
-
-
-def entity_graph_policy(entity: str) -> dict[str, str | None]:
-    """How this inventory entity maps to Neo4j (plan §5.2 / §5.4 + importer)."""
-    if entity in imp.SKIP_NODE_ENTITIES:
-        return {
-            "vertex_kind": "none",
-            "neo4j_label": None,
-            "note": "plan §5.4 SKIP_NODE_ENTITIES — no standalone graph vertex from this folder",
-        }
-    if entity == "datenmodell":
-        return {
-            "vertex_kind": "none",
-            "neo4j_label": None,
-            "note": "importer skips :Datenmodell nodes; has_datenmodell edges folded away",
-        }
-    if entity == "tooltyp":
-        return {
-            "vertex_kind": "none",
-            "neo4j_label": None,
-            "note": "importer skips :Tooltyp; tool categories as properties on Software/Tool",
-        }
-    if entity == "akteur":
-        return {
-            "vertex_kind": "dynamic",
-            "neo4j_label": None,
-            "note": "resolved per row via akteur_org_neo4j_label.py (§6.1 org labels or Akteur)",
-        }
-    if entity == "ort":
-        return {
-            "vertex_kind": "dynamic",
-            "neo4j_label": None,
-            "note": "resolved per row via ort_geo_label.py → Land or Stadt",
-        }
-    if entity == "software_digitaltool":
-        return {
-            "vertex_kind": "dynamic",
-            "neo4j_label": None,
-            "note": "resolved per row via software_tool_label.py → Software or Tool",
-        }
-    if entity in imp.ENTITY_LABEL:
-        return {
-            "vertex_kind": "static",
-            "neo4j_label": imp.ENTITY_LABEL[entity],
-            "note": "ENTITY_LABEL in import_database_folder_to_neo4j.py",
-        }
-    return {
-        "vertex_kind": "unknown",
-        "neo4j_label": None,
-        "note": "entity present in node_inventory.csv but not in ENTITY_LABEL — extend importer if needed",
-    }
+            tp = (row.get("typed_path") or "").strip()
+            if tp:
+                by_ent[ent].append(tp)
+    counts = {e: len(by_ent[e]) for e in sorted(by_ent)}
+    paths: list[str] = []
+    for e in sorted(by_ent):
+        paths.extend(sorted(by_ent[e], key=str.lower))
+    paths.sort(key=str.lower)
+    return paths, counts
 
 
 def load_csv_relation_tokens() -> list[str]:
@@ -161,37 +155,56 @@ def main() -> int:
     with EXPORT.open(encoding="utf-8") as f:
         data = json.load(f)
 
-    by_entity = load_inventory_by_entity()
-    entities = sorted(by_entity.keys(), key=str.lower)
+    paths, ent_counts = load_controlled_paths()
+    ts = datetime.now(timezone.utc).isoformat()
 
-    data["controlled_vocabulary"] = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "source_file": str(INVENTORY.relative_to(ROOT)).replace("\\", "/"),
-        "entry_count": sum(len(v) for v in by_entity.values()),
-        "entities": entities,
-        "entries_by_entity": by_entity,
+    # Drop legacy bulky blocks from earlier export runs
+    data.pop("inventory_entity_graph_policy", None)
+    old_cv = data.pop("controlled_vocabulary", None)
+    data.pop("csv_edge_relation_vocabulary", None)
+    data.pop("hat_art_allowlist", None)
+    data.pop("gehoert_zu_rolle_allowlist", None)
+    data.pop("csv_relations_skipped_from_graph", None)
+
+    data["controlled_vocab"] = {
+        "t": ts,
+        "src": str(INVENTORY.relative_to(ROOT)).replace("\\", "/"),
+        "n": len(paths),
+        "omit": sorted(
+            {
+                "akteur",
+                "akteur_beteiligung",
+                "bauobjekt",
+                "datenmodell",
+                "datenpunkt",
+                "dokumenttyp",
+                "fallstudie",
+                "kennwertdefinition",
+                "ort",
+                "projekt",
+                "quelle",
+                "reuse_einsatz",
+                "reuse_kettenstation",
+                "software_digitaltool",
+                "tooltyp",
+                "tragwerkstyp",
+            }
+        ),
+        "c": ent_counts,
+        "p": paths,
     }
-    data["hat_art_allowlist"] = HAT_ART_ALLOWLIST
-    data["gehoert_zu_rolle_allowlist"] = GEHOERT_ZU_ROLLE_ALLOWLIST
-    data["csv_relations_skipped_from_graph"] = sorted(SKIP_RELATIONS)
-    data["inventory_entity_graph_policy"] = {
-        ent: entity_graph_policy(ent) for ent in entities
-    }
+    data["hat_art"] = HAT_ART_ALLOWLIST
+    data["gzu_rolle"] = GEHOERT_ZU_ROLLE_ALLOWLIST
+    data["csv_rel_skip"] = sorted(SKIP_RELATIONS)
     rel_tokens = load_csv_relation_tokens()
-    data["csv_edge_relation_vocabulary"] = {
-        "generated_at": data["controlled_vocabulary"]["generated_at"],
-        "source_file": str(EDGES.relative_to(ROOT)).replace("\\", "/"),
-        "relation_count": len(rel_tokens),
-        "relations": rel_tokens,
-    }
+    data["csv_rel"] = rel_tokens
 
-    # Complete static label map for entities that use ENTITY_LABEL (no dynamic rows)
     static_map = {k: v for k, v in imp.ENTITY_LABEL.items()}
     data["inventory_entity_to_neo4j_label"] = static_map
     data["inventory_entity_to_neo4j_label_notes"] = {
-        "akteur": "dynamic — see inventory_entity_graph_policy",
-        "ort": "dynamic — Land|Stadt",
-        "software_digitaltool": "dynamic — Software|Tool",
+        "akteur": "dynamic §6.1",
+        "ort": "Land|Stadt",
+        "software_digitaltool": "Software|Tool",
         "datenmodell": "no vertex",
         "tooltyp": "no vertex",
     }
@@ -200,10 +213,10 @@ def main() -> int:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
 
+    dropped = "(no prior controlled_vocabulary)" if old_cv is None else "replaced verbose controlled_vocabulary"
     print(
-        f"Wrote {EXPORT.relative_to(ROOT)}: "
-        f"{data['controlled_vocabulary']['entry_count']} vocabulary entries, "
-        f"{len(entities)} entities."
+        f"Wrote {EXPORT.relative_to(ROOT)}: compact JSON, {len(paths)} paths, "
+        f"{len(CONTROLLED_VOCAB_ENTITIES)} entity kinds; {dropped}."
     )
     return 0
 
