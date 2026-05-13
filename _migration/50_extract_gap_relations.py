@@ -53,7 +53,8 @@ Current batch:
     tool-type edges.
   50r_has_bauobjekt_context
     Reads live bauobjekt/projekt pages plus matching source case files and maps
-    building class, role, status, use, and intervention edges.
+    building class, role, status, use, structural system (has_bausystem), and
+    intervention edges.
   50v_has_kontextmerkmal
     Reads the case-level EINORDNUNG bullet "Warnung Bestandserhalt" and, when the
     primary clause is "ja", adds has_kontextmerkmal -> kontextmerkmal/Bestandserhalt_Policy
@@ -5527,7 +5528,7 @@ def build_digital_evidence_edges(
 
 # ---------------------------------------------------------------------------
 # 50r -- has_bauobjektklasse / has_bauobjektrolle / has_bauobjektstatus /
-#        has_nutzung / has_bauaufgabe_intervention
+#        has_nutzung / has_bausystem / has_bauaufgabe_intervention
 # ---------------------------------------------------------------------------
 
 BUILDING_SOURCE_DIR_NAMES = {"gebaude", "gebaeude"}
@@ -5810,6 +5811,32 @@ def map_nutzung_targets(context: dict[str, str], existing_nodes: set[str]) -> li
     return targets
 
 
+def map_bausystem_targets_for_bauobjekt(
+    context: dict[str, str],
+    existing_nodes: set[str],
+) -> list[tuple[str, str, str]]:
+    """Derive has_bausystem targets from merged building labels (same Konstruktion
+    token inventory as 50o, but only emit bausystem edges on bauobjekt)."""
+    raw_label = context_label_for_mapping(
+        context,
+        "object_label",
+        "project_label",
+        "use_label",
+        "broad_label",
+    )
+    pairs = map_konstruktion_targets(raw_label, existing_nodes)
+    out: list[tuple[str, str, str]] = []
+    seen: set[str] = set()
+    for relation, target in pairs:
+        if relation != "has_bausystem":
+            continue
+        if target in seen:
+            continue
+        seen.add(target)
+        out.append((target, "rule_medium", "bauobjekt_building_context_konstruktion_tokens"))
+    return out
+
+
 def map_bauobjektstatus_targets(context: dict[str, str], existing_nodes: set[str]) -> list[tuple[str, str, str]]:
     label = normalized(context["status_label"])
     targets: list[tuple[str, str, str]] = []
@@ -6004,6 +6031,13 @@ def build_bauobjekt_context_edges(
                 context_label_for_report(context, "use_label"),
                 map_nutzung_targets(context, existing_nodes),
                 "label_50r_has_nutzung_bauobjekt_context",
+            ),
+            (
+                "has_bausystem",
+                "BAUOBJEKT:structure_context",
+                context_label_for_report(context, "object_label", "project_label", "broad_label"),
+                map_bausystem_targets_for_bauobjekt(context, existing_nodes),
+                "label_50r_has_bausystem_bauobjekt_context",
             ),
             (
                 "has_bauobjektstatus",

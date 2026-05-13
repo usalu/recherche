@@ -30,7 +30,7 @@ print('top10', c.most_common(10))"
 
 | Metric | Value |
 |--------|------:|
-| Total CSV rows | 13 836 |
+| Total CSV rows | 13 861 |
 | Distinct `relation` values | 49 |
 | Top relation (count) | `belongs_to_fallstudie` (1 618) |
 | `has_ressourcenquelle` (batch 50s) | 42 |
