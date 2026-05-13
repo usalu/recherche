@@ -479,7 +479,7 @@ Allowed triples `(sourceLabel, rolle, targetLabel)`:
 
 Allowed values for `HAT.art` (sorted):
 
-`akteur`, `entwurf`, `huerde`, `intervention`, `logistik`, `norm`, `nutzung`, `person`, `pruefung`, `prozessphase`, `recht`, `ressourcenquelle`, `reversibilitaet`, `schadstoff`, `status`, `verbindungstechnik`, `wirtschaft`, `wiederverwendungsart`, `zertifizierung`
+`akteur`, `entwurf`, `huerde`, `intervention`, `kontextmerkmal`, `logistik`, `norm`, `nutzung`, `person`, `pruefung`, `prozessphase`, `recht`, `ressourcenquelle`, `reversibilitaet`, `schadstoff`, `status`, `verbindungstechnik`, `wirtschaft`, `wiederverwendungsart`, `zertifizierung`
 
 - Physical **resource pools** from `ressourcenquelle/` (Baustelle, Lager, Donorgebaeude, …): CSV `has_ressourcenquelle` → target `(:Ressourcenquelle)`, edge `HAT { art: "ressourcenquelle" }` (distinct from `has_beschaffungsweg`, which encodes procurement **channels** on `beschaffungsweg/`).
 - Chemical substance Stammdaten from `schadstoff/`: target `(:Schadstoff)`, edge `HAT { art: "schadstoff" }` (not `art: "huerde"`). Generic hurdle “Schadstoffbelastung” under `huerde/`: target `(:Huerde)` with `HAT { art: "huerde" }`.

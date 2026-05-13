@@ -40,8 +40,8 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 
 - **Repo hygiene (2026-05-12 — second pass):** Removed the entire **`_archive/legacy/`** working tree from git (~500+ duplicate/staging files: old `_graph/`, `_extract/`, `_manual_review/`, flat entity stubs). Added **`_archive/legacy/README.md`** explaining recovery via git history. Removed **`clean_confirmed_edges.csv.before_*`** backups and duplicate **`_database/_system/clean_import_readiness_report.md`** (keep `_migration/22_*` as the frozen report). Added **`_scripts/verify_plan_coverage.py`** — run after structural changes; it must exit 0 before you assume Neo4j import safety.
 - **Repo hygiene (2026-05-12):** Earlier pass removed committed SQLite, phase6 CSV copies under `_database/_edges/`, Tolaria-only system docs, and tracked `__pycache__/`.
-- **3,043 nodes, 9,256 edges, 0 dangling endpoints, 0 type mismatches.**
-- 30 relation labels populated. Gap batches completed:
+- **3,043 nodes, 9,287 edges, 0 dangling endpoints, 0 type mismatches.**
+- **49** distinct `relation` tokens in `clean_confirmed_edges.csv`. Gap batches completed:
   - **50a** `has_reuse_strategie`: 248 edges
   - **50b** `has_fuegung_verbindung`: 21 edges
   - **50c** `has_reuse_einsatzstatus`: 407 edges
@@ -52,6 +52,17 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
   - **50h** `has_pruefung_nachweis`: 4 edges
   - **50i** `has_beschaffungsweg`: 17 edges
   - **50j** `has_aufbereitungsverfahren`: 27 edges
+  - **50k** `has_logistik`: 492 edges
+  - **50l** `has_wirtschaft`: 572 edges
+  - **50m** `has_rechtliche_bedingung`: 724 edges
+  - **50n** `has_schadstoff`: 1 edge (strict)
+  - **50o** `has_bauweise` / `has_bausystem` / `has_tragwerksprinzip`: 268 edges
+  - **50p** `has_bauteilebene` / `has_bauteilzustand` / `has_funktionswechsel`: 948 edges
+  - **50q** digital / data evidence batch: 979 edges
+  - **50r** `has_bauobjektklasse` / `has_bauobjektrolle` / `has_bauobjektstatus` / `has_nutzung` / `has_bauaufgabe_intervention`: 506 edges
+  - **50s** `has_ressourcenquelle`: 42 edges
+  - **50u** `has_methode`: 4 edges
+  - **50v** `has_kontextmerkmal`: 31 edges (EINORDNUNG „Warnung Bestandserhalt: ja“ → `kontextmerkmal/Bestandserhalt_Policy`)
 - 0 edges in the review queue, 0 `rule_low` edges, 0 mojibake titles.
 - `bauteiltyp` = 15 canonical types (matches schema §5 exactly).
 - `material` = 15 (matches schema §6 + Recyclingbeton + Gusseisen).
@@ -103,7 +114,7 @@ has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
 has_tragwerksprinzip,
 has_bauobjektklasse, has_bauobjektrolle, has_bauobjektstatus, has_nutzung,
 has_bauaufgabe_intervention,
-has_rechtliche_bedingung, has_schadstoff, has_kontextmerkmal,
+has_rechtliche_bedingung, has_schadstoff,
 has_zertifizierung_bewertungssystem, has_datenmodell, has_dokumenttyp,
 has_tooltyp, uses_software_digitaltool,
 documented_in_quelle, has_datenqualitaet,

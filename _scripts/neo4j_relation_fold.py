@@ -126,6 +126,9 @@ def fold_csv_relation(row: dict[str, str]) -> tuple[str | None, dict[str, str]]:
     if rel == "has_fuegung_verbindung":
         extra["art"] = "verbindungstechnik"
         return "HAT", extra
+    if rel == "has_kontextmerkmal":
+        extra["art"] = "kontextmerkmal"
+        return "HAT", extra
 
     # --- GEHÖRT_ZU (Appendix F + case-anchor rows from §7.1) ---
     if rel in {"belongs_to_fallstudie", "belongs_to_projekt"}:

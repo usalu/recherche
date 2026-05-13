@@ -54,6 +54,10 @@ Current batch:
   50r_has_bauobjekt_context
     Reads live bauobjekt/projekt pages plus matching source case files and maps
     building class, role, status, use, and intervention edges.
+  50v_has_kontextmerkmal
+    Reads the case-level EINORDNUNG bullet "Warnung Bestandserhalt" and, when the
+    primary clause is "ja", adds has_kontextmerkmal -> kontextmerkmal/Bestandserhalt_Policy
+    on the matching fallstudie node.
 """
 
 from __future__ import annotations
@@ -6088,6 +6092,88 @@ def build_bauobjekt_context_edges(
     return edge_rows + additions, additions, stats, skipped
 
 
+def _warnung_bestandserhalt_primary_clause_positive(bullet: str) -> bool:
+    """True when the first clause of the EINORDNUNG bullet affirms the warning (ja), not nein."""
+    if not bullet or is_uncertain(bullet):
+        return False
+    primary = bullet.split(";")[0].strip()
+    n = normalized(primary)
+    if n.startswith("nein"):
+        return False
+    if n.startswith("ja"):
+        return True
+    return False
+
+
+def build_kontextmerkmal_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    """50v — has_kontextmerkmal from EINORDNUNG bullet Warnung Bestandserhalt -> kontextmerkmal/Bestandserhalt_Policy."""
+    existing_keys = existing_edge_keys(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    target = "kontextmerkmal/Bestandserhalt_Policy"
+    if target not in existing_nodes:
+        stats["missing_target_node"] = 1
+        return edge_rows, additions, stats, skipped
+
+    fall_by_id = {row["id"]: row for row in inventory_rows_for_entity("fallstudie")}
+    source_dir = gebaeude_dir()
+
+    for path in sorted(source_dir.glob("*.md")):
+        case_id = path.stem
+        stats["gebaeude_files_scanned"] += 1
+        fs_row = fall_by_id.get(case_id)
+        if not fs_row:
+            stats["cases_without_fallstudie_node"] += 1
+            skipped.append({
+                "case_id": case_id,
+                "legacy_path": str(path.relative_to(ROOT)),
+                "reason": "no_fallstudie_inventory_row",
+            })
+            continue
+
+        markdown = path.read_text(encoding="utf-8", errors="replace")
+        bullet = extract_markdown_bullet(markdown, "Warnung Bestandserhalt")
+        if not _warnung_bestandserhalt_primary_clause_positive(bullet):
+            stats["cases_without_ja_warnung"] += 1
+            continue
+
+        source = fs_row["typed_path"]
+        key = (source, "has_kontextmerkmal", target)
+        if key in existing_keys:
+            stats["duplicates_skipped"] += 1
+            continue
+
+        target_entity, target_id = target.split("/", 1)
+        additions.append({
+            "source": source,
+            "source_entity": "fallstudie",
+            "source_id": fs_row["id"],
+            "relation": "has_kontextmerkmal",
+            "target": target,
+            "target_entity": target_entity,
+            "target_id": target_id,
+            "field": "EINORDNUNG:Warnung Bestandserhalt",
+            "raw_label": bullet,
+            "confidence": "structural",
+            "resolution_rule": "bullet_50v_has_kontextmerkmal_warnung_bestandserhalt",
+            "legacy_path": str(path.relative_to(ROOT)),
+            "original_source": source,
+            "original_relation": "has_kontextmerkmal",
+            "original_target": target,
+            "edge_cleaning": "added_gap_50v",
+        })
+        existing_keys.add(key)
+        stats["has_kontextmerkmal_edges"] += 1
+
+    stats["additions"] = len(additions)
+    return edge_rows + additions, additions, stats, skipped
+
+
 BATCHES = {
     "50a_reuse_strategie": build_reuse_strategy_edges,
     "50b_fuegung_verbindung": build_connection_edges,
@@ -6109,6 +6195,7 @@ BATCHES = {
     "50p_has_bauteilprofil": build_bauteilprofil_edges,
     "50q_has_digital_evidence": build_digital_evidence_edges,
     "50r_has_bauobjekt_context": build_bauobjekt_context_edges,
+    "50v_has_kontextmerkmal": build_kontextmerkmal_edges,
 }
 
 
