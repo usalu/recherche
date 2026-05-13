@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Neo4j Reuse Graph JSONL Record v1.1",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "record_type",
+        "id",
+        "labels",
+        "properties"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "node"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*_[a-z0-9_]+$"
+        },
+        "labels": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "Projekt",
+              "Bauwerk",
+              "Bauteilgruppe",
+              "Akteur",
+              "Quelle",
+              "Wiederverwendungskette",
+              "Bauteiltyp",
+              "Bauteilebene",
+              "Bauobjektklasse",
+              "Bauobjektrolle",
+              "Material",
+              "Materialgruppe",
+              "Huerde",
+              "HuerdeKategorie",
+              "Akteurrolle",
+              "Akteurtyp",
+              "WiederverwendungsArt",
+              "Status",
+              "Nutzung",
+              "Stadt",
+              "Land",
+              "Prozessphase",
+              "PruefungNachweis",
+              "Leistungsanforderung",
+              "Norm",
+              "Aufbereitungsverfahren",
+              "Rueckbauverfahren",
+              "Beschaffungsweg",
+              "Ressourcenquelle",
+              "Logistik",
+              "Methode",
+              "Verbindungstechnik",
+              "RechtlicheBedingung",
+              "Schadstoff",
+              "Wirtschaft",
+              "ZertifizierungBewertungssystem",
+              "Tragwerksprinzip",
+              "Bauweise",
+              "Bausystem",
+              "Funktionswechsel",
+              "BauaufgabeIntervention",
+              "Programm",
+              "Software",
+              "Tool"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "record_type",
+        "id",
+        "from",
+        "type",
+        "to",
+        "properties"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "rel"
+        },
+        "id": {
+          "type": "string",
+          "pattern": "^r_[a-z0-9_]+__[A-Z0-9_]+__[a-z0-9_]+.*$"
+        },
+        "from": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*_[a-z0-9_]+$"
+        },
+        "type": {
+          "enum": [
+            "HAT_BAUTEILGRUPPE",
+            "NUTZT_BAUWERK",
+            "AUS_BAUWERK",
+            "EINGEBAUT_IN",
+            "TEIL_VON_KETTE",
+            "HAT_BAUTEILTYP",
+            "HAT_BAUTEILEBENE",
+            "HAT_BAUOBJEKTKLASSE",
+            "HAT_BAUOBJEKTROLLE",
+            "HAT_TRAGWERKSPRINZIP",
+            "HAT_BAUWEISE",
+            "HAT_BAUSYSTEM",
+            "HAT_STATUS",
+            "HAT_NUTZUNG",
+            "HAT_WIEDERVERWENDUNGSART",
+            "HAT_FUNKTIONSWECHSEL",
+            "HAT_INTERVENTION",
+            "NUTZT_MATERIAL",
+            "HAT_MATERIALGRUPPE",
+            "HAT_PROZESSPHASE",
+            "HAT_METHODE",
+            "HAT_RUECKBAUVERFAHREN",
+            "HAT_AUFBEREITUNG",
+            "HAT_BESCHAFFUNGSWEG",
+            "HAT_RESSOURCENQUELLE",
+            "HAT_LOGISTIK",
+            "HAT_VERBINDUNGSTECHNIK",
+            "HAT_PRUEFUNG",
+            "HAT_LEISTUNGSANFORDERUNG",
+            "REFERENZIERT_NORM",
+            "HAT_RECHTLICHE_BEDINGUNG",
+            "HAT_SCHADSTOFF",
+            "HAT_ZERTIFIZIERUNG",
+            "HAT_WIRTSCHAFTSASPEKT",
+            "HAT_HUERDE",
+            "HAT_HUERDEKATEGORIE",
+            "BETEILIGT_AN",
+            "HAT_AKTEURROLLE",
+            "HAT_AKTEURTYP",
+            "LIEGT_IN_STADT",
+            "LIEGT_IN_LAND",
+            "BELEGT_IN",
+            "ZITIERT_QUELLE",
+            "NUTZT_SOFTWARE",
+            "NUTZT_TOOL",
+            "TEIL_VON_PROGRAMM"
+          ]
+        },
+        "to": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9]*_[a-z0-9_]+$"
+        },
+        "properties": {
+          "type": "object",
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "integer"
+                    },
+                    {
+                      "type": "boolean"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

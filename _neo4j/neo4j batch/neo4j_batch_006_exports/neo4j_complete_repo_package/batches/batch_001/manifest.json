@@ -1,0 +1,21 @@
+{
+  "batch_id": "batch_001",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Berlin_Schildow_Pilot_House.md",
+    "Berlin_Schildow_Pilot_House_2.md",
+    "Bestandverplanzung_Pavilion_Muenchen.md",
+    "Big_Dig_Building_Boston.md",
+    "Big_Dig_House_Lexington_Massachusetts.md"
+  ],
+  "project_files": [
+    "p_berlin_schildow_pilot_house.kg.jsonl",
+    "p_bestandverplanzung_pavilion_muenchen.kg.jsonl",
+    "p_big_dig_building_boston.kg.jsonl",
+    "p_big_dig_house_lexington_massachusetts.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Berlin_Schildow_Pilot_House.md and Berlin_Schildow_Pilot_House_2.md were merged into one canonical project file to avoid duplicate Projekt nodes. Big_Dig_Building_Boston is modeled as a proposed/aborted concept with counts_as_built_direct_reuse=false and component groups counts_as_direct_reuse=false."
+}

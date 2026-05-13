@@ -1,0 +1,10 @@
+{"record_type":"node","id":"mat_mdf","labels":["Material"],"properties":{"name":"MDF / mitteldichte Faserplatte"}}
+{"record_type":"node","id":"mat_textil","labels":["Material"],"properties":{"name":"Textil / Filz / textile Fasern"}}
+{"record_type":"node","id":"norm_sci_p427","labels":["Norm"],"properties":{"name":"SCI P427 Structural Steel Reuse"}}
+{"record_type":"node","id":"norm_sci_p440","labels":["Norm"],"properties":{"name":"SCI P440 Reuse of Structural Steel"}}
+{"record_type":"rel","id":"r_mat_mdf__HAT_MATERIALGRUPPE__mg_holz_biobasiert","from":"mat_mdf","type":"HAT_MATERIALGRUPPE","to":"mg_holz_biobasiert","properties":{}}
+{"record_type":"rel","id":"r_mat_mdf__HAT_MATERIALGRUPPE__mg_verbundstoff","from":"mat_mdf","type":"HAT_MATERIALGRUPPE","to":"mg_verbundstoff","properties":{}}
+{"record_type":"rel","id":"r_mat_textil__HAT_MATERIALGRUPPE__mg_verbundstoff","from":"mat_textil","type":"HAT_MATERIALGRUPPE","to":"mg_verbundstoff","properties":{}}
+{"record_type":"rel","id":"r_mat_textil__HAT_MATERIALGRUPPE__mg_kunststoff","from":"mat_textil","type":"HAT_MATERIALGRUPPE","to":"mg_kunststoff","properties":{}}
+{"record_type":"rel","id":"r_norm_sci_p427__REFERENZIERT_NORM__norm_sci_p440","from":"norm_sci_p427","type":"REFERENZIERT_NORM","to":"norm_sci_p440","properties":{}}
+{"record_type":"rel","id":"r_norm_sci_p440__REFERENZIERT_NORM__norm_sci_p427","from":"norm_sci_p440","type":"REFERENZIERT_NORM","to":"norm_sci_p427","properties":{}}

@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_006",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Hastings_Pier_Visitor_Centre.md",
+    "Haus_HOS_Mehrfamilienhaus_Muehlhausen.md",
+    "Holbein_Gardens_London.md",
+    "House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md",
+    "Impact_Hub_Berlin_CRCLR_Fitout.md"
+  ],
+  "project_files": [
+    "p_hastings_pier_visitor_centre.kg.jsonl",
+    "p_haus_hos_mehrfamilienhaus_muehlhausen.kg.jsonl",
+    "p_holbein_gardens_london.kg.jsonl",
+    "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain.kg.jsonl",
+    "p_impact_hub_berlin_crclr_fitout.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 006 follows the v1.1 graph contract. Projekt remains the central node. City/country/building roles/classes/actor roles/actor types/component types/hurdles/methods/phases/material groups are modeled as connected nodes. Bewertung and metrics are scalar properties. Direct reuse, Bestandserhalt, recycling, furniture, and uncertain context components are explicitly separated using boolean properties and relationships. Every BELEGT_IN relationship has datenqualitaet=Belegt."
+}

@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_004",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot.md",
+    "Circular_Pavilion_Paris.md",
+    "CRCLR_House_Impact_Hub_Berlin.md",
+    "ELYS_Kultur_Gewerbehaus_Basel.md",
+    "Europa_Building_Brussels.md"
+  ],
+  "project_files": [
+    "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot.kg.jsonl",
+    "p_circular_pavilion_paris.kg.jsonl",
+    "p_crclr_house_impact_hub_berlin.kg.jsonl",
+    "p_elys_kultur_gewerbehaus_basel.kg.jsonl",
+    "p_europa_building_brussels.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 004 follows the remodeled contract: Projekt is the central case node; Bewertung and metrics are scalar properties; Stadt/Land/Bauwerk/Bauobjektrolle/Bauobjektklasse/Akteurrolle/Akteurtyp/Bauteiltyp/HuerdeKategorie are connected nodes; Kennwerte are properties; each BELEGT_IN has datenqualitaet=Belegt. Bestandserhalt, surplus/restposten and planned-but-not-yet-built reuse are explicitly separated from score-relevant direct reuse using boolean properties."
+}

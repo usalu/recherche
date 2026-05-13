@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Neo4j Reuse Graph Batch Manifest v1.1",
+  "type": "object",
+  "required": [
+    "batch_id",
+    "schema_version",
+    "source_files",
+    "project_files",
+    "controlled_vocabulary_seed",
+    "controlled_terms_delta",
+    "validation_report"
+  ],
+  "properties": {
+    "batch_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "neo4j_reuse_graph_v1_1"
+    },
+    "source_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "project_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "controlled_vocabulary_seed": {
+      "type": "string"
+    },
+    "controlled_terms_delta": {
+      "type": "string"
+    },
+    "validation_report": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,10 @@
+{"record_type":"node","id":"norm_ns_3682","labels":["Norm"],"properties":{"name":"NS 3682 Reuse of hollow-core slabs / Norwegian reuse standard"}}
+{"record_type":"node","id":"norm_tek_norway","labels":["Norm"],"properties":{"name":"Norwegian building regulation TEK / documentation context"}}
+{"record_type":"node","id":"norm_sia_schweiz","labels":["Norm"],"properties":{"name":"SIA / Swiss building standards context"}}
+{"record_type":"node","id":"tool_bim_bauteilkatalog","labels":["Tool"],"properties":{"name":"BIM / digitaler Bauteilkatalog"}}
+{"record_type":"node","id":"software_bim","labels":["Software"],"properties":{"name":"Building Information Modeling / BIM"}}
+{"record_type":"rel","id":"r_norm_ns_3682__REFERENZIERT_NORM__norm_tek_norway","from":"norm_ns_3682","type":"REFERENZIERT_NORM","to":"norm_tek_norway","properties":{}}
+{"record_type":"rel","id":"r_norm_tek_norway__REFERENZIERT_NORM__norm_ns_3682","from":"norm_tek_norway","type":"REFERENZIERT_NORM","to":"norm_ns_3682","properties":{}}
+{"record_type":"rel","id":"r_norm_sia_schweiz__REFERENZIERT_NORM__norm_iso_20887","from":"norm_sia_schweiz","type":"REFERENZIERT_NORM","to":"norm_iso_20887","properties":{}}
+{"record_type":"rel","id":"r_tool_bim_bauteilkatalog__NUTZT_SOFTWARE__software_bim","from":"tool_bim_bauteilkatalog","type":"NUTZT_SOFTWARE","to":"software_bim","properties":{}}
+{"record_type":"rel","id":"r_software_bim__NUTZT_TOOL__tool_bim_bauteilkatalog","from":"software_bim","type":"NUTZT_TOOL","to":"tool_bim_bauteilkatalog","properties":{}}

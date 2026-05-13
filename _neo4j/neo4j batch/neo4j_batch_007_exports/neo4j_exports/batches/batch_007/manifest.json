@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_007",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Institut_de_Botanique_ULg_Liege.md",
+    "Jeugdkliniek_Ithaka_Emergis_Kloetinge.md",
+    "Juch_Areal_Recyclingzentrum_Zuerich.md",
+    "K118_Kopfbau_Halle_118_Winterthur.md",
+    "KA13_Kristian_Augusts_gate_13_Oslo.md"
+  ],
+  "project_files": [
+    "p_institut_de_botanique_ulg_liege.kg.jsonl",
+    "p_jeugdkliniek_ithaka_emergis_kloetinge.kg.jsonl",
+    "p_juch_areal_recyclingzentrum_zuerich.kg.jsonl",
+    "p_k118_kopfbau_halle_118_winterthur.kg.jsonl",
+    "p_ka13_kristian_augusts_gate_13_oslo.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 007 follows the v1.1 graph contract. Projekt remains central; Fallbeispiel and Kennwert nodes are not emitted. Metrics are scalar properties. City/country/building role/class/actor role/type/component type/hurdle/material/process/method/norm are connected nodes when useful. BELEGT_IN always carries datenqualitaet=Belegt."
+}

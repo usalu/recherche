@@ -1,0 +1,9 @@
+{"record_type":"node","id":"mat_bitumen","labels":["Material"],"properties":{"name":"Bitumen"}}
+{"record_type":"node","id":"mat_textil","labels":["Material"],"properties":{"name":"Textil / textile Fasern"}}
+{"record_type":"node","id":"prog_recreate","labels":["Programm"],"properties":{"name":"ReCreate"}}
+{"record_type":"rel","id":"r_mat_bitumen__HAT_MATERIALGRUPPE__mg_kunststoff","from":"mat_bitumen","type":"HAT_MATERIALGRUPPE","to":"mg_kunststoff","properties":{}}
+{"record_type":"rel","id":"r_mat_bitumen__HAT_MATERIALGRUPPE__mg_verbundstoff","from":"mat_bitumen","type":"HAT_MATERIALGRUPPE","to":"mg_verbundstoff","properties":{}}
+{"record_type":"rel","id":"r_mat_textil__HAT_MATERIALGRUPPE__mg_verbundstoff","from":"mat_textil","type":"HAT_MATERIALGRUPPE","to":"mg_verbundstoff","properties":{}}
+{"record_type":"rel","id":"r_mat_textil__HAT_MATERIALGRUPPE__mg_kunststoff","from":"mat_textil","type":"HAT_MATERIALGRUPPE","to":"mg_kunststoff","properties":{}}
+{"record_type":"rel","id":"r_prog_recreate__TEIL_VON_PROGRAMM__prog_forschungsprojekt","from":"prog_recreate","type":"TEIL_VON_PROGRAMM","to":"prog_forschungsprojekt","properties":{}}
+{"record_type":"rel","id":"r_prog_recreate__TEIL_VON_PROGRAMM__prog_pilotprojekt","from":"prog_recreate","type":"TEIL_VON_PROGRAMM","to":"prog_pilotprojekt","properties":{}}
