@@ -62,11 +62,18 @@ Rules:
 | Batch | Projects (count) | Status | Notes |
 |-------|-----------------|--------|-------|
 | 001 | Berlin-Schildow, Bestandverplanzung München, Big Dig Building Boston, Big Dig House Lexington (4) | ✅ done | Schildow files 1+2 merged |
-| 002 | BioPartner 5 Leiden, BlueCity Rotterdam, Boulder FS3, Brent Cross London, Brighton Waste House (5) | ✅ done | `mat_textil` delta introduced |
-| 003 | — | ⏳ next | |
-| … | … | … | ~16 further batches to full coverage |
+| 002 | BioPartner 5 Leiden, BlueCity Rotterdam, Boulder FS3, Brent Cross London, Brighton Waste House (5) | ✅ done | `mat_textil` delta |
+| 003 | Broethen Hoyerswerda, CascadeUp London, Charles Malis Molenbeek, Christ Pavilion Volkenroda, Chiro Dilbeek (5) | ✅ done | `bsys_p2`, `bsys_secondary_timber_glulamst`, `bsys_clst` delta |
+| 004 | Circular Centre NL, Circular Pavilion Paris, CRCLR House Berlin, ELYS Basel, Europa Building Brussels (5) | ✅ done | `norm_crow_cur_guideline_4_2023` delta |
+| 005 | Ferme du Rail Paris, gjG House Gentbrugge, Grande Halle Colombelles, Grubenstrasse 29 Zürich, Härmälänranta Tampere (5) | ✅ done | `mat_bitumen`, `prog_recreate` delta |
+| 006 | Hastings Pier, Haus HOS Mühlhausen, Holbein Gardens London, House of Fraser Oxford St, Impact Hub CRCLR fitout (5) | ✅ done | `mat_mdf`, `norm_sci_p427/440` delta |
+| 007 | Institut Botanique Liège, Jeugdkliniek Kloetinge, Juch-Areal Zürich, K118 Winterthur, KA13 Oslo (5) | ✅ done | `norm_ns_3682`, `norm_tek_norway`, `norm_sia`, `tool_bim_bauteilkatalog` delta |
+| 008 | Kamikatsu, Kindergarten Manegg Zürich, Liander HQ Duiven, Lo-Reninge, Lokomotion Tampere (5) | ✅ done | `norm_en_1168`, `tool_bauteilkatalog` delta |
+| 009 | Lycée Michel Lucius Luxembourg, Maison des Canaux, Maison DnA Asse, Maison Vignette Auderghem, Mehrow (5) | ✅ done | no delta |
+| 010 | — | ⏳ next | |
+| … | … | … | ~11 further batches to full coverage |
 
-**Projection:** 98 total – 9 done = **89 remaining** ÷ 5/batch ≈ **18 more batches**.
+**Projection:** 98 total – 44 done = **54 remaining** ÷ 5/batch ≈ **11 more batches**.
 
 ---
 
@@ -204,7 +211,25 @@ $done = @(
     "Big_Dig_Building_Boston","Big_Dig_House_Lexington_Massachusetts",
     "BioPartner_5_Leiden_Oegstgeest","BlueCity_Offices_Rotterdam",
     "Boulder_Fire_Station_3","Brent_Cross_Town_Primary_Substation_London",
-    "Brighton_Waste_House_Brighton"
+    "Brighton_Waste_House_Brighton",
+    "Broethen_Twin_House_Hoyerswerda","CascadeUp_London",
+    "Charles_Malis_Molenbeek","Christ_Pavilion_Volkenroda","Chiro_d_Itterbeek_Dilbeek",
+    "Circular_Centre_Netherlands","Circular_Pavilion_Paris",
+    "CRCLR_House_Impact_Hub_Berlin","ELYS_Kultur_Gewerbehaus_Basel","Europa_Building_Brussels",
+    "Ferme_du_Rail_Paris","gjG_House_Gentbrugge",
+    "Grande_Halle_de_Colombelles","Grubenstrasse_29_Werkhof_29_Zuerich",
+    "Harmalanranta_A_Kruunu_ReCreate_Tampere",
+    "Hastings_Pier_Visitor_Centre","Haus_HOS_Mehrfamilienhaus_Muehlhausen",
+    "Holbein_Gardens_London","House_of_Fraser_318_Oxford_Street_TBC_London",
+    "Impact_Hub_Berlin_CRCLR_Fitout",
+    "Institut_de_Botanique_ULg_Liege","Jeugdkliniek_Ithaka_Emergis_Kloetinge",
+    "Juch_Areal_Recyclingzentrum_Zuerich","K118_Kopfbau_Halle_118_Winterthur",
+    "KA13_Kristian_Augusts_Gate_13_Oslo",
+    "Kamikatsu_Zero_Waste_Center_Hotel_WHY","Kindergarten_Moeoeslistrasse_Manegg_Zuerich",
+    "Liander_Alliander_HQ_Duiven","Lo_Reninge_Town_Hall_Facade",
+    "Lokomotion_Technology_Centre_Mini_Pilot_Tampere",
+    "Lycee_Michel_Lucius_Conversion_Luxembourg","Maison_des_Canaux_Paris",
+    "Maison_DnA_Asse","Maison_Vignette_Auderghem","Mehrow_Pilot_House"
 )
 Get-ChildItem "_database\fallstudie" -Directory |
     Where-Object { $done -notcontains $_.Name } |

@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_009",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Lycee_Michel_Lucius_Conversion_Luxembourg.md",
+    "Maison_des_Canaux_Paris.md",
+    "Maison_DnA_Asse.md",
+    "Maison_Vignette_Auderghem.md",
+    "Mehrow_Pilot_House.md"
+  ],
+  "project_files": [
+    "p_lycee_michel_lucius_conversion_luxembourg.kg.jsonl",
+    "p_maison_des_canaux_paris.kg.jsonl",
+    "p_maison_dna_asse.kg.jsonl",
+    "p_maison_vignette_auderghem.kg.jsonl",
+    "p_mehrow_pilot_house.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 009 follows the v1.1 graph contract. Projekt remains central; Fallbeispiel and Kennwert nodes are not emitted. Metrics are scalar properties. Cities/countries/building roles/classes/actor roles/types/component types/materials/hurdles/methods/processes are connected nodes when useful. BELEGT_IN always carries datenqualitaet=Belegt."
+}

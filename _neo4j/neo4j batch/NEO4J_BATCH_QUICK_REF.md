@@ -8,27 +8,62 @@
 
 | Layer | Nodes | Relationships |
 |-------|-------|---------------|
-| Project files (batches 001+002) | 145 | 978 |
-| Controlled vocabulary seed | 330 | 43 |
-| **Total in graph** | **475** | **1 021** |
+| Project files (batches 001–009) | ~785 | ~8 482 |
+| Controlled vocabulary seed + deltas | ~330 | ~43 |
+| **Total in graph (live)** | **1 063** | **8 389** |
 
-**Progress:** 9 / 98 case studies processed (≈ 9 %)
+**Progress:** 44 / 98 case studies processed (≈ 45 %) · 143 direct-reuse BTGs + 52 non-reuse BTGs
 
 ---
 
 ## Projects Loaded
 
-| # | Batch | Project | Nodes | Rels | Bewertung | Notes |
-|---|-------|---------|-------|------|-----------|-------|
-| 1 | 001 | Berlin-Schildow Pilot House | 14 | 98 | 4 | WBS70 concrete prefab |
+| # | Batch | Project | Nodes | Rels | bw | Notes |
+|---|-------|---------|-------|------|-----|-------|
+| 1 | 001 | Berlin-Schildow Pilot House | 14 | 98 | 4 | WBS70 concrete prefab; 2 source files merged |
 | 2 | 001 | Bestandverplanzung Pavilion München | 7 | 50 | 2 | prefab concrete panels |
-| 3 | 001 | Big Dig Building Boston | 12 | 81 | 2 | NOT built; counts_as_direct_reuse:false |
-| 4 | 001 | Big Dig House Lexington MA | 14 | 119 | 4 | 3 BTGs; steel+concrete |
+| 3 | 001 | Big Dig Building Boston | 12 | 81 | 2 | not built; counts_as_direct_reuse:false |
+| 4 | 001 | Big Dig House Lexington MA | 14 | 119 | 4 | steel+concrete |
 | 5 | 002 | BioPartner 5 Leiden/Oegstgeest | 21 | 137 | 5 | 5 BTGs |
 | 6 | 002 | BlueCity Offices Rotterdam | 18 | 108 | 3 | 4 BTGs |
 | 7 | 002 | Boulder Fire Station 3 | 18 | 114 | 4 | 4 BTGs + 2 non-reuse |
 | 8 | 002 | Brent Cross Town Primary Substation | 23 | 138 | 4 | 4 BTGs |
-| 9 | 002 | Brighton Waste House | 18 | 133 | 3 | 6 BTGs incl. mat_textil |
+| 9 | 002 | Brighton Waste House | 18 | 133 | 3 | 6 BTGs; `mat_textil` delta |
+| 10 | 003 | Broethen Twin-House Hoyerswerda | 9 | 88 | 4 | WBS70 P2 concrete; `bsys_p2` delta |
+| 11 | 003 | CascadeUp London (glulam demonstrator) | 13 | 146 | 2 | remanufacturing; counts_as_direct_reuse:false |
+| 12 | 003 | Charles Malis Molenbeek | 19 | 138 | 2 | Bestandserhalt separated |
+| 13 | 003 | Christ Pavilion Volkenroda | 22 | 211 | 2 | translocation chain; 2 Bauwerk nodes |
+| 14 | 003 | Chiro d’Itterbeek Dilbeek | 28 | 357 | 3 | surplus flagged separately |
+| 15 | 004 | Circular Centre Netherlands | 17 | 199 | 3 | planned reuse; counts_as_direct_reuse:false |
+| 16 | 004 | Circular Pavilion Paris | 19 | 231 | 2 | fixed components only |
+| 17 | 004 | CRCLR House Berlin | 21 | 306 | 4 | Dachstahl + Fenster + Fassade |
+| 18 | 004 | ELYS Basel | 24 | 342 | 4 | 91 t CO₂ reuse; `norm_crow_cur` delta |
+| 19 | 004 | Europa Building Brussels | 16 | 146 | 4 | 3 750 wooden window frames |
+| 20 | 005 | La Ferme du Rail Paris | 23 | 363 | 3 | biosourced/reused mix |
+| 21 | 005 | gjG House Gentbrugge | 14 | 115 | 4 | reused brick shell |
+| 22 | 005 | Grande Halle de Colombelles | 23 | 390 | 3 | Lot 01 Réemploi separated |
+| 23 | 005 | Grubenstrasse 29 / Werkhof 29 Zürich | 21 | 417 | 4 | Bauteiljagd supply chain |
+| 24 | 005 | Härmälänranta Tampere | 17 | 153 | 3 | 25 hollow-core slabs; `prog_recreate` delta |
+| 25 | 006 | Hastings Pier Visitor Centre | 19 | 226 | 3 | reclaimed hardwood cladding; `mat_mdf` delta |
+| 26 | 006 | Haus HOS Mühlhausen | 15 | 237 | 4 | WBS70/Stahlbeton wall + floor + stair BTGs |
+| 27 | 006 | Holbein Gardens London | 20 | 232 | 4 | |
+| 28 | 006 | House of Fraser / TBC.London steel reuse chain | 26 | 360 | 4 | multi-actor reuse chain |
+| 29 | 006 | Impact Hub Berlin CRCLR fit-out | 22 | 435 | 2 | interior fit-out; `norm_sci` delta |
+| 30 | 007 | Institut de Botanique ULg Liège | 8 | 63 | 3 | |
+| 31 | 007 | Jeugdkliniek Ithaka / Emergis Kloetinge | 24 | 239 | 4 | |
+| 32 | 007 | Juch-Areal Recyclingzentrum Zürich | 20 | 161 | 3 | |
+| 33 | 007 | K118 / Kopfbau Halle 118 Winterthur | 24 | 206 | 5 | `norm_sia` delta |
+| 34 | 007 | KA13 / Kristian Augusts gate 13, Oslo | 20 | 207 | 5 | `norm_ns_3682`, `norm_tek_norway` delta |
+| 35 | 008 | Kamikatsu Zero Waste Center / Hotel WHY | 18 | 215 | 3 | |
+| 36 | 008 | Kindergarten Mööslistrasse Manegg Zürich | 24 | 286 | 3 | Bauteilkatalog; `tool_bauteilkatalog` delta |
+| 37 | 008 | Liander / Alliander HQ Duiven | 15 | 150 | 3 | cautious vague-data modeling |
+| 38 | 008 | Lo-Reninge Town Hall façade | 13 | 108 | 3 | only brick façade as direct reuse |
+| 39 | 008 | Lokomotion Technology Centre Tampere | 17 | 136 | 3 | 27 hollow-core slabs; `norm_en_1168` delta |
+| 40 | 009 | Lycée Michel Lucius Luxembourg | 18 | 186 | 4 | campus-internal reuse |
+| 41 | 009 | Maison des Canaux Paris | 12 | 126 | 3 | cautious; weakly documented |
+| 42 | 009 | Maison DnA Asse | 10 | 71 | 4 | reused brick outer structure |
+| 43 | 009 | Maison Vignette Auderghem | 18 | 161 | 3 | façade bricks + tiles + bluestone |
+| 44 | 009 | Mehrow Pilot House | 11 | 97 | 4 | WBS70 wall + slab; PRECS metrics |
 
 ---
 
@@ -36,17 +71,19 @@
 
 | Label | Count (approx.) | Description |
 |-------|----------------|-------------|
-| Projekt | 9 | One per case study |
-| Bauteilgruppe | ~41 | Component group; carries counts_as_direct_reuse |
-| Bauwerk | ~18 | Donor or receiver building |
-| Quelle | ~9 | Source markdown per project |
-| Akteur | ~24 | Persons / organisations |
-| Ort | ~15 | Stadt / Land |
-| Prozessphase | ~12 | Reuse process phases |
-| Nutzung | ~10 | Building use types (shared with seed) |
+| Projekt | 44 | One per case study |
+| Bauteilgruppe | 195 | Component group; carries counts_as_direct_reuse (143 true / 52 false) |
+| Bauwerk | ~90 | Donor or receiver building |
+| Quelle | ~44 | Source markdown per project |
+| Akteur | ~120 | Persons / organisations |
+| Ort | ~80 | Stadt / Land |
+| Prozessphase | ~60 | Reuse process phases |
+| Nutzung | ~50 | Building use types (shared with seed) |
 | Material | shared | Pulled from seed |
 | Bauteiltyp | shared | Pulled from seed |
 | Huerde | shared | Pulled from seed |
+| Bausystem | shared + delta | P2, secondary timber glulam, CLST (batch 003+) |
+| Norm | shared + delta | EN 1168, CROW-CUR, SIA, NS, SCI P-series (batches 007–8+) |
 
 ---
 

@@ -1,0 +1,11 @@
+{"record_type":"node","id":"norm_en_1168","labels":["Norm"],"properties":{"name":"EN 1168 Precast concrete products - Hollow core slabs"}}
+{"record_type":"node","id":"norm_crow_cur_4_2023","labels":["Norm"],"properties":{"name":"CROW-CUR Guideline 4:2023 Reuse of hollow core slabs"}}
+{"record_type":"node","id":"prog_recreate","labels":["Programm"],"properties":{"name":"ReCreate"}}
+{"record_type":"node","id":"tool_bauteilkatalog","labels":["Tool"],"properties":{"name":"Bauteilkatalog / Bauteilpass"}}
+{"record_type":"node","id":"software_bim","labels":["Software"],"properties":{"name":"Building Information Modeling / BIM"}}
+{"record_type":"rel","id":"r_norm_en_1168__REFERENZIERT_NORM__norm_crow_cur_4_2023","from":"norm_en_1168","type":"REFERENZIERT_NORM","to":"norm_crow_cur_4_2023","properties":{}}
+{"record_type":"rel","id":"r_norm_crow_cur_4_2023__REFERENZIERT_NORM__norm_en_1168","from":"norm_crow_cur_4_2023","type":"REFERENZIERT_NORM","to":"norm_en_1168","properties":{}}
+{"record_type":"rel","id":"r_prog_recreate__TEIL_VON_PROGRAMM__prog_forschungsprojekt","from":"prog_recreate","type":"TEIL_VON_PROGRAMM","to":"prog_forschungsprojekt","properties":{}}
+{"record_type":"rel","id":"r_prog_recreate__TEIL_VON_PROGRAMM__prog_pilotprojekt","from":"prog_recreate","type":"TEIL_VON_PROGRAMM","to":"prog_pilotprojekt","properties":{}}
+{"record_type":"rel","id":"r_tool_bauteilkatalog__NUTZT_SOFTWARE__software_bim","from":"tool_bauteilkatalog","type":"NUTZT_SOFTWARE","to":"software_bim","properties":{}}
+{"record_type":"rel","id":"r_software_bim__NUTZT_TOOL__tool_bauteilkatalog","from":"software_bim","type":"NUTZT_TOOL","to":"tool_bauteilkatalog","properties":{}}
