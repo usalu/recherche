@@ -13,7 +13,7 @@ Rows with `entity=ort` become `:Land` or `:Stadt` from folder `id` (see `ort_geo
 Rows with `entity=software_digitaltool` become `:Software` or `:Tool` (see `software_tool_label.py`).
 
 Environment (same as export_visual_attachment_to_neo4j.py):
-  NEO4J_URI, NEO4J_USER, NEO4J_DATABASE, NEO4J_PASSWORD
+  NEO4J_URI, NEO4J_USER (or NEO4J_USERNAME as used by Neo4j MCP), NEO4J_DATABASE, NEO4J_PASSWORD
 
 Examples:
   pip install -r requirements-neo4j.txt
@@ -318,7 +318,7 @@ def main() -> int:
         )
         return 1
     uri = os.environ.get("NEO4J_URI", "neo4j://127.0.0.1:7687").strip()
-    user = os.environ.get("NEO4J_USER", "neo4j").strip()
+    user = (os.environ.get("NEO4J_USER") or os.environ.get("NEO4J_USERNAME") or "neo4j").strip()
     database = (os.environ.get("NEO4J_DATABASE") or "neo4j").strip() or "neo4j"
 
     try:
