@@ -1,0 +1,70 @@
+{"record_type": "node", "id": "q_bizh_reallabor_berlin_md", "labels": ["Quelle"], "properties": {"id": "q_bizh_reallabor_berlin_md", "name": "BIZH_Reallabor.md", "quelltyp": "case_markdown"}}
+{"record_type": "node", "id": "stadt_berlin", "labels": ["Stadt"], "properties": {"id": "stadt_berlin", "name": "Berlin"}}
+{"record_type": "node", "id": "land_deutschland", "labels": ["Land"], "properties": {"id": "land_deutschland", "name": "Deutschland"}}
+{"record_type": "node", "id": "p_bizh_reallabor_berlin", "labels": ["Projekt"], "properties": {"id": "p_bizh_reallabor_berlin", "name": "BIZH Reallabor – Drahtglas Zweischeiben-Isolierverglasung", "bewertung": 2, "projektstatus_text": "in Bau / Reallabor laufend"}}
+{"record_type": "node", "id": "bw_halle_2_ringberlin", "labels": ["Bauwerk"], "properties": {"id": "bw_halle_2_ringberlin", "name": "Halle 2 ringberlin – Sheddach 1938", "note": "Halle 2 mit Sheddach von 1938; Drahtglasscheiben als Donor für Reallabor-Prototyp"}}
+{"record_type": "node", "id": "bg_bizh_drahtglas_zweischeiben", "labels": ["Bauteilgruppe"], "properties": {"id": "bg_bizh_drahtglas_zweischeiben", "name": "Drahtglasscheiben aus Sheddach → Zweischeiben-Isolierverglasung (Prototyp)", "counts_as_direct_reuse": false}}
+{"record_type": "node", "id": "a_bizh", "labels": ["Akteur"], "properties": {"id": "a_bizh", "name": "BIZH (Berliner Institut für Zirkuläres Handwerk)"}}
+{"record_type": "rel", "id": "r_a_bizh__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "a_bizh", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_bizh__HAT_AKTEURROLLE__ar_forschung_dokumentation", "from": "a_bizh", "type": "HAT_AKTEURROLLE", "to": "ar_forschung_dokumentation", "properties": {}}
+{"record_type": "rel", "id": "r_a_bizh__HAT_AKTEURTYP__at_forschung_lehre", "from": "a_bizh", "type": "HAT_AKTEURTYP", "to": "at_forschung_lehre", "properties": {}}
+{"record_type": "rel", "id": "r_a_bizh__BETEILIGT_AN__p_bizh_reallabor_berlin", "from": "a_bizh", "type": "BETEILIGT_AN", "to": "p_bizh_reallabor_berlin", "properties": {}}
+{"record_type": "node", "id": "a_koimo_development", "labels": ["Akteur"], "properties": {"id": "a_koimo_development", "name": "KOIMO Development GmbH"}}
+{"record_type": "rel", "id": "r_a_koimo_development__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "a_koimo_development", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_koimo_development__HAT_AKTEURROLLE__ar_bauherr_auftraggeber", "from": "a_koimo_development", "type": "HAT_AKTEURROLLE", "to": "ar_bauherr_auftraggeber", "properties": {}}
+{"record_type": "rel", "id": "r_a_koimo_development__HAT_AKTEURTYP__at_unternehmen", "from": "a_koimo_development", "type": "HAT_AKTEURTYP", "to": "at_unternehmen", "properties": {}}
+{"record_type": "rel", "id": "r_a_koimo_development__BETEILIGT_AN__p_bizh_reallabor_berlin", "from": "a_koimo_development", "type": "BETEILIGT_AN", "to": "p_bizh_reallabor_berlin", "properties": {}}
+{"record_type": "node", "id": "a_concular", "labels": ["Akteur"], "properties": {"id": "a_concular", "name": "Concular"}}
+{"record_type": "rel", "id": "r_a_concular__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "a_concular", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_concular__HAT_AKTEURROLLE__ar_reuse_beratung", "from": "a_concular", "type": "HAT_AKTEURROLLE", "to": "ar_reuse_beratung", "properties": {}}
+{"record_type": "rel", "id": "r_a_concular__HAT_AKTEURTYP__at_unternehmen", "from": "a_concular", "type": "HAT_AKTEURTYP", "to": "at_unternehmen", "properties": {}}
+{"record_type": "rel", "id": "r_a_concular__BETEILIGT_AN__p_bizh_reallabor_berlin", "from": "a_concular", "type": "BETEILIGT_AN", "to": "p_bizh_reallabor_berlin", "properties": {}}
+{"record_type": "node", "id": "a_glasfischer_glastec", "labels": ["Akteur"], "properties": {"id": "a_glasfischer_glastec", "name": "Glasfischer Glastechnik"}}
+{"record_type": "rel", "id": "r_a_glasfischer_glastec__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "a_glasfischer_glastec", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_glasfischer_glastec__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment", "from": "a_glasfischer_glastec", "type": "HAT_AKTEURROLLE", "to": "ar_aufbereitung_refurbishment", "properties": {}}
+{"record_type": "rel", "id": "r_a_glasfischer_glastec__HAT_AKTEURTYP__at_unternehmen", "from": "a_glasfischer_glastec", "type": "HAT_AKTEURTYP", "to": "at_unternehmen", "properties": {}}
+{"record_type": "rel", "id": "r_a_glasfischer_glastec__BETEILIGT_AN__p_bizh_reallabor_berlin", "from": "a_glasfischer_glastec", "type": "BETEILIGT_AN", "to": "p_bizh_reallabor_berlin", "properties": {}}
+{"record_type": "node", "id": "a_gibbins_architekten", "labels": ["Akteur"], "properties": {"id": "a_gibbins_architekten", "name": "Gibbins Architekten"}}
+{"record_type": "rel", "id": "r_a_gibbins_architekten__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "a_gibbins_architekten", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_gibbins_architekten__HAT_AKTEURROLLE__ar_architektur", "from": "a_gibbins_architekten", "type": "HAT_AKTEURROLLE", "to": "ar_architektur", "properties": {}}
+{"record_type": "rel", "id": "r_a_gibbins_architekten__HAT_AKTEURTYP__at_unternehmen", "from": "a_gibbins_architekten", "type": "HAT_AKTEURTYP", "to": "at_unternehmen", "properties": {}}
+{"record_type": "rel", "id": "r_a_gibbins_architekten__BETEILIGT_AN__p_bizh_reallabor_berlin", "from": "a_gibbins_architekten", "type": "BETEILIGT_AN", "to": "p_bizh_reallabor_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_stadt_berlin__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "stadt_berlin", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_land_deutschland__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "land_deutschland", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_stadt_berlin__LIEGT_IN_LAND__land_deutschland", "from": "stadt_berlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "p_bizh_reallabor_berlin", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__LIEGT_IN_STADT__stadt_berlin", "from": "p_bizh_reallabor_berlin", "type": "LIEGT_IN_STADT", "to": "stadt_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__LIEGT_IN_LAND__land_deutschland", "from": "p_bizh_reallabor_berlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__HAT_STATUS__status_in_bau", "from": "p_bizh_reallabor_berlin", "type": "HAT_STATUS", "to": "status_in_bau", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__HAT_INTERVENTION__bai_sanierung", "from": "p_bizh_reallabor_berlin", "type": "HAT_INTERVENTION", "to": "bai_sanierung", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__HAT_WIEDERVERWENDUNGSART__wva_remanufacturing", "from": "p_bizh_reallabor_berlin", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_remanufacturing", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__HAT_METHODE__meth_reuse_assessment", "from": "p_bizh_reallabor_berlin", "type": "HAT_METHODE", "to": "meth_reuse_assessment", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__HAT_HUERDE__h_technische_freigabe", "from": "p_bizh_reallabor_berlin", "type": "HAT_HUERDE", "to": "h_technische_freigabe", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__HAT_HUERDE__h_bauproduktstatus", "from": "p_bizh_reallabor_berlin", "type": "HAT_HUERDE", "to": "h_bauproduktstatus", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__TEIL_VON_PROGRAMM__prog_reallabor", "from": "p_bizh_reallabor_berlin", "type": "TEIL_VON_PROGRAMM", "to": "prog_reallabor", "properties": {}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__NUTZT_BAUWERK__bw_halle_2_ringberlin", "from": "p_bizh_reallabor_berlin", "type": "NUTZT_BAUWERK", "to": "bw_halle_2_ringberlin", "properties": {}}
+{"record_type": "rel", "id": "r_bw_halle_2_ringberlin__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "bw_halle_2_ringberlin", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_bw_halle_2_ringberlin__HAT_BAUOBJEKTKLASSE__bok_gebaeude", "from": "bw_halle_2_ringberlin", "type": "HAT_BAUOBJEKTKLASSE", "to": "bok_gebaeude", "properties": {}}
+{"record_type": "rel", "id": "r_bw_halle_2_ringberlin__HAT_BAUOBJEKTROLLE__bor_bestandsobjekt", "from": "bw_halle_2_ringberlin", "type": "HAT_BAUOBJEKTROLLE", "to": "bor_bestandsobjekt", "properties": {}}
+{"record_type": "rel", "id": "r_bw_halle_2_ringberlin__LIEGT_IN_STADT__stadt_berlin", "from": "bw_halle_2_ringberlin", "type": "LIEGT_IN_STADT", "to": "stadt_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_bw_halle_2_ringberlin__LIEGT_IN_LAND__land_deutschland", "from": "bw_halle_2_ringberlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_bw_halle_2_ringberlin__HAT_STATUS__status_in_bau", "from": "bw_halle_2_ringberlin", "type": "HAT_STATUS", "to": "status_in_bau", "properties": {}}
+{"record_type": "rel", "id": "r_bw_halle_2_ringberlin__HAT_NUTZUNG__nut_gewerbe", "from": "bw_halle_2_ringberlin", "type": "HAT_NUTZUNG", "to": "nut_gewerbe", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__BELEGT_IN__q_bizh_reallabor_berlin_md", "from": "bg_bizh_drahtglas_zweischeiben", "type": "BELEGT_IN", "to": "q_bizh_reallabor_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_p_bizh_reallabor_berlin__HAT_BAUTEILGRUPPE__bg_bizh_drahtglas_zweischeiben", "from": "p_bizh_reallabor_berlin", "type": "HAT_BAUTEILGRUPPE", "to": "bg_bizh_drahtglas_zweischeiben", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__AUS_BAUWERK__bw_halle_2_ringberlin", "from": "bg_bizh_drahtglas_zweischeiben", "type": "AUS_BAUWERK", "to": "bw_halle_2_ringberlin", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__EINGEBAUT_IN__bw_halle_2_ringberlin", "from": "bg_bizh_drahtglas_zweischeiben", "type": "EINGEBAUT_IN", "to": "bw_halle_2_ringberlin", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_BAUTEILTYP__bt_fenster", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_BAUTEILTYP", "to": "bt_fenster", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_BAUTEILTYP__bt_fassade", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_BAUTEILTYP", "to": "bt_fassade", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_BAUTEILEBENE__be_bauteilgruppe", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_BAUTEILEBENE", "to": "be_bauteilgruppe", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__NUTZT_MATERIAL__mat_glas", "from": "bg_bizh_drahtglas_zweischeiben", "type": "NUTZT_MATERIAL", "to": "mat_glas", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_WIEDERVERWENDUNGSART__wva_remanufacturing", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_remanufacturing", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_STATUS__status_in_bau", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_STATUS", "to": "status_in_bau", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_AUFBEREITUNG__av_remanufacturing", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_AUFBEREITUNG", "to": "av_remanufacturing", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_AUFBEREITUNG__av_drahtglasschneiden", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_AUFBEREITUNG", "to": "av_drahtglasschneiden", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_PRUEFUNG__pr_sichtpruefung", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_PRUEFUNG", "to": "pr_sichtpruefung", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_PRUEFUNG__pr_materialpruefung", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_PRUEFUNG", "to": "pr_materialpruefung", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_LEISTUNGSANFORDERUNG__la_waermeschutz", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_LEISTUNGSANFORDERUNG", "to": "la_waermeschutz", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_LEISTUNGSANFORDERUNG__la_brandschutz", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_LEISTUNGSANFORDERUNG", "to": "la_brandschutz", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_HUERDE__h_technische_freigabe", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_HUERDE", "to": "h_technische_freigabe", "properties": {}}
+{"record_type": "rel", "id": "r_bg_bizh_drahtglas_zweischeiben__HAT_HUERDE__h_bauproduktstatus", "from": "bg_bizh_drahtglas_zweischeiben", "type": "HAT_HUERDE", "to": "h_bauproduktstatus", "properties": {}}

@@ -1,0 +1,352 @@
+﻿Loading batches 001-014 as baseline ΓÇª
+  Baseline: 1,121 nodes, 11,310 rels
+
+
+================================================================
+  BATCH 015
+================================================================
+  Records   :   47 nodes    342 rels  0 bad
+  Dup nodes (already in 001-014): 7
+  Dup rels  (already in 001-014): 4
+  Conflicting nodes (same id, diff label/name): 0
+  Dangling rel endpoints (missing from+to): 219
+
+  Duplicate node IDs (sample of 7):
+    stadt_london  (first in batch 013, labels=['Stadt'])
+    a_symmetrys  (first in batch 012, labels=['Akteur'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    a_arup  (first in batch 010, labels=['Akteur'])
+
+  Duplicate rel IDs (sample of 4):
+    r_a_symmetrys__HAT_AKTEURROLLE__ar_tragwerksplanung  (first in batch 012)
+    r_a_symmetrys__HAT_AKTEURTYP__at_unternehmen  (first in batch 012)
+    r_a_arup__HAT_AKTEURROLLE__ar_tragwerksplanung  (first in batch 010)
+    r_a_arup__HAT_AKTEURTYP__at_unternehmen  (first in batch 010)
+
+  Dangling endpoints (sample):
+    rel r_p_55_great_suffolk_street_london__HAT_STATUS__status_gebaut  -> missing node: status_gebaut
+    rel r_p_55_great_suffolk_street_london__HAT_INTERVENTION__bai_sanierung  -> missing node: bai_sanierung
+    rel r_p_55_great_suffolk_street_london__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwendung  -> missing node: wva_direkte_wiederverwendung
+    rel r_p_55_great_suffolk_street_london__HAT_METHODE__meth_building_material_scouting  -> missing node: meth_building_material_scouting
+    rel r_p_55_great_suffolk_street_london__HAT_BESCHAFFUNGSWEG__bweg_rueckbauprojekt  -> missing node: bweg_rueckbauprojekt
+
+  Node labels in this batch:
+    Bauwerk                               10 total  (10 genuinely new)
+    Bauteilgruppe                          9 total  (9 genuinely new)
+    Akteur                                 9 total  (7 genuinely new)
+    Stadt                                  6 total  (5 genuinely new)
+    Quelle                                 5 total  (5 genuinely new)
+    Projekt                                5 total  (5 genuinely new)
+    Land                                   2 total  (1 genuinely new)
+    Bausystem                              1 total  (1 genuinely new)
+
+  Rel types in this batch:
+    BELEGT_IN                                  44
+    HAT_STATUS                                 24
+    LIEGT_IN_LAND                              21
+    HAT_BAUTEILTYP                             18
+    HAT_WIEDERVERWENDUNGSART                   17
+    LIEGT_IN_STADT                             15
+    HAT_RUECKBAUVERFAHREN                      13
+    HAT_NUTZUNG                                12
+    HAT_AUFBEREITUNG                           12
+    NUTZT_BAUWERK                              10
+    HAT_BAUOBJEKTKLASSE                        10
+    HAT_BAUOBJEKTROLLE                         10
+    NUTZT_MATERIAL                             10
+    HAT_PRUEFUNG                               10
+    HAT_AKTEURROLLE                            10
+
+  Projekt nodes: 5
+    p_55_great_suffolk_street_london                             bew=4 
+    p_association_house_groeditz                                 bew=4 
+    p_association_house_plauen                                   bew=4 
+    p_awm_muenster_circular_office                               bew=3 
+    p_bedzed_london_hackbridge                                   bew=4 
+
+================================================================
+  BATCH 016
+================================================================
+  Records   :   47 nodes    367 rels  0 bad
+  Dup nodes (already in 001-015): 14
+  Dup rels  (already in 001-015): 13
+  Conflicting nodes (same id, diff label/name): 0
+  Dangling rel endpoints (missing from+to): 246
+
+  Duplicate node IDs (sample of 10):
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    a_trnsfrm_eg  (first in batch 004, labels=['Akteur'])
+    a_lxsy_architektur  (first in batch 004, labels=['Akteur'])
+    stadt_basel  (first in batch 007, labels=['Stadt'])
+    land_schweiz  (first in batch 011, labels=['Land'])
+    a_immobilien_basel_stadt  (first in batch 004, labels=['Akteur'])
+    stadt_basel  (first in batch 007, labels=['Stadt'])
+    land_schweiz  (first in batch 011, labels=['Land'])
+    a_immobilien_basel_stadt  (first in batch 004, labels=['Akteur'])
+
+  Duplicate rel IDs (sample of 5):
+    r_a_trnsfrm_eg__HAT_AKTEURROLLE__ar_bauherr_auftraggeber  (first in batch 004)
+    r_a_trnsfrm_eg__HAT_AKTEURTYP__at_organisation  (first in batch 004)
+    r_a_lxsy_architektur__HAT_AKTEURROLLE__ar_architektur  (first in batch 004)
+    r_a_lxsy_architektur__HAT_AKTEURTYP__at_unternehmen  (first in batch 004)
+    r_stadt_berlin__LIEGT_IN_LAND__land_deutschland  (first in batch 011)
+
+  Dangling endpoints (sample):
+    rel r_bg_crclr_tueren__HAT_BAUTEILTYP__bt_tuer  -> missing node: bt_tuer
+    rel r_bg_crclr_tueren__HAT_BAUTEILEBENE__be_bauteilgruppe  -> missing node: be_bauteilgruppe
+    rel r_bg_crclr_tueren__NUTZT_MATERIAL__mat_holz  -> missing node: mat_holz
+    rel r_bg_crclr_tueren__NUTZT_MATERIAL__mat_stahl  -> missing node: mat_stahl
+    rel r_bg_crclr_tueren__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwendung  -> missing node: wva_direkte_wiederverwendung
+
+  Node labels in this batch:
+    Bauteilgruppe                         15 total  (15 genuinely new)
+    Akteur                                11 total  (8 genuinely new)
+    Bauwerk                                6 total  (6 genuinely new)
+    Quelle                                 5 total  (5 genuinely new)
+    Projekt                                5 total  (5 genuinely new)
+    Stadt                                  3 total  (0 genuinely new)
+    Land                                   2 total  (0 genuinely new)
+
+  Rel types in this batch:
+    BELEGT_IN                                  52
+    HAT_WIEDERVERWENDUNGSART                   26
+    HAT_STATUS                                 26
+    HAT_BAUTEILTYP                             24
+    NUTZT_MATERIAL                             19
+    HAT_RUECKBAUVERFAHREN                      16
+    BETEILIGT_AN                               16
+    HAT_BAUTEILGRUPPE                          15
+    EINGEBAUT_IN                               15
+    HAT_BAUTEILEBENE                           15
+    HAT_AUFBEREITUNG                           15
+    LIEGT_IN_LAND                              14
+    HAT_AKTEURROLLE                            11
+    HAT_AKTEURTYP                              11
+    LIEGT_IN_STADT                             11
+
+  Projekt nodes: 5
+    p_bestandshalle_crclr_house                                  bew=3 
+    p_elementa_walkeweg_basel                                    bew=3 
+    p_elys_kultur_und_gewerbehaus_basel_lysbuechelareal          bew=4 
+    p_hobelwerk_haus_d_oberwinterthur                            bew=2 
+    p_lysp8_basel_lysbuechelareal                                bew=4 
+
+================================================================
+  BATCH 017
+================================================================
+  Records   :   35 nodes    198 rels  0 bad
+  Dup nodes (already in 001-016): 15
+  Dup rels  (already in 001-016): 24
+  Conflicting nodes (same id, diff label/name): 1
+  Dangling rel endpoints (missing from+to): 118
+
+  Duplicate node IDs (sample of 10):
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    a_lxsy_architektur  (first in batch 004, labels=['Akteur'])
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    a_trnsfrm_eg  (first in batch 004, labels=['Akteur'])
+    a_lxsy_architektur  (first in batch 004, labels=['Akteur'])
+    a_zrs_architekten  (first in batch 016, labels=['Akteur'])
+    a_concular  (first in batch 015, labels=['Akteur'])
+    land_belgien  (first in batch 014, labels=['Land'])
+
+  Duplicate rel IDs (sample of 5):
+    r_a_lxsy_architektur__HAT_AKTEURROLLE__ar_architektur  (first in batch 004)
+    r_a_lxsy_architektur__HAT_AKTEURTYP__at_unternehmen  (first in batch 004)
+    r_stadt_berlin__LIEGT_IN_LAND__land_deutschland  (first in batch 011)
+    r_a_trnsfrm_eg__HAT_AKTEURROLLE__ar_bauherr_auftraggeber  (first in batch 004)
+    r_a_trnsfrm_eg__HAT_AKTEURTYP__at_organisation  (first in batch 004)
+
+  CONFLICTS:
+    bw_lysbuechel_parkhaus_basel
+      base (batch 016): labels=['Bauwerk'] name=Lysbuechel Parkhaus Basel (Spender)
+      new  (batch 017): labels=['Bauwerk'] name=Lysbuechel Parkhaus Basel
+
+  Dangling endpoints (sample):
+    rel r_a_lxsy_architektur__HAT_AKTEURROLLE__ar_architektur  -> missing node: ar_architektur
+    rel r_a_lxsy_architektur__HAT_AKTEURTYP__at_unternehmen  -> missing node: at_unternehmen
+    rel r_a_heinrich_boell_stiftung__HAT_AKTEURROLLE__ar_bauherr_auftraggeber  -> missing node: ar_bauherr_auftraggeber
+    rel r_a_heinrich_boell_stiftung__HAT_AKTEURTYP__at_organisation  -> missing node: at_organisation
+    rel r_p_boell_lab_berlin__HAT_STATUS__status_verworfen  -> missing node: status_verworfen
+
+  Node labels in this batch:
+    Akteur                                 9 total  (4 genuinely new)
+    Quelle                                 5 total  (5 genuinely new)
+    Projekt                                5 total  (5 genuinely new)
+    Bauwerk                                5 total  (4 genuinely new)
+    Stadt                                  4 total  (2 genuinely new)
+    Bauteilgruppe                          4 total  (4 genuinely new)
+    Land                                   3 total  (0 genuinely new)
+
+  Rel types in this batch:
+    BELEGT_IN                                  35
+    LIEGT_IN_LAND                              14
+    HAT_STATUS                                 14
+    HAT_WIEDERVERWENDUNGSART                   13
+    HAT_AKTEURROLLE                            11
+    BETEILIGT_AN                               11
+    LIEGT_IN_STADT                             10
+    HAT_AKTEURTYP                               9
+    HAT_BAUTEILTYP                              8
+    HAT_INTERVENTION                            7
+    HAT_METHODE                                 6
+    HAT_NUTZUNG                                 6
+    NUTZT_BAUWERK                               5
+    HAT_BAUOBJEKTKLASSE                         5
+    HAT_BAUOBJEKTROLLE                          5
+
+  Projekt nodes: 5
+    p_boell_lab_berlin                                           bew=1 
+    p_crclr_house_berlin_overview                                bew=3 
+    p_da_vinci_business_district_evere                           bew=2 
+    p_lysbuechel_parkhaus_basel                                  bew=3 
+    p_reusebox_heilbronn                                         bew=2 
+
+================================================================
+  BATCH 018
+================================================================
+  Records   :   30 nodes    166 rels  0 bad
+  Dup nodes (already in 001-017): 11
+  Dup rels  (already in 001-017): 8
+  Conflicting nodes (same id, diff label/name): 0
+  Dangling rel endpoints (missing from+to): 97
+
+  Duplicate node IDs (sample of 10):
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    a_zrs_architekten  (first in batch 016, labels=['Akteur'])
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    a_concular  (first in batch 015, labels=['Akteur'])
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    a_trnsfrm_eg  (first in batch 004, labels=['Akteur'])
+    land_belgien  (first in batch 014, labels=['Land'])
+
+  Duplicate rel IDs (sample of 5):
+    r_a_zrs_architekten__HAT_AKTEURTYP__at_unternehmen  (first in batch 016)
+    r_stadt_berlin__LIEGT_IN_LAND__land_deutschland  (first in batch 011)
+    r_a_concular__HAT_AKTEURROLLE__ar_reuse_beratung  (first in batch 015)
+    r_a_concular__HAT_AKTEURTYP__at_unternehmen  (first in batch 015)
+    r_stadt_berlin__LIEGT_IN_LAND__land_deutschland  (first in batch 011)
+
+  Dangling endpoints (sample):
+    rel r_a_natural_building_lab__HAT_AKTEURROLLE__ar_forschung_dokumentation  -> missing node: ar_forschung_dokumentation
+    rel r_a_natural_building_lab__HAT_AKTEURTYP__at_forschung_lehre  -> missing node: at_forschung_lehre
+    rel r_a_zrs_architekten__HAT_AKTEURROLLE__ar_architektur  -> missing node: ar_architektur
+    rel r_a_zrs_architekten__HAT_AKTEURTYP__at_unternehmen  -> missing node: at_unternehmen
+    rel r_a_dare_gmbh__HAT_AKTEURROLLE__ar_rueckbau_demontage  -> missing node: ar_rueckbau_demontage
+
+  Node labels in this batch:
+    Akteur                                12 total  (8 genuinely new)
+    Quelle                                 4 total  (4 genuinely new)
+    Projekt                                4 total  (4 genuinely new)
+    Bauwerk                                4 total  (4 genuinely new)
+    Stadt                                  2 total  (1 genuinely new)
+    Land                                   2 total  (0 genuinely new)
+    Bauteilgruppe                          2 total  (2 genuinely new)
+
+  Rel types in this batch:
+    BELEGT_IN                                  30
+    HAT_AKTEURROLLE                            12
+    HAT_AKTEURTYP                              12
+    BETEILIGT_AN                               12
+    LIEGT_IN_LAND                              10
+    HAT_STATUS                                 10
+    LIEGT_IN_STADT                              8
+    HAT_WIEDERVERWENDUNGSART                    7
+    HAT_NUTZUNG                                 6
+    HAT_BAUTEILTYP                              5
+    HAT_INTERVENTION                            4
+    TEIL_VON_PROGRAMM                           4
+    NUTZT_BAUWERK                               4
+    HAT_BAUOBJEKTKLASSE                         4
+    HAT_BAUOBJEKTROLLE                          4
+
+  Projekt nodes: 4
+    p_be_ware_reallabor_berlin                                   bew=3 
+    p_bizh_reallabor_berlin                                      bew=2 
+    p_kindl_areal_berlin                                         bew=2 
+    p_opalis_plattformfall                                       bew=2 
+
+================================================================
+  BATCH 019
+================================================================
+  Records   :   28 nodes    124 rels  0 bad
+  Dup nodes (already in 001-018): 13
+  Dup rels  (already in 001-018): 18
+  Conflicting nodes (same id, diff label/name): 0
+  Dangling rel endpoints (missing from+to): 62
+
+  Duplicate node IDs (sample of 10):
+    stadt_basel  (first in batch 007, labels=['Stadt'])
+    land_schweiz  (first in batch 011, labels=['Land'])
+    bw_lysbuechel_parkhaus_basel  (first in batch 016, labels=['Bauwerk'])
+    a_parabase  (first in batch 016, labels=['Akteur'])
+    a_immobilien_basel_stadt  (first in batch 004, labels=['Akteur'])
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    stadt_berlin  (first in batch 011, labels=['Stadt'])
+    land_deutschland  (first in batch 011, labels=['Land'])
+    stadt_brussel  (first in batch 018, labels=['Stadt'])
+
+  Duplicate rel IDs (sample of 5):
+    r_a_parabase__HAT_AKTEURROLLE__ar_architektur  (first in batch 016)
+    r_a_parabase__HAT_AKTEURTYP__at_unternehmen  (first in batch 016)
+    r_a_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_bauherr_auftraggeber  (first in batch 004)
+    r_a_immobilien_basel_stadt__HAT_AKTEURTYP__at_oeffentliche_institution  (first in batch 004)
+    r_stadt_basel__LIEGT_IN_LAND__land_schweiz  (first in batch 007)
+
+  Dangling endpoints (sample):
+    rel r_a_parabase__HAT_AKTEURROLLE__ar_architektur  -> missing node: ar_architektur
+    rel r_a_parabase__HAT_AKTEURTYP__at_unternehmen  -> missing node: at_unternehmen
+    rel r_a_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_bauherr_auftraggeber  -> missing node: ar_bauherr_auftraggeber
+    rel r_a_immobilien_basel_stadt__HAT_AKTEURTYP__at_oeffentliche_institution  -> missing node: at_oeffentliche_institution
+    rel r_p_areal_walkeweg_nord_basel__HAT_STATUS__status_geplant  -> missing node: status_geplant
+
+  Node labels in this batch:
+    Akteur                                 7 total  (3 genuinely new)
+    Bauwerk                                5 total  (4 genuinely new)
+    Quelle                                 4 total  (4 genuinely new)
+    Projekt                                4 total  (4 genuinely new)
+    Stadt                                  3 total  (0 genuinely new)
+    Land                                   3 total  (0 genuinely new)
+    Programm                               1 total  (1 genuinely new)
+    Bauteilgruppe                          1 total  (1 genuinely new)
+
+  Rel types in this batch:
+    BELEGT_IN                                  26
+    LIEGT_IN_LAND                              12
+    HAT_STATUS                                 10
+    LIEGT_IN_STADT                              9
+    BETEILIGT_AN                                8
+    HAT_AKTEURROLLE                             7
+    HAT_AKTEURTYP                               7
+    HAT_WIEDERVERWENDUNGSART                    7
+    HAT_NUTZUNG                                 6
+    NUTZT_BAUWERK                               5
+    HAT_BAUOBJEKTKLASSE                         5
+    HAT_BAUOBJEKTROLLE                          5
+    TEIL_VON_PROGRAMM                           3
+    HAT_BAUTEILTYP                              2
+    HAT_INTERVENTION                            1
+
+  Projekt nodes: 4
+    p_areal_walkeweg_nord_basel                                  bew=3 
+    p_haus_der_materialisierung_berlin                           bew=2 
+    p_kunst_stoffe_berlin                                        bew=2 
+    p_preuse_interreg_nwe                                        bew=2 
+
+================================================================
+  CROSS-BATCH SUMMARY 015-019
+================================================================
+  (Each batch's duplicates counted against all prior batches 001ΓÇôN-1)
+
+  Final cumulative: 1,267 unique node IDs, 12,452 unique rel IDs
+

@@ -1,0 +1,33 @@
+{"record_type": "node", "id": "q_boell_lab_berlin_md", "labels": ["Quelle"], "properties": {"id": "q_boell_lab_berlin_md", "name": "BOELL_LAB_Berlin.md", "quelltyp": "case_markdown"}}
+{"record_type": "node", "id": "stadt_berlin", "labels": ["Stadt"], "properties": {"id": "stadt_berlin", "name": "Berlin"}}
+{"record_type": "node", "id": "land_deutschland", "labels": ["Land"], "properties": {"id": "land_deutschland", "name": "Deutschland"}}
+{"record_type": "node", "id": "p_boell_lab_berlin", "labels": ["Projekt"], "properties": {"id": "p_boell_lab_berlin", "name": "BOELL.LAB Berlin (Projekt eingestellt)", "bewertung": 1, "projektstatus_text": "verworfen/eingestellt"}}
+{"record_type": "node", "id": "bw_boell_lab_berlin_konzept", "labels": ["Bauwerk"], "properties": {"id": "bw_boell_lab_berlin_konzept", "name": "BOELL.LAB Berlin (Konzept, nicht realisiert)", "note": "Geplanter Pavillon Karl-Marx-Allee; Design for Disassembly + ReUse Bauteile; eingestellt laut LXSY"}}
+{"record_type": "node", "id": "a_lxsy_architektur", "labels": ["Akteur"], "properties": {"id": "a_lxsy_architektur", "name": "LXSY Architektur"}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__BELEGT_IN__q_boell_lab_berlin_md", "from": "a_lxsy_architektur", "type": "BELEGT_IN", "to": "q_boell_lab_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__HAT_AKTEURROLLE__ar_architektur", "from": "a_lxsy_architektur", "type": "HAT_AKTEURROLLE", "to": "ar_architektur", "properties": {}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__HAT_AKTEURTYP__at_unternehmen", "from": "a_lxsy_architektur", "type": "HAT_AKTEURTYP", "to": "at_unternehmen", "properties": {}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__BETEILIGT_AN__p_boell_lab_berlin", "from": "a_lxsy_architektur", "type": "BETEILIGT_AN", "to": "p_boell_lab_berlin", "properties": {}}
+{"record_type": "node", "id": "a_heinrich_boell_stiftung", "labels": ["Akteur"], "properties": {"id": "a_heinrich_boell_stiftung", "name": "Heinrich-Böll-Stiftung"}}
+{"record_type": "rel", "id": "r_a_heinrich_boell_stiftung__BELEGT_IN__q_boell_lab_berlin_md", "from": "a_heinrich_boell_stiftung", "type": "BELEGT_IN", "to": "q_boell_lab_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_heinrich_boell_stiftung__HAT_AKTEURROLLE__ar_bauherr_auftraggeber", "from": "a_heinrich_boell_stiftung", "type": "HAT_AKTEURROLLE", "to": "ar_bauherr_auftraggeber", "properties": {}}
+{"record_type": "rel", "id": "r_a_heinrich_boell_stiftung__HAT_AKTEURTYP__at_organisation", "from": "a_heinrich_boell_stiftung", "type": "HAT_AKTEURTYP", "to": "at_organisation", "properties": {}}
+{"record_type": "rel", "id": "r_a_heinrich_boell_stiftung__BETEILIGT_AN__p_boell_lab_berlin", "from": "a_heinrich_boell_stiftung", "type": "BETEILIGT_AN", "to": "p_boell_lab_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_stadt_berlin__BELEGT_IN__q_boell_lab_berlin_md", "from": "stadt_berlin", "type": "BELEGT_IN", "to": "q_boell_lab_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_land_deutschland__BELEGT_IN__q_boell_lab_berlin_md", "from": "land_deutschland", "type": "BELEGT_IN", "to": "q_boell_lab_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_stadt_berlin__LIEGT_IN_LAND__land_deutschland", "from": "stadt_berlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__BELEGT_IN__q_boell_lab_berlin_md", "from": "p_boell_lab_berlin", "type": "BELEGT_IN", "to": "q_boell_lab_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__LIEGT_IN_STADT__stadt_berlin", "from": "p_boell_lab_berlin", "type": "LIEGT_IN_STADT", "to": "stadt_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__LIEGT_IN_LAND__land_deutschland", "from": "p_boell_lab_berlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__HAT_STATUS__status_verworfen", "from": "p_boell_lab_berlin", "type": "HAT_STATUS", "to": "status_verworfen", "properties": {}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__HAT_INTERVENTION__bai_neubau", "from": "p_boell_lab_berlin", "type": "HAT_INTERVENTION", "to": "bai_neubau", "properties": {}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__HAT_WIEDERVERWENDUNGSART__wva_design_for_disassembly", "from": "p_boell_lab_berlin", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_design_for_disassembly", "properties": {}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__HAT_METHODE__meth_design_for_disassembly", "from": "p_boell_lab_berlin", "type": "HAT_METHODE", "to": "meth_design_for_disassembly", "properties": {}}
+{"record_type": "rel", "id": "r_p_boell_lab_berlin__NUTZT_BAUWERK__bw_boell_lab_berlin_konzept", "from": "p_boell_lab_berlin", "type": "NUTZT_BAUWERK", "to": "bw_boell_lab_berlin_konzept", "properties": {}}
+{"record_type": "rel", "id": "r_bw_boell_lab_berlin_konzept__BELEGT_IN__q_boell_lab_berlin_md", "from": "bw_boell_lab_berlin_konzept", "type": "BELEGT_IN", "to": "q_boell_lab_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_bw_boell_lab_berlin_konzept__HAT_BAUOBJEKTKLASSE__bok_pavillon", "from": "bw_boell_lab_berlin_konzept", "type": "HAT_BAUOBJEKTKLASSE", "to": "bok_pavillon", "properties": {}}
+{"record_type": "rel", "id": "r_bw_boell_lab_berlin_konzept__HAT_BAUOBJEKTROLLE__bor_empfaengerobjekt", "from": "bw_boell_lab_berlin_konzept", "type": "HAT_BAUOBJEKTROLLE", "to": "bor_empfaengerobjekt", "properties": {}}
+{"record_type": "rel", "id": "r_bw_boell_lab_berlin_konzept__LIEGT_IN_STADT__stadt_berlin", "from": "bw_boell_lab_berlin_konzept", "type": "LIEGT_IN_STADT", "to": "stadt_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_bw_boell_lab_berlin_konzept__LIEGT_IN_LAND__land_deutschland", "from": "bw_boell_lab_berlin_konzept", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_bw_boell_lab_berlin_konzept__HAT_STATUS__status_verworfen", "from": "bw_boell_lab_berlin_konzept", "type": "HAT_STATUS", "to": "status_verworfen", "properties": {}}
+{"record_type": "rel", "id": "r_bw_boell_lab_berlin_konzept__HAT_NUTZUNG__nut_kultur", "from": "bw_boell_lab_berlin_konzept", "type": "HAT_NUTZUNG", "to": "nut_kultur", "properties": {}}

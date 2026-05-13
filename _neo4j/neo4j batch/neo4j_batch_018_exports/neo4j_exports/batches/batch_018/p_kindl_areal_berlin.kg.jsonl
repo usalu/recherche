@@ -1,0 +1,36 @@
+{"record_type": "node", "id": "q_kindl_areal_berlin_md", "labels": ["Quelle"], "properties": {"id": "q_kindl_areal_berlin_md", "name": "Kindl_Areal.md", "quelltyp": "case_markdown"}}
+{"record_type": "node", "id": "stadt_berlin", "labels": ["Stadt"], "properties": {"id": "stadt_berlin", "name": "Berlin"}}
+{"record_type": "node", "id": "land_deutschland", "labels": ["Land"], "properties": {"id": "land_deutschland", "name": "Deutschland"}}
+{"record_type": "node", "id": "p_kindl_areal_berlin", "labels": ["Projekt"], "properties": {"id": "p_kindl_areal_berlin", "name": "Kindl Areal Berlin-Neukölln – Arealtransformation", "bewertung": 2, "projektstatus_text": "gebaut / laufend", "note": "Ehemaliges Brauereigelände; Adaptive Reuse; Gemeinschaftsprojekt"}}
+{"record_type": "node", "id": "bw_kindl_areal_berlin", "labels": ["Bauwerk"], "properties": {"id": "bw_kindl_areal_berlin", "name": "Kindl Areal Berlin-Neukölln", "note": "Ehem. Schultheiß-Brauerei; Bestandserhalt + Adaptive Reuse; CRCLR House, Vollgut, KINDL Kunst"}}
+{"record_type": "node", "id": "a_trnsfrm_eg", "labels": ["Akteur"], "properties": {"id": "a_trnsfrm_eg", "name": "TRNSFRM eG"}}
+{"record_type": "rel", "id": "r_a_trnsfrm_eg__BELEGT_IN__q_kindl_areal_berlin_md", "from": "a_trnsfrm_eg", "type": "BELEGT_IN", "to": "q_kindl_areal_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_trnsfrm_eg__HAT_AKTEURROLLE__ar_betreiber_nutzer", "from": "a_trnsfrm_eg", "type": "HAT_AKTEURROLLE", "to": "ar_betreiber_nutzer", "properties": {}}
+{"record_type": "rel", "id": "r_a_trnsfrm_eg__HAT_AKTEURTYP__at_organisation", "from": "a_trnsfrm_eg", "type": "HAT_AKTEURTYP", "to": "at_organisation", "properties": {}}
+{"record_type": "rel", "id": "r_a_trnsfrm_eg__BETEILIGT_AN__p_kindl_areal_berlin", "from": "a_trnsfrm_eg", "type": "BETEILIGT_AN", "to": "p_kindl_areal_berlin", "properties": {}}
+{"record_type": "node", "id": "a_edith_maryon_stift", "labels": ["Akteur"], "properties": {"id": "a_edith_maryon_stift", "name": "Stiftung Edith Maryon"}}
+{"record_type": "rel", "id": "r_a_edith_maryon_stift__BELEGT_IN__q_kindl_areal_berlin_md", "from": "a_edith_maryon_stift", "type": "BELEGT_IN", "to": "q_kindl_areal_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_edith_maryon_stift__HAT_AKTEURROLLE__ar_oeffentliche_hand", "from": "a_edith_maryon_stift", "type": "HAT_AKTEURROLLE", "to": "ar_oeffentliche_hand", "properties": {}}
+{"record_type": "rel", "id": "r_a_edith_maryon_stift__HAT_AKTEURTYP__at_organisation", "from": "a_edith_maryon_stift", "type": "HAT_AKTEURTYP", "to": "at_organisation", "properties": {}}
+{"record_type": "rel", "id": "r_a_edith_maryon_stift__BETEILIGT_AN__p_kindl_areal_berlin", "from": "a_edith_maryon_stift", "type": "BETEILIGT_AN", "to": "p_kindl_areal_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_stadt_berlin__BELEGT_IN__q_kindl_areal_berlin_md", "from": "stadt_berlin", "type": "BELEGT_IN", "to": "q_kindl_areal_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_land_deutschland__BELEGT_IN__q_kindl_areal_berlin_md", "from": "land_deutschland", "type": "BELEGT_IN", "to": "q_kindl_areal_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_stadt_berlin__LIEGT_IN_LAND__land_deutschland", "from": "stadt_berlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__BELEGT_IN__q_kindl_areal_berlin_md", "from": "p_kindl_areal_berlin", "type": "BELEGT_IN", "to": "q_kindl_areal_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__LIEGT_IN_STADT__stadt_berlin", "from": "p_kindl_areal_berlin", "type": "LIEGT_IN_STADT", "to": "stadt_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__LIEGT_IN_LAND__land_deutschland", "from": "p_kindl_areal_berlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__HAT_STATUS__status_gebaut", "from": "p_kindl_areal_berlin", "type": "HAT_STATUS", "to": "status_gebaut", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__HAT_INTERVENTION__bai_umbau", "from": "p_kindl_areal_berlin", "type": "HAT_INTERVENTION", "to": "bai_umbau", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__HAT_INTERVENTION__bai_umnutzung", "from": "p_kindl_areal_berlin", "type": "HAT_INTERVENTION", "to": "bai_umnutzung", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__HAT_WIEDERVERWENDUNGSART__wva_bestandserhalt", "from": "p_kindl_areal_berlin", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_bestandserhalt", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__HAT_WIEDERVERWENDUNGSART__wva_adaptives_reuse", "from": "p_kindl_areal_berlin", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_adaptives_reuse", "properties": {}}
+{"record_type": "rel", "id": "r_p_kindl_areal_berlin__NUTZT_BAUWERK__bw_kindl_areal_berlin", "from": "p_kindl_areal_berlin", "type": "NUTZT_BAUWERK", "to": "bw_kindl_areal_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__BELEGT_IN__q_kindl_areal_berlin_md", "from": "bw_kindl_areal_berlin", "type": "BELEGT_IN", "to": "q_kindl_areal_berlin_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__HAT_BAUOBJEKTKLASSE__bok_quartier_areal", "from": "bw_kindl_areal_berlin", "type": "HAT_BAUOBJEKTKLASSE", "to": "bok_quartier_areal", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__HAT_BAUOBJEKTROLLE__bor_bestandsobjekt", "from": "bw_kindl_areal_berlin", "type": "HAT_BAUOBJEKTROLLE", "to": "bor_bestandsobjekt", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__LIEGT_IN_STADT__stadt_berlin", "from": "bw_kindl_areal_berlin", "type": "LIEGT_IN_STADT", "to": "stadt_berlin", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__LIEGT_IN_LAND__land_deutschland", "from": "bw_kindl_areal_berlin", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__HAT_STATUS__status_gebaut", "from": "bw_kindl_areal_berlin", "type": "HAT_STATUS", "to": "status_gebaut", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__HAT_NUTZUNG__nut_gewerbe", "from": "bw_kindl_areal_berlin", "type": "HAT_NUTZUNG", "to": "nut_gewerbe", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__HAT_NUTZUNG__nut_kultur", "from": "bw_kindl_areal_berlin", "type": "HAT_NUTZUNG", "to": "nut_kultur", "properties": {}}
+{"record_type": "rel", "id": "r_bw_kindl_areal_berlin__HAT_NUTZUNG__nut_wohnen", "from": "bw_kindl_areal_berlin", "type": "HAT_NUTZUNG", "to": "nut_wohnen", "properties": {}}
