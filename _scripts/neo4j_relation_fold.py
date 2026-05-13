@@ -151,5 +151,13 @@ def fold_csv_relation(row: dict[str, str]) -> tuple[str | None, dict[str, str]]:
         extra["rolle"] = geo.lower()  # `land` | `stadt` per Appendix F
         return "GEHÖRT_ZU", extra
 
+    # --- Appendix F: Fallbeispiel → Programm (foerderprogramm/ + programm_kontext/ → :Programm) ---
+    if rel in {"involves_foerderprogramm", "has_programm_kontext"}:
+        extra["rolle"] = "programm"
+        return "GEHÖRT_ZU", extra
+
+    if rel == "documented_in_quelle":
+        return "BELEGT_IN", extra
+
     # --- Unknown / not yet folded: skip (safer than inventing semantics) ---
     return None, {}

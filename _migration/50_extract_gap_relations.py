@@ -63,6 +63,10 @@ Current batch:
     Scans EINORDNUNG, ENTITÄTEN-MAPPING, TECHNIK, and KENNWERTE sections for mentions of
     BREEAM, DGNB, LEED, WELL, or Paris Proof and adds has_zertifizierung_bewertungssystem
     edges from the fallstudie node to the matching zertifizierung_bewertungssystem knot.
+  50y_has_programm_fallstudie
+    Scans full Gebäude/<case>.md text for named EU funding schemes and programme-context cues,
+    then adds involves_foerderprogramm → foerderprogramm/* and has_programm_kontext →
+    programm_kontext/* from the matching fallstudie node (plan Appendix F: rolle programm).
 """
 
 from __future__ import annotations
@@ -6347,6 +6351,166 @@ def build_zertifizierung_bewertungssystem_edges(
     return edge_rows + additions, additions, stats, skipped
 
 
+def _map_foerderprogramm_targets(blob_norm: str, existing_nodes: set[str]) -> list[str]:
+    """High-precision foerderprogramm/* hits from normalized Gebäude prose."""
+    hits: list[str] = []
+    n = blob_norm
+
+    def add(tp: str) -> None:
+        if tp in existing_nodes and tp not in hits:
+            hits.append(tp)
+
+    if re.search(r"reallabor.{0,140}be ware|be ware.{0,140}reallabor", n) or re.search(
+        r"reallabor.{0,140}be-ware|be-ware.{0,140}reallabor", n
+    ):
+        add("foerderprogramm/Reallabor_Be_Ware")
+    if re.search(r"(?<![a-z0-9])fcrbe(?![a-z0-9])", n):
+        add("foerderprogramm/FCRBE")
+    if re.search(r"(?<![a-z0-9])bbsm(?![a-z0-9])", n):
+        add("foerderprogramm/BBSM")
+    if re.search(r"(?<![a-z0-9])preuse(?![a-z0-9])", n):
+        add("foerderprogramm/PREUSE")
+    if re.search(r"(?<![a-z0-9])zukunftbau(?![a-z0-9])", n):
+        add("foerderprogramm/Zukunftbau")
+    return hits
+
+
+def _map_programm_kontext_targets(blob_norm: str, existing_nodes: set[str]) -> list[str]:
+    """programm_kontext/* cues (reuse-oriented pilots, research, competitions)."""
+    hits: list[str] = []
+    n = blob_norm
+
+    def add(tp: str) -> None:
+        if tp in existing_nodes and tp not in hits:
+            hits.append(tp)
+
+    if "pilotprojekt" in n or "pilotprojekte" in n:
+        add("programm_kontext/Pilotprojekt")
+    if any(
+        token in n
+        for token in (
+            "reuse pilot",
+            "re-use pilot",
+            "reuse-pilot",
+            "mini-pilot",
+            "mini pilot",
+        )
+    ):
+        add("programm_kontext/Pilotprojekt")
+    if "pilot project" in n and any(
+        token in n
+        for token in (
+            "recreate",
+            "reuse",
+            "re-use",
+            "circulair centrum",
+            "circular centre",
+        )
+    ):
+        add("programm_kontext/Pilotprojekt")
+
+    if any(token in n for token in ("forschungsprojekt", "forschungsprojekte", "forschungscluster")):
+        add("programm_kontext/Forschungsprojekt")
+
+    if "kommunales programm" in n or "kommunales entwicklungsprogramm" in n:
+        add("programm_kontext/Kommunales_Programm")
+
+    if re.search(r"(?<![a-z0-9])reallabor(?![a-z0-9])", n):
+        if not re.search(
+            r"reallabor.{0,140}be ware|be ware.{0,140}reallabor|reallabor.{0,140}be-ware|be-ware.{0,140}reallabor",
+            n,
+        ):
+            add("programm_kontext/Reallabor")
+
+    reuse_wettbewerb = (
+        "wettbewerbsbeitrag" in n
+        or "wettbewerbsgrundlage" in n
+        or "wettbewerbsteam" in n
+        or bool(
+            re.search(
+                r"wettbewerb.{0,120}(reuse|re-use|bauteil|bauteilkatalog|zirkul)|(?:reuse|re-use).{0,120}wettbewerb",
+                n,
+            )
+        )
+    )
+    if reuse_wettbewerb:
+        add("programm_kontext/Wettbewerb")
+
+    return hits
+
+
+def build_programm_fallstudie_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    """50y — involves_foerderprogramm + has_programm_kontext from Gebäude scan → fallstudie."""
+    existing_keys = existing_edge_keys(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    fall_by_id = {row["id"]: row for row in inventory_rows_for_entity("fallstudie")}
+    source_dir = gebaeude_dir()
+
+    for path in sorted(source_dir.glob("*.md")):
+        case_id = path.stem
+        stats["gebaeude_files_scanned"] += 1
+        fs_row = fall_by_id.get(case_id)
+        if not fs_row:
+            stats["cases_without_fallstudie_node"] += 1
+            skipped.append({
+                "case_id": case_id,
+                "legacy_path": str(path.relative_to(ROOT)),
+                "reason": "no_fallstudie_inventory_row",
+            })
+            continue
+
+        markdown = path.read_text(encoding="utf-8", errors="replace")
+        blob_norm = normalized(markdown)
+        foerder = _map_foerderprogramm_targets(blob_norm, existing_nodes)
+        kontext = _map_programm_kontext_targets(blob_norm, existing_nodes)
+        if not foerder and not kontext:
+            stats["cases_without_programm_hit"] += 1
+            continue
+
+        source = fs_row["typed_path"]
+        raw_label = markdown.strip().replace("\n", " ")[:500]
+
+        for relation, targets in (
+            ("involves_foerderprogramm", foerder),
+            ("has_programm_kontext", kontext),
+        ):
+            for target in targets:
+                key = (source, relation, target)
+                if key in existing_keys:
+                    stats["duplicates_skipped"] += 1
+                    continue
+                target_entity, target_id = target.split("/", 1)
+                additions.append({
+                    "source": source,
+                    "source_entity": "fallstudie",
+                    "source_id": fs_row["id"],
+                    "relation": relation,
+                    "target": target,
+                    "target_entity": target_entity,
+                    "target_id": target_id,
+                    "field": "Gebaude:Programm_Scan",
+                    "raw_label": raw_label,
+                    "confidence": "rule_high" if relation == "involves_foerderprogramm" else "rule_medium",
+                    "resolution_rule": "scan_50y_has_programm_fallstudie",
+                    "legacy_path": str(path.relative_to(ROOT)),
+                    "original_source": source,
+                    "original_relation": relation,
+                    "original_target": target,
+                    "edge_cleaning": "added_gap_50y",
+                })
+                existing_keys.add(key)
+                stats[f"{relation}_edges"] += 1
+
+    stats["additions"] = len(additions)
+    return edge_rows + additions, additions, stats, skipped
+
+
 BATCHES = {
     "50a_reuse_strategie": build_reuse_strategy_edges,
     "50b_fuegung_verbindung": build_connection_edges,
@@ -6370,6 +6534,7 @@ BATCHES = {
     "50r_has_bauobjekt_context": build_bauobjekt_context_edges,
     "50v_has_kontextmerkmal": build_kontextmerkmal_edges,
     "50w_has_zertifizierung_bewertungssystem": build_zertifizierung_bewertungssystem_edges,
+    "50y_has_programm_fallstudie": build_programm_fallstudie_edges,
 }
 
 
