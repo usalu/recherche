@@ -8,11 +8,11 @@
 
 | Layer | Nodes | Relationships |
 |-------|-------|---------------|
-| Project files (batches 001–009) | ~785 | ~8 482 |
-| Controlled vocabulary seed + deltas | ~330 | ~43 |
-| **Total in graph (live)** | **1 063** | **8 389** |
+| Project files (batches 001–014) | ~1 312 | ~12 988 |
+| Controlled vocabulary seed + deltas | ~280 | ~45 |
+| **Total in graph (live)** | **1 538** | **12 787** |
 
-**Progress:** 44 / 98 case studies processed (≈ 45 %) · 143 direct-reuse BTGs + 52 non-reuse BTGs
+**Progress:** 70 / 98 case studies processed (≈ 71 %) · 194 direct-reuse BTGs + 100 non/unclassified BTGs
 
 ---
 
@@ -64,6 +64,32 @@
 | 42 | 009 | Maison DnA Asse | 10 | 71 | 4 | reused brick outer structure |
 | 43 | 009 | Maison Vignette Auderghem | 18 | 161 | 3 | façade bricks + tiles + bluestone |
 | 44 | 009 | Mehrow Pilot House | 11 | 97 | 4 | WBS70 wall + slab; PRECS metrics |
+| 45 | 010 | Melkinlaituri Primary School + Day-care, Helsinki | 13 | 96 | 3 | 64 hollow-core slabs; ReCreate commercial replication |
+| 46 | 010 | Montessori Maassluis | 14 | 82 | 2 | planned/watchlist; `counts_as_direct_reuse:false` |
+| 47 | 010 | MULTI Brussels — Reuse in MULTI | 17 | 134 | 3 | interior BTGs separated from concrete Bestandserhalt |
+| 48 | 010 | Musée de Folklore Mouscron | 15 | 91 | 3 | |
+| 49 | 010 | People’s Pavilion Eindhoven | 18 | 163 | 2 | temporary demonstrator; Pretty Plastic shingles excluded |
+| 50 | 011 | Plattenpalast Berlin | 13 | 147 | 2 | WBS70 concrete prefab reuse |
+| 51 | 011 | Plattenvereinigung Berlin | 18 | 190 | 2 | WBS70 prefab panels |
+| 52 | 011 | PLP London HQ Circular Studio fit-out | 18 | 194 | 2 | loose furniture excluded; `mat_faserzement` delta |
+| 53 | 011 | Re:Crete footbridge — reused concrete blocks | 9 | 98 | 2 | infrastructure prototype; not a building Hauptfall |
+| 54 | 011 | Recyclinghaus Hannover | 22 | 304 | 4 | reuse + DfD separated; recycling concrete excluded |
+| 55 | 012 | Recypark Demets, Anderlecht | 15 | 97 | 5 | |
+| 56 | 012 | Résilience / La Ferme des Possibles, Stains | 34 | 220 | 3 | large complex; some BTGs unclassified |
+| 57 | 012 | Resource Rows, Copenhagen | 9 | 63 | 3 | |
+| 58 | 012 | Roots in the Sky, Blackfriars Crown Court | 21 | 132 | 2 | planned/failed appendix; `counts_as_direct_reuse:false` |
+| 59 | 012 | Saxum Vineyard Equipment Barn, Paso Robles | 19 | 118 | 4 | |
+| 60 | 013 | Superlocal Expogebouw, Bleijerheide | 20 | 212 | 2 | |
+| 61 | 013 | Svanen Kindergarten, Gladsaxe | 20 | 243 | 5 | |
+| 62 | 013 | The Green House, Utrecht | 22 | 234 | 3 | |
+| 63 | 013 | Thoravej 29, Copenhagen | 16 | 178 | 4 | |
+| 64 | 013 | Timber Square, London | 24 | 246 | 4 | |
+| 65 | 014 | Træ High Rise, Aarhus | 32 | 218 | 3 | |
+| 66 | 014 | Upcycle Studios, Copenhagen | 24 | 156 | 3 | |
+| 67 | 014 | Verbiest / Karreveld, Brussels | 31 | 241 | 3 | |
+| 68 | 014 | Villa Welpeloo, Enschede | 28 | 185 | 5 | |
+| 69 | 014 | Woongroep Boschgaard, Den Bosch | 29 | 219 | 3 | |
+| 70 | 014 | Zinneke / Feder / Masui4Ever, Brussels | 26 | 245 | 3 | 6th project in batch |
 
 ---
 
@@ -71,15 +97,15 @@
 
 | Label | Count (approx.) | Description |
 |-------|----------------|-------------|
-| Projekt | 44 | One per case study |
-| Bauteilgruppe | 195 | Component group; carries counts_as_direct_reuse (143 true / 52 false) |
-| Bauwerk | ~90 | Donor or receiver building |
-| Quelle | ~44 | Source markdown per project |
-| Akteur | ~120 | Persons / organisations |
-| Ort | ~80 | Stadt / Land |
-| Prozessphase | ~60 | Reuse process phases |
-| Nutzung | ~50 | Building use types (shared with seed) |
-| Material | shared | Pulled from seed |
+| Projekt | 70 | One per case study |
+| Bauteilgruppe | 294 | Component group; counts_as_direct_reuse: 194 true / 60 false / 40 null |
+| Bauwerk | ~140 | Donor or receiver building |
+| Quelle | ~70 | Source markdown per project |
+| Akteur | ~200 | Persons / organisations |
+| Ort | ~140 | Stadt / Land |
+| Prozessphase | ~75 | Reuse process phases |
+| Nutzung | ~60 | Building use types (shared with seed) |
+| Material | shared + delta | Includes `mat_faserzement` (batch 011 delta) |
 | Bauteiltyp | shared | Pulled from seed |
 | Huerde | shared | Pulled from seed |
 | Bausystem | shared + delta | P2, secondary timber glulam, CLST (batch 003+) |

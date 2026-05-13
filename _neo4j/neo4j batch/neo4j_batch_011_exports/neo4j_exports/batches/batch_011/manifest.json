@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_011",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Plattenpalast_Berlin.md",
+    "Plattenvereinigung_Berlin.md",
+    "PLP_London_HQ_Circular_Studio_Fitout.md",
+    "ReCrete_footbridge_reused_concrete_blocks.md",
+    "Recyclinghaus_Hannover.md"
+  ],
+  "project_files": [
+    "p_plattenpalast_berlin.kg.jsonl",
+    "p_plattenvereinigung_berlin.kg.jsonl",
+    "p_plp_london_hq_circular_studio_fitout.kg.jsonl",
+    "p_recrete_footbridge_reused_concrete_blocks.kg.jsonl",
+    "p_recyclinghaus_hannover.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 011 follows the v1.1 graph contract. Projekt remains central; no Fallbeispiel or Kennwert nodes are emitted. Metrics are scalar properties. Cities, countries, building roles/classes, actor roles/types, component types, materials, methods, hurdles and process concepts are modeled as connected nodes where useful. BELEGT_IN always carries datenqualitaet=Belegt. PLP fit-out excludes loose furniture; Recyclinghaus separates Direct Reuse from recycling/DfD; Re:Crete is kept as infrastructure prototype."
+}

@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_010",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md",
+    "Montessori_Maassluis.md",
+    "Multi_Brussels_Reuse_in_MULTI.md",
+    "Musee_de_Folklore_Mouscron.md",
+    "Peoples_Pavilion_Eindhoven.md"
+  ],
+  "project_files": [
+    "p_melkinlaituri_primary_school_daycare_centre_helsinki.kg.jsonl",
+    "p_montessori_maassluis.kg.jsonl",
+    "p_multi_brussels_reuse_in_multi.kg.jsonl",
+    "p_musee_de_folklore_mouscron.kg.jsonl",
+    "p_peoples_pavilion_eindhoven.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 010 follows the v1.1 graph contract. Projekt remains central; Fallbeispiel and Kennwert nodes are not emitted. Metrics are scalar properties. Cities/countries/building roles/classes/actor roles/types/component types/materials/hurdles/methods/processes are connected nodes when useful. BELEGT_IN always carries datenqualitaet=Belegt. Montessori is marked as watchlist/planned because as-built reuse is not yet verified."
+}

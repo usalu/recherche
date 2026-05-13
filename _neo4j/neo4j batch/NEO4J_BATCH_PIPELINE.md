@@ -70,10 +70,15 @@ Rules:
 | 007 | Institut Botanique Liège, Jeugdkliniek Kloetinge, Juch-Areal Zürich, K118 Winterthur, KA13 Oslo (5) | ✅ done | `norm_ns_3682`, `norm_tek_norway`, `norm_sia`, `tool_bim_bauteilkatalog` delta |
 | 008 | Kamikatsu, Kindergarten Manegg Zürich, Liander HQ Duiven, Lo-Reninge, Lokomotion Tampere (5) | ✅ done | `norm_en_1168`, `tool_bauteilkatalog` delta |
 | 009 | Lycée Michel Lucius Luxembourg, Maison des Canaux, Maison DnA Asse, Maison Vignette Auderghem, Mehrow (5) | ✅ done | no delta |
-| 010 | — | ⏳ next | |
-| … | … | … | ~11 further batches to full coverage |
+| 010 | Melkinlaituri Helsinki, Montessori Maassluis, MULTI Brussels, Musée Folklore Mouscron, People’s Pavilion Eindhoven (5) | ✅ done | empty delta; Montessori planned/watchlist |
+| 011 | Plattenpalast Berlin, Plattenvereinigung Berlin, PLP London HQ, Re:Crete Footbridge, Recyclinghaus Hannover (5) | ✅ done | `mat_faserzement` delta |
+| 012 | Recypark Demets Anderlecht, Résilience / La Ferme des Possibles Stains, Resource Rows Copenhagen, Roots in the Sky London, Saxum Vineyard Barn Paso Robles (5) | ✅ done | empty delta; Roots as planned/failed appendix |
+| 013 | Superlocal Expogebouw Bleijerheide, Svanen Kindergarten Gladsaxe, The Green House Utrecht, Thoravej 29 Copenhagen, Timber Square London (5) | ✅ done | 2 delta nodes |
+| 014 | Træ High Rise Aarhus, Upcycle Studios Copenhagen, Verbiest / Karreveld Brussels, Villa Welpeloo Enschede, Woongroep Boschgaard Den Bosch, Zinneke / Feder / Masui4Ever Brussels (6) | ✅ done | empty delta; 6 projects |
+| 015 | — | ⏳ next | |
+| … | … | … | ~6 further batches to full coverage |
 
-**Projection:** 98 total – 44 done = **54 remaining** ÷ 5/batch ≈ **11 more batches**.
+**Projection:** 98 total – 70 done = **28 remaining** ÷ 5/batch ≈ **6 more batches**.
 
 ---
 
@@ -229,7 +234,20 @@ $done = @(
     "Liander_Alliander_HQ_Duiven","Lo_Reninge_Town_Hall_Facade",
     "Lokomotion_Technology_Centre_Mini_Pilot_Tampere",
     "Lycee_Michel_Lucius_Conversion_Luxembourg","Maison_des_Canaux_Paris",
-    "Maison_DnA_Asse","Maison_Vignette_Auderghem","Mehrow_Pilot_House"
+    "Maison_DnA_Asse","Maison_Vignette_Auderghem","Mehrow_Pilot_House",
+    "Melkinlaituri_Primary_School_Daycare_Centre_Helsinki","Montessori_Maassluis",
+    "Multi_Brussels_Reuse_in_MULTI","Musee_de_Folklore_Mouscron","Peoples_Pavilion_Eindhoven",
+    "Plattenpalast_Berlin","Plattenvereinigung_Berlin",
+    "PLP_London_HQ_Circular_Studio_Fitout","ReCrete_Footbridge_Reused_Concrete_Blocks",
+    "Recyclinghaus_Hannover",
+    "Recypark_Demets_Anderlecht","Resilience_La_Ferme_des_Possibles_Stains",
+    "Resource_Rows_Copenhagen","Roots_in_the_Sky_Blackfriars_Crown_Court",
+    "Saxum_Vineyard_Equipment_Barn_Paso_Robles",
+    "Superlocal_Expogebouw_Bleijerheide","Svanen_Kindergarten_Gladsaxe",
+    "The_Green_House_Utrecht","Thoravej_29_Copenhagen","Timber_Square_London",
+    "Trae_High_Rise_Aarhus","Upcycle_Studios_Copenhagen",
+    "Verbiest_Karreveld_Brussels","Villa_Welpeloo_Enschede",
+    "Woongroep_Boschgaard_Den_Bosch","Zinneke_Feder_Masui4Ever_Brussels"
 )
 Get-ChildItem "_database\fallstudie" -Directory |
     Where-Object { $done -notcontains $_.Name } |

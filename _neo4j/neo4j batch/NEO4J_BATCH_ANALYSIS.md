@@ -1,4 +1,4 @@
-# Neo4j Batch Analysis — Batches 001–009
+# Neo4j Batch Analysis — Batches 001–014
 
 **Analysis Date:** 2026-05-13
 **Schema Version:** `neo4j_reuse_graph_v1_1`
@@ -9,18 +9,18 @@
 
 ## Executive Summary
 
-Nine production batches have been generated under schema `neo4j_reuse_graph_v1_1`, covering **44 case-study projects** across Germany, Belgium, Netherlands, France, Switzerland, United Kingdom, Norway, Finland, Luxembourg, Japan, and the United States. The architecture is modular: a single global controlled-vocabulary seed file provides all taxonomy nodes; per-project `.kg.jsonl` files carry the case-specific graph; delta files extend the vocabulary when new terms are needed.
+Fourteen production batches have been generated under schema `neo4j_reuse_graph_v1_1`, covering **70 case-study projects** across Germany, Belgium, Netherlands, France, Switzerland, United Kingdom, Norway, Finland, Luxembourg, Denmark, USA, and Japan. The architecture is modular: a single global controlled-vocabulary seed file provides all taxonomy nodes; per-project `.kg.jsonl` files carry the case-specific graph; delta files extend the vocabulary when new terms are needed.
 
 **Combined Metrics (project files, excluding seed):**
 
-| | 001 | 002 | 003 | 004 | 005 | 006 | 007 | 008 | 009 | Total |
-|---|---|---|---|---|---|---|---|---|---|---|
-| Projects | 4 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | **44** |
-| Nodes | 47 | 98 | 91 | 97 | 98 | 102 | 96 | 87 | 69 | **785** |
-| Rels | 348 | 630 | 940 | 1 224 | 1 438 | 1 490 | 876 | 895 | 641 | **8 482** |
-| Delta nodes | 0 | 1 | 3 | 1 | 3 | 4 | 5 | 5 | 0 | 22 |
+| | 001 | 002 | 003 | 004 | 005 | 006 | 007 | 008 | 009 | 010 | 011 | 012 | 013 | 014 | Total |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Projects | 4 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 5 | 6 | **70** |
+| Nodes | 47 | 98 | 91 | 97 | 98 | 102 | 96 | 87 | 69 | 77 | 80 | 98 | 102 | 170 | **1 312** |
+| Rels | 348 | 630 | 940 | 1 224 | 1 438 | 1 490 | 876 | 895 | 641 | 566 | 933 | 630 | 1 113 | 1 264 | **12 988** |
+| Delta nodes | 0 | 1 | 3 | 1 | 3 | 4 | 5 | 5 | 0 | 0 | 1 | 0 | 2 | 0 | 25 |
 
-**Live graph (DB: `mit-bestand`):** 1 063 nodes · 8 389 rels · 143 direct-reuse BTGs + 52 non-reuse BTGs
+**Live graph (DB: `mit-bestand`):** 1 538 nodes · 12 787 rels · 194 direct-reuse BTGs + 100 non/unclassified BTGs
 
 **Global controlled vocabulary seed:** 330 nodes, 43 rels (loaded once before any batch).
 

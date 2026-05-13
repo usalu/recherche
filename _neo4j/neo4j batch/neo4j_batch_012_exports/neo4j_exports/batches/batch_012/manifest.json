@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_012",
+  "schema_version": "neo4j_reuse_graph_v1_1",
+  "source_files": [
+    "Recypark_Demets_Anderlecht.md",
+    "Resilience_La_Ferme_des_Possibles_Stains.md",
+    "Resource_Rows_Copenhagen.md",
+    "Roots_in_the_Sky_Blackfriars_Crown_Court.md",
+    "Saxum_Vineyard_Equipment_Barn_Paso_Robles.md"
+  ],
+  "project_files": [
+    "p_recypark_demets_anderlecht.kg.jsonl",
+    "p_resilience_la_ferme_des_possibles_stains.kg.jsonl",
+    "p_resource_rows_copenhagen.kg.jsonl",
+    "p_roots_in_the_sky_blackfriars_crown_court.kg.jsonl",
+    "p_saxum_vineyard_equipment_barn_paso_robles.kg.jsonl"
+  ],
+  "controlled_vocabulary_seed": "../../controlled_vocabulary.seed.kg.jsonl",
+  "controlled_terms_delta": "controlled_terms.delta.jsonl",
+  "validation_report": "validation_report.md",
+  "notes": "Batch 012 follows the v1.1 graph contract. Projekt remains central; no Fallbeispiel or Kennwert nodes are emitted. Metrics are scalar properties. Cities, countries, Bauwerk roles/classes, actor roles/types, component types, materials, process concepts, hurdles and logistics are connected nodes. BELEGT_IN always carries datenqualitaet=Belegt. Roots is kept as an appendix/negative planned case, not as built reuse proof."
+}
