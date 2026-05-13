@@ -58,6 +58,10 @@ Current batch:
     Reads the case-level EINORDNUNG bullet "Warnung Bestandserhalt" and, when the
     primary clause is "ja", adds has_kontextmerkmal -> kontextmerkmal/Bestandserhalt_Policy
     on the matching fallstudie node.
+  50w_has_zertifizierung_bewertungssystem
+    Scans EINORDNUNG, ENTITÄTEN-MAPPING, TECHNIK, and KENNWERTE sections for mentions of
+    BREEAM, DGNB, LEED, WELL, or Paris Proof and adds has_zertifizierung_bewertungssystem
+    edges from the fallstudie node to the matching zertifizierung_bewertungssystem knot.
 """
 
 from __future__ import annotations
@@ -6174,6 +6178,141 @@ def build_kontextmerkmal_edges(
     return edge_rows + additions, additions, stats, skipped
 
 
+def _zertifizierung_scan_blob(markdown: str) -> str:
+    """Concatenate Gebäude sections where certification systems are usually mentioned."""
+    parts = [
+        markdown_section(markdown, "EINORD"),
+        markdown_section(markdown, "ENTIT"),
+        markdown_section(markdown, "TECHNIK"),
+        markdown_section(markdown, "KENNWERT"),
+        markdown_section(markdown, "WIRTSCHAFT"),
+    ]
+    return "\n".join(p for p in parts if p)
+
+
+def _map_zertifizierung_targets(blob: str, existing_nodes: set[str]) -> list[str]:
+    """Return sorted unique typed_paths for inventory zertifizierung_bewertungssystem/* hits."""
+    n = normalized(blob)
+    if not n:
+        return []
+
+    hits: list[str] = []
+
+    breeam = "zertifizierung_bewertungssystem/BREEAM"
+    if breeam in existing_nodes and "breeam" in n:
+        hits.append(breeam)
+
+    dgnb = "zertifizierung_bewertungssystem/DGNB"
+    if dgnb in existing_nodes and "dgnb" in n:
+        hits.append(dgnb)
+
+    leed = "zertifizierung_bewertungssystem/LEED"
+    if leed in existing_nodes and re.search(r"(?<![a-z0-9_])leed(?![a-z0-9_])", n):
+        hits.append(leed)
+
+    paris = "zertifizierung_bewertungssystem/Paris_Proof"
+    if paris in existing_nodes and any(
+        token in n for token in ("paris proof", "paris-proof", "parisproof", "paris_proof")
+    ):
+        hits.append(paris)
+
+    well = "zertifizierung_bewertungssystem/WELL"
+    if well in existing_nodes:
+        well_tokens = (
+            "well platinum",
+            "well gold",
+            "well silver",
+            "well bronze",
+            "well v2",
+            "well certification",
+            "well standard",
+            "well building",
+            "well outstanding",
+            "well health",
+            "well equity",
+            "breeam/well",
+            "well/nabers",
+        )
+        if any(token in n for token in well_tokens):
+            hits.append(well)
+
+    # De-dupe while keeping stable order
+    seen: set[str] = set()
+    out: list[str] = []
+    for h in hits:
+        if h not in seen:
+            seen.add(h)
+            out.append(h)
+    return out
+
+
+def build_zertifizierung_bewertungssystem_edges(
+    edge_rows: list[dict[str, str]],
+    existing_nodes: set[str],
+) -> tuple[list[dict[str, str]], list[dict[str, str]], Counter[str], list[dict[str, str]]]:
+    """50w — has_zertifizierung_bewertungssystem from Gebäude section scan -> zertifizierung_bewertungssystem/*."""
+    existing_keys = existing_edge_keys(edge_rows)
+    additions: list[dict[str, str]] = []
+    skipped: list[dict[str, str]] = []
+    stats: Counter[str] = Counter()
+
+    fall_by_id = {row["id"]: row for row in inventory_rows_for_entity("fallstudie")}
+    source_dir = gebaeude_dir()
+
+    for path in sorted(source_dir.glob("*.md")):
+        case_id = path.stem
+        stats["gebaeude_files_scanned"] += 1
+        fs_row = fall_by_id.get(case_id)
+        if not fs_row:
+            stats["cases_without_fallstudie_node"] += 1
+            skipped.append({
+                "case_id": case_id,
+                "legacy_path": str(path.relative_to(ROOT)),
+                "reason": "no_fallstudie_inventory_row",
+            })
+            continue
+
+        markdown = path.read_text(encoding="utf-8", errors="replace")
+        blob = _zertifizierung_scan_blob(markdown)
+        targets = _map_zertifizierung_targets(blob, existing_nodes)
+        if not targets:
+            stats["cases_without_zertifizierung_hit"] += 1
+            continue
+
+        source = fs_row["typed_path"]
+        raw_label = blob.strip().replace("\n", " ")[:500]
+
+        for target in targets:
+            key = (source, "has_zertifizierung_bewertungssystem", target)
+            if key in existing_keys:
+                stats["duplicates_skipped"] += 1
+                continue
+            target_entity, target_id = target.split("/", 1)
+            additions.append({
+                "source": source,
+                "source_entity": "fallstudie",
+                "source_id": fs_row["id"],
+                "relation": "has_zertifizierung_bewertungssystem",
+                "target": target,
+                "target_entity": target_entity,
+                "target_id": target_id,
+                "field": "Gebaude:Zertifizierung_Scan",
+                "raw_label": raw_label,
+                "confidence": "rule_high",
+                "resolution_rule": "scan_50w_has_zertifizierung_bewertungssystem",
+                "legacy_path": str(path.relative_to(ROOT)),
+                "original_source": source,
+                "original_relation": "has_zertifizierung_bewertungssystem",
+                "original_target": target,
+                "edge_cleaning": "added_gap_50w",
+            })
+            existing_keys.add(key)
+            stats["has_zertifizierung_bewertungssystem_edges"] += 1
+
+    stats["additions"] = len(additions)
+    return edge_rows + additions, additions, stats, skipped
+
+
 BATCHES = {
     "50a_reuse_strategie": build_reuse_strategy_edges,
     "50b_fuegung_verbindung": build_connection_edges,
@@ -6196,6 +6335,7 @@ BATCHES = {
     "50q_has_digital_evidence": build_digital_evidence_edges,
     "50r_has_bauobjekt_context": build_bauobjekt_context_edges,
     "50v_has_kontextmerkmal": build_kontextmerkmal_edges,
+    "50w_has_zertifizierung_bewertungssystem": build_zertifizierung_bewertungssystem_edges,
 }
 
 

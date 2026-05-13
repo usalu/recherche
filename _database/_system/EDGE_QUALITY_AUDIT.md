@@ -30,14 +30,15 @@ print('top10', c.most_common(10))"
 
 | Metric | Value |
 |--------|------:|
-| Total CSV rows | 13 823 |
+| Total CSV rows | 13 836 |
 | Distinct `relation` values | 49 |
 | Top relation (count) | `belongs_to_fallstudie` (1 618) |
 | `has_ressourcenquelle` (batch 50s) | 42 |
 | `has_methode` (batch 50u) | 4 |
 | `has_schadstoff` (batch 50n, strict) | 1 |
 | `has_kontextmerkmal` (batch 50v) | 31 |
-| **Still zero in CSV** | `has_zertifizierung_bewertungssystem`, `has_dokumenttyp`, `documented_in_quelle`, `involves_foerderprogramm`, `has_programm_kontext` |
+| `has_zertifizierung_bewertungssystem` (batch 50w) | 13 |
+| **Still zero in CSV** | `has_dokumenttyp`, `documented_in_quelle`, `involves_foerderprogramm`, `has_programm_kontext` |
 
 **Gate:**
 

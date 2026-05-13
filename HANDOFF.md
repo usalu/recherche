@@ -40,7 +40,7 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 
 - **Repo hygiene (2026-05-12 — second pass):** Removed the entire **`_archive/legacy/`** working tree from git (~500+ duplicate/staging files: old `_graph/`, `_extract/`, `_manual_review/`, flat entity stubs). Added **`_archive/legacy/README.md`** explaining recovery via git history. Removed **`clean_confirmed_edges.csv.before_*`** backups and duplicate **`_database/_system/clean_import_readiness_report.md`** (keep `_migration/22_*` as the frozen report). Added **`_scripts/verify_plan_coverage.py`** — run after structural changes; it must exit 0 before you assume Neo4j import safety.
 - **Repo hygiene (2026-05-12):** Earlier pass removed committed SQLite, phase6 CSV copies under `_database/_edges/`, Tolaria-only system docs, and tracked `__pycache__/`.
-- **3,043 nodes, 9,287 edges, 0 dangling endpoints, 0 type mismatches.**
+- **3,043 nodes, 9,300 edges, 0 dangling endpoints, 0 type mismatches.**
 - **49** distinct `relation` tokens in `clean_confirmed_edges.csv`. Gap batches completed:
   - **50a** `has_reuse_strategie`: 248 edges
   - **50b** `has_fuegung_verbindung`: 21 edges
@@ -63,6 +63,7 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
   - **50s** `has_ressourcenquelle`: 42 edges
   - **50u** `has_methode`: 4 edges
   - **50v** `has_kontextmerkmal`: 31 edges (EINORDNUNG „Warnung Bestandserhalt: ja“ → `kontextmerkmal/Bestandserhalt_Policy`)
+  - **50w** `has_zertifizierung_bewertungssystem`: 13 edges (BREEAM/DGNB/LEED/WELL/Paris Proof scan in `Gebäude/*.md` → `zertifizierung_bewertungssystem/*`)
 - 0 edges in the review queue, 0 `rule_low` edges, 0 mojibake titles.
 - `bauteiltyp` = 15 canonical types (matches schema §5 exactly).
 - `material` = 15 (matches schema §6 + Recyclingbeton + Gusseisen).
@@ -105,21 +106,12 @@ If you want to know what each batch did: read the commit message + the diff CSV 
 
 ### Step 1: Extract remaining gap relations (CONTINUING)
 
-**WHAT.** The graph now carries 30 populated relation types. Several are still missing:
+**WHAT.** Most gap relations from `SCHEMA.md` §9 are now populated via batches **50a–50w** (see §3 state list). For an up-to-date short list of **CSV relations that are still absent or sparse**, use [`_database/_system/EDGE_QUALITY_AUDIT.md`](_database/_system/EDGE_QUALITY_AUDIT.md) (table *Still zero in CSV* / counts).
 
 ```
-Remaining missing relations (from SCHEMA.md §9):
-has_ressourcenquelle, has_logistik, has_funktionswechsel,
-has_bauteilzustand, has_bauteilebene, has_bauweise, has_bausystem,
-has_tragwerksprinzip,
-has_bauobjektklasse, has_bauobjektrolle, has_bauobjektstatus, has_nutzung,
-has_bauaufgabe_intervention,
-has_rechtliche_bedingung, has_schadstoff,
-has_zertifizierung_bewertungssystem, has_datenmodell, has_dokumenttyp,
-has_tooltyp, uses_software_digitaltool,
-documented_in_quelle, has_datenqualitaet,
-involves_foerderprogramm, has_programm_kontext,
-has_methode, has_wirtschaft
+Examples still often missing or incomplete (verify in EDGE_QUALITY_AUDIT):
+has_datenmodell, has_dokumenttyp, has_tooltyp,
+documented_in_quelle, involves_foerderprogramm, has_programm_kontext
 ```
 
 Done in batch 50a: `has_reuse_strategie` for high-precision direct-reuse rows (248 edges). Remaining strategy variants such as adaptive reuse, Bestandserhalt, DfD, upcycling, and refurbishment still need a more careful row-level pass before adding edges.
