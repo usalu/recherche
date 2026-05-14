@@ -1,9 +1,12 @@
 """Apply or dry-run a Neo4j review patch JSONL file.
 
-Supported operations for the first controlled workflow:
-  - add_node
+Supported operations:
+  - add_node           (id/labels/properties at root OR nested under 'record' key)
   - set_node_properties
   - canonicalize_node
+  - set_property       (single property: id + property + value)
+  - add_rel            (from + type + to + optional properties)
+  - noop_reviewed      (log-only, no DB write)
 
 The default is a dry-run. Live mutation requires the exact phrase:
 
@@ -32,7 +35,7 @@ if str(_SCRIPTS) not in sys.path:
 from neo4j_env import repo_root, resolve_connection  # noqa: E402
 
 
-SUPPORTED_OPS = {"add_node", "set_node_properties", "canonicalize_node"}
+SUPPORTED_OPS = {"add_node", "set_node_properties", "canonicalize_node", "set_property", "add_rel", "noop_reviewed"}
 LABEL_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 
 
@@ -61,8 +64,8 @@ def load_patch(path: Path) -> tuple[list[dict], list[dict]]:
             except json.JSONDecodeError as exc:
                 errors.append({"line": lineno, "error": f"JSON parse error: {exc}"})
                 continue
-            if "op" not in record or "reason" not in record:
-                errors.append({"line": lineno, "error": "missing required op/reason"})
+            if "op" not in record:
+                errors.append({"line": lineno, "error": "missing required field: op"})
             records.append({**record, "_line": lineno})
     return records, errors
 
@@ -106,6 +109,29 @@ def current_node(session, node_id: str) -> dict | None:
     return {"labels": list(rec["labels"]), "properties": json_safe(dict(rec["properties"]))}
 
 
+def rel_type_safe(rel_type: str) -> str:
+    if not re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', rel_type):
+        raise ValueError(f"unsafe relationship type: {rel_type!r}")
+    return rel_type
+
+
+def current_rel_exists(session, from_id: str, rel_type: str, to_id: str) -> bool:
+    result = session.run(
+        "MATCH (a {id: $from_id})-[r]->(b {id: $to_id}) "
+        "WHERE type(r) = $rel_type RETURN count(r) AS c",
+        from_id=from_id, to_id=to_id, rel_type=rel_type,
+    ).single()
+    return result is not None and int(result["c"]) > 0
+
+
+def extract_add_node_fields(record: dict) -> tuple[str | None, list, dict]:
+    """Support both flat and nested-record add_node formats."""
+    if "record" in record and isinstance(record["record"], dict):
+        inner = record["record"]
+        return inner.get("id"), inner.get("labels") or [], dict(inner.get("properties") or {})
+    return record.get("id"), record.get("labels") or [], dict(record.get("properties") or {})
+
+
 def merge_aliases(existing: Any, incoming: list[str]) -> list[str]:
     aliases: list[str] = []
     if isinstance(existing, list):
@@ -119,9 +145,10 @@ def merge_aliases(existing: Any, incoming: list[str]) -> list[str]:
     return aliases
 
 
-def plan_record(session, record: dict) -> dict:
+def plan_record(session, record: dict, pending_node_ids: set[str] | None = None) -> dict:
     op = record.get("op")
     line = record.get("_line")
+    pending = pending_node_ids or set()
     if op not in SUPPORTED_OPS:
         return {
             "line": line,
@@ -130,10 +157,71 @@ def plan_record(session, record: dict) -> dict:
             "error": f"Unsupported operation {op!r}",
         }
 
-    if op == "add_node":
+    if op == "noop_reviewed":
+        return {
+            "line": line,
+            "op": op,
+            "id": record.get("target_id") or record.get("id"),
+            "status": "noop_reviewed",
+            "reason": record.get("reason") or record.get("evidence"),
+        }
+
+    if op == "set_property":
         node_id = record.get("id")
-        labels = record.get("labels") or []
-        properties = dict(record.get("properties") or {})
+        prop_key = record.get("property")
+        prop_value = record.get("value")
+        if not node_id or not prop_key:
+            return {"line": line, "op": op, "status": "invalid", "error": "set_property requires id and property"}
+        existing = current_node(session, node_id)
+        if existing is None and node_id not in pending:
+            return {"line": line, "op": op, "id": node_id, "status": "missing_node"}
+        if existing is None:
+            return {"line": line, "op": op, "id": node_id, "status": "would_update", "note": "node created earlier in same patch"}
+        same = existing["properties"].get(prop_key) == prop_value
+        after_props = dict(existing["properties"])
+        after_props[prop_key] = prop_value
+        return {
+            "line": line,
+            "op": op,
+            "id": node_id,
+            "property": prop_key,
+            "status": "noop_same" if same else "would_update",
+            "before": existing,
+            "after": {"labels": existing["labels"], "properties": after_props},
+        }
+
+    if op == "add_rel":
+        from_id = record.get("from")
+        to_id = record.get("to")
+        rel_type = record.get("type")
+        if not from_id or not to_id or not rel_type:
+            return {"line": line, "op": op, "status": "invalid", "error": "add_rel requires from, type, to"}
+        try:
+            rel_type_safe(rel_type)
+        except ValueError as exc:
+            return {"line": line, "op": op, "status": "invalid", "error": str(exc)}
+        from_exists = current_node(session, from_id) is not None or from_id in pending
+        to_exists = current_node(session, to_id) is not None or to_id in pending
+        if not from_exists:
+            return {"line": line, "op": op, "status": "missing_endpoint", "error": f"from node {from_id!r} not found"}
+        if not to_exists:
+            return {"line": line, "op": op, "status": "missing_endpoint", "error": f"to node {to_id!r} not found"}
+        # Only check for existing relationship when both nodes are in the live DB
+        if from_id not in pending and to_id not in pending:
+            exists = current_rel_exists(session, from_id, rel_type, to_id)
+        else:
+            exists = False
+        return {
+            "line": line,
+            "op": op,
+            "from": from_id,
+            "rel_type": rel_type,
+            "to": to_id,
+            "status": "noop_existing_rel" if exists else "would_create_rel",
+        }
+
+    if op == "add_node":
+        node_id, labels, properties = extract_add_node_fields(record)
         if not node_id or not labels:
             return {"line": line, "op": op, "status": "invalid", "error": "add_node requires id and labels"}
         try:
@@ -202,16 +290,42 @@ def plan_record(session, record: dict) -> dict:
 
 def apply_record(session, record: dict, planned: dict) -> None:
     status = planned.get("status")
-    if status not in {"would_create", "would_update", "noop_existing", "noop_same"}:
+    _safe_statuses = {
+        "would_create", "would_update", "noop_existing", "noop_same",
+        "would_create_rel", "noop_existing_rel", "noop_reviewed",
+    }
+    if status not in _safe_statuses:
         raise RuntimeError(f"Refusing to apply record with status {status!r}")
-    if status in {"noop_existing", "noop_same"}:
+    if status in {"noop_existing", "noop_same", "noop_existing_rel", "noop_reviewed"}:
         return
 
     op = record["op"]
+    if op == "noop_reviewed":
+        return
+
+    if op == "set_property":
+        session.run(
+            "MATCH (n {id: $id}) SET n[$key] = $value",
+            id=record["id"],
+            key=record["property"],
+            value=record["value"],
+        ).consume()
+        return
+
+    if op == "add_rel":
+        rel_type = record["type"]
+        props = dict(record.get("properties") or {})
+        cypher = (
+            f"MATCH (a {{id: $from_id}}), (b {{id: $to_id}}) "
+            f"MERGE (a)-[r:`{rel_type}`]->(b) "
+            "SET r += $props"
+        )
+        session.run(cypher, from_id=record["from"], to_id=record["to"], props=props).consume()
+        return
+
     if op == "add_node":
-        node_id = record["id"]
-        labels = record["labels"]
-        properties = {"id": node_id, **dict(record.get("properties") or {})}
+        node_id, labels, properties = extract_add_node_fields(record)
+        properties = {"id": node_id, **properties}
         cypher = (
             f"MERGE (n{label_clause(labels)} {{id: $id}}) "
             "SET n += $properties"
@@ -282,7 +396,7 @@ def write_reports(report_dir: Path, patch_path: Path, payload: dict) -> tuple[Pa
         )
     lines.extend(["", "## Rejected / Needs Review", ""])
     rejected = [
-        row for row in payload["records"] if row["status"] in {"unsupported", "invalid", "missing_node"}
+        row for row in payload["records"] if row["status"] in {"unsupported", "invalid", "missing_node", "missing_endpoint"}
     ]
     if rejected:
         lines.extend(["| Line | Op | Id | Status | Error |", "| --- | --- | --- | --- | --- |"])
@@ -325,7 +439,17 @@ def run(args: argparse.Namespace) -> dict:
         driver.verify_connectivity()
         with driver.session(database=database) as session:
             counts_before = get_counts(session)
-            planned = [plan_record(session, record) for record in records]
+            # Build pending-node set incrementally so add_rel records can
+            # reference nodes created earlier in the same patch.
+            pending_node_ids: set[str] = set()
+            planned: list[dict] = []
+            for record in records:
+                row = plan_record(session, record, pending_node_ids)
+                planned.append(row)
+                if record.get("op") == "add_node" and row.get("status") == "would_create":
+                    nid, _, _ = extract_add_node_fields(record)
+                    if nid:
+                        pending_node_ids.add(nid)
             if load_errors:
                 planned.extend(
                     {
@@ -338,7 +462,7 @@ def run(args: argparse.Namespace) -> dict:
                 )
 
             rejected = [
-                row for row in planned if row["status"] in {"unsupported", "invalid", "missing_node"}
+                row for row in planned if row["status"] in {"unsupported", "invalid", "missing_node", "missing_endpoint"}
             ]
             if rejected and not dry_run:
                 raise SystemExit("Refusing live apply while rejected/invalid records exist.")
@@ -353,9 +477,10 @@ def run(args: argparse.Namespace) -> dict:
 
     status_counts = Counter(row["status"] for row in planned)
     would_create = status_counts.get("would_create", 0)
+    would_create_rel = status_counts.get("would_create_rel", 0)
     counts_after_expected = {
         "nodes": counts_before["nodes"] + would_create,
-        "relationships": counts_before["relationships"],
+        "relationships": counts_before["relationships"] + would_create_rel,
     }
     payload = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),

@@ -1,0 +1,2313 @@
+{
+  "confirmation_required": "APPLY donor_receiver_source_research.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 1707,
+    "relationships": 14015
+  },
+  "counts_after_expected": {
+    "nodes": 1707,
+    "relationships": 14015
+  },
+  "counts_before": {
+    "nodes": 1704,
+    "relationships": 13961
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-14T12:29:47.070743+00:00",
+  "patch": "_neo4j\\review\\round_004_donor_receiver\\patches\\donor_receiver_source_research.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_altes_hobelwerk_laminatplatten",
+          "name": "Kasten aus recycelten Laminatfurnierplatten (Cirkla)",
+          "note": "Freistehender Einbau; reversibel; enthält Sanitär+Teeküche+Garderobe"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_altes_hobelwerk_laminatplatten",
+          "name": "Kasten aus recycelten Laminatfurnierplatten (Cirkla)",
+          "note": "Freistehender Einbau; reversibel; enthält Sanitär+Teeküche+Garderobe"
+        }
+      },
+      "id": "bg_altes_hobelwerk_laminatplatten",
+      "line": 1,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_altes_hobelwerk_laminatplatten",
+      "line": 2,
+      "op": "noop_reviewed",
+      "reason": "Source file for Altes Hobelwerk was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_awm_kabelkanaele_upcycling",
+          "name": "Kabelkanäle als Regalböden und Leuchten (Upcycling)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_awm_kabelkanaele_upcycling",
+          "name": "Kabelkanäle als Regalböden und Leuchten (Upcycling)"
+        }
+      },
+      "id": "bg_awm_kabelkanaele_upcycling",
+      "line": 3,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_awm_kabelkanaele_upcycling",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_unknown_documented_source"
+    },
+    {
+      "from": "bg_awm_kabelkanaele_upcycling",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_reclaimed_stock"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_be_ware_altholz_tragwerk",
+          "name": "Altholz / Sekundärmaterialien als Tragwerk (mehrere Teilprojekte)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_be_ware_altholz_tragwerk",
+          "name": "Altholz / Sekundärmaterialien als Tragwerk (mehrere Teilprojekte)"
+        }
+      },
+      "id": "bg_be_ware_altholz_tragwerk",
+      "line": 6,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_be_ware_altholz_tragwerk",
+      "line": 7,
+      "op": "noop_reviewed",
+      "reason": "Source file for Be-Ware Reallabor Berlin was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_bedzed_misc_reuse",
+          "name": "Diverses Reuse-Material (Türen, Bordsteine, Steinplatten, Geländerrohre)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_bedzed_misc_reuse",
+          "name": "Diverses Reuse-Material (Türen, Bordsteine, Steinplatten, Geländerrohre)"
+        }
+      },
+      "id": "bg_bedzed_misc_reuse",
+      "line": 8,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_bedzed_misc_reuse",
+      "line": 9,
+      "op": "noop_reviewed",
+      "reason": "Source file for BedZED was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "anteil_prozent": 95,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_bedzed_structural_steel",
+          "menge_t": 98,
+          "name": "Wiedergewonnene Stahlträger (98t, 95% des Tragwerkstahls)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "anteil_prozent": 95,
+          "counts_as_direct_reuse": true,
+          "id": "bg_bedzed_structural_steel",
+          "menge_t": 98,
+          "name": "Wiedergewonnene Stahlträger (98t, 95% des Tragwerkstahls)"
+        }
+      },
+      "id": "bg_bedzed_structural_steel",
+      "line": 10,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_bedzed_structural_steel",
+      "line": 11,
+      "op": "noop_reviewed",
+      "reason": "Source file for BedZED was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_bedzed_timber_studs",
+          "laenge_km": 54,
+          "name": "Wiedergewonnene Nadelholzständer (54 km)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_bedzed_timber_studs",
+          "laenge_km": 54,
+          "name": "Wiedergewonnene Nadelholzständer (54 km)"
+        }
+      },
+      "id": "bg_bedzed_timber_studs",
+      "line": 12,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_bedzed_timber_studs",
+      "line": 13,
+      "op": "noop_reviewed",
+      "reason": "Source file for BedZED was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Trenn-/Innenwände",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_biopartner_5_innenwaende_trennwaende",
+          "name": "Wiederverwendete Innenwände und Trennwände",
+          "neue_funktion": "Innenausbau BioPartner 5",
+          "note": "Umfang und technische Nachweise öffentlich unvollständig.",
+          "raw_name": "Innenwände / Trennwände aus anderem Bestand"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Trenn-/Innenwände",
+          "counts_as_direct_reuse": true,
+          "id": "bg_biopartner_5_innenwaende_trennwaende",
+          "name": "Wiederverwendete Innenwände und Trennwände",
+          "neue_funktion": "Innenausbau BioPartner 5",
+          "note": "Umfang und technische Nachweise öffentlich unvollständig.",
+          "raw_name": "Innenwände / Trennwände aus anderem Bestand"
+        }
+      },
+      "id": "bg_biopartner_5_innenwaende_trennwaende",
+      "line": 14,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_biopartner_5_innenwaende_trennwaende",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "bw_biopartner_gorlaeus_hochhaus",
+          "land": "Niederlande",
+          "name": "Ehemaliges Gorlaeus-Hochhaus / Leiden University donor source",
+          "ort": "Leiden/Oegstgeest"
+        }
+      },
+      "before": null,
+      "id": "bw_biopartner_gorlaeus_hochhaus",
+      "line": 16,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "bw_biopartner_gorlaeus_hochhaus",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUOBJEKTKLASSE",
+      "status": "would_create_rel",
+      "to": "bok_gebaeude"
+    },
+    {
+      "from": "bw_biopartner_gorlaeus_hochhaus",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUOBJEKTROLLE",
+      "status": "would_create_rel",
+      "to": "bor_donorobjekt"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Boden-/Pflastermaterial",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "exact_building",
+          "id": "bg_biopartner_5_pflaster_naturstein_bodenmaterial",
+          "name": "Wiederverwendete Pflaster-, Naturstein- und Bodenmaterialien",
+          "neue_funktion": "feste Boden- bzw. Außenraum-/Ausbaumaterialien",
+          "note": "Menge unbekannt; feste Materialwiederverwendung, niedriger bewertet als Tragwerk.",
+          "raw_name": "Pflaster / Naturstein / Bodenmaterial"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Boden-/Pflastermaterial",
+          "counts_as_direct_reuse": true,
+          "id": "bg_biopartner_5_pflaster_naturstein_bodenmaterial",
+          "name": "Wiederverwendete Pflaster-, Naturstein- und Bodenmaterialien",
+          "neue_funktion": "feste Boden- bzw. Außenraum-/Ausbaumaterialien",
+          "note": "Menge unbekannt; feste Materialwiederverwendung, niedriger bewertet als Tragwerk.",
+          "raw_name": "Pflaster / Naturstein / Bodenmaterial"
+        }
+      },
+      "id": "bg_biopartner_5_pflaster_naturstein_bodenmaterial",
+      "line": 19,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_biopartner_5_pflaster_naturstein_bodenmaterial",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_biopartner_gorlaeus_hochhaus"
+    },
+    {
+      "from": "bg_biopartner_5_pflaster_naturstein_bodenmaterial",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Sanitärausstattung",
+          "anzahl": 18,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_biopartner_5_sanitaerobjekte",
+          "name": "Wiederverwendete Sanitärobjekte",
+          "neue_funktion": "fest eingebaute Sanitärobjekte",
+          "note": "PTSA nennt 18 Toiletten/Waschbecken; genaue Prüfung unbekannt.",
+          "raw_name": "Toiletten / Waschbecken / Sanitärobjekte"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Sanitärausstattung",
+          "anzahl": 18,
+          "counts_as_direct_reuse": true,
+          "id": "bg_biopartner_5_sanitaerobjekte",
+          "name": "Wiederverwendete Sanitärobjekte",
+          "neue_funktion": "fest eingebaute Sanitärobjekte",
+          "note": "PTSA nennt 18 Toiletten/Waschbecken; genaue Prüfung unbekannt.",
+          "raw_name": "Toiletten / Waschbecken / Sanitärobjekte"
+        }
+      },
+      "id": "bg_biopartner_5_sanitaerobjekte",
+      "line": 22,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_biopartner_5_sanitaerobjekte",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Offshore-/Balustradenbauteil",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_bluecity_balustraden_oelplattform",
+          "name": "Mögliche wiederverwendete Balustraden",
+          "neue_funktion": "unbekannte räumliche Einbauteile",
+          "note": "Nur sekundär belegt; genaue Einbauorte unbekannt.",
+          "raw_name": "Balustraden von dekommissionierter Ölplattform laut Sekundärquelle"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Offshore-/Balustradenbauteil",
+          "counts_as_direct_reuse": true,
+          "id": "bg_bluecity_balustraden_oelplattform",
+          "name": "Mögliche wiederverwendete Balustraden",
+          "neue_funktion": "unbekannte räumliche Einbauteile",
+          "note": "Nur sekundär belegt; genaue Einbauorte unbekannt.",
+          "raw_name": "Balustraden von dekommissionierter Ölplattform laut Sekundärquelle"
+        }
+      },
+      "id": "bg_bluecity_balustraden_oelplattform",
+      "line": 24,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_bluecity_balustraden_oelplattform",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donor_infrastruktur"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "bw_bluecity_tropicana_rotterdam",
+          "land": "Niederlande",
+          "name": "Tropicana Rotterdam / BlueCity Bestand",
+          "ort": "Rotterdam"
+        }
+      },
+      "before": null,
+      "id": "bw_bluecity_tropicana_rotterdam",
+      "line": 26,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "bw_bluecity_tropicana_rotterdam",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUOBJEKTKLASSE",
+      "status": "would_create_rel",
+      "to": "bok_gebaeude"
+    },
+    {
+      "from": "bw_bluecity_tropicana_rotterdam",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUOBJEKTROLLE",
+      "status": "would_create_rel",
+      "to": "bor_same_site_donor_receiver"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bestands-/Baumaterial",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "same_site",
+          "id": "bg_bluecity_betonbloecke_trennwaende",
+          "name": "Betonblöcke als Trennwände",
+          "neue_funktion": "Trennwände",
+          "note": "Sekundärquelle; Menge, Herkunft und Einbauort unklar.",
+          "raw_name": "Betonblöcke laut Sekundärquelle"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bestands-/Baumaterial",
+          "counts_as_direct_reuse": true,
+          "id": "bg_bluecity_betonbloecke_trennwaende",
+          "name": "Betonblöcke als Trennwände",
+          "neue_funktion": "Trennwände",
+          "note": "Sekundärquelle; Menge, Herkunft und Einbauort unklar.",
+          "raw_name": "Betonblöcke laut Sekundärquelle"
+        }
+      },
+      "id": "bg_bluecity_betonbloecke_trennwaende",
+      "line": 29,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_bluecity_betonbloecke_trennwaende",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_bluecity_tropicana_rotterdam"
+    },
+    {
+      "from": "bg_bluecity_betonbloecke_trennwaende",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Außenfenster",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_bluecity_red_cedar_fensterrahmen_trennwaende",
+          "name": "Red-Cedar-Fensterrahmen als Trennwände / innere Fassade",
+          "neue_funktion": "Trennwände und innere Fassade zwischen Büros und Gemeinschaftsbereichen",
+          "note": "Menge unbekannt; beschädigtes Glas wurde teils ersetzt.",
+          "raw_name": "geerntete Fensterrahmen / Red-Cedar-Rahmen"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Außenfenster",
+          "counts_as_direct_reuse": true,
+          "id": "bg_bluecity_red_cedar_fensterrahmen_trennwaende",
+          "name": "Red-Cedar-Fensterrahmen als Trennwände / innere Fassade",
+          "neue_funktion": "Trennwände und innere Fassade zwischen Büros und Gemeinschaftsbereichen",
+          "note": "Menge unbekannt; beschädigtes Glas wurde teils ersetzt.",
+          "raw_name": "geerntete Fensterrahmen / Red-Cedar-Rahmen"
+        }
+      },
+      "id": "bg_bluecity_red_cedar_fensterrahmen_trennwaende",
+      "line": 32,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_bluecity_red_cedar_fensterrahmen_trennwaende",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "unbekannt",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_bluecity_wiederverwendeter_stahl",
+          "name": "Wiederverwendeter Stahl im Büroausbau",
+          "neue_funktion": "unbekannte feste Bauteile im Büroausbau",
+          "note": "Zweiter Materialinput nach Fensterrahmen; Rolle und Menge nicht belastbar dokumentiert.",
+          "raw_name": "wiederverwendeter Stahl"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "unbekannt",
+          "counts_as_direct_reuse": true,
+          "id": "bg_bluecity_wiederverwendeter_stahl",
+          "name": "Wiederverwendeter Stahl im Büroausbau",
+          "neue_funktion": "unbekannte feste Bauteile im Büroausbau",
+          "note": "Zweiter Materialinput nach Fensterrahmen; Rolle und Menge nicht belastbar dokumentiert.",
+          "raw_name": "wiederverwendeter Stahl"
+        }
+      },
+      "id": "bg_bluecity_wiederverwendeter_stahl",
+      "line": 34,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_bluecity_wiederverwendeter_stahl",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_unknown_documented_source"
+    },
+    {
+      "id": "bg_bluecity_wiederverwendeter_stahl",
+      "line": 36,
+      "op": "noop_reviewed",
+      "reason": "Source confirms reused steel is mentioned but Herkunft/role/quantity are not documented.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "nicht anwendbar / Mischsystem",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "hoehe_m": 21,
+          "id": "bg_brent_cross_oval_substation_screen",
+          "name": "Ovaler Substation-Screen",
+          "neue_funktion": "technische Einhausung und öffentliches Kunstwerk",
+          "note": "Mischsystem aus reused tubulars und neuen Komponenten.",
+          "raw_name": "21 m hoher ovaler Substation-Screen",
+          "umfang_m": 115
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "nicht anwendbar / Mischsystem",
+          "counts_as_direct_reuse": true,
+          "hoehe_m": 21,
+          "id": "bg_brent_cross_oval_substation_screen",
+          "name": "Ovaler Substation-Screen",
+          "neue_funktion": "technische Einhausung und öffentliches Kunstwerk",
+          "note": "Mischsystem aus reused tubulars und neuen Komponenten.",
+          "raw_name": "21 m hoher ovaler Substation-Screen",
+          "umfang_m": 115
+        }
+      },
+      "id": "bg_brent_cross_oval_substation_screen",
+      "line": 37,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_brent_cross_oval_substation_screen",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_surplus_stock"
+    },
+    {
+      "from": "bg_brent_cross_oval_substation_screen",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_supplier_stock"
+    },
+    {
+      "from": "bg_brent_cross_oval_substation_screen",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_haendler"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bauprodukt / Abfall",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_brighton_betonbloecke",
+          "name": "Wiederverwendete Betonblöcke",
+          "neue_funktion": "Wand/Fundament/Konstruktion, genaue Rolle unbekannt",
+          "note": "Tragende Rolle nicht vollständig öffentlich belegt.",
+          "raw_name": "Betonblöcke aus weggeworfenen Baustellenmaterialien"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bauprodukt / Abfall",
+          "counts_as_direct_reuse": true,
+          "id": "bg_brighton_betonbloecke",
+          "name": "Wiederverwendete Betonblöcke",
+          "neue_funktion": "Wand/Fundament/Konstruktion, genaue Rolle unbekannt",
+          "note": "Tragende Rolle nicht vollständig öffentlich belegt.",
+          "raw_name": "Betonblöcke aus weggeworfenen Baustellenmaterialien"
+        }
+      },
+      "id": "bg_brighton_betonbloecke",
+      "line": 41,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_brighton_betonbloecke",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_construction_waste_stream"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bauholz / Plattenmaterial / Abfall",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_brighton_holz_sperrholz",
+          "name": "Holz und Sperrholz aus Reststücken",
+          "neue_funktion": "Konstruktion, Ausbau oder Kassetten-/Wandschicht",
+          "note": "Mengen und genaue Positionen unbekannt.",
+          "raw_name": "Holz / off-cut timber / ply sheets"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bauholz / Plattenmaterial / Abfall",
+          "counts_as_direct_reuse": true,
+          "id": "bg_brighton_holz_sperrholz",
+          "name": "Holz und Sperrholz aus Reststücken",
+          "neue_funktion": "Konstruktion, Ausbau oder Kassetten-/Wandschicht",
+          "note": "Mengen und genaue Positionen unbekannt.",
+          "raw_name": "Holz / off-cut timber / ply sheets"
+        }
+      },
+      "id": "bg_brighton_holz_sperrholz",
+      "line": 43,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_brighton_holz_sperrholz",
+      "line": 44,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_construction_waste_stream"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bodenbelag",
+          "anzahl": 2000,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_brighton_teppichfliesen_fassade",
+          "name": "Gebrauchte Teppichfliesen als Fassaden-/Außenschicht",
+          "neue_funktion": "Rainscreen/Fassade bzw. Dämm-/Außenschicht",
+          "note": "Ungewöhnliche Außenanwendung; Langzeitverhalten/Brandschutz öffentlich unvollständig.",
+          "raw_name": "2.000 gebrauchte Teppichfliesen"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bodenbelag",
+          "anzahl": 2000,
+          "counts_as_direct_reuse": true,
+          "id": "bg_brighton_teppichfliesen_fassade",
+          "name": "Gebrauchte Teppichfliesen als Fassaden-/Außenschicht",
+          "neue_funktion": "Rainscreen/Fassade bzw. Dämm-/Außenschicht",
+          "note": "Ungewöhnliche Außenanwendung; Langzeitverhalten/Brandschutz öffentlich unvollständig.",
+          "raw_name": "2.000 gebrauchte Teppichfliesen"
+        }
+      },
+      "id": "bg_brighton_teppichfliesen_fassade",
+      "line": 45,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_brighton_teppichfliesen_fassade",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_reclaimed_stock"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Werbebanner",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_brighton_vinylbanner_dampfbremse",
+          "name": "Vinylbanner als Dampfbremse",
+          "neue_funktion": "innere Dampfbremse / vapour control layer",
+          "note": "Fester bauphysikalischer Layer; sd-Wert und Prüfungen unbekannt.",
+          "raw_name": "alte Veranstaltungsbanner / vinyl banners"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Werbebanner",
+          "counts_as_direct_reuse": true,
+          "id": "bg_brighton_vinylbanner_dampfbremse",
+          "name": "Vinylbanner als Dampfbremse",
+          "neue_funktion": "innere Dampfbremse / vapour control layer",
+          "note": "Fester bauphysikalischer Layer; sd-Wert und Prüfungen unbekannt.",
+          "raw_name": "alte Veranstaltungsbanner / vinyl banners"
+        }
+      },
+      "id": "bg_brighton_vinylbanner_dampfbremse",
+      "line": 47,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_brighton_vinylbanner_dampfbremse",
+      "line": 48,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_reclaimed_stock"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_crclr_mdf_schwarz",
+          "name": "Schwarzes MDF aus Berliner Club"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_crclr_mdf_schwarz",
+          "name": "Schwarzes MDF aus Berliner Club"
+        }
+      },
+      "id": "bg_crclr_mdf_schwarz",
+      "line": 49,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_crclr_mdf_schwarz",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_reclaimed_stock"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "same_site",
+          "id": "bg_crclr_stahl_treppen",
+          "name": "Stahlbauteile Hallendach als Treppenwangen"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_crclr_stahl_treppen",
+          "name": "Stahlbauteile Hallendach als Treppenwangen"
+        }
+      },
+      "id": "bg_crclr_stahl_treppen",
+      "line": 51,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_crclr_stahl_treppen",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_bestandshalle_crclr_kindl_areal"
+    },
+    {
+      "from": "bg_crclr_stahl_treppen",
+      "line": 53,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_crclr_tueren",
+          "name": "Türen + Schiebetüren aus ehem. Impact Hub Berlin"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_crclr_tueren",
+          "name": "Türen + Schiebetüren aus ehem. Impact Hub Berlin"
+        }
+      },
+      "id": "bg_crclr_tueren",
+      "line": 54,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_crclr_tueren",
+      "line": 55,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_unknown_documented_source"
+    },
+    {
+      "id": "bg_crclr_tueren",
+      "line": 56,
+      "op": "noop_reviewed",
+      "reason": "Do not create an exact former-Impact-Hub donor without clearer source evidence.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "not_applicable_retention",
+          "id": "bg_elys_bestehende_fassade",
+          "name": "Bestehende grüne Trapezblechfassade teilweise erhalten"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_elys_bestehende_fassade",
+          "name": "Bestehende grüne Trapezblechfassade teilweise erhalten"
+        }
+      },
+      "id": "bg_elys_bestehende_fassade",
+      "line": 57,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_elys_bestehende_fassade",
+      "line": 58,
+      "op": "noop_reviewed",
+      "reason": "Bestandserhalt / retained existing element; not a missing external donor problem.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_elys_fenster_fassade",
+          "name": "~200 verschiedene Fenster als Fassade (Lagerware/Fehlbestellungen)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_elys_fenster_fassade",
+          "name": "~200 verschiedene Fenster als Fassade (Lagerware/Fehlbestellungen)"
+        }
+      },
+      "id": "bg_elys_fenster_fassade",
+      "line": 59,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_elys_fenster_fassade",
+      "line": 60,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_surplus_stock"
+    },
+    {
+      "from": "bg_elys_fenster_fassade",
+      "line": 61,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_lager"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_elys_rueckbauholz_glulam",
+          "name": "~150m³ Rückbauholz als neue Leimbinder"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_elys_rueckbauholz_glulam",
+          "name": "~150m³ Rückbauholz als neue Leimbinder"
+        }
+      },
+      "id": "bg_elys_rueckbauholz_glulam",
+      "line": 62,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_elys_rueckbauholz_glulam",
+      "line": 63,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_elys_rueckbauholz_glulam",
+      "line": 64,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_demolition_waste_stream"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "bw_elys_ehemaliges_getraenkelager_areal",
+          "land": "Schweiz",
+          "name": "Ehemaliges Getränkelager / Dachaufbauten auf dem ELYS-Areal",
+          "ort": "Basel"
+        }
+      },
+      "before": null,
+      "id": "bw_elys_ehemaliges_getraenkelager_areal",
+      "line": 65,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "bw_elys_ehemaliges_getraenkelager_areal",
+      "line": 66,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUOBJEKTKLASSE",
+      "status": "would_create_rel",
+      "to": "bok_gebaeudeteil"
+    },
+    {
+      "from": "bw_elys_ehemaliges_getraenkelager_areal",
+      "line": 67,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUOBJEKTROLLE",
+      "status": "would_create_rel",
+      "to": "bor_same_site_donor_receiver"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "same_site",
+          "id": "bg_elys_trapezblech",
+          "name": "Trapezbleche aus ehem. Coop-Weinlager (beige)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_elys_trapezblech",
+          "name": "Trapezbleche aus ehem. Coop-Weinlager (beige)"
+        }
+      },
+      "id": "bg_elys_trapezblech",
+      "line": 68,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_elys_trapezblech",
+      "line": 69,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_elys_ehemaliges_getraenkelager_areal"
+    },
+    {
+      "from": "bg_elys_trapezblech",
+      "line": 70,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_hobelwerk_d_fenster_ausbau",
+          "name": "Fenster + Ausbauteile (Reuse, Detaildaten begrenzt)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_hobelwerk_d_fenster_ausbau",
+          "name": "Fenster + Ausbauteile (Reuse, Detaildaten begrenzt)"
+        }
+      },
+      "id": "bg_hobelwerk_d_fenster_ausbau",
+      "line": 71,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_hobelwerk_d_fenster_ausbau",
+      "line": 72,
+      "op": "noop_reviewed",
+      "reason": "Source file for Hobelwerk Haus D was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Beläge / Bühnen- oder Rückbaubauteile",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_k118_floor_finishes_bricks_panels",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Naturstein-/Granitplatten, Klinker und Holzplatten",
+          "neue_funktion": "Böden, Wände und Innenausbau K.118",
+          "raeumlich": true,
+          "raw_name": "Naturstein, Klinker, Dreischichtplatten"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Beläge / Bühnen- oder Rückbaubauteile",
+          "counts_as_direct_reuse": true,
+          "id": "bg_k118_floor_finishes_bricks_panels",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Naturstein-/Granitplatten, Klinker und Holzplatten",
+          "neue_funktion": "Böden, Wände und Innenausbau K.118",
+          "raeumlich": true,
+          "raw_name": "Naturstein, Klinker, Dreischichtplatten"
+        }
+      },
+      "id": "bg_k118_floor_finishes_bricks_panels",
+      "line": 73,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_k118_floor_finishes_bricks_panels",
+      "line": 74,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "noop_existing_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_k118_floor_finishes_bricks_panels",
+      "line": 75,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_reclaimed_stock"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Hüll- und Ausbauteile aus Rückbauquellen",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "huelle": true,
+          "id": "bg_k118_windows_cladding_insulation",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Fenster, Fassadenbleche und EPS-Dämmung",
+          "neue_funktion": "Hülle der K.118-Aufstockung",
+          "raw_name": "Fenster / Fassadenbleche / EPS-Dämmung"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Hüll- und Ausbauteile aus Rückbauquellen",
+          "counts_as_direct_reuse": true,
+          "huelle": true,
+          "id": "bg_k118_windows_cladding_insulation",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Fenster, Fassadenbleche und EPS-Dämmung",
+          "neue_funktion": "Hülle der K.118-Aufstockung",
+          "raw_name": "Fenster / Fassadenbleche / EPS-Dämmung"
+        }
+      },
+      "id": "bg_k118_windows_cladding_insulation",
+      "line": 76,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_k118_windows_cladding_insulation",
+      "line": 77,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "noop_existing_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_k118_windows_cladding_insulation",
+      "line": 78,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_surplus_stock"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bürofronten, Türen, Hüllbauteile",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "huelle": true,
+          "id": "bg_ka13_office_fronts_doors_facade",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Bürofronten, Türen und Fassadenbekleidung",
+          "neue_funktion": "Innenraumtrennung, Türen und Hülle KA13",
+          "raeumlich": true,
+          "raw_name": "office fronts / doors / facade cladding"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Bürofronten, Türen, Hüllbauteile",
+          "counts_as_direct_reuse": true,
+          "huelle": true,
+          "id": "bg_ka13_office_fronts_doors_facade",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Bürofronten, Türen und Fassadenbekleidung",
+          "neue_funktion": "Innenraumtrennung, Türen und Hülle KA13",
+          "raeumlich": true,
+          "raw_name": "office fronts / doors / facade cladding"
+        }
+      },
+      "id": "bg_ka13_office_fronts_doors_facade",
+      "line": 79,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_ka13_office_fronts_doors_facade",
+      "line": 80,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "noop_existing_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_ka13_office_fronts_doors_facade",
+      "line": 81,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_unknown_documented_source"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "technische Bauteile",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_ka13_tga_sanitary_radiators",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Radiatoren, Sanitär und Lüftungskanäle",
+          "neue_funktion": "technische Gebäudeausrüstung KA13",
+          "raw_name": "Radiatoren / Sanitär / ducts / pipes",
+          "technisch": true
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "technische Bauteile",
+          "counts_as_direct_reuse": true,
+          "id": "bg_ka13_tga_sanitary_radiators",
+          "menge_unbekannt": true,
+          "name": "Wiederverwendete Radiatoren, Sanitär und Lüftungskanäle",
+          "neue_funktion": "technische Gebäudeausrüstung KA13",
+          "raw_name": "Radiatoren / Sanitär / ducts / pipes",
+          "technisch": true
+        }
+      },
+      "id": "bg_ka13_tga_sanitary_radiators",
+      "line": 82,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_ka13_tga_sanitary_radiators",
+      "line": 83,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "noop_existing_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_ka13_tga_sanitary_radiators",
+      "line": 84,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_unknown_documented_source"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_lysp8_brettschichtholz",
+          "name": "Brettschichtholz-Deckenelemente (~400m²) aus Formel-E-Pavillon"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysp8_brettschichtholz",
+          "name": "Brettschichtholz-Deckenelemente (~400m²) aus Formel-E-Pavillon"
+        }
+      },
+      "id": "bg_lysp8_brettschichtholz",
+      "line": 85,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_lysp8_brettschichtholz",
+      "line": 86,
+      "op": "noop_reviewed",
+      "reason": "Source file for LYSP8 Basel was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_lysp8_dachziegel_fassade",
+          "name": "Dachziegel als Fassadenverkleidung"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysp8_dachziegel_fassade",
+          "name": "Dachziegel als Fassadenverkleidung"
+        }
+      },
+      "id": "bg_lysp8_dachziegel_fassade",
+      "line": 87,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_lysp8_dachziegel_fassade",
+      "line": 88,
+      "op": "noop_reviewed",
+      "reason": "Source file for LYSP8 Basel was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_lysp8_faserzement_fassade",
+          "name": "Faserzement-Fassadenplatten (Reuse)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysp8_faserzement_fassade",
+          "name": "Faserzement-Fassadenplatten (Reuse)"
+        }
+      },
+      "id": "bg_lysp8_faserzement_fassade",
+      "line": 89,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_lysp8_faserzement_fassade",
+      "line": 90,
+      "op": "noop_reviewed",
+      "reason": "Source file for LYSP8 Basel was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_lysp8_fensterlaeden",
+          "name": "Fensterläden Metall aus Zürcher Siedlung"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysp8_fensterlaeden",
+          "name": "Fensterläden Metall aus Zürcher Siedlung"
+        }
+      },
+      "id": "bg_lysp8_fensterlaeden",
+      "line": 91,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_lysp8_fensterlaeden",
+      "line": 92,
+      "op": "noop_reviewed",
+      "reason": "Source file for LYSP8 Basel was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_lysp8_kuechen",
+          "name": "~30 Küchenzeilen (Reuse)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysp8_kuechen",
+          "name": "~30 Küchenzeilen (Reuse)"
+        }
+      },
+      "id": "bg_lysp8_kuechen",
+      "line": 93,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_lysp8_kuechen",
+      "line": 94,
+      "op": "noop_reviewed",
+      "reason": "Source file for LYSP8 Basel was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_lysp8_sanitaer",
+          "name": "WC-Becken, Armaturen, Sanitärkeramik"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysp8_sanitaer",
+          "name": "WC-Becken, Armaturen, Sanitärkeramik"
+        }
+      },
+      "id": "bg_lysp8_sanitaer",
+      "line": 95,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_lysp8_sanitaer",
+      "line": 96,
+      "op": "noop_reviewed",
+      "reason": "Source file for LYSP8 Basel was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Fassaden- oder Bauteile aus Leihgeberbeständen",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "borrowed_pool",
+          "huelle": true,
+          "id": "bg_peoples_pavilion_borrowed_facade_elements",
+          "name": "Geliehene Fassadenelemente",
+          "neue_funktion": "temporäre Pavillonfassade",
+          "raeumlich": true,
+          "raw_name": "borrowed facade elements",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": false
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Fassaden- oder Bauteile aus Leihgeberbeständen",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "huelle": true,
+          "id": "bg_peoples_pavilion_borrowed_facade_elements",
+          "name": "Geliehene Fassadenelemente",
+          "neue_funktion": "temporäre Pavillonfassade",
+          "raeumlich": true,
+          "raw_name": "borrowed facade elements",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": false
+        }
+      },
+      "id": "bg_peoples_pavilion_borrowed_facade_elements",
+      "line": 97,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_peoples_pavilion_borrowed_facade_elements",
+      "line": 98,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_borrowed_material_pool"
+    },
+    {
+      "from": "bg_peoples_pavilion_borrowed_facade_elements",
+      "line": 99,
+      "op": "add_rel",
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_leihmodell"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "gelagerte oder geliehene Bauteile, alte Funktion nicht vollständig veröffentlicht",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "borrowed_pool",
+          "huelle": false,
+          "id": "bg_peoples_pavilion_concrete_elements",
+          "name": "Geliehene Betonpfähle / Betonelemente",
+          "neue_funktion": "temporäre Fundamente / konstruktive Elemente",
+          "raeumlich": false,
+          "raw_name": "concrete beams / Betonpfähle oder Betonelemente",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": true
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "gelagerte oder geliehene Bauteile, alte Funktion nicht vollständig veröffentlicht",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "huelle": false,
+          "id": "bg_peoples_pavilion_concrete_elements",
+          "name": "Geliehene Betonpfähle / Betonelemente",
+          "neue_funktion": "temporäre Fundamente / konstruktive Elemente",
+          "raeumlich": false,
+          "raw_name": "concrete beams / Betonpfähle oder Betonelemente",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": true
+        }
+      },
+      "id": "bg_peoples_pavilion_concrete_elements",
+      "line": 100,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_peoples_pavilion_concrete_elements",
+      "line": 101,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_borrowed_material_pool"
+    },
+    {
+      "from": "bg_peoples_pavilion_concrete_elements",
+      "line": 102,
+      "op": "add_rel",
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_leihmodell"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Leihbauteil unbekannter Herkunft",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "borrowed_pool",
+          "huelle": true,
+          "id": "bg_peoples_pavilion_glass_roof",
+          "name": "Geliehenes Glasdach",
+          "neue_funktion": "Dachlicht / Hüllbauteil des temporären Pavillons",
+          "raeumlich": true,
+          "raw_name": "glass roof",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": false
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Leihbauteil unbekannter Herkunft",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "huelle": true,
+          "id": "bg_peoples_pavilion_glass_roof",
+          "name": "Geliehenes Glasdach",
+          "neue_funktion": "Dachlicht / Hüllbauteil des temporären Pavillons",
+          "raeumlich": true,
+          "raw_name": "glass roof",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": false
+        }
+      },
+      "id": "bg_peoples_pavilion_glass_roof",
+      "line": 103,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_peoples_pavilion_glass_roof",
+      "line": 104,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_borrowed_material_pool"
+    },
+    {
+      "from": "bg_peoples_pavilion_glass_roof",
+      "line": 105,
+      "op": "add_rel",
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_leihmodell"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Standard-Holzbauteile aus Lieferantenbestand",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "borrowed_pool",
+          "huelle": false,
+          "id": "bg_peoples_pavilion_wooden_beams",
+          "name": "Geliehene Holzträger",
+          "neue_funktion": "temporäre Trag- und Konstruktionsbauteile",
+          "raeumlich": true,
+          "raw_name": "wooden beams / Holzträger",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": true
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Standard-Holzbauteile aus Lieferantenbestand",
+          "borrowed": true,
+          "counts_as_direct_reuse": true,
+          "huelle": false,
+          "id": "bg_peoples_pavilion_wooden_beams",
+          "name": "Geliehene Holzträger",
+          "neue_funktion": "temporäre Trag- und Konstruktionsbauteile",
+          "raeumlich": true,
+          "raw_name": "wooden beams / Holzträger",
+          "returned_unharmed": true,
+          "technisch": false,
+          "tragend": true
+        }
+      },
+      "id": "bg_peoples_pavilion_wooden_beams",
+      "line": 106,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_peoples_pavilion_wooden_beams",
+      "line": 107,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_borrowed_material_pool"
+    },
+    {
+      "from": "bg_peoples_pavilion_wooden_beams",
+      "line": 108,
+      "op": "add_rel",
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_leihmodell"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "fest_einbausituation_teilweise_unklar": true,
+          "id": "bg_plp_reclaimed_marble_feste_oberflaechen",
+          "name": "Reclaimed marble / feste Oberflächen"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "fest_einbausituation_teilweise_unklar": true,
+          "id": "bg_plp_reclaimed_marble_feste_oberflaechen",
+          "name": "Reclaimed marble / feste Oberflächen"
+        }
+      },
+      "id": "bg_plp_reclaimed_marble_feste_oberflaechen",
+      "line": 109,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_plp_reclaimed_marble_feste_oberflaechen",
+      "line": 110,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_supplier_stock"
+    },
+    {
+      "from": "bg_plp_reclaimed_marble_feste_oberflaechen",
+      "line": 111,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_haendler"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_recyclinghaus_abbruchziegel_innenwaende",
+          "name": "Abbruchziegel in nichttragenden Innenwänden"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_recyclinghaus_abbruchziegel_innenwaende",
+          "name": "Abbruchziegel in nichttragenden Innenwänden"
+        }
+      },
+      "id": "bg_recyclinghaus_abbruchziegel_innenwaende",
+      "line": 112,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_recyclinghaus_abbruchziegel_innenwaende",
+      "line": 113,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_demolition_waste_stream"
+    },
+    {
+      "from": "bg_recyclinghaus_abbruchziegel_innenwaende",
+      "line": 114,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "fest_eingebaut": true,
+          "id": "bg_recyclinghaus_sanitaer_feste_einbauten",
+          "name": "wiederverwendete Waschbecken / Sanitäreinbauten"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "fest_eingebaut": true,
+          "id": "bg_recyclinghaus_sanitaer_feste_einbauten",
+          "name": "wiederverwendete Waschbecken / Sanitäreinbauten"
+        }
+      },
+      "id": "bg_recyclinghaus_sanitaer_feste_einbauten",
+      "line": 115,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_recyclinghaus_sanitaer_feste_einbauten",
+      "line": 116,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_unknown_documented_source"
+    },
+    {
+      "id": "bg_recyclinghaus_sanitaer_feste_einbauten",
+      "line": 117,
+      "op": "noop_reviewed",
+      "reason": "No donor/source can be added beyond documented unknown source.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "herkunft": "unbekannt",
+          "id": "bg_recyclinghaus_wellblech_fassade",
+          "name": "wiederverwendetes Wellblech als Fassadenkomponente"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "herkunft": "unbekannt",
+          "id": "bg_recyclinghaus_wellblech_fassade",
+          "name": "wiederverwendetes Wellblech als Fassadenkomponente"
+        }
+      },
+      "id": "bg_recyclinghaus_wellblech_fassade",
+      "line": 118,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_recyclinghaus_wellblech_fassade",
+      "line": 119,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_unknown_documented_source"
+    },
+    {
+      "id": "bg_recyclinghaus_wellblech_fassade",
+      "line": 120,
+      "op": "noop_reviewed",
+      "reason": "No donor/source can be added beyond documented unknown source.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_reusebox_altholz",
+          "name": "Altholz (Ausbau + Fassade)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_reusebox_altholz",
+          "name": "Altholz (Ausbau + Fassade)"
+        }
+      },
+      "id": "bg_reusebox_altholz",
+      "line": 121,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_reusebox_altholz",
+      "line": 122,
+      "op": "noop_reviewed",
+      "reason": "Source file for ReUseBox Heilbronn was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "unknown",
+          "id": "bg_reusebox_stahltraeger",
+          "name": "Wiedergewonnene Stahlträger (Tragwerk)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_reusebox_stahltraeger",
+          "name": "Wiedergewonnene Stahlträger (Tragwerk)"
+        }
+      },
+      "id": "bg_reusebox_stahltraeger",
+      "line": 123,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_reusebox_stahltraeger",
+      "line": 124,
+      "op": "noop_reviewed",
+      "reason": "Source file for ReUseBox Heilbronn was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Akustikdecke/-wand",
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_trae_high_rise_aarhus_troldtekt_akustikplatten",
+          "name": "Troldtekt-Akustikplatten",
+          "neue_funktion": "Akustik auf Reuse-Floor"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Akustikdecke/-wand",
+          "counts_as_direct_reuse": true,
+          "id": "bg_trae_high_rise_aarhus_troldtekt_akustikplatten",
+          "name": "Troldtekt-Akustikplatten",
+          "neue_funktion": "Akustik auf Reuse-Floor"
+        }
+      },
+      "id": "bg_trae_high_rise_aarhus_troldtekt_akustikplatten",
+      "line": 125,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_trae_high_rise_aarhus_troldtekt_akustikplatten",
+      "line": 126,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_bauteilboerse"
+    },
+    {
+      "from": "bg_trae_high_rise_aarhus_troldtekt_akustikplatten",
+      "line": 127,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_supplier_stock"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Baustellen-/Montagelift",
+          "anzahl": 1,
+          "counts_as_direct_reuse": true,
+          "donor_resolution_status": "resource_source",
+          "id": "bg_villa_welpeloo_enschede_bau_montagelift_als_innenlift",
+          "name": "Bau-/Montagelift als Innenlift",
+          "neue_funktion": "fester Innen-/Lastenlift für Kunsttransport"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Baustellen-/Montagelift",
+          "anzahl": 1,
+          "counts_as_direct_reuse": true,
+          "id": "bg_villa_welpeloo_enschede_bau_montagelift_als_innenlift",
+          "name": "Bau-/Montagelift als Innenlift",
+          "neue_funktion": "fester Innen-/Lastenlift für Kunsttransport"
+        }
+      },
+      "id": "bg_villa_welpeloo_enschede_bau_montagelift_als_innenlift",
+      "line": 128,
+      "op": "set_property",
+      "property": "donor_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "from": "bg_villa_welpeloo_enschede_bau_montagelift_als_innenlift",
+      "line": 129,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "noop_existing_rel",
+      "to": "rq_baustelle"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysbuechel_parkhaus_betonteile",
+          "name": "Betonfertigteile: Stützen, Träger, Deckenplatten, Rampenplatten",
+          "receiver_resolution_status": "unknown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "counts_as_direct_reuse": true,
+          "id": "bg_lysbuechel_parkhaus_betonteile",
+          "name": "Betonfertigteile: Stützen, Träger, Deckenplatten, Rampenplatten"
+        }
+      },
+      "id": "bg_lysbuechel_parkhaus_betonteile",
+      "line": 130,
+      "op": "set_property",
+      "property": "receiver_resolution_status",
+      "status": "would_update"
+    },
+    {
+      "id": "bg_lysbuechel_parkhaus_betonteile",
+      "line": 131,
+      "op": "noop_reviewed",
+      "reason": "Source file for Lysbuechel Parkhaus Basel was not in the uploaded corpus for this research round.",
+      "status": "noop_reviewed"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 5,
+    "noop_reviewed": 20,
+    "records": 131,
+    "would_create": 3,
+    "would_create_rel": 54,
+    "would_update": 49
+  }
+}

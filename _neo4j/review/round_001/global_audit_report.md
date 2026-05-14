@@ -1,6 +1,6 @@
 # Round 001 Global Technical Audit
 
-Generated: 2026-05-14T11:33:38.899737+00:00
+Generated: 2026-05-14T12:30:37.698937+00:00
 
 ## Summary
 
@@ -14,6 +14,9 @@ Generated: 2026-05-14T11:33:38.899737+00:00
 | parse_errors | 0 |
 | schema_errors | 0 |
 | manifest_errors | 6 |
+| overlay_errors | 0 |
+| overlay_nodes | 0 |
+| overlay_relationships | 0 |
 | missing_endpoints | 3 |
 | duplicate_node_conflicts | 74 |
 | duplicate_node_conflict_ids | 25 |
@@ -50,6 +53,13 @@ Generated: 2026-05-14T11:33:38.899737+00:00
 | batch_018 | _neo4j\batch\neo4j_batch_018_exports\neo4j_exports\batches\batch_018 | 4 | no | no | 0 |
 | batch_019 | _neo4j\batch\neo4j_batch_019_exports\neo4j_exports\batches\batch_019 | 4 | no | yes | 1 |
 | batch_020 | _neo4j\batch\neo4j_batch_020_exports\neo4j_exports\batches\batch_020 | 4 | no | no | 0 |
+
+## Accepted Patch Overlay
+
+- Overlay patches: none
+- Overlay nodes: 0
+- Overlay relationships: 0
+- Overlay errors: 0
 
 ## Blocking Findings
 
@@ -102,6 +112,7 @@ Generated: 2026-05-14T11:33:38.899737+00:00
 - JSON parse errors: 0
 - Record schema errors: 0
 - Manifest errors: 6
+- Overlay errors: 0
 - Forbidden nodes: 0
 - BELEGT_IN without datenqualitaet=Belegt: 0
 - Projekt without BELEGT_IN: 0

@@ -1,13 +1,13 @@
 # Exports vs Live DB Diff
 
-Generated: 2026-05-14T11:33:38.903808+00:00
+Generated: 2026-05-14T12:30:37.702984+00:00
 
 ## Counts
 
 | Metric | Exports | Live DB |
 | --- | --- | --- |
-| nodes | 1697 | 1694 |
-| relationships | 14028 | 13961 |
+| nodes | 1697 | 1707 |
+| relationships | 14028 | 14015 |
 | projects | 97 | 94 |
 | bauteilgruppen | 328 | 328 |
 
@@ -24,7 +24,7 @@ Generated: 2026-05-14T11:33:38.903808+00:00
 | bg_no_source | 0 |
 | bg_no_type | 0 |
 | bg_no_material_or_level | 0 |
-| direct_bg_no_donor | 48 |
+| direct_bg_no_donor | 44 |
 | direct_bg_no_receiver | 1 |
 
 ## Live DB Samples
@@ -47,10 +47,8 @@ Generated: 2026-05-14T11:33:38.903808+00:00
 | bg_bedzed_structural_steel | Wiedergewonnene Stahlträger (98t, 95% des Tragwerkstahls) |
 | bg_bedzed_timber_studs | Wiedergewonnene Nadelholzständer (54 km) |
 | bg_biopartner_5_innenwaende_trennwaende | Wiederverwendete Innenwände und Trennwände |
-| bg_biopartner_5_pflaster_naturstein_bodenmaterial | Wiederverwendete Pflaster-, Naturstein- und Bodenmaterialien |
 | bg_biopartner_5_sanitaerobjekte | Wiederverwendete Sanitärobjekte |
 | bg_bluecity_balustraden_oelplattform | Mögliche wiederverwendete Balustraden |
-| bg_bluecity_betonbloecke_trennwaende | Betonblöcke als Trennwände |
 | bg_bluecity_red_cedar_fensterrahmen_trennwaende | Red-Cedar-Fensterrahmen als Trennwände / innere Fassade |
 | bg_bluecity_wiederverwendeter_stahl | Wiederverwendeter Stahl im Büroausbau |
 | bg_brent_cross_oval_substation_screen | Ovaler Substation-Screen |
@@ -59,12 +57,14 @@ Generated: 2026-05-14T11:33:38.903808+00:00
 | bg_brighton_teppichfliesen_fassade | Gebrauchte Teppichfliesen als Fassaden-/Außenschicht |
 | bg_brighton_vinylbanner_dampfbremse | Vinylbanner als Dampfbremse |
 | bg_crclr_mdf_schwarz | Schwarzes MDF aus Berliner Club |
-| bg_crclr_stahl_treppen | Stahlbauteile Hallendach als Treppenwangen |
 | bg_crclr_tueren | Türen + Schiebetüren aus ehem. Impact Hub Berlin |
 | bg_elys_bestehende_fassade | Bestehende grüne Trapezblechfassade teilweise erhalten |
 | bg_elys_fenster_fassade | ~200 verschiedene Fenster als Fassade (Lagerware/Fehlbestellungen) |
 | bg_elys_rueckbauholz_glulam | ~150m³ Rückbauholz als neue Leimbinder |
-| bg_elys_trapezblech | Trapezbleche aus ehem. Coop-Weinlager (beige) |
+| bg_hobelwerk_d_fenster_ausbau | Fenster + Ausbauteile (Reuse, Detaildaten begrenzt) |
+| bg_k118_floor_finishes_bricks_panels | Wiederverwendete Naturstein-/Granitplatten, Klinker und Holzplatten |
+| bg_k118_windows_cladding_insulation | Wiederverwendete Fenster, Fassadenbleche und EPS-Dämmung |
+| bg_ka13_office_fronts_doors_facade | Wiederverwendete Bürofronten, Türen und Fassadenbekleidung |
 
 ### Direct-reuse Bauteilgruppen without receiver
 
