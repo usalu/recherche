@@ -1,0 +1,44 @@
+{
+  "review_round": "round_004_donor_receiver_source_research",
+  "task_type": "SOURCE_RESEARCH_AND_PATCH",
+  "input_files": [
+    "donor_receiver_candidates.json",
+    "query_review_donor_receiver.md",
+    "uploaded markdown source files available in /mnt/data"
+  ],
+  "output_files": [
+    "controlled_terms/controlled_terms.delta.jsonl",
+    "patches/donor_receiver_source_research.patch.jsonl",
+    "reviews/donor_receiver_research_results.jsonl",
+    "reviews/donor_receiver_research_summary.md",
+    "cypher/post_patch_donor_receiver_review.cypher"
+  ],
+  "summary": {
+    "candidates_reviewed": 49,
+    "source_files_available": 34,
+    "source_files_missing_or_deferred": 15,
+    "patch_operations": 131,
+    "controlled_terms_delta": 8,
+    "operation_counts": {
+      "set_property": 49,
+      "noop_reviewed": 20,
+      "add_rel": 59,
+      "add_node": 3
+    },
+    "resolution_status_counts": {
+      "unknown": 18,
+      "resource_source": 22,
+      "exact_building": 1,
+      "same_site": 3,
+      "not_applicable_retention": 1,
+      "borrowed_pool": 4
+    }
+  },
+  "apply_order": [
+    "controlled_terms/controlled_terms.delta.jsonl",
+    "patches/donor_receiver_source_research.patch.jsonl",
+    "cypher/post_patch_donor_receiver_review.cypher"
+  ],
+  "human_review_required": true,
+  "notes": "Patch is conservative: no exact Bauwerk donor is created where the source only says unknown, rest stock, supplier stock, borrowed pool, construction waste, or mixed donor/Bestand."
+}
