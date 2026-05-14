@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "recommended_rounds": [
+    {
+      "round": "round_001",
+      "tasks": [
+        {
+          "task_id": "r001_global_audit",
+          "task_type": "GLOBAL_AUDIT",
+          "chunk_size": "all_batches",
+          "priority": 1
+        },
+        {
+          "task_id": "r001_vocab_material",
+          "task_type": "VOCAB_REVIEW",
+          "scope": "Material + Materialgruppe",
+          "chunk_size": "max_100_terms",
+          "priority": 2
+        },
+        {
+          "task_id": "r001_vocab_bauteil",
+          "task_type": "VOCAB_REVIEW",
+          "scope": "Bauteiltyp + Bauteilebene",
+          "chunk_size": "max_100_terms",
+          "priority": 3
+        },
+        {
+          "task_id": "r001_vocab_huerde",
+          "task_type": "VOCAB_REVIEW",
+          "scope": "Huerde + HuerdeKategorie",
+          "chunk_size": "max_100_terms",
+          "priority": 4
+        }
+      ]
+    },
+    {
+      "round": "round_002",
+      "tasks": [
+        {
+          "task_id": "r002_project_review_001_005",
+          "task_type": "PROJECT_CONTENT_REVIEW",
+          "scope": "first 5 project chunks",
+          "chunk_size": "5_projects",
+          "priority": 1
+        },
+        {
+          "task_id": "r002_project_review_006_010",
+          "task_type": "PROJECT_CONTENT_REVIEW",
+          "scope": "next 5 project chunks",
+          "chunk_size": "5_projects",
+          "priority": 2
+        },
+        {
+          "task_id": "r002_continue_project_reviews",
+          "task_type": "PROJECT_CONTENT_REVIEW",
+          "scope": "continue in chunks of 5",
+          "chunk_size": "5_projects",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "round": "round_003",
+      "tasks": [
+        {
+          "task_id": "r003_query_direct_structural_reuse",
+          "task_type": "QUERY_REVIEW",
+          "scope": "direct structural reuse",
+          "chunk_size": "top_25_rows",
+          "priority": 1
+        },
+        {
+          "task_id": "r003_query_donor_receiver",
+          "task_type": "QUERY_REVIEW",
+          "scope": "donor receiver completeness",
+          "chunk_size": "top_25_rows",
+          "priority": 2
+        },
+        {
+          "task_id": "r003_query_huerden",
+          "task_type": "QUERY_REVIEW",
+          "scope": "hurdle categories",
+          "chunk_size": "top_25_rows",
+          "priority": 3
+        }
+      ]
+    },
+    {
+      "round": "round_004",
+      "tasks": [
+        {
+          "task_id": "r004_global_audit_after_patches",
+          "task_type": "GLOBAL_AUDIT",
+          "chunk_size": "all_batches",
+          "priority": 1
+        },
+        {
+          "task_id": "r004_freeze_release",
+          "task_type": "FREEZE_RELEASE",
+          "chunk_size": "all_accepted_patches",
+          "priority": 2
+        }
+      ]
+    }
+  ],
+  "chunk_rules": {
+    "project_content_review": {
+      "preferred_projects": 5,
+      "max_projects": 6,
+      "complex_project_max": 3
+    },
+    "controlled_vocabulary_review": {
+      "preferred_families_per_run": 1,
+      "max_terms": 100
+    },
+    "query_review": {
+      "themes_per_run": 1,
+      "max_rows": 25
+    },
+    "patch_file": {
+      "max_operations": 250
+    }
+  }
+}

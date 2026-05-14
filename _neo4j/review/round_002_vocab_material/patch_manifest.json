@@ -1,0 +1,23 @@
+{
+  "review_round": "round_002_vocab_material",
+  "task_type": "VOCAB_REVIEW",
+  "scope": "Material + Materialgruppe",
+  "input_files": [
+    "live Neo4j mit-bestand Material/Materialgruppe query",
+    "_neo4j/review/round_001_apply_test/needs_review.patch.jsonl"
+  ],
+  "output_files": [
+    "_neo4j\\review\\round_002_vocab_material\\controlled_vocabulary_review_material.md",
+    "_neo4j\\review\\round_002_vocab_material\\patches\\controlled_vocabulary_material.patch.jsonl"
+  ],
+  "summary": {
+    "patch_operations": 1,
+    "blockers": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1,
+    "info": 0
+  },
+  "apply_order": [],
+  "human_review_required": true
+}

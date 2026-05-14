@@ -1,0 +1,75 @@
+{
+  "confirmation_required": "APPLY accepted_blockers.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 1696,
+    "relationships": 13961
+  },
+  "counts_before": {
+    "nodes": 1696,
+    "relationships": 13961
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-14T11:46:25.318053+00:00",
+  "patch": "_neo4j\\review\\round_001\\patches\\accepted_blockers.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Beschaffungsweg"
+        ],
+        "properties": {
+          "id": "bweg_lager",
+          "name": "Lager",
+          "review_status": "proposed"
+        }
+      },
+      "before": {
+        "labels": [
+          "Beschaffungsweg"
+        ],
+        "properties": {
+          "id": "bweg_lager",
+          "name": "Lager",
+          "review_status": "proposed"
+        }
+      },
+      "id": "bweg_lager",
+      "line": 1,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "id": "ar_materialhub_bauteilboerse",
+          "name": "Materialhub / Bauteilbörse",
+          "review_status": "proposed"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "id": "ar_materialhub_bauteilboerse",
+          "name": "Materialhub / Bauteilbörse",
+          "review_status": "proposed"
+        }
+      },
+      "id": "ar_materialhub_bauteilboerse",
+      "line": 2,
+      "op": "add_node",
+      "status": "noop_existing"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing": 2,
+    "records": 2
+  }
+}

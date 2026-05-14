@@ -1,0 +1,5 @@
+{"from": "land_vereinigtes_konigreich", "op": "merge_node", "reason": "Round 002 Stadt/Land candidate: duplicate country display name Vereinigtes K?nigreich; preserve aliases and relationships on merge.", "severity": "MEDIUM", "to": "land_vereinigtes_koenigreich"}
+{"from": "land_uk", "op": "merge_node", "reason": "Round 002 Stadt/Land candidate: United Kingdom country term duplicates canonical German country node.", "severity": "MEDIUM", "to": "land_vereinigtes_koenigreich"}
+{"from": "land_danemark", "op": "merge_node", "reason": "Round 002 Stadt/Land candidate: duplicate Denmark country spelling; keep ASCII id and preserve D?nemark as display/alias.", "severity": "MEDIUM", "to": "land_daenemark"}
+{"aliases": ["Daenemark"], "canonical_name": "D?nemark", "id": "land_daenemark", "op": "canonicalize_node", "reason": "Round 002 Stadt/Land candidate: keep ASCII id but canonical German display name.", "severity": "LOW"}
+{"from": "stadt_brussel", "op": "merge_node", "reason": "Round 002 Stadt/Land candidate: duplicate Br?ssel city node; preserve relationships on merge.", "severity": "MEDIUM", "to": "stadt_bruessel"}

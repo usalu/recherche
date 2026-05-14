@@ -1,0 +1,62 @@
+{
+  "area": {
+    "preferred": "flaeche_m2",
+    "allowed": [
+      "flaeche_m2",
+      "flaeche_m2_min",
+      "flaeche_m2_max",
+      "flaeche_bgf_m2_min",
+      "flaeche_bgf_m2_max"
+    ],
+    "scope": [
+      "Projekt",
+      "Bauwerk"
+    ]
+  },
+  "mass": {
+    "preferred": "menge_t",
+    "allowed": [
+      "menge_t",
+      "gewicht_t",
+      "menge_t_min",
+      "menge_t_max"
+    ],
+    "scope": [
+      "Bauteilgruppe",
+      "Projekt"
+    ]
+  },
+  "count": {
+    "preferred": "anzahl",
+    "allowed": [
+      "anzahl",
+      "menge_stueck"
+    ],
+    "scope": [
+      "Bauteilgruppe"
+    ]
+  },
+  "carbon": {
+    "preferred": "co2_einsparung_t",
+    "allowed": [
+      "co2_einsparung_t",
+      "co2_reduktion_prozent",
+      "upfront_embodied_carbon_kgco2e_m2"
+    ],
+    "scope": [
+      "Projekt",
+      "Bauteilgruppe"
+    ]
+  },
+  "reuse_share": {
+    "preferred": "reuse_anteil_prozent",
+    "allowed": [
+      "reuse_anteil_prozent",
+      "reuse_anteil_materialien_prozent"
+    ],
+    "scope": [
+      "Projekt",
+      "Bauteilgruppe"
+    ]
+  }
+}

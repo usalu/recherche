@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Neo4j Review Patch Record",
+  "type": "object",
+  "required": [
+    "op",
+    "reason"
+  ],
+  "properties": {
+    "op": {
+      "type": "string",
+      "enum": [
+        "add_node",
+        "add_rel",
+        "delete_node",
+        "delete_rel",
+        "set_node_properties",
+        "set_rel_properties",
+        "remove_node_properties",
+        "remove_rel_properties",
+        "merge_node",
+        "canonicalize_node",
+        "rename_property",
+        "move_property",
+        "replace_rel_type"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "properties": {
+      "type": "object"
+    },
+    "property": {
+      "type": "string"
+    },
+    "value": {},
+    "from_id": {
+      "type": "string"
+    },
+    "to_node": {
+      "type": "object"
+    },
+    "new_rel": {
+      "type": "object"
+    },
+    "canonical_name": {
+      "type": "string"
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reason": {
+      "type": "string"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "BLOCKER",
+        "HIGH",
+        "MEDIUM",
+        "LOW",
+        "INFO"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
