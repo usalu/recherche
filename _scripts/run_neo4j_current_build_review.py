@@ -33,6 +33,23 @@ NODE_ID_RE = re.compile(r"^[a-z][a-z0-9]*_[a-z0-9_]+$")
 REL_ID_RE = re.compile(r"^r_[a-z0-9_]+__[A-Z0-9_]+__[a-z0-9_]+.*$")
 BATCH_RE = re.compile(r"batch_(\d{3})$")
 
+# Labels that are controlled-vocabulary seed nodes; expected to have few
+# relationships and are excluded from the low-degree check (Check 13).
+VOCAB_LABELS: frozenset[str] = frozenset(
+    {
+        "Material", "Land", "Stadt", "Akteurrolle", "Akteurtyp",
+        "Bauobjektklasse", "Bauobjektrolle", "BauaufgabeIntervention",
+        "Bauweise", "Bausystem", "Tragwerksprinzip", "Nutzung", "Status",
+        "Bauteiltyp", "Bauteilebene", "Bauteilzustand", "Materialgruppe",
+        "WiederverwendungsArt", "Ressourcenquelle", "Beschaffungsweg",
+        "Methode", "Prozessphase", "Rueckbauverfahren", "Aufbereitungsverfahren",
+        "Logistik", "Funktionswechsel", "Verbindungstechnik", "HuerdeKategorie",
+        "Leistungsanforderung", "PruefungNachweis", "Norm", "RechtlicheBedingung",
+        "Schadstoff", "Wirtschaft", "ZertifizierungBewertungssystem",
+        "Software", "Tool", "Programm", "Datenqualitaet",
+    }
+)
+
 
 @dataclass
 class BatchInfo:
@@ -268,6 +285,7 @@ def query_live_db() -> tuple[dict, list[str]]:
                 "direct_reuse_without_donor": [],
                 "direct_reuse_without_receiver": [],
                 "duplicate_names": [],
+                "low_degree_non_vocab_nodes": [],
             }
             for name, cypher in queries.items():
                 rec = session.run(cypher).single()
@@ -326,6 +344,29 @@ def query_live_db() -> tuple[dict, list[str]]:
                     "MATCH (n) WHERE n.name IS NOT NULL "
                     "WITH labels(n)[0] AS label, toLower(toString(n.name)) AS name_key, collect(n.id) AS ids, count(*) AS c "
                     "WHERE c > 1 RETURN label, name_key, ids, c ORDER BY c DESC, label LIMIT 25"
+                )
+            ]
+            # Check 13: low-degree non-vocabulary nodes.
+            _vocab = list(VOCAB_LABELS)
+            _ld_count = session.run(
+                "MATCH (n) "
+                "WHERE NOT labels(n)[0] IN $vocab "
+                "WITH n, COUNT { (n)--() } AS degree "
+                "WHERE degree < 2 "
+                "RETURN count(n) AS c",
+                vocab=_vocab,
+            ).single()
+            result["checks"]["low_degree_non_vocab_nodes"] = int(_ld_count["c"])
+            result["low_degree_non_vocab_nodes"] = [
+                dict(row)
+                for row in session.run(
+                    "MATCH (n) "
+                    "WHERE NOT labels(n)[0] IN $vocab "
+                    "WITH n, COUNT { (n)--() } AS degree "
+                    "WHERE degree < 2 "
+                    "RETURN labels(n)[0] AS label, n.id AS id, n.name AS name, degree "
+                    "ORDER BY degree ASC, label, id LIMIT 50",
+                    vocab=_vocab,
                 )
             ]
     except Exception as exc:  # noqa: BLE001
@@ -522,6 +563,16 @@ def run(round_dir: Path, accepted_patch_paths: list[Path] | None = None) -> dict
             if ref[side] not in all_node_ids:
                 missing_endpoints.append({**ref, "side": side, "missing_id": ref[side]})
 
+    # Check 8 & 9: tally unexpected labels / rel types already captured in schema_errors.
+    unexpected_labels_counter: Counter[str] = Counter()
+    unexpected_rel_types_counter: Counter[str] = Counter()
+    for err in schema_errors:
+        msg = err.get("error", "")
+        if msg.startswith("unexpected label "):
+            unexpected_labels_counter[msg[len("unexpected label "):]] += 1
+        elif msg.startswith("unexpected relationship type "):
+            unexpected_rel_types_counter[msg[len("unexpected relationship type "):]] += 1
+
     projects_no_source: list[str] = []
     projects_no_component_or_work: list[str] = []
     bg_no_source: list[str] = []
@@ -623,6 +674,14 @@ def run(round_dir: Path, accepted_patch_paths: list[Path] | None = None) -> dict
         "bg_no_source": len(bg_no_source),
         "bg_no_type": len(bg_no_type),
         "bg_no_material_or_level": len(bg_no_material_or_level),
+        "unexpected_label_types": len(unexpected_labels_counter),
+        "unexpected_label_occurrences": sum(unexpected_labels_counter.values()),
+        "unexpected_rel_type_types": len(unexpected_rel_types_counter),
+        "unexpected_rel_type_occurrences": sum(unexpected_rel_types_counter.values()),
+        "low_degree_non_vocab_nodes": (
+            live_db.get("checks", {}).get("low_degree_non_vocab_nodes", "n/a")
+            if live_db.get("available") else "n/a"
+        ),
     }
 
     batch_rows = [
@@ -712,6 +771,57 @@ def run(round_dir: Path, accepted_patch_paths: list[Path] | None = None) -> dict
         f"- Bauteilgruppe without BELEGT_IN: {len(bg_no_source)}",
         f"- Bauteilgruppe without HAT_BAUTEILTYP: {len(bg_no_type)}",
         "",
+        "## Check 8: Unexpected Node Labels in Exports",
+        "",
+        f"{sum(unexpected_labels_counter.values())} occurrence(s) across "
+        f"{len(unexpected_labels_counter)} unexpected label type(s).",
+        "",
+        (
+            markdown_table(
+                ["Label", "Occurrences"],
+                [[lbl, cnt] for lbl, cnt in unexpected_labels_counter.most_common()],
+            )
+            if unexpected_labels_counter
+            else "_None — all labels conform to schema._"
+        ),
+        "",
+        "## Check 9: Unexpected Relationship Types in Exports",
+        "",
+        f"{sum(unexpected_rel_types_counter.values())} occurrence(s) across "
+        f"{len(unexpected_rel_types_counter)} unexpected relationship type(s).",
+        "",
+        (
+            markdown_table(
+                ["Relationship type", "Occurrences"],
+                [[rt, cnt] for rt, cnt in unexpected_rel_types_counter.most_common()],
+            )
+            if unexpected_rel_types_counter
+            else "_None — all relationship types conform to schema._"
+        ),
+        "",
+        "## Check 13: Low-Degree Non-Vocabulary Nodes (Live DB)",
+        "",
+        (
+            (
+                f"{live_db['checks']['low_degree_non_vocab_nodes']} non-vocabulary node(s) "
+                "with degree\u00a0< 2."
+            )
+            if live_db.get("available") and "low_degree_non_vocab_nodes" in live_db.get("checks", {})
+            else "_Live DB unavailable — check skipped._"
+        ),
+        "",
+        (
+            markdown_table(
+                ["Label", "id", "name", "degree"],
+                [
+                    [row.get("label"), row.get("id"), row.get("name"), row.get("degree")]
+                    for row in live_db.get("low_degree_non_vocab_nodes", [])
+                ],
+            )
+            if live_db.get("available") and live_db.get("low_degree_non_vocab_nodes")
+            else "_No low-degree non-vocabulary nodes found._"
+        ),
+        "",
         "## Patch Output",
         "",
         f"- Patch file: `{rel(patch_path)}`",
@@ -781,6 +891,17 @@ def run(round_dir: Path, accepted_patch_paths: list[Path] | None = None) -> dict
                     [
                         [row.get("label"), row.get("name_key"), row.get("c"), ", ".join(row.get("ids") or [])]
                         for row in live_db.get("duplicate_names", [])
+                    ]
+                    or [["none", "", "", ""]],
+                ),
+                "",
+                "### Check 13: Low-degree non-vocabulary nodes",
+                "",
+                markdown_table(
+                    ["label", "id", "name", "degree"],
+                    [
+                        [row.get("label"), row.get("id"), row.get("name"), row.get("degree")]
+                        for row in live_db.get("low_degree_non_vocab_nodes", [])
                     ]
                     or [["none", "", "", ""]],
                 ),

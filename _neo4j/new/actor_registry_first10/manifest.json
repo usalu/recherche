@@ -1,0 +1,30 @@
+{
+  "batch_id": "actor_registry_first10",
+  "schema_version": "1.2-draft-actor-registry",
+  "source_files": [
+    "akteursliste_master.md"
+  ],
+  "output_files": [
+    "actors_first10.registry.kg.jsonl",
+    "controlled_terms.delta.jsonl",
+    "schema_patch.actor_registry_v1_2.json",
+    "validation_report.md",
+    "README.md"
+  ],
+  "record_counts": {
+    "actor_registry_nodes": 74,
+    "actor_registry_relationships": 304,
+    "controlled_delta_nodes": 1,
+    "controlled_delta_relationships": 0
+  },
+  "import_order": [
+    "schema_patch.actor_registry_v1_2.json must be reflected in the importer/schema first",
+    "controlled_terms.delta.jsonl",
+    "actors_first10.registry.kg.jsonl"
+  ],
+  "notes": [
+    "Stars ignored by design.",
+    "Project links are weak actor-registry associations, not confirmed project participation.",
+    "Project nodes may be existing project IDs or stubs for later project-file import."
+  ]
+}
