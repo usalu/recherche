@@ -26,7 +26,7 @@ _ORG_CATALOG_DISPLAY_TO_INTERNAL[":Akteur"] = "Akteur"
 
 def main() -> None:
     repo = Path(__file__).resolve().parents[1]
-    db = repo / "_database"
+    db = repo / "research"
     inv_path = db / "_system" / "node_inventory.csv"
     by_entity: dict[str, list[str]] = defaultdict(list)
     with inv_path.open(newline="", encoding="utf-8") as f:

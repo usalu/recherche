@@ -20,8 +20,8 @@ from neo4j_relation_fold import SKIP_RELATIONS, fold_csv_relation  # noqa: E402
 
 def main() -> int:
     root = Path(__file__).resolve().parents[1]
-    inv_path = root / "_database" / "_system" / "node_inventory.csv"
-    edge_path = root / "_database" / "_edges" / "clean_confirmed_edges.csv"
+    inv_path = root / "research" / "_system" / "node_inventory.csv"
+    edge_path = root / "research" / "_edges" / "clean_confirmed_edges.csv"
     errs: list[str] = []
 
     allowed = (

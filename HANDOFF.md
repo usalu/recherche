@@ -10,9 +10,9 @@ A **knowledge base + research graph** for building-component reuse (German prose
 
 [`.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md`](.cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md)
 
-- **Knowledge:** Markdown under `_database/<entity>/<id>/index.md` (wikilinks welcome; any Markdown editor works).
-- **Graph in Neo4j:** Import from `_database/` via `_scripts/import_database_folder_to_neo4j.py` (see `_database/_system/NEO4J_SCHEMA.md`).
-- **Optional local SQLite:** `_migration/build_phase24_sqlite_database.py` can still materialize `reuse_ontology.sqlite` for ad-hoc SQL; the file is **not committed** (see `.gitignore`). Do not treat SQLite as co-equal with the plan—Neo4j semantics win.
+- **Knowledge:** Markdown under `research/<entity>/<id>/index.md` (wikilinks welcome; any Markdown editor works).
+- **Graph in Neo4j:** Import from `research/` via `_scripts/import_database_folder_to_neo4j.py` (see `research/_system/NEO4J_SCHEMA.md`).
+- **Optional local SQLite:** `_archive/migration/build_phase24_sqlite_database.py` can still materialize `reuse_ontology.sqlite` for ad-hoc SQL; the file is **not committed** (see `.gitignore`). Do not treat SQLite as co-equal with the plan—Neo4j semantics win.
 
 The user's goal, in his own words: *"an interconnected clear system that acts as a readable map without getting overwhelmed with unnecessary connections and wrong unclear ones."*
 
@@ -22,15 +22,14 @@ The user's goal, in his own words: *"an interconnected clear system that acts as
 
 | Path | Status | What |
 |---|---|---|
-| `_database/` | **LIVE — edit here** | Canonical Markdown knowledge + edge CSV |
-| `_database/_system/SCHEMA.md` | **Canonical reference** | Ontology folder layout, vocabulary, editing rules. **Read second.** |
-| `_database/_edges/clean_confirmed_edges.csv` | Derived | Canonical typed edges (folded on Neo4j import). |
-| `_database/_system/NEO4J_SCHEMA.md` | **Normative (narrative)** | Mirrors the Neo4j plan; import tooling implements the same rules. |
-| `_database/_system/reuse_ontology.sqlite` | Optional local | Rebuild with `_migration/build_phase24_sqlite_database.py` if needed; **not tracked in git**. |
-| `Gebäude/` | **LIVE — extraction source** | 76 hand-written case-study `.md` files with structured Entitäten-Mapping tables. New cases get added here, then extracted into `_database/`. |
-| `gebaeude/` | User-managed | Separate from `Gebäude/`. User will update independently. |
-| `_migration/` | Frozen tooling | All build/repair/migration scripts, batch reports, and decision logs. The scripts you might run are listed in §6. |
-| `_archive/legacy/` | **Pointer** | Only `README.md`: the old mirrored trees were **removed from git** in 2026-05 after consolidation into `_database/` (recover via git history). |
+| `research/` | **LIVE — edit here** | All entity nodes + edge CSV + system docs. Neo4j source of truth. |
+| `research/_system/SCHEMA.md` | **Canonical reference** | Ontology folder layout, vocabulary, editing rules. **Read second.** |
+| `research/_edges/clean_confirmed_edges.csv` | Derived | Canonical typed edges (folded on Neo4j import). |
+| `research/_system/NEO4J_SCHEMA.md` | **Normative (narrative)** | Mirrors the Neo4j plan; import tooling implements the same rules. |
+| `research/_system/reuse_ontology.sqlite` | Optional local | Rebuild with `_archive/migration/build_phase24_sqlite_database.py` if needed; **not tracked in git**. |
+| `research/gebaeude/` | **LIVE — source + future nodes** | 76 hand-written case-study `.md` files (source layer). Add `<id>/index.md` subfolders to register a building as a Neo4j node. |
+| `_archive/migration/` | Frozen tooling | All build/repair/migration scripts, batch reports, and decision logs. |
+| `_archive/dropped_knots/` | Provenance | Knot folders dropped during consolidation; original prose preserved. |
 | `_archive/dropped_knots/` | Provenance | Knot folders dropped during consolidation; original prose preserved. |
 | Top-level `*.md` | Optional stubs | Short entity-type stubs at repo root; safe to delete if your editor does not need them. |
 
@@ -107,7 +106,7 @@ If you want to know what each batch did: read the commit message + the diff CSV 
 
 ### Step 1: Extract remaining gap relations (CONTINUING)
 
-**WHAT.** Most gap relations from `SCHEMA.md` §9 are now populated via batches **50a–50w** (see §3 state list). For an up-to-date short list of **CSV relations that are still absent or sparse**, use [`_database/_system/EDGE_QUALITY_AUDIT.md`](_database/_system/EDGE_QUALITY_AUDIT.md) (table *Still zero in CSV* / counts).
+**WHAT.** Most gap relations from `SCHEMA.md` §9 are now populated via batches **50a–50w** (see §3 state list). For an up-to-date short list of **CSV relations that are still absent or sparse**, use [`research/_system/EDGE_QUALITY_AUDIT.md`](research/_system/EDGE_QUALITY_AUDIT.md) (table *Still zero in CSV* / counts).
 
 ```
 Examples still often missing or incomplete (verify in EDGE_QUALITY_AUDIT):
@@ -130,7 +129,7 @@ Done in batch 50e: `has_rueckbauverfahren` from explicit `Eingriff/Aufbereitung`
 **HOW.**
 1. Read each `Gebäude/<Case>.md`. Each has structured tables: ENTITÄTEN-MAPPING, BAUTEIL-INVENTAR, PROZESS UND LOGISTIK, TECHNIK LEISTUNG NORMEN, KENNWERTE.
 2. The **BAUTEIL-INVENTAR** and **PROZESS UND LOGISTIK** tables are the richest source — they map per-Bauteil to material, Eingriff, Verbindung, Prüfung, Norm, Hürde. One row → multiple edges.
-3. Match each row to its `_database/reuse_einsatz/<case>__NNN__<bauteil>` source (already extracted).
+3. Match each row to its `research/reuse_einsatz/<case>__NNN__<bauteil>` source (already extracted).
 4. Emit an edge per row-cell using the relation vocabulary.
 5. Write an extractor at `_migration/50_extract_gap_relations.py` modeled on `40_apply_edge_remap.py`.
 6. Continue **one relation at a time** so each batch is reviewable. Good next candidates: `has_logistik` from explicit Transport/Lagerung/Materialmatching cues, `has_aufbereitungsverfahren` from stronger Aufbereitung labels, or source/procurement relations such as `has_ressourcenquelle` and `has_beschaffungsweg`.
@@ -139,7 +138,7 @@ Done in batch 50e: `has_rueckbauverfahren` from explicit `Eingriff/Aufbereitung`
 **BLAST RADIUS.** Adds new edges only — won't break existing ones if you dedup. You'll roughly double the edge count when this is fully done.
 
 **VERIFY.**
-- `wc -l _database/_edges/clean_confirmed_edges.csv` should grow.
+- `wc -l research/_edges/clean_confirmed_edges.csv` should grow.
 - `python _scripts/verify_plan_coverage.py` must exit 0.
 - For relation R: optional local SQLite → `SELECT count(*) FROM edges WHERE relation='has_R'` should be plausible vs the case data.
 - For one case, count edges from its `reuse_einsatz/*` and compare against the case's BAUTEIL-INVENTAR table size.

@@ -18,7 +18,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EDGES = ROOT / "_database" / "_edges" / "clean_confirmed_edges.csv"
+EDGES = ROOT / "research" / "_edges" / "clean_confirmed_edges.csv"
 
 
 def norm(s: str) -> str:
@@ -32,7 +32,7 @@ def typed_path_to_index(typed_path: str) -> Path:
     if "/" not in typed_path:
         raise ValueError(f"Bad typed_path: {typed_path!r}")
     ent, rest = typed_path.split("/", 1)
-    return ROOT / "_database" / ent / rest / "index.md"
+    return ROOT / "research" / ent / rest / "index.md"
 
 
 def raw_label_evidence(raw: str, body: str) -> tuple[bool, str]:

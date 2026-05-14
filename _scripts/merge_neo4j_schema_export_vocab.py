@@ -29,9 +29,9 @@ import import_database_folder_to_neo4j as imp  # noqa: E402
 from neo4j_relation_fold import SKIP_RELATIONS  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-INVENTORY = ROOT / "_database" / "_system" / "node_inventory.csv"
-EDGES = ROOT / "_database" / "_edges" / "clean_confirmed_edges.csv"
-EXPORT = ROOT / "_database" / "_system" / "neo4j_schema_export.json"
+INVENTORY = ROOT / "research" / "_system" / "node_inventory.csv"
+EDGES = ROOT / "research" / "_edges" / "clean_confirmed_edges.csv"
+EXPORT = ROOT / "research" / "_system" / "neo4j_schema_export.json"
 
 # Inventory `entity` values that are bounded taxonomy / knot vocabulary (not cases, actors, quellen, …).
 CONTROLLED_VOCAB_ENTITIES: frozenset[str] = frozenset(

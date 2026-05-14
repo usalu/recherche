@@ -32,7 +32,7 @@ if str(_scripts_dir) not in sys.path:
 from neo4j_env import repo_root, resolve_connection
 
 VERSION_LABEL = "GraphVersion"
-MANIFEST_REL = Path("_database") / "_system" / "neo4j_graph_versions.jsonl"
+MANIFEST_REL = Path("research") / "_system" / "neo4j_graph_versions.jsonl"
 
 
 def manifest_path() -> Path:

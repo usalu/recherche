@@ -59,6 +59,7 @@ ENTITY_LABEL: dict[str, str] = {
     "bewertungslogik_abgrenzung": "WiederverwendungsArt",
     "datenqualitaet": "Datenqualitaet",
     "fallstudie": "Fallbeispiel",
+    "gebaeude": "Fallbeispiel",
     "foerderprogramm": "Programm",
     "fuegung_verbindung": "Verbindungstechnik",
     "funktionswechsel": "Funktionswechsel",
@@ -120,7 +121,7 @@ def repo_root() -> Path:
 
 
 def default_database_dir() -> Path:
-    return repo_root() / "_database"
+    return repo_root() / "research"
 
 
 def label_for_entity(entity: str) -> str:

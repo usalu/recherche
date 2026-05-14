@@ -15,9 +15,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-INV = ROOT / "_database" / "_system" / "node_inventory.csv"
-EDGES = ROOT / "_database" / "_edges" / "clean_confirmed_edges.csv"
-OUT_DIR = ROOT / "_migration"
+INV = ROOT / "research" / "_system" / "node_inventory.csv"
+EDGES = ROOT / "research" / "_edges" / "clean_confirmed_edges.csv"
+OUT_DIR = ROOT / "_archive" / "migration"
 
 
 def main() -> int:

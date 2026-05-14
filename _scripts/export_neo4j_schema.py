@@ -69,8 +69,8 @@ def main() -> int:
     ap.add_argument(
         "--out",
         type=Path,
-        default=_REPO / "_database" / "_system" / "neo4j_schema_export.json",
-        help="Output JSON path (default: _database/_system/neo4j_schema_export.json)",
+        default=_REPO / "research" / "_system" / "neo4j_schema_export.json",
+        help="Output JSON path (default: research/_system/neo4j_schema_export.json)",
     )
     ap.add_argument(
         "--password-file",
