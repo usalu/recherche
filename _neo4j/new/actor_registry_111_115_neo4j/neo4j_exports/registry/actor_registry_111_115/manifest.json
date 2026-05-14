@@ -1,0 +1,49 @@
+{
+  "artifact_type": "actor_registry_chunk",
+  "schema_version": "1.2-draft-actor-registry",
+  "chunk_id": "actor_registry_111_115",
+  "source_file": "akteursliste_master.md",
+  "actor_range": {
+    "from": 111,
+    "to": 115
+  },
+  "stars_ignored": true,
+  "uses_existing_node_labels": [
+    "Akteur",
+    "Akteurtyp",
+    "Akteurrolle",
+    "Land",
+    "Projekt",
+    "Quelle"
+  ],
+  "new_relationship_types_required": [
+    "VERBUNDEN_MIT_AKTEUR",
+    "ASSOZIIERT_MIT_PROJEKT"
+  ],
+  "files": [
+    {
+      "path": "actors_111_115.registry.kg.jsonl",
+      "record_type": "kg_jsonl",
+      "nodes": 25,
+      "relationships": 119
+    },
+    {
+      "path": "controlled_terms.delta.jsonl",
+      "record_type": "kg_jsonl_delta",
+      "nodes": 2,
+      "relationships": 0
+    },
+    {
+      "path": "schema_patch.actor_registry_v1_2.json",
+      "record_type": "schema_patch"
+    },
+    {
+      "path": "validation_report.md",
+      "record_type": "validation_report"
+    },
+    {
+      "path": "README.md",
+      "record_type": "readme"
+    }
+  ]
+}
