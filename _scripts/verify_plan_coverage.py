@@ -1,9 +1,14 @@
-"""Read-only checks: `_database/` is ready for Neo4j import per plan (inventory + edge fold).
+"""LEGACY REVIEW REQUIRED.
+
+Read-only checks for the retired folder-first workflow (`research/` inventory + edge fold).
 
 Exit 0 if all checks pass; prints issues and exits 1 otherwise.
 
 Usage (repo root):
   python _scripts/verify_plan_coverage.py
+
+Neo4j is now the source of truth. Keep this only for controlled legacy review;
+do not treat a passing result here as current graph authority.
 """
 
 from __future__ import annotations

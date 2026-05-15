@@ -1,0 +1,58 @@
+{"record_type": "node", "id": "mat_textil", "labels": ["Material"], "properties": {"name": "Textil", "review_status": "proposed", "note": "Needed for textile-based reused/waste materials such as denim and carpet tile textile layers."}}
+{"record_type": "rel", "id": "r_mat_textil__HAT_MATERIALGRUPPE__mg_verbundstoff", "from": "mat_textil", "type": "HAT_MATERIALGRUPPE", "to": "mg_verbundstoff", "properties": {}}
+{"record_type": "node", "id": "bsys_p2_plattenbausystem", "labels": ["Bausystem"], "properties": {"name": "P2_Plattenbausystem", "definition": "Großformatiges ostdeutsches Stahlbetonfertigteil-/Plattenbausystem; als kontrollierter Bausystem-Begriff für Plattenreuse-Fälle."}}
+{"record_type": "node", "id": "bsys_secondary_timber_glulamst", "labels": ["Bausystem"], "properties": {"name": "glulamST_secondary_timber", "definition": "Glued-laminated secondary timber from reclaimed solid wood; remanufactured mass timber component family."}}
+{"record_type": "node", "id": "bsys_cross_laminated_secondary_timber_clst", "labels": ["Bausystem"], "properties": {"name": "CLST_cross_laminated_secondary_timber", "definition": "Cross-laminated secondary timber from reclaimed solid wood; remanufactured panel component family."}}
+{"record_type": "rel", "id": "r_bsys_p2_plattenbausystem__HAT_BAUWEISE__bauw_fertigteilbauweise", "from": "bsys_p2_plattenbausystem", "type": "HAT_BAUWEISE", "to": "bauw_fertigteilbauweise", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_p2_plattenbausystem__NUTZT_MATERIAL__mat_stahlbeton", "from": "bsys_p2_plattenbausystem", "type": "NUTZT_MATERIAL", "to": "mat_stahlbeton", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_p2_plattenbausystem__HAT_TRAGWERKSPRINZIP__tp_wandtragwerk", "from": "bsys_p2_plattenbausystem", "type": "HAT_TRAGWERKSPRINZIP", "to": "tp_wandtragwerk", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_secondary_timber_glulamst__HAT_BAUWEISE__bauw_holzbauweise", "from": "bsys_secondary_timber_glulamst", "type": "HAT_BAUWEISE", "to": "bauw_holzbauweise", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_secondary_timber_glulamst__NUTZT_MATERIAL__mat_holz", "from": "bsys_secondary_timber_glulamst", "type": "NUTZT_MATERIAL", "to": "mat_holz", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_secondary_timber_glulamst__HAT_TRAGWERKSPRINZIP__tp_skeletttragwerk", "from": "bsys_secondary_timber_glulamst", "type": "HAT_TRAGWERKSPRINZIP", "to": "tp_skeletttragwerk", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_cross_laminated_secondary_timber_clst__HAT_BAUWEISE__bauw_holzbauweise", "from": "bsys_cross_laminated_secondary_timber_clst", "type": "HAT_BAUWEISE", "to": "bauw_holzbauweise", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_cross_laminated_secondary_timber_clst__NUTZT_MATERIAL__mat_holz", "from": "bsys_cross_laminated_secondary_timber_clst", "type": "NUTZT_MATERIAL", "to": "mat_holz", "properties": {}}
+{"record_type": "rel", "id": "r_bsys_cross_laminated_secondary_timber_clst__HAT_TRAGWERKSPRINZIP__tp_wandtragwerk", "from": "bsys_cross_laminated_secondary_timber_clst", "type": "HAT_TRAGWERKSPRINZIP", "to": "tp_wandtragwerk", "properties": {}}
+{"record_type": "node", "id": "norm_crow_cur_guideline_4_2023", "labels": ["Norm"], "properties": {"name": "CROW-CUR Guideline 4:2023", "definition": "Dutch guideline for reuse of structural precast concrete / hollow-core slabs; used as project-relevant guidance where explicitly cited."}}
+{"record_type": "rel", "id": "r_norm_crow_cur_guideline_4_2023__HAT_LEISTUNGSANFORDERUNG__la_tragfaehigkeit", "from": "norm_crow_cur_guideline_4_2023", "type": "HAT_LEISTUNGSANFORDERUNG", "to": "la_tragfaehigkeit", "properties": {}}
+{"record_type": "rel", "id": "r_norm_crow_cur_guideline_4_2023__HAT_METHODE__meth_reuse_assessment", "from": "norm_crow_cur_guideline_4_2023", "type": "HAT_METHODE", "to": "meth_reuse_assessment", "properties": {}}
+{"record_type": "rel", "id": "r_norm_crow_cur_guideline_4_2023__HAT_BAUTEILTYP__bt_decke", "from": "norm_crow_cur_guideline_4_2023", "type": "HAT_BAUTEILTYP", "to": "bt_decke", "properties": {}}
+{"record_type": "node", "id": "mat_bitumen", "labels": ["Material"], "properties": {"name": "Bitumen"}}
+{"record_type": "node", "id": "mat_textil", "labels": ["Material"], "properties": {"name": "Textil / textile Fasern"}}
+{"record_type": "node", "id": "prog_recreate", "labels": ["Programm"], "properties": {"name": "ReCreate"}}
+{"record_type": "rel", "id": "r_mat_bitumen__HAT_MATERIALGRUPPE__mg_kunststoff", "from": "mat_bitumen", "type": "HAT_MATERIALGRUPPE", "to": "mg_kunststoff", "properties": {}}
+{"record_type": "rel", "id": "r_mat_bitumen__HAT_MATERIALGRUPPE__mg_verbundstoff", "from": "mat_bitumen", "type": "HAT_MATERIALGRUPPE", "to": "mg_verbundstoff", "properties": {}}
+{"record_type": "rel", "id": "r_mat_textil__HAT_MATERIALGRUPPE__mg_kunststoff", "from": "mat_textil", "type": "HAT_MATERIALGRUPPE", "to": "mg_kunststoff", "properties": {}}
+{"record_type": "rel", "id": "r_prog_recreate__TEIL_VON_PROGRAMM__prog_forschungsprojekt", "from": "prog_recreate", "type": "TEIL_VON_PROGRAMM", "to": "prog_forschungsprojekt", "properties": {}}
+{"record_type": "rel", "id": "r_prog_recreate__TEIL_VON_PROGRAMM__prog_pilotprojekt", "from": "prog_recreate", "type": "TEIL_VON_PROGRAMM", "to": "prog_pilotprojekt", "properties": {}}
+{"record_type": "node", "id": "mat_mdf", "labels": ["Material"], "properties": {"name": "MDF / mitteldichte Faserplatte"}}
+{"record_type": "node", "id": "mat_textil", "labels": ["Material"], "properties": {"name": "Textil / Filz / textile Fasern"}}
+{"record_type": "node", "id": "norm_sci_p427", "labels": ["Norm"], "properties": {"name": "SCI P427 Structural Steel Reuse"}}
+{"record_type": "node", "id": "norm_sci_p440", "labels": ["Norm"], "properties": {"name": "SCI P440 Reuse of Structural Steel"}}
+{"record_type": "rel", "id": "r_mat_mdf__HAT_MATERIALGRUPPE__mg_holz_biobasiert", "from": "mat_mdf", "type": "HAT_MATERIALGRUPPE", "to": "mg_holz_biobasiert", "properties": {}}
+{"record_type": "rel", "id": "r_mat_mdf__HAT_MATERIALGRUPPE__mg_verbundstoff", "from": "mat_mdf", "type": "HAT_MATERIALGRUPPE", "to": "mg_verbundstoff", "properties": {}}
+{"record_type": "rel", "id": "r_norm_sci_p427__REFERENZIERT_NORM__norm_sci_p440", "from": "norm_sci_p427", "type": "REFERENZIERT_NORM", "to": "norm_sci_p440", "properties": {}}
+{"record_type": "rel", "id": "r_norm_sci_p440__REFERENZIERT_NORM__norm_sci_p427", "from": "norm_sci_p440", "type": "REFERENZIERT_NORM", "to": "norm_sci_p427", "properties": {}}
+{"record_type": "node", "id": "norm_ns_3682", "labels": ["Norm"], "properties": {"name": "NS 3682 Reuse of hollow-core slabs / Norwegian reuse standard"}}
+{"record_type": "node", "id": "norm_tek_norway", "labels": ["Norm"], "properties": {"name": "Norwegian building regulation TEK / documentation context"}}
+{"record_type": "node", "id": "norm_sia_schweiz", "labels": ["Norm"], "properties": {"name": "SIA / Swiss building standards context"}}
+{"record_type": "node", "id": "tool_bim_bauteilkatalog", "labels": ["Tool"], "properties": {"name": "BIM / digitaler Bauteilkatalog"}}
+{"record_type": "node", "id": "software_bim", "labels": ["Software"], "properties": {"name": "Building Information Modeling / BIM"}}
+{"record_type": "rel", "id": "r_norm_ns_3682__REFERENZIERT_NORM__norm_tek_norway", "from": "norm_ns_3682", "type": "REFERENZIERT_NORM", "to": "norm_tek_norway", "properties": {}}
+{"record_type": "rel", "id": "r_norm_tek_norway__REFERENZIERT_NORM__norm_ns_3682", "from": "norm_tek_norway", "type": "REFERENZIERT_NORM", "to": "norm_ns_3682", "properties": {}}
+{"record_type": "rel", "id": "r_norm_sia_schweiz__REFERENZIERT_NORM__norm_iso_20887", "from": "norm_sia_schweiz", "type": "REFERENZIERT_NORM", "to": "norm_iso_20887", "properties": {}}
+{"record_type": "rel", "id": "r_tool_bim_bauteilkatalog__NUTZT_SOFTWARE__software_bim", "from": "tool_bim_bauteilkatalog", "type": "NUTZT_SOFTWARE", "to": "software_bim", "properties": {}}
+{"record_type": "rel", "id": "r_software_bim__NUTZT_TOOL__tool_bim_bauteilkatalog", "from": "software_bim", "type": "NUTZT_TOOL", "to": "tool_bim_bauteilkatalog", "properties": {}}
+{"record_type": "node", "id": "norm_en_1168", "labels": ["Norm"], "properties": {"name": "EN 1168 Precast concrete products - Hollow core slabs"}}
+{"record_type": "node", "id": "norm_crow_cur_4_2023", "labels": ["Norm"], "properties": {"name": "CROW-CUR Guideline 4:2023 Reuse of hollow core slabs"}}
+{"record_type": "node", "id": "tool_bauteilkatalog", "labels": ["Tool"], "properties": {"name": "Bauteilkatalog / Bauteilpass"}}
+{"record_type": "rel", "id": "r_norm_en_1168__REFERENZIERT_NORM__norm_crow_cur_4_2023", "from": "norm_en_1168", "type": "REFERENZIERT_NORM", "to": "norm_crow_cur_4_2023", "properties": {}}
+{"record_type": "rel", "id": "r_norm_crow_cur_4_2023__REFERENZIERT_NORM__norm_en_1168", "from": "norm_crow_cur_4_2023", "type": "REFERENZIERT_NORM", "to": "norm_en_1168", "properties": {}}
+{"record_type": "rel", "id": "r_tool_bauteilkatalog__NUTZT_SOFTWARE__software_bim", "from": "tool_bauteilkatalog", "type": "NUTZT_SOFTWARE", "to": "software_bim", "properties": {}}
+{"record_type": "rel", "id": "r_software_bim__NUTZT_TOOL__tool_bauteilkatalog", "from": "software_bim", "type": "NUTZT_TOOL", "to": "tool_bauteilkatalog", "properties": {}}
+{"record_type": "node", "id": "mat_faserzement", "labels": ["Material"], "properties": {"name": "Faserzement / Eternit"}}
+{"record_type": "rel", "id": "r_mat_faserzement__HAT_MATERIALGRUPPE__mg_verbundstoff", "from": "mat_faserzement", "type": "HAT_MATERIALGRUPPE", "to": "mg_verbundstoff", "properties": {}}
+{"record_type": "rel", "id": "r_mat_faserzement__HAT_MATERIALGRUPPE__mg_mineralisch", "from": "mat_faserzement", "type": "HAT_MATERIALGRUPPE", "to": "mg_mineralisch", "properties": {}}
+{"record_type": "node", "id": "zbs_nordic_swan_ecolabel", "labels": ["ZertifizierungBewertungssystem"], "properties": {"name": "Nordic Swan Ecolabel / Svanemærket"}}
+{"record_type": "node", "id": "zbs_nabers", "labels": ["ZertifizierungBewertungssystem"], "properties": {"name": "NABERS"}}
+{"record_type": "node", "id": "bsys_iw73", "labels": ["Bausystem"], "properties": {"id": "bsys_iw73", "name": "IW73/6_Plattenbausystem"}}
+{"record_type": "node", "id": "prog_interreg_nwe", "labels": ["Programm"], "properties": {"id": "prog_interreg_nwe", "name": "Interreg_North_West_Europe"}}

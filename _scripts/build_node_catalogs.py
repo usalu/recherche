@@ -1,4 +1,7 @@
-"""Write NODE_CATALOG_BY_ENTITY.md and NODE_CATALOG_BY_NEO4J_LABEL.md from node_inventory.csv.
+"""LEGACY REVIEW REQUIRED.
+
+Write NODE_CATALOG_BY_ENTITY.md and NODE_CATALOG_BY_NEO4J_LABEL.md from the retired
+folder-first `node_inventory.csv`.
 
 To refresh per-label examples inside the schema plan (§5.2), run:
 `python _scripts/generate_plan_section_5_2.py`

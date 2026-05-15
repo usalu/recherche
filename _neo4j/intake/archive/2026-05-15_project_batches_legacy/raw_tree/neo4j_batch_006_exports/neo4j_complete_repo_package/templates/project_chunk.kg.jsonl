@@ -1,0 +1,24 @@
+{"record_type":"node","id":"p_project_slug","labels":["Projekt"],"properties":{"name":"Project Name","bewertung":4,"flaeche_m2":1234}}
+{"record_type":"node","id":"q_project_slug_md","labels":["Quelle"],"properties":{"name":"Source_File.md","quelltyp":"case_markdown"}}
+{"record_type":"node","id":"bw_receiver_slug","labels":["Bauwerk"],"properties":{"name":"Receiver Building Name"}}
+{"record_type":"node","id":"bg_component_group_slug","labels":["Bauteilgruppe"],"properties":{"name":"Component group name","raw_name":"raw source name","alte_funktion":"old function","neue_funktion":"new function","counts_as_direct_reuse":true}}
+{"record_type":"node","id":"a_actor_slug","labels":["Akteur"],"properties":{"name":"Actor Name"}}
+{"record_type":"rel","id":"r_p_project_slug__BELEGT_IN__q_project_slug_md","from":"p_project_slug","type":"BELEGT_IN","to":"q_project_slug_md","properties":{"datenqualitaet":"Belegt"}}
+{"record_type":"rel","id":"r_bw_receiver_slug__BELEGT_IN__q_project_slug_md","from":"bw_receiver_slug","type":"BELEGT_IN","to":"q_project_slug_md","properties":{"datenqualitaet":"Belegt"}}
+{"record_type":"rel","id":"r_bg_component_group_slug__BELEGT_IN__q_project_slug_md","from":"bg_component_group_slug","type":"BELEGT_IN","to":"q_project_slug_md","properties":{"datenqualitaet":"Belegt"}}
+{"record_type":"rel","id":"r_a_actor_slug__BELEGT_IN__q_project_slug_md","from":"a_actor_slug","type":"BELEGT_IN","to":"q_project_slug_md","properties":{"datenqualitaet":"Belegt"}}
+{"record_type":"rel","id":"r_p_project_slug__NUTZT_BAUWERK__bw_receiver_slug","from":"p_project_slug","type":"NUTZT_BAUWERK","to":"bw_receiver_slug","properties":{}}
+{"record_type":"rel","id":"r_p_project_slug__HAT_BAUTEILGRUPPE__bg_component_group_slug","from":"p_project_slug","type":"HAT_BAUTEILGRUPPE","to":"bg_component_group_slug","properties":{}}
+{"record_type":"rel","id":"r_bw_receiver_slug__HAT_BAUOBJEKTKLASSE__bok_gebaeude","from":"bw_receiver_slug","type":"HAT_BAUOBJEKTKLASSE","to":"bok_gebaeude","properties":{}}
+{"record_type":"rel","id":"r_bw_receiver_slug__HAT_BAUOBJEKTROLLE__bor_empfaengerobjekt","from":"bw_receiver_slug","type":"HAT_BAUOBJEKTROLLE","to":"bor_empfaengerobjekt","properties":{}}
+{"record_type":"rel","id":"r_bw_receiver_slug__LIEGT_IN_STADT__stadt_city_slug","from":"bw_receiver_slug","type":"LIEGT_IN_STADT","to":"stadt_city_slug","properties":{}}
+{"record_type":"rel","id":"r_stadt_city_slug__LIEGT_IN_LAND__land_country_slug","from":"stadt_city_slug","type":"LIEGT_IN_LAND","to":"land_country_slug","properties":{}}
+{"record_type":"rel","id":"r_bg_component_group_slug__EINGEBAUT_IN__bw_receiver_slug","from":"bg_component_group_slug","type":"EINGEBAUT_IN","to":"bw_receiver_slug","properties":{}}
+{"record_type":"rel","id":"r_bg_component_group_slug__HAT_BAUTEILTYP__bt_traeger","from":"bg_component_group_slug","type":"HAT_BAUTEILTYP","to":"bt_traeger","properties":{}}
+{"record_type":"rel","id":"r_bg_component_group_slug__NUTZT_MATERIAL__mat_stahl","from":"bg_component_group_slug","type":"NUTZT_MATERIAL","to":"mat_stahl","properties":{}}
+{"record_type":"rel","id":"r_bg_component_group_slug__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwendung","from":"bg_component_group_slug","type":"HAT_WIEDERVERWENDUNGSART","to":"wva_direkte_wiederverwendung","properties":{}}
+{"record_type":"rel","id":"r_bg_component_group_slug__HAT_STATUS__status_realisiert","from":"bg_component_group_slug","type":"HAT_STATUS","to":"status_realisiert","properties":{}}
+{"record_type":"rel","id":"r_bg_component_group_slug__HAT_HUERDE__h_technische_freigabe","from":"bg_component_group_slug","type":"HAT_HUERDE","to":"h_technische_freigabe","properties":{}}
+{"record_type":"rel","id":"r_a_actor_slug__BETEILIGT_AN__p_project_slug","from":"a_actor_slug","type":"BETEILIGT_AN","to":"p_project_slug","properties":{}}
+{"record_type":"rel","id":"r_a_actor_slug__HAT_AKTEURROLLE__ar_architektur","from":"a_actor_slug","type":"HAT_AKTEURROLLE","to":"ar_architektur","properties":{}}
+{"record_type":"rel","id":"r_a_actor_slug__HAT_AKTEURTYP__at_unternehmen","from":"a_actor_slug","type":"HAT_AKTEURTYP","to":"at_unternehmen","properties":{}}

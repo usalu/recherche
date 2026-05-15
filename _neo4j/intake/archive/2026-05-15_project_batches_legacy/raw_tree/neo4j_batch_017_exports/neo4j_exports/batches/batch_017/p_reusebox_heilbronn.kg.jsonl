@@ -1,0 +1,66 @@
+{"record_type": "node", "id": "q_reusebox_heilbronn_md", "labels": ["Quelle"], "properties": {"id": "q_reusebox_heilbronn_md", "name": "ReUseBox_Heilbronn.md", "quelltyp": "case_markdown"}}
+{"record_type": "node", "id": "stadt_heilbronn", "labels": ["Stadt"], "properties": {"id": "stadt_heilbronn", "name": "Heilbronn"}}
+{"record_type": "node", "id": "land_deutschland", "labels": ["Land"], "properties": {"id": "land_deutschland", "name": "Deutschland"}}
+{"record_type": "node", "id": "p_reusebox_heilbronn", "labels": ["Projekt"], "properties": {"id": "p_reusebox_heilbronn", "name": "ReUseBox Heilbronn (Wettbewerbsbeitrag 2025)", "bewertung": 2, "projektstatus_text": "Wettbewerb 2025; Realisierung ungesichert"}}
+{"record_type": "node", "id": "bw_reusebox_heilbronn", "labels": ["Bauwerk"], "properties": {"id": "bw_reusebox_heilbronn", "name": "ReUseBox Heilbronn – Demonstratorbau", "note": "Wettbewerbsentwurf; Lern- und Erlebnisort Kreislaufwirtschaft"}}
+{"record_type": "node", "id": "bg_reusebox_stahltraeger", "labels": ["Bauteilgruppe"], "properties": {"id": "bg_reusebox_stahltraeger", "name": "Wiedergewonnene Stahlträger (Tragwerk)", "counts_as_direct_reuse": true}}
+{"record_type": "node", "id": "bg_reusebox_altholz", "labels": ["Bauteilgruppe"], "properties": {"id": "bg_reusebox_altholz", "name": "Altholz (Ausbau + Fassade)", "counts_as_direct_reuse": true}}
+{"record_type": "node", "id": "a_lxsy_architektur", "labels": ["Akteur"], "properties": {"id": "a_lxsy_architektur", "name": "LXSY Architektur"}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__BELEGT_IN__q_reusebox_heilbronn_md", "from": "a_lxsy_architektur", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__HAT_AKTEURROLLE__ar_architektur", "from": "a_lxsy_architektur", "type": "HAT_AKTEURROLLE", "to": "ar_architektur", "properties": {}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__HAT_AKTEURTYP__at_unternehmen", "from": "a_lxsy_architektur", "type": "HAT_AKTEURTYP", "to": "at_unternehmen", "properties": {}}
+{"record_type": "rel", "id": "r_a_lxsy_architektur__BETEILIGT_AN__p_reusebox_heilbronn", "from": "a_lxsy_architektur", "type": "BETEILIGT_AN", "to": "p_reusebox_heilbronn", "properties": {}}
+{"record_type": "node", "id": "a_stadt_heilbronn", "labels": ["Akteur"], "properties": {"id": "a_stadt_heilbronn", "name": "Stadt Heilbronn"}}
+{"record_type": "rel", "id": "r_a_stadt_heilbronn__BELEGT_IN__q_reusebox_heilbronn_md", "from": "a_stadt_heilbronn", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_a_stadt_heilbronn__HAT_AKTEURROLLE__ar_bauherr_auftraggeber", "from": "a_stadt_heilbronn", "type": "HAT_AKTEURROLLE", "to": "ar_bauherr_auftraggeber", "properties": {}}
+{"record_type": "rel", "id": "r_a_stadt_heilbronn__HAT_AKTEURTYP__at_oeffentliche_institution", "from": "a_stadt_heilbronn", "type": "HAT_AKTEURTYP", "to": "at_oeffentliche_institution", "properties": {}}
+{"record_type": "rel", "id": "r_a_stadt_heilbronn__BETEILIGT_AN__p_reusebox_heilbronn", "from": "a_stadt_heilbronn", "type": "BETEILIGT_AN", "to": "p_reusebox_heilbronn", "properties": {}}
+{"record_type": "rel", "id": "r_stadt_heilbronn__BELEGT_IN__q_reusebox_heilbronn_md", "from": "stadt_heilbronn", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_land_deutschland__BELEGT_IN__q_reusebox_heilbronn_md", "from": "land_deutschland", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_stadt_heilbronn__LIEGT_IN_LAND__land_deutschland", "from": "stadt_heilbronn", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__BELEGT_IN__q_reusebox_heilbronn_md", "from": "p_reusebox_heilbronn", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__LIEGT_IN_STADT__stadt_heilbronn", "from": "p_reusebox_heilbronn", "type": "LIEGT_IN_STADT", "to": "stadt_heilbronn", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__LIEGT_IN_LAND__land_deutschland", "from": "p_reusebox_heilbronn", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_STATUS__status_wettbewerb", "from": "p_reusebox_heilbronn", "type": "HAT_STATUS", "to": "status_wettbewerb", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_INTERVENTION__bai_neubau", "from": "p_reusebox_heilbronn", "type": "HAT_INTERVENTION", "to": "bai_neubau", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwendung", "from": "p_reusebox_heilbronn", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_direkte_wiederverwendung", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_WIEDERVERWENDUNGSART__wva_design_for_disassembly", "from": "p_reusebox_heilbronn", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_design_for_disassembly", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_METHODE__meth_design_for_disassembly", "from": "p_reusebox_heilbronn", "type": "HAT_METHODE", "to": "meth_design_for_disassembly", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_METHODE__meth_form_follows_availability", "from": "p_reusebox_heilbronn", "type": "HAT_METHODE", "to": "meth_form_follows_availability", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_BESCHAFFUNGSWEG__bweg_rueckbauprojekt", "from": "p_reusebox_heilbronn", "type": "HAT_BESCHAFFUNGSWEG", "to": "bweg_rueckbauprojekt", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_RESSOURCENQUELLE__rq_donorgebaeude", "from": "p_reusebox_heilbronn", "type": "HAT_RESSOURCENQUELLE", "to": "rq_donorgebaeude", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__TEIL_VON_PROGRAMM__prog_wettbewerb", "from": "p_reusebox_heilbronn", "type": "TEIL_VON_PROGRAMM", "to": "prog_wettbewerb", "properties": {}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__NUTZT_BAUWERK__bw_reusebox_heilbronn", "from": "p_reusebox_heilbronn", "type": "NUTZT_BAUWERK", "to": "bw_reusebox_heilbronn", "properties": {}}
+{"record_type": "rel", "id": "r_bw_reusebox_heilbronn__BELEGT_IN__q_reusebox_heilbronn_md", "from": "bw_reusebox_heilbronn", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_bw_reusebox_heilbronn__HAT_BAUOBJEKTKLASSE__bok_gebaeude", "from": "bw_reusebox_heilbronn", "type": "HAT_BAUOBJEKTKLASSE", "to": "bok_gebaeude", "properties": {}}
+{"record_type": "rel", "id": "r_bw_reusebox_heilbronn__HAT_BAUOBJEKTROLLE__bor_empfaengerobjekt", "from": "bw_reusebox_heilbronn", "type": "HAT_BAUOBJEKTROLLE", "to": "bor_empfaengerobjekt", "properties": {}}
+{"record_type": "rel", "id": "r_bw_reusebox_heilbronn__LIEGT_IN_STADT__stadt_heilbronn", "from": "bw_reusebox_heilbronn", "type": "LIEGT_IN_STADT", "to": "stadt_heilbronn", "properties": {}}
+{"record_type": "rel", "id": "r_bw_reusebox_heilbronn__LIEGT_IN_LAND__land_deutschland", "from": "bw_reusebox_heilbronn", "type": "LIEGT_IN_LAND", "to": "land_deutschland", "properties": {}}
+{"record_type": "rel", "id": "r_bw_reusebox_heilbronn__HAT_STATUS__status_wettbewerb", "from": "bw_reusebox_heilbronn", "type": "HAT_STATUS", "to": "status_wettbewerb", "properties": {}}
+{"record_type": "rel", "id": "r_bw_reusebox_heilbronn__HAT_NUTZUNG__nut_kultur", "from": "bw_reusebox_heilbronn", "type": "HAT_NUTZUNG", "to": "nut_kultur", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__BELEGT_IN__q_reusebox_heilbronn_md", "from": "bg_reusebox_stahltraeger", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_BAUTEILGRUPPE__bg_reusebox_stahltraeger", "from": "p_reusebox_heilbronn", "type": "HAT_BAUTEILGRUPPE", "to": "bg_reusebox_stahltraeger", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__EINGEBAUT_IN__bw_reusebox_heilbronn", "from": "bg_reusebox_stahltraeger", "type": "EINGEBAUT_IN", "to": "bw_reusebox_heilbronn", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_BAUTEILTYP__bt_traeger", "from": "bg_reusebox_stahltraeger", "type": "HAT_BAUTEILTYP", "to": "bt_traeger", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_BAUTEILEBENE__be_bauteilgruppe", "from": "bg_reusebox_stahltraeger", "type": "HAT_BAUTEILEBENE", "to": "be_bauteilgruppe", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__NUTZT_MATERIAL__mat_stahl", "from": "bg_reusebox_stahltraeger", "type": "NUTZT_MATERIAL", "to": "mat_stahl", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwendung", "from": "bg_reusebox_stahltraeger", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_direkte_wiederverwendung", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_STATUS__status_geplant", "from": "bg_reusebox_stahltraeger", "type": "HAT_STATUS", "to": "status_geplant", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_AUFBEREITUNG__av_reinigung", "from": "bg_reusebox_stahltraeger", "type": "HAT_AUFBEREITUNG", "to": "av_reinigung", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_RUECKBAUVERFAHREN__rv_selektiver_rueckbau", "from": "bg_reusebox_stahltraeger", "type": "HAT_RUECKBAUVERFAHREN", "to": "rv_selektiver_rueckbau", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_TRAGWERKSPRINZIP__tp_skeletttragwerk", "from": "bg_reusebox_stahltraeger", "type": "HAT_TRAGWERKSPRINZIP", "to": "tp_skeletttragwerk", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_BAUWEISE__bauw_stahlbauweise", "from": "bg_reusebox_stahltraeger", "type": "HAT_BAUWEISE", "to": "bauw_stahlbauweise", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_stahltraeger__HAT_FUNKTIONSWECHSEL__fw_gleiche_funktion", "from": "bg_reusebox_stahltraeger", "type": "HAT_FUNKTIONSWECHSEL", "to": "fw_gleiche_funktion", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__BELEGT_IN__q_reusebox_heilbronn_md", "from": "bg_reusebox_altholz", "type": "BELEGT_IN", "to": "q_reusebox_heilbronn_md", "properties": {"datenqualitaet": "Belegt"}}
+{"record_type": "rel", "id": "r_p_reusebox_heilbronn__HAT_BAUTEILGRUPPE__bg_reusebox_altholz", "from": "p_reusebox_heilbronn", "type": "HAT_BAUTEILGRUPPE", "to": "bg_reusebox_altholz", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__EINGEBAUT_IN__bw_reusebox_heilbronn", "from": "bg_reusebox_altholz", "type": "EINGEBAUT_IN", "to": "bw_reusebox_heilbronn", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_BAUTEILTYP__bt_ausbau", "from": "bg_reusebox_altholz", "type": "HAT_BAUTEILTYP", "to": "bt_ausbau", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_BAUTEILTYP__bt_fassade", "from": "bg_reusebox_altholz", "type": "HAT_BAUTEILTYP", "to": "bt_fassade", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_BAUTEILEBENE__be_bauteilgruppe", "from": "bg_reusebox_altholz", "type": "HAT_BAUTEILEBENE", "to": "be_bauteilgruppe", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__NUTZT_MATERIAL__mat_holz", "from": "bg_reusebox_altholz", "type": "NUTZT_MATERIAL", "to": "mat_holz", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwendung", "from": "bg_reusebox_altholz", "type": "HAT_WIEDERVERWENDUNGSART", "to": "wva_direkte_wiederverwendung", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_STATUS__status_geplant", "from": "bg_reusebox_altholz", "type": "HAT_STATUS", "to": "status_geplant", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_AUFBEREITUNG__av_reinigung", "from": "bg_reusebox_altholz", "type": "HAT_AUFBEREITUNG", "to": "av_reinigung", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_AUFBEREITUNG__av_holzaufbereitung", "from": "bg_reusebox_altholz", "type": "HAT_AUFBEREITUNG", "to": "av_holzaufbereitung", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_RUECKBAUVERFAHREN__rv_demontage", "from": "bg_reusebox_altholz", "type": "HAT_RUECKBAUVERFAHREN", "to": "rv_demontage", "properties": {}}
+{"record_type": "rel", "id": "r_bg_reusebox_altholz__HAT_FUNKTIONSWECHSEL__fw_neue_funktion", "from": "bg_reusebox_altholz", "type": "HAT_FUNKTIONSWECHSEL", "to": "fw_neue_funktion", "properties": {}}

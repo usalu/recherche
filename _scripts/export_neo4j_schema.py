@@ -7,7 +7,7 @@ Uses the same connection env vars as import_database_folder_to_neo4j.py:
 
 Example:
   python _scripts/export_neo4j_schema.py --password-file .neo4j_password
-  python _scripts/export_neo4j_schema.py --out _database/_system/neo4j_schema_export.json
+  python _scripts/export_neo4j_schema.py --out _neo4j/review/neo4j_schema_export.json
 """
 
 from __future__ import annotations
@@ -69,8 +69,8 @@ def main() -> int:
     ap.add_argument(
         "--out",
         type=Path,
-        default=_REPO / "research" / "_system" / "neo4j_schema_export.json",
-        help="Output JSON path (default: research/_system/neo4j_schema_export.json)",
+        default=_REPO / "_neo4j" / "review" / "neo4j_schema_export.json",
+        help="Output JSON path (default: _neo4j/review/neo4j_schema_export.json)",
     )
     ap.add_argument(
         "--password-file",

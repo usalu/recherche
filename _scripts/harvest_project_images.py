@@ -30,10 +30,8 @@ MAX_IMAGES = 7
 HASH_THRESHOLD = 5 
 
 HEADERS = {
-    'User-Agent': 'RechercheImageHarvester/3.0 (https://github.com/example; bot@example.org) requests/2.31.0'
+    'User-Agent': 'RechercheImageHarvester/4.0 (https://github.com/example; bot@example.org) requests/2.31.0'
 }
-
-REUSE_KEYWORDS = ['reuse', 'reclaimed', 'circular', 'wiederverwendung', 'recycled', 'spolia', 'bauteil', 'salvage', 'upcycling', 'zirkulär']
 
 def sanitize_filename(name):
     return re.sub(r'[\\/*?:"<>|]', "", name.replace('/', '_'))
@@ -80,7 +78,8 @@ def search_wikimedia(query):
     }
     try:
         response = requests.get(url, params=params, headers=HEADERS, timeout=10)
-        response.raise_for_status()
+        if response.status_code != 200:
+            return []
         data = response.json()
         pages = data.get("query", {}).get("pages", {})
         results = []
@@ -93,12 +92,14 @@ def search_wikimedia(query):
                 author = re.sub(r'<[^>]+>', '', extmetadata.get("Artist", {}).get("value", ""))
                 desc = re.sub(r'<[^>]+>', '', extmetadata.get("ImageDescription", {}).get("value", ""))
                 license_info = extmetadata.get("LicenseShortName", {}).get("value", "")
+                categories = extmetadata.get("Categories", {}).get("value", "")
                 
                 results.append({
                     "url": img_url,
                     "title": title,
                     "description": desc,
                     "author": author,
+                    "categories": categories,
                     "license": license_info,
                     "source": "Wikimedia"
                 })
@@ -117,15 +118,18 @@ def search_openverse(query):
         response = requests.get(url, params=params, headers=HEADERS, timeout=10)
         if response.status_code == 429:
             time.sleep(2)
-        response.raise_for_status()
+        if response.status_code != 200:
+            return []
         data = response.json()
         results = []
         for item in data.get("results", []):
+            tags = " ".join([t.get("name", "") for t in item.get("tags", [])])
             results.append({
                 "url": item.get("url"),
                 "title": item.get("title", ""),
                 "description": item.get("description", ""),
                 "author": item.get("creator", ""),
+                "categories": tags,
                 "license": item.get("license", ""),
                 "source": "Openverse"
             })
@@ -154,35 +158,60 @@ def is_unique(new_hash, existing_hashes):
 
 def evaluate_image(image_data, project):
     score = 0
-    text_to_search = f"{image_data['title']} {image_data['description']} {image_data['author']}".lower()
+    text_to_search = f"{image_data['title']} {image_data['description']} {image_data['author']} {image_data.get('categories', '')}".lower()
+    cats_and_tags = image_data.get('categories', '').lower()
     
-    # 1. Base Name check
-    raw_name = project["name"].lower()
-    clean_name = re.sub(r'\(.*?\)', '', raw_name).split(',')[0].split('/')[0].strip()
-    
-    name_words = [w for w in clean_name.split() if len(w) > 3]
-    word_matches = sum(1 for w in name_words if w in text_to_search)
-    
-    if clean_name and len(clean_name) > 4 and clean_name in text_to_search:
-        score += 60 # Exact name match is almost a guaranteed pass
-    elif len(name_words) > 0 and word_matches == len(name_words):
-        score += 50 # All long words found (even if split apart)
-    elif word_matches > 0:
-        score += 20 * word_matches # Partial name match
+    # 1. Reject blatantly wrong subjects immediately based on tags/categories
+    non_arch_keywords = ['portrait', 'person', 'car', 'vehicle', 'auto', 'man', 'woman', 'people', 'coin', 'stamp', 'seal', 'insect', 'animal', 'hybrid', 'sculptuur', 'sculpture', 'painting', 'drawing']
+    if any(kw in cats_and_tags for kw in non_arch_keywords) or any(f" {kw} " in text_to_search for kw in non_arch_keywords):
+        return 0 # Instant fail
         
-    # 2. Context checks
+    # 2. Check for Explicit Architecture / Building tags
+    arch_keywords = ['architecture', 'building', 'pavilion', 'facade', 'structure', 'architektur', 'bauwerk', 'hq', 'headquarters', 'office', 'kantoor', 'gebouw', 'huis', 'house', 'construction', 'halle', 'werkhof', 'campus', 'exterior']
+    has_arch = any(kw in cats_and_tags for kw in arch_keywords) or any(kw in text_to_search for kw in arch_keywords)
+    
+    reuse_keywords = ['reuse', 'reclaimed', 'circular', 'wiederverwendung', 'recycled', 'spolia', 'bauteil', 'salvage', 'upcycling', 'zirkulär']
+    has_reuse = any(kw in cats_and_tags for kw in reuse_keywords) or any(kw in text_to_search for kw in reuse_keywords)
+
+    # 3. Base Name check
+    raw_name_clean = re.sub(r'\(.*?\)', '', project["name"].lower())
+    
+    # Exact Phrase Match
+    phrases = [p.strip() for p in re.split(r'[,/]', raw_name_clean) if len(p.strip()) > 4]
+    exact_phrase_match = any(p in text_to_search for p in phrases)
+    if exact_phrase_match:
+        score += 60
+        
+    # Word Match
+    name_words = [w for w in raw_name_clean.replace('/', ' ').replace(',', ' ').replace('-', ' ').split() if len(w) > 3]
+    matched_words = sum(1 for w in name_words if w in text_to_search)
+    if len(name_words) > 0:
+        score += (matched_words / len(name_words)) * 40 
+        
+    # 4. Context Context checks
+    has_city = False
     if project["city"] and project["city"].lower() in text_to_search:
-        score += 25
+        has_city = True
+        score += 30
         
+    has_actor = False
     for actor in project["actors"]:
         if actor and len(actor)>3 and actor.lower() in text_to_search:
+            has_actor = True
             score += 35
             
-    # 3. Reuse / Architecture keyword checks
-    if any(kw in text_to_search for kw in REUSE_KEYWORDS):
-        score += 30
-    if any(kw in text_to_search for kw in ['architecture', 'building', 'pavilion', 'facade', 'structure', 'architektur', 'bauwerk']):
-        score += 15
+    if has_arch: score += 25
+    if has_reuse: score += 35
+    
+    # The image must match AT LEAST ONE architectural keyword to guarantee it's not random.
+    if not has_arch and not has_reuse:
+        # If it doesn't say building, architecture, reuse, etc... we reject it, UNLESS it's an incredibly specific name match + city + actor
+        if not (exact_phrase_match and has_city and has_actor):
+            return 0
+            
+    # We must have at least SOME relation to the project name, or the city+architect combo
+    if matched_words == 0 and not (has_city and has_actor):
+        return 0
 
     return score
 
@@ -199,7 +228,7 @@ def harvest_images():
     metadata_exists = METADATA_CSV.exists()
     
     projects = get_projects_context_from_neo4j()
-    print(f"Found {len(projects)} projects. Using SMART REUSE EVALUATOR.")
+    print(f"Found {len(projects)} projects. Using V4 STRICT CATEGORY EVALUATOR.")
     
     with open(METADATA_CSV, mode="a", newline="", encoding="utf-8") as csvfile:
         fieldnames = ["project_id", "project_name", "eval_score", "source_api", "source_title", "source_url", "local_path", "license", "author", "image_hash"]
@@ -223,19 +252,17 @@ def harvest_images():
             
             base_name = get_base_name(proj_name)
             
-            # Broaden queries but rely on the smart evaluator to save us
             queries = [
-                f'"{base_name}"', # Exact phrase
-                f'{base_name} architecture', # Broad words
+                f'"{base_name}" architecture',
+                f'{base_name} building',
                 f'{base_name} reuse',
                 f'{base_name} wiederverwendung'
             ]
             if project["city"]:
                 queries.append(f'{base_name} {project["city"]}')
             if project["actors"]:
-                queries.append(f'{project["actors"][0]} architecture')
+                queries.append(f'{base_name} {project["actors"][0]}')
                 
-            # Remove duplicate queries
             queries = list(dict.fromkeys(queries))
                 
             collected_images = 0
@@ -262,11 +289,9 @@ def harvest_images():
                     if ext_check in ['pdf', 'djvu', 'ogg', 'webm', 'mp4', 'svg', 'doc', 'docx', 'zip', 'gz', 'txt']:
                         continue
                     
-                    # ---- SMART EVALUATION ----
-                    # Target score: 55
-                    # Needs either: Exact Name (60) OR (All words(50) + Architecture(15)) OR (Actor(35) + Partial(20)) OR (Partial(20) + Reuse(30) + Building(15))
+                    # ---- CATEGORY + SMART EVALUATION ----
                     score = evaluate_image(cand, project)
-                    if score < 55:
+                    if score < 60:
                         continue 
                         
                     img, raw_data, h = download_and_hash_image(url)
@@ -299,9 +324,9 @@ def harvest_images():
                         csvfile.flush()
                         
                         collected_images += 1
-                        print(f"    [Score: {score}] MATCH! Saved image {collected_images}/{MAX_IMAGES}")
+                        print(f"    [Score: {score}] VERIFIED ARCHITECTURE! Saved image {collected_images}/{MAX_IMAGES}")
                         
-            print(f"  Finished '{proj_name}'. Valid architectural/reuse images saved: {collected_images}")
+            print(f"  Finished '{proj_name}'. Valid architectural images saved: {collected_images}")
 
 if __name__ == "__main__":
     harvest_images()

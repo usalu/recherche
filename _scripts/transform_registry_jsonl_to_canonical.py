@@ -16,7 +16,7 @@ Relationship types:
   BELEGT_IN                  →  unchanged
 
 IDs:
-  Loaded from _neo4j/new/ID_RECONCILIATION.csv if present.
+  Loaded from _neo4j/contracts/actor_registry_v1_2/ID_RECONCILIATION.csv if present.
   Hard-coded known collisions applied next.
   Fallback: strip leading 'a_' prefix.
 
@@ -24,7 +24,7 @@ Usage:
   python _scripts/transform_registry_jsonl_to_canonical.py <input.registry.kg.jsonl> [...]
 
 Output:
-  _neo4j/new/canonical/<batch_dir>/<stem>.canonical.kg.jsonl
+  _neo4j/processed/actor_registry/chunks/<batch_dir>/<stem>.canonical.kg.jsonl
 """
 
 from __future__ import annotations
@@ -121,10 +121,10 @@ _AKTEURROLLE_REMAP: dict[str, str] = {
 # Paths
 # ---------------------------------------------------------------------------
 _REPO = Path(__file__).resolve().parents[1]
-_RECON_CSV = _REPO / "_neo4j" / "new" / "ID_RECONCILIATION.csv"
+_RECON_CSV = _REPO / "_neo4j" / "contracts" / "actor_registry_v1_2" / "ID_RECONCILIATION.csv"
 
 # ---------------------------------------------------------------------------
-# Known ID collisions: batch actor ID → canonical research/akteur/ ID
+# Known ID collisions: batch actor ID → reconciled graph ID
 # ---------------------------------------------------------------------------
 _KNOWN_COLLISIONS: dict[str, str] = {
     "a_patrick_teuffel": "patrick_teuffel",
@@ -295,7 +295,7 @@ def main() -> None:
         sys.exit(1)
 
     id_map = _load_id_map()
-    base_out = _REPO / "_neo4j" / "new" / "canonical"
+    base_out = _REPO / "_neo4j" / "processed" / "actor_registry" / "chunks"
 
     for arg in sys.argv[1:]:
         inp = Path(arg).resolve()

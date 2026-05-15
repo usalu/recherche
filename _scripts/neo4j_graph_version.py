@@ -1,10 +1,10 @@
 """
 Record and list logical versions of a Neo4j graph (metadata only).
 
-Creates nodes labeled `GraphVersion` (not used by the research CSV import) with
+Creates nodes labeled `GraphVersion` (not used by the retired folder-first import) with
 counts and notes, and appends the same record to:
 
-  `_database/_system/neo4j_graph_versions.jsonl`
+  `_neo4j/review/neo4j_graph_versions.jsonl`
 
 so a history survives full `DETACH DELETE` wipes. Re-import with
 `import_clean_confirmed_edges_csv_raw_neo4j.py --preserve-graph-versions` to
@@ -32,7 +32,7 @@ if str(_scripts_dir) not in sys.path:
 from neo4j_env import repo_root, resolve_connection
 
 VERSION_LABEL = "GraphVersion"
-MANIFEST_REL = Path("research") / "_system" / "neo4j_graph_versions.jsonl"
+MANIFEST_REL = Path("_neo4j") / "review" / "neo4j_graph_versions.jsonl"
 
 
 def manifest_path() -> Path:

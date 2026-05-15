@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Merge controlled taxonomy vocabulary into neo4j_schema_export.json (compact).
+"""LEGACY REVIEW REQUIRED.
+
+Merge controlled taxonomy vocabulary from the retired folder-first inventory into
+neo4j_schema_export.json (compact).
 
 Only Stammdaten / bounded knot folders — excludes case instances, actors, sources,
 components, metrics, etc. Format: one sorted list of typed_path strings.

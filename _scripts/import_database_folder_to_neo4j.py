@@ -1,5 +1,11 @@
 """
-Import nodes and relationships from _database into Neo4j.
+LEGACY REVIEW REQUIRED.
+
+Import nodes and relationships from the retired folder-first database layout into Neo4j.
+
+Neo4j is now the source of truth. This script is kept only for controlled review
+or archaeology of the former `research/` / `_database` workflow; it is not the
+normal current import entry point.
 
 Sources (under repo _database/ by default):
   - _system/node_inventory.csv  -> MERGE nodes keyed by typed_path
@@ -121,6 +127,7 @@ def repo_root() -> Path:
 
 
 def default_database_dir() -> Path:
+    """Legacy default retained only so old calls fail visibly if the tree is absent."""
     return repo_root() / "research"
 
 
