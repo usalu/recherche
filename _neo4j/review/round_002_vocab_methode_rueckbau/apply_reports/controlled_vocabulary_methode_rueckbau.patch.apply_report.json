@@ -1,0 +1,30 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_methode_rueckbau.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:16:32.854031+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_methode_rueckbau\\patches\\controlled_vocabulary_methode_rueckbau.patch.jsonl",
+  "records": [
+    {
+      "id": "methode_rueckbau",
+      "line": 1,
+      "op": "noop_reviewed",
+      "reason": "Round 002 Methode+Rueckbauverfahren+Aufbereitungsverfahren: 13+5+11 nodes, no duplicates, 2 orphans kept as seed (meth_abrissmonitoring, av_drahtglasschneiden). Family accepted as-is.",
+      "status": "noop_reviewed"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_reviewed": 1,
+    "records": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "review_round": "round_002_vocab_zertifizierung",
+  "task_type": "VOCAB_REVIEW",
+  "scope": "ZertifizierungBewertungssystem + Programm + Tool + Software",
+  "input_files": [
+    "live Neo4j mit-bestand ZertifizierungBewertungssystem + Programm + Tool + Software query",
+    "_neo4j/processed/projects/vocabulary/controlled_vocabulary.seed.kg.jsonl",
+    "_neo4j/review/round_002_baseline/global_audit_report.md"
+  ],
+  "output_files": [
+    "_neo4j/review/round_002_vocab_zertifizierung/controlled_vocabulary_review_zertifizierung.md",
+    "_neo4j/review/round_002_vocab_zertifizierung/patches/controlled_vocabulary_zertifizierung.patch.jsonl"
+  ],
+  "summary": {
+    "patch_operations": 1,
+    "blockers": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "info": 1
+  },
+  "deferred_operations": 0,
+  "apply_order": [],
+  "human_review_required": false,
+  "requires_apply_tool_support": [],
+  "generated_at_utc": "2026-05-15T12:18:16.013130+00:00"
+}

@@ -1,0 +1,30 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_zertifizierung.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:18:18.478649+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_zertifizierung\\patches\\controlled_vocabulary_zertifizierung.patch.jsonl",
+  "records": [
+    {
+      "id": "zertifizierung",
+      "line": 1,
+      "op": "noop_reviewed",
+      "reason": "Round 002 Zertifizierung+Programm+Tool+Software: 7+15+6+7 nodes, no duplicates, 8 orphans kept as proposed seed. Tool/Software qflow pair confirmed as deliberate dual-modeling (same product, two labels, cross-linked). Family accepted as-is.",
+      "status": "noop_reviewed"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_reviewed": 1,
+    "records": 1
+  }
+}

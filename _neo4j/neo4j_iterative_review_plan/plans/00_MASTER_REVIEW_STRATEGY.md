@@ -42,17 +42,28 @@ review/round_001/patch_manifest.json
 
 Review one controlled vocabulary family at a time.
 
-Recommended order:
+Recommended order (full list — extended past the original 8 in
+[`02_CONTROLLED_VOCABULARY_REVIEW_PLAN.md`](02_CONTROLLED_VOCABULARY_REVIEW_PLAN.md)):
 ```text
 1. Material + Materialgruppe
-2. Bauteiltyp + Bauteilebene
-3. Huerde + HuerdeKategorie
-4. Akteurrolle + Akteurtyp
-5. Bauobjektrolle + Bauobjektklasse
-6. Status + WiederverwendungsArt
-7. Stadt + Land
+2. Stadt + Land
+3. Bauteiltyp + Bauteilebene
+4. Huerde + HuerdeKategorie
+5. Akteurrolle + Akteurtyp
+6. Bauobjektrolle + Bauobjektklasse
+7. Status + WiederverwendungsArt
 8. Norm + PruefungNachweis + Leistungsanforderung
+9. Methode + Rueckbauverfahren + Aufbereitungsverfahren
+10. ZertifizierungBewertungssystem + Programm + Tool + Software
 ```
+
+**Round 002 executed:** 2026-05-15 — all 10 families plus a fresh global-audit
+baseline. Plan: [`_neo4j/review/ROUND_002_PLAN.md`](../../review/ROUND_002_PLAN.md).
+Baseline: [`_neo4j/review/round_002_baseline/`](../../review/round_002_baseline/).
+Output: 26 patch operations across 10 family folders (12 canonicalize/noop,
+14 merge_node), all UTF-8 LF and dry-run clean. Apply runner extended in
+the same round to support `merge_node`, `delete_node`, and 7 other ops
+(see [`apply_neo4j_review_patch.py`](../../../_scripts/apply_neo4j_review_patch.py)).
 
 ### Round 3 — Project content review
 

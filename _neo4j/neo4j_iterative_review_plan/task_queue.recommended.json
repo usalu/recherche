@@ -1,124 +1,86 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
+  "regenerated_at": "2026-05-15",
+  "regenerated_reason": "Round numbering aligned with master strategy + ROUND_002_PLAN. Previous version had round_002 = PROJECT_CONTENT_REVIEW and put FREEZE_RELEASE in round_004; both are off-by-one.",
   "recommended_rounds": [
     {
       "round": "round_001",
-      "tasks": [
-        {
-          "task_id": "r001_global_audit",
-          "task_type": "GLOBAL_AUDIT",
-          "chunk_size": "all_batches",
-          "priority": 1
-        },
-        {
-          "task_id": "r001_vocab_material",
-          "task_type": "VOCAB_REVIEW",
-          "scope": "Material + Materialgruppe",
-          "chunk_size": "max_100_terms",
-          "priority": 2
-        },
-        {
-          "task_id": "r001_vocab_bauteil",
-          "task_type": "VOCAB_REVIEW",
-          "scope": "Bauteiltyp + Bauteilebene",
-          "chunk_size": "max_100_terms",
-          "priority": 3
-        },
-        {
-          "task_id": "r001_vocab_huerde",
-          "task_type": "VOCAB_REVIEW",
-          "scope": "Huerde + HuerdeKategorie",
-          "chunk_size": "max_100_terms",
-          "priority": 4
-        }
+      "task_type_summary": "GLOBAL_AUDIT + initial vocab pass",
+      "status": "complete (pre-2026-05-15 corpus); re-baselined under round_002_baseline",
+      "artifacts": [
+        "_neo4j/review/round_001/global_audit_report.md",
+        "_neo4j/review/round_001_completion/",
+        "_neo4j/review/round_001_apply_test/needs_review.patch.jsonl"
       ]
     },
     {
       "round": "round_002",
+      "task_type_summary": "VOCAB_REVIEW — one controlled-vocabulary family at a time",
+      "status": "complete",
+      "plan": "_neo4j/review/ROUND_002_PLAN.md",
+      "baseline": "_neo4j/review/round_002_baseline/",
       "tasks": [
-        {
-          "task_id": "r002_project_review_001_005",
-          "task_type": "PROJECT_CONTENT_REVIEW",
-          "scope": "first 5 project chunks",
-          "chunk_size": "5_projects",
-          "priority": 1
-        },
-        {
-          "task_id": "r002_project_review_006_010",
-          "task_type": "PROJECT_CONTENT_REVIEW",
-          "scope": "next 5 project chunks",
-          "chunk_size": "5_projects",
-          "priority": 2
-        },
-        {
-          "task_id": "r002_continue_project_reviews",
-          "task_type": "PROJECT_CONTENT_REVIEW",
-          "scope": "continue in chunks of 5",
-          "chunk_size": "5_projects",
-          "priority": 3
-        }
+        {"task_id": "r002_baseline", "task_type": "GLOBAL_AUDIT", "scope": "post-2026-05-15 corpus baseline", "artifact": "_neo4j/review/round_002_baseline/", "status": "done"},
+        {"task_id": "r002_vocab_material", "task_type": "VOCAB_REVIEW", "scope": "Material + Materialgruppe", "artifact": "_neo4j/review/round_002_vocab_material/ (v2)", "status": "done"},
+        {"task_id": "r002_vocab_stadt_land", "task_type": "VOCAB_REVIEW", "scope": "Stadt + Land", "artifact": "_neo4j/review/round_002_vocab_stadt_land/ (v2)", "status": "done"},
+        {"task_id": "r002_vocab_bauteiltyp", "task_type": "VOCAB_REVIEW", "scope": "Bauteiltyp + Bauteilebene", "artifact": "_neo4j/review/round_002_vocab_bauteiltyp/", "status": "done"},
+        {"task_id": "r002_vocab_huerde", "task_type": "VOCAB_REVIEW", "scope": "Huerde + HuerdeKategorie", "artifact": "_neo4j/review/round_002_vocab_huerde/", "status": "done"},
+        {"task_id": "r002_vocab_akteur_vocab", "task_type": "VOCAB_REVIEW", "scope": "Akteurrolle + Akteurtyp", "artifact": "_neo4j/review/round_002_vocab_akteur_vocab/", "status": "done"},
+        {"task_id": "r002_vocab_bauobjekt", "task_type": "VOCAB_REVIEW", "scope": "Bauobjektrolle + Bauobjektklasse", "artifact": "_neo4j/review/round_002_vocab_bauobjekt/", "status": "done"},
+        {"task_id": "r002_vocab_status_wva", "task_type": "VOCAB_REVIEW", "scope": "Status + WiederverwendungsArt", "artifact": "_neo4j/review/round_002_vocab_status_wva/", "status": "done"},
+        {"task_id": "r002_vocab_norm_pruefung", "task_type": "VOCAB_REVIEW", "scope": "Norm + PruefungNachweis + Leistungsanforderung", "artifact": "_neo4j/review/round_002_vocab_norm_pruefung/", "status": "done"},
+        {"task_id": "r002_vocab_methode_rueckbau", "task_type": "VOCAB_REVIEW", "scope": "Methode + Rueckbauverfahren + Aufbereitungsverfahren", "artifact": "_neo4j/review/round_002_vocab_methode_rueckbau/", "status": "done"},
+        {"task_id": "r002_vocab_zertifizierung", "task_type": "VOCAB_REVIEW", "scope": "ZertifizierungBewertungssystem + Programm + Tool + Software", "artifact": "_neo4j/review/round_002_vocab_zertifizierung/", "status": "done"}
       ]
     },
     {
       "round": "round_003",
+      "task_type_summary": "PROJECT_CONTENT_REVIEW — five projects per agent run",
+      "status": "pending",
       "tasks": [
-        {
-          "task_id": "r003_query_direct_structural_reuse",
-          "task_type": "QUERY_REVIEW",
-          "scope": "direct structural reuse",
-          "chunk_size": "top_25_rows",
-          "priority": 1
-        },
-        {
-          "task_id": "r003_query_donor_receiver",
-          "task_type": "QUERY_REVIEW",
-          "scope": "donor receiver completeness",
-          "chunk_size": "top_25_rows",
-          "priority": 2
-        },
-        {
-          "task_id": "r003_query_huerden",
-          "task_type": "QUERY_REVIEW",
-          "scope": "hurdle categories",
-          "chunk_size": "top_25_rows",
-          "priority": 3
-        }
+        {"task_id": "r003_project_review_chunk_a", "task_type": "PROJECT_CONTENT_REVIEW", "scope": "first 5 projects", "chunk_size": "5_projects", "priority": 1},
+        {"task_id": "r003_project_review_chunk_b", "task_type": "PROJECT_CONTENT_REVIEW", "scope": "next 5 projects", "chunk_size": "5_projects", "priority": 2},
+        {"task_id": "r003_project_review_continued", "task_type": "PROJECT_CONTENT_REVIEW", "scope": "continue in chunks of 5 (15 chunks to cover 75 projects)", "chunk_size": "5_projects", "priority": 3},
+        {"task_id": "r003_bauwerk_canonicalization", "task_type": "PROJECT_CONTENT_REVIEW", "scope": "3 Bauwerk dups routed from round_001 needs_review: bw_halle_2_ringberlin, bw_lysbuechel_parkhaus_basel, bw_tampere_1980s_office_donor", "priority": 4},
+        {"task_id": "r003_projekt_dup_pair", "task_type": "PROJECT_CONTENT_REVIEW", "scope": "p_reallabor_be_ware / p_reallabor_b_e_ware duplicate concept pair (live-graph)", "priority": 5}
       ]
     },
     {
       "round": "round_004",
+      "task_type_summary": "QUERY_REVIEW — one research-query theme per run, top 25 suspicious rows",
+      "status": "pending",
       "tasks": [
-        {
-          "task_id": "r004_global_audit_after_patches",
-          "task_type": "GLOBAL_AUDIT",
-          "chunk_size": "all_batches",
-          "priority": 1
-        },
-        {
-          "task_id": "r004_freeze_release",
-          "task_type": "FREEZE_RELEASE",
-          "chunk_size": "all_accepted_patches",
-          "priority": 2
-        }
+        {"task_id": "r004_query_direct_structural_reuse", "task_type": "QUERY_REVIEW", "scope": "direct structural reuse", "chunk_size": "top_25_rows", "priority": 1},
+        {"task_id": "r004_query_donor_receiver", "task_type": "QUERY_REVIEW", "scope": "donor receiver completeness", "chunk_size": "top_25_rows", "priority": 2},
+        {"task_id": "r004_query_huerden", "task_type": "QUERY_REVIEW", "scope": "hurdle categories", "chunk_size": "top_25_rows", "priority": 3},
+        {"task_id": "r004_query_concrete_precast_reuse", "task_type": "QUERY_REVIEW", "scope": "concrete / precast reuse", "chunk_size": "top_25_rows", "priority": 4},
+        {"task_id": "r004_query_steel_reuse", "task_type": "QUERY_REVIEW", "scope": "steel reuse", "chunk_size": "top_25_rows", "priority": 5},
+        {"task_id": "r004_query_timber_reuse", "task_type": "QUERY_REVIEW", "scope": "timber reuse", "chunk_size": "top_25_rows", "priority": 6}
+      ]
+    },
+    {
+      "round": "round_005",
+      "task_type_summary": "FREEZE_RELEASE — final validation + release manifest",
+      "status": "pending",
+      "tasks": [
+        {"task_id": "r005_global_audit_after_apply", "task_type": "GLOBAL_AUDIT", "scope": "post-apply state", "chunk_size": "all", "priority": 1},
+        {"task_id": "r005_freeze_release", "task_type": "FREEZE_RELEASE", "scope": "all accepted patches across rounds 002–004", "priority": 2}
       ]
     }
   ],
-  "chunk_rules": {
-    "project_content_review": {
-      "preferred_projects": 5,
-      "max_projects": 6,
-      "complex_project_max": 3
-    },
-    "controlled_vocabulary_review": {
-      "preferred_families_per_run": 1,
-      "max_terms": 100
-    },
-    "query_review": {
-      "themes_per_run": 1,
-      "max_rows": 25
-    },
-    "patch_file": {
-      "max_operations": 250
+  "parallel_tracks": [
+    {
+      "track": "actor_registry_canonicalization",
+      "task_type_summary": "Canonicalize 11 a_* actor-organization nodes flagged in round-001 needs_review",
+      "status": "pending",
+      "input": "_neo4j/processed/actor_registry/conflicts/node_conflicts.jsonl + _neo4j/review/round_001_apply_test/needs_review.patch.jsonl (filtered to a_*)",
+      "note": "Out of scope for round_002 vocab review per ROUND_002_PLAN §4.3. Akteur-content is project content."
     }
+  ],
+  "chunk_rules": {
+    "project_content_review": {"preferred_projects": 5, "max_projects": 6, "complex_project_max": 3},
+    "controlled_vocabulary_review": {"preferred_families_per_run": 1, "max_terms": 100},
+    "query_review": {"themes_per_run": 1, "max_rows": 25},
+    "patch_file": {"max_operations": 250}
   }
 }
