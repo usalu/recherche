@@ -1,6 +1,6 @@
-# Patch Apply Report: controlled_vocabulary_material_v2.patch.jsonl
+# Patch Apply Report: controlled_vocabulary_akteur_vocab.patch.jsonl
 
-Generated: 2026-05-15T12:05:11.254159+00:00
+Generated: 2026-05-15T12:11:47.409683+00:00
 Mode: dry-run
 Database: mit-bestand
 
@@ -8,17 +8,16 @@ Database: mit-bestand
 
 | Metric | Value |
 | --- | --- |
-| records | 2 |
+| records | 8 |
 | load_errors | 0 |
-| noop_reviewed | 1 |
-| noop_same | 1 |
+| would_merge | 8 |
 
 ## Counts
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
 | before | 2170 | 15843 |
-| after_expected | 2170 | 15843 |
+| after_expected | 2162 | 15843 |
 
 ## Rejected / Needs Review
 

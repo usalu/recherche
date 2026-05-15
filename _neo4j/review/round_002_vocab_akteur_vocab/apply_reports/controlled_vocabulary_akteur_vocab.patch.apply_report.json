@@ -1,0 +1,375 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_akteur_vocab.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2162,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:11:47.409683+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_akteur_vocab\\patches\\controlled_vocabulary_akteur_vocab.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Bauausfuehrung"
+          ],
+          "id": "ar_bauausfuehrung_fertigung",
+          "name": "Bauausfuehrung_Fertigung"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_bauausfuehrung",
+            "name": "Bauausfuehrung"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_bauausfuehrung_fertigung",
+            "name": "Bauausfuehrung_Fertigung"
+          }
+        }
+      },
+      "from": "ar_bauausfuehrung",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_bauausfuehrung_fertigung"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Materiallieferant"
+          ],
+          "id": "ar_materiallieferung_markt",
+          "name": "Materiallieferung_Markt"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_materiallieferant",
+            "name": "Materiallieferant"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_materiallieferung_markt",
+            "name": "Materiallieferung_Markt"
+          }
+        }
+      },
+      "from": "ar_materiallieferant",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Oeffentliche_Hand"
+          ],
+          "id": "ar_oeffentliche_hand_foerderung",
+          "name": "Oeffentliche_Hand_Foerderung"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_oeffentliche_hand",
+            "name": "Oeffentliche_Hand"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_oeffentliche_hand_foerderung",
+            "name": "Oeffentliche_Hand_Foerderung"
+          }
+        }
+      },
+      "from": "ar_oeffentliche_hand",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_oeffentliche_hand_foerderung"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Projektbeteiligte_Unbestimmt"
+          ],
+          "id": "ar_unbestimmt",
+          "name": "Unbestimmt"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_projektbeteiligte_unbestimmt",
+            "name": "Projektbeteiligte_Unbestimmt"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_unbestimmt",
+            "name": "Unbestimmt"
+          }
+        }
+      },
+      "from": "ar_projektbeteiligte_unbestimmt",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 4,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_unbestimmt"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Rueckbau_Demontage"
+          ],
+          "id": "ar_rueckbau_bauteilernte_logistik",
+          "name": "Rueckbau_Bauteilernte_Logistik"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_rueckbau_demontage",
+            "name": "Rueckbau_Demontage"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_rueckbau_bauteilernte_logistik",
+            "name": "Rueckbau_Bauteilernte_Logistik"
+          }
+        }
+      },
+      "from": "ar_rueckbau_demontage",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 5,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Betreiber_Nutzer"
+          ],
+          "id": "ar_betrieb_nutzung",
+          "name": "Betrieb_Nutzung"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_betreiber_nutzer",
+            "name": "Betreiber_Nutzer"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_betrieb_nutzung",
+            "name": "Betrieb_Nutzung"
+          }
+        }
+      },
+      "from": "ar_betreiber_nutzer",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 6,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 2,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_betrieb_nutzung"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurtyp"
+        ],
+        "properties": {
+          "aliases": [
+            "NGO_Netzwerk"
+          ],
+          "id": "at_ngo_verband_netzwerk",
+          "name": "NGO_Verband_Netzwerk"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurtyp"
+          ],
+          "properties": {
+            "id": "at_ngo_netzwerk",
+            "name": "NGO_Netzwerk"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurtyp"
+          ],
+          "properties": {
+            "id": "at_ngo_verband_netzwerk",
+            "name": "NGO_Verband_Netzwerk"
+          }
+        }
+      },
+      "from": "at_ngo_netzwerk",
+      "label_union": [
+        "Akteurtyp"
+      ],
+      "line": 7,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "at_ngo_verband_netzwerk"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurtyp"
+        ],
+        "properties": {
+          "aliases": [
+            "Verband_Kammer"
+          ],
+          "id": "at_ngo_verband_netzwerk",
+          "name": "NGO_Verband_Netzwerk"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurtyp"
+          ],
+          "properties": {
+            "id": "at_verband_kammer",
+            "name": "Verband_Kammer"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurtyp"
+          ],
+          "properties": {
+            "id": "at_ngo_verband_netzwerk",
+            "name": "NGO_Verband_Netzwerk"
+          }
+        }
+      },
+      "from": "at_verband_kammer",
+      "label_union": [
+        "Akteurtyp"
+      ],
+      "line": 8,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "at_ngo_verband_netzwerk"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 8,
+    "would_merge": 8
+  }
+}

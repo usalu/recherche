@@ -1,0 +1,28 @@
+{
+  "review_round": "round_002_vocab_norm_pruefung",
+  "task_type": "VOCAB_REVIEW",
+  "scope": "Norm + PruefungNachweis + Leistungsanforderung",
+  "input_files": [
+    "live Neo4j mit-bestand Norm + PruefungNachweis + Leistungsanforderung query",
+    "_neo4j/processed/projects/vocabulary/controlled_vocabulary.seed.kg.jsonl",
+    "_neo4j/review/round_002_baseline/global_audit_report.md",
+    "_neo4j/review/round_001_apply_test/needs_review.patch.jsonl"
+  ],
+  "output_files": [
+    "_neo4j/review/round_002_vocab_norm_pruefung/controlled_vocabulary_review_norm_pruefung.md",
+    "_neo4j/review/round_002_vocab_norm_pruefung/patches/controlled_vocabulary_norm_pruefung.patch.jsonl"
+  ],
+  "summary": {
+    "patch_operations": 3,
+    "blockers": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 3,
+    "info": 0
+  },
+  "deferred_operations": 0,
+  "apply_order": [],
+  "human_review_required": false,
+  "requires_apply_tool_support": [],
+  "generated_at_utc": "2026-05-15T12:15:16.297963+00:00"
+}

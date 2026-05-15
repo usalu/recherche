@@ -1,0 +1,146 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_norm_pruefung.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2168,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:15:18.838372+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_norm_pruefung\\patches\\controlled_vocabulary_norm_pruefung.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "aliases": [
+            "SCI P427 Structural Steel Reuse"
+          ],
+          "id": "norm_sci_p427",
+          "name": "SCI P427 protocol",
+          "note": "Prüfprotokoll für reclaimed steel laut ASBP; keine weiteren Normnummern ergänzt."
+        }
+      },
+      "before": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "aliases": [
+            "SCI P427 Structural Steel Reuse"
+          ],
+          "id": "norm_sci_p427",
+          "name": "SCI P427 protocol",
+          "note": "Prüfprotokoll für reclaimed steel laut ASBP; keine weiteren Normnummern ergänzt."
+        }
+      },
+      "id": "norm_sci_p427",
+      "line": 1,
+      "op": "canonicalize_node",
+      "status": "noop_same"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "aliases": [
+            "CROW-CUR Guideline 4:2023"
+          ],
+          "definition": "Dutch guideline for reuse of structural precast concrete / hollow-core slabs; used as project-relevant guidance where explicitly cited.",
+          "id": "norm_crow_cur_4_2023",
+          "name": "CROW-CUR Guideline 4:2023 Reuse of hollow core slabs"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Norm"
+          ],
+          "properties": {
+            "definition": "Dutch guideline for reuse of structural precast concrete / hollow-core slabs; used as project-relevant guidance where explicitly cited.",
+            "id": "norm_crow_cur_guideline_4_2023",
+            "name": "CROW-CUR Guideline 4:2023"
+          }
+        },
+        "to": {
+          "labels": [
+            "Norm"
+          ],
+          "properties": {
+            "id": "norm_crow_cur_4_2023",
+            "name": "CROW-CUR Guideline 4:2023 Reuse of hollow core slabs"
+          }
+        }
+      },
+      "from": "norm_crow_cur_guideline_4_2023",
+      "label_union": [
+        "Norm"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 3,
+      "status": "would_merge",
+      "to": "norm_crow_cur_4_2023"
+    },
+    {
+      "after": {
+        "labels": [
+          "Leistungsanforderung"
+        ],
+        "properties": {
+          "aliases": [
+            "Brandschutzanforderung"
+          ],
+          "id": "la_brandschutz",
+          "name": "Brandschutz"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Leistungsanforderung"
+          ],
+          "properties": {
+            "id": "la_brandschutzanforderung",
+            "name": "Brandschutzanforderung"
+          }
+        },
+        "to": {
+          "labels": [
+            "Leistungsanforderung"
+          ],
+          "properties": {
+            "id": "la_brandschutz",
+            "name": "Brandschutz"
+          }
+        }
+      },
+      "from": "la_brandschutzanforderung",
+      "label_union": [
+        "Leistungsanforderung"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "la_brandschutz"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_same": 1,
+    "records": 3,
+    "would_merge": 2
+  }
+}

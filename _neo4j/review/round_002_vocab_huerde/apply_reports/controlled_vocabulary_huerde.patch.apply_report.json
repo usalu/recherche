@@ -1,0 +1,30 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_huerde.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:09:57.292881+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_huerde\\patches\\controlled_vocabulary_huerde.patch.jsonl",
+  "records": [
+    {
+      "id": "hk_unklar",
+      "line": 1,
+      "op": "noop_reviewed",
+      "reason": "Round 002 Huerde+HuerdeKategorie: orphan parent category with 0 Huerde children. Kept as reserved fallback.",
+      "status": "noop_reviewed"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_reviewed": 1,
+    "records": 1
+  }
+}

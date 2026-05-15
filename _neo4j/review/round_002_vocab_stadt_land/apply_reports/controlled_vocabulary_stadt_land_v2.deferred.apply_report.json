@@ -1,0 +1,195 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_stadt_land_v2.deferred.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2167,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:05:14.263382+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_stadt_land\\patches\\controlled_vocabulary_stadt_land_v2.deferred.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "aliases": [
+            "Vereinigtes Koenigreich"
+          ],
+          "id": "land_vereinigtes_koenigreich",
+          "name": "Vereinigtes Königreich",
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Land"
+          ],
+          "properties": {
+            "id": "land_vereinigtes_konigreich",
+            "name": "Vereinigtes Königreich"
+          }
+        },
+        "to": {
+          "labels": [
+            "Land"
+          ],
+          "properties": {
+            "aliases": [
+              "Vereinigtes Koenigreich"
+            ],
+            "id": "land_vereinigtes_koenigreich",
+            "name": "Vereinigtes Königreich",
+            "source_scope": "actor_registry"
+          }
+        }
+      },
+      "from": "land_vereinigtes_konigreich",
+      "label_union": [
+        "Land"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 5,
+      "rel_outbound_to_redirect": 2,
+      "status": "would_merge",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "aliases": [
+            "Vereinigtes Koenigreich",
+            "United Kingdom"
+          ],
+          "id": "land_vereinigtes_koenigreich",
+          "name": "Vereinigtes Königreich",
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Land"
+          ],
+          "properties": {
+            "id": "land_united_kingdom",
+            "name": "United Kingdom"
+          }
+        },
+        "to": {
+          "labels": [
+            "Land"
+          ],
+          "properties": {
+            "aliases": [
+              "Vereinigtes Koenigreich"
+            ],
+            "id": "land_vereinigtes_koenigreich",
+            "name": "Vereinigtes Königreich",
+            "source_scope": "actor_registry"
+          }
+        }
+      },
+      "from": "land_united_kingdom",
+      "label_union": [
+        "Land"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 2,
+      "status": "would_merge",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_daenemark",
+          "name": "Dänemark",
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Land"
+          ],
+          "properties": {
+            "id": "land_danemark",
+            "name": "Dänemark"
+          }
+        },
+        "to": {
+          "labels": [
+            "Land"
+          ],
+          "properties": {
+            "id": "land_daenemark",
+            "name": "Dänemark",
+            "source_scope": "actor_registry"
+          }
+        }
+      },
+      "from": "land_danemark",
+      "label_union": [
+        "Land"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 6,
+      "rel_outbound_to_redirect": 3,
+      "status": "would_merge",
+      "to": "land_daenemark"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "aliases": [
+            "Daenemark"
+          ],
+          "id": "land_daenemark",
+          "name": "Dänemark",
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_daenemark",
+          "name": "Dänemark",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_daenemark",
+      "line": 4,
+      "op": "canonicalize_node",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 4,
+    "would_merge": 3,
+    "would_update": 1
+  }
+}

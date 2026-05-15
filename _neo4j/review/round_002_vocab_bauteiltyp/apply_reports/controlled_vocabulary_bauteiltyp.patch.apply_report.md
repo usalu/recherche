@@ -1,6 +1,6 @@
-# Patch Apply Report: controlled_vocabulary_material_v2.patch.jsonl
+# Patch Apply Report: controlled_vocabulary_bauteiltyp.patch.jsonl
 
-Generated: 2026-05-15T12:05:11.254159+00:00
+Generated: 2026-05-15T12:08:53.824168+00:00
 Mode: dry-run
 Database: mit-bestand
 
@@ -10,8 +10,7 @@ Database: mit-bestand
 | --- | --- |
 | records | 2 |
 | load_errors | 0 |
-| noop_reviewed | 1 |
-| noop_same | 1 |
+| noop_reviewed | 2 |
 
 ## Counts
 

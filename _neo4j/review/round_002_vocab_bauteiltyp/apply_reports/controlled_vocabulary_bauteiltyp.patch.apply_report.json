@@ -1,0 +1,37 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_bauteiltyp.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:08:53.824168+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_bauteiltyp\\patches\\controlled_vocabulary_bauteiltyp.patch.jsonl",
+  "records": [
+    {
+      "id": "Bauteiltyp",
+      "line": 1,
+      "op": "noop_reviewed",
+      "reason": "Round 002 Bauteiltyp+Bauteilebene: 15 canonical Bauteiltyp nodes, no duplicates, no orphans. Family accepted as-is.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "Bauteilebene",
+      "line": 2,
+      "op": "noop_reviewed",
+      "reason": "Round 002 Bauteiltyp+Bauteilebene: 6 Bauteilebene nodes with intentional granularity ladder, no duplicates, no orphans. Family accepted as-is.",
+      "status": "noop_reviewed"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_reviewed": 2,
+    "records": 2
+  }
+}

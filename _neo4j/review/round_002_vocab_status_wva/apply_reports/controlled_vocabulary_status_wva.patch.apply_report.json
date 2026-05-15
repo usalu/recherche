@@ -1,0 +1,67 @@
+{
+  "confirmation_required": "APPLY controlled_vocabulary_status_wva.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2169,
+    "relationships": 15843
+  },
+  "counts_before": {
+    "nodes": 2170,
+    "relationships": 15843
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-15T12:13:40.784848+00:00",
+  "patch": "_neo4j\\review\\round_002_vocab_status_wva\\patches\\controlled_vocabulary_status_wva.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Status"
+        ],
+        "properties": {
+          "aliases": [
+            "Prototypisch"
+          ],
+          "id": "status_prototyp",
+          "name": "Prototyp"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Status"
+          ],
+          "properties": {
+            "id": "status_prototypisch",
+            "name": "Prototypisch"
+          }
+        },
+        "to": {
+          "labels": [
+            "Status"
+          ],
+          "properties": {
+            "id": "status_prototyp",
+            "name": "Prototyp"
+          }
+        }
+      },
+      "from": "status_prototypisch",
+      "label_union": [
+        "Status"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 3,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "status_prototyp"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_merge": 1
+  }
+}

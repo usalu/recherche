@@ -1,0 +1,27 @@
+{
+  "review_round": "round_002_vocab_status_wva",
+  "task_type": "VOCAB_REVIEW",
+  "scope": "Status + WiederverwendungsArt",
+  "input_files": [
+    "live Neo4j mit-bestand Status + WiederverwendungsArt query",
+    "_neo4j/processed/projects/vocabulary/controlled_vocabulary.seed.kg.jsonl",
+    "_neo4j/review/round_002_baseline/global_audit_report.md"
+  ],
+  "output_files": [
+    "_neo4j/review/round_002_vocab_status_wva/controlled_vocabulary_review_status_wva.md",
+    "_neo4j/review/round_002_vocab_status_wva/patches/controlled_vocabulary_status_wva.patch.jsonl"
+  ],
+  "summary": {
+    "patch_operations": 1,
+    "blockers": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1,
+    "info": 0
+  },
+  "deferred_operations": 0,
+  "apply_order": [],
+  "human_review_required": false,
+  "requires_apply_tool_support": [],
+  "generated_at_utc": "2026-05-15T12:13:38.286359+00:00"
+}

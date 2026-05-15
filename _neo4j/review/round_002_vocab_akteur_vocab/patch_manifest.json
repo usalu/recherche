@@ -1,0 +1,34 @@
+{
+  "review_round": "round_002_vocab_akteur_vocab",
+  "task_type": "VOCAB_REVIEW",
+  "scope": "Akteurrolle + Akteurtyp",
+  "input_files": [
+    "live Neo4j mit-bestand Akteurrolle + Akteurtyp query",
+    "_neo4j/processed/projects/vocabulary/controlled_vocabulary.seed.kg.jsonl",
+    "_neo4j/review/round_002_baseline/global_audit_report.md"
+  ],
+  "output_files": [
+    "_neo4j/review/round_002_vocab_akteur_vocab/controlled_vocabulary_review_akteur_vocab.md",
+    "_neo4j/review/round_002_vocab_akteur_vocab/patches/controlled_vocabulary_akteur_vocab.patch.jsonl"
+  ],
+  "summary": {
+    "patch_operations": 8,
+    "blockers": 0,
+    "high": 0,
+    "medium": 6,
+    "low": 2,
+    "info": 0
+  },
+  "deferred_operations": 0,
+  "apply_order": [],
+  "human_review_required": true,
+  "needs_review_human": [
+    "ar_architektur",
+    "ar_reuse_beratung",
+    "ar_nachhaltigkeitsberatung",
+    "ar_tragwerksplanung",
+    "ar_pruefung_qualitaetssicherung"
+  ],
+  "requires_apply_tool_support": [],
+  "generated_at_utc": "2026-05-15T12:11:44.756145+00:00"
+}
