@@ -1,5 +1,10 @@
 """Run the Round 001 technical review for the current Neo4j JSONL build.
 
+DEPRECATED 2026-05-15: superseded by `run_neo4j_round002_baseline.py`.
+This script still reads from the archived `_neo4j/batch/` tree and reflects the
+pre-cleanup 20-batch corpus. It is preserved as the reproducible record of the
+round-001 audit. Do not run it against the current state.
+
 This script is intentionally read-only for published batch exports. It writes
 review outputs under `_neo4j/review/round_001/`:
 

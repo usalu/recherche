@@ -1,0 +1,30 @@
+{
+  "review_round": "round_002_vocab_stadt_land_v2",
+  "task_type": "VOCAB_REVIEW",
+  "scope": "Stadt + Land",
+  "supersedes": "_neo4j/review/round_002_vocab_stadt_land/patch_manifest.json",
+  "input_files": [
+    "live Neo4j mit-bestand Stadt/Land query",
+    "_neo4j/review/round_002_baseline/global_audit_report.md"
+  ],
+  "output_files": [
+    "_neo4j/review/round_002_vocab_stadt_land/controlled_vocabulary_review_stadt_land_v2.md",
+    "_neo4j/review/round_002_vocab_stadt_land/patches/controlled_vocabulary_stadt_land_v2.patch.jsonl",
+    "_neo4j/review/round_002_vocab_stadt_land/patches/controlled_vocabulary_stadt_land_v2.deferred.jsonl"
+  ],
+  "summary": {
+    "patch_operations": 1,
+    "blockers": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 1,
+    "info": 0
+  },
+  "deferred_operations": 4,
+  "apply_order": [],
+  "human_review_required": true,
+  "requires_apply_tool_support": [
+    "merge_node"
+  ],
+  "generated_at_utc": "2026-05-15T11:59:29.014060+00:00"
+}

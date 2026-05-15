@@ -1,12 +1,21 @@
 """Apply or dry-run a Neo4j review patch JSONL file.
 
 Supported operations:
-  - add_node           (id/labels/properties at root OR nested under 'record' key)
-  - set_node_properties
-  - canonicalize_node
-  - set_property       (single property: id + property + value)
-  - add_rel            (from + type + to + optional properties)
-  - noop_reviewed      (log-only, no DB write)
+  - add_node                 (id/labels/properties at root OR nested under 'record' key)
+  - set_node_properties      (id + properties dict)
+  - canonicalize_node        (id + canonical_name + aliases)
+  - set_property             (single property: id + property + value)
+  - add_rel                  (from + type + to + optional properties)
+  - noop_reviewed            (log-only, no DB write)
+  - merge_node               (from + to: redirect rels, union labels/props, then delete from)
+  - delete_node              (id; refused for Quelle/Datenqualitaet or nodes with BELEGT_IN)
+  - delete_rel               (id OR from/type/to)
+  - set_rel_properties       (id OR from/type/to + properties dict)
+  - remove_node_properties   (id + properties: list of keys to remove)
+  - remove_rel_properties    (id OR from/type/to + properties: list of keys)
+  - rename_property          (id + from + to; node-scoped property rename)
+  - move_property            (from_id + to_id + property; copy + remove)
+  - replace_rel_type         (from + old_type + to + new_type; rebuilds rel under new type)
 
 The default is a dry-run. Live mutation requires the exact phrase:
 
@@ -35,8 +44,21 @@ if str(_SCRIPTS) not in sys.path:
 from neo4j_env import repo_root, resolve_connection  # noqa: E402
 
 
-SUPPORTED_OPS = {"add_node", "set_node_properties", "canonicalize_node", "set_property", "add_rel", "noop_reviewed"}
+SUPPORTED_OPS = {
+    "add_node", "set_node_properties", "canonicalize_node", "set_property",
+    "add_rel", "noop_reviewed",
+    "merge_node", "delete_node", "delete_rel", "set_rel_properties",
+    "remove_node_properties", "remove_rel_properties",
+    "rename_property", "move_property", "replace_rel_type",
+}
 LABEL_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+PROP_KEY_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+
+
+def prop_key_safe(key: str) -> str:
+    if not PROP_KEY_RE.match(key):
+        raise ValueError(f"unsafe property key: {key!r}")
+    return key
 
 
 def json_safe(value: Any) -> Any:

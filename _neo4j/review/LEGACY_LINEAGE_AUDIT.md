@@ -72,6 +72,7 @@ Initial status:
 | `_scripts/merge_neo4j_schema_export_vocab.py` | merges schema with old `_database` inventory |
 | `_scripts/export_neo4j_schema.py` | still documents the old output location |
 | `_scripts/neo4j_graph_version.py` | still documents old `_database` storage |
+| `_scripts/run_neo4j_current_build_review.py` | reads the archived `_neo4j/batch/` tree. **Superseded** by `_scripts/run_neo4j_round002_baseline.py` (2026-05-15). Left in place as the reproducible record of the pre-cleanup round-001 audit; do not run against the current state. |
 
 ## Rule going forward
 
