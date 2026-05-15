@@ -1,12 +1,17 @@
-"""Helper for the round_002 family re-verification.
+"""Query the live Neo4j graph for one controlled-vocabulary family.
 
-Queries the live mit-bestand graph for a vocab family and emits:
+Emits, as a single JSON blob:
   - hub snapshot table (id, name, inbound count, sample inbound labels)
   - same-name duplicates
   - orphans (no inbound link)
   - missing parent links (for hierarchical families)
 
-Result is printed to stdout as JSON.
+Originally written for the round_002 vocab review (one family per run).
+Reusable for any round that needs a fresh per-family snapshot.
+
+Example:
+  python _scripts/query_vocab_family.py --labels Material,Materialgruppe \\
+      --parent Material:HAT_MATERIALGRUPPE:Materialgruppe
 """
 
 from __future__ import annotations
