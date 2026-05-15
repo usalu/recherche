@@ -777,7 +777,25 @@ def apply_record(session, record: dict, planned: dict) -> None:
     if op == "merge_node":
         from_id = record["from"]
         to_id = record["to"]
-        # 1. Redirect inbound rels from source onto target, preserving type and props.
+
+        def rewrite_id_inbound(rel_id: str, rel_type: str) -> str | None:
+            # id form: r_<x>__<TYPE>__<from_id>[suffix] → r_<x>__<TYPE>__<to_id>[suffix]
+            needle = f"__{rel_type}__{from_id}"
+            if not isinstance(rel_id, str) or needle not in rel_id:
+                return None
+            return rel_id.replace(needle, f"__{rel_type}__{to_id}", 1)
+
+        def rewrite_id_outbound(rel_id: str, rel_type: str) -> str | None:
+            # id form: r_<from_id>__<TYPE>__<x>[suffix] → r_<to_id>__<TYPE>__<x>[suffix]
+            needle = f"r_{from_id}__{rel_type}__"
+            if not isinstance(rel_id, str) or not rel_id.startswith(needle):
+                return None
+            return f"r_{to_id}__{rel_type}__" + rel_id[len(needle):]
+
+        # 1. Redirect inbound rels from source onto target. MERGE on structure
+        # (x)-[:TYPE]->(target). If MERGE creates a new rel, write the rewritten
+        # rel id so uniqueness constraints stay satisfied. If MERGE matches an
+        # existing rel, leave its id alone.
         inbound = list(
             session.run(
                 "MATCH (s {id: $from_id})<-[r]-(x) "
@@ -787,12 +805,26 @@ def apply_record(session, record: dict, planned: dict) -> None:
         )
         for row in inbound:
             rt = rel_type_safe(row["rt"])
+            props = json_safe(dict(row["rp"] or {}))
+            new_id = rewrite_id_inbound(props.get("id"), rt)
+            if new_id is not None:
+                props["id"] = new_id
+            elif "id" in props:
+                # Source id doesn't match the expected pattern — drop it so we
+                # don't carry forward a stale id that would also violate the
+                # uniqueness constraint.
+                props.pop("id")
+            on_create = {k: v for k, v in props.items() if k != "id" or new_id is not None}
             session.run(
                 f"MATCH (x {{id: $x_id}}), (t {{id: $to_id}}) "
-                f"MERGE (x)-[r2:`{rt}`]->(t) SET r2 += $props",
-                x_id=row["x_id"], to_id=to_id, props=json_safe(dict(row["rp"] or {})),
+                f"MERGE (x)-[r2:`{rt}`]->(t) "
+                "ON CREATE SET r2 = $props "
+                "ON MATCH SET r2 += $on_match",
+                x_id=row["x_id"], to_id=to_id,
+                props=on_create,
+                on_match={k: v for k, v in props.items() if k != "id"},
             ).consume()
-        # 2. Redirect outbound rels.
+        # 2. Redirect outbound rels with the same id-rewriting logic.
         outbound = list(
             session.run(
                 "MATCH (s {id: $from_id})-[r]->(x) "
@@ -802,10 +834,21 @@ def apply_record(session, record: dict, planned: dict) -> None:
         )
         for row in outbound:
             rt = rel_type_safe(row["rt"])
+            props = json_safe(dict(row["rp"] or {}))
+            new_id = rewrite_id_outbound(props.get("id"), rt)
+            if new_id is not None:
+                props["id"] = new_id
+            elif "id" in props:
+                props.pop("id")
+            on_create = {k: v for k, v in props.items() if k != "id" or new_id is not None}
             session.run(
                 f"MATCH (t {{id: $to_id}}), (x {{id: $x_id}}) "
-                f"MERGE (t)-[r2:`{rt}`]->(x) SET r2 += $props",
-                to_id=to_id, x_id=row["x_id"], props=json_safe(dict(row["rp"] or {})),
+                f"MERGE (t)-[r2:`{rt}`]->(x) "
+                "ON CREATE SET r2 = $props "
+                "ON MATCH SET r2 += $on_match",
+                to_id=to_id, x_id=row["x_id"],
+                props=on_create,
+                on_match={k: v for k, v in props.items() if k != "id"},
             ).consume()
         # 3. Union labels onto target.
         label_union = planned.get("label_union") or []
