@@ -133,10 +133,13 @@ def process_projects(input_root: Path, output_root: Path) -> None:
             for batch_id in batch_ids
             if batch_id.split("_")[1].isdigit()
         ]
-        if numeric_batches and max(numeric_batches) >= 15:
-            review_status = "pending_review"
+        if numeric_batches and max(numeric_batches) <= 15:
+            # User-confirmed corpus boundary established on 2026-05-15:
+            # batches 001-014 plus the replacement batch 015 derived from the
+            # old `gebaeude/` source-file inventory.
+            review_status = "accepted_user_confirmed"
         else:
-            review_status = "legacy_review_required"
+            review_status = "pending_review"
 
         provenance_rows.append(
             {
@@ -200,9 +203,10 @@ def process_projects(input_root: Path, output_root: Path) -> None:
         "",
         "## Review note",
         "",
-        "The project corpus descends from the retired folder-first workflow. "
-        "Files are organized here for review and replay, but remain `legacy_review_required` "
-        "until checked against the live Neo4j graph.",
+        "Batches `001`-`015` are the user-confirmed project corpus. "
+        "The surviving `batch_015` package is the 2026-05-15 replacement batch "
+        "for the five valid old-`gebaeude/` cases after the older thin 015 and "
+        "untrusted 016-020 late-batch tree were removed.",
     ]
     if hash_conflicts:
         report += ["", "## Hash conflicts", ""]

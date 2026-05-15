@@ -14,4 +14,8 @@ This folder contains cleaned project import payloads derived from the older proj
 
 ## Trust status
 
-This corpus descends from the retired folder-first workflow. It is organized for replay and review, but its files remain `legacy_review_required` or `pending_review` until checked against the live Neo4j graph.
+The retained project corpus is user-confirmed through `batch_015`.
+
+- `batch_001`-`batch_014`: original accepted project-batch chain.
+- `batch_015`: accepted 2026-05-15 replacement package for the final five valid old-`gebaeude/` cases.
+- old `batch_016`-`batch_020`: removed from the repo and live graph on 2026-05-15 after they failed the old-`gebaeude/` filename provenance rule.

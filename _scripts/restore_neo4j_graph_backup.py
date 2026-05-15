@@ -26,8 +26,10 @@ if str(_SCRIPTS) not in sys.path:
 from neo4j_env import resolve_connection  # noqa: E402
 
 
-LABEL_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
-REL_TYPE_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+# Keep the restore validator aligned with backup_neo4j_graph.py.  This graph
+# uses valid Unicode identifiers such as ``GEHÖRT_ZU``.
+LABEL_RE = re.compile(r"^[^\W\d]\w*$", re.UNICODE)
+REL_TYPE_RE = re.compile(r"^[^\W\d]\w*$", re.UNICODE)
 TEMP_KEY = "__restore_backup_key"
 
 

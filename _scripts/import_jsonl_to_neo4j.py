@@ -72,6 +72,23 @@ def _merge_rel(tx, record: dict) -> None:
 
     all_props = {"id": rel_id, **props}
 
+    # Relationship ids are globally unique in the live graph.  Imports may be
+    # replayed after actor-id reconciliation has redirected an existing
+    # relationship to canonical endpoints, so matching through the original
+    # endpoints can incorrectly attempt to create a duplicate id.  Reuse an
+    # existing relationship by id first; only create when the id is new.
+    existing = tx.run(
+        "MATCH ()-[r {id: $rel_id}]->() RETURN count(r) AS count",
+        rel_id=rel_id,
+    ).single()["count"]
+    if existing:
+        tx.run(
+            "MATCH ()-[r {id: $rel_id}]->() SET r += $props",
+            rel_id=rel_id,
+            props=all_props,
+        )
+        return
+
     cypher = (
         f"MATCH (a {{id: $from_id}}) "
         f"MATCH (b {{id: $to_id}}) "

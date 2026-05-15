@@ -27,8 +27,12 @@ if str(_SCRIPTS) not in sys.path:
 from neo4j_env import repo_root, resolve_connection  # noqa: E402
 
 
-LABEL_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
-REL_TYPE_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
+# Neo4j identifiers in this graph include German Unicode names such as
+# ``GEHÖRT_ZU``.  ``[^\W\d]`` means "a Unicode word character that is not a
+# digit", so this still rejects empty names and digit-prefixed identifiers
+# while allowing valid non-ASCII labels / relationship types.
+LABEL_RE = re.compile(r"^[^\W\d]\w*$", re.UNICODE)
+REL_TYPE_RE = re.compile(r"^[^\W\d]\w*$", re.UNICODE)
 
 
 def json_safe(value: Any) -> Any:
