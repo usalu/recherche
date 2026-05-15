@@ -296,7 +296,9 @@ def query_live_db() -> dict:
         "projects_no_component_or_work": (
             "MATCH (p:Projekt) "
             "WHERE NOT ((p)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe) "
-            "OR (p)-[:NUTZT_BAUWERK]->(:Bauwerk)) RETURN count(p) AS c"
+            "OR (p)-[:NUTZT_BAUWERK]->(:Bauwerk)) "
+            "AND coalesce(p.node_role, '') <> 'cross_reference_stub' "
+            "RETURN count(p) AS c"
         ),
         "bg": "MATCH (bg:Bauteilgruppe) RETURN count(bg) AS c",
         "bg_no_source": "MATCH (bg:Bauteilgruppe) WHERE NOT (bg)-[:BELEGT_IN]->(:Quelle) RETURN count(bg) AS c",
@@ -358,17 +360,21 @@ def query_live_db() -> dict:
                     "ORDER BY count DESC, type"
                 )
             ]
+            # Use MATCH-based queries (not db.labels() / db.relationshipTypes())
+            # so we exclude ghost entries: labels and rel types that linger in
+            # the Neo4j 5 catalog after the last instance is deleted, until
+            # the next store compaction. Ghost entries have count == 0 and
+            # are not a real "live unknown" finding.
             result["all_relationship_types"] = [
-                row["relationshipType"]
+                row["type"]
                 for row in session.run(
-                    "CALL db.relationshipTypes() YIELD relationshipType "
-                    "RETURN relationshipType"
+                    "MATCH ()-[r]->() WITH DISTINCT type(r) AS type RETURN type"
                 )
             ]
             result["all_node_labels"] = [
-                row["label"]
+                row["lbl"]
                 for row in session.run(
-                    "CALL db.labels() YIELD label RETURN label"
+                    "MATCH (n) UNWIND labels(n) AS lbl WITH DISTINCT lbl RETURN lbl"
                 )
             ]
 
@@ -549,11 +555,14 @@ def run(round_dir: Path) -> dict:
     bg_no_material_or_level: list[str] = []
     for node_id, (node_labels, _) in node_defs.items():
         outs = out_by_from.get(node_id, [])
+        variant_props = (node_variants.get(node_id) or [{}])[0].get("properties") or {}
+        node_role = variant_props.get("node_role")
         if node_labels == ("Projekt",):
             if not any(t == "BELEGT_IN" for t, _ in outs):
                 projects_no_source.append(node_id)
             if not any(t in {"HAT_BAUTEILGRUPPE", "NUTZT_BAUWERK"} for t, _ in outs):
-                projects_no_component_or_work.append(node_id)
+                if node_role != "cross_reference_stub":
+                    projects_no_component_or_work.append(node_id)
         if node_labels == ("Bauteilgruppe",):
             if not any(t == "BELEGT_IN" for t, _ in outs):
                 bg_no_source.append(node_id)

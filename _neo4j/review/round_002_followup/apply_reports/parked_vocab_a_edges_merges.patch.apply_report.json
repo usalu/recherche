@@ -1,0 +1,152 @@
+{
+  "confirmation_required": "APPLY parked_vocab_a_edges_merges.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2154,
+    "relationships": 15834
+  },
+  "counts_after_expected": {
+    "nodes": 2154,
+    "relationships": 15834
+  },
+  "counts_before": {
+    "nodes": 2156,
+    "relationships": 15840
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-15T15:14:27.864223+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\parked_vocab_a_edges_merges.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_awm_reused_glass_partitions_doors",
+        "properties": {
+          "id": "r_bg_awm_reused_glass_partitions_doors__NUTZT_MATERIAL__mat_metall"
+        },
+        "rel_internal_id": 6917609291989909556,
+        "to": "mat_metall",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_awm_reused_glass_partitions_doors",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_metall",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mat_metall",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_mat_metall__BELEGT_IN__q_awm_muenster_circular_office_md"
+        },
+        "rel_internal_id": 1153028157234741300,
+        "to": "q_awm_muenster_circular_office_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "mat_metall",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_awm_muenster_circular_office_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Architektur"
+          ],
+          "id": "ar_entwurf_planung",
+          "name": "Entwurf_Planung"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_architektur",
+            "name": "Architektur"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_entwurf_planung",
+            "name": "Entwurf_Planung"
+          }
+        }
+      },
+      "from": "ar_architektur",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 5,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_entwurf_planung"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "aliases": [
+            "Pruefung_Qualitaetssicherung"
+          ],
+          "id": "ar_fachplanung_nachweis",
+          "name": "Fachplanung_Nachweis"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_pruefung_qualitaetssicherung",
+            "name": "Pruefung_Qualitaetssicherung"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteurrolle"
+          ],
+          "properties": {
+            "id": "ar_fachplanung_nachweis",
+            "name": "Fachplanung_Nachweis"
+          }
+        }
+      },
+      "from": "ar_pruefung_qualitaetssicherung",
+      "label_union": [
+        "Akteurrolle"
+      ],
+      "line": 4,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 0,
+      "status": "would_merge",
+      "to": "ar_fachplanung_nachweis"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 4,
+    "would_delete_rel": 2,
+    "would_merge": 2
+  }
+}

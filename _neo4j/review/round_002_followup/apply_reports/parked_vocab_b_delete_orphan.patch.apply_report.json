@@ -1,0 +1,44 @@
+{
+  "confirmation_required": "APPLY parked_vocab_b_delete_orphan.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2153,
+    "relationships": 15833
+  },
+  "counts_after_expected": {
+    "nodes": 2153,
+    "relationships": 15833
+  },
+  "counts_before": {
+    "nodes": 2154,
+    "relationships": 15834
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-15T15:14:30.542097+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\parked_vocab_b_delete_orphan.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "labels": [
+          "Material"
+        ],
+        "properties": {
+          "id": "mat_metall",
+          "name": "Metall",
+          "note": "Generic metal material where exact metal is unknown"
+        }
+      },
+      "id": "mat_metall",
+      "line": 1,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 1,
+      "status": "would_delete_node"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_delete_node": 1
+  }
+}

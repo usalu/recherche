@@ -1,0 +1,228 @@
+{
+  "confirmation_required": "APPLY actor_canonicalize.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2150,
+    "relationships": 15829
+  },
+  "counts_after_expected": {
+    "nodes": 2150,
+    "relationships": 15829
+  },
+  "counts_before": {
+    "nodes": 2153,
+    "relationships": 15833
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-15T15:18:14.978057+00:00",
+  "patch": "_neo4j\\review\\actor_registry_canonicalization\\patches\\actor_canonicalize.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Cleveland Steel and Tubes"
+          ],
+          "id": "cleveland_steel_tubes",
+          "name": "Cleveland Steel & Tubes"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "cleveland_steel_and_tubes",
+            "name": "Cleveland Steel and Tubes"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "aliases": [
+              "Cleveland Steel and Tubes"
+            ],
+            "id": "cleveland_steel_tubes",
+            "name": "Cleveland Steel & Tubes"
+          }
+        }
+      },
+      "from": "cleveland_steel_and_tubes",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 10,
+      "status": "would_merge",
+      "to": "cleveland_steel_tubes"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Cleveland Steel and Tubes"
+          ],
+          "id": "cleveland_steel_tubes",
+          "name": "Cleveland Steel & Tubes"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "cleveland_steel",
+            "name": "Cleveland Steel & Tubes"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "aliases": [
+              "Cleveland Steel and Tubes"
+            ],
+            "id": "cleveland_steel_tubes",
+            "name": "Cleveland Steel & Tubes"
+          }
+        }
+      },
+      "from": "cleveland_steel",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 1,
+      "status": "would_merge",
+      "to": "cleveland_steel_tubes"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Rotor Deconstruction / RotorDC"
+          ],
+          "id": "rotor_dc",
+          "name": "Rotor DC"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "rotor_deconstruction",
+            "name": "Rotor Deconstruction / RotorDC"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "rotor_dc",
+            "name": "Rotor DC"
+          }
+        }
+      },
+      "from": "rotor_deconstruction",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 1,
+      "status": "would_merge",
+      "to": "rotor_dc"
+    },
+    {
+      "id": "arup",
+      "line": 4,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=Arup matches live state. Note: id arup lacks underscore separator; separate id-format rename track addresses this with 31 others.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "Bellastock",
+      "line": 5,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=Bellastock matches live state. Note: id Bellastock uppercase; separate id-format rename track.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "die_zusammenarbeiter",
+      "line": 6,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=Die Zusammenarbeiter matches live state.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "encore_heureux",
+      "line": 7,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=Encore Heureux matches live state.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "imd_raadgevende_ingenieurs",
+      "line": 8,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=IMd Raadgevende Ingenieurs matches live state.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "immobilien_basel_stadt",
+      "line": 9,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=Immobilien Basel-Stadt matches live state.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "lxsy_architektur",
+      "line": 10,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=LXSY Architektur matches live state.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "symmetrys",
+      "line": 11,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=Symmetrys matches live state. Note: id symmetrys lacks underscore; separate id-format rename track.",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "trnsfrm_eg",
+      "line": 12,
+      "op": "noop_reviewed",
+      "reason": "Round 002 followup: round_001 canonical_name=TRNSFRM eG matches live state.",
+      "status": "noop_reviewed"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_reviewed": 9,
+    "records": 12,
+    "would_merge": 3
+  }
+}

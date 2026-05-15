@@ -2,11 +2,13 @@
   "schema_version": "1.2-draft-actor-registry",
   "add_relationship_types": [
     "VERBUNDEN_MIT_AKTEUR",
-    "ASSOZIIERT_MIT_PROJEKT"
+    "ASSOZIIERT_MIT_PROJEKT",
+    "GEHÖRT_ZU"
   ],
   "notes": [
     "VERBUNDEN_MIT_AKTEUR connects a person to an organisation, office, network, institution, or other actor mentioned in the actor registry context.",
     "ASSOZIIERT_MIT_PROJEKT is a weak registry-derived project association and must not be treated as confirmed project participation.",
-    "Keep BETEILIGT_AN for project-file-confirmed participation only."
+    "Keep BETEILIGT_AN for project-file-confirmed participation only.",
+    "GEHÖRT_ZU models organizational hierarchy: a person/sub-org belongs to a parent organization, network, institution, or programme. Distinct from VERBUNDEN_MIT_AKTEUR (which is a softer, peer-style connection)."
   ]
 }

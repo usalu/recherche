@@ -1,0 +1,4 @@
+{"from": "bg_awm_reused_glass_partitions_doors", "op": "delete_rel", "reason": "Round 002 followup: drop unknown-quality NUTZT_MATERIAL frame edge; mat_glas remains correctly attached. Per user decision.", "severity": "MEDIUM", "to": "mat_metall", "type": "NUTZT_MATERIAL"}
+{"from": "mat_metall", "op": "delete_rel", "reason": "Round 002 followup: stale auto-generated BELEGT_IN, removed alongside the mat_metall node.", "severity": "MEDIUM", "to": "q_awm_muenster_circular_office_md", "type": "BELEGT_IN"}
+{"from": "ar_architektur", "op": "merge_node", "reason": "Round 002 followup: Architektur consolidated into Entwurf_Planung per user decision.", "severity": "MEDIUM", "to": "ar_entwurf_planung"}
+{"from": "ar_pruefung_qualitaetssicherung", "op": "merge_node", "reason": "Round 002 followup: QA role folded under technical-proof per user decision.", "severity": "LOW", "to": "ar_fachplanung_nachweis"}
