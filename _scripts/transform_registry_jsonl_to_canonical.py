@@ -234,23 +234,53 @@ def transform(input_path: Path, output_path: Path, id_map: dict[str, str]) -> tu
     records = [json.loads(ln) for ln in lines if ln.strip()]
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    nodes_written = rels_written = 0
 
-    with output_path.open("w", encoding="utf-8") as fh:
-        for rec in records:
-            if rec["record_type"] == "node":
-                result = _transform_node(rec, id_map)
-            elif rec["record_type"] == "rel":
-                result = _transform_rel(rec, id_map)
-            else:
-                result = rec  # pass through unknown record types
-
+    # Transform all records, preserving source order.
+    transformed: list[dict] = []
+    for rec in records:
+        if rec["record_type"] == "node":
+            transformed.append(_transform_node(rec, id_map))
+        elif rec["record_type"] == "rel":
+            result = _transform_rel(rec, id_map)
             if result is not None:
-                fh.write(json.dumps(result, ensure_ascii=False) + "\n")
-                if result["record_type"] == "node":
-                    nodes_written += 1
-                else:
-                    rels_written += 1
+                transformed.append(result)
+        else:
+            transformed.append(rec)  # pass through unknown record types
+
+    # Deduplicate rels by (from, type, to, scope).
+    # Batches generated with both old and new role names produce duplicate rels after
+    # remap (both old and new map to the same canonical target).  On collision, prefer
+    # the record whose rel id already ends with "__<canonical_to>" — i.e., the one
+    # that was already using the canonical name in the source id string.
+    _seen_rels: dict[tuple, int] = {}  # key -> index of winner in `transformed`
+    _skip: set[int] = set()
+    for i, rec in enumerate(transformed):
+        if rec["record_type"] != "rel":
+            continue
+        scope = (rec.get("properties") or {}).get("scope", "")
+        key = (rec["from"], rec["type"], rec["to"], scope)
+        if key not in _seen_rels:
+            _seen_rels[key] = i
+        else:
+            canonical_suffix = "__" + rec["to"]
+            winner_idx = _seen_rels[key]
+            if rec["id"].endswith(canonical_suffix) and not transformed[winner_idx]["id"].endswith(canonical_suffix):
+                # New record uses canonical name in id — promote it, skip old winner
+                _skip.add(winner_idx)
+                _seen_rels[key] = i
+            else:
+                _skip.add(i)
+
+    nodes_written = rels_written = 0
+    with output_path.open("w", encoding="utf-8") as fh:
+        for i, result in enumerate(transformed):
+            if i in _skip:
+                continue
+            fh.write(json.dumps(result, ensure_ascii=False) + "\n")
+            if result["record_type"] == "node":
+                nodes_written += 1
+            else:
+                rels_written += 1
 
     return nodes_written, rels_written
 
