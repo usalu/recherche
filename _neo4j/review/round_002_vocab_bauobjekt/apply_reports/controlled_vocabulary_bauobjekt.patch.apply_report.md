@@ -1,7 +1,7 @@
 # Patch Apply Report: controlled_vocabulary_bauobjekt.patch.jsonl
 
-Generated: 2026-05-15T12:12:42.744166+00:00
-Mode: dry-run
+Generated: 2026-05-15T14:50:11.769181+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -18,6 +18,7 @@ Database: mit-bestand
 | --- | --- | --- |
 | before | 2170 | 15843 |
 | after_expected | 2170 | 15843 |
+| after_actual | 2170 | 15843 |
 
 ## Rejected / Needs Review
 

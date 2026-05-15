@@ -1,7 +1,7 @@
 # Patch Apply Report: controlled_vocabulary_methode_rueckbau.patch.jsonl
 
-Generated: 2026-05-15T12:16:32.854031+00:00
-Mode: dry-run
+Generated: 2026-05-15T14:50:14.297181+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -18,6 +18,7 @@ Database: mit-bestand
 | --- | --- | --- |
 | before | 2170 | 15843 |
 | after_expected | 2170 | 15843 |
+| after_actual | 2170 | 15843 |
 
 ## Rejected / Needs Review
 

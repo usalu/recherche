@@ -1,7 +1,7 @@
 # Patch Apply Report: controlled_vocabulary_stadt_land_v2.deferred.jsonl
 
-Generated: 2026-05-15T12:05:14.263382+00:00
-Mode: dry-run
+Generated: 2026-05-15T14:54:16.263123+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -17,8 +17,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2170 | 15843 |
-| after_expected | 2167 | 15843 |
+| before | 2159 | 15841 |
+| after_expected | 2156 | 15840 |
+| after_actual | 2156 | 15840 |
 
 ## Rejected / Needs Review
 

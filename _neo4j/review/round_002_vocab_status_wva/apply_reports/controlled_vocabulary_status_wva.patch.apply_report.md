@@ -1,7 +1,7 @@
 # Patch Apply Report: controlled_vocabulary_status_wva.patch.jsonl
 
-Generated: 2026-05-15T12:13:40.784848+00:00
-Mode: dry-run
+Generated: 2026-05-15T14:54:10.255676+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2170 | 15843 |
-| after_expected | 2169 | 15843 |
+| before | 2168 | 15843 |
+| after_expected | 2167 | 15842 |
+| after_actual | 2167 | 15842 |
 
 ## Rejected / Needs Review
 

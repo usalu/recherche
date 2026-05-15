@@ -1,7 +1,7 @@
 # Patch Apply Report: controlled_vocabulary_material_v2.patch.jsonl
 
-Generated: 2026-05-15T12:05:11.254159+00:00
-Mode: dry-run
+Generated: 2026-05-15T14:50:40.425230+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -19,6 +19,7 @@ Database: mit-bestand
 | --- | --- | --- |
 | before | 2170 | 15843 |
 | after_expected | 2170 | 15843 |
+| after_actual | 2170 | 15843 |
 
 ## Rejected / Needs Review
 

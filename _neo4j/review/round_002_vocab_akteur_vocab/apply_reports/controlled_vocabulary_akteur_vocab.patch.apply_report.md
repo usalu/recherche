@@ -1,7 +1,7 @@
 # Patch Apply Report: controlled_vocabulary_akteur_vocab.patch.jsonl
 
-Generated: 2026-05-15T12:11:47.409683+00:00
-Mode: dry-run
+Generated: 2026-05-15T14:54:13.319181+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2170 | 15843 |
-| after_expected | 2162 | 15843 |
+| before | 2167 | 15842 |
+| after_expected | 2159 | 15841 |
+| after_actual | 2159 | 15841 |
 
 ## Rejected / Needs Review
 
