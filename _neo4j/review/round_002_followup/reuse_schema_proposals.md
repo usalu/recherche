@@ -1,6 +1,7 @@
 # Reuse Schema Proposals — research-driven changes
 
 **Companion to:** [reuse_knowledge_map.md](reuse_knowledge_map.md)
+**Last revised:** 2026-05-16 (after integrating 13 external research files at [_neo4j/intake/inbox/research/](../../intake/inbox/research/))
 **Purpose:** Where the previous doc proposed *adding edges and nodes* to the existing schema, this one proposes *structural changes to the schema itself* — new labels, new relationship types, refinements — based on what the reuse-research literature treats as core and what the archive scan actually surfaces.
 
 Each proposal has:
@@ -11,6 +12,53 @@ Each proposal has:
 - **Acceptance** — verifiable success criteria
 
 Decisions stay yours. Each section is independent; you can take any subset.
+
+---
+
+## 0. Connection-density priority ranking (revised after research integration)
+
+The user's stated goal: **create nodes with more connections; avoid nodes with very few**. The proposals below are reordered by *expected connection density they generate* once landed, based on the 13 research files at [_neo4j/intake/inbox/research/](../../intake/inbox/research/).
+
+| Tier | Proposal | Why high-density | Expected new edges |
+|:---:|---|---|---:|
+| 🔥 | **P-15** New label `Bauproduktstatus` (CE / hEN / Ü / abZ / ZiE / project-specific) | Every Projekt + every Bauteilgruppe with a reused product gets exactly one. | ≈ 75 + 306 = **~380** |
+| 🔥 | **P-16** New Norm hub `norm_cen_ts_1090_201_2024` + country-specific implementations | Single Norm node attaches to every steel-reuse BG across UK/DE/CH/NL/BE/NO/FI. | **~70+** |
+| 🔥 | **P-5** `TYPISCH_BEI_MATERIAL` / `_BAUTEILTYP` / `_ERA` for Schadstoff (was already strong) | One Schadstoff × Material rule creates 10-50 implicit risk-screening edges. | **~50** new rule rels |
+| 🔥 | **P-17** Five new PruefungNachweis hubs (NDT, Korrosion, Festigkeitssortierung, Bohrkernpruefung, Dokumentenpruefung) | Each becomes a hub for one material × test combination across the corpus. | **~120+** Bauteilgruppe-level rels |
+| 🔥 | **P-2** `BauwerkEra` + `HAT_ERA` + `TYPISCH_BEI_ERA` | Every donor Bauwerk gets one HAT_ERA, every relevant Schadstoff/PruefungNachweis hangs off the era matrix. | **~196 Bauwerk-era + ~30 typisch_bei rels** |
+| 🔥 | **P-8** `LebenszyklusModul` (LCA A1-D) + 7 LCA Norm node refinements | Every BG with `co2_einsparung_t` (≈50 projects) anchors to a module + a Norm. | **~50 BG-module + ~12 module-Norm** |
+| ⚡ | **P-1** `Defekt` (refined per UBA/SCI taxonomy) | Each reused BG carries 1-3 Defekt rels. | **~300-500** via round 003 |
+| ⚡ | **P-6 (refined)** `vt_reversible_fuegung` as PARENT of Verbindungstechnik tree | Restructures existing 102 rels into a navigable tree (degree on parent ≈ 60). | restructure, +parent rels |
+| ⚡ | **P-18** Country×Material reuse templates (Steel UK, HCS NO/FI, Lehm DE) | Each template node has every project of that pattern attached. | **~80** template-anchor rels |
+| ⚡ | **P-7** `Layer` (Brand's shearing layers) | Every Bauteiltyp gets one parent layer rel (15 rels), but Layer→Bauteilgruppe transitive gives huge query power. | 15 rels, transitive ≈ 306 |
+| 🌱 | **P-3** `Marktmodell` | Per-BG, round 003 work. | up to **~150** |
+| 🌱 | **P-4** `GILT_IN_LAND` rel (Norm/RechtlicheBedingung → Land) | Direct rel conversion of existing property: ~16 Norm + ~9 RB = ~30 rels initially, but every new Norm/RB adds one. | **~30** initial, grows over time |
+| 🌱 | **P-13** `MatchingQualitaet` (Donor-receiver match dimensions) | Per-BG round 003 work. | up to **~600** (3 dimensions × 200 reuse BGs) |
+| ⚠ | **P-9** Akzeptanz refinements | Modest gain (refines 7 existing rels). | small |
+| ⚠ | **P-10** Wirtschaft tightening | Modest gain. | small |
+| ⚠ | **P-11** HuerdeKategorie tidy | Drop hk_unklar; rename. | cleanup |
+| ⚠ | **P-12** Beschaffungsweg note | Docs only. | none |
+| ⚠ | **P-14** Drop zero-rel orphans | Cleanup. | removes orphan dead-ends |
+| ❌ | `vt_holzduebel` (was in §10 of knowledge_map) | **WITHDRAW** — research warns no project evidence supports the term; Recyclinghaus is beech-screws not dowels. |
+| ❌ | `vt_verleimung` project edge for CascadeUp | **DOWNGRADE** — research clarifies CascadeUp's "Verleimung" was the glulam *manufacture*, not an assembly Verbindungstechnik. Model as `Herstellungsverfahren: Verleimung` instead. |
+| ❌ | `la_f90` / `la_r90` / `la_rei90` as standalone Leistungsanforderung nodes | **DOWNGRADE** — these are fire-resistance *classes*, not requirements. Model as a property `feuerwiderstandsklasse` on the `HAT_LEISTUNGSANFORDERUNG`→`la_brandschutz` rel. Reduces 3 orphans. |
+| ❌ | `s_radon` (was in §1 of knowledge_map proposals) | **WITHDRAW** — research confirms radon is a site condition, not a Bauteilreuse pollutant. Not modelled. |
+
+### What "high-density" means in practice for a new node
+
+A proposal is high-density when **the rule of creation guarantees many edges**, not when "round 003 might find some BGs to attach". Concretely:
+
+- **Universal hubs**: One node every project/BG must reference (`Bauproduktstatus`, `LebenszyklusModul` for any LCA-claiming project, `norm_cen_ts_1090_201_2024` for any steel project). High-density by *structural necessity*.
+- **Risk-rule matrices**: `Schadstoff × Material × Era` rels. Adding a single rule (`Asbest typical in Faserzement`) implicitly enriches every Faserzement project's risk profile.
+- **Parent hubs**: `vt_reversible_fuegung` as parent of `vt_verschraubung`/`vt_klemmverbindung`/etc. The parent has degree = sum of children's degrees.
+- **Country×material templates**: A `reuse_pattern_steel_uk` template that every UK steel project links to, plus the template links to SCI P427, CEN/TS 1090-201, lead paint screening, corrosion testing, fire performance, etc.
+
+### What's deliberately downgraded
+
+The research evidence pushed me to be more conservative on some earlier proposals:
+
+- **`mat_stroh` archive_mentions tag** (knowledge_map §10): the term appears in 5 archive files but the research/scan rule is "no Material BG link without explicit `nutztMaterial Stroh` in the source." Kept as proposed seed.
+- **Project-level `HAT_SCHADSTOFF` adds (knowledge_map §9)**: 3 of the 5 (`Berlin_Schildow` → `s_asbest`, `Multi_Brussels` → `s_asbest`) lack BG-specific evidence. Demote to `requiresVerificationFor`-style relation (see [graph_patch_validation.md](../../intake/inbox/research/graph_patch_validation.md) §1). Only `Europa Building` and `Superlocal Expogebouw` survive the audit as APPROVE-WITH-CAVEAT.
 
 ---
 
@@ -516,36 +564,255 @@ A BG can carry 3 matching-quality rels (one per axis). Lets you query "all reuse
 | Schadstoff | s_pak, s_pcb, s_bleifarbe, s_holzschutzmittel | keep, anchor via P-2 TYPISCH_BEI_ERA |
 | Programm | prog_bbsm, prog_preuse, prog_zukunftbau, prog_kommunales_programm | keep with scope tag |
 | Wirtschaft | wi_lebenszykluskosten, wi_preisbildung | repurpose per P-10 |
+| Leistungsanforderung | la_f90, la_r90, la_rei90 | **REMOVE** — convert to property `feuerwiderstandsklasse` on `HAT_LEISTUNGSANFORDERUNG` rel pointing at `la_brandschutz` / `la_feuerwiderstand`. (Per research validation in [graph_patch_validation.md](../../intake/inbox/research/graph_patch_validation.md) — these are CLASSES, not requirements.) |
+
+---
+
+## P-15. 🔥 New label `Bauproduktstatus` (CE / hEN / Ü / abZ / ZiE / project-specific)
+
+**Evidence ([bauteilreuse_legal_regime_matrix.md](../../intake/inbox/research/bauteilreuse_legal_regime_matrix.md) + [circular_construction_reuse_graph_gaps.md](../../intake/inbox/research/circular_construction_reuse_graph_gaps.md)).** The single biggest legal-regulatory variable across reuse projects is **which approval route the reused component takes**: CE-marked (under EU CPR), national `Ü`/abZ German conformity mark, project-specific `ZiE`/`vBG`, or "no formal status" (informal site reuse). Every project lives in exactly one of these regimes per reused element class, and that choice cascades to liability, insurance, warranty, and admissible test methods.
+
+**Rationale.** The current `rb_ce_ukca_marking_reused_steel` is too narrow (UK + Steel only). The German DIBt framework explicitly lists **5 distinct approval paths** (`CE_hEN`, `Ü_Zeichen`, `abZ_aBG`, `ZiE_vBG`, `ProjectSpecificEngineerAssessment`). Multiple countries map similar regimes. Without a `Bauproduktstatus` node every project is ambiguous about its regulatory route. Every Projekt OR every reused BG must connect to exactly one — that's **~75 + 306 = ~380 edges from the structural rule alone**.
+
+**Schema delta.**
+
+```text
+NEW LABEL: Bauproduktstatus
+  id prefix: bps_
+  example nodes:
+    bps_ce_hen                 "CE-Marking unter harmonisierter EN-Norm (hEN)"
+    bps_ce_eta                 "CE-Marking via Europäische Technische Bewertung (ETA)"
+    bps_ue_zeichen             "Ü-Zeichen (DE, nationale Konformität)"
+    bps_abz_abg                "abZ / aBG (DE, allgemeine bauaufsichtliche Zulassung)"
+    bps_zie_vbg                "ZiE / vBG (DE, project-specific approval)"
+    bps_ukca                   "UKCA marking (UK, post-Brexit equivalent of CE)"
+    bps_baupg_ch               "BauPG-Status (CH, Schweizer Bauprodukteverordnung)"
+    bps_pemd_fr                "PEMD-erfasst (FR, diagnostic produit/matériau/déchet)"
+    bps_tracimat_be            "Tracimat-zertifiziert (BE, traceable deconstruction)"
+    bps_project_specific       "Projektspezifische Ingenieurfreigabe ohne Marktzulassung"
+    bps_bestand_no_status      "Bestand vor Ort weiterverwendet (kein neues Inverkehrbringen)"
+    bps_unbekannt              "Status unbekannt / nicht dokumentiert"
+
+NEW REL: HAT_BAUPRODUKTSTATUS
+  domain: Bauteilgruppe  (preferred — different elements in a project can have different status)
+  range:  Bauproduktstatus
+  optional secondary domain: Projekt  (when one status is used throughout)
+```
+
+**Migration.** Round 003 tags each BG (or project) with its status. For deterministic seed:
+- All **same-site reuse** BGs (Resource Rows, Thoravej 29) → `bps_bestand_no_status`
+- All **UK CE-marked steel** projects → `bps_ce_hen` (e.g. 55 Great Suffolk Street has documented CE marking via EN 1090)
+- All **Belgian projects involving Tracimat or pre-demolition inventories** → `bps_tracimat_be` (Multi Brussels, FCRBE pilot projects)
+- All **French projects with PEMD diagnostic** → `bps_pemd_fr` (FR PEMD became mandatory for projects > 1000 m² since 2023)
+- All **Boulder Fire Station 3** → `bps_project_specific` (US, no EU-CPR analogue)
+
+**Acceptance.** Every reused BG carries one `HAT_BAUPRODUKTSTATUS` rel (≈ 306 rels minimum). Query `MATCH (bg)-[:HAT_BAUPRODUKTSTATUS]->(b:Bauproduktstatus) RETURN b.name, count(bg)` shows the legal landscape across the corpus.
+
+---
+
+## P-16. 🔥 Add `norm_cen_ts_1090_201_2024` and split `norm_eurocode_generic`
+
+**Evidence ([missing_underused_norm_nodes_reuse_kg.md](../../intake/inbox/research/missing_underused_norm_nodes_reuse_kg.md) + [circular_construction_reuse_graph_gaps.md](../../intake/inbox/research/circular_construction_reuse_graph_gaps.md)).** CEN/TS 1090-201:2024 is the EU-wide technical specification for **reuse-oriented assessment of reclaimed structural steel** — published 2024, applies in every CEN member country. It complements the country-specific protocols (UK SCI P427, Dutch NTA 8713, French CTICM recommendations) and is the single most universal reuse-Norm yet to enter our graph.
+
+Currently `norm_en_1090` (2 rels) exists but the reuse-specific CEN/TS 1090-201 doesn't. Also, `norm_eurocode_generic` (mentioned in 4 archive files: 2 Association_house files, Berlin_Schildow, Haus_HOS_Muehlhausen) is a placeholder that should split into **EN 1992 (concrete), EN 1993 (steel), EN 1995 (timber), EN 1996 (masonry)** so each material domain has its own Norm hub.
+
+**Rationale.** A Norm node connected to one country is sparse. A Norm connected to a *material category × all countries that adopt it* becomes a hub with high inbound count. The 4 Eurocode parts × ~12 corpus countries each = potentially **48 Norm-country edges** + every BG of that material adds another. CEN/TS 1090-201 specifically generates ~40-70 inbound edges (every steel-reuse BG across UK/DE/CH/NL/BE/FI/NO).
+
+**Schema delta.**
+
+```text
+NEW Norm nodes:
+  norm_cen_ts_1090_201_2024  "CEN/TS 1090-201:2024 — Assessment of Reclaimed Structural Steel"
+  norm_cen_ts_17440          "CEN/TS 17440 — Assessment of Existing Structures"
+  norm_en_1992                "EN 1992 — Eurocode 2 (Concrete)"
+  norm_en_1993                "EN 1993 — Eurocode 3 (Steel)"
+  norm_en_1995                "EN 1995 — Eurocode 5 (Timber)"
+  norm_en_1996                "EN 1996 — Eurocode 6 (Masonry)"
+  norm_en_206                 "EN 206 — Concrete specification (already proposed in knowledge_map §10)"
+  norm_en_14081               "EN 14081 — Strength-graded structural timber"
+  norm_en_771                 "EN 771 — Masonry units (specification)"
+  norm_en_13162               "EN 13162 — Mineral wool thermal insulation"
+  norm_nen_8700               "NEN 8700 — Dutch existing-structure assessment"
+  norm_ns_3682_already        (already exists — confirm)
+  norm_crow_cur_4_2023_already (already exists)
+  norm_sci_p427_already        (already exists)
+  norm_sci_p440_already        (already exists)
+  norm_din_4074                "DIN 4074 — Visual strength grading of structural timber (DE)"
+  norm_din_68800               "DIN 68800 — Wood preservation and durability classes"
+  norm_din_18008               "DIN 18008 — Glass in building (DE design code)"
+
+RETIRE: norm_eurocode_generic
+  → migrate any inbound rels to the specific Eurocode part by material context (Beton → EN 1992, Stahl → EN 1993, Holz → EN 1995, Mauerwerk → EN 1996).
+```
+
+**Migration.** Seed the new Norm nodes (≈ 13). Then GILT_IN_LAND rels per P-4 give each Norm its country anchors. Per-project edges only where archive evidence supports it (research warns explicitly).
+
+**Acceptance.** Every Norm has GILT_IN_LAND rels to at least one Land. The 4 Eurocode files in the archive (`Association_house_Groeditz`, `Association_house_Plauen`, `Berlin_Schildow_Pilot_House`, `Haus_HOS_Mehrfamilienhaus_Muehlhausen`) get `REFERENZIERT_NORM` edges to the correct material-specific Eurocode part instead of a generic.
+
+---
+
+## P-17. 🔥 Five new high-density PruefungNachweis hubs
+
+**Evidence ([testing_verification_bauteilreuse_kg.md](../../intake/inbox/research/testing_verification_bauteilreuse_kg.md)).** Reuse-research is consistent that 5 testing categories apply to *most* reused structural elements but are missing from our schema as named nodes:
+
+| Proposed node | Applies to | Connection-density source |
+|---|---|---|
+| `pr_zerstoerungsfreie_pruefung` | Steel, Beton, Holz | every structural BG (~150+ candidates) |
+| `pr_korrosionspruefung` | Stahl beams, columns, rebar | every reused Stahl BG (~111 BGs) |
+| `pr_festigkeitssortierung_holz` | Reused structural Holz | every structural Holz BG (~60 BGs) |
+| `pr_bohrkernpruefung_beton` | Reused Beton/Stahlbeton | every concrete-reuse BG (~87 BGs) |
+| `pr_dokumentenpruefung_bestand` | All — provenance verification | every project (~75) |
+| `pr_schadstoffpruefung` | Pre-1996 donor materials | parent of asbestos/PCB/PAK/KMF screening for every era-tagged BG |
+| `pr_materialbeprobung` | All hazardous-substance-risk BGs | parent of Schadstoffscreening + chemische Analyse |
+| `pr_feuchtepruefung` | Holz, Lehm, Dämmstoff | every biological-degradation-risk BG (~30 BGs) |
+| `pr_brandschutznachweis` (generic) | All structural reuse | new generic parent of `pr_abbrandbemessung` |
+
+**Rationale.** Each of these tests is **standards-required for the material class** — not project-specific evidence. The graph can model "this BG class requires this test category" without claiming "this specific BG was tested with this method" (project-level BELEGT). That distinction is exactly what research recommends (`Bauteilgruppe-level INFER` rels, not `Projekt-level BELEGT`).
+
+**Schema delta.**
+
+```text
+NEW PruefungNachweis nodes (9 in total):
+  pr_zerstoerungsfreie_pruefung    "Zerstörungsfreie Prüfung (ZfP / NDT)"
+  pr_zerstoerende_pruefung         "Zerstörende Prüfung (parent / category)"
+  pr_korrosionspruefung            "Korrosionsprüfung / Restdickenmessung"
+  pr_festigkeitssortierung_holz    "Festigkeitssortierung Holz (visuell + NDT)"
+  pr_bohrkernpruefung_beton        "Beton-Bohrkernprüfung (EN 12504-1)"
+  pr_dokumentenpruefung_bestand    "Dokumentenprüfung / Herkunfts- und Bestandsnachweis"
+  pr_schadstoffpruefung            "Schadstoffprüfung (parent of Asbest/PCB/etc. screenings)"
+  pr_materialbeprobung             "Materialprobe / Beprobung"
+  pr_feuchtepruefung               "Feuchteprüfung (Holz, Lehm, Dämmstoff)"
+  pr_brandschutznachweis           "Brandschutznachweis (generic; parent of pr_abbrandbemessung)"
+
+NEW REL: TYPISCH_BEI_MATERIAL  (extends P-5)
+  Also applies between PruefungNachweis and Material:
+    (pr_korrosionspruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_stahl)
+    (pr_korrosionspruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_stahlbeton)  # for rebar
+    (pr_festigkeitssortierung_holz)-[:TYPISCH_BEI_MATERIAL]->(mat_holz)
+    (pr_bohrkernpruefung_beton)-[:TYPISCH_BEI_MATERIAL]->(mat_beton)
+    (pr_bohrkernpruefung_beton)-[:TYPISCH_BEI_MATERIAL]->(mat_stahlbeton)
+    (pr_feuchtepruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_holz)
+    (pr_feuchtepruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_lehm)
+    (pr_feuchtepruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_daemmstoff)
+    (pr_zerstoerungsfreie_pruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_stahl)
+    (pr_zerstoerungsfreie_pruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_beton)
+    (pr_zerstoerungsfreie_pruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_stahlbeton)
+    (pr_zerstoerungsfreie_pruefung)-[:TYPISCH_BEI_MATERIAL]->(mat_holz)
+```
+
+This gives ~25 `TYPISCH_BEI_MATERIAL` rels seeded once → drives queries like
+```cypher
+MATCH (bg:Bauteilgruppe)-[:NUTZT_MATERIAL]->(m:Material)<-[:TYPISCH_BEI_MATERIAL]-(pr:PruefungNachweis)
+WHERE NOT (bg)-[:HAT_PRUEFUNG]->(pr)
+RETURN bg.id AS bg, m.name AS material, pr.name AS recommended_test
+```
+which yields **~120-300 "missing test recommendation" rows** for round 003.
+
+**Migration.** Seed the 9 new PruefungNachweis nodes + ~25 `TYPISCH_BEI_MATERIAL` rels. Per-BG project-level `BELEGT` edges only when archive source names the method.
+
+**Acceptance.** Every Material in the structural-reuse cluster (Stahl, Beton, Stahlbeton, Holz, Lehm, Dämmstoff) has at least one `TYPISCH_BEI_MATERIAL`-inbound PruefungNachweis. Recommended-test query (above) returns ≥ 100 rows.
+
+---
+
+## P-18. ⚡ Country×Material reuse templates (Reuse pattern hubs)
+
+**Evidence ([circular_construction_reuse_graph_gaps.md](../../intake/inbox/research/circular_construction_reuse_graph_gaps.md) ranks Top 20 country×material gaps).** The most reusable graph pattern in reuse research is the *country×material template*: a single "node" that bundles the relevant Norm, RechtlicheBedingung, PruefungNachweis, Schadstoff risks, and Bauproduktstatus for one material in one country. Steel-UK uses CEN/TS 1090-201 + SCI P427 + CE/UKCA + NDT + corrosion-coating-with-lead/chromate + bolted assembly. Hollow-core-NO uses NS 3682 + Eurocode 2 + bearing-zone testing + carbonation. Lehm-DE uses DIN 18940 family + project-specific approval + Eignungsprüfung.
+
+**Rationale.** Each template is a **hub node**: it attaches to every project that fits the pattern (~5-15 projects per template), and it brings together the norms/tests/risks for that pattern (~5-10 vocab nodes). One template gives you a 10×10 = 100 high-quality 2-hop traversals.
+
+**Schema delta.**
+
+```text
+NEW LABEL: ReusePattern
+  id prefix:  rp_
+  example nodes (top 8 by corpus relevance):
+    rp_stahl_uk            "UK Stahl-Reuse Pattern (CE/UKCA + SCI P427)"
+    rp_stahl_de            "DE Stahl-Reuse Pattern (CEN/TS 1090-201 + DIBt route)"
+    rp_stahl_ch            "CH Stahl-Reuse Pattern (SIA 263 + BauPG)"
+    rp_stahl_be            "BE Stahl-Reuse Pattern (CEN/TS 1090-201 + Tracimat)"
+    rp_stahl_nl            "NL Stahl-Reuse Pattern (NTA 8713 + CB'23 + Bbl)"
+    rp_beton_hcs_no_fi_nl  "Hollow-Core Slab Pattern (NS 3682 + EN 1168 + CROW-CUR)"
+    rp_beton_de            "DE Beton-Reuse Pattern (DIBt + EN 206)"
+    rp_holz_de_ch_at       "DE/CH/AT Holz-Reuse Pattern (EN 14081 + DIN 4074 / SIA 265)"
+    rp_naturstein_be       "BE Naturstein Pattern (EN 12058 + Opalis sheets)"
+    rp_lehm_de             "DE Lehm-Reuse Pattern (DIN 18940 family + project approval)"
+
+NEW REL: FOLGT_REUSE_PATTERN
+  domain: Bauteilgruppe (or Projekt for project-level summary)
+  range:  ReusePattern
+
+NEW REL: REUSE_PATTERN_USES_NORM, REUSE_PATTERN_USES_TEST, REUSE_PATTERN_HAS_RISIKO, REUSE_PATTERN_REQUIRES_STATUS
+  domain: ReusePattern
+  range:  Norm / PruefungNachweis / Schadstoff / Bauproduktstatus
+```
+
+A single pattern node like `rp_stahl_uk` then connects out to:
+- CEN/TS 1090-201, SCI P427, SCI P440, EN 1090, EN 1993 (5 Norms)
+- NDT, Korrosionspruefung, Schadstoffpruefung-Pb-paint, Schweissbarkeitspruefung (4 PruefungNachweis)
+- s_bleifarbe, s_chrombasierte_beschichtungen (2 Schadstoff)
+- bps_ce_hen, bps_ukca (2 Bauproduktstatus)
+- vt_verschraubung, vt_reversible_fuegung (2 Verbindungstechnik)
+- → **15 outbound rels** from the pattern, plus every UK steel BG inbound (~9 BGs).
+
+**Migration.** Define top 8-10 patterns. Seed 8-10 nodes + ~150 outbound rels + tag every existing reuse BG with `FOLGT_REUSE_PATTERN`. Patterns can evolve incrementally.
+
+**Acceptance.** Query "list all expected vocab attached to every UK steel project, even if specific BG doesn't yet carry them" returns the pattern-hub closure — drives audit completeness.
+
+**Risk warning.** Templates can over-claim ("this BG follows the pattern so it must have all the pattern's properties"). Mitigate by treating `FOLGT_REUSE_PATTERN` as "*matches the pattern's typical setting*" — a navigational shortcut, not an assertion that every pattern attribute applies. Round 003 still confirms each specific edge as `BELEGT`.
 
 ---
 
 ## Summary of proposed schema changes
 
-| # | Change | Risk | Impact |
-|---:|---|:---:|:---:|
-| P-1 | New label **Defekt** + HAT_DEFEKT | Low | **High** (enables defect crosstabs) |
-| P-2 | New label **BauwerkEra** + HAT_ERA + TYPISCH_BEI_ERA | Low | **High** (drives Schadstoff risk screening) |
-| P-3 | New label **Marktmodell** + HAT_MARKTMODELL | Low | Medium-High |
-| P-4 | New rel **GILT_IN_LAND** for Norm/RechtlicheBedingung | Very low | Medium |
-| P-5 | New rels **TYPISCH_BEI_MATERIAL** / **_BAUTEILTYP** for Schadstoff | Very low | Medium |
-| P-6 | Refine **Methode** via MethodenKategorie parent | Low | Medium |
-| P-7 | New label **Layer** (Brand's shearing layers) + TEILT_LAYER | Low | Medium |
-| P-8 | New label **LebenszyklusModul** + BERECHNET_NACH_MODUL + METHODENGRUNDLAGE_NORM | Medium | **High** for LCA-conscious projects |
-| P-9 | Refine **Huerde** with stakeholder-specific Akzeptanz nodes | Low | Low-Medium |
-| P-10 | Tighten **Wirtschaft** (renames + new nodes) | Low | Low-Medium |
-| P-11 | Tidy **HuerdeKategorie** (drop hk_unklar, possibly rename hk_sozial_organisatorisch) | Very low | Low |
-| P-12 | Document Beschaffungsweg ↔ Marktmodell axis | Very low | Low |
-| P-13 | New label **MatchingQualitaet** + HAT_MATCHING_QUALITAET | Medium | Medium-High |
-| P-14 | Audit / drop zero-rel orphans where appropriate | Very low | Low |
+| # | Change | Risk | Connection density | Tier |
+|---:|---|:---:|:---:|:---:|
+| **P-15** | New label **Bauproduktstatus** (CE/hEN/Ü/abZ/ZiE/…) | Low | ~380 edges (every BG) | 🔥 |
+| **P-16** | Add **norm_cen_ts_1090_201_2024** + 12 other Norm hubs + split Eurocode_generic | Low | ~70-100 (via GILT_IN_LAND + REFERENZIERT_NORM templates) | 🔥 |
+| **P-17** | 9 new **PruefungNachweis hubs** + TYPISCH_BEI_MATERIAL seed | Low | ~25 seed rules + 100-300 inferred test recommendations | 🔥 |
+| P-1 | New label **Defekt** + HAT_DEFEKT | Low | Round 003 ~300-500 | ⚡ |
+| P-2 | **BauwerkEra** + HAT_ERA + TYPISCH_BEI_ERA | Low | ~196 + ~30 typisch rels | 🔥 |
+| P-3 | **Marktmodell** + HAT_MARKTMODELL | Low | Up to 150 | 🌱 |
+| P-4 | **GILT_IN_LAND** rel for Norm/RechtlicheBedingung | Very low | ~30 immediate + grows | 🌱 |
+| P-5 | **TYPISCH_BEI_MATERIAL/_BAUTEILTYP/_ERA** for Schadstoff | Very low | ~50 seed rules | 🔥 |
+| P-6 | Refine **Methode** via MethodenKategorie parent | Low | restructure | ⚡ |
+| P-7 | New label **Layer** (Brand) + TEILT_LAYER | Low | 15 rels, big traversal | ⚡ |
+| P-8 | **LebenszyklusModul** + BERECHNET_NACH_MODUL + METHODENGRUNDLAGE_NORM | Medium | ~50 BG-module + 12 module-Norm | 🔥 |
+| P-9 | **Akzeptanz** stakeholder refinement | Low | small | ⚠ |
+| P-10 | **Wirtschaft** tightening | Low | small | ⚠ |
+| P-11 | **HuerdeKategorie** tidy | Very low | cleanup | ⚠ |
+| P-12 | Document **Beschaffungsweg ↔ Marktmodell** | Very low | docs only | ⚠ |
+| P-13 | **MatchingQualitaet** | Medium | up to 600 (round 003) | 🌱 |
+| P-14 | Drop zero-rel orphans | Very low | removes dead-ends | ⚠ |
+| **P-18** | **ReusePattern** country×material templates | Medium | ~150 outbound + 200-300 BG-inbound | 🔥/⚡ |
 
-## Recommended order if you accept multiple proposals
+**Withdrawn (per research validation):**
+- `vt_holzduebel` — research warns no project evidence supports the term
+- `vt_verleimung` project edge for CascadeUp — was lamination of glulam (manufacture), not assembly
+- `la_f90` / `la_r90` / `la_rei90` as standalone nodes — should be property of `HAT_LEISTUNGSANFORDERUNG` rel
+- `s_radon` — site condition, not a Bauteilreuse pollutant
 
-1. **P-4** (GILT_IN_LAND) — cheapest, unlocks country queries. Property → rel conversion.
-2. **P-2** (BauwerkEra) + **P-5** (Schadstoff TYPISCH_* rels) — domain-knowledge encoding, immediately usable for risk screening.
-3. **P-1** (Defekt) + **P-7** (Layer) — both add categorical depth. Round 003 work is where they get filled with real data.
-4. **P-8** (LebenszyklusModul) — needed if user wants to publish comparable CO2 numbers.
-5. **P-3** (Marktmodell) + **P-13** (MatchingQualitaet) — make the reuse research story tellable.
-6. **P-6** (Methode split), **P-9** (Akzeptanz), **P-10** (Wirtschaft), **P-11** (HuerdeKategorie), **P-12** (Beschaffungsweg note), **P-14** (orphan audit) — refinements after the core gaps close.
+## Recommended order if you accept multiple proposals (density-first)
+
+**Phase A — quick wins, high connectivity (≈1-2 sessions):**
+1. **P-4** (GILT_IN_LAND) — cheapest. Property → rel conversion.
+2. **P-16** (CEN/TS 1090-201 + Norm splits) — adds ~13 Norm nodes that become country hubs once P-4 lands.
+3. **P-15** (Bauproduktstatus) — every BG gets one. Densest single proposal.
+
+**Phase B — domain encoding via TYPISCH_BEI_* matrix (1 session):**
+4. **P-5** + **P-17** + **P-2** together — Schadstoff/PruefungNachweis/BauwerkEra matrix. One seed file, drives ~100+ inferred edges.
+
+**Phase C — LCA & structure layer (1 session):**
+5. **P-8** (LebenszyklusModul) — qualifies every CO2 claim, anchors zero-rel LCA Normen.
+6. **P-7** (Layer) — 15 rels, makes shearing-layer queries trivial.
+
+**Phase D — round-003 enablers (round 003 itself):**
+7. **P-1** (Defekt) — round 003 tags BGs as it walks them.
+8. **P-3** (Marktmodell) — round 003 tags procurement structure per BG.
+9. **P-13** (MatchingQualitaet) — round 003 tags donor-receiver match per BG.
+10. **P-18** (ReusePattern templates) — once you have several Phase A-C clusters seeded, ReusePattern stitches them into navigable hubs.
+
+**Phase E — refinements:**
+11. **P-6** Methode split, **P-9** Akzeptanz, **P-10** Wirtschaft, **P-11** HuerdeKategorie tidy, **P-12** Beschaffungsweg note, **P-14** orphan audit.
 
 ## Research prompts that came out of this (additional to §11 of knowledge map)
 
@@ -555,7 +822,25 @@ A BG can carry 3 matching-quality rels (one per axis). Lets you query "all reuse
 4. *"Akzeptanz-Hürden taxonomy: confirm the literature-standard 5-stakeholder split (Bauherr/Planer/Ausführer/Nutzer/Behörde) or substitute with a different framework (Adams 2017 vs Hradil 2014)?"*
 5. *"Defekt typology — which reuse-assessment protocol (SCI P427 Annex C? SIA 269? CROW-CUR?) has the most useful defect-category list to seed our Defekt nodes from?"*
 6. *"Marktmodell — does any EU member-state legislation distinguish 'Gebrauchtware' from 'Bauprodukt' for CE/CPR purposes, or is that gap exactly the regulatory hole reuse projects struggle with?"*
+7. *"CEN/TS 1090-201:2024 — confirm which corpus projects already cite it (very few, since it's new) vs. which would cite it if they were assessed today. The Norm is universal across EU steel reuse and should anchor every steel reuse pattern."*
+8. *"Bauproduktstatus by country mapping — confirm the 5-path German taxonomy (CE_hEN / Ü / abZ / ZiE / project-specific) matches the regulatory practice in CH (BauPG), NL (Bbl), BE (regional + Tracimat), FR (PEMD), DK (BR18) — or do these countries have additional/different categories?"*
+9. *"For each of the 9 new PruefungNachweis hubs (P-17), is there a Bauteiltyp filter? E.g. NDT applies primarily to structural members (Träger, Stütze, Decke), not to Innenausbau or Möbel. Encode as TYPISCH_BEI_BAUTEILTYP?"*
+
+## What NOT to add (research warnings consolidated)
+
+Lessons from [graph_patch_validation.md](../../intake/inbox/research/graph_patch_validation.md) and other research files. **Resist these tempting additions:**
+
+1. **`HAT_SCHADSTOFF` from Schadstoff name to project unless the source explicitly names the pollutant for the BG.** Berlin Schildow → s_asbest was REJECTED in patch validation. Multi Brussels → s_asbest was REJECTED.
+2. **`vt_holzduebel` from a screw-based project.** Recyclinghaus uses beech-wood screws, not dowels. The naming overlap is misleading.
+3. **`vt_verleimung` as an assembly Verbindungstechnik from CascadeUp.** That project's "Verleimung" was the manufacture of glulamST/CLST (a `Herstellungsverfahren`), not the assembly connection (which used unspecified fasteners).
+4. **CE/UKCA marking edges to non-steel projects.** Only steel is the active CPR-conformity-questioned material in the corpus right now.
+5. **`norm_eurocode_generic` left in place.** Use the specific Eurocode part (EN 1992/1993/1995/1996) or no edge.
+6. **Country-inference Norm edges.** "Project in Germany → DIN" doesn't get a rel unless the source names the specific DIN.
+7. **CO2-Einsparung property without `BERECHNET_NACH_MODUL`.** Numbers without method are uncomparable. Flag with `lca_module_unknown=true` if not specified.
+8. **Material × Schadstoff edges (P-5 matrix) as project assertions.** They are DOMAIN-LEVEL risk rules, not project facts. Don't write `Projekt -[hatSchadstoff]-> Asbest` from these rules.
 
 ---
 
-**Next step recommendation:** decide which P-N proposals are in scope. Each is independently shippable. Cheapest first wins (P-4, then P-5, then P-2). Then P-1 and P-8 are the two biggest unlocks for the reuse research questions the corpus is actually trying to answer.
+**Next step recommendation:** Phase A is the obvious starting point if you accept the high-density priority logic — P-4 + P-16 + P-15 in that order. Each is small, idempotent, and lands ~100-400 edges total. Then Phase B (P-5+P-17+P-2 matrix) gives the schema its risk-rule "brain" without touching project content.
+
+If you want a single proposal to test first, **P-15 (Bauproduktstatus)** is the densest and simplest — every reused BG gets one rel from a deterministic country×project rule, and it unblocks every regulatory query thereafter.
