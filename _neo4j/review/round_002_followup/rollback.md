@@ -9,14 +9,14 @@
 4. Verifies with post-apply queries (logged here).
 5. Appends a section to this doc.
 
-**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E. (Phase F paused — Neo4j connectivity dropped.)
+**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F.
 
 **Combined effect:**
 
-| | Before A | After A | After B | After C | After D | After E |
-|---|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | **2 260** |
-| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | **16 124** |
+| | Before A | After A | After B | After C | After D | After E | After F |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | 2 260 | **2 279** |
+| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | 16 124 | **16 138** |
 
 ---
 
@@ -592,16 +592,123 @@ Action item: small contract patch commit before next baseline run.
 
 ---
 
-## Phase F (paused — Neo4j connectivity dropped after Phase E)
+## Phase F — applied 2026-05-16
 
-Plan: P-1 Defekt seed (10 nodes + 10 TYPISCH_BEI_MATERIAL) + P-13 MatchingQualitaet (9 nodes), as Round 003 enablers. P-18 ReusePattern dropped — the pattern info is already derivable via existing traversals (Land + Material + Norm + PruefungNachweis + Bauproduktstatus + Verbindungstechnik chains).
+**Patch:** [patches/phase_f.patch.jsonl](patches/phase_f.patch.jsonl)
+**Apply report:** [apply_reports/phase_f.patch.apply_report.json](apply_reports/phase_f.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_f_pre_apply/`](../backups/phase_f_pre_apply/) (2 260 nodes, 16 124 rels; gitignored)
 
-Estimated ~30 ops total. Will resume once Neo4j is reachable.
+### What landed
+
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 260 | **2 279** | +19 |
+| Relationships | 16 124 | **16 138** | +14 |
+
+**Operations:** 33 records / 0 errors.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_node | 19 | 10 Defekt (P-1) + 9 MatchingQualitaet (P-13) |
+| add_rel | 14 | 14 TYPISCH_BEI_MATERIAL for Defekt |
+
+### New nodes
+
+**P-1 Defekt (10):** def_korrosion, def_riss, def_verformung, def_karbonatisierung, def_holzwurm_pilzbefall, def_hohlraum_delamination, def_oberflaechenmangel, def_chemische_belastung, def_brandschaden, def_keine_befunde (positive-finding category).
+
+**P-13 MatchingQualitaet (9):** Temporal axis (3): mq_temporal_easy, mq_temporal_storage, mq_temporal_planned. Geographic axis (3): mq_geographic_local, mq_geographic_regional, mq_geographic_intl. Specification axis (3): mq_spec_exact, mq_spec_anpassung, mq_spec_zweckaenderung.
+
+### TYPISCH_BEI_MATERIAL for Defekt (14 rules)
+
+- Korrosion → Stahl + Stahlbeton + Aluminium
+- Karbonatisierung → Beton + Stahlbeton
+- Holzwurm/Pilzbefall → Holz + Stroh + Lehm
+- Hohlraum/Delamination → Glas + MDF
+- Brandschaden → Stahl + Holz
+- Chemische Belastung → Naturstein + Ziegel
+
+### P-18 ReusePattern — explicitly NOT created
+
+The pattern information is already derivable via existing traversals:
+`Land + Material + Norm (via GILT_IN_LAND) + PruefungNachweis (via TYPISCH_BEI_MATERIAL) + Bauproduktstatus (via HAT_TYPISCHEN_BAUPRODUKTSTATUS) + Verbindungstechnik`. Creating ReusePattern nodes would duplicate this without adding new information. Dropped to avoid orphan risk and unnecessary hub creation.
+
+### Phase F rollback
+
+Option 1: inverse-patch.
+Option 2 (Cypher):
+```cypher
+MATCH (n) WHERE n.id IN [
+  'def_korrosion','def_riss','def_verformung','def_karbonatisierung',
+  'def_holzwurm_pilzbefall','def_hohlraum_delamination','def_oberflaechenmangel',
+  'def_chemische_belastung','def_brandschaden','def_keine_befunde',
+  'mq_temporal_easy','mq_temporal_storage','mq_temporal_planned',
+  'mq_geographic_local','mq_geographic_regional','mq_geographic_intl',
+  'mq_spec_exact','mq_spec_anpassung','mq_spec_zweckaenderung'
+] DETACH DELETE n;
+```
+Option 3: restore from [`_neo4j/review/backups/phase_f_pre_apply/`](../backups/phase_f_pre_apply/).
+
+### Capabilities unlocked
+
+```cypher
+// For each material, what defects are typically checked in reuse assessments
+MATCH (m:Material)<-[:TYPISCH_BEI_MATERIAL]-(def:Defekt)
+RETURN m.name, collect(DISTINCT def.name) AS defects_to_screen
+
+// Reused steel BG needing corrosion check (combines P-1 + P-17)
+MATCH (bg:Bauteilgruppe)-[:NUTZT_MATERIAL]->(:Material {id: 'mat_stahl'})
+WHERE bg.counts_as_direct_reuse = true
+  AND NOT (bg)-[:HAT_PRUEFUNG]->(:PruefungNachweis {id: 'pr_korrosionspruefung'})
+RETURN bg.id
+
+// MatchingQualitaet ready for round 003 (currently 0 BG edges — will be added per project)
+MATCH (n:MatchingQualitaet) RETURN n.id, n.name
+```
 
 ---
 
-## What's next
+## Final state — all six phases of round 002 followup applied
 
-- **Phase F** when Neo4j is back online (~30 ops).
-- **Round 003** project content review (15 chunks × 5 projects).
-- **Reminders parked:** **#1 stub-Akteur** (15 no-archive + 2 multi-file), **#2 stub-Projekt** (23 left), **contract drift cleanup**.
+| | Phase A | Phase B | Phase C | Phase D | Phase E | Phase F |
+|---|---:|---:|---:|---:|---:|---:|
+| Ops | 102 | 103 | 53 | 93 | 87 | 33 |
+| New nodes | 12 | 29 | 16 | 34 | 22 | 19 |
+| New rels | 58 | 74 | 34 | 59 | 65 | 14 |
+| Property writes | 32 | 0 | 1 | 0 | 0 | 0 |
+
+**Grand total: 471 ops / 132 new nodes / 304 new rels / 33 property writes.**
+
+**Live graph: 2 147 → 2 279 nodes (+132), 15 834 → 16 138 rels (+304).**
+
+### Contract drift after all six phases
+
+New **labels** live but not in contract (5):
+- `BauwerkEra`, `Bauproduktstatus`, `LebenszyklusModul`, `Layer`, `Marktmodell`, `Defekt`, `MatchingQualitaet`
+
+Wait — that's 7. New labels:
+- `BauwerkEra` (Phase A)
+- `Bauproduktstatus` (Phase B)
+- `LebenszyklusModul`, `Layer`, `Marktmodell` (Phase E)
+- `Defekt`, `MatchingQualitaet` (Phase F)
+
+New **rel types** live but not in contract (13):
+- `TYPISCH_BEI_MATERIAL`, `TYPISCH_BEI_BAUTEILTYP`, `TYPISCH_BEI_ERA` (Phase A)
+- `GILT_IN_LAND`, `HAT_TYPISCHEN_BAUPRODUKTSTATUS`, `HAT_BAUPRODUKTSTATUS` (Phase B)
+- `IST_UNTERVERFAHREN_VON`, `ERHALT_FOERDERUNG_DURCH` (Phase C — also `HAT_AUFBEREITUNG` Phase D, which already existed)
+- `METHODENGRUNDLAGE_NORM`, `BERECHNET_NACH_MODUL`, `TEILT_LAYER`, `HAT_MARKTMODELL` (Phase E)
+
+Plus existing rel types reused with new properties: `HAT_VERBINDUNGSTECHNIK` (carries `reversibility` property after Phase C).
+
+**Action item:** add to contract schemas in a small bookkeeping commit. No live-graph impact.
+
+---
+
+## Worklist after Phase F
+
+- ✅ Phases A–F applied. 471 ops total. Live graph at 2 279 / 16 138.
+- ⏳ **Round 003** — project content review (15 chunks × 5 projects). Round-003 enablers (Defekt, MatchingQualitaet) are now seeded; round 003 attaches them per BG.
+- ⏳ **Contract drift cleanup** — add 7 new labels + 12 new rel types to `_neo4j/contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json`. Small commit; no apply needed.
+- ⏳ **Parked #1 stub-Akteur** (15 no-archive + 2 multi-file) — still on the worklist; can fold into a separate actor-canonicalization track or absorb during round 003 per project.
+- ⏳ **Parked #2 stub-Projekt** — 22 remaining (Circle House was promoted in Phase A; 3 duplicate stubs were merged in followup). Promote-or-drop decisions during round 003 per chunk.
+
+Round 003 is the next big move. After that: Phase G (refinements — P-6 Methode split, P-9 Akzeptanz, P-10 Wirtschaft, P-11 HuerdeKategorie tidy, P-14 orphan audit) + round 005 freeze/release.
