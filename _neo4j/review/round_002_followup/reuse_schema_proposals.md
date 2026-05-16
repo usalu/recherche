@@ -15,50 +15,82 @@ Decisions stay yours. Each section is independent; you can take any subset.
 
 ---
 
-## 0. Connection-density priority ranking (revised after research integration)
+## 0. Connection-density priority ranking — revised with concrete data (2026-05-16)
 
-The user's stated goal: **create nodes with more connections; avoid nodes with very few**. The proposals below are reordered by *expected connection density they generate* once landed, based on the 13 research files at [_neo4j/intake/inbox/research/](../../intake/inbox/research/).
+The user's stated goal: **create nodes with more connections; avoid nodes with very few**, with reuse-relevance and project-connectivity as priorities. Earlier numbers in this doc were optimistic; the table below uses **actual live-graph queries** to ground each estimate.
 
-| Tier | Proposal | Why high-density | Expected new edges |
-|:---:|---|---|---:|
-| 🔥 | **P-15** New label `Bauproduktstatus` (CE / hEN / Ü / abZ / ZiE / project-specific) | Every Projekt + every Bauteilgruppe with a reused product gets exactly one. | ≈ 75 + 306 = **~380** |
-| 🔥 | **P-16** New Norm hub `norm_cen_ts_1090_201_2024` + country-specific implementations | Single Norm node attaches to every steel-reuse BG across UK/DE/CH/NL/BE/NO/FI. | **~70+** |
-| 🔥 | **P-5** `TYPISCH_BEI_MATERIAL` / `_BAUTEILTYP` / `_ERA` for Schadstoff (was already strong) | One Schadstoff × Material rule creates 10-50 implicit risk-screening edges. | **~50** new rule rels |
-| 🔥 | **P-17** Five new PruefungNachweis hubs (NDT, Korrosion, Festigkeitssortierung, Bohrkernpruefung, Dokumentenpruefung) | Each becomes a hub for one material × test combination across the corpus. | **~120+** Bauteilgruppe-level rels |
-| 🔥 | **P-2** `BauwerkEra` + `HAT_ERA` + `TYPISCH_BEI_ERA` | Every donor Bauwerk gets one HAT_ERA, every relevant Schadstoff/PruefungNachweis hangs off the era matrix. | **~196 Bauwerk-era + ~30 typisch_bei rels** |
-| 🔥 | **P-8** `LebenszyklusModul` (LCA A1-D) + 7 LCA Norm node refinements | Every BG with `co2_einsparung_t` (≈50 projects) anchors to a module + a Norm. | **~50 BG-module + ~12 module-Norm** |
-| ⚡ | **P-1** `Defekt` (refined per UBA/SCI taxonomy) | Each reused BG carries 1-3 Defekt rels. | **~300-500** via round 003 |
-| ⚡ | **P-6 (refined)** `vt_reversible_fuegung` as PARENT of Verbindungstechnik tree | Restructures existing 102 rels into a navigable tree (degree on parent ≈ 60). | restructure, +parent rels |
-| ⚡ | **P-18** Country×Material reuse templates (Steel UK, HCS NO/FI, Lehm DE) | Each template node has every project of that pattern attached. | **~80** template-anchor rels |
-| ⚡ | **P-7** `Layer` (Brand's shearing layers) | Every Bauteiltyp gets one parent layer rel (15 rels), but Layer→Bauteilgruppe transitive gives huge query power. | 15 rels, transitive ≈ 306 |
-| 🌱 | **P-3** `Marktmodell` | Per-BG, round 003 work. | up to **~150** |
-| 🌱 | **P-4** `GILT_IN_LAND` rel (Norm/RechtlicheBedingung → Land) | Direct rel conversion of existing property: ~16 Norm + ~9 RB = ~30 rels initially, but every new Norm/RB adds one. | **~30** initial, grows over time |
-| 🌱 | **P-13** `MatchingQualitaet` (Donor-receiver match dimensions) | Per-BG round 003 work. | up to **~600** (3 dimensions × 200 reuse BGs) |
-| ⚠ | **P-9** Akzeptanz refinements | Modest gain (refines 7 existing rels). | small |
-| ⚠ | **P-10** Wirtschaft tightening | Modest gain. | small |
-| ⚠ | **P-11** HuerdeKategorie tidy | Drop hk_unklar; rename. | cleanup |
-| ⚠ | **P-12** Beschaffungsweg note | Docs only. | none |
-| ⚠ | **P-14** Drop zero-rel orphans | Cleanup. | removes orphan dead-ends |
-| ❌ | `vt_holzduebel` (was in §10 of knowledge_map) | **WITHDRAW** — research warns no project evidence supports the term; Recyclinghaus is beech-screws not dowels. |
-| ❌ | `vt_verleimung` project edge for CascadeUp | **DOWNGRADE** — research clarifies CascadeUp's "Verleimung" was the glulam *manufacture*, not an assembly Verbindungstechnik. Model as `Herstellungsverfahren: Verleimung` instead. |
-| ❌ | `la_f90` / `la_r90` / `la_rei90` as standalone Leistungsanforderung nodes | **DOWNGRADE** — these are fire-resistance *classes*, not requirements. Model as a property `feuerwiderstandsklasse` on the `HAT_LEISTUNGSANFORDERUNG`→`la_brandschutz` rel. Reduces 3 orphans. |
-| ❌ | `s_radon` (was in §1 of knowledge_map proposals) | **WITHDRAW** — research confirms radon is a site condition, not a Bauteilreuse pollutant. Not modelled. |
+### Concrete corpus data anchoring all estimates
 
-### What "high-density" means in practice for a new node
+Run against live `mit-bestand` on 2026-05-16:
 
-A proposal is high-density when **the rule of creation guarantees many edges**, not when "round 003 might find some BGs to attach". Concretely:
+| Quantity | Value |
+|---|---:|
+| Projekt nodes (full + stubs) | 102 |
+| Projekt nodes (full, non-stub) | 75 |
+| Bauteilgruppe nodes | 306 |
+| Bauteilgruppen with `counts_as_direct_reuse = true` | 206 |
+| Bauteilgruppen same-site reuse (donor = receiver Bauwerk) | 31 across 18 sites |
+| Bauteilgruppen using `mat_stahl` | 111 (across 46 projects, multi-country) |
+| Bauteilgruppen using `mat_beton` | 51 (across 38 projects) |
+| Bauteilgruppen using `mat_stahlbeton` | 36 (across 25 projects) |
+| Bauteilgruppen using `mat_holz` | 87 (across 45 projects) |
+| Bauteilgruppen WITHOUT any `HAT_PRUEFUNG` | 94 of 306 (≈ 31 %) |
+| Projekt with `co2_einsparung_t` property | **7 of 99** |
+| Bauteilgruppen with `co2_einsparung_t` property | **2 of 306** |
+| Projekt with `bgf_m2` property | **1 of 99** |
+| Projekt with `errichtungsjahr` / `gesamtkosten_eur` / `reuse_anteil_pct` | **0 of 99** for each |
+| Bauwerk donors documented | 196 |
+| BELEGT_IN rels (post-fix) | 2 173 |
+| Total nodes / rels | 2 147 / 15 834 |
 
-- **Universal hubs**: One node every project/BG must reference (`Bauproduktstatus`, `LebenszyklusModul` for any LCA-claiming project, `norm_cen_ts_1090_201_2024` for any steel project). High-density by *structural necessity*.
-- **Risk-rule matrices**: `Schadstoff × Material × Era` rels. Adding a single rule (`Asbest typical in Faserzement`) implicitly enriches every Faserzement project's risk profile.
-- **Parent hubs**: `vt_reversible_fuegung` as parent of `vt_verschraubung`/`vt_klemmverbindung`/etc. The parent has degree = sum of children's degrees.
-- **Country×material templates**: A `reuse_pattern_steel_uk` template that every UK steel project links to, plus the template links to SCI P427, CEN/TS 1090-201, lead paint screening, corrosion testing, fire performance, etc.
+### Density tier table — re-anchored to concrete counts
 
-### What's deliberately downgraded
+| Tier | Proposal | Realistic edges at seed-time | Realistic edges at saturation |
+|:---:|---|---:|---:|
+| 🔥 | **P-15 revised** Bauproduktstatus (country-default + BG-BELEGT) | ~10 country-default rels + ~40 BELEGT BG rels | up to 306 after round 003 |
+| 🔥 | **P-17 revised** PruefungNachweis hubs + TYPISCH_BEI_MATERIAL matrix | 9 new nodes + ~25 typisch rules + 0 BG edges at seed | 100-200 BG edges after round 003 (94 BGs currently missing any test) |
+| 🔥 | **P-5 + P-19/20** Schadstoff/Aufbereitungsverfahren/Verbindungstechnik TYPISCH matrices | ~80 rule rels (high-confidence domain rules) | drives queries forever |
+| 🔥 | **P-19 NEW** Aufbereitungsverfahren expansion (25 new av_* + parent hierarchy) | 25 nodes + ~30 parent-child rels + ~40 TYPISCH_BEI_MATERIAL rels | round 003 attaches ~150 BG-level edges |
+| 🔥 | **P-21 NEW** Project quantitative property backfill (CO₂, Kosten, Fläche, Reuse-%, Jahr) | ~120 properties **populated** (15-20 projects × 6-8 metrics) | grows with research |
+| ⚡ | **P-2** BauwerkEra + HAT_ERA + TYPISCH_BEI_ERA | 6 era nodes + ~12 TYPISCH rules; HAT_ERA tagging needs round 003 source-read | up to 196 HAT_ERA edges |
+| ⚡ | **P-16 revised** New Norm hubs (CEN/TS 1090-201 + 12 others) + Eurocode split | 13 nodes + ~30 GILT_IN_LAND rels + 0 project edges initially | 50-100 INFER project edges after material×country auto-rules |
+| ⚡ | **P-22 NEW** Förderprogramm + Geschäftsmodell expansion | 10 nodes + ~15 BELEGT project-funding edges from documented case-studies | round 003 picks up more |
+| ⚡ | **P-1** Defekt + HAT_DEFEKT | 10 nodes + ~10 TYPISCH_BEI_MATERIAL rules | round 003 adds ~300 BG edges |
+| ⚡ | **P-20 NEW** Verbindungstechnik tree + reversibility property | 4 new VT nodes + parent rels + reversibility property added to existing 102 rels | adds typing without new edges |
+| ⚡ | **P-8** LebenszyklusModul + Module D anchoring | 5 nodes + ~7 METHODENGRUNDLAGE_NORM rels at seed | grows to ≥ 30 once P-21 backfills CO₂ data |
+| 🌱 | **P-7** Layer (Brand) + TEILT_LAYER | 6 nodes + 15 Bauteiltyp-Layer rels; traversal value high | static (15) |
+| 🌱 | **P-4** GILT_IN_LAND (property → rel) | ~30 immediate (16 Norm + 14 new) | grows organically |
+| 🌱 | **P-3** Marktmodell | 11 nodes + ~10 seed BELEGT (same-site, leasing examples) | round 003 brings to ~150 |
+| 🌱 | **P-13** MatchingQualitaet | 9 nodes + 0 BG edges at seed | round 003 ~600 (3 dimensions × 206 direct-reuse BGs) |
+| 🌱 | **P-18** ReusePattern templates | 8-10 pattern nodes + ~120 outbound vocab rels + ~80 inbound BG rels | static seed |
+| ⚠ | P-6 Methode split, P-9 Akzeptanz, P-10 Wirtschaft, P-11 HuerdeKategorie, P-12 Beschaffungsweg note, P-14 orphan audit | minor cleanups | |
 
-The research evidence pushed me to be more conservative on some earlier proposals:
+**Withdrawn after research validation:**
 
-- **`mat_stroh` archive_mentions tag** (knowledge_map §10): the term appears in 5 archive files but the research/scan rule is "no Material BG link without explicit `nutztMaterial Stroh` in the source." Kept as proposed seed.
-- **Project-level `HAT_SCHADSTOFF` adds (knowledge_map §9)**: 3 of the 5 (`Berlin_Schildow` → `s_asbest`, `Multi_Brussels` → `s_asbest`) lack BG-specific evidence. Demote to `requiresVerificationFor`-style relation (see [graph_patch_validation.md](../../intake/inbox/research/graph_patch_validation.md) §1). Only `Europa Building` and `Superlocal Expogebouw` survive the audit as APPROVE-WITH-CAVEAT.
+| Item | Reason | Source |
+|---|---|---|
+| `vt_holzduebel` as new node from project evidence | Recyclinghaus uses **beech screws**, not dowels — research warns explicitly not to misclassify | [connection_techniques_bauteilreuse.md](../../intake/inbox/research/connection_techniques_bauteilreuse.md) |
+| `vt_verleimung` as **assembly** edge to CascadeUp | CascadeUp's `Verleimung` is the **manufacture** of `glulamST`/`CLST`, not the assembly connection. Reclassify as `Herstellungsverfahren` if needed | [connection_techniques_bauteilreuse.md](../../intake/inbox/research/connection_techniques_bauteilreuse.md) + [graph_patch_validation.md](../../intake/inbox/research/graph_patch_validation.md) |
+| `la_f90` / `la_r90` / `la_rei90` as standalone Leistungsanforderung nodes | These are fire-resistance **classes**, not requirements. Model as property `feuerwiderstandsklasse` on `HAT_LEISTUNGSANFORDERUNG` → `la_brandschutz` rel | [circular_construction_leistungsanforderungen.md](../../intake/inbox/research/circular_construction_leistungsanforderungen.md) |
+| `s_radon` | Site condition, not a Bauteil pollutant. Skip as `Schadstoff` node | [schadstoff_reuse_knowledge_graph_research.md](../../intake/inbox/research/schadstoff_reuse_knowledge_graph_research.md) |
+| 3 of 5 project-level `HAT_SCHADSTOFF` adds from knowledge_map §9 | `Berlin_Schildow → s_asbest`, `Multi_Brussels → s_asbest`, `Recyclinghaus_Hannover → s_asbest` lack BG-specific evidence. Only `Europa_Building → s_asbest` (existing 1960s fabric demolition documented) and `Superlocal_Expogebouw → s_asbest` (window-frame BG documented) survive | [graph_patch_validation.md](../../intake/inbox/research/graph_patch_validation.md) §1 |
+
+### Evidence-level conventions to embed in every new edge
+
+Research repeatedly distinguishes three evidence strengths. Adopt as properties on every new rel:
+
+```text
+edge property "evidence": "BELEGT" | "INFER" | "RESEARCH_NEEDED"
+  BELEGT          = source explicitly documents the link for this project/BG
+  INFER           = domain rule (TYPISCH_BEI_X) or country-default; not project-specific
+  RESEARCH_NEEDED = candidate but unresolved
+```
+
+This single property turns the schema into something that can answer:
+- "Show only BELEGT edges for high-confidence reporting"
+- "Show INFER edges to find verification targets for round 003"
+
+It also resolves the question of whether to add a rel: **always add it with the right evidence property; let the property tell you what to trust**.
 
 ---
 
@@ -762,57 +794,381 @@ A single pattern node like `rp_stahl_uk` then connects out to:
 
 ---
 
+## P-15 REFINED. New label `Bauproduktstatus` — modelled as country-default + BG-level BELEGT
+
+**Evidence reality check.** Earlier estimate of "every BG gets one of 11 statuses → 380 edges" was wrong. Concrete data: only **a few projects** explicitly document their regulatory route in their source `.md`. The rest live in a country-default regime (every German project sits in MBO+CPR; every UK project in Building Regulations+CE/UKCA; …) but the source rarely names it.
+
+**Two-tier model so the schema reflects reality.**
+
+```text
+TIER A — country-default rel  (~10 high-confidence rels at seed)
+  (:Land)-[:HAT_TYPISCHEN_BAUPRODUKTSTATUS {evidence: 'INFER'}]->(:Bauproduktstatus)
+    land_deutschland -> bps_ue_zeichen, bps_zie_vbg, bps_ce_hen
+    land_vereinigtes_koenigreich -> bps_ukca, bps_ce_hen
+    land_schweiz -> bps_baupg_ch
+    land_belgien -> bps_tracimat_be, bps_ce_hen
+    land_frankreich -> bps_pemd_fr, bps_ce_hen
+    land_niederlande -> bps_ce_hen, bps_nta_8713  (NTA 8713 is Dutch reused-steel)
+    land_norwegen -> bps_ce_hen, bps_ns_3682_documentation
+    land_usa -> bps_ibc_104_11_alternative, bps_project_specific
+    land_japan -> bps_jis_jas_mlit
+    land_daenemark, land_finnland, land_luxemburg -> bps_ce_hen (+ Nordic specifics)
+
+TIER B — BG-level BELEGT rel  (~40 high-confidence at seed; expandable to 306)
+  (:Bauteilgruppe)-[:HAT_BAUPRODUKTSTATUS {evidence: 'BELEGT'|'INFER'}]->(:Bauproduktstatus)
+
+CONCRETE seed evidence (BELEGT):
+  All 31 same-site reuse BGs → bps_bestand_no_status      (deterministic from same-donor=receiver)
+  55 Great Suffolk steel BGs (~4 BGs) → bps_ce_hen        (research-validated, EN 1090 quoted)
+  Boulder Fire Station 3 BGs (~3 BGs) → bps_ibc_104_11   (US, IBC alternative materials)
+  Brent Cross Town Substation BGs (~3 BGs) → bps_ukca    (UK, post-Brexit)
+  Multi Brussels BGs (~5 BGs) → bps_tracimat_be (if Tracimat docs cited)
+```
+
+**Schema delta — final.**
+
+```text
+NEW LABEL: Bauproduktstatus
+  id prefix: bps_
+  nodes (12):
+    bps_ce_hen, bps_ce_eta, bps_ue_zeichen, bps_abz_abg, bps_zie_vbg, bps_ukca,
+    bps_baupg_ch, bps_pemd_fr, bps_tracimat_be, bps_nta_8713,
+    bps_ibc_104_11_alternative, bps_jis_jas_mlit,
+    bps_project_specific, bps_bestand_no_status, bps_unbekannt
+
+NEW REL: HAT_TYPISCHEN_BAUPRODUKTSTATUS  (Land → Bauproduktstatus, evidence='INFER')
+NEW REL: HAT_BAUPRODUKTSTATUS            (Bauteilgruppe → Bauproduktstatus, evidence='BELEGT' | 'INFER')
+```
+
+**Seed totals:** 12 nodes, ~15 country-default INFER rels, ~40 BG BELEGT rels. **Acceptance:** every Land has at least one HAT_TYPISCHEN_BAUPRODUKTSTATUS; the 31 same-site BGs and ~15 documented project BGs carry BG-level edges.
+
+---
+
+## P-19 🔥 NEW. Aufbereitungsverfahren expansion (25 new nodes + parent-child hierarchy)
+
+**Evidence ([aufbereitungsverfahren_reused_building_elements.md](../../intake/inbox/research/aufbereitungsverfahren_reused_building_elements.md), 75-row research table).** Current schema has 11 Aufbereitungsverfahren nodes (363 inbound rels — well-used at top: Reinigung 85, Zuschnitt 78, Rekonditionierung 74). Research lists ~40 more candidate `av_*` processes with material-specific specialisations and project evidence.
+
+To respect connection density: add only the ~25 with **documented project evidence or universal cross-cutting use**, plus a parent-child hierarchy so material-specific processes inherit semantics from material-agnostic parents.
+
+**Schema delta.**
+
+```text
+NEW PARENT NODES (cross-material categories):
+  av_oberflaechenbehandlung      "Oberflächenbehandlung (parent)"
+  av_zerlegung_vereinzelung      "Zerlegung / Vereinzelung (parent)"
+  av_materialsortierung_chargenbildung  "Materialsortierung & Chargenbildung (querschnittlich)"
+  av_kaskadierende_wiederverwendung     "Kaskadierende Nutzung / Downcycling-Entscheidung"
+
+NEW CHILD NODES (material-specific, research-evidenced):
+
+Stahl branch:
+  av_sandstrahlen                 (BedZED corpus-signal only; FCRBE-evidenced as practice)
+  av_entrosten_korrosionsbehandlung
+  av_korrosionsschutz_beschichten
+  av_stahl_zuschnitt_bohrung      (K.118 corpus-signal; CEN/TS 1090-201 evidenced)
+  av_stahl_pruefung_sortierung    (FCRBE + CEN/TS 1090-201 — better as PruefungNachweis; see P-17)
+
+Holz branch:
+  av_entnageln                    (CascadeUp corpus-signal)
+  av_holz_fremdstoffentfernung    (CascadeUp corpus-signal)
+  av_hobeln_schleifen_holz        (Holzreuse standard)
+  av_holz_zuschnitt_reparatur     (Recypark Anderlecht corpus-signal)
+  av_holz_trocknung_feuchtekonditionierung
+  av_holz_festigkeitssortierung   (Recypark + FCRBE; also see P-17 pr_festigkeitssortierung_holz)
+  av_holz_schadstoffscreening     (FCRBE)
+
+Beton / HCS branch:
+  av_betonfertigteil_saegen       (ReCreate NL Prinsenhof BELEGT)
+  av_beton_anhaftungen_entfernen  (ReCreate FI BELEGT — Estrichentfernung)
+  av_hcs_zuschnitt_bohrungen_fittings (ReCreate FI BELEGT — Consolis Parma)
+  av_betonfertigteil_factory_refurbishment (ReCreate FI BELEGT — process package)
+  av_beton_pruefung_requalifizierung  (ReCreate NL + FI BELEGT; better as PruefungNachweis P-17)
+  av_betonfertigteil_tagging_sortierung (ReCreate FI; cross-cutting)
+
+Mauerwerk / Naturstein branch:
+  av_moertelentfernung_ziegel     (FCRBE Ziegel-sheet BELEGT)
+  av_ziegel_sortierung_pruefung   (FCRBE Ziegel-sheet BELEGT)
+  av_mauerwerk_diamantsaegen_modul (Resource Rows BELEGT)
+  av_naturstein_reinigung_schleifen_zuschnitt (K.118 BELEGT for stone reuse)
+
+Glas / Fenster branch:
+  av_glas_reinigung_entkitten     (K.118 + Europa Building corpus-signal)
+  av_glas_pruefung_sortierung     (K.118 BELEGT — Katalogisieren/Prüfen)
+  av_fenster_refurbishment        (Process package; K.118 + Europa)
+
+Aluminium branch:
+  av_aluminium_reinigung_entdichtung
+  av_aluminiumfenster_beschlag_dichtung   (K.118)
+  av_aluminium_zuschnitt_bohrung
+
+Bio-based / Lehm:
+  av_lehm_sieben_mischen          (K.118 BELEGT — local Aushublehm as innenputz)
+  av_stroh_pruefen_trocknen_sortieren    (K.118 BELEGT — straw bales)
+  av_bio_daemmstoff_zuschnitt_gefach
+  av_biobasiert_hygiene_schadstoffcheck
+
+NEW REL TYPES:
+  IST_UNTERVERFAHREN_VON          (child → parent)
+    av_sandstrahlen → av_oberflaechenbehandlung
+    av_entrosten_korrosionsbehandlung → av_oberflaechenbehandlung
+    av_korrosionsschutz_beschichten → av_oberflaechenbehandlung
+    av_moertelentfernung_ziegel → av_oberflaechenbehandlung
+    av_naturstein_reinigung_schleifen_zuschnitt → av_oberflaechenbehandlung
+    av_betonfertigteil_saegen → av_zerlegung_vereinzelung
+    av_mauerwerk_diamantsaegen_modul → av_zerlegung_vereinzelung
+    ...
+  TYPISCH_BEI_MATERIAL             (av → mat; reuses the rel type from P-5)
+  TYPISCH_BEI_BAUTEILTYP           (av → bt)
+```
+
+**Seed totals:** ~25 new nodes + ~30 parent-child rels + ~40 TYPISCH_BEI_MATERIAL/_BAUTEILTYP rels. **Project-level edges**: only ~10 BELEGT at seed (Resource Rows → av_mauerwerk_diamantsaegen_modul, ReCreate NL → av_betonfertigteil_saegen, etc.); rest deferred to round 003.
+
+**Acceptance.** Every material has at least one TYPISCH av_* node attached. Existing av_ nodes (Reinigung, Zuschnitt, …) still well-used at the top; new specialisations have at least one parent rel and one TYPISCH rel each.
+
+---
+
+## P-20 🔥 NEW. Verbindungstechnik tree + `reversibility` property on rel
+
+**Evidence ([connection_techniques_bauteilreuse.md](../../intake/inbox/research/connection_techniques_bauteilreuse.md), 11-row research table).** Existing 8 VT nodes with 102 inbound rels. Research clarifies several misclassifications and adds 4 well-evidenced new nodes.
+
+**Critical insight from research:** *Reversibility is not a property of the connection type — it's a property of the case.* Recyclinghaus uses beech-wood screws (`vt_verschraubung`), but the screws swell and become inseparable. So `vt_verschraubung` is NOT automatically reversible. Same in reverse: a "permanent" weld can be reversibly cut by oxy-cutting in some contexts.
+
+**Schema delta.**
+
+```text
+PROMOTE: vt_reversible_fuegung becomes PARENT of the reversibility-supporting subtree.
+
+NEW REL TYPE: IST_UNTERVERFAHREN_VON  (reusing from P-19)
+  vt_verschraubung → vt_reversible_fuegung
+  vt_klemmverbindung → vt_reversible_fuegung
+  vt_steckverbindung → vt_reversible_fuegung
+  vt_bolzenverbindung (new) → vt_reversible_fuegung
+  vt_demontierbarer_schwerlastanker (new) → vt_reversible_fuegung
+  vt_verschweissung — leave as peer (NOT under reversible)
+  vt_vermoertelung — leave as peer
+  vt_verleimung — leave as peer (irreversible at assembly level)
+
+NEW NODES (4, all with project BELEGT):
+  vt_bolzenverbindung                "Bolzenverbindung"
+    BELEGT: K.118 (external steel staircase — bolted), Zinneke Brussels (plywood furniture)
+  vt_demontierbarer_schwerlastanker  "Demontierbarer Schwerlastanker"
+    BELEGT: Plattenpalast Berlin (reused GDR precast slabs)
+  vt_stahlverbinder_holz             "Stahlverbinder für Holz (Reparatur-/Anschluss-Verbindung)"
+    BELEGT: Recypark Anderlecht (glulam half-arches cut + new steel connections)
+  vt_stahlrahmen_fassadenmodul       "Stahlrahmen für reuse Fassadenmodul"
+    BELEGT: Resource Rows Copenhagen (brick modules mounted in steel frames)
+
+NEW PROPERTY ON HAT_VERBINDUNGSTECHNIK rel:
+  reversibility: 'reversible' | 'partially_reversible' | 'irreversible' | 'limited' | 'unknown'
+
+NEW PROJECT-LEVEL BELEGT edges (from research):
+  bg_cascadeup → HAT_VERBINDUNGSTECHNIK {reversibility:'reversible'} → vt_reversible_fuegung
+  bg_triodos_bank → HAT_VERBINDUNGSTECHNIK {reversibility:'reversible'} → vt_verschraubung
+  bg_recyclinghaus_holz100 → HAT_VERBINDUNGSTECHNIK {reversibility:'limited'} → vt_verschraubung
+  bg_plattenpalast_panels → HAT_VERBINDUNGSTECHNIK {reversibility:'partially_reversible'} → vt_demontierbarer_schwerlastanker
+  bg_brummen_townhall → HAT_VERBINDUNGSTECHNIK {reversibility:'reversible'} → vt_reversible_fuegung
+  bg_k118_external_stair → HAT_VERBINDUNGSTECHNIK {reversibility:'reversible'} → vt_bolzenverbindung
+  bg_recypark_glulam_arches → HAT_VERBINDUNGSTECHNIK {reversibility:'partially_reversible'} → vt_stahlverbinder_holz
+  bg_zinneke_plywood_furniture → HAT_VERBINDUNGSTECHNIK {reversibility:'reversible'} → vt_verschraubung
+  bg_resource_rows_brick_modules → HAT_VERBINDUNGSTECHNIK {reversibility:'partially_reversible'} → vt_stahlrahmen_fassadenmodul
+```
+
+**Seed totals:** 4 new nodes + 5 IST_UNTERVERFAHREN_VON rels + 9 BELEGT project edges + `reversibility` property added to all 102 existing rels (default 'unknown' until tagged). **Acceptance.** Query `MATCH (bg)-[r:HAT_VERBINDUNGSTECHNIK]->(vt) WHERE r.reversibility = 'reversible' RETURN count(bg)` returns a meaningful subset; `vt_reversible_fuegung` becomes a hub with degree ≥ 5 (its new children).
+
+---
+
+## P-21 🔥 NEW. Project quantitative property backfill (CO₂, Kosten, Fläche, Reuse-%, Jahr, GHG-Reduktion)
+
+**Evidence reality check.** Current state of project quantitative data:
+
+```text
+Projekt with co2_einsparung_t : 7 of 99
+Projekt with bgf_m2           : 1 of 99
+Projekt with errichtungsjahr  : 0 of 99
+Projekt with gesamtkosten_eur : 0 of 99
+Projekt with reuse_anteil_pct : 0 of 99
+Bauteilgruppe with co2_einsparung_t : 2 of 306
+```
+
+But [circular_construction_economics_kg.md](../../intake/inbox/research/circular_construction_economics_kg.md) and [energy_climate_reuse_research.md](../../intake/inbox/research/energy_climate_reuse_research.md) document **hard numbers** for ~15-20 projects:
+
+| Project | Source-cited numbers | Properties to set |
+|---|---|---|
+| K.118 Kopfbau Winterthur | ~60% GHG-Reduktion, 500 t CO₂ or 500 t primary material saved (source-conflict) | `co2_einsparung_t_konstruktion_pct=60`, `quantitative_quellen_konflikt=true` |
+| KA13 Kristian Augusts gate 13 | 80% Reuse-Anteil, 70% GHG-Reduktion, 4 297 m² BGF | `reuse_anteil_pct=80`, `ghg_reduktion_pct=70`, `bgf_m2=4297` |
+| Thoravej 29, Copenhagen | 88% CO₂-Reduktion, 95% Material-Reuse-Anteil, 90% Abfall-Reduktion | `co2_reduktion_pct=88`, `material_reuse_anteil_pct=95` |
+| Resource Rows Copenhagen | ~29% CO₂-Reduktion über 50 Jahre, 463 t Abfall eingespart | `co2_reduktion_pct_50y=29`, `abfall_eingespart_t=463` |
+| 55 Great Suffolk Street | ~50 t CO₂ saved from steel, 386 kgCO₂e/m² A1-A5 | `co2_einsparung_stahl_t=50`, `embodied_carbon_a1_a5_kg_per_m2=386` |
+| Brent Cross Substation | 66 / 99.2 t CO₂e (source-conflict), 45% Stahl reused, ~40% CO₂-Reduktion, 22 t CO₂ "missed" | `co2_einsparung_t_min=66`, `co2_einsparung_t_max=99.2`, `quantitative_quellen_konflikt=true` |
+| Brummen Town Hall | 30% günstiger als Vergleich, 20% Restwert garantiert, ≥ 90% demontierbar | `kostenvorteil_pct=30`, `restwert_pct=20`, `demontierbarkeit_pct=90` |
+| 1 Triton Square London | 35 000 t Beton, ~1 900 t Stahl, 3 300 m² Limestone reused; Fassade 66% Kostenersparnis; BREEAM Outstanding mit nur 0,3% Extra-Capex | `reused_beton_t=35000`, `reused_stahl_t=1900`, `reused_naturstein_m2=3300`, `fassaden_kostenersparnis_pct=66` |
+| SUPERLOCAL | Rückbau 3D-Unit €101 632,91 / €1 376 pro m² | `rueckbaukosten_eur=101632.91`, `rueckbaukosten_eur_pro_m2=1376` |
+| Portland Decon Program | Mech demo $10 000 / 2 Tage vs Decon $16-18 000 / 10 Tage; Förderung $3 000 | (Akteurrolle / Programm level — not Projekt) |
+| Gainesville six-house | Gross Decon 21% teurer, Net 37% billiger als Demo | properties on a Forschung node, not Projekt |
+| Boulder Community Hospital | Boulder Ordinance 8366 — 75% Diversion target | `legal_diversion_target_pct=75` |
+| ReCreate Horizon 2020 | €12.5m EU-Förderung | (Programm-level on `prog_recreate`) |
+
+**Schema delta — properties, not rels.**
+
+```text
+Standardised Projekt properties:
+  co2_einsparung_t                       (existing — keep)
+  co2_einsparung_t_min, _max             (NEW — for source-conflict cases)
+  ghg_reduktion_pct                      (NEW)
+  co2_reduktion_pct                      (NEW; can equal ghg_reduktion_pct depending on source convention)
+  embodied_carbon_a1_a5_kg_per_m2        (NEW)
+  bgf_m2                                 (existing — keep)
+  errichtungsjahr                        (NEW)
+  reuse_anteil_pct                       (NEW)
+  material_reuse_anteil_pct              (NEW)
+  rueckbaukosten_eur, rueckbaukosten_eur_pro_m2  (NEW)
+  kostenvorteil_pct, fassaden_kostenersparnis_pct (NEW)
+  restwert_pct                           (NEW)
+  abfall_eingespart_t                    (NEW)
+  quantitative_quellen_konflikt: bool    (NEW — flag for source-conflict rows)
+  lca_module_scope: 'A1_A3' | 'A1_A5' | 'whole_lifecycle' | 'modul_d' | 'unclear'
+                                         (NEW — qualifier required by P-8)
+```
+
+**Total backfill:** ~15-20 projects × 4-7 properties each = ~80-120 property settings. No new nodes; just enriches Projekt records. **Connection density indirect**: every new property makes existing edges more queryable. Combined with P-8 (LebenszyklusModul), every CO₂ number gains a method anchor.
+
+**Acceptance.** `(:Projekt)` properties show ≥ 15 projects with at least 3 quantitative properties each. Queries like "show all reuse projects with ≥ 50% CO₂ reduction" return ranked results.
+
+---
+
+## P-22 ⚡ NEW. Förderprogramm + Geschäftsmodell expansion
+
+**Evidence ([circular_construction_economics_kg.md](../../intake/inbox/research/circular_construction_economics_kg.md), table B "General / system evidence").** Multiple funding programmes, marketplaces, and business models are referenced across the corpus but missing from the schema, or under-represented in `Programm`/`Akteurtyp` clusters.
+
+**Schema delta.**
+
+```text
+NEW Programm nodes:
+  prog_horizon_2020_recreate     "Horizon 2020 — ReCreate (€12.5 m EU funding)"
+    EVIDENCE: ReCreate German+NL+FI pilots are corpus-projects
+  prog_urban_innovative_actions  "Urban Innovative Actions (UIA)"
+    EVIDENCE: SUPERLOCAL pilot funded by UIA
+  prog_iclei_procurement         "ICLEI circular procurement programme"
+    EVIDENCE: Brummen Town Hall via ICLEI case
+  prog_interreg_nwe_fcrbe        (already exists as prog_interreg_nwe; expand notes)
+  prog_breeam_nl                 "BREEAM-NL certification programme"
+    EVIDENCE: Liander HQ Duiven, 1 Triton Square (BREEAM Outstanding)
+  prog_dgnb                      "DGNB certification (DE)"
+    EVIDENCE: Thoravej 29 DGNB Gold pre-certification
+  prog_madaster                  (also under Tool — model as cross-label)
+  prog_zukunft_bau_de            "Zukunft Bau Forschungsförderung (DE)" — already exists `prog_zukunftbau`
+
+NEW Geschäftsmodell label OR new Akteurrolle entries (model decision below):
+
+Option A (recommended) — keep as Akteurrolle/Akteurtyp:
+  ar_reuse_consultant            (vs existing ar_reuse_zirkularitaetsberatung — consolidate)
+  ar_materialbroker              "Materialbroker / Reuse-Marketplace-Betreiber"
+    EVIDENCE: Rotor DC, Restado, Cycle Up FR
+  ar_versicherer_reuse           "Reuse-spezifischer Versicherer / Garantiegeber"
+    EVIDENCE: Concular (DE) — insurance/warranty enabler
+  at_marketplace_plattform       "Marketplace / digitale Plattform" (Akteurtyp)
+    EVIDENCE: Restado, Concular, Madaster, Cycle Up, Opalis
+
+Option B — new label Geschäftsmodell (creates orphan-risk if underused):
+  NOT RECOMMENDED — keeps redundancy with Akteurrolle/Akteurtyp.
+
+NEW REL: ERHALT_FOERDERUNG_DURCH  (Projekt → Programm)
+NEW PROJECT BELEGT edges:
+  ReCreate pilots (Lokomotion Tampere, Harmalanranta, etc.) → prog_horizon_2020_recreate
+  SUPERLOCAL Expogebouw Bleijerheide → prog_urban_innovative_actions
+  Brummen Town Hall (if added as Projekt) → prog_iclei_procurement
+  Liander/Alliander HQ Duiven → prog_breeam_nl
+  Thoravej 29 → prog_dgnb
+```
+
+**Seed totals:** ~8 new Programm/Akteur* nodes + ~15 BELEGT project-funding edges. **Acceptance.** Query "show projects by funding programme" returns ≥ 6 distinct programmes with ≥ 2 projects each.
+
+---
+
 ## Summary of proposed schema changes
 
 | # | Change | Risk | Connection density | Tier |
 |---:|---|:---:|:---:|:---:|
-| **P-15** | New label **Bauproduktstatus** (CE/hEN/Ü/abZ/ZiE/…) | Low | ~380 edges (every BG) | 🔥 |
-| **P-16** | Add **norm_cen_ts_1090_201_2024** + 12 other Norm hubs + split Eurocode_generic | Low | ~70-100 (via GILT_IN_LAND + REFERENZIERT_NORM templates) | 🔥 |
-| **P-17** | 9 new **PruefungNachweis hubs** + TYPISCH_BEI_MATERIAL seed | Low | ~25 seed rules + 100-300 inferred test recommendations | 🔥 |
-| P-1 | New label **Defekt** + HAT_DEFEKT | Low | Round 003 ~300-500 | ⚡ |
-| P-2 | **BauwerkEra** + HAT_ERA + TYPISCH_BEI_ERA | Low | ~196 + ~30 typisch rels | 🔥 |
-| P-3 | **Marktmodell** + HAT_MARKTMODELL | Low | Up to 150 | 🌱 |
+| **P-15 revised** | New label **Bauproduktstatus** (country-default + BG-BELEGT) | Low | 12 nodes + ~55 rels at seed | 🔥 |
+| **P-16** | Add **norm_cen_ts_1090_201_2024** + 12 other Norm hubs + split Eurocode_generic | Low | 13 nodes + ~30 GILT_IN_LAND rels at seed | ⚡ |
+| **P-17** | 9 new **PruefungNachweis hubs** + TYPISCH_BEI_MATERIAL seed | Low | 9 nodes + ~25 typisch rules at seed; 100-200 inferred queries thereafter | 🔥 |
+| P-1 | New label **Defekt** + HAT_DEFEKT | Low | 10 nodes + ~10 typisch rules at seed; round 003 ~300 | ⚡ |
+| P-2 | **BauwerkEra** + HAT_ERA + TYPISCH_BEI_ERA | Low | 6 nodes + ~12 typisch rules at seed; HAT_ERA from round 003 | ⚡ |
+| P-3 | **Marktmodell** + HAT_MARKTMODELL | Low | 11 nodes + ~10 BELEGT seed; round 003 grows | 🌱 |
 | P-4 | **GILT_IN_LAND** rel for Norm/RechtlicheBedingung | Very low | ~30 immediate + grows | 🌱 |
-| P-5 | **TYPISCH_BEI_MATERIAL/_BAUTEILTYP/_ERA** for Schadstoff | Very low | ~50 seed rules | 🔥 |
+| P-5 | **TYPISCH_BEI_MATERIAL/_BAUTEILTYP/_ERA** for Schadstoff | Very low | ~25 seed rules | 🔥 |
 | P-6 | Refine **Methode** via MethodenKategorie parent | Low | restructure | ⚡ |
-| P-7 | New label **Layer** (Brand) + TEILT_LAYER | Low | 15 rels, big traversal | ⚡ |
-| P-8 | **LebenszyklusModul** + BERECHNET_NACH_MODUL + METHODENGRUNDLAGE_NORM | Medium | ~50 BG-module + 12 module-Norm | 🔥 |
+| P-7 | New label **Layer** (Brand) + TEILT_LAYER | Low | 6 nodes + 15 rels | 🌱 |
+| P-8 | **LebenszyklusModul** + BERECHNET_NACH_MODUL + METHODENGRUNDLAGE_NORM | Medium | 5 nodes + ~7 rels at seed | ⚡ |
 | P-9 | **Akzeptanz** stakeholder refinement | Low | small | ⚠ |
 | P-10 | **Wirtschaft** tightening | Low | small | ⚠ |
 | P-11 | **HuerdeKategorie** tidy | Very low | cleanup | ⚠ |
 | P-12 | Document **Beschaffungsweg ↔ Marktmodell** | Very low | docs only | ⚠ |
-| P-13 | **MatchingQualitaet** | Medium | up to 600 (round 003) | 🌱 |
+| P-13 | **MatchingQualitaet** | Medium | 9 nodes; round 003 ~600 | 🌱 |
 | P-14 | Drop zero-rel orphans | Very low | removes dead-ends | ⚠ |
-| **P-18** | **ReusePattern** country×material templates | Medium | ~150 outbound + 200-300 BG-inbound | 🔥/⚡ |
+| **P-18** | **ReusePattern** country×material templates | Medium | 8-10 nodes + ~120 outbound rels + ~80 inbound BG rels | ⚡ |
+| **P-19 NEW** | **Aufbereitungsverfahren** expansion (25 new av_* + parent hierarchy) | Low-Medium | 25 nodes + ~30 parent rels + ~40 typisch rels + ~10 BELEGT | 🔥 |
+| **P-20 NEW** | **Verbindungstechnik** tree + reversibility property | Low | 4 new VT + 5 parent rels + 9 BELEGT + property on 102 existing | ⚡ |
+| **P-21 NEW** | Project **quantitative property** backfill (CO₂/Kosten/Fläche/Reuse-%) | Low | ~80-120 property settings on ~15-20 projects | 🔥 |
+| **P-22 NEW** | **Förderprogramm + Geschäftsmodell** expansion | Low | ~8 new nodes + ~15 BELEGT project-funding edges | ⚡ |
 
-**Withdrawn (per research validation):**
-- `vt_holzduebel` — research warns no project evidence supports the term
-- `vt_verleimung` project edge for CascadeUp — was lamination of glulam (manufacture), not assembly
-- `la_f90` / `la_r90` / `la_rei90` as standalone nodes — should be property of `HAT_LEISTUNGSANFORDERUNG` rel
-- `s_radon` — site condition, not a Bauteilreuse pollutant
+**Withdrawn (per research validation, full justifications in §0):**
+- `vt_holzduebel` (research warns no project evidence supports it)
+- `vt_verleimung` as **assembly** edge for CascadeUp (was glulam manufacture)
+- `la_f90` / `la_r90` / `la_rei90` as standalone Leistungsanforderung nodes (re-model as property `feuerwiderstandsklasse`)
+- `s_radon` (site condition, not a Bauteilreuse pollutant)
+- 3 of the 5 project-level `HAT_SCHADSTOFF` adds from knowledge_map §9 (Berlin Schildow, Multi Brussels, Recyclinghaus); keep Europa Building + Superlocal Expogebouw
 
-## Recommended order if you accept multiple proposals (density-first)
+## Recommended order — revised after concrete data check
 
-**Phase A — quick wins, high connectivity (≈1-2 sessions):**
-1. **P-4** (GILT_IN_LAND) — cheapest. Property → rel conversion.
-2. **P-16** (CEN/TS 1090-201 + Norm splits) — adds ~13 Norm nodes that become country hubs once P-4 lands.
-3. **P-15** (Bauproduktstatus) — every BG gets one. Densest single proposal.
+The reordering reflects real connection-density math (sections P-15..P-22) and reuse-relevance, not just "node count". The user's "more connections, fewer orphans" principle drives the priority.
 
-**Phase B — domain encoding via TYPISCH_BEI_* matrix (1 session):**
-4. **P-5** + **P-17** + **P-2** together — Schadstoff/PruefungNachweis/BauwerkEra matrix. One seed file, drives ~100+ inferred edges.
+**Phase A — Highest density at minimum risk (one apply run, ≈100 ops):**
+1. **P-21** Project quantitative property backfill (~80-120 property settings; no new nodes, no relationship risk) — instantly enriches every project's queryability.
+2. **P-4** GILT_IN_LAND for existing Norm/RechtlicheBedingung (~30 rels; pure property→rel conversion).
+3. **P-5** Schadstoff TYPISCH_BEI_MATERIAL/_BAUTEILTYP/_ERA matrix (~25 high-confidence domain rules).
+4. **P-2** BauwerkEra nodes + TYPISCH_BEI_ERA rules (~6 nodes + 12 rules); skip HAT_ERA tagging for now — round 003.
 
-**Phase C — LCA & structure layer (1 session):**
-5. **P-8** (LebenszyklusModul) — qualifies every CO2 claim, anchors zero-rel LCA Normen.
-6. **P-7** (Layer) — 15 rels, makes shearing-layer queries trivial.
+**Phase A drives ~150 edges/properties from one focused commit with near-zero hallucination risk.**
 
-**Phase D — round-003 enablers (round 003 itself):**
-7. **P-1** (Defekt) — round 003 tags BGs as it walks them.
-8. **P-3** (Marktmodell) — round 003 tags procurement structure per BG.
-9. **P-13** (MatchingQualitaet) — round 003 tags donor-receiver match per BG.
-10. **P-18** (ReusePattern templates) — once you have several Phase A-C clusters seeded, ReusePattern stitches them into navigable hubs.
+**Phase B — Bauproduktstatus + new Norm hubs (one apply run, ≈60 ops):**
+5. **P-15 revised** Bauproduktstatus (12 nodes + 15 country-default INFER rels + ~40 BG BELEGT rels).
+6. **P-16** New Norm hubs including CEN/TS 1090-201 (13 nodes + 30 GILT_IN_LAND rels).
 
-**Phase E — refinements:**
-11. **P-6** Methode split, **P-9** Akzeptanz, **P-10** Wirtschaft, **P-11** HuerdeKategorie tidy, **P-12** Beschaffungsweg note, **P-14** orphan audit.
+**Phase C — Domain-expansion phase (new connectivity dimensions, ≈100 ops):**
+7. **P-17** PruefungNachweis hubs (9 nodes + ~25 TYPISCH rules).
+8. **P-19** Aufbereitungsverfahren expansion (25 new nodes + parent hierarchy + ~40 TYPISCH rules).
+9. **P-20** Verbindungstechnik tree + reversibility (4 new VT + 9 BELEGT + property on existing 102).
+10. **P-22** Förderprogramm + Akteur reuse-business roles (~8 nodes + ~15 BELEGT).
+
+**Phase D — LCA, structure layer, market model (≈40 ops):**
+11. **P-8** LebenszyklusModul + Module D anchoring.
+12. **P-7** Layer (Brand) + TEILT_LAYER.
+13. **P-3** Marktmodell.
+
+**Phase E — Round 003 enablers (round 003 itself does the per-BG work):**
+14. **P-1** Defekt — round 003 tags BGs.
+15. **P-13** MatchingQualitaet — round 003 tags donor-receiver matches.
+16. **P-18** ReusePattern templates — assembled after Phase A-C clusters exist.
+
+**Phase F — Refinements:**
+17. **P-6** Methode split, **P-9** Akzeptanz, **P-10** Wirtschaft, **P-11** HuerdeKategorie tidy, **P-12** docs, **P-14** orphan audit.
+
+## Connection-density math summary (concrete totals)
+
+After all proposals applied (excluding round 003):
+
+| Phase | New nodes | New rels (BELEGT) | New rels (INFER / typisch) | New properties |
+|---|---:|---:|---:|---:|
+| A | 6 (era) | 30 (GILT_IN_LAND) | 37 (Schadstoff + era typisch) | ~100 (project quant) |
+| B | 25 (12 Bauproduktstatus + 13 Norm) | 40 (BG bps) | 45 (15 country-default + 30 GILT_IN_LAND) | — |
+| C | 38 (9 pr + 25 av + 4 vt) | 9 (vt BELEGT) | 95 (typisch + parent rels) | reversibility on 102 rels |
+| D | 17 (5 lz + 6 layer + 11 mm) | 7 (Modul anchor) | 15 (Layer mapping) | — |
+| **TOTAL Phases A-D** | **86** | **86** | **192** | **~200** |
+
+Plus the 8 archive-evidence-based add_rel ops from knowledge_map §9 (Schadstoff/heritage/Materialpass already validated by research §0 withdrawals).
+
+After round 003 (Phase E), expect **+1 000-1 500** additional BG-level rels from systematic per-project review (Defekt, MatchingQualitaet, Marktmodell, plus per-BG validation of every INFER edge into a BELEGT).
 
 ## Research prompts that came out of this (additional to §11 of knowledge map)
 
