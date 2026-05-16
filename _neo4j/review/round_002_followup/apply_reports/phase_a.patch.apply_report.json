@@ -1,0 +1,1932 @@
+{
+  "confirmation_required": "APPLY phase_a.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2159,
+    "relationships": 15892
+  },
+  "counts_after_expected": {
+    "nodes": 2159,
+    "relationships": 15892
+  },
+  "counts_before": {
+    "nodes": 2147,
+    "relationships": 15834
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-16T15:30:06.733531+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_a.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Schadstoff"
+        ],
+        "properties": {
+          "id": "s_kmf",
+          "name": "KMF — Künstliche Mineralfasern (alte Mineralwolle vor 1996/2000)",
+          "scope": "european",
+          "standards_body": "DE: TRGS 521",
+          "topic": "old_mineral_wool"
+        }
+      },
+      "before": null,
+      "id": "s_kmf",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Schadstoff"
+        ],
+        "properties": {
+          "id": "s_formaldehyd",
+          "name": "Formaldehyd (MDF / Spanplatten)",
+          "scope": "european",
+          "standards_body": "EU REACH",
+          "topic": "composite_wood_emissions"
+        }
+      },
+      "before": null,
+      "id": "s_formaldehyd",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Schadstoff"
+        ],
+        "properties": {
+          "id": "s_schwermetalle",
+          "name": "Schwermetalle (Pb, Cd, Hg, Cr) in Beschichtungen / Laborbauten",
+          "scope": "international",
+          "topic": "coating_lacquer_pigment_heavy_metals"
+        }
+      },
+      "before": null,
+      "id": "s_schwermetalle",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_eu",
+          "name": "Europäische Union (Geltungsbereich)",
+          "scope_type": "supranational"
+        }
+      },
+      "before": null,
+      "id": "land_eu",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_eea",
+          "name": "Europäischer Wirtschaftsraum (EU+EEA)",
+          "scope_type": "supranational"
+        }
+      },
+      "before": null,
+      "id": "land_eea",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_international",
+          "name": "International (ISO/IEC Geltungsbereich)",
+          "scope_type": "international"
+        }
+      },
+      "before": null,
+      "id": "land_international",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "norm_sci_p427",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "norm_sci_p440",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "norm_tek_norway",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_norwegen"
+    },
+    {
+      "from": "norm_ns_3682",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_norwegen"
+    },
+    {
+      "from": "norm_sia_schweiz",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "norm_rt_2012",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "norm_crow_cur_4_2023",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "norm_historic_sections_book",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "norm_en_1090",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_1168",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "after": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_bauordnungsrecht",
+          "is_universal": true,
+          "name": "Bauordnungsrecht",
+          "scope_note": "Building approval law applies in every corpus country; specific instruments differ (DE MBO, UK Building Regs, etc.)"
+        }
+      },
+      "before": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_bauordnungsrecht",
+          "name": "Bauordnungsrecht"
+        }
+      },
+      "id": "rb_bauordnungsrecht",
+      "line": 17,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_zulassung_im_einzelfall",
+          "is_universal": true,
+          "name": "Zulassung_im_Einzelfall",
+          "scope_note": "Project-specific approval route. Country-specific instruments (DE ZiE/vBG, UK alt-materials, USA IBC 104.11, NL equivalence, FR ATEx). Each country implements differently."
+        }
+      },
+      "before": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_zulassung_im_einzelfall",
+          "name": "Zulassung_im_Einzelfall"
+        }
+      },
+      "id": "rb_zulassung_im_einzelfall",
+      "line": 18,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_gewaehrleistung",
+          "is_universal": true,
+          "name": "Gewaehrleistung",
+          "scope_note": "Warranty / Sachmängelhaftung applies universally; decennial liability adds 10-year strong form in FR, BE, LU"
+        }
+      },
+      "before": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_gewaehrleistung",
+          "name": "Gewaehrleistung"
+        }
+      },
+      "id": "rb_gewaehrleistung",
+      "line": 19,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_produkthaftung",
+          "is_universal": true,
+          "name": "Produkthaftung",
+          "scope_note": "Product liability applies universally; EU has CPR-specific path"
+        }
+      },
+      "before": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_produkthaftung",
+          "name": "Produkthaftung"
+        }
+      },
+      "id": "rb_produkthaftung",
+      "line": 20,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_vergaberecht",
+          "is_universal": true,
+          "name": "Vergaberecht",
+          "scope_note": "Public procurement law applies universally; EU has GPP plus Taxonomie alignment"
+        }
+      },
+      "before": {
+        "labels": [
+          "RechtlicheBedingung"
+        ],
+        "properties": {
+          "id": "rb_vergaberecht",
+          "name": "Vergaberecht"
+        }
+      },
+      "id": "rb_vergaberecht",
+      "line": 21,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "rb_ce_ukca_marking_reused_steel",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "rb_ce_ukca_marking_reused_steel",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "rb_eu_taxonomie",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "rb_grade_ii_listing",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "rb_boulder_deconstruction_ordinance_8366",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_usa"
+    },
+    {
+      "from": "s_asbest",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_faserzement"
+    },
+    {
+      "from": "s_asbest",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_daemmstoff"
+    },
+    {
+      "from": "s_asbest",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_bitumen"
+    },
+    {
+      "from": "s_kmf",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_daemmstoff"
+    },
+    {
+      "from": "s_pak",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_bitumen"
+    },
+    {
+      "from": "s_pak",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "s_pcb",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahlbeton"
+    },
+    {
+      "from": "s_pcb",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_kunststoff"
+    },
+    {
+      "from": "s_holzschutzmittel",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahl"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_aluminium"
+    },
+    {
+      "from": "s_formaldehyd",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_mdf"
+    },
+    {
+      "from": "s_formaldehyd",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "s_schwermetalle",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahl"
+    },
+    {
+      "from": "s_schwermetalle",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "s_schwermetalle",
+      "line": 43,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_aluminium"
+    },
+    {
+      "from": "s_schwermetalle",
+      "line": 44,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_keramik"
+    },
+    {
+      "from": "s_asbest",
+      "line": 45,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_dach"
+    },
+    {
+      "from": "s_asbest",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_daemmung"
+    },
+    {
+      "from": "s_pcb",
+      "line": 47,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fenster"
+    },
+    {
+      "from": "s_pcb",
+      "line": 48,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fassade"
+    },
+    {
+      "from": "s_pak",
+      "line": 49,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_dach"
+    },
+    {
+      "from": "s_pak",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_boden"
+    },
+    {
+      "from": "s_pak",
+      "line": 51,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fundament"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fenster"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 53,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_tuer"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 54,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_traeger"
+    },
+    {
+      "after": {
+        "labels": [
+          "BauwerkEra"
+        ],
+        "properties": {
+          "id": "era_vor_1900",
+          "name": "vor 1900",
+          "notes": "Pre-industrial / Wilhelmine. PAK from coal tar high; lime mortars; structural variance very high.",
+          "year_to": 1899
+        }
+      },
+      "before": null,
+      "id": "era_vor_1900",
+      "line": 55,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "BauwerkEra"
+        ],
+        "properties": {
+          "id": "era_1900_1945",
+          "name": "1900–1945",
+          "notes": "Industrialisation; reinforced concrete commercialised; PAK still high; some early asbestos products.",
+          "year_from": 1900,
+          "year_to": 1945
+        }
+      },
+      "before": null,
+      "id": "era_1900_1945",
+      "line": 56,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "BauwerkEra"
+        ],
+        "properties": {
+          "id": "era_nachkrieg_1945_1970",
+          "name": "Nachkrieg 1945–1970",
+          "notes": "Wiederaufbau / Wirtschaftswunder. Highest asbestos use; PCB sealants begin; mineral wool widely installed.",
+          "year_from": 1945,
+          "year_to": 1970
+        }
+      },
+      "before": null,
+      "id": "era_nachkrieg_1945_1970",
+      "line": 57,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "BauwerkEra"
+        ],
+        "properties": {
+          "id": "era_1970_1990",
+          "name": "1970–1990",
+          "notes": "Still high asbestos / PCB / KMF; energy crisis drives insulation upgrades; first heavy-metal restrictions.",
+          "year_from": 1970,
+          "year_to": 1990
+        }
+      },
+      "before": null,
+      "id": "era_1970_1990",
+      "line": 58,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "BauwerkEra"
+        ],
+        "properties": {
+          "id": "era_1990_2000",
+          "name": "1990–2000",
+          "notes": "Country-specific asbestos bans (DE 1993, NL 1994, FR 1997, BE 1998, UK 2000); KMF biopersistence rules tighten.",
+          "year_from": 1990,
+          "year_to": 2000
+        }
+      },
+      "before": null,
+      "id": "era_1990_2000",
+      "line": 59,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "BauwerkEra"
+        ],
+        "properties": {
+          "id": "era_post_2000",
+          "name": "nach 2000",
+          "notes": "Modern. Asbestos banned across EU/EEA; tight formaldehyde emission limits.",
+          "year_from": 2000
+        }
+      },
+      "before": null,
+      "id": "era_post_2000",
+      "line": 60,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 1993,
+          "id": "land_deutschland",
+          "kmf_grenzwert_jahr": 1996,
+          "name": "Deutschland",
+          "pcb_verbot_jahr": 1989,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_deutschland",
+          "name": "Deutschland",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_deutschland",
+      "line": 61,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 1994,
+          "id": "land_niederlande",
+          "name": "Niederlande",
+          "pcb_verbot_jahr": 1985,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_niederlande",
+          "name": "Niederlande",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_niederlande",
+      "line": 62,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 1997,
+          "id": "land_frankreich",
+          "name": "Frankreich",
+          "pcb_verbot_jahr": 1987,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_frankreich",
+          "name": "Frankreich",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_frankreich",
+      "line": 63,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 1998,
+          "id": "land_belgien",
+          "name": "Belgien",
+          "pcb_verbot_jahr": 1986,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_belgien",
+          "name": "Belgien",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_belgien",
+      "line": 64,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "aliases": [
+            "Vereinigtes Koenigreich",
+            "United Kingdom"
+          ],
+          "asbest_verbot_jahr": 2000,
+          "id": "land_vereinigtes_koenigreich",
+          "name": "Vereinigtes Königreich",
+          "pcb_verbot_jahr": 1986,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "aliases": [
+            "Vereinigtes Koenigreich",
+            "United Kingdom"
+          ],
+          "id": "land_vereinigtes_koenigreich",
+          "name": "Vereinigtes Königreich",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_vereinigtes_koenigreich",
+      "line": 65,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 1990,
+          "id": "land_schweiz",
+          "name": "Schweiz",
+          "pcb_verbot_jahr": 1986,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_schweiz",
+          "name": "Schweiz",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_schweiz",
+      "line": 66,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 1980,
+          "id": "land_norwegen",
+          "name": "Norwegen",
+          "pcb_verbot_jahr": 1980
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_norwegen",
+          "name": "Norwegen"
+        }
+      },
+      "id": "land_norwegen",
+      "line": 67,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "aliases": [
+            "Daenemark"
+          ],
+          "asbest_verbot_jahr": 1986,
+          "id": "land_daenemark",
+          "name": "Dänemark",
+          "pcb_verbot_jahr": 1986,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "aliases": [
+            "Daenemark"
+          ],
+          "id": "land_daenemark",
+          "name": "Dänemark",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_daenemark",
+      "line": 68,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 1994,
+          "id": "land_finnland",
+          "name": "Finnland",
+          "pcb_verbot_jahr": 1990,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_finnland",
+          "name": "Finnland",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_finnland",
+      "line": 69,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_neshap_year": 1973,
+          "asbest_note": "No federal ban; NESHAP demolition/renovation inspection rules apply from 1973",
+          "id": "land_usa",
+          "name": "USA",
+          "pcb_verbot_jahr": 1979,
+          "source_scope": "actor_registry"
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_usa",
+          "name": "USA",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "land_usa",
+      "line": 70,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 2004,
+          "id": "land_japan",
+          "name": "Japan",
+          "pcb_verbot_jahr": 1974
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_japan",
+          "name": "Japan"
+        }
+      },
+      "id": "land_japan",
+      "line": 71,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "asbest_verbot_jahr": 2002,
+          "id": "land_luxemburg",
+          "name": "Luxemburg",
+          "pcb_verbot_jahr": 1986
+        }
+      },
+      "before": {
+        "labels": [
+          "Land"
+        ],
+        "properties": {
+          "id": "land_luxemburg",
+          "name": "Luxemburg"
+        }
+      },
+      "id": "land_luxemburg",
+      "line": 72,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "s_asbest",
+      "line": 73,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1900_1945"
+    },
+    {
+      "from": "s_asbest",
+      "line": 74,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_nachkrieg_1945_1970"
+    },
+    {
+      "from": "s_asbest",
+      "line": 75,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1970_1990"
+    },
+    {
+      "from": "s_pcb",
+      "line": 76,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_nachkrieg_1945_1970"
+    },
+    {
+      "from": "s_pcb",
+      "line": 77,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1970_1990"
+    },
+    {
+      "from": "s_pak",
+      "line": 78,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_vor_1900"
+    },
+    {
+      "from": "s_pak",
+      "line": 79,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1900_1945"
+    },
+    {
+      "from": "s_pak",
+      "line": 80,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_nachkrieg_1945_1970"
+    },
+    {
+      "from": "s_kmf",
+      "line": 81,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1970_1990"
+    },
+    {
+      "from": "s_kmf",
+      "line": 82,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1990_2000"
+    },
+    {
+      "from": "s_holzschutzmittel",
+      "line": 83,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_nachkrieg_1945_1970"
+    },
+    {
+      "from": "s_holzschutzmittel",
+      "line": 84,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1970_1990"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 85,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_vor_1900"
+    },
+    {
+      "from": "s_bleifarbe",
+      "line": 86,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_1900_1945"
+    },
+    {
+      "from": "s_formaldehyd",
+      "line": 87,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_ERA",
+      "status": "would_create_rel",
+      "to": "era_nachkrieg_1945_1970"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_circle_house",
+          "import_status": "registry_stub_only",
+          "name": "Circle House",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "project_category": "future_reuse_system_project_stub",
+          "promoted_at": "2026-05-16",
+          "promoted_reason": "Circle House has A/B-evidence case study (GXN/BLOXHUB) and was tagged as stub from registry-only association. Promoted to full Projekt for P-21 quantitative attachment.",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_circle_house",
+          "import_status": "registry_stub_only",
+          "name": "Circle House",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "future_reuse_system_project_stub",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_circle_house",
+      "line": 88,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "bewertung": 5,
+          "co2_einsparung_t": 494,
+          "co2_einsparung_t_max": 500,
+          "co2_einsparung_t_min": 500,
+          "co2_reduktion_prozent": 59,
+          "flaeche_m2": 1100,
+          "geschosse_aufstockung": 3,
+          "ghg_reduktion_pct_konstruktion": 60,
+          "id": "p_k118_kopfbau_halle_118_winterthur",
+          "jahr_auftrag": 2018,
+          "jahr_fertigstellung": 2021,
+          "lca_module_scope": "unclear",
+          "name": "K118 Kopfbau Halle 118 Winterthur",
+          "note": "Sehr starker Hauptfall: Direct-Reuse-Bewertung beruht auf transferierten Bauteilen, nicht auf bloßem Bestandserhalt der Halle 118.",
+          "primaermaterial_eingespart_t": 500,
+          "projektstatus_text": "gebaut",
+          "property_source": "ZHAW/IOP K.118 case study",
+          "quantitative_quellen_konflikt": true,
+          "quellen_konflikt_note": "ZHAW/IOP states 500 t CO₂, separate source states 500 t primary material; store both as source-specific claims",
+          "source_scope": "actor_registry_association",
+          "wiederverwendungsrate_gewicht_prozent": 14,
+          "wiederverwendungsrate_volumen_prozent": 41
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "bewertung": 5,
+          "co2_einsparung_t": 494,
+          "co2_reduktion_prozent": 59,
+          "flaeche_m2": 1100,
+          "geschosse_aufstockung": 3,
+          "id": "p_k118_kopfbau_halle_118_winterthur",
+          "jahr_auftrag": 2018,
+          "jahr_fertigstellung": 2021,
+          "name": "K118 Kopfbau Halle 118 Winterthur",
+          "note": "Sehr starker Hauptfall: Direct-Reuse-Bewertung beruht auf transferierten Bauteilen, nicht auf bloßem Bestandserhalt der Halle 118.",
+          "primaermaterial_eingespart_t": 500,
+          "projektstatus_text": "gebaut",
+          "source_scope": "actor_registry_association",
+          "wiederverwendungsrate_gewicht_prozent": 14,
+          "wiederverwendungsrate_volumen_prozent": 41
+        }
+      },
+      "id": "p_k118_kopfbau_halle_118_winterthur",
+      "line": 89,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 5,
+          "bgf_m2": 4297,
+          "co2_reduktion_prozent": 70,
+          "erreichter_reuse_anteil_prozent": 80,
+          "flaeche_basement_m2": 708,
+          "flaeche_extension_m2": 855,
+          "flaeche_m2": 4297,
+          "flaeche_originalgebaeude_m2": 2734,
+          "ghg_reduktion_pct": 70,
+          "hcs_anzahl": 21,
+          "hcs_breite_m": 1.2,
+          "hcs_co2_reduktion_prozent": 89,
+          "hcs_flaeche_m2": 160,
+          "hcs_kostenfaktor_max": 6,
+          "hcs_kostenfaktor_min": 5,
+          "hcs_laenge_m": 6.5,
+          "id": "p_ka13_kristian_augusts_gate_13_oslo",
+          "jahr_fertigstellung": 2021,
+          "lca_module_scope": "unclear",
+          "name": "KA13 / Kristian Augusts gate 13, Oslo",
+          "note": "Großmaßstäblicher FutureBuilt-Pilot mit ex-situ Hohlkörperdecken und Stahlreuse; Bestandserhalt separat geführt.",
+          "projektstatus_text": "gebaut",
+          "property_source": "FutureBuilt KA13 page",
+          "reuse_anteil_pct": 80,
+          "stahl_reused_prozent": 75,
+          "ziel_reuse_anteil_prozent": 50
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 5,
+          "co2_reduktion_prozent": 70,
+          "erreichter_reuse_anteil_prozent": 80,
+          "flaeche_basement_m2": 708,
+          "flaeche_extension_m2": 855,
+          "flaeche_m2": 4297,
+          "flaeche_originalgebaeude_m2": 2734,
+          "hcs_anzahl": 21,
+          "hcs_breite_m": 1.2,
+          "hcs_co2_reduktion_prozent": 89,
+          "hcs_flaeche_m2": 160,
+          "hcs_kostenfaktor_max": 6,
+          "hcs_kostenfaktor_min": 5,
+          "hcs_laenge_m": 6.5,
+          "id": "p_ka13_kristian_augusts_gate_13_oslo",
+          "jahr_fertigstellung": 2021,
+          "name": "KA13 / Kristian Augusts gate 13, Oslo",
+          "note": "Großmaßstäblicher FutureBuilt-Pilot mit ex-situ Hohlkörperdecken und Stahlreuse; Bestandserhalt separat geführt.",
+          "projektstatus_text": "gebaut",
+          "stahl_reused_prozent": 75,
+          "ziel_reuse_anteil_prozent": 50
+        }
+      },
+      "id": "p_ka13_kristian_augusts_gate_13_oslo",
+      "line": 90,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "abfall_reduktion_pct": 90,
+          "abfallreduktion_prozent": 90,
+          "actor_registry_mentioned": true,
+          "bewertung": 4,
+          "co2_reduktion_gegenueber_neubau_prozent_max": 88,
+          "co2_reduktion_pct": 88,
+          "flaeche_m2": 6224,
+          "id": "p_thoravej_29_copenhagen",
+          "lca_module_scope": "unclear",
+          "material_reuse_anteil_pct": 95,
+          "materialwiederverwendung_prozent": 95,
+          "name": "Thoravej 29 Copenhagen",
+          "note": "Transformation eines Industriegebäudes mit self-reuse: TT-/Betondecken wurden zu Treppen, Fassaden-/Ziegelmaterial zu Boden/Pflaster.",
+          "projektstatus_text": "gebaut / Fertigstellung Anfang 2025",
+          "property_source": "DTU via Pihlmann Architects; DGNB Gold pre-cert",
+          "quantitative_quellen_konflikt": false,
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "abfallreduktion_prozent": 90,
+          "actor_registry_mentioned": true,
+          "bewertung": 4,
+          "co2_reduktion_gegenueber_neubau_prozent_max": 88,
+          "flaeche_m2": 6224,
+          "id": "p_thoravej_29_copenhagen",
+          "materialwiederverwendung_prozent": 95,
+          "name": "Thoravej 29 Copenhagen",
+          "note": "Transformation eines Industriegebäudes mit self-reuse: TT-/Betondecken wurden zu Treppen, Fassaden-/Ziegelmaterial zu Boden/Pflaster.",
+          "projektstatus_text": "gebaut / Fertigstellung Anfang 2025",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_thoravej_29_copenhagen",
+      "line": 91,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "abfall_eingespart_t": 463,
+          "actor_registry_mentioned": true,
+          "bewertung": 3,
+          "co2_reduktion_pct_50y": 29,
+          "id": "p_resource_rows_copenhagen",
+          "lca_module_scope": "50y_lifecycle",
+          "name": "Resource Rows Copenhagen",
+          "note": "Gebautes Wohnprojekt mit sichtbarer Direct Reuse von Ziegelwand-Modulen als Fassaden-/Hüllbauteile; Kennwerte im Altfile unsicher.",
+          "projektstatus_text": "gebaut",
+          "property_source": "Lendager Resource Rows page + RIBA",
+          "source_scope": "actor_registry_association",
+          "upcycle_anteil_pct": 29,
+          "wirtschaftliches_ergebnis": "kostenneutral"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "bewertung": 3,
+          "id": "p_resource_rows_copenhagen",
+          "name": "Resource Rows Copenhagen",
+          "note": "Gebautes Wohnprojekt mit sichtbarer Direct Reuse von Ziegelwand-Modulen als Fassaden-/Hüllbauteile; Kennwerte im Altfile unsicher.",
+          "projektstatus_text": "gebaut",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_resource_rows_copenhagen",
+      "line": 92,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "co2_einsparung_stahl_t": 50,
+          "co2_einsparung_t": 50,
+          "embodied_carbon_a1_a5_kg_per_m2": 386,
+          "flaeche_m2": 1412,
+          "id": "p_55_great_suffolk_street_london",
+          "jahr_fertigstellung_erwartet": 2024,
+          "lca_module_scope": "a1_a5",
+          "name": "55 Great Suffolk Street, London",
+          "note": "Retrofit/extension with reused steel in new external service and circulation core; retained warehouse is not counted as direct reuse.",
+          "property_source": "ASBP case study + NLA + project research file",
+          "quantitative_quellen_konflikt": false,
+          "reuse_anteil_prozent": 97,
+          "upfront_embodied_carbon_kgco2e_m2_a1_a5": 386
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "co2_einsparung_t": 50,
+          "flaeche_m2": 1412,
+          "id": "p_55_great_suffolk_street_london",
+          "jahr_fertigstellung_erwartet": 2024,
+          "name": "55 Great Suffolk Street, London",
+          "note": "Retrofit/extension with reused steel in new external service and circulation core; retained warehouse is not counted as direct reuse.",
+          "reuse_anteil_prozent": 97,
+          "upfront_embodied_carbon_kgco2e_m2_a1_a5": 386
+        }
+      },
+      "id": "p_55_great_suffolk_street_london",
+      "line": 93,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "co2_eingespart_verlust_t": 22,
+          "co2_einsparung_t_max": 99.2,
+          "co2_einsparung_t_min": 66,
+          "co2_reduktion_pct": 40,
+          "hoehe_m": 21,
+          "id": "p_brent_cross_town_primary_substation_london",
+          "laenge_m": 52,
+          "lca_module_scope": "unclear",
+          "missed_co2_einsparung_t": 22,
+          "name": "Brent Cross Town Primary Substation",
+          "note": "Infrastruktur-/Screen-Bauwerk; CO₂- und Reuse-Anteil werden als Spannen/Quellenkonflikt geführt.",
+          "nutzung_text": "elektrische Primär-Substation mit ovalem Stahl-Screen / Kunstwerk-Hülle",
+          "projektstatus_text": "gebaut",
+          "property_source": "ASBP + Arup + local research file",
+          "quantitative_quellen_konflikt": true,
+          "quellen_konflikt_note": "Sources disagree on 66 vs 99.2 t CO₂e",
+          "reuse_stahl_anteil_prozent_max": 45,
+          "reuse_stahl_anteil_prozent_min": 42.5,
+          "reuse_stahl_t": 33.46,
+          "reused_stahl_anteil_pct": 45,
+          "stahlbau_ende_jahr": 2022,
+          "stahlbau_start_jahr": 2022,
+          "substation_mva": 80,
+          "umfang_m": 115
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "co2_einsparung_t_max": 99.2,
+          "co2_einsparung_t_min": 66,
+          "hoehe_m": 21,
+          "id": "p_brent_cross_town_primary_substation_london",
+          "laenge_m": 52,
+          "missed_co2_einsparung_t": 22,
+          "name": "Brent Cross Town Primary Substation",
+          "note": "Infrastruktur-/Screen-Bauwerk; CO₂- und Reuse-Anteil werden als Spannen/Quellenkonflikt geführt.",
+          "nutzung_text": "elektrische Primär-Substation mit ovalem Stahl-Screen / Kunstwerk-Hülle",
+          "projektstatus_text": "gebaut",
+          "reuse_stahl_anteil_prozent_max": 45,
+          "reuse_stahl_anteil_prozent_min": 42.5,
+          "reuse_stahl_t": 33.46,
+          "stahlbau_ende_jahr": 2022,
+          "stahlbau_start_jahr": 2022,
+          "substation_mva": 80,
+          "umfang_m": 115
+        }
+      },
+      "id": "p_brent_cross_town_primary_substation_london",
+      "line": 94,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 2,
+          "foerderprogramm": "Urban Innovative Actions",
+          "grossbauteil_gewicht_t_max": 45,
+          "grossbauteil_gewicht_t_min": 40,
+          "grossbauteile_stueck": 3,
+          "id": "p_superlocal_expogebouw_bleijerheide",
+          "name": "SUPERLOCAL Expogebouw / Superlocal Pavilion",
+          "note": "Cost figures €1376/m² and €3989/m² refer to specific 3D-unit deconstruction and Type B housing; do not apply to project as a whole",
+          "projektstatus_text": "gebaut / Demonstrator, geliefert 2018-02-22",
+          "property_source": "UIA journal Kerkrade SuperCircular Estate",
+          "quantitative_quellen_konflikt": false,
+          "wiederverwendete_materialien_anteil_prozent": 95
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 2,
+          "grossbauteil_gewicht_t_max": 45,
+          "grossbauteil_gewicht_t_min": 40,
+          "grossbauteile_stueck": 3,
+          "id": "p_superlocal_expogebouw_bleijerheide",
+          "name": "SUPERLOCAL Expogebouw / Superlocal Pavilion",
+          "note": "Demonstrator mit drei herausgesägten Wohnungsteilen und weiteren festen Bauteilen aus Hochhausflat Ursulastraat.",
+          "projektstatus_text": "gebaut / Demonstrator, geliefert 2018-02-22",
+          "wiederverwendete_materialien_anteil_prozent": 95
+        }
+      },
+      "id": "p_superlocal_expogebouw_bleijerheide",
+      "line": 95,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "diversion_requirement_percent": 75,
+          "diverted_from_landfill_lb": 60800000,
+          "donor_stockpile_stahl_tons": 161,
+          "fertigstellung_jahr": 2024,
+          "flaeche_sqft_max": 28370,
+          "flaeche_sqft_min": 28300,
+          "id": "p_boulder_fire_station_3",
+          "local_regulation": "Boulder Deconstruction Ordinance 8366",
+          "name": "Boulder Fire Station 3 / City of Boulder Fire Rescue Station #3",
+          "note": "75% diversion is a Boulder Community Hospital figure, not this station",
+          "nutzung_text": "Feuerwache und Fire Administration",
+          "projektstatus_text": "gebaut / online November 2024",
+          "property_source": "Boulder Fire Station 3 corpus file",
+          "reuse_stahl_mitglieder": 89,
+          "reuse_stahl_tons": 25
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "diversion_requirement_percent": 75,
+          "diverted_from_landfill_lb": 60800000,
+          "donor_stockpile_stahl_tons": 161,
+          "fertigstellung_jahr": 2024,
+          "flaeche_sqft_max": 28370,
+          "flaeche_sqft_min": 28300,
+          "id": "p_boulder_fire_station_3",
+          "name": "Boulder Fire Station 3 / City of Boulder Fire Rescue Station #3",
+          "note": "Kritische öffentliche Infrastruktur mit partieller struktureller Wiederverwendung von Krankenhaus-Stahlprofilen.",
+          "nutzung_text": "Feuerwache und Fire Administration",
+          "projektstatus_text": "gebaut / online November 2024",
+          "reuse_stahl_mitglieder": 89,
+          "reuse_stahl_tons": 25
+        }
+      },
+      "id": "p_boulder_fire_station_3",
+      "line": 96,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "bewertung": 3,
+          "foerderprogramm": "Horizon 2020 ReCreate",
+          "geschosse_anzahl": 5,
+          "id": "p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere",
+          "jahr_einbau": 2024,
+          "jahr_fertigstellung_geplant": 2025,
+          "jahr_rueckbau": 2023,
+          "name": "Härmälänranta / A-Kruunu ReCreate mini-pilot Tampere",
+          "note": "Kleiner, technisch relevanter ReCreate-Mini-Pilot mit tragenden Hohlkörperdecken aus einem 1980er-Bürogebäude.",
+          "projektstatus_text": "gebaut / Einbau 2024; Gebäude-Fertigstellung Frühjahr 2025 angekündigt",
+          "property_source": "ReCreate Finnish pilot pages",
+          "reuse_hohlkoerperdecken_anzahl": 25,
+          "reuse_hohlkoerperdecken_anzahl_konflikt": 24,
+          "reused_bauteiltyp": "hollow_core_slabs",
+          "source_scope": "actor_registry_association",
+          "transportdistanz_km": 6,
+          "wohnungen_anzahl": 39
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "bewertung": 3,
+          "geschosse_anzahl": 5,
+          "id": "p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere",
+          "jahr_einbau": 2024,
+          "jahr_fertigstellung_geplant": 2025,
+          "jahr_rueckbau": 2023,
+          "name": "Härmälänranta / A-Kruunu ReCreate mini-pilot Tampere",
+          "note": "Kleiner, technisch relevanter ReCreate-Mini-Pilot mit tragenden Hohlkörperdecken aus einem 1980er-Bürogebäude.",
+          "projektstatus_text": "gebaut / Einbau 2024; Gebäude-Fertigstellung Frühjahr 2025 angekündigt",
+          "reuse_hohlkoerperdecken_anzahl": 25,
+          "reuse_hohlkoerperdecken_anzahl_konflikt": 24,
+          "source_scope": "actor_registry_association",
+          "transportdistanz_km": 6,
+          "wohnungen_anzahl": 39
+        }
+      },
+      "id": "p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere",
+      "line": 97,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 3,
+          "id": "p_liander_alliander_hq_duiven",
+          "material_passport": "Madaster",
+          "name": "Liander / Alliander HQ, Duiven",
+          "note": "Vergleichsfall: starke zirkuläre Transformation, aber konkrete Direct-Reuse-Bauteile öffentlich nur begrenzt belegt; Bestandserhalt separat geführt.",
+          "projektstatus_text": "gebaut / Transformation",
+          "property_source": "Material District + Archello + CityLoops report",
+          "zertifizierung": "BREEAM-NL Outstanding"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 3,
+          "id": "p_liander_alliander_hq_duiven",
+          "name": "Liander / Alliander HQ, Duiven",
+          "note": "Vergleichsfall: starke zirkuläre Transformation, aber konkrete Direct-Reuse-Bauteile öffentlich nur begrenzt belegt; Bestandserhalt separat geführt.",
+          "projektstatus_text": "gebaut / Transformation"
+        }
+      },
+      "id": "p_liander_alliander_hq_duiven",
+      "line": 98,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aluminiumprofile_m": 1300,
+          "betonbestand_erhalten_prozent": 89,
+          "bewertung": 3,
+          "co2_neutral_office": true,
+          "first_renovation_madaster_belgium": true,
+          "flaeche_m2_max": 45800,
+          "flaeche_m2_min": 44200,
+          "granitfliesen_anzahl": 400,
+          "id": "p_multi_brussels_reuse_in_multi",
+          "import_status": "may_match_existing_project_chunk",
+          "material_passport": "Madaster",
+          "name": "Multi Brussels / Reuse in MULTI",
+          "needs_project_file": false,
+          "note": "Großmaßstäblicher Umbau mit Materialpass; Direct Reuse wird nur für transformierte oder neu eingesetzte Bauteile modelliert, nicht für den reinen Betonerhalt.",
+          "project_category": "building_project",
+          "projektstatus_text": "gebaut / fertiggestellt",
+          "property_source": "Immobel + Rotor",
+          "source_scope": "actor_registry_association",
+          "urban_mining_anteil_prozent_max": 3,
+          "urban_mining_anteil_prozent_min": 2
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aluminiumprofile_m": 1300,
+          "betonbestand_erhalten_prozent": 89,
+          "bewertung": 3,
+          "flaeche_m2_max": 45800,
+          "flaeche_m2_min": 44200,
+          "granitfliesen_anzahl": 400,
+          "id": "p_multi_brussels_reuse_in_multi",
+          "import_status": "may_match_existing_project_chunk",
+          "name": "Multi Brussels / Reuse in MULTI",
+          "needs_project_file": false,
+          "note": "Großmaßstäblicher Umbau mit Materialpass; Direct Reuse wird nur für transformierte oder neu eingesetzte Bauteile modelliert, nicht für den reinen Betonerhalt.",
+          "project_category": "building_project",
+          "projektstatus_text": "gebaut / fertiggestellt",
+          "source_scope": "actor_registry_association",
+          "urban_mining_anteil_prozent_max": 3,
+          "urban_mining_anteil_prozent_min": 2
+        }
+      },
+      "id": "p_multi_brussels_reuse_in_multi",
+      "line": 99,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "fensterrahmen_anzahl": 3750,
+          "flaeche_m2": 81777,
+          "id": "p_europa_building_brussels",
+          "jahr_fertigstellung": 2016,
+          "jahr_nutzung_start": 2017,
+          "jahr_wettbewerb_start": 2005,
+          "kosten_eur": 312000000,
+          "led_light_tubes_anzahl": 374,
+          "name": "Europa Building Brussels / Résidence Palace – Europa",
+          "note": "Asbestos removal during 1960s building demolition documented (Council timeline 2007–2008)",
+          "projektstatus_text": "gebaut",
+          "property_source": "Architectural Digest + research file",
+          "pv_paneele_anzahl": 636,
+          "reclaimed_windows_count": 3750,
+          "reclaimed_windows_source": "Demolitions across Europe",
+          "stahlreduktion_fassadenstruktur_prozent": 30
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "fensterrahmen_anzahl": 3750,
+          "flaeche_m2": 81777,
+          "id": "p_europa_building_brussels",
+          "jahr_fertigstellung": 2016,
+          "jahr_nutzung_start": 2017,
+          "jahr_wettbewerb_start": 2005,
+          "kosten_eur": 312000000,
+          "led_light_tubes_anzahl": 374,
+          "name": "Europa Building Brussels / Résidence Palace – Europa",
+          "note": "Großmaßstäblicher öffentlicher Hüllreuse-Fall; Residence-Palace-Erhalt ist Bestandserhalt/Denkmalintegration und nicht Direct-Reuse-Basis.",
+          "projektstatus_text": "gebaut",
+          "pv_paneele_anzahl": 636,
+          "stahlreduktion_fassadenstruktur_prozent": 30
+        }
+      },
+      "id": "p_europa_building_brussels",
+      "line": 100,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "arbeitsplaetze_min": 100,
+          "bewertung": 2,
+          "crclr_gesamtflaeche_m2": 4871,
+          "flaeche_m2": 3500,
+          "id": "p_impact_hub_berlin_crclr_fitout",
+          "jahr_bauzeit_ende": 2024,
+          "jahr_bauzeit_start": 2019,
+          "jahr_eroeffnung": 2022,
+          "materialanteil_recycled_sustainable_prozent": 70,
+          "materialanteil_sustainable_recycled_upcycled_prozent": 80,
+          "name": "Impact Hub Berlin / CRCLR Fit-out",
+          "note": "Black MDF boards explicitly reused as cupboard doors / wall panels",
+          "projektstatus_text": "gebaut",
+          "property_source": "Impact Hub Berlin / CRCLR fitout sources",
+          "reused_mdf_documented": true,
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "arbeitsplaetze_min": 100,
+          "bewertung": 2,
+          "crclr_gesamtflaeche_m2": 4871,
+          "flaeche_m2": 3500,
+          "id": "p_impact_hub_berlin_crclr_fitout",
+          "jahr_bauzeit_ende": 2024,
+          "jahr_bauzeit_start": 2019,
+          "jahr_eroeffnung": 2022,
+          "materialanteil_recycled_sustainable_prozent": 70,
+          "materialanteil_sustainable_recycled_upcycled_prozent": 80,
+          "name": "Impact Hub Berlin / CRCLR Fit-out",
+          "note": "Ergänzender Innenausbau-Fall; Direct Reuse nur für feste Wand-/Schrank-/Telefonbox- oder Raumelemente, nicht Möbel, Recycling oder CRCLR-Haupttragwerk.",
+          "projektstatus_text": "gebaut",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_impact_hub_berlin_crclr_fitout",
+      "line": 101,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "demontagebarkeit_pct": 90,
+          "design_for_disassembly": true,
+          "evidence_level": "A_B",
+          "id": "p_circle_house",
+          "import_status": "registry_stub_only",
+          "material_passport": "GXN demonstrator passport",
+          "name": "Circle House",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "future_reuse_system_project_stub",
+          "property_source": "GXN PDF + BLOXHUB",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_circle_house",
+          "import_status": "registry_stub_only",
+          "name": "Circle House",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "future_reuse_system_project_stub",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_circle_house",
+      "line": 102,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 102,
+    "would_create": 12,
+    "would_create_rel": 58,
+    "would_update": 32
+  }
+}
