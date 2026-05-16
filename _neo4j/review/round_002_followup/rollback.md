@@ -9,14 +9,14 @@
 4. Verifies with post-apply queries (logged here).
 5. Appends a section to this doc.
 
-**Apply order so far:** Phase A → Phase B.
+**Apply order so far:** Phase A → Phase B → Phase C.
 
 **Combined effect:**
 
-| | Before A | After A | After B |
-|---|---:|---:|---:|
-| Nodes | 2 147 | 2 159 | **2 188** |
-| Relationships | 15 834 | 15 892 | **15 966** |
+| | Before A | After A | After B | After C |
+|---|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 159 | 2 188 | **2 204** |
+| Relationships | 15 834 | 15 892 | 15 966 | **16 000** |
 
 ---
 
@@ -300,8 +300,162 @@ These node-labels and rel-types are now live but not yet in the project_batches/
 
 ---
 
+---
+
+## Phase C — applied 2026-05-16
+
+**Patch:** [patches/phase_c.patch.jsonl](patches/phase_c.patch.jsonl)
+**Apply report:** [apply_reports/phase_c.patch.apply_report.json](apply_reports/phase_c.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_c_pre_apply/`](../backups/phase_c_pre_apply/) (2 188 nodes, 15 966 rels; gitignored)
+
+### What landed
+
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 188 | **2 204** | +16 |
+| Relationships | 15 966 | **16 000** | +34 |
+
+**Operations:** 53 records / 0 errors / 1 noop_existing (`pr_brandschutznachweis` pre-existed) / 1 noop_existing_rel (`p_thoravej_29 → zbs_dgnb` pre-existed).
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_node | 17 | 10 PruefungNachweis (P-17) + 4 Verbindungstechnik (P-20) + 2 Programm + 1 Akteurrolle (P-22) — *1 PruefungNachweis already existed → noop* |
+| add_rel | 35 | 4 IST_UNTERVERFAHREN_VON PruefungNachweis hierarchy + 12 TYPISCH_BEI_MATERIAL for tests + 5 IST_UNTERVERFAHREN_VON Verbindungstechnik tree + 6 HAT_VERBINDUNGSTECHNIK BELEGT + 2 ERHALT_FOERDERUNG_DURCH + 2 HAT_ZERTIFIZIERUNG + 4 HAT_AKTEURROLLE materialbroker |
+| set_node_properties | 1 | `prog_recreate` funding metadata |
+
+### Verification (10/10 checks pass)
+
+| Check | Expected | Got |
+|---|---:|---:|
+| PruefungNachweis total | 11 + 9 = 20 | 20 ✓ |
+| Verbindungstechnik total | 8 + 4 = 12 | 12 ✓ |
+| Programm total | 15 + 2 = 17 | 17 ✓ |
+| Akteurrolle total | 24 + 1 = 25 (post-merges) | 25 ✓ |
+| IST_UNTERVERFAHREN_VON rels (new type) | 9 | 9 ✓ |
+| ERHALT_FOERDERUNG_DURCH rels (new type) | 2 | 2 ✓ |
+| TYPISCH_BEI_MATERIAL total (Schadstoff 18 + PruefungNachweis 12) | 30 | 30 ✓ |
+| HAT_VERBINDUNGSTECHNIK total (102 + 6) | 108 | 108 ✓ |
+| HAT_AKTEURROLLE → ar_materialbroker | 4 | 4 ✓ |
+| HAT_ZERTIFIZIERUNG total (was 10, +1 new) | 11 | 11 ✓ |
+
+### What changed in detail
+
+**P-17 — PruefungNachweis hubs (9 effective new nodes, `pr_brandschutznachweis` already existed):**
+`pr_zerstoerungsfreie_pruefung` (NDT), `pr_zerstoerende_pruefung` (parent), `pr_korrosionspruefung`, `pr_festigkeitssortierung_holz`, `pr_bohrkernpruefung_beton`, `pr_dokumentenpruefung_bestand`, `pr_schadstoffpruefung` (parent), `pr_materialbeprobung` (parent), `pr_feuchtepruefung`.
+
+**P-17 hierarchy (4 rels):**
+- `pr_bohrkernpruefung_beton` → `pr_zerstoerende_pruefung`
+- `pr_zugversuch` (existing) → `pr_zerstoerende_pruefung`
+- `pr_schadstoffscreening` (existing) → `pr_schadstoffpruefung`
+- `pr_abbrandbemessung` (existing) → `pr_brandschutznachweis`
+
+**P-17 TYPISCH_BEI_MATERIAL (12 rels):** NDT covers Stahl/Beton/Stahlbeton/Holz; Korrosionsprüfung covers Stahl + Stahlbeton (rebar); Festigkeitssortierung covers Holz; Bohrkernprüfung covers Beton + Stahlbeton; Feuchteprüfung covers Holz + Lehm + Dämmstoff.
+
+**P-20 — Verbindungstechnik tree (4 new nodes):**
+- `vt_bolzenverbindung` — K.118 external steel staircase, Zinneke plywood
+- `vt_demontierbarer_schwerlastanker` — Plattenpalast Berlin
+- `vt_stahlverbinder_holz` — Recypark Anderlecht glulam half-arches
+- `vt_stahlrahmen_fassadenmodul` — Resource Rows Copenhagen brick modules
+
+**P-20 hierarchy (5 IST_UNTERVERFAHREN_VON rels):** vt_verschraubung, vt_klemmverbindung, vt_steckverbindung, vt_bolzenverbindung, vt_demontierbarer_schwerlastanker → vt_reversible_fuegung (parent).
+
+**P-20 BELEGT cases (6 rels with `reversibility` property on rel):**
+- `bg_cascadeup_clst_floor_panels` → vt_reversible_fuegung [reversibility: reversible]
+- `bg_cascadeup_clst_wall_panels` → vt_reversible_fuegung [reversibility: reversible]
+- `bg_plattenpalast_wbs70_wand_deckenelemente` → vt_demontierbarer_schwerlastanker [reversibility: partially_reversible]
+- `bg_k118_external_steel_stair` → vt_bolzenverbindung [reversibility: reversible]
+- `bg_brettschichtholzbogen_recypark_demets` → vt_stahlverbinder_holz [reversibility: partially_reversible]
+- `bg_ziegelfassadenmodule_mauerwerksausschnitte_resource_rows` → vt_stahlrahmen_fassadenmodul [reversibility: partially_reversible]
+
+**P-22 — Förderprogramm + Marketplace actor role (2 Programm + 1 Akteurrolle + 8 rels):**
+- New Programm: `prog_horizon_2020`, `prog_urban_innovative_actions`
+- New Akteurrolle: `ar_materialbroker`
+- ERHALT_FOERDERUNG_DURCH: `p_harmalanranta → prog_horizon_2020`, `p_superlocal → prog_urban_innovative_actions`
+- HAT_ZERTIFIZIERUNG: `p_liander → zbs_breeam`, `p_thoravej_29 → zbs_dgnb` (noop, already existed)
+- HAT_AKTEURROLLE: `rotor_dc / concular / madaster / opalis → ar_materialbroker`
+- `prog_recreate` enhanced with `funding_source: 'EU Horizon 2020'`, `funding_amount_eur: 12500000`
+
+### Conservative choices made during apply
+
+- **Dropped `bg_recyclinghaus_holz100`, `bg_brummen`, `bg_triodos` BELEGT edges** — corresponding BGs/projects don't exist in the corpus. Pre-flight check caught this.
+- **Did NOT create new `prog_breeam_nl` / `prog_dgnb` nodes** — used existing `zbs_breeam` / `zbs_dgnb` via HAT_ZERTIFIZIERUNG instead. Cleaner taxonomy.
+- **Did NOT bulk-add `reversibility='unknown'` to all 102 existing HAT_VERBINDUNGSTECHNIK rels** — absence of property is "unknown" by default, saves 102 churn writes.
+- **Idempotency: 2 ops handled gracefully** (pr_brandschutznachweis pre-existed; p_thoravej→zbs_dgnb pre-existed). Confirms the apply tool's noop_existing handling.
+
+### Phase C rollback procedure
+
+#### Option 1 — Inverse-patch (preferred)
+
+```text
+For each add_node      → emit delete_node {id}     # 17 deletes (1 skipped if pre-existed)
+For each add_rel       → emit delete_rel {from, type, to}  # 35 deletes
+For prog_recreate enhancement → emit set_node_properties with null for funding_source, funding_amount_eur, scope_note
+```
+
+#### Option 2 — Targeted Cypher (surgical, single block)
+
+```cypher
+// 1. Delete the 16 new Phase C nodes (cascade kills their attached rels)
+MATCH (n) WHERE n.id IN [
+  'pr_zerstoerungsfreie_pruefung','pr_zerstoerende_pruefung','pr_korrosionspruefung',
+  'pr_festigkeitssortierung_holz','pr_bohrkernpruefung_beton','pr_dokumentenpruefung_bestand',
+  'pr_schadstoffpruefung','pr_materialbeprobung','pr_feuchtepruefung',
+  'vt_bolzenverbindung','vt_demontierbarer_schwerlastanker','vt_stahlverbinder_holz','vt_stahlrahmen_fassadenmodul',
+  'prog_horizon_2020','prog_urban_innovative_actions',
+  'ar_materialbroker'
+] DETACH DELETE n;
+
+// 2. Strip prog_recreate enhancement
+MATCH (n:Programm {id: 'prog_recreate'}) REMOVE n.funding_source, n.funding_amount_eur;
+// note: scope_note may have been added separately — verify before stripping
+
+// 3. The 2 new HAT_ZERTIFIZIERUNG edges to pre-existing zbs nodes need explicit cleanup
+MATCH (:Projekt {id: 'p_liander_alliander_hq_duiven'})-[r:HAT_ZERTIFIZIERUNG]->(:ZertifizierungBewertungssystem {id: 'zbs_breeam'}) DELETE r;
+// (the p_thoravej → zbs_dgnb edge pre-existed; do NOT delete it)
+
+// 4. The 4 IST_UNTERVERFAHREN_VON edges from existing PruefungNachweis nodes to also-existing parents
+// will be cascaded by step 1 (their parent target nodes are deleted in step 1).
+```
+
+#### Option 3 — Full restore from backup (nuclear)
+
+Restore from [`_neo4j/review/backups/phase_c_pre_apply/`](../backups/phase_c_pre_apply/).
+
+### New capabilities unlocked
+
+```cypher
+// Recommend missing tests for any reused BG by material rules
+MATCH (bg:Bauteilgruppe)-[:NUTZT_MATERIAL]->(m:Material)<-[:TYPISCH_BEI_MATERIAL]-(pr:PruefungNachweis)
+WHERE NOT (bg)-[:HAT_PRUEFUNG]->(pr)
+RETURN bg.id, m.name, collect(DISTINCT pr.name) AS recommended_tests
+ORDER BY size(recommended_tests) DESC
+
+// All reuse cases that explicitly use a reversible connection
+MATCH (bg:Bauteilgruppe)-[r:HAT_VERBINDUNGSTECHNIK]->(vt:Verbindungstechnik)
+WHERE r.reversibility = 'reversible'
+RETURN bg.id, vt.name
+
+// Reuse marketplaces in the corpus
+MATCH (a:Akteur)-[:HAT_AKTEURROLLE]->(:Akteurrolle {id: 'ar_materialbroker'}) RETURN a.id, a.name
+
+// Projects funded through specific programmes
+MATCH (p:Projekt)-[:ERHALT_FOERDERUNG_DURCH]->(prog:Programm) RETURN p.name, prog.name
+```
+
+### Contract drift after Phase A + B + C
+
+New labels and rel types live but not in contract yet (cumulative):
+- Labels: `BauwerkEra`, `Bauproduktstatus` (A, B)
+- Rel types: `TYPISCH_BEI_MATERIAL`, `TYPISCH_BEI_BAUTEILTYP`, `TYPISCH_BEI_ERA`, `GILT_IN_LAND`, `HAT_TYPISCHEN_BAUPRODUKTSTATUS`, `HAT_BAUPRODUKTSTATUS` (A, B), `IST_UNTERVERFAHREN_VON`, `ERHALT_FOERDERUNG_DURCH` (C)
+
+Action item: small contract patch commit before Phase D.
+
+---
+
 ## What's next
 
-- **Phase C** (P-17 PruefungNachweis + P-19 Aufbereitungsverfahren + P-20 Verbindungstechnik + P-22 Förderprogramm), ~110 ops.
-- **Reminder parked:** **#1 stub-Akteur** (15 no-archive-match + 2 multi-file) and **#2 stub-Projekt** (now 23, after Circle House promotion) — still on the worklist.
-- **Contract drift cleanup** — add the 2 new labels + 6 new rel types to the contract schemas (small commit, no apply needed).
+- **Phase D** (P-19 Aufbereitungsverfahren expansion — ~25-30 new av_* nodes + parent hierarchy + ~40 TYPISCH_BEI_MATERIAL rels — biggest single phase).
+- **Phase E** (P-8 LCA + P-7 Layer + P-3 Marktmodell, ~40 ops).
+- **Phase F** (P-1 Defekt + P-13 MatchingQualitaet + P-18 ReusePattern enablers for round 003).
+- **Round 003** itself (project content review, 15 chunks × 5 projects).
+- **Reminders parked:** **#1 stub-Akteur** (15 no-archive + 2 multi-file), **#2 stub-Projekt** (23 left), **contract drift cleanup**.

@@ -1,0 +1,644 @@
+{
+  "confirmation_required": "APPLY phase_c.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2204,
+    "relationships": 16000
+  },
+  "counts_after_expected": {
+    "nodes": 2204,
+    "relationships": 16000
+  },
+  "counts_before": {
+    "nodes": 2188,
+    "relationships": 15966
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-16T16:14:50.781096+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_c.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_zerstoerungsfreie_pruefung",
+          "name": "Zerstörungsfreie Prüfung (ZfP / NDT)",
+          "scope_note": "Non-destructive testing for hidden defects, cracks, weld quality, residual thickness, concrete uniformity. ISO 9712 personnel, ISO 17635 weld NDT, EN 12504-2 rebound concrete."
+        }
+      },
+      "before": null,
+      "id": "pr_zerstoerungsfreie_pruefung",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_zerstoerende_pruefung",
+          "name": "Zerstörende Prüfung (Sammelkategorie)",
+          "scope_note": "Parent category for destructive testing methods (cores, coupons, samples). EN 12504-1, EN 13791, EN 408, EN 14081 family."
+        }
+      },
+      "before": null,
+      "id": "pr_zerstoerende_pruefung",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_korrosionspruefung",
+          "name": "Korrosionsprüfung / Restdickenmessung",
+          "scope_note": "Corrosion assessment + residual section measurement. ISO 12944 corrosion protection of steel."
+        }
+      },
+      "before": null,
+      "id": "pr_korrosionspruefung",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_festigkeitssortierung_holz",
+          "name": "Festigkeitssortierung Holz (visuell + maschinell)",
+          "scope_note": "Strength grading of structural timber per EN 14081-1 + national visual grading (DIN 4074, BS 4978)."
+        }
+      },
+      "before": null,
+      "id": "pr_festigkeitssortierung_holz",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_bohrkernpruefung_beton",
+          "name": "Beton-Bohrkernprüfung",
+          "scope_note": "Core drilling and compression testing of concrete elements per EN 12504-1; in-situ strength assessment per EN 13791."
+        }
+      },
+      "before": null,
+      "id": "pr_bohrkernpruefung_beton",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_dokumentenpruefung_bestand",
+          "name": "Dokumentenprüfung / Herkunfts- und Bestandsnachweis",
+          "scope_note": "Document review: plans, calculations, maintenance/use records, prior investigations, declared performance. Typically the first verification step before testing."
+        }
+      },
+      "before": null,
+      "id": "pr_dokumentenpruefung_bestand",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_schadstoffpruefung",
+          "name": "Schadstoffprüfung (Sammelkategorie)",
+          "scope_note": "Parent category for pollutant/hazardous-substance testing. GefStoffV, TRGS 519/524."
+        }
+      },
+      "before": null,
+      "id": "pr_schadstoffpruefung",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_materialbeprobung",
+          "name": "Materialprobe / Beprobung (Sammelkategorie)",
+          "scope_note": "Parent category for sampling: cores, coupons, swabs. TRGS 519/524 + EN 12504-1 (concrete) + DIN 18945-18947 (earth)."
+        }
+      },
+      "before": null,
+      "id": "pr_materialbeprobung",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_feuchtepruefung",
+          "name": "Feuchteprüfung",
+          "scope_note": "Moisture testing for timber, earthen materials, insulation, masonry. EN 13183 series + DIN 68800."
+        }
+      },
+      "before": null,
+      "id": "pr_feuchtepruefung",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_brandschutznachweis",
+          "name": "Brandschutznachweis (Sammelkategorie)",
+          "scope_note": "Generic fire-resistance proof. EN 13501-2 + EN 1995-1-2 (timber charring) + DIN 4102 + project-specific fire-engineering proofs."
+        }
+      },
+      "before": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "id": "pr_brandschutznachweis",
+          "name": "Brandschutznachweis"
+        }
+      },
+      "id": "pr_brandschutznachweis",
+      "line": 10,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "pr_bohrkernpruefung_beton",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "pr_zerstoerende_pruefung"
+    },
+    {
+      "from": "pr_zugversuch",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "pr_zerstoerende_pruefung"
+    },
+    {
+      "from": "pr_schadstoffscreening",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "pr_schadstoffpruefung"
+    },
+    {
+      "from": "pr_abbrandbemessung",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "pr_brandschutznachweis"
+    },
+    {
+      "from": "pr_zerstoerungsfreie_pruefung",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahl"
+    },
+    {
+      "from": "pr_zerstoerungsfreie_pruefung",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_beton"
+    },
+    {
+      "from": "pr_zerstoerungsfreie_pruefung",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahlbeton"
+    },
+    {
+      "from": "pr_zerstoerungsfreie_pruefung",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "pr_korrosionspruefung",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahl"
+    },
+    {
+      "from": "pr_korrosionspruefung",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahlbeton"
+    },
+    {
+      "from": "pr_festigkeitssortierung_holz",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "pr_bohrkernpruefung_beton",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_beton"
+    },
+    {
+      "from": "pr_bohrkernpruefung_beton",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahlbeton"
+    },
+    {
+      "from": "pr_feuchtepruefung",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "pr_feuchtepruefung",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_lehm"
+    },
+    {
+      "from": "pr_feuchtepruefung",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_daemmstoff"
+    },
+    {
+      "after": {
+        "labels": [
+          "Verbindungstechnik"
+        ],
+        "properties": {
+          "id": "vt_bolzenverbindung",
+          "name": "Bolzenverbindung",
+          "scope_note": "Reversible structural bolt connection. K.118 external steel staircase + Zinneke plywood furniture."
+        }
+      },
+      "before": null,
+      "id": "vt_bolzenverbindung",
+      "line": 27,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Verbindungstechnik"
+        ],
+        "properties": {
+          "id": "vt_demontierbarer_schwerlastanker",
+          "name": "Demontierbarer Schwerlastanker",
+          "scope_note": "Demountable heavy-duty anchor for precast concrete / reused panels. Plattenpalast Berlin GDR-precast reuse."
+        }
+      },
+      "before": null,
+      "id": "vt_demontierbarer_schwerlastanker",
+      "line": 28,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Verbindungstechnik"
+        ],
+        "properties": {
+          "id": "vt_stahlverbinder_holz",
+          "name": "Stahlverbinder für Holz (Reparatur-/Anschluss-Verbindung)",
+          "scope_note": "Steel connector replacing damaged glulam end / providing repair connection. Recypark Anderlecht glulam half-arches."
+        }
+      },
+      "before": null,
+      "id": "vt_stahlverbinder_holz",
+      "line": 29,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Verbindungstechnik"
+        ],
+        "properties": {
+          "id": "vt_stahlrahmen_fassadenmodul",
+          "name": "Stahlrahmen für Fassadenmodul",
+          "scope_note": "Steel frame holding brick / masonry modules as façade panels. Resource Rows Copenhagen."
+        }
+      },
+      "before": null,
+      "id": "vt_stahlrahmen_fassadenmodul",
+      "line": 30,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "vt_verschraubung",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
+    },
+    {
+      "from": "vt_klemmverbindung",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
+    },
+    {
+      "from": "vt_steckverbindung",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
+    },
+    {
+      "from": "vt_bolzenverbindung",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
+    },
+    {
+      "from": "vt_demontierbarer_schwerlastanker",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
+    },
+    {
+      "from": "bg_cascadeup_clst_floor_panels",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
+    },
+    {
+      "from": "bg_cascadeup_clst_wall_panels",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
+    },
+    {
+      "from": "bg_plattenpalast_wbs70_wand_deckenelemente",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_demontierbarer_schwerlastanker"
+    },
+    {
+      "from": "bg_k118_external_steel_stair",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_bolzenverbindung"
+    },
+    {
+      "from": "bg_brettschichtholzbogen_recypark_demets",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_stahlverbinder_holz"
+    },
+    {
+      "from": "bg_ziegelfassadenmodule_mauerwerksausschnitte_resource_rows",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_stahlrahmen_fassadenmodul"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "id": "prog_horizon_2020",
+          "name": "Horizon 2020 (EU Forschungsförderung)",
+          "scope": "european",
+          "scope_note": "EU framework programme for research and innovation. Funded ReCreate (€12.5m) among other reuse projects."
+        }
+      },
+      "before": null,
+      "id": "prog_horizon_2020",
+      "line": 42,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "id": "prog_urban_innovative_actions",
+          "name": "Urban Innovative Actions (UIA, EU)",
+          "scope": "european",
+          "scope_note": "EU initiative supporting urban-innovation pilots. Funded SUPERLOCAL Kerkrade among others."
+        }
+      },
+      "before": null,
+      "id": "prog_urban_innovative_actions",
+      "line": 43,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "id": "ar_materialbroker",
+          "name": "Materialbroker / Reuse-Marketplace-Betreiber",
+          "scope_note": "Operates a reuse-material marketplace, hub, or brokerage service. Examples: Rotor DC, Concular, Restado, Cycle Up, Opalis, Madaster."
+        }
+      },
+      "before": null,
+      "id": "ar_materialbroker",
+      "line": 44,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere",
+      "line": 45,
+      "op": "add_rel",
+      "rel_type": "ERHALT_FOERDERUNG_DURCH",
+      "status": "would_create_rel",
+      "to": "prog_horizon_2020"
+    },
+    {
+      "from": "p_superlocal_expogebouw_bleijerheide",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "ERHALT_FOERDERUNG_DURCH",
+      "status": "would_create_rel",
+      "to": "prog_urban_innovative_actions"
+    },
+    {
+      "from": "p_liander_alliander_hq_duiven",
+      "line": 47,
+      "op": "add_rel",
+      "rel_type": "HAT_ZERTIFIZIERUNG",
+      "status": "would_create_rel",
+      "to": "zbs_breeam"
+    },
+    {
+      "from": "p_thoravej_29_copenhagen",
+      "line": 48,
+      "op": "add_rel",
+      "rel_type": "HAT_ZERTIFIZIERUNG",
+      "status": "noop_existing_rel",
+      "to": "zbs_dgnb"
+    },
+    {
+      "from": "rotor_dc",
+      "line": 49,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "concular",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "madaster",
+      "line": 51,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "opalis",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "funding_amount_eur": 12500000,
+          "funding_source": "EU Horizon 2020",
+          "id": "prog_recreate",
+          "name": "ReCreate",
+          "scope_note": "ReCreate research project (Horizon 2020); €12.5m EU funding; pilots in DE, NL, FI.",
+          "usage_countries": [
+            "Finnland"
+          ],
+          "usage_project_count": 2
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "id": "prog_recreate",
+          "name": "ReCreate",
+          "usage_countries": [
+            "Finnland"
+          ],
+          "usage_project_count": 2
+        }
+      },
+      "id": "prog_recreate",
+      "line": 53,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing": 1,
+    "noop_existing_rel": 1,
+    "records": 53,
+    "would_create": 16,
+    "would_create_rel": 34,
+    "would_update": 1
+  }
+}
