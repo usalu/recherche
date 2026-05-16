@@ -9,14 +9,14 @@
 4. Verifies with post-apply queries (logged here).
 5. Appends a section to this doc.
 
-**Apply order so far:** Phase A → Phase B → Phase C.
+**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E. (Phase F paused — Neo4j connectivity dropped.)
 
 **Combined effect:**
 
-| | Before A | After A | After B | After C |
-|---|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 159 | 2 188 | **2 204** |
-| Relationships | 15 834 | 15 892 | 15 966 | **16 000** |
+| | Before A | After A | After B | After C | After D | After E |
+|---|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | **2 260** |
+| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | **16 124** |
 
 ---
 
@@ -452,10 +452,156 @@ Action item: small contract patch commit before Phase D.
 
 ---
 
+## Phase D — applied 2026-05-16
+
+**Patch:** [patches/phase_d.patch.jsonl](patches/phase_d.patch.jsonl)
+**Apply report:** [apply_reports/phase_d.patch.apply_report.json](apply_reports/phase_d.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_d_pre_apply/`](../backups/phase_d_pre_apply/) (2 204 nodes, 16 000 rels; gitignored)
+
+### What landed
+
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 204 | **2 238** | +34 |
+| Relationships | 16 000 | **16 059** | +59 |
+
+**Operations:** 93 records / 0 errors.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_node | 34 | 4 parent-category Aufbereitungsverfahren + 30 material-specific child av_* |
+| add_rel | 59 | 21 IST_UNTERVERFAHREN_VON parent-child + 33 TYPISCH_BEI_MATERIAL + 5 BELEGT HAT_AUFBEREITUNG |
+
+### New nodes (4 parents + 30 children)
+
+**Parents:** `av_oberflaechenbehandlung`, `av_zerlegung_vereinzelung`, `av_materialsortierung_chargenbildung`, `av_kaskadierende_wiederverwendung`.
+
+**Children by material branch:**
+- **Stahl** (4): av_sandstrahlen, av_entrosten_korrosionsbehandlung, av_korrosionsschutz_beschichten, av_stahl_zuschnitt_bohrung
+- **Holz** (7): av_entnageln, av_holz_fremdstoffentfernung, av_hobeln_schleifen_holz, av_holz_zuschnitt_reparatur, av_holz_trocknung_feuchtekonditionierung, av_holz_festigkeitssortierung, av_holz_schadstoffscreening
+- **Beton/HCS** (5): av_betonfertigteil_saegen, av_beton_anhaftungen_entfernen, av_hcs_zuschnitt_bohrungen_fittings, av_betonfertigteil_factory_refurbishment, av_betonfertigteil_tagging_sortierung
+- **Mauerwerk** (4): av_moertelentfernung_ziegel, av_ziegel_sortierung_pruefung, av_mauerwerk_diamantsaegen_modul, av_naturstein_reinigung_schleifen_zuschnitt
+- **Glas** (3): av_glas_reinigung_entkitten, av_glas_pruefung_sortierung, av_fenster_refurbishment
+- **Aluminium** (3): av_aluminium_reinigung_entdichtung, av_aluminiumfenster_beschlag_dichtung, av_aluminium_zuschnitt_bohrung
+- **Bio** (4): av_lehm_sieben_mischen, av_stroh_pruefen_trocknen_sortieren, av_bio_daemmstoff_zuschnitt_gefach, av_biobasiert_hygiene_schadstoffcheck
+
+### BELEGT project-level cases (5)
+
+- `bg_ziegelfassadenmodule_mauerwerksausschnitte_resource_rows` → av_mauerwerk_diamantsaegen_modul (Resource Rows BELEGT)
+- `bg_brettschichtholzbogen_recypark_demets` → av_holz_zuschnitt_reparatur (Recypark BELEGT)
+- `bg_k118_floor_finishes_bricks_panels` → av_naturstein_reinigung_schleifen_zuschnitt (K.118 BELEGT)
+- `bg_brent_cross_reclaimed_tubular_columns` → av_sandstrahlen (Steel reuse — FCRBE general practice)
+- `bg_55gss_reused_steel_external_core` → av_korrosionsschutz_beschichten (ASBP source mentions coating renewal)
+
+### Phase D rollback
+
+Option 1 (preferred): inverse-patch via runner.
+Option 2 (Cypher): `MATCH (n:Aufbereitungsverfahren) WHERE n.id IN ['av_oberflaechenbehandlung','av_zerlegung_vereinzelung','av_materialsortierung_chargenbildung','av_kaskadierende_wiederverwendung','av_sandstrahlen','av_entrosten_korrosionsbehandlung','av_korrosionsschutz_beschichten','av_stahl_zuschnitt_bohrung','av_entnageln','av_holz_fremdstoffentfernung','av_hobeln_schleifen_holz','av_holz_zuschnitt_reparatur','av_holz_trocknung_feuchtekonditionierung','av_holz_festigkeitssortierung','av_holz_schadstoffscreening','av_betonfertigteil_saegen','av_beton_anhaftungen_entfernen','av_hcs_zuschnitt_bohrungen_fittings','av_betonfertigteil_factory_refurbishment','av_betonfertigteil_tagging_sortierung','av_moertelentfernung_ziegel','av_ziegel_sortierung_pruefung','av_mauerwerk_diamantsaegen_modul','av_naturstein_reinigung_schleifen_zuschnitt','av_glas_reinigung_entkitten','av_glas_pruefung_sortierung','av_fenster_refurbishment','av_aluminium_reinigung_entdichtung','av_aluminiumfenster_beschlag_dichtung','av_aluminium_zuschnitt_bohrung','av_lehm_sieben_mischen','av_stroh_pruefen_trocknen_sortieren','av_bio_daemmstoff_zuschnitt_gefach','av_biobasiert_hygiene_schadstoffcheck'] DETACH DELETE n;`
+Option 3 (nuclear): restore from [`_neo4j/review/backups/phase_d_pre_apply/`](../backups/phase_d_pre_apply/).
+
+### Capability: "what tools clean / cut / treat material X"
+
+```cypher
+MATCH (m:Material)<-[:TYPISCH_BEI_MATERIAL]-(av:Aufbereitungsverfahren)
+OPTIONAL MATCH (av)-[:IST_UNTERVERFAHREN_VON]->(parent:Aufbereitungsverfahren)
+RETURN m.name, av.name, parent.name AS category ORDER BY m.name
+```
+
+---
+
+## Phase E — applied 2026-05-16
+
+**Patch:** [patches/phase_e.patch.jsonl](patches/phase_e.patch.jsonl)
+**Apply report:** [apply_reports/phase_e.patch.apply_report.json](apply_reports/phase_e.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_e_pre_apply/`](../backups/phase_e_pre_apply/) (2 238 nodes, 16 059 rels; gitignored)
+
+### What landed
+
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 238 | **2 260** | +22 |
+| Relationships | 16 059 | **16 124** | +65 |
+
+**Operations:** 87 records / 0 errors.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_node | 22 | 5 LebenszyklusModul (P-8) + 6 Layer (P-7) + 11 Marktmodell (P-3) |
+| add_rel | 65 | 8 METHODENGRUNDLAGE_NORM + 8 BERECHNET_NACH_MODUL + 15 TEILT_LAYER + 31 HAT_MARKTMODELL + 3 same-site Multi Brussels HAT_MARKTMODELL |
+
+### New nodes (22)
+
+**P-8 LebenszyklusModul (5):** `lz_a1_a3` (Produkt A1-A3), `lz_a4_a5` (Errichtung), `lz_b` (Nutzung), `lz_c` (End of Life), `lz_d` (Module D / Reuse Credits).
+
+**P-7 Layer / Brand's shearing layers (6):** `layer_site`, `layer_structure`, `layer_skin`, `layer_services`, `layer_space_plan`, `layer_stuff`. Each carries `lifespan_years_min/max` properties.
+
+**P-3 Marktmodell (11):** `mm_kauf_neu`, `mm_kauf_gebraucht`, `mm_spende`, `mm_leasing`, `mm_rueckkauf`, `mm_same_site`, `mm_plattform_vermittelt`, `mm_forschungsprojekt_zuteilung`, `mm_intra_konzern`, `mm_take_back_service`, `mm_unbekannt`.
+
+### Critical wires unlocked
+
+**P-8 METHODENGRUNDLAGE_NORM (8):** lz_a1_a3/d → DIN_EN_15804 + DIN_EN_15978; lz_a4_a5/b/c → DIN_EN_15978; lz_a1_a3 → ISO_14040 + ISO_14044. The 4 LCA orphan Normen (DIN_EN_15804/15978, ISO_14040/14044) gain their first inbound edges.
+
+**P-8 BERECHNET_NACH_MODUL (8 project edges):** 55 Great Suffolk (A1-A3 + A4-A5), Resource Rows (B + D), Brent Cross (D), K.118 (A1-A3), KA13 (D), Thoravej 29 (D). Now every project with a CO₂ claim has its LCA scope tagged.
+
+**P-7 TEILT_LAYER (15):** Bauteiltyp → Layer mapping. bt_traeger/bt_stuetze/bt_decke/bt_wand/bt_fundament/bt_daemmung → structure; bt_fassade/bt_dach/bt_fenster → skin; bt_technik → services; bt_ausbau/bt_tuer/bt_treppe/bt_gelaender/bt_boden → space_plan.
+
+**P-3 HAT_MARKTMODELL (34 BELEGT):** 31 same-site BGs → mm_same_site (mirror of bps_bestand_no_status); 3 Multi Brussels BGs → mm_plattform_vermittelt (Madaster + Rotor evidence).
+
+### New capabilities
+
+```cypher
+// Every reuse case with its LCA scope and methodological standard
+MATCH (p:Projekt)-[:BERECHNET_NACH_MODUL]->(lz:LebenszyklusModul)-[:METHODENGRUNDLAGE_NORM]->(n:Norm)
+RETURN p.name, lz.name, collect(DISTINCT n.id) AS methodology
+
+// Bauteilgruppen grouped by Brand's layer (lifespan expectations)
+MATCH (bg:Bauteilgruppe)-[:HAT_BAUTEILTYP]->(bt:Bauteiltyp)-[:TEILT_LAYER]->(layer:Layer)
+RETURN layer.name, layer.lifespan_years_min, count(bg) AS reuse_cases ORDER BY reuse_cases DESC
+
+// Reuse cases by commercial model
+MATCH (bg:Bauteilgruppe)-[:HAT_MARKTMODELL]->(mm:Marktmodell)
+RETURN mm.name, count(bg) AS bg_count ORDER BY bg_count DESC
+```
+
+### Phase E rollback
+
+Option 1: inverse-patch.
+Option 2 (Cypher):
+```cypher
+MATCH (n) WHERE n.id IN [
+  'lz_a1_a3','lz_a4_a5','lz_b','lz_c','lz_d',
+  'layer_site','layer_structure','layer_skin','layer_services','layer_space_plan','layer_stuff',
+  'mm_kauf_neu','mm_kauf_gebraucht','mm_spende','mm_leasing','mm_rueckkauf','mm_same_site',
+  'mm_plattform_vermittelt','mm_forschungsprojekt_zuteilung','mm_intra_konzern','mm_take_back_service','mm_unbekannt'
+] DETACH DELETE n;
+```
+Option 3: restore from [`_neo4j/review/backups/phase_e_pre_apply/`](../backups/phase_e_pre_apply/).
+
+### Contract drift after Phase A + B + C + D + E
+
+New labels live but not in contract:
+- `BauwerkEra`, `Bauproduktstatus`, `LebenszyklusModul`, `Layer`, `Marktmodell`
+
+New rel types live but not in contract:
+- `TYPISCH_BEI_MATERIAL`, `TYPISCH_BEI_BAUTEILTYP`, `TYPISCH_BEI_ERA`
+- `GILT_IN_LAND`, `HAT_TYPISCHEN_BAUPRODUKTSTATUS`, `HAT_BAUPRODUKTSTATUS`
+- `IST_UNTERVERFAHREN_VON`, `ERHALT_FOERDERUNG_DURCH`
+- `METHODENGRUNDLAGE_NORM`, `BERECHNET_NACH_MODUL`, `TEILT_LAYER`, `HAT_MARKTMODELL`
+
+Action item: small contract patch commit before next baseline run.
+
+---
+
+## Phase F (paused — Neo4j connectivity dropped after Phase E)
+
+Plan: P-1 Defekt seed (10 nodes + 10 TYPISCH_BEI_MATERIAL) + P-13 MatchingQualitaet (9 nodes), as Round 003 enablers. P-18 ReusePattern dropped — the pattern info is already derivable via existing traversals (Land + Material + Norm + PruefungNachweis + Bauproduktstatus + Verbindungstechnik chains).
+
+Estimated ~30 ops total. Will resume once Neo4j is reachable.
+
+---
+
 ## What's next
 
-- **Phase D** (P-19 Aufbereitungsverfahren expansion — ~25-30 new av_* nodes + parent hierarchy + ~40 TYPISCH_BEI_MATERIAL rels — biggest single phase).
-- **Phase E** (P-8 LCA + P-7 Layer + P-3 Marktmodell, ~40 ops).
-- **Phase F** (P-1 Defekt + P-13 MatchingQualitaet + P-18 ReusePattern enablers for round 003).
-- **Round 003** itself (project content review, 15 chunks × 5 projects).
+- **Phase F** when Neo4j is back online (~30 ops).
+- **Round 003** project content review (15 chunks × 5 projects).
 - **Reminders parked:** **#1 stub-Akteur** (15 no-archive + 2 multi-file), **#2 stub-Projekt** (23 left), **contract drift cleanup**.

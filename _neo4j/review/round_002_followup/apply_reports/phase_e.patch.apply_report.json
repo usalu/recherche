@@ -1,0 +1,932 @@
+{
+  "confirmation_required": "APPLY phase_e.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2260,
+    "relationships": 16124
+  },
+  "counts_after_expected": {
+    "nodes": 2260,
+    "relationships": 16124
+  },
+  "counts_before": {
+    "nodes": 2238,
+    "relationships": 16059
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-16T16:24:55.203110+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_e.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "LebenszyklusModul"
+        ],
+        "properties": {
+          "id": "lz_a1_a3",
+          "name": "Produkt (A1–A3: Rohstoffe, Transport, Herstellung)",
+          "scope_note": "Module A1-A3 per EN 15978: raw-material extraction, transport, manufacturing — the upstream production stage."
+        }
+      },
+      "before": null,
+      "id": "lz_a1_a3",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "LebenszyklusModul"
+        ],
+        "properties": {
+          "id": "lz_a4_a5",
+          "name": "Errichtung (A4 Transport, A5 Bauphase)",
+          "scope_note": "Module A4-A5 per EN 15978: transport to site, construction-installation stage."
+        }
+      },
+      "before": null,
+      "id": "lz_a4_a5",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "LebenszyklusModul"
+        ],
+        "properties": {
+          "id": "lz_b",
+          "name": "Nutzung (B1–B7: Erhaltung, Reparatur, Betrieb, Operational Energy)",
+          "scope_note": "Module B1-B7 per EN 15978: use stage incl. maintenance, repair, replacement, refurbishment, operational energy/water."
+        }
+      },
+      "before": null,
+      "id": "lz_b",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "LebenszyklusModul"
+        ],
+        "properties": {
+          "id": "lz_c",
+          "name": "End of Life (C1–C4: Rückbau, Transport, Verarbeitung, Deponie)",
+          "scope_note": "Module C1-C4 per EN 15978: deconstruction, transport, waste processing, disposal."
+        }
+      },
+      "before": null,
+      "id": "lz_c",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "LebenszyklusModul"
+        ],
+        "properties": {
+          "id": "lz_d",
+          "name": "Module D — Beyond System Boundary (Reuse Credits)",
+          "scope_note": "Module D per EN 15978: benefits and loads beyond the system boundary — the 'reuse credit' where avoided new-product impact is reported. Critical for reuse LCA."
+        }
+      },
+      "before": null,
+      "id": "lz_d",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "lz_a1_a3",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_din_en_15804"
+    },
+    {
+      "from": "lz_a4_a5",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_din_en_15978"
+    },
+    {
+      "from": "lz_b",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_din_en_15978"
+    },
+    {
+      "from": "lz_c",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_din_en_15978"
+    },
+    {
+      "from": "lz_d",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_din_en_15978"
+    },
+    {
+      "from": "lz_d",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_din_en_15804"
+    },
+    {
+      "from": "lz_a1_a3",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_iso_14040"
+    },
+    {
+      "from": "lz_a1_a3",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "status": "would_create_rel",
+      "to": "norm_iso_14044"
+    },
+    {
+      "from": "p_55_great_suffolk_street_london",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_a1_a3"
+    },
+    {
+      "from": "p_55_great_suffolk_street_london",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_a4_a5"
+    },
+    {
+      "from": "p_resource_rows_copenhagen",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_b"
+    },
+    {
+      "from": "p_resource_rows_copenhagen",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_d"
+    },
+    {
+      "from": "p_brent_cross_town_primary_substation_london",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_d"
+    },
+    {
+      "from": "p_k118_kopfbau_halle_118_winterthur",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_a1_a3"
+    },
+    {
+      "from": "p_ka13_kristian_augusts_gate_13_oslo",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_d"
+    },
+    {
+      "from": "p_thoravej_29_copenhagen",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "status": "would_create_rel",
+      "to": "lz_d"
+    },
+    {
+      "after": {
+        "labels": [
+          "Layer"
+        ],
+        "properties": {
+          "id": "layer_site",
+          "lifespan_years_min": 1,
+          "name": "Site",
+          "scope_note": "Geological/legal location; lifespan effectively forever."
+        }
+      },
+      "before": null,
+      "id": "layer_site",
+      "line": 22,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Layer"
+        ],
+        "properties": {
+          "id": "layer_structure",
+          "lifespan_years_max": 300,
+          "lifespan_years_min": 30,
+          "name": "Structure",
+          "scope_note": "Foundation + load-bearing; ~30-300 year lifespan."
+        }
+      },
+      "before": null,
+      "id": "layer_structure",
+      "line": 23,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Layer"
+        ],
+        "properties": {
+          "id": "layer_skin",
+          "lifespan_years_max": 50,
+          "lifespan_years_min": 20,
+          "name": "Skin (Fassade)",
+          "scope_note": "Exterior cladding, envelope; ~20-50 year lifespan."
+        }
+      },
+      "before": null,
+      "id": "layer_skin",
+      "line": 24,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Layer"
+        ],
+        "properties": {
+          "id": "layer_services",
+          "lifespan_years_max": 15,
+          "lifespan_years_min": 7,
+          "name": "Services (TGA)",
+          "scope_note": "Mechanical/electrical/plumbing; ~7-15 year lifespan."
+        }
+      },
+      "before": null,
+      "id": "layer_services",
+      "line": 25,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Layer"
+        ],
+        "properties": {
+          "id": "layer_space_plan",
+          "lifespan_years_max": 30,
+          "lifespan_years_min": 3,
+          "name": "Space Plan",
+          "scope_note": "Internal walls, doors, partitions, floor finishes; ~3-30 year lifespan."
+        }
+      },
+      "before": null,
+      "id": "layer_space_plan",
+      "line": 26,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Layer"
+        ],
+        "properties": {
+          "id": "layer_stuff",
+          "lifespan_years_max": 5,
+          "lifespan_years_min": 1,
+          "name": "Stuff (Loose Furniture)",
+          "scope_note": "Furniture, decoration; ~1-5 year lifespan."
+        }
+      },
+      "before": null,
+      "id": "layer_stuff",
+      "line": 27,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "bt_fundament",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_structure"
+    },
+    {
+      "from": "bt_traeger",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_structure"
+    },
+    {
+      "from": "bt_stuetze",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_structure"
+    },
+    {
+      "from": "bt_decke",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_structure"
+    },
+    {
+      "from": "bt_wand",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_structure"
+    },
+    {
+      "from": "bt_fassade",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_skin"
+    },
+    {
+      "from": "bt_dach",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_skin"
+    },
+    {
+      "from": "bt_fenster",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_skin"
+    },
+    {
+      "from": "bt_technik",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_services"
+    },
+    {
+      "from": "bt_ausbau",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_space_plan"
+    },
+    {
+      "from": "bt_tuer",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_space_plan"
+    },
+    {
+      "from": "bt_treppe",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_space_plan"
+    },
+    {
+      "from": "bt_gelaender",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_space_plan"
+    },
+    {
+      "from": "bt_boden",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_space_plan"
+    },
+    {
+      "from": "bt_daemmung",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "TEILT_LAYER",
+      "status": "would_create_rel",
+      "to": "layer_structure"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_kauf_neu",
+          "name": "Kauf als Bauprodukt (Neuware-äquivalent)",
+          "scope_note": "Sale as if a new construction product; full CPR/CE conformity expected."
+        }
+      },
+      "before": null,
+      "id": "mm_kauf_neu",
+      "line": 43,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_kauf_gebraucht",
+          "name": "Kauf als Gebrauchtware",
+          "scope_note": "Sale acknowledged as used material; reduced product-status expectations."
+        }
+      },
+      "before": null,
+      "id": "mm_kauf_gebraucht",
+      "line": 44,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_spende",
+          "name": "Spende",
+          "scope_note": "Donation / no monetary transaction; common in research pilots and reuse platforms."
+        }
+      },
+      "before": null,
+      "id": "mm_spende",
+      "line": 45,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_leasing",
+          "name": "Leasing / Mietverhältnis",
+          "scope_note": "Element leased rather than purchased; ownership stays with provider. Liander HQ context."
+        }
+      },
+      "before": null,
+      "id": "mm_leasing",
+      "line": 46,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_rueckkauf",
+          "name": "Rückkauf-Vereinbarung",
+          "scope_note": "Take-back agreement; original supplier buys back at end of life."
+        }
+      },
+      "before": null,
+      "id": "mm_rueckkauf",
+      "line": 47,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_same_site",
+          "name": "Same-site Wiedereinbau (kein Markttransaktion)",
+          "scope_note": "On-site reuse without market transaction; no Bauproduktstatus needed."
+        }
+      },
+      "before": null,
+      "id": "mm_same_site",
+      "line": 48,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_plattform_vermittelt",
+          "name": "Plattform-vermittelter Kauf (Madaster/Concular/Restado/Rotor DC/Opalis)",
+          "scope_note": "Marketplace-mediated purchase. Active platforms: Madaster, Concular, Restado, Rotor DC, Opalis, Cycle Up."
+        }
+      },
+      "before": null,
+      "id": "mm_plattform_vermittelt",
+      "line": 49,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_forschungsprojekt_zuteilung",
+          "name": "Forschungsprojekt-Zuteilung",
+          "scope_note": "Allocation via research project (UMAR, ReCreate pilots, etc.)."
+        }
+      },
+      "before": null,
+      "id": "mm_forschungsprojekt_zuteilung",
+      "line": 50,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_intra_konzern",
+          "name": "Intra-Konzern-Transfer",
+          "scope_note": "Material transferred within the same legal entity / corporate group; no third-party transaction."
+        }
+      },
+      "before": null,
+      "id": "mm_intra_konzern",
+      "line": 51,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_take_back_service",
+          "name": "Take-Back Service-Modell",
+          "scope_note": "Provider continues to own and reclaims at end-of-use (extended-responsibility service)."
+        }
+      },
+      "before": null,
+      "id": "mm_take_back_service",
+      "line": 52,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Marktmodell"
+        ],
+        "properties": {
+          "id": "mm_unbekannt",
+          "name": "Marktmodell unbekannt",
+          "scope_note": "Source does not document the commercial structure."
+        }
+      },
+      "before": null,
+      "id": "mm_unbekannt",
+      "line": 53,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "bg_botanique_reclaimed_timber_facade",
+      "line": 54,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_botanique_retained_main_structure",
+      "line": 55,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_crclr_roof_steel_to_stair_stringers",
+      "line": 56,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_crclr_steel_trusses_greenhouse_uncertain",
+      "line": 57,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_elys_aluminium_trapezoidal_sheet",
+      "line": 58,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_elys_gratings_and_garage_door",
+      "line": 59,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_elys_retained_concrete_halls",
+      "line": 60,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_grande_halle_retained_concrete_structure",
+      "line": 61,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_grubenstrasse_retained_existing_building",
+      "line": 62,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_hastings_retained_pier_restoration",
+      "line": 63,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_hof_self_reused_steel_columns",
+      "line": 64,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_holbein_retained_concrete_frame",
+      "line": 65,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_ithaka_retained_existing_clinic",
+      "line": 66,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_k118_retained_halle_118",
+      "line": 67,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_ka13_retained_existing_structure",
+      "line": 68,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_moeoeslistrasse_bestand_werkhof",
+      "line": 69,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_moeoeslistrasse_sanitaer_kueche",
+      "line": 70,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_multi_aluminium_profiles",
+      "line": 71,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_multi_blaustein_facade_slabs",
+      "line": 72,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_multi_reinstalled_elevator_motors",
+      "line": 73,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_tbc_retained_concrete_frame",
+      "line": 74,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_tbc_reused_fixtures_uncertain",
+      "line": 75,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_thoravej_fassade_ziegel_zu_boden",
+      "line": 76,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_thoravej_kunststofffenster_bestand",
+      "line": 77,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_thoravej_tt_decken_zu_treppen",
+      "line": 78,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_thoravej_tueren_zu_tischplatten",
+      "line": 79,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_timber_square_print_building_retained_structure",
+      "line": 80,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_timber_square_reception_girder",
+      "line": 81,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_verbiest_karreveld_brussels_karreveld_abgehaengte_decken_und_leuchten",
+      "line": 82,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_verbiest_karreveld_brussels_karreveld_modulares_innenwandsystem",
+      "line": 83,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_verbiest_karreveld_brussels_verbiest_dach_und_terrassenfliesen",
+      "line": 84,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_multi_aluminium_profiles",
+      "line": 85,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    },
+    {
+      "from": "bg_multi_blaustein_facade_slabs",
+      "line": 86,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    },
+    {
+      "from": "bg_multi_reinstalled_elevator_motors",
+      "line": 87,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 87,
+    "would_create": 22,
+    "would_create_rel": 65
+  }
+}
