@@ -1,0 +1,1126 @@
+{
+  "confirmation_required": "APPLY phase_b.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2188,
+    "relationships": 15966
+  },
+  "counts_after_expected": {
+    "nodes": 2188,
+    "relationships": 15966
+  },
+  "counts_before": {
+    "nodes": 2159,
+    "relationships": 15892
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-16T15:58:34.882742+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_b.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_ce_hen",
+          "name": "CE-Marking unter harmonisierter EN-Norm (hEN)",
+          "scope_note": "EU CPR; covers CE-marked construction products under harmonised European standards."
+        }
+      },
+      "before": null,
+      "id": "bps_ce_hen",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_ce_eta",
+          "name": "CE-Marking via Europäische Technische Bewertung (ETA)",
+          "scope_note": "EU CPR alternative for non-hEN products; requires ETA assessment."
+        }
+      },
+      "before": null,
+      "id": "bps_ce_eta",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_ue_zeichen",
+          "name": "Ü-Zeichen (DE, nationale Konformität)",
+          "scope_note": "German national mark for products outside CPR harmonised scope."
+        }
+      },
+      "before": null,
+      "id": "bps_ue_zeichen",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_abz_abg",
+          "name": "abZ / aBG (DE, allgemeine bauaufsichtliche Zulassung)",
+          "scope_note": "DIBt allgemeine Zulassung for non-standard German construction products."
+        }
+      },
+      "before": null,
+      "id": "bps_abz_abg",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_zie_vbg",
+          "name": "ZiE / vBG (DE, project-specific approval)",
+          "scope_note": "Project-specific German approval (Zustimmung im Einzelfall / vorhabenbezogene Bauartgenehmigung)."
+        }
+      },
+      "before": null,
+      "id": "bps_zie_vbg",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_ukca",
+          "name": "UKCA marking (UK, post-Brexit equivalent of CE)",
+          "scope_note": "UK Conformity Assessed marking; mandatory for placing certain products on the UK market."
+        }
+      },
+      "before": null,
+      "id": "bps_ukca",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_baupg_ch",
+          "name": "BauPG-Status (CH, Schweizer Bauprodukteverordnung)",
+          "scope_note": "Swiss construction-products regime under BauPG."
+        }
+      },
+      "before": null,
+      "id": "bps_baupg_ch",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_pemd_fr",
+          "name": "PEMD-erfasst (FR, diagnostic produit/matériau/déchet)",
+          "scope_note": "French mandatory diagnostic for major demolition/renovation since 2023 (projects > 1000 m²)."
+        }
+      },
+      "before": null,
+      "id": "bps_pemd_fr",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_tracimat_be",
+          "name": "Tracimat-zertifiziert (BE, traceable deconstruction)",
+          "scope_note": "Belgian non-profit certifying selective deconstruction traceability."
+        }
+      },
+      "before": null,
+      "id": "bps_tracimat_be",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_nta_8713",
+          "name": "NTA 8713 (NL, Dutch reused-steel guidance)",
+          "scope_note": "Dutch national specification for reused structural steel."
+        }
+      },
+      "before": null,
+      "id": "bps_nta_8713",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_ibc_104_11_alternative",
+          "name": "IBC 104.11 alternative materials and methods (USA)",
+          "scope_note": "US IBC clause allowing alternative materials approved by the building official."
+        }
+      },
+      "before": null,
+      "id": "bps_ibc_104_11_alternative",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_jis_jas_mlit",
+          "name": "JIS/JAS/MLIT approval (Japan)",
+          "scope_note": "Japanese Building Standards Act conformity routes."
+        }
+      },
+      "before": null,
+      "id": "bps_jis_jas_mlit",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_project_specific",
+          "name": "Projektspezifische Ingenieurfreigabe",
+          "scope_note": "No formal market-placement status; structural engineer signs off per project."
+        }
+      },
+      "before": null,
+      "id": "bps_project_specific",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_bestand_no_status",
+          "name": "Bestand vor Ort weiterverwendet (kein neues Inverkehrbringen)",
+          "scope_note": "On-site reuse without placing the element on the market — no Bauproduktstatus needed."
+        }
+      },
+      "before": null,
+      "id": "bps_bestand_no_status",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauproduktstatus"
+        ],
+        "properties": {
+          "id": "bps_unbekannt",
+          "name": "Status unbekannt / nicht dokumentiert",
+          "scope_note": "Source does not document the regulatory route."
+        }
+      },
+      "before": null,
+      "id": "bps_unbekannt",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "land_deutschland",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_deutschland",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ue_zeichen"
+    },
+    {
+      "from": "land_deutschland",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_zie_vbg"
+    },
+    {
+      "from": "land_vereinigtes_koenigreich",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_vereinigtes_koenigreich",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ukca"
+    },
+    {
+      "from": "land_schweiz",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_baupg_ch"
+    },
+    {
+      "from": "land_belgien",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_belgien",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_tracimat_be"
+    },
+    {
+      "from": "land_frankreich",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_frankreich",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_pemd_fr"
+    },
+    {
+      "from": "land_niederlande",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_niederlande",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_nta_8713"
+    },
+    {
+      "from": "land_norwegen",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_usa",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ibc_104_11_alternative"
+    },
+    {
+      "from": "land_usa",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_project_specific"
+    },
+    {
+      "from": "land_japan",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_jis_jas_mlit"
+    },
+    {
+      "from": "land_daenemark",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_finnland",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "land_luxemburg",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "bg_botanique_reclaimed_timber_facade",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_botanique_retained_main_structure",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_crclr_roof_steel_to_stair_stringers",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_crclr_steel_trusses_greenhouse_uncertain",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_elys_aluminium_trapezoidal_sheet",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_elys_gratings_and_garage_door",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_elys_retained_concrete_halls",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_grande_halle_retained_concrete_structure",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_grubenstrasse_retained_existing_building",
+      "line": 43,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_hastings_retained_pier_restoration",
+      "line": 44,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_hof_self_reused_steel_columns",
+      "line": 45,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_holbein_retained_concrete_frame",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_ithaka_retained_existing_clinic",
+      "line": 47,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_k118_retained_halle_118",
+      "line": 48,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_ka13_retained_existing_structure",
+      "line": 49,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_moeoeslistrasse_bestand_werkhof",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_moeoeslistrasse_sanitaer_kueche",
+      "line": 51,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_multi_aluminium_profiles",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_multi_blaustein_facade_slabs",
+      "line": 53,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_multi_reinstalled_elevator_motors",
+      "line": 54,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_tbc_retained_concrete_frame",
+      "line": 55,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_tbc_reused_fixtures_uncertain",
+      "line": 56,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_thoravej_fassade_ziegel_zu_boden",
+      "line": 57,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_thoravej_kunststofffenster_bestand",
+      "line": 58,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_thoravej_tt_decken_zu_treppen",
+      "line": 59,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_thoravej_tueren_zu_tischplatten",
+      "line": 60,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_timber_square_print_building_retained_structure",
+      "line": 61,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_timber_square_reception_girder",
+      "line": 62,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_verbiest_karreveld_brussels_karreveld_abgehaengte_decken_und_leuchten",
+      "line": 63,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_verbiest_karreveld_brussels_karreveld_modulares_innenwandsystem",
+      "line": 64,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_verbiest_karreveld_brussels_verbiest_dach_und_terrassenfliesen",
+      "line": 65,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_bestand_no_status"
+    },
+    {
+      "from": "bg_55gss_reused_steel_external_core",
+      "line": 66,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ce_hen"
+    },
+    {
+      "from": "bg_brent_cross_reclaimed_tubular_columns",
+      "line": 67,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ukca"
+    },
+    {
+      "from": "bg_brent_cross_reclaimed_bracing_members",
+      "line": 68,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ukca"
+    },
+    {
+      "from": "bg_brent_cross_oval_substation_screen",
+      "line": 69,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ukca"
+    },
+    {
+      "from": "bg_boulder_salvaged_wide_flange_steel_members",
+      "line": 70,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ibc_104_11_alternative"
+    },
+    {
+      "from": "bg_boulder_hospital_steel_stockpile",
+      "line": 71,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "status": "would_create_rel",
+      "to": "bps_ibc_104_11_alternative"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_cen_ts_1090_201_2024",
+          "name": "CEN/TS 1090-201:2024 — Assessment of Reclaimed Structural Steel",
+          "scope_note": "EU-wide technical specification for reuse-oriented assessment of reclaimed structural steel; complements EN 1090 for reuse scenarios."
+        }
+      },
+      "before": null,
+      "id": "norm_cen_ts_1090_201_2024",
+      "line": 72,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_cen_ts_17440",
+          "name": "CEN/TS 17440 — Assessment of Existing Structures",
+          "scope_note": "European technical specification for assessment of retained / existing structures."
+        }
+      },
+      "before": null,
+      "id": "norm_cen_ts_17440",
+      "line": 73,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_1992",
+          "name": "EN 1992 — Eurocode 2 (Concrete structures)",
+          "scope_note": "European structural design code for concrete."
+        }
+      },
+      "before": null,
+      "id": "norm_en_1992",
+      "line": 74,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_1993",
+          "name": "EN 1993 — Eurocode 3 (Steel structures)",
+          "scope_note": "European structural design code for steel."
+        }
+      },
+      "before": null,
+      "id": "norm_en_1993",
+      "line": 75,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_1995",
+          "name": "EN 1995 — Eurocode 5 (Timber structures)",
+          "scope_note": "European structural design code for timber."
+        }
+      },
+      "before": null,
+      "id": "norm_en_1995",
+      "line": 76,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_1996",
+          "name": "EN 1996 — Eurocode 6 (Masonry structures)",
+          "scope_note": "European structural design code for masonry."
+        }
+      },
+      "before": null,
+      "id": "norm_en_1996",
+      "line": 77,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_206",
+          "name": "EN 206 — Concrete specification, performance, production and conformity",
+          "scope_note": "European concrete-specification standard, referenced for re-qualification."
+        }
+      },
+      "before": null,
+      "id": "norm_en_206",
+      "line": 78,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_14081",
+          "name": "EN 14081 — Strength-graded structural timber",
+          "scope_note": "European requirements for visual or machine strength-graded structural timber."
+        }
+      },
+      "before": null,
+      "id": "norm_en_14081",
+      "line": 79,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_771",
+          "name": "EN 771 — Masonry units (specification series)",
+          "scope_note": "European specifications for masonry units (brick, stone, concrete)."
+        }
+      },
+      "before": null,
+      "id": "norm_en_771",
+      "line": 80,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "EU",
+          "id": "norm_en_13162",
+          "name": "EN 13162 — Factory-made mineral wool thermal insulation",
+          "scope_note": "European product standard for mineral wool insulation."
+        }
+      },
+      "before": null,
+      "id": "norm_en_13162",
+      "line": 81,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "NL",
+          "id": "norm_nen_8700",
+          "name": "NEN 8700 — Existing-structure assessment (Netherlands)",
+          "scope_note": "Dutch national standard for assessment of existing structures; relevant to structural reuse."
+        }
+      },
+      "before": null,
+      "id": "norm_nen_8700",
+      "line": 82,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "DE",
+          "id": "norm_din_4074",
+          "name": "DIN 4074 — Visual strength grading of structural timber (DE)",
+          "scope_note": "German visual strength-grading rules for structural sawn timber."
+        }
+      },
+      "before": null,
+      "id": "norm_din_4074",
+      "line": 83,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "DE",
+          "id": "norm_din_68800",
+          "name": "DIN 68800 — Wood preservation and durability classes (DE)",
+          "scope_note": "German wood-protection standard; relevant for reused exterior/structural timber."
+        }
+      },
+      "before": null,
+      "id": "norm_din_68800",
+      "line": 84,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "country_short": "DE",
+          "id": "norm_din_18008",
+          "name": "DIN 18008 — Glass in building, design and execution (DE)",
+          "scope_note": "German design code for structural and façade glass."
+        }
+      },
+      "before": null,
+      "id": "norm_din_18008",
+      "line": 85,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "norm_cen_ts_1090_201_2024",
+      "line": 86,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_cen_ts_17440",
+      "line": 87,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_1992",
+      "line": 88,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_1993",
+      "line": 89,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_1995",
+      "line": 90,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_1996",
+      "line": 91,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_206",
+      "line": 92,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_14081",
+      "line": 93,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_771",
+      "line": 94,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_en_13162",
+      "line": 95,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eu"
+    },
+    {
+      "from": "norm_nen_8700",
+      "line": 96,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "norm_din_4074",
+      "line": 97,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "norm_din_68800",
+      "line": 98,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "norm_din_18008",
+      "line": 99,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "norm_cen_ts_1090_201_2024",
+      "line": 100,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eea"
+    },
+    {
+      "from": "norm_cen_ts_17440",
+      "line": 101,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eea"
+    },
+    {
+      "from": "norm_en_1993",
+      "line": 102,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eea"
+    },
+    {
+      "from": "norm_en_206",
+      "line": 103,
+      "op": "add_rel",
+      "rel_type": "GILT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_eea"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 103,
+    "would_create": 29,
+    "would_create_rel": 74
+  }
+}
