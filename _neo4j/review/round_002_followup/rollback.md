@@ -9,14 +9,14 @@
 4. Verifies with post-apply queries (logged here).
 5. Appends a section to this doc.
 
-**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F → Phase G → Phase H → Phase I.
+**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift.
 
 **Combined effect:**
 
-| | Before A | After D | After F | After G | After H | After I |
-|---|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 238 | 2 279 | 2 279 | 2 296 | **2 296** |
-| Relationships | 15 834 | 16 059 | 16 138 | 16 347 | 16 366 | **16 450** |
+| | Before A | After D | After F | After H | After I | After J | After R003 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 238 | 2 279 | 2 296 | 2 296 | 2 296 | **2 296** |
+| Relationships | 15 834 | 16 059 | 16 138 | 16 366 | 16 450 | 16 470 | **16 822** |
 
 ---
 
@@ -908,20 +908,146 @@ Or restore from [`_neo4j/review/backups/phase_i_pre_apply/`](../backups/phase_i_
 
 ---
 
-## Final state — all nine phases of round 002 followup applied
+## Phase J — applied 2026-05-17
 
-| | A | B | C | D | E | F | G | H | I |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Ops | 102 | 103 | 53 | 93 | 87 | 33 | 211 | 36 | 93 |
-| New nodes | 12 | 29 | 16 | 34 | 22 | 19 | 0 | 17 | 0 |
-| New rels | 58 | 74 | 34 | 59 | 65 | 14 | 209 | 19 | 84 |
-| Property writes | 32 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+**Patch:** [patches/phase_j.patch.jsonl](patches/phase_j.patch.jsonl)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_j_pre_apply/`](../backups/phase_j_pre_apply/) (2 296 nodes, 16 450 rels; gitignored).
 
-**Grand total: 811 ops / 149 new nodes / 616 new rels / 33 property writes.**
+### What landed
 
-**Live graph: 2 147 → 2 296 nodes (+149), 15 834 → 16 450 rels (+616).**
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 296 | **2 296** | +0 |
+| Relationships | 16 450 | **16 470** | +20 |
 
-**New rel type added in Phase I:** `HAT_DOMINANT_AKZEPTANZ` (project-level — parallels HAT_DOMINANT_MARKTMODELL).
+**Operations:** 20 records / 0 errors. All add_rel `HAT_WIRTSCHAFT` (new project-level rel type).
+
+### Per-vocab edge counts
+
+| vocab | n | sample-source pattern |
+|---|---:|---|
+| wi_capex_hoeher_subvention | 11 | "Förderprogramm | DISRUPT case study" / "Holcim Awards" / "funded by H2020" |
+| wi_hidden_costs_lagerung_pruefung | 5 | "Reuse-Koordination", "Zwischenlager Kosten" |
+| wi_capex_neutral | 3 | "Kosten etwa vergleichbar mit Neubau" / "kostenneutral" |
+| wi_capex_hoeher_marketing_payback | 1 | "Positionierung für Austauschbarkeit" |
+
+After Phase J, the 6 new wi_capex_* Wirtschaft nodes (Phase H seed) reach 4 of 6 connected; wi_capex_niedriger_direkter_ersparnis + wi_capex_hoeher_opex_payback remain orphan (low signal in corpus).
+
+### Phase J rollback
+
+```cypher
+MATCH ()-[r:HAT_WIRTSCHAFT]->() DELETE r;
+```
+Or restore from `_neo4j/review/backups/phase_j_pre_apply/`.
+
+---
+
+## Round 003 — applied 2026-05-17
+
+**Patch:** [patches/round_003.patch.jsonl](patches/round_003.patch.jsonl)
+**Pre-apply backup:** [`_neo4j/review/backups/round_003_pre_apply/`](../backups/round_003_pre_apply/) (2 296 nodes, 16 470 rels; gitignored).
+
+### What landed
+
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 296 | **2 296** | +0 |
+| Relationships | 16 470 | **16 822** | +352 |
+
+**Operations:** 354 records / 0 errors. 2 absorbed as dedup.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_rel `HAT_DEFEKT` | 31 | BG-level — propagated from project-level HAT_DEFEKT_BEFUND via TYPISCH_BEI_MATERIAL grounding |
+| add_rel `HAT_MARKTMODELL` | 321 | BG-level — propagated from project-level HAT_DOMINANT_MARKTMODELL to all BGs in project |
+
+### Inference rules
+
+**Defekt propagation (BG-level):**
+```cypher
+(p:Projekt)-[:HAT_DEFEKT_BEFUND]->(d:Defekt)
+AND (d)-[:TYPISCH_BEI_MATERIAL]->(m:Material)
+AND (p)-[:HAT_BAUTEILGRUPPE]->(bg:Bauteilgruppe)-[:NUTZT_MATERIAL]->(m)
+⇒ (bg)-[:HAT_DEFEKT]->(d)
+```
+A defect tagged at project level propagates only to BGs that actually use a material the defect is typical for. Conservative.
+
+**Marktmodell propagation (BG-level):**
+```cypher
+(p:Projekt)-[:HAT_DOMINANT_MARKTMODELL]->(mm:Marktmodell)
+AND (p)-[:HAT_BAUTEILGRUPPE]->(bg:Bauteilgruppe)
+⇒ (bg)-[:HAT_MARKTMODELL]->(mm)
+```
+Sourcing model is project-wide — all BGs in a project share the dominant Marktmodell.
+
+**MatchingQualitaet:** intentionally **not propagated** to BG level — axis values (temporal/geographic/spec) are project-dominant signals, not per-BG.
+
+### Coverage after Round 003
+
+| BG dimension | Coverage |
+|---|---:|
+| NUTZT_MATERIAL | 301/306 (98%) |
+| HAT_MARKTMODELL | 237/306 (77%) — up from 34/306 (11%) |
+| HAT_AUFBEREITUNG | 225/306 (74%) |
+| HAT_PRUEFUNG | 194/306 (63%) |
+| HAT_RUECKBAUVERFAHREN | 179/306 (58%) |
+| HAT_LOGISTIK | 178/306 (58%) |
+| HAT_VERBINDUNGSTECHNIK | 80/306 (26%) |
+| HAT_BAUPRODUKTSTATUS | 37/306 (12%) |
+| HAT_DEFEKT | 31/306 (10%) — new |
+
+### Round 003 rollback
+
+```cypher
+MATCH ()-[r]->()
+WHERE r.source IN ['round_003_material_propagation', 'round_003_project_propagation']
+DELETE r;
+```
+
+---
+
+## Phase K — audit report (no graph change)
+
+Generated [phase_k_audit_report.md](phase_k_audit_report.md). Key findings:
+
+- 67 rel types in use; only 2 with ≤ 3 instances (`HAT_SCHADSTOFF` n=1, `ERHALT_FOERDERUNG_DURCH` n=2)
+- Worst orphan-share labels (post-all-phases): Layer 33%, Wirtschaft 33%, Programm 29%, Akteurrolle 28%, Leistungsanforderung 25%, RechtlicheBedingung 22%
+- BG defect coverage 10% — biggest remaining gap; full BG-level Defekt tagging needs archive Section-5 row matching, deferred
+- Methode has only 13 nodes (not the assumed dozens), so the P-6 split is unnecessary; consider archive-level relabeling instead
+- HuerdeKategorie already exists (10 nodes), so P-11 tidy is mostly done; only need to ensure all 28 Huerde nodes are categorized
+
+No patch emitted from Phase K — it's a report for future planning.
+
+---
+
+## Contract drift cleanup — applied 2026-05-17
+
+Updated [_neo4j/contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json](../../contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json):
+
+- **Added 9 new node labels** to the `labels.items.enum`: BauwerkEra, Bauproduktstatus, LebenszyklusModul, Layer, Marktmodell, Defekt, MatchingQualitaet, ZustandsKlasse, Akzeptanz.
+- **Added 18 new rel types** to the `type.enum`: TYPISCH_BEI_MATERIAL, TYPISCH_BEI_BAUTEILTYP, TYPISCH_BEI_ERA, GILT_IN_LAND, HAT_TYPISCHEN_BAUPRODUKTSTATUS, HAT_BAUPRODUKTSTATUS, IST_UNTERVERFAHREN_VON, ERHALT_FOERDERUNG_DURCH, METHODENGRUNDLAGE_NORM, BERECHNET_NACH_MODUL, TEILT_LAYER, HAT_MARKTMODELL, HAT_DEFEKT_BEFUND, HAT_DEFEKT, HAT_MATCHINGQUALITAET, HAT_DOMINANT_MARKTMODELL, HAT_DOMINANT_AKZEPTANZ, HAT_WIRTSCHAFT.
+
+No live-graph impact — pure schema-doc bookkeeping. Future contract-validated imports will now accept the post-Phase-A-through-Round-003 graph.
+
+---
+
+## Final state — all phases of round 002 followup applied
+
+| | A | B | C | D | E | F | G | H | I | J | R003 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Ops | 102 | 103 | 53 | 93 | 87 | 33 | 211 | 36 | 93 | 20 | 354 |
+| New nodes | 12 | 29 | 16 | 34 | 22 | 19 | 0 | 17 | 0 | 0 | 0 |
+| New rels | 58 | 74 | 34 | 59 | 65 | 14 | 209 | 19 | 84 | 20 | 352 |
+| Property writes | 32 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+**Grand total: 1 185 ops / 149 new nodes / 988 new rels / 33 property writes.**
+
+**Live graph: 2 147 → 2 296 nodes (+149), 15 834 → 16 822 rels (+988).**
+
+**New rel types added after Phase H:**
+- `HAT_DOMINANT_AKZEPTANZ` (Phase I — project-level acceptance signals)
+- `HAT_WIRTSCHAFT` (Phase J — project-level cost-model signals)
+- `HAT_DEFEKT` (Round 003 — BG-level defect findings)
 
 ### Contract drift after all six phases
 
@@ -945,13 +1071,11 @@ Plus existing rel types reused with new properties: `HAT_VERBINDUNGSTECHNIK` (ca
 
 ---
 
-## Worklist after Phase H
+## Worklist after Round 003
 
-- ✅ Phases A–H applied. 718 ops total. Live graph at 2 296 / 16 366.
-- ⏳ **Phase I — orphan rescue + Marktmodell widening** — manually tag the ~14 vocab orphans (4 MQ + 7 Marktmodell + 1 Defekt + 1 ZustandsKlasse + 2 Akzeptanz, less those that are intentional non-events) plus widen Marktmodell patterns to push coverage from 20/76 → 40/76. Small, ~30-60 ops.
-- ⏳ **Phase J — Wirtschaft per-project tagging** — archive-driven scan for cost-model phrases ("CapEx", "Förderung", "Kosten vergleichbar"). Tags new wi_capex_* nodes per project, same shape as Phase G.
-- ⏳ **Round 003 — per-BG refinement** — convert Phase G project-level tags into BG-level edges using BAUTEIL-INVENTAR sections of archive files. Highest connection-density payoff.
-- ⏳ **Phase K — remaining refinements** — P-6 Methode split, P-11 HuerdeKategorie tidy, P-14 orphan audit.
-- ⏳ **Contract drift cleanup** — add 10 new labels + 16 new rel types to `_neo4j/contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json`. Small commit; no apply needed.
-- ⏳ **Parked #1 stub-Akteur** (15 no-archive + 2 multi-file) — still on the worklist; can fold into a separate actor-canonicalization track or absorb during round 003 per project.
-- ⏳ **Parked #2 stub-Projekt** — 22 remaining (Circle House was promoted in Phase A; 3 duplicate stubs were merged in followup). Promote-or-drop decisions during round 003 per chunk.
+- ✅ Phases A–K applied. 1 185 ops total. Live graph at 2 296 / 16 822.
+- ✅ Contract schemas updated with 9 new labels + 18 new rel types.
+- ⏳ **Parked stubs awaiting manual decision** — see [PARKED_DECISIONS.md](PARKED_DECISIONS.md). 23 stub Projekte (4 promote / 9 relabel / 1 delete / 1 merge / 8 keep) + 16 stub Akteure (2 delete / 3 merge / 11 keep). Each needs your sign-off before the patch lands.
+- ⏳ **Phase L (deferred) — full BG-level Defekt parsing** — currently 10% BG coverage; full coverage needs archive Section-5 row matching by Bauteil-name + Material + Bauteiltyp. Substantial archive parsing work; ~300-500 ops.
+- ⏳ **Phase M (deferred) — additional dimensions** — Norm tagging at BG-level (currently 5%), LCA-modul tagging at project-level (currently 8%), Akzeptanz expansion (currently 11%). Each needs archive scan or external lookup.
+- 📊 [phase_k_audit_report.md](phase_k_audit_report.md) — current orphan + coverage state; reference for future planning.
