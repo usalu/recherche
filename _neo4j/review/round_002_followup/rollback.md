@@ -9,14 +9,14 @@
 4. Verifies with post-apply queries (logged here).
 5. Appends a section to this doc.
 
-**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F.
+**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F → Phase G.
 
 **Combined effect:**
 
-| | Before A | After A | After B | After C | After D | After E | After F |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | 2 260 | **2 279** |
-| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | 16 124 | **16 138** |
+| | Before A | After A | After B | After C | After D | After E | After F | After G |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | 2 260 | 2 279 | **2 279** |
+| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | 16 124 | 16 138 | **16 347** |
 
 ---
 
@@ -667,18 +667,129 @@ MATCH (n:MatchingQualitaet) RETURN n.id, n.name
 
 ---
 
-## Final state — all six phases of round 002 followup applied
+## Phase G — applied 2026-05-17
 
-| | Phase A | Phase B | Phase C | Phase D | Phase E | Phase F |
-|---|---:|---:|---:|---:|---:|---:|
-| Ops | 102 | 103 | 53 | 93 | 87 | 33 |
-| New nodes | 12 | 29 | 16 | 34 | 22 | 19 |
-| New rels | 58 | 74 | 34 | 59 | 65 | 14 |
-| Property writes | 32 | 0 | 1 | 0 | 0 | 0 |
+**Patch:** [patches/phase_g.patch.jsonl](patches/phase_g.patch.jsonl)
+**Apply report:** [apply_reports/phase_g.patch.apply_report.json](apply_reports/phase_g.patch.apply_report.json)
+**Extraction summary:** [phase_g_extraction_summary.json](phase_g_extraction_summary.json) — per-project tag list with source excerpts.
+**Archive↔project map:** [phase_g_archive_project_map.json](phase_g_archive_project_map.json) — 76 archive files mapped to 75 Projekt IDs (Berlin_Schildow has two files mapped to one project).
+**Pre-apply backup:** [`_neo4j/review/backups/phase_g_pre_apply/`](../backups/phase_g_pre_apply/) (2 279 nodes, 16 138 rels; gitignored).
 
-**Grand total: 471 ops / 132 new nodes / 304 new rels / 33 property writes.**
+### What landed
 
-**Live graph: 2 147 → 2 279 nodes (+132), 15 834 → 16 138 rels (+304).**
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 279 | **2 279** | +0 |
+| Relationships | 16 138 | **16 347** | +209 |
+
+**Operations:** 211 records / 0 errors. 2 records were exact duplicates from Berlin_Schildow's two archive files mapping to the same project — absorbed as `noop_existing_rel`.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_rel `HAT_DEFEKT_BEFUND` | 22 | Project-level Defekt findings, 6 distinct vocab ids matched |
+| add_rel `HAT_MATCHINGQUALITAET` | 165 | Project-level matching axes, 5 distinct vocab ids matched |
+| add_rel `HAT_DOMINANT_MARKTMODELL` | 22 | Project-level dominant sourcing model, 4 distinct vocab ids matched |
+
+### How it was generated
+
+A keyword scanner (`_scripts/_generate_phase_g_patch.py`) walked all 76 archive `.md` files in `_archive/research/gebaeude/`. Two iterations:
+
+1. **First pass (363 records):** three patterns triggered universally and were rejected as false positives:
+   - `def_chemische_belastung` ← `\bschadstoff` matched the standard section header *"Schadstoffprüfung"*
+   - `mq_temporal_easy` ← `\bdirect(ly)? reuse\b` matched the file titles *"Fallstudie Direct Reuse / …"*
+   - `mq_spec_anpassung` ← `\banpassung\b` is genuinely universal (every reuse case adapts) — **kept** as true signal
+2. **Second pass (211 records, applied):** tightened `def_chemische_belastung` to require specific chemical-attack terms (PCB, Asbest, Salzangriff, Säureangriff, Ölkontamination, Schwermetall); tightened `mq_temporal_easy` to require explicit temporal phrasings.
+
+Each emitted rel carries:
+- `evidence='INFER'` — every Phase G edge is an inference from text scan, not a primary claim
+- `source='archive:<filename>'` — pointer to the source case study
+- `source_excerpt` — ~100-char surrounding text for review
+
+### Per-vocab edge counts after apply
+
+**Defekt (22 rels across 19/76 projects):**
+| vocab | n |
+|---|---:|
+| def_korrosion | 10 |
+| def_verformung | 5 |
+| def_riss | 3 |
+| def_keine_befunde | 2 |
+| def_hohlraum_delamination | 1 |
+| def_brandschaden | 1 |
+
+**MatchingQualitaet (165 rels across 75/76 projects):**
+| vocab | n |
+|---|---:|
+| mq_spec_anpassung | 75 |
+| mq_temporal_storage | 35 |
+| mq_geographic_local | 26 |
+| mq_spec_zweckaenderung | 23 |
+| mq_geographic_regional | 6 |
+
+**Marktmodell (22 rels across 20/76 projects):**
+| vocab | n |
+|---|---:|
+| mm_same_site | 10 |
+| mm_plattform_vermittelt | 6 |
+| mm_spende | 4 |
+| mm_leasing | 2 |
+
+### Orphan reduction
+
+| Label | Orphans before G | Orphans after G | Total nodes |
+|---|---:|---:|---:|
+| Defekt | 4 | **1** (def_oberflaechenmangel) | 10 |
+| MatchingQualitaet | 9 | **4** (mq_temporal_easy, mq_temporal_planned, mq_geographic_intl, mq_spec_exact) | 9 |
+| Marktmodell | 9 | **7** (mm_kauf_gebraucht, mm_kauf_neu, mm_rueckkauf, mm_forschungsprojekt_zuteilung, mm_intra_konzern, mm_take_back_service, mm_unbekannt) | 11 |
+
+The 4 remaining MatchingQualitaet orphans correspond to axis values that are difficult to detect from archive text alone (e.g. *mq_spec_exact* is a non-event — projects don't describe "we used the part as-is, no modification"). The 7 remaining Marktmodell orphans are sourcing models that aren't well-evidenced in the current corpus (Take-Back, Leasing variants, Rückkauf).
+
+### Phase G rollback
+
+Option 1: inverse-patch (recommended — preserves the 2 noop_existing_rel cases naturally).
+Option 2 (Cypher):
+```cypher
+MATCH (:Projekt)-[r:HAT_DEFEKT_BEFUND]->(:Defekt) DELETE r;
+MATCH (:Projekt)-[r:HAT_MATCHINGQUALITAET]->(:MatchingQualitaet) DELETE r;
+MATCH (:Projekt)-[r:HAT_DOMINANT_MARKTMODELL]->(:Marktmodell) DELETE r;
+```
+Option 3: restore from [`_neo4j/review/backups/phase_g_pre_apply/`](../backups/phase_g_pre_apply/).
+
+### Capabilities unlocked
+
+```cypher
+// Most-affected projects for a given defect
+MATCH (p:Projekt)-[:HAT_DEFEKT_BEFUND]->(:Defekt {id: 'def_korrosion'})
+RETURN p.name ORDER BY p.name
+
+// Matching profile per project — temporal + geographic + spec axes together
+MATCH (p:Projekt)-[r:HAT_MATCHINGQUALITAET]->(mq:MatchingQualitaet)
+RETURN p.name, collect({axis: split(mq.id,'_')[1], value: mq.name, source: r.source}) AS profile
+
+// Sourcing model adoption — which projects use platforms (Madaster/Concular/Rotor/Restado)
+MATCH (p:Projekt)-[:HAT_DOMINANT_MARKTMODELL]->(:Marktmodell {id: 'mm_plattform_vermittelt'})
+RETURN p.name, p.id
+
+// Cross-cut: same-site reuse projects + which materials they reuse
+MATCH (p:Projekt)-[:HAT_DOMINANT_MARKTMODELL]->(:Marktmodell {id: 'mm_same_site'})
+MATCH (p)-[:HAT_BAUTEILGRUPPE]->(bg:Bauteilgruppe)-[:NUTZT_MATERIAL]->(m:Material)
+RETURN p.name, collect(DISTINCT m.name) AS reused_materials
+```
+
+---
+
+## Final state — all seven phases of round 002 followup applied
+
+| | Phase A | Phase B | Phase C | Phase D | Phase E | Phase F | Phase G |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Ops | 102 | 103 | 53 | 93 | 87 | 33 | 211 |
+| New nodes | 12 | 29 | 16 | 34 | 22 | 19 | 0 |
+| New rels | 58 | 74 | 34 | 59 | 65 | 14 | 209 |
+| Property writes | 32 | 0 | 1 | 0 | 0 | 0 | 0 |
+
+**Grand total: 682 ops / 132 new nodes / 513 new rels / 33 property writes.**
+
+**Live graph: 2 147 → 2 279 nodes (+132), 15 834 → 16 347 rels (+513).**
 
 ### Contract drift after all six phases
 
@@ -691,11 +802,12 @@ Wait — that's 7. New labels:
 - `LebenszyklusModul`, `Layer`, `Marktmodell` (Phase E)
 - `Defekt`, `MatchingQualitaet` (Phase F)
 
-New **rel types** live but not in contract (13):
+New **rel types** live but not in contract (16):
 - `TYPISCH_BEI_MATERIAL`, `TYPISCH_BEI_BAUTEILTYP`, `TYPISCH_BEI_ERA` (Phase A)
 - `GILT_IN_LAND`, `HAT_TYPISCHEN_BAUPRODUKTSTATUS`, `HAT_BAUPRODUKTSTATUS` (Phase B)
 - `IST_UNTERVERFAHREN_VON`, `ERHALT_FOERDERUNG_DURCH` (Phase C — also `HAT_AUFBEREITUNG` Phase D, which already existed)
 - `METHODENGRUNDLAGE_NORM`, `BERECHNET_NACH_MODUL`, `TEILT_LAYER`, `HAT_MARKTMODELL` (Phase E)
+- `HAT_DEFEKT_BEFUND`, `HAT_MATCHINGQUALITAET`, `HAT_DOMINANT_MARKTMODELL` (Phase G — project-level reuse-quality dimensions)
 
 Plus existing rel types reused with new properties: `HAT_VERBINDUNGSTECHNIK` (carries `reversibility` property after Phase C).
 
@@ -703,12 +815,11 @@ Plus existing rel types reused with new properties: `HAT_VERBINDUNGSTECHNIK` (ca
 
 ---
 
-## Worklist after Phase F
+## Worklist after Phase G
 
-- ✅ Phases A–F applied. 471 ops total. Live graph at 2 279 / 16 138.
-- ⏳ **Round 003** — project content review (15 chunks × 5 projects). Round-003 enablers (Defekt, MatchingQualitaet) are now seeded; round 003 attaches them per BG.
-- ⏳ **Contract drift cleanup** — add 7 new labels + 12 new rel types to `_neo4j/contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json`. Small commit; no apply needed.
+- ✅ Phases A–G applied. 682 ops total. Live graph at 2 279 / 16 347.
+- ⏳ **Phase H refinements** — P-6 Methode split, P-9 Akzeptanz, P-10 Wirtschaft, P-11 HuerdeKategorie tidy, P-14 orphan audit. Also: per-BG refinement of Phase G's project-level tags once round 003 content review unlocks per-BG evidence.
+- ⏳ **Round 003 — project content review** — 15 chunks × 5 projects. Round-003 will refine Phase G's project-level Defekt/MatchingQualitaet/Marktmodell into per-BG edges, plus address the 4 remaining MatchingQualitaet orphans (mq_temporal_easy, mq_temporal_planned, mq_geographic_intl, mq_spec_exact) and 7 remaining Marktmodell orphans by reading individual case studies.
+- ⏳ **Contract drift cleanup** — add 7 new labels + 16 new rel types to `_neo4j/contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json`. Small commit; no apply needed.
 - ⏳ **Parked #1 stub-Akteur** (15 no-archive + 2 multi-file) — still on the worklist; can fold into a separate actor-canonicalization track or absorb during round 003 per project.
 - ⏳ **Parked #2 stub-Projekt** — 22 remaining (Circle House was promoted in Phase A; 3 duplicate stubs were merged in followup). Promote-or-drop decisions during round 003 per chunk.
-
-Round 003 is the next big move. After that: Phase G (refinements — P-6 Methode split, P-9 Akzeptanz, P-10 Wirtschaft, P-11 HuerdeKategorie tidy, P-14 orphan audit) + round 005 freeze/release.
