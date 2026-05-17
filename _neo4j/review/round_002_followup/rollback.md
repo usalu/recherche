@@ -9,14 +9,14 @@
 4. Verifies with post-apply queries (logged here).
 5. Appends a section to this doc.
 
-**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F → Phase G.
+**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F → Phase G → Phase H.
 
 **Combined effect:**
 
-| | Before A | After A | After B | After C | After D | After E | After F | After G |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | 2 260 | 2 279 | **2 279** |
-| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | 16 124 | 16 138 | **16 347** |
+| | Before A | After A | After B | After C | After D | After E | After F | After G | After H |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | 2 260 | 2 279 | 2 279 | **2 296** |
+| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | 16 124 | 16 138 | 16 347 | **16 366** |
 
 ---
 
@@ -778,29 +778,113 @@ RETURN p.name, collect(DISTINCT m.name) AS reused_materials
 
 ---
 
-## Final state — all seven phases of round 002 followup applied
+## Phase H — applied 2026-05-17
 
-| | Phase A | Phase B | Phase C | Phase D | Phase E | Phase F | Phase G |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Ops | 102 | 103 | 53 | 93 | 87 | 33 | 211 |
-| New nodes | 12 | 29 | 16 | 34 | 22 | 19 | 0 |
-| New rels | 58 | 74 | 34 | 59 | 65 | 14 | 209 |
-| Property writes | 32 | 0 | 1 | 0 | 0 | 0 | 0 |
+**Patch:** [patches/phase_h.patch.jsonl](patches/phase_h.patch.jsonl)
+**Apply report:** [apply_reports/phase_h.patch.apply_report.json](apply_reports/phase_h.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_h_pre_apply/`](../backups/phase_h_pre_apply/) (2 279 nodes, 16 347 rels; gitignored).
 
-**Grand total: 682 ops / 132 new nodes / 513 new rels / 33 property writes.**
+### What landed
 
-**Live graph: 2 147 → 2 279 nodes (+132), 15 834 → 16 347 rels (+513).**
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 279 | **2 296** | +17 |
+| Relationships | 16 347 | **16 366** | +19 |
+
+**Operations:** 36 records / 0 errors.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_node | 17 | 6 ZustandsKlasse (P-2) + 6 Wirtschaft (P-10) + 5 Akzeptanz (P-9) |
+| add_rel | 19 | 12 TYPISCH_BEI_MATERIAL for ZustandsKlasse + 7 GILT_IN_LAND for Akzeptanz |
+
+### New nodes
+
+**P-2 ZustandsKlasse (6):** zk_neuwertig, zk_gebrauchsspuren_funktional, zk_eingeschraenkt_nachbearbeitung, zk_eingeschraenkt_nutzungsklasse_reduzieren, zk_nicht_wiederverwendbar, zk_unbekannt_pruefung_offen. Standard discrete condition grades used in reuse assessment.
+
+**P-10 Wirtschaft (6):** wi_capex_neutral, wi_capex_niedriger_direkter_ersparnis, wi_capex_hoeher_opex_payback, wi_capex_hoeher_subvention, wi_capex_hoeher_marketing_payback, wi_hidden_costs_lagerung_pruefung. **Payback-model axis** — adds a new axis under the existing Wirtschaft label, which already had 6 aspect-category nodes (wi_finanzierung, wi_geschaeftsmodell, wi_kostenvergleich, wi_lebenszykluskosten, wi_preisbildung, wi_restwert). Both axes coexist under one label, like MatchingQualitaet's three axes.
+
+**P-9 Akzeptanz (5):** ak_dgnb_zertifizierung, ak_breeam_zertifizierung, ak_leed_zertifizierung, ak_oeffentlicher_bauherr_pilot, ak_aesthetik_patinakultur. Stakeholder acceptance signals for reuse — certifications, public-client pilots, aesthetic culture.
+
+### Grounding rules (anti-orphan)
+
+**ZustandsKlasse → Material (12 TYPISCH_BEI_MATERIAL):**
+- Neuwertig → Glas, Naturstein, Aluminium
+- Gebrauchsspuren funktional → Holz, Ziegel, Stahl
+- Nachbearbeitung → Stahl (re-coating), Holz (planing), Beton (edge work)
+- Nutzungsklasse reduzieren → Stahlbeton (downgrade), Holz (downgrade)
+- Nicht wiederverwendbar → MDF (recycling only)
+
+**Akzeptanz → Land (7 GILT_IN_LAND):**
+- DGNB → DE + AT + CH
+- BREEAM → UK + NL
+- LEED → US + International
+
+### Phase H rollback
+
+Option 1: inverse-patch.
+Option 2 (Cypher):
+```cypher
+MATCH (n) WHERE n.id IN [
+  'zk_neuwertig','zk_gebrauchsspuren_funktional','zk_eingeschraenkt_nachbearbeitung',
+  'zk_eingeschraenkt_nutzungsklasse_reduzieren','zk_nicht_wiederverwendbar','zk_unbekannt_pruefung_offen',
+  'wi_capex_neutral','wi_capex_niedriger_direkter_ersparnis','wi_capex_hoeher_opex_payback',
+  'wi_capex_hoeher_subvention','wi_capex_hoeher_marketing_payback','wi_hidden_costs_lagerung_pruefung',
+  'ak_dgnb_zertifizierung','ak_breeam_zertifizierung','ak_leed_zertifizierung',
+  'ak_oeffentlicher_bauherr_pilot','ak_aesthetik_patinakultur'
+] DETACH DELETE n;
+```
+Option 3: restore from [`_neo4j/review/backups/phase_h_pre_apply/`](../backups/phase_h_pre_apply/).
+
+### Orphan state after Phase H
+
+| Label | Orphans | Total | Notes |
+|---|---:|---:|---|
+| ZustandsKlasse | 1 | 6 | Only zk_unbekannt_pruefung_offen orphan (intentional — "not yet assessed" is a non-event category) |
+| Wirtschaft (payback-model axis) | 6 | 6 (of new) | All new wi_capex_* nodes ungrounded; will be tagged per-project in a future Phase G-style scan |
+| Akzeptanz | 2 | 5 | ak_oeffentlicher_bauherr_pilot + ak_aesthetik_patinakultur lack country grounding (both are cross-cutting) |
+
+The 6 ungrounded Wirtschaft payback-model nodes are expected — like Phase F's MatchingQualitaet seed, they'll be tagged once archive-driven scanning extends to cost-model phrases ("CapEx", "Förderung deckt", "Kosten vergleichbar", etc.).
+
+### Capabilities unlocked
+
+```cypher
+// Condition grading for a given material — what's typical when reused
+MATCH (zk:ZustandsKlasse)-[:TYPISCH_BEI_MATERIAL]->(m:Material {id: 'mat_stahl'})
+RETURN zk.name, zk.scope_note
+
+// Which certifications accept reuse in a given country
+MATCH (ak:Akzeptanz)-[:GILT_IN_LAND]->(:Land {id: 'land_deutschland'})
+RETURN ak.id, ak.name
+
+// All acceptance certifications cross-country reach
+MATCH (ak:Akzeptanz)-[:GILT_IN_LAND]->(l:Land)
+RETURN ak.name, collect(l.name) AS countries
+```
+
+---
+
+## Final state — all eight phases of round 002 followup applied
+
+| | Phase A | Phase B | Phase C | Phase D | Phase E | Phase F | Phase G | Phase H |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Ops | 102 | 103 | 53 | 93 | 87 | 33 | 211 | 36 |
+| New nodes | 12 | 29 | 16 | 34 | 22 | 19 | 0 | 17 |
+| New rels | 58 | 74 | 34 | 59 | 65 | 14 | 209 | 19 |
+| Property writes | 32 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+
+**Grand total: 718 ops / 149 new nodes / 532 new rels / 33 property writes.**
+
+**Live graph: 2 147 → 2 296 nodes (+149), 15 834 → 16 366 rels (+532).**
 
 ### Contract drift after all six phases
 
-New **labels** live but not in contract (5):
-- `BauwerkEra`, `Bauproduktstatus`, `LebenszyklusModul`, `Layer`, `Marktmodell`, `Defekt`, `MatchingQualitaet`
-
-Wait — that's 7. New labels:
+New **labels** live but not in contract (10):
 - `BauwerkEra` (Phase A)
 - `Bauproduktstatus` (Phase B)
 - `LebenszyklusModul`, `Layer`, `Marktmodell` (Phase E)
 - `Defekt`, `MatchingQualitaet` (Phase F)
+- `ZustandsKlasse`, `Akzeptanz` (Phase H — Wirtschaft label already existed, just got new node axis)
 
 New **rel types** live but not in contract (16):
 - `TYPISCH_BEI_MATERIAL`, `TYPISCH_BEI_BAUTEILTYP`, `TYPISCH_BEI_ERA` (Phase A)
@@ -815,11 +899,13 @@ Plus existing rel types reused with new properties: `HAT_VERBINDUNGSTECHNIK` (ca
 
 ---
 
-## Worklist after Phase G
+## Worklist after Phase H
 
-- ✅ Phases A–G applied. 682 ops total. Live graph at 2 279 / 16 347.
-- ⏳ **Phase H refinements** — P-6 Methode split, P-9 Akzeptanz, P-10 Wirtschaft, P-11 HuerdeKategorie tidy, P-14 orphan audit. Also: per-BG refinement of Phase G's project-level tags once round 003 content review unlocks per-BG evidence.
-- ⏳ **Round 003 — project content review** — 15 chunks × 5 projects. Round-003 will refine Phase G's project-level Defekt/MatchingQualitaet/Marktmodell into per-BG edges, plus address the 4 remaining MatchingQualitaet orphans (mq_temporal_easy, mq_temporal_planned, mq_geographic_intl, mq_spec_exact) and 7 remaining Marktmodell orphans by reading individual case studies.
-- ⏳ **Contract drift cleanup** — add 7 new labels + 16 new rel types to `_neo4j/contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json`. Small commit; no apply needed.
+- ✅ Phases A–H applied. 718 ops total. Live graph at 2 296 / 16 366.
+- ⏳ **Phase I — orphan rescue + Marktmodell widening** — manually tag the ~14 vocab orphans (4 MQ + 7 Marktmodell + 1 Defekt + 1 ZustandsKlasse + 2 Akzeptanz, less those that are intentional non-events) plus widen Marktmodell patterns to push coverage from 20/76 → 40/76. Small, ~30-60 ops.
+- ⏳ **Phase J — Wirtschaft per-project tagging** — archive-driven scan for cost-model phrases ("CapEx", "Förderung", "Kosten vergleichbar"). Tags new wi_capex_* nodes per project, same shape as Phase G.
+- ⏳ **Round 003 — per-BG refinement** — convert Phase G project-level tags into BG-level edges using BAUTEIL-INVENTAR sections of archive files. Highest connection-density payoff.
+- ⏳ **Phase K — remaining refinements** — P-6 Methode split, P-11 HuerdeKategorie tidy, P-14 orphan audit.
+- ⏳ **Contract drift cleanup** — add 10 new labels + 16 new rel types to `_neo4j/contracts/project_batches_v1_1/schemas/kg_jsonl_record_schema.json`. Small commit; no apply needed.
 - ⏳ **Parked #1 stub-Akteur** (15 no-archive + 2 multi-file) — still on the worklist; can fold into a separate actor-canonicalization track or absorb during round 003 per project.
 - ⏳ **Parked #2 stub-Projekt** — 22 remaining (Circle House was promoted in Phase A; 3 duplicate stubs were merged in followup). Promote-or-drop decisions during round 003 per chunk.
