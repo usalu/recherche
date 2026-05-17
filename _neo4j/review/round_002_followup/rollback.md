@@ -9,14 +9,14 @@
 4. Verifies with post-apply queries (logged here).
 5. Appends a section to this doc.
 
-**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F → Phase G → Phase H.
+**Apply order so far:** Phase A → Phase B → Phase C → Phase D → Phase E → Phase F → Phase G → Phase H → Phase I.
 
 **Combined effect:**
 
-| | Before A | After A | After B | After C | After D | After E | After F | After G | After H |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 159 | 2 188 | 2 204 | 2 238 | 2 260 | 2 279 | 2 279 | **2 296** |
-| Relationships | 15 834 | 15 892 | 15 966 | 16 000 | 16 059 | 16 124 | 16 138 | 16 347 | **16 366** |
+| | Before A | After D | After F | After G | After H | After I |
+|---|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 238 | 2 279 | 2 279 | 2 296 | **2 296** |
+| Relationships | 15 834 | 16 059 | 16 138 | 16 347 | 16 366 | **16 450** |
 
 ---
 
@@ -864,18 +864,64 @@ RETURN ak.name, collect(l.name) AS countries
 
 ---
 
-## Final state — all eight phases of round 002 followup applied
+## Phase I — applied 2026-05-17
 
-| | Phase A | Phase B | Phase C | Phase D | Phase E | Phase F | Phase G | Phase H |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Ops | 102 | 103 | 53 | 93 | 87 | 33 | 211 | 36 |
-| New nodes | 12 | 29 | 16 | 34 | 22 | 19 | 0 | 17 |
-| New rels | 58 | 74 | 34 | 59 | 65 | 14 | 209 | 19 |
-| Property writes | 32 | 0 | 1 | 0 | 0 | 0 | 0 | 0 |
+**Patch:** [patches/phase_i.patch.jsonl](patches/phase_i.patch.jsonl)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_i_pre_apply/`](../backups/phase_i_pre_apply/) (2 296 nodes, 16 366 rels; gitignored).
 
-**Grand total: 718 ops / 149 new nodes / 532 new rels / 33 property writes.**
+### What landed
 
-**Live graph: 2 147 → 2 296 nodes (+149), 15 834 → 16 366 rels (+532).**
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 296 | **2 296** | +0 |
+| Relationships | 16 366 | **16 450** | +84 |
+
+**Operations:** 93 records / 0 errors. 9 records absorbed as `noop_existing_rel` (orphan-rescue overlapping with Marktmodell widening for same project+vocab).
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_rel `HAT_MATCHINGQUALITAET` | 14 | Manual rescue of mq_temporal_easy, mq_temporal_planned, mq_geographic_intl, mq_spec_exact |
+| add_rel `HAT_DEFEKT_BEFUND` | 3 | Manual rescue of def_oberflaechenmangel |
+| add_rel `HAT_DOMINANT_AKZEPTANZ` | 9 | New rel type — Manual rescue of ak_oeffentlicher_bauherr_pilot + ak_aesthetik_patinakultur |
+| add_rel `HAT_DOMINANT_MARKTMODELL` | 67 | 22 from orphan rescue + 45 from Marktmodell widening rescan |
+
+### Orphan state after Phase I
+
+| Label | Orphans before I | Orphans after I |
+|---|---:|---:|
+| Defekt | 1 | **0** |
+| MatchingQualitaet | 4 | **0** |
+| Marktmodell | 7 | **2** (mm_rueckkauf, mm_unbekannt) |
+| Akzeptanz | 2 | **0** |
+
+The 2 remaining Marktmodell orphans (mm_rueckkauf = buyback, mm_unbekannt = unknown) are intentional non-events. All Phase F/H seed vocabs are now connected to projects.
+
+### Phase I rollback
+
+```cypher
+MATCH ()-[r]->()
+WHERE r.source = 'manual_orphan_rescue' OR r.reason STARTS WITH 'P-I '
+DELETE r;
+```
+
+Or restore from [`_neo4j/review/backups/phase_i_pre_apply/`](../backups/phase_i_pre_apply/).
+
+---
+
+## Final state — all nine phases of round 002 followup applied
+
+| | A | B | C | D | E | F | G | H | I |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Ops | 102 | 103 | 53 | 93 | 87 | 33 | 211 | 36 | 93 |
+| New nodes | 12 | 29 | 16 | 34 | 22 | 19 | 0 | 17 | 0 |
+| New rels | 58 | 74 | 34 | 59 | 65 | 14 | 209 | 19 | 84 |
+| Property writes | 32 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 |
+
+**Grand total: 811 ops / 149 new nodes / 616 new rels / 33 property writes.**
+
+**Live graph: 2 147 → 2 296 nodes (+149), 15 834 → 16 450 rels (+616).**
+
+**New rel type added in Phase I:** `HAT_DOMINANT_AKZEPTANZ` (project-level — parallels HAT_DOMINANT_MARKTMODELL).
 
 ### Contract drift after all six phases
 
