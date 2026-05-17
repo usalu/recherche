@@ -1,77 +1,92 @@
-# Batch 6 — EU-funded consortia
+# Batch 6 — EU-funded research consortia (4 projects)
 
-**Decision after research:** **relabel** `Projekt` → `Programm` for all 4. These are multi-partner research consortia (Interreg / Horizon Europe / national R&D), not buildings. May also include **merge** of `p_interreg_nwe_fcrbe` into `p_fcrbe` if they refer to the same programme.
-**Project count:** 4.
-**Common reference:** see [README.md](README.md). Adjacent existing Programm nodes in the graph (some you'll cross-link to): `prg_disrupt`, `prg_recreate`, `prg_horizon_europe` (if present).
+**Workflow + categories to gather:** see [README.md](README.md).
 
-These programmes are well-documented online — the research should be quick (one official project page + one Interreg/CORDIS database entry per programme).
+These four entries are **multi-partner research consortia** — typically funded by Interreg North-West Europe, Horizon 2020 / Horizon Europe, or national equivalents — not single buildings. Two of them (FCRBE + Interreg NWE FCRBE) may be the same programme under two different names; please flag this in your dossier.
 
----
+The dossier sections that apply are the same as for teaching programmes (batch 5):
+- Identification (programme name, funder, coordinator, partner list)
+- People and organizations (project lead, partner-organization leads, advisory board)
+- Time line (start, end, milestone deliverables)
+- Funding (programme, grant agreement number, total budget, EU contribution)
+- Outputs (pilot buildings produced, public guidelines, toolkits, deliverable reports, dataset releases, websites)
+- Linked case studies our archive may already cover (e.g. FCRBE pilots include many Belgian / Brussels reuse cases, several Multi Brussels variants, House of Fraser London)
+- Sources for everything
 
-### 1. `p_fcrbe` — FCRBE — Facilitating the Circulation of Reclaimed Building Elements
-
-**Existing actor links:** Hugo Topalov, Sarah Westerfeld.
-
-**Likely identity:** **FCRBE** Interreg NWE 2017–2022 programme, lead partner Rotor (Brussels), Salvo (UK), Bellastock (FR), CSTC/WTCB (BE), Brussels Environment. Outputs: opalis.eu, futureusedmaterials.eu, FCRBE guidelines.
-
-**To research:**
-- [ ] Confirm the programme is FCRBE Interreg NWE (≈ €4.6M, 2018–2022)
-- [ ] Full partner list (probably already partly in graph)
-- [ ] Funder: Interreg North-West Europe + ERDF
-- [ ] Outputs: 36 pilot reuse projects in NWE, Opalis dealer directory, online guides
-- [ ] Sources: nweurope.eu/fcrbe, opalis.eu, FCRBE final report
+EU programmes have very stable documentation paths:
+- **CORDIS** for Horizon-funded projects (cordis.europa.eu)
+- **Interreg programme websites** for Interreg projects (nweurope.eu for North-West Europe)
+- **Deliverable PDFs** are usually open-access
 
 ---
 
-### 2. `p_interreg_nwe_fcrbe` — Interreg NWE FCRBE
+## 1. FCRBE — Facilitating the Circulation of Reclaimed Building Elements
 
-**Existing actor links:** Michaël Ghyoot.
+**Already linked:** Hugo Topalov, Sarah Westerfeld.
 
-**Likely identity:** Same as `p_fcrbe`. Michaël Ghyoot = Rotor partner, FCRBE project lead. **Strong MERGE candidate** into `p_fcrbe`.
+**Plausible starting context:** Interreg North-West Europe project, lead by **Rotor** (Brussels). Run 2017–2022 (or thereabouts), budget ≈ €4.6 million. Partners typically include Rotor (BE, coordinator), Salvo (UK, salvage-trade umbrella), Bellastock (FR, architecture / urban research), Brussels Environment (BE, regulator), CSTC / BBRI Belgian Building Research Institute, possibly Glasgow Caledonian University. Notable outputs: **Opalis dealer directory** (opalis.eu — the European reclaimed-materials dealer index), **futureusedmaterials.eu**, ~36 pilot reuse buildings in NWE region, technical guidelines, public webinars.
 
-**To research:**
-- [ ] Confirm complete overlap with `p_fcrbe`
-- [ ] If confirmed: emit `canonicalize_node` op merging `p_interreg_nwe_fcrbe` into `p_fcrbe` (keep `Interreg NWE FCRBE` as alias)
+**Specific items to chase:**
+- Confirm Interreg NWE call cycle and grant agreement reference
+- Complete partner list with country and role
+- Total budget split (EU + co-funding)
+- Output catalogue: all pilot buildings (each one is a candidate for separate case-study documentation), technical guidance documents, the Opalis directory itself
+- Linkage to existing graph projects — many FCRBE pilots are already in our archive (Multi Brussels, House of Fraser London, others); please list them so we can cross-link
+- Status: completed? follow-on programme (FCRBE-2 or similar)?
 
----
-
-### 3. `p_rebridge_structural_reuse_project` — REBRIDGE structural reuse project
-
-**Existing actor links:** Corentin Fivet.
-
-**Likely identity:** **ReBridge** — likely a structural-reuse research project on bridges or bridge-girder reuse. Corentin Fivet = Structural Xploration Lab at EPFL Fribourg, known for structural reuse research (incl. ReCrete footbridge using reused concrete).
-
-**To research:**
-- [ ] Disambiguate ReBridge: could be (a) a specific SNSF/Innosuisse project on bridge reuse, (b) part of NCCR Digital Fabrication, or (c) an EPFL teaching studio
-- [ ] Look at Fivet's SXL group at EPFL: sxl.epfl.ch
-- [ ] Outputs: reused bridge girders, demonstrator bridges, publications
-- [ ] Funder
-- [ ] Sources: sxl.epfl.ch publications, EPFL news
+**Where to look:** nweurope.eu/projects/project-search/fcrbe, opalis.eu, futureusedmaterials.eu, Rotor publications, BBRI / CSTC research, Salvo's UK reports.
 
 ---
 
-### 4. `p_reuse_logistics` — Reuse Logistics
+## 2. Interreg NWE FCRBE
 
-**Existing actor links:** Madlen Kobi.
+**Already linked:** Michaël Ghyoot.
 
-**Likely identity:** Generic title — likely a research project on logistics/transport for reuse. Madlen Kobi = circular-economy researcher (ZHAW or EPFL or HSLU).
+**Plausible starting context:** Almost certainly the same programme as FCRBE above. **Michaël Ghyoot** is a Rotor partner and the FCRBE project lead. This stub likely exists because the actor registry indexed the programme from the Interreg-administrative angle, while project 1 above came from the FCRBE-acronym angle.
 
-**To research:**
-- [ ] Identify the specific project. Candidates: Innosuisse "Reuse Logistics" call, KTI/SBFI project, NFP-funded study
-- [ ] Confirm Madlen Kobi's affiliation
-- [ ] If too generic / unidentifiable: relabel as `Begriff` (concept) rather than `Programm`, or delete
+**Specific items to chase:**
+- **Confirm overlap with FCRBE** explicitly — list shared facts (years, budget, partners) so the duplicate can be merged unambiguously at the integration step
+- Michaël Ghyoot's specific role (likely scientific coordinator, work-package lead, or programme coordinator)
+- Any *additional* deliverables or angles that were prominent under the Interreg framing but not under the FCRBE framing — sometimes Interreg requires impact reports and final stakeholder events that are documented separately
+
+**Where to look:** same sources as project 1, plus interreg-nwe.eu, Ghyoot's personal publications (he's also written extensively on reuse).
 
 ---
 
-## Output
+## 3. REBRIDGE structural reuse project
 
-For each programme: a short `.md` documenting the consortium + a small JSONL (label `Programm`, no Bauwerk/BG). For the FCRBE pair, also include the merge op.
+**Already linked:** Corentin Fivet.
 
-```cypher
-// FCRBE-merge verification BEFORE merging:
-MATCH (p:Projekt {id: 'p_interreg_nwe_fcrbe'})-[r]-()
-RETURN type(r), count(*);
+**Plausible starting context:** Research project on structural reuse, very likely focused on **bridges** or **bridge girders** as a reuse source. **Corentin Fivet** leads the **Structural Xploration Lab (SXL)** at EPFL Fribourg, which is the leading European academic group on structural reuse — they also built the ReCrete footbridge from reused concrete. REBRIDGE may be an SNSF / Innosuisse / NCCR Digital Fabrication / Horizon Europe funded project.
 
-MATCH (p:Projekt {id: 'p_fcrbe'})-[r]-()
-RETURN type(r), count(*);
-```
+**Specific items to chase:**
+- Decode REBRIDGE — could be **RE**used **BRIDGE**, possibly a combined acronym like "REusable BRIDGE elements" or "REusing BRIDGE materials"
+- Funder (SNSF Sinergia? Innosuisse? NCCR Digital Fabrication? Horizon Europe?)
+- Time line + grant reference
+- Industry partners (Holcim? Implenia? Eberhard? Swiss Federal Roads Office FEDRO?)
+- Outputs: demonstrator bridges, reused-girder catalogues, design-method publications
+- Linkage to ReCrete footbridge (already in our archive — same group)
+- Whether REBRIDGE is built, prototyped, or theory-only
+
+**Where to look:** sxl.epfl.ch (Fivet's group), epfl.ch news, SNSF P3 grant database (data.snf.ch), CORDIS, Holcim Foundation sponsorship records, Corentin Fivet publications on Google Scholar.
+
+---
+
+## 4. Reuse Logistics
+
+**Already linked:** Madlen Kobi.
+
+**Plausible starting context:** Generic-sounding name — likely a research project on **logistics for reuse** (transport, storage, broker matching) rather than a building. **Madlen Kobi** is a Swiss circular-economy researcher — affiliation likely ZHAW, HSLU Luzern, or ETH. The project may be funded by Innosuisse, SBFI, or a Swiss federal programme on construction sustainability.
+
+**Specific items to chase:**
+- Identify the specific project — search Innosuisse Innovation Project database for "Reuse Logistics", check Madlen Kobi's publication and affiliation history
+- Likely candidates: Innosuisse Innovation Project, an HSLU Luzern research module, an SNF / SBFI funded study, a city-of-Zürich pilot, or a private-consultancy white paper
+- If genuinely unidentifiable as a discrete project: document the negative finding clearly. The entry can be re-categorized (as a concept rather than a project) or deleted at the integration step.
+
+**Where to look:** innosuisse.ch project database, ZHAW / HSLU publication pages, Madlen Kobi on Google Scholar / ResearchGate, Swiss circular-economy press (espazium, hochparterre).
+
+---
+
+## What to do with the dossiers once written
+
+Hand each finished `.md` file back. For the FCRBE / Interreg NWE FCRBE pair: if confirmed as the same programme, one combined dossier is fine (e.g. `FCRBE_Interreg_NWE.md`) with a short note documenting that both stub names refer to it. For Reuse Logistics: if identification fails, a short "negative finding" dossier is acceptable.

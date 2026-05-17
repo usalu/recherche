@@ -1,85 +1,76 @@
-# Batch 1 — Swiss case-study pilots
+# Batch 1 — Swiss case-study pilots (3 projects)
 
-**Decision after research:** promote to full Projekt.
-**Project count:** 3.
-**Common reference:** see [README.md](README.md) for schema, controlled vocab, ID conventions, and the K.118 reference example.
+**Workflow + categories to gather:** see [README.md](README.md).
+**Reference example (depth + structure):** [`K118_Kopfbau_Halle_118_Winterthur.md`](../../../../_archive/research/gebaeude/K118_Kopfbau_Halle_118_Winterthur.md).
 
-## Per-project research checklist
+For each project below, produce one structured markdown dossier following the K.118 template, covering as many of the categories listed in the README as the public record allows. **Every factual claim needs a source citation.** Items marked "unknown" are preferred to fabrication.
 
-For each project below, ChatGPT/Perplexity should gather enough to produce:
-- `_archive/research/gebaeude/<Name>.md` mirroring the K.118 case-study template (Sections 1–10).
-- `_neo4j/intake/inbox/stub_promotion/<pid>.kg.jsonl` matching the contract.
-
-The Akteure listed under "Existing actor links" already point to the project via `ASSOZIIERT_MIT_PROJEKT` — **do not re-create those**, just add new ones as needed.
+The people / organizations under "Already linked" have shown up in our actor registry as participating in this project — start research from them, but do not stop there. Look for additional actors, especially in the under-documented role categories (sustainability consultant, demolition contractor, broker, funder, regulator).
 
 ---
 
-### 1. `p_schaerenmoosstrasse_zuerich` — Schärenmoosstrasse Zürich
+## 1. Schärenmoosstrasse Zürich
 
-**Existing actor links:** Daniel Hoffmann, Gian Trachsler, Studio Trachsler Hoffmann.
+**Already linked:** Daniel Hoffmann, Gian Trachsler, Studio Trachsler Hoffmann.
 
-**Likely identity:** Direct-reuse housing or fit-out project in Zürich-Schwamendingen (Schärenmoosstrasse area). Studio Trachsler Hoffmann is a Zürich architecture firm known for reuse-led design.
+**Plausible starting context:** Studio Trachsler Hoffmann is a Zürich architecture office known for reuse-led design. The street Schärenmoosstrasse runs through Zürich-Schwamendingen. The project is most likely a residential building, a school, or a mixed-use housing development on that street.
 
-**To research:**
-- [ ] Exact street address; intervention type (Neubau vs Umbau vs Aufstockung)
-- [ ] Building type (Wohnen / Schule / Büro / ...)
-- [ ] Year of design + completion
-- [ ] Bauherr, Tragwerksplanung
-- [ ] Which materials/elements are reused; donor sources
-- [ ] Reuse-rate by mass/volume if published
-- [ ] Certifications, norms, financing
-- [ ] Sources: Studio Trachsler Hoffmann project page, hochparterre.ch, espazium.ch
+**Specific items to chase:**
+- Exact address (Schärenmoosstrasse N°), district, postcode
+- Whether this is a new build, transformation, extension, or replacement
+- Client (Bauherr) — likely a cooperative, foundation, or City of Zürich entity
+- Year of design start, construction start, completion
+- Reuse strategy and donor sources — Swiss reuse projects typically draw from Sulzer-Areal Winterthur, Klybeck Basel, ETH demonstrators, or municipal teardowns
+- Reuse rate by mass and by volume
+- Norms cited (SIA 269 family is the Swiss reuse standard; SIA 261/263/265 for structural design)
+- Project funding and any cost benchmarking against a new-build reference
 
----
-
-### 2. `p_umar_unit` — UMAR Unit
-
-**Existing actor links:** Werner Sobek, Dirk E. Hebel, Felix Heisel, Vanessa Propach.
-
-**Likely identity:** **U**rban **M**ining **A**nd **R**ecycling unit in the **NEST** experimental building at Empa Dübendorf (Switzerland). Architects: Werner Sobek + KIT/ETH (Hebel + Heisel). Built 2017–2018.
-
-**To research:**
-- [ ] Confirm year (≈ 2018), location (Empa NEST, Dübendorf CH)
-- [ ] All reused/upcycled elements: metal envelope, wood, brick, copper, plumbing fixtures
-- [ ] Donor buildings + reuse chain
-- [ ] Quantitative reuse-rate (~100 % design target?)
-- [ ] Bauherr (Empa), Tragwerksplanung
-- [ ] Publications: Sobek + Hebel + Heisel "Building from Waste", NEST UMAR project page (empa.ch), academic articles
-- [ ] Norms / certifications
+**Where to look:** hochparterre.ch, espazium.ch, studio Trachsler Hoffmann project page (likely studiotrachslerhoffmann.ch), Stadt Zürich Hochbaudepartement, Werk-Bauen+Wohnen archives.
 
 ---
 
-### 3. `p_elementa_walkeweg` — ELEMENTA / Walkeweg Basel
+## 2. UMAR Unit (NEST, Empa Dübendorf)
 
-**Existing actor links:** Carla Ferrando Costansa, Pablo Garrido Arnaiz.
+**Already linked:** Werner Sobek, Dirk E. Hebel, Felix Heisel, Vanessa Propach.
 
-**Likely identity:** ELEMENTA / Walkeweg site in Basel — likely a reuse-focused housing or mixed-use development on Walkeweg. Architects in registry suggest a Spanish-named pair, possibly EMI Architekten or a similar Basel office. ELEMENTA is also a known Swiss precast/reuse brand.
+**Plausible starting context:** "UMAR" almost certainly stands for **Urban Mining and Recycling** — the experimental residential unit inside the NEST building at Empa in Dübendorf (Switzerland). Designed by Werner Sobek with Dirk Hebel and Felix Heisel (then both at ETH Zürich, now Hebel at KIT Karlsruhe), opened in 2018, designed as a fully-disassemblable demonstration. This is a well-documented case — research should be quick and thorough.
 
-**To research:**
-- [ ] Disambiguate "ELEMENTA Walkeweg" — building, brand, or planning study?
-- [ ] If building: location (Basel address), Bauherr, year
-- [ ] Materials reused, donor sources
-- [ ] Architect office of Ferrando Costansa / Garrido Arnaiz
-- [ ] Publications: hochparterre.ch, espazium.ch, BaslerZeitung
-- [ ] Whether it has been built or is still in planning
+**Specific items to chase:**
+- All categories listed in README — UMAR has extensive open documentation
+- Especially good coverage to chase: full bill of reused materials (copper, brick, plywood, gypsum, fixtures), donor sources for each
+- Design-for-disassembly philosophy: which joining techniques were used to ensure later disassembly
+- Lifecycle-assessment scope (UMAR was modeled in detail — EN 15978 modules)
+- Quantitative target: reuse + recyclability rate (the project advertised ≈ 100 % at end-of-life)
+- Bauherr Empa, building owner of NEST
+- Operator of the unit post-construction (occupied, used by Empa researchers)
+
+**Where to look:** empa.ch/web/nest/umar, sobek.de project page, hebel.arch.kit.edu publications, Hebel + Heisel "Building from Waste" book (Birkhäuser), peer-reviewed papers (Sustainable Cities and Society, Journal of Cleaner Production), ArchDaily.
 
 ---
 
-## Output deliverable per project
+## 3. ELEMENTA / Walkeweg Basel
 
-Two files. For Schärenmoosstrasse:
-```
-_archive/research/gebaeude/Schaerenmoosstrasse_Zuerich.md
-_neo4j/intake/inbox/stub_promotion/p_schaerenmoosstrasse_zuerich.kg.jsonl
-```
+**Already linked:** Carla Ferrando Costansa, Pablo Garrido Arnaiz.
 
-The JSONL should at minimum include:
-- 1 `Projekt` node (use existing id `p_schaerenmoosstrasse_zuerich`; set `node_role: "full_projekt"`, `promoted_at`, `promoted_reason: "Phase L stub promotion"`)
-- 1 `Quelle` node for the new archive markdown (id `q_<slug>_md`)
-- 1+ `Bauwerk` nodes (receiver + any donor)
-- 1+ `Bauteilgruppe` nodes
-- New `Akteur` nodes only for actors NOT already in the existing actor links
-- `Stadt` + `Land` (likely already exist: `stadt_zuerich`, `land_schweiz`)
-- All the BELEGT_IN, LIEGT_IN_*, HAT_BAUTEILGRUPPE, NUTZT_BAUWERK, BETEILIGT_AN, HAT_AKTEURROLLE rels.
+**Plausible starting context:** The actor names suggest a Spanish-speaking architect duo working in Basel. "Walkeweg" is a street in Basel (Gellert / Breite district). "ELEMENTA" is also the brand name of a Swiss precast-concrete reuse system marketed by Element AG. The combination "ELEMENTA Walkeweg" most likely refers to a residential or mixed-use development on Walkeweg that uses the ELEMENTA precast-reuse system, or a building by EMI Architekten / Esch Sintzel / another Basel office.
 
-Existing rels (the ASSOZIIERT_MIT_PROJEKT from registry actors) stay untouched.
+**Specific items to chase:**
+- First and most critical: **disambiguate** "ELEMENTA Walkeweg" — is it a building name, a planning study, or a project alias?
+- Architecture firm Ferrando Costansa and Garrido Arnaiz belong to (try EMI Architekten, blue architects, Esch Sintzel, Buol & Zünd, Salathé Rytz)
+- Bauherr (likely a Basel housing cooperative or Stiftung Habitat)
+- Whether built, under construction, or in planning
+- Connection to the ELEMENTA precast-reuse system (Element AG, Veltheim CH)
+- Material flows: what is being reused, where it comes from
+- Norms and Swiss-specific regulatory product status
+
+**Where to look:** hochparterre.ch, baublatt.ch, Basel-Stadt Hochbau-Magazin, Element AG (element-ag.ch), TEC21, espazium.ch, the architects' personal portfolios.
+
+---
+
+## What to do with the dossiers once written
+
+Hand each finished `.md` file back. I'll handle:
+- Translating it into the graph chunk (knowledge categories → nodes + relationships)
+- Reconciling new actor names against the existing actor registry
+- Cross-linking newly mentioned donor buildings to existing receiver projects in the graph (e.g. K.118's ELYS Basel donor is already a known node, so if your dossier mentions ELYS, that link gets made automatically)
+- Promoting the project from stub to full record

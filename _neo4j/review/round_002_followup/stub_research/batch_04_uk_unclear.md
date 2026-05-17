@@ -1,46 +1,58 @@
-# Batch 4 — UK + unidentified
+# Batch 4 — UK + unidentified (2 projects)
 
-**Decision after research:** promote `p_granby_workshop` to full Projekt. For `p_obk_27`: identify or delete.
-**Project count:** 2.
-**Common reference:** see [README.md](README.md). Comparable UK case: [`55_Great_Suffolk_Street_London.md`](../../../../_archive/research/gebaeude/55_Great_Suffolk_Street_London.md), [`Holbein_Gardens_London.md`](../../../../_archive/research/gebaeude/Holbein_Gardens_London.md).
+**Workflow + categories to gather:** see [README.md](README.md).
+**Reference UK examples in archive:** [`55_Great_Suffolk_Street_London.md`](../../../../_archive/research/gebaeude/55_Great_Suffolk_Street_London.md), [`Holbein_Gardens_London.md`](../../../../_archive/research/gebaeude/Holbein_Gardens_London.md), [`Hastings_Pier_Visitor_Centre.md`](../../../../_archive/research/gebaeude/Hastings_Pier_Visitor_Centre.md).
 
----
+For each project below, produce one structured markdown dossier following the README categories. **Source every claim.** Project 2 below is unidentified — confidence is the priority; do not invent.
 
-### 1. `p_granby_workshop` — Granby Workshop (Liverpool)
-
-**Existing actor links:** Lewis Jones.
-
-**Likely identity:** **Granby Workshop** — a social-enterprise design studio in Liverpool's Granby Four Streets, spun out of the **Assemble** collective's Turner Prize-winning 2015 community-led housing-restoration project. Lewis Jones = one of the Granby Workshop founders. The Workshop makes ceramics + door handles from salvaged materials.
-
-**To research:**
-- [ ] Disambiguate: is the stub about **Granby Workshop** the studio, or the broader **Granby Four Streets** housing project?
-- [ ] Most likely: the Workshop's craft-from-salvage activity (mantelpieces, door handles, ceramics) **and** the Granby Four Streets reuse-led housing restoration (the Turner Prize project)
-- [ ] Address (Cairns Street, Liverpool L8 area)
-- [ ] Founding year (Workshop: 2015; Four Streets restoration: 2013–2017+)
-- [ ] Materials reused: bricks from demolition, tile/marble fragments, doors, fireplace surrounds
-- [ ] Architects: Assemble (London-based collective)
-- [ ] Bauherr: Granby Four Streets Community Land Trust (CLT)
-- [ ] Sources: assemblestudio.co.uk/projects/granby-four-streets, granbyworkshop.co.uk, Turner Prize 2015 press
+UK reuse projects typically use:
+- **BS 8500** for reused concrete, **BS 5950 / EN 1993 + SCI P427** for reused structural steel, **BS 5268 / EN 1995** for timber
+- **CE-marking transition** to **UKCA marking** post-Brexit — relevant for reused construction products with declared performance
+- **BREEAM** as the dominant sustainability rating
+- **CIRIA** (Construction Industry Research and Information Association) guidance documents
 
 ---
 
-### 2. `p_obk_27` — OBK 27
+## 1. Granby Workshop (Liverpool)
 
-**Existing actor links:** Cyril Pressacco, Thibaut Barrault.
+**Already linked:** Lewis Jones.
 
-**Likely identity:** Both actors are French architects — Cyril Pressacco + Thibaut Barrault = **Barrault Pressacco** Paris architecture firm (known for reuse + raw materials, e.g. their Saint-Denis pierre-de-taille housing). "OBK 27" plausibly = a building or address — possibly **Olympus Building Kapital 27** / **Oberkampf 27** (Paris 11e: 27 rue Oberkampf) / similar.
+**Plausible starting context:** **Granby Workshop** is the social-enterprise design studio in Liverpool's Granby Four Streets area, spun out of the **Assemble** collective's Turner Prize-winning 2015 community-led restoration project. Lewis Jones is one of the Workshop founders. The Workshop produces handmade ceramics, door handles, mantelpieces, and tiles from salvaged materials — and the broader **Granby Four Streets Community Land Trust** restored a row of Victorian terraced houses on Cairns Street using reused brick, salvaged timber, and reclaimed fittings.
 
-**To research:**
-- [ ] Decode "OBK 27" — most likely **27 rue Oberkampf** (Paris 11e), since that's the standard French architectural shorthand and matches Barrault Pressacco's geography
-- [ ] If confirmed: building type, reuse strategy, dates
-- [ ] If NOT identifiable from any source: **delete** the stub (rec: keep as last resort)
-- [ ] Sources: barrault-pressacco.com, archdaily.com search "Barrault Pressacco", AMC magazine
+**Specific items to chase:**
+- Disambiguate: is the project this stub refers to (a) the **Workshop** as a salvage-craft production studio, (b) the **Granby Four Streets housing restoration** (the actual Turner Prize 2015 project), or (c) both as one entwined initiative? Most likely (c) — research both and flag if your dossier covers both
+- Addresses: Cairns Street, Liverpool L8 (Toxteth)
+- Granby Four Streets CLT (Community Land Trust) as client / steward
+- Assemble Studio (London-based architect collective) as designer
+- Reuse inventory across the restored houses: bricks from the same street's demolitions, timber, fireplace surrounds, doors, tile fragments
+- Workshop production: which items, what salvaged source, what destination (sold to public, used in the houses, exported)
+- Funding: Turner Prize prize money, Steinbeck Studios, Liverpool City Council, Heritage Lottery Fund
+- Year line: restoration began ~2013, Turner Prize 2015, Workshop founded 2015, ongoing
+- Whether any of this is documented in a peer-reviewed architecture journal
 
-**Fallback decision:** if the project cannot be confidently identified after a reasonable research effort, document the negative finding and the stub can be deleted via a follow-up prompt. Do not invent details.
+**Where to look:** assemblestudio.co.uk/projects/granby-four-streets, granbyworkshop.co.uk, Turner Prize 2015 archives (Tate), Architects' Journal, dezeen, The Guardian housing coverage, Liverpool John Moores University research output.
 
 ---
 
-## Output
+## 2. OBK 27
 
-For Granby Workshop: one archive + one JSONL.
-For OBK 27: only emit files if identification is confident. Otherwise produce a `_neo4j/intake/inbox/stub_promotion/p_obk_27.NEGATIVE_FINDING.md` documenting what was checked, and the stub can be DETACH DELETE'd later.
+**Already linked:** Cyril Pressacco, Thibaut Barrault.
+
+**Plausible starting context:** Both linked actors are the architects of **Barrault Pressacco** (Paris), an architecture firm known for raw-material design (notably their Saint-Denis pierre-de-taille housing). The string "OBK 27" is most plausibly a French architectural shorthand for an address — best guesses:
+- **27 rue Oberkampf**, Paris 11ᵉ (most likely — "OBK" = standard abbreviation for Oberkampf)
+- **Office Bâti Kapital 27** or similar branded project code (less likely)
+- Possibly a renovation project on rue Oberkampf 27 by Barrault Pressacco
+
+**Specific items to chase:**
+- First and most important: **identify the project**. Cross-check Barrault Pressacco's portfolio against the "OBK 27" string. Look for a renovation at 27 rue Oberkampf.
+- If identified: building type, intervention type (renovation? extension?), reuse strategy, Bauherr, dates
+- If still unidentified after a reasonable search: write a short dossier documenting what you checked and the negative finding. **Do not invent details.** The project entry can be deleted at the integration step.
+- Source for what is genuinely Barrault Pressacco vs. what is speculation
+
+**Where to look:** barrault-pressacco.com, ArchDaily search for "Barrault Pressacco", AMC magazine, Architectes.org, Pavillon de l'Arsenal (Paris) project database, Le Moniteur architecture coverage.
+
+---
+
+## What to do with the dossiers once written
+
+Hand each finished `.md` file back. For OBK 27 specifically: if the identification fails, the dossier should be short (≈ 1 page) documenting what was checked, and clearly labelled "**negative finding**" at the top so I know to handle it as a deletion candidate rather than a promotion.

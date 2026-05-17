@@ -1,93 +1,115 @@
-# Batch 2 — DE/AT/CH large urban + mega-projects
+# Batch 2 — Large urban / DE-AT-CH projects (5 projects)
 
-**Decision after research:** promote to full Projekt.
-**Project count:** 5.
-**Common reference:** see [README.md](README.md). Comparable existing case in archive: [`Resource_Rows_Copenhagen.md`](../../../../_archive/research/gebaeude/Resource_Rows_Copenhagen.md) (large urban reuse).
+**Workflow + categories to gather:** see [README.md](README.md).
+**Reference example:** [`K118_Kopfbau_Halle_118_Winterthur.md`](../../../../_archive/research/gebaeude/K118_Kopfbau_Halle_118_Winterthur.md). Comparable larger-scale case in our archive: [`Resource_Rows_Copenhagen.md`](../../../../_archive/research/gebaeude/Resource_Rows_Copenhagen.md).
 
-These are larger / urban-scale than batch 1. Expect multiple Bauwerke per project, multiple Bauteilgruppen, public client (Bauherr), and often EU/national funding programs.
+These five are larger or urban-scale than batch 1. Expect:
+- Multiple receiver buildings inside one project name
+- Multiple distinct component groups, possibly from multiple donor sites
+- Public-sector or institutional client (Bauherr)
+- Often EU / national / cantonal research funding
+- Stronger documentation in academic and policy press
 
----
-
-### 1. `p_stuttgart_210` — Stuttgart 210
-
-**Existing actor links:** Andreas Kretzer, HFT Stuttgart, HTWG Konstanz, Katharina Raabe, Klingelhöfer Krötsch (architects), Maximilian Stemmler, Roman Kreuzer, Stefan Krötsch, Thomas Stark.
-
-**Likely identity:** Reuse pilot in the context of the Stuttgart 21 rail / urban-renewal mega-project. **NOT the Stuttgart 21 mainline rail station itself** — likely a research / pilot demonstrator using salvage from the S21 demolition (the name "Stuttgart 210" suggests a sub-program or follow-on). HFT Stuttgart (Hochschule für Technik) + HTWG Konstanz + Krötsch architects are the likely team.
-
-**To research:**
-- [ ] Disambiguate: what exactly is "Stuttgart 210"? Pilot building? Research study? Demonstrator pavilion?
-- [ ] Connection to Stuttgart-21 rail teardown (donor material)
-- [ ] Location, year, scope (m², € budget)
-- [ ] Reuse strategy + donor inventory
-- [ ] HFT Stuttgart project page; Klingelhöfer Krötsch Architekten portfolio; press
-- [ ] Funding source (BBSR / Land Baden-Württemberg / DFG?)
+For each, produce one structured markdown dossier following the README categories. **Source every claim.**
 
 ---
 
-### 2. `p_lysp8_basel` — LYSP8 Basel (Lysbüchel)
+## 1. Stuttgart 210
 
-**Existing actor links:** baubüro in situ (×3), Kerstin Müller, Kevin Straub, Loeliger Strub, Marc Angst, Marc Loeliger, Martin Zeller, Pascal Hentschel, Zirkular (×3).
+**Already linked:** Andreas Kretzer, HFT Stuttgart, HTWG Konstanz, Katharina Raabe, Klingelhöfer Krötsch (architects), Maximilian Stemmler, Roman Kreuzer, Stefan Krötsch, Thomas Stark.
 
-**Likely identity:** **Lysbüchel** urban district transformation in Basel, plot 8 (= "Lys-P8"). Major Swiss reuse-driven mixed-use development. Architect team baubüro in situ + Loeliger Strub. Zirkular GmbH = reuse-planning consultancy that spun off from K.118.
+**Plausible starting context:** The name plays on "Stuttgart 21", the long-running Stuttgart rail-station mega-project. "Stuttgart 210" most likely refers to a research demonstrator, student-design studio, or pilot building that uses salvage material from the Stuttgart-21 teardowns as donor source. The team mix (HFT Stuttgart academic + HTWG Konstanz academic + Klingelhöfer Krötsch architects + Thomas Stark sustainability) points to a teaching-research collaboration with a built or near-built outcome.
 
-**To research:**
-- [ ] Confirm Lys = Lysbüchel; P8 = parcel 8
-- [ ] Bauherr (likely SBB Immobilien, Stiftung Habitat, or pension fund)
-- [ ] Year (design + completion); built or in planning?
-- [ ] Building scale (BGF, m², EUR mio)
-- [ ] Reuse inventory: what comes from where (often other Basel teardowns: Spedition Areal, Klybeck, etc.)
-- [ ] Reuse-rate by mass + volume
-- [ ] CO₂ savings vs. Neubau-Referenz
-- [ ] Sources: hochparterre.ch, baublatt.ch, baubüro in situ portfolio, zirkular.net
+**Specific items to chase:**
+- Disambiguate: built building? demonstrator pavilion? semester studio? competition entry?
+- Connection to Stuttgart-21 demolitions — which buildings were torn down, when, what materials were salvaged for "210"
+- Site / address of the demonstrator
+- Funder (BBSR Zukunft Bau, Land Baden-Württemberg, DFG, Wüstenrot Stiftung?)
+- Quantitative outcome (m², t reused, CO₂ saved)
+- Final report or thesis publications
 
----
-
-### 3. `p_reallabor_be_ware` — Reallabor B(e) Ware
-
-**Existing actor links:** Natural Building Lab (NBL), ZRS Architekten Ingenieure, Andrea Klinge, Christof Ziegert, Eike Roswag-Klinge, Matthew Crabbe, NBL Studio, Nina Pawlicki, Sina Jansen, Uwe Seiler.
-
-**Likely identity:** **Reallabor** funded by BMBF/BBSR or Berlin Senate — "BE-WARE" = Bauen mit erprobten WAren / Berliner Weiterverwendungs-Initiative. NBL = Natural Building Lab at TU Berlin (chair Roswag-Klinge). ZRS = ZRS Architekten Ingenieure (Berlin, earth-building specialist).
-
-**To research:**
-- [ ] Exact program acronym expansion; funder; runtime years
-- [ ] Pilot buildings produced under the Reallabor
-- [ ] Materials focus (lehm/stroh/wood salvage?)
-- [ ] Reports / Veröffentlichungen
-- [ ] TU Berlin NBL project page; reallabor-be-ware.de or similar
+**Where to look:** HFT Stuttgart Forschung pages, Klingelhöfer Krötsch portfolio, BBSR Zukunft Bau database, Thomas Stark publications, Bauwelt, db deutsche bauzeitung.
 
 ---
 
-### 4. `p_meduni_campus_mariannengasse` — MedUni Campus Mariannengasse (Wien)
+## 2. LYSP8 Basel (Lysbüchel)
 
-**Existing actor links:** Markus Meissner, Thomas Romm.
+**Already linked:** baubüro in situ (multiple mentions), Kerstin Müller, Kevin Straub, Loeliger Strub, Marc Angst, Marc Loeliger, Martin Zeller, Pascal Hentschel, Zirkular (multiple mentions).
 
-**Likely identity:** Medical University of Vienna's new campus at Mariannengasse (9th district). Thomas Romm = Vienna architect / urban researcher (known for reuse-led developments incl. Re-Use Map). Likely a planning study or pilot for reuse-aware construction.
+**Plausible starting context:** "Lys-P8" parses as Lysbüchel, parcel 8 — the Lysbüchel urban-transformation district in Basel-Saint-Johann. Lead architects baubüro in situ and Loeliger Strub. Zirkular GmbH provides reuse planning (Zirkular spun off from baubüro in situ during K.118). This is likely one of the largest Swiss reuse-led mixed-use developments.
 
-**To research:**
-- [ ] Campus location + scope (Mariannengasse 14 area)
-- [ ] Whether reuse is realized or planning-stage
-- [ ] Architect (Romm = consultant? Planner?)
-- [ ] Bauherr (MedUni Wien, BIG Bundesimmobilien Gesellschaft?)
-- [ ] Sources: meduniwien.ac.at press, forschen-planen-bauen.at, Romm portfolio
+**Specific items to chase:**
+- Bauherr (likely SBB Immobilien, Stiftung Habitat, Pensionskasse, or developer Lysbüchel Süd consortium)
+- Plot 8 specifics: building program (housing + commercial + studios?), BGF in m², floors, units
+- Status (built / under construction / completed phase / planning)
+- Year of design start, construction start, completion
+- Donor inventory — which Basel teardowns supplied this site (Klybeck, Hafen, Sulzer-equivalent industrial sites)
+- Reuse rate by mass and volume
+- CO₂ savings vs. Neubau-Referenz
+- Total budget, cost per m², funding
+- Norms cited (SIA family, plus Basel-specific cantonal building code)
+- Linked sustainability framework (Minergie, SNBS, 2000-Watt-Areal)
 
----
-
-### 5. `p_re_use_hoefe` — RE-USE Höfe (Wien)
-
-**Existing actor links:** Félix Dillmann.
-
-**Likely identity:** Vienna's network of "RE-USE Höfe" — public reuse collection yards run by city utility MA 48. Either a single "Hof" (yard) or the program as a whole.
-
-**To research:**
-- [ ] Number of Höfe + their addresses (Vienna)
-- [ ] Operating model (drop-off + resale)
-- [ ] Material throughput (t/year if published)
-- [ ] Relation to MA 48 / Wien.gv.at
-- [ ] Whether this is genuinely a Projekt or should be relabeled as `Programm`
-- [ ] Sources: wien.gv.at/umwelt/ma48, reuse.wien.at
+**Where to look:** baubüro in situ project portfolio (insitu.ch), Loeliger Strub portfolio, zirkular.net, Hochparterre, espazium TEC21 and TRACÉS, BaslerZeitung, baublatt.ch, SBB Immobilien press, Stiftung Habitat.
 
 ---
 
-## Output
+## 3. Reallabor B(e) Ware
 
-Each project: one archive `.md` + one JSONL chunk under `_neo4j/intake/inbox/stub_promotion/`. See [README.md](README.md) for JSONL pattern.
+**Already linked:** Natural Building Lab (NBL), ZRS Architekten Ingenieure, Andrea Klinge, Christof Ziegert, Eike Roswag-Klinge, Matthew Crabbe, NBL Studio, Nina Pawlicki, Sina Jansen, Uwe Seiler.
+
+**Plausible starting context:** "Reallabor" is a German federal-research format (BMBF / BBSR / Bundesstiftung Baukultur) — a real-world experimental zone. "B(e) Ware" plays on "Be Ware" (be aware) and "Bauen mit erprobten Waren" (building with proven goods). Lead: TU Berlin Natural Building Lab (Eike Roswag-Klinge chair) + ZRS Architekten (earth-construction specialist, Christof Ziegert). Likely a multi-year program with one or more pilot buildings.
+
+**Specific items to chase:**
+- Funding programme (BMBF Reallabor, BBSR, Berlin Senate, EU?)
+- Run-time years (start and end)
+- Pilot buildings produced (these themselves are case studies for our archive)
+- Material focus — given NBL + ZRS, expect clay, straw, salvaged timber, lehm-bauteile
+- Whether output is built or planning-only
+- Published outputs (reports, theses, conference papers)
+
+**Where to look:** TU Berlin Natural Building Lab project pages, ZRS website, BBSR Reallabor program directory, Bundesstiftung Baukultur Magazin, BAUWELT, Detail.
+
+---
+
+## 4. MedUni Campus Mariannengasse (Wien)
+
+**Already linked:** Markus Meissner, Thomas Romm.
+
+**Plausible starting context:** New medical-university campus of MedUni Wien at Mariannengasse in Vienna's 9th district (Alsergrund). Thomas Romm is a Vienna architect / urban researcher (Forschen Planen Bauen) known for reuse-driven design and the Re-Use Map initiative. Markus Meissner is associated with several Austrian sustainability and reuse projects.
+
+**Specific items to chase:**
+- Campus address (Mariannengasse 9–14 area)
+- Bauherr (likely BIG Bundesimmobiliengesellschaft on behalf of MedUni Wien)
+- Phase of project (concept, planning, under construction, completed)
+- Reuse component: is reuse actually being implemented at construction, or is this a research/study about reuse potential?
+- Architect team (Romm = consultant? Lead?)
+- Linked Austrian regulatory product-status pathway (ÖNORM, OIB-Richtlinien)
+- Funding programme + scale
+
+**Where to look:** meduniwien.ac.at press, BIG.at project pages, forschen-planen-bauen.at (Romm), Architektur Aktuell, derStandard.at architecture coverage.
+
+---
+
+## 5. RE-USE Höfe (Wien)
+
+**Already linked:** Félix Dillmann.
+
+**Plausible starting context:** Vienna's public reuse-yard network operated by city waste utility **MA 48**. Multiple "Höfe" (yards) around the city where citizens drop off and pick up usable goods. The network includes the **48er-Tandler** flagship shop. This is more a programme / network than a single project — translation into our schema may be best as a recurring programme node with multiple Hof locations as sub-buildings.
+
+**Specific items to chase:**
+- Full list of Höfe locations in Vienna (number + addresses)
+- Year of network launch + expansion timeline
+- Operating model (free drop-off, no-cost or low-cost resale, integration with 48er-Tandler, online catalogue)
+- Annual material throughput (tons in / tons resold, if published)
+- Funding model (city budget, EU co-financing, ticket income)
+- Relation to wider Vienna circular-economy strategy (Reparaturbon, Re-Use Map)
+- Whether the Höfe focus on furniture / household goods, or also on building components
+
+**Where to look:** wien.gv.at/umwelt/ma48, reuse.wien.at, 48ertandler.at, Stadt Wien press releases, Austrian sustainability press.
+
+---
+
+## What to do with the dossiers once written
+
+Hand each finished `.md` file back. Same handling as batch 1: I do the schema translation and graph integration.

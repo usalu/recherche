@@ -1,86 +1,95 @@
-# Batch 5 — Teaching / research programs
+# Batch 5 — Teaching / research programmes (4 projects)
 
-**Decision after research:** **relabel** `Projekt` → `Programm` for all 4 — these are pedagogical / research initiatives, not buildings. The actor links stay (they're meaningful), but the node should carry `Programm` instead of `Projekt` semantics.
-**Project count:** 4.
-**Common reference:** see [README.md](README.md). Existing `Programm` nodes in the graph (17 of them) include things like `prg_disrupt`, `prg_recreate`, etc.
+**Workflow + categories to gather:** see [README.md](README.md).
 
-The output for this batch is **simpler** than for Building case studies — there's no Bauwerk, no Bauteilgruppe, no Material reuse to inventory. Just:
-- The `Programm` node (renamed from `Projekt`)
-- A `Quelle` for the source documentation
-- Stadt / Land
-- Linked Akteure with rolls (`ar_forschung_dokumentation`, `ar_reuse_beratung`)
-- Optionally: linked case-study Projekte that the programme produced
+These four entries are **not buildings** — they are pedagogical or research initiatives at universities and architecture schools. They produce buildings, theses, demonstrators, publications, and graduates, but the entry itself describes the programme. The dossier sections that apply are:
 
----
+- Identification (programme name, host institution, country, web presence)
+- People and organizations (leads, faculty, collaborators, partner firms)
+- Time line (founding year, current status, run-time of specific cycles)
+- Funding sources (research-council grants, ETH/internal, industry partners)
+- Outputs (built demonstrators, exhibitions, publications, theses, courses, graduates)
+- Linked case studies our archive may already cover (e.g. ReCrete footbridge ↔ EPFL Fivet group; K.118 ↔ ZHAW Eva Stricker)
+- Sources for everything
 
-### 1. `p_eth_circular_construction_student_reuse` — ETH Circular Construction (student reuse demonstrator/news)
-
-**Existing actor links:** Catherine De Wolf, Fabio Gramazio, Matthias Kohler.
-
-**Likely identity:** ETH Zürich's circular-construction teaching + research track. Catherine De Wolf = professor at ETH for Circular Engineering for Architecture (CEA, est. 2021). Gramazio Kohler = robotics-driven design + construction lab.
-
-**To research:**
-- [ ] Confirm scope: ETH Zürich CEA chair + student projects (likely the demonstrators tracked here)
-- [ ] Notable student demonstrator projects (e.g., **Re-Crete** pavilion, **Save** salvage, robot-assembled reuse)
-- [ ] Dates (CEA chair founded 2021; specific demonstrators from 2022 onwards)
-- [ ] Funding: ETH internal? SNSF? Industry partners?
-- [ ] Linked sources: ethz.ch/cea, gramaziokohler.arch.ethz.ch, publications in CEA Journal
-- [ ] List of derived case-study Projekte (some may already be in graph: ReCrete footbridge, K.118 connection?)
+The "Buildings involved" / "Reused components" / "Processing" / "Quality, defects" sections from the README mostly do not apply to a programme itself. They apply to the specific demonstrator buildings the programme produced — and those demonstrators are best documented as separate case studies linked back to the programme.
 
 ---
 
-### 2. `p_reuse_in_construction_zhaw` — Reuse in Construction / ZHAW
+## 1. ETH Circular Construction — student-reuse demonstrator track
 
-**Existing actor links:** Andreas Sonderegger, Eva Stricker, Guido Brandi, ZHAW.
+**Already linked:** Catherine De Wolf, Fabio Gramazio, Matthias Kohler.
 
-**Likely identity:** ZHAW Zürcher Hochschule für Angewandte Wissenschaften — Institute for Constructive Engineering (IKE) reuse research line. Eva Stricker = lead researcher (compiled K.118 + several Swiss reuse case studies). Andreas Sonderegger + Guido Brandi = ZHAW IKE colleagues.
+**Plausible starting context:** ETH Zürich's circular-construction track, led by **Prof. Catherine De Wolf** at the **Circular Engineering for Architecture (CEA)** chair (established 2021). Gramazio Kohler Research is ETH's robotics-driven design + construction lab — they collaborate with CEA on demonstrators that combine reuse with computational fabrication.
 
-**To research:**
-- [ ] Programme/research-line title (likely "Wiederverwendung im Bauwesen" or similar)
-- [ ] Outputs (ZHAW Reuse Compendium, K.118 case study, ELYS Basel coverage)
-- [ ] Programme runtime + funding (Innosuisse?)
-- [ ] Sources: zhaw.ch/ike, ZHAW Compendium (link), Stricker publications
+**Specific items to chase:**
+- CEA chair full title, founding year, host department (D-BAUG most likely)
+- Notable student / research demonstrator projects produced under the track. Likely candidates worth probing: ReCrete footbridge, robotic assembly of reused timber, Save salvage demonstrators, MAS in Sustainable Building Design student outputs
+- Funding (ETH internal, SNSF, industry partners — Holcim?, Implenia?, Bouygues?)
+- Course offerings (Bachelor's, Master's, MAS, summer schools)
+- Industry partnerships (Madaster Switzerland, Concular Switzerland, Implenia, Eberhard, baubüro in situ)
+- Publications track (CEA Journal? Buildings? Journal of Cleaner Production?)
+- Linkage to existing graph projects: ReCrete is already documented; K.118 has ETH-adjacent involvement; UMAR involves ETH alumni
 
----
-
-### 3. `p_architecture_of_reuse_brussels` — Architecture of Reuse Brussels
-
-**Existing actor links:** Christine Conix, Lionel Devlieger, Maarten Gielen.
-
-**Likely identity:** Probably a teaching programme / studio jointly run by Rotor (Devlieger + Gielen) and Christine Conix (CONIX RDBM Architects, Antwerp) at one of the Brussels architecture schools (KU Leuven Faculty of Architecture, ULB, or Université Saint-Luc). "Architecture of Reuse" is a recurring studio theme in Brussels.
-
-**To research:**
-- [ ] Host institution (KU Leuven / ULB / VUB / La Cambre)
-- [ ] Programme dates + studio cycles
-- [ ] Notable student / studio outputs
-- [ ] Sources: rotordc.com, conixrdbm.com, the school's website
+**Where to look:** cea.arch.ethz.ch, gramaziokohler.arch.ethz.ch, ethz.ch news archive, ETH Library research output, Catherine De Wolf personal publications page, ETH MAS programme listings.
 
 ---
 
-### 4. `p_vandkunsten_component_reuse` — Vandkunsten Reused Construction Materials / Component Reuse
+## 2. Reuse in Construction / ZHAW
 
-**Existing actor links:** Katrine West Kristensen, Søren Nielsen, Vandkunsten.
+**Already linked:** Andreas Sonderegger, Eva Stricker, Guido Brandi, ZHAW.
 
-**Likely identity:** **Vandkunsten Architects** (Copenhagen) reuse R&D line. Søren Nielsen = Vandkunsten partner known for circular/reuse design (e.g., Upcycle House, Upcycle Studios). Katrine West Kristensen = Vandkunsten researcher.
+**Plausible starting context:** ZHAW Zürcher Hochschule für Angewandte Wissenschaften — specifically the **Institut für Konstruktives Entwerfen (IKE)** at Departement Architektur, Gestaltung und Bauingenieurwesen in Winterthur. **Eva Stricker** has led ZHAW's reuse research compendium — the foundational Swiss reference work on direct reuse, with detailed case studies of K.118 and many other Swiss buildings. Andreas Sonderegger and Guido Brandi are ZHAW colleagues.
 
-**To research:**
-- [ ] Programme title (likely a Realdania-funded R&D project on component reuse)
-- [ ] Connection to existing graph projects: `p_upcycle_studios_copenhagen` (already in graph)
-- [ ] Outputs: pilot buildings, research reports
-- [ ] Funding (Realdania, Innovation Fund Denmark?)
-- [ ] Sources: vandkunsten.com, realdania.dk
+**Specific items to chase:**
+- Research programme / line title (likely "Wiederverwendung im Bauwesen" or similar)
+- Years of activity, funding (Innosuisse most likely, also SNF / SBFI possible)
+- Outputs: ZHAW Reuse Compendium (publication metadata — year, ISBN, publisher), case-study compilations, conference papers
+- Industry partners (Zirkular GmbH, baubüro in situ, Eberhard, Implenia, Halter)
+- Linkage to case studies already in our archive — Stricker is a primary chronicler of K.118 and likely others
+- Teaching component (Bachelor's / Master's modules, MAS programmes)
+
+**Where to look:** zhaw.ch/ike (Institute page), ZHAW publication database (zhaw.ch/publikationen), Eva Stricker on Google Scholar, Hochparterre interviews, espazium publications.
 
 ---
 
-## Output
+## 3. Architecture of Reuse Brussels
 
-For each, produce:
-- A short `.md` documenting the programme (not a full case-study template — programme template is simpler)
-- A small JSONL with:
-  - **`Programm` node** (id stays `p_<slug>`, but label changes from `Projekt` to `Programm`)
-  - `Quelle`, `Stadt`, `Land`, linked Akteure with `ar_forschung_dokumentation` rolle
-  - Optional: linked Projekte the programme produced
+**Already linked:** Christine Conix, Lionel Devlieger, Maarten Gielen.
 
-A label change in JSONL is done as an `add_node` op with the new label list + `remove_label` op for the old label (or via Cypher: `MATCH (n {id:'...'}) REMOVE n:Projekt SET n:Programm`).
+**Plausible starting context:** A teaching programme or design studio in Brussels jointly run by **Rotor** (Devlieger + Gielen, the cooperative behind Rotor DC and Opalis) and **CONIX RDBM Architects** (Christine Conix, an Antwerp-based firm with reuse practice). Host institution is most likely **KU Leuven Faculty of Architecture** (Brussels Campus), **ULB La Cambre**, or **Sint-Lucas School of Architecture**.
 
-**Recommendation:** treat the relabel as the *last step* — first promote with `node_role: full_programm`, then do the label flip separately for safety.
+**Specific items to chase:**
+- Host institution + faculty
+- Programme format (semester studio, design research, lecture series, ongoing)
+- Years of operation, run cycles
+- Student / studio outputs (theses, built demonstrators if any, exhibitions)
+- Public outputs (book, exhibition catalogue, project website)
+- Linkage to Rotor's parallel commercial activity (Rotor DC, Opalis directory)
+- Funding (Flemish Region, EU Erasmus+, Brussels region)
+
+**Where to look:** rotordc.com (Rotor cooperative also lists academic engagements), conixrdbm.com, the universities' architecture programme pages (KU Leuven Architecture, La Cambre, Sint-Lucas), Brussels architecture press (A+, BRUZZ).
+
+---
+
+## 4. Vandkunsten Reused Construction Materials / Component Reuse
+
+**Already linked:** Katrine West Kristensen, Søren Nielsen, Vandkunsten.
+
+**Plausible starting context:** **Vandkunsten Architects** (Copenhagen, founded 1970) — a long-established Danish firm with a strong sustainability and reuse practice. **Søren Nielsen** is a partner / senior researcher known for circular-construction R&D at the firm, notably the **Upcycle House** and **Upcycle Studios** projects in Copenhagen. Katrine West Kristensen is a Vandkunsten researcher in this stream. This stub likely refers to a multi-year Vandkunsten R&D programme on component reuse, very probably co-funded by **Realdania** (the Danish philanthropic foundation that funds most of the country's experimental architecture R&D).
+
+**Specific items to chase:**
+- Programme title (could be "Reused Construction Materials" or "Genbrug i Byggeri" or similar Danish-language original)
+- Years of operation, funding amount, funder (Realdania most likely; also Innovationsfonden Danmark, Bolig- og Planstyrelsen)
+- Specific built outputs already in our archive: Upcycle Studios Copenhagen is already documented; The Green House Utrecht possibly tangential; check if Resource Rows Copenhagen has Vandkunsten involvement (it's usually Lendager-led, so probably not)
+- Industry partners (Lendager Group? Henning Larsen? MOE engineering?)
+- Publications (reports, conference papers, peer-reviewed articles by Søren Nielsen)
+- Linkage to broader Danish circular-construction infrastructure (Genanvend Byggeri, Cirkulær Byggeri)
+
+**Where to look:** vandkunsten.com, realdania.dk projects database, Arkitektur magazine, Bygtek, Søren Nielsen publications, Danish Architecture Center exhibitions.
+
+---
+
+## What to do with the dossiers once written
+
+Hand each finished `.md` file back. For these four entries: the dossier itself does not need a Bauteil-Inventar or Quality/Defects section — those apply to the built outputs of the programme, which are separate case studies. The programme dossier should however **list those built outputs by name** so I can cross-link them in the graph if they're already documented or flag them as future case-study candidates.
