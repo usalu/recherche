@@ -1,13 +1,15 @@
 # Rollback ledger — round 002 followup applied phases
 
-**Purpose.** A running record of every applied phase, with the exact ops, before/after counts, the backup path, and a rollback procedure. Each new phase appends here.
+**Purpose.** A running record of every applied phase, with the exact ops, before/after counts, the backup path, and a verification procedure. Each new phase appends here.
 
 **Convention.** Every apply:
 1. Takes a fresh backup under `_neo4j/review/backups/<phase>_pre_apply/`.
 2. Generates a JSONL patch under `_neo4j/review/round_002_followup/patches/<phase>.patch.jsonl`.
 3. Dry-runs first; only applies live after dry-run is clean.
-4. Verifies with post-apply queries (logged here).
+4. Verifies with post-apply queries — full set in [`VERIFICATION_QUERIES.cypher`](VERIFICATION_QUERIES.cypher).
 5. Appends a section to this doc.
+
+**Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
 **Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift.
 
@@ -1075,7 +1077,9 @@ Plus existing rel types reused with new properties: `HAT_VERBINDUNGSTECHNIK` (ca
 
 - ✅ Phases A–K applied. 1 185 ops total. Live graph at 2 296 / 16 822.
 - ✅ Contract schemas updated with 9 new labels + 18 new rel types.
-- ⏳ **Parked stubs awaiting manual decision** — see [PARKED_DECISIONS.md](PARKED_DECISIONS.md). 23 stub Projekte (4 promote / 9 relabel / 1 delete / 1 merge / 8 keep) + 16 stub Akteure (2 delete / 3 merge / 11 keep). Each needs your sign-off before the patch lands.
-- ⏳ **Phase L (deferred) — full BG-level Defekt parsing** — currently 10% BG coverage; full coverage needs archive Section-5 row matching by Bauteil-name + Material + Bauteiltyp. Substantial archive parsing work; ~300-500 ops.
-- ⏳ **Phase M (deferred) — additional dimensions** — Norm tagging at BG-level (currently 5%), LCA-modul tagging at project-level (currently 8%), Akzeptanz expansion (currently 11%). Each needs archive scan or external lookup.
+- 🔬 **Verification queries:** [`VERIFICATION_QUERIES.cypher`](VERIFICATION_QUERIES.cypher) — 48 read-only queries covering every phase + cross-cutting insights.
+- 📥 **Stub promotion (23 Projekte) — external research path** — see [`stub_research/README.md`](stub_research/README.md). Seven batched ChatGPT-research prompts, one per category, ≤ 5 projects each. Each batch produces an archive `.md` + JSONL chunk per project. After research lands, a small promotion patch flips `node_role` and (for some) relabels `Projekt` → `Programm` / `Plattform`.
+- 📥 **Stub Akteur decisions (16)** — see [`STUB_AKTEUR_DECISIONS.md`](STUB_AKTEUR_DECISIONS.md). 2 delete / 2 merge / 12 keep (revised down from earlier rec — `zusammenkunft_berlin` reverted to KEEP). Removals execute via future prompts.
+- ⏳ **Phase L (deferred)** — full BG-level Defekt parsing (Section-5 row matching); ~300-500 ops.
+- ⏳ **Phase M (deferred)** — BG-level Norm tagging, project-level LCA-modul expansion, Akzeptanz widening.
 - 📊 [phase_k_audit_report.md](phase_k_audit_report.md) — current orphan + coverage state; reference for future planning.
