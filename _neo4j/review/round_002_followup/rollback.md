@@ -11,14 +11,64 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift.
+**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L.
 
 **Combined effect:**
 
-| | Before A | After D | After F | After H | After I | After J | After R003 |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 238 | 2 279 | 2 296 | 2 296 | 2 296 | **2 296** |
-| Relationships | 15 834 | 16 059 | 16 138 | 16 366 | 16 450 | 16 470 | **16 822** |
+| | Before A | After D | After F | After H | After I | After J | After R003 | After L |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 238 | 2 279 | 2 296 | 2 296 | 2 296 | 2 296 | **2 296** |
+| Relationships | 15 834 | 16 059 | 16 138 | 16 366 | 16 450 | 16 470 | 16 822 | **16 822** |
+
+---
+
+## Phase L — applied 2026-05-19
+
+**Patch:** [patches/phase_l.patch.jsonl](patches/phase_l.patch.jsonl)
+**Apply report:** [apply_reports/phase_l.patch.apply_report.json](apply_reports/phase_l.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_l_pre_apply/`](../backups/phase_l_pre_apply/) (2296 nodes, 16822 rels — full JSONL backup)
+
+## What landed
+
+Property hygiene only — no structural change. Node/rel counts unchanged.
+
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2296 | 2296 | 0 |
+| Relationships | 16822 | 16822 | 0 |
+
+**Operations:** 591 records / 0 errors / 0 rejected.
+
+| Op | Count | Effect |
+|---|---:|---|
+| remove_node_properties | 114 | L1: stray intake props on 12 Material/Methode/AV/PN/Programm nodes; L2: usage_* on 16 Norm; L3: stars_ignored on 85 Akteur; L4: duplicate titel on `q_akteursliste_master_md` |
+| rename_property | 324 | L4: 288 Quelle titel→name (short titels); 31 Quelle titel→name_full (long titels); 5 Quelle filename→source_file |
+| set_node_properties | 153 | L4: 31 short name (derived from medium titels) + 109 name_full+short name (long names); L5: 13 country_iso2 on sovereign Land nodes |
+
+## Verification (all pass)
+
+| Check | Expected | Got |
+|---|---:|---:|
+| Node count | 2296 | 2296 ✓ |
+| Rel count | 16822 | 16822 ✓ |
+| L1 stray-prop leaks across 5 labels × 5 keys | 0 | 0 ✓ |
+| L2 Norm with usage_* | 0 | 0 ✓ |
+| L3 Akteur with stars_ignored | 0 | 0 ✓ |
+| L4 Quelle dirty (name null OR titel/filename/dateiname present) | 0 | 0 ✓ |
+| L4 Quelle name > 25 chars | 0 | 0 ✓ |
+| L4 Quelle with name_full | 140 | 140 ✓ |
+| L4 Quelle with source_file | 325 | 325 ✓ |
+| L5 Land with country_iso2 | 13 sovereign | 13 ✓ |
+
+## Notes / amendments
+
+- Plan's L5 said "all 16 Land nodes" but the 3 supranational Land scope-pseudo-nodes (`land_eu`, `land_eea`, `land_international`) are not countries — `country_iso2` intentionally **skipped** for those three. If we later need codes for them, EU=`EU`, EEA=`EE` (note: `EE` collides with Estonia), and `land_international` has no ISO code. Best to leave them null.
+- Short-name derivation for Quelle uses simple truncation + `…` (per plan §3 Group B). The hybrid id-suffix / author-year refinement (Q6 decision) is deferred — current names are good enough for the graph view; the open-question note in plan §3 still applies.
+- Phase L did **not** touch the `archive_mentions`, `archive_mentioned_in_corpus`, or `usage_project_count`/`usage_countries` properties on Programm — those are out of plan scope. If they should also go, a follow-up patch is trivial.
+
+## Rollback
+
+Property-only changes. To rollback any specific L1-L5 piece, set the property back from the pre-apply backup at `_neo4j/review/backups/phase_l_pre_apply/`. The backup contains every node's full property set in JSONL form.
 
 ---
 
