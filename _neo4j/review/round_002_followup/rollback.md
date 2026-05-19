@@ -11,14 +11,63 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L → Phase M.
+**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L → Phase M → Phase N.
 
 **Combined effect:**
 
-| | Before A | After R003 | After L | After M |
-|---|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 296 | 2 296 | **2 296** |
-| Relationships | 15 834 | 16 822 | 16 822 | **16 822** |
+| | Before A | After R003 | After L | After M | After N |
+|---|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 296 | 2 296 | 2 296 | **2 296** |
+| Relationships | 15 834 | 16 822 | 16 822 | 16 822 | **16 822** |
+
+---
+
+## Phase N — applied 2026-05-19
+
+**Patch:** [patches/phase_n.patch.jsonl](patches/phase_n.patch.jsonl)
+**Apply report:** [apply_reports/phase_n.patch.apply_report.json](apply_reports/phase_n.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_n_pre_apply/`](../backups/phase_n_pre_apply/) (2296 nodes, 16822 rels)
+
+## What landed
+
+Short `name` + `name_full` on 3 long-named entity labels. No structural change.
+
+**Operations:** 304 records / 0 errors / 0 rejected.
+
+| Label | Total | Updated (name+name_full) | Already short (no-op) |
+|---|---:|---:|---:|
+| Projekt | 99 | 70 | 29 |
+| Bauwerk | 196 | 171 | 25 |
+| Wiederverwendungskette | 63 | 63 | 0 |
+| **Total** | **358** | **304** | **54** |
+
+## Verification
+
+| Check | Expected | Got |
+|---|---:|---:|
+| Node/rel counts unchanged | 2296/16822 | 2296/16822 ✓ |
+| Projekt with name > 25 chars | 0 | 0 ✓ |
+| Bauwerk with name > 25 chars | 0 | 0 ✓ |
+| Wiederverwendungskette with name > 25 chars | 0 | 0 ✓ |
+| Aliases preserved on `p_lysp8_basel` | `['LYSP8']` | `['LYSP8']` ✓ |
+| Aliases preserved on `p_eth_circular_construction_student_reuse` | `['ETH Circular Construction student reuse project']` | preserved ✓ |
+
+## Notes / amendments
+
+- **Derivation heuristic:** `Projekt` and `Bauwerk` take the first chunk before ` / `, ` — `, or `, ` (word-aware truncation as fallback). `Wiederverwendungskette` takes the receiver chunk after ` → ` (most chains describe `donor → receiver`). All else falls through to truncation with `…`.
+- **Overrides (24 hand-tuned)** for plan-§3 explicit examples and **5 collision groups** detected during generation:
+  - Gorlaeus pair → `Gorlaeus (Biopartner)` vs `Gorlaeus Hochhaus`
+  - Boston Big Dig pair → `Big Dig (I-93)` vs `Big Dig (CA/T)`
+  - Cleveland Steel pair → `Cleveland S&T stock` vs `Cleveland Steel reclaimed`
+  - Lycée Michel Lucius trio → `Lycée Lucius B3000` / `…B6000` / `…Campus`
+  - Drill-Stem-Pipe chain pair → `Drill-Stem-Pipe Dach` vs `Drill-Stem-Pipe Stütze`
+- **Aliases-append rule** (CONFLICT_ANALYSIS.md B3) did not apply here: Phase N only writes `name` and `name_full`. Existing aliases on `p_lysp8_basel` and `p_eth_circular_construction_student_reuse` are intact.
+- **`p_eth_circular_construction_student_reuse`** had name "ETH Circular Construction" (already 25 chars) — heuristic still kicked the original long name to `name_full` since the existing 25-char name happened to be a stable short form of the longer alias.
+- Cross-label name reuse (e.g. `Broethen Twin-House` appears on both a Projekt and a Bauwerk node) is intentional: Neo4j Browser distinguishes by label color, no real collision.
+
+## Rollback
+
+Property-only changes. Restore individual `name`/`name_full` values from `_neo4j/review/backups/phase_n_pre_apply/` if needed.
 
 ---
 
