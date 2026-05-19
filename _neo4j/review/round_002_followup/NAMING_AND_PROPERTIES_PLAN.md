@@ -650,26 +650,135 @@ The structural-vocab labels (Akteurrolle, Akteurtyp, Status, Nutzung, Prozesspha
 
 ---
 
-## 8. Open questions
+## 8. Open questions — pick one option per row
+
+Each question has 2–3 concrete options and a recommended answer. Decide before starting Phase L.
 
 ### Structural
 
-1. **`bg_slug` vs `slug_short`** — should the slug live on Projekt as `bg_slug` (specific to BGs) or as a general `slug_short` reusable for Bauwerk/Wiederverwendungskette ids too?
-2. **Multi-material BGs** — when a BG has 3+ materials (37 BGs do), `primary_material_id` becomes `mehrere`. Should we instead pick the *dominant by mass / volume*, or stay with `mehrere` for honesty?
-3. **`name_full` retention rule** — keep `name_full` only when meaningfully different from `name` (saves ~30 % of writes), or always set it for consistency?
-4. **Phase ordering** — run Phase L first (hygiene) before any name changes? My recommendation: yes, get to a clean property baseline before introducing `name_full` everywhere.
+#### Q1 — What do we call the short project slug?
+
+We need a ≤ 3-token slug on every Projekt so Bauteilgruppe ids can use it (`bg_<slug>__…`).
+
+| Option | Detail |
+|---|---|
+| **A** | Property name = `bg_slug` (specific to BG ids) |
+| **B** *(recommended)* | Property name = `slug_short` (same slug can also seed Bauwerk and Wiederverwendungskette ids later) |
+
+**Why B:** reusing the slug elsewhere costs nothing now and saves work later.
+
+#### Q2 — When a Bauteilgruppe contains many materials, what's "the" material?
+
+113 BGs (37 %) use 2 or more materials. The new id schema and `primary_material_id` property need a single value.
+
+| Option | Detail |
+|---|---|
+| **A** *(recommended)* | Default to `mat_mehrere` ("multiple"); allow per-BG manual override for the ~30 cases where one material is clearly dominant (e.g. K.118 = steel-primary despite also listing glass and timber) |
+| B | Pick the dominant by mass / volume for all 113 — accurate but means manual review of every multi-material BG |
+| C | Pick the alphabetically-first material — deterministic, but arbitrary |
+
+**Why A:** honesty by default, fix the obvious cases, don't over-invest in the rest.
+
+(Same answer applies to multi-Bauteiltyp BGs — 189 of them, ~62 %.)
+
+#### Q3 — Always store `name_full`, or only when it adds info?
+
+Some short names are already complete (`Brandschaden`, `Spende`, `EN 206`). Do we still write a redundant `name_full` copy?
+
+| Option | Detail |
+|---|---|
+| A | Always set `name_full = name` — uniform, predictable |
+| **B** *(recommended)* | Only set `name_full` when meaningfully different — leaner, saves ~30 % of writes |
+
+**Why B:** `name_full` is for the *long* form, not a duplicate. Neo4j Browser falls back to `name` when `name_full` is missing — no display difference.
+
+#### Q4 — Run hygiene cleanup before the rename work?
+
+Phase L drops stray intake properties, normalises Quelle, etc. The rename phases (M / N / O) happen after.
+
+| Option | Detail |
+|---|---|
+| **A** *(recommended)* | Phase L first, then M → N → O → P |
+| B | Bundle hygiene into the rename patches to reduce phase count |
+
+**Why A:** small patches dry-run faster, fail more gracefully, and the verification queries stay focused.
+
+---
 
 ### Quelle-specific (Phase Q decisions)
 
-5. **Q4 — structural-vocab Quelle coverage** — do we want the ~190 structural-vocab nodes (Akteurrolle, Akteurtyp, Status, Nutzung, …) attached to a single `q_controlled_vocab_seed` Quelle (100 % coverage) or do we accept that pure typology stays un-sourced?
-6. **Quelle short-name derivation** — three candidate strategies for the ~440 Quellen needing a ≤ 25-char `name`:
-   - (a) Truncate `name_full` to 24 chars + ellipsis (current draft) — ugly but deterministic
-   - (b) Derive from `id` suffix: `q_villa_welpeloo_enschede_s3` → `Welpeloo S3` — readable, requires id parsing
-   - (c) Author + year tag: `Stricker 2022`, `MacArthur 2014` — most readable, needs per-Quelle parsing of `name_full` (laborious for 446 nodes)
-   - Recommendation: **(b) for `external_link_from_actor_registry` and `case_markdown`, (c) for `external_reference` if author/year are extractable, (a) as a fallback**
-7. **Inferred-rel source values — codify the enum?** The `r.source` property currently mixes formats: `archive:<file>`, `round_003_<sub>`, free text (`Same-site reuse (donor = receiver…)`). Should we enforce a small enum like `archive | research | inference | manual_curation`? Trade-off: enum lookup is fast; current free-form values are descriptive.
-8. **Phase Q timing** — schedule alongside Phase O (when we already touch many vocab nodes) or as a follow-on after the naming pass? My recommendation: **after**, so Phase O stays scoped to renames.
+#### Q5 — Do "category" nodes need a source too?
+
+About 190 nodes are pure structural typology: Akteurrolle ("architect", "structural engineer"), Status ("built", "in planning"), Nutzung ("office", "residential"), Bauteiltyp ("beam", "column"), Akteurtyp ("person", "company"), etc. These came from the contract's controlled-vocabulary seed file.
+
+| Option | Detail |
+|---|---|
+| A | Attach all 190 to a single `q_controlled_vocab_seed` Quelle → 100 % source coverage on every node |
+| **B** *(recommended)* | Leave structural typology un-sourced; only the ~90 *conceptual* vocab nodes (Defekt, MatchingQualitaet, ZustandsKlasse, Marktmodell, Schadstoff, Aufbereitungsverfahren, etc.) get linked to the research file that introduced them |
+
+**Why B:** pure typology is universal vocabulary, not a research finding. A Quelle for "the concept of 'architect'" is meaningless. The 90 conceptual vocabs *are* research findings → those do earn a Quelle.
+
+#### Q6 — How do we shorten Quelle names?
+
+About 440 Quelle nodes need a ≤ 25-char `name`. The current full title is often a long bibliographic entry.
+
+| Option | Detail | Example |
+|---|---|---|
+| A | Truncate the long title to 24 chars + "…" | "Steukers, Ghyoot, Devliege…" |
+| B | Use the id suffix as the short name | `q_villa_welpeloo_enschede_s3` → `Welpeloo S3` |
+| C | Use author + year extracted from the title | "MacArthur 2014" |
+| **Hybrid** *(recommended)* | **B** for the 320 `external_link_from_actor_registry` + 76 `case_markdown` Quellen (their ids are already clean) · **C** for the 51 `external_reference` Quellen where author/year is parseable from the title · **A** as a fallback if neither pattern matches |
+
+**Why hybrid:** readable, mostly automatic, doesn't require manually editing 440 rows.
+
+#### Q7 — Should we standardise the rel-source values?
+
+The `r.source` property on inferred edges is currently a mix:
+
+- `archive:<filename>` — ~150 distinct values
+- `round_003_project_propagation` / `round_003_material_propagation` — fixed strings
+- `manual_orphan_rescue` — fixed string
+- Free text like `"Same-site reuse (donor=receiver Bauwerk); no market transaction"` — descriptive
+
+| Option | Detail |
+|---|---|
+| **A** *(recommended)* | Split into two properties: `source_type` (small enum: `archive` \| `research` \| `inference` \| `manual_curation`) and `source_detail` (free text — the filename or the descriptive sentence) — fast filtering AND human-readable |
+| B | Keep the current mixed format — descriptive but needs fuzzy string matching to filter |
+
+**Why A:** the cost of splitting is small (one-time `set_rel_properties` pass on ~600 edges); the gain is queries like `MATCH ()-[r {source_type: 'archive'}]-() …` that don't need a regex.
+
+#### Q8 — When do we do the Quelle gap work?
+
+Phase Q is ~350 ops total (the 12 research Quellen + ~160 BELEGT_IN edges + ~20 case-specific backfills).
+
+| Option | Detail |
+|---|---|
+| A | Alongside Phase O (we're already touching many vocab nodes) |
+| **B** *(recommended)* | After all naming + property work is done (after Phase P) |
+
+**Why B:** Phase O is the riskiest of the lot (BG renames). Don't mix it with anything else.
+
+---
+
+### TL;DR — if you accept all my recommendations
+
+| # | Question | Answer |
+|---|---|---|
+| Q1 | Slug property name | `slug_short` |
+| Q2 | Multi-material BG handling | Default `mehrere` + manual overrides for the ~30 obvious cases |
+| Q3 | Always set `name_full`? | Only when meaningfully different |
+| Q4 | Run hygiene before renames? | Yes — Phase L → M → N → O → P |
+| Q5 | Source for structural typology? | No — only the conceptual vocab nodes get sources |
+| Q6 | Quelle short-name strategy | Hybrid: id-suffix + author-year + truncation fallback |
+| Q7 | Codify `r.source` values? | Yes — split into `source_type` (enum) + `source_detail` (text) |
+| Q8 | Phase Q timing | After Phase P |
+
+If you accept all 8 as recommended: the only thing left to discuss before execution is the 306-row Bauteilgruppe rename table (next deliverable below).
 
 ### Next concrete deliverable
 
-If you green-light the structure, the next deliverable is **the 306-row Bauteilgruppe rename table** (Phase O step 2) — a CSV/markdown sheet with the proposed `new_id`, `name`, `name_full`, `reuse_status`, `primary_material_id`, `primary_bauteiltyp_id`, `discriminator`, `aliases`, and a `manual_override?` flag for the ~30 ambiguous rows (multi-axis BGs, zero-material outliers, collision groups).
+The **306-row Bauteilgruppe rename table** (Phase O pre-step 2 — see Section 7) — a CSV/markdown sheet with columns:
+
+`old_id | new_id | name | name_full | reuse_status | primary_material_id | primary_bauteiltyp_id | discriminator | aliases | manual_override?`
+
+About 30 rows will be flagged `manual_override = true` (the multi-axis BGs + the 5 zero-material outliers + the 15 colliding (project, material, bauteiltyp) groups). You mark those rows up before the patch is generated.
