@@ -1,0 +1,46 @@
+{
+  "confirmation_required": "APPLY phase_o0b.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2298,
+    "relationships": 16869
+  },
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 16869
+  },
+  "counts_before": {
+    "nodes": 2299,
+    "relationships": 16903
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-19T16:03:41.026259+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_o0b.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Geländer / Boden-Wand-Oberflächen / Steine",
+          "counts_as_direct_reuse": true,
+          "id": "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi",
+          "name": "Verbiest Geländer Fliesen und Steine aus Charleroi",
+          "neue_funktion": "Geländer, Oberflächen und Bauteile im Verbiest-Projekt"
+        }
+      },
+      "id": "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi",
+      "line": 1,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 1,
+      "rel_outbound_to_remove": 33,
+      "status": "would_delete_node"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_delete_node": 1
+  }
+}

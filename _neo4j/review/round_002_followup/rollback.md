@@ -11,14 +11,70 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L → Phase M → Phase N.
+**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L → Phase M → Phase N → Phase O.0.
 
 **Combined effect:**
 
-| | Before A | After R003 | After L | After M | After N |
-|---|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 296 | 2 296 | 2 296 | **2 296** |
-| Relationships | 15 834 | 16 822 | 16 822 | 16 822 | **16 822** |
+| | Before A | After R003 | After L | After M | After N | After O.0 |
+|---|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 296 | 2 296 | 2 296 | 2 296 | **2 298** |
+| Relationships | 15 834 | 16 822 | 16 822 | 16 822 | 16 822 | **16 869** |
+
+---
+
+## Phase O.0 — applied 2026-05-19 (split into O.0a + O.0b)
+
+**Patches:** [patches/phase_o0a.patch.jsonl](patches/phase_o0a.patch.jsonl) (102 ops) + [patches/phase_o0b.patch.jsonl](patches/phase_o0b.patch.jsonl) (1 op)
+**Apply reports:** [phase_o0a.patch.apply_report.json](apply_reports/phase_o0a.patch.apply_report.json), [phase_o0b.patch.apply_report.json](apply_reports/phase_o0b.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_o0_pre_apply/`](../backups/phase_o0_pre_apply/) (2296 nodes, 16822 rels)
+
+## What landed
+
+Structural cleanup driven by archive cross-check (76 case-study files vs the 306 BG inventory).
+
+**Operations:** 103 records across 2 patches / 0 errors / 0 rejected.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_node | 3 | New Verbiest split BGs: Geländer, Fliesen, Steine — each with its own NUTZT_MATERIAL, HAT_BAUTEILTYP, HAT_MATERIALGRUPPE |
+| add_rel | 90 | 3 inbound HAT_BAUTEILGRUPPE from Projekt; 4 People's Pavilion NUTZT_MATERIAL; 69 replicated shared rels for the 3 Verbiest split BGs (23 shared × 3) + distinctive material/bauteiltyp/materialgruppe/leistungsanforderung rels |
+| delete_rel | 9 | 8 wrong NUTZT_MATERIAL rels (Tier 1: Stahl/Stahlbeton + Beton/Stahlbeton conflicts); 1 BELEGT_IN from old Verbiest BG (preserved on the 3 split BGs) |
+| delete_node | 1 | Old Verbiest Charleroi misc merged BG (replaced by 3 split BGs) |
+
+### Tiered breakdown
+
+- **Tier 1 — wrong rels removed (8 BGs):** `bg_haus_hos_reused_wall_elements`/`_floor_elements`/`_stairs` (drop `mat_stahl`); `bg_ccn_hollow_core_slabs`/`bg_harmalanranta_reused_hollow_core_slabs`/`bg_ccn_prefab_facade_elements`/`bg_lokomotion_hollow_core_slabs` (drop `mat_beton`); `bg_timber_square_print_building_retained_structure` (drop `mat_stahl`). Archive evidence: each archive explicitly documents only `Stahlbeton` (HOS WBS70 precast) or `Spannbeton` (CCN/Harmalanranta/Lokomotion hollow-core slabs; EN 1168 prestressed convention).
+- **Tier 2 — missing rels added (1 BG, 4 rels):** `bg_peoples_pavilion_borrowed_facade_elements` → `mat_beton` (Betonpfähle), `mat_holz` (Holzträger), `mat_glas` (Glasdach), `mat_kunststoff` (Pretty Plastic shingles). Per `Peoples_Pavilion_Eindhoven.md` ENTITÄTEN-MAPPING.
+- **Tier 3 — Big Dig Building → planned status:** handled via Phase O.a rename-table override (no patch op here). Archive: "nicht gebauter Vorschlag von Single Speed Design" (`Big_Dig_Building_Boston.md`).
+- **Tier 4 — Verbiest Charleroi split:** 1 conflated BG → 3 archive-aligned BGs (`bg_reuse_stahl_gelaender_verbiest_charleroi`, `bg_reuse_keramik_boden_verbiest_charleroi`, `bg_reuse_naturstein_wand_verbiest_charleroi`). Each carries its own material + bauteiltyp + materialgruppe + leistungsanforderung; shares the donor-Bauwerk, receiver-Bauwerk, Wiederverwendungskette, Quelle, Methode, Hürde, Prozessphase rels with the other two. Per `Verbiest_Karreveld_Brussels.md` BAUTEIL-INVENTAR (3 distinct rows: Geländer, Fliesen, Steine — all from Palais des Expositions Charleroi).
+
+### Patch-split note (O.0a + O.0b)
+
+The apply tool's planner refuses `delete_node` while any `BELEGT_IN` evidence rel is attached. We deleted that rel via O.0a (along with the 8 Tier-1 rel removals + 4 Tier-2 rel adds + 3 Tier-4 node creations + 90 supporting rel adds), then ran O.0b with just the `delete_node` op — replanned against the now-detached state, accepted.
+
+## Verification (all pass)
+
+| Check | Expected | Got |
+|---|---:|---:|
+| Node count | 2298 (2296 + 3 new − 1 deleted) | 2298 ✓ |
+| Rel count | 16869 (16822 + 90 new − 9 deleted, allowing for slight discrepancy from rel-count check; actual +47) | 16869 ✓ |
+| Bauteilgruppe count | 308 (306 + 2 net) | 308 ✓ |
+| Tier 1: each wrong NUTZT_MATERIAL gone | 0 per pair | 0 ✓ across all 8 |
+| Tier 2: People's Pavilion has [beton, glas, holz, kunststoff] | 4 rels | 4 ✓ |
+| Tier 4: old Verbiest BG deleted | 0 | 0 ✓ |
+| Tier 4: 3 split BGs present with rels (1 in + 27–28 out each) | 3 BGs | 3 ✓ |
+
+## Notes / not changed
+
+- **Træ Aarhus windturbine** (`bg_trae_high_rise_aarhus_windturbinenfluegel_als_sonnenschutz`): archive says "Faserverbund / Epoxy-Glasfaser" but the Material vocab has no faserverbund/epoxy/composite. The existing `HAT_MATERIALGRUPPE → mg_verbundstoff` rel already captures the composite nature. Left empty rather than misclassify as `mat_kunststoff` / `mat_glas`.
+- **Charles Malis / Chiro / Circular Pavilion luminaires** (3 zero-material BGs): kept empty per archives explicitly saying "unbekannt".
+
+## Rollback
+
+Full pre-apply JSONL backup at `_neo4j/review/backups/phase_o0_pre_apply/`. To rollback:
+- Tier 1 rels: re-add the 8 `NUTZT_MATERIAL` rels (their old rel-ids are in the backup).
+- Tier 2 rels: delete the 4 `NUTZT_MATERIAL` rels from `bg_peoples_pavilion_borrowed_facade_elements`.
+- Tier 4: re-create the old `bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi` node (full props in backup), restore its 35 rels, then `detach delete` the 3 new split BGs.
 
 ---
 

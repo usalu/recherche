@@ -1,0 +1,983 @@
+{
+  "confirmation_required": "APPLY phase_o0a.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2299,
+    "relationships": 16903
+  },
+  "counts_after_expected": {
+    "nodes": 2299,
+    "relationships": 16903
+  },
+  "counts_before": {
+    "nodes": 2296,
+    "relationships": 16822
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-19T16:03:30.476609+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_o0a.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_haus_hos_reused_wall_elements",
+        "properties": {
+          "id": "r_bg_haus_hos_reused_wall_elements__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1157505368583050322,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_haus_hos_reused_wall_elements",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_haus_hos_reused_floor_elements",
+        "properties": {
+          "id": "r_bg_haus_hos_reused_floor_elements__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1157505368583050323,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_haus_hos_reused_floor_elements",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_haus_hos_reused_stairs",
+        "properties": {
+          "id": "r_bg_haus_hos_reused_stairs__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1157505368583050324,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_haus_hos_reused_stairs",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_ccn_hollow_core_slabs",
+        "properties": {
+          "id": "r_bg_ccn_hollow_core_slabs__NUTZT_MATERIAL__mat_beton"
+        },
+        "rel_internal_id": 1155253568769364777,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_ccn_hollow_core_slabs",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_harmalanranta_reused_hollow_core_slabs",
+        "properties": {
+          "id": "r_bg_harmalanranta_reused_hollow_core_slabs__NUTZT_MATERIAL__mat_beton"
+        },
+        "rel_internal_id": 1155253568769364947,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_harmalanranta_reused_hollow_core_slabs",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_ccn_prefab_facade_elements",
+        "properties": {
+          "id": "r_bg_ccn_prefab_facade_elements__NUTZT_MATERIAL__mat_beton"
+        },
+        "rel_internal_id": 1153001768955679530,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_ccn_prefab_facade_elements",
+      "line": 6,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_timber_square_print_building_retained_structure",
+        "properties": {
+          "id": "r_bg_timber_square_print_building_retained_structure__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1153001768955680436,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_timber_square_print_building_retained_structure",
+      "line": 7,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_lokomotion_hollow_core_slabs",
+        "properties": {
+          "id": "r_bg_lokomotion_hollow_core_slabs__NUTZT_MATERIAL__mat_beton"
+        },
+        "rel_internal_id": 1155253568769365294,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_lokomotion_hollow_core_slabs",
+      "line": 8,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "from": "bg_peoples_pavilion_borrowed_facade_elements",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_beton"
+    },
+    {
+      "from": "bg_peoples_pavilion_borrowed_facade_elements",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
+    },
+    {
+      "from": "bg_peoples_pavilion_borrowed_facade_elements",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_glas"
+    },
+    {
+      "from": "bg_peoples_pavilion_borrowed_facade_elements",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_kunststoff"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "id": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+          "name": "Geländer aus Charleroi",
+          "name_full": "Verbiest-Geländer aus Palais des Expositions Charleroi",
+          "primary_bauteiltyp_id": "bt_gelaender",
+          "primary_material_id": "mat_stahl",
+          "raw_name": "Verbiest Geländer | Metall/Holz | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "id": "bg_reuse_keramik_boden_verbiest_charleroi",
+          "name": "Fliesen aus Charleroi",
+          "name_full": "Verbiest-Fliesen (Keramik/Stein) aus Palais des Expositions Charleroi",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_keramik",
+          "raw_name": "Verbiest Fliesen | keramisch/Stein | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "id": "bg_reuse_naturstein_wand_verbiest_charleroi",
+          "name": "Steine aus Charleroi",
+          "name_full": "Verbiest-Steine (Natur-/Mauersteine) aus Palais des Expositions Charleroi",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_naturstein",
+          "raw_name": "Verbiest Steine | Natur-/Mauersteine | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "p_verbiest_karreveld_brussels",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_stahl_gelaender_verbiest_charleroi"
+    },
+    {
+      "from": "p_verbiest_karreveld_brussels",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_keramik_boden_verbiest_charleroi"
+    },
+    {
+      "from": "p_verbiest_karreveld_brussels",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_naturstein_wand_verbiest_charleroi"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_palais_des_expositions_charleroi"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_verbiest_lagerhaus_zu_haus_und_atelier"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_verbiest_karreveld_brussels_verbiest_karreveld_in_situ_und_projektuebergreifende_reuse_kette"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "HAT_PROZESSPHASE",
+      "status": "would_create_rel",
+      "to": "phase_rueckbau"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "HAT_PROZESSPHASE",
+      "status": "would_create_rel",
+      "to": "phase_wiedereinbau"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_reuse_assessment"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_zerstoerungsarme_bergung"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_reinigung"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_zuschnitt"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_rueckbauprojekt"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_transport"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "HAT_PRUEFUNG",
+      "status": "would_create_rel",
+      "to": "pr_zustandsbewertung"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_materialqualitaet_unklar"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_technische_freigabe"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "hk_technisch"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "hk_daten_evidenz"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_verbiest_karreveld_brussels_md"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahl"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 43,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_gelaender"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 44,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 45,
+      "op": "add_rel",
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_dauerhaftigkeit"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_tragfaehigkeit"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 47,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_palais_des_expositions_charleroi"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 48,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_verbiest_lagerhaus_zu_haus_und_atelier"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 49,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_verbiest_karreveld_brussels_verbiest_karreveld_in_situ_und_projektuebergreifende_reuse_kette"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 51,
+      "op": "add_rel",
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 53,
+      "op": "add_rel",
+      "rel_type": "HAT_PROZESSPHASE",
+      "status": "would_create_rel",
+      "to": "phase_rueckbau"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 54,
+      "op": "add_rel",
+      "rel_type": "HAT_PROZESSPHASE",
+      "status": "would_create_rel",
+      "to": "phase_wiedereinbau"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 55,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_reuse_assessment"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 56,
+      "op": "add_rel",
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_zerstoerungsarme_bergung"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 57,
+      "op": "add_rel",
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_reinigung"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 58,
+      "op": "add_rel",
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_zuschnitt"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 59,
+      "op": "add_rel",
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_rueckbauprojekt"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 60,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 61,
+      "op": "add_rel",
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_transport"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 62,
+      "op": "add_rel",
+      "rel_type": "HAT_PRUEFUNG",
+      "status": "would_create_rel",
+      "to": "pr_zustandsbewertung"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 63,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_materialqualitaet_unklar"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 64,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_technische_freigabe"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 65,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "hk_technisch"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 66,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "hk_daten_evidenz"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 67,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_verbiest_karreveld_brussels_md"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 68,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 69,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 70,
+      "op": "add_rel",
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_keramik"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 71,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_boden"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 72,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fassade"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 73,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 74,
+      "op": "add_rel",
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_dauerhaftigkeit"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 75,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_palais_des_expositions_charleroi"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 76,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_verbiest_lagerhaus_zu_haus_und_atelier"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 77,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_verbiest_karreveld_brussels_verbiest_karreveld_in_situ_und_projektuebergreifende_reuse_kette"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 78,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 79,
+      "op": "add_rel",
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 80,
+      "op": "add_rel",
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 81,
+      "op": "add_rel",
+      "rel_type": "HAT_PROZESSPHASE",
+      "status": "would_create_rel",
+      "to": "phase_rueckbau"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 82,
+      "op": "add_rel",
+      "rel_type": "HAT_PROZESSPHASE",
+      "status": "would_create_rel",
+      "to": "phase_wiedereinbau"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 83,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_reuse_assessment"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 84,
+      "op": "add_rel",
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_zerstoerungsarme_bergung"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 85,
+      "op": "add_rel",
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_reinigung"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 86,
+      "op": "add_rel",
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_zuschnitt"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 87,
+      "op": "add_rel",
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_rueckbauprojekt"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 88,
+      "op": "add_rel",
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 89,
+      "op": "add_rel",
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_transport"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 90,
+      "op": "add_rel",
+      "rel_type": "HAT_PRUEFUNG",
+      "status": "would_create_rel",
+      "to": "pr_zustandsbewertung"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 91,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_materialqualitaet_unklar"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 92,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_technische_freigabe"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 93,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "hk_technisch"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 94,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "hk_daten_evidenz"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 95,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_verbiest_karreveld_brussels_md"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 96,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_same_site"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 97,
+      "op": "add_rel",
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 98,
+      "op": "add_rel",
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_naturstein"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 99,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_wand"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 100,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 101,
+      "op": "add_rel",
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_dauerhaftigkeit"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi__BELEGT_IN__q_verbiest_karreveld_brussels_md"
+        },
+        "rel_internal_id": 1153028157234747133,
+        "to": "q_verbiest_karreveld_brussels_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi",
+      "line": 102,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_verbiest_karreveld_brussels_md",
+      "type": "BELEGT_IN"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 102,
+    "would_create": 3,
+    "would_create_rel": 90,
+    "would_delete_rel": 9
+  }
+}
