@@ -1,5 +1,7 @@
 # Naming + property cleanup plan — graph-wide
 
+> **✅ Migration completed 2026-05-19.** Phases L → M → N → O.0 → O.a → O.b → P → R all applied. Final state: 2 298 nodes / 17 035 relationships / 308 Bauteilgruppen. See [rollback.md](rollback.md) for what landed in each phase. The plan below is preserved as the migration's design document; the body is unchanged from the pre-execution version.
+
 ## 0. Execution context (read first if you're starting fresh)
 
 **State at plan freeze:** 2 296 nodes / 16 822 relationships in Neo4j database `mit-bestand` (bolt://localhost:7687). Verify before starting any phase:
