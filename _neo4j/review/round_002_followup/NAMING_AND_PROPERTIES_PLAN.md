@@ -15,7 +15,8 @@ RETURN nodes, rels;
 
 | File | Purpose |
 |---|---|
-| **[NAMING_AND_PROPERTIES_PLAN.md](NAMING_AND_PROPERTIES_PLAN.md)** *(this file)* | The plan |
+| **[NAMING_AND_PROPERTIES_PLAN.md](NAMING_AND_PROPERTIES_PLAN.md)** *(this file)* | The plan — naming, properties, BG id rename |
+| **[QUELLE_PLAN.md](QUELLE_PLAN.md)** | The source-coverage companion plan — schedule after Phase P |
 | [CONFLICT_ANALYSIS.md](CONFLICT_ANALYSIS.md) | Pre-flight conflict scan; the 7 plan amendments are already baked in here |
 | [rollback.md](rollback.md) | Ledger of every applied phase A–K + Round 003 with backup paths |
 | [VERIFICATION_QUERIES.cypher](VERIFICATION_QUERIES.cypher) | 18 graph-output queries to sanity-check each phase post-apply |
@@ -443,7 +444,7 @@ Don't denormalize. If a node has multiple sources, that's an array of `BELEGT_IN
 
 The ~340 controlled-vocabulary nodes (Defekt, Marktmodell, ZustandsKlasse, Akzeptanz, MatchingQualitaet, Material, Methode, Aufbereitungsverfahren, PruefungNachweis, Schadstoff, BauwerkEra, Bauproduktstatus, LebenszyklusModul, Layer, Wirtschaft, plus the structural-vocab labels Akteurrolle/Akteurtyp/Status/Nutzung/Prozessphase/Bauteiltyp/Materialgruppe…) carry **no `BELEGT_IN` edge** — by accident of how they were seeded, not by design. Most were introduced by the research files under `_neo4j/intake/inbox/research/` and could legitimately point at those.
 
-The fix is deferred — see **Phase Q** in Section 7. Until then, the convention is unchanged: every new case-specific node MUST have a `BELEGT_IN` edge at creation time; every new inferred rel MUST have a `r.source` property.
+The fix is the subject of [QUELLE_PLAN.md](QUELLE_PLAN.md), scheduled to run after Phase P. Until then, the convention is unchanged: every new case-specific node MUST have a `BELEGT_IN` edge at creation time; every new inferred rel MUST have a `r.source` property.
 
 ### Verification queries
 
@@ -496,18 +497,20 @@ The concrete tables (MatchingQualitaet, ZustandsKlasse, Bauproduktstatus, Lebens
 ## 6. Bauteilgruppe id convention (with amendments from CONFLICT_ANALYSIS.md)
 
 ```
-bg_<project-slug>__<reuse-status>_<material>_<bauteiltyp>_<discriminator?>
+bg_<reuse-status>_<material>_<bauteiltyp>_<discriminator>
 ```
+
+**No project slug in the id.** Project ownership lives in the `HAT_BAUTEILGRUPPE` relationship — queries find a BG's project trivially via `MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(bg)`. We don't add a `slug_short` / `bg_slug` property anywhere.
 
 | Slot | Vocabulary |
 |---|---|
 | `bg_` | fixed |
-| `<project-slug>` | ≤ 3 tokens, stored on `Projekt.bg_slug` |
-| `__` | double underscore separator (machine-parseable; no existing id uses `__`, verified) |
 | `<reuse-status>` | `reuse / retained / planned / dismantled` |
 | `<material>` | `stahl / holz / beton / stahlbeton / glas / keramik / ziegel / naturstein / daemmstoff / aluminium / kunststoff / mdf / recyclingbeton / mehrere / unbekannt` |
 | `<bauteiltyp>` | `traeger / stuetze / wand / decke / dach / fassade / fenster / tuer / treppe / ausbau / belag / boden / daemmung / technik / mehrere` |
-| `<discriminator>` | **mandatory when (project, material, bauteiltyp) collides** (≥ 15 collision groups confirmed); free-form ≤ 4 tokens (donor source, location, sub-component) |
+| `<discriminator>` | **mandatory and globally unique.** Free-form ≤ 5 tokens — typically a project hint + donor source + sub-component. Examples: `k118_aus_elys_basel`, `resource_rows_module`, `alliander_atrium`, `55gss_external_core`. |
+
+Without the project slug separator (`__`), the discriminator is the only thing making BG ids globally unique. The rename-table generator must verify uniqueness during ID generation; any collision forces a longer / more specific discriminator.
 
 Companion properties on every Bauteilgruppe:
 - `reuse_status` (enum string)
@@ -561,7 +564,7 @@ For each of: Projekt (99), Bauwerk (196), Wiederverwendungskette (63). ~358 node
 
 #### Pre-Phase work
 
-1. Compute `Projekt.bg_slug` for all 76 + 23 projects (≤ 3 tokens each). Manual review of the slug list before any patch.
+1. _(Skipped — per the Section 8 decision we don't add a slug property to Projekt.)_
 2. Compute, for each of 306 BGs:
    - `new_id` per the schema in Section 6 (with mandatory discriminator for the 15 colliding tuples)
    - `reuse_status` (derived from existing reuse-status tokens in current id; defaults `reuse` if absent)
@@ -596,63 +599,39 @@ For each of 306 BGs: emit one `merge_node { from: <old_id>, to: <new_id> }` op. 
 - Backfill `alte_funktion` / `neue_funktion` on the 19 BGs where they're missing.
 - Backfill the Projekt "best-effort optional" set (`jahr_fertigstellung`, `flaeche_m2`, `note`) on projects with archive evidence.
 
-### Phase Q (DEFERRED) — Quelle gap filling for vocabulary nodes
+### Quelle gap filling — separate plan
 
-**Status:** scoped but **not scheduled** — depends on a separate decision about how strict we want vocabulary-level provenance to be.
+The Quelle gap-filling work (~12 new Quelle nodes + ~350 BELEGT_IN edges to link every vocab node to a source) has been **moved to its own document:** [QUELLE_PLAN.md](QUELLE_PLAN.md).
 
-**Goal:** lift the ~340 controlled-vocabulary nodes from 0 % to ~100 % `BELEGT_IN` coverage by linking each vocab to the research file that introduced it.
-
-#### Q1 — create research-source Quelle nodes (≈ 12)
-
-One Quelle per research markdown file under `_neo4j/intake/inbox/research/`:
-
-| Research file | Proposed Quelle id | quelltyp |
-|---|---|---|
-| `bauteilreuse_legal_regime_matrix.md` | `q_research_bauteilreuse_legal_regime` | `research_markdown` |
-| `connection_techniques_bauteilreuse.md` | `q_research_connection_techniques` | `research_markdown` |
-| `circular_construction_economics_kg.md` | `q_research_circular_economics` | `research_markdown` |
-| `circular_construction_leistungsanforderungen.md` | `q_research_leistungsanforderungen` | `research_markdown` |
-| `circular_construction_reuse_graph_gaps.md` | `q_research_reuse_graph_gaps` | `research_markdown` |
-| `schadstoff_reuse_knowledge_graph_research.md` | `q_research_schadstoff_kg` | `research_markdown` |
-| `energy_climate_reuse_research.md` | `q_research_energy_climate` | `research_markdown` |
-| `aufbereitungsverfahren_reused_building_elements.md` | `q_research_aufbereitungsverfahren` | `research_markdown` |
-| `missing_underused_norm_nodes_reuse_kg.md` | `q_research_norm_nodes` | `research_markdown` |
-| `reuse_knowledge_graph_coverage_audit.md` | `q_research_coverage_audit` | `research_markdown` |
-| `testing_verification_bauteilreuse_kg.md` | `q_research_testing_verification` | `research_markdown` |
-| `graph_patch_validation.md` | `q_research_patch_validation` | `research_markdown` |
-
-#### Q2 — bulk-attach research Quellen to vocabulary nodes (≈ 160 edges)
-
-| Research Quelle | Attach via `BELEGT_IN` to |
-|---|---|
-| `q_research_bauteilreuse_legal_regime` | 15 Bauproduktstatus + 5 Akzeptanz |
-| `q_research_connection_techniques` | 12 Verbindungstechnik |
-| `q_research_circular_economics` | 12 Wirtschaft + 11 Marktmodell |
-| `q_research_reuse_graph_gaps` | 10 Defekt + 9 MatchingQualitaet + 6 ZustandsKlasse |
-| `q_research_schadstoff_kg` | 8 Schadstoff + 6 BauwerkEra |
-| `q_research_aufbereitungsverfahren` | 45 Aufbereitungsverfahren |
-| `q_research_norm_nodes` | the 27 currently-source-less Norms |
-| `q_research_energy_climate` | 5 LebenszyklusModul + 6 Layer |
-| `q_research_leistungsanforderungen` | 12 Leistungsanforderung |
-
-#### Q3 — backfill case-specific gap (≈ 20 edges)
-
-- 17 source-less Akteure: investigate per-actor (most likely actor-registry entries with no URL — add the registry markdown as Quelle)
-- 3 source-less Lands: the 3 supranational scope-pseudo nodes (`land_eu`, `land_eea`, `land_international`) — could attach a Phase A research source or accept they don't need a Quelle (they're meta).
-
-#### Q4 (optional, only if 100 % coverage is wanted) — structural-vocab nodes
-
-The structural-vocab labels (Akteurrolle, Akteurtyp, Status, Nutzung, Prozessphase, Bauteiltyp, Materialgruppe, Bauobjektklasse, Bauobjektrolle, WiederverwendungsArt, Funktionswechsel, Bausystem, Bauweise, Tragwerksprinzip, Logistik, BauaufgabeIntervention, Ressourcenquelle, Beschaffungsweg, HuerdeKategorie) hold purely typological nodes that were defined in the contract's `controlled_vocabulary.seed.kg.jsonl`. If 100 % BELEGT_IN coverage is desired, create one Quelle (`q_controlled_vocab_seed`, `quelltyp: controlled_vocab_seed`) and attach all ~190 structural-vocab nodes to it.
-
-**Phase Q total estimate:** ~12 new Quelle nodes + ~160 new BELEGT_IN edges (without Q4) or ~190 more with Q4 = ≈ 350 ops.
-
-**Why deferred:** Q4 is the question — do we want a sourced provenance for typological vocabulary? If yes, ~190 more BELEGT_IN edges; if no, the structural-vocab labels stay un-sourced and Q3 lifts everything else to ~100 %. Decide this before scheduling Phase Q.
+That work happens **after Phase P** and is sequenced independently of the naming work.
 
 ---
 
-## 8. Open questions — pick one option per row
+## 8. Decisions recorded
 
-Each question has 2–3 concrete options and a recommended answer. Decide before starting Phase L.
+The 8 design questions are answered. The rest of the plan reflects these answers throughout.
+
+| # | Question | Decision |
+|---|---|---|
+| 1 | Project slug property name | **No slug property.** Drop `slug_short` / `bg_slug` entirely. Project ownership lives in `HAT_BAUTEILGRUPPE` — no need to also encode it in a separate property or in the BG id's project-slug slot. |
+| 2 | Multi-material BG handling | **Default `mat_mehrere` + per-BG manual override** for the ~30 cases where one material is clearly dominant. Same for multi-Bauteiltyp. |
+| 3 | Always set `name_full`? | **No.** Only when meaningfully different from `name`. Browser falls back to `name` automatically. |
+| 4 | Run hygiene first? | **Yes.** Phase L → M → N → O → P. |
+| 5 | Source for structural-vocab nodes? | **Whatever source is available, link it.** Any node that can be traced to an originating source (research file, controlled-vocab seed, project archive) gets a `BELEGT_IN` edge. Detail in [QUELLE_PLAN.md](QUELLE_PLAN.md). |
+| 6 | Quelle short-name strategy | **Hybrid** — id-suffix for archive + registry Quellen (`Welpeloo S3`), author + year for academic refs (`MacArthur 2014`), truncation as fallback. |
+| 7 | Codify `r.source` values? | **No.** Keep `r.source` as a single free-text pointer. The only requirement: every inferred edge has *some* source pointer. No enum split, no separate `source_detail`. The verification query in Section 4 catches missing values. |
+| 8 | Quelle gap-filling work | **Separate document** — see [QUELLE_PLAN.md](QUELLE_PLAN.md). Schedule after Phase P; not part of this plan. |
+
+### Next concrete deliverable
+
+The **306-row Bauteilgruppe rename table** (Phase O pre-step 2 — see Section 7) — a CSV/markdown sheet with columns:
+
+`old_id | new_id | name | name_full | reuse_status | primary_material_id | primary_bauteiltyp_id | discriminator | aliases | manual_override?`
+
+About 30 rows will be flagged `manual_override = true` (the multi-axis BGs + the 5 zero-material outliers + the 15 colliding (project, material, bauteiltyp) groups). Mark those rows up before the patch is generated.
+
+<!-- legacy open-questions section (kept for reference) -->
+<details><summary>Legacy: original question framing with options + rationale</summary>
 
 ### Structural
 
@@ -782,3 +761,5 @@ The **306-row Bauteilgruppe rename table** (Phase O pre-step 2 — see Section 7
 `old_id | new_id | name | name_full | reuse_status | primary_material_id | primary_bauteiltyp_id | discriminator | aliases | manual_override?`
 
 About 30 rows will be flagged `manual_override = true` (the multi-axis BGs + the 5 zero-material outliers + the 15 colliding (project, material, bauteiltyp) groups). You mark those rows up before the patch is generated.
+
+</details>
