@@ -1,0 +1,389 @@
+{
+  "confirmation_required": "APPLY phase_p.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2298,
+    "relationships": 16869
+  },
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 16869
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 16869
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-19T16:20:01.800181+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_p.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "co2_einsparung_stahl_t": 50,
+          "co2_einsparung_t": 50,
+          "embodied_carbon_a1_a5_kg_per_m2": 386,
+          "flaeche_m2": 1412,
+          "id": "p_55_great_suffolk_street_london",
+          "jahr_fertigstellung": 2024,
+          "jahr_fertigstellung_erwartet": 2024,
+          "lca_module_scope": "a1_a5",
+          "name": "55 Great Suffolk Street",
+          "name_full": "55 Great Suffolk Street, London",
+          "note": "Retrofit/extension with reused steel in new external service and circulation core; retained warehouse is not counted as direct reuse.",
+          "property_source": "ASBP case study + NLA + project research file",
+          "quantitative_quellen_konflikt": false,
+          "reuse_anteil_prozent": 97,
+          "upfront_embodied_carbon_kgco2e_m2_a1_a5": 386
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 4,
+          "co2_einsparung_stahl_t": 50,
+          "co2_einsparung_t": 50,
+          "embodied_carbon_a1_a5_kg_per_m2": 386,
+          "flaeche_m2": 1412,
+          "id": "p_55_great_suffolk_street_london",
+          "jahr_fertigstellung_erwartet": 2024,
+          "lca_module_scope": "a1_a5",
+          "name": "55 Great Suffolk Street",
+          "name_full": "55 Great Suffolk Street, London",
+          "note": "Retrofit/extension with reused steel in new external service and circulation core; retained warehouse is not counted as direct reuse.",
+          "property_source": "ASBP case study + NLA + project research file",
+          "quantitative_quellen_konflikt": false,
+          "reuse_anteil_prozent": 97,
+          "upfront_embodied_carbon_kgco2e_m2_a1_a5": 386
+        }
+      },
+      "id": "p_55_great_suffolk_street_london",
+      "line": 1,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 5,
+          "co2_kg_eq_m2": 248,
+          "co2_reduktion_prozent": 40,
+          "entwurfsstart_jahr": 2018,
+          "fertigstellung_jahr": 2021,
+          "flaeche_m2_max": 7000,
+          "flaeche_m2_min": 6200,
+          "id": "p_biopartner_5_leiden_oegstgeest",
+          "jahr_fertigstellung": 2021,
+          "name": "BioPartner 5",
+          "name_full": "BioPartner 5, Leiden / Oegstgeest",
+          "note": "Quellen nennen 150–170 t reused steel; 165.000 kg wird als zentraler belastbarer Wert gespeichert. Möbel werden nicht als Direct Reuse bewertet.",
+          "nutzung_text": "Labor-, Büro- und Begegnungsgebäude für Life-Sciences-Startups",
+          "projektstatus_text": "gebaut",
+          "reuse_stahl_kg": 165000
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 5,
+          "co2_kg_eq_m2": 248,
+          "co2_reduktion_prozent": 40,
+          "entwurfsstart_jahr": 2018,
+          "fertigstellung_jahr": 2021,
+          "flaeche_m2_max": 7000,
+          "flaeche_m2_min": 6200,
+          "id": "p_biopartner_5_leiden_oegstgeest",
+          "name": "BioPartner 5",
+          "name_full": "BioPartner 5, Leiden / Oegstgeest",
+          "note": "Quellen nennen 150–170 t reused steel; 165.000 kg wird als zentraler belastbarer Wert gespeichert. Möbel werden nicht als Direct Reuse bewertet.",
+          "nutzung_text": "Labor-, Büro- und Begegnungsgebäude für Life-Sciences-Startups",
+          "projektstatus_text": "gebaut",
+          "reuse_stahl_kg": 165000
+        }
+      },
+      "id": "p_biopartner_5_leiden_oegstgeest",
+      "line": 2,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "baukosten_usd_excl_land": 645000,
+          "baukosten_usd_per_sqft_max": 175,
+          "baukosten_usd_per_sqft_min": 150,
+          "bewertung": 4,
+          "fertigstellung_jahr": 2006,
+          "flaeche_m2_max": 399,
+          "flaeche_m2_min": 372,
+          "flaeche_sqft_max": 4300,
+          "flaeche_sqft_min": 4000,
+          "id": "p_big_dig_house_lexington_massachusetts",
+          "jahr_fertigstellung": 2006,
+          "name": "Big Dig House",
+          "name_full": "Big Dig House, Lexington, Massachusetts",
+          "note": "Quellenkonflikte zu Fläche, Kosten und Montagezeit wurden als Spannweiten/Eigenschaften gespeichert statt geglättet.",
+          "projektstatus_text": "gebaut",
+          "reuse_masse_lb_min": 600000,
+          "reuse_masse_tons": 300
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "baukosten_usd_excl_land": 645000,
+          "baukosten_usd_per_sqft_max": 175,
+          "baukosten_usd_per_sqft_min": 150,
+          "bewertung": 4,
+          "fertigstellung_jahr": 2006,
+          "flaeche_m2_max": 399,
+          "flaeche_m2_min": 372,
+          "flaeche_sqft_max": 4300,
+          "flaeche_sqft_min": 4000,
+          "id": "p_big_dig_house_lexington_massachusetts",
+          "name": "Big Dig House",
+          "name_full": "Big Dig House, Lexington, Massachusetts",
+          "note": "Quellenkonflikte zu Fläche, Kosten und Montagezeit wurden als Spannweiten/Eigenschaften gespeichert statt geglättet.",
+          "projektstatus_text": "gebaut",
+          "reuse_masse_lb_min": 600000,
+          "reuse_masse_tons": 300
+        }
+      },
+      "id": "p_big_dig_house_lexington_massachusetts",
+      "line": 3,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "arbeitsplaetze": 100,
+          "bewertung": 3,
+          "co2_einsparung_t": 60,
+          "co2_reduktion_prozent": 68,
+          "fertigstellung_jahr": 2017,
+          "flaeche_m2": 1300,
+          "id": "p_bluecity_offices_rotterdam",
+          "jahr_fertigstellung": 2017,
+          "name": "BlueCity Offices…",
+          "name_full": "BlueCity Offices Rotterdam",
+          "note": "Direct-Reuse-Schwerpunkt sind feste Fensterrahmen-Trennwände; Bestandserhalt des Tropicana wird nicht als Direct Reuse bewertet.",
+          "nutzung_text": "Büro- und Arbeitsplätze für Circular-Economy-Unternehmen",
+          "projektstatus_text": "gebaut",
+          "reuse_anteil_prozent": 90,
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "arbeitsplaetze": 100,
+          "bewertung": 3,
+          "co2_einsparung_t": 60,
+          "co2_reduktion_prozent": 68,
+          "fertigstellung_jahr": 2017,
+          "flaeche_m2": 1300,
+          "id": "p_bluecity_offices_rotterdam",
+          "name": "BlueCity Offices…",
+          "name_full": "BlueCity Offices Rotterdam",
+          "note": "Direct-Reuse-Schwerpunkt sind feste Fensterrahmen-Trennwände; Bestandserhalt des Tropicana wird nicht als Direct Reuse bewertet.",
+          "nutzung_text": "Büro- und Arbeitsplätze für Circular-Economy-Unternehmen",
+          "projektstatus_text": "gebaut",
+          "reuse_anteil_prozent": 90,
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_bluecity_offices_rotterdam",
+      "line": 4,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 3,
+          "flaeche_m2": 610,
+          "id": "p_verbiest_karreveld_brussels",
+          "jahr_fertigstellung": 2020,
+          "kosten_eur_exkl_mwst": 6000000,
+          "name": "Verbiest + Karreveld",
+          "note": "Kombinierter Vergleichsfall zweier AgwA-Projekte; Kosten beziehen sich auf Karreveld Phase 2, Fläche auf Verbiest-Projektfläche."
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "bewertung": 3,
+          "flaeche_m2": 610,
+          "id": "p_verbiest_karreveld_brussels",
+          "kosten_eur_exkl_mwst": 6000000,
+          "name": "Verbiest + Karreveld",
+          "note": "Kombinierter Vergleichsfall zweier AgwA-Projekte; Kosten beziehen sich auf Karreveld Phase 2, Fläche auf Verbiest-Projektfläche."
+        }
+      },
+      "id": "p_verbiest_karreveld_brussels",
+      "line": 5,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "alte_funktion": "Geländer im Palais des Expositions Charleroi",
+          "id": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+          "name": "Geländer aus Charleroi",
+          "name_full": "Verbiest-Geländer aus Palais des Expositions Charleroi",
+          "neue_funktion": "Geländer im Verbiest-Projekt",
+          "primary_bauteiltyp_id": "bt_gelaender",
+          "primary_material_id": "mat_stahl",
+          "raw_name": "Verbiest Geländer | Metall/Holz | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "id": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+          "name": "Geländer aus Charleroi",
+          "name_full": "Verbiest-Geländer aus Palais des Expositions Charleroi",
+          "primary_bauteiltyp_id": "bt_gelaender",
+          "primary_material_id": "mat_stahl",
+          "raw_name": "Verbiest Geländer | Metall/Holz | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "id": "bg_reuse_stahl_gelaender_verbiest_charleroi",
+      "line": 6,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "alte_funktion": "Boden-/Wandfliesen im Palais des Expositions Charleroi",
+          "id": "bg_reuse_keramik_boden_verbiest_charleroi",
+          "name": "Fliesen aus Charleroi",
+          "name_full": "Verbiest-Fliesen (Keramik/Stein) aus Palais des Expositions Charleroi",
+          "neue_funktion": "Boden-/Wandoberflächen im Verbiest-Projekt",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_keramik",
+          "raw_name": "Verbiest Fliesen | keramisch/Stein | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "id": "bg_reuse_keramik_boden_verbiest_charleroi",
+          "name": "Fliesen aus Charleroi",
+          "name_full": "Verbiest-Fliesen (Keramik/Stein) aus Palais des Expositions Charleroi",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_keramik",
+          "raw_name": "Verbiest Fliesen | keramisch/Stein | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "id": "bg_reuse_keramik_boden_verbiest_charleroi",
+      "line": 7,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "alte_funktion": "Natur-/Mauersteine im Palais des Expositions Charleroi",
+          "id": "bg_reuse_naturstein_wand_verbiest_charleroi",
+          "name": "Steine aus Charleroi",
+          "name_full": "Verbiest-Steine (Natur-/Mauersteine) aus Palais des Expositions Charleroi",
+          "neue_funktion": "Bauteil/Oberfläche im Verbiest-Projekt",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_naturstein",
+          "raw_name": "Verbiest Steine | Natur-/Mauersteine | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "before": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "aliases": [
+            "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi"
+          ],
+          "id": "bg_reuse_naturstein_wand_verbiest_charleroi",
+          "name": "Steine aus Charleroi",
+          "name_full": "Verbiest-Steine (Natur-/Mauersteine) aus Palais des Expositions Charleroi",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_naturstein",
+          "raw_name": "Verbiest Steine | Natur-/Mauersteine | Palais des Expositions Charleroi",
+          "reuse_status": "reuse"
+        }
+      },
+      "id": "bg_reuse_naturstein_wand_verbiest_charleroi",
+      "line": 8,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 8,
+    "would_update": 8
+  }
+}

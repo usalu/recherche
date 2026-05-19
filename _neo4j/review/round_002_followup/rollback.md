@@ -11,15 +11,77 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → … → Phase L → M → N → O.0 → O.a → O.b.
+**Apply order so far:** Phase A → … → Phase L → M → N → O.0 → O.a → O.b → P.
 
 **Combined effect:**
 
-| | Before A | After R003 | After N | After O.0 | After O |
-|---|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 296 | 2 296 | 2 298 | **2 298** |
-| Relationships | 15 834 | 16 822 | 16 822 | 16 869 | **16 869** |
-| Bauteilgruppen | — | 306 | 306 | 308 | **308** |
+| | Before A | After R003 | After N | After O.0 | After O | After P |
+|---|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 296 | 2 296 | 2 298 | 2 298 | **2 298** |
+| Relationships | 15 834 | 16 822 | 16 822 | 16 869 | 16 869 | **16 869** |
+| Bauteilgruppen | — | 306 | 306 | 308 | 308 | **308** |
+
+---
+
+## Phase P — applied 2026-05-19
+
+**Patch:** [patches/phase_p.patch.jsonl](patches/phase_p.patch.jsonl) (8 ops)
+**Apply report:** [phase_p.patch.apply_report.json](apply_reports/phase_p.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_p_pre_apply/`](../backups/phase_p_pre_apply/)
+**Companion review file:** [phase_p_review.json](phase_p_review.json) + [phase_p_review.md](phase_p_review.md) (agent comparison output — see "Why minimal" below)
+
+## What landed
+
+Minimal high-confidence backfill. The original plan was to fill all ~200 gaps (43 BGs missing `counts_as_direct_reuse`, 22 missing `alte_funktion`/`neue_funktion`, 73 Projekte missing `jahr_fertigstellung`, etc.). After a thorough archive-vs-graph comparison via an Explore subagent, **only 8 entries were applied** because the agent's automatic extraction yielded just 11 high-confidence rows AND 6 of those 11 were misassigned (the agent conflated the new Verbiest-Charleroi split BGs with Verbiest-Karreveld in-situ BGs).
+
+**Operations:** 8 records / 0 errors / 0 rejected.
+
+| Op | Count | Effect |
+|---|---:|---|
+| set_node_properties | 8 | 5 Projekt `jahr_fertigstellung` + 3 Verbiest-split `alte_funktion` + `neue_funktion` (manually backfilled from O.0's preserved `raw_name`) |
+
+### Applied values
+
+**Projekt years (5):**
+| id | jahr_fertigstellung | archive source |
+|---|---:|---|
+| `p_55_great_suffolk_street_london` | 2024 | "Expected in 2024 / Estimated completion September 2024" |
+| `p_biopartner_5_leiden_oegstgeest` | 2021 | "Realisierung 2020–2021; Fertigstellung 2021" |
+| `p_big_dig_house_lexington_massachusetts` | 2006 | "gebaut; Fertigstellung 2006" |
+| `p_bluecity_offices_rotterdam` | 2017 | "eröffnet 31.03.2017; Fertigstellung März 2017" |
+| `p_verbiest_karreveld_brussels` | 2020 | "Verbiest ca. 2020 abgeschlossen" |
+
+**Verbiest split alte/neue_funktion (3 BGs × 2 fields = 6 properties on 3 nodes):**
+| id | alte_funktion | neue_funktion |
+|---|---|---|
+| `bg_reuse_stahl_gelaender_verbiest_charleroi` | "Geländer im Palais des Expositions Charleroi" | "Geländer im Verbiest-Projekt" |
+| `bg_reuse_keramik_boden_verbiest_charleroi` | "Boden-/Wandfliesen im Palais des Expositions Charleroi" | "Boden-/Wandoberflächen im Verbiest-Projekt" |
+| `bg_reuse_naturstein_wand_verbiest_charleroi` | "Natur-/Mauersteine im Palais des Expositions Charleroi" | "Bauteil/Oberfläche im Verbiest-Projekt" |
+
+## Remaining gaps (deferred)
+
+| Gap | Count | Why deferred |
+|---|---:|---|
+| BGs missing `counts_as_direct_reuse` | 43 | Each requires reading the Fallstudie's "Grundregel" / "Begründung" section to make the boolean call. Not mechanical. |
+| BGs missing `alte_funktion` | 19 | Archive BAUTEIL-INVENTAR rows are inconsistently structured across 76 files; agent extraction was unreliable for direct sequential mapping. |
+| BGs missing `neue_funktion` | 19 | Same as alte_funktion. |
+| Projekte missing `jahr_fertigstellung` | 68 (was 73) | 5 high-confidence applied; the other 68 either have ambiguous dates (Phase 1 vs Phase 2, "expected 2024" vs "live"), or the archive doesn't state a year. |
+| Projekte missing `flaeche_m2` | 66 | Many archives skip this; needs targeted research per project. |
+| Projekte missing `note` | 25 | Editorial — no need to fill unless a useful 1-line summary exists. |
+
+These 240+ remaining values are **not blockers** — they're best-effort optional per the original plan. A future Phase P+ session could batch-process them with a more targeted per-archive extraction pass (one BG → one archive page at a time, not bulk batch).
+
+## Verification (all pass)
+
+| Check | Expected | Got |
+|---|---:|---:|
+| Node/rel counts unchanged | 2298 / 16869 | 2298 / 16869 ✓ |
+| 5 Projekt years set | per table | ✓ |
+| 3 Verbiest splits alte+neue_funktion set | 6 props | ✓ |
+
+## Rollback
+
+Single-field property writes. Restore from `_neo4j/review/backups/phase_p_pre_apply/` if needed, or just `REMOVE` the 8 properties.
 
 ---
 
