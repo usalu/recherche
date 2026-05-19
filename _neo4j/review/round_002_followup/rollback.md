@@ -11,15 +11,61 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → … → Phase L → M → N → O.0 → O.a → O.b → P.
+**Apply order so far:** Phase A → … → L → M → N → O.0 → O.a → O.b → P → R.
 
 **Combined effect:**
 
-| | Before A | After R003 | After N | After O.0 | After O | After P |
-|---|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 296 | 2 296 | 2 298 | 2 298 | **2 298** |
-| Relationships | 15 834 | 16 822 | 16 822 | 16 869 | 16 869 | **16 869** |
-| Bauteilgruppen | — | 306 | 306 | 308 | 308 | **308** |
+| | Before A | After R003 | After O | After P | After R |
+|---|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 296 | 2 298 | 2 298 | **2 298** |
+| Relationships | 15 834 | 16 822 | 16 869 | 16 869 | **17 035** |
+| Bauteilgruppen | — | 306 | 308 | 308 | **308** |
+
+---
+
+## Phase R — applied 2026-05-19 (rel-id hygiene + HAT_MATERIALGRUPPE backfill)
+
+**Apply script:** [`_scripts/_apply_phase_r_full.py`](../../../_scripts/_apply_phase_r_full.py) (direct Cypher, not JSONL — too many bulk ops for the patch tool's per-rel planner)
+**Report:** [phase_r_full_report.json](phase_r_full_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_r_pre_apply/`](../backups/phase_r_pre_apply/)
+
+## What landed
+
+A graph-quality audit (`_scripts/_audit_graph_quality.py`) surfaced four orthogonal issues that all pre-dated Phase O:
+
+- **R-4** (parallel-rel triage): 59 cases of two identical rels between the same pair of nodes (all from `ASSOZIIERT_MIT_PROJEKT`, plus a handful of `HAT_AKTEURROLLE` / `GEHÖRT_ZU` / `BELEGT_IN`). All had identical properties → true duplicates → 31 redundant rels deleted (kept one of each group).
+- **R-1** (stale r.id repair): 2523 rels had `r.id` strings that didn't match their actual endpoints. Pattern: earlier Akteur canonicalisations (e.g. `a_cbre` → `cbre`) and rel-type renames (`LIEGT_IN_LAND` → `GEHÖRT_ZU`) updated the nodes/types but left `r.id` pointing at the pre-merge form. Top affected types: HAT_AKTEURROLLE (925), BELEGT_IN (555), BETEILIGT_AN (366), HAT_AKTEURTYP (347), GEHÖRT_ZU (216), ZITIERT_QUELLE (56), ASSOZIIERT_MIT_PROJEKT (47), VERBUNDEN_MIT_AKTEUR (11).
+- **R-2** (missing r.id backfill): 80 rels had `r.id IS NULL` from older intake. Convention: `r_<from-id>__<TYPE>__<to-id>`.
+- **R-3** (HAT_MATERIALGRUPPE backfill): 134 BGs had `NUTZT_MATERIAL` rels but 0 `HAT_MATERIALGRUPPE`. Derived 197 new rels from the canonical Material→Materialgruppe mapping (which is itself many-to-many on Material nodes — e.g. `mat_bitumen` → `{mg_kunststoff, mg_verbundstoff}`).
+
+**Operations:** 2 832 graph writes across 4 bulk Cypher passes.
+
+| Step | Operation | Count | Effect |
+|---|---|---:|---|
+| R-4 | DELETE parallel duplicates | 31 | Net -31 rels |
+| R-1a | REMOVE r.id from stale rels | 2 493 | Clears bad ids; allows R-1b to rewrite cleanly |
+| R-1b + R-2 | SET r.id = canonical where null | 2 573 | 80 originally null + 2 493 cleared in R-1a |
+| R-3 | MERGE HAT_MATERIALGRUPPE | 197 | Net +197 rels |
+
+**Net rel change:** −31 + 197 = +166 (16 869 → 17 035 rels).
+
+## Why direct Cypher, not a JSONL patch
+
+The JSONL patch tool plans each op individually against live state. A 2 523-op set_rel_properties patch would (a) blow up the report files and (b) hit cascading collisions: if rel X has stale id matching rel Y's canonical, the planner sees the collision at plan-time and rejects. The two-pass approach (REMOVE all stale, then SET canonical) avoids that entirely but isn't expressible as planned individual ops.
+
+## Verification (all 0 after live apply)
+
+| Check | Before | After |
+|---|---:|---:|
+| Rels missing r.id | 195 | 0 ✓ |
+| Rels with stale r.id (doesn't match endpoints) | 2 523 | 0 ✓ |
+| BGs with NUTZT_MATERIAL but 0 HAT_MATERIALGRUPPE | 134 | 0 ✓ |
+| Parallel rel pairs (same from-type-to) | 59 | 0 ✓ |
+| Duplicate r.id within same rel type | 0 | 0 ✓ |
+
+## Rollback
+
+Pre-apply backup at `_neo4j/review/backups/phase_r_pre_apply/`. The script is idempotent on dry-run (`python -m _scripts._apply_phase_r_full`) — re-run will report 0 of everything if state is already clean.
 
 ---
 

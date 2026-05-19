@@ -1,0 +1,5467 @@
+{
+  "confirmation_required": "APPLY phase_r.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 17063
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 16869
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-19T19:31:33.004570+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\phase_r.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende__AUS_BAUWERK__bw_bluecity_tropicana_rotterdam"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende",
+        "properties": {},
+        "rel_internal_id": 1152985276281258212,
+        "to": "bw_bluecity_tropicana_rotterdam",
+        "type": "AUS_BAUWERK"
+      },
+      "from": "bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bw_bluecity_tropicana_rotterdam",
+      "type": "AUS_BAUWERK"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial__AUS_BAUWERK__bw_biopartner_gorlaeus_hochhaus"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial",
+        "properties": {},
+        "rel_internal_id": 1152985276281258208,
+        "to": "bw_biopartner_gorlaeus_hochhaus",
+        "type": "AUS_BAUWERK"
+      },
+      "from": "bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bw_biopartner_gorlaeus_hochhaus",
+      "type": "AUS_BAUWERK"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Bellastock__BELEGT_IN__q_ferme_du_rail_paris_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Bellastock",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1164287156303173789,
+        "to": "q_ferme_du_rail_paris_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Bellastock",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_ferme_du_rail_paris_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Bellastock__BELEGT_IN__q_resilience_la_ferme_des_possibles_stains_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Bellastock",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1166538956116859037,
+        "to": "q_resilience_la_ferme_des_possibles_stains_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Bellastock",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_resilience_la_ferme_des_possibles_stains_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Lendager__BELEGT_IN__q_svanen_kindergarten_gladsaxe_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Lendager",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432748,
+        "to": "q_svanen_kindergarten_gladsaxe_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Lendager",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_svanen_kindergarten_gladsaxe_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Lendager__BELEGT_IN__q_trae_high_rise_aarhus_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Lendager",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862117996,
+        "to": "q_trae_high_rise_aarhus_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Lendager",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_trae_high_rise_aarhus_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Lendager__BELEGT_IN__q_upcycle_studios_copenhagen_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Lendager",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1159783556675803244,
+        "to": "q_upcycle_studios_copenhagen_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Lendager",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_upcycle_studios_copenhagen_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Rotor__BELEGT_IN__q_charles_malis_molenbeek_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1159783556675803523,
+        "to": "q_charles_malis_molenbeek_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Rotor",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_charles_malis_molenbeek_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Rotor__BELEGT_IN__q_multi_brussels_reuse_in_multi_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1162035356489488771,
+        "to": "q_multi_brussels_reuse_in_multi_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Rotor",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_multi_brussels_reuse_in_multi_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Rotor__BELEGT_IN__q_recypark_demets_anderlecht_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1164287156303174019,
+        "to": "q_recypark_demets_anderlecht_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Rotor",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_recypark_demets_anderlecht_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Rotor__BELEGT_IN__q_zinneke_feder_masui4ever_brussels_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1166538956116859267,
+        "to": "q_zinneke_feder_masui4ever_brussels_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Rotor",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_zinneke_feder_masui4ever_brussels_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Superuse_Studios__BELEGT_IN__q_bluecity_offices_rotterdam_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Superuse_Studios",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432684,
+        "to": "q_bluecity_offices_rotterdam_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Superuse_Studios",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_bluecity_offices_rotterdam_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_Superuse_Studios__BELEGT_IN__q_woongroep_boschgaard_den_bosch_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "Superuse_Studios",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862117932,
+        "to": "q_woongroep_boschgaard_den_bosch_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "Superuse_Studios",
+      "line": 13,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_woongroep_boschgaard_den_bosch_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_akt_ii__BELEGT_IN__q_55_great_suffolk_street_london_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "akt_ii",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432192,
+        "to": "q_55_great_suffolk_street_london_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "akt_ii",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_55_great_suffolk_street_london_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_arup__BELEGT_IN__q_bedzed_london_hackbridge_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "arup",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1159783556675802144,
+        "to": "q_bedzed_london_hackbridge_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "arup",
+      "line": 15,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_bedzed_london_hackbridge_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_bioregional__BELEGT_IN__q_bedzed_london_hackbridge_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432510,
+        "to": "q_bedzed_london_hackbridge_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "bioregional",
+      "line": 16,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_bedzed_london_hackbridge_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_bischof_foehn_architektur__BELEGT_IN__q_kindergarten_moeoeslistrasse_manegg_zuerich_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "bischof_foehn_architektur",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432792,
+        "to": "q_kindergarten_moeoeslistrasse_manegg_zuerich_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "bischof_foehn_architektur",
+      "line": 17,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_kindergarten_moeoeslistrasse_manegg_zuerich_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_bureau_sla__BELEGT_IN__q_peoples_pavilion_eindhoven_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "bureau_sla",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432888,
+        "to": "q_peoples_pavilion_eindhoven_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "bureau_sla",
+      "line": 18,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_peoples_pavilion_eindhoven_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_cleveland_steel_tubes__BELEGT_IN__q_55_great_suffolk_street_london_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1159783556675802215,
+        "to": "q_55_great_suffolk_street_london_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 19,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_55_great_suffolk_street_london_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_cleveland_steel_tubes__BELEGT_IN__q_brent_cross_town_primary_substation_london_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1162035356489487463,
+        "to": "q_brent_cross_town_primary_substation_london_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 20,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_brent_cross_town_primary_substation_london_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_concular__BELEGT_IN__q_awm_muenster_circular_office_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1159783556675803565,
+        "to": "q_awm_muenster_circular_office_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "concular",
+      "line": 21,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_awm_muenster_circular_office_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_conix_rdbm__BELEGT_IN__q_multi_brussels_reuse_in_multi_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "conix_rdbm",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432889,
+        "to": "q_multi_brussels_reuse_in_multi_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "conix_rdbm",
+      "line": 22,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_multi_brussels_reuse_in_multi_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_die_zusammenarbeiter__BELEGT_IN__q_crclr_house_impact_hub_berlin_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "die_zusammenarbeiter",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432683,
+        "to": "q_crclr_house_impact_hub_berlin_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "die_zusammenarbeiter",
+      "line": 23,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_crclr_house_impact_hub_berlin_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_die_zusammenarbeiter__BELEGT_IN__q_impact_hub_berlin_crclr_fitout_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "die_zusammenarbeiter",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862117931,
+        "to": "q_impact_hub_berlin_crclr_fitout_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "die_zusammenarbeiter",
+      "line": 24,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_impact_hub_berlin_crclr_fitout_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_duncan_baker_brown__BELEGT_IN__q_brighton_waste_house_brighton_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "duncan_baker_brown",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432817,
+        "to": "q_brighton_waste_house_brighton_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "duncan_baker_brown",
+      "line": 25,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_brighton_waste_house_brighton_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_encore_heureux__BELEGT_IN__q_circular_pavilion_paris_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "encore_heureux",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432890,
+        "to": "q_circular_pavilion_paris_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "encore_heureux",
+      "line": 26,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_circular_pavilion_paris_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_encore_heureux__BELEGT_IN__q_grande_halle_de_colombelles_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "encore_heureux",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862118138,
+        "to": "q_grande_halle_de_colombelles_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "encore_heureux",
+      "line": 27,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_grande_halle_de_colombelles_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_fabrix__BELEGT_IN__q_55_great_suffolk_street_london_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "fabrix",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432478,
+        "to": "q_55_great_suffolk_street_london_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "fabrix",
+      "line": 28,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_55_great_suffolk_street_london_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_grand_huit__BELEGT_IN__q_ferme_du_rail_paris_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "grand_huit",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432793,
+        "to": "q_ferme_du_rail_paris_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "grand_huit",
+      "line": 29,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_ferme_du_rail_paris_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_hawkins_brown__BELEGT_IN__q_55_great_suffolk_street_london_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "hawkins_brown",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432476,
+        "to": "q_55_great_suffolk_street_london_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "hawkins_brown",
+      "line": 30,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_55_great_suffolk_street_london_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_jan_jongert__BELEGT_IN__q_villa_welpeloo_enschede_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "jan_jongert",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432708,
+        "to": "q_villa_welpeloo_enschede_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "jan_jongert",
+      "line": 31,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_villa_welpeloo_enschede_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_jeroen_bergsma__BELEGT_IN__q_villa_welpeloo_enschede_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "jeroen_bergsma",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432770,
+        "to": "q_villa_welpeloo_enschede_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "jeroen_bergsma",
+      "line": 32,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_villa_welpeloo_enschede_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_lxsy_architektur__BELEGT_IN__q_crclr_house_impact_hub_berlin_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "lxsy_architektur",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432887,
+        "to": "q_crclr_house_impact_hub_berlin_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "lxsy_architektur",
+      "line": 33,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_crclr_house_impact_hub_berlin_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_lxsy_architektur__BELEGT_IN__q_impact_hub_berlin_crclr_fitout_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "lxsy_architektur",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862118135,
+        "to": "q_impact_hub_berlin_crclr_fitout_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "lxsy_architektur",
+      "line": 34,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_impact_hub_berlin_crclr_fitout_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_new_horizon__BELEGT_IN__q_peoples_pavilion_eindhoven_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "new_horizon",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048433073,
+        "to": "q_peoples_pavilion_eindhoven_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "new_horizon",
+      "line": 35,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_peoples_pavilion_eindhoven_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_ouest_architecture__BELEGT_IN__q_zinneke_feder_masui4ever_brussels_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "ouest_architecture",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432843,
+        "to": "q_zinneke_feder_masui4ever_brussels_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "ouest_architecture",
+      "line": 36,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_zinneke_feder_masui4ever_brussels_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_overtreders_w__BELEGT_IN__q_peoples_pavilion_eindhoven_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "overtreders_w",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432886,
+        "to": "q_peoples_pavilion_eindhoven_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "overtreders_w",
+      "line": 37,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_peoples_pavilion_eindhoven_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_peabody_trust__BELEGT_IN__q_bedzed_london_hackbridge_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "peabody_trust",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432511,
+        "to": "q_bedzed_london_hackbridge_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "peabody_trust",
+      "line": 38,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_bedzed_london_hackbridge_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_petra_jablonicka__BELEGT_IN__q_awm_muenster_circular_office_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "petra_jablonicka",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432945,
+        "to": "q_awm_muenster_circular_office_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "petra_jablonicka",
+      "line": 39,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_awm_muenster_circular_office_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_pihlmann_architects__BELEGT_IN__q_thoravej_29_copenhagen_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "pihlmann_architects",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432841,
+        "to": "q_thoravej_29_copenhagen_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "pihlmann_architects",
+      "line": 40,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_thoravej_29_copenhagen_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_rotordc__BELEGT_IN__q_chiro_d_itterbeek_dilbeek_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048433028,
+        "to": "q_chiro_d_itterbeek_dilbeek_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "rotordc",
+      "line": 41,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_chiro_d_itterbeek_dilbeek_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_rotordc__BELEGT_IN__q_multi_brussels_reuse_in_multi_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862118276,
+        "to": "q_multi_brussels_reuse_in_multi_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "rotordc",
+      "line": 42,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_multi_brussels_reuse_in_multi_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_satu_huuhka__BELEGT_IN__q_lokomotion_technology_centre_mini_pilot_tampere_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "satu_huuhka",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432969,
+        "to": "q_lokomotion_technology_centre_mini_pilot_tampere_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "satu_huuhka",
+      "line": 43,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_lokomotion_technology_centre_mini_pilot_tampere_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_sven_urselmann__BELEGT_IN__q_awm_muenster_circular_office_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "sven_urselmann",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432948,
+        "to": "q_awm_muenster_circular_office_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "sven_urselmann",
+      "line": 44,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_awm_muenster_circular_office_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_symmetrys__BELEGT_IN__q_55_great_suffolk_street_london_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "symmetrys",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862117441,
+        "to": "q_55_great_suffolk_street_london_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "symmetrys",
+      "line": 45,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_55_great_suffolk_street_london_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_trnsfrm_eg__BELEGT_IN__q_crclr_house_impact_hub_berlin_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432682,
+        "to": "q_crclr_house_impact_hub_berlin_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "trnsfrm_eg",
+      "line": 46,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_crclr_house_impact_hub_berlin_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_trnsfrm_eg__BELEGT_IN__q_impact_hub_berlin_crclr_fitout_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862117930,
+        "to": "q_impact_hub_berlin_crclr_fitout_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "trnsfrm_eg",
+      "line": 47,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_impact_hub_berlin_crclr_fitout_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_university_of_brighton__BELEGT_IN__q_brighton_waste_house_brighton_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "university_of_brighton",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432795,
+        "to": "q_brighton_waste_house_brighton_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "university_of_brighton",
+      "line": 48,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_brighton_waste_house_brighton_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_urselmann_interior__BELEGT_IN__q_awm_muenster_circular_office_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "urselmann_interior",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432930,
+        "to": "q_awm_muenster_circular_office_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "urselmann_interior",
+      "line": 49,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_awm_muenster_circular_office_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_zirkular__BELEGT_IN__q_elys_kultur_gewerbehaus_basel_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "zirkular",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1155279957048432681,
+        "to": "q_elys_kultur_gewerbehaus_basel_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "zirkular",
+      "line": 50,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_elys_kultur_gewerbehaus_basel_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "datenqualitaet": "Belegt",
+        "id": "r_zirkular__BELEGT_IN__q_grubenstrasse_29_werkhof_29_zuerich_md"
+      },
+      "before": {
+        "count": 1,
+        "from": "zirkular",
+        "properties": {
+          "datenqualitaet": "Belegt"
+        },
+        "rel_internal_id": 1157531756862117929,
+        "to": "q_grubenstrasse_29_werkhof_29_zuerich_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "zirkular",
+      "line": 51,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "q_grubenstrasse_29_werkhof_29_zuerich_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Bellastock__BETEILIGT_AN__p_ferme_du_rail_paris"
+      },
+      "before": {
+        "count": 1,
+        "from": "Bellastock",
+        "properties": {},
+        "rel_internal_id": 1153022659676608669,
+        "to": "p_ferme_du_rail_paris",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Bellastock",
+      "line": 52,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_ferme_du_rail_paris",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Bellastock__BETEILIGT_AN__p_resilience_la_ferme_des_possibles_stains",
+        "rolle_text": "ar_reuse_beratung, ar_forschung_dokumentation"
+      },
+      "before": {
+        "count": 1,
+        "from": "Bellastock",
+        "properties": {
+          "rolle_text": "ar_reuse_beratung, ar_forschung_dokumentation"
+        },
+        "rel_internal_id": 1155274459490293917,
+        "to": "p_resilience_la_ferme_des_possibles_stains",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Bellastock",
+      "line": 53,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_resilience_la_ferme_des_possibles_stains",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Lendager__BETEILIGT_AN__p_svanen_kindergarten_gladsaxe"
+      },
+      "before": {
+        "count": 1,
+        "from": "Lendager",
+        "properties": {},
+        "rel_internal_id": 1153022659676608620,
+        "to": "p_svanen_kindergarten_gladsaxe",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Lendager",
+      "line": 54,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_svanen_kindergarten_gladsaxe",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Lendager__BETEILIGT_AN__p_trae_high_rise_aarhus"
+      },
+      "before": {
+        "count": 1,
+        "from": "Lendager",
+        "properties": {},
+        "rel_internal_id": 1155274459490293868,
+        "to": "p_trae_high_rise_aarhus",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Lendager",
+      "line": 55,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_trae_high_rise_aarhus",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Lendager__BETEILIGT_AN__p_upcycle_studios_copenhagen"
+      },
+      "before": {
+        "count": 1,
+        "from": "Lendager",
+        "properties": {},
+        "rel_internal_id": 1157526259303979116,
+        "to": "p_upcycle_studios_copenhagen",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Lendager",
+      "line": 56,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_upcycle_studios_copenhagen",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Rotor__BETEILIGT_AN__p_charles_malis_molenbeek"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {},
+        "rel_internal_id": 1153022659676608899,
+        "to": "p_charles_malis_molenbeek",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Rotor",
+      "line": 57,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_charles_malis_molenbeek",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Rotor__BETEILIGT_AN__p_multi_brussels_reuse_in_multi"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {},
+        "rel_internal_id": 1155274459490294147,
+        "to": "p_multi_brussels_reuse_in_multi",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Rotor",
+      "line": 58,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_multi_brussels_reuse_in_multi",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Rotor__BETEILIGT_AN__p_recypark_demets_anderlecht",
+        "rolle_text": "ar_reuse_beratung"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "rolle_text": "ar_reuse_beratung"
+        },
+        "rel_internal_id": 1157526259303979395,
+        "to": "p_recypark_demets_anderlecht",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Rotor",
+      "line": 59,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_recypark_demets_anderlecht",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Rotor__BETEILIGT_AN__p_zinneke_feder_masui4ever_brussels"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {},
+        "rel_internal_id": 1159778059117664643,
+        "to": "p_zinneke_feder_masui4ever_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Rotor",
+      "line": 60,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_zinneke_feder_masui4ever_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Superuse_Studios__BETEILIGT_AN__p_bluecity_offices_rotterdam"
+      },
+      "before": {
+        "count": 1,
+        "from": "Superuse_Studios",
+        "properties": {},
+        "rel_internal_id": 1153022659676608556,
+        "to": "p_bluecity_offices_rotterdam",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Superuse_Studios",
+      "line": 61,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_bluecity_offices_rotterdam",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_Superuse_Studios__BETEILIGT_AN__p_woongroep_boschgaard_den_bosch"
+      },
+      "before": {
+        "count": 1,
+        "from": "Superuse_Studios",
+        "properties": {},
+        "rel_internal_id": 1155274459490293804,
+        "to": "p_woongroep_boschgaard_den_bosch",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Superuse_Studios",
+      "line": 62,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_woongroep_boschgaard_den_bosch",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_akt_ii__BETEILIGT_AN__bg_reuse_stahl_mehrere_55gss_external_core"
+      },
+      "before": {
+        "count": 1,
+        "from": "akt_ii",
+        "properties": {},
+        "rel_internal_id": 6924385582151893195,
+        "to": "bg_reuse_stahl_mehrere_55gss_external_core",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "akt_ii",
+      "line": 63,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_reuse_stahl_mehrere_55gss_external_core",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_akt_ii__BETEILIGT_AN__p_55_great_suffolk_street_london"
+      },
+      "before": {
+        "count": 1,
+        "from": "akt_ii",
+        "properties": {},
+        "rel_internal_id": 1155274459490293312,
+        "to": "p_55_great_suffolk_street_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "akt_ii",
+      "line": 64,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_55_great_suffolk_street_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_arup__BETEILIGT_AN__p_bedzed_london_hackbridge"
+      },
+      "before": {
+        "count": 1,
+        "from": "arup",
+        "properties": {},
+        "rel_internal_id": 1159778059117663264,
+        "to": "p_bedzed_london_hackbridge",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "arup",
+      "line": 65,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_bedzed_london_hackbridge",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_bioregional__BETEILIGT_AN__bg_reuse_stahl_mehrere_bedzed_structural"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {},
+        "rel_internal_id": 6919881982524522710,
+        "to": "bg_reuse_stahl_mehrere_bedzed_structural",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bioregional",
+      "line": 66,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_reuse_stahl_mehrere_bedzed_structural",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_bioregional__BETEILIGT_AN__p_bedzed_london_hackbridge"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {},
+        "rel_internal_id": 1155274459490293630,
+        "to": "p_bedzed_london_hackbridge",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bioregional",
+      "line": 67,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_bedzed_london_hackbridge",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_bischof_foehn_architektur__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      },
+      "before": {
+        "count": 1,
+        "from": "bischof_foehn_architektur",
+        "properties": {},
+        "rel_internal_id": 1153022659676608664,
+        "to": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bischof_foehn_architektur",
+      "line": 68,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_bureau_sla__BETEILIGT_AN__p_peoples_pavilion_eindhoven"
+      },
+      "before": {
+        "count": 1,
+        "from": "bureau_sla",
+        "properties": {},
+        "rel_internal_id": 1153022659676608760,
+        "to": "p_peoples_pavilion_eindhoven",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bureau_sla",
+      "line": 69,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_peoples_pavilion_eindhoven",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_cleveland_steel_tubes__BETEILIGT_AN__bg_reuse_stahl_mehrere_55gss_external_core"
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {},
+        "rel_internal_id": 6922133782338207947,
+        "to": "bg_reuse_stahl_mehrere_55gss_external_core",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 70,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_reuse_stahl_mehrere_55gss_external_core",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_cleveland_steel_tubes__BETEILIGT_AN__p_55_great_suffolk_street_london"
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {},
+        "rel_internal_id": 1159778059117663335,
+        "to": "p_55_great_suffolk_street_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 71,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_55_great_suffolk_street_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_cleveland_steel_tubes__BETEILIGT_AN__p_brent_cross_town_primary_substation_london"
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {},
+        "rel_internal_id": 1164281658745033831,
+        "to": "p_brent_cross_town_primary_substation_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 72,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_brent_cross_town_primary_substation_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__BETEILIGT_AN__bg_reuse_glas_mehrere_awm_partitions_doors"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 6917630182710837457,
+        "to": "bg_reuse_glas_mehrere_awm_partitions_doors",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "concular",
+      "line": 73,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_reuse_glas_mehrere_awm_partitions_doors",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__BETEILIGT_AN__bg_reuse_kunststoff_wand_awm_wc_partitions"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 6917630182710837458,
+        "to": "bg_reuse_kunststoff_wand_awm_wc_partitions",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "concular",
+      "line": 74,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_reuse_kunststoff_wand_awm_wc_partitions",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__BETEILIGT_AN__p_awm_muenster_circular_office"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 1155274459490294189,
+        "to": "p_awm_muenster_circular_office",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "concular",
+      "line": 75,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_awm_muenster_circular_office",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 1153022659676608941,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "concular",
+      "line": 76,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_conix_rdbm__BETEILIGT_AN__p_multi_brussels_reuse_in_multi"
+      },
+      "before": {
+        "count": 1,
+        "from": "conix_rdbm",
+        "properties": {},
+        "rel_internal_id": 1153022659676608761,
+        "to": "p_multi_brussels_reuse_in_multi",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "conix_rdbm",
+      "line": 77,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_multi_brussels_reuse_in_multi",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_die_zusammenarbeiter__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+      },
+      "before": {
+        "count": 1,
+        "from": "die_zusammenarbeiter",
+        "properties": {},
+        "rel_internal_id": 1153022659676608555,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "die_zusammenarbeiter",
+      "line": 78,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_die_zusammenarbeiter__BETEILIGT_AN__p_impact_hub_berlin_crclr_fitout"
+      },
+      "before": {
+        "count": 1,
+        "from": "die_zusammenarbeiter",
+        "properties": {},
+        "rel_internal_id": 1155274459490293803,
+        "to": "p_impact_hub_berlin_crclr_fitout",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "die_zusammenarbeiter",
+      "line": 79,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_impact_hub_berlin_crclr_fitout",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_duncan_baker_brown__BETEILIGT_AN__p_brighton_waste_house_brighton"
+      },
+      "before": {
+        "count": 1,
+        "from": "duncan_baker_brown",
+        "properties": {},
+        "rel_internal_id": 1153022659676608689,
+        "to": "p_brighton_waste_house_brighton",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "duncan_baker_brown",
+      "line": 80,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_brighton_waste_house_brighton",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_encore_heureux__BETEILIGT_AN__p_circular_pavilion_paris"
+      },
+      "before": {
+        "count": 1,
+        "from": "encore_heureux",
+        "properties": {},
+        "rel_internal_id": 1153022659676608762,
+        "to": "p_circular_pavilion_paris",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "encore_heureux",
+      "line": 81,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_circular_pavilion_paris",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_encore_heureux__BETEILIGT_AN__p_grande_halle_de_colombelles"
+      },
+      "before": {
+        "count": 1,
+        "from": "encore_heureux",
+        "properties": {},
+        "rel_internal_id": 1155274459490294010,
+        "to": "p_grande_halle_de_colombelles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "encore_heureux",
+      "line": 82,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_grande_halle_de_colombelles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_fabrix__BETEILIGT_AN__p_55_great_suffolk_street_london"
+      },
+      "before": {
+        "count": 1,
+        "from": "fabrix",
+        "properties": {},
+        "rel_internal_id": 1155274459490293598,
+        "to": "p_55_great_suffolk_street_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "fabrix",
+      "line": 83,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_55_great_suffolk_street_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_grand_huit__BETEILIGT_AN__p_ferme_du_rail_paris"
+      },
+      "before": {
+        "count": 1,
+        "from": "grand_huit",
+        "properties": {},
+        "rel_internal_id": 1153022659676608665,
+        "to": "p_ferme_du_rail_paris",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "grand_huit",
+      "line": 84,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_ferme_du_rail_paris",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_hawkins_brown__BETEILIGT_AN__p_55_great_suffolk_street_london"
+      },
+      "before": {
+        "count": 1,
+        "from": "hawkins_brown",
+        "properties": {},
+        "rel_internal_id": 1155274459490293596,
+        "to": "p_55_great_suffolk_street_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "hawkins_brown",
+      "line": 85,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_55_great_suffolk_street_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_jan_jongert__BETEILIGT_AN__p_villa_welpeloo_enschede"
+      },
+      "before": {
+        "count": 1,
+        "from": "jan_jongert",
+        "properties": {},
+        "rel_internal_id": 1153022659676608580,
+        "to": "p_villa_welpeloo_enschede",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "jan_jongert",
+      "line": 86,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_villa_welpeloo_enschede",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_jeroen_bergsma__BETEILIGT_AN__p_villa_welpeloo_enschede"
+      },
+      "before": {
+        "count": 1,
+        "from": "jeroen_bergsma",
+        "properties": {},
+        "rel_internal_id": 1153022659676608642,
+        "to": "p_villa_welpeloo_enschede",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "jeroen_bergsma",
+      "line": 87,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_villa_welpeloo_enschede",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_lxsy_architektur__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+      },
+      "before": {
+        "count": 1,
+        "from": "lxsy_architektur",
+        "properties": {},
+        "rel_internal_id": 1153022659676608759,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "lxsy_architektur",
+      "line": 88,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_lxsy_architektur__BETEILIGT_AN__p_impact_hub_berlin_crclr_fitout"
+      },
+      "before": {
+        "count": 1,
+        "from": "lxsy_architektur",
+        "properties": {},
+        "rel_internal_id": 1155274459490294007,
+        "to": "p_impact_hub_berlin_crclr_fitout",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "lxsy_architektur",
+      "line": 89,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_impact_hub_berlin_crclr_fitout",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_new_horizon__BETEILIGT_AN__p_peoples_pavilion_eindhoven"
+      },
+      "before": {
+        "count": 1,
+        "from": "new_horizon",
+        "properties": {},
+        "rel_internal_id": 1153022659676608945,
+        "to": "p_peoples_pavilion_eindhoven",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "new_horizon",
+      "line": 90,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_peoples_pavilion_eindhoven",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_ouest_architecture__BETEILIGT_AN__p_zinneke_feder_masui4ever_brussels"
+      },
+      "before": {
+        "count": 1,
+        "from": "ouest_architecture",
+        "properties": {},
+        "rel_internal_id": 1153022659676608715,
+        "to": "p_zinneke_feder_masui4ever_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "ouest_architecture",
+      "line": 91,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_zinneke_feder_masui4ever_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_overtreders_w__BETEILIGT_AN__p_peoples_pavilion_eindhoven"
+      },
+      "before": {
+        "count": 1,
+        "from": "overtreders_w",
+        "properties": {},
+        "rel_internal_id": 1153022659676608758,
+        "to": "p_peoples_pavilion_eindhoven",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "overtreders_w",
+      "line": 92,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_peoples_pavilion_eindhoven",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_peabody_trust__BETEILIGT_AN__p_bedzed_london_hackbridge"
+      },
+      "before": {
+        "count": 1,
+        "from": "peabody_trust",
+        "properties": {},
+        "rel_internal_id": 1155274459490293631,
+        "to": "p_bedzed_london_hackbridge",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "peabody_trust",
+      "line": 93,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_bedzed_london_hackbridge",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_petra_jablonicka__BETEILIGT_AN__p_awm_muenster_circular_office"
+      },
+      "before": {
+        "count": 1,
+        "from": "petra_jablonicka",
+        "properties": {},
+        "rel_internal_id": 1153022659676608817,
+        "to": "p_awm_muenster_circular_office",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "petra_jablonicka",
+      "line": 94,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_awm_muenster_circular_office",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_pihlmann_architects__BETEILIGT_AN__p_thoravej_29_copenhagen"
+      },
+      "before": {
+        "count": 1,
+        "from": "pihlmann_architects",
+        "properties": {},
+        "rel_internal_id": 1153022659676608713,
+        "to": "p_thoravej_29_copenhagen",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "pihlmann_architects",
+      "line": 95,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_thoravej_29_copenhagen",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_rotordc__BETEILIGT_AN__p_chiro_d_itterbeek_dilbeek"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {},
+        "rel_internal_id": 1153022659676608900,
+        "to": "p_chiro_d_itterbeek_dilbeek",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 96,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_chiro_d_itterbeek_dilbeek",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_rotordc__BETEILIGT_AN__p_multi_brussels_reuse_in_multi"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {},
+        "rel_internal_id": 1155274459490294148,
+        "to": "p_multi_brussels_reuse_in_multi",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 97,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_multi_brussels_reuse_in_multi",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_satu_huuhka__BETEILIGT_AN__p_lokomotion_technology_centre_mini_pilot_tampere"
+      },
+      "before": {
+        "count": 1,
+        "from": "satu_huuhka",
+        "properties": {},
+        "rel_internal_id": 1153022659676608841,
+        "to": "p_lokomotion_technology_centre_mini_pilot_tampere",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "satu_huuhka",
+      "line": 98,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_lokomotion_technology_centre_mini_pilot_tampere",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_stadt_zuerich__BETEILIGT_AN__p_juch_areal_recyclingzentrum_zuerich"
+      },
+      "before": {
+        "count": 1,
+        "from": "stadt_zuerich",
+        "properties": {},
+        "rel_internal_id": 1153022659676607418,
+        "to": "p_juch_areal_recyclingzentrum_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "stadt_zuerich",
+      "line": 99,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_juch_areal_recyclingzentrum_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_sven_urselmann__BETEILIGT_AN__p_awm_muenster_circular_office"
+      },
+      "before": {
+        "count": 1,
+        "from": "sven_urselmann",
+        "properties": {},
+        "rel_internal_id": 1153022659676608820,
+        "to": "p_awm_muenster_circular_office",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "sven_urselmann",
+      "line": 100,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_awm_muenster_circular_office",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_symmetrys__BETEILIGT_AN__p_55_great_suffolk_street_london"
+      },
+      "before": {
+        "count": 1,
+        "from": "symmetrys",
+        "properties": {},
+        "rel_internal_id": 1157526259303978561,
+        "to": "p_55_great_suffolk_street_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "symmetrys",
+      "line": 101,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_55_great_suffolk_street_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_trnsfrm_eg__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+      },
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {},
+        "rel_internal_id": 1153022659676608554,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "trnsfrm_eg",
+      "line": 102,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_trnsfrm_eg__BETEILIGT_AN__p_impact_hub_berlin_crclr_fitout"
+      },
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {},
+        "rel_internal_id": 1155274459490293802,
+        "to": "p_impact_hub_berlin_crclr_fitout",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "trnsfrm_eg",
+      "line": 103,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_impact_hub_berlin_crclr_fitout",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_university_of_brighton__BETEILIGT_AN__p_brighton_waste_house_brighton"
+      },
+      "before": {
+        "count": 1,
+        "from": "university_of_brighton",
+        "properties": {},
+        "rel_internal_id": 1153022659676608667,
+        "to": "p_brighton_waste_house_brighton",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "university_of_brighton",
+      "line": 104,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_brighton_waste_house_brighton",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_urselmann_interior__BETEILIGT_AN__p_awm_muenster_circular_office"
+      },
+      "before": {
+        "count": 1,
+        "from": "urselmann_interior",
+        "properties": {},
+        "rel_internal_id": 1153022659676608802,
+        "to": "p_awm_muenster_circular_office",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "urselmann_interior",
+      "line": 105,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_awm_muenster_circular_office",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_zirkular__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+      },
+      "before": {
+        "count": 1,
+        "from": "zirkular",
+        "properties": {},
+        "rel_internal_id": 1153022659676608553,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "zirkular",
+      "line": 106,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_zirkular__BETEILIGT_AN__p_grubenstrasse_29_werkhof_29_zuerich"
+      },
+      "before": {
+        "count": 1,
+        "from": "zirkular",
+        "properties": {},
+        "rel_internal_id": 1155274459490293801,
+        "to": "p_grubenstrasse_29_werkhof_29_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "zirkular",
+      "line": 107,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "id": "r_akt_ii__HAT_AKTEURROLLE__ar_reuse_beratung"
+      },
+      "before": {
+        "count": 1,
+        "from": "akt_ii",
+        "properties": {},
+        "rel_internal_id": 6922134881849841693,
+        "to": "ar_reuse_beratung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "akt_ii",
+      "line": 108,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_reuse_beratung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_akt_ii__HAT_AKTEURROLLE__ar_tragwerksplanung"
+      },
+      "before": {
+        "count": 1,
+        "from": "akt_ii",
+        "properties": {},
+        "rel_internal_id": 6919883082036156449,
+        "to": "ar_tragwerksplanung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "akt_ii",
+      "line": 109,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_tragwerksplanung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_arup__HAT_AKTEURROLLE__ar_unbestimmt"
+      },
+      "before": {
+        "count": 1,
+        "from": "arup",
+        "properties": {},
+        "rel_internal_id": 1157527358815605792,
+        "to": "ar_unbestimmt",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "arup",
+      "line": 110,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_unbestimmt",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bioregional__HAT_AKTEURROLLE__ar_forschung_dokumentation"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {},
+        "rel_internal_id": 1157527358815606654,
+        "to": "ar_forschung_dokumentation",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "bioregional",
+      "line": 111,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_forschung_dokumentation",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bioregional__HAT_AKTEURROLLE__ar_nachhaltigkeitsberatung"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {},
+        "rel_internal_id": 6922134881849841689,
+        "to": "ar_nachhaltigkeitsberatung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "bioregional",
+      "line": 112,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_nachhaltigkeitsberatung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bioregional__HAT_AKTEURROLLE__ar_reuse_beratung"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {},
+        "rel_internal_id": 6924386681663526941,
+        "to": "ar_reuse_beratung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "bioregional",
+      "line": 113,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_reuse_beratung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_cleveland_steel_tubes__HAT_AKTEURROLLE__ar_fachplanung_nachweis"
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {},
+        "rel_internal_id": 1159779158629291111,
+        "to": "ar_fachplanung_nachweis",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 114,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_fachplanung_nachweis",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__HAT_AKTEURROLLE__ar_nachhaltigkeitsberatung"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 6924386681663526937,
+        "to": "ar_nachhaltigkeitsberatung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "concular",
+      "line": 115,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_nachhaltigkeitsberatung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__HAT_AKTEURROLLE__ar_reuse_beratung"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 6926638481477212189,
+        "to": "ar_reuse_beratung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "concular",
+      "line": 116,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_reuse_beratung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_die_zusammenarbeiter__HAT_AKTEURROLLE__ar_entwurf_planung",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "die_zusammenarbeiter",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1155275559001921579,
+        "to": "ar_entwurf_planung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "die_zusammenarbeiter",
+      "line": 117,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_entwurf_planung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_encore_heureux__HAT_AKTEURROLLE__ar_projektmanagement_koordination",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "encore_heureux",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1159779158629292282,
+        "to": "ar_projektmanagement_koordination",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "encore_heureux",
+      "line": 118,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_projektmanagement_koordination",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_fabrix__HAT_AKTEURROLLE__ar_bauherr_auftraggeber"
+      },
+      "before": {
+        "count": 1,
+        "from": "fabrix",
+        "properties": {},
+        "rel_internal_id": 1155275559001921374,
+        "to": "ar_bauherr_auftraggeber",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "fabrix",
+      "line": 119,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_bauherr_auftraggeber",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_fabrix__HAT_AKTEURROLLE__ar_betrieb_nutzung"
+      },
+      "before": {
+        "count": 1,
+        "from": "fabrix",
+        "properties": {},
+        "rel_internal_id": 1159779158629291870,
+        "to": "ar_betrieb_nutzung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "fabrix",
+      "line": 120,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_betrieb_nutzung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_peabody_trust__HAT_AKTEURROLLE__ar_bauherr_auftraggeber"
+      },
+      "before": {
+        "count": 1,
+        "from": "peabody_trust",
+        "properties": {},
+        "rel_internal_id": 1155275559001921407,
+        "to": "ar_bauherr_auftraggeber",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "peabody_trust",
+      "line": 121,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_bauherr_auftraggeber",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_rotor_dc__HAT_AKTEURROLLE__ar_betrieb_nutzung",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotor_dc",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1157527358815606121,
+        "to": "ar_betrieb_nutzung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "rotor_dc",
+      "line": 122,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_betrieb_nutzung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1164282758256662916,
+        "to": "ar_reuse_zirkularitaetsberatung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "rotordc",
+      "line": 123,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_reuse_zirkularitaetsberatung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_stadt_zuerich__HAT_AKTEURROLLE__ar_bauherr_auftraggeber",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "stadt_zuerich",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1153023759188235194,
+        "to": "ar_bauherr_auftraggeber",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "stadt_zuerich",
+      "line": 124,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_bauherr_auftraggeber",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_stadt_zuerich__HAT_AKTEURROLLE__ar_oeffentliche_hand_foerderung",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "stadt_zuerich",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1155275559001920442,
+        "to": "ar_oeffentliche_hand_foerderung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "stadt_zuerich",
+      "line": 125,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_oeffentliche_hand_foerderung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_symmetrys__HAT_AKTEURROLLE__ar_tragwerksplanung"
+      },
+      "before": {
+        "count": 1,
+        "from": "symmetrys",
+        "properties": {},
+        "rel_internal_id": 6922134881849841697,
+        "to": "ar_tragwerksplanung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "symmetrys",
+      "line": 126,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_tragwerksplanung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_trnsfrm_eg__HAT_AKTEURROLLE__ar_betrieb_nutzung",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1159779158629292074,
+        "to": "ar_betrieb_nutzung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "trnsfrm_eg",
+      "line": 127,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_betrieb_nutzung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_trnsfrm_eg__HAT_AKTEURROLLE__ar_entwurf_planung",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1157527358815606826,
+        "to": "ar_entwurf_planung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "trnsfrm_eg",
+      "line": 128,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_entwurf_planung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_university_of_brighton__HAT_AKTEURROLLE__ar_bauherr_auftraggeber",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "university_of_brighton",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1155275559001921691,
+        "to": "ar_bauherr_auftraggeber",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "university_of_brighton",
+      "line": 129,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_bauherr_auftraggeber",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_university_of_brighton__HAT_AKTEURROLLE__ar_betrieb_nutzung",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "university_of_brighton",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1157527358815606939,
+        "to": "ar_betrieb_nutzung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "university_of_brighton",
+      "line": 130,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_betrieb_nutzung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_urselmann_interior__HAT_AKTEURROLLE__ar_bauausfuehrung_fertigung"
+      },
+      "before": {
+        "count": 1,
+        "from": "urselmann_interior",
+        "properties": {},
+        "rel_internal_id": 1164282758256662818,
+        "to": "ar_bauausfuehrung_fertigung",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "urselmann_interior",
+      "line": 131,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_bauausfuehrung_fertigung",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_zirkular__HAT_AKTEURROLLE__ar_materiallieferung_markt",
+        "scope": "expertise_profile"
+      },
+      "before": {
+        "count": 1,
+        "from": "zirkular",
+        "properties": {
+          "scope": "expertise_profile"
+        },
+        "rel_internal_id": 1159779158629292073,
+        "to": "ar_materiallieferung_markt",
+        "type": "HAT_AKTEURROLLE"
+      },
+      "from": "zirkular",
+      "line": 132,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ar_materiallieferung_markt",
+      "type": "HAT_AKTEURROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_Rotor__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {},
+        "rel_internal_id": 1155276658513549699,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "Rotor",
+      "line": 133,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_association_reavie__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "association_reavie",
+        "properties": {},
+        "rel_internal_id": 6935646780243580933,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "association_reavie",
+      "line": 134,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_bioregional__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {},
+        "rel_internal_id": 6940150379870951429,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "bioregional",
+      "line": 135,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_bioregional__HAT_AKTEURTYP__at_organisation"
+      },
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {},
+        "rel_internal_id": 1155276658513549182,
+        "to": "at_organisation",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "bioregional",
+      "line": 136,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_organisation",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_cat_fletcher_freegle__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "cat_fletcher_freegle",
+        "properties": {},
+        "rel_internal_id": 6926639580988839941,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "cat_fletcher_freegle",
+      "line": 137,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_cleveland_steel_tubes__HAT_AKTEURTYP__at_unternehmen"
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {},
+        "rel_internal_id": 1155276658513548391,
+        "to": "at_unternehmen",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 138,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_unternehmen",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 1157528458327234989,
+        "to": "at_materialhub_bauteilboerse",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "concular",
+      "line": 139,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_materialhub_bauteilboerse",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_concular__HAT_AKTEURTYP__at_unternehmen"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {},
+        "rel_internal_id": 1155276658513549741,
+        "to": "at_unternehmen",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "concular",
+      "line": 140,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_unternehmen",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_fabrix__HAT_AKTEURTYP__at_unternehmen"
+      },
+      "before": {
+        "count": 1,
+        "from": "fabrix",
+        "properties": {},
+        "rel_internal_id": 1155276658513549150,
+        "to": "at_unternehmen",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "fabrix",
+      "line": 141,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_unternehmen",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_futurebuilt__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "futurebuilt",
+        "properties": {},
+        "rel_internal_id": 6931143180616210437,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "futurebuilt",
+      "line": 142,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_hastings_bexhill_wood_recycling__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "hastings_bexhill_wood_recycling",
+        "properties": {},
+        "rel_internal_id": 6928891380802525189,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "hastings_bexhill_wood_recycling",
+      "line": 143,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_hawkins_brown__HAT_AKTEURTYP__at_unternehmen"
+      },
+      "before": {
+        "count": 1,
+        "from": "hawkins_brown",
+        "properties": {},
+        "rel_internal_id": 1155276658513549148,
+        "to": "at_unternehmen",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "hawkins_brown",
+      "line": 144,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_unternehmen",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_kunst_stoffe_ev__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "kunst_stoffe_ev",
+        "properties": {},
+        "rel_internal_id": 6944653979498321925,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "kunst_stoffe_ev",
+      "line": 145,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_les_canaux__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "les_canaux",
+        "properties": {},
+        "rel_internal_id": 6933394980429895685,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "les_canaux",
+      "line": 146,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_namur_croisade_pauvrete__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "namur_croisade_pauvrete",
+        "properties": {},
+        "rel_internal_id": 6922135981361469445,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "namur_croisade_pauvrete",
+      "line": 147,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_new_horizon__HAT_AKTEURTYP__at_unternehmen"
+      },
+      "before": {
+        "count": 1,
+        "from": "new_horizon",
+        "properties": {},
+        "rel_internal_id": 1155276658513549745,
+        "to": "at_unternehmen",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "new_horizon",
+      "line": 148,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_unternehmen",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_peabody_trust__HAT_AKTEURTYP__at_organisation"
+      },
+      "before": {
+        "count": 1,
+        "from": "peabody_trust",
+        "properties": {},
+        "rel_internal_id": 1155276658513549183,
+        "to": "at_organisation",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "peabody_trust",
+      "line": 149,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_organisation",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_petra_jablonicka__HAT_AKTEURTYP__at_unternehmen"
+      },
+      "before": {
+        "count": 1,
+        "from": "petra_jablonicka",
+        "properties": {},
+        "rel_internal_id": 1155276658513549617,
+        "to": "at_unternehmen",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "petra_jablonicka",
+      "line": 150,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_unternehmen",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_rotor_asbl_vzw__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotor_asbl_vzw",
+        "properties": {},
+        "rel_internal_id": 6919884181547784197,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "rotor_asbl_vzw",
+      "line": 151,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_rotor_vzw__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotor_vzw",
+        "properties": {},
+        "rel_internal_id": 6942402179684636677,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "rotor_vzw",
+      "line": 152,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_stadt_zuerich__HAT_AKTEURTYP__at_oeffentliche_institution"
+      },
+      "before": {
+        "count": 1,
+        "from": "stadt_zuerich",
+        "properties": {},
+        "rel_internal_id": 1153024858699862970,
+        "to": "at_oeffentliche_institution",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "stadt_zuerich",
+      "line": 153,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_oeffentliche_institution",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_sven_urselmann__HAT_AKTEURTYP__at_unternehmen"
+      },
+      "before": {
+        "count": 1,
+        "from": "sven_urselmann",
+        "properties": {},
+        "rel_internal_id": 1155276658513549620,
+        "to": "at_unternehmen",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "sven_urselmann",
+      "line": 154,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_unternehmen",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_zinneke_asbl__HAT_AKTEURTYP__at_ngo_verband_netzwerk"
+      },
+      "before": {
+        "count": 1,
+        "from": "zinneke_asbl",
+        "properties": {},
+        "rel_internal_id": 6937898580057266181,
+        "to": "at_ngo_verband_netzwerk",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "zinneke_asbl",
+      "line": 155,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "at_ngo_verband_netzwerk",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after_properties": {
+        "id": "r_bw_biopartner_gorlaeus_hochhaus__HAT_BAUOBJEKTKLASSE__bok_gebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_biopartner_gorlaeus_hochhaus",
+        "properties": {},
+        "rel_internal_id": 1152990773839403010,
+        "to": "bok_gebaeude",
+        "type": "HAT_BAUOBJEKTKLASSE"
+      },
+      "from": "bw_biopartner_gorlaeus_hochhaus",
+      "line": 156,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bok_gebaeude",
+      "type": "HAT_BAUOBJEKTKLASSE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bw_bluecity_tropicana_rotterdam__HAT_BAUOBJEKTKLASSE__bok_gebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_bluecity_tropicana_rotterdam",
+        "properties": {},
+        "rel_internal_id": 1152990773839403011,
+        "to": "bok_gebaeude",
+        "type": "HAT_BAUOBJEKTKLASSE"
+      },
+      "from": "bw_bluecity_tropicana_rotterdam",
+      "line": 157,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bok_gebaeude",
+      "type": "HAT_BAUOBJEKTKLASSE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bw_elys_ehemaliges_getraenkelager_areal__HAT_BAUOBJEKTKLASSE__bok_gebaeudeteil"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_elys_ehemaliges_getraenkelager_areal",
+        "properties": {},
+        "rel_internal_id": 1152990773839403012,
+        "to": "bok_gebaeudeteil",
+        "type": "HAT_BAUOBJEKTKLASSE"
+      },
+      "from": "bw_elys_ehemaliges_getraenkelager_areal",
+      "line": 158,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bok_gebaeudeteil",
+      "type": "HAT_BAUOBJEKTKLASSE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bw_biopartner_gorlaeus_hochhaus__HAT_BAUOBJEKTROLLE__bor_donorobjekt"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_biopartner_gorlaeus_hochhaus",
+        "properties": {},
+        "rel_internal_id": 1152991873351030786,
+        "to": "bor_donorobjekt",
+        "type": "HAT_BAUOBJEKTROLLE"
+      },
+      "from": "bw_biopartner_gorlaeus_hochhaus",
+      "line": 159,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bor_donorobjekt",
+      "type": "HAT_BAUOBJEKTROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bw_bluecity_tropicana_rotterdam__HAT_BAUOBJEKTROLLE__bor_same_site_donor_receiver"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_bluecity_tropicana_rotterdam",
+        "properties": {},
+        "rel_internal_id": 1152991873351030787,
+        "to": "bor_same_site_donor_receiver",
+        "type": "HAT_BAUOBJEKTROLLE"
+      },
+      "from": "bw_bluecity_tropicana_rotterdam",
+      "line": 160,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bor_same_site_donor_receiver",
+      "type": "HAT_BAUOBJEKTROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bw_elys_ehemaliges_getraenkelager_areal__HAT_BAUOBJEKTROLLE__bor_same_site_donor_receiver"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_elys_ehemaliges_getraenkelager_areal",
+        "properties": {},
+        "rel_internal_id": 1152991873351030788,
+        "to": "bor_same_site_donor_receiver",
+        "type": "HAT_BAUOBJEKTROLLE"
+      },
+      "from": "bw_elys_ehemaliges_getraenkelager_areal",
+      "line": 161,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bor_same_site_donor_receiver",
+      "type": "HAT_BAUOBJEKTROLLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_beton_fundament_peoples_pavilion_elements__HAT_BESCHAFFUNGSWEG__bweg_leihmodell"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_beton_fundament_peoples_pavilion_elements",
+        "properties": {},
+        "rel_internal_id": 6928874888128108545,
+        "to": "bweg_leihmodell",
+        "type": "HAT_BESCHAFFUNGSWEG"
+      },
+      "from": "bg_reuse_beton_fundament_peoples_pavilion_elements",
+      "line": 162,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bweg_leihmodell",
+      "type": "HAT_BESCHAFFUNGSWEG"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_glas_dach_peoples_pavilion__HAT_BESCHAFFUNGSWEG__bweg_leihmodell"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_glas_dach_peoples_pavilion",
+        "properties": {},
+        "rel_internal_id": 6931126687941793793,
+        "to": "bweg_leihmodell",
+        "type": "HAT_BESCHAFFUNGSWEG"
+      },
+      "from": "bg_reuse_glas_dach_peoples_pavilion",
+      "line": 163,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bweg_leihmodell",
+      "type": "HAT_BESCHAFFUNGSWEG"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_holz_traeger_peoples_pavilion__HAT_BESCHAFFUNGSWEG__bweg_leihmodell"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_holz_traeger_peoples_pavilion",
+        "properties": {},
+        "rel_internal_id": 6933378487755479041,
+        "to": "bweg_leihmodell",
+        "type": "HAT_BESCHAFFUNGSWEG"
+      },
+      "from": "bg_reuse_holz_traeger_peoples_pavilion",
+      "line": 164,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bweg_leihmodell",
+      "type": "HAT_BESCHAFFUNGSWEG"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements__HAT_BESCHAFFUNGSWEG__bweg_leihmodell"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+        "properties": {},
+        "rel_internal_id": 6926623088314423297,
+        "to": "bweg_leihmodell",
+        "type": "HAT_BESCHAFFUNGSWEG"
+      },
+      "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+      "line": 165,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bweg_leihmodell",
+      "type": "HAT_BESCHAFFUNGSWEG"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_beton_fundament_peoples_pavilion_elements__HAT_RESSOURCENQUELLE__rq_borrowed_material_pool"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_beton_fundament_peoples_pavilion_elements",
+        "properties": {},
+        "rel_internal_id": 6928875987639736314,
+        "to": "rq_borrowed_material_pool",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_beton_fundament_peoples_pavilion_elements",
+      "line": 166,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_borrowed_material_pool",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_beton_mehrere_brighton_betonbloecke__HAT_RESSOURCENQUELLE__rq_construction_waste_stream"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_beton_mehrere_brighton_betonbloecke",
+        "properties": {},
+        "rel_internal_id": 6922120588198680571,
+        "to": "rq_construction_waste_stream",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_beton_mehrere_brighton_betonbloecke",
+      "line": 167,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_construction_waste_stream",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende__HAT_RESSOURCENQUELLE__rq_donorgebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende",
+        "properties": {},
+        "rel_internal_id": 1153009465537069284,
+        "to": "rq_donorgebaeude",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende",
+      "line": 168,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_donorgebaeude",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_daemmstoff_mehrere_trae_high_rise_aarhus_troldtekt_akustikplatten__HAT_RESSOURCENQUELLE__rq_bauteilboerse"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_daemmstoff_mehrere_trae_high_rise_aarhus_troldtekt_akustikplatten",
+        "properties": {},
+        "rel_internal_id": 1153009465537069538,
+        "to": "rq_bauteilboerse",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_daemmstoff_mehrere_trae_high_rise_aarhus_troldtekt_akustikplatten",
+      "line": 169,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_bauteilboerse",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_daemmstoff_mehrere_trae_high_rise_aarhus_troldtekt_akustikplatten__HAT_RESSOURCENQUELLE__rq_supplier_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_daemmstoff_mehrere_trae_high_rise_aarhus_troldtekt_akustikplatten",
+        "properties": {},
+        "rel_internal_id": 6928875987639736319,
+        "to": "rq_supplier_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_daemmstoff_mehrere_trae_high_rise_aarhus_troldtekt_akustikplatten",
+      "line": 170,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_supplier_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_glas_dach_peoples_pavilion__HAT_RESSOURCENQUELLE__rq_borrowed_material_pool"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_glas_dach_peoples_pavilion",
+        "properties": {},
+        "rel_internal_id": 6931127787453421562,
+        "to": "rq_borrowed_material_pool",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_glas_dach_peoples_pavilion",
+      "line": 171,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_borrowed_material_pool",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_holz_mehrere_brighton_sperrholz__HAT_RESSOURCENQUELLE__rq_construction_waste_stream"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_holz_mehrere_brighton_sperrholz",
+        "properties": {},
+        "rel_internal_id": 6924372388012365819,
+        "to": "rq_construction_waste_stream",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_holz_mehrere_brighton_sperrholz",
+      "line": 172,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_construction_waste_stream",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_holz_traeger_peoples_pavilion__HAT_RESSOURCENQUELLE__rq_borrowed_material_pool"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_holz_traeger_peoples_pavilion",
+        "properties": {},
+        "rel_internal_id": 6933379587267106810,
+        "to": "rq_borrowed_material_pool",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_holz_traeger_peoples_pavilion",
+      "line": 173,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_borrowed_material_pool",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_holz_wand_biopartner_5_innenwaende_trennwaende__HAT_RESSOURCENQUELLE__rq_donorgebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_holz_wand_biopartner_5_innenwaende_trennwaende",
+        "properties": {},
+        "rel_internal_id": 1153009465537069279,
+        "to": "rq_donorgebaeude",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_holz_wand_biopartner_5_innenwaende_trennwaende",
+      "line": 174,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_donorgebaeude",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_keramik_technik_biopartner_5_sanitaerobjekte__HAT_RESSOURCENQUELLE__rq_donorgebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_keramik_technik_biopartner_5_sanitaerobjekte",
+        "properties": {},
+        "rel_internal_id": 1153009465537069281,
+        "to": "rq_donorgebaeude",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_keramik_technik_biopartner_5_sanitaerobjekte",
+      "line": 175,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_donorgebaeude",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_kunststoff_technik_brighton_vinylbanner_dampfbremse__HAT_RESSOURCENQUELLE__rq_reclaimed_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_kunststoff_technik_brighton_vinylbanner_dampfbremse",
+        "properties": {},
+        "rel_internal_id": 6931127787453421565,
+        "to": "rq_reclaimed_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_kunststoff_technik_brighton_vinylbanner_dampfbremse",
+      "line": 176,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_reclaimed_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements__HAT_RESSOURCENQUELLE__rq_borrowed_material_pool"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+        "properties": {},
+        "rel_internal_id": 6926624187826051066,
+        "to": "rq_borrowed_material_pool",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+      "line": 177,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_borrowed_material_pool",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_bluecity_red_cedar_fensterrahmen_trennwaende__HAT_RESSOURCENQUELLE__rq_donorgebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_mehrere_bluecity_red_cedar_fensterrahmen_trennwaende",
+        "properties": {},
+        "rel_internal_id": 1153009465537069285,
+        "to": "rq_donorgebaeude",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_mehrere_bluecity_red_cedar_fensterrahmen_trennwaende",
+      "line": 178,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_donorgebaeude",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_brighton_teppichfliesen_fassade__HAT_RESSOURCENQUELLE__rq_reclaimed_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_mehrere_brighton_teppichfliesen_fassade",
+        "properties": {},
+        "rel_internal_id": 6928875987639736317,
+        "to": "rq_reclaimed_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_mehrere_brighton_teppichfliesen_fassade",
+      "line": 179,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_reclaimed_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels__HAT_RESSOURCENQUELLE__rq_reclaimed_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "properties": {},
+        "rel_internal_id": 6933379587267106813,
+        "to": "rq_reclaimed_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "line": 180,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_reclaimed_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_k118_windows_cladding_insulation__HAT_RESSOURCENQUELLE__rq_surplus_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_mehrere_k118_windows_cladding_insulation",
+        "properties": {},
+        "rel_internal_id": 6926624187826051070,
+        "to": "rq_surplus_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_mehrere_k118_windows_cladding_insulation",
+      "line": 181,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_surplus_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_ka13_office_fronts_doors_facade__HAT_RESSOURCENQUELLE__rq_unknown_documented_source"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_mehrere_ka13_office_fronts_doors_facade",
+        "properties": {},
+        "rel_internal_id": 6935631387080792064,
+        "to": "rq_unknown_documented_source",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_mehrere_ka13_office_fronts_doors_facade",
+      "line": 182,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_unknown_documented_source",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_recyclinghaus_sanitaer_feste_einbauten__HAT_RESSOURCENQUELLE__rq_unknown_documented_source"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_mehrere_recyclinghaus_sanitaer_feste_einbauten",
+        "properties": {},
+        "rel_internal_id": 6940134986708162560,
+        "to": "rq_unknown_documented_source",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_mehrere_recyclinghaus_sanitaer_feste_einbauten",
+      "line": 183,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_unknown_documented_source",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_mehrere_technik_ka13_tga_sanitary_radiators__HAT_RESSOURCENQUELLE__rq_unknown_documented_source"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_mehrere_technik_ka13_tga_sanitary_radiators",
+        "properties": {},
+        "rel_internal_id": 6937883186894477312,
+        "to": "rq_unknown_documented_source",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_mehrere_technik_ka13_tga_sanitary_radiators",
+      "line": 184,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_unknown_documented_source",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial__HAT_RESSOURCENQUELLE__rq_donorgebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial",
+        "properties": {},
+        "rel_internal_id": 1153009465537069280,
+        "to": "rq_donorgebaeude",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial",
+      "line": 185,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_donorgebaeude",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_naturstein_mehrere_plp_marble_feste_oberflaechen__HAT_RESSOURCENQUELLE__rq_haendler"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_naturstein_mehrere_plp_marble_feste_oberflaechen",
+        "properties": {},
+        "rel_internal_id": 1153009465537069498,
+        "to": "rq_haendler",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_naturstein_mehrere_plp_marble_feste_oberflaechen",
+      "line": 186,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_haendler",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_naturstein_mehrere_plp_marble_feste_oberflaechen__HAT_RESSOURCENQUELLE__rq_supplier_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_naturstein_mehrere_plp_marble_feste_oberflaechen",
+        "properties": {},
+        "rel_internal_id": 6926624187826051071,
+        "to": "rq_supplier_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_naturstein_mehrere_plp_marble_feste_oberflaechen",
+      "line": 187,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_supplier_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_stahl_ausbau_bluecity__HAT_RESSOURCENQUELLE__rq_unknown_documented_source"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_stahl_ausbau_bluecity",
+        "properties": {},
+        "rel_internal_id": 6933379587267106816,
+        "to": "rq_unknown_documented_source",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_stahl_ausbau_bluecity",
+      "line": 188,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_unknown_documented_source",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_stahl_fassade_recyclinghaus_wellblech__HAT_RESSOURCENQUELLE__rq_unknown_documented_source"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_stahl_fassade_recyclinghaus_wellblech",
+        "properties": {},
+        "rel_internal_id": 6942386786521847808,
+        "to": "rq_unknown_documented_source",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_stahl_fassade_recyclinghaus_wellblech",
+      "line": 189,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_unknown_documented_source",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_stahl_gelaender_bluecity_oelplattform__HAT_RESSOURCENQUELLE__rq_donor_infrastruktur"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_stahl_gelaender_bluecity_oelplattform",
+        "properties": {},
+        "rel_internal_id": 1153009465537069283,
+        "to": "rq_donor_infrastruktur",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_stahl_gelaender_bluecity_oelplattform",
+      "line": 190,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_donor_infrastruktur",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen__HAT_RESSOURCENQUELLE__rq_haendler"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen",
+        "properties": {},
+        "rel_internal_id": 1153009465537069294,
+        "to": "rq_haendler",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen",
+      "line": 191,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_haendler",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen__HAT_RESSOURCENQUELLE__rq_supplier_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen",
+        "properties": {},
+        "rel_internal_id": 6924372388012365823,
+        "to": "rq_supplier_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen",
+      "line": 192,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_supplier_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen__HAT_RESSOURCENQUELLE__rq_surplus_stock"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen",
+        "properties": {},
+        "rel_internal_id": 6924372388012365822,
+        "to": "rq_surplus_stock",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen",
+      "line": 193,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_surplus_stock",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_ziegel_wand_recyclinghaus_abbruchziegel_innenwaende__HAT_RESSOURCENQUELLE__rq_demolition_waste_stream"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_ziegel_wand_recyclinghaus_abbruchziegel_innenwaende",
+        "properties": {},
+        "rel_internal_id": 6922120588198680572,
+        "to": "rq_demolition_waste_stream",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_ziegel_wand_recyclinghaus_abbruchziegel_innenwaende",
+      "line": 194,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_demolition_waste_stream",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "after_properties": {
+        "id": "r_bg_reuse_ziegel_wand_recyclinghaus_abbruchziegel_innenwaende__HAT_RESSOURCENQUELLE__rq_donorgebaeude"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_reuse_ziegel_wand_recyclinghaus_abbruchziegel_innenwaende",
+        "properties": {},
+        "rel_internal_id": 1153009465537069502,
+        "to": "rq_donorgebaeude",
+        "type": "HAT_RESSOURCENQUELLE"
+      },
+      "from": "bg_reuse_ziegel_wand_recyclinghaus_abbruchziegel_innenwaende",
+      "line": 195,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rq_donorgebaeude",
+      "type": "HAT_RESSOURCENQUELLE"
+    },
+    {
+      "from": "bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile",
+      "line": 196,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile",
+      "line": 197,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_planned_stahlbeton_decke_montessori_maassluis_hollow_core_slabs",
+      "line": 198,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_alliander_existing_buildings",
+      "line": 199,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_alliander_existing_buildings",
+      "line": 200,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_alliander_existing_buildings",
+      "line": 201,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_botanique_main_structure",
+      "line": 202,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_botanique_main_structure",
+      "line": 203,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_ithaka_existing_clinic",
+      "line": 204,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_ithaka_existing_clinic",
+      "line": 205,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_k118_halle_118",
+      "line": 206,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_k118_halle_118",
+      "line": 207,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_ka13_existing_structure",
+      "line": 208,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_ka13_existing_structure",
+      "line": 209,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_lo_reninge_convent",
+      "line": 210,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_lo_reninge_convent",
+      "line": 211,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_aluminium_mehrere_multi_profiles",
+      "line": 212,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_beton_boden_lycee_paving_slabs",
+      "line": 213,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_fundament_peoples_pavilion_elements",
+      "line": 214,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_bestandverplanzung_betonfertigteil_paneele",
+      "line": 215,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_brighton_betonbloecke",
+      "line": 216,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_juch_kerenzerberg_betonplatten",
+      "line": 217,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_lycee_precast_channels",
+      "line": 218,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_plattenvereinigung_betonfertigteile",
+      "line": 219,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_plattenvereinigung_wand_fassadenelemente",
+      "line": 220,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_recrete_betonbloecke_bogensegmente",
+      "line": 221,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende",
+      "line": 222,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_daemmstoff_mehrere_lycee_gypsum_acoustic_panels",
+      "line": 223,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_daemmstoff"
+    },
+    {
+      "from": "bg_reuse_faserzement_fassade_recyclinghaus_faserzement",
+      "line": 224,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_faserzement_fassade_recyclinghaus_faserzement",
+      "line": 225,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_verbundstoff"
+    },
+    {
+      "from": "bg_reuse_glas_dach_peoples_pavilion",
+      "line": 226,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_awm_partitions_doors",
+      "line": 227,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_boulder_pv_roof",
+      "line": 228,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_recyclinghaus_aluminiumfenster",
+      "line": 229,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_recyclinghaus_aluminiumfenster",
+      "line": 230,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_recyclinghaus_profilbauglas",
+      "line": 231,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_holz_ausbau_awm_fixed_builtins",
+      "line": 232,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_fassade_botanique",
+      "line": 233,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_fassade_ithaka_azobe_shingles",
+      "line": 234,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_brighton_sperrholz",
+      "line": 235,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_ithaka_holztraeger_balken",
+      "line": 236,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_maison_dna_new_inner_box_context",
+      "line": 237,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_daemmstoff"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_maison_dna_new_inner_box_context",
+      "line": 238,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_recyclinghaus_messebauplatten_innenausbau",
+      "line": 239,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_recyclinghaus_saunabank_holzleisten",
+      "line": 240,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_stuetze_boulder_glulam",
+      "line": 241,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_traeger_peoples_pavilion",
+      "line": 242,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_wand_awm_cladding_old_chairs",
+      "line": 243,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_wand_bedzed_studs",
+      "line": 244,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_holz_wand_biopartner_5_innenwaende_trennwaende",
+      "line": 245,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_keramik_mehrere_kamikatsu_old_tiles",
+      "line": 246,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_keramik_mehrere_maison_vignette_terracotta_floor_tiles",
+      "line": 247,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_keramik_mehrere_maison_vignette_wall_tiles_solvay",
+      "line": 248,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_keramik_technik_biopartner_5_sanitaerobjekte",
+      "line": 249,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_kunststoff_daemmung_brighton_zahnbuersten_medienabfall_infill",
+      "line": 250,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_kunststoff_fassade_peoples_pavilion_pretty_plastic_shingles",
+      "line": 251,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_kunststoff_technik_brighton_vinylbanner_dampfbremse",
+      "line": 252,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_kunststoff_wand_awm_wc_partitions",
+      "line": 253,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_ausbau_alliander_material_passport_inventory",
+      "line": 254,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_ausbau_alliander_material_passport_inventory",
+      "line": 255,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_ausbau_alliander_material_passport_inventory",
+      "line": 256,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_ausbau_plp_materialbibliothek_oberflaechen",
+      "line": 257,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_ausbau_plp_materialbibliothek_oberflaechen",
+      "line": 258,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_boden_ithaka_holzfussboeden_klinker",
+      "line": 259,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_boden_ithaka_holzfussboeden_klinker",
+      "line": 260,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_boden_kamikatsu_glass_ceramic_terrazzo",
+      "line": 261,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_decke_plattenvereinigung_deckenelemente",
+      "line": 262,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+      "line": 263,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+      "line": 264,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+      "line": 265,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_fassade_peoples_pavilion_borrowed_elements",
+      "line": 266,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_alliander_common_roof_atrium",
+      "line": 267,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_alliander_common_roof_atrium",
+      "line": 268,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_alliander_common_roof_atrium",
+      "line": 269,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_alliander_interior_elements",
+      "line": 270,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_alliander_interior_elements",
+      "line": 271,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_alliander_interior_elements",
+      "line": 272,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_bedzed_fixed_secondary_components",
+      "line": 273,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_bedzed_fixed_secondary_components",
+      "line": 274,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_bedzed_fixed_secondary_components",
+      "line": 275,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_big_dig_house_ramp_pier_roadway_components",
+      "line": 276,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_big_dig_house_ramp_pier_roadway_components",
+      "line": 277,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_bluecity_red_cedar_fensterrahmen_trennwaende",
+      "line": 278,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_bluecity_red_cedar_fensterrahmen_trennwaende",
+      "line": 279,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_brighton_teppichfliesen_fassade",
+      "line": 280,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_brighton_teppichfliesen_fassade",
+      "line": 281,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_verbundstoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ithaka_innentueren_beschlaege",
+      "line": 282,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ithaka_innentueren_beschlaege",
+      "line": 283,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ithaka_kozijnen_fenster",
+      "line": 284,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ithaka_kozijnen_fenster",
+      "line": 285,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ithaka_kozijnen_fenster",
+      "line": 286,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "line": 287,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "line": 288,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_k118_windows_cladding_insulation",
+      "line": 289,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_daemmstoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_k118_windows_cladding_insulation",
+      "line": 290,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_k118_windows_cladding_insulation",
+      "line": 291,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ka13_office_fronts_doors_facade",
+      "line": 292,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ka13_office_fronts_doors_facade",
+      "line": 293,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ka13_office_fronts_doors_facade",
+      "line": 294,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_ka13_office_fronts_doors_facade",
+      "line": 295,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_kamikatsu_donated_facade_windows",
+      "line": 296,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_kamikatsu_donated_facade_windows",
+      "line": 297,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_kamikatsu_donated_facade_windows",
+      "line": 298,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_kamikatsu_old_town_hall_wall_parts",
+      "line": 299,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_kamikatsu_old_town_hall_wall_parts",
+      "line": 300,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_kamikatsu_shoji_glass_doors",
+      "line": 301,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_kamikatsu_shoji_glass_doors",
+      "line": 302,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_doors",
+      "line": 303,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_doors",
+      "line": 304,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_fixed_builtins",
+      "line": 305,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_fixed_builtins",
+      "line": 306,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_floor_wall_finishes",
+      "line": 307,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_floor_wall_finishes",
+      "line": 308,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_sanitary_parts",
+      "line": 309,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_sanitary_parts",
+      "line": 310,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_vignette_sanitary_objects",
+      "line": 311,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_vignette_sanitary_objects",
+      "line": 312,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_akustikelemente",
+      "line": 313,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_daemmstoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_akustikelemente",
+      "line": 314,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_bestand_werkhof",
+      "line": 315,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_bestand_werkhof",
+      "line": 316,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_sanitaer_kueche",
+      "line": 317,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_sanitaer_kueche",
+      "line": 318,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_sanitaer_kueche",
+      "line": 319,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_stahlpergola_beschattung",
+      "line": 320,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_moeoeslistrasse_stahlpergola_beschattung",
+      "line": 321,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plattenpalast_palast_fenster",
+      "line": 322,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plattenpalast_palast_fenster",
+      "line": 323,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_feste_fitout_komponenten",
+      "line": 324,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_feste_fitout_komponenten",
+      "line": 325,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_feste_fitout_komponenten",
+      "line": 326,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_terrazzo_arbeits_kuechenflaechen",
+      "line": 327,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_terrazzo_arbeits_kuechenflaechen",
+      "line": 328,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_recyclinghaus_sanitaer_feste_einbauten",
+      "line": 329,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_recyclinghaus_sanitaer_feste_einbauten",
+      "line": 330,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_technik_ithaka_tga_beleuchtung_installationen",
+      "line": 331,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_technik_ithaka_tga_beleuchtung_installationen",
+      "line": 332,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_technik_ka13_tga_sanitary_radiators",
+      "line": 333,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
+    },
+    {
+      "from": "bg_reuse_mehrere_technik_ka13_tga_sanitary_radiators",
+      "line": 334,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_mehrere_technik_ka13_tga_sanitary_radiators",
+      "line": 335,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_mehrere_treppe_plattenvereinigung_treppenelemente",
+      "line": 336,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_mehrere_tuer_moeoeslistrasse_brandschutztueren_lavater",
+      "line": 337,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
+    },
+    {
+      "from": "bg_reuse_mehrere_tuer_moeoeslistrasse_brandschutztueren_lavater",
+      "line": 338,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial",
+      "line": 339,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_naturstein_boden_maison_vignette_bluestone_slabs",
+      "line": 340,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_naturstein_boden_multi_granite_natural_tiles",
+      "line": 341,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_naturstein_mehrere_multi_blaustein_facade_slabs",
+      "line": 342,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_naturstein_mehrere_plp_marble_feste_oberflaechen",
+      "line": 343,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_recyclingbeton_mehrere_recyclinghaus_fundament",
+      "line": 344,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_recyclingmaterial"
+    },
+    {
+      "from": "bg_reuse_stahl_ausbau_bluecity",
+      "line": 345,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_fassade_brent_cross_new_support_members",
+      "line": 346,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_fassade_recyclinghaus_wellblech",
+      "line": 347,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_gelaender_bluecity_oelplattform",
+      "line": 348,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_55gss_external_core",
+      "line": 349,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_awm_cable_trays_shelves_lights",
+      "line": 350,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_bedzed_structural",
+      "line": 351,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_big_dig_house",
+      "line": 352,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_biopartner_5_stuetzen_rahmen",
+      "line": 353,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_boulder_wide_flange_members",
+      "line": 354,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_brent_cross_bracing_members",
+      "line": 355,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen",
+      "line": 356,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_brent_cross_tubular_columns",
+      "line": 357,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_juch_hagenholz_stahlstruktur",
+      "line": 358,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_k118_external_stair",
+      "line": 359,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_k118_structure",
+      "line": 360,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_ka13",
+      "line": 361,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_facade_panels_railing",
+      "line": 362,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_floor_sheet_metal_facade",
+      "line": 363,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_metal_ceiling_panels",
+      "line": 364,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_profiles_canopy",
+      "line": 365,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_moeoeslistrasse_stuetzen",
+      "line": 366,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_technik_multi_reinstalled_elevator_motors",
+      "line": 367,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_traeger_boulder_hospital_stockpile",
+      "line": 368,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahl_treppe_moeoeslistrasse_aussentreppe",
+      "line": 369,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_decke_ka13_hollow_core_slabs",
+      "line": 370,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_big_dig_house_inverset_panels",
+      "line": 371,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_groeditz_dresden_type_precast_components",
+      "line": 372,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_groeditz_wbs70_precast_panels",
+      "line": 373,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_juch_schellinghalle_pilzstuetzen",
+      "line": 374,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_lokomotion_hollow_core_slabs",
+      "line": 375,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_mehrow_wbs70_floor_slabs",
+      "line": 376,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_melkinlaituri_hollow_core_slabs",
+      "line": 377,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_plattenpalast_wbs70_wand_deckenelemente",
+      "line": 378,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_plauen_iw73_6_precast_components",
+      "line": 379,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_schildow_zugeschnittene_wbs70_betonfertigteile",
+      "line": 380,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_wand_mehrow_wbs70_slabs",
+      "line": 381,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_textil_daemmung_brighton_denim",
+      "line": 382,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
+    },
+    {
+      "from": "bg_reuse_textil_daemmung_brighton_denim",
+      "line": 383,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_verbundstoff"
+    },
+    {
+      "from": "bg_reuse_ziegel_fassade_biopartner_5_abbruchschutt_gruene",
+      "line": 384,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_ziegel_mehrere_lo_reninge_facade",
+      "line": 385,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_ziegel_mehrere_maison_dna_outer_walls",
+      "line": 386,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_ziegel_mehrere_maison_vignette_facade_claustra",
+      "line": 387,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_ziegel_mehrere_musef_facade",
+      "line": 388,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    },
+    {
+      "from": "bg_reuse_ziegel_wand_recyclinghaus_abbruchziegel_innenwaende",
+      "line": 389,
+      "op": "add_rel",
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 389,
+    "would_create_rel": 194,
+    "would_update_rel": 195
+  }
+}
