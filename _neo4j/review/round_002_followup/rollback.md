@@ -11,14 +11,86 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L → Phase M → Phase N → Phase O.0.
+**Apply order so far:** Phase A → … → Phase L → M → N → O.0 → O.a → O.b.
 
 **Combined effect:**
 
-| | Before A | After R003 | After L | After M | After N | After O.0 |
-|---|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 296 | 2 296 | 2 296 | 2 296 | **2 298** |
-| Relationships | 15 834 | 16 822 | 16 822 | 16 822 | 16 822 | **16 869** |
+| | Before A | After R003 | After N | After O.0 | After O |
+|---|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 296 | 2 296 | 2 298 | **2 298** |
+| Relationships | 15 834 | 16 822 | 16 822 | 16 869 | **16 869** |
+| Bauteilgruppen | — | 306 | 306 | 308 | **308** |
+
+---
+
+## Phase O — applied 2026-05-19 (O.a + O.b)
+
+**Patches:** [patches/phase_oa.patch.jsonl](patches/phase_oa.patch.jsonl) (305 add_node) + [patches/phase_ob.patch.jsonl](patches/phase_ob.patch.jsonl) (305 merge_node)
+**Apply reports:** [phase_oa.patch.apply_report.json](apply_reports/phase_oa.patch.apply_report.json), [phase_ob.patch.apply_report.json](apply_reports/phase_ob.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_oa_pre_apply/`](../backups/phase_oa_pre_apply/) (2298 nodes, 16869 rels — post-O.0 state)
+**Rename table:** [phase_o_rename_table_v3.csv](phase_o_rename_table_v3.csv) (305 rows; the 3 Verbiest split BGs from O.0 were already schema-compliant and excluded)
+
+## What landed
+
+Bauteilgruppe id-rename + property additions per the schema `bg_<reuse-status>_<material>_<bauteiltyp>_<discriminator>`. All inbound + outbound rels redirected; rel `id` strings rewritten from `r_<old-bg>__TYPE__<x>` to `r_<new-bg>__TYPE__<x>`.
+
+**Operations:** 610 records across 2 patches / 0 errors / 0 rejected.
+
+| Op | Patch | Count | Effect |
+|---|---|---:|---|
+| add_node | O.a | 305 | Create new BG shells with new ids + schema props (`reuse_status`, `primary_material_id`, `primary_bauteiltyp_id`, short `name`, optional `name_full`, `aliases=[old_id]`) |
+| merge_node | O.b | 305 | For each old BG: redirect every in/out rel onto its new counterpart, rewrite outbound r.id strings, union labels, merge remaining old props (raw_name, alte_funktion, neue_funktion, etc.) onto new BG, DETACH DELETE the old BG |
+
+### How rel-id rewriting works
+
+`merge_node` uses `rewrite_id_outbound`:
+- `r_bg_broethen_p2_wandplatten__AUS_BAUWERK__bw_…` → `r_bg_reuse_stahlbeton_wand_broethen_p2_wandplatten__AUS_BAUWERK__bw_…`
+
+This preserves the unique-id contract on every rel without manual ops.
+
+### Properties merged onto new BGs
+
+Per the apply tool's merge logic (line 256–263), src (old) properties win where dst (new) doesn't have them or has None/"". So:
+- New wins (schema props): `id`, `name`, `name_full`, `reuse_status`, `primary_material_id`, `primary_bauteiltyp_id`
+- Old wins (preserved): `raw_name`, `alte_funktion`, `neue_funktion`, `counts_as_direct_reuse`, `co2_einsparung_t`, `menge_t`, `reuse_anteil_prozent`, all per-project quantitatives
+- Unioned: `aliases` (= [old_id, optional old name if different])
+
+## Verification (all pass)
+
+| Check | Expected | Got |
+|---|---:|---:|
+| Node count | 2298 (unchanged: 305 created + 305 deleted = 0 net) | 2298 ✓ |
+| Rel count | 16869 (rels redirected, no net change) | 16869 ✓ |
+| Bauteilgruppe count | 308 (305 renamed + 3 Verbiest splits from O.0) | 308 ✓ |
+| BGs not matching new schema (id starts with `bg_reuse_/retained_/planned_/dismantled_`) | 0 | 0 ✓ |
+| Rels with old-pattern BG id in `r.id` | 0 | 0 ✓ |
+| reuse_status distribution | 290 reuse + 16 retained + 2 planned | 290 / 16 / 2 ✓ |
+| BGs with `aliases` set | 308 | 308 ✓ |
+| BGs with `name_full` set | 270 (others already had clean short names) | 270 ✓ |
+| HAT_BAUTEILGRUPPE rel count | 308 (one per BG) | 308 ✓ |
+
+## Tier 3 from Phase O.0 — completed here
+
+`bg_big_dig_building_geplante_infrastrukturbauteile` → renamed to `bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile` with `reuse_status = planned` (rename-table `REUSE_STATUS_OVERRIDES` map). Archive evidence: `Big_Dig_Building_Boston.md` "nicht gebauter Vorschlag von Single Speed Design".
+
+## Companion-property summary
+
+| primary_material_id | Count |
+|---|---:|
+| `mat_mehrere` | 87 + 1 (BedZED fix) + 1 (Verbiest fliesen) = 89 of 308 |
+| `mat_stahl` | 54 |
+| `mat_holz` | 53 |
+| `mat_stahlbeton` | 21 (was 17; +4 from Tier 1 hollow-core BGs) |
+| `mat_ziegel` | 15 |
+| `mat_beton` | 14 (was 16; −4 from Tier 1) |
+| `mat_keramik` | 13 + 1 (Verbiest fliesen) |
+| `mat_naturstein` | 8 + 1 (Verbiest steine) |
+| `mat_unbekannt` | 4 (luminaires + windturbinenflügel) |
+| _others_ | as table v3 |
+
+## Rollback
+
+Full backup at `_neo4j/review/backups/phase_oa_pre_apply/`. Since Phase O is a sequence of `add_node` + `merge_node`, true rollback would require: for each new BG, restore the old BG node + all its 1-30 rels with original ids, then `detach delete` the new BG. Practical rollback path: restore from JSONL backup with `_scripts/restore_neo4j_graph_backup.py`.
 
 ---
 

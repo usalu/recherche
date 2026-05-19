@@ -230,6 +230,61 @@
       "bw_local_demolition_sources_bedzed"
     ]
   },
+  "bg_reuse_stahl_gelaender_verbiest_charleroi": {
+    "name": "Geländer aus Charleroi",
+    "raw_name": "Verbiest Geländer | Metall/Holz | Palais des Expositions Charleroi",
+    "alte_funktion": null,
+    "neue_funktion": null,
+    "counts_as_direct_reuse": null,
+    "projekt": "p_verbiest_karreveld_brussels",
+    "projekt_name": "Verbiest + Karreveld",
+    "materials": [
+      "mat_stahl"
+    ],
+    "bauteiltypen": [
+      "bt_gelaender"
+    ],
+    "bauwerke": [
+      "bw_palais_des_expositions_charleroi"
+    ]
+  },
+  "bg_reuse_keramik_boden_verbiest_charleroi": {
+    "name": "Fliesen aus Charleroi",
+    "raw_name": "Verbiest Fliesen | keramisch/Stein | Palais des Expositions Charleroi",
+    "alte_funktion": null,
+    "neue_funktion": null,
+    "counts_as_direct_reuse": null,
+    "projekt": "p_verbiest_karreveld_brussels",
+    "projekt_name": "Verbiest + Karreveld",
+    "materials": [
+      "mat_keramik"
+    ],
+    "bauteiltypen": [
+      "bt_boden",
+      "bt_fassade"
+    ],
+    "bauwerke": [
+      "bw_palais_des_expositions_charleroi"
+    ]
+  },
+  "bg_reuse_naturstein_wand_verbiest_charleroi": {
+    "name": "Steine aus Charleroi",
+    "raw_name": "Verbiest Steine | Natur-/Mauersteine | Palais des Expositions Charleroi",
+    "alte_funktion": null,
+    "neue_funktion": null,
+    "counts_as_direct_reuse": null,
+    "projekt": "p_verbiest_karreveld_brussels",
+    "projekt_name": "Verbiest + Karreveld",
+    "materials": [
+      "mat_naturstein"
+    ],
+    "bauteiltypen": [
+      "bt_wand"
+    ],
+    "bauwerke": [
+      "bw_palais_des_expositions_charleroi"
+    ]
+  },
   "bg_schildow_zugeschnittene_wbs70_betonfertigteile": {
     "name": "Zugeschnittene WBS70-Stahlbetonfertigteile",
     "raw_name": "200 zugeschnittene Teile aus 60 Decken- und 50 Innenwandplatten",
@@ -880,7 +935,6 @@
     "projekt": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
     "projekt_name": "Circular Centre Netherla…",
     "materials": [
-      "mat_beton",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -899,7 +953,6 @@
     "projekt": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
     "projekt_name": "Circular Centre Netherla…",
     "materials": [
-      "mat_beton",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -1871,7 +1924,6 @@
     "projekt": "p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere",
     "projekt_name": "Härmälänranta",
     "materials": [
-      "mat_beton",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -2380,7 +2432,6 @@
     "projekt_name": "Haus HOS",
     "materials": [
       "mat_beton",
-      "mat_stahl",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -2400,7 +2451,6 @@
     "projekt_name": "Haus HOS",
     "materials": [
       "mat_beton",
-      "mat_stahl",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -2421,7 +2471,6 @@
     "projekt_name": "Haus HOS",
     "materials": [
       "mat_beton",
-      "mat_stahl",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -3509,7 +3558,6 @@
     "projekt": "p_lokomotion_technology_centre_mini_pilot_tampere",
     "projekt_name": "Lokomotion Technology…",
     "materials": [
-      "mat_beton",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -4110,7 +4158,12 @@
     "counts_as_direct_reuse": true,
     "projekt": "p_peoples_pavilion_eindhoven",
     "projekt_name": "People’s Pavilion…",
-    "materials": [],
+    "materials": [
+      "mat_beton",
+      "mat_glas",
+      "mat_holz",
+      "mat_kunststoff"
+    ],
     "bauteiltypen": [
       "bt_fassade"
     ],
@@ -5229,7 +5282,6 @@
     "projekt_name": "Timber Square London",
     "materials": [
       "mat_beton",
-      "mat_stahl",
       "mat_stahlbeton"
     ],
     "bauteiltypen": [
@@ -5475,28 +5527,6 @@
     ],
     "bauwerke": [
       "bw_verbiest_lagerhaus_zu_haus_und_atelier"
-    ]
-  },
-  "bg_verbiest_karreveld_brussels_verbiest_gelaender_fliesen_und_steine_aus_charleroi": {
-    "name": "Verbiest Geländer Fliesen und Steine aus Charleroi",
-    "raw_name": null,
-    "alte_funktion": "Geländer / Boden-Wand-Oberflächen / Steine",
-    "neue_funktion": "Geländer, Oberflächen und Bauteile im Verbiest-Projekt",
-    "counts_as_direct_reuse": true,
-    "projekt": "p_verbiest_karreveld_brussels",
-    "projekt_name": "Verbiest + Karreveld",
-    "materials": [
-      "mat_keramik",
-      "mat_naturstein",
-      "mat_stahl"
-    ],
-    "bauteiltypen": [
-      "bt_boden",
-      "bt_fassade",
-      "bt_gelaender"
-    ],
-    "bauwerke": [
-      "bw_palais_des_expositions_charleroi"
     ]
   },
   "bg_verbiest_karreveld_brussels_verbiest_dekorative_fliesen_aus_hanzinelle": {
