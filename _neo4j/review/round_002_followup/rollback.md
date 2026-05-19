@@ -11,14 +11,59 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L.
+**Apply order so far:** Phase A → B → C → D → E → F → G → H → I → J → Round 003 → Phase K (audit) → contract drift → Phase L → Phase M.
 
 **Combined effect:**
 
-| | Before A | After D | After F | After H | After I | After J | After R003 | After L |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 238 | 2 279 | 2 296 | 2 296 | 2 296 | 2 296 | **2 296** |
-| Relationships | 15 834 | 16 059 | 16 138 | 16 366 | 16 450 | 16 470 | 16 822 | **16 822** |
+| | Before A | After R003 | After L | After M |
+|---|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 296 | 2 296 | **2 296** |
+| Relationships | 15 834 | 16 822 | 16 822 | **16 822** |
+
+---
+
+## Phase M — applied 2026-05-19
+
+**Patch:** [patches/phase_m.patch.jsonl](patches/phase_m.patch.jsonl)
+**Apply report:** [apply_reports/phase_m.patch.apply_report.json](apply_reports/phase_m.patch.apply_report.json)
+**Pre-apply backup:** [`_neo4j/review/backups/phase_m_pre_apply/`](../backups/phase_m_pre_apply/) (2296 nodes, 16822 rels)
+
+## What landed
+
+Short `name` + `name_full` on 8 long-named vocab labels. No structural change.
+
+**Operations:** 85 records / 0 errors / 0 rejected.
+
+| Label | Total | Updated (name+name_full) | Already short (no-op) |
+|---|---:|---:|---:|
+| Defekt | 10 | 8 | 2 (`def_korrosion`, `def_brandschaden`) |
+| MatchingQualitaet | 9 | 9 | 0 |
+| ZustandsKlasse | 6 | 6 | 0 |
+| Bauproduktstatus | 15 | 15 | 0 |
+| LebenszyklusModul | 5 | 5 | 0 |
+| Akzeptanz | 5 | 5 | 0 |
+| Marktmodell | 11 | 10 | 1 (`mm_spende`) |
+| Norm | 30 | 27 | 3 (`norm_historic_sections_book`, `norm_rt_2012`, `norm_sci_p427`) |
+| **Total** | **91** | **85** | **6** |
+
+## Verification
+
+| Check | Expected | Got |
+|---|---:|---:|
+| Node count | 2296 | 2296 ✓ |
+| Rel count | 16822 | 16822 ✓ |
+| Nodes with name > 25 chars across 8 labels | 0 | 0 ✓ |
+
+## Notes / amendments
+
+- Plan §3 used 2 stale Bauproduktstatus ids (`bps_ueh_zeichen`, `bps_bauproduktstatus_unbekannt`). Live ids are `bps_ue_zeichen` and `bps_unbekannt` — used live ids.
+- Plan §3 claimed "remaining 5 Bauproduktstatus already short" but those 5 (`bps_baupg_ch`, `bps_ibc_104_11_alternative`, `bps_jis_jas_mlit`, `bps_nta_8713`, `bps_project_specific`) had names 29–50 chars. Derived sensible short names: `BauPG (CH)`, `IBC 104.11 (USA)`, `JIS/JAS/MLIT (JP)`, `NTA 8713 (NL)`, `Projekt-Freigabe`.
+- 25 of 30 Norm short names follow the "standard-number-only" recipe (e.g. `EN 206`, `DIN 4074`). The 4 Eurocode-EN entries kept the Eurocode-N suffix for readability (e.g. `EN 1992 (Eurocode 2)`). `norm_sia_schweiz` and `norm_tek_norway` got `SIA (CH)` / `TEK (NO)` respectively (no published number to use).
+- Norm ids with underscored old names (`DIN_18940`, `EN_1090`, `ISO_14040`, `ISO_14044`, `ISO_20887`, `DIN_EN_15804`, `DIN_EN_15978`) were renormalised to space-form (`DIN 18940`, etc.) — old names were not preserved as `name_full` (since the only difference is `_` vs space).
+
+## Rollback
+
+Property-only changes. Restore individual `name`/`name_full` values from `_neo4j/review/backups/phase_m_pre_apply/` if needed.
 
 ---
 
