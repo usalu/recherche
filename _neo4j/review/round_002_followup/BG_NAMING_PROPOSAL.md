@@ -139,6 +139,74 @@ Expected impact: 306 node renames + 0 new nodes + new properties on 306 BGs. All
 - **Don't pre-encode Akteur slugs in BG ids.** Actors change; the project link is enough.
 - **Don't introduce a separate `BauteilgruppeTyp` taxonomy** on top of the existing `Bauteiltyp` + `Material` combination — the two existing vocabularies are sufficient.
 
+## Showing short labels in the graph view while keeping the full `name`
+
+Neo4j Browser lets you pick which property becomes the visible caption of a node, independently of what is stored on it. So we can keep the long `name` as truth and show a short tag in the diagram.
+
+### Step 1 — add a `short_name` property to every node
+
+For Bauteilgruppen, target ≤ 25 chars. Common patterns:
+- `<Material> <Bauteiltyp> <project-abbr>`  → `Stahl-Träger K.118`
+- `<Bauteiltyp> <project-abbr>`            → `Ziegelfassade RR`
+- `<location> <Bauteiltyp>`                → `Atrium Dach Alliander`
+
+| Full `name` | Proposed `short_name` |
+|---|---|
+| "Stahlträger / Stützen / Profilbleche Verbunddecken" (K.118) | `Stahl-Träger K.118` |
+| "Ziegelfassadenmodule / Mauerwerksausschnitte" (Resource Rows) | `Ziegelfassade RR` |
+| "Reused structural steel" (BedZED) | `Stahl BedZED` |
+| "Gemeinsame Überdachung / Atriumhülle" (Alliander) | `Atrium Alliander` |
+
+The property is also worth adding to other often-long labels: `Projekt` (e.g. `K.118 Winterthur`), `Akteur` (most are already short), `Bauwerk`, `Norm`.
+
+### Step 2 — tell Neo4j Browser to use it (paste once per browser)
+
+```cypher
+:style
+{
+  node.Bauteilgruppe {
+    caption: '{short_name}';
+    color: '#FFE081';
+  }
+  node.Projekt {
+    caption: '{short_name}';
+    color: '#A5ABB6';
+  }
+  node.Bauwerk {
+    caption: '{short_name}';
+  }
+  node.Akteur {
+    caption: '{short_name}';
+  }
+  node.Material   { caption: '{name}'; }
+  node.Bauteiltyp { caption: '{name}'; }
+  node.Land       { caption: '{name}'; }
+  node.Norm       { caption: '{short_name}'; }
+}
+```
+
+The style persists in the browser's localStorage. If `short_name` is missing, Browser falls back to `name`, then `id` — so partial roll-out is fine.
+
+### Step 3 (alternative) — caption from existing structured properties
+
+Once the new `primary_material_id` + `primary_bauteiltyp_id` exist on every Bauteilgruppe (proposed above), you can skip the extra `short_name` and use them directly:
+
+```cypher
+:style {
+  node.Bauteilgruppe {
+    caption: '{primary_material_id} · {primary_bauteiltyp_id}';
+  }
+}
+```
+
+That gives every BG a caption like `mat_stahl · bt_traeger` without storing a new property. Less human-friendly than a hand-written `short_name`, but zero migration cost.
+
+### What stays unchanged
+
+- `id` — structured machine handle, never used as visual caption
+- `name` — full descriptive label, multilingual, visible on hover + in the side-panel detail view
+- `note`, `scope_note`, `raw_name` etc. — unchanged
+
 ## Open questions before executing
 
 1. Is `bg_slug` the right property name on Projekt, or should it be `slug_short` / `canonical_slug` (more general for cross-referencing all child nodes)?
