@@ -1,18 +1,19 @@
 # Batch 5 — Teaching / research programmes (4 projects)
 
 **Workflow + categories to gather:** see [README.md](README.md).
+**Full graph schema (node labels, controlled vocabularies, property names):** see [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md).
 
-These four entries are **not buildings** — they are pedagogical or research initiatives at universities and architecture schools. They produce buildings, theses, demonstrators, publications, and graduates, but the entry itself describes the programme. The dossier sections that apply are:
+## Graph nodes to populate
 
-- Identification (programme name, host institution, country, web presence)
-- People and organizations (leads, faculty, collaborators, partner firms)
-- Time line (founding year, current status, run-time of specific cycles)
-- Funding sources (research-council grants, ETH/internal, industry partners)
-- Outputs (built demonstrators, exhibitions, publications, theses, courses, graduates)
-- Linked case studies our archive may already cover (e.g. ReCrete footbridge ↔ EPFL Fivet group; K.118 ↔ ZHAW Eva Stricker)
-- Sources for everything
+These are **research or teaching programmes** — the core node is `Programm`. Fill as many of the following node types and their properties as the public record allows. Consult [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for all controlled-vocabulary IDs and property names.
 
-The "Buildings involved" / "Reused components" / "Processing" / "Quality, defects" sections from the README mostly do not apply to a programme itself. They apply to the specific demonstrator buildings the programme produced — and those demonstrators are best documented as separate case studies linked back to the programme.
+**Core node:** `Programm`
+
+**Linked nodes:** `Akteur` (+ `Akteurrolle` + `Akteurtyp` + `GEHÖRT_ZU`) · `Land` · `Stadt` · `Methode` · `WiederverwendungsArt` · `Software` · `Tool` · `Quelle` · `Norm`
+
+**Relationships:** `BETEILIGT_AN` · `GEHÖRT_ZU` · `ERHALT_FOERDERUNG_DURCH` · `TEIL_VON_PROGRAMM` (link built demonstrators) · `NUTZT_SOFTWARE` · `NUTZT_TOOL` · `LIEGT_IN_LAND`
+
+**Also list** any built demonstrators by name so they can be linked as `Bauwerk` nodes via `TEIL_VON_PROGRAMM`. The actors under "Already linked" are known graph nodes — use them as research anchors. **Every factual claim needs a source citation. Unknown → write "unknown".**
 
 ---
 
@@ -22,16 +23,7 @@ The "Buildings involved" / "Reused components" / "Processing" / "Quality, defect
 
 **Plausible starting context:** ETH Zürich's circular-construction track, led by **Prof. Catherine De Wolf** at the **Circular Engineering for Architecture (CEA)** chair (established 2021). Gramazio Kohler Research is ETH's robotics-driven design + construction lab — they collaborate with CEA on demonstrators that combine reuse with computational fabrication.
 
-**Specific items to chase:**
-- CEA chair full title, founding year, host department (D-BAUG most likely)
-- Notable student / research demonstrator projects produced under the track. Likely candidates worth probing: ReCrete footbridge, robotic assembly of reused timber, Save salvage demonstrators, MAS in Sustainable Building Design student outputs
-- Funding (ETH internal, SNSF, industry partners — Holcim?, Implenia?, Bouygues?)
-- Course offerings (Bachelor's, Master's, MAS, summer schools)
-- Industry partnerships (Madaster Switzerland, Concular Switzerland, Implenia, Eberhard, baubüro in situ)
-- Publications track (CEA Journal? Buildings? Journal of Cleaner Production?)
-- Linkage to existing graph projects: ReCrete is already documented; K.118 has ETH-adjacent involvement; UMAR involves ETH alumni
-
-**Where to look:** cea.arch.ethz.ch, gramaziokohler.arch.ethz.ch, ethz.ch news archive, ETH Library research output, Catherine De Wolf personal publications page, ETH MAS programme listings.
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 
@@ -41,15 +33,7 @@ The "Buildings involved" / "Reused components" / "Processing" / "Quality, defect
 
 **Plausible starting context:** ZHAW Zürcher Hochschule für Angewandte Wissenschaften — specifically the **Institut für Konstruktives Entwerfen (IKE)** at Departement Architektur, Gestaltung und Bauingenieurwesen in Winterthur. **Eva Stricker** has led ZHAW's reuse research compendium — the foundational Swiss reference work on direct reuse, with detailed case studies of K.118 and many other Swiss buildings. Andreas Sonderegger and Guido Brandi are ZHAW colleagues.
 
-**Specific items to chase:**
-- Research programme / line title (likely "Wiederverwendung im Bauwesen" or similar)
-- Years of activity, funding (Innosuisse most likely, also SNF / SBFI possible)
-- Outputs: ZHAW Reuse Compendium (publication metadata — year, ISBN, publisher), case-study compilations, conference papers
-- Industry partners (Zirkular GmbH, baubüro in situ, Eberhard, Implenia, Halter)
-- Linkage to case studies already in our archive — Stricker is a primary chronicler of K.118 and likely others
-- Teaching component (Bachelor's / Master's modules, MAS programmes)
-
-**Where to look:** zhaw.ch/ike (Institute page), ZHAW publication database (zhaw.ch/publikationen), Eva Stricker on Google Scholar, Hochparterre interviews, espazium publications.
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 
@@ -59,16 +43,7 @@ The "Buildings involved" / "Reused components" / "Processing" / "Quality, defect
 
 **Plausible starting context:** A teaching programme or design studio in Brussels jointly run by **Rotor** (Devlieger + Gielen, the cooperative behind Rotor DC and Opalis) and **CONIX RDBM Architects** (Christine Conix, an Antwerp-based firm with reuse practice). Host institution is most likely **KU Leuven Faculty of Architecture** (Brussels Campus), **ULB La Cambre**, or **Sint-Lucas School of Architecture**.
 
-**Specific items to chase:**
-- Host institution + faculty
-- Programme format (semester studio, design research, lecture series, ongoing)
-- Years of operation, run cycles
-- Student / studio outputs (theses, built demonstrators if any, exhibitions)
-- Public outputs (book, exhibition catalogue, project website)
-- Linkage to Rotor's parallel commercial activity (Rotor DC, Opalis directory)
-- Funding (Flemish Region, EU Erasmus+, Brussels region)
-
-**Where to look:** rotordc.com (Rotor cooperative also lists academic engagements), conixrdbm.com, the universities' architecture programme pages (KU Leuven Architecture, La Cambre, Sint-Lucas), Brussels architecture press (A+, BRUZZ).
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 
@@ -78,15 +53,7 @@ The "Buildings involved" / "Reused components" / "Processing" / "Quality, defect
 
 **Plausible starting context:** **Vandkunsten Architects** (Copenhagen, founded 1970) — a long-established Danish firm with a strong sustainability and reuse practice. **Søren Nielsen** is a partner / senior researcher known for circular-construction R&D at the firm, notably the **Upcycle House** and **Upcycle Studios** projects in Copenhagen. Katrine West Kristensen is a Vandkunsten researcher in this stream. This stub likely refers to a multi-year Vandkunsten R&D programme on component reuse, very probably co-funded by **Realdania** (the Danish philanthropic foundation that funds most of the country's experimental architecture R&D).
 
-**Specific items to chase:**
-- Programme title (could be "Reused Construction Materials" or "Genbrug i Byggeri" or similar Danish-language original)
-- Years of operation, funding amount, funder (Realdania most likely; also Innovationsfonden Danmark, Bolig- og Planstyrelsen)
-- Specific built outputs already in our archive: Upcycle Studios Copenhagen is already documented; The Green House Utrecht possibly tangential; check if Resource Rows Copenhagen has Vandkunsten involvement (it's usually Lendager-led, so probably not)
-- Industry partners (Lendager Group? Henning Larsen? MOE engineering?)
-- Publications (reports, conference papers, peer-reviewed articles by Søren Nielsen)
-- Linkage to broader Danish circular-construction infrastructure (Genanvend Byggeri, Cirkulær Byggeri)
-
-**Where to look:** vandkunsten.com, realdania.dk projects database, Arkitektur magazine, Bygtek, Søren Nielsen publications, Danish Architecture Center exhibitions.
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 

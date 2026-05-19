@@ -1,6 +1,7 @@
 # Batch 7 — Reuse platforms / matching tools (2 projects)
 
 **Workflow + categories to gather:** see [README.md](README.md).
+**Full graph schema (node labels, controlled vocabularies, property names):** see [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md).
 
 These two entries are **digital platforms / matching tools** for reused building components, not buildings themselves. They are operators of a marketplace, a directory, or a software service. The dossier sections that apply are:
 
@@ -18,6 +19,18 @@ These two entries are **digital platforms / matching tools** for reused building
 
 Like teaching programmes and EU consortia, these dossiers do not need a Bauteil-Inventar or Quality/Defects section — those apply to the specific buildings the platform serves, which are separate case studies.
 
+## Graph nodes to populate
+
+These are **digital platforms or material-exchange operators** — the core nodes are `Akteur` (Akteurtyp → `at_materialhub_bauteilboerse` or `at_software_tool_anbieter`) and `Software` or `Tool`. Fill as many of the following node types and their properties as the public record allows. Consult [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for all controlled-vocabulary IDs and property names.
+
+**Core nodes:** `Akteur` · `Software` · `Tool`
+
+**Linked nodes:** `Beschaffungsweg` (which acquisition paths this platform enables) · `Methode` · `Land` · `Stadt` · `Programm` (funding programme) · `Quelle`
+
+**Relationships:** `NUTZT_SOFTWARE` / `NUTZT_TOOL` (from projects that used this platform) · `GEHÖRT_ZU` · `ERHALT_FOERDERUNG_DURCH` · `LIEGT_IN_LAND`
+
+The actors under "Already linked" are known graph nodes — use them as research anchors. **Every factual claim needs a source citation. Unknown → write "unknown".**
+
 ---
 
 ## 1. REFAIR Bordeaux reuse platform
@@ -26,18 +39,7 @@ Like teaching programmes and EU consortia, these dossiers do not need a Bauteil-
 
 **Plausible starting context:** Regional reuse-materials platform in the Bordeaux area (Nouvelle-Aquitaine, France). Likely operated by an association, cooperative, or local-government-backed entity. Both linked actors are French; Tiphaine Berthomé works on circular-construction projects in Nouvelle-Aquitaine. French regional reuse platforms typically receive seed funding from **ADEME** (Agence de la Transition Écologique), **Région Nouvelle-Aquitaine**, and **Bordeaux Métropole**.
 
-**Specific items to chase:**
-- Decode "REFAIR" — likely **RÉ**emploi + **FAIR** or a regional play on words (FR also has Refer, Réavie, etc.)
-- Operator structure (association loi 1901? coopérative SCIC? SAS?)
-- Founding year
-- Operating model: physical reuse-yard (dépôt de réemploi)? online marketplace? both? consultancy-bundled?
-- Material categories handled (typical French reuse platforms split into "second-œuvre" finishes vs. structural)
-- Annual throughput (tons / number of items)
-- Funders (ADEME, Région Nouvelle-Aquitaine, Bordeaux Métropole, EU LIFE programme)
-- Notable matched projects (any built case studies that sourced material via REFAIR)
-- Relationship to national French reuse infrastructure (Booster du Réemploi, Cycle Up, R-USE, Backacia)
-
-**Where to look:** refair-bordeaux.fr (likely URL), bordeaux-metropole.fr economy/circular pages, ademe.fr project database, Sud Ouest newspaper, French architecture press (AMC, Le Moniteur), Booster du Réemploi annual reports.
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 
@@ -50,15 +52,7 @@ Like teaching programmes and EU consortia, these dossiers do not need a Bauteil-
 - **Reused Construction Material Index** (a price / availability index)
 - A specific blueprint method that Concular markets as a service
 
-**Specific items to chase:**
-- Decode RCMI — check Concular's product / service pages directly
-- Whether RCMI is a separate trademark, a workflow within the Concular platform, or a one-off blueprint document
-- Connection to existing graph projects: Concular is already represented as an actor / tool node, so this stub may reduce to "RCMI is Concular's audit workflow, not a separate entity"
-- Concular's overall scale (number of listings, t matched in 2025, number of partner architects)
-- Funder / investor history (Concular has raised venture funding — disclose where named publicly)
-- Notable matched projects already in our archive
-
-**Where to look:** concular.com (product / service pages, English + German), Dominik Campanella interviews (Detail magazine, Süddeutsche Zeitung, Building Radar), Restado project archives, German circular-construction press (DBZ, Bauwelt).
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. If research shows RCMI is a Concular service rather than a separate entity, document that clearly — the entry can be reduced to a cross-reference to the existing Concular node at integration. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 

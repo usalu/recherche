@@ -2,6 +2,39 @@
 
 Twenty-three building-reuse case studies are referenced in our archive but have no dedicated research dossier yet. This folder contains seven batched prompts (≤ 5 projects each, grouped by category) that you can hand to an external research assistant (ChatGPT, Perplexity, a research intern) to fill the gap.
 
+## How this research feeds the graph
+
+Every dossier is ultimately imported into the **Neo4j graph database (`mit-bestand`)**. The full schema — all node labels, controlled-vocabulary IDs, and property names — is in **[GRAPH_SCHEMA.md](GRAPH_SCHEMA.md)**. Read it before writing dossiers.
+
+The table below maps research-dossier sections to graph node types:
+
+| Dossier section | Primary graph node(s) | Key controlled vocab |
+|---|---|---|
+| Identification (buildings) | `Bauwerk` | `Bauobjektrolle`, `Bauobjektklasse`, `BauaufgabeIntervention`, `Nutzung` |
+| People & organisations | `Akteur` + `BETEILIGT_AN` / `GEHÖRT_ZU` | `Akteurrolle`, `Akteurtyp` |
+| Reused components | `Bauteilgruppe` | `Bauteiltyp`, `Materialgruppe`, `WiederverwendungsArt` |
+| Acquisition path | `Bauteilgruppe` → `Beschaffungsweg` | see `bweg_*` vocab |
+| Deconstruction method | `Bauteilgruppe` → `Rueckbauverfahren` | `rv_selektiver_rueckbau` etc. |
+| Refurbishment / processing | `Bauteilgruppe` → `Aufbereitungsverfahren` | see `av_*` vocab |
+| Quality, defects, testing | `Defekt`, `PruefungNachweis`, `Leistungsanforderung` | — |
+| Pollutants | `Schadstoff` | `asbeststatus` property |
+| Regulatory / norm | `Norm`, `Bauproduktstatus`, `RechtlicheBedingung` | `bps_*` vocab |
+| Certification | `ZertifizierungBewertungssystem` | `zbs_breeam`, `zbs_dgnb` … |
+| Market model / economics | `Marktmodell`, `Wirtschaft`, `Akzeptanz` | `mm_*`, `ak_*` vocab |
+| Design method / strategy | `Methode` | `meth_*` vocab |
+| Joining technique | `Verbindungstechnik` | — |
+| Logistics | `Logistik` | `log_*` vocab |
+| Funding / programme | `Programm` + `ERHALT_FOERDERUNG_DURCH` | `prog_*` existing nodes |
+| Software / tools | `Software`, `Tool` | existing `software_*` / `tool_*` nodes |
+| LCA scope | `LebenszyklusModul` + `BERECHNET_NACH_MODUL` | — |
+| Donor–receiver geometry | `Bauwerk` properties + `Logistik` | `transportdistanz_donor_receiver_km` |
+
+### Key quantitative fields to collect (abbreviated; full list in GRAPH_SCHEMA.md)
+
+**Receiver `Bauwerk`:** `bgf_m2`, `fertigstellung_jahr`, `reuse_anteil_prozent`, `wiederverwendungsrate_gewicht_prozent`, `wiederverwendungsrate_volumen_prozent`, `reuse_masse_t`, `co2_einsparung_t`, `co2_einsparung_prozent`, `baukosten_eur`, `baukosten_eur_m2`, `lca_module_scope`, `transportdistanz_donor_receiver_km`, `design_for_disassembly`, `material_passport`
+
+**`Bauteilgruppe`:** `menge_t`, `menge_m2`, `menge_stueck`, `menge_m3`, `bauteilalter_jahre`, `lagerdauer_jahre`, `transportdistanz_km`, `asbeststatus`, `alte_funktion`, `neue_funktion`, `herkunft`
+
 Every batch document follows the same workflow and asks for the same kinds of information — only the per-project focus differs.
 
 ## What every research dossier must contain

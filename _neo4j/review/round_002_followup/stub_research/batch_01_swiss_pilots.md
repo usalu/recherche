@@ -1,11 +1,24 @@
 # Batch 1 — Swiss case-study pilots (3 projects)
 
 **Workflow + categories to gather:** see [README.md](README.md).
+**Full graph schema (node labels, controlled vocabularies, property names):** see [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md).
 **Reference example (depth + structure):** [`K118_Kopfbau_Halle_118_Winterthur.md`](../../../../_archive/research/gebaeude/K118_Kopfbau_Halle_118_Winterthur.md).
 
-For each project below, produce one structured markdown dossier following the K.118 template, covering as many of the categories listed in the README as the public record allows. **Every factual claim needs a source citation.** Items marked "unknown" are preferred to fabrication.
+## Graph nodes to populate
 
-The people / organizations under "Already linked" have shown up in our actor registry as participating in this project — start research from them, but do not stop there. Look for additional actors, especially in the under-documented role categories (sustainability consultant, demolition contractor, broker, funder, regulator).
+These are **physical buildings** — the core node is `Bauwerk`. Fill as many of the following node types and their properties as the public record allows. Consult [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for all controlled-vocabulary IDs and property names.
+
+**Core nodes:** `Bauwerk` · `Akteur` (+ `Akteurrolle` + `Akteurtyp` + `GEHÖRT_ZU`) · `Bauteilgruppe`
+
+**Per component batch:** `Bauteiltyp` · `Materialgruppe` · `WiederverwendungsArt` · `Beschaffungsweg` · `Rueckbauverfahren` · `Aufbereitungsverfahren` · `Verbindungstechnik` · `Logistik` · `Defekt` · `ZustandsKlasse` · `PruefungNachweis` · `Leistungsanforderung` · `Bauproduktstatus` · `Schadstoff`
+
+**Per building:** `BauaufgabeIntervention` · `Nutzung` · `Bauobjektrolle` · `Bauobjektklasse` · `ZertifizierungBewertungssystem` · `Methode` · `Norm` · `LebenszyklusModul` · `Marktmodell` · `Akzeptanz` · `Huerde` · `HuerdeKategorie` · `Programm` · `Software` · `Tool` · `Wirtschaft`
+
+**Geographic:** `Stadt` · `Land`
+
+**Relationships to establish:** `BETEILIGT_AN` · `AUS_BAUWERK` · `EINGEBAUT_IN` · `LIEGT_IN_STADT` · `LIEGT_IN_LAND` · `ERHALT_FOERDERUNG_DURCH` · `TEIL_VON_PROGRAMM` · `BERECHNET_NACH_MODUL` · `HAT_WIRTSCHAFT`
+
+The actors under "Already linked" are known graph nodes — use them as research anchors and add any newly discovered actors with their roles. **Every factual claim needs a source citation. Unknown → write "unknown".**
 
 ---
 
@@ -15,17 +28,7 @@ The people / organizations under "Already linked" have shown up in our actor reg
 
 **Plausible starting context:** Studio Trachsler Hoffmann is a Zürich architecture office known for reuse-led design. The street Schärenmoosstrasse runs through Zürich-Schwamendingen. The project is most likely a residential building, a school, or a mixed-use housing development on that street.
 
-**Specific items to chase:**
-- Exact address (Schärenmoosstrasse N°), district, postcode
-- Whether this is a new build, transformation, extension, or replacement
-- Client (Bauherr) — likely a cooperative, foundation, or City of Zürich entity
-- Year of design start, construction start, completion
-- Reuse strategy and donor sources — Swiss reuse projects typically draw from Sulzer-Areal Winterthur, Klybeck Basel, ETH demonstrators, or municipal teardowns
-- Reuse rate by mass and by volume
-- Norms cited (SIA 269 family is the Swiss reuse standard; SIA 261/263/265 for structural design)
-- Project funding and any cost benchmarking against a new-build reference
-
-**Where to look:** hochparterre.ch, espazium.ch, studio Trachsler Hoffmann project page (likely studiotrachslerhoffmann.ch), Stadt Zürich Hochbaudepartement, Werk-Bauen+Wohnen archives.
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 
@@ -35,16 +38,7 @@ The people / organizations under "Already linked" have shown up in our actor reg
 
 **Plausible starting context:** "UMAR" almost certainly stands for **Urban Mining and Recycling** — the experimental residential unit inside the NEST building at Empa in Dübendorf (Switzerland). Designed by Werner Sobek with Dirk Hebel and Felix Heisel (then both at ETH Zürich, now Hebel at KIT Karlsruhe), opened in 2018, designed as a fully-disassemblable demonstration. This is a well-documented case — research should be quick and thorough.
 
-**Specific items to chase:**
-- All categories listed in README — UMAR has extensive open documentation
-- Especially good coverage to chase: full bill of reused materials (copper, brick, plywood, gypsum, fixtures), donor sources for each
-- Design-for-disassembly philosophy: which joining techniques were used to ensure later disassembly
-- Lifecycle-assessment scope (UMAR was modeled in detail — EN 15978 modules)
-- Quantitative target: reuse + recyclability rate (the project advertised ≈ 100 % at end-of-life)
-- Bauherr Empa, building owner of NEST
-- Operator of the unit post-construction (occupied, used by Empa researchers)
-
-**Where to look:** empa.ch/web/nest/umar, sobek.de project page, hebel.arch.kit.edu publications, Hebel + Heisel "Building from Waste" book (Birkhäuser), peer-reviewed papers (Sustainable Cities and Society, Journal of Cleaner Production), ArchDaily.
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 
@@ -54,16 +48,7 @@ The people / organizations under "Already linked" have shown up in our actor reg
 
 **Plausible starting context:** The actor names suggest a Spanish-speaking architect duo working in Basel. "Walkeweg" is a street in Basel (Gellert / Breite district). "ELEMENTA" is also the brand name of a Swiss precast-concrete reuse system marketed by Element AG. The combination "ELEMENTA Walkeweg" most likely refers to a residential or mixed-use development on Walkeweg that uses the ELEMENTA precast-reuse system, or a building by EMI Architekten / Esch Sintzel / another Basel office.
 
-**Specific items to chase:**
-- First and most critical: **disambiguate** "ELEMENTA Walkeweg" — is it a building name, a planning study, or a project alias?
-- Architecture firm Ferrando Costansa and Garrido Arnaiz belong to (try EMI Architekten, blue architects, Esch Sintzel, Buol & Zünd, Salathé Rytz)
-- Bauherr (likely a Basel housing cooperative or Stiftung Habitat)
-- Whether built, under construction, or in planning
-- Connection to the ELEMENTA precast-reuse system (Element AG, Veltheim CH)
-- Material flows: what is being reused, where it comes from
-- Norms and Swiss-specific regulatory product status
-
-**Where to look:** hochparterre.ch, baublatt.ch, Basel-Stadt Hochbau-Magazin, Element AG (element-ag.ch), TEC21, espazium.ch, the architects' personal portfolios.
+**Task:** Produce a dossier filling as many graph nodes and properties as possible. If the project cannot be unambiguously identified, document that as a negative finding. See [GRAPH_SCHEMA.md](GRAPH_SCHEMA.md) for the complete vocabulary.
 
 ---
 
