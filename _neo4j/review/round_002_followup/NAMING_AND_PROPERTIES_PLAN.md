@@ -1,15 +1,95 @@
 # Naming + property cleanup plan — graph-wide
 
+## 0. Execution context (read first if you're starting fresh)
+
+**State at plan freeze:** 2 296 nodes / 16 822 relationships in Neo4j database `mit-bestand` (bolt://localhost:7687). Verify before starting any phase:
+
+```cypher
+MATCH (n) WITH count(n) AS nodes
+MATCH ()-[r]->() WITH nodes, count(r) AS rels
+RETURN nodes, rels;
+// Expected: 2296 / 16822 (drift would mean someone applied something in between)
+```
+
+### Companion docs you'll want open
+
+| File | Purpose |
+|---|---|
+| **[NAMING_AND_PROPERTIES_PLAN.md](NAMING_AND_PROPERTIES_PLAN.md)** *(this file)* | The plan |
+| [CONFLICT_ANALYSIS.md](CONFLICT_ANALYSIS.md) | Pre-flight conflict scan; the 7 plan amendments are already baked in here |
+| [rollback.md](rollback.md) | Ledger of every applied phase A–K + Round 003 with backup paths |
+| [VERIFICATION_QUERIES.cypher](VERIFICATION_QUERIES.cypher) | 18 graph-output queries to sanity-check each phase post-apply |
+| [EXPLORATION_QUERIES.cypher](EXPLORATION_QUERIES.cypher) | 20 rich-combination queries for exploring the live graph |
+| [PARKED_DECISIONS.md](PARKED_DECISIONS.md) | 23 stub Projekte awaiting promotion (handled in `stub_research/`) |
+| [STUB_AKTEUR_DECISIONS.md](STUB_AKTEUR_DECISIONS.md) | 16 stub Akteure (decisions written, removals deferred to future prompts) |
+| [stub_research/README.md](stub_research/README.md) | 7 batched research prompts for the 23 stub Projekte |
+
+Historical / audit-trail (don't act on, just read for context if needed): `phase_a_execution_plan.md`, `reuse_knowledge_map.md`, `reuse_schema_proposals.md`, `phase_k_audit_report.md`, `phase_g_*.json`, `belegt_in_*`, `vocab_*`, `deep_reuse_scan.json`.
+
+### Apply-tool workflow
+
+Every phase follows the same protocol (Phases A–K were all done this way; see [rollback.md](rollback.md) for examples):
+
+1. **Backup** the live graph to `_neo4j/review/backups/<phase>_pre_apply/`:
+   ```bash
+   rm -rf _neo4j/review/backups/phase_X_pre_apply
+   python _scripts/backup_neo4j_graph.py --out-dir _neo4j/review/backups/phase_X_pre_apply
+   ```
+2. **Generate** the JSONL patch under `_neo4j/review/round_002_followup/patches/phase_X.patch.jsonl` (write a small generator script under `_scripts/_generate_phase_X_patch.py`, commit-and-delete pattern).
+3. **Dry-run** the patch — confirm op counts, zero errors:
+   ```bash
+   python _scripts/apply_neo4j_review_patch.py --patch _neo4j/review/round_002_followup/patches/phase_X.patch.jsonl --dry-run
+   ```
+4. **Live apply** with the explicit confirmation phrase:
+   ```bash
+   python _scripts/apply_neo4j_review_patch.py --patch _neo4j/review/round_002_followup/patches/phase_X.patch.jsonl --confirm "APPLY phase_X.patch.jsonl TO mit-bestand"
+   ```
+5. **Verify** with the relevant section of [VERIFICATION_QUERIES.cypher](VERIFICATION_QUERIES.cypher) — expected counts shown inline in comments.
+6. **Update** [rollback.md](rollback.md) — append a new section using the existing template (before/after counts, ops table, rollback Cypher, capabilities unlocked).
+7. **Commit** small batches with 3-word imperative subjects (`Apply Phase L`, `Add Quelle convention`, etc.), no AI co-author trailers, using `git -c core.longpaths=true add ... && git -c core.longpaths=true commit -m "..."`.
+
+### Apply-tool ops reference (`_scripts/apply_neo4j_review_patch.py`)
+
+Supported ops: `add_node`, `set_node_properties`, `canonicalize_node`, `set_property`, `add_rel`, `noop_reviewed`, `merge_node`, `delete_node`, `delete_rel`, `set_rel_properties`, `remove_node_properties`, `remove_rel_properties`, `rename_property`, `move_property`, `replace_rel_type`.
+
+**Critical gotchas** (caught in [CONFLICT_ANALYSIS.md](CONFLICT_ANALYSIS.md)):
+
+- `canonicalize_node` only sets `name` and `aliases`. It **does NOT rename the node id**. For id renames, use the **`add_node` → `merge_node`** sequence — see Phase O.a + O.b below. `merge_node` is the only op that rewrites outgoing `r.id` properties via `rewrite_id_outbound`.
+- `set_node_properties` and `set_rel_properties` **overwrite** the named properties. For `aliases` (or any list-valued property) you must first read the current value and emit the union, otherwise existing entries are lost. Nodes with existing aliases today: `imd_raadgevende_ingenieurs`, `cleveland_steel_tubes`, `rotor_dc`, `duncan_baker_brown`, `p_lysp8_basel`, `p_eth_circular_construction_student_reuse`, `land_daenemark`.
+- `remove_node_properties` takes a `properties: ["key1", "key2", …]` list — use this for Phase L hygiene drops.
+- `rename_property` takes `{id, from, to}` for a node-scoped property rename — used in Phase L Quelle handling (`titel → name_full`).
+
+### Phase ordering (recommended)
+
+```
+L (hygiene) → M (vocab name+name_full) → N (entity name+name_full) → O.a (BG add_node) → O.b (BG merge_node) → P (backfill)
+              ──────────── do these first; lowest risk ────────────  ── biggest ──   ── final polish ──
+```
+
+`Q (Quelle gap)` is **deferred** — schedule after Q4 decision (whether to source structural-vocab labels).
+
+### Conventions recap
+
+- Commits: 3-word imperative subjects, no AI co-author trailers, no `--no-verify`, never push without explicit ask
+- Always `git -c core.longpaths=true` when adding files under `_database/` or large json dumps
+- No interactive git ops (no `-i` flags)
+- Confirmation phrase for live apply must match the patch file name and database name exactly: `APPLY <patch-file-name> TO mit-bestand`
+
+---
+
 **Decision recorded:** the canonical `name` property becomes the **short caption** (≤ 25 chars where applicable). Neo4j Browser displays it as the node label by default, so no `:style` config is needed. Long descriptive text moves to a sibling property `name_full` where it has real value.
 
 This document covers:
+0. Execution context (read this first if starting a new chat)
 1. The universal property convention (what every node label should carry)
 2. Per-label property landscape (current state, 53 labels)
 3. Per-label cleanup actions (Groups A–H)
 4. **Quelle convention** — the two-channel source-tracking rule and current coverage
-5. Concrete short-name tables for the labels where `name` is currently too long
-6. The Bauteilgruppe id-restructuring convention (with amendments from CONFLICT_ANALYSIS.md)
+5. Concrete short-name tables for the labels where `name` is currently too long *(in §3 Groups C+D)*
+6. The Bauteilgruppe id-restructuring convention (with amendments from [CONFLICT_ANALYSIS.md](CONFLICT_ANALYSIS.md))
 7. A phased migration plan (Phases L → P plus deferred Phase Q for Quelle gaps)
+8. Open questions
+
 
 ---
 
