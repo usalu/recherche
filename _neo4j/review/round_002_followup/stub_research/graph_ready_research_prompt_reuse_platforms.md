@@ -246,18 +246,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Orianne Scourzic | already linked graph node |
 | Tiphaine Berthomé | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- REFAIR is a physical and/or online reuse platform based in the Bordeaux metropolitan area, Région Nouvelle-Aquitaine, France.
-- The platform may operate a physical depot or showroom alongside an online listing service.
-- Primary funders may include ADEME, Région Nouvelle-Aquitaine, and Bordeaux Métropole.
-- Orianne Scourzic and/or Tiphaine Berthomé may be co-founders or key staff.
-- The platform may be registered as an association (loi 1901), SCOP, or SAS.
-- The platform may be linked to Cd2e (Centre de Ressources Technologies Propres) or the Cluster Eskal Eureka.
-- A commercial listing tool or data standard may have been developed in-house or adapted from an existing one.
-
 ### Task
 
 Produce `REFAIR_Bordeaux.md` using the exact dossier template above.
@@ -273,16 +261,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Actor | Status |
 |---|---|
 | Dominik Campanella | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- RCMI may stand for "Reverse Construction Material Inventory" or similar — a Concular audit-and-inventory workflow.
-- If so, RCMI is not a separate entity but a product, feature, or methodology within the Concular platform.
-- Concular GmbH is a Berlin-based construction-material platform with Dominik Campanella as a co-founder or key figure.
-- If RCMI is confirmed as a workflow or product feature (not a separate company or programme), the dossier should reduce to a cross-reference note: document the relationship clearly and point to the existing Concular node rather than creating a duplicate.
-- If RCMI is a distinct project, initiative, or pilot with its own identity, produce a full dossier.
 
 ### Task
 

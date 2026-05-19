@@ -298,15 +298,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Stefan Krötsch | already linked graph node |
 | Thomas Stark | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- The name "Stuttgart 210" plays on "Stuttgart 21" — likely a demonstrator using materials salvaged from Stuttgart-21 demolition sites.
-- The project may be a research demonstrator, student design studio, or a built pilot building.
-- The team mix (HFT Stuttgart + HTWG Konstanz + Klingelhöfer Krötsch + Thomas Stark) points to a teaching-research collaboration with a built or near-built output.
-- Material donor source may be Stuttgart-21 site demolitions.
-
 ### Task
 
 Produce `Stuttgart_210.md` using the exact dossier template above.
@@ -330,16 +321,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Martin Zeller | already linked graph node |
 | Pascal Hentschel | already linked graph node |
 | Zirkular | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- "LYSP8" refers to Lysbüchel, parcel 8 — an urban-transformation district in Basel-Saint-Johann.
-- Lead architects are baubüro in situ and Loeliger Strub.
-- Zirkular GmbH is the reuse and circularity consultant (Zirkular spun off from baubüro in situ).
-- The project is likely one of the largest Swiss reuse-led mixed-use developments.
-- Client may be SBB Immobilien or a Basel housing cooperative / foundation.
 
 ### Task
 
@@ -366,16 +347,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Sina Jansen | already linked graph node |
 | Uwe Seiler | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- "Reallabor" is a German federal research format (BMBF / BBSR / Bundesstiftung Baukultur) — a real-world experimental zone with public funding.
-- "B(e) Ware" plays on "Be Ware" (be aware) and "Bauen mit erprobten Waren" (building with proven goods).
-- The programme is led by TU Berlin Natural Building Lab (Eike Roswag-Klinge) and ZRS Architekten (Christof Ziegert).
-- It may have produced one or more built pilot buildings.
-- `prog_reallabor_be_ware` is already in the graph — this stub may refer to the same node; confirm and cross-link any pilot buildings via `TEIL_VON_PROGRAMM`.
-
 ### Task
 
 Produce `Reallabor_Be_Ware.md` using the exact dossier template above. If the programme produced multiple pilot buildings, list each under `Bauteilgruppen` only if construction details are documented; otherwise list them under `Programm` in the building-level categories table and note them as separate dossier candidates.
@@ -393,16 +364,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Markus Meissner | already linked graph node |
 | Thomas Romm | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- The project is a new medical-university campus for MedUni Wien on or near Mariannengasse, Vienna 9th district (Alsergrund).
-- Thomas Romm (Forschen Planen Bauen) is involved in a reuse-driven design capacity.
-- Markus Meissner is associated with Austrian sustainability and reuse projects.
-- Client may be BIG Bundesimmobiliengesellschaft (Austrian federal building authority) acting for MedUni Wien.
-- Reuse implementation may be at study or planning stage rather than built.
-
 ### Task
 
 Produce `MedUni_Campus_Mariannengasse_Wien.md` using the exact dossier template above.
@@ -418,16 +379,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Actor | Status |
 |---|---|
 | Félix Dillmann | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- RE-USE Höfe Wien is Vienna's public reuse-yard network, operated by city waste utility MA 48.
-- Multiple "Höfe" (yards) around the city function as drop-off and low-cost resale points for usable goods.
-- The network includes the 48er-Tandler flagship shop.
-- This is more a programme / network than a single building — it may be best represented as a `Programm` node with multiple `Bauwerk` locations (each Hof) rather than a single `Bauwerk`.
-- If the Höfe focus on furniture and household goods rather than structural building components, the connection to the reuse graph may be via `Beschaffungsweg` or `Marktmodell` rather than via component-batch nodes.
 
 ### Task
 

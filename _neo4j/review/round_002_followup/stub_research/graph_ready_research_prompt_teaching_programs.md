@@ -245,16 +245,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Fabio Gramazio | already linked graph node |
 | Matthias Kohler | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- The programme is the Circular Engineering for Architecture (CEA) chair at ETH Zürich, led by Prof. Catherine De Wolf, established 2021.
-- Gramazio Kohler Research (robotics-driven design and construction) collaborates with CEA on demonstrators combining reuse with computational fabrication.
-- Host department is likely D-BAUG (Department of Civil, Environmental and Geomatic Engineering).
-- The programme has produced built or prototyped demonstrators including possibly ReCrete footbridge and robotic reused-timber assemblies.
-- Funding may come from ETH internal sources, SNSF, and industry partners such as Holcim, Implenia, or Bouygues.
-
 ### Task
 
 Produce `ETH_Circular_Construction_Programme.md` using the exact dossier template above.
@@ -274,17 +264,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Guido Brandi | already linked graph node |
 | ZHAW | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- The programme is based at ZHAW Zürcher Hochschule für Angewandte Wissenschaften, specifically the Institut für Konstruktives Entwerfen (IKE) in Winterthur.
-- Eva Stricker leads ZHAW's reuse research compendium — the foundational Swiss reference work on direct reuse.
-- Funding may be from Innosuisse, SNF, or SBFI.
-- Published outputs include a ZHAW Reuse Compendium (year, ISBN, and publisher to be verified).
-- Industry partners may include Zirkular GmbH, baubüro in situ, Eberhard, Implenia, or Halter.
-- Stricker is a primary chronicler of K.118 and other Swiss reuse buildings already in the archive.
-
 ### Task
 
 Produce `ZHAW_Reuse_in_Construction.md` using the exact dossier template above.
@@ -303,16 +282,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Lionel Devlieger | already linked graph node |
 | Maarten Gielen | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- The programme is a teaching studio or design-research programme jointly involving Rotor (Devlieger + Gielen) and CONIX RDBM Architects (Christine Conix).
-- Host institution is likely KU Leuven Faculty of Architecture (Brussels Campus), ULB La Cambre, or Sint-Lucas School of Architecture.
-- Format may be a semester studio, design-research initiative, or lecture series.
-- Outputs may include student theses, built demonstrators, or exhibitions.
-- Funding may come from the Flemish Region, EU Erasmus+, or Brussels Region.
-
 ### Task
 
 Produce `Architecture_of_Reuse_Brussels.md` using the exact dossier template above.
@@ -330,16 +299,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Katrine West Kristensen | already linked graph node |
 | Søren Nielsen | already linked graph node |
 | Vandkunsten | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- Vandkunsten Architects (Copenhagen) runs a multi-year R&D programme on component reuse, likely co-funded by Realdania (Danish philanthropic foundation).
-- Søren Nielsen is a partner or senior researcher known for circular-construction R&D at the firm, notably the Upcycle House and Upcycle Studios projects.
-- The programme may be titled "Reused Construction Materials", "Genbrug i Byggeri", or a similar Danish-language name.
-- Specific built outputs already in our archive may include Upcycle Studios Copenhagen.
-- Additional funding may come from Innovationsfonden Danmark or Bolig- og Planstyrelsen.
 
 ### Task
 

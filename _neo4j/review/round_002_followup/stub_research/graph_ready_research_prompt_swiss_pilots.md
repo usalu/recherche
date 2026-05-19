@@ -290,14 +290,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Gian Trachsler | already linked graph node |
 | Studio Trachsler Hoffmann | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- Studio Trachsler Hoffmann may be connected to a reuse-led project at or near Schärenmoosstrasse in Zürich.
-- The project may be in Zürich-Schwamendingen.
-- The project may be residential, educational, or mixed-use.
-
 ### Task
 
 Produce `Schaerenmoosstrasse_Zuerich.md` using the exact dossier template above.
@@ -317,16 +309,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Felix Heisel | already linked graph node |
 | Vanessa Propach | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- UMAR stands for Urban Mining and Recycling.
-- UMAR is an experimental residential unit inside the NEST building at Empa in Dübendorf, Switzerland.
-- The unit opened in or around 2018.
-- It was designed as a fully disassemblable demonstration unit.
-- Werner Sobek, Dirk E. Hebel, Felix Heisel, and Vanessa Propach were involved.
-
 ### Task
 
 Produce `UMAR_Unit_NEST_Empa_Duebendorf.md` using the exact dossier template above.
@@ -343,15 +325,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 |---|---|
 | Carla Ferrando Costansa | already linked graph node |
 | Pablo Garrido Arnaiz | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- Walkeweg is a street in Basel.
-- ELEMENTA may refer to a precast concrete reuse or circular building system.
-- The project may be a residential or mixed-use development on Walkeweg.
-- The project may involve a Basel-based architecture office or a Swiss concrete / precast supplier.
 
 ### Task
 

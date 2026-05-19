@@ -244,17 +244,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Hugo Topalov | already linked graph node |
 | Sarah Westerfeld | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- FCRBE is an Interreg North-West Europe project led by Rotor (Brussels).
-- Run approximately 2017–2022, budget approximately €4.6 million.
-- Partners include Rotor (BE, coordinator), Salvo (UK), Bellastock (FR), Brussels Environment (BE), CSTC / BBRI (BE), and possibly Glasgow Caledonian University.
-- Notable outputs include the Opalis dealer directory (opalis.eu), futureusedmaterials.eu, approximately 36 pilot reuse buildings, and technical guidelines.
-- `prog_fcrbe` is already in the graph — this stub may update or confirm that node rather than create a duplicate.
-- This programme overlaps with project 2 (Interreg NWE FCRBE) — confirm whether they are the same node.
-
 ### Task
 
 Produce `FCRBE_Facilitating_Circulation_Reclaimed_Building_Elements.md` using the exact dossier template above. List all pilot buildings in the built-demonstrators table. Confirm whether `prog_fcrbe` in the graph already captures this data or needs updating.
@@ -270,14 +259,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Actor | Status |
 |---|---|
 | Michaël Ghyoot | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- This stub almost certainly refers to the same programme as project 1 (FCRBE), indexed from the Interreg-administrative angle.
-- Michaël Ghyoot is a Rotor partner and likely the FCRBE project coordinator or scientific lead.
-- `prog_interreg_nwe` is already in the graph — confirm whether this stub maps to that node.
 
 ### Task
 
@@ -295,16 +276,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 |---|---|
 | Corentin Fivet | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- REBRIDGE may stand for "Reused Bridge" or "Reusable Bridge Elements" — a project on structural reuse of bridge components.
-- Corentin Fivet leads the Structural Xploration Lab (SXL) at EPFL Fribourg, the leading European academic group on structural reuse.
-- Funding may be from SNSF Sinergia, Innosuisse, NCCR Digital Fabrication, or Horizon Europe.
-- The project may be related to the ReCrete footbridge (already in the archive, same research group).
-- Industry partners may include Holcim, Implenia, Eberhard, or the Swiss Federal Roads Office (FEDRO).
-
 ### Task
 
 Produce `REBRIDGE_Structural_Reuse.md` using the exact dossier template above.
@@ -320,15 +291,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Actor | Status |
 |---|---|
 | Madlen Kobi | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- "Reuse Logistics" is likely a research project on the logistics of component reuse — transport, storage, and broker matching.
-- Madlen Kobi is a Swiss circular-economy researcher, likely affiliated with ZHAW, HSLU Luzern, or ETH.
-- The project may be funded by Innosuisse, SBFI, or a Swiss federal construction-sustainability programme.
-- It may not correspond to a discrete named project at all — if so, document as a negative finding.
 
 ### Task
 

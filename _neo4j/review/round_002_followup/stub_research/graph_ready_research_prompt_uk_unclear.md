@@ -288,18 +288,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 |---|---|
 | Lewis Jones | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- Granby Workshop is a social-enterprise design studio in Liverpool's Granby Four Streets area, spun out of the Assemble collective's Turner Prize-winning 2015 community-led restoration project.
-- Lewis Jones is one of the Workshop founders.
-- The Workshop produces handmade ceramics, door handles, mantelpieces, and tiles from salvaged materials.
-- The broader Granby Four Streets Community Land Trust restored a row of Victorian terraced houses on Cairns Street using reused brick, salvaged timber, and reclaimed fittings.
-- The stub may refer to the Workshop as a production entity, to the housing restoration project, or to both as one entwined initiative.
-- Assemble Studio (London) was the designer of the Granby Four Streets restoration.
-- Funding included Turner Prize prize money, Steinbeck Studios, Liverpool City Council, and Heritage Lottery Fund.
-
 ### Task
 
 Produce `Granby_Workshop_Liverpool.md` using the exact dossier template above. If the stub covers both the Workshop and the housing restoration, document both aspects within the same dossier and flag the disambiguation under `Identification status`.
@@ -316,15 +304,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 |---|---|
 | Cyril Pressacco | already linked graph node |
 | Thibaut Barrault | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- Both linked actors are the architects of Barrault Pressacco (Paris), known for raw-material and reuse-driven design.
-- "OBK 27" may be shorthand for a project at 27 rue Oberkampf, Paris 11e ("OBK" = common abbreviation for Oberkampf).
-- It may alternatively be a project code or branded name unrelated to a street address.
-- The project, if identified, is likely a renovation or extension with a reuse dimension.
 
 ### Task
 

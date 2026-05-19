@@ -291,15 +291,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Lionel Billiet | already linked graph node |
 | Sébastien Paulet | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- "Be.Circular" is the Brussels-Capital regional circular-economy programme operated by Bruxelles Environnement since 2016.
-- "Careno" is a Be.Circular-funded pilot project — possibly a building, a refurbishment, a planning study, or a consultancy initiative.
-- Both linked actors are Belgian, likely part of the same firm or design team.
-- The project may have used the Rotor DC or Opalis reuse infrastructure.
-
 ### Task
 
 Produce `Careno_Be_Circular_Brussels.md` using the exact dossier template above.
@@ -316,17 +307,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 |---|---|
 | Hans Hammink | already linked graph node |
 
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- This is the Circl Pavilion at the ABN AMRO headquarters in Amsterdam-Zuid, opened 2017.
-- Designed by de Architekten Cie. with Hans Hammink as partner-in-charge.
-- Built explicitly as a circular-economy demonstrator; extensively documented in the circular-construction literature.
-- **This project and project 3 below almost certainly refer to the same building** — confirm and document the overlap. If confirmed, produce one combined dossier.
-- BREEAM Outstanding certification was reported.
-- One of the founding Madaster registrants.
-
 ### Task
 
 Produce `Circl_Pavilion_Amsterdam.md` using the exact dossier template above. If confirmed as the same building as project 3, explicitly state the duplicate in `Identification status` and expand the dossier to cover both angles (architecture and urban-mining supply chain).
@@ -342,14 +322,6 @@ Use these as research anchors and include them first in the `Akteure` table:
 | Actor | Status |
 |---|---|
 | Michel Baars | already linked graph node |
-
-### Search hypotheses
-
-The following are only hypotheses. Verify or reject them using sources:
-
-- This stub refers to the same Circl Pavilion building as project 2, but indexed from the supply-chain angle — specifically the role of New Horizon Urban Mining (founded by Michel Baars, Den Haag).
-- New Horizon supplied salvaged components from demolished ABN AMRO offices.
-- If confirmed as the same building as project 2, produce a short duplicate note only; the full dossier is filed under project 2.
 
 ### Task
 
