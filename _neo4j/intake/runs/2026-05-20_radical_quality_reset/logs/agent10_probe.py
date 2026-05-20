@@ -144,6 +144,104 @@ def main() -> int:
                 "RETURN properties(r) AS p LIMIT 3"
             ).data()
             out["sample_akteur_belegt_actor_url"] = sample3
+
+            # evidence distributions
+            out["evidence_dist_akteurrolle"] = s.run(
+                "MATCH (a:Akteur)-[r:HAT_AKTEURROLLE]->() "
+                "RETURN r.evidence_origin AS origin, r.evidence_basis AS basis, "
+                "       r.evidence_confidence AS conf, count(*) AS c "
+                "ORDER BY c DESC"
+            ).data()
+            out["evidence_dist_assoz"] = s.run(
+                "MATCH ()-[r:ASSOZIIERT_MIT_PROJEKT]->() "
+                "RETURN r.evidence_origin AS origin, r.evidence_basis AS basis, "
+                "       r.evidence_confidence AS conf, count(*) AS c "
+                "ORDER BY c DESC"
+            ).data()
+            out["evidence_dist_akteur_belegt"] = s.run(
+                "MATCH (a:Akteur)-[r:BELEGT_IN]->(q:Quelle) "
+                "WHERE q.quelltyp='external_link_from_actor_registry' "
+                "RETURN r.evidence_origin AS origin, r.evidence_basis AS basis, "
+                "       r.evidence_confidence AS conf, count(*) AS c "
+                "ORDER BY c DESC"
+            ).data()
+            out["evidence_dist_zitiert_quelle"] = s.run(
+                "MATCH ()-[r:ZITIERT_QUELLE]->() "
+                "RETURN r.evidence_origin AS origin, r.evidence_basis AS basis, "
+                "       r.evidence_confidence AS conf, count(*) AS c "
+                "ORDER BY c DESC LIMIT 20"
+            ).data()
+            out["zitiert_quelle_master_outgoing"] = s.run(
+                "MATCH (src:Quelle)-[r:ZITIERT_QUELLE]->(q:Quelle) "
+                "WHERE q.quelltyp='external_link_from_actor_registry' "
+                "RETURN src.id AS src_id, count(r) AS c "
+                "ORDER BY c DESC LIMIT 10"
+            ).data()
+            out["sample_akteurrolle_curated"] = s.run(
+                "MATCH (a:Akteur)-[r:HAT_AKTEURROLLE]->() "
+                "WHERE r.evidence_origin='curated' "
+                "RETURN properties(r) AS p LIMIT 3"
+            ).data()
+            out["sample_projekt_stub"] = s.run(
+                "MATCH (p:Projekt) "
+                "WHERE p.actor_registry_mentioned=true OR p.import_status='registry_stub_only' "
+                "RETURN p.id AS id, p.name AS name, p.import_status AS status, "
+                "       p.actor_registry_mentioned AS mentioned LIMIT 10"
+            ).data()
+            out["domain_node_samples"] = {
+                "aufbereitungsverfahren": s.run(
+                    "MATCH (n:Aufbereitungsverfahren) "
+                    "RETURN n.id AS id, n.name AS name LIMIT 60"
+                ).data(),
+                "verbindungstechnik": s.run(
+                    "MATCH (n:Verbindungstechnik) "
+                    "RETURN n.id AS id, n.name AS name LIMIT 30"
+                ).data(),
+                "pruefungnachweis": s.run(
+                    "MATCH (n:PruefungNachweis) "
+                    "RETURN n.id AS id, n.name AS name LIMIT 30"
+                ).data(),
+            }
+            # are there any USES_VERBINDUNGSTECHNIK or HAT_AUFBEREITUNG edges?
+            out["existing_domain_edge_counts"] = {
+                "HAT_AUFBEREITUNG": s.run(
+                    "MATCH ()-[r:HAT_AUFBEREITUNG]->() RETURN count(r) AS c"
+                ).single()["c"],
+                "HAT_VERBINDUNGSTECHNIK": s.run(
+                    "MATCH ()-[r:HAT_VERBINDUNGSTECHNIK]->() RETURN count(r) AS c"
+                ).single()["c"],
+                "USES_VERBINDUNGSTECHNIK": s.run(
+                    "MATCH ()-[r:USES_VERBINDUNGSTECHNIK]->() RETURN count(r) AS c"
+                ).single()["c"],
+                "HAT_PRUEFUNG": s.run(
+                    "MATCH ()-[r:HAT_PRUEFUNG]->() RETURN count(r) AS c"
+                ).single()["c"],
+            }
+            # list of all known projekt ids
+            out["all_projekt_ids"] = [
+                r["id"]
+                for r in s.run("MATCH (p:Projekt) RETURN p.id AS id ORDER BY p.id").data()
+            ]
+            # check additional vocabularies that the research files touch
+            out["other_vocab_counts"] = {
+                "Schadstoff": s.run("MATCH (n:Schadstoff) RETURN count(n) AS c").single()["c"],
+                "RechtlicheBedingung": s.run("MATCH (n:RechtlicheBedingung) RETURN count(n) AS c").single()["c"],
+                "ReuseRule": s.run("MATCH (n:ReuseRule) RETURN count(n) AS c").single()["c"],
+                "LcaModule": s.run("MATCH (n:LcaModule) RETURN count(n) AS c").single()["c"],
+                "AccountingStatus": s.run("MATCH (n:AccountingStatus) RETURN count(n) AS c").single()["c"],
+                "Leistungsanforderung": s.run("MATCH (n:Leistungsanforderung) RETURN count(n) AS c").single()["c"],
+                "Akteurrolle": s.run("MATCH (n:Akteurrolle) RETURN count(n) AS c").single()["c"],
+                "Akteurtyp": s.run("MATCH (n:Akteurtyp) RETURN count(n) AS c").single()["c"],
+                "Land": s.run("MATCH (n:Land) RETURN count(n) AS c").single()["c"],
+            }
+            out["sample_schadstoff"] = s.run(
+                "MATCH (n:Schadstoff) RETURN n.id AS id, n.name AS name LIMIT 30"
+            ).data()
+            out["sample_rechtlichebedingung"] = s.run(
+                "MATCH (n:RechtlicheBedingung) RETURN n.id AS id, n.name AS name LIMIT 30"
+            ).data()
+            # constraints overview
+            out["constraints"] = s.run("SHOW CONSTRAINTS YIELD name, type, labelsOrTypes, properties RETURN name, type, labelsOrTypes, properties").data()
     finally:
         driver.close()
 

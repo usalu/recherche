@@ -1,0 +1,633 @@
+﻿python : Received notification from DBMS server: {severity: WARNING} {code: 
+Neo.ClientNotification.Statement.UnknownRelationshipTypeWarning} {category: UNRECOGNIZED} {title: The provided 
+relationship type is not in the database.} {description: One of the relationship types in your query is not available 
+in the database, make sure you didn't misspell it or that the label is available when you run this statement in your 
+application (the missing relationship type is: USES_VERBINDUNGSTECHNIK)} {position: line: 1, column: 13, offset: 12} 
+for query: 'MATCH ()-[r:USES_VERBINDUNGSTECHNIK]->() RETURN count(r) AS c'
+At C:\Users\Kinosh\AppData\Local\Temp\ps-script-b0a413bc-46fd-4b7b-b500-fa805a4143a5.ps1:87 char:1
++ python "E:\recherche\_neo4j\intake\runs\2026-05-20_radical_quality_re ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Received notifi... count(r) AS c':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+{
+  "probed_at": "2026-05-20T21:51:33+00:00",
+  "database": "mit-bestand",
+  "totals": {
+    "nodes": 2674,
+    "rels": 19624,
+    "quelle": 726,
+    "akteur": 647,
+    "projekt": 91
+  },
+  "anchors": [
+    {
+      "id": "q_aufbereitungsverfahren_reused_building_elements_md",
+      "exists": false
+    },
+    {
+      "id": "q_connection_techniques_bauteilreuse_md",
+      "exists": false
+    },
+    {
+      "id": "q_testing_verification_bauteilreuse_kg_md",
+      "exists": false
+    },
+    {
+      "id": "q_bauteilreuse_legal_regime_matrix_md",
+      "exists": false
+    },
+    {
+      "id": "q_schadstoff_reuse_knowledge_graph_research_md",
+      "exists": false
+    },
+    {
+      "id": "q_circular_construction_reuse_graph_gaps_md",
+      "exists": false
+    },
+    {
+      "id": "q_circular_construction_economics_kg_md",
+      "exists": false
+    },
+    {
+      "id": "q_energy_climate_reuse_research_md",
+      "exists": false
+    }
+  ],
+  "actor_registry": {
+    "akteursliste_master": false,
+    "q_actor_external_link": 319,
+    "projekt_belegt_actor_registry_residual": 0,
+    "akteur_belegt_actor_registry": 360,
+    "akteur_belegt_master": 0,
+    "assoziiert_mit_projekt_total": 167,
+    "registry_stub_only_projects": 0,
+    "verbunden_mit_akteur_total": 335,
+    "hat_akteurrolle_total": 1177,
+    "hat_akteurtyp_total": 657
+  },
+  "domain_nodes": {
+    "aufbereitungsverfahren": 45,
+    "verbindungstechnik": 12,
+    "pruefungnachweis": 20
+  },
+  "sample_akteurrolle": [
+    {
+      "t": "HAT_AKTEURROLLE",
+      "p": {
+        "evidence_source_id": "batch2_v2_import_2026-05-20",
+        "evidence_basis": "controlled_vocab",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_la_fabrique_de_bordeaux_metropole__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "t": "HAT_AKTEURROLLE",
+      "p": {
+        "evidence_source_id": "batch2_v2_import_2026-05-20",
+        "evidence_basis": "controlled_vocab",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_new_horizon_urban_mining__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "t": "HAT_AKTEURROLLE",
+      "p": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "controlled_vocab",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bauteilboerse_basel__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    }
+  ],
+  "sample_assoziiert": [
+    {
+      "t": "ASSOZIIERT_MIT_PROJEKT",
+      "p": {
+        "needs_verification": true,
+        "evidence_source_id": "mig_4_1",
+        "evidence_basis": "registry_stub",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry",
+        "evidence_confidence": "unklar",
+        "id": "r_julien_choppin__ASSOZIIERT_MIT_PROJEKT__p_circular_pavilion_paris"
+      }
+    },
+    {
+      "t": "ASSOZIIERT_MIT_PROJEKT",
+      "p": {
+        "needs_verification": true,
+        "evidence_source_id": "mig_4_1",
+        "evidence_basis": "registry_stub",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry",
+        "evidence_confidence": "unklar",
+        "id": "r_nicola_delon__ASSOZIIERT_MIT_PROJEKT__p_circular_pavilion_paris"
+      }
+    },
+    {
+      "t": "ASSOZIIERT_MIT_PROJEKT",
+      "p": {
+        "needs_verification": true,
+        "evidence_source_id": "mig_4_1",
+        "evidence_basis": "registry_stub",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_context",
+        "not_confirmed_project_participation": true,
+        "evidence_confidence": "unklar",
+        "id": "r_trnsfrm_eg__ASSOZIIERT_MIT_PROJEKT__p_crclr_house_impact_hub_berlin"
+      }
+    }
+  ],
+  "sample_akteur_belegt_actor_url": [
+    {
+      "p": {
+        "evidence_source_id": "q_actor_andreas_kretzer_01",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_external_link",
+        "evidence_confidence": "unklar",
+        "id": "r_andreas_kretzer__BELEGT_IN__q_actor_andreas_kretzer_01"
+      }
+    },
+    {
+      "p": {
+        "evidence_source_id": "q_actor_andreas_kretzer_02",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_external_link",
+        "evidence_confidence": "unklar",
+        "id": "r_andreas_kretzer__BELEGT_IN__q_actor_andreas_kretzer_02"
+      }
+    },
+    {
+      "p": {
+        "evidence_source_id": "q_actor_andreas_kretzer_03",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_external_link",
+        "evidence_confidence": "unklar",
+        "id": "r_andreas_kretzer__BELEGT_IN__q_actor_andreas_kretzer_03"
+      }
+    }
+  ],
+  "evidence_dist_akteurrolle": [
+    {
+      "origin": "derived",
+      "basis": "controlled_vocab",
+      "conf": "unklar",
+      "c": 1175
+    }
+  ],
+  "evidence_dist_assoz": [
+    {
+      "origin": "derived",
+      "basis": "registry_stub",
+      "conf": "unklar",
+      "c": 167
+    }
+  ],
+  "evidence_dist_akteur_belegt": [
+    {
+      "origin": "derived",
+      "basis": "cell_citation",
+      "conf": "unklar",
+      "c": 360
+    }
+  ],
+  "evidence_dist_zitiert_quelle": [
+    {
+      "origin": "derived",
+      "basis": "controlled_vocab",
+      "conf": "unklar",
+      "c": 370
+    },
+    {
+      "origin": "derived",
+      "basis": "external_sources_array",
+      "conf": "unklar",
+      "c": 269
+    }
+  ],
+  "zitiert_quelle_master_outgoing": [],
+  "sample_akteurrolle_curated": [],
+  "sample_projekt_stub": [],
+  "domain_node_samples": {
+    "aufbereitungsverfahren": [
+      {
+        "id": "av_oberflaechenbehandlung",
+        "name": "Oberfl\u00e4chenbehandlung (Sammelkategorie)"
+      },
+      {
+        "id": "av_zerlegung_vereinzelung",
+        "name": "Zerlegung / Vereinzelung (Sammelkategorie)"
+      },
+      {
+        "id": "av_materialsortierung_chargenbildung",
+        "name": "Materialsortierung & Chargenbildung (querschnittlich)"
+      },
+      {
+        "id": "av_kaskadierende_wiederverwendung",
+        "name": "Kaskadierende Nutzung / Downcycling-Entscheidung"
+      },
+      {
+        "id": "av_sandstrahlen",
+        "name": "Sandstrahlen / Strahlreinigen"
+      },
+      {
+        "id": "av_entrosten_korrosionsbehandlung",
+        "name": "Entrosten / Korrosionsbehandlung"
+      },
+      {
+        "id": "av_korrosionsschutz_beschichten",
+        "name": "Korrosionsschutz-Beschichtung / Neubeschichtung"
+      },
+      {
+        "id": "av_stahl_zuschnitt_bohrung",
+        "name": "Stahl-Zuschnitt, Bohrung, Lochung"
+      },
+      {
+        "id": "av_entnageln",
+        "name": "Entnageln / Entfernen metallischer Verbindungsmittel"
+      },
+      {
+        "id": "av_holz_fremdstoffentfernung",
+        "name": "Holz-Fremdstoffentfernung"
+      },
+      {
+        "id": "av_hobeln_schleifen_holz",
+        "name": "Hobeln, Schleifen, Fr\u00e4sen (Holz)"
+      },
+      {
+        "id": "av_holz_zuschnitt_reparatur",
+        "name": "Holz-Zuschnitt + Reparaturzuschnitt"
+      },
+      {
+        "id": "av_holz_trocknung_feuchtekonditionierung",
+        "name": "Trocknung / Feuchtekonditionierung"
+      },
+      {
+        "id": "av_holz_festigkeitssortierung",
+        "name": "Festigkeitssortierung Holz"
+      },
+      {
+        "id": "av_holz_schadstoffscreening",
+        "name": "Holz-Schadstoffscreening (PCP, Lindan, CCA, Lead)"
+      },
+      {
+        "id": "av_betonfertigteil_saegen",
+        "name": "S\u00e4gen von Betonfertigteilen"
+      },
+      {
+        "id": "av_beton_anhaftungen_entfernen",
+        "name": "Reinigung von Beton-Anhaftungen"
+      },
+      {
+        "id": "av_hcs_zuschnitt_bohrungen_fittings",
+        "name": "HCS-Zuschnitt + Bohrungen + Fittings"
+      },
+      {
+        "id": "av_betonfertigteil_factory_refurbishment",
+        "name": "Beton-Fertigteil Factory Refurbishment (Prozesspaket)"
+      },
+      {
+        "id": "av_betonfertigteil_tagging_sortierung",
+        "name": "Bauteil-Tagging + Sortierung"
+      },
+      {
+        "id": "av_moertelentfernung_ziegel",
+        "name": "M\u00f6rtelentfernung bei Ziegeln"
+      },
+      {
+        "id": "av_ziegel_sortierung_pruefung",
+        "name": "Ziegel-Qualit\u00e4tssortierung + Klang-/Geruchspr\u00fcfung"
+      },
+      {
+        "id": "av_mauerwerk_diamantsaegen_modul",
+        "name": "Mauerwerk-Diamants\u00e4gen (Modulausschnitt)"
+      },
+      {
+        "id": "av_naturstein_reinigung_schleifen_zuschnitt",
+        "name": "Naturstein-Reinigung, Schleifen, Zuschnitt"
+      },
+      {
+        "id": "av_glas_reinigung_entkitten",
+        "name": "Glas-Reinigung + Entkitten"
+      },
+      {
+        "id": "av_glas_pruefung_sortierung",
+        "name": "Glas-/Fensterelement-Pr\u00fcfung + Sortierung"
+      },
+      {
+        "id": "av_fenster_refurbishment",
+        "name": "Fenster-Refurbishment (Beschl\u00e4ge + Dichtungen)"
+      },
+      {
+        "id": "av_aluminium_reinigung_entdichtung",
+        "name": "Aluminium-Reinigung + Entdichtung"
+      },
+      {
+        "id": "av_aluminiumfenster_beschlag_dichtung",
+        "name": "Aluminiumfenster \u2014 Beschl\u00e4ge + Dichtungen tauschen"
+      },
+      {
+        "id": "av_aluminium_zuschnitt_bohrung",
+        "name": "Aluminium-Zuschnitt + Bohrung + Profilanpassung"
+      },
+      {
+        "id": "av_lehm_sieben_mischen",
+        "name": "Lehm sieben, brechen, anfeuchten, neu mischen"
+      },
+      {
+        "id": "av_stroh_pruefen_trocknen_sortieren",
+        "name": "Strohballen pr\u00fcfen, trocknen, sortieren"
+      },
+      {
+        "id": "av_bio_daemmstoff_zuschnitt_gefach",
+        "name": "Bio-D\u00e4mmstoff-Zuschnitt + Gefachanpassung"
+      },
+      {
+        "id": "av_biobasiert_hygiene_schadstoffcheck",
+        "name": "Bio-basiert \u2014 Hygiene + Schadstoffcheck"
+      },
+      {
+        "id": "av_drahtglasschneiden",
+        "name": "Drahtglasschneiden"
+      },
+      {
+        "id": "av_entmoertelung_von_fliesen",
+        "name": "Entmoertelung_von_Fliesen"
+      },
+      {
+        "id": "av_holzaufbereitung",
+        "name": "Holzaufbereitung"
+      },
+      {
+        "id": "av_leuchten_refurbishment",
+        "name": "Leuchten_Refurbishment"
+      },
+      {
+        "id": "av_qualitaetssicherung",
+        "name": "Qualitaetssicherung"
+      },
+      {
+        "id": "av_reinigung",
+        "name": "Reinigung"
+      },
+      {
+        "id": "av_rekonditionierung",
+        "name": "Rekonditionierung"
+      },
+      {
+        "id": "av_remanufacturing",
+        "name": "Remanufacturing"
+      },
+      {
+        "id": "av_reparatur",
+        "name": "Reparatur"
+      },
+      {
+        "id": "av_verstaerkung",
+        "name": "Verstaerkung"
+      },
+      {
+        "id": "av_zuschnitt",
+        "name": "Zuschnitt"
+      }
+    ],
+    "verbindungstechnik": [
+      {
+        "id": "vt_mauerwerk_ausgleich",
+        "name": "Mauerwerk_Ausgleichsschicht"
+      },
+      {
+        "id": "vt_bolzenverbindung",
+        "name": "Bolzenverbindung"
+      },
+      {
+        "id": "vt_demontierbarer_schwerlastanker",
+        "name": "Demontierbarer Schwerlastanker"
+      },
+      {
+        "id": "vt_stahlverbinder_holz",
+        "name": "Stahlverbinder f\u00fcr Holz (Reparatur-/Anschluss-Verbindung)"
+      },
+      {
+        "id": "vt_stahlrahmen_fassadenmodul",
+        "name": "Stahlrahmen f\u00fcr Fassadenmodul"
+      },
+      {
+        "id": "vt_klemmverbindung",
+        "name": "Klemmverbindung"
+      },
+      {
+        "id": "vt_reversible_fuegung",
+        "name": "Reversible_Fuegung"
+      },
+      {
+        "id": "vt_steckverbindung",
+        "name": "Steckverbindung"
+      },
+      {
+        "id": "vt_verleimung",
+        "name": "Verleimung"
+      },
+      {
+        "id": "vt_vermoertelung",
+        "name": "Vermoertelung"
+      },
+      {
+        "id": "vt_verschraubung",
+        "name": "Verschraubung"
+      },
+      {
+        "id": "vt_verschweissung",
+        "name": "Verschweissung"
+      }
+    ],
+    "pruefungnachweis": [
+      {
+        "id": "pr_zerstoerungsfreie_pruefung",
+        "name": "Zerst\u00f6rungsfreie Pr\u00fcfung (ZfP / NDT)"
+      },
+      {
+        "id": "pr_zerstoerende_pruefung",
+        "name": "Zerst\u00f6rende Pr\u00fcfung (Sammelkategorie)"
+      },
+      {
+        "id": "pr_korrosionspruefung",
+        "name": "Korrosionspr\u00fcfung / Restdickenmessung"
+      },
+      {
+        "id": "pr_festigkeitssortierung_holz",
+        "name": "Festigkeitssortierung Holz (visuell + maschinell)"
+      },
+      {
+        "id": "pr_bohrkernpruefung_beton",
+        "name": "Beton-Bohrkernpr\u00fcfung"
+      },
+      {
+        "id": "pr_dokumentenpruefung_bestand",
+        "name": "Dokumentenpr\u00fcfung / Herkunfts- und Bestandsnachweis"
+      },
+      {
+        "id": "pr_schadstoffpruefung",
+        "name": "Schadstoffpr\u00fcfung (Sammelkategorie)"
+      },
+      {
+        "id": "pr_materialbeprobung",
+        "name": "Materialprobe / Beprobung (Sammelkategorie)"
+      },
+      {
+        "id": "pr_feuchtepruefung",
+        "name": "Feuchtepr\u00fcfung"
+      },
+      {
+        "id": "pr_abbrandbemessung",
+        "name": "Abbrandbemessung"
+      },
+      {
+        "id": "pr_brandschutznachweis",
+        "name": "Brandschutznachweis"
+      },
+      {
+        "id": "pr_eignungspruefung_baulehm",
+        "name": "Eignungspruefung_Baulehm"
+      },
+      {
+        "id": "pr_geometrische_vermessung",
+        "name": "Geometrische_Vermessung"
+      },
+      {
+        "id": "pr_materialpruefung",
+        "name": "Materialpruefung"
+      },
+      {
+        "id": "pr_schadstoffscreening",
+        "name": "Schadstoffscreening"
+      },
+      {
+        "id": "pr_schweissbarkeitspruefung",
+        "name": "Schweissbarkeitspruefung"
+      },
+      {
+        "id": "pr_sichtpruefung",
+        "name": "Sichtpruefung"
+      },
+      {
+        "id": "pr_statische_nachweisfuehrung",
+        "name": "Statische_Nachweisfuehrung"
+      },
+      {
+        "id": "pr_zugversuch",
+        "name": "Zugversuch"
+      },
+      {
+        "id": "pr_zustandsbewertung",
+        "name": "Zustandsbewertung"
+      }
+    ]
+  },
+  "existing_domain_edge_counts": {
+    "HAT_AUFBEREITUNG": 426,
+    "HAT_VERBINDUNGSTECHNIK": 130,
+    "USES_VERBINDUNGSTECHNIK": 0,
+    "HAT_PRUEFUNG": 347
+  },
+  "all_projekt_ids": [
+    "p_55_great_suffolk_street_london",
+    "p_architecture_of_reuse_brussels",
+    "p_association_house_groeditz",
+    "p_association_house_plauen",
+    "p_awm_muenster_circular_office",
+    "p_bedzed_london_hackbridge",
+    "p_berlin_schildow_pilot_house",
+    "p_bestandverplanzung_pavilion_muenchen",
+    "p_big_dig_building_boston",
+    "p_big_dig_house_lexington_massachusetts",
+    "p_biopartner_5_leiden_oegstgeest",
+    "p_bluecity_offices_rotterdam",
+    "p_boulder_fire_station_3",
+    "p_brent_cross_town_primary_substation_london",
+    "p_brighton_waste_house_brighton",
+    "p_broethen_twin_house_hoyerswerda",
+    "p_careno_becircular",
+    "p_cascadeup_london_secondary_timber_glulam_demonstrator",
+    "p_charles_malis_molenbeek",
+    "p_chiro_d_itterbeek_dilbeek",
+    "p_christ_pavilion_volkenroda",
+    "p_circl_abn_amro",
+    "p_circle_house",
+    "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+    "p_circular_pavilion_paris",
+    "p_crclr_house_impact_hub_berlin",
+    "p_eggshell_pavilion",
+    "p_elementa_walkeweg",
+    "p_elys_kultur_gewerbehaus_basel",
+    "p_europa_building_brussels",
+    "p_ferme_du_rail_paris",
+    "p_gjg_house_gentbrugge",
+    "p_granby_workshop",
+    "p_grande_halle_de_colombelles",
+    "p_grubenstrasse_29_werkhof_29_zuerich",
+    "p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere",
+    "p_hastings_pier_visitor_centre",
+    "p_haus_hos_mehrfamilienhaus_muehlhausen",
+    "p_holbein_gardens_london",
+    "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+    "p_impact_hub_berlin_crclr_fitout",
+    "p_institut_de_botanique_ulg_liege",
+    "p_jeugdkliniek_ithaka_emergis_kloetinge",
+    "p_juch_areal_recyclingzentrum_zuerich",
+    "p_jugendtreff_ingersheim",
+    "p_k118_kopfbau_halle_118_winterthur",
+    "p_ka13_kristian_augusts_gate_13_oslo",
+    "p_kamikatsu_zero_waste_center_hotel_why",
+    "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+    "p_liander_alliander_hq_duiven",
+    "p_lo_reninge_town_hall_facade",
+    "p_lokomotion_technology_centre_mini_pilot_tampere",
+    "p_lycee_michel_lucius_conversion_luxembourg",
+    "p_lysp8_basel",
+    "p_maison_des_canaux_paris",
+    "p_maison_dna_asse",
+    "p_maison_vignette_auderghem",
+    "p_meduni_campus_mariannengasse",
+    "p_mehrow_pilot_house",
+    "p_melkinlaituri_primary_school_daycare_centre_helsinki",
+    "p_montessori_maassluis",
+    "p_multi_brussels_reuse_in_multi",
+    "p_musee_de_folklore_mouscron",
+    "p_peoples_pavilion_eindhoven",
+    "p_plattenpalast_berlin",
+    "p_plattenvereinigung_berlin",
+    "p_plp_london_hq_circular_studio_fitout",
+    "p_recrete_footbridge_reused_concrete_blocks",
+    "p_recyclinghaus_hannover",
+    "p_recypark_demets_anderlecht",
+    "p_resilience_la_ferme_des_possibles_stains",
+    "p_resource_rows_copenhagen",
+    "p_reuse_in_construction_zhaw",
+    "p_reuse_logistics",
+    "p_roots_in_the_sky_blackfriars_crown_court",
+    "p_saxum_vineyard_equipment_barn_paso_robles",
+    "p_schaerenmoosstrasse_zuerich",
+    "p_superlocal_expogebouw_bleijerheide",
+    "p_svanen_kindergarten_gladsaxe",
+    "p_the_green_house_utrecht",
+    "p_thoravej_29_copenhagen",
+    "p_timber_square_london",
+    "p_trae_high_rise_aarhus",
+    "p_umar_unit",
+    "p_up_sticks_dundee",
+    "p_upcycle_studios_copenhagen",
+    "p_vandkunsten_component_reuse",
+    "p_verbiest_karreveld_brussels",
+    "p_villa_welpeloo_enschede",
+    "p_woongroep_boschgaard_den_bosch",
+    "p_zinneke_feder_masui4ever_brussels"
+  ]
+}

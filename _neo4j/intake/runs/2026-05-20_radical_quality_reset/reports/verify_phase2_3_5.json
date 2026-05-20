@@ -1,0 +1,172 @@
+{
+  "phase": "2.3+2.5",
+  "verifier": "8 of 12",
+  "status": "PASS",
+  "read_only": true,
+  "db": "mit-bestand",
+  "checks_2_3": {
+    "1_done_flag_exists": {
+      "expected": true,
+      "observed": true,
+      "location": "logs/PHASE_2_3_DONE.flag",
+      "pass": true
+    },
+    "2_beteiligt_an_rolle_text_null": {
+      "query": "MATCH ()-[r:BETEILIGT_AN]->() WHERE r.rolle_text IS NOT NULL RETURN count(r)",
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "3_akteur_raw_role_evidence": {
+      "query": "MATCH (a:Akteur) WHERE a.raw_role_evidence IS NOT NULL RETURN count(a)",
+      "expected_min": 150,
+      "observed": 155,
+      "pass": true
+    },
+    "4a_ar_reuse_beratung_gone": {
+      "expected": "absent_or_degree_0",
+      "observed": "absent",
+      "pass": true
+    },
+    "4b_ar_reuse_zirkularitaetsberatung_exists": {
+      "expected": true,
+      "observed": true,
+      "indegree": 198,
+      "pass": true
+    },
+    "5_akteurrolle_total": {
+      "query": "MATCH (r:Akteurrolle) RETURN count(r)",
+      "expected": 24,
+      "observed": 24,
+      "pass": true
+    }
+  },
+  "checks_2_5": {
+    "6_done_flag_exists": {
+      "expected": true,
+      "observed": true,
+      "location": "logs/PHASE_2_5_DONE.flag",
+      "pass": true
+    },
+    "7_layer_count": {
+      "query": "MATCH (n:Layer) RETURN count(n)",
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "8_lebenszyklusmodul_count": {
+      "query": "MATCH (n:LebenszyklusModul) RETURN count(n)",
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "9_rechtlichebedingung_count": {
+      "query": "MATCH (n:RechtlicheBedingung) RETURN count(n)",
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "10_zertifizierungbewertungssystem_count": {
+      "query": "MATCH (n:ZertifizierungBewertungssystem) RETURN count(n)",
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "11_tool_count": {
+      "query": "MATCH (n:Tool) RETURN count(n)",
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "12_software_count": {
+      "query": "MATCH (s:Software) RETURN count(s)",
+      "expected_min": 18,
+      "expected_target_after_merge": 19,
+      "observed": 19,
+      "pass": true
+    },
+    "13_software_kind_set": {
+      "query": "MATCH (s:Software) RETURN count(s) AS total, sum(CASE WHEN s.kind IS NULL THEN 1 ELSE 0 END) AS missing",
+      "expected_missing": 0,
+      "observed_total": 19,
+      "observed_missing": 0,
+      "kind_breakdown": {"software": 11, "tool": 8},
+      "sample_5": [
+        {"id": "software_bim", "kind": "software"},
+        {"id": "software_concular", "kind": "software"},
+        {"id": "software_ecotool", "kind": "software"},
+        {"id": "software_inies", "kind": "software"},
+        {"id": "software_llmnt", "kind": "software"}
+      ],
+      "pass": true
+    },
+    "14_bauteiltyp_brand_layer": {
+      "query": "MATCH (bt:Bauteiltyp) WHERE bt.brand_layer IS NOT NULL RETURN count(bt)",
+      "expected_min": 10,
+      "observed": 15,
+      "values": ["space_plan", "skin", "structure", "services"],
+      "pass": true
+    },
+    "15_projekt_lca_module_scope_and_certifications": {
+      "direct_property": {
+        "lca_module_scope_count": 0,
+        "certifications_count": 0
+      },
+      "archived_in_archive_json": {
+        "lca_module_scope_count": 6,
+        "certifications_count": 8
+      },
+      "expected_lca_min": 6,
+      "expected_cert_min": 8,
+      "phase_2_5_originally_set": {
+        "lca_module_scope": 6,
+        "certifications": 8,
+        "source": "agent_5_phase2_report.md sections 2.5.b, 2.5.d"
+      },
+      "relocated_by": "Phase 2.7 mig_2_7_panel_cleanup.cypher (Agent 6) into Projekt._archive JSON per plan section 2.7 three-bucket model",
+      "pass": true,
+      "pass_reason": "Phase 2.5 wrote the expected 6 + 8 values; they still exist in the graph, relocated into _archive by downstream Phase 2.7 as designed"
+    },
+    "bonus_referenziert_norm_derived": {
+      "expected_lca_demote_derived": 15,
+      "observed_via_derived_from_lzm_sidecar": 15,
+      "evidence_basis_renormalised_by_phase_4_1": "standards_body (all 52 edges, including the 15 derived)",
+      "pass": true
+    }
+  },
+  "cosmetic_note": {
+    "labels_lingering_in_db_labels": ["RechtlicheBedingung", "Tool", "ZertifizierungBewertungssystem"],
+    "explanation": "Neo4j keeps label tokens in the schema index after the last node is deleted; no live nodes carry them and no verification check fails because of this."
+  },
+  "akteurrolle_inventory": [
+    {"id": "ar_aufbereitung_refurbishment", "indeg": 17},
+    {"id": "ar_bauausfuehrung_fertigung", "indeg": 69},
+    {"id": "ar_bauherr_auftraggeber", "indeg": 86},
+    {"id": "ar_betrieb_nutzung", "indeg": 34},
+    {"id": "ar_bildung_wissenstransfer", "indeg": 20},
+    {"id": "ar_brandschutz_barrierefreiheit", "indeg": 0},
+    {"id": "ar_entwurf_planung", "indeg": 197},
+    {"id": "ar_fachplanung_nachweis", "indeg": 121},
+    {"id": "ar_fassade", "indeg": 1},
+    {"id": "ar_forschung_dokumentation", "indeg": 141},
+    {"id": "ar_kunst_gestaltung", "indeg": 1},
+    {"id": "ar_landschaftsplanung", "indeg": 5},
+    {"id": "ar_materialbroker", "indeg": 8},
+    {"id": "ar_materiallieferung_markt", "indeg": 97},
+    {"id": "ar_nachhaltigkeitsberatung", "indeg": 3},
+    {"id": "ar_oeffentliche_hand_foerderung", "indeg": 33},
+    {"id": "ar_projektmanagement_koordination", "indeg": 79},
+    {"id": "ar_reuse_zirkularitaetsberatung", "indeg": 198},
+    {"id": "ar_rueckbau_bauteilernte_logistik", "indeg": 36},
+    {"id": "ar_software_digitalisierung", "indeg": 2},
+    {"id": "ar_stahlbau_fertigung", "indeg": 0},
+    {"id": "ar_tga_gebaeudetechnik", "indeg": 2},
+    {"id": "ar_tragwerksplanung", "indeg": 11},
+    {"id": "ar_unbestimmt", "indeg": 16}
+  ],
+  "summary": {
+    "phase_2_3_checks_passed": "5/5",
+    "phase_2_5_checks_passed": "10/10",
+    "overall": "PASS"
+  }
+}

@@ -1,0 +1,845 @@
+{
+  "total_nodes": 3731,
+  "total_rels": 24460,
+  "bauwerk_total": 186,
+  "bauwerk_era_total": 6,
+  "bauwerk_era_nodes": [
+    {
+      "year_from": 1900,
+      "notes": "Industrialisation; reinforced concrete commercialised; PAK still high; some early asbestos products.",
+      "name": "1900–1945",
+      "source_scope": "controlled_vocab_seed",
+      "year_to": 1945,
+      "id": "era_1900_1945"
+    },
+    {
+      "year_from": 1970,
+      "notes": "Still high asbestos / PCB / KMF; energy crisis drives insulation upgrades; first heavy-metal restrictions.",
+      "name": "1970–1990",
+      "source_scope": "controlled_vocab_seed",
+      "year_to": 1990,
+      "id": "era_1970_1990"
+    },
+    {
+      "year_from": 1990,
+      "notes": "Country-specific asbestos bans (DE 1993, NL 1994, FR 1997, BE 1998, UK 2000); KMF biopersistence rules tighten.",
+      "name": "1990–2000",
+      "source_scope": "controlled_vocab_seed",
+      "year_to": 2000,
+      "id": "era_1990_2000"
+    },
+    {
+      "year_from": 1945,
+      "notes": "Wiederaufbau / Wirtschaftswunder. Highest asbestos use; PCB sealants begin; mineral wool widely installed.",
+      "name": "Nachkrieg 1945–1970",
+      "source_scope": "controlled_vocab_seed",
+      "year_to": 1970,
+      "id": "era_nachkrieg_1945_1970"
+    },
+    {
+      "year_from": 2000,
+      "notes": "Modern. Asbestos banned across EU/EEA; tight formaldehyde emission limits.",
+      "name": "nach 2000",
+      "source_scope": "controlled_vocab_seed",
+      "id": "era_post_2000"
+    },
+    {
+      "notes": "Pre-industrial / Wilhelmine. PAK from coal tar high; lime mortars; structural variance very high.",
+      "name": "vor 1900",
+      "source_scope": "controlled_vocab_seed",
+      "year_to": 1899,
+      "id": "era_vor_1900"
+    }
+  ],
+  "built_in_era_total": 0,
+  "bauwerk_with_year": 8,
+  "bauwerk_year_property_examples": [
+    {
+      "name": "Ehemaliges Rijkswatersta…",
+      "id": "bw_rws_districtskantoor_terneuzen",
+      "baujahr": 2000
+    },
+    {
+      "name": "KA13 Bestandsgebäude…",
+      "id": "bw_ka13_existing_building",
+      "baujahr": 1950
+    },
+    {
+      "name": "Werkhof Mööslistrasse",
+      "id": "bw_werkhof_moeoeslistrasse",
+      "baujahr": 1978
+    },
+    {
+      "name": "Lycée Lucius B3000",
+      "id": "bw_lycee_block_3000",
+      "baujahr": 1973
+    },
+    {
+      "name": "Lycée Lucius B6000",
+      "id": "bw_lycee_block_6000",
+      "baujahr": 1997
+    },
+    {
+      "name": "Suutarila community…",
+      "id": "bw_suutarila_community_centre_donor",
+      "baujahr": 1981
+    },
+    {
+      "name": "Ehemaliger Philips",
+      "id": "bw_multi_brouckere_tower",
+      "baujahr": 1969
+    },
+    {
+      "name": "Villa Welpeloo Wohnhaus…",
+      "id": "bw_villa_welpeloo_wohnhaus_und_kunstlager",
+      "baujahr": 2009
+    }
+  ],
+  "bauwerk_property_keys": [
+    "_archive",
+    "baujahr",
+    "flaeche_m2",
+    "id",
+    "land",
+    "name",
+    "name_full",
+    "nutzung_text",
+    "source_scope"
+  ],
+  "bauwerk_era_edge_types": [
+    {
+      "type": "TYPISCH_BEI_ERA",
+      "count": 15
+    },
+    {
+      "type": "ANCHORED_BY",
+      "count": 6
+    }
+  ],
+  "bauwerk_era_unknown_count": 0,
+  "materialdepot_total": 23,
+  "materialdepot_era_unknown_count": 0,
+  "schadstoff_total": 9,
+  "schadstoff_nodes": [
+    {
+      "id": "s_asbest",
+      "name": "Asbest"
+    },
+    {
+      "id": "s_bleifarbe",
+      "name": "Bleifarbe"
+    },
+    {
+      "id": "s_formaldehyd",
+      "name": "Formaldehyd (MDF / Spanplatten)"
+    },
+    {
+      "id": "s_holzschutzmittel",
+      "name": "Holzschutzmittel"
+    },
+    {
+      "id": "s_kmf",
+      "name": "KMF — Künstliche Mineralfasern (alte Mineralwolle vor 1996/2000)"
+    },
+    {
+      "id": "s_pak",
+      "name": "PAK"
+    },
+    {
+      "id": "s_pcb",
+      "name": "PCB"
+    },
+    {
+      "id": "s_radon",
+      "name": "s_radon"
+    },
+    {
+      "id": "s_schwermetalle",
+      "name": "Schwermetalle (Pb, Cd, Hg, Cr) in Beschichtungen / Laborbauten"
+    }
+  ],
+  "typisch_bei_material_total": 18,
+  "typisch_bei_era_total": 15,
+  "typisch_bei_material_pairs": [
+    {
+      "schadstoff": "s_asbest",
+      "material": "Bitumen"
+    },
+    {
+      "schadstoff": "s_asbest",
+      "material": "Daemmstoff"
+    },
+    {
+      "schadstoff": "s_asbest",
+      "material": "Faserzement / Eternit"
+    },
+    {
+      "schadstoff": "s_bleifarbe",
+      "material": "Aluminium"
+    },
+    {
+      "schadstoff": "s_bleifarbe",
+      "material": "Holz"
+    },
+    {
+      "schadstoff": "s_bleifarbe",
+      "material": "Stahl"
+    },
+    {
+      "schadstoff": "s_formaldehyd",
+      "material": "Holz"
+    },
+    {
+      "schadstoff": "s_formaldehyd",
+      "material": "MDF / mitteldichte Faserplatte"
+    },
+    {
+      "schadstoff": "s_holzschutzmittel",
+      "material": "Holz"
+    },
+    {
+      "schadstoff": "s_kmf",
+      "material": "Daemmstoff"
+    },
+    {
+      "schadstoff": "s_pak",
+      "material": "Bitumen"
+    },
+    {
+      "schadstoff": "s_pak",
+      "material": "Holz"
+    },
+    {
+      "schadstoff": "s_pcb",
+      "material": "Kunststoff"
+    },
+    {
+      "schadstoff": "s_pcb",
+      "material": "Stahlbeton"
+    },
+    {
+      "schadstoff": "s_schwermetalle",
+      "material": "Aluminium"
+    },
+    {
+      "schadstoff": "s_schwermetalle",
+      "material": "Holz"
+    },
+    {
+      "schadstoff": "s_schwermetalle",
+      "material": "Keramik"
+    },
+    {
+      "schadstoff": "s_schwermetalle",
+      "material": "Stahl"
+    }
+  ],
+  "typisch_bei_era_pairs": [
+    {
+      "schadstoff": "s_asbest",
+      "era": "era_1900_1945"
+    },
+    {
+      "schadstoff": "s_asbest",
+      "era": "era_1970_1990"
+    },
+    {
+      "schadstoff": "s_asbest",
+      "era": "era_nachkrieg_1945_1970"
+    },
+    {
+      "schadstoff": "s_bleifarbe",
+      "era": "era_1900_1945"
+    },
+    {
+      "schadstoff": "s_bleifarbe",
+      "era": "era_vor_1900"
+    },
+    {
+      "schadstoff": "s_formaldehyd",
+      "era": "era_nachkrieg_1945_1970"
+    },
+    {
+      "schadstoff": "s_holzschutzmittel",
+      "era": "era_1970_1990"
+    },
+    {
+      "schadstoff": "s_holzschutzmittel",
+      "era": "era_nachkrieg_1945_1970"
+    },
+    {
+      "schadstoff": "s_kmf",
+      "era": "era_1970_1990"
+    },
+    {
+      "schadstoff": "s_kmf",
+      "era": "era_1990_2000"
+    },
+    {
+      "schadstoff": "s_pak",
+      "era": "era_1900_1945"
+    },
+    {
+      "schadstoff": "s_pak",
+      "era": "era_nachkrieg_1945_1970"
+    },
+    {
+      "schadstoff": "s_pak",
+      "era": "era_vor_1900"
+    },
+    {
+      "schadstoff": "s_pcb",
+      "era": "era_1970_1990"
+    },
+    {
+      "schadstoff": "s_pcb",
+      "era": "era_nachkrieg_1945_1970"
+    }
+  ],
+  "hat_schadstoff_total": 11,
+  "hat_schadstoff_endpoints": [
+    {
+      "left_labels": [
+        "Projekt"
+      ],
+      "right_labels": [
+        "Schadstoff"
+      ],
+      "count": 4
+    },
+    {
+      "left_labels": [
+        "Bauteilgruppe"
+      ],
+      "right_labels": [
+        "Schadstoff"
+      ],
+      "count": 7
+    }
+  ],
+  "hat_schadstoff_samples": [
+    {
+      "left_id": "p_bedzed_london_hackbridge",
+      "right_id": "s_formaldehyd",
+      "props": {
+        "evidence_source_id": "q_schadstoff_reuse_knowledge_graph_research_md",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "curated",
+        "source_scope": "research_file_row",
+        "evidence_confidence": "belegt",
+        "id": "r_p_bedzed_london_hackbridge__HAT_SCHADSTOFF__s_formaldehyd__research_inferred",
+        "evidence_excerpt": "| `s_formaldehyd` | Formaldehyde | MDF, particleboard, chipboard, OSB/plywood, laminated wood-based panels, furniture, cabinetry, some acoustic boards, some mineral-wool binders, textiles/composite panels | Not only age-based; older/unknown composite wood and urea-formaldehyde-bonded boards are higher-risk; emission rules tightened over time | Product/emission requirements: Germany; EU-wide REACH formaldehyde limits from 2026 for products placed on market; relevant to Netherl"
+      }
+    },
+    {
+      "left_id": "bg_retained_mehrere_mehrere_europa_residence_palace_parts",
+      "right_id": "s_asbest",
+      "props": {
+        "evidence_source_id": "mig_4_1",
+        "evidence_basis": "controlled_vocab",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bg_retained_mehrere_mehrere_europa_residence_palace_parts__HAT_SCHADSTOFF__s_asbest"
+      }
+    },
+    {
+      "left_id": "bg_reuse_mineralisch_stuetze_elementa_baufeld_c",
+      "right_id": "s_asbest",
+      "props": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "legacy_migration",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bg_reuse_mineralisch_stuetze_elementa_baufeld_c__HAT_SCHADSTOFF__s_asbest",
+        "evidence_excerpt": "BELEGT"
+      }
+    },
+    {
+      "left_id": "bg_reuse_mineralisch_stuetze_elementa_baufeld_c",
+      "right_id": "s_pak",
+      "props": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "legacy_migration",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bg_reuse_mineralisch_stuetze_elementa_baufeld_c__HAT_SCHADSTOFF__s_pak",
+        "evidence_excerpt": "BELEGT"
+      }
+    },
+    {
+      "left_id": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+      "right_id": "s_asbest",
+      "props": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "legacy_migration",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bg_reuse_mineralisch_wand_elementa_baufeld_d__HAT_SCHADSTOFF__s_asbest",
+        "evidence_excerpt": "BELEGT"
+      }
+    },
+    {
+      "left_id": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+      "right_id": "s_pak",
+      "props": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "legacy_migration",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bg_reuse_mineralisch_wand_elementa_baufeld_d__HAT_SCHADSTOFF__s_pak",
+        "evidence_excerpt": "BELEGT"
+      }
+    },
+    {
+      "left_id": "bg_reuse_glas_keramik_boden_careno_historic_tiles",
+      "right_id": "s_bleifarbe",
+      "props": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "legacy_migration",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bg_reuse_glas_keramik_boden_careno_historic_tiles__HAT_SCHADSTOFF__s_bleifarbe",
+        "evidence_excerpt": "BELEGT"
+      }
+    },
+    {
+      "left_id": "bg_dismantled_glas_technik_medunicampus_fluorescent",
+      "right_id": "s_schwermetalle",
+      "props": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "legacy_migration",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bg_dismantled_glas_technik_medunicampus_fluorescent__HAT_SCHADSTOFF__s_schwermetalle",
+        "evidence_excerpt": "BELEGT"
+      }
+    },
+    {
+      "left_id": "p_crclr_house_impact_hub_berlin",
+      "right_id": "s_formaldehyd",
+      "props": {
+        "evidence_source_id": "q_schadstoff_reuse_knowledge_graph_research_md",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "curated",
+        "source_scope": "research_file_row",
+        "evidence_confidence": "belegt",
+        "id": "r_p_crclr_house_impact_hub_berlin__HAT_SCHADSTOFF__s_formaldehyd__research_inferred",
+        "evidence_excerpt": "| `s_formaldehyd` | Formaldehyde | MDF, particleboard, chipboard, OSB/plywood, laminated wood-based panels, furniture, cabinetry, some acoustic boards, some mineral-wool binders, textiles/composite panels | Not only age-based; older/unknown composite wood and urea-formaldehyde-bonded boards are higher-risk; emission rules tightened over time | Product/emission requirements: Germany; EU-wide REACH formaldehyde limits from 2026 for products placed on market; relevant to Netherl"
+      }
+    },
+    {
+      "left_id": "p_biopartner_5_leiden_oegstgeest",
+      "right_id": "s_formaldehyd",
+      "props": {
+        "evidence_source_id": "q_schadstoff_reuse_knowledge_graph_research_md",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "curated",
+        "source_scope": "research_file_row",
+        "evidence_confidence": "belegt",
+        "id": "r_p_biopartner_5_leiden_oegstgeest__HAT_SCHADSTOFF__s_formaldehyd__research_inferred",
+        "evidence_excerpt": "| `s_formaldehyd` | Formaldehyde | MDF, particleboard, chipboard, OSB/plywood, laminated wood-based panels, furniture, cabinetry, some acoustic boards, some mineral-wool binders, textiles/composite panels | Not only age-based; older/unknown composite wood and urea-formaldehyde-bonded boards are higher-risk; emission rules tightened over time | Product/emission requirements: Germany; EU-wide REACH formaldehyde limits from 2026 for products placed on market; relevant to Netherl"
+      }
+    },
+    {
+      "left_id": "p_multi_brussels_reuse_in_multi",
+      "right_id": "s_formaldehyd",
+      "props": {
+        "evidence_source_id": "q_schadstoff_reuse_knowledge_graph_research_md",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "curated",
+        "source_scope": "research_file_row",
+        "evidence_confidence": "belegt",
+        "id": "r_p_multi_brussels_reuse_in_multi__HAT_SCHADSTOFF__s_formaldehyd__research_inferred",
+        "evidence_excerpt": "| `s_formaldehyd` | Formaldehyde | MDF, particleboard, chipboard, OSB/plywood, laminated wood-based panels, furniture, cabinetry, some acoustic boards, some mineral-wool binders, textiles/composite panels | Not only age-based; older/unknown composite wood and urea-formaldehyde-bonded boards are higher-risk; emission rules tightened over time | Product/emission requirements: Germany; EU-wide REACH formaldehyde limits from 2026 for products placed on market; relevant to Netherl"
+      }
+    }
+  ],
+  "has_risk_pollutant_total": 0,
+  "requires_verification_for_total": 0,
+  "bauteilgruppe_total": 369,
+  "nutzt_material_total": 472,
+  "aus_bauwerk_total": 0,
+  "hat_bauteilgruppe_total": 363,
+  "era_and_material_candidate": 0,
+  "material_only_candidate": 792,
+  "land_total": 19,
+  "land_nodes": [
+    {
+      "id": "land_belgien",
+      "name": "Belgien",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_daenemark",
+      "name": "Dänemark",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_deutschland",
+      "name": "Deutschland",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_eea",
+      "name": "Europäischer Wirtschaftsraum (EU+EEA)",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_eu",
+      "name": "Europäische Union (Geltungsbereich)",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_finnland",
+      "name": "Finnland",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_frankreich",
+      "name": "Frankreich",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_international",
+      "name": "International (ISO/IEC Geltungsbereich)",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_italien",
+      "name": "Italien",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_japan",
+      "name": "Japan",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_luxemburg",
+      "name": "Luxemburg",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_niederlande",
+      "name": "Niederlande",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_norwegen",
+      "name": "Norwegen",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_oesterreich",
+      "name": "Österreich",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_portugal",
+      "name": "Portugal",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_schweiz",
+      "name": "Schweiz",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_ukraine",
+      "name": "Ukraine",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_usa",
+      "name": "USA",
+      "iso": null,
+      "country_iso": null
+    },
+    {
+      "id": "land_vereinigtes_koenigreich",
+      "name": "Vereinigtes Königreich",
+      "iso": null,
+      "country_iso": null
+    }
+  ],
+  "material_total": 26,
+  "material_nodes": [
+    {
+      "id": "mat_aluminium",
+      "name": "Aluminium"
+    },
+    {
+      "id": "mat_beton",
+      "name": "Beton"
+    },
+    {
+      "id": "mat_bitumen",
+      "name": "Bitumen"
+    },
+    {
+      "id": "mat_daemmstoff",
+      "name": "Daemmstoff"
+    },
+    {
+      "id": "mat_drahtglas",
+      "name": "mat_drahtglas"
+    },
+    {
+      "id": "mat_faserzement",
+      "name": "Faserzement / Eternit"
+    },
+    {
+      "id": "mat_glas",
+      "name": "Glas"
+    },
+    {
+      "id": "mat_gusseisen",
+      "name": "Gusseisen"
+    },
+    {
+      "id": "mat_holz",
+      "name": "Holz"
+    },
+    {
+      "id": "mat_holz_clt",
+      "name": "CLT / Brettsperrholz"
+    },
+    {
+      "id": "mat_keramik",
+      "name": "Keramik"
+    },
+    {
+      "id": "mat_kunststoff",
+      "name": "Kunststoff"
+    },
+    {
+      "id": "mat_kupfer",
+      "name": "Kupfer"
+    },
+    {
+      "id": "mat_lehm",
+      "name": "Lehm"
+    },
+    {
+      "id": "mat_mdf",
+      "name": "MDF / mitteldichte Faserplatte"
+    },
+    {
+      "id": "mat_mehrere",
+      "name": "Mehrere"
+    },
+    {
+      "id": "mat_messing",
+      "name": "Messing"
+    },
+    {
+      "id": "mat_naturstein",
+      "name": "Naturstein"
+    },
+    {
+      "id": "mat_pcm_phasenwechsel",
+      "name": "PCM"
+    },
+    {
+      "id": "mat_recyclingbeton",
+      "name": "Recyclingbeton"
+    },
+    {
+      "id": "mat_spannbeton",
+      "name": "mat_spannbeton"
+    },
+    {
+      "id": "mat_stahl",
+      "name": "Stahl"
+    },
+    {
+      "id": "mat_stahlbeton",
+      "name": "Stahlbeton"
+    },
+    {
+      "id": "mat_stroh",
+      "name": "Stroh"
+    },
+    {
+      "id": "mat_textil",
+      "name": "Textil"
+    },
+    {
+      "id": "mat_ziegel",
+      "name": "Ziegel"
+    }
+  ],
+  "norm_total": 34,
+  "norm_property_keys": [
+    "aliases",
+    "classified_at",
+    "country_short",
+    "definition",
+    "id",
+    "name",
+    "name_full",
+    "not_yet_referenced_in_corpus",
+    "note",
+    "scope",
+    "scope_note",
+    "source_scope",
+    "standards_body",
+    "topic"
+  ],
+  "norm_nodes": [
+    {
+      "id": "norm_cen_ts_1090_201_2024",
+      "name": "CEN/TS 1090-201:2024"
+    },
+    {
+      "id": "norm_cen_ts_17440",
+      "name": "CEN/TS 17440"
+    },
+    {
+      "id": "norm_crow_cur_4_2023",
+      "name": "CROW-CUR 4:2023"
+    },
+    {
+      "id": "norm_din_18008",
+      "name": "DIN 18008"
+    },
+    {
+      "id": "norm_din_4074",
+      "name": "DIN 4074"
+    },
+    {
+      "id": "norm_din_68800",
+      "name": "DIN 68800"
+    },
+    {
+      "id": "norm_din_en_15804",
+      "name": "DIN EN 15804"
+    },
+    {
+      "id": "norm_din_en_15978",
+      "name": "DIN EN 15978"
+    },
+    {
+      "id": "norm_en_1090",
+      "name": "EN 1090"
+    },
+    {
+      "id": "norm_en_1168",
+      "name": "EN 1168"
+    },
+    {
+      "id": "norm_en_13162",
+      "name": "EN 13162"
+    },
+    {
+      "id": "norm_en_14081",
+      "name": "EN 14081"
+    },
+    {
+      "id": "norm_en_1992",
+      "name": "EN 1992 (Eurocode 2)"
+    },
+    {
+      "id": "norm_en_1993",
+      "name": "EN 1993 (Eurocode 3)"
+    },
+    {
+      "id": "norm_en_1995",
+      "name": "EN 1995 (Eurocode 5)"
+    },
+    {
+      "id": "norm_en_1996",
+      "name": "EN 1996 (Eurocode 6)"
+    },
+    {
+      "id": "norm_en_206",
+      "name": "EN 206"
+    },
+    {
+      "id": "norm_en_771",
+      "name": "EN 771"
+    },
+    {
+      "id": "norm_historic_sections_book",
+      "name": "Historic Sections Book"
+    },
+    {
+      "id": "norm_iso_14040",
+      "name": "ISO 14040"
+    },
+    {
+      "id": "norm_iso_14044",
+      "name": "ISO 14044"
+    },
+    {
+      "id": "norm_iso_20887",
+      "name": "ISO 20887"
+    },
+    {
+      "id": "norm_nen_8700",
+      "name": "NEN 8700"
+    },
+    {
+      "id": "norm_ns_3682",
+      "name": "NS 3682"
+    },
+    {
+      "id": "norm_rt_2012",
+      "name": "RT 2012"
+    },
+    {
+      "id": "norm_sci_p427",
+      "name": "SCI P427 protocol"
+    },
+    {
+      "id": "norm_sci_p440",
+      "name": "SCI P440"
+    },
+    {
+      "id": "norm_sia_261",
+      "name": "SIA 261"
+    },
+    {
+      "id": "norm_sia_269",
+      "name": "SIA 269"
+    },
+    {
+      "id": "norm_sia_380_1",
+      "name": "SIA 380/1"
+    },
+    {
+      "id": "norm_sia_416",
+      "name": "SIA 416"
+    },
+    {
+      "id": "norm_sia_500",
+      "name": "SIA 500"
+    },
+    {
+      "id": "norm_sia_schweiz",
+      "name": "SIA (CH)"
+    },
+    {
+      "id": "norm_tek_norway",
+      "name": "TEK (NO)"
+    }
+  ],
+  "reuse_rule_total": 0
+}

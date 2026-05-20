@@ -1,0 +1,84 @@
+{
+  "phase": "4.1+4.2",
+  "verifier": 10,
+  "status": "FAIL",
+  "live_graph": {
+    "total_nodes": 2674,
+    "total_rels": 19624
+  },
+  "checks": {
+    "phase4_done_flag_exists": true,
+    "missing_evidence_origin": {
+      "expected_max": 50,
+      "observed": 0,
+      "pass": true
+    },
+    "viol_curated_no_excerpt": {
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "viol_bookkeeping_not_derived": {
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "viol_excerpt_propagated_from": {
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "evidence_origin_enum": {
+      "expected": ["curated", "inferred", "derived"],
+      "observed": {"derived": 19624},
+      "off_enum_values": [],
+      "pass": true
+    },
+    "evidence_confidence_enum": {
+      "expected": ["belegt", "teilweise_belegt", "unklar", "inferiert", "bookkeeping"],
+      "observed": {"unklar": 18588, "bookkeeping": 1021, "mittel": 15},
+      "off_enum_values": ["mittel"],
+      "off_enum_count": 15,
+      "off_enum_breakdown_by_rel_type": {"REFERENZIERT_NORM": 15},
+      "pass": false
+    },
+    "phase4_2_done_flag_exists": true,
+    "aus_bauwerk_count": {
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "eingebaut_in_count": {
+      "expected": 0,
+      "observed": 0,
+      "pass": true
+    },
+    "from_donor_count": {
+      "expected_min": 280,
+      "expected_about": 286,
+      "observed": 286,
+      "pass": true
+    },
+    "into_receiver_count": {
+      "expected_min": 340,
+      "expected_about": 349,
+      "observed": 349,
+      "pass": true
+    }
+  },
+  "summary": {
+    "checks_total": 12,
+    "checks_passed": 11,
+    "checks_failed": 1,
+    "failed_checks": ["evidence_confidence_enum"]
+  },
+  "notes": [
+    "Live verification was read-only via the project-0-recherche Neo4j-Official MCP read-cypher tool against database 'mit-bestand'.",
+    "Phase 4.2 rename is clean: AUS_BAUWERK=0, EINGEBAUT_IN=0, FROM_DONOR=286, INTO_RECEIVER=349, total_rels unchanged at 19624.",
+    "All four Phase 4.1 hard rules from plan section 4.1 (curated-no-excerpt, bookkeeping-not-derived, propagated-from excerpt, missing-origin) report 0 violations.",
+    "evidence_origin distribution is single-valued ('derived' on all 19624 edges); curated and inferred origins are produced by Phase 4b and Phase 3 respectively and are explicitly out of Agent 7 scope.",
+    "evidence_confidence enum fails: 15 REFERENZIERT_NORM edges carry 'mittel' which is not in the strict enum {belegt, teilweise_belegt, unklar, inferiert, bookkeeping}.",
+    "Agent 7's Phase 4 report itself lists 'mittel' with count 15 in its post-migration distribution, so this is a known unfinished surface left by Phase 4.1 - the canonical migration only normalizes evidence_basis values, never evidence_confidence values.",
+    "Suggested follow-up (out of verifier scope): remap 'mittel' -> 'teilweise_belegt' in a Phase 4.1.i step with derivation_note='former_confidence=mittel'."
+  ]
+}

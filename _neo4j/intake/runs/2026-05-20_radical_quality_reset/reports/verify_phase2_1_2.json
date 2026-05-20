@@ -1,0 +1,233 @@
+{
+  "verifier": "7_of_12",
+  "scope": ["phase_2_1_status", "phase_2_2_wiederverwendungsart_facet"],
+  "run_id": "2026-05-20_radical_quality_reset",
+  "database": "mit-bestand",
+  "verified_at_utc": "2026-05-20T23:51:00Z",
+  "read_only": true,
+  "verdict": "PASS",
+  "summary": {
+    "checks_total": 10,
+    "checks_passed": 10,
+    "checks_failed": 0,
+    "blocking_issues": 0,
+    "non_blocking_observations": 1
+  },
+  "checks": [
+    {
+      "id": 1,
+      "phase": "2.1",
+      "name": "migration_file_exists",
+      "expected": "mig_2_1_*.cypher under migrations/",
+      "observed": {
+        "path": "_neo4j/intake/runs/2026-05-20_radical_quality_reset/migrations/mig_2_1_status_consolidation.cypher",
+        "size_bytes": 3376,
+        "lines": 73
+      },
+      "result": "PASS"
+    },
+    {
+      "id": 2,
+      "phase": "2.1",
+      "name": "phase_2_1_done_flag_exists",
+      "expected": "PHASE_2_1_DONE.flag present (run-dir root)",
+      "observed": {
+        "path_found": "_neo4j/intake/runs/2026-05-20_radical_quality_reset/logs/PHASE_2_1_DONE.flag",
+        "size_bytes": 1254,
+        "json_valid": true,
+        "note": "flag is under logs/, not run-dir root; content valid"
+      },
+      "result": "PASS_WITH_NOTE"
+    },
+    {
+      "id": 3,
+      "phase": "2.1",
+      "name": "status_count_equals_9",
+      "expected": 9,
+      "observed": 9,
+      "cypher": "MATCH (s:Status) RETURN count(s)",
+      "result": "PASS"
+    },
+    {
+      "id": 4,
+      "phase": "2.1",
+      "name": "every_status_has_kind_enum",
+      "expected_kinds": ["lifecycle", "maturity", "unknown"],
+      "observed": {
+        "status_total": 9,
+        "status_with_kind": 9,
+        "kinds_present": ["lifecycle", "maturity", "unknown"],
+        "distribution": {
+          "lifecycle": 4,
+          "maturity": 4,
+          "unknown": 1
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "id": 5,
+      "phase": "2.1",
+      "name": "no_standalone_gebaut_or_wettbewerb",
+      "expected": 0,
+      "observed": {
+        "count_with_id_in_gebaut_wettbewerb": 0,
+        "count_with_name_in_Gebaut_Wettbewerb": 0,
+        "aliases_preserved_on_canonicals": {
+          "status_realisiert.aliases": ["Gebaut", "status_gebaut"],
+          "status_prototyp.aliases": ["Prototypisch", "Wettbewerb", "status_wettbewerb"]
+        }
+      },
+      "result": "PASS"
+    },
+    {
+      "id": 6,
+      "phase": "2.1",
+      "name": "bauwerk_dup_status_props_removed",
+      "expected": {"bauwerks_with_dup_props": 0, "sample_5_all_clean": true},
+      "observed": {
+        "bauwerks_with_bauwerkstatus_or_status_text": 0,
+        "total_bauwerk_nodes": 186,
+        "sample_5_inspected": [
+          {"id": "bw_55_great_suffolk_street_warehouse", "has_bauwerkstatus": false, "has_status_text": false},
+          {"id": "bw_1_broadgate_london", "has_bauwerkstatus": false, "has_status_text": false},
+          {"id": "bw_association_house_groeditz", "has_bauwerkstatus": false, "has_status_text": false},
+          {"id": "bw_school_type_dresden_donor", "has_bauwerkstatus": false, "has_status_text": false},
+          {"id": "bw_association_house_plauen", "has_bauwerkstatus": false, "has_status_text": false}
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "id": 7,
+      "phase": "2.1",
+      "name": "bauteilgruppe_counts_as_removed",
+      "expected": 0,
+      "observed": {
+        "bg_with_any_counts_as_prop": 0,
+        "props_checked": [
+          "counts_as_direct_reuse",
+          "counts_as_bestandserhalt",
+          "counts_as_recycling",
+          "counts_as_remanufacturing",
+          "counts_as_surplus"
+        ],
+        "total_bauteilgruppe_nodes": 369
+      },
+      "result": "PASS"
+    },
+    {
+      "id": 8,
+      "phase": "2.2",
+      "name": "wva_count_equals_11",
+      "expected": 11,
+      "observed": 11,
+      "cypher": "MATCH (w:WiederverwendungsArt) RETURN count(w)",
+      "result": "PASS"
+    },
+    {
+      "id": 9,
+      "phase": "2.2",
+      "name": "every_wva_has_facet_enum",
+      "expected_facets": ["treatment", "sourcing", "location", "intent"],
+      "observed": {
+        "wva_total": 11,
+        "wva_with_facet": 11,
+        "facets_present": ["treatment", "sourcing", "location", "intent"],
+        "no_rogue_values": true
+      },
+      "result": "PASS"
+    },
+    {
+      "id": 10,
+      "phase": "2.2",
+      "name": "facet_distribution_matches_plan",
+      "expected": {"treatment": 5, "sourcing": 3, "location": 1, "intent": 2},
+      "observed": {"treatment": 5, "sourcing": 3, "location": 1, "intent": 2},
+      "result": "PASS"
+    }
+  ],
+  "live_state": {
+    "status": {
+      "count": 9,
+      "with_kind": 9,
+      "distribution_by_kind": {"lifecycle": 4, "maturity": 4, "unknown": 1},
+      "hat_status_total_edges": 672,
+      "in_degree_by_id": {
+        "status_realisiert": 580,
+        "status_rueckgebaut": 29,
+        "status_geplant": 21,
+        "status_unklar": 14,
+        "status_prototyp": 9,
+        "status_in_bau": 8,
+        "status_temporaer": 5,
+        "status_verworfen": 3,
+        "status_vorgeschlagen": 3
+      },
+      "ids_present": [
+        "status_geplant",
+        "status_in_bau",
+        "status_prototyp",
+        "status_realisiert",
+        "status_rueckgebaut",
+        "status_temporaer",
+        "status_unklar",
+        "status_verworfen",
+        "status_vorgeschlagen"
+      ],
+      "ids_absent_as_required": ["status_gebaut", "status_wettbewerb"]
+    },
+    "wiederverwendungsart": {
+      "count": 11,
+      "with_facet": 11,
+      "distribution_by_facet": {"treatment": 5, "sourcing": 3, "location": 1, "intent": 2},
+      "hat_wiederverwendungsart_total_edges": 621,
+      "by_facet": {
+        "treatment": [
+          "wva_direkte_wiederverwendung",
+          "wva_upcycling",
+          "wva_recycling",
+          "wva_refurbishment",
+          "wva_remanufacturing"
+        ],
+        "sourcing": [
+          "wva_bestandserhalt",
+          "wva_urban_mining",
+          "wva_weiterbauen_im_bestand"
+        ],
+        "location": ["wva_same_site_reuse"],
+        "intent": ["wva_design_for_disassembly", "wva_adaptives_reuse"]
+      }
+    },
+    "property_cleanup": {
+      "bauwerk_with_bauwerkstatus_or_status_text": 0,
+      "bauteilgruppe_with_any_counts_as": 0
+    }
+  },
+  "artefacts": {
+    "migrations": [
+      "_neo4j/intake/runs/2026-05-20_radical_quality_reset/migrations/mig_2_1_status_consolidation.cypher",
+      "_neo4j/intake/runs/2026-05-20_radical_quality_reset/migrations/mig_2_2_wva_facet.cypher"
+    ],
+    "flags": [
+      "_neo4j/intake/runs/2026-05-20_radical_quality_reset/logs/PHASE_2_1_DONE.flag",
+      "_neo4j/intake/runs/2026-05-20_radical_quality_reset/logs/PHASE_2_2_DONE.flag"
+    ],
+    "author_report": "_neo4j/intake/runs/2026-05-20_radical_quality_reset/reports/agent_5_phase2_report.md"
+  },
+  "observations": [
+    {
+      "severity": "info",
+      "text": "PHASE_2_1_DONE.flag and PHASE_2_2_DONE.flag are written under logs/ instead of the run-dir root, unlike PHASE_2_4_DONE.flag and PHASE_2_7_DONE.flag which sit at the run-dir root. Non-blocking; flag content is valid. Recommend the orchestrator standardise location in a follow-up."
+    },
+    {
+      "severity": "info",
+      "text": "HAT_STATUS edge count is 672 (Realisiert in-degree 580). Plan §2.1 target is >= 583 on Realisiert after the Gebaut merge; current 580 reflects the documented 3-edge mergeRels:true dedup (3 sources held both Realisiert and Gebaut edges and were collapsed). Behaviour is plan-conformant and recorded in agent_5_phase2_report.md."
+    },
+    {
+      "severity": "info",
+      "text": "Aliases captured on canonical Status nodes correctly preserve absorbed-node provenance (status_realisiert.aliases=['Gebaut','status_gebaut']; status_prototyp.aliases=['Prototypisch','Wettbewerb','status_wettbewerb'])."
+    }
+  ],
+  "writes_performed": "none (read-only verification)"
+}

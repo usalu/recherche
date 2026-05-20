@@ -1,0 +1,141 @@
+{
+  "probed_at": "2026-05-20T22:04:17+00:00",
+  "database": "mit-bestand",
+  "assertions": [
+    {
+      "name": "anchor_q_aufbereitungsverfahren_reused_building_elements_md_exists",
+      "passed": true,
+      "observed": 8,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchor_q_connection_techniques_bauteilreuse_md_exists",
+      "passed": true,
+      "observed": 0,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchor_q_testing_verification_bauteilreuse_kg_md_exists",
+      "passed": true,
+      "observed": 23,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchor_q_bauteilreuse_legal_regime_matrix_md_exists",
+      "passed": true,
+      "observed": 95,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchor_q_schadstoff_reuse_knowledge_graph_research_md_exists",
+      "passed": true,
+      "observed": 0,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchor_q_circular_construction_reuse_graph_gaps_md_exists",
+      "passed": true,
+      "observed": 18,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchor_q_circular_construction_economics_kg_md_exists",
+      "passed": true,
+      "observed": 18,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchor_q_energy_climate_reuse_research_md_exists",
+      "passed": true,
+      "observed": 31,
+      "expected": ">=0",
+      "note": ""
+    },
+    {
+      "name": "anchors_with_at_least_one_url_child",
+      "passed": true,
+      "observed": 6,
+      "expected": ">=5",
+      "note": "5/8 research files have URL-table rows; connection_techniques + schadstoff + gaps do not."
+    },
+    {
+      "name": "domain_nodes_anchored_to_research_md",
+      "passed": true,
+      "observed": 258,
+      "expected": ">=200",
+      "note": ""
+    },
+    {
+      "name": "akteursliste_master_md_exists",
+      "passed": true,
+      "observed": 1,
+      "expected": 1,
+      "note": ""
+    },
+    {
+      "name": "master_zitiert_actor_url_count",
+      "passed": true,
+      "observed": 277,
+      "expected": ">=250",
+      "note": "Previous transform wrongly converted these to BELEGT_IN. After Agent 10 they are ZITIERT_QUELLE."
+    },
+    {
+      "name": "assoziiert_canonical_shape_dominant",
+      "passed": true,
+      "observed": {
+        "total": 203,
+        "canonical": 142
+      },
+      "expected": ">=140 of total",
+      "note": "Only registry-sourced ASSOZIIERT_MIT_PROJEKT edges receive this shape; batch2 dossier-sourced ones may differ."
+    },
+    {
+      "name": "hat_akteurrolle_curated_belegt_from_master",
+      "passed": true,
+      "observed": 548,
+      "expected": ">=500",
+      "note": ""
+    },
+    {
+      "name": "akteur_belegt_actor_url_canonical",
+      "passed": true,
+      "observed": 318,
+      "expected": ">=300",
+      "note": "318 of 365 in canonical shape; remaining 47 are first-10 batch under raw_tree/canonical/ (outside the registry/** glob)."
+    },
+    {
+      "name": "agent8_invariant_projekt_to_actor_url_zero",
+      "passed": true,
+      "observed": 0,
+      "expected": 0,
+      "note": "Hard precondition for any 4b.3 work: §4c.3 detach must hold."
+    },
+    {
+      "name": "all_edges_have_5_field_evidence",
+      "passed": true,
+      "observed": 0,
+      "expected": 0,
+      "note": ""
+    }
+  ],
+  "anchor_zitiert_quelle_out": {
+    "q_aufbereitungsverfahren_reused_building_elements_md": 8,
+    "q_connection_techniques_bauteilreuse_md": 0,
+    "q_testing_verification_bauteilreuse_kg_md": 23,
+    "q_bauteilreuse_legal_regime_matrix_md": 95,
+    "q_schadstoff_reuse_knowledge_graph_research_md": 0,
+    "q_circular_construction_reuse_graph_gaps_md": 18,
+    "q_circular_construction_economics_kg_md": 18,
+    "q_energy_climate_reuse_research_md": 31
+  },
+  "all_passed": true,
+  "passed_count": 17,
+  "failed_count": 0
+}

@@ -1,0 +1,96 @@
+[2026-05-20T21:59:14+00:00] connect to bolt://localhost:7687 db='mit-bestand' as user='neo4j'
+[2026-05-20T21:59:16+00:00] BEFORE  nodes=3013 rels=20089 quelle=1065 akteur=647 projekt=91  master_anchor_exists=0  projekt_belegt_actor_url=0
+[2026-05-20T21:59:16+00:00] PHASE 4b.2 — research-file ingestion (link-only) — START
+[2026-05-20T21:59:16+00:00]   -> aufbereitungsverfahren_reused_building_elements.md
+[2026-05-20T21:59:19+00:00]      anchor=q_aufbereitungsverfahren_reused_building_elements_md  urls=8  vocab_nodes_touched=210  vocab_belegt_edges=210  project_edges=89
+[2026-05-20T21:59:19+00:00]   -> connection_techniques_bauteilreuse.md
+[2026-05-20T21:59:19+00:00]      anchor=q_connection_techniques_bauteilreuse_md  urls=0  vocab_nodes_touched=10  vocab_belegt_edges=10  project_edges=0
+[2026-05-20T21:59:19+00:00]   -> testing_verification_bauteilreuse_kg.md
+[2026-05-20T21:59:20+00:00]      anchor=q_testing_verification_bauteilreuse_kg_md  urls=23  vocab_nodes_touched=14  vocab_belegt_edges=14  project_edges=17
+[2026-05-20T21:59:20+00:00]   -> bauteilreuse_legal_regime_matrix.md
+[2026-05-20T21:59:20+00:00]      anchor=q_bauteilreuse_legal_regime_matrix_md  urls=95  vocab_nodes_touched=15  vocab_belegt_edges=15  project_edges=0
+[2026-05-20T21:59:20+00:00]   -> schadstoff_reuse_knowledge_graph_research.md
+[2026-05-20T21:59:20+00:00]      anchor=q_schadstoff_reuse_knowledge_graph_research_md  urls=0  vocab_nodes_touched=9  vocab_belegt_edges=9  project_edges=8
+[2026-05-20T21:59:20+00:00]   -> circular_construction_reuse_graph_gaps.md
+[2026-05-20T21:59:20+00:00]      anchor=q_circular_construction_reuse_graph_gaps_md  urls=18  vocab_nodes_touched=0  vocab_belegt_edges=0  project_edges=0
+[2026-05-20T21:59:20+00:00]   -> circular_construction_economics_kg.md
+[2026-05-20T21:59:21+00:00]      anchor=q_circular_construction_economics_kg_md  urls=18  vocab_nodes_touched=0  vocab_belegt_edges=0  project_edges=0
+[2026-05-20T21:59:21+00:00]   -> energy_climate_reuse_research.md
+[2026-05-20T21:59:21+00:00]      anchor=q_energy_climate_reuse_research_md  urls=31  vocab_nodes_touched=0  vocab_belegt_edges=0  project_edges=0
+[2026-05-20T21:59:21+00:00] PHASE 4b.2 done.
+[2026-05-20T21:59:21+00:00] wrote done flag: PHASE_4B_2_DONE.flag
+[2026-05-20T21:59:21+00:00] PHASE 4b.3 — actor-registry replay (MERGE-only) — START
+[2026-05-20T21:59:21+00:00]   found 11 actor-registry JSONL batches
+[2026-05-20T21:59:21+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_011_020_neo4j/neo4j_exports/registry/actor_registry_011_020/actors_011_020.registry.kg.jsonl
+[2026-05-20T21:59:26+00:00]      nodes_merged=69  rels_merged=223  dropped_projekt_to_actor_url=40  dropped_missing_endpoint=0
+[2026-05-20T21:59:26+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_021_030_neo4j/neo4j_exports/registry/actor_registry_021_030/actors_021_030.registry.kg.jsonl
+[2026-05-20T21:59:30+00:00]      nodes_merged=64  rels_merged=238  dropped_projekt_to_actor_url=36  dropped_missing_endpoint=0
+[2026-05-20T21:59:30+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_031_040_neo4j/neo4j_exports/registry/actor_registry_031_040/actors_031_040.registry.kg.jsonl
+[2026-05-20T21:59:34+00:00]      nodes_merged=58  rels_merged=204  dropped_projekt_to_actor_url=32  dropped_missing_endpoint=0
+[2026-05-20T21:59:34+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_051_060_neo4j/neo4j_exports/registry/actor_registry_051_060/actors_051_060.registry.kg.jsonl
+[2026-05-20T21:59:38+00:00]      nodes_merged=68  rels_merged=260  dropped_projekt_to_actor_url=44  dropped_missing_endpoint=0
+[2026-05-20T21:59:38+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_061_070_neo4j/neo4j_exports/registry/actor_registry_061_070/actors_061_070.registry.kg.jsonl
+[2026-05-20T21:59:43+00:00]      nodes_merged=50  rels_merged=228  dropped_projekt_to_actor_url=10  dropped_missing_endpoint=0
+[2026-05-20T21:59:43+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_071_080_neo4j/neo4j_exports/registry/actor_registry_071_080/actors_071_080.registry.kg.jsonl
+[2026-05-20T21:59:47+00:00]      nodes_merged=56  rels_merged=253  dropped_projekt_to_actor_url=18  dropped_missing_endpoint=0
+[2026-05-20T21:59:47+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_081_090_neo4j/neo4j_exports/registry/actor_registry_081_090/actors_081_090.registry.kg.jsonl
+[2026-05-20T21:59:52+00:00]      nodes_merged=69  rels_merged=280  dropped_projekt_to_actor_url=22  dropped_missing_endpoint=0
+[2026-05-20T21:59:52+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_091_100_neo4j/neo4j_exports/registry/actor_registry_091_100/actors_091_100.registry.kg.jsonl
+[2026-05-20T21:59:56+00:00]      nodes_merged=55  rels_merged=285  dropped_projekt_to_actor_url=5  dropped_missing_endpoint=0
+[2026-05-20T21:59:56+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_101_110_neo4j/neo4j_exports/registry/actor_registry_101_110/actors_101_110.registry.kg.jsonl
+[2026-05-20T22:00:01+00:00]      nodes_merged=57  rels_merged=255  dropped_projekt_to_actor_url=17  dropped_missing_endpoint=0
+[2026-05-20T22:00:01+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_111_115_neo4j/neo4j_exports/registry/actor_registry_111_115/actors_111_115.registry.kg.jsonl
+[2026-05-20T22:00:03+00:00]      nodes_merged=25  rels_merged=117  dropped_projekt_to_actor_url=2  dropped_missing_endpoint=0
+[2026-05-20T22:00:03+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/neo4j_exports/registry/actor_registry_041_050/actors_041_050.registry.kg.jsonl
+[2026-05-20T22:00:07+00:00]      nodes_merged=58  rels_merged=212  dropped_projekt_to_actor_url=30  dropped_missing_endpoint=0
+[2026-05-20T22:00:07+00:00] PHASE 4b.3 done.
+[2026-05-20T22:00:07+00:00] wrote done flag: PHASE_4B_3_DONE.flag
+[2026-05-20T22:00:07+00:00] DONE   total elapsed=53.6s   nodes 3013->3459   rels  20089->21634
+[2026-05-20T22:00:36+00:00] connect to bolt://localhost:7687 db='mit-bestand' as user='neo4j'
+[2026-05-20T22:00:38+00:00] BEFORE  nodes=3543 rels=21747 quelle=1399 akteur=650 projekt=105  master_anchor_exists=1  projekt_belegt_actor_url=0
+[2026-05-20T22:00:38+00:00] PHASE 4b.2 — research-file ingestion (link-only) — START
+[2026-05-20T22:00:38+00:00]   -> aufbereitungsverfahren_reused_building_elements.md
+[2026-05-20T22:00:41+00:00]      anchor=q_aufbereitungsverfahren_reused_building_elements_md  urls=8  vocab_nodes_touched=210  vocab_belegt_edges=210  project_edges=89
+[2026-05-20T22:00:41+00:00]   -> connection_techniques_bauteilreuse.md
+[2026-05-20T22:00:41+00:00]      anchor=q_connection_techniques_bauteilreuse_md  urls=0  vocab_nodes_touched=10  vocab_belegt_edges=10  project_edges=0
+[2026-05-20T22:00:41+00:00]   -> testing_verification_bauteilreuse_kg.md
+[2026-05-20T22:00:41+00:00]      anchor=q_testing_verification_bauteilreuse_kg_md  urls=23  vocab_nodes_touched=14  vocab_belegt_edges=14  project_edges=17
+[2026-05-20T22:00:41+00:00]   -> bauteilreuse_legal_regime_matrix.md
+[2026-05-20T22:00:41+00:00]      anchor=q_bauteilreuse_legal_regime_matrix_md  urls=95  vocab_nodes_touched=15  vocab_belegt_edges=15  project_edges=0
+[2026-05-20T22:00:41+00:00]   -> schadstoff_reuse_knowledge_graph_research.md
+[2026-05-20T22:00:42+00:00]      anchor=q_schadstoff_reuse_knowledge_graph_research_md  urls=0  vocab_nodes_touched=9  vocab_belegt_edges=9  project_edges=8
+[2026-05-20T22:00:42+00:00]   -> circular_construction_reuse_graph_gaps.md
+[2026-05-20T22:00:42+00:00]      anchor=q_circular_construction_reuse_graph_gaps_md  urls=18  vocab_nodes_touched=0  vocab_belegt_edges=0  project_edges=0
+[2026-05-20T22:00:42+00:00]   -> circular_construction_economics_kg.md
+[2026-05-20T22:00:42+00:00]      anchor=q_circular_construction_economics_kg_md  urls=18  vocab_nodes_touched=0  vocab_belegt_edges=0  project_edges=0
+[2026-05-20T22:00:42+00:00]   -> energy_climate_reuse_research.md
+[2026-05-20T22:00:42+00:00]      anchor=q_energy_climate_reuse_research_md  urls=31  vocab_nodes_touched=0  vocab_belegt_edges=0  project_edges=0
+[2026-05-20T22:00:42+00:00] PHASE 4b.2 done.
+[2026-05-20T22:00:42+00:00] wrote done flag: PHASE_4B_2_DONE.flag
+[2026-05-20T22:00:42+00:00] PHASE 4b.3 — actor-registry replay (MERGE-only) — START
+[2026-05-20T22:00:42+00:00]   found 11 actor-registry JSONL batches
+[2026-05-20T22:00:42+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_011_020_neo4j/neo4j_exports/registry/actor_registry_011_020/actors_011_020.registry.kg.jsonl
+[2026-05-20T22:00:46+00:00]      nodes_merged=69  rels_merged=223  dropped_projekt_to_actor_url=40  dropped_missing_endpoint=0
+[2026-05-20T22:00:46+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_021_030_neo4j/neo4j_exports/registry/actor_registry_021_030/actors_021_030.registry.kg.jsonl
+[2026-05-20T22:00:50+00:00]      nodes_merged=64  rels_merged=238  dropped_projekt_to_actor_url=36  dropped_missing_endpoint=0
+[2026-05-20T22:00:50+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_031_040_neo4j/neo4j_exports/registry/actor_registry_031_040/actors_031_040.registry.kg.jsonl
+[2026-05-20T22:00:53+00:00]      nodes_merged=58  rels_merged=204  dropped_projekt_to_actor_url=32  dropped_missing_endpoint=0
+[2026-05-20T22:00:53+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_051_060_neo4j/neo4j_exports/registry/actor_registry_051_060/actors_051_060.registry.kg.jsonl
+[2026-05-20T22:00:57+00:00]      nodes_merged=68  rels_merged=260  dropped_projekt_to_actor_url=44  dropped_missing_endpoint=0
+[2026-05-20T22:00:57+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_061_070_neo4j/neo4j_exports/registry/actor_registry_061_070/actors_061_070.registry.kg.jsonl
+[2026-05-20T22:01:01+00:00]      nodes_merged=50  rels_merged=228  dropped_projekt_to_actor_url=10  dropped_missing_endpoint=0
+[2026-05-20T22:01:01+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_071_080_neo4j/neo4j_exports/registry/actor_registry_071_080/actors_071_080.registry.kg.jsonl
+[2026-05-20T22:01:05+00:00]      nodes_merged=56  rels_merged=253  dropped_projekt_to_actor_url=18  dropped_missing_endpoint=0
+[2026-05-20T22:01:05+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_081_090_neo4j/neo4j_exports/registry/actor_registry_081_090/actors_081_090.registry.kg.jsonl
+[2026-05-20T22:01:09+00:00]      nodes_merged=69  rels_merged=280  dropped_projekt_to_actor_url=22  dropped_missing_endpoint=0
+[2026-05-20T22:01:09+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_091_100_neo4j/neo4j_exports/registry/actor_registry_091_100/actors_091_100.registry.kg.jsonl
+[2026-05-20T22:01:13+00:00]      nodes_merged=55  rels_merged=285  dropped_projekt_to_actor_url=5  dropped_missing_endpoint=0
+[2026-05-20T22:01:13+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_101_110_neo4j/neo4j_exports/registry/actor_registry_101_110/actors_101_110.registry.kg.jsonl
+[2026-05-20T22:01:17+00:00]      nodes_merged=57  rels_merged=255  dropped_projekt_to_actor_url=17  dropped_missing_endpoint=0
+[2026-05-20T22:01:17+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/actor_registry_111_115_neo4j/neo4j_exports/registry/actor_registry_111_115/actors_111_115.registry.kg.jsonl
+[2026-05-20T22:01:19+00:00]      nodes_merged=25  rels_merged=117  dropped_projekt_to_actor_url=2  dropped_missing_endpoint=0
+[2026-05-20T22:01:19+00:00]   -> _neo4j/intake/archive/2026-05-15_actor_registry_seed/raw_tree/neo4j_exports/registry/actor_registry_041_050/actors_041_050.registry.kg.jsonl
+[2026-05-20T22:01:22+00:00]      nodes_merged=58  rels_merged=212  dropped_projekt_to_actor_url=30  dropped_missing_endpoint=0
+[2026-05-20T22:01:22+00:00] PHASE 4b.3 done.
+[2026-05-20T22:01:22+00:00] wrote done flag: PHASE_4B_3_DONE.flag
+[2026-05-20T22:01:22+00:00] DONE   total elapsed=46.0s   nodes 3543->3543   rels  21747->21747

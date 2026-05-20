@@ -1,0 +1,109 @@
+{
+  "verifier": "6_of_12",
+  "phase": "1.6",
+  "scope": "akteur_merges",
+  "run_dir": "E:\\recherche\\_neo4j\\intake\\runs\\2026-05-20_radical_quality_reset\\",
+  "database": "mit-bestand",
+  "verified_at": "2026-05-20",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "id": 1,
+      "name": "migration_file_exists",
+      "expected": "migrations/mig_1_6_actor_merge.cypher present",
+      "actual": "present (28 lines; documentation + parameterised apoc.refactor.mergeNodes pattern)",
+      "status": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "done_flag_exists",
+      "expected": "PHASE_1_6_DONE.flag present",
+      "actual": "present (2500 bytes; includes fixup_note for scalar id reset, before=654, after=647, delta=-7, 7 merged_pairs)",
+      "status": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "journal_has_7_lines",
+      "expected": 7,
+      "actual": 7,
+      "path": "deleted/phase1_6_merges.jsonl",
+      "status": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "live_akteur_count",
+      "expected_value": 647,
+      "tolerance_pm": 2,
+      "actual_value": 647,
+      "cypher": "MATCH (a:Akteur) RETURN count(a)",
+      "status": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "merge_in_ids_gone",
+      "expected": "0 hits for any merge-in id",
+      "actual_hits": 0,
+      "checked_ids": [
+        "bauburo_in_situ",
+        "ak_plp_architecture",
+        "zrs_architekten",
+        "loeliger_strub_architektur",
+        "bill_dunster_zedfactory",
+        "opera_pm",
+        "Bellastock"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": 6,
+      "name": "canonical_aliases_contain_merge_in",
+      "expected": "7/7 canonical Akteure carry the merge-in id in aliases[]",
+      "actual": "7/7",
+      "pairs": [
+        {"canonical_id": "baubuero_in_situ",            "aliases": ["bauburo_in_situ"],            "degree": 23, "name": "baubüro in situ"},
+        {"canonical_id": "plp_architecture",            "aliases": ["ak_plp_architecture"],        "degree": 11, "name": "PLP Architecture"},
+        {"canonical_id": "ZRS_Architekten_Ingenieure",  "aliases": ["zrs_architekten"],            "degree": 9,  "name": "ZRS Architekten Ingenieure"},
+        {"canonical_id": "loeliger_strub",              "aliases": ["loeliger_strub_architektur"], "degree": 10, "name": "Loeliger Strub"},
+        {"canonical_id": "zedfactory_bill_dunster",     "aliases": ["bill_dunster_zedfactory"],    "degree": 4,  "name": "Bill Dunster / ZEDfactory"},
+        {"canonical_id": "opera",                       "aliases": ["opera_pm"],                   "degree": 7,  "name": "Opera"},
+        {"canonical_id": "bellastock",                  "aliases": ["Bellastock"],                 "degree": 26, "name": "Bellastock"}
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": 7,
+      "name": "no_case_only_collisions",
+      "expected_value": 0,
+      "actual_value": 0,
+      "cypher": "MATCH (a1:Akteur),(a2:Akteur) WHERE a1.id<>a2.id AND toLower(a1.id)=toLower(a2.id) RETURN count(*)",
+      "status": "PASS"
+    },
+    {
+      "id": 8,
+      "name": "id_is_scalar_string",
+      "expected": "a.id IS :: STRING == true on all merged actors AND graph-wide",
+      "actual": {
+        "merged_actors_all_string": true,
+        "merged_actors_none_list": true,
+        "graph_wide_non_string_akteur_count": 0
+      },
+      "note_from_flag": "apoc.refactor.mergeNodes(... properties:'combine') coerced id to list during merge; logs/agent4_fixup_merge_id.py reset each merged node's id to canonical scalar.",
+      "status": "PASS"
+    }
+  ],
+  "side_observations": {
+    "akteure_with_aliases_total": 16,
+    "comment": "7 from Phase 1.6 merges + 9 from case-normalisation of typology-backbone IDs (CITYFOERSTER, Lendager, Natural_Building_Lab, Rotor, Superuse_Studios, Werner_Sobek, etc.) per plan §1.6, which normalises the id to lowercase but does not merge any node.",
+    "akteur_net_delta_vs_flag_before": -7,
+    "akteur_net_delta_vs_plan_baseline": "660 baseline - 6 hard-delete (Phase 1.5) - 7 merges = 647 final"
+  },
+  "methodology": {
+    "transport": "read-only Bolt via .cursor/mcp.json (NEO4J_READ_ONLY=true)",
+    "writes_issued": 0,
+    "files_inspected": [
+      "migrations/mig_1_6_actor_merge.cypher",
+      "PHASE_1_6_DONE.flag",
+      "deleted/phase1_6_merges.jsonl"
+    ]
+  }
+}

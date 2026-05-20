@@ -1,0 +1,142 @@
+{
+  "verifier": "agent_9",
+  "scope": ["phase_2_4", "phase_2_7"],
+  "plan": "c:/Users/Kinosh/.cursor/plans/radical_quality-first_reset_8d1e2b66.plan.md",
+  "run_dir": "E:/recherche/_neo4j/intake/runs/2026-05-20_radical_quality_reset",
+  "database": "mit-bestand",
+  "graph_totals": {
+    "nodes": 2674,
+    "relationships": 19624
+  },
+  "phase_2_4": {
+    "checks": [
+      {
+        "id": 1,
+        "name": "PHASE_2_4_DONE.flag exists",
+        "expected": "file present",
+        "actual": "present, 3992 bytes, completed_at 2026-05-20T21:22:59+00:00",
+        "verdict": "PASS"
+      },
+      {
+        "id": 2,
+        "name": "Projekt.year_completed filled",
+        "cypher": "MATCH (p:Projekt) WHERE p.year_completed IS NOT NULL RETURN count(p)",
+        "expected": ">= 40",
+        "actual": 42,
+        "verdict": "PASS"
+      },
+      {
+        "id": 3,
+        "name": "Projekt.area_m2_gross filled",
+        "cypher": "MATCH (p:Projekt) WHERE p.area_m2_gross IS NOT NULL RETURN count(p)",
+        "expected": ">= 30",
+        "actual": 36,
+        "verdict": "PASS"
+      },
+      {
+        "id": 4,
+        "name": "Projekt with non-empty cost_facts",
+        "cypher": "MATCH (p:Projekt) WHERE p.cost_facts IS NOT NULL AND size(p.cost_facts) > 0 RETURN count(p)",
+        "expected": ">= 5",
+        "actual": 7,
+        "verdict": "PASS"
+      },
+      {
+        "id": 5,
+        "name": "Projekt.raw_year_fields present on multi-year projects",
+        "cypher": "MATCH (p:Projekt) WHERE p.raw_year_fields IS NOT NULL RETURN count(p)",
+        "expected": "present on multi-year projects",
+        "actual": 53,
+        "verdict": "PASS"
+      },
+      {
+        "id": 6,
+        "name": "No :CostEntry / :ReuseShare labels",
+        "cypher": "MATCH (n:CostEntry) RETURN count(n) | MATCH (n:ReuseShare) RETURN count(n)",
+        "expected": "0 / 0; labels not in db.labels()",
+        "actual": {"CostEntry": 0, "ReuseShare": 0, "labels_present": []},
+        "verdict": "PASS"
+      }
+    ],
+    "summary": {"pass": 6, "fail": 0, "total": 6}
+  },
+  "phase_2_7": {
+    "checks": [
+      {
+        "id": 7,
+        "name": "PHASE_2_7_DONE.flag exists",
+        "expected": "file present",
+        "actual": "present, 3992 bytes, completed_at 2026-05-20T21:22:59+00:00",
+        "verdict": "PASS"
+      },
+      {
+        "id": 8,
+        "name": "Distinct keys on :Projekt",
+        "cypher": "MATCH (p:Projekt) UNWIND keys(p) AS k RETURN count(DISTINCT k)",
+        "expected": "<= 25 (was 434)",
+        "actual": 17,
+        "verdict": "PASS"
+      },
+      {
+        "id": 9,
+        "name": "Distinct keys on :Bauteilgruppe",
+        "cypher": "MATCH (b:Bauteilgruppe) UNWIND keys(b) AS k RETURN count(DISTINCT k)",
+        "expected": "<= 30 (was 142)",
+        "actual": 25,
+        "verdict": "PASS",
+        "notes": "Two extras (`menge_source`, `menge_original_key`) are Phase 2.4 provenance fields, still under the 30-key budget."
+      },
+      {
+        "id": 10,
+        "name": "Sample 5 Projekt carry _archive (JSON string); keys outside _archive <= 17",
+        "expected": "_archive is JSON string; max panel keys <= 17",
+        "actual": {
+          "sample_ids": [
+            "p_55_great_suffolk_street_london",
+            "p_association_house_groeditz",
+            "p_association_house_plauen",
+            "p_bedzed_london_hackbridge",
+            "p_berlin_schildow_pilot_house"
+          ],
+          "archive_type": "string (JSON)",
+          "archive_sample_prefix": "{\"note\":\"Retrofit/extension with reused steel...\"",
+          "max_panel_keys": 14,
+          "avg_panel_keys": 10.4,
+          "min_panel_keys": 7
+        },
+        "verdict": "PASS"
+      },
+      {
+        "id": 11,
+        "name": "Quelle.external_sources removed",
+        "cypher": "MATCH (q:Quelle) WHERE q.external_sources IS NOT NULL RETURN count(q)",
+        "expected": 0,
+        "actual": 0,
+        "verdict": "PASS"
+      },
+      {
+        "id": 12,
+        "name": "No relationship carries url or source_file",
+        "cypher": "MATCH ()-[r]-() WHERE r.url IS NOT NULL OR r.source_file IS NOT NULL RETURN count(r)",
+        "expected": 0,
+        "actual": 0,
+        "verdict": "PASS"
+      },
+      {
+        "id": 13,
+        "name": "Akteur.raw_role_evidence intact",
+        "cypher": "MATCH (a:Akteur) WHERE a.raw_role_evidence IS NOT NULL AND size(a.raw_role_evidence) > 0 RETURN count(a)",
+        "expected": ">= 150",
+        "actual": 155,
+        "verdict": "PASS"
+      }
+    ],
+    "summary": {"pass": 7, "fail": 0, "total": 7}
+  },
+  "totals": {"pass": 13, "fail": 0, "total": 13},
+  "overall_verdict": "PASS",
+  "notes": [
+    "Both flag files report payload.skipped=true (idempotent re-run); before/after measurements match the live graph exactly.",
+    "Optional, non-blocking follow-up: fold menge_source / menge_original_key into the published Bauteilgruppe panel list or move them into _archive."
+  ]
+}

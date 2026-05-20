@@ -1,0 +1,91 @@
+{
+  "verifier": "11 of 12",
+  "phase": "4c",
+  "subject": "source-as-link enforcement",
+  "run_dir": "E:\\recherche\\_neo4j\\intake\\runs\\2026-05-20_radical_quality_reset",
+  "plan_file": "c:\\Users\\Kinosh\\.cursor\\plans\\radical_quality-first_reset_8d1e2b66.plan.md",
+  "plan_section": "Phase 4c",
+  "verified_at": "2026-05-20T21:51:00Z",
+  "mode": "read-only graph verification; report files written",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "id": 1,
+      "name": "PHASE_4C_DONE.flag exists",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "id": 2,
+      "name": "deleted phase4c project actor-registry BELEGT_IN JSONL exists with 176 lines",
+      "path": "E:\\recherche\\_neo4j\\intake\\runs\\2026-05-20_radical_quality_reset\\deleted\\phase4c_3_projekt_actor_registry_belegt.jsonl",
+      "expected_lines": 176,
+      "observed_jsonl_records": 176,
+      "status": "PASS"
+    },
+    {
+      "id": 3,
+      "name": "Quelle.external_sources removed",
+      "query": "MATCH (q:Quelle) WHERE q.external_sources IS NOT NULL RETURN count(q)",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "id": 4,
+      "name": "No URL/http/source_file/external_sources relationship keys",
+      "query": "MATCH ()-[r]-() WHERE any(k IN keys(r) WHERE toLower(k) CONTAINS 'url' OR toLower(k) CONTAINS 'http' OR k='source_file' OR k='external_sources') RETURN count(r)",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "id": 5,
+      "name": "No Projekt BELEGT_IN actor-registry external links",
+      "query": "MATCH (p:Projekt)-[:BELEGT_IN]->(q:Quelle {quelltyp:'external_link_from_actor_registry'}) RETURN count(*)",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "id": 6,
+      "name": "Akteur BELEGT_IN actor-registry external links preserved",
+      "query": "MATCH (a:Akteur)-[:BELEGT_IN]->(q:Quelle {quelltyp:'external_link_from_actor_registry'}) RETURN count(*)",
+      "expected_min": 350,
+      "observed": 360,
+      "status": "PASS"
+    },
+    {
+      "id": 7,
+      "name": "ZITIERT_QUELLE relationship volume",
+      "query": "MATCH ()-[r:ZITIERT_QUELLE]->() RETURN count(r)",
+      "expected_min": 600,
+      "observed": 639,
+      "status": "PASS"
+    },
+    {
+      "id": 8,
+      "name": "Agent 8 dossier manifest exists and lists at least 90 dossiers",
+      "path": "E:\\recherche\\_neo4j\\intake\\runs\\2026-05-20_radical_quality_reset\\reports\\agent_8_dossier_manifest.json",
+      "expected_min_dossiers": 90,
+      "observed_total_dossier_files": 97,
+      "status": "PASS"
+    }
+  ],
+  "live_counts": {
+    "quelle_with_external_sources": 0,
+    "rels_with_url_like_or_source_keys": 0,
+    "projekt_belegt_actor_registry": 0,
+    "akteur_belegt_actor_registry": 360,
+    "zitiert_quelle_total": 639
+  },
+  "manifest_totals": {
+    "total_dossier_files": 97,
+    "gebaeude_files": 76,
+    "batch2_files": 21,
+    "live_case_markdown_quelle_in_graph": 92,
+    "matched_live_quelle_id": 76,
+    "unmatched_dossier_files": 21
+  }
+}
