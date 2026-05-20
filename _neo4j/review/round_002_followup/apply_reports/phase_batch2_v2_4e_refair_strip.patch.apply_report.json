@@ -1,0 +1,146 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_4e_refair_strip.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 17030
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T07:44:11.473539+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_4e_refair_strip.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "p_refair_bordeaux_reemploi_platform",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_refair_bordeaux_reemploi_platform__BELEGT_IN__q_akteursliste_master_md",
+          "source_scope": "actor_registry_project_mention"
+        },
+        "rel_internal_id": 1153028157234747871,
+        "to": "q_akteursliste_master_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_refair_bordeaux_reemploi_platform",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_akteursliste_master_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_refair_bordeaux_reemploi_platform",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_refair_bordeaux_reemploi_platform__BELEGT_IN__q_actor_orianne_scourzic_02",
+          "source_scope": "actor_registry_project_link"
+        },
+        "rel_internal_id": 1155279957048433119,
+        "to": "q_actor_orianne_scourzic_02",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_refair_bordeaux_reemploi_platform",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_actor_orianne_scourzic_02",
+      "type": "BELEGT_IN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_refair_bordeaux_reemploi_platform",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_refair_bordeaux_reemploi_platform__BELEGT_IN__q_actor_tiphaine_berthome_02",
+          "source_scope": "actor_registry_project_link"
+        },
+        "rel_internal_id": 1157531756862118367,
+        "to": "q_actor_tiphaine_berthome_02",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_refair_bordeaux_reemploi_platform",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_actor_tiphaine_berthome_02",
+      "type": "BELEGT_IN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "orianne_scourzic",
+        "properties": {
+          "association_basis": "actor-list source link or context; upgrade only after project-file/external confirmation",
+          "id": "r_orianne_scourzic__ASSOZIIERT_MIT_PROJEKT__p_refair_bordeaux_reemploi_platform",
+          "needs_verification": true,
+          "not_confirmed_project_participation": true,
+          "source_scope": "actor_registry"
+        },
+        "rel_internal_id": 1153035853816142324,
+        "to": "p_refair_bordeaux_reemploi_platform",
+        "type": "ASSOZIIERT_MIT_PROJEKT"
+      },
+      "from": "orianne_scourzic",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_refair_bordeaux_reemploi_platform",
+      "type": "ASSOZIIERT_MIT_PROJEKT"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tiphaine_berthome",
+        "properties": {
+          "association_basis": "actor-list source link or context; upgrade only after project-file/external confirmation",
+          "id": "r_tiphaine_berthome__ASSOZIIERT_MIT_PROJEKT__p_refair_bordeaux_reemploi_platform",
+          "needs_verification": true,
+          "not_confirmed_project_participation": true,
+          "source_scope": "actor_registry"
+        },
+        "rel_internal_id": 1153035853816142334,
+        "to": "p_refair_bordeaux_reemploi_platform",
+        "type": "ASSOZIIERT_MIT_PROJEKT"
+      },
+      "from": "tiphaine_berthome",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_refair_bordeaux_reemploi_platform",
+      "type": "ASSOZIIERT_MIT_PROJEKT"
+    },
+    {
+      "error": "to node 'la_fabrique_de_bordeaux_metropole' not found",
+      "line": 6,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "to node 'la_fabrique_de_bordeaux_metropole' not found",
+      "line": 7,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'la_fabrique_de_bordeaux_metropole' not found",
+      "line": 8,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "missing_endpoint": 3,
+    "records": 8,
+    "would_delete_rel": 5
+  }
+}

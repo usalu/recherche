@@ -1,0 +1,31 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_4c_eth_merge.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T07:44:05.991833+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_4c_eth_merge.patch.jsonl",
+  "records": [
+    {
+      "error": "merge target 'prog_mas_dfab' not found",
+      "from": "p_eth_circular_construction_student_reuse",
+      "line": 1,
+      "op": "merge_node",
+      "status": "missing_node",
+      "to": "prog_mas_dfab"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "missing_node": 1,
+    "records": 1
+  }
+}

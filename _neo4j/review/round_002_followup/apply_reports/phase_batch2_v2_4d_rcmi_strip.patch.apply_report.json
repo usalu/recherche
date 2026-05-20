@@ -1,0 +1,101 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_4d_rcmi_strip.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 17033
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T07:44:08.782748+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_4d_rcmi_strip.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "p_rcmi_concular",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_rcmi_concular__BELEGT_IN__q_akteursliste_master_md",
+          "source_scope": "actor_registry_project_mention"
+        },
+        "rel_internal_id": 1153028157234747817,
+        "to": "q_akteursliste_master_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_rcmi_concular",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_akteursliste_master_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_rcmi_concular",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_rcmi_concular__BELEGT_IN__q_actor_dominik_campanella_02",
+          "source_scope": "actor_registry_project_link"
+        },
+        "rel_internal_id": 1155279957048433065,
+        "to": "q_actor_dominik_campanella_02",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_rcmi_concular",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_actor_dominik_campanella_02",
+      "type": "BELEGT_IN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "dominik_campanella",
+        "properties": {
+          "association_basis": "actor-list source link or context; upgrade only after project-file/external confirmation",
+          "id": "r_dominik_campanella__ASSOZIIERT_MIT_PROJEKT__p_rcmi_concular",
+          "needs_verification": true,
+          "not_confirmed_project_participation": true,
+          "source_scope": "actor_registry"
+        },
+        "rel_internal_id": 1153035853816142270,
+        "to": "p_rcmi_concular",
+        "type": "ASSOZIIERT_MIT_PROJEKT"
+      },
+      "from": "dominik_campanella",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_rcmi_concular",
+      "type": "ASSOZIIERT_MIT_PROJEKT"
+    },
+    {
+      "error": "to node 'tool_rcmi' not found",
+      "line": 4,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "dominik_campanella",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "concular"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "missing_endpoint": 1,
+    "records": 5,
+    "would_create_rel": 1,
+    "would_delete_rel": 3
+  }
+}

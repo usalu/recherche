@@ -1,0 +1,921 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_6a_bg_addnodes.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2340,
+    "relationships": 17035
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T01:51:21.425857+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_6a_bg_addnodes.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_retained_mehrere_mehrere_sms_zuerich_existing_bldgs",
+          "name": "SMS ZH Bestand",
+          "name_full": "SMS Zürich — existing Micro+Dixa buildings retained in place",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "retained",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_retained_mehrere_mehrere_sms_zuerich_existing_bldgs",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_mehrere_sms_zuerich_ubs_hall",
+          "name": "SMS ZH UBS-Halle",
+          "name_full": "SMS Zürich — Two-storey communal hall from UBS Datenzentrum Altstetten",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_mehrere_sms_zuerich_ubs_hall",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_stahl_fassade_sms_zuerich_arcade",
+          "name": "SMS ZH Stahl-Laubeng.",
+          "name_full": "SMS Zürich — Self-supporting steel arcade / Laubengang",
+          "primary_bauteiltyp_id": "bt_traeger",
+          "primary_material_id": "mat_stahl",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_stahl_fassade_sms_zuerich_arcade",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_retained_stahlbeton_treppe_sms_zuerich_existing_stairs",
+          "name": "SMS ZH Bestandstreppen",
+          "name_full": "SMS Zürich — Existing stair cores retained",
+          "primary_bauteiltyp_id": "bt_treppe",
+          "primary_material_id": "mat_stahlbeton",
+          "reuse_status": "retained",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_retained_stahlbeton_treppe_sms_zuerich_existing_stairs",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_mehrere_technik_sms_zuerich_pv_roof",
+          "name": "SMS ZH PV-Anlage",
+          "name_full": "SMS Zürich — Photovoltaic system, 250 m² PV roof array",
+          "primary_bauteiltyp_id": "bt_technik",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_mehrere_technik_sms_zuerich_pv_roof",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_holz_wand_umar_timber_facade",
+          "name": "UMAR Holz/Fassade",
+          "name_full": "UMAR — DfD untreated timber structure + facade",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_wand_umar_timber_facade",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_metall_fassade_umar_alu_copper",
+          "name": "UMAR Alu+Kupfer",
+          "name_full": "UMAR — Aluminium + copper facade elements",
+          "primary_bauteiltyp_id": "bt_fassade",
+          "primary_material_id": "mat_aluminium",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_metall_fassade_umar_alu_copper",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "bank door handles (Brussels HQ)",
+          "id": "bg_reuse_metall_tuer_umar_wabbes_handles",
+          "name": "UMAR Wabbes Türgriffe",
+          "name_full": "UMAR — Jules Wabbes door handles (loan from Rotor; from Brussels Générale de Banque HQ)",
+          "neue_funktion": "research unit door handles",
+          "primary_bauteiltyp_id": "bt_tuer",
+          "primary_material_id": "mat_messing",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_metall_tuer_umar_wabbes_handles",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_glas_keramik_fassade_umar_magna_glass",
+          "name": "UMAR Magna Glas",
+          "name_full": "UMAR — Magna Glaskeramik sintered recycled-glass panels (kitchen tabletop + bath cladding)",
+          "primary_bauteiltyp_id": "bt_fassade",
+          "primary_material_id": "mat_glas",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_glas_keramik_fassade_umar_magna_glass",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_daemmstoff_daemmung_umar_mycelium",
+          "name": "UMAR Pilzmyzel-Dämm.",
+          "name_full": "UMAR — Ecovative mycelium insulation boards",
+          "primary_bauteiltyp_id": "bt_daemmung",
+          "primary_material_id": "mat_daemmstoff",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_daemmstoff_daemmung_umar_mycelium",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_kunststoff_boden_umar_carpets",
+          "name": "UMAR Desso-Teppich",
+          "name_full": "UMAR — Desso/Tarkett carpets (take-back product-service system)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_kunststoff",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_kunststoff_boden_umar_carpets",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_verbundstoff_decke_umar_lindner_ceiling",
+          "name": "UMAR Lindner-Decke",
+          "name_full": "UMAR — Lindner Plafotherm heated/chilled ceiling panels (take-back service)",
+          "primary_bauteiltyp_id": "bt_decke",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_verbundstoff_decke_umar_lindner_ceiling",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mineralisch_wand_umar_recycled_bricks",
+          "name": "UMAR Recyclingziegel",
+          "name_full": "UMAR — Recycled bricks + recycled insulation",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_ziegel",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mineralisch_wand_umar_recycled_bricks",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mineralisch_stuetze_elementa_baufeld_c",
+          "name": "ELEMENTA Baufeld C",
+          "name_full": "ELEMENTA — Reused RC column-beam structure (Baufeld C from Lysbüchel garage)",
+          "primary_bauteiltyp_id": "bt_stuetze",
+          "primary_material_id": "mat_stahlbeton",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mineralisch_stuetze_elementa_baufeld_c",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+          "name": "ELEMENTA Baufeld D",
+          "name_full": "ELEMENTA — RC rib-panel load-bearing exterior wall (Baufeld D from Lysbüchel garage)",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_stahlbeton",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_holz_decke_elementa_brettstapel",
+          "name": "ELEMENTA Brettstapel",
+          "name_full": "ELEMENTA — Brettstapeldecken (new renewable wood)",
+          "primary_bauteiltyp_id": "bt_decke",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_holz_decke_elementa_brettstapel",
+      "line": 16,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_lehm_erde_wand_elementa_clay",
+          "name": "ELEMENTA Lehm",
+          "name_full": "ELEMENTA — Lehmbauplatten + Lehmputz (clay boards + plaster)",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_lehm_erde",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_lehm_erde_wand_elementa_clay",
+      "line": 17,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_glas_keramik_boden_careno_historic_tiles",
+          "name": "Careno Hist. Fliesen",
+          "name_full": "Careno — Historic ceramic flooring tiles, circa 1900-1960 (raw stock, mortar+grout residues)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_keramik",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_glas_keramik_boden_careno_historic_tiles",
+      "line": 18,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_glas_keramik_boden_careno_retile_cleaned",
+          "name": "Careno Re-Tile cleaned",
+          "name_full": "Careno — Re-Tile machine-cleaned reclaimed floor tiles (mortar removed)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_keramik",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_glas_keramik_boden_careno_retile_cleaned",
+      "line": 19,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_glas_keramik_boden_careno_rotor_stock",
+          "name": "Careno RotorDC Lager",
+          "name_full": "Careno — RotorDC reclaimed ceramic tile stock (online + physical shop)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_keramik",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_glas_keramik_boden_careno_rotor_stock",
+      "line": 20,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "wooden window frames (rejected)",
+          "id": "bg_reuse_holz_boden_circl_window_frame_floor",
+          "name": "Circl Fenster→Boden",
+          "name_full": "Circl — Rejected wooden window frames cut into floorboards",
+          "neue_funktion": "floorboards",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_boden_circl_window_frame_floor",
+      "line": 21,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_dismantled_holz_mehrere_circl_larch_structure",
+          "name": "Circl Lärchentragwerk",
+          "name_full": "Circl — Fully demountable locally-sourced larch timber support structure (installed 2017; dismantled 2024-2025)",
+          "primary_bauteiltyp_id": "bt_traeger",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "dismantled",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_dismantled_holz_mehrere_circl_larch_structure",
+      "line": 22,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "jeans (clothing)",
+          "id": "bg_reuse_daemmstoff_daemmung_circl_jeans_insulation",
+          "name": "Circl Jeans-Dämmung",
+          "name_full": "Circl — 16,000 old jeans incorporated as ceiling insulation (Denimtex)",
+          "neue_funktion": "ceiling insulation",
+          "primary_bauteiltyp_id": "bt_daemmung",
+          "primary_material_id": "mat_textil",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_daemmstoff_daemmung_circl_jeans_insulation",
+      "line": 23,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_fenster_circl_conference_windows",
+          "name": "Circl Bürofenster",
+          "name_full": "Circl — Conference-room window frames, carefully removed from demolished office buildings",
+          "primary_bauteiltyp_id": "bt_fenster",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_fenster_circl_conference_windows",
+      "line": 24,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_metall_technik_circl_fire_hose_cabinets",
+          "name": "Circl Löschkästen",
+          "name_full": "Circl — Second-hand fire-hose-reel cabinets (New Horizon Urban Mining supplier)",
+          "primary_bauteiltyp_id": "bt_technik",
+          "primary_material_id": "mat_stahl",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_metall_technik_circl_fire_hose_cabinets",
+      "line": 25,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "business clothing",
+          "id": "bg_reuse_textil_wand_circl_clothing_felt",
+          "name": "Circl Textilfilz-Wand",
+          "name_full": "Circl — Stuccoed walls + tribune felt from old ABN AMRO business clothing",
+          "neue_funktion": "wall + tribune felt",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_textil",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_textil_wand_circl_clothing_felt",
+      "line": 26,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_dismantled_mehrere_technik_circl_solar_panels",
+          "name": "Circl Solar",
+          "name_full": "Circl — 500 roof solar panels, ~7 years old, lower output than new panels (Exasun)",
+          "primary_bauteiltyp_id": "bt_technik",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "dismantled",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_dismantled_mehrere_technik_circl_solar_panels",
+      "line": 27,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_fassade_lysp8_external_mix",
+          "name": "LysP8 Fassade-Mix",
+          "name_full": "LysP8 — Reuse façade components: roof tiles, window shutters, fibre-cement panels, railings",
+          "primary_bauteiltyp_id": "bt_fassade",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_fassade_lysp8_external_mix",
+      "line": 28,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_holz_ausbau_lysp8_kitchens",
+          "name": "LysP8 Küchen ZH-Wohns.",
+          "name_full": "LysP8 — All kitchens reclaimed from a Zürich housing estate and stored for project",
+          "primary_bauteiltyp_id": "bt_ausbau",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_ausbau_lysp8_kitchens",
+      "line": 29,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_metall_boden_lysp8_grating_steps",
+          "name": "LysP8 Gitterrost",
+          "name_full": "LysP8 — Reused steel grid grating steps for seat stair",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_stahl",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_metall_boden_lysp8_grating_steps",
+      "line": 30,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_ausbau_lysp8_doors_tiles",
+          "name": "LysP8 Türen+Fliesen",
+          "name_full": "LysP8 — Reused doors and tiles",
+          "primary_bauteiltyp_id": "bt_ausbau",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_ausbau_lysp8_doors_tiles",
+      "line": 31,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_holz_mehrere_lysp8_dfd_frame",
+          "name": "LysP8 DfD Holzbau",
+          "name_full": "LysP8 — DfD timber structure with screwed visible elements",
+          "primary_bauteiltyp_id": "bt_traeger",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_holz_mehrere_lysp8_dfd_frame",
+      "line": 32,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_lehm_erde_boden_lysp8_oxacrete",
+          "name": "LysP8 Oxacrete-Boden",
+          "name_full": "LysP8 — Oxacrete Nossim poured-earth floor (Oxara + Repoxit + KIBAG)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_lehm_erde",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_lehm_erde_boden_lysp8_oxacrete",
+      "line": 33,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_technik_medunicampus_paternoster",
+          "name": "MedUni Paternoster",
+          "name_full": "MedUni Mariannengasse — Paternoster cabins (donor batch → Wiener Aufzugmuseum)",
+          "primary_bauteiltyp_id": "bt_technik",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_technik_medunicampus_paternoster",
+      "line": 34,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "doors",
+          "id": "bg_reuse_holz_wand_medunicampus_doors_as_cladding",
+          "name": "MedUni Türen→Wand",
+          "name_full": "MedUni Mariannengasse — Doors repurposed as wall cladding (donor batch)",
+          "neue_funktion": "wall cladding",
+          "primary_bauteiltyp_id": "bt_wand",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_wand_medunicampus_doors_as_cladding",
+      "line": 35,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_retained_mehrere_decke_medunicampus_glasdecke",
+          "name": "MedUni Jugendstildecke",
+          "name_full": "MedUni Mariannengasse — Jugendstil glass ceiling retained in situ",
+          "primary_bauteiltyp_id": "bt_decke",
+          "primary_material_id": "mat_glas",
+          "reuse_status": "retained",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_retained_mehrere_decke_medunicampus_glasdecke",
+      "line": 36,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "Stuttgart 21 concrete formwork",
+          "id": "bg_reuse_holz_mehrere_ingersheim_clt_structure",
+          "name": "Ingersheim CLT-Bau",
+          "name_full": "Jugendtreff Ingersheim — 12 curved CLT formwork elements as primary structure (FW: formwork→structure)",
+          "neue_funktion": "structural CLT building shell",
+          "primary_bauteiltyp_id": "bt_traeger",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_mehrere_ingersheim_clt_structure",
+      "line": 37,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_dismantled_holz_mehrere_stuttgart21_donor_stock",
+          "name": "S21 CLT-Lager",
+          "name_full": "Stuttgart 21 Hauptbahnhof — 78 CLT formwork elements secured in depot for Stuttgart 210 reallabs",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "dismantled",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_dismantled_holz_mehrere_stuttgart21_donor_stock",
+      "line": 38,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "broken bricks, roofing slates, skip waste",
+          "id": "bg_reuse_mehrere_boden_granby_rock_terrazzo",
+          "name": "Granby Rock Terrazzo",
+          "name_full": "Granby Workshop — Granby Rock recycled terrazzo (broken bricks + roofing slates + skip waste → terrazzo aggregate)",
+          "neue_funktion": "decorative terrazzo aggregate (mantlepieces, countertops)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_boden_granby_rock_terrazzo",
+      "line": 39,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "alte_funktion": "bricks + roofing slates",
+          "id": "bg_reuse_ziegel_boden_granby_brick_slate_terrazzo",
+          "name": "Granby Brick+Slate",
+          "name_full": "Granby Workshop — Brick & Slate Terrazzo (recycled brick + roofing slate as aggregate, BS 5385-5:2009)",
+          "neue_funktion": "terrazzo aggregate",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_ziegel",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_ziegel_boden_granby_brick_slate_terrazzo",
+      "line": 40,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_mehrere_eggshell_recycled_structure",
+          "name": "Eggshell Struct.",
+          "name_full": "Eggshell Pavilion — robotic 3D-printed recycled formwork material, reversible connections (ETH MAS DFAB 2022)",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_mehrere_eggshell_recycled_structure",
+      "line": 41,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_holz_mehrere_upsticks_timber_frame",
+          "name": "Up Sticks Holzrahmen",
+          "name_full": "Up Sticks Dundee — robotically-drilled dowel-locked timber assembly (no glue, no nails) (ETH MAS DFAB 2019)",
+          "primary_bauteiltyp_id": "bt_traeger",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_mehrere_upsticks_timber_frame",
+      "line": 42,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 42,
+    "would_create": 42
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_8_project_vocab.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 17089
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T07:26:26.183943+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_8_project_vocab.patch.jsonl",
+  "records": [
+    {
+      "from": "p_schaerenmoosstrasse_zuerich",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_umnutzung"
+    },
+    {
+      "from": "p_schaerenmoosstrasse_zuerich",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_umbau"
+    },
+    {
+      "from": "p_schaerenmoosstrasse_zuerich",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_wohnen"
+    },
+    {
+      "from": "p_schaerenmoosstrasse_zuerich",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_gewerbe"
+    },
+    {
+      "from": "p_schaerenmoosstrasse_zuerich",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_form_follows_availability"
+    },
+    {
+      "from": "p_schaerenmoosstrasse_zuerich",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_reuse_assessment"
+    },
+    {
+      "from": "p_schaerenmoosstrasse_zuerich",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_AKZEPTANZ",
+      "status": "would_create_rel",
+      "to": "ak_oeffentlicher_bauherr_pilot"
+    },
+    {
+      "error": "to node 'norm_sia_500' not found",
+      "line": 8,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "to node 'norm_sia_261' not found",
+      "line": 9,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_wohnen"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_design_for_disassembly"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_reversibilitaet"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_urban_mining"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_bauteilkatalogisierung"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_take_back_service"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "NUTZT_TOOL",
+      "status": "would_create_rel",
+      "to": "tool_bim_bauteilkatalog"
+    },
+    {
+      "from": "p_umar_unit",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_AKZEPTANZ",
+      "status": "would_create_rel",
+      "to": "ak_oeffentlicher_bauherr_pilot"
+    },
+    {
+      "error": "to node 'norm_sia_269' not found",
+      "line": 19,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_wohnen"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_pre_deconstruction_audit"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_bauteilkatalogisierung"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_materialinventur"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_form_follows_availability"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    },
+    {
+      "error": "to node 'software_ecotool' not found",
+      "line": 27,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "NUTZT_TOOL",
+      "status": "would_create_rel",
+      "to": "tool_bauteilkatalog"
+    },
+    {
+      "error": "to node 'zbs_ecotool' not found",
+      "line": 29,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_elementa_walkeweg",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_AKZEPTANZ",
+      "status": "would_create_rel",
+      "to": "ak_oeffentlicher_bauherr_pilot"
+    },
+    {
+      "error": "to node 'norm_sia_269' not found",
+      "line": 31,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_careno_becircular",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_wiederverwendungskriterien"
+    },
+    {
+      "from": "p_careno_becircular",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_building_material_scouting"
+    },
+    {
+      "from": "p_careno_becircular",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_plattform_vermittelt"
+    },
+    {
+      "error": "to node 'tool_retile' not found",
+      "line": 35,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_rueckbau"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_buero"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_mischnutzung"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_design_for_disassembly"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_zirkulaere_ausschreibung"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_urban_mining"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 43,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_abrissmonitoring"
+    },
+    {
+      "from": "p_circl_abn_amro",
+      "line": 44,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_MARKTMODELL",
+      "status": "noop_existing_rel",
+      "to": "mm_intra_konzern"
+    },
+    {
+      "error": "to node 'software_llmnt' not found",
+      "line": 45,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_lysp8_basel",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
+    },
+    {
+      "from": "p_lysp8_basel",
+      "line": 47,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_wohnen"
+    },
+    {
+      "from": "p_lysp8_basel",
+      "line": 48,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_gewerbe"
+    },
+    {
+      "from": "p_lysp8_basel",
+      "line": 49,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_design_for_disassembly"
+    },
+    {
+      "from": "p_lysp8_basel",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_reuse_assessment"
+    },
+    {
+      "from": "p_lysp8_basel",
+      "line": 51,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_building_material_scouting"
+    },
+    {
+      "from": "p_lysp8_basel",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_AKZEPTANZ",
+      "status": "would_create_rel",
+      "to": "ak_oeffentlicher_bauherr_pilot"
+    },
+    {
+      "error": "to node 'norm_sia_269' not found",
+      "line": 53,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 54,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_rueckbau"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 55,
+      "op": "add_rel",
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 56,
+      "op": "add_rel",
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_schule_bildung"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 57,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_pre_deconstruction_audit"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 58,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_bauteilkatalogisierung"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 59,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_materialinventur"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 60,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_spende"
+    },
+    {
+      "from": "p_meduni_campus_mariannengasse",
+      "line": 61,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_AKZEPTANZ",
+      "status": "would_create_rel",
+      "to": "ak_oeffentlicher_bauherr_pilot"
+    },
+    {
+      "from": "p_granby_workshop",
+      "line": 62,
+      "op": "add_rel",
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_form_follows_availability"
+    },
+    {
+      "from": "p_granby_workshop",
+      "line": 63,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_kauf_gebraucht"
+    },
+    {
+      "from": "p_granby_workshop",
+      "line": 64,
+      "op": "add_rel",
+      "rel_type": "HAT_DOMINANT_AKZEPTANZ",
+      "status": "would_create_rel",
+      "to": "ak_aesthetik_patinakultur"
+    },
+    {
+      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "line": 65,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "line": 66,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "line": 67,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "line": 68,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "line": 69,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_eggshell_pavilion' not found",
+      "line": 70,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_eggshell_pavilion' not found",
+      "line": 71,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_up_sticks_dundee' not found",
+      "line": 72,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'p_up_sticks_dundee' not found",
+      "line": 73,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "missing_endpoint": 18,
+    "noop_existing_rel": 1,
+    "records": 73,
+    "would_create_rel": 54
+  }
+}

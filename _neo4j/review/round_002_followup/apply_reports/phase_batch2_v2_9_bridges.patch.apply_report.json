@@ -1,0 +1,190 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_9_bridges.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2298,
+    "relationships": 17049
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T07:27:21.848923+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_9_bridges.patch.jsonl",
+  "records": [
+    {
+      "from": "Rotor",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_careno_becircular"
+    },
+    {
+      "from": "Rotor",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_fcrbe"
+    },
+    {
+      "from": "Rotor",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_architecture_of_reuse_brussels"
+    },
+    {
+      "from": "rotordc",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_careno_becircular"
+    },
+    {
+      "from": "rotordc",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_umar_unit"
+    },
+    {
+      "error": "from node 'tu_delft' not found",
+      "line": 6,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'tu_delft' not found",
+      "line": 7,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "zirkular_gmbh",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_lysp8_basel"
+    },
+    {
+      "from": "zirkular_gmbh",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_elementa_walkeweg"
+    },
+    {
+      "from": "assemble",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_granby_workshop"
+    },
+    {
+      "from": "baukarussell",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_meduni_campus_mariannengasse"
+    },
+    {
+      "error": "to node 'tool_rcmi' not found",
+      "line": 12,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "from node 'la_fabrique_de_bordeaux_metropole' not found",
+      "line": 13,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "to node 'software_opalis' not found",
+      "line": 14,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "to node 'prog_urban_bricolage' not found",
+      "line": 15,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "from": "materialnomaden",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_reuse_logistics"
+    },
+    {
+      "from": "duncan_baker_brown",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_fcrbe"
+    },
+    {
+      "from": "hugo_topalov",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_fcrbe"
+    },
+    {
+      "from": "sarah_westerfeld",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_fcrbe"
+    },
+    {
+      "from": "michael_ghyoot",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_fcrbe"
+    },
+    {
+      "error": "to node 'prog_mas_dfab' not found",
+      "line": 21,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "to node 'prog_mas_dfab' not found",
+      "line": 22,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    },
+    {
+      "error": "to node 'prog_mas_dfab' not found",
+      "line": 23,
+      "op": "add_rel",
+      "status": "missing_endpoint"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "missing_endpoint": 9,
+    "records": 23,
+    "would_create_rel": 14
+  }
+}
