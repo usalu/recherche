@@ -1,0 +1,606 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_18_cleanups.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2538,
+    "relationships": 18662
+  },
+  "counts_after_expected": {
+    "nodes": 2538,
+    "relationships": 18662
+  },
+  "counts_before": {
+    "nodes": 2538,
+    "relationships": 18651
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T13:11:58.399950+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_18_cleanups.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "adresse": "Gustav Mahlerplein, Amsterdam Zuidas",
+          "aliases": [
+            "Pavilion Circl Amsterdam"
+          ],
+          "bau_jahr_von": 2016,
+          "bauwerkstatus": "rueckgebaut",
+          "bgf_m2": 2000,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "date_dismantled": "2025-03",
+          "fertigstellung_jahr": 2017,
+          "id": "p_circl_abn_amro",
+          "import_status": "registry_stub_only",
+          "name": "Circl",
+          "name_full": "Circl / ABN AMRO urban mining context",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "project_category": "building_project_stub",
+          "source_scope": "actor_registry_association",
+          "year_opened_date": "2017-09-05"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "adresse": "Gustav Mahlerplein, Amsterdam Zuidas",
+          "aliases": [
+            "Pavilion Circl Amsterdam"
+          ],
+          "bau_jahr_von": 2016,
+          "bauwerkstatus": "rueckgebaut",
+          "bgf_m2": 2000,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "date_dismantled": "2025-03",
+          "fertigstellung_jahr": 2017,
+          "id": "p_circl_abn_amro",
+          "import_status": "registry_stub_only",
+          "name": "Circl",
+          "name_full": "Circl / ABN AMRO urban mining context",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "building_project_stub",
+          "source_scope": "actor_registry_association",
+          "year_opened_date": "2017-09-05"
+        }
+      },
+      "id": "p_circl_abn_amro",
+      "line": 1,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "Interreg NWE FCRBE"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "end_year": 2023,
+          "eu_funding_programme": "Interreg North-West Europe",
+          "id": "prog_fcrbe",
+          "import_status": "registry_stub_only",
+          "lead_organisation": "Rotor",
+          "name": "FCRBE",
+          "name_full": "FCRBE — Facilitating the Circulation of Reclaimed Building Elements",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "project_category": "research_or_market_program_stub",
+          "short_description": "The project aimed to increase by 50% the amount of reclaimed building elements circulated in North-West Europe by 2032.",
+          "source_scope": "actor_registry_association",
+          "start_year": 2018,
+          "status": "concluded",
+          "type": "Interreg",
+          "usage_countries": [
+            "Frankreich"
+          ],
+          "usage_project_count": 1
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "Interreg NWE FCRBE"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "end_year": 2023,
+          "eu_funding_programme": "Interreg North-West Europe",
+          "id": "prog_fcrbe",
+          "import_status": "registry_stub_only",
+          "lead_organisation": "Rotor",
+          "name": "FCRBE",
+          "name_full": "FCRBE — Facilitating the Circulation of Reclaimed Building Elements",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "research_or_market_program_stub",
+          "short_description": "The project aimed to increase by 50% the amount of reclaimed building elements circulated in North-West Europe by 2032.",
+          "source_scope": "actor_registry_association",
+          "start_year": 2018,
+          "status": "concluded",
+          "type": "Interreg",
+          "usage_countries": [
+            "Frankreich"
+          ],
+          "usage_project_count": 1
+        }
+      },
+      "id": "prog_fcrbe",
+      "line": 2,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "ETH Circular Construction"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "ETH Zürich",
+          "id": "prog_mas_dfab",
+          "import_status": "registry_stub_only",
+          "name": "MAS DFAB ETH",
+          "name_full": "MAS Architektur und Digitale Fabrikation, ETH Zürich (Gramazio Kohler Research)",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "project_category": "research_news_or_demonstrator_stub",
+          "short_description": "ETH MAS teaching+research programme combining computational design, robotic fabrication, and reusable/reversible construction details.",
+          "source_scope": "case_markdown",
+          "status": "active",
+          "type": "Lehre+Forschung"
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "ETH Circular Construction"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "ETH Zürich",
+          "id": "prog_mas_dfab",
+          "import_status": "registry_stub_only",
+          "name": "MAS DFAB ETH",
+          "name_full": "MAS Architektur und Digitale Fabrikation, ETH Zürich (Gramazio Kohler Research)",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "research_news_or_demonstrator_stub",
+          "short_description": "ETH MAS teaching+research programme combining computational design, robotic fabrication, and reusable/reversible construction details.",
+          "source_scope": "case_markdown",
+          "status": "active",
+          "type": "Lehre+Forschung"
+        }
+      },
+      "id": "prog_mas_dfab",
+      "line": 3,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "RE_USE Höfe Wien",
+            "REUSE Yards"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "ZHAW Institut Konstruktives Entwerfen (IKE)",
+          "id": "prog_re_use_hoefe",
+          "import_status": "registry_stub_only",
+          "name": "RE-USE Höfe",
+          "name_full": "RE-USE Höfe — zirkuläre Lieferketten anhand der Fensterwiederverwendung",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "project_category": "reuse_network_project_stub",
+          "short_description": "Publication/project documenting RE-WIN and Windows for Ukraine experience. NOTE: dossier explicitly says Vienna location is unverified — evidence is for Basel, Winterthur, Switzerland-Ukraine.",
+          "source_scope": "case_markdown",
+          "status": "published_2025",
+          "type": "research+publication"
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "RE_USE Höfe Wien",
+            "REUSE Yards"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "ZHAW Institut Konstruktives Entwerfen (IKE)",
+          "id": "prog_re_use_hoefe",
+          "import_status": "registry_stub_only",
+          "name": "RE-USE Höfe",
+          "name_full": "RE-USE Höfe — zirkuläre Lieferketten anhand der Fensterwiederverwendung",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "reuse_network_project_stub",
+          "short_description": "Publication/project documenting RE-WIN and Windows for Ukraine experience. NOTE: dossier explicitly says Vienna location is unverified — evidence is for Basel, Winterthur, Switzerland-Ukraine.",
+          "source_scope": "case_markdown",
+          "status": "published_2025",
+          "type": "research+publication"
+        }
+      },
+      "id": "prog_re_use_hoefe",
+      "line": 4,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "Reallabor B(e) Ware"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "end_year": 2028,
+          "host_institution": "TU Berlin / Natural Building Lab",
+          "id": "prog_reallabor_be_ware",
+          "import_status": "registry_stub_only",
+          "name": "Reallabor_Be_Ware",
+          "name_full": "Reallabor B(e) Ware — Gebäudetragwerke aus Sekundärmaterialien Made in Berlin",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "project_category": "research_demonstrator_stub",
+          "short_description": "Berlin reallab developing simplified realization and value chains for demanding building structures from local waste/secondary materials.",
+          "source_scope": "actor_registry_association",
+          "start_year": 2025,
+          "status": "active",
+          "type": "Reallabor",
+          "usage_countries": [],
+          "usage_project_count": 0
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "Reallabor B(e) Ware"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "end_year": 2028,
+          "host_institution": "TU Berlin / Natural Building Lab",
+          "id": "prog_reallabor_be_ware",
+          "import_status": "registry_stub_only",
+          "name": "Reallabor_Be_Ware",
+          "name_full": "Reallabor B(e) Ware — Gebäudetragwerke aus Sekundärmaterialien Made in Berlin",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "research_demonstrator_stub",
+          "short_description": "Berlin reallab developing simplified realization and value chains for demanding building structures from local waste/secondary materials.",
+          "source_scope": "actor_registry_association",
+          "start_year": 2025,
+          "status": "active",
+          "type": "Reallabor",
+          "usage_countries": [],
+          "usage_project_count": 0
+        }
+      },
+      "id": "prog_reallabor_be_ware",
+      "line": 5,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "REBRIDGE structural…"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "end_year": 2028,
+          "eu_contribution_eur": 1695121.69,
+          "eu_funding_programme": "Research Fund for Coal and Steel (RFCS)",
+          "grant_agreement_reference": "101157419",
+          "id": "prog_rebridge",
+          "import_status": "registry_stub_only",
+          "lead_organisation": "University of Stuttgart / Institute of Lightweight Structures and Conceptual Design",
+          "name": "ReBridge",
+          "name_full": "REBRIDGE — Reuse of Steel Components from Existing Bridge Structures",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "short_description": "The project develops scientific and technical foundations for safe reuse of steel components from decommissioned bridge structures.",
+          "source_scope": "case_markdown",
+          "start_year": 2025,
+          "status": "active",
+          "type": "research"
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "REBRIDGE structural…"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "end_year": 2028,
+          "eu_contribution_eur": 1695121.69,
+          "eu_funding_programme": "Research Fund for Coal and Steel (RFCS)",
+          "grant_agreement_reference": "101157419",
+          "id": "prog_rebridge",
+          "import_status": "registry_stub_only",
+          "lead_organisation": "University of Stuttgart / Institute of Lightweight Structures and Conceptual Design",
+          "name": "ReBridge",
+          "name_full": "REBRIDGE — Reuse of Steel Components from Existing Bridge Structures",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "short_description": "The project develops scientific and technical foundations for safe reuse of steel components from decommissioned bridge structures.",
+          "source_scope": "case_markdown",
+          "start_year": 2025,
+          "status": "active",
+          "type": "research"
+        }
+      },
+      "id": "prog_rebridge",
+      "line": 6,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "HTWG Konstanz",
+          "id": "prog_stuttgart_210",
+          "import_status": "registry_stub_only",
+          "name": "Stuttgart 210",
+          "name_full": "Stuttgart 210 — weiterdenken, weiterbauen!",
+          "needs_project_file": false,
+          "node_role": "full_projekt",
+          "project_category": "demonstrator_or_research_project",
+          "short_description": "Research programme + built youth-pavilion pilot demonstrating component reuse of Stuttgart 21 CLT concrete formwork.",
+          "source_scope": "case_markdown",
+          "status": "active",
+          "type": "teaching+research"
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "HTWG Konstanz",
+          "id": "prog_stuttgart_210",
+          "import_status": "registry_stub_only",
+          "name": "Stuttgart 210",
+          "name_full": "Stuttgart 210 — weiterdenken, weiterbauen!",
+          "needs_project_file": false,
+          "node_role": "cross_reference_stub",
+          "project_category": "demonstrator_or_research_project",
+          "short_description": "Research programme + built youth-pavilion pilot demonstrating component reuse of Stuttgart 21 CLT concrete formwork.",
+          "source_scope": "case_markdown",
+          "status": "active",
+          "type": "teaching+research"
+        }
+      },
+      "id": "prog_stuttgart_210",
+      "line": 7,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "actor_registry_order": 66,
+          "akteur_kontext_text": "Werner Sobek / UMAR",
+          "aliases": [
+            "werner_sobek_p",
+            "Werner Sobek (canonical post-merge)"
+          ],
+          "id": "Werner_Sobek",
+          "name": "Werner Sobek",
+          "reuse_relevanz_text": "UMAR/Systemengineering: zirkuläre Gebäudesysteme und reversibles Bauen; eher Future-Reuse als direkte Bauteil-Reuse.",
+          "source_file": "akteursliste_master.md",
+          "source_scope": "actor_registry_context"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "actor_registry_order": 66,
+          "akteur_kontext_text": "Werner Sobek / UMAR",
+          "id": "Werner_Sobek",
+          "name": "Werner Sobek",
+          "reuse_relevanz_text": "UMAR/Systemengineering: zirkuläre Gebäudesysteme und reversibles Bauen; eher Future-Reuse als direkte Bauteil-Reuse.",
+          "source_file": "akteursliste_master.md",
+          "source_scope": "actor_registry_context"
+        }
+      },
+      "id": "Werner_Sobek",
+      "line": 8,
+      "op": "canonicalize_node",
+      "status": "would_update"
+    },
+    {
+      "from": "drz_demontage_recycling",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_meduni_campus_mariannengasse"
+    },
+    {
+      "from": "die_kuemmerei",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_meduni_campus_mariannengasse"
+    },
+    {
+      "from": "wiener_aufzugmuseum",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_meduni_campus_mariannengasse"
+    },
+    {
+      "from": "icon_real_estate",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_circl_abn_amro"
+    },
+    {
+      "from": "victory_group",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "p_circl_abn_amro"
+    },
+    {
+      "from": "university_of_fribourg",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_reuse_logistics"
+    },
+    {
+      "from": "university_of_fribourg",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_urban_bricolage"
+    },
+    {
+      "from": "kanton_basel_stadt",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_elementa_walkeweg"
+    },
+    {
+      "from": "proholz_bw",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_stuttgart_210"
+    },
+    {
+      "from": "ed_zueblin_ag",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "prog_stuttgart_210"
+    },
+    {
+      "from": "mehr_als_wohnen",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_lysp8_basel"
+    },
+    {
+      "from": "kunst_stoffe_ev",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_reallabor_be_ware"
+    },
+    {
+      "from": "edith_maryon_stift",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_re_use_hoefe"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 2,
+    "records": 21,
+    "would_create_rel": 11,
+    "would_update": 8
+  }
+}

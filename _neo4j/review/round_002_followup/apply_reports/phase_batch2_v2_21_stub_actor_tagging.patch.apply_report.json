@@ -1,0 +1,123 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_21_stub_actor_tagging.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2578,
+    "relationships": 18823
+  },
+  "counts_after_expected": {
+    "nodes": 2578,
+    "relationships": 18823
+  },
+  "counts_before": {
+    "nodes": 2578,
+    "relationships": 18812
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T13:14:48.129210+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_21_stub_actor_tagging.patch.jsonl",
+  "records": [
+    {
+      "from": "Rotor",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "p_architecture_of_reuse_brussels"
+    },
+    {
+      "from": "rotordc",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_architecture_of_reuse_brussels"
+    },
+    {
+      "from": "lionel_devlieger",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_architecture_of_reuse_brussels"
+    },
+    {
+      "from": "maarten_gielen",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_architecture_of_reuse_brussels"
+    },
+    {
+      "from": "christine_conix",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_architecture_of_reuse_brussels"
+    },
+    {
+      "from": "katrine_west_kristensen",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_vandkunsten_component_reuse"
+    },
+    {
+      "from": "soren_nielsen",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_vandkunsten_component_reuse"
+    },
+    {
+      "from": "vandkunsten",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_vandkunsten_component_reuse"
+    },
+    {
+      "from": "andreas_sonderegger",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_reuse_in_construction_zhaw"
+    },
+    {
+      "from": "eva_stricker",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_reuse_in_construction_zhaw"
+    },
+    {
+      "from": "guido_brandi",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_reuse_in_construction_zhaw"
+    },
+    {
+      "from": "zhaw_ike",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_reuse_in_construction_zhaw"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 1,
+    "records": 12,
+    "would_create_rel": 11
+  }
+}

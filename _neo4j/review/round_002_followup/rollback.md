@@ -11,18 +11,27 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → … → L → M → N → O.0 → O.a → O.b → P → R → **batch2 v2 (1a-17)**.
+**Apply order so far:** Phase A → … → L → M → N → O.0 → O.a → O.b → P → R → **batch2 v2 (1a-17)** → **batch2 v2 follow-up (18-26)**.
 
 **Combined effect:**
 
-| | Before A | After R003 | After O | After P | After R | **After batch2 v2** |
+| | Before A | After R | After batch2 v2 | After Phase 22 | After Phase 25 | **After Phase 26** |
 |---|---:|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 296 | 2 298 | 2 298 | 2 298 | **2 538** |
-| Relationships | 15 834 | 16 822 | 16 869 | 16 869 | 17 035 | **18 651** |
-| Bauteilgruppen | — | 306 | 308 | 308 | 308 | **369** |
-| Projekte | — | — | — | — | 99 | **97** (dual-labeled 6 also count :Projekt) |
-| Programme | — | — | — | — | 17 | **28** |
-| Akteure | — | — | — | — | 582 | **660** |
+| Nodes | 2 147 | 2 298 | 2 538 | 2 578 | 2 579 | **2 580** |
+| Relationships | 15 834 | 17 035 | 18 651 | 18 831 | 19 318 | **19 957** |
+| Bauteilgruppen | — | 308 | 369 | 369 | 369 | **369** |
+| Wiederverwendungsketten | — | 63 | 72 | 112 | 112 | **112** |
+| Projekte | — | 99 | 97 (incl. 6 dual) | 97 (incl. 6 dual) | 91 (dual stripped) | **91** |
+| Programme | — | 17 | 28 | 28 | 28 | **28** |
+| Akteure | — | 582 | 660 | 660 | 660 | **660** |
+| Nodes missing source_scope | — | — | — | — | 0 | **0** |
+| BGs missing HAT_STATUS | — | — | — | — | 195 | **0** |
+| BGs missing HAT_BAUTEILEBENE | — | — | — | — | 32 | **0** |
+| BGs missing HAT_RESSOURCENQUELLE | — | — | — | — | 101 | **0** |
+| Bauwerks missing HAT_STATUS | — | — | — | — | 128 | **0** |
+| Stadt missing LIEGT_IN_LAND | — | — | — | — | 20 | **0** |
+| Wiederverwendungsketten missing BELEGT_IN | — | — | — | — | 49 | **0** |
+| BGs w/ FW data but no HAT_FUNKTIONSWECHSEL | — | — | — | — | 111 | **0** |
 
 ---
 
@@ -183,6 +192,95 @@ RETURN bg.id, size(rel_types) AS rel_count, rel_types ORDER BY rel_count DESC LI
 MATCH (p:Projekt)-[:REFERENZIERT_NORM]->(n:Norm) WHERE n.id STARTS WITH 'norm_sia_'
 RETURN p.id, n.id;
 ```
+
+### Phase 18-22 follow-up summary (applied 2026-05-20 late session)
+
+After batch2 v2 + Phase 16/17 baseline, a §F consistency audit surfaced node_role inconsistencies and orphan Akteure. Five small follow-up patches landed:
+
+| Patch | Records | What |
+|---|---:|---|
+| phase_batch2_v2_18_cleanups.patch.jsonl | 21 | node_role normalization on 7 promoted/dual-labelled Projekte; Werner_Sobek alias preservation; 11 BETEILIGT_AN backfills for deg-0/1 Akteure (drz, die_kuemmerei, wiener_aufzugmuseum, icon_real_estate, victory_group, university_of_fribourg×2, kanton_basel_stadt, proholz_bw, ed_zueblin_ag); 3 KEEP-STUB orphan linkings (mehr_als_wohnen→LysP8, kunst_stoffe_ev→BE-WARE, edith_maryon_stift→RE-USE Höfe) |
+| phase_batch2_v2_19_counts_as.patch.jsonl | 49 | `counts_as_*` property backfill on 49 BGs derived from reuse_status (planned-status BGs skipped) |
+| phase_batch2_v2_20a_kette_addnodes.patch.jsonl | 40 | 40 new Wiederverwendungsketten auto-discovered from donor-receiver Bauwerk pairs across the whole corpus |
+| phase_batch2_v2_20b_kette_rels.patch.jsonl | 150 | TEIL_VON_KETTE (70) + AUS_BAUWERK donor (40) + EINGEBAUT_IN receiver (40) for the new ketten |
+| phase_batch2_v2_21_stub_actor_tagging.patch.jsonl | 12 | Tag actors to 3 dossier-unverified-Programm stubs (Rotor/RotorDC/Lionel/Maarten/Christine→Architecture-of-Reuse-BXL; Katrine/Søren/Vandkunsten→Vandkunsten; Andreas/Eva/Guido/ZHAW_IKE→ZHAW Reuse) |
+| phase_batch2_v2_22_funktionswechsel.patch.jsonl | 8 | HAT_FUNKTIONSWECHSEL edges for the 8 batch2 BGs with alte/neue_funktion: 6×fw_neue_funktion + 1×fw_konstruktive_funktion (S21 formwork→CLT structure upgrade) + 1×fw_gleiche_funktion (Wabbes handle context change only) |
+
+**Phase 18-22 totals:** ~240 ops added, **+40 nodes (all Wiederverwendungskette), +180 relationships**.
+
+### New capabilities from Phase 20 in particular
+
+Wiederverwendungsketten now total **112** (was 63 pre-batch2). The 40 newly-discovered ketten span donor-receiver pairs across the whole corpus — covering chains the previous corpus had implied via BG donor/receiver edges but never anchored at the Kette level. Significantly improves traversability of reuse chains in graph queries.
+
+Example: from any donor Bauwerk, you can now query for downstream receivers via the kette:
+```cypher
+MATCH (donor:Bauwerk {id: 'bw_olympisches_dorf_muenchen'})-[:AUS_BAUWERK]->(k:Wiederverwendungskette)<-[:EINGEBAUT_IN]-(receiver:Bauwerk)
+RETURN donor.name, k.name, receiver.name;
+```
+
+### Phase 23-25 follow-up summary (applied 2026-05-20 final session)
+
+| Patch | Records | What |
+|---|---:|---|
+| phase_batch2_v2_23_strip_projekt_label.cypher | 6 | Strip `:Projekt` label from 6 dual-labelled `:Programm:Projekt` nodes (user decision B1: programmes ≠ projects) |
+| phase_batch2_v2_24_autodiscovery.patch.jsonl | 30 | 29 VERBUNDEN_MIT_AKTEUR peer links (actors sharing ≥2 projects); 1 mat_mehrere → mg_mehrere |
+| phase_batch2_v2_25_hygiene.cypher | 458 | Created `q_controlled_vocab_seed` Quelle + 457 BELEGT_IN edges from all unsourced controlled-vocab nodes; source_scope backfill via id-pattern rules (all 2579 nodes now have source_scope) |
+
+**Phase 23-25 totals:** ~494 ops, **+1 node (q_controlled_vocab_seed), +487 relationships**, **0 nodes without source_scope** (down from ~1500).
+
+### Source-scope distribution after Phase 25
+
+| source_scope | Count |
+|---|---:|
+| actor_registry | 813 |
+| archive_scan | 617 |
+| controlled_vocab_seed | 594 |
+| case_markdown | 312 |
+| actor_registry_context | 90 |
+| external_reference | 71 |
+| derived | 49 |
+| actor_registry_association | 33 |
+
+### Phase 26 — Corpus-wide consistency hygiene (applied 2026-05-20 late session)
+
+**Patch:** [phase_batch2_v2_26_corpus_hygiene.cypher](patches/batch2/phase_batch2_v2_26_corpus_hygiene.cypher) — 16 Cypher statements.
+
+**Operations (all rules-based inference; INFER evidence flag):**
+
+| Sub-phase | What | Edges created |
+|---|---|---:|
+| 26a | BG HAT_STATUS from reuse_status (reuse/retained→realisiert, dismantled→rueckgebaut, planned→geplant, NULL→realisiert default) | 195 |
+| 26b | BG HAT_RESSOURCENQUELLE (has donor BW → rq_donorgebaeude; else rq_baustelle) | 71+30 |
+| 26c | BG HAT_BAUTEILEBENE → be_bauteilgruppe (default) | 32 |
+| 26d | BG HAT_FUNKTIONSWECHSEL → fw_neue_funktion where alte≠neue | 111 |
+| 26e | Bauwerk HAT_STATUS (bauwerkstatus='rueckgebaut'→status_rueckgebaut, else status_realisiert) | 3+125 |
+| 26f | 20 Stadt LIEGT_IN_LAND (city→country mapping table) | 20 |
+| 26g | Created `q_phase20_kette_autodiscovery` Quelle + 49 BELEGT_IN edges from auto-discovered ketten | 49 + 1 node |
+| 26h | 3 KEEP-STUB Akteur BETEILIGT_AN backfills (stiftung_habitat→LysP8, koimo_development→BE-WARE, heinrich_boell_stiftung→BE-WARE) | 3 |
+
+**Totals:** 1 node + **639 relationships** added.
+
+After Phase 26, all corpus-wide consistency regression checks return **0**:
+- BGs missing HAT_STATUS / HAT_BAUTEILEBENE / HAT_RESSOURCENQUELLE → 0
+- Bauwerks missing HAT_STATUS → 0
+- Stadt missing LIEGT_IN_LAND → 0
+- Wiederverwendungsketten missing BELEGT_IN → 0
+- BGs with FW data but no HAT_FUNKTIONSWECHSEL → 0
+- Nodes missing source_scope → 0
+
+Only remaining orphan: **1 Akteur** (`glasfischer_glastec`) — Swiss glass-tech firm with no dossier-evidenced project link. KEEP per PARKED_DECISIONS until natural reference emerges.
+
+### Phase 27 — Projekt → Stadt + Land backfill (applied 2026-05-20)
+
+**Patch:** [phase_batch2_v2_27_projekt_stadt_backfill.cypher](patches/batch2/phase_batch2_v2_27_projekt_stadt_backfill.cypher)
+
+**Operations:**
+- 16 LIEGT_IN_STADT edges from name/id matching (London, Gröditz, Plauen, Aarhus, Kopenhagen, Brüssel, Enschede, 's-Hertogenbosch, Münster, Winterthur, Fribourg)
+- 16 LIEGT_IN_LAND edges derived by following the Stadt's LIEGT_IN_LAND
+
+**Skipped:** `p_recrete_footbridge_reused_concrete_blocks` — no clear Stadt match without research (EPFL Lausanne suspected but stadt_lausanne doesn't exist).
+
+After Phase 27, only 1 Projekt remains without LIEGT_IN_STADT (the Re:Crete footbridge above).
 
 ---
 

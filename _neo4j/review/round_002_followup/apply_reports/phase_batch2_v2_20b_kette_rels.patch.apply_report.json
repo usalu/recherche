@@ -1,0 +1,1226 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_20b_kette_rels.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2578,
+    "relationships": 18812
+  },
+  "counts_after_expected": {
+    "nodes": 2578,
+    "relationships": 18812
+  },
+  "counts_before": {
+    "nodes": 2578,
+    "relationships": 18662
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T13:14:05.766563+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_20b_kette_rels.patch.jsonl",
+  "records": [
+    {
+      "from": "bw_1_broadgate_london",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_1_broadgate_london_to_55_great_suffolk_street_warehouse"
+    },
+    {
+      "from": "bw_55_great_suffolk_street_warehouse",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_1_broadgate_london_to_55_great_suffolk_street_warehouse"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_55gss_external_core",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_1_broadgate_london_to_55_great_suffolk_street_warehouse"
+    },
+    {
+      "from": "bw_alte_lackiererei_hannover",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_alte_lackiererei_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_recyclinghaus_hannover",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_alte_lackiererei_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_recyclinghaus_profilbauglas",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_alte_lackiererei_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_behrensbau_duesseldorf_donor",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_behrensbau_duesseldorf_donor_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bw_awm_muenster_admin_building",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_behrensbau_duesseldorf_donor_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_awm_partitions_doors",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_behrensbau_duesseldorf_donor_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bg_reuse_kunststoff_wand_awm_wc_partitions",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_behrensbau_duesseldorf_donor_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bw_berlin_marzahn_wbs70_plattenbau",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_berlin_marzahn_wbs70_plattenbau_to_schildow_pilot_house"
+    },
+    {
+      "from": "bw_schildow_pilot_house",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_berlin_marzahn_wbs70_plattenbau_to_schildow_pilot_house"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_schildow_zugeschnittene_wbs70_betonfertigteile",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_berlin_marzahn_wbs70_plattenbau_to_schildow_pilot_house"
+    },
+    {
+      "from": "bw_boston_big_dig_i_93_infrastructure",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_i_93_infrastructure_to_big_dig_house"
+    },
+    {
+      "from": "bw_big_dig_house",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_i_93_infrastructure_to_big_dig_house"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_big_dig_house_inverset_panels",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_i_93_infrastructure_to_big_dig_house"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_big_dig_house_ramp_pier_roadway_components",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_i_93_infrastructure_to_big_dig_house"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_big_dig_house",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_i_93_infrastructure_to_big_dig_house"
+    },
+    {
+      "from": "bw_boston_big_dig_infrastructure",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_infrastructure_to_big_dig_building"
+    },
+    {
+      "from": "bw_big_dig_building",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_infrastructure_to_big_dig_building"
+    },
+    {
+      "from": "bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_boston_big_dig_infrastructure_to_big_dig_building"
+    },
+    {
+      "from": "bw_brighton_railway_station_donor",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_brighton_railway_station_donor_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bw_bedzed_quarter_hackbridge",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_brighton_railway_station_donor_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_bedzed_structural",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_brighton_railway_station_donor_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bw_cleveland_steel_and_tubes_stock",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_cleveland_steel_and_tubes_stock_to_55_great_suffolk_street_warehouse"
+    },
+    {
+      "from": "bw_55_great_suffolk_street_warehouse",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_cleveland_steel_and_tubes_stock_to_55_great_suffolk_street_warehouse"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_55gss_external_core",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_cleveland_steel_and_tubes_stock_to_55_great_suffolk_street_warehouse"
+    },
+    {
+      "from": "bw_ehemaliges_haus_der_jugend_hannover",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_ehemaliges_haus_der_jugend_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_recyclinghaus_hannover",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_ehemaliges_haus_der_jugend_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bg_reuse_glas_mehrere_recyclinghaus_aluminiumfenster",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ehemaliges_haus_der_jugend_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bg_reuse_faserzement_fassade_recyclinghaus_faserzement",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ehemaliges_haus_der_jugend_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_iw73_6_mass_housing_donor",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_iw73_6_mass_housing_donor_to_association_house_plauen"
+    },
+    {
+      "from": "bw_association_house_plauen",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_iw73_6_mass_housing_donor_to_association_house_plauen"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_plauen_iw73_6_precast_components",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_iw73_6_mass_housing_donor_to_association_house_plauen"
+    },
+    {
+      "from": "bw_ka13_existing_building",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_ka13_existing_building_to_ka13_oslo"
+    },
+    {
+      "from": "bw_ka13_oslo",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_ka13_existing_building_to_ka13_oslo"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_ka13",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ka13_existing_building_to_ka13_oslo"
+    },
+    {
+      "from": "bw_lo_reninge_former_convent",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_lo_reninge_former_convent_to_lo_reninge_town_hall"
+    },
+    {
+      "from": "bw_lo_reninge_town_hall",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_lo_reninge_former_convent_to_lo_reninge_town_hall"
+    },
+    {
+      "from": "bg_retained_mehrere_mehrere_lo_reninge_convent",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lo_reninge_former_convent_to_lo_reninge_town_hall"
+    },
+    {
+      "from": "bw_local_demolition_sources_bedzed",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_local_demolition_sources_bedzed_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bw_bedzed_quarter_hackbridge",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_local_demolition_sources_bedzed_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_bedzed_fixed_secondary_components",
+      "line": 43,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_local_demolition_sources_bedzed_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_bedzed_structural",
+      "line": 44,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_local_demolition_sources_bedzed_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bg_reuse_holz_wand_bedzed_studs",
+      "line": 45,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_local_demolition_sources_bedzed_to_bedzed_quarter_hackbridge"
+    },
+    {
+      "from": "bw_lycee_block_3000",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_block_6000"
+    },
+    {
+      "from": "bw_lycee_block_6000",
+      "line": 47,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_block_6000"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_floor_sheet_metal_facade",
+      "line": 48,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_block_6000"
+    },
+    {
+      "from": "bg_reuse_daemmstoff_mehrere_lycee_gypsum_acoustic_panels",
+      "line": 49,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_block_6000"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_metal_ceiling_panels",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_block_6000"
+    },
+    {
+      "from": "bw_lycee_block_3000",
+      "line": 51,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_esplanade_aussenanlagen"
+    },
+    {
+      "from": "bw_lycee_esplanade_aussenanlagen",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_esplanade_aussenanlagen"
+    },
+    {
+      "from": "bg_reuse_beton_boden_lycee_paving_slabs",
+      "line": 53,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_esplanade_aussenanlagen"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_lycee_precast_channels",
+      "line": 54,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_esplanade_aussenanlagen"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_facade_panels_railing",
+      "line": 55,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_esplanade_aussenanlagen"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_lycee_profiles_canopy",
+      "line": 56,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lycee_block_3000_to_lycee_esplanade_aussenanlagen"
+    },
+    {
+      "from": "bw_maison_des_canaux_unspecified_donors",
+      "line": 57,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_maison_des_canaux_unspecified_donor_to_maison_des_canaux_bestandsgebaeude"
+    },
+    {
+      "from": "bw_maison_des_canaux_bestandsgebaeude",
+      "line": 58,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_maison_des_canaux_unspecified_donor_to_maison_des_canaux_bestandsgebaeude"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_fixed_builtins",
+      "line": 59,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_des_canaux_unspecified_donor_to_maison_des_canaux_bestandsgebaeude"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_doors",
+      "line": 60,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_des_canaux_unspecified_donor_to_maison_des_canaux_bestandsgebaeude"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_floor_wall_finishes",
+      "line": 61,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_des_canaux_unspecified_donor_to_maison_des_canaux_bestandsgebaeude"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_des_canaux_sanitary_parts",
+      "line": 62,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_des_canaux_unspecified_donor_to_maison_des_canaux_bestandsgebaeude"
+    },
+    {
+      "from": "bw_maison_dna_unknown_brick_donor",
+      "line": 63,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_maison_dna_unknown_brick_donor_to_maison_dna_receiver"
+    },
+    {
+      "from": "bw_maison_dna_receiver",
+      "line": 64,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_maison_dna_unknown_brick_donor_to_maison_dna_receiver"
+    },
+    {
+      "from": "bg_reuse_ziegel_mehrere_maison_dna_outer_walls",
+      "line": 65,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_dna_unknown_brick_donor_to_maison_dna_receiver"
+    },
+    {
+      "from": "bw_maison_vignette_unknown_donors",
+      "line": 66,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_maison_vignette_unknown_donors_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bw_maison_vignette_receiver",
+      "line": 67,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_maison_vignette_unknown_donors_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bg_reuse_naturstein_boden_maison_vignette_bluestone_slabs",
+      "line": 68,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_vignette_unknown_donors_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bg_reuse_ziegel_mehrere_maison_vignette_facade_claustra",
+      "line": 69,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_vignette_unknown_donors_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_maison_vignette_sanitary_objects",
+      "line": 70,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_vignette_unknown_donors_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bg_reuse_keramik_mehrere_maison_vignette_terracotta_floor_tiles",
+      "line": 71,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_maison_vignette_unknown_donors_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bw_marzahn_wbs70_eleven_storey_donor",
+      "line": 72,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_marzahn_wbs70_eleven_storey_donor_to_mehrow_pilot_house_receiver"
+    },
+    {
+      "from": "bw_mehrow_pilot_house_receiver",
+      "line": 73,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_marzahn_wbs70_eleven_storey_donor_to_mehrow_pilot_house_receiver"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_mehrow_wbs70_floor_slabs",
+      "line": 74,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_marzahn_wbs70_eleven_storey_donor_to_mehrow_pilot_house_receiver"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_wand_mehrow_wbs70_slabs",
+      "line": 75,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_marzahn_wbs70_eleven_storey_donor_to_mehrow_pilot_house_receiver"
+    },
+    {
+      "from": "bw_messebau_lager_hannover",
+      "line": 76,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_messebau_lager_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_recyclinghaus_hannover",
+      "line": 77,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_messebau_lager_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_recyclinghaus_messebauplatten_innenausbau",
+      "line": 78,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_messebau_lager_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_multi_external_urban_mining_sources",
+      "line": 79,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_multi_external_urban_mining_sources_to_multi_brouckere_tower"
+    },
+    {
+      "from": "bw_multi_brouckere_tower",
+      "line": 80,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_multi_external_urban_mining_sources_to_multi_brouckere_tower"
+    },
+    {
+      "from": "bg_reuse_naturstein_boden_multi_granite_natural_tiles",
+      "line": 81,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_multi_external_urban_mining_sources_to_multi_brouckere_tower"
+    },
+    {
+      "from": "bw_musef_eight_demolition_sources",
+      "line": 82,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_musef_eight_demolition_sources_to_musef_mouscron_receiver"
+    },
+    {
+      "from": "bw_musef_mouscron_receiver",
+      "line": 83,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_musef_eight_demolition_sources_to_musef_mouscron_receiver"
+    },
+    {
+      "from": "bg_reuse_ziegel_mehrere_musef_facade",
+      "line": 84,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_musef_eight_demolition_sources_to_musef_mouscron_receiver"
+    },
+    {
+      "from": "bw_olympisches_dorf_bungalows_muenchen",
+      "line": 85,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_bungalows_muenchen_to_bestandverplanzung_pavilion"
+    },
+    {
+      "from": "bw_bestandverplanzung_pavilion",
+      "line": 86,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_bungalows_muenchen_to_bestandverplanzung_pavilion"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_bestandverplanzung_betonfertigteil_paneele",
+      "line": 87,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_bungalows_muenchen_to_bestandverplanzung_pavilion"
+    },
+    {
+      "from": "bw_olympisches_dorf_muenchen",
+      "line": 88,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_muenchen_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bw_plattenvereinigung_tempelhofer_feld",
+      "line": 89,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_muenchen_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_plattenvereinigung_betonfertigteile",
+      "line": 90,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_muenchen_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_mehrere_decke_plattenvereinigung_deckenelemente",
+      "line": 91,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_muenchen_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_mehrere_treppe_plattenvereinigung_treppenelemente",
+      "line": 92,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_muenchen_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_plattenvereinigung_wand_fassadenelemente",
+      "line": 93,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_olympisches_dorf_muenchen_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bw_palast_der_republik_berlin",
+      "line": 94,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_palast_der_republik_berlin_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bw_plattenpalast_berlin",
+      "line": 95,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_palast_der_republik_berlin_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plattenpalast_palast_fenster",
+      "line": 96,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_palast_der_republik_berlin_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bw_peter_behrens_halle_berlin",
+      "line": 97,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_berlin_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bw_plattenpalast_berlin",
+      "line": 98,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_berlin_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_plattenpalast_wbs70_wand_deckenelemente",
+      "line": 99,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_berlin_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bw_peter_behrens_halle_tu_berlin",
+      "line": 100,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_tu_berlin_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bw_plattenvereinigung_tempelhofer_feld",
+      "line": 101,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_tu_berlin_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_plattenvereinigung_betonfertigteile",
+      "line": 102,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_tu_berlin_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_mehrere_decke_plattenvereinigung_deckenelemente",
+      "line": 103,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_tu_berlin_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_mehrere_treppe_plattenvereinigung_treppenelemente",
+      "line": 104,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_peter_behrens_halle_tu_berlin_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bw_ph12_punkthochhaus_frankfurt_oder",
+      "line": 105,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_ph12_punkthochhaus_frankfurt_oder_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bw_plattenvereinigung_tempelhofer_feld",
+      "line": 106,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_ph12_punkthochhaus_frankfurt_oder_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_plattenvereinigung_betonfertigteile",
+      "line": 107,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ph12_punkthochhaus_frankfurt_oder_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_mehrere_decke_plattenvereinigung_deckenelemente",
+      "line": 108,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ph12_punkthochhaus_frankfurt_oder_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_mehrere_treppe_plattenvereinigung_treppenelemente",
+      "line": 109,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ph12_punkthochhaus_frankfurt_oder_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_plattenvereinigung_wand_fassadenelemente",
+      "line": 110,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ph12_punkthochhaus_frankfurt_oder_to_plattenvereinigung_tempelhofer_feld"
+    },
+    {
+      "from": "bw_plp_previous_studio_london",
+      "line": 111,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_plp_previous_studio_london_to_plp_circular_studio_white_chapel"
+    },
+    {
+      "from": "bw_plp_circular_studio_white_chapel",
+      "line": 112,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_plp_previous_studio_london_to_plp_circular_studio_white_chapel"
+    },
+    {
+      "from": "bg_reuse_mehrere_ausbau_plp_materialbibliothek_oberflaechen",
+      "line": 113,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_plp_previous_studio_london_to_plp_circular_studio_white_chapel"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_terrazzo_arbeits_kuechenflaechen",
+      "line": 114,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_plp_previous_studio_london_to_plp_circular_studio_white_chapel"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_feste_fitout_komponenten",
+      "line": 115,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_plp_previous_studio_london_to_plp_circular_studio_white_chapel"
+    },
+    {
+      "from": "bw_public_building_material_sources_awm",
+      "line": 116,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_public_building_material_sources_aw_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bw_awm_muenster_admin_building",
+      "line": 117,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_public_building_material_sources_aw_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bg_reuse_stahl_mehrere_awm_cable_trays_shelves_lights",
+      "line": 118,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_public_building_material_sources_aw_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bg_reuse_holz_ausbau_awm_fixed_builtins",
+      "line": 119,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_public_building_material_sources_aw_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bg_reuse_holz_wand_awm_cladding_old_chairs",
+      "line": 120,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_public_building_material_sources_aw_to_awm_muenster_admin_building"
+    },
+    {
+      "from": "bw_schellinghalle_ruemlang",
+      "line": 121,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_schellinghalle_ruemlang_to_juch_areal_recyclingzentrum"
+    },
+    {
+      "from": "bw_juch_areal_recyclingzentrum",
+      "line": 122,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_schellinghalle_ruemlang_to_juch_areal_recyclingzentrum"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_juch_schellinghalle_pilzstuetzen",
+      "line": 123,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_schellinghalle_ruemlang_to_juch_areal_recyclingzentrum"
+    },
+    {
+      "from": "bw_school_type_dresden_donor",
+      "line": 124,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_school_type_dresden_donor_to_association_house_groeditz"
+    },
+    {
+      "from": "bw_association_house_groeditz",
+      "line": 125,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_school_type_dresden_donor_to_association_house_groeditz"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_groeditz_dresden_type_precast_components",
+      "line": 126,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_school_type_dresden_donor_to_association_house_groeditz"
+    },
+    {
+      "from": "bw_solvay_building_tile_donor",
+      "line": 127,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_solvay_building_tile_donor_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bw_maison_vignette_receiver",
+      "line": 128,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_solvay_building_tile_donor_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bg_reuse_keramik_mehrere_maison_vignette_wall_tiles_solvay",
+      "line": 129,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_solvay_building_tile_donor_to_maison_vignette_receiver"
+    },
+    {
+      "from": "bw_sportzentrum_sauna_hannover",
+      "line": 130,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_sportzentrum_sauna_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_recyclinghaus_hannover",
+      "line": 131,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_sportzentrum_sauna_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bg_reuse_holz_mehrere_recyclinghaus_saunabank_holzleisten",
+      "line": 132,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_sportzentrum_sauna_hannover_to_recyclinghaus_hannover"
+    },
+    {
+      "from": "bw_stuttgart21_hauptbahnhof",
+      "line": 133,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_stuttgart21_hauptbahnhof_to_jugendtreff_ingersheim"
+    },
+    {
+      "from": "bw_jugendtreff_ingersheim",
+      "line": 134,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_stuttgart21_hauptbahnhof_to_jugendtreff_ingersheim"
+    },
+    {
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
+      "line": 135,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_stuttgart21_hauptbahnhof_to_jugendtreff_ingersheim"
+    },
+    {
+      "from": "bw_suutarila_community_centre_donor",
+      "line": 136,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_suutarila_community_centre_donor_to_melkinlaituri_school_daycare_receiv"
+    },
+    {
+      "from": "bw_melkinlaituri_school_daycare_receiver",
+      "line": 137,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_suutarila_community_centre_donor_to_melkinlaituri_school_daycare_receiv"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_melkinlaituri_hollow_core_slabs",
+      "line": 138,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_suutarila_community_centre_donor_to_melkinlaituri_school_daycare_receiv"
+    },
+    {
+      "from": "bw_unbekannte_wbs70_plattenbauten",
+      "line": 139,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_unbekannte_wbs70_plattenbauten_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bw_plattenpalast_berlin",
+      "line": 140,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_unbekannte_wbs70_plattenbauten_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_plattenpalast_wbs70_wand_deckenelemente",
+      "line": 141,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_unbekannte_wbs70_plattenbauten_to_plattenpalast_berlin"
+    },
+    {
+      "from": "bw_unbekanntes_transformationsgebaeude_kellerwaende",
+      "line": 142,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_unbekanntes_transformationsgebaeude_to_recrete_footbridge_prototype"
+    },
+    {
+      "from": "bw_recrete_footbridge_prototype",
+      "line": 143,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_unbekanntes_transformationsgebaeude_to_recrete_footbridge_prototype"
+    },
+    {
+      "from": "bg_reuse_beton_mehrere_recrete_betonbloecke_bogensegmente",
+      "line": 144,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_unbekanntes_transformationsgebaeude_to_recrete_footbridge_prototype"
+    },
+    {
+      "from": "bw_wbs70_donor_groeditz",
+      "line": 145,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_wbs70_donor_groeditz_to_association_house_groeditz"
+    },
+    {
+      "from": "bw_association_house_groeditz",
+      "line": 146,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_wbs70_donor_groeditz_to_association_house_groeditz"
+    },
+    {
+      "from": "bg_reuse_stahlbeton_mehrere_groeditz_wbs70_precast_panels",
+      "line": 147,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_wbs70_donor_groeditz_to_association_house_groeditz"
+    },
+    {
+      "from": "bw_white_chapel_building_london",
+      "line": 148,
+      "op": "add_rel",
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_white_chapel_building_london_to_plp_circular_studio_white_chapel"
+    },
+    {
+      "from": "bw_plp_circular_studio_white_chapel",
+      "line": 149,
+      "op": "add_rel",
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_white_chapel_building_london_to_plp_circular_studio_white_chapel"
+    },
+    {
+      "from": "bg_reuse_mehrere_mehrere_plp_feste_fitout_komponenten",
+      "line": 150,
+      "op": "add_rel",
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_white_chapel_building_london_to_plp_circular_studio_white_chapel"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 150,
+    "would_create_rel": 150
+  }
+}
