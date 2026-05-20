@@ -628,10 +628,289 @@ RETURN nodes_before, rels_before;
 
 
 // =============================================================================
-// END OF PRE-FLIGHT VALIDATION
+// END OF PRE-FLIGHT VALIDATION (PART A: tabular checks S1-S40)
 // =============================================================================
 //
 // After running S1-S40, transcribe every "EXPECTED but got X" into
 // CORRECTIONS_2026-05-20.md and amend PLAN_v2.md / patch generator accordingly
 // BEFORE any backup or live apply.
+// =============================================================================
+
+
+// #############################################################################
+// PART B — GRAPH EXPLORATION QUERIES (G1-G20)
+// #############################################################################
+//
+// Purpose: 20 graph-producing queries that show the live `mit-bestand` graph
+//          from semantically interesting angles. Each block RETURNs paths or
+//          node+rel tuples so Neo4j Browser renders a graph, not a table.
+//
+// Browser setup (run once in Browser, NOT via _run_cypher_file.py):
+//     :config initialNodeDisplay: 5000
+//     :config maxNeighbours: 1000
+//   Then run each Gn block individually in Browser to see the graph view.
+//
+// Each block uses LIMIT 5000 so almost the whole sub-graph is rendered.
+// #############################################################################
+
+
+// -----------------------------------------------------------------------------
+// G1 — Whole-graph sample: every directed edge (capped at 5000)
+// -----------------------------------------------------------------------------
+//   Bird's-eye view. With ~17k rels in the graph, 5000 ≈ 30% sample —
+//   enough to see all major clusters and their controlled-vocab spokes.
+
+MATCH p = (a)-[r]->(b)
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G2 — Every Projekt with its full 1-hop neighborhood
+// -----------------------------------------------------------------------------
+//   All ~30 Projekt nodes and everything directly attached: Akteure,
+//   Bauteilgruppen, Programme, Städte, Quellen, MatchingQualitaet, etc.
+
+MATCH p = (proj:Projekt)-[r]-(other)
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G3 — Donor → Bauteilgruppe → Receiver: end-to-end reuse chains
+// -----------------------------------------------------------------------------
+//   The defining transaction of this graph. Each path shows what was harvested
+//   from which Bauwerk, the BG carrier, and where it was installed; optional
+//   Wiederverwendungskette overlay groups them into named reuse cases.
+
+MATCH p = (donor:Bauwerk)<-[:AUS_BAUWERK]-(bg:Bauteilgruppe)-[:EINGEBAUT_IN]->(receiver:Bauwerk)
+OPTIONAL MATCH p2 = (bg)-[:TEIL_VON_KETTE]->(k:Wiederverwendungskette)
+RETURN p, p2
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G4 — Geographic backbone: Projekt → Stadt → Land
+// -----------------------------------------------------------------------------
+//   Map-shape projection. Every Projekt collapses onto its city onto its country.
+
+MATCH p = (proj:Projekt)-[:LIEGT_IN_STADT]->(s:Stadt)-[:LIEGT_IN_LAND]->(l:Land)
+OPTIONAL MATCH p2 = (bw:Bauwerk)-[:LIEGT_IN_STADT]->(s)
+RETURN p, p2
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G5 — Programme & funding ecosystem
+// -----------------------------------------------------------------------------
+//   Programme nodes as funding hubs: which Projekte are inside (TEIL_VON_PROGRAMM)
+//   or funded (ERHALT_FOERDERUNG_DURCH), with the Akteure that participate.
+
+MATCH p = (prog:Programm)<-[:TEIL_VON_PROGRAMM|ERHALT_FOERDERUNG_DURCH]-(proj:Projekt)
+OPTIONAL MATCH p2 = (akt:Akteur)-[:BETEILIGT_AN]->(proj)
+RETURN p, p2
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G6 — Bauteilgruppe full ontology fan-out (80 BGs × all HAT_* + NUTZT_MATERIAL)
+// -----------------------------------------------------------------------------
+//   Picks 80 BGs and explodes their controlled-vocab membership: Bauteiltyp,
+//   Materialgruppe, Wiederverwendungsart, Marktmodell, Bauproduktstatus,
+//   ZustandsKlasse, Pruefung, Defekt, etc. The shape of the reuse ontology.
+
+MATCH (bg:Bauteilgruppe)
+WITH bg LIMIT 80
+MATCH p = (bg)-[r]->(target)
+WHERE type(r) STARTS WITH 'HAT_' OR type(r) = 'NUTZT_MATERIAL'
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G7 — Actor role / type identity network
+// -----------------------------------------------------------------------------
+//   Every Akteur with its Akteurrolle(n) and Akteurtyp. Reveals which roles
+//   dominate (Tragwerksplanung, Materialbroker, …) and orphan actors.
+
+MATCH p = (a:Akteur)-[:HAT_AKTEURROLLE]->(ar:Akteurrolle)
+OPTIONAL MATCH p2 = (a)-[:HAT_AKTEURTYP]->(at:Akteurtyp)
+RETURN p, p2
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G8 — Source citation web (BELEGT_IN + ZITIERT_QUELLE)
+// -----------------------------------------------------------------------------
+//   All evidence pointers. Useful to spot Quellen with disproportionate fan-in
+//   (key sources) and case-specific nodes still missing a Quelle.
+
+MATCH p = (n)-[r:BELEGT_IN|ZITIERT_QUELLE]->(q:Quelle)
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G9 — Material flow: Material ↔ Bauteilgruppe ↔ Bauwerk
+// -----------------------------------------------------------------------------
+//   Trace any Material (steel, brick, timber, …) into the BGs that use it,
+//   then to donor/receiver Bauwerken and its Materialgruppe.
+
+MATCH p = (m:Material)<-[:NUTZT_MATERIAL]-(bg:Bauteilgruppe)
+OPTIONAL MATCH p2 = (bg)-[:HAT_MATERIALGRUPPE]->(:Materialgruppe)
+OPTIONAL MATCH p3 = (bg)-[:AUS_BAUWERK|EINGEBAUT_IN]->(:Bauwerk)
+RETURN p, p2, p3
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G10 — Norms & standards reference network
+// -----------------------------------------------------------------------------
+//   Every Norm and what cites it (REFERENZIERT_NORM, METHODENGRUNDLAGE_NORM,
+//   BERECHNET_NACH_MODUL). Useful to find norms with zero incoming edges.
+
+MATCH p = (n:Norm)<-[r:REFERENZIERT_NORM|METHODENGRUNDLAGE_NORM|BERECHNET_NACH_MODUL]-(other)
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G11 — Marktmodell adoption per Projekt and per Bauteilgruppe
+// -----------------------------------------------------------------------------
+//   All 11 Marktmodell hubs (same_site, plattform_vermittelt, kauf_gebraucht, …)
+//   with everyone linking in. Shows the commercial structure of reuse.
+
+MATCH p = (mm:Marktmodell)<-[r:HAT_MARKTMODELL|HAT_DOMINANT_MARKTMODELL]-(other)
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G12 — Digital tooling ecosystem (Software + Tool)
+// -----------------------------------------------------------------------------
+//   NUTZT_SOFTWARE / NUTZT_TOOL edges from Projekte and Akteure. Reveals which
+//   platforms (Concular, Madaster, Opalis, Restado…) are wired into which work.
+
+MATCH p = (n)-[r:NUTZT_SOFTWARE|NUTZT_TOOL]->(t)
+WHERE t:Software OR t:Tool
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G13 — BG quality network: Pruefung + ZustandsKlasse + Bauproduktstatus + Defekt
+// -----------------------------------------------------------------------------
+//   The "is it safe to reuse?" sub-graph. Highlights BGs with rich quality
+//   evidence vs. BGs that only carry Bauproduktstatus without Pruefung.
+
+MATCH p = (bg:Bauteilgruppe)-[r:HAT_PRUEFUNG|HAT_ZUSTANDSKLASSE|HAT_BAUPRODUKTSTATUS|HAT_DEFEKT|HAT_LEISTUNGSANFORDERUNG]->(target)
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G14 — Akteur ↔ Projekt mega network
+// -----------------------------------------------------------------------------
+//   All participation edges between actors and projects. The social spine
+//   of the database; high-degree actors are recurring reuse practitioners.
+
+MATCH p = (a:Akteur)-[r:BETEILIGT_AN|ASSOZIIERT_MIT_PROJEKT|VERBUNDEN_MIT_AKTEUR]-(proj:Projekt)
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G15 — Two-hop neighborhood around flagship projects
+// -----------------------------------------------------------------------------
+//   Deep dive: pick 8 flagships, expand 2 hops in any direction. Useful for
+//   case-study slides — shows everything that "belongs to" a project.
+
+MATCH p = (proj:Projekt)-[*1..2]-(other)
+WHERE proj.id IN [
+  'p_umar_unit', 'p_elementa_walkeweg', 'p_circl_abn_amro',
+  'p_lysp8_basel', 'p_obk_27', 'p_pavilion_circl_amsterdam',
+  'p_re_use_hoefe', 'p_stuttgart_210'
+]
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G16 — Funktionswechsel / Zweckaenderung paths via MatchingQualitaet
+// -----------------------------------------------------------------------------
+//   The "spec change between donor and receiver" cluster: projects pinned to
+//   mq_spec_zweckaenderung and the BG → Bauwerk paths underneath.
+
+MATCH p = (mq:MatchingQualitaet)<-[:HAT_MATCHINGQUALITAET]-(proj:Projekt)
+OPTIONAL MATCH p2 = (proj)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe)-[:AUS_BAUWERK|EINGEBAUT_IN]->(:Bauwerk)
+RETURN p, p2
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G17 — Wiederverwendungskette full ecosystem
+// -----------------------------------------------------------------------------
+//   For each named reuse chain (k_*): its member BGs, their donor/receiver
+//   Bauwerken, and any associated Projekte. The narrative unit of the graph.
+
+MATCH p = (k:Wiederverwendungskette)<-[:TEIL_VON_KETTE]-(bg:Bauteilgruppe)
+OPTIONAL MATCH p2 = (bg)-[:AUS_BAUWERK|EINGEBAUT_IN]->(:Bauwerk)
+OPTIONAL MATCH p3 = (bg)-[:ASSOZIIERT_MIT_PROJEKT]-(:Projekt)
+OPTIONAL MATCH p4 = (bg)-[:HAT_BAUTEILTYP]->(:Bauteiltyp)
+RETURN p, p2, p3, p4
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G18 — Bauwerk centrality (each building with projects + BGs + city)
+// -----------------------------------------------------------------------------
+//   Bauwerken are the physical anchors. This shows the BGs harvested from /
+//   installed in each, the projects they belong to, and their city context.
+
+MATCH p = (bw:Bauwerk)-[r]-(other)
+WHERE other:Projekt OR other:Bauteilgruppe OR other:Stadt OR other:Bauobjektklasse OR other:Bauobjektrolle
+RETURN p
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G19 — Cross-project Akteur bridges (actors active on ≥2 projects)
+// -----------------------------------------------------------------------------
+//   Reveals the connective tissue: which actors recur across projects and
+//   thereby bridge otherwise-disjoint case clusters. Strong tells about the
+//   organisation of the reuse community.
+
+MATCH (a:Akteur)-[:BETEILIGT_AN|ASSOZIIERT_MIT_PROJEKT]-(p:Projekt)
+WITH a, count(DISTINCT p) AS proj_count
+WHERE proj_count > 1
+MATCH path = (a)-[:BETEILIGT_AN|ASSOZIIERT_MIT_PROJEKT]-(:Projekt)
+RETURN path
+LIMIT 5000;
+
+
+// -----------------------------------------------------------------------------
+// G20 — Bauteilgruppe → Bauwerk → Stadt → Land full geo-trace
+// -----------------------------------------------------------------------------
+//   Closes the loop: from any specific reuse component up through its building,
+//   city, and country. Useful for cross-border / cross-city reuse cartography.
+
+MATCH p = (bg:Bauteilgruppe)-[:AUS_BAUWERK|EINGEBAUT_IN]->(bw:Bauwerk)
+OPTIONAL MATCH p2 = (bw)-[:LIEGT_IN_STADT]->(:Stadt)-[:LIEGT_IN_LAND]->(:Land)
+OPTIONAL MATCH p3 = (bg)-[:HAT_MARKTMODELL|HAT_DOMINANT_MARKTMODELL]->(:Marktmodell)
+RETURN p, p2, p3
+LIMIT 5000;
+
+
+// =============================================================================
+// END OF PART B — GRAPH EXPLORATION (G1-G20)
+// =============================================================================
+//
+// Tips for use in Neo4j Browser:
+//   - Set node display ceiling: `:config initialNodeDisplay: 5000`
+//   - Set per-node neighbour cap:  `:config maxNeighbours: 1000`
+//   - Switch to "Graph" tab after each query (not "Table" / "Text").
+//   - For very large results, drag the result panel to full screen and
+//     use the layout button (force/hierarchy) to declutter.
+//
+// These queries are READ-ONLY. Safe to run in any database, any time.
 // =============================================================================

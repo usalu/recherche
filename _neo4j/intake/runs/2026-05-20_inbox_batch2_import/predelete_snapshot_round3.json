@@ -1,0 +1,573 @@
+[
+  {
+    "id": "zirkular",
+    "found": true,
+    "labels": [
+      "Akteur"
+    ],
+    "properties": {
+      "name": "Zirkular",
+      "source_scope": "actor_registry_context",
+      "id": "zirkular"
+    },
+    "rels": [
+      {
+        "type": "GEH\u00d6RT_ZU",
+        "direction": "OUT",
+        "neighbor_id": "land_schweiz",
+        "neighbor_name": "Schweiz",
+        "neighbor_labels": [
+          "Land"
+        ],
+        "properties": {
+          "rolle": "land",
+          "scope": "organisation_country_context",
+          "source_scope": "actor_registry_context",
+          "id": "r_zirkular__GEH\u00d6RT_ZU__land_schweiz"
+        }
+      },
+      {
+        "type": "BETEILIGT_AN",
+        "direction": "OUT",
+        "neighbor_id": "p_elys_kultur_gewerbehaus_basel",
+        "neighbor_name": "ELYS Kultur- und\u2026",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "id": "r_zirkular__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        }
+      },
+      {
+        "type": "BETEILIGT_AN",
+        "direction": "OUT",
+        "neighbor_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+        "neighbor_name": "Grubenstrasse 29",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "id": "r_zirkular__BETEILIGT_AN__p_grubenstrasse_29_werkhof_29_zuerich"
+        }
+      },
+      {
+        "type": "HAT_AKTEURROLLE",
+        "direction": "OUT",
+        "neighbor_id": "ar_fachplanung_nachweis",
+        "neighbor_name": "Fachplanung_Nachweis",
+        "neighbor_labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "scope": "organisation_profile",
+          "source_scope": "actor_registry_context",
+          "id": "r_zirkular__HAT_AKTEURROLLE__ar_fachplanung_nachweis"
+        }
+      },
+      {
+        "type": "HAT_AKTEURROLLE",
+        "direction": "OUT",
+        "neighbor_id": "ar_materiallieferung_markt",
+        "neighbor_name": "Materiallieferung_Markt",
+        "neighbor_labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "scope": "expertise_profile",
+          "id": "r_zirkular__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+        }
+      },
+      {
+        "type": "HAT_AKTEURROLLE",
+        "direction": "OUT",
+        "neighbor_id": "ar_reuse_zirkularitaetsberatung",
+        "neighbor_name": "Reuse_Zirkularitaetsberatung",
+        "neighbor_labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "scope": "organisation_profile",
+          "source_scope": "actor_registry_context",
+          "id": "r_zirkular__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+        }
+      },
+      {
+        "type": "HAT_AKTEURTYP",
+        "direction": "OUT",
+        "neighbor_id": "at_unternehmen",
+        "neighbor_name": "Unternehmen",
+        "neighbor_labels": [
+          "Akteurtyp"
+        ],
+        "properties": {
+          "scope": "actor_registry_context",
+          "id": "r_zirkular__HAT_AKTEURTYP__at_unternehmen"
+        }
+      },
+      {
+        "type": "BELEGT_IN",
+        "direction": "OUT",
+        "neighbor_id": "q_elys_kultur_gewerbehaus_basel_md",
+        "neighbor_name": "ELYS_Kultur_Gewerbehaus_\u2026",
+        "neighbor_labels": [
+          "Quelle"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_zirkular__BELEGT_IN__q_elys_kultur_gewerbehaus_basel_md"
+        }
+      },
+      {
+        "type": "BELEGT_IN",
+        "direction": "OUT",
+        "neighbor_id": "q_grubenstrasse_29_werkhof_29_zuerich_md",
+        "neighbor_name": "Grubenstrasse_29_Werkhof\u2026",
+        "neighbor_labels": [
+          "Quelle"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_zirkular__BELEGT_IN__q_grubenstrasse_29_werkhof_29_zuerich_md"
+        }
+      },
+      {
+        "type": "BELEGT_IN",
+        "direction": "OUT",
+        "neighbor_id": "q_akteursliste_master_md",
+        "neighbor_name": "akteursliste_master.md",
+        "neighbor_labels": [
+          "Quelle"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "source_scope": "actor_registry",
+          "id": "r_zirkular__BELEGT_IN__q_akteursliste_master_md"
+        }
+      },
+      {
+        "type": "ASSOZIIERT_MIT_PROJEKT",
+        "direction": "OUT",
+        "neighbor_id": "p_elys_kultur_gewerbehaus_basel",
+        "neighbor_name": "ELYS Kultur- und\u2026",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "needs_verification": true,
+          "source_scope": "actor_registry_context",
+          "not_confirmed_project_participation": true,
+          "id": "r_zirkular__ASSOZIIERT_MIT_PROJEKT__p_elys_kultur_gewerbehaus_basel"
+        }
+      },
+      {
+        "type": "ASSOZIIERT_MIT_PROJEKT",
+        "direction": "OUT",
+        "neighbor_id": "p_juch_areal_recyclingzentrum_zuerich",
+        "neighbor_name": "Juch-Areal Recyclingzent\u2026",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "needs_verification": true,
+          "source_scope": "actor_registry_context",
+          "not_confirmed_project_participation": true,
+          "id": "r_zirkular__ASSOZIIERT_MIT_PROJEKT__p_juch_areal_recyclingzentrum_zuerich"
+        }
+      },
+      {
+        "type": "ASSOZIIERT_MIT_PROJEKT",
+        "direction": "OUT",
+        "neighbor_id": "p_k118_kopfbau_halle_118_winterthur",
+        "neighbor_name": "K.118 Winterthur",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "needs_verification": true,
+          "source_scope": "actor_registry_context",
+          "not_confirmed_project_participation": true,
+          "id": "r_zirkular__ASSOZIIERT_MIT_PROJEKT__p_k118_kopfbau_halle_118_winterthur"
+        }
+      },
+      {
+        "type": "ASSOZIIERT_MIT_PROJEKT",
+        "direction": "OUT",
+        "neighbor_id": "p_lysp8_basel",
+        "neighbor_name": "LYSP8 Basel",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "needs_verification": true,
+          "source_scope": "actor_registry_context",
+          "not_confirmed_project_participation": true,
+          "id": "r_zirkular__ASSOZIIERT_MIT_PROJEKT__p_lysp8_basel"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "barbara_buser",
+        "neighbor_name": "Barbara Buser",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_barbara_buser__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "kerstin_mueller",
+        "neighbor_name": "Kerstin M\u00fcller",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_kerstin_mueller__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "marc_angst",
+        "neighbor_name": "Marc Angst",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_marc_angst__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "michel_massmuenster",
+        "neighbor_name": "Michel Massm\u00fcnster",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_michel_massmuenster__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "pascal_hentschel",
+        "neighbor_name": "Pascal Hentschel",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_pascal_hentschel__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "charlotte_bofinger",
+        "neighbor_name": "Charlotte Bofinger",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_charlotte_bofinger__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "marco_graber",
+        "neighbor_name": "Marco Graber",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_marco_graber__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "thomas_pulver",
+        "neighbor_name": "Thomas Pulver",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_thomas_pulver__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "marc_loeliger",
+        "neighbor_name": "Marc Loeliger",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_marc_loeliger__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "direction": "IN",
+        "neighbor_id": "martin_zeller",
+        "neighbor_name": "Martin Zeller",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "needs_verification": false,
+          "source_scope": "actor_registry",
+          "id": "r_martin_zeller__VERBUNDEN_MIT_AKTEUR__zirkular",
+          "connection_kind": "context_affiliation_from_actor_list"
+        }
+      }
+    ]
+  },
+  {
+    "id": "zirkular_gmbh",
+    "found": true,
+    "labels": [
+      "Akteur"
+    ],
+    "properties": {
+      "aliases": [
+        "Zirkular / Cirkla"
+      ],
+      "name": "Zirkular GmbH",
+      "id": "zirkular_gmbh"
+    },
+    "rels": [
+      {
+        "type": "BETEILIGT_AN",
+        "direction": "OUT",
+        "neighbor_id": "p_juch_areal_recyclingzentrum_zuerich",
+        "neighbor_name": "Juch-Areal Recyclingzent\u2026",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "id": "r_zirkular_gmbh__BETEILIGT_AN__p_juch_areal_recyclingzentrum_zuerich"
+        }
+      },
+      {
+        "type": "BETEILIGT_AN",
+        "direction": "OUT",
+        "neighbor_id": "p_k118_kopfbau_halle_118_winterthur",
+        "neighbor_name": "K.118 Winterthur",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "id": "r_zirkular_gmbh__BETEILIGT_AN__p_k118_kopfbau_halle_118_winterthur"
+        }
+      },
+      {
+        "type": "BETEILIGT_AN",
+        "direction": "OUT",
+        "neighbor_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+        "neighbor_name": "Kindergarten M\u00f6\u00f6slistras\u2026",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "id": "r_zirkular_gmbh__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+        }
+      },
+      {
+        "type": "BETEILIGT_AN",
+        "direction": "OUT",
+        "neighbor_id": "p_lysp8_basel",
+        "neighbor_name": "LYSP8 Basel",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "evidence": "BELEGT",
+          "id": "r_zirkular_gmbh__BETEILIGT_AN__p_lysp8_basel",
+          "source": "batch2_v2_import_2026-05-20",
+          "rolle_text": "Reuse-Beratung / Bauteilj\u00e4ger"
+        }
+      },
+      {
+        "type": "BETEILIGT_AN",
+        "direction": "OUT",
+        "neighbor_id": "p_elementa_walkeweg",
+        "neighbor_name": "ELEMENTA Walkeweg",
+        "neighbor_labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "evidence": "BELEGT",
+          "id": "r_zirkular_gmbh__BETEILIGT_AN__p_elementa_walkeweg",
+          "source": "batch2_v2_import_2026-05-20",
+          "rolle_text": "Wiederverwendungsberatung / Bauteilkatalog"
+        }
+      },
+      {
+        "type": "HAT_AKTEURROLLE",
+        "direction": "OUT",
+        "neighbor_id": "ar_projektmanagement_koordination",
+        "neighbor_name": "Projektmanagement_Koordination",
+        "neighbor_labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "scope": "expertise_profile",
+          "id": "r_zirkular_gmbh__HAT_AKTEURROLLE__ar_projektmanagement_koordination"
+        }
+      },
+      {
+        "type": "HAT_AKTEURROLLE",
+        "direction": "OUT",
+        "neighbor_id": "ar_materiallieferung_markt",
+        "neighbor_name": "Materiallieferung_Markt",
+        "neighbor_labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "scope": "expertise_profile",
+          "id": "r_zirkular_gmbh__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+        }
+      },
+      {
+        "type": "HAT_AKTEURROLLE",
+        "direction": "OUT",
+        "neighbor_id": "ar_reuse_zirkularitaetsberatung",
+        "neighbor_name": "Reuse_Zirkularitaetsberatung",
+        "neighbor_labels": [
+          "Akteurrolle"
+        ],
+        "properties": {
+          "scope": "expertise_profile",
+          "id": "r_zirkular_gmbh__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+        }
+      },
+      {
+        "type": "HAT_AKTEURTYP",
+        "direction": "OUT",
+        "neighbor_id": "at_unternehmen",
+        "neighbor_name": "Unternehmen",
+        "neighbor_labels": [
+          "Akteurtyp"
+        ],
+        "properties": {
+          "id": "r_zirkular_gmbh__HAT_AKTEURTYP__at_unternehmen"
+        }
+      },
+      {
+        "type": "BELEGT_IN",
+        "direction": "OUT",
+        "neighbor_id": "q_juch_areal_recyclingzentrum_zuerich_md",
+        "neighbor_name": "Juch_Areal_Recyclingzent\u2026",
+        "neighbor_labels": [
+          "Quelle"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_zirkular_gmbh__BELEGT_IN__q_juch_areal_recyclingzentrum_zuerich_md"
+        }
+      },
+      {
+        "type": "BELEGT_IN",
+        "direction": "OUT",
+        "neighbor_id": "q_k118_kopfbau_halle_118_winterthur_md",
+        "neighbor_name": "K118_Kopfbau_Halle_118_W\u2026",
+        "neighbor_labels": [
+          "Quelle"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_zirkular_gmbh__BELEGT_IN__q_k118_kopfbau_halle_118_winterthur_md"
+        }
+      },
+      {
+        "type": "BELEGT_IN",
+        "direction": "OUT",
+        "neighbor_id": "q_kindergarten_moeoeslistrasse_manegg_zuerich_md",
+        "neighbor_name": "Kindergarten_Moeoeslistr\u2026",
+        "neighbor_labels": [
+          "Quelle"
+        ],
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_zirkular_gmbh__BELEGT_IN__q_kindergarten_moeoeslistrasse_manegg_zuerich_md"
+        }
+      },
+      {
+        "type": "GEH\u00d6RT_ZU",
+        "direction": "IN",
+        "neighbor_id": "rebecca_brandmayer",
+        "neighbor_name": "Rebecca Brandmayer",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence": "BELEGT",
+          "id": "r_rebecca_brandmayer__GEH\u00d6RT_ZU__zirkular_gmbh",
+          "source": "batch2_v2_followup_2026-05-20"
+        }
+      },
+      {
+        "type": "GEH\u00d6RT_ZU",
+        "direction": "IN",
+        "neighbor_id": "laia_meier",
+        "neighbor_name": "Laia Meier",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence": "BELEGT",
+          "id": "r_laia_meier__GEH\u00d6RT_ZU__zirkular_gmbh",
+          "source": "batch2_v2_followup_2026-05-20"
+        }
+      },
+      {
+        "type": "GEH\u00d6RT_ZU",
+        "direction": "IN",
+        "neighbor_id": "pascal_hentschel",
+        "neighbor_name": "Pascal Hentschel",
+        "neighbor_labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence": "BELEGT",
+          "id": "r_pascal_hentschel__GEH\u00d6RT_ZU__zirkular_gmbh",
+          "source": "batch2_v2_followup_2026-05-20"
+        }
+      }
+    ]
+  }
+]

@@ -11,15 +11,178 @@
 
 **Verification, not destruction.** The Cypher snippets in each phase section below are **read-only sanity checks** that confirm the phase landed. Actual removal/rollback is done case-by-case via prompting + selective `DETACH DELETE`. Full backups live under `_neo4j/review/backups/<phase>_pre_apply/` if a full restore is ever needed.
 
-**Apply order so far:** Phase A → … → L → M → N → O.0 → O.a → O.b → P → R.
+**Apply order so far:** Phase A → … → L → M → N → O.0 → O.a → O.b → P → R → **batch2 v2 (1a-17)**.
 
 **Combined effect:**
 
-| | Before A | After R003 | After O | After P | After R |
-|---|---:|---:|---:|---:|---:|
-| Nodes | 2 147 | 2 296 | 2 298 | 2 298 | **2 298** |
-| Relationships | 15 834 | 16 822 | 16 869 | 16 869 | **17 035** |
-| Bauteilgruppen | — | 306 | 308 | 308 | **308** |
+| | Before A | After R003 | After O | After P | After R | **After batch2 v2** |
+|---|---:|---:|---:|---:|---:|---:|
+| Nodes | 2 147 | 2 296 | 2 298 | 2 298 | 2 298 | **2 538** |
+| Relationships | 15 834 | 16 822 | 16 869 | 16 869 | 17 035 | **18 651** |
+| Bauteilgruppen | — | 306 | 308 | 308 | 308 | **369** |
+| Projekte | — | — | — | — | 99 | **97** (dual-labeled 6 also count :Projekt) |
+| Programme | — | — | — | — | 17 | **28** |
+| Akteure | — | — | — | — | 582 | **660** |
+
+---
+
+## Phase batch2 v2 — applied 2026-05-20 (inbox dossier import + connectivity expansion)
+
+**Apply scripts:**
+- [`_scripts/_apply_batch2_v2_all.py`](../../../_scripts/_apply_batch2_v2_all.py) — orchestrator (34 JSONL patches sequenced + dependency-aware)
+- [`_scripts/_run_cypher_file.py`](../../../_scripts/_run_cypher_file.py) — Cypher script runner (for GEHÖRT_ZU which the apply tool can't write via JSONL — see "Tooling fixes" below)
+
+**Patches:** [`_neo4j/review/round_002_followup/patches/batch2/`](patches/batch2/) (37 files: 34 sequenced JSONL + 1 ad-hoc placeholder patch + 2 Cypher scripts)
+**Pre-apply backup:** [`_neo4j/review/backups/batch2_v2_pre_apply/`](../backups/batch2_v2_pre_apply/) (2 298 nodes / 17 035 rels)
+**Apply log:** [`_neo4j/intake/runs/2026-05-20_inbox_batch2_import/apply_log.jsonl`](../../intake/runs/2026-05-20_inbox_batch2_import/apply_log.jsonl)
+**Planning docs:** [PLAN_v2.md](../../intake/runs/2026-05-20_inbox_batch2_import/PLAN_v2.md), [CORRECTIONS_2026-05-20.md](../../intake/runs/2026-05-20_inbox_batch2_import/CORRECTIONS_2026-05-20.md), [APPLY_ORDER.md](../../intake/runs/2026-05-20_inbox_batch2_import/APPLY_ORDER.md), [NEXT_STEPS.md](../../intake/runs/2026-05-20_inbox_batch2_import/NEXT_STEPS.md), [NEW_NODE_SUGGESTIONS.md](../../intake/runs/2026-05-20_inbox_batch2_import/NEW_NODE_SUGGESTIONS.md)
+
+### What landed
+
+Imported all 21 dossier files from `_neo4j/intake/inbox/projects/` (BE/NL, DE/AT/CH, EU consortia, reuse platforms, teaching programmes, UK, plus root batch1.md), with full per-BG vocab wiring, Funktionswechsel modelling, Wiederverwendungsketten, and a follow-up Phase 16 of 8 new vocabulary nodes. Phase 17 deduped `zirkular_gmbh → zirkular`.
+
+| | Before | After | Δ |
+|---|---:|---:|---:|
+| Nodes | 2 298 | **2 538** | +240 |
+| Relationships | 17 035 | **18 651** | +1 616 |
+
+**Operations:** 1 919 graph writes across 35 JSONL patches + 42 GEHÖRT_ZU MERGEs + 1 zirkular merge_node.
+
+| Op | Count | Effect |
+|---|---:|---|
+| add_node | 270 | 14 Stadt + 3 Land + 11 Programm + 4 Software + 2 Tool + 4 Norm + 1 ZBS + 13 Bauwerk + 20 case Quelle + 17 external Quelle + 3 child Projekte + 61 Bauteilgruppe + 9 Wiederverwendungskette + 90 Akteure + 8 new vocab nodes (Phase 16) + 3 multi-value placeholders (mg_/bt_/mat_mehrere) + a handful of property-only setters |
+| set_node_properties | 21 | Projekt promotions + Programm enrichments + canonicalize_node UNION-aliases |
+| canonicalize_node | 8 | Projekt short-name canonicalization w/ alias UNION |
+| merge_node | 16 | 1c (Circl pavilion → abn_amro) + 1b (Werner Sobek, 3 Rotor, zirkular_cirkla) + 1d (FCRBE, Interreg, BE-WARE) + 1d-2b (Stuttgart 210, REBRIDGE, RE-USE Höfe) + 4c (ETH stub → MAS DFAB) + 17 (zirkular_gmbh → zirkular) |
+| delete_node | 4 | bizh, dare_gmbh, p_obk_27, p_rcmi_concular, p_refair_bordeaux_reemploi_platform |
+| delete_rel | 8 | BELEGT_IN strips before delete_node (apply-tool safety guard) + ASSOZIIERT redirects |
+| add_rel | 1 565 | Full BG vocab + project-level vocab + Akteur typed rels + Bauwerk structural rels + Wiederverwendungskette wiring + Funktionswechsel + bridges + external-Quelle BELEGT_IN |
+| GEHÖRT_ZU MERGE (direct Cypher) | 41 | Phase 15 Person→Org links (apply-tool regex blocked these from JSONL) |
+
+### Net rel counts by type (Δ vs pre-batch2)
+
+Top 15 batch2-added rel types (filtered by `r.source` containing `batch2_v2_`):
+
+| Rel type | Added by batch2 v2 |
+|---|---:|
+| BETEILIGT_AN | 67 |
+| HAT_AKTEURROLLE | 64 |
+| HAT_AKTEURTYP | 60 |
+| HAT_AUFBEREITUNG | 54 |
+| HAT_LEISTUNGSANFORDERUNG | 53 |
+| HAT_BESCHAFFUNGSWEG | 50 |
+| HAT_LOGISTIK | 49 |
+| HAT_HUERDE | 44 |
+| GEHÖRT_ZU | 41 |
+| HAT_ZUSTANDSKLASSE | 40 (NEW REL TYPE — first use) |
+| HAT_RUECKBAUVERFAHREN | 39 |
+| HAT_BAUPRODUKTSTATUS | 30 |
+| HAT_WIRTSCHAFT | 26 |
+| NUTZT_MATERIAL | 26 |
+| HAT_PRUEFUNG | 25 |
+
+Total `r.source = batch2_v2_*` rels: ~1 080 (the remainder are inferred-implicit or structural where source wasn't tagged).
+
+### New labels / rel types declared
+
+- **`HAT_ZUSTANDSKLASSE`** — first-use rel type. ZustandsKlasse nodes (6) existed pre-batch2 but had no incoming rels.
+- No new labels introduced. `Plattform` was considered (CORRECTIONS C12) but rejected in favour of Software+Akteur+Bauwerk per-dossier shape.
+
+### Schema decisions recorded during batch2 v2
+
+| # | Decision | Driver |
+|---|---|---|
+| D1 | Circl canonical = `p_circl_abn_amro` (Pavilion merged in) | PARKED_DECISIONS line 47 + dossier evidence consolidated on canonical |
+| D2 | `Plattform` label dropped | RCMI/REFAIR dossiers explicitly reject Plattform classification |
+| D3 | 4 dossier-unverified Programms stay as Projekt | Dossiers say `identified_programme: no` (Architecture of Reuse BXL, Vandkunsten, ZHAW, Reuse Logistics) |
+| D4 | ETH dossier collapsed to existing `prog_mas_dfab` | Single verified programme; ETH parent stub merged in |
+| D5 | Reuse Logistics stays Projekt; new parent `prog_urban_bricolage` | SNSF subproject relationship per dossier |
+| D6 | UMAR + ELEMENTA brought in scope from batch 1.md | Original Plan 2 had only Schärenmoosstrasse from batch 1; F1 expanded |
+| D7 | RE_USE Höfe drops "Wien" from name; Vienna becomes alias | Dossier explicit "Vienna location unverified" |
+| D8 | `wk_*` prefix for new ketten (matches existing 44 nodes) | Live live state count overruled initial `k_*` proposal |
+| D9 | `norm_*` prefix preserved; new SIA + BS norms follow it | Existing 30 Norm nodes all `norm_*` |
+| D10 | Werner Sobek canonical = `Werner_Sobek` (not werner_sobek_p) | Higher-degree node wins (Z9 user decision) |
+| D11 | Rotor canonical = `Rotor` (not rotor_asbl_vzw) | Higher-degree node wins (Z10 user decision) |
+| D12 | Zirkular canonical = `zirkular` (not zirkular_gmbh) | Same logic — Phase 17 |
+| D13 | RotorDC canonical = `rotordc` (not rotor_dc) | Higher-degree node wins |
+| D14 | `bw_ubs_altstetten` (not bw_ubs_datacenter_altstetten) | Match Plan 1's shorter id |
+| D15 | 8 new vocab nodes added (Phase 16): mat_messing, mat_kupfer, mat_holz_clt, mat_pcm_phasenwechsel, norm_sia_416, norm_sia_380_1, ak_oeffentliche_sichtbarkeit_lernort, ak_humanitarian_purpose | NEW_NODE_SUGGESTIONS — existing vocab insufficient for these dossier concepts |
+| D16 | 3 multi-value placeholders added: mg_mehrere, bt_mehrere, mat_mehrere | NAMING_AND_PROPERTIES_PLAN convention; required for 4 multi-axis BGs |
+
+### Tooling fixes shipped during apply
+
+1. **`_scripts/apply_neo4j_review_patch.py:135`** — `rel_type_safe()` regex relaxed from `^[A-Za-z_][A-Za-z0-9_]*$` to `^[^\W\d]\w*$` (Unicode). Was blocking `merge_node` rel-redirect for GEHÖRT_ZU rels (umlaut). Now ASCII-safe AND handles legitimate Unicode identifiers.
+2. **`_scripts/_apply_batch2_v2_all.py`** — new orchestrator; runs 34 patches in sequence with correct `--confirm` phrases; logs each result; handles Windows UTF-8 console quirks via `errors='replace'`.
+3. **`_scripts/_run_cypher_file.py`** — multi-statement Cypher runner (used for Phase 15 GEHÖRT_ZU which the apply tool can't write to JSONL).
+4. **`_scripts/_snapshot_predelete.py`** — pre-delete snapshot tool (records rels + properties for any node about to be deleted or merged; used for Phase 1a, 1b, 1c, 4c, 4d, 4e, 17).
+5. **`_scripts/run_preflight_validation.py`** — pre-flight validation runner; parses Cypher file with `// SXX --` section headers + `// EXPECTED:` annotations; emits JSON results for diff.
+
+### Verification (all checks PASS)
+
+| Check | Expected | Got |
+|---|---:|---:|
+| Node count delta from pre-apply backup | +240 | +240 ✓ |
+| Relationship count delta | +1 616 | +1 616 ✓ |
+| Should-be-deleted nodes still present | 0 | 0 ✓ |
+| New Bauteilgruppen missing HAT_BAUTEILEBENE | 0 | 0 ✓ |
+| New Bauteilgruppen missing HAT_STATUS | 0 | 0 ✓ |
+| New Bauteilgruppen missing BELEGT_IN | 0 | 0 ✓ |
+| New Akteure missing HAT_AKTEURROLLE | 0 | 0 ✓ |
+| Fabricated rel types (HAT_SOFTWARE, HAT_TOOL, LIEFERT_MATERIAL_AUS, etc.) | 0 | 0 ✓ |
+| `r.id` integrity (stale ids) | 0 | 0 ✓ |
+| Funktionswechsel hub incoming (mq_spec_zweckaenderung) | ~7-8 | 8 ✓ |
+| Dual-label `:Programm:Projekt` nodes | 6 | 6 ✓ (prog_fcrbe, prog_mas_dfab, prog_re_use_hoefe, prog_reallabor_be_ware, prog_rebridge, prog_stuttgart_210) |
+
+### Rollback procedure
+
+#### Option 1 — Nuclear (restore full pre-apply backup)
+```bash
+python _scripts/restore_neo4j_graph_backup.py --backup-dir _neo4j/review/backups/batch2_v2_pre_apply
+```
+Restores 2 298 nodes / 17 035 rels exactly.
+
+#### Option 2 — Reverse the merge_node ops (selective)
+Each `merge_node` from this batch is documented in [APPLY_ORDER.md](../../intake/runs/2026-05-20_inbox_batch2_import/APPLY_ORDER.md). Reversing requires:
+1. Re-create the source node (look up properties in `predelete_snapshot.json` / `predelete_snapshot_round2.json` / `predelete_snapshot_round3.json`).
+2. Move rels back per the snapshot.
+Snapshots saved in `_neo4j/intake/runs/2026-05-20_inbox_batch2_import/predelete_snapshot*.json`.
+
+#### Option 3 — Delete only the new nodes added by batch2 v2
+```cypher
+MATCH (n) WHERE n.source_scope = 'case_markdown' AND n.id IN [<list_of_new_ids>]
+DETACH DELETE n;
+```
+Then for the rels added with `r.source = 'batch2_v2_import_2026-05-20'` or `'batch2_v2_followup_2026-05-20'`:
+```cypher
+MATCH ()-[r]->() WHERE r.source IN ['batch2_v2_import_2026-05-20', 'batch2_v2_followup_2026-05-20']
+DELETE r;
+```
+
+### New capabilities unlocked
+
+```cypher
+// Reuse-chain visualization: donor BW → BG → Kette → receiver BW
+MATCH (donor:Bauwerk)<-[:AUS_BAUWERK]-(bg:Bauteilgruppe)-[:TEIL_VON_KETTE]->(k:Wiederverwendungskette)<-[:EINGEBAUT_IN]-(receiver:Bauwerk)
+WHERE k.source_scope = 'case_markdown'
+RETURN donor.name, bg.name, k.name, receiver.name;
+
+// Funktionswechsel cases across new BGs
+MATCH (bg:Bauteilgruppe)-[:HAT_MATCHINGQUALITAET]->(:MatchingQualitaet {id: 'mq_spec_zweckaenderung'})
+RETURN bg.id, bg.alte_funktion, bg.neue_funktion;
+
+// Programmes by funding-source (Interreg, RFCS, SNSF, ...) — typed Programm props
+MATCH (p:Programm) WHERE p.eu_funding_programme IS NOT NULL
+RETURN p.id, p.name, p.eu_funding_programme, p.start_year, p.end_year;
+
+// All BGs with full vocab coverage (mandatory 7 + optional)
+MATCH (bg:Bauteilgruppe) WHERE bg.source_scope = 'case_markdown'
+WITH bg, [(bg)-[r]->() | type(r)] AS rel_types
+RETURN bg.id, size(rel_types) AS rel_count, rel_types ORDER BY rel_count DESC LIMIT 20;
+
+// New SIA norms in use
+MATCH (p:Projekt)-[:REFERENZIERT_NORM]->(n:Norm) WHERE n.id STARTS WITH 'norm_sia_'
+RETURN p.id, n.id;
+```
 
 ---
 

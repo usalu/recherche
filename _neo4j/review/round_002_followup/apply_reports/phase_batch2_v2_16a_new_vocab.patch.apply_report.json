@@ -1,0 +1,172 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_16a_new_vocab.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2539,
+    "relationships": 18635
+  },
+  "counts_after_expected": {
+    "nodes": 2539,
+    "relationships": 18635
+  },
+  "counts_before": {
+    "nodes": 2531,
+    "relationships": 18635
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T12:39:44.022290+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_16a_new_vocab.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Material"
+        ],
+        "properties": {
+          "id": "mat_messing",
+          "name": "Messing",
+          "name_full": "Messing — Kupfer-Zink-Legierung (Tür-/Möbelbeschläge, oft historische Werte)",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "mat_messing",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Material"
+        ],
+        "properties": {
+          "id": "mat_kupfer",
+          "name": "Kupfer",
+          "name_full": "Kupfer (Fassade, Bedachung, Sanitärinstallation)",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "mat_kupfer",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Material"
+        ],
+        "properties": {
+          "id": "mat_holz_clt",
+          "name": "CLT / Brettsperrholz",
+          "name_full": "Cross-Laminated Timber / Brettsperrholz — kreuzweise verleimtes Massivholzpaneel",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "mat_holz_clt",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Material"
+        ],
+        "properties": {
+          "id": "mat_pcm_phasenwechsel",
+          "name": "PCM",
+          "name_full": "Phase Change Material — Phasenwechselmaterial für thermische Speicherung",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "mat_pcm_phasenwechsel",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "id": "norm_sia_416",
+          "name": "SIA 416",
+          "name_full": "SIA 416 — Kennzahlen für Grundstücke und Gebäude (Schweiz)",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "norm_sia_416",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Norm"
+        ],
+        "properties": {
+          "id": "norm_sia_380_1",
+          "name": "SIA 380/1",
+          "name_full": "SIA 380/1 — Heizwärmebedarf (Schweiz)",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "norm_sia_380_1",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akzeptanz"
+        ],
+        "properties": {
+          "id": "ak_oeffentliche_sichtbarkeit_lernort",
+          "name": "Sichtbarkeit / Lernort",
+          "name_full": "Öffentliche Sichtbarkeit + Lernort — Akzeptanzgewinn durch Pavillon-/Schaufenster-/Workshop-Funktion",
+          "scope_note": "Reuse-Projekt wird zum öffentlich zugänglichen Lern-, Demonstrations- und Veranstaltungsort. Stärkt soziale Akzeptanz unabhängig von Zertifizierung.",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "ak_oeffentliche_sichtbarkeit_lernort",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akzeptanz"
+        ],
+        "properties": {
+          "id": "ak_humanitarian_purpose",
+          "name": "Humanitärer Zweck",
+          "name_full": "Humanitärer/Sozialer Zweck — Akzeptanzgewinn durch Mission jenseits ökonomischer/ökologischer Argumente",
+          "scope_note": "Akzeptanztreiber: Projekt verfolgt explizit humanitäre oder sozialarbeiterische Mission, die isolierte Wirtschaftlichkeitsdebatte überschreibt.",
+          "source_scope": "controlled_vocab_seed"
+        }
+      },
+      "before": null,
+      "id": "ak_humanitarian_purpose",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 8,
+    "would_create": 8
+  }
+}

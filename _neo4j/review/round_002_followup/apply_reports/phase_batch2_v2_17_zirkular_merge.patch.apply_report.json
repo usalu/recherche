@@ -1,0 +1,75 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_17_zirkular_merge.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2538,
+    "relationships": 18651
+  },
+  "counts_after_expected": {
+    "nodes": 2538,
+    "relationships": 18651
+  },
+  "counts_before": {
+    "nodes": 2539,
+    "relationships": 18654
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T12:40:55.504689+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_17_zirkular_merge.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Zirkular GmbH"
+          ],
+          "id": "zirkular",
+          "name": "Zirkular",
+          "source_scope": "actor_registry_context"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "aliases": [
+              "Zirkular / Cirkla"
+            ],
+            "id": "zirkular_gmbh",
+            "name": "Zirkular GmbH"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "zirkular",
+            "name": "Zirkular",
+            "source_scope": "actor_registry_context"
+          }
+        }
+      },
+      "from": "zirkular_gmbh",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 3,
+      "rel_outbound_to_redirect": 12,
+      "status": "would_merge",
+      "to": "zirkular"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_merge": 1
+  }
+}
