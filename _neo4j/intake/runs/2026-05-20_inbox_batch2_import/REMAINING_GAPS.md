@@ -43,7 +43,7 @@ None of the above blocks any downstream consumer today. The graph is internally 
 
 **Identity:** Swiss/German glass-tech company (real entity — searchable on web; not fictional).
 
-**Where it came from:** KEEP-STUB Akteure list in [`_neo4j/review/round_002_followup/PARKED_DECISIONS.md`](../../review/round_002_followup/PARKED_DECISIONS.md). It was kept across earlier rounds because no dossier evidence yet ties it to a specific project, but the entity itself is verified-real.
+**Where it came from:** KEEP-STUB Akteure list in [`_neo4j/review/round_002_followup/PARKED_DECISIONS.md`](../../../review/round_002_followup/PARKED_DECISIONS.md). It was kept across earlier rounds because no dossier evidence yet ties it to a specific project, but the entity itself is verified-real.
 
 **Why it's still deg 0:**
 - None of the 21 batch2 dossiers reference it.
@@ -185,7 +185,7 @@ Expected: ~10 URL groups with 2-5 Quelle nodes each.
 ### D.3 — Why NOT to dedupe
 
 - Each per-actor Quelle carries `attributed_to_actor_id` (implicit via the Akteur it's BELEGT_IN'd to). Merging them loses provenance.
-- The naming scheme `q_actor_<actor>_<n>` is explicitly per-actor (see [`_neo4j/review/round_002_followup/NAMING_AND_PROPERTIES_PLAN.md`](../../review/round_002_followup/NAMING_AND_PROPERTIES_PLAN.md)).
+- The naming scheme `q_actor_<actor>_<n>` is explicitly per-actor (see [`_neo4j/review/round_002_followup/NAMING_AND_PROPERTIES_PLAN.md`](../../../review/round_002_followup/NAMING_AND_PROPERTIES_PLAN.md)).
 - Frontend queries that ask "what does Rotor cite?" want to see Rotor's own Quelle list, not a deduped graph-wide list.
 
 ### D.4 — Action
@@ -356,7 +356,7 @@ These are documented elsewhere and should not be confused with "remaining gaps":
 
 | Topic | Where it lives |
 |---|---|
-| What was applied, in what order | [APPLY_ORDER.md](APPLY_ORDER.md) + [rollback.md](../../review/round_002_followup/rollback.md) |
+| What was applied, in what order | [APPLY_ORDER.md](APPLY_ORDER.md) + [rollback.md](../../../review/round_002_followup/rollback.md) |
 | Live data state verified before patches | [pre_flight_validation.cypher](pre_flight_validation.cypher) + [pre_flight_results.json](pre_flight_results.json) |
 | Issue catalog from batch2 v2 (C1-C15, O1-O14, F1-F27) | [CORRECTIONS_2026-05-20.md](CORRECTIONS_2026-05-20.md) |
 | New vocab nodes from Phase 16 | [NEW_NODE_SUGGESTIONS.md](NEW_NODE_SUGGESTIONS.md) |
@@ -409,4 +409,4 @@ If any of these flip to non-zero, that's a regression — diagnose before doing 
 
 **End of REMAINING_GAPS.md.** Updated 2026-05-20.
 
-Cross-references: [HANDOFF.md](HANDOFF.md), [CLEANUP_PLAN.md](CLEANUP_PLAN.md), [NEXT_STEPS_v2.md](NEXT_STEPS_v2.md), [rollback.md](../../review/round_002_followup/rollback.md), [PARKED_DECISIONS.md](../../review/round_002_followup/PARKED_DECISIONS.md).
+Cross-references: [HANDOFF.md](HANDOFF.md), [CLEANUP_PLAN.md](CLEANUP_PLAN.md), [NEXT_STEPS_v2.md](NEXT_STEPS_v2.md), [rollback.md](../../../review/round_002_followup/rollback.md), [PARKED_DECISIONS.md](../../../review/round_002_followup/PARKED_DECISIONS.md).

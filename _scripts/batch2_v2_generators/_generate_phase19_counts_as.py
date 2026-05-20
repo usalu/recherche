@@ -11,7 +11,7 @@ import json
 import sys
 from pathlib import Path
 
-_SCRIPTS = Path(__file__).resolve().parent
+_SCRIPTS = Path(__file__).resolve().parent.parent  # _scripts/ (one level up after relocation to batch2_v2_generators/)
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 

@@ -25,7 +25,7 @@ A single multi-day work block that:
 
 | Question | File |
 |---|---|
-| "What's the current graph state?" | [rollback.md](../../review/round_002_followup/rollback.md) — combined-effect table at the top |
+| "What's the current graph state?" | [rollback.md](../../../review/round_002_followup/rollback.md) — combined-effect table at the top |
 | "What patches were applied in what order?" | [APPLY_ORDER.md](APPLY_ORDER.md) (phases 1-28 documented; phases 16, 17, 23-27 added later) |
 | "What was originally planned?" | [PLAN_v2.md](PLAN_v2.md) (PLAN.md is the original; v2 is the authoritative version) |
 | "What dossier said what?" | [actor_extraction_per_dossier.md](actor_extraction_per_dossier.md) — per-dossier actor/BG/Bauwerk/Quelle inventory |
@@ -34,7 +34,7 @@ A single multi-day work block that:
 | "What new vocabulary nodes did we add and why?" | [NEW_NODE_SUGGESTIONS.md](NEW_NODE_SUGGESTIONS.md) — 8 nodes added in Phase 16 |
 | "What's still open?" | [REMAINING_GAPS.md](REMAINING_GAPS.md) |
 | "Which scripts to use for what?" | §6 below |
-| "How to roll back?" | [rollback.md §Rollback procedure](../../review/round_002_followup/rollback.md) |
+| "How to roll back?" | [rollback.md §Rollback procedure](../../../review/round_002_followup/rollback.md) |
 
 ---
 
@@ -347,7 +347,7 @@ python _scripts/restore_neo4j_graph_backup.py --backup-dir _neo4j/review/backups
 
 1. [REMAINING_GAPS.md](REMAINING_GAPS.md) — what's still open + suggested next batch
 2. [CLEANUP_PLAN.md](CLEANUP_PLAN.md) — repo housekeeping after batch2 v2
-3. [rollback.md](../../review/round_002_followup/rollback.md) — full ledger of every applied phase
+3. [rollback.md](../../../review/round_002_followup/rollback.md) — full ledger of every applied phase
 
 If you're picking up this work cold: run `python _scripts/_gap_survey.py` first to see live state, then read these three documents in order.
 

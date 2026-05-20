@@ -1,6 +1,10 @@
+> ⚠️ **SUPERSEDED** by [REMAINING_GAPS.md](REMAINING_GAPS.md). This file proposed §A-§J after Phase 17; Phases 18-27 then applied most of §A, §F, and §E4. The remaining open items (Gap E, Gap F, deferred decisions) are catalogued in REMAINING_GAPS.md. Kept here for historic context — do not act on it directly.
+
+---
+
 # Next steps — post batch2 v2 + Phase 16/17 (2026-05-20 evening)
 
-**Current state:** 2 538 nodes / 18 651 rels in `mit-bestand`. Batch2 v2 + Phase 16 (new vocab) + Phase 17 (Zirkular dedup) all applied successfully. See [rollback.md §Phase batch2 v2](../../review/round_002_followup/rollback.md) for the audit trail.
+**Current state:** 2 538 nodes / 18 651 rels in `mit-bestand`. Batch2 v2 + Phase 16 (new vocab) + Phase 17 (Zirkular dedup) all applied successfully. See [rollback.md §Phase batch2 v2](../../../review/round_002_followup/rollback.md) for the audit trail.
 
 **Survey findings drove this plan.** A quick live-graph audit surfaced 5 categories of post-apply gaps that should be closed before moving to batch3. They're ordered by priority + effort.
 
@@ -272,4 +276,4 @@ The bigger jumps come from batch3 (§D3-D6) which requires research outside this
 
 **End of NEXT_STEPS_v2.md.**
 
-Cross-references: [rollback.md §Phase batch2 v2](../../review/round_002_followup/rollback.md), [NEXT_STEPS.md](NEXT_STEPS.md) (the pre-apply plan, now mostly obsolete), [APPLY_ORDER.md](APPLY_ORDER.md), [NEW_NODE_SUGGESTIONS.md](NEW_NODE_SUGGESTIONS.md).
+Cross-references: [rollback.md §Phase batch2 v2](../../../review/round_002_followup/rollback.md), [NEXT_STEPS.md](NEXT_STEPS.md) (the pre-apply plan, now mostly obsolete), [APPLY_ORDER.md](APPLY_ORDER.md), [NEW_NODE_SUGGESTIONS.md](NEW_NODE_SUGGESTIONS.md).

@@ -1,3 +1,7 @@
+> ⚠️ **SUPERSEDED** by [PLAN_v2.md](PLAN_v2.md), which incorporates all corrections from [CORRECTIONS_2026-05-20.md](CORRECTIONS_2026-05-20.md) and the user decisions documented in [HANDOFF.md §7](HANDOFF.md). This file is kept for diff/historic reference only — do not act on it.
+
+---
+
 # Plan: Batch 2 Import — 21 Inbox Dossiers (v3 — complete)
 
 **Date:** 2026-05-20

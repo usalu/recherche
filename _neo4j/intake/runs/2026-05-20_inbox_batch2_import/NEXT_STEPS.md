@@ -1,3 +1,7 @@
+> ⚠️ **SUPERSEDED** by [NEXT_STEPS_v2.md](NEXT_STEPS_v2.md) (post-apply survey-driven plan) and ultimately by [REMAINING_GAPS.md](REMAINING_GAPS.md) (final gap list after Phase 27). This file is kept for diff/historic reference only — do not act on it.
+
+---
+
 # Next steps — post batch2 v2 work
 
 **Status (2026-05-20):** 28 JSONL patches + 1 Cypher script written, all dry-run clean. Ready to apply. See [APPLY_ORDER.md](APPLY_ORDER.md).

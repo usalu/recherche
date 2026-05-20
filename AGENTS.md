@@ -31,3 +31,13 @@ Sie sind ein Assistent, der hilft, Wissen für den **Neo4j-Graphen** zu struktur
 - `_archive/research/` als Arbeitsquelle
 
 Diese Dinge sind nur noch Legacy-Kontext, bis sie ausdrücklich geprüft und neu freigegeben wurden.
+
+## Aktueller Stand (2026-05-20)
+
+Batch2 v2 ist vollständig importiert. Aktueller Graph-Stand: **2 580 Knoten / 19 989 Relationen** in `mit-bestand`. Alle Pflicht-Konsistenzprüfungen geben 0 zurück.
+
+- Übergabe für nächste Agenten: [`_neo4j/intake/runs/2026-05-20_inbox_batch2_import/HANDOFF.md`](_neo4j/intake/runs/2026-05-20_inbox_batch2_import/HANDOFF.md)
+- Offene Lücken und Batch3-Kandidaten: [`_neo4j/intake/runs/2026-05-20_inbox_batch2_import/REMAINING_GAPS.md`](_neo4j/intake/runs/2026-05-20_inbox_batch2_import/REMAINING_GAPS.md)
+- Repo-Aufräumplan (für diesen Lauf): [`_neo4j/intake/runs/2026-05-20_inbox_batch2_import/CLEANUP_PLAN.md`](_neo4j/intake/runs/2026-05-20_inbox_batch2_import/CLEANUP_PLAN.md)
+
+Diagnose-Standard: `python _scripts/_gap_survey.py` vor jeder neuen Patch-Batch ausführen — meldet jede Pflicht-Lücke, falls eine Regression vorliegt.
