@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_3a_quellen_case.patch.jsonl
 
-Generated: 2026-05-20T01:39:50.299646+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:17:11.059167+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2318 | 17035 |
+| before | 2335 | 17073 |
+| after_expected | 2355 | 17073 |
+| after_actual | 2355 | 17073 |
 
 ## Rejected / Needs Review
 

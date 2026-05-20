@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_5a_new_akteure.patch.jsonl
 
-Generated: 2026-05-20T01:46:30.509620+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:17:23.473741+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -17,8 +17,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2324 | 17035 |
+| before | 2358 | 17165 |
+| after_expected | 2384 | 17165 |
+| after_actual | 2384 | 17165 |
 
 ## Rejected / Needs Review
 

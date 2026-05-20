@@ -132,7 +132,9 @@ def current_node(session, node_id: str) -> dict | None:
 
 
 def rel_type_safe(rel_type: str) -> str:
-    if not re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', rel_type):
+    # Allow Unicode word characters because the live graph contains rel types
+    # like GEHÖRT_ZU. ASCII-only would break merge_node rel redirection.
+    if not re.match(r'^[^\W\d]\w*$', rel_type, re.UNICODE):
         raise ValueError(f"unsafe relationship type: {rel_type!r}")
     return rel_type
 

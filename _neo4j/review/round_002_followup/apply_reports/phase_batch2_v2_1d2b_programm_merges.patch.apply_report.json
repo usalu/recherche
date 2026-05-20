@@ -1,0 +1,256 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_1d2b_programm_merges.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2286,
+    "relationships": 17012
+  },
+  "counts_after_expected": {
+    "nodes": 2286,
+    "relationships": 17012
+  },
+  "counts_before": {
+    "nodes": 2289,
+    "relationships": 17012
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:16:51.267393+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_1d2b_programm_merges.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "HTWG Konstanz",
+          "id": "prog_stuttgart_210",
+          "import_status": "registry_stub_only",
+          "name": "Stuttgart 210",
+          "name_full": "Stuttgart 210 — weiterdenken, weiterbauen!",
+          "needs_project_file": false,
+          "node_role": "cross_reference_stub",
+          "project_category": "demonstrator_or_research_project",
+          "short_description": "Research programme + built youth-pavilion pilot demonstrating component reuse of Stuttgart 21 CLT concrete formwork.",
+          "source_scope": "case_markdown",
+          "status": "active",
+          "type": "teaching+research"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Projekt"
+          ],
+          "properties": {
+            "actor_registry_mentioned": true,
+            "classified_at": "2026-05-15",
+            "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+            "id": "p_stuttgart_210",
+            "import_status": "registry_stub_only",
+            "name": "Stuttgart 210",
+            "needs_project_file": false,
+            "node_role": "cross_reference_stub",
+            "project_category": "demonstrator_or_research_project",
+            "source_scope": "actor_registry_association"
+          }
+        },
+        "to": {
+          "labels": [
+            "Programm"
+          ],
+          "properties": {
+            "host_institution": "HTWG Konstanz",
+            "id": "prog_stuttgart_210",
+            "name": "Stuttgart 210",
+            "name_full": "Stuttgart 210 — weiterdenken, weiterbauen!",
+            "short_description": "Research programme + built youth-pavilion pilot demonstrating component reuse of Stuttgart 21 CLT concrete formwork.",
+            "source_scope": "case_markdown",
+            "status": "active",
+            "type": "teaching+research"
+          }
+        }
+      },
+      "from": "p_stuttgart_210",
+      "label_union": [
+        "Programm",
+        "Projekt"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 9,
+      "rel_outbound_to_redirect": 17,
+      "status": "would_merge",
+      "to": "prog_stuttgart_210"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "REBRIDGE structural…"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "end_year": 2028,
+          "eu_contribution_eur": 1695121.69,
+          "eu_funding_programme": "Research Fund for Coal and Steel (RFCS)",
+          "grant_agreement_reference": "101157419",
+          "id": "prog_rebridge",
+          "import_status": "registry_stub_only",
+          "lead_organisation": "University of Stuttgart / Institute of Lightweight Structures and Conceptual Design",
+          "name": "ReBridge",
+          "name_full": "REBRIDGE — Reuse of Steel Components from Existing Bridge Structures",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "short_description": "The project develops scientific and technical foundations for safe reuse of steel components from decommissioned bridge structures.",
+          "source_scope": "case_markdown",
+          "start_year": 2025,
+          "status": "active",
+          "type": "research"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Projekt"
+          ],
+          "properties": {
+            "actor_registry_mentioned": true,
+            "classified_at": "2026-05-15",
+            "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+            "id": "p_rebridge_structural_reuse_project",
+            "import_status": "registry_stub_only",
+            "name": "REBRIDGE structural…",
+            "name_full": "REBRIDGE structural reuse project",
+            "needs_project_file": true,
+            "node_role": "cross_reference_stub",
+            "source_scope": "actor_registry_association"
+          }
+        },
+        "to": {
+          "labels": [
+            "Programm"
+          ],
+          "properties": {
+            "end_year": 2028,
+            "eu_contribution_eur": 1695121.69,
+            "eu_funding_programme": "Research Fund for Coal and Steel (RFCS)",
+            "grant_agreement_reference": "101157419",
+            "id": "prog_rebridge",
+            "lead_organisation": "University of Stuttgart / Institute of Lightweight Structures and Conceptual Design",
+            "name": "ReBridge",
+            "name_full": "REBRIDGE — Reuse of Steel Components from Existing Bridge Structures",
+            "short_description": "The project develops scientific and technical foundations for safe reuse of steel components from decommissioned bridge structures.",
+            "source_scope": "case_markdown",
+            "start_year": 2025,
+            "status": "active",
+            "type": "research"
+          }
+        }
+      },
+      "from": "p_rebridge_structural_reuse_project",
+      "label_union": [
+        "Programm",
+        "Projekt"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 2,
+      "status": "would_merge",
+      "to": "prog_rebridge"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "RE_USE Höfe Wien",
+            "REUSE Yards"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "ZHAW Institut Konstruktives Entwerfen (IKE)",
+          "id": "prog_re_use_hoefe",
+          "import_status": "registry_stub_only",
+          "name": "RE-USE Höfe",
+          "name_full": "RE-USE Höfe — zirkuläre Lieferketten anhand der Fensterwiederverwendung",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "reuse_network_project_stub",
+          "short_description": "Publication/project documenting RE-WIN and Windows for Ukraine experience. NOTE: dossier explicitly says Vienna location is unverified — evidence is for Basel, Winterthur, Switzerland-Ukraine.",
+          "source_scope": "case_markdown",
+          "status": "published_2025",
+          "type": "research+publication"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Projekt"
+          ],
+          "properties": {
+            "actor_registry_mentioned": true,
+            "classified_at": "2026-05-15",
+            "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+            "id": "p_re_use_hoefe",
+            "import_status": "registry_stub_only",
+            "name": "RE-USE Höfe",
+            "needs_project_file": true,
+            "node_role": "cross_reference_stub",
+            "project_category": "reuse_network_project_stub",
+            "source_scope": "actor_registry_association"
+          }
+        },
+        "to": {
+          "labels": [
+            "Programm"
+          ],
+          "properties": {
+            "aliases": [
+              "RE_USE Höfe Wien",
+              "REUSE Yards"
+            ],
+            "host_institution": "ZHAW Institut Konstruktives Entwerfen (IKE)",
+            "id": "prog_re_use_hoefe",
+            "name": "RE-USE Höfe",
+            "name_full": "RE-USE Höfe — zirkuläre Lieferketten anhand der Fensterwiederverwendung",
+            "short_description": "Publication/project documenting RE-WIN and Windows for Ukraine experience. NOTE: dossier explicitly says Vienna location is unverified — evidence is for Basel, Winterthur, Switzerland-Ukraine.",
+            "source_scope": "case_markdown",
+            "status": "published_2025",
+            "type": "research+publication"
+          }
+        }
+      },
+      "from": "p_re_use_hoefe",
+      "label_union": [
+        "Programm",
+        "Projekt"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 2,
+      "status": "would_merge",
+      "to": "prog_re_use_hoefe"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 3,
+    "would_merge": 3
+  }
+}

@@ -48,8 +48,26 @@ Apply each patch with: `python _scripts/apply_neo4j_review_patch.py --patch <pat
 | **26** | **phase_batch2_v2_4d2_rcmi_delete.patch.jsonl** | **1** | **Delete p_rcmi_concular** | **step 25** |
 | **27** | **phase_batch2_v2_4e_refair_strip.patch.jsonl** | **8** | **Strip BELEGT_IN x3 + ASSOZIIERT x2 from p_refair_bordeaux_reemploi_platform; re-route Orianne + Tiphaine → la_fab + La Fab NUTZT_BAUWERK depot** | **step 15 (la_fabrique...)** |
 | **28** | **phase_batch2_v2_4e2_refair_delete.patch.jsonl** | **1** | **Delete p_refair_bordeaux_reemploi_platform** | **step 27** |
+| **29** | **phase_batch2_v2_10_huerde_wirtschaft.patch.jsonl** | **72** | **Project-level HAT_HUERDE + HAT_WIRTSCHAFT + HAT_DOMINANT_AKZEPTANZ (CORRECTIONS O7 cont.)** | **steps 13, 24** |
+| **30** | **phase_batch2_v2_11_bg_vocab.patch.jsonl** | **357** | **BG-level optional vocab: HAT_BESCHAFFUNGSWEG, HAT_VERBINDUNGSTECHNIK, HAT_RUECKBAUVERFAHREN, HAT_AUFBEREITUNG, HAT_LOGISTIK, HAT_PRUEFUNG, HAT_DEFEKT, HAT_ZUSTANDSKLASSE, HAT_BAUPRODUKTSTATUS, HAT_LEISTUNGSANFORDERUNG, HAT_SCHADSTOFF, HAT_MARKTMODELL, NUTZT_MATERIAL** | **step 18** |
+| **31** | **phase_batch2_v2_12a_deferred_bg_addnodes.patch.jsonl** | **19** | **19 deferred Bauteilgruppen (Circl extended, MedUni, BE-WARE TULIUM, RE_USE Höfe, Ingersheim secondary, Granby first house + bespoke)** | (baseline) |
+| **32** | **phase_batch2_v2_12b_deferred_bg_rels.patch.jsonl** | **236** | **Mandatory 7 rels + Project + Bauwerk links + optional vocab for 19 deferred BGs** | **steps 8, 9, 11, 13, 31** |
+| **33** | **phase_batch2_v2_13a_more_actors_addnodes.patch.jsonl** | **67 (60 new + 7 noop)** | **~60 truly new Akteure (UMAR suppliers, ELEMENTA team, SMS team, LysP8 + Zirkular team, MedUni Persons, Stuttgart 210 + Ingersheim Persons + funders, Granby CIC, Circl additional, RE-USE Höfe Persons, Urban Bricolage core, REFAIR Persons, RCMI Persons, FCRBE partners)** | (baseline) |
+| **34** | **phase_batch2_v2_13b_more_actors_rels.patch.jsonl** | **201** | **HAT_AKTEURROLLE + HAT_AKTEURTYP + BETEILIGT_AN for all new actors** | **step 33** |
+| **35** | **phase_batch2_v2_14_external_quellen.patch.jsonl** | **17** | **17 external_reference Quellen for high-value source URLs (Circl × 5, Careno × 2, LysP8 × 3, MedUni × 1, Stuttgart 210 × 2, FCRBE × 1, REBRIDGE × 1, Granby × 2)** | (baseline) |
+| **36** | **phase_batch2_v2_15_gehoert_zu_full.cypher** | **manual** | **~38 GEHÖRT_ZU Person→Org edges via direct Cypher (apply-tool umlaut limit)** | **steps 15, 33** |
 
-**Total: 949 ops + 1 Cypher script.**
+**Total: 1869 ops + 1 Cypher script (~38 GEHÖRT_ZU MERGEs).**
+
+### Insertion notes for steps 29-36
+
+- Steps 29-30 (Phases 10-11) add project-level + BG-level optional vocab. These are pure rel additions, no new nodes. Can run any time after steps 8, 13, 18.
+- Steps 31-32 (Phase 12) add the 19 deferred BGs + their full rel set. Step 32 depends on step 31 (BGs created) plus prior shared infrastructure.
+- Steps 33-34 (Phase 13) add ~60 more Akteure (UMAR/ELEMENTA/SMS/LysP8/MedUni/etc.) + typed rels. The 7 noop_existing in step 33 are actors S27 confirmed already exist (e.g., `gemeinde_ingersheim` may have a near-name match).
+- Step 35 (Phase 14) is independent — 17 standalone Quelle nodes. Can run early.
+- Step 36 (Phase 15) is the direct-Cypher GEHÖRT_ZU expansion; depends on Phases 5a + 13a having created the target Persons + Orgs.
+
+**Updated total: ~1870 ops across 36 JSONL patches + 1 Cypher script.**
 
 ### Insertion notes
 
@@ -73,9 +91,10 @@ After all 23 steps, run:
 MATCH (n) WITH count(n) AS nodes
 MATCH ()-[r]->() WITH nodes, count(r) AS rels
 RETURN nodes, rels;
-// EXPECTED: ~2430 nodes / ~17910 rels (delta: +132 nodes incl. -3 orphan stubs deleted in steps 26+28; +875 rels)
-// count(:Projekt) net: -3 (orphans deleted in steps 24/26/28) + (3 new child Projekts from step 13) - 1 (pavilion merge) - 1 (interreg merge) - 1 (OBK delete) = -3 net → 96
-// count(:Programm) net: +8 (Phase 2) + 3 (Phase 1d-2) = +11 net → 28
+// EXPECTED: ~2495 nodes / ~18800 rels after all 36 patches (delta: +197 nodes, +1765 rels)
+// Nodes: +135 batch2 v2 (steps 1-28) + 19 deferred BGs (step 31) + 60 more Akteure (step 33) - 3 orphan stubs = +211 raw, but the 5 ":Programm:Projekt" dual-labels count once each (no node growth) → ~+197 net
+// count(:Projekt) net: -3 (orphans) + 3 new children + 5 dual-labels still counted - 2 pure-Projekt merges (pavilion, interreg) - 1 OBK = 99 + 2 = ~101 or 96 depending on label-count interpretation (per discussion in B5)
+// count(:Programm) net: +11 → 28
 
 // 2. No fabricated rel types
 MATCH ()-[r]->() WHERE type(r) IN ['HAT_SOFTWARE','HAT_TOOL','HAT_NORM',

@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_6a_bg_addnodes.patch.jsonl
 
-Generated: 2026-05-20T01:51:21.425857+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:17:44.669007+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2340 | 17035 |
+| before | 2384 | 17238 |
+| after_expected | 2426 | 17238 |
+| after_actual | 2426 | 17238 |
 
 ## Rejected / Needs Review
 

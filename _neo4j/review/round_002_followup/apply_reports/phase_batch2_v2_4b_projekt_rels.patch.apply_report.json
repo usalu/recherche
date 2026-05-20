@@ -1,24 +1,29 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_4b_projekt_rels.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2358,
+    "relationships": 17165
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17047
+    "nodes": 2358,
+    "relationships": 17165
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2358,
+    "relationships": 17114
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T01:43:51.640848+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:17:20.726035+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_4b_projekt_rels.patch.jsonl",
   "records": [
     {
-      "error": "to node 'qu_lysp8_basel_dossier' not found",
+      "from": "p_lysp8_basel",
       "line": 1,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_lysp8_basel_dossier"
     },
     {
       "from": "p_lysp8_basel",
@@ -37,22 +42,28 @@
       "to": "land_schweiz"
     },
     {
-      "error": "to node 'bw_lysp8_basel' not found",
+      "from": "p_lysp8_basel",
       "line": 4,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_lysp8_basel"
     },
     {
-      "error": "to node 'qu_meduni_mariannengasse_dossier' not found",
+      "from": "p_meduni_campus_mariannengasse",
       "line": 5,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_meduni_mariannengasse_dossier"
     },
     {
-      "error": "to node 'stadt_wien' not found",
+      "from": "p_meduni_campus_mariannengasse",
       "line": 6,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_STADT",
+      "status": "would_create_rel",
+      "to": "stadt_wien"
     },
     {
       "from": "p_meduni_campus_mariannengasse",
@@ -63,16 +74,20 @@
       "to": "land_oesterreich"
     },
     {
-      "error": "to node 'bw_meduni_campus_mariannengasse' not found",
+      "from": "p_meduni_campus_mariannengasse",
       "line": 8,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_meduni_campus_mariannengasse"
     },
     {
-      "error": "to node 'qu_batch1_schaerenmoosstrasse_dossier' not found",
+      "from": "p_schaerenmoosstrasse_zuerich",
       "line": 9,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_schaerenmoosstrasse_dossier"
     },
     {
       "from": "p_schaerenmoosstrasse_zuerich",
@@ -91,28 +106,36 @@
       "to": "land_schweiz"
     },
     {
-      "error": "to node 'bw_schaerenmoosstrasse_zuerich' not found",
+      "from": "p_schaerenmoosstrasse_zuerich",
       "line": 12,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_schaerenmoosstrasse_zuerich"
     },
     {
-      "error": "to node 'prog_stiftung_pwg' not found",
+      "from": "p_schaerenmoosstrasse_zuerich",
       "line": 13,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_stiftung_pwg"
     },
     {
-      "error": "to node 'qu_granby_workshop_dossier' not found",
+      "from": "p_granby_workshop",
       "line": 14,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_granby_workshop_dossier"
     },
     {
-      "error": "to node 'stadt_liverpool' not found",
+      "from": "p_granby_workshop",
       "line": 15,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_STADT",
+      "status": "would_create_rel",
+      "to": "stadt_liverpool"
     },
     {
       "from": "p_granby_workshop",
@@ -123,16 +146,20 @@
       "to": "land_vereinigtes_koenigreich"
     },
     {
-      "error": "to node 'bw_granby_workshop_liverpool' not found",
+      "from": "p_granby_workshop",
       "line": 17,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_granby_workshop_liverpool"
     },
     {
-      "error": "to node 'qu_careno_becircular_dossier' not found",
+      "from": "p_careno_becircular",
       "line": 18,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_careno_becircular_dossier"
     },
     {
       "from": "p_careno_becircular",
@@ -151,28 +178,36 @@
       "to": "land_belgien"
     },
     {
-      "error": "to node 'prog_be_circular' not found",
+      "from": "p_careno_becircular",
       "line": 21,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_be_circular"
     },
     {
-      "error": "from node 'prog_be_circular' not found",
+      "from": "prog_be_circular",
       "line": 22,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_prec"
     },
     {
-      "error": "to node 'qu_batch1_umar_dossier' not found",
+      "from": "p_umar_unit",
       "line": 23,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_umar_dossier"
     },
     {
-      "error": "to node 'stadt_duebendorf' not found",
+      "from": "p_umar_unit",
       "line": 24,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_STADT",
+      "status": "would_create_rel",
+      "to": "stadt_duebendorf"
     },
     {
       "from": "p_umar_unit",
@@ -183,22 +218,28 @@
       "to": "land_schweiz"
     },
     {
-      "error": "to node 'bw_umar_unit_duebendorf' not found",
+      "from": "p_umar_unit",
       "line": 26,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_umar_unit_duebendorf"
     },
     {
-      "error": "to node 'prog_nest_empa' not found",
+      "from": "p_umar_unit",
       "line": 27,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_nest_empa"
     },
     {
-      "error": "to node 'qu_batch1_elementa_dossier' not found",
+      "from": "p_elementa_walkeweg",
       "line": 28,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_elementa_dossier"
     },
     {
       "from": "p_elementa_walkeweg",
@@ -217,22 +258,28 @@
       "to": "land_schweiz"
     },
     {
-      "error": "to node 'bw_elementa_walkeweg_basel' not found",
+      "from": "p_elementa_walkeweg",
       "line": 31,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_elementa_walkeweg_basel"
     },
     {
-      "error": "to node 'qu_circl_pavilion_dossier' not found",
+      "from": "p_circl_abn_amro",
       "line": 32,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'stadt_amsterdam' not found",
+      "from": "p_circl_abn_amro",
       "line": 33,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_STADT",
+      "status": "would_create_rel",
+      "to": "stadt_amsterdam"
     },
     {
       "from": "p_circl_abn_amro",
@@ -243,112 +290,145 @@
       "to": "land_niederlande"
     },
     {
-      "error": "to node 'bw_circl_pavilion_amsterdam' not found",
+      "from": "p_circl_abn_amro",
       "line": 35,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "to node 'prog_abn_amro_mission_2030' not found",
+      "from": "p_circl_abn_amro",
       "line": 36,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_abn_amro_mission_2030"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 37,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 38,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_STADT",
+      "status": "would_create_rel",
+      "to": "stadt_ingersheim"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 39,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 40,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_jugendtreff_ingersheim"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 41,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_stuttgart_210"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 42,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "ERHALT_FOERDERUNG_DURCH",
+      "status": "would_create_rel",
+      "to": "prog_holzbau_offensive_bw"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 43,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_eth_mas_dfab_dossier"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 44,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_STADT",
+      "status": "would_create_rel",
+      "to": "stadt_weil_am_rhein"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 45,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 46,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_mas_dfab"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 47,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_eth_mas_dfab_dossier"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 48,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_STADT",
+      "status": "would_create_rel",
+      "to": "stadt_dundee"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 49,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 50,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_mas_dfab"
     },
     {
-      "error": "to node 'prog_urban_bricolage' not found",
+      "from": "p_reuse_logistics",
       "line": 51,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "status": "would_create_rel",
+      "to": "prog_urban_bricolage"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 39,
     "records": 51,
-    "would_create_rel": 12
+    "would_create_rel": 51
   }
 }

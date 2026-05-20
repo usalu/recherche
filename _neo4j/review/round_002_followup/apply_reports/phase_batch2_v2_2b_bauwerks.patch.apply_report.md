@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_2b_bauwerks.patch.jsonl
 
-Generated: 2026-05-20T01:36:55.347741+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:17:04.391530+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2311 | 17035 |
+| before | 2322 | 17012 |
+| after_expected | 2335 | 17012 |
+| after_actual | 2335 | 17012 |
 
 ## Rejected / Needs Review
 

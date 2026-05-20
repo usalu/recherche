@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_1d_programm_merges.patch.jsonl
 
-Generated: 2026-05-20T01:29:05.215600+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:16:45.621515+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -18,8 +18,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2295 | 17036 |
+| before | 2289 | 17012 |
+| after_expected | 2286 | 17012 |
+| after_actual | 2286 | 17012 |
 
 ## Rejected / Needs Review
 

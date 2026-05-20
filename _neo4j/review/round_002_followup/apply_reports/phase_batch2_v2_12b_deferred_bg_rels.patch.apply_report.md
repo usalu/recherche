@@ -1,0 +1,261 @@
+# Patch Apply Report: phase_batch2_v2_12b_deferred_bg_rels.patch.jsonl
+
+Generated: 2026-05-20T08:00:41.450346+00:00
+Mode: dry-run
+Database: mit-bestand
+
+## Summary
+
+| Metric | Value |
+| --- | --- |
+| records | 236 |
+| load_errors | 0 |
+| missing_endpoint | 236 |
+
+## Counts
+
+| State | Nodes | Relationships |
+| --- | --- | --- |
+| before | 2298 | 17035 |
+| after_expected | 2298 | 17035 |
+
+## Rejected / Needs Review
+
+| Line | Op | Id | Status | Error |
+| --- | --- | --- | --- | --- |
+| 1 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 2 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 3 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 4 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 5 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 6 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 7 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 8 | add_rel |  | missing_endpoint | to node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 9 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 10 | add_rel |  | missing_endpoint | from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found |
+| 11 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 12 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 13 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 14 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 15 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 16 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 17 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 18 | add_rel |  | missing_endpoint | to node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 19 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 20 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 21 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 22 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 23 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found |
+| 24 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 25 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 26 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 27 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 28 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 29 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 30 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 31 | add_rel |  | missing_endpoint | to node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 32 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 33 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 34 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 35 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found |
+| 36 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 37 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 38 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 39 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 40 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 41 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 42 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 43 | add_rel |  | missing_endpoint | to node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 44 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 45 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 46 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found |
+| 47 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 48 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 49 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 50 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 51 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 52 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 53 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 54 | add_rel |  | missing_endpoint | to node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 55 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 56 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 57 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 58 | add_rel |  | missing_endpoint | from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found |
+| 59 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 60 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 61 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 62 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 63 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 64 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 65 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 66 | add_rel |  | missing_endpoint | to node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 67 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 68 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found |
+| 69 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 70 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 71 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 72 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 73 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 74 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 75 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 76 | add_rel |  | missing_endpoint | to node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 77 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 78 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 79 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 80 | add_rel |  | missing_endpoint | from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found |
+| 81 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 82 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 83 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 84 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 85 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 86 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 87 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 88 | add_rel |  | missing_endpoint | to node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 89 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 90 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 91 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found |
+| 92 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 93 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 94 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 95 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 96 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 97 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 98 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 99 | add_rel |  | missing_endpoint | to node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 100 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 101 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 102 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 103 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found |
+| 104 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 105 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 106 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 107 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 108 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 109 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 110 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 111 | add_rel |  | missing_endpoint | to node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 112 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 113 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 114 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 115 | add_rel |  | missing_endpoint | from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found |
+| 116 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 117 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 118 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 119 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 120 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 121 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 122 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 123 | add_rel |  | missing_endpoint | to node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 124 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 125 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 126 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 127 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 128 | add_rel |  | missing_endpoint | from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found |
+| 129 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 130 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 131 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 132 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 133 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 134 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 135 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 136 | add_rel |  | missing_endpoint | to node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 137 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 138 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 139 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 140 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 141 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 142 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 143 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_local_timber' not found |
+| 144 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 145 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 146 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 147 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 148 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 149 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 150 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 151 | add_rel |  | missing_endpoint | to node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 152 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 153 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 154 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 155 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 156 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found |
+| 157 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 158 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 159 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 160 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 161 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 162 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 163 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 164 | add_rel |  | missing_endpoint | to node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 165 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 166 | add_rel |  | missing_endpoint | from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found |
+| 167 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 168 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 169 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 170 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 171 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 172 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 173 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 174 | add_rel |  | missing_endpoint | from node 'prog_re_use_hoefe' not found |
+| 175 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 176 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 177 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 178 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 179 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 180 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 181 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 182 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 183 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 184 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found |
+| 185 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 186 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 187 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 188 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 189 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 190 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 191 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 192 | add_rel |  | missing_endpoint | from node 'prog_re_use_hoefe' not found |
+| 193 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 194 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 195 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 196 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 197 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 198 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 199 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found |
+| 200 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 201 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 202 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 203 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 204 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 205 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 206 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 207 | add_rel |  | missing_endpoint | from node 'p_jugendtreff_ingersheim' not found |
+| 208 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 209 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 210 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 211 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 212 | add_rel |  | missing_endpoint | from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found |
+| 213 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 214 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 215 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 216 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 217 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 218 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 219 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 220 | add_rel |  | missing_endpoint | to node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 221 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 222 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 223 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 224 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 225 | add_rel |  | missing_endpoint | from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found |
+| 226 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 227 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 228 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 229 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 230 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 231 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 232 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 233 | add_rel |  | missing_endpoint | to node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 234 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 235 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |
+| 236 | add_rel |  | missing_endpoint | from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found |

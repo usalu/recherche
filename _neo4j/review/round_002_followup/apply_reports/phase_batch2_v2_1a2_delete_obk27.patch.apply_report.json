@@ -1,0 +1,51 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_1a2_delete_obk27.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2295,
+    "relationships": 17029
+  },
+  "counts_after_expected": {
+    "nodes": 2295,
+    "relationships": 17029
+  },
+  "counts_before": {
+    "nodes": 2296,
+    "relationships": 17031
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:14:34.785098+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_1a2_delete_obk27.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_obk_27",
+          "import_status": "registry_stub_only",
+          "name": "OBK 27",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "future_reuse_case_stub",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_obk_27",
+      "line": 1,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 2,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_delete_node": 1
+  }
+}

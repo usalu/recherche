@@ -1,269 +1,354 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_3b_belegt_in_edges.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2355,
+    "relationships": 17114
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2355,
+    "relationships": 17114
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2355,
+    "relationships": 17073
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T01:41:18.143865+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:17:14.393964+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_3b_belegt_in_edges.patch.jsonl",
   "records": [
     {
-      "error": "from node 'stadt_amsterdam' not found",
+      "from": "stadt_amsterdam",
       "line": 1,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "from node 'stadt_duebendorf' not found",
+      "from": "stadt_duebendorf",
       "line": 2,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_umar_dossier"
     },
     {
-      "error": "from node 'stadt_liverpool' not found",
+      "from": "stadt_liverpool",
       "line": 3,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_granby_workshop_dossier"
     },
     {
-      "error": "from node 'stadt_bordeaux' not found",
+      "from": "stadt_bordeaux",
       "line": 4,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_refair_dossier"
     },
     {
-      "error": "from node 'stadt_merignac' not found",
+      "from": "stadt_merignac",
       "line": 5,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_refair_dossier"
     },
     {
-      "error": "from node 'stadt_fribourg' not found",
+      "from": "stadt_fribourg",
       "line": 6,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_reuselogistics_dossier"
     },
     {
-      "error": "from node 'stadt_ingersheim' not found",
+      "from": "stadt_ingersheim",
       "line": 7,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'stadt_weil_am_rhein' not found",
+      "from": "stadt_weil_am_rhein",
       "line": 8,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_eth_mas_dfab_dossier"
     },
     {
-      "error": "from node 'stadt_dundee' not found",
+      "from": "stadt_dundee",
       "line": 9,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_eth_mas_dfab_dossier"
     },
     {
-      "error": "from node 'stadt_canterbury' not found",
+      "from": "stadt_canterbury",
       "line": 10,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_fcrbe_dossier"
     },
     {
-      "error": "from node 'stadt_esch_sur_alzette' not found",
+      "from": "stadt_esch_sur_alzette",
       "line": 11,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_fcrbe_dossier"
     },
     {
-      "error": "from node 'stadt_coimbra' not found",
+      "from": "stadt_coimbra",
       "line": 12,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_rebridge_dossier"
     },
     {
-      "error": "from node 'stadt_stuttgart' not found",
+      "from": "stadt_stuttgart",
       "line": 13,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'stadt_wien' not found",
+      "from": "stadt_wien",
       "line": 14,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_meduni_mariannengasse_dossier"
     },
     {
-      "error": "from node 'land_ukraine' not found",
+      "from": "land_ukraine",
       "line": 15,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_reusehoefe_dossier"
     },
     {
-      "error": "from node 'land_portugal' not found",
+      "from": "land_portugal",
       "line": 16,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_rebridge_dossier"
     },
     {
-      "error": "from node 'land_italien' not found",
+      "from": "land_italien",
       "line": 17,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_rebridge_dossier"
     },
     {
-      "error": "from node 'bw_schaerenmoosstrasse_zuerich' not found",
+      "from": "bw_schaerenmoosstrasse_zuerich",
       "line": 18,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_schaerenmoosstrasse_dossier"
     },
     {
-      "error": "from node 'bw_umar_unit_duebendorf' not found",
+      "from": "bw_umar_unit_duebendorf",
       "line": 19,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_umar_dossier"
     },
     {
-      "error": "from node 'bw_elementa_walkeweg_basel' not found",
+      "from": "bw_elementa_walkeweg_basel",
       "line": 20,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_elementa_dossier"
     },
     {
-      "error": "from node 'bw_circl_pavilion_amsterdam' not found",
+      "from": "bw_circl_pavilion_amsterdam",
       "line": 21,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "from node 'bw_lysp8_basel' not found",
+      "from": "bw_lysp8_basel",
       "line": 22,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_lysp8_basel_dossier"
     },
     {
-      "error": "from node 'bw_meduni_campus_mariannengasse' not found",
+      "from": "bw_meduni_campus_mariannengasse",
       "line": 23,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_meduni_mariannengasse_dossier"
     },
     {
-      "error": "from node 'bw_jugendtreff_ingersheim' not found",
+      "from": "bw_jugendtreff_ingersheim",
       "line": 24,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'bw_ubs_altstetten' not found",
+      "from": "bw_ubs_altstetten",
       "line": 25,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_schaerenmoosstrasse_dossier"
     },
     {
-      "error": "from node 'bw_generale_de_banque_brussels' not found",
+      "from": "bw_generale_de_banque_brussels",
       "line": 26,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_umar_dossier"
     },
     {
-      "error": "from node 'bw_lysbueechel_garage_basel' not found",
+      "from": "bw_lysbueechel_garage_basel",
       "line": 27,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_elementa_dossier"
     },
     {
-      "error": "from node 'bw_stuttgart21_hauptbahnhof' not found",
+      "from": "bw_stuttgart21_hauptbahnhof",
       "line": 28,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'bw_base_du_reemploi_merignac' not found",
+      "from": "bw_base_du_reemploi_merignac",
       "line": 29,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_refair_dossier"
     },
     {
-      "error": "from node 'bw_granby_workshop_liverpool' not found",
+      "from": "bw_granby_workshop_liverpool",
       "line": 30,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_granby_workshop_dossier"
     },
     {
-      "error": "from node 'prog_nest_empa' not found",
+      "from": "prog_nest_empa",
       "line": 31,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_umar_dossier"
     },
     {
-      "error": "from node 'prog_stiftung_pwg' not found",
+      "from": "prog_stiftung_pwg",
       "line": 32,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_batch1_schaerenmoosstrasse_dossier"
     },
     {
-      "error": "from node 'prog_be_circular' not found",
+      "from": "prog_be_circular",
       "line": 33,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_careno_becircular_dossier"
     },
     {
-      "error": "from node 'prog_prec' not found",
+      "from": "prog_prec",
       "line": 34,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_careno_becircular_dossier"
     },
     {
-      "error": "from node 'prog_abn_amro_mission_2030' not found",
+      "from": "prog_abn_amro_mission_2030",
       "line": 35,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "from node 'prog_mas_dfab' not found",
+      "from": "prog_mas_dfab",
       "line": 36,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_eth_mas_dfab_dossier"
     },
     {
-      "error": "from node 'prog_holzbau_offensive_bw' not found",
+      "from": "prog_holzbau_offensive_bw",
       "line": 37,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'prog_urban_bricolage' not found",
+      "from": "prog_urban_bricolage",
       "line": 38,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_reuselogistics_dossier"
     },
     {
-      "error": "from node 'prog_stuttgart_210' not found",
+      "from": "prog_stuttgart_210",
       "line": 39,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'prog_rebridge' not found",
+      "from": "prog_rebridge",
       "line": 40,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_rebridge_dossier"
     },
     {
-      "error": "from node 'prog_re_use_hoefe' not found",
+      "from": "prog_re_use_hoefe",
       "line": 41,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_reusehoefe_dossier"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 41,
-    "records": 41
+    "records": 41,
+    "would_create_rel": 41
   }
 }

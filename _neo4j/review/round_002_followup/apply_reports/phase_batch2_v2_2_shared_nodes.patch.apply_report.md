@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_2_shared_nodes.patch.jsonl
 
-Generated: 2026-05-20T01:31:50.498510+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:17:01.727482+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2334 | 17035 |
+| before | 2286 | 17012 |
+| after_expected | 2322 | 17012 |
+| after_actual | 2322 | 17012 |
 
 ## Rejected / Needs Review
 

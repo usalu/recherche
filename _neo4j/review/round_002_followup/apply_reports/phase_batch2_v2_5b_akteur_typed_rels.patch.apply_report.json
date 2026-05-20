@@ -1,276 +1,365 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_5b_akteur_typed_rels.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2384,
+    "relationships": 17238
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2384,
+    "relationships": 17238
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2384,
+    "relationships": 17165
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T01:48:39.759556+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:17:27.655610+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_5b_akteur_typed_rels.patch.jsonl",
   "records": [
     {
-      "error": "from node 'abn_amro' not found",
+      "from": "abn_amro",
       "line": 1,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bauherr_auftraggeber"
     },
     {
-      "error": "from node 'abn_amro' not found",
+      "from": "abn_amro",
       "line": 2,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'abn_amro' not found",
+      "from": "abn_amro",
       "line": 3,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_circl_abn_amro"
     },
     {
-      "error": "from node 'bam_bouw_techniek' not found",
+      "from": "bam_bouw_techniek",
       "line": 4,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bauausfuehrung_fertigung"
     },
     {
-      "error": "from node 'bam_bouw_techniek' not found",
+      "from": "bam_bouw_techniek",
       "line": 5,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'bam_bouw_techniek' not found",
+      "from": "bam_bouw_techniek",
       "line": 6,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_circl_abn_amro"
     },
     {
-      "error": "from node 'tu_delft' not found",
+      "from": "tu_delft",
       "line": 7,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_forschung_dokumentation"
     },
     {
-      "error": "from node 'tu_delft' not found",
+      "from": "tu_delft",
       "line": 8,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_forschung_lehre"
     },
     {
-      "error": "from node 'tu_delft' not found",
+      "from": "tu_delft",
       "line": 9,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_circl_abn_amro"
     },
     {
-      "error": "from node 'tu_delft' not found",
+      "from": "tu_delft",
       "line": 10,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_rebridge"
     },
     {
-      "error": "from node 'big_bundesimmobilien' not found",
+      "from": "big_bundesimmobilien",
       "line": 11,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bauherr_auftraggeber"
     },
     {
-      "error": "from node 'big_bundesimmobilien' not found",
+      "from": "big_bundesimmobilien",
       "line": 12,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_oeffentliche_institution"
     },
     {
-      "error": "from node 'big_bundesimmobilien' not found",
+      "from": "big_bundesimmobilien",
       "line": 13,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_meduni_campus_mariannengasse"
     },
     {
-      "error": "from node 'meduni_wien' not found",
+      "from": "meduni_wien",
       "line": 14,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_betrieb_nutzung"
     },
     {
-      "error": "from node 'meduni_wien' not found",
+      "from": "meduni_wien",
       "line": 15,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_forschung_lehre"
     },
     {
-      "error": "from node 'meduni_wien' not found",
+      "from": "meduni_wien",
       "line": 16,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_meduni_campus_mariannengasse"
     },
     {
-      "error": "from node 'la_fabrique_de_bordeaux_metropole' not found",
+      "from": "la_fabrique_de_bordeaux_metropole",
       "line": 17,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
     },
     {
-      "error": "from node 'la_fabrique_de_bordeaux_metropole' not found",
+      "from": "la_fabrique_de_bordeaux_metropole",
       "line": 18,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_oeffentliche_institution"
     },
     {
-      "error": "from node 'university_of_fribourg' not found",
+      "from": "university_of_fribourg",
       "line": 19,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_forschung_dokumentation"
     },
     {
-      "error": "from node 'university_of_fribourg' not found",
+      "from": "university_of_fribourg",
       "line": 20,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_forschung_lehre"
     },
     {
-      "error": "from node 'empa' not found",
+      "from": "empa",
       "line": 21,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_forschung_dokumentation"
     },
     {
-      "error": "from node 'empa' not found",
+      "from": "empa",
       "line": 22,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_forschung_lehre"
     },
     {
-      "error": "from node 'empa' not found",
+      "from": "empa",
       "line": 23,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_umar_unit"
     },
     {
-      "error": "from node 'stiftung_pwg' not found",
+      "from": "stiftung_pwg",
       "line": 24,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bauherr_auftraggeber"
     },
     {
-      "error": "from node 'stiftung_pwg' not found",
+      "from": "stiftung_pwg",
       "line": 25,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_organisation"
     },
     {
-      "error": "from node 'stiftung_pwg' not found",
+      "from": "stiftung_pwg",
       "line": 26,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_schaerenmoosstrasse_zuerich"
     },
     {
-      "error": "from node 'kanton_basel_stadt' not found",
+      "from": "kanton_basel_stadt",
       "line": 27,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_oeffentliche_hand_foerderung"
     },
     {
-      "error": "from node 'kanton_basel_stadt' not found",
+      "from": "kanton_basel_stadt",
       "line": 28,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_oeffentliche_institution"
     },
     {
-      "error": "from node 'brussels_capital_region' not found",
+      "from": "brussels_capital_region",
       "line": 29,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_oeffentliche_hand_foerderung"
     },
     {
-      "error": "from node 'brussels_capital_region' not found",
+      "from": "brussels_capital_region",
       "line": 30,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_oeffentliche_institution"
     },
     {
-      "error": "to node 'brussels_capital_region' not found",
+      "from": "p_careno_becircular",
       "line": 31,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "ERHALT_FOERDERUNG_DURCH",
+      "status": "would_create_rel",
+      "to": "brussels_capital_region"
     },
     {
-      "error": "from node 'bbri' not found",
+      "from": "bbri",
       "line": 32,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_forschung_dokumentation"
     },
     {
-      "error": "from node 'bbri' not found",
+      "from": "bbri",
       "line": 33,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_forschung_lehre"
     },
     {
-      "error": "from node 'bbri' not found",
+      "from": "bbri",
       "line": 34,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_careno_becircular"
     },
     {
-      "error": "from node 'loeliger_strub_architektur' not found",
+      "from": "loeliger_strub_architektur",
       "line": 35,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_entwurf_planung"
     },
     {
-      "error": "from node 'loeliger_strub_architektur' not found",
+      "from": "loeliger_strub_architektur",
       "line": 36,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'loeliger_strub_architektur' not found",
+      "from": "loeliger_strub_architektur",
       "line": 37,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_lysp8_basel"
     },
     {
-      "error": "from node 'pirmin_jung_schweiz' not found",
+      "from": "pirmin_jung_schweiz",
       "line": 38,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_tragwerksplanung"
     },
     {
-      "error": "from node 'pirmin_jung_schweiz' not found",
+      "from": "pirmin_jung_schweiz",
       "line": 39,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'pirmin_jung_schweiz' not found",
+      "from": "pirmin_jung_schweiz",
       "line": 40,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_lysp8_basel"
     },
     {
-      "error": "from node 'oxara_ag' not found",
+      "from": "oxara_ag",
       "line": 41,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
     },
     {
-      "error": "from node 'oxara_ag' not found",
+      "from": "oxara_ag",
       "line": 42,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'oxara_ag' not found",
+      "from": "oxara_ag",
       "line": 43,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_lysp8_basel"
     },
     {
       "from": "htwg_konstanz",
@@ -289,10 +378,12 @@
       "to": "at_forschung_lehre"
     },
     {
-      "error": "to node 'prog_stuttgart_210' not found",
+      "from": "htwg_konstanz",
       "line": 46,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_stuttgart_210"
     },
     {
       "from": "hft_stuttgart",
@@ -327,64 +418,84 @@
       "to": "at_unternehmen"
     },
     {
-      "error": "to node 'p_jugendtreff_ingersheim' not found",
+      "from": "klingelhoefer_kroetsch",
       "line": 51,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_jugendtreff_ingersheim"
     },
     {
-      "error": "from node 'gemeinde_ingersheim' not found",
+      "from": "gemeinde_ingersheim",
       "line": 52,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bauherr_auftraggeber"
     },
     {
-      "error": "from node 'gemeinde_ingersheim' not found",
+      "from": "gemeinde_ingersheim",
       "line": 53,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_oeffentliche_institution"
     },
     {
-      "error": "from node 'gemeinde_ingersheim' not found",
+      "from": "gemeinde_ingersheim",
       "line": 54,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_jugendtreff_ingersheim"
     },
     {
-      "error": "from node 'zueblin_timber_gmbh' not found",
+      "from": "zueblin_timber_gmbh",
       "line": 55,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
     },
     {
-      "error": "from node 'zueblin_timber_gmbh' not found",
+      "from": "zueblin_timber_gmbh",
       "line": 56,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'zueblin_timber_gmbh' not found",
+      "from": "zueblin_timber_gmbh",
       "line": 57,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_stuttgart_210"
     },
     {
-      "error": "from node 'verein_re_win' not found",
+      "from": "verein_re_win",
       "line": 58,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
     },
     {
-      "error": "from node 'verein_re_win' not found",
+      "from": "verein_re_win",
       "line": 59,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_ngo_verband_netzwerk"
     },
     {
-      "error": "from node 'verein_re_win' not found",
+      "from": "verein_re_win",
       "line": 60,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_re_use_hoefe"
     },
     {
       "from": "zhaw_ike",
@@ -403,124 +514,162 @@
       "to": "at_forschung_lehre"
     },
     {
-      "error": "from node 'new_horizon_urban_mining' not found",
+      "from": "new_horizon_urban_mining",
       "line": 63,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
     },
     {
-      "error": "from node 'new_horizon_urban_mining' not found",
+      "from": "new_horizon_urban_mining",
       "line": 64,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
     },
     {
-      "error": "from node 'new_horizon_urban_mining' not found",
+      "from": "new_horizon_urban_mining",
       "line": 65,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_circl_abn_amro"
     },
     {
-      "error": "from node 'lcp_circulair' not found",
+      "from": "lcp_circulair",
       "line": 66,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
     },
     {
-      "error": "from node 'lcp_circulair' not found",
+      "from": "lcp_circulair",
       "line": 67,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'lcp_circulair' not found",
+      "from": "lcp_circulair",
       "line": 68,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_circl_abn_amro"
     },
     {
-      "error": "from node 'donkergroen' not found",
+      "from": "donkergroen",
       "line": 69,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_landschaftsplanung"
     },
     {
-      "error": "from node 'donkergroen' not found",
+      "from": "donkergroen",
       "line": 70,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'donkergroen' not found",
+      "from": "donkergroen",
       "line": 71,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_circl_abn_amro"
     },
     {
-      "error": "from node 'drz_demontage_recycling' not found",
+      "from": "drz_demontage_recycling",
       "line": 72,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
     },
     {
-      "error": "from node 'drz_demontage_recycling' not found",
+      "from": "drz_demontage_recycling",
       "line": 73,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_ngo_verband_netzwerk"
     },
     {
-      "error": "from node 'die_kuemmerei' not found",
+      "from": "die_kuemmerei",
       "line": 74,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
     },
     {
-      "error": "from node 'die_kuemmerei' not found",
+      "from": "die_kuemmerei",
       "line": 75,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_ngo_verband_netzwerk"
     },
     {
-      "error": "from node 'wiener_aufzugmuseum' not found",
+      "from": "wiener_aufzugmuseum",
       "line": 76,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_betrieb_nutzung"
     },
     {
-      "error": "from node 'wiener_aufzugmuseum' not found",
+      "from": "wiener_aufzugmuseum",
       "line": 77,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_ngo_verband_netzwerk"
     },
     {
-      "error": "from node 'icon_real_estate' not found",
+      "from": "icon_real_estate",
       "line": 78,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bauherr_auftraggeber"
     },
     {
-      "error": "from node 'icon_real_estate' not found",
+      "from": "icon_real_estate",
       "line": 79,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_unternehmen"
     },
     {
-      "error": "from node 'proholz_bw' not found",
+      "from": "proholz_bw",
       "line": 80,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
     },
     {
-      "error": "from node 'proholz_bw' not found",
+      "from": "proholz_bw",
       "line": 81,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_ngo_verband_netzwerk"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 73,
     "noop_existing_rel": 8,
-    "records": 81
+    "records": 81,
+    "would_create_rel": 73
   }
 }

@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_4a_projekt_promote.patch.jsonl
 
-Generated: 2026-05-20T01:42:26.413460+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:17:17.180842+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -17,8 +17,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2301 | 17035 |
+| before | 2355 | 17114 |
+| after_expected | 2358 | 17114 |
+| after_actual | 2358 | 17114 |
 
 ## Rejected / Needs Review
 

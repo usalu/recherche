@@ -1,0 +1,1378 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_13a_more_actors_addnodes.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2358,
+    "relationships": 17035
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T08:03:04.153199+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_13a_more_actors_addnodes.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kaufmann_zimmerei",
+          "land": "CH",
+          "name": "kaufmann zimmerei",
+          "name_full": "kaufmann zimmerei und tischlerei GmbH",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "kaufmann_zimmerei",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "amstein_walthert",
+          "land": "CH",
+          "name": "Amstein+Walthert AG",
+          "name_full": "Amstein+Walthert AG — building services engineer",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "amstein_walthert",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "balzer_ingenieure",
+          "land": "CH",
+          "name": "Balzer Ingenieure AG",
+          "name_full": "Balzer Ingenieure AG — structural engineer",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "balzer_ingenieure",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "weber_energie_bauphysik",
+          "land": "CH",
+          "name": "Weber Energie+Bauphysik",
+          "name_full": "Weber Energie und Bauphysik — building physics",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "weber_energie_bauphysik",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lindner_se",
+          "land": "DE",
+          "name": "Lindner SE",
+          "name_full": "Lindner SE — Plafotherm ceiling panel supplier (product-as-service)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "lindner_se",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "nimbus",
+          "land": "DE",
+          "name": "Nimbus",
+          "name_full": "Nimbus — lighting designer (UMAR)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "nimbus",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "magna_glaskeramik",
+          "land": "DE",
+          "name": "Magna Glaskeramik",
+          "name_full": "Magna Glaskeramik — sintered recycled-glass panel manufacturer",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "magna_glaskeramik",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ecovative",
+          "land": "US",
+          "name": "Ecovative",
+          "name_full": "Ecovative — mycelium insulation manufacturer",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "ecovative",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "desso_tarkett",
+          "land": "NL",
+          "name": "Desso / Tarkett",
+          "name_full": "Desso / Tarkett — carpet supplier (take-back service)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "desso_tarkett",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "monotti_ingegneri",
+          "land": "CH",
+          "name": "Monotti Ingegneri",
+          "name_full": "Monotti Ingegneri Consulenti SA — structural engineer (ELEMENTA)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "monotti_ingegneri",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mario_monotti",
+          "land": "CH",
+          "name": "Mario Monotti",
+          "name_full": "Mario Monotti — structural engineer at Monotti Ingegneri",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "mario_monotti",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "usus_la",
+          "land": "CH",
+          "name": "USUS Landschaftsarch.",
+          "name_full": "USUS Landschaftsarchitektur — landscape architect (ELEMENTA)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "usus_la",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "roger_keller",
+          "land": "CH",
+          "name": "Roger Keller",
+          "name_full": "Roger Keller — landscape architect at USUS",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "roger_keller",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ana_olalquiaga",
+          "land": "CH",
+          "name": "Ana Olalquiaga",
+          "name_full": "Ana Olalquiaga — architect at PARABASE",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "ana_olalquiaga",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "caretta_weidmann",
+          "land": "CH",
+          "name": "Caretta+Weidmann",
+          "name_full": "Caretta+Weidmann — façade engineering",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "caretta_weidmann",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gti_engineering",
+          "land": "CH",
+          "name": "GTI Engineering",
+          "name_full": "GTI Engineering — MEP / building services (ELEMENTA)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "gti_engineering",
+      "line": 16,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "afc_basel",
+          "land": "CH",
+          "name": "AFC Basel",
+          "name_full": "AFC — cost management / quantity surveying",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "afc_basel",
+      "line": 17,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "senn_technology",
+          "land": "CH",
+          "name": "Senn Technology AG",
+          "name_full": "Senn Technology AG — specialist engineering",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "senn_technology",
+      "line": 18,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "anima_engineering",
+          "land": "CH",
+          "name": "Anima Engineering AG",
+          "name_full": "Anima Engineering AG — specialist engineering",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "anima_engineering",
+      "line": 19,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bauteilboerse_basel",
+          "land": "CH",
+          "name": "Bauteilbörse Basel",
+          "name_full": "Bauteilbörse Basel — component exchange platform",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bauteilboerse_basel",
+      "line": 20,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "digvis_gmbh",
+          "land": "CH",
+          "name": "Digvis GmbH",
+          "name_full": "Digvis GmbH — digital visualisation (ELEMENTA)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "digvis_gmbh",
+      "line": 21,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "perez_schmidlin_bauingenieure",
+          "land": "CH",
+          "name": "Pérez Schmidlin",
+          "name_full": "Pérez Schmidlin Bauingenieure GmbH — structural engineer",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "perez_schmidlin_bauingenieure",
+      "line": 22,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "andreas_geser_landschaftsarchitekten",
+          "land": "CH",
+          "name": "AG Landschaftsarch.",
+          "name_full": "Andreas Geser Landschaftsarchitekten AG",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "andreas_geser_landschaftsarchitekten",
+      "line": 23,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stefan_perez",
+          "land": "CH",
+          "name": "Stefan Pérez",
+          "name_full": "Stefan Pérez — Bauingenieur Mitarbeit at Pérez Schmidlin",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "stefan_perez",
+      "line": 24,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "michael_schmidlin",
+          "land": "CH",
+          "name": "Michael Schmidlin",
+          "name_full": "Michael Schmidlin — Bauingenieur Mitarbeit at Pérez Schmidlin",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "michael_schmidlin",
+      "line": 25,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "andreas_geser",
+          "land": "CH",
+          "name": "Andreas Geser",
+          "name_full": "Andreas Geser — landscape architecture lead at AG Landschaftsarch.",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "andreas_geser",
+      "line": 26,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "martin_zeller",
+          "land": "CH",
+          "name": "Martin Zeller",
+          "name_full": "Martin Zeller — credits at Loeliger Strub Architektur (LysP8 visuals)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "actor_registry_order": 29,
+          "akteur_kontext_text": "Loeliger Strub / Zirkular",
+          "id": "martin_zeller",
+          "name": "Martin Zeller",
+          "reuse_relevanz_text": "LYSP8: projektbezogener Loeliger-Strub-Credit bei Zirkular; relevant für Umsetzung der Reuse-Fassade und Innenbauteile.",
+          "source_file": "akteursliste_master.md"
+        }
+      },
+      "id": "martin_zeller",
+      "line": 27,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "repoxit_ag",
+          "land": "CH",
+          "name": "Repoxit AG",
+          "name_full": "Repoxit AG — construction / floor execution (Oxacrete)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "repoxit_ag",
+      "line": 28,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kibag",
+          "land": "CH",
+          "name": "KIBAG",
+          "name_full": "KIBAG — Oxacrete material production",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "kibag",
+      "line": 29,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "pascal_hentschel",
+          "land": "CH",
+          "name": "Pascal Hentschel",
+          "name_full": "Pascal Hentschel — project team at Zirkular GmbH",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "actor_registry_order": 9,
+          "akteur_kontext_text": "Zirkular / baubüro in situ",
+          "id": "pascal_hentschel",
+          "name": "Pascal Hentschel",
+          "reuse_relevanz_text": "Kernakteur für Design → Bauteilsuche → Bauteildaten → Einbau; direkte Bauteil-Wiederverwendung in K.118/ELYS/Juch/LYSP8.",
+          "source_file": "akteursliste_master.md"
+        }
+      },
+      "id": "pascal_hentschel",
+      "line": 30,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rebecca_brandmayer",
+          "land": "CH",
+          "name": "Rebecca Brandmayer",
+          "name_full": "Rebecca Brandmayer — component hunting at Zirkular",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "rebecca_brandmayer",
+      "line": 31,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "laia_meier",
+          "land": "CH",
+          "name": "Laia Meier",
+          "name_full": "Laia Meier — component hunting at Zirkular",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "laia_meier",
+      "line": 32,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "markus_meissner",
+          "land": "AT",
+          "name": "Markus Meissner",
+          "name_full": "Markus Meissner — Ressourcenmanager / Leiter at BauKarussell",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "actor_registry_order": 87,
+          "akteur_kontext_text": "BauKarussell / Ökologie-Institut",
+          "id": "markus_meissner",
+          "name": "Markus Meissner",
+          "reuse_relevanz_text": "BauKarussell/Ökologie-Institut: operative Systeme für Social Urban Mining und Bauteil-Reuse.",
+          "source_file": "akteursliste_master.md",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "markus_meissner",
+      "line": 33,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "thomas_romm",
+          "land": "AT",
+          "name": "Thomas Romm",
+          "name_full": "Thomas Romm — architect / founder of BauKarussell",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "actor_registry_order": 91,
+          "akteur_kontext_text": "BauKarussell / Romm ZT",
+          "id": "thomas_romm",
+          "name": "Thomas Romm",
+          "reuse_relevanz_text": "BauKarussell: Social Urban Mining, selektiver Rückbau und Reuse-Kette mit realen Großprojekten.",
+          "source_file": "akteursliste_master.md",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "thomas_romm",
+      "line": 34,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ed_zueblin_ag",
+          "land": "DE",
+          "name": "Ed. Züblin AG",
+          "name_full": "Ed. Züblin AG — Praxispartner (Stuttgart 210; parent of ZÜBLIN Timber)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "ed_zueblin_ag",
+      "line": 35,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "faltlhauser_krapf",
+          "land": "DE",
+          "name": "Faltlhauser Krapf",
+          "name_full": "Faltlhauser Krapf — structural engineer (Jugendtreff Ingersheim)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "faltlhauser_krapf",
+      "line": 36,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mlr_bw",
+          "land": "DE",
+          "name": "MLR BW",
+          "name_full": "Ministerium für Ernährung, Ländlichen Raum und Verbraucherschutz Baden-Württemberg — funder",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "mlr_bw",
+      "line": 37,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "will_shannon",
+          "land": "GB",
+          "name": "Will Shannon",
+          "name_full": "Will Shannon — collaborator on Granby Rock terrazzo development",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "will_shannon",
+      "line": 38,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "granby_workshop_cic",
+          "land": "GB",
+          "name": "Granby Workshop CIC",
+          "name_full": "Granby Workshop CIC — operator / manufacturer",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "granby_workshop_cic",
+      "line": 39,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "granby_4_streets_clt",
+          "land": "GB",
+          "name": "Granby 4 Streets CLT",
+          "name_full": "Granby 4 Streets CLT — community land trust collaborator",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "granby_4_streets_clt",
+      "line": 40,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "traject",
+          "land": "NL",
+          "name": "TRAJECT",
+          "name_full": "TRAJECT — Circl construction-team coordinator",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "traject",
+      "line": 41,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "vermaat",
+          "land": "NL",
+          "name": "Vermaat",
+          "name_full": "Vermaat — Circl circular catering operator",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "vermaat",
+      "line": 42,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "exasun",
+          "land": "NL",
+          "name": "Exasun",
+          "name_full": "Exasun — Circl solar panel supplier",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "exasun",
+      "line": 43,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "fagerhult",
+          "land": "SE",
+          "name": "Fagerhult",
+          "name_full": "Fagerhult — Circl DC lighting supplier (leased)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "fagerhult",
+      "line": 44,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "de_groot_en_visser",
+          "land": "NL",
+          "name": "De Groot & Visser",
+          "name_full": "De Groot & Visser — Circl façade / solar boiler",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "de_groot_en_visser",
+          "name": "De Groot & Visser"
+        }
+      },
+      "id": "de_groot_en_visser",
+      "line": 45,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "victory_group",
+          "land": "NL",
+          "name": "Victory Group",
+          "name_full": "Victory Group — owner of ABN AMRO complex including Circl post-2024",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "victory_group",
+      "line": 46,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ter_velde_den_besten",
+          "land": "NL",
+          "name": "Ter Velde & Den Besten",
+          "name_full": "Ter Velde & Den Besten — 3D laser scanning provider (Circl digital twin)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "ter_velde_den_besten",
+      "line": 47,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "michelle_schneider_zhaw",
+          "land": "CH",
+          "name": "Michelle Schneider",
+          "name_full": "Michelle Schneider — author / concept / graphics at ZHAW IKE",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "michelle_schneider_zhaw",
+      "line": 48,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "felix_dillmann",
+          "land": "CH",
+          "name": "Félix Dillmann",
+          "name_full": "Félix Dillmann — author / concept / graphics at Verein RE-WIN",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "actor_registry_order": 103,
+          "actor_registry_section": "Organisation / Bildung / Wissenstransfer",
+          "akteur_kontext_text": "RE-WIN / Nomol",
+          "id": "felix_dillmann",
+          "name": "Félix Dillmann",
+          "reuse_relevanz_text": "RE-WIN/Nomol: Netzwerk- und Projektarbeit zu Bauteil-Wiederverwendung; eher Organisation/Kette als Tragwerk.",
+          "source_file": "akteursliste_master.md",
+          "source_scope": "actor_registry"
+        }
+      },
+      "id": "felix_dillmann",
+      "line": 49,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "elena_sischarenco",
+          "land": "CH",
+          "name": "Elena Sischarenco",
+          "name_full": "Elena Sischarenco — Urban Bricolage core team",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "elena_sischarenco",
+      "line": 50,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "vanessa_feri",
+          "land": "CH",
+          "name": "Vanessa Feri",
+          "name_full": "Vanessa Feri — Urban Bricolage core team",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "vanessa_feri",
+      "line": 51,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "adam_przywara",
+          "land": "CH",
+          "name": "Adam Przywara",
+          "name_full": "Adam Przywara — Urban Bricolage core team",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "adam_przywara",
+      "line": 52,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rahel_jud",
+          "land": "CH",
+          "name": "Rahel Jud",
+          "name_full": "Rahel Jud — Urban Bricolage core team",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "rahel_jud",
+      "line": 53,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "valerie_jamet",
+          "land": "FR",
+          "name": "Valérie Jamet",
+          "name_full": "Valérie Jamet — DGD de La Fab",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "valerie_jamet",
+      "line": 54,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "aurelie_heraut",
+          "land": "FR",
+          "name": "Aurélie Héraut",
+          "name_full": "Aurélie Héraut — directrice de projet, REFAIR pilot at La Fab",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "aurelie_heraut",
+      "line": 55,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "jerome_goze",
+          "land": "FR",
+          "name": "Jérôme Goze",
+          "name_full": "Jérôme Goze — Directeur Général Délégué La Fab",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "jerome_goze",
+      "line": 56,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "collectif_cancan",
+          "land": "FR",
+          "name": "Collectif CANCAN",
+          "name_full": "Collectif CANCAN — architect maîtrise d'œuvre for Base du Réemploi",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "collectif_cancan",
+      "line": 57,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "julius_schaeufele",
+          "land": "DE",
+          "name": "Julius Schäufele",
+          "name_full": "Julius Schäufele — Geschäftsführer Concular GmbH",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "julius_schaeufele",
+      "line": 58,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lenard_da_costa_kurek",
+          "land": "DE",
+          "name": "Lenard da Costa Kurek",
+          "name_full": "Lenard da Costa Kurek — RCMI article co-author at Concular",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "lenard_da_costa_kurek",
+      "line": 59,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "salvo_ltd",
+          "land": "GB",
+          "name": "Salvo Ltd",
+          "name_full": "Salvo Ltd — UK reclamation directory and marketplace (FCRBE partner)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "salvo_ltd",
+      "line": 60,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "embuild",
+          "land": "BE",
+          "name": "Embuild",
+          "name_full": "Embuild — Belgian construction federation (FCRBE partner)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "embuild",
+      "line": 61,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "buildwise",
+          "land": "BE",
+          "name": "Buildwise",
+          "name_full": "Buildwise — Belgian Building Research Institute partner (FCRBE)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "buildwise",
+      "line": 62,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cstb",
+          "land": "FR",
+          "name": "CSTB",
+          "name_full": "CSTB — Centre Scientifique et Technique du Bâtiment (France, FCRBE)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "cstb",
+      "line": 63,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "brussels_environment",
+          "land": "BE",
+          "name": "Brussels Environment",
+          "name_full": "Brussels Environment (Bruxelles Environnement) — FCRBE partner",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "brussels_environment",
+      "line": 64,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "university_of_brighton",
+          "land": "GB",
+          "name": "Univ. of Brighton",
+          "name_full": "University of Brighton — UK academic partner (FCRBE)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "university_of_brighton",
+          "name": "University of Brighton",
+          "source_scope": "actor_registry_context"
+        }
+      },
+      "id": "university_of_brighton",
+      "line": 65,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "city_of_utrecht",
+          "land": "NL",
+          "name": "City of Utrecht",
+          "name_full": "City of Utrecht — NL public-authority partner (FCRBE)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "city_of_utrecht",
+      "line": 66,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bellastock",
+          "land": "FR",
+          "name": "Bellastock",
+          "name_full": "Bellastock — French reuse architecture/research collective (FCRBE partner)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bellastock",
+      "line": 67,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing": 7,
+    "records": 67,
+    "would_create": 60
+  }
+}

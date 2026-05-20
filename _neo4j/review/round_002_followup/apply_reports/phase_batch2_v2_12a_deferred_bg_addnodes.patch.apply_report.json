@@ -1,0 +1,422 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_12a_deferred_bg_addnodes.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2317,
+    "relationships": 17035
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T08:00:37.589905+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_12a_deferred_bg_addnodes.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
+          "name": "Circl PCM-Fliesen",
+          "name_full": "Circl — Tile floors from reused concrete with PCM",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_recyclingbeton",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
+          "name": "Circl ABN-Möbel",
+          "name_full": "Circl — Restored ABN AMRO furniture (intra-konzern reuse)",
+          "primary_bauteiltyp_id": "bt_ausbau",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_mehrere_technik_circl_leased_lifts",
+          "name": "Circl Mietaufzüge",
+          "name_full": "Circl — Leased lifts (product-service system, supplier ownership, 10-year return)",
+          "primary_bauteiltyp_id": "bt_technik",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_mehrere_technik_circl_leased_lifts",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_mehrere_technik_circl_leased_lighting",
+          "name": "Circl Mietbeleuchtung",
+          "name_full": "Circl — Leased Fagerhult DC lighting (product-service system)",
+          "primary_bauteiltyp_id": "bt_technik",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_mehrere_technik_circl_leased_lighting",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
+          "name": "Circl Tarkett C2C",
+          "name_full": "Circl — C2C-certified Tarkett iQ One flooring",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_kunststoff",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_mehrere_fassade_circl_remountable_facade",
+          "name": "Circl Remont. Fass.",
+          "name_full": "Circl — Remountable façade with C2C-certified plant modules (De Groot & Visser + Donkergroen)",
+          "primary_bauteiltyp_id": "bt_fassade",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_mehrere_fassade_circl_remountable_facade",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_dismantled_mehrere_boden_circl_floor_structure",
+          "name": "Circl Bodenaufbau",
+          "name_full": "Circl — Floor structure (less suitable for reuse than anticipated per Icon dismantling progress)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "dismantled",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_dismantled_mehrere_boden_circl_floor_structure",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
+          "name": "Circl Bepflanzung",
+          "name_full": "Circl — Roof terrace + garden planting harvested by local residents (Stichting Struikroven)",
+          "primary_bauteiltyp_id": "bt_dach",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
+          "name": "MedUni Fahrradwerkst.",
+          "name_full": "MedUni Mariannengasse — Bike workshop equipment (donor batch)",
+          "primary_bauteiltyp_id": "bt_ausbau",
+          "primary_material_id": "mat_stahl",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
+          "name": "MedUni Schwerlastreg.",
+          "name_full": "MedUni Mariannengasse — Heavy-duty shelves (donor batch)",
+          "primary_bauteiltyp_id": "bt_ausbau",
+          "primary_material_id": "mat_stahl",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_dismantled_glas_technik_medunicampus_fluorescent",
+          "name": "MedUni Leuchtstoffr.",
+          "name_full": "MedUni Mariannengasse — Fluorescent tubes (hazardous removal, not reuse)",
+          "primary_bauteiltyp_id": "bt_technik",
+          "primary_material_id": "mat_glas",
+          "reuse_status": "dismantled",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_dismantled_glas_technik_medunicampus_fluorescent",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_holz_mehrere_beware_local_timber",
+          "name": "BE-WARE Altholz",
+          "name_full": "Reallabor B(e) Ware Berlin — Local secondary timber for structural systems (central storage Spandau)",
+          "primary_bauteiltyp_id": "bt_traeger",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_mehrere_beware_local_timber",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_holz_mehrere_beware_tulium_trusses",
+          "name": "TULIUM Altholz-Träger",
+          "name_full": "TULIUM museum pavilion (BE-WARE) — Wide-span lattice beams from old timber (reversible steel-poor system)",
+          "primary_bauteiltyp_id": "bt_traeger",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_mehrere_beware_tulium_trusses",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_planned_mehrere_fundament_beware_flying_foundation",
+          "name": "BE-WARE Flugfundam.",
+          "name_full": "TULIUM (BE-WARE) — Flying foundation with recycled RC elements (low-concrete, no slab sealing)",
+          "primary_bauteiltyp_id": "bt_fundament",
+          "primary_material_id": "mat_recyclingbeton",
+          "reuse_status": "planned",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_planned_mehrere_fundament_beware_flying_foundation",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
+          "name": "RE-WIN Ukraine-Fenster",
+          "name_full": "RE-USE Höfe — Windows for Ukraine: salvaged window frames from CH demolitions → humanitarian reuse Ukraine",
+          "primary_bauteiltyp_id": "bt_fenster",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
+          "name": "RE-USE Höfe Logistik",
+          "name_full": "RE-USE Höfe — yard logistics / supply-chain model (collection, storage, distribution)",
+          "primary_bauteiltyp_id": "bt_mehrere",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
+      "line": 16,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
+          "name": "Ingersheim CLT-Ausbau",
+          "name_full": "Jugendtreff Ingersheim — CLT offcuts used for secondary fit-out elements",
+          "primary_bauteiltyp_id": "bt_ausbau",
+          "primary_material_id": "mat_holz",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
+      "line": 17,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_mehrere_boden_granby_bespoke_waste",
+          "name": "Granby Abfallmix",
+          "name_full": "Granby Workshop — bespoke waste-stream terrazzo mixes (client-supplied materials or workshop materials)",
+          "primary_bauteiltyp_id": "bt_boden",
+          "primary_material_id": "mat_mehrere",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_mehrere_boden_granby_bespoke_waste",
+      "line": 18,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteilgruppe"
+        ],
+        "properties": {
+          "id": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
+          "name": "Granby Ersthausprod.",
+          "name_full": "Granby Workshop — first products (bathroom tiles, door handles, fireplaces) made in Granby for renovated houses",
+          "primary_bauteiltyp_id": "bt_ausbau",
+          "primary_material_id": "mat_keramik",
+          "reuse_status": "reuse",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
+      "line": 19,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 19,
+    "would_create": 19
+  }
+}
