@@ -1,0 +1,34 @@
+[2026-05-20T20:54:05+00:00] connecting to bolt://localhost:7687 db='mit-bestand' as user='neo4j'
+[2026-05-20T20:54:07+00:00] precheck: gathering live counts
+[2026-05-20T20:54:08+00:00] precheck snapshot: {"total_nodes": 2442, "total_rels": 19714, "anchors_as_quelle": 2, "anchors_as_ontology_anchor": 0, "belegt_in_to_anchors": 716, "anchored_by_to_anchors": 0, "deg0_quelle": 1, "hat_marktmodell_with_propagated_excerpt": 319, "hat_marktmodell_with_propagated_basis": 0, "hat_dominant_marktmodell": 86, "hat_dominant_akzeptanz": 24}
+[2026-05-20T20:57:47+00:00] connecting to bolt://localhost:7687 db='mit-bestand' as user='neo4j'
+[2026-05-20T20:57:49+00:00] precheck: gathering live counts
+[2026-05-20T20:57:49+00:00] precheck snapshot: {"total_nodes": 2442, "total_rels": 19714, "anchors_as_quelle": 2, "anchors_as_ontology_anchor": 0, "belegt_in_to_anchors": 716, "anchored_by_to_anchors": 0, "deg0_quelle": 1, "hat_marktmodell_with_propagated_excerpt": 319, "hat_marktmodell_with_propagated_basis": 0, "hat_dominant_marktmodell": 86, "hat_dominant_akzeptanz": 24}
+[2026-05-20T20:57:49+00:00] observed 1 deg-0 Quelle (plan expected 21 by 1.2.c; Phase 1.5 already removed the 21 named IDs — any remaining are Phase-1.1 collateral and will be deleted).
+[2026-05-20T20:57:49+00:00] --- Phase 1.2: parsing mig_1_2_anchor_relabel.cypher
+[2026-05-20T20:57:49+00:00] --- Phase 1.2: 3 statements parsed
+[2026-05-20T20:57:49+00:00]     [Phase 1.2 #1/3] MATCH (q:Quelle) WHERE q.id IN ['q_controlled_vocab_seed', 'q_akteursliste_master_md'] REMOVE q:Quelle SET q:OntologyAnc
+[2026-05-20T20:57:49+00:00]         rows=2  counters={'nodes_created': 0, 'nodes_deleted': 0, 'relationships_created': 0, 'relationships_deleted': 0, 'labels_added': 2, 'labels_removed': 2, 'properties_set': 0}
+[2026-05-20T20:57:49+00:00]         first_row={"relabelled_id": "q_controlled_vocab_seed", "new_labels": ["OntologyAnchor"]}
+[2026-05-20T20:57:49+00:00]     [Phase 1.2 #2/3] MATCH (n)-[r:BELEGT_IN]->(a:OntologyAnchor) CREATE (n)-[r2:ANCHORED_BY]->(a) SET r2 = { evidence_origin: 'derived', evid
+[2026-05-20T20:57:49+00:00]         rows=1  counters={'nodes_created': 0, 'nodes_deleted': 0, 'relationships_created': 716, 'relationships_deleted': 716, 'labels_added': 0, 'labels_removed': 0, 'properties_set': 2864}
+[2026-05-20T20:57:49+00:00]         first_row={"belegt_in_to_anchored_by": 716}
+[2026-05-20T20:57:49+00:00]     [Phase 1.2 #3/3] MATCH (q:Quelle) WHERE NOT exists { (q)<-[]-() } AND NOT exists { (q)-[]->() } WITH q, q.id AS deleted_id DELETE q RETUR
+[2026-05-20T20:57:49+00:00]         rows=1  counters={'nodes_created': 0, 'nodes_deleted': 1, 'relationships_created': 0, 'relationships_deleted': 0, 'labels_added': 0, 'labels_removed': 0, 'properties_set': 0}
+[2026-05-20T20:57:49+00:00]         first_row={"quelle_deleted": 1, "deleted_ids": ["q_phase20_kette_autodiscovery"]}
+[2026-05-20T20:57:49+00:00] --- Phase 1.3: parsing mig_1_3_flag_propagated.cypher
+[2026-05-20T20:57:49+00:00] --- Phase 1.3: 3 statements parsed
+[2026-05-20T20:57:49+00:00]     [Phase 1.3 #1/3] MATCH ()-[r:HAT_MARKTMODELL]->() WHERE r.source_excerpt CONTAINS 'propagated' WITH r, r.source_excerpt AS original_excer
+[2026-05-20T20:57:50+00:00]         rows=1  counters={'nodes_created': 0, 'nodes_deleted': 0, 'relationships_created': 0, 'relationships_deleted': 0, 'labels_added': 0, 'labels_removed': 0, 'properties_set': 1595}
+[2026-05-20T20:57:50+00:00]         first_row={"hat_marktmodell_flagged": 319}
+[2026-05-20T20:57:50+00:00]     [Phase 1.3 #2/3] MATCH ()-[r:HAT_DOMINANT_MARKTMODELL]->() DELETE r RETURN count(*) AS hat_dominant_marktmodell_deleted
+[2026-05-20T20:57:50+00:00]         rows=1  counters={'nodes_created': 0, 'nodes_deleted': 0, 'relationships_created': 0, 'relationships_deleted': 86, 'labels_added': 0, 'labels_removed': 0, 'properties_set': 0}
+[2026-05-20T20:57:50+00:00]         first_row={"hat_dominant_marktmodell_deleted": 86}
+[2026-05-20T20:57:50+00:00]     [Phase 1.3 #3/3] MATCH ()-[r:HAT_DOMINANT_AKZEPTANZ]->() DELETE r RETURN count(*) AS hat_dominant_akzeptanz_deleted
+[2026-05-20T20:57:50+00:00]         rows=1  counters={'nodes_created': 0, 'nodes_deleted': 0, 'relationships_created': 0, 'relationships_deleted': 24, 'labels_added': 0, 'labels_removed': 0, 'properties_set': 0}
+[2026-05-20T20:57:50+00:00]         first_row={"hat_dominant_akzeptanz_deleted": 24}
+[2026-05-20T20:57:50+00:00] precheck: gathering live counts
+[2026-05-20T20:57:50+00:00] precheck snapshot: {"total_nodes": 2441, "total_rels": 19604, "anchors_as_quelle": 0, "anchors_as_ontology_anchor": 2, "belegt_in_to_anchors": 0, "anchored_by_to_anchors": 716, "deg0_quelle": 0, "hat_marktmodell_with_propagated_excerpt": 0, "hat_marktmodell_with_propagated_basis": 319, "hat_dominant_marktmodell": 0, "hat_dominant_akzeptanz": 0}
+[2026-05-20T20:57:50+00:00] wrote done flag: PHASE_1_2_DONE.flag
+[2026-05-20T20:57:50+00:00] wrote done flag: PHASE_1_3_DONE.flag
+[2026-05-20T20:57:50+00:00] DONE  nodes 2442->2441 (-1) rels 19714->19604 (-110) elapsed=2.87s

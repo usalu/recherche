@@ -1,0 +1,161 @@
+{
+  "started_at": "2026-05-20T20:57:47+00:00",
+  "before": {
+    "total_nodes": 2442,
+    "total_rels": 19714,
+    "anchors_as_quelle": 2,
+    "anchors_as_ontology_anchor": 0,
+    "belegt_in_to_anchors": 716,
+    "anchored_by_to_anchors": 0,
+    "deg0_quelle": 1,
+    "hat_marktmodell_with_propagated_excerpt": 319,
+    "hat_marktmodell_with_propagated_basis": 0,
+    "hat_dominant_marktmodell": 86,
+    "hat_dominant_akzeptanz": 24
+  },
+  "phase_1_2": {
+    "skipped": false,
+    "statements": [
+      {
+        "statement_index": 1,
+        "statement_preview": "MATCH (q:Quelle) WHERE q.id IN ['q_controlled_vocab_seed', 'q_akteursliste_master_md'] REMOVE q:Quelle SET q:OntologyAnc",
+        "rows": [
+          {
+            "relabelled_id": "q_controlled_vocab_seed",
+            "new_labels": [
+              "OntologyAnchor"
+            ]
+          },
+          {
+            "relabelled_id": "q_akteursliste_master_md",
+            "new_labels": [
+              "OntologyAnchor"
+            ]
+          }
+        ],
+        "counters": {
+          "nodes_created": 0,
+          "nodes_deleted": 0,
+          "relationships_created": 0,
+          "relationships_deleted": 0,
+          "labels_added": 2,
+          "labels_removed": 2,
+          "properties_set": 0
+        }
+      },
+      {
+        "statement_index": 2,
+        "statement_preview": "MATCH (n)-[r:BELEGT_IN]->(a:OntologyAnchor) CREATE (n)-[r2:ANCHORED_BY]->(a) SET r2 = { evidence_origin: 'derived', evid",
+        "rows": [
+          {
+            "belegt_in_to_anchored_by": 716
+          }
+        ],
+        "counters": {
+          "nodes_created": 0,
+          "nodes_deleted": 0,
+          "relationships_created": 716,
+          "relationships_deleted": 716,
+          "labels_added": 0,
+          "labels_removed": 0,
+          "properties_set": 2864
+        }
+      },
+      {
+        "statement_index": 3,
+        "statement_preview": "MATCH (q:Quelle) WHERE NOT exists { (q)<-[]-() } AND NOT exists { (q)-[]->() } WITH q, q.id AS deleted_id DELETE q RETUR",
+        "rows": [
+          {
+            "quelle_deleted": 1,
+            "deleted_ids": [
+              "q_phase20_kette_autodiscovery"
+            ]
+          }
+        ],
+        "counters": {
+          "nodes_created": 0,
+          "nodes_deleted": 1,
+          "relationships_created": 0,
+          "relationships_deleted": 0,
+          "labels_added": 0,
+          "labels_removed": 0,
+          "properties_set": 0
+        }
+      }
+    ]
+  },
+  "phase_1_3": {
+    "skipped": false,
+    "statements": [
+      {
+        "statement_index": 1,
+        "statement_preview": "MATCH ()-[r:HAT_MARKTMODELL]->() WHERE r.source_excerpt CONTAINS 'propagated' WITH r, r.source_excerpt AS original_excer",
+        "rows": [
+          {
+            "hat_marktmodell_flagged": 319
+          }
+        ],
+        "counters": {
+          "nodes_created": 0,
+          "nodes_deleted": 0,
+          "relationships_created": 0,
+          "relationships_deleted": 0,
+          "labels_added": 0,
+          "labels_removed": 0,
+          "properties_set": 1595
+        }
+      },
+      {
+        "statement_index": 2,
+        "statement_preview": "MATCH ()-[r:HAT_DOMINANT_MARKTMODELL]->() DELETE r RETURN count(*) AS hat_dominant_marktmodell_deleted",
+        "rows": [
+          {
+            "hat_dominant_marktmodell_deleted": 86
+          }
+        ],
+        "counters": {
+          "nodes_created": 0,
+          "nodes_deleted": 0,
+          "relationships_created": 0,
+          "relationships_deleted": 86,
+          "labels_added": 0,
+          "labels_removed": 0,
+          "properties_set": 0
+        }
+      },
+      {
+        "statement_index": 3,
+        "statement_preview": "MATCH ()-[r:HAT_DOMINANT_AKZEPTANZ]->() DELETE r RETURN count(*) AS hat_dominant_akzeptanz_deleted",
+        "rows": [
+          {
+            "hat_dominant_akzeptanz_deleted": 24
+          }
+        ],
+        "counters": {
+          "nodes_created": 0,
+          "nodes_deleted": 0,
+          "relationships_created": 0,
+          "relationships_deleted": 24,
+          "labels_added": 0,
+          "labels_removed": 0,
+          "properties_set": 0
+        }
+      }
+    ]
+  },
+  "after": {
+    "total_nodes": 2441,
+    "total_rels": 19604,
+    "anchors_as_quelle": 0,
+    "anchors_as_ontology_anchor": 2,
+    "belegt_in_to_anchors": 0,
+    "anchored_by_to_anchors": 716,
+    "deg0_quelle": 0,
+    "hat_marktmodell_with_propagated_excerpt": 0,
+    "hat_marktmodell_with_propagated_basis": 319,
+    "hat_dominant_marktmodell": 0,
+    "hat_dominant_akzeptanz": 0
+  },
+  "finished_at": "2026-05-20T20:57:50+00:00",
+  "elapsed_seconds": 2.8680211000028066
+}

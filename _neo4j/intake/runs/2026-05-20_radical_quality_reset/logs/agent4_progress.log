@@ -1,0 +1,34 @@
+[2026-05-20T20:52:56+00:00] connecting to bolt://localhost:7687 db='mit-bestand' as user='neo4j'
+[2026-05-20T20:52:58+00:00] PHASE 1.4 — Relabel Bauwerk -> Materialdepot
+[2026-05-20T20:52:58+00:00]   relabelled 23 :Bauwerk -> :Materialdepot
+[2026-05-20T20:52:58+00:00]   BETRIEBEN_VON edges (touched, may include existing): 4
+[2026-05-20T20:52:58+00:00] PHASE 1.4 done: {'phase': '1.4', 'before_bauwerk': 209, 'after_bauwerk': 186, 'before_materialdepot': 0, 'after_materialdepot': 23, 'relabelled': 23, 'betrieben_von_touched': 4, 'expected_relabelled': 23}
+[2026-05-20T20:52:58+00:00] wrote PHASE_1_4_DONE.flag
+[2026-05-20T20:52:58+00:00] PHASE 1.5 — Surgical deletes (journal first, then DETACH DELETE)
+[2026-05-20T20:52:58+00:00]   before: {'Akteur': 660, 'Programm': 28, 'Norm': 36, 'Quelle': 486}
+[2026-05-20T20:52:58+00:00]   journalled: Akteur=6 Programm=4 Norm=2 Quelle=21 total=33
+[2026-05-20T20:52:58+00:00]   deleted Akteur: 6
+[2026-05-20T20:52:58+00:00]   deleted Programm: 4
+[2026-05-20T20:52:58+00:00]   deleted Norm: 2
+[2026-05-20T20:52:58+00:00]   deleted Quelle: 21
+[2026-05-20T20:52:58+00:00]   after: {'Akteur': 654, 'Programm': 24, 'Norm': 34, 'Quelle': 465}
+[2026-05-20T20:52:58+00:00]   deleted by label: {'Akteur': 6, 'Programm': 4, 'Norm': 2, 'Quelle': 21}
+[2026-05-20T20:52:58+00:00] wrote PHASE_1_5_DONE.flag
+[2026-05-20T20:52:58+00:00] PHASE 1.6 — Akteur merges (apoc.refactor.mergeNodes)
+[2026-05-20T20:52:59+00:00]   MERGE baubuero_in_situ (deg 11) <- bauburo_in_situ (deg 15)
+[2026-05-20T20:52:59+00:00]     -> id=['baubuero_in_situ', 'bauburo_in_situ'], combined_degree=23, aliases=['bauburo_in_situ']
+[2026-05-20T20:52:59+00:00]   MERGE plp_architecture (deg 7) <- ak_plp_architecture (deg 6)
+[2026-05-20T20:52:59+00:00]     -> id=['plp_architecture', 'ak_plp_architecture'], combined_degree=11, aliases=['ak_plp_architecture']
+[2026-05-20T20:52:59+00:00]   MERGE ZRS_Architekten_Ingenieure (deg 9) <- zrs_architekten (deg 2)
+[2026-05-20T20:52:59+00:00]     -> id=['ZRS_Architekten_Ingenieure', 'zrs_architekten'], combined_degree=9, aliases=['zrs_architekten']
+[2026-05-20T20:52:59+00:00]   MERGE loeliger_strub (deg 8) <- loeliger_strub_architektur (deg 4)
+[2026-05-20T20:52:59+00:00]     -> id=['loeliger_strub', 'loeliger_strub_architektur'], combined_degree=10, aliases=['loeliger_strub_architektur']
+[2026-05-20T20:52:59+00:00]   MERGE zedfactory_bill_dunster (deg 4) <- bill_dunster_zedfactory (deg 2)
+[2026-05-20T20:52:59+00:00]     -> id=['zedfactory_bill_dunster', 'bill_dunster_zedfactory'], combined_degree=4, aliases=['bill_dunster_zedfactory']
+[2026-05-20T20:52:59+00:00]   MERGE opera (deg 4) <- opera_pm (deg 4)
+[2026-05-20T20:52:59+00:00]     -> id=['opera', 'opera_pm'], combined_degree=7, aliases=['opera_pm']
+[2026-05-20T20:52:59+00:00]   MERGE bellastock (deg 5) <- Bellastock (deg 23)
+[2026-05-20T20:52:59+00:00]     -> id=['bellastock', 'Bellastock'], combined_degree=26, aliases=['Bellastock']
+[2026-05-20T20:52:59+00:00] PHASE 1.6 done: Akteur 654 -> 647
+[2026-05-20T20:52:59+00:00] wrote PHASE_1_6_DONE.flag
+[2026-05-20T20:52:59+00:00] agent4 runner: ALL PHASES COMPLETE

@@ -1,0 +1,207 @@
+{
+  "phase": "2.4",
+  "completed_at": "2026-05-20T21:14:06+00:00",
+  "before": {
+    "total_nodes": 2410,
+    "total_rels": 19531,
+    "label_state": {
+      "Projekt": {
+        "node_count": 91,
+        "distinct_keys": 412,
+        "key_pairs": 1572,
+        "max_keys_per_node": 36,
+        "avg_keys_per_node": 17.274725274725274
+      },
+      "Bauteilgruppe": {
+        "node_count": 369,
+        "distinct_keys": 140,
+        "key_pairs": 4579,
+        "max_keys_per_node": 22,
+        "avg_keys_per_node": 12.409214092140937
+      },
+      "Bauwerk": {
+        "node_count": 186,
+        "distinct_keys": 58,
+        "key_pairs": 971,
+        "max_keys_per_node": 13,
+        "avg_keys_per_node": 5.220430107526881
+      },
+      "Materialdepot": {
+        "node_count": 23,
+        "distinct_keys": 16,
+        "key_pairs": 121,
+        "max_keys_per_node": 7,
+        "avg_keys_per_node": 5.2608695652173925
+      },
+      "Quelle": {
+        "node_count": 462,
+        "distinct_keys": 10,
+        "key_pairs": 3109,
+        "max_keys_per_node": 8,
+        "avg_keys_per_node": 6.72943722943723
+      },
+      "Akteur": {
+        "node_count": 647,
+        "distinct_keys": 15,
+        "key_pairs": 2770,
+        "max_keys_per_node": 9,
+        "avg_keys_per_node": 4.281298299845436
+      }
+    },
+    "projekt_year_completed_filled": 42,
+    "projekt_area_m2_gross_filled": 36,
+    "projekt_cost_facts_filled": 7,
+    "projekt_co2_facts_filled": 20,
+    "projekt_reuse_share_facts_filled": 7,
+    "projekt_archive_filled": 0,
+    "bg_archive_filled": 0,
+    "bauwerk_archive_filled": 0,
+    "materialdepot_archive_filled": 0,
+    "quelle_archive_filled": 0,
+    "akteur_archive_filled": 0,
+    "quelle_external_sources_count": 60,
+    "akteur_raw_role_evidence_count": 155,
+    "zitiert_quelle_count": 370,
+    "polluted_edges_with_origin_null": 4948,
+    "polluted_edges_total": 5267,
+    "bg_with_menge_source_mig_2_4": 11
+  },
+  "after": {
+    "total_nodes": 2410,
+    "total_rels": 19531,
+    "label_state": {
+      "Projekt": {
+        "node_count": 91,
+        "distinct_keys": 404,
+        "key_pairs": 1562,
+        "max_keys_per_node": 36,
+        "avg_keys_per_node": 17.164835164835168
+      },
+      "Bauteilgruppe": {
+        "node_count": 369,
+        "distinct_keys": 140,
+        "key_pairs": 4579,
+        "max_keys_per_node": 22,
+        "avg_keys_per_node": 12.409214092140937
+      },
+      "Bauwerk": {
+        "node_count": 186,
+        "distinct_keys": 58,
+        "key_pairs": 971,
+        "max_keys_per_node": 13,
+        "avg_keys_per_node": 5.220430107526881
+      },
+      "Materialdepot": {
+        "node_count": 23,
+        "distinct_keys": 16,
+        "key_pairs": 121,
+        "max_keys_per_node": 7,
+        "avg_keys_per_node": 5.2608695652173925
+      },
+      "Quelle": {
+        "node_count": 462,
+        "distinct_keys": 10,
+        "key_pairs": 3109,
+        "max_keys_per_node": 8,
+        "avg_keys_per_node": 6.72943722943723
+      },
+      "Akteur": {
+        "node_count": 647,
+        "distinct_keys": 15,
+        "key_pairs": 2770,
+        "max_keys_per_node": 9,
+        "avg_keys_per_node": 4.281298299845436
+      }
+    },
+    "projekt_year_completed_filled": 42,
+    "projekt_area_m2_gross_filled": 36,
+    "projekt_cost_facts_filled": 7,
+    "projekt_co2_facts_filled": 20,
+    "projekt_reuse_share_facts_filled": 7,
+    "projekt_archive_filled": 0,
+    "bg_archive_filled": 0,
+    "bauwerk_archive_filled": 0,
+    "materialdepot_archive_filled": 0,
+    "quelle_archive_filled": 0,
+    "akteur_archive_filled": 0,
+    "quelle_external_sources_count": 60,
+    "akteur_raw_role_evidence_count": 155,
+    "zitiert_quelle_count": 370,
+    "polluted_edges_with_origin_null": 4948,
+    "polluted_edges_total": 5267,
+    "bg_with_menge_source_mig_2_4": 11
+  },
+  "payload": {
+    "projekt_collapse_applied": 0,
+    "projekt_collapse_skipped_idempotent": 91,
+    "counter_migrations": [
+      {
+        "counter_key": "reuse_deckenplatten_anzahl",
+        "projekt_id": "p_broethen_twin_house_hoyerswerda",
+        "bg_id": "bg_reuse_stahlbeton_decke_broethen_p2_deckenplatten",
+        "menge_stueck": 50
+      },
+      {
+        "counter_key": "reuse_wandplatten_anzahl",
+        "projekt_id": "p_broethen_twin_house_hoyerswerda",
+        "bg_id": "bg_reuse_stahlbeton_wand_broethen_p2_wandplatten",
+        "menge_stueck": 26
+      },
+      {
+        "counter_key": "wiederverwendete_fertigteile_anzahl",
+        "projekt_id": "p_association_house_groeditz",
+        "bg_id": "bg_reuse_stahlbeton_mehrere_groeditz_dresden_type_precast_components",
+        "menge_stueck": 438
+      },
+      {
+        "counter_key": "wiederverwendete_fertigteile_anzahl",
+        "projekt_id": "p_association_house_groeditz",
+        "bg_id": "bg_reuse_stahlbeton_mehrere_groeditz_wbs70_precast_panels",
+        "menge_stueck": 438
+      },
+      {
+        "counter_key": "wiederverwendete_fertigteile_anzahl",
+        "projekt_id": "p_association_house_plauen",
+        "bg_id": "bg_reuse_stahlbeton_mehrere_plauen_iw73_6_precast_components",
+        "menge_stueck": 189
+      },
+      {
+        "counter_key": "fenster_anzahl",
+        "projekt_id": "p_elys_kultur_gewerbehaus_basel",
+        "bg_id": "bg_reuse_glas_mehrere_elys_restposten_windows",
+        "menge_stueck": 200
+      },
+      {
+        "counter_key": "holztueren_anzahl",
+        "projekt_id": "p_circular_pavilion_paris",
+        "bg_id": "bg_reuse_holz_mehrere_circular_pavilion_doors_facade",
+        "menge_stueck": 180
+      },
+      {
+        "counter_key": "leuchten_anzahl",
+        "projekt_id": "p_circular_pavilion_paris",
+        "bg_id": "bg_reuse_unbekannt_technik_circular_pavilion_lights",
+        "menge_stueck": 4
+      },
+      {
+        "counter_key": "teppichfliesen_anzahl",
+        "projekt_id": "p_brighton_waste_house_brighton",
+        "bg_id": "bg_reuse_mehrere_mehrere_brighton_teppichfliesen_fassade",
+        "menge_stueck": 2000
+      },
+      {
+        "counter_key": "granitfliesen_anzahl",
+        "projekt_id": "p_multi_brussels_reuse_in_multi",
+        "bg_id": "bg_reuse_naturstein_boden_multi_granite_natural_tiles",
+        "menge_stueck": 400
+      },
+      {
+        "counter_key": "demontierte_fassadenelemente_anzahl",
+        "projekt_id": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+        "bg_id": "bg_reuse_stahlbeton_mehrere_ccn_prefab_facade_elements",
+        "menge_stueck": 350
+      }
+    ],
+    "counter_keys_removed_from_projekt": 10
+  }
+}

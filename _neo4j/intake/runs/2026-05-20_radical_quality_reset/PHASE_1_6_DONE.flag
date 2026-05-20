@@ -1,0 +1,73 @@
+{
+  "phase": "1.6",
+  "completed_at": "2026-05-20T20:52:59+00:00",
+  "fixed_up_at": "2026-05-20T20:55:00+00:00",
+  "fixup_note": "apoc.refactor.mergeNodes({properties:'combine'}) coerced the scalar `id` property into a list. Post-merge fixup (logs/agent4_fixup_merge_id.py) reset each merged node's id to the canonical scalar. The aliases array is the authoritative record of merged-in ids.",
+  "summary": {
+    "phase": "1.6",
+    "before_akteur": 654,
+    "after_akteur": 647,
+    "delta_akteur": -7,
+    "merged_pairs": [
+      {
+        "canonical_id": "baubuero_in_situ",
+        "merge_id": "bauburo_in_situ",
+        "status": "merged",
+        "resulting_id": "baubuero_in_situ",
+        "combined_degree": 23,
+        "aliases": ["bauburo_in_situ"]
+      },
+      {
+        "canonical_id": "plp_architecture",
+        "merge_id": "ak_plp_architecture",
+        "status": "merged",
+        "resulting_id": "plp_architecture",
+        "combined_degree": 11,
+        "aliases": ["ak_plp_architecture"]
+      },
+      {
+        "canonical_id": "ZRS_Architekten_Ingenieure",
+        "merge_id": "zrs_architekten",
+        "status": "merged",
+        "resulting_id": "ZRS_Architekten_Ingenieure",
+        "combined_degree": 9,
+        "aliases": ["zrs_architekten"]
+      },
+      {
+        "canonical_id": "loeliger_strub",
+        "merge_id": "loeliger_strub_architektur",
+        "status": "merged",
+        "resulting_id": "loeliger_strub",
+        "combined_degree": 10,
+        "aliases": ["loeliger_strub_architektur"]
+      },
+      {
+        "canonical_id": "zedfactory_bill_dunster",
+        "merge_id": "bill_dunster_zedfactory",
+        "status": "merged",
+        "resulting_id": "zedfactory_bill_dunster",
+        "combined_degree": 4,
+        "aliases": ["bill_dunster_zedfactory"]
+      },
+      {
+        "canonical_id": "opera",
+        "merge_id": "opera_pm",
+        "status": "merged",
+        "resulting_id": "opera",
+        "combined_degree": 7,
+        "aliases": ["opera_pm"]
+      },
+      {
+        "canonical_id": "bellastock",
+        "merge_id": "Bellastock",
+        "status": "merged",
+        "resulting_id": "bellastock",
+        "combined_degree": 26,
+        "aliases": ["Bellastock"]
+      }
+    ],
+    "journal_file": "E:\\recherche\\_neo4j\\intake\\runs\\2026-05-20_radical_quality_reset\\deleted\\phase1_6_merges.jsonl",
+    "expected_after": 647,
+    "elapsed_seconds": 0.765
+  }
+}

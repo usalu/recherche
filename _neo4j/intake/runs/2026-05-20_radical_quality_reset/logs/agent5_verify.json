@@ -1,0 +1,541 @@
+{
+  "status_nodes": [
+    {
+      "id": "status_realisiert",
+      "name": "Realisiert",
+      "kind": "lifecycle",
+      "aliases": [
+        "Gebaut",
+        "status_gebaut"
+      ],
+      "in_hat_status": 580
+    },
+    {
+      "id": "status_rueckgebaut",
+      "name": "Rueckgebaut",
+      "kind": "lifecycle",
+      "aliases": null,
+      "in_hat_status": 29
+    },
+    {
+      "id": "status_geplant",
+      "name": "Geplant",
+      "kind": "lifecycle",
+      "aliases": null,
+      "in_hat_status": 21
+    },
+    {
+      "id": "status_unklar",
+      "name": "Unklar",
+      "kind": "unknown",
+      "aliases": null,
+      "in_hat_status": 14
+    },
+    {
+      "id": "status_prototyp",
+      "name": "Prototyp",
+      "kind": "maturity",
+      "aliases": [
+        "Prototypisch",
+        "Wettbewerb",
+        "status_wettbewerb"
+      ],
+      "in_hat_status": 9
+    },
+    {
+      "id": "status_in_bau",
+      "name": "In_Bau",
+      "kind": "lifecycle",
+      "aliases": null,
+      "in_hat_status": 8
+    },
+    {
+      "id": "status_temporaer",
+      "name": "Temporaer",
+      "kind": "maturity",
+      "aliases": null,
+      "in_hat_status": 5
+    },
+    {
+      "id": "status_verworfen",
+      "name": "Verworfen",
+      "kind": "maturity",
+      "aliases": null,
+      "in_hat_status": 3
+    },
+    {
+      "id": "status_vorgeschlagen",
+      "name": "Vorgeschlagen",
+      "kind": "maturity",
+      "aliases": null,
+      "in_hat_status": 3
+    }
+  ],
+  "wva_facets": [
+    {
+      "facet": "intent",
+      "ids": [
+        "wva_adaptives_reuse",
+        "wva_design_for_disassembly"
+      ]
+    },
+    {
+      "facet": "location",
+      "ids": [
+        "wva_same_site_reuse"
+      ]
+    },
+    {
+      "facet": "sourcing",
+      "ids": [
+        "wva_bestandserhalt",
+        "wva_urban_mining",
+        "wva_weiterbauen_im_bestand"
+      ]
+    },
+    {
+      "facet": "treatment",
+      "ids": [
+        "wva_direkte_wiederverwendung",
+        "wva_recycling",
+        "wva_refurbishment",
+        "wva_remanufacturing",
+        "wva_upcycling"
+      ]
+    }
+  ],
+  "akteurrolle_post": [
+    {
+      "id": "ar_reuse_zirkularitaetsberatung",
+      "aliases": [
+        "Reuse_Beratung",
+        "ar_reuse_beratung"
+      ]
+    }
+  ],
+  "raw_role_evidence_stats": {
+    "akteurs": 155,
+    "total_strings": 166,
+    "min_per_akteur": 1,
+    "max_per_akteur": 4
+  },
+  "bauteiltyp_brand_layer": [
+    {
+      "layer": "services",
+      "bauteiltypen": [
+        "bt_technik"
+      ]
+    },
+    {
+      "layer": "skin",
+      "bauteiltypen": [
+        "bt_dach",
+        "bt_fassade",
+        "bt_fenster"
+      ]
+    },
+    {
+      "layer": "space_plan",
+      "bauteiltypen": [
+        "bt_ausbau",
+        "bt_boden",
+        "bt_gelaender",
+        "bt_treppe",
+        "bt_tuer"
+      ]
+    },
+    {
+      "layer": "structure",
+      "bauteiltypen": [
+        "bt_daemmung",
+        "bt_decke",
+        "bt_fundament",
+        "bt_stuetze",
+        "bt_traeger",
+        "bt_wand"
+      ]
+    },
+    {
+      "layer": null,
+      "bauteiltypen": [
+        "bt_mehrere"
+      ]
+    }
+  ],
+  "projekt_lca_module_scope": [
+    {
+      "projekt_id": "p_55_great_suffolk_street_london",
+      "modules": [
+        "a1_a5",
+        "A1_A3",
+        "A4_A5"
+      ]
+    },
+    {
+      "projekt_id": "p_brent_cross_town_primary_substation_london",
+      "modules": [
+        "unclear",
+        "D"
+      ]
+    },
+    {
+      "projekt_id": "p_k118_kopfbau_halle_118_winterthur",
+      "modules": [
+        "unclear",
+        "A1_A3"
+      ]
+    },
+    {
+      "projekt_id": "p_ka13_kristian_augusts_gate_13_oslo",
+      "modules": [
+        "unclear",
+        "D"
+      ]
+    },
+    {
+      "projekt_id": "p_resource_rows_copenhagen",
+      "modules": [
+        "50y_lifecycle",
+        "B",
+        "D"
+      ]
+    },
+    {
+      "projekt_id": "p_thoravej_29_copenhagen",
+      "modules": [
+        "unclear",
+        "D"
+      ]
+    }
+  ],
+  "projekt_certifications": [
+    {
+      "projekt_id": "p_biopartner_5_leiden_oegstgeest",
+      "certifications": [
+        "Paris_Proof"
+      ]
+    },
+    {
+      "projekt_id": "p_elementa_walkeweg",
+      "certifications": [
+        "EcoTool (ZBS)"
+      ]
+    },
+    {
+      "projekt_id": "p_holbein_gardens_london",
+      "certifications": [
+        "BREEAM",
+        "WELL",
+        "NABERS"
+      ]
+    },
+    {
+      "projekt_id": "p_liander_alliander_hq_duiven",
+      "certifications": [
+        "BREEAM"
+      ]
+    },
+    {
+      "projekt_id": "p_multi_brussels_reuse_in_multi",
+      "certifications": [
+        "BREEAM"
+      ]
+    },
+    {
+      "projekt_id": "p_svanen_kindergarten_gladsaxe",
+      "certifications": [
+        "Nordic Swan Ecolabel / Svanemærket"
+      ]
+    },
+    {
+      "projekt_id": "p_thoravej_29_copenhagen",
+      "certifications": [
+        "DGNB"
+      ]
+    },
+    {
+      "projekt_id": "p_timber_square_london",
+      "certifications": [
+        "BREEAM",
+        "WELL",
+        "NABERS"
+      ]
+    }
+  ],
+  "legal_conditions_by_label": [
+    {
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "n": 5,
+      "total_entries": 5
+    },
+    {
+      "labels": [
+        "Projekt"
+      ],
+      "n": 5,
+      "total_entries": 6
+    },
+    {
+      "labels": [
+        "Bauwerk"
+      ],
+      "n": 1,
+      "total_entries": 1
+    }
+  ],
+  "software_kind_distribution": [
+    {
+      "kind": "software",
+      "n": 11
+    },
+    {
+      "kind": "tool",
+      "n": 8
+    }
+  ],
+  "software_label_overlap": [
+    [
+      "still_tool",
+      0
+    ],
+    [
+      "total_software",
+      19
+    ]
+  ],
+  "edge_counts": {
+    "hat_status": 672,
+    "hat_wva": 621,
+    "beteiligt_an": 576,
+    "hat_akteurrolle": 1177,
+    "teilt_layer": 0,
+    "berechnet_nach_modul": 0,
+    "methodengrundlage_norm": 0,
+    "hat_rb": 0,
+    "hat_zert": 0,
+    "nutzt_tool": 0,
+    "nutzt_software": 51,
+    "referenziert_norm": 52,
+    "rn_lca_derived": 15
+  },
+  "node_label_counts": [
+    {
+      "label": "Akteur",
+      "n": 647
+    },
+    {
+      "label": "Quelle",
+      "n": 462
+    },
+    {
+      "label": "Bauteilgruppe",
+      "n": 369
+    },
+    {
+      "label": "Bauwerk",
+      "n": 186
+    },
+    {
+      "label": "Projekt",
+      "n": 91
+    },
+    {
+      "label": "Stadt",
+      "n": 76
+    },
+    {
+      "label": "Aufbereitungsverfahren",
+      "n": 45
+    },
+    {
+      "label": "Norm",
+      "n": 34
+    },
+    {
+      "label": "Huerde",
+      "n": 28
+    },
+    {
+      "label": "Programm",
+      "n": 24
+    },
+    {
+      "label": "Akteurrolle",
+      "n": 24
+    },
+    {
+      "label": "Material",
+      "n": 24
+    },
+    {
+      "label": "Materialdepot",
+      "n": 23
+    },
+    {
+      "label": "PruefungNachweis",
+      "n": 20
+    },
+    {
+      "label": "Land",
+      "n": 19
+    },
+    {
+      "label": "Software",
+      "n": 19
+    },
+    {
+      "label": "Bauteiltyp",
+      "n": 16
+    },
+    {
+      "label": "Ressourcenquelle",
+      "n": 16
+    },
+    {
+      "label": "Bauproduktstatus",
+      "n": 15
+    },
+    {
+      "label": "Wiederverwendungskette",
+      "n": 14
+    },
+    {
+      "label": "Methode",
+      "n": 13
+    },
+    {
+      "label": "Verbindungstechnik",
+      "n": 12
+    },
+    {
+      "label": "Wirtschaft",
+      "n": 12
+    },
+    {
+      "label": "Leistungsanforderung",
+      "n": 12
+    },
+    {
+      "label": "Marktmodell",
+      "n": 11
+    },
+    {
+      "label": "Materialgruppe",
+      "n": 11
+    },
+    {
+      "label": "WiederverwendungsArt",
+      "n": 11
+    },
+    {
+      "label": "Defekt",
+      "n": 10
+    },
+    {
+      "label": "Akteurtyp",
+      "n": 10
+    },
+    {
+      "label": "BauaufgabeIntervention",
+      "n": 10
+    },
+    {
+      "label": "Beschaffungsweg",
+      "n": 10
+    },
+    {
+      "label": "HuerdeKategorie",
+      "n": 10
+    },
+    {
+      "label": "Logistik",
+      "n": 10
+    },
+    {
+      "label": "Prozessphase",
+      "n": 10
+    },
+    {
+      "label": "MatchingQualitaet",
+      "n": 9
+    },
+    {
+      "label": "Status",
+      "n": 9
+    },
+    {
+      "label": "Bausystem",
+      "n": 9
+    },
+    {
+      "label": "Nutzung",
+      "n": 9
+    },
+    {
+      "label": "Schadstoff",
+      "n": 8
+    },
+    {
+      "label": "Bauobjektklasse",
+      "n": 8
+    },
+    {
+      "label": "Akzeptanz",
+      "n": 7
+    },
+    {
+      "label": "BauwerkEra",
+      "n": 6
+    },
+    {
+      "label": "ZustandsKlasse",
+      "n": 6
+    },
+    {
+      "label": "Bauobjektrolle",
+      "n": 6
+    },
+    {
+      "label": "Bauteilebene",
+      "n": 6
+    },
+    {
+      "label": "Bauweise",
+      "n": 6
+    },
+    {
+      "label": "Funktionswechsel",
+      "n": 6
+    },
+    {
+      "label": "Rueckbauverfahren",
+      "n": 5
+    },
+    {
+      "label": "Tragwerksprinzip",
+      "n": 4
+    },
+    {
+      "label": "OntologyAnchor",
+      "n": 2
+    }
+  ],
+  "totals": {
+    "nodes": 2410,
+    "rels": 19531
+  },
+  "beteiligt_an_rolle_text_remaining": 0,
+  "bauwerk_legacy_status_props": {
+    "bauwerkstatus": 0,
+    "status_text": 0
+  },
+  "bg_legacy_counts_props": {
+    "direct_reuse": 0,
+    "bestandserhalt": 0,
+    "recycling": 0,
+    "reman": 0,
+    "surplus": 0
+  }
+}
