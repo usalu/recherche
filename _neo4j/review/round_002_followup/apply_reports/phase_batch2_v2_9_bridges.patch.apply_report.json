@@ -1,17 +1,20 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_9_bridges.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2438,
+    "relationships": 17741
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17049
+    "nodes": 2438,
+    "relationships": 17741
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2438,
+    "relationships": 17719
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T07:27:21.848923+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:19:33.838201+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_9_bridges.patch.jsonl",
   "records": [
     {
@@ -55,16 +58,20 @@
       "to": "p_umar_unit"
     },
     {
-      "error": "from node 'tu_delft' not found",
+      "from": "tu_delft",
       "line": 6,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "prog_rebridge"
     },
     {
-      "error": "from node 'tu_delft' not found",
+      "from": "tu_delft",
       "line": 7,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_fcrbe"
     },
     {
       "from": "zirkular_gmbh",
@@ -99,28 +106,36 @@
       "to": "p_meduni_campus_mariannengasse"
     },
     {
-      "error": "to node 'tool_rcmi' not found",
+      "from": "concular",
       "line": 12,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_TOOL",
+      "status": "would_create_rel",
+      "to": "tool_rcmi"
     },
     {
-      "error": "from node 'la_fabrique_de_bordeaux_metropole' not found",
+      "from": "la_fabrique_de_bordeaux_metropole",
       "line": 13,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_SOFTWARE",
+      "status": "would_create_rel",
+      "to": "software_refair"
     },
     {
-      "error": "to node 'software_opalis' not found",
+      "from": "Rotor",
       "line": 14,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_SOFTWARE",
+      "status": "would_create_rel",
+      "to": "software_opalis"
     },
     {
-      "error": "to node 'prog_urban_bricolage' not found",
+      "from": "madlen_kobi",
       "line": 15,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_urban_bricolage"
     },
     {
       "from": "materialnomaden",
@@ -163,28 +178,34 @@
       "to": "prog_fcrbe"
     },
     {
-      "error": "to node 'prog_mas_dfab' not found",
+      "from": "catherine_de_wolf",
       "line": 21,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_mas_dfab"
     },
     {
-      "error": "to node 'prog_mas_dfab' not found",
+      "from": "fabio_gramazio",
       "line": 22,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_mas_dfab"
     },
     {
-      "error": "to node 'prog_mas_dfab' not found",
+      "from": "matthias_kohler",
       "line": 23,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_mas_dfab"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 9,
+    "noop_existing_rel": 1,
     "records": 23,
-    "would_create_rel": 14
+    "would_create_rel": 22
   }
 }

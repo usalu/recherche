@@ -1,31 +1,103 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_4c_eth_merge.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2437,
+    "relationships": 17741
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2437,
+    "relationships": 17741
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2438,
+    "relationships": 17741
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T07:44:05.991833+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:20:05.001952+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_4c_eth_merge.patch.jsonl",
   "records": [
     {
-      "error": "merge target 'prog_mas_dfab' not found",
+      "after": {
+        "labels": [
+          "Programm",
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "ETH Circular Construction"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "host_institution": "ETH Zürich",
+          "id": "prog_mas_dfab",
+          "import_status": "registry_stub_only",
+          "name": "MAS DFAB ETH",
+          "name_full": "MAS Architektur und Digitale Fabrikation, ETH Zürich (Gramazio Kohler Research)",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "research_news_or_demonstrator_stub",
+          "short_description": "ETH MAS teaching+research programme combining computational design, robotic fabrication, and reusable/reversible construction details.",
+          "source_scope": "case_markdown",
+          "status": "active",
+          "type": "Lehre+Forschung"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Projekt"
+          ],
+          "properties": {
+            "actor_registry_mentioned": true,
+            "aliases": [
+              "ETH Circular Construction student reuse project"
+            ],
+            "classified_at": "2026-05-15",
+            "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+            "id": "p_eth_circular_construction_student_reuse",
+            "import_status": "registry_stub_only",
+            "name": "ETH Circular Construction",
+            "name_full": "ETH Circular Construction — student reuse demonstrator/news",
+            "needs_project_file": true,
+            "node_role": "cross_reference_stub",
+            "project_category": "research_news_or_demonstrator_stub",
+            "source_scope": "actor_registry_association"
+          }
+        },
+        "to": {
+          "labels": [
+            "Programm"
+          ],
+          "properties": {
+            "host_institution": "ETH Zürich",
+            "id": "prog_mas_dfab",
+            "name": "MAS DFAB ETH",
+            "name_full": "MAS Architektur und Digitale Fabrikation, ETH Zürich (Gramazio Kohler Research)",
+            "short_description": "ETH MAS teaching+research programme combining computational design, robotic fabrication, and reusable/reversible construction details.",
+            "source_scope": "case_markdown",
+            "status": "active",
+            "type": "Lehre+Forschung"
+          }
+        }
+      },
       "from": "p_eth_circular_construction_student_reuse",
+      "label_union": [
+        "Programm",
+        "Projekt"
+      ],
       "line": 1,
       "op": "merge_node",
-      "status": "missing_node",
+      "rel_inbound_to_redirect": 3,
+      "rel_outbound_to_redirect": 5,
+      "status": "would_merge",
       "to": "prog_mas_dfab"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_node": 1,
-    "records": 1
+    "records": 1,
+    "would_merge": 1
   }
 }

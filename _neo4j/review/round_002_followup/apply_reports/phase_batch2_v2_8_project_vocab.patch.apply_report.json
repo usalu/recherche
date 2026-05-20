@@ -1,17 +1,20 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_8_project_vocab.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2438,
+    "relationships": 17719
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17089
+    "nodes": 2438,
+    "relationships": 17719
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2438,
+    "relationships": 17647
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T07:26:26.183943+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:19:30.548026+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_8_project_vocab.patch.jsonl",
   "records": [
     {
@@ -71,16 +74,20 @@
       "to": "ak_oeffentlicher_bauherr_pilot"
     },
     {
-      "error": "to node 'norm_sia_500' not found",
+      "from": "p_schaerenmoosstrasse_zuerich",
       "line": 8,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "REFERENZIERT_NORM",
+      "status": "would_create_rel",
+      "to": "norm_sia_500"
     },
     {
-      "error": "to node 'norm_sia_261' not found",
+      "from": "p_schaerenmoosstrasse_zuerich",
       "line": 9,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "REFERENZIERT_NORM",
+      "status": "would_create_rel",
+      "to": "norm_sia_261"
     },
     {
       "from": "p_umar_unit",
@@ -155,10 +162,12 @@
       "to": "ak_oeffentlicher_bauherr_pilot"
     },
     {
-      "error": "to node 'norm_sia_269' not found",
+      "from": "p_umar_unit",
       "line": 19,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "REFERENZIERT_NORM",
+      "status": "would_create_rel",
+      "to": "norm_sia_269"
     },
     {
       "from": "p_elementa_walkeweg",
@@ -217,10 +226,12 @@
       "to": "mm_plattform_vermittelt"
     },
     {
-      "error": "to node 'software_ecotool' not found",
+      "from": "p_elementa_walkeweg",
       "line": 27,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_SOFTWARE",
+      "status": "would_create_rel",
+      "to": "software_ecotool"
     },
     {
       "from": "p_elementa_walkeweg",
@@ -231,10 +242,12 @@
       "to": "tool_bauteilkatalog"
     },
     {
-      "error": "to node 'zbs_ecotool' not found",
+      "from": "p_elementa_walkeweg",
       "line": 29,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_ZERTIFIZIERUNG",
+      "status": "would_create_rel",
+      "to": "zbs_ecotool"
     },
     {
       "from": "p_elementa_walkeweg",
@@ -245,10 +258,12 @@
       "to": "ak_oeffentlicher_bauherr_pilot"
     },
     {
-      "error": "to node 'norm_sia_269' not found",
+      "from": "p_elementa_walkeweg",
       "line": 31,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "REFERENZIERT_NORM",
+      "status": "would_create_rel",
+      "to": "norm_sia_269"
     },
     {
       "from": "p_careno_becircular",
@@ -275,10 +290,12 @@
       "to": "mm_plattform_vermittelt"
     },
     {
-      "error": "to node 'tool_retile' not found",
+      "from": "p_careno_becircular",
       "line": 35,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_TOOL",
+      "status": "would_create_rel",
+      "to": "tool_retile"
     },
     {
       "from": "p_circl_abn_amro",
@@ -353,10 +370,12 @@
       "to": "mm_intra_konzern"
     },
     {
-      "error": "to node 'software_llmnt' not found",
+      "from": "p_circl_abn_amro",
       "line": 45,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_SOFTWARE",
+      "status": "would_create_rel",
+      "to": "software_llmnt"
     },
     {
       "from": "p_lysp8_basel",
@@ -415,10 +434,12 @@
       "to": "ak_oeffentlicher_bauherr_pilot"
     },
     {
-      "error": "to node 'norm_sia_269' not found",
+      "from": "p_lysp8_basel",
       "line": 53,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "REFERENZIERT_NORM",
+      "status": "would_create_rel",
+      "to": "norm_sia_269"
     },
     {
       "from": "p_meduni_campus_mariannengasse",
@@ -509,65 +530,82 @@
       "to": "ak_aesthetik_patinakultur"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 65,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 66,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_NUTZUNG",
+      "status": "would_create_rel",
+      "to": "nut_kultur"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 67,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_form_follows_availability"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 68,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_urban_mining"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 69,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_DOMINANT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_forschungsprojekt_zuteilung"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 70,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 71,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_design_for_disassembly"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 72,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_INTERVENTION",
+      "status": "would_create_rel",
+      "to": "bai_neubau"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 73,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_METHODE",
+      "status": "would_create_rel",
+      "to": "meth_design_for_disassembly"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 18,
     "noop_existing_rel": 1,
     "records": 73,
-    "would_create_rel": 54
+    "would_create_rel": 72
   }
 }

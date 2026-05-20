@@ -1,1439 +1,1914 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_12b_deferred_bg_rels.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2454,
+    "relationships": 18403
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2454,
+    "relationships": 18403
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2454,
+    "relationships": 18167
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T08:00:41.450346+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:20:51.684863+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_12b_deferred_bg_rels.patch.jsonl",
   "records": [
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 1,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 2,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 3,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_baustelle"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 4,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_boden"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 5,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 6,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_recycling"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 7,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "p_circl_abn_amro",
       "line": 8,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_mineralisch_boden_circl_pcm_tiles"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 9,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_boden_circl_pcm_tiles' not found",
+      "from": "bg_reuse_mineralisch_boden_circl_pcm_tiles",
       "line": 10,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_recyclingbeton"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 11,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_einzelbauteil"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 12,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 13,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_baustelle"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 14,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_ausbau"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 15,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 16,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 17,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "p_circl_abn_amro",
       "line": 18,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_mehrere_ausbau_circl_restored_furniture"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 19,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 20,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_reinigung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 21,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_holz_zuschnitt_reparatur"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 22,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_ZUSTANDSKLASSE",
+      "status": "would_create_rel",
+      "to": "zk_gebrauchsspuren_funktional"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_restored_furniture' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_restored_furniture",
       "line": 23,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_intra_konzern"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 24,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_system"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 25,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 26,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_lager"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 27,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_technik"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 28,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 29,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_design_for_disassembly"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 30,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "p_circl_abn_amro",
       "line": 31,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_planned_mehrere_technik_circl_leased_lifts"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 32,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 33,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_leihmodell"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 34,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_rueckbaubarkeit"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lifts' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lifts",
       "line": 35,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_leasing"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 36,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_system"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 37,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 38,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_lager"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 39,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_technik"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 40,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 41,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_design_for_disassembly"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 42,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "p_circl_abn_amro",
       "line": 43,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_planned_mehrere_technik_circl_leased_lighting"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 44,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 45,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_leihmodell"
     },
     {
-      "error": "from node 'bg_planned_mehrere_technik_circl_leased_lighting' not found",
+      "from": "bg_planned_mehrere_technik_circl_leased_lighting",
       "line": 46,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_leasing"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 47,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_oberflaechenschicht"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 48,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 49,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_lager"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 50,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_boden"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 51,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_kunststoff"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 52,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 53,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "p_circl_abn_amro",
       "line": 54,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_planned_kunststoff_boden_circl_c2c_tarkett"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 55,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 56,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_rueckbaubarkeit"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 57,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_dauerhaftigkeit"
     },
     {
-      "error": "from node 'bg_planned_kunststoff_boden_circl_c2c_tarkett' not found",
+      "from": "bg_planned_kunststoff_boden_circl_c2c_tarkett",
       "line": 58,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_take_back_service"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 59,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_system"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 60,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 61,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_baustelle"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 62,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fassade"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 63,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 64,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_design_for_disassembly"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 65,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "p_circl_abn_amro",
       "line": 66,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_planned_mehrere_fassade_circl_remountable_facade"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 67,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fassade_circl_remountable_facade' not found",
+      "from": "bg_planned_mehrere_fassade_circl_remountable_facade",
       "line": 68,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_rueckbaubarkeit"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 69,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 70,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 71,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_baustelle"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 72,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_boden"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 73,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 74,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_recycling"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 75,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "p_circl_abn_amro",
       "line": 76,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_dismantled_mehrere_boden_circl_floor_structure"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 77,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 78,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_demontage"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 79,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_PRUEFUNG",
+      "status": "would_create_rel",
+      "to": "pr_dokumentenpruefung_bestand"
     },
     {
-      "error": "from node 'bg_dismantled_mehrere_boden_circl_floor_structure' not found",
+      "from": "bg_dismantled_mehrere_boden_circl_floor_structure",
       "line": 80,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_ZUSTANDSKLASSE",
+      "status": "would_create_rel",
+      "to": "zk_eingeschraenkt_nachbearbeitung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 81,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_einzelbauteil"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 82,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_rueckgebaut"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 83,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_baustelle"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 84,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_dach"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 85,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 86,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 87,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_circl_pavilion_dossier"
     },
     {
-      "error": "to node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "p_circl_abn_amro",
       "line": 88,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_mehrere_ausbau_circl_greenery_harvest"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 89,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_circl_pavilion_amsterdam"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 90,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_informelles_netzwerk"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_ausbau_circl_greenery_harvest' not found",
+      "from": "bg_reuse_mehrere_ausbau_circl_greenery_harvest",
       "line": 91,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_spende"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 92,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_einzelbauteil"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 93,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 94,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 95,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_ausbau"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 96,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 97,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 98,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_meduni_mariannengasse_dossier"
     },
     {
-      "error": "to node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "p_meduni_campus_mariannengasse",
       "line": 99,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_metall_ausbau_medunicampus_bike_workshop"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 100,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_meduni_campus_mariannengasse"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 101,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_ausbau_von_bauteilen"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 102,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_kauf_gebraucht"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_bike_workshop' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_bike_workshop",
       "line": 103,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahl"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 104,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_einzelbauteil"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 105,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 106,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 107,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_ausbau"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 108,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_metall"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 109,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 110,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_meduni_mariannengasse_dossier"
     },
     {
-      "error": "to node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "p_meduni_campus_mariannengasse",
       "line": 111,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 112,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_meduni_campus_mariannengasse"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 113,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_ausbau_von_bauteilen"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 114,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_kauf_gebraucht"
     },
     {
-      "error": "from node 'bg_reuse_metall_ausbau_medunicampus_heavy_shelves' not found",
+      "from": "bg_reuse_metall_ausbau_medunicampus_heavy_shelves",
       "line": 115,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_stahl"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 116,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_einzelbauteil"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 117,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 118,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_baustelle"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 119,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_technik"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 120,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 121,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_recycling"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 122,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_meduni_mariannengasse_dossier"
     },
     {
-      "error": "to node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "p_meduni_campus_mariannengasse",
       "line": 123,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_dismantled_glas_technik_medunicampus_fluorescent"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 124,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_meduni_campus_mariannengasse"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 125,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_ausbau_von_bauteilen"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 126,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_zerstoerungsarme_bergung"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 127,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_ZUSTANDSKLASSE",
+      "status": "would_create_rel",
+      "to": "zk_nicht_wiederverwendbar"
     },
     {
-      "error": "from node 'bg_dismantled_glas_technik_medunicampus_fluorescent' not found",
+      "from": "bg_dismantled_glas_technik_medunicampus_fluorescent",
       "line": 128,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_SCHADSTOFF",
+      "status": "would_create_rel",
+      "to": "s_schwermetalle"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 129,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_materialcharge"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 130,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_geplant"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 131,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_lager"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 132,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_traeger"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 133,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 134,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 135,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_beware_dossier"
     },
     {
-      "error": "to node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "prog_reallabor_be_ware",
       "line": 136,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_holz_mehrere_beware_local_timber"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 137,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_holz_festigkeitssortierung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 138,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_holz_trocknung_feuchtekonditionierung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 139,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_lagerung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 140,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_zwischenlagerung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 141,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_bauteiltracking"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 142,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_PRUEFUNG",
+      "status": "would_create_rel",
+      "to": "pr_festigkeitssortierung_holz"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_local_timber' not found",
+      "from": "bg_reuse_holz_mehrere_beware_local_timber",
       "line": 143,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 144,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 145,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_geplant"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 146,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 147,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_traeger"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 148,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 149,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 150,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_beware_dossier"
     },
     {
-      "error": "to node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "prog_reallabor_be_ware",
       "line": 151,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_holz_mehrere_beware_tulium_trusses"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 152,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_reversible_fuegung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 153,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "status": "would_create_rel",
+      "to": "vt_steckverbindung"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 154,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_tragfaehigkeit"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 155,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_rueckbaubarkeit"
     },
     {
-      "error": "from node 'bg_reuse_holz_mehrere_beware_tulium_trusses' not found",
+      "from": "bg_reuse_holz_mehrere_beware_tulium_trusses",
       "line": 156,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 157,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 158,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_geplant"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 159,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 160,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fundament"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 161,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mineralisch"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 162,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_recycling"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 163,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_beware_dossier"
     },
     {
-      "error": "to node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "prog_reallabor_be_ware",
       "line": 164,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_planned_mehrere_fundament_beware_flying_foundation"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 165,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_tragfaehigkeit"
     },
     {
-      "error": "from node 'bg_planned_mehrere_fundament_beware_flying_foundation' not found",
+      "from": "bg_planned_mehrere_fundament_beware_flying_foundation",
       "line": 166,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_recyclingbeton"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 167,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_bauteilgruppe"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 168,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 169,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 170,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_fenster"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 171,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 172,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 173,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_reusehoefe_dossier"
     },
     {
-      "error": "from node 'prog_re_use_hoefe' not found",
+      "from": "prog_re_use_hoefe",
       "line": 174,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 175,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_spende"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 176,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_informelles_netzwerk"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 177,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_ausbau_von_bauteilen"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 178,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "status": "would_create_rel",
+      "to": "rv_zerstoerungsarme_bergung"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 179,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_fenster_refurbishment"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 180,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_lagerung"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 181,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_transport"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 182,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_transportdistanz"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 183,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_spende"
     },
     {
-      "error": "from node 'bg_reuse_holz_fenster_reusehoefe_ukraine_windows' not found",
+      "from": "bg_reuse_holz_fenster_reusehoefe_ukraine_windows",
       "line": 184,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 185,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_system"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 186,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 187,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_lager"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 188,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_mehrere"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 189,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 190,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 191,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_reusehoefe_dossier"
     },
     {
-      "error": "from node 'prog_re_use_hoefe' not found",
+      "from": "prog_re_use_hoefe",
       "line": 192,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 193,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_digitale_plattform"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 194,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_informelles_netzwerk"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 195,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_lagerung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 196,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_zwischenlagerung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 197,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_bauteiltracking"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 198,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_materialmatching"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics' not found",
+      "from": "bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics",
       "line": 199,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LOGISTIK",
+      "status": "would_create_rel",
+      "to": "log_lagerflaeche"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 200,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_einzelbauteil"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 201,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 202,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_donorgebaeude"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 203,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_ausbau"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 204,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_holz_biobasiert"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 205,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 206,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_stuttgart210_dossier"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 207,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_holz_ausbau_ingersheim_clt_secondary"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 208,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "bw_jugendtreff_ingersheim"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 209,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_stuttgart21_hauptbahnhof"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 210,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_holz_zuschnitt_reparatur"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 211,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_hobeln_schleifen_holz"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_ingersheim_clt_secondary' not found",
+      "from": "bg_reuse_holz_ausbau_ingersheim_clt_secondary",
       "line": 212,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_holz"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 213,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_materialcharge"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 214,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 215,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_lager"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 216,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_boden"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 217,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 218,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_recycling"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 219,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_granby_workshop_dossier"
     },
     {
-      "error": "to node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "p_granby_workshop",
       "line": 220,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_mehrere_boden_granby_bespoke_waste"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 221,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "status": "would_create_rel",
+      "to": "bweg_direktvermittlung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 222,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_materialsortierung_chargenbildung"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 223,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_AUFBEREITUNG",
+      "status": "would_create_rel",
+      "to": "av_naturstein_reinigung_schleifen_zuschnitt"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 224,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_dauerhaftigkeit"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_bespoke_waste' not found",
+      "from": "bg_reuse_mehrere_boden_granby_bespoke_waste",
       "line": 225,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_kauf_gebraucht"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 226,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILEBENE",
+      "status": "would_create_rel",
+      "to": "be_einzelbauteil"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 227,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_STATUS",
+      "status": "would_create_rel",
+      "to": "status_realisiert"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 228,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "status": "would_create_rel",
+      "to": "rq_baustelle"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 229,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_ausbau"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 230,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_glas_keramik"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 231,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "status": "would_create_rel",
+      "to": "wva_direkte_wiederverwendung"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 232,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "qu_granby_workshop_dossier"
     },
     {
-      "error": "to node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "p_granby_workshop",
       "line": 233,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "status": "would_create_rel",
+      "to": "bg_reuse_glas_keramik_ausbau_granby_first_house_products"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 234,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "status": "would_create_rel",
+      "to": "la_dauerhaftigkeit"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 235,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MARKTMODELL",
+      "status": "would_create_rel",
+      "to": "mm_kauf_gebraucht"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_ausbau_granby_first_house_products' not found",
+      "from": "bg_reuse_glas_keramik_ausbau_granby_first_house_products",
       "line": 236,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "NUTZT_MATERIAL",
+      "status": "would_create_rel",
+      "to": "mat_keramik"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 236,
-    "records": 236
+    "records": 236,
+    "would_create_rel": 236
   }
 }

@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_14_external_quellen.patch.jsonl
 
-Generated: 2026-05-20T08:04:13.492632+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:21:03.097711+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2315 | 17035 |
+| before | 2514 | 18594 |
+| after_expected | 2531 | 18594 |
+| after_actual | 2531 | 18594 |
 
 ## Rejected / Needs Review
 

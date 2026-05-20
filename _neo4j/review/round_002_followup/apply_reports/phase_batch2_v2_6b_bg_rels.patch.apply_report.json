@@ -1,17 +1,20 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_6b_bg_rels.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2429,
+    "relationships": 17622
+  },
   "counts_after_expected": {
-    "nodes": 2426,
-    "relationships": 17618
+    "nodes": 2429,
+    "relationships": 17622
   },
   "counts_before": {
-    "nodes": 2426,
+    "nodes": 2429,
     "relationships": 17238
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T08:18:29.031345+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:19:20.179182+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_6b_bg_rels.patch.jsonl",
   "records": [
     {
@@ -2247,10 +2250,12 @@
       "to": "bt_ausbau"
     },
     {
-      "error": "to node 'mg_mehrere' not found",
+      "from": "bg_reuse_mehrere_ausbau_lysp8_doors_tiles",
       "line": 280,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
       "from": "bg_reuse_mehrere_ausbau_lysp8_doors_tiles",
@@ -2765,10 +2770,12 @@
       "to": "rq_baustelle"
     },
     {
-      "error": "to node 'bt_mehrere' not found",
+      "from": "bg_dismantled_holz_mehrere_stuttgart21_donor_stock",
       "line": 345,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_BAUTEILTYP",
+      "status": "would_create_rel",
+      "to": "bt_mehrere"
     },
     {
       "from": "bg_dismantled_holz_mehrere_stuttgart21_donor_stock",
@@ -2843,10 +2850,12 @@
       "to": "bt_boden"
     },
     {
-      "error": "to node 'mg_mehrere' not found",
+      "from": "bg_reuse_mehrere_boden_granby_rock_terrazzo",
       "line": 355,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
       "from": "bg_reuse_mehrere_boden_granby_rock_terrazzo",
@@ -2985,10 +2994,12 @@
       "to": "bt_traeger"
     },
     {
-      "error": "to node 'mg_mehrere' not found",
+      "from": "bg_reuse_mehrere_mehrere_eggshell_recycled_structure",
       "line": 373,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "status": "would_create_rel",
+      "to": "mg_mehrere"
     },
     {
       "from": "bg_reuse_mehrere_mehrere_eggshell_recycled_structure",
@@ -3081,8 +3092,7 @@
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 4,
     "records": 384,
-    "would_create_rel": 380
+    "would_create_rel": 384
   }
 }

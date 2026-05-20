@@ -1,173 +1,226 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_7b_kette_rels.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2438,
+    "relationships": 17647
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2438,
+    "relationships": 17647
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2438,
+    "relationships": 17622
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T07:25:34.425186+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:19:25.980586+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_7b_kette_rels.patch.jsonl",
   "records": [
     {
-      "error": "from node 'bg_reuse_holz_mehrere_ingersheim_clt_structure' not found",
+      "from": "bg_reuse_holz_mehrere_ingersheim_clt_structure",
       "line": 1,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_stuttgart21_clt_to_ingersheim"
     },
     {
-      "error": "from node 'bg_dismantled_holz_mehrere_stuttgart21_donor_stock' not found",
+      "from": "bg_dismantled_holz_mehrere_stuttgart21_donor_stock",
       "line": 2,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_stuttgart21_clt_to_ingersheim"
     },
     {
-      "error": "from node 'bw_stuttgart21_hauptbahnhof' not found",
+      "from": "bw_stuttgart21_hauptbahnhof",
       "line": 3,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_stuttgart21_clt_to_ingersheim"
     },
     {
-      "error": "from node 'bw_jugendtreff_ingersheim' not found",
+      "from": "bw_jugendtreff_ingersheim",
       "line": 4,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_stuttgart21_clt_to_ingersheim"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_mehrere_sms_zuerich_ubs_hall' not found",
+      "from": "bg_reuse_mehrere_mehrere_sms_zuerich_ubs_hall",
       "line": 5,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_ubs_altstetten_hall_to_sms"
     },
     {
-      "error": "from node 'bw_ubs_altstetten' not found",
+      "from": "bw_ubs_altstetten",
       "line": 6,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_ubs_altstetten_hall_to_sms"
     },
     {
-      "error": "from node 'bw_schaerenmoosstrasse_zuerich' not found",
+      "from": "bw_schaerenmoosstrasse_zuerich",
       "line": 7,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_ubs_altstetten_hall_to_sms"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_boden_granby_rock_terrazzo' not found",
+      "from": "bg_reuse_mehrere_boden_granby_rock_terrazzo",
       "line": 8,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_granby_rock_terrazzo_chain"
     },
     {
-      "error": "from node 'bg_reuse_ziegel_boden_granby_brick_slate_terrazzo' not found",
+      "from": "bg_reuse_ziegel_boden_granby_brick_slate_terrazzo",
       "line": 9,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_granby_rock_terrazzo_chain"
     },
     {
-      "error": "from node 'bg_dismantled_holz_mehrere_circl_larch_structure' not found",
+      "from": "bg_dismantled_holz_mehrere_circl_larch_structure",
       "line": 10,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_circl_larch_dismantling_chain"
     },
     {
-      "error": "from node 'bw_circl_pavilion_amsterdam' not found",
+      "from": "bw_circl_pavilion_amsterdam",
       "line": 11,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_circl_larch_dismantling_chain"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_boden_careno_historic_tiles' not found",
+      "from": "bg_reuse_glas_keramik_boden_careno_historic_tiles",
       "line": 12,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_careno_rotor_tile_cleaning"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_boden_careno_retile_cleaned' not found",
+      "from": "bg_reuse_glas_keramik_boden_careno_retile_cleaned",
       "line": 13,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_careno_rotor_tile_cleaning"
     },
     {
-      "error": "from node 'bg_reuse_glas_keramik_boden_careno_rotor_stock' not found",
+      "from": "bg_reuse_glas_keramik_boden_careno_rotor_stock",
       "line": 14,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_careno_rotor_tile_cleaning"
     },
     {
-      "error": "from node 'bg_reuse_metall_tuer_umar_wabbes_handles' not found",
+      "from": "bg_reuse_metall_tuer_umar_wabbes_handles",
       "line": 15,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_wabbes_handles_to_umar"
     },
     {
-      "error": "from node 'bw_generale_de_banque_brussels' not found",
+      "from": "bw_generale_de_banque_brussels",
       "line": 16,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_wabbes_handles_to_umar"
     },
     {
-      "error": "from node 'bw_umar_unit_duebendorf' not found",
+      "from": "bw_umar_unit_duebendorf",
       "line": 17,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_wabbes_handles_to_umar"
     },
     {
-      "error": "from node 'bg_reuse_mehrere_technik_medunicampus_paternoster' not found",
+      "from": "bg_reuse_mehrere_technik_medunicampus_paternoster",
       "line": 18,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_meduni_paternoster_to_aufzugmuseum"
     },
     {
-      "error": "from node 'bw_meduni_campus_mariannengasse' not found",
+      "from": "bw_meduni_campus_mariannengasse",
       "line": 19,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_meduni_paternoster_to_aufzugmuseum"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_stuetze_elementa_baufeld_c' not found",
+      "from": "bg_reuse_mineralisch_stuetze_elementa_baufeld_c",
       "line": 20,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lysbueechel_to_elementa"
     },
     {
-      "error": "from node 'bg_reuse_mineralisch_wand_elementa_baufeld_d' not found",
+      "from": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
       "line": 21,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lysbueechel_to_elementa"
     },
     {
-      "error": "from node 'bw_lysbueechel_garage_basel' not found",
+      "from": "bw_lysbueechel_garage_basel",
       "line": 22,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "AUS_BAUWERK",
+      "status": "would_create_rel",
+      "to": "wk_lysbueechel_to_elementa"
     },
     {
-      "error": "from node 'bw_elementa_walkeweg_basel' not found",
+      "from": "bw_elementa_walkeweg_basel",
       "line": 23,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_lysbueechel_to_elementa"
     },
     {
-      "error": "from node 'bg_reuse_holz_ausbau_lysp8_kitchens' not found",
+      "from": "bg_reuse_holz_ausbau_lysp8_kitchens",
       "line": 24,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "TEIL_VON_KETTE",
+      "status": "would_create_rel",
+      "to": "wk_lysp8_zuerich_kitchens"
     },
     {
-      "error": "from node 'bw_lysp8_basel' not found",
+      "from": "bw_lysp8_basel",
       "line": 25,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "EINGEBAUT_IN",
+      "status": "would_create_rel",
+      "to": "wk_lysp8_zuerich_kitchens"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 25,
-    "records": 25
+    "records": 25,
+    "would_create_rel": 25
   }
 }

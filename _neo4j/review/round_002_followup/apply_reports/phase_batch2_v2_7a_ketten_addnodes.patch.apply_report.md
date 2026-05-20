@@ -1,7 +1,7 @@
 # Patch Apply Report: phase_batch2_v2_7a_ketten_addnodes.patch.jsonl
 
-Generated: 2026-05-20T07:24:36.375283+00:00
-Mode: dry-run
+Generated: 2026-05-20T08:19:22.894266+00:00
+Mode: live apply
 Database: mit-bestand
 
 ## Summary
@@ -16,8 +16,9 @@ Database: mit-bestand
 
 | State | Nodes | Relationships |
 | --- | --- | --- |
-| before | 2298 | 17035 |
-| after_expected | 2307 | 17035 |
+| before | 2429 | 17622 |
+| after_expected | 2438 | 17622 |
+| after_actual | 2438 | 17622 |
 
 ## Rejected / Needs Review
 

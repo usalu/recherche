@@ -1,17 +1,20 @@
 {
   "confirmation_required": "APPLY phase_batch2_v2_10_huerde_wirtschaft.patch.jsonl TO mit-bestand",
-  "counts_after_actual": null,
+  "counts_after_actual": {
+    "nodes": 2435,
+    "relationships": 17810
+  },
   "counts_after_expected": {
-    "nodes": 2298,
-    "relationships": 17094
+    "nodes": 2435,
+    "relationships": 17810
   },
   "counts_before": {
-    "nodes": 2298,
-    "relationships": 17035
+    "nodes": 2435,
+    "relationships": 17738
   },
   "database": "mit-bestand",
-  "dry_run": true,
-  "generated_at_utc": "2026-05-20T07:55:49.716868+00:00",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-20T08:20:19.423164+00:00",
   "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_10_huerde_wirtschaft.patch.jsonl",
   "records": [
     {
@@ -455,58 +458,76 @@
       "to": "wi_preisbildung"
     },
     {
-      "error": "from node 'prog_stuttgart_210' not found",
+      "from": "prog_stuttgart_210",
       "line": 56,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_bauproduktstatus"
     },
     {
-      "error": "from node 'prog_stuttgart_210' not found",
+      "from": "prog_stuttgart_210",
       "line": 57,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_technische_freigabe"
     },
     {
-      "error": "from node 'prog_stuttgart_210' not found",
+      "from": "prog_stuttgart_210",
       "line": 58,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_gewaehrleistung"
     },
     {
-      "error": "from node 'prog_stuttgart_210' not found",
+      "from": "prog_stuttgart_210",
       "line": 59,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIRTSCHAFT",
+      "status": "would_create_rel",
+      "to": "wi_capex_niedriger_direkter_ersparnis"
     },
     {
-      "error": "from node 'prog_stuttgart_210' not found",
+      "from": "prog_stuttgart_210",
       "line": 60,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_WIRTSCHAFT",
+      "status": "would_create_rel",
+      "to": "wi_restwert"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 61,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_bauproduktstatus"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 62,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_technische_freigabe"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 63,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_unkonventionelles_material"
     },
     {
-      "error": "from node 'p_jugendtreff_ingersheim' not found",
+      "from": "p_jugendtreff_ingersheim",
       "line": 64,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_DOMINANT_AKZEPTANZ",
+      "status": "would_create_rel",
+      "to": "ak_oeffentlicher_bauherr_pilot"
     },
     {
       "from": "p_granby_workshop",
@@ -541,34 +562,41 @@
       "to": "wi_preisbildung"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 69,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_unkonventionelles_material"
     },
     {
-      "error": "from node 'p_eggshell_pavilion' not found",
+      "from": "p_eggshell_pavilion",
       "line": 70,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_bauproduktstatus"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 71,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_unkonventionelles_material"
     },
     {
-      "error": "from node 'p_up_sticks_dundee' not found",
+      "from": "p_up_sticks_dundee",
       "line": 72,
       "op": "add_rel",
-      "status": "missing_endpoint"
+      "rel_type": "HAT_HUERDE",
+      "status": "would_create_rel",
+      "to": "h_bauproduktstatus"
     }
   ],
   "summary": {
     "load_errors": 0,
-    "missing_endpoint": 13,
     "records": 72,
-    "would_create_rel": 59
+    "would_create_rel": 72
   }
 }
