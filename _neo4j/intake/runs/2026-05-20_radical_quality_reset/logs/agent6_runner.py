@@ -839,18 +839,41 @@ def run_phase_2_7(driver, database: str) -> dict[str, Any]:
         res["external_sources_links_created"] = ext_total_links
 
     # --- 2.7.c Akteur.raw_role_evidence rollup
+    #
+    # Defensive: Agent 5 (Phase 2.3) is the canonical owner of this rollup
+    # and it strips :BETEILIGT_AN.rolle_text immediately after populating
+    # :Akteur.raw_role_evidence with entries shaped like
+    # `"<rolle_text> @ <target_id>"`. If we observe that Agent 5 has
+    # already populated the field on >= 100 Akteurs, we SKIP our own
+    # rollup entirely to avoid clobbering the richer entries.
+    #
+    # If Agent 5 has not run yet, we fall back to a coalesce that only
+    # writes when our computed list is non-empty (so a re-run after
+    # Agent 5 also leaves Agent 5's content intact).
     with driver.session(database=database) as session:
-        rec = session.run(
-            """
-            MATCH (a:Akteur)
-            OPTIONAL MATCH (a)-[r:BETEILIGT_AN]->()
-            WITH a, [x IN collect(DISTINCT r.rolle_text) WHERE x IS NOT NULL] AS roles
-            SET a.raw_role_evidence = roles
-            RETURN count(a) AS c
-            """
-        ).single()
-        res["akteur_role_rollup_applied"] = rec["c"]
-        _log(f"  akteur raw_role_evidence rollup: {rec['c']} nodes touched")
+        already = session.run(
+            "MATCH (a:Akteur) WHERE a.raw_role_evidence IS NOT NULL "
+            "AND size(a.raw_role_evidence) > 0 RETURN count(a) AS c"
+        ).single()["c"]
+        if already >= 100:
+            res["akteur_role_rollup_applied"] = 0
+            res["akteur_role_rollup_skipped_owned_by_agent_5"] = already
+            _log(f"  akteur raw_role_evidence rollup: SKIPPED "
+                 f"(Agent 5 already populated {already} Akteurs)")
+        else:
+            rec = session.run(
+                """
+                MATCH (a:Akteur)
+                OPTIONAL MATCH (a)-[r:BETEILIGT_AN]->()
+                WITH a, [x IN collect(DISTINCT r.rolle_text) WHERE x IS NOT NULL] AS roles
+                WHERE size(roles) > 0
+                SET a.raw_role_evidence = coalesce(a.raw_role_evidence, roles)
+                RETURN count(a) AS c
+                """
+            ).single()
+            res["akteur_role_rollup_applied"] = rec["c"]
+            _log(f"  akteur raw_role_evidence rollup: {rec['c']} nodes touched "
+                 f"(fallback path; Agent 5 had populated {already})")
 
     # --- 2.7.a Mark Materialdepot.is_material_depot = true
     with driver.session(database=database) as session:

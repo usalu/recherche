@@ -1,51 +1,51 @@
 {
   "phase": "2.7",
-  "completed_at": "2026-05-20T21:14:06+00:00",
+  "completed_at": "2026-05-20T21:22:59+00:00",
   "before": {
-    "total_nodes": 2410,
-    "total_rels": 19531,
+    "total_nodes": 2674,
+    "total_rels": 19800,
     "label_state": {
       "Projekt": {
         "node_count": 91,
-        "distinct_keys": 404,
-        "key_pairs": 1562,
-        "max_keys_per_node": 36,
-        "avg_keys_per_node": 17.164835164835168
+        "distinct_keys": 17,
+        "key_pairs": 1036,
+        "max_keys_per_node": 15,
+        "avg_keys_per_node": 11.384615384615383
       },
       "Bauteilgruppe": {
         "node_count": 369,
-        "distinct_keys": 140,
-        "key_pairs": 4579,
-        "max_keys_per_node": 22,
-        "avg_keys_per_node": 12.409214092140937
+        "distinct_keys": 25,
+        "key_pairs": 3974,
+        "max_keys_per_node": 17,
+        "avg_keys_per_node": 10.76964769647697
       },
       "Bauwerk": {
         "node_count": 186,
-        "distinct_keys": 58,
-        "key_pairs": 971,
-        "max_keys_per_node": 13,
-        "avg_keys_per_node": 5.220430107526881
+        "distinct_keys": 9,
+        "key_pairs": 903,
+        "max_keys_per_node": 7,
+        "avg_keys_per_node": 4.854838709677421
       },
       "Materialdepot": {
         "node_count": 23,
-        "distinct_keys": 16,
-        "key_pairs": 121,
+        "distinct_keys": 9,
+        "key_pairs": 139,
         "max_keys_per_node": 7,
-        "avg_keys_per_node": 5.2608695652173925
+        "avg_keys_per_node": 6.043478260869565
       },
       "Quelle": {
-        "node_count": 462,
-        "distinct_keys": 10,
-        "key_pairs": 3109,
-        "max_keys_per_node": 8,
-        "avg_keys_per_node": 6.72943722943723
+        "node_count": 726,
+        "distinct_keys": 8,
+        "key_pairs": 4602,
+        "max_keys_per_node": 7,
+        "avg_keys_per_node": 6.3388429752066076
       },
       "Akteur": {
         "node_count": 647,
-        "distinct_keys": 15,
-        "key_pairs": 2770,
-        "max_keys_per_node": 9,
-        "avg_keys_per_node": 4.281298299845436
+        "distinct_keys": 8,
+        "key_pairs": 2410,
+        "max_keys_per_node": 7,
+        "avg_keys_per_node": 3.7248840803709404
       }
     },
     "projekt_year_completed_filled": 42,
@@ -53,17 +53,17 @@
     "projekt_cost_facts_filled": 7,
     "projekt_co2_facts_filled": 20,
     "projekt_reuse_share_facts_filled": 7,
-    "projekt_archive_filled": 0,
-    "bg_archive_filled": 0,
-    "bauwerk_archive_filled": 0,
-    "materialdepot_archive_filled": 0,
-    "quelle_archive_filled": 0,
-    "akteur_archive_filled": 0,
-    "quelle_external_sources_count": 60,
+    "projekt_archive_filled": 88,
+    "bg_archive_filled": 308,
+    "bauwerk_archive_filled": 85,
+    "materialdepot_archive_filled": 16,
+    "quelle_archive_filled": 708,
+    "akteur_archive_filled": 126,
+    "quelle_external_sources_count": 0,
     "akteur_raw_role_evidence_count": 155,
-    "zitiert_quelle_count": 370,
-    "polluted_edges_with_origin_null": 4948,
-    "polluted_edges_total": 5267,
+    "zitiert_quelle_count": 639,
+    "polluted_edges_with_origin_null": 0,
+    "polluted_edges_total": 319,
     "bg_with_menge_source_mig_2_4": 11
   },
   "after": {
@@ -108,9 +108,9 @@
       "Akteur": {
         "node_count": 647,
         "distinct_keys": 8,
-        "key_pairs": 2902,
+        "key_pairs": 2410,
         "max_keys_per_node": 7,
-        "avg_keys_per_node": 4.4853168469860885
+        "avg_keys_per_node": 3.7248840803709404
       }
     },
     "projekt_year_completed_filled": 42,
@@ -125,42 +125,13 @@
     "quelle_archive_filled": 708,
     "akteur_archive_filled": 126,
     "quelle_external_sources_count": 0,
-    "akteur_raw_role_evidence_count": 0,
+    "akteur_raw_role_evidence_count": 155,
     "zitiert_quelle_count": 639,
     "polluted_edges_with_origin_null": 0,
     "polluted_edges_total": 319,
     "bg_with_menge_source_mig_2_4": 11
   },
   "payload": {
-    "external_sources_links_created": 270,
-    "akteur_role_rollup_applied": 647,
-    "materialdepot_flag_set": 23,
-    "edges_pollution_canonicalised": 4948,
-    "label_archive_results": [
-      {
-        "label": "Projekt",
-        "nodes_processed": 88
-      },
-      {
-        "label": "Bauteilgruppe",
-        "nodes_processed": 308
-      },
-      {
-        "label": "Bauwerk",
-        "nodes_processed": 85
-      },
-      {
-        "label": "Materialdepot",
-        "nodes_processed": 16
-      },
-      {
-        "label": "Quelle",
-        "nodes_processed": 708
-      },
-      {
-        "label": "Akteur",
-        "nodes_processed": 126
-      }
-    ]
+    "skipped": true
   }
 }

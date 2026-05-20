@@ -1,0 +1,165 @@
+{
+  "probed_at": "2026-05-20T21:50:13+00:00",
+  "database": "mit-bestand",
+  "totals": {
+    "nodes": 2674,
+    "rels": 19624,
+    "quelle": 726,
+    "akteur": 647,
+    "projekt": 91
+  },
+  "anchors": [
+    {
+      "id": "q_aufbereitungsverfahren_reused_building_elements_md",
+      "exists": false
+    },
+    {
+      "id": "q_connection_techniques_bauteilreuse_md",
+      "exists": false
+    },
+    {
+      "id": "q_testing_verification_bauteilreuse_kg_md",
+      "exists": false
+    },
+    {
+      "id": "q_bauteilreuse_legal_regime_matrix_md",
+      "exists": false
+    },
+    {
+      "id": "q_schadstoff_reuse_knowledge_graph_research_md",
+      "exists": false
+    },
+    {
+      "id": "q_circular_construction_reuse_graph_gaps_md",
+      "exists": false
+    },
+    {
+      "id": "q_circular_construction_economics_kg_md",
+      "exists": false
+    },
+    {
+      "id": "q_energy_climate_reuse_research_md",
+      "exists": false
+    }
+  ],
+  "actor_registry": {
+    "akteursliste_master": false,
+    "q_actor_external_link": 319,
+    "projekt_belegt_actor_registry_residual": 0,
+    "akteur_belegt_actor_registry": 360,
+    "akteur_belegt_master": 0,
+    "assoziiert_mit_projekt_total": 167,
+    "registry_stub_only_projects": 0,
+    "verbunden_mit_akteur_total": 335,
+    "hat_akteurrolle_total": 1177,
+    "hat_akteurtyp_total": 657
+  },
+  "domain_nodes": {
+    "aufbereitungsverfahren": 45,
+    "verbindungstechnik": 12,
+    "pruefungnachweis": 20
+  },
+  "sample_akteurrolle": [
+    {
+      "t": "HAT_AKTEURROLLE",
+      "p": {
+        "evidence_source_id": "batch2_v2_import_2026-05-20",
+        "evidence_basis": "controlled_vocab",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_la_fabrique_de_bordeaux_metropole__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "t": "HAT_AKTEURROLLE",
+      "p": {
+        "evidence_source_id": "batch2_v2_import_2026-05-20",
+        "evidence_basis": "controlled_vocab",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_new_horizon_urban_mining__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "t": "HAT_AKTEURROLLE",
+      "p": {
+        "evidence_source_id": "batch2_v2_followup_2026-05-20",
+        "evidence_basis": "controlled_vocab",
+        "evidence_origin": "derived",
+        "evidence_confidence": "unklar",
+        "id": "r_bauteilboerse_basel__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    }
+  ],
+  "sample_assoziiert": [
+    {
+      "t": "ASSOZIIERT_MIT_PROJEKT",
+      "p": {
+        "needs_verification": true,
+        "evidence_source_id": "mig_4_1",
+        "evidence_basis": "registry_stub",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry",
+        "evidence_confidence": "unklar",
+        "id": "r_julien_choppin__ASSOZIIERT_MIT_PROJEKT__p_circular_pavilion_paris"
+      }
+    },
+    {
+      "t": "ASSOZIIERT_MIT_PROJEKT",
+      "p": {
+        "needs_verification": true,
+        "evidence_source_id": "mig_4_1",
+        "evidence_basis": "registry_stub",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry",
+        "evidence_confidence": "unklar",
+        "id": "r_nicola_delon__ASSOZIIERT_MIT_PROJEKT__p_circular_pavilion_paris"
+      }
+    },
+    {
+      "t": "ASSOZIIERT_MIT_PROJEKT",
+      "p": {
+        "needs_verification": true,
+        "evidence_source_id": "mig_4_1",
+        "evidence_basis": "registry_stub",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_context",
+        "not_confirmed_project_participation": true,
+        "evidence_confidence": "unklar",
+        "id": "r_trnsfrm_eg__ASSOZIIERT_MIT_PROJEKT__p_crclr_house_impact_hub_berlin"
+      }
+    }
+  ],
+  "sample_akteur_belegt_actor_url": [
+    {
+      "p": {
+        "evidence_source_id": "q_actor_andreas_kretzer_01",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_external_link",
+        "evidence_confidence": "unklar",
+        "id": "r_andreas_kretzer__BELEGT_IN__q_actor_andreas_kretzer_01"
+      }
+    },
+    {
+      "p": {
+        "evidence_source_id": "q_actor_andreas_kretzer_02",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_external_link",
+        "evidence_confidence": "unklar",
+        "id": "r_andreas_kretzer__BELEGT_IN__q_actor_andreas_kretzer_02"
+      }
+    },
+    {
+      "p": {
+        "evidence_source_id": "q_actor_andreas_kretzer_03",
+        "evidence_basis": "cell_citation",
+        "evidence_origin": "derived",
+        "source_scope": "actor_registry_external_link",
+        "evidence_confidence": "unklar",
+        "id": "r_andreas_kretzer__BELEGT_IN__q_actor_andreas_kretzer_03"
+      }
+    }
+  ]
+}

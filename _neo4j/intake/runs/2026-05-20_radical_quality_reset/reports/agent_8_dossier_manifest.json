@@ -1,0 +1,1780 @@
+{
+  "manifest_version": "agent_8_phase4c_2_prep",
+  "generated_at": "2026-05-20T21:34:33+00:00",
+  "generator": "agent8_build_manifest.py",
+  "scope_note": "Phase 4c.2 prep ONLY. Agent 8 lists every dossier file the Phase-4b loader (Agent 9 / 10) must process; no full parse is performed here. Each entry stubs the q_<slug>_md id, points at the sources block offset, and counts inline citation markers so the loader knows what to expect.",
+  "totals": {
+    "gebaeude_files": 76,
+    "batch2_files": 21,
+    "total_dossier_files": 97,
+    "live_case_markdown_quelle_in_graph": 92,
+    "matched_live_quelle_id": 76,
+    "unmatched_dossier_files": 21,
+    "with_sources_block": 56,
+    "missing_sources_block": 41,
+    "multi_dossier_files": 1,
+    "overlapping_expected_quelle_ids": 0
+  },
+  "overlaps": {},
+  "multi_dossier_files": [
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/batch 1.md",
+      "h1_titles": [
+        "Schärenmoosstrasse Zürich — Projekt «ménage à trois»",
+        "UMAR Unit — NEST, Empa Dübendorf",
+        "ELEMENTA / Walkeweg Basel"
+      ]
+    }
+  ],
+  "phase_4b_loader_contract_hint": "For each entry: MERGE (qmd:Quelle {id: expected_quelle_id}) ON CREATE SET qmd.quelltyp='case_markdown', qmd.source_file=rel_path; stream sources_block, MERGE one q_<slug>_sN per [Sn], then MERGE (qmd)-[:ZITIERT_QUELLE]->(q_sn) with evidence_basis='case_markdown_sources'.",
+  "entries": [
+    {
+      "rel_path": "_archive/research/gebaeude/55_Great_Suffolk_Street_London.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\55_Great_Suffolk_Street_London.md",
+      "size_bytes": 27876,
+      "mtime_utc": "2026-05-07T07:22:15+00:00",
+      "sha1": "3ec58ea197417e60588e020d2a039d34bb666ef5",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "55 Great Suffolk Street, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_55_great_suffolk_street_london_md",
+      "live_quelle_id": "q_55_great_suffolk_street_london_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 8,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Association_house_Groeditz.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Association_house_Groeditz.md",
+      "size_bytes": 19435,
+      "mtime_utc": "2026-05-07T07:01:34+00:00",
+      "sha1": "95bf6eb9cc507341e3dfc1aeae9336a7b5f3160b",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Association house, Gröditz — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
+      ],
+      "expected_quelle_id": "q_association_house_groeditz_md",
+      "live_quelle_id": "q_association_house_groeditz_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 17807,
+      "inline_url_count": 7,
+      "sref_inline_count": 59
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Association_house_Plauen.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Association_house_Plauen.md",
+      "size_bytes": 19819,
+      "mtime_utc": "2026-05-07T07:01:27+00:00",
+      "sha1": "1a8a4f50c79f8468af372302d69e029b64dd05fc",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Association house, Plauen — Fallstudie Direct Reuse / Wiederverwendung von Betonfertigteilen"
+      ],
+      "expected_quelle_id": "q_association_house_plauen_md",
+      "live_quelle_id": "q_association_house_plauen_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 18362,
+      "inline_url_count": 6,
+      "sref_inline_count": 61
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/AWM_Muenster_Circular_Office.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\AWM_Muenster_Circular_Office.md",
+      "size_bytes": 23258,
+      "mtime_utc": "2026-05-07T09:27:20+00:00",
+      "sha1": "320a1e730b4e0724003f0c9b619c3cd56c2658d8",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "AWM Münster – Zirkulärer Büroausbau 3. OG – Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_awm_muenster_circular_office_md",
+      "live_quelle_id": "q_awm_muenster_circular_office_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 21925,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/BedZED_London_Hackbridge.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\BedZED_London_Hackbridge.md",
+      "size_bytes": 26900,
+      "mtime_utc": "2026-05-07T06:43:33+00:00",
+      "sha1": "0d5a063461cea8b76aec2a8a9d94982ac4ed6fc2",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "BedZED, London / Hackbridge — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+      ],
+      "expected_quelle_id": "q_bedzed_london_hackbridge_md",
+      "live_quelle_id": "q_bedzed_london_hackbridge_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 25672,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Berlin_Schildow_Pilot_House.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Berlin_Schildow_Pilot_House.md",
+      "size_bytes": 21635,
+      "mtime_utc": "2026-05-07T07:01:46+00:00",
+      "sha1": "9b7144eb84b52c5d8f2cc1ae465832d1e2712b8d",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Berlin-Schildow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+      ],
+      "expected_quelle_id": "q_berlin_schildow_pilot_house_md",
+      "live_quelle_id": "q_berlin_schildow_pilot_house_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19757,
+      "inline_url_count": 9,
+      "sref_inline_count": 90
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Berlin_Schildow_Pilot_House_2.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Berlin_Schildow_Pilot_House_2.md",
+      "size_bytes": 22134,
+      "mtime_utc": "2026-05-07T07:12:58+00:00",
+      "sha1": "b5543d11399975912bf61a67218b88a66e4b43a9",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Berlin-Schildow Pilot House 2 — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+      ],
+      "expected_quelle_id": "q_berlin_schildow_pilot_house_2_md",
+      "live_quelle_id": "q_berlin_schildow_pilot_house_2_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 21089,
+      "inline_url_count": 4,
+      "sref_inline_count": 76
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Bestandverplanzung_Pavilion_Muenchen.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Bestandverplanzung_Pavilion_Muenchen.md",
+      "size_bytes": 18571,
+      "mtime_utc": "2026-05-07T10:03:49+00:00",
+      "sha1": "62ae27137a7fe31d1b8b6f7bb3064bbc4564d767",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Bestandverplanzung Pavilion, München — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_bestandverplanzung_pavilion_muenchen_md",
+      "live_quelle_id": "q_bestandverplanzung_pavilion_muenchen_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 17489,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Big_Dig_Building_Boston.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Big_Dig_Building_Boston.md",
+      "size_bytes": 19657,
+      "mtime_utc": "2026-05-07T10:04:10+00:00",
+      "sha1": "27bf7a9de01ec1bd086a139bb54c844ad93ae712",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Big Dig Building, Boston/Cambridge — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_big_dig_building_boston_md",
+      "live_quelle_id": "q_big_dig_building_boston_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 18540,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Big_Dig_House_Lexington_Massachusetts.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Big_Dig_House_Lexington_Massachusetts.md",
+      "size_bytes": 25286,
+      "mtime_utc": "2026-05-07T07:22:37+00:00",
+      "sha1": "965fd2d2372bba9c837ef6eb97bace270f882762",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Big Dig House, Lexington, Massachusetts — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_big_dig_house_lexington_massachusetts_md",
+      "live_quelle_id": "q_big_dig_house_lexington_massachusetts_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 8,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/BioPartner_5_Leiden_Oegstgeest.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\BioPartner_5_Leiden_Oegstgeest.md",
+      "size_bytes": 26477,
+      "mtime_utc": "2026-05-07T06:33:22+00:00",
+      "sha1": "2c06e7ffc2cf6145368e3476c379db093c5a2f16",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "BioPartner 5, Leiden / Oegstgeest — Fallstudie Direct Reuse / Wiederverwendung"
+      ],
+      "expected_quelle_id": "q_biopartner_5_leiden_oegstgeest_md",
+      "live_quelle_id": "q_biopartner_5_leiden_oegstgeest_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 24544,
+      "inline_url_count": 12,
+      "sref_inline_count": 155
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/BlueCity_Offices_Rotterdam.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\BlueCity_Offices_Rotterdam.md",
+      "size_bytes": 20593,
+      "mtime_utc": "2026-05-07T09:27:09+00:00",
+      "sha1": "6e65fead8eb79e37ccd2cc97bc9b5a4c83d7b975",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "BlueCity Offices Rotterdam – Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_bluecity_offices_rotterdam_md",
+      "live_quelle_id": "q_bluecity_offices_rotterdam_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19173,
+      "inline_url_count": 8,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Boulder_Fire_Station_3.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Boulder_Fire_Station_3.md",
+      "size_bytes": 25916,
+      "mtime_utc": "2026-05-07T07:55:30+00:00",
+      "sha1": "a6908dba745c30d9a37f66a9bf328067875797ea",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Boulder Fire Station 3, Boulder, Colorado — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_boulder_fire_station_3_md",
+      "live_quelle_id": "q_boulder_fire_station_3_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 24279,
+      "inline_url_count": 9,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Brent_Cross_Town_Primary_Substation_London.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Brent_Cross_Town_Primary_Substation_London.md",
+      "size_bytes": 25064,
+      "mtime_utc": "2026-05-07T07:22:20+00:00",
+      "sha1": "ba6315e1745dbe8f6e72c147299caa59ba844920",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Brent Cross Town Primary Substation, London — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_brent_cross_town_primary_substation_london_md",
+      "live_quelle_id": "q_brent_cross_town_primary_substation_london_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Brighton_Waste_House_Brighton.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Brighton_Waste_House_Brighton.md",
+      "size_bytes": 25197,
+      "mtime_utc": "2026-05-07T08:12:31+00:00",
+      "sha1": "9acc5fc1dcc9f021c484d95369425dbb8f515adc",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Brighton Waste House / Wild House, Brighton — Fallstudie Bauteil- und Materialwiederverwendung"
+      ],
+      "expected_quelle_id": "q_brighton_waste_house_brighton_md",
+      "live_quelle_id": "q_brighton_waste_house_brighton_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 8,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Broethen_Twin_House_Hoyerswerda.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Broethen_Twin_House_Hoyerswerda.md",
+      "size_bytes": 17485,
+      "mtime_utc": "2026-05-07T07:13:11+00:00",
+      "sha1": "c0deff0a622a99e5685c19eafe31f1980882349c",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Bröthen Twin-House, Hoyerswerda — Fallstudie Direct Reuse / Wiederverwendung von P2-Plattenbauteilen"
+      ],
+      "expected_quelle_id": "q_broethen_twin_house_hoyerswerda_md",
+      "live_quelle_id": "q_broethen_twin_house_hoyerswerda_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 16743,
+      "inline_url_count": 2,
+      "sref_inline_count": 47
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/CascadeUp_London_secondary_timber_glulam_demonstrator.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\CascadeUp_London_secondary_timber_glulam_demonstrator.md",
+      "size_bytes": 19887,
+      "mtime_utc": "2026-05-07T09:55:43+00:00",
+      "sha1": "46303ba7e867f4b6480878772b23e2021a250691",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "CascadeUp / London secondary-timber glulam demonstrator — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_cascadeup_london_secondary_timber_glulam_demonstrator_md",
+      "live_quelle_id": "q_cascadeup_london_secondary_timber_glulam_demonstrator_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 18623,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Charles_Malis_Molenbeek.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Charles_Malis_Molenbeek.md",
+      "size_bytes": 19447,
+      "mtime_utc": "2026-05-07T09:35:06+00:00",
+      "sha1": "c68b1438bde0cee49daaab046c446d421bafeff6",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Charles Malis / Antenne administrative Molenbeek-Saint-Jean — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_charles_malis_molenbeek_md",
+      "live_quelle_id": "q_charles_malis_molenbeek_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 17948,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Chiro_d_Itterbeek_Dilbeek.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Chiro_d_Itterbeek_Dilbeek.md",
+      "size_bytes": 26313,
+      "mtime_utc": "2026-05-07T08:42:51+00:00",
+      "sha1": "a29fb7c4466774b8e901ef9ba3b06a3845e3b14d",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Chiro d’Itterbeek / Sanitary block, Dilbeek – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_chiro_d_itterbeek_dilbeek_md",
+      "live_quelle_id": "q_chiro_d_itterbeek_dilbeek_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 24997,
+      "inline_url_count": 6,
+      "sref_inline_count": 160
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Christ_Pavilion_Volkenroda.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Christ_Pavilion_Volkenroda.md",
+      "size_bytes": 22914,
+      "mtime_utc": "2026-05-07T10:04:18+00:00",
+      "sha1": "e638d44ea01165911b544baea92ae9b7d6ad42c2",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Christus-Pavillon / Christ Pavilion, Volkenroda — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_christ_pavilion_volkenroda_md",
+      "live_quelle_id": "q_christ_pavilion_volkenroda_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 21402,
+      "inline_url_count": 8,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Circular_Centre_Netherlands_Prinsenhof_A_reuse_pilot.md",
+      "size_bytes": 20838,
+      "mtime_utc": "2026-05-07T09:01:40+00:00",
+      "sha1": "de136172faae0f2571d388db27843c1ff80f790e",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Circular Centre Netherlands / Prinsenhof A reuse pilot — Fallstudie Wiederverwendung / Direct Reuse"
+      ],
+      "expected_quelle_id": "q_circular_centre_netherlands_prinsenhof_a_reuse_pilot_md",
+      "live_quelle_id": "q_circular_centre_netherlands_prinsenhof_a_reuse_pilot_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Circular_Pavilion_Paris.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Circular_Pavilion_Paris.md",
+      "size_bytes": 21292,
+      "mtime_utc": "2026-05-07T09:35:18+00:00",
+      "sha1": "a275baafa60dac053a55ac66d10d1c95e47a4741",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Pavillon Circulaire / Circular Pavilion, Paris — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_circular_pavilion_paris_md",
+      "live_quelle_id": "q_circular_pavilion_paris_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19443,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/CRCLR_House_Impact_Hub_Berlin.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\CRCLR_House_Impact_Hub_Berlin.md",
+      "size_bytes": 22651,
+      "mtime_utc": "2026-05-07T07:44:52+00:00",
+      "sha1": "d80f090a6b0654033c7c5e393a996a6ce0d96233",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "CRCLR House / Impact Hub Berlin – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_crclr_house_impact_hub_berlin_md",
+      "live_quelle_id": "q_crclr_house_impact_hub_berlin_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 21420,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/ELYS_Kultur_Gewerbehaus_Basel.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\ELYS_Kultur_Gewerbehaus_Basel.md",
+      "size_bytes": 22159,
+      "mtime_utc": "2026-05-07T07:45:08+00:00",
+      "sha1": "6da98ef62ba01f955e96262de4a04b34ee8ea65b",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "ELYS Kultur- & Gewerbehaus, Basel – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_elys_kultur_gewerbehaus_basel_md",
+      "live_quelle_id": "q_elys_kultur_gewerbehaus_basel_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 20671,
+      "inline_url_count": 8,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Europa_Building_Brussels.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Europa_Building_Brussels.md",
+      "size_bytes": 19687,
+      "mtime_utc": "2026-05-07T07:45:02+00:00",
+      "sha1": "ca207c9a4bae349829414a6c6288bacbbaace60d",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Europa Building, Brussels – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_europa_building_brussels_md",
+      "live_quelle_id": "q_europa_building_brussels_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 18608,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Ferme_du_Rail_Paris.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Ferme_du_Rail_Paris.md",
+      "size_bytes": 25055,
+      "mtime_utc": "2026-05-07T08:23:48+00:00",
+      "sha1": "b9d8a752329c63fca2028d088cbbe350b5df1b1b",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "La Ferme du Rail, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_ferme_du_rail_paris_md",
+      "live_quelle_id": "q_ferme_du_rail_paris_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 23938,
+      "inline_url_count": 6,
+      "sref_inline_count": 108
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/gjG_House_Gentbrugge.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\gjG_House_Gentbrugge.md",
+      "size_bytes": 19679,
+      "mtime_utc": "2026-05-07T07:31:41+00:00",
+      "sha1": "fa66194772b4a36ddbd2a1b4dc7a906b79e14668",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "gjG House, Gentbrugge / Ghent — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_gjg_house_gentbrugge_md",
+      "live_quelle_id": "q_gjg_house_gentbrugge_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 4,
+      "sref_inline_count": 82
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Grande_Halle_de_Colombelles.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Grande_Halle_de_Colombelles.md",
+      "size_bytes": 24691,
+      "mtime_utc": "2026-05-07T08:23:43+00:00",
+      "sha1": "4c865d44fec684aa3773b24345f61492a2fdae66",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Grande Halle de Colombelles / Le WIP — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_grande_halle_de_colombelles_md",
+      "live_quelle_id": "q_grande_halle_de_colombelles_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 23161,
+      "inline_url_count": 8,
+      "sref_inline_count": 172
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Grubenstrasse_29_Werkhof_29_Zuerich.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Grubenstrasse_29_Werkhof_29_Zuerich.md",
+      "size_bytes": 27885,
+      "mtime_utc": "2026-05-07T07:55:18+00:00",
+      "sha1": "1f8032271dcf69e18129ab9d522dae5a80a80587",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Grubenstrasse 29 / Werkhof 29, Zürich — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_grubenstrasse_29_werkhof_29_zuerich_md",
+      "live_quelle_id": "q_grubenstrasse_29_werkhof_29_zuerich_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 26418,
+      "inline_url_count": 9,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Harmalanranta_A_Kruunu_ReCreate_mini_pilot_Tampere.md",
+      "size_bytes": 17266,
+      "mtime_utc": "2026-05-07T09:01:25+00:00",
+      "sha1": "e87a0a1901c505b2bd2a83f84127ac115af8df4a",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Härmälänranta / A-Kruunu ReCreate mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+      ],
+      "expected_quelle_id": "q_harmalanranta_a_kruunu_recreate_mini_pilot_tampere_md",
+      "live_quelle_id": "q_harmalanranta_a_kruunu_recreate_mini_pilot_tampere_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Hastings_Pier_Visitor_Centre.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Hastings_Pier_Visitor_Centre.md",
+      "size_bytes": 24371,
+      "mtime_utc": "2026-05-07T08:52:42+00:00",
+      "sha1": "246c07c7531a5b536f0857cf6e0e3a10b8640a70",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Hastings Pier Visitor Centre / Pavilion Cladding, Hastings"
+      ],
+      "expected_quelle_id": "q_hastings_pier_visitor_centre_md",
+      "live_quelle_id": "q_hastings_pier_visitor_centre_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Haus_HOS_Mehrfamilienhaus_Muehlhausen.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Haus_HOS_Mehrfamilienhaus_Muehlhausen.md",
+      "size_bytes": 21137,
+      "mtime_utc": "2026-05-07T07:01:40+00:00",
+      "sha1": "e8601d699eb3942dcf7dcbdd6221359f0e6dd705",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Haus HOS / Mehrfamilienhaus Mühlhausen — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+      ],
+      "expected_quelle_id": "q_haus_hos_mehrfamilienhaus_muehlhausen_md",
+      "live_quelle_id": "q_haus_hos_mehrfamilienhaus_muehlhausen_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19246,
+      "inline_url_count": 9,
+      "sref_inline_count": 101
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Holbein_Gardens_London.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Holbein_Gardens_London.md",
+      "size_bytes": 26452,
+      "mtime_utc": "2026-05-07T07:13:17+00:00",
+      "sha1": "8aa77e545e1b41be928e325747da6bfdd06c3b0f",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Holbein Gardens, London — Fallstudie Direct Reuse / Wiederverwendung von Tragwerksstahl"
+      ],
+      "expected_quelle_id": "q_holbein_gardens_london_md",
+      "live_quelle_id": "q_holbein_gardens_london_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 24202,
+      "inline_url_count": 13,
+      "sref_inline_count": 159
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\House_of_Fraser_318_Oxford_Street_TBC_London_reuse_chain.md",
+      "size_bytes": 29706,
+      "mtime_utc": "2026-05-07T07:22:30+00:00",
+      "sha1": "73a59d93cdee06100b0b7b0b980c20d2c01f3503",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "House of Fraser / 318 Oxford Street → TBC.London / Tower Bridge Court — Fallstudie Reuse-Kette"
+      ],
+      "expected_quelle_id": "q_house_of_fraser_318_oxford_street_tbc_london_reuse_chain_md",
+      "live_quelle_id": "q_house_of_fraser_318_oxford_street_tbc_london_reuse_chain_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 10,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Impact_Hub_Berlin_CRCLR_Fitout.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Impact_Hub_Berlin_CRCLR_Fitout.md",
+      "size_bytes": 21879,
+      "mtime_utc": "2026-05-07T09:27:15+00:00",
+      "sha1": "288f1b0e1ca8fc1e0a0c7d79445781b415134514",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Impact Hub Berlin Interior / CRCLR Fit-out – Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_impact_hub_berlin_crclr_fitout_md",
+      "live_quelle_id": "q_impact_hub_berlin_crclr_fitout_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 20764,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Institut_de_Botanique_ULg_Liege.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Institut_de_Botanique_ULg_Liege.md",
+      "size_bytes": 17049,
+      "mtime_utc": "2026-05-07T08:03:01+00:00",
+      "sha1": "51ded26a0cb7c09540737d332dc1fcbd0ff8009c",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Institut de Botanique de l’ULg, Liège — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_institut_de_botanique_ulg_liege_md",
+      "live_quelle_id": "q_institut_de_botanique_ulg_liege_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 16267,
+      "inline_url_count": 2,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Jeugdkliniek_Ithaka_Emergis_Kloetinge.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Jeugdkliniek_Ithaka_Emergis_Kloetinge.md",
+      "size_bytes": 25769,
+      "mtime_utc": "2026-05-07T09:14:17+00:00",
+      "sha1": "5fe14839c8f27e9f6d1a24ee9bac30d1bddfa1b0",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Jeugdkliniek Ithaka / Emergis, Kloetinge"
+      ],
+      "expected_quelle_id": "q_jeugdkliniek_ithaka_emergis_kloetinge_md",
+      "live_quelle_id": "q_jeugdkliniek_ithaka_emergis_kloetinge_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 23186,
+      "inline_url_count": 15,
+      "sref_inline_count": 140
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Juch_Areal_Recyclingzentrum_Zuerich.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Juch_Areal_Recyclingzentrum_Zuerich.md",
+      "size_bytes": 24327,
+      "mtime_utc": "2026-05-07T09:14:23+00:00",
+      "sha1": "844258a8173c9ae0c88f66341a13b9130d493463",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Juch-Areal Recyclingzentrum, Zürich-Altstetten"
+      ],
+      "expected_quelle_id": "q_juch_areal_recyclingzentrum_zuerich_md",
+      "live_quelle_id": "q_juch_areal_recyclingzentrum_zuerich_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 22534,
+      "inline_url_count": 9,
+      "sref_inline_count": 124
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/K118_Kopfbau_Halle_118_Winterthur.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\K118_Kopfbau_Halle_118_Winterthur.md",
+      "size_bytes": 24985,
+      "mtime_utc": "2026-05-07T06:33:26+00:00",
+      "sha1": "8bbbd6b7faacb7597dbc8828f433cdbb76e97c58",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "K.118 / Kopfbau Halle 118, Winterthur — Fallstudie Direct Reuse / Wiederverwendung"
+      ],
+      "expected_quelle_id": "q_k118_kopfbau_halle_118_winterthur_md",
+      "live_quelle_id": "q_k118_kopfbau_halle_118_winterthur_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 23201,
+      "inline_url_count": 9,
+      "sref_inline_count": 139
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/KA13_Kristian_Augusts_gate_13_Oslo.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\KA13_Kristian_Augusts_gate_13_Oslo.md",
+      "size_bytes": 27596,
+      "mtime_utc": "2026-05-07T06:43:46+00:00",
+      "sha1": "d412dd7fa298af81320a0a4bf8c7b075c2326fa1",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "KA13 / Kristian Augusts gate 13, Oslo — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+      ],
+      "expected_quelle_id": "q_ka13_kristian_augusts_gate_13_oslo_md",
+      "live_quelle_id": "q_ka13_kristian_augusts_gate_13_oslo_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 25865,
+      "inline_url_count": 9,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Kamikatsu_Zero_Waste_Center_Hotel_WHY.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Kamikatsu_Zero_Waste_Center_Hotel_WHY.md",
+      "size_bytes": 25858,
+      "mtime_utc": "2026-05-07T08:52:48+00:00",
+      "sha1": "05b874b79c7558fe06f52e8c2787c42ea772edd1",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Kamikatsu Zero Waste Center / Hotel WHY, Kamikatsu"
+      ],
+      "expected_quelle_id": "q_kamikatsu_zero_waste_center_hotel_why_md",
+      "live_quelle_id": "q_kamikatsu_zero_waste_center_hotel_why_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 8,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Kindergarten_Moeoeslistrasse_Manegg_Zuerich.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Kindergarten_Moeoeslistrasse_Manegg_Zuerich.md",
+      "size_bytes": 27086,
+      "mtime_utc": "2026-05-07T08:12:36+00:00",
+      "sha1": "ebce437597ded12d537c80df5c548115da666e4c",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Kindergarten Mööslistrasse / Manegg, Zürich — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+      ],
+      "expected_quelle_id": "q_kindergarten_moeoeslistrasse_manegg_zuerich_md",
+      "live_quelle_id": "q_kindergarten_moeoeslistrasse_manegg_zuerich_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 9,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Liander_Alliander_HQ_Duiven.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Liander_Alliander_HQ_Duiven.md",
+      "size_bytes": 19559,
+      "mtime_utc": "2026-05-07T08:03:12+00:00",
+      "sha1": "81cf9d7c7da9cc4dca4bebd6a3148e54dc0f4662",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Liander / Alliander HQ, Duiven — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_liander_alliander_hq_duiven_md",
+      "live_quelle_id": "q_liander_alliander_hq_duiven_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 18685,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Lo_Reninge_Town_Hall_Facade.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Lo_Reninge_Town_Hall_Facade.md",
+      "size_bytes": 20068,
+      "mtime_utc": "2026-05-07T08:42:29+00:00",
+      "sha1": "408218963b56df53ecadec700e7e5277f82fc960",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Lo-Reninge Town Hall façade / Stadhuis Lo – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_lo_reninge_town_hall_facade_md",
+      "live_quelle_id": "q_lo_reninge_town_hall_facade_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19169,
+      "inline_url_count": 4,
+      "sref_inline_count": 66
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Lokomotion_Technology_Centre_mini_pilot_Tampere.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Lokomotion_Technology_Centre_mini_pilot_Tampere.md",
+      "size_bytes": 19726,
+      "mtime_utc": "2026-05-07T09:01:18+00:00",
+      "sha1": "440a6bf9abca17243cec291639f7829bb863c6af",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Lokomotion Technology Centre mini-pilot, Tampere — Fallstudie Wiederverwendung / Direct Reuse"
+      ],
+      "expected_quelle_id": "q_lokomotion_technology_centre_mini_pilot_tampere_md",
+      "live_quelle_id": "q_lokomotion_technology_centre_mini_pilot_tampere_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Lycee_Michel_Lucius_Conversion_Luxembourg.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Lycee_Michel_Lucius_Conversion_Luxembourg.md",
+      "size_bytes": 26392,
+      "mtime_utc": "2026-05-07T07:31:48+00:00",
+      "sha1": "a38726c7fe4a97e9d7e279a0846cc7f6848d2c43",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Lycée Michel Lucius Conversion, Luxembourg — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_lycee_michel_lucius_conversion_luxembourg_md",
+      "live_quelle_id": "q_lycee_michel_lucius_conversion_luxembourg_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 6,
+      "sref_inline_count": 100
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Maison_des_Canaux_Paris.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Maison_des_Canaux_Paris.md",
+      "size_bytes": 18887,
+      "mtime_utc": "2026-05-07T08:03:07+00:00",
+      "sha1": "824d17e7e017272fd695357a2fc8ac20b22ce5b8",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Maison des Canaux, Paris — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_maison_des_canaux_paris_md",
+      "live_quelle_id": "q_maison_des_canaux_paris_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 18026,
+      "inline_url_count": 4,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Maison_DnA_Asse.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Maison_DnA_Asse.md",
+      "size_bytes": 19698,
+      "mtime_utc": "2026-05-07T07:31:34+00:00",
+      "sha1": "eff01622f7399e57ef020602fabb20635096f94b",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Maison DnA / dnA House, Asse — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_maison_dna_asse_md",
+      "live_quelle_id": "q_maison_dna_asse_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 3,
+      "sref_inline_count": 60
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Maison_Vignette_Auderghem.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Maison_Vignette_Auderghem.md",
+      "size_bytes": 21934,
+      "mtime_utc": "2026-05-07T08:42:35+00:00",
+      "sha1": "975899934b539c2883fd33c255e14a7433ce77c6",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Maison Vignette, Auderghem – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_maison_vignette_auderghem_md",
+      "live_quelle_id": "q_maison_vignette_auderghem_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 20891,
+      "inline_url_count": 4,
+      "sref_inline_count": 85
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Mehrow_Pilot_House.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Mehrow_Pilot_House.md",
+      "size_bytes": 19994,
+      "mtime_utc": "2026-05-07T07:13:03+00:00",
+      "sha1": "5c0ef5caa99c5d2191ef4b30e1ce716c3539a886",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Mehrow Pilot House — Fallstudie Direct Reuse / Wiederverwendung von WBS70-Plattenbauteilen"
+      ],
+      "expected_quelle_id": "q_mehrow_pilot_house_md",
+      "live_quelle_id": "q_mehrow_pilot_house_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19019,
+      "inline_url_count": 4,
+      "sref_inline_count": 68
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Melkinlaituri_Primary_School_Daycare_Centre_Helsinki.md",
+      "size_bytes": 18224,
+      "mtime_utc": "2026-05-07T09:01:31+00:00",
+      "sha1": "0ac9566b85253358c8bad5348bd713ce4222b7a5",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Melkinlaituri Primary School and Day-care Centre, Helsinki — Fallstudie Wiederverwendung / Direct Reuse"
+      ],
+      "expected_quelle_id": "q_melkinlaituri_primary_school_daycare_centre_helsinki_md",
+      "live_quelle_id": "q_melkinlaituri_primary_school_daycare_centre_helsinki_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Montessori_Maassluis.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Montessori_Maassluis.md",
+      "size_bytes": 23287,
+      "mtime_utc": "2026-05-07T07:55:36+00:00",
+      "sha1": "c42c68f13ec04613122f1f3aa3ae3bff210f1fde",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Montessori Maassluis — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_montessori_maassluis_md",
+      "live_quelle_id": "q_montessori_maassluis_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 22507,
+      "inline_url_count": 4,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Multi_Brussels_Reuse_in_MULTI.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Multi_Brussels_Reuse_in_MULTI.md",
+      "size_bytes": 22371,
+      "mtime_utc": "2026-05-07T09:27:03+00:00",
+      "sha1": "642e83e1c878021225572907ca2c8cade4aeb5df",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Multi Brussels / Reuse in MULTI – Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_multi_brussels_reuse_in_multi_md",
+      "live_quelle_id": "q_multi_brussels_reuse_in_multi_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 20957,
+      "inline_url_count": 9,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Musee_de_Folklore_Mouscron.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Musee_de_Folklore_Mouscron.md",
+      "size_bytes": 21823,
+      "mtime_utc": "2026-05-07T08:42:42+00:00",
+      "sha1": "7a092e544e495620a66b2b085726c88b04ec5d5e",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Musée de Folklore Vie Frontalière / MUSEF, Mouscron – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_musee_de_folklore_mouscron_md",
+      "live_quelle_id": "q_musee_de_folklore_mouscron_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 20706,
+      "inline_url_count": 6,
+      "sref_inline_count": 103
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Peoples_Pavilion_Eindhoven.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Peoples_Pavilion_Eindhoven.md",
+      "size_bytes": 20427,
+      "mtime_utc": "2026-05-07T09:35:12+00:00",
+      "sha1": "8457e83d822d0b7ef2f6a901fab384c0fbbea6b8",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "People’s Pavilion, Eindhoven — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_peoples_pavilion_eindhoven_md",
+      "live_quelle_id": "q_peoples_pavilion_eindhoven_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19093,
+      "inline_url_count": 4,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Plattenpalast_Berlin.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Plattenpalast_Berlin.md",
+      "size_bytes": 20256,
+      "mtime_utc": "2026-05-07T09:56:00+00:00",
+      "sha1": "b0646b1724646dea4f62328647bf5a766117f320",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Plattenpalast Berlin — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_plattenpalast_berlin_md",
+      "live_quelle_id": "q_plattenpalast_berlin_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19101,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Plattenvereinigung_Berlin.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Plattenvereinigung_Berlin.md",
+      "size_bytes": 20430,
+      "mtime_utc": "2026-05-07T09:56:08+00:00",
+      "sha1": "f7a3e70c1b7c600d4eb969fe21ca50bcd226ccb1",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Plattenvereinigung Berlin — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_plattenvereinigung_berlin_md",
+      "live_quelle_id": "q_plattenvereinigung_berlin_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19303,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/PLP_London_HQ_Circular_Studio_Fitout.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\PLP_London_HQ_Circular_Studio_Fitout.md",
+      "size_bytes": 21360,
+      "mtime_utc": "2026-05-07T09:35:00+00:00",
+      "sha1": "0edfbc0dc1de48e5cab17102e7df95c21a04e9e3",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "PLP Architecture HQ / Circular Studio Fit-out, London — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_plp_london_hq_circular_studio_fitout_md",
+      "live_quelle_id": "q_plp_london_hq_circular_studio_fitout_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19893,
+      "inline_url_count": 4,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/ReCrete_footbridge_reused_concrete_blocks.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\ReCrete_footbridge_reused_concrete_blocks.md",
+      "size_bytes": 19515,
+      "mtime_utc": "2026-05-07T09:55:53+00:00",
+      "sha1": "c33b5ba553a3d9d4e8c0d17a8aa082b016ff9730",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Re:Crete footbridge — Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_recrete_footbridge_reused_concrete_blocks_md",
+      "live_quelle_id": "q_recrete_footbridge_reused_concrete_blocks_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 18391,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Recyclinghaus_Hannover.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Recyclinghaus_Hannover.md",
+      "size_bytes": 27969,
+      "mtime_utc": "2026-05-07T07:55:25+00:00",
+      "sha1": "1b619ed4c78d305d5d7a52994a0acdaa8a284f75",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Recyclinghaus Hannover — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_recyclinghaus_hannover_md",
+      "live_quelle_id": "q_recyclinghaus_hannover_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 25820,
+      "inline_url_count": 13,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Recypark_Demets_Anderlecht.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Recypark_Demets_Anderlecht.md",
+      "size_bytes": 24350,
+      "mtime_utc": "2026-05-07T06:33:31+00:00",
+      "sha1": "145818678cb30168a4c68a0c8c8e60486b186377",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Recypark Demets / Recypark Anderlecht, Brüssel — Fallstudie Direct Reuse / Wiederverwendung"
+      ],
+      "expected_quelle_id": "q_recypark_demets_anderlecht_md",
+      "live_quelle_id": "q_recypark_demets_anderlecht_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 22821,
+      "inline_url_count": 9,
+      "sref_inline_count": 122
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Resilience_La_Ferme_des_Possibles_Stains.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Resilience_La_Ferme_des_Possibles_Stains.md",
+      "size_bytes": 27620,
+      "mtime_utc": "2026-05-07T08:24:01+00:00",
+      "sha1": "72638c09263102aaf701a27bf333760279920307",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Résilience / La Ferme des Possibles, Stains — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_resilience_la_ferme_des_possibles_stains_md",
+      "live_quelle_id": "q_resilience_la_ferme_des_possibles_stains_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 25791,
+      "inline_url_count": 7,
+      "sref_inline_count": 140
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Resource_Rows_Copenhagen.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Resource_Rows_Copenhagen.md",
+      "size_bytes": 20040,
+      "mtime_utc": "2026-05-07T08:03:18+00:00",
+      "sha1": "3b47c336c22498ec592cf38101466ac8663b6c64",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Resource Rows, Copenhagen — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_resource_rows_copenhagen_md",
+      "live_quelle_id": "q_resource_rows_copenhagen_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19097,
+      "inline_url_count": 5,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Roots_in_the_Sky_Blackfriars_Crown_Court.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Roots_in_the_Sky_Blackfriars_Crown_Court.md",
+      "size_bytes": 23512,
+      "mtime_utc": "2026-05-07T09:14:04+00:00",
+      "sha1": "d1fe62cfac4a44ea32cacb306480cd00861637e4",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Roots in the Sky / Blackfriars Crown Court, London"
+      ],
+      "expected_quelle_id": "q_roots_in_the_sky_blackfriars_crown_court_md",
+      "live_quelle_id": "q_roots_in_the_sky_blackfriars_crown_court_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 21506,
+      "inline_url_count": 11,
+      "sref_inline_count": 102
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Saxum_Vineyard_Equipment_Barn_Paso_Robles.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Saxum_Vineyard_Equipment_Barn_Paso_Robles.md",
+      "size_bytes": 22345,
+      "mtime_utc": "2026-05-07T07:31:30+00:00",
+      "sha1": "af861bc6d7ef0e6d2043d0ed045e85ffe432fccf",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Saxum Vineyard Equipment Barn, Paso Robles — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_saxum_vineyard_equipment_barn_paso_robles_md",
+      "live_quelle_id": "q_saxum_vineyard_equipment_barn_paso_robles_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 5,
+      "sref_inline_count": 93
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Superlocal_Expogebouw_Bleijerheide.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Superlocal_Expogebouw_Bleijerheide.md",
+      "size_bytes": 24696,
+      "mtime_utc": "2026-05-07T10:03:59+00:00",
+      "sha1": "8b089126456294ef3370f9eabd745316f60a0fd2",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "SUPERLOCAL Expogebouw, Bleijerheide/Kerkrade — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_superlocal_expogebouw_bleijerheide_md",
+      "live_quelle_id": "q_superlocal_expogebouw_bleijerheide_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 23612,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Svanen_Kindergarten_Gladsaxe.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Svanen_Kindergarten_Gladsaxe.md",
+      "size_bytes": 26245,
+      "mtime_utc": "2026-05-07T06:33:36+00:00",
+      "sha1": "b2ddbe91ee9602af009eb94553871e49b7c6b801",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Svanen / The Swan Kindergarten, Gladsaxe — Fallstudie Direct Reuse / Wiederverwendung"
+      ],
+      "expected_quelle_id": "q_svanen_kindergarten_gladsaxe_md",
+      "live_quelle_id": "q_svanen_kindergarten_gladsaxe_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 24522,
+      "inline_url_count": 10,
+      "sref_inline_count": 133
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/The_Green_House_Utrecht.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\The_Green_House_Utrecht.md",
+      "size_bytes": 24901,
+      "mtime_utc": "2026-05-07T08:52:56+00:00",
+      "sha1": "26133b7b801c76077ab35afec519089062bad4cf",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "The Green House, Utrecht"
+      ],
+      "expected_quelle_id": "q_the_green_house_utrecht_md",
+      "live_quelle_id": "q_the_green_house_utrecht_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Thoravej_29_Copenhagen.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Thoravej_29_Copenhagen.md",
+      "size_bytes": 20149,
+      "mtime_utc": "2026-05-07T07:44:57+00:00",
+      "sha1": "475b87ec16acc856c4629d49cd9a5f1e56d45872",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Thoravej 29, Copenhagen – Fallstudie Direct Reuse"
+      ],
+      "expected_quelle_id": "q_thoravej_29_copenhagen_md",
+      "live_quelle_id": "q_thoravej_29_copenhagen_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 19128,
+      "inline_url_count": 7,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Timber_Square_London.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Timber_Square_London.md",
+      "size_bytes": 26801,
+      "mtime_utc": "2026-05-07T06:43:52+00:00",
+      "sha1": "51ed8ce8a86b54a9607bfbfca5fcaafbd6c516f9",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Timber Square, London — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+      ],
+      "expected_quelle_id": "q_timber_square_london_md",
+      "live_quelle_id": "q_timber_square_london_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 25325,
+      "inline_url_count": 10,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/TRAE_High_Rise_Aarhus.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\TRAE_High_Rise_Aarhus.md",
+      "size_bytes": 23544,
+      "mtime_utc": "2026-05-07T09:14:09+00:00",
+      "sha1": "49d20f6174703472547d953ffa293fd5e40ea7fe",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "TRÆ High-Rise, Aarhus"
+      ],
+      "expected_quelle_id": "q_trae_high_rise_aarhus_md",
+      "live_quelle_id": "q_trae_high_rise_aarhus_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 21856,
+      "inline_url_count": 12,
+      "sref_inline_count": 132
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Upcycle_Studios_Copenhagen.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Upcycle_Studios_Copenhagen.md",
+      "size_bytes": 21682,
+      "mtime_utc": "2026-05-07T08:12:26+00:00",
+      "sha1": "2c7eed55929696cfffe6eee3aa43b8792ce0ac4a",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Upcycle Studios, Copenhagen — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+      ],
+      "expected_quelle_id": "q_upcycle_studios_copenhagen_md",
+      "live_quelle_id": "q_upcycle_studios_copenhagen_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 6,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Verbiest_Karreveld_Brussels.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Verbiest_Karreveld_Brussels.md",
+      "size_bytes": 29436,
+      "mtime_utc": "2026-05-07T08:53:01+00:00",
+      "sha1": "2a8df92931a873a1a64eebaaa6121b45995d2643",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Verbiest + Karreveld, Brüssel / Molenbeek"
+      ],
+      "expected_quelle_id": "q_verbiest_karreveld_brussels_md",
+      "live_quelle_id": "q_verbiest_karreveld_brussels_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 9,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Villa_Welpeloo_Enschede.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Villa_Welpeloo_Enschede.md",
+      "size_bytes": 25998,
+      "mtime_utc": "2026-05-07T06:43:37+00:00",
+      "sha1": "df120292ae76bbe7cf48a94f6ea8168db2c49c60",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Villa Welpeloo, Enschede — Fallstudie Direct Reuse / Bauteilwiederverwendung"
+      ],
+      "expected_quelle_id": "q_villa_welpeloo_enschede_md",
+      "live_quelle_id": "q_villa_welpeloo_enschede_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 24252,
+      "inline_url_count": 10,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Woongroep_Boschgaard_Den_Bosch.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Woongroep_Boschgaard_Den_Bosch.md",
+      "size_bytes": 26152,
+      "mtime_utc": "2026-05-07T08:12:20+00:00",
+      "sha1": "7b6e39250ade801ea4b87f93eca2dbf4149c29cf",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Woongroep Boschgaard, Den Bosch — Fallstudie Bauteilwiederverwendung / Direct Reuse"
+      ],
+      "expected_quelle_id": "q_woongroep_boschgaard_den_bosch_md",
+      "live_quelle_id": "q_woongroep_boschgaard_den_bosch_md",
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 10,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_archive/research/gebaeude/Zinneke_Feder_Masui4ever_Brussels.md",
+      "abs_path": "E:\\recherche\\_archive\\research\\gebaeude\\Zinneke_Feder_Masui4ever_Brussels.md",
+      "size_bytes": 23297,
+      "mtime_utc": "2026-05-07T08:23:36+00:00",
+      "sha1": "a04daf79c29be11f3fa5f1855fd2bfbdbc6de244",
+      "corpus": "gebaeude",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Zinneke / FEDER Masui4ever, Brüssel — Fallstudie Direct Reuse / zirkuläres Bauen"
+      ],
+      "expected_quelle_id": "q_zinneke_feder_masui4ever_brussels_md",
+      "live_quelle_id": "q_zinneke_feder_masui4ever_brussels_md",
+      "sources_block_kind": "quellen_und_links",
+      "sources_block_offset": 22309,
+      "inline_url_count": 4,
+      "sref_inline_count": 128
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/batch 1.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\batch 1.md",
+      "size_bytes": 103787,
+      "mtime_utc": "2026-05-19T17:58:45+00:00",
+      "sha1": "78d0931ffa09b312496271a75f5698d11f40180b",
+      "corpus": "batch2",
+      "format_hint": "case_markdown_multi",
+      "h1_titles": [
+        "Schärenmoosstrasse Zürich — Projekt «ménage à trois»",
+        "UMAR Unit — NEST, Empa Dübendorf",
+        "ELEMENTA / Walkeweg Basel"
+      ],
+      "expected_quelle_id": "q_batch_1_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 358,
+      "sref_inline_count": 344
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/BE_NL_graph_ready_dossiers/Careno_Be_Circular_Brussels.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\BE_NL_graph_ready_dossiers\\Careno_Be_Circular_Brussels.md",
+      "size_bytes": 19791,
+      "mtime_utc": "2026-05-19T16:11:36+00:00",
+      "sha1": "5ce465f5b1fe5be65f87ab7534bafdcee5c524f2",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Careno - Be.Circular"
+      ],
+      "expected_quelle_id": "q_careno_be_circular_brussels_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 70,
+      "sref_inline_count": 64
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/BE_NL_graph_ready_dossiers/Circl_ABN_AMRO_Urban_Mining.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\BE_NL_graph_ready_dossiers\\Circl_ABN_AMRO_Urban_Mining.md",
+      "size_bytes": 10494,
+      "mtime_utc": "2026-05-19T16:13:32+00:00",
+      "sha1": "5b04578eb55d43af5cdcbfc1392b64f9692ff188",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Circl / ABN AMRO Urban Mining Context"
+      ],
+      "expected_quelle_id": "q_circl_abn_amro_urban_mining_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 37,
+      "sref_inline_count": 29
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/BE_NL_graph_ready_dossiers/Circl_Pavilion_Amsterdam.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\BE_NL_graph_ready_dossiers\\Circl_Pavilion_Amsterdam.md",
+      "size_bytes": 44400,
+      "mtime_utc": "2026-05-19T16:13:10+00:00",
+      "sha1": "9ee2db48073c9e6d55413d79f172ba3be64655be",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Circl Pavilion Amsterdam"
+      ],
+      "expected_quelle_id": "q_circl_pavilion_amsterdam_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 177,
+      "sref_inline_count": 162
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/DE_AT_CH_graph_ready_dossiers/LYSP8_Basel.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\DE_AT_CH_graph_ready_dossiers\\LYSP8_Basel.md",
+      "size_bytes": 27495,
+      "mtime_utc": "2026-05-19T16:25:24+00:00",
+      "sha1": "c04375d11f94a53bf203fd2361b444ec9f939593",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "LYSP8 Basel"
+      ],
+      "expected_quelle_id": "q_lysp8_basel_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 164,
+      "sref_inline_count": 159
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/DE_AT_CH_graph_ready_dossiers/MedUni_Campus_Mariannengasse_Wien.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\DE_AT_CH_graph_ready_dossiers\\MedUni_Campus_Mariannengasse_Wien.md",
+      "size_bytes": 36898,
+      "mtime_utc": "2026-05-19T16:27:44+00:00",
+      "sha1": "061c172a2507a47dec6b0b2784d0f2fdf639a3bb",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "MedUni Campus Mariannengasse Wien"
+      ],
+      "expected_quelle_id": "q_meduni_campus_mariannengasse_wien_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 148,
+      "sref_inline_count": 145
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/DE_AT_CH_graph_ready_dossiers/RE_USE_Hoefe_Wien.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\DE_AT_CH_graph_ready_dossiers\\RE_USE_Hoefe_Wien.md",
+      "size_bytes": 32025,
+      "mtime_utc": "2026-05-19T16:28:54+00:00",
+      "sha1": "dfca7d68fdb97223ec33f442dd3f99de6e404f99",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "RE-USE Höfe Wien"
+      ],
+      "expected_quelle_id": "q_re_use_hoefe_wien_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 152,
+      "sref_inline_count": 148
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/DE_AT_CH_graph_ready_dossiers/Reallabor_Be_Ware.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\DE_AT_CH_graph_ready_dossiers\\Reallabor_Be_Ware.md",
+      "size_bytes": 26339,
+      "mtime_utc": "2026-05-19T16:26:32+00:00",
+      "sha1": "911ec5b145add2c64b9561a55e662bbd9e219285",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Reallabor B(e) Ware"
+      ],
+      "expected_quelle_id": "q_reallabor_be_ware_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 110,
+      "sref_inline_count": 108
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/DE_AT_CH_graph_ready_dossiers/Stuttgart_210.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\DE_AT_CH_graph_ready_dossiers\\Stuttgart_210.md",
+      "size_bytes": 33872,
+      "mtime_utc": "2026-05-19T16:23:58+00:00",
+      "sha1": "fd874dcdaa380b706ae75e5e5a1f9f6dd881cc3a",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Stuttgart 210"
+      ],
+      "expected_quelle_id": "q_stuttgart_210_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 179,
+      "sref_inline_count": 172
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/EU_consortia_graph_ready_dossiers/FCRBE_Facilitating_Circulation_Reclaimed_Building_Elements.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\EU_consortia_graph_ready_dossiers\\FCRBE_Facilitating_Circulation_Reclaimed_Building_Elements.md",
+      "size_bytes": 46878,
+      "mtime_utc": "2026-05-19T16:36:30+00:00",
+      "sha1": "d51d4be5f6a16899dbdcbbbb41b45feefeb6df2c",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "FCRBE — Facilitating the Circulation of Reclaimed Building Elements"
+      ],
+      "expected_quelle_id": "q_fcrbe_facilitating_circulation_reclaimed_building_elements_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 184,
+      "sref_inline_count": 169
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/EU_consortia_graph_ready_dossiers/Interreg_NWE_FCRBE.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\EU_consortia_graph_ready_dossiers\\Interreg_NWE_FCRBE.md",
+      "size_bytes": 4571,
+      "mtime_utc": "2026-05-19T16:36:30+00:00",
+      "sha1": "d6898b0b48a5f991497e042d162c0f6ad6a770c2",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Interreg NWE FCRBE — duplicate note"
+      ],
+      "expected_quelle_id": "q_interreg_nwe_fcrbe_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 12,
+      "sref_inline_count": 11
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/EU_consortia_graph_ready_dossiers/REBRIDGE_Structural_Reuse.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\EU_consortia_graph_ready_dossiers\\REBRIDGE_Structural_Reuse.md",
+      "size_bytes": 16218,
+      "mtime_utc": "2026-05-19T16:36:30+00:00",
+      "sha1": "7f36871643603ff9b2721aad6a985757ccdb706e",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "REBRIDGE structural reuse project"
+      ],
+      "expected_quelle_id": "q_rebridge_structural_reuse_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 75,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/EU_consortia_graph_ready_dossiers/Reuse_Logistics.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\EU_consortia_graph_ready_dossiers\\Reuse_Logistics.md",
+      "size_bytes": 15245,
+      "mtime_utc": "2026-05-19T16:36:30+00:00",
+      "sha1": "e424ba5a0ae731928b4eec22585decc14563e31f",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Reuse Logistics"
+      ],
+      "expected_quelle_id": "q_reuse_logistics_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 68,
+      "sref_inline_count": 0
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/reuse_platform_graph_ready_dossiers/RCMI_Concular.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\reuse_platform_graph_ready_dossiers\\RCMI_Concular.md",
+      "size_bytes": 17170,
+      "mtime_utc": "2026-05-19T18:45:38+00:00",
+      "sha1": "a9b95a8372d231628f5aedf04c558b05848c0892",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "RCMI / Concular — Reclaimed Construction Material Insurance cross-reference"
+      ],
+      "expected_quelle_id": "q_rcmi_concular_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 86,
+      "sref_inline_count": 75
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/reuse_platform_graph_ready_dossiers/REFAIR_Bordeaux.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\reuse_platform_graph_ready_dossiers\\REFAIR_Bordeaux.md",
+      "size_bytes": 15710,
+      "mtime_utc": "2026-05-19T18:45:38+00:00",
+      "sha1": "d6fb8291a13e48ed1a773973ff6220f1bb2bc518",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "REFAIR — Bordeaux reuse platform"
+      ],
+      "expected_quelle_id": "q_refair_bordeaux_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 84,
+      "sref_inline_count": 74
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/teaching_programme_graph_ready_dossiers/Architecture_of_Reuse_Brussels.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\teaching_programme_graph_ready_dossiers\\Architecture_of_Reuse_Brussels.md",
+      "size_bytes": 14728,
+      "mtime_utc": "2026-05-19T16:54:18+00:00",
+      "sha1": "b1c29d3b804f51a13f62d0e0081710c375c6f3e8",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Architecture of Reuse Brussels"
+      ],
+      "expected_quelle_id": "q_architecture_of_reuse_brussels_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 120,
+      "sref_inline_count": 122
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/teaching_programme_graph_ready_dossiers/ETH_Circular_Construction_Programme.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\teaching_programme_graph_ready_dossiers\\ETH_Circular_Construction_Programme.md",
+      "size_bytes": 17153,
+      "mtime_utc": "2026-05-19T16:54:18+00:00",
+      "sha1": "8ec619f71dd3fa316497e9e725034ee443be4069",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "ETH Circular Construction Programme"
+      ],
+      "expected_quelle_id": "q_eth_circular_construction_programme_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 98,
+      "sref_inline_count": 104
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/teaching_programme_graph_ready_dossiers/Vandkunsten_Component_Reuse_Programme.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\teaching_programme_graph_ready_dossiers\\Vandkunsten_Component_Reuse_Programme.md",
+      "size_bytes": 10341,
+      "mtime_utc": "2026-05-19T16:54:34+00:00",
+      "sha1": "00fd25274abc84d5624a436092651ce5415d9ac8",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Vandkunsten Component Reuse Programme"
+      ],
+      "expected_quelle_id": "q_vandkunsten_component_reuse_programme_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 49,
+      "sref_inline_count": 58
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/teaching_programme_graph_ready_dossiers/ZHAW_Reuse_in_Construction.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\teaching_programme_graph_ready_dossiers\\ZHAW_Reuse_in_Construction.md",
+      "size_bytes": 12459,
+      "mtime_utc": "2026-05-19T16:54:18+00:00",
+      "sha1": "566b281e6603c1c1cefb521a4a637492fb93449a",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "ZHAW Reuse in Construction"
+      ],
+      "expected_quelle_id": "q_zhaw_reuse_in_construction_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 93,
+      "sref_inline_count": 101
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/uk_unclear_graph_ready_dossiers/Granby_Workshop_Liverpool.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\uk_unclear_graph_ready_dossiers\\Granby_Workshop_Liverpool.md",
+      "size_bytes": 23023,
+      "mtime_utc": "2026-05-19T17:07:16+00:00",
+      "sha1": "cb37af0ef6990649463febfe8133cd8d0ce8168d",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "Granby Workshop (Liverpool)"
+      ],
+      "expected_quelle_id": "q_granby_workshop_liverpool_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 74,
+      "sref_inline_count": 70
+    },
+    {
+      "rel_path": "_neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tree/uk_unclear_graph_ready_dossiers/OBK_27.md",
+      "abs_path": "E:\\recherche\\_neo4j\\intake\\archive\\2026-05-20_inbox_batch2_import\\raw_tree\\uk_unclear_graph_ready_dossiers\\OBK_27.md",
+      "size_bytes": 14253,
+      "mtime_utc": "2026-05-19T17:07:34+00:00",
+      "sha1": "7f4eb13cb5429a36a2d1d956f809ea3f9fc45875",
+      "corpus": "batch2",
+      "format_hint": "case_markdown",
+      "h1_titles": [
+        "OBK 27 — negative-finding dossier"
+      ],
+      "expected_quelle_id": "q_obk_27_md",
+      "live_quelle_id": null,
+      "sources_block_kind": null,
+      "sources_block_offset": null,
+      "inline_url_count": 76,
+      "sref_inline_count": 73
+    }
+  ]
+}

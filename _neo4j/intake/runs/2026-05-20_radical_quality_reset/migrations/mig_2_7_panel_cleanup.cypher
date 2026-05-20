@@ -88,10 +88,22 @@
 
 // --- 2.7.c Akteur.raw_role_evidence (rollup from BETEILIGT_AN.rolle_text)
 //
+// NOTE on ownership: Phase 2.3 (Agent 5) is the canonical owner of this
+// rollup; that pass writes entries shaped `"<rolle_text> @ <target_id>"`
+// AND strips the source `rolle_text` property in the same transaction.
+// Agent 6's runner therefore probes for prior Agent-5 population and
+// SKIPS the rollup if >=100 Akteurs already carry a non-empty list;
+// otherwise it falls back to a coalesce-guarded write so re-runs cannot
+// clobber a richer prior value. See agent6_runner.py `2.7.c` for the
+// guard and `agent6_restore_role_evidence.py` for the recovery script
+// that rebuilds the rollup from `snapshot/relationships.jsonl` when an
+// out-of-order execution has clobbered the field.
+//
 // MATCH (a:Akteur)
 // OPTIONAL MATCH (a)-[r:BETEILIGT_AN]->() WHERE r.rolle_text IS NOT NULL
 // WITH a, collect(DISTINCT r.rolle_text) AS roles
-// SET a.raw_role_evidence = roles;
+// WHERE size(roles) > 0
+// SET a.raw_role_evidence = coalesce(a.raw_role_evidence, roles);
 
 // --- 2.7.d Edge source pollution → canonical 5-field shape (partial)
 //
