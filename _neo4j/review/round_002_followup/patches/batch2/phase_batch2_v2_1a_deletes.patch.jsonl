@@ -1,0 +1,5 @@
+{"op": "delete_node", "id": "bizh", "reason": "PARKED_DECISIONS B: degree 0, no source_scope. Snapshot: predelete_snapshot.json.", "severity": "LOW"}
+{"op": "delete_node", "id": "dare_gmbh", "reason": "PARKED_DECISIONS B: degree 1, generic GmbH stub, no source_scope. Snapshot: predelete_snapshot.json (1 rel: HAT_AKTEURROLLE will be detached).", "severity": "LOW"}
+{"op": "delete_rel", "from": "p_obk_27", "type": "BELEGT_IN", "to": "q_akteursliste_master_md", "reason": "Pre-delete strip for p_obk_27: remove BELEGT_IN before delete_node (apply-tool safety guard). Quelle remains attached to ~445 other nodes.", "severity": "MEDIUM"}
+{"op": "delete_rel", "from": "p_obk_27", "type": "BELEGT_IN", "to": "q_actor_cyril_pressacco_01", "reason": "Pre-delete strip. Quelle remains attached to cyril_pressacco actor.", "severity": "MEDIUM"}
+{"op": "delete_rel", "from": "p_obk_27", "type": "BELEGT_IN", "to": "q_actor_thibaut_barrault_01", "reason": "Pre-delete strip. Quelle remains attached to thibaut_barrault actor.", "severity": "MEDIUM"}

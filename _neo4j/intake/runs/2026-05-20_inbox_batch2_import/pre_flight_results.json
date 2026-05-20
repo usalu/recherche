@@ -1,0 +1,3124 @@
+[
+  {
+    "section_id": "S1",
+    "title": "Graph state at plan freeze",
+    "expected": "~2298 nodes / ~17035 rels (post-Phase R as of 2026-05-19).",
+    "cypher": "MATCH (n) WITH count(n) AS nodes\nMATCH ()-[r]->() WITH nodes, count(r) AS rels\nRETURN nodes, rels;",
+    "rows": [
+      {
+        "nodes": 2298,
+        "rels": 17035
+      }
+    ],
+    "row_count": 1,
+    "error": null
+  },
+  {
+    "section_id": "S2",
+    "title": "All relationship types Plan v2 will USE must actually exist",
+    "expected": "",
+    "cypher": "CALL db.relationshipTypes() YIELD relationshipType\nWITH collect(relationshipType) AS live_rels,\n     [\n       'BETEILIGT_AN', 'ASSOZIIERT_MIT_PROJEKT',\n       'HAT_AKTEURROLLE', 'HAT_AKTEURTYP',\n       'GEH\u00d6RT_ZU', 'VERBUNDEN_MIT_AKTEUR',\n       'LIEGT_IN_STADT', 'LIEGT_IN_LAND',\n       'HAT_BAUTEILTYP', 'HAT_MATERIALGRUPPE', 'HAT_WIEDERVERWENDUNGSART',\n       'HAT_BESCHAFFUNGSWEG', 'HAT_VERBINDUNGSTECHNIK', 'HAT_RUECKBAUVERFAHREN',\n       'HAT_AUFBEREITUNG', 'HAT_PRUEFUNG', 'HAT_DEFEKT', 'HAT_LEISTUNGSANFORDERUNG',\n       'HAT_BAUPRODUKTSTATUS', 'HAT_METHODE', 'HAT_LOGISTIK', 'HAT_SCHADSTOFF',\n       'HAT_MARKTMODELL', 'HAT_BAUTEILEBENE', 'HAT_RESSOURCENQUELLE',\n       'HAT_STATUS', 'HAT_BAUOBJEKTROLLE', 'HAT_BAUOBJEKTKLASSE',\n       'AUS_BAUWERK', 'EINGEBAUT_IN',\n       'HAT_BAUTEILGRUPPE', 'HAT_INTERVENTION', 'HAT_NUTZUNG',\n       'HAT_DOMINANT_MARKTMODELL', 'HAT_DOMINANT_AKZEPTANZ',\n       'HAT_WIRTSCHAFT', 'HAT_HUERDE', 'HAT_MATCHINGQUALITAET',\n       'HAT_ZERTIFIZIERUNG', 'REFERENZIERT_NORM', 'NUTZT_BAUWERK',\n       'TEIL_VON_PROGRAMM', 'ERHALT_FOERDERUNG_DURCH',\n       'NUTZT_SOFTWARE', 'NUTZT_TOOL',\n       'NUTZT_MATERIAL',\n       'BELEGT_IN', 'ZITIERT_QUELLE',\n       'TEIL_VON_KETTE',\n       'BERECHNET_NACH_MODUL', 'METHODENGRUNDLAGE_NORM',\n       'HAT_ZUSTANDSKLASSE'\n     ] AS planned_rels\nUNWIND planned_rels AS r\nWITH r, live_rels\nRETURN r AS planned_rel_type,\n       (r IN live_rels) AS exists_in_graph\nORDER BY exists_in_graph, planned_rel_type;",
+    "rows": [
+      {
+        "planned_rel_type": "HAT_ZUSTANDSKLASSE",
+        "exists_in_graph": false
+      },
+      {
+        "planned_rel_type": "ASSOZIIERT_MIT_PROJEKT",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "AUS_BAUWERK",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "BELEGT_IN",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "BERECHNET_NACH_MODUL",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "BETEILIGT_AN",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "EINGEBAUT_IN",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "ERHALT_FOERDERUNG_DURCH",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "GEH\u00d6RT_ZU",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_AKTEURROLLE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_AKTEURTYP",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_AUFBEREITUNG",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_BAUOBJEKTKLASSE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_BAUOBJEKTROLLE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_BAUPRODUKTSTATUS",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_BAUTEILEBENE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_BAUTEILGRUPPE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_BAUTEILTYP",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_BESCHAFFUNGSWEG",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_DEFEKT",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_DOMINANT_AKZEPTANZ",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_DOMINANT_MARKTMODELL",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_HUERDE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_INTERVENTION",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_LEISTUNGSANFORDERUNG",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_LOGISTIK",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_MARKTMODELL",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_MATCHINGQUALITAET",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_MATERIALGRUPPE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_METHODE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_NUTZUNG",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_PRUEFUNG",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_RESSOURCENQUELLE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_RUECKBAUVERFAHREN",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_SCHADSTOFF",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_STATUS",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_VERBINDUNGSTECHNIK",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_WIEDERVERWENDUNGSART",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_WIRTSCHAFT",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "HAT_ZERTIFIZIERUNG",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "LIEGT_IN_LAND",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "LIEGT_IN_STADT",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "METHODENGRUNDLAGE_NORM",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "NUTZT_BAUWERK",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "NUTZT_MATERIAL",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "NUTZT_SOFTWARE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "NUTZT_TOOL",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "REFERENZIERT_NORM",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "TEIL_VON_KETTE",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "TEIL_VON_PROGRAMM",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "VERBUNDEN_MIT_AKTEUR",
+        "exists_in_graph": true
+      },
+      {
+        "planned_rel_type": "ZITIERT_QUELLE",
+        "exists_in_graph": true
+      }
+    ],
+    "row_count": 52,
+    "error": null
+  },
+  {
+    "section_id": "S3",
+    "title": "Relationship types Plan 2 INCORRECTLY used (sanity check: confirm absent)",
+    "expected": "All rows have exists_in_graph = false. Confirms our diagnosis.",
+    "cypher": "CALL db.relationshipTypes() YIELD relationshipType\nWITH collect(relationshipType) AS live_rels,\n     ['HAT_SOFTWARE', 'HAT_TOOL', 'HAT_NORM', 'HAT_BAUAUFGABE',\n      'HAT_AKZEPTANZ', 'HAT_AUFBEREITUNGSVERFAHREN', 'HAT_PRUEFUNG_NACHWEIS',\n      'HAT_PRUEFUNGNACHWEIS', 'LIEFERT_MATERIAL_AUS', 'VERBUNDEN_MIT',\n      'LIEGT_IN'] AS bad_rels\nUNWIND bad_rels AS r\nWITH r, live_rels\nRETURN r AS plan_2_uses_this,\n       (r IN live_rels) AS exists_in_graph,\n       CASE r\n         WHEN 'HAT_SOFTWARE' THEN 'use NUTZT_SOFTWARE'\n         WHEN 'HAT_TOOL' THEN 'use NUTZT_TOOL'\n         WHEN 'HAT_NORM' THEN 'use REFERENZIERT_NORM'\n         WHEN 'HAT_BAUAUFGABE' THEN 'use HAT_INTERVENTION'\n         WHEN 'HAT_AKZEPTANZ' THEN 'use HAT_DOMINANT_AKZEPTANZ'\n         WHEN 'HAT_AUFBEREITUNGSVERFAHREN' THEN 'use HAT_AUFBEREITUNG'\n         WHEN 'HAT_PRUEFUNG_NACHWEIS' THEN 'use HAT_PRUEFUNG'\n         WHEN 'HAT_PRUEFUNGNACHWEIS' THEN 'use HAT_PRUEFUNG'\n         WHEN 'LIEFERT_MATERIAL_AUS' THEN 'use AUS_BAUWERK'\n         WHEN 'VERBUNDEN_MIT' THEN 'use TEIL_VON_PROGRAMM or ERHALT_FOERDERUNG_DURCH or VERBUNDEN_MIT_AKTEUR (target-dependent)'\n         WHEN 'LIEGT_IN' THEN 'use LIEGT_IN_STADT or LIEGT_IN_LAND (target-dependent)'\n       END AS replacement;",
+    "rows": [
+      {
+        "plan_2_uses_this": "HAT_SOFTWARE",
+        "exists_in_graph": false,
+        "replacement": "use NUTZT_SOFTWARE"
+      },
+      {
+        "plan_2_uses_this": "HAT_TOOL",
+        "exists_in_graph": false,
+        "replacement": "use NUTZT_TOOL"
+      },
+      {
+        "plan_2_uses_this": "HAT_NORM",
+        "exists_in_graph": false,
+        "replacement": "use REFERENZIERT_NORM"
+      },
+      {
+        "plan_2_uses_this": "HAT_BAUAUFGABE",
+        "exists_in_graph": false,
+        "replacement": "use HAT_INTERVENTION"
+      },
+      {
+        "plan_2_uses_this": "HAT_AKZEPTANZ",
+        "exists_in_graph": false,
+        "replacement": "use HAT_DOMINANT_AKZEPTANZ"
+      },
+      {
+        "plan_2_uses_this": "HAT_AUFBEREITUNGSVERFAHREN",
+        "exists_in_graph": false,
+        "replacement": "use HAT_AUFBEREITUNG"
+      },
+      {
+        "plan_2_uses_this": "HAT_PRUEFUNG_NACHWEIS",
+        "exists_in_graph": false,
+        "replacement": "use HAT_PRUEFUNG"
+      },
+      {
+        "plan_2_uses_this": "HAT_PRUEFUNGNACHWEIS",
+        "exists_in_graph": false,
+        "replacement": "use HAT_PRUEFUNG"
+      },
+      {
+        "plan_2_uses_this": "LIEFERT_MATERIAL_AUS",
+        "exists_in_graph": false,
+        "replacement": "use AUS_BAUWERK"
+      },
+      {
+        "plan_2_uses_this": "VERBUNDEN_MIT",
+        "exists_in_graph": false,
+        "replacement": "use TEIL_VON_PROGRAMM or ERHALT_FOERDERUNG_DURCH or VERBUNDEN_MIT_AKTEUR (target-dependent)"
+      },
+      {
+        "plan_2_uses_this": "LIEGT_IN",
+        "exists_in_graph": false,
+        "replacement": "use LIEGT_IN_STADT or LIEGT_IN_LAND (target-dependent)"
+      }
+    ],
+    "row_count": 11,
+    "error": null
+  },
+  {
+    "section_id": "S4",
+    "title": "All Akteurrolle ids enumerated (for HAT_AKTEURROLLE writes)",
+    "expected": "~25 rows including ar_entwurf_planung, ar_tragwerksplanung,",
+    "cypher": "MATCH (ar:Akteurrolle)\nRETURN ar.id AS akteurrolle_id, ar.name AS name\nORDER BY ar.id;",
+    "rows": [
+      {
+        "akteurrolle_id": "ar_aufbereitung_refurbishment",
+        "name": "Aufbereitung_Refurbishment"
+      },
+      {
+        "akteurrolle_id": "ar_bauausfuehrung_fertigung",
+        "name": "Bauausfuehrung_Fertigung"
+      },
+      {
+        "akteurrolle_id": "ar_bauherr_auftraggeber",
+        "name": "Bauherr_Auftraggeber"
+      },
+      {
+        "akteurrolle_id": "ar_betrieb_nutzung",
+        "name": "Betrieb_Nutzung"
+      },
+      {
+        "akteurrolle_id": "ar_bildung_wissenstransfer",
+        "name": "Bildung_Wissenstransfer"
+      },
+      {
+        "akteurrolle_id": "ar_brandschutz_barrierefreiheit",
+        "name": "Brandschutz_Barrierefreiheit"
+      },
+      {
+        "akteurrolle_id": "ar_entwurf_planung",
+        "name": "Entwurf_Planung"
+      },
+      {
+        "akteurrolle_id": "ar_fachplanung_nachweis",
+        "name": "Fachplanung_Nachweis"
+      },
+      {
+        "akteurrolle_id": "ar_fassade",
+        "name": "Fassade"
+      },
+      {
+        "akteurrolle_id": "ar_forschung_dokumentation",
+        "name": "Forschung_Dokumentation"
+      },
+      {
+        "akteurrolle_id": "ar_kunst_gestaltung",
+        "name": "Kunst_Gestaltung"
+      },
+      {
+        "akteurrolle_id": "ar_landschaftsplanung",
+        "name": "Landschaftsplanung"
+      },
+      {
+        "akteurrolle_id": "ar_materialbroker",
+        "name": "Materialbroker / Reuse-Marketplace-Betreiber"
+      },
+      {
+        "akteurrolle_id": "ar_materiallieferung_markt",
+        "name": "Materiallieferung_Markt"
+      },
+      {
+        "akteurrolle_id": "ar_nachhaltigkeitsberatung",
+        "name": "Nachhaltigkeitsberatung"
+      },
+      {
+        "akteurrolle_id": "ar_oeffentliche_hand_foerderung",
+        "name": "Oeffentliche_Hand_Foerderung"
+      },
+      {
+        "akteurrolle_id": "ar_projektmanagement_koordination",
+        "name": "Projektmanagement_Koordination"
+      },
+      {
+        "akteurrolle_id": "ar_reuse_beratung",
+        "name": "Reuse_Beratung"
+      },
+      {
+        "akteurrolle_id": "ar_reuse_zirkularitaetsberatung",
+        "name": "Reuse_Zirkularitaetsberatung"
+      },
+      {
+        "akteurrolle_id": "ar_rueckbau_bauteilernte_logistik",
+        "name": "Rueckbau_Bauteilernte_Logistik"
+      },
+      {
+        "akteurrolle_id": "ar_software_digitalisierung",
+        "name": "Software_Digitalisierung"
+      },
+      {
+        "akteurrolle_id": "ar_stahlbau_fertigung",
+        "name": "Stahlbau_Fertigung"
+      },
+      {
+        "akteurrolle_id": "ar_tga_gebaeudetechnik",
+        "name": "TGA_Gebaeudetechnik"
+      },
+      {
+        "akteurrolle_id": "ar_tragwerksplanung",
+        "name": "Tragwerksplanung"
+      },
+      {
+        "akteurrolle_id": "ar_unbestimmt",
+        "name": "Unbestimmt"
+      }
+    ],
+    "row_count": 25,
+    "error": null
+  },
+  {
+    "section_id": "S5",
+    "title": "All Akteurtyp ids enumerated (for HAT_AKTEURTYP writes)",
+    "expected": "~9 rows: at_person, at_unternehmen, at_forschung_lehre,",
+    "cypher": "MATCH (at:Akteurtyp)\nRETURN at.id AS akteurtyp_id, at.name AS name\nORDER BY at.id;",
+    "rows": [
+      {
+        "akteurtyp_id": "at_foerdergeber_programmtraeger",
+        "name": "Foerdergeber_Programmtraeger"
+      },
+      {
+        "akteurtyp_id": "at_forschung_lehre",
+        "name": "Forschung_Lehre"
+      },
+      {
+        "akteurtyp_id": "at_materialhub_bauteilboerse",
+        "name": "Materialhub_Bauteilboerse"
+      },
+      {
+        "akteurtyp_id": "at_ngo_verband_netzwerk",
+        "name": "NGO_Verband_Netzwerk"
+      },
+      {
+        "akteurtyp_id": "at_oeffentliche_institution",
+        "name": "Oeffentliche_Institution"
+      },
+      {
+        "akteurtyp_id": "at_organisation",
+        "name": "Organisation"
+      },
+      {
+        "akteurtyp_id": "at_person",
+        "name": "Person"
+      },
+      {
+        "akteurtyp_id": "at_software_tool_anbieter",
+        "name": "Software_Tool_Anbieter"
+      },
+      {
+        "akteurtyp_id": "at_unbekannt",
+        "name": "Unbekannt"
+      },
+      {
+        "akteurtyp_id": "at_unternehmen",
+        "name": "Unternehmen"
+      }
+    ],
+    "row_count": 10,
+    "error": null
+  },
+  {
+    "section_id": "S6",
+    "title": "All Aufbereitungsverfahren ids (avoid Plan 1's invented av_holzaufbereitung)",
+    "expected": "~45 rows (4 parents + 30 Phase D children + originals). Critical to",
+    "cypher": "MATCH (av:Aufbereitungsverfahren)\nRETURN av.id AS aufbereitungsverfahren_id, av.name AS name\nORDER BY av.id;",
+    "rows": [
+      {
+        "aufbereitungsverfahren_id": "av_aluminium_reinigung_entdichtung",
+        "name": "Aluminium-Reinigung + Entdichtung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_aluminium_zuschnitt_bohrung",
+        "name": "Aluminium-Zuschnitt + Bohrung + Profilanpassung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_aluminiumfenster_beschlag_dichtung",
+        "name": "Aluminiumfenster \u2014 Beschl\u00e4ge + Dichtungen tauschen"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_beton_anhaftungen_entfernen",
+        "name": "Reinigung von Beton-Anhaftungen"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_betonfertigteil_factory_refurbishment",
+        "name": "Beton-Fertigteil Factory Refurbishment (Prozesspaket)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_betonfertigteil_saegen",
+        "name": "S\u00e4gen von Betonfertigteilen"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_betonfertigteil_tagging_sortierung",
+        "name": "Bauteil-Tagging + Sortierung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_bio_daemmstoff_zuschnitt_gefach",
+        "name": "Bio-D\u00e4mmstoff-Zuschnitt + Gefachanpassung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_biobasiert_hygiene_schadstoffcheck",
+        "name": "Bio-basiert \u2014 Hygiene + Schadstoffcheck"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_drahtglasschneiden",
+        "name": "Drahtglasschneiden"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_entmoertelung_von_fliesen",
+        "name": "Entmoertelung_von_Fliesen"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_entnageln",
+        "name": "Entnageln / Entfernen metallischer Verbindungsmittel"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_entrosten_korrosionsbehandlung",
+        "name": "Entrosten / Korrosionsbehandlung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_fenster_refurbishment",
+        "name": "Fenster-Refurbishment (Beschl\u00e4ge + Dichtungen)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_glas_pruefung_sortierung",
+        "name": "Glas-/Fensterelement-Pr\u00fcfung + Sortierung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_glas_reinigung_entkitten",
+        "name": "Glas-Reinigung + Entkitten"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_hcs_zuschnitt_bohrungen_fittings",
+        "name": "HCS-Zuschnitt + Bohrungen + Fittings"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_hobeln_schleifen_holz",
+        "name": "Hobeln, Schleifen, Fr\u00e4sen (Holz)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_holz_festigkeitssortierung",
+        "name": "Festigkeitssortierung Holz"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_holz_fremdstoffentfernung",
+        "name": "Holz-Fremdstoffentfernung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_holz_schadstoffscreening",
+        "name": "Holz-Schadstoffscreening (PCP, Lindan, CCA, Lead)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_holz_trocknung_feuchtekonditionierung",
+        "name": "Trocknung / Feuchtekonditionierung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_holz_zuschnitt_reparatur",
+        "name": "Holz-Zuschnitt + Reparaturzuschnitt"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_holzaufbereitung",
+        "name": "Holzaufbereitung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_kaskadierende_wiederverwendung",
+        "name": "Kaskadierende Nutzung / Downcycling-Entscheidung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_korrosionsschutz_beschichten",
+        "name": "Korrosionsschutz-Beschichtung / Neubeschichtung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_lehm_sieben_mischen",
+        "name": "Lehm sieben, brechen, anfeuchten, neu mischen"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_leuchten_refurbishment",
+        "name": "Leuchten_Refurbishment"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_materialsortierung_chargenbildung",
+        "name": "Materialsortierung & Chargenbildung (querschnittlich)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_mauerwerk_diamantsaegen_modul",
+        "name": "Mauerwerk-Diamants\u00e4gen (Modulausschnitt)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_moertelentfernung_ziegel",
+        "name": "M\u00f6rtelentfernung bei Ziegeln"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_naturstein_reinigung_schleifen_zuschnitt",
+        "name": "Naturstein-Reinigung, Schleifen, Zuschnitt"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_oberflaechenbehandlung",
+        "name": "Oberfl\u00e4chenbehandlung (Sammelkategorie)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_qualitaetssicherung",
+        "name": "Qualitaetssicherung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_reinigung",
+        "name": "Reinigung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_rekonditionierung",
+        "name": "Rekonditionierung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_remanufacturing",
+        "name": "Remanufacturing"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_reparatur",
+        "name": "Reparatur"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_sandstrahlen",
+        "name": "Sandstrahlen / Strahlreinigen"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_stahl_zuschnitt_bohrung",
+        "name": "Stahl-Zuschnitt, Bohrung, Lochung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_stroh_pruefen_trocknen_sortieren",
+        "name": "Strohballen pr\u00fcfen, trocknen, sortieren"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_verstaerkung",
+        "name": "Verstaerkung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_zerlegung_vereinzelung",
+        "name": "Zerlegung / Vereinzelung (Sammelkategorie)"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_ziegel_sortierung_pruefung",
+        "name": "Ziegel-Qualit\u00e4tssortierung + Klang-/Geruchspr\u00fcfung"
+      },
+      {
+        "aufbereitungsverfahren_id": "av_zuschnitt",
+        "name": "Zuschnitt"
+      }
+    ],
+    "row_count": 45,
+    "error": null
+  },
+  {
+    "section_id": "S7",
+    "title": "All PruefungNachweis ids (validate Plan 2's pr_* references)",
+    "expected": "~20 rows. Plan 2 references pr_zustandsbewertung, pr_sichtpruefung,",
+    "cypher": "MATCH (pr:PruefungNachweis)\nRETURN pr.id AS pruefung_id, pr.name AS name\nORDER BY pr.id;",
+    "rows": [
+      {
+        "pruefung_id": "pr_abbrandbemessung",
+        "name": "Abbrandbemessung"
+      },
+      {
+        "pruefung_id": "pr_bohrkernpruefung_beton",
+        "name": "Beton-Bohrkernpr\u00fcfung"
+      },
+      {
+        "pruefung_id": "pr_brandschutznachweis",
+        "name": "Brandschutznachweis"
+      },
+      {
+        "pruefung_id": "pr_dokumentenpruefung_bestand",
+        "name": "Dokumentenpr\u00fcfung / Herkunfts- und Bestandsnachweis"
+      },
+      {
+        "pruefung_id": "pr_eignungspruefung_baulehm",
+        "name": "Eignungspruefung_Baulehm"
+      },
+      {
+        "pruefung_id": "pr_festigkeitssortierung_holz",
+        "name": "Festigkeitssortierung Holz (visuell + maschinell)"
+      },
+      {
+        "pruefung_id": "pr_feuchtepruefung",
+        "name": "Feuchtepr\u00fcfung"
+      },
+      {
+        "pruefung_id": "pr_geometrische_vermessung",
+        "name": "Geometrische_Vermessung"
+      },
+      {
+        "pruefung_id": "pr_korrosionspruefung",
+        "name": "Korrosionspr\u00fcfung / Restdickenmessung"
+      },
+      {
+        "pruefung_id": "pr_materialbeprobung",
+        "name": "Materialprobe / Beprobung (Sammelkategorie)"
+      },
+      {
+        "pruefung_id": "pr_materialpruefung",
+        "name": "Materialpruefung"
+      },
+      {
+        "pruefung_id": "pr_schadstoffpruefung",
+        "name": "Schadstoffpr\u00fcfung (Sammelkategorie)"
+      },
+      {
+        "pruefung_id": "pr_schadstoffscreening",
+        "name": "Schadstoffscreening"
+      },
+      {
+        "pruefung_id": "pr_schweissbarkeitspruefung",
+        "name": "Schweissbarkeitspruefung"
+      },
+      {
+        "pruefung_id": "pr_sichtpruefung",
+        "name": "Sichtpruefung"
+      },
+      {
+        "pruefung_id": "pr_statische_nachweisfuehrung",
+        "name": "Statische_Nachweisfuehrung"
+      },
+      {
+        "pruefung_id": "pr_zerstoerende_pruefung",
+        "name": "Zerst\u00f6rende Pr\u00fcfung (Sammelkategorie)"
+      },
+      {
+        "pruefung_id": "pr_zerstoerungsfreie_pruefung",
+        "name": "Zerst\u00f6rungsfreie Pr\u00fcfung (ZfP / NDT)"
+      },
+      {
+        "pruefung_id": "pr_zugversuch",
+        "name": "Zugversuch"
+      },
+      {
+        "pruefung_id": "pr_zustandsbewertung",
+        "name": "Zustandsbewertung"
+      }
+    ],
+    "row_count": 20,
+    "error": null
+  },
+  {
+    "section_id": "S8",
+    "title": "All Material ids (for NUTZT_MATERIAL writes)",
+    "expected": "~19 rows. Need explicit list so the BG patch generator can pick",
+    "cypher": "MATCH (m:Material)\nRETURN m.id AS material_id, m.name AS name\nORDER BY m.id;",
+    "rows": [
+      {
+        "material_id": "mat_aluminium",
+        "name": "Aluminium"
+      },
+      {
+        "material_id": "mat_beton",
+        "name": "Beton"
+      },
+      {
+        "material_id": "mat_bitumen",
+        "name": "Bitumen"
+      },
+      {
+        "material_id": "mat_daemmstoff",
+        "name": "Daemmstoff"
+      },
+      {
+        "material_id": "mat_faserzement",
+        "name": "Faserzement / Eternit"
+      },
+      {
+        "material_id": "mat_glas",
+        "name": "Glas"
+      },
+      {
+        "material_id": "mat_gusseisen",
+        "name": "Gusseisen"
+      },
+      {
+        "material_id": "mat_holz",
+        "name": "Holz"
+      },
+      {
+        "material_id": "mat_keramik",
+        "name": "Keramik"
+      },
+      {
+        "material_id": "mat_kunststoff",
+        "name": "Kunststoff"
+      },
+      {
+        "material_id": "mat_lehm",
+        "name": "Lehm"
+      },
+      {
+        "material_id": "mat_mdf",
+        "name": "MDF / mitteldichte Faserplatte"
+      },
+      {
+        "material_id": "mat_naturstein",
+        "name": "Naturstein"
+      },
+      {
+        "material_id": "mat_recyclingbeton",
+        "name": "Recyclingbeton"
+      },
+      {
+        "material_id": "mat_stahl",
+        "name": "Stahl"
+      },
+      {
+        "material_id": "mat_stahlbeton",
+        "name": "Stahlbeton"
+      },
+      {
+        "material_id": "mat_stroh",
+        "name": "Stroh"
+      },
+      {
+        "material_id": "mat_textil",
+        "name": "Textil"
+      },
+      {
+        "material_id": "mat_ziegel",
+        "name": "Ziegel"
+      }
+    ],
+    "row_count": 19,
+    "error": null
+  },
+  {
+    "section_id": "S9",
+    "title": "All Materialgruppe ids (sanity check Plan 2's mg_* references)",
+    "expected": "~10 rows: mg_metall, mg_mineralisch, mg_holz_biobasiert,",
+    "cypher": "MATCH (mg:Materialgruppe)\nRETURN mg.id AS materialgruppe_id, mg.name AS name\nORDER BY mg.id;",
+    "rows": [
+      {
+        "materialgruppe_id": "mg_daemmstoff",
+        "name": "Daemmstoff"
+      },
+      {
+        "materialgruppe_id": "mg_glas_keramik",
+        "name": "Glas_Keramik"
+      },
+      {
+        "materialgruppe_id": "mg_holz_biobasiert",
+        "name": "Holz_Biobasiert"
+      },
+      {
+        "materialgruppe_id": "mg_kunststoff",
+        "name": "Kunststoff"
+      },
+      {
+        "materialgruppe_id": "mg_lehm_erde",
+        "name": "Lehm_Erde"
+      },
+      {
+        "materialgruppe_id": "mg_metall",
+        "name": "Metall"
+      },
+      {
+        "materialgruppe_id": "mg_mineralisch",
+        "name": "Mineralisch"
+      },
+      {
+        "materialgruppe_id": "mg_recyclingmaterial",
+        "name": "Recyclingmaterial"
+      },
+      {
+        "materialgruppe_id": "mg_unbekannt",
+        "name": "Unbekannt"
+      },
+      {
+        "materialgruppe_id": "mg_verbundstoff",
+        "name": "Verbundstoff"
+      }
+    ],
+    "row_count": 10,
+    "error": null
+  },
+  {
+    "section_id": "S10",
+    "title": "All Bauteiltyp ids (verify bt_belag question raised in review)",
+    "expected": "~15 rows. Critical: does `bt_belag` exist? Plan 2 uses it in BG ids",
+    "cypher": "MATCH (bt:Bauteiltyp)\nRETURN bt.id AS bauteiltyp_id, bt.name AS name\nORDER BY bt.id;",
+    "rows": [
+      {
+        "bauteiltyp_id": "bt_ausbau",
+        "name": "Ausbau"
+      },
+      {
+        "bauteiltyp_id": "bt_boden",
+        "name": "Boden"
+      },
+      {
+        "bauteiltyp_id": "bt_dach",
+        "name": "Dach"
+      },
+      {
+        "bauteiltyp_id": "bt_daemmung",
+        "name": "Daemmung"
+      },
+      {
+        "bauteiltyp_id": "bt_decke",
+        "name": "Decke"
+      },
+      {
+        "bauteiltyp_id": "bt_fassade",
+        "name": "Fassade"
+      },
+      {
+        "bauteiltyp_id": "bt_fenster",
+        "name": "Fenster"
+      },
+      {
+        "bauteiltyp_id": "bt_fundament",
+        "name": "Fundament"
+      },
+      {
+        "bauteiltyp_id": "bt_gelaender",
+        "name": "Gelaender"
+      },
+      {
+        "bauteiltyp_id": "bt_stuetze",
+        "name": "Stuetze"
+      },
+      {
+        "bauteiltyp_id": "bt_technik",
+        "name": "Technik"
+      },
+      {
+        "bauteiltyp_id": "bt_traeger",
+        "name": "Traeger"
+      },
+      {
+        "bauteiltyp_id": "bt_treppe",
+        "name": "Treppe"
+      },
+      {
+        "bauteiltyp_id": "bt_tuer",
+        "name": "Tuer"
+      },
+      {
+        "bauteiltyp_id": "bt_wand",
+        "name": "Wand"
+      }
+    ],
+    "row_count": 15,
+    "error": null
+  },
+  {
+    "section_id": "S11",
+    "title": "All Marktmodell ids (verify mm_* enum constraint)",
+    "expected": "~11 rows per NAMING_AND_PROPERTIES_PLAN.md constraint:",
+    "cypher": "MATCH (mm:Marktmodell)\nRETURN mm.id AS marktmodell_id, mm.name AS name\nORDER BY mm.id;",
+    "rows": [
+      {
+        "marktmodell_id": "mm_forschungsprojekt_zuteilung",
+        "name": "Forschungs-Zuteilung"
+      },
+      {
+        "marktmodell_id": "mm_intra_konzern",
+        "name": "Intra-Konzern"
+      },
+      {
+        "marktmodell_id": "mm_kauf_gebraucht",
+        "name": "Kauf gebraucht"
+      },
+      {
+        "marktmodell_id": "mm_kauf_neu",
+        "name": "Kauf neu-\u00e4quiv."
+      },
+      {
+        "marktmodell_id": "mm_leasing",
+        "name": "Leasing"
+      },
+      {
+        "marktmodell_id": "mm_plattform_vermittelt",
+        "name": "Plattform-Kauf"
+      },
+      {
+        "marktmodell_id": "mm_rueckkauf",
+        "name": "R\u00fcckkauf"
+      },
+      {
+        "marktmodell_id": "mm_same_site",
+        "name": "Same-site"
+      },
+      {
+        "marktmodell_id": "mm_spende",
+        "name": "Spende"
+      },
+      {
+        "marktmodell_id": "mm_take_back_service",
+        "name": "Take-Back"
+      },
+      {
+        "marktmodell_id": "mm_unbekannt",
+        "name": "Unbekannt"
+      }
+    ],
+    "row_count": 11,
+    "error": null
+  },
+  {
+    "section_id": "S12",
+    "title": "All Akzeptanz ids (verify ak_* enum constraint)",
+    "expected": "5 rows: ak_dgnb_zertifizierung, ak_breeam_zertifizierung,",
+    "cypher": "MATCH (ak:Akzeptanz)\nRETURN ak.id AS akzeptanz_id, ak.name AS name\nORDER BY ak.id;",
+    "rows": [
+      {
+        "akzeptanz_id": "ak_aesthetik_patinakultur",
+        "name": "Patina-\u00c4sthetik"
+      },
+      {
+        "akzeptanz_id": "ak_breeam_zertifizierung",
+        "name": "BREEAM"
+      },
+      {
+        "akzeptanz_id": "ak_dgnb_zertifizierung",
+        "name": "DGNB"
+      },
+      {
+        "akzeptanz_id": "ak_leed_zertifizierung",
+        "name": "LEED"
+      },
+      {
+        "akzeptanz_id": "ak_oeffentlicher_bauherr_pilot",
+        "name": "Public-Bauherr Pilot"
+      }
+    ],
+    "row_count": 5,
+    "error": null
+  },
+  {
+    "section_id": "S13",
+    "title": "All ZustandsKlasse ids (verify zk_* enum constraint)",
+    "expected": "6 rows: zk_neuwertig, zk_gebrauchsspuren_funktional,",
+    "cypher": "MATCH (zk:ZustandsKlasse)\nRETURN zk.id AS zustandsklasse_id, zk.name AS name\nORDER BY zk.id;",
+    "rows": [
+      {
+        "zustandsklasse_id": "zk_eingeschraenkt_nachbearbeitung",
+        "name": "Eingeschr\u00e4nkt: Nacharbeit"
+      },
+      {
+        "zustandsklasse_id": "zk_eingeschraenkt_nutzungsklasse_reduzieren",
+        "name": "Eingeschr\u00e4nkt: downgrade"
+      },
+      {
+        "zustandsklasse_id": "zk_gebrauchsspuren_funktional",
+        "name": "Gebraucht, funktional"
+      },
+      {
+        "zustandsklasse_id": "zk_neuwertig",
+        "name": "Neuwertig"
+      },
+      {
+        "zustandsklasse_id": "zk_nicht_wiederverwendbar",
+        "name": "Nicht reusable"
+      },
+      {
+        "zustandsklasse_id": "zk_unbekannt_pruefung_offen",
+        "name": "Pr\u00fcfung offen"
+      }
+    ],
+    "row_count": 6,
+    "error": null
+  },
+  {
+    "section_id": "S14",
+    "title": "All Bauproduktstatus ids (verify bps_* enum constraint)",
+    "expected": "~15 rows: bps_tracimat_be, bps_pemd_fr, bps_zie_vbg, bps_abz_abg,",
+    "cypher": "MATCH (bps:Bauproduktstatus)\nRETURN bps.id AS bauproduktstatus_id, bps.name AS name\nORDER BY bps.id;",
+    "rows": [
+      {
+        "bauproduktstatus_id": "bps_abz_abg",
+        "name": "abZ / aBG (DE)"
+      },
+      {
+        "bauproduktstatus_id": "bps_baupg_ch",
+        "name": "BauPG (CH)"
+      },
+      {
+        "bauproduktstatus_id": "bps_bestand_no_status",
+        "name": "Bestand vor Ort"
+      },
+      {
+        "bauproduktstatus_id": "bps_ce_eta",
+        "name": "CE (ETA)"
+      },
+      {
+        "bauproduktstatus_id": "bps_ce_hen",
+        "name": "CE (hEN)"
+      },
+      {
+        "bauproduktstatus_id": "bps_ibc_104_11_alternative",
+        "name": "IBC 104.11 (USA)"
+      },
+      {
+        "bauproduktstatus_id": "bps_jis_jas_mlit",
+        "name": "JIS/JAS/MLIT (JP)"
+      },
+      {
+        "bauproduktstatus_id": "bps_nta_8713",
+        "name": "NTA 8713 (NL)"
+      },
+      {
+        "bauproduktstatus_id": "bps_pemd_fr",
+        "name": "PEMD (FR)"
+      },
+      {
+        "bauproduktstatus_id": "bps_project_specific",
+        "name": "Projekt-Freigabe"
+      },
+      {
+        "bauproduktstatus_id": "bps_tracimat_be",
+        "name": "Tracimat (BE)"
+      },
+      {
+        "bauproduktstatus_id": "bps_ue_zeichen",
+        "name": "\u00dc-Zeichen (DE)"
+      },
+      {
+        "bauproduktstatus_id": "bps_ukca",
+        "name": "UKCA"
+      },
+      {
+        "bauproduktstatus_id": "bps_unbekannt",
+        "name": "Status unbekannt"
+      },
+      {
+        "bauproduktstatus_id": "bps_zie_vbg",
+        "name": "ZiE / vBG (DE)"
+      }
+    ],
+    "row_count": 15,
+    "error": null
+  },
+  {
+    "section_id": "S15",
+    "title": "All Status ids (HAT_STATUS targets)",
+    "expected": "Plan 2 references status_geplant, status_realisiert,",
+    "cypher": "MATCH (s:Status)\nRETURN s.id AS status_id, s.name AS name\nORDER BY s.id;",
+    "rows": [
+      {
+        "status_id": "status_gebaut",
+        "name": "Gebaut"
+      },
+      {
+        "status_id": "status_geplant",
+        "name": "Geplant"
+      },
+      {
+        "status_id": "status_in_bau",
+        "name": "In_Bau"
+      },
+      {
+        "status_id": "status_prototyp",
+        "name": "Prototyp"
+      },
+      {
+        "status_id": "status_realisiert",
+        "name": "Realisiert"
+      },
+      {
+        "status_id": "status_rueckgebaut",
+        "name": "Rueckgebaut"
+      },
+      {
+        "status_id": "status_temporaer",
+        "name": "Temporaer"
+      },
+      {
+        "status_id": "status_unklar",
+        "name": "Unklar"
+      },
+      {
+        "status_id": "status_verworfen",
+        "name": "Verworfen"
+      },
+      {
+        "status_id": "status_vorgeschlagen",
+        "name": "Vorgeschlagen"
+      },
+      {
+        "status_id": "status_wettbewerb",
+        "name": "Wettbewerb"
+      }
+    ],
+    "row_count": 11,
+    "error": null
+  },
+  {
+    "section_id": "S16",
+    "title": "All Bauteilebene ids",
+    "expected": "be_bauteilgruppe, be_einzelbauteil, be_gebaeudeteil,",
+    "cypher": "MATCH (be:Bauteilebene)\nRETURN be.id AS bauteilebene_id, be.name AS name\nORDER BY be.id;",
+    "rows": [
+      {
+        "bauteilebene_id": "be_bauteilgruppe",
+        "name": "Bauteilgruppe"
+      },
+      {
+        "bauteilebene_id": "be_einzelbauteil",
+        "name": "Einzelbauteil"
+      },
+      {
+        "bauteilebene_id": "be_gebaeudeteil",
+        "name": "Gebaeudeteil"
+      },
+      {
+        "bauteilebene_id": "be_materialcharge",
+        "name": "Materialcharge"
+      },
+      {
+        "bauteilebene_id": "be_oberflaechenschicht",
+        "name": "Oberflaechenschicht"
+      },
+      {
+        "bauteilebene_id": "be_system",
+        "name": "System"
+      }
+    ],
+    "row_count": 6,
+    "error": null
+  },
+  {
+    "section_id": "S17",
+    "title": "All Ressourcenquelle ids",
+    "expected": "Plan 2 references rq_donorgebaeude, rq_lager, rq_baustelle \u2014",
+    "cypher": "MATCH (rq:Ressourcenquelle)\nRETURN rq.id AS ressourcenquelle_id, rq.name AS name\nORDER BY rq.id;",
+    "rows": [
+      {
+        "ressourcenquelle_id": "rq_baustelle",
+        "name": "Baustelle"
+      },
+      {
+        "ressourcenquelle_id": "rq_bauteilboerse",
+        "name": "Bauteilboerse"
+      },
+      {
+        "ressourcenquelle_id": "rq_borrowed_material_pool",
+        "name": "Borrowed_Material_Pool"
+      },
+      {
+        "ressourcenquelle_id": "rq_construction_waste_stream",
+        "name": "Construction_Waste_Stream"
+      },
+      {
+        "ressourcenquelle_id": "rq_demolition_waste_stream",
+        "name": "Demolition_Waste_Stream"
+      },
+      {
+        "ressourcenquelle_id": "rq_donor_infrastruktur",
+        "name": "Donor_Infrastruktur"
+      },
+      {
+        "ressourcenquelle_id": "rq_donorgebaeude",
+        "name": "Donorgebaeude"
+      },
+      {
+        "ressourcenquelle_id": "rq_haendler",
+        "name": "Haendler"
+      },
+      {
+        "ressourcenquelle_id": "rq_lager",
+        "name": "Lager"
+      },
+      {
+        "ressourcenquelle_id": "rq_materialstockpile",
+        "name": "Materialstockpile"
+      },
+      {
+        "ressourcenquelle_id": "rq_produktionsueberschuss",
+        "name": "Produktionsueberschuss"
+      },
+      {
+        "ressourcenquelle_id": "rq_reclaimed_stock",
+        "name": "Reclaimed_Stock"
+      },
+      {
+        "ressourcenquelle_id": "rq_supplier_stock",
+        "name": "Supplier_Stock"
+      },
+      {
+        "ressourcenquelle_id": "rq_surplus_stock",
+        "name": "Surplus_Stock"
+      },
+      {
+        "ressourcenquelle_id": "rq_unbekannt",
+        "name": "Unbekannt"
+      },
+      {
+        "ressourcenquelle_id": "rq_unknown_documented_source",
+        "name": "Unknown_Documented_Source"
+      }
+    ],
+    "row_count": 16,
+    "error": null
+  },
+  {
+    "section_id": "S18",
+    "title": "All Bauobjektrolle ids (HAT_BAUOBJEKTROLLE targets)",
+    "expected": "6 rows per GRAPH_SCHEMA: bor_donorobjekt, bor_empfaengerobjekt,",
+    "cypher": "MATCH (bor:Bauobjektrolle)\nRETURN bor.id AS bauobjektrolle_id, bor.name AS name\nORDER BY bor.id;",
+    "rows": [
+      {
+        "bauobjektrolle_id": "bor_bestandsobjekt",
+        "name": "Bestandsobjekt"
+      },
+      {
+        "bauobjektrolle_id": "bor_donorobjekt",
+        "name": "Donorobjekt"
+      },
+      {
+        "bauobjektrolle_id": "bor_empfaengerobjekt",
+        "name": "Empfaengerobjekt"
+      },
+      {
+        "bauobjektrolle_id": "bor_referenzobjekt",
+        "name": "Referenzobjekt"
+      },
+      {
+        "bauobjektrolle_id": "bor_same_site_donor_receiver",
+        "name": "Same_Site_Donor_Receiver"
+      },
+      {
+        "bauobjektrolle_id": "bor_zwischenlager",
+        "name": "Zwischenlager"
+      }
+    ],
+    "row_count": 6,
+    "error": null
+  },
+  {
+    "section_id": "S19",
+    "title": "All Bauobjektklasse ids (HAT_BAUOBJEKTKLASSE targets)",
+    "expected": "8 rows: bok_gebaeude, bok_gebaeudeteil, bok_pavillon,",
+    "cypher": "MATCH (bok:Bauobjektklasse)\nRETURN bok.id AS bauobjektklasse_id, bok.name AS name\nORDER BY bok.id;",
+    "rows": [
+      {
+        "bauobjektklasse_id": "bok_depot_lager",
+        "name": "Depot_Lager"
+      },
+      {
+        "bauobjektklasse_id": "bok_gebaeude",
+        "name": "Gebaeude"
+      },
+      {
+        "bauobjektklasse_id": "bok_gebaeudeteil",
+        "name": "Gebaeudeteil"
+      },
+      {
+        "bauobjektklasse_id": "bok_infrastruktur",
+        "name": "Infrastruktur"
+      },
+      {
+        "bauobjektklasse_id": "bok_innenausbau",
+        "name": "Innenausbau"
+      },
+      {
+        "bauobjektklasse_id": "bok_pavillon",
+        "name": "Pavillon"
+      },
+      {
+        "bauobjektklasse_id": "bok_quartier_areal",
+        "name": "Quartier_Areal"
+      },
+      {
+        "bauobjektklasse_id": "bok_reuse_centre",
+        "name": "Reuse_Centre"
+      }
+    ],
+    "row_count": 8,
+    "error": null
+  },
+  {
+    "section_id": "S20",
+    "title": "All Programm ids (verify existing + identify new)",
+    "expected": "17 rows after Phase C. Plan v2 will introduce ~4 new:",
+    "cypher": "MATCH (p:Programm)\nRETURN p.id AS programm_id, p.name AS name\nORDER BY p.id;",
+    "rows": [
+      {
+        "programm_id": "prog_bbsm",
+        "name": "BBSM"
+      },
+      {
+        "programm_id": "prog_expo_2000",
+        "name": "EXPO 2000 Hannover"
+      },
+      {
+        "programm_id": "prog_fcrbe",
+        "name": "FCRBE"
+      },
+      {
+        "programm_id": "prog_foerderprogramm",
+        "name": "Foerderprogramm"
+      },
+      {
+        "programm_id": "prog_forschungsprojekt",
+        "name": "Forschungsprojekt"
+      },
+      {
+        "programm_id": "prog_horizon_2020",
+        "name": "Horizon 2020 (EU Forschungsf\u00f6rderung)"
+      },
+      {
+        "programm_id": "prog_interreg_nwe",
+        "name": "Interreg_North_West_Europe"
+      },
+      {
+        "programm_id": "prog_kommunales_programm",
+        "name": "Kommunales_Programm"
+      },
+      {
+        "programm_id": "prog_pilotprojekt",
+        "name": "Pilotprojekt"
+      },
+      {
+        "programm_id": "prog_preuse",
+        "name": "PREUSE"
+      },
+      {
+        "programm_id": "prog_reallabor",
+        "name": "Reallabor"
+      },
+      {
+        "programm_id": "prog_reallabor_be_ware",
+        "name": "Reallabor_Be_Ware"
+      },
+      {
+        "programm_id": "prog_recreate",
+        "name": "ReCreate"
+      },
+      {
+        "programm_id": "prog_recreate_local",
+        "name": "ReCreate Finnish cluster mini-pilot"
+      },
+      {
+        "programm_id": "prog_urban_innovative_actions",
+        "name": "Urban Innovative Actions (UIA, EU)"
+      },
+      {
+        "programm_id": "prog_wettbewerb",
+        "name": "Wettbewerb"
+      },
+      {
+        "programm_id": "prog_zukunftbau",
+        "name": "Zukunftbau"
+      }
+    ],
+    "row_count": 17,
+    "error": null
+  },
+  {
+    "section_id": "S21",
+    "title": "All Stadt ids (verify existing + identify new)",
+    "expected": "62 rows. Plan v2 needs to introduce or reuse:",
+    "cypher": "MATCH (s:Stadt)\nRETURN s.id AS stadt_id, s.name AS name\nORDER BY s.id;",
+    "rows": [
+      {
+        "stadt_id": "stadt_aarhus",
+        "name": "Aarhus"
+      },
+      {
+        "stadt_id": "stadt_arnhem",
+        "name": "Arnhem"
+      },
+      {
+        "stadt_id": "stadt_asse",
+        "name": "Asse"
+      },
+      {
+        "stadt_id": "stadt_auderghem_brussels",
+        "name": "Auderghem / Br\u00fcssel"
+      },
+      {
+        "stadt_id": "stadt_basel",
+        "name": "Basel"
+      },
+      {
+        "stadt_id": "stadt_berlin",
+        "name": "Berlin"
+      },
+      {
+        "stadt_id": "stadt_berlin_marzahn",
+        "name": "Berlin-Marzahn"
+      },
+      {
+        "stadt_id": "stadt_bleijerheide_kerkrade",
+        "name": "Bleijerheide / Kerkrade"
+      },
+      {
+        "stadt_id": "stadt_boston",
+        "name": "Boston"
+      },
+      {
+        "stadt_id": "stadt_boulder_colorado",
+        "name": "Boulder, Colorado"
+      },
+      {
+        "stadt_id": "stadt_brighton",
+        "name": "Brighton"
+      },
+      {
+        "stadt_id": "stadt_bruessel",
+        "name": "Br\u00fcssel"
+      },
+      {
+        "stadt_id": "stadt_brussel_anderlecht",
+        "name": "Br\u00fcssel / Anderlecht"
+      },
+      {
+        "stadt_id": "stadt_cambridge_ma",
+        "name": "Cambridge, Massachusetts"
+      },
+      {
+        "stadt_id": "stadt_colombelles",
+        "name": "Colombelles"
+      },
+      {
+        "stadt_id": "stadt_dilbeek",
+        "name": "Dilbeek / Itterbeek"
+      },
+      {
+        "stadt_id": "stadt_duesseldorf",
+        "name": "D\u00fcsseldorf"
+      },
+      {
+        "stadt_id": "stadt_duiven",
+        "name": "Duiven"
+      },
+      {
+        "stadt_id": "stadt_eindhoven",
+        "name": "Eindhoven"
+      },
+      {
+        "stadt_id": "stadt_enschede",
+        "name": "Enschede"
+      },
+      {
+        "stadt_id": "stadt_frankfurt_oder",
+        "name": "Frankfurt (Oder)"
+      },
+      {
+        "stadt_id": "stadt_gentbrugge",
+        "name": "Gentbrugge / Ghent"
+      },
+      {
+        "stadt_id": "stadt_gladsaxe",
+        "name": "Gladsaxe"
+      },
+      {
+        "stadt_id": "stadt_groeditz",
+        "name": "Gr\u00f6ditz"
+      },
+      {
+        "stadt_id": "stadt_hannover",
+        "name": "Hannover"
+      },
+      {
+        "stadt_id": "stadt_hastings",
+        "name": "Hastings"
+      },
+      {
+        "stadt_id": "stadt_heerde",
+        "name": "Heerde"
+      },
+      {
+        "stadt_id": "stadt_helsinki",
+        "name": "Helsinki"
+      },
+      {
+        "stadt_id": "stadt_hoyerswerda",
+        "name": "Hoyerswerda / Broethen"
+      },
+      {
+        "stadt_id": "stadt_kamikatsu",
+        "name": "Kamikatsu, Tokushima Prefecture"
+      },
+      {
+        "stadt_id": "stadt_kloetinge",
+        "name": "Kloetinge"
+      },
+      {
+        "stadt_id": "stadt_kopenhagen",
+        "name": "Kopenhagen"
+      },
+      {
+        "stadt_id": "stadt_leiden",
+        "name": "Leiden"
+      },
+      {
+        "stadt_id": "stadt_leinefelde",
+        "name": "Leinefelde"
+      },
+      {
+        "stadt_id": "stadt_lexington_ma",
+        "name": "Lexington, Massachusetts"
+      },
+      {
+        "stadt_id": "stadt_liege",
+        "name": "Li\u00e8ge / L\u00fcttich"
+      },
+      {
+        "stadt_id": "stadt_lo_reninge",
+        "name": "Lo-Reninge"
+      },
+      {
+        "stadt_id": "stadt_london",
+        "name": "London"
+      },
+      {
+        "stadt_id": "stadt_luxembourg_limpertsberg",
+        "name": "Luxembourg-Limpertsberg"
+      },
+      {
+        "stadt_id": "stadt_maassluis",
+        "name": "Maassluis"
+      },
+      {
+        "stadt_id": "stadt_mehrow",
+        "name": "Mehrow, Brandenburg"
+      },
+      {
+        "stadt_id": "stadt_molenbeek_saint_jean",
+        "name": "Molenbeek-Saint-Jean / Bruessel"
+      },
+      {
+        "stadt_id": "stadt_mouscron",
+        "name": "Mouscron"
+      },
+      {
+        "stadt_id": "stadt_muehlhausen_thueringen",
+        "name": "M\u00fchlhausen, Th\u00fcringen"
+      },
+      {
+        "stadt_id": "stadt_muenchen",
+        "name": "M\u00fcnchen"
+      },
+      {
+        "stadt_id": "stadt_muenster",
+        "name": "M\u00fcnster"
+      },
+      {
+        "stadt_id": "stadt_oegstgeest",
+        "name": "Oegstgeest"
+      },
+      {
+        "stadt_id": "stadt_oslo",
+        "name": "Oslo"
+      },
+      {
+        "stadt_id": "stadt_paris",
+        "name": "Paris"
+      },
+      {
+        "stadt_id": "stadt_paso_robles_templeton_gap",
+        "name": "Paso Robles / Templeton Gap"
+      },
+      {
+        "stadt_id": "stadt_plauen",
+        "name": "Plauen"
+      },
+      {
+        "stadt_id": "stadt_rotterdam",
+        "name": "Rotterdam"
+      },
+      {
+        "stadt_id": "stadt_ruemlang",
+        "name": "R\u00fcmlang"
+      },
+      {
+        "stadt_id": "stadt_s_hertogenbosch",
+        "name": "s-Hertogenbosch"
+      },
+      {
+        "stadt_id": "stadt_schildow",
+        "name": "Schildow"
+      },
+      {
+        "stadt_id": "stadt_stains",
+        "name": "Stains"
+      },
+      {
+        "stadt_id": "stadt_tampere",
+        "name": "Tampere"
+      },
+      {
+        "stadt_id": "stadt_terneuzen",
+        "name": "Terneuzen"
+      },
+      {
+        "stadt_id": "stadt_utrecht",
+        "name": "Utrecht"
+      },
+      {
+        "stadt_id": "stadt_volkenroda_koerner",
+        "name": "Volkenroda / Koerner"
+      },
+      {
+        "stadt_id": "stadt_winterthur",
+        "name": "Winterthur"
+      },
+      {
+        "stadt_id": "stadt_zuerich",
+        "name": "Z\u00fcrich"
+      }
+    ],
+    "row_count": 62,
+    "error": null
+  },
+  {
+    "section_id": "S22",
+    "title": "All Land ids (Ukraine is the most likely new one)",
+    "expected": "16 rows. Plan v2 may need to add: land_ukraine, land_portugal,",
+    "cypher": "MATCH (l:Land)\nRETURN l.id AS land_id, l.name AS name, l.country_iso2 AS iso2\nORDER BY l.id;",
+    "rows": [
+      {
+        "land_id": "land_belgien",
+        "name": "Belgien",
+        "iso2": "BE"
+      },
+      {
+        "land_id": "land_daenemark",
+        "name": "D\u00e4nemark",
+        "iso2": "DK"
+      },
+      {
+        "land_id": "land_deutschland",
+        "name": "Deutschland",
+        "iso2": "DE"
+      },
+      {
+        "land_id": "land_eea",
+        "name": "Europ\u00e4ischer Wirtschaftsraum (EU+EEA)",
+        "iso2": null
+      },
+      {
+        "land_id": "land_eu",
+        "name": "Europ\u00e4ische Union (Geltungsbereich)",
+        "iso2": null
+      },
+      {
+        "land_id": "land_finnland",
+        "name": "Finnland",
+        "iso2": "FI"
+      },
+      {
+        "land_id": "land_frankreich",
+        "name": "Frankreich",
+        "iso2": "FR"
+      },
+      {
+        "land_id": "land_international",
+        "name": "International (ISO/IEC Geltungsbereich)",
+        "iso2": null
+      },
+      {
+        "land_id": "land_japan",
+        "name": "Japan",
+        "iso2": "JP"
+      },
+      {
+        "land_id": "land_luxemburg",
+        "name": "Luxemburg",
+        "iso2": "LU"
+      },
+      {
+        "land_id": "land_niederlande",
+        "name": "Niederlande",
+        "iso2": "NL"
+      },
+      {
+        "land_id": "land_norwegen",
+        "name": "Norwegen",
+        "iso2": "NO"
+      },
+      {
+        "land_id": "land_oesterreich",
+        "name": "\u00d6sterreich",
+        "iso2": "AT"
+      },
+      {
+        "land_id": "land_schweiz",
+        "name": "Schweiz",
+        "iso2": "CH"
+      },
+      {
+        "land_id": "land_usa",
+        "name": "USA",
+        "iso2": "US"
+      },
+      {
+        "land_id": "land_vereinigtes_koenigreich",
+        "name": "Vereinigtes K\u00f6nigreich",
+        "iso2": "GB"
+      }
+    ],
+    "row_count": 16,
+    "error": null
+  },
+  {
+    "section_id": "S23",
+    "title": "All Software ids (avoid duplicate creation)",
+    "expected": "~5 rows: software_bim, software_concular, software_restado,",
+    "cypher": "MATCH (sw:Software)\nRETURN sw.id AS software_id, sw.name AS name\nORDER BY sw.id;",
+    "rows": [
+      {
+        "software_id": "software_bim",
+        "name": "Building Information Modeling / BIM"
+      },
+      {
+        "software_id": "software_concular",
+        "name": "Concular"
+      },
+      {
+        "software_id": "software_inies",
+        "name": "INIES"
+      },
+      {
+        "software_id": "software_qflow",
+        "name": "Qflow"
+      },
+      {
+        "software_id": "software_recrete_finite_element_model",
+        "name": "Finite-Elemente-Modell / FE-Modell"
+      },
+      {
+        "software_id": "software_restado",
+        "name": "Restado"
+      },
+      {
+        "software_id": "software_risa_3d",
+        "name": "RISA-3D"
+      }
+    ],
+    "row_count": 7,
+    "error": null
+  },
+  {
+    "section_id": "S24",
+    "title": "All Tool ids (avoid duplicate creation)",
+    "expected": "~5 rows: tool_bauteilkatalog, tool_bim_bauteilkatalog,",
+    "cypher": "MATCH (t:Tool)\nRETURN t.id AS tool_id, t.name AS name\nORDER BY t.id;",
+    "rows": [
+      {
+        "tool_id": "tool_bauteilkatalog",
+        "name": "Bauteilkatalog / Bauteilpass"
+      },
+      {
+        "tool_id": "tool_bim_bauteilkatalog",
+        "name": "BIM / digitaler Bauteilkatalog"
+      },
+      {
+        "tool_id": "tool_hts_stockmatcher",
+        "name": "HTS Reused Steel Stockmatcher"
+      },
+      {
+        "tool_id": "tool_material_passports_maconda",
+        "name": "Material passports / Maconda data workflow"
+      },
+      {
+        "tool_id": "tool_oogstkaart_harvest_map",
+        "name": "Oogstkaart / Harvest Map logic"
+      },
+      {
+        "tool_id": "tool_qflow",
+        "name": "Qflow delivery and waste ticket tracking"
+      }
+    ],
+    "row_count": 6,
+    "error": null
+  },
+  {
+    "section_id": "S25",
+    "title": "All Norm ids (verify norm_* prefix convention)",
+    "expected": "~30 rows. Plan 2 used `n_bs_5385_5_2009` (wrong prefix); replace with",
+    "cypher": "MATCH (n:Norm)\nRETURN n.id AS norm_id, n.name AS name\nORDER BY n.id;",
+    "rows": [
+      {
+        "norm_id": "norm_cen_ts_1090_201_2024",
+        "name": "CEN/TS 1090-201:2024"
+      },
+      {
+        "norm_id": "norm_cen_ts_17440",
+        "name": "CEN/TS 17440"
+      },
+      {
+        "norm_id": "norm_crow_cur_4_2023",
+        "name": "CROW-CUR 4:2023"
+      },
+      {
+        "norm_id": "norm_din_18008",
+        "name": "DIN 18008"
+      },
+      {
+        "norm_id": "norm_din_18940",
+        "name": "DIN 18940"
+      },
+      {
+        "norm_id": "norm_din_4074",
+        "name": "DIN 4074"
+      },
+      {
+        "norm_id": "norm_din_68800",
+        "name": "DIN 68800"
+      },
+      {
+        "norm_id": "norm_din_en_15804",
+        "name": "DIN EN 15804"
+      },
+      {
+        "norm_id": "norm_din_en_15978",
+        "name": "DIN EN 15978"
+      },
+      {
+        "norm_id": "norm_en_1090",
+        "name": "EN 1090"
+      },
+      {
+        "norm_id": "norm_en_1168",
+        "name": "EN 1168"
+      },
+      {
+        "norm_id": "norm_en_13162",
+        "name": "EN 13162"
+      },
+      {
+        "norm_id": "norm_en_14081",
+        "name": "EN 14081"
+      },
+      {
+        "norm_id": "norm_en_1992",
+        "name": "EN 1992 (Eurocode 2)"
+      },
+      {
+        "norm_id": "norm_en_1993",
+        "name": "EN 1993 (Eurocode 3)"
+      },
+      {
+        "norm_id": "norm_en_1995",
+        "name": "EN 1995 (Eurocode 5)"
+      },
+      {
+        "norm_id": "norm_en_1996",
+        "name": "EN 1996 (Eurocode 6)"
+      },
+      {
+        "norm_id": "norm_en_206",
+        "name": "EN 206"
+      },
+      {
+        "norm_id": "norm_en_771",
+        "name": "EN 771"
+      },
+      {
+        "norm_id": "norm_historic_sections_book",
+        "name": "Historic Sections Book"
+      },
+      {
+        "norm_id": "norm_iso_14040",
+        "name": "ISO 14040"
+      },
+      {
+        "norm_id": "norm_iso_14044",
+        "name": "ISO 14044"
+      },
+      {
+        "norm_id": "norm_iso_20887",
+        "name": "ISO 20887"
+      },
+      {
+        "norm_id": "norm_nen_8700",
+        "name": "NEN 8700"
+      },
+      {
+        "norm_id": "norm_ns_3682",
+        "name": "NS 3682"
+      },
+      {
+        "norm_id": "norm_rt_2012",
+        "name": "RT 2012"
+      },
+      {
+        "norm_id": "norm_sci_p427",
+        "name": "SCI P427 protocol"
+      },
+      {
+        "norm_id": "norm_sci_p440",
+        "name": "SCI P440"
+      },
+      {
+        "norm_id": "norm_sia_schweiz",
+        "name": "SIA (CH)"
+      },
+      {
+        "norm_id": "norm_tek_norway",
+        "name": "TEK (NO)"
+      }
+    ],
+    "row_count": 30,
+    "error": null
+  },
+  {
+    "section_id": "S26",
+    "title": "Existing project nodes Plan v2 will touch (PARKED_DECISIONS scope)",
+    "expected": "All 23 ids present with degree > 0. ALIASES capture is critical",
+    "cypher": "MATCH (p:Projekt) WHERE p.id IN [\n  'p_obk_27', 'p_pavilion_circl_amsterdam', 'p_circl_abn_amro',\n  'p_fcrbe', 'p_interreg_nwe_fcrbe', 'p_architecture_of_reuse_brussels',\n  'p_eth_circular_construction_student_reuse', 'p_reuse_in_construction_zhaw',\n  'p_vandkunsten_component_reuse', 'p_rebridge_structural_reuse_project',\n  'p_re_use_hoefe', 'p_reuse_logistics', 'p_rcmi_concular',\n  'p_refair_bordeaux_reemploi_platform', 'p_stuttgart_210',\n  'p_lysp8_basel', 'p_reallabor_be_ware', 'p_schaerenmoosstrasse_zuerich',\n  'p_meduni_campus_mariannengasse', 'p_granby_workshop', 'p_careno_becircular',\n  'p_umar_unit', 'p_elementa_walkeweg'\n]\nOPTIONAL MATCH (p)-[r]-()\nWITH p, count(r) AS degree\nOPTIONAL MATCH (p)-[:BELEGT_IN]->(q:Quelle)\nRETURN p.id AS projekt_id,\n       p.name AS name,\n       p.node_role AS node_role,\n       p.aliases AS aliases,\n       degree,\n       collect(DISTINCT q.id) AS belegt_in_quellen\nORDER BY p.id;",
+    "rows": [
+      {
+        "projekt_id": "p_architecture_of_reuse_brussels",
+        "name": "Architecture of Reuse\u2026",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 7,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_christine_conix_03",
+          "q_actor_maarten_gielen_05",
+          "q_actor_lionel_devlieger_04"
+        ]
+      },
+      {
+        "projekt_id": "p_careno_becircular",
+        "name": "Careno Be.Circular",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 5,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_lionel_billiet_03",
+          "q_actor_sebastien_paulet_03"
+        ]
+      },
+      {
+        "projekt_id": "p_circl_abn_amro",
+        "name": "Circl",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 5,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_michel_baars_02",
+          "q_actor_michel_baars_03"
+        ]
+      },
+      {
+        "projekt_id": "p_elementa_walkeweg",
+        "name": "ELEMENTA / Walkeweg Basel",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 7,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_carla_ferrando_costansa_01",
+          "q_actor_carla_ferrando_costansa_02",
+          "q_actor_pablo_garrido_arnaiz_01",
+          "q_actor_pablo_garrido_arnaiz_02"
+        ]
+      },
+      {
+        "projekt_id": "p_eth_circular_construction_student_reuse",
+        "name": "ETH Circular Construction",
+        "node_role": "cross_reference_stub",
+        "aliases": [
+          "ETH Circular Construction student reuse project"
+        ],
+        "degree": 8,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_catherine_de_wolf_02",
+          "q_actor_catherine_de_wolf_03",
+          "q_actor_fabio_gramazio_02",
+          "q_actor_matthias_kohler_02"
+        ]
+      },
+      {
+        "projekt_id": "p_fcrbe",
+        "name": "FCRBE",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 5,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_hugo_topalov_03",
+          "q_actor_sarah_westerfeld_03"
+        ]
+      },
+      {
+        "projekt_id": "p_granby_workshop",
+        "name": "Granby Workshop",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 3,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_lewis_jones_02"
+        ]
+      },
+      {
+        "projekt_id": "p_interreg_nwe_fcrbe",
+        "name": "Interreg NWE FCRBE",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 3,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_michael_ghyoot_04"
+        ]
+      },
+      {
+        "projekt_id": "p_lysp8_basel",
+        "name": "LYSP8 Basel",
+        "node_role": "cross_reference_stub",
+        "aliases": [
+          "LYSP8"
+        ],
+        "degree": 19,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_kerstin_mueller_05",
+          "q_actor_marc_angst_05",
+          "q_actor_pascal_hentschel_05",
+          "q_actor_marc_loeliger_01",
+          "q_actor_marc_loeliger_02",
+          "q_actor_marc_loeliger_03",
+          "q_actor_martin_zeller_01",
+          "q_actor_martin_zeller_02",
+          "q_actor_kevin_straub_01"
+        ]
+      },
+      {
+        "projekt_id": "p_meduni_campus_mariannengasse",
+        "name": "MedUni Campus Marianneng\u2026",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 5,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_markus_meissner_04",
+          "q_actor_thomas_romm_04"
+        ]
+      },
+      {
+        "projekt_id": "p_obk_27",
+        "name": "OBK 27",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 5,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_cyril_pressacco_01",
+          "q_actor_thibaut_barrault_01"
+        ]
+      },
+      {
+        "projekt_id": "p_pavilion_circl_amsterdam",
+        "name": "Pavilion Circl Amsterdam",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 5,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_hans_hammink_01",
+          "q_actor_hans_hammink_02",
+          "q_actor_hans_hammink_03"
+        ]
+      },
+      {
+        "projekt_id": "p_rcmi_concular",
+        "name": "RCMI",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 3,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_dominik_campanella_02"
+        ]
+      },
+      {
+        "projekt_id": "p_re_use_hoefe",
+        "name": "RE-USE H\u00f6fe",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 3,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_felix_dillmann_02"
+        ]
+      },
+      {
+        "projekt_id": "p_reallabor_be_ware",
+        "name": "Reallabor B(e) Ware",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 20,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_eike_roswag_klinge_01",
+          "q_actor_eike_roswag_klinge_03",
+          "q_actor_andrea_klinge_02",
+          "q_actor_andrea_klinge_03",
+          "q_actor_matthew_crabbe_02",
+          "q_actor_nina_pawlicki_02",
+          "q_actor_sina_jansen_02",
+          "q_actor_christof_ziegert_02",
+          "q_actor_uwe_seiler_02"
+        ]
+      },
+      {
+        "projekt_id": "p_rebridge_structural_reuse_project",
+        "name": "REBRIDGE structural\u2026",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 3,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_corentin_fivet_03"
+        ]
+      },
+      {
+        "projekt_id": "p_refair_bordeaux_reemploi_platform",
+        "name": "REFAIR Bordeaux reuse\u2026",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 5,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_orianne_scourzic_02",
+          "q_actor_tiphaine_berthome_02"
+        ]
+      },
+      {
+        "projekt_id": "p_reuse_in_construction_zhaw",
+        "name": "Reuse in Construction",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 8,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_andreas_sonderegger_01",
+          "q_actor_eva_stricker_01",
+          "q_actor_guido_brandi_01"
+        ]
+      },
+      {
+        "projekt_id": "p_reuse_logistics",
+        "name": "Reuse Logistics",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 3,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_madlen_kobi_02"
+        ]
+      },
+      {
+        "projekt_id": "p_schaerenmoosstrasse_zuerich",
+        "name": "Sch\u00e4renmoosstrasse Z\u00fcrich",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 10,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_daniel_hoffmann_01",
+          "q_actor_daniel_hoffmann_02",
+          "q_actor_daniel_hoffmann_03",
+          "q_actor_gian_trachsler_01",
+          "q_actor_gian_trachsler_02",
+          "q_actor_gian_trachsler_03"
+        ]
+      },
+      {
+        "projekt_id": "p_stuttgart_210",
+        "name": "Stuttgart 210",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 26,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_andreas_kretzer_01",
+          "q_actor_andreas_kretzer_02",
+          "q_actor_andreas_kretzer_03",
+          "q_actor_stefan_kroetsch_01",
+          "q_actor_stefan_kroetsch_02",
+          "q_actor_stefan_kroetsch_03",
+          "q_actor_katharina_raabe_01",
+          "q_actor_katharina_raabe_02",
+          "q_actor_katharina_raabe_03",
+          "q_actor_maximilian_stemmler_01",
+          "q_actor_maximilian_stemmler_02",
+          "q_actor_maximilian_stemmler_03",
+          "q_actor_roman_kreuzer_01",
+          "q_actor_roman_kreuzer_02",
+          "q_actor_roman_kreuzer_03",
+          "q_actor_thomas_stark_01"
+        ]
+      },
+      {
+        "projekt_id": "p_umar_unit",
+        "name": "UMAR Unit",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 10,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_dirk_e_hebel_01",
+          "q_actor_felix_heisel_01",
+          "q_actor_werner_sobek_01",
+          "q_actor_vanessa_propach_01"
+        ]
+      },
+      {
+        "projekt_id": "p_vandkunsten_component_reuse",
+        "name": "Vandkunsten Reused\u2026",
+        "node_role": "cross_reference_stub",
+        "aliases": null,
+        "degree": 7,
+        "belegt_in_quellen": [
+          "q_akteursliste_master_md",
+          "q_actor_soren_nielsen_01",
+          "q_actor_soren_nielsen_03",
+          "q_actor_katrine_west_kristensen_01"
+        ]
+      }
+    ],
+    "row_count": 23,
+    "error": null
+  },
+  {
+    "section_id": "S27",
+    "title": "Akteure that PARKED says are \"already in graph\"; verify each",
+    "expected": "All ids that PARKED_DECISIONS / dossiers claim exist \u2014 confirm.",
+    "cypher": "MATCH (a:Akteur) WHERE a.id IN [\n  'glasfischer_glastec','heinrich_boell_stiftung','koimo_development',\n  'mehr_als_wohnen','stiftung_habitat','citydev_brussels','denkstatt',\n  'edith_maryon_stift','eitel_partner','gibbins_architekten',\n  'kunst_stoffe_ev','zusammenkunft_berlin',\n  'rotor_asbl_vzw','rotor','rotor_dc','rotordc',\n  'zirkular_gmbh','zirkular',\n  'studio_trachsler_hoffmann','daniel_hoffmann','gian_trachsler',\n  'dirk_e_hebel','felix_heisel','vanessa_propach',\n  'carla_ferrando_costansa','pablo_garrido_arnaiz','parabase',\n  'immobilien_basel_stadt','hochbauamt_basel_stadt','zirkular_gmbh',\n  'lionel_billiet','sebastien_paulet','hans_hammink','michel_baars',\n  'baubuero_in_situ','baubureau_in_situ',\n  'kerstin_mueller','kerstin_m\u00fcller','kevin_straub','marc_angst','marc_loeliger',\n  'tu_delft','abn_amro','bam','bam_bouw_techniek',\n  'de_architekten_cie','assemble','assemble_studio','lewis_jones',\n  'andrea_klinge','christof_ziegert','eike_roswag_klinge','matthew_crabbe',\n  'nina_pawlicki','uwe_seiler','nbl_studio',\n  'andreas_kretzer','katharina_raabe','maximilian_stemmler','roman_kreuzer',\n  'stefan_kroetsch','thomas_stark',\n  'duncan_baker_brown','hugo_topalov','sarah_westerfeld','michael_ghyoot',\n  'catherine_de_wolf','fabio_gramazio','matthias_kohler',\n  'andreas_sonderegger','eva_stricker','guido_brandi',\n  'katrine_west_kristensen','soren_nielsen','vandkunsten',\n  'christine_conix','lionel_devlieger','maarten_gielen',\n  'concular','la_fabrique_de_bordeaux_metropole','la_fab',\n  'baukarussell','big_bundesimmobilien','meduni_wien',\n  'madlen_kobi','university_of_fribourg','materialnomaden','urban_bricolage'\n]\nRETURN a.id AS akteur_id, a.name AS name, a.akteurtyp AS akteurtyp,\n       size([(a)-[r]-() | r]) AS degree\nORDER BY a.id;",
+    "rows": [
+      {
+        "akteur_id": "andrea_klinge",
+        "name": "Andrea Klinge",
+        "akteurtyp": null,
+        "degree": 11
+      },
+      {
+        "akteur_id": "andreas_kretzer",
+        "name": "Andreas Kretzer",
+        "akteurtyp": null,
+        "degree": 10
+      },
+      {
+        "akteur_id": "andreas_sonderegger",
+        "name": "Andreas Sonderegger",
+        "akteurtyp": null,
+        "degree": 9
+      },
+      {
+        "akteur_id": "assemble",
+        "name": "Assemble",
+        "akteurtyp": null,
+        "degree": 7
+      },
+      {
+        "akteur_id": "baubuero_in_situ",
+        "name": "baub\u00fcro in situ",
+        "akteurtyp": null,
+        "degree": 10
+      },
+      {
+        "akteur_id": "baukarussell",
+        "name": "BauKarussell",
+        "akteurtyp": null,
+        "degree": 23
+      },
+      {
+        "akteur_id": "carla_ferrando_costansa",
+        "name": "Carla Ferrando Costansa",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "catherine_de_wolf",
+        "name": "Catherine De Wolf",
+        "akteurtyp": null,
+        "degree": 14
+      },
+      {
+        "akteur_id": "christine_conix",
+        "name": "Christine Conix",
+        "akteurtyp": null,
+        "degree": 13
+      },
+      {
+        "akteur_id": "christof_ziegert",
+        "name": "Christof Ziegert",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "citydev_brussels",
+        "name": "citydev.brussels",
+        "akteurtyp": null,
+        "degree": 1
+      },
+      {
+        "akteur_id": "concular",
+        "name": "Concular",
+        "akteurtyp": null,
+        "degree": 27
+      },
+      {
+        "akteur_id": "daniel_hoffmann",
+        "name": "Daniel Hoffmann",
+        "akteurtyp": null,
+        "degree": 11
+      },
+      {
+        "akteur_id": "de_architekten_cie",
+        "name": "de Architekten Cie.",
+        "akteurtyp": null,
+        "degree": 8
+      },
+      {
+        "akteur_id": "denkstatt",
+        "name": "Denkstatt",
+        "akteurtyp": null,
+        "degree": 1
+      },
+      {
+        "akteur_id": "dirk_e_hebel",
+        "name": "Dirk E. Hebel",
+        "akteurtyp": null,
+        "degree": 18
+      },
+      {
+        "akteur_id": "duncan_baker_brown",
+        "name": "Duncan Baker-Brown",
+        "akteurtyp": null,
+        "degree": 14
+      },
+      {
+        "akteur_id": "edith_maryon_stift",
+        "name": "Stiftung Edith Maryon",
+        "akteurtyp": null,
+        "degree": 1
+      },
+      {
+        "akteur_id": "eike_roswag_klinge",
+        "name": "Eike Roswag-Klinge",
+        "akteurtyp": null,
+        "degree": 13
+      },
+      {
+        "akteur_id": "eitel_partner",
+        "name": "Eitel & Partner",
+        "akteurtyp": null,
+        "degree": 1
+      },
+      {
+        "akteur_id": "eva_stricker",
+        "name": "Eva Stricker",
+        "akteurtyp": null,
+        "degree": 9
+      },
+      {
+        "akteur_id": "fabio_gramazio",
+        "name": "Fabio Gramazio",
+        "akteurtyp": null,
+        "degree": 13
+      },
+      {
+        "akteur_id": "felix_heisel",
+        "name": "Felix Heisel",
+        "akteurtyp": null,
+        "degree": 14
+      },
+      {
+        "akteur_id": "gian_trachsler",
+        "name": "Gian Trachsler",
+        "akteurtyp": null,
+        "degree": 11
+      },
+      {
+        "akteur_id": "gibbins_architekten",
+        "name": "Gibbins Architekten",
+        "akteurtyp": null,
+        "degree": 1
+      },
+      {
+        "akteur_id": "glasfischer_glastec",
+        "name": "Glasfischer Glastechnik",
+        "akteurtyp": null,
+        "degree": 0
+      },
+      {
+        "akteur_id": "guido_brandi",
+        "name": "Guido Brandi",
+        "akteurtyp": null,
+        "degree": 9
+      },
+      {
+        "akteur_id": "hans_hammink",
+        "name": "Hans Hammink",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "heinrich_boell_stiftung",
+        "name": "Heinrich-B\u00f6ll-Stiftung",
+        "akteurtyp": null,
+        "degree": 0
+      },
+      {
+        "akteur_id": "hochbauamt_basel_stadt",
+        "name": "Hochbauamt Basel-Stadt",
+        "akteurtyp": null,
+        "degree": 6
+      },
+      {
+        "akteur_id": "hugo_topalov",
+        "name": "Hugo Topalov",
+        "akteurtyp": null,
+        "degree": 13
+      },
+      {
+        "akteur_id": "immobilien_basel_stadt",
+        "name": "Immobilien Basel-Stadt",
+        "akteurtyp": null,
+        "degree": 5
+      },
+      {
+        "akteur_id": "katharina_raabe",
+        "name": "Katharina Raabe",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "katrine_west_kristensen",
+        "name": "Katrine West Kristensen",
+        "akteurtyp": null,
+        "degree": 11
+      },
+      {
+        "akteur_id": "kerstin_mueller",
+        "name": "Kerstin M\u00fcller",
+        "akteurtyp": null,
+        "degree": 19
+      },
+      {
+        "akteur_id": "kevin_straub",
+        "name": "Kevin Straub",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "koimo_development",
+        "name": "KOIMO Development GmbH",
+        "akteurtyp": null,
+        "degree": 0
+      },
+      {
+        "akteur_id": "kunst_stoffe_ev",
+        "name": "Kunst-Stoffe e.V.",
+        "akteurtyp": null,
+        "degree": 1
+      },
+      {
+        "akteur_id": "lewis_jones",
+        "name": "Lewis Jones",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "lionel_billiet",
+        "name": "Lionel Billiet",
+        "akteurtyp": null,
+        "degree": 17
+      },
+      {
+        "akteur_id": "lionel_devlieger",
+        "name": "Lionel Devlieger",
+        "akteurtyp": null,
+        "degree": 15
+      },
+      {
+        "akteur_id": "maarten_gielen",
+        "name": "Maarten Gielen",
+        "akteurtyp": null,
+        "degree": 23
+      },
+      {
+        "akteur_id": "madlen_kobi",
+        "name": "Madlen Kobi",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "marc_angst",
+        "name": "Marc Angst",
+        "akteurtyp": null,
+        "degree": 17
+      },
+      {
+        "akteur_id": "marc_loeliger",
+        "name": "Marc Loeliger",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "materialnomaden",
+        "name": "materialnomaden",
+        "akteurtyp": null,
+        "degree": 14
+      },
+      {
+        "akteur_id": "matthew_crabbe",
+        "name": "Matthew Crabbe",
+        "akteurtyp": null,
+        "degree": 11
+      },
+      {
+        "akteur_id": "matthias_kohler",
+        "name": "Matthias Kohler",
+        "akteurtyp": null,
+        "degree": 13
+      },
+      {
+        "akteur_id": "maximilian_stemmler",
+        "name": "Maximilian Stemmler",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "mehr_als_wohnen",
+        "name": "Baugenossenschaft mehr als wohnen",
+        "akteurtyp": null,
+        "degree": 0
+      },
+      {
+        "akteur_id": "michael_ghyoot",
+        "name": "Micha\u00ebl Ghyoot",
+        "akteurtyp": null,
+        "degree": 18
+      },
+      {
+        "akteur_id": "michel_baars",
+        "name": "Michel Baars",
+        "akteurtyp": null,
+        "degree": 13
+      },
+      {
+        "akteur_id": "nbl_studio",
+        "name": "NBL Studio",
+        "akteurtyp": null,
+        "degree": 8
+      },
+      {
+        "akteur_id": "nina_pawlicki",
+        "name": "Nina Pawlicki",
+        "akteurtyp": null,
+        "degree": 10
+      },
+      {
+        "akteur_id": "pablo_garrido_arnaiz",
+        "name": "Pablo Garrido Arnaiz",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "parabase",
+        "name": "PARABASE",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "roman_kreuzer",
+        "name": "Roman Kreuzer",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "rotor_asbl_vzw",
+        "name": "Rotor asbl-vzw",
+        "akteurtyp": null,
+        "degree": 6
+      },
+      {
+        "akteur_id": "rotor_dc",
+        "name": "Rotor DC",
+        "akteurtyp": null,
+        "degree": 8
+      },
+      {
+        "akteur_id": "rotordc",
+        "name": "RotorDC",
+        "akteurtyp": null,
+        "degree": 20
+      },
+      {
+        "akteur_id": "sarah_westerfeld",
+        "name": "Sarah Westerfeld",
+        "akteurtyp": null,
+        "degree": 13
+      },
+      {
+        "akteur_id": "sebastien_paulet",
+        "name": "S\u00e9bastien Paulet",
+        "akteurtyp": null,
+        "degree": 15
+      },
+      {
+        "akteur_id": "soren_nielsen",
+        "name": "S\u00f8ren Nielsen",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "stefan_kroetsch",
+        "name": "Stefan Kr\u00f6tsch",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "stiftung_habitat",
+        "name": "Stiftung Habitat",
+        "akteurtyp": null,
+        "degree": 0
+      },
+      {
+        "akteur_id": "studio_trachsler_hoffmann",
+        "name": "Studio Trachsler Hoffmann",
+        "akteurtyp": null,
+        "degree": 9
+      },
+      {
+        "akteur_id": "thomas_stark",
+        "name": "Thomas Stark",
+        "akteurtyp": null,
+        "degree": 9
+      },
+      {
+        "akteur_id": "urban_bricolage",
+        "name": "Urban Bricolage",
+        "akteurtyp": null,
+        "degree": 11
+      },
+      {
+        "akteur_id": "uwe_seiler",
+        "name": "Uwe Seiler",
+        "akteurtyp": null,
+        "degree": 12
+      },
+      {
+        "akteur_id": "vandkunsten",
+        "name": "Vandkunsten",
+        "akteurtyp": null,
+        "degree": 14
+      },
+      {
+        "akteur_id": "vanessa_propach",
+        "name": "Vanessa Propach",
+        "akteurtyp": null,
+        "degree": 10
+      },
+      {
+        "akteur_id": "zirkular",
+        "name": "Zirkular",
+        "akteurtyp": null,
+        "degree": 24
+      },
+      {
+        "akteur_id": "zirkular_gmbh",
+        "name": "Zirkular GmbH",
+        "akteurtyp": null,
+        "degree": 10
+      },
+      {
+        "akteur_id": "zusammenkunft_berlin",
+        "name": "ZUsammenKUNFT Berlin eG",
+        "akteurtyp": null,
+        "degree": 1
+      }
+    ],
+    "row_count": 74,
+    "error": null
+  },
+  {
+    "section_id": "S28",
+    "title": "Werner Sobek duplicate on UMAR (Plan 1 P0-A)",
+    "expected": "2 rows (werner_sobek_p canonical + Werner_Sobek duplicate).",
+    "cypher": "MATCH (p:Projekt {id:'p_umar_unit'})-[r:ASSOZIIERT_MIT_PROJEKT|BETEILIGT_AN]-(a:Akteur)\nWHERE a.name CONTAINS 'Sobek' OR a.name CONTAINS 'sobek'\nRETURN a.id AS akteur_id, a.name AS name, type(r) AS rel_type,\n       size([(a)-[r2]-() | r2]) AS degree;",
+    "rows": [
+      {
+        "akteur_id": "werner_sobek_p",
+        "name": "Werner Sobek",
+        "rel_type": "ASSOZIIERT_MIT_PROJEKT",
+        "degree": 10
+      },
+      {
+        "akteur_id": "Werner_Sobek",
+        "name": "Werner Sobek",
+        "rel_type": "ASSOZIIERT_MIT_PROJEKT",
+        "degree": 13
+      }
+    ],
+    "row_count": 2,
+    "error": null
+  },
+  {
+    "section_id": "S29",
+    "title": "Rotor / RotorDC fragmentation (Plan 1 P0-C)",
+    "expected": "At least 5 rows: Rotor, rotor_asbl_vzw, rotor_vzw, rotor_dc, rotordc.",
+    "cypher": "MATCH (a:Akteur)\nWHERE a.name =~ '(?i).*rotor.*' OR a.id =~ 'rotor.*'\nRETURN a.id AS akteur_id, a.name AS name,\n       size([(a)-[r]-() | r]) AS degree\nORDER BY degree DESC;",
+    "rows": [
+      {
+        "akteur_id": "Rotor",
+        "name": "Rotor",
+        "degree": 33
+      },
+      {
+        "akteur_id": "rotordc",
+        "name": "RotorDC",
+        "degree": 20
+      },
+      {
+        "akteur_id": "rotor_dc",
+        "name": "Rotor DC",
+        "degree": 8
+      },
+      {
+        "akteur_id": "rotor_asbl_vzw",
+        "name": "Rotor asbl-vzw",
+        "degree": 6
+      },
+      {
+        "akteur_id": "rotor_vzw",
+        "name": "Rotor vzw",
+        "degree": 1
+      }
+    ],
+    "row_count": 5,
+    "error": null
+  },
+  {
+    "section_id": "S30",
+    "title": "Circl merge direction baseline (P0-B in Plan 1; Phase 1c in Plan 2)",
+    "expected": "Both ids present. PARKED_DECISIONS recommends merge p_pavilion_*",
+    "cypher": "MATCH (p:Projekt) WHERE p.id IN ['p_pavilion_circl_amsterdam','p_circl_abn_amro']\nOPTIONAL MATCH (p)-[r]-(other)\nWITH p, count(DISTINCT r) AS degree, collect(DISTINCT type(r)) AS rel_types\nRETURN p.id AS projekt_id, p.name AS name, p.node_role AS node_role,\n       degree, rel_types;",
+    "rows": [
+      {
+        "projekt_id": "p_pavilion_circl_amsterdam",
+        "name": "Pavilion Circl Amsterdam",
+        "node_role": "cross_reference_stub",
+        "degree": 5,
+        "rel_types": [
+          "BELEGT_IN",
+          "ASSOZIIERT_MIT_PROJEKT"
+        ]
+      },
+      {
+        "projekt_id": "p_circl_abn_amro",
+        "name": "Circl",
+        "node_role": "cross_reference_stub",
+        "degree": 5,
+        "rel_types": [
+          "BELEGT_IN",
+          "ASSOZIIERT_MIT_PROJEKT",
+          "HAT_DOMINANT_MARKTMODELL"
+        ]
+      }
+    ],
+    "row_count": 2,
+    "error": null
+  },
+  {
+    "section_id": "S31",
+    "title": "Quelle nodes Plan v2 will reuse vs. create",
+    "expected": "Variable. Critical: identify existing Circl-related Quellen so the",
+    "cypher": "MATCH (q:Quelle)\nWHERE q.id CONTAINS 'circl' OR q.id CONTAINS 'pavilion'\n   OR q.id CONTAINS 'baars' OR q.id CONTAINS 'akteursliste'\n   OR q.id CONTAINS 'lysp8' OR q.id CONTAINS 'careno'\nRETURN q.id AS quelle_id, q.name AS name, q.url AS url, q.quelltyp AS quelltyp\nORDER BY q.id;",
+    "rows": [
+      {
+        "quelle_id": "q_actor_michel_baars_01",
+        "name": "New Horizon",
+        "url": "https://www.newhorizon.nl/en/",
+        "quelltyp": "external_link_from_actor_registry"
+      },
+      {
+        "quelle_id": "q_actor_michel_baars_02",
+        "name": "Circl Partner Context",
+        "url": "https://www.abnamro.com/en/news/urban-mining-as-a-business-case",
+        "quelltyp": "external_link_from_actor_registry"
+      },
+      {
+        "quelle_id": "q_actor_michel_baars_03",
+        "name": "ABN AMRO Urban Mining",
+        "url": "https://www.abnamro.com/en/news/urban-mining-as-a-business-case",
+        "quelltyp": "external_link_from_actor_registry"
+      },
+      {
+        "quelle_id": "q_akteursliste_master_md",
+        "name": "akteursliste_master.md",
+        "url": null,
+        "quelltyp": "actor_registry_markdown"
+      },
+      {
+        "quelle_id": "q_bestandverplanzung_pavilion_muenchen_md",
+        "name": "Bestandverplanzung_Pavil\u2026",
+        "url": null,
+        "quelltyp": "case_markdown"
+      },
+      {
+        "quelle_id": "q_christ_pavilion_volkenroda_md",
+        "name": "Christ_Pavilion_Volkenro\u2026",
+        "url": null,
+        "quelltyp": "case_markdown"
+      },
+      {
+        "quelle_id": "q_circular_pavilion_paris_md",
+        "name": "Circular_Pavilion_Paris.\u2026",
+        "url": null,
+        "quelltyp": "case_markdown"
+      },
+      {
+        "quelle_id": "q_peoples_pavilion_eindhoven_md",
+        "name": "Peoples_Pavilion_Eindhov\u2026",
+        "url": null,
+        "quelltyp": "case_markdown"
+      }
+    ],
+    "row_count": 8,
+    "error": null
+  },
+  {
+    "section_id": "S32",
+    "title": "Wiederverwendungskette existing prefix (k_* vs wk_*)",
+    "expected": "63 rows total. Confirm prefix is `k_` (not `wk_`). PLAN_v2 must",
+    "cypher": "MATCH (k:Wiederverwendungskette)\nRETURN substring(k.id, 0, 2) AS id_prefix, count(*) AS count\nORDER BY count DESC;",
+    "rows": [
+      {
+        "id_prefix": "wk",
+        "count": 44
+      },
+      {
+        "id_prefix": "k_",
+        "count": 19
+      }
+    ],
+    "row_count": 2,
+    "error": null
+  },
+  {
+    "section_id": "S33",
+    "title": "Rel type used to attach Bauteilgruppe to Wiederverwendungskette",
+    "expected": "TEIL_VON_KETTE dominant. PLAN_v2 uses this rel type.",
+    "cypher": "MATCH (bg:Bauteilgruppe)-[r]->(k:Wiederverwendungskette)\nRETURN type(r) AS rel_type, count(*) AS count\nORDER BY count DESC;",
+    "rows": [
+      {
+        "rel_type": "TEIL_VON_KETTE",
+        "count": 210
+      }
+    ],
+    "row_count": 1,
+    "error": null
+  },
+  {
+    "section_id": "S34",
+    "title": "Rel type used to attach Bauwerk to Wiederverwendungskette (if any)",
+    "expected": "Reveals whether the graph has a Bauwerk\u2192Kette rel. If not, the BG",
+    "cypher": "MATCH (bw:Bauwerk)-[r]-(k:Wiederverwendungskette)\nRETURN type(r) AS rel_type, count(*) AS count\nORDER BY count DESC;",
+    "rows": [
+      {
+        "rel_type": "AUS_BAUWERK",
+        "count": 14
+      },
+      {
+        "rel_type": "EINGEBAUT_IN",
+        "count": 14
+      }
+    ],
+    "row_count": 2,
+    "error": null
+  },
+  {
+    "section_id": "S35",
+    "title": "Already-linked actors that PARKED_DECISIONS notes as having aliases",
+    "expected": "All 5 present with non-empty aliases. PLAN_v2 must UNION new",
+    "cypher": "MATCH (a:Akteur) WHERE a.id IN [\n  'imd_raadgevende_ingenieurs','cleveland_steel_tubes','rotor_dc',\n  'duncan_baker_brown','land_daenemark'\n]\nRETURN a.id AS akteur_id, a.name AS name, a.aliases AS current_aliases;",
+    "rows": [
+      {
+        "akteur_id": "imd_raadgevende_ingenieurs",
+        "name": "IMd Raadgevende Ingenieurs",
+        "current_aliases": [
+          "IMd raadgevende ingenieurs"
+        ]
+      },
+      {
+        "akteur_id": "cleveland_steel_tubes",
+        "name": "Cleveland Steel & Tubes",
+        "current_aliases": [
+          "Cleveland Steel and Tubes"
+        ]
+      },
+      {
+        "akteur_id": "rotor_dc",
+        "name": "Rotor DC",
+        "current_aliases": [
+          "Rotor Deconstruction / RotorDC"
+        ]
+      },
+      {
+        "akteur_id": "duncan_baker_brown",
+        "name": "Duncan Baker-Brown",
+        "current_aliases": [
+          "Duncan Baker-Brown / BBM Sustainable Design"
+        ]
+      }
+    ],
+    "row_count": 4,
+    "error": null
+  },
+  {
+    "section_id": "S36",
+    "title": "Already-linked Projekt nodes that have aliases",
+    "expected": "Both with aliases. PLAN_v2 patch generator MUST read these and",
+    "cypher": "MATCH (p:Projekt) WHERE p.id IN [\n  'p_lysp8_basel','p_eth_circular_construction_student_reuse'\n]\nRETURN p.id AS projekt_id, p.name AS name, p.aliases AS current_aliases;",
+    "rows": [
+      {
+        "projekt_id": "p_lysp8_basel",
+        "name": "LYSP8 Basel",
+        "current_aliases": [
+          "LYSP8"
+        ]
+      },
+      {
+        "projekt_id": "p_eth_circular_construction_student_reuse",
+        "name": "ETH Circular Construction",
+        "current_aliases": [
+          "ETH Circular Construction student reuse project"
+        ]
+      }
+    ],
+    "row_count": 2,
+    "error": null
+  },
+  {
+    "section_id": "S37",
+    "title": "`mq_*` MatchingQualitaet hub (for HAT_MATCHINGQUALITAET writes)",
+    "expected": "9 rows including mq_spec_zweckaenderung. PLAN_v2 will add new edges",
+    "cypher": "MATCH (mq:MatchingQualitaet)\nRETURN mq.id AS matchingqualitaet_id, mq.name AS name,\n       size([(mq)<-[r]-() | r]) AS incoming_count\nORDER BY incoming_count DESC;",
+    "rows": [
+      {
+        "matchingqualitaet_id": "mq_spec_anpassung",
+        "name": "Spec: Anpassung",
+        "incoming_count": 75
+      },
+      {
+        "matchingqualitaet_id": "mq_temporal_storage",
+        "name": "Temporal: Zwischenlager",
+        "incoming_count": 35
+      },
+      {
+        "matchingqualitaet_id": "mq_geographic_local",
+        "name": "Geo: lokal (<50 km)",
+        "incoming_count": 26
+      },
+      {
+        "matchingqualitaet_id": "mq_spec_zweckaenderung",
+        "name": "Spec: Zweck\u00e4nderung",
+        "incoming_count": 23
+      },
+      {
+        "matchingqualitaet_id": "mq_geographic_regional",
+        "name": "Geo: regional",
+        "incoming_count": 6
+      },
+      {
+        "matchingqualitaet_id": "mq_temporal_planned",
+        "name": "Temporal: geplant",
+        "incoming_count": 4
+      },
+      {
+        "matchingqualitaet_id": "mq_spec_exact",
+        "name": "Spec: exakt",
+        "incoming_count": 4
+      },
+      {
+        "matchingqualitaet_id": "mq_temporal_easy",
+        "name": "Temporal: unproblematisch",
+        "incoming_count": 3
+      },
+      {
+        "matchingqualitaet_id": "mq_geographic_intl",
+        "name": "Geo: international",
+        "incoming_count": 3
+      }
+    ],
+    "row_count": 9,
+    "error": null
+  },
+  {
+    "section_id": "S38",
+    "title": "Sanity: existing rel-id naming pattern",
+    "expected": "0 rows after Phase R. If any non-zero count appears, Phase R hygiene",
+    "cypher": "MATCH ()-[r]->() WHERE r.id IS NOT NULL\nWITH r, startNode(r) AS s, endNode(r) AS e\nWHERE r.id <> 'r_' + s.id + '__' + type(r) + '__' + e.id\nRETURN type(r) AS rel_type, count(*) AS stale_rid_count\nORDER BY stale_rid_count DESC\nLIMIT 20;",
+    "rows": [],
+    "row_count": 0,
+    "error": null
+  },
+  {
+    "section_id": "S39",
+    "title": "Case-specific nodes without BELEGT_IN (regression test)",
+    "expected": "0 rows. After PLAN_v2 apply, this stays 0 (every new case-specific",
+    "cypher": "MATCH (n)\nWHERE any(l IN labels(n) WHERE l IN\n  ['Projekt','Bauteilgruppe','Bauwerk','Wiederverwendungskette','Stadt'])\n  AND NOT EXISTS { (n)-[:BELEGT_IN]->(:Quelle) }\nRETURN labels(n)[0] AS label, n.id, n.name LIMIT 20;",
+    "rows": [],
+    "row_count": 0,
+    "error": null
+  },
+  {
+    "section_id": "S40",
+    "title": "Final count freeze (compare against post-apply numbers in PLAN_v2)",
+    "expected": "~2298 / ~17035. PLAN_v2 projects ~2298 + 220 = ~2518 nodes after",
+    "cypher": "MATCH (n) WITH count(n) AS nodes_before\nMATCH ()-[r]->() WITH nodes_before, count(r) AS rels_before\nRETURN nodes_before, rels_before;",
+    "rows": [
+      {
+        "nodes_before": 2298,
+        "rels_before": 17035
+      }
+    ],
+    "row_count": 1,
+    "error": null
+  }
+]

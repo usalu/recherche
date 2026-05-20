@@ -1,0 +1,118 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_1a_deletes.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2296,
+    "relationships": 17032
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T01:26:54.828186+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_1a_deletes.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bizh",
+          "name": "BIZH (Berliner Institut für Zirkuläres Handwerk)"
+        }
+      },
+      "id": "bizh",
+      "line": 1,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "dare_gmbh",
+          "name": "DARE GmbH"
+        }
+      },
+      "id": "dare_gmbh",
+      "line": 2,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 1,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_obk_27",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_obk_27__BELEGT_IN__q_akteursliste_master_md",
+          "source_scope": "actor_registry_project_mention"
+        },
+        "rel_internal_id": 1153028157234747918,
+        "to": "q_akteursliste_master_md",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_obk_27",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_akteursliste_master_md",
+      "type": "BELEGT_IN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_obk_27",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_obk_27__BELEGT_IN__q_actor_cyril_pressacco_01",
+          "source_scope": "actor_registry_project_link"
+        },
+        "rel_internal_id": 1155279957048433166,
+        "to": "q_actor_cyril_pressacco_01",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_obk_27",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_actor_cyril_pressacco_01",
+      "type": "BELEGT_IN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_obk_27",
+        "properties": {
+          "datenqualitaet": "Belegt",
+          "id": "r_p_obk_27__BELEGT_IN__q_actor_thibaut_barrault_01",
+          "source_scope": "actor_registry_project_link"
+        },
+        "rel_internal_id": 1157531756862118414,
+        "to": "q_actor_thibaut_barrault_01",
+        "type": "BELEGT_IN"
+      },
+      "from": "p_obk_27",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "q_actor_thibaut_barrault_01",
+      "type": "BELEGT_IN"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 5,
+    "would_delete_node": 2,
+    "would_delete_rel": 3
+  }
+}

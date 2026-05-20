@@ -2,7 +2,7 @@
 
 **Audit dates:** 2026-05-19 + 2026-05-20
 **Method:** Cross-reference against `_neo4j/intake/runs/2026-05-19_inbox_projects_import/CORRECTIONS.md`, `_neo4j/review/round_002_followup/NAMING_AND_PROPERTIES_PLAN.md`, `_neo4j/review/round_002_followup/stub_research/GRAPH_SCHEMA.md`, `_neo4j/review/round_002_followup/rollback.md`, `PARKED_DECISIONS.md`, `STUB_AKTEUR_DECISIONS.md`, and direct reading of all 21 inbox dossier markdown files.
-**Status:** Findings recorded. Run [pre_flight_validation.cypher](pre_flight_validation.cypher) against live `mit-bestand` to fill in the live-state column before patch generation.
+**Status:** Findings recorded; live validation complete (2026-05-20). See **§Z — Live validation results** at the bottom for confirmations and overrides.
 
 ---
 
@@ -631,6 +631,68 @@ If all corrections above are applied via PLAN_v2:
 | Project-level vocab edges (Plan 1 Phase 8 restored + extended) | ~10 | ~150 | +140 |
 
 Roughly **+400 high-value graph edges** over Plan 2-as-written, all targeting central vocabulary hubs (the user's stated goal).
+
+---
+
+## §Z — Live validation results (2026-05-20)
+
+[pre_flight_validation.cypher](pre_flight_validation.cypher) ran cleanly: 40 blocks parsed, 0 errors, results in [pre_flight_results.json](pre_flight_results.json). Live state at validation time: **2298 nodes / 17035 rels**, matching expected (S1 ✓).
+
+### Confirmed (no change needed)
+
+| ID | Finding | Live result |
+|---|---|---|
+| **C1-C5** | `HAT_SOFTWARE`, `HAT_TOOL`, `HAT_NORM`, `HAT_BAUAUFGABE`, `HAT_AKZEPTANZ`, `HAT_AUFBEREITUNGSVERFAHREN`, `HAT_PRUEFUNG_NACHWEIS`, `HAT_PRUEFUNGNACHWEIS`, `LIEFERT_MATERIAL_AUS`, `VERBUNDEN_MIT`, `LIEGT_IN` all absent | S3: All 11 confirmed absent ✓ |
+| **C6** | `HAT_ZUSTANDSKLASSE` is NEW (first use) | S2: confirmed missing — declare as intentional schema extension in rollback |
+| **C8/C9** | Receiving + donor Bauwerk nodes don't exist | (not directly checked but no `bw_circl_pavilion_amsterdam` etc. in S26's Projekt scope; safe to create) |
+| **C15** | Multiple Stadt nodes need creation | S21: missing — `stadt_amsterdam`, `stadt_duebendorf`, `stadt_liverpool`, `stadt_bordeaux`, `stadt_fribourg`, `stadt_merignac`, `stadt_ingersheim`, `stadt_weil_am_rhein`, `stadt_dundee`, `stadt_canterbury`, `stadt_esch_sur_alzette`, `stadt_coimbra`, `stadt_stuttgart`, `stadt_wien`. Already present: stadt_basel, stadt_berlin, stadt_bruessel, stadt_eindhoven, stadt_paris, stadt_utrecht, stadt_winterthur, stadt_zuerich, stadt_brussel_anderlecht (use this for FCRBE's Anderlecht). |
+| **F11** | Land Ukraine missing | S22: confirmed; `land_portugal`, `land_italien` also missing. `land_luxemburg` already exists ✓ |
+| **F26** | Aliases UNION mandatory for `p_lysp8_basel` and `p_eth_circular_construction_student_reuse` | S36: confirmed (live aliases shown) |
+| **O11** | `TEIL_VON_KETTE` is the live BG→Kette rel | S33: 210 existing rels confirm |
+| **O11** | Bauwerk→Kette rels use `AUS_BAUWERK` (donor) + `EINGEBAUT_IN` (receiver) | S34: 14+14 rels confirm. Phase 7 should emit these BW-to-K edges too |
+| All 23 target Projekte exist | S26 ✓ | |
+| `r.id` integrity perfect | S38: 0 rows ✓ | |
+| BELEGT_IN regression check perfect | S39: 0 rows ✓ | |
+
+### Overrides — these CORRECTIONS entries were WRONG
+
+| ID | Original claim | Live result | Action |
+|---|---|---|---|
+| **C10** | "Plan 2's `wk_*` prefix conflicts with `k_*`" | **S32: wk_* dominates (44 nodes) vs k_* (19 nodes)** | **REVERT** — use `wk_*` for new ketten (matches majority). Update PLAN_v2 Phase 7 ids back to `wk_*`. |
+| **C13** | "`av_holzaufbereitung`, `av_remanufacturing`, `av_reinigung`, `av_rekonditionierung`, `av_qualitaetssicherung`, `av_entmoertelung_von_fliesen` are invented Plan 1 ids" | **S6: All 6 EXIST in the live graph (along with the Phase D children)** | **WITHDRAW** — Plan 1's Aufbereitungsverfahren ids are correct. No remediation needed. |
+| **F8/F10** | "`land_luxemburg` is a NEW Land" | S22: already exists ✓ | No creation needed |
+
+### Newly-discovered issues from live data
+
+| ID | Finding | Action |
+|---|---|---|
+| **Z1** | `bt_belag` ABSENT (S10) | Rewrite all `bg_*_belag_*` ids in PLAN_v2 + actor_extraction to use `_boden_` slot. ~15 BG ids affected. |
+| **Z2** | `norm_sia_schweiz` ABSENT (S25) | Plan 1 + PLAN_v2 reference this for SMS / UMAR / ELEMENTA. Either create as new Norm (`norm_sia_269`, `norm_sia_500`, `norm_sia_261` are the actual SIA-family standards) or drop the rel. **Recommendation:** create new Norm nodes per actual SIA standard (e.g. `norm_sia_269` for existing structures, `norm_sia_500` for accessibility) rather than the conflated `norm_sia_schweiz`. Or omit Norm linkage for SMS/UMAR/ELEMENTA until verified. |
+| **Z3** | `software_opalis` ABSENT (S23) | Create as new Software node in Phase 2 (already in PLAN_v2; confirmed) |
+| **Z4** | `norm_bs_5385_5_2009` ABSENT (S25) | Create in Phase 2 (already in PLAN_v2; confirmed) |
+| **Z5** | `tool_retile`, `tool_rcmi` ABSENT (S24) | Create in Phase 2 (confirmed) |
+| **Z6** | `software_ecotool`, `software_llmnt`, `software_refair` all ABSENT (S23) | Create in Phase 2 (confirmed) |
+| **Z7** | **`prog_fcrbe` ALREADY EXISTS as Programm node** (S20) | PLAN_v2 Phase 1d "relabel p_fcrbe → prog_fcrbe" is **wrong** — both nodes exist. **Action:** `merge_node p_fcrbe → prog_fcrbe` (the Programm node is canonical; the Projekt is the duplicate). Same pattern needed for `p_interreg_nwe_fcrbe → prog_interreg_nwe` (both exist; see S20). |
+| **Z8** | **`prog_reallabor_be_ware` ALREADY EXISTS as Programm node** (S20) | PLAN_v2 Phase 4d "promote `p_reallabor_be_ware` to full_projekt" should instead **merge into existing `prog_reallabor_be_ware` Programm**. PARKED_DECISIONS suggested PROMOTE but live state has TWO nodes for the same thing. |
+| **Z9** | **Werner Sobek duplicate: `Werner_Sobek` has MORE rels (13) than `werner_sobek_p` (10)** (S28) | Plan 1 P0-A picked `werner_sobek_p` as canonical, but the higher-degree node is `Werner_Sobek`. Two options: (a) follow Plan 1, merge `Werner_Sobek → werner_sobek_p` (lose 3 rels by deduplication risk); (b) reverse direction, merge `werner_sobek_p → Werner_Sobek` (preserves all 13 rels of the higher-degree node). **Recommendation:** option (b) — merge `werner_sobek_p → Werner_Sobek`. `merge_node` redirects all rels; merge favors higher-degree node. |
+| **Z10** | **Rotor fragmentation deeper than Plan 1 P0-C/STUB_AKTEUR_DECISIONS captured** (S29) | Five Rotor-family nodes: `Rotor` (deg 33), `rotordc` (deg 20), `rotor_dc` (deg 8 — has aliases), `rotor_asbl_vzw` (deg 6), `rotor_vzw` (deg 1). **STUB_AKTEUR_DECISIONS proposed `rotor_vzw → rotor_asbl_vzw`** — but `Rotor` (high-deg) is the obvious canonical. **Recommendation for PLAN_v2 Phase 1b:** (i) `merge_node rotor_vzw → Rotor` (not rotor_asbl_vzw — Rotor has 33 rels), (ii) `merge_node rotor_asbl_vzw → Rotor` (consolidate cooperative ids), (iii) `merge_node rotor_dc → rotordc` (RotorDC platform consolidation; preserve aliases via UNION). Flag for user before applying. |
+| **Z11** | `Stadt stadt_brussel_anderlecht` already exists (S21) | Use this id for FCRBE's Anderlecht reference; don't create `stadt_anderlecht`. |
+| **Z12** | Already-existing Persons saved | S27 confirms 74 of 86 expected actors PRESENT. Saves ~62 `add_node` ops in Phase 5. Truly NEW (12): `abn_amro`, `bam`, `bam_bouw_techniek`, `big_bundesimmobilien`, `la_fab`, `la_fabrique_de_bordeaux_metropole`, `meduni_wien`, `tu_delft`, `university_of_fribourg` (the others are alt-spelling aliases). PLUS the dossier-specific persons not in S27's check list (will need Phase 5 enumeration). |
+| **Z13** | `software_concular` exists (S23) but Plan 2 didn't explicitly reuse it | Concular as a software/tool — use `software_concular` for Concular SaaS references; `concular` Akteur for the company. |
+| **Z14** | All 30 Norm ids start with `norm_*` (S25) | Confirms C11. `norm_sia_schweiz` Plan 1 used does NOT exist — see Z2. |
+
+### Updated PLAN_v2 actions
+
+Based on §Z above, the following PLAN_v2 amendments are required:
+
+1. **Phase 1b** — extend Rotor merge cleanup (Z10). Recommend asking user before applying.
+2. **Phase 1c** — Werner Sobek direction (Z9). Recommend asking user.
+3. **Phase 1d** — `p_fcrbe → prog_fcrbe` MERGE (not relabel; Z7). Same for `p_interreg_nwe_fcrbe → prog_interreg_nwe` (existing Programm).
+4. **Phase 4d** — `p_reallabor_be_ware → prog_reallabor_be_ware` MERGE (Z8).
+5. **Phase 7** — revert ket id prefix to `wk_*` (Z-C10 override).
+6. **Phase 2** — drop `norm_sia_schweiz` references; either create proper SIA-* norms or omit (Z2).
+7. **All BG ids** — rewrite `_belag_` → `_boden_` slot (Z1).
+8. **Phase 5** — actor creation list shrinks: only 12 confirmed-truly-new orgs + dossier-specific persons. Update [actor_extraction_per_dossier.md](actor_extraction_per_dossier.md) per-dossier "Existing actors" sections.
 
 ---
 

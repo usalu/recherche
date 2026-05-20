@@ -1,0 +1,190 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_1c_circl_merge.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2297,
+    "relationships": 17035
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T01:27:39.703351+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_1c_circl_merge.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "adresse": "Gustav Mahlerplein, Amsterdam Zuidas",
+          "bau_jahr_von": 2016,
+          "bauwerkstatus": "rueckgebaut",
+          "bgf_m2": 2000,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "date_dismantled": "2025-03",
+          "fertigstellung_jahr": 2017,
+          "id": "p_circl_abn_amro",
+          "import_status": "registry_stub_only",
+          "name": "Circl",
+          "name_full": "Circl — ABN AMRO Circular Pavilion Amsterdam",
+          "needs_project_file": true,
+          "node_role": "full_projekt",
+          "project_category": "building_project_stub",
+          "source_scope": "case_markdown",
+          "year_opened_date": "2017-09-05"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_circl_abn_amro",
+          "import_status": "registry_stub_only",
+          "name": "Circl",
+          "name_full": "Circl / ABN AMRO urban mining context",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "building_project_stub",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_circl_abn_amro",
+      "line": 1,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "Circl pavilion",
+            "Circulair paviljoen Circl",
+            "Pavilion Circl Amsterdam",
+            "ABN AMRO Circular Pavilion"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_circl_abn_amro",
+          "import_status": "registry_stub_only",
+          "name": "Circl",
+          "name_full": "Circl / ABN AMRO urban mining context",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "building_project_stub",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_circl_abn_amro",
+          "import_status": "registry_stub_only",
+          "name": "Circl",
+          "name_full": "Circl / ABN AMRO urban mining context",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "building_project_stub",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "id": "p_circl_abn_amro",
+      "line": 2,
+      "op": "canonicalize_node",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "actor_registry_mentioned": true,
+          "aliases": [
+            "Pavilion Circl Amsterdam"
+          ],
+          "classified_at": "2026-05-15",
+          "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+          "id": "p_circl_abn_amro",
+          "import_status": "registry_stub_only",
+          "name": "Circl",
+          "name_full": "Circl / ABN AMRO urban mining context",
+          "needs_project_file": true,
+          "node_role": "cross_reference_stub",
+          "project_category": "building_project_stub",
+          "source_scope": "actor_registry_association"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Projekt"
+          ],
+          "properties": {
+            "actor_registry_mentioned": true,
+            "classified_at": "2026-05-15",
+            "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+            "id": "p_pavilion_circl_amsterdam",
+            "import_status": "registry_stub_only",
+            "name": "Pavilion Circl Amsterdam",
+            "needs_project_file": true,
+            "node_role": "cross_reference_stub",
+            "source_scope": "actor_registry_association"
+          }
+        },
+        "to": {
+          "labels": [
+            "Projekt"
+          ],
+          "properties": {
+            "actor_registry_mentioned": true,
+            "classified_at": "2026-05-15",
+            "classified_reason": "Actor-registry-derived stub; no case-study record. ASSOZIIERT_MIT_PROJEKT only.",
+            "id": "p_circl_abn_amro",
+            "import_status": "registry_stub_only",
+            "name": "Circl",
+            "name_full": "Circl / ABN AMRO urban mining context",
+            "needs_project_file": true,
+            "node_role": "cross_reference_stub",
+            "project_category": "building_project_stub",
+            "source_scope": "actor_registry_association"
+          }
+        }
+      },
+      "from": "p_pavilion_circl_amsterdam",
+      "label_union": [
+        "Projekt"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 1,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "p_circl_abn_amro"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 3,
+    "would_merge": 1,
+    "would_update": 2
+  }
+}

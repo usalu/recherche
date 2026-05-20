@@ -1,0 +1,123 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_1d2_programm_relabels.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2301,
+    "relationships": 17035
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T01:29:46.288130+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_1d2_programm_relabels.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "host_institution": "HTWG Konstanz",
+          "id": "prog_stuttgart_210",
+          "name": "Stuttgart 210",
+          "name_full": "Stuttgart 210 — weiterdenken, weiterbauen!",
+          "short_description": "Research programme + built youth-pavilion pilot demonstrating component reuse of Stuttgart 21 CLT concrete formwork.",
+          "source_scope": "case_markdown",
+          "status": "active",
+          "type": "teaching+research"
+        }
+      },
+      "before": null,
+      "id": "prog_stuttgart_210",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "error": "merge target 'prog_stuttgart_210' not found",
+      "from": "p_stuttgart_210",
+      "line": 2,
+      "op": "merge_node",
+      "status": "missing_node",
+      "to": "prog_stuttgart_210"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "end_year": 2028,
+          "eu_contribution_eur": 1695121.69,
+          "eu_funding_programme": "Research Fund for Coal and Steel (RFCS)",
+          "grant_agreement_reference": "101157419",
+          "id": "prog_rebridge",
+          "lead_organisation": "University of Stuttgart / Institute of Lightweight Structures and Conceptual Design",
+          "name": "ReBridge",
+          "name_full": "REBRIDGE — Reuse of Steel Components from Existing Bridge Structures",
+          "short_description": "The project develops scientific and technical foundations for safe reuse of steel components from decommissioned bridge structures.",
+          "source_scope": "case_markdown",
+          "start_year": 2025,
+          "status": "active",
+          "type": "research"
+        }
+      },
+      "before": null,
+      "id": "prog_rebridge",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "error": "merge target 'prog_rebridge' not found",
+      "from": "p_rebridge_structural_reuse_project",
+      "line": 4,
+      "op": "merge_node",
+      "status": "missing_node",
+      "to": "prog_rebridge"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "aliases": [
+            "RE_USE Höfe Wien",
+            "REUSE Yards"
+          ],
+          "host_institution": "ZHAW Institut Konstruktives Entwerfen (IKE)",
+          "id": "prog_re_use_hoefe",
+          "name": "RE-USE Höfe",
+          "name_full": "RE-USE Höfe — zirkuläre Lieferketten anhand der Fensterwiederverwendung",
+          "short_description": "Publication/project documenting RE-WIN and Windows for Ukraine experience and proposing reuse yards for circular window-reuse chains. NOTE: dossier explicitly says Vienna location is unverified — evidence is for Basel, Winterthur, Switzerland-Ukraine.",
+          "source_scope": "case_markdown",
+          "status": "published_2025",
+          "type": "research+publication"
+        }
+      },
+      "before": null,
+      "id": "prog_re_use_hoefe",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "error": "merge target 'prog_re_use_hoefe' not found",
+      "from": "p_re_use_hoefe",
+      "line": 6,
+      "op": "merge_node",
+      "status": "missing_node",
+      "to": "prog_re_use_hoefe"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "missing_node": 3,
+    "records": 6,
+    "would_create": 3
+  }
+}

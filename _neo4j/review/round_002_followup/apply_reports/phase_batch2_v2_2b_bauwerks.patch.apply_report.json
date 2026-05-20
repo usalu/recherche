@@ -1,0 +1,303 @@
+{
+  "confirmation_required": "APPLY phase_batch2_v2_2b_bauwerks.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2311,
+    "relationships": 17035
+  },
+  "counts_before": {
+    "nodes": 2298,
+    "relationships": 17035
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-05-20T01:36:55.347741+00:00",
+  "patch": "_neo4j\\review\\round_002_followup\\patches\\batch2\\phase_batch2_v2_2b_bauwerks.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "Schärenmoosstrasse 115/117, Zürich",
+          "bauwerkstatus": "geplant",
+          "id": "bw_schaerenmoosstrasse_zuerich",
+          "name": "Schärenmoosstr. ZH",
+          "name_full": "Schärenmoosstrasse 115/117 Zürich — Umnutzung Büro zu Wohnen (Stiftung PWG Wettbewerb 2022)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_schaerenmoosstrasse_zuerich",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "Überlandstrasse 129, 8600 Dübendorf, Switzerland",
+          "bau_jahr_von": 2017,
+          "bauwerkstatus": "realisiert",
+          "fertigstellung_jahr": 2018,
+          "id": "bw_umar_unit_duebendorf",
+          "name": "UMAR Unit Dübendorf",
+          "name_full": "NEST Unit UMAR — Urban Mining and Recycling, Empa Dübendorf",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_umar_unit_duebendorf",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "Emilie Louise Frey-Strasse, 4053 Basel",
+          "bauwerkstatus": "geplant",
+          "bgf_m2": 20000,
+          "id": "bw_elementa_walkeweg_basel",
+          "name": "ELEMENTA Walkeweg",
+          "name_full": "ELEMENTA Walkeweg Basel — Wohnbau mit Wiederverwendung von Bestandskomponenten",
+          "number_of_units": 150,
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_elementa_walkeweg_basel",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "Gustav Mahlerplein, Amsterdam Zuidas",
+          "bau_jahr_von": 2016,
+          "bauwerkstatus": "rueckgebaut",
+          "bgf_m2": 2000,
+          "date_dismantled": "2025-03",
+          "fertigstellung_jahr": 2017,
+          "id": "bw_circl_pavilion_amsterdam",
+          "name": "Circl Pavilion AMS",
+          "name_full": "Circl — ABN AMRO Circular Pavilion Amsterdam (2017–2025, dismantled)",
+          "source_scope": "case_markdown",
+          "year_opened_date": "2017-09-05"
+        }
+      },
+      "before": null,
+      "id": "bw_circl_pavilion_amsterdam",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "Weinlagerstrasse 33, 4056 Basel",
+          "bau_jahr_bis": 2025,
+          "bauwerkstatus": "realisiert",
+          "bgf_m2": 2250,
+          "entwurfsstart_jahr": 2020,
+          "geschosse_anzahl_max": 10,
+          "geschosse_anzahl_min": 6,
+          "id": "bw_lysp8_basel",
+          "name": "LysP8 Basel",
+          "name_full": "LysP8 — LysBüchelStrasse 8 Reuse Pilot Basel (Loeliger Strub / Zirkular / Stiftung Habitat)",
+          "number_of_units": 27,
+          "site_area_m2": 686,
+          "source_scope": "case_markdown",
+          "volume_m3": 7170
+        }
+      },
+      "before": null,
+      "id": "bw_lysp8_basel",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "Mariannengasse, Vienna",
+          "bauwerkstatus": "rueckgebaut",
+          "id": "bw_meduni_campus_mariannengasse",
+          "name": "MedUni Campus Wien",
+          "name_full": "MedUni Campus Mariannengasse Wien — BauKarussell pre-demolition reuse",
+          "reuse_masse_kg": 60400,
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_meduni_campus_mariannengasse",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "Baumwasenweg, 74379 Ingersheim",
+          "bauwerkstatus": "realisiert",
+          "bgf_m2": 50,
+          "fertigstellung_jahr": 2024,
+          "id": "bw_jugendtreff_ingersheim",
+          "name": "Jugendtreff Ingersheim",
+          "name_full": "Jugendtreff Ingersheim — CLT-Reuse Pilot (Stuttgart 210, 2024)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_jugendtreff_ingersheim",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "aliases": [
+            "bw_ubs_datacenter_altstetten",
+            "UBS Datacenter Altstetten"
+          ],
+          "bauwerkstatus": "rueckgebaut",
+          "id": "bw_ubs_altstetten",
+          "name": "UBS Datenz. Altstetten",
+          "name_full": "UBS Datenzentrum Altstetten, Zürich — donor for SMS Zürich hall components",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_ubs_altstetten",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "bauwerkstatus": "rueckgebaut",
+          "id": "bw_generale_de_banque_brussels",
+          "name": "Gén. de Banque BXL",
+          "name_full": "Générale de Banque / BNP Paribas Fortis HQ, Brussels — donor for UMAR's Jules Wabbes door handles (via Rotor)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_generale_de_banque_brussels",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "bauwerkstatus": "rueckgebaut",
+          "id": "bw_lysbueechel_garage_basel",
+          "name": "Lysbüchel Parkgarage",
+          "name_full": "Lysbüchel Parkgarage Basel — donor for ELEMENTA RC columns/slabs/rib-panels",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_lysbueechel_garage_basel",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "id": "bw_stuttgart21_hauptbahnhof",
+          "name": "Stuttgart 21 Bhf",
+          "name_full": "Stuttgart 21 Hauptbahnhof — donor for one-off CLT concrete formwork (78 elements secured for Stuttgart 210 reallabs)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_stuttgart21_hauptbahnhof",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "26 avenue de la Somme, 33700 Mérignac",
+          "bauwerkstatus": "realisiert",
+          "id": "bw_base_du_reemploi_merignac",
+          "name": "Base du Réemploi Mér.",
+          "name_full": "Base du Réemploi Mérignac — physical reuse depot (REFAIR / La Fab Bordeaux Métropole)",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_base_du_reemploi_merignac",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauwerk"
+        ],
+        "properties": {
+          "adresse": "1 Aspen Grove, Aspen Yard, Liverpool L8 0SR",
+          "bauwerkstatus": "realisiert",
+          "fertigstellung_jahr": 2015,
+          "id": "bw_granby_workshop_liverpool",
+          "name": "Granby Workshop LIV",
+          "name_full": "Granby Workshop CIC Liverpool — recycled terrazzo + architectural ceramics manufacturer",
+          "source_scope": "case_markdown"
+        }
+      },
+      "before": null,
+      "id": "bw_granby_workshop_liverpool",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 13,
+    "would_create": 13
+  }
+}
