@@ -1,0 +1,76 @@
+{
+  "phase": "r2",
+  "agent": "agent_2_schema_restoration",
+  "completed_at_utc": "2026-05-21T10:55:34.186599+00:00",
+  "verified": true,
+  "pre": {
+    "total_nodes": 3802,
+    "total_rels": 25023,
+    "count_Layer": 0,
+    "count_LCAModule": 0,
+    "count_RechtlicheBedingung": 0,
+    "count_Zertifizierungssystem": 0,
+    "count_Tool": 0,
+    "count_DeprecatedType": 0
+  },
+  "post": {
+    "total_nodes": 3836,
+    "total_rels": 25107,
+    "count_Layer": 6,
+    "count_LCAModule": 5,
+    "count_RechtlicheBedingung": 15,
+    "count_Zertifizierungssystem": 8,
+    "count_Tool": 8,
+    "count_DeprecatedType": 0
+  },
+  "gate_results": {
+    "layer_count": {
+      "c": 6,
+      "_pass": true
+    },
+    "teilt_layer_count": {
+      "c": 15,
+      "_pass": true
+    },
+    "lca_module_count": {
+      "c": 5,
+      "_pass": true
+    },
+    "berechnet_nach_modul": {
+      "c": 8,
+      "_pass": true
+    },
+    "rb_count": {
+      "c": 15,
+      "_pass": true
+    },
+    "hat_rb_count": {
+      "c": 12,
+      "_pass": true
+    },
+    "rb_gilt_in_land": {
+      "c": 5,
+      "_pass": true
+    },
+    "cert_count": {
+      "c": 8,
+      "_pass": true
+    },
+    "hat_zert_count": {
+      "c": 12,
+      "_pass": true
+    },
+    "tool_count": {
+      "c": 8,
+      "_pass": true
+    },
+    "tool_without_software": {
+      "violations": 0,
+      "_pass": true
+    },
+    "layer_no_edge_violations": {
+      "violations": 0,
+      "_pass": true
+    }
+  }
+}

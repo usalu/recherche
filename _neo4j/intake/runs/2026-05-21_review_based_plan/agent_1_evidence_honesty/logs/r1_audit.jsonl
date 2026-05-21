@@ -1,8 +1,17 @@
-{"statement_index": 0, "started": "2026-05-21T10:40:38.602465+00:00", "elapsed_ms": 267.1, "records": [], "counters": {"_contains_updates": true, "properties_set": 508}}
-{"statement_index": 1, "started": "2026-05-21T10:40:38.869542+00:00", "elapsed_ms": 201.0, "records": [], "counters": {"_contains_updates": true, "properties_set": 3338}}
-{"statement_index": 2, "started": "2026-05-21T10:40:39.070581+00:00", "elapsed_ms": 76.1, "records": [], "counters": {"_contains_updates": true, "properties_set": 8}}
-{"statement_index": 3, "started": "2026-05-21T10:40:39.146662+00:00", "elapsed_ms": 59.1, "records": [], "counters": {"_contains_updates": true, "properties_set": 44}}
-{"statement_index": 4, "started": "2026-05-21T10:40:39.205783+00:00", "elapsed_ms": 53.0, "records": [], "counters": {"_contains_updates": true, "properties_set": 538}}
-{"statement_index": 5, "started": "2026-05-21T10:40:39.258787+00:00", "elapsed_ms": 210.2, "records": [], "counters": {"_contains_updates": true, "properties_set": 5606}}
-{"statement_index": 6, "started": "2026-05-21T10:40:39.468988+00:00", "elapsed_ms": 147.3, "records": [], "counters": {"_contains_updates": true, "properties_set": 3066}}
-{"statement_index": 7, "error": "{code: Neo.ClientError.Statement.SyntaxError} {message: Failed to parse string literal. The query must contain an even number of non-escaped quotes. (line 7, column 7 (offset: 341))\r\n\"      ' | r1: inferred+belegt was self-contradictory\"\r\n       ^}", "statement_preview": "// R1.h \u2014 ReuseRule contradiction fix\n//        Pre-count: 60 edges (20 APPLIES_IN + 20 APPLIES_TO + ~20 REFERENZIERT_NORM)\nMATCH (rule:ReuseRule)-[r]->()\nWHERE r.evidence_origin = 'inferred' AND r.evidence_confidence = 'belegt'\nSET r.evidence_confidence = 'teilweise_belegt',\n    r.derivation_note ="}
+{"statement_index": 0, "started": "2026-05-21T10:43:56.736676+00:00", "elapsed_ms": 18.0, "records": [], "counters": {}}
+{"statement_index": 1, "started": "2026-05-21T10:43:56.754677+00:00", "elapsed_ms": 15.0, "records": [], "counters": {}}
+{"statement_index": 2, "started": "2026-05-21T10:43:56.769675+00:00", "elapsed_ms": 5.0, "records": [], "counters": {}}
+{"statement_index": 3, "started": "2026-05-21T10:43:56.774678+00:00", "elapsed_ms": 22.0, "records": [], "counters": {"_contains_updates": true, "properties_set": 44}}
+{"statement_index": 4, "started": "2026-05-21T10:43:56.796676+00:00", "elapsed_ms": 11.0, "records": [], "counters": {"_contains_updates": true, "properties_set": 538}}
+{"statement_index": 5, "started": "2026-05-21T10:43:56.807676+00:00", "elapsed_ms": 21.0, "records": [], "counters": {}}
+{"statement_index": 6, "started": "2026-05-21T10:43:56.829680+00:00", "elapsed_ms": 16.5, "records": [], "counters": {}}
+{"statement_index": 7, "started": "2026-05-21T10:43:56.847199+00:00", "elapsed_ms": 2.0, "records": [], "counters": {}}
+{"statement_index": 8, "started": "2026-05-21T10:43:56.849199+00:00", "elapsed_ms": 2.0, "records": [], "counters": {}}
+{"statement_index": 9, "started": "2026-05-21T10:43:56.853199+00:00", "elapsed_ms": 74.0, "records": [], "counters": {"_contains_updates": true, "properties_set": 116}}
+{"statement_index": 10, "started": "2026-05-21T10:43:56.927202+00:00", "elapsed_ms": 466.1, "records": [], "counters": {"_contains_updates": true, "properties_set": 36850}}
+{"statement_index": 11, "started": "2026-05-21T10:43:57.393328+00:00", "elapsed_ms": 30.0, "records": [], "counters": {}}
+{"statement_index": 12, "started": "2026-05-21T10:43:57.423331+00:00", "elapsed_ms": 27.5, "records": [], "counters": {}}
+{"statement_index": 13, "started": "2026-05-21T10:43:57.450845+00:00", "elapsed_ms": 26.0, "records": [], "counters": {}}
+{"statement_index": 14, "started": "2026-05-21T10:43:57.476846+00:00", "elapsed_ms": 33.0, "records": [], "counters": {}}
+{"statement_index": 15, "started": "2026-05-21T10:43:57.510845+00:00", "elapsed_ms": 31.0, "records": [], "counters": {}}
+{"statement_index": 16, "started": "2026-05-21T10:43:57.541869+00:00", "elapsed_ms": 21.5, "records": [{"rule": "audit_is_bookkeeping_count", "c": 1022, "expected": 703}], "counters": {}}

@@ -1,0 +1,94 @@
+{
+  "phase": "R4",
+  "agent": "agent_4_data_model",
+  "completed_at_utc": "2026-05-21T11:03:56.877358+00:00",
+  "verified": true,
+  "verification_query_results": {
+    "kennwert_total": {
+      "c": 258,
+      "_pass": true,
+      "_expect": ">= 12"
+    },
+    "reuse_share_count": {
+      "c": 39,
+      "_pass": true,
+      "_expect": ">= 4"
+    },
+    "co2_saving_count": {
+      "c": 46,
+      "_pass": true,
+      "_expect": ">= 5"
+    },
+    "cost_count": {
+      "c": 173,
+      "_pass": true,
+      "_expect": ">= 5"
+    },
+    "kennwert_orphan": {
+      "violations": 0,
+      "_pass": true,
+      "_expect": "0"
+    },
+    "reuse_share_count_mismatch": {
+      "violations": 0,
+      "_pass": true,
+      "_expect": "0"
+    },
+    "co2_count_mismatch": {
+      "violations": 0,
+      "_pass": true,
+      "_expect": "0"
+    },
+    "cost_count_mismatch": {
+      "violations": 0,
+      "_pass": true,
+      "_expect": "0"
+    },
+    "hat_kennwert_origin_enum": {
+      "violations": 0,
+      "_pass": true,
+      "_expect": "0"
+    },
+    "q3_tier1_reuse_projects": {
+      "c": 3,
+      "_pass": true,
+      "_expect": ">= 3"
+    },
+    "holbein_steel_34": {
+      "hits": 1,
+      "wert": 34.0,
+      "_pass": true,
+      "_expect": "hits >= 1 and wert = 34"
+    },
+    "jeugdkliniek_range": {
+      "hits": 1,
+      "wert_min": 30.0,
+      "wert_max": 40.0,
+      "_pass": true,
+      "_expect": "hits >= 1 and range 30..40"
+    },
+    "quality_tier_facts_untouched": {
+      "c": 101,
+      "_pass": true,
+      "_expect": "> 0"
+    }
+  },
+  "extra": {
+    "kennwert_by_category": [
+      {
+        "category": "co2_saving",
+        "c": 46
+      },
+      {
+        "category": "cost",
+        "c": 173
+      },
+      {
+        "category": "reuse_share",
+        "c": 39
+      }
+    ],
+    "normalized_rows": 258,
+    "parse_errors": 0
+  }
+}

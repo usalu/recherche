@@ -80,12 +80,31 @@ MATCH (rule:ReuseRule)-[r]->()
 WHERE r.evidence_origin = 'inferred' AND r.evidence_confidence = 'belegt'
 SET r.evidence_confidence = 'teilweise_belegt',
     r.derivation_note = coalesce(r.derivation_note, '') +
-      ' | r1: inferred+belegt was self-contradictory; downgraded to teilweise_belegt';
+      ' | r1: inferred+belegt was self-contradictory => downgraded to teilweise_belegt';
 
 // R1.h-node — Also fix the ReuseRule node-level evidence_confidence
 MATCH (rule:ReuseRule)
 WHERE rule.evidence_origin = 'inferred' AND rule.evidence_confidence = 'belegt'
 SET rule.evidence_confidence = 'teilweise_belegt';
+
+// R1.j — Reclassify all remaining 'derived' edges to new enum values
+//        'derived' is not in the new 5-value enum and must be mapped
+//        registry_stub basis → registry_derived
+MATCH ()-[r]->()
+WHERE r.evidence_origin = 'derived'
+  AND r.evidence_basis = 'registry_stub'
+SET r.evidence_origin = 'registry_derived',
+    r.derivation_note = coalesce(r.derivation_note, '') +
+      ' | r1: derived=>registry_derived (registry_stub basis)';
+
+// All other remaining 'derived' → topology_synthesized
+// (controlled_vocab, legacy_migration, cell_citation, propagated, etc.
+//  were programmatically generated, not manually curated)
+MATCH ()-[r]->()
+WHERE r.evidence_origin = 'derived'
+SET r.evidence_origin = 'topology_synthesized',
+    r.derivation_note = coalesce(r.derivation_note, '') +
+      ' | r1: derived=>topology_synthesized (catch-all: basis=' + coalesce(r.evidence_basis, 'null') + ')';
 
 // R1.i — D10 decision: downgrade registry_derived edges confidence to teilweise_belegt
 //        (registry data is name-level belegt, not project-participation belegt)

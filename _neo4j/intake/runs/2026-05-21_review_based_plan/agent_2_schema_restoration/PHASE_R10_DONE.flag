@@ -1,0 +1,42 @@
+{
+  "phase": "r10",
+  "agent": "agent_2_schema_restoration",
+  "completed_at_utc": "2026-05-21T10:56:16.097916+00:00",
+  "verified": true,
+  "pre": {
+    "total_nodes": 3836,
+    "total_rels": 25107,
+    "count_Layer": 6,
+    "count_LCAModule": 5,
+    "count_RechtlicheBedingung": 15,
+    "count_Zertifizierungssystem": 8,
+    "count_Tool": 8,
+    "count_DeprecatedType": 0
+  },
+  "post": {
+    "total_nodes": 3849,
+    "total_rels": 25107,
+    "count_Layer": 6,
+    "count_LCAModule": 5,
+    "count_RechtlicheBedingung": 15,
+    "count_Zertifizierungssystem": 8,
+    "count_Tool": 8,
+    "count_DeprecatedType": 13
+  },
+  "gate_results": {
+    "deprecated_type_count": {
+      "c": 13,
+      "_pass": true
+    },
+    "distinct_kinds": [
+      {
+        "kind": "label",
+        "c": 3
+      },
+      {
+        "kind": "rel_type",
+        "c": 10
+      }
+    ]
+  }
+}
