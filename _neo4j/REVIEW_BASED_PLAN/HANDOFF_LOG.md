@@ -54,11 +54,12 @@
 
 | When | Who | What | Branch / PR | Status | Notes |
 |---|---|---|---|---|---|
-| 2026-05-21 13:35 +02:00 | orchestrator | Stage 4 audit artefacts authored | `orch/r5-and-integrate` | STAGED | `stage_4_integration/migrations/stage_4_audit_queries.cypher` + `logs/stage_4_audit_runner.py` ready. Runner refuses to start until R3, R9, R8 flags exist. See [STAGE_4_PLAN.md](STAGE_4_PLAN.md). |
-| _<pending>_ | agent_3 | R3 HAS_BAUWERK + RELEVANT_FOR (unblocked) | `agent3/r3-r9-structure` | UNBLOCKED | Run `logs/agent_3_runner.py r3`; PHASE_R7_DONE.flag now present. |
-| _<pending>_ | agent_3 | R9 ASSOZIIERT_MIT_PROJEKT → STUB_PROJECT_LINK | `agent3/r3-r9-structure` | PENDING R3 | Run `logs/agent_3_runner.py r9` after R3 verified. |
-| _<pending>_ | agent_1 | R8 :DataIssue seed (depends: Stages 1–3 done) | `agent1/r1-r8-evidence` | PENDING R3+R9 | Run `logs/agent_1_runner.py r8` after R9 verified. Expect DataIssue count by kind: q1_topology_synthesis=254, pollutant_inference=799, registry_unverified_actor_stub=200, era_inference=8, dossier_section8_missing=N. |
-| _<pending>_ | orchestrator | Stage 4 integration audit | `orch/r5-and-integrate` | PENDING R8 | Run `stage_4_integration/logs/stage_4_audit_runner.py`. Produces `_neo4j/FINAL_REVIEW_PLAN_AUDIT.md` and `STAGE_4_AUDIT_DONE.flag`. |
+| 2026-05-21 13:35 +02:00 | orchestrator | Stage 4 audit artefacts authored | `orch/r5-and-integrate` | STAGED | `stage_4_integration/migrations/stage_4_audit_queries.cypher` + `logs/stage_4_audit_runner.py` ready. |
+| 2026-05-21 13:28 +02:00 | agent_3 | R3 HAS_BAUWERK + RELEVANT_FOR | `agent3/r3-r9-structure` | PASS | HAS_BAUWERK=184 (donor=101, receiver=83), RELEVANT_FOR=103. Holbein=2 rules, Ferme du Rail=0 (FR uncovered ✓). 9 acceptance gates PASS. 14 projects flagged as `residual_project_no_building_path`. Operator fixed stale `>=200` gate inline. |
+| 2026-05-21 ~13:29 +02:00 | agent_3 | R9 ASSOZIIERT_MIT_PROJEKT → STUB_PROJECT_LINK | `agent3/r3-r9-structure` | PASS | 200 edges renamed. ASSOZIIERT_MIT_PROJEKT=0, STUB_PROJECT_LINK=200. |
+| 2026-05-21 13:30 +02:00 | agent_1 | R8 :DataIssue seed | `agent1/r1-r8-evidence` | PASS | 1,454 :DataIssue nodes; kinds: pollutant_inference=792, q1_topology_synthesis=254, registry_unverified_actor_stub=200, curated_no_excerpt=110, dossier_uses_retired_type=59, dossier_section8_missing=16, controlled_vocab_too_sparse=15, era_inference=8. Severity: high=364, medium=1067, low=23. Operator fixed semicolon-in-string statement-splitter bug inline. |
+| 2026-05-21 13:30 +02:00 | orchestrator | Stage 4 integration audit | `orch/r5-and-integrate` | PASS WITH RESIDUALS | 51 queries, 0 errors. Final report at `_neo4j/FINAL_REVIEW_PLAN_AUDIT.md`. Q1 source_curated=0 (the honest signal), Q5 RELEVANT_FOR=103 (way above min). 9 residuals tracked as FU-1 (revised) through FU-9. **Tier-1 did NOT drop from 11** — gate was BELEGT_IN-based, not HAT_BAUTEILGRUPPE-based; needs FU-1 v2. |
+| 2026-05-21 14:30 +02:00 | orchestrator | **FU-10 Quelle remediation STAGED** | `orch/quelle-remediation` | STAGED | Plan: `_neo4j/QUELLE_REMEDIATION_PLAN.md`. Migrations Q1–Q4 + runner ready under `_neo4j/intake/runs/2026-05-21_quelle_remediation/`. Rolls back R7.d text_content mistake. User-facing guide: `_neo4j/QUELLE_QUERY_GUIDE.md`. CLI: `_scripts/find_sources.py`. Run: `python _neo4j/intake/runs/2026-05-21_quelle_remediation/logs/quelle_remediation_runner.py all`. |
 
 ---
 
