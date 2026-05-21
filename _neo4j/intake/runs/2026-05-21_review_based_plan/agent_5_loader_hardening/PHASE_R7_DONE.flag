@@ -1,0 +1,33 @@
+{
+  "phase": "R7",
+  "agent": "agent_5_loader_hardening",
+  "composite_flag": true,
+  "issued_by": "orchestrator",
+  "completed_at_utc": "2026-05-21T11:25:00+00:00",
+  "verified": true,
+  "constituent_flags": {
+    "PHASE_R7AB_DONE.flag": {
+      "covers": "R7.a (dual-naming merge, 16 pairs) + R7.b (orphan dossier resolution)",
+      "completed_at_utc": "2026-05-21T11:10:18.031236+00:00",
+      "verified": true
+    },
+    "PHASE_R7D_DONE.flag": {
+      "covers": "R7.d (Quelle.text_content population + dossier-schema drift validator)",
+      "completed_at_utc": "2026-05-21T11:10:47.987580+00:00",
+      "verified": true,
+      "post_state": {
+        "case_markdown_with_text_content": 95,
+        "drift_issues_created": 59
+      }
+    },
+    "R7.c": {
+      "status": "deferred",
+      "reason": "Largely absorbed by Agent 4 R4 (258 :Kennwert nodes created vs ≥12 expected, breakdown reuse_share=39, co2_saving=46, cost=173). Remaining Section-8 gaps will be flagged by Agent 1 R8 seed pass under kind='dossier_section8_missing' and resolved in a future ingestion cycle.",
+      "next_action": "Agent 1 R8 seed creates :DataIssue per :Projekt that has case_markdown anchor but no :Kennwert. Track in future R7.c.v2 if backlog grows."
+    }
+  },
+  "unblocks": [
+    "agent_3_structural_completion (R3 may now proceed; runner accepts this flag OR PHASE_R7_AB_DONE.flag OR PHASE_R7AB_DONE.flag)"
+  ],
+  "notes": "This composite flag is issued by the orchestrator to resolve the PHASE_R7_AB_DONE.flag (underscore) vs PHASE_R7AB_DONE.flag (no underscore) naming mismatch between Agent 3's brief and Agent 5's runner output. Both constituent flags are present and verified. R7.c is explicitly deferred (see above)."
+}
