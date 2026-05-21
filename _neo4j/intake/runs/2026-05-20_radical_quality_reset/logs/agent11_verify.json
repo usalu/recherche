@@ -1,0 +1,604 @@
+{
+  "acceptance": [
+    {
+      "name": "3.1 BUILT_IN_ERA from Bauwerk created",
+      "op": ">=",
+      "want": 8,
+      "got": 8,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.1 BUILT_IN_ERA from Materialdepot (no year prop)",
+      "op": "==",
+      "want": 0,
+      "got": 0,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.1 every Bauwerk has either era edge or era_unknown=true",
+      "op": "==",
+      "want": 0,
+      "got": 0,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.1 every Materialdepot has either era edge or era_unknown=true",
+      "op": "==",
+      "want": 0,
+      "got": 0,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.1 Bauwerk era_unknown == total - built_from_bauwerk",
+      "op": "==",
+      "want": 178,
+      "got": 178,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.1 Materialdepot era_unknown == total - built_from_depot",
+      "op": "==",
+      "want": 23,
+      "got": 23,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.2 zero remaining HAT_SCHADSTOFF edges",
+      "op": "==",
+      "want": 0,
+      "got": 0,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.2 HAS_RISK_POLLUTANT total in ~800 magnitude",
+      "op": "between",
+      "want": [
+        600,
+        1100
+      ],
+      "got": 803,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.2 documented edges promoted from HAT_SCHADSTOFF",
+      "op": ">=",
+      "want": 11,
+      "got": 11,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.2 era_and_material rule fired",
+      "op": ">=",
+      "want": 0,
+      "got": 4,
+      "passed": true,
+      "note": "Only 8 Bauwerke carry baujahr -> few donor-era matches expected"
+    },
+    {
+      "name": "3.2 material_only fallback fired",
+      "op": ">=",
+      "want": 600,
+      "got": 788,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.2 REQUIRES_VERIFICATION_FOR in ~250 magnitude",
+      "op": "between",
+      "want": [
+        200,
+        500
+      ],
+      "got": 347,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 exactly 20 ReuseRule nodes",
+      "op": "==",
+      "want": 20,
+      "got": 20,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 APPLIES_IN edges (one per rule)",
+      "op": "==",
+      "want": 20,
+      "got": 20,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 APPLIES_TO edges (one per rule)",
+      "op": "==",
+      "want": 20,
+      "got": 20,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 REFERENZIERT_NORM in 60..120 magnitude",
+      "op": "between",
+      "want": [
+        60,
+        120
+      ],
+      "got": 93,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 no ReuseRule missing APPLIES_IN",
+      "op": "==",
+      "want": 0,
+      "got": 0,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 no ReuseRule missing APPLIES_TO",
+      "op": "==",
+      "want": 0,
+      "got": 0,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 no ReuseRule missing REFERENZIERT_NORM",
+      "op": "==",
+      "want": 0,
+      "got": 0,
+      "passed": true,
+      "note": ""
+    },
+    {
+      "name": "3.3 ReuseRule median degree >= 5 (Rule B threshold ~6)",
+      "op": ">=",
+      "want": 5,
+      "got": 7,
+      "passed": true,
+      "note": ""
+    }
+  ],
+  "counts": {
+    "built_in_era_total": 8,
+    "built_from_bauwerk": 8,
+    "built_from_materialdepot": 0,
+    "bauwerk_era_unknown": 178,
+    "materialdepot_era_unknown": 23,
+    "bauwerk_total": 186,
+    "materialdepot_total": 23,
+    "hat_schadstoff_remaining": 0,
+    "has_risk_pollutant_total": 803,
+    "has_risk_pollutant_documented": 11,
+    "has_risk_pollutant_era_and_material": 4,
+    "has_risk_pollutant_material_only": 788,
+    "requires_verification_for_total": 347,
+    "reuse_rule_total": 20,
+    "applies_in_total": 20,
+    "applies_to_total": 20,
+    "referenziert_norm_total": 93,
+    "referenziert_norm_distinct_norms": 75,
+    "new_norm_nodes_reuse_rule_seed": 69,
+    "norm_total_after": 103,
+    "reuse_rule_min_deg": 5,
+    "reuse_rule_median_deg": 7,
+    "reuse_rule_mean_deg": 6.65
+  },
+  "rule_degrees": [
+    {
+      "rule": "rr_be_naturstein",
+      "deg": 10
+    },
+    {
+      "rule": "rr_be_beton",
+      "deg": 8
+    },
+    {
+      "rule": "rr_de_ziegel",
+      "deg": 8
+    },
+    {
+      "rule": "rr_de_lehm",
+      "deg": 8
+    },
+    {
+      "rule": "rr_gb_stahl",
+      "deg": 7
+    },
+    {
+      "rule": "rr_nl_beton",
+      "deg": 7
+    },
+    {
+      "rule": "rr_de_beton",
+      "deg": 7
+    },
+    {
+      "rule": "rr_de_holz",
+      "deg": 7
+    },
+    {
+      "rule": "rr_nl_holz",
+      "deg": 7
+    },
+    {
+      "rule": "rr_gb_holz",
+      "deg": 7
+    },
+    {
+      "rule": "rr_be_stahl",
+      "deg": 6
+    },
+    {
+      "rule": "rr_de_stahl",
+      "deg": 6
+    },
+    {
+      "rule": "rr_nl_stahl",
+      "deg": 6
+    },
+    {
+      "rule": "rr_ch_stahl",
+      "deg": 6
+    },
+    {
+      "rule": "rr_fi_beton_hollow_core_slabs",
+      "deg": 6
+    },
+    {
+      "rule": "rr_no_beton_hollow_core_slabs",
+      "deg": 6
+    },
+    {
+      "rule": "rr_be_holz",
+      "deg": 6
+    },
+    {
+      "rule": "rr_ch_beton",
+      "deg": 5
+    },
+    {
+      "rule": "rr_ch_holz",
+      "deg": 5
+    },
+    {
+      "rule": "rr_ch_naturstein",
+      "deg": 5
+    }
+  ],
+  "sample_era_edges": [
+    {
+      "bauwerk": "bw_ka13_existing_building",
+      "era": "era_nachkrieg_1945_1970",
+      "year": 1950
+    },
+    {
+      "bauwerk": "bw_lycee_block_3000",
+      "era": "era_1970_1990",
+      "year": 1973
+    },
+    {
+      "bauwerk": "bw_lycee_block_6000",
+      "era": "era_1990_2000",
+      "year": 1997
+    },
+    {
+      "bauwerk": "bw_multi_brouckere_tower",
+      "era": "era_nachkrieg_1945_1970",
+      "year": 1969
+    },
+    {
+      "bauwerk": "bw_rws_districtskantoor_terneuzen",
+      "era": "era_1990_2000",
+      "year": 2000
+    },
+    {
+      "bauwerk": "bw_suutarila_community_centre_donor",
+      "era": "era_1970_1990",
+      "year": 1981
+    },
+    {
+      "bauwerk": "bw_villa_welpeloo_wohnhaus_und_kunstlager",
+      "era": "era_post_2000",
+      "year": 2009
+    },
+    {
+      "bauwerk": "bw_werkhof_moeoeslistrasse",
+      "era": "era_1970_1990",
+      "year": 1978
+    }
+  ],
+  "sample_risk_pollutant_edges": [
+    {
+      "bg": "bg_dismantled_glas_technik_medunicampus_fluorescent",
+      "schadstoff": "s_schwermetalle",
+      "basis": "documented",
+      "origin": "derived",
+      "source": "batch2_v2_followup_2026-05-20"
+    },
+    {
+      "bg": "bg_retained_mehrere_mehrere_europa_residence_palace_parts",
+      "schadstoff": "s_asbest",
+      "basis": "documented",
+      "origin": "derived",
+      "source": "mig_4_1"
+    },
+    {
+      "bg": "bg_reuse_glas_keramik_boden_careno_historic_tiles",
+      "schadstoff": "s_bleifarbe",
+      "basis": "documented",
+      "origin": "derived",
+      "source": "batch2_v2_followup_2026-05-20"
+    },
+    {
+      "bg": "bg_reuse_mineralisch_stuetze_elementa_baufeld_c",
+      "schadstoff": "s_pak",
+      "basis": "documented",
+      "origin": "derived",
+      "source": "batch2_v2_followup_2026-05-20"
+    },
+    {
+      "bg": "bg_reuse_mineralisch_stuetze_elementa_baufeld_c",
+      "schadstoff": "s_asbest",
+      "basis": "documented",
+      "origin": "derived",
+      "source": "batch2_v2_followup_2026-05-20"
+    },
+    {
+      "bg": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+      "schadstoff": "s_pak",
+      "basis": "documented",
+      "origin": "derived",
+      "source": "batch2_v2_followup_2026-05-20"
+    },
+    {
+      "bg": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+      "schadstoff": "s_asbest",
+      "basis": "documented",
+      "origin": "derived",
+      "source": "batch2_v2_followup_2026-05-20"
+    },
+    {
+      "bg": "bg_reuse_daemmstoff_mehrere_lycee_gypsum_acoustic_panels",
+      "schadstoff": "s_kmf",
+      "basis": "era_and_material",
+      "origin": "inferred",
+      "source": "q_schadstoff_reuse_knowledge_graph_research_md"
+    },
+    {
+      "bg": "bg_reuse_daemmstoff_mehrere_lycee_gypsum_acoustic_panels",
+      "schadstoff": "s_asbest",
+      "basis": "era_and_material",
+      "origin": "inferred",
+      "source": "q_schadstoff_reuse_knowledge_graph_research_md"
+    },
+    {
+      "bg": "bg_reuse_mehrere_mehrere_moeoeslistrasse_sanitaer_kueche",
+      "schadstoff": "s_pcb",
+      "basis": "era_and_material",
+      "origin": "inferred",
+      "source": "q_schadstoff_reuse_knowledge_graph_research_md"
+    }
+  ],
+  "sample_requires_verification_edges": [
+    {
+      "projekt": "p_55_great_suffolk_street_london",
+      "schadstoff": "s_bleifarbe",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_55_great_suffolk_street_london",
+      "schadstoff": "s_schwermetalle",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_association_house_groeditz",
+      "schadstoff": "s_pcb",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_association_house_plauen",
+      "schadstoff": "s_pcb",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_awm_muenster_circular_office",
+      "schadstoff": "s_bleifarbe",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_awm_muenster_circular_office",
+      "schadstoff": "s_formaldehyd",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_awm_muenster_circular_office",
+      "schadstoff": "s_holzschutzmittel",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_awm_muenster_circular_office",
+      "schadstoff": "s_pak",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_awm_muenster_circular_office",
+      "schadstoff": "s_pcb",
+      "basis": "material_only"
+    },
+    {
+      "projekt": "p_awm_muenster_circular_office",
+      "schadstoff": "s_schwermetalle",
+      "basis": "material_only"
+    }
+  ],
+  "sample_reuse_rules": [
+    {
+      "evidence_basis": "research_file_row",
+      "processing_methods": [
+        "Dismantle by unbolting",
+        "Cut out damaged ends",
+        "Shotblast",
+        "Decoat",
+        "Redrill",
+        "Recoat",
+        "Recertify"
+      ],
+      "pollutant_risks": [
+        "Lead/chromate paint",
+        "PAH coatings",
+        "Asbestos fireproofing",
+        "PCB sealants",
+        "Cadmium/galvanic coatings"
+      ],
+      "priority": "P1_Critical",
+      "legal_conditions": [
+        "Building Regulations Part A",
+        "CDM 2015",
+        "waste duty-of-care",
+        "CE/UKCA status for placed-on-market reclaimed members"
+      ],
+      "source_url": "https://standards.iteh.ai/catalog/standards/cen/31a1835a-d97d-4bf7-8319-62d76609fe39/cen-ts-1090-201-2024",
+      "evidence_source_id": "q_circular_construction_reuse_graph_gaps_md",
+      "required_tests": [
+        "Provenance",
+        "visual inspection",
+        "section geometry",
+        "tensile/yield/elongation",
+        "Charpy where relevant",
+        "weldability/CEV",
+        "NDT of welds",
+        "corrosion loss",
+        "fire-protection evidence"
+      ],
+      "material": "Stahl",
+      "key_norms": [
+        "PD CEN/TS 1090-201",
+        "EN 1090-2",
+        "Eurocode 3",
+        "SCI protocol",
+        "UKCA/CE interface"
+      ],
+      "name": "Vereinigtes Königreich × Stahl reuse rule",
+      "evidence_origin": "inferred",
+      "country_name": "Vereinigtes Königreich",
+      "rank": 1,
+      "source_scope": "research_file_row",
+      "evidence_confidence": "belegt",
+      "material_id": "mat_stahl",
+      "project_cluster": "Steel-dominant structural reuse",
+      "id": "rr_gb_stahl",
+      "country_iso": "GB",
+      "suggested_graph_action": "Create `ReusableStructuralSteelMember` template with edges to CEN_TS_1090_201, SCI_Protocol, TestProtocol, PollutantScreening, BoltedSpliceConnection, FireResistanceRequirement, CorrosionProtectionRequirement."
+    },
+    {
+      "evidence_basis": "research_file_row",
+      "processing_methods": [
+        "Selective deconstruction",
+        "Traceable batch labelling",
+        "Blasting/decoating",
+        "Re-fabrication"
+      ],
+      "pollutant_risks": [
+        "Coatings with lead/chromate/PAH",
+        "Asbestos fireproofing",
+        "PCB sealants"
+      ],
+      "priority": "P1_Critical",
+      "legal_conditions": [
+        "Regional waste/product boundary",
+        "Tracimat traceability",
+        "CPR/CE/DoP/DPP",
+        "Liability split between salvager, engineer, contractor"
+      ],
+      "source_url": "https://www.fir-recycling.com/wp-content/uploads/2023/02/FPRGErkenning_Tracimatversie_Engels.pdf",
+      "evidence_source_id": "q_circular_construction_reuse_graph_gaps_md",
+      "required_tests": [
+        "Same steel test package as UK",
+        "Batch grouping by provenance and execution class"
+      ],
+      "material": "Stahl",
+      "key_norms": [
+        "CEN/TS 1090-201",
+        "EN 1090-2",
+        "Eurocode 3",
+        "NBN national annexes"
+      ],
+      "name": "Belgien × Stahl reuse rule",
+      "evidence_origin": "inferred",
+      "country_name": "Belgien",
+      "rank": 2,
+      "source_scope": "research_file_row",
+      "evidence_confidence": "belegt",
+      "material_id": "mat_stahl",
+      "project_cluster": "High-count Belgian steel reuse",
+      "id": "rr_be_stahl",
+      "country_iso": "BE",
+      "suggested_graph_action": "Add Belgium-specific TraceabilityProcedure = Tracimat and require ProvenanceEvidence before assigning steel strength class."
+    },
+    {
+      "evidence_basis": "research_file_row",
+      "processing_methods": [
+        "Careful deconstruction",
+        "Coating removal",
+        "Trimming",
+        "New bolted connections",
+        "DIBt/project documentation"
+      ],
+      "pollutant_risks": [
+        "Lead/chromate coatings",
+        "PAH",
+        "Asbestos",
+        "PCB",
+        "Old fireproofing"
+      ],
+      "priority": "P1_Critical",
+      "legal_conditions": [
+        "CE-marked product status",
+        "Non-harmonised Ü/ZiE/vBG route",
+        "Project-specific approval"
+      ],
+      "source_url": "https://www.dibt.de/en/service/faqs/the-german-regulatory-system-for-construction-products-and-construction-techniques",
+      "evidence_source_id": "q_circular_construction_reuse_graph_gaps_md",
+      "required_tests": [
+        "Mechanical tests",
+        "Chemical tests",
+        "Weldability tests",
+        "Geometry",
+        "Corrosion",
+        "Existing weld NDT",
+        "Coating/fire proofing records"
+      ],
+      "material": "Stahl",
+      "key_norms": [
+        "CEN/TS 1090-201",
+        "DIN EN 1090-2",
+        "DIN EN 1993",
+        "MVV TB/DIBt pathway"
+      ],
+      "name": "Deutschland × Stahl reuse rule",
+      "evidence_origin": "inferred",
+      "country_name": "Deutschland",
+      "rank": 3,
+      "source_scope": "research_file_row",
+      "evidence_confidence": "belegt",
+      "material_id": "mat_stahl",
+      "project_cluster": "High-count German structural steel",
+      "id": "rr_de_stahl",
+      "country_iso": "DE",
+      "suggested_graph_action": "Add GermanyApprovalPath decision node: CE_hEN, Ü_Zeichen, abZ/aBG, ZiE/vBG, ProjectSpecificEngineerAssessment."
+    }
+  ],
+  "all_passed": true
+}

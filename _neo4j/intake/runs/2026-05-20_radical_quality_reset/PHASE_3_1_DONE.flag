@@ -1,0 +1,40 @@
+{
+  "phase": "3.1",
+  "agent": 11,
+  "completed_at": "2026-05-20T22:35:01+00:00",
+  "migration": "migrations/mig_3_1_built_in_era.cypher",
+  "runner": "logs/agent11_runner.py",
+  "before": {
+    "bauwerk_total": 186,
+    "materialdepot_total": 23,
+    "bauwerk_era_total": 6,
+    "built_in_era_total": 0,
+    "built_in_era_from_bauwerk": 0,
+    "built_in_era_from_materialdepot": 0,
+    "bauwerk_era_unknown": 0,
+    "materialdepot_era_unknown": 0
+  },
+  "after": {
+    "bauwerk_total": 186,
+    "materialdepot_total": 23,
+    "bauwerk_era_total": 6,
+    "built_in_era_total": 8,
+    "built_in_era_from_bauwerk": 8,
+    "built_in_era_from_materialdepot": 0,
+    "bauwerk_era_unknown": 178,
+    "materialdepot_era_unknown": 23
+  },
+  "acceptance": {
+    "built_in_era_from_bauwerk_minimum": {"want": ">=8", "got": 8, "passed": true},
+    "bauwerk_neither_era_nor_unknown": {"want": 0, "got": 0, "passed": true},
+    "materialdepot_neither_era_nor_unknown": {"want": 0, "got": 0, "passed": true},
+    "bauwerk_era_unknown_equals_remainder": {"want": 178, "got": 178, "passed": true},
+    "materialdepot_era_unknown_equals_remainder": {"want": 23, "got": 23, "passed": true}
+  },
+  "notes": [
+    "All 8 :Bauwerk nodes that carry a baujahr property received the correct :BUILT_IN_ERA edge.",
+    "No :Materialdepot carries a baujahr today; the entire 23-node depot population is honestly flagged era_unknown=true.",
+    "178 of 186 :Bauwerk are honestly flagged era_unknown=true (the dossier-loaded per-row era backfill envisaged by plan section 3.1.c was NOT emitted by the Phase 4b loaders, so it cannot be applied here without expanding the Phase 4b scope explicitly excluded from this agent's brief).",
+    "Migration is idempotent: a second run produced zero deltas (see logs/agent11_progress.log)."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "phase": "3.3",
+  "agent": 11,
+  "completed_at": "2026-05-20T22:35:01+00:00",
+  "migration": "migrations/mig_3_3_reuse_rules.cypher",
+  "runner": "logs/agent11_runner.py",
+  "source_research_file": "_neo4j/intake/inbox/research/circular_construction_reuse_graph_gaps.md",
+  "before": {
+    "reuse_rule_total": 0,
+    "applies_in_total": 0,
+    "applies_to_total": 0,
+    "referenziert_norm_from_rule": 0,
+    "norm_total": 34,
+    "land_with_iso": 0
+  },
+  "after": {
+    "reuse_rule_total": 20,
+    "applies_in_total": 20,
+    "applies_to_total": 20,
+    "referenziert_norm_from_rule": 93,
+    "referenziert_norm_distinct_norms": 75,
+    "norm_total": 103,
+    "new_norm_nodes_reuse_rule_seed": 69,
+    "land_with_iso": 7,
+    "reuse_rule_min_deg": 5,
+    "reuse_rule_median_deg": 7,
+    "reuse_rule_mean_deg": 6.65
+  },
+  "acceptance": {
+    "exactly_20_reuse_rules": {"want": 20, "got": 20, "passed": true},
+    "applies_in_per_rule": {"want": 20, "got": 20, "passed": true},
+    "applies_to_per_rule": {"want": 20, "got": 20, "passed": true},
+    "referenziert_norm_total": {"want": "60..120", "got": 93, "passed": true},
+    "no_rule_missing_applies_in": {"want": 0, "got": 0, "passed": true},
+    "no_rule_missing_applies_to": {"want": 0, "got": 0, "passed": true},
+    "no_rule_missing_referenziert_norm": {"want": 0, "got": 0, "passed": true},
+    "rule_b_median_deg_threshold": {"want": ">=5", "got": 7, "passed": true}
+  },
+  "notes": [
+    "All 20 :ReuseRule nodes carry evidence_origin='inferred', evidence_basis='research_file_row', evidence_source_id='q_circular_construction_reuse_graph_gaps_md', evidence_confidence='belegt'.",
+    "country_iso codes (GB, BE, DE, NL, CH, FI, NO) were set on the 7 relevant existing :Land nodes; other Land nodes were not modified.",
+    "The two 'Beton / hollow-core slabs' rows (Finland row 10, Norway row 11) anchor to :Material{id:'mat_beton'} with the full text retained in ReuseRule.material.",
+    "69 new :Norm nodes were created (evidence_origin='inferred', source_scope='reuse_rule_seed') for norms named in the rules but not yet present; 6 existing :Norm nodes were re-used via id match.",
+    "Median ReuseRule degree is 7 and minimum is 5, so the new label passes the plan's Rule B (≥5 connections per node).",
+    "Migration is idempotent: a second run produced zero deltas (see logs/agent11_progress.log)."
+  ]
+}

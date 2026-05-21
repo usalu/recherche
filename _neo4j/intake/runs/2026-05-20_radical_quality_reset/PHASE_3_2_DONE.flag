@@ -1,0 +1,39 @@
+{
+  "phase": "3.2",
+  "agent": 11,
+  "completed_at": "2026-05-20T22:35:01+00:00",
+  "migration": "migrations/mig_3_2_pollutant_inference.cypher",
+  "runner": "logs/agent11_runner.py",
+  "before": {
+    "hat_schadstoff_total": 11,
+    "has_risk_pollutant_total": 0,
+    "requires_verification_for_total": 0,
+    "schadstoff_typisch_bei_material": 18,
+    "schadstoff_typisch_bei_era": 15,
+    "bauteilgruppe_nutzt_material": 472
+  },
+  "after": {
+    "hat_schadstoff_total": 0,
+    "has_risk_pollutant_total": 803,
+    "has_risk_pollutant_documented": 11,
+    "has_risk_pollutant_era_and_material": 4,
+    "has_risk_pollutant_material_only": 788,
+    "requires_verification_for_total": 347,
+    "requires_verification_for_documented": 5,
+    "requires_verification_for_era_and_material": 4,
+    "requires_verification_for_material_only": 338
+  },
+  "acceptance": {
+    "hat_schadstoff_remaining": {"want": 0, "got": 0, "passed": true},
+    "has_risk_pollutant_in_800_magnitude": {"want": "600..1100", "got": 803, "passed": true},
+    "documented_edges_promoted": {"want": ">=11", "got": 11, "passed": true},
+    "requires_verification_for_in_250_magnitude": {"want": "200..500", "got": 347, "passed": true}
+  },
+  "notes": [
+    "Plan section 3.2.b uses (bg)-[:AUS_BAUWERK]->(b:Bauwerk); Phase 4.2 has since renamed that type to :FROM_DONOR. The migration uses :FROM_DONOR (the donor building's era determines the era during which the components were originally installed).",
+    "era_and_material rule fired 4 times: it requires (i) the donor :Bauwerk to carry a :BUILT_IN_ERA edge (only 8 do) AND (ii) the bauteilgruppe to share a material with a :Schadstoff that links to that era. With only 8 dated donors, 4 era+material matches is the realistic ceiling pending broader Bauwerk dossier coverage.",
+    "11 documented HAS_RISK_POLLUTANT correspond to the 11 pre-existing HAT_SCHADSTOFF edges (4 Projekt-to-Schadstoff + 7 Bauteilgruppe-to-Schadstoff). The original edges were deleted to avoid duplicate semantics.",
+    "347 :REQUIRES_VERIFICATION_FOR project-level edges roll up across 803 BG-level rows. The plan's earlier ~250 estimate assumed ~85 projects × ~3 pollutants; the actual coverage spans 105 projects × broader material mix, so 347 is consistent.",
+    "Migration is idempotent: a second run produced zero deltas (see logs/agent11_progress.log)."
+  ]
+}

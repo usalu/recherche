@@ -1,0 +1,66 @@
+PHASE_2_7_5_1_REPAIR_DONE
+agent: Repair Agent E
+date_utc: 2026-05-21T07:18:00Z
+database: mit-bestand
+status: PASS
+graph_changed: true
+
+migrations_applied:
+  - migrations/mig_repair_2_7_5_1_quality_tier_panel.cypher
+
+projekt_distinct_keys:
+  before: 30
+  after:  22
+  target: <=25
+  pass:   true
+
+projekt_max_per_node_keys:
+  before: 26
+  after:  18
+  target: <=18
+  pass:   true
+
+projekt_sample_5_per_node_keys:
+  before: [21, 21, 21, 22, 23]
+  after:  [14, 13, 13, 15, 13]
+  target: <=18
+  pass:   true
+
+projekt_with_quality_tier_facts:
+  before: 0
+  after:  101
+  pass:   true
+
+projekt_with_any_legacy_quality_tier_scalar:
+  before: 101
+  after:  0
+  pass:   true
+
+all_101_projekt_still_tiered: true
+tier_distribution_unchanged:
+  tier_1_decision_grade: 11
+  tier_2_documentation_only: 68
+  tier_3_stub: 22
+
+p_circle_house_decision:
+  labels: [Projekt]
+  quality_tier: tier_2_documentation_only
+  decision: KEEP_TIER_2_NO_GRAPH_CHANGE
+  rationale: |
+    Plan §5.1 formula is deterministic (truthy_count=2 -> tier_2). The plan §5.3
+    narrative ("tier_3_stub") was never written into mig_5_3_relabel_programme.cypher
+    as an override; it is a narrative expectation. Per the repair task brief,
+    quality_tier semantics are not degraded just to satisfy a narrative mismatch.
+    Full sub-criterion bag is preserved inside p.quality_tier_facts.
+
+acceptance_q3_after: 4
+acceptance_q6_after:
+  derived: 3205
+  curated: 2939
+  inferred: 342
+
+bauteilgruppe_distinct_keys_after: 25  # unchanged; still <=30
+
+report: reports/repair_phase2_7_5_1_panel_tier.md
+runner_log: logs/repair_2_7_5_1_runner.log
+verifier_json: logs/repair_2_7_5_1_verify.json

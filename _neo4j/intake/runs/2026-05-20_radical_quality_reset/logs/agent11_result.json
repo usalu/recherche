@@ -1,0 +1,277 @@
+{
+  "agent": 11,
+  "phases": [
+    "3.1",
+    "3.2",
+    "3.3"
+  ],
+  "started_at": "2026-05-20T22:34:59+00:00",
+  "before": {
+    "total_nodes": 3820,
+    "total_rels": 25740,
+    "bauwerk_total": 186,
+    "materialdepot_total": 23,
+    "bauwerk_era_total": 6,
+    "built_in_era_total": 8,
+    "built_in_era_from_bauwerk": 8,
+    "built_in_era_from_materialdepot": 0,
+    "bauwerk_era_unknown": 178,
+    "materialdepot_era_unknown": 23,
+    "hat_schadstoff_total": 0,
+    "has_risk_pollutant_total": 803,
+    "requires_verification_for_total": 347,
+    "reuse_rule_total": 20,
+    "applies_in_total": 20,
+    "applies_to_total": 20,
+    "referenziert_norm_from_rule": 93,
+    "norm_total": 103,
+    "land_with_iso": 7,
+    "has_risk_pollutant_by_basis": {
+      "documented": 11,
+      "material_only": 788,
+      "era_and_material": 4
+    },
+    "requires_verification_for_by_basis": {
+      "material_only": 338,
+      "documented": 5,
+      "era_and_material": 4
+    }
+  },
+  "after_3_1": {
+    "total_nodes": 3820,
+    "total_rels": 25740,
+    "bauwerk_total": 186,
+    "materialdepot_total": 23,
+    "bauwerk_era_total": 6,
+    "built_in_era_total": 8,
+    "built_in_era_from_bauwerk": 8,
+    "built_in_era_from_materialdepot": 0,
+    "bauwerk_era_unknown": 178,
+    "materialdepot_era_unknown": 23,
+    "hat_schadstoff_total": 0,
+    "has_risk_pollutant_total": 803,
+    "requires_verification_for_total": 347,
+    "reuse_rule_total": 20,
+    "applies_in_total": 20,
+    "applies_to_total": 20,
+    "referenziert_norm_from_rule": 93,
+    "norm_total": 103,
+    "land_with_iso": 7,
+    "has_risk_pollutant_by_basis": {
+      "documented": 11,
+      "material_only": 788,
+      "era_and_material": 4
+    },
+    "requires_verification_for_by_basis": {
+      "material_only": 338,
+      "documented": 5,
+      "era_and_material": 4
+    }
+  },
+  "after_3_2": {
+    "total_nodes": 3820,
+    "total_rels": 25740,
+    "bauwerk_total": 186,
+    "materialdepot_total": 23,
+    "bauwerk_era_total": 6,
+    "built_in_era_total": 8,
+    "built_in_era_from_bauwerk": 8,
+    "built_in_era_from_materialdepot": 0,
+    "bauwerk_era_unknown": 178,
+    "materialdepot_era_unknown": 23,
+    "hat_schadstoff_total": 0,
+    "has_risk_pollutant_total": 803,
+    "requires_verification_for_total": 347,
+    "reuse_rule_total": 20,
+    "applies_in_total": 20,
+    "applies_to_total": 20,
+    "referenziert_norm_from_rule": 93,
+    "norm_total": 103,
+    "land_with_iso": 7,
+    "has_risk_pollutant_by_basis": {
+      "documented": 11,
+      "material_only": 788,
+      "era_and_material": 4
+    },
+    "requires_verification_for_by_basis": {
+      "material_only": 338,
+      "documented": 5,
+      "era_and_material": 4
+    }
+  },
+  "after_3_3": {
+    "total_nodes": 3820,
+    "total_rels": 25740,
+    "bauwerk_total": 186,
+    "materialdepot_total": 23,
+    "bauwerk_era_total": 6,
+    "built_in_era_total": 8,
+    "built_in_era_from_bauwerk": 8,
+    "built_in_era_from_materialdepot": 0,
+    "bauwerk_era_unknown": 178,
+    "materialdepot_era_unknown": 23,
+    "hat_schadstoff_total": 0,
+    "has_risk_pollutant_total": 803,
+    "requires_verification_for_total": 347,
+    "reuse_rule_total": 20,
+    "applies_in_total": 20,
+    "applies_to_total": 20,
+    "referenziert_norm_from_rule": 93,
+    "norm_total": 103,
+    "land_with_iso": 7,
+    "has_risk_pollutant_by_basis": {
+      "documented": 11,
+      "material_only": 788,
+      "era_and_material": 4
+    },
+    "requires_verification_for_by_basis": {
+      "material_only": 338,
+      "documented": 5,
+      "era_and_material": 4
+    }
+  },
+  "audits": {
+    "3.1": [
+      {
+        "file": "mig_3_1_built_in_era.cypher",
+        "stmt": 5,
+        "audit": {
+          "check": "built_in_era_bauwerk_total",
+          "c": 8
+        }
+      },
+      {
+        "file": "mig_3_1_built_in_era.cypher",
+        "stmt": 7,
+        "audit": {
+          "check": "bauwerk_era_unknown_total",
+          "c": 178
+        }
+      },
+      {
+        "file": "mig_3_1_built_in_era.cypher",
+        "stmt": 8,
+        "audit": {
+          "check": "materialdepot_era_unknown_total",
+          "c": 23
+        }
+      }
+    ],
+    "3.2": [
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 6,
+        "audit": {
+          "check": "has_risk_pollutant_total",
+          "c": 803
+        }
+      },
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 7,
+        "audit": {
+          "check": "has_risk_pollutant_by_basis",
+          "basis": "documented",
+          "c": 11
+        }
+      },
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 7,
+        "audit": {
+          "check": "has_risk_pollutant_by_basis",
+          "basis": "era_and_material",
+          "c": 4
+        }
+      },
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 7,
+        "audit": {
+          "check": "has_risk_pollutant_by_basis",
+          "basis": "material_only",
+          "c": 788
+        }
+      },
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 8,
+        "audit": {
+          "check": "requires_verification_for_total",
+          "c": 347
+        }
+      },
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 9,
+        "audit": {
+          "check": "requires_verification_for_by_basis",
+          "basis": "documented",
+          "c": 5
+        }
+      },
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 9,
+        "audit": {
+          "check": "requires_verification_for_by_basis",
+          "basis": "era_and_material",
+          "c": 4
+        }
+      },
+      {
+        "file": "mig_3_2_pollutant_inference.cypher",
+        "stmt": 9,
+        "audit": {
+          "check": "requires_verification_for_by_basis",
+          "basis": "material_only",
+          "c": 338
+        }
+      }
+    ],
+    "3.3": [
+      {
+        "file": "mig_3_3_reuse_rules.cypher",
+        "stmt": 7,
+        "audit": {
+          "check": "reuse_rule_total",
+          "c": 20
+        }
+      },
+      {
+        "file": "mig_3_3_reuse_rules.cypher",
+        "stmt": 8,
+        "audit": {
+          "check": "applies_in_total",
+          "c": 20
+        }
+      },
+      {
+        "file": "mig_3_3_reuse_rules.cypher",
+        "stmt": 9,
+        "audit": {
+          "check": "applies_to_total",
+          "c": 20
+        }
+      },
+      {
+        "file": "mig_3_3_reuse_rules.cypher",
+        "stmt": 10,
+        "audit": {
+          "check": "referenziert_norm_total",
+          "c": 93
+        }
+      },
+      {
+        "file": "mig_3_3_reuse_rules.cypher",
+        "stmt": 11,
+        "audit": {
+          "check": "reuse_rule_avg_degree",
+          "deg": 6.65
+        }
+      }
+    ]
+  },
+  "completed_at": "2026-05-20T22:35:01+00:00",
+  "status": "ok"
+}

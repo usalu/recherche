@@ -1,0 +1,68 @@
+{
+  "verifier": "final_verifier_10_of_12",
+  "scope": ["phase_4_1", "phase_4_2", "phase_4c"],
+  "run_dir": "_neo4j/intake/runs/2026-05-20_radical_quality_reset/",
+  "database": "mit-bestand",
+  "timestamp": "2026-05-21T07:05:00Z",
+  "overall_verdict": "FAIL",
+  "checks_total": 16,
+  "checks_pass": 15,
+  "checks_fail": 1,
+  "phase_4_1": {
+    "verdict": "FAIL",
+    "checks": {
+      "1_phase_4_done_flag": {"expected": "present", "actual": "present", "pass": true},
+      "2_claim_edges_missing_evidence_origin": {"expected": 0, "actual_rows": 0, "pass": true},
+      "3_evidence_origin_enum_violations": {"expected": 0, "actual": 0, "pass": true},
+      "4_evidence_confidence_enum_violations": {"expected": 0, "actual": 0, "pass": true, "note": "earlier-wave 15x 'mittel' is now cleared"},
+      "5_curated_without_excerpt": {"expected": 0, "actual": 2108, "pass": false,
+        "breakdown": [
+          {"rel_type": "HAT_AKTEURROLLE", "basis": "controlled_vocab", "source_id": "q_akteursliste_master_md", "count": 548},
+          {"rel_type": "BELEGT_IN", "basis": "cell_citation", "source_id": "q_akteursliste_master_md", "count": 404},
+          {"rel_type": "BELEGT_IN", "basis": "cell_citation", "source_id": "actor_s_refs (q_actor_*_NN)", "count": 318},
+          {"rel_type": "VERBUNDEN_MIT_AKTEUR", "basis": "controlled_vocab", "source_id": "q_akteursliste_master_md", "count": 289},
+          {"rel_type": "LIEGT_IN_LAND", "basis": "controlled_vocab", "source_id": "q_akteursliste_master_md", "count": 201},
+          {"rel_type": "HAT_AKTEURTYP", "basis": "controlled_vocab", "source_id": "q_akteursliste_master_md", "count": 193},
+          {"rel_type": "ASSOZIIERT_MIT_PROJEKT", "basis": "registry_stub", "source_id": "q_akteursliste_master_md", "count": 142},
+          {"rel_type": "BUILT_IN_ERA", "basis": "year_inferred", "source_id": "bauwerk.baujahr_property", "count": 8},
+          {"rel_type": "REQUIRES_VERIFICATION_FOR", "basis": "project_rollup", "source_id": "q_schadstoff_reuse_knowledge_graph_research_md", "count": 5}
+        ],
+        "curated_total": 4911,
+        "curated_with_excerpt": 2803,
+        "curated_without_excerpt": 2108,
+        "root_cause": "Phase 4b loader runs (2026-05-21 00:00-00:08) inserted curated registry edges without filling evidence_excerpt; PHASE_4_DONE.flag was written earlier (2026-05-20 23:41) and recorded viol_curated_no_excerpt:0 at that time."
+      },
+      "6_bookkeeping_not_derived": {"expected": 0, "actual": 0, "pass": true},
+      "7_excerpt_contains_propagated_from": {"expected": 0, "actual": 0, "pass": true}
+    }
+  },
+  "phase_4_2": {
+    "verdict": "PASS",
+    "checks": {
+      "8_phase_4_2_done_flag": {"expected": "present", "actual": "present", "pass": true},
+      "9_aus_bauwerk_count": {"expected": 0, "actual": 0, "pass": true},
+      "9_eingebaut_in_count": {"expected": 0, "actual": 0, "pass": true},
+      "10_from_donor_count": {"expected_min": 280, "target": 286, "actual": 286, "pass": true},
+      "10_into_receiver_count": {"expected_min": 340, "target": 349, "actual": 349, "pass": true}
+    }
+  },
+  "phase_4c": {
+    "verdict": "PASS",
+    "checks": {
+      "11_phase_4c_done_flag": {"expected": "present", "actual": "present", "pass": true},
+      "12_quelle_external_sources_count": {"expected": 0, "actual": 0, "pass": true},
+      "13_rels_with_illegal_keys": {"expected": 0, "actual": 0, "pass": true,
+        "keys_checked": ["url", "http", "source_file", "external_sources"]},
+      "14_projekt_belegt_actor_registry": {"expected": 0, "actual": 0, "pass": true},
+      "15_akteur_belegt_actor_registry": {"expected_min": 300, "actual": 365, "pass": true},
+      "16_zitiert_quelle_total": {"expected_min": 1500, "target": 1747, "actual": 1747, "pass": true}
+    }
+  },
+  "remediation_recommended": [
+    "Re-parse q_akteursliste_master_md to backfill evidence_excerpt on the 1920 registry-sourced curated edges.",
+    "Re-parse actor S-ref dossiers (q_actor_*_NN) to backfill evidence_excerpt on the 318 BELEGT_IN edges.",
+    "Re-classify BUILT_IN_ERA basis='year_inferred' edges to evidence_origin='inferred' (or fill evidence_excerpt with the year value).",
+    "Backfill evidence_excerpt on the 5 REQUIRES_VERIFICATION_FOR project_rollup edges from q_schadstoff_reuse_knowledge_graph_research_md.",
+    "Add CI hard-constraint: MATCH ()-[r]->() WHERE r.evidence_origin='curated' AND r.evidence_excerpt IS NULL RETURN count(r) = 0."
+  ]
+}

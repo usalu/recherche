@@ -1,0 +1,184 @@
+{
+  "phase_5_checks": {
+    "file_artifacts": {
+      "mig_5_1_quality_tier_exists": true,
+      "mig_5_3_relabel_programme_exists": true,
+      "phase_5_done_flag_exists": true,
+      "final_plan_completion_audit_exists": true
+    },
+    "all_projekt_tiered": {
+      "projekt_total": 101,
+      "projekt_with_quality_tier": 101,
+      "passed": true
+    },
+    "tier_distribution": {
+      "rows": [
+        {
+          "tier": "tier_1_decision_grade",
+          "n": 11
+        },
+        {
+          "tier": "tier_2_documentation_only",
+          "n": 68
+        },
+        {
+          "tier": "tier_3_stub",
+          "n": 22
+        }
+      ],
+      "tier_1": 11,
+      "tier_2": 68,
+      "tier_3": 22,
+      "passed": true
+    },
+    "relabelled_to_programm": {
+      "want": 4,
+      "got": 4,
+      "passed": true
+    },
+    "relabel_detail_rows": [
+      {
+        "id": "p_architecture_of_reuse_brussels",
+        "labels": [
+          "Programm"
+        ],
+        "quality_tier": "tier_3_stub",
+        "migration_origin": "5_3_relabel_to_programm",
+        "original_label": "Projekt"
+      },
+      {
+        "id": "p_circle_house",
+        "labels": [
+          "Projekt"
+        ],
+        "quality_tier": "tier_2_documentation_only",
+        "migration_origin": null,
+        "original_label": null
+      },
+      {
+        "id": "p_reuse_in_construction_zhaw",
+        "labels": [
+          "Programm"
+        ],
+        "quality_tier": "tier_3_stub",
+        "migration_origin": "5_3_relabel_to_programm",
+        "original_label": "Projekt"
+      },
+      {
+        "id": "p_reuse_logistics",
+        "labels": [
+          "Programm"
+        ],
+        "quality_tier": "tier_3_stub",
+        "migration_origin": "5_3_relabel_to_programm",
+        "original_label": "Projekt"
+      },
+      {
+        "id": "p_vandkunsten_component_reuse",
+        "labels": [
+          "Programm"
+        ],
+        "quality_tier": "tier_3_stub",
+        "migration_origin": "5_3_relabel_to_programm",
+        "original_label": "Projekt"
+      }
+    ],
+    "p_circle_house": {
+      "row": {
+        "labels": [
+          "Projekt"
+        ],
+        "quality_tier": "tier_2_documentation_only"
+      },
+      "passed": false
+    }
+  },
+  "acceptance_queries": {
+    "Q1_reuse_story": {
+      "canonical_rows": 0,
+      "topology_only_rows": 266,
+      "bg_with_donor_and_receiver": 254,
+      "hat_bauteilgruppe_curated": 0,
+      "expected_empty": false,
+      "verdict": "FAIL_DOCUMENTED",
+      "note": "Canonical query returns 0 because HAT_BAUTEILGRUPPE.evidence_origin was never promoted to 'curated' by the Phase 4b loader; topology (254 BG carry both FROM_DONOR and INTO_RECEIVER) is intact. Documented in FINAL_PLAN_COMPLETION_AUDIT.md §5.1; outside Phase 5 scope."
+    },
+    "Q2_risk_story": {
+      "rows": 799,
+      "threshold": 700,
+      "verdict": "PASS"
+    },
+    "Q3_comparison": {
+      "rows": 4,
+      "expected_empty": false,
+      "verdict": "PASS",
+      "note": "Plan allows 0; live value is documented. Tier-1 projects carrying reuse_share_facts unwound."
+    },
+    "Q4_actor_network": {
+      "rows": 1,
+      "expected_empty": false,
+      "verdict": "PASS",
+      "note": "Plan permits 0 when only 11 tier-1 projects exist. Documented in FINAL_PLAN_COMPLETION_AUDIT.md §4 as DEGRADED.",
+      "relationship_types_present": [
+        {
+          "types": [
+            "BETEILIGT_AN"
+          ]
+        }
+      ]
+    },
+    "Q5_decision_support": {
+      "rows": 20,
+      "expected": 20,
+      "verdict": "PASS"
+    },
+    "Q6_trust_check": {
+      "per_project_rows": [
+        {
+          "origin": "curated",
+          "c": 153
+        },
+        {
+          "origin": "derived",
+          "c": 55
+        },
+        {
+          "origin": "inferred",
+          "c": 7
+        }
+      ],
+      "aggregate_rows": [
+        {
+          "origin": "derived",
+          "c": 3205
+        },
+        {
+          "origin": "curated",
+          "c": 2939
+        },
+        {
+          "origin": "inferred",
+          "c": 342
+        }
+      ],
+      "verdict": "PASS"
+    },
+    "Q7_source_drilldown": {
+      "rows": 958,
+      "threshold": 500,
+      "verdict": "PASS"
+    }
+  },
+  "overall": {
+    "phase_5_passed": false,
+    "acceptance_verdicts": {
+      "Q1": "FAIL_DOCUMENTED",
+      "Q2": "PASS",
+      "Q3": "PASS",
+      "Q4": "PASS",
+      "Q5": "PASS",
+      "Q6": "PASS",
+      "Q7": "PASS"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "phase": "1.2_repair",
+  "status": "done",
+  "database": "mit-bestand",
+  "completed_at": "2026-05-21T07:18:00+00:00",
+  "migration": "migrations/mig_repair_1_2_anchor_regression.cypher",
+  "audit": "logs/repair_phase1_2_anchor_regression_audit.jsonl",
+  "before": {
+    "duplicate_quelle_controlled_vocab_ids": 1,
+    "belegt_in_to_ontology_anchor": 202,
+    "ontology_anchor_count": 2,
+    "anchored_by_to_ontology_anchor": 702,
+    "anchored_by_to_q_akteursliste_master_md": 259,
+    "belegt_in_to_duplicate_quelle_q_akteursliste_master_md": 202,
+    "duplicate_quelle_zitiert_quelle_out": 277,
+    "ontology_anchor_zitiert_quelle_out": 319
+  },
+  "migration_effect": {
+    "belegt_in_to_anchor_removed": 202,
+    "duplicate_shell_belegt_in_removed": 202,
+    "duplicate_zitiert_quelle_removed": 277,
+    "duplicate_quelle_deleted": 1,
+    "anchored_by_created": 3
+  },
+  "after": {
+    "duplicate_quelle_controlled_vocab_ids": 0,
+    "belegt_in_to_ontology_anchor": 0,
+    "ontology_anchor_count": 2,
+    "anchored_by_to_ontology_anchor": 703,
+    "anchored_by_to_q_akteursliste_master_md": 260,
+    "belegt_in_to_q_akteursliste_master_md_any_label": 0,
+    "ontology_anchor_zitiert_quelle_out": 319,
+    "bad_anchored_by_shape_to_ontology_anchor": 0
+  },
+  "notes": [
+    "199 of 202 regressed source nodes already had canonical ANCHORED_BY edges from the original Phase 1.2 migration.",
+    "Only the three missing ANCHORED_BY edges were created during repair; latest live verification is 703 after shared-graph drift.",
+    "Actor-registry ZITIERT_QUELLE source-as-link behavior was preserved on the surviving OntologyAnchor."
+  ]
+}

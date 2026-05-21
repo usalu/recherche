@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "timestamp": "2026-05-21T07:18:05.005145+00:00",
+  "before": {
+    "counts": {
+      "akteur_count": 650,
+      "node_count": 3804,
+      "relationship_count": 25047
+    },
+    "phase1_5_norm_remaining": [
+      {
+        "id": "norm_din_18940",
+        "labels": [
+          "Norm"
+        ],
+        "degree": 1
+      }
+    ],
+    "phase1_6_merge_ids_remaining": [
+      {
+        "id": "Bellastock",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 18
+      },
+      {
+        "id": "bauburo_in_situ",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 8
+      }
+    ],
+    "target_ids_remaining": [
+      {
+        "id": "Bellastock",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 18
+      },
+      {
+        "id": "bauburo_in_situ",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 8
+      },
+      {
+        "id": "norm_din_18940",
+        "labels": [
+          "Norm"
+        ],
+        "degree": 1
+      }
+    ],
+    "case_insensitive_actor_duplicate_ordered_pairs": 2,
+    "norm_family": [],
+    "canonical_actor_degrees": [
+      {
+        "id": "baubuero_in_situ",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 23
+      },
+      {
+        "id": "bellastock",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 26
+      }
+    ]
+  },
+  "after": {
+    "counts": {
+      "akteur_count": 648,
+      "node_count": 3802,
+      "relationship_count": 25023
+    },
+    "phase1_5_norm_remaining": [],
+    "phase1_6_merge_ids_remaining": [],
+    "target_ids_remaining": [],
+    "case_insensitive_actor_duplicate_ordered_pairs": 0,
+    "norm_family": [
+      {
+        "id": "norm_din_18940_family",
+        "labels": [
+          "Norm"
+        ],
+        "degree": 1
+      }
+    ],
+    "canonical_actor_degrees": [
+      {
+        "id": "baubuero_in_situ",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 24
+      },
+      {
+        "id": "bellastock",
+        "labels": [
+          "Akteur"
+        ],
+        "degree": 27
+      }
+    ]
+  },
+  "actions": [
+    "merged bauburo_in_situ into baubuero_in_situ: {'id': 'baubuero_in_situ', 'aliases': ['bauburo_in_situ', 'baubüro in situ'], 'degree': 24}",
+    "merged Bellastock into bellastock: {'id': 'bellastock', 'aliases': ['Bellastock'], 'degree': 27}",
+    "remapped norm_din_18940 into norm_din_18940_family: {'id': 'norm_din_18940_family', 'aliases': ['norm_din_18940', 'DIN 18940'], 'degree': 1}"
+  ],
+  "audit_records_written": 3,
+  "relationship_delta": -24,
+  "semantic_relationship_coverage": {
+    "checked_relationships": 27,
+    "missing_count": 0,
+    "missing_semantic_relationships": []
+  },
+  "files_written": [
+    "deleted\\repair_phase1_5_1_6_residuals.jsonl",
+    "logs\\repair_phase1_5_1_6_result.json",
+    "reports\\repair_phase1_5_1_6_residuals.md",
+    "PHASE_1_5_1_6_REPAIR_DONE.flag",
+    "migrations/mig_repair_1_5_1_6_residuals.cypher"
+  ],
+  "risks": [
+    "norm_din_18940 had become connected after the original Phase 1.5 journal; it was remapped to a family norm node rather than detached.",
+    "APOC mergeRels collapsed duplicate parallel relationships during canonical actor merges; semantic coverage check found all 27 journalled residual relationships still represented after repair."
+  ],
+  "failures": []
+}
