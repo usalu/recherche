@@ -1,43 +1,3 @@
-# Agent 3 - Phase R9 Report
-
-- **Agent:** agent_3_structural_completion
-- **Database:** mit-bestand
-- **Branch:** wip/kinan2 working tree
-- **Completed (UTC):** 2026-05-21T13:28:52.446263+00:00
-- **Verdict:** PASS
-
-## Executive summary
-
-Agent 3 artefacts for R3/R9 are present under this run directory. R3 creates direct `:Projekt-[:HAS_BAUWERK]->:Bauwerk` edges from Bauteilgruppe topology and `:ReuseRule-[:RELEVANT_FOR]->:Projekt` edges from country/material topology. R9 renames `:ASSOZIIERT_MIT_PROJEKT` to `:STUB_PROJECT_LINK`, but is gated behind R3 completion.
-
-## Before / after counts
-
-| Metric | Before | After | Delta |
-|---|---:|---:|---:|
-| Total relationships | 25664 | 25664 | 0 |
-| HAS_BAUWERK total | 184 | 184 | 0 |
-| HAS_BAUWERK donor | 101 | 101 | 0 |
-| HAS_BAUWERK receiver | 83 | 83 | 0 |
-| RELEVANT_FOR | 103 | 103 | 0 |
-| ASSOZIIERT_MIT_PROJEKT | 0 | 0 | 0 |
-| STUB_PROJECT_LINK | 200 | 200 | 0 |
-
-## Acceptance gates
-
-| Gate | Expected | Live | Verdict |
-|---|---|---|---|
-| old_type_remaining | 0 | {"violations": 0} | PASS |
-| new_type_count | 200 | {"c": 200} | PASS |
-| needs_verification_preserved | 0 | {"violations": 0} | PASS |
-
-## Issues raised
-
-- Dependency status: `{"phase": "R9", "r1_done": true, "r7_done": true, "r7_ab_done": true, "r3_done": true, "can_run": true, "missing": []}`.
-- D3 is deferred: no `:Bauteilgruppe-[:DERIVED_FROM]->:Bauteilgruppe` edge added in this phase.
-
-## Distribution snippets
-
-```json
 {
   "has_bauwerk_top20": [
     {
@@ -288,26 +248,3 @@ Agent 3 artefacts for R3/R9 are present under this run directory. R3 creates dir
     }
   ]
 }
-```
-
-## Artefacts
-
-```
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_audit.jsonl
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_gates.json
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_metrics.json
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_probe_post.json
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_probe_pre.json
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_progress.log
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_runner.py
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/migrations/mig_r3_a_has_bauwerk.cypher
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/migrations/mig_r3_b_reuse_rule_relevant_for.cypher
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/migrations/mig_r9_stub_project_link_rename.cypher
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/PHASE_R3_DONE.flag
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/PHASE_R9_DONE.flag
-_neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/reports/agent_3_report.md
-```
-
-## Handoff
-
-Run `python _neo4j/intake/runs/2026-05-21_review_based_plan/agent_3_structural_completion/logs/agent_3_runner.py r3` after Agent 5 has written `PHASE_R7_DONE.flag` or `PHASE_R7_AB_DONE.flag`. Run R9 only after R3 is integrated and `PHASE_R3_DONE.flag` exists.

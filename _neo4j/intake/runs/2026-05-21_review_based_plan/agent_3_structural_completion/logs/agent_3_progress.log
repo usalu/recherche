@@ -1,3 +1,46 @@
 [2026-05-21T10:54:56.737737+00:00] Preflight complete. can_run=False missing=['agent_5_loader_hardening/PHASE_R7_DONE.flag or PHASE_R7_AB_DONE.flag']
 [2026-05-21T10:56:03.198587+00:00] Preflight complete. can_run=False missing=['agent_5_loader_hardening/PHASE_R7_DONE.flag or PHASE_R7_AB_DONE.flag']
 [2026-05-21T10:56:25.240975+00:00] Preflight complete. can_run=False missing=['agent_5_loader_hardening/PHASE_R7_DONE.flag or PHASE_R7_AB_DONE.flag']
+[2026-05-21T13:25:37.380496+00:00] r9: executing mig_r9_stub_project_link_rename.cypher (4 statements)
+[2026-05-21T13:25:37.615568+00:00]   OK mig_r9_stub_project_link_rename.cypher [1/4]: MATCH ()-[r:ASSOZIIERT_MIT_PROJEKT]->()
+[2026-05-21T13:25:37.637569+00:00]   OK mig_r9_stub_project_link_rename.cypher [2/4]: MATCH ()-[r:ASSOZIIERT_MIT_PROJEKT]->()
+[2026-05-21T13:25:37.660085+00:00]   OK mig_r9_stub_project_link_rename.cypher [3/4]: MATCH ()-[r:STUB_PROJECT_LINK]->()
+[2026-05-21T13:25:37.690089+00:00]   OK mig_r9_stub_project_link_rename.cypher [4/4]: MATCH ()-[r:STUB_PROJECT_LINK]->()
+[2026-05-21T13:25:37.972586+00:00] R9 complete. PASS.
+[2026-05-21T13:27:49.921897+00:00] r3: executing mig_r3_a_has_bauwerk.cypher (7 statements)
+[2026-05-21T13:27:49.993422+00:00]   OK mig_r3_a_has_bauwerk.cypher [1/7]: MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe)-[:FROM_DONOR]->(b:Bauwerk)
+[2026-05-21T13:27:50.052419+00:00]   OK mig_r3_a_has_bauwerk.cypher [2/7]: MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe)-[:INTO_RECEIVER]->(b:Bauwerk)
+[2026-05-21T13:27:50.073428+00:00]   OK mig_r3_a_has_bauwerk.cypher [3/7]: MATCH ()-[r:HAS_BAUWERK]->()
+[2026-05-21T13:27:50.096996+00:00]   OK mig_r3_a_has_bauwerk.cypher [4/7]: MATCH ()-[r:HAS_BAUWERK {role:'donor'}]->()
+[2026-05-21T13:27:50.106514+00:00]   OK mig_r3_a_has_bauwerk.cypher [5/7]: MATCH ()-[r:HAS_BAUWERK {role:'receiver'}]->()
+[2026-05-21T13:27:50.156512+00:00]   OK mig_r3_a_has_bauwerk.cypher [6/7]: MATCH (p:Projekt)
+[2026-05-21T13:27:50.190667+00:00]   OK mig_r3_a_has_bauwerk.cypher [7/7]: MATCH ()-[r:HAS_BAUWERK]->()
+[2026-05-21T13:27:50.193666+00:00] r3: executing mig_r3_b_reuse_rule_relevant_for.cypher (6 statements)
+[2026-05-21T13:27:50.280672+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [1/6]: MATCH (rule:ReuseRule)-[:APPLIES_IN]->(l:Land)<-[:LIEGT_IN_LAND]-(p:Projekt),
+[2026-05-21T13:27:50.302191+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [2/6]: MATCH ()-[r:RELEVANT_FOR]->()
+[2026-05-21T13:27:50.339191+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [3/6]: MATCH (rule:ReuseRule)
+[2026-05-21T13:27:50.370199+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [4/6]: MATCH (p:Projekt {id:'p_ferme_du_rail_paris'})
+[2026-05-21T13:27:50.398713+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [5/6]: MATCH (p:Projekt {id:'p_holbein_gardens_london'})
+[2026-05-21T13:27:50.424714+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [6/6]: MATCH ()-[r:RELEVANT_FOR]->()
+[2026-05-21T13:28:42.119097+00:00] r3: executing mig_r3_a_has_bauwerk.cypher (7 statements)
+[2026-05-21T13:28:42.125096+00:00]   OK mig_r3_a_has_bauwerk.cypher [1/7]: MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe)-[:FROM_DONOR]->(b:Bauwerk)
+[2026-05-21T13:28:42.131097+00:00]   OK mig_r3_a_has_bauwerk.cypher [2/7]: MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe)-[:INTO_RECEIVER]->(b:Bauwerk)
+[2026-05-21T13:28:42.134608+00:00]   OK mig_r3_a_has_bauwerk.cypher [3/7]: MATCH ()-[r:HAS_BAUWERK]->()
+[2026-05-21T13:28:42.137607+00:00]   OK mig_r3_a_has_bauwerk.cypher [4/7]: MATCH ()-[r:HAS_BAUWERK {role:'donor'}]->()
+[2026-05-21T13:28:42.141607+00:00]   OK mig_r3_a_has_bauwerk.cypher [5/7]: MATCH ()-[r:HAS_BAUWERK {role:'receiver'}]->()
+[2026-05-21T13:28:42.145609+00:00]   OK mig_r3_a_has_bauwerk.cypher [6/7]: MATCH (p:Projekt)
+[2026-05-21T13:28:42.149607+00:00]   OK mig_r3_a_has_bauwerk.cypher [7/7]: MATCH ()-[r:HAS_BAUWERK]->()
+[2026-05-21T13:28:42.152612+00:00] r3: executing mig_r3_b_reuse_rule_relevant_for.cypher (6 statements)
+[2026-05-21T13:28:42.160609+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [1/6]: MATCH (rule:ReuseRule)-[:APPLIES_IN]->(l:Land)<-[:LIEGT_IN_LAND]-(p:Projekt),
+[2026-05-21T13:28:42.165608+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [2/6]: MATCH ()-[r:RELEVANT_FOR]->()
+[2026-05-21T13:28:42.170608+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [3/6]: MATCH (rule:ReuseRule)
+[2026-05-21T13:28:42.174607+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [4/6]: MATCH (p:Projekt {id:'p_ferme_du_rail_paris'})
+[2026-05-21T13:28:42.179606+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [5/6]: MATCH (p:Projekt {id:'p_holbein_gardens_london'})
+[2026-05-21T13:28:42.183607+00:00]   OK mig_r3_b_reuse_rule_relevant_for.cypher [6/6]: MATCH ()-[r:RELEVANT_FOR]->()
+[2026-05-21T13:28:42.364572+00:00] R3 complete. PASS.
+[2026-05-21T13:28:52.249604+00:00] r9: executing mig_r9_stub_project_link_rename.cypher (4 statements)
+[2026-05-21T13:28:52.331612+00:00]   OK mig_r9_stub_project_link_rename.cypher [1/4]: MATCH ()-[r:ASSOZIIERT_MIT_PROJEKT]->()
+[2026-05-21T13:28:52.336612+00:00]   OK mig_r9_stub_project_link_rename.cypher [2/4]: MATCH ()-[r:ASSOZIIERT_MIT_PROJEKT]->()
+[2026-05-21T13:28:52.340739+00:00]   OK mig_r9_stub_project_link_rename.cypher [3/4]: MATCH ()-[r:STUB_PROJECT_LINK]->()
+[2026-05-21T13:28:52.344739+00:00]   OK mig_r9_stub_project_link_rename.cypher [4/4]: MATCH ()-[r:STUB_PROJECT_LINK]->()
+[2026-05-21T13:28:52.451263+00:00] R9 complete. PASS.

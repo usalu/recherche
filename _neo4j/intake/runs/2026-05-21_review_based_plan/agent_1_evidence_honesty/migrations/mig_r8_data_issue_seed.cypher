@@ -51,7 +51,7 @@ ON CREATE SET
   i.found_at = date(),
   i.found_by = 'r8_audit_seed',
   i.status = 'open',
-  i.resolution_note = 'Inferred from era×material lookup; no source-cell citation. Requires donor-building dossier verification.'
+  i.resolution_note = 'Inferred from era×material lookup, no source-cell citation. Requires donor-building dossier verification.'
 MERGE (i)-[:CONCERNS]->(bg);
 
 // R8.c — Registry actor stubs (after R9 rename: STUB_PROJECT_LINK)
@@ -68,10 +68,10 @@ ON CREATE SET
   i.found_at = date(),
   i.found_by = 'r8_audit_seed',
   i.status = 'open',
-  i.resolution_note = 'Actor↔project link from master registry; not confirmed via dossier text.'
+  i.resolution_note = 'Actor↔project link from master registry, not confirmed via dossier text.'
 MERGE (i)-[:CONCERNS]->(a);
 
-// R8.d — Era inference (8 expected; demoted in Repair D step C)
+// R8.d — Era inference (8 expected, demoted in Repair D step C)
 MATCH (b:Bauwerk)-[r:BUILT_IN_ERA]->(era:BauwerkEra)
 WHERE r.evidence_origin = 'inferred'
 MERGE (i:DataIssue {
@@ -103,7 +103,7 @@ ON CREATE SET
   i.found_at = date(),
   i.found_by = 'r8_audit_seed',
   i.status = 'open',
-  i.resolution_note = 'Project has dossier anchor but no :Kennwert; Section 8 facts likely missed by loader.'
+  i.resolution_note = 'Project has dossier anchor but no :Kennwert. Section 8 facts likely missed by loader.'
 MERGE (i)-[:CONCERNS]->(p);
 
 // R8.f — Defensive: source_curated edges without excerpts
@@ -126,7 +126,7 @@ ON CREATE SET
   i.resolution_note = 'source_curated edge without an excerpt. Should not occur after R1.'
 MERGE (i)-[:CONCERNS]->(s);
 
-// R8.g — Sparse vocab labels (< 10 nodes; informational, severity=low)
+// R8.g — Sparse vocab labels (< 10 nodes, informational, severity=low)
 UNWIND ['Akteurtyp','Beschaffungsweg','HuerdeKategorie','BauaufgabeIntervention',
         'Defekt','Logistik','Prozessphase','Bausystem','MatchingQualitaet','Nutzung',
         'Schadstoff','Status','Bauobjektklasse','Akzeptanz','Bauobjektrolle',

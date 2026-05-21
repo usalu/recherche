@@ -54,8 +54,11 @@
 
 | When | Who | What | Branch / PR | Status | Notes |
 |---|---|---|---|---|---|
-| _<fill>_ | agent_1 | R8 :DataIssue seed (depends: Stages 1–3 done) | `agent1/r1-r8-evidence` | _<…>_ | _<DataIssue count by kind: q1_topology_synthesis=254, pollutant_inference=799, …>_ |
-| _<fill>_ | orchestrator | Stage 4 integration audit | `orch/integrate-2026-05-21` | _<…>_ | _<FINAL_REVIEW_PLAN_AUDIT.md produced; honest Q1=X, Q2 doc=0, Q3 graph-native=Y, Q4 with STUB filter=Z>_ |
+| 2026-05-21 13:35 +02:00 | orchestrator | Stage 4 audit artefacts authored | `orch/r5-and-integrate` | STAGED | `stage_4_integration/migrations/stage_4_audit_queries.cypher` + `logs/stage_4_audit_runner.py` ready. Runner refuses to start until R3, R9, R8 flags exist. See [STAGE_4_PLAN.md](STAGE_4_PLAN.md). |
+| _<pending>_ | agent_3 | R3 HAS_BAUWERK + RELEVANT_FOR (unblocked) | `agent3/r3-r9-structure` | UNBLOCKED | Run `logs/agent_3_runner.py r3`; PHASE_R7_DONE.flag now present. |
+| _<pending>_ | agent_3 | R9 ASSOZIIERT_MIT_PROJEKT → STUB_PROJECT_LINK | `agent3/r3-r9-structure` | PENDING R3 | Run `logs/agent_3_runner.py r9` after R3 verified. |
+| _<pending>_ | agent_1 | R8 :DataIssue seed (depends: Stages 1–3 done) | `agent1/r1-r8-evidence` | PENDING R3+R9 | Run `logs/agent_1_runner.py r8` after R9 verified. Expect DataIssue count by kind: q1_topology_synthesis=254, pollutant_inference=799, registry_unverified_actor_stub=200, era_inference=8, dossier_section8_missing=N. |
+| _<pending>_ | orchestrator | Stage 4 integration audit | `orch/r5-and-integrate` | PENDING R8 | Run `stage_4_integration/logs/stage_4_audit_runner.py`. Produces `_neo4j/FINAL_REVIEW_PLAN_AUDIT.md` and `STAGE_4_AUDIT_DONE.flag`. |
 
 ---
 

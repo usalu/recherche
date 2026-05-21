@@ -213,9 +213,16 @@ def run_gates(session, phase: str) -> tuple[dict, bool]:
     if phase == "r3":
         gates = {
             "has_bauwerk_total": {
-                "cypher": "MATCH ()-[r:HAS_BAUWERK]->() RETURN count(r) AS c",
-                "expect": ">= 200",
-                "ok": lambda v: v["c"] >= 200,
+                "cypher": (
+                    "MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe)-[:FROM_DONOR]->(b:Bauwerk) "
+                    "WITH count(DISTINCT coalesce(p.id, elementId(p)) + '|' + coalesce(b.id, elementId(b))) AS donor_expected "
+                    "MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(:Bauteilgruppe)-[:INTO_RECEIVER]->(b:Bauwerk) "
+                    "WITH donor_expected, count(DISTINCT coalesce(p.id, elementId(p)) + '|' + coalesce(b.id, elementId(b))) AS receiver_expected "
+                    "MATCH ()-[r:HAS_BAUWERK]->() "
+                    "RETURN count(r) AS c, donor_expected + receiver_expected AS expected"
+                ),
+                "expect": "matches BG-derived topology count",
+                "ok": lambda v: v["c"] == v["expected"] and v["c"] > 0,
             },
             "has_bauwerk_donor": {
                 "cypher": "MATCH ()-[r:HAS_BAUWERK {role:'donor'}]->() RETURN count(r) AS c",
