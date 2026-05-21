@@ -1,0 +1,788 @@
+{
+  "verifier": "pass2_phase5_acceptance",
+  "database": "mit-bestand",
+  "uri": "bolt://localhost:7687",
+  "timestamp_utc": "2026-05-21T07:59:21.974313+00:00",
+  "mode": "read_only",
+  "phase_5_checks": {
+    "file_artifacts": {
+      "mig_5_1_quality_tier.cypher": true,
+      "mig_5_3_relabel_programme.cypher": true,
+      "mig_repair_2_7_5_1_quality_tier_panel.cypher": true,
+      "mig_repair_4_1_curated_excerpts_and_q1.cypher": true,
+      "PHASE_5_DONE.flag": true,
+      "PHASE_2_7_5_1_REPAIR_DONE.flag": true,
+      "PHASE_4_1_Q1_REPAIR_DONE.flag": true,
+      "POST_REPAIR_VERIFY_DONE.flag": true,
+      "FINAL_PLAN_COMPLETION_AUDIT.md": true
+    },
+    "projekt_tier_coverage": {
+      "projekt_total": 101,
+      "projekt_with_quality_tier": 101,
+      "projekt_with_quality_tier_in_enum": 101,
+      "off_enum_rows": [],
+      "passed": true
+    },
+    "tier_distribution": {
+      "rows": [
+        {
+          "tier": "tier_1_decision_grade",
+          "n": 11
+        },
+        {
+          "tier": "tier_2_documentation_only",
+          "n": 68
+        },
+        {
+          "tier": "tier_3_stub",
+          "n": 22
+        }
+      ],
+      "tier_1": 11,
+      "tier_2": 68,
+      "tier_3": 22,
+      "expected": {
+        "tier_1_decision_grade": 11,
+        "tier_2_documentation_only": 68,
+        "tier_3_stub": 22
+      },
+      "passed": true
+    },
+    "relabel_audit": {
+      "rows": [
+        {
+          "id": "p_architecture_of_reuse_brussels",
+          "labels": [
+            "Programm"
+          ],
+          "quality_tier": "tier_3_stub",
+          "migration_origin": "5_3_relabel_to_programm",
+          "original_label": "Projekt"
+        },
+        {
+          "id": "p_circle_house",
+          "labels": [
+            "Projekt"
+          ],
+          "quality_tier": "tier_2_documentation_only",
+          "migration_origin": null,
+          "original_label": null
+        },
+        {
+          "id": "p_reuse_in_construction_zhaw",
+          "labels": [
+            "Programm"
+          ],
+          "quality_tier": "tier_3_stub",
+          "migration_origin": "5_3_relabel_to_programm",
+          "original_label": "Projekt"
+        },
+        {
+          "id": "p_reuse_logistics",
+          "labels": [
+            "Programm"
+          ],
+          "quality_tier": "tier_3_stub",
+          "migration_origin": "5_3_relabel_to_programm",
+          "original_label": "Projekt"
+        },
+        {
+          "id": "p_vandkunsten_component_reuse",
+          "labels": [
+            "Programm"
+          ],
+          "quality_tier": "tier_3_stub",
+          "migration_origin": "5_3_relabel_to_programm",
+          "original_label": "Projekt"
+        }
+      ],
+      "relabelled_to_programm_correct": 4,
+      "relabelled_expected": 4,
+      "circle_house_correct": true,
+      "passed": true
+    },
+    "quality_tier_facts_fold": {
+      "projekt_with_facts": 101,
+      "projekt_with_any_legacy_scalar": 0,
+      "sample_quality_tier_facts_p_k118": "{\"computed_by\":\"mig_5_1_quality_tier\",\"has_land\":true,\"n_bg_quantified\":0,\"n_curated_evidence\":68,\"repaired_by\":\"mig_repair_2_7_5_1_quality_tier_panel\",\"has_components\":true,\"has_metric\":true,\"has_evidence\":true,\"has_year\":true,\"n_bg\":5,\"repaired_at\":\"2026-05-21\"}",
+      "passed": true
+    },
+    "evidence_enum_hygiene": {
+      "referenziert_norm_mittel": 0,
+      "evidence_confidence_off_enum": 0,
+      "evidence_origin_off_enum": 0,
+      "curated_without_excerpt": 0,
+      "passed": true
+    }
+  },
+  "acceptance_queries": {
+    "Q1_reuse_story": {
+      "canonical_rows_bauwerk_to_bauwerk": 197,
+      "canonical_rows_any_donor_receiver_label": 266,
+      "topology_total_rows_any_origin": 266,
+      "bauteilgruppen_with_donor_and_receiver": 254,
+      "hat_bauteilgruppe_total": 369,
+      "hat_bauteilgruppe_curated": 254,
+      "expected_minimum": 1,
+      "expected_target": 266,
+      "verdict": "PASS"
+    },
+    "Q2_risk_story": {
+      "has_risk_pollutant_rows": 799,
+      "requires_verification_for_rows": 347,
+      "breakdown_origin_confidence": [
+        {
+          "origin": "inferred",
+          "confidence": "inferiert",
+          "n": 792
+        },
+        {
+          "origin": "derived",
+          "confidence": "unklar",
+          "n": 7
+        }
+      ],
+      "expected_minimum": 700,
+      "verdict": "PASS"
+    },
+    "Q3_comparison": {
+      "tier1_reuse_share_facts_total_entries": 4,
+      "tier1_projects_with_reuse_share_facts": 3,
+      "detail_rows": [
+        {
+          "id": "p_ferme_du_rail_paris",
+          "name": "Ferme du Rail Paris",
+          "reuse_share_facts": [
+            "{\"kennwert\": \"Anteil biosourcé und/oder réemployé\", \"wert\": \"90\", \"einheit\": \"%\", \"method\": \"unbekannt\", \"bilanzgrenze\": \"Materialien in Trockenbauweise\", \"source_id\": \"q_ferme_du_rail_paris_s2\", \"confidence\": \"unklar\", \"loader\": \"agent9_phase4b1\"}"
+          ]
+        },
+        {
+          "id": "p_holbein_gardens_london",
+          "name": "Holbein Gardens, London",
+          "reuse_share_facts": [
+            "{\"kennwert\": \"Anteil reused steel an Stahltonnage\", \"wert\": \"34 / ca. ein Drittel\", \"einheit\": \"%\", \"method\": \"Fach-/Projektquellen\", \"bilanzgrenze\": \"Stahlstruktur\", \"source_id\": \"q_holbein_gardens_london_s9\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}"
+          ]
+        },
+        {
+          "id": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+          "name": "Jeugdkliniek Ithaka",
+          "reuse_share_facts": [
+            "{\"kennwert\": \"Materialanteil aus RWS\", \"wert\": \"30–40\", \"einheit\": \"%\", \"method\": \"Emergis/Medienangabe\", \"bilanzgrenze\": \"Materialien/Grundstoffe aus Donorgebäude\", \"source_id\": \"q_jeugdkliniek_ithaka_emergis_kloetinge_s6\", \"confidence\": \"teilweise_belegt\", \"loader\": \"agent9_phase4b1\"}",
+            "{\"kennwert\": \"Ziel Reuse-Anteil Neubau\", \"wert\": \"50\", \"einheit\": \"%\", \"method\": \"Planungsziel\", \"bilanzgrenze\": \"neues Gebäude\", \"source_id\": \"q_jeugdkliniek_ithaka_emergis_kloetinge_s13\", \"confidence\": \"teilweise_belegt\", \"loader\": \"agent9_phase4b1\"}"
+          ]
+        }
+      ],
+      "verdict": "PASS",
+      "note": "Plan permits 0; live value documented."
+    },
+    "Q4_actor_network": {
+      "relationship_types_present": [
+        {
+          "types": [
+            "BETEILIGT_AN",
+            "HAT_AKTEURROLLE",
+            "ASSOZIIERT_MIT_PROJEKT"
+          ]
+        }
+      ],
+      "rows_via_BETEILIGT_AN_only": 1,
+      "rows_via_ASSOZIIERT_MIT_PROJEKT": 0,
+      "actor_list_via_ASSOZIIERT": [],
+      "verdict": "PASS",
+      "note": "Plan permits 0 when only 11 tier-1 projects exist. Reported via both edge types for completeness."
+    },
+    "Q5_decision_support": {
+      "reuse_rule_total": 20,
+      "reuse_rule_with_both_applies": 20,
+      "applies_in_total": 20,
+      "applies_to_total": 20,
+      "expected": 20,
+      "verdict": "PASS"
+    },
+    "Q6_trust_check": {
+      "aggregate_all_projekt_rows": [
+        {
+          "origin": "curated",
+          "c": 3188
+        },
+        {
+          "origin": "derived",
+          "c": 2948
+        },
+        {
+          "origin": "inferred",
+          "c": 347
+        }
+      ],
+      "tier1_only_aggregate_rows": [
+        {
+          "origin": "curated",
+          "c": 1461
+        },
+        {
+          "origin": "derived",
+          "c": 418
+        },
+        {
+          "origin": "inferred",
+          "c": 59
+        }
+      ],
+      "per_project_p_chiro_d_itterbeek_dilbeek": [
+        {
+          "origin": "curated",
+          "c": 166
+        },
+        {
+          "origin": "derived",
+          "c": 42
+        },
+        {
+          "origin": "inferred",
+          "c": 7
+        }
+      ],
+      "verdict": "PASS"
+    },
+    "Q7_source_drilldown": {
+      "case_markdown_zitiert_quelle_total": 958,
+      "per_project_p_chiro_external_quellen": 13,
+      "expected_minimum": 500,
+      "verdict": "PASS"
+    }
+  },
+  "end_state_size": {
+    "node_total": 3802,
+    "relationship_total": 25023,
+    "node_label_inventory": [
+      {
+        "label": "Quelle",
+        "c": 1586
+      },
+      {
+        "label": "Akteur",
+        "c": 648
+      },
+      {
+        "label": "Bauteilgruppe",
+        "c": 369
+      },
+      {
+        "label": "Bauwerk",
+        "c": 186
+      },
+      {
+        "label": "PruefungNachweis",
+        "c": 120
+      },
+      {
+        "label": "Norm",
+        "c": 103
+      },
+      {
+        "label": "Projekt",
+        "c": 101
+      },
+      {
+        "label": "Stadt",
+        "c": 76
+      },
+      {
+        "label": "Aufbereitungsverfahren",
+        "c": 62
+      },
+      {
+        "label": "Leistungsanforderung",
+        "c": 46
+      },
+      {
+        "label": "Huerde",
+        "c": 28
+      },
+      {
+        "label": "Programm",
+        "c": 28
+      },
+      {
+        "label": "Material",
+        "c": 26
+      },
+      {
+        "label": "Akteurrolle",
+        "c": 24
+      },
+      {
+        "label": "Bauteiltyp",
+        "c": 23
+      },
+      {
+        "label": "Materialdepot",
+        "c": 23
+      },
+      {
+        "label": "ReuseRule",
+        "c": 20
+      },
+      {
+        "label": "Land",
+        "c": 19
+      },
+      {
+        "label": "Software",
+        "c": 19
+      },
+      {
+        "label": "Ressourcenquelle",
+        "c": 16
+      },
+      {
+        "label": "Bauproduktstatus",
+        "c": 15
+      },
+      {
+        "label": "Verbindungstechnik",
+        "c": 15
+      },
+      {
+        "label": "Wiederverwendungskette",
+        "c": 14
+      },
+      {
+        "label": "Methode",
+        "c": 13
+      },
+      {
+        "label": "Wirtschaft",
+        "c": 12
+      },
+      {
+        "label": "Marktmodell",
+        "c": 11
+      },
+      {
+        "label": "Materialgruppe",
+        "c": 11
+      },
+      {
+        "label": "WiederverwendungsArt",
+        "c": 11
+      },
+      {
+        "label": "Akteurtyp",
+        "c": 10
+      },
+      {
+        "label": "BauaufgabeIntervention",
+        "c": 10
+      },
+      {
+        "label": "Beschaffungsweg",
+        "c": 10
+      },
+      {
+        "label": "Defekt",
+        "c": 10
+      },
+      {
+        "label": "HuerdeKategorie",
+        "c": 10
+      },
+      {
+        "label": "Logistik",
+        "c": 10
+      },
+      {
+        "label": "Prozessphase",
+        "c": 10
+      },
+      {
+        "label": "Bausystem",
+        "c": 9
+      },
+      {
+        "label": "MatchingQualitaet",
+        "c": 9
+      },
+      {
+        "label": "Nutzung",
+        "c": 9
+      },
+      {
+        "label": "Schadstoff",
+        "c": 9
+      },
+      {
+        "label": "Status",
+        "c": 9
+      },
+      {
+        "label": "Bauobjektklasse",
+        "c": 8
+      },
+      {
+        "label": "Akzeptanz",
+        "c": 7
+      },
+      {
+        "label": "Bauobjektrolle",
+        "c": 6
+      },
+      {
+        "label": "Bauteilebene",
+        "c": 6
+      },
+      {
+        "label": "Bauweise",
+        "c": 6
+      },
+      {
+        "label": "BauwerkEra",
+        "c": 6
+      },
+      {
+        "label": "Funktionswechsel",
+        "c": 6
+      },
+      {
+        "label": "ZustandsKlasse",
+        "c": 6
+      },
+      {
+        "label": "Rueckbauverfahren",
+        "c": 5
+      },
+      {
+        "label": "Tragwerksprinzip",
+        "c": 4
+      },
+      {
+        "label": "OntologyAnchor",
+        "c": 2
+      },
+      {
+        "label": "GraphVersion",
+        "c": 0
+      },
+      {
+        "label": "RechtlicheBedingung",
+        "c": 0
+      },
+      {
+        "label": "Tool",
+        "c": 0
+      },
+      {
+        "label": "ZertifizierungBewertungssystem",
+        "c": 0
+      }
+    ],
+    "relationship_type_inventory": [
+      {
+        "type": "BELEGT_IN",
+        "c": 4734
+      },
+      {
+        "type": "ZITIERT_QUELLE",
+        "c": 1470
+      },
+      {
+        "type": "HAT_AKTEURROLLE",
+        "c": 1180
+      },
+      {
+        "type": "HAT_HUERDE",
+        "c": 1068
+      },
+      {
+        "type": "HAT_PROZESSPHASE",
+        "c": 812
+      },
+      {
+        "type": "HAS_RISK_POLLUTANT",
+        "c": 803
+      },
+      {
+        "type": "ANCHORED_BY",
+        "c": 703
+      },
+      {
+        "type": "HAT_STATUS",
+        "c": 672
+      },
+      {
+        "type": "HAT_AKTEURTYP",
+        "c": 658
+      },
+      {
+        "type": "HAT_WIEDERVERWENDUNGSART",
+        "c": 621
+      },
+      {
+        "type": "HAT_BAUTEILTYP",
+        "c": 607
+      },
+      {
+        "type": "HAT_METHODE",
+        "c": 602
+      },
+      {
+        "type": "BETEILIGT_AN",
+        "c": 576
+      },
+      {
+        "type": "HAT_RESSOURCENQUELLE",
+        "c": 567
+      },
+      {
+        "type": "HAT_LEISTUNGSANFORDERUNG",
+        "c": 561
+      },
+      {
+        "type": "LIEGT_IN_LAND",
+        "c": 520
+      },
+      {
+        "type": "HAT_MATERIALGRUPPE",
+        "c": 516
+      },
+      {
+        "type": "HAT_LOGISTIK",
+        "c": 500
+      },
+      {
+        "type": "NUTZT_MATERIAL",
+        "c": 475
+      },
+      {
+        "type": "HAT_AUFBEREITUNG",
+        "c": 448
+      },
+      {
+        "type": "HAT_PRUEFUNG",
+        "c": 410
+      },
+      {
+        "type": "HAT_MARKTMODELL",
+        "c": 384
+      },
+      {
+        "type": "HAT_BAUTEILEBENE",
+        "c": 372
+      },
+      {
+        "type": "HAT_BAUTEILGRUPPE",
+        "c": 369
+      },
+      {
+        "type": "INTO_RECEIVER",
+        "c": 349
+      },
+      {
+        "type": "REQUIRES_VERIFICATION_FOR",
+        "c": 347
+      },
+      {
+        "type": "VERBUNDEN_MIT_AKTEUR",
+        "c": 337
+      },
+      {
+        "type": "HAT_RUECKBAUVERFAHREN",
+        "c": 301
+      },
+      {
+        "type": "HAT_FUNKTIONSWECHSEL",
+        "c": 299
+      },
+      {
+        "type": "FROM_DONOR",
+        "c": 286
+      },
+      {
+        "type": "HAT_BESCHAFFUNGSWEG",
+        "c": 285
+      },
+      {
+        "type": "LIEGT_IN_STADT",
+        "c": 261
+      },
+      {
+        "type": "GEHÖRT_ZU",
+        "c": 255
+      },
+      {
+        "type": "HAT_BAUOBJEKTROLLE",
+        "c": 230
+      },
+      {
+        "type": "HAT_BAUOBJEKTKLASSE",
+        "c": 227
+      },
+      {
+        "type": "HAT_NUTZUNG",
+        "c": 216
+      },
+      {
+        "type": "ASSOZIIERT_MIT_PROJEKT",
+        "c": 200
+      },
+      {
+        "type": "HAT_MATCHINGQUALITAET",
+        "c": 187
+      },
+      {
+        "type": "NUTZT_BAUWERK",
+        "c": 169
+      },
+      {
+        "type": "HAT_HUERDEKATEGORIE",
+        "c": 167
+      },
+      {
+        "type": "HAT_INTERVENTION",
+        "c": 148
+      },
+      {
+        "type": "REFERENZIERT_NORM",
+        "c": 145
+      },
+      {
+        "type": "HAT_VERBINDUNGSTECHNIK",
+        "c": 131
+      },
+      {
+        "type": "HAT_BAUWEISE",
+        "c": 129
+      },
+      {
+        "type": "TYPISCH_BEI_MATERIAL",
+        "c": 91
+      },
+      {
+        "type": "HAT_TRAGWERKSPRINZIP",
+        "c": 72
+      },
+      {
+        "type": "HAT_BAUPRODUKTSTATUS",
+        "c": 67
+      },
+      {
+        "type": "HAT_BAUSYSTEM",
+        "c": 64
+      },
+      {
+        "type": "NUTZT_SOFTWARE",
+        "c": 51
+      },
+      {
+        "type": "HAT_WIRTSCHAFT",
+        "c": 46
+      },
+      {
+        "type": "HAT_DEFEKT",
+        "c": 45
+      },
+      {
+        "type": "HAT_ZUSTANDSKLASSE",
+        "c": 40
+      },
+      {
+        "type": "TEIL_VON_PROGRAMM",
+        "c": 38
+      },
+      {
+        "type": "GILT_IN_LAND",
+        "c": 35
+      },
+      {
+        "type": "IST_UNTERVERFAHREN_VON",
+        "c": 28
+      },
+      {
+        "type": "HAT_DEFEKT_BEFUND",
+        "c": 25
+      },
+      {
+        "type": "APPLIES_IN",
+        "c": 20
+      },
+      {
+        "type": "APPLIES_TO",
+        "c": 20
+      },
+      {
+        "type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+        "c": 19
+      },
+      {
+        "type": "TYPISCH_BEI_ERA",
+        "c": 15
+      },
+      {
+        "type": "TEIL_VON_KETTE",
+        "c": 14
+      },
+      {
+        "type": "HAT_WIRTSCHAFTSASPEKT",
+        "c": 11
+      },
+      {
+        "type": "TYPISCH_BEI_BAUTEILTYP",
+        "c": 10
+      },
+      {
+        "type": "BUILT_IN_ERA",
+        "c": 8
+      },
+      {
+        "type": "ERHALT_FOERDERUNG_DURCH",
+        "c": 4
+      },
+      {
+        "type": "BETRIEBEN_VON",
+        "c": 3
+      },
+      {
+        "type": "AUS_BAUWERK",
+        "c": 0
+      },
+      {
+        "type": "EINGEBAUT_IN",
+        "c": 0
+      },
+      {
+        "type": "HAT_RECHTLICHE_BEDINGUNG",
+        "c": 0
+      },
+      {
+        "type": "HAT_SCHADSTOFF",
+        "c": 0
+      },
+      {
+        "type": "HAT_ZERTIFIZIERUNG",
+        "c": 0
+      },
+      {
+        "type": "NUTZT_TOOL",
+        "c": 0
+      }
+    ],
+    "plan_target_nodes": 2460,
+    "plan_target_rels": 19100,
+    "delta_nodes_pct_vs_target": 54.6,
+    "delta_rels_pct_vs_target": 31.0
+  },
+  "overall": {
+    "phase_5_passed": true,
+    "acceptance_verdicts": {
+      "Q1_reuse_story": "PASS",
+      "Q2_risk_story": "PASS",
+      "Q3_comparison": "PASS",
+      "Q4_actor_network": "PASS",
+      "Q5_decision_support": "PASS",
+      "Q6_trust_check": "PASS",
+      "Q7_source_drilldown": "PASS"
+    },
+    "acceptance_all_pass": true,
+    "overall_verdict": "PASS"
+  }
+}

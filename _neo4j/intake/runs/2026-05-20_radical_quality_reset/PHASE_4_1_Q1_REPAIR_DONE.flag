@@ -1,0 +1,45 @@
+{
+  "phase": "4.1_q1_repair",
+  "agent": "repair_agent_D",
+  "migration": "migrations/mig_repair_4_1_curated_excerpts_and_q1.cypher",
+  "database": "mit-bestand",
+  "completed_at_utc": "2026-05-21T07:40:09+00:00",
+  "verdict": "PASS",
+  "before": {
+    "verifier_10_curated_no_excerpt": 2108,
+    "repair_agent_start_curated_no_excerpt": 1682,
+    "hat_bauteilgruppe_curated": 0,
+    "q1_canonical_rows": 0,
+    "note": "426 fewer than verifier-10 count because 404 Akteur BELEGT_IN→q_akteursliste_master_md were already renamed to ANCHORED_BY (Phase 1.2) before this repair ran"
+  },
+  "after": {
+    "curated_no_excerpt": 0,
+    "origin_enum_violations": 0,
+    "confidence_enum_violations": 0,
+    "citation_basis_enum_violations": 0,
+    "hat_bauteilgruppe_curated": 254,
+    "q1_canonical_rows": 266,
+    "invariants_4c": {
+      "quelle_external_sources": 0,
+      "rel_url_props": 0,
+      "projekt_belegt_actor_url": 0,
+      "zitiert_quelle_total": 1470
+    }
+  },
+  "classification_rules": [
+    "A_registry_excerpt: HAT_AKTEURROLLE/HAT_AKTEURTYP/LIEGT_IN_LAND/VERBUNDEN_MIT_AKTEUR/ASSOZIIERT_MIT_PROJEKT with evidence_source_id=q_akteursliste_master_md → keep curated, fill registry cell identity excerpt",
+    "B_actor_sref_excerpt: BELEGT_IN with evidence_source_id STARTS WITH q_actor_ → keep curated, cite Akteur + Quelle.url in excerpt (URL stays on :Quelle node per 4c)",
+    "C_built_in_era_demote: BUILT_IN_ERA year_inferred from bauwerk.baujahr → demote curated→inferred, belegt→inferiert, fill provenance excerpt",
+    "D_requires_verification_demote: REQUIRES_VERIFICATION_FOR project_rollup → demote curated→inferred, belegt→inferiert, fill provenance excerpt",
+    "E_hat_bg_promotion: HAT_BAUTEILGRUPPE where BG has FROM_DONOR+INTO_RECEIVER and Projekt has case_markdown BELEGT_IN anchor → promote to curated/cell_citation/teilweise_belegt with dossier anchor id",
+    "F_unpack_arrays: 22 dedup-merged list properties from Phase 1.6 actor merge → scalar canonical values (curated>inferred>derived)",
+    "G_basis_remap: BELEGT_IN research_file_row → cell_citation (243 edges, Agent 10 loader enum fix)"
+  ],
+  "artifacts": {
+    "migration_cypher": "migrations/mig_repair_4_1_curated_excerpts_and_q1.cypher",
+    "runner_json": "logs/repair_d_runner.json",
+    "runner_jsonl": "logs/repair_d_runner.jsonl",
+    "verify_json": "logs/repair_d_verify.json",
+    "report_md": "reports/repair_phase4_1_q1.md"
+  }
+}

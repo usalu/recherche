@@ -1,0 +1,662 @@
+{
+  "verifier": "pass2_detailed_verifier_9_of_12",
+  "scope": "phase_4_1_and_4_2_full_with_curated_excerpt_repair",
+  "database": "mit-bestand",
+  "timestamp_utc": "2026-05-21T07:59:26.623816+00:00",
+  "checks": {
+    "1_migrations_present": {
+      "mig_4_1_canonical_evidence.cypher": true,
+      "mig_repair_4_1_curated_excerpts_and_q1.cypher": true,
+      "pass": true
+    },
+    "2_flags_present": {
+      "PHASE_4_DONE.flag": true,
+      "PHASE_4_1_Q1_REPAIR_DONE.flag": true,
+      "pass": true
+    },
+    "3_claim_edges_evidence_origin_null": {
+      "by_type": {},
+      "total": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "4_evidence_origin_enum_strict": {
+      "violations": 0,
+      "expected": 0,
+      "distribution": {
+        "derived": 18752,
+        "curated": 4748,
+        "inferred": 1523
+      },
+      "pass": true
+    },
+    "5_evidence_confidence_enum_strict": {
+      "violations": 0,
+      "expected": 0,
+      "distribution": {
+        "unklar": 18440,
+        "belegt": 3511,
+        "inferiert": 1390,
+        "bookkeeping": 1022,
+        "teilweise_belegt": 660
+      },
+      "pass": true
+    },
+    "6_curated_requires_excerpt": {
+      "violations": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "7_bookkeeping_requires_derived": {
+      "violations": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "8_excerpt_no_propagated_from": {
+      "violations": 0,
+      "expected": 0,
+      "pass": true
+    },
+    "9_matrix_dump": {
+      "edge_types_count": 66,
+      "column_totals": {
+        "derived": 18752,
+        "inferred": 1523,
+        "curated": 4748
+      },
+      "pass": true
+    },
+    "10_phase_4_2_done_flag": {
+      "present": true,
+      "pass": true
+    },
+    "11_legacy_donor_receiver_zero": {
+      "AUS_BAUWERK": 0,
+      "EINGEBAUT_IN": 0,
+      "expected": {
+        "AUS_BAUWERK": 0,
+        "EINGEBAUT_IN": 0
+      },
+      "pass": true
+    },
+    "12_new_donor_receiver_thresholds": {
+      "FROM_DONOR": 286,
+      "INTO_RECEIVER": 349,
+      "expected": {
+        "FROM_DONOR_min": 280,
+        "INTO_RECEIVER_min": 340
+      },
+      "pass": true
+    },
+    "13_donor_receiver_samples": {
+      "FROM_DONOR_sampled": 5,
+      "INTO_RECEIVER_sampled": 5,
+      "pass": true
+    },
+    "14_hat_bauteilgruppe_curated_min_200": {
+      "count": 254,
+      "expected_min": 200,
+      "pass": true
+    },
+    "15_promoted_hat_bauteilgruppe_attributes": {
+      "sampled": 5,
+      "all_topology_basis_conf_ok": true,
+      "pass": true
+    }
+  },
+  "matrix_edge_type_x_origin": {
+    "ANCHORED_BY": {
+      "derived": 703
+    },
+    "APPLIES_IN": {
+      "inferred": 20
+    },
+    "APPLIES_TO": {
+      "inferred": 20
+    },
+    "ASSOZIIERT_MIT_PROJEKT": {
+      "curated": 142,
+      "derived": 58
+    },
+    "BELEGT_IN": {
+      "curated": 3031,
+      "derived": 1460,
+      "inferred": 243
+    },
+    "BETEILIGT_AN": {
+      "derived": 576
+    },
+    "BETRIEBEN_VON": {
+      "derived": 3
+    },
+    "BUILT_IN_ERA": {
+      "inferred": 8
+    },
+    "ERHALT_FOERDERUNG_DURCH": {
+      "derived": 4
+    },
+    "FROM_DONOR": {
+      "derived": 286
+    },
+    "GEHÖRT_ZU": {
+      "derived": 255
+    },
+    "GILT_IN_LAND": {
+      "derived": 35
+    },
+    "HAS_RISK_POLLUTANT": {
+      "curated": 4,
+      "derived": 7,
+      "inferred": 792
+    },
+    "HAT_AKTEURROLLE": {
+      "curated": 548,
+      "derived": 632
+    },
+    "HAT_AKTEURTYP": {
+      "curated": 193,
+      "derived": 465
+    },
+    "HAT_AUFBEREITUNG": {
+      "curated": 22,
+      "derived": 426
+    },
+    "HAT_BAUOBJEKTKLASSE": {
+      "derived": 227
+    },
+    "HAT_BAUOBJEKTROLLE": {
+      "derived": 230
+    },
+    "HAT_BAUPRODUKTSTATUS": {
+      "derived": 67
+    },
+    "HAT_BAUSYSTEM": {
+      "derived": 64
+    },
+    "HAT_BAUTEILEBENE": {
+      "derived": 372
+    },
+    "HAT_BAUTEILGRUPPE": {
+      "curated": 254,
+      "derived": 115
+    },
+    "HAT_BAUTEILTYP": {
+      "derived": 607
+    },
+    "HAT_BAUWEISE": {
+      "derived": 129
+    },
+    "HAT_BESCHAFFUNGSWEG": {
+      "derived": 285
+    },
+    "HAT_DEFEKT": {
+      "derived": 45
+    },
+    "HAT_DEFEKT_BEFUND": {
+      "derived": 25
+    },
+    "HAT_FUNKTIONSWECHSEL": {
+      "derived": 299
+    },
+    "HAT_HUERDE": {
+      "derived": 1068
+    },
+    "HAT_HUERDEKATEGORIE": {
+      "derived": 167
+    },
+    "HAT_INTERVENTION": {
+      "derived": 148
+    },
+    "HAT_LEISTUNGSANFORDERUNG": {
+      "derived": 561
+    },
+    "HAT_LOGISTIK": {
+      "derived": 500
+    },
+    "HAT_MARKTMODELL": {
+      "derived": 384
+    },
+    "HAT_MATCHINGQUALITAET": {
+      "derived": 187
+    },
+    "HAT_MATERIALGRUPPE": {
+      "derived": 516
+    },
+    "HAT_METHODE": {
+      "derived": 602
+    },
+    "HAT_NUTZUNG": {
+      "derived": 216
+    },
+    "HAT_PROZESSPHASE": {
+      "derived": 812
+    },
+    "HAT_PRUEFUNG": {
+      "curated": 63,
+      "derived": 347
+    },
+    "HAT_RESSOURCENQUELLE": {
+      "derived": 567
+    },
+    "HAT_RUECKBAUVERFAHREN": {
+      "derived": 301
+    },
+    "HAT_STATUS": {
+      "derived": 672
+    },
+    "HAT_TRAGWERKSPRINZIP": {
+      "derived": 72
+    },
+    "HAT_TYPISCHEN_BAUPRODUKTSTATUS": {
+      "derived": 19
+    },
+    "HAT_VERBINDUNGSTECHNIK": {
+      "curated": 1,
+      "derived": 130
+    },
+    "HAT_WIEDERVERWENDUNGSART": {
+      "derived": 621
+    },
+    "HAT_WIRTSCHAFT": {
+      "derived": 46
+    },
+    "HAT_WIRTSCHAFTSASPEKT": {
+      "derived": 11
+    },
+    "HAT_ZUSTANDSKLASSE": {
+      "derived": 40
+    },
+    "INTO_RECEIVER": {
+      "derived": 349
+    },
+    "IST_UNTERVERFAHREN_VON": {
+      "derived": 28
+    },
+    "LIEGT_IN_LAND": {
+      "curated": 201,
+      "derived": 319
+    },
+    "LIEGT_IN_STADT": {
+      "derived": 261
+    },
+    "NUTZT_BAUWERK": {
+      "derived": 169
+    },
+    "NUTZT_MATERIAL": {
+      "derived": 475
+    },
+    "NUTZT_SOFTWARE": {
+      "derived": 51
+    },
+    "REFERENZIERT_NORM": {
+      "derived": 52,
+      "inferred": 93
+    },
+    "REQUIRES_VERIFICATION_FOR": {
+      "inferred": 347
+    },
+    "TEIL_VON_KETTE": {
+      "derived": 14
+    },
+    "TEIL_VON_PROGRAMM": {
+      "derived": 38
+    },
+    "TYPISCH_BEI_BAUTEILTYP": {
+      "derived": 10
+    },
+    "TYPISCH_BEI_ERA": {
+      "derived": 15
+    },
+    "TYPISCH_BEI_MATERIAL": {
+      "derived": 91
+    },
+    "VERBUNDEN_MIT_AKTEUR": {
+      "curated": 289,
+      "derived": 48
+    },
+    "ZITIERT_QUELLE": {
+      "derived": 1470
+    }
+  },
+  "samples": {
+    "13_FROM_DONOR_sample_5": [
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_dismantled_glas_technik_medunicampus_fluorescent",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_meduni_campus_mariannengasse",
+        "props": {
+          "evidence_source_id": "batch2_v2_followup_2026-05-20",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_dismantled_glas_technik_medunicampus_fluorescent__AUS_BAUWERK__bw_meduni_campus_mariannengasse",
+          "evidence_excerpt": "BELEGT"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_dismantled_holz_mehrere_stuttgart21_donor_stock",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_stuttgart21_hauptbahnhof",
+        "props": {
+          "evidence_source_id": "batch2_v2_import_2026-05-20",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_dismantled_holz_mehrere_stuttgart21_donor_stock__AUS_BAUWERK__bw_stuttgart21_hauptbahnhof"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_boston_big_dig_infrastructure",
+        "props": {
+          "evidence_source_id": "mig_4_1",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile__AUS_BAUWERK__bw_boston_big_dig_infrastructure"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_retained_mehrere_mehrere_alliander_existing_buildings",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_alliander_existing_campus",
+        "props": {
+          "evidence_source_id": "mig_4_1",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_retained_mehrere_mehrere_alliander_existing_buildings__AUS_BAUWERK__bw_alliander_existing_campus"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_retained_mehrere_mehrere_botanique_main_structure",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_institut_botanique_ulg",
+        "props": {
+          "evidence_source_id": "mig_4_1",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_retained_mehrere_mehrere_botanique_main_structure__AUS_BAUWERK__bw_institut_botanique_ulg"
+        }
+      }
+    ],
+    "13_INTO_RECEIVER_sample_5": [
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_dismantled_holz_mehrere_circl_larch_structure",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_circl_pavilion_amsterdam",
+        "props": {
+          "evidence_source_id": "batch2_v2_import_2026-05-20",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_dismantled_holz_mehrere_circl_larch_structure__EINGEBAUT_IN__bw_circl_pavilion_amsterdam"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_dismantled_mehrere_boden_circl_floor_structure",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_circl_pavilion_amsterdam",
+        "props": {
+          "evidence_source_id": "batch2_v2_followup_2026-05-20",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_dismantled_mehrere_boden_circl_floor_structure__EINGEBAUT_IN__bw_circl_pavilion_amsterdam",
+          "evidence_excerpt": "BELEGT"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_dismantled_mehrere_technik_circl_solar_panels",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_circl_pavilion_amsterdam",
+        "props": {
+          "evidence_source_id": "batch2_v2_import_2026-05-20",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_dismantled_mehrere_technik_circl_solar_panels__EINGEBAUT_IN__bw_circl_pavilion_amsterdam"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_planned_holz_decke_elementa_brettstapel",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_elementa_walkeweg_basel",
+        "props": {
+          "evidence_source_id": "batch2_v2_import_2026-05-20",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_planned_holz_decke_elementa_brettstapel__EINGEBAUT_IN__bw_elementa_walkeweg_basel"
+        }
+      },
+      {
+        "src_labels": [
+          "Bauteilgruppe"
+        ],
+        "src_id": "bg_planned_holz_mehrere_lysp8_dfd_frame",
+        "dst_labels": [
+          "Bauwerk"
+        ],
+        "dst_id": "bw_lysp8_basel",
+        "props": {
+          "evidence_source_id": "batch2_v2_import_2026-05-20",
+          "evidence_basis": "controlled_vocab",
+          "evidence_origin": "derived",
+          "evidence_confidence": "unklar",
+          "id": "r_bg_planned_holz_mehrere_lysp8_dfd_frame__EINGEBAUT_IN__bw_lysp8_basel"
+        }
+      }
+    ],
+    "15_promoted_HAT_BAUTEILGRUPPE_sample_5": [
+      {
+        "projekt_id": "p_55_great_suffolk_street_london",
+        "bg_id": "bg_reuse_stahl_mehrere_55gss_external_core",
+        "donor_count": 2,
+        "donor_sample": [
+          "bw_1_broadgate_london",
+          "bw_cleveland_steel_and_tubes_stock"
+        ],
+        "receiver_count": 1,
+        "receiver_sample": [
+          "bw_55_great_suffolk_street_warehouse"
+        ],
+        "props": {
+          "evidence_source_id": "q_55_great_suffolk_street_london_md",
+          "evidence_basis": "cell_citation",
+          "derivation_note": "promoted derived->curated by mig_repair_4_1_q1 (criterion: BG carries both FROM_DONOR and INTO_RECEIVER AND Projekt anchored to case_markdown dossier)",
+          "evidence_origin": "curated",
+          "migration_origin": "mig_repair_4_1_q1",
+          "evidence_confidence": "teilweise_belegt",
+          "id": "r_p_55_great_suffolk_street_london__HAT_BAUTEILGRUPPE__bg_reuse_stahl_mehrere_55gss_external_core",
+          "evidence_excerpt": "Projekt 55 Great Suffolk Street [p_55_great_suffolk_street_london] Section 5 (Reuse-Bauteilgruppen) [q_55_great_suffolk_street_london_md]: Bauteilgruppe bg_reuse_stahl_mehrere_55gss_external_core ist dossier-verankert mit 2 FROM_DONOR + 1 INTO_RECEIVER Verknüpfung(en)."
+        },
+        "checks_per_sample": {
+          "basis_cell_citation": true,
+          "confidence_in_enum": true,
+          "topology_donor_and_receiver": true,
+          "ok": true
+        }
+      },
+      {
+        "projekt_id": "p_association_house_groeditz",
+        "bg_id": "bg_reuse_stahlbeton_mehrere_groeditz_dresden_type_precast_components",
+        "donor_count": 1,
+        "donor_sample": [
+          "bw_school_type_dresden_donor"
+        ],
+        "receiver_count": 1,
+        "receiver_sample": [
+          "bw_association_house_groeditz"
+        ],
+        "props": {
+          "evidence_source_id": "q_association_house_groeditz_md",
+          "evidence_basis": "cell_citation",
+          "derivation_note": "promoted derived->curated by mig_repair_4_1_q1 (criterion: BG carries both FROM_DONOR and INTO_RECEIVER AND Projekt anchored to case_markdown dossier)",
+          "evidence_origin": "curated",
+          "migration_origin": "mig_repair_4_1_q1",
+          "evidence_confidence": "teilweise_belegt",
+          "id": "r_p_association_house_groeditz__HAT_BAUTEILGRUPPE__bg_reuse_stahlbeton_mehrere_groeditz_dresden_type_precast_components",
+          "evidence_excerpt": "Projekt Vereinshaus Gröditz [p_association_house_groeditz] Section 5 (Reuse-Bauteilgruppen) [q_association_house_groeditz_md]: Bauteilgruppe bg_reuse_stahlbeton_mehrere_groeditz_dresden_type_precast_components ist dossier-verankert mit 1 FROM_DONOR + 1 INTO_RECEIVER Verknüpfung(en)."
+        },
+        "checks_per_sample": {
+          "basis_cell_citation": true,
+          "confidence_in_enum": true,
+          "topology_donor_and_receiver": true,
+          "ok": true
+        }
+      },
+      {
+        "projekt_id": "p_association_house_groeditz",
+        "bg_id": "bg_reuse_stahlbeton_mehrere_groeditz_wbs70_precast_panels",
+        "donor_count": 1,
+        "donor_sample": [
+          "bw_wbs70_donor_groeditz"
+        ],
+        "receiver_count": 1,
+        "receiver_sample": [
+          "bw_association_house_groeditz"
+        ],
+        "props": {
+          "evidence_source_id": "q_association_house_groeditz_md",
+          "evidence_basis": "cell_citation",
+          "derivation_note": "promoted derived->curated by mig_repair_4_1_q1 (criterion: BG carries both FROM_DONOR and INTO_RECEIVER AND Projekt anchored to case_markdown dossier)",
+          "evidence_origin": "curated",
+          "migration_origin": "mig_repair_4_1_q1",
+          "evidence_confidence": "teilweise_belegt",
+          "id": "r_p_association_house_groeditz__HAT_BAUTEILGRUPPE__bg_reuse_stahlbeton_mehrere_groeditz_wbs70_precast_panels",
+          "evidence_excerpt": "Projekt Vereinshaus Gröditz [p_association_house_groeditz] Section 5 (Reuse-Bauteilgruppen) [q_association_house_groeditz_md]: Bauteilgruppe bg_reuse_stahlbeton_mehrere_groeditz_wbs70_precast_panels ist dossier-verankert mit 1 FROM_DONOR + 1 INTO_RECEIVER Verknüpfung(en)."
+        },
+        "checks_per_sample": {
+          "basis_cell_citation": true,
+          "confidence_in_enum": true,
+          "topology_donor_and_receiver": true,
+          "ok": true
+        }
+      },
+      {
+        "projekt_id": "p_association_house_plauen",
+        "bg_id": "bg_reuse_stahlbeton_mehrere_plauen_iw73_6_precast_components",
+        "donor_count": 1,
+        "donor_sample": [
+          "bw_iw73_6_mass_housing_donor"
+        ],
+        "receiver_count": 1,
+        "receiver_sample": [
+          "bw_association_house_plauen"
+        ],
+        "props": {
+          "evidence_source_id": "q_association_house_plauen_md",
+          "evidence_basis": "cell_citation",
+          "derivation_note": "promoted derived->curated by mig_repair_4_1_q1 (criterion: BG carries both FROM_DONOR and INTO_RECEIVER AND Projekt anchored to case_markdown dossier)",
+          "evidence_origin": "curated",
+          "migration_origin": "mig_repair_4_1_q1",
+          "evidence_confidence": "teilweise_belegt",
+          "id": "r_p_association_house_plauen__HAT_BAUTEILGRUPPE__bg_reuse_stahlbeton_mehrere_plauen_iw73_6_precast_components",
+          "evidence_excerpt": "Projekt Vereinshaus Plauen [p_association_house_plauen] Section 5 (Reuse-Bauteilgruppen) [q_association_house_plauen_md]: Bauteilgruppe bg_reuse_stahlbeton_mehrere_plauen_iw73_6_precast_components ist dossier-verankert mit 1 FROM_DONOR + 1 INTO_RECEIVER Verknüpfung(en)."
+        },
+        "checks_per_sample": {
+          "basis_cell_citation": true,
+          "confidence_in_enum": true,
+          "topology_donor_and_receiver": true,
+          "ok": true
+        }
+      },
+      {
+        "projekt_id": "p_awm_muenster_circular_office",
+        "bg_id": "bg_reuse_glas_mehrere_awm_partitions_doors",
+        "donor_count": 1,
+        "donor_sample": [
+          "bw_behrensbau_duesseldorf_donor"
+        ],
+        "receiver_count": 1,
+        "receiver_sample": [
+          "bw_awm_muenster_admin_building"
+        ],
+        "props": {
+          "evidence_source_id": "q_awm_muenster_circular_office_md",
+          "evidence_basis": "cell_citation",
+          "derivation_note": "promoted derived->curated by mig_repair_4_1_q1 (criterion: BG carries both FROM_DONOR and INTO_RECEIVER AND Projekt anchored to case_markdown dossier)",
+          "evidence_origin": "curated",
+          "migration_origin": "mig_repair_4_1_q1",
+          "evidence_confidence": "teilweise_belegt",
+          "id": "r_p_awm_muenster_circular_office__HAT_BAUTEILGRUPPE__bg_reuse_glas_mehrere_awm_partitions_doors",
+          "evidence_excerpt": "Projekt AWM Münster – zirkulärer… [p_awm_muenster_circular_office] Section 5 (Reuse-Bauteilgruppen) [q_awm_muenster_circular_office_md]: Bauteilgruppe bg_reuse_glas_mehrere_awm_partitions_doors ist dossier-verankert mit 1 FROM_DONOR + 1 INTO_RECEIVER Verknüpfung(en)."
+        },
+        "checks_per_sample": {
+          "basis_cell_citation": true,
+          "confidence_in_enum": true,
+          "topology_donor_and_receiver": true,
+          "ok": true
+        }
+      }
+    ]
+  },
+  "verdict_per_check": {
+    "10_phase_4_2_done_flag": true,
+    "11_legacy_donor_receiver_zero": true,
+    "12_new_donor_receiver_thresholds": true,
+    "13_donor_receiver_samples": true,
+    "14_hat_bauteilgruppe_curated_min_200": true,
+    "15_promoted_hat_bauteilgruppe_attributes": true,
+    "1_migrations_present": true,
+    "2_flags_present": true,
+    "3_claim_edges_evidence_origin_null": true,
+    "4_evidence_origin_enum_strict": true,
+    "5_evidence_confidence_enum_strict": true,
+    "6_curated_requires_excerpt": true,
+    "7_bookkeeping_requires_derived": true,
+    "8_excerpt_no_propagated_from": true,
+    "9_matrix_dump": true
+  },
+  "overall_verdict": "PASS",
+  "fail_count": 0,
+  "pass_count": 15
+}

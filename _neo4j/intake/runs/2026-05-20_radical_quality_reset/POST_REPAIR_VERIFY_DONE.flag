@@ -1,0 +1,81 @@
+{
+  "verifier": "post_repair_verification",
+  "timestamp_utc": "2026-05-21T07:47:08+00:00",
+  "database": "mit-bestand",
+  "mode": "read-only",
+  "overall_verdict": "PASS",
+  "section_passes": {
+    "phase_1_2": true,
+    "phase_1_5_1_6": true,
+    "phase_2_5": true,
+    "phase_4_1_and_4c_and_q1": true,
+    "phase_2_7_and_5_1": true
+  },
+  "checks_total": 28,
+  "checks_passed": 28,
+  "checks_failed": 0,
+  "remaining_failures": [],
+  "consumed_repair_flags": [
+    "PHASE_1_2_REPAIR_DONE.flag",
+    "PHASE_1_5_1_6_REPAIR_DONE.flag",
+    "PHASE_2_5_REPAIR_DONE.flag",
+    "PHASE_4_1_Q1_REPAIR_DONE.flag",
+    "PHASE_2_7_5_1_REPAIR_DONE.flag"
+  ],
+  "artifacts": {
+    "report_md": "reports/post_repair_verification.md",
+    "raw_json": "logs/post_repair_verify.json",
+    "verifier_script": "logs/post_repair_verify.py",
+    "q1_probe": "logs/post_repair_q1_probe.py"
+  },
+  "key_counts": {
+    "phase_1_2": {
+      "quelle_with_anchor_ids": 0,
+      "belegt_in_to_ontology_anchor": 0,
+      "ontology_anchor_count": 2,
+      "anchored_by_count": 703
+    },
+    "phase_1_5_1_6": {
+      "norm_din_18940_remaining": 0,
+      "bauburo_in_situ_remaining": 0,
+      "Bellastock_remaining": 0,
+      "case_insensitive_actor_dup_ordered_pairs": 0,
+      "akteur_count": 648
+    },
+    "phase_2_5": {
+      "rechtlichebedingung_count": 0,
+      "layer_count": 0,
+      "lebenszyklusmodul_count": 0,
+      "zertifizierungbewertungssystem_count": 0,
+      "tool_count": 0
+    },
+    "phase_4_1_and_4c_and_q1": {
+      "curated_without_excerpt": 0,
+      "origin_enum_violations": 0,
+      "confidence_enum_violations": 0,
+      "bookkeeping_not_derived": 0,
+      "quelle_external_sources_nonnull": 0,
+      "rel_polluted_keys": 0,
+      "projekt_actor_registry_belegt_in": 0,
+      "q1_canonical_rows": 266,
+      "hat_bauteilgruppe_curated": 254,
+      "zitiert_quelle_total": 1470
+    },
+    "phase_2_7_and_5_1": {
+      "projekt_distinct_keys": 22,
+      "projekt_max_keys_per_node": 18,
+      "projekt_sample_5_keys": [14, 13, 13, 15, 13],
+      "projekt_with_quality_tier_facts": 101,
+      "projekt_with_legacy_scalars": 0,
+      "projekt_with_quality_tier": 101,
+      "projekt_total": 101,
+      "tier_distribution": {
+        "tier_1_decision_grade": 11,
+        "tier_2_documentation_only": 68,
+        "tier_3_stub": 22
+      },
+      "p_circle_house_labels": ["Projekt"],
+      "p_circle_house_quality_tier": "tier_2_documentation_only"
+    }
+  }
+}

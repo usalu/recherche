@@ -1,0 +1,835 @@
+{
+  "verifier": "Pass-2 Detailed Verifier 7 of 12",
+  "phase": "2.4 + 2.7 (incl. panel repair)",
+  "database": "mit-bestand",
+  "driver_uri": "bolt://localhost:7687",
+  "run_dir": "E:\\recherche\\_neo4j\\intake\\runs\\2026-05-20_radical_quality_reset",
+  "phase_2_4": {
+    "check_1_flag_present": {
+      "expected": "present",
+      "got": true,
+      "size_bytes": 3992,
+      "pass": true
+    },
+    "check_2_year_completed": {
+      "expected": ">= 35",
+      "got": 42,
+      "pass": true
+    },
+    "check_3_area_m2_gross": {
+      "expected": ">= 30",
+      "got": 36,
+      "pass": true
+    },
+    "check_4_cost_facts_nonempty": {
+      "expected": ">= 50",
+      "got": 73,
+      "pass": true
+    },
+    "check_5_no_costentry_no_reuseshare": {
+      "expected": "CostEntry==0 AND ReuseShare==0",
+      "CostEntry": 0,
+      "ReuseShare": 0,
+      "pass": true
+    },
+    "check_6_reuse_share_facts_nonempty": {
+      "expected": ">= 4 (Q3 baseline)",
+      "got": 23,
+      "pass": true
+    },
+    "check_7_no_legacy_year_area_counter": {
+      "13_year_fields": {
+        "list": [
+          "jahr_fertigstellung",
+          "fertigstellung_jahr",
+          "jahr_beginn",
+          "jahr",
+          "jahr_fertigstellung_geplant",
+          "jahr_eroeffnung",
+          "fertigstellung_geplant_jahr",
+          "jahr_start",
+          "bau_jahr_von",
+          "jahr_fertigstellung_max",
+          "baujahr",
+          "baujahr_von",
+          "entwurfsjahr"
+        ],
+        "projekt_with_any": 0,
+        "per_key_counts": [
+          {
+            "k": "jahr_fertigstellung",
+            "n": 0
+          },
+          {
+            "k": "fertigstellung_jahr",
+            "n": 0
+          },
+          {
+            "k": "jahr_beginn",
+            "n": 0
+          },
+          {
+            "k": "jahr",
+            "n": 0
+          },
+          {
+            "k": "jahr_fertigstellung_geplant",
+            "n": 0
+          },
+          {
+            "k": "jahr_eroeffnung",
+            "n": 0
+          },
+          {
+            "k": "fertigstellung_geplant_jahr",
+            "n": 0
+          },
+          {
+            "k": "jahr_start",
+            "n": 0
+          },
+          {
+            "k": "bau_jahr_von",
+            "n": 0
+          },
+          {
+            "k": "jahr_fertigstellung_max",
+            "n": 0
+          },
+          {
+            "k": "baujahr",
+            "n": 0
+          },
+          {
+            "k": "baujahr_von",
+            "n": 0
+          },
+          {
+            "k": "entwurfsjahr",
+            "n": 0
+          }
+        ],
+        "pass": true
+      },
+      "11_area_fields": {
+        "list": [
+          "flaeche_m2",
+          "flaeche_m2_min",
+          "flaeche_m2_max",
+          "bgf_m2",
+          "flaeche_m2_alternative",
+          "nutzflaeche_m2",
+          "grundstueck_m2",
+          "flaeche_sqft_min",
+          "flaeche_sqft_max",
+          "hoehe_m",
+          "breite_m"
+        ],
+        "projekt_with_any": 0,
+        "per_key_counts": [
+          {
+            "k": "flaeche_m2",
+            "n": 0
+          },
+          {
+            "k": "flaeche_m2_min",
+            "n": 0
+          },
+          {
+            "k": "flaeche_m2_max",
+            "n": 0
+          },
+          {
+            "k": "bgf_m2",
+            "n": 0
+          },
+          {
+            "k": "flaeche_m2_alternative",
+            "n": 0
+          },
+          {
+            "k": "nutzflaeche_m2",
+            "n": 0
+          },
+          {
+            "k": "grundstueck_m2",
+            "n": 0
+          },
+          {
+            "k": "flaeche_sqft_min",
+            "n": 0
+          },
+          {
+            "k": "flaeche_sqft_max",
+            "n": 0
+          },
+          {
+            "k": "hoehe_m",
+            "n": 0
+          },
+          {
+            "k": "breite_m",
+            "n": 0
+          }
+        ],
+        "pass": true
+      },
+      "30_counter_fields": {
+        "list": [
+          "ursprungs_deckenplatten_anzahl",
+          "reuse_deckenplatten_anzahl",
+          "ursprungs_innenwandplatten_anzahl",
+          "reuse_wandplatten_anzahl",
+          "wiederverwendete_fertigteile_anzahl",
+          "fenster_anzahl",
+          "fensterrahmen_anzahl",
+          "holztueren_anzahl",
+          "leuchten_anzahl",
+          "stahltraeger_anzahl",
+          "anzahl_stuetzen",
+          "anzahl_schalter",
+          "pv_paneele_anzahl",
+          "led_light_tubes_anzahl",
+          "teppichfliesen_anzahl",
+          "granitfliesen_anzahl",
+          "demontierte_bodenelemente_anzahl",
+          "demontierte_fassadenelemente_anzahl",
+          "hcs_anzahl",
+          "anzahl_reuse_slabs",
+          "reuse_hohlkoerperdecken_anzahl",
+          "hohlkoerperdecken_anzahl",
+          "wohnungen_anzahl",
+          "donor_bauwerke_anzahl",
+          "videokassetten_anzahl",
+          "elemente_anzahl",
+          "module_anzahl",
+          "tueren_anzahl",
+          "stuetzen_anzahl",
+          "tragwerk_komponenten_anzahl"
+        ],
+        "projekt_with_any": 0,
+        "per_key_counts": [
+          {
+            "k": "ursprungs_deckenplatten_anzahl",
+            "n": 0
+          },
+          {
+            "k": "reuse_deckenplatten_anzahl",
+            "n": 0
+          },
+          {
+            "k": "ursprungs_innenwandplatten_anzahl",
+            "n": 0
+          },
+          {
+            "k": "reuse_wandplatten_anzahl",
+            "n": 0
+          },
+          {
+            "k": "wiederverwendete_fertigteile_anzahl",
+            "n": 0
+          },
+          {
+            "k": "fenster_anzahl",
+            "n": 0
+          },
+          {
+            "k": "fensterrahmen_anzahl",
+            "n": 0
+          },
+          {
+            "k": "holztueren_anzahl",
+            "n": 0
+          },
+          {
+            "k": "leuchten_anzahl",
+            "n": 0
+          },
+          {
+            "k": "stahltraeger_anzahl",
+            "n": 0
+          },
+          {
+            "k": "anzahl_stuetzen",
+            "n": 0
+          },
+          {
+            "k": "anzahl_schalter",
+            "n": 0
+          },
+          {
+            "k": "pv_paneele_anzahl",
+            "n": 0
+          },
+          {
+            "k": "led_light_tubes_anzahl",
+            "n": 0
+          },
+          {
+            "k": "teppichfliesen_anzahl",
+            "n": 0
+          },
+          {
+            "k": "granitfliesen_anzahl",
+            "n": 0
+          },
+          {
+            "k": "demontierte_bodenelemente_anzahl",
+            "n": 0
+          },
+          {
+            "k": "demontierte_fassadenelemente_anzahl",
+            "n": 0
+          },
+          {
+            "k": "hcs_anzahl",
+            "n": 0
+          },
+          {
+            "k": "anzahl_reuse_slabs",
+            "n": 0
+          },
+          {
+            "k": "reuse_hohlkoerperdecken_anzahl",
+            "n": 0
+          },
+          {
+            "k": "hohlkoerperdecken_anzahl",
+            "n": 0
+          },
+          {
+            "k": "wohnungen_anzahl",
+            "n": 0
+          },
+          {
+            "k": "donor_bauwerke_anzahl",
+            "n": 0
+          },
+          {
+            "k": "videokassetten_anzahl",
+            "n": 0
+          },
+          {
+            "k": "elemente_anzahl",
+            "n": 0
+          },
+          {
+            "k": "module_anzahl",
+            "n": 0
+          },
+          {
+            "k": "tueren_anzahl",
+            "n": 0
+          },
+          {
+            "k": "stuetzen_anzahl",
+            "n": 0
+          },
+          {
+            "k": "tragwerk_komponenten_anzahl",
+            "n": 0
+          }
+        ],
+        "pass": true
+      },
+      "structural_pattern_residual_keys_on_Projekt": [],
+      "structural_pass": true,
+      "pass": true
+    }
+  },
+  "phase_2_7": {
+    "check_8_flags_present": {
+      "PHASE_2_7_DONE.flag": {
+        "present": true,
+        "size_bytes": 3992
+      },
+      "PHASE_2_7_5_1_REPAIR_DONE.flag": {
+        "present": true,
+        "size_bytes": 1714
+      },
+      "pass": true
+    },
+    "check_9_projekt_distinct_keys": {
+      "expected": "<= 25 (target 22)",
+      "got": 22,
+      "distinct_keys_list": [
+        "_archive",
+        "actor_registry_loader_seen",
+        "actor_registry_mentioned",
+        "area_m2_gross",
+        "area_m2_range_max",
+        "area_m2_range_min",
+        "bewertung",
+        "co2_facts",
+        "cost_facts",
+        "id",
+        "name",
+        "name_full",
+        "node_role",
+        "nutzung_text",
+        "project_category",
+        "projektstatus_text",
+        "quality_tier",
+        "quality_tier_facts",
+        "raw_year_fields",
+        "reuse_share_facts",
+        "source_scope",
+        "year_completed"
+      ],
+      "matches_22": true,
+      "pass": true
+    },
+    "check_10_max_per_node_keys": {
+      "expected": "<= 18",
+      "max_per_node_keys": 18,
+      "sample_top10_by_n_keys": [
+        {
+          "id": "p_crclr_house_impact_hub_berlin",
+          "n_keys": 18
+        },
+        {
+          "id": "p_bluecity_offices_rotterdam",
+          "n_keys": 17
+        },
+        {
+          "id": "p_biopartner_5_leiden_oegstgeest",
+          "n_keys": 17
+        },
+        {
+          "id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+          "n_keys": 16
+        },
+        {
+          "id": "p_k118_kopfbau_halle_118_winterthur",
+          "n_keys": 16
+        },
+        {
+          "id": "p_big_dig_house_lexington_massachusetts",
+          "n_keys": 16
+        },
+        {
+          "id": "p_elys_kultur_gewerbehaus_basel",
+          "n_keys": 16
+        },
+        {
+          "id": "p_chiro_d_itterbeek_dilbeek",
+          "n_keys": 16
+        },
+        {
+          "id": "p_impact_hub_berlin_crclr_fitout",
+          "n_keys": 16
+        },
+        {
+          "id": "p_peoples_pavilion_eindhoven",
+          "n_keys": 16
+        }
+      ],
+      "all_sample_le_18": true,
+      "pass": true
+    },
+    "check_11_bauteilgruppe_distinct_keys": {
+      "expected": "<= 30",
+      "got_distinct": 25,
+      "max_per_node_keys": 17,
+      "pass": true
+    },
+    "check_12_quality_tier_facts_nonnull": {
+      "expected": "== 101",
+      "got": 101,
+      "projekt_total": 101,
+      "pass": true
+    },
+    "check_13_legacy_quality_tier_scalars": {
+      "expected": "== 0",
+      "got": 0,
+      "legacy_scalars_list": [
+        "quality_tier_computed_by",
+        "quality_tier_has_components",
+        "quality_tier_has_evidence",
+        "quality_tier_has_land",
+        "quality_tier_has_metric",
+        "quality_tier_has_year",
+        "quality_tier_n_bg",
+        "quality_tier_n_bg_quantified",
+        "quality_tier_n_curated_evidence"
+      ],
+      "per_key_counts": [
+        {
+          "k": "quality_tier_computed_by",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_has_components",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_has_evidence",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_has_land",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_has_metric",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_has_year",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_n_bg",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_n_bg_quantified",
+          "n": 0
+        },
+        {
+          "k": "quality_tier_n_curated_evidence",
+          "n": 0
+        }
+      ],
+      "pass": true
+    },
+    "check_14_quelle_external_sources": {
+      "expected": "== 0",
+      "got": 0,
+      "pass": true
+    },
+    "check_15_edges_with_url_http_source_file_external_sources": {
+      "expected": "== 0",
+      "got": 0,
+      "offending_edge_property_keys": [],
+      "pass": true
+    },
+    "check_16_akteur_raw_role_evidence": {
+      "expected": ">= 150",
+      "got": 155,
+      "akteur_total": 648,
+      "pass": true
+    },
+    "check_17_sample_5_full_dump": {
+      "sample_5": [
+        {
+          "id": "p_55_great_suffolk_street_london",
+          "n_keys": 14,
+          "keys_on_node": [
+            "_archive",
+            "area_m2_gross",
+            "bewertung",
+            "co2_facts",
+            "cost_facts",
+            "id",
+            "name",
+            "name_full",
+            "quality_tier",
+            "quality_tier_facts",
+            "raw_year_fields",
+            "reuse_share_facts",
+            "source_scope",
+            "year_completed"
+          ],
+          "has_archive": true,
+          "has_quality_tier_facts": true,
+          "has_quality_tier": true,
+          "properties_truncated": {
+            "cost_facts": [
+              "{\"kennwert\": \"CO₂-Einsparung Stahlreuse\", \"wert\": \"ca. 50\", \"einheit\": \"t CO₂ / CO₂e\", \"method\": \"Vergleich zu A1-A3 2.5 kgCO₂e/kg steel\", \"bilanzgrenze\": \"Stahl des externen Kerns\", \"source_id\": \"q_55_great_suffolk_street_london_md\", \"confidence\": \"teilweise_belegt\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Kosten\", \"wert\": \"unbekannt\", \"einheit\": \"—\", \"method\": \"—\", \"bilanzgrenze\": \"—\", \"source_id\": \"q_55_great_suffolk_street_london_md\", \"confidence\": \"unklar\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "name_full": "55 Great Suffolk Street, London",
+            "year_completed": 2024,
+            "reuse_share_facts": [
+              "{\"basis\": \"reuse_anteil_prozent\", \"value\": 97, \"unit\": \"%\", \"source_id\": null}",
+              "{\"kennwert\": \"Anteil reused steel am Kernstahl\", \"wert\": \"97\", \"einheit\": \"%\", \"method\": \"20.35/20.98 t\", \"bilanzgrenze\": \"Neuer externer Kern\", \"source_id\": \"q_55_great_suffolk_street_london_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "raw_year_fields": "{\"jahr_fertigstellung\": 2024}",
+            "quality_tier_facts": "{\"computed_by\":\"mig_5_1_quality_tier\",\"has_land\":true,\"n_bg_quantified\":1,\"n_curated_evidence\":0,\"repaired_by\":\"mig_repair_2_7_5_1_quality_tier_panel\",\"has_components\":false,\"has_metric\":true,\"has_evidence\":false,\"has_year\":true,\"n_bg\":1,\"repaired_at\":\"2026-05-21\"}",
+            "area_m2_gross": 1412,
+            "co2_facts": [
+              "{\"basis\": \"co2_einsparung_t\", \"value\": 50, \"unit\": \"t\", \"source_id\": null}"
+            ],
+            "name": "55 Great Suffolk Street",
+            "source_scope": "archive_scan",
+            "id": "p_55_great_suffolk_street_london",
+            "_archive": "{\"note\":\"Retrofit/extension with reused steel in new external service and circulation core; retained warehouse is not counted as direct reuse.\",\"jahr_fertigstellung_erwartet\":2024,\"lca_module_scope\":[\"a1_a5\",\"A1_A3\",\"A4_A5\"],\"embodied_carbon_a1_a5_kg_per_m2\":386,\"quantitative_quellen_konflikt\":false,\"co2_einsparung_stahl_t\":50,\"upfront_embodied_carbon_kgco2e_m2_a1_a5\":386,\"property_source\":\"ASBP case study + NLA + project research file\"}",
+            "bewertung": 4,
+            "quality_tier": "tier_2_documentation_only"
+          }
+        },
+        {
+          "id": "p_association_house_groeditz",
+          "n_keys": 13,
+          "keys_on_node": [
+            "_archive",
+            "bewertung",
+            "co2_facts",
+            "cost_facts",
+            "id",
+            "name",
+            "name_full",
+            "quality_tier",
+            "quality_tier_facts",
+            "raw_year_fields",
+            "reuse_share_facts",
+            "source_scope",
+            "year_completed"
+          ],
+          "has_archive": true,
+          "has_quality_tier_facts": true,
+          "has_quality_tier": true,
+          "properties_truncated": {
+            "cost_facts": [
+              "{\"kennwert\": \"CO₂-Einsparung\", \"wert\": \"unbekannt\", \"einheit\": \"kg CO₂e\", \"method\": \"unbekannt\", \"bilanzgrenze\": \"unbekannt\", \"source_id\": \"q_association_house_groeditz_md\", \"confidence\": \"unklar\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Kosten\", \"wert\": \"unbekannt\", \"einheit\": \"EUR\", \"method\": \"unbekannt\", \"bilanzgrenze\": \"unbekannt\", \"source_id\": \"q_association_house_groeditz_md\", \"confidence\": \"unklar\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "name_full": "Association house, Gröditz",
+            "year_completed": 2007,
+            "reuse_share_facts": [],
+            "raw_year_fields": "{\"jahr_fertigstellung\": 2007}",
+            "quality_tier_facts": "{\"computed_by\":\"mig_5_1_quality_tier\",\"has_land\":true,\"n_bg_quantified\":2,\"n_curated_evidence\":23,\"repaired_by\":\"mig_repair_2_7_5_1_quality_tier_panel\",\"has_components\":false,\"has_metric\":true,\"has_evidence\":true,\"has_year\":true,\"n_bg\":2,\"repaired_at\":\"2026-05-21\"}",
+            "co2_facts": [
+              "{\"basis\": \"transportdistanz_km\", \"value\": 2.5, \"unit\": \"km\", \"source_id\": null}"
+            ],
+            "name": "Vereinshaus Gröditz",
+            "source_scope": "archive_scan",
+            "id": "p_association_house_groeditz",
+            "_archive": "{\"note\":\"Thinner representation of built sports/association house using reused precast concrete elements from two donor sources.\"}",
+            "bewertung": 4,
+            "quality_tier": "tier_2_documentation_only"
+          }
+        },
+        {
+          "id": "p_association_house_plauen",
+          "n_keys": 13,
+          "keys_on_node": [
+            "_archive",
+            "bewertung",
+            "co2_facts",
+            "cost_facts",
+            "id",
+            "name",
+            "name_full",
+            "quality_tier",
+            "quality_tier_facts",
+            "raw_year_fields",
+            "reuse_share_facts",
+            "source_scope",
+            "year_completed"
+          ],
+          "has_archive": true,
+          "has_quality_tier_facts": true,
+          "has_quality_tier": true,
+          "properties_truncated": {
+            "cost_facts": [
+              "{\"kennwert\": \"CO₂-Einsparung\", \"wert\": \"unbekannt\", \"einheit\": \"kg CO₂e\", \"method\": \"unbekannt\", \"bilanzgrenze\": \"unbekannt\", \"source_id\": \"q_association_house_plauen_md\", \"confidence\": \"unklar\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Kosten\", \"wert\": \"unbekannt\", \"einheit\": \"EUR\", \"method\": \"unbekannt\", \"bilanzgrenze\": \"unbekannt\", \"source_id\": \"q_association_house_plauen_md\", \"confidence\": \"unklar\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "name_full": "Association house, Plauen",
+            "year_completed": 2007,
+            "reuse_share_facts": [],
+            "raw_year_fields": "{\"jahr_fertigstellung\": 2007}",
+            "quality_tier_facts": "{\"computed_by\":\"mig_5_1_quality_tier\",\"has_land\":true,\"n_bg_quantified\":1,\"n_curated_evidence\":28,\"repaired_by\":\"mig_repair_2_7_5_1_quality_tier_panel\",\"has_components\":false,\"has_metric\":true,\"has_evidence\":true,\"has_year\":true,\"n_bg\":1,\"repaired_at\":\"2026-05-21\"}",
+            "co2_facts": [
+              "{\"basis\": \"transportdistanz_km\", \"value\": 7, \"unit\": \"km\", \"source_id\": null}"
+            ],
+            "name": "Vereinshaus Plauen",
+            "source_scope": "archive_scan",
+            "id": "p_association_house_plauen",
+            "_archive": "{\"note\":\"Thinner representation of built sport/association house reusing IW73/6 precast concrete components.\"}",
+            "bewertung": 4,
+            "quality_tier": "tier_2_documentation_only"
+          }
+        },
+        {
+          "id": "p_awm_muenster_circular_office",
+          "n_keys": 15,
+          "keys_on_node": [
+            "_archive",
+            "actor_registry_loader_seen",
+            "area_m2_gross",
+            "bewertung",
+            "co2_facts",
+            "cost_facts",
+            "id",
+            "name",
+            "name_full",
+            "quality_tier",
+            "quality_tier_facts",
+            "raw_year_fields",
+            "reuse_share_facts",
+            "source_scope",
+            "year_completed"
+          ],
+          "has_archive": true,
+          "has_quality_tier_facts": true,
+          "has_quality_tier": true,
+          "properties_truncated": {
+            "cost_facts": [
+              "{\"kennwert\": \"CO₂-Einsparung\", \"wert\": \"13,32\", \"einheit\": \"t CO₂e\", \"method\": \"zirkuläre Ökobilanzierung\", \"bilanzgrenze\": \"gegenüber konventioneller Bauweise\", \"source_id\": \"q_awm_muenster_circular_office_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Wassereinsparung\", \"wert\": \"32\", \"einheit\": \"%\", \"method\": \"AWM-Angabe\", \"bilanzgrenze\": \"gegenüber konventioneller Bauweise\", \"source_id\": \"q_awm_muenster_circular_office_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"CO₂-Einsparung Glastrennwände\", \"wert\": \"4,39\", \"einheit\": \"t CO₂\", \"method\": \"AWM Materialseite\", \"bilanzgrenze\": \"Glastrennwände\", \"source_id\": \"q_awm_muenster_circular_office_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"CO₂-Einsparung Hanfkalk\", \"wert\": \"1,7\", \"einheit\": \"t CO₂e\", \"method\": \"AWM Materialseite\", \"bilanzgrenze\": \"Vergleich zu Kalksandstein\", \"source_id\": \"q_awm_muenster_circular_office_md\", \"confidence\": \"unklar\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Kostenwirkung\", \"wert\": \"vergleichbare Kosten\", \"einheit\": \"qualitativ\", \"method\": \"AWM-Zitat\", \"bilanzgrenze\": \"Gesamtprojekt\", \"source_id\": \"q_awm_muenster_circular_office_md\", \"confidence\": \"teilweise_belegt\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "actor_registry_loader_seen": "agent10",
+            "name_full": "AWM Münster – zirkulärer Büroausbau 3. OG",
+            "year_completed": 2023,
+            "reuse_share_facts": [],
+            "raw_year_fields": "{\"jahr_fertigstellung\": 2023}",
+            "quality_tier_facts": "{\"computed_by\":\"mig_5_1_quality_tier\",\"has_land\":true,\"n_bg_quantified\":0,\"n_curated_evidence\":0,\"repaired_by\":\"mig_repair_2_7_5_1_quality_tier_panel\",\"has_components\":true,\"has_metric\":true,\"has_evidence\":false,\"has_year\":true,\"n_bg\":5,\"repaired_at\":\"2026-05-21\"}",
+            "area_m2_gross": 250,
+            "co2_facts": [
+              "{\"basis\": \"co2_einsparung_t\", \"value\": 13.32, \"unit\": \"t\", \"source_id\": null}",
+              "{\"basis\": \"co2_reduktion_prozent\", \"value\": 82, \"unit\": \"%\", \"source_id\": null}",
+              "{\"kennwert\": \"CO₂-Reduktion\", \"wert\": \"82\", \"einheit\": \"%\", \"method\": \"zirkuläre Ökobilanzierung\", \"bilanzgrenze\": \"gegenüber konventioneller Bauweise\", \"source_id\": \"q_awm_muenster_circular_office_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "name": "AWM Münster – zirkulärer…",
+            "source_scope": "archive_scan",
+            "id": "p_awm_muenster_circular_office",
+            "_archive": "{\"abfallvermeidung_t\":6.9,\"note\":\"Comparison/appendix case; small circular interior fit-out. Loose furniture and existing-building retention are not counted as direct reuse.\",\"wiedergewonnene_materialien_t\":6.9,\"circular_or_reuse_products_prozent\":95.6,\"wasser_einsparung_prozent\":32}",
+            "bewertung": 2,
+            "quality_tier": "tier_2_documentation_only"
+          }
+        },
+        {
+          "id": "p_bedzed_london_hackbridge",
+          "n_keys": 13,
+          "keys_on_node": [
+            "_archive",
+            "bewertung",
+            "co2_facts",
+            "cost_facts",
+            "id",
+            "name",
+            "name_full",
+            "quality_tier",
+            "quality_tier_facts",
+            "raw_year_fields",
+            "reuse_share_facts",
+            "source_scope",
+            "year_completed"
+          ],
+          "has_archive": true,
+          "has_quality_tier_facts": true,
+          "has_quality_tier": true,
+          "properties_truncated": {
+            "cost_facts": [
+              "{\"kennwert\": \"Kosten reclaimed steel\", \"wert\": \"300\", \"einheit\": \"£/t\", \"method\": \"Kostenvergleich\", \"bilanzgrenze\": \"Stahlbeschaffung\", \"source_id\": \"q_bedzed_london_hackbridge_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Vergleichspreis neuer Stahl\", \"wert\": \"313\", \"einheit\": \"£/t\", \"method\": \"Kostenvergleich\", \"bilanzgrenze\": \"Stahlbeschaffung\", \"source_id\": \"q_bedzed_london_hackbridge_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Transportbedingte CO₂-Einsparung durch lokale Beschaffung\", \"wert\": \"120\", \"einheit\": \"t CO₂\", \"method\": \"Vergleich zu Durchschnittsdistanzen\", \"bilanzgrenze\": \"Transport / Materialien\", \"source_id\": \"q_bedzed_london_hackbridge_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "name_full": "BedZED / Beddington Zero Energy Development",
+            "year_completed": 2002,
+            "reuse_share_facts": [
+              "{\"kennwert\": \"Anteil reclaimed steel am tragenden Stahl\", \"wert\": \"95\", \"einheit\": \"%\", \"method\": \"Materialreport\", \"bilanzgrenze\": \"Tragender Stahl\", \"source_id\": \"q_bedzed_london_hackbridge_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}",
+              "{\"kennwert\": \"Anteil reclaimed/recycled materials\", \"wert\": \"15\", \"einheit\": \"% Gewicht\", \"method\": \"BioRegional Materials Report\", \"bilanzgrenze\": \"Gesamtmaterial\", \"source_id\": \"q_bedzed_london_hackbridge_md\", \"confidence\": \"belegt\", \"loader\": \"agent9_phase4b1\"}"
+            ],
+            "raw_year_fields": "{\"jahr_fertigstellung\": 2002, \"jahr_beginn\": 2000}",
+            "quality_tier_facts": "{\"computed_by\":\"mig_5_1_quality_tier\",\"has_land\":true,\"n_bg_quantified\":1,\"n_curated_evidence\":0,\"repaired_by\":\"mig_repair_2_7_5_1_quality_tier_panel\",\"has_components\":true,\"has_metric\":true,\"has_evidence\":false,\"has_year\":true,\"n_bg\":3,\"repaired_at\":\"2026-05-21\"}",
+            "co2_facts": [],
+            "name": "BedZED",
+            "source_scope": "archive_scan",
+            "id": "p_bedzed_london_hackbridge",
+            "_archive": "{\"wiederverwendete_recycelte_materialien_prozent\":15,\"transport_co2_einsparung_t\":120,\"note\":\"Early mixed-use eco-quarter; direct reuse scoring focuses on reused structural steel and fixed components, not general recycled material.\",\"flaeche_arbeitsbereich_m2_min\":1405,\"flaeche_arbeitsbereich_m2_max\":2500,\"lokale_materialien_prozent\":52,\"wohnungen_anzahl\":82,\"wiederverwendete_recycelte_materialien_t\":3404}",
+            "bewertung": 5,
+            "quality_tier": "tier_2_documentation_only"
+          }
+        }
+      ],
+      "all_have_archive_and_facts": true,
+      "all_n_keys_le_18": true
+    }
+  },
+  "verdict": {
+    "overall_pass": true,
+    "n_checks_total": 16,
+    "n_checks_passed": 16,
+    "per_check": [
+      {
+        "check": "phase_2_4.check_1_flag_present",
+        "pass": true
+      },
+      {
+        "check": "phase_2_4.check_2_year_completed",
+        "pass": true
+      },
+      {
+        "check": "phase_2_4.check_3_area_m2_gross",
+        "pass": true
+      },
+      {
+        "check": "phase_2_4.check_4_cost_facts_nonempty",
+        "pass": true
+      },
+      {
+        "check": "phase_2_4.check_5_no_costentry_no_reuseshare",
+        "pass": true
+      },
+      {
+        "check": "phase_2_4.check_6_reuse_share_facts_nonempty",
+        "pass": true
+      },
+      {
+        "check": "phase_2_4.check_7_no_legacy_year_area_counter",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_8_flags_present",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_9_projekt_distinct_keys",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_10_max_per_node_keys",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_11_bauteilgruppe_distinct_keys",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_12_quality_tier_facts_nonnull",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_13_legacy_quality_tier_scalars",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_14_quelle_external_sources",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_15_edges_with_url_http_source_file_external_sources",
+        "pass": true
+      },
+      {
+        "check": "phase_2_7.check_16_akteur_raw_role_evidence",
+        "pass": true
+      }
+    ]
+  },
+  "counts_summary": {
+    "projekt_total": 101,
+    "projekt_year_completed_filled": 42,
+    "projekt_area_m2_gross_filled": 36,
+    "projekt_cost_facts_nonempty": 73,
+    "projekt_reuse_share_facts_nonempty": 23,
+    "projekt_distinct_keys": 22,
+    "projekt_max_per_node_keys": 18,
+    "projekt_with_quality_tier_facts": 101,
+    "projekt_with_legacy_quality_tier_scalar": 0,
+    "bauteilgruppe_distinct_keys": 25,
+    "quelle_external_sources_nonnull": 0,
+    "edges_with_url_http_etc": 0,
+    "akteur_raw_role_evidence_nonempty": 155,
+    "akteur_total": 648,
+    "cost_entry_label_count": 0,
+    "reuse_share_label_count": 0
+  }
+}
