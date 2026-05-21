@@ -18,7 +18,7 @@ from neo4j import GraphDatabase
 
 THIS_FILE = Path(__file__).resolve()
 RUN_DIR = THIS_FILE.parents[1]
-REPO_ROOT = THIS_FILE.parents[5]
+REPO_ROOT = THIS_FILE.parents[6]
 sys.path.insert(0, str(REPO_ROOT / "_scripts"))
 
 # noinspection PyUnresolvedReferences
@@ -144,7 +144,8 @@ def run_audits(session) -> tuple[bool, dict]:
 
 
 def run_migration():
-    conn = resolve_connection()
+    uri, user, password, _db = resolve_connection()
+    conn = {"uri": uri, "user": user, "password": password, "database": "mit-bestand"}
     driver = GraphDatabase.driver(conn["uri"], auth=(conn["user"], conn["password"]))
 
     migration_path = MIG_DIR / "mig_r5_bg_disambiguation.cypher"
@@ -161,7 +162,7 @@ def run_migration():
             fp.write(line + "\n")
 
     log(f"Starting R5 migration ({len(statements)} statements)")
-    log(f"Database: {conn.get('database', 'mit-bestand')}; URI: {conn['uri']}")
+    log(f"Database: {conn['database']}; URI: {conn['uri']}")
 
     # Pre-probe (read-only)
     with driver.session(

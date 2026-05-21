@@ -23,9 +23,9 @@
 | When | Who | What | Branch / PR | Status | Notes |
 |---|---|---|---|---|---|
 | 2026-05-21 | agent_1 | R1 evidence_origin split + is_bookkeeping flag | `agent1/r1-r8-evidence` | PASS | source_curated=2803, topology_synthesized=18701, registry_derived=1727, inferred=1523, external_unfolded=269; is_bookkeeping=1022; all 8 gates PASS; D10 applied (registry_derived belegt→teilweise_belegt); D_derived_mapping: remaining derived→topology_synthesized |
-| _<fill>_ | agent_5 | R7.a dual-naming Quelle merge (16 pairs) | `agent5/r7-loader` | _<…>_ | _<merged_pairs=16>_ |
-| _<fill>_ | agent_5 | R7.b 7 orphan dossiers resolved | `agent5/r7-loader` | _<…>_ | _<3 Projekt + 4 Programm created>_ |
-| _<fill>_ | orchestrator | R5 bg_kind tagging (369 BGs) | `orch/r5-and-integrate` | _<…>_ | _<batch=X, partial_batch=Y, category=Z>_ |
+| 2026-05-21 | agent_5 | R7.a dual-naming Quelle merge (16 pairs) | `agent5/r7-loader` | PASS | merged=16, qu_dossier_remaining=0, q_md_with_qu_alias=16, case_markdown=100; pre=3849n/25107r, post=4091n/25365r |
+| 2026-05-21 | agent_5 | R7.b orphan dossiers resolved | `agent5/r7-loader` | PASS | 1 Programm created (p_eth_circular_construction_programme), 11 BELEGT_IN edges added; case_markdown_still_orphan=0; post=4092n/25377r |
+| 2026-05-21 | orchestrator | R5 bg_kind tagging (369 BGs) | `orch/r5-and-integrate` | PASS | batch=254, partial_batch=87, category=28; all 6 gates PASS; 369 nodes tagged; pre=4151n/25377r (no new nodes/rels) |
 
 ---
 
@@ -33,11 +33,11 @@
 
 | When | Who | What | Branch / PR | Status | Notes |
 |---|---|---|---|---|---|
-| _<fill>_ | agent_4 | R4 Kennwert lift (depends: R1) | `agent4/r4-kennwert` | _<…>_ | _<Kennwert created: reuse_share=X, co2_saving=Y, cost=Z>_ |
+| 2026-05-21 13:03 +02:00 | agent_4 | R4 Kennwert lift (depends: R1) | `agent4/r4-kennwert` | PASS | Kennwert=258 (reuse_share=39, co2_saving=46, cost=173); HAT_KENNWERT=258; all 13 gates PASS; Agent 5 R7.c can proceed |
 | 2026-05-21 | agent_2 | R2 restore demoted labels (depends: R1) | `agent2/r2-r10-restore` | PASS | Layer=6, LCAModule=5, RB=15 (9 journal+6 stubs), Cert=8, Tool secondary label=8; all 12 gates PASS; pre=3802n/25023r, post=3836n/25107r |
 | _<fill>_ | agent_3 | R3 HAS_BAUWERK + RELEVANT_FOR (depends: R1, R7.a/b) | `agent3/r3-r9-structure` | _<…>_ | _<HAS_BAUWERK=X (donor=A, receiver=B), RELEVANT_FOR=Y>_ |
 | _<fill>_ | agent_5 | R7.c Section-8 re-extraction (depends: R4) | `agent5/r7-loader` | _<…>_ | _<Kennwert from Section-8 = X>_ |
-| _<fill>_ | agent_5 | R7.d Quelle.text_content + drift validator | `agent5/r7-loader` | _<…>_ | _<116 case_markdown populated; drift findings=X>_ |
+| 2026-05-21 | agent_5 | R7.d Quelle.text_content + drift validator | `agent5/r7-loader` | PASS | text_content=95/100, missing_source=5 (bare-filename paths); drift DataIssue=59 (LebenszyklusModul=13, ZertifizierungBewertungssystem=13, EINGEBAUT_IN=13, others); post=4151n/25377r |
 
 ---
 

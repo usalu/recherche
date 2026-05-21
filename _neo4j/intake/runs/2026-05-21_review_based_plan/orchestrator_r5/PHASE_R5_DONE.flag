@@ -1,0 +1,45 @@
+{
+  "phase": "R5",
+  "agent": "orchestrator",
+  "completed_at_utc": "2026-05-21T11:15:22.613813+00:00",
+  "verified": true,
+  "verification_query_results": {
+    "a1_bg_without_kind": {
+      "value": 0,
+      "expectation": "expect_zero"
+    },
+    "a2_bg_kind_enum_violation": {
+      "value": 0,
+      "expectation": "expect_zero"
+    },
+    "a3_category_with_donor_or_receiver": {
+      "value": 0,
+      "expectation": "expect_zero"
+    },
+    "a4_batch_missing_topology": {
+      "value": 0,
+      "expectation": "expect_zero"
+    },
+    "a5_partial_batch_misclassified": {
+      "value": 0,
+      "expectation": "expect_zero"
+    },
+    "q1_canonical_batches_distinct": {
+      "value": 254,
+      "expectation": "expect_at_least_254"
+    }
+  },
+  "extra": {
+    "pre_distribution": {
+      "<null>": 369
+    },
+    "post_distribution": {
+      "batch": 254,
+      "partial_batch": 87,
+      "category": 28
+    },
+    "total_bauteilgruppe": 369,
+    "from_donor_edges": 286,
+    "into_receiver_edges": 349
+  }
+}
