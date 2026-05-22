@@ -1,0 +1,195 @@
+{
+  "started_at_utc": "2026-05-22T07:22:21.185343+00:00",
+  "database": "mit-bestand",
+  "fu8_resolved": 5,
+  "fu8_unresolved": 0,
+  "fu8_url_records_reextracted": 34,
+  "alias_repairs": [],
+  "acceptance": {
+    "dossier_count": 100,
+    "external_link_count": 2640,
+    "research_document_count": 201,
+    "section_ref_count": 641,
+    "untyped_quelle": 0,
+    "dossier_with_text_content": 0,
+    "dossier_with_pre_strip_chars": 100,
+    "total_chars_stripped": 2570644,
+    "fu8_data_issues": 0,
+    "known_qu_aliases": 16
+  },
+  "secondary_label_results": {
+    "mig_s4_a_secondary_labels.cypher:0": [],
+    "mig_s4_a_secondary_labels.cypher:1": [],
+    "mig_s4_a_secondary_labels.cypher:2": [],
+    "mig_s4_a_secondary_labels.cypher:3": [],
+    "mig_s4_a_secondary_labels.cypher:4": [
+      {
+        "check": "s4_a_dossier_count",
+        "c": 100
+      }
+    ],
+    "mig_s4_a_secondary_labels.cypher:5": [
+      {
+        "check": "s4_a_external_link_count",
+        "c": 2640
+      }
+    ],
+    "mig_s4_a_secondary_labels.cypher:6": [
+      {
+        "check": "s4_a_research_document_count",
+        "c": 201
+      }
+    ],
+    "mig_s4_a_secondary_labels.cypher:7": [
+      {
+        "check": "s4_a_section_ref_count",
+        "c": 641
+      }
+    ],
+    "mig_s4_a_secondary_labels.cypher:8": [],
+    "mig_s4_a_secondary_labels.cypher:9": [],
+    "mig_s4_a_secondary_labels.cypher:10": [
+      {
+        "rule": "s4_a_quelle_multi_classified",
+        "violations": 827,
+        "sample": [
+          "q_ext_sciencedirect_com_science_article_pii_s0959652622048090",
+          "q_55_great_suffolk_street_london_s1",
+          "q_55_great_suffolk_street_london_s2",
+          "q_55_great_suffolk_street_london_s3",
+          "q_55_great_suffolk_street_london_s4",
+          "q_55_great_suffolk_street_london_s5",
+          "q_55_great_suffolk_street_london_s6",
+          "q_55_great_suffolk_street_london_s7",
+          "q_55_great_suffolk_street_london_s8",
+          "q_association_house_groeditz_s1",
+          "q_association_house_groeditz_s2",
+          "q_association_house_groeditz_s3",
+          "q_association_house_groeditz_s4",
+          "q_association_house_groeditz_s5",
+          "q_association_house_groeditz_s6",
+          "q_association_house_groeditz_s7",
+          "q_association_house_plauen_s1",
+          "q_association_house_plauen_s2",
+          "q_association_house_plauen_s3",
+          "q_association_house_plauen_s4"
+        ]
+      }
+    ]
+  },
+  "pre_strip_gate": {
+    "violations": 0,
+    "sample": []
+  },
+  "text_strip_results": {
+    "mig_s4_b_text_strip.cypher:0": [],
+    "mig_s4_b_text_strip.cypher:1": [
+      {
+        "check": "s4_b2_dossiers_about_to_strip",
+        "c": 100,
+        "total_chars": 2570644
+      }
+    ],
+    "mig_s4_b_text_strip.cypher:2": [],
+    "mig_s4_b_text_strip.cypher:3": [],
+    "mig_s4_b_text_strip.cypher:4": [
+      {
+        "check": "s4_b4_dossiers_stripped",
+        "c": 100,
+        "total_chars_removed": 2570644
+      }
+    ]
+  },
+  "alias_audit_results": {
+    "mig_s4_d_alias_sanity.cypher:0": [
+      {
+        "dossier_id": "q_55_great_suffolk_street_london_md",
+        "expected_alias": "qu_55_great_suffolk_street_london_dossier"
+      },
+      {
+        "dossier_id": "q_association_house_groeditz_md",
+        "expected_alias": "qu_association_house_groeditz_dossier"
+      },
+      {
+        "dossier_id": "q_association_house_plauen_md",
+        "expected_alias": "qu_association_house_plauen_dossier"
+      },
+      {
+        "dossier_id": "q_bedzed_london_hackbridge_md",
+        "expected_alias": "qu_bedzed_london_hackbridge_dossier"
+      },
+      {
+        "dossier_id": "q_batch_1_md",
+        "expected_alias": "qu_batch_1_dossier"
+      },
+      {
+        "dossier_id": "q_schaerenmoosstrasse_zuerich_projekt_menage_a_trois_md",
+        "expected_alias": "qu_schaerenmoosstrasse_zuerich_projekt_menage_a_trois_dossier"
+      },
+      {
+        "dossier_id": "q_umar_unit_nest_empa_duebendorf_md",
+        "expected_alias": "qu_umar_unit_nest_empa_duebendorf_dossier"
+      },
+      {
+        "dossier_id": "q_elementa_walkeweg_basel_md",
+        "expected_alias": "qu_elementa_walkeweg_basel_dossier"
+      },
+      {
+        "dossier_id": "q_careno_be_circular_brussels_md",
+        "expected_alias": "qu_careno_be_circular_brussels_dossier"
+      },
+      {
+        "dossier_id": "q_circl_abn_amro_urban_mining_md",
+        "expected_alias": "qu_circl_abn_amro_urban_mining_dossier"
+      },
+      {
+        "dossier_id": "q_circl_pavilion_amsterdam_md",
+        "expected_alias": "qu_circl_pavilion_amsterdam_dossier"
+      },
+      {
+        "dossier_id": "q_meduni_campus_mariannengasse_wien_md",
+        "expected_alias": "qu_meduni_campus_mariannengasse_wien_dossier"
+      },
+      {
+        "dossier_id": "q_re_use_hoefe_wien_md",
+        "expected_alias": "qu_re_use_hoefe_wien_dossier"
+      },
+      {
+        "dossier_id": "q_reallabor_be_ware_md",
+        "expected_alias": "qu_reallabor_be_ware_dossier"
+      },
+      {
+        "dossier_id": "q_stuttgart_210_md",
+        "expected_alias": "qu_stuttgart_210_dossier"
+      },
+      {
+        "dossier_id": "q_fcrbe_facilitating_circulation_reclaimed_building_elements_md",
+        "expected_alias": "qu_fcrbe_facilitating_circulation_reclaimed_building_elements_dossier"
+      },
+      {
+        "dossier_id": "q_interreg_nwe_fcrbe_md",
+        "expected_alias": "qu_interreg_nwe_fcrbe_dossier"
+      },
+      {
+        "dossier_id": "q_rebridge_structural_reuse_md",
+        "expected_alias": "qu_rebridge_structural_reuse_dossier"
+      },
+      {
+        "dossier_id": "q_reuse_logistics_md",
+        "expected_alias": "qu_reuse_logistics_dossier"
+      },
+      {
+        "dossier_id": "q_rcmi_concular_md",
+        "expected_alias": "qu_rcmi_concular_dossier"
+      }
+    ],
+    "mig_s4_d_alias_sanity.cypher:1": [
+      {
+        "check": "s4_d_known_qu_alias_count",
+        "c": 16
+      }
+    ]
+  },
+  "completed_at_utc": "2026-05-22T07:22:24.762912+00:00",
+  "verified": true
+}

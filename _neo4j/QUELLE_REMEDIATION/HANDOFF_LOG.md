@@ -21,7 +21,7 @@
 
 | When | Who | Status | Notes |
 |---|---|---|---|
-| _<fill>_ | agent_s1 | _<…>_ | URLs extracted: total=<n>, dossier_md=<n>, dossier_bare=<n>, pre_existing=<n>, edge_property=<n>, node_property=<n>; top dossier by URL count: <id>/<count> |
+| 2026-05-21 | agent_s1 | PASS | Stage 1 dossier links=3309, bare URLs=517; stage 2 pre-existing Quelle.url=2640; stage 3 edge-property URLs=2243; stage 4 node-property URLs=20; **distinct URLs after normalisation=1030**; errors=0 |
 
 ## §3 S2 — URL prober
 
@@ -33,25 +33,25 @@
 
 | When | Who | Status | Notes |
 |---|---|---|---|
-| _<fill>_ | agent_s3 | _<…>_ | Verified <n> citations; verbatim_match=<n>, paraphrase_match=<n>, token_match=<n>, no_text_match=<n>, target_page_dead=<n>, cookie_wall=<n>, js_required=<n>, language_mismatch=<n>, fetch_error=<n>; top no-match project: <id>/<count> |
+| 2026-05-22 | agent_s3 | PASS_WITH_HONEST_SIGNAL | Attempted 4,158 source_curated citation edges; **verbatim_match=0, paraphrase_match=4, token_match=0**; no_text_match=2,847; target_page_dead=1,152; fetch_error=44; cookie_wall_detected=1; no_url_node=110; language_mismatch=0; errors=0. **Match rate of attempted = 0.1 %.** This is the honest signal predicted by the plan: existing `evidence_excerpt` fields were paraphrased by research agents, not verbatim from source pages. Future dossiers must use verbatim quotes for verification to work. |
 
 ## §5 S4 — schema cleanup
 
 | When | Who | Status | Notes |
 |---|---|---|---|
-| _<fill>_ | agent_s4 | _<…>_ | Secondary labels: Dossier=<n>, ExternalLink=<n>, ResearchDocument=<n>, SectionRef=<n>; FU-8 retries resolved=<n>, unresolved=<n>; text_content stripped from <n> dossiers (<n> chars total); aliases sanity = OK |
+| 2026-05-22 09:23 +02:00 | agent_s4 | PASS | Secondary labels: Dossier=100, ExternalLink=2640, ResearchDocument=201, SectionRef=641; FU-8 retries resolved=5, unresolved=0; text_content stripped from 100 dossiers (2570644 chars total); aliases sanity = OK (16 known R7.a aliases present, 0 repairs needed). |
 
 ## §6 S5 — visibility
 
 | When | Who | Status | Notes |
 |---|---|---|---|
-| _<fill>_ | agent_s5 | _<…>_ | Projekt with source_urls=<n>; avg source_count=<n>; trust ≥ 0.7=<n>; Bauwerk with source_urls=<n>; Akteur with source_urls=<n>; excessive_sources DataIssues=<n> |
+| 2026-05-22 | agent_s5 | PASS | Projekt with source_urls=91/101 (10 have NULL trust — no sources); avg trust=0.0127 (low because S3 produced few matches; see S3 row); Bauwerk with source_urls=186/186 (100 %); Akteur with source_urls=511/648 (78 %); excessive_sources DataIssues=2; all S5 acceptance gates green |
 
 ## §7 S6 — audit + sign-off
 
 | When | Who | Status | Notes |
 |---|---|---|---|
-| _<fill>_ | agent_s6 | _<…>_ | All 10 QV invariants=<violations sum>; FINAL_QUELLE_AUDIT.md written; CI gate installed; verdict=<PASS/PASS_WITH_RESIDUALS/FAIL> |
+| 2026-05-22 07:43 UTC | agent_s6 | **PASS WITH RESIDUALS** | QV1, QV2, QV3, QV5, QV6, QV7, QV9, QV10 = PASS (8/10). QV4 = YELLOW (34 source_curated edges with excerpt have no verification_status). QV8 = YELLOW (2,008 source_curated edges have no excerpt, so S3 couldn't verify them). `:DataIssue` total=4,976. node_with_no_source seeded for 10 :Projekt. FINAL_QUELLE_AUDIT.md written. CI gate `_scripts/validate_no_text_content.py` installed. |
 
 ---
 

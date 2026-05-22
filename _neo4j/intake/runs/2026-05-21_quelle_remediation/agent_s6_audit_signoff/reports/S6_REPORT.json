@@ -1,0 +1,395 @@
+{
+  "completed_utc": "2026-05-22T07:43:04.927499+00:00",
+  "database": "mit-bestand",
+  "verdict": "PASS WITH RESIDUALS",
+  "hard_fail": false,
+  "invariants": [
+    {
+      "gate": "QV1",
+      "description": "Every :Quelle has a secondary label",
+      "violations": 0,
+      "hard": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "QV2",
+      "description": "Every :ExternalLink has non-null url",
+      "violations": 0,
+      "hard": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "QV3",
+      "description": "Every :ExternalLink has url_status (S2 done)",
+      "violations": 0,
+      "hard": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "QV4",
+      "description": "source_curated edges with excerpt have verification_status",
+      "violations": 34,
+      "hard": false,
+      "status": "YELLOW"
+    },
+    {
+      "gate": "QV5",
+      "description": "No :Dossier carries text_content",
+      "violations": 0,
+      "hard": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "QV6",
+      "description": "Every Projekt/Bauwerk/Akteur has source_urls",
+      "violations": 0,
+      "hard": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "QV7",
+      "description": "Every Projekt/Bauwerk/Akteur has source_quality_summary",
+      "violations": 0,
+      "hard": true,
+      "status": "PASS"
+    },
+    {
+      "gate": "QV8",
+      "description": "Every source_curated edge has verification_status (incl. no-excerpt)",
+      "violations": 2008,
+      "hard": false,
+      "status": "YELLOW"
+    },
+    {
+      "gate": "QV9",
+      "description": "No URL contains utm_ or unintended trailing slash",
+      "violations": 0,
+      "hard": false,
+      "status": "PASS"
+    },
+    {
+      "gate": "QV10",
+      "description": "Every S2/S3/S4/S5/S6 DataIssue has a :CONCERNS edge",
+      "violations": 0,
+      "hard": true,
+      "status": "PASS"
+    }
+  ],
+  "distributions": {
+    "D1_url_reachability": [
+      {
+        "status": "reachable_2xx",
+        "c": 1955
+      },
+      {
+        "status": "dead_4xx",
+        "c": 336
+      },
+      {
+        "status": "dns_failure",
+        "c": 231
+      },
+      {
+        "status": "blocked_by_robots",
+        "c": 79
+      },
+      {
+        "status": "timeout",
+        "c": 11
+      },
+      {
+        "status": "dead_5xx",
+        "c": 10
+      },
+      {
+        "status": "tls_failure",
+        "c": 10
+      },
+      {
+        "status": "reachable_3xx_to_4xx",
+        "c": 8
+      }
+    ],
+    "D2_verification_status": [
+      {
+        "status": "no_text_match",
+        "c": 2843
+      },
+      {
+        "status": "target_page_dead",
+        "c": 1148
+      },
+      {
+        "status": "no_url_node",
+        "c": 110
+      },
+      {
+        "status": "fetch_error",
+        "c": 44
+      },
+      {
+        "status": "paraphrase_match",
+        "c": 4
+      },
+      {
+        "status": "cookie_wall_detected",
+        "c": 1
+      }
+    ],
+    "D3_trust_score_bins": [
+      {
+        "bin": "0.0-0.3",
+        "c": 91
+      }
+    ],
+    "D4_dataissue_by_kind": [
+      {
+        "kind": "citation_no_text_match",
+        "c": 2843
+      },
+      {
+        "kind": "pollutant_inference",
+        "c": 792
+      },
+      {
+        "kind": "url_unreachable_4xx",
+        "c": 336
+      },
+      {
+        "kind": "q1_topology_synthesis",
+        "c": 254
+      },
+      {
+        "kind": "url_dns_failure",
+        "c": 231
+      },
+      {
+        "kind": "registry_unverified_actor_stub",
+        "c": 200
+      },
+      {
+        "kind": "curated_no_excerpt",
+        "c": 110
+      },
+      {
+        "kind": "url_blocked_by_robots",
+        "c": 79
+      },
+      {
+        "kind": "dossier_uses_retired_type",
+        "c": 59
+      },
+      {
+        "kind": "dossier_section8_missing",
+        "c": 16
+      },
+      {
+        "kind": "controlled_vocab_too_sparse",
+        "c": 15
+      },
+      {
+        "kind": "url_timeout",
+        "c": 11
+      },
+      {
+        "kind": "url_unreachable_5xx",
+        "c": 10
+      },
+      {
+        "kind": "url_tls_failure",
+        "c": 10
+      },
+      {
+        "kind": "era_inference",
+        "c": 8
+      },
+      {
+        "kind": "excessive_sources_on_node",
+        "c": 2
+      }
+    ],
+    "D5_dataissue_by_severity": [
+      {
+        "sev": "low",
+        "c": 2958
+      },
+      {
+        "sev": "medium",
+        "c": 1654
+      },
+      {
+        "sev": "high",
+        "c": 364
+      }
+    ],
+    "D6_tier1_projects": [
+      {
+        "projekt": "p_chiro_d_itterbeek_dilbeek",
+        "n": 8,
+        "trust": 0.109
+      },
+      {
+        "projekt": "p_grande_halle_de_colombelles",
+        "n": 12,
+        "trust": 0.0885
+      },
+      {
+        "projekt": "p_haus_hos_mehrfamilienhaus_muehlhausen",
+        "n": 10,
+        "trust": 0.0479
+      },
+      {
+        "projekt": "p_k118_kopfbau_halle_118_winterthur",
+        "n": 9,
+        "trust": 0.0398
+      },
+      {
+        "projekt": "p_ferme_du_rail_paris",
+        "n": 8,
+        "trust": 0.0325
+      },
+      {
+        "projekt": "p_holbein_gardens_london",
+        "n": 16,
+        "trust": 0.0306
+      },
+      {
+        "projekt": "p_lycee_michel_lucius_conversion_luxembourg",
+        "n": 6,
+        "trust": 0.0198
+      },
+      {
+        "projekt": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+        "n": 19,
+        "trust": 0.0042
+      },
+      {
+        "projekt": "p_biopartner_5_leiden_oegstgeest",
+        "n": 18,
+        "trust": 0.0
+      },
+      {
+        "projekt": "p_maison_vignette_auderghem",
+        "n": 4,
+        "trust": 0.0
+      },
+      {
+        "projekt": "p_trae_high_rise_aarhus",
+        "n": 17,
+        "trust": 0.0
+      }
+    ],
+    "D7_top10_no_match_projekt": [
+      {
+        "projekt": "p_schaerenmoosstrasse_zuerich",
+        "no_match_count": 24
+      },
+      {
+        "projekt": "p_circl_abn_amro",
+        "no_match_count": 16
+      },
+      {
+        "projekt": "p_recyclinghaus_hannover",
+        "no_match_count": 14
+      },
+      {
+        "projekt": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+        "no_match_count": 14
+      },
+      {
+        "projekt": "p_biopartner_5_leiden_oegstgeest",
+        "no_match_count": 14
+      },
+      {
+        "projekt": "p_timber_square_london",
+        "no_match_count": 13
+      },
+      {
+        "projekt": "p_woongroep_boschgaard_den_bosch",
+        "no_match_count": 13
+      },
+      {
+        "projekt": "p_elementa_walkeweg",
+        "no_match_count": 12
+      },
+      {
+        "projekt": "p_refair_bordeaux_reemploi_platform",
+        "no_match_count": 12
+      },
+      {
+        "projekt": "p_umar_unit",
+        "no_match_count": 12
+      }
+    ],
+    "D8_top10_no_match_url": [
+      {
+        "url": "https://doi.org/10.1088/1755-1315/225/1/012049",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://labs.aap.cornell.edu/ccl/umar-unit",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://www.lindner-group.com/en/references/nest-unit-umar",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://nimbus-lighting.com/en/projects/nest-urban-mining-recycling-umar-experimental-unit-duebendorf-ch",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://www.bs.ch/schwerpunkte/bauprojekte/seiten/hochbauprojekte/wohnueberbauung-walkeweg-baufelder-cd-neubau",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://www.bs.ch/verwaltung/bau-und-verkehrsdepartement/aemter-und-bereiche/staedtebau-architektur/baukultur/architekturwettbewerbe/areal-walkeweg-nord-basel-wohnueberbauung-baufeld-cd-mit-bauteil-wiederverwendung-re-use",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://zirkular.net/de/projekt/bauteilkatalog-immobilien-basel-stadt",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://www.metalocus.es/en/news/parabase-wins-competition-residential-development-reuse-building-elements-areal-walkeweg-nord-basel",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://www.archdaily.com/1008183/parabase-reuses-prefabricated-concrete-elements-for-a-radical-housing-development-in-basel-switzerland",
+        "no_match_count": 4
+      },
+      {
+        "url": "https://www.wernersobek.com/projects/nest-unit-umar",
+        "no_match_count": 4
+      }
+    ],
+    "D9_headline_counts": [
+      {
+        "n_quelle": 2755,
+        "n_extlink": 2640,
+        "n_issues": 4976
+      }
+    ],
+    "D10_curated_edges": [
+      {
+        "c": 6158
+      }
+    ],
+    "D11_verified_citations": [
+      {
+        "c": 4
+      }
+    ],
+    "D12_projekt_with_source_urls": [
+      {
+        "c": 91
+      }
+    ],
+    "D13_trust_score_null_projekt": [
+      {
+        "c": 10
+      }
+    ]
+  },
+  "node_with_no_source_seeded": 10
+}
