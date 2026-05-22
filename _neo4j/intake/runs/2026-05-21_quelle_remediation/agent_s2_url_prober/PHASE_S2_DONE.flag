@@ -1,0 +1,40 @@
+{
+  "phase": "S2",
+  "agent": "agent_s2_url_prober",
+  "completed_at_utc": "2026-05-22T07:02:16+00:00",
+  "verified": true,
+  "external_link_nodes_covered": 2640,
+  "distinct_urls_covered": 1030,
+  "probe_log_lines": 1432,
+  "body_cache_size_bytes": 122683283,
+  "body_cache_files": 1659,
+  "proactive_wayback_archive_enabled": false,
+  "wayback_fallbacks": 148,
+  "acceptance_gates": {
+    "unchecked_external_links": 0,
+    "reachable_2xx": 1955,
+    "dead_with_wayback": 148,
+    "reachable_html_without_cache": 0,
+    "missing_expected_s2_dataissues": 0,
+    "stale_s2_dataissues": 0
+  },
+  "status_distribution": [
+    {"status": "reachable_2xx", "count": 1955},
+    {"status": "dead_4xx", "count": 336},
+    {"status": "dns_failure", "count": 231},
+    {"status": "blocked_by_robots", "count": 79},
+    {"status": "timeout", "count": 11},
+    {"status": "dead_5xx", "count": 10},
+    {"status": "tls_failure", "count": 10},
+    {"status": "reachable_3xx_to_4xx", "count": 8}
+  ],
+  "data_issue_counts": [
+    {"kind": "url_unreachable_4xx", "count": 336},
+    {"kind": "url_dns_failure", "count": 231},
+    {"kind": "url_blocked_by_robots", "count": 79},
+    {"kind": "url_timeout", "count": 11},
+    {"kind": "url_unreachable_5xx", "count": 10},
+    {"kind": "url_tls_failure", "count": 10}
+  ],
+  "notes": "Interrupted/resumed run; one overlapping runner briefly duplicated append-only JSONL entries. Final graph state and S2 DataIssues were audited and cleaned."
+}

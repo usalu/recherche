@@ -1,0 +1,2444 @@
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10 gt-ie8"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js gt-ie8"> <!--<![endif]-->
+	<head>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        wait_for_update: 1000
+    });
+    gtag("set", "url_passthrough", true);
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WNV7CBN');</script>
+<!-- End Google Tag Manager -->
+
+
+	
+		<script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"></script>
+
+
+		<script type="text/javascript">
+			var config = {
+				// Core configuration
+				apiKey: 'c433a7e71f6e58793e9e30a93f18446ba55c66a4',
+				product: 'PRO',
+
+				// Controlling use of cookies
+				necessaryCookies: ["_gcl*","route","_cf*","DEFAULTLOCALE","_gat","_gat_UA-*","twk_*","VID","PreviousNav","tawk_uuid_*","_ga_G-*","TawkConnectionTime","PRESIDEWORKFLOWSESSION","tawkUUID","Tawk_*","PSID","ss","cf*","_gid","twk_idm_key","_PRESIDE_LANGUAGE","li_gc","_ga","__tawkuuid"],
+				optionalCookies: [
+					
+
+	
+		
+		{
+			name : 'Analytics',
+			label: 'Analytics',
+			description: 'We would like to set Google Analytics cookies to help us improve our website by collecting and reporting information on how you use it. The cookies collect information in a way that does not directly identify anyone. For more information on how these cookies work, please see our cookies page.',
+			cookies: ["_ga*","_gat*","_ga_*","_gcl*","_gid","1P_JAR","DSID","_dc_gtm_*","GA_OPT_OUT","AMP_TOKEN","NID","ar_debug","test_cookie","id"],
+			recommendedState: true,
+			onAccept: function(){
+				// gtag consent API
+    gtag('consent', 'update', { 'analytics_storage': 'granted'  });
+// gtag consent API END
+			},
+			onRevoke: function(){
+				// gtag consent API
+    gtag('consent', 'update', { 'analytics_storage': 'denied'  });
+// gtag consent API END
+
+			},
+			thirdPartyCookies: [{"name":"Google","optOutLink":"https://tools.google.com/dlpage/gaoptout"}]
+		}
+		,
+	
+		
+		{
+			name : 'Social Media',
+			label: 'Social Media',
+			description: 'Social media cookies allow you to interact more easily with social media, such as sharing articles to Twitter, LinkedIn, Facebook etc.',
+			cookies: ["_stid","__stidv","st_optout","pubconsent-v2","euconsent-v2"],
+			recommendedState: true,
+			onAccept: function(){
+				let clone = $( $( "#social-share-template" ).html() ).prop( "id", "shareThisJs" );
+$( "body" ).append( clone );
+$( "#share-this-wdget" ).removeClass( "hide" );
+			},
+			onRevoke: function(){
+				$( "body" ).find( "#shareThisJs" ).remove();
+$( "#share-this-wdget" ).addClass( "hide" );
+			},
+			thirdPartyCookies: [{"name":"ShareThis","optOutLink":"https://sharethis.com/privacy/"}]
+		}
+		,
+	
+		
+		{
+			name : 'Marketing',
+			label: 'Marketing',
+			description: '',
+			cookies: ["lidc","bcookie"],
+			recommendedState: false,
+			onAccept: function(){
+				
+			},
+			onRevoke: function(){
+				
+			},
+			thirdPartyCookies: [{"name":"LinkedIn","optOutLink":"https://www.linkedin.com/help/linkedin/answer/a1342443/manage-advertising-preferences?lang=en"}]
+		}
+		
+	
+
+				],    // Array of objects based on CookieCategory object
+				consentCookieExpiry: 90,
+
+				
+					statement : {
+						  description: ''
+						, name: 'Privacy notice'
+						, url: 'https://www.iom3.org/privacy.html'
+						, updated: '03/11/2020'
+					},
+				
+
+				logConsent: true,
+				encodeCookie: false,
+				
+					sameSiteCookie: true,
+					sameSiteValue: "Strict",
+					closeOnGlobalChange: true,
+				
+				subDomains: true,
+
+				// Customizing appearance and behaviour
+				initialState: "NOTIFY",
+				notifyOnce: false,
+				rejectButton: true,
+				layout: "SLIDEOUT",
+				position: "LEFT",
+				theme: "DARK",
+				toggleType: "slider",
+				closeStyle: "icon",
+				
+					notifyDismissButton: true,
+				
+				settingsStyle: "button",
+				
+					acceptBehaviour: "all",
+				
+
+				
+
+				text : {
+					title: 'This site uses cookies to store information on your computer.'
+					, intro                : 'Some of these cookies are essential, while others help us to improve your experience by providing insights into how the site is used. If you click \"I accept cookies\" all cookies below will be accepted. If you wish to reject optional cookies please click the X to close this pop-up.'
+					, acceptRecommended    : 'Accept recommended settings'
+					, rejectSettings       : 'Reject all'
+					, necessaryTitle       : 'Necessary cookies'
+					, necessaryDescription : 'Necessary cookies enable core functionality such as page navigation and access to secure areas. The website cannot function properly without these cookies being set.'
+					, thirdPartyTitle      : 'Some cookies require your attention (third party)'
+					, thirdPartyDescription: 'Consent for the following third party cookies could not be automatically revoked.'
+					, notifyTitle          : 'Your choice regarding cookies on this site'
+					, notifyDescription    : 'We use cookies to optimise site functionality and give you the best website experience.'
+					, on                   : 'On'
+					, off                  : 'Off'
+					, accept               : 'Accept'
+					, reject               : 'Reject'
+					, settings             : 'Cookie preferences'
+					, closeLabel           : 'Close'
+					, accessibilityAlert   : 'This site uses cookies to store information. Press accesskey C to learn more about your options.'
+					
+				},
+
+				
+				branding : {
+					  fontFamily       : 'Arial, sans serif'
+					
+					
+					
+					
+					
+					
+					
+					
+					
+						
+						
+					
+					
+					
+					
+					
+					
+					
+					, buttonIconWidth  : '64px'
+					, buttonIconHeight : '64px'
+					, removeIcon       : false
+					, removeAbout      : true
+				},
+				
+
+				
+					excludedCountries: [],
+
+					
+						locale: "undefined" != typeof window ? window.navigator.language : "en",
+					
+				locales: [
+					
+				],
+				
+
+				accessibility: {
+					accessKey: 'c',
+					highlightFocus: true
+				}
+			};
+
+			CookieControl.load( config );
+
+			var onPageStyle = "";
+			
+			if ( onPageStyle.length ) {
+				var style       = document.createElement('style');
+				style.innerHTML = onPageStyle;
+				document.head.appendChild( style );
+			}
+		</script>
+	
+
+		<meta charset="utf-8">
+		<!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+
+		
+
+
+
+
+	<title>IOM3 |  Steel from demolition site directly reused for construction</title>
+
+	
+		<meta name="description" content="Property developers Grosvenor have reused salvaged steel for a building retrofit in London, UK." />
+	
+
+	
+
+	
+		<meta name="author" content="IOM3" />
+	
+
+	
+
+	<meta name="robots" content="index,follow" />
+
+	
+
+
+	<meta property="og:title" content="Steel from demolition site directly reused for construction" />
+	<meta property="og:type"  content="website" />
+	<meta property="og:url"   content="https://www.iom3.org/resource/steel-reused-from-uk-s-first-steelworks.html" />
+	
+		<meta property="og:description" content="Property developers Grosvenor have reused salvaged steel for a building retrofit in London, UK." />
+	
+	
+		<meta property="og:image" content="https://www.iom3.org/static/a5647b35-e4d6-43bc-9d4896b1f5d3cc38/opengraphimage_83f4e8796336604b59d7216d0ecd81a5_4a7c7e45a350/steel-beams.jpg" />
+	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Steel from demolition site directly reused for construction" />
+	
+		<meta name="twitter:description" content="Property developers Grosvenor have reused salvaged steel for a building retrofit in London, UK." />
+	
+	
+		<meta name="twitter:image" content="https://www.iom3.org/static/a5647b35-e4d6-43bc-9d4896b1f5d3cc38/opengraphimage_83f4e8796336604b59d7216d0ecd81a5_4a7c7e45a350/steel-beams.jpg" />
+	
+
+
+
+
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96.png">
+		<link rel="icon" type="image/png" sizes="64x64" href="/assets/img/favicon/favicon-64.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16.png">
+
+		<link rel="stylesheet" type="text/css" href="//use.typekit.net/aoi3ubz.css" async="true">
+<link rel="stylesheet" type="text/css" href="/assets/css/pixl8core/lib/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/lib/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/pixl8core/core/_6705bf98.core.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/core/_3941485d.core.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/specific/core-widgets/_6c2ec106.core-widgets.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/specific/core-widgets-theme/_107affce.core-widgets-theme.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/specific/resource-library-v2/_303eafaa.resource-library-v2.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/specific/resource-library-theme-v2/_3bbbb13c.resource-library-theme-v2.min.css">
+<link rel="stylesheet" type="text/css" href="/preside/system/assets/extension/preside-ext-resource-library-frontend/assets/css/specific/resource-layout/layout.min.css">
+
+		
+
+		<style>.async-hide { opacity: 0 !important} </style>
+	</head>
+	<body class="preload  ">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNV7CBN"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+		<!--[if lte IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		
+
+		<div id="overlay-background"></div>
+		<div class="page-wrapper " >
+			
+
+
+	<header id="site-head" class="header">
+		<div class="container">
+			<div class="header-inner row-flex align-items-center">
+
+				<div class="col-9 col-lg-4 align-self-center">
+					<div class="header-logo">
+	<a href="/" class="header-logo-link">
+		<img class="header-logo-image" src="/assets/img/logo.svg" alt="">
+		<img class="header-logo-image-mobile" src="/assets/img/logo-2.svg" alt="">
+	</a>
+</div>
+				</div>
+
+				<div id="collapseSearch" class="header-search collapse">
+					<form class="mb-0" action="https://www.iom3.org/site-search.html">
+						<div class="d-flex">
+							<div class="form-group w-100 mb-0">
+								<div class="form-field">
+									<input type="hidden" name="sortBy" value="relevance">
+									<input type="text"   name="searchQuery" class="form-control" placeholder="Search by name or keyword">
+								</div>
+							</div>
+							<a class="btn btn-bordered btn-icon mx-10" data-toggle="collapse" href="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch"><span class="font-icon-close1 font-lg"></span></a>
+							<button class="btn btn-bordered btn-icon btn-icon"><span class="font-icon-search2"></span></button>
+						</div>
+					</form>
+				</div>
+
+				<nav class="user-nav order-lg-3 ml-lg-20 ml-xl-50 ml-auto col-1">
+					<ul class="user-nav-list d-flex mb-0 justify-content-end">
+						
+							<li class="user-nav-list-item d-none d-sm-inline-flex"><a href="https://www.iom3.org/membership/become-a-member/join-online.html" class="btn btn-bordered btn-icon-user">Join</a></li>
+							<li class="user-nav-list-item d-none d-sm-inline-flex"><a href="https://www.iom3.org/login.html" class="btn btn-bordered btn-icon-user">Login</a></li>
+						
+						<li class="user-nav-list-item"><a class="btn btn-bordered btn-search" data-toggle="collapse" href="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch"><span class="font-icon-search2"></span></a></li>
+					</ul>
+				</nav>
+
+				<div class="d-flex d-lg-none align-items-center justify-content-end col-1 ">
+					<a href="/" class="header-mobile-nav-btn js-toggle-mobile-menu btn btn-bordered btn-icon">
+						<span class="header-mobile-nav-btn-icon"></span>
+					</a>
+				</div>
+
+				<div class="col-12 col-lg-8 main-nav-holder">
+					<nav class="main-nav">
+						<ul class="main-nav-list">
+							
+
+
+	
+		
+
+		
+		
+
+		
+			<li class="main-nav-item has-sub-nav has-mega-menu">
+				<a class="main-nav-link" href="https://www.iom3.org/membership.html">Membership</a>
+
+				<a href="#" class="sub-nav-toggler js-toggle-sub-nav"></a>
+
+				<div class="sub-nav mega-menu row">
+					<div class="mega-menu-item col-md-4">
+						<ul class="mega-menu-nav">
+							
+
+
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/membership/why-join-iom3.html" >Why join IOM3?</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/membership/become-a-member.html" >Become a member</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/membership/chartered-status.html" >Chartered status</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/membership/our-communities.html" >Our communities</a>
+
+				
+			</li>
+		
+	
+
+						</ul>
+					</div>
+
+					<div class="mega-menu-item col-md-4">
+						&nbsp;
+					</div>
+
+					
+
+					
+						<div class="mega-menu-item col-md-4 mod-cta">
+							<div class="cta-widget">
+								
+
+	<img src="https://www.iom3.org/static/a6d832fd-5ac7-443a-8b33ec72b76f4162/0d86d8fc-3989-4f40-a6811031c3a25061/cta_e292741a9b744cbaee4cb6cd0e2e84e2_4a7c7e45a350/IOM3-Membership-Badges-x3-SM.jpg"
+		 alt="IOM3 Membership Badges x3 SM.jpg"
+		
+		 class="cta-image"
+	/>
+
+
+								<div class="cta-content text-white bg-primary">
+									<h3 class="cta-heading">Membership benefits</h3>
+
+									<p class="cta-text">Our membership benefits are designed to support you at every stage of your career</p>
+
+									<p class="cta-text">
+										<a href="https://www.iom3.org/membership/why-join-iom3/membership-benefits.html" class="btn">Find out more</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="main-nav-item has-sub-nav has-mega-menu">
+				<a class="main-nav-link" href="https://www.iom3.org/news.html">News</a>
+
+				<a href="#" class="sub-nav-toggler js-toggle-sub-nav"></a>
+
+				<div class="sub-nav mega-menu row">
+					<div class="mega-menu-item col-md-4">
+						<ul class="mega-menu-nav">
+							
+
+
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/news/industry-news.html" >Industry news</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/news/iom3-news.html" >IOM3 news</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/news/blog.html" >Blog</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/news/iom3-investigates-podcast.html" >Podcast</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/news/iom3-policy.html" >Policy</a>
+
+				
+			</li>
+		
+	
+
+						</ul>
+					</div>
+
+					<div class="mega-menu-item col-md-4">
+						&nbsp;
+					</div>
+
+					
+
+					
+						<div class="mega-menu-item col-md-4 mod-cta">
+							<div class="cta-widget">
+								
+
+	<img src="https://www.iom3.org/static/0fa9bb97-1181-4ff7-99e0ec04d279c31e/cta_e292741a9b744cbaee4cb6cd0e2e84e2_4a7c7e45a350/Policy-web-image.jpg"
+		 alt="Policy - web image.jpg"
+		
+		 class="cta-image"
+	/>
+
+
+								<div class="cta-content text-white bg-primary">
+									<h3 class="cta-heading">IOM3 policy & influence </h3>
+
+									<p class="cta-text">You can find all our latest consultation responses and latest policy news.</p>
+
+									<p class="cta-text">
+										<a href="https://www.iom3.org/news/iom3-policy.html" class="btn">Find out more</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="main-nav-item has-sub-nav has-mega-menu">
+				<a class="main-nav-link" href="https://www.iom3.org/events-awards.html">Events</a>
+
+				<a href="#" class="sub-nav-toggler js-toggle-sub-nav"></a>
+
+				<div class="sub-nav mega-menu row">
+					<div class="mega-menu-item col-md-4">
+						<ul class="mega-menu-nav">
+							
+
+
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/events-awards/ems-event-calendar.html" >IOM3 Events Calendar</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/events-awards/webinars.html" >Webinars</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/events-awards/awards.html" >Awards & Prizes</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/events-awards/competitions.html" >Competitions</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/events-awards/sustainable-future.html" >Sustainable Future</a>
+
+				
+			</li>
+		
+	
+
+						</ul>
+					</div>
+
+					<div class="mega-menu-item col-md-4">
+						&nbsp;
+					</div>
+
+					
+
+					
+						<div class="mega-menu-item col-md-4 mod-cta">
+							<div class="cta-widget">
+								
+
+	<img src="https://www.iom3.org/static/c4389f94-a22a-42c3-9acbf6c1d3e26d10/cta_e292741a9b744cbaee4cb6cd0e2e84e2_4a7c7e45a350/INFORM-series-900x600-website-images.jpg"
+		 alt="Yellow collage background of textured materials with a black, rounded rectangle centred, displaying the white text 'INFORM series' in bold font  IOM3"
+		
+		 class="cta-image"
+	/>
+
+
+								<div class="cta-content text-white bg-primary">
+									<h3 class="cta-heading">INFORM Series</h3>
+
+									<p class="cta-text">Showcasing the latest advances in technology from those working in research and manufacturing</p>
+
+									<p class="cta-text">
+										<a href="https://www.iom3.org/events-awards/inform.html" class="btn">Find out more</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="main-nav-item has-sub-nav has-mega-menu">
+				<a class="main-nav-link" href="https://www.iom3.org/resources.html">Resources</a>
+
+				<a href="#" class="sub-nav-toggler js-toggle-sub-nav"></a>
+
+				<div class="sub-nav mega-menu row">
+					<div class="mega-menu-item col-md-4">
+						<ul class="mega-menu-nav">
+							
+
+
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/resources/publications.html" >Publications</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/resources/information-services.html" >Information services</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/resources/technical-themes.html" >Technical themes</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/resources/all-resources.html" >Website resources list</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/resources/iom3-for-business.html" >IOM3 for business</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/resources/student-early-career-hub.html" >Student & Early Career Hub</a>
+
+				
+			</li>
+		
+	
+
+						</ul>
+					</div>
+
+					<div class="mega-menu-item col-md-4">
+						&nbsp;
+					</div>
+
+					
+
+					
+						<div class="mega-menu-item col-md-4 mod-cta">
+							<div class="cta-widget">
+								
+
+	<img src="https://www.iom3.org/static/05b071c9-6609-4fe4-acab8d24b75a7713/0fb1e307-1910-4ebe-ac5afd8bcf5330b5/cta_e292741a9b744cbaee4cb6cd0e2e84e2_4a7c7e45a350/MW-MEGA-MENU-Oct2020.jpg"
+		 alt="MW MEGA MENU Oct2020.jpg"
+		
+		 class="cta-image"
+	/>
+
+
+								<div class="cta-content text-white bg-primary">
+									<h3 class="cta-heading">Materials World</h3>
+
+									<p class="cta-text">Our flagship members' magazine covering all aspects of the materials cycle</p>
+
+									<p class="cta-text">
+										<a href="https://www.iom3.org/resources/publications/materials-world.html" class="btn">Explore Materials World</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="main-nav-item has-sub-nav has-mega-menu">
+				<a class="main-nav-link" href="https://www.iom3.org/careers-learning.html">Careers & Learning</a>
+
+				<a href="#" class="sub-nav-toggler js-toggle-sub-nav"></a>
+
+				<div class="sub-nav mega-menu row">
+					<div class="mega-menu-item col-md-4">
+						<ul class="mega-menu-nav">
+							
+
+
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/careers-learning/schools-outreach.html" >Schools Support</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/careers-learning/accreditation-and-approval.html" >Accreditation & approval </a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/careers-learning/education-outreach-trust.html" >Apply for funding</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/careers-learning/training-academy.html" >Training Academy</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/careers-learning/job-listing.html" >Jobs</a>
+
+				
+			</li>
+		
+	
+
+						</ul>
+					</div>
+
+					<div class="mega-menu-item col-md-4">
+						&nbsp;
+					</div>
+
+					
+
+					
+						<div class="mega-menu-item col-md-4 mod-cta">
+							<div class="cta-widget">
+								
+
+	<img src="https://www.iom3.org/static/cab3e9da-b938-4a32-893b85bca6bc5baf/cta_e292741a9b744cbaee4cb6cd0e2e84e2_4a7c7e45a350/Trust-logo-with-light-grey-BG.jpg"
+		 alt="Black text and red stem with three leaves on grey background representing IOM3 Education & Outreach Trust"
+		
+		 class="cta-image"
+	/>
+
+
+								<div class="cta-content text-white bg-primary">
+									<h3 class="cta-heading">Education & Outreach Trust</h3>
+
+									<p class="cta-text">Grants, bursaries and prizes for student and early career members and funding for schools</p>
+
+									<p class="cta-text">
+										<a href="https://www.iom3.org/careers-learning/education-outreach-trust.html" class="btn">Find out more</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="main-nav-item has-sub-nav has-mega-menu">
+				<a class="main-nav-link" href="https://www.iom3.org/about-us.html">About IOM3</a>
+
+				<a href="#" class="sub-nav-toggler js-toggle-sub-nav"></a>
+
+				<div class="sub-nav mega-menu row">
+					<div class="mega-menu-item col-md-4">
+						<ul class="mega-menu-nav">
+							
+
+
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/about-us/governance.html" >Governance</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/about-us/history.html" >History</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/about-us/venue-hire.html" >Venue hire</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/about-us/contact-us.html" >Contact us</a>
+
+				
+			</li>
+		
+	
+		
+
+		
+		
+
+		
+			<li class="mega-menu-nav-item">
+				<a class="mega-menu-nav-link" href="https://www.iom3.org/about-us/partnerships.html" >Partnerships</a>
+
+				
+			</li>
+		
+	
+
+						</ul>
+					</div>
+
+					<div class="mega-menu-item col-md-4">
+						&nbsp;
+					</div>
+
+					
+
+					
+						<div class="mega-menu-item col-md-4 mod-cta">
+							<div class="cta-widget">
+								
+
+	<img src="https://www.iom3.org/static/ee2d7574-c0d4-42ee-bc44d1dce0e806dd/cta_e292741a9b744cbaee4cb6cd0e2e84e2/FAQ-icon.png"
+		 alt="FAQ icon.png"
+		
+		 class="cta-image"
+	/>
+
+
+								<div class="cta-content text-white bg-primary">
+									<h3 class="cta-heading">Need help?</h3>
+
+									<p class="cta-text">See our Frequently Asked Questions and links on how to contact us if you need help</p>
+
+									<p class="cta-text">
+										<a href="https://www.iom3.org/about-us/contact-us/faq.html" class="btn">See FAQ</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					
+				</div>
+			</li>
+		
+	
+
+						</ul>
+						
+							<ul class="mobile-nav-list d-block d-sm-none">
+								<li class="mobile-nav-list-item">
+									<a href="https://www.iom3.org/membership/become-a-member/join-online.html" class="btn btn-bordered btn-icon-user">Join</a>
+								</li>
+								<li class="mobile-nav-list-item">
+									<a href="https://www.iom3.org/login.html" class="btn btn-bordered btn-icon-user">Login</a>
+								</li>
+							</ul>
+						
+					</nav>
+				</div>
+
+			</div>
+		</div>
+	</header>
+
+
+			
+	
+
+
+	
+	
+
+
+	
+	<div class="breadcrumb-row">
+		<div class="container">
+			<ol class="breadcrumb">
+				<li  class="breadcrumb-item is-label" >You're here:</li>
+				
+
+
+	
+		
+		
+
+		<li class="breadcrumb-item ">
+			
+				<a class="breadcrumb-link" href="https://www.iom3.org/">Homepage</a>
+			
+		</li>
+	
+		
+		
+
+		<li class="breadcrumb-item ">
+			
+				<a class="breadcrumb-link" href="https://www.iom3.org/resources.html">Resources</a>
+			
+		</li>
+	
+		
+		
+
+		<li class="breadcrumb-item ">
+			
+				<a class="breadcrumb-link" href="https://www.iom3.org/resources/all-resources.html">Website content search</a>
+			
+		</li>
+	
+		
+		
+
+		<li class="breadcrumb-item active">
+			
+				Steel from demolition site directly reused for construction
+			
+		</li>
+	
+
+			</ol>
+	
+			
+			
+				
+
+
+	
+		
+
+
+    
+		
+
+		
+			<template id="social-share-template" type="text/template">
+				
+			<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6643728442e5580019a41a90" async="async"></script>
+		
+			</template>
+
+			
+		
+
+		<div id="share-this-wdget">
+			<div class="sharethis-inline-share-buttons"></div>
+		</div>
+    
+
+	
+
+			
+		</div>
+	</div>
+
+	
+
+	
+
+	
+
+	
+
+	<div class="main-wrapper">
+		<div class="contents">
+
+			<div class="main-content">
+				
+
+				<div class="resource-library-page">
+
+					<div class="resource-loader hide"></div>
+
+					<div class="container">
+						
+
+	<div class="row">
+
+		<div class="col-xs-12 col-md-8">
+			<section class="resource-detail " >
+
+				
+
+
+	<div class="resource-detail-meta">
+
+		
+			<div class="resource-detail-meta-type">
+
+				
+					<a
+						class=""
+						href="https://www.iom3.org/resources/all-resources.html?information_type=news"
+						
+					>
+						News
+					</a>
+				
+			</div>
+		
+
+		<div class="resource-detail-meta-date">26 July 2022</div>
+		
+		
+			<div class="resource-detail-meta-author">
+				by Alex Brinded
+			</div>
+		
+	</div>
+
+
+
+				
+	<h1 class="resource-detail-title" >Steel from demolition site directly reused for construction</h1>
+
+
+				
+					
+
+	<h4 class="resource-detail-teaser">
+		<p>Property developers Grosvenor have reused salvaged steel for a building retrofit in London, UK.</p>
+	</h4>
+
+				
+
+				
+					
+
+					
+
+
+	
+		<figure style="margin:5px auto 5px auto; display:block;text-align:center;max-width:800px;">
+	
+
+	
+
+	<img src="https://www.iom3.org/static/dd180365-d59f-467b-8b238af34fa19c2f/800x533_highestperformance__4a7c7e45a350/steel-beams.jpg" alt="bare steel structure for building in morning sunlight" />
+
+	
+
+	
+			<figcaption>
+				
+				
+					<small class="copyright">&copy; dakotaroosphotography / unsplash</small>
+				
+			</figcaption>
+		</figure>
+	
+
+<p>The developer has reused steel from the demolition site at their Holbein Gardens site in Belgravia.</p>
+
+<p>The existing 1980s office building is getting a 25% uplift and upward extension, requiring around 70t of steelwork. Investigations determined that 9t of existing steel from a nearby demolition site also within Grosvenor&#39;s portfolio could be used. Combined with 15t of reused steelwork sourced by steel stockists Cleveland Steel and refabricated for the rooftop extension.</p>
+
+<p>The reuse of steel beams and columns is estimated to save 60t of carbon, lowering the carbon dioxide equivalent of the building from 268CO<sub>2</sub>e/m2 to 68CO<sub>2</sub>e/m2.</p>
+
+<p>Structural engineers Heyne Tillet Steel also partnered on the project for Grosvenor&#39;s first net zero scheme.</p>
+
+
+
+
+
+
+	<div class="widget widget-resource mode-grid-3">
+
+		
+			<div class="page-section-heading d-flex justify-content-between">
+				
+				
+			</div>
+		
+
+		
+
+	<div class="article-list article-list-grid mod-grid-3" >
+		
+
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+			
+		
+		
+
+		<article class="article-list-item article-type-article is-restricted">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/retention-retrofit-and-repurpose.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/4f4a62be-ef88-4a0a-a2f8fcd57a2d3a7f/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e/GettyImages-1215121189WEB.jpg">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/4f4a62be-ef88-4a0a-a2f8fcd57a2d3a7f/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a/GettyImages-1215121189WEB.jpg">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/4f4a62be-ef88-4a0a-a2f8fcd57a2d3a7f/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46/GettyImages-1215121189WEB.jpg">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/4f4a62be-ef88-4a0a-a2f8fcd57a2d3a7f/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93/GettyImages-1215121189WEB.jpg">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/4f4a62be-ef88-4a0a-a2f8fcd57a2d3a7f/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94/GettyImages-1215121189WEB.jpg"
+		 alt="GettyImages-1215121189_WEB.jpg"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+			<div class="meta article-restricted"><span class='font-icon font-icon-padlock'></span>Members only</div>
+		
+
+		
+			<div class="meta article-date">5 February 2021</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/retention-retrofit-and-repurpose.html">
+							
+							Retention, retrofit and repurpose – implementing the circular economy in building design
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>Dr Danielle Densley Tingley at Sheffield University, UK, outlines a tool encouraging circular economy principles into building design.</p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+		<div class="article-post-meta">
+			
+				<a href="https://www.iom3.org/resources/all-resources.html?information_type=article" class="" >Article</a>
+			
+
+			
+
+		</div>
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+		<article class="article-list-item article-type-article">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/iom3-investigates-sustainability-in-the-built-environment.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/3fb3684a-b762-4848-a60ce97010762c57/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e/IOM3-Investigates-Sustainability-Built-Environment.png">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/3fb3684a-b762-4848-a60ce97010762c57/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a/IOM3-Investigates-Sustainability-Built-Environment.png">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/3fb3684a-b762-4848-a60ce97010762c57/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46/IOM3-Investigates-Sustainability-Built-Environment.png">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/3fb3684a-b762-4848-a60ce97010762c57/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93/IOM3-Investigates-Sustainability-Built-Environment.png">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/3fb3684a-b762-4848-a60ce97010762c57/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94/IOM3-Investigates-Sustainability-Built-Environment.png"
+		 alt="IOM3 Investigates, Sustainability Built Environment.png"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+
+		
+			<div class="meta article-date">30 April 2021</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/iom3-investigates-sustainability-in-the-built-environment.html">
+							
+							IOM3 Investigates... sustainability in the built environment
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>This week's episode, Rupal Mehta, Editor of Materials World is joined by four guests to explore sustainability in the built environment.
+</p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+		<div class="article-post-meta">
+			
+				<a href="https://www.iom3.org/resources/all-resources.html?information_type=podcast" class="" >Podcast</a>
+			
+
+			
+
+		</div>
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+
+	</div>
+
+
+		
+	</div>
+
+
+<p>&nbsp;</p>
+
+
+					
+
+					
+					
+					
+						
+
+	<div class="resource-detail-tags">
+
+		<h4>Related topics</h4>
+		<div class="resource-detail-tags-list">
+
+			
+				<a href="https://www.iom3.org/resources/all-resources.html?topics=infrastructure" class="btn btn-tag mod-tag-solid" >Infrastructure</a>
+			
+				<a href="https://www.iom3.org/resources/all-resources.html?topics=sustainability" class="btn btn-tag mod-tag-solid" >Sustainability</a>
+			
+				
+		</div>
+
+	</div>
+
+					
+
+					
+
+					
+						
+
+	<div class="resource-detail-author">
+		<h4>Authors</h4>
+		
+
+
+	
+
+
+	
+		
+		
+		
+		
+		
+		<div class="profile is-inline-sm">
+
+			
+				
+					<div class="profile-image-holder is-sm"></div>
+				
+			
+
+			<div class="profile-content">
+				
+				<h4 class="profile-heading">
+					
+						Alex Brinded
+					
+				</h4>
+				<p class="profile-meta">Features Editor</p>
+
+				
+
+			</div>
+
+			
+
+		</div>
+	
+
+
+	</div>
+
+					
+
+					
+
+
+	<div class="return-link-holder">
+		<a href="https://www.iom3.org/resources/all-resources.html" class="return-link">Return to listing</a>
+	</div>
+
+				
+			</section>
+		</div>
+
+		<div class="col-xs-12 col-md-4">
+
+			<aside class="sidebar">
+
+				
+					<div class="widget">
+						
+						
+					</div>
+				
+
+				
+
+				
+
+			</aside>
+
+		</div>
+
+	</div>
+
+					</div>
+
+				</div>
+			
+			</div>
+		
+			
+				<div class="bottom-content">
+					
+	
+
+	
+		<div class="resource-detail-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						
+
+
+	<div class="related-resources">
+		<h3 class="related-resources-heading">Related Content</h3>
+		<div class="article-list article-list-grid mod-grid-3" >
+			
+
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+		<article class="article-list-item article-type-article">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/return-to-work-support-for-career-breakers-targets-energy-infrastructure-sector.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/63553a07-45b5-4326-b28548ba735fafd2/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e_4a7c7e45a350/MSI-Wales-May-2025-127.jpg">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/63553a07-45b5-4326-b28548ba735fafd2/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a_4a7c7e45a350/MSI-Wales-May-2025-127.jpg">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/63553a07-45b5-4326-b28548ba735fafd2/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46_4a7c7e45a350/MSI-Wales-May-2025-127.jpg">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/63553a07-45b5-4326-b28548ba735fafd2/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93_4a7c7e45a350/MSI-Wales-May-2025-127.jpg">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/63553a07-45b5-4326-b28548ba735fafd2/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94_4a7c7e45a350/MSI-Wales-May-2025-127.jpg"
+		 alt="MSI Wales May 2025-127.jpg"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+
+		
+			<div class="meta article-date">21 May 2026</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/return-to-work-support-for-career-breakers-targets-energy-infrastructure-sector.html">
+							
+							Return-to-work support for career breakers targets energy infrastructure sector
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>STEM Returners will coach and mentor the first cohort to join Morgan Sindall Infrastructure.</p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+		<article class="article-list-item article-type-article">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/uk-s-first-certification-scheme-for-biogenic-stored-carbon-in-the-built-environment.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/903e9585-1085-4a89-b54a25b17f5d0ec3/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e_4a7c7e45a350/shutterstock2579504365.jpg">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/903e9585-1085-4a89-b54a25b17f5d0ec3/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a_4a7c7e45a350/shutterstock2579504365.jpg">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/903e9585-1085-4a89-b54a25b17f5d0ec3/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46_4a7c7e45a350/shutterstock2579504365.jpg">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/903e9585-1085-4a89-b54a25b17f5d0ec3/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93_4a7c7e45a350/shutterstock2579504365.jpg">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/903e9585-1085-4a89-b54a25b17f5d0ec3/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94_4a7c7e45a350/shutterstock2579504365.jpg"
+		 alt="shutterstock_2579504365.jpg"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+
+		
+			<div class="meta article-date">21 May 2026</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/uk-s-first-certification-scheme-for-biogenic-stored-carbon-in-the-built-environment.html">
+							
+							UK’s 'first certification scheme' for biogenic stored carbon in the built environment
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>Grown in Britain highlights independently verified way to measure the long-term carbon stored in biogenic materials.</p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+		<article class="article-list-item article-type-article">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/climate-change-committee-presents-solutions-for-climate-risks.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/b3c45093-9e29-4cee-b252b55937d0b2be/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e_4a7c7e45a350/shutterstock2325129051.jpg">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/b3c45093-9e29-4cee-b252b55937d0b2be/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a_4a7c7e45a350/shutterstock2325129051.jpg">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/b3c45093-9e29-4cee-b252b55937d0b2be/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46_4a7c7e45a350/shutterstock2325129051.jpg">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/b3c45093-9e29-4cee-b252b55937d0b2be/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93_4a7c7e45a350/shutterstock2325129051.jpg">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/b3c45093-9e29-4cee-b252b55937d0b2be/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94_4a7c7e45a350/shutterstock2325129051.jpg"
+		 alt="shutterstock_2325129051.jpg"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+
+		
+			<div class="meta article-date">20 May 2026</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/climate-change-committee-presents-solutions-for-climate-risks.html">
+							
+							UK Climate Change Committee recommends solutions for climate risks
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>By 2050, 92% of homes are likely to overheat and peak river flows will be up to 45% higher, says the committee.</p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+		<article class="article-list-item article-type-article">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/adhesive-free-sealing-to-enhance-paper-packaging-recyclability.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/91f6a234-bb34-4aba-9fe10f82cd23ed20/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e_4a7c7e45a350/iap-iws-ivv-iwu-papure-bild-4web.png">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/91f6a234-bb34-4aba-9fe10f82cd23ed20/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a_4a7c7e45a350/iap-iws-ivv-iwu-papure-bild-4web.png">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/91f6a234-bb34-4aba-9fe10f82cd23ed20/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46_4a7c7e45a350/iap-iws-ivv-iwu-papure-bild-4web.png">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/91f6a234-bb34-4aba-9fe10f82cd23ed20/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93_4a7c7e45a350/iap-iws-ivv-iwu-papure-bild-4web.png">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/91f6a234-bb34-4aba-9fe10f82cd23ed20/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94_4a7c7e45a350/iap-iws-ivv-iwu-papure-bild-4web.png"
+		 alt="iap-iws-ivv-iwu-papure-bild-4_web.png"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+
+		
+			<div class="meta article-date">20 May 2026</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/adhesive-free-sealing-to-enhance-paper-packaging-recyclability.html">
+							
+							Adhesive-free sealing to enhance paper packaging recyclability
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>A heat-based laser treatment could enable adhesive-free paper packaging to simplify recycling at the end of its life.</p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+		<article class="article-list-item article-type-article">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/uk-government-urged-to-move-faster-on-electricity-digitalisation.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/dbf6e05d-d6dd-4f37-b6f4558371f9c243/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e_4a7c7e45a350/shutterstock2578818201.jpg">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/dbf6e05d-d6dd-4f37-b6f4558371f9c243/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a_4a7c7e45a350/shutterstock2578818201.jpg">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/dbf6e05d-d6dd-4f37-b6f4558371f9c243/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46_4a7c7e45a350/shutterstock2578818201.jpg">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/dbf6e05d-d6dd-4f37-b6f4558371f9c243/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93_4a7c7e45a350/shutterstock2578818201.jpg">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/dbf6e05d-d6dd-4f37-b6f4558371f9c243/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94_4a7c7e45a350/shutterstock2578818201.jpg"
+		 alt="shutterstock_2578818201.jpg"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+
+		
+			<div class="meta article-date">19 May 2026</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/uk-government-urged-to-move-faster-on-electricity-digitalisation.html">
+							
+							UK Government urged to move faster on electricity digitalisation
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>The National Engineering Policy Centre calls for a step-change to maintain system resilience and reduce energy costs.  </p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+		<article class="article-list-item article-type-article">
+			<div class="article-wrapper">
+
+				
+					<div class="article-img">
+						<a href="https://www.iom3.org/resource/smouldering-technology-for-tackling-nuclear-waste.html">
+							
+
+	<picture>
+		
+			<source media="(min-width: 992px)" srcset="https://www.iom3.org/static/475a91b5-68d4-4386-90486cc7e451376c/resourcegridlistingimage992_78d5ef0710777426d9a12c477196c33e_4a7c7e45a350/nuclear-waste800x533.png">
+		
+			<source media="(min-width: 768px)" srcset="https://www.iom3.org/static/475a91b5-68d4-4386-90486cc7e451376c/resourcegridlistingimage768_a1700d4b24d502cf3fc659ed39aa8e8a_4a7c7e45a350/nuclear-waste800x533.png">
+		
+			<source media="(min-width: 576px)" srcset="https://www.iom3.org/static/475a91b5-68d4-4386-90486cc7e451376c/resourcegridlistingimage576_b58ed5ba24d88ce91e2e2527e4909e46_4a7c7e45a350/nuclear-waste800x533.png">
+		
+			<source media="(min-width: 481px)" srcset="https://www.iom3.org/static/475a91b5-68d4-4386-90486cc7e451376c/resourcegridlistingimage481_14e6874ce34be97772f6319c879e8a93_4a7c7e45a350/nuclear-waste800x533.png">
+		
+
+		
+
+	<img src="https://www.iom3.org/static/475a91b5-68d4-4386-90486cc7e451376c/resourcegridlistingimagedefault_4d12532919c64e60a22baf03232bbf94_4a7c7e45a350/nuclear-waste800x533.png"
+		 alt="nuclear waste_800x533.png"
+		
+		
+	/>
+
+
+	</picture>
+
+						</a>
+						
+					</div>
+				
+
+				<div class="article-details">
+					
+
+					
+
+
+
+
+	<div class="article-pre-meta">
+
+		
+
+		
+			<div class="meta article-date">18 May 2026</div>
+		
+
+	</div>
+
+
+
+					<h4 class="article-title">
+						<a href="https://www.iom3.org/resource/smouldering-technology-for-tackling-nuclear-waste.html">
+							
+							Smouldering technology for tackling nuclear waste
+						</a>
+					</h4>
+
+					
+						<div class="article-teaser">
+							<p>Researchers at the University of Nottingham, UK, to investigate combustion treatments for waste graphite.</p>
+						</div>
+					
+
+					
+						
+
+
+
+	
+
+
+					
+
+				</div>
+				
+			</div>
+		</article>
+	
+
+		</div>
+	</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	
+
+
+				</div>
+			
+
+			
+
+		</div>
+	</div>
+
+
+			
+
+
+	
+
+	<footer class="footer">
+		<div class="footer-main">
+
+			<div class="container">
+				<p class="footer-logo text-center text-lg-left"><a href="/"><img src="/assets/img/logo.svg"></a></p>
+				<div class="row-flex">
+
+					<div class="col-lg-6 text-center text-lg-left footer-address">
+						
+							<p>297 Euston Road, London NW1 3AD, UK&nbsp;</p>
+
+<p>Telephone: +44 (0)20 7451 7300</p>
+
+						
+						
+							<nav class="footer-nav is-white">
+								<ul class="footer-nav-list">
+									
+
+	
+
+		<li class="footer-nav-list-item">
+			<a href="https://www.iom3.org/about-us/contact-us.html" class="footer-nav-link">Contact us</a>
+		</li>
+	
+
+		<li class="footer-nav-list-item">
+			<a href="https://www.iom3.org/about-us/contact-us/website-issues.html" class="footer-nav-link">Website issues</a>
+		</li>
+	
+
+		<li class="footer-nav-list-item">
+			<a href="https://www.iom3.org/copyright.html" class="footer-nav-link">Copyright</a>
+		</li>
+	
+
+		<li class="footer-nav-list-item">
+			<a href="https://www.iom3.org/privacy.html" class="footer-nav-link">Privacy notice</a>
+		</li>
+	
+
+		<li class="footer-nav-list-item">
+			<a href="https://www.iom3.org/accessibility.html" class="footer-nav-link">Accessibility</a>
+		</li>
+	
+
+		<li class="footer-nav-list-item">
+			<a href="https://www.iom3.org/terms-conditions.html" class="footer-nav-link">Terms & conditions</a>
+		</li>
+	
+
+								</ul>
+							</nav>
+						
+					</div>
+
+					<div class="col-lg-4 col-md-offset-2 text-center text-lg-left">
+						<p>The Institute is a body incorporated by Royal Charter (company no RC000267) and a charity registered in England &amp; Wales (269275) and in Scotland (SC050586).&nbsp;Patron: HM The King.<br />
+&copy; 2026 IOM3</p>
+
+
+	<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5f2c22ad5c885a1b7fb6e42e/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+	<!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "d4cef4158d304c078d7d31eb0ca2e212"}'></script><!-- End Cloudflare Web Analytics -->
+
+
+<p>&nbsp;</p>
+
+						
+							<ul class="social-link-list mt-20 mt-lg-0">
+								
+
+	
+		
+		<li class="social-link-item">
+			
+
+
+	
+		<a href="https://twitter.com/iom3" class="social-link"><span class='font-icon-twitter'></span> </a>
+	
+
+		</li>
+	
+		
+		<li class="social-link-item">
+			
+
+
+	
+		<a href="https://linkedin.com/company/institute-of-materials-minerals-and-mining/" class="social-link"><span class='font-icon-linkedin'></span> </a>
+	
+
+		</li>
+	
+		
+		<li class="social-link-item">
+			
+
+
+	
+		<a href="https://www.facebook.com/iom3globalnetwork" class="social-link"><span class='font-icon-facebook'></span> </a>
+	
+
+		</li>
+	
+		
+		<li class="social-link-item">
+			
+
+
+	
+		<a href="https://www.instagram.com/iomthree/" class="social-link"><span class='font-icon-instagram'></span> </a>
+	
+
+		</li>
+	
+
+							</ul>
+						
+						<p class="mt-50"><a href="https://www.pixl8.co.uk/">Design &amp; Development by Pixl8</a></p>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="container p-20">
+				<p></p>
+			</div>
+		
+		</div>
+	</footer>
+
+		</div>
+
+		
+
+
+
+		<script nonce="068932ddc5159af1f6f1bca110465bdd">cfrequest={"dismissEndPoint":"https://www.iom3.org/Announcement/dismissAnnouncement/","updateClickEndpoint":"https://www.iom3.org/advertising/updateClick/","updateImpressionEndpoint":"https://www.iom3.org/advertising/updateImpression/"}</script>
+<script src="/assets/js/pixl8core/lib/modernizr-2.6.2.min.js" async="true"></script>
+<script src="/assets/js/pixl8core/lib/jquery-3.6.0.min.js"></script>
+<script src="/assets/js/pixl8core/lib/jquery-migrate-3.3.2.js"></script>
+<script src="/assets/js/lib/jquery-ui.min.js"></script>
+<script src="/preside/system/assets/extension/preside-ext-advertising/assets/js/lib/jquery.lazyloadxt.min.js"></script>
+<script src="/preside/system/assets/extension/preside-ext-advertising/assets/js/main.js"></script>
+<!--[if lte IE 9]><script src="/assets/js/pixl8core/lib/placeholders.jquery.min.js"></script><![endif]-->
+<script src="/assets/js/pixl8core/core/_f01724ab.core.min.js"></script>
+<script src="/assets/js/core/_908be50e.core.min.js"></script>
+<script src="/assets/js/specific/components/collapsible-content/_3918260b.collapsible-content.min.js"></script>
+
+	</body>
+</html>

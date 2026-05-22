@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>.LA - The Official .LA Registry</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="WWW.LA, the official Los Angeles .LA Registry: .LA domain name ensures your customers, friends and fans know that you are in Los Angeles before they even look at your site." />
+
+	<meta name="keywords" content="domains, domain names, domain name registration, tld, cctld, hosting, website builder, email, LA, Los Angeles, California" />
+
+	<meta name="robots" content="index, follow" />
+
+	<!-- mobile browser config -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="/resources/la/img/fav.ico" type="image/x-icon" />
+
+	<link rel="stylesheet" type="text/css" href="/resources/default/css/bootstrap3.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/resources/default/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/resources/la/css/bootstrap-theme.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/resources/la/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/resources/default/css/gapps.css" media="screen" />
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/resources/default/css/font-awesome-animation.min.css" media="screen" />
+
+ 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/resources/default/js/html5shiv.js"></script>
+      <script src="/resources/default/js/respond.min.js"></script>
+    <![endif]-->
+
+
+	<!--[if IE 8]>
+		<link rel="stylesheet" type="text/css" href="/resources/default/css/style.ie8.css">
+	<![endif]-->
+	<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="/resources/default/css/style.ie7.css">
+	<![endif]-->
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/resources/default/css/style.ie.css">
+	<![endif]-->
+
+		
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-1385674-1']);
+		_gaq.push(["_setDomainName", "www.la"]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+	
+	
+	<script type="text/javascript" src="/resources/default/js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="/resources/default/js/common.js"></script>
+	<script type="text/javascript" src="/resources/default/js/bootstrap3.min.js"></script>
+	<script type="text/javascript" src="/resources/default/js/jquery.cookie.js"></script>
+	<script type="text/javascript" src="/resources/default/js/jquery.form.js"></script>
+
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			if(!$.cookie("cookie_warning")) {
+				$("div#cookie_warning").show();
+			}
+
+			$("div#cookie_warning button#accept").click(function() {
+				$.cookie('cookie_warning', 'accepted', { expires: 90, path: '/' });
+				$("div#cookie_warning").hide();
+			});
+
+ 			// var now = new Date();
+ 			// var now_hours = now.getHours();
+
+ 			// if (now_hours >= 6 && now_hours <= 20) {
+ 			// 	$('body').addClass("urban");
+ 			// } else {
+ 			// 	$('body').addClass("city");
+ 			// }
+
+			$.post("/cart/json_get_cart_count", {}, onCount, "json");
+
+			function onCount(data) {
+				$("span#cart_count").html(data.count);
+			}
+		});
+	</script>
+ 	<script type="text/javascript" src="//use.typekit.net/qky8cyf.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	
+</head>
+<body>
+	<div id="loader"><img src="/resources/default/img/ajax-loader-top.gif" class="middle" />&nbsp;Please wait...</div>
+	<div id="container" class="container">
+		<div id="header" class="navbar navbar-fixed-top">
+			<div class="container" style="position: relative;">
+				<h1 id="logo" class="navbar-brand"><a href="/"><img src="/resources/la/img/logo.png" /></a></h1>
+				<div id="cart_login" class="right">
+					<a href="/login" id="login_link">Login</a><a href="/create-account" id="signup_link">Sign Up</a>
+					<a href="/cart/view_shopping_cart" id="shopping_link">Shopping Cart (<span id='cart_count'>0</span>)</a>
+				</div>
+									<button style="margin-top: 60px;" type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><div class="glyphicon icon-chevron-down"></div>&nbsp;Menu</button>
+					<div class="navbar-collapse collapse" style="margin-top: 60px;">
+						<ul class="nav navbar-nav navbar-right">
+							<li ><a href="/blog"><div class="glyphicon glyphicon-comment"></div>&nbsp;News Blog</a></li>
+							<li ><a href="/premiums"><div class="glyphicon glyphicon-star"></div>&nbsp;Premiums</a></li>
+							<li ><a href="/about"><div class="glyphicon glyphicon-heart"></div>&nbsp;About .LA</a></li>
+							<li ><a href="/faqs/"><div class="glyphicon glyphicon-info-sign"></div>&nbsp;FAQs</a></li>
+							<li class="dropdown ">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#"><div class="glyphicon glyphicon-chevron-down"></div>&nbsp;Website Tools</a>
+								<ul class="dropdown-menu">
+																											<li><a href="/qrcode">Free QR Code</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+							</div>
+		</div>
+		<div id="container_inner">
+			
+<script type="text/javascript" src="/resources/default/js/jquery.vticker.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("div#main_carousel").carousel({
+			interval: 12000
+		});
+
+		function tick(){
+			$('#premium_scroller li:first').animate({'opacity':0.4}, 200, function () { $(this).appendTo($('#premium_scroller')).css('opacity', 1); });
+		}
+
+		setInterval(function(){ tick () }, 2000);
+
+	});
+</script>
+
+<div id="content">
+	<div id="main_carousel" class="visible-md visible-lg carousel slide carousel-fade">
+		<div id="main_search">
+			<span class="tagline-message">Thousands of valuable keywords now available...</span>
+			<div class="search_form_wrap">
+<script type="text/javascript">
+$(document).ready(function() {
+
+	var preString = "Search for your domain name";
+
+	$("div#search_form button#search").click(function(e) {
+		var input_domain = $(this).parents('table').find("input#domain");
+		if(input_domain.val().length > 0 && input_domain.val() != preString) {
+			window.location = "/cart/search/" + input_domain.val();
+		} else {
+			input_domain.focus();
+		}
+		e.preventDefault();
+	});
+
+	$("div#search_form input#domain").focus(function() {
+		if($(this).val() == preString) {
+			$(this).removeClass("input-blurred");
+			$(this).val("");
+		}
+	});
+
+	$("div#search_form input#domain").blur(function() {
+		if($(this).val() == "") {
+			$(this).addClass("input-blurred");
+			$(this).val(preString);
+		}
+	});
+
+	$("div#search_form input#domain").val(preString);
+	$("div#search_form input#domain").focus();
+
+	$("div#search_form input#domain").keypress(function (e) {
+		if (e.which == 13) {
+			$("div#search_form button#search").click();
+		}
+	});
+});
+</script>
+
+
+<div id="search_form">
+	<table cellspacing="0" cellpadding="0">
+		<tr>
+			<td><span class="www bold">www.</span></td>
+			<td>&nbsp;</td>
+			<td><input type="text" name="domain" id="domain" autocomplete="off" class="form-control" /></td>
+			<td>&nbsp;</td>
+			<td><span class="www bold">.</span></td>
+			<td class="middle" valign="middle">
+							<input type="hidden" name="tlds" id="tlds" value="la" />
+				<span class="www bold">la</span>
+						</td>
+			<td><button id="search" class="btn"></button></td>
+		</tr>
+	</table>
+</div></div>
+			<span class="message">from as low as &#36;50!</span>
+			<span class="sub-message bold">
+				<table cellspacing="0" cellpadding="0">
+					<tr>
+						<td colspan="2" class="center"><p class="blue center">As featured..</p></td>
+					</tr>
+					<tr>
+						<td class="middle"><a href="/e/blog#latimes"><img src="/resources/la/img/blog/la-times-logo.png" style="margin-right: 15px;"/></a></td>
+						<td class="middle"><a href="/e/blog#variety"><img src="/resources/la/img/blog/variety-logo.png" /></a></td>
+					</tr>
+				</table>
+			</span>
+		</div>
+<!--	<ol class="carousel-indicators">
+			<li data-target="#main_carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#main_carousel" data-slide-to="1"></li>
+			<li data-target="#main_carousel" data-slide-to="2"></li>
+			<li data-target="#main_carousel" data-slide-to="3"></li>
+		</ol>-->
+		<!-- Carousel items -->
+		<div class="carousel-inner">
+			<div id="banner1" class="active item"></div>
+			<div id="banner2" class="item"></div>
+			<div id="banner3" class="item"></div>
+			<div id="banner4" class="item"><a href="/e/sitebuilder" style="display: block; height: 100%; width: 100%;"></a></div>
+		</div>
+
+		<!-- Carousel nav -->
+		<a class="carousel-control left visible-md visible-lg" href="#main_carousel" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right visible-md visible-lg" href="#main_carousel" data-slide="next">&rsaquo;</a>
+		<img src="/resources/default/img/search-box-shadow.png" />
+	</div>
+	<div class="visible-sm visible-xs center">
+		<div class="panel margin-center" style="background: #1a1a1a; display: inline-block;">
+			<div class="content center" style="padding: 12px 20px 7px 20px;">
+				
+<script type="text/javascript">
+$(document).ready(function() {
+
+	var preString = "Search for your domain name";
+
+	$("div#search_form button#search").click(function(e) {
+		var input_domain = $(this).parents('table').find("input#domain");
+		if(input_domain.val().length > 0 && input_domain.val() != preString) {
+			window.location = "/cart/search/" + input_domain.val();
+		} else {
+			input_domain.focus();
+		}
+		e.preventDefault();
+	});
+
+	$("div#search_form input#domain").focus(function() {
+		if($(this).val() == preString) {
+			$(this).removeClass("input-blurred");
+			$(this).val("");
+		}
+	});
+
+	$("div#search_form input#domain").blur(function() {
+		if($(this).val() == "") {
+			$(this).addClass("input-blurred");
+			$(this).val(preString);
+		}
+	});
+
+	$("div#search_form input#domain").val(preString);
+	$("div#search_form input#domain").focus();
+
+	$("div#search_form input#domain").keypress(function (e) {
+		if (e.which == 13) {
+			$("div#search_form button#search").click();
+		}
+	});
+});
+</script>
+
+
+<div id="search_form">
+	<table cellspacing="0" cellpadding="0">
+		<tr>
+			<td><span class="www bold">www.</span></td>
+			<td>&nbsp;</td>
+			<td><input type="text" name="domain" id="domain" autocomplete="off" class="form-control" /></td>
+			<td>&nbsp;</td>
+			<td><span class="www bold">.</span></td>
+			<td class="middle" valign="middle">
+							<input type="hidden" name="tlds" id="tlds" value="la" />
+				<span class="www bold">la</span>
+						</td>
+			<td><button id="search" class="btn"></button></td>
+		</tr>
+	</table>
+</div>			</div>
+		</div>
+	</div>
+
+	<div class="row" style="padding: 0 20px;" id="home-section">
+		<div class="col-md-6">
+			<div id="homebox-1" class="homebox">
+				<div class="heading">
+					<img src="/resources/la/img/homebox-corner-new.png" id="corner-new" class="visible-md visible-lg" />
+					<h2 class="white nowrap hidden-xs">Create Your Own Website</h2>
+					<h2 class="white nowrap visible-xs">Create Your Website</h2>
+					<h3 class="white nowrap hidden-xs">With our easy to use website builder tool..</h3>
+					<h3 class="white nowrap visible-xs">With our easy to use website builder..</h3>
+				</div>
+				<div class="content">
+					<p>Whatever your needs, we have a package tailor made for you. You can also try out our website builder for free for an unlimited time period.</p>
+					<p class="bold">Website builder is a simple, user-friendly and affordable solution to building your website.</p>
+					<div class="center"><a href="/e/sitebuilder" id="start_creating" class="bold btn btn-lg nowrap">Try it for Free &raquo;</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div id="homebox-2" class="homebox">
+				<div class="heading">
+					<h2 class="white nowrap">Great Premium Names</h2>
+					<h3 class="white nowrap hidden-xs">Quality names available from as low as $200..</h3>
+					<h3 class="white nowrap visible-xs">From as low as $200..</h3>
+				</div>
+				<div class="content">
+					<p>Our premium domains now come with a low renewal rate of just $50. Better yet, they are fully transferable to your registrar of choice.</p>
+					<ul id="premium_scroller" style="margin:0 0 0 0px;">
+											</ul>
+					<div class="center"><a href="/e/premiums" id="more_premiums" class="bold btn btn-lg nowrap center">More Premiums &raquo;</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</div> <!-- container-inner -->
+	</div> <!-- container -->
+	<div id="footer">
+		<div class="container">
+			<div id="cookie_warning" style="display: none;">
+				<span class="white">By browsing our site, you&#039;re agreeing to the use of cookies. Cookies are tiny bits of data websites store in your web browser to make your online experience better.
+				<button id="accept" class="btn btn-success">OK</button>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="nav nav-simple" style="display: inline-block;">
+						<li><a href="/about">About</a></li>
+						<li><a href="/sell">Sell Our Domains</a></li>
+						<li><a href="/whois">Whois Lookup</a></li>
+						<li><a href="/faqs/">FAQs</a></li>
+						<li><a href="/policies">Policies</a></li>
+						<li><a href="/terms">Terms of Use</a></li>
+						<li><a href="/privacy">Privacy</a></li>
+						<li><a href="/contact-us">Contact Us</a></li>
+						<!-- <li><a href="http://www.facebook.com/registryLA"><img style="opacity: 0.7; width: 16px;" src="/resources/default/img/facebook_icon.png" /></a></li> -->
+						<!-- <li><a href="https://twitter.com/#!/dotlaregistry"><img style="opacity: 0.7; width: 16px;" src="/resources/default/img/twitter_icon.png" /></a></li> -->
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<span class="center">&copy; 2026 WWW.LA. All rights reserved.</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1418 @@
+<!doctype html>
+<!--
+===================================
+==== made in Vienna with ♡ ... ====
+===================================
+=== http://www.benpazdernik.com ===
+===================================
+-->
+<html lang="de">
+<head>
+    <title>LXSY ARCHITEKTUR | LXSY Architektur</title>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description"  content="LXSY ist ein Architekturbüro in Berlin. Wir beschäftigen uns mit dem Feld des zirkulären Planen und Bauens und setzen uns aktiv ein für die Transformation hin zur einer klimagerechten Baubranche.">
+    <meta name="theme-color" content="#000000">
+        
+    <meta name="language" content="de">
+        
+    <base href="https://lxsy.de/" />
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/plugins/lightgallery/css/lightgallery.css">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+    <!-- Flickity -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    
+    <style>
+    @media screen and (max-width: 1200px) {
+        .page-id-3 .custom-row,
+        .page-id-4 .custom-row {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page-id-3 .custom-row .content-left,
+        .page-id-4 .custom-row .content-left {
+            order: 3;
+        }
+    }
+    
+    /* Adding arrow to the homepage and adapting the CSS slightly */
+    .template-Homepage main {
+        padding-top: 0;
+        top: 90vh;
+    }
+    
+    .arrow-down-icon {
+        width: 5vh;
+        height: 5vh;
+        margin: 45px auto 45px;
+        display: block;
+    }
+    
+    /* Press publications design changes */ 
+    p.press-publication {
+        display: block;
+        margin-bottom: 0.25em;
+    }
+    
+    .template-Presse h2 {
+        text-transform: uppercase;
+        margin-bottom: 1.5em;
+        font-size: 1.25em;
+    }
+    
+    body.template-Presse .container .custom-row .content-left {
+        flex-direction: column;
+    }
+    
+    /* Pulse animation vor down-arrow on startpage */
+    .template-Homepage .arrow-down-icon {
+        -webkit-animation: mover 1s infinite  alternate;
+        animation: mover 1s infinite  alternate;
+    }
+    .template-Homepage .arrow-down-icon {
+        -webkit-animation: mover 1s infinite  alternate;
+        animation: mover 1s infinite  alternate;
+    }
+    @-webkit-keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    
+    </style>
+    
+ <style>
+/*=================================
+=            Variables            =
+=================================*/
+
+:root {
+  --color-blue: #0203e2;
+  --color-light-gray: #f5f5f5;
+  --color-nude: #f6c7b3;
+  --color-light-green: #bbdbca;
+  --color-light-blue: #cedbed;
+}
+
+
+/*=================================
+=            Heading Styles       =
+=================================*/
+
+h2.heading, h1.heading {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin: 4rem 0;
+}
+
+ul > li {
+  font-weight: 400;
+}
+
+.heading.alignment-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  h2.heading, h1.heading {
+    font-size: 2rem;
+  }
+  
+  .heading {
+    max-width: 40ch;
+  }
+  
+  .heading.alignment-left {
+    text-align: left;
+  }
+  
+  .heading.alignment-center,
+  .alignment-centered {
+    text-align: center;
+  }
+  
+  p {
+    max-width: 65ch;
+  }
+}
+
+/*=================================
+=         Utility Classes         =
+=================================*/
+
+.font-large, .font-large p {
+  font-size: 1.25rem;
+  letter-spacing: 0.25px;
+  line-height: 1.25em;
+  margin-bottom: 1.5rem;
+  font-family: "Larsseit", sans-serif;
+  font-weight: bold;
+}
+
+.font-large:last-of-type, .font-large p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .font-large, .font-large p {
+    font-size: 1.55rem;
+  }
+}
+
+.font-uppercase {
+  text-transform: uppercase;
+}
+
+.mt-4 {
+  margin-top: 1em;
+}
+
+.mb-4 {
+  margin-bottom: 1em;
+}
+
+/*=================================
+=          Button Styles          =
+=================================*/
+
+.button {
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  transition: background-color 0.25s cubic-bezier(0.46, 0.46, 0, 0.95), color 0.25s ease-in-out;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: var(--color-blue);
+}
+
+/*=================================
+=         Content Container       =
+=================================*/
+
+.container-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .container-content {
+    max-width: 1200px;
+  }
+}
+
+/*=================================
+=       Two-Column Layout         =
+=================================*/
+
+.row.two-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row.two-column > .column {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+  .row.two-column {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row.two-column > .column {
+    flex: 1 1 50%;
+  }
+}
+
+/*=================================
+=         Image Optimization      =
+=================================*/
+
+.row.two-column img {
+  max-height: 40rem;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/*=================================
+=        Offset Layout Styles     =
+=================================*/
+
+section.row.offset-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.offset-left {
+  flex: 1;
+}
+
+.row-main-content {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  section.row.offset-left {
+    flex-direction: row;
+  }
+
+  .offset-left {
+    flex: 0 0 25%;
+  }
+
+  .row-main-content {
+    flex: 0 0 75%;
+  }
+  
+  .offset-left h2 {
+    position: sticky;
+    top: 8rem;
+  }
+}
+
+/*=================================
+=        Accordion Styles         =
+=================================*/
+
+.accordion-header, .accordion-icon {
+  cursor: pointer;
+}
+
+.accordion-header h2 {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  position: relative;
+  width: 100%;
+  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #0203e2;
+}
+
+.accordion-item:focus {
+  outline: none;
+}
+
+.accordion-item:last-child {
+  border-bottom: 1px solid #0203e2;
+}
+
+.accordion-icon {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.accordion-icon .vertical-line {
+  transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transform-origin: center;
+}
+
+.accordion-header.active .vertical-line {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.accordion-content.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .accordion-item {
+    flex-direction: row;
+  }
+
+  .accordion-header {
+    flex: 0 0 25%;
+  }
+
+  .accordion-content {
+    flex: 0 0 75%;
+  }
+  
+  .accordion-headline h2 {
+    position: sticky;
+    top: 8rem;
+  }
+}
+
+/*=================================
+=           Card Grid             =
+=================================*/
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team-grid {
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.team-member-position {
+  font-weight: 400;
+}
+
+/*=================================
+=       Mobile Row Fixes          =
+=================================*/
+
+@media screen and (max-width: 768px) {
+  .row [class^="col"], .row [class^="col"]:last-of-type {
+    margin: 0.5rem 0;
+    float: left;
+  }
+}
+
+
+/*=================================
+=       Desktop Row Changes          =
+=================================*/
+
+/* Increase padding on homepage for rows on desktop */
+
+@media screen and (min-width: 1024px) {
+    .template-Homepage.V2 .row {
+        margin-bottom: 5rem;
+    }
+}
+
+/*=================================
+=       Footer Changes            =
+=================================*/
+
+footer {
+    font-weight: bold;
+}
+
+/*=================================
+=       Small Fixes               =
+=================================*/
+
+/* Remove space below icon to align spaces better */
+.arrow-down-icon {
+    margin-bottom: -1.25rem;
+}
+
+/* Fix slightly off overhang on project-grid */
+@media screen and (min-width: 768px) {
+    .project-grid.v2 {
+        margin-left: -14px;
+        margin-right: -14px;
+    }
+}
+
+/* Remove the margin from the project-grid element when a heading is above */
+.heading + .news-grid .project-grid {
+    margin-top: 0;
+}
+
+/* If the row has a news-grid / project-grid the headline should be sized according to specifications */
+.row:has(.heading + .news-grid) .heading {
+    margin-bottom: 0;
+    font-size: 21px;
+}
+
+.column:has(> img:only-child) {
+    display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+    .row [class^="col"] {
+        margin: 0;
+    }
+}
+
+*:not(.button) + .button {
+  margin-top: 2.25rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    display: block !important;
+    text-align: center;
+  }
+}
+
+/* When a heading is directly followed by a .font-large then reduce the margin to make the rhythm work again */
+.heading:has(+ .font-large) {
+  margin-bottom: 1.5rem;
+}
+
+/*=================================
+=       Gallery Slider            =
+=================================*/
+
+.gallery-slider {
+  width: 100%;
+  margin: auto;
+}
+
+.gallery-slider:not(.flickity-enabled) {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.gallery-slider.flickity-enabled {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.gallery-slider .flickity-button {
+  width: 50%;
+  height: 100%;
+  background: transparent !important;
+  opacity: 0 !important;
+  padding: 0;
+}
+
+.gallery-slider .flickity-button .flickity-button-icon {
+  display: none;
+}
+
+.gallery-slider .flickity-button.flickity-prev-next-button.next {
+  cursor: url('/assets/graphics/arrow-right.png') 25 25, pointer;
+}
+
+.gallery-slider .flickity-button.flickity-prev-next-button.previous {
+  cursor: url('/assets/graphics/arrow-left.png') 25 25, pointer;
+}
+
+/* Fix footer padding and width */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    footer .container {
+        width: 100%;
+        padding: 1.25rem;
+        box-sizing: border-box;
+    }
+    
+    footer .container .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+@media only screen and (min-width: 60em) and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 3rem;
+        box-sizing: border-box;
+    }  
+}
+
+/*==============================================================
+=      Fixes and changes to the project detail page template   =
+================================================================*/
+
+
+@media screen and (min-width: 1200px) {
+    .container .custom-row .content-center {
+        width: 55%;
+        padding-left: 25%;
+        padding-top: 0;
+        margin-top: -20px;
+    }
+
+    .container .custom-row .content-right {
+        width: 20%;
+        padding-left: 0%;
+        padding-top: 0;
+        margin-top: -20px;
+    }
+    
+    .project-title {
+        width: 20%;
+        clear: both;
+    }
+}
+
+.content-center .row {
+    margin-top: 0;
+}
+
+.project-content .content-center, .project-content .content-right {
+    padding-top: 2rem;
+}
+
+
+</style>
+ 
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var items = document.querySelectorAll('.accordion-item');
+    
+      items.forEach(function(item) {
+        var header = item.querySelector('.accordion-header');
+        var content = item.querySelector('.accordion-content');
+    
+        function toggleAccordion() {
+          var isActive = header.classList.contains('active');
+    
+          // Toggle active class on header
+          header.classList.toggle('active');
+          // Update aria-expanded attribute
+          header.setAttribute('aria-expanded', !isActive);
+    
+          if (isActive) {
+            // Collapse content
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.classList.remove('active');
+            setTimeout(function() {
+              content.style.maxHeight = '0';
+            }, 10);
+          } else {
+            // Expand content
+            content.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        }
+    
+        // Click event listener on header
+        header.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleAccordion();
+        });
+    
+        // Keydown event listener for keyboard interaction
+        header.addEventListener('keydown', function(e) {
+          var key = e.key || e.code;
+    
+          if (key === 'Enter' || key === ' ' || key === 'Space') {
+            e.preventDefault();
+            toggleAccordion();
+          }
+        });
+      });
+    });
+
+</script>
+ 
+</head>
+
+<body class="template-Homepage V2 page-id-530" >
+
+<navbar class="navbar menu">
+    <div class="brand">
+        <a href="/">
+            <img src="/assets/graphics/lxsy-architektur-logo.svg" alt="LXSY Arcitektur - Logo">
+        </a>
+    </div>
+    <div id="menuButton">
+        <a id="menuButtonLink" href="javascript:openNav();">
+            <div class="hamburger"></div>
+        </a>
+    </div>
+    
+    <div id="sideNavigation" class="sidenav">
+            <div class="main-menu">
+                <a href="projekte/">Projekte</a>
+                <a href="how-and-why">HOW + WHY</a>
+                <a href="about">About</a>
+                <a href="news/">News</a>
+                <a href="presse/">Presse</a>
+                <a href="kontakt">Kontakt</a>
+            </div>
+            
+            
+            <div class="language-menu">
+                <ul><a href="https://lxsy.de/en/" style="text-transform: uppercase;" class="en nav-link"><strong>en</strong></a></ul>
+            </div>
+           
+            
+            <div class="social-menu">
+                <a href="https://www.facebook.com/LXSY.Architektur/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/lxsy.architektur/" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/company/lxsy-architektur" target="_blank">LinkedIn</a>
+            </div>
+            
+            <div class="legal-menu">
+                <a href="impressum">Impressum</a>
+                <a href="datenschutz">Datenschutz</a>
+             <!--   <a href="impressum">Impressum</a>
+                <a href="datenschutz">Datenschutz</a>-->
+            </div>
+    </div>
+</navbar>
+
+<section class="hero">
+    <div class="letters state-1">
+    	<div class="letter"><img src="/assets/graphics/L.svg" alt="L"></div>
+    	<div class="letter"><img src="/assets/graphics/S.svg" alt="L"></div>
+    	<div class="letter"><img src="/assets/graphics/X.svg" alt="L"></div>
+    	<div class="letter"><img src="/assets/graphics/Y.svg" alt="L"></div>
+    </div>
+    
+    <div class="hero-slider">
+    <div class="hero-slide" style="background-image:url('/assets/components/phpthumbof/cache/LXSY_ReUseBox_01a.ac0b14e211775042d782f5dd8111b29a530.jpg');">
+    <div class="hero-slide-image"></div>
+    <div class="hero-slide-info">
+        <a href="projekte/reusebox">
+            <h4 class="category">
+                
+                
+                
+                
+                
+                Bildung
+            </h4>
+            <h2 class="title">REUSEBOX</h2>
+        </a>
+    </div>
+</div>
+<div class="hero-slide" style="background-image:url('/assets/components/phpthumbof/cache/LXSY_FUNKYTOWN_01.ac0b14e211775042d782f5dd8111b29a530.jpg');">
+    <div class="hero-slide-image"></div>
+    <div class="hero-slide-info">
+        <a href="projekte/funkytown">
+            <h4 class="category">
+                Arbeiten
+                
+                
+                
+                
+                
+            </h4>
+            <h2 class="title">FUNKYTOWN</h2>
+        </a>
+    </div>
+</div>
+<div class="hero-slide" style="background-image:url('/assets/components/phpthumbof/cache/LXSY_Connecting-Roofs_01.ac0b14e211775042d782f5dd8111b29a530.jpg');">
+    <div class="hero-slide-image"></div>
+    <div class="hero-slide-info">
+        <a href="projekte/connecting-roofs">
+            <h4 class="category">
+                Arbeiten
+                
+                
+                
+                
+                
+            </h4>
+            <h2 class="title">CONNECTING ROOFS</h2>
+        </a>
+    </div>
+</div>
+<div class="hero-slide" style="background-image:url('/assets/components/phpthumbof/cache/LXSY_DER-NEUE-STOECKACH_01b.ac0b14e211775042d782f5dd8111b29a530.jpg');">
+    <div class="hero-slide-image"></div>
+    <div class="hero-slide-info">
+        <a href="projekte/der-neue-stöckach">
+            <h4 class="category">
+                
+                
+                
+                Wohnen
+                
+                
+            </h4>
+            <h2 class="title">DER NEUE STÖCKACH</h2>
+        </a>
+    </div>
+</div>
+<div class="hero-slide" style="background-image:url('/assets/components/phpthumbof/cache/LXSY_Schwanenwall-11_00a.ac0b14e211775042d782f5dd8111b29a530.jpg');">
+    <div class="hero-slide-image"></div>
+    <div class="hero-slide-info">
+        <a href="projekte/schwanenwall-11">
+            <h4 class="category">
+                Arbeiten
+                
+                
+                
+                
+                
+            </h4>
+            <h2 class="title">SCHWANENWALL 11</h2>
+        </a>
+    </div>
+</div>
+<div class="hero-slide" style="background-image:url('/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-10ihb.ac0b14e211775042d782f5dd8111b29a530.jpg');">
+    <div class="hero-slide-image"></div>
+    <div class="hero-slide-info">
+        <a href="projekte/impact-hub-berlin-at-crclr-house">
+            <h4 class="category">
+                Arbeiten
+                
+                
+                
+                
+                
+            </h4>
+            <h2 class="title">IMPACT HUB BERLIN at CRCLR-HOUSE</h2>
+        </a>
+    </div>
+</div>  
+</div>
+    
+</section>
+    
+<main>
+    <img class="arrow-down-icon" src="/assets/graphics/arrow-down.svg">
+    <div class="container">
+       <div class="container-content row">
+    <h1 class="heading alignment-centered">Wir gestalten das Bauen von morgen positiv mit und denken über Standards hinaus.</h1>
+
+<section class="row two-column">
+    <div class="column">
+        <div class="font-large">Wir sind LXSY. Als Architekturbüro in Berlin beschäftigen wir uns mit dem Feld des zirkulären Planen und Bauens und setzen uns aktiv ein für die Transformation hin zur einer klimagerechten Baubranche, die Ressourcen schont und Müll vermeidet. Als Botschafter:innen der Bauwende setzen wir neue Standards für die Zukunft der Architektur und hinterfragen etablierte Abläufe in der Baubranche. Wir transformieren Bestand und sind Pionier:innen für das kreislaufgerechte Bauen.</div>
+
+<div class="font-large">Über das bloße Architektur Machen hinaus ist es uns ein Anliegen, einen positiven sozialen, kulturellen und ökologischen Impact zu generieren. Als Architekt:innen beschäftigen wir uns mit der Frage, wie wir als Gesellschaft in Zukunft zusammenleben und arbeiten wollen. Im ressourcenschonenden, zirkulären Planen und Bauen sehen wir eine Schlüsselrolle für einen nachhaltigen Wandel.</div>
+
+<a href="about" class="button" data-type="resource">Mehr zu LXSY</a>
+    </div>
+    <div class="column">
+        <img src="assets/uploads/projects-news/about/group/group-shot.jpg" width="1302" height="1960" alt="">
+    </div>
+</section>
+</div>
+
+<div class=" row">
+    <h2 class="heading alignment-left">PROJEKTE</h2>
+
+<div class="news-grid">
+    <div class="project-grid v2">
+ <div class="portfolio-item medium hover-image-available">
+    
+        <a href="projekte/dorothee-soelle-haus" title="DOROTHEE-SÖLLE-HAUS">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Dorothee-Soelle-Haus_01.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="DOROTHEE-SÖLLE-HAUS" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/LXSY_Dorothee-Soelle-Haus_00.svg">
+        </div>
+        <h4 class="category">
+            
+            Wohnen
+            
+            
+            
+            
+        </h4>
+        
+        <h3 class="title">DOROTHEE-SÖLLE-HAUS</h3>
+        <p class="intro">LPH 1–2 • Der Umbau verwandelt einen denkmalgeschützten Backsteinbau und ein ehemaliges Bürogebäude in Hamburg-Altona in ein ressourcenschonendes Wohnensemble mit Studierendenwohnen, Coworking und aktiven Erdgeschossnutzungen. Durch den Erhalt der Bestandsstruktur entstehen 222 Studierendenplätze und gemeinschaftliche Angebote mit starker Anbindung an das Quartier.</p>
+    </a>
+</div>
+
+<div class="portfolio-item large hover-image-available">
+    
+        <a href="projekte/reusebox" title="REUSEBOX">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_ReUseBox_01a.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="REUSEBOX" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/LXSY_ReUseBox_00.svg">
+        </div>
+        <h4 class="category">
+            
+            
+            
+            Bildung
+            
+            
+        </h4>
+        
+        <h3 class="title">REUSEBOX</h3>
+        <p class="intro">Wettbewerb • Die ReUseBox Heilbronn ist ein Lern- und Demonstrationsort, der Kreislaufwirtschaft durch Architektur, Materialeinsatz und Nutzung räumlich erlebbar macht. Sie zeigt, wie Wiederverwendung, Ressourcenbewusstsein und zukunftsfähiges Bauen praktisch umgesetzt werden können.</p>
+    </a>
+</div>
+
+<div class="portfolio-item large hover-image-available">
+    
+        <a href="projekte/funkytown" title="FUNKYTOWN">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_FUNKYTOWN_01.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="FUNKYTOWN" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/12_template_work-in-progress.svg">
+        </div>
+        <h4 class="category">
+            Arbeiten
+            
+            
+            
+            
+            
+        </h4>
+        
+        <h3 class="title">FUNKYTOWN</h3>
+        <p class="intro">LPH 1–2 • Trockland entwickelt auf dem ehemaligen DDR-Rundfunkgelände in der Rummelsburger Landstraße das urbane Kreativquartier FUNKYTOWN mit acht Neubauten und dem historischen Block-E. Die Station E von LXSY verbindet zirkuläres Bauen mit urbaner Ästhetik durch eine gewellte Metallhülle und ReUse-Backstein.</p>
+    </a>
+</div>
+
+<div class="portfolio-item large hover-image-available">
+    
+        <a href="projekte/ddr-typenhaus" title="DDR-TYPENHAUS">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_DDR-Typenhaus_01.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="DDR-TYPENHAUS" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/22_Template_Competition.svg">
+        </div>
+        <h4 class="category">
+            
+            Wohnen
+            
+            
+            
+            
+        </h4>
+        
+        <h3 class="title">DDR-TYPENHAUS</h3>
+        <p class="intro">Wettbewerb • Das Projekt in Zusammenarbeit mit asp Architekten zeigt, wie ein DDR-Typenhaus in Erfurt durch zirkuläres Bauen und Wiederverwendung von Materialien nachhaltig transformiert werden kann. Aus dem seriellen Bestand entsteht ein lebendiger, ressourcenschonender und sozialer Ort, der Gemeinschaft und Umwelt gleichermaßen stärkt.</p>
+    </a>
+</div>
+
+<div class="portfolio-item large hover-image-available">
+    
+        <a href="projekte/tempelhofer-feld" title="TEMPELHOFER FELD">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Tempelhofer-Feld_01.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="TEMPELHOFER FELD" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/22_Template_Competition.svg">
+        </div>
+        <h4 class="category">
+            
+            
+            
+            
+            
+            Quartiersentwicklung
+        </h4>
+        
+        <h3 class="title">TEMPELHOFER FELD</h3>
+        <p class="intro">Wettbewerb 2. Phase • „Ein Meer für Alle“ bewahrt das Tempelhofer Feld als grüne Lunge Berlins, stärkt Biodiversität und Klimaresilienz und verbindet nachhaltige Stadtentwicklung mit Freiheit, Geschichte und sozialem Miteinander.</p>
+    </a>
+</div>
+
+<div class="portfolio-item x-large hover-image-available">
+    
+        <a href="projekte/connecting-roofs" title="CONNECTING ROOFS">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Connecting-Roofs_01.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="CONNECTING ROOFS" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/21_Template_Competition.svg">
+        </div>
+        <h4 class="category">
+            Arbeiten
+            
+            
+            
+            
+            
+        </h4>
+        
+        <h3 class="title">CONNECTING ROOFS</h3>
+        <p class="intro">Wettbewerb 1. Preis • Connecting Roofs ist ein Quartierszentrum aus wiederverwendeten Dachstühlen, das gemeinschaftliche Räume schafft. Es verbindet zirkuläres Bauen mit sozialer Stadtentwicklung.</p>
+    </a>
+</div>
+
+<div class="portfolio-item x-large hover-image-available">
+    
+        <a href="projekte/der-neue-stöckach" title="DER NEUE STÖCKACH">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_DER-NEUE-STOECKACH_01b.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="DER NEUE STÖCKACH" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/18_Der-Neue-Stoeckach.svg">
+        </div>
+        <h4 class="category">
+            
+            Wohnen
+            
+            
+            
+            
+        </h4>
+        
+        <h3 class="title">DER NEUE STÖCKACH</h3>
+        <p class="intro">LPH 1–4 • Das Bauvorhaben DER NEUE STÖCKACH ist ein Projekt im Rahmen der IBA `27 StadtRegion Stuttgart und soll eine Antwort auf die Frage geben „Wie wollen wir leben?“.</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium hover-image-available">
+    
+        <a href="projekte/schwanenwall-11" title="SCHWANENWALL 11">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Schwanenwall-11_00a.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="SCHWANENWALL 11" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/projects/2024/SCHWANENWALL 11/LXSY_Schwanenwall-11_09.png">
+        </div>
+        <h4 class="category">
+            Arbeiten
+            
+            
+            
+            
+            
+        </h4>
+        
+        <h3 class="title">SCHWANENWALL 11</h3>
+        <p class="intro">Wettbewerb 2. Preis • Transformation eines Stadtbausteins: Der Schwanenwall 11 in Dortmund wird zum Vorzeigeprojekt für zukunftsorientiertes Bauen. Die Transformation verbindet Ressourcenschonung, soziale und ökologische Nachhaltigkeit sowie zeitlose Gestaltung. Das Gebäude wird mit neuen Nutzungen, einer wiederverwendeten Fassade und innovativen Konzepten neu belebt.</p>
+    </a>
+</div>
+
+<div class="portfolio-item large hover-image-available">
+    
+        <a href="projekte/jüdisches-zentrum-fraenkelufer" title="JÜDISCHES ZENTRUM FRAENKELUFER">
+    
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Juedisches-Zentrum-Fraenkelufer_01.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="JÜDISCHES ZENTRUM FRAENKELUFER" />
+            <img class="portfolio-hover-image" src="/assets/uploads/projects-news/hover-graphics/22_Template_Competition.svg">
+        </div>
+        <h4 class="category">
+            
+            
+            
+            Bildung
+            
+            
+        </h4>
+        
+        <h3 class="title">JÜDISCHES ZENTRUM FRAENKELUFER</h3>
+        <p class="intro">Wettbewerb • Das Jüdische Zentrum Fraenkelufer schafft einen offenen, sicheren Ort der Begegnung. Kubische Baukörper, terrassierte Freiräume und flexible Innenräume verbinden Tradition mit zeitgenössischer jüdischer Kultur. Nachhaltige Materialien und Begrünung machen es zu einem lebendigen, identitätsstiftenden Ensemble.</p>
+    </a>
+</div>
+  
+</div>
+
+<a class="button" href="projekte/">Mehr Projekte</a>
+
+</div>
+</div>
+
+<div class="container-content row">
+    <h2 class="heading alignment-centered">Zirkuläres Planen und Bauen ist kein nice-to-have.</h2>
+
+<section class="row two-column">
+    <div class="column">
+        <img src="assets/uploads/projects-news/about/group/group-shoot-2.jpg" width="1120" height="1692" alt="">
+    </div>
+    <div class="column">
+        <div class="font-large">Für uns ist Architektur der Versuch, in
+der gebauten Umwelt Antworten auf die
+dringlichsten sozialen, gesellschaftlichen,
+ökonomischen und ökologischen
+Herausforderungen unserer Zeit zu finden.</div>
+
+<div class="font-large">Als Architektinnen setzen wir neue Standards
+für die Zukunft der Architektur und hinterfragen
+etablierte Abläufe in der Baubranche. Wir
+transformieren Bestand und sind Pionierinnen
+für das kreislaufgerechte Bauen. Für die
+Bauwende benötigt es einen Wandel hin zu
+einer allumfassenden Kreislaufwirtschaft.
+Wir verbinden dabei ökologische und soziale
+Nachhaltigkeit.</div>
+    </div>
+</section>
+</div>
+
+<div class=" row">
+    <h2 class="heading alignment-left">NEWS</h2>
+
+<div class="news-grid">
+    <div class="project-grid v2">
+ <div class="portfolio-item medium ">
+    <a href="https://www.ibl.uni-stuttgart.de/aktuelles/veranstaltungen/23.-Stuttgarter-Baurechtstag/" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/Labör_rund_website.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="KIM LE ROUX IN LABÖR BEIRAT" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            
+            
+            
+            About
+        </h4>
+        <h3 class="title">KIM LE ROUX IN LABÖR BEIRAT</h3>
+        <p class="intro">Kim Le Roux ist Beiratsmitglied von Labör. Der Verein Labör bespielt eine ehemalige Kupferschmiede mit Vorplatz am Bahnhof Oerlikon, Zürich. Das Konzept: ein lebendiger Begegnungsort und Freiraum, in dem experimentierfreudige, soziale, kulturelle und ökologische Projekte realisiert werden können. Der sanfte Umbau der Räumlichkeiten wird schrittweise, ressourcenschonend und wenn immer möglich mit wiederverwendeten oder organischen Materialien umgesetzt. </p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://www.ibl.uni-stuttgart.de/aktuelles/veranstaltungen/23.-Stuttgarter-Baurechtstag/" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Stuttgarter-Baurechtstag.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="23. Stuttgarter Baurechtstag" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            Vortrag
+            
+            
+            
+        </h4>
+        <h3 class="title">23. Stuttgarter Baurechtstag</h3>
+        <p class="intro">Am 7. Mai 2026 lädt das Institut für Baubetriebslehre der Universität Stuttgart zum 23. Stuttgarter Baurechtstag ein. Im Mittelpunkt stehen aktuelle Entwicklungen im Baurecht sowie Fragen des zirkulären Bauens. In ihrem Vortrag „It takes a society to build circular“ spricht Prof. Margit Sichrovsky über das Bauen im Kreislauf zwischen Norm und Experiment.</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://www.dgnb.de/de/dgnb/netzwerk/gremien/kommission-fuer-gestaltungsqualitaet" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Heinze-Podcast_Wiebke.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="Wiebke Ahues in DGNB Kommission" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            
+            
+            
+            About
+        </h4>
+        <h3 class="title">Wiebke Ahues in DGNB Kommission</h3>
+        <p class="intro">Wiebke Ahues ist Mitglied der DGNB Kommission für Gestaltungsqualität. Diese bewertet im Rahmen des DGNB Diamanten die gestalterische und baukulturelle Qualität von Projekten. Die Kommission besteht aus drei Expert:innen der Baubranche und wird für drei Jahre von der DGNB, den Architektenkammern sowie in Abstimmung mit dem BDA berufen, um ihre Unabhängigkeit zu sichern.</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://www.evergabe-online.de/tenderdetails.html?id=838642" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Architekturbiennale-2027.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="Ausschreibung für deutschen Beitrag zur Architekturbiennale 2027" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            
+            
+            
+            About
+        </h4>
+        <h3 class="title">Ausschreibung für deutschen Beitrag zur Architekturbiennale 2027</h3>
+        <p class="intro">Im Rahmen der Architekturbiennale 2023 waren wir Teil der Ausstellung OPEN FOR MAINTENANCE – WEGEN UMBAU GEÖFFNET. Wiebke Ahues ist in diesem Jahr als Mitglied des Auswahlgremiums am deutschen Beitrag beteiligt. Für die Architekturbiennale 2027 in Venedig ist nun die Ausschreibung des deutschen Pavillons veröffentlicht. Das BBSR schreibt im Auftrag des BMWSB die Kuratierung aus. Eine Fachkommission wählt das überzeugendste Konzept. Bewerbungen sind bis 2. April 2026 möglich. Die 20. Internationale Architekturbiennale findet vom 8. Mai bis 21. November 2027 statt. Die Gesamtleitung übernehmen die chinesischen Architekt:innen Wang Shu und Lu Wenyu.</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://www.bbsr.bund.de/BBSR/DE/forschung/programme/exwost/jahr/2023/baukultur-in-der-bauwende/01-start.html" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Baukultur-in-der-Bauwende.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="Baukultur in der Bauwende" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            
+            
+            
+            
+        </h4>
+        <h3 class="title">Baukultur in der Bauwende</h3>
+        <p class="intro">Das Forschungsprojekt „Baukultur in der Bauwende“ des BBSR untersucht, wie sich ökologische Transformation und baukulturelle Qualität wirksam verbinden lassen, und entwickelt hierzu interdisziplinäre Handlungsempfehlungen. Im Auftrag des Bundesinstituts für Bau-, Stadt- und Raumforschung (BBSR) entstand das Projekt in Zusammenarbeit mit Forward Planung und Forschung, NBL Studio, LXSY Architektur und Hanne Rung (TU Wien). Wir freuen uns, die Bauwende aktiv mitzugestalten.</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://www.bundespreis-ecodesign.de/de/gewinner/2025-lxsy-zirkulaeres-planen-und-bauen" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_bundespreis-ecodesign_de.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="bundespreis ecodesign" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            Auszeichnung
+            
+            
+            
+            
+            
+        </h4>
+        <h3 class="title">bundespreis ecodesign</h3>
+        <p class="intro">Wir freuen uns, dass wir 2025 in der Kategorie „Service“ des bundespreis ecodesign nominiert sind. Die Auszeichnung würdigt unseren Einsatz für zirkuläres Planen und Bauen. Seit 2021 gestalten wir Architektur, die durch wiederverwendbare Bauteile, rückbaubare Konstruktionen und Materialpässe flexibel und nachhaltig ist. Innovative Planungsprozesse, die Wiederverwendung und transparente Kommunikation fördern, stehen dabei im Mittelpunkt.</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://lxsy.de/kontakt" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_Arbeitsplaetze.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="Freie Arbeitsplätze" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            
+            
+            
+            About
+        </h4>
+        <h3 class="title">Freie Arbeitsplätze</h3>
+        <p class="intro">Wir haben Platz in unserem Gemeinschaftsbüro in Berlin! Eine Schreibtischinsel mit vier Arbeitsplätzen wird frei: ideal für kleine, kreative Teams. Unser Büro befindet sich im Dachgeschoss des ehemaligen Maggi-Hauses in der Lützowstraße. Es ist hell, ruhig und liegt mitten in Berlin, nur einen Katzensprung vom Park am Gleisdreieck entfernt. Auf 260 qm erwartet euch ein offenes Arbeitsumfeld mit Besprechungsraum, Lounge, Modellwerkstatt, Küche und WC. Die Schreibtischinsel für vier Personen kostet 1.000 Euro inklusive Nebenkosten. Bei Interesse meldet euch gerne per E-Mail an office@lxsy.de.</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://bak.de/presse/pressemitteilungen/andrea-gebhard-als-praesidentin-der-bundesarchitektenkammer-bestaetigt/" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_BAK.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="Neues Präsidium Bundesarchitektenkammer" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            
+            
+            
+            About
+        </h4>
+        <h3 class="title">Neues Präsidium Bundesarchitektenkammer</h3>
+        <p class="intro">Herzlichen Glückwunsch an das neu gewählte Präsidium der Bundesarchitektenkammer! Andrea Gebhard wurde als Präsidentin bestätigt. Evelin Lux bleibt Vizepräsidentin, neu in diese Rolle gewählt wurden Wiebke Ahues und Stephan Weber.
+</p>
+    </a>
+</div>
+
+<div class="portfolio-item medium ">
+    <a href="https://www.nachhaltigkeitspreis.de/wettbewerbe/architektur" target="_blank">
+        <div class="portfolio-image-holder">
+            <img class="portfolio-thumb" src="/assets/components/phpthumbof/cache/LXSY_BAU2025.f90062f7fbe02cdb18a7c2d4a57a1358530.jpg" alt="Wiebke Ahues in der Jury des DNP Architektur" />
+            <img class="portfolio-hover-image" src="">
+        </div>
+        
+        <h4 class="category">
+            
+            
+            
+            
+            
+            
+            About
+        </h4>
+        <h3 class="title">Wiebke Ahues in der Jury des DNP Architektur</h3>
+        <p class="intro">Wiebke Ahues ist Teil der Jury des Deutschen Nachhaltigkeitspreises Architektur, gemeinsam mit weiteren Architekt:innen und Vertreter:innen der Baubranche. Der Preis zeichnet Gebäude aus, die durch Nachhaltigkeit, Innovation und gestalterische Qualität überzeugen. Bereits zum 13. Mal werden Vorbilder gesucht, die den Wandel im Bausektor sichtbar machen. Der Preis versteht sich als Seismograf für Transformation und Bühne für zukunftsweisende Architektur. Bewerbungen sind noch bis zum 6. Juni möglich.
+</p>
+    </a>
+</div>
+  
+</div>
+<a class="button" href="news/">Mehr News</a>
+
+</div>
+</div>
+
+<div class="container-content row">
+    <section class="row two-column">
+    <div class="column">
+        <h2 class="heading alignment-left">Wie wir unsere Arbeit als Architekt:innen verstehen</h2>
+
+<div class="font-large">Gute Architektur trägt zu einer nachhaltigen
+Gesellschaft mit hoher Lebensqualität, sozialer
+Gerechtigkeit, kultureller Vielfalt und einer
+nachhaltigen Wirtschaft bei.</div>
+
+<div class="font-large">Mit unserer Arbeit wollen wir Menschen
+zusammenbringen und innovative Ansätze
+verfolgen, um gemeinsam ein zukunftsfähiges
+Miteinander zu entwickeln.</div>
+
+<a href="how-and-why" class="button" data-type="resource">HOW + WHY</a>
+    </div>
+    <div class="column">
+        <img src="assets/uploads/projects-news/how-and-why/NEU_LXSY_HowandWhy_Illustratationen_1_zirkulär denken.jpg" width="1667" height="1667" alt="">
+    </div>
+</section>
+</div>
+
+<div class="container-content row">
+    <ul class="gallery-slider"><li><img src="/assets/components/phpthumbof/cache/LXSY_DER-NEUE-STOECKACH_01b.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2000" height="1500" alt=""></li><li><img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-02ihb.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2000" height="1500" alt=""></li><li><img src="/assets/components/phpthumbof/cache/LXSY_ReUseBox_01a.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2000" height="1554" alt=""></li><li><img src="/assets/components/phpthumbof/cache/LXSY_Connecting-Roofs_01.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="1680" height="1200" alt=""></li><li><img src="/assets/components/phpthumbof/cache/231023_Bauwende_Baukultur_MC_384_web.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2048" height="1365" alt=""></li><li><img src="/assets/components/phpthumbof/cache/LXSY_ReUseBox_23a.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2000" height="1333" alt=""></li><li><img src="/assets/components/phpthumbof/cache/LXSY_Tempelhofer-Feld_01.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="1700" height="1200" alt=""></li><li><img src="/assets/components/phpthumbof/cache/lxsy-architekten_trivial-circuit-spiel_09.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="3000" height="2000" alt=""></li><li><img src="/assets/components/phpthumbof/cache/LXSY_BOELL.LAB_01a.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2000" height="1500" alt=""></li><li><img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-09ihb.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2000" height="1500" alt=""></li><li><img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-18ihb.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2500" height="1403" alt=""></li><li><img src="/assets/components/phpthumbof/cache/LXSY_FUNKYTOWN_01.dc7afa7b1dc635b8d3c8201eca1438bf530.jpg" width="2132" height="1200" alt=""></li></ul>
+
+<script>
+    $('.gallery-slider').imagesLoaded( function() {
+      $('.gallery-slider').flickity({
+          wrapAround: true,
+          dragThreshold: 50,
+          imagesLoaded: true,
+          autoPlay: 4000,
+          pageDots: false,
+          contain: true,
+          arrowShape: { 
+            x0: 10,
+            x1: 45, y1: 20,
+            x2: 100, y2: 50,
+            x3: 100
+          }
+        });
+    });
+</script>
+</div>
+    </div>
+    
+    <footer>
+    <div class="container">
+    <div class="row">
+        <div class="col-3">
+            Lützowstr. 102-104<br>
+            Hof 3 | Aufgang E<br>
+            10785 Berlin
+        </div>
+        <div class="col-3">
+            <a href="https://www.facebook.com/LXSY.Architektur/" target="_blank">FACEBOOK</a><br>
+            <a href="https://www.instagram.com/lxsy.architektur/" target="_blank">INSTAGRAM</a><br>
+            <a href="https://www.linkedin.com/company/lxsy-architektur" target="_blank">LINKEDIN</a><br>
+        </div>
+        <div class="col-3">
+            <a href="tel:+4930235995500">+49 30 2359955-00</a><br>
+            <a href="mailto:info@lxsy.de">info@lxsy.de</a><br>
+            <a href="http://www.lxsy.de">www.lxsy.de</a>
+        </div>
+        <div class="col-3">
+            <a href="impressum">IMPRESSUM</a><br>
+            All Rights Reserved<br>
+            LXSY © 2026
+        </div>
+      </div>
+      </div>
+</footer>
+
+</main>
+
+    <script>
+        // Hamburger Button Animation
+        var menuButton = document.getElementById('menuButton');
+        menuButton.addEventListener('click', function (e) {
+            menuButton.classList.toggle('is-active');
+        });
+        
+        // Open Navigation on click change button function
+        function openNav() {
+            document.getElementById("sideNavigation").style.right = "0px";
+            document.getElementsByTagName('body')[0].classList.add("menu-open");
+            document.getElementById( "menuButtonLink" ).setAttribute( "href", "javascript:closeNav();" );
+        }
+         
+        // Close Navigation on click change button function
+        function closeNav() {
+            document.getElementById("sideNavigation").style.right = "-500px";
+            document.getElementById( "menuButtonLink" ).setAttribute( "href", "javascript:openNav();" );
+        }
+    </script>
+    
+    <!-- Initialize Flickity -->
+    <script>
+        $( document ).ready(function() {
+            $('.project-slider').imagesLoaded( function() {
+              $('.project-slider').flickity({
+                  // options
+                  wrapAround: true,
+                  dragThreshold: 50,
+                  imagesLoaded: true,
+                  autoPlay: 4000,
+                  pageDots: false,
+                  contain: true,
+                  arrowShape: { 
+                    x0: 10,
+                    x1: 45, y1: 20,
+                    x2: 100, y2: 50,
+                    x3: 100
+                  }
+                });
+            });
+            
+            
+            $('.hero-slider').flickity({
+              // options
+              wrapAround: true,
+              imagesLoaded: true,
+              pageDots: false,
+              prevNextButtons: false,
+              autoPlay: 4000,
+              pauseAutoPlayOnHover: false
+
+            });
+            $('.hero-slider').on( 'change.flickity', function( event, index ) {
+              $('.letters').each(function(){
+                var classes = ['letters state-1','letters state-2','letters state-3'];
+                this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
+              });
+            });
+        });
+        
+    </script>
+    
+    <style>
+        .project-slide {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .project-slide img {
+            max-height: 700px;
+        }
+    </style>
+</body>
+</html>

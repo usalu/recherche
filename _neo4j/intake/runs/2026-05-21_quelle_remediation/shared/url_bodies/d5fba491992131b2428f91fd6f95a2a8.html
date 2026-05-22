@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head >
+<meta charset="UTF-8" />
+<script type="text/javascript">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+    <script type="text/javascript" class="Doelgroepgerichte-cookies">
+        var userLayer = {"customerid":null,"profession":null,"userLoginDetails":"null","userCustomerType":"null"}    </script>
+	<!-- OneTrust Cookies Consent Notice start for skipr.nl -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="a9569548-715a-4c71-850f-a3cf916ad16f" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for skipr.nl -->
+
+<!-- Google Tag Manager crossdomain tracking -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MHS62MT');</script>
+<!-- End Google Tag Manager -->
+
+<script>
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(";");
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == " ") {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
+
+function getScript(site) {
+    let scripts = [
+        { name: "nursing.nl", script: "https://cdn.optimizely.com/js/20850291427.js" },
+        { name: "skipr.nl", script: "https://cdn.optimizely.com/js/20895160887.js" },
+        { name: "zorgvisie.nl", script: "https://cdn.optimizely.com/js/20899820213.js" },
+        { name: "kinderopvangtotaal.nl", script: "https://cdn.optimizely.com/js/20913120290.js" },
+    ];
+    for (let s = 0; s < scripts.length; s++) {
+        if (site.indexOf(scripts[s].name) !== -1) return scripts[s].script;
+    }
+}
+
+function injectScript() {
+    let consentData = getCookie("OptanonConsent");
+    let currentScript = getScript(window.location.hostname);
+    let isActive = false;
+    if (consentData.indexOf("C0002%3A1") !== -1 && consentData.indexOf("C0004%3A1") !== -1 && currentScript) {
+        let script = document.createElement("script");
+        script.src = currentScript;
+        script.type = "text/javascript";
+        document.head.appendChild(script);
+        return true;
+    }
+    return false;
+}
+
+function stopInterval() {
+    clearInterval(intervalId);
+}
+
+injectScript();
+let result = false;
+var intervalId = window.setInterval(function () {
+    result = injectScript();
+    if (result) stopInterval();
+}, 1000);
+</script>    
+	<!-- Google Tag Manager -->
+	<script type="text/javascript">
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push(
+					{'gtm.start': new Date().getTime(), event: 'gtm.js'}
+				);
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-59HTCZG');
+	</script>
+	<!-- End Google Tag Manager -->
+	        <!-- Google Tag Manager -->
+        <script type="text/javascript">
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push(
+                    {'gtm.start': new Date().getTime(), event: 'gtm.js'}
+                );
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PHBXDF2');
+        </script>
+        <!-- End Google Tag Manager -->
+            <script src="https://ods-services.springer-sbm.com/webpush/publicwebpush/TernairWebPushSDK" async=""></script>
+        <script>
+            window.TernairWebPush = window.TernairWebPush || [];
+            TernairWebPush.push(function() {
+                TernairWebPush.init({
+                    webPushId: "wp-f3379209-fdd9-454d-aa37-7eb8eb84fa2e",
+                    subscribeUrl: "https://ods-services.springer-sbm.com/webhook//webpush/register",
+                    client: "bsl",
+                });
+            });
+        </script>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Emergis bouwt kliniek met hergebruikt materiaal - Skipr</title>
+	<link rel="canonical" href="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/" />
+	<meta property="og:locale" content="nl_NL" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Emergis bouwt kliniek met hergebruikt materiaal - Skipr" />
+	<meta property="og:description" content="Emergis bouwt in het Zeeuwse Kloetinge aan een nieuwe kinder- en jeugdkliniek met hergebruikt materiaal. Dit doet de zorgaanbieder niet alleen vanwege het milieu en de kosten, maar vooral omdat duurzame, biobased-materialen zorgen voor een gezond en prettig gebouw voor cliënten en medewerkers." />
+	<meta property="og:url" content="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/" />
+	<meta property="og:site_name" content="Skipr" />
+	<meta property="article:published_time" content="2017-07-12T06:59:10+00:00" />
+	<meta name="author" content="Skipr Redactie" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Skipr Redactie" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="1 minuut" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/","url":"https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/","name":"Emergis bouwt kliniek met hergebruikt materiaal - Skipr","isPartOf":{"@id":"https://www.skipr.nl/#website"},"datePublished":"2017-07-12T06:59:10+00:00","author":{"@id":"https://www.skipr.nl/#/schema/person/b3e0c9eb117ace8283acb1ece2b1e2c1"},"breadcrumb":{"@id":"https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/#breadcrumb"},"inLanguage":"nl-NL","potentialAction":[{"@type":"ReadAction","target":["https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/"]}]},{"@type":"BreadcrumbList","@id":"https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.skipr.nl/"},{"@type":"ListItem","position":2,"name":"Emergis bouwt kliniek met hergebruikt materiaal"}]},{"@type":"WebSite","@id":"https://www.skipr.nl/#website","url":"https://www.skipr.nl/","name":"Skipr","description":"Het laatste zorgnieuws, eerst","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.skipr.nl/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"nl-NL"},{"@type":"Person","@id":"https://www.skipr.nl/#/schema/person/b3e0c9eb117ace8283acb1ece2b1e2c1","name":"Skipr Redactie","image":{"@type":"ImageObject","inLanguage":"nl-NL","@id":"https://www.skipr.nl/#/schema/person/image/","url":"https://www.skipr.nl/content/uploads/2021/06/skipr-favicon-150x150.png","contentUrl":"https://www.skipr.nl/content/uploads/2021/06/skipr-favicon-150x150.png","caption":"Skipr Redactie"},"url":"https://www.skipr.nl/author/skipr/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//kit.fontawesome.com' />
+<link rel="alternate" type="application/rss+xml" title="Skipr &raquo; feed" href="https://www.skipr.nl/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Skipr &raquo; reacties feed" href="https://www.skipr.nl/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Skipr &raquo; Emergis bouwt kliniek met hergebruikt materiaal reacties feed" href="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.skipr.nl\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='skipr-css' href='https://www.skipr.nl/content/themes/skipr/style.css?ver=10.25.0' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.skipr.nl/wp/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='ppress-frontend-css' href='https://www.skipr.nl/content/plugins/wp-user-avatar/assets/css/frontend.min.css?ver=4.16.6' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-flatpickr-css' href='https://www.skipr.nl/content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.css?ver=4.16.6' type='text/css' media='all' />
+<link rel='stylesheet' id='ppress-select2-css' href='https://www.skipr.nl/content/plugins/wp-user-avatar/assets/select2/select2.min.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='solr_frontend-css' href='https://www.skipr.nl/content/plugins/wpsolr-pro/wpsolr/core/css/style.css?ver=24.1' type='text/css' media='all' />
+<link rel='stylesheet' id='taxopress-frontend-css-css' href='https://www.skipr.nl/content/plugins/simple-tags/assets/frontend/css/frontend.css?ver=3.40.0' type='text/css' media='all' />
+<link rel='stylesheet' id='heateor_sss_frontend_css-css' href='https://www.skipr.nl/content/plugins/sassy-social-share/public/css/sassy-social-share-public.css?ver=3.3.79' type='text/css' media='all' />
+<style id='heateor_sss_frontend_css-inline-css' type='text/css'>
+.heateor_sss_button_instagram span.heateor_sss_svg,a.heateor_sss_instagram span.heateor_sss_svg{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}.heateor_sss_horizontal_sharing .heateor_sss_svg,.heateor_sss_standard_follow_icons_container .heateor_sss_svg{color:#fff;border-width:0px;border-style:solid;border-color:transparent}.heateor_sss_horizontal_sharing .heateorSssTCBackground{color:#666}.heateor_sss_horizontal_sharing span.heateor_sss_svg:hover,.heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{border-color:transparent;}.heateor_sss_vertical_sharing span.heateor_sss_svg,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg{color:#fff;border-width:0px;border-style:solid;border-color:transparent;}.heateor_sss_vertical_sharing .heateorSssTCBackground{color:#666;}.heateor_sss_vertical_sharing span.heateor_sss_svg:hover,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg:hover{border-color:transparent;}@media screen and (max-width:783px) {.heateor_sss_vertical_sharing{display:none!important}}
+</style>
+<link rel='stylesheet' id='child-theme-css-css' href='https://www.skipr.nl/content/themes/skipr/resources/css/style.min.css?ver=10.25.0' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/wp-user-avatar/assets/flatpickr/flatpickr.min.js?ver=4.16.6" id="ppress-flatpickr-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/wp-user-avatar/assets/select2/select2.min.js?ver=4.16.6" id="ppress-select2-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/simple-tags/assets/frontend/js/frontend.js?ver=3.40.0" id="taxopress-frontend-js-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/springer-sso-rest//assets/fix-referer.min.js?ver=6.8.3" id="springer-sso-fix-referer-js-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/springer-sso-rest//assets/js.cookie.min.js?ver=6.8.3" id="springer-js-cookie-js"></script>
+<script type="text/javascript" id="springer-sso-gateway-js-js-before">
+/* <![CDATA[ */
+window.springer_sso_gateway_url = 'https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/?sso=gateway';
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/springer-sso-rest//assets/gateway-redirect.min.js?ver=1.0.1" id="springer-sso-gateway-js-js"></script>
+<script type="text/javascript" src="https://kit.fontawesome.com/983552e298.js?ver=10.25.0" id="font-awesome-css-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/themes/skipr/resources/js/cookies.js?ver=10.25.0" id="cookies-js-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/themes/skipr/resources/js/gtm.min.js?ver=10.25.0" id="gtm-layer-js"></script>
+<link rel="https://api.w.org/" href="https://www.skipr.nl/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.skipr.nl/wp-json/wp/v2/posts/99448" /><meta name="generator" content="WordPress 6.8.3" />
+<link rel='shortlink' href='https://www.skipr.nl/?p=99448' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.skipr.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.skipr.nl%2Fnieuws%2Femergis-bouwt-kliniek-met-hergebruikt-materiaal%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.skipr.nl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.skipr.nl%2Fnieuws%2Femergis-bouwt-kliniek-met-hergebruikt-materiaal%2F&#038;format=xml" />
+        <script>
+            wpsolr_globalError = [];
+            window.onerror = function (msg, url, line, col, error) {
+                wpsolr_globalError.push({msg: msg, url: url, line: line, error: error});
+            };
+        </script>
+		    <!-- Start GPT Tag -->
+
+    <script type="text/javascript">
+			(function () {
+
+				// Run this in an interval (every 0.1s)
+				var cnt = 0;
+				var consentSetInterval = setInterval(function () {
+					cnt += 1;
+
+					// Stop if no consent after 60 seconds.
+					if (cnt === 600) {
+						clearInterval(consentSetInterval);
+					}
+
+					if (document.cookie.split('; ').find(row => row.startsWith('OptanonAlertBoxClosed='))) {
+
+						console.log('add gpt script');
+
+						clearInterval(consentSetInterval);
+						var script = document.createElement('script');
+						script.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+						jQuery('head').append(script.outerHTML);
+					}
+
+					cnt++;
+				}, 100);
+			})();
+    </script>
+
+    <script>
+			window.googletag = window.googletag || {cmd: []};
+			googletag.cmd.push(function () {
+				var topbanner = googletag.sizeMapping()
+				.addSize([1070, 0], [[1070, 225], [970, 250], [728, 90]])
+				.addSize([970, 0], [[970, 250], [728, 90]])
+				.addSize([728, 0], [[728, 90]])
+				.addSize([0, 0], [])
+				.build();
+
+				var topbanner_mobile = googletag.sizeMapping()
+				.addSize([768, 0], [])
+				.addSize([370, 0], [[320, 100]])
+				.build();
+
+				var sidebar = googletag.sizeMapping()
+				.addSize([768, 0], [[300, 250], [300, 600]])
+				.addSize([300, 0], [])
+				.addSize([0, 0], [])
+				.build();
+
+				var sidebar_mobile = googletag.sizeMapping()
+				.addSize([768, 0], [])
+				.addSize([300, 0], [[300, 251], [300, 601]])
+				.addSize([0, 0], [])
+				.build();
+
+				googletag.defineSlot('/4969/skipr.nl/vastgoed', [[1070, 225], [728, 90], [970, 250]], 'div-gpt-ad-topbanner')
+				.defineSizeMapping(topbanner)
+				.addService(googletag.pubads());
+
+				googletag.defineSlot('/4969/skipr.nl/vastgoed', [[320, 100]], 'div-gpt-ad-topbanner_mobile')
+				.defineSizeMapping(topbanner_mobile)
+				.addService(googletag.pubads());
+
+				googletag.defineSlot('/4969/skipr.nl/vastgoed', [[300, 250], [300, 600]], 'div-gpt-ad-sidebar')
+				.defineSizeMapping(sidebar)
+				.addService(googletag.pubads());
+
+				googletag.defineSlot('/4969/skipr.nl/vastgoed', [[300, 251], [300, 601]], 'div-gpt-ad-sidebar_mobile')
+				.defineSizeMapping(sidebar_mobile)
+				.addService(googletag.pubads());
+
+				googletag.pubads().enableSingleRequest();
+				googletag.pubads()
+                                .setTargeting('Tags', ['ggz','vastgoed'])
+                                .setTargeting('Pageid', ['99448']);
+            googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().setCentering(true);
+            googletag.enableServices();
+
+        });
+    </script>
+    <!-- End GPT Tag -->
+    <link rel="pingback" href="https://www.skipr.nl/wp/xmlrpc.php" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><meta property="og:image" content="https://www.skipr.nl/content/themes/skipr/resources/img/skipr-favicon.png" /><link rel="icon" href="https://www.skipr.nl/content/uploads/2023/11/screenshot_4-1.png" sizes="32x32" />
+<link rel="icon" href="https://www.skipr.nl/content/uploads/2023/11/screenshot_4-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.skipr.nl/content/uploads/2023/11/screenshot_4-1.png" />
+<meta name="msapplication-TileImage" content="https://www.skipr.nl/content/uploads/2023/11/screenshot_4-1.png" />
+		<style type="text/css" id="wp-custom-css">
+			.screen-reader-shortcut {
+	display:none !important;
+}
+
+.event-info-block .event-prices .expired-price dt {
+	text-decoration:line-through;
+	cursor:default;
+}
+
+.event-info-block .event-prices .expired-price dd {
+	text-decoration:line-through;
+	cursor:default;
+}
+
+
+.vacancy-description a {
+    font-size: larger;
+    color: #057799;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.gform_legacy_markup_wrapper ul#input_1_4 li.gchoice {
+	overflow:visible !important ;
+}
+
+.gform_legacy_markup_wrapper ul#gform_fields_1 label {
+	vertical-align:sub;
+}
+
+
+.tooltip-gf {
+    display: inline-block !important ;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #666;
+    border-radius: 50%;
+    color: #ff4f68;    
+	  font-weight: bold;
+    margin-left: 10px;
+	  padding-left: 7px; 
+	  padding-right: 8px; 
+    z-index: 1000;
+    width: 25px; /* Pas dit aan voor de breedte van de tooltip */
+}
+
+.tooltip-gf::after {
+    content: attr(data-tooltip-gf);
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    /* left: 50%; */
+	  left: 25px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: normal; /* Zorgt ervoor dat lange tekst niet wordt afgebroken */
+    z-index: 1000;
+    width: 200px; /* Pas dit aan voor de breedte van de tooltip */
+}
+
+.tooltip-gf:hover::after {
+    display: block;
+}
+.tooltip-gf:hover {
+    background-color: #ff4f68;
+	  color:#fff;
+}
+
+.single-skipr22 .entry-header .entry-title {
+	max-width:80%;
+}
+
+.single-skipr22 .entry-header .vip-image {
+	top:0px !important;
+}
+
+/* Zorg dat submenu open blijft */
+.menu-primary .menu-item-has-children:hover > .sub-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Verwijder verticale gap */
+.menu-primary .sub-menu {
+    margin-top: 0 !important;
+}
+
+/* Z-index fix zodat niets het overlapt */
+.menu-primary .sub-menu {
+    z-index: 99999 !important;
+    position: absolute !important;
+}
+
+/* Submenu sneller tonen */
+.menu-primary .sub-menu {
+    transition: opacity 0.01s ease-in-out !important;
+}
+
+/* Laat submenu eerder actief zijn */
+.menu-primary .menu-item-has-children:hover > .sub-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Extra hover padding zodat cursor niet 'wegvalt' */
+.menu-primary .menu-item-has-children > a {
+    padding-bottom: 8px !important;
+}
+		</style>
+		</head>
+<body class="wp-singular post-template-default single single-post postid-99448 single-format-standard wp-theme-genesis wp-child-theme-skipr nieuws header-full-width sidebar-content-sidebar genesis-breadcrumbs-visible"><!-- Google Tag Manager (noscript) -->
+<noscript>
+	<iframe
+		src="https://www.googletagmanager.com/ns.html?id=GTM-59HTCZG"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="site-container"><ul class="genesis-skip-link"><li><a href="#genesis-nav-primary" class="screen-reader-shortcut"> Skip to primary navigation</a></li><li><a href="#genesis-content" class="screen-reader-shortcut"> Skip to main content</a></li><li><a href="#genesis-sidebar-primary" class="screen-reader-shortcut"> Skip to primary sidebar</a></li><li><a href="#genesis-sidebar-secondary" class="screen-reader-shortcut"> Skip to secondary sidebar</a></li></ul><header class="site-header">
+        <nav class="top-left-menu">
+            <ul id="menu-top-left" class="top-left-nav">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                    <a href="/">Home</a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                    <a href="https://www.skipr.nl/nieuwsbrief/">Nieuwsbrief
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    <ul class='mobile-search hidden'>
+            <li>
+                <form autocomplete="off" class="search-form" method="get" action="https://www.skipr.nl/" role="search"><label class="search-form-label screen-reader-text" for="searchform-1">Search this website</label><input class="search-form-input" type="search" autocomplete="off" name="s" id="searchform-1" placeholder="Zoeken"><input class="search-form-submit" type="submit" value="Search"><meta content="https://www.skipr.nl/?s={s}"></form>
+            </li>
+         </ul></nav><div class="title-area">        <a href="https://www.skipr.nl/" rel="home">
+            <img  src="https://www.skipr.nl/content/themes/skipr/resources/img/logo_skipr_blue.svg" width="220" alt="Skipr">
+        </a>
+    <p class="site-description">Het laatste zorgnieuws, eerst</p></div><nav class="top-right-menu"><ul><li>
+                <a rel="nofollow" href='https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/?sso=login'>Inloggen</a>
+            </li>
+            <li>
+                <form autocomplete="off" class="search-form" method="get" action="https://www.skipr.nl/" role="search"><label class="search-form-label screen-reader-text" for="searchform-2">Search this website</label><input class="search-form-input" type="search" autocomplete="off" name="s" id="searchform-2" placeholder="Zoeken"><input class="search-form-submit" type="submit" value="Search"><meta content="https://www.skipr.nl/?s={s}"></form>
+            </li>
+         </li></nav></header><nav class="nav-primary" aria-label="Main" id="genesis-nav-primary"><ul id="menu-main-menu" class="menu genesis-nav-menu menu-primary js-superfish"><li id="menu-item-149811" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149811"><a href="https://www.skipr.nl/nieuws/"><span >Nieuws</span></a></li>
+<li id="menu-item-131549" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-131549"><a href="https://www.skipr.nl/blog/"><span >Opinie</span></a></li>
+<li id="menu-item-200028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200028"><a href="https://www.skipr.nl/podcast-voorzorg/"><span >Podcast</span></a></li>
+<li id="menu-item-223152" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-223152"><a href="https://www.skipr.nl/video/"><span >Video&#8217;s</span></a></li>
+<li id="menu-item-137648" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-137648"><a href="https://www.skipr.nl/thema-overzicht/"><span >Thema&#8217;s</span></a></li>
+<li id="menu-item-85937" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-85937"><a href="https://events.skipr.nl/?utm_source=skipr&#038;utm_medium=referral&#038;utm_content=menu"><span >Events</span></a></li>
+<li id="menu-item-304256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-304256"><a href="#"><span >Vacatures</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-149627" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149627"><a href="https://vacatures.skipr.nl/"><span >Vacatures</span></a></li>
+	<li id="menu-item-304258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304258"><a href="https://vacatures.skipr.nl/jobalert/"><span >Aanmelden Jobalert</span></a></li>
+	<li id="menu-item-304259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-304259"><a href="https://vacatures.skipr.nl/werkgevers-in-de-zorg/"><span >Werkgevers in de zorg</span></a></li>
+</ul>
+</li>
+<li id="menu-item-162083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162083"><a href="https://www.skipr.nl/partners/"><span >Partners</span></a></li>
+<li id="menu-item-150965" class="menu-item-skipr-99 menu-item menu-item-type-custom menu-item-object-custom menu-item-150965"><a href="https://www.skipr.nl/skipr-99-overzicht/"><span >Skipr<span>99</span></span></a></li>
+<li id="menu-item-303280" class="menu-item-skipr-99 menu-item menu-item-type-custom menu-item-object-custom menu-item-303280"><a href="https://www.skipr.nl/skipr-22-overzicht/"><span >Skipr<span>22</span></span></a></li>
+</ul></nav><div class="site-inner">
+    <div class="ads-wrapper alignfull">
+        <!-- GPT AdSlot 1 for Ad unit 'https://www.skipr.nl' ### Size: [[1070,225],[728,90],[970,250]] -->
+        <div id='div-gpt-ad-topbanner'>
+            <script>
+                googletag.cmd.push(function () {
+                    googletag.display('div-gpt-ad-topbanner');
+                });
+            </script>
+        </div>
+        <!-- End AdSlot 1 -->
+
+        <!-- GPT AdSlot 2 for Ad unit 'https://www.skipr.nl' ### Size: [[320,100]] -->
+        <div id='div-gpt-ad-topbanner_mobile'>
+            <script>
+                googletag.cmd.push(function () {
+                    googletag.display('div-gpt-ad-topbanner_mobile');
+                });
+            </script>
+        </div>
+        <!-- End AdSlot 2 -->
+    </div>
+<div class="content-sidebar-wrap"><main class="content" id="genesis-content"><div class="breadcrumb"><span class="breadcrumb-link-wrap"><a class="breadcrumb-link" href="https://www.skipr.nl/"><span class="breadcrumb-link-text-wrap">Home</span></a><meta ></span> › <span class="breadcrumb-link-wrap"><a class="breadcrumb-link" href="https://www.skipr.nl/nieuws/"><span class="breadcrumb-link-text-wrap">Nieuws</span></a><meta ></span></div>        <div class="post-detail-container">
+			            <div class="post-options">
+
+				                    <span class="post-options-save-article-auth">Opslaan</span>
+                    <div class="post-saved-tooltip post-saved-tooltip-hidden">
+                        <span class="close-tooltip"><i class="fa fa-close"></i></span>
+
+                        <h4 class="title">Artikel opslaan</h4>
+                        <p class="message">
+                            U hebt een account nodig om artikelen in uw profiel op te slaan.<br>
+                            <a href="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/?sso=login">Login</a>
+                            of
+                            <a href="/registreren">maak een account aan</a>.
+                        </p>
+                    </div>
+					
+                                    <span id="comment_link" class="post-options-comment"> <a href="#comments">Reageer nu</a> </span>
+                                <span class="post-options-share">
+					Delen					<span class="post-options-share-container">
+						<div class="heateor_sss_sharing_container heateor_sss_horizontal_sharing" data-heateor-ss-offset="0" data-heateor-sss-href='https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/'><div class="heateor_sss_sharing_ul"><a aria-label="Whatsapp" class="heateor_sss_whatsapp" href="https://api.whatsapp.com/send?text=Emergis%20bouwt%20kliniek%20met%20hergebruikt%20materiaal%20https%3A%2F%2Fwww.skipr.nl%2Fnieuws%2Femergis-bouwt-kliniek-met-hergebruikt-materiaal%2F" title="Whatsapp" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#55eb4c;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-6 -5 40 40"><path class="heateor_sss_svg_stroke heateor_sss_no_fill" stroke="#fff" stroke-width="2" fill="none" d="M 11.579798566743314 24.396926207859085 A 10 10 0 1 0 6.808479557110079 20.73576436351046"></path><path d="M 7 19 l -1 6 l 6 -1" class="heateor_sss_no_fill heateor_sss_svg_stroke" stroke="#fff" stroke-width="2" fill="none"></path><path d="M 10 10 q -1 8 8 11 c 5 -1 0 -6 -1 -3 q -4 -3 -5 -5 c 4 -2 -1 -5 -1 -4" fill="#fff"></path></svg></span></a><a aria-label="Twitter" class="heateor_sss_button_twitter" href="https://twitter.com/intent/tweet?via=Skipr&text=Emergis%20bouwt%20kliniek%20met%20hergebruikt%20materiaal&url=https%3A%2F%2Fwww.skipr.nl%2Fnieuws%2Femergis-bouwt-kliniek-met-hergebruikt-materiaal%2F" title="Twitter" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_twitter" style="background-color:#55acee;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-4 -4 39 39"><path d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z" fill="#fff"></path></svg></span></a><a aria-label="Facebook" class="heateor_sss_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.skipr.nl%2Fnieuws%2Femergis-bouwt-kliniek-met-hergebruikt-materiaal%2F" title="Facebook" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#0765FE;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path fill="#fff" d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.628 3.875 10.35 9.101 11.647v-7.98h-2.474V16H13.1v-1.58c0-4.085 1.849-5.978 5.859-5.978.76 0 2.072.15 2.608.298v3.325c-.283-.03-.775-.045-1.386-.045-1.967 0-2.728.745-2.728 2.683V16h3.92l-.673 3.667h-3.247v8.245C23.395 27.195 28 22.135 28 16Z"></path></svg></span></a><a aria-label="Linkedin" class="heateor_sss_button_linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.skipr.nl%2Fnieuws%2Femergis-bouwt-kliniek-met-hergebruikt-materiaal%2F" title="Linkedin" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_linkedin" style="background-color:#0077b5;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path d="M6.227 12.61h4.19v13.48h-4.19V12.61zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187V12.61z" fill="#fff"></path></svg></span></a><a aria-label="Email" class="heateor_sss_email" href="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/" onclick="event.preventDefault();window.open('mailto:?subject=' + decodeURIComponent('Emergis%20bouwt%20kliniek%20met%20hergebruikt%20materiaal').replace('&', '%26') + '&body=https%3A%2F%2Fwww.skipr.nl%2Fnieuws%2Femergis-bouwt-kliniek-met-hergebruikt-materiaal%2F', '_blank')" title="Email" rel="noopener" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#649a3f;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-.75 -.5 36 36"><path d="M 5.5 11 h 23 v 1 l -11 6 l -11 -6 v -1 m 0 2 l 11 6 l 11 -6 v 11 h -22 v -11" stroke-width="1" fill="#fff"></path></svg></span></a></div><div class="heateorSssClear"></div></div>					</span>
+				</span>
+                <span class="post-options-print" onclick="window.print()">Print</span>
+            </div>
+            <div style="clear:both"></div>
+        </div>
+        <div style="clear:both"></div>
+		<article class="post-99448 post type-post status-publish format-standard category-nieuws tag-ggz tag-vastgoed themas-vastgoed entry" aria-label="Emergis bouwt kliniek met hergebruikt materiaal"><header class="entry-header"><h1 class="entry-title">Emergis bouwt kliniek met hergebruikt materiaal</h1>
+<p class="entry-meta"><img class="author-image" src="https://www.skipr.nl/content/uploads/2021/06/skipr-favicon-150x150.png" /><span class="redactie"><span class="entry-author"><a href="https://www.skipr.nl/author/skipr/" class="entry-author-link" rel="author"><span class="entry-author-name">Skipr Redactie</span></a></span></span><span class="date"><time class="entry-time">12 juli 2017</time>, <time class="entry-time">08:59</time></span> <span class="views"></span> </p></header><div class="entry-content"><p>Emergis bouwt in het Zeeuwse Kloetinge aan een nieuwe kinder- en jeugdkliniek met hergebruikt materiaal. Dit doet de zorgaanbieder niet alleen vanwege het milieu en de kosten, maar vooral omdat duurzame, biobased-materialen zorgen voor een gezond en prettig gebouw voor cliënten en medewerkers.<br />
+</p>
+        <!-- GPT AdSlot 4 for Ad unit 'https://www.skipr.nl' ### Size: [[300,250]] -->
+        <div id='div-gpt-ad-sidebar_mobile'>
+            <script>
+                googletag.cmd.push(function () {
+                    googletag.display('div-gpt-ad-sidebar_mobile');
+                });
+            </script>
+        </div>
+        <!-- End AdSlot 4 -->
+        
+<p><a href="http://www.rvo.nl/actueel/nieuws/zorginstelling-emergis-realiseert-kliniek-met-hergebruikt-materiaal" target="_blank" rel="noopener noreferrer">Dit meldt de Rijksdienst voor Ondernemend Nederland (RVO).</a></p>
+<p>Het beleid van Emergis is erop gericht om de verbouwing zo duurzaam en energiezuinig mogelijk te doen, en het liefst circulair. Dit houdt in dat er zo min mogelijk gebruik wordt gemaakt van nieuwe grondstoffen, door hergebruik van bestaande materialen. De bouw begint in 2018, de ggz-aanbieder streeft ernaar het in 2019 te openen.</p>
+<p>Omdat Emergis onvoldoende kennis en middelen in huis heeft om te innoveren met circulair bouwen, heeft de ggz-instelling partners om zich heen verzameld. Zo brengen een architect en installatieadviseur ontwerp- en technische expertise in, adviseert een advocaat over nieuwe contracten en helpt ontwikkelingsmaatschappij Impuls Zeeland met innovaties in ondernemerschap.</p>
+<h2>Donorpand</h2>
+<p>Van Rijkswaterstaat krijgt Emergis materiaal voor hergebruik. Rijkswaterstaat heeft recent een duurzaam districtskantoor in Terneuzen gesloten. &#8220;Een ideaal donorpand vanwege de fantastische materialen&#8221;, zegt directeur Vastgoed Dorine Peters van Emergis tegen MVO. &#8220;Dankzij een overzichtelijk logboek van bestekken konden we eenvoudig door het pand lopen en aanvinken wat we wilden overnemen.&#8221;</p>
+<p>Ook wat de financi&euml;n betreft, kan Emergis op steun rekenen. De provincie Zeeland draagt bij aan de ontwikkelkosten, de Rabobank verleent via de Regeling groenprojecten een gunstige lening.</p>
+<!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/"
+    dc:identifier="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/"
+    dc:title="Emergis bouwt kliniek met hergebruikt materiaal"
+    trackback:ping="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/trackback/" />
+</rdf:RDF>-->
+</div><div class="comment-shortcut"><a href="#comments" id="scroll-to-comment-link">Reageer op dit artikel</a></div><div class="meta-post-tags"><span class="tags-label">Meer over:</span><span class="tag-name"><a href=" https://www.skipr.nl/tag/ggz/ ">Ggz</a></span><span class="tag-name"><a href=" https://www.skipr.nl/tag/vastgoed/ ">Vastgoed</a></span></div></article></main><aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" id="genesis-sidebar-primary"><h2 class="genesis-sidebar-title screen-reader-text">Primary Sidebar</h2><section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="widget_text widget-wrap"><div class="textwidget custom-html-widget"><!-- GPT AdSlot 3 for Ad unit '[websiteurl][thema]' ### Size: [[300,250],[300,600]] -->
+<div id='div-gpt-ad-sidebar'>
+<script>googletag.cmd.push(function() { googletag.display('div-gpt-ad-sidebar'); });
+</script>
+</div>
+<!-- End AdSlot 3 --></div></div></section>
+</aside><aside class="sidebar sidebar-secondary widget-area" role="complementary" aria-label="Secondary Sidebar" id="genesis-sidebar-secondary"><h2 class="genesis-sidebar-title screen-reader-text">Secondary Sidebar</h2></aside></div></div><div class="single-newsletter-section"><div class="single-newsletter-section-container">
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework gf_simple_horizontal_wrapper' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_9' ><div id='gf_9' class='gform_anchor' tabindex='-1'></div>
+                        <div class='gform_heading'>
+                            <p class='gform_description'></p>
+                        </div><form method='post' enctype='multipart/form-data'  id='gform_9' class='gf_simple_horizontal' action='/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/#gf_9' data-formid='9' novalidate>
+                        <div class='gform-body gform_body'><ul id='gform_fields_9' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_9_1" class="gfield gfield--type-html gfield--input-type-html gf_inline gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class="newsletter-horizontal-form-text">Dit artikel heeft ook in onze nieuwsbrief gestaan. <span class="gold">Blijf op de hoogte.</span></div></li><li id="field_9_2" class="gfield gfield--type-email gfield--input-type-email gf_inline headerblock-email field_sublabel_below gfield--no-description field_description_below hidden_label field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label screen-reader-text' for='input_9_2'>Uw e-mailadres</label><div class='ginput_container ginput_container_email'>
+                            <input name='input_2' id='input_9_2' type='email' value='' class='medium'   placeholder='Uw e-mailadres'  aria-invalid="false"  />
+                        </div></li><li id="field_9_3" class="gfield gfield--type-checkbox gfield--type-choice gfield--input-type-checkbox field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_hidden"  ><div class="admin-hidden-markup"><i class="gform-icon gform-icon--hidden" aria-hidden="true" title="Dit veld is verborgen bij het bekijken van het formulier"></i><span>Dit veld is verborgen bij het bekijken van het formulier</span></div><label class='gfield_label gform-field-label gfield_label_before_complex' >Dagelijkse nieuwsbrief</label><div class='ginput_container ginput_container_checkbox'><ul class='gfield_checkbox' id='input_9_3'><li class='gchoice gchoice_9_3_1'>
+								<input class='gfield-choice-input' name='input_3.1' type='checkbox'  value='BSL_NL_SKIPR_DAILY' checked='checked' id='choice_9_3_1'   />
+								<label for='choice_9_3_1' id='label_9_3_1' class='gform-field-label gform-field-label--type-inline'>Dagelijkse nieuwsbrief</label>
+							</li><li class='gchoice gchoice_9_3_2'>
+								<input class='gfield-choice-input' name='input_3.2' type='checkbox'  value='BSL_NL_SKIPR_WEEKLY' checked='checked' id='choice_9_3_2'   />
+								<label for='choice_9_3_2' id='label_9_3_2' class='gform-field-label gform-field-label--type-inline'>Wekelijkse nieuwsbrief</label>
+							</li></ul></div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <input type='image' src='https://www.skipr.nl/content/uploads/2021/03/nieuwsbrief-icon.png' id='gform_submit_button_9' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' class='gform_button button gform_image_button' alt='Versturen'  /> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_9' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_9' id='gform_theme_9' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_9' id='gform_style_settings_9' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_9' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='9' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_9' value='WyJbXSIsIjFiMTllZmRmOTkyYTBhM2U5NTBmOTljODhhYTM3OTkzIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_9' id='gform_target_page_number_9' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_9' id='gform_source_page_number_9' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div><script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 9, 'https://www.skipr.nl/content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_9').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_9');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_9').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_9').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_9').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_9').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_9').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_9').val();gformInitSpinner( 9, 'https://www.skipr.nl/content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [9, current_page]);window['gf_submitting_9'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_9').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_9').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [9]);window['gf_submitting_9'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_9').text());}else{jQuery('#gform_9').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "9", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_9" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_9";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_9" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 9, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]> */
+</script>
+</div></div><div class="single-podcast-section"><div class="single-podcast-section-container">        <div class="single-podcast-section-content">
+            <div class="podcast-logo">
+                <img src="https://www.skipr.nl/content/uploads/2020/12/image_voorzorg_500x500.jpg" width="80" height="80" alt="VoorZorg logo"/>
+            </div>
+            <div class="podcast-intro">
+				Abonneer u nu op dé podcast door de redactie van Skipr en Zorgvisie over de gezondheidszorg in Nederland                <a class="podcast-more-info" href="https://www.skipr.nl/podcast"
+                   target="">Beluister de afleveringen van Voorzorg hier</a>
+            </div>
+        </div>
+		</div></div>        <section class="related-news">
+            <div class="news sm-recent-news-wrap">
+                <div class="sm-recent-news-inner-wrap">
+                    <h2>
+                        Gerelateerd nieuws                    </h2>
+                                            <div class="news-item">
+                            <span class="sm-recent-news-date">5 mrt 2026</span>
+                                                            <span class="title"><a href="https://www.skipr.nl/nieuws/ggz-wnb-vreest-landgoed-deels-te-moeten-verkopen/">GGZ WNB vreest landgoed deels te moeten verkopen</a></span>
+                                                    </div>
+                                                <div class="news-item">
+                            <span class="sm-recent-news-date">13 jan 2026</span>
+                                                            <span class="title"><a href="https://www.skipr.nl/nieuws/langdurige-zorg-heeft-vanaf-2026-meer-geld-om-te-investeren-in-zorgvastgoed/">Langdurige zorg heeft vanaf 2026 meer geld om te investeren in zorgvastgoed</a></span>
+                                                    </div>
+                                                <div class="news-item">
+                            <span class="sm-recent-news-date">19 mei 2026</span>
+                                                            <span class="title"><a href="https://www.skipr.nl/nieuws/mind-wil-betere-beveiliging-ggz-data/">MIND wil betere beveiliging ggz-data</a></span>
+                                                    </div>
+                                                <div class="news-item">
+                            <span class="sm-recent-news-date">15 mei 2026</span>
+                                                            <span class="title"><a href="https://www.skipr.nl/nieuws/inhoudelijk-stevige-onderhandelingsronde-voor-nieuwe-cao-ggz/">‘Inhoudelijk stevige’ onderhandelingsronde voor nieuwe cao ggz</a></span>
+                                                    </div>
+                                                <div class="news-item">
+                            <span class="sm-recent-news-date">8 mei 2026</span>
+                                                            <span class="title"><a href="https://www.skipr.nl/nieuws/onderhandelingen-ggz-cao-gaan-moeizaam-zeggen-vakbonden/">Onderhandelingen ggz-cao gaan moeizaam, zeggen vakbonden</a></span>
+                                                    </div>
+                        
+                    <!-- Wrap around interesting content -->
+                    <div class="interesting-content">
+
+                        
+                            <div class="event-block-header"><h3 class="">Interessant voor u</h3></div>
+
+                                                            <div class="post_block event postid-297805"
+                                     style="background:url(https://www.skipr.nl/content/uploads/2025/06/BSL-1065_SEA_Bestuurlijke_Wijsheid_1200x628-500x262.jpg); no-repeat: 0px 0px; background-position: center center; background-size: cover;">
+                                    <div class="wrapper">
+                                        <div class="post_block_item">
+                                            <span class="event-date">Vanaf 28 oktober 2025</span>
+                                            <a href="https://www.zorgvisie.nl/congressen/bestuurlijke-wijsheid/"><h4>Masterclass Bestuurlijke Wijsheid</h4></a>
+                                            <span class="event-start-end-time"><i class="far fa-clock"></i>00:00 - 00:00</span>
+                                            <span class="event-location"><i class="fas fa-location-arrow"></i>Den Dolder</span>
+                                            <a href="https://www.zorgvisie.nl/congressen/bestuurlijke-wijsheid/" class="readmore-btn"
+                                               target="_blank">Inschrijven</a>
+                                            <a href="https://www.zorgvisie.nl/congressen/bestuurlijke-wijsheid/" class="readmore">Meer informatie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="post_block event postid-297413"
+                                     style="background:url(https://www.skipr.nl/content/uploads/2025/06/Ontwerp-zonder-titel-2025-06-13T154129.616-500x250.png); no-repeat: 0px 0px; background-position: center center; background-size: cover;">
+                                    <div class="wrapper">
+                                        <div class="post_block_item">
+                                            <span class="event-date">16 december 2025, Utrecht</span>
+                                            <a href="https://managersacademie.nl/events/teamdynamiek/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=academie-generaties&#038;utm_id=aanmelder165380"><h4>Masterclass Teamdynamiek</h4></a>
+                                            <span class="event-start-end-time"><i class="far fa-clock"></i>09:00 - 16:30</span>
+                                            <span class="event-location"><i class="fas fa-location-arrow"></i>Van der Valk Hotel</span>
+                                            <a href="https://managersacademie.nl/events/teamdynamiek/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=academie-generaties&#038;utm_id=aanmelder165380" class="readmore-btn"
+                                               target="_blank">Inschrijven</a>
+                                            <a href="https://managersacademie.nl/events/teamdynamiek/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=academie-generaties&#038;utm_id=aanmelder165380" class="readmore">Meer informatie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="post_block event postid-296832"
+                                     style="background:url(https://www.skipr.nl/content/uploads/2023/08/BSL-0811_Secretaressecongres_Nov_header_700x350_2-500x250.jpg); no-repeat: 0px 0px; background-position: center center; background-size: cover;">
+                                    <div class="wrapper">
+                                        <div class="post_block_item">
+                                            <span class="event-date">23 april 2026</span>
+                                            <a href="https://www.secretaressesindezorg.nl/?utm_source=websiteskipr&#038;utm_medium=redirect"><h4>Tip uw secretaresse over Hét Secretaressecongres</h4></a>
+                                            <span class="event-start-end-time"><i class="far fa-clock"></i>09:00 - 16:30</span>
+                                            <span class="event-location"><i class="fas fa-location-arrow"></i>Den Bosch</span>
+                                            <a href="https://www.aanmelder.nl/165938/subscribe?utm_source=websiteskipr&#038;utm_medium=redirect" class="readmore-btn"
+                                               target="_blank">Inschrijven</a>
+                                            <a href="https://www.secretaressesindezorg.nl/?utm_source=websiteskipr&#038;utm_medium=redirect" class="readmore">Meer informatie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="post_block event postid-296830"
+                                     style="background:url(https://www.skipr.nl/content/uploads/2023/08/BSL-0811_Secretaressecongres_Nov_header_700x350_2-500x250.jpg); no-repeat: 0px 0px; background-position: center center; background-size: cover;">
+                                    <div class="wrapper">
+                                        <div class="post_block_item">
+                                            <span class="event-date">20 november 2025</span>
+                                            <a href="https://www.secretaressesindezorg.nl/programma-november-2025/?utm_source=websiteskipr&#038;utm_medium=redirect"><h4>Tip uw secretaresse over Hét Secretaressecongres</h4></a>
+                                            <span class="event-start-end-time"><i class="far fa-clock"></i>09:00 - 16:30</span>
+                                            <span class="event-location"><i class="fas fa-location-arrow"></i>Barneveld</span>
+                                            <a href="https://www.aanmelder.nl/161416/subscribe?utm_source=websiteskipr&#038;utm_medium=redirect" class="readmore-btn"
+                                               target="_blank">Inschrijven</a>
+                                            <a href="https://www.secretaressesindezorg.nl/programma-november-2025/?utm_source=websiteskipr&#038;utm_medium=redirect" class="readmore">Meer informatie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="post_block event postid-296507"
+                                     style="background:url(https://www.skipr.nl/content/uploads/2025/05/GGZ-uit-de-knel-1-500x250.png); no-repeat: 0px 0px; background-position: center center; background-size: cover;">
+                                    <div class="wrapper">
+                                        <div class="post_block_item">
+                                            <span class="event-date">4 november 2025, Veenendaal</span>
+                                            <a href="https://www.zorgvisie.nl/congressen/congres-ggz-uit-de-knel/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=zorgvisie_ggz&#038;utm_id=aanmelder166536"><h4>Congres GGZ uit de knel</h4></a>
+                                            <span class="event-start-end-time"><i class="far fa-clock"></i>09:00 - 16:30</span>
+                                            <span class="event-location"><i class="fas fa-location-arrow"></i>Van der Valk</span>
+                                            <a href="https://www.zorgvisie.nl/congressen/congres-ggz-uit-de-knel/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=zorgvisie_ggz&#038;utm_id=aanmelder166536" class="readmore-btn"
+                                               target="_blank">Inschrijven</a>
+                                            <a href="https://www.zorgvisie.nl/congressen/congres-ggz-uit-de-knel/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=zorgvisie_ggz&#038;utm_id=aanmelder166536" class="readmore">Meer informatie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                                                <div class="post_block event postid-296502"
+                                     style="background:url(https://www.skipr.nl/content/uploads/2025/05/BSL-1120_Header_Concentratie_en_spreiding_van_zorg_700x350_Beeld-500x250.jpg); no-repeat: 0px 0px; background-position: center center; background-size: cover;">
+                                    <div class="wrapper">
+                                        <div class="post_block_item">
+                                            <span class="event-date">27 november 2025, Utrecht</span>
+                                            <a href="https://www.zorgvisie.nl/congressen/congres-concentratie-en-spreiding-van-zorg/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=zorgvisie_concentratie&#038;utm_id=aanmelder166348"><h4>Congres Concentratie en spreiding van zorg</h4></a>
+                                            <span class="event-start-end-time"><i class="far fa-clock"></i>09:00 - 16:30</span>
+                                            <span class="event-location"><i class="fas fa-location-arrow"></i>Van der Valk</span>
+                                            <a href="https://www.zorgvisie.nl/congressen/congres-concentratie-en-spreiding-van-zorg/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=zorgvisie_concentratie&#038;utm_id=aanmelder166348" class="readmore-btn"
+                                               target="_blank">Inschrijven</a>
+                                            <a href="https://www.zorgvisie.nl/congressen/congres-concentratie-en-spreiding-van-zorg/?utm_source=website-agenda&#038;utm_medium=skipr&#038;utm_campaign=zorgvisie_concentratie&#038;utm_id=aanmelder166348" class="readmore">Meer informatie</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        
+                                            </div>
+                </div>
+            </div>
+        </section>
+        <h2 class="screen-reader-text">Reader Interactions</h2>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Reacties <small><a rel="nofollow" id="cancel-comment-reply-link" href="/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/#respond" style="display:none;">Reactie annuleren</a></small></h3><p class="must-log-in">Je moet <a href="https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal/?sso=login"> ingelogd zijn op</a> om een reactie te plaatsen.</p>	</div><!-- #respond -->
+	<footer>
+            <div class="column">
+                <div class="footer-logo">
+                    <a href="https://www.bsl.nl" rel="home">
+                        <img  src="https://www.skipr.nl/content/themes/skipr/resources/img/BSL_logo_eenmerkvan.png" alt="Bohn Stafleu van Loghum">
+                    </a>
+                </div>
+                <div class="footer-copyright">
+                <span style="display: block; margin-bottom: 3px;">&nbsp;</span>
+                    <a href="/copyright/">&copy; 2026 | BSL Media & Learning</a>, onderdeel van <a target="_blank" href=https://www.springernature.com/rel="nofollow">Springer Nature</a>
+                </div>
+            </div><div class="column"><nav class="footer-menu"><ul id="menu-footer-menu" class="footer-nav"><li id="menu-item-149859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-149859"><a href="https://www.skipr.nl/contact/">Contact</a></li>
+<li id="menu-item-162054" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-162054"><a href="https://www.skipr.nl/adverteren/">Adverteren</a></li>
+<li id="menu-item-309238" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-309238"><a target="_blank" href="https://www.bsl.nl/privacy-statement/">Privacy statement</a></li>
+<li id="menu-item-137666" class="optanon-toggle-display menu-item menu-item-type-custom menu-item-object-custom menu-item-137666"><a rel="nofollow" href="#">Cookies</a></li>
+<li id="menu-item-187341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-187341"><a target="_blank" href="https://www.bsl.nl/voorwaarden">Voorwaarden</a></li>
+<li id="menu-item-224087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-224087"><a href="https://www.skipr.nl/?page_id=50987">Het laatste nieuws over de zorg. Snel, geïnformeerd, compleet</a></li>
+</ul></nav><style>
+                    .social-links {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-right: 20px;
+                        list-style: none;
+                        gap: 16px;
+                    }
+                    .social-links img{
+                        height: 20px;
+                    }
+                </style><ul class="social-links">
+                    <li>
+                        <a href="https://x.com/skipr" target="_blank">
+                            <img  src="https://www.skipr.nl/content/themes/skipr/resources/img/X.png" alt="X">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/company/skipr" target="_blank">
+                            <img  src="https://www.skipr.nl/content/themes/skipr/resources/img/Linkedin.png" alt="linkedin">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/skiprstories" target="_blank">
+                            <img  src="https://www.skipr.nl/content/themes/skipr/resources/img/insta.png" alt="instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/skiprredactie/" target="_blank">
+                            <img  src="https://www.skipr.nl/content/themes/skipr/resources/img/Facebook.png" alt="facebook">
+                        </a>
+                    </li>
+                  </ul></div></footer></div><script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp\/wp-*.php","\/wp\/wp-admin\/*","\/content\/uploads\/*","\/content\/*","\/content\/plugins\/*","\/content\/themes\/skipr\/*","\/content\/themes\/genesis\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+        <!-- wpsolr - ajax auto completion nonce -->
+        <input type="hidden" id="wpsolr_autocomplete_nonce"
+               value="f5acf8b7b2">
+
+		<link rel='stylesheet' id='dashicons-css' href='https://www.skipr.nl/wp/wp-includes/css/dashicons.min.css?ver=6.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_reset_css-css' href='https://www.skipr.nl/content/plugins/gravityforms/legacy/css/formreset.min.css?ver=2.9.21' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css' href='https://www.skipr.nl/content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=2.9.21' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css' href='https://www.skipr.nl/content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=2.9.21' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css' href='https://www.skipr.nl/content/plugins/gravityforms/legacy/css/browsers.min.css?ver=2.9.21' type='text/css' media='all' />
+<script type="text/javascript" id="view-count-js-extra">
+/* <![CDATA[ */
+var ViewCount = {"ajaxurl":"https:\/\/www.skipr.nl\/wp\/wp-admin\/admin-ajax.php","security":"18d18919b6"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skipr.nl/content/mu-plugins/shared-functions/resources/js/view-count.js?ver=1.0.0" id="view-count-js"></script>
+<script type="text/javascript" id="ppress-frontend-script-js-extra">
+/* <![CDATA[ */
+var pp_ajax_form = {"ajaxurl":"https:\/\/www.skipr.nl\/wp\/wp-admin\/admin-ajax.php","confirm_delete":"Are you sure?","deleting_text":"Deleting...","deleting_error":"An error occurred. Please try again.","nonce":"ebd80d4c39","disable_ajax_form":"false","is_checkout":"0","is_checkout_tax_enabled":"0","is_checkout_autoscroll_enabled":"true"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/wp-user-avatar/assets/js/frontend.min.js?ver=4.16.6" id="ppress-frontend-script-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/wpsolr-pro/wpsolr/core/js/devbridge/jquery.autocomplete.js?ver=24.1" id="solr_auto_js1-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/wpsolr-pro/wpsolr/core/bower_components/jsurl/url.js?ver=24.1" id="urljs-js"></script>
+<script type="text/javascript" id="autocomplete-js-extra">
+/* <![CDATA[ */
+var wp_localize_script_autocomplete = {"data":{"wpsolr_v":"","ajax_url":"https:\/\/www.skipr.nl\/wp\/wp-admin\/admin-ajax.php","lang":"","is_show_url_parameters":true,"is_ajax":false,"SEARCH_PARAMETER_VIEW_ID":"wpsolr_v","SEARCH_PARAMETER_S":"s","SEARCH_PARAMETER_SEARCH":"search","SEARCH_PARAMETER_Q":"wpsolr_q","SEARCH_PARAMETER_FQ":"wpsolr_fq","SEARCH_PARAMETER_SORT":"wpsolr_sort","SEARCH_PARAMETER_PAGE":"wpsolr_page","SORT_CODE_BY_RELEVANCY_DESC":"sort_by_relevancy_desc","css_ajax_container_page_title":".page-title","css_ajax_container_page_sort":".woocommerce-ordering select,.select_field","css_ajax_container_results":".products,.results-by-facets","css_ajax_container_overlay":".products,.results-by-facets","css_ajax_container_pagination":"nav.woocommerce-pagination,.paginate_div","css_ajax_container_pagination_page":"a.page-numbers,a.paginate","css_ajax_container_results_count":".woocommerce-result-count,.res_info","ajax_delay_ms":500,"redirect_search_home":"","suggestions_icon":"https:\/\/www.skipr.nl\/content\/plugins\/wpsolr-pro\/wpsolr\/core\/images\/wpsolr-ajax-loader.gif","is_event_tracking_cached":false,"wpsolr_autocomplete_is_active":true,"wpsolr_autocomplete_selector":[{"view_uuid":"","suggestion_uuid":"2FA2DA0FA154C979C661DEC1C5E89EB6","suggestion_class":"c2FA2DA0FA154C979C661DEC1C5E89EB6","jquery_selector":"#searchform-2, #searchform-3","url_parameters":"","jquery_autocomplete_options":"{\"minChars\": 3,\"deferRequestBy\": 200}"}],"wpsolr_autocomplete_action":"wdm_return_solr_rows","wpsolr_autocomplete_nonce_selector":"#wpsolr_autocomplete_nonce","wpsolr_is_search_admin":false,"wpsolr_recommendation_selector":[],"wpsolr_recommendation_action":"wpsolr_recommendations","wpsolr_recommendation_nonce_selector":"#wpsolr_recommendations_nonce"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/wpsolr-pro/wpsolr/core/js/autocomplete_solr.js?ver=24.1" id="autocomplete-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/wpsolr-pro/wpsolr/core/js/loadingoverlay/loadingoverlay.min.js?ver=24.1" id="loadingoverlay-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/comment-reply.min.js?ver=6.8.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/themes/genesis/lib/js/menu/superfish.min.js?ver=1.7.10" id="superfish-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/themes/genesis/lib/js/menu/superfish.args.min.js?ver=3.6.1" id="superfish-args-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/content/themes/genesis/lib/js/skip-links.min.js?ver=3.6.1" id="skip-links-js"></script>
+<script type="text/javascript" id="heateor_sss_sharing_js-js-before">
+/* <![CDATA[ */
+function heateorSssLoadEvent(e) {var t=window.onload;if (typeof window.onload!="function") {window.onload=e}else{window.onload=function() {t();e()}}};	var heateorSssSharingAjaxUrl = 'https://www.skipr.nl/wp/wp-admin/admin-ajax.php', heateorSssCloseIconPath = 'https://www.skipr.nl/content/plugins/sassy-social-share/public/../images/close.png', heateorSssPluginIconPath = 'https://www.skipr.nl/content/plugins/sassy-social-share/public/../images/logo.png', heateorSssHorizontalSharingCountEnable = 0, heateorSssVerticalSharingCountEnable = 0, heateorSssSharingOffset = -10; var heateorSssMobileStickySharingEnabled = 0;var heateorSssCopyLinkMessage = "Link copied.";var heateorSssUrlCountFetched = [], heateorSssSharesText = 'Shares', heateorSssShareText = 'Share';function heateorSssPopup(e) {window.open(e,"popUpWindow","height=400,width=600,left=400,top=100,resizable,scrollbars,toolbar=0,personalbar=0,menubar=no,location=no,directories=no,status")}
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skipr.nl/content/plugins/sassy-social-share/public/js/sassy-social-share-public.js?ver=3.3.79" id="heateor_sss_sharing_js-js"></script>
+<script type="text/javascript" id="child-theme-js-js-extra">
+/* <![CDATA[ */
+var ajax_object = {"ajax_url":"https:\/\/www.skipr.nl\/wp\/wp-admin\/admin-ajax.php","favorite_posts":[]};
+var preferred = {"favorites":[],"post_id":"99448"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skipr.nl/content/themes/skipr/resources/js/script.min.js?ver=10.25.0" id="child-theme-js-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-a11y-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2025-11-12 09:30:06+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"nl"},"Notifications":["Meldingen"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skipr.nl/wp/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script type="text/javascript" defer='defer' src="https://www.skipr.nl/content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.21" id="gform_json-js"></script>
+<script type="text/javascript" id="gform_gravityforms-js-extra">
+/* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Ma","tuesday":"Di","wednesday":"Wo","thursday":"Do","friday":"Vr","saturday":"Za","sunday":"Zo"},"months":{"january":"Januari","february":"Februari","march":"Maart","april":"April","may":"Mei","june":"Juni","july":"Juli","august":"Augustus","september":"September","october":"Oktober","november":"November","december":"December"},"firstDay":1,"iconText":"Selecteer een datum"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"Dit bestandstype is niet toegestaan. Moet \u00e9\u00e9n van de volgende zijn:","delete_file":"Dit bestand verwijderen","in_progress":"in behandeling","file_exceeds_limit":"Bestand overschrijdt limiet bestandsgrootte","illegal_extension":"Dit type bestand is niet toegestaan.","max_reached":"Maximale aantal bestanden bereikt","unknown_error":"Er was een probleem bij het opslaan van het bestand op de server","currently_uploading":"Wacht tot het uploaden is voltooid","cancel":"Annuleren","cancel_upload":"Deze upload annuleren","cancelled":"Geannuleerd","error":"Fout","message":"Bericht"},"vars":{"images_url":"https:\/\/www.skipr.nl\/content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"Amerikaanse dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/www.skipr.nl\/content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/www.skipr.nl\/content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"5189ee76ba7f64a0c1eae2e2d229aede","strings":{"newRowAdded":"Nieuwe rij toegevoegd.","rowRemoved":"Rij verwijderd","formSaved":"Het formulier is opgeslagen. De inhoud bevat de link om terug te keren en het formulier in te vullen."}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://www.skipr.nl/content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.21" id="gform_gravityforms-js"></script>
+<script type="text/javascript" defer='defer' src="https://www.skipr.nl/content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=2.9.21" id="gform_placeholder-js"></script>
+<script type="text/javascript" defer='defer' src="https://www.skipr.nl/content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=380b7a5ec0757c78876bc8a59488f2f3" id="gform_gravityforms_utils-js"></script>
+<script type="text/javascript" defer='defer' src="https://www.skipr.nl/content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=8673c9a2ff188de55f9073009ba56f5e" id="gform_gravityforms_theme_vendors-js"></script>
+<script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"5189ee76ba7f64a0c1eae2e2d229aede"},"ajax":{"ajaxurl":"https:\/\/www.skipr.nl\/wp\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"695387f0d0","i18n":{"step_announcement":"Stap %1$s van %2$s, %3$s","unknown_error":"Er was een onbekende fout bij het verwerken van je aanvraag. Probeer het opnieuw."}}}},"hmr_dev":"","public_path":"https:\/\/www.skipr.nl\/content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"e0fcfeccaa"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://www.skipr.nl/content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=ea8a466a3fdf642558f016efd46a6aff" id="gform_gravityforms_theme-js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 9) {if(typeof Placeholders != 'undefined'){
+                        Placeholders.enable();
+                    }} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "9", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_9" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_9";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_9" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 9, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+</body></html>
+
+<!-- Dynamic page generated in 0.510 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-05-22 08:45:20 -->
+
+<!-- super cache -->

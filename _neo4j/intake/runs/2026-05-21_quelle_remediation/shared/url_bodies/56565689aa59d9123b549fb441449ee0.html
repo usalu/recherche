@@ -1,0 +1,962 @@
+<!doctype html>
+<!--
+===================================
+==== made in Vienna with ♡ ... ====
+===================================
+=== http://www.benpazdernik.com ===
+===================================
+-->
+<html lang="de">
+<head>
+    <title>LXSY ARCHITEKTUR | IMPACT HUB BERLIN at CRCLR-HOUSE | LXSY Architektur</title>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description"  content="Bei dem in Planung befindlichen Projekt IMPACT HUB BERLIN at CRCLR-HOUSE in Berlin dreht sich alles um das Thema zirkuläres Bauen.">
+    <meta name="theme-color" content="#000000">
+        
+    <meta name="language" content="en">
+        
+    <base href="https://lxsy.de/en/" />
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/plugins/lightgallery/css/lightgallery.css">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
+    <!-- Flickity -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    
+    <style>
+    @media screen and (max-width: 1200px) {
+        .page-id-3 .custom-row,
+        .page-id-4 .custom-row {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .page-id-3 .custom-row .content-left,
+        .page-id-4 .custom-row .content-left {
+            order: 3;
+        }
+    }
+    
+    /* Adding arrow to the homepage and adapting the CSS slightly */
+    .template-Homepage main {
+        padding-top: 0;
+        top: 90vh;
+    }
+    
+    .arrow-down-icon {
+        width: 5vh;
+        height: 5vh;
+        margin: 45px auto 45px;
+        display: block;
+    }
+    
+    /* Press publications design changes */ 
+    p.press-publication {
+        display: block;
+        margin-bottom: 0.25em;
+    }
+    
+    .template-Presse h2 {
+        text-transform: uppercase;
+        margin-bottom: 1.5em;
+        font-size: 1.25em;
+    }
+    
+    body.template-Presse .container .custom-row .content-left {
+        flex-direction: column;
+    }
+    
+    /* Pulse animation vor down-arrow on startpage */
+    .template-Homepage .arrow-down-icon {
+        -webkit-animation: mover 1s infinite  alternate;
+        animation: mover 1s infinite  alternate;
+    }
+    .template-Homepage .arrow-down-icon {
+        -webkit-animation: mover 1s infinite  alternate;
+        animation: mover 1s infinite  alternate;
+    }
+    @-webkit-keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    @keyframes mover {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-10px); }
+    }
+    
+    </style>
+    
+ <style>
+/*=================================
+=            Variables            =
+=================================*/
+
+:root {
+  --color-blue: #0203e2;
+  --color-light-gray: #f5f5f5;
+  --color-nude: #f6c7b3;
+  --color-light-green: #bbdbca;
+  --color-light-blue: #cedbed;
+}
+
+
+/*=================================
+=            Heading Styles       =
+=================================*/
+
+h2.heading, h1.heading {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin: 4rem 0;
+}
+
+ul > li {
+  font-weight: 400;
+}
+
+.heading.alignment-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  h2.heading, h1.heading {
+    font-size: 2rem;
+  }
+  
+  .heading {
+    max-width: 40ch;
+  }
+  
+  .heading.alignment-left {
+    text-align: left;
+  }
+  
+  .heading.alignment-center,
+  .alignment-centered {
+    text-align: center;
+  }
+  
+  p {
+    max-width: 65ch;
+  }
+}
+
+/*=================================
+=         Utility Classes         =
+=================================*/
+
+.font-large, .font-large p {
+  font-size: 1.25rem;
+  letter-spacing: 0.25px;
+  line-height: 1.25em;
+  margin-bottom: 1.5rem;
+  font-family: "Larsseit", sans-serif;
+  font-weight: bold;
+}
+
+.font-large:last-of-type, .font-large p:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .font-large, .font-large p {
+    font-size: 1.55rem;
+  }
+}
+
+.font-uppercase {
+  text-transform: uppercase;
+}
+
+.mt-4 {
+  margin-top: 1em;
+}
+
+.mb-4 {
+  margin-bottom: 1em;
+}
+
+/*=================================
+=          Button Styles          =
+=================================*/
+
+.button {
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  transition: background-color 0.25s cubic-bezier(0.46, 0.46, 0, 0.95), color 0.25s ease-in-out;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: var(--color-blue);
+}
+
+/*=================================
+=         Content Container       =
+=================================*/
+
+.container-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .container-content {
+    max-width: 1200px;
+  }
+}
+
+/*=================================
+=       Two-Column Layout         =
+=================================*/
+
+.row.two-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row.two-column > .column {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+  .row.two-column {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .row.two-column > .column {
+    flex: 1 1 50%;
+  }
+}
+
+/*=================================
+=         Image Optimization      =
+=================================*/
+
+.row.two-column img {
+  max-height: 40rem;
+  width: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/*=================================
+=        Offset Layout Styles     =
+=================================*/
+
+section.row.offset-left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.offset-left {
+  flex: 1;
+}
+
+.row-main-content {
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  section.row.offset-left {
+    flex-direction: row;
+  }
+
+  .offset-left {
+    flex: 0 0 25%;
+  }
+
+  .row-main-content {
+    flex: 0 0 75%;
+  }
+  
+  .offset-left h2 {
+    position: sticky;
+    top: 8rem;
+  }
+}
+
+/*=================================
+=        Accordion Styles         =
+=================================*/
+
+.accordion-header, .accordion-icon {
+  cursor: pointer;
+}
+
+.accordion-header h2 {
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  position: relative;
+  width: 100%;
+  padding: 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #0203e2;
+}
+
+.accordion-item:focus {
+  outline: none;
+}
+
+.accordion-item:last-child {
+  border-bottom: 1px solid #0203e2;
+}
+
+.accordion-icon {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.accordion-icon .vertical-line {
+  transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  transform-origin: center;
+}
+
+.accordion-header.active .vertical-line {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.65, 0.05, 0.36, 1), opacity 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.accordion-content.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .accordion-item {
+    flex-direction: row;
+  }
+
+  .accordion-header {
+    flex: 0 0 25%;
+  }
+
+  .accordion-content {
+    flex: 0 0 75%;
+  }
+  
+  .accordion-headline h2 {
+    position: sticky;
+    top: 8rem;
+  }
+}
+
+/*=================================
+=           Card Grid             =
+=================================*/
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team-grid {
+  align-items: end;
+  margin-bottom: 4rem;
+}
+
+.team-member-position {
+  font-weight: 400;
+}
+
+/*=================================
+=       Mobile Row Fixes          =
+=================================*/
+
+@media screen and (max-width: 768px) {
+  .row [class^="col"], .row [class^="col"]:last-of-type {
+    margin: 0.5rem 0;
+    float: left;
+  }
+}
+
+
+/*=================================
+=       Desktop Row Changes          =
+=================================*/
+
+/* Increase padding on homepage for rows on desktop */
+
+@media screen and (min-width: 1024px) {
+    .template-Homepage.V2 .row {
+        margin-bottom: 5rem;
+    }
+}
+
+/*=================================
+=       Footer Changes            =
+=================================*/
+
+footer {
+    font-weight: bold;
+}
+
+/*=================================
+=       Small Fixes               =
+=================================*/
+
+/* Remove space below icon to align spaces better */
+.arrow-down-icon {
+    margin-bottom: -1.25rem;
+}
+
+/* Fix slightly off overhang on project-grid */
+@media screen and (min-width: 768px) {
+    .project-grid.v2 {
+        margin-left: -14px;
+        margin-right: -14px;
+    }
+}
+
+/* Remove the margin from the project-grid element when a heading is above */
+.heading + .news-grid .project-grid {
+    margin-top: 0;
+}
+
+/* If the row has a news-grid / project-grid the headline should be sized according to specifications */
+.row:has(.heading + .news-grid) .heading {
+    margin-bottom: 0;
+    font-size: 21px;
+}
+
+.column:has(> img:only-child) {
+    display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+    .row [class^="col"] {
+        margin: 0;
+    }
+}
+
+*:not(.button) + .button {
+  margin-top: 2.25rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    display: block !important;
+    text-align: center;
+  }
+}
+
+/* When a heading is directly followed by a .font-large then reduce the margin to make the rhythm work again */
+.heading:has(+ .font-large) {
+  margin-bottom: 1.5rem;
+}
+
+/*=================================
+=       Gallery Slider            =
+=================================*/
+
+.gallery-slider {
+  width: 100%;
+  margin: auto;
+}
+
+.gallery-slider:not(.flickity-enabled) {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.gallery-slider.flickity-enabled {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.gallery-slider .flickity-button {
+  width: 50%;
+  height: 100%;
+  background: transparent !important;
+  opacity: 0 !important;
+  padding: 0;
+}
+
+.gallery-slider .flickity-button .flickity-button-icon {
+  display: none;
+}
+
+.gallery-slider .flickity-button.flickity-prev-next-button.next {
+  cursor: url('/assets/graphics/arrow-right.png') 25 25, pointer;
+}
+
+.gallery-slider .flickity-button.flickity-prev-next-button.previous {
+  cursor: url('/assets/graphics/arrow-left.png') 25 25, pointer;
+}
+
+/* Fix footer padding and width */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    footer .container {
+        width: 100%;
+        padding: 1.25rem;
+        box-sizing: border-box;
+    }
+    
+    footer .container .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+@media only screen and (min-width: 60em) and (max-width: 1200px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 3rem;
+        box-sizing: border-box;
+    }  
+}
+
+/*==============================================================
+=      Fixes and changes to the project detail page template   =
+================================================================*/
+
+
+@media screen and (min-width: 1200px) {
+    .container .custom-row .content-center {
+        width: 55%;
+        padding-left: 25%;
+        padding-top: 0;
+        margin-top: -20px;
+    }
+
+    .container .custom-row .content-right {
+        width: 20%;
+        padding-left: 0%;
+        padding-top: 0;
+        margin-top: -20px;
+    }
+    
+    .project-title {
+        width: 20%;
+        clear: both;
+    }
+}
+
+.content-center .row {
+    margin-top: 0;
+}
+
+.project-content .content-center, .project-content .content-right {
+    padding-top: 2rem;
+}
+
+
+</style>
+ 
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var items = document.querySelectorAll('.accordion-item');
+    
+      items.forEach(function(item) {
+        var header = item.querySelector('.accordion-header');
+        var content = item.querySelector('.accordion-content');
+    
+        function toggleAccordion() {
+          var isActive = header.classList.contains('active');
+    
+          // Toggle active class on header
+          header.classList.toggle('active');
+          // Update aria-expanded attribute
+          header.setAttribute('aria-expanded', !isActive);
+    
+          if (isActive) {
+            // Collapse content
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.classList.remove('active');
+            setTimeout(function() {
+              content.style.maxHeight = '0';
+            }, 10);
+          } else {
+            // Expand content
+            content.classList.add('active');
+            content.style.maxHeight = content.scrollHeight + 'px';
+          }
+        }
+    
+        // Click event listener on header
+        header.addEventListener('click', function(e) {
+          e.preventDefault();
+          toggleAccordion();
+        });
+    
+        // Keydown event listener for keyboard interaction
+        header.addEventListener('keydown', function(e) {
+          var key = e.key || e.code;
+    
+          if (key === 'Enter' || key === ' ' || key === 'Space') {
+            e.preventDefault();
+            toggleAccordion();
+          }
+        });
+      });
+    });
+
+</script>
+ 
+</head>
+
+<body class="template-Projekt page-id-313" >
+
+<navbar class="navbar menu">
+    <div class="brand">
+        <a href="/en/">
+            <img src="/assets/graphics/lxsy-architektur-logo.svg" alt="LXSY Arcitektur - Logo">
+        </a>
+    </div>
+    <div id="menuButton">
+        <a id="menuButtonLink" href="javascript:openNav();">
+            <div class="hamburger"></div>
+        </a>
+    </div>
+    
+    <div id="sideNavigation" class="sidenav">
+            <div class="main-menu">
+                <a href="/en/projects">Projects</a>
+                <a href="how-and-why">HOW + WHY</a>
+                <a href="about">About</a>
+                <a href="/en/news">News</a>
+                <a href="/en/press">Press</a>
+                <a href="contact">Contact</a>
+            </div>
+            
+            
+            <div class="language-menu">
+                <ul><a href="https://lxsy.de/projekte/impact-hub-berlin-at-crclr-house" style="text-transform: uppercase;" class="de nav-link"><strong>de</strong></a></ul>
+            </div>
+           
+            
+            <div class="social-menu">
+                <a href="https://www.facebook.com/LXSY.Architektur/" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/lxsy.architektur/" target="_blank">Instagram</a>
+                <a href="https://www.linkedin.com/company/lxsy-architektur" target="_blank">LinkedIn</a>
+            </div>
+            
+            <div class="legal-menu">
+                <a href="/en/legal-information">Imprint</a>
+                <a href="/en/privacy-policy">Data Protection</a>
+             <!--   <a href="legal-information">Imprint</a>
+                <a href="privacy-policy">Data Protection</a>-->
+            </div>
+    </div>
+</navbar>
+
+
+<main>
+    <div class="project-slider-container">
+        <div class="project-slider">
+    <div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-01ihb_polis_dam_frame.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-02ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-03ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-04ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-05ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-06ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-07ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-08ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-09ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-10ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-11ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-12ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-13ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-14ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-15ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-16ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-17ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-18ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-19ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-20ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-21ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-22ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-23ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-24ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-25ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+<div class="project-slide">
+    <img src="/assets/components/phpthumbof/cache/lxsy-architekten_arbeiten_crclr-house-berlin-26ihb.40ecfb746ce85d432ae4d2d3db256b5b313.jpg" alt="">
+</div>
+</div>
+    </div>
+    
+    <div class="project-content">
+        <div class="project-content-inner container">
+            <div class="project-title">
+                <h4 class="category">Realisation</h4>
+                <h1 class="title">IMPACT HUB BERLIN at CRCLR-HOUSE</h1>
+            </div>
+            <div class="custom-row">
+                <div class="content-center"><div class=" row">
+    <p class="Body"><span lang="EN-US">On the site of the former Kindl brewery in Berlin's Neuk</span><span lang="SV">&ouml;</span><span lang="EN-US">lln district, the collaborative community and&nbsp;</span><span lang="IT">co</span><span lang="EN-US">-working space Impact Hub Berlin is opening for a new generation of entrepreneurs who focus on circular economy, sustainable food, diversity &amp; inclusion and green tech. For the development of the Kindl-Areal, aspects such as social compatibility, accessibility, diversity, environmental friendliness, resource conservation and waste avoidance play an essential role. Resource-saving construction also informs the interior design of Impact Hub Berlin at CRCLR-House by LXSY Architektur.</span></p>
+<p class="Body"><span lang="EN-US">Back in 2015, LXSY Architektur approached the interior design of Impact Hub Berlin in Kreuzberg in a participatory and sustainable way. Two years later their concept earned them the German Design Award. In an exploration of circular construction methods, the new location takes into account aspects such as reusing of building components, flexibility, recycling</span><span lang="PT">&nbsp;material,&nbsp;</span><span lang="EN-US">facilitating future usage&nbsp;</span><span lang="FR">changes</span><span lang="FR">&nbsp;</span><span lang="EN-US">and creating versatile structures. The necessary retrofitting of the former warehouse and its extension were carried out by TRNSFRM eG according to the design of Die Zusammenarbeiter. Recyclable materials, deconstructable and unmixed constructions and simple standards are used for the interior fittings. With the help of product and material passports, the elements used can be repurposed after disassembly. The process itself was accompanied by various workshops to explore sustainable construction methods and experimental approaches in prototyping.</span></p>
+<p class="Body"><span lang="EN-US">The former warehouse is split into two levels by the installation of a wooden gallery. Adapted to the high level of the windows, emergency exits and the predetermined grid of the columns, accessible multifunctional rooms and team spaces are placed above and below the gallery level. Public areas on the ground floor, such as the caf</span><span lang="FR">&eacute;</span><span lang="EN-US">, are also made accessible to local residents. Other spaces are reserved for Impact Hub Berlin members. In a nod to the history of the site, the industrial character of the existing building can still be felt. Without the hall losing any of its spaciousness, the central rooms allow for indirect zoning. Adapted to the different needs, there are different room styles suited to either noisy or quiet working environments. The open spaces encourage dialogue with others, but also feature spaces to retreat to for concentrated work. The result is a varied mix of team areas, open co-working, meeting rooms, lounge and a caf</span><span lang="FR">&eacute;&nbsp;</span><span lang="EN-US">with a terrace. Telephone boxes, meeting booths and seating niches are distributed throughout the</span><span lang="DA">&nbsp;levels</span><span lang="EN-US">, while studios, workshop rooms and labs can be found in the basement.&nbsp;</span></p>
+<p class="Body"><span lang="EN-US">The values of Impact Hub Berlin are incorporated into its design and are&nbsp;</span><span lang="FR">visible&nbsp;</span><span lang="EN-US">thanks to its transparency, openness and flexibility. The interplay of transparent, translucent and opaque walls characterises the design of interior spaces. Despite strong specifications such as the grid of the columns or the escape routes, the building&rsquo;s use is as flexible as&nbsp;</span><span lang="FR">possible&nbsp;</span><span lang="EN-US">in terms of the versatility of the size of the rooms. Based on the colour concept of Impact Hub Berlin's corporate design, the zoning is emphasised by specific</span><span lang="FR">&nbsp;colours&nbsp;</span><span lang="EN-US">which facilitate recognition and orientation. All rooms offer a friendly, bright atmosphere that put visitors at ease.&nbsp;</span></p>
+<p class="Body"><span lang="EN-US">The material concept of Impact Hub Berlin at CRCLR-House involves both &ldquo;using materials as they are found" and "upcycling". Around 70 percent of the materials and products used are recycled or sustainable. High-quality reused and new sustainable materials are used as they are. Damaged or uneven materials are treated to fit the design concept. The aesthetics of a circular building should deliberately dispel any prejudices around second-hand design or the notion of inferior materials. Despite the simplicity and the use of diverse materials, the design hinges on clarity</span><span lang="NL">, homogene</span><span lang="EN-US">ity and a high-quality aesthetic.&nbsp;</span></p>
+<p class="Body"><span lang="EN-US">Materials and products used in the design&nbsp;</span><span lang="IT">originate</span><span lang="EN-US">d from demolition sites, trade fairs, museums and company stockpiles. The sliding doors of the telephone boxes, for example, were taken from former Impact Hub Berlin. The black MDF comes from a Berlin&nbsp;</span><span lang="NL">club.&nbsp;</span><span lang="EN-US">Local carpentry workshops were regularly canvassed to recycle wood offcuts and leftover pieces. The wooden standing grid with its width of 62.5 cm makes it possible to use even small offcuts of wood. Much of the furniture from old Impact Hub Berlin was kept and complemented with a mix of vintage pieces or furniture rentals. Functional elements such as cables, sanitary installations, ventilation pipes and heaters were also second-hand. The use of a new materials, in the form of hemp walls for example, provides a healthy</span><span lang="NL">&nbsp;indoor climate a</span><span lang="EN-US">s well as sound insulation. Felt and straw panels also serve to boost the acoustics.&nbsp;</span></p>
+<p class="Body"><span lang="EN-US">&nbsp;</span>Impact Hub Berlin at CRCLR-House shows how preserving existing structures and using sustainable, renewable and recycled materials can positively shape tomorrow&rsquo;s buildings.</p>
+<p class="Body">&nbsp;</p>
+<h4>PUBLICATIONS</h4>
+<p><a href="../assets/uploads/projects-news/press/New%20Work%20in%20zirkul%C3%A4rer%20%C3%84sthetik%20Cradle%205%20CMA.pdf" target="_blank" rel="noopener">CRADLE Magazin 11/24</a><a href="https://www.md-mag.com/projekte/bueros-objektbauten/coworking-space-von-lxsy/" target="_blank" rel="noopener"><br /></a><a href="assets/uploads/projects-news/press/LXSY_FOGS-Magazin.pdf" target="_blank" rel="noopener">FOGS Green Style Magazin 11/24</a><a href="https://www.md-mag.com/projekte/bueros-objektbauten/coworking-space-von-lxsy/" target="_blank" rel="noopener"><br /></a><a href="assets/uploads/projects-news/press/architektur.aktuell.pdf" target="_blank" rel="noopener">architektur.aktuell 09/24</a><a href="https://www.md-mag.com/projekte/bueros-objektbauten/coworking-space-von-lxsy/" target="_blank" rel="noopener"><br /></a><a href="assets/uploads/projects-news/press/LXSY_architektur-Fachmagazin.pdf" target="_blank" rel="noopener">architektur FACHMAGAZIN 07/24</a><a href="https://www.md-mag.com/projekte/bueros-objektbauten/coworking-space-von-lxsy/" target="_blank" rel="noopener"><br /></a><a href="https://www.cube-magazin.de/artikel/nachhaltig-und-zirkulaer/" target="_blank" rel="noopener">CUBE Berlin 04/24</a><br /><a href="https://www.md-mag.com/projekte/bueros-objektbauten/coworking-space-von-lxsy/" target="_blank" rel="noopener">md mag 08/23</a><br /><a href="assets/uploads/projects-news/press/LXSY_IMPACT-HUB-BERLIN-at-CRCLR-HOUSE_0723_DETAIL.pdf" target="_blank" rel="noopener">DETAIL 07/2023</a><br /><a href="https://www.architonic.com/en/story/palmberg-circularity-that-inspires-the-palmberg-intelligence-series/20734710" target="_blank" rel="noopener">ARCHITONIC 07/23</a><br /><a href="../assets/uploads/projects-news/press/LXSY_Architekten_Arch+_OFM.pdf" target="_blank" rel="noopener">ARCH+ 06/23</a><br /><a href="https://www.polis-award.com/teilnehmer/impact-hub-berlin-at-crclr-house-cfb411a0/" target="_blank" rel="noopener">polis AWARD 04/23</a><br /><a href="assets/uploads/projects-news/press/LXSY_IMPACT-HUB-BERLIN-at-CRCLR-HOUSE_Jahrbuch-Architektur-Berlin_0323.pdf" target="_blank" rel="noopener">Building Berlin 03/23</a><br /><a href="assets/uploads/projects-news/press/LXSY_IMPACT-HUB-BERLIN-at-CRCLR-HOUSE_0323-Bauwelt.pdf" target="_blank" rel="noopener">Baunetz Praxis 03/23</a><br /><a href="https://www.baunetzwissen.de/treppen/objekte/buero-gewerbe/crclr-house-in-berlin-8098882?wt_mc=nlbw.Treppen.2023-01.Objekte-Buero%2FGewerbe.cid-8098882&amp;context=3201" target="_blank" rel="noopener">Baunetz Wissen 01/23</a><br /><a href="https://www.ad-magazin.de/artikel/zirkulares-bauen-lxsy-berlin" target="_blank" rel="noopener">AD 12/22</a><br /><a href="https://www.nbau.org/2022/12/08/transformation-bauen-das-crclr-haus-in-berlin/" target="_blank" rel="noopener">nbau 12/22</a><br /><a href="KARLSON 11/22" target="_blank" rel="noopener">KARLSON 11/22</a><br /><a href="baunetz id 11/22" target="_blank" rel="noopener">baunetz id 11/22</a><br /><a href="AD 11/22" target="_blank" rel="noopener">AD 11/22</a><br /><a href="assets/uploads/projects-news/press/Die-Architekt_5-2022.pdf" target="_blank" rel="noopener">Die Architekt 10/22</a><br /><a href="assets/uploads/projects-news/press/LXSY_AIT_10-22.pdf" target="_blank" rel="noopener">AIT 10/22</a><br /><a href="https://www.german-architects.com/de/architecture-news/bau-der-woche/in-kreislaufen-planen-und-bauen" target="_blank" rel="noopener">German-Architects 09/22</a><br /><a href="https://www.swiss-architects.com/de/architecture-news/meldungen/margit-sichrovsky-und-kim-le-roux-zirkulares-bauen-funktioniert-nicht-ohne-eine-zirkulare-wirtschaft-wir-brauchen-neue-geschaftsmodelle" target="_blank" rel="noopener">Swiss-Architects 08/22</a><br /><a href="https://www.swr.de/swr2/wissen/bauen-mit-recycling-material-das-haus-als-rohstofflager-swr2-wissen-2022-04-12-100.html?fbclid=IwAR0qMdlBV5WoOMEl-CiKEr2uFVgk-ZK8sANaxiZYWOvnOaSVmYgY62qFxJ4" target="_blank" rel="noopener">SWR2 04/22</a><br /><a href="assets/uploads/projects-news/press/ImpactHubBerlin-at-CRCLR-House_materialReport.pdf" target="_blank" rel="noopener">materialREPORT 02/22</a><br /><br /><br /></p>
+<p class="Body"><span lang="EN-US"><a href="https://www.polis-award.com/teilnehmer/impact-hub-berlin-at-crclr-house-cfb411a0/" target="_blank" rel="noopener"><img src="assets/pA23_&Ouml;kologischeWirklichkeit_ImpactHubBerlin.png" alt="" width="900" height="245" /></a>&nbsp;</span></p>
+<p class="Body"><span lang="EN-US"><img src="assets/uploads/projects-news/news/LXSY_DAM-Pr.png" alt="" width="1081" height="1080" />&nbsp;</span></p>
+<p class="Body"><span lang="EN-US">&nbsp;</span></p>
+<p class="Body"><span lang="EN-US">&nbsp;</span></p>
+</div></div>
+                
+                <div class="content-right">
+                    <div class="project-infos">
+                        <div class="information-wrapper"><span class="information-title">Topic</span><span class="information-content">Community and coworking space in circular design</span></div><br>
+                        <div class="information-wrapper"><span class="information-title">Category</span><span class="information-content">Realisation</span></div><br>
+                        <div class="information-wrapper"><span class="information-title">Year</span><span class="information-content">2022</span></div><br>
+                        
+                        <div class="information-wrapper"><span class="information-title">Location</span><span class="information-content">DE – Berlin Neukölln</span></div><br>
+                        
+                        <div class="information-wrapper"><span class="information-title">BGF</span><span class="information-content">1.780 sq m</span></div><br>
+                        <div class="information-wrapper"><span class="information-title">Awards</span><span class="information-content">polis AWARD, DAM PREIS 2024 nominee, FRAME AWARD 2023, Heinze Award 223 nominee, bundespreis ecodesign 2025 nominee</span></div><br>
+                        
+                        <div class="information-wrapper"><span class="information-title">Client</span><span class="information-content">
+                            <a class="information-link" target="_blank" href="https://berlin.impacthub.net/de/">
+                                Impact Hub Berlin GmbH
+                             </a>
+                        </span></div><br>
+                        
+                        <div class="information-wrapper"><span class="information-title">Workshop</span><span class="information-content">Sustainable Building Workshop</span></div><br>
+                        
+                        <div class="information-wrapper"><span class="information-title">Team</span><span class="information-content">Kim Le Roux, Margit Sichrovsky, Lina Aakeroy, Rasa Weber, Sophia Wenzler</span></div><br>
+                        
+                        <div class="information-wrapper"><span class="information-title">Partner</span><span class="information-content">
+                            <a class="information-link" target="_blank" href="https://www.trnsfrm.org">
+                                TRNSFRM eG
+                            </a>
+                            
+                                
+                            
+                            
+                                
+                            
+                        </span></div><br>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <div class="information-wrapper"><span class="information-title">Photos</span><span class="information-content">
+                            <a class="information-link" target="_blank" href="https://studiobowie.de/de/">
+                                Studio Bowie
+                            </a>
+                        </span></div><br>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+    <div class="container">
+    <div class="row">
+        <div class="col-3">
+            Lützowstr. 102-104<br>
+            Hof 3 | Aufgang E<br>
+            10785 Berlin
+        </div>
+        <div class="col-3">
+            <a href="https://www.facebook.com/LXSY.Architektur/" target="_blank">FACEBOOK</a><br>
+            <a href="https://www.instagram.com/lxsy.architektur/" target="_blank">INSTAGRAM</a><br>
+            <a href="https://www.linkedin.com/company/lxsy-architektur" target="_blank">LINKEDIN</a><br>
+        </div>
+        <div class="col-3">
+            <a href="tel:+4930235995500">+49 30 2359955-00</a><br>
+            <a href="mailto:info@lxsy.de">info@lxsy.de</a><br>
+            <a href="http://www.lxsy.de">www.lxsy.de</a>
+        </div>
+        <div class="col-3">
+            <a href="https://lxsy.de/impressum">IMPRESSUM</a><br>
+            All Rights Reserved<br>
+            LXSY © 2026
+        </div>
+      </div>
+      </div>
+</footer>
+    </div>
+</main>
+
+    <script>
+        // Hamburger Button Animation
+        var menuButton = document.getElementById('menuButton');
+        menuButton.addEventListener('click', function (e) {
+            menuButton.classList.toggle('is-active');
+        });
+        
+        // Open Navigation on click change button function
+        function openNav() {
+            document.getElementById("sideNavigation").style.right = "0px";
+            document.getElementsByTagName('body')[0].classList.add("menu-open");
+            document.getElementById( "menuButtonLink" ).setAttribute( "href", "javascript:closeNav();" );
+        }
+         
+        // Close Navigation on click change button function
+        function closeNav() {
+            document.getElementById("sideNavigation").style.right = "-500px";
+            document.getElementById( "menuButtonLink" ).setAttribute( "href", "javascript:openNav();" );
+        }
+    </script>
+    
+    <!-- Initialize Flickity -->
+    <script>
+        $( document ).ready(function() {
+            $('.project-slider').imagesLoaded( function() {
+              $('.project-slider').flickity({
+                  // options
+                  wrapAround: true,
+                  dragThreshold: 50,
+                  imagesLoaded: true,
+                  autoPlay: 4000,
+                  pageDots: false,
+                  contain: true,
+                  arrowShape: { 
+                    x0: 10,
+                    x1: 45, y1: 20,
+                    x2: 100, y2: 50,
+                    x3: 100
+                  }
+                });
+            });
+            
+            
+            $('.hero-slider').flickity({
+              // options
+              wrapAround: true,
+              imagesLoaded: true,
+              pageDots: false,
+              prevNextButtons: false,
+              autoPlay: 4000,
+              pauseAutoPlayOnHover: false
+
+            });
+            $('.hero-slider').on( 'change.flickity', function( event, index ) {
+              $('.letters').each(function(){
+                var classes = ['letters state-1','letters state-2','letters state-3'];
+                this.className = classes[($.inArray(this.className, classes)+1)%classes.length];
+              });
+            });
+        });
+        
+    </script>
+    
+    <style>
+        .project-slide {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .project-slide img {
+            max-height: 700px;
+        }
+    </style>
+</body>
+</html>
