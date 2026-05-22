@@ -1,0 +1,2060 @@
+{
+  "id": "C2_regelkette",
+  "title": "C2 · Nachweis-Kette: Bauteil → Frage → Nachweis → Regelwerk → Land",
+  "caption": "Semantische Kette für einen wiederverwendeten Stahlträger (K.118, Schweiz); Regelwerke zur Lesbarkeit nach Rechtsdomäne aggregiert. Genau die Verknüpfung von Metadaten und Nachweisanforderungen, nach der Forschungsfrage 6.1 fragt.",
+  "stats": {
+    "regulierungsfragen": 2,
+    "nachweisforderungen": 16,
+    "rechtsdomaenen": 10
+  },
+  "graph": {
+    "directed": true,
+    "nodes": [
+      {
+        "id": "BG",
+        "group": "Bauteilgruppe",
+        "label": "Stahlträger und Stützen…",
+        "color": "#72B7B2",
+        "size": 1500,
+        "tier": 0
+      },
+      {
+        "id": "RF::BauproduktstatusFrage",
+        "group": "Regulierungsfrage",
+        "label": "BauproduktstatusFrage",
+        "color": "#F58518",
+        "size": 760,
+        "tier": 1
+      },
+      {
+        "id": "NF::Bauteilidentifikation",
+        "group": "Nachweisforderung",
+        "label": "Bauteilidentifikation",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "DM::ReuseDokumentationsrecht",
+        "group": "Regelwerk",
+        "label": "ReuseDokumentationsrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "DM::Schadstoffrecht",
+        "group": "Regelwerk",
+        "label": "Schadstoffrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "DM::RueckbauUndAbbruchrecht",
+        "group": "Regelwerk",
+        "label": "RueckbauUndAbbruchrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "NF::HerkunftsUndRueckbaudokumentation",
+        "group": "Nachweisforderung",
+        "label": "HerkunftsUndRueckbaud…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "DM::Haftungsrecht",
+        "group": "Regelwerk",
+        "label": "Haftungsrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "NF::Standsicherheitsnachweis",
+        "group": "Nachweisforderung",
+        "label": "Standsicherheitsnachw…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "DM::Bauproduktrecht",
+        "group": "Regelwerk",
+        "label": "Bauproduktrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "DM::Tragwerksrecht",
+        "group": "Regelwerk",
+        "label": "Tragwerksrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "LD::Schweiz",
+        "group": "Land",
+        "label": "Schweiz",
+        "color": "#54A24B",
+        "size": 820,
+        "tier": 4
+      },
+      {
+        "id": "NF::Materialpruefung",
+        "group": "Nachweisforderung",
+        "label": "Materialpruefung",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::Brandschutznachweis",
+        "group": "Nachweisforderung",
+        "label": "Brandschutznachweis",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "DM::Bauphysikrecht",
+        "group": "Regelwerk",
+        "label": "Bauphysikrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "DM::Brandschutzrecht",
+        "group": "Regelwerk",
+        "label": "Brandschutzrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "NF::ProduktstatusUndLeistungserklaerung",
+        "group": "Nachweisforderung",
+        "label": "ProduktstatusUndLeist…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::GenehmigungsOderZustimmungsbedarf",
+        "group": "Nachweisforderung",
+        "label": "GenehmigungsOderZusti…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::Befestigungsnachweis",
+        "group": "Nachweisforderung",
+        "label": "Befestigungsnachweis",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::SicherheitsglasInfo",
+        "group": "Nachweisforderung",
+        "label": "SicherheitsglasInfo",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::U_WertOderEnergieInfo",
+        "group": "Nachweisforderung",
+        "label": "U_WertOderEnergieInfo",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::DauerhaftigkeitRestlebensdauer",
+        "group": "Nachweisforderung",
+        "label": "DauerhaftigkeitRestle…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::OekobilanzEPD",
+        "group": "Nachweisforderung",
+        "label": "OekobilanzEPD",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "DM::UmweltUndOekobilanzrecht",
+        "group": "Regelwerk",
+        "label": "UmweltUndOekobilanzrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      },
+      {
+        "id": "NF::MaterialpassRessourcenpass",
+        "group": "Nachweisforderung",
+        "label": "MaterialpassRessource…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "RF::TragwerkssicherheitFrage",
+        "group": "Regulierungsfrage",
+        "label": "TragwerkssicherheitFr…",
+        "color": "#F58518",
+        "size": 760,
+        "tier": 1
+      },
+      {
+        "id": "NF::ZustandsUndMassaufnahme",
+        "group": "Nachweisforderung",
+        "label": "ZustandsUndMassaufnah…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::RcGesteinskoernungEignung",
+        "group": "Nachweisforderung",
+        "label": "RcGesteinskoernungEig…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "NF::AbsturzsicherungNachweis",
+        "group": "Nachweisforderung",
+        "label": "AbsturzsicherungNachw…",
+        "color": "#E45756",
+        "size": 640,
+        "tier": 2
+      },
+      {
+        "id": "DM::Genehmigungsrecht",
+        "group": "Regelwerk",
+        "label": "Genehmigungsrecht",
+        "color": "#72B7B2",
+        "size": 620,
+        "tier": 3
+      }
+    ],
+    "edges": [
+      {
+        "source": "BG",
+        "target": "RF::BauproduktstatusFrage",
+        "rel": "TRIGGERS"
+      },
+      {
+        "source": "BG",
+        "target": "RF::TragwerkssicherheitFrage",
+        "rel": "TRIGGERS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::Bauteilidentifikation",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::HerkunftsUndRueckbaudokumentation",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::Standsicherheitsnachweis",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::Materialpruefung",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::Brandschutznachweis",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::ProduktstatusUndLeistungserklaerung",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::GenehmigungsOderZustimmungsbedarf",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::Befestigungsnachweis",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::SicherheitsglasInfo",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::U_WertOderEnergieInfo",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::DauerhaftigkeitRestlebensdauer",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::OekobilanzEPD",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::BauproduktstatusFrage",
+        "target": "NF::MaterialpassRessourcenpass",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "NF::Bauteilidentifikation",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Bauteilidentifikation",
+        "target": "DM::Schadstoffrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Bauteilidentifikation",
+        "target": "DM::RueckbauUndAbbruchrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::HerkunftsUndRueckbaudokumentation",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::HerkunftsUndRueckbaudokumentation",
+        "target": "DM::Schadstoffrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::HerkunftsUndRueckbaudokumentation",
+        "target": "DM::RueckbauUndAbbruchrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::HerkunftsUndRueckbaudokumentation",
+        "target": "DM::Haftungsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Standsicherheitsnachweis",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Standsicherheitsnachweis",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Standsicherheitsnachweis",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "DM::Tragwerksrecht",
+        "target": "LD::Schweiz",
+        "rel": "GILT_IN_LAND"
+      },
+      {
+        "source": "NF::Materialpruefung",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Materialpruefung",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Materialpruefung",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Brandschutznachweis",
+        "target": "DM::Bauphysikrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Brandschutznachweis",
+        "target": "DM::Brandschutzrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Brandschutznachweis",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Brandschutznachweis",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "DM::Bauphysikrecht",
+        "target": "LD::Schweiz",
+        "rel": "GILT_IN_LAND"
+      },
+      {
+        "source": "DM::Brandschutzrecht",
+        "target": "LD::Schweiz",
+        "rel": "GILT_IN_LAND"
+      },
+      {
+        "source": "NF::ProduktstatusUndLeistungserklaerung",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::ProduktstatusUndLeistungserklaerung",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::ProduktstatusUndLeistungserklaerung",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::ProduktstatusUndLeistungserklaerung",
+        "target": "DM::RueckbauUndAbbruchrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::ProduktstatusUndLeistungserklaerung",
+        "target": "DM::Haftungsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::GenehmigungsOderZustimmungsbedarf",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::GenehmigungsOderZustimmungsbedarf",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::GenehmigungsOderZustimmungsbedarf",
+        "target": "DM::Bauphysikrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::GenehmigungsOderZustimmungsbedarf",
+        "target": "DM::RueckbauUndAbbruchrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Befestigungsnachweis",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::Befestigungsnachweis",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::SicherheitsglasInfo",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::SicherheitsglasInfo",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::U_WertOderEnergieInfo",
+        "target": "DM::Bauphysikrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::U_WertOderEnergieInfo",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::DauerhaftigkeitRestlebensdauer",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::DauerhaftigkeitRestlebensdauer",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::DauerhaftigkeitRestlebensdauer",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::OekobilanzEPD",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::OekobilanzEPD",
+        "target": "DM::UmweltUndOekobilanzrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::OekobilanzEPD",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::OekobilanzEPD",
+        "target": "DM::Bauphysikrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "DM::UmweltUndOekobilanzrecht",
+        "target": "LD::Schweiz",
+        "rel": "GILT_IN_LAND"
+      },
+      {
+        "source": "NF::MaterialpassRessourcenpass",
+        "target": "DM::Bauproduktrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::MaterialpassRessourcenpass",
+        "target": "DM::UmweltUndOekobilanzrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::MaterialpassRessourcenpass",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::ZustandsUndMassaufnahme",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::Standsicherheitsnachweis",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::Materialpruefung",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::Brandschutznachweis",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::ProduktstatusUndLeistungserklaerung",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::Befestigungsnachweis",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::SicherheitsglasInfo",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::DauerhaftigkeitRestlebensdauer",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::RcGesteinskoernungEignung",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "RF::TragwerkssicherheitFrage",
+        "target": "NF::AbsturzsicherungNachweis",
+        "rel": "ERFORDERT_NACHWEIS"
+      },
+      {
+        "source": "NF::ZustandsUndMassaufnahme",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::ZustandsUndMassaufnahme",
+        "target": "DM::ReuseDokumentationsrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::RcGesteinskoernungEignung",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::AbsturzsicherungNachweis",
+        "target": "DM::Tragwerksrecht",
+        "rel": "GESTUETZT_AUF"
+      },
+      {
+        "source": "NF::AbsturzsicherungNachweis",
+        "target": "DM::Genehmigungsrecht",
+        "rel": "GESTUETZT_AUF"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Bauteilidentifikation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Bauteilidentifikation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Bauteilidentifikation",
+      "law_domain": "Schadstoffrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Bauteilidentifikation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Bauteilidentifikation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Bauteilidentifikation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Bauteilidentifikation",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "Schadstoffrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "Schadstoffrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "Haftungsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "HerkunftsUndRueckbaudokumentation",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Brandschutzrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Brandschutzrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Haftungsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "GenehmigungsOderZustimmungsbedarf",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "GenehmigungsOderZustimmungsbedarf",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "GenehmigungsOderZustimmungsbedarf",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "GenehmigungsOderZustimmungsbedarf",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "GenehmigungsOderZustimmungsbedarf",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "GenehmigungsOderZustimmungsbedarf",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "SicherheitsglasInfo",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "SicherheitsglasInfo",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauphysikrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "U_WertOderEnergieInfo",
+      "law_domain": "Bauphysikrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "UmweltUndOekobilanzrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "UmweltUndOekobilanzrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "UmweltUndOekobilanzrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "UmweltUndOekobilanzrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "OekobilanzEPD",
+      "law_domain": "UmweltUndOekobilanzrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "MaterialpassRessourcenpass",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "MaterialpassRessourcenpass",
+      "law_domain": "UmweltUndOekobilanzrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "MaterialpassRessourcenpass",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "BauproduktstatusFrage",
+      "nf": "MaterialpassRessourcenpass",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ZustandsUndMassaufnahme",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ZustandsUndMassaufnahme",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ZustandsUndMassaufnahme",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ZustandsUndMassaufnahme",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ZustandsUndMassaufnahme",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ZustandsUndMassaufnahme",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ZustandsUndMassaufnahme",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Standsicherheitsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Materialpruefung",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Brandschutzrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Bauphysikrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Brandschutznachweis",
+      "law_domain": "Brandschutzrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "RueckbauUndAbbruchrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Haftungsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "ProduktstatusUndLeistungserklaerung",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "Befestigungsnachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "SicherheitsglasInfo",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "SicherheitsglasInfo",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "Bauproduktrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "ReuseDokumentationsrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "DauerhaftigkeitRestlebensdauer",
+      "law_domain": "Tragwerksrecht",
+      "land": "Schweiz"
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "RcGesteinskoernungEignung",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "AbsturzsicherungNachweis",
+      "law_domain": "Tragwerksrecht",
+      "land": null
+    },
+    {
+      "bg_name": "Stahlträger und Stützen…",
+      "rf": "TragwerkssicherheitFrage",
+      "nf": "AbsturzsicherungNachweis",
+      "law_domain": "Genehmigungsrecht",
+      "land": null
+    }
+  ]
+}

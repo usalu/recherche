@@ -124,7 +124,7 @@ sample REQUIRES_VERIFICATION_FOR (project-level rollup):
 
 ### Inputs
 
-- Source: `_neo4j/intake/inbox/research/circular_construction_reuse_graph_gaps.md`, "Top 20 graph gaps" table.
+- Source: `_knowledge/themes/circular_construction_reuse_graph_gaps.md`, "Top 20 graph gaps" table.
 - 19 pre-existing `:Land` nodes (none with `country_iso`), 26 `:Material` nodes, 34 `:Norm` nodes.
 
 ### Outputs

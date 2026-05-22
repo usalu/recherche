@@ -1,0 +1,898 @@
+### DataIssue  (nodes=28729, props=21)
+  id                                 cov= 100.0%  keep_minimum                 str:28729            | di_no_match__6976182475424798415 || di_no_match__69784342752
+  kind                               cov= 100.0%  drop_or_archive_meta_node    str:28729            | citation_no_text_match || excessive_sources_on_node || node_
+  severity                           cov= 100.0%  drop_or_archive_meta_node    str:28729            | low || medium || high
+  status                             cov= 96.83%  drop_or_archive_meta_node    str:27818            | open || review_required
+  description                        cov= 79.52%  drop_or_archive_meta_node    str:22846            | Legacy :ZITIERT_QUELLE did not terminate in a URL and was re
+  review_status                      cov= 79.52%  review_domain_property       str:22846            | retired_topology_artifact || needs_source_url_review
+  source_scope                       cov= 79.52%  move_to_provenance_model     str:22846            | source_trace_review
+  rel_type                           cov=  76.6%  drop_or_archive_meta_node    str:22006            | NUTZT_BAUWERK || HAT_STATUS || HAT_NUTZUNG || HAT_WIEDERVERW
+  end_id                             cov= 72.27%  drop_or_archive_meta_node    str:20762            | q_schaerenmoosstrasse_zuerich_projekt_menage_a_trois_md || q
+  start_id                           cov= 72.27%  drop_or_archive_meta_node    str:20762            | q_batch_1_md || p_55_great_suffolk_street_london || bw_55_gr
+  rel_element_id                     cov= 72.26%  drop_or_archive_meta_node    str:20759            | 5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152984176769630215 |
+  evidence_origin                    cov= 72.01%  move_to_provenance_model     str:20687            | topology_synthesized || source_curated || inferred || regist
+  evidence_source_id                 cov= 71.78%  review_relationship_duplicate str:20621            | mig_4_1 || batch2_v2_phase27_2026-05-20 || r2_b_journal_edge
+  ref_id                             cov= 24.13%  review_relationship_duplicate str:6932             | 6976182475424798415 || 6978434275238483663 || 69806860750521
+  evidence_excerpt_preview           cov=   9.9%  move_to_provenance_model     str:2843             | Entität: People | Wert: Lendager | Beziehung zur Fallstudie:
+  message                            cov=  3.17%  drop_or_archive_meta_node    str:911              | No source URLs found via citation graph for Marktmodell node
+  subject_id                         cov=  3.17%  drop_or_archive_meta_node    str:911              | mm_kauf_neu || mm_kauf_gebraucht || mm_spende || mm_leasing
+  subject_label                      cov=  3.17%  drop_or_archive_meta_node    str:911              | Marktmodell || Schadstoff || BauwerkEra || Bauproduktstatus
+  url                                cov=  2.17%  move_to_provenance_model     str:622              | https://51n4e.com/projects/recypar || https://alb || https:/
+  invalid_source_url                 cov=  0.25%  move_to_provenance_model     str:72               | https://alb || https://arc || https://b || https://bimtec
+  legacy_rel_element_id              cov=  0.01%  review_relationship_duplicate str:3                | 5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153029256746370294 |
+
+### Quelle  (nodes=5330, props=50)
+  id                                 cov= 100.0%  keep_minimum                 str:5330             | q_url_4355c6af7f5e034ee6866841bf19ea11 || q_url_d7a72171312d
+  quelltyp                           cov= 100.0%  keep_minimum                 str:5330             | external_link || research_markdown || external_reference || 
+  url                                cov= 94.26%  keep_minimum                 str:5024             | https://maryon.ch/v2/wp-content/uploads/2023.Juni_ARCH_EN.pd
+  url_origin                         cov= 94.13%  move_to_provenance_model     str:5017             | research_md_link || pre_existing_quelle || dossier_md_link |
+  title                              cov= 70.77%  keep_minimum                 str:3772             | ReCreate || STRUCTUREmag || ICLEI circular procurement case 
+  evidence_basis                     cov=  67.0%  move_to_provenance_model     str:3571             | markdown_link_extraction || bare_url_extraction || pre_exist
+  evidence_confidence                cov=  67.0%  move_to_provenance_model     str:3571             | belegt
+  evidence_origin                    cov=  67.0%  move_to_provenance_model     str:3571             | source_curated
+  evidence_source_id                 cov=  67.0%  review_relationship_duplicate str:3571             | q_research_reuse_knowledge_graph_coverage_audit_md || q_rese
+  url_final_url                      cov= 49.36%  move_to_provenance_model     str:2631             | https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873 |
+  url_redirect_chain                 cov= 49.36%  move_to_provenance_model     list[]:1827; list[str]:804 | [] || ["https://munin.uit.no/bitstream/handle/10037/23335/th
+  url_status                         cov= 49.36%  move_to_provenance_model     str:2631             | dns_failure || reachable_2xx || dead_4xx || blocked_by_robot
+  url_user_agent                     cov= 49.36%  move_to_provenance_model     str:2631             | mit-bestand-source-prober/1.0 (research-graph; contact: kina
+  url_wayback_attempted              cov= 49.36%  move_to_provenance_model     bool:2631            | true || false
+  url_http_code                      cov= 43.15%  move_to_provenance_model     int:2300             | 200 || 403 || 404 || 525
+  url_content_type                   cov= 42.95%  move_to_provenance_model     str:2289             | text/html || application/pdf || text/plain
+  url_server_header                  cov= 37.71%  move_to_provenance_model     str:2010             | CloudFront || nginx || AmazonS3 || cloudflare
+  url_content_length_bytes           cov= 37.35%  move_to_provenance_model     int:1991             | 139176 || 13482991 || 3063 || 85395
+  source_resolution_status           cov= 35.91%  move_to_provenance_model     str:1914             | single_url_from_legacy_zitiert_quelle || needs_source_url_re
+  source_url_node_ids                cov= 34.47%  review_relationship_duplicate list[str]:1837       | ["q_url_c8790eca26733521"] || ["q_url_5de14127acc58b64"] || 
+  name                               cov=  33.0%  keep_minimum                 str:1759             | NMBU thesis: Muligheter med ombruk av prefabrikkerte betonge
+  source_url                         cov= 29.47%  move_to_provenance_model     str:1571             | https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873 |
+  primary_source_url                 cov= 27.69%  move_to_provenance_model     str:1476             | https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873 |
+  source_count                       cov= 27.69%  move_to_provenance_model     int:1476             | 1 || 4 || 5 || 6
+  source_urls                        cov= 27.69%  move_to_provenance_model     list[str]:1476       | ["https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873
+  source_scope                       cov= 21.16%  move_to_provenance_model     str:1128             | mig_2_7_external_sources || source_trace_review || external_
+  source_file                        cov= 11.73%  keep_minimum                 str:625              | _neo4j\intake\inbox\research\aufbereitungsverfahren_reused_b
+  strict_source_url_cleanup          cov=  4.95%  move_to_provenance_model     str:264              | mig_strict_source_url_binding_cleanup_2026_05_23
+  review_status                      cov=  4.39%  review_sparse                str:234              | needs_source_url_review
+  url_wayback_snapshot               cov=  4.11%  move_to_provenance_model     str:219              | http://web.archive.org/web/20250908224821/https://nmbu.brage
+  url_wayback_timestamp              cov=  4.11%  move_to_provenance_model     str:219              | 20250908224821 || 20260216000506 || 20240704094810 || 202402
+  strict_invalid_url_cleanup         cov=  1.88%  move_to_provenance_model     str:100              | mig_strict_invalid_url_cleanup_2026_05_23
+  text_content_chars_pre_strip       cov=  1.82%  review_sparse                int:97               | 103604 || 19777 || 10491 || 44381
+  invalid_candidate_source_urls      cov=  1.48%  move_to_provenance_model     list[str]:79         | [""] || ["https://t"] || ["https://olympiap"] || ["https://p
+  strict_candidate_url_array_cleanup cov=  0.75%  move_to_provenance_model     str:40               | mig_strict_candidate_url_array_cleanup_2026_05_23
+  strict_node_url_array_cleanup      cov=  0.73%  move_to_provenance_model     str:39               | mig_strict_node_url_array_cleanup_2026_05_23
+  invalid_source_url                 cov=   0.6%  move_to_provenance_model     str:32               | https://t || https://olympiap || https://projecta || https:/
+  access_date                        cov=  0.28%  review_sparse                str:15               | 2026-05-19
+  aliases                            cov=  0.28%  review_keep_if_used          list[str]:15         | ["qu_batch1_schaerenmoosstrasse_dossier"] || ["qu_batch1_uma
+  text_content_retry_result          cov=  0.09%  review_sparse                str:5                | resolved
+  demoted_legal_condition_ids        cov=  0.02%  review_relationship_duplicate list[str]:1          | ["rb_bauordnungsrecht","rb_bauproduktenverordnung_cpr","rb_b
+  demoted_legal_condition_records    cov=  0.02%  review_sparse                list[str]:1          | ["{\"id\":\"rb_bauordnungsrecht\",\"name\":\"rb_bauordnungsr
+  legal_condition_demoted_by         cov=  0.02%  review_sparse                str:1                | mig_repair_2_5_rechtliche_bedingung_demote
+  legal_condition_evidence_basis     cov=  0.02%  move_to_provenance_model     list[str]:1          | ["research_file_row"]
+  legal_condition_evidence_confidence cov=  0.02%  move_to_provenance_model     list[str]:1          | ["inferiert"]
+  legal_condition_evidence_origin    cov=  0.02%  move_to_provenance_model     list[str]:1          | ["inferred"]
+  legal_condition_evidence_source_ids cov=  0.02%  review_relationship_duplicate list[str]:1          | ["q_bauteilreuse_legal_regime_matrix_md"]
+  legal_condition_ids                cov=  0.02%  review_relationship_duplicate list[str]:1          | ["rb_bauordnungsrecht","rb_bauproduktenverordnung_cpr","rb_b
+  legal_condition_source_edge_ids    cov=  0.02%  review_relationship_duplicate list[str]:1          | ["r_rb_bauordnungsrecht__BELEGT_IN__q_bauteilreuse_legal_reg
+  legal_conditions                   cov=  0.02%  review_sparse                list[str]:1          | ["rb_bauordnungsrecht","rb_bauproduktenverordnung_cpr","rb_b
+
+### ExternalLink  (nodes=5017, props=34)
+  id                                 cov= 100.0%  keep_minimum                 str:5017             | q_url_4355c6af7f5e034ee6866841bf19ea11 || q_url_d7a72171312d
+  quelltyp                           cov= 100.0%  keep_minimum                 str:5017             | external_link || external_reference || external_link_from_ac
+  url                                cov= 100.0%  keep_minimum                 str:5017             | https://maryon.ch/v2/wp-content/uploads/2023.Juni_ARCH_EN.pd
+  url_origin                         cov= 100.0%  move_to_provenance_model     str:5017             | research_md_link || pre_existing_quelle || dossier_md_link |
+  title                              cov= 75.02%  keep_minimum                 str:3764             | ReCreate || STRUCTUREmag || ICLEI circular procurement case 
+  evidence_basis                     cov= 71.18%  move_to_provenance_model     str:3571             | markdown_link_extraction || bare_url_extraction || pre_exist
+  evidence_confidence                cov= 71.18%  move_to_provenance_model     str:3571             | belegt
+  evidence_origin                    cov= 71.18%  move_to_provenance_model     str:3571             | source_curated
+  evidence_source_id                 cov= 71.18%  review_relationship_duplicate str:3571             | q_research_reuse_knowledge_graph_coverage_audit_md || q_rese
+  url_final_url                      cov= 52.44%  move_to_provenance_model     str:2631             | https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873 |
+  url_redirect_chain                 cov= 52.44%  move_to_provenance_model     list[]:1827; list[str]:804 | [] || ["https://munin.uit.no/bitstream/handle/10037/23335/th
+  url_status                         cov= 52.44%  move_to_provenance_model     str:2631             | dns_failure || reachable_2xx || dead_4xx || blocked_by_robot
+  url_user_agent                     cov= 52.44%  move_to_provenance_model     str:2631             | mit-bestand-source-prober/1.0 (research-graph; contact: kina
+  url_wayback_attempted              cov= 52.44%  move_to_provenance_model     bool:2631            | true || false
+  url_http_code                      cov= 45.84%  move_to_provenance_model     int:2300             | 200 || 403 || 404 || 525
+  url_content_type                   cov= 45.62%  move_to_provenance_model     str:2289             | text/html || application/pdf || text/plain
+  url_server_header                  cov= 40.06%  move_to_provenance_model     str:2010             | CloudFront || nginx || AmazonS3 || cloudflare
+  url_content_length_bytes           cov= 39.69%  move_to_provenance_model     int:1991             | 139176 || 13482991 || 3063 || 85395
+  source_resolution_status           cov= 31.91%  move_to_provenance_model     str:1601             | single_url_from_legacy_zitiert_quelle || trusted_incident_re
+  source_url_node_ids                cov= 31.91%  review_relationship_duplicate list[str]:1601       | ["q_url_c8790eca26733521"] || ["q_url_5de14127acc58b64"] || 
+  source_url                         cov= 31.27%  move_to_provenance_model     str:1569             | https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873 |
+  name                               cov= 28.82%  keep_minimum                 str:1446             | NMBU thesis: Muligheter med ombruk av prefabrikkerte betonge
+  primary_source_url                 cov= 28.02%  move_to_provenance_model     str:1406             | https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873 |
+  source_count                       cov= 28.02%  move_to_provenance_model     int:1406             | 1
+  source_urls                        cov= 28.02%  move_to_provenance_model     list[str]:1406       | ["https://nmbu.brage.unit.no/nmbu-xmlui/handle/11250/3079873
+  source_scope                       cov= 16.42%  move_to_provenance_model     str:824              | mig_2_7_external_sources || research_file_url || external_re
+  source_file                        cov=  6.36%  keep_minimum                 str:319              | akteursliste_master.md
+  url_wayback_snapshot               cov=  4.37%  move_to_provenance_model     str:219              | http://web.archive.org/web/20250908224821/https://nmbu.brage
+  url_wayback_timestamp              cov=  4.37%  move_to_provenance_model     str:219              | 20250908224821 || 20260216000506 || 20240704094810 || 202402
+  invalid_candidate_source_urls      cov=  0.64%  move_to_provenance_model     list[str]:32         | ["https://t"] || ["https://olympiap"] || ["https://projecta"
+  invalid_source_url                 cov=  0.64%  move_to_provenance_model     str:32               | https://t || https://olympiap || https://projecta || https:/
+  strict_node_url_array_cleanup      cov=  0.64%  move_to_provenance_model     str:32               | mig_strict_node_url_array_cleanup_2026_05_23
+  strict_invalid_url_cleanup         cov=   0.6%  move_to_provenance_model     str:30               | mig_strict_invalid_url_cleanup_2026_05_23
+  strict_source_url_cleanup          cov=   0.6%  move_to_provenance_model     str:30               | mig_strict_source_url_binding_cleanup_2026_05_23
+
+### DossierEntityTarget  (nodes=2591, props=12)
+  created_at_utc                     cov= 100.0%  review_domain_property       str:2591             | 2026-05-22T15:56:47.248320+00:00 || 2026-05-22T15:56:47.5119
+  entity_type                        cov= 100.0%  review_domain_property       str:2591             | bauteil || prozessphase || thema || kennwert
+  entity_value                       cov= 100.0%  review_domain_property       str:2591             | Bestandslagerhaus || Fassadenbekleidung externer Kern || Sch
+  entity_value_norm                  cov= 100.0%  review_domain_property       str:2591             | bestandslagerhaus || fassadenbekleidung externer kern || sch
+  exact_match_candidate_ids          cov= 100.0%  review_relationship_duplicate list[]:2282; list[str]:309 | [] || ["la_brandschutz"] || ["bg_reuse_mehrere_decke_platten
+  id                                 cov= 100.0%  keep_minimum                 str:2591             | det_83190834155e588a7987dec0 || det_cc2a84349ab1701eb19f00a6
+  name                               cov= 100.0%  keep_minimum                 str:2591             | Bestandslagerhaus || Fassadenbekleidung externer Kern || Sch
+  review_status                      cov= 100.0%  review_domain_property       str:2591             | unresolved_no_exact_match || exact_unique_candidate || exact
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:2591             | dossier_entity_target
+  unfolding_kind                     cov= 100.0%  review_domain_property       str:2591             | dossier_row
+  exact_match_label                  cov= 11.81%  review_domain_property       str:306              | Leistungsanforderung || Bauteilgruppe || Prozessphase || Pro
+  exact_match_node_id                cov= 11.81%  review_relationship_duplicate str:306              | la_brandschutz || bg_reuse_mehrere_decke_plattenvereinigung_
+
+### Akteur  (nodes=669, props=25)
+  id                                 cov= 100.0%  keep_minimum                 str:669              | cbre || werner_sobek_p || gardiner_and_theobald || cantillon
+  name                               cov= 100.0%  keep_minimum                 str:669              | CBRE || Werner Sobek || Gardiner & Theobald || Cantillon
+  source_scope                       cov= 100.0%  move_to_provenance_model     list[str]:5; str:664 | actor_registry || bauteilboerse_legacy_review || ["actor_reg
+  source_freshness_summary           cov= 95.37%  move_to_provenance_model     str:638              | {"n_reachable": 5, "n_reachable_via_3xx": 0, "n_dead": 1, "n
+  source_quality_summary             cov= 95.37%  move_to_provenance_model     str:638              | {"n_verbatim": 0, "n_paraphrase": 0, "n_no_match": 0, "n_dea
+  source_resolution_status           cov= 95.37%  move_to_provenance_model     str:638              | needs_source_url_review || trusted_incident_relationship_sou
+  strict_source_url_cleanup          cov= 82.66%  move_to_provenance_model     str:553              | mig_strict_source_url_binding_cleanup_2026_05_23
+  review_status                      cov= 79.97%  review_domain_property       str:535              | needs_source_url_review || reviewed_legacy_profile_needs_url
+  source_trust_score                 cov= 75.78%  move_to_provenance_model     float:507            | 0.0 || 0.0054 || 0.0125 || 0.0185
+  invalid_candidate_source_urls      cov= 32.29%  move_to_provenance_model     list[str]:216        | ["","https://t"] || ["https://projecta","https://pr"] || [""
+  strict_candidate_url_array_cleanup cov= 32.29%  move_to_provenance_model     str:216              | mig_strict_candidate_url_array_cleanup_2026_05_23
+  primary_source_url                 cov= 20.03%  move_to_provenance_model     str:134              | https://labs.aap.cornell.edu/ccl/umar-unit || https://www.hf
+  source_count                       cov= 20.03%  move_to_provenance_model     int:134              | 1 || 3 || 4 || 5
+  source_urls                        cov= 20.03%  move_to_provenance_model     list[str]:134        | ["https://labs.aap.cornell.edu/ccl/umar-unit"] || ["https://
+  strict_invalid_url_cleanup         cov= 20.03%  move_to_provenance_model     str:134              | mig_strict_invalid_url_cleanup_2026_05_23
+  source_url_node_ids                cov= 18.24%  review_relationship_duplicate list[str]:122        | ["q_url_5368eaa41895c58f"] || ["q_url_576c46740500c21b","q_u
+  land                               cov= 12.11%  review_relationship_duplicate str:81               | NL || AT || FR || CH
+  name_full                          cov= 12.11%  review_keep_if_distinct      str:81               | ABN AMRO Bank N.V. — Circl pavilion client / initiator || BA
+  review_run                         cov=  4.63%  review_sparse                str:31               | 2026-05-28_bauteilboersen_integration
+  source_url                         cov=  4.33%  move_to_provenance_model     str:29               | https://labs.aap.cornell.edu/ccl/umar-unit || https://www.zh
+  aliases                            cov=  2.39%  review_keep_if_used          list[str]:16         | ["IMd raadgevende ingenieurs"] || ["bauburo_in_situ","baubür
+  repair_phase                       cov=   0.3%  review_sparse                str:2                | 1.5_1.6_residuals
+  actor_registry_order               cov=  0.15%  review_sparse                int:1                | 66
+  reuse_relevanz_text                cov=  0.15%  review_sparse                str:1                | UMAR/Systemengineering: zirkuläre Gebäudesysteme und reversi
+  source_file                        cov=  0.15%  move_to_provenance_model     str:1                | akteursliste_master.md
+
+### SectionRef  (nodes=636, props=25)
+  id                                 cov= 100.0%  keep_minimum                 str:636              | q_55_great_suffolk_street_london_s1 || q_55_great_suffolk_st
+  name                               cov= 100.0%  keep_minimum                 str:636              | ASBP — 55 Great Suffolk Street case study || New London Arch
+  quelltyp                           cov= 100.0%  keep_minimum                 str:636              | external_reference || external_link
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:636              | single_url_from_legacy_zitiert_quelle || incident_relationsh
+  url                                cov= 100.0%  keep_minimum                 str:636              | https://asbp.org.uk/case-studies/55-great-suffolk-street || 
+  primary_source_url                 cov=  98.9%  move_to_provenance_model     str:629              | https://asbp.org.uk/case-studies/55-great-suffolk-street || 
+  source_count                       cov=  98.9%  move_to_provenance_model     int:629              | 1
+  source_url                         cov=  98.9%  move_to_provenance_model     str:629              | https://asbp.org.uk/case-studies/55-great-suffolk-street || 
+  source_url_node_ids                cov=  98.9%  review_relationship_duplicate list[str]:629        | ["q_url_f7a01727bf385ae0"] || ["q_url_83b88f93aa003a94"] || 
+  source_urls                        cov=  98.9%  move_to_provenance_model     list[str]:629        | ["https://asbp.org.uk/case-studies/55-great-suffolk-street"]
+  url_final_url                      cov=  98.9%  move_to_provenance_model     str:629              | https://asbp.org.uk/case-studies/55-great-suffolk-street || 
+  url_origin                         cov=  98.9%  move_to_provenance_model     str:629              | pre_existing_quelle
+  url_redirect_chain                 cov=  98.9%  move_to_provenance_model     list[]:416; list[str]:213 | [] || ["https://www.hawkinsbrown.com/projects/55-great-suffo
+  url_status                         cov=  98.9%  move_to_provenance_model     str:629              | reachable_2xx || blocked_by_robots || dead_4xx || dead_5xx
+  url_user_agent                     cov=  98.9%  move_to_provenance_model     str:629              | mit-bestand-source-prober/1.0 (research-graph; contact: kina
+  url_wayback_attempted              cov=  98.9%  move_to_provenance_model     bool:629             | false || true
+  url_http_code                      cov= 92.14%  move_to_provenance_model     int:586              | 200 || 403 || 525 || 404
+  url_content_type                   cov= 91.67%  move_to_provenance_model     str:583              | text/html || application/pdf || text/plain
+  url_server_header                  cov=  80.5%  move_to_provenance_model     str:512              | Apache || LiteSpeed || Microsoft-IIS/10.0 || cloudflare
+  url_content_length_bytes           cov= 78.77%  move_to_provenance_model     int:501              | 251337 || 87444 || 108594 || 11754
+  source_scope                       cov=  8.18%  move_to_provenance_model     str:52               | mig_2_7_external_sources || external_reference
+  url_wayback_snapshot               cov=   7.7%  move_to_provenance_model     str:49               | http://web.archive.org/web/20250708053000/https://www.ribaj.
+  url_wayback_timestamp              cov=   7.7%  move_to_provenance_model     str:49               | 20250708053000 || 20240425010839 || 20240416204055 || 202306
+  invalid_candidate_source_urls      cov=   1.1%  move_to_provenance_model     list[str]:7          | [""]
+  strict_node_url_array_cleanup      cov=   1.1%  move_to_provenance_model     str:7                | mig_strict_node_url_array_cleanup_2026_05_23
+
+### ResearchDocument  (nodes=402, props=38)
+  id                                 cov= 100.0%  keep_minimum                 str:402              | q_research_aufbereitungsverfahren_reused_building_elements_m
+  name                               cov= 100.0%  keep_minimum                 str:402              | aufbereitungsverfahren_reused_building_elements || bauteilre
+  quelltyp                           cov= 100.0%  keep_minimum                 str:402              | research_markdown || external_reference
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:402              | needs_source_url_review || single_url_from_legacy_zitiert_qu
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:402              | source_trace_review || inbox_research || research_file_url
+  source_url_node_ids                cov= 82.59%  review_relationship_duplicate list[str]:332        | ["q_url_fde7a9f41201d6f6abf440b2355657c6","q_url_18bd21ad631
+  review_status                      cov= 51.99%  review_domain_property       str:209              | needs_source_url_review
+  source_file                        cov= 51.99%  keep_minimum                 str:209              | _neo4j\intake\inbox\research\aufbereitungsverfahren_reused_b
+  title                              cov=  50.0%  keep_minimum                 str:201              | Aufbereitungsverfahren for Reused Building Elements || u/sit
+  source_url                         cov= 48.01%  move_to_provenance_model     str:193              | https://opalis.eu/sites/default/files/2022-02/FCRBE-General_
+  url                                cov= 48.01%  keep_minimum                 str:193              | https://opalis.eu/sites/default/files/2022-02/FCRBE-General_
+  url_final_url                      cov= 48.01%  move_to_provenance_model     str:193              | https://opalis.eu/sites/default/files/2022-02/FCRBE-General_
+  url_origin                         cov= 48.01%  move_to_provenance_model     str:193              | pre_existing_quelle
+  url_redirect_chain                 cov= 48.01%  move_to_provenance_model     list[]:158; list[str]:35 | [] || ["https://recreate-project.eu/project-pilots/the-nethe
+  url_status                         cov= 48.01%  move_to_provenance_model     str:193              | reachable_2xx || dead_4xx || blocked_by_robots || timeout
+  url_user_agent                     cov= 48.01%  move_to_provenance_model     str:193              | mit-bestand-source-prober/1.0 (research-graph; contact: kina
+  url_wayback_attempted              cov= 48.01%  move_to_provenance_model     bool:193             | false || true
+  url_http_code                      cov= 46.52%  move_to_provenance_model     int:187              | 200 || 403 || 404 || 202
+  url_content_type                   cov= 46.27%  move_to_provenance_model     str:186              | application/pdf || text/html
+  strict_source_url_cleanup          cov= 42.04%  move_to_provenance_model     str:169              | mig_strict_source_url_binding_cleanup_2026_05_23
+  url_content_length_bytes           cov= 41.54%  move_to_provenance_model     int:167              | 1775315 || 9663761 || 106244 || 148918
+  url_server_header                  cov= 36.32%  move_to_provenance_model     str:146              | Apache || Simply.com || nginx/1.14.2 || CloudFront
+  primary_source_url                 cov=  7.46%  move_to_provenance_model     str:30               | https://se2050.org/wp-content/uploads/2024/07/SEI-CE-WG-Circ
+  source_count                       cov=  7.46%  move_to_provenance_model     int:30               | 1
+  source_urls                        cov=  7.46%  move_to_provenance_model     list[str]:30         | ["https://se2050.org/wp-content/uploads/2024/07/SEI-CE-WG-Ci
+  strict_invalid_url_cleanup         cov=  7.46%  move_to_provenance_model     str:30               | mig_strict_invalid_url_cleanup_2026_05_23
+  url_wayback_snapshot               cov=  3.48%  move_to_provenance_model     str:14               | http://web.archive.org/web/20250115132929/https://se2050.org
+  url_wayback_timestamp              cov=  3.48%  move_to_provenance_model     str:14               | 20250115132929 || 20260407071201 || 20250125114912 || 202309
+  demoted_legal_condition_ids        cov=  0.25%  review_relationship_duplicate list[str]:1          | ["rb_bauordnungsrecht","rb_bauproduktenverordnung_cpr","rb_b
+  demoted_legal_condition_records    cov=  0.25%  review_sparse                list[str]:1          | ["{\"id\":\"rb_bauordnungsrecht\",\"name\":\"rb_bauordnungsr
+  legal_condition_demoted_by         cov=  0.25%  review_sparse                str:1                | mig_repair_2_5_rechtliche_bedingung_demote
+  legal_condition_evidence_basis     cov=  0.25%  move_to_provenance_model     list[str]:1          | ["research_file_row"]
+  legal_condition_evidence_confidence cov=  0.25%  move_to_provenance_model     list[str]:1          | ["inferiert"]
+  legal_condition_evidence_origin    cov=  0.25%  move_to_provenance_model     list[str]:1          | ["inferred"]
+  legal_condition_evidence_source_ids cov=  0.25%  review_relationship_duplicate list[str]:1          | ["q_bauteilreuse_legal_regime_matrix_md"]
+  legal_condition_ids                cov=  0.25%  review_relationship_duplicate list[str]:1          | ["rb_bauordnungsrecht","rb_bauproduktenverordnung_cpr","rb_b
+  legal_condition_source_edge_ids    cov=  0.25%  review_relationship_duplicate list[str]:1          | ["r_rb_bauordnungsrecht__BELEGT_IN__q_bauteilreuse_legal_reg
+  legal_conditions                   cov=  0.25%  review_sparse                list[str]:1          | ["rb_bauordnungsrecht","rb_bauproduktenverordnung_cpr","rb_b
+
+### Bauteilgruppe  (nodes=356, props=30)
+  bg_kind                            cov= 100.0%  review_domain_property       str:356              | batch || category || partial_batch
+  id                                 cov= 100.0%  keep_minimum                 str:356              | bg_reuse_stahl_gelaender_verbiest_charleroi || bg_reuse_kera
+  name                               cov= 100.0%  keep_minimum                 str:356              | Geländer aus Charleroi || Fliesen aus Charleroi || Steine au
+  primary_bauteiltyp_id              cov= 100.0%  review_relationship_duplicate str:356              | bt_gelaender || bt_mehrere || bt_wand || bt_ausbau
+  primary_material_id                cov= 100.0%  review_relationship_duplicate str:356              | mat_stahl || mat_keramik || mat_naturstein || mat_mehrere
+  reuse_status                       cov= 100.0%  review_relationship_duplicate str:356              | reuse || retained || planned || dismantled
+  review_status                      cov= 100.0%  review_domain_property       str:356              | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:356              | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:356              | archive_scan || case_markdown
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:356              | mig_strict_source_url_binding_cleanup_2026_05_23
+  name_full                          cov= 89.61%  review_keep_if_distinct      str:319              | Verbiest-Geländer aus Palais des Expositions Charleroi || Ve
+  alte_funktion                      cov= 81.74%  review_domain_property       str:291              | Geländer im Palais des Expositions Charleroi || Boden-/Wandf
+  neue_funktion                      cov= 81.74%  review_domain_property       str:291              | Geländer im Verbiest-Projekt || Boden-/Wandoberflächen im Ve
+  invalid_candidate_source_urls      cov= 44.94%  move_to_provenance_model     list[str]:160        | ["https://bimtec","https://b","https://symmetr"] || ["https:
+  strict_candidate_url_array_cleanup cov= 44.94%  move_to_provenance_model     str:160              | mig_strict_candidate_url_array_cleanup_2026_05_23
+  tragend                            cov= 34.83%  review_domain_property       bool:121; str:3      | true || false || teilweise || wahrscheinlich / teils
+  raeumlich                          cov=  32.3%  review_domain_property       bool:115             | true || false
+  huelle                             cov= 22.75%  review_domain_property       bool:81              | true || false
+  menge_unbekannt                    cov= 12.08%  review_domain_property       bool:43              | true
+  technisch                          cov=  9.55%  review_domain_property       bool:34              | true || false
+  donor_resolution_status            cov=   7.3%  review_domain_property       str:26               | resource_source || exact_building || same_site || unknown
+  donor_unknown                      cov=  6.74%  review_domain_property       bool:24              | true
+  menge_stueck                       cov=  5.62%  review_domain_property       int:20               | 20 || 2000 || 50 || 26
+  menge_m2                           cov=  3.93%  review_sparse                float:2; int:12      | 125 || 60 || 450 || 1000
+  menge_original_key                 cov=  3.09%  review_sparse                str:11               | teppichfliesen_anzahl || reuse_deckenplatten_anzahl || reuse
+  menge_source                       cov=  3.09%  move_to_provenance_model     str:11               | projekt_counter_migration_mig_2_4
+  direct_reuse_relevant              cov=  2.25%  review_sparse                bool:7; str:1        | false || fester Einbau, aber nicht bewertungsrelevantes Trag
+  menge_t                            cov=  1.97%  review_sparse                float:3; int:4       | 20.35 || 98 || 165 || 33.46
+  menge_kg                           cov=  0.28%  review_sparse                int:1                | 165000
+  menge_m                            cov=  0.28%  review_sparse                int:1                | 1300
+
+### Kennwert  (nodes=255, props=22)
+  category                           cov= 100.0%  review_domain_property       str:255              | reuse_share || co2_saving || cost
+  einheit                            cov= 100.0%  keep_or_model_fact           str:255              | % || t || t CO₂ / CO₂e || —
+  fact_index                         cov= 100.0%  keep_or_model_fact           int:255              | 0 || 1 || 2 || 3
+  id                                 cov= 100.0%  keep_minimum                 str:255              | kw_p_55_great_suffolk_street_london_reuse_share_0 || kw_p_55
+  kennwert                           cov= 100.0%  keep_or_model_fact           str:255              | reuse_anteil_prozent || Anteil reused steel am Kernstahl || 
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:255              | needs_source_url_review || trusted_incident_relationship_sou
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:255              | r4_reuse_share || r4_co2_saving || r4_cost
+  wert_text                          cov= 100.0%  keep_or_model_fact           str:255              | 97 || 50 || ca. 50 || unbekannt
+  bilanzgrenze                       cov= 83.92%  keep_or_model_fact           str:214              | Neuer externer Kern || Stahl des externen Kerns || — || unbe
+  method                             cov= 83.92%  keep_or_model_fact           str:214              | 20.35/20.98 t || Vergleich zu A1-A3 2.5 kgCO₂e/kg steel || —
+  source_id                          cov= 83.92%  review_relationship_duplicate str:214              | q_55_great_suffolk_street_london_md || q_association_house_g
+  strict_source_url_cleanup          cov= 83.92%  move_to_provenance_model     str:214              | mig_strict_source_url_binding_cleanup_2026_05_23
+  review_status                      cov= 79.61%  review_domain_property       str:203              | needs_source_url_review
+  wert                               cov= 60.39%  keep_or_model_fact           float:154            | 97.0 || 50.0 || 2.5 || 7.0
+  invalid_candidate_source_urls      cov= 34.51%  move_to_provenance_model     list[str]:88         | [""] || ["https://olympiap"] || ["https://projecta","https:/
+  strict_candidate_url_array_cleanup cov= 34.51%  move_to_provenance_model     str:88               | mig_strict_candidate_url_array_cleanup_2026_05_23
+  primary_source_url                 cov= 20.39%  move_to_provenance_model     str:52               | https://www.nationalestaalprijs.nl/project/biopartner-5 || h
+  source_count                       cov= 20.39%  move_to_provenance_model     int:52               | 1
+  source_urls                        cov= 20.39%  move_to_provenance_model     list[str]:52         | ["https://www.nationalestaalprijs.nl/project/biopartner-5"] 
+  strict_invalid_url_cleanup         cov= 20.39%  move_to_provenance_model     str:52               | mig_strict_invalid_url_cleanup_2026_05_23
+  wert_max                           cov=  1.18%  review_sparse                float:3              | 40.0 || 6.0 || 792.0
+  wert_min                           cov=  1.18%  review_sparse                float:3              | 30.0 || 5.0 || 458.0
+
+### Bauwerk  (nodes=184, props=17)
+  id                                 cov= 100.0%  keep_minimum                 str:184              | bw_association_house_groeditz || bw_school_type_dresden_dono
+  name                               cov= 100.0%  keep_minimum                 str:184              | Sport-/Vereinshaus… || School type Dresden… || Sport-/Verein
+  review_status                      cov= 100.0%  review_domain_property       str:184              | needs_source_url_review
+  source_freshness_summary           cov= 100.0%  move_to_provenance_model     str:184              | {"n_reachable": 4, "n_reachable_via_3xx": 0, "n_dead": 1, "n
+  source_quality_summary             cov= 100.0%  move_to_provenance_model     str:184              | {"n_verbatim": 0, "n_paraphrase": 0, "n_no_match": 0, "n_dea
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:184              | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:184              | archive_scan || case_markdown
+  source_trust_score                 cov= 100.0%  move_to_provenance_model     float:184            | 0.0 || 0.0093 || 0.0125 || 0.0185
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:184              | mig_strict_source_url_binding_cleanup_2026_05_23
+  era_unknown                        cov= 95.65%  review_domain_property       bool:176             | true
+  name_full                          cov= 86.41%  review_keep_if_distinct      str:159              | Sport-/Vereinshaus Gröditz || School type Dresden donor buil
+  invalid_candidate_source_urls      cov= 48.91%  move_to_provenance_model     list[str]:90         | [""] || ["","https://t"] || ["https://olympiap"] || ["https:
+  strict_candidate_url_array_cleanup cov= 48.91%  move_to_provenance_model     str:90               | mig_strict_candidate_url_array_cleanup_2026_05_23
+  nutzung_text                       cov= 43.48%  review_domain_property       str:80               | Doppelhaus / Wohnhaus || kleiner modularer Pilotbau / Ausste
+  baujahr                            cov=  4.35%  review_sparse                int:8                | 2000 || 1950 || 1978 || 1973
+  flaeche_m2                         cov=   3.8%  review_sparse                int:7                | 15 || 2004 || 70 || 81777
+  land                               cov=  1.09%  review_relationship_duplicate str:2                | Niederlande
+
+### PruefungNachweis  (nodes=120, props=13)
+  id                                 cov= 100.0%  keep_minimum                 str:120              | pr_zerstoerungsfreie_pruefung || pr_zerstoerende_pruefung ||
+  name                               cov= 100.0%  keep_minimum                 str:120              | Zerstörungsfreie Prüfung (ZfP / NDT) || Zerstörende Prüfung 
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:120              | needs_source_url_review || trusted_incident_relationship_sou
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:120              | controlled_vocab_seed || research_file
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:120              | mig_strict_source_url_binding_cleanup_2026_05_23
+  review_status                      cov= 95.83%  review_domain_property       str:115              | needs_source_url_review
+  scope_note                         cov=   7.5%  keep_minimum                 str:9                | Non-destructive testing for hidden defects, cracks, weld qua
+  primary_source_url                 cov=  4.17%  move_to_provenance_model     str:5                | https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-un
+  source_count                       cov=  4.17%  move_to_provenance_model     int:5                | 1
+  source_urls                        cov=  4.17%  move_to_provenance_model     list[str]:5          | ["https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-
+  strict_invalid_url_cleanup         cov=  4.17%  move_to_provenance_model     str:5                | mig_strict_invalid_url_cleanup_2026_05_23
+  archive_mentioned_in_corpus        cov=  0.83%  review_sparse                bool:1               | true
+  archive_mentions                   cov=  0.83%  review_sparse                list[str]:1          | ["CRCLR_House_Impact_Hub_Berlin.md"]
+
+### Norm  (nodes=103, props=20)
+  id                                 cov= 100.0%  keep_minimum                 str:103              | norm_en_206 || norm_en_14081 || norm_en_771 || norm_en_13162
+  name                               cov= 100.0%  keep_minimum                 str:103              | EN 206 || EN 14081 || EN 771 || EN 13162
+  review_status                      cov= 100.0%  review_domain_property       str:103              | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:103              | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     list[str]:1; str:102 | controlled_vocab_seed || reuse_rule_seed || ["repair_phase_1
+  strict_source_url_cleanup          cov= 75.73%  move_to_provenance_model     str:78               | mig_strict_source_url_binding_cleanup_2026_05_23
+  evidence_basis                     cov= 66.99%  move_to_provenance_model     list[str]:1; str:68  | reuse_rule_key_norm || ["reuse_rule_key_norm_family","reuse_
+  evidence_confidence                cov= 66.99%  move_to_provenance_model     str:69               | belegt
+  evidence_origin                    cov= 66.99%  move_to_provenance_model     list[str]:1; str:68  | inferred || ["repair_remap","inferred"]
+  evidence_source_id                 cov= 66.99%  review_relationship_duplicate str:69               | q_circular_construction_reuse_graph_gaps_md
+  name_full                          cov= 31.07%  review_keep_if_distinct      str:32               | EN 206 — Concrete specification, performance, production and
+  scope_note                         cov= 15.53%  review_domain_property       str:16               | EN national standard adoption across CEN/CENELEC members, co
+  country_short                      cov= 13.59%  review_domain_property       str:14               | CEN || NL || DE || EU/EFTA+UK
+  standards_body                     cov=  4.85%  review_sparse                str:5                | DIN/CEN || ISO
+  aliases                            cov=  2.91%  review_keep_if_used          list[str]:3          | ["norm_din_18940","DIN 18940"] || ["SCI P427 Structural Stee
+  note                               cov=  2.91%  review_keep_if_used          str:3                | Prüfprotokoll für reclaimed steel laut ASBP; keine weiteren 
+  definition                         cov=  0.97%  review_sparse                str:1                | Dutch guideline for reuse of structural precast concrete / h
+  invalid_candidate_source_urls      cov=  0.97%  move_to_provenance_model     list[str]:1          | ["https://ww","https://www"]
+  repair_phase                       cov=  0.97%  review_sparse                str:1                | 1.5_1.6_residuals
+  strict_candidate_url_array_cleanup cov=  0.97%  move_to_provenance_model     str:1                | mig_strict_candidate_url_array_cleanup_2026_05_23
+
+### Dossier  (nodes=97, props=20)
+  id                                 cov= 100.0%  keep_minimum                 str:97               | q_batch_1_md || q_schaerenmoosstrasse_zuerich_projekt_menage
+  name                               cov= 100.0%  keep_minimum                 str:97               | Schärenmoosstrasse Zürich — Projekt «ménage à trois» || UMAR
+  quelltyp                           cov= 100.0%  review_domain_property       str:97               | case_markdown
+  source_file                        cov= 100.0%  move_to_provenance_model     str:97               | _neo4j/intake/archive/2026-05-20_inbox_batch2_import/raw_tre
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:97               | needs_source_url_review || single_url_from_legacy_zitiert_qu
+  source_url_node_ids                cov= 100.0%  review_relationship_duplicate list[str]:97         | ["q_url_aeef5e8ee66234ee","q_url_f528c30f69536ba7","q_url_7d
+  text_content_chars_pre_strip       cov= 100.0%  review_domain_property       int:97               | 103604 || 19777 || 10491 || 44381
+  source_scope                       cov= 97.94%  move_to_provenance_model     str:95               | source_trace_review || external_reference || case_markdown
+  strict_source_url_cleanup          cov= 97.94%  move_to_provenance_model     str:95               | mig_strict_source_url_binding_cleanup_2026_05_23
+  primary_source_url                 cov= 72.16%  move_to_provenance_model     str:70               | https://doi.org/10.1016/j.jclepro.2022.135235 || https://www
+  source_count                       cov= 72.16%  move_to_provenance_model     int:70               | 4 || 5 || 6 || 1
+  source_urls                        cov= 72.16%  move_to_provenance_model     list[str]:70         | ["https://doi.org/10.1016/j.jclepro.2022.135235","https://in
+  strict_invalid_url_cleanup         cov= 72.16%  move_to_provenance_model     str:70               | mig_strict_invalid_url_cleanup_2026_05_23
+  invalid_candidate_source_urls      cov= 41.24%  move_to_provenance_model     list[str]:40         | [""] || ["https://t"] || ["https://olympiap"] || ["https://p
+  strict_candidate_url_array_cleanup cov= 41.24%  move_to_provenance_model     str:40               | mig_strict_candidate_url_array_cleanup_2026_05_23
+  review_status                      cov= 25.77%  review_domain_property       str:25               | needs_source_url_review
+  access_date                        cov= 15.46%  review_domain_property       str:15               | 2026-05-19
+  aliases                            cov= 15.46%  review_keep_if_used          list[str]:15         | ["qu_batch1_schaerenmoosstrasse_dossier"] || ["qu_batch1_uma
+  text_content_retry_result          cov=  5.15%  review_domain_property       str:5                | resolved
+  source_url                         cov=  2.06%  move_to_provenance_model     str:2                | https://vb.nweurope.eu/projects/project-search/fcrbe-facilit
+
+### Projekt  (nodes=86, props=34)
+  id                                 cov= 100.0%  keep_minimum                 str:86               | p_lysp8 || p_eth_circular_construction_student_reuse || p_rc
+  name                               cov= 100.0%  keep_minimum                 str:86               | LysP8 — LysBüchelStrasse 8 Reuse Pilot Basel || ETH Circular
+  quality_tier                       cov= 100.0%  review_domain_property       str:86               | tier_3_stub || tier_2_documentation_only || tier_1_decision_
+  quality_tier_facts                 cov= 100.0%  review_domain_property       str:86               | {"computed_by":"mig_5_1_quality_tier","has_land":false,"n_bg
+  source_freshness_summary           cov= 100.0%  move_to_provenance_model     str:86               | {"n_reachable": 0, "n_reachable_via_3xx": 0, "n_dead": 0, "n
+  source_quality_summary             cov= 100.0%  move_to_provenance_model     str:86               | {"n_verbatim": 0, "n_paraphrase": 0, "n_no_match": 0, "n_dea
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:86               | needs_source_url_review || trusted_incident_relationship_sou
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:86               | actor_registry_association || archive_scan || case_markdown
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:86               | mig_strict_source_url_binding_cleanup_2026_05_23
+  source_trust_score                 cov= 96.51%  move_to_provenance_model     float:83             | 0.0 || 0.0093 || 0.109 || 0.0185
+  co2_facts                          cov= 94.19%  review_domain_property       list[]:54; list[str]:27 | ["{\"basis\": \"transportdistanz_km\", \"value\": 2.5, \"uni
+  cost_facts                         cov= 94.19%  review_domain_property       list[]:9; list[str]:72 | ["{\"kennwert\": \"CO₂-Einsparung\", \"wert\": \"unbekannt\"
+  reuse_share_facts                  cov= 94.19%  review_domain_property       list[]:59; list[str]:22 | [] || ["{\"kennwert\": \"Metropolis Next Generation Prize\",
+  bewertung                          cov= 86.05%  review_domain_property       int:74               | 4 || 2 || 3 || 5
+  projektstatus_text                 cov= 80.23%  review_domain_property       str:69               | gebaut / Rohbau 2005 || gebaut / Pavillon bzw. kleiner Demon
+  name_full                          cov= 76.74%  review_keep_if_distinct      str:66               | Association house, Gröditz || Association house, Plauen || B
+  review_status                      cov= 60.47%  review_domain_property       str:52               | needs_source_url_review
+  year_completed                     cov= 48.84%  review_domain_property       int:42               | 2007 || 2005 || 2008 || 2006
+  invalid_candidate_source_urls      cov= 45.35%  move_to_provenance_model     list[str]:39         | [""] || ["https://t",""] || ["https://olympiap"] || ["https:
+  strict_candidate_url_array_cleanup cov= 45.35%  move_to_provenance_model     str:39               | mig_strict_candidate_url_array_cleanup_2026_05_23
+  area_m2_gross                      cov=  40.7%  review_domain_property       int:35               | 15 || 2004 || 70 || 4690
+  primary_source_url                 cov= 38.37%  move_to_provenance_model     str:33               | https://doi.org/10.1016/j.jclepro.2022.135235 || https://www
+  source_count                       cov= 38.37%  move_to_provenance_model     int:33               | 4 || 5 || 6 || 2
+  source_urls                        cov= 38.37%  move_to_provenance_model     list[str]:33         | ["https://doi.org/10.1016/j.jclepro.2022.135235","https://ba
+  strict_invalid_url_cleanup         cov= 38.37%  move_to_provenance_model     str:33               | mig_strict_invalid_url_cleanup_2026_05_23
+  area_m2_range_max                  cov= 12.79%  review_domain_property       int:11               | 399 || 7603 || 25000 || 7000
+  area_m2_range_min                  cov= 12.79%  review_domain_property       int:11               | 372 || 4871 || 20000 || 6200
+  nutzung_text                       cov= 10.47%  review_domain_property       str:9                | Doppelhaus / Wohnnutzung || Ausstellungs- und Forschungsdemo
+  node_role                          cov=  8.14%  review_domain_property       str:7                | full_projekt
+  actor_registry_mentioned           cov=  6.98%  review_domain_property       bool:6               | true
+  project_category                   cov=  5.81%  review_domain_property       str:5                | building_project_stub || research_news_or_demonstrator_stub 
+  aliases                            cov=  1.16%  review_keep_if_used          list[str]:1          | ["Pavilion Circl Amsterdam"]
+  source_url                         cov=  1.16%  move_to_provenance_model     str:1                | https://www.thoravej29.com/en
+  source_url_node_ids                cov=  1.16%  review_relationship_duplicate list[str]:1          | ["q_url_77a9d4c410a84c41"]
+
+### Stadt  (nodes=74, props=4)
+  id                                 cov= 100.0%  keep_minimum                 str:74               | stadt_groeditz || stadt_plauen || stadt_muenster || stadt_du
+  name                               cov= 100.0%  keep_minimum                 str:74               | Gröditz || Plauen || Münster || Düsseldorf
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:74               | controlled_vocab_seed || case_markdown
+  aliases                            cov=  1.35%  review_keep_if_used          list[str]:1          | ["Brussels / Bruxelles"]
+
+### Aufbereitungsverfahren  (nodes=62, props=8)
+  id                                 cov= 100.0%  keep_minimum                 str:62               | av_oberflaechenbehandlung || av_zerlegung_vereinzelung || av
+  name                               cov= 100.0%  keep_minimum                 str:62               | Oberflächenbehandlung (Sammelkategorie) || Zerlegung / Verei
+  review_status                      cov= 100.0%  review_domain_property       str:62               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:62               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:62               | controlled_vocab_seed || research_file
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:62               | mig_strict_source_url_binding_cleanup_2026_05_23
+  scope_note                         cov= 54.84%  keep_minimum                 str:34               | Parent category: cleaning, stripping, coating-removal, blast
+  is_parent_category                 cov=  6.45%  review_domain_property       bool:4               | true
+
+### Leistungsanforderung  (nodes=46, props=9)
+  id                                 cov= 100.0%  keep_minimum                 str:46               | la_korrosionsschutz || la_arbeitsschutz || la_oberflaechenqu
+  name                               cov= 100.0%  keep_minimum                 str:46               | la_korrosionsschutz || la_arbeitsschutz || la_oberflaechenqu
+  review_status                      cov= 100.0%  review_domain_property       str:46               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:46               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:46               | research_file || controlled_vocab_seed
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:46               | mig_strict_source_url_binding_cleanup_2026_05_23
+  aliases                            cov=  2.17%  review_keep_if_used          list[str]:1          | ["Brandschutzanforderung"]
+  archive_mentioned_in_corpus        cov=  2.17%  review_sparse                bool:1               | true
+  archive_mentions                   cov=  2.17%  review_sparse                list[str]:1          | ["CRCLR_House_Impact_Hub_Berlin.md"]
+
+### Programm  (nodes=29, props=57)
+  id                                 cov= 100.0%  keep_minimum                 str:29               | prog_horizon_2020 || prog_urban_innovative_actions || p_eth_
+  name                               cov= 100.0%  keep_minimum                 str:29               | Horizon 2020 (EU Forschungsförderung) || Urban Innovative Ac
+  review_status                      cov= 100.0%  review_domain_property       str:29               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:29               | needs_source_url_review || trusted_incident_relationship_sou
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:29               | controlled_vocab_seed || r7_b_orphan_resolution || actor_reg
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:29               | mig_strict_source_url_binding_cleanup_2026_05_23
+  name_full                          cov= 55.17%  review_keep_if_distinct      str:16               | FCRBE — Facilitating the Circulation of Reclaimed Building E
+  short_description                  cov= 44.83%  review_domain_property       str:13               | The project aimed to increase by 50% the amount of reclaimed
+  type                               cov= 44.83%  review_domain_property       str:13               | Interreg || Reallabor || teaching+research || research
+  host_institution                   cov= 34.48%  review_domain_property       str:10               | TU Berlin / Natural Building Lab || HTWG Konstanz || ZHAW In
+  node_role                          cov= 34.48%  review_domain_property       str:10               | full_projekt || cross_reference_stub
+  quality_tier                       cov= 34.48%  review_domain_property       str:10               | tier_3_stub
+  status                             cov= 34.48%  review_relationship_duplicate str:10               | concluded || active || published_2025
+  actor_registry_mentioned           cov= 20.69%  review_domain_property       bool:6               | true
+  classified_reason                  cov= 20.69%  review_domain_property       str:6                | Actor-registry-derived stub; no case-study record. ASSOZIIER
+  import_status                      cov= 20.69%  review_domain_property       str:6                | registry_stub_only
+  needs_project_file                 cov= 20.69%  review_domain_property       bool:6               | true || false
+  primary_source_url                 cov= 20.69%  move_to_provenance_model     str:6                | https://rotordb.org/en/projects/interreg-nwe-fcrbe || https:
+  quality_tier_facts                 cov= 20.69%  review_domain_property       str:6                | {"computed_by":"mig_5_1_quality_tier","has_land":false,"n_bg
+  source_count                       cov= 20.69%  move_to_provenance_model     int:6                | 2 || 3 || 1
+  source_freshness_summary           cov= 20.69%  move_to_provenance_model     str:6                | {"n_reachable": 0, "n_reachable_via_3xx": 0, "n_dead": 0, "n
+  source_quality_summary             cov= 20.69%  move_to_provenance_model     str:6                | {"n_verbatim": 0, "n_paraphrase": 0, "n_no_match": 0, "n_dea
+  source_urls                        cov= 20.69%  move_to_provenance_model     list[str]:6          | ["https://rotordb.org/en/projects/interreg-nwe-fcrbe","https
+  strict_invalid_url_cleanup         cov= 20.69%  move_to_provenance_model     str:6                | mig_strict_invalid_url_cleanup_2026_05_23
+  aliases                            cov= 17.24%  review_keep_if_used          list[str]:5          | ["Interreg NWE FCRBE"] || ["Reallabor B(e) Ware"] || ["REBRI
+  project_category                   cov= 17.24%  review_domain_property       str:5                | research_or_market_program_stub || research_demonstrator_stu
+  co2_facts                          cov= 13.79%  review_domain_property       list[]:4             | []
+  cost_facts                         cov= 13.79%  review_domain_property       list[]:4             | []
+  end_year                           cov= 13.79%  review_domain_property       int:4                | 2023 || 2028 || 2026
+  original_label                     cov= 13.79%  review_domain_property       str:4                | Projekt
+  quality_tier_computed_by           cov= 13.79%  review_domain_property       str:4                | mig_5_1_quality_tier
+  quality_tier_has_components        cov= 13.79%  review_domain_property       bool:4               | false
+  quality_tier_has_evidence          cov= 13.79%  move_to_provenance_model     bool:4               | false
+  quality_tier_has_land              cov= 13.79%  review_domain_property       bool:4               | true
+  quality_tier_has_metric            cov= 13.79%  review_domain_property       bool:4               | false
+  quality_tier_has_year              cov= 13.79%  review_domain_property       bool:4               | false
+  quality_tier_n_bg                  cov= 13.79%  review_domain_property       int:4                | 0
+  quality_tier_n_bg_quantified       cov= 13.79%  review_domain_property       int:4                | 0
+  quality_tier_n_curated_evidence    cov= 13.79%  move_to_provenance_model     int:4                | 0
+  reuse_share_facts                  cov= 13.79%  review_domain_property       list[]:4             | []
+  start_year                         cov= 13.79%  review_domain_property       int:4                | 2018 || 2025 || 2022
+  lead_organisation                  cov= 10.34%  review_domain_property       str:3                | Rotor || University of Stuttgart / Institute of Lightweight 
+  scope_note                         cov= 10.34%  review_domain_property       str:3                | EU framework programme for research and innovation. Funded R
+  eu_funding_programme               cov=   6.9%  review_domain_property       str:2                | Interreg North-West Europe || Research Fund for Coal and Ste
+  invalid_candidate_source_urls      cov=   6.9%  move_to_provenance_model     list[str]:2          | ["https://ww"] || ["https://www"]
+  source_trust_score                 cov=   6.9%  move_to_provenance_model     float:2              | 0.0
+  strict_candidate_url_array_cleanup cov=   6.9%  move_to_provenance_model     str:2                | mig_strict_candidate_url_array_cleanup_2026_05_23
+  eu_contribution_eur                cov=  3.45%  review_sparse                float:1              | 1695121.69
+  evidence_basis                     cov=  3.45%  move_to_provenance_model     str:1                | dossier_anchored
+  evidence_confidence                cov=  3.45%  move_to_provenance_model     str:1                | belegt
+  evidence_origin                    cov=  3.45%  move_to_provenance_model     str:1                | source_curated
+  funding_amount_eur                 cov=  3.45%  review_sparse                int:1                | 12500000
+  funding_programme                  cov=  3.45%  review_sparse                str:1                | SNSF PRIMA
+  funding_source                     cov=  3.45%  move_to_provenance_model     str:1                | EU Horizon 2020
+  grant_agreement_reference          cov=  3.45%  review_sparse                str:1                | 101157419
+  needs_dossier_extraction           cov=  3.45%  review_sparse                bool:1               | true
+  note                               cov=  3.45%  review_keep_if_used          str:1                | Projektkonkreter Programm-/Pilotkontext; generischer Program
+
+### Huerde  (nodes=28, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:28               | h_akzeptanzproblem || h_anschlussproblem || h_aufbereitungsa
+  name                               cov= 100.0%  keep_minimum                 str:28               | Akzeptanzproblem || Anschlussproblem || Aufbereitungsaufwand
+  review_status                      cov= 100.0%  review_domain_property       str:28               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:28               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:28               | controlled_vocab_seed
+
+### Material  (nodes=26, props=12)
+  id                                 cov= 100.0%  keep_minimum                 str:26               | mat_spannbeton || mat_drahtglas || mat_aluminium || mat_beto
+  name                               cov= 100.0%  keep_minimum                 str:26               | mat_spannbeton || mat_drahtglas || Aluminium || Beton
+  review_status                      cov= 100.0%  review_domain_property       str:26               | needs_source_url_review || proposed
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:26               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:26               | research_file || controlled_vocab_seed
+  strict_source_url_cleanup          cov= 38.46%  move_to_provenance_model     str:10               | mig_strict_source_url_binding_cleanup_2026_05_23
+  name_full                          cov= 19.23%  review_keep_if_distinct      str:5                | Mehrere Materialien — Multi-material BGs with no single domi
+  aliases                            cov=  3.85%  review_keep_if_used          list[str]:1          | ["Textil / textile Fasern","Textil / Filz / textile Fasern"]
+  archive_mentioned_in_corpus        cov=  3.85%  review_sparse                bool:1               | true
+  archive_mentions                   cov=  3.85%  review_sparse                list[str]:1          | ["CRCLR_House_Impact_Hub_Berlin.md","Ferme_du_Rail_Paris.md"
+  note                               cov=  3.85%  review_keep_if_used          str:1                | Needed for textile-based reused/waste materials such as deni
+  scope_note                         cov=  3.85%  keep_minimum                 str:1                | Fine-grained Material counterpart to mg_mehrere. Used as pri
+
+### Akteurrolle  (nodes=24, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:24               | ar_materialbroker || ar_aufbereitung_refurbishment || ar_bau
+  name                               cov= 100.0%  keep_minimum                 str:24               | Materialbroker / Reuse-Marketplace-Betreiber || Aufbereitung
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:24               | controlled_vocab_seed
+  aliases                            cov=  37.5%  review_keep_if_used          list[str]:9          | ["Architektur"] || ["Pruefung_Qualitaetssicherung"] || ["Bau
+  scope_note                         cov=  4.17%  keep_minimum                 str:1                | Operates a reuse-material marketplace, hub, or brokerage ser
+
+### Bauteiltyp  (nodes=23, props=9)
+  id                                 cov= 100.0%  keep_minimum                 str:23               | bt_hohlkoerperdecke || bt_fassadenelement_beton || bt_glassc
+  name                               cov= 100.0%  keep_minimum                 str:23               | bt_hohlkoerperdecke || bt_fassadenelement_beton || bt_glassc
+  review_status                      cov= 100.0%  review_domain_property       str:23               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:23               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:23               | research_file || controlled_vocab_seed
+  brand_layer                        cov= 65.22%  review_domain_property       str:15               | space_plan || skin || structure || services
+  strict_source_url_cleanup          cov= 34.78%  move_to_provenance_model     str:8                | mig_strict_source_url_binding_cleanup_2026_05_23
+  name_full                          cov=  4.35%  review_keep_if_distinct      str:1                | Mehrere Bauteiltypen — Multi-type BGs with no single dominan
+  scope_note                         cov=  4.35%  keep_minimum                 str:1                | Placeholder for Bauteilgruppen that span multiple component 
+
+### Materialdepot  (nodes=22, props=14)
+  era_unknown                        cov= 100.0%  review_domain_property       bool:22              | true
+  id                                 cov= 100.0%  keep_minimum                 str:22               | bw_cleveland_steel_and_tubes_stock || bw_wbs70_donor_groedit
+  is_material_depot                  cov= 100.0%  review_domain_property       bool:22              | true
+  name                               cov= 100.0%  keep_minimum                 str:22               | Cleveland S&T stock || WBS70 donor building… || Unbekanntes 
+  name_full                          cov= 100.0%  review_keep_if_distinct      str:22               | Cleveland Steel and Tubes reclaimed stock || WBS70 donor bui
+  review_status                      cov= 100.0%  review_domain_property       str:22               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:22               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:22               | archive_scan
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:22               | mig_strict_source_url_binding_cleanup_2026_05_23
+  invalid_candidate_source_urls      cov= 45.45%  move_to_provenance_model     list[str]:10         | [""] || ["https://www"] || ["https://hts"] || ["https://arc"
+  strict_candidate_url_array_cleanup cov= 45.45%  move_to_provenance_model     str:10               | mig_strict_candidate_url_array_cleanup_2026_05_23
+  nutzung_text                       cov= 27.27%  review_domain_property       str:6                | Coworking, Werkstaetten, Events, Wohnen || Aggregierte Donor
+  flaeche_m2                         cov=  4.55%  review_sparse                int:1                | 610
+  land                               cov=  4.55%  review_relationship_duplicate str:1                | Schweiz
+
+### ReuseRule  (nodes=20, props=27)
+  country_iso                        cov= 100.0%  review_domain_property       str:20               | GB || BE || DE || NL
+  country_name                       cov= 100.0%  review_domain_property       str:20               | Vereinigtes Königreich || Belgien || Deutschland || Niederla
+  evidence_basis                     cov= 100.0%  move_to_provenance_model     str:20               | research_file_row
+  evidence_confidence                cov= 100.0%  move_to_provenance_model     str:20               | teilweise_belegt
+  evidence_origin                    cov= 100.0%  move_to_provenance_model     str:20               | inferred
+  evidence_source_id                 cov= 100.0%  review_relationship_duplicate str:20               | q_circular_construction_reuse_graph_gaps_md
+  id                                 cov= 100.0%  keep_minimum                 str:20               | rr_gb_stahl || rr_be_stahl || rr_de_stahl || rr_nl_stahl
+  key_norms                          cov= 100.0%  review_domain_property       list[str]:20         | ["PD CEN/TS 1090-201","EN 1090-2","Eurocode 3","SCI protocol
+  legal_conditions                   cov= 100.0%  review_domain_property       list[str]:20         | ["Building Regulations Part A","CDM 2015","waste duty-of-car
+  material                           cov= 100.0%  review_domain_property       str:20               | Stahl || Beton || Beton / hollow-core slabs || Holz
+  material_id                        cov= 100.0%  review_relationship_duplicate str:20               | mat_stahl || mat_beton || mat_holz || mat_naturstein
+  name                               cov= 100.0%  keep_minimum                 str:20               | Vereinigtes Königreich × Stahl reuse rule || Belgien × Stahl
+  pollutant_risks                    cov= 100.0%  review_domain_property       list[str]:20         | ["Lead/chromate paint","PAH coatings","Asbestos fireproofing
+  primary_source_url                 cov= 100.0%  move_to_provenance_model     str:20               | https://standards.iteh.ai/catalog/standards/cen/31a1835a-d97
+  priority                           cov= 100.0%  review_domain_property       str:20               | P1_Critical || P2_High
+  processing_methods                 cov= 100.0%  review_domain_property       list[str]:20         | ["Dismantle by unbolting","Cut out damaged ends","Shotblast"
+  project_cluster                    cov= 100.0%  review_domain_property       str:20               | Steel-dominant structural reuse || High-count Belgian steel 
+  rank                               cov= 100.0%  review_domain_property       int:20               | 1 || 2 || 3 || 4
+  required_tests                     cov= 100.0%  review_domain_property       list[str]:20         | ["Provenance","visual inspection","section geometry","tensil
+  source_count                       cov= 100.0%  move_to_provenance_model     int:20               | 1
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:20               | trusted_incident_relationship_source_urls
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:20               | research_file_row
+  source_url                         cov= 100.0%  move_to_provenance_model     str:20               | https://standards.iteh.ai/catalog/standards/cen/31a1835a-d97
+  source_urls                        cov= 100.0%  move_to_provenance_model     list[str]:20         | ["https://standards.iteh.ai/catalog/standards/cen/31a1835a-d
+  strict_invalid_url_cleanup         cov= 100.0%  move_to_provenance_model     str:20               | mig_strict_invalid_url_cleanup_2026_05_23
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:20               | mig_strict_source_url_binding_cleanup_2026_05_23
+  suggested_graph_action             cov= 100.0%  review_domain_property       str:20               | Create `ReusableStructuralSteelMember` template with edges t
+
+### Software  (nodes=18, props=13)
+  id                                 cov= 100.0%  keep_minimum                 str:18               | tool_oogstkaart_harvest_map || software_qflow || tool_qflow 
+  kind                               cov= 100.0%  review_domain_property       str:18               | tool || software
+  name                               cov= 100.0%  keep_minimum                 str:18               | Oogstkaart / Harvest Map logic || Qflow || Qflow delivery an
+  review_status                      cov= 100.0%  review_domain_property       str:18               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:18               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:18               | controlled_vocab_seed || case_markdown
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:18               | mig_strict_source_url_binding_cleanup_2026_05_23
+  name_full                          cov= 27.78%  review_keep_if_distinct      str:5                | LLMNT Material Passport Platform (Circl digital twin) || Eco
+  invalid_candidate_source_urls      cov= 22.22%  move_to_provenance_model     list[str]:4          | ["https://d"] || ["https://www"]
+  strict_candidate_url_array_cleanup cov= 22.22%  move_to_provenance_model     str:4                | mig_strict_candidate_url_array_cleanup_2026_05_23
+  note                               cov= 16.67%  review_keep_if_used          str:3                | Materialsuche und Harvesting-Logik; konkrete Elementliste ni
+  funktion                           cov=  5.56%  review_domain_property       str:1                | Abgleich von stock list und design list für wiederverwendete
+  software_basis                     cov=  5.56%  review_domain_property       str:1                | Python
+
+### Land  (nodes=16, props=11)
+  country_iso2                       cov= 100.0%  keep_minimum                 str:16               | DE || US || GB || BE
+  id                                 cov= 100.0%  keep_minimum                 str:16               | land_deutschland || land_usa || land_vereinigtes_koenigreich
+  name                               cov= 100.0%  keep_minimum                 str:16               | Deutschland || USA || Vereinigtes Königreich || Belgien
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:16               | actor_registry || case_markdown || controlled_vocab_seed
+  pcb_verbot_jahr                    cov=  75.0%  review_domain_property       int:12               | 1989 || 1979 || 1986 || 1985
+  asbest_verbot_jahr                 cov= 68.75%  review_domain_property       int:11               | 1993 || 2000 || 1998 || 1994
+  country_iso                        cov= 43.75%  review_domain_property       str:7                | DE || GB || BE || NL
+  aliases                            cov=  12.5%  review_keep_if_used          list[str]:2          | ["Vereinigtes Koenigreich","United Kingdom"] || ["Daenemark"
+  asbest_neshap_year                 cov=  6.25%  review_domain_property       int:1                | 1973
+  asbest_note                        cov=  6.25%  review_domain_property       str:1                | No federal ban; NESHAP demolition/renovation inspection rule
+  kmf_grenzwert_jahr                 cov=  6.25%  review_domain_property       int:1                | 1996
+
+### RechtlicheBedingung  (nodes=16, props=12)
+  evidence_basis                     cov= 100.0%  move_to_provenance_model     str:16               | controlled_vocab || registry_stub
+  evidence_confidence                cov= 100.0%  move_to_provenance_model     str:16               | belegt || unklar
+  evidence_origin                    cov= 100.0%  move_to_provenance_model     str:16               | source_curated || topology_synthesized
+  id                                 cov= 100.0%  keep_minimum                 str:16               | rb_grade_ii_listing || rb_bauordnungsrecht || rb_eu_taxonomi
+  name                               cov= 100.0%  keep_minimum                 str:16               | Grade_II_Listing || Bauordnungsrecht || EU_Taxonomie || Gewa
+  review_status                      cov= 100.0%  review_domain_property       str:16               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:16               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:16               | r2_c_legal_restore || scope_audit_2026_05_31 || r2_c_legal_r
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:16               | mig_strict_source_url_binding_cleanup_2026_05_23
+  is_universal                       cov=  62.5%  review_domain_property       bool:10              | false || true
+  scope_note                         cov=  62.5%  keep_minimum                 str:10               | Building approval law applies in every corpus country; speci
+  stub_note                          cov=  37.5%  review_domain_property       str:6                | Referenced in q_bauteilreuse_legal_regime_matrix_md.legal_co
+
+### Ressourcenquelle  (nodes=16, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:16               | rq_baustelle || rq_bauteilboerse || rq_donor_infrastruktur |
+  name                               cov= 100.0%  keep_minimum                 str:16               | Baustelle || Bauteilboerse || Donor_Infrastruktur || Donorge
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:16               | controlled_vocab_seed
+  beschreibung                       cov= 43.75%  review_domain_property       str:7                | Pool geliehener oder temporär bereitgestellter Bauteile; Eig
+  datenqualitaet                     cov= 43.75%  review_domain_property       str:7                | Belegt
+
+### Bauproduktstatus  (nodes=15, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:15               | bps_ce_hen || bps_ce_eta || bps_ue_zeichen || bps_abz_abg
+  name                               cov= 100.0%  keep_minimum                 str:15               | CE (hEN) || CE (ETA) || Ü-Zeichen (DE) || abZ / aBG (DE)
+  name_full                          cov= 100.0%  review_keep_if_distinct      str:15               | CE-Marking unter harmonisierter EN-Norm (hEN) || CE-Marking 
+  scope_note                         cov= 100.0%  keep_minimum                 str:15               | EU CPR; covers CE-marked construction products under harmoni
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:15               | controlled_vocab_seed
+
+### Verbindungstechnik  (nodes=15, props=10)
+  id                                 cov= 100.0%  keep_minimum                 str:15               | vt_bolzenverbindung || vt_demontierbarer_schwerlastanker || 
+  name                               cov= 100.0%  keep_minimum                 str:15               | Bolzenverbindung || Demontierbarer Schwerlastanker || Stahlv
+  review_status                      cov= 100.0%  review_domain_property       str:15               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:15               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:15               | controlled_vocab_seed || research_file
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:15               | mig_strict_source_url_binding_cleanup_2026_05_23
+  scope_note                         cov= 26.67%  keep_minimum                 str:4                | Reversible structural bolt connection. K.118 external steel 
+  invalid_candidate_source_urls      cov=  6.67%  move_to_provenance_model     list[str]:1          | [""]
+  note                               cov=  6.67%  review_keep_if_used          str:1                | Brick layer / masonry layer used as height compensation
+  strict_candidate_url_array_cleanup cov=  6.67%  move_to_provenance_model     str:1                | mig_strict_candidate_url_array_cleanup_2026_05_23
+
+### Wiederverwendungskette  (nodes=14, props=14)
+  id                                 cov= 100.0%  keep_minimum                 str:14               | k_reuse_kette_brettschichtholzbogen_liege_bierset_nach_ander
+  name                               cov= 100.0%  keep_minimum                 str:14               | Reuse-Kette Brettschicht… || Reuse-Kette Holzfenster… || Reu
+  name_full                          cov= 100.0%  review_keep_if_distinct      str:14               | Reuse-Kette Brettschichtholzbögen Liège/Bierset nach Anderle
+  review_status                      cov= 100.0%  review_domain_property       str:14               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:14               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:14               | archive_scan
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:14               | mig_strict_source_url_binding_cleanup_2026_05_23
+  invalid_candidate_source_urls      cov= 28.57%  move_to_provenance_model     list[str]:4          | ["https://w","https://rotordb"] || ["https://www"] || ["http
+  strict_candidate_url_array_cleanup cov= 28.57%  move_to_provenance_model     str:4                | mig_strict_candidate_url_array_cleanup_2026_05_23
+  beschaffungsweg                    cov=  7.14%  review_domain_property       str:1                | Le Bon Coin / Second-hand
+  distanz_km                         cov=  7.14%  review_domain_property       int:1                | 4
+  methodische_abgrenzung             cov=  7.14%  review_domain_property       str:1                | Bestandserhalt nicht als Direct Reuse werten
+  prozess                            cov=  7.14%  review_domain_property       str:1                | Demontage, Lagerung in Nivelles, Prüfung, Anpassung, Wiedere
+  status                             cov=  7.14%  review_relationship_duplicate str:1                | geplant / nicht gebaut bestätigt
+
+### DeprecatedType  (nodes=13, props=9)
+  deprecated_by                      cov= 100.0%  review_domain_property       str:13               | mig_r10_deprecated_type_seed
+  evidence_basis                     cov= 100.0%  move_to_provenance_model     str:13               | audit_record
+  evidence_confidence                cov= 100.0%  move_to_provenance_model     str:13               | belegt
+  evidence_origin                    cov= 100.0%  move_to_provenance_model     str:13               | source_curated
+  id                                 cov= 100.0%  keep_minimum                 str:13               | dep_label__GraphVersion || dep_label__ZertifizierungBewertun
+  kind                               cov= 100.0%  drop_or_archive_meta_node    str:13               | label || rel_type
+  new_name                           cov= 100.0%  review_domain_property       str:13               | (none — dropped) || Zertifizierungssystem || LCAModule || FR
+  old_name                           cov= 100.0%  review_domain_property       str:13               | GraphVersion || ZertifizierungBewertungssystem || Lebenszykl
+  reason                             cov= 100.0%  review_domain_property       str:13               | Experimental versioning label — never populated. || Renamed 
+
+### Methode  (nodes=13, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:13               | meth_abrissmonitoring || meth_bauteilkatalogisierung || meth
+  name                               cov= 100.0%  keep_minimum                 str:13               | Abrissmonitoring || Bauteilkatalogisierung || Building_Mater
+  review_status                      cov= 100.0%  review_domain_property       str:13               | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:13               | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:13               | controlled_vocab_seed
+
+### Wirtschaft  (nodes=12, props=4)
+  id                                 cov= 100.0%  keep_minimum                 str:12               | wi_capex_neutral || wi_capex_niedriger_direkter_ersparnis ||
+  name                               cov= 100.0%  keep_minimum                 str:12               | CapEx vergleichbar mit Neubau || CapEx niedriger (direkte Ma
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:12               | controlled_vocab_seed
+  scope_note                         cov=  50.0%  keep_minimum                 str:6                | Investitionskosten in Größenordnung Neubaureferenz; Reuse al
+
+### Marktmodell  (nodes=11, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:11               | mm_forschungsprojekt_zuteilung || mm_intra_konzern || mm_tak
+  name                               cov= 100.0%  keep_minimum                 str:11               | Forschungs-Zuteilung || Intra-Konzern || Take-Back || Unbeka
+  scope_note                         cov= 100.0%  keep_minimum                 str:11               | Allocation via research project (UMAR, ReCreate pilots, etc.
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:11               | controlled_vocab_seed
+  name_full                          cov= 90.91%  review_keep_if_distinct      str:10               | Forschungsprojekt-Zuteilung || Intra-Konzern-Transfer || Tak
+
+### Materialgruppe  (nodes=11, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:11               | mg_metall || mg_mineralisch || mg_holz_biobasiert || mg_glas
+  name                               cov= 100.0%  keep_minimum                 str:11               | Metall || Mineralisch || Holz_Biobasiert || Glas_Keramik
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:11               | controlled_vocab_seed
+  name_full                          cov=  9.09%  review_keep_if_distinct      str:1                | Mehrere Materialgruppen — Multi-material BGs with no single 
+  scope_note                         cov=  9.09%  keep_minimum                 str:1                | Placeholder for Bauteilgruppen that span multiple material c
+
+### WiederverwendungsArt  (nodes=11, props=4)
+  facet                              cov= 100.0%  review_domain_property       str:11               | intent || sourcing || treatment || location
+  id                                 cov= 100.0%  keep_minimum                 str:11               | wva_adaptives_reuse || wva_bestandserhalt || wva_design_for_
+  name                               cov= 100.0%  keep_minimum                 str:11               | Adaptives_ReUse || Bestandserhalt || Design_for_Disassembly 
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:11               | controlled_vocab_seed
+
+### Akteurtyp  (nodes=10, props=4)
+  id                                 cov= 100.0%  keep_minimum                 str:10               | at_person || at_organisation || at_unternehmen || at_oeffent
+  name                               cov= 100.0%  keep_minimum                 str:10               | Person || Organisation || Unternehmen || Oeffentliche_Instit
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:10               | controlled_vocab_seed
+  aliases                            cov=  10.0%  review_keep_if_used          list[str]:1          | ["Verband_Kammer"]
+
+### BauaufgabeIntervention  (nodes=10, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:10               | bai_aufstockung || bai_erweiterung || bai_fit_out || bai_neu
+  name                               cov= 100.0%  keep_minimum                 str:10               | Aufstockung || Erweiterung || Fit_out || Neubau
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:10               | controlled_vocab_seed
+
+### Beschaffungsweg  (nodes=10, props=6)
+  id                                 cov= 100.0%  keep_minimum                 str:10               | bweg_ausschreibung || bweg_bauteilboerse || bweg_digitale_pl
+  name                               cov= 100.0%  keep_minimum                 str:10               | Ausschreibung || Bauteilboerse || Digitale_Plattform || Dire
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:10               | controlled_vocab_seed
+  beschreibung                       cov=  10.0%  review_domain_property       str:1                | Bauteile werden geliehen, rückgabefähig montiert und nach Nu
+  datenqualitaet                     cov=  10.0%  review_domain_property       str:1                | Belegt
+  review_status                      cov=  10.0%  review_domain_property       str:1                | proposed
+
+### Defekt  (nodes=10, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:10               | def_korrosion || def_riss || def_verformung || def_karbonati
+  name                               cov= 100.0%  keep_minimum                 str:10               | Korrosion || Risse || Verformung || Karbonatisierung
+  scope_note                         cov= 100.0%  keep_minimum                 str:10               | Rust / metallic corrosion. ISO 12944 / ISO 4628 classificati
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:10               | controlled_vocab_seed
+  name_full                          cov=  80.0%  review_keep_if_distinct      str:8                | Riss / Rissbildung || Verformung / Setzung / Verzug || Karbo
+
+### HuerdeKategorie  (nodes=10, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:10               | hk_technisch || hk_rechtlich || hk_wirtschaftlich || hk_logi
+  name                               cov= 100.0%  keep_minimum                 str:10               | Technisch || Rechtlich || Wirtschaftlich || Logistisch
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:10               | controlled_vocab_seed
+
+### Logistik  (nodes=10, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:10               | log_bauteiltracking || log_just_in_time || log_lagerflaeche 
+  name                               cov= 100.0%  keep_minimum                 str:10               | Bauteiltracking || Just_in_Time || Lagerflaeche || Lagerung
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:10               | controlled_vocab_seed
+
+### Prozessphase  (nodes=10, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:10               | phase_aufbereitung || phase_betrieb || phase_dokumentation |
+  name                               cov= 100.0%  keep_minimum                 str:10               | Aufbereitung || Betrieb || Dokumentation || Identifikation
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:10               | controlled_vocab_seed
+
+### Bausystem  (nodes=9, props=4)
+  id                                 cov= 100.0%  keep_minimum                 str:9                | bsys_betonfertigteil_system || bsys_holz_skelettbau || bsys_
+  name                               cov= 100.0%  keep_minimum                 str:9                | Betonfertigteil_System || Holz_Skelettbau || Holzrahmenbau |
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:9                | controlled_vocab_seed
+  definition                         cov= 33.33%  review_domain_property       str:3                | Großformatiges ostdeutsches Stahlbetonfertigteil-/Plattenbau
+
+### MatchingQualitaet  (nodes=9, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:9                | mq_temporal_easy || mq_temporal_storage || mq_temporal_plann
+  name                               cov= 100.0%  keep_minimum                 str:9                | Temporal: unproblematisch || Temporal: Zwischenlager || Temp
+  name_full                          cov= 100.0%  review_keep_if_distinct      str:9                | Temporales Matching unproblematisch || Temporales Matching d
+  scope_note                         cov= 100.0%  keep_minimum                 str:9                | Donor availability aligns with receiver design; no special t
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:9                | controlled_vocab_seed
+
+### Nutzung  (nodes=9, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:9                | nut_buero || nut_gewerbe || nut_infrastruktur || nut_kultur
+  name                               cov= 100.0%  keep_minimum                 str:9                | Buero || Gewerbe || Infrastruktur || Kultur
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:9                | controlled_vocab_seed
+
+### Schadstoff  (nodes=9, props=4)
+  id                                 cov= 100.0%  keep_minimum                 str:9                | s_radon || s_asbest || s_bleifarbe || s_holzschutzmittel
+  name                               cov= 100.0%  keep_minimum                 str:9                | s_radon || Asbest || Bleifarbe || Holzschutzmittel
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:9                | research_file || controlled_vocab_seed
+  standards_body                     cov= 22.22%  review_domain_property       str:2                | DE: TRGS 521 || EU REACH
+
+### Status  (nodes=9, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:9                | status_geplant || status_in_bau || status_prototyp || status
+  kind                               cov= 100.0%  review_domain_property       str:9                | lifecycle || maturity || unknown
+  name                               cov= 100.0%  keep_minimum                 str:9                | Geplant || In_Bau || Prototyp || Rueckgebaut
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:9                | controlled_vocab_seed
+  aliases                            cov= 22.22%  review_keep_if_used          list[str]:2          | ["Prototypisch","Wettbewerb","status_wettbewerb"] || ["Gebau
+
+### Bauobjektklasse  (nodes=8, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:8                | bok_depot_lager || bok_gebaeude || bok_gebaeudeteil || bok_i
+  name                               cov= 100.0%  keep_minimum                 str:8                | Depot_Lager || Gebaeude || Gebaeudeteil || Infrastruktur
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:8                | controlled_vocab_seed
+
+### Zertifizierungssystem  (nodes=8, props=12)
+  aliases                            cov= 100.0%  review_keep_if_used          list[str]:8          | ["ZertifizierungBewertungssystem"]
+  evidence_basis                     cov= 100.0%  move_to_provenance_model     str:8                | controlled_vocab
+  evidence_confidence                cov= 100.0%  move_to_provenance_model     str:8                | belegt
+  evidence_origin                    cov= 100.0%  move_to_provenance_model     str:8                | source_curated
+  evidence_source_id                 cov= 100.0%  review_relationship_duplicate str:8                | r2_d_cert_restore
+  id                                 cov= 100.0%  keep_minimum                 str:8                | zbs_breeam || zbs_leed || zbs_dgnb || zbs_well
+  name                               cov= 100.0%  keep_minimum                 str:8                | BREEAM || LEED || DGNB || WELL
+  review_status                      cov= 100.0%  review_domain_property       str:8                | needs_source_url_review
+  scheme_kind                        cov= 100.0%  review_domain_property       str:8                | multi_criteria || health_wellness || operational_energy || c
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:8                | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:8                | r2_d_cert_restore
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:8                | mig_strict_source_url_binding_cleanup_2026_05_23
+
+### Akzeptanz  (nodes=7, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:7                | ak_dgnb_zertifizierung || ak_breeam_zertifizierung || ak_lee
+  name                               cov= 100.0%  keep_minimum                 str:7                | DGNB || BREEAM || LEED || Public-Bauherr Pilot
+  name_full                          cov= 100.0%  review_keep_if_distinct      str:7                | DGNB-Zertifizierung akzeptiert Reuse || BREEAM-Zertifizierun
+  scope_note                         cov= 100.0%  keep_minimum                 str:7                | Deutsches Nachhaltigkeitszertifikat (DGNB) gewährt Bonuspunk
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:7                | controlled_vocab_seed
+
+### Tool  (nodes=7, props=13)
+  id                                 cov= 100.0%  keep_minimum                 str:7                | tool_oogstkaart_harvest_map || tool_qflow || tool_bim_bautei
+  kind                               cov= 100.0%  review_domain_property       str:7                | tool
+  name                               cov= 100.0%  keep_minimum                 str:7                | Oogstkaart / Harvest Map logic || Qflow delivery and waste t
+  review_status                      cov= 100.0%  review_domain_property       str:7                | needs_source_url_review
+  source_resolution_status           cov= 100.0%  move_to_provenance_model     str:7                | needs_source_url_review
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:7                | controlled_vocab_seed || case_markdown
+  strict_source_url_cleanup          cov= 100.0%  move_to_provenance_model     str:7                | mig_strict_source_url_binding_cleanup_2026_05_23
+  invalid_candidate_source_urls      cov= 42.86%  move_to_provenance_model     list[str]:3          | ["https://d"] || ["https://www"]
+  strict_candidate_url_array_cleanup cov= 42.86%  move_to_provenance_model     str:3                | mig_strict_candidate_url_array_cleanup_2026_05_23
+  funktion                           cov= 14.29%  review_domain_property       str:1                | Abgleich von stock list und design list für wiederverwendete
+  name_full                          cov= 14.29%  review_keep_if_distinct      str:1                | Reclaimed Construction Material Insurance (Concular + VHV Ve
+  note                               cov= 14.29%  review_keep_if_used          str:1                | Materialsuche und Harvesting-Logik; konkrete Elementliste ni
+  software_basis                     cov= 14.29%  review_domain_property       str:1                | Python
+
+### Bauobjektrolle  (nodes=6, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:6                | bor_bestandsobjekt || bor_donorobjekt || bor_empfaengerobjek
+  name                               cov= 100.0%  keep_minimum                 str:6                | Bestandsobjekt || Donorobjekt || Empfaengerobjekt || Referen
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | controlled_vocab_seed
+
+### Bauteilebene  (nodes=6, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:6                | be_bauteilgruppe || be_einzelbauteil || be_gebaeudeteil || b
+  name                               cov= 100.0%  keep_minimum                 str:6                | Bauteilgruppe || Einzelbauteil || Gebaeudeteil || Materialch
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | controlled_vocab_seed
+
+### Bauweise  (nodes=6, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:6                | bauw_fertigteilbauweise || bauw_holzbauweise || bauw_hybridb
+  name                               cov= 100.0%  keep_minimum                 str:6                | Fertigteilbauweise || Holzbauweise || Hybridbauweise || Mass
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | controlled_vocab_seed
+
+### BauwerkEra  (nodes=6, props=6)
+  id                                 cov= 100.0%  keep_minimum                 str:6                | era_vor_1900 || era_1900_1945 || era_nachkrieg_1945_1970 || 
+  name                               cov= 100.0%  keep_minimum                 str:6                | vor 1900 || 1900–1945 || Nachkrieg 1945–1970 || 1970–1990
+  notes                              cov= 100.0%  review_domain_property       str:6                | Pre-industrial / Wilhelmine. PAK from coal tar high; lime mo
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | controlled_vocab_seed
+  year_from                          cov= 83.33%  review_domain_property       int:5                | 1900 || 1945 || 1970 || 1990
+  year_to                            cov= 83.33%  review_domain_property       int:5                | 1899 || 1945 || 1970 || 1990
+
+### Funktionswechsel  (nodes=6, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:6                | fw_dekorative_funktion || fw_gleiche_funktion || fw_konstruk
+  name                               cov= 100.0%  keep_minimum                 str:6                | Dekorative_Funktion || Gleiche_Funktion || Konstruktive_Funk
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | controlled_vocab_seed
+
+### Geltungsbereich  (nodes=6, props=10)
+  evidence_basis                     cov= 100.0%  move_to_provenance_model     str:6                | official_web_audit
+  evidence_confidence                cov= 100.0%  move_to_provenance_model     str:6                | belegt || teilweise_belegt
+  evidence_origin                    cov= 100.0%  move_to_provenance_model     str:6                | source_curated
+  evidence_source_id                 cov= 100.0%  review_relationship_duplicate str:6                | scope_audit_2026_05_31
+  id                                 cov= 100.0%  keep_minimum                 str:6                | geltungsbereich_ukca_grossbritannien || geltungsbereich_eu_r
+  name                               cov= 100.0%  keep_minimum                 str:6                | UKCA in Grossbritannien || EU-Regulierung || CEN Technical S
+  scope_note                         cov= 100.0%  review_domain_property       str:6                | Great Britain market context for UKCA and continued CE recog
+  scope_system                       cov= 100.0%  review_domain_property       str:6                | UKCA || EU || CEN/CENELEC || Eurocodes
+  scope_type                         cov= 100.0%  review_domain_property       str:6                | legal_market_scope || legal_regulation_scope || standardizat
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | scope_audit_2026_05_31
+
+### Layer  (nodes=6, props=8)
+  brand_position                     cov= 100.0%  review_domain_property       int:6                | 1 || 2 || 3 || 4
+  evidence_basis                     cov= 100.0%  move_to_provenance_model     str:6                | controlled_vocab
+  evidence_confidence                cov= 100.0%  move_to_provenance_model     str:6                | belegt
+  evidence_origin                    cov= 100.0%  move_to_provenance_model     str:6                | source_curated
+  evidence_source_id                 cov= 100.0%  review_relationship_duplicate str:6                | q_brand_how_buildings_learn
+  id                                 cov= 100.0%  keep_minimum                 str:6                | layer_site || layer_structure || layer_skin || layer_service
+  name                               cov= 100.0%  keep_minimum                 str:6                | Site || Structure || Skin || Services
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | r2_a_layer_restore
+
+### ZustandsKlasse  (nodes=6, props=5)
+  id                                 cov= 100.0%  keep_minimum                 str:6                | zk_neuwertig || zk_gebrauchsspuren_funktional || zk_eingesch
+  name                               cov= 100.0%  keep_minimum                 str:6                | Neuwertig || Gebraucht, funktional || Eingeschränkt: Nacharb
+  name_full                          cov= 100.0%  review_keep_if_distinct      str:6                | Neuwertig / wie neu || Gebrauchsspuren, funktional unbeeintr
+  scope_note                         cov= 100.0%  keep_minimum                 str:6                | Minimale Gebrauchsspuren; volle Wiederverwendungseignung in 
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:6                | controlled_vocab_seed
+
+### Geschaeftsmodell  (nodes=5, props=4)
+  id                                 cov= 100.0%  keep_minimum                 str:5                | gm_shop_eigenstock || gm_marketplace_vermittlung || gm_diens
+  name                               cov= 100.0%  keep_minimum                 str:5                | Shop mit Eigenstock || Multi-Vendor-Marktplatz || Urban-Mini
+  review_run                         cov= 100.0%  review_domain_property       str:5                | bauteilboersen_finalest_30_2026_05_31
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:5                | controlled_vocab_seed
+
+### LCAModule  (nodes=5, props=9)
+  en15978_code                       cov= 100.0%  review_domain_property       str:5                | A1_A3 || A4_A5 || B || C1_C4
+  evidence_basis                     cov= 100.0%  move_to_provenance_model     str:5                | controlled_vocab
+  evidence_confidence                cov= 100.0%  move_to_provenance_model     str:5                | belegt
+  evidence_origin                    cov= 100.0%  move_to_provenance_model     str:5                | source_curated
+  evidence_source_id                 cov= 100.0%  review_relationship_duplicate str:5                | q_en_15978_lifecycle_modules
+  id                                 cov= 100.0%  keep_minimum                 str:5                | lz_a1_a3 || lz_a4_a5 || lz_b || lz_c
+  name                               cov= 100.0%  keep_minimum                 str:5                | A1-A3 Produkt || A4-A5 Errichtung || B1-B7 Nutzung || C1-C4 
+  scope_note                         cov= 100.0%  review_domain_property       str:5                | Module A1-A3 per EN 15978: raw-material extraction, transpor
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:5                | r2_b_lca_restore
+
+### Rueckbauverfahren  (nodes=5, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:5                | rv_ausbau_von_bauteilen || rv_betonfraesen || rv_demontage |
+  name                               cov= 100.0%  keep_minimum                 str:5                | Ausbau_von_Bauteilen || Betonfraesen || Demontage || Selekti
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:5                | controlled_vocab_seed
+
+### Tragwerksprinzip  (nodes=4, props=3)
+  id                                 cov= 100.0%  keep_minimum                 str:4                | tp_fachwerk || tp_skeletttragwerk || tp_wand_kern_tragwerk |
+  name                               cov= 100.0%  keep_minimum                 str:4                | Fachwerk || Skeletttragwerk || Wand_Kern_Tragwerk || Wandtra
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:4                | controlled_vocab_seed
+
+### OntologyAnchor  (nodes=2, props=13)
+  id                                 cov= 100.0%  keep_minimum                 str:2                | q_akteursliste_master_md || q_controlled_vocab_seed
+  name                               cov= 100.0%  keep_minimum                 str:2                | akteursliste_master.md || Controlled-vocab seed
+  quelltyp                           cov= 100.0%  review_domain_property       str:2                | actor_registry_markdown || controlled_vocab_seed
+  source_file                        cov= 100.0%  move_to_provenance_model     str:2                | akteursliste_master.md || _neo4j/intake/controlled_vocabular
+  source_scope                       cov= 100.0%  move_to_provenance_model     str:2                | case_markdown || controlled_vocab_seed
+  access_date                        cov=  50.0%  review_domain_property       str:1                | 2026-05-20
+  hinweis                            cov=  50.0%  review_domain_property       str:1                | Sterne wurden bewusst nicht importiert.
+  name_full                          cov=  50.0%  review_keep_if_distinct      str:1                | Controlled vocabulary seed source — definitional taxonomy fi
+  primary_source_url                 cov=  50.0%  move_to_provenance_model     str:1                | https://www.hft-stuttgart.com/research/projects/current/stut
+  source_count                       cov=  50.0%  move_to_provenance_model     int:1                | 163
+  source_resolution_status           cov=  50.0%  move_to_provenance_model     str:1                | url_set_from_legacy_zitiert_quelle
+  source_url_node_ids                cov=  50.0%  review_relationship_duplicate list[str]:1          | ["q_actor_andreas_kretzer_01","q_actor_andreas_kretzer_02","
+  source_urls                        cov=  50.0%  move_to_provenance_model     list[str]:1          | ["https://www.hft-stuttgart.com/research/projects/current/st

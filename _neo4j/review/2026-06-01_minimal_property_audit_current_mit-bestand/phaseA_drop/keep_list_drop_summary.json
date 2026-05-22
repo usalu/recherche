@@ -1,0 +1,2805 @@
+{
+  "created_at_utc": "2026-06-01T08:08:21.987536+00:00",
+  "database": "mit-bestand",
+  "drop_pairs": 465,
+  "graph_counts_before": {
+    "nodes": 39165,
+    "rels": 80135
+  },
+  "guarded_keeps": 3196,
+  "node_property_removals": 69390,
+  "patch_path": "_neo4j\\review\\2026-06-01_minimal_property_audit_current_mit-bestand\\phaseA_drop\\keep_list_drop.patch.jsonl",
+  "patch_records": 7810,
+  "per_pair_counts": [
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 15,
+      "property": "access_date"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 15,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "demoted_legal_condition_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "demoted_legal_condition_records"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 3571,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 3571,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 3571,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 3571,
+      "property": "evidence_source_id"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 79,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 32,
+      "property": "invalid_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_condition_demoted_by"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_source_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_condition_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_condition_source_edge_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1,
+      "property": "legal_conditions"
+    },
+    {
+      "guarded_kept": 1135,
+      "label": "Quelle",
+      "live_nodes": 1759,
+      "property": "name"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1476,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 234,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1476,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 209,
+      "label": "Quelle",
+      "live_nodes": 625,
+      "property": "source_file"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1914,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1128,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1571,
+      "property": "source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1837,
+      "property": "source_url_node_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1476,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 40,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 100,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 39,
+      "property": "strict_node_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 264,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 97,
+      "property": "text_content_chars_pre_strip"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 5,
+      "property": "text_content_retry_result"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 1991,
+      "property": "url_content_length_bytes"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2289,
+      "property": "url_content_type"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2631,
+      "property": "url_final_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2300,
+      "property": "url_http_code"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 5017,
+      "property": "url_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2631,
+      "property": "url_redirect_chain"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2010,
+      "property": "url_server_header"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2631,
+      "property": "url_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2631,
+      "property": "url_user_agent"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 2631,
+      "property": "url_wayback_attempted"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 219,
+      "property": "url_wayback_snapshot"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Quelle",
+      "live_nodes": 219,
+      "property": "url_wayback_timestamp"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 3571,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 3571,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 3571,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 3571,
+      "property": "evidence_source_id"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 32,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 32,
+      "property": "invalid_source_url"
+    },
+    {
+      "guarded_kept": 822,
+      "label": "ExternalLink",
+      "live_nodes": 1446,
+      "property": "name"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 1406,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 1406,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 319,
+      "property": "source_file"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 1601,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 824,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 1569,
+      "property": "source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 1601,
+      "property": "source_url_node_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 1406,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 30,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 32,
+      "property": "strict_node_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 30,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 1991,
+      "property": "url_content_length_bytes"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2289,
+      "property": "url_content_type"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2631,
+      "property": "url_final_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2300,
+      "property": "url_http_code"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 5017,
+      "property": "url_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2631,
+      "property": "url_redirect_chain"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2010,
+      "property": "url_server_header"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2631,
+      "property": "url_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2631,
+      "property": "url_user_agent"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 2631,
+      "property": "url_wayback_attempted"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 219,
+      "property": "url_wayback_snapshot"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ExternalLink",
+      "live_nodes": 219,
+      "property": "url_wayback_timestamp"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 1,
+      "property": "actor_registry_order"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 16,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 216,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 81,
+      "property": "name_full"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 134,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 2,
+      "property": "repair_phase"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 1,
+      "property": "reuse_relevanz_text"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 31,
+      "property": "review_run"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 535,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 134,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 1,
+      "property": "source_file"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 638,
+      "property": "source_freshness_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 638,
+      "property": "source_quality_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 638,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 669,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 507,
+      "property": "source_trust_score"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 29,
+      "property": "source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 122,
+      "property": "source_url_node_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 134,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 216,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 134,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteur",
+      "live_nodes": 553,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 7,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 636,
+      "label": "SectionRef",
+      "live_nodes": 636,
+      "property": "quelltyp"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 636,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 52,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "source_url_node_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 7,
+      "property": "strict_node_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 501,
+      "property": "url_content_length_bytes"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 583,
+      "property": "url_content_type"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "url_final_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 586,
+      "property": "url_http_code"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "url_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "url_redirect_chain"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 512,
+      "property": "url_server_header"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "url_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "url_user_agent"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 629,
+      "property": "url_wayback_attempted"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 49,
+      "property": "url_wayback_snapshot"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "SectionRef",
+      "live_nodes": 49,
+      "property": "url_wayback_timestamp"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "demoted_legal_condition_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "demoted_legal_condition_records"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_condition_demoted_by"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_condition_evidence_source_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_condition_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_condition_source_edge_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 1,
+      "property": "legal_conditions"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 30,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 209,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 30,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 402,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 402,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 332,
+      "property": "source_url_node_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 30,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 30,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 169,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 201,
+      "label": "ResearchDocument",
+      "live_nodes": 201,
+      "property": "title"
+    },
+    {
+      "guarded_kept": 193,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 167,
+      "property": "url_content_length_bytes"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 186,
+      "property": "url_content_type"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "url_final_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 187,
+      "property": "url_http_code"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "url_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "url_redirect_chain"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 146,
+      "property": "url_server_header"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "url_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "url_user_agent"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 193,
+      "property": "url_wayback_attempted"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 14,
+      "property": "url_wayback_snapshot"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ResearchDocument",
+      "live_nodes": 14,
+      "property": "url_wayback_timestamp"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 8,
+      "property": "direct_reuse_relevant"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 26,
+      "property": "donor_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 24,
+      "property": "donor_unknown"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 81,
+      "property": "huelle"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 160,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 1,
+      "property": "menge_kg"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 1,
+      "property": "menge_m"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 14,
+      "property": "menge_m2"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 11,
+      "property": "menge_original_key"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 11,
+      "property": "menge_source"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 20,
+      "property": "menge_stueck"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 7,
+      "property": "menge_t"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 43,
+      "property": "menge_unbekannt"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 319,
+      "property": "name_full"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 115,
+      "property": "raeumlich"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 356,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 356,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 356,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 160,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 356,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilgruppe",
+      "live_nodes": 34,
+      "property": "technisch"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 88,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 203,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 52,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 255,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 255,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 88,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 52,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 214,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 3,
+      "property": "wert_max"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Kennwert",
+      "live_nodes": 3,
+      "property": "wert_min"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 8,
+      "property": "baujahr"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 176,
+      "property": "era_unknown"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 7,
+      "property": "flaeche_m2"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 90,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 184,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 184,
+      "property": "source_freshness_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 184,
+      "property": "source_quality_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 184,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 184,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 184,
+      "property": "source_trust_score"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 90,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauwerk",
+      "live_nodes": 184,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 1,
+      "property": "archive_mentioned_in_corpus"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 1,
+      "property": "archive_mentions"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 5,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 115,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 5,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 120,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 120,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 5,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 5,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "PruefungNachweis",
+      "live_nodes": 120,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 3,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 1,
+      "property": "definition"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 1,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 3,
+      "property": "note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 1,
+      "property": "repair_phase"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 103,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 103,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 103,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 5,
+      "property": "standards_body"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 1,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Norm",
+      "live_nodes": 78,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 15,
+      "property": "access_date"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 15,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 40,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 70,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 25,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 70,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 97,
+      "property": "source_file"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 97,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 95,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 2,
+      "property": "source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 97,
+      "property": "source_url_node_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 70,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 40,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 70,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 95,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 97,
+      "property": "text_content_chars_pre_strip"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Dossier",
+      "live_nodes": 5,
+      "property": "text_content_retry_result"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 6,
+      "property": "actor_registry_mentioned"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 1,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 11,
+      "property": "area_m2_range_max"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 11,
+      "property": "area_m2_range_min"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 74,
+      "property": "bewertung"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 81,
+      "property": "co2_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 81,
+      "property": "cost_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 39,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 7,
+      "property": "node_role"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 33,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 5,
+      "property": "project_category"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 86,
+      "property": "quality_tier"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 86,
+      "property": "quality_tier_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 81,
+      "property": "reuse_share_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 52,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 33,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 86,
+      "property": "source_freshness_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 86,
+      "property": "source_quality_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 86,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 86,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 83,
+      "property": "source_trust_score"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 1,
+      "property": "source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 1,
+      "property": "source_url_node_ids"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 33,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 39,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 33,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Projekt",
+      "live_nodes": 86,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Stadt",
+      "live_nodes": 1,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Stadt",
+      "live_nodes": 74,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Aufbereitungsverfahren",
+      "live_nodes": 4,
+      "property": "is_parent_category"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Aufbereitungsverfahren",
+      "live_nodes": 62,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Aufbereitungsverfahren",
+      "live_nodes": 62,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Aufbereitungsverfahren",
+      "live_nodes": 62,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Aufbereitungsverfahren",
+      "live_nodes": 62,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Leistungsanforderung",
+      "live_nodes": 1,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Leistungsanforderung",
+      "live_nodes": 1,
+      "property": "archive_mentioned_in_corpus"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Leistungsanforderung",
+      "live_nodes": 1,
+      "property": "archive_mentions"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Leistungsanforderung",
+      "live_nodes": 46,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Leistungsanforderung",
+      "live_nodes": 46,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Leistungsanforderung",
+      "live_nodes": 46,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Leistungsanforderung",
+      "live_nodes": 46,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "actor_registry_mentioned"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "classified_reason"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "co2_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "cost_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "end_year"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "eu_contribution_eur"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 2,
+      "property": "eu_funding_programme"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "funding_amount_eur"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "funding_programme"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "funding_source"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "grant_agreement_reference"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 10,
+      "property": "host_institution"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "import_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 2,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 3,
+      "property": "lead_organisation"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "needs_dossier_extraction"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "needs_project_file"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 10,
+      "property": "node_role"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 1,
+      "property": "note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "original_label"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "primary_source_url"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 5,
+      "property": "project_category"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 10,
+      "property": "quality_tier"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_computed_by"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "quality_tier_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_has_components"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_has_evidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_has_land"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_has_metric"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_has_year"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_n_bg"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_n_bg_quantified"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "quality_tier_n_curated_evidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "reuse_share_facts"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 29,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "source_count"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "source_freshness_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "source_quality_summary"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 29,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 29,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 2,
+      "property": "source_trust_score"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 4,
+      "property": "start_year"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 10,
+      "property": "status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 2,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 6,
+      "property": "strict_invalid_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Programm",
+      "live_nodes": 29,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Huerde",
+      "live_nodes": 28,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Huerde",
+      "live_nodes": 28,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Huerde",
+      "live_nodes": 28,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 1,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 1,
+      "property": "archive_mentioned_in_corpus"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 1,
+      "property": "archive_mentions"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 5,
+      "property": "name_full"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 1,
+      "property": "note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 26,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 1,
+      "property": "scope_note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 26,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 26,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Material",
+      "live_nodes": 10,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteurrolle",
+      "live_nodes": 1,
+      "property": "scope_note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteurrolle",
+      "live_nodes": 24,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteiltyp",
+      "live_nodes": 1,
+      "property": "name_full"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteiltyp",
+      "live_nodes": 23,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteiltyp",
+      "live_nodes": 1,
+      "property": "scope_note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteiltyp",
+      "live_nodes": 23,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteiltyp",
+      "live_nodes": 23,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteiltyp",
+      "live_nodes": 8,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 22,
+      "property": "era_unknown"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 1,
+      "property": "flaeche_m2"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 10,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 22,
+      "property": "is_material_depot"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 22,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 22,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 22,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 10,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialdepot",
+      "live_nodes": 22,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 1,
+      "property": "funktion"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 4,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 5,
+      "property": "name_full"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 3,
+      "property": "note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 18,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 1,
+      "property": "software_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 18,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 18,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 4,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Software",
+      "live_nodes": 18,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Land",
+      "live_nodes": 7,
+      "property": "country_iso"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Land",
+      "live_nodes": 16,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 16,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 16,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 16,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 16,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 16,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 16,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 16,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "RechtlicheBedingung",
+      "live_nodes": 6,
+      "property": "stub_note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Ressourcenquelle",
+      "live_nodes": 7,
+      "property": "datenqualitaet"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Ressourcenquelle",
+      "live_nodes": 16,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauproduktstatus",
+      "live_nodes": 15,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Verbindungstechnik",
+      "live_nodes": 1,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Verbindungstechnik",
+      "live_nodes": 1,
+      "property": "note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Verbindungstechnik",
+      "live_nodes": 15,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Verbindungstechnik",
+      "live_nodes": 15,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Verbindungstechnik",
+      "live_nodes": 15,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Verbindungstechnik",
+      "live_nodes": 1,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Verbindungstechnik",
+      "live_nodes": 15,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 1,
+      "property": "beschaffungsweg"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 1,
+      "property": "distanz_km"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 4,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 1,
+      "property": "methodische_abgrenzung"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 1,
+      "property": "prozess"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 14,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 14,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 14,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 1,
+      "property": "status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 4,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wiederverwendungskette",
+      "live_nodes": 14,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Methode",
+      "live_nodes": 13,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Methode",
+      "live_nodes": 13,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Methode",
+      "live_nodes": 13,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Wirtschaft",
+      "live_nodes": 12,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Marktmodell",
+      "live_nodes": 11,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialgruppe",
+      "live_nodes": 1,
+      "property": "name_full"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Materialgruppe",
+      "live_nodes": 11,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "WiederverwendungsArt",
+      "live_nodes": 11,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akteurtyp",
+      "live_nodes": 10,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "BauaufgabeIntervention",
+      "live_nodes": 10,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Beschaffungsweg",
+      "live_nodes": 1,
+      "property": "datenqualitaet"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Beschaffungsweg",
+      "live_nodes": 1,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Beschaffungsweg",
+      "live_nodes": 10,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Defekt",
+      "live_nodes": 10,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "HuerdeKategorie",
+      "live_nodes": 10,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Logistik",
+      "live_nodes": 10,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Prozessphase",
+      "live_nodes": 10,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bausystem",
+      "live_nodes": 9,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "MatchingQualitaet",
+      "live_nodes": 9,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Nutzung",
+      "live_nodes": 9,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Schadstoff",
+      "live_nodes": 9,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Status",
+      "live_nodes": 9,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauobjektklasse",
+      "live_nodes": 8,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "aliases"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "evidence_source_id"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Zertifizierungssystem",
+      "live_nodes": 8,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Akzeptanz",
+      "live_nodes": 7,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 1,
+      "property": "funktion"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 3,
+      "property": "invalid_candidate_source_urls"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 1,
+      "property": "name_full"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 1,
+      "property": "note"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 7,
+      "property": "review_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 1,
+      "property": "software_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 7,
+      "property": "source_resolution_status"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 7,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 3,
+      "property": "strict_candidate_url_array_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tool",
+      "live_nodes": 7,
+      "property": "strict_source_url_cleanup"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauobjektrolle",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauteilebene",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Bauweise",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "BauwerkEra",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Funktionswechsel",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Geltungsbereich",
+      "live_nodes": 6,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Geltungsbereich",
+      "live_nodes": 6,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Geltungsbereich",
+      "live_nodes": 6,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Geltungsbereich",
+      "live_nodes": 6,
+      "property": "evidence_source_id"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Geltungsbereich",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Layer",
+      "live_nodes": 6,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Layer",
+      "live_nodes": 6,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Layer",
+      "live_nodes": 6,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Layer",
+      "live_nodes": 6,
+      "property": "evidence_source_id"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Layer",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "ZustandsKlasse",
+      "live_nodes": 6,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Geschaeftsmodell",
+      "live_nodes": 5,
+      "property": "review_run"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Geschaeftsmodell",
+      "live_nodes": 5,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "LCAModule",
+      "live_nodes": 5,
+      "property": "evidence_basis"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "LCAModule",
+      "live_nodes": 5,
+      "property": "evidence_confidence"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "LCAModule",
+      "live_nodes": 5,
+      "property": "evidence_origin"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "LCAModule",
+      "live_nodes": 5,
+      "property": "evidence_source_id"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "LCAModule",
+      "live_nodes": 5,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Rueckbauverfahren",
+      "live_nodes": 5,
+      "property": "source_scope"
+    },
+    {
+      "guarded_kept": 0,
+      "label": "Tragwerksprinzip",
+      "live_nodes": 4,
+      "property": "source_scope"
+    }
+  ]
+}

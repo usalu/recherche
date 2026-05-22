@@ -1,0 +1,4141 @@
+{
+  "confirmation_required": "APPLY ier_evidence_recovery_deletes.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2263,
+    "relationships": 14846
+  },
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14846
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-07T09:57:31.116205+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\ier_evidence_recovery_deletes.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_de_ziegel",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_de_ziegel->s_bleifarbe",
+          "source_quote": "Bleifarbe in Anstrichen v.a. vor 1960.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1153088630374271061,
+        "to": "s_bleifarbe",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_de_ziegel",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_bleifarbe",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_big_dig_building_boston",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_big_dig_building_boston->s_schwermetalle",
+          "pollutant_basis": "material_only",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1153093028420784821,
+        "to": "s_schwermetalle",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_big_dig_building_boston",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_maison_vignette_auderghem",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_maison_vignette_auderghem->s_bleifarbe",
+          "pollutant_basis": "material_only",
+          "source_quote": "Bleifarbe in Anstrichen v.a. vor 1960.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1153093028420785504,
+        "to": "s_bleifarbe",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_maison_vignette_auderghem",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_bleifarbe",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_biopartner_5_leiden_oegstgeest",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448159,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_biopartner_5_leiden_oegstgeest",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_bluecity_offices_rotterdam",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448177,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_bluecity_offices_rotterdam",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448350,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+      "line": 6,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_liander_alliander_hq_duiven",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448472,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_liander_alliander_hq_duiven",
+      "line": 7,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_montessori_maassluis",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448580,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_montessori_maassluis",
+      "line": 8,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_superlocal_expogebouw_bleijerheide",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448799,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_superlocal_expogebouw_bleijerheide",
+      "line": 9,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_villa_welpeloo_enschede",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448969,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_villa_welpeloo_enschede",
+      "line": 10,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_woongroep_boschgaard_den_bosch",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141448996,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_woongroep_boschgaard_den_bosch",
+      "line": 11,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_circl_abn_amro",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155336032141449642,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_circl_abn_amro",
+      "line": 12,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_biopartner_5_leiden_oegstgeest",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653075935,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_biopartner_5_leiden_oegstgeest",
+      "line": 13,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_bluecity_offices_rotterdam",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653075953,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_bluecity_offices_rotterdam",
+      "line": 14,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653076126,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+      "line": 15,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_liander_alliander_hq_duiven",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653076248,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_liander_alliander_hq_duiven",
+      "line": 16,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_montessori_maassluis",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653076356,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_montessori_maassluis",
+      "line": 17,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_superlocal_expogebouw_bleijerheide",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653076575,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_superlocal_expogebouw_bleijerheide",
+      "line": 18,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_villa_welpeloo_enschede",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653076745,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_villa_welpeloo_enschede",
+      "line": 19,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_woongroep_boschgaard_den_bosch",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653076772,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_woongroep_boschgaard_den_bosch",
+      "line": 20,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_circl_abn_amro",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1155337131653077418,
+        "to": "rf_genehmigungs_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_circl_abn_amro",
+      "line": 21,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_genehmigungs_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_big_dig_building_boston",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_big_dig_building_boston->s_bleifarbe",
+          "pollutant_basis": "material_only",
+          "source_quote": "Bleifarbe in Anstrichen v.a. vor 1960.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1155344828234470069,
+        "to": "s_bleifarbe",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_big_dig_building_boston",
+      "line": 22,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_bleifarbe",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_liander_alliander_hq_duiven",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_liander_alliander_hq_duiven->s_schwermetalle",
+          "pollutant_basis": "material_only",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1155344828234470680,
+        "to": "s_schwermetalle",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_liander_alliander_hq_duiven",
+      "line": 23,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_lo_reninge_town_hall_facade",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_lo_reninge_town_hall_facade->s_schwermetalle",
+          "pollutant_basis": "material_only",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1155344828234470704,
+        "to": "s_schwermetalle",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_lo_reninge_town_hall_facade",
+      "line": 24,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_umar_unit",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_umar_unit->s_schwermetalle",
+          "pollutant_basis": "material_only",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1155344828234471761,
+        "to": "s_schwermetalle",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_umar_unit",
+      "line": 25,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rf_reusedokumentationfrage",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1157587831955130024,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "rf_reusedokumentationfrage",
+      "line": 26,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_biopartner_5_leiden_oegstgeest",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1157588931466761183,
+        "to": "rf_reusedokumentationfrage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_biopartner_5_leiden_oegstgeest",
+      "line": 27,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_reusedokumentationfrage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_montessori_maassluis",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1157588931466761604,
+        "to": "rf_reusedokumentationfrage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_montessori_maassluis",
+      "line": 28,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_reusedokumentationfrage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_villa_welpeloo_enschede",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1157588931466761993,
+        "to": "rf_reusedokumentationfrage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "p_villa_welpeloo_enschede",
+      "line": 29,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rf_reusedokumentationfrage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_liander_alliander_hq_duiven",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_liander_alliander_hq_duiven->s_bleifarbe",
+          "pollutant_basis": "material_only",
+          "source_quote": "Bleifarbe in Anstrichen v.a. vor 1960.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1157596628048155928,
+        "to": "s_bleifarbe",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_liander_alliander_hq_duiven",
+      "line": 30,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_bleifarbe",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_lo_reninge_town_hall_facade",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.25,
+          "metadata_sidecar_key": "rel:ERFORDERT_SCHADSTOFFPRUEFUNG:p_lo_reninge_town_hall_facade->s_bleifarbe",
+          "pollutant_basis": "material_only",
+          "source_quote": "Bleifarbe in Anstrichen v.a. vor 1960.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1157596628048155952,
+        "to": "s_bleifarbe",
+        "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+      },
+      "from": "p_lo_reninge_town_hall_facade",
+      "line": 31,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_bleifarbe",
+      "type": "ERFORDERT_SCHADSTOFFPRUEFUNG"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_ch_beton",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_ch_beton->s_schwermetalle",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1159844029815326795,
+        "to": "s_schwermetalle",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_ch_beton",
+      "line": 32,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_de_beton",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_de_beton->s_schwermetalle",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1162095829629012042,
+        "to": "s_schwermetalle",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_de_beton",
+      "line": 33,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_no_beton_hollow_core_slabs",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_no_beton_hollow_core_slabs->s_schwermetalle",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1162095829629012045,
+        "to": "s_schwermetalle",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_no_beton_hollow_core_slabs",
+      "line": 34,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_be_naturstein",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_be_naturstein->s_schwermetalle",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1162095829629012050,
+        "to": "s_schwermetalle",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_be_naturstein",
+      "line": 35,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_ch_naturstein",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_ch_naturstein->s_schwermetalle",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1162095829629012051,
+        "to": "s_schwermetalle",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_ch_naturstein",
+      "line": 36,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_biopartner_5_leiden_oegstgeest",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189151,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_biopartner_5_leiden_oegstgeest",
+      "line": 37,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_bluecity_offices_rotterdam",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189169,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_bluecity_offices_rotterdam",
+      "line": 38,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189342,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+      "line": 39,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_liander_alliander_hq_duiven",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189464,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_liander_alliander_hq_duiven",
+      "line": 40,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_montessori_maassluis",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189572,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_montessori_maassluis",
+      "line": 41,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_superlocal_expogebouw_bleijerheide",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189791,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_superlocal_expogebouw_bleijerheide",
+      "line": 42,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_villa_welpeloo_enschede",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189961,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_villa_welpeloo_enschede",
+      "line": 43,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_woongroep_boschgaard_den_bosch",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396189988,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_woongroep_boschgaard_den_bosch",
+      "line": 44,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_circl_abn_amro",
+        "properties": {
+          "confidence": 0.9,
+          "source_quote": "Article 4.166 Bbl facilitates 1-to-1 reuse of building products without quality loss, allowing direct redeployment in new construction works.",
+          "source_url": "https://climate-laws.org/document/the-environment-buildings-decree-of-the-netherlands-besluit-bouwwerken-leefomgeving-bbl_1057"
+        },
+        "rel_internal_id": 1164343231396190634,
+        "to": "nf_produktstatus_und_leistungserklaerung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "p_circl_abn_amro",
+      "line": 45,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nf_produktstatus_und_leistungserklaerung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_be_beton",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_be_beton->s_schwermetalle",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1164347629442697288,
+        "to": "s_schwermetalle",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_be_beton",
+      "line": 46,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rr_nl_beton",
+        "properties": {
+          "basis": "screening_unverified",
+          "confidence": 0.5,
+          "metadata_sidecar_key": "rel:HAT_SCHADSTOFFRISIKO:rr_nl_beton->s_schwermetalle",
+          "source_quote": "Schwermetalle (Pb/Cd/Hg/Cr) in Beschichtungen/Laborbauten; REACH-beschraenkt.",
+          "source_url": "https://www.schadstoff-kompass.de/grenzwerte-fuer-schadstoffbelastungen/",
+          "updated_at_utc": "2026-06-05T15:44:19.507156+00:00"
+        },
+        "rel_internal_id": 1164347629442697289,
+        "to": "s_schwermetalle",
+        "type": "HAT_SCHADSTOFFRISIKO"
+      },
+      "from": "rr_nl_beton",
+      "line": 47,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "s_schwermetalle",
+      "type": "HAT_SCHADSTOFFRISIKO"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "actor_id": "rotordc",
+          "actor_name": "RotorDC",
+          "basis_project_edge_id": "r_rotordc__BETEILIGT_AN__p_maison_vignette_auderghem",
+          "basis_project_edge_type": "BETEILIGT_AN",
+          "bauteilgruppe_id": "bg_reuse_ziegel_mehrere_maison_vignette_facade_claustra",
+          "bauteilgruppe_name": "3.000 wiederverwendete…",
+          "confidence": 0.4,
+          "connection_kind": "reuse_supply_or_material_hub_candidate",
+          "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:409",
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Actor/page match (3.000); project/component (maison+3.000)",
+          "evidence_url": "https://opalis.eu/fr/projets/maison-vignette",
+          "id": "r_project_part_actor_rotordc__BETEILIGT_AN__bg_reuse_ziegel_mehrere_maison_vignette_facade_claustra",
+          "metadata_sidecar_key": "rel:BETEILIGT_AN:rotordc->bg_ziegel_mehrere_maison_vignette_facade_claustra",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+          "shared_bauteiltyp_ids": [
+            "bt_wand"
+          ],
+          "shared_material_ids": [
+            "mat_ziegel"
+          ]
+        },
+        "rel_internal_id": 6917630182710837657,
+        "to": "bg_ziegel_mehrere_maison_vignette_facade_claustra",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 48,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bg_ziegel_mehrere_maison_vignette_facade_claustra",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "actor_id": "rotordc",
+          "actor_name": "RotorDC",
+          "basis_project_edge_id": "r_rotordc__BETEILIGT_AN__p_maison_vignette_auderghem",
+          "basis_project_edge_type": "BETEILIGT_AN",
+          "bauteilgruppe_id": "bg_reuse_keramik_mehrere_maison_vignette_terracotta_floor_tiles",
+          "bauteilgruppe_name": "13,5 m² wiederverwendete…",
+          "confidence": 0.4,
+          "connection_kind": "reuse_supply_or_material_hub_candidate",
+          "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:411",
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Actor/page match (13,5); project/component (maison+13,5)",
+          "evidence_url": "https://opalis.eu/fr/projets/maison-vignette",
+          "id": "r_project_part_actor_rotordc__BETEILIGT_AN__bg_reuse_keramik_mehrere_maison_vignette_terracotta_floor_tiles",
+          "metadata_sidecar_key": "rel:BETEILIGT_AN:rotordc->bg_keramik_mehrere_maison_vignette_terracotta_floor_tiles",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+          "shared_bauteiltyp_ids": [
+            "bt_ausbau",
+            "bt_boden"
+          ],
+          "shared_material_ids": [
+            "mat_keramik"
+          ]
+        },
+        "rel_internal_id": 6917630182710837659,
+        "to": "bg_keramik_mehrere_maison_vignette_terracotta_floor_tiles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 49,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bg_keramik_mehrere_maison_vignette_terracotta_floor_tiles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bam_bouw_techniek",
+        "properties": {
+          "id": "r_bam_bouw_techniek__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676602952,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bam_bouw_techniek",
+      "line": 50,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tu_delft",
+        "properties": {
+          "id": "r_tu_delft__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676602953,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "tu_delft",
+      "line": 51,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "big_bundesimmobilien",
+        "properties": {
+          "id": "r_big_bundesimmobilien__BETEILIGT_AN__p_meduni_campus_mariannengasse"
+        },
+        "rel_internal_id": 1153022659676602954,
+        "to": "p_meduni_campus_mariannengasse",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "big_bundesimmobilien",
+      "line": 52,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_meduni_campus_mariannengasse",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "meduni_wien",
+        "properties": {
+          "id": "r_meduni_wien__BETEILIGT_AN__p_meduni_campus_mariannengasse"
+        },
+        "rel_internal_id": 1153022659676602955,
+        "to": "p_meduni_campus_mariannengasse",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "meduni_wien",
+      "line": 53,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_meduni_campus_mariannengasse",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "stiftung_pwg",
+        "properties": {
+          "id": "r_stiftung_pwg__BETEILIGT_AN__p_schaerenmoosstrasse_zuerich"
+        },
+        "rel_internal_id": 1153022659676602959,
+        "to": "p_schaerenmoosstrasse_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "stiftung_pwg",
+      "line": 54,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_schaerenmoosstrasse_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kanton_basel_stadt",
+        "properties": {
+          "id": "r_kanton_basel_stadt__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676602960,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "kanton_basel_stadt",
+      "line": 55,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "oxara_ag",
+        "properties": {
+          "id": "r_oxara_ag__BETEILIGT_AN__p_lysp8_basel"
+        },
+        "rel_internal_id": 1153022659676602965,
+        "to": "p_lysp8_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "oxara_ag",
+      "line": 56,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_lysp8_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "id": "r_new_horizon_urban_mining__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676602970,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 57,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "lcp_circulair",
+        "properties": {
+          "id": "r_lcp_circulair__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676602971,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "lcp_circulair",
+      "line": 58,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "icon_real_estate",
+        "properties": {
+          "id": "r_icon_real_estate__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676602972,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "icon_real_estate",
+      "line": 59,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "donkergroen",
+        "properties": {
+          "id": "r_donkergroen__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676602973,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "donkergroen",
+      "line": 60,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "wiener_aufzugmuseum",
+        "properties": {
+          "id": "r_wiener_aufzugmuseum__BETEILIGT_AN__p_meduni_campus_mariannengasse"
+        },
+        "rel_internal_id": 1153022659676602976,
+        "to": "p_meduni_campus_mariannengasse",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "wiener_aufzugmuseum",
+      "line": 61,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_meduni_campus_mariannengasse",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kaufmann_zimmerei",
+        "properties": {
+          "id": "r_kaufmann_zimmerei__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603050,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "kaufmann_zimmerei",
+      "line": 62,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "amstein_walthert",
+        "properties": {
+          "id": "r_amstein_walthert__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603051,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "amstein_walthert",
+      "line": 63,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "balzer_ingenieure",
+        "properties": {
+          "id": "r_balzer_ingenieure__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603052,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "balzer_ingenieure",
+      "line": 64,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "weber_energie_bauphysik",
+        "properties": {
+          "id": "r_weber_energie_bauphysik__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603053,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "weber_energie_bauphysik",
+      "line": 65,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "nimbus",
+        "properties": {
+          "id": "r_nimbus__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603055,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "nimbus",
+      "line": 66,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "magna_glaskeramik",
+        "properties": {
+          "id": "r_magna_glaskeramik__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603056,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "magna_glaskeramik",
+      "line": 67,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "ecovative",
+        "properties": {
+          "id": "r_ecovative__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603057,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "ecovative",
+      "line": 68,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "desso_tarkett",
+        "properties": {
+          "id": "r_desso_tarkett__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1153022659676603058,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "desso_tarkett",
+      "line": 69,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mario_monotti",
+        "properties": {
+          "id": "r_mario_monotti__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603060,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "mario_monotti",
+      "line": 70,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "usus_la",
+        "properties": {
+          "id": "r_usus_la__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603061,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "usus_la",
+      "line": 71,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "roger_keller",
+        "properties": {
+          "id": "r_roger_keller__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603062,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "roger_keller",
+      "line": 72,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "ana_olalquiaga",
+        "properties": {
+          "id": "r_ana_olalquiaga__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603063,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "ana_olalquiaga",
+      "line": 73,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "caretta_weidmann",
+        "properties": {
+          "id": "r_caretta_weidmann__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603064,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "caretta_weidmann",
+      "line": 74,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gti_engineering",
+        "properties": {
+          "id": "r_gti_engineering__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603065,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "gti_engineering",
+      "line": 75,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "afc_basel",
+        "properties": {
+          "id": "r_afc_basel__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603066,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "afc_basel",
+      "line": 76,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "senn_technology",
+        "properties": {
+          "id": "r_senn_technology__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603067,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "senn_technology",
+      "line": 77,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "anima_engineering",
+        "properties": {
+          "id": "r_anima_engineering__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603068,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "anima_engineering",
+      "line": 78,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "digvis_gmbh",
+        "properties": {
+          "id": "r_digvis_gmbh__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603070,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "digvis_gmbh",
+      "line": 79,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "perez_schmidlin_bauingenieure",
+        "properties": {
+          "id": "r_perez_schmidlin_bauingenieure__BETEILIGT_AN__p_schaerenmoosstrasse_zuerich"
+        },
+        "rel_internal_id": 1153022659676603071,
+        "to": "p_schaerenmoosstrasse_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "perez_schmidlin_bauingenieure",
+      "line": 80,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_schaerenmoosstrasse_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "andreas_geser_landschaftsarchitekten",
+        "properties": {
+          "id": "r_andreas_geser_landschaftsarchitekten__BETEILIGT_AN__p_schaerenmoosstrasse_zuerich"
+        },
+        "rel_internal_id": 1153022659676603072,
+        "to": "p_schaerenmoosstrasse_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "andreas_geser_landschaftsarchitekten",
+      "line": 81,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_schaerenmoosstrasse_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "stefan_perez",
+        "properties": {
+          "id": "r_stefan_perez__BETEILIGT_AN__p_schaerenmoosstrasse_zuerich"
+        },
+        "rel_internal_id": 1153022659676603073,
+        "to": "p_schaerenmoosstrasse_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "stefan_perez",
+      "line": 82,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_schaerenmoosstrasse_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "michael_schmidlin",
+        "properties": {
+          "id": "r_michael_schmidlin__BETEILIGT_AN__p_schaerenmoosstrasse_zuerich"
+        },
+        "rel_internal_id": 1153022659676603074,
+        "to": "p_schaerenmoosstrasse_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "michael_schmidlin",
+      "line": 83,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_schaerenmoosstrasse_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "andreas_geser",
+        "properties": {
+          "id": "r_andreas_geser__BETEILIGT_AN__p_schaerenmoosstrasse_zuerich"
+        },
+        "rel_internal_id": 1153022659676603075,
+        "to": "p_schaerenmoosstrasse_zuerich",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "andreas_geser",
+      "line": 84,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_schaerenmoosstrasse_zuerich",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "repoxit_ag",
+        "properties": {
+          "id": "r_repoxit_ag__BETEILIGT_AN__p_lysp8_basel"
+        },
+        "rel_internal_id": 1153022659676603076,
+        "to": "p_lysp8_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "repoxit_ag",
+      "line": 85,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_lysp8_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kibag",
+        "properties": {
+          "id": "r_kibag__BETEILIGT_AN__p_lysp8_basel"
+        },
+        "rel_internal_id": 1153022659676603077,
+        "to": "p_lysp8_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "kibag",
+      "line": 86,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_lysp8_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "faltlhauser_krapf",
+        "properties": {
+          "id": "r_faltlhauser_krapf__BETEILIGT_AN__p_jugendtreff_ingersheim"
+        },
+        "rel_internal_id": 1153022659676603081,
+        "to": "p_jugendtreff_ingersheim",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "faltlhauser_krapf",
+      "line": 87,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_jugendtreff_ingersheim",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "traject",
+        "properties": {
+          "id": "r_traject__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676603086,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "traject",
+      "line": 88,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "vermaat",
+        "properties": {
+          "id": "r_vermaat__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676603087,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "vermaat",
+      "line": 89,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "exasun",
+        "properties": {
+          "id": "r_exasun__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676603088,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "exasun",
+      "line": 90,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "fagerhult",
+        "properties": {
+          "id": "r_fagerhult__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676603089,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "fagerhult",
+      "line": 91,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "victory_group",
+        "properties": {
+          "id": "r_victory_group__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676603090,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "victory_group",
+      "line": 92,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "ter_velde_den_besten",
+        "properties": {
+          "id": "r_ter_velde_den_besten__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1153022659676603091,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "ter_velde_den_besten",
+      "line": 93,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bauteilkatalog_immobilien_basel_stadt",
+        "properties": {
+          "confidence": 0.9,
+          "id": "r_bauteilkatalog_immobilien_basel_stadt__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676603262,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bauteilkatalog_immobilien_basel_stadt",
+      "line": 94,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gmp_architekten",
+        "properties": {
+          "id": "r_gmp_architekten__BETEILIGT_AN__p_christ_pavilion_volkenroda"
+        },
+        "rel_internal_id": 1153022659676607257,
+        "to": "p_christ_pavilion_volkenroda",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "gmp_architekten",
+      "line": 95,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_christ_pavilion_volkenroda",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "meinhard_von_gerkan",
+        "properties": {
+          "id": "r_meinhard_von_gerkan__BETEILIGT_AN__p_christ_pavilion_volkenroda"
+        },
+        "rel_internal_id": 1153022659676607258,
+        "to": "p_christ_pavilion_volkenroda",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "meinhard_von_gerkan",
+      "line": 96,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_christ_pavilion_volkenroda",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "joachim_zais",
+        "properties": {
+          "id": "r_joachim_zais__BETEILIGT_AN__p_christ_pavilion_volkenroda"
+        },
+        "rel_internal_id": 1153022659676607259,
+        "to": "p_christ_pavilion_volkenroda",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "joachim_zais",
+      "line": 97,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_christ_pavilion_volkenroda",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "evangelisches_buero_expo_2000",
+        "properties": {
+          "id": "r_evangelisches_buero_expo_2000__BETEILIGT_AN__p_christ_pavilion_volkenroda"
+        },
+        "rel_internal_id": 1153022659676607260,
+        "to": "p_christ_pavilion_volkenroda",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "evangelisches_buero_expo_2000",
+      "line": 98,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_christ_pavilion_volkenroda",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "ev_luth_landeskirche_hannover",
+        "properties": {
+          "id": "r_ev_luth_landeskirche_hannover__BETEILIGT_AN__p_christ_pavilion_volkenroda"
+        },
+        "rel_internal_id": 1153022659676607261,
+        "to": "p_christ_pavilion_volkenroda",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "ev_luth_landeskirche_hannover",
+      "line": 99,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_christ_pavilion_volkenroda",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kloster_volkenroda_jesus_bruderschaft",
+        "properties": {
+          "id": "r_kloster_volkenroda_jesus_bruderschaft__BETEILIGT_AN__p_christ_pavilion_volkenroda"
+        },
+        "rel_internal_id": 1153022659676607262,
+        "to": "p_christ_pavilion_volkenroda",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "kloster_volkenroda_jesus_bruderschaft",
+      "line": 100,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_christ_pavilion_volkenroda",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "andreas_felger",
+        "properties": {
+          "id": "r_andreas_felger__BETEILIGT_AN__p_christ_pavilion_volkenroda"
+        },
+        "rel_internal_id": 1153022659676607263,
+        "to": "p_christ_pavilion_volkenroda",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "andreas_felger",
+      "line": 101,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_christ_pavilion_volkenroda",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "zrs_ingenieure",
+        "properties": {
+          "id": "r_zrs_ingenieure__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+        },
+        "rel_internal_id": 1153022659676607315,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "zrs_ingenieure",
+      "line": 102,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "brandkontrolle",
+        "properties": {
+          "id": "r_brandkontrolle__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+        },
+        "rel_internal_id": 1153022659676607318,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "brandkontrolle",
+      "line": 103,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "akustik_ingenieurbuero_moll",
+        "properties": {
+          "id": "r_akustik_ingenieurbuero_moll__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+        },
+        "rel_internal_id": 1153022659676607319,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "akustik_ingenieurbuero_moll",
+      "line": 104,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "immobilien_basel_stadt",
+        "properties": {
+          "id": "r_immobilien_basel_stadt__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607334,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "immobilien_basel_stadt",
+      "line": 105,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "hochbauamt_basel_stadt",
+        "properties": {
+          "id": "r_hochbauamt_basel_stadt__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607335,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "hochbauamt_basel_stadt",
+      "line": 106,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "s_plus_b",
+        "properties": {
+          "id": "r_s_plus_b__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607337,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "s_plus_b",
+      "line": 107,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "jauslin_stebler",
+        "properties": {
+          "id": "r_jauslin_stebler__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607338,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "jauslin_stebler",
+      "line": 108,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "pro_engineering",
+        "properties": {
+          "id": "r_pro_engineering__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607339,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "pro_engineering",
+      "line": 109,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "haustec_engineering",
+        "properties": {
+          "id": "r_haustec_engineering__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607340,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "haustec_engineering",
+      "line": 110,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rapp_ag",
+        "properties": {
+          "id": "r_rapp_ag__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607341,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rapp_ag",
+      "line": 111,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "husner_ag_holzbau",
+        "properties": {
+          "id": "r_husner_ag_holzbau__BETEILIGT_AN__p_elys_kultur_gewerbehaus_basel"
+        },
+        "rel_internal_id": 1153022659676607342,
+        "to": "p_elys_kultur_gewerbehaus_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "husner_ag_holzbau",
+      "line": 112,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "philippe_samyn_and_partners",
+        "properties": {
+          "id": "r_philippe_samyn_and_partners__BETEILIGT_AN__p_europa_building_brussels"
+        },
+        "rel_internal_id": 1153022659676607353,
+        "to": "p_europa_building_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "philippe_samyn_and_partners",
+      "line": 113,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_europa_building_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "studio_valle_progettazioni",
+        "properties": {
+          "id": "r_studio_valle_progettazioni__BETEILIGT_AN__p_europa_building_brussels"
+        },
+        "rel_internal_id": 1153022659676607354,
+        "to": "p_europa_building_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "studio_valle_progettazioni",
+      "line": 114,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_europa_building_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "buro_happold",
+        "properties": {
+          "id": "r_buro_happold__BETEILIGT_AN__p_europa_building_brussels"
+        },
+        "rel_internal_id": 1153022659676607355,
+        "to": "p_europa_building_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "buro_happold",
+      "line": 115,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_europa_building_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "belgian_buildings_agency",
+        "properties": {
+          "id": "r_belgian_buildings_agency__BETEILIGT_AN__p_europa_building_brussels"
+        },
+        "rel_internal_id": 1153022659676607356,
+        "to": "p_europa_building_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "belgian_buildings_agency",
+      "line": 116,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_europa_building_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bopro",
+        "properties": {
+          "id": "r_bopro__BETEILIGT_AN__p_europa_building_brussels"
+        },
+        "rel_internal_id": 1153022659676607357,
+        "to": "p_europa_building_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bopro",
+      "line": 117,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_europa_building_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "jan_de_nul",
+        "properties": {
+          "id": "r_jan_de_nul__BETEILIGT_AN__p_europa_building_brussels"
+        },
+        "rel_internal_id": 1153022659676607358,
+        "to": "p_europa_building_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "jan_de_nul",
+      "line": 118,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_europa_building_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "melanie_devret",
+        "properties": {
+          "id": "r_melanie_devret__BETEILIGT_AN__p_ferme_du_rail_paris"
+        },
+        "rel_internal_id": 1153022659676607382,
+        "to": "p_ferme_du_rail_paris",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "melanie_devret",
+      "line": 119,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_ferme_du_rail_paris",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "normandie_amenagement",
+        "properties": {
+          "id": "r_normandie_amenagement__BETEILIGT_AN__p_grande_halle_de_colombelles"
+        },
+        "rel_internal_id": 1153022659676607411,
+        "to": "p_grande_halle_de_colombelles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "normandie_amenagement",
+      "line": 120,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_grande_halle_de_colombelles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "construire",
+        "properties": {
+          "id": "r_construire__BETEILIGT_AN__p_grande_halle_de_colombelles"
+        },
+        "rel_internal_id": 1153022659676607412,
+        "to": "p_grande_halle_de_colombelles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "construire",
+      "line": 121,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_grande_halle_de_colombelles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "stephanie_paly",
+        "properties": {
+          "id": "r_stephanie_paly__BETEILIGT_AN__p_grande_halle_de_colombelles"
+        },
+        "rel_internal_id": 1153022659676607414,
+        "to": "p_grande_halle_de_colombelles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "stephanie_paly",
+      "line": 122,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_grande_halle_de_colombelles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "ligne_be",
+        "properties": {
+          "id": "r_ligne_be__BETEILIGT_AN__p_grande_halle_de_colombelles"
+        },
+        "rel_internal_id": 1153022659676607415,
+        "to": "p_grande_halle_de_colombelles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "ligne_be",
+      "line": 123,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_grande_halle_de_colombelles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "albert_and_co",
+        "properties": {
+          "id": "r_albert_and_co__BETEILIGT_AN__p_grande_halle_de_colombelles"
+        },
+        "rel_internal_id": 1153022659676607416,
+        "to": "p_grande_halle_de_colombelles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "albert_and_co",
+      "line": 124,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_grande_halle_de_colombelles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kla_engineers_and_builders",
+        "properties": {
+          "id": "r_kla_engineers_and_builders__BETEILIGT_AN__p_boulder_fire_station_3"
+        },
+        "rel_internal_id": 1153022659676607501,
+        "to": "p_boulder_fire_station_3",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "kla_engineers_and_builders",
+      "line": 125,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_boulder_fire_station_3",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "boulder_community_health",
+        "properties": {
+          "id": "r_boulder_community_health__BETEILIGT_AN__p_boulder_fire_station_3"
+        },
+        "rel_internal_id": 1153022659676607503,
+        "to": "p_boulder_fire_station_3",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "boulder_community_health",
+      "line": 126,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_boulder_fire_station_3",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "vplus_projectiles",
+        "properties": {
+          "id": "r_vplus_projectiles__BETEILIGT_AN__p_musee_de_folklore_mouscron"
+        },
+        "rel_internal_id": 1153022659676607906,
+        "to": "p_musee_de_folklore_mouscron",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "vplus_projectiles",
+      "line": 127,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_musee_de_folklore_mouscron",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "westvlaamse_steencentrale_interconstruct",
+        "properties": {
+          "id": "r_westvlaamse_steencentrale_interconstruct__BETEILIGT_AN__p_musee_de_folklore_mouscron"
+        },
+        "rel_internal_id": 1153022659676607912,
+        "to": "p_musee_de_folklore_mouscron",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "westvlaamse_steencentrale_interconstruct",
+      "line": 128,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_musee_de_folklore_mouscron",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "ak_maconda",
+        "properties": {
+          "id": "r_ak_maconda__BETEILIGT_AN__p_plp_london_hq_circular_studio_fitout"
+        },
+        "rel_internal_id": 1153022659676607964,
+        "to": "p_plp_london_hq_circular_studio_fitout",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "ak_maconda",
+      "line": 129,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_plp_london_hq_circular_studio_fitout",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bruxelles_proprete_net_brussel",
+        "properties": {
+          "id": "r_bruxelles_proprete_net_brussel__BETEILIGT_AN__p_recypark_demets_anderlecht"
+        },
+        "rel_internal_id": 1153022659676608006,
+        "to": "p_recypark_demets_anderlecht",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bruxelles_proprete_net_brussel",
+      "line": 130,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_recypark_demets_anderlecht",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "witteveen_bos",
+        "properties": {
+          "id": "r_witteveen_bos__BETEILIGT_AN__p_recypark_demets_anderlecht"
+        },
+        "rel_internal_id": 1153022659676608008,
+        "to": "p_recypark_demets_anderlecht",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "witteveen_bos",
+      "line": 131,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_recypark_demets_anderlecht",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "les_marneurs_janne_saario",
+        "properties": {
+          "id": "r_les_marneurs_janne_saario__BETEILIGT_AN__p_recypark_demets_anderlecht"
+        },
+        "rel_internal_id": 1153022659676608011,
+        "to": "p_recypark_demets_anderlecht",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "les_marneurs_janne_saario",
+      "line": 132,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_recypark_demets_anderlecht",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bikubenfonden",
+        "properties": {
+          "id": "r_bikubenfonden__BETEILIGT_AN__p_thoravej_29_copenhagen"
+        },
+        "rel_internal_id": 1153022659676608155,
+        "to": "p_thoravej_29_copenhagen",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bikubenfonden",
+      "line": 133,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_thoravej_29_copenhagen",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "abc_raadgivende_ingenioerer",
+        "properties": {
+          "id": "r_abc_raadgivende_ingenioerer__BETEILIGT_AN__p_thoravej_29_copenhagen"
+        },
+        "rel_internal_id": 1153022659676608158,
+        "to": "p_thoravej_29_copenhagen",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "abc_raadgivende_ingenioerer",
+      "line": 134,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_thoravej_29_copenhagen",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "stora_enso",
+        "properties": {
+          "id": "r_stora_enso__BETEILIGT_AN__p_timber_square_london"
+        },
+        "rel_internal_id": 1153022659676608176,
+        "to": "p_timber_square_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "stora_enso",
+      "line": 135,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_timber_square_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "klingelhoefer_kroetsch",
+        "properties": {
+          "id": "r_klingelhoefer_kroetsch__BETEILIGT_AN__p_jugendtreff_ingersheim"
+        },
+        "rel_internal_id": 1153022659676608559,
+        "to": "p_jugendtreff_ingersheim",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "klingelhoefer_kroetsch",
+      "line": 136,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_jugendtreff_ingersheim",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "plp_architecture",
+        "properties": {
+          "id": "r_ak_plp_architecture__BETEILIGT_AN__p_plp_london_hq_circular_studio_fitout"
+        },
+        "rel_internal_id": 1153022659676608801,
+        "to": "p_plp_london_hq_circular_studio_fitout",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "plp_architecture",
+      "line": 137,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_plp_london_hq_circular_studio_fitout",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "id": "r_concular__BETEILIGT_AN__p_crclr_house_impact_hub_berlin"
+        },
+        "rel_internal_id": 1153022659676608941,
+        "to": "p_crclr_house_impact_hub_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "concular",
+      "line": 138,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_crclr_house_impact_hub_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_basel_overall",
+        "properties": {
+          "id": "r_bauteilboerse_basel_overall__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1153022659676637201,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bauteilboerse_basel_overall",
+      "line": 139,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "id": "r_Bellastock__BETEILIGT_AN__p_ferme_du_rail_paris"
+        },
+        "rel_internal_id": 1155274459490288357,
+        "to": "p_ferme_du_rail_paris",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bellastock",
+      "line": 140,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_ferme_du_rail_paris",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "heyne_tillett_steel",
+        "properties": {
+          "id": "r_heyne_tillett_steel__BETEILIGT_AN__p_timber_square_london"
+        },
+        "rel_internal_id": 1155274459490292838,
+        "to": "p_timber_square_london",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "heyne_tillett_steel",
+      "line": 141,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_timber_square_london",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "de_groot_en_visser",
+        "properties": {
+          "id": "r_de_groot_en_visser__BETEILIGT_AN__p_circl_abn_amro"
+        },
+        "rel_internal_id": 1155274459490293392,
+        "to": "p_circl_abn_amro",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "de_groot_en_visser",
+      "line": 142,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_circl_abn_amro",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mehr_als_wohnen",
+        "properties": {
+          "id": "r_mehr_als_wohnen__BETEILIGT_AN__p_lysp8_basel"
+        },
+        "rel_internal_id": 1155274459490293658,
+        "to": "p_lysp8_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "mehr_als_wohnen",
+      "line": 143,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_lysp8_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "encore_heureux",
+        "properties": {
+          "id": "r_encore_heureux__BETEILIGT_AN__p_grande_halle_de_colombelles"
+        },
+        "rel_internal_id": 1155274459490294010,
+        "to": "p_grande_halle_de_colombelles",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "encore_heureux",
+      "line": 144,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_grande_halle_de_colombelles",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "id": "r_rotordc__BETEILIGT_AN__p_umar_unit"
+        },
+        "rel_internal_id": 1162029858931349892,
+        "to": "p_umar_unit",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 145,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_umar_unit",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "zirkular",
+        "properties": {
+          "id": "r_zirkular__BETEILIGT_AN__p_elementa_walkeweg"
+        },
+        "rel_internal_id": 1166533458558720041,
+        "to": "p_elementa_walkeweg",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "zirkular",
+      "line": 146,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_elementa_walkeweg",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_brent_cross_town_primary_substation_london",
+        "properties": {
+          "confidence": 0.6,
+          "role": "donor"
+        },
+        "rel_internal_id": 1153087530862646290,
+        "to": "bw_cancelled_oil_gas_pipeline_projects",
+        "type": "HAT_BAUWERK"
+      },
+      "from": "p_brent_cross_town_primary_substation_london",
+      "line": 147,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bw_cancelled_oil_gas_pipeline_projects",
+      "type": "HAT_BAUWERK"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "2hs",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_2hs__VERBUNDEN_MIT_AKTEUR__dirk_e_hebel"
+        },
+        "rel_internal_id": 1157538353931884888,
+        "to": "dirk_e_hebel",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "2hs",
+      "line": 148,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "dirk_e_hebel",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "2hs",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_2hs__VERBUNDEN_MIT_AKTEUR__kit"
+        },
+        "rel_internal_id": 1155286554118199640,
+        "to": "kit",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "2hs",
+      "line": 149,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "kit",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "3xn",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_3xn__VERBUNDEN_MIT_AKTEUR__gxn"
+        },
+        "rel_internal_id": 1155286554118199830,
+        "to": "gxn",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "3xn",
+      "line": 150,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "gxn",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "3xn",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_3xn__VERBUNDEN_MIT_AKTEUR__vandkunsten"
+        },
+        "rel_internal_id": 1157538353931885078,
+        "to": "vandkunsten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "3xn",
+      "line": 151,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "vandkunsten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "Werner_Sobek",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_Werner_Sobek__VERBUNDEN_MIT_AKTEUR__vanessa_propach"
+        },
+        "rel_internal_id": 1157538353931884891,
+        "to": "vanessa_propach",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "Werner_Sobek",
+      "line": 152,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "vanessa_propach",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "akt_ii",
+        "properties": {
+          "id": "r_akt_ii__VERBUNDEN_MIT_AKTEUR__symmetrys",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304513600,
+        "to": "symmetrys",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "akt_ii",
+      "line": 153,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "symmetrys",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "andreas_sonderegger",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_andreas_sonderegger__VERBUNDEN_MIT_AKTEUR__zhaw"
+        },
+        "rel_internal_id": 1153034754304514421,
+        "to": "zhaw",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "andreas_sonderegger",
+      "line": 154,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "zhaw",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "annabelle_von_reutern",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_annabelle_von_reutern__VERBUNDEN_MIT_AKTEUR__tomas"
+        },
+        "rel_internal_id": 1153034754304514564,
+        "to": "tomas",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "annabelle_von_reutern",
+      "line": 155,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "tomas",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "annette_hillebrandt",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_annette_hillebrandt__VERBUNDEN_MIT_AKTEUR__universitaet_wuppertal"
+        },
+        "rel_internal_id": 1153034754304514425,
+        "to": "universitaet_wuppertal",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "annette_hillebrandt",
+      "line": 156,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "universitaet_wuppertal",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "baukarussell",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_baukarussell__VERBUNDEN_MIT_AKTEUR__oekologie_institut"
+        },
+        "rel_internal_id": 1153034754304514479,
+        "to": "oekologie_institut",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "baukarussell",
+      "line": 157,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "oekologie_institut",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "baumab_kassel",
+        "properties": {
+          "confidence": 0.9,
+          "id": "r_baumab_kassel__VERBUNDEN_MIT_AKTEUR__surap_gmbh"
+        },
+        "rel_internal_id": 1155286554118194058,
+        "to": "surap_gmbh",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "baumab_kassel",
+      "line": 158,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "surap_gmbh",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "id": "r_bellastock__VERBUNDEN_MIT_AKTEUR__hugo_topalov"
+        },
+        "rel_internal_id": 1164293753372934885,
+        "to": "hugo_topalov",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 159,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "hugo_topalov",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "id": "r_bellastock__VERBUNDEN_MIT_AKTEUR__sarah_westerfeld"
+        },
+        "rel_internal_id": 1166545553186620133,
+        "to": "sarah_westerfeld",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 160,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "sarah_westerfeld",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bioregional",
+        "properties": {
+          "id": "r_bioregional__VERBUNDEN_MIT_AKTEUR__ellis_and_moore",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304513918,
+        "to": "ellis_and_moore",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bioregional",
+      "line": 161,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "ellis_and_moore",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bureau_sla",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_bureau_sla__VERBUNDEN_MIT_AKTEUR__peter_van_assche"
+        },
+        "rel_internal_id": 1155286554118199544,
+        "to": "peter_van_assche",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bureau_sla",
+      "line": 162,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "peter_van_assche",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cantillon",
+        "properties": {
+          "id": "r_cantillon__VERBUNDEN_MIT_AKTEUR__akt_ii",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118193171,
+        "to": "akt_ii",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cantillon",
+      "line": 163,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "akt_ii",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cantillon",
+        "properties": {
+          "id": "r_cantillon__VERBUNDEN_MIT_AKTEUR__cleveland_steel_tubes",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304507923,
+        "to": "cleveland_steel_tubes",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cantillon",
+      "line": 164,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cleveland_steel_tubes",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {
+          "id": "r_cleveland_steel_tubes__VERBUNDEN_MIT_AKTEUR__akt_ii",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118198375,
+        "to": "akt_ii",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 165,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "akt_ii",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_concular__VERBUNDEN_MIT_AKTEUR__annabelle_von_reutern"
+        },
+        "rel_internal_id": 1162041953559255469,
+        "to": "annabelle_von_reutern",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 166,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "annabelle_von_reutern",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_concular__VERBUNDEN_MIT_AKTEUR__tomas"
+        },
+        "rel_internal_id": 1157538353931884973,
+        "to": "tomas",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 167,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "tomas",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "de_architekten_cie",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_de_architekten_cie__VERBUNDEN_MIT_AKTEUR__hans_hammink"
+        },
+        "rel_internal_id": 1155286554118199541,
+        "to": "hans_hammink",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "de_architekten_cie",
+      "line": 168,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "hans_hammink",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "die_zusammenarbeiter",
+        "properties": {
+          "id": "r_die_zusammenarbeiter__VERBUNDEN_MIT_AKTEUR__lxsy_architektur",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304514091,
+        "to": "lxsy_architektur",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "die_zusammenarbeiter",
+      "line": 169,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "lxsy_architektur",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "dirk_e_hebel",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_dirk_e_hebel__VERBUNDEN_MIT_AKTEUR__kit"
+        },
+        "rel_internal_id": 1153034754304514408,
+        "to": "kit",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "dirk_e_hebel",
+      "line": 170,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "kit",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "eva_stricker",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_eva_stricker__VERBUNDEN_MIT_AKTEUR__zhaw"
+        },
+        "rel_internal_id": 1153034754304514444,
+        "to": "zhaw",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "eva_stricker",
+      "line": 171,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "zhaw",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gain",
+        "properties": {
+          "id": "r_gain__VERBUNDEN_MIT_AKTEUR__Lendager",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304513730,
+        "to": "Lendager",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gain",
+      "line": 172,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Lendager",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gardiner_and_theobald",
+        "properties": {
+          "id": "r_gardiner_and_theobald__VERBUNDEN_MIT_AKTEUR__akt_ii",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304507922,
+        "to": "akt_ii",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gardiner_and_theobald",
+      "line": 173,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "akt_ii",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gardiner_and_theobald",
+        "properties": {
+          "id": "r_gardiner_and_theobald__VERBUNDEN_MIT_AKTEUR__cantillon",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1157538353931878418,
+        "to": "cantillon",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gardiner_and_theobald",
+      "line": 174,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cantillon",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gardiner_and_theobald",
+        "properties": {
+          "id": "r_gardiner_and_theobald__VERBUNDEN_MIT_AKTEUR__cleveland_steel_tubes",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118193170,
+        "to": "cleveland_steel_tubes",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gardiner_and_theobald",
+      "line": 175,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cleveland_steel_tubes",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "grand_huit",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_grand_huit__VERBUNDEN_MIT_AKTEUR__julia_turpin"
+        },
+        "rel_internal_id": 1155286554118199449,
+        "to": "julia_turpin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "grand_huit",
+      "line": 176,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "julia_turpin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gruner_ag",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_gruner_ag__VERBUNDEN_MIT_AKTEUR__ullrich_dickgiesser"
+        },
+        "rel_internal_id": 1157538353931884886,
+        "to": "ullrich_dickgiesser",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gruner_ag",
+      "line": 177,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "ullrich_dickgiesser",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "guido_brandi",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_guido_brandi__VERBUNDEN_MIT_AKTEUR__zhaw"
+        },
+        "rel_internal_id": 1153034754304514449,
+        "to": "zhaw",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "guido_brandi",
+      "line": 178,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "zhaw",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gxn",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_gxn__VERBUNDEN_MIT_AKTEUR__vandkunsten"
+        },
+        "rel_internal_id": 1157538353931885077,
+        "to": "vandkunsten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gxn",
+      "line": 179,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "vandkunsten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "hester_van_dijk",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_hester_van_dijk__VERBUNDEN_MIT_AKTEUR__overtreders_w"
+        },
+        "rel_internal_id": 1153034754304514305,
+        "to": "overtreders_w",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "hester_van_dijk",
+      "line": 180,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "overtreders_w",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "htwg_konstanz",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_htwg_konstanz__VERBUNDEN_MIT_AKTEUR__thomas_stark"
+        },
+        "rel_internal_id": 1155286554118199342,
+        "to": "thomas_stark",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "htwg_konstanz",
+      "line": 181,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "thomas_stark",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "jan_haerens",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_jan_haerens__VERBUNDEN_MIT_AKTEUR__ouest_architecture"
+        },
+        "rel_internal_id": 1153034754304514278,
+        "to": "ouest_architecture",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "jan_haerens",
+      "line": 182,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "ouest_architecture",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "jinhee_park",
+        "properties": {
+          "id": "r_jinhee_park__VERBUNDEN_MIT_AKTEUR__paul_pedini",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304512699,
+        "to": "paul_pedini",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "jinhee_park",
+      "line": 183,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "paul_pedini",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "john_hong",
+        "properties": {
+          "id": "r_john_hong__VERBUNDEN_MIT_AKTEUR__jinhee_park",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304512698,
+        "to": "jinhee_park",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "john_hong",
+      "line": 184,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "jinhee_park",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "john_hong",
+        "properties": {
+          "id": "r_john_hong__VERBUNDEN_MIT_AKTEUR__paul_pedini",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118197946,
+        "to": "paul_pedini",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "john_hong",
+      "line": 185,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "paul_pedini",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "katrine_west_kristensen",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_katrine_west_kristensen__VERBUNDEN_MIT_AKTEUR__vandkunsten"
+        },
+        "rel_internal_id": 1153034754304514286,
+        "to": "vandkunsten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "katrine_west_kristensen",
+      "line": 186,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "vandkunsten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kerstin_mueller",
+        "properties": {
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_kerstin_mueller__VERBUNDEN_MIT_AKTEUR__bauburo_in_situ"
+        },
+        "rel_internal_id": 1157538353931884618,
+        "to": "baubuero_in_situ",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "kerstin_mueller",
+      "line": 187,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "baubuero_in_situ",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kerstin_mueller",
+        "properties": {
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_kerstin_mueller__VERBUNDEN_MIT_AKTEUR__zirkular"
+        },
+        "rel_internal_id": 1153034754304514122,
+        "to": "zirkular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "kerstin_mueller",
+      "line": 188,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "zirkular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kevin_straub",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_kevin_straub__VERBUNDEN_MIT_AKTEUR__pirmin_jung_schweiz_ag"
+        },
+        "rel_internal_id": 1153034754304514416,
+        "to": "pirmin_jung_schweiz_ag",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "kevin_straub",
+      "line": 189,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "pirmin_jung_schweiz_ag",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "markus_meissner",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_markus_meissner__VERBUNDEN_MIT_AKTEUR__oekologie_institut"
+        },
+        "rel_internal_id": 1155286554118199759,
+        "to": "oekologie_institut",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "markus_meissner",
+      "line": 190,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "oekologie_institut",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "matthew_crabbe",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_matthew_crabbe__VERBUNDEN_MIT_AKTEUR__Natural_Building_Lab"
+        },
+        "rel_internal_id": 1153034754304514245,
+        "to": "Natural_Building_Lab",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "matthew_crabbe",
+      "line": 191,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Natural_Building_Lab",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "matthew_crabbe",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_matthew_crabbe__VERBUNDEN_MIT_AKTEUR__nbl_studio"
+        },
+        "rel_internal_id": 1155286554118199493,
+        "to": "nbl_studio",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "matthew_crabbe",
+      "line": 192,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nbl_studio",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "new_horizon",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_new_horizon__VERBUNDEN_MIT_AKTEUR__michel_baars"
+        },
+        "rel_internal_id": 1155286554118199729,
+        "to": "michel_baars",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "new_horizon",
+      "line": 193,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "michel_baars",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "overtreders_w",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_overtreders_w__VERBUNDEN_MIT_AKTEUR__reinder_bakker"
+        },
+        "rel_internal_id": 1157538353931884790,
+        "to": "reinder_bakker",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "overtreders_w",
+      "line": 194,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "reinder_bakker",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "petra_jablonicka",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_petra_jablonicka__VERBUNDEN_MIT_AKTEUR__urselmann_interior"
+        },
+        "rel_internal_id": 1153034754304514353,
+        "to": "urselmann_interior",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "petra_jablonicka",
+      "line": 195,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "urselmann_interior",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__maarten_gielen"
+        },
+        "rel_internal_id": 1157538353931884932,
+        "to": "maarten_gielen",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "rotordc",
+      "line": 196,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "maarten_gielen",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "sina_jansen",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_sina_jansen__VERBUNDEN_MIT_AKTEUR__Natural_Building_Lab"
+        },
+        "rel_internal_id": 1153034754304514263,
+        "to": "Natural_Building_Lab",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "sina_jansen",
+      "line": 197,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Natural_Building_Lab",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "single_speed_design",
+        "properties": {
+          "id": "r_single_speed_design__VERBUNDEN_MIT_AKTEUR__jinhee_park",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118197945,
+        "to": "jinhee_park",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "single_speed_design",
+      "line": 198,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "jinhee_park",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "single_speed_design",
+        "properties": {
+          "id": "r_single_speed_design__VERBUNDEN_MIT_AKTEUR__john_hong",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304512697,
+        "to": "john_hong",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "single_speed_design",
+      "line": 199,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "john_hong",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "single_speed_design",
+        "properties": {
+          "id": "r_single_speed_design__VERBUNDEN_MIT_AKTEUR__paul_pedini",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1157538353931883193,
+        "to": "paul_pedini",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "single_speed_design",
+      "line": 200,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "paul_pedini",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "soren_nielsen",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_soren_nielsen__VERBUNDEN_MIT_AKTEUR__vandkunsten"
+        },
+        "rel_internal_id": 1153034754304514187,
+        "to": "vandkunsten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "soren_nielsen",
+      "line": 201,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "vandkunsten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "stephane_damsin",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_stephane_damsin__VERBUNDEN_MIT_AKTEUR__ouest_architecture"
+        },
+        "rel_internal_id": 1153034754304514282,
+        "to": "ouest_architecture",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "stephane_damsin",
+      "line": 202,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "ouest_architecture",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "sven_urselmann",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_sven_urselmann__VERBUNDEN_MIT_AKTEUR__urselmann_interior"
+        },
+        "rel_internal_id": 1153034754304514356,
+        "to": "urselmann_interior",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "sven_urselmann",
+      "line": 203,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "urselmann_interior",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {
+          "id": "r_trnsfrm_eg__VERBUNDEN_MIT_AKTEUR__die_zusammenarbeiter",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1157538353931884586,
+        "to": "die_zusammenarbeiter",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "trnsfrm_eg",
+      "line": 204,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "die_zusammenarbeiter",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "trnsfrm_eg",
+        "properties": {
+          "id": "r_trnsfrm_eg__VERBUNDEN_MIT_AKTEUR__lxsy_architektur",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118199338,
+        "to": "lxsy_architektur",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "trnsfrm_eg",
+      "line": 205,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "lxsy_architektur",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "zrs_ingenieure",
+        "properties": {
+          "id": "r_zrs_ingenieure__VERBUNDEN_MIT_AKTEUR__die_zusammenarbeiter",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118198099,
+        "to": "die_zusammenarbeiter",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "zrs_ingenieure",
+      "line": 206,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "die_zusammenarbeiter",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "zrs_ingenieure",
+        "properties": {
+          "id": "r_zrs_ingenieure__VERBUNDEN_MIT_AKTEUR__trnsfrm_eg",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304512851,
+        "to": "trnsfrm_eg",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "zrs_ingenieure",
+      "line": 207,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "trnsfrm_eg",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bauteilkatalog_immobilien_basel_stadt",
+        "properties": {
+          "confidence": 0.9,
+          "id": "r_bauteilkatalog_immobilien_basel_stadt__NUTZT_SOFTWARE__tool_bauteilkatalog"
+        },
+        "rel_internal_id": 1153030356257997694,
+        "to": "tool_bauteilkatalog",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "bauteilkatalog_immobilien_basel_stadt",
+      "line": 208,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "tool_bauteilkatalog",
+      "type": "NUTZT_SOFTWARE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+        "properties": {
+          "id": "r_p_kindergarten_moeoeslistrasse_manegg_zuerich__NUTZT_SOFTWARE__tool_bauteilkatalog"
+        },
+        "rel_internal_id": 1153030356258002179,
+        "to": "tool_bauteilkatalog",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "line": 209,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "tool_bauteilkatalog",
+      "type": "NUTZT_SOFTWARE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_elementa_walkeweg",
+        "properties": {
+          "id": "r_p_elementa_walkeweg__NUTZT_SOFTWARE__tool_bauteilkatalog"
+        },
+        "rel_internal_id": 1155282156071688717,
+        "to": "tool_bauteilkatalog",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "p_elementa_walkeweg",
+      "line": 210,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "tool_bauteilkatalog",
+      "type": "NUTZT_SOFTWARE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_plp_feste_fitout_komponenten",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_plp_feste_fitout_komponenten__NUTZT_SOFTWARE__tool_material_passports_maconda"
+        },
+        "rel_internal_id": 6917637879292237284,
+        "to": "tool_material_passports_maconda",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "bg_mehrere_mehrere_plp_feste_fitout_komponenten",
+      "line": 211,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "tool_material_passports_maconda",
+      "type": "NUTZT_SOFTWARE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_recrete_footbridge_reused_concrete_blocks",
+        "properties": {
+          "id": "r_p_recrete_footbridge_reused_concrete_blocks__NUTZT_SOFTWARE__software_recrete_finite_element_model"
+        },
+        "rel_internal_id": 6917637879292237292,
+        "to": "software_recrete_finite_element_model",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "p_recrete_footbridge_reused_concrete_blocks",
+      "line": 212,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "software_recrete_finite_element_model",
+      "type": "NUTZT_SOFTWARE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "p_plp_london_hq_circular_studio_fitout",
+        "properties": {
+          "id": "r_p_plp_london_hq_circular_studio_fitout__NUTZT_SOFTWARE__tool_material_passports_maconda"
+        },
+        "rel_internal_id": 6919889679105922532,
+        "to": "tool_material_passports_maconda",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "p_plp_london_hq_circular_studio_fitout",
+      "line": 213,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "tool_material_passports_maconda",
+      "type": "NUTZT_SOFTWARE"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bg_beton_mehrere_recrete_betonbloecke_bogensegmente",
+        "properties": {
+          "id": "r_bg_reuse_beton_mehrere_recrete_betonbloecke_bogensegmente__NUTZT_SOFTWARE__software_recrete_finite_element_model"
+        },
+        "rel_internal_id": 6922141478919607788,
+        "to": "software_recrete_finite_element_model",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "bg_beton_mehrere_recrete_betonbloecke_bogensegmente",
+      "line": 214,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "software_recrete_finite_element_model",
+      "type": "NUTZT_SOFTWARE"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 214,
+    "would_delete_rel": 214
+  }
+}

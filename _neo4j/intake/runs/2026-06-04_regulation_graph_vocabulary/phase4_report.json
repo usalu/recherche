@@ -1,0 +1,78 @@
+{
+  "acceptance": {
+    "Schadstoff": 13,
+    "Schadstoff_with_nachweis": 13,
+    "Schadstoff_with_trigger": 13,
+    "duplicate_typisch_pairs": 0,
+    "legacy_pollutant_edges_not_marked_unverified": 0,
+    "remaining_HAS_RISK_POLLUTANT": 100,
+    "remaining_REQUIRES_VERIFICATION_FOR": 37,
+    "unsourced_kept_schadstoff_screening_edges": 0
+  },
+  "after": {
+    "ERFORDERT_NACHWEIS": 1475,
+    "HAS_RISK_POLLUTANT": 100,
+    "REQUIRES_VERIFICATION_FOR": 37,
+    "TRIGGERS_REGULIERUNGSFRAGE": 1100,
+    "TYPISCH_BEI_BAUTEILTYP": 10,
+    "TYPISCH_BEI_ERA": 15,
+    "TYPISCH_BEI_MATERIAL": 74
+  },
+  "applied": {
+    "case_edges": {
+      "candidate_nodes": 4,
+      "case_edges_written": 4
+    },
+    "overlay_edges": {
+      "ERFORDERT_NACHWEIS": 13,
+      "TRIGGERS_REGULIERUNGSFRAGE": 13,
+      "pollutants": 13
+    },
+    "screening_edges": {
+      "TYPISCH_BEI_BAUTEILTYP": 10,
+      "TYPISCH_BEI_ERA": 15,
+      "TYPISCH_BEI_MATERIAL": 18
+    }
+  },
+  "before": {
+    "ERFORDERT_NACHWEIS": 1458,
+    "HAS_RISK_POLLUTANT": 754,
+    "REQUIRES_VERIFICATION_FOR": 339,
+    "TRIGGERS_REGULIERUNGSFRAGE": 1087,
+    "TYPISCH_BEI_BAUTEILTYP": 10,
+    "TYPISCH_BEI_ERA": 15,
+    "TYPISCH_BEI_MATERIAL": 74
+  },
+  "commit": true,
+  "created_at_utc": "2026-06-05T13:40:58.576762+00:00",
+  "database": "mit-bestand",
+  "phase": "phase4_schadstoff_revidence",
+  "planned": {
+    "case_edges": {
+      "candidate_nodes": 4
+    },
+    "legacy_edges_to_delete_with_replacement": 956,
+    "legacy_edges_to_tag_screening_unverified": 137,
+    "legacy_to_delete_by_type": {
+      "HAS_RISK_POLLUTANT": 654,
+      "REQUIRES_VERIFICATION_FOR": 302
+    },
+    "legacy_to_tag_by_type": {
+      "HAS_RISK_POLLUTANT": 100,
+      "REQUIRES_VERIFICATION_FOR": 37
+    },
+    "overlay_edges": {
+      "ERFORDERT_NACHWEIS": 13,
+      "TRIGGERS_REGULIERUNGSFRAGE": 13,
+      "pollutants": 13
+    },
+    "screening_edges_to_enrich": {
+      "TYPISCH_BEI_BAUTEILTYP": 10,
+      "TYPISCH_BEI_ERA": 15,
+      "TYPISCH_BEI_MATERIAL": 18
+    }
+  },
+  "snapshot": {
+    "relationships": 3737
+  }
+}

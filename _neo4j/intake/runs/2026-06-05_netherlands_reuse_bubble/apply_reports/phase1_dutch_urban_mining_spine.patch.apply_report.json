@@ -1,0 +1,258 @@
+{
+  "confirmation_required": "APPLY phase1_dutch_urban_mining_spine.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2431,
+    "relationships": 15612
+  },
+  "counts_after_expected": {
+    "nodes": 2431,
+    "relationships": 15612
+  },
+  "counts_before": {
+    "nodes": 2431,
+    "relationships": 15583
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:02:09.152713+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\patches\\phase1_dutch_urban_mining_spine.patch.jsonl",
+  "records": [
+    {
+      "from": "superuse_studios_2012architecten",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_superuse_harvest"
+    },
+    {
+      "from": "superuse_studios_2012architecten",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_superuse_oogst"
+    },
+    {
+      "from": "superuse_studios_2012architecten",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "new_horizon_urban_mining"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "superuse_studios_2012architecten"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_newhorizon_home"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_newhorizon_harvest"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_newhorizon_donor"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_newhorizon_collective"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_circo_newhorizon"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "insert_marketplace"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "new_horizon_urban_mining"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "madaster"
+    },
+    {
+      "from": "madaster",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "new_horizon_urban_mining"
+    },
+    {
+      "from": "superuse_studios_2012architecten",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "insert_marketplace"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "superuse_studios_2012architecten"
+    },
+    {
+      "from": "superuse_studios_2012architecten",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "madaster"
+    },
+    {
+      "from": "madaster",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "superuse_studios_2012architecten"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_insert_marketplace"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_insert_services"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "madaster"
+    },
+    {
+      "from": "madaster",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "insert_marketplace"
+    },
+    {
+      "from": "madaster",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_madaster_passport"
+    },
+    {
+      "from": "madaster",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_madaster_position"
+    },
+    {
+      "from": "madaster",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_madaster_eu"
+    },
+    {
+      "from": "madaster",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_madaster_abn_circl"
+    },
+    {
+      "from": "madaster",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "city_of_utrecht"
+    },
+    {
+      "from": "city_of_utrecht",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "madaster"
+    },
+    {
+      "from": "city_of_utrecht",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "new_horizon_urban_mining"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "city_of_utrecht"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 29,
+    "would_create_rel": 29
+  }
+}

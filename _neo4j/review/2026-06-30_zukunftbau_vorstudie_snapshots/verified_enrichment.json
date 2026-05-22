@@ -1,0 +1,370 @@
+{
+  "_readme": "External-verified enrichment layer for RSI v3/v6. Matched to graph project by case-insensitive substring on 'match'. v6 overrides: verified_enrichment_v6.json (profile, gates G1-G6, criteria K1-K14). reuse_scope also: single_trade, interior_fitout, platform_volume, unknown.",
+  "entries": [
+    {
+      "match": "KA13",
+      "canonical": "Kristian Augusts gate 13 (KA13), Oslo",
+      "donors": 25,
+      "donors_note": "25+ demolition/renovation projects & surplus stocks; incl. 21 hollow-core slabs from Regjeringskvartalet, ~70% steel, 1500 m² ceiling, ~2200 m² carpet, 20000 bricks.",
+      "reuse_share": 80.0,
+      "reuse_scope": "whole_building",
+      "area_m2_gross": 4297.0,
+      "co2_reduktion_pct": 70.0,
+      "dfd": true,
+      "design_quality": 72,
+      "design_note": "Bricks in lime mortar (removable), demountable extension units; but much in-situ integration. Independence moderate, exchangeability good.",
+      "sources": [
+        "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "https://www.ncc.no/vare-prosjekter/ka13-oslo/",
+        "https://greenbuilt.no/kristian-augustsgate-13-oslo-ombruk/"
+      ]
+    },
+    {
+      "match": "Halle 118",
+      "canonical": "K.118 – Kopfbau Halle 118, Winterthur",
+      "donors": 3,
+      "donors_note": "Steel skeleton from Basel; stair/windows/granite from a Zürich office; further regional demolitions. >2700 components assessed; <100 km.",
+      "reuse_share": 50.0,
+      "reuse_scope": "whole_building",
+      "reuse_share_note": ">half of material second-used; 41% circular by volume, ~38% by weight.",
+      "area_m2_gross": 1266.0,
+      "co2_reduktion_pct": 60.0,
+      "co2_einsparung_t": 494.0,
+      "dfd": true,
+      "design_quality": 85,
+      "design_note": "Layered, decoupled construction; visible/accessible structure designed to be taken apart (Brand layers; high exchangeability).",
+      "sources": [
+        "https://www.insitu.ch/projekte/196-k-118",
+        "https://circle-economy.com/knowledge-hub/article/29941",
+        "https://szs.ch/wp-content/uploads/2021-02_03_5_d_Kopfbau_Halle_118.pdf"
+      ]
+    },
+    {
+      "match": "Recyclinghaus",
+      "canonical": "Recyclinghaus Hannover-Kronsberg",
+      "donors": 4,
+      "reuse_share": 90.0,
+      "reuse_scope": "facade",
+      "reuse_share_note": "~90% of facade cladding reused; all windows/doors reused; foundation 42% RC-concrete. Facade-scoped.",
+      "area_m2_gross": 285.0,
+      "co2_einsparung_t": 100.0,
+      "dfd": true,
+      "design_quality": 88,
+      "design_note": "Glue-free single-material timber shell (beech dowels), type-separable, fully dismountable without quality loss — textbook Durmisevic exchangeability.",
+      "sources": [
+        "https://circle-economy.com/knowledge-hub/article/30040",
+        "https://www.dabonline.de/architektur/recyclinghaus-in-hannover-von-cityfoerster-baustoffe-baumaterialien/"
+      ]
+    },
+    {
+      "match": "TR\u00c6",
+      "canonical": "TR\u00c6 High-Rise, Aarhus",
+      "area_m2_gross": 14850.0,
+      "co2_reduktion_pct": 26.0,
+      "co2_reduktion_note": "26% embodied-carbon cut vs concrete (21% timber + 5% reuse); Lendager LCA cites 30-50%. Reuse partial (salvaged aluminium facade, reused windows, turbine-blade shading).",
+      "reuse_scope": "facade",
+      "dfd": true,
+      "design_quality": 70,
+      "design_note": "Mass-timber columns + CLT slabs (demountable), concrete only in cores; dual biogenic/circular ecosystems.",
+      "sources": [
+        "https://lendager.com/project/trae/",
+        "https://www.archdaily.com/1036295/trae-high-rise-building-lendager-arkitekter",
+        "https://www.yankodesign.com/2026/05/24/trae-is-the-timber-tower-that-turns-waste-into-architecture/"
+      ]
+    },
+    {
+      "match": "R\u00e9silience",
+      "canonical": "R\u00e9silience – La Ferme des Possibles, Stains",
+      "donors": 5,
+      "donors_note": "Diffuse sources: Bellastock, M\u00e9tabolisme Urbain, R\u00e9avie, leboncoin, Mairie de Paris + contractor salvage.",
+      "reuse_share": 12.67,
+      "reuse_scope": "single_gewerk",
+      "reuse_share_note": "72.24 t reuse = 12.67% of total mass (fit-out + facade elements).",
+      "co2_einsparung_t": 69.22,
+      "dfd": true,
+      "design_quality": 65,
+      "design_note": "Dry-assembly timber frame (glulam + CLT), straw+clay infill; largely biosourced with discrete reuse.",
+      "sources": [
+        "https://www.construction21.org/france/case-studies/h/resilience-la-ferme-des-possibles.html"
+      ]
+    },
+    {
+      "match": "Great Suffolk",
+      "canonical": "55 Great Suffolk Street, London",
+      "donors": 2,
+      "reuse_share": 97.0,
+      "reuse_scope": "single_gewerk",
+      "reuse_share_note": "97% of the NEW external-core structural steel is reclaimed (steel-scoped, not whole building). 43% from 1 Broadgate + 57% via stockholder Cleveland Steel.",
+      "area_m2_gross": 1394.0,
+      "co2_einsparung_t": 50.0,
+      "co2_reduktion_pct": 36.0,
+      "dfd": true,
+      "design_quality": 70,
+      "design_note": "Bolted external steel core; existing floorplates retained uninterrupted (layer independence).",
+      "sources": [
+        "https://asbp.org.uk/case-studies/55-great-suffolk-street",
+        "https://ukgbc.org/resources/55-great-suffolk-street/"
+      ]
+    },
+    {
+      "match": "M\u00f6\u00f6slistras",
+      "canonical": "Kindergarten M\u00f6\u00f6slistrasse / Manegg, Z\u00fcrich",
+      "donors": 5,
+      "donors_note": "Fire doors from Schulhaus Lavater (1:1), steel beams from a deconstruction, supermarket-trolley-depot pergola, lavabos/WCs from former flats, city second-hand furniture; 'Bauteiljagd'.",
+      "co2_reduktion_pct": 30.0,
+      "area_m2_gross": 271.0,
+      "dfd": true,
+      "design_quality": 70,
+      "design_note": "Steel cut/re-plated/re-coated & bolted for reinstallation; components chosen for reversibility.",
+      "sources": [
+        "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "https://zirkular.net/de/projekt/kindergarten-manegg/"
+      ]
+    },
+    {
+      "match": "People",
+      "canonical": "People's Pavilion, Eindhoven (DDW 2017)",
+      "donors": 6,
+      "donors_note": "100% BORROWED from many suppliers, producers and Eindhoven residents; returned unharmed after 9 days. Multi-source but temporary/borrowed (product-as-service), not owned.",
+      "reuse_share": 100.0,
+      "reuse_scope": "temporary_borrowed",
+      "area_m2_gross": 250.0,
+      "dfd": true,
+      "design_quality": 100,
+      "design_note": "Zero-damage design: no screws/glue/drills/saws — steel straps & tension belts only. Maximal Durmisevic independence+exchangeability. The DfD reference case — but its scalability is limited by the temporary/borrowed model.",
+      "sources": [
+        "https://www.overtreders-w.nl/en/peoplespavilion",
+        "https://bureausla.nl/projects/peoples-pavilion/",
+        "https://new-material-award.nl/en/peoples-pavilion-100-borrowed/"
+      ]
+    },
+    {
+      "match": "Welpeloo",
+      "canonical": "Villa Welpeloo, Enschede (Superuse)",
+      "donors": 3,
+      "donors_note": "Steel structure from one textile 'paternoster' machine; facade from Twente cable reels; interior from local waste. Pioneered the 'Harvest Map' (Oogstkaart) sourcing method.",
+      "reuse_share": 60.0,
+      "reuse_scope": "structural",
+      "reuse_share_note": "~60% of primary elements reused; steel structure 90% salvaged.",
+      "co2_reduktion_pct": 90.0,
+      "dfd": true,
+      "design_quality": 62,
+      "design_note": "Bolted salvaged-steel frame; design driven by harvested stock ('form follows availability'). Method (harvest map) is the transferable innovation.",
+      "sources": [
+        "https://www.superuse-studios.com/projectplus/villa-welpeloo/",
+        "https://journals.open.tudelft.nl/dash/article/view/4751",
+        "https://circle-economy.com/knowledge-hub/article/30046"
+      ]
+    },
+    {
+      "match": "Thoravej",
+      "canonical": "Thoravej 29, Copenhagen (Pihlmann)",
+      "donors": 1,
+      "donors_note": "Single-source closed loop: the existing 1967 factory itself is the material bank. TT-slabs cut & tilted into staircases, bricks into paving, doors recast into tabletops.",
+      "reuse_share": 95.0,
+      "reuse_scope": "whole_building",
+      "reuse_share_note": "DTU analysis: ~95% of original material reused/recycled; waste -90%.",
+      "area_m2_gross": 6224.0,
+      "co2_reduktion_pct": 88.0,
+      "dfd": true,
+      "design_quality": 78,
+      "design_note": "Radical in-situ structural reuse ('the building reuses itself'); bolted brackets/threaded rods/chemical anchors for new assemblies. High reuse execution; future-demountability moderate.",
+      "sources": [
+        "https://www.architectsjournal.co.uk/buildings/radical-structural-reuse-thoravej-29-arts-and-community-hub-copenhagen",
+        "https://pihlmann.dk/project/thoravej-29",
+        "https://dac.dk/en/magazine/places/thoravej-29-what-can-be-reused-must-be-reused-376"
+      ]
+    },
+    {
+      "match": "Ferme du Rail",
+      "canonical": "Ferme du Rail, Paris (Grand Huit)",
+      "reuse_share": 15.0,
+      "reuse_scope": "single_gewerk",
+      "reuse_share_note": "CORRECTION: the widely cited '90%' is biosourced+reuse COMBINED (timber+straw), NOT 90% reuse. Actual reuse is discrete elements (reused windows, pavers, tiles, granite) — a minority of mass; 15% is a conservative estimate pending a published reuse-only figure.",
+      "area_m2_gross": 1371.0,
+      "dfd": true,
+      "design_quality": 70,
+      "design_note": "Dry-assembly ('filière sèche') prefabricated timber frame + straw cassettes — high adaptability/separability; reuse itself is modest.",
+      "sources": [
+        "https://www.scoping.fr/projet/construction-dun-batiment-dagriculture-urbaine-la-ferme-du-rail/",
+        "https://albert-and-co.fr/2023/07/19/ferme-du-rail-paris-19eme/",
+        "https://grandhuit.eu/projet/ferme-du-rail/"
+      ]
+    },
+    {
+      "match": "Resource Rows",
+      "canonical": "Resource Rows, Copenhagen (Lendager)",
+      "donors": 4,
+      "donors_note": "Facade sourced from several regional demolitions <160 km: cut 1x1 m brick modules from the old Carlsberg Brewery + Aarhus schools; waste timber from Copenhagen Metro crates; repurposed factory bridge.",
+      "reuse_share": 39.0,
+      "reuse_scope": "facade",
+      "reuse_share_note": "Facade composed of 39% demolition-sourced material (roof 20%, wooden deck 5%). Building-level upcycle share ~29%; each reused brick saves ~500 g CO2 (~70% at brick level).",
+      "area_m2_gross": 9000.0,
+      "co2_reduktion_pct": 29.0,
+      "co2_einsparung_t": 463.0,
+      "dfd": false,
+      "design_quality": 55,
+      "design_note": "Bricks are cement-mortar (not separable per brick) — sawn into 1x1 m panels tied to precast/timber. Upcycling into new composite panels rather than reversible DfD; separability low at component level.",
+      "sources": [
+        "https://lendager.com/project/resource-rows/",
+        "https://eumiesawards.com/heritageobject/the-resource-rows/",
+        "https://circularmaterialsystems.com/en/case/02_en_resource-rows/"
+      ]
+    },
+    {
+      "match": "Upcycle",
+      "canonical": "Upcycle Studios, Copenhagen (Lendager)",
+      "donors": 3,
+      "donors_note": "World's first commercially scaled circular housing (20 row houses). 75% of windows from public housing in North Jutland; ~850-1400 t recycled-aggregate concrete from Copenhagen Metro waste; upcycled Dinesen wood offcuts for floors/walls/facades.",
+      "reuse_share": 40.0,
+      "reuse_scope": "whole_building",
+      "reuse_share_note": "~2/3 of materials 'upcycled or reused' COMBINED — but a large part is recycled-aggregate concrete (recycling, not element reuse). Element reuse (75% windows + wood) is a subset; 40% is a conservative reuse-weighted estimate.",
+      "area_m2_gross": 3909.0,
+      "co2_reduktion_pct": 45.0,
+      "co2_einsparung_t": 914.0,
+      "dfd": true,
+      "design_quality": 55,
+      "design_note": "DfD principles claimed, but recycled-aggregate concrete is cast in situ (not demountable); reused windows/wood are separable. Mixed: recycling-heavy, moderate exchangeability.",
+      "sources": [
+        "https://lendager.com/project/upcycle-studios/",
+        "https://www.again.dk/project-references/upcycle-studios",
+        "https://www.dezeen.com/2019/04/16/upcycle-studios-townhouses-lendager-group-copenhagen-recycled-materials/"
+      ]
+    },
+    {
+      "match": "Green House",
+      "canonical": "The Green House, Utrecht (cepezed)",
+      "donors": 3,
+      "donors_note": "Smoked-glass facade panels harvested from the adjacent Knoop barracks (structure dimensioned to them); clinker pavers from an old Tiel quay; reused wood + furniture. Leased lift/light/furniture (product-as-service).",
+      "reuse_scope": "whole_building",
+      "area_m2_gross": 680.0,
+      "dfd": true,
+      "design_quality": 90,
+      "design_note": "Reference-grade demountable kit-of-parts: galvanized bolted steel frame, dry-assembled, even prefab-concrete-block foundations removable; parts independently reusable/recyclable. Paired with a closed 15-yr+1-day circular business case (leasing + buyback guarantee, ROI in 2-3 yrs) — the business-model exemplar.",
+      "sources": [
+        "https://www.cepezed.com/projects/the-green-house/",
+        "https://www.archdaily.com/915728/the-green-house-architectenbureau-cepezed",
+        "https://dutcharchitects.org/projects/the-green-house-utrecht"
+      ]
+    },
+    {
+      "match": "Circl",
+      "canonical": "Circl pavilion, Amsterdam (de Architekten Cie.)",
+      "donors": 7,
+      "donors_note": "First fully-circular NL building; broad urban-mining aggregation <100 km: monastery hardwood floor, window frames from a Philips office/Haarlem/Arnhem, 16 000 employee jeans + 2 500 kg workwear -> insulation/acoustic panels, fire-hose reels/cable ducts/pavers via urban miner New Horizon, bar from a football club, bench frames from canal bicycles.",
+      "reuse_scope": "single_gewerk",
+      "reuse_share_note": "Many discrete reused components across trades (multi-source aggregator); no single whole-building reuse-% published.",
+      "dfd": true,
+      "design_quality": 85,
+      "design_note": "Bolted/clicked, glue-free assembly; larch skeleton left oversized so beams can be re-cut to standard planks; lifts/lighting leased; full digital twin / material register. High independence + exchangeability.",
+      "sources": [
+        "https://circl.nl/themakingof/en/",
+        "https://dutcharchitects.org/projects/circl-amsterdam",
+        "https://circularmaterialsystems.com/en/case/03_en_pavilion-circl/"
+      ]
+    },
+    {
+      "match": "Grande Halle",
+      "canonical": "Grande Halle de Colombelles (Encore Heureux / Le WIP)",
+      "donors": 5,
+      "donors_note": "Regional demolition sites (CU Caen la mer): 49 radiators, 10 oak doors (incl. fire door), sanitary, 190 m² tiles, 430 m² mineral wool, 21 wooden purlins. 21 windows identified but stolen before reuse.",
+      "reuse_share": 8.0,
+      "reuse_scope": "single_gewerk",
+      "reuse_share_note": "Concrete structure retained; reuse is interior fit-out. Reuse cost = 2% of the operation; discrete-element share of mass is small (~8% estimate).",
+      "area_m2_gross": 3700.0,
+      "co2_einsparung_t": 18.0,
+      "co2_einsparung_note": "11.4 t (Construction21) to 25.1 t CO2eq (Circle Economy) avoided; ~19-30 t waste diverted; 580 m³ CO2 saved.",
+      "dfd": true,
+      "design_quality": 55,
+      "design_note": "Structure kept, reversible fit-out. The real innovation is PROCUREMENT, not DfD: first building with a dedicated reuse work-package ('Lot 01', held by association Le WIP) + a variant/gap tender spec ('CCTP à trous') — a highly replicable contractual mechanism.",
+      "sources": [
+        "https://encoreheureux.org/en/projects/grande-halle",
+        "https://www.construction21.org/france/case-studies/h/the-grande-halle-de-colombelles-en.html",
+        "https://knowledge-hub.circle-economy.com/article/30009"
+      ]
+    },
+    {
+      "match": "H\u00e4rm\u00e4l\u00e4n",
+      "canonical": "H\u00e4rm\u00e4l\u00e4nranta 'Ernst' / A-Kruunu \u2013 ReCreate mini-pilot, Tampere",
+      "donors": 1,
+      "donors_note": "Single donor: a 7-storey 1982 Tampere office (deconstructed 2023 by Umacon/Skanska). 25 hollow-core slabs reclaimed, factory-refurbished at Consolis Parma, reused as floors above an air-raid shelter in the new A-Kruunu block.",
+      "reuse_scope": "structural",
+      "reuse_share_note": "Mini-pilot: only 25 load-bearing slabs reused (small share of the new building) — a structural-reuse DEMONSTRATION, not a high whole-building quota.",
+      "co2_reduktion_note": "ReCreate reports up to 75% CO2 reduction at ELEMENT level for reused precast; no whole-building figure for this mini-pilot.",
+      "dfd": false,
+      "design_quality": 60,
+      "design_note": "Donor precast was NOT designed for disassembly (the core research challenge); proves salvage + factory QC + product approval of load-bearing precast. New frame is fully precast -> future reuse potential. Full-value-chain consortium (uni, demolisher, precast factory, engineer, architect, contractor, city).",
+      "sources": [
+        "https://recreate-project.eu/project-pilots/finland/",
+        "https://recreate-project.eu/2025/02/13/first-elements-reclaimed-by-the-finnish-cluster-reused-in-a-real-life-mini-pilot/",
+        "https://www.tue.nl/en/research/research-groups/structural-engineering-and-design/concrete-structures/recreate"
+      ]
+    },
+    {
+      "match": "Kamikatsu",
+      "canonical": "Kamikatsu Zero Waste Center 'WHY' (Hiroshi Nakamura & NAP)",
+      "donors": 10,
+      "donors_note": "Community-participation sourcing: ~700 windows/fixtures donated by residents of a town of <1 500; plus company-donated bricks/tiles/wood/fabric, deserted houses, a former government building, a closed junior-high, and shiitake-factory harvest containers.",
+      "reuse_scope": "facade",
+      "reuse_share_note": "Predominantly built from salvaged materials; signature patchwork double-glazing facade from ~700 donated windows. No single reuse-% published.",
+      "area_m2_gross": 5557.0,
+      "dfd": true,
+      "design_quality": 68,
+      "design_note": "Unprocessed cedar logs sawn + bolted into trusses that can be disassembled/reused; separable structure. Patchwork window facade is bespoke (each unit measured/positioned by software) rather than a systematic product — high craft, moderate replicability.",
+      "sources": [
+        "https://www.nakam.info/en/works/kamikatsu0/",
+        "https://www.dezeen.com/2021/11/09/kamikatsu-zero-waste-center-hiroshi-nakamura-architecture/",
+        "https://why-kamikatsu.jp/en/pages/why"
+      ]
+    },
+    {
+      "match": "CRCLR House",
+      "canonical": "CRCLR House, Berlin-Neuk\u00f6lln (whole building)",
+      "donors": 3,
+      "donors_note": "Former Kindl brewery warehouse retrofit + GLT/CLT rooftep extension. Steel purlins from the hall's own roof reused as load-bearing stair stringers; removed steel trusses planned for the greenhouse roof; second-hand windows + fire doors.",
+      "reuse_scope": "whole_building",
+      "area_m2_gross": 4690.0,
+      "dfd": true,
+      "design_quality": 80,
+      "design_note": "New components joined with reversible connectors and planned in layers (Brand); short-life technical elements accessible/exchangeable without destruction; burn-down timber (F90 without encapsulation for material purity); material passports. German cooperative model (TRNSFRM eG) + CH->DE knowledge transfer via baubüro in situ + KfW/IBB funding — highly relevant to the DE funding context.",
+      "sources": [
+        "https://www.zrs.berlin/en/project/crclr-house-2/",
+        "https://www.architectsjournal.co.uk/buildings/going-full-circle-new-housing-on-former-berlin-brewery",
+        "http://zusammenarbeiter.de/crclr/Projektbeteiligte-Daten.php"
+      ]
+    },
+    {
+      "match": "CRCLR Fit",
+      "canonical": "Impact Hub Berlin / CRCLR interior fit-out (LXSY)",
+      "donors": 3,
+      "donors_note": "500 m² co-working fit-out; ~70% reused/recycled/upcycled materials (steel beams, windows, fire doors). Built largely DIY by a collective of few craftsmen + many laypersons after COVID left no contractors.",
+      "reuse_share": 70.0,
+      "reuse_scope": "single_gewerk",
+      "area_m2_gross": 3500.0,
+      "dfd": true,
+      "design_quality": 78,
+      "design_note": "Interior planned along circular lines: recyclable materials + elements designed for easy disassembly/repurposing, documented with product/material passports. Fit-out-scoped; strong exchangeability, DIY-built.",
+      "sources": [
+        "https://circularmaterialsystems.com/en/case/impact-hub-berlin-crclr-house/",
+        "https://www.architectsjournal.co.uk/buildings/going-full-circle-new-housing-on-former-berlin-brewery"
+      ]
+    },
+    {
+      "match": "Europa",
+      "canonical": "Europa Building, Brussels (Philippe Samyn & Partners)",
+      "donors": 12,
+      "donors_note": "3 750 reclaimed oak window frames salvaged from renovation/demolition sites across ALL EU member states, sanded/restored/varnished and set in stainless-steel frames — a cross-border aggregation forming the double-facade outer skin ('United in Diversity').",
+      "reuse_scope": "facade",
+      "reuse_share_note": "Reuse is the decorative/acoustic outer facade skin only; the rest of the 53 815 m² superstructure is new. Whole-building reuse mass share is small.",
+      "co2_reduktion_note": "Facade structure uses ~30% less steel than a classic facade; no whole-building reuse LCA published.",
+      "dfd": false,
+      "design_quality": 55,
+      "design_note": "Landmark LARGE-SCALE facade-reuse aggregation with high political/symbolic legitimation value, but the windows are a fixed decorative skin (bespoke, not a systemic DfD strategy). Its lever is legitimation + cross-border sourcing, not transformation capacity.",
+      "sources": [
+        "https://samynandpartners.com/portfolio/europa-new-headquarters-of-the-council-of-the-european-union/",
+        "https://www.consilium.europa.eu/en/europa-building-story/",
+        "https://www.jandenul.com/projects/europa-building-brussels-belgium"
+      ]
+    }
+  ]
+}

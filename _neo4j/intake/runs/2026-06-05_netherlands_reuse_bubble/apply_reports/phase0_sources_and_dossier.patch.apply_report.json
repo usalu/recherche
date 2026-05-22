@@ -1,0 +1,463 @@
+{
+  "confirmation_required": "APPLY phase0_sources_and_dossier.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2431,
+    "relationships": 15583
+  },
+  "counts_after_expected": {
+    "nodes": 2431,
+    "relationships": 15583
+  },
+  "counts_before": {
+    "nodes": 2412,
+    "relationships": 15583
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:02:06.340707+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\patches\\phase0_sources_and_dossier.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ResearchDocument"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_research_netherlands_reuse_bubble_combined_md",
+          "name": "netherlands_reuse_bubble_combined.md",
+          "quelltyp": "research_markdown",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_file": "_neo4j\\intake\\inbox\\2026-06-05_netherlands_reuse_bubble\\netherlands_reuse_bubble_combined.md",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        }
+      },
+      "before": null,
+      "id": "q_research_netherlands_reuse_bubble_combined_md",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_superuse_harvest",
+          "name": "Superuse Harvest Collect Re-use",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_superuse_harvest",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_superuse_oogst",
+          "name": "Superuse Oogstkaart New Horizon",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_superuse_oogst",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_newhorizon_home",
+          "name": "New Horizon homepage",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://newhorizon.nl/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_newhorizon_home",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_newhorizon_harvest",
+          "name": "New Horizon urban mining harvest",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://newhorizon.nl/urban-mining/circulair-oogsten/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_newhorizon_harvest",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_newhorizon_donor",
+          "name": "New Horizon donor buildings",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://newhorizon.nl/urban-mining/donorgebouwen/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_newhorizon_donor",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_newhorizon_collective",
+          "name": "New Horizon Oogst Collectief",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.newhorizon.nl/urban-mining-collective/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_newhorizon_collective",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_circo_newhorizon",
+          "name": "CIRCO New Horizon case",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.circonl.nl/case/urban-mining-new-horizon/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_circo_newhorizon",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_madaster_passport",
+          "name": "Madaster material passport",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://madaster.com/material-passport/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_madaster_passport",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_madaster_position",
+          "name": "Madaster position paper NL origin",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://madaster.de/en/inspiration/position-paper/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_madaster_position",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_madaster_eu",
+          "name": "Madaster EU stakeholder platform",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/madaster"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_madaster_eu",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_insert_marketplace",
+          "name": "Insert Marktplaats",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.insert.nl/producten/insert-marktplaats/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_insert_marketplace",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_insert_services",
+          "name": "Insert services inventory",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.insert.nl/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_insert_services",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_madopt",
+          "name": "Madopt marketplace",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.madopt.nl/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_madopt",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_repurpose",
+          "name": "Repurpose BV",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://repurpose.nl/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_repurpose",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_platformcb23",
+          "name": "Platform CB23",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://platformcb23.nl/english/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_platformcb23",
+      "line": 16,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_gov_2050",
+          "name": "NL circular economy 2050",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.government.nl/topics/sustainable-economy/circular-economy-by-2050"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_gov_2050",
+      "line": 17,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_amsterdam_circular",
+          "name": "Amsterdam circular economy",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.amsterdam.nl/en/policy/circular-economy/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_amsterdam_circular",
+      "line": 18,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "q_url_new_nl_madaster_abn_circl",
+          "name": "ABN AMRO Madaster Circl passport",
+          "quelltyp": "external_link",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake",
+          "url": "https://www.abnamro.com/en/news/madaster-materials-passport-opens-the-way-for-waste-free-building-culture%2520%2520"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_nl_madaster_abn_circl",
+      "line": 19,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 19,
+    "would_create": 19
+  }
+}

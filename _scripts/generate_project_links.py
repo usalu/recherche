@@ -25,8 +25,8 @@ def get_projects_data():
     driver = GraphDatabase.driver(uri, auth=(user, pwd))
     
     query = """
-    MATCH (p:Projekt)
-    WHERE p.name IS NOT NULL
+    MATCH (p)
+    WHERE (p:Projekt OR p:Programm) AND p.name IS NOT NULL
     OPTIONAL MATCH (a:Akteur)-[:BETEILIGT_AN]->(p)
     OPTIONAL MATCH (p)-[:LIEGT_IN_STADT]->(s:Stadt)
     OPTIONAL MATCH (p)-[:LIEGT_IN_LAND]->(l:Land)

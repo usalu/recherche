@@ -1,0 +1,146 @@
+{
+  "anchor_id": "loopfront",
+  "sources_visited": [
+    {
+      "url": "https://www.loopfront.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.loopfront.com/product",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Product/source for reuse platform; material tracking and reporting."
+      ]
+    },
+    {
+      "url": "https://businessnorway.com/solutions/loopfront-digital-platform-makes-reuse-simple",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Business Norway source for platform/CO2 reporting context."
+      ]
+    },
+    {
+      "url": "https://ukgbc.org/resources/digital-reuse-platform/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "UKGBC resource on digital reuse platform."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "External marketplace copy includes building materials and project reuse; material-specific claims require listing-level data.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Platform covers furniture, fixtures and internal marketplace/reuse storage.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://www.loopfront.com/product"
+      ],
+      "evidence_quote": "Product page states separate fields for building materials during reuse surveying.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Site says reuse storage keeps control of inventory and reusable assets, and construction projects conduct surveying of building components.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Case examples include climate/CO2 and waste reporting outcomes from reuse.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "co2",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_software_platform",
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Software platform for reuse inventory, marketplace and project surveying.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Loopfront",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.loopfront.com/",
+      "https://www.loopfront.com/product"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material claims",
+      "reason": "Platform-level software evidence does not expose individual closed-set material categories."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/loopfront.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "mat_holz"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_mehrere"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

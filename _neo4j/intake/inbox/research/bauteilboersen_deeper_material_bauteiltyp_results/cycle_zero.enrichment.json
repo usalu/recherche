@@ -1,0 +1,268 @@
+{
+  "anchor_id": "cycle_zero",
+  "sources_visited": [
+    {
+      "url": "https://cyclezero.fr/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Operator page: app references jobsite materials directly and connects professionals/individuals."
+      ]
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.cycle0.cycle0app",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://apps.apple.com/fr/app/cycle-z%C3%A9ro/id6443607769",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Regional article names bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage."
+      ]
+    },
+    {
+      "url": "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Secondary article names bois, fenêtres, carrelage, isolants, radiateurs."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers"
+      ],
+      "evidence_quote": "Secondary article lists isolants/insulation.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Regional article explicitly lists bois among materials recovered via Cycle Zéro.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Regional article lists carrelage; map to ceramic.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    },
+    {
+      "target_id": "mat_kunststoff",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Tuyauterie/piping often includes plastic; verify product pages.",
+      "confidence": "unsicher",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers"
+      ],
+      "evidence_quote": "Secondary article lists isolants.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Article explicitly lists fenêtres.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Article lists radiators and piping/tuyauterie.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Article explicitly lists portes.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Article lists carrelage / tiling.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Carrelage can be floor or wall tile; wall link kept likely.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_salvage_app",
+      "evidence_urls": [
+        "https://cyclezero.fr/"
+      ],
+      "evidence_quote": "Application for recovery/free reuse of site materials; exact categories not exposed.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Cycle Zéro",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://cyclezero.fr/",
+      "https://play.google.com/store/apps/details?id=com.cycle0.cycle0app"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material + Bauteiltyp",
+      "reason": "App/operator pages did not expose stable category vocabulary."
+    },
+    {
+      "topic": "Rueckbau",
+      "reason": "Free recovery does not equal on-site deconstruction by operator; no rbv link."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/cycle_zero.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_holz",
+        "mat_keramik",
+        "mat_daemmstoff"
+      ],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "mat_kunststoff"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_fenster",
+        "bt_tuer",
+        "bt_technik",
+        "bt_daemmung"
+      ],
+      "wahrscheinlich": [
+        "bt_boden",
+        "bt_wand"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [
+      {
+        "bauteiltyp_id": "bt_fenster",
+        "material_ids": [],
+        "pair_basis": "fenêtres named, but frame/glass material not specified in available source",
+        "evidence_urls": [
+          "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_tuer",
+        "material_ids": [],
+        "pair_basis": "portes named, material not specified in available source",
+        "evidence_urls": [
+          "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_boden",
+        "material_ids": [
+          "mat_keramik"
+        ],
+        "pair_basis": "carrelage / tiling",
+        "evidence_urls": [
+          "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+        ],
+        "confidence": "wahrscheinlich"
+      },
+      {
+        "bauteiltyp_id": "bt_daemmung",
+        "material_ids": [
+          "mat_daemmstoff"
+        ],
+        "pair_basis": "isolants / insulation",
+        "evidence_urls": [
+          "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers"
+        ],
+        "confidence": "belegt"
+      }
+    ],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

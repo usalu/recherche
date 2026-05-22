@@ -1,0 +1,385 @@
+{
+  "database": "mit-bestand",
+  "nodes": {
+    "Rotor": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Rotor"
+    },
+    "rotordc": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "RotorDC"
+    },
+    "opalis": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Opalis"
+    },
+    "bellastock": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Bellastock"
+    },
+    "prog_fcrbe": {
+      "exists": true,
+      "labels": [
+        "Programm"
+      ],
+      "name": "FCRBE"
+    },
+    "brussels_environment": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Brussels Environment"
+    },
+    "p_multi_brussels_reuse_in_multi": {
+      "exists": true,
+      "labels": [
+        "Projekt"
+      ],
+      "name": "Multi Brussels"
+    },
+    "p_architecture_of_reuse_brussels": {
+      "exists": true,
+      "labels": [
+        "Programm"
+      ],
+      "name": "Architecture of Reuse…"
+    },
+    "whitewood": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Whitewood"
+    },
+    "immobel": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Immobel"
+    },
+    "bw_generale_de_banque_brussels": {
+      "exists": true,
+      "labels": [
+        "Bauwerk"
+      ],
+      "name": "Gén. de Banque BXL"
+    },
+    "city_of_utrecht": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "City of Utrecht"
+    },
+    "prog_preuse": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_oxy_centre_monnaie": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    }
+  },
+  "rels": [
+    {
+      "from_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "to_id": "p_architecture_of_reuse_brussels",
+      "rid": "r_Rotor__BETEILIGT_AN__p_architecture_of_reuse_brussels",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "to_id": "p_multi_brussels_reuse_in_multi",
+      "rid": "r_Rotor__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null,
+      "start_id": "opalis"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null,
+      "start_id": "rotordc"
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "bellastock"
+    },
+    {
+      "from_id": "brussels_environment",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_brussels_environment__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "brussels_environment"
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "city_of_utrecht"
+    },
+    {
+      "from_id": "immobel",
+      "typ": "BETEILIGT_AN",
+      "to_id": "p_multi_brussels_reuse_in_multi",
+      "rid": "r_immobel__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "immobel"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null,
+      "start_id": "opalis"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "p_architecture_of_reuse_brussels",
+      "typ": "BETEILIGT_AN",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__p_architecture_of_reuse_brussels",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "p_architecture_of_reuse_brussels",
+      "typ": "BETEILIGT_AN",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__BETEILIGT_AN__p_architecture_of_reuse_brussels",
+      "conf": null,
+      "start_id": "rotordc"
+    },
+    {
+      "from_id": "p_multi_brussels_reuse_in_multi",
+      "typ": "BETEILIGT_AN",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "p_multi_brussels_reuse_in_multi",
+      "typ": "BETEILIGT_AN",
+      "to_id": "immobel",
+      "rid": "r_immobel__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "immobel"
+    },
+    {
+      "from_id": "p_multi_brussels_reuse_in_multi",
+      "typ": "BETEILIGT_AN",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "rotordc"
+    },
+    {
+      "from_id": "p_multi_brussels_reuse_in_multi",
+      "typ": "BETEILIGT_AN",
+      "to_id": "whitewood",
+      "rid": "r_whitewood__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "whitewood"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "Rotor"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "bellastock",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "bellastock"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "brussels_environment",
+      "rid": "r_brussels_environment__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "brussels_environment"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "city_of_utrecht",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_fcrbe",
+      "conf": null,
+      "start_id": "city_of_utrecht"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "BETEILIGT_AN",
+      "to_id": "p_architecture_of_reuse_brussels",
+      "rid": "r_rotordc__BETEILIGT_AN__p_architecture_of_reuse_brussels",
+      "conf": null,
+      "start_id": "rotordc"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "BETEILIGT_AN",
+      "to_id": "p_multi_brussels_reuse_in_multi",
+      "rid": "r_rotordc__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "rotordc"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null,
+      "start_id": "rotordc"
+    },
+    {
+      "from_id": "whitewood",
+      "typ": "BETEILIGT_AN",
+      "to_id": "p_multi_brussels_reuse_in_multi",
+      "rid": "r_whitewood__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "start_id": "whitewood"
+    }
+  ],
+  "generale_neighborhood": [
+    {
+      "typ": "HAT_BAUOBJEKTROLLE",
+      "from_id": "bw_generale_de_banque_brussels",
+      "to_id": "bor_donorobjekt",
+      "rid": "r_bw_generale_de_banque_brussels__HAT_BAUOBJEKTROLLE__bor_donorobjekt"
+    },
+    {
+      "typ": "LIEGT_IN_STADT",
+      "from_id": "bw_generale_de_banque_brussels",
+      "to_id": "stadt_bruessel",
+      "rid": "r_bw_generale_de_banque_brussels__LIEGT_IN_STADT__stadt_bruessel"
+    },
+    {
+      "typ": "LIEGT_IN_LAND",
+      "from_id": "bw_generale_de_banque_brussels",
+      "to_id": "land_belgien",
+      "rid": "r_bw_generale_de_banque_brussels__LIEGT_IN_LAND__land_belgien"
+    },
+    {
+      "typ": "HAT_BAUWERK",
+      "from_id": "p_umar_unit",
+      "to_id": "bw_generale_de_banque_brussels",
+      "rid": null
+    },
+    {
+      "typ": "AUS_SPENDER",
+      "from_id": "bg_metall_tuer_umar_wabbes_handles",
+      "to_id": "bw_generale_de_banque_brussels",
+      "rid": null
+    }
+  ],
+  "multi_beteiligt": [
+    {
+      "actor": "whitewood",
+      "rid": "r_whitewood__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "ev": null
+    },
+    {
+      "actor": "immobel",
+      "rid": "r_immobel__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "ev": null
+    },
+    {
+      "actor": "cordeel",
+      "rid": "r_cordeel__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "ev": null
+    },
+    {
+      "actor": "madaster_epea",
+      "rid": "r_madaster_epea__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "ev": null
+    },
+    {
+      "actor": "conix_rdbm",
+      "rid": "r_conix_rdbm__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "ev": null
+    },
+    {
+      "actor": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "ev": null
+    },
+    {
+      "actor": "rotordc",
+      "rid": "r_rotordc__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null,
+      "ev": null
+    }
+  ]
+}

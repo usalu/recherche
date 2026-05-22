@@ -1,0 +1,3484 @@
+{
+  "id": "13_huerden",
+  "section": "13",
+  "title": "Reuse barriers (Hürden) network",
+  "cypher": "MATCH (p:Projekt)-[r:HAT_HUERDE]->(h:Huerde)\nRETURN p, r, h;",
+  "status": "ok",
+  "row_count": 93,
+  "node_count": 57,
+  "relationship_count": 93,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5198",
+      "id": "p_haus_hos_mehrfamilienhaus_muehlhausen",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Haus HOS / Mehrfamilienhaus Mühlhausen",
+        "year_completed": 2008,
+        "latitude": 51.2089,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 250,
+        "name": "Haus HOS",
+        "adresse": "Mühlhausen, 99974, Germany",
+        "geo_confidence": "low",
+        "entwurfsbeschreibung": "Haus HOS uses reclaimed concrete elements within a new multi-family housing project, linking East German prefabrication history to contemporary residential needs. The design task is to make salvaged structural parts compatible with new comfort, regulations and domestic layouts. Architectural interest comes from the tension between standardised heavy components and new housing individuality. Reuse is expressed through module, concrete mass and adapted construction logic rather than a deliberately picturesque material collage.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_haus_hos_mehrfamilienhaus_muehlhausen",
+        "id": "p_haus_hos_mehrfamilienhaus_muehlhausen",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://doi.org/10.1016/j.jclepro.2022.135235",
+          "https://www.researchgate.net/publication/365763750_Reuse_of_concrete_components_in_new_construction_projectscritical_review_of_77_circular_precedents",
+          "https://baustatik-wiki.fiw.hs-wismar.de/mediawiki/index.php/Wiederverwendung_von_Stahlbetonbauteilen",
+          "https://innowest-brandenburg.de/beitraege/Bachelorarbeit-plattenbautyp-wbs-70",
+          "https://www.seidlarchitekten.de/haus-hos-muehlhausen",
+          "https://www.seidlarchitekten.de/wp-content/uploads/2022/10/SeidlSeidl-Architekten_Haus-Hos_Muehlhausen.pdf",
+          "https://www.stern.de/wirtschaft/immobilien/vorzeigeimmobilien-recycling-der-platte-3300150.html",
+          "https://www.seidlarchitekten.de/haus-hos-muehlhausen/"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: regional"
+        ],
+        "longitude": 10.4526
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4567",
+      "id": "h_akzeptanzproblem",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Akzeptanzproblem",
+        "id": "h_akzeptanzproblem",
+        "category": "social_perception",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5564",
+      "id": "p_plattenpalast_berlin",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: exakt"
+        ],
+        "tragwerksprinzip": [
+          "Wandtragwerk"
+        ],
+        "year_completed": 2009,
+        "latitude": 52.5390524,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Plattenpalast Berlin",
+        "adresse": "Wolliner Straße 50, Berlin",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Plattenpalast turns East German concrete panels into a small urban pavilion or house-like object, making large-panel construction visible outside its original housing-block context. The design works through displacement: familiar prefabricated slabs are recomposed into a compact, almost archetypal form. Architectural quality comes from the contrast between heavy industrial panels and the new scale of occupation. Reuse is not merely material saving; it produces a recognisable spolia of post-war housing culture.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_plattenpalast_berlin",
+        "id": "p_plattenpalast_berlin",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / Prototyp",
+        "source_urls": [
+          "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+          "https://www.umweltbundesamt.de/system/files/medien/378/publikationen/texte_93_2015_wiederverwertung_von_bauteilen_0.pdf"
+        ],
+        "bauobjektklasse": [
+          "Gebaeude"
+        ],
+        "status": [
+          "Prototyp",
+          "Realisiert"
+        ],
+        "longitude": 13.4018775
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "id": "p_meduni_campus_mariannengasse",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "Geschaeftsmodell",
+          "Preisbildung"
+        ],
+        "name_full": "MedUni Campus Mariannengasse Wien — BauKarussell pre-demolition reuse",
+        "latitude": 48.2161081,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "MedUni Campus Wien",
+        "adresse": "Mariannengasse 10, 1090 Vienna, Austria",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "MedUni Mariannengasse is primarily a donor-side design resource rather than a recipient building. Its architectural relevance lies in pre-demolition selection: components are identified, removed and prepared so they can influence other projects’ design decisions. The project changes the design process by making future material availability visible before demolition. Do not describe a final architectural output unless a recipient building is linked; treat this as the supply-side moment where architecture becomes possible elsewhere.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_meduni_campus_mariannengasse",
+        "id": "p_meduni_campus_mariannengasse",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "reuse phase documented 2020; demolition + new construction subsequent",
+        "longitude": 16.3492133
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4819",
+      "id": "p_cascadeup_london_secondary_timber_glulam_demonstrator",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Ausstellungs- und Forschungsdemonstrator",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "CascadeUp / London secondary-timber glulam demonstrator",
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "latitude": 51.5074456,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "CascadeUp",
+        "adresse": "London; UCL Festival of Engineering 2024, London Design Festival 2024, Futurebuild 2025",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "CascadeUp investigates whether demolition timber can become a credible mass-timber architecture. The demonstrator’s design is driven by the limits of reclaimed feedstock: short lengths, variable quality and the need to laminate or panelise timber into new structural formats. The architectural output is small, but its significance is methodological. It shows how reclaimed timber can move beyond rustic reuse into engineered frames and panels with a contemporary tectonic expression.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_cascadeup_london_secondary_timber_glulam_demonstrator",
+        "id": "p_cascadeup_london_secondary_timber_glulam_demonstrator",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "Prototyp / Demonstrator",
+        "status": "Prototyp",
+        "longitude": -0.1277653
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "id": "h_aufbereitungsaufwand",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Aufbereitungsaufwand",
+        "id": "h_aufbereitungsaufwand",
+        "category": "economic_labour",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4901",
+      "id": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "Circular Centre Netherlands / Prinsenhof A reuse pilot",
+        "latitude": 52.3917,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Circular Centre Netherla…",
+        "adresse": "Zwarteweg 1, 8181 PD Heerde, Netherlands",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Prinsenhof A pilot should be read as a circular office intervention where existing building components become test material for future practice. The design value lies in how reclaimed parts are documented, selected and reinserted into a working environment rather than merely displayed. It is important to distinguish architectural effects from process evidence: only when reused elements influence partitions, finishes, furniture, facade or spatial organisation should the two new nodes be created.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+        "id": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "geplant / in Entwicklung; Wiedereinbau noch nicht abschliessend belegt",
+        "source_urls": [
+          "https://recreate-project.eu/"
+        ],
+        "status": "Geplant",
+        "longitude": 6.0286
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4995",
+      "id": "p_ferme_du_rail_paris",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "year_completed": 2019,
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "latitude": 48.8877647,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 2300,
+        "name": "Ferme du Rail Paris",
+        "adresse": "2 bis rue de l’Ourcq, 75019 Paris",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Ferme du Rail combines social, agricultural and architectural programmes with a material strategy based on reuse and low-impact construction. Reclaimed components contribute to a deliberately modest, workshop-like atmosphere suited to urban farming, housing and public activity. The design decisions emphasise repairability, visible assemblies and a productive landscape rather than formal smoothness. Its architectural quality lies in making social infrastructure feel materially grounded, with reused elements reinforcing the project’s ethic of care and resourcefulness.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_ferme_du_rail_paris",
+        "id": "p_ferme_du_rail_paris",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.bellastock.com/projets/la-ferme-du-rail",
+          "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+          "https://circularmaterialsystems.com/en/case/05_ferme-du-rail",
+          "https://grandhuit.eu/projet/ferme-du-rail"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)",
+          "Geo: regional"
+        ],
+        "longitude": 2.3851363
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5030",
+      "id": "p_grande_halle_de_colombelles",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "wirtschaft": [
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "Grande Halle de Colombelles / Le WIP",
+        "year_completed": 2019,
+        "latitude": 49.1916221,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 3700,
+        "name": "Grande Halle de Colombel…",
+        "adresse": "Rue des Ateliers, 14460 Colombelles",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Le WIP transforms an industrial hall into a flexible civic and cultural workplace by preserving the spatial generosity of the existing structure while inserting reused and adaptable elements. The design does not overfinish the hall; it uses robust, legible interventions to support events, workspaces and public gathering. Reuse contributes to an atmosphere of productive incompleteness, where large-span industrial space, lightweight inserts and visible assemblies make the building feel open to change.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_grande_halle_de_colombelles",
+        "id": "p_grande_halle_de_colombelles",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.le-wip.com/le-reemploi-de-materiaux",
+          "https://www.ekopolis.fr/operations-batiment/grande-halle-de-colombelles",
+          "https://www.construction21.org/france/case-studies/h/la-grande-halle-de-colombelles.html",
+          "https://encoreheureux.org/fr/projets/grande-halle",
+          "https://vb.nweurope.eu/media/21155/fcrbe_cashallecolombelle_final18oct2023_en.pdf",
+          "https://albert-and-co.fr/2023/05/28/centre-culturel-grande-halle-caen",
+          "https://www.culture.gouv.fr/regions/drac-normandie/actualites/Micro-Folie-a-la-Grande-Halle-de-Colombelles"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": -0.3061681
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5122",
+      "id": "p_boulder_fire_station_3",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Feuerwache und Fire Administration",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Boulder Fire Station 3 / City of Boulder Fire Rescue Station #3",
+        "year_completed": 2024,
+        "latitude": 40.0149856,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Boulder FS-3",
+        "adresse": "2967 Bluff Street, Boulder, CO 80301, USA",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Boulder Fire Station 3 turns salvaged hospital steel into a civic structural order. The design depends on cataloguing wide-flange members, verifying them, and recomposing them with new timber elements into a disciplined public-safety building. Rather than producing a scrap aesthetic, the architecture makes reuse look dependable: exposed beams and columns frame generous operational spaces, while the hybrid structure communicates durability, municipal responsibility and technical confidence.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_boulder_fire_station_3",
+        "id": "p_boulder_fire_station_3",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / online November 2024",
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": -105.270545
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "wirtschaft": [
+          "CapEx vergleichbar mit Neubau"
+        ],
+        "name_full": "Kindergarten Mööslistrasse / Manegg Zürich",
+        "year_completed": 2023,
+        "latitude": 47.3406,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager",
+          "Temporal: unproblematisch"
+        ],
+        "area_m2_gross": 271,
+        "name": "Kindergarten Mööslistras…",
+        "adresse": "Mööslistrasse 8, 8038 Zürich, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The kindergarten applies reuse to a precise educational building type, where robustness, daylight, scale and atmosphere matter. Reclaimed components must be integrated into a child-friendly environment rather than showcased as raw salvage. The design interest is in how reused elements affect facade rhythm, interior tactility, structural decisions or play-space character while still meeting safety and comfort demands. Its strongest extraction should follow documented components, not a generic claim of circular construction.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_kindergarten_moeoeslistrasse_manegg_zuerich",
+        "id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / abgeschlossen 2023",
+        "source_urls": [
+          "https://www.stadt-zuerich.ch/"
+        ],
+        "status": "Realisiert",
+        "longitude": 8.5154
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5414",
+      "id": "p_lokomotion_technology_centre_mini_pilot_tampere",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Lokomotion Technology Centre mini-pilot Tampere",
+        "latitude": 61.4588,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Lokomotion Technology…",
+        "adresse": "Leppästensuonkatu 13, 33840 Tampere, Finland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Lokomotion mini-pilot tests reclaimed concrete and component reuse in an industrial or technological context. Its architectural importance is experimental: design decisions are constrained by what can be dismantled, certified and recomposed into a new demonstrator. Rather than offering a finished architectural language, the project helps define future rules for module selection, connection and structural confidence. Extract only where the recovered elements visibly determine form, span, envelope or spatial organisation.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_lokomotion_technology_centre_mini_pilot_tampere",
+        "id": "p_lokomotion_technology_centre_mini_pilot_tampere",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "im Bau; Reuse-Mini-Pilot Sommer 2025 eingebaut",
+        "source_urls": [
+          "https://www.lokomotion.fi/"
+        ],
+        "status": "In_Bau",
+        "longitude": 23.6324
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5575",
+      "id": "p_plattenvereinigung_berlin",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: exakt"
+        ],
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "latitude": 52.5408,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Plattenvereinigung Berlin",
+        "adresse": "Gustav-Meyer-Allee 25, 13355 Berlin (Peter-Behrens-Halle, Jan 2010–May 2011); Tempelhofer Feld, southern entrance Oderstraße, 12051 Berlin (May 2011–Oct 2011+)",
+        "geo_confidence": "medium",
+        "entwurfsbeschreibung": "Plattenvereinigung uses salvaged prefabricated panels as a public and cultural architectural statement. The design recomposes mass-housing components into a new pavilion-like structure, making the source system legible through joints, panel proportions and concrete surfaces. Its architectural value is both spatial and symbolic: components associated with standardised housing become a flexible civic object. The output depends on recognising the panels’ previous life while allowing them to support new gatherings and programmes.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_plattenvereinigung_berlin",
+        "id": "p_plattenvereinigung_berlin",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / temporär / mobil",
+        "source_urls": [
+          "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+          "https://www.umweltbundesamt.de/system/files/medien/378/publikationen/texte_93_2015_wiederverwertung_von_bauteilen_0.pdf",
+          "https://www.plattenvereinigung.de/project/orte/"
+        ],
+        "bauobjektklasse": [
+          "Gebaeude",
+          "Pavillon"
+        ],
+        "status": [
+          "Prototyp",
+          "Realisiert",
+          "Temporaer"
+        ],
+        "longitude": 13.3892
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "id": "p_lysp8_basel",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx vergleichbar mit Neubau",
+          "Kostenvergleich",
+          "Lebenszykluskosten"
+        ],
+        "name_full": "LysP8 — LysBüchelStrasse 8 Reuse Pilot Basel (Loeliger Strub / Zirkular / Stiftung Habitat)",
+        "latitude": 47.5726315,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "LYSP8 Basel",
+        "adresse": "Weinlagerstrasse 33, 4056 Basel, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "LysP8 is a practical architecture of many small recovered decisions rather than one heroic reused structure. Kitchens, doors, tiles, facade parts and steel grating steps are worked into a new or transformed building so that reuse influences thresholds, surfaces, circulation and domestic atmosphere. The design quality comes from careful matching: everyday components are given enough order to feel intentional, while their different origins remain readable as part of the building’s circular character.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_lysp8_basel",
+        "id": "p_lysp8_basel",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "completed 02/2025",
+        "longitude": 7.5738216
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4570",
+      "id": "h_ausschreibungsproblem",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Ausschreibungsproblem",
+        "id": "h_ausschreibungsproblem",
+        "category": "procurement_regulatory",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "id": "p_k118_kopfbau_halle_118_winterthur",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "CapEx vergleichbar mit Neubau",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "K118 Kopfbau Halle 118 Winterthur",
+        "year_completed": 2021,
+        "latitude": 47.4997,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "area_m2_gross": 1100,
+        "entwurfsbeschreibung": "K118 is one of the clearest examples of component-led architecture. Reclaimed steel, windows, facade elements, stairs and interior pieces are composed into an addition whose design was shaped by what could be found, tested and joined. The building does not hide heterogeneity; it turns it into architectural order through careful proportion, exposed assembly and precise detailing. The result is neither nostalgic nor improvised, but a rigorous architecture of visible second-use elements.",
+        "metadata_sidecar_key": "node:p_k118_kopfbau_halle_118_winterthur",
+        "id": "p_k118_kopfbau_halle_118_winterthur",
+        "lca_modules": [
+          "A1-A3 Produkt"
+        ],
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 8.7267,
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager",
+          "Temporal: geplant"
+        ],
+        "name": "K.118 Winterthur",
+        "adresse": "Lagerplatz 24, 8400 Winterthur, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "source_urls": [
+          "https://zirkular.net/de/projekt/k-118-kopfbau-halle-118",
+          "https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ",
+          "https://www.galvanizingeurope.org/case_studies/k-118-from-former-factory-to-beacon-of-sustainable-building",
+          "https://www.arch2o.com/k118-kopfbau-halle-118-bauburo-in-situ",
+          "https://zirkular.net/en/project/reuse-in-construction-a-compendium-of-circular-architecture",
+          "https://www.researchgate.net/publication/376148869_Case_Study_K118_-_The_Reuse_of_Building_Components_in_Winterthur_Switzerland",
+          "https://intergalva.com/awards/global-galvanizing-awards-2024/k-118-kopfbau-halle-118",
+          "https://www.lagerplatz.ch/"
+        ],
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5634",
+      "id": "p_recypark_demets_anderlecht",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "name_full": "Recypark Demets / Recypark Anderlecht",
+        "latitude": 50.8415883,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 5000,
+        "name": "Recypark Demets",
+        "adresse": "Quai Fernand Demets 22, 1070 Anderlecht, Brüssel",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Recypark Anderlecht makes circularity tangible in a public waste facility. Second-hand steel beams and other recovered components determine major parts of the structure, while the building’s programme already concerns urban material flows. The design uses this overlap to produce an architecture that is both operational and didactic. Its spatial and structural order shows that a recycling centre can itself be built as a demonstrator of reuse, not only as a place where reuse begins.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_recypark_demets_anderlecht",
+        "id": "p_recypark_demets_anderlecht",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / fertiggestellt 2024",
+        "source_urls": [
+          "https://rotordb.org/en/projects/recypark-anderlecht",
+          "https://51n4e.com/projects/recypark",
+          "https://brusselsarchitectureprize.be/en/project/recypark-demets",
+          "https://www.bruxelles-proprete.be/en/recypark",
+          "https://www.simonprize.org/work2024/recypark",
+          "https://www.greisch.com/en/recypark-demets-in-anderlecht-awarded-at-the-belgian-timber-construction-awards-2024",
+          "https://rotordb.org/en/news/recypark-under-construction",
+          "https://www.greisch.com/en/projet/anderlecht-recypark-wood-expertise"
+        ],
+        "bauobjektklasse": [
+          "Gebaeude"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 4.3206717
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "id": "h_entwurfsbindung",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Entwurfsbindung",
+        "id": "h_entwurfsbindung",
+        "category": "planning_organisational",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Grubenstrasse 29 / Werkhof 29, Zürich",
+        "year_completed": 2025,
+        "latitude": 47.3612682,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 2600,
+        "name": "Grubenstrasse 29",
+        "adresse": "Grubenstrasse 29, 8045 Zürich, Binz",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Werkhof 29 is a reuse-driven conversion where the design value lies in the relationship between retained industrial character and newly inserted recovered components. The project should be read through its handling of workshops, circulation, facade pieces and interior fit-out rather than through a single spectacular element. Reused materials help produce a pragmatic urban atmosphere: robust, flexible and slightly rough. The architecture works by letting construction history and new programme remain simultaneously visible.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_grubenstrasse_29_werkhof_29_zuerich",
+        "id": "p_grubenstrasse_29_werkhof_29_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / Vermietung 2025",
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 8.5142622
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5138",
+      "id": "p_brent_cross_town_primary_substation_london",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "elektrische Primär-Substation mit ovalem Stahl-Screen / Kunstwerk-Hülle",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "name_full": "Brent Cross Town Primary Substation",
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "latitude": 51.5639,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Brent Cross Town…",
+        "adresse": "124 Pennine Drive, London NW2 1NL, UK",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The substation separates architectural screen and structural reuse in a precise way. Reclaimed tubular steel is used where its section, length and geometry can work as columns and bracing, while new elements handle conditions that require tighter control. The design quality lies in selective application rather than total reuse. Behind the public artwork and infrastructural wrapper, the project demonstrates how reused industrial steel can quietly determine support, span and connection strategy.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_brent_cross_town_primary_substation_london",
+        "id": "p_brent_cross_town_primary_substation_london",
+        "lca_modules": [
+          "D Beyond (Reuse)"
+        ],
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.arup.com/projects/brent-cross-town"
+        ],
+        "status": "Realisiert",
+        "longitude": -0.2267
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5278",
+      "id": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "name_full": "Jeugdkliniek Ithaka / Emergis Kloetinge",
+        "year_completed": 2019,
+        "latitude": 51.4479,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Jeugdkliniek Ithaka",
+        "adresse": "Oostmolenweg 79, 4481 PM Kloetinge, Netherlands",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Ithaka’s design relevance lies in applying reuse to a sensitive care environment, where atmosphere, durability and comfort are as important as circular ambition. Reused components must be domesticated: they need to contribute to calm interiors, safe details and spatial clarity rather than appear as rough salvage. Architectural output should be tied only to documented components, but the broader design question is clear: how can recovered building elements support a therapeutic setting without compromising dignity or performance?",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_jeugdkliniek_ithaka_emergis_kloetinge",
+        "id": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / eröffnet 2019",
+        "source_urls": [
+          "https://www.burobas.nl/nieuws/kinder-en-jeugdkliniek-van-emergis-volgens-jury-mooiste-gebouw-van-zeeland",
+          "https://www.innax.nl/kennisbank/toekomstvast-bouwen/emergis",
+          "https://www.skipr.nl/nieuws/circulair-herbouwde-kliniek-emergis-geopend",
+          "https://galleo.co/project/zorgkliniek-emergis-te-kloetinge",
+          "https://www.duurzaamdoor.nl/circulair-gebouw-voor-kinder-en-jeugdkliniek-emergis",
+          "https://emergiskindenjeugd.nl/wie-zijn-we/nieuws/2019-08/nieuwe-kliniek-kind-jeugd-gebruik",
+          "https://www.bouwtotaal.nl/2019/07/circulair-project-kinder-en-jeugdkliniek-in-kloetinge",
+          "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+          "https://www.bouwwereld.nl/bouwdelen/gevels/hergebruikte-kozijnen",
+          "https://www.pl-pr-architects.nl/nl/construction-and-material-specification-details",
+          "https://www.architectuur.nl/nieuws/evenementen/symposium-in-circulaire-kinder-en-jeugdkliniek-emergis",
+          "https://www.paree.nl/project/ithaka-emergis-kloetinge",
+          "https://www.skipr.nl/nieuws/emergis-bouwt-kliniek-met-hergebruikt-materiaal",
+          "https://www.scribd.com/document/960365903/Circular-Buildings-Strategies-and-Case-Studies-2021",
+          "https://dwtgroep.nl/projecten/kinder-en-jeugdkliniek-emergis-kloetinge",
+          "https://www.emergis.nl/"
+        ],
+        "status": "Realisiert",
+        "longitude": 3.6645
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5400",
+      "id": "p_liander_alliander_hq_duiven",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Liander / Alliander HQ, Duiven",
+        "wiederverwendungsort": [
+          "Im_selben_Gebaeude_versetzt",
+          "In_situ"
+        ],
+        "latitude": 51.9442,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "BREEAM"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Liander",
+        "adresse": "Dijkgraaf 4, 6921 RL Duiven, Netherlands",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Liander’s campus renovation uses reuse to reshape a corporate complex into a connected workplace. Existing buildings and recovered materials contribute to a large interior landscape under a new unifying roof, making reuse part of spatial organisation rather than just supply. The design quality lies in stitching fragments together: old structures, reused components and new circulation create a collective working environment with a warm, workshop-like atmosphere. Circularity is expressed through connection, openness and material layering.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_liander_alliander_hq_duiven",
+        "id": "p_liander_alliander_hq_duiven",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / Transformation",
+        "source_urls": [
+          "https://www.alliander.com/"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 6.0783
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5765",
+      "id": "p_the_green_house_utrecht",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "latitude": 52.0867,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "The Green House Utrecht",
+        "adresse": "Croeselaan 16, 3521 CA Utrecht, Netherlands",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Green House is designed as a temporary, demountable restaurant and meeting pavilion that can move after its first use. Reused glass panels, timber floor elements, pavers and wall cladding influence the building’s greenhouse-like image and dry-assembly details. Its architecture is intentionally light, systematic and recoverable. The design quality comes from making reversibility visible but polished: a civic pavilion that behaves like a material bank without looking provisional.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_the_green_house_utrecht",
+        "id": "p_the_green_house_utrecht",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / eröffnet April 2018 / temporär ca. 15 Jahre",
+        "source_urls": [
+          "https://www.thegreenhouserestaurant.nl/"
+        ],
+        "status": [
+          "Realisiert",
+          "Temporaer"
+        ],
+        "longitude": 5.1172
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5785",
+      "id": "p_thoravej_29_copenhagen",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "latitude": 55.706084,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "DGNB"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 6224,
+        "name": "Thoravej 29 Copenhagen",
+        "adresse": "Thoravej 29, 2400 København NV, Copenhagen",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Thoravej 29 transforms an industrial building into a community and workspace through radical retention and internal reuse. Existing structures, concrete deck elements, bricks, doors and other components are recut or reassigned, so the design reads as an edited continuation of the factory rather than a replacement. Architectural quality lies in the thickness of traces: old surfaces, reused stairs, improvised furniture boundaries and new communal spaces form a coherent, rough but carefully composed environment.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_thoravej_29_copenhagen",
+        "id": "p_thoravej_29_copenhagen",
+        "lca_modules": [
+          "D Beyond (Reuse)"
+        ],
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / Fertigstellung Anfang 2025",
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 12.526846
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6344",
+      "id": "p_schaerenmoosstrasse_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Payback über OpEx / LCA",
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "name_full": "Schärenmoosstrasse 115/117 Zürich — ménage à trois (Stiftung PWG Wettbewerb 2022)",
+        "latitude": 47.4187214,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "source_titles": [
+          "Schärenmoosstrasse Zürich — Projekt «ménage à trois»"
+        ],
+        "name": "Schärenmoosstr. ZH",
+        "adresse": "Schärenmoosstrasse 115/117, 8050 Zürich, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Schärenmoosstrasse proposes a careful conversion of existing office stock into housing, using retention and selective component reuse as design tools. The existing stair cores, buildings and possible reused structural hall elements shape collective spaces and access. Its architectural quality is not in a reclaimed-material collage but in spatial reprogramming: workplaces become dwellings through added communal rooms, galleries and shared thresholds. Treat specific reuse outputs as provisional until the graph confirms built component evidence.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_schaerenmoosstrasse_zuerich",
+        "id": "p_schaerenmoosstrasse_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "1st-rank competition 2022; unbuilt",
+        "longitude": 8.5578892
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "id": "p_elementa_walkeweg",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten",
+          "CapEx niedriger (direkte Materialersparnis)",
+          "Lebenszykluskosten",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "ELEMENTA Walkeweg Basel — Wohnbau mit Wiederverwendung von Bestandskomponenten (Kanton Basel-Stadt Wettbewerb)",
+        "latitude": 47.5388275,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "EcoTool (ZBS)"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "ELEMENTA Walkeweg",
+        "adresse": "Emilie Louise Frey-Strasse, 4053 Basel, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "ELEMENTA is important as a housing proposal organised around the reuse of substantial existing components. The architectural interest lies in how salvaged concrete and other building elements can discipline a new residential scheme: bay spacing, stair logic, facade rhythm and construction sequence all have to negotiate availability. Because delivery status still needs verification, the description should remain design-focused. It is a project about making component reuse compatible with ordinary collective housing, not about a one-off pavilion gesture.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_elementa_walkeweg",
+        "id": "p_elementa_walkeweg",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "Planung 2023–2025; Realisierung geplant 2027–2029",
+        "longitude": 7.6125448
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "id": "h_fehlende_lagerflaeche",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Fehlende_Lagerflaeche",
+        "id": "h_fehlende_lagerflaeche",
+        "category": "logistics_storage",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5228",
+      "id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "House of Fraser / 318 Oxford Street → TBC.London steel reuse chain",
+        "latitude": 51.5142,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: geplant"
+        ],
+        "name": "House of Fraser",
+        "adresse": "318 Oxford Street, London W1C 1HF, UK (donor); 224-226 Tower Bridge Road, London SE1 2UP, UK (receiver TBC.London)",
+        "geo_confidence": "medium",
+        "entwurfsbeschreibung": "This entry is best understood as a design and logistics chain linking a donor department-store structure to a new commercial project. The architectural decision is made before the recipient building is complete: steel members are identified, tested and assigned so they can influence the next structural design. Its design significance lies in timing, dimensional matching and procurement. The output is not only a building part, but a model for making urban demolition stock shape future office construction.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+        "id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "TBC.London gebaut / Practical Completion Mitte Juni 2025; 318 Oxford Street in Construction/Refurbishment",
+        "source_urls": [
+          "https://www.stiffandtrevillion.com/projects/tower-bridge-road"
+        ],
+        "status": [
+          "In_Bau",
+          "Realisiert"
+        ],
+        "longitude": -0.1427
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "id": "p_juch_areal_recyclingzentrum_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Juch-Areal Recyclingzentrum Zürich",
+        "latitude": 47.393,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Juch-Areal Recyclingzent…",
+        "adresse": "Juch-Areal, Zürich-Altstetten, 8048 Zürich, Switzerland",
+        "geo_confidence": "low",
+        "entwurfsbeschreibung": "The recycling centre uses reclaimed components within an infrastructure building that already deals with material flows. This gives the architecture a direct conceptual fit: the place for sorting urban resources is itself designed from recovered parts. The design should be read through robust construction, accessible circulation, weathering surfaces and didactic visibility. Reuse strengthens the building’s public message, turning an operational facility into an architectural demonstration of the city’s circular material metabolism.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_juch_areal_recyclingzentrum_zuerich",
+        "id": "p_juch_areal_recyclingzentrum_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "geplant / Ausführung 2026–2027 vorgesehen",
+        "source_urls": [
+          "https://zirkular.net/de/projekt/erz-juchareal",
+          "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+          "https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2025/07/neubau-recyclingzentrum-juch-areal.html",
+          "https://www.stadt-zuerich.ch/de/aktuell/publikationen/2026/reuse-tragstrukturen-studie.html",
+          "https://www.cirkla.ch/de/le-reseau-du-reemploi/lannuaire/projets/recyclingzentrum-juch-areal",
+          "https://www.perita.ch/de/projekt/recyclingzentrum-juch-areal",
+          "https://www.studioloko.ch/en/projects/recyclingzentrum-juch-areal",
+          "https://www.energiekonzepte.ch/en/current/zirkularitaet-am-bau-innovationsprojekt-recyclingzentrum-juch-areal",
+          "https://eurocodes.jrc.ec.europa.eu/sites/default/files/2021-12/EUR23252EN.pdf",
+          "https://www.baunetzwissen.de/gesund-bauen/fachwissen/regelwerke/normen-fuer-den-lehmbau-3393643"
+        ],
+        "status": "Geplant",
+        "longitude": 8.4885
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4917",
+      "id": "p_circular_pavilion_paris",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "year_completed": 2015,
+        "latitude": 48.8565,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 70,
+        "name": "Circular Pavilion Paris",
+        "adresse": "Place de l'Hôtel de Ville, 75004 Paris, France",
+        "geo_confidence": "medium",
+        "entwurfsbeschreibung": "The Circular Pavilion uses recovered doors, timber, lighting and urban materials to construct a public architectural manifesto. Its design is legible because the facade and enclosure are composed from repeated reclaimed elements rather than disguised behind a neutral finish. The pavilion works through accumulation, rhythm and didactic visibility: citizens can read the city’s discarded components as architecture. Its temporary scale allows reuse to become both construction method and public communication.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_circular_pavilion_paris",
+        "id": "p_circular_pavilion_paris",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / temporär; spaetere Wiederaufstellung angekuendigt, nicht abschliessend belegt",
+        "source_urls": [
+          "https://www.batiactu.com/edito/un-pavillon-circulaire-illustrer-reemploi-materiaux-42547.php"
+        ],
+        "status": [
+          "Realisiert",
+          "Temporaer"
+        ],
+        "longitude": 2.3522
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "id": "h_heterogenitaet_chargen",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Heterogenitaet_Chargen",
+        "id": "h_heterogenitaet_chargen",
+        "category": "technical_quality",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4955",
+      "id": "p_elys_kultur_gewerbehaus_basel",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "ELYS Kultur- und Gewerbehaus Basel",
+        "latitude": 47.5489,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "ELYS Kultur- und…",
+        "adresse": "Elsässerstrasse 215, 4056 Basel, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "ELYS converts former industrial stock into a cultural and commercial environment where reuse is inseparable from atmosphere. Existing structures, reclaimed fit-out pieces and rough material traces produce spaces that feel provisional yet intensely inhabited. The design works by accepting the building’s accumulated layers rather than erasing them. Architectural quality comes from generous industrial rooms, adapted circulation, improvised details and visible material histories that support a mixed cultural programme.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_elys_kultur_gewerbehaus_basel",
+        "id": "p_elys_kultur_gewerbehaus_basel",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 7.6012
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4978",
+      "id": "p_europa_building_brussels",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Europa Building Brussels / Résidence Palace – Europa",
+        "year_completed": 2016,
+        "latitude": 50.8436,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 81777,
+        "name": "Europa Building Brussels",
+        "adresse": "Rue de la Loi 175, 1048 Brussels, Belgium",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Europa Building is not a simple component-reuse project; its architectural power comes from setting a new institutional lantern inside a retained historic block. Reused or repurposed window elements contribute to the layered facade and interior identity, but the larger design decision is urban and symbolic: preserve the Residence Palace fabric while inserting a luminous new council chamber. Reuse here operates through memory, facade layering and the tension between diplomatic monumentality and recovered domestic fragments.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_europa_building_brussels",
+        "id": "p_europa_building_brussels",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "status": "Realisiert",
+        "longitude": 4.3819
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5361",
+      "id": "p_kamikatsu_zero_waste_center_hotel_why",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Kamikatsu Zero Waste Center / Hotel WHY",
+        "year_completed": 2020,
+        "latitude": 33.896,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: unproblematisch"
+        ],
+        "area_m2_gross": 5557,
+        "name": "Kamikatsu Zero Waste…",
+        "adresse": "7-2 Aza Shimoniura, Oaza Fukuhara, Kamikatsu-cho, Tokushima 771-4501, Japan",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Kamikatsu’s building is a civic emblem for a town organised around zero waste. Reused windows, fittings and materials help create an architecture that feels handmade, local and publicly legible. The design uses irregularity as a virtue: recovered pieces contribute to facade rhythm, interior warmth and narrative identity. Rather than hiding behind a generic eco-aesthetic, the building lets visitors read reuse through thresholds, surfaces and everyday details connected to the town’s waste-sorting culture.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_kamikatsu_zero_waste_center_hotel_why",
+        "id": "p_kamikatsu_zero_waste_center_hotel_why",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / eröffnet Mai 2020",
+        "source_urls": [
+          "https://why-kamikatsu.jp/"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: international"
+        ],
+        "longitude": 134.2885
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5424",
+      "id": "p_lo_reninge_town_hall_facade",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "Lo-Reninge Town Hall façade / Stadhuis Lo",
+        "year_completed": 2011,
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "latitude": 50.9805957,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: unproblematisch"
+        ],
+        "area_m2_gross": 1350,
+        "name": "Lo-Reninge Town Hall…",
+        "adresse": "Markt 1, 8647 Lo-Reninge, Belgien",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Lo-Reninge town hall facade is a focused case where reclaimed material operates at the scale of civic image. Reused bricks or facade elements do not simply reduce impact; they shape how the public building meets the street and relates to local continuity. The design interest is in rhythm, texture, colour and weathering. Architectural output should therefore be described through the facade’s material presence and how recovered components support institutional dignity without appearing ornamental or nostalgic.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_lo_reninge_town_hall_facade",
+        "id": "p_lo_reninge_town_hall_facade",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / fertiggestellt 2011",
+        "source_urls": [
+          "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+          "https://www.vai.be/en/buildings/publieke-gebouwen/stadhuis-lo-lo-reninge",
+          "https://adokin.eu/fr/category/comment/projets",
+          "https://afasiaarchzine.com/2017/12/noa"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 2.7493019
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5647",
+      "id": "p_resilience_la_ferme_des_possibles_stains",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "Résilience / La Ferme des Possibles Stains",
+        "latitude": 48.9500637,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 1883,
+        "name": "Résilience",
+        "adresse": "29 Rue d’Amiens, 93240 Stains",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Résilience combines reuse with bioclimatic construction to make a social and agricultural building feel materially rooted. Reused windows, radiators, granite paving, sanitary objects and lighting interact with earth, straw and timber, producing a facade and interior palette that is both pragmatic and atmospheric. The design quality lies in continuity between environmental performance and material character: reclaimed components help define daylight, thermal behaviour, texture and the everyday dignity of a community-oriented farm building.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_resilience_la_ferme_des_possibles_stains",
+        "id": "p_resilience_la_ferme_des_possibles_stains",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.bellastock.com/projets/resilience",
+          "https://www.construction21.org/france/case-studies/h/resilience-la-ferme-des-possibles.html",
+          "https://www.socotec.fr/media/client-projects/reemploi-materiaux-novaedia",
+          "https://www.darchitectures.com/magazine/numeros/dossier-tous/111-n-291-la-filiere-du-reemploi-est-elle-credible/4751-reemploi-5-8-un-equilibre-a-trouver-entre-prise-de-risque-et-aleas-siege-de-la-cooperative-novaedia-a-stains-archipel-zero-architectes.html",
+          "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles",
+          "https://www.construction21.org/france/articles/h/resilience-un-batiment-bioclimatique-pour-la-ferme-des-possibles.html"
+        ],
+        "bauobjektklasse": [
+          "Gebaeude"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 2.3701218
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "id": "p_chiro_d_itterbeek_dilbeek",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Sanitärblock / WC-Anlage fuer Chiro und Besucher",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "Chiro d’Itterbeek / Sanitary block, Dilbeek",
+        "year_completed": 2019,
+        "latitude": 50.8318626,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 15,
+        "name": "Chiro d’Itterbeek",
+        "adresse": "Plankenstraat 23, 1701 Dilbeek, Belgien",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The sanitary block is small, but the design work is unusually precise. Reclaimed tiles, sanitary fixtures, mirrors, lighting, doors, windows, bricks and steel profiles are not scattered tokens; they define the wet-room atmosphere, facade texture and everyday usability of the building. The project shows how a modest programme can be designed almost as a fitted assemblage, where each recovered component is selected for dimension, durability, hygiene, finish and visual compatibility.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_chiro_d_itterbeek_dilbeek",
+        "id": "p_chiro_d_itterbeek_dilbeek",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.construction21.org/france/case-studies/h/pavillon-de-sanitaires-du-chiro-d-itterbeek.html",
+          "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+          "https://www.construction21.org/belgique/case-studies/h/pavillon-de-sanitaires-du-chiro-d-itterbeek-dilbeek.html",
+          "https://opalis.eu/en/dealers/rotor-deconstruction",
+          "https://opalis.eu/en/dealers/franck-bricks",
+          "https://adokin.eu/fr/tag/briques"
+        ],
+        "status": "Realisiert",
+        "longitude": 4.234055
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4586",
+      "id": "h_mengenunsicherheit",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Mengenunsicherheit",
+        "id": "h_mengenunsicherheit",
+        "category": "market_supply",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5179",
+      "id": "p_hastings_pier_visitor_centre",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "name_full": "Hastings Pier Visitor Centre / reclaimed timber cladding",
+        "year_completed": 2016,
+        "wiederverwendungsort": [
+          "Auf_demselben_Standort_versetzt"
+        ],
+        "latitude": 50.8567,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 11720,
+        "name": "Hastings Pier Visitor…",
+        "adresse": "1-10 White Rock, Hastings TN34 1JY, UK",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The visitor centre gives fire-damaged pier timber a new architectural role. Reclaimed hardwood is cut, sorted and used as cladding, so the building’s surface carries the memory of the destroyed pier while protecting a new public facility. The design is simple but emotionally specific: material provenance becomes facade, atmosphere and civic narrative. Its architectural quality depends on weathered texture, horizontal boarding and the transformation of loss into a calm seaside building.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_hastings_pier_visitor_centre",
+        "id": "p_hastings_pier_visitor_centre",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / Wiedereröffnung 2016",
+        "source_urls": [
+          "https://www.drmm.co.uk/project/hastings-pier/"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 0.5792
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "id": "p_impact_hub_berlin_crclr_fitout",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Impact Hub Berlin / CRCLR Fit-out",
+        "year_completed": 2022,
+        "latitude": 52.4764,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 3500,
+        "name": "Impact Hub Berlin",
+        "adresse": "Rollbergstraße 26, 12053 Berlin, Germany",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Impact Hub fit-out translates CRCLR’s circular agenda into everyday workspace design. Reclaimed partitions, surfaces, fixtures and furniture help produce an interior that is flexible, informal and materially explicit. The design choices favour adaptability and visible assembly over a seamless office finish. Reuse becomes spatial communication: tenants encounter the building’s values through desks, meeting rooms, partitions and rough surfaces, not through abstract sustainability signage.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_impact_hub_berlin_crclr_fitout",
+        "id": "p_impact_hub_berlin_crclr_fitout",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.buildingsocialecology.org/projects/crclr-house-berlin/"
+        ],
+        "status": "Realisiert",
+        "longitude": 13.4357
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5799",
+      "id": "p_timber_square_london",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "latitude": 51.5050972,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "BREEAM",
+          "NABERS",
+          "WELL"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 52026,
+        "name": "Timber Square London",
+        "adresse": "25 Lavington Street / Bankside, Southwark, London SE1",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Timber Square combines retained printworks structure, new timber construction and selective reused steel into a layered office redevelopment. Reuse is not the only design driver, but it changes the structural and interior narrative: existing frames remain, reclaimed beams appear around cores, and CLT introduces a warmer contemporary layer. The architectural quality is in the legible coexistence of old industrial fabric, new timber order and targeted second-use steel within a commercial city block.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_timber_square_london",
+        "id": "p_timber_square_london",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "im Bau / nahe Fertigstellung; Handover zu verifizieren",
+        "status": [
+          "In_Bau",
+          "Unklar"
+        ],
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": -0.1000695
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "id": "h_terminunsicherheit",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Terminunsicherheit",
+        "id": "h_terminunsicherheit",
+        "category": "organisational_timing",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5087",
+      "id": "p_biopartner_5_leiden_oegstgeest",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Labor-, Büro- und Begegnungsgebäude für Life-Sciences-Startups",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "BioPartner 5, Leiden / Oegstgeest",
+        "year_completed": 2021,
+        "latitude": 52.1710283,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "Paris_Proof"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "BioPartner 5",
+        "adresse": "Limes 7 / Leiden Bio Science Park, Oegstgeest/Leiden",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "BioPartner 5 integrates reused elements into a technically demanding laboratory and office building rather than into an informal showcase. Reclaimed steel, partitions, paving, sanitary fixtures and demolition rubble are absorbed into a new institutional architecture where performance, certification and flexibility matter. The design challenge is to make circular components compatible with a clean, precise research environment. Its architectural output is a controlled circular identity: reuse is visible in selected surfaces and structure without undermining laboratory order.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_biopartner_5_leiden_oegstgeest",
+        "id": "p_biopartner_5_leiden_oegstgeest",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://leidenbioscienceparkprojects.nl/en/sustainability/circulariteit",
+          "https://www.nationalestaalprijs.nl/project/biopartner-5",
+          "https://www.staalmakers.nl/projecten/biopartner-5",
+          "https://www.universiteitleiden.nl/en/news/2020/11/gorlaeus-highrise-lives-on-in-two-new-buildings-in-leiden",
+          "https://www.btbnet.nl/projecten/bouwbegeleiding-biopartner-center-5-leiden",
+          "https://stone22.com/en/portfolio/biopartner5",
+          "https://www.biopartnerleiden.nl/media_blog/opening_biopartner5",
+          "https://www.dutchdesignawards.nl/en/gallery/biopartner-5",
+          "https://www.bouwwereld.nl/bouwdelen/constructie/dubbel-circulaire-staalconstructie-voor-biopartner-5",
+          "https://vicobdam.nl/circulair-bouwen",
+          "https://dutchdesigndaily.com/stories/biopartner-5",
+          "https://ptsa.nl"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 4.4502649
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5210",
+      "id": "p_holbein_gardens_london",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: exakt"
+        ],
+        "year_completed": 2023,
+        "latitude": 51.4947,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "BREEAM",
+          "NABERS",
+          "WELL"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 3536,
+        "name": "Holbein Gardens, London",
+        "adresse": "7 Holbein Place, London SW1W 8NR, UK",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Holbein Gardens combines deep retrofit with selective structural reuse, making the existing building fabric an active design resource. Rather than replacing the frame wholesale, the project works with what can remain and what can be inserted, producing a layered office architecture. Reclaimed or retained elements shape the structural strategy, facade response and interior character. The design quality lies in showing commercial redevelopment as careful editing: conservation, new performance and reuse are coordinated into a polished urban workplace.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_holbein_gardens_london",
+        "id": "p_holbein_gardens_london",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / fertiggestellt 2023",
+        "source_urls": [
+          "https://www.grosvenor.com/news-insights/some-of-uk%E2%80%99s-first-salvaged-steelwork-reused-in-holbein-gardens-retrofit",
+          "https://hts.uk.com/project/holbein-gardens",
+          "https://www.istructe.org/journal/volumes/volume-101-%282023%29/issue-3/holbein-gardens-low-carbon-reclaimed-steel",
+          "https://www.newsteelconstruction.com/wp/holbein-gardens-london",
+          "https://terc.org.uk/54-2",
+          "https://ukgbc.org/resources/reused-steel-stockmatcher",
+          "https://asbp.org.uk/case-studies/holbein-gardens",
+          "https://nla.london/projects/holbein-gardens-2",
+          "https://link.springer.com/article/10.1007/s13296-023-00778-4",
+          "https://www.researchgate.net/publication/339713300_SCI_P427_-_Structural_Steel_Reuse_assessment_testing_and_design_principles",
+          "https://www.tftconsultants.com/projects/holbein-gardens-london",
+          "https://www.iom3.org/resource/steel-reused-from-uk-s-first-steelworks.html",
+          "https://www.grosvenor.com/property/holbein-gardens"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": -0.1489
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5688",
+      "id": "p_roots_in_the_sky_blackfriars_crown_court",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "wirtschaft_aspekte": [
+          "Finanzierung"
+        ],
+        "name_full": "Roots in the Sky / Blackfriars Crown Court",
+        "latitude": 51.5025,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager",
+          "Temporal: geplant"
+        ],
+        "name": "Roots in the Sky",
+        "adresse": "1-15 Pocock Street, London SE1 0BT, UK",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Roots in the Sky remains relevant as a planned or superseded reuse concept because unrealised status is not itself a reason to discard it. The design idea combines retained lower structures with a new timber-and-planting identity and possible reclaimed steel strategy. Its architectural significance lies in imagining how an existing court building could support a dramatically different public and ecological programme. Treat outputs as proposed design intentions, not built evidence, and keep extraction tied to documented reuse claims.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_roots_in_the_sky_blackfriars_crown_court",
+        "id": "p_roots_in_the_sky_blackfriars_crown_court",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "ungebaut / ersetzt durch iQ-Studentenwohnprojekt",
+        "source_urls": [
+          "https://ukgbc.org/resources/roots-in-the-sky",
+          "https://www.macegroup.com/en-us/news/fabrix-appoints-mace-as-main-contractor-for-transformational-roots-in-the-sky-development",
+          "https://symmetrys.com/project/roots-in-the-sky",
+          "https://betterbankside.co.uk/bankside/future-bankside/blackfriars-crown-court",
+          "https://southwarknews.co.uk/area/southwark/approved-71-new-social-rent-homes-will-replace-blackfriars-crown-court-alongside-student-accommodation",
+          "https://moderngov.southwark.gov.uk/mgAi.aspx?ID=75726",
+          "https://www.turley.co.uk/project/former-blackfriars-crown-court-loman-street-southwark",
+          "https://www.architectsjournal.co.uk/news/developer-urban-mines-broadgate-steel-frame-for-southwark-retrofits",
+          "https://www.architectsjournal.co.uk/news/studio-rhe-redesigns-blackfriars-court-building-with-urban-forest",
+          "https://www.theconstructionindex.co.uk/news/view/second-hand-steel-to-hold-up-forest-in-the-sky",
+          "https://bimtechnologies.co.uk/projects/roots-in-the-sky-london",
+          "https://en.wikipedia.org/wiki/Blackfriars_Crown_Court"
+        ],
+        "bauobjektklasse": [
+          "Gebaeude"
+        ],
+        "status": [
+          "Geplant",
+          "Verworfen"
+        ],
+        "longitude": -0.0999
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:580",
+      "id": "p_jugendtreff_ingersheim",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "name_full": "Jugendtreff Ingersheim — CLT-Reuse Pilot (Stuttgart 210 first reallab, 2024)",
+        "latitude": 48.959324,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Jugendtreff Ingersheim",
+        "adresse": "Baumwasenweg, 74379 Ingersheim, Germany",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Jugendtreff Ingersheim turns former Stuttgart 21 formwork into a youth-centre construction system. The design has to accept the geometry, marks and structural behaviour of CLT-like timber formwork elements, translating infrastructure-site waste into walls or roof components. Its architectural quality comes from that visible conversion: a young public building gains a tactile, experimental timber identity while demonstrating that temporary construction aids can become long-life spatial elements.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_jugendtreff_ingersheim",
+        "id": "p_jugendtreff_ingersheim",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "built 2024",
+        "longitude": 9.188568
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4591",
+      "id": "h_unkonventionelles_material",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Unkonventionelles_Material",
+        "id": "h_unkonventionelles_material",
+        "category": "technical_quality",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4789",
+      "id": "p_big_dig_building_boston",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "name_full": "Big Dig Building, Boston/Cambridge",
+        "year_completed": 2008,
+        "latitude": 42.3884,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Big Dig Building",
+        "adresse": "Massachusetts Avenue (triangular lot near Porter Square), Cambridge, MA 02140, USA",
+        "geo_confidence": "low",
+        "entwurfsbeschreibung": "The proposal reframes highway demolition debris as an architectural stockroom. Instead of designing a conventional building and then searching for recycled content, it imagines ramp, pier and roadway elements as the starting geometry for structure and enclosure. Its design relevance is speculative but strong: infrastructural scale, excessive load capacity and rough component identity would shape span, massing and facade language. The project is therefore a reuse concept for translating civil-engineering remnants into habitable architecture.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_big_dig_building_boston",
+        "id": "p_big_dig_building_boston",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "Proposal / aborted / ungebaut",
+        "source_urls": [
+          "https://metropolismag.com/programs/single-speed-design-the-2004-next-generation-winner/"
+        ],
+        "status": [
+          "Prototyp",
+          "Verworfen",
+          "Vorgeschlagen"
+        ],
+        "longitude": -71.1192
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5160",
+      "id": "p_brighton_waste_house_brighton",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Forschungs-, Lehr-, Demonstrations- und Besuchsgebäude",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Brighton Waste House / Brighton Wild House",
+        "latitude": 50.8247,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Brighton Waste House",
+        "adresse": "58-67 Grand Parade, Brighton BN2 0JY, UK",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Waste House is a full-scale teaching experiment where discarded and reclaimed products become architectural lessons. Carpet tiles, denim, vinyl banners, waste timber, concrete blocks and unusual infill materials are built into walls and envelopes so that construction itself becomes a display system. The design does not hide the research character; it makes the building a readable catalogue of assemblies, testing how low-value waste can create enclosure, texture, insulation and public curiosity.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_brighton_waste_house_brighton",
+        "id": "p_brighton_waste_house_brighton",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / permanent; 2025 als Wild House weiterentwickelt",
+        "source_urls": [
+          "https://www.construction21.org/articles/h/the-brighton-waste-house.html"
+        ],
+        "status": "Realisiert",
+        "longitude": -0.1366
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5708",
+      "id": "p_saxum_vineyard_equipment_barn_paso_robles",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "tragwerksprinzip": [
+          "Skeletttragwerk"
+        ],
+        "name_full": "Saxum Vineyard Equipment Barn",
+        "latitude": 35.6366,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Saxum Vineyard Equipment…",
+        "adresse": "2800 Willow Creek Road, Paso Robles, CA 93446, USA",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Saxum barn converts oil-field drill-stem pipe and steel offcuts into an agricultural structure with a direct industrial presence. The design does not refine the components beyond recognition; it lets their strength, circular sections and weathering character define columns, roof support and large gates. Architectural quality comes from a precise fit between source and programme: rugged industrial salvage becomes appropriate vineyard infrastructure, giving the barn a tough, place-specific tectonic language.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_saxum_vineyard_equipment_barn_paso_robles",
+        "id": "p_saxum_vineyard_equipment_barn_paso_robles",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.aisc.org/awards-and-honors/ideas-awards-archive/saxum-vineyard-equipment-barn",
+          "https://rarig.com/projects/agricultural-cold-storage/saxum-vineyards-equipment-barn",
+          "https://www.world-architects.com/nl/projects/view/saxum-vineyard-equipment-barn",
+          "https://risa.com/case-studies/saxum-vineyard-equipment-barn",
+          "https://www.architecturelab.net/saxum-vineyard-equipment-barn-clayton-korte",
+          "https://www.saxumvineyards.com/"
+        ],
+        "bauobjektklasse": [
+          "Depot_Lager"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: international"
+        ],
+        "longitude": -120.6869
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "id": "h_verfuegbarkeitsproblem",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Verfuegbarkeitsproblem",
+        "id": "h_verfuegbarkeitsproblem",
+        "category": "market_supply",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5338",
+      "id": "p_ka13_kristian_augusts_gate_13_oslo",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "KA13 / Kristian Augusts gate 13, Oslo",
+        "year_completed": 2021,
+        "latitude": 59.916806,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 4297,
+        "name": "KA13",
+        "adresse": "Kristian Augusts gate 13, Oslo, Norwegen",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "KA13 shows how an ordinary office transformation can become a reuse-driven design exercise. The project keeps and upgrades existing structures while integrating reused components into facade, interior and technical strategies. Design quality comes from making circular construction appear professional and urban, not experimental in a fragile sense. The architectural output is a restrained commercial building whose material decisions reveal a shift from replacement culture toward careful reconfiguration and selective recovered-component use.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_ka13_kristian_augusts_gate_13_oslo",
+        "id": "p_ka13_kristian_augusts_gate_13_oslo",
+        "lca_modules": [
+          "D Beyond (Reuse)"
+        ],
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 10.737562
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5606",
+      "id": "p_recrete_footbridge_reused_concrete_blocks",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Re:Crete footbridge — reused concrete blocks",
+        "latitude": 46.2264,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Re:Crete footbridge",
+        "adresse": "Route Cantonale / Route de la Morge, 1964 Conthey, Switzerland",
+        "geo_confidence": "medium",
+        "entwurfsbeschreibung": "Re:Crete makes the structural consequences of reclaimed concrete explicit. Instead of crushing concrete into aggregate, the project stacks or recomposes large blocks into a bridge, so design decisions revolve around compression, geometry, contact surfaces and safe assembly. The architectural output is intentionally direct: a small piece of infrastructure that reveals the mass and previous life of the material. It demonstrates how reclaimed concrete can become form, structure and public object simultaneously.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_recrete_footbridge_reused_concrete_blocks",
+        "id": "p_recrete_footbridge_reused_concrete_blocks",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "Prototyp / Forschungsdemonstrator",
+        "source_urls": [
+          "https://www.construction21.org/articles/h/recrete-footbridge.html"
+        ],
+        "bauobjektklasse": [
+          "Infrastruktur"
+        ],
+        "status": "Prototyp",
+        "longitude": 7.3074
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4878",
+      "id": "p_christ_pavilion_volkenroda",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Kirche / Klosterensemble",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Christus-Pavillon / Christ Pavilion Volkenroda",
+        "latitude": 51.2067,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 2004,
+        "name": "Christus-Pavillon",
+        "adresse": "Kloster Volkenroda, 99994 Volkenroda, Germany",
+        "geo_confidence": "medium",
+        "entwurfsbeschreibung": "The Christus-Pavillon is architectural reuse at the scale of an entire pavilion. Rather than harvesting isolated components, the project relocates and re-anchors a symbolic steel, glass, marble and concrete ensemble in a new religious setting. Design decisions concern dismantling, transport, reassembly and contextual transformation. The architectural quality comes from continuity and displacement: Expo-era elements become a monastery-related spatial sequence, carrying their original formal language into a different spiritual and landscape context.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_christ_pavilion_volkenroda",
+        "id": "p_christ_pavilion_volkenroda",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / transloziert / in Nutzung",
+        "status": "Realisiert",
+        "longitude": 10.4567
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "id": "h_witterung_feuchte",
+      "labels": [
+        "Huerde"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rakhshan et al. 2020 systematic review"
+        ],
+        "name": "Witterung_Feuchte",
+        "id": "h_witterung_feuchte",
+        "category": "logistics_storage",
+        "source_urls": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5271",
+      "id": "p_institut_de_botanique_ulg_liege",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Institut de Botanique de l’ULg, Liège",
+        "latitude": 50.603,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Institut de Botanique…",
+        "adresse": "Chemin de la Vallée 4, 4000 Liège, Belgium",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Botanical Institute conversion is an adaptive reuse project where design begins with the retained institutional building and its existing spatial order. Reuse is strongest when existing fabric, structure and finishes are preserved or supplemented by recovered components to support new functions. The architectural quality comes from careful transformation rather than replacement: old academic rooms, circulation and material traces are reinterpreted for contemporary use, giving the project a layered civic and educational character.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_institut_de_botanique_ulg_liege",
+        "id": "p_institut_de_botanique_ulg_liege",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / Renovierung",
+        "source_urls": [
+          "https://opalis.eu/fr/projets/institut-de-botanique-ulg-liege"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 5.5818
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5679",
+      "id": "p_resource_rows_copenhagen",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Resource Rows Copenhagen",
+        "latitude": 55.641,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Resource Rows",
+        "adresse": "Ejler Billes Allé 29, 2300 København S, Denmark",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Resource Rows gives old brickwork a new facade logic by cutting wall fragments into modules rather than cleaning individual bricks. This decision preserves mortar, colour variation and irregular edges, making the origin of the material visible in a controlled residential envelope. The design turns a technical problem into an aesthetic one: patchwork masonry panels create rhythm, depth and memory. Reuse shapes not only material content but the entire architectural image of the housing block.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_resource_rows_copenhagen",
+        "id": "p_resource_rows_copenhagen",
+        "lca_modules": [
+          "B1-B7 Nutzung",
+          "D Beyond (Reuse)"
+        ],
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://dac.dk/en/magazine/resource-rows"
+        ],
+        "bauobjektklasse": [
+          "Gebaeude"
+        ],
+        "status": "Realisiert",
+        "longitude": 12.5852
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919879783501271511",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5198",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4567",
+      "start_id": "p_haus_hos_mehrfamilienhaus_muehlhausen",
+      "end_id": "h_akzeptanzproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_haus_hos_mehrfamilienhaus_muehlhausen__HAT_HUERDE__h_akzeptanzproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094408124",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5564",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4567",
+      "start_id": "p_plattenpalast_berlin",
+      "end_id": "h_akzeptanzproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_plattenpalast_berlin__HAT_HUERDE__h_akzeptanzproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280723880",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4567",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "h_akzeptanzproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_meduni_campus_mariannengasse__HAT_HUERDE__h_akzeptanzproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917627983687586265",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4819",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_cascadeup_london_secondary_timber_glulam_demonstrator",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_cascadeup_london_secondary_timber_glulam_demonstrator__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094407461",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4901",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_circular_centre_netherlands_prinsenhof_a_reuse_pilot__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908092803",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4995",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_ferme_du_rail_paris",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_ferme_du_rail_paris__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164279459721778086",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5030",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_grande_halle_de_colombelles",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_grande_halle_de_colombelles__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094407682",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5122",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_boulder_fire_station_3",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_boulder_fire_station_3__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164279459721778435",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_kindergarten_moeoeslistrasse_manegg_zuerich__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164279459721778470",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5414",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_lokomotion_technology_centre_mini_pilot_tampere",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lokomotion_technology_centre_mini_pilot_tampere__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467037639",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_plattenvereinigung_berlin",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_plattenvereinigung_berlin__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280723494",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4569",
+      "start_id": "p_lysp8_basel",
+      "end_id": "h_aufbereitungsaufwand",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lysp8_basel__HAT_HUERDE__h_aufbereitungsaufwand",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917627983687586266",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5030",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4570",
+      "start_id": "p_grande_halle_de_colombelles",
+      "end_id": "h_ausschreibungsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_grande_halle_de_colombelles__HAT_HUERDE__h_ausschreibungsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919879783501271514",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4570",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "h_ausschreibungsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_k118_kopfbau_halle_118_winterthur__HAT_HUERDE__h_ausschreibungsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922131583314956762",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5634",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4570",
+      "start_id": "p_recypark_demets_anderlecht",
+      "end_id": "h_ausschreibungsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_recypark_demets_anderlecht__HAT_HUERDE__h_ausschreibungsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467038632",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4570",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "h_ausschreibungsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_meduni_campus_mariannengasse__HAT_HUERDE__h_ausschreibungsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467036965",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4901",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_circular_centre_netherlands_prinsenhof_a_reuse_pilot__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467037115",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_grubenstrasse_29_werkhof_29_zuerich__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722450",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5138",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_brent_cross_town_primary_substation_london",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_brent_cross_town_primary_substation_london__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467037262",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5198",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_haus_hos_mehrfamilienhaus_muehlhausen",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_haus_hos_mehrfamilienhaus_muehlhausen__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352094",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5278",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_jeugdkliniek_ithaka_emergis_kloetinge__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352135",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_k118_kopfbau_halle_118_winterthur__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352195",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_kindergarten_moeoeslistrasse_manegg_zuerich__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093208",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5400",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_liander_alliander_hq_duiven",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_liander_alliander_hq_duiven__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352581",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5765",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_the_green_house_utrecht",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_the_green_house_utrecht__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352601",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5785",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_thoravej_29_copenhagen",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_thoravej_29_copenhagen__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467038408",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6344",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_schaerenmoosstrasse_zuerich",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_schaerenmoosstrasse_zuerich__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653353485",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4576",
+      "start_id": "p_elementa_walkeweg",
+      "end_id": "h_entwurfsbindung",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_elementa_walkeweg__HAT_HUERDE__h_entwurfsbindung",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919879783501271522",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4901",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_circular_centre_netherlands_prinsenhof_a_reuse_pilot",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_circular_centre_netherlands_prinsenhof_a_reuse_pilot__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922131583314956770",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4995",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_ferme_du_rail_paris",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_ferme_du_rail_paris__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924383383128642018",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5030",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_grande_halle_de_colombelles",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_grande_halle_de_colombelles__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094407788",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5228",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094407861",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_juch_areal_recyclingzentrum_zuerich__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722631",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_k118_kopfbau_halle_118_winterthur__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093442",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5634",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_recypark_demets_anderlecht",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_recypark_demets_anderlecht__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467038246",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4578",
+      "start_id": "p_lysp8_basel",
+      "end_id": "h_fehlende_lagerflaeche",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lysp8_basel__HAT_HUERDE__h_fehlende_lagerflaeche",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917627983687586278",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4917",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_circular_pavilion_paris",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_circular_pavilion_paris__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924383383128642022",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4955",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_elys_kultur_gewerbehaus_basel",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_elys_kultur_gewerbehaus_basel__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653351794",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4978",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_europa_building_brussels",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_europa_building_brussels__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352177",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5361",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_kamikatsu_zero_waste_center_hotel_why",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_kamikatsu_zero_waste_center_hotel_why__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093232",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5424",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_lo_reninge_town_hall_facade",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lo_reninge_town_hall_facade__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352391",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_plattenvereinigung_berlin",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_plattenvereinigung_berlin__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352463",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5647",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_resilience_la_ferme_des_possibles_stains",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_resilience_la_ferme_des_possibles_stains__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280723981",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4582",
+      "start_id": "p_elementa_walkeweg",
+      "end_id": "h_heterogenitaet_chargen",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_elementa_walkeweg__HAT_HUERDE__h_heterogenitaet_chargen",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922131583314956778",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4586",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "h_mengenunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_chiro_d_itterbeek_dilbeek__HAT_HUERDE__h_mengenunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908092838",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5030",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4586",
+      "start_id": "p_grande_halle_de_colombelles",
+      "end_id": "h_mengenunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_grande_halle_de_colombelles__HAT_HUERDE__h_mengenunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653351995",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5179",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4586",
+      "start_id": "p_hastings_pier_visitor_centre",
+      "end_id": "h_mengenunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_hastings_pier_visitor_centre__HAT_HUERDE__h_mengenunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352044",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5228",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4586",
+      "start_id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+      "end_id": "h_mengenunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain__HAT_HUERDE__h_mengenunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093058",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4586",
+      "start_id": "p_impact_hub_berlin_crclr_fitout",
+      "end_id": "h_mengenunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_impact_hub_berlin_crclr_fitout__HAT_HUERDE__h_mengenunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093607",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5799",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4586",
+      "start_id": "p_timber_square_london",
+      "end_id": "h_mengenunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_timber_square_london__HAT_HUERDE__h_mengenunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917627983687586285",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_chiro_d_itterbeek_dilbeek__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919879783501271533",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4995",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_ferme_du_rail_paris",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_ferme_du_rail_paris__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922131583314956781",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5087",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_biopartner_5_leiden_oegstgeest",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_biopartner_5_leiden_oegstgeest__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924383383128642029",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5210",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_holbein_gardens_london",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_holbein_gardens_london__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722540",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5228",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352117",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_juch_areal_recyclingzentrum_zuerich__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722726",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5414",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_lokomotion_technology_centre_mini_pilot_tampere",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lokomotion_technology_centre_mini_pilot_tampere__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094408248",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5688",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_roots_in_the_sky_blackfriars_crown_court",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_roots_in_the_sky_blackfriars_crown_court__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093990",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_lysp8_basel",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lysp8_basel__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653353384",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_meduni_campus_mariannengasse__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094409229",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4589",
+      "start_id": "p_elementa_walkeweg",
+      "end_id": "h_terminunsicherheit",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_elementa_walkeweg__HAT_HUERDE__h_terminunsicherheit",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280717892",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:580",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4591",
+      "start_id": "p_jugendtreff_ingersheim",
+      "end_id": "h_unkonventionelles_material",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_jugendtreff_ingersheim__HAT_HUERDE__h_unkonventionelles_material",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917627983687586287",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4789",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4591",
+      "start_id": "p_big_dig_building_boston",
+      "end_id": "h_unkonventionelles_material",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_big_dig_building_boston__HAT_HUERDE__h_unkonventionelles_material",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467036981",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4917",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4591",
+      "start_id": "p_circular_pavilion_paris",
+      "end_id": "h_unkonventionelles_material",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_circular_pavilion_paris__HAT_HUERDE__h_unkonventionelles_material",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653351976",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5160",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4591",
+      "start_id": "p_brighton_waste_house_brighton",
+      "end_id": "h_unkonventionelles_material",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_brighton_waste_house_brighton__HAT_HUERDE__h_unkonventionelles_material",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352524",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5708",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4591",
+      "start_id": "p_saxum_vineyard_equipment_barn_paso_robles",
+      "end_id": "h_unkonventionelles_material",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_saxum_vineyard_equipment_barn_paso_robles__HAT_HUERDE__h_unkonventionelles_material",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917627983687586288",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4789",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_big_dig_building_boston",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_big_dig_building_boston__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919879783501271536",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4819",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_cascadeup_london_secondary_timber_glulam_demonstrator",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_cascadeup_london_secondary_timber_glulam_demonstrator__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922131583314956784",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_chiro_d_itterbeek_dilbeek__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467037019",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4955",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_elys_kultur_gewerbehaus_basel",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_elys_kultur_gewerbehaus_basel__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653351867",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_grubenstrasse_29_werkhof_29_zuerich__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653351954",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5138",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_brent_cross_town_primary_substation_london",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_brent_cross_town_primary_substation_london__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352026",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5210",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_holbein_gardens_london",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_holbein_gardens_london__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722562",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_impact_hub_berlin_crclr_fitout",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_impact_hub_berlin_crclr_fitout__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467037365",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_juch_areal_recyclingzentrum_zuerich__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093146",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5338",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_ka13_kristian_augusts_gate_13_oslo",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_ka13_kristian_augusts_gate_13_oslo__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094408166",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5606",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_recrete_footbridge_reused_concrete_blocks",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_recrete_footbridge_reused_concrete_blocks__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094408194",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5634",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_recypark_demets_anderlecht",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_recypark_demets_anderlecht__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093496",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5688",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_roots_in_the_sky_blackfriars_crown_court",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_roots_in_the_sky_blackfriars_crown_court__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352615",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5799",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_timber_square_london",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_timber_square_london__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653352998",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_lysp8_basel",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lysp8_basel__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467038733",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4592",
+      "start_id": "p_elementa_walkeweg",
+      "end_id": "h_verfuegbarkeitsproblem",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_elementa_walkeweg__HAT_HUERDE__h_verfuegbarkeitsproblem",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919879783501271537",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4878",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_christ_pavilion_volkenroda",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_christ_pavilion_volkenroda__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722229",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4917",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_circular_pavilion_paris",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_circular_pavilion_paris__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467037042",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4978",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_europa_building_brussels",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_europa_building_brussels__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153020460653351811",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4995",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_ferme_du_rail_paris",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_ferme_du_rail_paris__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722472",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5160",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_brighton_waste_house_brighton",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_brighton_waste_house_brighton__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155272260467037243",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5179",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_hastings_pier_visitor_centre",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_hastings_pier_visitor_centre__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094407831",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5271",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_institut_de_botanique_ulg_liege",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_institut_de_botanique_ulg_liege__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164279459721778334",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5278",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_jeugdkliniek_ithaka_emergis_kloetinge",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_jeugdkliniek_ithaka_emergis_kloetinge__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162027659908093169",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5361",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_kamikatsu_zero_waste_center_hotel_why",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_kamikatsu_zero_waste_center_hotel_why__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159775860094407984",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5424",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_lo_reninge_town_hall_facade",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_lo_reninge_town_hall_facade__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157524060280722991",
+      "type": "HAT_HUERDE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5679",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4593",
+      "start_id": "p_resource_rows_copenhagen",
+      "end_id": "h_witterung_feuchte",
+      "properties": {
+        "confidence": 0.45,
+        "id": "r_p_resource_rows_copenhagen__HAT_HUERDE__h_witterung_feuchte",
+        "basis": "taxonomy_derived_legacy_screening",
+        "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/",
+        "source_quote": "Components reuse in the building sector: systematic review identifies social, technical, economic, regulatory, organisational and market barriers."
+      }
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "confirmation_required": "APPLY ier_p0.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-06-06T21:13:30.423604+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\ier_p0.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Zur Erstellung belastbarer Ökobilanzen werden in der Regel Umweltproduktdeklarationen (EPDs) gemäß DIN EN 15804 herangezogen",
+        "evidence_url": "https://www.gebaeudeforum.de/wissen/nachhaltiges-bauen-und-sanieren/lebenszyklusbetrachtung/oekobilanzierung-lca/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_epd_oder_lca_nachweis",
+        "properties": {
+          "evidence_basis": "EN 15804/15978 environmental product declaration or building LCA (EU Taxonomy, national schemes)",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014157,
+        "to": "nf_oekobilanz_epd",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_epd_oder_lca_nachweis",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_oekobilanz_epd",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Technical preparation for the roll-out of the Digital Product Passport (DPP) is already underway by the Commission",
+        "evidence_url": "https://green-forum.ec.europa.eu/implementing-ecodesign-sustainable-products-regulation_en",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_materialpass_oder_dpp",
+        "properties": {
+          "evidence_basis": "Digital product passport / building resource passport (ESPR DPP, Madaster, DGNB Level(s))",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014159,
+        "to": "nf_materialpass_ressourcenpass",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_materialpass_oder_dpp",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_materialpass_ressourcenpass",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Ziel dieser Norm ist die Barrierefreiheit baulicher Anlagen, damit sie für Menschen mit Behinderungen in der allgemein üblichen Weise zugänglich und nutzbar sind",
+        "evidence_url": "https://www.baunormenlexikon.de/norm/din-18040-1/c099c3ee-ecd0-48ed-9d9d-ec0f84970d53",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_barrierefreiheitsaudit",
+        "properties": {
+          "evidence_basis": "Accessibility audit per DIN 18040 / DIN 18065",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014160,
+        "to": "nf_barrierefreiheit_nachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_barrierefreiheitsaudit",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_barrierefreiheit_nachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Die DGUV Vorschrift 3 fordert in § 5 Abs. 1 Nr. 1 grundsätzlich Prüfungen vor der Inbetriebnahme von elektrischen Betriebsmitteln und Anlagen",
+        "evidence_url": "https://www.elektrofachkraft.de/pruefung/elektrotechnische-erstpruefung-wiederholungspruefung",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_elektrosicherheitspruefung",
+        "properties": {
+          "evidence_basis": "Electrical safety initial/repeat inspection (DGUV V3 / VDE)",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014161,
+        "to": "nf_elektrosicherheitsnachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_elektrosicherheitspruefung",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_elektrosicherheitsnachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Ziel der Richtlinienreihe ist es, die einwandfreie Trinkwasserqualität in der Trinkwasser-Installation zu bewahren",
+        "evidence_url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien/unsere-richtlinien-highlights/vdi-6023",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_trinkwasser_hygiene_nachweis",
+        "properties": {
+          "evidence_basis": "Drinking-water hygiene inspection (VDI 6023 / VDI 6022)",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014162,
+        "to": "nf_hygiene_und_reinigungsnachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_trinkwasser_hygiene_nachweis",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_hygiene_und_reinigungsnachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch_partial",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "VDI 6202 Blatt 3 befasst sich mit der Erkundung und Bewertung von Asbest in baulichen und technischen Anlagen, insbesondere im Rahmen von Abbruch",
+        "evidence_url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien/unsere-richtlinien-highlights/vdi-6202",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_dokumentenpruefung_bestand",
+        "properties": {
+          "evidence_basis": "pre-demolition document review / building pollutant register (VDI 6210 / ATV DIN 18459)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164698737,
+        "to": "nf_schadstoffkataster_erkundung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_dokumentenpruefung_bestand",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffkataster_erkundung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch_partial",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "Nach Art. 13 sind Hersteller von Produkten, die einer harmonisierten technischen Spezifikation unterliegen, verpflichtet eine Leistungs- und Konformitätserklärung zu erstellen",
+        "evidence_url": "https://www.ressource-deutschland.de/service/rechtlicher-rahmen-zur-ressourceneffizienz/eu-bauprodukte-verordnung-2024/3110/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_approval_process",
+        "properties": {
+          "evidence_basis": "approval / ZIE-ABZ pathway documentation (DIBt Zulassung)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164700106,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_approval_process",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Tests for anchors on site may be required ... To validate the quality of installation of anchors used on the job, i.e. proof tests",
+        "evidence_url": "https://www.wurth.co.uk/media/downloads/pdf/anchors_2/literature/adm/03_Building_Site_Tests.pdf",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_ankerpruefung",
+        "properties": {
+          "evidence_basis": "anchor pull-out test supports fastening proof (EN 1992-4 / facade anchorage)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164700147,
+        "to": "nf_befestigungsnachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_ankerpruefung",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_befestigungsnachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "es kann bei dem gleichen Hersteller durchaus sein, dass es Schwankungen in der petrografischen Zusammensetzung der RC-Körnung gibt",
+        "evidence_url": "https://www.schwenk.de/recyclingbeton-baustoff-der-zukunft/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_petrografie",
+        "properties": {
+          "evidence_basis": "petrographic analysis for recycled aggregate suitability (DAfStb RC concrete)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164700150,
+        "to": "nf_rc_gesteinskoernung_eignung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_petrografie",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_rc_gesteinskoernung_eignung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "In der Neuerscheinung sind die Einstufung der RC-Gesteinskörnung in 4 Typen und die werkseigene Produktionskontrolle (WPK) geregelt",
+        "evidence_url": "https://www.schwenk.de/recyclingbeton-baustoff-der-zukunft/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_eignungspruefung_baulehm",
+        "properties": {
+          "evidence_basis": "suitability testing for mineral secondary aggregates / RC materials",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164703318,
+        "to": "nf_rc_gesteinskoernung_eignung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_eignungspruefung_baulehm",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_rc_gesteinskoernung_eignung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch_partial",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "Mögliche Anschlussnutzungspfade werden identifiziert und hinsichtlich technischer Machbarkeit, wirtschaftlicher Zumutbarkeit und ökologischem Potenzial bewertet",
+        "evidence_url": "https://concular.de/dinspec91525/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_zustandsbewertung",
+        "properties": {
+          "evidence_basis": "condition assessment informs remaining service life (DIN SPEC 91525 PUC)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164703326,
+        "to": "nf_dauerhaftigkeit_restlebensdauer",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_zustandsbewertung",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_dauerhaftigkeit_restlebensdauer",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Der Eignungsnachweis besteht aus der Erstprüfung und der Betriebsbeurteilung",
+        "evidence_url": "https://www.gesetze-im-internet.de/ersatzbaustoffv/__5.html",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_eignungspruefung_baulehm",
+        "properties": {
+          "evidence_basis": "EBV Ersatzbaustoff suitability / quality assessment",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1157590030978388566,
+        "to": "nf_mineralische_ersatzbaustoff_guete",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_eignungspruefung_baulehm",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_mineralische_ersatzbaustoff_guete",
+      "type": "ERFUELLT_NACHWEIS"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 12,
+    "would_update_rel": 12
+  }
+}

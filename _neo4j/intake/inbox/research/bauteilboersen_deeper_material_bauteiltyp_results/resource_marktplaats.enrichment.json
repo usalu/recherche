@@ -1,0 +1,105 @@
+{
+  "anchor_id": "resource_marktplaats",
+  "sources_visited": [
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.pss.resource",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current app-store page: online depot, marketplace, inventory controls and CO2 monitoring for circular construction materials."
+      ]
+    },
+    {
+      "url": "https://apps.apple.com/nl/app/resource-marktplaats/id6743317802",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "App Store source for resource marketplace."
+      ]
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://play.google.com/store/apps/details?id=com.pss.resource"
+      ],
+      "evidence_quote": "App-store source only says circular construction materials; no stable component family exposed.",
+      "confidence": "unsicher",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_mobile_app",
+      "evidence_urls": [
+        "https://play.google.com/store/apps/details?id=com.pss.resource"
+      ],
+      "evidence_quote": "Mobile app marketplace/listing model; operator remains ambiguous.",
+      "confidence": "unsicher"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Resource Marktplaats",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://play.google.com/store/apps/details?id=com.pss.resource",
+      "https://apps.apple.com/nl/app/resource-marktplaats/id6743317802"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [
+    {
+      "field": "operator",
+      "archive": "unknown / package com.pss.resource",
+      "live": "Publisher/operator could not be resolved from accessible store metadata in this run.",
+      "evidence_url": "https://play.google.com/store/apps/details?id=com.pss.resource"
+    }
+  ],
+  "gaps": [
+    {
+      "topic": "Stop-and-ask",
+      "reason": "Operator chain is ambiguous; do not add material/type links until publisher and app scope are verified."
+    },
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Store pages alone do not provide category evidence."
+    },
+    {
+      "topic": "Material",
+      "reason": "No concrete source-backed material term was found in operator/current/history sources. Keep material empty rather than infer from generic construction-material wording."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/resource_marktplaats.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "bt_mehrere"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

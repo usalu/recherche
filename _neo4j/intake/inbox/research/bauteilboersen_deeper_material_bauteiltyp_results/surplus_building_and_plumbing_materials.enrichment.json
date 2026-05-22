@@ -1,0 +1,226 @@
+{
+  "anchor_id": "surplus_building_and_plumbing_materials",
+  "sources_visited": [
+    {
+      "url": "https://surplusbuildingsupplies.co.uk/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current homepage lists bricks, plasterboard, guttering, brassware, paving, decking."
+      ]
+    },
+    {
+      "url": "https://surplusbuildingsupplies.co.uk/how-it-works/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://surplusbuildingsupplies.co.uk/building-materials.html",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Building materials page names concrete, roofing tiles, adhesives, blocks, bricks, builders metalwork, building chemicals, cement/aggregates, reinforcement, damp course/membrane."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_beton",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include Blocks, Cement & Aggregates and Concrete Reinforcement.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include Timber & Sheet Materials and landscaping decking/sleepers.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Building Materials categories include Bricks; latest listings include Ibstock bricks.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include Roofing and roof tiles/flashing-related stock; ceramic roof-tile material needs item-level check.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include Builders Metalwork, fixings and hardware; steel material likely for metalwork.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_kunststoff",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include drainage/guttering/plumbing stock where plastics are common; needs item confirmation.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Fixings, hardware, paint/decorating and tools/workwear map to fit-out support categories.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include Roofing & Guttering, Roof Windows, Flashings and roof materials.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include roof windows and flat roof windows.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include Heating & Plumbing, Electrical & Lighting, kitchens and bathrooms.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Categories include Bricks, Blocks, Plaster & Plasterboard.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://surplusbuildingsupplies.co.uk/building-materials.html"
+      ],
+      "evidence_quote": "Landscaping categories include paving/decking; floor/walkable surface items.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Surplus Building & Plumbing Materials",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://surplusbuildingsupplies.co.uk/",
+      "https://surplusbuildingsupplies.co.uk/how-it-works/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung",
+      "reason": "No QA/certification evidence located."
+    },
+    {
+      "topic": "Material plastic/ceramic",
+      "reason": "Need item pages for polymer/ceramic exactness."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/surplus_building_and_plumbing_materials.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_ziegel",
+        "mat_beton",
+        "mat_holz"
+      ],
+      "wahrscheinlich": [
+        "mat_keramik",
+        "mat_stahl"
+      ],
+      "unsicher": [
+        "mat_kunststoff"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_dach",
+        "bt_wand",
+        "bt_technik",
+        "bt_fenster",
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_boden"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [
+      {
+        "bauteiltyp_id": "bt_wand",
+        "material_ids": [
+          "mat_ziegel",
+          "mat_beton"
+        ],
+        "pair_basis": "bricks, blocks, concrete listed in building-material categories",
+        "evidence_urls": [
+          "https://surplusbuildingsupplies.co.uk/building-materials.html"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_dach",
+        "material_ids": [
+          "mat_keramik"
+        ],
+        "pair_basis": "roofing tiles named",
+        "evidence_urls": [
+          "https://surplusbuildingsupplies.co.uk/building-materials.html"
+        ],
+        "confidence": "wahrscheinlich"
+      },
+      {
+        "bauteiltyp_id": "bt_boden",
+        "material_ids": [
+          "mat_holz"
+        ],
+        "pair_basis": "decking named on homepage",
+        "evidence_urls": [
+          "https://surplusbuildingsupplies.co.uk/"
+        ],
+        "confidence": "wahrscheinlich"
+      }
+    ],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

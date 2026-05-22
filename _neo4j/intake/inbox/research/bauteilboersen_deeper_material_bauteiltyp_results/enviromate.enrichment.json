@@ -1,0 +1,162 @@
+{
+  "anchor_id": "enviromate",
+  "sources_visited": [
+    {
+      "url": "https://www.enviromate.co.uk/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.enviromate.co.uk/marketplace",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Marketplace current source for construction materials."
+      ]
+    },
+    {
+      "url": "https://www.enviromate.co.uk/how-it-works",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "How-it-works source for buy/sell/donate logic."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Marketplace/category evidence includes insulation materials.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Marketplace lets users explore materials across categories; archive/category evidence includes timber/wood stock.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Marketplace/category evidence includes tiles/ceramics.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Marketplace/category evidence includes bricks/building materials.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Tiles/flooring-like materials map to floor component type.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Category/listing scope includes insulation.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Category/listing scope includes doors.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Bricks/tiles/building materials map to wall components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_treppe",
+      "evidence_urls": [
+        "https://www.enviromate.co.uk/marketplace"
+      ],
+      "evidence_quote": "Category/listing scope includes stairs.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Enviromate",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.enviromate.co.uk/",
+      "https://www.enviromate.co.uk/marketplace"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung",
+      "reason": "No evidence of QA, certification or audit workflow."
+    },
+    {
+      "topic": "Confidence",
+      "reason": "Classified marketplace categories need item-level spot-checks."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/enviromate.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "mat_holz",
+        "mat_ziegel",
+        "mat_daemmstoff",
+        "mat_keramik"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "bt_tuer",
+        "bt_daemmung",
+        "bt_wand",
+        "bt_boden"
+      ],
+      "unsicher": [
+        "bt_treppe"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

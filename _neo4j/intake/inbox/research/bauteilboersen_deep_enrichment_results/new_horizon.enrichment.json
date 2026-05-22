@@ -1,0 +1,87 @@
+{
+  "anchor_id": "new_horizon",
+  "sources_visited": [
+    {
+      "url": "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://knowledge-hub.circle-economy.com/article/4067",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.jajo.com/en/companies/new-horizon/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+      ],
+      "evidence_quote": "Oogstkaart / harvest-map method is an inventory/mapping approach for reusable materials.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [
+    {
+      "target_id": null,
+      "lookup_keyword": "urban mining",
+      "intended_label": "Rueckbauverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.jajo.com/en/companies/new-horizon/"
+      ],
+      "evidence_quote": "Secondary company source frames New Horizon around urban mining / harvesting of building materials.",
+      "confidence": "unsicher",
+      "note": "Resolve Rueckbauverfahren node ID before import."
+    }
+  ],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_METHODE",
+      "target_id": "methode_harvest_map",
+      "evidence_urls": [
+        "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+      ],
+      "evidence_quote": "Oogstkaart / Harvest Map method.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "New Horizon / Oogstkaart",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/",
+      "https://www.superuse-studios.com/publication/harvest-collect-re-use/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Harvest-map method is broad/project-specific; no closed-set material claims loaded."
+    },
+    {
+      "topic": "First-party",
+      "reason": "New Horizon first-party harvest-map page not found in this pass."
+    }
+  ],
+  "run_notes": []
+}

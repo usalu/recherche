@@ -1,0 +1,147 @@
+{
+  "anchor_id": "warp_it",
+  "sources_visited": [
+    {
+      "url": "https://www.warp-it.co.uk/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current category list includes building equipment/tools/materials, fixtures/fittings, office interiors, electrical, furniture and storage."
+      ]
+    },
+    {
+      "url": "https://www.warp-it.co.uk/report-guide",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Report guide source for weight/avoided waste metrics."
+      ]
+    },
+    {
+      "url": "https://www.gla.ac.uk/myglasgow/sustainability/wasterecyclingreuse/warpit-furniturerecycling/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "University of Glasgow source for Warpit furniture/resource redistribution."
+      ]
+    },
+    {
+      "url": "https://www.warp-it.co.uk/benefits",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://blog.warp-it.co.uk/all",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Warp It blog source: free furniture/equipment/assets for charities/schools."
+      ]
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.warp-it.co.uk/"
+      ],
+      "evidence_quote": "Category list includes fixtures and fittings, office interiors, furniture and storage.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://www.warp-it.co.uk/"
+      ],
+      "evidence_quote": "Warp It category list includes Building Equipment/Tools/Materials, fixtures/fittings and multiple equipment categories; no stable construction component family beyond fit-out/services.",
+      "confidence": "unsicher",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.warp-it.co.uk/"
+      ],
+      "evidence_quote": "Category list includes electrical, generators, lab/equipment and tools categories.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_resource_redistribution_network",
+      "evidence_urls": [
+        "https://www.warp-it.co.uk/"
+      ],
+      "evidence_quote": "Homepage title frames Warp It as a resource redistribution network.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Warp It",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.warp-it.co.uk/",
+      "https://www.warp-it.co.uk/report-guide"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [
+    {
+      "field": "actor_type_fit",
+      "archive": "at_materialhub_bauteilboerse candidate",
+      "live": "Accessible categories are mostly furniture/equipment/resources rather than construction material marketplace.",
+      "evidence_url": "https://www.warp-it.co.uk/"
+    }
+  ],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "No closed-set construction material named in accessible copy."
+    },
+    {
+      "topic": "Type fit",
+      "reason": "Review whether this should stay in Bauteilbörse/material-hub class or be moved to organisation resource redistribution."
+    },
+    {
+      "topic": "Material",
+      "reason": "No concrete source-backed material term was found in operator/current/history sources. Keep material empty rather than infer from generic construction-material wording."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/warp_it.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "bt_ausbau",
+        "bt_technik",
+        "bt_mehrere"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

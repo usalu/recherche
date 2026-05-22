@@ -29,3 +29,29 @@ _neo4j/review/backups/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Crash/debug logs
+*.log
+debug.log
+
+# Local rollback snapshots (large, machine-specific)
+_neo4j/backups/
+
+# Scratch / regenerable working area (never commit)
+_tmp/
+
+# Rendered diagrams (regenerable from the .dot next to them, which IS tracked).
+# Drop these three lines if you want the printable sheets under version control.
+_neo4j/exports/diagrams/*.pdf
+_neo4j/exports/diagrams/*.svg
+_neo4j/exports/diagrams/*.png
+
+# Abandoned Figma icon/upload automation (regenerable one-off tooling)
+_images/**/_chunk_scripts/
+_images/assests/_*
+_images/_apply_*.py
+_images/_gen_*.py
+_images/_mcp_*.js
+_images/_figma_*.js
+_images/*.jpg
+_images/*b64*.txt

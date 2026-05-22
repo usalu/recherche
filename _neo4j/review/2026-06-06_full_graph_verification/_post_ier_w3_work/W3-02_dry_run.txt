@@ -1,0 +1,117 @@
+{
+  "confirmation_required": "APPLY W3-02_upgrades_only.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-06-07T12:29:47.525847+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\_post_ier_w3_work\\W3-02_upgrades_only.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_basis": "w3_02_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ZirkuLIE \u2013 Zentrum f\u00fcr Zirkul\u00e4res Bauen Home Shop Ausstattung Geb\u00e4ude Mobiliar Regale / Lagerstrukturen Kleininventar Dach Dachhaut, Dachziegel Geb\u00e4udeh\u00fclle Aussent\u00fcren Fassadenelemente Glasscheibe Fenster Geb\u00e4udetechnik Brandschutz Lufttechnik W\u00e4rmetechnik Beleuchtung Elektroger\u00e4te Innenausbau Bodenbelag Elektro Handlauf K\u00fcche Schr\u00e4nke Wandverkleidung Oblicht T\u00fcre Konstruktion Geb\u00e4ude Bretter D\u00e4mmung Holzplatten Konstruktionsholz Bausteine Treppen Eisenwaren Beschl\u00e4ge, Griffe Platten Schrauben ",
+        "evidence_url": "https://shop.zirkulie.net/",
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_BAUTEILTYP__bt_treppe",
+        "review_run": "post_ier_w3_2026_06_07",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "zirkulie_bauteilboerse_triesen",
+        "properties": {
+          "confidence": 0.9,
+          "id": "r_zirkulie_bauteilboerse_triesen__HAT_BAUTEILTYP__bt_treppe"
+        },
+        "rel_internal_id": 1168751173511938962,
+        "to": "bt_treppe",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "zirkulie_bauteilboerse_triesen",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_treppe",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_basis": "w3_02_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Gemeinsam mit Schindel & Holz wurden f\u00fcnf Geb\u00e4ud [\u2026] Weiterlesen Zweiphasiger R\u00fcckbau am Grazer Hornig Areal Foto \u00a9 BauKarussell Im Auftrag der \u00d6sterreichischen Wohnbaugenossenschaft (\u00d6WG) plante BauKarussell 2023 den abbruchvorbereitenden R\u00fcckbau mit der h\u00f6chstm\u00f6glichen Wiederverwendung der ehemaligen J.",
+        "evidence_url": "https://www.baukarussell.at/projekte",
+        "id": "r_baukarussell__NUTZT_MATERIAL__mat_holz",
+        "review_run": "post_ier_w3_2026_06_07",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "baukarussell",
+        "properties": {
+          "confidence": 0.9,
+          "id": "r_baukarussell__NUTZT_MATERIAL__mat_holz"
+        },
+        "rel_internal_id": 1155253568769366447,
+        "to": "mat_holz",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "baukarussell",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_holz",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_basis": "w3_02_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Produkte auf der Seite 10 25 50 100 All H\u00e4ngeschrank f\u00fcrs Bad mit Aussen Mattglas CHF 125.00 In den Warenkorb Ausguss- emailliert, mit praktischem Auflagerost CHF 140.00 In den Warenkorb kl Sicherungskasten f Wohnung CHF 75.00 Weiterlesen Unterbau f\u00fcr 90cm Waschtisch ( Oberteil mit Lavabo u Armatur gibt\u2019s nicht mehr) CHF 75.00 In den Warenkorb 2 -fl\u00fcgl Holz/Metallfenster JG 2012 CHF 325.00 In den Warenkorb 3-fl\u00fcgler Holz/ Metall JG 2012 CHF 325.00 In den Warenkorb Granitabdeckung ohne Ausschnitt",
+        "evidence_url": "https://bauteilladen.ch/shop/",
+        "id": "r_bauteilladen_winterthur__NUTZT_MATERIAL__mat_holz",
+        "review_run": "post_ier_w3_2026_06_07",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilladen_winterthur",
+        "properties": {
+          "confidence": 0.9,
+          "id": "r_bauteilladen_winterthur__NUTZT_MATERIAL__mat_holz"
+        },
+        "rel_internal_id": 1153001768955679689,
+        "to": "mat_holz",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bauteilladen_winterthur",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_holz",
+      "type": "NUTZT_MATERIAL"
+    }
+  ],
+  "report_files": [
+    "_neo4j\\review\\apply_reports\\W3-02_upgrades_only.patch.apply_report.json",
+    "_neo4j\\review\\apply_reports\\W3-02_upgrades_only.patch.apply_report.md"
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 3,
+    "would_update_rel": 3
+  }
+}
+Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.FeatureDeprecationWarning} {category: DEPRECATION} {title: This feature is deprecated and will be removed in future versions.} {description: The query used a deprecated function. ('id' has been replaced by 'elementId or consider using an application-generated id')} {position: line: 1, column: 72, offset: 71} for query: 'MATCH (a {id: $from_id})-[r:`HAT_BAUTEILTYP`]->(b {id: $to_id}) RETURN id(r) AS rid_internal, a.id AS from_id, b.id AS to_id, type(r) AS rel_type, properties(r) AS props'
+Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.FeatureDeprecationWarning} {category: DEPRECATION} {title: This feature is deprecated and will be removed in future versions.} {description: The query used a deprecated function. ('id' has been replaced by 'elementId or consider using an application-generated id')} {position: line: 1, column: 72, offset: 71} for query: 'MATCH (a {id: $from_id})-[r:`NUTZT_MATERIAL`]->(b {id: $to_id}) RETURN id(r) AS rid_internal, a.id AS from_id, b.id AS to_id, type(r) AS rel_type, properties(r) AS props'
+Received notification from DBMS server: {severity: WARNING} {code: Neo.ClientNotification.Statement.FeatureDeprecationWarning} {category: DEPRECATION} {title: This feature is deprecated and will be removed in future versions.} {description: The query used a deprecated function. ('id' has been replaced by 'elementId or consider using an application-generated id')} {position: line: 1, column: 72, offset: 71} for query: 'MATCH (a {id: $from_id})-[r:`NUTZT_MATERIAL`]->(b {id: $to_id}) RETURN id(r) AS rid_internal, a.id AS from_id, b.id AS to_id, type(r) AS rel_type, properties(r) AS props'

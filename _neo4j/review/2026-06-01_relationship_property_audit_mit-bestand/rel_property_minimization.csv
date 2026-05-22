@@ -1,0 +1,1051 @@
+rel_type,property,rel_count,coverage,coverage_pct,distinct_values,suggested_verdict,samples
+ANCHORED_BY,review_status,695,695,100.0,1,DROP,needs_source_url_review
+ANCHORED_BY,evidence_source_id,695,695,100.0,2,DROP,q_controlled_vocab_seed | q_akteursliste_master_md
+ANCHORED_BY,evidence_origin,695,695,100.0,1,DROP,topology_synthesized
+ANCHORED_BY,evidence_confidence,695,695,100.0,1,KEEP,unklar
+ANCHORED_BY,evidence_basis,695,695,100.0,1,DROP,controlled_vocab
+ANCHORED_BY,derivation_note,695,695,100.0,1,DROP, | r1: confidence=bookkeeping→unklar + is_bookkeeping=true | r1: derived=>topol…
+ANCHORED_BY,is_bookkeeping,695,695,100.0,1,DROP,True
+ANCHORED_BY,source_resolution_status,695,695,100.0,1,DROP,bookkeeping_anchor_internal_source_not_claim_evidence
+ANCHORED_BY,source_role,695,695,100.0,1,DROP,ontology_anchor_bookkeeping
+ANCHORED_BY,source_status_correction_previous,695,695,100.0,2,DROP,missing | candidate
+ANCHORED_BY,source_status_correction,695,695,100.0,1,DROP,mig_source_status_scope_addendum_2026_05_28
+ANCHORED_BY,source_status_correction_reason,695,695,100.0,1,DROP,ontology_anchor_bookkeeping_not_fact_proof
+ANCHORED_BY,source_review_status_correction_previous,695,695,100.0,1,DROP,needs_source_url_review
+ANCHORED_BY,source_resolution_status_correction_previous,695,695,100.0,1,DROP,needs_source_url_review
+ANCHORED_BY,evidence_quality,695,695,100.0,1,DROP,internal_anchor_not_claim_evidence
+ANCHORED_BY,evidence_note,695,695,100.0,1,DROP,ANCHORED_BY points to an internal OntologyAnchor/control-vocabulary record; do …
+ANCHORED_BY,evidence_cleanup_run,695,695,100.0,1,DROP,2026-05-28_anchor_source_evidence_cleanup
+ANCHORED_BY,strict_source_url_cleanup,695,252,36.3,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+APPLIES_IN,id,20,20,100.0,20,KEEP,r_rr_gb_stahl__APPLIES_IN__land_vereinigtes_koenigreich | r_rr_be_stahl__APPLIES_IN__land_belgien | r_rr_de_stahl__APPLIES_IN__land_deutschland | r_rr_nl_stahl__APPLIES_IN__land_niederlande
+APPLIES_IN,review_status,20,20,100.0,1,DROP,needs_source_url_review
+APPLIES_IN,evidence_source_id,20,20,100.0,1,DROP,q_circular_construction_reuse_graph_gaps_md
+APPLIES_IN,evidence_origin,20,20,100.0,1,DROP,inferred
+APPLIES_IN,evidence_confidence,20,20,100.0,1,KEEP,teilweise_belegt
+APPLIES_IN,evidence_basis,20,20,100.0,1,DROP,research_file_row
+APPLIES_IN,derivation_note,20,20,100.0,1,DROP, | r1: inferred+belegt was self-contradictory => downgraded to teilweise_belegt
+APPLIES_IN,source_resolution_status,20,20,100.0,1,DROP,needs_source_url_review
+APPLIES_IN,strict_source_url_cleanup,20,20,100.0,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+APPLIES_IN,source_status,20,20,100.0,1,DROP,candidate
+APPLIES_IN,source_status_reason,20,20,100.0,1,DROP,candidate_urls_need_fact_review
+APPLIES_IN,source_status_migration,20,20,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+APPLIES_TO,id,20,20,100.0,20,KEEP,r_rr_gb_stahl__APPLIES_TO__mat_stahl | r_rr_be_stahl__APPLIES_TO__mat_stahl | r_rr_de_stahl__APPLIES_TO__mat_stahl | r_rr_nl_stahl__APPLIES_TO__mat_stahl
+APPLIES_TO,review_status,20,20,100.0,1,DROP,needs_source_url_review
+APPLIES_TO,evidence_source_id,20,20,100.0,1,DROP,q_circular_construction_reuse_graph_gaps_md
+APPLIES_TO,evidence_origin,20,20,100.0,1,DROP,inferred
+APPLIES_TO,evidence_confidence,20,20,100.0,1,KEEP,teilweise_belegt
+APPLIES_TO,evidence_basis,20,20,100.0,1,DROP,research_file_row
+APPLIES_TO,derivation_note,20,20,100.0,1,DROP, | r1: inferred+belegt was self-contradictory => downgraded to teilweise_belegt
+APPLIES_TO,source_resolution_status,20,20,100.0,1,DROP,needs_source_url_review
+APPLIES_TO,strict_source_url_cleanup,20,20,100.0,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+APPLIES_TO,source_status,20,20,100.0,1,DROP,candidate
+APPLIES_TO,source_status_reason,20,20,100.0,1,DROP,candidate_urls_need_fact_review
+APPLIES_TO,source_status_migration,20,20,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+BELEGT_IN,evidence_basis,5199,4866,93.6,4,DROP,cell_citation | slug_match | controlled_vocab | direct_url_listed_in_archive_md
+BELEGT_IN,evidence_source_id,5199,4842,93.1,760,DROP,q_55_great_suffolk_street_london_md | q_bedzed_london_hackbridge_md | q_association_house_groeditz_md | q_association_house_groeditz_s1
+BELEGT_IN,evidence_origin,5199,4730,91.0,4,DROP,topology_synthesized | source_curated | inferred | registry_derived
+BELEGT_IN,evidence_confidence,5199,4730,91.0,4,KEEP,unklar | teilweise_belegt | belegt | inferiert
+BELEGT_IN,source_resolution_status,5199,4730,91.0,2,DROP,needs_source_url_review | direct_url_endpoint
+BELEGT_IN,source_status,5199,4730,91.0,3,DROP,candidate | exact | missing
+BELEGT_IN,source_status_reason,5199,4730,91.0,4,DROP,candidate_urls_need_fact_review | concrete_source_url_on_fact | invalid_direct_url_endpoint | no_exact_url_binding_needs_review
+BELEGT_IN,source_status_migration,5199,4730,91.0,1,DROP,mig_source_status_normalization_2026_05_28
+BELEGT_IN,derivation_note,5199,4697,90.3,9,DROP, | r1: derived=>topology_synthesized (catch-all: basis=cell_citation) |  | r1: curated→source_curated (default reclassification) | former_basis=research_file_row->cell_citation via mig_repair_4_1 (BELEGT_IN bel… | unpacked dedup-merged array (Phase 1.6 actor merge artifact) by mig_repair_4_1_…
+BELEGT_IN,source_url,5199,3143,60.5,352,DROP,https://doi.org/10.1016/j.jclepro.2022.135235 | https://baustatik-wiki.fiw.hs-wismar.de/mediawiki/index.php/Wiederverwendung_vo… | https://innowest-brandenburg.de/beitraege/Bachelorarbeit-plattenbautyp-wbs-70 | https://www.bft-international.com/de/artikel/wiederverwendung-von-betonfertigte…
+BELEGT_IN,source_url_status,5199,3143,60.5,8,DROP,reachable_2xx | blocked_by_robots | dead_4xx | dead_5xx
+BELEGT_IN,source_url_node_id,5199,3143,60.5,530,DROP,q_association_house_groeditz_s1 | q_association_house_groeditz_s4 | q_association_house_groeditz_s5 | q_association_house_groeditz_s6
+BELEGT_IN,source_url_http_code,5199,3044,58.5,5,DROP,200 | 403 | 525 | 404
+BELEGT_IN,evidence_excerpt,5199,3040,58.5,1908,DROP,Entität: Tragwerkssystem | Wert: Fertigteil-Wand-/Deckensystem | Beziehung zur … | Entität: Reuse-Strategie | Wert: ex-situ Bauteilwiederverwendung | Beziehung zu… | Entität: Verbindung | Wert: Ziegelschicht zum Höhenausgleich; überlappende Fass… | Thema: Lastabtragung | Befund: Wände/Decken/Treppen vermutlich tragend eingeset…
+BELEGT_IN,verification_status,5199,2713,52.2,4,DROP,no_text_match | no_url_node | target_page_dead | fetch_error
+BELEGT_IN,verification_score,5199,2713,52.2,731,DROP,0.5455 | 0.4545 | 0.6364 | 0.5
+BELEGT_IN,verification_method,5199,2713,52.2,2,DROP,none | skipped
+BELEGT_IN,verification_attempts,5199,2713,52.2,2,DROP,1 | 2
+BELEGT_IN,verification_notes,5199,2713,52.2,1458,DROP,best_fuzz=0.545 best_token=0.000 | best_fuzz=0.455 best_token=0.000 | best_fuzz=0.636 best_token=0.000 | best_fuzz=0.500 best_token=0.000
+BELEGT_IN,id,5199,2120,40.8,2120,KEEP,r_p_55_great_suffolk_street_london__BELEGT_IN__q_55_great_suffolk_street_london… | r_bw_55_great_suffolk_street_warehouse__BELEGT_IN__q_55_great_suffolk_street_lo… | r_bw_1_broadgate_london__BELEGT_IN__q_55_great_suffolk_street_london_md | r_bw_cleveland_steel_and_tubes_stock__BELEGT_IN__q_55_great_suffolk_street_lond…
+BELEGT_IN,verification_body_md5,5199,1990,38.3,138,DROP,9f0ae4f8e63529a916c00fdd536ad0da | 371cab3b3e207f9c1aa2403896010dfa | 9f5556fc745af255deea2a03c3ea04a7 | 563deeb65ac1def26fdd893a0efebfd8
+BELEGT_IN,review_status,5199,1723,33.1,2,DROP,needs_source_url_review | reviewed_legacy_profile_needs_url_fact_check
+BELEGT_IN,strict_source_url_cleanup,5199,1424,27.4,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+BELEGT_IN,invalid_candidate_source_urls,5199,644,12.4,22,DROP,"[''] | ['https://bimtec', 'https://b', 'https://symmetr'] | ['https://olympiap'] | ['https://projecta', 'https://pr']"
+BELEGT_IN,strict_candidate_url_array_cleanup,5199,644,12.4,1,DROP,mig_strict_candidate_url_array_cleanup_2026_05_23
+BELEGT_IN,source_scope,5199,523,10.1,4,DROP,actor_registry_project_link | actor_registry | bauteilboerse_legacy_review | actor_registry_external_link
+BELEGT_IN,source_url_wayback_snapshot,5199,424,8.2,24,DROP,http://web.archive.org/web/20240425010839/https://www.construction21.org/france… | http://web.archive.org/web/20240416204055/https://www.bellastock.com/projets/la… | http://web.archive.org/web/20230609154546/https://www.le-wip.com/le-reemploi-de… | http://web.archive.org/web/20240425041043/https://www.construction21.org/france…
+BELEGT_IN,review_run,5199,136,2.6,1,DROP,2026-05-28_bauteilboersen_integration
+BELEGT_IN,archive_source_id,5199,136,2.6,39,DROP,q_research_gebruiktebouwmaterialen_gbm_md | q_research_bauteilladen_winterthur_md | q_research_restado_md | q_research_rotordc_md
+BELEGT_IN,evidence_quality,5199,13,0.3,1,DROP,source_binding_not_exact
+BELEGT_IN,evidence_note,5199,13,0.3,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+BELEGT_IN,evidence_cleanup_run,5199,13,0.3,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+BELEGT_IN,previous_evidence_confidence,5199,13,0.3,1,DROP,belegt
+BELEGT_IN,evidence_confidence_status,5199,13,0.3,1,DROP,downgraded_pending_exact_source_url_review
+BELEGT_IN,invalid_source_url,5199,8,0.2,1,DROP,
+BELEGT_IN,invalid_source_url_node_id,5199,8,0.2,7,DROP,q_association_house_groeditz_s0 | q_association_house_plauen_s0 | q_berlin_schildow_pilot_house_s0 | q_chiro_d_itterbeek_dilbeek_s1
+BELEGT_IN,strict_invalid_url_cleanup,5199,8,0.2,1,DROP,mig_strict_invalid_url_cleanup_2026_05_23
+BERECHNET_NACH_MODUL,review_status,8,8,100.0,1,DROP,needs_source_url_review
+BERECHNET_NACH_MODUL,evidence_source_id,8,8,100.0,1,DROP,r2_b_journal_edge_restore
+BERECHNET_NACH_MODUL,evidence_origin,8,8,100.0,1,DROP,source_curated
+BERECHNET_NACH_MODUL,evidence_confidence,8,8,100.0,1,KEEP,teilweise_belegt
+BERECHNET_NACH_MODUL,evidence_basis,8,8,100.0,1,DROP,cell_citation
+BERECHNET_NACH_MODUL,source_resolution_status,8,8,100.0,1,DROP,needs_source_url_review
+BERECHNET_NACH_MODUL,source_status,8,8,100.0,1,DROP,missing
+BERECHNET_NACH_MODUL,source_status_reason,8,8,100.0,1,DROP,no_exact_url_binding_needs_review
+BERECHNET_NACH_MODUL,source_status_migration,8,8,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+BETEILIGT_AN,id,561,560,99.8,560,KEEP,r_cbre__BETEILIGT_AN__p_55_great_suffolk_street_london | r_gardiner_and_theobald__BETEILIGT_AN__p_55_great_suffolk_street_london | r_gardiner_and_theobald__BETEILIGT_AN__p_bedzed_london_hackbridge | r_gardiner_and_theobald__BETEILIGT_AN__bg_reuse_stahl_mehrere_55gss_external_co…
+BETEILIGT_AN,review_status,561,560,99.8,1,DROP,needs_source_url_review
+BETEILIGT_AN,evidence_source_id,561,560,99.8,6,DROP,mig_4_1 | batch2_v2_import_2026-05-20 | batch2_v2_phase18_2026-05-20 | batch2_v2_followup_2026-05-20
+BETEILIGT_AN,evidence_origin,561,560,99.8,1,DROP,topology_synthesized
+BETEILIGT_AN,evidence_confidence,561,560,99.8,1,KEEP,unklar
+BETEILIGT_AN,evidence_basis,561,560,99.8,1,DROP,controlled_vocab
+BETEILIGT_AN,derivation_note,561,560,99.8,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+BETEILIGT_AN,source_resolution_status,561,560,99.8,1,DROP,needs_source_url_review
+BETEILIGT_AN,source_status,561,560,99.8,1,DROP,missing
+BETEILIGT_AN,source_status_reason,561,560,99.8,1,DROP,no_exact_url_binding_needs_review
+BETEILIGT_AN,source_status_migration,561,560,99.8,1,DROP,mig_source_status_normalization_2026_05_28
+BETEILIGT_AN,evidence_excerpt,561,108,19.3,2,DROP,INFER | BELEGT
+BETRIEBEN_VON,review_status,5,5,100.0,2,DROP,needs_source_url_review | reviewed_legacy_profile_needs_url_fact_check
+BETRIEBEN_VON,evidence_source_id,5,5,100.0,4,DROP,mig_1_4 | q_url_74e67b64770f2741ee9cce15ef3ac2ad | q_url_317570e3c4e0c2be5ef74e07e4819409 | q_url_35bf8e4ee16b85a593fea9d14d107bff
+BETRIEBEN_VON,evidence_basis,5,5,100.0,2,DROP,name_match | betreiber_section_existing_operator
+BETRIEBEN_VON,source_resolution_status,5,4,80.0,2,DROP,needs_source_url_review | needs_exact_claim_source_review
+BETRIEBEN_VON,id,5,3,60.0,3,KEEP,r_software_restado__betrieben_von__concular | r_re_store_harvestmap_vienna__betrieben_von__materialnomaden | r_salvoweb__betrieben_von__salvo_ltd
+BETRIEBEN_VON,source_scope,5,3,60.0,1,DROP,bauteilboerse_legacy_review
+BETRIEBEN_VON,review_run,5,3,60.0,1,DROP,2026-05-28_bauteilboersen_integration
+BETRIEBEN_VON,evidence_origin,5,2,40.0,1,DROP,topology_synthesized
+BETRIEBEN_VON,evidence_confidence,5,2,40.0,1,KEEP,unklar
+BETRIEBEN_VON,derivation_note,5,2,40.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=name_match)
+BETRIEBEN_VON,source_status,5,2,40.0,1,DROP,missing
+BETRIEBEN_VON,source_status_reason,5,2,40.0,1,DROP,no_exact_url_binding_needs_review
+BETRIEBEN_VON,source_status_migration,5,2,40.0,1,DROP,mig_source_status_normalization_2026_05_28
+BETRIEBEN_VON,evidence_quality,5,2,40.0,1,DROP,unverified_source_claim
+BETRIEBEN_VON,evidence_note,5,2,40.0,1,DROP,Relationship came from reviewed archive profile/direct URL list but exact sourc…
+BUILT_IN_ERA,source_status_reason,8,8,100.0,1,DROP,no_exact_url_binding_needs_review
+BUILT_IN_ERA,source_status_migration,8,8,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+BUILT_IN_ERA,id,8,8,100.0,8,KEEP,r_bw_rws_districtskantoor_terneuzen__BUILT_IN_ERA__era_1990_2000 | r_bw_ka13_existing_building__BUILT_IN_ERA__era_nachkrieg_1945_1970 | r_bw_werkhof_moeoeslistrasse__BUILT_IN_ERA__era_1970_1990 | r_bw_lycee_block_3000__BUILT_IN_ERA__era_1970_1990
+BUILT_IN_ERA,review_status,8,8,100.0,1,DROP,needs_source_url_review
+BUILT_IN_ERA,evidence_source_id,8,8,100.0,1,DROP,bauwerk.baujahr_property
+BUILT_IN_ERA,evidence_origin,8,8,100.0,1,DROP,inferred
+BUILT_IN_ERA,evidence_confidence,8,8,100.0,1,KEEP,inferiert
+BUILT_IN_ERA,evidence_basis,8,8,100.0,1,DROP,year_inferred
+BUILT_IN_ERA,evidence_excerpt,8,8,100.0,8,DROP,Bauwerk Ehemaliges Rijkswatersta… [bw_rws_districtskantoor_terneuzen] hat bauja… | Bauwerk KA13 Bestandsgebäude… [bw_ka13_existing_building] hat baujahr=1950; dar… | Bauwerk Werkhof Mööslistrasse [bw_werkhof_moeoeslistrasse] hat baujahr=1978; da… | Bauwerk Lycée Lucius B3000 [bw_lycee_block_3000] hat baujahr=1973; daraus infer…
+BUILT_IN_ERA,derivation_note,8,8,100.0,1,DROP,curated->inferred + belegt->inferiert via mig_repair_4_1 (year-derived era assi…
+BUILT_IN_ERA,source_resolution_status,8,8,100.0,1,DROP,needs_source_url_review
+BUILT_IN_ERA,source_status,8,8,100.0,1,DROP,missing
+ERHALT_FOERDERUNG_DURCH,id,3,3,100.0,3,KEEP,r_p_jugendtreff_ingersheim__ERHALT_FOERDERUNG_DURCH__prog_holzbau_offensive_bw | r_p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere__ERHALT_FOERDERUNG_DURCH… | r_p_superlocal_expogebouw_bleijerheide__ERHALT_FOERDERUNG_DURCH__prog_urban_inn…
+ERHALT_FOERDERUNG_DURCH,review_status,3,3,100.0,1,DROP,needs_source_url_review
+ERHALT_FOERDERUNG_DURCH,evidence_source_id,3,3,100.0,3,DROP,batch2_v2_import_2026-05-20 | ReCreate Finnish mini-pilot under Horizon 2020 (€12.5m); see prog_recreate as t… | SUPERLOCAL pilot funded by UIA per UIA journal Kerkrade SuperCircular Estate re…
+ERHALT_FOERDERUNG_DURCH,evidence_origin,3,3,100.0,1,DROP,topology_synthesized
+ERHALT_FOERDERUNG_DURCH,evidence_confidence,3,3,100.0,1,KEEP,unklar
+ERHALT_FOERDERUNG_DURCH,evidence_basis,3,3,100.0,1,DROP,legacy_migration
+ERHALT_FOERDERUNG_DURCH,derivation_note,3,3,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+ERHALT_FOERDERUNG_DURCH,source_resolution_status,3,3,100.0,1,DROP,needs_source_url_review
+ERHALT_FOERDERUNG_DURCH,source_status,3,3,100.0,1,DROP,missing
+ERHALT_FOERDERUNG_DURCH,source_status_reason,3,3,100.0,1,DROP,no_exact_url_binding_needs_review
+ERHALT_FOERDERUNG_DURCH,source_status_migration,3,3,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+ERHALT_FOERDERUNG_DURCH,evidence_excerpt,3,2,66.7,1,DROP,BELEGT
+FROM_DONOR,id,284,284,100.0,284,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__AUS_BAUWERK__bw_palais_des_expos… | r_bg_reuse_keramik_boden_verbiest_charleroi__AUS_BAUWERK__bw_palais_des_exposit… | r_bg_reuse_naturstein_wand_verbiest_charleroi__AUS_BAUWERK__bw_palais_des_expos… | r_bg_reuse_stahl_mehrere_55gss_external_core__AUS_BAUWERK__bw_1_broadgate_london
+FROM_DONOR,review_status,284,284,100.0,1,DROP,needs_source_url_review
+FROM_DONOR,evidence_source_id,284,284,100.0,4,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | batch2_v2_import_2026-05-20 | batch2_v2_followup_2026-05-20
+FROM_DONOR,evidence_origin,284,284,100.0,1,DROP,topology_synthesized
+FROM_DONOR,evidence_confidence,284,284,100.0,1,KEEP,unklar
+FROM_DONOR,evidence_basis,284,284,100.0,1,DROP,controlled_vocab
+FROM_DONOR,derivation_note,284,284,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+FROM_DONOR,source_resolution_status,284,284,100.0,1,DROP,needs_source_url_review
+FROM_DONOR,source_status,284,284,100.0,1,DROP,missing
+FROM_DONOR,source_status_reason,284,284,100.0,1,DROP,no_exact_url_binding_needs_review
+FROM_DONOR,source_status_migration,284,284,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+FROM_DONOR,evidence_excerpt,284,4,1.4,1,DROP,BELEGT
+GEHÖRT_ZU,id,250,250,100.0,250,KEEP,r_mario_monotti__GEHÖRT_ZU__monotti_ingegneri | r_roger_keller__GEHÖRT_ZU__usus_la | r_ana_olalquiaga__GEHÖRT_ZU__parabase | r_stefan_perez__GEHÖRT_ZU__perez_schmidlin_bauingenieure
+GEHÖRT_ZU,review_status,250,250,100.0,2,DROP,needs_source_url_review | reviewed_legacy_profile_needs_url_fact_check
+GEHÖRT_ZU,evidence_source_id,250,250,100.0,3,DROP,batch2_v2_followup_2026-05-20 | mig_4_1 | q_url_74e67b64770f2741ee9cce15ef3ac2ad
+GEHÖRT_ZU,evidence_basis,250,250,100.0,3,DROP,legacy_migration | controlled_vocab | land_region_section
+GEHÖRT_ZU,evidence_origin,250,249,99.6,1,DROP,topology_synthesized
+GEHÖRT_ZU,evidence_confidence,250,249,99.6,1,KEEP,unklar
+GEHÖRT_ZU,derivation_note,250,249,99.6,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+GEHÖRT_ZU,source_resolution_status,250,249,99.6,1,DROP,needs_source_url_review
+GEHÖRT_ZU,source_status,250,249,99.6,1,DROP,missing
+GEHÖRT_ZU,source_status_reason,250,249,99.6,1,DROP,no_exact_url_binding_needs_review
+GEHÖRT_ZU,source_status_migration,250,249,99.6,1,DROP,mig_source_status_normalization_2026_05_28
+GEHÖRT_ZU,source_scope,250,210,84.0,3,DROP,actor_registry_context | bauteilboerse_legacy_review | actor_registry
+GEHÖRT_ZU,rolle,250,209,83.6,1,KEEP,land
+GEHÖRT_ZU,evidence_excerpt,250,40,16.0,1,DROP,BELEGT
+GEHÖRT_ZU,review_run,250,1,0.4,1,DROP,2026-05-28_bauteilboersen_integration
+GILT_IN_LAND,review_status,172,172,100.0,2,DROP,needs_source_url_review | reviewed
+GILT_IN_LAND,evidence_source_id,172,172,100.0,23,DROP,"UK historical steel sections reference book | Eurocode, EU-wide | scope_audit_2026_05_31 | Eurocode also applies in EEA states (Norway)"
+GILT_IN_LAND,evidence_origin,172,172,100.0,2,DROP,topology_synthesized | source_curated
+GILT_IN_LAND,evidence_confidence,172,172,100.0,2,KEEP,unklar | belegt
+GILT_IN_LAND,evidence_basis,172,172,100.0,3,DROP,legacy_migration | official_web_audit | cell_citation
+GILT_IN_LAND,source_resolution_status,172,172,100.0,2,DROP,needs_source_url_review | reviewed
+GILT_IN_LAND,id,172,170,98.8,170,KEEP,r_norm_historic_sections_book__GILT_IN_LAND__land_vereinigtes_koenigreich | norm_en_1992__GILT_IN_LAND__land_portugal | norm_en_1992__GILT_IN_LAND__land_italien | norm_en_1992__GILT_IN_LAND__land_deutschland
+GILT_IN_LAND,derivation_note,172,170,98.8,7,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) | expa… |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) | expa… |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) | expa…
+GILT_IN_LAND,source_status,172,160,93.0,1,DROP,missing
+GILT_IN_LAND,source_status_reason,172,160,93.0,1,DROP,no_exact_url_binding_needs_review
+GILT_IN_LAND,source_status_migration,172,160,93.0,1,DROP,mig_source_status_normalization_2026_05_28
+GILT_IN_LAND,evidence_excerpt,172,148,86.0,2,DROP,BELEGT | INFER
+GILT_IN_LAND,evidence_quality,172,2,1.2,1,DROP,source_binding_not_exact
+GILT_IN_LAND,evidence_note,172,2,1.2,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+GILT_IN_LAND,evidence_cleanup_run,172,2,1.2,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+GILT_IN_LAND,previous_evidence_confidence,172,2,1.2,1,DROP,belegt
+GILT_IN_LAND,evidence_confidence_status,172,2,1.2,1,DROP,downgraded_pending_exact_source_url_review
+HAS_BAUWERK,review_status,183,183,100.0,1,DROP,needs_source_url_review
+HAS_BAUWERK,evidence_source_id,183,183,100.0,1,DROP,r3_a_topology
+HAS_BAUWERK,evidence_origin,183,183,100.0,1,DROP,topology_synthesized
+HAS_BAUWERK,evidence_confidence,183,183,100.0,1,KEEP,teilweise_belegt
+HAS_BAUWERK,evidence_basis,183,183,100.0,1,DROP,derived_from_bg_topology
+HAS_BAUWERK,derivation_note,183,183,100.0,2,DROP,Aggregated from (p)-[:HAT_BAUTEILGRUPPE]->(bg)-[:INTO_RECEIVER]->(b). | Aggregated from (p)-[:HAT_BAUTEILGRUPPE]->(bg)-[:FROM_DONOR]->(b).
+HAS_BAUWERK,role,183,183,100.0,2,KEEP,receiver | donor
+HAS_BAUWERK,source_resolution_status,183,183,100.0,1,DROP,needs_source_url_review
+HAS_BAUWERK,source_status,183,183,100.0,1,DROP,missing
+HAS_BAUWERK,source_status_reason,183,183,100.0,1,DROP,no_exact_url_binding_needs_review
+HAS_BAUWERK,source_status_migration,183,183,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAS_RISK_POLLUTANT,id,795,795,100.0,795,KEEP,r_p_bedzed_london_hackbridge__HAS_RISK_POLLUTANT__s_formaldehyd__documented | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAS_RISK_POLLUTANT__s_schwermeta… | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAS_RISK_POLLUTANT__s_bleifarbe_… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAS_RISK_POLLUTANT__s_schwermetall…
+HAS_RISK_POLLUTANT,review_status,795,795,100.0,1,DROP,needs_source_url_review
+HAS_RISK_POLLUTANT,evidence_source_id,795,795,100.0,3,DROP,q_schadstoff_reuse_knowledge_graph_research_md | mig_4_1 | batch2_v2_followup_2026-05-20
+HAS_RISK_POLLUTANT,evidence_origin,795,795,100.0,3,DROP,source_curated | inferred | topology_synthesized
+HAS_RISK_POLLUTANT,evidence_confidence,795,795,100.0,2,KEEP,unklar | inferiert
+HAS_RISK_POLLUTANT,evidence_basis,795,795,100.0,3,DROP,documented | material_only | era_and_material
+HAS_RISK_POLLUTANT,source_resolution_status,795,795,100.0,1,DROP,needs_source_url_review
+HAS_RISK_POLLUTANT,source_status,795,795,100.0,1,DROP,missing
+HAS_RISK_POLLUTANT,source_status_reason,795,795,100.0,1,DROP,no_exact_url_binding_needs_review
+HAS_RISK_POLLUTANT,source_status_migration,795,795,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAS_RISK_POLLUTANT,derivation_note,795,10,1.3,2,DROP, | r1: curated→source_curated (default reclassification) |  | r1: derived=>topology_synthesized (catch-all: basis=documented)
+HAS_RISK_POLLUTANT,evidence_excerpt,795,9,1.1,2,DROP,"| `s_formaldehyd` | Formaldehyde | MDF, particleboard, chipboard, OSB/plywood, … | BELEGT"
+HAS_RISK_POLLUTANT,source_scope,795,4,0.5,1,DROP,research_file_row
+HAS_RISK_POLLUTANT,verification_status,795,4,0.5,1,DROP,no_url_node
+HAS_RISK_POLLUTANT,verification_score,795,4,0.5,1,DROP,0.0
+HAS_RISK_POLLUTANT,verification_method,795,4,0.5,1,DROP,skipped
+HAS_RISK_POLLUTANT,verification_attempts,795,4,0.5,1,DROP,1
+HAS_RISK_POLLUTANT,verification_notes,795,4,0.5,1,DROP,No ExternalLink reachable from this citation
+HAS_RISK_POLLUTANT,evidence_quality,795,4,0.5,1,DROP,source_binding_not_exact
+HAS_RISK_POLLUTANT,evidence_note,795,4,0.5,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+HAS_RISK_POLLUTANT,evidence_cleanup_run,795,4,0.5,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAS_RISK_POLLUTANT,previous_evidence_confidence,795,4,0.5,1,DROP,belegt
+HAS_RISK_POLLUTANT,evidence_confidence_status,795,4,0.5,1,DROP,downgraded_pending_exact_source_url_review
+HAS_SOURCE_LINK,evidence_source_id,20,20,100.0,20,DROP,rr_gb_stahl | rr_be_stahl | rr_de_stahl | rr_nl_stahl
+HAS_SOURCE_LINK,evidence_origin,20,20,100.0,1,DROP,source_curated
+HAS_SOURCE_LINK,evidence_confidence,20,20,100.0,1,KEEP,belegt
+HAS_SOURCE_LINK,evidence_basis,20,20,100.0,1,DROP,node_property_extraction
+HAS_SOURCE_LINK,source_url,20,20,100.0,17,DROP,https://standards.iteh.ai/catalog/standards/cen/31a1835a-d97d-4bf7-8319-62d7660… | https://www.fir-recycling.com/wp-content/uploads/2023/02/FPRGErkenning_Tracimat… | https://www.dibt.de/en/service/faqs/the-german-regulatory-system-for-constructi… | https://www.government.nl/themes/building-and-housing/construction-products/ce-…
+HAS_SOURCE_LINK,property_name,20,20,100.0,1,KEEP,source_url
+HAS_SOURCE_LINK,source_url_status,20,20,100.0,1,DROP,reachable_2xx
+HAS_SOURCE_LINK,source_url_http_code,20,20,100.0,1,DROP,200
+HAS_SOURCE_LINK,source_resolution_status,20,20,100.0,1,DROP,direct_url_endpoint
+HAS_SOURCE_LINK,source_url_node_id,20,20,100.0,17,DROP,q_url_ce98280edf39f05c | q_url_a70051296d3b271b | q_url_44c61371bc8b39eb | q_url_b02ccd4ad0f6c53e
+HAS_SOURCE_LINK,source_role,20,20,100.0,1,DROP,source_inventory
+HAS_SOURCE_LINK,source_status_correction_previous,20,20,100.0,1,DROP,exact
+HAS_SOURCE_LINK,source_status_correction,20,20,100.0,1,DROP,mig_source_status_scope_addendum_2026_05_28
+HAS_SOURCE_LINK,source_status_correction_reason,20,20,100.0,1,DROP,source_link_inventory_not_fact_proof
+HAT_AKTEURROLLE,id,1403,1308,93.2,1308,KEEP,r_cbre__HAT_AKTEURROLLE__ar_nachhaltigkeitsberatung | r_gardiner_and_theobald__HAT_AKTEURROLLE__ar_projektmanagement_koordination | r_gardiner_and_theobald__HAT_AKTEURROLLE__ar_reuse_beratung | r_cantillon__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik
+HAT_AKTEURROLLE,review_status,1403,1308,93.2,1,DROP,needs_source_url_review
+HAT_AKTEURROLLE,evidence_source_id,1403,1308,93.2,45,DROP,mig_4_1 | batch2_v2_import_2026-05-20 | batch2_v2_followup_2026-05-20 | q_akteursliste_master_md
+HAT_AKTEURROLLE,source_resolution_status,1403,1308,93.2,3,DROP,evidence_source_id_not_resolved_to_visible_source_url | needs_exact_claim_source_review | needs_source_url_review
+HAT_AKTEURROLLE,evidence_quality,1403,1306,93.1,2,DROP,internal_or_missing_source_url | unverified_source_claim
+HAT_AKTEURROLLE,evidence_note,1403,1306,93.1,2,DROP,Global audit: evidence_source_id does not resolve to a Quelle node with visible… | Relationship came from reviewed archive profile/direct URL list but exact sourc…
+HAT_AKTEURROLLE,evidence_basis,1403,1212,86.4,3,DROP,controlled_vocab | universal_bauteilboerse_role | gm_fingerprint_2026_05_31
+HAT_AKTEURROLLE,evidence_origin,1403,1161,82.8,2,DROP,topology_synthesized | registry_derived
+HAT_AKTEURROLLE,evidence_confidence,1403,1161,82.8,2,KEEP,unklar | teilweise_belegt
+HAT_AKTEURROLLE,derivation_note,1403,1161,82.8,3,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) | unpacked dedup-merged array (Phase 1.6 actor merge artifact) by mig_repair_4_1_… |  | r1: curated→registry_derived (Repair D A1–A5 excerpts are auto-generated fro…
+HAT_AKTEURROLLE,source_status,1403,1161,82.8,2,DROP,missing | candidate
+HAT_AKTEURROLLE,source_status_reason,1403,1161,82.8,2,DROP,no_exact_url_binding_needs_review | candidate_urls_need_fact_review
+HAT_AKTEURROLLE,source_status_migration,1403,1161,82.8,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_AKTEURROLLE,source_scope,1403,711,50.7,3,DROP,actor_registry | bauteilboerse_legacy_review | actor_registry_context
+HAT_AKTEURROLLE,evidence_excerpt,1403,539,38.4,531,DROP,Curated edge unpacked from dedup-merged array (Phase 1.6 actor merge) by mig_re… | Akteursregister (q_akteursliste_master_md): Akteur Werner Sobek [werner_sobek_p… | Akteursregister (q_akteursliste_master_md): Akteur Werner Sobek [werner_sobek_p… | Akteursregister (q_akteursliste_master_md): Akteur Werner Sobek [werner_sobek_p…
+HAT_AKTEURROLLE,strict_source_url_cleanup,1403,535,38.1,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+HAT_AKTEURROLLE,review_run,1403,242,17.2,4,DROP,schema_compatible_bauteilboersen_update_2026_06_01 | bauteilboersen_finalest_30_2026_05_31 | 2026-05-28_bauteilboersen_integration | audit_quickfix_2026_06_01
+HAT_AKTEURROLLE,evidence_cleanup_run,1403,6,0.4,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAT_AKTEURROLLE,previous_evidence_confidence,1403,6,0.4,1,DROP,belegt
+HAT_AKTEURROLLE,evidence_confidence_status,1403,6,0.4,1,DROP,downgraded_pending_exact_source_url_review
+HAT_AKTEURTYP,id,692,673,97.3,673,KEEP,r_cbre__HAT_AKTEURTYP__at_unternehmen | r_gardiner_and_theobald__HAT_AKTEURTYP__at_unternehmen | r_cantillon__HAT_AKTEURTYP__at_unternehmen | r_abfallwirtschaftsbetriebe_muenster__HAT_AKTEURTYP__at_oeffentliche_institution
+HAT_AKTEURTYP,review_status,692,673,97.3,1,DROP,needs_source_url_review
+HAT_AKTEURTYP,evidence_source_id,692,673,97.3,28,DROP,mig_4_1 | batch2_v2_import_2026-05-20 | batch2_v2_followup_2026-05-20 | q_akteursliste_master_md
+HAT_AKTEURTYP,evidence_basis,692,673,97.3,5,DROP,"controlled_vocab | legacy_migration | ['controlled_vocab', 'legacy_migration'] | frontmatter_type_bauteilboerse"
+HAT_AKTEURTYP,source_resolution_status,692,673,97.3,3,DROP,evidence_source_id_not_resolved_to_visible_source_url | needs_source_url_review | needs_exact_claim_source_review
+HAT_AKTEURTYP,evidence_quality,692,672,97.1,2,DROP,internal_or_missing_source_url | unverified_source_claim
+HAT_AKTEURTYP,evidence_note,692,672,97.1,2,DROP,Global audit: evidence_source_id does not resolve to a Quelle node with visible… | Relationship came from reviewed archive profile/direct URL list but exact sourc…
+HAT_AKTEURTYP,evidence_origin,692,646,93.4,2,DROP,topology_synthesized | registry_derived
+HAT_AKTEURTYP,evidence_confidence,692,646,93.4,2,KEEP,unklar | teilweise_belegt
+HAT_AKTEURTYP,derivation_note,692,646,93.4,5,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) | unpacked dedup-merged array (Phase 1.6 actor merge artifact) by mig_repair_4_1_… | unpacked dedup-merged array (Phase 1.6 actor merge artifact) by mig_repair_4_1_…
+HAT_AKTEURTYP,source_status,692,646,93.4,2,DROP,missing | candidate
+HAT_AKTEURTYP,source_status_reason,692,646,93.4,2,DROP,no_exact_url_binding_needs_review | candidate_urls_need_fact_review
+HAT_AKTEURTYP,source_status_migration,692,646,93.4,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_AKTEURTYP,source_scope,692,214,30.9,2,DROP,actor_registry | bauteilboerse_legacy_review
+HAT_AKTEURTYP,evidence_excerpt,692,187,27.0,185,DROP,Curated edge unpacked from dedup-merged array (Phase 1.6 actor merge) by mig_re… | Akteursregister (q_akteursliste_master_md): Akteur Werner Sobek [werner_sobek_p… | Akteursregister (q_akteursliste_master_md): Akteur HFT Stuttgart [hft_stuttgart… | Akteursregister (q_akteursliste_master_md): Akteur Zirkular [zirkular] ist vom …
+HAT_AKTEURTYP,strict_source_url_cleanup,692,187,27.0,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+HAT_AKTEURTYP,review_run,692,27,3.9,1,DROP,2026-05-28_bauteilboersen_integration
+HAT_AKTEURTYP,evidence_cleanup_run,692,3,0.4,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAT_AKTEURTYP,previous_evidence_confidence,692,3,0.4,1,DROP,belegt
+HAT_AKTEURTYP,evidence_confidence_status,692,3,0.4,1,DROP,downgraded_pending_exact_source_url_review
+HAT_AUFBEREITUNG,id,433,433,100.0,433,KEEP,r_p_bedzed_london_hackbridge__HAT_AUFBEREITUNG__av_entrosten_korrosionsbehandlu… | r_p_bedzed_london_hackbridge__HAT_AUFBEREITUNG__av_oberflaechenbehandlung_metal… | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_AUFBEREITUNG__av_reinigung | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_AUFBEREITUNG__av_zuschnitt
+HAT_AUFBEREITUNG,review_status,433,433,100.0,1,DROP,needs_source_url_review
+HAT_AUFBEREITUNG,evidence_source_id,433,433,100.0,9,DROP,q_aufbereitungsverfahren_reused_building_elements_md | archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | 55 Great Suffolk: ASBP case mentions coating renewal on reclaimed steel | mig_4_1
+HAT_AUFBEREITUNG,evidence_origin,433,433,100.0,2,DROP,source_curated | topology_synthesized
+HAT_AUFBEREITUNG,evidence_confidence,433,433,100.0,1,KEEP,unklar
+HAT_AUFBEREITUNG,evidence_basis,433,433,100.0,3,DROP,cell_citation | legacy_migration | controlled_vocab
+HAT_AUFBEREITUNG,derivation_note,433,433,100.0,3,DROP, | r1: curated→source_curated (default reclassification) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_AUFBEREITUNG,source_resolution_status,433,433,100.0,1,DROP,needs_source_url_review
+HAT_AUFBEREITUNG,source_status,433,433,100.0,2,DROP,candidate | missing
+HAT_AUFBEREITUNG,source_status_reason,433,433,100.0,2,DROP,candidate_urls_need_fact_review | no_exact_url_binding_needs_review
+HAT_AUFBEREITUNG,source_status_migration,433,433,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_AUFBEREITUNG,evidence_excerpt,433,70,16.2,14,DROP,"| Entrosten / Korrosionsbehandlung | `av_entrosten_korrosionsbehandlung` | Entf… | BELEGT | | Sägen von Betonfertigteilen / Trennen nasser Verbindungen | `av_betonfertigte… | | Glasreinigung, Entkitten und Entfernen alter Dichtungen | `av_glas_reinigung_…"
+HAT_AUFBEREITUNG,source_scope,433,22,5.1,1,DROP,research_file_row
+HAT_AUFBEREITUNG,verification_status,433,22,5.1,1,DROP,no_url_node
+HAT_AUFBEREITUNG,verification_score,433,22,5.1,1,DROP,0.0
+HAT_AUFBEREITUNG,verification_method,433,22,5.1,1,DROP,skipped
+HAT_AUFBEREITUNG,verification_attempts,433,22,5.1,1,DROP,1
+HAT_AUFBEREITUNG,verification_notes,433,22,5.1,1,DROP,No ExternalLink reachable from this citation
+HAT_AUFBEREITUNG,strict_source_url_cleanup,433,22,5.1,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+HAT_AUFBEREITUNG,evidence_quality,433,22,5.1,1,DROP,source_binding_not_exact
+HAT_AUFBEREITUNG,evidence_note,433,22,5.1,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+HAT_AUFBEREITUNG,evidence_cleanup_run,433,22,5.1,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAT_AUFBEREITUNG,previous_evidence_confidence,433,22,5.1,1,DROP,belegt
+HAT_AUFBEREITUNG,evidence_confidence_status,433,22,5.1,1,DROP,downgraded_pending_exact_source_url_review
+HAT_BAUOBJEKTKLASSE,id,224,224,100.0,224,KEEP,r_bw_55_great_suffolk_street_warehouse__HAT_BAUOBJEKTKLASSE__bok_gebaeude | r_bw_1_broadgate_london__HAT_BAUOBJEKTKLASSE__bok_gebaeude | r_bw_cleveland_steel_and_tubes_stock__HAT_BAUOBJEKTKLASSE__bok_depot_lager | r_bw_association_house_groeditz__HAT_BAUOBJEKTKLASSE__bok_gebaeude
+HAT_BAUOBJEKTKLASSE,review_status,224,224,100.0,1,DROP,needs_source_url_review
+HAT_BAUOBJEKTKLASSE,evidence_source_id,224,224,100.0,2,DROP,mig_4_1 | batch2_v2_import_2026-05-20
+HAT_BAUOBJEKTKLASSE,evidence_origin,224,224,100.0,1,DROP,topology_synthesized
+HAT_BAUOBJEKTKLASSE,evidence_confidence,224,224,100.0,1,KEEP,unklar
+HAT_BAUOBJEKTKLASSE,evidence_basis,224,224,100.0,2,DROP,controlled_vocab | legacy_migration
+HAT_BAUOBJEKTKLASSE,derivation_note,224,224,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_BAUOBJEKTKLASSE,source_resolution_status,224,224,100.0,1,DROP,needs_source_url_review
+HAT_BAUOBJEKTKLASSE,source_status,224,224,100.0,1,DROP,missing
+HAT_BAUOBJEKTKLASSE,source_status_reason,224,224,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BAUOBJEKTKLASSE,source_status_migration,224,224,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BAUOBJEKTROLLE,id,225,225,100.0,225,KEEP,r_bw_55_great_suffolk_street_warehouse__HAT_BAUOBJEKTROLLE__bor_bestandsobjekt | r_bw_55_great_suffolk_street_warehouse__HAT_BAUOBJEKTROLLE__bor_empfaengerobjekt | r_bw_1_broadgate_london__HAT_BAUOBJEKTROLLE__bor_donorobjekt | r_bw_cleveland_steel_and_tubes_stock__HAT_BAUOBJEKTROLLE__bor_zwischenlager
+HAT_BAUOBJEKTROLLE,review_status,225,225,100.0,1,DROP,needs_source_url_review
+HAT_BAUOBJEKTROLLE,evidence_source_id,225,225,100.0,2,DROP,mig_4_1 | batch2_v2_import_2026-05-20
+HAT_BAUOBJEKTROLLE,evidence_origin,225,225,100.0,1,DROP,topology_synthesized
+HAT_BAUOBJEKTROLLE,evidence_confidence,225,225,100.0,1,KEEP,unklar
+HAT_BAUOBJEKTROLLE,evidence_basis,225,225,100.0,2,DROP,controlled_vocab | legacy_migration
+HAT_BAUOBJEKTROLLE,derivation_note,225,225,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_BAUOBJEKTROLLE,source_resolution_status,225,225,100.0,1,DROP,needs_source_url_review
+HAT_BAUOBJEKTROLLE,source_status,225,225,100.0,1,DROP,missing
+HAT_BAUOBJEKTROLLE,source_status_reason,225,225,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BAUOBJEKTROLLE,source_status_migration,225,225,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BAUPRODUKTSTATUS,id,65,65,100.0,65,KEEP,r_bg_reuse_stahl_mehrere_55gss_external_core__HAT_BAUPRODUKTSTATUS__bps_ce_hen | r_bg_reuse_holz_fassade_botanique__HAT_BAUPRODUKTSTATUS__bps_bestand_no_status | r_bg_retained_mehrere_mehrere_botanique_main_structure__HAT_BAUPRODUKTSTATUS__b… | r_bg_reuse_stahl_traeger_boulder_hospital_stockpile__HAT_BAUPRODUKTSTATUS__bps_…
+HAT_BAUPRODUKTSTATUS,review_status,65,65,100.0,1,DROP,needs_source_url_review
+HAT_BAUPRODUKTSTATUS,evidence_source_id,65,65,100.0,5,DROP,Archive (55_Great_Suffolk_Street_London.md): CE marking documented; ASBP case s… | Same-site reuse (donor Bauwerk = receiver Bauwerk via existing AUS_BAUWERK + EI… | Boulder Ordinance 8366 + IBC 104.11 alternative materials route (research: baut… | Archive (Brent_Cross_Town_Primary_Substation_London.md): UKCA marking documente…
+HAT_BAUPRODUKTSTATUS,evidence_origin,65,65,100.0,1,DROP,topology_synthesized
+HAT_BAUPRODUKTSTATUS,evidence_confidence,65,65,100.0,1,KEEP,unklar
+HAT_BAUPRODUKTSTATUS,evidence_basis,65,65,100.0,1,DROP,legacy_migration
+HAT_BAUPRODUKTSTATUS,evidence_excerpt,65,65,100.0,1,DROP,BELEGT
+HAT_BAUPRODUKTSTATUS,derivation_note,65,65,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_BAUPRODUKTSTATUS,source_resolution_status,65,65,100.0,1,DROP,needs_source_url_review
+HAT_BAUPRODUKTSTATUS,source_status,65,65,100.0,1,DROP,missing
+HAT_BAUPRODUKTSTATUS,source_status_reason,65,65,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BAUPRODUKTSTATUS,source_status_migration,65,65,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BAUSYSTEM,id,64,64,100.0,64,KEEP,r_bw_iw73_6_mass_housing_donor__HAT_BAUSYSTEM__bsys_plattenbau | r_bg_reuse_beton_mehrere_bestandverplanzung_betonfertigteil_paneele__HAT_BAUSYS… | r_bg_reuse_stahlbeton_mehrere_big_dig_house_inverset_panels__HAT_BAUSYSTEM__bsy… | r_bg_reuse_stahlbeton_decke_broethen_p2_deckenplatten__HAT_BAUSYSTEM__bsys_p2_p…
+HAT_BAUSYSTEM,review_status,64,64,100.0,1,DROP,needs_source_url_review
+HAT_BAUSYSTEM,evidence_source_id,64,64,100.0,1,DROP,mig_4_1
+HAT_BAUSYSTEM,evidence_origin,64,64,100.0,1,DROP,topology_synthesized
+HAT_BAUSYSTEM,evidence_confidence,64,64,100.0,1,KEEP,unklar
+HAT_BAUSYSTEM,evidence_basis,64,64,100.0,1,DROP,controlled_vocab
+HAT_BAUSYSTEM,derivation_note,64,64,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_BAUSYSTEM,source_resolution_status,64,64,100.0,1,DROP,needs_source_url_review
+HAT_BAUSYSTEM,source_status,64,64,100.0,1,DROP,missing
+HAT_BAUSYSTEM,source_status_reason,64,64,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BAUSYSTEM,source_status_migration,64,64,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BAUTEILEBENE,id,359,359,100.0,359,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_BAUTEILEBENE__be_bauteilgrup… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_BAUTEILEBENE__be_bauteilgruppe | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_BAUTEILEBENE__be_bauteilgrup… | r_bg_reuse_stahl_mehrere_55gss_external_core__HAT_BAUTEILEBENE__be_bauteilgruppe
+HAT_BAUTEILEBENE,review_status,359,359,100.0,1,DROP,needs_source_url_review
+HAT_BAUTEILEBENE,evidence_source_id,359,359,100.0,5,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | batch2_v2_phase26_2026-05-20 | mig_4_1 | batch2_v2_import_2026-05-20
+HAT_BAUTEILEBENE,evidence_origin,359,359,100.0,1,DROP,topology_synthesized
+HAT_BAUTEILEBENE,evidence_confidence,359,359,100.0,1,KEEP,unklar
+HAT_BAUTEILEBENE,evidence_basis,359,359,100.0,2,DROP,legacy_migration | controlled_vocab
+HAT_BAUTEILEBENE,derivation_note,359,359,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_BAUTEILEBENE,source_resolution_status,359,359,100.0,1,DROP,needs_source_url_review
+HAT_BAUTEILEBENE,source_status,359,359,100.0,1,DROP,missing
+HAT_BAUTEILEBENE,source_status_reason,359,359,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BAUTEILEBENE,source_status_migration,359,359,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BAUTEILEBENE,evidence_excerpt,359,49,13.6,2,DROP,INFER | BELEGT
+HAT_BAUTEILGRUPPE,id,356,356,100.0,356,KEEP,r_p_55_great_suffolk_street_london__HAT_BAUTEILGRUPPE__bg_reuse_stahl_mehrere_5… | r_p_association_house_groeditz__HAT_BAUTEILGRUPPE__bg_reuse_stahlbeton_mehrere_… | r_p_association_house_groeditz__HAT_BAUTEILGRUPPE__bg_reuse_stahlbeton_mehrere_… | r_p_association_house_plauen__HAT_BAUTEILGRUPPE__bg_reuse_stahlbeton_mehrere_pl…
+HAT_BAUTEILGRUPPE,review_status,356,356,100.0,1,DROP,needs_source_url_review
+HAT_BAUTEILGRUPPE,evidence_source_id,356,356,100.0,73,DROP,q_55_great_suffolk_street_london_md | q_association_house_groeditz_md | q_association_house_plauen_md | q_bedzed_london_hackbridge_md
+HAT_BAUTEILGRUPPE,evidence_origin,356,356,100.0,1,DROP,topology_synthesized
+HAT_BAUTEILGRUPPE,evidence_confidence,356,356,100.0,2,KEEP,teilweise_belegt | unklar
+HAT_BAUTEILGRUPPE,evidence_basis,356,356,100.0,2,DROP,cell_citation | controlled_vocab
+HAT_BAUTEILGRUPPE,derivation_note,356,356,100.0,2,DROP,promoted derived->curated by mig_repair_4_1_q1 (criterion: BG carries both FROM… |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_BAUTEILGRUPPE,source_resolution_status,356,356,100.0,1,DROP,needs_source_url_review
+HAT_BAUTEILGRUPPE,source_status,356,356,100.0,2,DROP,candidate | missing
+HAT_BAUTEILGRUPPE,source_status_reason,356,356,100.0,2,DROP,candidate_urls_need_fact_review | no_exact_url_binding_needs_review
+HAT_BAUTEILGRUPPE,source_status_migration,356,356,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BAUTEILGRUPPE,evidence_excerpt,356,268,75.3,253,DROP,Projekt 55 Great Suffolk Street [p_55_great_suffolk_street_london] Section 5 (R… | Projekt Vereinshaus Gröditz [p_association_house_groeditz] Section 5 (Reuse-Bau… | Projekt Vereinshaus Gröditz [p_association_house_groeditz] Section 5 (Reuse-Bau… | Projekt Vereinshaus Plauen [p_association_house_plauen] Section 5 (Reuse-Bautei…
+HAT_BAUTEILGRUPPE,strict_source_url_cleanup,356,246,69.1,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+HAT_BAUTEILGRUPPE,invalid_candidate_source_urls,356,130,36.5,20,DROP,"[''] | ['https://t'] | ['https://olympiap'] | ['https://projecta', 'https://pr']"
+HAT_BAUTEILGRUPPE,strict_candidate_url_array_cleanup,356,130,36.5,1,DROP,mig_strict_candidate_url_array_cleanup_2026_05_23
+HAT_BAUTEILTYP,evidence_confidence,741,741,100.0,2,KEEP,belegt | unklar
+HAT_BAUTEILTYP,evidence_basis,741,665,89.7,3,DROP,legacy_migration | controlled_vocab | pass8_strict_import_2026_05_31
+HAT_BAUTEILTYP,id,741,593,80.0,593,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_BAUTEILTYP__bt_gelaender | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_BAUTEILTYP__bt_boden | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_BAUTEILTYP__bt_fassade | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_BAUTEILTYP__bt_wand
+HAT_BAUTEILTYP,review_status,741,593,80.0,1,DROP,needs_source_url_review
+HAT_BAUTEILTYP,evidence_source_id,741,593,80.0,4,DROP,archive:Verbiest_Karreveld_Brussels.md (split-specific function) | mig_4_1 | batch2_v2_import_2026-05-20 | batch2_v2_followup_2026-05-20
+HAT_BAUTEILTYP,evidence_origin,741,593,80.0,1,DROP,topology_synthesized
+HAT_BAUTEILTYP,derivation_note,741,593,80.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_BAUTEILTYP,source_resolution_status,741,593,80.0,1,DROP,needs_source_url_review
+HAT_BAUTEILTYP,source_status,741,593,80.0,1,DROP,missing
+HAT_BAUTEILTYP,source_status_reason,741,593,80.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BAUTEILTYP,source_status_migration,741,593,80.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BAUTEILTYP,review_run,741,148,20.0,2,DROP,schema_compatible_bauteilboersen_update_2026_06_01 | bauteilboersen_finalest_30_2026_05_31
+HAT_BAUTEILTYP,evidence_url,741,76,10.3,15,KEEP,https://www.la-ressourcerie.ch/les-mat%C3%A9riaux | https://materiuum.ch/ressourcerie-lausanne-magasin-shop/ | https://www.baumatpool.ch/de/ | https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile
+HAT_BAUTEILTYP,evidence_quote,741,76,10.3,15,KEEP,"Le magasin de la Ressourcerie dispose en permanence de matériaux de constructio… | La Ressourcerie Lausanne permet de stocker et de prolonger la durée de vie de m… | Die Schweizer Materialbörse – Baumaterialien und Restposten einfach finden, kau… | Im LADEN 2 Bauteile finden Sie alles für einen nachhaltigen Wohnungsumbau – von…"
+HAT_BAUTEILTYP,evidence_excerpt,741,17,2.3,1,DROP,BELEGT
+HAT_BAUWEISE,id,128,128,100.0,128,KEEP,r_bg_reuse_mehrere_mehrere_alliander_common_roof_atrium__HAT_BAUWEISE__bauw_hyb… | r_bg_reuse_beton_mehrere_bestandverplanzung_betonfertigteil_paneele__HAT_BAUWEI… | r_bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile__H… | r_bg_reuse_stahlbeton_mehrere_big_dig_house_inverset_panels__HAT_BAUWEISE__bauw…
+HAT_BAUWEISE,review_status,128,128,100.0,1,DROP,needs_source_url_review
+HAT_BAUWEISE,evidence_source_id,128,128,100.0,1,DROP,mig_4_1
+HAT_BAUWEISE,evidence_origin,128,128,100.0,1,DROP,topology_synthesized
+HAT_BAUWEISE,evidence_confidence,128,128,100.0,1,KEEP,unklar
+HAT_BAUWEISE,evidence_basis,128,128,100.0,1,DROP,controlled_vocab
+HAT_BAUWEISE,derivation_note,128,128,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_BAUWEISE,source_resolution_status,128,128,100.0,1,DROP,needs_source_url_review
+HAT_BAUWEISE,source_status,128,128,100.0,1,DROP,missing
+HAT_BAUWEISE,source_status_reason,128,128,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BAUWEISE,source_status_migration,128,128,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BESCHAFFUNGSWEG,id,274,274,100.0,274,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_BESCHAFFUNGSWEG__bweg_rueckb… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_BESCHAFFUNGSWEG__bweg_rueckbau… | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_BESCHAFFUNGSWEG__bweg_rueckb… | r_bg_reuse_stahl_mehrere_55gss_external_core__HAT_BESCHAFFUNGSWEG__bweg_direktv…
+HAT_BESCHAFFUNGSWEG,review_status,274,274,100.0,1,DROP,needs_source_url_review
+HAT_BESCHAFFUNGSWEG,evidence_source_id,274,274,100.0,3,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | batch2_v2_followup_2026-05-20
+HAT_BESCHAFFUNGSWEG,evidence_origin,274,274,100.0,1,DROP,topology_synthesized
+HAT_BESCHAFFUNGSWEG,evidence_confidence,274,274,100.0,1,KEEP,unklar
+HAT_BESCHAFFUNGSWEG,evidence_basis,274,274,100.0,2,DROP,legacy_migration | controlled_vocab
+HAT_BESCHAFFUNGSWEG,derivation_note,274,274,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_BESCHAFFUNGSWEG,source_resolution_status,274,274,100.0,1,DROP,needs_source_url_review
+HAT_BESCHAFFUNGSWEG,source_status,274,274,100.0,1,DROP,missing
+HAT_BESCHAFFUNGSWEG,source_status_reason,274,274,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_BESCHAFFUNGSWEG,source_status_migration,274,274,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_BESCHAFFUNGSWEG,evidence_excerpt,274,40,14.6,1,DROP,BELEGT
+HAT_DEFEKT,id,42,42,100.0,42,KEEP,r_bg_reuse_mehrere_mehrere_bedzed_fixed_secondary_components__HAT_DEFEKT__def_k… | r_bg_reuse_stahl_mehrere_bedzed_structural__HAT_DEFEKT__def_korrosion | r_bg_reuse_stahl_mehrere_biopartner_5_stuetzen_rahmen__HAT_DEFEKT__def_korrosion | r_bg_reuse_stahl_mehrere_drill_stem_pipe_dachtragwerk_saxum__HAT_DEFEKT__def_ko…
+HAT_DEFEKT,review_status,42,42,100.0,1,DROP,needs_source_url_review
+HAT_DEFEKT,evidence_source_id,42,42,100.0,2,DROP,round_003_material_propagation | batch2_v2_followup_2026-05-20
+HAT_DEFEKT,evidence_origin,42,42,100.0,1,DROP,topology_synthesized
+HAT_DEFEKT,evidence_confidence,42,42,100.0,1,KEEP,unklar
+HAT_DEFEKT,evidence_basis,42,42,100.0,2,DROP,propagated | legacy_migration
+HAT_DEFEKT,derivation_note,42,42,100.0,5,DROP,propagated from project HAT_DEFEKT_BEFUND via material grounding (Stahl) | r1: … | propagated from project HAT_DEFEKT_BEFUND via material grounding (Holz) | r1: d… | propagated from project HAT_DEFEKT_BEFUND via material grounding (Stahlbeton) |… | propagated from project HAT_DEFEKT_BEFUND via material grounding (Aluminium) | …
+HAT_DEFEKT,source_resolution_status,42,42,100.0,1,DROP,needs_source_url_review
+HAT_DEFEKT,source_status,42,42,100.0,1,DROP,missing
+HAT_DEFEKT,source_status_reason,42,42,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_DEFEKT,source_status_migration,42,42,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_DEFEKT,evidence_excerpt,42,11,26.2,1,DROP,BELEGT
+HAT_DEFEKT_BEFUND,id,25,25,100.0,25,KEEP,r_p_bedzed_london_hackbridge__HAT_DEFEKT_BEFUND__def_korrosion | r_p_bedzed_london_hackbridge__HAT_DEFEKT_BEFUND__def_keine_befunde | r_p_berlin_schildow_pilot_house__HAT_DEFEKT_BEFUND__def_korrosion | r_p_grubenstrasse_29_werkhof_29_zuerich__HAT_DEFEKT_BEFUND__def_korrosion
+HAT_DEFEKT_BEFUND,review_status,25,25,100.0,1,DROP,needs_source_url_review
+HAT_DEFEKT_BEFUND,evidence_source_id,25,25,100.0,20,DROP,archive:BedZED_London_Hackbridge.md | archive:Berlin_Schildow_Pilot_House_2.md | archive:Grubenstrasse_29_Werkhof_29_Zuerich.md | archive:BioPartner_5_Leiden_Oegstgeest.md
+HAT_DEFEKT_BEFUND,evidence_origin,25,25,100.0,1,DROP,topology_synthesized
+HAT_DEFEKT_BEFUND,evidence_confidence,25,25,100.0,1,KEEP,unklar
+HAT_DEFEKT_BEFUND,evidence_basis,25,25,100.0,1,DROP,legacy_migration
+HAT_DEFEKT_BEFUND,evidence_excerpt,25,25,100.0,25,DROP,"| technisch/wirtschaftlich | Korrosion/alte Beschichtungen | zusätzlicher Werks… | ftigkeit | Reclaimed steel in gutem Zustand; zusätzliche Beschichtung | Langzei… | bekannt | unbekannt | Alter / Korrosion | Prüfung nötig | [S3] | | Zulassung/Ha… | gfähigkeit, Absturzsicherung, Korrosion | unbekannt | Passgenauigkeit, Statik |…"
+HAT_DEFEKT_BEFUND,derivation_note,25,25,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_DEFEKT_BEFUND,source_resolution_status,25,25,100.0,1,DROP,needs_source_url_review
+HAT_DEFEKT_BEFUND,source_status,25,25,100.0,1,DROP,missing
+HAT_DEFEKT_BEFUND,source_status_reason,25,25,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_DEFEKT_BEFUND,source_status_migration,25,25,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_FUNKTIONSWECHSEL,id,293,293,100.0,293,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_FUNKTIONSWECHSEL__fw_neue_fu… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_FUNKTIONSWECHSEL__fw_neue_funk… | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_FUNKTIONSWECHSEL__fw_neue_fu… | r_bg_reuse_stahl_mehrere_55gss_external_core__HAT_FUNKTIONSWECHSEL__fw_neue_fun…
+HAT_FUNKTIONSWECHSEL,review_status,293,293,100.0,1,DROP,needs_source_url_review
+HAT_FUNKTIONSWECHSEL,evidence_source_id,293,293,100.0,3,DROP,batch2_v2_phase26_2026-05-20 | mig_4_1 | batch2_v2_phase22_2026-05-20
+HAT_FUNKTIONSWECHSEL,evidence_origin,293,293,100.0,1,DROP,topology_synthesized
+HAT_FUNKTIONSWECHSEL,evidence_confidence,293,293,100.0,1,KEEP,unklar
+HAT_FUNKTIONSWECHSEL,evidence_basis,293,293,100.0,2,DROP,legacy_migration | controlled_vocab
+HAT_FUNKTIONSWECHSEL,derivation_note,293,293,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_FUNKTIONSWECHSEL,source_resolution_status,293,293,100.0,1,DROP,needs_source_url_review
+HAT_FUNKTIONSWECHSEL,source_status,293,293,100.0,1,DROP,missing
+HAT_FUNKTIONSWECHSEL,source_status_reason,293,293,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_FUNKTIONSWECHSEL,source_status_migration,293,293,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_FUNKTIONSWECHSEL,evidence_excerpt,293,117,39.9,2,DROP,INFER | BELEGT
+HAT_GELTUNGSBEREICH,id,15,15,100.0,15,KEEP,norm_cen_ts_1090_201_2024__HAT_GELTUNGSBEREICH__geltungsbereich_cen_ts_europaei… | norm_cen_ts_17440__HAT_GELTUNGSBEREICH__geltungsbereich_cen_ts_europaeisch | norm_en_1992__HAT_GELTUNGSBEREICH__geltungsbereich_eurocodes_eu_efta_uk | norm_en_1993__HAT_GELTUNGSBEREICH__geltungsbereich_eurocodes_eu_efta_uk
+HAT_GELTUNGSBEREICH,review_status,15,15,100.0,1,DROP,reviewed
+HAT_GELTUNGSBEREICH,source_scope,15,15,100.0,1,DROP,scope_audit_2026_05_31
+HAT_GELTUNGSBEREICH,evidence_source_id,15,15,100.0,1,DROP,scope_audit_2026_05_31
+HAT_GELTUNGSBEREICH,evidence_origin,15,15,100.0,1,DROP,source_curated
+HAT_GELTUNGSBEREICH,evidence_confidence,15,15,100.0,2,KEEP,teilweise_belegt | belegt
+HAT_GELTUNGSBEREICH,evidence_basis,15,15,100.0,1,DROP,official_web_audit
+HAT_GESCHAEFTSMODELL,review_run,66,66,100.0,2,DROP,schema_compatible_bauteilboersen_update_2026_06_01 | bauteilboersen_finalest_30_2026_05_31
+HAT_GESCHAEFTSMODELL,evidence_confidence,66,44,66.7,2,KEEP,wahrscheinlich | belegt
+HAT_GESCHAEFTSMODELL,evidence_basis,66,44,66.7,1,DROP,marktmodell_addendum_2026_05_31
+HAT_HUERDE,review_status,1044,1044,100.0,1,DROP,needs_source_url_review
+HAT_HUERDE,evidence_source_id,1044,1044,100.0,8,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | k_green_house_knoopkazerne_tiel_to_pavilion | k_superlocal_ursulastraat_to_expogebouw
+HAT_HUERDE,evidence_origin,1044,1044,100.0,1,DROP,topology_synthesized
+HAT_HUERDE,evidence_confidence,1044,1044,100.0,1,KEEP,unklar
+HAT_HUERDE,evidence_basis,1044,1044,100.0,2,DROP,controlled_vocab | propagated
+HAT_HUERDE,derivation_note,1044,1044,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) | former_basis=demoted_from_kette | r1: derived=>topology_synthesized (catch-all:…
+HAT_HUERDE,source_resolution_status,1044,1044,100.0,1,DROP,needs_source_url_review
+HAT_HUERDE,source_status,1044,1044,100.0,1,DROP,missing
+HAT_HUERDE,source_status_reason,1044,1044,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_HUERDE,source_status_migration,1044,1044,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_HUERDE,id,1044,987,94.5,987,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_HUERDE__h_materialqualitaet_… | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_HUERDE__h_technische_freigabe | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_HUERDE__h_materialqualitaet_un… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_HUERDE__h_technische_freigabe
+HAT_HUERDE,evidence_excerpt,1044,33,3.2,1,DROP,BELEGT
+HAT_HUERDEKATEGORIE,id,167,167,100.0,167,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_HUERDEKATEGORIE__hk_technisch | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_HUERDEKATEGORIE__hk_daten_ev… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_HUERDEKATEGORIE__hk_technisch | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_HUERDEKATEGORIE__hk_daten_evid…
+HAT_HUERDEKATEGORIE,review_status,167,167,100.0,1,DROP,needs_source_url_review
+HAT_HUERDEKATEGORIE,evidence_source_id,167,167,100.0,2,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1
+HAT_HUERDEKATEGORIE,evidence_origin,167,167,100.0,1,DROP,topology_synthesized
+HAT_HUERDEKATEGORIE,evidence_confidence,167,167,100.0,1,KEEP,unklar
+HAT_HUERDEKATEGORIE,evidence_basis,167,167,100.0,2,DROP,legacy_migration | controlled_vocab
+HAT_HUERDEKATEGORIE,derivation_note,167,167,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_HUERDEKATEGORIE,source_resolution_status,167,167,100.0,1,DROP,needs_source_url_review
+HAT_HUERDEKATEGORIE,source_status,167,167,100.0,1,DROP,missing
+HAT_HUERDEKATEGORIE,source_status_reason,167,167,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_HUERDEKATEGORIE,source_status_migration,167,167,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_INTERVENTION,id,144,144,100.0,144,KEEP,r_p_55_great_suffolk_street_london__HAT_INTERVENTION__bai_erweiterung | r_p_55_great_suffolk_street_london__HAT_INTERVENTION__bai_sanierung | r_p_association_house_groeditz__HAT_INTERVENTION__bai_neubau | r_p_association_house_plauen__HAT_INTERVENTION__bai_neubau
+HAT_INTERVENTION,review_status,144,144,100.0,1,DROP,needs_source_url_review
+HAT_INTERVENTION,evidence_source_id,144,144,100.0,2,DROP,mig_4_1 | batch2_v2_import_2026-05-20
+HAT_INTERVENTION,evidence_origin,144,144,100.0,1,DROP,topology_synthesized
+HAT_INTERVENTION,evidence_confidence,144,144,100.0,1,KEEP,unklar
+HAT_INTERVENTION,evidence_basis,144,144,100.0,2,DROP,controlled_vocab | legacy_migration
+HAT_INTERVENTION,derivation_note,144,144,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_INTERVENTION,source_resolution_status,144,144,100.0,1,DROP,needs_source_url_review
+HAT_INTERVENTION,source_status,144,144,100.0,1,DROP,missing
+HAT_INTERVENTION,source_status_reason,144,144,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_INTERVENTION,source_status_migration,144,144,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_INTERVENTION,evidence_excerpt,144,10,6.9,1,DROP,BELEGT
+HAT_KENNWERT,evidence_origin,255,255,100.0,2,DROP,topology_synthesized | source_curated
+HAT_KENNWERT,evidence_confidence,255,255,100.0,3,KEEP,unklar | teilweise_belegt | belegt
+HAT_KENNWERT,evidence_basis,255,255,100.0,2,DROP,legacy_fact_property | cell_citation
+HAT_KENNWERT,source_resolution_status,255,255,100.0,2,DROP,needs_source_url_review | evidence_source_id_single_url
+HAT_KENNWERT,source_status,255,255,100.0,3,DROP,missing | candidate | exact
+HAT_KENNWERT,source_status_reason,255,255,100.0,3,DROP,no_exact_url_binding_needs_review | candidate_urls_need_fact_review | concrete_source_url_on_fact
+HAT_KENNWERT,source_status_migration,255,255,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_KENNWERT,evidence_source_id,255,214,83.9,98,DROP,q_55_great_suffolk_street_london_md | q_association_house_groeditz_md | q_association_house_plauen_md | q_bedzed_london_hackbridge_md
+HAT_KENNWERT,review_status,255,203,79.6,1,DROP,needs_source_url_review
+HAT_KENNWERT,strict_source_url_cleanup,255,162,63.5,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+HAT_KENNWERT,invalid_candidate_source_urls,255,88,34.5,20,DROP,"[''] | ['https://olympiap'] | ['https://projecta', 'https://pr'] | ['https://ww']"
+HAT_KENNWERT,strict_candidate_url_array_cleanup,255,88,34.5,1,DROP,mig_strict_candidate_url_array_cleanup_2026_05_23
+HAT_KENNWERT,source_url,255,52,20.4,32,DROP,https://www.construction21.org/france/case-studies/h/pavillon-de-sanitaires-du-… | https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail | https://www.construction21.org/france/case-studies/h/la-grande-halle-de-colombe… | https://albert-and-co.fr/2023/05/28/centre-culturel-grande-halle-caen
+HAT_KENNWERT,source_url_node_id,255,52,20.4,32,DROP,q_chiro_d_itterbeek_dilbeek_s2 | q_ferme_du_rail_paris_s2 | q_grande_halle_de_colombelles_s3 | q_grande_halle_de_colombelles_s6
+HAT_KENNWERT,evidence_quality,255,25,9.8,1,DROP,source_binding_not_exact
+HAT_KENNWERT,evidence_note,255,25,9.8,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+HAT_KENNWERT,evidence_cleanup_run,255,25,9.8,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAT_KENNWERT,previous_evidence_confidence,255,25,9.8,1,DROP,belegt
+HAT_KENNWERT,evidence_confidence_status,255,25,9.8,1,DROP,downgraded_pending_exact_source_url_review
+HAT_LEISTUNGSANFORDERUNG,id,549,549,100.0,549,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_LEISTUNGSANFORDERUNG__la_dau… | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_LEISTUNGSANFORDERUNG__la_tra… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_LEISTUNGSANFORDERUNG__la_dauer… | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_LEISTUNGSANFORDERUNG__la_dau…
+HAT_LEISTUNGSANFORDERUNG,review_status,549,549,100.0,1,DROP,needs_source_url_review
+HAT_LEISTUNGSANFORDERUNG,evidence_source_id,549,549,100.0,3,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | batch2_v2_followup_2026-05-20
+HAT_LEISTUNGSANFORDERUNG,evidence_origin,549,549,100.0,1,DROP,topology_synthesized
+HAT_LEISTUNGSANFORDERUNG,evidence_confidence,549,549,100.0,1,KEEP,unklar
+HAT_LEISTUNGSANFORDERUNG,evidence_basis,549,549,100.0,2,DROP,legacy_migration | controlled_vocab
+HAT_LEISTUNGSANFORDERUNG,derivation_note,549,549,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_LEISTUNGSANFORDERUNG,source_resolution_status,549,549,100.0,1,DROP,needs_source_url_review
+HAT_LEISTUNGSANFORDERUNG,source_status,549,549,100.0,1,DROP,missing
+HAT_LEISTUNGSANFORDERUNG,source_status_reason,549,549,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_LEISTUNGSANFORDERUNG,source_status_migration,549,549,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_LEISTUNGSANFORDERUNG,evidence_excerpt,549,46,8.4,1,DROP,BELEGT
+HAT_LOGISTIK,review_status,494,494,100.0,1,DROP,needs_source_url_review
+HAT_LOGISTIK,evidence_source_id,494,494,100.0,8,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | k_green_house_knoopkazerne_tiel_to_pavilion | k_superlocal_ursulastraat_to_expogebouw
+HAT_LOGISTIK,evidence_origin,494,494,100.0,1,DROP,topology_synthesized
+HAT_LOGISTIK,evidence_confidence,494,494,100.0,1,KEEP,unklar
+HAT_LOGISTIK,evidence_basis,494,494,100.0,3,DROP,legacy_migration | controlled_vocab | demoted_from_kette
+HAT_LOGISTIK,derivation_note,494,494,100.0,3,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=demoted_from_kette)
+HAT_LOGISTIK,source_resolution_status,494,494,100.0,1,DROP,needs_source_url_review
+HAT_LOGISTIK,source_status,494,494,100.0,1,DROP,missing
+HAT_LOGISTIK,source_status_reason,494,494,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_LOGISTIK,source_status_migration,494,494,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_LOGISTIK,id,494,436,88.3,436,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_LOGISTIK__log_transport | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_LOGISTIK__log_transport | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_LOGISTIK__log_transport | r_bg_reuse_stahl_mehrere_55gss_external_core__HAT_LOGISTIK__log_lagerung
+HAT_LOGISTIK,evidence_excerpt,494,44,8.9,1,DROP,BELEGT
+HAT_MARKTMODELL,evidence_basis,420,404,96.2,3,DROP,legacy_migration | propagated | gm_fingerprint_2026_05_31
+HAT_MARKTMODELL,id,420,374,89.0,374,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_MARKTMODELL__mm_same_site | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_MARKTMODELL__mm_plattform_ve… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_MARKTMODELL__mm_same_site | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_MARKTMODELL__mm_plattform_verm…
+HAT_MARKTMODELL,review_status,420,374,89.0,1,DROP,needs_source_url_review
+HAT_MARKTMODELL,evidence_source_id,420,374,89.0,5,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | round_003_project_propagation | Same-site reuse (donor=receiver Bauwerk); no market transaction | Multi Brussels — Madaster + Rotor DC platform-mediated reuse
+HAT_MARKTMODELL,evidence_origin,420,374,89.0,1,DROP,topology_synthesized
+HAT_MARKTMODELL,evidence_confidence,420,374,89.0,1,KEEP,unklar
+HAT_MARKTMODELL,derivation_note,420,374,89.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: confidence=bookkeeping→unklar + is_bookkeeping=true | r1: derived=>topol…
+HAT_MARKTMODELL,source_resolution_status,420,374,89.0,1,DROP,needs_source_url_review
+HAT_MARKTMODELL,source_status,420,374,89.0,1,DROP,missing
+HAT_MARKTMODELL,source_status_reason,420,374,89.0,1,DROP,no_exact_url_binding_needs_review
+HAT_MARKTMODELL,source_status_migration,420,374,89.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_MARKTMODELL,original_source_excerpt,420,315,75.0,1,KEEP,propagated from project HAT_DOMINANT_MARKTMODELL (project-wide sourcing)
+HAT_MARKTMODELL,is_bookkeeping,420,315,75.0,1,DROP,True
+HAT_MARKTMODELL,evidence_excerpt,420,53,12.6,1,DROP,BELEGT
+HAT_MARKTMODELL,review_run,420,30,7.1,1,DROP,bauteilboersen_finalest_30_2026_05_31
+HAT_MATCHINGQUALITAET,id,182,182,100.0,182,KEEP,r_p_55_great_suffolk_street_london__HAT_MATCHINGQUALITAET__mq_temporal_planned | r_p_55_great_suffolk_street_london__HAT_MATCHINGQUALITAET__mq_spec_exact | r_p_55_great_suffolk_street_london__HAT_MATCHINGQUALITAET__mq_spec_anpassung | r_p_association_house_groeditz__HAT_MATCHINGQUALITAET__mq_spec_anpassung
+HAT_MATCHINGQUALITAET,review_status,182,182,100.0,1,DROP,needs_source_url_review
+HAT_MATCHINGQUALITAET,evidence_source_id,182,182,100.0,76,DROP,manual_orphan_rescue | archive:55_Great_Suffolk_Street_London.md | archive:Association_house_Groeditz.md | archive:Association_house_Plauen.md
+HAT_MATCHINGQUALITAET,evidence_origin,182,182,100.0,1,DROP,topology_synthesized
+HAT_MATCHINGQUALITAET,evidence_confidence,182,182,100.0,1,KEEP,unklar
+HAT_MATCHINGQUALITAET,evidence_basis,182,182,100.0,1,DROP,legacy_migration
+HAT_MATCHINGQUALITAET,evidence_excerpt,182,182,100.0,165,DROP,"Steel pre-reserved from House of Fraser teardown years before | Some reused steel members 1:1 in equivalent role | SBP, NLA | belegt | Lagerung, Aufbereitung, Testkoordination | | Bauteil | Wied… | en-Fertigteile | Konstruktive Anpassung | [S1] | belegt | Selten dokumentierter…"
+HAT_MATCHINGQUALITAET,derivation_note,182,182,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_MATCHINGQUALITAET,source_resolution_status,182,182,100.0,1,DROP,needs_source_url_review
+HAT_MATCHINGQUALITAET,source_status,182,182,100.0,1,DROP,missing
+HAT_MATCHINGQUALITAET,source_status_reason,182,182,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_MATCHINGQUALITAET,source_status_migration,182,182,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_MATERIALGRUPPE,id,503,503,100.0,503,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_MATERIALGRUPPE__mg_metall | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_MATERIALGRUPPE__mg_glas_keramik | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_MATERIALGRUPPE__mg_mineralis… | r_bg_reuse_stahl_mehrere_55gss_external_core__HAT_MATERIALGRUPPE__mg_metall
+HAT_MATERIALGRUPPE,review_status,503,503,100.0,1,DROP,needs_source_url_review
+HAT_MATERIALGRUPPE,evidence_source_id,503,503,100.0,6,DROP,archive:Verbiest_Karreveld_Brussels.md (split-specific material group) | Phase R-3 derived from Material->Materialgruppe canonical map | mig_4_1 | batch2_v2_import_2026-05-20
+HAT_MATERIALGRUPPE,evidence_origin,503,503,100.0,1,DROP,topology_synthesized
+HAT_MATERIALGRUPPE,evidence_confidence,503,503,100.0,1,KEEP,unklar
+HAT_MATERIALGRUPPE,evidence_basis,503,503,100.0,2,DROP,legacy_migration | controlled_vocab
+HAT_MATERIALGRUPPE,derivation_note,503,503,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_MATERIALGRUPPE,source_resolution_status,503,503,100.0,1,DROP,needs_source_url_review
+HAT_MATERIALGRUPPE,source_status,503,503,100.0,1,DROP,missing
+HAT_MATERIALGRUPPE,source_status_reason,503,503,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_MATERIALGRUPPE,source_status_migration,503,503,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_MATERIALGRUPPE,evidence_excerpt,503,17,3.4,1,DROP,BELEGT
+HAT_METHODE,evidence_basis,654,636,97.2,4,DROP,controlled_vocab | legacy_migration | demoted_from_kette | gm_fingerprint_2026_05_31
+HAT_METHODE,review_status,654,595,91.0,1,DROP,needs_source_url_review
+HAT_METHODE,evidence_source_id,654,595,91.0,8,DROP,mig_4_1 | archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | k_green_house_knoopkazerne_tiel_to_pavilion | k_superlocal_ursulastraat_to_expogebouw
+HAT_METHODE,evidence_origin,654,595,91.0,1,DROP,topology_synthesized
+HAT_METHODE,evidence_confidence,654,595,91.0,1,KEEP,unklar
+HAT_METHODE,derivation_note,654,595,91.0,3,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=demoted_from_kette)
+HAT_METHODE,source_resolution_status,654,595,91.0,1,DROP,needs_source_url_review
+HAT_METHODE,source_status,654,595,91.0,1,DROP,missing
+HAT_METHODE,source_status_reason,654,595,91.0,1,DROP,no_exact_url_binding_needs_review
+HAT_METHODE,source_status_migration,654,595,91.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_METHODE,id,654,532,81.3,532,KEEP,r_p_55_great_suffolk_street_london__HAT_METHODE__meth_urban_mining | r_p_association_house_groeditz__HAT_METHODE__meth_bauteilkatalogisierung | r_p_association_house_plauen__HAT_METHODE__meth_bauteilkatalogisierung | r_p_bedzed_london_hackbridge__HAT_METHODE__meth_building_material_scouting
+HAT_METHODE,review_run,654,59,9.0,2,DROP,bauteilboersen_finalest_30_2026_05_31 | schema_compatible_bauteilboersen_update_2026_06_01
+HAT_METHODE,evidence_excerpt,654,22,3.4,1,DROP,BELEGT
+HAT_NUTZUNG,id,214,214,100.0,214,KEEP,r_p_55_great_suffolk_street_london__HAT_NUTZUNG__nut_buero | r_p_55_great_suffolk_street_london__HAT_NUTZUNG__nut_gewerbe | r_p_association_house_groeditz__HAT_NUTZUNG__nut_sozialbau | r_p_association_house_plauen__HAT_NUTZUNG__nut_sozialbau
+HAT_NUTZUNG,review_status,214,214,100.0,1,DROP,needs_source_url_review
+HAT_NUTZUNG,evidence_source_id,214,214,100.0,2,DROP,mig_4_1 | batch2_v2_import_2026-05-20
+HAT_NUTZUNG,evidence_origin,214,214,100.0,1,DROP,topology_synthesized
+HAT_NUTZUNG,evidence_confidence,214,214,100.0,1,KEEP,unklar
+HAT_NUTZUNG,evidence_basis,214,214,100.0,2,DROP,controlled_vocab | legacy_migration
+HAT_NUTZUNG,derivation_note,214,214,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_NUTZUNG,source_resolution_status,214,214,100.0,1,DROP,needs_source_url_review
+HAT_NUTZUNG,source_status,214,214,100.0,1,DROP,missing
+HAT_NUTZUNG,source_status_reason,214,214,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_NUTZUNG,source_status_migration,214,214,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_NUTZUNG,evidence_excerpt,214,10,4.7,1,DROP,BELEGT
+HAT_PROZESSPHASE,review_status,812,812,100.0,1,DROP,needs_source_url_review
+HAT_PROZESSPHASE,evidence_source_id,812,812,100.0,7,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | k_green_house_knoopkazerne_tiel_to_pavilion | k_superlocal_ursulastraat_to_expogebouw
+HAT_PROZESSPHASE,evidence_origin,812,812,100.0,1,DROP,topology_synthesized
+HAT_PROZESSPHASE,evidence_confidence,812,812,100.0,1,KEEP,unklar
+HAT_PROZESSPHASE,evidence_basis,812,812,100.0,3,DROP,legacy_migration | controlled_vocab | demoted_from_kette
+HAT_PROZESSPHASE,derivation_note,812,812,100.0,3,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=demoted_from_kette)
+HAT_PROZESSPHASE,source_resolution_status,812,812,100.0,1,DROP,needs_source_url_review
+HAT_PROZESSPHASE,source_status,812,812,100.0,1,DROP,missing
+HAT_PROZESSPHASE,source_status_reason,812,812,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_PROZESSPHASE,source_status_migration,812,812,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_PROZESSPHASE,id,812,693,85.3,693,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_PROZESSPHASE__phase_rueckbau | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_PROZESSPHASE__phase_wiederei… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_PROZESSPHASE__phase_rueckbau | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_PROZESSPHASE__phase_wiedereinb…
+HAT_PRUEFUNG,id,408,408,100.0,408,KEEP,r_p_bedzed_london_hackbridge__HAT_PRUEFUNG__pn_sichtpruefung__research_inferred | r_p_bedzed_london_hackbridge__HAT_PRUEFUNG__pn_rostgrad__research_inferred | r_p_bedzed_london_hackbridge__HAT_PRUEFUNG__pn_restquerschnitt__research_inferr… | r_p_bedzed_london_hackbridge__HAT_PRUEFUNG__pn_ultraschall_dickenmessung__resea…
+HAT_PRUEFUNG,evidence_source_id,408,408,100.0,9,DROP,q_aufbereitungsverfahren_reused_building_elements_md | archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | batch2_v2_followup_2026-05-20
+HAT_PRUEFUNG,evidence_origin,408,408,100.0,2,DROP,source_curated | topology_synthesized
+HAT_PRUEFUNG,evidence_confidence,408,408,100.0,2,KEEP,unklar | belegt
+HAT_PRUEFUNG,evidence_basis,408,408,100.0,3,DROP,cell_citation | legacy_migration | controlled_vocab
+HAT_PRUEFUNG,derivation_note,408,408,100.0,3,DROP, | r1: curated→source_curated (default reclassification) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_PRUEFUNG,source_resolution_status,408,408,100.0,2,DROP,needs_source_url_review | evidence_source_id_single_url
+HAT_PRUEFUNG,source_status,408,408,100.0,3,DROP,candidate | missing | exact
+HAT_PRUEFUNG,source_status_reason,408,408,100.0,3,DROP,candidate_urls_need_fact_review | no_exact_url_binding_needs_review | concrete_source_url_on_fact
+HAT_PRUEFUNG,source_status_migration,408,408,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_PRUEFUNG,review_status,408,396,97.1,1,DROP,needs_source_url_review
+HAT_PRUEFUNG,evidence_excerpt,408,87,21.3,20,DROP,"| Entrosten / Korrosionsbehandlung | `av_entrosten_korrosionsbehandlung` | Entf… | BELEGT | | Sägen von Betonfertigteilen / Trennen nasser Verbindungen | `av_betonfertigte… | | Glasreinigung, Entkitten und Entfernen alter Dichtungen | `av_glas_reinigung_…"
+HAT_PRUEFUNG,source_scope,408,63,15.4,1,DROP,research_file_row
+HAT_PRUEFUNG,verification_status,408,63,15.4,1,DROP,no_url_node
+HAT_PRUEFUNG,verification_score,408,63,15.4,1,DROP,0.0
+HAT_PRUEFUNG,verification_method,408,63,15.4,1,DROP,skipped
+HAT_PRUEFUNG,verification_attempts,408,63,15.4,1,DROP,1
+HAT_PRUEFUNG,verification_notes,408,63,15.4,1,DROP,No ExternalLink reachable from this citation
+HAT_PRUEFUNG,strict_source_url_cleanup,408,51,12.5,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+HAT_PRUEFUNG,evidence_quality,408,51,12.5,1,DROP,source_binding_not_exact
+HAT_PRUEFUNG,evidence_note,408,51,12.5,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+HAT_PRUEFUNG,evidence_cleanup_run,408,51,12.5,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAT_PRUEFUNG,previous_evidence_confidence,408,51,12.5,1,DROP,belegt
+HAT_PRUEFUNG,evidence_confidence_status,408,51,12.5,1,DROP,downgraded_pending_exact_source_url_review
+HAT_PRUEFUNG,source_url,408,12,2.9,4,DROP,https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/h… | https://eurocodes.jrc.ec.europa.eu/sites/default/files/2021-12/EUR23252EN.pdf | https://www.baunetzwissen.de/gesund-bauen/fachwissen/regelwerke/normen-fuer-den… | https://www.umweltbundesamt.de/system/files/medien/378/publikationen/texte_93_2…
+HAT_PRUEFUNG,source_url_node_id,408,12,2.9,4,DROP,q_research_testing_verification_bauteilreuse_kg_url_1c3c02d1 | q_research_testing_verification_bauteilreuse_kg_url_79050c57 | q_research_testing_verification_bauteilreuse_kg_url_07c6159c | q_research_testing_verification_bauteilreuse_kg_url_60c31d28
+HAT_RECHTLICHE_BEDINGUNG,review_status,15,15,100.0,1,DROP,needs_source_url_review
+HAT_RECHTLICHE_BEDINGUNG,evidence_source_id,15,15,100.0,2,DROP,r2_c_journal_edge_restore | scope_split_rewire_2026_05_31
+HAT_RECHTLICHE_BEDINGUNG,evidence_origin,15,15,100.0,1,DROP,source_curated
+HAT_RECHTLICHE_BEDINGUNG,evidence_confidence,15,15,100.0,1,KEEP,teilweise_belegt
+HAT_RECHTLICHE_BEDINGUNG,evidence_basis,15,15,100.0,1,DROP,cell_citation
+HAT_RECHTLICHE_BEDINGUNG,source_resolution_status,15,15,100.0,1,DROP,needs_source_url_review
+HAT_RECHTLICHE_BEDINGUNG,source_status,15,15,100.0,1,DROP,missing
+HAT_RECHTLICHE_BEDINGUNG,source_status_reason,15,15,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_RECHTLICHE_BEDINGUNG,source_status_migration,15,15,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_RECHTLICHE_BEDINGUNG,id,15,6,40.0,6,KEEP,bg_reuse_stahl_mehrere_brent_cross_bracing_members__HAT_RECHTLICHE_BEDINGUNG__r… | bg_reuse_stahl_mehrere_brent_cross_bracing_members__HAT_RECHTLICHE_BEDINGUNG__r… | bg_reuse_stahl_mehrere_brent_cross_tubular_columns__HAT_RECHTLICHE_BEDINGUNG__r… | bg_reuse_stahl_mehrere_brent_cross_tubular_columns__HAT_RECHTLICHE_BEDINGUNG__r…
+HAT_RECHTLICHE_BEDINGUNG,derivation_note,15,6,40.0,1,DROP,Recreated after splitting rb_ce_ukca_marking_reused_steel on 2026-05-31.
+HAT_RESSOURCENQUELLE,id,552,552,100.0,552,KEEP,r_bw_cleveland_steel_and_tubes_stock__HAT_RESSOURCENQUELLE__rq_lager | r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_RESSOURCENQUELLE__rq_donorge… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_RESSOURCENQUELLE__rq_donorgeba… | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_RESSOURCENQUELLE__rq_donorge…
+HAT_RESSOURCENQUELLE,review_status,552,552,100.0,1,DROP,needs_source_url_review
+HAT_RESSOURCENQUELLE,evidence_source_id,552,552,100.0,5,DROP,mig_4_1 | archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | batch2_v2_phase26_2026-05-20 | batch2_v2_import_2026-05-20
+HAT_RESSOURCENQUELLE,evidence_origin,552,552,100.0,1,DROP,topology_synthesized
+HAT_RESSOURCENQUELLE,evidence_confidence,552,552,100.0,1,KEEP,unklar
+HAT_RESSOURCENQUELLE,evidence_basis,552,552,100.0,2,DROP,controlled_vocab | legacy_migration
+HAT_RESSOURCENQUELLE,derivation_note,552,552,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_RESSOURCENQUELLE,source_resolution_status,552,552,100.0,1,DROP,needs_source_url_review
+HAT_RESSOURCENQUELLE,source_status,552,552,100.0,1,DROP,missing
+HAT_RESSOURCENQUELLE,source_status_reason,552,552,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_RESSOURCENQUELLE,source_status_migration,552,552,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_RESSOURCENQUELLE,evidence_excerpt,552,114,20.7,2,DROP,INFER | BELEGT
+HAT_RUECKBAUVERFAHREN,id,299,299,100.0,299,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_RUECKBAUVERFAHREN__rv_zersto… | r_bg_reuse_keramik_boden_verbiest_charleroi__HAT_RUECKBAUVERFAHREN__rv_zerstoer… | r_bg_reuse_naturstein_wand_verbiest_charleroi__HAT_RUECKBAUVERFAHREN__rv_zersto… | r_bg_reuse_stahlbeton_mehrere_big_dig_house_inverset_panels__HAT_RUECKBAUVERFAH…
+HAT_RUECKBAUVERFAHREN,review_status,299,299,100.0,1,DROP,needs_source_url_review
+HAT_RUECKBAUVERFAHREN,evidence_source_id,299,299,100.0,3,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | batch2_v2_followup_2026-05-20
+HAT_RUECKBAUVERFAHREN,evidence_origin,299,299,100.0,1,DROP,topology_synthesized
+HAT_RUECKBAUVERFAHREN,evidence_confidence,299,299,100.0,1,KEEP,unklar
+HAT_RUECKBAUVERFAHREN,evidence_basis,299,299,100.0,2,DROP,legacy_migration | controlled_vocab
+HAT_RUECKBAUVERFAHREN,derivation_note,299,299,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_RUECKBAUVERFAHREN,source_resolution_status,299,299,100.0,1,DROP,needs_source_url_review
+HAT_RUECKBAUVERFAHREN,source_status,299,299,100.0,1,DROP,missing
+HAT_RUECKBAUVERFAHREN,source_status_reason,299,299,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_RUECKBAUVERFAHREN,source_status_migration,299,299,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_RUECKBAUVERFAHREN,evidence_excerpt,299,37,12.4,1,DROP,BELEGT
+HAT_STATUS,id,655,655,100.0,655,KEEP,r_p_55_great_suffolk_street_london__HAT_STATUS__status_unklar | r_bw_55_great_suffolk_street_warehouse__HAT_STATUS__status_realisiert | r_bw_1_broadgate_london__HAT_STATUS__status_realisiert | r_bw_cleveland_steel_and_tubes_stock__HAT_STATUS__status_realisiert
+HAT_STATUS,review_status,655,655,100.0,1,DROP,needs_source_url_review
+HAT_STATUS,evidence_source_id,655,655,100.0,5,DROP,mig_4_1 | batch2_v2_phase26_2026-05-20 | archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | batch2_v2_import_2026-05-20
+HAT_STATUS,evidence_origin,655,655,100.0,1,DROP,topology_synthesized
+HAT_STATUS,evidence_confidence,655,655,100.0,1,KEEP,unklar
+HAT_STATUS,evidence_basis,655,655,100.0,2,DROP,controlled_vocab | legacy_migration
+HAT_STATUS,derivation_note,655,655,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_STATUS,source_resolution_status,655,655,100.0,1,DROP,needs_source_url_review
+HAT_STATUS,source_status,655,655,100.0,1,DROP,missing
+HAT_STATUS,source_status_reason,655,655,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_STATUS,source_status_migration,655,655,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_STATUS,evidence_excerpt,655,334,51.0,2,DROP,INFER | BELEGT
+HAT_TRAGWERKSPRINZIP,id,71,71,100.0,71,KEEP,r_bg_reuse_mehrere_mehrere_alliander_common_roof_atrium__HAT_TRAGWERKSPRINZIP__… | r_bg_reuse_beton_mehrere_bestandverplanzung_betonfertigteil_paneele__HAT_TRAGWE… | r_bg_planned_mehrere_mehrere_big_dig_building_geplante_infrastrukturbauteile__H… | r_bg_reuse_mehrere_mehrere_big_dig_house_ramp_pier_roadway_components__HAT_TRAG…
+HAT_TRAGWERKSPRINZIP,review_status,71,71,100.0,1,DROP,needs_source_url_review
+HAT_TRAGWERKSPRINZIP,evidence_source_id,71,71,100.0,1,DROP,mig_4_1
+HAT_TRAGWERKSPRINZIP,evidence_origin,71,71,100.0,1,DROP,topology_synthesized
+HAT_TRAGWERKSPRINZIP,evidence_confidence,71,71,100.0,1,KEEP,unklar
+HAT_TRAGWERKSPRINZIP,evidence_basis,71,71,100.0,1,DROP,controlled_vocab
+HAT_TRAGWERKSPRINZIP,derivation_note,71,71,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_TRAGWERKSPRINZIP,source_resolution_status,71,71,100.0,1,DROP,needs_source_url_review
+HAT_TRAGWERKSPRINZIP,source_status,71,71,100.0,1,DROP,missing
+HAT_TRAGWERKSPRINZIP,source_status_reason,71,71,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_TRAGWERKSPRINZIP,source_status_migration,71,71,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,id,19,19,100.0,19,KEEP,r_land_deutschland__HAT_TYPISCHEN_BAUPRODUKTSTATUS__bps_ce_hen | r_land_deutschland__HAT_TYPISCHEN_BAUPRODUKTSTATUS__bps_ue_zeichen | r_land_deutschland__HAT_TYPISCHEN_BAUPRODUKTSTATUS__bps_zie_vbg | r_land_usa__HAT_TYPISCHEN_BAUPRODUKTSTATUS__bps_ibc_104_11_alternative
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,review_status,19,19,100.0,1,DROP,needs_source_url_review
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,evidence_source_id,19,19,100.0,1,DROP,Research legal-regime matrix (typical jurisdiction)
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,evidence_origin,19,19,100.0,1,DROP,topology_synthesized
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,evidence_confidence,19,19,100.0,1,KEEP,unklar
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,evidence_basis,19,19,100.0,1,DROP,legacy_migration
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,evidence_excerpt,19,19,100.0,1,DROP,INFER
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,derivation_note,19,19,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,source_resolution_status,19,19,100.0,1,DROP,needs_source_url_review
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,source_status,19,19,100.0,1,DROP,missing
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,source_status_reason,19,19,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_TYPISCHEN_BAUPRODUKTSTATUS,source_status_migration,19,19,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_VERBINDUNGSTECHNIK,id,128,128,100.0,128,KEEP,r_bg_reuse_holz_mehrere_brettschichtholzbogen_recypark_demets__HAT_VERBINDUNGST… | r_bg_reuse_holz_mehrere_cascadeup_clst_floor_panels__HAT_VERBINDUNGSTECHNIK__vt… | r_bg_reuse_holz_wand_cascadeup_clst__HAT_VERBINDUNGSTECHNIK__vt_reversible_fueg… | r_bg_reuse_mehrere_mehrere_christ_pavilion_cloister_glass_facade__HAT_VERBINDUN…
+HAT_VERBINDUNGSTECHNIK,review_status,128,128,100.0,1,DROP,needs_source_url_review
+HAT_VERBINDUNGSTECHNIK,evidence_source_id,128,128,100.0,9,DROP,Recypark Anderlecht: 'half-arches were bolted together'; rotten ends cut and re… | CascadeUp WCTE paper: 'kit-of-parts' assembly with fasteners; can be disassembl… | CascadeUp WCTE paper: same kit-of-parts logic applies to wall panels | mig_4_1
+HAT_VERBINDUNGSTECHNIK,evidence_origin,128,128,100.0,2,DROP,topology_synthesized | source_curated
+HAT_VERBINDUNGSTECHNIK,evidence_confidence,128,128,100.0,1,KEEP,unklar
+HAT_VERBINDUNGSTECHNIK,evidence_basis,128,128,100.0,3,DROP,legacy_migration | controlled_vocab | cell_citation
+HAT_VERBINDUNGSTECHNIK,derivation_note,128,128,100.0,3,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: curated→source_curated (default reclassification)
+HAT_VERBINDUNGSTECHNIK,source_resolution_status,128,128,100.0,1,DROP,needs_source_url_review
+HAT_VERBINDUNGSTECHNIK,source_status,128,128,100.0,2,DROP,missing | candidate
+HAT_VERBINDUNGSTECHNIK,source_status_reason,128,128,100.0,2,DROP,no_exact_url_binding_needs_review | candidate_urls_need_fact_review
+HAT_VERBINDUNGSTECHNIK,source_status_migration,128,128,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_VERBINDUNGSTECHNIK,evidence_excerpt,128,26,20.3,2,DROP,BELEGT | | Diamantsägen von Mauerwerksmodulen | `av_mauerwerk_diamantsaegen_modul` | Tre…
+HAT_VERBINDUNGSTECHNIK,reversibility,128,6,4.7,2,KEEP,partially_reversible | reversible
+HAT_VERBINDUNGSTECHNIK,source_scope,128,1,0.8,1,DROP,research_file_row
+HAT_VERBINDUNGSTECHNIK,verification_status,128,1,0.8,1,DROP,no_url_node
+HAT_VERBINDUNGSTECHNIK,verification_score,128,1,0.8,1,DROP,0.0
+HAT_VERBINDUNGSTECHNIK,verification_method,128,1,0.8,1,DROP,skipped
+HAT_VERBINDUNGSTECHNIK,verification_attempts,128,1,0.8,1,DROP,1
+HAT_VERBINDUNGSTECHNIK,verification_notes,128,1,0.8,1,DROP,No ExternalLink reachable from this citation
+HAT_VERBINDUNGSTECHNIK,strict_source_url_cleanup,128,1,0.8,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+HAT_VERBINDUNGSTECHNIK,evidence_quality,128,1,0.8,1,DROP,source_binding_not_exact
+HAT_VERBINDUNGSTECHNIK,evidence_note,128,1,0.8,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+HAT_VERBINDUNGSTECHNIK,evidence_cleanup_run,128,1,0.8,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAT_VERBINDUNGSTECHNIK,previous_evidence_confidence,128,1,0.8,1,DROP,belegt
+HAT_VERBINDUNGSTECHNIK,evidence_confidence_status,128,1,0.8,1,DROP,downgraded_pending_exact_source_url_review
+HAT_WIEDERVERWENDUNGSART,id,604,604,100.0,604,KEEP,r_p_55_great_suffolk_street_london__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiede… | r_p_association_house_groeditz__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederver… | r_p_association_house_plauen__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwe… | r_p_bedzed_london_hackbridge__HAT_WIEDERVERWENDUNGSART__wva_direkte_wiederverwe…
+HAT_WIEDERVERWENDUNGSART,review_status,604,604,100.0,1,DROP,needs_source_url_review
+HAT_WIEDERVERWENDUNGSART,evidence_source_id,604,604,100.0,4,DROP,mig_4_1 | archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | batch2_v2_import_2026-05-20 | batch2_v2_followup_2026-05-20
+HAT_WIEDERVERWENDUNGSART,evidence_origin,604,604,100.0,1,DROP,topology_synthesized
+HAT_WIEDERVERWENDUNGSART,evidence_confidence,604,604,100.0,1,KEEP,unklar
+HAT_WIEDERVERWENDUNGSART,evidence_basis,604,604,100.0,2,DROP,controlled_vocab | legacy_migration
+HAT_WIEDERVERWENDUNGSART,derivation_note,604,604,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_WIEDERVERWENDUNGSART,source_resolution_status,604,604,100.0,1,DROP,needs_source_url_review
+HAT_WIEDERVERWENDUNGSART,source_status,604,604,100.0,1,DROP,missing
+HAT_WIEDERVERWENDUNGSART,source_status_reason,604,604,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_WIEDERVERWENDUNGSART,source_status_migration,604,604,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_WIEDERVERWENDUNGSART,evidence_excerpt,604,17,2.8,1,DROP,BELEGT
+HAT_WIRTSCHAFT,id,41,41,100.0,41,KEEP,r_p_55_great_suffolk_street_london__HAT_WIRTSCHAFT__wi_capex_hoeher_subvention | r_p_bedzed_london_hackbridge__HAT_WIRTSCHAFT__wi_capex_neutral | r_prog_stuttgart_210__HAT_WIRTSCHAFT__wi_capex_niedriger_direkter_ersparnis | r_prog_stuttgart_210__HAT_WIRTSCHAFT__wi_restwert
+HAT_WIRTSCHAFT,review_status,41,41,100.0,1,DROP,needs_source_url_review
+HAT_WIRTSCHAFT,evidence_source_id,41,41,100.0,20,DROP,archive:55_Great_Suffolk_Street_London.md | archive:BedZED_London_Hackbridge.md | batch2_v2_followup_2026-05-20 | archive:Big_Dig_Building_Boston.md
+HAT_WIRTSCHAFT,evidence_origin,41,41,100.0,1,DROP,topology_synthesized
+HAT_WIRTSCHAFT,evidence_confidence,41,41,100.0,1,KEEP,unklar
+HAT_WIRTSCHAFT,evidence_basis,41,41,100.0,1,DROP,legacy_migration
+HAT_WIRTSCHAFT,evidence_excerpt,41,41,100.0,21,DROP,"erwähnt, Schadstoff nicht | | Förderprogramm | DISRUPT | Forschungs-/Case-Study… | r; mit Zusatzaufwand effektiv kostenneutral | Kostenwirkung Stahlwiederverwendu… | BELEGT | ektbezogene Entwurfsdaten | | Förderprogramm | Holcim Awards Encouragement Priz…"
+HAT_WIRTSCHAFT,derivation_note,41,41,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_WIRTSCHAFT,source_resolution_status,41,41,100.0,1,DROP,needs_source_url_review
+HAT_WIRTSCHAFT,source_status,41,41,100.0,1,DROP,missing
+HAT_WIRTSCHAFT,source_status_reason,41,41,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_WIRTSCHAFT,source_status_migration,41,41,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_WIRTSCHAFTSASPEKT,id,11,11,100.0,11,KEEP,r_bg_reuse_stahl_mehrere_bedzed_structural__HAT_WIRTSCHAFTSASPEKT__wi_kostenver… | r_bg_reuse_glas_mehrere_elys_restposten_windows__HAT_WIRTSCHAFTSASPEKT__wi_rest… | r_bg_reuse_stahlbeton_mehrere_haus_hos_floor_elements__HAT_WIRTSCHAFTSASPEKT__w… | r_bg_reuse_stahlbeton_treppe_haus_hos__HAT_WIRTSCHAFTSASPEKT__wi_kostenvergleich
+HAT_WIRTSCHAFTSASPEKT,review_status,11,11,100.0,1,DROP,needs_source_url_review
+HAT_WIRTSCHAFTSASPEKT,evidence_source_id,11,11,100.0,1,DROP,mig_4_1
+HAT_WIRTSCHAFTSASPEKT,evidence_origin,11,11,100.0,1,DROP,topology_synthesized
+HAT_WIRTSCHAFTSASPEKT,evidence_confidence,11,11,100.0,1,KEEP,unklar
+HAT_WIRTSCHAFTSASPEKT,evidence_basis,11,11,100.0,1,DROP,controlled_vocab
+HAT_WIRTSCHAFTSASPEKT,derivation_note,11,11,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+HAT_WIRTSCHAFTSASPEKT,source_resolution_status,11,11,100.0,1,DROP,needs_source_url_review
+HAT_WIRTSCHAFTSASPEKT,source_status,11,11,100.0,1,DROP,missing
+HAT_WIRTSCHAFTSASPEKT,source_status_reason,11,11,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_WIRTSCHAFTSASPEKT,source_status_migration,11,11,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_ZERTIFIZIERUNG,review_status,12,12,100.0,1,DROP,needs_source_url_review
+HAT_ZERTIFIZIERUNG,evidence_source_id,12,12,100.0,1,DROP,r2_d_journal_edge_restore
+HAT_ZERTIFIZIERUNG,evidence_origin,12,12,100.0,1,DROP,source_curated
+HAT_ZERTIFIZIERUNG,evidence_confidence,12,12,100.0,1,KEEP,unklar
+HAT_ZERTIFIZIERUNG,evidence_basis,12,12,100.0,1,DROP,cell_citation
+HAT_ZERTIFIZIERUNG,evidence_excerpt,12,12,100.0,1,DROP,Restored from Phase 2.5 deletion journal
+HAT_ZERTIFIZIERUNG,verification_status,12,12,100.0,1,DROP,no_url_node
+HAT_ZERTIFIZIERUNG,verification_score,12,12,100.0,1,DROP,0.0
+HAT_ZERTIFIZIERUNG,verification_method,12,12,100.0,1,DROP,skipped
+HAT_ZERTIFIZIERUNG,verification_attempts,12,12,100.0,1,DROP,1
+HAT_ZERTIFIZIERUNG,verification_notes,12,12,100.0,1,DROP,No ExternalLink reachable from this citation
+HAT_ZERTIFIZIERUNG,source_resolution_status,12,12,100.0,1,DROP,needs_source_url_review
+HAT_ZERTIFIZIERUNG,source_status,12,12,100.0,1,DROP,missing
+HAT_ZERTIFIZIERUNG,source_status_reason,12,12,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_ZERTIFIZIERUNG,source_status_migration,12,12,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+HAT_ZERTIFIZIERUNG,evidence_quality,12,12,100.0,1,DROP,source_binding_not_exact
+HAT_ZERTIFIZIERUNG,evidence_note,12,12,100.0,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+HAT_ZERTIFIZIERUNG,evidence_cleanup_run,12,12,100.0,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+HAT_ZERTIFIZIERUNG,previous_evidence_confidence,12,12,100.0,1,DROP,belegt
+HAT_ZERTIFIZIERUNG,evidence_confidence_status,12,12,100.0,1,DROP,downgraded_pending_exact_source_url_review
+HAT_ZUSTANDSKLASSE,id,36,36,100.0,36,KEEP,r_bg_retained_mehrere_mehrere_sms_zuerich_existing_bldgs__HAT_ZUSTANDSKLASSE__z… | r_bg_reuse_mehrere_mehrere_sms_zuerich_ubs_hall__HAT_ZUSTANDSKLASSE__zk_unbekan… | r_bg_planned_stahl_fassade_sms_zuerich_arcade__HAT_ZUSTANDSKLASSE__zk_unbekannt… | r_bg_reuse_holz_wand_umar_timber_facade__HAT_ZUSTANDSKLASSE__zk_neuwertig
+HAT_ZUSTANDSKLASSE,review_status,36,36,100.0,1,DROP,needs_source_url_review
+HAT_ZUSTANDSKLASSE,evidence_source_id,36,36,100.0,1,DROP,batch2_v2_followup_2026-05-20
+HAT_ZUSTANDSKLASSE,evidence_origin,36,36,100.0,1,DROP,topology_synthesized
+HAT_ZUSTANDSKLASSE,evidence_confidence,36,36,100.0,1,KEEP,unklar
+HAT_ZUSTANDSKLASSE,evidence_basis,36,36,100.0,1,DROP,legacy_migration
+HAT_ZUSTANDSKLASSE,evidence_excerpt,36,36,100.0,1,DROP,BELEGT
+HAT_ZUSTANDSKLASSE,derivation_note,36,36,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+HAT_ZUSTANDSKLASSE,source_resolution_status,36,36,100.0,1,DROP,needs_source_url_review
+HAT_ZUSTANDSKLASSE,source_status,36,36,100.0,1,DROP,missing
+HAT_ZUSTANDSKLASSE,source_status_reason,36,36,100.0,1,DROP,no_exact_url_binding_needs_review
+HAT_ZUSTANDSKLASSE,source_status_migration,36,36,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+INTO_RECEIVER,id,345,345,100.0,345,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__EINGEBAUT_IN__bw_verbiest_lagerh… | r_bg_reuse_keramik_boden_verbiest_charleroi__EINGEBAUT_IN__bw_verbiest_lagerhau… | r_bg_reuse_naturstein_wand_verbiest_charleroi__EINGEBAUT_IN__bw_verbiest_lagerh… | r_bg_reuse_stahl_mehrere_55gss_external_core__EINGEBAUT_IN__bw_55_great_suffolk…
+INTO_RECEIVER,review_status,345,345,100.0,1,DROP,needs_source_url_review
+INTO_RECEIVER,evidence_source_id,345,345,100.0,4,DROP,archive:Verbiest_Karreveld_Brussels.md (replicated from pre-split BG) | mig_4_1 | batch2_v2_import_2026-05-20 | batch2_v2_followup_2026-05-20
+INTO_RECEIVER,evidence_origin,345,345,100.0,1,DROP,topology_synthesized
+INTO_RECEIVER,evidence_confidence,345,345,100.0,1,KEEP,unklar
+INTO_RECEIVER,evidence_basis,345,345,100.0,1,DROP,controlled_vocab
+INTO_RECEIVER,derivation_note,345,345,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+INTO_RECEIVER,source_resolution_status,345,345,100.0,1,DROP,needs_source_url_review
+INTO_RECEIVER,source_status,345,345,100.0,1,DROP,missing
+INTO_RECEIVER,source_status_reason,345,345,100.0,1,DROP,no_exact_url_binding_needs_review
+INTO_RECEIVER,source_status_migration,345,345,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+INTO_RECEIVER,evidence_excerpt,345,9,2.6,1,DROP,BELEGT
+IST_UNTERVERFAHREN_VON,id,28,28,100.0,28,KEEP,r_pr_bohrkernpruefung_beton__IST_UNTERVERFAHREN_VON__pr_zerstoerende_pruefung | r_vt_bolzenverbindung__IST_UNTERVERFAHREN_VON__vt_reversible_fuegung | r_vt_demontierbarer_schwerlastanker__IST_UNTERVERFAHREN_VON__vt_reversible_fueg… | r_av_sandstrahlen__IST_UNTERVERFAHREN_VON__av_oberflaechenbehandlung
+IST_UNTERVERFAHREN_VON,review_status,28,28,100.0,1,DROP,needs_source_url_review
+IST_UNTERVERFAHREN_VON,evidence_source_id,28,28,100.0,10,DROP,Bohrkernprüfung is a destructive testing method | Bolzenverbindung is reversible (K.118 case) | Demountable heavy-duty anchor explicitly designed for disassembly (Plattenpalas… | Schema parent-child classification per P-19 plan
+IST_UNTERVERFAHREN_VON,evidence_origin,28,28,100.0,1,DROP,topology_synthesized
+IST_UNTERVERFAHREN_VON,evidence_confidence,28,28,100.0,1,KEEP,unklar
+IST_UNTERVERFAHREN_VON,evidence_basis,28,28,100.0,1,DROP,legacy_migration
+IST_UNTERVERFAHREN_VON,evidence_excerpt,28,28,100.0,2,DROP,BELEGT | INFER
+IST_UNTERVERFAHREN_VON,derivation_note,28,28,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+IST_UNTERVERFAHREN_VON,source_resolution_status,28,28,100.0,1,DROP,needs_source_url_review
+IST_UNTERVERFAHREN_VON,source_status,28,28,100.0,1,DROP,missing
+IST_UNTERVERFAHREN_VON,source_status_reason,28,28,100.0,1,DROP,no_exact_url_binding_needs_review
+IST_UNTERVERFAHREN_VON,source_status_migration,28,28,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+LIEGT_IN_LAND,id,633,538,85.0,538,KEEP,r_p_55_great_suffolk_street_london__LIEGT_IN_LAND__land_vereinigtes_koenigreich | r_stadt_groeditz__LIEGT_IN_LAND__land_deutschland | r_p_association_house_groeditz__LIEGT_IN_LAND__land_deutschland | r_stadt_plauen__LIEGT_IN_LAND__land_deutschland
+LIEGT_IN_LAND,review_status,633,538,85.0,2,DROP,needs_source_url_review | reviewed_legacy_profile_needs_url_fact_check
+LIEGT_IN_LAND,evidence_source_id,633,538,85.0,39,DROP,batch2_v2_phase27_2026-05-20 | mig_4_1 | batch2_v2_phase26_2026-05-20 | batch2_v2_import_2026-05-20
+LIEGT_IN_LAND,evidence_basis,633,538,85.0,3,DROP,legacy_migration | controlled_vocab | land_region_section
+LIEGT_IN_LAND,source_resolution_status,633,537,84.8,3,DROP,needs_source_url_review | evidence_source_id_not_resolved_to_visible_source_url | needs_exact_claim_source_review
+LIEGT_IN_LAND,evidence_origin,633,504,79.6,2,DROP,topology_synthesized | registry_derived
+LIEGT_IN_LAND,evidence_confidence,633,504,79.6,2,KEEP,unklar | teilweise_belegt
+LIEGT_IN_LAND,derivation_note,633,504,79.6,3,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: curated→registry_derived (Repair D A1–A5 excerpts are auto-generated fro…
+LIEGT_IN_LAND,source_status,633,504,79.6,2,DROP,missing | candidate
+LIEGT_IN_LAND,source_status_reason,633,504,79.6,2,DROP,no_exact_url_binding_needs_review | candidate_urls_need_fact_review
+LIEGT_IN_LAND,source_status_migration,633,504,79.6,1,DROP,mig_source_status_normalization_2026_05_28
+LIEGT_IN_LAND,source_scope,633,230,36.3,2,DROP,actor_registry | bauteilboerse_legacy_review
+LIEGT_IN_LAND,evidence_excerpt,633,229,36.2,198,DROP,INFER | BELEGT | Akteursregister (q_akteursliste_master_md): Akteur Bellastock [bellastock] ist … | Akteursregister (q_akteursliste_master_md): Akteur Werner Sobek [werner_sobek_p…
+LIEGT_IN_LAND,evidence_quality,633,229,36.2,2,DROP,internal_or_missing_source_url | unverified_source_claim
+LIEGT_IN_LAND,evidence_note,633,229,36.2,2,DROP,Global audit: evidence_source_id does not resolve to a Quelle node with visible… | Relationship came from reviewed archive profile/direct URL list but exact sourc…
+LIEGT_IN_LAND,strict_source_url_cleanup,633,196,31.0,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+LIEGT_IN_LAND,review_run,633,34,5.4,1,DROP,2026-05-28_bauteilboersen_integration
+LIEGT_IN_STADT,id,252,252,100.0,252,KEEP,r_p_55_great_suffolk_street_london__LIEGT_IN_STADT__stadt_london | r_bw_55_great_suffolk_street_warehouse__LIEGT_IN_STADT__stadt_london | r_bw_1_broadgate_london__LIEGT_IN_STADT__stadt_london | r_p_association_house_groeditz__LIEGT_IN_STADT__stadt_groeditz
+LIEGT_IN_STADT,review_status,252,252,100.0,1,DROP,needs_source_url_review
+LIEGT_IN_STADT,evidence_source_id,252,252,100.0,3,DROP,batch2_v2_phase27_2026-05-20 | mig_4_1 | batch2_v2_import_2026-05-20
+LIEGT_IN_STADT,evidence_origin,252,252,100.0,1,DROP,topology_synthesized
+LIEGT_IN_STADT,evidence_confidence,252,252,100.0,1,KEEP,unklar
+LIEGT_IN_STADT,evidence_basis,252,252,100.0,2,DROP,legacy_migration | controlled_vocab
+LIEGT_IN_STADT,derivation_note,252,252,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+LIEGT_IN_STADT,source_resolution_status,252,252,100.0,1,DROP,needs_source_url_review
+LIEGT_IN_STADT,source_status,252,252,100.0,1,DROP,missing
+LIEGT_IN_STADT,source_status_reason,252,252,100.0,1,DROP,no_exact_url_binding_needs_review
+LIEGT_IN_STADT,source_status_migration,252,252,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+LIEGT_IN_STADT,evidence_excerpt,252,15,6.0,1,DROP,BELEGT
+METHODENGRUNDLAGE_NORM,review_status,8,8,100.0,1,DROP,needs_source_url_review
+METHODENGRUNDLAGE_NORM,evidence_source_id,8,8,100.0,1,DROP,r2_b_journal_edge_restore
+METHODENGRUNDLAGE_NORM,evidence_origin,8,8,100.0,1,DROP,source_curated
+METHODENGRUNDLAGE_NORM,evidence_confidence,8,8,100.0,1,KEEP,unklar
+METHODENGRUNDLAGE_NORM,evidence_basis,8,8,100.0,1,DROP,controlled_vocab
+METHODENGRUNDLAGE_NORM,source_resolution_status,8,8,100.0,1,DROP,needs_source_url_review
+METHODENGRUNDLAGE_NORM,source_status,8,8,100.0,1,DROP,missing
+METHODENGRUNDLAGE_NORM,source_status_reason,8,8,100.0,1,DROP,no_exact_url_binding_needs_review
+METHODENGRUNDLAGE_NORM,source_status_migration,8,8,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+METHODENGRUNDLAGE_NORM,evidence_quality,8,8,100.0,1,DROP,source_binding_not_exact
+METHODENGRUNDLAGE_NORM,evidence_note,8,8,100.0,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+METHODENGRUNDLAGE_NORM,evidence_cleanup_run,8,8,100.0,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+METHODENGRUNDLAGE_NORM,previous_evidence_confidence,8,8,100.0,1,DROP,belegt
+METHODENGRUNDLAGE_NORM,evidence_confidence_status,8,8,100.0,1,DROP,downgraded_pending_exact_source_url_review
+NUTZT_BAUWERK,id,166,166,100.0,166,KEEP,r_p_55_great_suffolk_street_london__NUTZT_BAUWERK__bw_55_great_suffolk_street_w… | r_p_association_house_groeditz__NUTZT_BAUWERK__bw_association_house_groeditz | r_p_association_house_plauen__NUTZT_BAUWERK__bw_association_house_plauen | r_p_bedzed_london_hackbridge__NUTZT_BAUWERK__bw_bedzed_quarter_hackbridge
+NUTZT_BAUWERK,review_status,166,166,100.0,1,DROP,needs_source_url_review
+NUTZT_BAUWERK,evidence_source_id,166,166,100.0,2,DROP,mig_4_1 | batch2_v2_import_2026-05-20
+NUTZT_BAUWERK,evidence_origin,166,166,100.0,1,DROP,topology_synthesized
+NUTZT_BAUWERK,evidence_confidence,166,166,100.0,1,KEEP,unklar
+NUTZT_BAUWERK,evidence_basis,166,166,100.0,2,DROP,controlled_vocab | legacy_migration
+NUTZT_BAUWERK,derivation_note,166,166,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+NUTZT_BAUWERK,source_resolution_status,166,166,100.0,1,DROP,needs_source_url_review
+NUTZT_BAUWERK,source_status,166,166,100.0,1,DROP,missing
+NUTZT_BAUWERK,source_status_reason,166,166,100.0,1,DROP,no_exact_url_binding_needs_review
+NUTZT_BAUWERK,source_status_migration,166,166,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+NUTZT_BAUWERK,evidence_excerpt,166,1,0.6,1,DROP,BELEGT
+NUTZT_MATERIAL,evidence_confidence,560,530,94.6,2,KEEP,belegt | unklar
+NUTZT_MATERIAL,evidence_basis,560,508,90.7,3,DROP,legacy_migration | controlled_vocab | pass8_strict_import_2026_05_31
+NUTZT_MATERIAL,id,560,468,83.6,468,KEEP,r_bg_reuse_stahl_gelaender_verbiest_charleroi__NUTZT_MATERIAL__mat_stahl | r_bg_reuse_keramik_boden_verbiest_charleroi__NUTZT_MATERIAL__mat_keramik | r_bg_reuse_naturstein_wand_verbiest_charleroi__NUTZT_MATERIAL__mat_naturstein | r_bg_reuse_stahl_mehrere_55gss_external_core__NUTZT_MATERIAL__mat_stahl
+NUTZT_MATERIAL,review_status,560,468,83.6,1,DROP,needs_source_url_review
+NUTZT_MATERIAL,evidence_source_id,560,468,83.6,4,DROP,archive:Verbiest_Karreveld_Brussels.md (split-specific material) | mig_4_1 | archive:Peoples_Pavilion_Eindhoven.md ENTITÄTEN-MAPPING | batch2_v2_followup_2026-05-20
+NUTZT_MATERIAL,evidence_origin,560,468,83.6,1,DROP,topology_synthesized
+NUTZT_MATERIAL,derivation_note,560,468,83.6,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+NUTZT_MATERIAL,source_resolution_status,560,468,83.6,1,DROP,needs_source_url_review
+NUTZT_MATERIAL,source_status,560,468,83.6,1,DROP,missing
+NUTZT_MATERIAL,source_status_reason,560,468,83.6,1,DROP,no_exact_url_binding_needs_review
+NUTZT_MATERIAL,source_status_migration,560,468,83.6,1,DROP,mig_source_status_normalization_2026_05_28
+NUTZT_MATERIAL,review_run,560,62,11.1,2,DROP,schema_compatible_bauteilboersen_update_2026_06_01 | bauteilboersen_finalest_30_2026_05_31
+NUTZT_MATERIAL,evidence_excerpt,560,28,5.0,1,DROP,BELEGT
+NUTZT_MATERIAL,evidence_url,560,22,3.9,9,KEEP,https://www.la-ressourcerie.ch/les-mat%C3%A9riaux | https://materiuum.ch/ressourcerie-lausanne-magasin-shop/ | https://www.baumatpool.ch/de/ | https://bauteilboerse-basel.ch/
+NUTZT_MATERIAL,evidence_quote,560,22,3.9,9,KEEP,"Le magasin de la Ressourcerie dispose en permanence de matériaux de constructio… | La Ressourcerie Lausanne permet de stocker et de prolonger la durée de vie de m… | Die Schweizer Materialbörse – Baumaterialien und Restposten einfach finden, kau… | Die Bauteilbörse rettet Bauteile, bevor sie Abfall werden ... Das und mehr find…"
+NUTZT_SOFTWARE,id,50,50,100.0,50,KEEP,r_bg_reuse_stahl_mehrere_hof_1930s_beams_to_tbc__NUTZT_SOFTWARE__software_qflow | r_bg_reuse_stahl_mehrere_hof_1930s_beams_to_tbc__NUTZT_SOFTWARE__tool_qflow | r_bg_reuse_stahl_mehrere_hof_self_columns__NUTZT_SOFTWARE__software_qflow | r_bg_reuse_stahl_mehrere_hof_self_columns__NUTZT_SOFTWARE__tool_qflow
+NUTZT_SOFTWARE,review_status,50,50,100.0,1,DROP,needs_source_url_review
+NUTZT_SOFTWARE,evidence_source_id,50,50,100.0,2,DROP,mig_4_1 | batch2_v2_import_2026-05-20
+NUTZT_SOFTWARE,evidence_origin,50,50,100.0,1,DROP,topology_synthesized
+NUTZT_SOFTWARE,evidence_confidence,50,50,100.0,1,KEEP,unklar
+NUTZT_SOFTWARE,evidence_basis,50,50,100.0,2,DROP,controlled_vocab | legacy_migration
+NUTZT_SOFTWARE,derivation_note,50,50,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab) |  | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+NUTZT_SOFTWARE,source_resolution_status,50,50,100.0,1,DROP,needs_source_url_review
+NUTZT_SOFTWARE,source_status,50,50,100.0,1,DROP,missing
+NUTZT_SOFTWARE,source_status_reason,50,50,100.0,1,DROP,no_exact_url_binding_needs_review
+NUTZT_SOFTWARE,source_status_migration,50,50,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+NUTZT_SOFTWARE,evidence_excerpt,50,7,14.0,1,DROP,BELEGT
+REFERENZIERT_NORM,id,145,145,100.0,145,KEEP,r_p_55_great_suffolk_street_london__REFERENZIERT_NORM__norm_din_en_15804 | r_p_55_great_suffolk_street_london__REFERENZIERT_NORM__norm_din_en_15978 | r_p_55_great_suffolk_street_london__REFERENZIERT_NORM__norm_iso_14040 | r_p_55_great_suffolk_street_london__REFERENZIERT_NORM__norm_iso_14044
+REFERENZIERT_NORM,review_status,145,145,100.0,1,DROP,needs_source_url_review
+REFERENZIERT_NORM,evidence_source_id,145,145,100.0,5,DROP,mig_2_5 | mig_4_1 | q_circular_construction_reuse_graph_gaps_md | batch2_v2_import_2026-05-20
+REFERENZIERT_NORM,evidence_origin,145,145,100.0,2,DROP,topology_synthesized | inferred
+REFERENZIERT_NORM,evidence_confidence,145,145,100.0,2,KEEP,teilweise_belegt | unklar
+REFERENZIERT_NORM,evidence_basis,145,145,100.0,2,DROP,standards_body | research_file_row
+REFERENZIERT_NORM,derivation_note,145,145,100.0,4,DROP,former_basis=lca_module_demote | mittel->teilweise_belegt via mig_5_1_pretier (… |  | r1: derived=>topology_synthesized (catch-all: basis=standards_body) |  | r1: inferred+belegt was self-contradictory => downgraded to teilweise_belegt | former_basis=legacy_migration | r1: derived=>topology_synthesized (catch-all: b…
+REFERENZIERT_NORM,source_resolution_status,145,145,100.0,1,DROP,needs_source_url_review
+REFERENZIERT_NORM,source_status,145,145,100.0,2,DROP,missing | candidate
+REFERENZIERT_NORM,source_status_reason,145,145,100.0,2,DROP,no_exact_url_binding_needs_review | candidate_urls_need_fact_review
+REFERENZIERT_NORM,source_status_migration,145,145,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+REFERENZIERT_NORM,strict_source_url_cleanup,145,93,64.1,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+REFERENZIERT_NORM,evidence_excerpt,145,8,5.5,1,DROP,BELEGT
+RELEVANT_FOR,review_status,100,100,100.0,1,DROP,needs_source_url_review
+RELEVANT_FOR,evidence_source_id,100,100,100.0,1,DROP,r3_b_topology
+RELEVANT_FOR,evidence_origin,100,100,100.0,1,DROP,topology_synthesized
+RELEVANT_FOR,evidence_confidence,100,100,100.0,1,KEEP,teilweise_belegt
+RELEVANT_FOR,evidence_basis,100,100,100.0,1,DROP,country_material_match
+RELEVANT_FOR,derivation_note,100,100,100.0,19,DROP,Country x Material match. Country: land_vereinigtes_koenigreich. Material: mat_… | Country x Material match. Country: land_belgien. Material: mat_stahl. Rule: rr_… | Country x Material match. Country: land_deutschland. Material: mat_stahl. Rule:… | Country x Material match. Country: land_niederlande. Material: mat_stahl. Rule:…
+RELEVANT_FOR,source_resolution_status,100,100,100.0,1,DROP,needs_source_url_review
+RELEVANT_FOR,source_status,100,100,100.0,1,DROP,missing
+RELEVANT_FOR,source_status_reason,100,100,100.0,1,DROP,no_exact_url_binding_needs_review
+RELEVANT_FOR,source_status_migration,100,100,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+REQUIRES_VERIFICATION_FOR,id,339,339,100.0,339,KEEP,r_p_55_great_suffolk_street_london__REQUIRES_VERIFICATION_FOR__s_schwermetalle | r_p_55_great_suffolk_street_london__REQUIRES_VERIFICATION_FOR__s_bleifarbe | r_p_association_house_groeditz__REQUIRES_VERIFICATION_FOR__s_pcb | r_p_association_house_plauen__REQUIRES_VERIFICATION_FOR__s_pcb
+REQUIRES_VERIFICATION_FOR,review_status,339,339,100.0,1,DROP,needs_source_url_review
+REQUIRES_VERIFICATION_FOR,evidence_source_id,339,339,100.0,1,DROP,q_schadstoff_reuse_knowledge_graph_research_md
+REQUIRES_VERIFICATION_FOR,evidence_origin,339,339,100.0,1,DROP,inferred
+REQUIRES_VERIFICATION_FOR,evidence_confidence,339,339,100.0,1,KEEP,inferiert
+REQUIRES_VERIFICATION_FOR,evidence_basis,339,339,100.0,1,DROP,project_rollup
+REQUIRES_VERIFICATION_FOR,pollutant_basis,339,339,100.0,3,KEEP,material_only | documented | era_and_material
+REQUIRES_VERIFICATION_FOR,source_resolution_status,339,339,100.0,1,DROP,needs_source_url_review
+REQUIRES_VERIFICATION_FOR,source_status,339,339,100.0,1,DROP,missing
+REQUIRES_VERIFICATION_FOR,source_status_reason,339,339,100.0,1,DROP,no_exact_url_binding_needs_review
+REQUIRES_VERIFICATION_FOR,source_status_migration,339,339,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+REQUIRES_VERIFICATION_FOR,evidence_excerpt,339,4,1.2,4,DROP,Projekt Europa Building Brussels [p_europa_building_brussels] erfordert Verifik… | Projekt MedUni Campus Wien [p_meduni_campus_mariannengasse] erfordert Verifikat… | Projekt ELEMENTA Walkeweg [p_elementa_walkeweg] erfordert Verifikation gegen Sc… | Projekt ELEMENTA Walkeweg [p_elementa_walkeweg] erfordert Verifikation gegen Sc…
+REQUIRES_VERIFICATION_FOR,derivation_note,339,4,1.2,1,DROP,curated->inferred + belegt->inferiert via mig_repair_4_1 (project_rollup is inf…
+STUB_PROJECT_LINK,id,169,169,100.0,169,KEEP,r_bellastock__ASSOZIIERT_MIT_PROJEKT__p_resilience_lferme_des_possibles_stains | r_werner_sobek_p__ASSOZIIERT_MIT_PROJEKT__p_umar_unit | r_bauburo_in_situ__ASSOZIIERT_MIT_PROJEKT__p_elys_kultur_gewerbehaus_basel | r_bauburo_in_situ__ASSOZIIERT_MIT_PROJEKT__p_juch_areal_recyclingzentrum_zuerich
+STUB_PROJECT_LINK,review_status,169,169,100.0,1,DROP,needs_source_url_review
+STUB_PROJECT_LINK,source_scope,169,169,100.0,2,DROP,actor_registry | actor_registry_context
+STUB_PROJECT_LINK,needs_verification,169,169,100.0,1,DROP,True
+STUB_PROJECT_LINK,evidence_source_id,169,169,100.0,2,DROP,q_akteursliste_master_md | mig_4_1
+STUB_PROJECT_LINK,evidence_origin,169,169,100.0,2,DROP,topology_synthesized | registry_derived
+STUB_PROJECT_LINK,evidence_confidence,169,169,100.0,2,KEEP,teilweise_belegt | unklar
+STUB_PROJECT_LINK,evidence_basis,169,169,100.0,1,DROP,registry_stub
+STUB_PROJECT_LINK,derivation_note,169,169,100.0,3,DROP,unpacked dedup-merged array (Phase 1.6 actor merge artifact) by mig_repair_4_1_… |  | r1: curated→registry_derived (Repair D A1–A5 excerpts are auto-generated fro… |  | r1: derived=>registry_derived (registry_stub basis)
+STUB_PROJECT_LINK,source_resolution_status,169,169,100.0,1,DROP,needs_source_url_review
+STUB_PROJECT_LINK,source_status,169,169,100.0,2,DROP,candidate | missing
+STUB_PROJECT_LINK,source_status_reason,169,169,100.0,2,DROP,candidate_urls_need_fact_review | no_exact_url_binding_needs_review
+STUB_PROJECT_LINK,source_status_migration,169,169,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+STUB_PROJECT_LINK,evidence_excerpt,169,133,78.7,131,DROP,Curated edge unpacked from dedup-merged array (Phase 1.6 actor merge) by mig_re… | Akteursregister-Stub (q_akteursliste_master_md): Akteur Werner Sobek [werner_so… | Akteursregister-Stub (q_akteursliste_master_md): Akteur HFT Stuttgart [hft_stut… | Akteursregister-Stub (q_akteursliste_master_md): Akteur Zirkular [zirkular] ist…
+STUB_PROJECT_LINK,strict_source_url_cleanup,169,133,78.7,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+STUB_PROJECT_LINK,not_confirmed_project_participation,169,129,76.3,1,KEEP,True
+STUB_PROJECT_LINK,association_basis,169,53,31.4,4,KEEP,"actor-list source link; research/demonstrator/program association, not exact bu… | ReCreate programme/source link; not direct project-role proof | actor-list source link; project association needs project-file confirmation bef… | actor-list source link or context; upgrade only after project-file/external con…"
+STUB_PROJECT_LINK,individual_project_lead_uncertain,169,2,1.2,1,KEEP,True
+TEILT_LAYER,review_status,15,15,100.0,1,DROP,needs_source_url_review
+TEILT_LAYER,evidence_source_id,15,15,100.0,1,DROP,r2_a_layer_restore
+TEILT_LAYER,evidence_origin,15,15,100.0,1,DROP,topology_synthesized
+TEILT_LAYER,evidence_confidence,15,15,100.0,1,KEEP,unklar
+TEILT_LAYER,evidence_basis,15,15,100.0,1,DROP,controlled_vocab
+TEILT_LAYER,source_resolution_status,15,15,100.0,1,DROP,needs_source_url_review
+TEILT_LAYER,source_status,15,15,100.0,1,DROP,missing
+TEILT_LAYER,source_status_reason,15,15,100.0,1,DROP,no_exact_url_binding_needs_review
+TEILT_LAYER,source_status_migration,15,15,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+TEILT_LAYER,evidence_quality,15,15,100.0,1,DROP,source_binding_not_exact
+TEILT_LAYER,evidence_note,15,15,100.0,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+TEILT_LAYER,evidence_cleanup_run,15,15,100.0,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+TEILT_LAYER,previous_evidence_confidence,15,15,100.0,1,DROP,belegt
+TEILT_LAYER,evidence_confidence_status,15,15,100.0,1,DROP,downgraded_pending_exact_source_url_review
+TEIL_VON_KETTE,id,14,14,100.0,14,KEEP,r_bg_reuse_mehrere_mehrere_bestandsfundamente_und_erste_geschosse_blackfriars__… | r_bg_reuse_holz_mehrere_brettschichtholzbogen_recypark_demets__TEIL_VON_KETTE__… | r_bg_reuse_lehm_mehrere_btc_ziegel_mur_trombe_resilience__TEIL_VON_KETTE__k_reu… | r_bg_reuse_holz_fenster_doppeltverglaste_holzfenster_resilience__TEIL_VON_KETTE…
+TEIL_VON_KETTE,review_status,14,14,100.0,1,DROP,needs_source_url_review
+TEIL_VON_KETTE,evidence_source_id,14,14,100.0,1,DROP,mig_4_1
+TEIL_VON_KETTE,evidence_origin,14,14,100.0,1,DROP,topology_synthesized
+TEIL_VON_KETTE,evidence_confidence,14,14,100.0,1,KEEP,unklar
+TEIL_VON_KETTE,evidence_basis,14,14,100.0,1,DROP,controlled_vocab
+TEIL_VON_KETTE,derivation_note,14,14,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+TEIL_VON_KETTE,source_resolution_status,14,14,100.0,1,DROP,needs_source_url_review
+TEIL_VON_KETTE,source_status,14,14,100.0,1,DROP,missing
+TEIL_VON_KETTE,source_status_reason,14,14,100.0,1,DROP,no_exact_url_binding_needs_review
+TEIL_VON_KETTE,source_status_migration,14,14,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+TEIL_VON_PROGRAMM,id,35,35,100.0,35,KEEP,r_prog_be_circular__TEIL_VON_PROGRAMM__prog_prec | r_p_jugendtreff_ingersheim__TEIL_VON_PROGRAMM__prog_stuttgart_210 | r_prog_fcrbe__TEIL_VON_PROGRAMM__prog_interreg_nwe | r_p_berlin_schildow_pilot_house__TEIL_VON_PROGRAMM__prog_pilotprojekt
+TEIL_VON_PROGRAMM,review_status,35,35,100.0,1,DROP,needs_source_url_review
+TEIL_VON_PROGRAMM,evidence_source_id,35,35,100.0,2,DROP,batch2_v2_import_2026-05-20 | mig_4_1
+TEIL_VON_PROGRAMM,evidence_origin,35,35,100.0,1,DROP,topology_synthesized
+TEIL_VON_PROGRAMM,evidence_confidence,35,35,100.0,1,KEEP,unklar
+TEIL_VON_PROGRAMM,evidence_basis,35,35,100.0,2,DROP,legacy_migration | controlled_vocab
+TEIL_VON_PROGRAMM,derivation_note,35,35,100.0,2,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+TEIL_VON_PROGRAMM,source_resolution_status,35,35,100.0,1,DROP,needs_source_url_review
+TEIL_VON_PROGRAMM,source_status,35,35,100.0,1,DROP,missing
+TEIL_VON_PROGRAMM,source_status_reason,35,35,100.0,1,DROP,no_exact_url_binding_needs_review
+TEIL_VON_PROGRAMM,source_status_migration,35,35,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+TEIL_VON_PROGRAMM,evidence_excerpt,35,1,2.9,1,DROP,BELEGT
+TYPISCH_BEI_BAUTEILTYP,id,10,10,100.0,10,KEEP,r_s_asbest__TYPISCH_BEI_BAUTEILTYP__bt_dach | r_s_asbest__TYPISCH_BEI_BAUTEILTYP__bt_daemmung | r_s_bleifarbe__TYPISCH_BEI_BAUTEILTYP__bt_fenster | r_s_bleifarbe__TYPISCH_BEI_BAUTEILTYP__bt_traeger
+TYPISCH_BEI_BAUTEILTYP,review_status,10,10,100.0,1,DROP,needs_source_url_review
+TYPISCH_BEI_BAUTEILTYP,evidence_source_id,10,10,100.0,10,DROP,"Asbestos roofing tiles and gutters | Sprayed asbestos insulation, pipe lagging | Painted timber/metal window frames | Painted structural steel beams"
+TYPISCH_BEI_BAUTEILTYP,evidence_origin,10,10,100.0,1,DROP,topology_synthesized
+TYPISCH_BEI_BAUTEILTYP,evidence_confidence,10,10,100.0,1,KEEP,unklar
+TYPISCH_BEI_BAUTEILTYP,evidence_basis,10,10,100.0,1,DROP,legacy_migration
+TYPISCH_BEI_BAUTEILTYP,evidence_excerpt,10,10,100.0,1,DROP,INFER
+TYPISCH_BEI_BAUTEILTYP,derivation_note,10,10,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+TYPISCH_BEI_BAUTEILTYP,source_resolution_status,10,10,100.0,1,DROP,needs_source_url_review
+TYPISCH_BEI_BAUTEILTYP,source_status,10,10,100.0,1,DROP,missing
+TYPISCH_BEI_BAUTEILTYP,source_status_reason,10,10,100.0,1,DROP,no_exact_url_binding_needs_review
+TYPISCH_BEI_BAUTEILTYP,source_status_migration,10,10,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+TYPISCH_BEI_ERA,id,15,15,100.0,15,KEEP,r_s_kmf__TYPISCH_BEI_ERA__era_1970_1990 | r_s_kmf__TYPISCH_BEI_ERA__era_1990_2000 | r_s_formaldehyd__TYPISCH_BEI_ERA__era_nachkrieg_1945_1970 | r_s_asbest__TYPISCH_BEI_ERA__era_1900_1945
+TYPISCH_BEI_ERA,review_status,15,15,100.0,1,DROP,needs_source_url_review
+TYPISCH_BEI_ERA,evidence_source_id,15,15,100.0,15,DROP,Pre-1996 biopersistent mineral wool | Pre-ban old mineral wool persists | Early urea-formaldehyde MDF/chipboard | Early asbestos cement products
+TYPISCH_BEI_ERA,evidence_origin,15,15,100.0,1,DROP,topology_synthesized
+TYPISCH_BEI_ERA,evidence_confidence,15,15,100.0,1,KEEP,unklar
+TYPISCH_BEI_ERA,evidence_basis,15,15,100.0,1,DROP,legacy_migration
+TYPISCH_BEI_ERA,evidence_excerpt,15,15,100.0,1,DROP,INFER
+TYPISCH_BEI_ERA,derivation_note,15,15,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+TYPISCH_BEI_ERA,source_resolution_status,15,15,100.0,1,DROP,needs_source_url_review
+TYPISCH_BEI_ERA,source_status,15,15,100.0,1,DROP,missing
+TYPISCH_BEI_ERA,source_status_reason,15,15,100.0,1,DROP,no_exact_url_binding_needs_review
+TYPISCH_BEI_ERA,source_status_migration,15,15,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+TYPISCH_BEI_MATERIAL,id,91,91,100.0,91,KEEP,r_s_kmf__TYPISCH_BEI_MATERIAL__mat_daemmstoff | r_s_formaldehyd__TYPISCH_BEI_MATERIAL__mat_holz | r_s_formaldehyd__TYPISCH_BEI_MATERIAL__mat_mdf | r_s_schwermetalle__TYPISCH_BEI_MATERIAL__mat_aluminium
+TYPISCH_BEI_MATERIAL,review_status,91,91,100.0,1,DROP,needs_source_url_review
+TYPISCH_BEI_MATERIAL,evidence_source_id,91,91,100.0,90,DROP,DE TRGS 521: pre-1996 mineral wool potentially biopersistent | UBA: urea-formaldehyde-bonded engineered timber | UBA: formaldehyde in MDF / chipboard / OSB before emission tightening | FCRBE: chromate conversion coatings on aluminium
+TYPISCH_BEI_MATERIAL,evidence_origin,91,91,100.0,1,DROP,topology_synthesized
+TYPISCH_BEI_MATERIAL,evidence_confidence,91,91,100.0,1,KEEP,unklar
+TYPISCH_BEI_MATERIAL,evidence_basis,91,91,100.0,1,DROP,legacy_migration
+TYPISCH_BEI_MATERIAL,evidence_excerpt,91,91,100.0,1,DROP,INFER
+TYPISCH_BEI_MATERIAL,derivation_note,91,91,100.0,1,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration)
+TYPISCH_BEI_MATERIAL,source_resolution_status,91,91,100.0,1,DROP,needs_source_url_review
+TYPISCH_BEI_MATERIAL,source_status,91,91,100.0,1,DROP,missing
+TYPISCH_BEI_MATERIAL,source_status_reason,91,91,100.0,1,DROP,no_exact_url_binding_needs_review
+TYPISCH_BEI_MATERIAL,source_status_migration,91,91,100.0,1,DROP,mig_source_status_normalization_2026_05_28
+VERBUNDEN_MIT_AKTEUR,id,302,298,98.7,298,KEEP,r_gardiner_and_theobald__VERBUNDEN_MIT_AKTEUR__cantillon | r_gardiner_and_theobald__VERBUNDEN_MIT_AKTEUR__cleveland_steel_tubes | r_gardiner_and_theobald__VERBUNDEN_MIT_AKTEUR__akt_ii | r_cantillon__VERBUNDEN_MIT_AKTEUR__cleveland_steel_tubes
+VERBUNDEN_MIT_AKTEUR,review_status,302,298,98.7,1,DROP,needs_source_url_review
+VERBUNDEN_MIT_AKTEUR,evidence_source_id,302,298,98.7,3,DROP,batch2_v2_phase24_2026-05-20 | q_akteursliste_master_md | mig_4_1
+VERBUNDEN_MIT_AKTEUR,evidence_origin,302,298,98.7,2,DROP,topology_synthesized | registry_derived
+VERBUNDEN_MIT_AKTEUR,evidence_confidence,302,298,98.7,2,KEEP,unklar | teilweise_belegt
+VERBUNDEN_MIT_AKTEUR,evidence_basis,302,298,98.7,2,DROP,legacy_migration | controlled_vocab
+VERBUNDEN_MIT_AKTEUR,derivation_note,302,298,98.7,4,DROP, | r1: derived=>topology_synthesized (catch-all: basis=legacy_migration) | unpacked dedup-merged array (Phase 1.6 actor merge artifact) by mig_repair_4_1_… |  | r1: curated→registry_derived (Repair D A1–A5 excerpts are auto-generated fro… |  | r1: derived=>topology_synthesized (catch-all: basis=controlled_vocab)
+VERBUNDEN_MIT_AKTEUR,source_resolution_status,302,298,98.7,1,DROP,needs_source_url_review
+VERBUNDEN_MIT_AKTEUR,source_status,302,298,98.7,2,DROP,missing | candidate
+VERBUNDEN_MIT_AKTEUR,source_status_reason,302,298,98.7,2,DROP,no_exact_url_binding_needs_review | candidate_urls_need_fact_review
+VERBUNDEN_MIT_AKTEUR,source_status_migration,302,298,98.7,1,DROP,mig_source_status_normalization_2026_05_28
+VERBUNDEN_MIT_AKTEUR,evidence_excerpt,302,279,92.4,246,DROP,INFER | Curated edge unpacked from dedup-merged array (Phase 1.6 actor merge) by mig_re… | Akteursregister (q_akteursliste_master_md): Akteur Werner Sobek [werner_sobek_p… | Akteursregister (q_akteursliste_master_md): Akteur HTWG Konstanz [htwg_konstanz…
+VERBUNDEN_MIT_AKTEUR,source_scope,302,269,89.1,1,DROP,actor_registry
+VERBUNDEN_MIT_AKTEUR,needs_verification,302,269,89.1,2,DROP,True | False
+VERBUNDEN_MIT_AKTEUR,strict_source_url_cleanup,302,250,82.8,1,DROP,mig_strict_source_url_binding_cleanup_2026_05_23
+VERBUNDEN_MIT_AKTEUR,connection_kind,302,59,19.5,1,KEEP,context_affiliation_from_actor_list
+VERBUNDEN_MIT_AKTEUR,inference_basis,302,29,9.6,2,KEEP,shared 2 project(s) | shared 3 project(s)
+VERBUNDEN_MIT_AKTEUR,cleanup_bauteilboersen_bidirectional_dedup_run,302,27,8.9,1,DROP,2026-05-28_bauteilboersen_cleanup
+VERBUNDEN_MIT_AKTEUR,cleanup_bauteilboersen_removed_inverse_rel_ids,302,27,8.9,27,DROP,['5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304514435'] | ['5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199710'] | ['5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199746'] | ['5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304514522']
+VERBUNDEN_MIT_AKTEUR,cleanup_bauteilboersen_inverse_ledger,302,27,8.9,1,DROP,E:/recherche/_neo4j/intake/runs/2026-05-28_bauteilboersen_cleanup/removed_inver…
+VERBUNDEN_MIT_AKTEUR,evidence_quality,302,6,2.0,1,DROP,source_binding_not_exact
+VERBUNDEN_MIT_AKTEUR,evidence_note,302,6,2.0,1,DROP,Former evidence_confidence=belegt was downgraded because source_status is not e…
+VERBUNDEN_MIT_AKTEUR,evidence_cleanup_run,302,6,2.0,1,DROP,2026-05-28_belegt_confidence_conflict_cleanup
+VERBUNDEN_MIT_AKTEUR,previous_evidence_confidence,302,6,2.0,1,DROP,belegt
+VERBUNDEN_MIT_AKTEUR,evidence_confidence_status,302,6,2.0,1,DROP,downgraded_pending_exact_source_url_review

@@ -1,0 +1,90 @@
+{
+  "anchor_id": "cycle_up",
+  "sources_visited": [
+    {
+      "url": "https://www.cycle-up.fr/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.climate-chance.org/en/best-pratices/cycle-up/",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.innovation-transformations.ecologie.gouv.fr/actualites/visite-apprenante-de-cycle-up-acteur-de-leconomie-circulaire-du-batiment",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://opalis.eu/fr/fournisseurs/cycle",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://www.cycle-up.fr/"
+      ],
+      "evidence_quote": "Circular-building platform scope is broad; component categories are project/listing dependent.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.cycle-up.fr/"
+      ],
+      "evidence_quote": "Cycle Up is associated with diagnostic/resource and reuse support workflows in construction.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "diagnose",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.climate-chance.org/en/best-pratices/cycle-up/"
+      ],
+      "evidence_quote": "Secondary climate-practice source supports circular building audit/diagnosis role.",
+      "confidence": "unsicher",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "audit",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_b2b_marketplace",
+      "evidence_urls": [
+        "https://www.cycle-up.fr/"
+      ],
+      "evidence_quote": "B2B circular construction marketplace/platform.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Cycle Up",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.cycle-up.fr/",
+      "https://www.climate-chance.org/en/best-pratices/cycle-up/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Closed-set materials",
+      "reason": "No stable accessible category list for material assertions."
+    }
+  ],
+  "run_notes": []
+}

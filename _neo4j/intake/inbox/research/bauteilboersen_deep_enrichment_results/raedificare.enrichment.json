@@ -1,0 +1,100 @@
+{
+  "anchor_id": "raedificare",
+  "sources_visited": [
+    {
+      "url": "https://raedificare.com/marketplace/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://raedificare.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.climate-chance.org/bonne-pratique/plateforme-raedificare/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace connects deconstructed buildings to future projects; materials are described precisely with visual evidence, but categories are not exposed in the accessible copy.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace says it is compatible with the regulatory diagnostic application and synchronizes with diagnostic PEMD + Ressource.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "diagnose",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://raedificare.com/"
+      ],
+      "evidence_quote": "Diagnostic resource establishes a targeted inventory of reusable materials with photos, quantities, dimensions, location and availability.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace states automatic calculation of avoided carbon impact for each material put online.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "co2",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_b2b_marketplace",
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Professional marketplace for reuse materials with free catalogue navigation.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "RAEDIFICARE",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://raedificare.com/marketplace/",
+      "https://raedificare.com/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Accessible page proves diagnostic/marketplace workflow, not exact closed-set categories."
+    },
+    {
+      "topic": "PN IDs",
+      "reason": "Resolve PEMD/resource diagnostic and carbon/CO2 nodes."
+    }
+  ],
+  "run_notes": []
+}

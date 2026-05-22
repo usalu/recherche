@@ -1,161 +1,168 @@
 # How to find where a fact in `mit-bestand` came from
 
-> One page. Five queries. That's all you need.
-> Authoritative guide for source traceability after the Quelle remediation (2026-05-21). See [QUELLE_REMEDIATION_PLAN.md](QUELLE_REMEDIATION_PLAN.md) for design rationale.
-
----
+Authoritative guide after the 2026-05-23 source trace migration and the
+2026-05-28 source-status normalization.
 
 ## 30-second mental model
 
+The old source hop is gone:
+
+```cypher
+MATCH ()-[r:ZITIERT_QUELLE]->()
+RETURN count(r);  // 0
 ```
-Any fact node ─[:BELEGT_IN]→ :Dossier ─[:ZITIERT_QUELLE]→ :ExternalLink {url}
+
+Fact/claim relationships now carry a small source state directly:
+
+```text
+source_status = exact | candidate | missing | derived
 ```
 
-- **`:Dossier`** — an internal markdown file describing one project (`q_holbein_gardens_london_md`, `q_stuttgart_210_md`, …). 100 of them.
-- **`:ExternalLink`** — a clickable URL (`https://www.baunetzwissen.de/…`). ~1,000–2,000 of them after Q1.
-- **`:BELEGT_IN`** — "this fact is documented in that dossier". Carries `evidence_excerpt` (the cell text).
-- **`:ZITIERT_QUELLE`** — "this dossier cites that URL". Carries `locator` (`S1`, `S7`, `P1`, `bare`).
+Use `source_url` as fact proof only when `source_status = 'exact'` and the relationship is tied to a concrete URL endpoint or a single resolved source. Broad document-level URL sets are not evidence for a specific fact. They live in `candidate_source_urls` with `source_status = 'candidate'` and require review before promotion. Lineage/audit/bookkeeping relationships such as `CITED_FROM_DOSSIER`, `CONCERNS`, `ANCHORED_BY`, or `HAS_SOURCE_LINK` may carry URLs as context or inventory, but they must not carry `source_status`. Malformed/truncated URL strings are not exposed as trusted or candidate URLs; they are kept only in `invalid_source_url` / `invalid_candidate_source_urls` for cleanup.
 
-If you want the URLs immediately without writing a query: every `:Projekt`, `:Bauwerk`, `:Akteur` has a denormalised `source_urls` array. Click the node in Browser, see the list.
+`:ExternalLink`, `:SectionRef`, and `:UrlMetadata` nodes may still exist as URL metadata, but normal source lookup must not depend on a `:ZITIERT_QUELLE` traversal.
 
----
-
-## Query 1 — "Just give me the URLs for this thing" (the 90 % query)
+## Query 1 - just give me the URLs for this thing
 
 ```cypher
 MATCH (n {id: 'p_holbein_gardens_london'})
-RETURN n.source_urls AS urls, n.source_count AS n;
+RETURN n.primary_source_url AS primary,
+       n.source_urls AS source_url_inventory,
+       n.source_count AS inventory_n,
+       n.candidate_source_urls AS candidate_urls,
+       n.candidate_source_count AS candidate_n;
 ```
 
-Works on `:Projekt`, `:Bauwerk`, `:Akteur`. Instant. No traversal.
+This is the fast browser/card query. Node-level URLs are inventory/visibility, not proof for every fact attached to the node.
 
----
-
-## Query 2 — "Where does this fact come from, with full context?"
+## Query 2 - show relationship-level source context
 
 ```cypher
-MATCH (n {id: 'p_holbein_gardens_london'})
-OPTIONAL MATCH (n)-[bel:BELEGT_IN]->(d:Dossier)-[z:ZITIERT_QUELLE]->(ext:ExternalLink)
-RETURN ext.url       AS url,
-       ext.title     AS title,
-       d.id          AS dossier,
-       z.locator     AS sref,
-       bel.evidence_excerpt AS excerpt
-ORDER BY dossier, sref;
+MATCH (n {id: 'p_holbein_gardens_london'})-[r]-(other)
+WHERE r.source_status = 'exact'
+  AND r.source_url IS NOT NULL
+  AND coalesce(r.source_role, 'fact') = 'fact'
+RETURN DISTINCT r.source_url AS url,
+       type(r) AS rel_type,
+       other.id AS context_id,
+       labels(other) AS context_labels,
+       r.source_status AS source_status,
+       r.locator AS locator,
+       r.evidence_source_id AS evidence_source_id,
+       r.evidence_excerpt AS excerpt,
+       r.source_resolution_status AS source_resolution_status
+ORDER BY rel_type, context_id, url;
 ```
 
-Returns one row per (dossier, URL) pair with the dossier reference label (`S1` …) and the verbatim excerpt that grounded the claim.
+This is the replacement for the old `BELEGT_IN -> Dossier -> ZITIERT_QUELLE -> ExternalLink` query.
 
----
-
-## Query 3 — "Which dossiers cite this URL?"
+## Query 3 - which facts cite this URL directly?
 
 ```cypher
-MATCH (ext:ExternalLink {url: 'https://www.baunetzwissen.de/...'})
-<-[:ZITIERT_QUELLE]-(d:Dossier)
-RETURN d.id AS dossier;
+MATCH (a)-[r]-(b)
+WHERE r.source_status = 'exact'
+  AND r.source_url = 'https://www.baunetzwissen.de/...'
+  AND coalesce(r.source_role, 'fact') = 'fact'
+RETURN type(r) AS rel_type,
+       labels(a) AS a_labels,
+       a.id AS a_id,
+       labels(b) AS b_labels,
+       b.id AS b_id,
+       r.locator AS locator
+ORDER BY rel_type, a_id, b_id;
 ```
 
-Use to find every project whose dossier mentions a specific URL.
+Use this to find facts, not just source documents, attached to a trusted URL.
 
----
-
-## Query 4 — "Which projects share this source?"
+## Query 4 - which nodes share this source?
 
 ```cypher
-MATCH (ext:ExternalLink {url: 'https://standards.iteh.ai/...'})
-<-[:ZITIERT_QUELLE]-(:Dossier)<-[:BELEGT_IN]-(p:Projekt)
-RETURN p.id AS projekt, p.name AS name
-ORDER BY p.id;
+MATCH (n)
+WHERE 'https://standards.iteh.ai/...' IN coalesce(n.source_urls, [])
+   OR n.source_url = 'https://standards.iteh.ai/...'
+RETURN labels(n) AS labels, n.id AS id, n.name AS name
+ORDER BY labels, id;
 ```
 
-Reveals projects citing the same standard / paper / report.
-
----
-
-## Query 5 — "Give me one row per project with all sources packed in"
+## Query 5 - unresolved source review queue
 
 ```cypher
-MATCH (p:Projekt {id: 'p_stuttgart_210'})
-OPTIONAL MATCH (p)-[:BELEGT_IN]->(d:Dossier)
-RETURN p.name AS project,
-       p.source_urls AS urls,
-       p.source_count AS n_sources,
-       collect(DISTINCT d.id) AS dossiers;
+MATCH (a)-[r]->(b)
+WHERE r.source_status IN ['candidate', 'missing']
+RETURN type(r) AS rel_type,
+       a.id AS start_id,
+       b.id AS end_id,
+       r.source_status AS source_status,
+       r.evidence_source_id AS evidence_source_id,
+       r.evidence_origin AS evidence_origin,
+       r.evidence_basis AS evidence_basis
+ORDER BY rel_type, start_id, end_id
+LIMIT 200;
 ```
 
-Quick one-liner for a CSV export or a UI card.
+These rows are honest residuals: the graph has provenance text or a legacy run id, but no concrete URL can be assigned automatically without source review.
 
----
+Candidate URL sets are visible separately:
 
-## What's where (so you stop guessing)
+```cypher
+MATCH (a)-[r]->(b)
+WHERE r.candidate_source_urls IS NOT NULL
+RETURN type(r) AS rel_type,
+       a.id AS start_id,
+       b.id AS end_id,
+       r.evidence_source_id AS evidence_source_id,
+       r.candidate_source_urls AS candidate_urls
+LIMIT 50;
+```
 
-| If you want… | Look at… |
+## What's where
+
+| If you want | Look at |
 |---|---|
-| The clickable URLs for a project | `Projekt.source_urls` (array) — Query 1 |
-| The dossier that mentions a project | `:Dossier`-labelled `:Quelle` reachable via `:BELEGT_IN` |
-| The verbatim cell text behind a fact | `BELEGT_IN.evidence_excerpt` on the edge |
-| The S-ref label (`S1`, `S7`) for a URL | `ZITIERT_QUELLE.locator` on the edge |
-| The dossier file on disk | `<dossier.id>.md` under `_neo4j/intake/archive/` or `_archive/research/` |
-| The trust grade of a citation | `BELEGT_IN.evidence_origin` ∈ `{source_curated, topology_synthesized, registry_derived, inferred, external_unfolded}` |
-
----
+| Node URL inventory / clickable visibility | `n.source_urls`, `n.primary_source_url` |
+| Candidate URLs needing review | `n.candidate_source_urls`, `r.candidate_source_urls` |
+| Invalid/truncated URL strings | `invalid_source_url`, `invalid_candidate_source_urls` |
+| URL for a specific relationship | `r.source_url` |
+| Minimal source state for a fact relationship | `r.source_status` |
+| Context/inventory, not fact proof | `r.source_role = 'lineage_only'`, `audit_only`, `ontology_anchor`, or `source_inventory` |
+| Row locator / section locator | `r.locator` |
+| Original source id | `r.evidence_source_id` |
+| Evidence text | `r.evidence_excerpt` |
+| URL reachability/cache metadata | matching `:ExternalLink` / `:UrlMetadata` node by `.url` |
+| Unresolved URL provenance | `r.source_resolution_status = 'needs_source_url_review'` and related `:DataIssue` |
 
 ## Helper script
 
 ```bash
 python _scripts/find_sources.py p_holbein_gardens_london
-```
-
-Prints the project's source URLs to stdout. Wraps Query 2.
-
-Add `--full` to also dump the excerpts:
-
-```bash
 python _scripts/find_sources.py p_holbein_gardens_london --full
 ```
 
----
+`--full` now separates exact fact sources, candidate review leads, and node URL inventory. It does not use `:ZITIERT_QUELLE`.
 
-## What does NOT exist anymore
+## Current migration artefacts
 
-- `:Quelle.text_content` — the full dossier markdown is no longer dumped on the node. Read the `.md` file from disk if you need full text.
-- `quelltyp='case_markdown'` filter — still works for back-compat, but prefer `MATCH (d:Dossier)`.
-- "Where is the URL?" — it's on `:ExternalLink.url`. Always. No exceptions.
+- Run report: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/reports/zitiert_quelle_trace_report.md`
+- Strict binding cleanup: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/reports/strict_source_url_binding_cleanup.json`
+- Invalid URL cleanup: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/reports/strict_invalid_url_cleanup.json`
+- Node URL array cleanup: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/reports/strict_node_url_array_cleanup.json`
+- Candidate URL cleanup: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/reports/strict_candidate_url_array_cleanup.json`
+- Legacy edge ledger: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/logs/zitiert_quelle_resolution_ledger.jsonl`
+- Information edge ledger: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/logs/information_source_url_ledger.jsonl`
+- Review queue: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/logs/source_url_unresolved_review.jsonl`
+- Candidate URL review queue: `_neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/logs/strict_candidate_source_url_review.jsonl`
+- Backup: `_neo4j/review/backups/2026-05-23_pre_trace_zitiert_quelle_to_urls`
+- Source-status normalization: `_neo4j/intake/runs/2026-05-28_source_status_normalization/reports/source_status_normalization_report.md`
+- Source-status correction: `_neo4j/intake/runs/2026-05-28_source_status_correction/reports/source_status_correction_report.md`
+- Source-status scope addendum: `_neo4j/intake/runs/2026-05-28_source_status_correction/reports/source_status_scope_addendum_report.md`
+- Backup before source-status normalization: `_neo4j/review/backups/2026-05-28_pre_source_status_normalization`
 
----
+## What does not exist anymore
 
-## Edge cases
+- `:ZITIERT_QUELLE` relationships in the live graph.
+- `:Quelle.text_content` on dossiers.
+- Source lookup that requires archived markdown as a canonical path.
 
-| Situation | Behaviour |
-|---|---|
-| A project with `source_count = 0` | The dossier exists but cited no URLs (rare; flagged as `:DataIssue {kind:'dossier_section8_missing'}` by R8 audit). |
-| A URL appears in two dossiers | One `:ExternalLink` node, two incoming `:ZITIERT_QUELLE` edges. `ext.also_in_dossier` lists all citers. |
-| A URL has tracking params (utm, fbclid, …) | Normalised away before MERGE. So `https://x.com/y?utm_source=a` and `https://x.com/y` are one node. |
-| A URL appears as both `[label](url)` and bare in same dossier | Single edge, label-version wins (Q1 dedupes per dossier). |
-| The dossier `.md` file is missing from disk | The `:Dossier` node still exists but `text_content_chars_pre_strip` may be 0; URLs would be missing. Flag via R8. |
+## When to refresh visibility
 
----
-
-## When to update the denormalised `source_urls`
-
-`Projekt.source_urls` / `Bauwerk.source_urls` / `Akteur.source_urls` are denormalised for visibility. The graph traversal is source of truth.
-
-**Re-run `mig_q4_surface_urls.cypher`** after any of:
-- New dossier ingested
-- A `:ZITIERT_QUELLE` edge added or removed
-- A new `:Projekt`, `:Bauwerk`, or `:Akteur` introduced
-
-The migration is idempotent. Safe to re-run anytime.
-
----
-
-## How this evolved (one paragraph)
-
-The pre-2026-05-21 `:Quelle` model used a `.quelltyp` property to discriminate 5+ kinds of source nodes; users had to remember to filter. The review-based remediation's R7.d added `Quelle.text_content` dumping full dossier markdown onto nodes — a mistake, since the disk file was already authoritative. The 2026-05-21 Quelle remediation (Q1–Q5): extracted every URL from `text_content` into `:Quelle :ExternalLink` nodes (Q1), promoted the discriminator to secondary labels `:Dossier` / `:ExternalLink` / `:ResearchDocument` / `:SectionRef` (Q2), stripped the markdown bloat (Q3), denormalised `source_urls` arrays onto `:Projekt`, `:Bauwerk`, `:Akteur` (Q4), and wrote this guide (Q5).
-
-The historic `quelltyp` property is preserved for back-compat but new queries should use the secondary labels.
-
----
-
-**End of QUELLE_QUERY_GUIDE.md.**
+After future imports, write `source_status = 'exact'` and `source_url` only when the fact-to-URL binding is exact. If the importer only knows the source document's URL list, write `source_status = 'candidate'`, `candidate_source_urls`, and `source_resolution_status = 'needs_source_url_review'`. For lineage/audit/bookkeeping/source-inventory relationships, keep URLs as context and set `source_role` instead of `source_status`. Do not recreate `:ZITIERT_QUELLE`.

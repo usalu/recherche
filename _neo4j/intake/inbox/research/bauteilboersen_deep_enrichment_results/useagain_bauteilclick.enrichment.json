@@ -1,0 +1,151 @@
+{
+  "anchor_id": "useagain_bauteilclick",
+  "sources_visited": [
+    {
+      "url": "https://www.useagain.ch/de/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.useagain.ch/de/kaufen",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://library-of-reuse.ch/pioneers/useagain",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.bauwende.tools/en/werkzeuge/use-again",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://library-of-reuse.ch/pioneers/useagain"
+      ],
+      "evidence_quote": "Library of Reuse says materials range from ovens to doors and windows to steel beams.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Holzbeläge and timber-like components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Keramikbeläge.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Fenster / Innenfenster; glass material likely but needs item confirmation.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Türen & Tore, Aussentüren and Innentüren.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Fenster, Dachfenster, Wandfenster, Innenfenster.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://library-of-reuse.ch/pioneers/useagain"
+      ],
+      "evidence_quote": "Secondary source explicitly mentions steel beams.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes kitchen, sanitary/fixtures and apparatus/device families.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Ausbau, An-/Einbauten, Möbel & Einrichtungen.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fassade",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Gebäudehülle & Konstruktion and window/skin components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ],
+      "evidence_quote": "Category list includes Boden- & Wandbeläge, Holzbeläge, Keramikbeläge, Steinbeläge.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "useagain / Bauteilclick",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.useagain.ch/de/",
+      "https://www.useagain.ch/de/kaufen"
+    ]
+  },
+  "new_vocab_candidates": [
+    {
+      "intended_label": "Norm",
+      "intended_id_proposal": "norm_ebkp_h_sn_506_511",
+      "rationale": "useagain categories are explicitly eBKP-H; may deserve Norm linkage if node exists.",
+      "evidence_urls": [
+        "https://www.useagain.ch/de/"
+      ]
+    }
+  ],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Norm node",
+      "reason": "Only add eBKP-H / SN 506 511 if existing Norm node is found."
+    },
+    {
+      "topic": "Pruefung",
+      "reason": "No proof/QA evidence located."
+    }
+  ],
+  "run_notes": []
+}

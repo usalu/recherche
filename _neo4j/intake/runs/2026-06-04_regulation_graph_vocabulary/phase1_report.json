@@ -1,0 +1,95 @@
+{
+  "acceptance": {
+    "duplicate_source_url_arrays": 0,
+    "evidence_confidence_edges": 0,
+    "expected_min_source_url_nodes": 315,
+    "passed": true,
+    "source_label_counts": {
+      "Dossier": 0,
+      "ExternalLink": 0,
+      "OntologyAnchor": 0,
+      "Quelle": 0,
+      "ResearchDocument": 0,
+      "SectionRef": 0
+    },
+    "source_relationship_counts": {
+      "ANCHORED_BY": 0,
+      "BELEGT_IN": 0,
+      "HAS_SOURCE_LINK": 0
+    },
+    "source_url_nodes": 315,
+    "url_less_citations_not_counted_as_real_evidence": 2069
+  },
+  "after": {
+    "evidence_confidence_edges": 0,
+    "label_counts": {
+      "Dossier": 0,
+      "ExternalLink": 0,
+      "OntologyAnchor": 0,
+      "Quelle": 0,
+      "ResearchDocument": 0,
+      "SectionRef": 0
+    },
+    "nodes": 2462,
+    "relationship_counts": {
+      "ANCHORED_BY": 0,
+      "BELEGT_IN": 0,
+      "HAS_SOURCE_LINK": 0
+    },
+    "relationships": 17469
+  },
+  "before": {
+    "evidence_confidence_edges": 19228,
+    "label_counts": {
+      "Dossier": 97,
+      "ExternalLink": 2610,
+      "OntologyAnchor": 2,
+      "Quelle": 2981,
+      "ResearchDocument": 396,
+      "SectionRef": 582
+    },
+    "nodes": 5445,
+    "relationship_counts": {
+      "ANCHORED_BY": 609,
+      "BELEGT_IN": 2971,
+      "HAS_SOURCE_LINK": 354
+    },
+    "relationships": 21403
+  },
+  "commit": true,
+  "confidence_migrated": 19228,
+  "created_at_utc": "2026-06-05T13:05:12.890857+00:00",
+  "database": "mit-bestand",
+  "extraction": {
+    "belegt_in_edges_seen": 2951,
+    "cited_nodes_seen": 1788,
+    "cited_non_source_nodes": 1788,
+    "cited_non_source_nodes_with_url": 315,
+    "cited_source_nodes_skipped": 0,
+    "distinct_cited_urls": 588,
+    "non_source_nodes_to_update": 1788,
+    "source_url_values_to_write": 881,
+    "url_less_citations": 2069
+  },
+  "phase": "phase1_extract_evidence_delete_sources",
+  "planned": {
+    "delete_source_nodes": {
+      "Dossier": 97,
+      "ExternalLink": 2610,
+      "OntologyAnchor": 2,
+      "Quelle": 2981,
+      "ResearchDocument": 396,
+      "SectionRef": 582
+    },
+    "delete_source_relationships": {
+      "ANCHORED_BY": 609,
+      "BELEGT_IN": 2971,
+      "HAS_SOURCE_LINK": 354
+    },
+    "migrate_evidence_confidence_edges": 19228
+  },
+  "snapshot": {
+    "deleted_relationships": 3934,
+    "source_nodes": 2983
+  }
+}

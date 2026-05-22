@@ -1,0 +1,78 @@
+{
+  "anchor_id": "salza",
+  "sources_visited": [
+    {
+      "url": "https://salza.ch/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://salza.ch/bauteil-plattform",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://salza.ch/how-it-works",
+      "http_status": 200,
+      "first_party": true
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://salza.ch/"
+      ],
+      "evidence_quote": "Homepage says Salza offers reusable Bauteile on its online platform; exact categories were not exposed in accessible copy.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://salza.ch/bauteil-plattform"
+      ],
+      "evidence_quote": "Platform workflow states after fee payment and final check by Salza administration, building parts are published within a few working days.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "annahme",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_bauteil_platform",
+      "evidence_urls": [
+        "https://salza.ch/bauteil-plattform"
+      ],
+      "evidence_quote": "Bauteil-Plattform for reuse and circular economy in construction.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Salza",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://salza.ch/",
+      "https://salza.ch/bauteil-plattform"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Need search/listing/category pages to extract actual component/material families."
+    },
+    {
+      "topic": "PN target",
+      "reason": "Resolve Annahmeprüfung/intake-review node."
+    }
+  ],
+  "run_notes": []
+}

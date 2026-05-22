@@ -1,4 +1,10 @@
 // ==========================================================================
+// SUPERSEDED 2026-05-23:
+//   :ZITIERT_QUELLE has been removed from the live graph.
+//   Future visibility refreshes must aggregate concrete source_url/source_urls
+//   properties from information relationships. See:
+//   _neo4j/intake/runs/2026-05-23_trace_zitiert_quelle_to_urls/
+// ==========================================================================
 // mig_s5_visibility.cypher
 // Agent S5 — denormalise source quality/freshness summaries onto
 // Projekt, Bauwerk, Akteur nodes for one-click visibility in Neo4j Browser.
@@ -8,18 +14,8 @@
 //       parameterised Python writes for performance — this file is NOT
 //       executed directly by the runner.
 //
-// Actual graph topology (verified 2026-05-22):
-//   Projekt  -[:BELEGT_IN]->  :ExternalLink        (2 756 edges)
-//   Projekt  -[:BELEGT_IN]->  :Dossier
-//              -[:ZITIERT_QUELLE]-> :ExternalLink   (94 → ~1 950 ext)
-//   Projekt  -[:ZITIERT_QUELLE]-> :ExternalLink     (1 edge)
-//   Bauwerk  -[:BELEGT_IN]->  :Dossier
-//              -[:ZITIERT_QUELLE]-> :ExternalLink   (190 dossiers)
-//   Akteur   -[:BELEGT_IN]->  :ExternalLink         (361 edges)
-//   Akteur   -[:BELEGT_IN]->  :Dossier
-//              -[:ZITIERT_QUELLE]-> :ExternalLink   (437 dossiers)
-//   Akteur   -[:ZITIERT_QUELLE]-> :ExternalLink     (366 edges)
-//   HAS_SOURCE_LINK only exists on :ReuseRule (not Projekt/Bauwerk/Akteur)
+// Former 2026-05-22 topology removed. The live graph now stores URLs on
+// source_url/source_urls properties instead of source-hop relationships.
 // ==========================================================================
 
 // --------------------------------------------------------------------------

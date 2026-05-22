@@ -1,0 +1,87 @@
+{
+  "confirmation_required": "APPLY post_quality_p06_03.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "counts_before": {
+    "nodes": 2264,
+    "relationships": 15063
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T18:15:39.291380+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\post_quality_p06_03.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "RAU Architects"
+          ],
+          "id": "rau",
+          "name": "RAU",
+          "primary_source_url": "https://thomasrau.eu/en/initiatives/rau",
+          "source_titles": [
+            "Thomas Rau"
+          ],
+          "source_urls": [
+            "https://thomasrau.eu/en/initiatives/rau"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "rau_architects",
+            "name": "RAU Architects",
+            "source_titles": [
+              "Liander_Alliander_HQ_Dui…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "rau",
+            "name": "RAU",
+            "primary_source_url": "https://thomasrau.eu/en/initiatives/rau",
+            "source_titles": [
+              "Thomas Rau"
+            ],
+            "source_urls": [
+              "https://thomasrau.eu/en/initiatives/rau"
+            ]
+          }
+        }
+      },
+      "from": "rau_architects",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "rau"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_merge": 1
+  }
+}

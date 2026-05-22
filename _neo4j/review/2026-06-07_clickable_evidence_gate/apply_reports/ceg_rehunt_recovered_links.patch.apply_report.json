@@ -1,0 +1,342 @@
+{
+  "confirmation_required": "APPLY ceg_rehunt_recovered_links.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-06-07T18:59:13.480467+00:00",
+  "patch": "_neo4j\\review\\2026-06-07_clickable_evidence_gate\\patches\\ceg_rehunt_recovered_links.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "evidence_basis": "w3_05_vma_web",
+        "evidence_checked_at": "2026-06-07T18:45:45Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ase gmbh: carla ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.beta-architecture.com/elementa-parabase",
+        "id": "r_carla_ferrando_costansa__VERBUNDEN_MIT_AKTEUR__parabase",
+        "review_run": "post_ier_w3_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "carla_ferrando_costansa",
+        "properties": {
+          "confidence": 0.6,
+          "evidence_basis": "w3_05_vma_web",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "ase gmbh: carla ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario",
+          "evidence_url": "https://www.archdaily.com/1008183/parabase-reuses-prefabricated-concrete-elements-for-a-radical-housing-development-in-basel-switzerland",
+          "id": "r_carla_ferrando_costansa__VERBUNDEN_MIT_AKTEUR__parabase",
+          "review_run": "post_ier_w3_2026_06_07"
+        },
+        "rel_internal_id": 1153034754304514605,
+        "to": "parabase",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "carla_ferrando_costansa",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "parabase",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "evidence_basis": "w3_05_vma_web",
+        "evidence_checked_at": "2026-06-07T18:45:45Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario monotti landscap",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.beta-architecture.com/elementa-parabase",
+        "id": "r_pablo_garrido_arnaiz__VERBUNDEN_MIT_AKTEUR__parabase",
+        "review_run": "post_ier_w3_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "pablo_garrido_arnaiz",
+        "properties": {
+          "confidence": 0.6,
+          "evidence_basis": "w3_05_vma_web",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario monotti landscap",
+          "evidence_url": "https://www.archdaily.com/1008183/parabase-reuses-prefabricated-concrete-elements-for-a-radical-housing-development-in-basel-switzerland",
+          "id": "r_pablo_garrido_arnaiz__VERBUNDEN_MIT_AKTEUR__parabase",
+          "review_run": "post_ier_w3_2026_06_07"
+        },
+        "rel_internal_id": 1153034754304514609,
+        "to": "parabase",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "pablo_garrido_arnaiz",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "parabase",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "evidence_checked_at": "2026-06-07T18:45:45Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "bauteilboerse_hannover",
+          "land": "DE",
+          "name": "Bauteilbörse Hannover",
+          "name_full": "Bauteilbörse Hannover — regional used-component exchange",
+          "primary_source_url": "https://restado.de/profil/bauteilboerse-hannover/",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake",
+          "source_urls": [
+            "https://bauteilboerse-hannover.de/",
+            "https://restado.de/profil/bauteilboerse-hannover/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "id": "bauteilboerse_hannover",
+          "land": "DE",
+          "name": "Bauteilbörse Hannover",
+          "name_full": "Bauteilbörse Hannover — regional used-component exchange",
+          "primary_source_url": "https://bauteilboerse-hannover.de/",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake",
+          "source_urls": [
+            "https://bauteilboerse-hannover.de/",
+            "https://restado.de/profil/bauteilboerse-hannover/"
+          ]
+        }
+      },
+      "id": "bauteilboerse_hannover",
+      "line": 3,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T18:45:45Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "michel_massmuenster",
+          "name": "Michel Massmünster",
+          "primary_source_url": "https://www.park-books.com/produkt/bauteile-wiederverwenden/108",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "project team: Marc Angst, Pascal Hentschel, Benjamin Poignon, Michèle",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Kompendium"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://www.park-books.com/produkt/bauteile-wiederverwenden/108"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "michel_massmuenster",
+          "name": "Michel Massmünster",
+          "primary_source_url": "https://zirkular.net/en/project/building-k-118",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "project team: Marc Angst, Pascal Hentschel, Benjamin Poignon, Michèle",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Kompendium"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://www.park-books.com/produkt/bauteile-wiederverwenden/108"
+          ]
+        }
+      },
+      "id": "michel_massmuenster",
+      "line": 4,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T18:45:45Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "eike_roswag_klinge",
+          "name": "Eike Roswag-Klinge",
+          "primary_source_url": "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge",
+          "source_titles": [
+            "Natural Building Lab"
+          ],
+          "source_urls": [
+            "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eike_roswag_klinge",
+          "name": "Eike Roswag-Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge",
+          "source_titles": [
+            "Natural Building Lab"
+          ],
+          "source_urls": [
+            "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "id": "eike_roswag_klinge",
+      "line": 5,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T18:45:45Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "anders_lendager",
+          "name": "Anders Lendager",
+          "primary_source_url": "https://circularmaterialsystems.com/en/case/02_en_resource-rows",
+          "source_titles": [
+            "https://lendager.com/project/resource-rows/",
+            "Lendager — Upcycle Studi…",
+            "CMS Resource Rows",
+            "DAC Resource Rows"
+          ],
+          "source_urls": [
+            "https://lendager.com/project/resource-rows",
+            "https://lendager.com/project/upcycle-studios",
+            "https://circularmaterialsystems.com/en/case/02_en_resource-rows",
+            "https://dac.dk/en/magazine/places/resource-rows-a-gem-of-upcycling-nestled-between-newbuilds-and-nature-279"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "anders_lendager",
+          "name": "Anders Lendager",
+          "primary_source_url": "https://lendager.com/project/resource-rows",
+          "source_titles": [
+            "https://lendager.com/project/resource-rows/",
+            "Lendager — Upcycle Studi…",
+            "CMS Resource Rows",
+            "DAC Resource Rows"
+          ],
+          "source_urls": [
+            "https://lendager.com/project/resource-rows",
+            "https://lendager.com/project/upcycle-studios",
+            "https://circularmaterialsystems.com/en/case/02_en_resource-rows",
+            "https://dac.dk/en/magazine/places/resource-rows-a-gem-of-upcycling-nestled-between-newbuilds-and-nature-279"
+          ]
+        }
+      },
+      "id": "anders_lendager",
+      "line": 6,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T18:45:45Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "andrea_klinge",
+          "name": "Andrea Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge und Andrea Klinge",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "andrea_klinge",
+          "name": "Andrea Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge und Andrea Klinge",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "id": "andrea_klinge",
+      "line": 7,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 7,
+    "would_update": 5,
+    "would_update_rel": 2
+  }
+}

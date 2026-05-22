@@ -1,0 +1,464 @@
+{
+  "confirmation_required": "APPLY merge_duplicate_nodes_high_confidence.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2296,
+    "relationships": 15338
+  },
+  "counts_after_expected": {
+    "nodes": 2296,
+    "relationships": 15338
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15367
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:48:46.425453+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\merge_duplicate_nodes_high_confidence.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Superuse Studios"
+          ],
+          "id": "superuse_studios_2012architecten",
+          "name": "Superuse Studios / 2012Architecten",
+          "primary_source_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "source_titles": [
+            "Villa_Welpeloo_Enschede.…"
+          ],
+          "source_urls": [
+            "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+            "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "Superuse_Studios",
+            "name": "Superuse Studios",
+            "source_titles": [
+              "BlueCity_Offices_Rotterd…",
+              "Woongroep_Boschgaard_Den…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "superuse_studios_2012architecten",
+            "name": "Superuse Studios / 2012Architecten",
+            "primary_source_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+            "source_titles": [
+              "Villa_Welpeloo_Enschede.…"
+            ],
+            "source_urls": [
+              "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+              "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+            ]
+          }
+        }
+      },
+      "from": "Superuse_Studios",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 3,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "superuse_studios_2012architecten"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "CITYFÖRSTER architecture + urbanism"
+          ],
+          "id": "CITYFOERSTER",
+          "metadata_sidecar_key": "node:ak_cityfoerster",
+          "name": "CITYFÖRSTER"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "ak_cityfoerster",
+            "metadata_sidecar_key": "node:ak_cityfoerster",
+            "name": "CITYFÖRSTER architecture + urbanism"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "CITYFOERSTER",
+            "name": "CITYFÖRSTER"
+          }
+        }
+      },
+      "from": "ak_cityfoerster",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "CITYFOERSTER"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Artelia Group"
+          ],
+          "id": "artelia",
+          "metadata_sidecar_key": "node:artelia_group",
+          "name": "Artelia",
+          "source_titles": [
+            "Upcycle_Studios_Copenhag…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "artelia_group",
+            "metadata_sidecar_key": "node:artelia_group",
+            "name": "Artelia Group"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "artelia",
+            "name": "Artelia",
+            "source_titles": [
+              "Upcycle_Studios_Copenhag…"
+            ]
+          }
+        }
+      },
+      "from": "artelia_group",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 3,
+      "status": "would_merge",
+      "to": "artelia"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Bureau Greisch"
+          ],
+          "id": "greisch",
+          "name": "Greisch",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "bureau_greisch",
+            "name": "Bureau Greisch",
+            "source_titles": [
+              "Recypark_Demets_Anderlec…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "greisch",
+            "name": "Greisch",
+            "source_titles": [
+              "Musee_de_Folklore_Mouscr…"
+            ]
+          }
+        }
+      },
+      "from": "bureau_greisch",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 4,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 3,
+      "status": "would_merge",
+      "to": "greisch"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Graber Pulver Architekt:innen"
+          ],
+          "id": "graber_pulver",
+          "name": "Graber Pulver",
+          "source_titles": [
+            "Juch_Areal_Recyclingzent…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "graber_pulver_architektinnen",
+            "name": "Graber Pulver Architekt:innen",
+            "source_titles": [
+              "Juch_Areal_Recyclingzent…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "graber_pulver",
+            "name": "Graber Pulver"
+          }
+        }
+      },
+      "from": "graber_pulver_architektinnen",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 5,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 3,
+      "status": "would_merge",
+      "to": "graber_pulver"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Fabrix London"
+          ],
+          "id": "fabrix",
+          "name": "Fabrix",
+          "source_titles": [
+            "55_Great_Suffolk_Street_…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "fabrix_london",
+            "name": "Fabrix London",
+            "source_titles": [
+              "Roots_in_the_Sky_Blackfr…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "fabrix",
+            "name": "Fabrix",
+            "source_titles": [
+              "55_Great_Suffolk_Street_…"
+            ]
+          }
+        }
+      },
+      "from": "fabrix_london",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 6,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "fabrix"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Lendager Group / Lendager Architects"
+          ],
+          "id": "Lendager",
+          "metadata_sidecar_key": "node:Lendager",
+          "name": "Lendager",
+          "source_titles": [
+            "Resource_Rows_Copenhagen…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "lendager_group_lendager_architects",
+            "name": "Lendager Group / Lendager Architects",
+            "source_titles": [
+              "Resource_Rows_Copenhagen…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "Lendager",
+            "metadata_sidecar_key": "node:Lendager",
+            "name": "Lendager"
+          }
+        }
+      },
+      "from": "lendager_group_lendager_architects",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 7,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "Lendager"
+    },
+    {
+      "after": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "aliases": [
+            "Qflow delivery and waste ticket tracking"
+          ],
+          "id": "software_qflow",
+          "kind": "software",
+          "name": "Qflow",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ],
+          "source_urls": [
+            "https://qflow.io/",
+            "https://qflow.io/about/"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Software"
+          ],
+          "properties": {
+            "id": "tool_qflow",
+            "kind": "tool",
+            "name": "Qflow delivery and waste ticket tracking",
+            "source_titles": [
+              "House_of_Fraser_318_Oxfo…"
+            ],
+            "source_urls": [
+              "https://qflow.io/",
+              "https://qflow.io/about/"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Software"
+          ],
+          "properties": {
+            "id": "software_qflow",
+            "kind": "software",
+            "name": "Qflow",
+            "source_titles": [
+              "House_of_Fraser_318_Oxfo…"
+            ],
+            "source_urls": [
+              "https://qflow.io/",
+              "https://qflow.io/about/"
+            ]
+          }
+        }
+      },
+      "from": "tool_qflow",
+      "label_union": [
+        "Software"
+      ],
+      "line": 8,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 5,
+      "rel_outbound_to_redirect": 9,
+      "status": "would_merge",
+      "to": "software_qflow"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 8,
+    "would_merge": 8
+  }
+}

@@ -1,0 +1,89 @@
+# Objektive Projektübersicht nach Ausschluss primärer Innenausbau- und Möbelfälle
+
+Die Tabelle enthält die ReUse-Fallstudien, deren dokumentierter Schwerpunkt nicht primär auf Innenausbau, Büro-Fit-out, Möbeln, losen Ausstattungen oder ausschließlich innenräumlichen Trennwänden liegt. Sie ist als neutrale Grunddatentabelle für einen akademischen Bericht formuliert. Sie enthält keine Rangfolge, keine RSI-Bewertung und keine Aussage über finale Skalierbarkeit.
+
+„—“ kennzeichnet nicht näher angegebene Jahres- oder Statusinformationen.
+
+| Nr. | Projekt | Ort | Land | Jahr / Stand | Status | Gebäude- / Projekttyp | Dokumentierter ReUse-Bezug | ReUse-Profil |
+|---:|---|---|---|---|---|---|---|---|
+| 1 | K.118 / Kopfbau Halle 118 | Winterthur | Schweiz | 2021 | gebaut | Erweiterung / Aufstockung | Übertragene Bauteile aus externen Quellen; mehrere Bauteilgruppen | Mehrquellen-Bauteilaggregation |
+| 2 | BedZED (Beddington Zero Energy Development) | London | Vereinigtes Königreich | 2002 | gebaut | gemischt genutztes Quartier | Wiederverwendung von Baustahl und festen Komponenten | Strukturelle Bauteilwiederverwendung |
+| 3 | BioPartner 5 | Leiden / Oegstgeest | Niederlande | — | gebaut | Labor- / Bürogebäude | Wiederverwendung von Stahl; lose Möbel nicht als direkter Bauteil-ReUse gezählt | Strukturelle Stahlwiederverwendung / Donor-Skeleton-Bezug |
+| 4 | KA13 / Kristian Augusts gate 13 | Oslo | Norwegen | 2021 | gebaut | Bürogebäude | Wiederverwendung von Hohlkörperdecken und Stahl; Bestandserhalt getrennt behandelt | Mehrquellen-Bauteilaggregation |
+| 5 | Recypark Demets / Anderlecht | Brüssel | Belgien | 2024 | gebaut | öffentlicher Recyclingpark | Wiederverwendung von Brettschichtholzbögen aus einer Reithalle | Strukturelle Holzbauteilwiederverwendung |
+| 6 | Svanen / The Swan Kindergarten | Gladsaxe | Dänemark | 2022 | gebaut | kommunaler Kindergarten | Same-site Urban Mining aus der ehemaligen Gladsaxe School; Recycling getrennt behandelt | Standortbezogene Materialwiederverwendung |
+| 7 | Villa Welpeloo | Enschede | Niederlande | 2009 | gebaut | Wohnhaus | Wiederverwendung tragender Stahlträger aus einer industriellen Quelle | Strukturelle Bauteilwiederverwendung |
+| 8 | Holbein Gardens | London | Vereinigtes Königreich | 2023 | gebaut | Büro / Erweiterung | Wiederverwendung tragender Stahlbauteile in der Erweiterung; Bestandserhalt getrennt behandelt | Strukturelle Bauteilwiederverwendung |
+| 9 | Grubenstrasse 29 / Werkhof 29 | Zürich | Schweiz | 2025 | gebaut | Umbau und Erweiterung | Wiederverwendung fester Bauteile und Komponenten | Gebäudebezogene Bauteilwiederverwendung |
+| 10 | Haus HOS | Mühlhausen | Deutschland | 2008 | gebaut | Mehrfamilienhaus | Wiederverwendung von WBS70- bzw. Stahlbeton-Großtafelelementen | Strukturelle Betonbauteilwiederverwendung |
+| 11 | Mehrow Pilot House | Mehrow | Deutschland | 2005 | gebaut | Pilot-Wohnhaus | Wiederverwendung von WBS70-Wand- und Deckenelementen aus Marzahn | Strukturelle Betonbauteilwiederverwendung |
+| 12 | Broethen Twin-House | Hoyerswerda | Deutschland | — | gebaut | Doppelhaus | Wiederverwendung von Wand- und Deckenelementen des P2-Systems | Strukturelle Betonbauteilwiederverwendung |
+| 13 | CRCLR House / Impact Hub | Berlin | Deutschland | 2023 | gebaut | Umnutzung / Impact Hub | Wiederverwendung von Dachstahl als Treppenwangen; Hallenbestand getrennt behandelt | Adaptive Umnutzung mit Komponentenwiederverwendung |
+| 14 | Recyclinghaus Hannover | Hannover | Deutschland | 2019 | gebaut | Wohnhaus / Demonstrator | Wiederverwendung in Gebäudehülle und Innenausbau; neue Holzstruktur getrennt behandelt | Hüll- und Innenausbau-ReUse |
+| 15 | Thoravej 29 | Kopenhagen | Dänemark | 2025 | gebaut | industrielle Transformation | Self-ReUse von Betonplatten, Ziegeln und weiteren Bestandsmaterialien | Adaptive Eigenwiederverwendung |
+| 16 | Timber Square | London | Vereinigtes Königreich | Übergabe offen | Übergabe offen | Büro / gemischte Nutzung | Wiederverwendung von Baustahl | Strukturelle Bauteilwiederverwendung |
+| 17 | House of Fraser → TBC.London | London | Vereinigtes Königreich | 2025 | gebaut / als ReUse-Kette geführt | Donor-Receiver-ReUse-Kette | Donor- und Receiver-Projekt getrennt modelliert; Mengenangaben mit Quellenkonflikten | Projektübergreifende Wiederverwendungskette |
+| 18 | 55 Great Suffolk Street | London | Vereinigtes Königreich | — | gebaut | Retrofit / Erweiterung | Wiederverwendung von Stahl im neuen externen Kern | Strukturelle Bauteilwiederverwendung |
+| 19 | Brent Cross Town Substation | London | Vereinigtes Königreich | — | gebaut | Infrastruktur / Screen-Struktur | Wiederverwendung in einer Infrastruktur- bzw. Screen-Struktur; Mengen und CO₂-Werte als Quellenbereiche geführt | Strukturelle / infrastrukturelle Bauteilwiederverwendung |
+| 20 | Boulder Fire Station 3 | Boulder | USA | 2024 | gebaut | Feuerwache / öffentliche Infrastruktur | Partielle strukturelle Wiederverwendung von Stahlprofilen aus einem Krankenhausbestand | Öffentliche Materialreserve / strukturelle Wiederverwendung |
+| 21 | Big Dig House | Lexington | USA | — | gebaut | Wohnhaus | Nutzung von Bauteilen und Materialien aus dem Big-Dig-Infrastrukturkontext; Quellenkonflikte als Bereiche geführt | Material-Salvage / Komponentenwiederverwendung |
+| 22 | Saxum Vineyard Equipment Barn | Paso Robles | USA | — | gebaut | landwirtschaftliche Gerätehalle | Wiederverwendung von Bohrgestängen als Stützen und Dachstruktur | Strukturelle Bauteilwiederverwendung |
+| 23 | Europa Building (Résidence Palace) | Brüssel | Belgien | 2016 | gebaut | öffentliches / institutionelles Gebäude | Großmaßstäbliche Wiederverwendung von Hüllbauteilen; Bestandserhalt getrennt behandelt | Fassaden- / Hüllbauteilwiederverwendung |
+| 24 | ELYS Kultur- & Gewerbehaus | Basel | Schweiz | — | gebaut | Kultur- und Gewerbehaus | Wiederverwendung von Hüllbauteilen; Betontragwerk-Retention getrennt behandelt | Fassaden- / Hüllbauteilwiederverwendung |
+| 25 | Lycée Michel Lucius Conversion | Luxemburg | Luxemburg | 2021 | gebaut | öffentliche Campus-Konversion | Mehrere dokumentierte direkte ReUse-Ströme | Öffentliche Konversion / feste Komponentenwiederverwendung |
+| 26 | Jeugdkliniek Ithaka / Emergis | Kloetinge | Niederlande | 2019 | gebaut | Gesundheitsbau | Direkter Bauteil-ReUse mit Spendergebäude RWS Terneuzen | Spenderquellenbasierter Komponenten-ReUse |
+| 27 | gjG House | Gentbrugge / Gent | Belgien | 2015 | gebaut | Wohnhaus | Strukturell eigenständige Ziegelschale aus wiederverwendeten Ziegeln | Strukturelle Ziegelwiederverwendung |
+| 28 | Maison DnA | Asse | Belgien | 2013 | gebaut | Wohnhaus / Neubau | Wiederverwendete Ziegelwände als eigenständige Außenstruktur | Strukturelle Ziegelwiederverwendung |
+| 29 | Association House, Gröditz | Gröditz | Deutschland | 2007 | gebaut | Sport- / Vereinshaus | Wiederverwendung von Betonfertigteilen aus zwei Spenderquellen | Strukturelle Betonbauteilwiederverwendung |
+| 30 | Association House, Plauen | Plauen | Deutschland | 2007 | gebaut | Vereinshaus | Wiederverwendung von IW73/6-Betonfertigteilen | Strukturelle Betonbauteilwiederverwendung |
+| 31 | Berlin-Schildow Pilot House | Schildow | Deutschland | 2005 (Rohbau) | gebaut / Rohbau benannt | Pilot-Wohnhaus | Wiederverwendung von Großtafel-Fertigteilen | Strukturelle Betonbauteilwiederverwendung |
+| 32 | Circular Centre NL / Prinsenhof A | Arnhem | Niederlande | — | geplant / Reinstallation nicht als gebaut bestätigt | geplanter ReUse-Pilot | Demontage und geplante Wiederverwendung; CO₂-Wert dokumentiert | Geplanter ReUse / nicht als gebaut bestätigt |
+| 33 | Juch-Areal Recyclingzentrum | Zürich | Schweiz | 2026–2027 geplant | geplant | öffentliches Recyclingzentrum | Geplanter öffentlicher ReUse-Pilot; CO₂-Wert dokumentiert | Geplanter ReUse / nicht als gebaut bestätigt |
+| 34 | Melkinlaituri School & Day-care | Helsinki | Finnland | — | gebaut / als ReCreate-Replikation geführt | Schule und Tagesbetreuung | Wiederverwendung von 64 Hohlkörperdecken aus Suutarila | Strukturelle Hohlkörperdecken-Wiederverwendung |
+| 35 | Härmälänranta / A-Kruunu ReCreate | Tampere | Finnland | — | gebaut / Mini-Pilot | Wohn- / Pilotprojekt | Wiederverwendung tragender Hohlkörperdecken aus einem Bürogebäude der 1980er Jahre | Strukturelle Hohlkörperdecken-Wiederverwendung |
+| 36 | Lokomotion Technology Centre | Tampere | Finnland | — | gebaut / Mini-Pilot | Industrie- / Technologieprojekt | Wiederverwendung tragender Hohlkörperdecken in zwei Bereichen eines größeren Projekts | Strukturelle Hohlkörperdecken-Wiederverwendung |
+| 37 | Grande Halle de Colombelles / Le WIP | Colombelles | Frankreich | — | gebaut | Kultur- / Arbeits- und Gemeinschaftsort | Wiederverwendung über ein eigenes Réemploi-Los; Erhalt der Betonhalle getrennt behandelt | Öffentliches Beschaffungslernmodell |
+| 38 | La Ferme du Rail | Paris | Frankreich | — | gebaut | Neubau / soziales Programm | Feste direkte ReUse-Bauteile; Prozentangaben vermischen biobasierte und wiederverwendete Materialien | Fester Komponenten-ReUse mit Scope-Abgrenzung |
+| 39 | Résilience / La Ferme des Possibles | Stains | Frankreich | — | gebaut | Neubau / soziale Landwirtschaft | Direkter ReUse in Hülle, Innenausbau, TGA und Außenraum; neue Primärstruktur | Mehrschichtiger Komponenten-ReUse |
+| 40 | Maison Vignette | Auderghem | Belgien | — | gebaut | Wohnhaus / Neubau | Fester ReUse in Fassade, Ausbau und Sanitär; neue Holz-Stroh-Hanf-Struktur | Fassaden- / Finish-Wiederverwendung |
+| 41 | MULTI Brussels | Brüssel | Belgien | — | gebaut / Refit | großmaßstäblicher Refit | Materialpass; ReUse nur für transformierte oder repositionierte Bauteile bewertet | Materialpass / Refit-Wiederverwendung |
+| 42 | Musée de Folklore / MUSEF | Mouscron | Belgien | — | gebaut | Museum / Kulturbau | Fassaden-ReUse mit Ziegeln aus acht Abbruchquellen | Fassaden- / Ziegelwiederverwendung |
+| 43 | Lo-Reninge Town Hall façade | Lo-Reninge | Belgien | — | gebaut | Rathaus-Fassade | Neue Fassade aus wiederverwendeten Ziegeln; Kloster-Retention getrennt behandelt | Fassaden- / Ziegelwiederverwendung |
+| 44 | Institut de Botanique ULg | Lüttich | Belgien | — | gebaut / teilweise dokumentiert | Universitäts- / Institutsgebäude | Teilweise dokumentierte wiederverwendete Holzfassade | Fassaden- / Holzwiederverwendung |
+| 45 | Chiro d’Itterbeek (sanitary block) | Dilbeek | Belgien | — | gebaut | kleiner Sanitärblock | Wiederverwendete und überschüssige Komponenten in einem kleinen Neubau | Kleinmaßstäbliche Komponentenwiederverwendung |
+| 46 | Verbiest + Karreveld | Brüssel | Belgien | — | gebaut / Vergleichsfall | kombinierter Projektvergleich | Vergleich zweier AgwA-Projekte mit ReUse-Bezug | Vergleichsfall mit ReUse-Bezug |
+| 47 | Zinneke / FEDER Masui4ever | Brüssel | Belgien | — | gebaut / öffentlicher Förderkontext | öffentliches / kulturelles Projekt | Retention-Wert als Kontext; nicht als Direct-ReUse-Quote bewertet | Öffentlicher Beschaffungslernfall / Retention-Kontext |
+| 48 | Liander / Alliander HQ | Duiven | Niederlande | — | gebaut / Transformation | Büro- / HQ-Transformation | Zirkuläre Transformation; direkte Beton-ReUse-Anteile nur teilweise dokumentiert | Adaptive Umnutzung mit teilweisem direktem ReUse |
+| 49 | The Green House | Utrecht | Niederlande | — | temporär / gebaut | temporärer zirkulärer Pavillon | ReUse-Bauteile und Design-for-Disassembly getrennt betrachtet | Temporäres / reversibles System |
+| 50 | Resource Rows | Kopenhagen | Dänemark | — | gebaut | Wohnprojekt | Direkter ReUse von Ziegelwandmodulen als Fassaden- bzw. Hüllbauteile | Fassaden- / Ziegelmodulwiederverwendung |
+| 51 | Upcycle Studios | Kopenhagen | Dänemark | — | gebaut | Wohnprojekt | Quellenkonflikte zu Fläche, Jahr und Betonmenge als Bereiche geführt | Upcycling / Wiederverwendung mit Quellenkonflikten |
+| 52 | TRÆ High-Rise | Aarhus | Dänemark | — | gebaut | Hochhaus | ReUse- und Upcycling-Komponenten; neue bzw. hybride Primärstruktur | Hybride Komponentenwiederverwendung |
+| 53 | Woongroep Boschgaard | ’s-Hertogenbosch | Niederlande | — | gebaut | Wohnprojekt | Quellen nennen hohe Anteile geernteter bzw. sekundärer Materialien; Methode nicht näher angegeben | Sekundärmaterial- / ReUse-Mix |
+| 54 | Kindergarten Mööslistrasse / Manegg | Zürich | Schweiz | — | gebaut / kommunaler Pilot | Kindergarten | Kommunaler ReUse-Pilot; CO₂-Wert dokumentiert; Depot-Retention und lose Möbel getrennt behandelt | Kommunale Komponentenwiederverwendung |
+| 55 | Brighton Waste House | Brighton | Vereinigtes Königreich | — | gebaut / Living Lab | Material- / Living-Lab-Demonstrator | Materialbezogener Demonstrator; nicht primär als tragender Bauteil-ReUse geführt | Material- / Living-Lab-Demonstrator |
+| 56 | Hastings Pier Visitor Centre | Hastings | Vereinigtes Königreich | — | gebaut | Besucherzentrum | Feste wiederverwendete Holzverkleidung gezählt; Pier-Restaurierung getrennt behandelt | Fassaden- / Holzverkleidungswiederverwendung |
+| 57 | Kamikatsu Zero Waste Center / Hotel WHY | Kamikatsu | Japan | — | gebaut | Zero-Waste-Zentrum / Hotel | Lokaler Komponenten- und Material-ReUse im Neubau | Lokale Komponenten- / Materialwiederverwendung |
+| 58 | People’s Pavilion | Eindhoven | Niederlande | — | temporär / nach neun Tagen demontiert | temporärer Pavillon | Geliehene Materialien; temporärer Aufbau und Rückbau | Temporäres Leih- / reversibles System |
+| 59 | Circular Pavilion (Pavillon Circulaire) | Paris | Frankreich | — | temporär / gebaut | kleiner temporärer Pavillon | Temporärer Demonstrator; lose Stühle nicht als Bauteil-ReUse gezählt | Temporäres / reversibles System |
+| 60 | Christ Pavilion | Volkenroda | Deutschland | — | transloziert / wiederaufgebaut | Pavillon | EXPO-2000-Pavillon demontiert und wieder aufgebaut | Translokation / temporäres System |
+| 61 | Plattenvereinigung | Berlin | Deutschland | — | temporär / demontierbar | temporäres Gebäude / Pavillon | Demontierbares Gebäude aus wiederverwendeten Fertigteilen | Temporäres demontierbares Plattensystem |
+| 62 | Plattenpalast | Berlin | Deutschland | — | gebaut / Mikrohaus-Galerie | Mikrohaus / Galerie | WBS70-Platten und Fenster aus dem Palast der Republik | Kleinmaßstäbliche Fertigteilwiederverwendung |
+| 63 | SUPERLOCAL Expogebouw | Kerkrade | Niederlande | — | gebaut / Demonstrator | Demonstratorgebäude | Wiederverwendung herausgeschnittener Apartment-Sektionen aus einem Hochhaus | Forschungsdemonstrator mit ausgeschnittenen Bauteilen |
+| 64 | CascadeUp glulam demonstrator | London | Vereinigtes Königreich | — | Demonstrator | Holz-Remanufacturing-Demonstrator | Aufbereitung von Salvage-Holz zu glulamST/CLST; Mengen nicht angegeben | Remanufacturing / Holzbauteil-Demonstrator |
+| 65 | Re:Crete footbridge | EPFL | Schweiz | — | Forschungsprototyp / kein Gebäude | Fußbrücke / Forschungsprototyp | Wiederverwendung gesägter Ortbetonblöcke | Forschungsprototyp / Betonblockwiederverwendung |
+| 66 | Bestandverplanzung Pavilion | München | Deutschland | — | kleiner gebauter Demonstrator | Pavillon | Kleiner Demonstrator; technische Dokumentation begrenzt | Kleinmaßstäblicher Demonstrator |
+| 67 | Montessori Maassluis | Maassluis | Niederlande | ca. 2026/27 geplant | geplant / nicht als gebaut bestätigt | Schule | Wiederverwendete Hohlkörperdecken im Entwurf; As-built-Status nicht bestätigt | Geplanter struktureller ReUse / nicht als gebaut bestätigt |
+| 68 | Big Dig Building | Boston | USA | — | ungebaut / Konzept | ungebauter Vorschlag | Nicht realisierter Entwurf mit ReUse-Bezug | Konzept- / Lernfall |
+| 69 | Roots in the Sky / Blackfriars | London | Vereinigtes Königreich | — | nicht als gebauter ReUse-Nachweis geführt | geplantes Projekt / negative learning | Geplanter struktureller Stahl-ReUse nicht als gebauter ReUse-Nachweis geführt | Negativer Lernfall |
+
+## Ausgeschlossene primäre Innenausbau- und Möbelfälle
+
+Die folgenden Fälle wurden nicht in die Tabelle aufgenommen, weil der dokumentierte ReUse-Schwerpunkt primär im Innenausbau, Büro-Fit-out, Möbel- oder Ausstattungsbereich liegt. Die Herausnahme ist keine qualitative Bewertung der Projekte.
+
+| Nr. | Projekt | Grund der Abgrenzung |
+|---:|---|---|
+| 1 | Maison des Canaux | primär Innenausbau / fixer Fit-out |
+| 2 | BlueCity Offices | primär Innenausbau / feste Trennwände |
+| 3 | Impact Hub Berlin Interior (CRCLR fit-out) | Innenausbau / Fit-out |
+| 4 | PLP Architecture HQ fit-out | Büro-Fit-out; Möbel-/Spendenanteile abzugrenzen |
+| 5 | AWM Münster circular office | kleiner Büro-Innenausbau |

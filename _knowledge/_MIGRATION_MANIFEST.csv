@@ -1,0 +1,53 @@
+phase,action,source,destination,kind,files,size,git
+1,DELETE,_tmp/semio,,dir,11548,2.8GB,tracked
+1,DELETE,_tmp/figma_import,,dir,191,77.6MB,untracked
+1,DELETE,debug.log,,file,1,2.1KB,untracked
+1,MOVE,_tmp/project_images_manifest.json,_neo4j/exports/project_images_manifest.json,file,1,18.4KB,untracked
+1,MOVE,_tmp/projects_ranked.json,_neo4j/exports/projects_ranked.json,file,1,41.3KB,untracked
+1,DELETE,_images/precast_display.jpg,,file,1,4.1MB,untracked
+1,DELETE,_images/precast_wall2.jpg,,file,1,405.2KB,untracked
+1,DELETE,_images/unsplash1.jpg,,file,1,114.2KB,untracked
+1,DELETE,_images/unsplash2.jpg,,file,1,382.2KB,untracked
+1,DELETE,_images/unsplash3.jpg,,file,1,281.9KB,untracked
+1,DELETE,_images/unsplash4.jpg,,file,1,353.3KB,untracked
+1,DELETE,_images/user_input_bild_thumb.jpg,,file,1,46.4KB,untracked
+1,DELETE,_images/user_input_lowering.jpg,,file,1,408.0KB,untracked
+1,DELETE,_images/user_input_precast_wall.jpg,,file,1,405.2KB,untracked
+1,DELETE,_images/wall_u1.jpg,,file,1,255.2KB,untracked
+1,DELETE,_images/wall_u2.jpg,,file,1,406.7KB,untracked
+1,DELETE,_images/wall_u4.jpg,,file,1,240.9KB,untracked
+1,DELETE,_images/wall_u5.jpg,,file,1,156.5KB,untracked
+1,DELETE,_images/b64_part1.txt,,file,1,30.9KB,untracked
+1,DELETE,_images/b64_part2.txt,,file,1,30.9KB,untracked
+1,DELETE,_images/user_input_bild_b64.txt,,file,1,61.9KB,untracked
+1,DELETE,_images/Screenshot 2026-06-14 141323.png,,file,1,93.3KB,untracked
+2,DELETE,_images/assests/icons/_chunk_scripts,,dir,1159,21.9MB,tracked
+2,DELETE,_images/_chunk_scripts,,dir,9,63.0KB,untracked
+2,DELETE-GLOB,_images/assests/_* (automation .py/.js/.mjs/.json/.md + _crop_debug.png),,glob,,,
+2,DELETE-GLOB,_images/_* (automation .py/.js + _gen/_mcp/_apply),,glob,,,
+2,DELETE,_scripts/build_project_images_contact_sheet.py,,file,1,4.7KB,untracked
+2,DELETE,_scripts/push_figma_project_images_grid.py,,file,1,7.6KB,untracked
+3,MOVE,PROJECTS_RESEARCH.md,_knowledge/projects/PROJECTS_RESEARCH.md,file,1,18.8KB,untracked
+3,REVERTED-INDEXED,_knowledge/themes/aufbereitungsverfahren_reused_building_elements.md,_knowledge/themes/,file,1,46.3KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/bauteilreuse_legal_regime_matrix.md,_knowledge/themes/,file,1,44.7KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/circular_construction_economics_kg.md,_knowledge/themes/,file,1,17.4KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/circular_construction_leistungsanforderungen.md,_knowledge/themes/,file,1,25.7KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/circular_construction_reuse_graph_gaps.md,_knowledge/themes/,file,1,21.2KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/connection_techniques_bauteilreuse.md,_knowledge/themes/,file,1,8.3KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/energy_climate_reuse_research.md,_knowledge/themes/,file,1,29.1KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/missing_underused_norm_nodes_reuse_kg.md,_knowledge/themes/,file,1,26.7KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/schadstoff_reuse_knowledge_graph_research.md,_knowledge/themes/,file,1,15.3KB,tracked
+3,REVERTED-INDEXED,_knowledge/themes/testing_verification_bauteilreuse_kg.md,_knowledge/themes/,file,1,21.3KB,tracked
+3,MOVED-BACK-TO-NEO4J,_neo4j/review/2026-06-16_semantic_reuse_network_catalog,_knowledge/synthesis/semantic_reuse_network_catalog,dir,30,4.3MB,tracked
+3,KEPT-IN-PLACE,_neo4j/neo4j_donor_receiver_research_round004/reviews,_knowledge/synthesis/donor_receiver_findings,dir,2,31.6KB,tracked
+4,DEFERRED-MOVE,_neo4j/intake/runs,_archive/neo4j_runs/,dir,2499,351.7MB,tracked
+4,DEFERRED-MOVE,_neo4j/review/round_001*,_archive/neo4j_review_rounds/,glob,,,
+4,DEFERRED-MOVE,_neo4j/review/round_002*,_archive/neo4j_review_rounds/,glob,,,
+4,DEFERRED-COMPRESS,_neo4j/intake/archive,_neo4j/intake/archive.tar.gz,dir,336,7.8MB,tracked
+4,DEFERRED-MOVE,_scripts/batch2_v2_generators,_archive/neo4j_scripts/batch2_v2_generators,dir,10,96.1KB,tracked
+4,DEFERRED-MOVE,_exports/figma,_archive/exports_figma,dir,36,92.3KB,untracked
+3,MOVE,_neo4j/intake/inbox/Zwischenbericht_Entwerfen_mit_Bestand_10-07-2026_AP_final_geprueft.md,_knowledge/report/Zwischenbericht_Entwerfen_mit_Bestand_2026-07-10.md,file,1,60KB,untracked
+6,MOVE,_neo4j/intake/inbox/2026-06-05_*_reuse_bubble/*.md,_knowledge/reuse_bubbles/,glob,5,,tracked
+6,MOVE,_neo4j/intake/inbox/research/new taxonomy edit/*.md,_knowledge/taxonomy/,glob,12,,tracked
+6,MOVE,_neo4j/intake/inbox/.../BAUTEILBOERSEN_RESEARCH_INTERFACE_DATA + Marktmodell,_knowledge/bauteilboerse/,glob,2,,tracked
+6,NOTE,source_file provenance paths rewritten for moved dossiers+bubbles,137 occurrences in 32 files,,,,

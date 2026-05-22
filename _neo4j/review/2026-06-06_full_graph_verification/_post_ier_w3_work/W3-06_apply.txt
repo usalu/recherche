@@ -1,0 +1,80 @@
+{
+  "confirmation_required": "APPLY w3_06_missing_evidence.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-07T12:33:06.772990+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\w3_06_missing_evidence.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Materialdepot"
+        ],
+        "properties": {
+          "bauobjektklasse": [
+            "Gebaeudeteil"
+          ],
+          "id": "bw_elys_ehemaliges_getraenkelager_areal",
+          "name": "Ehemaliges Getr\u00e4nkelager",
+          "name_full": "Ehemaliges Getr\u00e4nkelager / Dachaufbauten auf dem ELYS-Areal",
+          "primary_source_url": "https://www.insitu.ch/",
+          "review_run": "post_ier_w3_2026_06_07",
+          "source_quote": "Plusieurs cas \u2014 Porteous \u00e0 Gen\u00e8ve, Viktoria \u00e0 Berne, Neubad \u00e0 Lucerne, Frank Areal \u00e0 B\u00e2le \u2014 montrent qu'une telle approche, malgr\u00e9 sa fragilit\u00e9 \u00e9conomique, ouvre des perspectives plus s\u00fbres, et plus solidaires.",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_\u2026"
+          ],
+          "source_urls": [
+            "https://www.insitu.ch/"
+          ],
+          "status": "Realisiert"
+        }
+      },
+      "before": {
+        "labels": [
+          "Materialdepot"
+        ],
+        "properties": {
+          "bauobjektklasse": [
+            "Gebaeudeteil"
+          ],
+          "id": "bw_elys_ehemaliges_getraenkelager_areal",
+          "name": "Ehemaliges Getr\u00e4nkelager",
+          "name_full": "Ehemaliges Getr\u00e4nkelager / Dachaufbauten auf dem ELYS-Areal",
+          "primary_source_url": "https://elys-basel.ch/",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_\u2026"
+          ],
+          "source_urls": [
+            "https://elys-basel.ch/"
+          ],
+          "status": "Realisiert"
+        }
+      },
+      "id": "bw_elys_ehemaliges_getraenkelager_areal",
+      "line": 1,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "report_files": [
+    "_neo4j\\review\\2026-06-06_full_graph_verification\\apply_reports\\w3_06_missing_evidence.patch.apply_report.json",
+    "_neo4j\\review\\2026-06-06_full_graph_verification\\apply_reports\\w3_06_missing_evidence.patch.apply_report.md"
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_update": 1
+  }
+}

@@ -1,0 +1,1582 @@
+{
+  "id": "14_hub_subgraph",
+  "section": "14",
+  "title": "Core hub actors subgraph",
+  "cypher": "MATCH (a:Akteur)-[r:VERBUNDEN_MIT_AKTEUR]-(b:Akteur)\nWHERE r.review_run IS NOT NULL\n  AND (\n    a.id IN ['cirkla', 'opalis', 'zirkular', 'concular', 'rotordc', 'useagain_bauteilclick']\n    OR b.id IN ['cirkla', 'opalis', 'zirkular', 'concular', 'rotordc', 'useagain_bauteilclick']\n  )\nRETURN a, r, b;",
+  "status": "ok",
+  "row_count": 78,
+  "node_count": 39,
+  "relationship_count": 39,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:475",
+      "id": "sumami",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "name": "Sumami",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "id": "sumami",
+        "review_status": "evidence_backed_pending_apply",
+        "source_urls": [
+          "https://www.sumami.ch/",
+          "https://sustainable-digital-construction.ethz.ch/en/reuse"
+        ],
+        "primary_source_url": "https://www.sumami.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "id": "useagain_bauteilclick",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "useagain-bauteilclick"
+        ],
+        "name": "useagain / Bauteilclick",
+        "id": "useagain_bauteilclick",
+        "source_urls": [
+          "https://library-of-reuse.ch/pioneers/useagain",
+          "https://www.useagain.ch/de/"
+        ],
+        "primary_source_url": "https://library-of-reuse.ch/pioneers/useagain"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:610",
+      "id": "bauteilboerse_hannover",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "name_full": "Bauteilbörse Hannover — regional used-component exchange",
+        "name": "Bauteilbörse Hannover",
+        "land": "DE",
+        "source_scope": "germany_reuse_bubble_intake",
+        "id": "bauteilboerse_hannover",
+        "review_status": "evidence_backed_pending_apply",
+        "source_urls": [
+          "https://bauteilboerse-hannover.de/",
+          "https://restado.de/profil/bauteilboerse-hannover/"
+        ],
+        "primary_source_url": "https://bauteilboerse-hannover.de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "id": "concular",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "AWM_Muenster_Circular_Of…",
+          "Concular"
+        ],
+        "name": "Concular",
+        "id": "concular",
+        "source_urls": [
+          "https://concular.de/",
+          "https://concular.de/urban-mining/"
+        ],
+        "primary_source_url": "https://concular.de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:739",
+      "id": "brussels_environment",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Brussels Environment",
+        "id": "brussels_environment",
+        "source_urls": [
+          "https://environnement.brussels/",
+          "https://opalis.eu/en/about"
+        ],
+        "primary_source_url": "https://environnement.brussels/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "id": "opalis",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "https://opalis.eu/en/about"
+        ],
+        "name": "Opalis",
+        "id": "opalis",
+        "source_urls": [
+          "https://experimentationsurbaines.ademe.fr/blog/ressource/opalis-plateforme-de-reemploi-de-materiaux-de-construction-et-de-renovation/",
+          "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "https://opalis.eu/en/about",
+          "https://opalis.eu/en/documentation"
+        ],
+        "primary_source_url": "https://experimentationsurbaines.ademe.fr/blog/ressource/opalis-plateforme-de-reemploi-de-materiaux-de-construction-et-de-renovation/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:741",
+      "id": "bellastock",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bellastock",
+        "metadata_sidecar_key": "node:bellastock",
+        "id": "bellastock",
+        "source_urls": [
+          "https://experimentationsurbaines.ademe.fr/blog/ressource/programmes-repar-1-et-2/",
+          "https://experimentationsurbaines.ademe.fr/blog/ressource/site-de-bellastock-expert-sur-le-reemploi-de-materiaux-de-construction/",
+          "https://www.bellastock.com/projets/opalis-france/",
+          "https://www.bellastock.com/projets/preuse/",
+          "https://www.bellastock.com/reemploi/",
+          "https://www.lemoniteur.fr/article/missionnaires-du-circulaire.2133509",
+          "https://www.seinesaintdenishabitat.fr/notre-actualite/nos-actualites/visite-de-la-fabrique-du-clos-au-clos-saint-lazare-de-stains/"
+        ],
+        "primary_source_url": "https://experimentationsurbaines.ademe.fr/blog/ressource/programmes-repar-1-et-2/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:754",
+      "id": "mineka",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "evidence_basis": "deep_web_research_2026_06_06",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "name_full": "Minéka — matériauthèque et bureau d'études réemploi (Lyon)",
+        "name": "Minéka",
+        "land": "FR",
+        "source_scope": "france_reuse_bubble_intake",
+        "id": "mineka",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_urls": [
+          "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "https://mineka.fr/",
+          "https://opalis.eu/fr/fournisseurs/mineka"
+        ],
+        "primary_source_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "id": "baubuero_in_situ",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ELYS_Kultur_Gewerbehaus_…",
+          "Grubenstrasse_29_Werkhof…",
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "baubüro in situ",
+        "id": "baubuero_in_situ",
+        "source_urls": [
+          "https://www.insitu.ch/"
+        ],
+        "primary_source_url": "https://www.insitu.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "id": "zirkular",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ELYS_Kultur_Gewerbehaus_…",
+          "Grubenstrasse_29_Werkhof…",
+          "Juch_Areal_Recyclingzent…",
+          "K118_Kopfbau_Halle_118_W…",
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "Zirkular",
+        "id": "zirkular",
+        "source_urls": [
+          "https://zirkular.net/en/service/",
+          "https://zirkular.net/en/project/building-k-118/"
+        ],
+        "primary_source_url": "https://zirkular.net/en/service/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "id": "cirkla",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Cirkla Profil"
+        ],
+        "name": "Cirkla",
+        "id": "cirkla",
+        "source_urls": [
+          "https://www.cirkla.ch/en/",
+          "https://www.cirkla.ch/en/lassociation-cirkla/",
+          "https://www.cirkla.ch/en/le-reseau-du-reemploi/",
+          "https://www.cirkla.ch/en/publications-outils/"
+        ],
+        "primary_source_url": "https://www.cirkla.ch/en/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "id": "bauteilladen_winterthur",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilladen-winterthur",
+          "Grubenstrasse_29_Werkhof…"
+        ],
+        "name": "Bauteilladen Winterthur",
+        "id": "bauteilladen_winterthur",
+        "source_urls": [
+          "https://bauteilladen.ch/"
+        ],
+        "primary_source_url": "https://bauteilladen.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5524",
+      "id": "immobel",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Multi_Brussels_Reuse_in_…"
+        ],
+        "name": "Immobel",
+        "id": "immobel",
+        "source_urls": [
+          "https://www.immobelgroup.com/",
+          "https://rotordb.org/en/projects/oxy-centre-monnaie"
+        ],
+        "primary_source_url": "https://www.immobelgroup.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "id": "rotordc",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rotor Deconstruction — Reuse of building materials made easy",
+          "Chiro_d_Itterbeek_Dilbee…",
+          "Maison_Vignette_Auderghe…",
+          "Multi_Brussels_Reuse_in_…",
+          "rotordc"
+        ],
+        "name": "RotorDC",
+        "id": "rotordc",
+        "source_urls": [
+          "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72"
+        ],
+        "primary_source_url": "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5657",
+      "id": "association_reavie",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Resilience_La_Ferme_des_…"
+        ],
+        "name": "Association Réavie",
+        "id": "association_reavie",
+        "source_urls": [
+          "https://asso-reavie.fr/",
+          "https://opalis.eu/fr/fournisseurs/reavie",
+          "https://seinesaintdenis.fr/actualite/ecologie/transition-ecologique/ReaVie-lassociation-qui-donne-une-seconde-vie-aux-materiaux-du-BTP/",
+          "https://www.bellastock.com/reemploi/"
+        ],
+        "primary_source_url": "https://asso-reavie.fr/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6196",
+      "id": "barbara_buser",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Zirkular – Culture & Commercial Center ELYS",
+          "K.118 in situ",
+          "K.118 Zirkular",
+          "Kompendium"
+        ],
+        "name": "Barbara Buser",
+        "id": "barbara_buser",
+        "source_urls": [
+          "https://re-win.ch/verein/ueber"
+        ],
+        "primary_source_url": "https://re-win.ch/verein/ueber"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6224",
+      "id": "marc_angst",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "LysP8",
+          "Zirkular – Culture & Commercial Center ELYS",
+          "K.118 Zirkular",
+          "Kompendium",
+          "Juch-Areal"
+        ],
+        "name": "Marc Angst",
+        "id": "marc_angst",
+        "source_urls": [
+          "https://zirkular.net/en/project/building-k-118"
+        ],
+        "primary_source_url": "https://zirkular.net/en/project/building-k-118"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6230",
+      "id": "michel_massmuenster",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "ier_a1_2026_06_06",
+        "source_titles": [
+          "Zirkular – Culture & Commercial Center ELYS",
+          "K.118 Zirkular",
+          "Kompendium"
+        ],
+        "name": "Michel Massmünster",
+        "id": "michel_massmuenster",
+        "source_urls": [
+          "https://zirkular.net/en/project/culture-commercial-center-elys",
+          "https://zirkular.net/en/project/building-k-118",
+          "https://www.park-books.com/produkt/bauteile-wiederverwenden/108"
+        ],
+        "primary_source_url": "https://zirkular.net/en/project/building-k-118",
+        "source_quote": "project team: Marc Angst, Pascal Hentschel, Benjamin Poignon, Michèle"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6257",
+      "id": "charlotte_bofinger",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "ier_a1_2026_06_06",
+        "source_titles": [
+          "Zirkular – Culture & Commercial Center ELYS",
+          "K.118 Zirkular",
+          "Zirkular Kontakt"
+        ],
+        "name": "Charlotte Bofinger",
+        "id": "charlotte_bofinger",
+        "source_urls": [
+          "https://zirkular.net/en/project/culture-commercial-center-elys",
+          "https://zirkular.net/en/project/building-k-118",
+          "https://zirkular.net/en/contact"
+        ],
+        "primary_source_url": "https://zirkular.net/en/contact",
+        "source_quote": "rio brings his experience and know-how of two worlds – construction and planning-execution – to his job of component hunter. Charlotte Bofinger"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6266",
+      "id": "marco_graber",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Juch-Areal",
+          "Juch-Areal Cirkla",
+          "Graber Pulver"
+        ],
+        "name": "Marco Graber",
+        "id": "marco_graber",
+        "source_urls": [
+          "https://zirkular.net/en/project/recycling-center-juch-areal",
+          "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/projets/recyclingzentrum-juch-areal",
+          "https://www.graberpulver.ch/projekt/recyclingzentrum-juch-areal"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6270",
+      "id": "thomas_pulver",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Juch-Areal",
+          "Juch-Areal Cirkla",
+          "Graber Pulver"
+        ],
+        "name": "Thomas Pulver",
+        "id": "thomas_pulver",
+        "source_urls": [
+          "https://zirkular.net/en/project/recycling-center-juch-areal",
+          "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/projets/recyclingzentrum-juch-areal",
+          "https://www.graberpulver.ch/projekt/recyclingzentrum-juch-areal"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6334",
+      "id": "marc_loeliger",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "LysP8",
+          "LysP8, Neubau Wohnhaus mit Gewerbe, Basel"
+        ],
+        "name": "Marc Loeliger",
+        "id": "marc_loeliger",
+        "source_urls": [
+          "https://zirkular.net/en/project/lysp8",
+          "https://www.swiss-arc.ch/de/projekt/lysp8/13222858",
+          "https://loeligerstrub.ch/nproject/lysp8-neubau-wohnhaus-mit-gewerbe-basel"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6338",
+      "id": "martin_zeller",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "LysP8",
+          "LysP8, Neubau Wohnhaus mit Gewerbe, Basel"
+        ],
+        "name": "Martin Zeller",
+        "id": "martin_zeller",
+        "source_urls": [
+          "https://zirkular.net/en/project/building-k-118"
+        ],
+        "primary_source_url": "https://zirkular.net/en/project/building-k-118"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6439",
+      "id": "circular_structural_design",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Circular Structural Design",
+        "id": "circular_structural_design",
+        "source_urls": [
+          "https://circular-structural-design.eu/en/",
+          "https://www.din.de/de/din-und-seine-partner/presse/mitteilungen/zirkulaer-bauen-zweites-leben-fuer-altes-baumaterial-931612"
+        ],
+        "primary_source_url": "https://circular-structural-design.eu/en/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6531",
+      "id": "Rotor",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Chiro_d_Itterbeek_Dilbee…",
+          "Multi_Brussels_Reuse_in_…",
+          "Recypark_Demets_Anderlec…",
+          "Zinneke_Feder_Masui4ever…",
+          "Rotor",
+          "Rotor Projects"
+        ],
+        "name": "Rotor",
+        "id": "Rotor",
+        "source_urls": [
+          "https://rotordb.org/en",
+          "https://rotordb.org/en/projects"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5523",
+      "id": "whitewood",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Multi_Brussels_Reuse_in_…"
+        ],
+        "name": "Whitewood",
+        "id": "whitewood",
+        "source_urls": [
+          "https://www.whitewood.eu/",
+          "https://rotordb.org/en/projects/oxy-centre-monnaie"
+        ],
+        "primary_source_url": "https://www.whitewood.eu/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6594",
+      "id": "lionel_billiet",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Careno - Be.Circular",
+          "Rotor Deconstruction — Reuse of building materials made easy",
+          "Vademecum Offsite Reuse"
+        ],
+        "name": "Lionel Billiet",
+        "id": "lionel_billiet",
+        "source_urls": [
+          "https://rotordb.org/en/projects/careno-becircular",
+          "https://rotordc.com",
+          "https://rotordb.org/en/projects/reuse-multi-project",
+          "https://opalis.eu/sites/default/files/2022-02/Vademecum_offsite_reuse-Rotor.pdf"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6618",
+      "id": "sebastien_paulet",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Careno - Be.Circular",
+          "Rotor Deconstruction — Reuse of building materials made easy",
+          "Vademecum Offsite Reuse"
+        ],
+        "name": "Sébastien Paulet",
+        "id": "sebastien_paulet",
+        "source_urls": [
+          "https://rotordb.org/en/projects/careno-becircular",
+          "https://rotordc.com",
+          "https://rotordb.org/en/projects/reuse-multi-project",
+          "https://opalis.eu/sites/default/files/2022-02/Vademecum_offsite_reuse-Rotor.pdf"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6590",
+      "id": "dominik_campanella",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Concular — Reclaimed Construction Material Insurance (RCMI)",
+          "Clean Energy Wire",
+          "Concular"
+        ],
+        "name": "Dominik Campanella",
+        "id": "dominik_campanella",
+        "source_urls": [
+          "https://www.circularbuildingscoalition.org/blueprint-projects/concular",
+          "https://www.cleanenergywire.org/circular-economy-construction-europe",
+          "https://concular.de"
+        ],
+        "primary_source_url": "https://www.circularbuildingscoalition.org/blueprint-projects/concular"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6651",
+      "id": "rebekka_steinlein",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Heinze Interview",
+          "Concular"
+        ],
+        "name": "Rebekka Steinlein",
+        "id": "rebekka_steinlein",
+        "source_urls": [
+          "https://heinze.podigee.io/147-new-episode",
+          "https://concular.de"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "id": "materiuum",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Matériuum Team"
+        ],
+        "name": "Matériuum",
+        "id": "materiuum",
+        "source_urls": [
+          "https://materiuum.ch/"
+        ],
+        "primary_source_url": "https://materiuum.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6673",
+      "id": "urban_bricolage",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Urban Bricolage"
+        ],
+        "name": "Urban Bricolage",
+        "id": "urban_bricolage",
+        "source_urls": [
+          "https://urbanbricolage.ch"
+        ],
+        "primary_source_url": "https://urbanbricolage.ch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "id": "wick_reuse_roto_baumarkt",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Wick ReUse / ROTO Baumarkt",
+        "id": "wick_reuse_roto_baumarkt",
+        "source_urls": [
+          "https://wickreuse.ch/baumarkt/"
+        ],
+        "primary_source_url": "https://wickreuse.ch/baumarkt/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "id": "reuzi_ch",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "REUZI",
+        "id": "reuzi_ch",
+        "source_urls": [
+          "https://reuzi.ch/",
+          "https://reuzi.ch/agora/",
+          "https://www.immobilier.ch/fr/actualite/reuzi-ressource-les-chantiers-avec-du-reemploi-13814"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "id": "gruner_reuse_platform",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Gruner ReUse",
+          "Planen mit ReUse"
+        ],
+        "name": "Gruner ReUse",
+        "id": "gruner_reuse_platform",
+        "source_urls": [
+          "https://www.gruner-reuse.ch",
+          "https://www.gruner-reuse.ch/projekt",
+          "https://www.gruner-reuse.ch/produkte",
+          "https://www.gruner.ch/de/news/alt-wird-neu-zweites-leben-fuer-gebrauchte-bauteile-mit-gruner-reuse"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "id": "salza",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "salza"
+        ],
+        "name": "Salza",
+        "id": "salza",
+        "source_urls": [
+          "https://salza.ch/bauteil-plattform"
+        ],
+        "primary_source_url": "https://salza.ch/bauteil-plattform"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "id": "bauteilboerse_basel_overall",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilbörse Basel",
+        "id": "bauteilboerse_basel_overall",
+        "source_urls": [
+          "https://bauteilboerse-basel.ch/bauteile/",
+          "https://bauteilboerse-basel.ch/nachhaltigkeit/",
+          "https://bauteilboerse-basel.ch/",
+          "https://bauteilboerse-basel.ch/ueber-uns/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "id": "backacia",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "backacia"
+        ],
+        "name": "Backacia",
+        "id": "backacia",
+        "source_urls": [
+          "https://backacia.com/",
+          "https://opalis.eu/fr/fournisseurs/backacia"
+        ],
+        "primary_source_url": "https://backacia.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "id": "cycle_up",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "cycle-up"
+        ],
+        "name": "Cycle Up",
+        "id": "cycle_up",
+        "source_urls": [
+          "https://opalis.eu/fr/fournisseurs/cycle",
+          "https://vb.nweurope.eu/media/21153/fcrbe_cas-cycle-up-final18oct2023_en.pdf",
+          "https://www.cycle-up.fr/",
+          "https://www.iledefrance.fr/tous-les-services/ma-region-pres-de-chez-moi/environnement/economie-circulaire-et-gestion-des-dechets/162815-creation-dun-atelier-de-reconditionnement-de-6000-sanitaires-par-et-dautres-materiaux-de-reemploi-pour-cycle"
+        ],
+        "primary_source_url": "https://opalis.eu/fr/fournisseurs/cycle"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304508379",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:475",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "sumami",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "first_party_research_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://sustainable-digital-construction.ethz.ch/en/reuse",
+        "connection_kind": "software_development_context",
+        "fact_label": "Fact",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§7",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "developing useagain- the Swiss brokerage and sales platform",
+        "id": "r_sumami__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "As a tool for this, they are developing useagain- the Swiss brokerage and sales platform for the reuse of building components."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118193762",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:610",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "start_id": "bauteilboerse_hannover",
+      "end_id": "concular",
+      "properties": {
+        "evidence_basis": "restado_marketplace_operator",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "restado lists Bauteilbörse Hannover; restado operated by Concular",
+        "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__concular",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://restado.de/profil/bauteilboerse-hannover/",
+        "connection_kind": "marketplace_listing"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304508643",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:739",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "start_id": "brussels_environment",
+      "end_id": "opalis",
+      "properties": {
+        "evidence_basis": "preuse_opalis_funding",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "cross_bubble_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor match-funded by Brussels Environment under Renolution for PREUSE Opalis maintenance",
+        "id": "r_brussels_environment__verbunden_mit_akteur__opalis",
+        "review_status": "evidence_on_properties",
+        "evidence_url": "https://opalis.eu/en/about",
+        "connection_kind": "programme_funder_platform"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:63",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:741",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "start_id": "bellastock",
+      "end_id": "opalis",
+      "properties": {
+        "evidence_basis": "first_party_about_page",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "rotor_dc_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Since 2019 Bellastock joined; maintains French Opalis section",
+        "id": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://opalis.eu/en/about",
+        "connection_kind": "programme_maintenance_partner"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118193906",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:754",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "start_id": "mineka",
+      "end_id": "opalis",
+      "properties": {
+        "evidence_basis": "opalis_supplier_directory",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "listed on Opalis supplier directory",
+        "id": "r_mineka__verbunden_mit_akteur__opalis",
+        "review_status": "evidence_hardening_2026_06_06",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/mineka",
+        "connection_kind": "supplier_listing"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304512872",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "baubuero_in_situ",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "eously by bauburo in situ in 2021, the projects k.118 in winterthur and elys in basel, proved to be pioneering",
+        "id": "r_baubuero_in_situ__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/project/building-k-118/",
+        "inference_basis": "shared 3 project(s)"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "start_id": "baubuero_in_situ",
+      "end_id": "cirkla",
+      "properties": {
+        "evidence_basis": "first_party_committee_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/comite/benjamin-poignon",
+        "connection_kind": "committee_co_chair_affiliation",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§2.3",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Benjamin Poignon - Co-Chairman, Baubüro in situ",
+        "id": "r_baubuero_in_situ__verbunden_mit_akteur__cirkla",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Benjamin Poignon - Co-Chairman. Baubüro in situ"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118198217",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "cirkla",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/bauteilladen-winterthur",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__cirkla",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157538353931883465",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "first_party_network_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+        "connection_kind": "network_library_of_reuse",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§5",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "exchange between Bauteilbörse Basel … Bauteilladen Winterthur",
+        "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "useagain promotes direct exchange between various organisations, such as Bauteilbörse Basel, BauTeile Zürich and Bauteilladen Winterthur."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118198676",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "start_id": "immobel",
+      "end_id": "rotordc",
+      "properties": {
+        "evidence_basis": "rotor_project_commissioner",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "cross_bubble_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Immobel commissioner; Rotor Deconstruction operator on OXY project",
+        "id": "r_immobel__verbunden_mit_akteur__rotordc",
+        "review_status": "evidence_on_properties",
+        "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "connection_kind": "project_commissioner"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164293753372939801",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5657",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "start_id": "association_reavie",
+      "end_id": "opalis",
+      "properties": {
+        "evidence_basis": "opalis_supplier_directory",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "listed on Opalis supplier directory",
+        "id": "r_association_reavie__verbunden_mit_akteur__opalis",
+        "review_status": "evidence_hardening_2026_06_06",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+        "connection_kind": "supplier_listing"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199348",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6196",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "barbara_buser",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "leistet: barbara und anna buser entwickelten im sommer 2022 die idee, fenster in die ukraine zu liefern. unte",
+        "id": "r_barbara_buser__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://re-win.ch/verein/ueber",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304514128",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6224",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "marc_angst",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ect team: marc angst, pascal hentschel, benjamin poignon, michele brand component hunting: nina hsu, milena bu",
+        "id": "r_marc_angst__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/project/building-k-118",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199382",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6230",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "michel_massmuenster",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "poignon, michele brand component hunting: nina hsu, milena buchwalder, geraldine clausen, jan bauer, michelle",
+        "id": "r_michel_massmuenster__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/project/building-k-118",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304514161",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6257",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "charlotte_bofinger",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "t hunter. charlotte bofinger structural engineer, msc. in engineering cas eth regenerative materials mail char",
+        "id": "r_charlotte_bofinger__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/contact",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199418",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6266",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "marco_graber",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ning team graber pulver architekten as specialist planners in the development of the project and in the coordi",
+        "id": "r_marco_graber__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/project/recycling-center-juch-areal",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199422",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6270",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "thomas_pulver",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "am graber pulver architekten as specialist planners in the development of the project and in the coordination",
+        "id": "r_thomas_pulver__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/project/recycling-center-juch-areal",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199486",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6334",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "marc_loeliger",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "itecture: loeliger strub architektur credits: martin zeller, loeliger strub architektur project examples reuse",
+        "id": "r_marc_loeliger__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/project/lysp8",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199490",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6338",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "start_id": "martin_zeller",
+      "end_id": "zirkular",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "credits: martin zeller project examples elys media articles baunetz wissen: re-use par excellence tec21: bewa",
+        "id": "r_martin_zeller__VERBUNDEN_MIT_AKTEUR__zirkular",
+        "evidence_url": "https://zirkular.net/en/project/building-k-118",
+        "connection_kind": "context_affiliation_from_actor_list"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:65",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6439",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "start_id": "circular_structural_design",
+      "end_id": "concular",
+      "properties": {
+        "evidence_basis": "green_ai_hub_pilot",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Concular and Circular Structural Design developing matching algorithms",
+        "id": "r_circular_structural_design__verbunden_mit_akteur__concular",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://www.green-ai-hub.de/en/pilot-projects/pilotproject-concular",
+        "connection_kind": "reuse_matching_pilot"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157538353931884931",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "start_id": "Rotor",
+      "end_id": "opalis",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "lates={}; rotor - brussels | rotor skip to main content group 23 created with sketch. navigation principale pr",
+        "id": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis",
+        "evidence_url": "https://rotordb.org/en"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338748307",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5523",
+      "start_id": "rotordc",
+      "end_id": "whitewood",
+      "properties": {
+        "evidence_basis": "rotor_project_commissioner",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "cross_bubble_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Whitewood commissioner on OXY Centre Monnaie deconstruction project",
+        "id": "r_rotordc__verbunden_mit_akteur__whitewood",
+        "review_status": "evidence_on_properties",
+        "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "connection_kind": "project_commissioner"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199684",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6531",
+      "start_id": "rotordc",
+      "end_id": "Rotor",
+      "properties": {
+        "evidence_basis": "first_party_project_page",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "confidence": 0.6,
+        "source_scope": "rotor_dc_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor offices located literally above RotorDC stocks",
+        "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://www.rotordb.org/en/projects/rotor-dc-reuse-made-easy",
+        "connection_kind": "colocation_evere"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159790153745570180",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6594",
+      "start_id": "rotordc",
+      "end_id": "lionel_billiet",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "spin-off rotordc's website. design : ekta / website : bien a vous {\"path\":{\"baseurl\":\"\\/\",\"pathprefix\":\"en\\/\"",
+        "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__lionel_billiet",
+        "evidence_url": "https://rotordb.org/en/projects/careno-becircular"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162041953559255428",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6618",
+      "start_id": "rotordc",
+      "end_id": "sebastien_paulet",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "spin-off rotordc's website. design : ekta / website : bien a vous {\"path\":{\"baseurl\":\"\\/\",\"pathprefix\":\"en\\/\"",
+        "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__sebastien_paulet",
+        "evidence_url": "https://rotordb.org/en/projects/careno-becircular"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:49",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "start_id": "opalis",
+      "end_id": "rotordc",
+      "properties": {
+        "evidence_basis": "first_party_dealer_page",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "rotor_dc_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor Deconstruction listed dealer since 2016",
+        "id": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://opalis.eu/en/dealers/rotor-deconstruction",
+        "connection_kind": "directory_dealer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199725",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6590",
+      "start_id": "concular",
+      "end_id": "dominik_campanella",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "projects concular concular, the leading company for circular construction in germany, is on a mission to tran",
+        "id": "r_concular__VERBUNDEN_MIT_AKTEUR__dominik_campanella",
+        "evidence_url": "https://www.circularbuildingscoalition.org/blueprint-projects/concular"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159790153745570221",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6651",
+      "start_id": "concular",
+      "end_id": "rebekka_steinlein",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "teinlein, concular: hands on – materialkreislaufe praktisch und digital gestalten - architekturfunk - podcast",
+        "id": "r_concular__VERBUNDEN_MIT_AKTEUR__rebekka_steinlein",
+        "evidence_url": "https://heinze.podigee.io/147-new-episode"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922145876966113755",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:475",
+      "start_id": "cirkla",
+      "end_id": "sumami",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "cross_bubble_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "sumami listed in Cirkla reuse network directory",
+        "id": "r_cirkla__verbunden_mit_akteur__sumami",
+        "review_status": "evidence_on_properties",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/sumami/",
+        "connection_kind": "cirkla_directory"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:0",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "start_id": "cirkla",
+      "end_id": "materiuum",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/materiuum",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_cirkla__verbunden_mit_akteur__materiuum",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118199826",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6673",
+      "start_id": "cirkla",
+      "end_id": "urban_bricolage",
+      "properties": {
+        "evidence_basis": "w3_05_vma_web",
+        "review_run": "post_ier_w3_2026_06_07",
+        "confidence": 0.6,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "uadrat.ch cirkla der verein cirkla ist der verband aller akteur*innen der wiederverwendung. organisationen, fi",
+        "id": "r_cirkla__VERBUNDEN_MIT_AKTEUR__urban_bricolage",
+        "evidence_url": "https://urbanbricolage.ch"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338777618",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "start_id": "cirkla",
+      "end_id": "wick_reuse_roto_baumarkt",
+      "properties": {
+        "evidence_basis": "web_fetch_q05",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "evidence_url": "https://www.cirkla.ch/en/lassociation-cirkla/",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§2.3",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "the cirkla association - cirkla img:is([sizes=\"auto\" i], [sizes^=\"auto,\" i]) { contain-intrinsic-size: 3",
+        "id": "r_cirkla__verbunden_mit_akteur__wick_reuse_roto_baumarkt",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Elias Knecht - Committee member. ROTO-Reuse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338777620",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "start_id": "cirkla",
+      "end_id": "reuzi_ch",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/reuzi",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_cirkla__verbunden_mit_akteur__reuzi_ch",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6931153076220889110",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "start_id": "cirkla",
+      "end_id": "gruner_reuse_platform",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/gruner-ag",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_cirkla__verbunden_mit_akteur__gruner_reuse_platform",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338782326",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "start_id": "cirkla",
+      "end_id": "salza",
+      "properties": {
+        "evidence_basis": "first_party_association_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/lassociation-cirkla/",
+        "connection_kind": "committee_member_affiliation",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§2.3",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Olivier de Perrot - Committee member, Salza",
+        "id": "r_cirkla__verbunden_mit_akteur__salza",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Olivier de Perrot - Committee member. Salza"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338782330",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "cirkla",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/useagain",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§5",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "plateforme de mise en relation pour matériaux de construction",
+        "id": "r_cirkla__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Useagain.ch est une plateforme de mise en relation pour matériaux de construction et savoir-faire."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118227985",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "first_party_supply_chain_news",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+        "connection_kind": "supply_chain_roche_resale",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§6",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+        "id": "r_bauteilboerse_basel_overall__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118232670",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "start_id": "backacia",
+      "end_id": "opalis",
+      "properties": {
+        "evidence_basis": "opalis_supplier_directory",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "listed on Opalis supplier directory",
+        "id": "r_backacia__verbunden_mit_akteur__opalis",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+        "connection_kind": "supplier_listing"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157538353931917924",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "start_id": "cycle_up",
+      "end_id": "opalis",
+      "properties": {
+        "evidence_basis": "opalis_supplier_directory",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "marketplace and reconditioning workshops listed on Opalis",
+        "id": "r_cycle_up__verbunden_mit_akteur__opalis",
+        "review_status": "evidence_hardening_2026_06_06",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+        "connection_kind": "supplier_listing"
+      }
+    }
+  ]
+}

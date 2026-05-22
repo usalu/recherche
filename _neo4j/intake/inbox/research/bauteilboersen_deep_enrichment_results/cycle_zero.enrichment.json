@@ -1,0 +1,57 @@
+{
+  "anchor_id": "cycle_zero",
+  "sources_visited": [
+    {
+      "url": "https://cyclezero.fr/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.cycle0.cycle0app",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://apps.apple.com/fr/app/cycle-z%C3%A9ro/id6443607769",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_salvage_app",
+      "evidence_urls": [
+        "https://cyclezero.fr/"
+      ],
+      "evidence_quote": "Application for recovery/free reuse of site materials; exact categories not exposed.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Cycle Zéro",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://cyclezero.fr/",
+      "https://play.google.com/store/apps/details?id=com.cycle0.cycle0app"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material + Bauteiltyp",
+      "reason": "App/operator pages did not expose stable category vocabulary."
+    },
+    {
+      "topic": "Rueckbau",
+      "reason": "Free recovery does not equal on-site deconstruction by operator; no rbv link."
+    }
+  ],
+  "run_notes": []
+}

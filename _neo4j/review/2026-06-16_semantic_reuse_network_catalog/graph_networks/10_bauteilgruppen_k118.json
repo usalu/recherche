@@ -1,0 +1,715 @@
+{
+  "id": "10_bauteilgruppen_k118",
+  "section": "10",
+  "title": "K.118 Bauteilgruppen × Bauteiltypen",
+  "cypher": "MATCH (p:Projekt {id: 'p_k118_kopfbau_halle_118_winterthur'})-[r:HAT_BAUTEILGRUPPE]->(bg:Bauteilgruppe)\nOPTIONAL MATCH (bg)-[t:HAT_BAUTEILTYP]->(bt:Bauteiltyp)\nRETURN p, r, bg, t, bt;",
+  "status": "ok",
+  "row_count": 20,
+  "node_count": 24,
+  "relationship_count": 23,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "id": "p_k118_kopfbau_halle_118_winterthur",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "CapEx vergleichbar mit Neubau",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "K118 Kopfbau Halle 118 Winterthur",
+        "year_completed": 2021,
+        "latitude": 47.4997,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "area_m2_gross": 1100,
+        "entwurfsbeschreibung": "K118 is one of the clearest examples of component-led architecture. Reclaimed steel, windows, facade elements, stairs and interior pieces are composed into an addition whose design was shaped by what could be found, tested and joined. The building does not hide heterogeneity; it turns it into architectural order through careful proportion, exposed assembly and precise detailing. The result is neither nostalgic nor improvised, but a rigorous architecture of visible second-use elements.",
+        "metadata_sidecar_key": "node:p_k118_kopfbau_halle_118_winterthur",
+        "id": "p_k118_kopfbau_halle_118_winterthur",
+        "lca_modules": [
+          "A1-A3 Produkt"
+        ],
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 8.7267,
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager",
+          "Temporal: geplant"
+        ],
+        "name": "K.118 Winterthur",
+        "adresse": "Lagerplatz 24, 8400 Winterthur, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "source_urls": [
+          "https://zirkular.net/de/projekt/k-118-kopfbau-halle-118",
+          "https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ",
+          "https://www.galvanizingeurope.org/case_studies/k-118-from-former-factory-to-beacon-of-sustainable-building",
+          "https://www.arch2o.com/k118-kopfbau-halle-118-bauburo-in-situ",
+          "https://zirkular.net/en/project/reuse-in-construction-a-compendium-of-circular-architecture",
+          "https://www.researchgate.net/publication/376148869_Case_Study_K118_-_The_Reuse_of_Building_Components_in_Winterthur_Switzerland",
+          "https://intergalva.com/awards/global-galvanizing-awards-2024/k-118-kopfbau-halle-118",
+          "https://www.lagerplatz.ch/"
+        ],
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:376",
+      "id": "bg_stahl_mehrere_k118_external_stair",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "alte_funktion": "Fluchttreppe / Außentreppe Orion-Bürogebäude Zürich",
+        "reuse_status": "reuse",
+        "tragend": true,
+        "name": "Externe Stahltreppe",
+        "funktionswechsel": [
+          "Gleiche_Funktion"
+        ],
+        "metadata_sidecar_key": "node:bg_stahl_mehrere_k118_external_stair",
+        "id": "bg_stahl_mehrere_k118_external_stair",
+        "bg_kind": "batch",
+        "bauteilebene": [
+          "System"
+        ],
+        "neue_funktion": "Erschließung / Fluchtweg K.118",
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4533",
+      "id": "bt_gelaender",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "space_plan",
+        "name": "Gelaender",
+        "id": "bt_gelaender",
+        "layer": [
+          "Space Plan"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4537",
+      "id": "bt_treppe",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "space_plan",
+        "name": "Treppe",
+        "id": "bt_treppe",
+        "layer": [
+          "Space Plan"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:377",
+      "id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "alte_funktion": "Beläge / Bühnen- oder Rückbaubauteile",
+        "reuse_status": "reuse",
+        "name": "Naturstein-/Granitplatten",
+        "funktionswechsel": [
+          "Gleiche_Funktion"
+        ],
+        "metadata_sidecar_key": "node:bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "bg_kind": "partial_batch",
+        "bauteilebene": [
+          "Bauteilgruppe"
+        ],
+        "neue_funktion": "Böden, Wände und Innenausbau K.118",
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4525",
+      "id": "bt_ausbau",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "space_plan",
+        "name": "Ausbau",
+        "id": "bt_ausbau",
+        "layer": [
+          "Space Plan"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4526",
+      "id": "bt_boden",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "space_plan",
+        "name": "Boden",
+        "id": "bt_boden",
+        "layer": [
+          "Space Plan"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4539",
+      "id": "bt_wand",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "structure",
+        "name": "Wand",
+        "id": "bt_wand",
+        "layer": [
+          "Structure"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:379",
+      "id": "bg_stahl_mehrere_k118_structure",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "tragwerksprinzip": [
+          "Skeletttragwerk"
+        ],
+        "alte_funktion": "Tragwerk einer Halle im ELYS-Projekt Basel",
+        "reuse_status": "reuse",
+        "tragend": true,
+        "name": "Stahlträger und Stützen…",
+        "funktionswechsel": [
+          "Gleiche_Funktion"
+        ],
+        "metadata_sidecar_key": "node:bg_stahl_mehrere_k118_structure",
+        "id": "bg_stahl_mehrere_k118_structure",
+        "bg_kind": "batch",
+        "bauteilebene": [
+          "System"
+        ],
+        "neue_funktion": "Tragwerk der dreigeschossigen K.118-Aufstockung",
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4534",
+      "id": "bt_stuetze",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "structure",
+        "name": "Stuetze",
+        "id": "bt_stuetze",
+        "layer": [
+          "Structure"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4536",
+      "id": "bt_traeger",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "structure",
+        "name": "Traeger",
+        "id": "bt_traeger",
+        "layer": [
+          "Structure"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:818",
+      "id": "bg_stahl_mehrere_k118_kopfbau_halle_118_winterthur_stahltraeger_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "name": "bg_reuse_stahl_mehrere_k118_kopfbau_halle_118_winterthur_stahltraeger_candidate",
+        "created_at": "2026-06-03T23:43:55.182000000+00:00",
+        "id": "bg_stahl_mehrere_k118_kopfbau_halle_118_winterthur_stahltraeger_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:819",
+      "id": "bg_stahl_erschliessung_k118_aussentreppe_orion_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "name": "bg_reuse_stahl_erschliessung_k118_aussentreppe_orion_candidate",
+        "created_at": "2026-06-03T23:43:55.182000000+00:00",
+        "id": "bg_stahl_erschliessung_k118_aussentreppe_orion_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:820",
+      "id": "bg_naturstein_fassade_k118_granit_orion_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "name": "bg_reuse_naturstein_fassade_k118_granit_orion_candidate",
+        "created_at": "2026-06-03T23:43:55.182000000+00:00",
+        "id": "bg_naturstein_fassade_k118_granit_orion_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:868",
+      "id": "bg_stahl_tragwerk_k118_basel_steel_beams_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_stahl_tragwerk_k118_basel_steel_beams_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_stahl_tragwerk_k118_basel_steel_beams_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:869",
+      "id": "bg_stahl_treppe_k118_orion_stair_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_stahl_treppe_k118_orion_stair_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_stahl_treppe_k118_orion_stair_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:870",
+      "id": "bg_glas_fenster_k118_zurich_windows_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_glas_fenster_k118_zurich_windows_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_glas_fenster_k118_zurich_windows_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:871",
+      "id": "bg_naturstein_boden_k118_granite_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_naturstein_boden_k118_granite_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_naturstein_boden_k118_granite_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:872",
+      "id": "bg_metall_fassade_k118_red_sheets_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_metall_fassade_k118_red_sheets_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_metall_fassade_k118_red_sheets_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:873",
+      "id": "bg_holz_dach_k118_aarau_roof_elements_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_holz_dach_k118_aarau_roof_elements_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_holz_dach_k118_aarau_roof_elements_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:874",
+      "id": "bg_holz_tueren_k118_uster_doors_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_holz_tueren_k118_uster_doors_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_holz_tueren_k118_uster_doors_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:875",
+      "id": "bg_holz_boden_k118_parquet_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_holz_boden_k118_parquet_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_holz_boden_k118_parquet_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:876",
+      "id": "bg_technik_ausbau_k118_fixtures_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_technik_ausbau_k118_fixtures_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_technik_ausbau_k118_fixtures_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:877",
+      "id": "bg_mehrere_technik_k118_pv_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_mehrere_technik_k118_pv_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_mehrere_technik_k118_pv_candidate",
+        "bg_kind": "partial_batch"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115384",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:376",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_stahl_mehrere_k118_external_stair",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_p_k118_kopfbau_halle_118_winterthur__HAT_BAUTEILGRUPPE__bg_reuse_stahl_mehrere_k118_external_stair"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152988574816141688",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:376",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4533",
+      "start_id": "bg_stahl_mehrere_k118_external_stair",
+      "end_id": "bt_gelaender",
+      "properties": {
+        "id": "r_bg_reuse_stahl_mehrere_k118_external_stair__HAT_BAUTEILTYP__bt_gelaender"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155240374629826936",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:376",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4537",
+      "start_id": "bg_stahl_mehrere_k118_external_stair",
+      "end_id": "bt_treppe",
+      "properties": {
+        "id": "r_bg_reuse_stahl_mehrere_k118_external_stair__HAT_BAUTEILTYP__bt_treppe"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115385",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:377",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "properties": {
+        "id": "r_p_k118_kopfbau_halle_118_winterthur__HAT_BAUTEILGRUPPE__bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152988574816141689",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:377",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4525",
+      "start_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "end_id": "bt_ausbau",
+      "properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels__HAT_BAUTEILTYP__bt_ausbau"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155240374629826937",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:377",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4526",
+      "start_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "end_id": "bt_boden",
+      "properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels__HAT_BAUTEILTYP__bt_boden"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157492174443512185",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:377",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4539",
+      "start_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "end_id": "bt_wand",
+      "properties": {
+        "id": "r_bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels__HAT_BAUTEILTYP__bt_wand"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115387",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:379",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_stahl_mehrere_k118_structure",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_p_k118_kopfbau_halle_118_winterthur__HAT_BAUTEILGRUPPE__bg_reuse_stahl_mehrere_k118_structure"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152988574816141691",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:379",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4534",
+      "start_id": "bg_stahl_mehrere_k118_structure",
+      "end_id": "bt_stuetze",
+      "properties": {
+        "id": "r_bg_reuse_stahl_mehrere_k118_structure__HAT_BAUTEILTYP__bt_stuetze"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155240374629826939",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:379",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4536",
+      "start_id": "bg_stahl_mehrere_k118_structure",
+      "end_id": "bt_traeger",
+      "properties": {
+        "id": "r_bg_reuse_stahl_mehrere_k118_structure__HAT_BAUTEILTYP__bt_traeger"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115826",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:818",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_stahl_mehrere_k118_kopfbau_halle_118_winterthur_stahltraeger_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10A-083"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115827",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:819",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_stahl_erschliessung_k118_aussentreppe_orion_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10A-088"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115828",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:820",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_naturstein_fassade_k118_granit_orion_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10A-094"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115876",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:868",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_stahl_tragwerk_k118_basel_steel_beams_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-01a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115877",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:869",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_stahl_treppe_k118_orion_stair_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-02a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115878",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:870",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_glas_fenster_k118_zurich_windows_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-03a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115879",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:871",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_naturstein_boden_k118_granite_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-04a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115880",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:872",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_metall_fassade_k118_red_sheets_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-05a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115881",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:873",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_holz_dach_k118_aarau_roof_elements_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-06a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115882",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:874",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_holz_tueren_k118_uster_doors_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-07a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115883",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:875",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_holz_boden_k118_parquet_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-08a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115884",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:876",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_technik_ausbau_k118_fixtures_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-09a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115885",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:877",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "bg_mehrere_technik_k118_pv_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-003-10a"
+      }
+    }
+  ]
+}

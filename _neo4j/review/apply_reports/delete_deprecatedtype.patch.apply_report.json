@@ -1,0 +1,338 @@
+{
+  "confirmation_required": "APPLY delete_deprecatedtype.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 5450,
+    "relationships": 23796
+  },
+  "counts_after_expected": {
+    "nodes": 5450,
+    "relationships": 23796
+  },
+  "counts_before": {
+    "nodes": 5463,
+    "relationships": 23796
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-01T09:47:28.744585+00:00",
+  "patch": "_neo4j\\review\\2026-06-01_deprecatedtype_delete\\delete_deprecatedtype.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_label__GraphVersion",
+          "kind": "label",
+          "new_name": "(none — dropped)",
+          "old_name": "GraphVersion",
+          "reason": "Experimental versioning label — never populated."
+        }
+      },
+      "id": "dep_label__GraphVersion",
+      "line": 1,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_label__ZertifizierungBewertungssystem",
+          "kind": "label",
+          "new_name": "Zertifizierungssystem",
+          "old_name": "ZertifizierungBewertungssystem",
+          "reason": "Renamed in R2.d for brevity — old name preserved as alias on new nodes."
+        }
+      },
+      "id": "dep_label__ZertifizierungBewertungssystem",
+      "line": 2,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_label__LebenszyklusModul",
+          "kind": "label",
+          "new_name": "LCAModule",
+          "old_name": "LebenszyklusModul",
+          "reason": "Renamed in R2.b — original IDs (lz_*) preserved on new nodes."
+        }
+      },
+      "id": "dep_label__LebenszyklusModul",
+      "line": 3,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__AUS__BAUWERK",
+          "kind": "rel_type",
+          "new_name": "FROM_DONOR",
+          "old_name": "AUS_BAUWERK",
+          "reason": "Phase 4.2 rename."
+        }
+      },
+      "id": "dep_rel_type__AUS__BAUWERK",
+      "line": 4,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__EINGEBAUT__IN",
+          "kind": "rel_type",
+          "new_name": "INTO_RECEIVER",
+          "old_name": "EINGEBAUT_IN",
+          "reason": "Phase 4.2 rename."
+        }
+      },
+      "id": "dep_rel_type__EINGEBAUT__IN",
+      "line": 5,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__HAT__SCHADSTOFF",
+          "kind": "rel_type",
+          "new_name": "HAS_RISK_POLLUTANT",
+          "old_name": "HAT_SCHADSTOFF",
+          "reason": "Phase 3.2 split into HAS_RISK_POLLUTANT + REQUIRES_VERIFICATION_FOR."
+        }
+      },
+      "id": "dep_rel_type__HAT__SCHADSTOFF",
+      "line": 6,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__NUTZT__TOOL",
+          "kind": "rel_type",
+          "new_name": "NUTZT_SOFTWARE",
+          "old_name": "NUTZT_TOOL",
+          "reason": "Phase 2.5.e Tool relabel."
+        }
+      },
+      "id": "dep_rel_type__NUTZT__TOOL",
+      "line": 7,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__ASSOZIIERT__MIT__PROJEKT",
+          "kind": "rel_type",
+          "new_name": "STUB_PROJECT_LINK",
+          "old_name": "ASSOZIIERT_MIT_PROJEKT",
+          "reason": "Renamed in R9 for honest stub semantics."
+        }
+      },
+      "id": "dep_rel_type__ASSOZIIERT__MIT__PROJEKT",
+      "line": 8,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__TEILT__LAYER",
+          "kind": "rel_type",
+          "new_name": "(restored in R2.a)",
+          "old_name": "TEILT_LAYER",
+          "reason": "Restored from brand_layer property by mig_r2_a_restore_layer."
+        }
+      },
+      "id": "dep_rel_type__TEILT__LAYER",
+      "line": 9,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__BERECHNET__NACH__MODUL",
+          "kind": "rel_type",
+          "new_name": "(restored in R2.b)",
+          "old_name": "BERECHNET_NACH_MODUL",
+          "reason": "Restored from Phase 2.5 deletion journal by mig_r2_b_restore_lca_module."
+        }
+      },
+      "id": "dep_rel_type__BERECHNET__NACH__MODUL",
+      "line": 10,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__HAT__RECHTLICHE__BEDINGUNG",
+          "kind": "rel_type",
+          "new_name": "(restored in R2.c)",
+          "old_name": "HAT_RECHTLICHE_BEDINGUNG",
+          "reason": "Restored from Phase 2.5 deletion journal by mig_r2_c_restore_legal."
+        }
+      },
+      "id": "dep_rel_type__HAT__RECHTLICHE__BEDINGUNG",
+      "line": 11,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__GILT__IN__LAND",
+          "kind": "rel_type",
+          "new_name": "(restored in R2.c via journal edges)",
+          "old_name": "GILT_IN_LAND",
+          "reason": "Restored from Phase 2.5 deletion journal by mig_r2_c_restore_legal."
+        }
+      },
+      "id": "dep_rel_type__GILT__IN__LAND",
+      "line": 12,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "DeprecatedType"
+        ],
+        "properties": {
+          "deprecated_by": "mig_r10_deprecated_type_seed",
+          "evidence_basis": "audit_record",
+          "evidence_confidence": "belegt",
+          "evidence_origin": "source_curated",
+          "id": "dep_rel_type__HAT__ZERTIFIZIERUNG",
+          "kind": "rel_type",
+          "new_name": "(restored in R2.d)",
+          "old_name": "HAT_ZERTIFIZIERUNG",
+          "reason": "Restored from Phase 2.5 deletion journal by mig_r2_d_restore_certifications."
+        }
+      },
+      "id": "dep_rel_type__HAT__ZERTIFIZIERUNG",
+      "line": 13,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 0,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 13,
+    "would_delete_node": 13
+  }
+}

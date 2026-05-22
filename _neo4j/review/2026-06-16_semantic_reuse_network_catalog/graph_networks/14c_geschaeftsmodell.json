@@ -1,0 +1,2272 @@
+{
+  "id": "14c_geschaeftsmodell",
+  "section": "14c",
+  "title": "Actor business-model network",
+  "cypher": "MATCH (a:Akteur)-[r:HAT_GESCHAEFTSMODELL]->(gm:Geschaeftsmodell)\nRETURN a, r, gm;",
+  "status": "ok",
+  "row_count": 90,
+  "node_count": 66,
+  "relationship_count": 90,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:60",
+      "id": "la_ressourcerie_fribourg",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "La Ressourcerie Fribourg",
+        "id": "la_ressourcerie_fribourg",
+        "source_urls": [
+          "https://www.la-ressourcerie.ch/projets",
+          "https://www.la-ressourcerie.ch/les-mat%C3%A9riaux",
+          "https://www.la-ressourcerie.ch/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "id": "gm_shop_eigenstock",
+      "labels": [
+        "Geschaeftsmodell"
+      ],
+      "properties": {
+        "name": "Shop mit Eigenstock",
+        "id": "gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "id": "baumab_kassel",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "BauMaB Kassel homepage",
+          "BauMaB Kassel offers",
+          "BauMaB Kassel buy workflow",
+          "BauMaB Kassel sell workflow",
+          "BauMaB Kassel imprint"
+        ],
+        "name": "BauMaB Kassel / Bauteilbörse Kassel",
+        "id": "baumab_kassel",
+        "source_urls": [
+          "https://baumab-kassel.de/"
+        ],
+        "primary_source_url": "https://baumab-kassel.de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "id": "zirkulie_bauteilboerse_triesen",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ZirkuLIE centre and Bauteilboerse",
+          "ZirkuLIE webshop",
+          "ZirkuLIE window offers",
+          "ZirkuLIE door offers",
+          "ZirkuLIE imprint"
+        ],
+        "name": "ZirkuLIE Bauteilbörse Triesen",
+        "id": "zirkulie_bauteilboerse_triesen",
+        "source_urls": [
+          "https://www.zirkulie.net/zentrum-fuer-zirkulaeres-bauen",
+          "https://shop.zirkulie.net/",
+          "https://shop.zirkulie.net/produkt-kategorie/gebaeudehuelle-2/fenster-gebaeudehuelle-2/",
+          "https://shop.zirkulie.net/produkt-kategorie/innenausbau-2/tuere-innenausbau-2/",
+          "https://www.zirkulie.net/impressum"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2073",
+      "id": "ressourcerie_lausanne_materiuum_ruul",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Ressourcerie Lausanne / Matériuum / R-UUL",
+        "id": "ressourcerie_lausanne_materiuum_ruul",
+        "source_urls": [
+          "https://materiuum.ch/ressourcerie-lausanne-magasin-shop/",
+          "https://materiuum.ch/boutique/",
+          "https://materiuum.ch/deconstruction-et-valorisation/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "id": "gebruiktebouwmaterialen",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "gebruiktebouwmaterialen-gbm",
+          "Chiro_d_Itterbeek_Dilbee…"
+        ],
+        "name": "Gebruiktebouwmaterialen",
+        "id": "gebruiktebouwmaterialen",
+        "source_urls": [
+          "https://gebruiktebouwmaterialen.com/",
+          "https://gebruiktebouwmaterialen.com/over-ons",
+          "https://gebruiktebouwmaterialen.com/assortiment.html",
+          "https://madaster.com/inspiration/madaster-and-gebruiktebouwmaterialen-com-collaborate-on-the-reuse-of-building-materials"
+        ],
+        "primary_source_url": "https://gebruiktebouwmaterialen.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "id": "bauteilladen_winterthur",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilladen-winterthur",
+          "Grubenstrasse_29_Werkhof…"
+        ],
+        "name": "Bauteilladen Winterthur",
+        "id": "bauteilladen_winterthur",
+        "source_urls": [
+          "https://bauteilladen.ch/"
+        ],
+        "primary_source_url": "https://bauteilladen.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5223",
+      "id": "cleveland_steel_tubes",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Cleveland Steel & Tubes",
+        "metadata_sidecar_key": "node:cleveland_steel_tubes",
+        "id": "cleveland_steel_tubes",
+        "source_urls": [
+          "https://cleveland-steel.com/"
+        ],
+        "primary_source_url": "https://cleveland-steel.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "id": "rotordc",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rotor Deconstruction — Reuse of building materials made easy",
+          "Chiro_d_Itterbeek_Dilbee…",
+          "Maison_Vignette_Auderghe…",
+          "Multi_Brussels_Reuse_in_…",
+          "rotordc"
+        ],
+        "name": "RotorDC",
+        "id": "rotordc",
+        "source_urls": [
+          "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72"
+        ],
+        "primary_source_url": "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6571",
+      "id": "materialnomaden",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "materialnomaden"
+        ],
+        "name": "materialnomaden",
+        "id": "materialnomaden",
+        "source_urls": [
+          "https://www.materialnomaden.at/"
+        ],
+        "primary_source_url": "https://www.materialnomaden.at/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "id": "concular",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "AWM_Muenster_Circular_Of…",
+          "Concular"
+        ],
+        "name": "Concular",
+        "id": "concular",
+        "source_urls": [
+          "https://concular.de/",
+          "https://concular.de/urban-mining/"
+        ],
+        "primary_source_url": "https://concular.de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "id": "bauteilboerse_bremen",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilboerse-bremen"
+        ],
+        "name": "Bauteilbörse Bremen",
+        "id": "bauteilboerse_bremen",
+        "source_urls": [
+          "https://www.bauteilboerse-bremen.de/start",
+          "https://www.bremen.de/visitenkarte/bauteilboerse-bremen-344897"
+        ],
+        "primary_source_url": "https://www.bauteilboerse-bremen.de/start"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "id": "materiuum",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Matériuum Team"
+        ],
+        "name": "Matériuum",
+        "id": "materiuum",
+        "source_urls": [
+          "https://materiuum.ch/"
+        ],
+        "primary_source_url": "https://materiuum.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "id": "ggzatwork_laden2_bauteile_zug",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "GGZ@WORK Laden 2 Bauteile Zug",
+        "id": "ggzatwork_laden2_bauteile_zug",
+        "source_urls": [
+          "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+          "https://ggzatwork.ch/auftragskunden/demontage-montage",
+          "https://ggzatwork.ch/auftragskunden/raeumung-entsorgung"
+        ],
+        "primary_source_url": "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "id": "bauteilboerse_basel_overall",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilbörse Basel",
+        "id": "bauteilboerse_basel_overall",
+        "source_urls": [
+          "https://bauteilboerse-basel.ch/bauteile/",
+          "https://bauteilboerse-basel.ch/nachhaltigkeit/",
+          "https://bauteilboerse-basel.ch/",
+          "https://bauteilboerse-basel.ch/ueber-uns/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "id": "wick_reuse_roto_baumarkt",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Wick ReUse / ROTO Baumarkt",
+        "id": "wick_reuse_roto_baumarkt",
+        "source_urls": [
+          "https://wickreuse.ch/baumarkt/"
+        ],
+        "primary_source_url": "https://wickreuse.ch/baumarkt/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34839",
+      "id": "syphon_ag_bauteilboerse_biel_bruegg",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Syphon AG Bauteilbörse Biel-Brügg",
+        "id": "syphon_ag_bauteilboerse_biel_bruegg",
+        "source_urls": [
+          "https://syphon.ch/vente-de-materiaux/",
+          "https://www.syphon.ch/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34840",
+      "id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "ReUse Recycling Center Riedtwil / wiederverwendung.ch",
+        "id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+        "source_urls": [
+          "https://www.wiederverwendung.ch/",
+          "https://shop.wiederverwendung.ch/de/434/gebrauchte-bauteile-occasion-bauteile",
+          "https://shop.wiederverwendung.ch/"
+        ],
+        "primary_source_url": "https://www.wiederverwendung.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "id": "bauteilverwertung_koeppel_klein",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilverwertung Köppel & Klein",
+        "id": "bauteilverwertung_koeppel_klein",
+        "source_urls": [
+          "https://www.bauteilverwertung.ch/",
+          "https://www.bauteilverwertung.ch/abbruch.html",
+          "https://www.bauteilverwertung.ch/verkauf.html"
+        ],
+        "primary_source_url": "https://www.bauteilverwertung.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "id": "archipel_sion_ressourcerie",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Archipel Sion Ressourcerie",
+        "id": "archipel_sion_ressourcerie",
+        "source_urls": [
+          "https://archipelsion.ch/ressourcerie/inventaire/",
+          "https://archipelsion.ch/",
+          "https://archipelsion.ch/evenements/"
+        ],
+        "primary_source_url": "https://archipelsion.ch/ressourcerie/inventaire/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Stiftung Chance BauTeile Zürich / Glattbrugg",
+        "id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+        "source_urls": [
+          "https://www.chance.ch/dienstleistungen/bauteile",
+          "https://www.chance.ch/dienstleistungen",
+          "https://www.chance.ch/produkte"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "id": "articonnex",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "articonnex"
+        ],
+        "name": "Articonnex",
+        "id": "articonnex",
+        "source_urls": [
+          "https://articonnex.com/",
+          "https://articonnex.com/collections/reemploi",
+          "https://www.jaimelesstartups.fr/articonnex-economie-circulaire-anti-gaspi-materieux-bricolage"
+        ],
+        "primary_source_url": "https://articonnex.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "id": "baticycle",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "baticycle"
+        ],
+        "name": "Bâticycle",
+        "id": "baticycle",
+        "source_urls": [
+          "https://baticycle.fr/"
+        ],
+        "primary_source_url": "https://baticycle.fr/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "id": "batiterre",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "batiterre"
+        ],
+        "name": "BatiTerre",
+        "id": "batiterre",
+        "source_urls": [
+          "https://www.batiterre.be/"
+        ],
+        "primary_source_url": "https://www.batiterre.be/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "id": "cornermat_retrival",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "cornermat-retrival"
+        ],
+        "name": "Cornermat / Retrival",
+        "id": "cornermat_retrival",
+        "source_urls": [
+          "https://www.cornermat.be/",
+          "https://www.cornermat.be/shop",
+          "https://advitam-material.be/nl/actor/cornermat"
+        ],
+        "primary_source_url": "https://www.cornermat.be/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "id": "genbyg",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "genbyg"
+        ],
+        "name": "Genbyg",
+        "id": "genbyg",
+        "source_urls": [
+          "https://genbyg.dk/"
+        ],
+        "primary_source_url": "https://genbyg.dk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "id": "materialenbank_leuven_atelier_circuler",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "materialenbank-leuven-atelier-circuler"
+        ],
+        "name": "Materialenbank Leuven / Atelier Circuler",
+        "id": "materialenbank_leuven_atelier_circuler",
+        "source_urls": [
+          "https://ateliercirculer.be/materialenbank",
+          "https://ateliercirculer.be/",
+          "https://ateliercirculer.be/materialenbank/catalogus",
+          "https://www.vvsg.be/kennis/praktijken/praktijkendatabank/materialenbank-leuven",
+          "https://pers.leuven.be/de-leuvense-materialenbank-redt-470-ton-materialen-in-2025-recordjaar-voor-circulaire-economie"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "id": "re_store_harvestmap_vienna",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "aliases": [
+          "HarvestMAP"
+        ],
+        "source_titles": [
+          "re-store-harvestmap-vienna"
+        ],
+        "name": "re:store / HarvestMAP Vienna",
+        "id": "re_store_harvestmap_vienna",
+        "source_urls": [
+          "https://www.restore.or.at/",
+          "https://www.restore.or.at/impressum",
+          "https://www.materialnomaden.at/about"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "id": "gm_marketplace_vermittlung",
+      "labels": [
+        "Geschaeftsmodell"
+      ],
+      "properties": {
+        "name": "Multi-Vendor-Marktplatz",
+        "id": "gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18156",
+      "id": "baumatpool_ch",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Baumatpool.ch",
+        "id": "baumatpool_ch",
+        "source_urls": [
+          "https://www.baumatpool.ch/de/",
+          "https://www.baumatpool.ch/de/content/impressum/",
+          "https://www.baumatpool.ch/de/content/faq/"
+        ],
+        "primary_source_url": "https://www.baumatpool.ch/de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34835",
+      "id": "btvz_zuerichsee_oberland",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilvermittlung Zürichsee-Oberland",
+        "id": "btvz_zuerichsee_oberland",
+        "source_urls": [
+          "https://www.btvz.ch/angebote/",
+          "https://www.btvz.ch/so-funktioniert-es/",
+          "https://www.btvz.ch/portraet/",
+          "https://www.btvz.ch/suchliste/"
+        ],
+        "primary_source_url": "https://www.btvz.ch/angebote/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "id": "reuzi_ch",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "REUZI",
+        "id": "reuzi_ch",
+        "source_urls": [
+          "https://reuzi.ch/",
+          "https://reuzi.ch/agora/",
+          "https://www.immobilier.ch/fr/actualite/reuzi-ressource-les-chantiers-avec-du-reemploi-13814"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "id": "materiuum_geneve_ressourcerie",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Matériuum Genève Ressourcerie",
+        "id": "materiuum_geneve_ressourcerie",
+        "source_urls": [
+          "https://materiuum.ch/ressourcerie-espace-magasin-shop-geneve/",
+          "https://materiuum.ch/lassociation/",
+          "https://materiuum.ch/boutique/",
+          "https://materiuum.ch/deconstruction-et-valorisation/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "id": "gruner_reuse_platform",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Gruner ReUse",
+          "Planen mit ReUse"
+        ],
+        "name": "Gruner ReUse",
+        "id": "gruner_reuse_platform",
+        "source_urls": [
+          "https://www.gruner-reuse.ch",
+          "https://www.gruner-reuse.ch/projekt",
+          "https://www.gruner-reuse.ch/produkte",
+          "https://www.gruner.ch/de/news/alt-wird-neu-zweites-leben-fuer-gebrauchte-bauteile-mit-gruner-reuse"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "id": "backacia",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "backacia"
+        ],
+        "name": "Backacia",
+        "id": "backacia",
+        "source_urls": [
+          "https://backacia.com/",
+          "https://opalis.eu/fr/fournisseurs/backacia"
+        ],
+        "primary_source_url": "https://backacia.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "id": "batrecup",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "batrecup"
+        ],
+        "name": "BatRecup",
+        "id": "batrecup",
+        "source_urls": [
+          "https://www.batrecup.com/",
+          "https://play.google.com/store/apps/details?id=com.batrecup",
+          "https://www.batrecup.com/batrecup-lappli-cest-parti"
+        ],
+        "primary_source_url": "https://www.batrecup.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "id": "building_spares_market",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "building-spares-market"
+        ],
+        "name": "Building Spares Market",
+        "id": "building_spares_market",
+        "source_urls": [
+          "https://buildingsparesmarket.co.uk/",
+          "https://buildingsparesmarket.co.uk/about",
+          "https://buildingsparesmarket.co.uk/sell-spare-and-second-hand-building-supplies-uk",
+          "https://buildingsparesmarket.co.uk/advert-category/general-building-materials"
+        ],
+        "primary_source_url": "https://buildingsparesmarket.co.uk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "id": "cycle_up",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "cycle-up"
+        ],
+        "name": "Cycle Up",
+        "id": "cycle_up",
+        "source_urls": [
+          "https://opalis.eu/fr/fournisseurs/cycle",
+          "https://vb.nweurope.eu/media/21153/fcrbe_cas-cycle-up-final18oct2023_en.pdf",
+          "https://www.cycle-up.fr/",
+          "https://www.iledefrance.fr/tous-les-services/ma-region-pres-de-chez-moi/environnement/economie-circulaire-et-gestion-des-dechets/162815-creation-dun-atelier-de-reconditionnement-de-6000-sanitaires-par-et-dautres-materiaux-de-reemploi-pour-cycle"
+        ],
+        "primary_source_url": "https://opalis.eu/fr/fournisseurs/cycle"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "id": "cycle_zero",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "cycle-zero"
+        ],
+        "name": "Cycle Zéro",
+        "id": "cycle_zero",
+        "source_urls": [
+          "https://cyclezero.fr/",
+          "https://play.google.com/store/apps/details?id=com.cycle0.cycle0app",
+          "https://apps.apple.com/fr/app/cycle-z%C3%A9ro/id6443607769"
+        ],
+        "primary_source_url": "https://cyclezero.fr/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "id": "enviromate",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "enviromate"
+        ],
+        "name": "Enviromate",
+        "id": "enviromate",
+        "source_urls": [
+          "https://www.enviromate.co.uk/"
+        ],
+        "primary_source_url": "https://www.enviromate.co.uk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "id": "insert_marketplace",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "insert-marketplace"
+        ],
+        "name": "Insert Marketplace",
+        "id": "insert_marketplace",
+        "source_urls": [
+          "https://www.insert.nl/",
+          "https://www.insert.nl/producten/insert-marktplaats/"
+        ],
+        "primary_source_url": "https://www.insert.nl/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "id": "material_index",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "material-index"
+        ],
+        "name": "Material Index",
+        "id": "material_index",
+        "source_urls": [
+          "https://material-index.co.uk/"
+        ],
+        "primary_source_url": "https://material-index.co.uk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "id": "materialrest24",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "ier_a1_2026_06_06",
+        "source_titles": [
+          "materialrest24"
+        ],
+        "name": "Materialrest24",
+        "id": "materialrest24",
+        "source_urls": [
+          "https://www.handwerk-magazin.de/materialrest24de-restbestaende-clever-verwerten-183318",
+          "https://nachhaltiges-handwerk.de/gute-beispiele/materialrest24",
+          "https://www.instagram.com/materialrest24.de"
+        ],
+        "primary_source_url": "https://www.handwerk-magazin.de/materialrest24de-restbestaende-clever-verwerten-183318",
+        "source_quote": "materialrest24.de:"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39535",
+      "id": "r_place",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "r-place"
+        ],
+        "name": "R-Place",
+        "id": "r_place",
+        "source_urls": [
+          "https://r-place.fr/"
+        ],
+        "primary_source_url": "https://r-place.fr/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "id": "reempro",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "reempro"
+        ],
+        "name": "Réempro",
+        "id": "reempro",
+        "source_urls": [
+          "https://www.reempro.com/marketplace",
+          "https://www.reempro.com/marketplace-reempro",
+          "https://www.reempro.com/on-parle-de-nous-sur-france-3"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39540",
+      "id": "reuse_and_trade",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "reuse-and-trade"
+        ],
+        "name": "ReUse and Trade",
+        "id": "reuse_and_trade",
+        "source_urls": [
+          "https://www.reuseandtrade.de/",
+          "https://www.reuseandtrade.de/artikeluebersicht/Schnaeppchen-fuer-Privatkunden.aspx",
+          "https://www.facebook.com/ReUseandTrade"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "id": "salvoweb",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "salvoweb"
+        ],
+        "name": "SalvoWEB",
+        "id": "salvoweb",
+        "source_urls": [
+          "https://www.salvoweb.com/"
+        ],
+        "primary_source_url": "https://www.salvoweb.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "id": "salza",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "salza"
+        ],
+        "name": "Salza",
+        "id": "salza",
+        "source_urls": [
+          "https://salza.ch/bauteil-plattform"
+        ],
+        "primary_source_url": "https://salza.ch/bauteil-plattform"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "id": "skop_marketplace",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "skop-marketplace"
+        ],
+        "name": "Skop Marketplace",
+        "id": "skop_marketplace",
+        "source_urls": [
+          "https://marketplace.skop.app/",
+          "https://www.skop.app/marketplace-materiaux-reemploi",
+          "https://www.francenum.gouv.fr/activateurs/skop"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39544",
+      "id": "surplus_building_and_plumbing_materials",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "surplus-building-and-plumbing-materials"
+        ],
+        "name": "Surplus Building & Plumbing Materials",
+        "id": "surplus_building_and_plumbing_materials",
+        "source_urls": [
+          "https://surplusbuildingsupplies.co.uk/",
+          "https://surplusbuildingsupplies.co.uk/how-it-works",
+          "https://surplusbuildingsupplies.co.uk/building-materials.html"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "id": "sustainability_yard",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "sustainability-yard"
+        ],
+        "name": "Sustainability Yard",
+        "id": "sustainability_yard",
+        "source_urls": [
+          "https://sustainabilityyard.com/",
+          "https://sustainabilityyard.com/docs/sell-on-sustainability-yard",
+          "https://sustainabilityyard.com/docs/sell-on-sustainability-yard-business",
+          "https://materialreuseportal.com/Marketplace-Providers"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "id": "useagain_bauteilclick",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "useagain-bauteilclick"
+        ],
+        "name": "useagain / Bauteilclick",
+        "id": "useagain_bauteilclick",
+        "source_urls": [
+          "https://library-of-reuse.ch/pioneers/useagain",
+          "https://www.useagain.ch/de/"
+        ],
+        "primary_source_url": "https://library-of-reuse.ch/pioneers/useagain"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:602",
+      "id": "new_horizon_urban_mining",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "New Horizon UM",
+        "id": "new_horizon_urban_mining",
+        "source_urls": [
+          "https://newhorizon.nl/",
+          "https://newhorizon.nl/urban-mining/circulair-oogsten/",
+          "https://newhorizon.nl/urban-mining/donorgebouwen/",
+          "https://www.circonl.nl/case/urban-mining-new-horizon/",
+          "https://www.newhorizon.nl/urban-mining-collective/"
+        ],
+        "primary_source_url": "https://newhorizon.nl/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "id": "gm_dienstleistung_urban_mining",
+      "labels": [
+        "Geschaeftsmodell"
+      ],
+      "properties": {
+        "name": "Urban-Mining-Dienstleister mit Verkaufskanal",
+        "id": "gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "id": "bauteilkatalog_immobilien_basel_stadt",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Immobilien Basel-Stadt Bauteilkatalog zur Wiederverwendung",
+          "Bauteile IBS project information",
+          "Bauteile IBS component catalogue",
+          "Bauteile IBS Bauteilminen",
+          "Bauteile IBS contact and imprint"
+        ],
+        "name": "Bauteilkatalog Immobilien Basel-Stadt",
+        "id": "bauteilkatalog_immobilien_basel_stadt",
+        "source_urls": [
+          "https://bauteile-ibs.ch/",
+          "https://bauteile-ibs.ch/info",
+          "https://bauteile-ibs.ch/components",
+          "https://bauteile-ibs.ch/componentsmine",
+          "https://bauteile-ibs.ch/contact"
+        ],
+        "primary_source_url": "https://bauteile-ibs.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "id": "baukarussell",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "baukarussell",
+          "BauKarussell",
+          "BauKarussell Projekte"
+        ],
+        "name": "BauKarussell",
+        "id": "baukarussell",
+        "source_urls": [
+          "https://www.baukarussell.at/projekte"
+        ],
+        "primary_source_url": "https://www.baukarussell.at/projekte"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6578",
+      "id": "mobius_reemploi",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Polytechnique Insights - Towards a circular economy in the construction sector",
+          "Région Île-de-France - Construction d’une plateforme de reconditionnement pour Mobius Réemploi",
+          "Mobius Réemploi",
+          "BESIX über Mobius"
+        ],
+        "name": "Mobius Réemploi",
+        "id": "mobius_reemploi",
+        "source_urls": [
+          "https://www.iledefrance.fr/tous-les-services/ma-region-pres-de-chez-moi/environnement/economie-circulaire-et-gestion-des-dechets/96425-construction-dune-plateforme-de-reconditionnement-de-materiaux-pour-lentreprise-mobius-reemploi",
+          "https://www.mobius-reemploi.fr/"
+        ],
+        "primary_source_url": "https://www.iledefrance.fr/tous-les-services/ma-region-pres-de-chez-moi/environnement/economie-circulaire-et-gestion-des-dechets/96425-construction-dune-plateforme-de-reconditionnement-de-materiaux-pour-lentreprise-mobius-reemploi"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "id": "refair_bordeaux",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Collectif CANCAN - REFAIR project page",
+          "La Fab - Réemploi des matériaux: REFAIR launch and website",
+          "REFAIR - La démarche",
+          "La Fab - Future Base du Réemploi",
+          "REFAIR Bordeaux"
+        ],
+        "name": "REFAIR Bordeaux",
+        "id": "refair_bordeaux",
+        "source_urls": [
+          "https://www.collectifcancan.fr/project/refair/"
+        ],
+        "primary_source_url": "https://www.collectifcancan.fr/project/refair/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6716",
+      "id": "madaster",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Madaster"
+        ],
+        "name": "Madaster",
+        "id": "madaster",
+        "source_urls": [
+          "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/madaster",
+          "https://madaster.ch/en/",
+          "https://madaster.com/material-passport/",
+          "https://madaster.de/",
+          "https://madaster.de/en/inspiration/position-paper/",
+          "https://www.abnamro.com/en/news/madaster-materials-passport-opens-the-way-for-waste-free-building-culture%2520%2520"
+        ],
+        "primary_source_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/madaster"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34831",
+      "id": "gm_saas_inventar_plattform",
+      "labels": [
+        "Geschaeftsmodell"
+      ],
+      "properties": {
+        "name": "SaaS-Inventarplattform",
+        "id": "gm_saas_inventar_plattform"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39530",
+      "id": "loopfront",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "loopfront"
+        ],
+        "name": "Loopfront",
+        "id": "loopfront",
+        "source_urls": [
+          "https://www.loopfront.com/"
+        ],
+        "primary_source_url": "https://www.loopfront.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:735",
+      "id": "salvo_ltd",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Salvo Ltd",
+        "id": "salvo_ltd",
+        "source_urls": [
+          "https://www.salvoweb.com/"
+        ],
+        "primary_source_url": "https://www.salvoweb.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34832",
+      "id": "gm_netzwerk_aggregator",
+      "labels": [
+        "Geschaeftsmodell"
+      ],
+      "properties": {
+        "name": "Netzwerk / Aggregator / Redistribution",
+        "id": "gm_netzwerk_aggregator"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "id": "opalis",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "https://opalis.eu/en/about"
+        ],
+        "name": "Opalis",
+        "id": "opalis",
+        "source_urls": [
+          "https://experimentationsurbaines.ademe.fr/blog/ressource/opalis-plateforme-de-reemploi-de-materiaux-de-construction-et-de-renovation/",
+          "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "https://opalis.eu/en/about",
+          "https://opalis.eu/en/documentation"
+        ],
+        "primary_source_url": "https://experimentationsurbaines.ademe.fr/blog/ressource/opalis-plateforme-de-reemploi-de-materiaux-de-construction-et-de-renovation/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6630",
+      "id": "bauteilnetz_deutschland",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilnetz-deutschland",
+          "bauteilnetz Deutschland"
+        ],
+        "name": "bauteilnetz Deutschland",
+        "id": "bauteilnetz_deutschland",
+        "source_urls": [
+          "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html"
+        ],
+        "primary_source_url": "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39532",
+      "id": "material_reuse_portal",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "material-reuse-portal"
+        ],
+        "name": "Material Reuse Portal",
+        "id": "material_reuse_portal",
+        "source_urls": [
+          "https://materialreuseportal.com/"
+        ],
+        "primary_source_url": "https://materialreuseportal.com/"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769619004",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:60",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "la_ressourcerie_fribourg",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_la_ressourcerie_fribourg__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583305098",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "baumab_kassel",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baumab_kassel__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769619858",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "zirkulie_bauteilboerse_triesen",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769621017",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2073",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "ressourcerie_lausanne_materiuum_ruul",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_ressourcerie_lausanne_materiuum_ruul__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922189857431259136",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "gebruiktebouwmaterialen",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_gebruiktebouwmaterialen__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919938057617573888",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_bauteilladen_winterthur__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583309415",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5223",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "cleveland_steel_tubes",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6940204255940741120",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "rotordc",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_rotordc__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583310763",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6571",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "materialnomaden",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583310765",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "concular",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types.",
+        "confidence": 0.4,
+        "metadata_sidecar_key": "rel:HAT_GESCHAEFTSMODELL:concular->gm_shop_eigenstock",
+        "id": "r_deep_concular__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6931197056686000128",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_bauteilboerse_bremen__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583310823",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "materiuum",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769647170",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653777",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_bauteilboerse_basel_overall__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653778",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653783",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34839",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "syphon_ag_bauteilboerse_biel_bruegg",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_syphon_ag_bauteilboerse_biel_bruegg__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653784",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34840",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_hiltbrunner_reuse_riedtwil_wiederverwendung__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653785",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653786",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "archipel_sion_ressourcerie",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_archipel_sion_ressourcerie__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769655910",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917686257803888640",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "articonnex",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_articonnex__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6926693457058629632",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "baticycle",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baticycle__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6928945256872314880",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "batiterre",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_batiterre__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6933448856499685376",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "cornermat_retrival",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_cornermat_retrival__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924441657244944384",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "genbyg",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_genbyg__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6935700656313370624",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_materialenbank_leuven_atelier_circuler__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6937952456127055872",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34816",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "gm_shop_eigenstock",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_re_store_harvestmap_vienna__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769619850",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "baumab_kassel",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baumab_kassel__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769625517",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "concular",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769637100",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18156",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "baumatpool_ch",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "id": "r_baumatpool_ch__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653779",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34835",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "btvz_zuerichsee_oberland",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "id": "r_btvz_zuerichsee_oberland__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653780",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "reuzi_ch",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "id": "r_reuzi_ch__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653781",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769653782",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "id": "r_gruner_reuse_platform__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6942456055754426381",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "backacia",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_backacia__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917686257803888653",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "batrecup",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_batrecup__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919938057617573901",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "building_spares_market",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_building_spares_market__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6944707855568111629",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "cycle_up",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_cycle_up__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922189857431259149",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "cycle_zero",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_cycle_zero__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924441657244944397",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "enviromate",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_enviromate__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6926693457058629645",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "insert_marketplace",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_insert_marketplace__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6953715054822852621",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "material_index",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_material_index__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6928945256872314893",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "materialrest24",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_materialrest24__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6931197056686000141",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39535",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "r_place",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_r_place__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769658481",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types.",
+        "confidence": 0.4,
+        "metadata_sidecar_key": "rel:HAT_GESCHAEFTSMODELL:harvestmap->gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6946959655381796877",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "reempro",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_reempro__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769658484",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39540",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "reuse_and_trade",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6949211455195482125",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "salvoweb",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_salvoweb__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769658486",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "salza",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "id": "r_salza__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6951463255009167373",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "skop_marketplace",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_skop_marketplace__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6935700656313370637",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39544",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "surplus_building_and_plumbing_materials",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_surplus_building_and_plumbing_materials__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6937952456127055885",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "sustainability_yard",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_sustainability_yard__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6940204255940741133",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34829",
+      "start_id": "useagain_bauteilclick",
+      "end_id": "gm_marketplace_vermittlung",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_useagain_bauteilclick__HAT_GESCHAEFTSMODELL__gm_marketplace_vermittlung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769619546",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:602",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "new_horizon_urban_mining",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769619838",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157582334396990346",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "baumab_kassel",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_baumab_kassel__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769624167",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5223",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "cleveland_steel_tubes",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6940204255940741134",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "rotordc",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_rotordc__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769625515",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6571",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "materialnomaden",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157582334396996013",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "concular",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types.",
+        "confidence": 0.4,
+        "metadata_sidecar_key": "rel:HAT_GESCHAEFTSMODELL:concular->gm_dienstleistung_urban_mining",
+        "id": "r_deep_concular__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917686257803888654",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "baukarussell",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baukarussell__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769625522",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6578",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "mobius_reemploi",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769625571",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "refair_bordeaux",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6926693457058629646",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_bauteilboerse_bremen__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769625575",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "materiuum",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583332418",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583339026",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583339029",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583339031",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34839",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "syphon_ag_bauteilboerse_biel_bruegg",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "id": "r_syphon_ag_bauteilboerse_biel_bruegg__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583339033",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583341158",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919938057617573902",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "backacia",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_backacia__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922189857431259150",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "baticycle",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_baticycle__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924441657244944398",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "batiterre",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_batiterre__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6928945256872314894",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "cornermat_retrival",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_cornermat_retrival__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6931197056686000142",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "cycle_up",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_cycle_up__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6944707855568111630",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "material_index",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_material_index__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6933448856499685390",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_materialenbank_leuven_atelier_circuler__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6935700656313370638",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_re_store_harvestmap_vienna__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6937952456127055886",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "reempro",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_reempro__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6942456055754426382",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34830",
+      "start_id": "skop_marketplace",
+      "end_id": "gm_dienstleistung_urban_mining",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_skop_marketplace__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769625660",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6716",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34831",
+      "start_id": "madaster",
+      "end_id": "gm_saas_inventar_plattform",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769658474",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39530",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34831",
+      "start_id": "loopfront",
+      "end_id": "gm_saas_inventar_plattform",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917686257803888655",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34831",
+      "start_id": "material_index",
+      "end_id": "gm_saas_inventar_plattform",
+      "properties": {
+        "confidence": 0.5,
+        "id": "r_material_index__HAT_GESCHAEFTSMODELL__gm_saas_inventar_plattform"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6922189857431259152",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:735",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34832",
+      "start_id": "salvo_ltd",
+      "end_id": "gm_netzwerk_aggregator",
+      "properties": {
+        "confidence": 0.9
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769625477",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34832",
+      "start_id": "opalis",
+      "end_id": "gm_netzwerk_aggregator",
+      "properties": {
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types.",
+        "confidence": 0.4,
+        "metadata_sidecar_key": "rel:HAT_GESCHAEFTSMODELL:opalis->gm_netzwerk_aggregator",
+        "id": "r_deep_opalis__HAT_GESCHAEFTSMODELL__gm_netzwerk_aggregator"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917686257803888656",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6630",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34832",
+      "start_id": "bauteilnetz_deutschland",
+      "end_id": "gm_netzwerk_aggregator",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_bauteilnetz_deutschland__HAT_GESCHAEFTSMODELL__gm_netzwerk_aggregator"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153078734769658476",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34832",
+      "start_id": "material_reuse_portal",
+      "end_id": "gm_netzwerk_aggregator",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155330534583343729",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34832",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "gm_netzwerk_aggregator",
+      "properties": {
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types.",
+        "confidence": 0.4,
+        "metadata_sidecar_key": "rel:HAT_GESCHAEFTSMODELL:harvestmap->gm_netzwerk_aggregator"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919938057617573904",
+      "type": "HAT_GESCHAEFTSMODELL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34832",
+      "start_id": "salvoweb",
+      "end_id": "gm_netzwerk_aggregator",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_salvoweb__HAT_GESCHAEFTSMODELL__gm_netzwerk_aggregator"
+      }
+    }
+  ]
+}

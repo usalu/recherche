@@ -1,0 +1,236 @@
+{
+  "confirmation_required": "APPLY cross_bubble_extension.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:59:06.025620+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_cross_bubble_extension\\patches\\cross_bubble_extension.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "connection_kind": "formal_partnership",
+        "evidence_basis": "madaster_insert_partner_agreement",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Insert and Madaster Services signed partner agreement; automatic coupling between Madaster and Insert marketplace",
+        "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+        "id": "r_insert_marketplace__verbunden_mit_akteur__madaster",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "formal_partnership",
+          "evidence_basis": "madaster_insert_partner_agreement",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Insert and Madaster Services signed partner agreement; automatic coupling between Madaster and Insert marketplace",
+          "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__madaster",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745603177,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "formal_partnership",
+        "evidence_basis": "madaster_insert_partner_agreement",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Madaster Platform users to sell registered materials on Insert marketplace",
+        "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+        "id": "r_madaster__verbunden_mit_akteur__insert_marketplace",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "formal_partnership",
+          "evidence_basis": "madaster_insert_partner_agreement",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Madaster Platform users to sell registered materials on Insert marketplace",
+          "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+          "id": "r_madaster__verbunden_mit_akteur__insert_marketplace",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6926649476593523305,
+        "to": "insert_marketplace",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "insert_marketplace",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "id": "software_restado",
+          "kind": "software",
+          "name": "Restado",
+          "primary_source_url": "https://restado.de/ueber-restado/",
+          "source_titles": [
+            "Impact_Hub_Berlin_CRCLR_…",
+            "restado"
+          ],
+          "source_urls": [
+            "https://restado.de/ueber-restado/",
+            "https://restado.de/hilfe/impressum/",
+            "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "id": "software_restado",
+          "kind": "software",
+          "name": "Restado",
+          "primary_source_url": "https://restado.de/ueber-restado/",
+          "source_titles": [
+            "Impact_Hub_Berlin_CRCLR_…",
+            "restado"
+          ],
+          "source_urls": [
+            "https://restado.de/ueber-restado/",
+            "https://restado.de/hilfe/impressum/",
+            "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado"
+          ]
+        }
+      },
+      "id": "software_restado",
+      "line": 3,
+      "op": "set_node_properties",
+      "status": "noop_same"
+    },
+    {
+      "from": "madaster",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "madaster_epea"
+    },
+    {
+      "from": "madaster_epea",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "madaster"
+    },
+    {
+      "from": "concular",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_restado"
+    },
+    {
+      "from": "software_restado",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "concular"
+    },
+    {
+      "from": "opalis",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "prog_preuse"
+    },
+    {
+      "from": "software_restado",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "opalis"
+    },
+    {
+      "from": "opalis",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_restado"
+    },
+    {
+      "from": "software_restado",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "insert_marketplace"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_restado"
+    },
+    {
+      "from": "cirkla",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_restado"
+    },
+    {
+      "from": "software_restado",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 11,
+    "noop_same": 1,
+    "noop_same_rel": 2,
+    "records": 14
+  }
+}

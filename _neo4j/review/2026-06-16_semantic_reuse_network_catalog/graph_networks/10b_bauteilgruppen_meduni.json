@@ -1,0 +1,706 @@
+{
+  "id": "10b_bauteilgruppen_meduni",
+  "section": "10",
+  "title": "MedUni Wien Bauteilgruppen × Bauteiltypen",
+  "cypher": "MATCH (p:Projekt {id: 'p_meduni_campus_mariannengasse'})-[r:HAT_BAUTEILGRUPPE]->(bg:Bauteilgruppe)\nOPTIONAL MATCH (bg)-[t:HAT_BAUTEILTYP]->(bt:Bauteiltyp)\nRETURN p, r, bg, t, bt;",
+  "status": "ok",
+  "row_count": 20,
+  "node_count": 24,
+  "relationship_count": 24,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "id": "p_meduni_campus_mariannengasse",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "Geschaeftsmodell",
+          "Preisbildung"
+        ],
+        "name_full": "MedUni Campus Mariannengasse Wien — BauKarussell pre-demolition reuse",
+        "latitude": 48.2161081,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "MedUni Campus Wien",
+        "adresse": "Mariannengasse 10, 1090 Vienna, Austria",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "MedUni Mariannengasse is primarily a donor-side design resource rather than a recipient building. Its architectural relevance lies in pre-demolition selection: components are identified, removed and prepared so they can influence other projects’ design decisions. The project changes the design process by making future material availability visible before demolition. Do not describe a final architectural output unless a recipient building is linked; treat this as the supply-side moment where architecture becomes possible elsewhere.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_meduni_campus_mariannengasse",
+        "id": "p_meduni_campus_mariannengasse",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "reuse phase documented 2020; demolition + new construction subsequent",
+        "longitude": 16.3492133
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:642",
+      "id": "bg_mehrere_technik_medunicampus_paternoster",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "reuse_status": "reuse",
+        "source_titles": [
+          "MedUni Campus Mariannengasse Wien"
+        ],
+        "name": "MedUni Paternoster",
+        "id": "bg_mehrere_technik_medunicampus_paternoster",
+        "bg_kind": "partial_batch",
+        "bauteilebene": [
+          "Bauteilgruppe"
+        ],
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4535",
+      "id": "bt_technik",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "services",
+        "name": "Technik",
+        "id": "bt_technik",
+        "layer": [
+          "Services"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:643",
+      "id": "bg_holz_wand_medunicampus_doors_as_cladding",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "matchingqualitaet_spec": [
+          "Spec: Zweckänderung"
+        ],
+        "alte_funktion": "doors",
+        "reuse_status": "reuse",
+        "name": "MedUni Türen→Wand",
+        "funktionswechsel": [
+          "Neue_Funktion"
+        ],
+        "metadata_sidecar_key": "node:bg_holz_wand_medunicampus_doors_as_cladding",
+        "id": "bg_holz_wand_medunicampus_doors_as_cladding",
+        "bg_kind": "partial_batch",
+        "bauteilebene": [
+          "Bauteilgruppe"
+        ],
+        "neue_funktion": "wall cladding",
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4539",
+      "id": "bt_wand",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "structure",
+        "name": "Wand",
+        "id": "bt_wand",
+        "layer": [
+          "Structure"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:671",
+      "id": "bg_metall_ausbau_medunicampus_bike_workshop",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "reuse_status": "reuse",
+        "name": "MedUni Fahrradwerkst.",
+        "metadata_sidecar_key": "node:bg_metall_ausbau_medunicampus_bike_workshop",
+        "id": "bg_metall_ausbau_medunicampus_bike_workshop",
+        "bg_kind": "partial_batch",
+        "bauteilebene": [
+          "Einzelbauteil"
+        ],
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4525",
+      "id": "bt_ausbau",
+      "labels": [
+        "Bauteiltyp"
+      ],
+      "properties": {
+        "brand_layer": "space_plan",
+        "name": "Ausbau",
+        "id": "bt_ausbau",
+        "layer": [
+          "Space Plan"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:672",
+      "id": "bg_metall_ausbau_medunicampus_heavy_shelves",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "reuse_status": "reuse",
+        "name": "MedUni Schwerlastreg.",
+        "metadata_sidecar_key": "node:bg_metall_ausbau_medunicampus_heavy_shelves",
+        "id": "bg_metall_ausbau_medunicampus_heavy_shelves",
+        "bg_kind": "partial_batch",
+        "bauteilebene": [
+          "Einzelbauteil"
+        ],
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:878",
+      "id": "bg_mehrere_mehrere_meduni_component_catalogue",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_mehrere_mehrere_meduni_component_catalogue",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_mehrere_mehrere_meduni_component_catalogue",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:879",
+      "id": "bg_technik_aufzug_meduni_paternoster_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_technik_aufzug_meduni_paternoster_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_technik_aufzug_meduni_paternoster_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:880",
+      "id": "bg_moebel_sitze_meduni_cinema_seats_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_moebel_sitze_meduni_cinema_seats_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_moebel_sitze_meduni_cinema_seats_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:881",
+      "id": "bg_technik_ausbau_meduni_projector_screen_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_technik_ausbau_meduni_projector_screen_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_technik_ausbau_meduni_projector_screen_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:882",
+      "id": "bg_moebel_lager_meduni_heavy_shelves_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_moebel_lager_meduni_heavy_shelves_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_moebel_lager_meduni_heavy_shelves_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:883",
+      "id": "bg_metall_treppe_meduni_jugendstil_handrails_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_metall_treppe_meduni_jugendstil_handrails_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_metall_treppe_meduni_jugendstil_handrails_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:884",
+      "id": "bg_technik_ausbau_meduni_vintage_clocks_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_technik_ausbau_meduni_vintage_clocks_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_technik_ausbau_meduni_vintage_clocks_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:885",
+      "id": "bg_boden_meduni_double_floors_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Gelagert_oder_Unbekannt"
+        ],
+        "name": "bg_reuse_boden_meduni_double_floors_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_boden_meduni_double_floors_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:886",
+      "id": "bg_holz_boden_meduni_parquet_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_holz_boden_meduni_parquet_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_holz_boden_meduni_parquet_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:887",
+      "id": "bg_fliesen_boden_wand_meduni_tiles_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_fliesen_boden_wand_meduni_tiles_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_fliesen_boden_wand_meduni_tiles_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:888",
+      "id": "bg_ausbau_wand_meduni_toilet_partitions_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_ausbau_wand_meduni_toilet_partitions_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_ausbau_wand_meduni_toilet_partitions_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:889",
+      "id": "bg_holz_tueren_meduni_doors_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_holz_tueren_meduni_doors_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_holz_tueren_meduni_doors_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:890",
+      "id": "bg_moebel_stuehle_meduni_folding_chairs_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_moebel_stuehle_meduni_folding_chairs_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_moebel_stuehle_meduni_folding_chairs_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:891",
+      "id": "bg_metall_technik_meduni_copper_cables_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Gelagert_oder_Unbekannt"
+        ],
+        "name": "bg_reuse_metall_technik_meduni_copper_cables_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_metall_technik_meduni_copper_cables_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:892",
+      "id": "bg_holz_treppe_meduni_oak_handrails_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "name": "bg_reuse_holz_treppe_meduni_oak_handrails_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_holz_treppe_meduni_oak_handrails_candidate",
+        "bg_kind": "partial_batch"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:893",
+      "id": "bg_aluminium_technik_meduni_cable_ducts_grids_candidate",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "wiederverwendungsort": [
+          "Gelagert_oder_Unbekannt"
+        ],
+        "name": "bg_reuse_aluminium_technik_meduni_cable_ducts_grids_candidate",
+        "created_at": "2026-06-03T23:43:56.868000000+00:00",
+        "id": "bg_aluminium_technik_meduni_cable_ducts_grids_candidate",
+        "bg_kind": "partial_batch"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153033654792886696",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:642",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_mehrere_technik_medunicampus_paternoster",
+      "properties": {
+        "id": "r_p_meduni_campus_mariannengasse__HAT_BAUTEILGRUPPE__bg_reuse_mehrere_technik_medunicampus_paternoster"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152988574816141954",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:642",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4535",
+      "start_id": "bg_mehrere_technik_medunicampus_paternoster",
+      "end_id": "bt_technik",
+      "properties": {
+        "id": "r_bg_reuse_mehrere_technik_medunicampus_paternoster__HAT_BAUTEILTYP__bt_technik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155285454606571944",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:643",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_holz_wand_medunicampus_doors_as_cladding",
+      "properties": {
+        "id": "r_p_meduni_campus_mariannengasse__HAT_BAUTEILGRUPPE__bg_reuse_holz_wand_medunicampus_doors_as_cladding"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152988574816141955",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:643",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4539",
+      "start_id": "bg_holz_wand_medunicampus_doors_as_cladding",
+      "end_id": "bt_wand",
+      "properties": {
+        "id": "r_bg_reuse_holz_wand_medunicampus_doors_as_cladding__HAT_BAUTEILTYP__bt_wand"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159789054233942440",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:671",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_metall_ausbau_medunicampus_bike_workshop",
+      "properties": {
+        "id": "r_p_meduni_campus_mariannengasse__HAT_BAUTEILGRUPPE__bg_reuse_metall_ausbau_medunicampus_bike_workshop"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152988574816141983",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:671",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4525",
+      "start_id": "bg_metall_ausbau_medunicampus_bike_workshop",
+      "end_id": "bt_ausbau",
+      "properties": {
+        "id": "r_bg_reuse_metall_ausbau_medunicampus_bike_workshop__HAT_BAUTEILTYP__bt_ausbau"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162040854047627688",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:672",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_metall_ausbau_medunicampus_heavy_shelves",
+      "properties": {
+        "id": "r_p_meduni_campus_mariannengasse__HAT_BAUTEILGRUPPE__bg_reuse_metall_ausbau_medunicampus_heavy_shelves"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1152988574816141984",
+      "type": "HAT_BAUTEILTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:672",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4525",
+      "start_id": "bg_metall_ausbau_medunicampus_heavy_shelves",
+      "end_id": "bt_ausbau",
+      "properties": {
+        "id": "r_bg_reuse_metall_ausbau_medunicampus_heavy_shelves__HAT_BAUTEILTYP__bt_ausbau"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115886",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:878",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_mehrere_mehrere_meduni_component_catalogue",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-01a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115887",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:879",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_technik_aufzug_meduni_paternoster_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-02a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115888",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:880",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_moebel_sitze_meduni_cinema_seats_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-03a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115889",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:881",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_technik_ausbau_meduni_projector_screen_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-04a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115890",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:882",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_moebel_lager_meduni_heavy_shelves_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-05a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115891",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:883",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_metall_treppe_meduni_jugendstil_handrails_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-06a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115892",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:884",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_technik_ausbau_meduni_vintage_clocks_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-08a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115893",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:885",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_boden_meduni_double_floors_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-11a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115894",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:886",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_holz_boden_meduni_parquet_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-12a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115895",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:887",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_fliesen_boden_wand_meduni_tiles_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-13a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115896",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:888",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_ausbau_wand_meduni_toilet_partitions_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-14a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115897",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:889",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_holz_tueren_meduni_doors_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-15a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115898",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:890",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_moebel_stuehle_meduni_folding_chairs_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-16a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115899",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:891",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_metall_technik_meduni_copper_cables_candidate",
+      "properties": {
+        "confidence": 0.5,
+        "id": "v10-005-17a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115900",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:892",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_holz_treppe_meduni_oak_handrails_candidate",
+      "properties": {
+        "confidence": 0.9,
+        "id": "v10-005-18a"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917641177827115901",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:893",
+      "start_id": "p_meduni_campus_mariannengasse",
+      "end_id": "bg_aluminium_technik_meduni_cable_ducts_grids_candidate",
+      "properties": {
+        "confidence": 0.5,
+        "id": "v10-005-19a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "completed_at_utc": "2026-05-22T15:56:59.429544+00:00",
+  "database": "mit-bestand",
+  "input_triples_file": "_neo4j\\intake\\runs\\2026-05-21_quelle_remediation\\agent_qext\\logs\\unfold_all_gebaeude_triples.jsonl",
+  "input_summary_grand_total": 6150,
+  "input_summary_distinct_urls": 388,
+  "input_summary_distinct_entities": 2587,
+  "prepared": {
+    "distinct_targets": 2591,
+    "exact_unique": 306,
+    "unresolved": 2282,
+    "exact_ambiguous": 3,
+    "prepared_relationships": 6150
+  },
+  "written_edges_returned": 6150,
+  "exact_candidate_relationships_returned": 306,
+  "audit": {
+    "cited_edges": 6150,
+    "distinct_urls": 388,
+    "dossiers": 71,
+    "distinct_targets": 2591
+  },
+  "target_review_status": [
+    {
+      "status": "unresolved_no_exact_match",
+      "count": 2282
+    },
+    {
+      "status": "exact_unique_candidate",
+      "count": 306
+    },
+    {
+      "status": "exact_ambiguous_candidates",
+      "count": 3
+    }
+  ],
+  "top_entity_types": [
+    {
+      "entity_type": "prozessphase",
+      "edges": 933
+    },
+    {
+      "entity_type": "bauteil",
+      "edges": 820
+    },
+    {
+      "entity_type": "kennwert",
+      "edges": 815
+    },
+    {
+      "entity_type": "thema",
+      "edges": 677
+    },
+    {
+      "entity_type": "huerde",
+      "edges": 451
+    },
+    {
+      "entity_type": "Bauteil",
+      "edges": 416
+    },
+    {
+      "entity_type": "People",
+      "edges": 401
+    },
+    {
+      "entity_type": "Kennwert",
+      "edges": 237
+    },
+    {
+      "entity_type": "Fallstudie",
+      "edges": 180
+    },
+    {
+      "entity_type": "Gebäude",
+      "edges": 151
+    },
+    {
+      "entity_type": "Projekt",
+      "edges": 138
+    },
+    {
+      "entity_type": "Ort",
+      "edges": 131
+    },
+    {
+      "entity_type": "Material",
+      "edges": 105
+    },
+    {
+      "entity_type": "Reuse-Strategie",
+      "edges": 98
+    },
+    {
+      "entity_type": "Hürde",
+      "edges": 71
+    },
+    {
+      "entity_type": "Methode",
+      "edges": 43
+    },
+    {
+      "entity_type": "Logistik",
+      "edges": 42
+    },
+    {
+      "entity_type": "Prüfung",
+      "edges": 41
+    },
+    {
+      "entity_type": "Tragwerkssystem",
+      "edges": 39
+    },
+    {
+      "entity_type": "Bauherr",
+      "edges": 38
+    },
+    {
+      "entity_type": "Aufbereitungsmethode",
+      "edges": 33
+    },
+    {
+      "entity_type": "Abbruchmethode",
+      "edges": 32
+    },
+    {
+      "entity_type": "Wirtschaft",
+      "edges": 30
+    },
+    {
+      "entity_type": "Verbindung",
+      "edges": 29
+    },
+    {
+      "entity_type": "Recht",
+      "edges": 23
+    },
+    {
+      "entity_type": "Architekt",
+      "edges": 19
+    },
+    {
+      "entity_type": "Bauteilbörse",
+      "edges": 18
+    },
+    {
+      "entity_type": "Leistungsanforderung",
+      "edges": 18
+    },
+    {
+      "entity_type": "Förderprogramm",
+      "edges": 16
+    },
+    {
+      "entity_type": "Prozessphase",
+      "edges": 14
+    }
+  ],
+  "baseline_note": "_scripts/_gap_survey.py had pre-existing FAIL rows before this import; see run transcript."
+}

@@ -1,0 +1,58 @@
+{
+  "acceptance_preview": {
+    "evidence_confidence_edges_will_be_zero": true,
+    "non_source_nodes_receive_source_urls": 1788,
+    "source_layer_will_be_deleted": true
+  },
+  "before": {
+    "evidence_confidence_edges": 19228,
+    "label_counts": {
+      "Dossier": 97,
+      "ExternalLink": 2610,
+      "OntologyAnchor": 2,
+      "Quelle": 2981,
+      "ResearchDocument": 396,
+      "SectionRef": 582
+    },
+    "nodes": 5445,
+    "relationship_counts": {
+      "ANCHORED_BY": 609,
+      "BELEGT_IN": 2971,
+      "HAS_SOURCE_LINK": 354
+    },
+    "relationships": 21403
+  },
+  "commit": false,
+  "confidence_migrated": 0,
+  "created_at_utc": "2026-06-05T13:03:55.204102+00:00",
+  "database": "mit-bestand",
+  "extraction": {
+    "belegt_in_edges_seen": 2951,
+    "cited_nodes_seen": 1788,
+    "cited_non_source_nodes": 1788,
+    "cited_non_source_nodes_with_url": 315,
+    "cited_source_nodes_skipped": 0,
+    "distinct_cited_urls": 588,
+    "non_source_nodes_to_update": 1788,
+    "source_url_values_to_write": 881,
+    "url_less_citations": 2069
+  },
+  "phase": "phase1_extract_evidence_delete_sources",
+  "planned": {
+    "delete_source_nodes": {
+      "Dossier": 97,
+      "ExternalLink": 2610,
+      "OntologyAnchor": 2,
+      "Quelle": 2981,
+      "ResearchDocument": 396,
+      "SectionRef": 582
+    },
+    "delete_source_relationships": {
+      "ANCHORED_BY": 609,
+      "BELEGT_IN": 2971,
+      "HAS_SOURCE_LINK": 354
+    },
+    "migrate_evidence_confidence_edges": 19228
+  },
+  "snapshot_would_write": "E:\\recherche\\_neo4j\\intake\\runs\\2026-06-04_regulation_graph_vocabulary\\phase1_before.json"
+}

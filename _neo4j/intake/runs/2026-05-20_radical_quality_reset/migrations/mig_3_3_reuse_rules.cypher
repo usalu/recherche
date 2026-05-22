@@ -2,7 +2,7 @@
 // mig_3_3 — Phase 3.3: Country × material decision shelf
 //
 // Creates exactly 20 :ReuseRule nodes from the 20 rows of
-//   _neo4j/intake/inbox/research/circular_construction_reuse_graph_gaps.md
+//   _knowledge/themes/circular_construction_reuse_graph_gaps.md
 // and wires them with:
 //   (:ReuseRule)-[:APPLIES_IN]->(:Land)
 //   (:ReuseRule)-[:APPLIES_TO]->(:Material)

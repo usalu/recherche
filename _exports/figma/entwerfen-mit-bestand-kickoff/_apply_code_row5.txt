@@ -1,0 +1,25 @@
+const cells = [{"row": 5, "col": 0, "rowLabel": "schema-mapping", "columnHeading": "Rippenplatte / Spannbeton", "nodeId": "377:3224", "yaml": "## Item\n\ncanonical_title: Rippenplatte aus Spannbeton\ncomponent_family: structure\ncomponent_type: slab\nmaterial_family: mineral\nprimary_material: prestressed_concrete\nstructural_role: load_bearing\nnewness_type: reclaimed\n\n## VariantBatch\n\nquantity: 188\nquantity_unit: piece\nlength_mm: 6840\nwidth_mm: 1495\nheight_mm: 480\narea_m2: 10.23\ntotal_area_m2: 1922.45\n\n## RiskAssessment\n\nrisk_level: high\nhazard_flags:\n  - chlorides\n  - corrosion\n  - moisture_damage\n  - hydrocarbons\n  - unknown_pollutants\nstructural_verification_required: true\npollutant_test_status: partial_test"}, {"row": 5, "col": 1, "rowLabel": "schema-mapping", "columnHeading": "Stahlträger HEB 140", "nodeId": "377:3225", "yaml": "## Item\n\ncanonical_title: Stahlträger HEB 140\ncomponent_family: structure\ncomponent_type: beam\nmaterial_family: metal\nprimary_material: steel\nstructural_role: load_bearing\nnewness_type: overstock\n\n## TechnicalAttribute\n\nattribute_group: metal_steel\nprofile_type: HEB\nsection_size: \"140\"\nnominal_profile_height_mm: 140\nnominal_profile_width_mm: 140\ntypical_mass_kg_per_m: 33.7-34.2\ntypical_elastic_modulus_mpa: 210000\naccessory_list: Unterlegbleche für Mauerwerks- und Balkenauflager"}, {"row": 5, "col": 2, "rowLabel": "schema-mapping", "columnHeading": "Historische Holzbalken aus Altbausanierung", "nodeId": "377:3226", "yaml": "## Item\n\ncanonical_title: Historische Holzbalken aus Altbausanierung\ncomponent_family: structure\ncomponent_type: beam\nmaterial_family: timber_biobased\nprimary_material: solid_timber\nnewness_type: reclaimed\nstructural_role: unknown_or_potentially_load_bearing\nshort_description: Alte, trockene Holzbalken mit rustikaler Oberfläche und teilweise fränkischer Kerbe.\n\n## VariantBatch\n\nquantity: 10\nquantity_unit: piece\nlength_min_mm: 1000\nlength_max_mm: 6000\nwidth_min_mm: 180\nwidth_max_mm: 220\nheight_min_mm: 180\nheight_max_mm: 220\nestimated_total_volume_typical_m3: 1.4\ndimension_notes: Querschnitte variieren; Einzelmaße je Balken erforderlich.\n\n## TechnicalAttribute\n\nattribute_group: timber\nestimated_age_years: 160\nwood_species: unknown\nsolid_or_engineered: solid_timber\nsurface_finish: raw_untreated\nmoisture_condition: very_dry\njoinery_detail: two-sided_franconian_notch_partial"}];
+await figma.loadFontAsync({ family: 'Inter', style: 'Regular' });
+function hex(h){const c=h.replace('#','');return{r:parseInt(c.slice(0,2),16)/255,g:parseInt(c.slice(2,4),16)/255,b:parseInt(c.slice(4,6),16)/255};}
+const results=[];
+for (const cell of cells){
+  const old=await figma.getNodeByIdAsync(cell.nodeId);
+  if(!old||!('width' in old)){results.push({nodeId:cell.nodeId,error:'missing'});continue;}
+  const parent=old.parent; const pad=12;
+  const frame=figma.createFrame();
+  frame.name='Cell_'+cell.row+'_'+cell.col;
+  frame.x=old.x; frame.y=old.y; frame.resize(old.width,old.height);
+  frame.fills=[{type:'SOLID',color:hex('1e1e1e')}];
+  frame.strokes=[{type:'SOLID',color:hex('333333')}]; frame.strokeWeight=1; frame.cornerRadius=6; frame.clipsContent=true;
+  const text=figma.createText();
+  text.fontName={family:'Inter',style:'Regular'}; text.fontSize=11;
+  text.lineHeight={unit:'PIXELS',value:14};
+  text.fills=[{type:'SOLID',color:hex('e6e6e6')}];
+  text.characters=cell.yaml; text.textAutoResize='HEIGHT';
+  text.resize(old.width-pad*2,10); text.x=pad; text.y=pad;
+  frame.appendChild(text);
+  frame.resize(old.width, Math.max(old.height, text.height+pad*2));
+  parent.appendChild(frame); old.remove();
+  results.push({nodeId:cell.nodeId,newId:frame.id,row:cell.row,col:cell.col,h:Math.round(frame.height)});
+}
+return results;

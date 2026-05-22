@@ -1,0 +1,182 @@
+{
+  "anchor_id": "reempro",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://www.reempro.com/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L172-L236; L240-L248; L252-L266",
+      "evidence_excerpt": "Réempro services include selective deconstruction, supply/collection of reuse equipment, reconditioning, storage; categories include gros œuvre, second œuvre, placo/electricity/tiles/plumbing, outdoor paving/gravel/fences, equipment."
+    },
+    {
+      "url": "https://www.reempro.com/marketplace/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L46-L55; L177-L189",
+      "evidence_excerpt": "Marketplace dedicated to reuse materials; categories include Second oeuvre > Electricité et éclairage, CVC, sanitaires, isolation/cloisons, plomberie/quincaillerie, portes/fenêtres/menuiserie, revêtements sol et plafond."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://www.reempro.com/"
+      ],
+      "evidence_quote": "Reconditioning examples include “briques”; gros œuvre category supports construction material stock.",
+      "confidence": "belegt",
+      "note": "Direct first-party material/process evidence.",
+      "source_line_ref": "L191-L193; L225-L230"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.reempro.com/"
+      ],
+      "evidence_quote": "R&D examples include “Reconditionnement de sanitaires en céramique”.",
+      "confidence": "belegt",
+      "note": "Direct first-party material/process evidence.",
+      "source_line_ref": "L227-L233"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Second œuvre includes “Isolation et cloisons”; home page second œuvre lists placo.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "marketplace L182-L189; home L246-L248"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace category includes “Isolation et cloisons”.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "L182-L189"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace category includes “Portes, fenêtres, menuiserie”.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "L182-L189"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace category includes “Portes, fenêtres, menuiserie”.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "L182-L189"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace category includes “Revêtements sol et plafond”; home page names plancher technique.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "marketplace L182-L189; home L191-L193"
+    },
+    {
+      "target_id": "bt_decke",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace category includes “Revêtements sol et plafond”.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "L182-L189"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace categories include Électricité/éclairage, CVC, équipements sanitaires, plomberie.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "L182-L189"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace category includes plomberie et quincaillerie; second œuvre.",
+      "confidence": "belegt",
+      "note": "Direct first-party marketplace category evidence.",
+      "source_line_ref": "L182-L189"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": "LOOKUP_REQUIRED_mechanical_brick_cleaning",
+      "evidence_urls": [
+        "https://www.reempro.com/"
+      ],
+      "evidence_quote": "“Reconditionnement de briques… Grâce à un nettoyage mécanique…”",
+      "confidence": "unsicher",
+      "note": "Exact Aufbereitungsverfahren ID requires Cypher lookup.",
+      "source_line_ref": "L225-L230"
+    },
+    {
+      "target_id": "LOOKUP_REQUIRED_technical_floor_sanding",
+      "evidence_urls": [
+        "https://www.reempro.com/"
+      ],
+      "evidence_quote": "“Le ponçage de la dalle permet de remettre à neuf sa surface…”",
+      "confidence": "unsicher",
+      "note": "Exact Aufbereitungsverfahren ID requires Cypher lookup.",
+      "source_line_ref": "L227-L233"
+    },
+    {
+      "target_id": "LOOKUP_REQUIRED_ceramic_sanitary_cleaning",
+      "evidence_urls": [
+        "https://www.reempro.com/"
+      ],
+      "evidence_quote": "“nettoyage en profondeur de la céramique à partir de produits biosourcés”",
+      "confidence": "unsicher",
+      "note": "Exact Aufbereitungsverfahren ID requires Cypher lookup.",
+      "source_line_ref": "L227-L233"
+    }
+  ],
+  "rueckbau": [
+    {
+      "target_id": "LOOKUP_REQUIRED_deconstruction_selective",
+      "evidence_urls": [
+        "https://www.reempro.com/"
+      ],
+      "evidence_quote": "Réempro intervient ... pour procéder à la déconstruction sélective.",
+      "confidence": "unsicher",
+      "note": "Exact Rueckbauverfahren ID requires Cypher lookup.",
+      "source_line_ref": "L176-L179; L200-L201"
+    }
+  ],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [],
+  "rejected_or_not_importable": [],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

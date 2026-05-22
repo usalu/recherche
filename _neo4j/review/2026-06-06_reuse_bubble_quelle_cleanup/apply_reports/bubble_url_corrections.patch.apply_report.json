@@ -1,0 +1,66 @@
+{
+  "confirmation_required": "APPLY bubble_url_corrections.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:22:47.096800+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_reuse_bubble_quelle_cleanup\\patches\\bubble_url_corrections.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sumami",
+          "name": "Sumami",
+          "primary_source_url": "https://www.sumami.ch/",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake",
+          "source_urls": [
+            "https://www.sumami.ch/",
+            "https://sustainable-digital-construction.ethz.ch/en/reuse"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sumami",
+          "name": "Sumami",
+          "primary_source_url": "https://sustainable-digital-construction.ethz.ch/en/reuse",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake",
+          "source_urls": [
+            "https://sustainable-digital-construction.ethz.ch/en/reuse",
+            "https://www.sumami.ch/"
+          ]
+        }
+      },
+      "id": "sumami",
+      "line": 1,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_update": 1
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "anchor_id": "articonnex",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://articonnex.com/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Contreplaqué, OSB, Bois, Sols, Quincaillerie... produits phares: contreplaqué, OSB, parquets, isolant, bardage, terrasse, tasseaux, quincaillerie."
+    },
+    {
+      "url": "https://articonnex.com/collections/sols/reemploi",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Collection de revêtements de sol: sol PVC, vinyle, parquets, carrelages, moquettes; dalles/lames PVC."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://articonnex.com/"
+      ],
+      "evidence_quote": "Contreplaqué, OSB, Bois; products include parquets, terrasse, tasseaux.",
+      "confidence": "belegt",
+      "note": "Direct first-party wording names wood/wood products.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://articonnex.com/"
+      ],
+      "evidence_quote": "Produits phares include “isolant”.",
+      "confidence": "belegt",
+      "note": "French “isolant” supports insulation material.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "mat_kunststoff",
+      "evidence_urls": [
+        "https://articonnex.com/collections/sols/reemploi"
+      ],
+      "evidence_quote": "Collection de revêtements de sol: sol PVC, vinyle; dalles et lames PVC.",
+      "confidence": "belegt",
+      "note": "PVC/vinyl is explicit plastic material.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://articonnex.com/collections/sols/reemploi"
+      ],
+      "evidence_quote": "Revêtements de sol: sol PVC, vinyle, parquets, carrelages, moquettes.",
+      "confidence": "belegt",
+      "note": "Direct floor-covering category.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_fassade",
+      "evidence_urls": [
+        "https://articonnex.com/"
+      ],
+      "evidence_quote": "Produits phares include “bardage”.",
+      "confidence": "belegt",
+      "note": "Bardage/cladding supports facade/skin component.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://articonnex.com/"
+      ],
+      "evidence_quote": "Product scope includes “quincaillerie”.",
+      "confidence": "belegt",
+      "note": "Hardware/fittings fit the Ausbau category.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "articonnex",
+      "claim_type": "Material",
+      "target_id": "mat_beton",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Articonnex sols/reemploi search extract",
+      "source_url": "https://articonnex.com/collections/sols/reemploi",
+      "source_line_ref": "",
+      "source_excerpt_short": "PVC vinyle imitation béton",
+      "rejection_reason": "This is imitation-concrete finish, not concrete material.",
+      "pass_name": "continuation_3_final_evidence_check"
+    },
+    {
+      "anchor_id": "articonnex",
+      "claim_type": "Material",
+      "target_id": "mat_keramik",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Articonnex sols/reemploi search extract",
+      "source_url": "https://articonnex.com/collections/sols/reemploi",
+      "source_line_ref": "",
+      "source_excerpt_short": "carrelages",
+      "rejection_reason": "Tile/carrelage supports floor/wall type, but this extract does not explicitly say ceramic/céramique.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

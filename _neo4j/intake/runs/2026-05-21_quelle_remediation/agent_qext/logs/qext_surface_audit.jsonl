@@ -1,0 +1,60 @@
+{"label": "Akteur", "nodes_updated": 648}
+{"label": "Akteurrolle", "nodes_updated": 24}
+{"label": "Akteurtyp", "nodes_updated": 10}
+{"label": "Akzeptanz", "nodes_updated": 7}
+{"label": "Aufbereitungsverfahren", "nodes_updated": 62}
+{"label": "BauaufgabeIntervention", "nodes_updated": 10}
+{"label": "Bauobjektklasse", "nodes_updated": 8}
+{"label": "Bauobjektrolle", "nodes_updated": 6}
+{"label": "Bauproduktstatus", "nodes_updated": 15}
+{"label": "Bausystem", "nodes_updated": 9}
+{"label": "Bauteilebene", "nodes_updated": 6}
+{"label": "Bauteilgruppe", "nodes_updated": 369}
+{"label": "Bauteiltyp", "nodes_updated": 23}
+{"label": "Bauweise", "nodes_updated": 6}
+{"label": "Bauwerk", "nodes_updated": 186}
+{"label": "BauwerkEra", "nodes_updated": 6}
+{"label": "Beschaffungsweg", "nodes_updated": 10}
+{"label": "Defekt", "nodes_updated": 10}
+{"label": "Funktionswechsel", "nodes_updated": 6}
+{"label": "Huerde", "nodes_updated": 28}
+{"label": "HuerdeKategorie", "nodes_updated": 10}
+{"label": "Kennwert", "nodes_updated": 258}
+{"label": "LCAModule", "nodes_updated": 5}
+{"label": "Layer", "nodes_updated": 6}
+{"label": "Leistungsanforderung", "nodes_updated": 46}
+{"label": "Logistik", "nodes_updated": 10}
+{"label": "Marktmodell", "nodes_updated": 11}
+{"label": "MatchingQualitaet", "nodes_updated": 9}
+{"label": "Material", "nodes_updated": 26}
+{"label": "Materialdepot", "nodes_updated": 23}
+{"label": "Materialgruppe", "nodes_updated": 11}
+{"label": "Methode", "nodes_updated": 13}
+{"label": "Norm", "nodes_updated": 103}
+{"label": "Nutzung", "nodes_updated": 9}
+{"label": "Programm", "nodes_updated": 29}
+{"label": "Projekt", "nodes_updated": 101}
+{"label": "Prozessphase", "nodes_updated": 10}
+{"label": "PruefungNachweis", "nodes_updated": 120}
+{"label": "RechtlicheBedingung", "nodes_updated": 15}
+{"label": "Ressourcenquelle", "nodes_updated": 16}
+{"label": "ReuseRule", "nodes_updated": 20}
+{"label": "Rueckbauverfahren", "nodes_updated": 5}
+{"label": "Schadstoff", "nodes_updated": 9}
+{"label": "Software", "nodes_updated": 19}
+{"label": "Status", "nodes_updated": 9}
+{"label": "Tool", "nodes_updated": 8}
+{"label": "Tragwerksprinzip", "nodes_updated": 4}
+{"label": "Verbindungstechnik", "nodes_updated": 15}
+{"label": "WiederverwendungsArt", "nodes_updated": 11}
+{"label": "Wiederverwendungskette", "nodes_updated": 14}
+{"label": "Wirtschaft", "nodes_updated": 12}
+{"label": "ZertifizierungBewertungssystem", "nodes_updated": 0}
+{"label": "Zertifizierungssystem", "nodes_updated": 8}
+{"label": "ZustandsKlasse", "nodes_updated": 6}
+{"audit_statement_preview": "MATCH (n:Material) WHERE n.source_urls IS NULL", "rows": []}
+{"audit_statement_preview": "MATCH (n:Norm) WHERE n.source_urls IS NULL", "rows": []}
+{"audit_statement_preview": "MATCH (n:Bauteilgruppe) WHERE n.source_urls IS NULL", "rows": []}
+{"audit_statement_preview": "MATCH (n) WHERE n.source_urls IS NOT NULL AND n.migration_origin CONTAINS 'mig_qext_b_source_urls'", "rows": [{"lbl": "Akteur", "nodes": 648, "avg_sources": 7.131172839506167, "max_sources": 60}, {"lbl": "Bauteilgruppe", "nodes": 369, "avg_sources": 10.005420054200552, "max_sources": 19}, {"lbl": "Kennwert", "nodes": 258, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Bauwerk", "nodes": 186, "avg_sources": 9.924731182795698, "max_sources": 27}, {"lbl": "PruefungNachweis", "nodes": 120, "avg_sources": 9.283333333333337, "max_sources": 23}, {"lbl": "Norm", "nodes": 103, "avg_sources": 0.24271844660194175, "max_sources": 10}, {"lbl": "Projekt", "nodes": 101, "avg_sources": 8.000000000000002, "max_sources": 19}, {"lbl": "Aufbereitungsverfahren", "nodes": 62, "avg_sources": 6.709677419354837, "max_sources": 8}, {"lbl": "Leistungsanforderung", "nodes": 46, "avg_sources": 7.130434782608695, "max_sources": 8}, {"lbl": "Programm", "nodes": 29, "avg_sources": 4.344827586206898, "max_sources": 15}, {"lbl": "Huerde", "nodes": 28, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Material", "nodes": 26, "avg_sources": 2.4615384615384617, "max_sources": 8}, {"lbl": "Akteurrolle", "nodes": 24, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Materialdepot", "nodes": 23, "avg_sources": 8.17391304347826, "max_sources": 17}, {"lbl": "Bauteiltyp", "nodes": 23, "avg_sources": 2.7826086956521743, "max_sources": 8}, {"lbl": "ReuseRule", "nodes": 20, "avg_sources": 1.0, "max_sources": 1}, {"lbl": "Software", "nodes": 19, "avg_sources": 4.684210526315789, "max_sources": 16}, {"lbl": "Ressourcenquelle", "nodes": 16, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Verbindungstechnik", "nodes": 15, "avg_sources": 1.5333333333333332, "max_sources": 8}, {"lbl": "Bauproduktstatus", "nodes": 15, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "RechtlicheBedingung", "nodes": 15, "avg_sources": 97.0, "max_sources": 107}, {"lbl": "Wiederverwendungskette", "nodes": 14, "avg_sources": 8.5, "max_sources": 14}, {"lbl": "Methode", "nodes": 13, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Wirtschaft", "nodes": 12, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Marktmodell", "nodes": 11, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Materialgruppe", "nodes": 11, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "WiederverwendungsArt", "nodes": 11, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Defekt", "nodes": 10, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "Akteurtyp", "nodes": 10, "avg_sources": 0.0, "max_sources": 0}, {"lbl": "BauaufgabeIntervention", "nodes": 10, "avg_sources": 0.0, "max_sources": 0}]}
+{"audit_statement_preview": "MATCH (n:Material {id: 'mat_stahl'})", "rows": [{"check": "qext_b_s1_mat_stahl", "sources": 8, "urls": ["https://opalis.eu/sites/default/files/2022-02/FCRBE-General_introduction.pdf", "https://opalis.eu/sites/default/files/2022-01/2.40_en_-_reclaimed_solid_terracotta_brick_v01_0.pdf", "https://recreate-project.eu/project-pilots/the-netherlands", "https://recreate-project.eu/tag/hollow-core-slabs", "https://lendager.com/project/resource-rows", "https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ", "https://www.nen.nl/en/cen-ts-1090-201-2024-en-330911", "https://www.architecturaldigest.com/story/european-union-set-bold-new-brussels-headquarters"]}]}
+{"audit_statement_preview": "MATCH (n:Bauteilgruppe) WHERE n.id STARTS WITH 'bg_stuttgart_21'", "rows": []}

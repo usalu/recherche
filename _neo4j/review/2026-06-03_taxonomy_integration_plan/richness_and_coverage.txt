@@ -1,0 +1,287 @@
+==============================================================================
+1. PROPERTY-BAG RICHNESS — what carries info that batches won't regenerate
+==============================================================================
+
+--- :Projekt — property keys observed across all 86 nodes ---
+    name                                     appears on  86/86 nodes
+    id                                       appears on  86/86 nodes
+    projektstatus_text                       appears on  69/86 nodes
+    name_full                                appears on  66/86 nodes
+    year_completed                           appears on  42/86 nodes
+    area_m2_gross                            appears on  35/86 nodes
+    nutzung_text                             appears on   9/86 nodes
+
+--- :Projekt — sample full property bag (densest 3) ---
+
+  * p_bluecity_offices_rotterdam  (7 properties)
+      nutzung_text                     = Büro- und Arbeitsplätze für Circular-Economy-Unternehmen
+      area_m2_gross                    = 1300
+      name_full                        = BlueCity Offices Rotterdam
+      year_completed                   = 2017
+      name                             = BlueCity Offices…
+      id                               = p_bluecity_offices_rotterdam
+      projektstatus_text               = gebaut
+
+  * p_chiro_d_itterbeek_dilbeek  (7 properties)
+      nutzung_text                     = Sanitärblock / WC-Anlage fuer Chiro und Besucher
+      area_m2_gross                    = 15
+      name_full                        = Chiro d’Itterbeek / Sanitary block, Dilbeek
+      year_completed                   = 2019
+      name                             = Chiro d’Itterbeek
+      id                               = p_chiro_d_itterbeek_dilbeek
+      projektstatus_text               = gebaut
+
+  * p_biopartner_5_leiden_oegstgeest  (6 properties)
+      nutzung_text                     = Labor-, Büro- und Begegnungsgebäude für Life-Sciences-Startups
+      name_full                        = BioPartner 5, Leiden / Oegstgeest
+      year_completed                   = 2021
+      name                             = BioPartner 5
+      id                               = p_biopartner_5_leiden_oegstgeest
+      projektstatus_text               = gebaut
+
+--- :Bauteilgruppe — property keys observed across all 356 nodes ---
+    reuse_status                             appears on 356/356 nodes
+    name                                     appears on 356/356 nodes
+    id                                       appears on 356/356 nodes
+    bg_kind                                  appears on 356/356 nodes
+    alte_funktion                            appears on 291/356 nodes
+    neue_funktion                            appears on 291/356 nodes
+    tragend                                  appears on 124/356 nodes
+
+--- :Bauteilgruppe — sample 3 densest ---
+
+  * bg_planned_stahlbeton_decke_montessori_maassluis_hollow_core_slabs  (7 properties)
+      alte_funktion                    = Donor-Funktion öffentlich nicht genannt
+      reuse_status                     = planned
+      tragend                          = True
+      name                             = Hohlkörperd… (Montessori)
+      id                               = bg_planned_stahlbeton_decke_montessori_maassluis_hollow_core_slabs
+      bg_kind                          = partial_batch
+      neue_funktion                    = tragende Decken im Schulneubau
+
+  * bg_retained_mehrere_mehrere_elys_concrete_halls  (7 properties)
+      alte_funktion                    = Tragstruktur des Coop-Verteilzentrums
+      reuse_status                     = retained
+      tragend                          = True
+      name                             = Betonhallen
+      id                               = bg_retained_mehrere_mehrere_elys_concrete_halls
+      bg_kind                          = batch
+      neue_funktion                    = weitergenutzte Tragstruktur des Kultur- und Gewerbehauses
+
+  * bg_retained_mehrere_mehrere_grande_halle_concrete_structure  (7 properties)
+      alte_funktion                    = Tragwerk/Hülle
+      reuse_status                     = retained
+      tragend                          = True
+      name                             = Bestand-Betonstruktur…
+      id                               = bg_retained_mehrere_mehrere_grande_halle_concrete_structure
+      bg_kind                          = batch
+      neue_funktion                    = Tragwerk/Hülle nach Sanierung
+
+--- :Bauteilgruppe — outgoing edges by target label (top 15) ---
+    -[:HAS_RISK_POLLUTANT          ]->(:Schadstoff              )   791
+    -[:HAT_HUERDE                  ]->(:Huerde                  )   739
+    -[:HAT_PROZESSPHASE            ]->(:Prozessphase            )   645
+    -[:BELEGT_IN                   ]->(:Quelle                  )   627
+    -[:HAT_BAUTEILTYP              ]->(:Bauteiltyp              )   592
+    -[:HAT_LEISTUNGSANFORDERUNG    ]->(:Leistungsanforderung    )   548
+    -[:NUTZT_MATERIAL              ]->(:Material                )   495
+    -[:HAT_RESSOURCENQUELLE        ]->(:Ressourcenquelle        )   482  [IN SCOPE]
+    -[:HAT_MATERIALGRUPPE          ]->(:Materialgruppe          )   475
+    -[:HAT_WIEDERVERWENDUNGSART    ]->(:WiederverwendungsArt    )   425  [IN SCOPE]
+    -[:HAT_AUFBEREITUNG            ]->(:Aufbereitungsverfahren  )   411  [IN SCOPE]
+    -[:HAT_METHODE                 ]->(:Methode                 )   397  [IN SCOPE]
+    -[:HAT_LOGISTIK                ]->(:Logistik                )   390
+    -[:HAT_MARKTMODELL             ]->(:Marktmodell             )   374
+    -[:HAT_BAUTEILEBENE            ]->(:Bauteilebene            )   359
+
+==============================================================================
+2. PER-PROJECT RE-SUPPLY DENSITY — old edges vs new batch rows
+==============================================================================
+
+Format:  old / new  per axis. Projects where batch supply < old detail are flagged.
+
+  project_id                                         Method   Aufber   Quelle   Rueckb      WVA   Ergebn      Ort   FLAG
+  p_55_great_suffolk_street_london                   1/2     3/2     2/1     0/1     2/0     0/1     0/1  
+  p_association_house_groeditz                       1/2     0/2     2/2     2/2     3/0     0/2     0/2  
+  p_association_house_plauen                         1/2     0/1     1/1     1/1     2/0     0/1     0/1  
+  p_awm_muenster_circular_office                     2/5     4/5     5/5     0/1    12/0     0/5     0/5  
+  p_bedzed_london_hackbridge                         1/2     5/3     3/3     0/3     4/0     0/3     0/3  
+  p_berlin_schildow_pilot_house                      1/2     2/1     2/1     2/1     2/0     0/1     0/1  
+  p_bestandverplanzung_pavilion_muenchen             1/1     0/1     2/1     0/1     2/0     0/1     0/1  
+  p_big_dig_building_boston                          3/2     0/1     2/1     0/1     4/0     0/1     0/1  
+  p_big_dig_house_lexington_massachusetts            2/2     3/0     4/3     6/0     5/0     0/3     0/3     THIN: Aufber-thin(3→0),Rueckb-thin(6→0)
+  p_biopartner_5_leiden_oegstgeest                   3/2     2/2     6/2     0/1     9/0     0/5     0/2  
+  p_bluecity_offices_rotterdam                       2/2     2/2     5/3     0/0     6/0     0/4     0/2  
+  p_boulder_fire_station_3                           2/4     2/3     6/2     1/2     5/0     0/3     0/1  
+  p_brent_cross_town_primary_substation_london       2/4     3/2     8/2     0/0     5/0     0/1     0/1  
+  p_brighton_waste_house_brighton                    2/4     1/8     8/6     0/1     9/0     0/6     0/6  
+  p_broethen_twin_house_hoyerswerda                  2/2     2/2     3/2     4/2     3/0     0/2     0/2  
+  p_cascadeup_london_secondary_timber_glulam_demonstrator  10/2     9/2     5/2     0/0     9/0     0/2     0/1     THIN: Method-thin(10→2),Aufber-thin(9→2)
+  p_chiro_d_itterbeek_dilbeek                       17/2     9/0    26/12    0/0    16/0     0/12    0/12    THIN: Method-thin(17→2),Aufber-thin(9→0)
+  p_christ_pavilion_volkenroda                       8/2     6/6     7/6     6/6     8/0     0/6     0/6  
+  p_circl_abn_amro                                   4/4     9/3    15/5     7/0    15/0     0/5     0/1     THIN: Rueckb-thin(7→0)
+  p_circular_centre_netherlands_prinsenhof_a_reuse_pilot   6/4     6/3     4/3     6/3     9/0     0/3     0/3  
+  p_circular_pavilion_paris                          9/3     7/6    15/6     6/0     9/0     0/6     0/6     THIN: Rueckb-thin(6→0)
+  p_crclr_house_impact_hub_berlin                   16/3    10/6    15/6    12/1    15/0     0/6     0/6     THIN: Method-thin(16→3),Rueckb-thin(12→1)
+  p_elementa_walkeweg                                4/3     6/4     4/4     2/4     4/0     0/4     0/4  
+  p_elys_kultur_gewerbehaus_basel                   17/2    14/0    24/7    14/0    14/0     0/7     0/7     THIN: Method-thin(17→2),Aufber-thin(14→0),Quelle-thin(24→7),Rueckb-thin(14→0)
+  p_eth_circular_construction_student_reuse          0/0     0/0     0/0     0/0     0/0     0/0     0/0  
+  p_europa_building_brussels                         5/1     7/1     3/2     2/0     6/0     0/2     0/2     THIN: Aufber-thin(7→1)
+  p_fcrbe                                            0/0     0/0     0/0     0/0     0/0     0/0     0/0  
+  p_ferme_du_rail_paris                             19/3    11/1    27/1    16/0    10/0     0/5     0/1     THIN: Method-thin(19→3),Aufber-thin(11→1),Quelle-thin(27→1),Rueckb-thin(16→0)
+  p_gjg_house_gentbrugge                             4/3     2/1     5/1     1/0     3/0     0/2     0/1  
+  p_grande_halle_de_colombelles                     21/3    16/8    20/8    18/0    12/0     0/8     0/8     THIN: Method-thin(21→3),Rueckb-thin(18→0)
+  p_grubenstrasse_29_werkhof_29_zuerich             22/2    16/0    31/9    18/0    12/0     0/9     0/10    THIN: Method-thin(22→2),Aufber-thin(16→0),Quelle-thin(31→9),Rueckb-thin(18→0)
+  p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere   6/2     2/2     3/2     3/2     4/0     0/2     0/2  
+  p_hastings_pier_visitor_centre                     8/2     8/2     8/1     5/1     9/0     0/2     0/1     THIN: Quelle-thin(8→1)
+  p_haus_hos_mehrfamilienhaus_muehlhausen           12/2     6/3     4/3     6/3     8/0     0/3     0/3     THIN: Method-thin(12→2)
+  p_holbein_gardens_london                           9/4     9/2     9/2     2/1     9/0     0/4     0/2     THIN: Aufber-thin(9→2),Quelle-thin(9→2)
+  p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain  15/2    13/0    14/4     6/0    15/0     0/4     0/4     THIN: Method-thin(15→2),Aufber-thin(13→0),Rueckb-thin(6→0)
+  p_impact_hub_berlin_crclr_fitout                  33/3    11/7    24/7    14/0    15/0     0/7     0/7     THIN: Method-thin(33→3),Quelle-thin(24→7),Rueckb-thin(14→0)
+  p_institut_de_botanique_ulg_liege                  1/1     1/2     2/2     0/2     4/0     0/2     0/2  
+  p_jeugdkliniek_ithaka_emergis_kloetinge            8/3     6/7     7/7     5/7     9/0     0/7     0/7  
+  p_juch_areal_recyclingzentrum_zuerich              6/3     0/3     3/3     3/3     5/0     0/3     0/3  
+  p_jugendtreff_ingersheim                           2/2     5/2     2/2     2/2     2/0     0/2     0/2  
+  p_k118_kopfbau_halle_118_winterthur                9/4    20/1     7/3     3/0     7/0     0/3     0/3     THIN: Aufber-thin(20→1),Rueckb-thin(3→0)
+  p_ka13_kristian_augusts_gate_13_oslo               7/4     6/5     8/5     2/1     8/0     0/5     0/5  
+  p_kamikatsu_zero_waste_center_hotel_why            6/2     8/5     5/5     4/5     9/0     0/5     0/5  
+  p_kindergarten_moeoeslistrasse_manegg_zuerich      8/3    10/7     7/7     5/7    10/0     0/7     0/7  
+  p_liander_alliander_hq_duiven                      9/3     1/2     5/1     0/0     9/0     0/8     0/2  
+  p_lo_reninge_town_hall_facade                      4/1     1/2     3/1     1/0     5/0     0/2     0/1  
+  p_lokomotion_technology_centre_mini_pilot_tampere   6/3     3/1     1/1     2/1     3/0     0/1     0/1  
+  p_lycee_michel_lucius_conversion_luxembourg        7/2     0/7     7/7     7/7     9/0     0/7     0/7  
+  p_lysp8                                            0/0     0/0     0/0     0/0     0/0     0/0     0/0  
+  p_lysp8_basel                                      3/3     6/6     6/6     5/6     6/0     0/6     0/6  
+  p_maison_des_canaux_paris                          4/5     2/4     4/3     0/2     6/0     0/7     0/3  
+  p_maison_dna_asse                                  2/1     0/2     2/2     0/2     3/0     0/2     0/2  
+  p_maison_vignette_auderghem                        6/2     3/1     5/1     0/0     6/0     0/1     0/1  
+  p_meduni_campus_mariannengasse                     3/3     3/0     6/2     8/1     6/0     0/5     0/1     THIN: Aufber-thin(3→0),Rueckb-thin(8→1)
+  p_mehrow_pilot_house                               0/2     2/2     2/2     4/2     3/0     0/2     0/2  
+  p_melkinlaituri_primary_school_daycare_centre_helsinki   2/3     3/1     1/1     1/1     4/0     0/3     0/1  
+  p_montessori_maassluis                             1/1     0/0     1/1     0/0     2/0     0/1     0/1  
+  p_multi_brussels_reuse_in_multi                    6/4     3/2     4/3     1/2     9/0     0/7     0/3  
+  p_musee_de_folklore_mouscron                       2/1     2/1     1/1     1/1     3/0     0/1     0/1  
+  p_peoples_pavilion_eindhoven                      11/3     1/1     9/5     4/0    13/0     0/5     0/5     THIN: Rueckb-thin(4→0)
+  p_plattenpalast_berlin                             6/1     3/2     3/2     3/2     4/0     0/2     0/2     THIN: Method-thin(6→1)
+  p_plattenvereinigung_berlin                        5/2     3/4     5/4     2/4     6/0     0/4     0/4  
+  p_plp_london_hq_circular_studio_fitout            10/2     7/0     7/4     2/0    12/0     0/4     0/4     THIN: Method-thin(10→2),Aufber-thin(7→0)
+  p_rcmi_concular                                    0/0     0/0     0/0     0/0     0/0     0/0     0/0  
+  p_recrete_footbridge_reused_concrete_blocks        4/2     2/2     2/1     2/1     3/0     0/1     0/1  
+  p_recyclinghaus_hannover                          14/3    14/9    12/9     7/0    15/0     0/9     0/9     THIN: Method-thin(14→3),Rueckb-thin(7→0)
+  p_recypark_demets_anderlecht                       3/3     3/2     2/1     1/1     3/0     0/1     0/1  
+  p_refair_bordeaux_reemploi_platform                0/0     0/0     0/0     0/0     0/0     0/0     0/0  
+  p_resilience_la_ferme_des_possibles_stains         4/2     7/7    10/7     1/7    10/0     0/7     0/7  
+  p_resource_rows_copenhagen                         3/2     3/1     2/2     1/0     3/0     0/1     0/2  
+  p_roots_in_the_sky_blackfriars_crown_court         3/1     1/0     3/2     1/0     5/0     0/2     0/2  
+  p_saxum_vineyard_equipment_barn_paso_robles        2/1     3/0     4/3     0/0     5/0     0/3     0/3     THIN: Aufber-thin(3→0)
+  p_schaerenmoosstrasse_zuerich                      2/3     1/0     5/1     1/0     5/0     0/4     0/2  
+  p_superlocal_expogebouw_bleijerheide              14/3     8/1     6/2     6/1     9/0     0/4     0/2     THIN: Method-thin(14→3),Aufber-thin(8→1),Rueckb-thin(6→1)
+  p_svanen_kindergarten_gladsaxe                    23/4     9/2     7/7     9/1    15/0     0/7     0/7     THIN: Method-thin(23→4),Aufber-thin(9→2),Rueckb-thin(9→1)
+  p_the_green_house_utrecht                         18/3     6/0     6/3     3/0     9/0     0/4     0/3     THIN: Method-thin(18→3),Aufber-thin(6→0),Rueckb-thin(3→0)
+  p_thoravej_29_copenhagen                          12/3     5/4     5/4     4/0    13/0     0/4     0/4     THIN: Method-thin(12→3),Rueckb-thin(4→0)
+  p_timber_square_london                            22/4     4/2     7/2     1/0    11/0     0/4     0/2     THIN: Method-thin(22→4)
+  p_trae_high_rise_aarhus                            7/3     7/2     7/5     4/0     8/0     0/5     0/4     THIN: Rueckb-thin(4→0)
+  p_umar_unit                                        4/2    10/0     8/4     8/0     8/0     0/4     0/4     THIN: Aufber-thin(10→0),Rueckb-thin(8→0)
+  p_upcycle_studios_copenhagen                       5/3     5/1     3/3     2/0     7/0     0/3     0/1  
+  p_verbiest_karreveld_brussels                      9/2    12/7     7/7     7/7    10/0     0/7     0/7     THIN: Method-thin(9→2)
+  p_villa_welpeloo_enschede                         11/3     7/4     4/4     2/0     6/0     0/4     0/4  
+  p_woongroep_boschgaard_den_bosch                  11/4     8/2     4/4     4/1     7/0     0/5     0/3  
+  p_zinneke_feder_masui4ever_brussels               15/3    10/6     6/6     6/6     8/0     0/6     0/6     THIN: Method-thin(15→3)
+
+==============================================================================
+3. PER-BAUTEILGRUPPE EVIDENCE COVERAGE
+==============================================================================
+For each live BG with old vocab edges, check if its project has batch coverage.
+
+Distribution: how many BGs have N old-vocab edges?
+    BGs with  1 old-vocab edges: 2
+    BGs with  2 old-vocab edges: 43
+    BGs with  3 old-vocab edges: 46
+    BGs with  4 old-vocab edges: 47
+    BGs with  5 old-vocab edges: 55
+    BGs with  6 old-vocab edges: 47
+    BGs with  7 old-vocab edges: 35
+    BGs with  8 old-vocab edges: 16
+    BGs with  9 old-vocab edges: 21
+    BGs with 10 old-vocab edges: 25
+    BGs with 11 old-vocab edges: 8
+    BGs with 12 old-vocab edges: 4
+    BGs with 13 old-vocab edges: 3
+    BGs with 14 old-vocab edges: 4
+
+Evidence-heavy BGs (>=5 old vocab edges) — top 20 by old-edge count:
+    bg_reuse_stahl_mehrere_hof_1930s_beams_to_tbc           proj=p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain old=14 (ERE:3 ODE:3 OUR:3 ERV:3 KBA:2)  batch_rows=18
+    bg_reuse_stahl_mehrere_hof_self_columns                 proj=p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain old=14 (ERE:3 ODE:3 OUR:3 ERV:3 KBA:2)  batch_rows=18
+    bg_reuse_stahl_mehrere_holbein_structural               proj=p_holbein_gardens_london         old=14 (ERE:3 ODE:3 OUR:3 ERV:3 KBA:2)  batch_rows=21
+    bg_reuse_stahl_mehrere_tbc_repurposed_cleveland         proj=p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain old=14 (ERE:3 ODE:3 OUR:3 ERV:3 KBA:2)  batch_rows=18
+    bg_reuse_mdf_mehrere_impact_black_mdf_panels            proj=p_impact_hub_berlin_crclr_fitout old=13 (ODE:4 OUR:3 ERE:2 KBA:2 ERV:2)  batch_rows=38
+    bg_reuse_mdf_ausbau_impact_red_mdf_reception            proj=p_impact_hub_berlin_crclr_fitout old=13 (ODE:4 OUR:3 ERE:2 KBA:2 ERV:2)  batch_rows=38
+    bg_reuse_holz_mehrere_impact_offcuts_phone_booths       proj=p_impact_hub_berlin_crclr_fitout old=13 (ODE:4 OUR:3 ERE:2 KBA:2 ERV:2)  batch_rows=38
+    bg_reuse_mehrere_mehrere_impact_crclr_doors_windows_sanitary proj=p_impact_hub_berlin_crclr_fitout old=12 (ODE:4 OUR:3 ERE:2 KBA:2 ERV:1)  batch_rows=38
+    bg_reuse_ziegel_mehrere_impact_reception                proj=p_impact_hub_berlin_crclr_fitout old=12 (ODE:4 OUR:3 KBA:2 ERV:2 ERE:1)  batch_rows=38
+    bg_reuse_holz_mehrere_svanen_dachbinder                 proj=p_svanen_kindergarten_gladsaxe   old=12 (ODE:4 ERE:2 OUR:2 KBA:2 ERV:2)  batch_rows=37
+    bg_reuse_mehrere_mehrere_thoravej_tt_decken_zu_treppen  proj=p_thoravej_29_copenhagen         old=12 (ODE:3 ERV:3 ERE:2 OUR:2 KBA:2)  batch_rows=23
+    bg_reuse_holz_mehrere_crclr_recycled_gallery_interior   proj=p_crclr_house_impact_hub_berlin  old=11 (ERV:3 ERE:2 ODE:2 OUR:2 KBA:2)  batch_rows=34
+    bg_reuse_aluminium_fassade_elys_trapezoidal_sheet       proj=p_elys_kultur_gewerbehaus_basel  old=11 (OUR:3 ERE:2 ODE:2 KBA:2 ERV:2)  batch_rows=30
+    bg_reuse_stahl_mehrere_elys_gratings_and_garage_door    proj=p_elys_kultur_gewerbehaus_basel  old=11 (OUR:3 ERE:2 ODE:2 KBA:2 ERV:2)  batch_rows=30
+    bg_reuse_holz_fassade_elys_reuse_system                 proj=p_elys_kultur_gewerbehaus_basel  old=11 (OUR:3 ERE:2 ODE:2 KBA:2 ERV:2)  batch_rows=30
+    bg_reuse_holz_fassade_hastings_outbuilding_cladding     proj=p_hastings_pier_visitor_centre   old=11 (ERE:3 ODE:2 OUR:2 KBA:2 ERV:2)  batch_rows=11
+    bg_reuse_holz_fassade_hastings_hardwood_cladding        proj=p_hastings_pier_visitor_centre   old=11 (ERE:3 ODE:2 OUR:2 KBA:2 ERV:2)  batch_rows=11
+    bg_reuse_textil_mehrere_impact_recycled_felt_panels     proj=p_impact_hub_berlin_crclr_fitout old=11 (ODE:4 OUR:3 KBA:2 ERE:1 ERV:1)  batch_rows=38
+    bg_reuse_holz_mehrere_impact_gallery                    proj=p_impact_hub_berlin_crclr_fitout old=11 (ODE:4 OUR:3 KBA:2 ERE:1 ERV:1)  batch_rows=38
+    bg_reuse_mehrere_mehrere_crclr_wood_aluminium_windows   proj=p_crclr_house_impact_hub_berlin  old=10 (ERE:2 ODE:2 OUR:2 KBA:2 ERV:2)  batch_rows=34
+
+BGs whose project has zero or very few batch rows (<= 3):
+    Count: 6
+    bg_reuse_holz_fenster_reusehoefe_ukraine_windows        proj=?                                old= 5  batch=0
+    bg_reuse_holz_mehrere_beware_local_timber               proj=?                                old= 4  batch=0
+    bg_dismantled_holz_mehrere_stuttgart21_donor_stock      proj=?                                old= 4  batch=0
+    bg_reuse_holz_mehrere_beware_tulium_trusses             proj=?                                old= 2  batch=0
+    bg_planned_mehrere_fundament_beware_flying_foundation   proj=?                                old= 2  batch=0
+    bg_reuse_mehrere_mehrere_reusehoefe_yard_logistics      proj=?                                old= 2  batch=0
+
+==============================================================================
+4. SUMMARY
+==============================================================================
+
+  Total old vocab edges (5 rels) across all projects:  2459
+  Total new batch rows (6 rels) across all projects :  1426
+  Net density change:                                 -1033
+
+  Projects flagged (batch supply < old detail on ≥1 axis): 32
+  Flagged project ids:
+    - p_big_dig_house_lexington_massachusetts  (Big Dig House)
+    - p_cascadeup_london_secondary_timber_glulam_demonstrator  (CascadeUp)
+    - p_chiro_d_itterbeek_dilbeek  (Chiro d’Itterbeek)
+    - p_circl_abn_amro  (Circl)
+    - p_circular_pavilion_paris  (Circular Pavilion Paris)
+    - p_crclr_house_impact_hub_berlin  (CRCLR House)
+    - p_elys_kultur_gewerbehaus_basel  (ELYS Kultur- und…)
+    - p_europa_building_brussels  (Europa Building Brussels)
+    - p_ferme_du_rail_paris  (Ferme du Rail Paris)
+    - p_grande_halle_de_colombelles  (Grande Halle de Colombel…)
+    - p_grubenstrasse_29_werkhof_29_zuerich  (Grubenstrasse 29)
+    - p_hastings_pier_visitor_centre  (Hastings Pier Visitor…)
+    - p_haus_hos_mehrfamilienhaus_muehlhausen  (Haus HOS)
+    - p_holbein_gardens_london  (Holbein Gardens, London)
+    - p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain  (House of Fraser)
+    - p_impact_hub_berlin_crclr_fitout  (Impact Hub Berlin)
+    - p_k118_kopfbau_halle_118_winterthur  (K.118 Winterthur)
+    - p_meduni_campus_mariannengasse  (MedUni Campus Wien)
+    - p_peoples_pavilion_eindhoven  (People’s Pavilion…)
+    - p_plattenpalast_berlin  (Plattenpalast Berlin)
+    - p_plp_london_hq_circular_studio_fitout  (PLP London HQ circular…)
+    - p_recyclinghaus_hannover  (Recyclinghaus Hannover)
+    - p_saxum_vineyard_equipment_barn_paso_robles  (Saxum Vineyard Equipment…)
+    - p_superlocal_expogebouw_bleijerheide  (SUPERLOCAL Expogebouw)
+    - p_svanen_kindergarten_gladsaxe  (Svanen)
+    - p_the_green_house_utrecht  (The Green House Utrecht)
+    - p_thoravej_29_copenhagen  (Thoravej 29 Copenhagen)
+    - p_timber_square_london  (Timber Square London)
+    - p_trae_high_rise_aarhus  (TRÆ High-Rise)
+    - p_umar_unit  (UMAR Unit)
+    - p_verbiest_karreveld_brussels  (Verbiest + Karreveld)
+    - p_zinneke_feder_masui4ever_brussels  (Zinneke)
+
+  BGs whose project has near-zero batch rows: 6
+

@@ -6,7 +6,7 @@
   (`c:\Users\Kinosh\.cursor\plans\radical_quality-first_reset_8d1e2b66.plan.md`, lines 984–1058)
 - Run dir: `E:\recherche\_neo4j\intake\runs\2026-05-20_radical_quality_reset\`
 - Driver: Neo4j MCP (`project-0-recherche-Neo4j-Official`) → `bolt://localhost:7687`, database **mit-bestand** (read-only)
-- Source research file: `_neo4j/intake/inbox/research/circular_construction_reuse_graph_gaps.md`
+- Source research file: `_knowledge/themes/circular_construction_reuse_graph_gaps.md`
 
 ## Verdict: PASS (9 / 9 checks)
 

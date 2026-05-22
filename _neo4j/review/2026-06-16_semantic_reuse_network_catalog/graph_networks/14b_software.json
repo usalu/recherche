@@ -1,0 +1,691 @@
+{
+  "id": "14b_software",
+  "section": "14b",
+  "title": "Software used in projects",
+  "cypher": "MATCH (p:Projekt)-[r:NUTZT_SOFTWARE]->(sw)\nRETURN p, r, sw;",
+  "status": "ok",
+  "row_count": 11,
+  "node_count": 20,
+  "relationship_count": 11,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5105",
+      "id": "p_bluecity_offices_rotterdam",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Büro- und Arbeitsplätze für Circular-Economy-Unternehmen",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "BlueCity Offices Rotterdam",
+        "year_completed": 2017,
+        "wiederverwendungsort": [
+          "Extern_importiert",
+          "Im_selben_Gebaeude_versetzt"
+        ],
+        "latitude": 51.9436,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 1300,
+        "name": "BlueCity Offices…",
+        "adresse": "Maasboulevard 100, 3063 NS Rotterdam, Netherlands",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The office conversion uses reclaimed components to invent an interior language for a former leisure complex turned circular-business hub. Red-cedar window frames become partitions and internal facades, concrete blocks define boundaries, and reused steel enters the fit-out. The design is neither nostalgic nor polished; it works through reorientation, repetition and visible provenance. Spatially, the components organise offices while maintaining a sense of openness, making material flow part of the workplace identity.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_bluecity_offices_rotterdam",
+        "id": "p_bluecity_offices_rotterdam",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.bluecity.nl/"
+        ],
+        "status": "Realisiert",
+        "longitude": 4.5112
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5113",
+      "id": "tool_oogstkaart_harvest_map",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "source_titles": [
+          "BlueCity_Offices_Rotterd…"
+        ],
+        "kind": "tool",
+        "name": "Oogstkaart / Harvest Map logic",
+        "id": "tool_oogstkaart_harvest_map"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5228",
+      "id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "House of Fraser / 318 Oxford Street → TBC.London steel reuse chain",
+        "latitude": 51.5142,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: geplant"
+        ],
+        "name": "House of Fraser",
+        "adresse": "318 Oxford Street, London W1C 1HF, UK (donor); 224-226 Tower Bridge Road, London SE1 2UP, UK (receiver TBC.London)",
+        "geo_confidence": "medium",
+        "entwurfsbeschreibung": "This entry is best understood as a design and logistics chain linking a donor department-store structure to a new commercial project. The architectural decision is made before the recipient building is complete: steel members are identified, tested and assigned so they can influence the next structural design. Its design significance lies in timing, dimensional matching and procurement. The output is not only a building part, but a model for making urban demolition stock shape future office construction.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+        "id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "TBC.London gebaut / Practical Completion Mitte Juni 2025; 318 Oxford Street in Construction/Refurbishment",
+        "source_urls": [
+          "https://www.stiffandtrevillion.com/projects/tower-bridge-road"
+        ],
+        "status": [
+          "In_Bau",
+          "Realisiert"
+        ],
+        "longitude": -0.1427
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5238",
+      "id": "software_qflow",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "aliases": [
+          "Qflow delivery and waste ticket tracking"
+        ],
+        "source_titles": [
+          "House_of_Fraser_318_Oxfo…"
+        ],
+        "kind": "software",
+        "name": "Qflow",
+        "id": "software_qflow",
+        "source_urls": [
+          "https://qualisflow.com/"
+        ],
+        "primary_source_url": "https://qualisflow.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "id": "p_impact_hub_berlin_crclr_fitout",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Impact Hub Berlin / CRCLR Fit-out",
+        "year_completed": 2022,
+        "latitude": 52.4764,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 3500,
+        "name": "Impact Hub Berlin",
+        "adresse": "Rollbergstraße 26, 12053 Berlin, Germany",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Impact Hub fit-out translates CRCLR’s circular agenda into everyday workspace design. Reclaimed partitions, surfaces, fixtures and furniture help produce an interior that is flexible, informal and materially explicit. The design choices favour adaptability and visible assembly over a seamless office finish. Reuse becomes spatial communication: tenants encounter the building’s values through desks, meeting rooms, partitions and rough surfaces, not through abstract sustainability signage.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_impact_hub_berlin_crclr_fitout",
+        "id": "p_impact_hub_berlin_crclr_fitout",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.buildingsocialecology.org/projects/crclr-house-berlin/"
+        ],
+        "status": "Realisiert",
+        "longitude": 13.4357
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5262",
+      "id": "software_concular",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "source_titles": [
+          "Impact_Hub_Berlin_CRCLR_…"
+        ],
+        "kind": "software",
+        "name": "Concular",
+        "id": "software_concular",
+        "source_urls": [
+          "https://concular.de/restado/",
+          "https://restado.de/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5263",
+      "id": "software_restado",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "source_titles": [
+          "Impact_Hub_Berlin_CRCLR_…",
+          "restado"
+        ],
+        "kind": "software",
+        "name": "Restado",
+        "id": "software_restado",
+        "source_urls": [
+          "https://restado.de/ueber-restado/",
+          "https://restado.de/hilfe/impressum/",
+          "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado"
+        ],
+        "primary_source_url": "https://restado.de/ueber-restado/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "id": "p_juch_areal_recyclingzentrum_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Juch-Areal Recyclingzentrum Zürich",
+        "latitude": 47.393,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Juch-Areal Recyclingzent…",
+        "adresse": "Juch-Areal, Zürich-Altstetten, 8048 Zürich, Switzerland",
+        "geo_confidence": "low",
+        "entwurfsbeschreibung": "The recycling centre uses reclaimed components within an infrastructure building that already deals with material flows. This gives the architecture a direct conceptual fit: the place for sorting urban resources is itself designed from recovered parts. The design should be read through robust construction, accessible circulation, weathering surfaces and didactic visibility. Reuse strengthens the building’s public message, turning an operational facility into an architectural demonstration of the city’s circular material metabolism.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_juch_areal_recyclingzentrum_zuerich",
+        "id": "p_juch_areal_recyclingzentrum_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "geplant / Ausführung 2026–2027 vorgesehen",
+        "source_urls": [
+          "https://zirkular.net/de/projekt/erz-juchareal",
+          "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+          "https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2025/07/neubau-recyclingzentrum-juch-areal.html",
+          "https://www.stadt-zuerich.ch/de/aktuell/publikationen/2026/reuse-tragstrukturen-studie.html",
+          "https://www.cirkla.ch/de/le-reseau-du-reemploi/lannuaire/projets/recyclingzentrum-juch-areal",
+          "https://www.perita.ch/de/projekt/recyclingzentrum-juch-areal",
+          "https://www.studioloko.ch/en/projects/recyclingzentrum-juch-areal",
+          "https://www.energiekonzepte.ch/en/current/zirkularitaet-am-bau-innovationsprojekt-recyclingzentrum-juch-areal",
+          "https://eurocodes.jrc.ec.europa.eu/sites/default/files/2021-12/EUR23252EN.pdf",
+          "https://www.baunetzwissen.de/gesund-bauen/fachwissen/regelwerke/normen-fuer-den-lehmbau-3393643"
+        ],
+        "status": "Geplant",
+        "longitude": 8.4885
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5268",
+      "id": "tool_bim_bauteilkatalog",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "kind": "tool",
+        "name": "BIM / digitaler Bauteilkatalog",
+        "id": "tool_bim_bauteilkatalog"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5647",
+      "id": "p_resilience_la_ferme_des_possibles_stains",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "Résilience / La Ferme des Possibles Stains",
+        "latitude": 48.9500637,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 1883,
+        "name": "Résilience",
+        "adresse": "29 Rue d’Amiens, 93240 Stains",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Résilience combines reuse with bioclimatic construction to make a social and agricultural building feel materially rooted. Reused windows, radiators, granite paving, sanitary objects and lighting interact with earth, straw and timber, producing a facade and interior palette that is both pragmatic and atmospheric. The design quality lies in continuity between environmental performance and material character: reclaimed components help define daylight, thermal behaviour, texture and the everyday dignity of a community-oriented farm building.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_resilience_la_ferme_des_possibles_stains",
+        "id": "p_resilience_la_ferme_des_possibles_stains",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.bellastock.com/projets/resilience",
+          "https://www.construction21.org/france/case-studies/h/resilience-la-ferme-des-possibles.html",
+          "https://www.socotec.fr/media/client-projects/reemploi-materiaux-novaedia",
+          "https://www.darchitectures.com/magazine/numeros/dossier-tous/111-n-291-la-filiere-du-reemploi-est-elle-credible/4751-reemploi-5-8-un-equilibre-a-trouver-entre-prise-de-risque-et-aleas-siege-de-la-cooperative-novaedia-a-stains-archipel-zero-architectes.html",
+          "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles",
+          "https://www.construction21.org/france/articles/h/resilience-un-batiment-bioclimatique-pour-la-ferme-des-possibles.html"
+        ],
+        "bauobjektklasse": [
+          "Gebaeude"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 2.3701218
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5650",
+      "id": "software_inies",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "source_titles": [
+          "Resilience_La_Ferme_des_…"
+        ],
+        "kind": "software",
+        "name": "INIES",
+        "id": "software_inies"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5708",
+      "id": "p_saxum_vineyard_equipment_barn_paso_robles",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "tragwerksprinzip": [
+          "Skeletttragwerk"
+        ],
+        "name_full": "Saxum Vineyard Equipment Barn",
+        "latitude": 35.6366,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Saxum Vineyard Equipment…",
+        "adresse": "2800 Willow Creek Road, Paso Robles, CA 93446, USA",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Saxum barn converts oil-field drill-stem pipe and steel offcuts into an agricultural structure with a direct industrial presence. The design does not refine the components beyond recognition; it lets their strength, circular sections and weathering character define columns, roof support and large gates. Architectural quality comes from a precise fit between source and programme: rugged industrial salvage becomes appropriate vineyard infrastructure, giving the barn a tough, place-specific tectonic language.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_saxum_vineyard_equipment_barn_paso_robles",
+        "id": "p_saxum_vineyard_equipment_barn_paso_robles",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.aisc.org/awards-and-honors/ideas-awards-archive/saxum-vineyard-equipment-barn",
+          "https://rarig.com/projects/agricultural-cold-storage/saxum-vineyards-equipment-barn",
+          "https://www.world-architects.com/nl/projects/view/saxum-vineyard-equipment-barn",
+          "https://risa.com/case-studies/saxum-vineyard-equipment-barn",
+          "https://www.architecturelab.net/saxum-vineyard-equipment-barn-clayton-korte",
+          "https://www.saxumvineyards.com/"
+        ],
+        "bauobjektklasse": [
+          "Depot_Lager"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: international"
+        ],
+        "longitude": -120.6869
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5713",
+      "id": "software_risa_3d",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "source_titles": [
+          "Saxum_Vineyard_Equipment…"
+        ],
+        "kind": "software",
+        "name": "RISA-3D",
+        "id": "software_risa_3d"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5799",
+      "id": "p_timber_square_london",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "latitude": 51.5050972,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "BREEAM",
+          "NABERS",
+          "WELL"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 52026,
+        "name": "Timber Square London",
+        "adresse": "25 Lavington Street / Bankside, Southwark, London SE1",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Timber Square combines retained printworks structure, new timber construction and selective reused steel into a layered office redevelopment. Reuse is not the only design driver, but it changes the structural and interior narrative: existing frames remain, reclaimed beams appear around cores, and CLT introduces a warmer contemporary layer. The architectural quality is in the legible coexistence of old industrial fabric, new timber order and targeted second-use steel within a commercial city block.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_timber_square_london",
+        "id": "p_timber_square_london",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "im Bau / nahe Fertigstellung; Handover zu verifizieren",
+        "status": [
+          "In_Bau",
+          "Unklar"
+        ],
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": -0.1000695
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5815",
+      "id": "tool_hts_stockmatcher",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "kind": "tool",
+        "name": "HTS Reused Steel Stockmatcher",
+        "metadata_sidecar_key": "node:tool_hts_stockmatcher",
+        "id": "tool_hts_stockmatcher",
+        "source_urls": [
+          "https://www.heynetillettsteel.com/research/",
+          "https://www.heynetillettsteel.com/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "id": "p_umar_unit",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Payback über OpEx / LCA",
+          "Geschaeftsmodell",
+          "Lebenszykluskosten",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "UMAR Unit — Urban Mining and Recycling, NEST Empa Dübendorf",
+        "latitude": 47.4023749,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "UMAR Unit",
+        "adresse": "Überlandstrasse 129, 8600 Dübendorf, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "UMAR is a research apartment designed as a catalogue of reversible material cycles. Most components are selected for separability, take-back, reuse, recycling or compostability; reclaimed Jules Wabbes door handles add a small but explicit reused-component layer. The architectural output is a clean demonstrator rather than a salvage collage: dry joints, modular layers, visible systems and controlled material contrasts show how a dwelling can be designed for future disassembly and resource recovery.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_umar_unit",
+        "id": "p_umar_unit",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "active research demonstrator in NEST since 2018",
+        "longitude": 8.6114852
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6570",
+      "id": "p_circl_abn_amro",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Marketing-/Branding-Payback",
+          "Geschaeftsmodell",
+          "Lebenszykluskosten",
+          "Restwert"
+        ],
+        "name_full": "Circl / ABN AMRO urban mining context",
+        "year_completed": 2017,
+        "latitude": 52.3371844,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 2000,
+        "name": "Circl",
+        "adresse": "Gustav Mahlerplein 1, 1082 MS Amsterdam, Netherlands",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Circl treats the pavilion as a material bank and public demonstration of circular building. Reclaimed timber, reused interior elements and demountable construction are organised into an architecture that must function as restaurant, meeting space and statement object. The design avoids the look of temporary waste reuse by giving recovered components careful detailing and spatial generosity. Its architectural output is a polished but readable kit of materials intended to remain recoverable after use.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_circl_abn_amro",
+        "id": "p_circl_abn_amro",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "longitude": 4.8734146
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:536",
+      "id": "software_llmnt",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "kind": "software",
+        "name": "LLMNT",
+        "id": "software_llmnt"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "id": "p_elementa_walkeweg",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten",
+          "CapEx niedriger (direkte Materialersparnis)",
+          "Lebenszykluskosten",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "ELEMENTA Walkeweg Basel — Wohnbau mit Wiederverwendung von Bestandskomponenten (Kanton Basel-Stadt Wettbewerb)",
+        "latitude": 47.5388275,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "EcoTool (ZBS)"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "ELEMENTA Walkeweg",
+        "adresse": "Emilie Louise Frey-Strasse, 4053 Basel, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "ELEMENTA is important as a housing proposal organised around the reuse of substantial existing components. The architectural interest lies in how salvaged concrete and other building elements can discipline a new residential scheme: bay spacing, stair logic, facade rhythm and construction sequence all have to negotiate availability. Because delivery status still needs verification, the description should remain design-focused. It is a project about making component reuse compatible with ordinary collective housing, not about a one-off pavilion gesture.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_elementa_walkeweg",
+        "id": "p_elementa_walkeweg",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "Planung 2023–2025; Realisierung geplant 2027–2029",
+        "longitude": 7.6125448
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:537",
+      "id": "software_ecotool",
+      "labels": [
+        "Software"
+      ],
+      "properties": {
+        "kind": "software",
+        "name": "EcoTool",
+        "id": "software_ecotool",
+        "source_urls": [
+          "https://concular.de/ecotool/",
+          "https://www.concular.de/"
+        ]
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292236793",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5105",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5113",
+      "start_id": "p_bluecity_offices_rotterdam",
+      "end_id": "tool_oogstkaart_harvest_map",
+      "properties": {
+        "id": "r_p_bluecity_offices_rotterdam__NUTZT_SOFTWARE__tool_oogstkaart_harvest_map"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292236918",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5228",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5238",
+      "start_id": "p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain",
+      "end_id": "software_qflow",
+      "properties": {
+        "id": "r_p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain__NUTZT_SOFTWARE__software_qflow"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292236942",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5262",
+      "start_id": "p_impact_hub_berlin_crclr_fitout",
+      "end_id": "software_concular",
+      "properties": {
+        "id": "r_p_impact_hub_berlin_crclr_fitout__NUTZT_SOFTWARE__software_concular"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292236943",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5263",
+      "start_id": "p_impact_hub_berlin_crclr_fitout",
+      "end_id": "software_restado",
+      "properties": {
+        "id": "r_p_impact_hub_berlin_crclr_fitout__NUTZT_SOFTWARE__software_restado"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153030356258002101",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5268",
+      "start_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "end_id": "tool_bim_bauteilkatalog",
+      "properties": {
+        "id": "r_p_juch_areal_recyclingzentrum_zuerich__NUTZT_SOFTWARE__tool_bim_bauteilkatalog"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292237330",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5647",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5650",
+      "start_id": "p_resilience_la_ferme_des_possibles_stains",
+      "end_id": "software_inies",
+      "properties": {
+        "id": "r_p_resilience_la_ferme_des_possibles_stains__NUTZT_SOFTWARE__software_inies"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292237393",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5708",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5713",
+      "start_id": "p_saxum_vineyard_equipment_barn_paso_robles",
+      "end_id": "software_risa_3d",
+      "properties": {
+        "id": "r_p_saxum_vineyard_equipment_barn_paso_robles__NUTZT_SOFTWARE__software_risa_3d"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153030356258002599",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5799",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5815",
+      "start_id": "p_timber_square_london",
+      "end_id": "tool_hts_stockmatcher",
+      "properties": {
+        "id": "r_p_timber_square_london__NUTZT_SOFTWARE__tool_hts_stockmatcher"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153030356258003281",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5268",
+      "start_id": "p_umar_unit",
+      "end_id": "tool_bim_bauteilkatalog",
+      "properties": {
+        "id": "r_p_umar_unit__NUTZT_SOFTWARE__tool_bim_bauteilkatalog"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292232216",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6570",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:536",
+      "start_id": "p_circl_abn_amro",
+      "end_id": "software_llmnt",
+      "properties": {
+        "id": "r_p_circl_abn_amro__NUTZT_SOFTWARE__software_llmnt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917637879292232217",
+      "type": "NUTZT_SOFTWARE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:537",
+      "start_id": "p_elementa_walkeweg",
+      "end_id": "software_ecotool",
+      "properties": {
+        "id": "r_p_elementa_walkeweg__NUTZT_SOFTWARE__software_ecotool"
+      }
+    }
+  ]
+}

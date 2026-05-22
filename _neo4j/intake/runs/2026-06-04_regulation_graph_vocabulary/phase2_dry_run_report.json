@@ -1,0 +1,52 @@
+{
+  "before": {
+    "labels": {
+      "Nachweisforderung": 0,
+      "Quelle": 0,
+      "Regelwerk": 0,
+      "Regulierungsfrage": 0
+    },
+    "nodes": 2462,
+    "relationships": 17469,
+    "reltypes": {
+      "ERFORDERT_NACHWEIS": 0,
+      "GESTUETZT_AUF_REGELWERK": 0,
+      "GILT_IN_LAND": 172,
+      "TRIGGERS_REGULIERUNGSFRAGE": 0,
+      "UNTERLIEGT_REGELWERK": 0
+    }
+  },
+  "commit": false,
+  "created_at_utc": "2026-06-05T13:26:08.991798+00:00",
+  "database": "mit-bestand",
+  "phase": "phase2_apply_property_overlay",
+  "planned": {
+    "dropped_nachweisforderung_mapped_to_schadstoffpruefung": [
+      "nf_kmf_check",
+      "nf_mikrobielle_belastung_check",
+      "nf_pak_check",
+      "nf_pcb_check",
+      "nf_radonmessung",
+      "nf_voc_emissionsnachweis"
+    ],
+    "edge_stats": {
+      "deduped_edges": 2545,
+      "folded_or_skipped_BETRIFFT_BAUTEILTYP": 18,
+      "folded_or_skipped_BETRIFFT_MATERIAL": 39,
+      "folded_or_skipped_GESTUETZT_AUF_REGELWERK": 169,
+      "folded_or_skipped_GILT_IN_LAND": 281,
+      "folded_or_skipped_UNTERLIEGT_REGELWERK": 1272,
+      "raw_allowed_edges": 2551
+    },
+    "edges_by_type": {
+      "ERFORDERT_NACHWEIS": 1458,
+      "TRIGGERS_REGULIERUNGSFRAGE": 1087
+    },
+    "nachweisforderung_nodes": 27,
+    "nachweisforderung_with_standard_properties": 27,
+    "nodes_total": 38,
+    "regulierungsfrage_nodes": 11
+  },
+  "validation_problem_count": 0,
+  "validation_problems": []
+}

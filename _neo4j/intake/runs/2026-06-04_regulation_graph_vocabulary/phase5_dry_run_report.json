@@ -1,0 +1,33 @@
+{
+  "before": {
+    "ERFUELLT_NACHWEIS": 0,
+    "HAT_LEISTUNGSANFORDERUNG": 451,
+    "HAT_PRUEFUNG": 465,
+    "Leistungsanforderung": 46,
+    "PruefungNachweis": 120
+  },
+  "commit": false,
+  "created_at_utc": "2026-06-05T13:46:16.487836+00:00",
+  "database": "mit-bestand",
+  "phase": "phase5_pruefung_leistung_cleanup",
+  "planned": {
+    "exact_pn_pr_pairs": [
+      {
+        "canonical_id": "pr_sichtpruefung",
+        "duplicate_id": "pn_sichtpruefung"
+      },
+      {
+        "canonical_id": "pr_zugversuch",
+        "duplicate_id": "pn_zugversuch"
+      }
+    ],
+    "leistungsanforderung_consolidation": {
+      "canonical_nodes": 8,
+      "groups": 8,
+      "nodes_to_delete": 38
+    },
+    "pruefung_erfuellt_edges": {
+      "planned_edges": 118
+    }
+  }
+}

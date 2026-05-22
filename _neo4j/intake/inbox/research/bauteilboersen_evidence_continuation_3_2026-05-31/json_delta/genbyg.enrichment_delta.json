@@ -1,0 +1,86 @@
+{
+  "anchor_id": "genbyg",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://genbyg.dk/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L2-L5; L36-L67",
+      "evidence_excerpt": "Danmarks største webshop for brugte byggematerialer; categories include Brugte Døre, Brugte Vinduer, Enkeltlagsglas, Lamper & EL."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Window subcategory includes “Enkeltlagsglas”.",
+      "confidence": "belegt",
+      "note": "Single glazing/glass is explicit material.",
+      "source_line_ref": "L50-L56"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Category tree: “Brugte Døre” with subcategories for exterior/interior/double/fire doors.",
+      "confidence": "belegt",
+      "note": "Direct first-party webshop category evidence.",
+      "source_line_ref": "L36-L49"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Category tree: “Brugte Vinduer” with window subcategories.",
+      "confidence": "belegt",
+      "note": "Direct first-party webshop category evidence.",
+      "source_line_ref": "L50-L61"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Category tree includes “Lamper & EL”, lamps/lighting and electrical articles.",
+      "confidence": "belegt",
+      "note": "Direct first-party webshop category evidence.",
+      "source_line_ref": "L62-L67"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "genbyg",
+      "claim_type": "Material",
+      "target_id": "mat_stahl",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Genbyg home/category tree",
+      "source_url": "https://genbyg.dk/",
+      "source_line_ref": "",
+      "source_excerpt_short": "Jernvinduer",
+      "rejection_reason": "Jern = iron, not steel. Do not import mat_stahl from this wording alone.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

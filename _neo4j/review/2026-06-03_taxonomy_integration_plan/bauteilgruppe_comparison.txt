@@ -1,0 +1,320 @@
+==============================================================================
+BAUTEILGRUPPE COMPARISON: live graph vs batch markdowns
+==============================================================================
+
+Match rules:
+  EXACT      = identical bg_* slug appears in both live and batches
+  FUZZY      = different slug, but ≥0.5 Jaccard similarity on tokens
+  LIVE-ONLY  = bg exists in live graph but not referenced by any batch row
+  BATCH-ONLY = bg appears in batches but no live equivalent (NEW candidate)
+
+project_id                                       live batch  EXACT  FUZZY LIVE-ONLY BATCH-ONLY
+------------------------------------------------------------------------------------------------
+p_55_great_suffolk_street_london                    1     1      1      0         0          0
+p_association_house_groeditz                        2     2      2      0         0          0
+p_association_house_plauen                          1     1      1      0         0          0
+p_awm_muenster_circular_office                      5     5      5      0         0          0
+p_bedzed_london_hackbridge                          3     3      3      0         0          0
+p_berlin_schildow_pilot_house                       1     1      1      0         0          0
+p_bestandverplanzung_pavilion_muenchen              1     1      1      0         0          0
+p_big_dig_building_boston                           1     1      1      0         0          0
+p_big_dig_house_lexington_massachusetts             3     3      3      0         0          0
+p_biopartner_5_leiden_oegstgeest                    5     6      5      0         0          1
+p_bluecity_offices_rotterdam                        4     4      0      2         2          2 *
+p_boulder_fire_station_3                            4     3      3      0         1          0 *
+p_brent_cross_town_primary_substation_london        4     1      0      0         4          1 *
+p_brighton_waste_house_brighton                     6     6      6      0         0          0
+p_broethen_twin_house_hoyerswerda                   2     2      2      0         0          0
+p_cascadeup_london_secondary_timber_glulam_demonstrator    3     2      0      2         1          0 *
+p_chiro_d_itterbeek_dilbeek                        13    12     12      0         1          0 *
+p_christ_pavilion_volkenroda                        6     6      6      0         0          0
+p_circl_abn_amro                                   15     8      8      0         7          0 *
+p_circular_centre_netherlands_prinsenhof_a_reuse_pilot    3     3      3      0         0          0
+p_circular_pavilion_paris                           6     6      6      0         0          0
+p_crclr_house_impact_hub_berlin                     6     6      6      0         0          0
+p_elementa_walkeweg                                 4     4      4      0         0          0
+p_elys_kultur_gewerbehaus_basel                     7     7      7      0         0          0
+p_eth_circular_construction_student_reuse           0     0      0      0         0          0
+p_europa_building_brussels                          2     2      2      0         0          0
+p_fcrbe                                             0     0      0      0         0          0
+p_ferme_du_rail_paris                               8     5      0      0         8          5 *
+p_gjg_house_gentbrugge                              2     2      2      0         0          0
+p_grande_halle_de_colombelles                       9     8      8      0         1          0 *
+p_grubenstrasse_29_werkhof_29_zuerich               9    10      8      0         1          2 *
+p_harmalanranta_a_kruunu_recreate_mini_pilot_tampere    2     2      2      0         0          0
+p_hastings_pier_visitor_centre                      4     2      0      1         3          1 *
+p_haus_hos_mehrfamilienhaus_muehlhausen             3     3      3      0         0          0
+p_holbein_gardens_london                            4     4      4      0         0          0
+p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain    5     4      4      0         1          0 *
+p_impact_hub_berlin_crclr_fitout                    7     7      7      0         0          0
+p_institut_de_botanique_ulg_liege                   2     2      2      0         0          0
+p_jeugdkliniek_ithaka_emergis_kloetinge             7     7      7      0         0          0
+p_juch_areal_recyclingzentrum_zuerich               3     3      3      0         0          0
+p_jugendtreff_ingersheim                            2     2      2      0         0          0
+p_k118_kopfbau_halle_118_winterthur                 5     3      0      1         4          2 *
+p_ka13_kristian_augusts_gate_13_oslo                5     5      5      0         0          0
+p_kamikatsu_zero_waste_center_hotel_why             5     5      5      0         0          0
+p_kindergarten_moeoeslistrasse_manegg_zuerich       7     7      7      0         0          0
+p_liander_alliander_hq_duiven                       4     8      0      0         4          8 *
+p_lo_reninge_town_hall_facade                       2     2      0      1         1          1 *
+p_lokomotion_technology_centre_mini_pilot_tampere    1     1      1      0         0          0
+p_lycee_michel_lucius_conversion_luxembourg         7     7      7      0         0          0
+p_lysp8                                             0     0      0      0         0          0
+p_lysp8_basel                                       6     6      6      0         0          0
+p_maison_des_canaux_paris                           4     6      0      0         4          6 *
+p_maison_dna_asse                                   2     2      2      0         0          0
+p_maison_vignette_auderghem                         5     2      0      1         4          1 *
+p_meduni_campus_mariannengasse                      6     5      5      0         1          0 *
+p_mehrow_pilot_house                                2     2      2      0         0          0
+p_melkinlaituri_primary_school_daycare_centre_helsinki    1     3      1      0         0          2
+p_montessori_maassluis                              1     1      1      0         0          0
+p_multi_brussels_reuse_in_multi                     4     6      0      3         1          3 *
+p_musee_de_folklore_mouscron                        1     1      1      0         0          0
+p_peoples_pavilion_eindhoven                        5     5      5      0         0          0
+p_plattenpalast_berlin                              2     2      2      0         0          0
+p_plattenvereinigung_berlin                         4     4      4      0         0          0
+p_plp_london_hq_circular_studio_fitout              4     4      4      0         0          0
+p_rcmi_concular                                     0     0      0      0         0          0
+p_recrete_footbridge_reused_concrete_blocks         1     1      1      0         0          0
+p_recyclinghaus_hannover                            9     9      9      0         0          0
+p_recypark_demets_anderlecht                        1     1      1      0         0          0
+p_refair_bordeaux_reemploi_platform                 0     0      0      0         0          0
+p_resilience_la_ferme_des_possibles_stains          7     7      7      0         0          0
+p_resource_rows_copenhagen                          1     2      1      0         0          1
+p_roots_in_the_sky_blackfriars_crown_court          2     2      2      0         0          0
+p_saxum_vineyard_equipment_barn_paso_robles         3     3      3      0         0          0
+p_schaerenmoosstrasse_zuerich                       5     4      0      0         5          4 *
+p_superlocal_expogebouw_bleijerheide                5     4      4      0         1          0 *
+p_svanen_kindergarten_gladsaxe                      6     7      6      0         0          1
+p_the_green_house_utrecht                           6     4      4      0         2          0 *
+p_thoravej_29_copenhagen                            4     4      4      0         0          0
+p_timber_square_london                              5     4      4      0         1          0 *
+p_trae_high_rise_aarhus                             5     5      5      0         0          0
+p_umar_unit                                         8     4      3      1         4          0 *
+p_upcycle_studios_copenhagen                        3     3      0      1         2          2 *
+p_verbiest_karreveld_brussels                       7     7      7      0         0          0
+p_villa_welpeloo_enschede                           4     4      4      0         0          0
+p_woongroep_boschgaard_den_bosch                    4     5      4      0         0          1
+p_zinneke_feder_masui4ever_brussels                 6     6      6      0         0          0
+
+==============================================================================
+SUMMARY TOTALS
+==============================================================================
+  Total live BGs covered:       350
+  Total batch BGs referenced:   330
+  EXACT matches:                273
+  FUZZY matches (resolver auto-folds): 13
+  LIVE-ONLY (no batch evidence): 64
+  BATCH-ONLY (new candidates to add): 44
+
+  Live BGs at risk if resolver fails to fuzzy-match: 13
+  Live BGs that will keep zero batch evidence:        64
+
+==============================================================================
+PROJECTS WITH LIVE-ONLY BGs (not referenced by any batch row)
+==============================================================================
+
+  p_ferme_du_rail_paris  (live total: 8, live-only: 8, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_holz_ausbau_ferme_fixed_cupboards                             alte_funktion='unbekannt'
+      - bg_reuse_holz_mehrere_ferme_window_frames_endgrain_floor               alte_funktion='Fenster'
+      - bg_reuse_holz_mehrere_ferme_window_frames_roof_terrace                 alte_funktion='Fenster'
+      - bg_reuse_keramik_mehrere_ferme_tiles_bathroom_walls                    alte_funktion='Restbestand / Bodenfliesen'
+      - bg_reuse_mehrere_boden_ferme_bitumen_concrete_blocks_paths             alte_funktion='Abbruchmaterial'
+      - bg_reuse_naturstein_boden_ferme_slabs_fill                             alte_funktion='Dach- oder Bürofußbodenplatten'
+      - bg_reuse_naturstein_mehrere_ferme_granite_kerbstones_retaining_wall    alte_funktion='Bordstein'
+      - bg_reuse_textil_mehrere_ferme_textile_sun_shading                      alte_funktion='unklar'
+
+  p_circl_abn_amro  (live total: 15, live-only: 7, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_dismantled_mehrere_boden_circl_floor_structure                      alte_funktion=''
+      - bg_dismantled_mehrere_technik_circl_solar_panels                       alte_funktion=''
+      - bg_planned_kunststoff_boden_circl_c2c_tarkett                          alte_funktion=''
+      - bg_planned_mehrere_technik_circl_leased_lighting                       alte_funktion=''
+      - bg_reuse_mehrere_ausbau_circl_greenery_harvest                         alte_funktion=''
+      - bg_reuse_metall_technik_circl_fire_hose_cabinets                       alte_funktion=''
+      - bg_reuse_mineralisch_boden_circl_pcm_tiles                             alte_funktion=''
+
+  p_schaerenmoosstrasse_zuerich  (live total: 5, live-only: 5, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_planned_mehrere_technik_sms_zuerich_pv_roof                         alte_funktion=''
+      - bg_planned_stahl_fassade_sms_zuerich_arcade                            alte_funktion=''
+      - bg_retained_mehrere_mehrere_sms_zuerich_existing_bldgs                 alte_funktion=''
+      - bg_retained_stahlbeton_treppe_sms_zuerich_existing_stairs              alte_funktion=''
+      - bg_reuse_mehrere_mehrere_sms_zuerich_ubs_hall                          alte_funktion=''
+
+  p_brent_cross_town_primary_substation_london  (live total: 4, live-only: 4, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_stahl_fassade_brent_cross_new_support_members                 alte_funktion='nicht anwendbar'
+      - bg_reuse_stahl_mehrere_brent_cross_bracing_members                     alte_funktion='Pipeline-/Industrieprodukt'
+      - bg_reuse_stahl_mehrere_brent_cross_oval_substation_screen              alte_funktion='nicht anwendbar / Mischsystem'
+      - bg_reuse_stahl_mehrere_brent_cross_tubular_columns                     alte_funktion='Pipeline-/Industrieprodukt, teils ungenutzt'
+
+  p_k118_kopfbau_halle_118_winterthur  (live total: 5, live-only: 4, fuzzy folded: 1)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_mehrere_mehrere_k118_floor_finishes_bricks_panels             alte_funktion='Beläge / Bühnen- oder Rückbaubauteile'
+      - bg_reuse_mehrere_mehrere_k118_windows_cladding_insulation              alte_funktion='Hüll- und Ausbauteile aus Rückbauquellen'
+      - bg_reuse_stahl_mehrere_k118_external_stair                             alte_funktion='Fluchttreppe / Außentreppe Orion-Bürogebäude Züric'
+      - bg_reuse_stahl_mehrere_k118_structure                                  alte_funktion='Tragwerk einer Halle im ELYS-Projekt Basel'
+
+  p_liander_alliander_hq_duiven  (live total: 4, live-only: 4, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_retained_mehrere_mehrere_alliander_existing_buildings               alte_funktion='Büro-/Betriebsgebäude'
+      - bg_reuse_mehrere_ausbau_alliander_material_passport_inventory          alte_funktion='Materialinformation'
+      - bg_reuse_mehrere_mehrere_alliander_common_roof_atrium                  alte_funktion='unbekannt / überwiegend neu oder unklar'
+      - bg_reuse_mehrere_mehrere_alliander_interior_elements                   alte_funktion='Innenausbau / Bauteile im Bestand oder Donorquelle'
+
+  p_maison_des_canaux_paris  (live total: 4, live-only: 4, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_mehrere_mehrere_maison_des_canaux_doors                       alte_funktion='Tür / Raumabschluss'
+      - bg_reuse_mehrere_mehrere_maison_des_canaux_fixed_builtins              alte_funktion='unbekannt'
+      - bg_reuse_mehrere_mehrere_maison_des_canaux_floor_wall_finishes         alte_funktion='Oberfläche / Belag'
+      - bg_reuse_mehrere_mehrere_maison_des_canaux_sanitary_parts              alte_funktion='Sanitärobjekt'
+
+  p_maison_vignette_auderghem  (live total: 5, live-only: 4, fuzzy folded: 1)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_keramik_mehrere_maison_vignette_terracotta_floor_tiles        alte_funktion='Bodenbelag'
+      - bg_reuse_keramik_mehrere_maison_vignette_wall_tiles_solvay             alte_funktion='Wand-/Innenbekleidung'
+      - bg_reuse_mehrere_mehrere_maison_vignette_sanitary_objects              alte_funktion='Sanitärausstattung'
+      - bg_reuse_naturstein_boden_maison_vignette_bluestone_slabs              alte_funktion='Boden-/Außenplatten unbekannter Herkunft'
+
+  p_umar_unit  (live total: 8, live-only: 4, fuzzy folded: 1)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_glas_keramik_fassade_umar_magna_glass                         alte_funktion=''
+      - bg_reuse_holz_wand_umar_timber_facade                                  alte_funktion=''
+      - bg_reuse_kunststoff_boden_umar_carpets                                 alte_funktion=''
+      - bg_reuse_metall_fassade_umar_alu_copper                                alte_funktion=''
+
+  p_hastings_pier_visitor_centre  (live total: 4, live-only: 3, fuzzy folded: 1)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_retained_mehrere_mehrere_hastings_pier_restoration                  alte_funktion='Pier und Pavillon'
+      - bg_reuse_holz_fassade_hastings_outbuilding_cladding                    alte_funktion='Pier-Deckbohlen'
+      - bg_reuse_holz_mehrere_hastings_clt_visitor_centre_structure            alte_funktion='neu'
+
+  p_bluecity_offices_rotterdam  (live total: 4, live-only: 2, fuzzy folded: 2)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_mehrere_mehrere_bluecity_red_cedar_fensterrahmen_trennwaende  alte_funktion='Außenfenster'
+      - bg_reuse_stahl_gelaender_bluecity_oelplattform                         alte_funktion='Offshore-/Balustradenbauteil'
+
+  p_the_green_house_utrecht  (live total: 6, live-only: 2, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_daemmstoff_mehrere_green_house_daemmung_holzbodenelemente     alte_funktion='Dämmmaterial / Herkunft unbekannt'
+      - bg_reuse_holz_mehrere_green_house_feste_wandverkleidung                alte_funktion='Innenausbau / Oberfläche unbekannt'
+
+  p_upcycle_studios_copenhagen  (live total: 3, live-only: 2, fuzzy folded: 1)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_holz_mehrere_upcycle_dinesen_offcuts                          alte_funktion='Produktionsrest / floorboard offcuts'
+      - bg_reuse_mehrere_mehrere_upcycle_recyclingbeton_metro                  alte_funktion='Betonabbruch / Metro-Baustellenabfall'
+
+  p_boulder_fire_station_3  (live total: 4, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_glas_mehrere_boulder_pv_roof                                  alte_funktion='nicht anwendbar'
+
+  p_cascadeup_london_secondary_timber_glulam_demonstrator  (live total: 3, live-only: 1, fuzzy folded: 2)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_holz_wand_cascadeup_clst                                      alte_funktion='Rueckbauholz / unbekannt'
+
+  p_chiro_d_itterbeek_dilbeek  (live total: 13, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_daemmstoff_daemmung_chiro_surplus_ceiling                     alte_funktion='unbenutzt / Restposten'
+
+  p_grande_halle_de_colombelles  (live total: 9, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_keramik_mehrere_grande_halle_tiles_faience                    alte_funktion='Wand-/Bodenbelag'
+
+  p_grubenstrasse_29_werkhof_29_zuerich  (live total: 9, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_mehrere_dach_grubenstrasse_sheets                             alte_funktion='Dach-/Blechdeckung'
+
+  p_house_of_fraser_318_oxford_street_tbc_london_reuse_chain  (live total: 5, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_ziegel_mehrere_tbc_fixtures                                   alte_funktion='Bauteile / Ausbauelemente im Bestand'
+
+  p_lo_reninge_town_hall_facade  (live total: 2, live-only: 1, fuzzy folded: 1)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_retained_mehrere_mehrere_lo_reninge_convent                         alte_funktion='Kloster / Bestand'
+
+  p_meduni_campus_mariannengasse  (live total: 6, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_retained_mehrere_decke_medunicampus_glasdecke                       alte_funktion=''
+
+  p_multi_brussels_reuse_in_multi  (live total: 4, live-only: 1, fuzzy folded: 3)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_naturstein_mehrere_multi_blaustein_facade_slabs               alte_funktion='Fassadenbekleidung des Brouckère Tower'
+
+  p_superlocal_expogebouw_bleijerheide  (live total: 5, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_mehrere_mehrere_superlocal_haustueren_gelaender_bruestungen   alte_funktion='Innen-/Außenbauteile der Flat'
+
+  p_timber_square_london  (live total: 5, live-only: 1, fuzzy folded: 0)
+    LIVE-ONLY (will lack batch evidence on new axes):
+      - bg_reuse_holz_mehrere_square_clt_hybrid_decken                         alte_funktion='neu / nicht reused'
+
+==============================================================================
+FUZZY MATCH SAMPLES — resolver should fold these
+==============================================================================
+
+  Project: p_bluecity_offices_rotterdam
+    LIVE : bg_reuse_beton_wand_bluecity_betonbloecke_trennwaende
+    BATCH: bg_reuse_beton_innenwand_bluecity_original_concrete_blocks    (jaccard=0.50)
+
+  Project: p_bluecity_offices_rotterdam
+    LIVE : bg_reuse_stahl_ausbau_bluecity
+    BATCH: bg_reuse_stahl_tragwerk_bluecity_reused_steel    (jaccard=0.40)
+
+  Project: p_cascadeup_london_secondary_timber_glulam_demonstrator
+    LIVE : bg_reuse_holz_mehrere_cascadeup_clst_floor_panels
+    BATCH: bg_reuse_holz_wand_decke_cascadeup_clst_panels    (jaccard=0.57)
+
+  Project: p_cascadeup_london_secondary_timber_glulam_demonstrator
+    LIVE : bg_reuse_holz_mehrere_cascadeup_glulamst_frame
+    BATCH: bg_reuse_holz_tragwerk_cascadeup_glulamst_frame    (jaccard=1.00)
+
+  Project: p_hastings_pier_visitor_centre
+    LIVE : bg_reuse_holz_fassade_hastings_hardwood_cladding
+    BATCH: bg_reuse_holz_fassade_hastings_pier_rescued_tropical_hardwood    (jaccard=0.57)
+
+  Project: p_k118_kopfbau_halle_118_winterthur
+    LIVE : bg_retained_mehrere_mehrere_k118_halle_118
+    BATCH: bg_reuse_stahl_mehrere_k118_kopfbau_halle_118_winterthur_stahltraeger_candidate    (jaccard=0.43)
+
+  Project: p_lo_reninge_town_hall_facade
+    LIVE : bg_reuse_ziegel_mehrere_lo_reninge_facade
+    BATCH: bg_reuse_ziegel_fassade_lo_reninge_reclaimed_yellow_brick    (jaccard=0.60)
+
+  Project: p_maison_vignette_auderghem
+    LIVE : bg_reuse_ziegel_mehrere_maison_vignette_facade_claustra
+    BATCH: bg_reuse_ziegel_fassade_maison_vignette_reused_facing_bricks    (jaccard=0.57)
+
+  Project: p_multi_brussels_reuse_in_multi
+    LIVE : bg_reuse_aluminium_mehrere_multi_profiles
+    BATCH: bg_reuse_aluminium_profile_multi_facade_h_profiles    (jaccard=0.60)
+
+  Project: p_multi_brussels_reuse_in_multi
+    LIVE : bg_reuse_naturstein_boden_multi_granite_natural_tiles
+    BATCH: bg_reuse_stein_boden_multi_generale_granite_flooring    (jaccard=0.38)
+
+  Project: p_umar_unit
+    LIVE : bg_reuse_daemmstoff_daemmung_umar_mycelium
+    BATCH: bg_reuse_daemmstoff_daemmung_umar_repurposed_insulation    (jaccard=0.60)
+    batch detail: repurposed insulation materials
+
+  Project: p_upcycle_studios_copenhagen
+    LIVE : bg_reuse_glas_fenster_upcycle_studios_copenhagen_doppelverglaste
+    BATCH: bg_reuse_glas_fenster_upcycle_studios_repurposed_double_glazing    (jaccard=0.50)
+
+==============================================================================
+BATCH-ONLY samples (new candidates batches want to add)
+==============================================================================
+  p_biopartner_5_leiden_oegstgeest                 NEW: bg_reuse_mehrere_ausbau_biopartner5_furniture_doors_candidate
+  p_bluecity_offices_rotterdam                     NEW: bg_reuse_glas_innenwand_bluecity_reused_window_frames
+  p_bluecity_offices_rotterdam                     NEW: bg_reuse_metall_gelaender_bluecity_oil_platform_balustrades
+  p_brent_cross_town_primary_substation_london     NEW: bg_reuse_stahl_tragwerk_brent_cross_oil_pipeline_tubulars
+  p_ferme_du_rail_paris                            NEW: bg_reuse_holz_papier_ferme_du_rail_recycled_fibre_wall_panels
+  p_ferme_du_rail_paris                            NEW: bg_reuse_keramik_fliese_ferme_du_rail_reused_tiles
+  p_grubenstrasse_29_werkhof_29_zuerich            NEW: bg_reuse_holz_mehrere_grubenstrasse_old_roof_purlins
+  p_grubenstrasse_29_werkhof_29_zuerich            NEW: bg_reuse_mehrere_mehrere_grubenstrasse_site_storage
+  p_hastings_pier_visitor_centre                   NEW: bg_reuse_holz_moebel_hastings_pier_deck_furniture
+  p_k118_kopfbau_halle_118_winterthur              NEW: bg_reuse_naturstein_fassade_k118_granit_orion_candidate
+  p_k118_kopfbau_halle_118_winterthur              NEW: bg_reuse_stahl_erschliessung_k118_aussentreppe_orion_candidate
+  p_liander_alliander_hq_duiven                    NEW: bg_reuse_asphalt_liander_existing_roofs

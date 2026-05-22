@@ -1,0 +1,86 @@
+{
+  "anchor_id": "warp_it",
+  "sources_visited": [
+    {
+      "url": "https://www.warp-it.co.uk/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.warp-it.co.uk/report-guide",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.gla.ac.uk/myglasgow/sustainability/wasterecyclingreuse/warpit-furniturerecycling/",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.warp-it.co.uk/benefits",
+      "http_status": 200,
+      "first_party": true
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.warp-it.co.uk/"
+      ],
+      "evidence_quote": "Category list includes fixtures and fittings, office interiors, furniture and storage.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.warp-it.co.uk/"
+      ],
+      "evidence_quote": "Category list includes electrical, generators, lab/equipment and tools categories.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_resource_redistribution_network",
+      "evidence_urls": [
+        "https://www.warp-it.co.uk/"
+      ],
+      "evidence_quote": "Homepage title frames Warp It as a resource redistribution network.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Warp It",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.warp-it.co.uk/",
+      "https://www.warp-it.co.uk/report-guide"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [
+    {
+      "field": "actor_type_fit",
+      "archive": "at_materialhub_bauteilboerse candidate",
+      "live": "Accessible categories are mostly furniture/equipment/resources rather than construction material marketplace.",
+      "evidence_url": "https://www.warp-it.co.uk/"
+    }
+  ],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "No closed-set construction material named in accessible copy."
+    },
+    {
+      "topic": "Type fit",
+      "reason": "Review whether this should stay in Bauteilbörse/material-hub class or be moved to organisation resource redistribution."
+    }
+  ],
+  "run_notes": []
+}

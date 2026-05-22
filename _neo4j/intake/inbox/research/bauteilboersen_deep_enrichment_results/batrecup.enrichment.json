@@ -1,0 +1,57 @@
+{
+  "anchor_id": "batrecup",
+  "sources_visited": [
+    {
+      "url": "https://www.batrecup.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.batrecup.com/batrecup-lappli-cest-parti/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.batrecup",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_p2p_app",
+      "evidence_urls": [
+        "https://www.batrecup.com/batrecup-lappli-cest-parti/"
+      ],
+      "evidence_quote": "Community/app framing indicates a peer-to-peer reuse application.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "BatRecup",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.batrecup.com/",
+      "https://www.batrecup.com/batrecup-lappli-cest-parti/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material + Bauteiltyp",
+      "reason": "Accessible pages/app listing did not expose stable product categories."
+    },
+    {
+      "topic": "Operator chain",
+      "reason": "App/store details should be rechecked for publisher before BETRIEBEN_VON changes."
+    }
+  ],
+  "run_notes": []
+}

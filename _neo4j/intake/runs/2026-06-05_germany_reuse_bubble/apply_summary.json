@@ -1,0 +1,190 @@
+{
+  "run": "2026-06-05_germany_reuse_bubble",
+  "commit": true,
+  "database": "mit-bestand",
+  "generated_at_utc": "2026-06-05T22:31:01.544749+00:00",
+  "phases": [
+    {
+      "phase": "phase0_sources_and_dossier.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 17,
+        "load_errors": 0,
+        "noop_existing": 17
+      },
+      "counts_after_actual": {
+        "nodes": 2384,
+        "relationships": 15529
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase1_ecosystem_spine.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 16,
+        "load_errors": 0,
+        "noop_existing_rel": 16
+      },
+      "counts_after_actual": {
+        "nodes": 2384,
+        "relationships": 15529
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase1_ecosystem_spine.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase1_ecosystem_spine.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase2_bauteilboerse_hannover.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 11,
+        "load_errors": 0,
+        "noop_existing": 1,
+        "noop_existing_rel": 8,
+        "would_create_rel": 2
+      },
+      "counts_after_actual": {
+        "nodes": 2384,
+        "relationships": 15531
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase2_bauteilboerse_hannover.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase2_bauteilboerse_hannover.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase2b_hdm_civic_hub.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 11,
+        "load_errors": 0,
+        "noop_existing": 1,
+        "noop_existing_rel": 4,
+        "would_create_rel": 6
+      },
+      "counts_after_actual": {
+        "nodes": 2384,
+        "relationships": 15537
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase2b_hdm_civic_hub.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase2b_hdm_civic_hub.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase1c_evidence_hardening.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 46,
+        "load_errors": 0,
+        "noop_existing": 9,
+        "noop_existing_rel": 25,
+        "noop_same_rel": 4,
+        "would_delete_rel": 8
+      },
+      "counts_after_actual": {
+        "nodes": 2384,
+        "relationships": 15529
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase1c_evidence_hardening.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\apply_reports\\phase1c_evidence_hardening.patch.apply_report.md"
+      ]
+    }
+  ],
+  "counts_before": {
+    "nodes": 2384,
+    "relationships": 15529
+  },
+  "connectivity_before": {
+    "T0_concular_verbunden": {
+      "value": 8,
+      "neighbors": [
+        "bauteilboerse_hannover",
+        "madaster_epea",
+        "circular_structural_design",
+        "tomas",
+        "bauteilboerse_bremen",
+        "rebekka_steinlein",
+        "annabelle_von_reutern",
+        "madaster"
+      ]
+    },
+    "T1_bauteilboerse_mesh": [
+      "bauteilboerse_hannover",
+      "concular",
+      "bauteilnetz_deutschland",
+      "ute_dechantsreiter"
+    ],
+    "T2_hannover_spine": [
+      "software_restado",
+      "concular",
+      "bauteilboerse_bremen",
+      "bauteilnetz_deutschland"
+    ],
+    "T3_hdm_hub": [
+      "material_mafia",
+      "circular_berlin",
+      "kunst_stoffe_ev",
+      "tu_berlin"
+    ],
+    "T4_bubble_edges": 52,
+    "T5_hdm_kunst_stoffe": 2,
+    "T6_hdm_research_cluster": [
+      "material_mafia",
+      "circular_berlin",
+      "kunst_stoffe_ev",
+      "tu_berlin"
+    ]
+  },
+  "counts_after": {
+    "nodes": 2384,
+    "relationships": 15529
+  },
+  "connectivity_after": {
+    "T0_concular_verbunden": {
+      "value": 8,
+      "neighbors": [
+        "bauteilboerse_hannover",
+        "madaster_epea",
+        "circular_structural_design",
+        "tomas",
+        "bauteilboerse_bremen",
+        "rebekka_steinlein",
+        "annabelle_von_reutern",
+        "madaster"
+      ]
+    },
+    "T1_bauteilboerse_mesh": [
+      "bauteilboerse_hannover",
+      "concular",
+      "bauteilnetz_deutschland",
+      "ute_dechantsreiter"
+    ],
+    "T2_hannover_spine": [
+      "software_restado",
+      "concular",
+      "bauteilboerse_bremen",
+      "bauteilnetz_deutschland"
+    ],
+    "T3_hdm_hub": [
+      "material_mafia",
+      "circular_berlin",
+      "kunst_stoffe_ev",
+      "tu_berlin"
+    ],
+    "T4_bubble_edges": 52,
+    "T5_hdm_kunst_stoffe": 2,
+    "T6_hdm_research_cluster": [
+      "material_mafia",
+      "circular_berlin",
+      "kunst_stoffe_ev",
+      "tu_berlin"
+    ]
+  }
+}

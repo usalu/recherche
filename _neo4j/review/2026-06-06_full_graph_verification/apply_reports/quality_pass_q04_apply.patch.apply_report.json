@@ -1,0 +1,1546 @@
+{
+  "confirmation_required": "APPLY quality_pass_q04_apply.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2264,
+    "relationships": 15063
+  },
+  "counts_after_expected": {
+    "nodes": 2264,
+    "relationships": 15063
+  },
+  "counts_before": {
+    "nodes": 2264,
+    "relationships": 15064
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T17:49:45.624327+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\quality_pass_q04_apply.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Ouvert Fermeture à 18:00 Fermé Ouverture à 10:00 Lundi 10h-18h Mardi 10h-18h Mercredi 10h-18h Jeudi 10h-18h Vendredi 10h-18h Samedi Fermé Dimanche Fermé 02 85 35 91 75 angers@articonnex.com 4,9/5 Articonnex La Roche-sur-Yon 9 Rue Henri Aucher 85000 La Roche-sur-Yon Voir les produits à La Roche-sur-Yon OSB, contreplaqué, terrasse, bardage, quincaillerie, sol PVC, réemploi.",
+        "evidence_url": "https://articonnex.com/collections/reemploi",
+        "id": "r_deep_articonnex__HAT_BAUTEILTYP__bt_fassade",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:articonnex->bt_fassade",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "articonnex",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Ouvert Fermeture à 18:00 Fermé Ouverture à 10:00 Lundi 10h-18h Mardi 10h-18h Mercredi 10h-18h Jeudi 10h-18h Vendredi 10h-18h Samedi Fermé Dimanche Fermé 02 85 35 91 75 angers@articonnex.com 4,9/5 Articonnex La Roche-sur-Yon 9 Rue Henri Aucher 85000 La Roche-sur-Yon Voir les produits à La Roche-sur-Yon OSB, contreplaqué, terrasse, bardage, quincaillerie, sol PVC, réemploi.",
+          "evidence_url": "https://articonnex.com/collections/reemploi",
+          "id": "r_deep_articonnex__HAT_BAUTEILTYP__bt_fassade",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:articonnex->bt_fassade",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1157492174443551325,
+        "to": "bt_fassade",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "articonnex",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_fassade",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Nos produits dans Cloisons et Doublages Tout Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte 93x203cm 75017 Paris, France Quantité : 4 U 95,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte tiercé 75017 Paris, France Quantité : 1 U 135,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 13/07/2026 au 30/09/2026 Ensemble vitrage trempé sans ossature 94250 Gentilly, France Quantité : 66 ml 30,00€ HT/ml icon-X \"Fermer (Esc)\" Vue rapide Disp",
+        "evidence_url": "https://backacia.com/",
+        "id": "r_backacia__HAT_BAUTEILTYP__bt_fenster",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:backacia->bt_fenster",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Nos produits dans Cloisons et Doublages Tout Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte 93x203cm 75017 Paris, France Quantité : 4 U 95,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte tiercé 75017 Paris, France Quantité : 1 U 135,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 13/07/2026 au 30/09/2026 Ensemble vitrage trempé sans ossature 94250 Gentilly, France Quantité : 66 ml 30,00€ HT/ml icon-X \"Fermer (Esc)\" Vue rapide Disp",
+          "evidence_url": "https://backacia.com/",
+          "id": "r_backacia__HAT_BAUTEILTYP__bt_fenster",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:backacia->bt_fenster",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1159743974257236574,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "backacia",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Démarrer un projet Catégories de produits de réemploi : Mobilier intérieur CVC - Chauffage et ventilation Installations sanitaires Revêtements de sols et murs Réseaux électriques et appareils d’éclairage Cloisons et doublages intérieurs Couvertures - Étanchéités - Charpentes - Zingueries Façades et menuiseries extérieures Éléments spécialisés et matériaux divers Backacia propose des matériaux issus du réemploi pour construire durablement : cloisons, sanitaires, luminaires, et plus encore.",
+        "evidence_url": "https://backacia.com/",
+        "id": "r_backacia__HAT_BAUTEILTYP__bt_technik",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:backacia->bt_technik",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Démarrer un projet Catégories de produits de réemploi : Mobilier intérieur CVC - Chauffage et ventilation Installations sanitaires Revêtements de sols et murs Réseaux électriques et appareils d’éclairage Cloisons et doublages intérieurs Couvertures - Étanchéités - Charpentes - Zingueries Façades et menuiseries extérieures Éléments spécialisés et matériaux divers Backacia propose des matériaux issus du réemploi pour construire durablement : cloisons, sanitaires, luminaires, et plus encore.",
+          "evidence_url": "https://backacia.com/",
+          "id": "r_backacia__HAT_BAUTEILTYP__bt_technik",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:backacia->bt_technik",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1155240374629866078,
+        "to": "bt_technik",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "backacia",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_technik",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Démarrer un projet Catégories de produits de réemploi : Mobilier intérieur CVC - Chauffage et ventilation Installations sanitaires Revêtements de sols et murs Réseaux électriques et appareils d’éclairage Cloisons et doublages intérieurs Couvertures - Étanchéités - Charpentes - Zingueries Façades et menuiseries extérieures Éléments spécialisés et matériaux divers Backacia propose des matériaux issus du réemploi pour construire durablement : cloisons, sanitaires, luminaires, et plus encore.",
+        "evidence_url": "https://backacia.com/",
+        "id": "r_backacia__HAT_BAUTEILTYP__bt_wand",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:backacia->bt_wand",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Démarrer un projet Catégories de produits de réemploi : Mobilier intérieur CVC - Chauffage et ventilation Installations sanitaires Revêtements de sols et murs Réseaux électriques et appareils d’éclairage Cloisons et doublages intérieurs Couvertures - Étanchéités - Charpentes - Zingueries Façades et menuiseries extérieures Éléments spécialisés et matériaux divers Backacia propose des matériaux issus du réemploi pour construire durablement : cloisons, sanitaires, luminaires, et plus encore.",
+          "evidence_url": "https://backacia.com/",
+          "id": "r_backacia__HAT_BAUTEILTYP__bt_wand",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:backacia->bt_wand",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1152988574816180830,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "backacia",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Start Toggle navigation bauteilbörse bremen --> Start Katalog Fenster Türen Hof & Garten Böden & Treppen Wände & Innenraum Sanitär & Heizung Elektro Schätze & Upcycling Dach & Fassade Suche Merkzettel Die Idee Über uns Vereine Aktuelles Film der Bundesstiftung Bauakademie Kontakt Merkzettel Suche --> Willkommen in der bauteilbörse bremen!",
+        "evidence_url": "https://www.bauteilboerse-bremen.de/start",
+        "id": "r_deep_bauteilboerse_bremen__HAT_BAUTEILTYP__bt_fassade",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilboerse_bremen->bt_fassade",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_bremen",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Start Toggle navigation bauteilbörse bremen --> Start Katalog Fenster Türen Hof & Garten Böden & Treppen Wände & Innenraum Sanitär & Heizung Elektro Schätze & Upcycling Dach & Fassade Suche Merkzettel Die Idee Über uns Vereine Aktuelles Film der Bundesstiftung Bauakademie Kontakt Merkzettel Suche --> Willkommen in der bauteilbörse bremen!",
+          "evidence_url": "https://www.bauteilboerse-bremen.de/start",
+          "id": "r_deep_bauteilboerse_bremen__HAT_BAUTEILTYP__bt_fassade",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilboerse_bremen->bt_fassade",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1161995774070888933,
+        "to": "bt_fassade",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bauteilboerse_bremen",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_fassade",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Der Ausbau erfolgt durch das Team der Stiftung Chance.",
+        "evidence_url": "https://www.btvz.ch/portraet/",
+        "id": "r_btvz_zuerichsee_oberland__HAT_BAUTEILTYP__bt_ausbau",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:btvz_zuerichsee_oberland->bt_ausbau",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "btvz_zuerichsee_oberland",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Der Ausbau erfolgt durch das Team der Stiftung Chance.",
+          "evidence_url": "https://www.btvz.ch/portraet/",
+          "id": "r_btvz_zuerichsee_oberland__HAT_BAUTEILTYP__bt_ausbau",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:btvz_zuerichsee_oberland->bt_ausbau",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1166499373698287635,
+        "to": "bt_ausbau",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "btvz_zuerichsee_oberland",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_ausbau",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Register here Spare building material categories Architectural Salvage and Antiques Building Site Equipment Doors, Windows and Joinery Everything Else Free Items General Building Materials Insulation Kitchens, Interiors and Flooring Landscaping, Fencing and Groundworks Painting and Decorating Plasterboard and Plastering Supplies Plumbing, Heating and Bathrooms Roofing Supplies and External Fixtures Timber and Sheet Materials Top Picks Category Buy building materials Nice things near you Register",
+        "evidence_url": "https://buildingsparesmarket.co.uk/",
+        "id": "r_building_spares_market__HAT_BAUTEILTYP__bt_technik",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:building_spares_market->bt_technik",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "building_spares_market",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Register here Spare building material categories Architectural Salvage and Antiques Building Site Equipment Doors, Windows and Joinery Everything Else Free Items General Building Materials Insulation Kitchens, Interiors and Flooring Landscaping, Fencing and Groundworks Painting and Decorating Plasterboard and Plastering Supplies Plumbing, Heating and Bathrooms Roofing Supplies and External Fixtures Timber and Sheet Materials Top Picks Category Buy building materials Nice things near you Register",
+          "evidence_url": "https://buildingsparesmarket.co.uk/",
+          "id": "r_building_spares_market__HAT_BAUTEILTYP__bt_technik",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:building_spares_market->bt_technik",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1168751173511977570,
+        "to": "bt_technik",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "building_spares_market",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_technik",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Kreislaufgerechte Büroausstattung Komplettservice Ausbau-Einbau-Reporting 5 Jahre Hersteller-Garantie Über 1.000 erfolgreiche Projekte und Millionen Materialien im Kreislauf geführt – die #1 für zirkuläre Immobilien.",
+        "evidence_url": "https://concular.de/urban-mining/",
+        "id": "r_deep_concular__HAT_BAUTEILTYP__bt_ausbau",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_ausbau",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Kreislaufgerechte Büroausstattung Komplettservice Ausbau-Einbau-Reporting 5 Jahre Hersteller-Garantie Über 1.000 erfolgreiche Projekte und Millionen Materialien im Kreislauf geführt – die #1 für zirkuläre Immobilien.",
+          "evidence_url": "https://concular.de/urban-mining/",
+          "id": "r_deep_concular__HAT_BAUTEILTYP__bt_ausbau",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_ausbau",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1161995774070888877,
+        "to": "bt_ausbau",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "concular",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_ausbau",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Statt Ressourcen zu entsorgen, werden Bauteile wie Stahl, Holz, Fenster oder Böden erfasst, bewertet und wiederverwendet – für ein zirkuläres, ressourcenschonendes Bauen.",
+        "evidence_url": "https://concular.de/urban-mining/",
+        "id": "r_deep_concular__HAT_BAUTEILTYP__bt_boden",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_boden",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Statt Ressourcen zu entsorgen, werden Bauteile wie Stahl, Holz, Fenster oder Böden erfasst, bewertet und wiederverwendet – für ein zirkuläres, ressourcenschonendes Bauen.",
+          "evidence_url": "https://concular.de/urban-mining/",
+          "id": "r_deep_concular__HAT_BAUTEILTYP__bt_boden",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_boden",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1157492174443518381,
+        "to": "bt_boden",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "concular",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_boden",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Zu den gefragtesten Materialien im Urban Mining zählen Türen und Zargen, Fenster und Glaselemente, Bodenbeläge (Parkett, Naturstein, Teppich), Stahlträger und Metallkonstruktionen, abgehängte Decken und Trennwandsysteme sowie Sanitär- und Elektroanlagen.",
+        "evidence_url": "https://concular.de/urban-mining/",
+        "id": "r_deep_concular__HAT_BAUTEILTYP__bt_decke",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_decke",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Zu den gefragtesten Materialien im Urban Mining zählen Türen und Zargen, Fenster und Glaselemente, Bodenbeläge (Parkett, Naturstein, Teppich), Stahlträger und Metallkonstruktionen, abgehängte Decken und Trennwandsysteme sowie Sanitär- und Elektroanlagen.",
+          "evidence_url": "https://concular.de/urban-mining/",
+          "id": "r_deep_concular__HAT_BAUTEILTYP__bt_decke",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_decke",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1159743974257203629,
+        "to": "bt_decke",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "concular",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_decke",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Konkret bedeutet Urban Mining im Bauwesen: Türen, Fenster, Bodenbeläge, Stahlträger, Fassadenelemente oder Dämmstoffe werden vor dem Rückbau digital erfasst, auf ihre Wiederverwendbarkeit geprüft und anschließend gezielt ausgebaut.",
+        "evidence_url": "https://concular.de/urban-mining/",
+        "id": "r_deep_concular__HAT_BAUTEILTYP__bt_fenster",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_fenster",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Konkret bedeutet Urban Mining im Bauwesen: Türen, Fenster, Bodenbeläge, Stahlträger, Fassadenelemente oder Dämmstoffe werden vor dem Rückbau digital erfasst, auf ihre Wiederverwendbarkeit geprüft und anschließend gezielt ausgebaut.",
+          "evidence_url": "https://concular.de/urban-mining/",
+          "id": "r_deep_concular__HAT_BAUTEILTYP__bt_fenster",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:concular->bt_fenster",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1155240374629833133,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "concular",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "We offer programs to support different routes into the industry including mentorship, apprenticeships and internships for individuals from underrepresented groups.",
+        "evidence_url": "https://hts.uk.com/practice/",
+        "id": "r_deeper_heyne_tillett_steel__HAT_BAUTEILTYP__bt_stuetze",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:heyne_tillett_steel->bt_stuetze",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "heyne_tillett_steel",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "We offer programs to support different routes into the industry including mentorship, apprenticeships and internships for individuals from underrepresented groups.",
+          "evidence_url": "https://hts.uk.com/practice/",
+          "id": "r_deeper_heyne_tillett_steel__HAT_BAUTEILTYP__bt_stuetze",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:heyne_tillett_steel->bt_stuetze",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types."
+        },
+        "rel_internal_id": 1155240374629831782,
+        "to": "bt_stuetze",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "heyne_tillett_steel",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_stuetze",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Downloaden Thomas Van Oppens schepen van klimaat & duurzaamheid, financiën, afvalbeleid en digitalisering van de stad Leuven thomas.vanoppens@leuven.be 0494 94 01 67 016 27 41 70 August Smessaert coördinator Materialenbank august@ateliercirculer.be Eva Soetaert co-manager Atelier Circuler eva@ateliercirculer.be 0469 14 28 03 Lieve Van Espen Beleidsadviseur circulaire economie Lieve.VanEspen@leuven.be 016 27 23 48 Share Download assets Persberichten in je mailbox E-mailadres Inschrijven Door op \"",
+        "evidence_url": "https://pers.leuven.be/de-leuvense-materialenbank-redt-470-ton-materialen-in-2025-recordjaar-voor-circulaire-economie",
+        "id": "r_materialenbank_leuven_atelier_circuler__HAT_BAUTEILTYP__bt_tuer",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:materialenbank_leuven_atelier_circuler->bt_tuer",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "materialenbank_leuven_atelier_circuler",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Downloaden Thomas Van Oppens schepen van klimaat & duurzaamheid, financiën, afvalbeleid en digitalisering van de stad Leuven thomas.vanoppens@leuven.be 0494 94 01 67 016 27 41 70 August Smessaert coördinator Materialenbank august@ateliercirculer.be Eva Soetaert co-manager Atelier Circuler eva@ateliercirculer.be 0469 14 28 03 Lieve Van Espen Beleidsadviseur circulaire economie Lieve.VanEspen@leuven.be 016 27 23 48 Share Download assets Persberichten in je mailbox E-mailadres Inschrijven Door op \"",
+          "evidence_url": "https://pers.leuven.be/de-leuvense-materialenbank-redt-470-ton-materialen-in-2025-recordjaar-voor-circulaire-economie",
+          "id": "r_materialenbank_leuven_atelier_circuler__HAT_BAUTEILTYP__bt_tuer",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:materialenbank_leuven_atelier_circuler->bt_tuer",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1166499373698292333,
+        "to": "bt_tuer",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 13,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_tuer",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Voir toutes les boutiques BATISHOP LES BATINEURS Matériaux de réemploi et équipements professionnels Matériaux de réemploi : Bois d'œuvre, menuiseries intérieures et extérieures, sanitaires, isolant, revêtements sols et murs, couverture, quincaillerie, outillage, ...",
+        "evidence_url": "https://marketplace.skop.app/",
+        "id": "r_skop_marketplace__HAT_BAUTEILTYP__bt_wand",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:skop_marketplace->bt_wand",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "skop_marketplace",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Voir toutes les boutiques BATISHOP LES BATINEURS Matériaux de réemploi et équipements professionnels Matériaux de réemploi : Bois d'œuvre, menuiseries intérieures et extérieures, sanitaires, isolant, revêtements sols et murs, couverture, quincaillerie, outillage, ...",
+          "evidence_url": "https://marketplace.skop.app/",
+          "id": "r_skop_marketplace__HAT_BAUTEILTYP__bt_wand",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:skop_marketplace->bt_wand",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1155240374629866103,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "skop_marketplace",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Unterstütze uns auf Social Media Baustoff kostenlos einstellen Sicher bezahlen Baustoffe nach Region Berlin Hamburg München Köln Frankfurt Stuttgart Düsseldorf Dortmund Essen Leipzig Bremen Dresden Hannover Mannheim Weitere beliebte Städte Kategorien Türen & Zargen Fenster Fliesen & Steine Dach Haustechnik & Sanitär Rohbau Fassade Innenausbau Garten & Freianlagen Werkzeuge & Maschinen Alle Baustoff-Kategorien Ausgewählte Baustoffe Händlerverzeichnis Hilfethemen Händler werden Baustoff verkaufen ",
+        "evidence_url": "https://restado.de/",
+        "id": "r_deeper_software_concular__HAT_BAUTEILTYP__bt_fenster",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:software_concular->bt_fenster",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "software_concular",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Unterstütze uns auf Social Media Baustoff kostenlos einstellen Sicher bezahlen Baustoffe nach Region Berlin Hamburg München Köln Frankfurt Stuttgart Düsseldorf Dortmund Essen Leipzig Bremen Dresden Hannover Mannheim Weitere beliebte Städte Kategorien Türen & Zargen Fenster Fliesen & Steine Dach Haustechnik & Sanitär Rohbau Fassade Innenausbau Garten & Freianlagen Werkzeuge & Maschinen Alle Baustoff-Kategorien Ausgewählte Baustoffe Händlerverzeichnis Hilfethemen Händler werden Baustoff verkaufen ",
+          "evidence_url": "https://restado.de/",
+          "id": "r_deeper_software_concular__HAT_BAUTEILTYP__bt_fenster",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:software_concular->bt_fenster",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types."
+        },
+        "rel_internal_id": 1152988574816146574,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "software_concular",
+      "line": 15,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Additional support The platform offers support, training and advice, particularly to suppliers, and provides information on large-scale orders, renovation projects and remaining stock.",
+        "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+        "id": "r_useagain_bauteilclick__HAT_BAUTEILTYP__bt_stuetze",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:useagain_bauteilclick->bt_stuetze",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "useagain_bauteilclick",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Additional support The platform offers support, training and advice, particularly to suppliers, and provides information on large-scale orders, renovation projects and remaining stock.",
+          "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+          "id": "r_useagain_bauteilclick__HAT_BAUTEILTYP__bt_stuetze",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:useagain_bauteilclick->bt_stuetze",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1171002973325662842,
+        "to": "bt_stuetze",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "useagain_bauteilclick",
+      "line": 16,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "bt_stuetze",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Nos produits dans Cloisons et Doublages Tout Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte 93x203cm 75017 Paris, France Quantité : 4 U 95,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte tiercé 75017 Paris, France Quantité : 1 U 135,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 13/07/2026 au 30/09/2026 Ensemble vitrage trempé sans ossature 94250 Gentilly, France Quantité : 66 ml 30,00€ HT/ml icon-X \"Fermer (Esc)\" Vue rapide Disp",
+        "evidence_url": "https://backacia.com/",
+        "id": "r_backacia__NUTZT_MATERIAL__mat_glas",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:backacia->mat_glas",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Nos produits dans Cloisons et Doublages Tout Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte 93x203cm 75017 Paris, France Quantité : 4 U 95,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 18/05/2026 au 02/10/2027 Bloc-porte tiercé 75017 Paris, France Quantité : 1 U 135,00€ HT/U icon-X \"Fermer (Esc)\" Vue rapide Disponible du 13/07/2026 au 30/09/2026 Ensemble vitrage trempé sans ossature 94250 Gentilly, France Quantité : 66 ml 30,00€ HT/ml icon-X \"Fermer (Esc)\" Vue rapide Disp",
+          "evidence_url": "https://backacia.com/",
+          "id": "r_backacia__NUTZT_MATERIAL__mat_glas",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:backacia->mat_glas",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1155253568769399390,
+        "to": "mat_glas",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "backacia",
+      "line": 17,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_glas",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Und vielleicht dürfen wir uns bald über das erste Hochhaus aus gebrauchten Bauteilen freuen.» Pierre Strub Inhaber «nachhaltig wirkt» «Die BTB ist ein hervorragendes Beispiel für Zirkularwirtschaft und eröffnet meinen Studierenden immer wieder neue Perspektiven.» Thomas Wüthrich Lehrbeauftragter Hochschule für Gestaltung und Kunst HGK Basel «So einfach kann Wieder­ver­wen­dung sein.",
+        "evidence_url": "https://bauteilboerse-basel.ch/ueber-uns/",
+        "id": "r_bauteilboerse_basel_overall__NUTZT_MATERIAL__mat_naturstein",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:bauteilboerse_basel_overall->mat_naturstein",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_basel_overall",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Und vielleicht dürfen wir uns bald über das erste Hochhaus aus gebrauchten Bauteilen freuen.» Pierre Strub Inhaber «nachhaltig wirkt» «Die BTB ist ein hervorragendes Beispiel für Zirkularwirtschaft und eröffnet meinen Studierenden immer wieder neue Perspektiven.» Thomas Wüthrich Lehrbeauftragter Hochschule für Gestaltung und Kunst HGK Basel «So einfach kann Wieder­ver­wen­dung sein.",
+          "evidence_url": "https://bauteilboerse-basel.ch/ueber-uns/",
+          "id": "r_bauteilboerse_basel_overall__NUTZT_MATERIAL__mat_naturstein",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:bauteilboerse_basel_overall->mat_naturstein",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1159757168396765201,
+        "to": "mat_naturstein",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bauteilboerse_basel_overall",
+      "line": 18,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_naturstein",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Worldwide supply of steel tubing | Cleveland Steel & Tubes Skip to main content X Menu Main navigation Show — Main navigation Hide — Main navigation Home Pipe and Tube Stock Search Services Case studies Sell Steel Pipe and Tube Sell Steel Section Repurposed Steel Our stock Downloads About us Contact Image REDUCE COSTS REDUCE DELIVERY TIMES REDUCE CARBON EMISSIONS View all stock We’re promoting the use of surplus steel tube The use of surplus steel tube in construction and infrastructure projects",
+        "evidence_url": "https://cleveland-steel.com/",
+        "id": "r_deep_cleveland_steel_tubes__NUTZT_MATERIAL__mat_stahl",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:cleveland_steel_tubes->mat_stahl",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Worldwide supply of steel tubing | Cleveland Steel & Tubes Skip to main content X Menu Main navigation Show — Main navigation Hide — Main navigation Home Pipe and Tube Stock Search Services Case studies Sell Steel Pipe and Tube Sell Steel Section Repurposed Steel Our stock Downloads About us Contact Image REDUCE COSTS REDUCE DELIVERY TIMES REDUCE CARBON EMISSIONS View all stock We’re promoting the use of surplus steel tube The use of surplus steel tube in construction and infrastructure projects",
+          "evidence_url": "https://cleveland-steel.com/",
+          "id": "r_deep_cleveland_steel_tubes__NUTZT_MATERIAL__mat_stahl",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:cleveland_steel_tubes->mat_stahl",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1153001768955679847,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 19,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Statt Ressourcen zu entsorgen, werden Bauteile wie Stahl, Holz, Fenster oder Böden erfasst, bewertet und wiederverwendet – für ein zirkuläres, ressourcenschonendes Bauen.",
+        "evidence_url": "https://concular.de/urban-mining/",
+        "id": "r_deep_concular__NUTZT_MATERIAL__mat_holz",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:concular->mat_holz",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Statt Ressourcen zu entsorgen, werden Bauteile wie Stahl, Holz, Fenster oder Böden erfasst, bewertet und wiederverwendet – für ein zirkuläres, ressourcenschonendes Bauen.",
+          "evidence_url": "https://concular.de/urban-mining/",
+          "id": "r_deep_concular__NUTZT_MATERIAL__mat_holz",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:concular->mat_holz",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1159757168396736941,
+        "to": "mat_holz",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "concular",
+      "line": 20,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_holz",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Jetzt anfragen Urban Mining – Erfolgsgeschichten Erfolgsgeschichten Re-use Naturstein Travertin aus dem Bestand – MOMENI Group mit David Chipperfield Architects Mehr erfahren Erfolgsgeschichten B&B HOTEL in Lübeck – Hochwertige Materialien werden durch Urban Mining im Kreislauf gehalten Mehr erfahren Pressemitteilung Zeitenwende für das Siemens Tagungszentrum in Feldafing – Mit Urban Mining in die bauliche Zukunft des Unternehmens Mehr erfahren Erfolgsgeschichten Behrens-/Väthbau in Düsseldorf M",
+        "evidence_url": "https://concular.de/urban-mining/",
+        "id": "r_deep_concular__NUTZT_MATERIAL__mat_naturstein",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:concular->mat_naturstein",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Jetzt anfragen Urban Mining – Erfolgsgeschichten Erfolgsgeschichten Re-use Naturstein Travertin aus dem Bestand – MOMENI Group mit David Chipperfield Architects Mehr erfahren Erfolgsgeschichten B&B HOTEL in Lübeck – Hochwertige Materialien werden durch Urban Mining im Kreislauf gehalten Mehr erfahren Pressemitteilung Zeitenwende für das Siemens Tagungszentrum in Feldafing – Mit Urban Mining in die bauliche Zukunft des Unternehmens Mehr erfahren Erfolgsgeschichten Behrens-/Väthbau in Düsseldorf M",
+          "evidence_url": "https://concular.de/urban-mining/",
+          "id": "r_deep_concular__NUTZT_MATERIAL__mat_naturstein",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:concular->mat_naturstein",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1164260768024107437,
+        "to": "mat_naturstein",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "concular",
+      "line": 21,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_naturstein",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Practice | Heyne Tillett Steel Heyne Tillett Steel Home Low carbon toggle Low carbon mode Search toggle Menu Search Search Heyne Tillett Steel Home Projects Services Practice People News & Views Careers Contact We're hiring!",
+        "evidence_url": "https://hts.uk.com/practice/",
+        "id": "r_deeper_heyne_tillett_steel__NUTZT_MATERIAL__mat_stahl",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:heyne_tillett_steel->mat_stahl",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "heyne_tillett_steel",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Practice | Heyne Tillett Steel Heyne Tillett Steel Home Low carbon toggle Low carbon mode Search toggle Menu Search Search Heyne Tillett Steel Home Projects Services Practice People News & Views Careers Contact We're hiring!",
+          "evidence_url": "https://hts.uk.com/practice/",
+          "id": "r_deeper_heyne_tillett_steel__NUTZT_MATERIAL__mat_stahl",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:heyne_tillett_steel->mat_stahl",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types."
+        },
+        "rel_internal_id": 1153001768955679846,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "heyne_tillett_steel",
+      "line": 22,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "De schone materialen die het bedrijf terugwint, zoals beton, bitumen en baksteen, zijn één op één vergelijkbaar met nieuwe materialen.",
+        "evidence_url": "https://www.circonl.nl/case/urban-mining-new-horizon/",
+        "id": "r_deep_new_horizon_urban_mining__NUTZT_MATERIAL__mat_beton",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:new_horizon_urban_mining->mat_beton",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "De schone materialen die het bedrijf terugwint, zoals beton, bitumen en baksteen, zijn één op één vergelijkbaar met nieuwe materialen.",
+          "evidence_url": "https://www.circonl.nl/case/urban-mining-new-horizon/",
+          "id": "r_deep_new_horizon_urban_mining__NUTZT_MATERIAL__mat_beton",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:new_horizon_urban_mining->mat_beton",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1155253568769360474,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 23,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "General contractors Interior finishers Wood workers Roofers Demolishers and dismantlers Infrastructure companies Insurance for reused building materials A selection of 11 case studies which successfully dealt with insurance issues for reused building materials.",
+        "evidence_url": "https://opalis.eu/en/documentation",
+        "id": "r_deep_opalis__NUTZT_MATERIAL__mat_holz",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:opalis->mat_holz",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "General contractors Interior finishers Wood workers Roofers Demolishers and dismantlers Infrastructure companies Insurance for reused building materials A selection of 11 case studies which successfully dealt with insurance issues for reused building materials.",
+          "evidence_url": "https://opalis.eu/en/documentation",
+          "id": "r_deep_opalis__NUTZT_MATERIAL__mat_holz",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:opalis->mat_holz",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1153001768955681157,
+        "to": "mat_holz",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "opalis",
+      "line": 24,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_holz",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Both designers are renowned for their meticulous craftsmanship and their distinctive use of high-quality, timeless materials such as solid wood, stone and steel.",
+        "evidence_url": "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72",
+        "id": "r_rotordc__NUTZT_MATERIAL__mat_stahl",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:rotordc->mat_stahl",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Both designers are renowned for their meticulous craftsmanship and their distinctive use of high-quality, timeless materials such as solid wood, stone and steel.",
+          "evidence_url": "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72",
+          "id": "r_rotordc__NUTZT_MATERIAL__mat_stahl",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:rotordc->mat_stahl",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1164260768024107396,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "rotordc",
+      "line": 25,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "q04_strict_gate_verified",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "0 Building Materials Breedon Double Roll Concrete Roof Tile, Antique Red New £0.96 excl.",
+        "evidence_url": "https://sustainabilityyard.com/",
+        "id": "r_deep_sustainability_yard__NUTZT_MATERIAL__mat_beton",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:sustainability_yard->mat_beton",
+        "review_run": "quality_pass_q04_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "sustainability_yard",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "0 Building Materials Breedon Double Roll Concrete Roof Tile, Antique Red New £0.96 excl.",
+          "evidence_url": "https://sustainabilityyard.com/",
+          "id": "r_deep_sustainability_yard__NUTZT_MATERIAL__mat_beton",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:sustainability_yard->mat_beton",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1159757168396769913,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "sustainability_yard",
+      "line": 26,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "line": 27,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 28,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 29,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 30,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 31,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "batrecup",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "q04_strict_gate_verified",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "ctive){.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me .VfPpkd-fmcmS-wGMbrd{background-color:Window}.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me .VfPpkd-NLUYnc-V67aGc{z-index:1}}.VfPpkd-fmcmS-yrriRe-OWXEXe-OWB6Me .VfPpkd-NL",
+          "evidence_url": "https://play.google.com/store/apps/details?id=com.batrecup",
+          "id": "r_batrecup__HAT_BAUTEILTYP__bt_fenster",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:batrecup->bt_fenster",
+          "review_run": "quality_pass_q04_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1155240374629866081,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "batrecup",
+      "line": 32,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "line": 33,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 34,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 35,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 36,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 37,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 38,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 39,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 40,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 41,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 42,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 43,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 44,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 45,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 46,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 47,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 48,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 49,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 50,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 51,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 52,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 53,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 54,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 55,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 56,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 57,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 58,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 59,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 60,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 61,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 62,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 63,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 64,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 65,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 66,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 67,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 68,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 69,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 70,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 71,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 72,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 73,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 74,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 75,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 76,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 77,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 78,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 79,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 80,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 81,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 82,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 83,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 84,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 85,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 86,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 87,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 88,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 89,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 90,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 91,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 92,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 93,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 94,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 95,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 96,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 97,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 98,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 99,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 100,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 101,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 102,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 103,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 104,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 105,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 106,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 107,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 108,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 109,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 110,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 111,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 112,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 113,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 114,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 115,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 116,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 117,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 118,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 119,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 120,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 121,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 122,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 123,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 124,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 125,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 126,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 127,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 128,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 129,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 130,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 131,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 132,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "line": 133,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_missing": 106,
+    "noop_same_rel": 26,
+    "records": 133,
+    "would_delete_rel": 1
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "confirmation_required": "APPLY remediation_r05_connect_orphans.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2295,
+    "relationships": 15330
+  },
+  "counts_after_expected": {
+    "nodes": 2295,
+    "relationships": 15330
+  },
+  "counts_before": {
+    "nodes": 2295,
+    "relationships": 15327
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:56:22.456811+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\remediation_r05_connect_orphans.patch.jsonl",
+  "records": [
+    {
+      "from": "c33_circular_construction_catalyst",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "circular_economy_switzerland",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "repurpose",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 3,
+    "would_create_rel": 3
+  }
+}

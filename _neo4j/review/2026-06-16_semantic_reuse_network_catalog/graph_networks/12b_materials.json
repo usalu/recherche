@@ -1,0 +1,558 @@
+{
+  "id": "12b_materials",
+  "section": "12",
+  "title": "Project × material subgraph",
+  "cypher": "MATCH (p:Projekt)-[r:NUTZT_MATERIAL]->(m:Material)\nRETURN p, r, m;",
+  "status": "ok",
+  "row_count": 14,
+  "node_count": 12,
+  "relationship_count": 14,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "id": "p_chiro_d_itterbeek_dilbeek",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "nutzung_text": "Sanitärblock / WC-Anlage fuer Chiro und Besucher",
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "Chiro d’Itterbeek / Sanitary block, Dilbeek",
+        "year_completed": 2019,
+        "latitude": 50.8318626,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 15,
+        "name": "Chiro d’Itterbeek",
+        "adresse": "Plankenstraat 23, 1701 Dilbeek, Belgien",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The sanitary block is small, but the design work is unusually precise. Reclaimed tiles, sanitary fixtures, mirrors, lighting, doors, windows, bricks and steel profiles are not scattered tokens; they define the wet-room atmosphere, facade texture and everyday usability of the building. The project shows how a modest programme can be designed almost as a fitted assemblage, where each recovered component is selected for dimension, durability, hygiene, finish and visual compatibility.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_chiro_d_itterbeek_dilbeek",
+        "id": "p_chiro_d_itterbeek_dilbeek",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.construction21.org/france/case-studies/h/pavillon-de-sanitaires-du-chiro-d-itterbeek.html",
+          "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+          "https://www.construction21.org/belgique/case-studies/h/pavillon-de-sanitaires-du-chiro-d-itterbeek-dilbeek.html",
+          "https://opalis.eu/en/dealers/rotor-deconstruction",
+          "https://opalis.eu/en/dealers/franck-bricks",
+          "https://adokin.eu/fr/tag/briques"
+        ],
+        "status": "Realisiert",
+        "longitude": 4.234055
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4629",
+      "id": "mat_beton",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "aliases": [
+          "Spannbeton"
+        ],
+        "name": "Beton",
+        "metadata_sidecar_key": "node:mat_spannbeton",
+        "id": "mat_beton"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4630",
+      "id": "mat_daemmstoff",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "name": "Daemmstoff",
+        "id": "mat_daemmstoff"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4631",
+      "id": "mat_glas",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "aliases": [
+          "Drahtglas"
+        ],
+        "name": "Glas",
+        "metadata_sidecar_key": "node:mat_glas",
+        "id": "mat_glas"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4633",
+      "id": "mat_holz",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "name": "Holz",
+        "metadata_sidecar_key": "node:mat_holz",
+        "id": "mat_holz"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4634",
+      "id": "mat_keramik",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "name": "Keramik",
+        "id": "mat_keramik"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4639",
+      "id": "mat_stahl",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "name": "Stahl",
+        "metadata_sidecar_key": "node:mat_stahl",
+        "id": "mat_stahl"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4642",
+      "id": "mat_ziegel",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "name": "Ziegel",
+        "metadata_sidecar_key": "node:mat_ziegel",
+        "id": "mat_ziegel"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5210",
+      "id": "p_holbein_gardens_london",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: exakt"
+        ],
+        "year_completed": 2023,
+        "latitude": 51.4947,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "BREEAM",
+          "NABERS",
+          "WELL"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 3536,
+        "name": "Holbein Gardens, London",
+        "adresse": "7 Holbein Place, London SW1W 8NR, UK",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Holbein Gardens combines deep retrofit with selective structural reuse, making the existing building fabric an active design resource. Rather than replacing the frame wholesale, the project works with what can remain and what can be inserted, producing a layered office architecture. Reclaimed or retained elements shape the structural strategy, facade response and interior character. The design quality lies in showing commercial redevelopment as careful editing: conservation, new performance and reuse are coordinated into a polished urban workplace.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_holbein_gardens_london",
+        "id": "p_holbein_gardens_london",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / fertiggestellt 2023",
+        "source_urls": [
+          "https://www.grosvenor.com/news-insights/some-of-uk%E2%80%99s-first-salvaged-steelwork-reused-in-holbein-gardens-retrofit",
+          "https://hts.uk.com/project/holbein-gardens",
+          "https://www.istructe.org/journal/volumes/volume-101-%282023%29/issue-3/holbein-gardens-low-carbon-reclaimed-steel",
+          "https://www.newsteelconstruction.com/wp/holbein-gardens-london",
+          "https://terc.org.uk/54-2",
+          "https://ukgbc.org/resources/reused-steel-stockmatcher",
+          "https://asbp.org.uk/case-studies/holbein-gardens",
+          "https://nla.london/projects/holbein-gardens-2",
+          "https://link.springer.com/article/10.1007/s13296-023-00778-4",
+          "https://www.researchgate.net/publication/339713300_SCI_P427_-_Structural_Steel_Reuse_assessment_testing_and_design_principles",
+          "https://www.tftconsultants.com/projects/holbein-gardens-london",
+          "https://www.iom3.org/resource/steel-reused-from-uk-s-first-steelworks.html",
+          "https://www.grosvenor.com/property/holbein-gardens"
+        ],
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": -0.1489
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "id": "p_impact_hub_berlin_crclr_fitout",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Impact Hub Berlin / CRCLR Fit-out",
+        "year_completed": 2022,
+        "latitude": 52.4764,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 3500,
+        "name": "Impact Hub Berlin",
+        "adresse": "Rollbergstraße 26, 12053 Berlin, Germany",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The Impact Hub fit-out translates CRCLR’s circular agenda into everyday workspace design. Reclaimed partitions, surfaces, fixtures and furniture help produce an interior that is flexible, informal and materially explicit. The design choices favour adaptability and visible assembly over a seamless office finish. Reuse becomes spatial communication: tenants encounter the building’s values through desks, meeting rooms, partitions and rough surfaces, not through abstract sustainability signage.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_impact_hub_berlin_crclr_fitout",
+        "id": "p_impact_hub_berlin_crclr_fitout",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://www.buildingsocialecology.org/projects/crclr-house-berlin/"
+        ],
+        "status": "Realisiert",
+        "longitude": 13.4357
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5472",
+      "id": "p_maison_vignette_auderghem",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten"
+        ],
+        "name_full": "Maison Vignette, Auderghem",
+        "year_completed": 2020,
+        "wiederverwendungsort": [
+          "Extern_importiert"
+        ],
+        "latitude": 50.815,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "area_m2_gross": 255,
+        "name": "Maison Vignette",
+        "adresse": "106 Rue de la Vignette, 1160 Auderghem, Belgium",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Maison Vignette is a compact urban reuse case where architectural quality depends on precision at domestic scale. Reclaimed components shape the building through surface, opening, fixture or detail decisions rather than through a large structural gesture. The design challenge is to balance the irregularity of recovered materials with the intimacy and clarity expected in a house. Extraction should therefore focus on documented design effects: facade texture, interior atmosphere, custom details or spatial adaptation driven by recovered parts.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_maison_vignette_auderghem",
+        "id": "p_maison_vignette_auderghem",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "source_urls": [
+          "https://opalis.eu/fr/projets/maison-vignette",
+          "https://gidsduurzamegebouwen.brussels/sites/default/files/documents/2024-06/dt4_2_2_project-sheets_041023_lr.pdf",
+          "https://opalis.eu/fr/projets/maison-vignette-karbon-architecture-et-urbanisme",
+          "https://www.architectura.be/fr/actualite/voici-les-laureats-de-l-appel-a-projets-beexemplary-3",
+          "https://guidebatimentdurable.brussels/construction-dune-maison-unifamiliale-paille-projet-vignette"
+        ],
+        "status": "Realisiert",
+        "longitude": 4.4214
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4637",
+      "id": "mat_naturstein",
+      "labels": [
+        "Material"
+      ],
+      "properties": {
+        "name": "Naturstein",
+        "metadata_sidecar_key": "node:mat_naturstein",
+        "id": "mat_naturstein"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164260768024105714",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4629",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "mat_beton",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "The load-bearing structure, both the concrete blocks and the roof structure (and the associated thermal insulation), comes from site surplus or production surplus.",
+        "id": "r_deeper_p_chiro_d_itterbeek_dilbeek__NUTZT_MATERIAL__mat_beton",
+        "evidence_url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162008968210420466",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4630",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "mat_daemmstoff",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Cette adaptation de l’habituel mur creux rempli d’isolant à la maçonnerie en briques est une nouvelle façon de lui rendre une place qu’elle avait perdue.",
+        "id": "r_deeper_p_chiro_d_itterbeek_dilbeek__NUTZT_MATERIAL__mat_daemmstoff",
+        "evidence_url": "https://adokin.eu/fr/tag/briques"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1166512567837790962",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4631",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "mat_glas",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Ces innovations se retrouvent d’ailleurs dans le projet Quincho Tia Coral (2016, voir à ce sujet un article Archdaily ) dont la pergola est faite de verre de réemploi mais surtout de modules triangulaires en béton cyclopéen de débris céramiques.",
+        "id": "r_deeper_p_chiro_d_itterbeek_dilbeek__NUTZT_MATERIAL__mat_glas",
+        "evidence_url": "https://adokin.eu/fr/tag/briques"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153001768955679474",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4633",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "mat_holz",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Materials Flagstones Stone wall slabs Natural stone elements Window tablets Finishing wood Scrap wood Doors Panelled doors Fire doors Hardware Flush doors Panels and boards Wood-based panel materials Tiles Unglazed porcelain tiles Enamelled, ceramic tiles Cement based tiles Lights Tracks and spotlights Light fittings Sanitary appliances Washbasins, slop sinks Toilet bowls Urinals Also offers Flagstones Stone flooring slabs Bricks Solid terracotta bricks Structural timber Trusses, beams, rafters,",
+        "id": "r_deeper_p_chiro_d_itterbeek_dilbeek__NUTZT_MATERIAL__mat_holz",
+        "evidence_url": "https://opalis.eu/en/dealers/rotor-deconstruction"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157505368583049970",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4634",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "mat_keramik",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Ceramic tiles once used in the former Everheide Primary School in Evere (1930s), have a second life.",
+        "id": "r_deeper_p_chiro_d_itterbeek_dilbeek__NUTZT_MATERIAL__mat_keramik",
+        "evidence_url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159757168396735218",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4639",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "mat_stahl",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Matériaux Projets Tags ACV Africa Andalusia architecture Asia Balearic Islands Basque Country briques béton carrelage circular economy climate change Community of Madrid DCD definition Denmark divulgation employment empreinte carbone european project extractivism fenêtres formation Germany History interior design inventory Italy La Rioja matières premières North America Norway pavés pierres portes press self-build South America structure en acier structure en bois The Netherlands tuiles tôle mét",
+        "id": "r_deeper_p_chiro_d_itterbeek_dilbeek__NUTZT_MATERIAL__mat_stahl",
+        "evidence_url": "https://adokin.eu/fr/tag/briques"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155253568769364722",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4642",
+      "start_id": "p_chiro_d_itterbeek_dilbeek",
+      "end_id": "mat_ziegel",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Thus, the old salvaged brick ensures the integration of the new building into the existing brick wall of the old farm, while retaining its individuality thanks to atypical masonry equipment.",
+        "id": "r_deeper_p_chiro_d_itterbeek_dilbeek__NUTZT_MATERIAL__mat_ziegel",
+        "evidence_url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159757168396735578",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5210",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4629",
+      "start_id": "p_holbein_gardens_london",
+      "end_id": "mat_beton",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Location Royal Borough of Kensington and Chelsea Client Grosvenor Architect Barr Gazetas Status Complete (2023) GIA 3,536m² Feature Refurbishment Key features Making sustainable materials choices The new structure comprises a steel frame, CemfreeTM concrete and CLT floor slabs, with some steelwork procured from other Grosvenor projects and reclaimed stock.",
+        "id": "r_deeper_p_holbein_gardens_london__NUTZT_MATERIAL__mat_beton",
+        "evidence_url": "https://hts.uk.com/project/holbein-gardens"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153001768955679834",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5210",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4633",
+      "start_id": "p_holbein_gardens_london",
+      "end_id": "mat_holz",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Structural embodied carbon 62 kgCO ₂ e/m² 90% of the existing building retained = Structure retained = Structure demolished Embodied carbon saved 45 Tonnes of embodied carbon saved by reused steel 16 Tonnes of embodied carbon stored by timber Previous Next How we measure impact 01 - 03 Previous Next Perspective view Awards 2023 Building Awards Workplace project (20 million and over) Shortlisted 2023 Structural Awards Won 2023 Wastebuild Zero Awards Commercial Building Won 2023 Institution of Str",
+        "id": "r_deeper_p_holbein_gardens_london__NUTZT_MATERIAL__mat_holz",
+        "evidence_url": "https://hts.uk.com/project/holbein-gardens"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162008968210420826",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5210",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4639",
+      "start_id": "p_holbein_gardens_london",
+      "end_id": "mat_stahl",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Holbein Gardens | Heyne Tillett Steel Heyne Tillett Steel Home Low carbon toggle Low carbon mode Search toggle Menu Search Search Heyne Tillett Steel Home Projects Services Practice People News & Views Careers Contact We're hiring!",
+        "id": "r_deeper_p_holbein_gardens_london__NUTZT_MATERIAL__mat_stahl",
+        "evidence_url": "https://hts.uk.com/project/holbein-gardens"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155253568769365122",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4633",
+      "start_id": "p_impact_hub_berlin_crclr_fitout",
+      "end_id": "mat_holz",
+      "properties": {
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "id": "r_deeper_p_impact_hub_berlin_crclr_fitout__NUTZT_MATERIAL__mat_holz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157505368583050592",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5472",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4634",
+      "start_id": "p_maison_vignette_auderghem",
+      "end_id": "mat_keramik",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Outre ce lot de 3.000 briques, d'autres éléments de construction de réemploi ont été mis en œuvre dans le projet tels que des carreaux de carrelage, des dalles de sol en pierre bleue et des équipements sanitaires.",
+        "id": "r_deeper_p_maison_vignette_auderghem__NUTZT_MATERIAL__mat_keramik",
+        "evidence_url": "https://opalis.eu/fr/projets/maison-vignette"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153001768955680096",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5472",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4637",
+      "start_id": "p_maison_vignette_auderghem",
+      "end_id": "mat_naturstein",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Type Integration Type de marché privé Year 2020 Conception Karbon’ architecture & Urbanisme Technique / Stabilité Pierre Stoffel Fournisseurs Franck Bricks Implementation 3 ALJ Construct Gautier Nagant Adresse Rue de la Vignette Auderghem Belgique Newsletter Enter your email to subscribe * --> Langue * Français Nederlands English Subscribe Your e-mail address is only used to send you our newsletter as well as information concerning the activities of Opalis.",
+        "id": "r_deeper_p_maison_vignette_auderghem__NUTZT_MATERIAL__mat_naturstein",
+        "evidence_url": "https://opalis.eu/fr/projets/maison-vignette"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155253568769365344",
+      "type": "NUTZT_MATERIAL",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5472",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4642",
+      "start_id": "p_maison_vignette_auderghem",
+      "end_id": "mat_ziegel",
+      "properties": {
+        "evidence_basis": "w3_04_web_fetch",
+        "review_run": "post_ier_w3_2026_06_07",
+        "scope_note": "Deeper pass: added edges only between existing nodes and existing vocabulary target nodes; no new nodes, labels, or node types.",
+        "confidence": 0.4,
+        "semantic_basis": "catalog_extension",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Maison Vignette | Opalis Aller au contenu principal en fr nl Main navigation Fournisseurs Matériaux Matériaux Opérations sur les produits Exemples Documentation En savoir plus FAQ À propos Actualités Sandbox Maison Vignette Briques et autres matériaux de réemploi pour une maison neuve Diaporama Giulia Frigerio Giulia Frigerio Giulia Frigerio Giulia Frigerio Giulia Frigerio Giulia Frigerio Giulia Frigerio Giulia Frigerio Giulia Frigerio Matériaux réutilisés et quantités - Brique : Large Boomse St",
+        "id": "r_deeper_p_maison_vignette_auderghem__NUTZT_MATERIAL__mat_ziegel",
+        "evidence_url": "https://opalis.eu/fr/projets/maison-vignette"
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "anchor_id": "genbyg",
+  "sources_visited": [
+    {
+      "url": "https://genbyg.dk/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://pub.norden.org/temanord2021-508/",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.salvoweb.com/directory/24044-genbyg-as",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Category list includes Brugte Døre, Brugte Vinduer and timber-like used components; wood material is explicit in product families on site.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Window category includes Enkeltlagsglas.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Window category includes Jernvinduer; iron/steel candidate needs material-normalization review.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Menu lists Brugte Døre with exterior, interior, double, fire doors and hinges.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Menu lists Brugte Vinduer with several window subcategories.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Menu includes Lamper & EL / lighting and electrical families.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Door hardware, hinges and accessories map to Ausbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Genbyg reuse catalogue includes flooring/floor elements in overall shop scope.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Genbyg",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://genbyg.dk/",
+      "https://pub.norden.org/temanord2021-508/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung",
+      "reason": "No QA/audit evidence located."
+    },
+    {
+      "topic": "Material exactness",
+      "reason": "Jernvinduer can mean iron/steel; import as steel only after normalization decision."
+    }
+  ],
+  "run_notes": []
+}

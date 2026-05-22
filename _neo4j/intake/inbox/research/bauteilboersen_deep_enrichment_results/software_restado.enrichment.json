@@ -1,0 +1,169 @@
+{
+  "anchor_id": "software_restado",
+  "sources_visited": [
+    {
+      "url": "https://restado.de/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://restado.de/ueber-restado/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://restado.de/materialreste/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://restado.de/hilfe/impressum/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://restado.de/haendler-auf-restado-werden/",
+      "http_status": 200,
+      "first_party": true
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site explicitly lists alte Ziegel, Klinker and alte Ziegelsteine.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site explicitly lists Altholz, alte Balken, Holzbretter and Holzbalken.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site explicitly mentions Verblender Naturstein and Steine.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site mentions Fliesen & Steine and roof tiles/Braas Ziegel; ceramic needs category-item review.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_beton",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site mentions Recycling-Beton in Rückbau source section.",
+      "confidence": "belegt"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Türen & Zargen and site notes doors from Rückbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Fenster and site mentions gebrauchte Fenster.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Fliesen & Steine / Holzbretter can map to floor components when used as flooring.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Old bricks, clinker and tiles map to wall/facade components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Dach and Braas roof tiles.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fassade",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Fassade and Klinker/Verblender.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Haustechnik & Sanitär.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Innenausbau, Werkzeuge and material leftovers.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_b2b_online_shop",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site calls restado a B2B online shop for circular building materials.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "restado / Concular",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://restado.de/",
+      "https://restado.de/ueber-restado/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung",
+      "reason": "No proof/QA workflow found in accessible text."
+    }
+  ],
+  "run_notes": []
+}

@@ -1,0 +1,954 @@
+{
+  "backed_up_relationships": 9670,
+  "database": "mit-bestand",
+  "migration": "mig_source_status_correction_2026_05_28",
+  "non_fact_rel_types": [
+    "CITED_FROM_DOSSIER",
+    "CONCERNS",
+    "HAS_DATA_ISSUE",
+    "EXACT_MATCH_CANDIDATE"
+  ],
+  "post_gates": {
+    "fact_candidate_urls_without_candidate_status": 0,
+    "fact_exact_status_without_url": 0,
+    "fact_exact_url_without_exact_status": 0,
+    "non_fact_relationships_marked_exact": 0,
+    "non_fact_relationships_with_source_status": 0,
+    "review_relationship_with_trusted_url": 0,
+    "zitiert_remaining": 0
+  },
+  "post_source_status_counts": [
+    {
+      "count": 3151,
+      "rel_type": "BELEGT_IN",
+      "source_status": "exact"
+    },
+    {
+      "count": 1441,
+      "rel_type": "BELEGT_IN",
+      "source_status": "candidate"
+    },
+    {
+      "count": 1068,
+      "rel_type": "HAT_HUERDE",
+      "source_status": "missing"
+    },
+    {
+      "count": 812,
+      "rel_type": "HAT_PROZESSPHASE",
+      "source_status": "missing"
+    },
+    {
+      "count": 803,
+      "rel_type": "HAS_RISK_POLLUTANT",
+      "source_status": "missing"
+    },
+    {
+      "count": 672,
+      "rel_type": "HAT_STATUS",
+      "source_status": "missing"
+    },
+    {
+      "count": 632,
+      "rel_type": "HAT_AKTEURROLLE",
+      "source_status": "missing"
+    },
+    {
+      "count": 621,
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "source_status": "missing"
+    },
+    {
+      "count": 607,
+      "rel_type": "HAT_BAUTEILTYP",
+      "source_status": "missing"
+    },
+    {
+      "count": 602,
+      "rel_type": "HAT_METHODE",
+      "source_status": "missing"
+    },
+    {
+      "count": 576,
+      "rel_type": "BETEILIGT_AN",
+      "source_status": "missing"
+    },
+    {
+      "count": 567,
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "source_status": "missing"
+    },
+    {
+      "count": 561,
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 548,
+      "rel_type": "HAT_AKTEURROLLE",
+      "source_status": "candidate"
+    },
+    {
+      "count": 516,
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "source_status": "missing"
+    },
+    {
+      "count": 500,
+      "rel_type": "HAT_LOGISTIK",
+      "source_status": "missing"
+    },
+    {
+      "count": 475,
+      "rel_type": "NUTZT_MATERIAL",
+      "source_status": "missing"
+    },
+    {
+      "count": 465,
+      "rel_type": "HAT_AKTEURTYP",
+      "source_status": "missing"
+    },
+    {
+      "count": 443,
+      "rel_type": "ANCHORED_BY",
+      "source_status": "missing"
+    },
+    {
+      "count": 426,
+      "rel_type": "HAT_AUFBEREITUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 384,
+      "rel_type": "HAT_MARKTMODELL",
+      "source_status": "missing"
+    },
+    {
+      "count": 372,
+      "rel_type": "HAT_BAUTEILEBENE",
+      "source_status": "missing"
+    },
+    {
+      "count": 349,
+      "rel_type": "INTO_RECEIVER",
+      "source_status": "missing"
+    },
+    {
+      "count": 347,
+      "rel_type": "HAT_PRUEFUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 347,
+      "rel_type": "REQUIRES_VERIFICATION_FOR",
+      "source_status": "missing"
+    },
+    {
+      "count": 319,
+      "rel_type": "LIEGT_IN_LAND",
+      "source_status": "missing"
+    },
+    {
+      "count": 301,
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "source_status": "missing"
+    },
+    {
+      "count": 299,
+      "rel_type": "HAT_FUNKTIONSWECHSEL",
+      "source_status": "missing"
+    },
+    {
+      "count": 286,
+      "rel_type": "FROM_DONOR",
+      "source_status": "missing"
+    },
+    {
+      "count": 285,
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "source_status": "missing"
+    },
+    {
+      "count": 262,
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "source_status": "candidate"
+    },
+    {
+      "count": 261,
+      "rel_type": "LIEGT_IN_STADT",
+      "source_status": "missing"
+    },
+    {
+      "count": 260,
+      "rel_type": "ANCHORED_BY",
+      "source_status": "candidate"
+    },
+    {
+      "count": 255,
+      "rel_type": "GEHÖRT_ZU",
+      "source_status": "missing"
+    },
+    {
+      "count": 248,
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "source_status": "candidate"
+    },
+    {
+      "count": 230,
+      "rel_type": "HAT_BAUOBJEKTROLLE",
+      "source_status": "missing"
+    },
+    {
+      "count": 227,
+      "rel_type": "HAT_BAUOBJEKTKLASSE",
+      "source_status": "missing"
+    },
+    {
+      "count": 216,
+      "rel_type": "HAT_NUTZUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 201,
+      "rel_type": "LIEGT_IN_LAND",
+      "source_status": "candidate"
+    },
+    {
+      "count": 193,
+      "rel_type": "HAT_AKTEURTYP",
+      "source_status": "candidate"
+    },
+    {
+      "count": 187,
+      "rel_type": "HAT_MATCHINGQUALITAET",
+      "source_status": "missing"
+    },
+    {
+      "count": 184,
+      "rel_type": "HAS_BAUWERK",
+      "source_status": "missing"
+    },
+    {
+      "count": 178,
+      "rel_type": "BELEGT_IN",
+      "source_status": "missing"
+    },
+    {
+      "count": 169,
+      "rel_type": "NUTZT_BAUWERK",
+      "source_status": "missing"
+    },
+    {
+      "count": 167,
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "source_status": "missing"
+    },
+    {
+      "count": 164,
+      "rel_type": "HAT_KENNWERT",
+      "source_status": "candidate"
+    },
+    {
+      "count": 148,
+      "rel_type": "HAT_INTERVENTION",
+      "source_status": "missing"
+    },
+    {
+      "count": 142,
+      "rel_type": "STUB_PROJECT_LINK",
+      "source_status": "candidate"
+    },
+    {
+      "count": 130,
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "source_status": "missing"
+    },
+    {
+      "count": 129,
+      "rel_type": "HAT_BAUWEISE",
+      "source_status": "missing"
+    },
+    {
+      "count": 121,
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "source_status": "missing"
+    },
+    {
+      "count": 103,
+      "rel_type": "RELEVANT_FOR",
+      "source_status": "missing"
+    },
+    {
+      "count": 93,
+      "rel_type": "REFERENZIERT_NORM",
+      "source_status": "candidate"
+    },
+    {
+      "count": 91,
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "source_status": "missing"
+    },
+    {
+      "count": 72,
+      "rel_type": "HAT_TRAGWERKSPRINZIP",
+      "source_status": "missing"
+    },
+    {
+      "count": 67,
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "source_status": "missing"
+    },
+    {
+      "count": 64,
+      "rel_type": "HAT_BAUSYSTEM",
+      "source_status": "missing"
+    },
+    {
+      "count": 58,
+      "rel_type": "STUB_PROJECT_LINK",
+      "source_status": "missing"
+    },
+    {
+      "count": 52,
+      "rel_type": "HAT_KENNWERT",
+      "source_status": "exact"
+    },
+    {
+      "count": 52,
+      "rel_type": "REFERENZIERT_NORM",
+      "source_status": "missing"
+    },
+    {
+      "count": 51,
+      "rel_type": "HAT_PRUEFUNG",
+      "source_status": "candidate"
+    },
+    {
+      "count": 51,
+      "rel_type": "NUTZT_SOFTWARE",
+      "source_status": "missing"
+    },
+    {
+      "count": 48,
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "source_status": "missing"
+    },
+    {
+      "count": 46,
+      "rel_type": "HAT_WIRTSCHAFT",
+      "source_status": "missing"
+    },
+    {
+      "count": 45,
+      "rel_type": "HAT_DEFEKT",
+      "source_status": "missing"
+    },
+    {
+      "count": 42,
+      "rel_type": "HAT_KENNWERT",
+      "source_status": "missing"
+    },
+    {
+      "count": 40,
+      "rel_type": "GILT_IN_LAND",
+      "source_status": "missing"
+    },
+    {
+      "count": 40,
+      "rel_type": "HAT_ZUSTANDSKLASSE",
+      "source_status": "missing"
+    },
+    {
+      "count": 38,
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "source_status": "missing"
+    },
+    {
+      "count": 28,
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "source_status": "missing"
+    },
+    {
+      "count": 25,
+      "rel_type": "HAT_DEFEKT_BEFUND",
+      "source_status": "missing"
+    },
+    {
+      "count": 22,
+      "rel_type": "HAT_AUFBEREITUNG",
+      "source_status": "candidate"
+    },
+    {
+      "count": 20,
+      "rel_type": "APPLIES_IN",
+      "source_status": "candidate"
+    },
+    {
+      "count": 20,
+      "rel_type": "APPLIES_TO",
+      "source_status": "candidate"
+    },
+    {
+      "count": 20,
+      "rel_type": "HAS_SOURCE_LINK",
+      "source_status": "exact"
+    },
+    {
+      "count": 19,
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "source_status": "missing"
+    },
+    {
+      "count": 15,
+      "rel_type": "TEILT_LAYER",
+      "source_status": "missing"
+    },
+    {
+      "count": 15,
+      "rel_type": "TYPISCH_BEI_ERA",
+      "source_status": "missing"
+    },
+    {
+      "count": 14,
+      "rel_type": "TEIL_VON_KETTE",
+      "source_status": "missing"
+    },
+    {
+      "count": 12,
+      "rel_type": "HAT_PRUEFUNG",
+      "source_status": "exact"
+    },
+    {
+      "count": 12,
+      "rel_type": "HAT_RECHTLICHE_BEDINGUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 12,
+      "rel_type": "HAT_ZERTIFIZIERUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 11,
+      "rel_type": "HAT_WIRTSCHAFTSASPEKT",
+      "source_status": "missing"
+    },
+    {
+      "count": 10,
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "source_status": "missing"
+    },
+    {
+      "count": 8,
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "source_status": "missing"
+    },
+    {
+      "count": 8,
+      "rel_type": "BUILT_IN_ERA",
+      "source_status": "missing"
+    },
+    {
+      "count": 8,
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "source_status": "missing"
+    },
+    {
+      "count": 4,
+      "rel_type": "ERHALT_FOERDERUNG_DURCH",
+      "source_status": "missing"
+    },
+    {
+      "count": 3,
+      "rel_type": "BETRIEBEN_VON",
+      "source_status": "missing"
+    },
+    {
+      "count": 1,
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "source_status": "candidate"
+    }
+  ],
+  "pre_gates": {
+    "fact_candidate_urls_without_candidate_status": 0,
+    "fact_exact_status_without_url": 0,
+    "fact_exact_url_without_exact_status": 0,
+    "non_fact_relationships_marked_exact": 9606,
+    "non_fact_relationships_with_source_status": 9670,
+    "review_relationship_with_trusted_url": 0,
+    "zitiert_remaining": 0
+  },
+  "pre_source_status_counts": [
+    {
+      "count": 6150,
+      "rel_type": "CITED_FROM_DOSSIER",
+      "source_status": "exact"
+    },
+    {
+      "count": 3456,
+      "rel_type": "CONCERNS",
+      "source_status": "exact"
+    },
+    {
+      "count": 3151,
+      "rel_type": "BELEGT_IN",
+      "source_status": "exact"
+    },
+    {
+      "count": 1441,
+      "rel_type": "BELEGT_IN",
+      "source_status": "candidate"
+    },
+    {
+      "count": 1068,
+      "rel_type": "HAT_HUERDE",
+      "source_status": "missing"
+    },
+    {
+      "count": 812,
+      "rel_type": "HAT_PROZESSPHASE",
+      "source_status": "missing"
+    },
+    {
+      "count": 803,
+      "rel_type": "HAS_RISK_POLLUTANT",
+      "source_status": "missing"
+    },
+    {
+      "count": 672,
+      "rel_type": "HAT_STATUS",
+      "source_status": "missing"
+    },
+    {
+      "count": 632,
+      "rel_type": "HAT_AKTEURROLLE",
+      "source_status": "missing"
+    },
+    {
+      "count": 621,
+      "rel_type": "HAT_WIEDERVERWENDUNGSART",
+      "source_status": "missing"
+    },
+    {
+      "count": 607,
+      "rel_type": "HAT_BAUTEILTYP",
+      "source_status": "missing"
+    },
+    {
+      "count": 602,
+      "rel_type": "HAT_METHODE",
+      "source_status": "missing"
+    },
+    {
+      "count": 576,
+      "rel_type": "BETEILIGT_AN",
+      "source_status": "missing"
+    },
+    {
+      "count": 567,
+      "rel_type": "HAT_RESSOURCENQUELLE",
+      "source_status": "missing"
+    },
+    {
+      "count": 561,
+      "rel_type": "HAT_LEISTUNGSANFORDERUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 548,
+      "rel_type": "HAT_AKTEURROLLE",
+      "source_status": "candidate"
+    },
+    {
+      "count": 516,
+      "rel_type": "HAT_MATERIALGRUPPE",
+      "source_status": "missing"
+    },
+    {
+      "count": 500,
+      "rel_type": "HAT_LOGISTIK",
+      "source_status": "missing"
+    },
+    {
+      "count": 475,
+      "rel_type": "NUTZT_MATERIAL",
+      "source_status": "missing"
+    },
+    {
+      "count": 465,
+      "rel_type": "HAT_AKTEURTYP",
+      "source_status": "missing"
+    },
+    {
+      "count": 443,
+      "rel_type": "ANCHORED_BY",
+      "source_status": "missing"
+    },
+    {
+      "count": 426,
+      "rel_type": "HAT_AUFBEREITUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 384,
+      "rel_type": "HAT_MARKTMODELL",
+      "source_status": "missing"
+    },
+    {
+      "count": 372,
+      "rel_type": "HAT_BAUTEILEBENE",
+      "source_status": "missing"
+    },
+    {
+      "count": 349,
+      "rel_type": "INTO_RECEIVER",
+      "source_status": "missing"
+    },
+    {
+      "count": 347,
+      "rel_type": "HAT_PRUEFUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 347,
+      "rel_type": "REQUIRES_VERIFICATION_FOR",
+      "source_status": "missing"
+    },
+    {
+      "count": 319,
+      "rel_type": "LIEGT_IN_LAND",
+      "source_status": "missing"
+    },
+    {
+      "count": 301,
+      "rel_type": "HAT_RUECKBAUVERFAHREN",
+      "source_status": "missing"
+    },
+    {
+      "count": 299,
+      "rel_type": "HAT_FUNKTIONSWECHSEL",
+      "source_status": "missing"
+    },
+    {
+      "count": 286,
+      "rel_type": "FROM_DONOR",
+      "source_status": "missing"
+    },
+    {
+      "count": 285,
+      "rel_type": "HAT_BESCHAFFUNGSWEG",
+      "source_status": "missing"
+    },
+    {
+      "count": 262,
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "source_status": "candidate"
+    },
+    {
+      "count": 261,
+      "rel_type": "LIEGT_IN_STADT",
+      "source_status": "missing"
+    },
+    {
+      "count": 260,
+      "rel_type": "ANCHORED_BY",
+      "source_status": "candidate"
+    },
+    {
+      "count": 255,
+      "rel_type": "GEHÖRT_ZU",
+      "source_status": "missing"
+    },
+    {
+      "count": 248,
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "source_status": "candidate"
+    },
+    {
+      "count": 230,
+      "rel_type": "HAT_BAUOBJEKTROLLE",
+      "source_status": "missing"
+    },
+    {
+      "count": 227,
+      "rel_type": "HAT_BAUOBJEKTKLASSE",
+      "source_status": "missing"
+    },
+    {
+      "count": 216,
+      "rel_type": "HAT_NUTZUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 201,
+      "rel_type": "LIEGT_IN_LAND",
+      "source_status": "candidate"
+    },
+    {
+      "count": 193,
+      "rel_type": "HAT_AKTEURTYP",
+      "source_status": "candidate"
+    },
+    {
+      "count": 187,
+      "rel_type": "HAT_MATCHINGQUALITAET",
+      "source_status": "missing"
+    },
+    {
+      "count": 184,
+      "rel_type": "HAS_BAUWERK",
+      "source_status": "missing"
+    },
+    {
+      "count": 178,
+      "rel_type": "BELEGT_IN",
+      "source_status": "missing"
+    },
+    {
+      "count": 169,
+      "rel_type": "NUTZT_BAUWERK",
+      "source_status": "missing"
+    },
+    {
+      "count": 167,
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "source_status": "missing"
+    },
+    {
+      "count": 164,
+      "rel_type": "HAT_KENNWERT",
+      "source_status": "candidate"
+    },
+    {
+      "count": 148,
+      "rel_type": "HAT_INTERVENTION",
+      "source_status": "missing"
+    },
+    {
+      "count": 142,
+      "rel_type": "STUB_PROJECT_LINK",
+      "source_status": "candidate"
+    },
+    {
+      "count": 130,
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "source_status": "missing"
+    },
+    {
+      "count": 129,
+      "rel_type": "HAT_BAUWEISE",
+      "source_status": "missing"
+    },
+    {
+      "count": 121,
+      "rel_type": "HAT_BAUTEILGRUPPE",
+      "source_status": "missing"
+    },
+    {
+      "count": 103,
+      "rel_type": "RELEVANT_FOR",
+      "source_status": "missing"
+    },
+    {
+      "count": 93,
+      "rel_type": "REFERENZIERT_NORM",
+      "source_status": "candidate"
+    },
+    {
+      "count": 91,
+      "rel_type": "TYPISCH_BEI_MATERIAL",
+      "source_status": "missing"
+    },
+    {
+      "count": 72,
+      "rel_type": "HAT_TRAGWERKSPRINZIP",
+      "source_status": "missing"
+    },
+    {
+      "count": 67,
+      "rel_type": "HAT_BAUPRODUKTSTATUS",
+      "source_status": "missing"
+    },
+    {
+      "count": 64,
+      "rel_type": "CONCERNS",
+      "source_status": "missing"
+    },
+    {
+      "count": 64,
+      "rel_type": "HAT_BAUSYSTEM",
+      "source_status": "missing"
+    },
+    {
+      "count": 58,
+      "rel_type": "STUB_PROJECT_LINK",
+      "source_status": "missing"
+    },
+    {
+      "count": 52,
+      "rel_type": "HAT_KENNWERT",
+      "source_status": "exact"
+    },
+    {
+      "count": 52,
+      "rel_type": "REFERENZIERT_NORM",
+      "source_status": "missing"
+    },
+    {
+      "count": 51,
+      "rel_type": "HAT_PRUEFUNG",
+      "source_status": "candidate"
+    },
+    {
+      "count": 51,
+      "rel_type": "NUTZT_SOFTWARE",
+      "source_status": "missing"
+    },
+    {
+      "count": 48,
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "source_status": "missing"
+    },
+    {
+      "count": 46,
+      "rel_type": "HAT_WIRTSCHAFT",
+      "source_status": "missing"
+    },
+    {
+      "count": 45,
+      "rel_type": "HAT_DEFEKT",
+      "source_status": "missing"
+    },
+    {
+      "count": 42,
+      "rel_type": "HAT_KENNWERT",
+      "source_status": "missing"
+    },
+    {
+      "count": 40,
+      "rel_type": "GILT_IN_LAND",
+      "source_status": "missing"
+    },
+    {
+      "count": 40,
+      "rel_type": "HAT_ZUSTANDSKLASSE",
+      "source_status": "missing"
+    },
+    {
+      "count": 38,
+      "rel_type": "TEIL_VON_PROGRAMM",
+      "source_status": "missing"
+    },
+    {
+      "count": 28,
+      "rel_type": "IST_UNTERVERFAHREN_VON",
+      "source_status": "missing"
+    },
+    {
+      "count": 25,
+      "rel_type": "HAT_DEFEKT_BEFUND",
+      "source_status": "missing"
+    },
+    {
+      "count": 22,
+      "rel_type": "HAT_AUFBEREITUNG",
+      "source_status": "candidate"
+    },
+    {
+      "count": 20,
+      "rel_type": "APPLIES_IN",
+      "source_status": "candidate"
+    },
+    {
+      "count": 20,
+      "rel_type": "APPLIES_TO",
+      "source_status": "candidate"
+    },
+    {
+      "count": 20,
+      "rel_type": "HAS_SOURCE_LINK",
+      "source_status": "exact"
+    },
+    {
+      "count": 19,
+      "rel_type": "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "source_status": "missing"
+    },
+    {
+      "count": 15,
+      "rel_type": "TEILT_LAYER",
+      "source_status": "missing"
+    },
+    {
+      "count": 15,
+      "rel_type": "TYPISCH_BEI_ERA",
+      "source_status": "missing"
+    },
+    {
+      "count": 14,
+      "rel_type": "TEIL_VON_KETTE",
+      "source_status": "missing"
+    },
+    {
+      "count": 12,
+      "rel_type": "HAT_PRUEFUNG",
+      "source_status": "exact"
+    },
+    {
+      "count": 12,
+      "rel_type": "HAT_RECHTLICHE_BEDINGUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 12,
+      "rel_type": "HAT_ZERTIFIZIERUNG",
+      "source_status": "missing"
+    },
+    {
+      "count": 11,
+      "rel_type": "HAT_WIRTSCHAFTSASPEKT",
+      "source_status": "missing"
+    },
+    {
+      "count": 10,
+      "rel_type": "TYPISCH_BEI_BAUTEILTYP",
+      "source_status": "missing"
+    },
+    {
+      "count": 8,
+      "rel_type": "BERECHNET_NACH_MODUL",
+      "source_status": "missing"
+    },
+    {
+      "count": 8,
+      "rel_type": "BUILT_IN_ERA",
+      "source_status": "missing"
+    },
+    {
+      "count": 8,
+      "rel_type": "METHODENGRUNDLAGE_NORM",
+      "source_status": "missing"
+    },
+    {
+      "count": 4,
+      "rel_type": "ERHALT_FOERDERUNG_DURCH",
+      "source_status": "missing"
+    },
+    {
+      "count": 3,
+      "rel_type": "BETRIEBEN_VON",
+      "source_status": "missing"
+    },
+    {
+      "count": 1,
+      "rel_type": "HAT_VERBINDUNGSTECHNIK",
+      "source_status": "candidate"
+    }
+  ],
+  "rule": "source_status is only for fact/claim evidence, not lineage or audit context.",
+  "started_at": "2026-05-28T11:17:58.813088+00:00",
+  "stats": {
+    "audit_status_removed": 3520,
+    "lineage_status_removed": 6150
+  }
+}

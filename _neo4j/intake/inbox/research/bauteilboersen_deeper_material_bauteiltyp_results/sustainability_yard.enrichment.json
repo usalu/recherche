@@ -1,0 +1,165 @@
+{
+  "anchor_id": "sustainability_yard",
+  "sources_visited": [
+    {
+      "url": "https://sustainabilityyard.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://sustainabilityyard.com/docs/sell-on-sustainability-yard",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current doc: marketplace for reclaimed, surplus and sustainable building materials."
+      ]
+    },
+    {
+      "url": "https://sustainabilityyard.com/docs/sell-on-sustainability-yard-business",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Business seller page: surplus, reclaimed and sustainable building materials at commercial scale."
+      ]
+    },
+    {
+      "url": "https://materialreuseportal.com/Marketplace-Providers",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Material Reuse Portal provider source."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Homepage category list includes Timber & Joinery.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Homepage category list includes Tiles.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Landscaping & Garden category may include stone/paving but material is not explicit in captured lines.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Categories include Fixings & Ironmongery, Paint & Decorating, Tools & Equipment.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Categories include Bathrooms, Electrical & Lighting, Plumbing & Heating.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Categories include Tiles, Timber & Joinery and landscaping/garden surface materials.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Tiles and Building Materials can map to wall components; needs listing-level support.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_marketplace",
+      "evidence_urls": [
+        "https://sustainabilityyard.com/"
+      ],
+      "evidence_quote": "Marketplace with product search and sell-now flow.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Sustainability Yard",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://sustainabilityyard.com/",
+      "https://sustainabilityyard.com/docs/sell-on-sustainability-yard"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "CO2 report",
+      "reason": "Brief mentioned CO2 reporting planned; accessible pages did not confirm a CO2/LCA proof feature."
+    },
+    {
+      "topic": "Pruefung",
+      "reason": "No proof/QA source found."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/sustainability_yard.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_holz",
+        "mat_keramik"
+      ],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "mat_naturstein"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_technik",
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_boden"
+      ],
+      "unsicher": [
+        "bt_wand"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

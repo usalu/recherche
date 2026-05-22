@@ -1,0 +1,59 @@
+{
+  "anchor_id": "resource_marktplaats",
+  "sources_visited": [
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.pss.resource",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://apps.apple.com/nl/app/resource-marktplaats/id6743317802",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_mobile_app",
+      "evidence_urls": [
+        "https://play.google.com/store/apps/details?id=com.pss.resource"
+      ],
+      "evidence_quote": "Mobile app marketplace/listing model; operator remains ambiguous.",
+      "confidence": "unsicher"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Resource Marktplaats",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://play.google.com/store/apps/details?id=com.pss.resource",
+      "https://apps.apple.com/nl/app/resource-marktplaats/id6743317802"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [
+    {
+      "field": "operator",
+      "archive": "unknown / package com.pss.resource",
+      "live": "Publisher/operator could not be resolved from accessible store metadata in this run.",
+      "evidence_url": "https://play.google.com/store/apps/details?id=com.pss.resource"
+    }
+  ],
+  "gaps": [
+    {
+      "topic": "Stop-and-ask",
+      "reason": "Operator chain is ambiguous; do not add material/type links until publisher and app scope are verified."
+    },
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Store pages alone do not provide category evidence."
+    }
+  ],
+  "run_notes": []
+}

@@ -1,0 +1,140 @@
+{
+  "anchor_id": "skop_marketplace",
+  "sources_visited": [
+    {
+      "url": "https://marketplace.skop.app/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.skop.app/marketplace-materiaux-reemploi",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.francenum.gouv.fr/activateurs/skop",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Boutique/category text includes Bois d’œuvre and chutes de bois.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Categories/products include appareils sanitaires and revêtements; ceramic-specific product pages should be checked.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Boutique category text includes isolant.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Products/categories include fixing brackets and technical/electrical equipment; steel material needs item-page confirmation.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Main categories include Appareils sanitaires, lighting, electrical boards and armoires.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Main categories include Mobilier and Menuiseries intérieures.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Product/category evidence includes parquet underlay and floor/wall coverings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Menuiseries intérieures can include interior doors; needs category detail.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Boutique text includes isolant.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "reconditioned",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Homepage explicitly separates matériaux de réemploi, produits reconditionnés and surplus de chantier.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_BEZUG_ZU",
+      "target_id": "baticycle",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Marketplace lists Bâticycle among vendors and product cards.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Skop Marketplace",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://marketplace.skop.app/",
+      "https://www.skop.app/marketplace-materiaux-reemploi"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Process ID",
+      "reason": "Resolve reconditioned/reconditioning node ID."
+    }
+  ],
+  "run_notes": []
+}

@@ -1,0 +1,146 @@
+{
+  "anchor_id": "bauteilnetz_deutschland",
+  "sources_visited": [
+    {
+      "url": "https://www.bauteilnetz.de/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Network page; material/component evidence mostly inherited through member exchanges."
+      ]
+    },
+    {
+      "url": "https://www.dbu.de/projektbeispiele/das-bauteilnetz-deutschland/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "DBU historical source for Bauteilnetz Germany project context."
+      ]
+    },
+    {
+      "url": "https://www.baunetzwissen.de/nachhaltig-bauen/tipps/linkliste/bauteilnetz-deutschland-3081855",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Secondary link list/context."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.bauteilnetz.de/"
+      ],
+      "evidence_quote": "Network/member exchange context includes reusable wooden building parts, but evidence is inherited from member exchanges.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.bauteilnetz.de/"
+      ],
+      "evidence_quote": "Network/member context includes tiles/ceramics via Bauteilbörse-style examples.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://www.bauteilnetz.de/"
+      ],
+      "evidence_quote": "Network-level examples include roof-related items via member exchanges.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.bauteilnetz.de/"
+      ],
+      "evidence_quote": "Network-level examples include windows via member exchanges.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.bauteilnetz.de/"
+      ],
+      "evidence_quote": "Network-level examples include sanitary/technical items via member exchanges.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_treppe",
+      "evidence_urls": [
+        "https://www.bauteilnetz.de/"
+      ],
+      "evidence_quote": "Network-level examples include stairs via member exchanges.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.bauteilnetz.de/"
+      ],
+      "evidence_quote": "Network-level examples include doors via member exchanges.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Bauteilnetz Deutschland",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.bauteilnetz.de/",
+      "https://www.dbu.de/projektbeispiele/das-bauteilnetz-deutschland/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Entity type",
+      "reason": "This is an NGO/network rather than direct material-hub operator; keep links low-confidence/inherited."
+    },
+    {
+      "topic": "Material claims",
+      "reason": "Need member-level product pages for belegt claims."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/bauteilnetz_deutschland.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "mat_holz",
+        "mat_keramik"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "bt_fenster",
+        "bt_tuer",
+        "bt_treppe",
+        "bt_dach",
+        "bt_technik"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

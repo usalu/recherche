@@ -1,0 +1,119 @@
+{
+  "anchor_id": "articonnex",
+  "sources_visited": [
+    {
+      "url": "https://articonnex.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://articonnex.com/collections/reemploi",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current collection page was used to preserve flooring/parquet/OSB/carrelage-style candidate links; product-level confirmation remains advised."
+      ]
+    },
+    {
+      "url": "https://www.jaimelesstartups.fr/articonnex-economie-circulaire-anti-gaspi-materieux-bricolage/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Historical/press context: anti-waste circular economy for DIY/building materials."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Réemploi collection includes timber-derived stock such as OSB / contreplaqué / parquet categories.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Reuse catalogue/category evidence includes carrelage / tiling stock.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Anti-gaspi DIY/building stock includes finishing and hardware-like product families.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Reuse collection surfaced flooring/parquet/terrace-type items.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Articonnex",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://articonnex.com/",
+      "https://articonnex.com/collections/reemploi"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "PruefungNachweis",
+      "reason": "No browser-readable operator evidence for audit, passport, CE/CPR or QA workflow."
+    },
+    {
+      "topic": "Rueckbau/Aufbereitung",
+      "reason": "No concrete process or deconstruction service found in accessible copy."
+    }
+  ],
+  "run_notes": [
+    "Depth increased from broad platform classification to timber/flooring/fit-out candidate links, but still needs product-page confirmation."
+  ],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/articonnex.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "mat_holz"
+      ],
+      "unsicher": [
+        "mat_keramik"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "bt_boden",
+        "bt_ausbau"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

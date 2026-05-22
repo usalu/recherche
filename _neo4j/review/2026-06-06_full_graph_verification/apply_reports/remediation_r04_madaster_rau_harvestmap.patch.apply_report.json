@@ -1,0 +1,237 @@
+{
+  "confirmation_required": "APPLY remediation_r04_madaster_rau_harvestmap.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2295,
+    "relationships": 15327
+  },
+  "counts_after_expected": {
+    "nodes": 2295,
+    "relationships": 15327
+  },
+  "counts_before": {
+    "nodes": 2296,
+    "relationships": 15338
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:54:54.843494+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\remediation_r04_madaster_rau_harvestmap.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_madaster__VERBUNDEN_MIT_AKTEUR__rau"
+        },
+        "rel_internal_id": 1155286554118199868,
+        "to": "rau",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rau",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rau",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_rau__VERBUNDEN_MIT_AKTEUR__madaster"
+        },
+        "rel_internal_id": 1153034754304514619,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "rau",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_madaster__VERBUNDEN_MIT_AKTEUR__thomas_rau"
+        },
+        "rel_internal_id": 1157538353931885116,
+        "to": "thomas_rau",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "thomas_rau",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rau",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_rau__VERBUNDEN_MIT_AKTEUR__thomas_rau"
+        },
+        "rel_internal_id": 1157538353931885115,
+        "to": "thomas_rau",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "rau",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "thomas_rau",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "founder_initiative",
+        "evidence_basis": "r04_madaster_founder_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Madaster is an online global registry... established in 2017, following the ideas as elaborated by Thomas and Sabine in their book, Material Matters. Thomas and Sabine decided to take the initiative themselves.",
+        "evidence_url": "https://thomasrau.eu/en/initiatives/madaster",
+        "id": "r_thomas_rau__VERBUNDEN_MIT_AKTEUR__madaster",
+        "review_run": "remediation_wave2_r04_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "thomas_rau",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_thomas_rau__VERBUNDEN_MIT_AKTEUR__madaster"
+        },
+        "rel_internal_id": 1155286554118199874,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "thomas_rau",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rau",
+          "name": "RAU",
+          "primary_source_url": "https://thomasrau.eu/en/initiatives/rau",
+          "source_titles": [
+            "Thomas Rau"
+          ],
+          "source_urls": [
+            "https://thomasrau.eu/en/initiatives/rau"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rau",
+          "name": "RAU",
+          "source_titles": [
+            "Thomas Rau"
+          ],
+          "source_urls": [
+            "https://thomasrau.eu/en"
+          ]
+        }
+      },
+      "id": "rau",
+      "line": 6,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "HarvestMAP"
+          ],
+          "id": "re_store_harvestmap_vienna",
+          "name": "re:store / HarvestMAP Vienna",
+          "source_titles": [
+            "re-store-harvestmap-vienna"
+          ],
+          "source_urls": [
+            "https://www.restore.or.at/",
+            "https://www.restore.or.at/impressum",
+            "https://www.materialnomaden.at/about"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "harvestmap",
+            "name": "HarvestMAP",
+            "source_titles": [
+              "materialnomaden"
+            ],
+            "source_urls": [
+              "https://www.materialnomaden.at"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "re_store_harvestmap_vienna",
+            "name": "re:store / HarvestMAP Vienna",
+            "source_titles": [
+              "re-store-harvestmap-vienna"
+            ],
+            "source_urls": [
+              "https://www.restore.or.at/",
+              "https://www.restore.or.at/impressum",
+              "https://www.materialnomaden.at/about"
+            ]
+          }
+        }
+      },
+      "from": "harvestmap",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 7,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 2,
+      "rel_outbound_to_redirect": 14,
+      "status": "would_merge",
+      "to": "re_store_harvestmap_vienna"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 7,
+    "would_delete_rel": 4,
+    "would_merge": 1,
+    "would_update": 1,
+    "would_update_rel": 1
+  }
+}

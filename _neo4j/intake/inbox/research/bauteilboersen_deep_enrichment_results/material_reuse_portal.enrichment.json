@@ -1,0 +1,67 @@
+{
+  "anchor_id": "material_reuse_portal",
+  "sources_visited": [
+    {
+      "url": "https://materialreuseportal.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://materialreuseportal.com/About",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://relondon.gov.uk/built-environment",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://ukgbc.org/resources/aggregated-material-reuse-marketplace/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_aggregator",
+      "evidence_urls": [
+        "https://materialreuseportal.com/About"
+      ],
+      "evidence_quote": "Portal is an aggregator / marketplace provider directory rather than a single material stockholder.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Material Reuse Portal",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://materialreuseportal.com/",
+      "https://materialreuseportal.com/About"
+    ]
+  },
+  "new_vocab_candidates": [
+    {
+      "intended_label": "Marktmodell",
+      "intended_id_proposal": "mkt_aggregated_material_reuse_marketplace",
+      "rationale": "Aggregator/portal model differs from direct marketplace or material-hub actor.",
+      "evidence_urls": [
+        "https://ukgbc.org/resources/aggregated-material-reuse-marketplace/"
+      ]
+    }
+  ],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Do not inherit every provider category; no direct material claims should be imported at portal level."
+    }
+  ],
+  "run_notes": []
+}

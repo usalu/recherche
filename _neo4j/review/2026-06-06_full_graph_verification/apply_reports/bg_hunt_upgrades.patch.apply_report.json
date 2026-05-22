@@ -1,0 +1,381 @@
+{
+  "confirmation_required": "APPLY bg_hunt_upgrades.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-07T14:28:14.460189+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\bg_hunt_upgrades.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Fixed wall cladding from old chair parts",
+        "evidence_url": "https://awm.stadt-muenster.de/",
+        "id": "r_bg_reuse_holz_wand_awm_cladding_old_chairs__HAT_BAUTEILTYP__bt_wand",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_holz_wand_awm_cladding_old_chairs",
+        "properties": {
+          "id": "r_bg_reuse_holz_wand_awm_cladding_old_chairs__HAT_BAUTEILTYP__bt_wand"
+        },
+        "rel_internal_id": 1152988574816141524,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_holz_wand_awm_cladding_old_chairs",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Reused softwood wall studs",
+        "evidence_url": "https://www.bioregional.com/projects-and-services/case-studies/bedzed",
+        "id": "r_bg_reuse_holz_wand_bedzed_studs__HAT_BAUTEILTYP__bt_wand",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_holz_wand_bedzed_studs",
+        "properties": {
+          "id": "r_bg_reuse_holz_wand_bedzed_studs__HAT_BAUTEILTYP__bt_wand"
+        },
+        "rel_internal_id": 1152988574816141527,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_holz_wand_bedzed_studs",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Abbruchschutt / Mauerwerkspuin in grüner Fassade",
+        "id": "r_bg_reuse_ziegel_fassade_biopartner_5_abbruchschutt_gruene__HAT_BAUTEILTYP__bt_fassade",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_ziegel_fassade_biopartner_5_abbruchschutt_gruene",
+        "properties": {
+          "id": "r_bg_reuse_ziegel_fassade_biopartner_5_abbruchschutt_gruene__HAT_BAUTEILTYP__bt_fassade"
+        },
+        "rel_internal_id": 1152988574816141534,
+        "to": "bt_fassade",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_ziegel_fassade_biopartner_5_abbruchschutt_gruene",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fassade",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Wiederverwendete Pflaster-, Naturstein- und Bodenmaterialien",
+        "id": "r_bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial__NUTZT_MATERIAL__mat_naturstein",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_naturstein_boden_biopartner_5_pflaster_bodenmaterial",
+        "properties": {
+          "id": "r_bg_reuse_naturstein_boden_biopartner_5_pflaster_bodenmaterial__NUTZT_MATERIAL__mat_naturstein"
+        },
+        "rel_internal_id": 1153001768955674848,
+        "to": "mat_naturstein",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_naturstein_boden_biopartner_5_pflaster_bodenmaterial",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_naturstein",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "89 salvaged wide-flange steel members",
+        "id": "r_bg_reuse_stahl_mehrere_boulder_wide_flange_members__NUTZT_MATERIAL__mat_stahl",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_stahl_mehrere_boulder_wide_flange_members",
+        "properties": {
+          "id": "r_bg_reuse_stahl_mehrere_boulder_wide_flange_members__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1153001768955674860,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_stahl_mehrere_boulder_wide_flange_members",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Boulder Community Hospital structural steel stockpile",
+        "id": "r_bg_reuse_stahl_traeger_boulder_hospital_stockpile__NUTZT_MATERIAL__mat_stahl",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_stahl_traeger_boulder_hospital_stockpile",
+        "properties": {
+          "id": "r_bg_reuse_stahl_traeger_boulder_hospital_stockpile__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1153001768955674858,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_stahl_traeger_boulder_hospital_stockpile",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Neue façade support members",
+        "evidence_url": "https://www.arup.com/projects/brent-cross-town",
+        "id": "r_bg_reuse_stahl_fassade_brent_cross_new_support_members__HAT_BAUTEILTYP__bt_fassade",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_stahl_fassade_brent_cross_new_support_members",
+        "properties": {
+          "id": "r_bg_reuse_stahl_fassade_brent_cross_new_support_members__HAT_BAUTEILTYP__bt_fassade"
+        },
+        "rel_internal_id": 1152988574816141549,
+        "to": "bt_fassade",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_stahl_fassade_brent_cross_new_support_members",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fassade",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Wiederverwendete Holz-Alu-Fenster / Außenfenster",
+        "id": "r_bg_reuse_mehrere_mehrere_crclr_wood_aluminium_windows__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_crclr_wood_aluminium_windows",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_crclr_wood_aluminium_windows__HAT_BAUTEILTYP__bt_fenster"
+        },
+        "rel_internal_id": 1155240374629826849,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_mehrere_mehrere_crclr_wood_aluminium_windows",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Wiederverwendete Holz-Alu-Fenster / Außenfenster",
+        "id": "r_bg_reuse_mehrere_mehrere_crclr_wood_aluminium_windows__NUTZT_MATERIAL__mat_holz",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_crclr_wood_aluminium_windows",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_crclr_wood_aluminium_windows__NUTZT_MATERIAL__mat_holz"
+        },
+        "rel_internal_id": 1157505368583045409,
+        "to": "mat_holz",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_mehrere_mehrere_crclr_wood_aluminium_windows",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_holz",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "200 Fenster aus Lagerrestbeständen",
+        "id": "r_bg_reuse_glas_mehrere_elys_restposten_windows__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_glas_mehrere_elys_restposten_windows",
+        "properties": {
+          "id": "r_bg_reuse_glas_mehrere_elys_restposten_windows__HAT_BAUTEILTYP__bt_fenster"
+        },
+        "rel_internal_id": 1155240374629826859,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_glas_mehrere_elys_restposten_windows",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Reuse-Fassade als Holzrahmen-Bauteilsystem",
+        "id": "r_bg_reuse_holz_fassade_elys_reuse_system__HAT_BAUTEILTYP__bt_fassade",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_holz_fassade_elys_reuse_system",
+        "properties": {
+          "id": "r_bg_reuse_holz_fassade_elys_reuse_system__HAT_BAUTEILTYP__bt_fassade"
+        },
+        "rel_internal_id": 1152988574816141613,
+        "to": "bt_fassade",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_holz_fassade_elys_reuse_system",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fassade",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Wiederverwendete Fenster und Türen",
+        "id": "r_bg_reuse_mehrere_mehrere_grubenstrasse_windows_doors__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_grubenstrasse_windows_doors",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_grubenstrasse_windows_doors__HAT_BAUTEILTYP__bt_fenster"
+        },
+        "rel_internal_id": 1152988574816141653,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_mehrere_mehrere_grubenstrasse_windows_doors",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Repurposed Cleveland steel für obere Etage TBC",
+        "evidence_url": "https://www.stiffandtrevillion.com/projects/tower-bridge-road",
+        "id": "r_bg_reuse_stahl_mehrere_tbc_repurposed_cleveland__NUTZT_MATERIAL__mat_stahl",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_stahl_mehrere_tbc_repurposed_cleveland",
+        "properties": {
+          "id": "r_bg_reuse_stahl_mehrere_tbc_repurposed_cleveland__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1153001768955675092,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_stahl_mehrere_tbc_repurposed_cleveland",
+      "line": 13,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Türen, Fenster und Sanitär im CRCLR-Gesamtprojekt mit unscharfer Fit-out-Zuordnung",
+        "evidence_url": "https://www.buildingsocialecology.org/projects/crclr-house-berlin/",
+        "id": "r_bg_reuse_mehrere_mehrere_impact_crclr_doors_windows_sanitary__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_impact_crclr_doors_windows_sanitary",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_impact_crclr_doors_windows_sanitary__HAT_BAUTEILTYP__bt_fenster"
+        },
+        "rel_internal_id": 1152988574816141672,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_mehrere_mehrere_impact_crclr_doors_windows_sanitary",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 14,
+    "would_update_rel": 14
+  }
+}

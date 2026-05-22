@@ -1,0 +1,269 @@
+{
+  "anchor_id": "rotordc",
+  "sources_visited": [
+    {
+      "url": "https://rotordc.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current homepage explicitly lists furniture, lighting, doors, hardware, tiles, sanitary, technical equipment."
+      ]
+    },
+    {
+      "url": "https://rotordc.com/service/depositsale",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://rotordc.com/shop",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://rotordc.com/about-us",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://rotordc.com/blog/salvaging-by-rotordc-3",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "About/salvaging page: dismantles, processes and trades salvaged components with focus on hardware, doors, flooring, furniture, lighting fixtures."
+      ]
+    },
+    {
+      "url": "https://rotordc.com/shop/category/per-building-43/page/2",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Shop pages surface terracotta/terrazzo tiles, bronze/brass/chrome hardware and other materials."
+      ]
+    },
+    {
+      "url": "https://rotordc.com/shop/category/door-triple-228",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Category source for doors and wider shop taxonomy."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights large glass windows from CBR building.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights parquet; about page mentions reprocessing high-quality urban wood.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights salvaged cement, zellige and glazed ceramic tiles.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://rotordc.com/shop"
+      ],
+      "evidence_quote": "Shop/architectural salvage scope includes stone/natural-stone products; product page spot-check needed.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Doors & hardware, furniture, building hardware and finishing materials map to Ausbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Tiles and parquet map to floor components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights large glass windows.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights bathroom accessories and sinks; about page includes repair/transformation of lighting equipment.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights final batch of doors & hardware; shop filter includes door rotation.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "repair",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://rotordc.com/about-us"
+      ],
+      "evidence_quote": "About page lists repair/transformation of lighting equipment, removing mortar from ceramic tiles, reprocessing urban wood, cleaning hardware.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    },
+    {
+      "target_id": null,
+      "lookup_keyword": "cleaning",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://rotordc.com/about-us"
+      ],
+      "evidence_quote": "About page explicitly lists cleaning and preparing for reuse of furniture and building hardware.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [
+    {
+      "target_id": null,
+      "lookup_keyword": "salvage operations",
+      "intended_label": "Rueckbauverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://rotordc.com/about-us"
+      ],
+      "evidence_quote": "About page lists planning and organising salvage operations in large and complicated buildings.",
+      "confidence": "belegt",
+      "note": "Resolve Rueckbauverfahren node ID before import."
+    }
+  ],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_webshop_deposit_sale",
+      "evidence_urls": [
+        "https://rotordc.com/service/depositsale"
+      ],
+      "evidence_quote": "Deposit-sale page offers one-stop shop for sale/purchase of second-hand materials.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Rotor Deconstruction",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://rotordc.com/",
+      "https://rotordc.com/service/depositsale"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Process target IDs",
+      "reason": "Need graph lookup for repair, cleaning, mortar-removal, salvage-operation node IDs."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/rotordc.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_keramik",
+        "mat_holz",
+        "mat_glas"
+      ],
+      "wahrscheinlich": [
+        "mat_naturstein"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_tuer",
+        "bt_boden",
+        "bt_technik",
+        "bt_ausbau",
+        "bt_fenster"
+      ],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "component_material_pairs": [
+      {
+        "bauteiltyp_id": "bt_tuer",
+        "material_ids": [],
+        "pair_basis": "doors named, material depends on individual product pages",
+        "evidence_urls": [
+          "https://rotordc.com/"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_boden",
+        "material_ids": [
+          "mat_keramik",
+          "mat_naturstein"
+        ],
+        "pair_basis": "tiles, terrazzo and stone/terracotta floor products on shop pages",
+        "evidence_urls": [
+          "https://rotordc.com/shop/page/18"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_ausbau",
+        "material_ids": [
+          "mat_stahl"
+        ],
+        "pair_basis": "hardware/door handles in bronze/brass/chrome-plated metal on product pages",
+        "evidence_urls": [
+          "https://rotordc.com/shop/category/per-building-43/page/2"
+        ],
+        "confidence": "belegt"
+      }
+    ],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

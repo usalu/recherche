@@ -1,0 +1,838 @@
+{
+  "database": "mit-bestand",
+  "nodes": {
+    "superuse_studios_2012architecten": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Superuse Studios / 2012Architecten"
+    },
+    "superuse_on_site": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Superuse on Site"
+    },
+    "new_horizon_urban_mining": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "New Horizon UM"
+    },
+    "new_horizon": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "New Horizon"
+    },
+    "madaster": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Madaster"
+    },
+    "madaster_epea": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Madaster / EPEA"
+    },
+    "madaster_context": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Madaster / Materialpass-Kontext"
+    },
+    "insert_marketplace": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Insert Marketplace"
+    },
+    "repurpose": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Repurpose"
+    },
+    "madopt": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "cirkelstad": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "platform_cb23": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "city_of_utrecht": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "City of Utrecht"
+    },
+    "Rotor": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Rotor"
+    },
+    "rotordc": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "RotorDC"
+    },
+    "opalis": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Opalis"
+    },
+    "bellastock": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Bellastock"
+    },
+    "prog_fcrbe": {
+      "exists": true,
+      "labels": [
+        "Programm"
+      ],
+      "name": "FCRBE"
+    },
+    "prog_preuse": {
+      "exists": true,
+      "labels": [
+        "Programm"
+      ],
+      "name": "PREUSE"
+    },
+    "concular": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Concular"
+    },
+    "p_villa_welpeloo": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_wikado": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_bluecity_offices": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_buitenplaats_brienenoord": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_de_ceuvel": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_circl": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_peoples_pavilion": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_biopartner_5": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    }
+  },
+  "seed_rels": [
+    {
+      "from_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_fcrbe",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_preuse",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_preuse",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__bellastock",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_preuse",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_city_of_utrecht__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_madaster__verbunden_mit_akteur__city_of_utrecht",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_city_of_utrecht__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__city_of_utrecht",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "concular",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_concular__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "concular",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_madaster__verbunden_mit_akteur__concular",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "concular",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster_epea",
+      "rid": "r_concular__verbunden_mit_akteur__madaster_epea",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "concular",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster_epea",
+      "rid": "r_madaster_epea__verbunden_mit_akteur__concular",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_madaster__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_repurpose__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "insert_marketplace",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "city_of_utrecht",
+      "rid": "r_madaster__verbunden_mit_akteur__city_of_utrecht",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "city_of_utrecht",
+      "rid": "r_city_of_utrecht__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "concular",
+      "rid": "r_madaster__verbunden_mit_akteur__concular",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "concular",
+      "rid": "r_concular__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_madaster__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_madaster__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_madaster__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_repurpose__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_madaster__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster_epea",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "concular",
+      "rid": "r_madaster_epea__verbunden_mit_akteur__concular",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "madaster_epea",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "concular",
+      "rid": "r_concular__verbunden_mit_akteur__madaster_epea",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "city_of_utrecht",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__city_of_utrecht",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "city_of_utrecht",
+      "rid": "r_city_of_utrecht__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_madaster__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_repurpose__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "new_horizon_urban_mining",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "bellastock",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__bellastock",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "bellastock",
+      "rid": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_fcrbe",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "bellastock",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "city_of_utrecht",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "prog_preuse",
+      "typ": "BETEILIGT_AN",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_preuse",
+      "typ": "BETEILIGT_AN",
+      "to_id": "bellastock",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_preuse",
+      "typ": "BETEILIGT_AN",
+      "to_id": "city_of_utrecht",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_repurpose__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_repurpose__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_madaster__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_repurpose__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_repurpose__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "repurpose",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "superuse_studios_2012architecten",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__insert_marketplace",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "insert_marketplace",
+      "rid": "r_insert_marketplace__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__madaster",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "madaster",
+      "rid": "r_madaster__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__new_horizon_urban_mining",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "new_horizon_urban_mining",
+      "rid": "r_new_horizon_urban_mining__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_superuse_studios_2012architecten__verbunden_mit_akteur__repurpose",
+      "conf": "teilweise_belegt"
+    },
+    {
+      "from_id": "superuse_studios_2012architecten",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "repurpose",
+      "rid": "r_repurpose__verbunden_mit_akteur__superuse_studios_2012architecten",
+      "conf": "teilweise_belegt"
+    }
+  ],
+  "superuse_verbunden": {
+    "neighbors": [
+      "new_horizon_urban_mining",
+      "repurpose",
+      "madaster",
+      "insert_marketplace"
+    ],
+    "degree": 4
+  },
+  "new_horizon_verbunden": {
+    "neighbors": [
+      "city_of_utrecht",
+      "repurpose",
+      "superuse_studios_2012architecten",
+      "madaster",
+      "insert_marketplace"
+    ],
+    "degree": 5
+  },
+  "madaster_verbunden": {
+    "neighbors": [
+      "new_horizon_urban_mining",
+      "city_of_utrecht",
+      "repurpose",
+      "superuse_studios_2012architecten",
+      "concular",
+      "rau",
+      "thomas_rau",
+      "insert_marketplace"
+    ],
+    "degree": 8
+  },
+  "insert_verbunden": {
+    "neighbors": [
+      "new_horizon_urban_mining",
+      "repurpose",
+      "superuse_studios_2012architecten",
+      "madaster"
+    ],
+    "degree": 4
+  },
+  "fuzzy_actors": [
+    {
+      "id": "Superuse_Studios",
+      "name": "Superuse Studios"
+    },
+    {
+      "id": "insert_marketplace",
+      "name": "Insert Marketplace"
+    },
+    {
+      "id": "madaster",
+      "name": "Madaster"
+    },
+    {
+      "id": "madaster_context",
+      "name": "Madaster / Materialpass-Kontext"
+    },
+    {
+      "id": "madaster_epea",
+      "name": "Madaster / EPEA"
+    },
+    {
+      "id": "new_horizon",
+      "name": "New Horizon"
+    },
+    {
+      "id": "new_horizon_urban_mining",
+      "name": "New Horizon UM"
+    },
+    {
+      "id": "repurpose",
+      "name": "Repurpose"
+    },
+    {
+      "id": "superuse_on_site",
+      "name": "Superuse on Site"
+    },
+    {
+      "id": "superuse_studios_2012architecten",
+      "name": "Superuse Studios / 2012Architecten"
+    }
+  ]
+}

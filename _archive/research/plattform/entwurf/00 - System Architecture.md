@@ -1,0 +1,83 @@
+# System Architecture
+
+## Struktur
+
+- System Architecture
+  - 1 Interface 1 — Einspeiseplattform
+    - 1.1 Bauteil-Seed
+      - 1.1.1 Eingabeprozess
+        - 1.1.1.1 User Input
+        - 1.1.1.2 API / Import aus Bauteilbörse
+      - 1.1.2 UI Concept
+        - 1.1.2.1 Minimaler Input
+        - 1.1.2.2 KI-Erkennung
+        - 1.1.2.3 Formular-Interface
+        - 1.1.2.4 Nachweis-Panel
+      - 1.1.3 Bauteil-Daten
+        - 1.1.3.1 Mindestdaten zum Entwerfen
+        - 1.1.3.2 Abgeleitete / angereicherte Daten
+      - 1.1.4 Output Bauteil-Seed
+        - 1.1.4.1 Seed-ID + Typologie + Menge + Geometriehinweis + Material + Quelle + Verfügbarkeit + Zielrolle
+    - 1.2 Generator
+      - 1.2.1 Rolle des Generators
+        - 1.2.1.1 Konzept
+        - 1.2.1.2 Grammatiklogik
+      - 1.2.2 Klassifikationslogik
+        - 1.2.2.1 Typologie
+        - 1.2.2.2 Generatorgrammatik
+        - 1.2.2.3 Typ
+        - 1.2.2.4 Piece
+      - 1.2.3 Bauteil-Seed → generiertes Bauteilobjekt
+        - 1.2.3.1 Geometrisches Planungsmodell
+        - 1.2.3.2 Abstraktes Strukturmodell
+        - 1.2.3.3 Abstraktes Energiemodell
+        - 1.2.3.4 Semantisches Modell
+        - 1.2.3.5 Evidence Link
+  - 2 Interface 2 — Design Tool
+    - 2.1 Bauteilkatalog
+      - 2.1.1 Bauteilkarte
+        - 2.1.1.1 Visuelle Ebene
+        - 2.1.1.2 Datenlayer
+        - 2.1.1.3 Reifegrad
+        - 2.1.1.4 Prüfstatus
+      - 2.1.2 Filterstruktur
+        - 2.1.2.1 Typologie / Typ
+        - 2.1.2.2 Geometrie
+        - 2.1.2.3 Funktion
+        - 2.1.2.4 Semantik / Kompatibilität
+        - 2.1.2.5 Tragwerk
+        - 2.1.2.6 Energie
+        - 2.1.2.7 Verfügbarkeit / Menge
+        - 2.1.2.8 Risiko / Nachweise
+        - 2.1.2.9 CO₂ / Transport
+      - 2.1.3 Katalog-Aktionen
+        - 2.1.3.1 Auswählen / Vergleichen
+        - 2.1.3.2 Platzieren im Playground
+        - 2.1.3.3 Reservieren / Anfrage an Bauteilbörse
+    - 2.2 Playground
+      - 2.2.1 Idee + Komposition
+        - 2.2.1.1 Target-Entwurf
+        - 2.2.1.2 Kombination mehrerer Bauteile
+      - 2.2.2 Kompatibilitätsprüfung
+        - 2.2.2.1 Regelquellen
+          - 2.2.2.1.1 Regelbasiert
+          - 2.2.2.1.2 Energetisch
+          - 2.2.2.1.3 Tragwerklich
+          - 2.2.2.1.4 Realwelt-basiert
+          - 2.2.2.1.5 Semantisch
+      - 2.2.3 Entwurfsfeedback
+        - 2.2.3.1 Live-Warnungen
+          - 2.2.3.1.1 Fehlende Nachweise
+          - 2.2.3.1.2 Zeitkonflikte
+          - 2.2.3.1.3 Riskante Verbindungen
+          - 2.2.3.1.4 Unvollständige Mengen
+          - 2.2.3.1.5 Risiko / Datenvertrauen
+        - 2.2.3.2 Visuelle Statuslogik
+        - 2.2.3.3 Variantenbewertung
+          - 2.2.3.3.1 ReUse-Anteil
+          - 2.2.3.3.2 CO₂-Vergleich
+          - 2.2.3.3.3 System-Kompatibilität
+          - 2.2.3.3.4 Regelbasierte Alternativvorschläge
+          - 2.2.3.3.5 Umgang mit unvollständigen Mengen
+      - 2.2.4 Export
+        - 2.2.4.1 Entwurfsvariante + Bauteilliste + offene Nachweise + Prüfpfade + ReUse-/CO₂-Auswertung

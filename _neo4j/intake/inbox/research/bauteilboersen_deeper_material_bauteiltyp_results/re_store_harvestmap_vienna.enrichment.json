@@ -1,0 +1,151 @@
+{
+  "anchor_id": "re_store_harvestmap_vienna",
+  "sources_visited": [
+    {
+      "url": "https://www.restore.or.at/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current re:store page."
+      ]
+    },
+    {
+      "url": "https://www.restore.or.at/impressum/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.materialnomaden.at/about/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.materialnomaden.at/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Materialnomaden page: evaluates buildings and material flows; extends material life cycles."
+      ]
+    },
+    {
+      "url": "https://www.vis-a-wien.at/materialnomaden/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Historical/source: Materialnomaden formed from Bauteiler and HarvestMAP cooperative; expertise in reuse components."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.materialnomaden.at/"
+      ],
+      "evidence_quote": "Materialnomaden evaluates buildings and material flows; material-specific evidence requires product/source pages.",
+      "confidence": "unsicher",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.restore.or.at/"
+      ],
+      "evidence_quote": "Store shows re:design, re:furbished and re:use products across project sources; likely fit-out/interior stock.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.restore.or.at/"
+      ],
+      "evidence_quote": "Project-source store/HarvestMAP framing supports inventory of reusable project items.",
+      "confidence": "unsicher",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "refurb",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.restore.or.at/"
+      ],
+      "evidence_quote": "Store filters explicitly show re:furbished products.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_METHODE",
+      "target_id": "methode_harvest_map",
+      "evidence_urls": [
+        "https://www.materialnomaden.at/about/"
+      ],
+      "evidence_quote": "Archive/operator chain links re:store to Materialnomaden HarvestMAP method.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "re:store / Materialnomaden",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.restore.or.at/",
+      "https://www.restore.or.at/impressum/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "Store did not expose material-specific categories in accessible text."
+    },
+    {
+      "topic": "Operator chain",
+      "reason": "BETRIEBEN_VON materialnomaden should be retained only if existing node verified in graph."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/re_store_harvestmap_vienna.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "mat_holz"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "bt_ausbau"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "confirmation_required": "APPLY unsupported_edges_tier2_removal.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15457
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15457
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15470
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T14:54:59.788984+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_cross_bubble_extension\\patches\\unsupported_edges_tier2_removal.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "coordination_ecosystem",
+          "dossier_section": "§10",
+          "evidence_basis": "interpretive_conclusion_not_sourced_merge",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss coordination office for circular construction; 2033 goal.",
+          "evidence_url": "https://www.circularconstructioncatalyst.ch/",
+          "fact_label": "Interpretive_conclusion",
+          "id": "r_cirkla__verbunden_mit_akteur__c33_circular_construction_catalyst",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743244,
+        "to": "c33_circular_construction_catalyst",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "c33_circular_construction_catalyst",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "coordination_ecosystem",
+          "dossier_section": "§10",
+          "evidence_basis": "interpretive_conclusion_not_sourced_merge",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Circularity mission for construction and real-estate sector; KreislaufLAB Kanton Zürich.",
+          "evidence_url": "https://circularhub.ch/",
+          "fact_label": "Interpretive_conclusion",
+          "id": "r_cirkla__verbunden_mit_akteur__circular_hub_zurich",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743253,
+        "to": "circular_hub_zurich",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_hub_zurich",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "coordination_ecosystem",
+          "dossier_section": "§10",
+          "evidence_basis": "interpretive_conclusion_not_sourced_merge",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Decentralized regional circles; networking, information, and knowledge building.",
+          "evidence_url": "https://www.circular-economy-switzerland.ch/en",
+          "fact_label": "Interpretive_conclusion",
+          "id": "r_cirkla__verbunden_mit_akteur__circular_economy_switzerland",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743254,
+        "to": "circular_economy_switzerland",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_economy_switzerland",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "ecosystem_practice_triangle",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "dossier_section": "§1 / §12",
+          "evidence_basis": "interpretive_conclusion_not_sourced_merge",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "architecture: baubüro in situ; trigger for the foundation of Zirkular.",
+          "evidence_url": "https://zirkular.net/en/project/building-k-118/",
+          "fact_label": "Interpretive_conclusion",
+          "id": "r_cirkla__verbunden_mit_akteur__zirkular",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 4,
+        "to": "zirkular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "zirkular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_bremen",
+        "properties": {
+          "connection_kind": "digital_physical_exchange_layer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "german_marketplace_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "German marketplace for reclaimed building materials",
+          "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado",
+          "id": "r_bauteilboerse_bremen__verbunden_mit_akteur__concular",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 69,
+        "to": "concular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_bremen",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "concular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "french_reuse_ecosystem",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "french_reuse_polycentric_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "French reuse practice and supply/reconditioning layers in SPIROU ecosystem | shared French reuse research and practice ecosystem",
+          "evidence_url": "https://www.cstb.fr/nos-offres/toutes-nos-offres/accompagner-developpement-reemploi",
+          "id": "r_bellastock__verbunden_mit_akteur__mobius_reemploi",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6928901276407175602,
+        "to": "mobius_reemploi",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 6,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mobius_reemploi",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "association_reavie",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "opalis_directory_maintainer_reavie_listed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "RéaVie supplier on Opalis maintained by Bellastock and Rotor",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+          "id": "r_association_reavie__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118198809,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "association_reavie",
+      "line": 7,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "opalis_france_maintainer_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "shared Opalis France reuse directory infrastructure | Bellastock co-develops Opalis France; Backacia listed supplier",
+          "evidence_url": "https://www.bellastock.com/projets/opalis-france/",
+          "id": "r_backacia__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745603166,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "backacia",
+      "line": 8,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "bellastock_opalis_maintainer_cycle_up_listed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Bellastock codévelops Opalis France listing Cycle Up among resellers | Cycle Up in Opalis directory maintained with Bellastock",
+          "evidence_url": "https://www.lemoniteur.fr/article/missionnaires-du-circulaire.2133509",
+          "id": "r_bellastock__verbunden_mit_akteur__cycle_up",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6926649476593523300,
+        "to": "cycle_up",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 9,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cycle_up",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer French resellers on Opalis directory | peer resellers in Opalis professional directory",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+          "id": "r_backacia__verbunden_mit_akteur__mineka",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 80,
+        "to": "mineka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "backacia",
+      "line": 10,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mineka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "ademe_fcrbe_opalis_40_resellers",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer French resellers in ADEME/FCRBE Opalis study",
+          "evidence_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "id": "r_backacia__verbunden_mit_akteur__cycle_up",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6919894077152467556,
+        "to": "cycle_up",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "backacia",
+      "line": 11,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cycle_up",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Bellastock maintains Opalis listing French resellers including regional actors | peer reseller in Opalis directory co-maintained by Bellastock",
+          "evidence_url": "https://www.lemoniteur.fr/article/missionnaires-du-circulaire.2133509",
+          "id": "r_bellastock__verbunden_mit_akteur__mineka",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6924397676779799282,
+        "to": "mineka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 12,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mineka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cycle_up",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer French marketplace/reseller actors on Opalis | peer professional resellers in ADEME/FCRBE Opalis study",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+          "id": "r_cycle_up__verbunden_mit_akteur__mineka",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6928901276407169778,
+        "to": "mineka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cycle_up",
+      "line": 13,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mineka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 13,
+    "would_delete_rel": 13
+  }
+}

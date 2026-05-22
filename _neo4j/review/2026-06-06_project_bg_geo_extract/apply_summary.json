@@ -1,0 +1,122 @@
+{
+  "run": "2026-06-06_project_bg_geo_extract",
+  "commit": true,
+  "database": "mit-bestand",
+  "generated_at_utc": "2026-06-05T23:17:50.538004+00:00",
+  "phases": [
+    {
+      "phase": "phase1_projekte_geo.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 83,
+        "load_errors": 0,
+        "would_update": 83
+      },
+      "counts_before": {
+        "nodes": 2304,
+        "relationships": 15527
+      },
+      "counts_after_actual": {
+        "nodes": 2304,
+        "relationships": 15527
+      },
+      "report_files": [
+        "_neo4j\\review\\2026-06-06_project_bg_geo_extract\\apply_reports\\phase1_projekte_geo.patch.apply_report.json",
+        "_neo4j\\review\\2026-06-06_project_bg_geo_extract\\apply_reports\\phase1_projekte_geo.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase2_bauwerke_geo.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 163,
+        "load_errors": 0,
+        "would_update": 163
+      },
+      "counts_before": {
+        "nodes": 2304,
+        "relationships": 15527
+      },
+      "counts_after_actual": {
+        "nodes": 2304,
+        "relationships": 15527
+      },
+      "report_files": [
+        "_neo4j\\review\\2026-06-06_project_bg_geo_extract\\apply_reports\\phase2_bauwerke_geo.patch.apply_report.json",
+        "_neo4j\\review\\2026-06-06_project_bg_geo_extract\\apply_reports\\phase2_bauwerke_geo.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase3_staedte_geo.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 73,
+        "load_errors": 0,
+        "would_update": 73
+      },
+      "counts_before": {
+        "nodes": 2304,
+        "relationships": 15527
+      },
+      "counts_after_actual": {
+        "nodes": 2304,
+        "relationships": 15527
+      },
+      "report_files": [
+        "_neo4j\\review\\2026-06-06_project_bg_geo_extract\\apply_reports\\phase3_staedte_geo.patch.apply_report.json",
+        "_neo4j\\review\\2026-06-06_project_bg_geo_extract\\apply_reports\\phase3_staedte_geo.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase4_new_donor_bauwerke.patch.jsonl",
+      "status": "skipped_empty"
+    }
+  ],
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "coverage_before": {
+    "projekte_with_adresse": 0,
+    "bauwerke_with_adresse": 0,
+    "staedte_with_latitude": 0,
+    "low_confidence_projekte": 0,
+    "low_confidence_projekte_ids": [],
+    "superlocal_chain": [
+      {
+        "donor_adresse": null,
+        "receiver_adresse": null,
+        "donor_lat": null,
+        "receiver_lat": null
+      }
+    ]
+  },
+  "counts_after": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "coverage_after": {
+    "projekte_with_adresse": 83,
+    "bauwerke_with_adresse": 163,
+    "staedte_with_latitude": 73,
+    "low_confidence_projekte": 8,
+    "low_confidence_projekte_ids": [
+      "p_association_house_groeditz",
+      "p_berlin_schildow_pilot_house",
+      "p_big_dig_building_boston",
+      "p_broethen_twin_house_hoyerswerda",
+      "p_gjg_house_gentbrugge",
+      "p_haus_hos_mehrfamilienhaus_muehlhausen",
+      "p_juch_areal_recyclingzentrum_zuerich",
+      "p_mehrow_pilot_house"
+    ],
+    "superlocal_chain": [
+      {
+        "donor_adresse": "Ursulastraat, Bleijerheide, 6464 Kerkrade, Netherlands",
+        "receiver_adresse": "Voorterstraat, Bleijerheide, 6462 Kerkrade, Netherlands",
+        "donor_lat": 50.8530372,
+        "receiver_lat": 50.8534
+      }
+    ]
+  }
+}

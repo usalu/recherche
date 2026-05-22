@@ -1,0 +1,457 @@
+{
+  "seeds": {
+    "rotordc": {
+      "id": "rotordc",
+      "labels": [
+        "Akteur"
+      ],
+      "name": "RotorDC",
+      "verbunden_degree": 5,
+      "verbunden_neighbors": [
+        "Rotor",
+        "opalis",
+        "maarten_gielen",
+        "lionel_billiet",
+        "sebastien_paulet"
+      ],
+      "beteiligt_count": 24,
+      "projects": [
+        "bg_holz_tuer_chiro_external",
+        "bg_ziegel_mehrere_chiro_facade",
+        "bg_keramik_boden_chiro_tiles",
+        "bg_unbekannt_technik_chiro_luminaires",
+        "bg_ziegel_dach_chiro_tiles",
+        "bg_mehrere_technik_chiro_sanitary_fixtures",
+        "bg_stahl_mehrere_chiro_u_lintels",
+        "bg_beton_wand_chiro_surplus_blocks",
+        "bg_holz_mehrere_chiro_surplus_roof_frame",
+        "bg_keramik_wand_chiro_tiles"
+      ]
+    },
+    "Rotor": {
+      "id": "Rotor",
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Rotor",
+      "verbunden_degree": 7,
+      "verbunden_neighbors": [
+        "opalis",
+        "maarten_gielen",
+        "michael_ghyoot",
+        "lionel_billiet",
+        "lionel_devlieger",
+        "tristan_boniver",
+        "rotordc"
+      ],
+      "beteiligt_count": 8,
+      "projects": [
+        "prog_preuse",
+        "p_oxy_centre_monnaie",
+        "prog_fcrbe",
+        "p_chiro_d_itterbeek_dilbeek",
+        "p_multi_brussels_reuse_in_multi",
+        "p_recypark_demets_anderlecht",
+        "p_zinneke_feder_masui4ever_brussels",
+        "p_architecture_of_reuse_brussels"
+      ]
+    },
+    "opalis": {
+      "id": "opalis",
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Opalis",
+      "verbunden_degree": 4,
+      "verbunden_neighbors": [
+        "bellastock",
+        "Rotor",
+        "rotordc",
+        "maarten_gielen"
+      ],
+      "beteiligt_count": 0,
+      "projects": []
+    },
+    "bellastock": {
+      "id": "bellastock",
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Bellastock",
+      "verbunden_degree": 4,
+      "verbunden_neighbors": [
+        "opalis",
+        "hugo_topalov",
+        "sarah_westerfeld",
+        "frederic_denise"
+      ],
+      "beteiligt_count": 3,
+      "projects": [
+        "prog_preuse",
+        "prog_fcrbe",
+        "p_ferme_du_rail_paris"
+      ]
+    },
+    "prog_fcrbe": {
+      "id": "prog_fcrbe",
+      "labels": [
+        "Programm"
+      ],
+      "name": "FCRBE",
+      "verbunden_degree": 0,
+      "verbunden_neighbors": [],
+      "beteiligt_count": 0,
+      "projects": []
+    },
+    "p_multi_brussels_reuse_in_multi": {
+      "id": "p_multi_brussels_reuse_in_multi",
+      "labels": [
+        "Projekt"
+      ],
+      "name": "Multi Brussels",
+      "verbunden_degree": 0,
+      "verbunden_neighbors": [],
+      "beteiligt_count": 0,
+      "projects": []
+    },
+    "p_chiro_d_itterbeek_dilbeek": {
+      "id": "p_chiro_d_itterbeek_dilbeek",
+      "labels": [
+        "Projekt"
+      ],
+      "name": "Chiro d’Itterbeek",
+      "verbunden_degree": 0,
+      "verbunden_neighbors": [],
+      "beteiligt_count": 0,
+      "projects": []
+    },
+    "prog_preuse": {
+      "id": "prog_preuse",
+      "labels": [
+        "Programm"
+      ],
+      "name": "PREUSE",
+      "verbunden_degree": 0,
+      "verbunden_neighbors": [],
+      "beteiligt_count": 0,
+      "projects": []
+    }
+  },
+  "rankings": {
+    "rotordc": [
+      {
+        "typ": "BETEILIGT_AN",
+        "c": 24
+      },
+      {
+        "typ": "HAT_AKTEURROLLE",
+        "c": 8
+      },
+      {
+        "typ": "NUTZT_MATERIAL",
+        "c": 6
+      },
+      {
+        "typ": "VERBUNDEN_MIT_AKTEUR",
+        "c": 6
+      },
+      {
+        "typ": "HAT_BAUTEILTYP",
+        "c": 5
+      },
+      {
+        "typ": "HAT_METHODE",
+        "c": 3
+      },
+      {
+        "typ": "HAT_AKTEURTYP",
+        "c": 2
+      },
+      {
+        "typ": "HAT_GESCHAEFTSMODELL",
+        "c": 2
+      },
+      {
+        "typ": "NUTZT_BAUWERK",
+        "c": 1
+      },
+      {
+        "typ": "HAT_BESCHAFFUNGSWEG",
+        "c": 1
+      },
+      {
+        "typ": "LIEGT_IN_LAND",
+        "c": 1
+      },
+      {
+        "typ": "BELEGT_IN",
+        "c": 1
+      }
+    ],
+    "Rotor": [
+      {
+        "typ": "VERBUNDEN_MIT_AKTEUR",
+        "c": 11
+      },
+      {
+        "typ": "BETEILIGT_AN",
+        "c": 8
+      },
+      {
+        "typ": "HAT_AKTEURROLLE",
+        "c": 7
+      },
+      {
+        "typ": "HAT_AKTEURTYP",
+        "c": 2
+      },
+      {
+        "typ": "LIEGT_IN_LAND",
+        "c": 1
+      },
+      {
+        "typ": "NUTZT_SOFTWARE",
+        "c": 1
+      }
+    ],
+    "opalis": [
+      {
+        "typ": "HAT_BAUTEILTYP",
+        "c": 10
+      },
+      {
+        "typ": "VERBUNDEN_MIT_AKTEUR",
+        "c": 8
+      },
+      {
+        "typ": "NUTZT_MATERIAL",
+        "c": 7
+      },
+      {
+        "typ": "HAT_AKTEURROLLE",
+        "c": 6
+      },
+      {
+        "typ": "HAT_METHODE",
+        "c": 2
+      },
+      {
+        "typ": "BELEGT_IN",
+        "c": 2
+      },
+      {
+        "typ": "HAT_AKTEURTYP",
+        "c": 1
+      },
+      {
+        "typ": "LIEGT_IN_LAND",
+        "c": 1
+      },
+      {
+        "typ": "NUTZT_SOFTWARE",
+        "c": 1
+      },
+      {
+        "typ": "BETRIEBEN_VON",
+        "c": 1
+      },
+      {
+        "typ": "HAT_GESCHAEFTSMODELL",
+        "c": 1
+      }
+    ],
+    "bellastock": [
+      {
+        "typ": "VERBUNDEN_MIT_AKTEUR",
+        "c": 6
+      },
+      {
+        "typ": "HAT_AKTEURROLLE",
+        "c": 5
+      },
+      {
+        "typ": "BETEILIGT_AN",
+        "c": 3
+      },
+      {
+        "typ": "HAT_AKTEURTYP",
+        "c": 2
+      },
+      {
+        "typ": "LIEGT_IN_LAND",
+        "c": 1
+      },
+      {
+        "typ": "BETRIEBEN_VON",
+        "c": 1
+      }
+    ]
+  },
+  "gaps": [],
+  "stack_edges": [
+    {
+      "from_id": "rotordc",
+      "to_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc"
+    },
+    {
+      "from_id": "rotordc",
+      "to_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__opalis"
+    },
+    {
+      "from_id": "Rotor",
+      "to_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor"
+    },
+    {
+      "from_id": "Rotor",
+      "to_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor"
+    },
+    {
+      "from_id": "Rotor",
+      "to_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis"
+    },
+    {
+      "from_id": "opalis",
+      "to_id": "bellastock",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis"
+    },
+    {
+      "from_id": "opalis",
+      "to_id": "bellastock",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__bellastock"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "to_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_fcrbe"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "to_id": "bellastock",
+      "typ": "BETEILIGT_AN",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_fcrbe"
+    }
+  ],
+  "preuse_nodes": [
+    {
+      "id": "bg_holz_mehrere_green_house_preused_holzdecke",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "name": "Pre-used wood Geschossde…"
+    },
+    {
+      "id": "q_url_150bfa71ec64ea9192c5252bb7453284",
+      "labels": [
+        "Quelle",
+        "ExternalLink"
+      ],
+      "name": "PREUSE homepage"
+    },
+    {
+      "id": "q_url_4a94cddf6628f350b982c97040dce9fd",
+      "labels": [
+        "Quelle",
+        "ExternalLink"
+      ],
+      "name": "PREUSE partners"
+    },
+    {
+      "id": "q_url_714d4c31c9d811b5269f20eaf16bb43f",
+      "labels": [
+        "Quelle",
+        "ExternalLink"
+      ],
+      "name": "Rotor PREUSE Interreg NWE"
+    },
+    {
+      "id": "q_url_new_preuse_launch",
+      "labels": [
+        "Quelle",
+        "ExternalLink"
+      ],
+      "name": "PREUSE official launch"
+    },
+    {
+      "id": "q_url_new_preuse_utrecht_opening",
+      "labels": [
+        "Quelle",
+        "ExternalLink"
+      ],
+      "name": "PREUSE Utrecht reuse centre opening"
+    },
+    {
+      "id": "prog_preuse",
+      "labels": [
+        "Programm"
+      ],
+      "name": "PREUSE"
+    }
+  ],
+  "opalis_verbunden": [
+    {
+      "id": "Rotor",
+      "conf": null
+    },
+    {
+      "id": "Rotor",
+      "conf": null
+    },
+    {
+      "id": "bellastock",
+      "conf": "belegt"
+    },
+    {
+      "id": "bellastock",
+      "conf": "belegt"
+    },
+    {
+      "id": "maarten_gielen",
+      "conf": null
+    },
+    {
+      "id": "maarten_gielen",
+      "conf": null
+    },
+    {
+      "id": "rotordc",
+      "conf": "belegt"
+    },
+    {
+      "id": "rotordc",
+      "conf": "belegt"
+    }
+  ],
+  "rotordc_rotor_links": [
+    {
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "props": {
+        "evidence_source_id": "q_url_714d4c31c9d811b5269f20eaf16bb43f",
+        "evidence_basis": "first_party_project_page",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "confidence": 0.6,
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "source_scope": "rotor_dc_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor offices located literally above RotorDC stocks",
+        "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://www.rotordb.org/en/projects/rotor-dc-reuse-made-easy",
+        "connection_kind": "colocation_evere"
+      }
+    }
+  ]
+}

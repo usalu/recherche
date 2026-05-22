@@ -1,0 +1,68 @@
+{
+  "agent_id": "F1",
+  "generated_at_utc": "2026-06-06T18:16:00Z",
+  "merge_patch": "patches/post_quality_p06_03.patch.jsonl",
+  "survivor_node_id": "rau",
+  "survivor_node_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6715",
+  "deleted_node_id": "rau_architects",
+  "stale_ledger_rows": 5,
+  "stale_ledger_claim_ids": [
+    "AKT-node-357",
+    "09-beteiligt_an-0690",
+    "EP01-rel-01039",
+    "EP01-rel-01040",
+    "EP02-rel-00500"
+  ],
+  "prune_element_ids": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5405",
+      "kind": "node",
+      "graph_id": "rau_architects",
+      "reason": "merged_node_deleted",
+      "ledger_claim_ids": ["AKT-node-357"]
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607773",
+      "kind": "rel",
+      "rel_type": "BETEILIGT_AN",
+      "from_id": "rau_architects",
+      "to_id": "p_liander_alliander_hq_duiven",
+      "reason": "redirected_replaced",
+      "replacement_element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676609083",
+      "ledger_claim_ids": ["09-beteiligt_an-0690"]
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:7018962273838307334",
+      "kind": "rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "from_id": "rau_architects",
+      "to_id": "ar_entwurf_planung",
+      "reason": "deduped_parallel_on_survivor",
+      "ledger_claim_ids": ["EP01-rel-01039"]
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815606045",
+      "kind": "rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "from_id": "rau_architects",
+      "to_id": "ar_reuse_zirkularitaetsberatung",
+      "reason": "deduped_parallel_on_survivor",
+      "ledger_claim_ids": ["EP01-rel-01040"]
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699863325",
+      "kind": "rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "from_id": "rau_architects",
+      "to_id": "at_unternehmen",
+      "reason": "deduped_parallel_on_survivor",
+      "ledger_claim_ids": ["EP02-rel-00500"]
+    }
+  ],
+  "post_merge_counts": {
+    "nodes": 2263,
+    "relationships": 15060,
+    "elements": 17323
+  },
+  "notes": "Plan headline 17326 assumed 15063 rels; merge deduped 3 parallel rau edges (−3 rels net)."
+}

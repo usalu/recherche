@@ -1,0 +1,123 @@
+{
+  "anchor_id": "resandes",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://resandes.de/en/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L92-L118; L130-L155; L261-L271",
+      "evidence_excerpt": "Old windows and doors; reclaimed timber boards, granite slabs, old bricks, roof tiles, reclaimed wood; product list includes granite/sandstone slabs, cobblestones, reclaimed timber, old windows and doors."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "reclaimed timber boards; reclaimed wood; old beams/planks/boards.",
+      "confidence": "belegt",
+      "note": "Direct first-party material evidence.",
+      "source_line_ref": "L116-L118; L130-L155"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "granite slabs, sandstone slabs, cobblestones, granite paving/columns.",
+      "confidence": "belegt",
+      "note": "Direct first-party material evidence.",
+      "source_line_ref": "L130-L155; L267-L271"
+    },
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "old bricks, brick slips, brick tiles, roof tiles.",
+      "confidence": "belegt",
+      "note": "Direct first-party material evidence.",
+      "source_line_ref": "L116-L118; L130-L131; L270-L271"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "old windows and doors; historical windows.",
+      "confidence": "belegt",
+      "note": "Direct first-party product evidence.",
+      "source_line_ref": "L92-L95; L147-L155"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "old windows and doors; historical windows and doors.",
+      "confidence": "belegt",
+      "note": "Direct first-party product evidence.",
+      "source_line_ref": "L92-L95; L147-L155"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "roof tiles.",
+      "confidence": "belegt",
+      "note": "Direct first-party product evidence.",
+      "source_line_ref": "L130-L131; L270-L271"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "old floorboards; granite/sandstone slabs; paving slabs.",
+      "confidence": "belegt",
+      "note": "Direct first-party product evidence.",
+      "source_line_ref": "L147-L155; L267-L271"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "brick/facing slips and brick tiles; reclaimed wood wall panels.",
+      "confidence": "belegt",
+      "note": "Direct first-party product evidence.",
+      "source_line_ref": "L123-L131"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": "LOOKUP_REQUIRED_restored_reglazed",
+      "evidence_urls": [
+        "https://resandes.de/en/"
+      ],
+      "evidence_quote": "Old windows and doors available in original salvage condition, drained or fully restored and re-glazed.",
+      "confidence": "unsicher",
+      "note": "Exact Aufbereitungsverfahren ID requires Cypher lookup.",
+      "source_line_ref": "L92-L95"
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [],
+  "rejected_or_not_importable": [],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

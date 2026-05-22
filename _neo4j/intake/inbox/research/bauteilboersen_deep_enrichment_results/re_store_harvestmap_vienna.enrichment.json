@@ -1,0 +1,91 @@
+{
+  "anchor_id": "re_store_harvestmap_vienna",
+  "sources_visited": [
+    {
+      "url": "https://www.restore.or.at/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.restore.or.at/impressum/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.materialnomaden.at/about/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.restore.or.at/"
+      ],
+      "evidence_quote": "Store shows re:design, re:furbished and re:use products across project sources; likely fit-out/interior stock.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.restore.or.at/"
+      ],
+      "evidence_quote": "Project-source store/HarvestMAP framing supports inventory of reusable project items.",
+      "confidence": "unsicher",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "refurb",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.restore.or.at/"
+      ],
+      "evidence_quote": "Store filters explicitly show re:furbished products.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_METHODE",
+      "target_id": "methode_harvest_map",
+      "evidence_urls": [
+        "https://www.materialnomaden.at/about/"
+      ],
+      "evidence_quote": "Archive/operator chain links re:store to Materialnomaden HarvestMAP method.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "re:store / Materialnomaden",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.restore.or.at/",
+      "https://www.restore.or.at/impressum/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "Store did not expose material-specific categories in accessible text."
+    },
+    {
+      "topic": "Operator chain",
+      "reason": "BETRIEBEN_VON materialnomaden should be retained only if existing node verified in graph."
+    }
+  ],
+  "run_notes": []
+}

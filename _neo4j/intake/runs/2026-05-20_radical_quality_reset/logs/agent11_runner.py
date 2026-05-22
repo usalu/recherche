@@ -9,7 +9,7 @@ statement with the relevant parameters.
 
 The 20 :ReuseRule rows are encoded below in REUSE_RULE_ROWS following
 the canonical structure of
-  _neo4j/intake/inbox/research/circular_construction_reuse_graph_gaps.md.
+  _knowledge/themes/circular_construction_reuse_graph_gaps.md.
 
 Usage:
     python agent11_runner.py

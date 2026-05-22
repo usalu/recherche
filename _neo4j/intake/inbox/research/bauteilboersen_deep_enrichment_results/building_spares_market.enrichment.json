@@ -1,0 +1,90 @@
+{
+  "anchor_id": "building_spares_market",
+  "sources_visited": [
+    {
+      "url": "https://buildingsparesmarket.co.uk/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://buildingsparesmarket.co.uk/about/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://buildingsparesmarket.co.uk/sell-spare-and-second-hand-building-supplies-uk/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/",
+      "http_status": 200,
+      "first_party": true
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "General building materials category includes bricks / masonry-type items.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_beton",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "General building materials listings include concrete/block/lintel-type stock.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "Bricks/blocks category maps to wall components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_fassade",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "Bricks/facing masonry can map to façade components when listed as such.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "Lintels / load-bearing building spares map to beam/lintel component type.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Building Spares Market",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://buildingsparesmarket.co.uk/",
+      "https://buildingsparesmarket.co.uk/about/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material exactness",
+      "reason": "Classified-listing categories need item-level pages for belegt confidence."
+    }
+  ],
+  "run_notes": []
+}

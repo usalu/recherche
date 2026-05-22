@@ -1,0 +1,144 @@
+{
+  "confirmation_required": "APPLY phase2b_hdm_civic_hub.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2384,
+    "relationships": 15537
+  },
+  "counts_after_expected": {
+    "nodes": 2384,
+    "relationships": 15537
+  },
+  "counts_before": {
+    "nodes": 2384,
+    "relationships": 15531
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:31:12.649900+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\patches\\phase2b_hdm_civic_hub.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "id": "haus_der_materialisierung",
+          "land": "DE",
+          "name": "Haus der Materialisierung",
+          "name_full": "Haus der Materialisierung — Berlin circular-material civic hub",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "id": "haus_der_materialisierung",
+          "land": "DE",
+          "name": "Haus der Materialisierung",
+          "name_full": "Haus der Materialisierung — Berlin circular-material civic hub",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        }
+      },
+      "id": "haus_der_materialisierung",
+      "line": 1,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_hdm_home"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_hdm_info"
+    },
+    {
+      "from": "tu_berlin",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "haus_der_materialisierung"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "tu_berlin"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bauteilboerse_bremen"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "haus_der_materialisierung"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bauteilboerse_hannover"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "haus_der_materialisierung"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "madaster_epea"
+    },
+    {
+      "from": "madaster_epea",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "haus_der_materialisierung"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing": 1,
+    "noop_existing_rel": 4,
+    "records": 11,
+    "would_create_rel": 6
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "anchor_id": "salza",
+  "sources_visited": [
+    {
+      "url": "https://salza.ch/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://salza.ch/bauteil-plattform",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Bauteil-platform source; categories need product-page extraction."
+      ]
+    },
+    {
+      "url": "https://salza.ch/how-it-works",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "How-it-works source."
+      ]
+    },
+    {
+      "url": "https://www.ecobau.ch/de/instrumente/ecobkp",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "ecoBKP source lists reuse-suitable components including timber beams, steel beams, stairs, railings, kitchens, sanitary equipment, windows, doors, solid parquet."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists timber beams and solid-wood parquet among reuse-suitable components in same ecosystem context.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists steel beams as reuse-suitable components.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists solid-wood parquet.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists windows.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_gelaender",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists railings.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists kitchens and sanitary equipment.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists timber beams and steel beams.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_treppe",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists stairs.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.ecobau.ch/de/instrumente/ecobkp"
+      ],
+      "evidence_quote": "ecoBKP lists doors.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://salza.ch/"
+      ],
+      "evidence_quote": "Homepage says Salza offers reusable Bauteile on its online platform; exact categories were not exposed in accessible copy.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://salza.ch/bauteil-plattform"
+      ],
+      "evidence_quote": "Platform workflow states after fee payment and final check by Salza administration, building parts are published within a few working days.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "annahme",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_bauteil_platform",
+      "evidence_urls": [
+        "https://salza.ch/bauteil-plattform"
+      ],
+      "evidence_quote": "Bauteil-Plattform for reuse and circular economy in construction.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Salza",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://salza.ch/",
+      "https://salza.ch/bauteil-plattform"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Need search/listing/category pages to extract actual component/material families."
+    },
+    {
+      "topic": "PN target",
+      "reason": "Resolve Annahmeprüfung/intake-review node."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/salza.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "mat_holz",
+        "mat_stahl"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "bt_traeger",
+        "bt_treppe",
+        "bt_gelaender",
+        "bt_technik",
+        "bt_fenster",
+        "bt_tuer",
+        "bt_boden"
+      ],
+      "unsicher": [
+        "bt_mehrere"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

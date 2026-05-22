@@ -1,0 +1,208 @@
+{
+  "id": "11b_cross_country_donor_flows",
+  "section": "11",
+  "title": "Cross-country donor → receiver flows",
+  "cypher": "MATCH (bg:Bauteilgruppe)-[rs:AUS_SPENDER]->(donor:Bauwerk)-[:LIEGT_IN_LAND]->(dl:Land),\n      (bg)-[re:IN_EMPFANGSOBJEKT]->(recv:Bauwerk)-[:LIEGT_IN_LAND]->(rl:Land)\nWHERE dl <> rl\nOPTIONAL MATCH (p:Projekt)-[hp:HAT_BAUTEILGRUPPE]->(bg)\nRETURN bg, rs, donor, dl, re, recv, rl, p, hp;",
+  "status": "ok",
+  "row_count": 1,
+  "node_count": 6,
+  "relationship_count": 3,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:616",
+      "id": "bg_metall_tuer_umar_wabbes_handles",
+      "labels": [
+        "Bauteilgruppe"
+      ],
+      "properties": {
+        "matchingqualitaet_spec": [
+          "Spec: Zweckänderung"
+        ],
+        "reuse_status": "reuse",
+        "wiederverwendungsort": [
+          "In_situ"
+        ],
+        "bauproduktstatus": [
+          "Projekt-Freigabe"
+        ],
+        "alte_funktion": "bank door handles (Brussels HQ)",
+        "source_titles": [
+          "UMAR Unit — NEST, Empa Dübendorf"
+        ],
+        "name": "UMAR Wabbes Türgriffe",
+        "funktionswechsel": [
+          "Gleiche_Funktion"
+        ],
+        "id": "bg_metall_tuer_umar_wabbes_handles",
+        "bg_kind": "batch",
+        "bauteilebene": [
+          "Bauteilgruppe"
+        ],
+        "neue_funktion": "research unit door handles",
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:555",
+      "id": "bw_generale_de_banque_brussels",
+      "labels": [
+        "Bauwerk"
+      ],
+      "properties": {
+        "name_full": "Générale de Banque / BNP Paribas Fortis HQ, Brussels — donor for UMAR's Jules Wabbes door handles (via Rotor)",
+        "latitude": 50.8455758,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "source_titles": [
+          "UMAR Unit — NEST, Empa Dübendorf"
+        ],
+        "name": "Gén. de Banque BXL",
+        "adresse": "Rue Montagne du Parc 3, 1000 Brussels, Belgium",
+        "geo_confidence": "high",
+        "metadata_sidecar_key": "node:bw_generale_de_banque_brussels",
+        "id": "bw_generale_de_banque_brussels",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "source_urls": [
+          "https://opalis.eu/fr/projets/ancien-siege-de-la-generale-de-banque"
+        ],
+        "primary_source_url": "https://opalis.eu/fr/projets/ancien-siege-de-la-generale-de-banque",
+        "bauobjektklasse": [
+          "Gebaeude"
+        ],
+        "status": "Rueckgebaut",
+        "longitude": 4.3604784
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4831",
+      "id": "land_belgien",
+      "labels": [
+        "Land"
+      ],
+      "properties": {
+        "name": "Belgien",
+        "metadata_sidecar_key": "node:land_belgien",
+        "id": "land_belgien",
+        "typische_bauproduktstatus": [
+          "CE (hEN)",
+          "Tracimat (BE)"
+        ],
+        "country_iso2": "BE"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:548",
+      "id": "bw_umar_unit_duebendorf",
+      "labels": [
+        "Bauwerk"
+      ],
+      "properties": {
+        "name_full": "NEST Unit UMAR — Urban Mining and Recycling, Empa Dübendorf",
+        "latitude": 47.4023749,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "source_titles": [
+          "UMAR Unit — NEST, Empa Dübendorf"
+        ],
+        "name": "UMAR Unit Dübendorf",
+        "adresse": "Überlandstrasse 129, 8600 Dübendorf, Switzerland",
+        "geo_confidence": "high",
+        "metadata_sidecar_key": "node:bw_umar_unit_duebendorf",
+        "id": "bw_umar_unit_duebendorf",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "bauobjektklasse": [
+          "Gebaeudeteil"
+        ],
+        "status": "Realisiert",
+        "longitude": 8.6114852
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "id": "land_schweiz",
+      "labels": [
+        "Land"
+      ],
+      "properties": {
+        "source_titles": [
+          "ELYS_Kultur_Gewerbehaus_…",
+          "Grubenstrasse_29_Werkhof…",
+          "Juch_Areal_Recyclingzent…",
+          "K118_Kopfbau_Halle_118_W…",
+          "Kindergarten_Moeoeslistr…",
+          "ReCrete_footbridge_reuse…"
+        ],
+        "name": "Schweiz",
+        "akzeptanzfaktoren": [
+          "DGNB"
+        ],
+        "id": "land_schweiz",
+        "typische_bauproduktstatus": [
+          "BauPG (CH)"
+        ],
+        "country_iso2": "CH"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "id": "p_umar_unit",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Payback über OpEx / LCA",
+          "Geschaeftsmodell",
+          "Lebenszykluskosten",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "UMAR Unit — Urban Mining and Recycling, NEST Empa Dübendorf",
+        "latitude": 47.4023749,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "UMAR Unit",
+        "adresse": "Überlandstrasse 129, 8600 Dübendorf, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "UMAR is a research apartment designed as a catalogue of reversible material cycles. Most components are selected for separability, take-back, reuse, recycling or compostability; reclaimed Jules Wabbes door handles add a small but explicit reused-component layer. The architectural output is a clean demonstrator rather than a salvage collage: dry joints, modular layers, visible systems and controlled material contrasts show how a dwelling can be designed for future disassembly and resource recovery.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_umar_unit",
+        "id": "p_umar_unit",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "active research demonstrator in NEST since 2018",
+        "longitude": 8.6114852
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153089729885897320",
+      "type": "AUS_SPENDER",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:616",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:555",
+      "start_id": "bg_metall_tuer_umar_wabbes_handles",
+      "end_id": "bw_generale_de_banque_brussels",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153090829397525096",
+      "type": "IN_EMPFANGSOBJEKT",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:616",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:548",
+      "start_id": "bg_metall_tuer_umar_wabbes_handles",
+      "end_id": "bw_umar_unit_duebendorf",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157537254420257105",
+      "type": "HAT_BAUTEILGRUPPE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:616",
+      "start_id": "p_umar_unit",
+      "end_id": "bg_metall_tuer_umar_wabbes_handles",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_p_umar_unit__HAT_BAUTEILGRUPPE__bg_reuse_metall_tuer_umar_wabbes_handles"
+      }
+    }
+  ]
+}

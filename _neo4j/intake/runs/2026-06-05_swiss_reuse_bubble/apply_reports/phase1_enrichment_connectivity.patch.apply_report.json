@@ -1,0 +1,290 @@
+{
+  "confirmation_required": "APPLY phase1_enrichment_connectivity.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "counts_before": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-06-05T21:36:29.708992+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\patches\\phase1_enrichment_connectivity.patch.jsonl",
+  "records": [
+    {
+      "from": "cirkla",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_0f6a8243ac5d1567100a3117bc4594e6"
+    },
+    {
+      "from": "cirkla",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_actor_benjamin_poignon_03"
+    },
+    {
+      "from": "cirkla",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_72047630eba27e60c1f672463457463e"
+    },
+    {
+      "from": "cirkla",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_83aa2d2f1524132cce8dcbac4e8fb774"
+    },
+    {
+      "from": "cirkla",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "useagain_bauteilclick"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "materiuum"
+    },
+    {
+      "from": "materiuum",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "wick_reuse_roto_baumarkt"
+    },
+    {
+      "from": "wick_reuse_roto_baumarkt",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilladen_winterthur"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "reuzi_ch"
+    },
+    {
+      "from": "reuzi_ch",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "gruner_reuse_platform"
+    },
+    {
+      "from": "gruner_reuse_platform",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "baubuero_in_situ"
+    },
+    {
+      "from": "baubuero_in_situ",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "salza"
+    },
+    {
+      "from": "salza",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "zirkular"
+    },
+    {
+      "from": "zirkular",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "baubuero_in_situ",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "p_k118_kopfbau_halle_118_winterthur"
+    },
+    {
+      "line": 24,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "from": "zirkular",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "p_k118_kopfbau_halle_118_winterthur"
+    },
+    {
+      "line": 26,
+      "op": "delete_rel",
+      "status": "noop_missing"
+    },
+    {
+      "from": "zirkular",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "p_elys_kultur_gewerbehaus_basel"
+    },
+    {
+      "from": "madaster",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_c19e3aef6ee77ca6de0e75bf46654fb0"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_82ad61e4b3672c05a8fedf46e57faee6"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_9fce1894aaa7455c757369850397e39f"
+    },
+    {
+      "from": "salza",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_45d7c6380377a9cec952dbf6c3f2ba8c"
+    },
+    {
+      "from": "materiuum",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_56649f37d5b1ee18d083da852797c756"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_48e67450f81ae55a6012813987faf31e"
+    },
+    {
+      "from": "wick_reuse_roto_baumarkt",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_161aca331467d6b5bd144e83b6837af4"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 32,
+    "noop_missing": 2,
+    "records": 34
+  }
+}

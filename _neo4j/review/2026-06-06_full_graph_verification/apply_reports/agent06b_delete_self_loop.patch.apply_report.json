@@ -1,0 +1,44 @@
+{
+  "confirmation_required": "APPLY agent06b_delete_self_loop.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15456
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15456
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15457
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:40:56.851135+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\agent06b_delete_self_loop.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "Werner_Sobek",
+        "properties": {
+          "id": "r_Werner_Sobek__VERBUNDEN_MIT_AKTEUR__Werner_Sobek"
+        },
+        "rel_internal_id": 1162041953559255387,
+        "to": "Werner_Sobek",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "Werner_Sobek",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Werner_Sobek",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_delete_rel": 1
+  }
+}

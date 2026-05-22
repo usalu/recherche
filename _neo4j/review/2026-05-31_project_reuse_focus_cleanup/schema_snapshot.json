@@ -1,0 +1,3450 @@
+{
+  "exported_at": "2026-05-31T18:20:46.283248+00:00",
+  "connection": {
+    "uri": "neo4j://127.0.0.1:7687",
+    "user": "neo4j",
+    "database": "mit-bestand"
+  },
+  "normative_plan": ".cursor/plans/neo4j_schema_catalogue_3bc01035.plan.md",
+  "inventory_entity_to_neo4j_label": {
+    "akteurrolle": "Akteurrolle",
+    "aufbereitungsverfahren": "Aufbereitungsverfahren",
+    "bauaufgabe_intervention": "BauaufgabeIntervention",
+    "bauobjekt": "Bauwerk",
+    "bauobjektstatus": "Status",
+    "bausystem": "Bausystem",
+    "bauteilebene": "Bauteilebene",
+    "bauteilgruppe": "Bauteilgruppe",
+    "bauteiltyp": "Bauteiltyp",
+    "bauteilzustand": "Bauteilzustand",
+    "bauweise": "Bauweise",
+    "beschaffungsweg": "Beschaffungsweg",
+    "bewertungslogik_abgrenzung": "WiederverwendungsArt",
+    "datenqualitaet": "Datenqualitaet",
+    "fallstudie": "Fallbeispiel",
+    "foerderprogramm": "Programm",
+    "fuegung_verbindung": "Verbindungstechnik",
+    "funktionswechsel": "Funktionswechsel",
+    "gebaeude": "Fallbeispiel",
+    "huerde": "Huerde",
+    "kontextmerkmal": "Programm",
+    "leistungsanforderung": "Leistungsanforderung",
+    "logistik": "Logistik",
+    "material": "Material",
+    "methode": "Methode",
+    "norm": "Norm",
+    "nutzung": "Nutzung",
+    "person": "Person",
+    "programm_kontext": "Programm",
+    "projekt": "Fallbeispiel",
+    "prozessphase": "Prozessphase",
+    "pruefung_nachweis": "PruefungNachweis",
+    "quelle": "Quelle",
+    "rechtliche_bedingung": "RechtlicheBedingung",
+    "ressourcenquelle": "Ressourcenquelle",
+    "reuse_einsatz": "Bauteilgruppe",
+    "reuse_einsatzstatus": "Status",
+    "reuse_kette": "Wiederverwendungskette",
+    "reuse_strategie": "WiederverwendungsArt",
+    "rueckbauverfahren": "Rueckbauverfahren",
+    "schadstoff": "Schadstoff",
+    "tragwerksprinzip": "Tragwerksprinzip",
+    "wirtschaft": "Wirtschaft",
+    "zertifizierung_bewertungssystem": "ZertifizierungBewertungssystem"
+  },
+  "folded_relationship_types": [
+    "BELEGT_IN",
+    "BENUTZT",
+    "GEHÖRT_ZU",
+    "HAT",
+    "IST"
+  ],
+  "live_graph": {
+    "node_labels": [
+      "Akteur",
+      "Akteurrolle",
+      "Akteurtyp",
+      "Akzeptanz",
+      "Aufbereitungsverfahren",
+      "BauaufgabeIntervention",
+      "Bauobjektklasse",
+      "Bauobjektrolle",
+      "Bauproduktstatus",
+      "Bausystem",
+      "Bauteilebene",
+      "Bauteilgruppe",
+      "Bauteiltyp",
+      "Bauweise",
+      "Bauwerk",
+      "BauwerkEra",
+      "Beschaffungsweg",
+      "DataIssue",
+      "Defekt",
+      "DeprecatedType",
+      "Dossier",
+      "DossierEntityTarget",
+      "ExternalLink",
+      "Funktionswechsel",
+      "Geltungsbereich",
+      "GraphVersion",
+      "Huerde",
+      "HuerdeKategorie",
+      "Kennwert",
+      "LCAModule",
+      "Land",
+      "Layer",
+      "Leistungsanforderung",
+      "Logistik",
+      "Marktmodell",
+      "MatchingQualitaet",
+      "Material",
+      "Materialdepot",
+      "Materialgruppe",
+      "Methode",
+      "Norm",
+      "Nutzung",
+      "OntologyAnchor",
+      "Programm",
+      "Projekt",
+      "Prozessphase",
+      "PruefungNachweis",
+      "Quelle",
+      "RechtlicheBedingung",
+      "ResearchDocument",
+      "Ressourcenquelle",
+      "ReuseRule",
+      "Rueckbauverfahren",
+      "Schadstoff",
+      "SectionRef",
+      "Software",
+      "Stadt",
+      "Status",
+      "Tool",
+      "Tragwerksprinzip",
+      "Verbindungstechnik",
+      "WiederverwendungsArt",
+      "Wiederverwendungskette",
+      "Wirtschaft",
+      "ZertifizierungBewertungssystem",
+      "Zertifizierungssystem",
+      "ZustandsKlasse"
+    ],
+    "relationship_types": [
+      "ANCHORED_BY",
+      "APPLIES_IN",
+      "APPLIES_TO",
+      "AUS_BAUWERK",
+      "BELEGT_IN",
+      "BERECHNET_NACH_MODUL",
+      "BETEILIGT_AN",
+      "BETRIEBEN_VON",
+      "BUILT_IN_ERA",
+      "CITED_FROM_DOSSIER",
+      "CONCERNS",
+      "EINGEBAUT_IN",
+      "ERHALT_FOERDERUNG_DURCH",
+      "EXACT_MATCH_CANDIDATE",
+      "FROM_DONOR",
+      "GEHÖRT_ZU",
+      "GILT_IN_LAND",
+      "HAS_BAUWERK",
+      "HAS_DATA_ISSUE",
+      "HAS_RISK_POLLUTANT",
+      "HAS_SOURCE_LINK",
+      "HAT_AKTEURROLLE",
+      "HAT_AKTEURTYP",
+      "HAT_AUFBEREITUNG",
+      "HAT_BAUOBJEKTKLASSE",
+      "HAT_BAUOBJEKTROLLE",
+      "HAT_BAUPRODUKTSTATUS",
+      "HAT_BAUSYSTEM",
+      "HAT_BAUTEILEBENE",
+      "HAT_BAUTEILGRUPPE",
+      "HAT_BAUTEILTYP",
+      "HAT_BAUWEISE",
+      "HAT_BESCHAFFUNGSWEG",
+      "HAT_DEFEKT",
+      "HAT_DEFEKT_BEFUND",
+      "HAT_FUNKTIONSWECHSEL",
+      "HAT_GELTUNGSBEREICH",
+      "HAT_HUERDE",
+      "HAT_HUERDEKATEGORIE",
+      "HAT_INTERVENTION",
+      "HAT_KENNWERT",
+      "HAT_LEISTUNGSANFORDERUNG",
+      "HAT_LOGISTIK",
+      "HAT_MARKTMODELL",
+      "HAT_MATCHINGQUALITAET",
+      "HAT_MATERIALGRUPPE",
+      "HAT_METHODE",
+      "HAT_NUTZUNG",
+      "HAT_PROZESSPHASE",
+      "HAT_PRUEFUNG",
+      "HAT_RECHTLICHE_BEDINGUNG",
+      "HAT_RESSOURCENQUELLE",
+      "HAT_RUECKBAUVERFAHREN",
+      "HAT_SCHADSTOFF",
+      "HAT_STATUS",
+      "HAT_TRAGWERKSPRINZIP",
+      "HAT_TYPISCHEN_BAUPRODUKTSTATUS",
+      "HAT_VERBINDUNGSTECHNIK",
+      "HAT_WIEDERVERWENDUNGSART",
+      "HAT_WIRTSCHAFT",
+      "HAT_WIRTSCHAFTSASPEKT",
+      "HAT_ZERTIFIZIERUNG",
+      "HAT_ZUSTANDSKLASSE",
+      "INTO_RECEIVER",
+      "IST_UNTERVERFAHREN_VON",
+      "LIEGT_IN_LAND",
+      "LIEGT_IN_STADT",
+      "METHODENGRUNDLAGE_NORM",
+      "NUTZT_BAUWERK",
+      "NUTZT_MATERIAL",
+      "NUTZT_SOFTWARE",
+      "NUTZT_TOOL",
+      "REFERENZIERT_NORM",
+      "RELEVANT_FOR",
+      "REQUIRES_VERIFICATION_FOR",
+      "STUB_PROJECT_LINK",
+      "TEILT_LAYER",
+      "TEIL_VON_KETTE",
+      "TEIL_VON_PROGRAMM",
+      "TYPISCH_BEI_BAUTEILTYP",
+      "TYPISCH_BEI_ERA",
+      "TYPISCH_BEI_MATERIAL",
+      "VERBUNDEN_MIT_AKTEUR",
+      "ZITIERT_QUELLE"
+    ],
+    "constraints": [
+      {
+        "id": 9,
+        "name": "akteur_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Akteur"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "akteur_id",
+        "propertyType": null
+      },
+      {
+        "id": 31,
+        "name": "akteurrolle_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Akteurrolle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "akteurrolle_id",
+        "propertyType": null
+      },
+      {
+        "id": 33,
+        "name": "akteurtyp_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Akteurtyp"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "akteurtyp_id",
+        "propertyType": null
+      },
+      {
+        "id": 53,
+        "name": "aufbereitungsverfahren_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Aufbereitungsverfahren"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "aufbereitungsverfahren_id",
+        "propertyType": null
+      },
+      {
+        "id": 83,
+        "name": "bauaufgabeintervention_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "BauaufgabeIntervention"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauaufgabeintervention_id",
+        "propertyType": null
+      },
+      {
+        "id": 19,
+        "name": "bauobjektklasse_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauobjektklasse"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauobjektklasse_id",
+        "propertyType": null
+      },
+      {
+        "id": 21,
+        "name": "bauobjektrolle_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauobjektrolle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauobjektrolle_id",
+        "propertyType": null
+      },
+      {
+        "id": 79,
+        "name": "bausystem_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bausystem"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bausystem_id",
+        "propertyType": null
+      },
+      {
+        "id": 17,
+        "name": "bauteilebene_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauteilebene"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauteilebene_id",
+        "propertyType": null
+      },
+      {
+        "id": 7,
+        "name": "bauteilgruppe_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauteilgruppe"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauteilgruppe_id",
+        "propertyType": null
+      },
+      {
+        "id": 15,
+        "name": "bauteiltyp_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauteiltyp"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauteiltyp_id",
+        "propertyType": null
+      },
+      {
+        "id": 77,
+        "name": "bauweise_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauweise"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauweise_id",
+        "propertyType": null
+      },
+      {
+        "id": 5,
+        "name": "bauwerk_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauwerk"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "bauwerk_id",
+        "propertyType": null
+      },
+      {
+        "id": 57,
+        "name": "beschaffungsweg_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Beschaffungsweg"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "beschaffungsweg_id",
+        "propertyType": null
+      },
+      {
+        "id": 81,
+        "name": "funktionswechsel_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Funktionswechsel"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "funktionswechsel_id",
+        "propertyType": null
+      },
+      {
+        "id": 3,
+        "name": "graphversion_tag_unique",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "GraphVersion"
+        ],
+        "properties": [
+          "tag"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "graphversion_tag_unique",
+        "propertyType": null
+      },
+      {
+        "id": 27,
+        "name": "huerde_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Huerde"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "huerde_id",
+        "propertyType": null
+      },
+      {
+        "id": 29,
+        "name": "huerdekategorie_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "HuerdeKategorie"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "huerdekategorie_id",
+        "propertyType": null
+      },
+      {
+        "id": 43,
+        "name": "land_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Land"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "land_id",
+        "propertyType": null
+      },
+      {
+        "id": 49,
+        "name": "leistungsanforderung_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Leistungsanforderung"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "leistungsanforderung_id",
+        "propertyType": null
+      },
+      {
+        "id": 61,
+        "name": "logistik_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Logistik"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "logistik_id",
+        "propertyType": null
+      },
+      {
+        "id": 23,
+        "name": "material_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Material"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "material_id",
+        "propertyType": null
+      },
+      {
+        "id": 25,
+        "name": "materialgruppe_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Materialgruppe"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "materialgruppe_id",
+        "propertyType": null
+      },
+      {
+        "id": 63,
+        "name": "methode_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Methode"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "methode_id",
+        "propertyType": null
+      },
+      {
+        "id": 51,
+        "name": "norm_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Norm"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "norm_id",
+        "propertyType": null
+      },
+      {
+        "id": 39,
+        "name": "nutzung_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Nutzung"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "nutzung_id",
+        "propertyType": null
+      },
+      {
+        "id": 85,
+        "name": "programm_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Programm"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "programm_id",
+        "propertyType": null
+      },
+      {
+        "id": 45,
+        "name": "prozessphase_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Prozessphase"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "prozessphase_id",
+        "propertyType": null
+      },
+      {
+        "id": 47,
+        "name": "pruefungnachweis_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "PruefungNachweis"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "pruefungnachweis_id",
+        "propertyType": null
+      },
+      {
+        "id": 11,
+        "name": "quelle_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Quelle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "quelle_id",
+        "propertyType": null
+      },
+      {
+        "id": 67,
+        "name": "rechtlichebedingung_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "RechtlicheBedingung"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rechtlichebedingung_id",
+        "propertyType": null
+      },
+      {
+        "id": 93,
+        "name": "rel_aus_bauwerk_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "AUS_BAUWERK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_aus_bauwerk_id",
+        "propertyType": null
+      },
+      {
+        "id": 171,
+        "name": "rel_belegt_in_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "BELEGT_IN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_belegt_in_id",
+        "propertyType": null
+      },
+      {
+        "id": 161,
+        "name": "rel_beteiligt_an_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "BETEILIGT_AN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_beteiligt_an_id",
+        "propertyType": null
+      },
+      {
+        "id": 95,
+        "name": "rel_eingebaut_in_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "EINGEBAUT_IN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_eingebaut_in_id",
+        "propertyType": null
+      },
+      {
+        "id": 163,
+        "name": "rel_hat_akteurrolle_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_AKTEURROLLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_akteurrolle_id",
+        "propertyType": null
+      },
+      {
+        "id": 165,
+        "name": "rel_hat_akteurtyp_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_AKTEURTYP"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_akteurtyp_id",
+        "propertyType": null
+      },
+      {
+        "id": 133,
+        "name": "rel_hat_aufbereitung_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_AUFBEREITUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_aufbereitung_id",
+        "propertyType": null
+      },
+      {
+        "id": 103,
+        "name": "rel_hat_bauobjektklasse_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUOBJEKTKLASSE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_bauobjektklasse_id",
+        "propertyType": null
+      },
+      {
+        "id": 105,
+        "name": "rel_hat_bauobjektrolle_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUOBJEKTROLLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_bauobjektrolle_id",
+        "propertyType": null
+      },
+      {
+        "id": 111,
+        "name": "rel_hat_bausystem_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUSYSTEM"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_bausystem_id",
+        "propertyType": null
+      },
+      {
+        "id": 101,
+        "name": "rel_hat_bauteilebene_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUTEILEBENE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_bauteilebene_id",
+        "propertyType": null
+      },
+      {
+        "id": 99,
+        "name": "rel_hat_bauteiltyp_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUTEILTYP"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_bauteiltyp_id",
+        "propertyType": null
+      },
+      {
+        "id": 109,
+        "name": "rel_hat_bauweise_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUWEISE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_bauweise_id",
+        "propertyType": null
+      },
+      {
+        "id": 135,
+        "name": "rel_hat_beschaffungsweg_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BESCHAFFUNGSWEG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_beschaffungsweg_id",
+        "propertyType": null
+      },
+      {
+        "id": 119,
+        "name": "rel_hat_funktionswechsel_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_FUNKTIONSWECHSEL"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_funktionswechsel_id",
+        "propertyType": null
+      },
+      {
+        "id": 157,
+        "name": "rel_hat_huerde_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_HUERDE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_huerde_id",
+        "propertyType": null
+      },
+      {
+        "id": 159,
+        "name": "rel_hat_huerdekategorie_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_HUERDEKATEGORIE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_huerdekategorie_id",
+        "propertyType": null
+      },
+      {
+        "id": 121,
+        "name": "rel_hat_intervention_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_INTERVENTION"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_intervention_id",
+        "propertyType": null
+      },
+      {
+        "id": 145,
+        "name": "rel_hat_leistungsanforderung_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_LEISTUNGSANFORDERUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_leistungsanforderung_id",
+        "propertyType": null
+      },
+      {
+        "id": 139,
+        "name": "rel_hat_logistik_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_LOGISTIK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_logistik_id",
+        "propertyType": null
+      },
+      {
+        "id": 125,
+        "name": "rel_hat_materialgruppe_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_MATERIALGRUPPE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_materialgruppe_id",
+        "propertyType": null
+      },
+      {
+        "id": 129,
+        "name": "rel_hat_methode_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_METHODE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_methode_id",
+        "propertyType": null
+      },
+      {
+        "id": 115,
+        "name": "rel_hat_nutzung_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_NUTZUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_nutzung_id",
+        "propertyType": null
+      },
+      {
+        "id": 127,
+        "name": "rel_hat_prozessphase_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_PROZESSPHASE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_prozessphase_id",
+        "propertyType": null
+      },
+      {
+        "id": 143,
+        "name": "rel_hat_pruefung_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_PRUEFUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_pruefung_id",
+        "propertyType": null
+      },
+      {
+        "id": 149,
+        "name": "rel_hat_rechtliche_bedingung_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_RECHTLICHE_BEDINGUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_rechtliche_bedingung_id",
+        "propertyType": null
+      },
+      {
+        "id": 137,
+        "name": "rel_hat_ressourcenquelle_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_RESSOURCENQUELLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_ressourcenquelle_id",
+        "propertyType": null
+      },
+      {
+        "id": 131,
+        "name": "rel_hat_rueckbauverfahren_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_RUECKBAUVERFAHREN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_rueckbauverfahren_id",
+        "propertyType": null
+      },
+      {
+        "id": 151,
+        "name": "rel_hat_schadstoff_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_SCHADSTOFF"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_schadstoff_id",
+        "propertyType": null
+      },
+      {
+        "id": 113,
+        "name": "rel_hat_status_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_STATUS"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_status_id",
+        "propertyType": null
+      },
+      {
+        "id": 107,
+        "name": "rel_hat_tragwerksprinzip_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_TRAGWERKSPRINZIP"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_tragwerksprinzip_id",
+        "propertyType": null
+      },
+      {
+        "id": 141,
+        "name": "rel_hat_verbindungstechnik_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_VERBINDUNGSTECHNIK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_verbindungstechnik_id",
+        "propertyType": null
+      },
+      {
+        "id": 117,
+        "name": "rel_hat_wiederverwendungsart_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_WIEDERVERWENDUNGSART"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_wiederverwendungsart_id",
+        "propertyType": null
+      },
+      {
+        "id": 155,
+        "name": "rel_hat_wirtschaftsaspekt_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_WIRTSCHAFTSASPEKT"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_wirtschaftsaspekt_id",
+        "propertyType": null
+      },
+      {
+        "id": 153,
+        "name": "rel_hat_zertifizierung_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_ZERTIFIZIERUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_hat_zertifizierung_id",
+        "propertyType": null
+      },
+      {
+        "id": 169,
+        "name": "rel_liegt_in_land_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "LIEGT_IN_LAND"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_liegt_in_land_id",
+        "propertyType": null
+      },
+      {
+        "id": 167,
+        "name": "rel_liegt_in_stadt_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "LIEGT_IN_STADT"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_liegt_in_stadt_id",
+        "propertyType": null
+      },
+      {
+        "id": 91,
+        "name": "rel_nutzt_bauwerk_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_BAUWERK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_nutzt_bauwerk_id",
+        "propertyType": null
+      },
+      {
+        "id": 123,
+        "name": "rel_nutzt_material_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_MATERIAL"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_nutzt_material_id",
+        "propertyType": null
+      },
+      {
+        "id": 175,
+        "name": "rel_nutzt_software_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_SOFTWARE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_nutzt_software_id",
+        "propertyType": null
+      },
+      {
+        "id": 177,
+        "name": "rel_nutzt_tool_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_TOOL"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_nutzt_tool_id",
+        "propertyType": null
+      },
+      {
+        "id": 147,
+        "name": "rel_referenziert_norm_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "REFERENZIERT_NORM"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_referenziert_norm_id",
+        "propertyType": null
+      },
+      {
+        "id": 97,
+        "name": "rel_teil_von_kette_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "TEIL_VON_KETTE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_teil_von_kette_id",
+        "propertyType": null
+      },
+      {
+        "id": 179,
+        "name": "rel_teil_von_programm_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "TEIL_VON_PROGRAMM"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_teil_von_programm_id",
+        "propertyType": null
+      },
+      {
+        "id": 173,
+        "name": "rel_zitiert_quelle_id",
+        "type": "RELATIONSHIP_PROPERTY_UNIQUENESS",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "ZITIERT_QUELLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rel_zitiert_quelle_id",
+        "propertyType": null
+      },
+      {
+        "id": 59,
+        "name": "ressourcenquelle_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Ressourcenquelle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "ressourcenquelle_id",
+        "propertyType": null
+      },
+      {
+        "id": 55,
+        "name": "rueckbauverfahren_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Rueckbauverfahren"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "rueckbauverfahren_id",
+        "propertyType": null
+      },
+      {
+        "id": 69,
+        "name": "schadstoff_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Schadstoff"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "schadstoff_id",
+        "propertyType": null
+      },
+      {
+        "id": 87,
+        "name": "software_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Software"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "software_id",
+        "propertyType": null
+      },
+      {
+        "id": 41,
+        "name": "stadt_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Stadt"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "stadt_id",
+        "propertyType": null
+      },
+      {
+        "id": 37,
+        "name": "status_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Status"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "status_id",
+        "propertyType": null
+      },
+      {
+        "id": 89,
+        "name": "tool_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Tool"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "tool_id",
+        "propertyType": null
+      },
+      {
+        "id": 75,
+        "name": "tragwerksprinzip_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Tragwerksprinzip"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "tragwerksprinzip_id",
+        "propertyType": null
+      },
+      {
+        "id": 65,
+        "name": "verbindungstechnik_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Verbindungstechnik"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "verbindungstechnik_id",
+        "propertyType": null
+      },
+      {
+        "id": 35,
+        "name": "wiederverwendungsart_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "WiederverwendungsArt"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "wiederverwendungsart_id",
+        "propertyType": null
+      },
+      {
+        "id": 13,
+        "name": "wiederverwendungskette_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Wiederverwendungskette"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "wiederverwendungskette_id",
+        "propertyType": null
+      },
+      {
+        "id": 71,
+        "name": "wirtschaft_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Wirtschaft"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "wirtschaft_id",
+        "propertyType": null
+      },
+      {
+        "id": 73,
+        "name": "zertifizierungbewertungssystem_id",
+        "type": "NODE_PROPERTY_UNIQUENESS",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "ZertifizierungBewertungssystem"
+        ],
+        "properties": [
+          "id"
+        ],
+        "enforcedLabel": null,
+        "ownedIndex": "zertifizierungbewertungssystem_id",
+        "propertyType": null
+      }
+    ],
+    "indexes": [
+      {
+        "id": 8,
+        "name": "akteur_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Akteur"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "akteur_id",
+        "lastRead": "2026-05-28T15:39:12.342000000+00:00",
+        "readCount": 4232
+      },
+      {
+        "id": 30,
+        "name": "akteurrolle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Akteurrolle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "akteurrolle_id",
+        "lastRead": "2026-05-28T15:15:28.508000000+00:00",
+        "readCount": 337
+      },
+      {
+        "id": 32,
+        "name": "akteurtyp_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Akteurtyp"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "akteurtyp_id",
+        "lastRead": "2026-05-28T10:31:50.861000000+00:00",
+        "readCount": 1766
+      },
+      {
+        "id": 52,
+        "name": "aufbereitungsverfahren_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Aufbereitungsverfahren"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "aufbereitungsverfahren_id",
+        "lastRead": "2026-05-20T21:59:18.685000000+00:00",
+        "readCount": 61
+      },
+      {
+        "id": 82,
+        "name": "bauaufgabeintervention_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "BauaufgabeIntervention"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauaufgabeintervention_id",
+        "lastRead": "2026-05-14T22:48:39.646000000+00:00",
+        "readCount": 40
+      },
+      {
+        "id": 18,
+        "name": "bauobjektklasse_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauobjektklasse"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauobjektklasse_id",
+        "lastRead": "2026-05-14T22:48:39.678000000+00:00",
+        "readCount": 32
+      },
+      {
+        "id": 20,
+        "name": "bauobjektrolle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauobjektrolle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauobjektrolle_id",
+        "lastRead": "2026-05-14T22:48:39.703000000+00:00",
+        "readCount": 24
+      },
+      {
+        "id": 78,
+        "name": "bausystem_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bausystem"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bausystem_id",
+        "lastRead": "2026-05-14T22:48:39.754000000+00:00",
+        "readCount": 35
+      },
+      {
+        "id": 16,
+        "name": "bauteilebene_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauteilebene"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauteilebene_id",
+        "lastRead": "2026-05-20T17:40:18.205000000+00:00",
+        "readCount": 25
+      },
+      {
+        "id": 6,
+        "name": "bauteilgruppe_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauteilgruppe"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauteilgruppe_id",
+        "lastRead": "2026-05-22T08:12:15.185000000+00:00",
+        "readCount": 2687
+      },
+      {
+        "id": 14,
+        "name": "bauteiltyp_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauteiltyp"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauteiltyp_id",
+        "lastRead": "2026-05-20T21:59:18.475000000+00:00",
+        "readCount": 446
+      },
+      {
+        "id": 76,
+        "name": "bauweise_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauweise"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauweise_id",
+        "lastRead": "2026-05-14T22:48:39.851000000+00:00",
+        "readCount": 24
+      },
+      {
+        "id": 4,
+        "name": "bauwerk_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Bauwerk"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "bauwerk_id",
+        "lastRead": "2026-05-20T21:14:00.866000000+00:00",
+        "readCount": 1079
+      },
+      {
+        "id": 56,
+        "name": "beschaffungsweg_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Beschaffungsweg"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "beschaffungsweg_id",
+        "lastRead": "2026-05-14T22:48:39.886000000+00:00",
+        "readCount": 36
+      },
+      {
+        "id": 80,
+        "name": "funktionswechsel_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Funktionswechsel"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "funktionswechsel_id",
+        "lastRead": "2026-05-20T17:40:18.273000000+00:00",
+        "readCount": 25
+      },
+      {
+        "id": 2,
+        "name": "graphversion_tag_unique",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "GraphVersion"
+        ],
+        "properties": [
+          "tag"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "graphversion_tag_unique",
+        "lastRead": "2026-05-13T15:08:07.316000000+00:00",
+        "readCount": 2
+      },
+      {
+        "id": 26,
+        "name": "huerde_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Huerde"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "huerde_id",
+        "lastRead": "2026-05-14T22:48:40.042000000+00:00",
+        "readCount": 112
+      },
+      {
+        "id": 28,
+        "name": "huerdekategorie_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "HuerdeKategorie"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "huerdekategorie_id",
+        "lastRead": "2026-05-14T22:48:40.075000000+00:00",
+        "readCount": 40
+      },
+      {
+        "id": 1,
+        "name": "index_1b9dcc97",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "LOOKUP",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": null,
+        "properties": null,
+        "indexProvider": "token-lookup-1.0",
+        "owningConstraint": null,
+        "lastRead": "2026-05-31T12:55:17.644000000+00:00",
+        "readCount": 26623
+      },
+      {
+        "id": 0,
+        "name": "index_460996c0",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "LOOKUP",
+        "entityType": "NODE",
+        "labelsOrTypes": null,
+        "properties": null,
+        "indexProvider": "token-lookup-1.0",
+        "owningConstraint": null,
+        "lastRead": "2026-05-31T17:50:50.086000000+00:00",
+        "readCount": 170572
+      },
+      {
+        "id": 42,
+        "name": "land_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Land"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "land_id",
+        "lastRead": "2026-05-31T12:58:46.659000000+00:00",
+        "readCount": 615
+      },
+      {
+        "id": 48,
+        "name": "leistungsanforderung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Leistungsanforderung"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "leistungsanforderung_id",
+        "lastRead": "2026-05-20T21:59:18.799000000+00:00",
+        "readCount": 87
+      },
+      {
+        "id": 60,
+        "name": "logistik_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Logistik"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "logistik_id",
+        "lastRead": "2026-05-14T22:48:40.153000000+00:00",
+        "readCount": 40
+      },
+      {
+        "id": 22,
+        "name": "material_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Material"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "material_id",
+        "lastRead": "2026-05-22T08:12:15.182000000+00:00",
+        "readCount": 546
+      },
+      {
+        "id": 24,
+        "name": "materialgruppe_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Materialgruppe"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "materialgruppe_id",
+        "lastRead": "2026-05-20T08:19:08.422000000+00:00",
+        "readCount": 42
+      },
+      {
+        "id": 62,
+        "name": "methode_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Methode"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "methode_id",
+        "lastRead": "2026-05-14T22:48:40.288000000+00:00",
+        "readCount": 52
+      },
+      {
+        "id": 50,
+        "name": "norm_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Norm"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "norm_id",
+        "lastRead": "2026-05-31T12:58:46.268000000+00:00",
+        "readCount": 605
+      },
+      {
+        "id": 38,
+        "name": "nutzung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Nutzung"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "nutzung_id",
+        "lastRead": "2026-05-14T22:48:40.342000000+00:00",
+        "readCount": 36
+      },
+      {
+        "id": 84,
+        "name": "programm_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Programm"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "programm_id",
+        "lastRead": "2026-05-21T11:10:18.014000000+00:00",
+        "readCount": 131
+      },
+      {
+        "id": 44,
+        "name": "prozessphase_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Prozessphase"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "prozessphase_id",
+        "lastRead": "2026-05-14T22:48:40.382000000+00:00",
+        "readCount": 40
+      },
+      {
+        "id": 46,
+        "name": "pruefungnachweis_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "PruefungNachweis"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "pruefungnachweis_id",
+        "lastRead": "2026-05-20T21:59:19.971000000+00:00",
+        "readCount": 144
+      },
+      {
+        "id": 10,
+        "name": "quelle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Quelle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "quelle_id",
+        "lastRead": "2026-05-28T15:26:00.050000000+00:00",
+        "readCount": 339586
+      },
+      {
+        "id": 66,
+        "name": "rechtlichebedingung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "RechtlicheBedingung"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rechtlichebedingung_id",
+        "lastRead": "2026-05-31T12:58:53.506000000+00:00",
+        "readCount": 196
+      },
+      {
+        "id": 92,
+        "name": "rel_aus_bauwerk_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "AUS_BAUWERK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_aus_bauwerk_id",
+        "lastRead": "2026-05-20T13:14:05.743000000+00:00",
+        "readCount": 1952
+      },
+      {
+        "id": 170,
+        "name": "rel_belegt_in_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "BELEGT_IN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_belegt_in_id",
+        "lastRead": "2026-05-28T11:01:55.339000000+00:00",
+        "readCount": 17722
+      },
+      {
+        "id": 160,
+        "name": "rel_beteiligt_an_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "BETEILIGT_AN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_beteiligt_an_id",
+        "lastRead": "2026-05-20T21:20:21.211000000+00:00",
+        "readCount": 3571
+      },
+      {
+        "id": 94,
+        "name": "rel_eingebaut_in_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "EINGEBAUT_IN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_eingebaut_in_id",
+        "lastRead": "2026-05-20T13:14:05.751000000+00:00",
+        "readCount": 2387
+      },
+      {
+        "id": 162,
+        "name": "rel_hat_akteurrolle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_AKTEURROLLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_akteurrolle_id",
+        "lastRead": "2026-05-28T11:01:55.763000000+00:00",
+        "readCount": 9983
+      },
+      {
+        "id": 164,
+        "name": "rel_hat_akteurtyp_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_AKTEURTYP"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_akteurtyp_id",
+        "lastRead": "2026-05-28T11:01:55.516000000+00:00",
+        "readCount": 4511
+      },
+      {
+        "id": 132,
+        "name": "rel_hat_aufbereitung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_AUFBEREITUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_aufbereitung_id",
+        "lastRead": "2026-05-20T08:20:51.585000000+00:00",
+        "readCount": 2820
+      },
+      {
+        "id": 102,
+        "name": "rel_hat_bauobjektklasse_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUOBJEKTKLASSE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_bauobjektklasse_id",
+        "lastRead": "2026-05-20T08:17:08.348000000+00:00",
+        "readCount": 1476
+      },
+      {
+        "id": 104,
+        "name": "rel_hat_bauobjektrolle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUOBJEKTROLLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_bauobjektrolle_id",
+        "lastRead": "2026-05-20T08:17:08.335000000+00:00",
+        "readCount": 1510
+      },
+      {
+        "id": 110,
+        "name": "rel_hat_bausystem_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUSYSTEM"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_bausystem_id",
+        "lastRead": "2026-05-19T16:10:03.996000000+00:00",
+        "readCount": 472
+      },
+      {
+        "id": 100,
+        "name": "rel_hat_bauteilebene_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUTEILEBENE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_bauteilebene_id",
+        "lastRead": "2026-05-20T08:20:51.606000000+00:00",
+        "readCount": 2178
+      },
+      {
+        "id": 98,
+        "name": "rel_hat_bauteiltyp_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUTEILTYP"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_bauteiltyp_id",
+        "lastRead": "2026-05-20T08:20:51.626000000+00:00",
+        "readCount": 4252
+      },
+      {
+        "id": 108,
+        "name": "rel_hat_bauweise_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BAUWEISE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_bauweise_id",
+        "lastRead": "2026-05-19T16:10:03.991000000+00:00",
+        "readCount": 929
+      },
+      {
+        "id": 134,
+        "name": "rel_hat_beschaffungsweg_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_BESCHAFFUNGSWEG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_beschaffungsweg_id",
+        "lastRead": "2026-05-20T08:20:51.571000000+00:00",
+        "readCount": 1683
+      },
+      {
+        "id": 118,
+        "name": "rel_hat_funktionswechsel_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_FUNKTIONSWECHSEL"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_funktionswechsel_id",
+        "lastRead": "2026-05-20T13:16:10.918000000+00:00",
+        "readCount": 1419
+      },
+      {
+        "id": 156,
+        "name": "rel_hat_huerde_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_HUERDE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_huerde_id",
+        "lastRead": "2026-05-20T08:20:19.416000000+00:00",
+        "readCount": 6508
+      },
+      {
+        "id": 158,
+        "name": "rel_hat_huerdekategorie_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_HUERDEKATEGORIE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_huerdekategorie_id",
+        "lastRead": "2026-05-19T16:10:12.585000000+00:00",
+        "readCount": 1165
+      },
+      {
+        "id": 120,
+        "name": "rel_hat_intervention_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_INTERVENTION"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_intervention_id",
+        "lastRead": "2026-05-20T08:19:30.530000000+00:00",
+        "readCount": 1009
+      },
+      {
+        "id": 144,
+        "name": "rel_hat_leistungsanforderung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_LEISTUNGSANFORDERUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_leistungsanforderung_id",
+        "lastRead": "2026-05-20T08:20:51.658000000+00:00",
+        "readCount": 3573
+      },
+      {
+        "id": 138,
+        "name": "rel_hat_logistik_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_LOGISTIK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_logistik_id",
+        "lastRead": "2026-05-20T08:20:51.418000000+00:00",
+        "readCount": 2664
+      },
+      {
+        "id": 124,
+        "name": "rel_hat_materialgruppe_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_MATERIALGRUPPE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_materialgruppe_id",
+        "lastRead": "2026-05-20T17:33:46.798000000+00:00",
+        "readCount": 1973
+      },
+      {
+        "id": 128,
+        "name": "rel_hat_methode_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_METHODE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_methode_id",
+        "lastRead": "2026-05-20T08:19:30.539000000+00:00",
+        "readCount": 3590
+      },
+      {
+        "id": 114,
+        "name": "rel_hat_nutzung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_NUTZUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_nutzung_id",
+        "lastRead": "2026-05-20T08:19:30.470000000+00:00",
+        "readCount": 1507
+      },
+      {
+        "id": 126,
+        "name": "rel_hat_prozessphase_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_PROZESSPHASE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_prozessphase_id",
+        "lastRead": "2026-05-19T16:10:12.496000000+00:00",
+        "readCount": 4873
+      },
+      {
+        "id": 142,
+        "name": "rel_hat_pruefung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_PRUEFUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_pruefung_id",
+        "lastRead": "2026-05-20T08:20:51.013000000+00:00",
+        "readCount": 2351
+      },
+      {
+        "id": 148,
+        "name": "rel_hat_rechtliche_bedingung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_RECHTLICHE_BEDINGUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_rechtliche_bedingung_id",
+        "lastRead": "2026-05-19T16:09:56.718000000+00:00",
+        "readCount": 72
+      },
+      {
+        "id": 136,
+        "name": "rel_hat_ressourcenquelle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_RESSOURCENQUELLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_ressourcenquelle_id",
+        "lastRead": "2026-05-20T08:20:51.620000000+00:00",
+        "readCount": 2614
+      },
+      {
+        "id": 130,
+        "name": "rel_hat_rueckbauverfahren_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_RUECKBAUVERFAHREN"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_rueckbauverfahren_id",
+        "lastRead": "2026-05-20T08:20:51.275000000+00:00",
+        "readCount": 2085
+      },
+      {
+        "id": 150,
+        "name": "rel_hat_schadstoff_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_SCHADSTOFF"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_schadstoff_id",
+        "lastRead": "2026-05-20T08:20:50.912000000+00:00",
+        "readCount": 12
+      },
+      {
+        "id": 112,
+        "name": "rel_hat_status_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_STATUS"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_status_id",
+        "lastRead": "2026-05-20T21:10:26.949000000+00:00",
+        "readCount": 2668
+      },
+      {
+        "id": 106,
+        "name": "rel_hat_tragwerksprinzip_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_TRAGWERKSPRINZIP"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_tragwerksprinzip_id",
+        "lastRead": "2026-05-19T16:10:03.985000000+00:00",
+        "readCount": 502
+      },
+      {
+        "id": 140,
+        "name": "rel_hat_verbindungstechnik_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_VERBINDUNGSTECHNIK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_verbindungstechnik_id",
+        "lastRead": "2026-05-20T08:20:51.094000000+00:00",
+        "readCount": 732
+      },
+      {
+        "id": 116,
+        "name": "rel_hat_wiederverwendungsart_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_WIEDERVERWENDUNGSART"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_wiederverwendungsart_id",
+        "lastRead": "2026-05-20T08:20:51.638000000+00:00",
+        "readCount": 4249
+      },
+      {
+        "id": 154,
+        "name": "rel_hat_wirtschaftsaspekt_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_WIRTSCHAFTSASPEKT"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_wirtschaftsaspekt_id",
+        "lastRead": "2026-05-19T16:09:42.405000000+00:00",
+        "readCount": 75
+      },
+      {
+        "id": 152,
+        "name": "rel_hat_zertifizierung_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "HAT_ZERTIFIZIERUNG"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_hat_zertifizierung_id",
+        "lastRead": "2026-05-20T08:19:30.044000000+00:00",
+        "readCount": 61
+      },
+      {
+        "id": 168,
+        "name": "rel_liegt_in_land_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "LIEGT_IN_LAND"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_liegt_in_land_id",
+        "lastRead": "2026-05-28T11:01:55.394000000+00:00",
+        "readCount": 2262
+      },
+      {
+        "id": 166,
+        "name": "rel_liegt_in_stadt_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "LIEGT_IN_STADT"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_liegt_in_stadt_id",
+        "lastRead": "2026-05-20T08:17:20.699000000+00:00",
+        "readCount": 1789
+      },
+      {
+        "id": 90,
+        "name": "rel_nutzt_bauwerk_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_BAUWERK"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_nutzt_bauwerk_id",
+        "lastRead": "2026-05-20T08:20:12.898000000+00:00",
+        "readCount": 1214
+      },
+      {
+        "id": 122,
+        "name": "rel_nutzt_material_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_MATERIAL"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_nutzt_material_id",
+        "lastRead": "2026-05-20T12:39:46.982000000+00:00",
+        "readCount": 3451
+      },
+      {
+        "id": 174,
+        "name": "rel_nutzt_software_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_SOFTWARE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_nutzt_software_id",
+        "lastRead": "2026-05-20T21:11:10.389000000+00:00",
+        "readCount": 256
+      },
+      {
+        "id": 176,
+        "name": "rel_nutzt_tool_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "NUTZT_TOOL"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_nutzt_tool_id",
+        "lastRead": "2026-05-20T08:19:33.639000000+00:00",
+        "readCount": 100
+      },
+      {
+        "id": 146,
+        "name": "rel_referenziert_norm_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "REFERENZIERT_NORM"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_referenziert_norm_id",
+        "lastRead": "2026-05-21T07:18:07.387000000+00:00",
+        "readCount": 235
+      },
+      {
+        "id": 96,
+        "name": "rel_teil_von_kette_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "TEIL_VON_KETTE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_teil_von_kette_id",
+        "lastRead": "2026-05-20T13:14:05.759000000+00:00",
+        "readCount": 1642
+      },
+      {
+        "id": 178,
+        "name": "rel_teil_von_programm_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "TEIL_VON_PROGRAMM"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_teil_von_programm_id",
+        "lastRead": "2026-05-20T08:17:20.720000000+00:00",
+        "readCount": 252
+      },
+      {
+        "id": 172,
+        "name": "rel_zitiert_quelle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "RELATIONSHIP",
+        "labelsOrTypes": [
+          "ZITIERT_QUELLE"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rel_zitiert_quelle_id",
+        "lastRead": "2026-05-19T19:39:30.139000000+00:00",
+        "readCount": 630
+      },
+      {
+        "id": 58,
+        "name": "ressourcenquelle_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Ressourcenquelle"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "ressourcenquelle_id",
+        "lastRead": "2026-05-20T17:40:18.151000000+00:00",
+        "readCount": 52
+      },
+      {
+        "id": 54,
+        "name": "rueckbauverfahren_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Rueckbauverfahren"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "rueckbauverfahren_id",
+        "lastRead": "2026-05-14T22:48:40.520000000+00:00",
+        "readCount": 20
+      },
+      {
+        "id": 68,
+        "name": "schadstoff_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Schadstoff"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "schadstoff_id",
+        "lastRead": "2026-05-20T21:59:20.806000000+00:00",
+        "readCount": 27
+      },
+      {
+        "id": 86,
+        "name": "software_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Software"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "software_id",
+        "lastRead": "2026-05-20T21:11:10.223000000+00:00",
+        "readCount": 43
+      },
+      {
+        "id": 40,
+        "name": "stadt_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Stadt"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "stadt_id",
+        "lastRead": "2026-05-20T17:43:37.144000000+00:00",
+        "readCount": 400
+      },
+      {
+        "id": 36,
+        "name": "status_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Status"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "status_id",
+        "lastRead": "2026-05-21T07:59:36.739000000+00:00",
+        "readCount": 83
+      },
+      {
+        "id": 88,
+        "name": "tool_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Tool"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "tool_id",
+        "lastRead": "2026-05-21T10:55:33.940000000+00:00",
+        "readCount": 33
+      },
+      {
+        "id": 74,
+        "name": "tragwerksprinzip_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Tragwerksprinzip"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "tragwerksprinzip_id",
+        "lastRead": "2026-05-14T22:48:40.549000000+00:00",
+        "readCount": 16
+      },
+      {
+        "id": 64,
+        "name": "verbindungstechnik_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Verbindungstechnik"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "verbindungstechnik_id",
+        "lastRead": "2026-05-20T21:59:19.783000000+00:00",
+        "readCount": 33
+      },
+      {
+        "id": 34,
+        "name": "wiederverwendungsart_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "WiederverwendungsArt"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "wiederverwendungsart_id",
+        "lastRead": "2026-05-20T21:11:08.640000000+00:00",
+        "readCount": 55
+      },
+      {
+        "id": 12,
+        "name": "wiederverwendungskette_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Wiederverwendungskette"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "wiederverwendungskette_id",
+        "lastRead": "2026-05-20T13:14:00.421000000+00:00",
+        "readCount": 277
+      },
+      {
+        "id": 70,
+        "name": "wirtschaft_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "Wirtschaft"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "wirtschaft_id",
+        "lastRead": "2026-05-17T02:02:13.829000000+00:00",
+        "readCount": 36
+      },
+      {
+        "id": 72,
+        "name": "zertifizierungbewertungssystem_id",
+        "state": "ONLINE",
+        "populationPercent": 100.0,
+        "type": "RANGE",
+        "entityType": "NODE",
+        "labelsOrTypes": [
+          "ZertifizierungBewertungssystem"
+        ],
+        "properties": [
+          "id"
+        ],
+        "indexProvider": "range-1.0",
+        "owningConstraint": "zertifizierungbewertungssystem_id",
+        "lastRead": "2026-05-20T08:17:01.719000000+00:00",
+        "readCount": 30
+      }
+    ],
+    "node_counts_by_label": [
+      {
+        "label": "Akteur",
+        "node_count": 679
+      },
+      {
+        "label": "Akteurrolle",
+        "node_count": 24
+      },
+      {
+        "label": "Akteurtyp",
+        "node_count": 10
+      },
+      {
+        "label": "Akzeptanz",
+        "node_count": 7
+      },
+      {
+        "label": "Aufbereitungsverfahren",
+        "node_count": 62
+      },
+      {
+        "label": "BauaufgabeIntervention",
+        "node_count": 10
+      },
+      {
+        "label": "Bauobjektklasse",
+        "node_count": 8
+      },
+      {
+        "label": "Bauobjektrolle",
+        "node_count": 6
+      },
+      {
+        "label": "Bauproduktstatus",
+        "node_count": 15
+      },
+      {
+        "label": "Bausystem",
+        "node_count": 9
+      },
+      {
+        "label": "Bauteilebene",
+        "node_count": 6
+      },
+      {
+        "label": "Bauteilgruppe",
+        "node_count": 365
+      },
+      {
+        "label": "Bauteiltyp",
+        "node_count": 23
+      },
+      {
+        "label": "Bauweise",
+        "node_count": 6
+      },
+      {
+        "label": "Bauwerk",
+        "node_count": 185
+      },
+      {
+        "label": "BauwerkEra",
+        "node_count": 6
+      },
+      {
+        "label": "Beschaffungsweg",
+        "node_count": 10
+      },
+      {
+        "label": "DataIssue",
+        "node_count": 28905
+      },
+      {
+        "label": "Defekt",
+        "node_count": 10
+      },
+      {
+        "label": "DeprecatedType",
+        "node_count": 13
+      },
+      {
+        "label": "Dossier",
+        "node_count": 99
+      },
+      {
+        "label": "DossierEntityTarget",
+        "node_count": 2591
+      },
+      {
+        "label": "ExternalLink",
+        "node_count": 5017
+      },
+      {
+        "label": "Funktionswechsel",
+        "node_count": 6
+      },
+      {
+        "label": "Geltungsbereich",
+        "node_count": 6
+      },
+      {
+        "label": "Huerde",
+        "node_count": 28
+      },
+      {
+        "label": "HuerdeKategorie",
+        "node_count": 10
+      },
+      {
+        "label": "Kennwert",
+        "node_count": 256
+      },
+      {
+        "label": "LCAModule",
+        "node_count": 5
+      },
+      {
+        "label": "Land",
+        "node_count": 16
+      },
+      {
+        "label": "Layer",
+        "node_count": 6
+      },
+      {
+        "label": "Leistungsanforderung",
+        "node_count": 46
+      },
+      {
+        "label": "Logistik",
+        "node_count": 10
+      },
+      {
+        "label": "Marktmodell",
+        "node_count": 11
+      },
+      {
+        "label": "MatchingQualitaet",
+        "node_count": 9
+      },
+      {
+        "label": "Material",
+        "node_count": 26
+      },
+      {
+        "label": "Materialdepot",
+        "node_count": 22
+      },
+      {
+        "label": "Materialgruppe",
+        "node_count": 11
+      },
+      {
+        "label": "Methode",
+        "node_count": 13
+      },
+      {
+        "label": "Norm",
+        "node_count": 103
+      },
+      {
+        "label": "Nutzung",
+        "node_count": 9
+      },
+      {
+        "label": "OntologyAnchor",
+        "node_count": 2
+      },
+      {
+        "label": "Programm",
+        "node_count": 29
+      },
+      {
+        "label": "Projekt",
+        "node_count": 100
+      },
+      {
+        "label": "Prozessphase",
+        "node_count": 10
+      },
+      {
+        "label": "PruefungNachweis",
+        "node_count": 120
+      },
+      {
+        "label": "Quelle",
+        "node_count": 5332
+      },
+      {
+        "label": "RechtlicheBedingung",
+        "node_count": 16
+      },
+      {
+        "label": "ResearchDocument",
+        "node_count": 402
+      },
+      {
+        "label": "Ressourcenquelle",
+        "node_count": 16
+      },
+      {
+        "label": "ReuseRule",
+        "node_count": 20
+      },
+      {
+        "label": "Rueckbauverfahren",
+        "node_count": 5
+      },
+      {
+        "label": "Schadstoff",
+        "node_count": 9
+      },
+      {
+        "label": "SectionRef",
+        "node_count": 636
+      },
+      {
+        "label": "Software",
+        "node_count": 19
+      },
+      {
+        "label": "Stadt",
+        "node_count": 76
+      },
+      {
+        "label": "Status",
+        "node_count": 9
+      },
+      {
+        "label": "Tool",
+        "node_count": 8
+      },
+      {
+        "label": "Tragwerksprinzip",
+        "node_count": 4
+      },
+      {
+        "label": "Verbindungstechnik",
+        "node_count": 15
+      },
+      {
+        "label": "WiederverwendungsArt",
+        "node_count": 11
+      },
+      {
+        "label": "Wiederverwendungskette",
+        "node_count": 14
+      },
+      {
+        "label": "Wirtschaft",
+        "node_count": 12
+      },
+      {
+        "label": "Zertifizierungssystem",
+        "node_count": 8
+      },
+      {
+        "label": "ZustandsKlasse",
+        "node_count": 6
+      }
+    ]
+  }
+}

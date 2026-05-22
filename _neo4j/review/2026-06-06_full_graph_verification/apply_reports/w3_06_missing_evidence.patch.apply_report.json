@@ -1,0 +1,76 @@
+{
+  "confirmation_required": "APPLY w3_06_missing_evidence.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 14819
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-07T12:33:06.772990+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\w3_06_missing_evidence.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Materialdepot"
+        ],
+        "properties": {
+          "bauobjektklasse": [
+            "Gebaeudeteil"
+          ],
+          "id": "bw_elys_ehemaliges_getraenkelager_areal",
+          "name": "Ehemaliges Getränkelager",
+          "name_full": "Ehemaliges Getränkelager / Dachaufbauten auf dem ELYS-Areal",
+          "primary_source_url": "https://www.insitu.ch/",
+          "review_run": "post_ier_w3_2026_06_07",
+          "source_quote": "Plusieurs cas — Porteous à Genève, Viktoria à Berne, Neubad à Lucerne, Frank Areal à Bâle — montrent qu'une telle approche, malgré sa fragilité économique, ouvre des perspectives plus sûres, et plus solidaires.",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ],
+          "source_urls": [
+            "https://www.insitu.ch/"
+          ],
+          "status": "Realisiert"
+        }
+      },
+      "before": {
+        "labels": [
+          "Materialdepot"
+        ],
+        "properties": {
+          "bauobjektklasse": [
+            "Gebaeudeteil"
+          ],
+          "id": "bw_elys_ehemaliges_getraenkelager_areal",
+          "name": "Ehemaliges Getränkelager",
+          "name_full": "Ehemaliges Getränkelager / Dachaufbauten auf dem ELYS-Areal",
+          "primary_source_url": "https://elys-basel.ch/",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ],
+          "source_urls": [
+            "https://elys-basel.ch/"
+          ],
+          "status": "Realisiert"
+        }
+      },
+      "id": "bw_elys_ehemaliges_getraenkelager_areal",
+      "line": 1,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 1,
+    "would_update": 1
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "database": "mit-bestand",
+  "nodes": {
+    "bellastock": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Bellastock"
+    },
+    "Rotor": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Rotor"
+    },
+    "rotordc": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "RotorDC"
+    },
+    "opalis": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Opalis"
+    },
+    "prog_fcrbe": {
+      "exists": true,
+      "labels": [
+        "Programm"
+      ],
+      "name": "FCRBE"
+    },
+    "prog_preuse": {
+      "exists": true,
+      "labels": [
+        "Programm"
+      ],
+      "name": "PREUSE"
+    },
+    "cycle_up": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Cycle Up"
+    },
+    "backacia": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Backacia"
+    },
+    "mobius_reemploi": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Mobius Réemploi"
+    },
+    "mineka": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "raedificare": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "RAEDIFICARE"
+    },
+    "reavie": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "booster_du_reemploi": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "a4mt": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "ademe": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "cstb": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "CSTB"
+    },
+    "qualiconsult": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "maarten_gielen": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Maarten Gielen"
+    },
+    "brussels_environment": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Brussels Environment"
+    },
+    "city_of_utrecht": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "City of Utrecht"
+    },
+    "p_actlab": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_fabrique_du_clos": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_maison_des_canaux": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_pavillon_circulaire": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_pavillon_keller": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "prog_life_waste2build": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "prog_repar": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "prog_spirou": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    }
+  },
+  "seed_rels": [
+    {
+      "from_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_fcrbe",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_preuse",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "maarten_gielen",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__maarten_gielen",
+      "conf": null
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "maarten_gielen",
+      "rid": "r_maarten_gielen__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null
+    },
+    {
+      "from_id": "Rotor",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_preuse",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "bellastock",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__bellastock",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "brussels_environment",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_brussels_environment__BETEILIGT_AN__prog_fcrbe",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "brussels_environment",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_preuse",
+      "rid": "r_brussels_environment__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "city_of_utrecht",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_preuse",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "cstb",
+      "typ": "BETEILIGT_AN",
+      "to_id": "prog_fcrbe",
+      "rid": "r_cstb__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "maarten_gielen",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_maarten_gielen__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null
+    },
+    {
+      "from_id": "maarten_gielen",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__maarten_gielen",
+      "conf": null
+    },
+    {
+      "from_id": "maarten_gielen",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_maarten_gielen__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null
+    },
+    {
+      "from_id": "maarten_gielen",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__maarten_gielen",
+      "conf": null
+    },
+    {
+      "from_id": "maarten_gielen",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__maarten_gielen",
+      "conf": null
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": null
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "bellastock",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__bellastock",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "bellastock",
+      "rid": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "maarten_gielen",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__maarten_gielen",
+      "conf": null
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "maarten_gielen",
+      "rid": "r_maarten_gielen__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": null
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "opalis",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "rotordc",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_fcrbe",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "bellastock",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "brussels_environment",
+      "rid": "r_brussels_environment__BETEILIGT_AN__prog_fcrbe",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "city_of_utrecht",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "prog_fcrbe",
+      "typ": "BETEILIGT_AN",
+      "to_id": "cstb",
+      "rid": "r_cstb__BETEILIGT_AN__prog_fcrbe",
+      "conf": null
+    },
+    {
+      "from_id": "prog_preuse",
+      "typ": "BETEILIGT_AN",
+      "to_id": "Rotor",
+      "rid": "r_Rotor__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_preuse",
+      "typ": "BETEILIGT_AN",
+      "to_id": "bellastock",
+      "rid": "r_bellastock__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_preuse",
+      "typ": "BETEILIGT_AN",
+      "to_id": "brussels_environment",
+      "rid": "r_brussels_environment__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "prog_preuse",
+      "typ": "BETEILIGT_AN",
+      "to_id": "city_of_utrecht",
+      "rid": "r_city_of_utrecht__BETEILIGT_AN__prog_preuse",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "Rotor",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "maarten_gielen",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__maarten_gielen",
+      "conf": null
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_rotordc__VERBUNDEN_MIT_AKTEUR__opalis",
+      "conf": "belegt"
+    },
+    {
+      "from_id": "rotordc",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "opalis",
+      "rid": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc",
+      "conf": "belegt"
+    }
+  ],
+  "bellastock_neighborhood": [],
+  "bellastock_verbunden": {
+    "neighbors": [
+      "opalis",
+      "hugo_topalov",
+      "sarah_westerfeld",
+      "frederic_denise"
+    ],
+    "degree": 4
+  },
+  "opalis_verbunden": {
+    "neighbors": [
+      "bellastock",
+      "Rotor",
+      "rotordc",
+      "maarten_gielen"
+    ],
+    "degree": 4
+  },
+  "fuzzy_actors": [
+    {
+      "id": "association_reavie",
+      "name": "Association Réavie"
+    },
+    {
+      "id": "backacia",
+      "name": "Backacia"
+    },
+    {
+      "id": "baticycle",
+      "name": "Bâticycle"
+    },
+    {
+      "id": "bellastock",
+      "name": "Bellastock"
+    },
+    {
+      "id": "cycle_up",
+      "name": "Cycle Up"
+    },
+    {
+      "id": "cycle_zero",
+      "name": "Cycle Zéro"
+    },
+    {
+      "id": "mobius_reemploi",
+      "name": "Mobius Réemploi"
+    },
+    {
+      "id": "raedificare",
+      "name": "RAEDIFICARE"
+    }
+  ]
+}

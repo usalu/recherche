@@ -1,0 +1,508 @@
+{
+  "confirmation_required": "APPLY classify_and_drop.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2670,
+    "relationships": 14948
+  },
+  "counts_after_expected": {
+    "nodes": 2670,
+    "relationships": 14948
+  },
+  "counts_before": {
+    "nodes": 2672,
+    "relationships": 14972
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-08-06T11:33:54.498684+00:00",
+  "patch": "_neo4j\\review\\2026-08-06_digital_barriers_taxonomy\\classify_and_drop.patch.jsonl",
+  "records": [
+    {
+      "from": "h_akzeptanzproblem",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_d6_adoptionswiderstand"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_akzeptanzproblem",
+          "name": "Akzeptanzproblem",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "social_perception",
+          "id": "h_akzeptanzproblem",
+          "name": "Akzeptanzproblem",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_akzeptanzproblem",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 2,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_aufbereitungsaufwand",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_h4_pruef_aufbereitungskapazitaet"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_aufbereitungsaufwand",
+          "name": "Aufbereitungsaufwand",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "economic_labour",
+          "id": "h_aufbereitungsaufwand",
+          "name": "Aufbereitungsaufwand",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_aufbereitungsaufwand",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 4,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_heterogenitaet_chargen",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_e5_unreife_reuse_maerkte"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_heterogenitaet_chargen",
+          "name": "Heterogenitaet_Chargen",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "technical_quality",
+          "id": "h_heterogenitaet_chargen",
+          "name": "Heterogenitaet_Chargen",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_heterogenitaet_chargen",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 6,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_mengenunsicherheit",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_g1_angebotssichtbarkeit"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_mengenunsicherheit",
+          "name": "Mengenunsicherheit",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "market_supply",
+          "id": "h_mengenunsicherheit",
+          "name": "Mengenunsicherheit",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_mengenunsicherheit",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 8,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_terminunsicherheit",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_g5_zeitliche_diskrepanz"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_terminunsicherheit",
+          "name": "Terminunsicherheit",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "organisational_timing",
+          "id": "h_terminunsicherheit",
+          "name": "Terminunsicherheit",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_terminunsicherheit",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 10,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_unkonventionelles_material",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_f6_technisches_risiko"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_unkonventionelles_material",
+          "name": "Unkonventionelles_Material",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "technical_quality",
+          "id": "h_unkonventionelles_material",
+          "name": "Unkonventionelles_Material",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_unkonventionelles_material",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 12,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_verfuegbarkeitsproblem",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_g4_verfuegbarkeitsunsicherheit"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_verfuegbarkeitsproblem",
+          "name": "Verfuegbarkeitsproblem",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "market_supply",
+          "id": "h_verfuegbarkeitsproblem",
+          "name": "Verfuegbarkeitsproblem",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_verfuegbarkeitsproblem",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 14,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_witterung_feuchte",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_h5_lagerfaehigkeit"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_witterung_feuchte",
+          "name": "Witterung_Feuchte",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "logistics_storage",
+          "id": "h_witterung_feuchte",
+          "name": "Witterung_Feuchte",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_witterung_feuchte",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 16,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "from": "h_fehlende_lagerflaeche",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "HAT_HUERDEKATEGORIE",
+      "status": "would_create_rel",
+      "to": "huek_h5_lagerfaehigkeit"
+    },
+    {
+      "after": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "id": "h_fehlende_lagerflaeche",
+          "name": "Fehlende_Lagerflaeche",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "logistics_storage",
+          "id": "h_fehlende_lagerflaeche",
+          "name": "Fehlende_Lagerflaeche",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_fehlende_lagerflaeche",
+      "keys_removed": [
+        "category"
+      ],
+      "line": 18,
+      "op": "remove_node_properties",
+      "status": "would_update"
+    },
+    {
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "planning_organisational",
+          "id": "h_entwurfsbindung",
+          "name": "Entwurfsbindung",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_entwurfsbindung",
+      "line": 19,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 28,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    },
+    {
+      "before": {
+        "labels": [
+          "Huerde"
+        ],
+        "properties": {
+          "category": "procurement_regulatory",
+          "id": "h_ausschreibungsproblem",
+          "name": "Ausschreibungsproblem",
+          "source_titles": [
+            "Rakhshan et al. 2020 systematic review"
+          ],
+          "source_urls": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC7472835/"
+          ]
+        }
+      },
+      "id": "h_ausschreibungsproblem",
+      "line": 20,
+      "op": "delete_node",
+      "rel_inbound_to_remove": 5,
+      "rel_outbound_to_remove": 0,
+      "status": "would_delete_node"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 20,
+    "would_create_rel": 9,
+    "would_delete_node": 2,
+    "would_update": 9
+  }
+}

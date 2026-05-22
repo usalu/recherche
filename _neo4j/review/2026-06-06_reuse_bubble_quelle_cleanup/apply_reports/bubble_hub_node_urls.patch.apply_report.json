@@ -1,0 +1,299 @@
+{
+  "confirmation_required": "APPLY bubble_hub_node_urls.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:21:42.813326+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_reuse_bubble_quelle_cleanup\\patches\\bubble_hub_node_urls.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "baubuero_in_situ",
+          "name": "baubüro in situ",
+          "primary_source_url": "https://www.insitu.ch/",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…",
+            "Grubenstrasse_29_Werkhof…",
+            "K118_Kopfbau_Halle_118_W…"
+          ],
+          "source_urls": [
+            "https://www.insitu.ch/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "baubuero_in_situ",
+          "name": "baubüro in situ",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…",
+            "Grubenstrasse_29_Werkhof…",
+            "K118_Kopfbau_Halle_118_W…"
+          ]
+        }
+      },
+      "id": "baubuero_in_situ",
+      "line": 1,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "zirkular",
+          "name": "Zirkular",
+          "primary_source_url": "https://zirkular.net/en/service/",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…",
+            "Grubenstrasse_29_Werkhof…",
+            "Juch_Areal_Recyclingzent…",
+            "K118_Kopfbau_Halle_118_W…",
+            "Kindergarten_Moeoeslistr…"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/service/",
+            "https://zirkular.net/en/project/building-k-118/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "zirkular",
+          "name": "Zirkular",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…",
+            "Grubenstrasse_29_Werkhof…",
+            "Juch_Areal_Recyclingzent…",
+            "K118_Kopfbau_Halle_118_W…",
+            "Kindergarten_Moeoeslistr…"
+          ]
+        }
+      },
+      "id": "zirkular",
+      "line": 2,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eth_zuerich",
+          "name": "ETH Zürich",
+          "primary_source_url": "https://ethz.ch/en.html",
+          "source_urls": [
+            "https://ethz.ch/en.html",
+            "https://swircular.ethz.ch/the-project.html"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eth_zuerich",
+          "name": "ETH Zürich"
+        }
+      },
+      "id": "eth_zuerich",
+      "line": 3,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "city_of_utrecht",
+          "name": "City of Utrecht",
+          "primary_source_url": "https://www.utrecht.nl/",
+          "source_urls": [
+            "https://www.utrecht.nl/",
+            "https://www.government.nl/topics/sustainable-economy/circular-economy-by-2050",
+            "https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "city_of_utrecht",
+          "name": "City of Utrecht"
+        }
+      },
+      "id": "city_of_utrecht",
+      "line": 4,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "madaster_epea",
+          "name": "Madaster / EPEA",
+          "primary_source_url": "https://madaster.de/",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ],
+          "source_urls": [
+            "https://madaster.de/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "madaster_epea",
+          "name": "Madaster / EPEA",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ]
+        }
+      },
+      "id": "madaster_epea",
+      "line": 5,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "brussels_environment",
+          "name": "Brussels Environment",
+          "primary_source_url": "https://environnement.brussels/",
+          "source_urls": [
+            "https://environnement.brussels/",
+            "https://opalis.eu/en/about"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "brussels_environment",
+          "name": "Brussels Environment"
+        }
+      },
+      "id": "brussels_environment",
+      "line": 6,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "immobel",
+          "name": "Immobel",
+          "primary_source_url": "https://www.immobelgroup.com/",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ],
+          "source_urls": [
+            "https://www.immobelgroup.com/",
+            "https://rotordb.org/en/projects/oxy-centre-monnaie"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "immobel",
+          "name": "Immobel",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ]
+        }
+      },
+      "id": "immobel",
+      "line": 7,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "whitewood",
+          "name": "Whitewood",
+          "primary_source_url": "https://www.whitewood.eu/",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ],
+          "source_urls": [
+            "https://www.whitewood.eu/",
+            "https://rotordb.org/en/projects/oxy-centre-monnaie"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "whitewood",
+          "name": "Whitewood",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ]
+        }
+      },
+      "id": "whitewood",
+      "line": 8,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 8,
+    "would_update": 8
+  }
+}

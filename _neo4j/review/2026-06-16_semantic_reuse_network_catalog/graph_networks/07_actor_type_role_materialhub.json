@@ -1,0 +1,4547 @@
+{
+  "id": "07_actor_type_role_materialhub",
+  "section": "7",
+  "title": "Materialhub actor type × role",
+  "cypher": "MATCH (a:Akteur)-[rt:HAT_AKTEURTYP]->(at:Akteurtyp),\n      (a)-[rr:HAT_AKTEURROLLE]->(ar:Akteurrolle)\nWHERE at.id = 'at_materialhub_bauteilboerse'\nRETURN a, rt, at, rr, ar;",
+  "status": "ok",
+  "row_count": 260,
+  "node_count": 62,
+  "relationship_count": 309,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:60",
+      "id": "la_ressourcerie_fribourg",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "La Ressourcerie Fribourg",
+        "id": "la_ressourcerie_fribourg",
+        "source_urls": [
+          "https://www.la-ressourcerie.ch/projets",
+          "https://www.la-ressourcerie.ch/les-mat%C3%A9riaux",
+          "https://www.la-ressourcerie.ch/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "id": "at_materialhub_bauteilboerse",
+      "labels": [
+        "Akteurtyp"
+      ],
+      "properties": {
+        "name": "Materialhub_Bauteilboerse",
+        "id": "at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "id": "ar_materialbroker",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "name": "Materialbroker / Reuse-Marketplace-Betreiber",
+        "id": "ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "id": "ar_materiallieferung_markt",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "aliases": [
+          "Materiallieferant"
+        ],
+        "name": "Materiallieferung_Markt",
+        "id": "ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "id": "ar_software_digitalisierung",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "name": "Software_Digitalisierung",
+        "id": "ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "id": "bauteilkatalog_immobilien_basel_stadt",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Immobilien Basel-Stadt Bauteilkatalog zur Wiederverwendung",
+          "Bauteile IBS project information",
+          "Bauteile IBS component catalogue",
+          "Bauteile IBS Bauteilminen",
+          "Bauteile IBS contact and imprint"
+        ],
+        "name": "Bauteilkatalog Immobilien Basel-Stadt",
+        "id": "bauteilkatalog_immobilien_basel_stadt",
+        "source_urls": [
+          "https://bauteile-ibs.ch/",
+          "https://bauteile-ibs.ch/info",
+          "https://bauteile-ibs.ch/components",
+          "https://bauteile-ibs.ch/componentsmine",
+          "https://bauteile-ibs.ch/contact"
+        ],
+        "primary_source_url": "https://bauteile-ibs.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "id": "ar_aufbereitung_refurbishment",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "name": "Aufbereitung_Refurbishment",
+        "id": "ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4442",
+      "id": "ar_forschung_dokumentation",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "name": "Forschung_Dokumentation",
+        "id": "ar_forschung_dokumentation"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "id": "ar_rueckbau_bauteilernte_logistik",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "aliases": [
+          "Rueckbau_Demontage"
+        ],
+        "name": "Rueckbau_Bauteilernte_Logistik",
+        "id": "ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "id": "ar_reuse_zirkularitaetsberatung",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "aliases": [
+          "Reuse_Beratung",
+          "ar_reuse_beratung"
+        ],
+        "name": "Reuse_Zirkularitaetsberatung",
+        "id": "ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "id": "baumab_kassel",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "BauMaB Kassel homepage",
+          "BauMaB Kassel offers",
+          "BauMaB Kassel buy workflow",
+          "BauMaB Kassel sell workflow",
+          "BauMaB Kassel imprint"
+        ],
+        "name": "BauMaB Kassel / Bauteilbörse Kassel",
+        "id": "baumab_kassel",
+        "source_urls": [
+          "https://baumab-kassel.de/"
+        ],
+        "primary_source_url": "https://baumab-kassel.de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "id": "ar_bildung_wissenstransfer",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "name": "Bildung_Wissenstransfer",
+        "id": "ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "id": "zirkulie_bauteilboerse_triesen",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ZirkuLIE centre and Bauteilboerse",
+          "ZirkuLIE webshop",
+          "ZirkuLIE window offers",
+          "ZirkuLIE door offers",
+          "ZirkuLIE imprint"
+        ],
+        "name": "ZirkuLIE Bauteilbörse Triesen",
+        "id": "zirkulie_bauteilboerse_triesen",
+        "source_urls": [
+          "https://www.zirkulie.net/zentrum-fuer-zirkulaeres-bauen",
+          "https://shop.zirkulie.net/",
+          "https://shop.zirkulie.net/produkt-kategorie/gebaeudehuelle-2/fenster-gebaeudehuelle-2/",
+          "https://shop.zirkulie.net/produkt-kategorie/innenausbau-2/tuere-innenausbau-2/",
+          "https://www.zirkulie.net/impressum"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2073",
+      "id": "ressourcerie_lausanne_materiuum_ruul",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Ressourcerie Lausanne / Matériuum / R-UUL",
+        "id": "ressourcerie_lausanne_materiuum_ruul",
+        "source_urls": [
+          "https://materiuum.ch/ressourcerie-lausanne-magasin-shop/",
+          "https://materiuum.ch/boutique/",
+          "https://materiuum.ch/deconstruction-et-valorisation/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "id": "gebruiktebouwmaterialen",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "gebruiktebouwmaterialen-gbm",
+          "Chiro_d_Itterbeek_Dilbee…"
+        ],
+        "name": "Gebruiktebouwmaterialen",
+        "id": "gebruiktebouwmaterialen",
+        "source_urls": [
+          "https://gebruiktebouwmaterialen.com/",
+          "https://gebruiktebouwmaterialen.com/over-ons",
+          "https://gebruiktebouwmaterialen.com/assortiment.html",
+          "https://madaster.com/inspiration/madaster-and-gebruiktebouwmaterialen-com-collaborate-on-the-reuse-of-building-materials"
+        ],
+        "primary_source_url": "https://gebruiktebouwmaterialen.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "id": "bauteilladen_winterthur",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilladen-winterthur",
+          "Grubenstrasse_29_Werkhof…"
+        ],
+        "name": "Bauteilladen Winterthur",
+        "id": "bauteilladen_winterthur",
+        "source_urls": [
+          "https://bauteilladen.ch/"
+        ],
+        "primary_source_url": "https://bauteilladen.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "id": "rotordc",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Rotor Deconstruction — Reuse of building materials made easy",
+          "Chiro_d_Itterbeek_Dilbee…",
+          "Maison_Vignette_Auderghe…",
+          "Multi_Brussels_Reuse_in_…",
+          "rotordc"
+        ],
+        "name": "RotorDC",
+        "id": "rotordc",
+        "source_urls": [
+          "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72"
+        ],
+        "primary_source_url": "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6151",
+      "id": "ar_fachplanung_nachweis",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "aliases": [
+          "Pruefung_Qualitaetssicherung"
+        ],
+        "name": "Fachplanung_Nachweis",
+        "id": "ar_fachplanung_nachweis"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6157",
+      "id": "ar_betrieb_nutzung",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "aliases": [
+          "Betreiber_Nutzer"
+        ],
+        "name": "Betrieb_Nutzung",
+        "id": "ar_betrieb_nutzung"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "id": "concular",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "AWM_Muenster_Circular_Of…",
+          "Concular"
+        ],
+        "name": "Concular",
+        "id": "concular",
+        "source_urls": [
+          "https://concular.de/",
+          "https://concular.de/urban-mining/"
+        ],
+        "primary_source_url": "https://concular.de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6169",
+      "id": "ar_nachhaltigkeitsberatung",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "name": "Nachhaltigkeitsberatung",
+        "id": "ar_nachhaltigkeitsberatung"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "id": "baukarussell",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "baukarussell",
+          "BauKarussell",
+          "BauKarussell Projekte"
+        ],
+        "name": "BauKarussell",
+        "id": "baukarussell",
+        "source_urls": [
+          "https://www.baukarussell.at/projekte"
+        ],
+        "primary_source_url": "https://www.baukarussell.at/projekte"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4449",
+      "id": "ar_projektmanagement_koordination",
+      "labels": [
+        "Akteurrolle"
+      ],
+      "properties": {
+        "name": "Projektmanagement_Koordination",
+        "id": "ar_projektmanagement_koordination"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "id": "refair_bordeaux",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Collectif CANCAN - REFAIR project page",
+          "La Fab - Réemploi des matériaux: REFAIR launch and website",
+          "REFAIR - La démarche",
+          "La Fab - Future Base du Réemploi",
+          "REFAIR Bordeaux"
+        ],
+        "name": "REFAIR Bordeaux",
+        "id": "refair_bordeaux",
+        "source_urls": [
+          "https://www.collectifcancan.fr/project/refair/"
+        ],
+        "primary_source_url": "https://www.collectifcancan.fr/project/refair/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "id": "bauteilboerse_bremen",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilboerse-bremen"
+        ],
+        "name": "Bauteilbörse Bremen",
+        "id": "bauteilboerse_bremen",
+        "source_urls": [
+          "https://www.bauteilboerse-bremen.de/start",
+          "https://www.bremen.de/visitenkarte/bauteilboerse-bremen-344897"
+        ],
+        "primary_source_url": "https://www.bauteilboerse-bremen.de/start"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "id": "materiuum",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Matériuum Team"
+        ],
+        "name": "Matériuum",
+        "id": "materiuum",
+        "source_urls": [
+          "https://materiuum.ch/"
+        ],
+        "primary_source_url": "https://materiuum.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18156",
+      "id": "baumatpool_ch",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Baumatpool.ch",
+        "id": "baumatpool_ch",
+        "source_urls": [
+          "https://www.baumatpool.ch/de/",
+          "https://www.baumatpool.ch/de/content/impressum/",
+          "https://www.baumatpool.ch/de/content/faq/"
+        ],
+        "primary_source_url": "https://www.baumatpool.ch/de/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "id": "ggzatwork_laden2_bauteile_zug",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "GGZ@WORK Laden 2 Bauteile Zug",
+        "id": "ggzatwork_laden2_bauteile_zug",
+        "source_urls": [
+          "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+          "https://ggzatwork.ch/auftragskunden/demontage-montage",
+          "https://ggzatwork.ch/auftragskunden/raeumung-entsorgung"
+        ],
+        "primary_source_url": "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "id": "bauteilboerse_basel_overall",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilbörse Basel",
+        "id": "bauteilboerse_basel_overall",
+        "source_urls": [
+          "https://bauteilboerse-basel.ch/bauteile/",
+          "https://bauteilboerse-basel.ch/nachhaltigkeit/",
+          "https://bauteilboerse-basel.ch/",
+          "https://bauteilboerse-basel.ch/ueber-uns/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "id": "wick_reuse_roto_baumarkt",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Wick ReUse / ROTO Baumarkt",
+        "id": "wick_reuse_roto_baumarkt",
+        "source_urls": [
+          "https://wickreuse.ch/baumarkt/"
+        ],
+        "primary_source_url": "https://wickreuse.ch/baumarkt/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34835",
+      "id": "btvz_zuerichsee_oberland",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilvermittlung Zürichsee-Oberland",
+        "id": "btvz_zuerichsee_oberland",
+        "source_urls": [
+          "https://www.btvz.ch/angebote/",
+          "https://www.btvz.ch/so-funktioniert-es/",
+          "https://www.btvz.ch/portraet/",
+          "https://www.btvz.ch/suchliste/"
+        ],
+        "primary_source_url": "https://www.btvz.ch/angebote/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "id": "reuzi_ch",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "REUZI",
+        "id": "reuzi_ch",
+        "source_urls": [
+          "https://reuzi.ch/",
+          "https://reuzi.ch/agora/",
+          "https://www.immobilier.ch/fr/actualite/reuzi-ressource-les-chantiers-avec-du-reemploi-13814"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "id": "materiuum_geneve_ressourcerie",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Matériuum Genève Ressourcerie",
+        "id": "materiuum_geneve_ressourcerie",
+        "source_urls": [
+          "https://materiuum.ch/ressourcerie-espace-magasin-shop-geneve/",
+          "https://materiuum.ch/lassociation/",
+          "https://materiuum.ch/boutique/",
+          "https://materiuum.ch/deconstruction-et-valorisation/"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "id": "gruner_reuse_platform",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Gruner ReUse",
+          "Planen mit ReUse"
+        ],
+        "name": "Gruner ReUse",
+        "id": "gruner_reuse_platform",
+        "source_urls": [
+          "https://www.gruner-reuse.ch",
+          "https://www.gruner-reuse.ch/projekt",
+          "https://www.gruner-reuse.ch/produkte",
+          "https://www.gruner.ch/de/news/alt-wird-neu-zweites-leben-fuer-gebrauchte-bauteile-mit-gruner-reuse"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34840",
+      "id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "ReUse Recycling Center Riedtwil / wiederverwendung.ch",
+        "id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+        "source_urls": [
+          "https://www.wiederverwendung.ch/",
+          "https://shop.wiederverwendung.ch/de/434/gebrauchte-bauteile-occasion-bauteile",
+          "https://shop.wiederverwendung.ch/"
+        ],
+        "primary_source_url": "https://www.wiederverwendung.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "id": "bauteilverwertung_koeppel_klein",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilverwertung Köppel & Klein",
+        "id": "bauteilverwertung_koeppel_klein",
+        "source_urls": [
+          "https://www.bauteilverwertung.ch/",
+          "https://www.bauteilverwertung.ch/abbruch.html",
+          "https://www.bauteilverwertung.ch/verkauf.html"
+        ],
+        "primary_source_url": "https://www.bauteilverwertung.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "id": "archipel_sion_ressourcerie",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Archipel Sion Ressourcerie",
+        "id": "archipel_sion_ressourcerie",
+        "source_urls": [
+          "https://archipelsion.ch/ressourcerie/inventaire/",
+          "https://archipelsion.ch/",
+          "https://archipelsion.ch/evenements/"
+        ],
+        "primary_source_url": "https://archipelsion.ch/ressourcerie/inventaire/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Stiftung Chance BauTeile Zürich / Glattbrugg",
+        "id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+        "source_urls": [
+          "https://www.chance.ch/dienstleistungen/bauteile",
+          "https://www.chance.ch/dienstleistungen",
+          "https://www.chance.ch/produkte"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "id": "articonnex",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "articonnex"
+        ],
+        "name": "Articonnex",
+        "id": "articonnex",
+        "source_urls": [
+          "https://articonnex.com/",
+          "https://articonnex.com/collections/reemploi",
+          "https://www.jaimelesstartups.fr/articonnex-economie-circulaire-anti-gaspi-materieux-bricolage"
+        ],
+        "primary_source_url": "https://articonnex.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "id": "backacia",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "backacia"
+        ],
+        "name": "Backacia",
+        "id": "backacia",
+        "source_urls": [
+          "https://backacia.com/",
+          "https://opalis.eu/fr/fournisseurs/backacia"
+        ],
+        "primary_source_url": "https://backacia.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "id": "baticycle",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "baticycle"
+        ],
+        "name": "Bâticycle",
+        "id": "baticycle",
+        "source_urls": [
+          "https://baticycle.fr/"
+        ],
+        "primary_source_url": "https://baticycle.fr/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "id": "batiterre",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "batiterre"
+        ],
+        "name": "BatiTerre",
+        "id": "batiterre",
+        "source_urls": [
+          "https://www.batiterre.be/"
+        ],
+        "primary_source_url": "https://www.batiterre.be/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "id": "batrecup",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "batrecup"
+        ],
+        "name": "BatRecup",
+        "id": "batrecup",
+        "source_urls": [
+          "https://www.batrecup.com/",
+          "https://play.google.com/store/apps/details?id=com.batrecup",
+          "https://www.batrecup.com/batrecup-lappli-cest-parti"
+        ],
+        "primary_source_url": "https://www.batrecup.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "id": "building_spares_market",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "building-spares-market"
+        ],
+        "name": "Building Spares Market",
+        "id": "building_spares_market",
+        "source_urls": [
+          "https://buildingsparesmarket.co.uk/",
+          "https://buildingsparesmarket.co.uk/about",
+          "https://buildingsparesmarket.co.uk/sell-spare-and-second-hand-building-supplies-uk",
+          "https://buildingsparesmarket.co.uk/advert-category/general-building-materials"
+        ],
+        "primary_source_url": "https://buildingsparesmarket.co.uk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "id": "cornermat_retrival",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "cornermat-retrival"
+        ],
+        "name": "Cornermat / Retrival",
+        "id": "cornermat_retrival",
+        "source_urls": [
+          "https://www.cornermat.be/",
+          "https://www.cornermat.be/shop",
+          "https://advitam-material.be/nl/actor/cornermat"
+        ],
+        "primary_source_url": "https://www.cornermat.be/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "id": "cycle_up",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "cycle-up"
+        ],
+        "name": "Cycle Up",
+        "id": "cycle_up",
+        "source_urls": [
+          "https://opalis.eu/fr/fournisseurs/cycle",
+          "https://vb.nweurope.eu/media/21153/fcrbe_cas-cycle-up-final18oct2023_en.pdf",
+          "https://www.cycle-up.fr/",
+          "https://www.iledefrance.fr/tous-les-services/ma-region-pres-de-chez-moi/environnement/economie-circulaire-et-gestion-des-dechets/162815-creation-dun-atelier-de-reconditionnement-de-6000-sanitaires-par-et-dautres-materiaux-de-reemploi-pour-cycle"
+        ],
+        "primary_source_url": "https://opalis.eu/fr/fournisseurs/cycle"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "id": "cycle_zero",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "cycle-zero"
+        ],
+        "name": "Cycle Zéro",
+        "id": "cycle_zero",
+        "source_urls": [
+          "https://cyclezero.fr/",
+          "https://play.google.com/store/apps/details?id=com.cycle0.cycle0app",
+          "https://apps.apple.com/fr/app/cycle-z%C3%A9ro/id6443607769"
+        ],
+        "primary_source_url": "https://cyclezero.fr/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "id": "enviromate",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "enviromate"
+        ],
+        "name": "Enviromate",
+        "id": "enviromate",
+        "source_urls": [
+          "https://www.enviromate.co.uk/"
+        ],
+        "primary_source_url": "https://www.enviromate.co.uk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "id": "genbyg",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "genbyg"
+        ],
+        "name": "Genbyg",
+        "id": "genbyg",
+        "source_urls": [
+          "https://genbyg.dk/"
+        ],
+        "primary_source_url": "https://genbyg.dk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "id": "insert_marketplace",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "insert-marketplace"
+        ],
+        "name": "Insert Marketplace",
+        "id": "insert_marketplace",
+        "source_urls": [
+          "https://www.insert.nl/",
+          "https://www.insert.nl/producten/insert-marktplaats/"
+        ],
+        "primary_source_url": "https://www.insert.nl/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "id": "material_index",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "material-index"
+        ],
+        "name": "Material Index",
+        "id": "material_index",
+        "source_urls": [
+          "https://material-index.co.uk/"
+        ],
+        "primary_source_url": "https://material-index.co.uk/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "id": "materialenbank_leuven_atelier_circuler",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "materialenbank-leuven-atelier-circuler"
+        ],
+        "name": "Materialenbank Leuven / Atelier Circuler",
+        "id": "materialenbank_leuven_atelier_circuler",
+        "source_urls": [
+          "https://ateliercirculer.be/materialenbank",
+          "https://ateliercirculer.be/",
+          "https://ateliercirculer.be/materialenbank/catalogus",
+          "https://www.vvsg.be/kennis/praktijken/praktijkendatabank/materialenbank-leuven",
+          "https://pers.leuven.be/de-leuvense-materialenbank-redt-470-ton-materialen-in-2025-recordjaar-voor-circulaire-economie"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "id": "materialrest24",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "ier_a1_2026_06_06",
+        "source_titles": [
+          "materialrest24"
+        ],
+        "name": "Materialrest24",
+        "id": "materialrest24",
+        "source_urls": [
+          "https://www.handwerk-magazin.de/materialrest24de-restbestaende-clever-verwerten-183318",
+          "https://nachhaltiges-handwerk.de/gute-beispiele/materialrest24",
+          "https://www.instagram.com/materialrest24.de"
+        ],
+        "primary_source_url": "https://www.handwerk-magazin.de/materialrest24de-restbestaende-clever-verwerten-183318",
+        "source_quote": "materialrest24.de:"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39535",
+      "id": "r_place",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "r-place"
+        ],
+        "name": "R-Place",
+        "id": "r_place",
+        "source_urls": [
+          "https://r-place.fr/"
+        ],
+        "primary_source_url": "https://r-place.fr/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "id": "re_store_harvestmap_vienna",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "aliases": [
+          "HarvestMAP"
+        ],
+        "source_titles": [
+          "re-store-harvestmap-vienna"
+        ],
+        "name": "re:store / HarvestMAP Vienna",
+        "id": "re_store_harvestmap_vienna",
+        "source_urls": [
+          "https://www.restore.or.at/",
+          "https://www.restore.or.at/impressum",
+          "https://www.materialnomaden.at/about"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "id": "reempro",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "reempro"
+        ],
+        "name": "Réempro",
+        "id": "reempro",
+        "source_urls": [
+          "https://www.reempro.com/marketplace",
+          "https://www.reempro.com/marketplace-reempro",
+          "https://www.reempro.com/on-parle-de-nous-sur-france-3"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "id": "salvoweb",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "salvoweb"
+        ],
+        "name": "SalvoWEB",
+        "id": "salvoweb",
+        "source_urls": [
+          "https://www.salvoweb.com/"
+        ],
+        "primary_source_url": "https://www.salvoweb.com/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "id": "salza",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "salza"
+        ],
+        "name": "Salza",
+        "id": "salza",
+        "source_urls": [
+          "https://salza.ch/bauteil-plattform"
+        ],
+        "primary_source_url": "https://salza.ch/bauteil-plattform"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "id": "skop_marketplace",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "skop-marketplace"
+        ],
+        "name": "Skop Marketplace",
+        "id": "skop_marketplace",
+        "source_urls": [
+          "https://marketplace.skop.app/",
+          "https://www.skop.app/marketplace-materiaux-reemploi",
+          "https://www.francenum.gouv.fr/activateurs/skop"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39544",
+      "id": "surplus_building_and_plumbing_materials",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "surplus-building-and-plumbing-materials"
+        ],
+        "name": "Surplus Building & Plumbing Materials",
+        "id": "surplus_building_and_plumbing_materials",
+        "source_urls": [
+          "https://surplusbuildingsupplies.co.uk/",
+          "https://surplusbuildingsupplies.co.uk/how-it-works",
+          "https://surplusbuildingsupplies.co.uk/building-materials.html"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "id": "sustainability_yard",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "sustainability-yard"
+        ],
+        "name": "Sustainability Yard",
+        "id": "sustainability_yard",
+        "source_urls": [
+          "https://sustainabilityyard.com/",
+          "https://sustainabilityyard.com/docs/sell-on-sustainability-yard",
+          "https://sustainabilityyard.com/docs/sell-on-sustainability-yard-business",
+          "https://materialreuseportal.com/Marketplace-Providers"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "id": "useagain_bauteilclick",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "useagain-bauteilclick"
+        ],
+        "name": "useagain / Bauteilclick",
+        "id": "useagain_bauteilclick",
+        "source_urls": [
+          "https://library-of-reuse.ch/pioneers/useagain",
+          "https://www.useagain.ch/de/"
+        ],
+        "primary_source_url": "https://library-of-reuse.ch/pioneers/useagain"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699857980",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:60",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "la_ressourcerie_fribourg",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_la_ressourcerie_fribourg__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188230204",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:60",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "la_ressourcerie_fribourg",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_la_ressourcerie_fribourg__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001915452",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:60",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "la_ressourcerie_fribourg",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_la_ressourcerie_fribourg__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815600700",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:60",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "la_ressourcerie_fribourg",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_la_ressourcerie_fribourg__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699858814",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188231038",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1166534558070342526",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256657278",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4442",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "ar_forschung_dokumentation",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_forschung_dokumentation"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629286782",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001916286",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958442972030",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815601534",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "bauteilkatalog_immobilien_basel_stadt",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_bauteilkatalog_immobilien_basel_stadt__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699858826",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "baumab_kassel",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baumab_kassel__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188231050",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "baumab_kassel",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baumab_kassel__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256657290",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "baumab_kassel",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_baumab_kassel__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629286794",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "baumab_kassel",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_baumab_kassel__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001916298",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "baumab_kassel",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baumab_kassel__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958442972042",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "baumab_kassel",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_baumab_kassel__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1166534558070342538",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "baumab_kassel",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baumab_kassel__HAT_AKTEURROLLE__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815601546",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:906",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "baumab_kassel",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_baumab_kassel__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699858834",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "zirkulie_bauteilboerse_triesen",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188231058",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "zirkulie_bauteilboerse_triesen",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001916306",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "zirkulie_bauteilboerse_triesen",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629286802",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "zirkulie_bauteilboerse_triesen",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.4,
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958442972050",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "zirkulie_bauteilboerse_triesen",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_AKTEURROLLE__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815601554",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:914",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "zirkulie_bauteilboerse_triesen",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_zirkulie_bauteilboerse_triesen__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699859993",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2073",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "ressourcerie_lausanne_materiuum_ruul",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_ressourcerie_lausanne_materiuum_ruul__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188232217",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2073",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "ressourcerie_lausanne_materiuum_ruul",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_ressourcerie_lausanne_materiuum_ruul__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001917465",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2073",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "ressourcerie_lausanne_materiuum_ruul",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_ressourcerie_lausanne_materiuum_ruul__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815602713",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2073",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "ressourcerie_lausanne_materiuum_ruul",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_ressourcerie_lausanne_materiuum_ruul__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699862792",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "gebruiktebouwmaterialen",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_gebruiktebouwmaterialen__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256661256",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "gebruiktebouwmaterialen",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_gebruiktebouwmaterialen__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815605512",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "gebruiktebouwmaterialen",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_gebruiktebouwmaterialen__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6926638481477212170",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "gebruiktebouwmaterialen",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_gebruiktebouwmaterialen__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629290760",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "gebruiktebouwmaterialen",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "id": "r_gebruiktebouwmaterialen__hat_akteurrolle__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001920264",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4872",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "gebruiktebouwmaterialen",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_gebruiktebouwmaterialen__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699862985",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_bauteilladen_winterthur__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001920457",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_bauteilladen_winterthur__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6944652879986694154",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_bauteilladen_winterthur__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629290953",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_bauteilladen_winterthur__hat_akteurrolle__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815605705",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_bauteilladen_winterthur__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699864452",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "rotordc",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_rotordc__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1166534558070348164",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "rotordc",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629292420",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "rotordc",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958442977668",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6151",
+      "start_id": "rotordc",
+      "end_id": "ar_fachplanung_nachweis",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_fachplanung_nachweis"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815607172",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "rotordc",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188236676",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "rotordc",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256662916",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "rotordc",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1168786357884033412",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6157",
+      "start_id": "rotordc",
+      "end_id": "ar_betrieb_nutzung",
+      "properties": {
+        "id": "r_rotordc__HAT_AKTEURROLLE__ar_betrieb_nutzung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3305",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6532",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "rotordc",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_rotordc__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157528458327234989",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "concular",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_concular__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919883082036150395",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "concular",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_concular__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815607213",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4442",
+      "start_id": "concular",
+      "end_id": "ar_forschung_dokumentation",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_concular__HAT_AKTEURROLLE__ar_forschung_dokumentation"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629292461",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6151",
+      "start_id": "concular",
+      "end_id": "ar_fachplanung_nachweis",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_concular__HAT_AKTEURROLLE__ar_fachplanung_nachweis"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188236717",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "concular",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_concular__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256662957",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "concular",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.6,
+        "id": [
+          "r_concular__HAT_AKTEURROLLE__ar_reuse_beratung",
+          "r_concular__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+        ]
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "concular",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924386681663526937",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6169",
+      "start_id": "concular",
+      "end_id": "ar_nachhaltigkeitsberatung",
+      "properties": {
+        "id": "r_concular__HAT_AKTEURROLLE__ar_nachhaltigkeitsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699864495",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "baukarussell",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_baukarussell__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3299",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "baukarussell",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_baukarussell__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2484",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "baukarussell",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_baukarussell__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958442977711",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4449",
+      "start_id": "baukarussell",
+      "end_id": "ar_projektmanagement_koordination",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_baukarussell__HAT_AKTEURROLLE__ar_projektmanagement_koordination"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001921967",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "baukarussell",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_baukarussell__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188236719",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "baukarussell",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_baukarussell__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815607215",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "baukarussell",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_baukarussell__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3300",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "baukarussell",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "id": "r_baukarussell__hat_akteurrolle__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6924386681663526927",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "baukarussell",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_baukarussell__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699864547",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "refair_bordeaux",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_refair_bordeaux__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:15",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_materialbroker",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:17",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188236771",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_refair_bordeaux__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815607267",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_refair_bordeaux__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6919883082036156430",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_refair_bordeaux__HAT_AKTEURROLLE__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:16",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6928890281290897433",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6627",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6169",
+      "start_id": "refair_bordeaux",
+      "end_id": "ar_nachhaltigkeitsberatung",
+      "properties": {
+        "confidence": 0.9,
+        "id": "r_refair_bordeaux__HAT_AKTEURROLLE__ar_nachhaltigkeitsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699864549",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_bauteilboerse_bremen__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3301",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_bauteilboerse_bremen__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3159",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_bauteilboerse_bremen__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3302",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_bauteilboerse_bremen__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188236773",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_bauteilboerse_bremen__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629292517",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_bauteilboerse_bremen__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815607269",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_bauteilboerse_bremen__HAT_AKTEURROLLE__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6926638481477212175",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6629",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "bauteilboerse_bremen",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_bauteilboerse_bremen__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699864551",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "materiuum",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_materiuum__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:19",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "materiuum",
+      "end_id": "ar_materialbroker",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:22",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "materiuum",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:21",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "materiuum",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188236775",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "materiuum",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_materiuum__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815607271",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "materiuum",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_materiuum__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629292519",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "materiuum",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_materiuum__HAT_AKTEURROLLE__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:20",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "materiuum",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699876076",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18156",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "baumatpool_ch",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_baumatpool_ch__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188248300",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18156",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "baumatpool_ch",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_baumatpool_ch__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815618796",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18156",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "baumatpool_ch",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_baumatpool_ch__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001933548",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:18156",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "baumatpool_ch",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_baumatpool_ch__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699886146",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188258370",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815628866",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001943618",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629314114",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958442999362",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256684610",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:28226",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "ggzatwork_laden2_bauteile_zug",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_ggzatwork_laden2_bauteile_zug__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892753",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_bauteilboerse_basel_overall__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264977",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_bauteilboerse_basel_overall__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950225",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_bauteilboerse_basel_overall__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635473",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_bauteilboerse_basel_overall__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892754",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264978",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635474",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950226",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629320722",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443005970",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256691218",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34834",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "wick_reuse_roto_baumarkt",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_wick_reuse_roto_baumarkt__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892755",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34835",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "btvz_zuerichsee_oberland",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_btvz_zuerichsee_oberland__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264979",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34835",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "btvz_zuerichsee_oberland",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_btvz_zuerichsee_oberland__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635475",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34835",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "btvz_zuerichsee_oberland",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_btvz_zuerichsee_oberland__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950227",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34835",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "btvz_zuerichsee_oberland",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_btvz_zuerichsee_oberland__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892756",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "reuzi_ch",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_reuzi_ch__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264980",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "reuzi_ch",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_reuzi_ch__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635476",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "reuzi_ch",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_reuzi_ch__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950228",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "reuzi_ch",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_reuzi_ch__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892757",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264981",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629320725",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635477",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443005973",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256691221",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950229",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34837",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "materiuum_geneve_ressourcerie",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_materiuum_geneve_ressourcerie__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892758",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_gruner_reuse_platform__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264982",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_gruner_reuse_platform__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629320726",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6151",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "ar_fachplanung_nachweis",
+      "properties": {
+        "confidence": 0.6
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443005974",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "confidence": 0.6
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635478",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_gruner_reuse_platform__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256691222",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.6
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950230",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "gruner_reuse_platform",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_gruner_reuse_platform__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892760",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34840",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_hiltbrunner_reuse_riedtwil_wiederverwendung__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264984",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34840",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_hiltbrunner_reuse_riedtwil_wiederverwendung__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950232",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34840",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_hiltbrunner_reuse_riedtwil_wiederverwendung__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635480",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34840",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "hiltbrunner_reuse_riedtwil_wiederverwendung",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_hiltbrunner_reuse_riedtwil_wiederverwendung__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892761",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264985",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635481",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950233",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629320729",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443005977",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256691225",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "bauteilverwertung_koeppel_klein",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_bauteilverwertung_koeppel_klein__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699892762",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "archipel_sion_ressourcerie",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_archipel_sion_ressourcerie__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188264986",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "archipel_sion_ressourcerie",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_archipel_sion_ressourcerie__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001950234",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "archipel_sion_ressourcerie",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_archipel_sion_ressourcerie__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815635482",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "archipel_sion_ressourcerie",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_archipel_sion_ressourcerie__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699894886",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188267110",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815637606",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001952358",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629322854",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_AKTEURROLLE__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443008102",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256693350",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "stiftung_chance_bauteile_zuerich_glattbrugg",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_stiftung_chance_bauteile_zuerich_glattbrugg__HAT_AKTEURROLLE__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897437",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "articonnex",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_articonnex__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954909",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "articonnex",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_articonnex__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325405",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "articonnex",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_articonnex__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269661",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "articonnex",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_articonnex__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640157",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39517",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "articonnex",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_articonnex__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897438",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "backacia",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_backacia__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954910",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "backacia",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_backacia__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695902",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "backacia",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_backacia__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010654",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "backacia",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_backacia__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269662",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "backacia",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_backacia__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325406",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "backacia",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_backacia__hat_akteurrolle__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640158",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39518",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "backacia",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_backacia__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897439",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "baticycle",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_baticycle__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954911",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "baticycle",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_baticycle__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325407",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "baticycle",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_baticycle__hat_akteurrolle__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010655",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "baticycle",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_baticycle__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269663",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "baticycle",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_baticycle__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695903",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "baticycle",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_baticycle__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640159",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39519",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "baticycle",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_baticycle__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897440",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "batiterre",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_batiterre__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3295",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "batiterre",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_batiterre__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010656",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "batiterre",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_batiterre__hat_akteurrolle__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325408",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "batiterre",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_batiterre__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269664",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "batiterre",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_batiterre__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640160",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "batiterre",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_batiterre__hat_akteurrolle__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954912",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39520",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "batiterre",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_batiterre__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897441",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "batrecup",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_batrecup__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954913",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "batrecup",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_batrecup__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325409",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "batrecup",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_batrecup__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269665",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "batrecup",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_batrecup__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640161",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39521",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "batrecup",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_batrecup__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897442",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "building_spares_market",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_building_spares_market__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325410",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "building_spares_market",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_building_spares_market__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640162",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "building_spares_market",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_building_spares_market__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269666",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "building_spares_market",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_building_spares_market__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954914",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39522",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "building_spares_market",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_building_spares_market__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897443",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "cornermat_retrival",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_cornermat_retrival__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325411",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "cornermat_retrival",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_cornermat_retrival__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010659",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "cornermat_retrival",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_cornermat_retrival__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640163",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "cornermat_retrival",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_cornermat_retrival__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269667",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "cornermat_retrival",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_cornermat_retrival__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695907",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "cornermat_retrival",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_cornermat_retrival__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954915",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39523",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "cornermat_retrival",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_cornermat_retrival__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897444",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "cycle_up",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_cycle_up__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954916",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "cycle_up",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_cycle_up__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3213",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "cycle_up",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_cycle_up__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:23",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6151",
+      "start_id": "cycle_up",
+      "end_id": "ar_fachplanung_nachweis",
+      "properties": {
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes.",
+        "confidence": 0.4,
+        "metadata_sidecar_key": "rel:HAT_AKTEURROLLE:cycle_up->ar_fachplanung_nachweis",
+        "id": "r_cycle_up__HAT_AKTEURROLLE__ar_fachplanung_nachweis"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3026",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "cycle_up",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_cycle_up__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269668",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "cycle_up",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_cycle_up__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325412",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "cycle_up",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_cycle_up__hat_akteurrolle__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010660",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "cycle_up",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "id": "r_cycle_up__hat_akteurrolle__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640164",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39524",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "cycle_up",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_cycle_up__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897445",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "cycle_zero",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_cycle_zero__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010661",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "cycle_zero",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_cycle_zero__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325413",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "cycle_zero",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_cycle_zero__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269669",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "cycle_zero",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_cycle_zero__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640165",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "cycle_zero",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_cycle_zero__hat_akteurrolle__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954917",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39525",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "cycle_zero",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_cycle_zero__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897446",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "enviromate",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_enviromate__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954918",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "enviromate",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_enviromate__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325414",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "enviromate",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_enviromate__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269670",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "enviromate",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_enviromate__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640166",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39526",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "enviromate",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_enviromate__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897447",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "genbyg",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_genbyg__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010663",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "genbyg",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_genbyg__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640167",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "genbyg",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_genbyg__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269671",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "genbyg",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_genbyg__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325415",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "genbyg",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "id": "r_genbyg__hat_akteurrolle__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954919",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39527",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "genbyg",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_genbyg__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897449",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "insert_marketplace",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_insert_marketplace__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954921",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "insert_marketplace",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_insert_marketplace__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325417",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "insert_marketplace",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_insert_marketplace__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269673",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "insert_marketplace",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_insert_marketplace__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640169",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "insert_marketplace",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_insert_marketplace__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897451",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "material_index",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_material_index__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954923",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "material_index",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_material_index__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695915",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "material_index",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_material_index__hat_akteurrolle__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1166534558070381163",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4442",
+      "start_id": "material_index",
+      "end_id": "ar_forschung_dokumentation",
+      "properties": {
+        "id": "r_material_index__HAT_AKTEURROLLE__ar_forschung_dokumentation"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010667",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "material_index",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_material_index__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269675",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "material_index",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_material_index__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325419",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "material_index",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_material_index__hat_akteurrolle__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640171",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39531",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "material_index",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_material_index__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897453",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_materialenbank_leuven_atelier_circuler__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325421",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_materialenbank_leuven_atelier_circuler__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010669",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_materialenbank_leuven_atelier_circuler__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640173",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_materialenbank_leuven_atelier_circuler__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269677",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_materialenbank_leuven_atelier_circuler__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695917",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_materialenbank_leuven_atelier_circuler__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954925",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39533",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "materialenbank_leuven_atelier_circuler",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_materialenbank_leuven_atelier_circuler__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897454",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "materialrest24",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_materialrest24__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954926",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "materialrest24",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_materialrest24__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325422",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "materialrest24",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_materialrest24__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269678",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "materialrest24",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_materialrest24__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010670",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "materialrest24",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "id": "r_materialrest24__hat_akteurrolle__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640174",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39534",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "materialrest24",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_materialrest24__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897455",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39535",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "r_place",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_r_place__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954927",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39535",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "r_place",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_r_place__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269679",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39535",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "r_place",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_r_place__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640175",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39535",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "r_place",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_r_place__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897457",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_re_store_harvestmap_vienna__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325425",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_re_store_harvestmap_vienna__HAT_AKTEURROLLE__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010673",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_re_store_harvestmap_vienna__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:82",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4442",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_forschung_dokumentation",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_re_store_harvestmap_vienna__HAT_AKTEURROLLE__ar_forschung_dokumentation"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640177",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_re_store_harvestmap_vienna__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269681",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_re_store_harvestmap_vienna__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695921",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "confidence": 0.6,
+        "id": "r_re_store_harvestmap_vienna__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:87",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {}
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954929",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "re_store_harvestmap_vienna",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_re_store_harvestmap_vienna__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897458",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "reempro",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_reempro__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954930",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "reempro",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_reempro__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010674",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "reempro",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_reempro__HAT_AKTEURROLLE__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325426",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "reempro",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_reempro__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269682",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "reempro",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_reempro__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695922",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "reempro",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_reempro__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640178",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39538",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "reempro",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_reempro__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897461",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "salvoweb",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_salvoweb__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954933",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "salvoweb",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_salvoweb__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010677",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "salvoweb",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_salvoweb__hat_akteurrolle__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:2982",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4442",
+      "start_id": "salvoweb",
+      "end_id": "ar_forschung_dokumentation",
+      "properties": {
+        "id": "r_salvoweb__HAT_AKTEURROLLE__ar_forschung_dokumentation"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325429",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "salvoweb",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_salvoweb__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269685",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "salvoweb",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_salvoweb__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695925",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "salvoweb",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "id": "r_salvoweb__hat_akteurrolle__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640181",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "salvoweb",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_salvoweb__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155276658513582710",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "salza",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_salza__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954934",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "salza",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_salza__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010678",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "salza",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_salza__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269686",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "salza",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_salza__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325430",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "salza",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_salza__hat_akteurrolle__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695926",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6158",
+      "start_id": "salza",
+      "end_id": "ar_bildung_wissenstransfer",
+      "properties": {
+        "id": "r_salza__hat_akteurrolle__ar_bildung_wissenstransfer"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640182",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "salza",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_salza__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897463",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "skop_marketplace",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_skop_marketplace__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954935",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "skop_marketplace",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_skop_marketplace__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325431",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4436",
+      "start_id": "skop_marketplace",
+      "end_id": "ar_aufbereitung_refurbishment",
+      "properties": {
+        "id": "r_skop_marketplace__hat_akteurrolle__ar_aufbereitung_refurbishment"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162030958443010679",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "skop_marketplace",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_skop_marketplace__HAT_AKTEURROLLE__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269687",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "skop_marketplace",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_skop_marketplace__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1164282758256695927",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6155",
+      "start_id": "skop_marketplace",
+      "end_id": "ar_reuse_zirkularitaetsberatung",
+      "properties": {
+        "id": "r_skop_marketplace__HAT_AKTEURROLLE__ar_reuse_zirkularitaetsberatung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640183",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39543",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "skop_marketplace",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_skop_marketplace__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897464",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39544",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "surplus_building_and_plumbing_materials",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_surplus_building_and_plumbing_materials__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954936",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39544",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "surplus_building_and_plumbing_materials",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_surplus_building_and_plumbing_materials__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269688",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39544",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "surplus_building_and_plumbing_materials",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_surplus_building_and_plumbing_materials__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640184",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39544",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "surplus_building_and_plumbing_materials",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_surplus_building_and_plumbing_materials__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897465",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "sustainability_yard",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_sustainability_yard__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954937",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "sustainability_yard",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_sustainability_yard__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325433",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "sustainability_yard",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_sustainability_yard__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269689",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "sustainability_yard",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_sustainability_yard__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640185",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "sustainability_yard",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_sustainability_yard__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699897466",
+      "type": "HAT_AKTEURTYP",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4463",
+      "start_id": "useagain_bauteilclick",
+      "end_id": "at_materialhub_bauteilboerse",
+      "properties": {
+        "id": "r_useagain_bauteilclick__hat_akteurtyp__at_materialhub_bauteilboerse"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155275559001954938",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:123",
+      "start_id": "useagain_bauteilclick",
+      "end_id": "ar_materialbroker",
+      "properties": {
+        "id": "r_useagain_bauteilclick__hat_akteurrolle__ar_materialbroker"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1159779158629325434",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6153",
+      "start_id": "useagain_bauteilclick",
+      "end_id": "ar_rueckbau_bauteilernte_logistik",
+      "properties": {
+        "id": "r_useagain_bauteilclick__hat_akteurrolle__ar_rueckbau_bauteilernte_logistik"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153023759188269690",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6154",
+      "start_id": "useagain_bauteilclick",
+      "end_id": "ar_materiallieferung_markt",
+      "properties": {
+        "id": "r_useagain_bauteilclick__hat_akteurrolle__ar_materiallieferung_markt"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157527358815640186",
+      "type": "HAT_AKTEURROLLE",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6159",
+      "start_id": "useagain_bauteilclick",
+      "end_id": "ar_software_digitalisierung",
+      "properties": {
+        "id": "r_useagain_bauteilclick__hat_akteurrolle__ar_software_digitalisierung"
+      }
+    }
+  ]
+}

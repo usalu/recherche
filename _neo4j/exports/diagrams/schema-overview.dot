@@ -1,0 +1,163 @@
+// semio-appearance: light
+// semio-tokens: 93453c301839
+digraph recherche {
+  graph [ charset="UTF-8"
+         , size="32.31,22.59"
+         , margin=0.4
+         , fontname="Anta"
+         , rankdir="TB"
+         , nodesep=0.35, ranksep=0.75
+         , splines="true", concentrate=false, bgcolor="#F0ECDD"
+         , label="Schema-Übersicht — Labels und Relationstypen\nJede Label-zu-Label-Kante mit mindestens 40 Instanzen", labelloc="t", labeljust="l"
+         , fontsize=9.6, fontcolor="#001117"
+  ];
+  node [ shape="box", style="filled", fontname="Anta", fontsize=9.6, penwidth=0.75, margin="0.10,0.05" ];
+  edge [ fontname="Anta", fontsize=7.2, penwidth=0.75, arrowsize=0.6, arrowhead="vee", color="#7B827D" ];
+
+  n0 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Akteur</FONT></TD></TR><TR><TD ALIGN="LEFT">Akteur</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Akteur: Akteur" ];
+  n1 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Akteurrolle</FONT></TD></TR><TR><TD ALIGN="LEFT">Akteurrolle</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Akteurrolle: Akteurrolle" ];
+  n2 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteilgruppe</FONT></TD></TR><TR><TD ALIGN="LEFT">Bauteilgruppe</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteilgruppe: Bauteilgruppe" ];
+  n3 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Nachweisforderung</FONT></TD></TR><TR><TD ALIGN="LEFT">Nachweisforderung</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Nachweisforderung: Nachweisforderung" ];
+  n4 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Regulierungsfrage</FONT></TD></TR><TR><TD ALIGN="LEFT">Regulierungsfrage</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Regulierungsfrage: Regulierungsfrage" ];
+  n5 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Akteurtyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Akteurtyp</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Akteurtyp: Akteurtyp" ];
+  n6 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Prozessphase</FONT></TD></TR><TR><TD ALIGN="LEFT">Prozessphase</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Prozessphase: Prozessphase" ];
+  n7 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Beschaffungsweg</FONT></TD></TR><TR><TD ALIGN="LEFT">Beschaffungsweg</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Beschaffungsweg: Beschaffungsweg" ];
+  n8 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Bauteiltyp</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Bauteiltyp" ];
+  n9 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">Projekt</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: Projekt", penwidth=2.25 ];
+  n10 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Material</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Material" ];
+  n11 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Materialgruppe</FONT></TD></TR><TR><TD ALIGN="LEFT">Materialgruppe</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Materialgruppe: Materialgruppe" ];
+  n12 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Logistik</FONT></TD></TR><TR><TD ALIGN="LEFT">Logistik</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Logistik: Logistik" ];
+  n13 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Land</FONT></TD></TR><TR><TD ALIGN="LEFT">Land</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Land: Land" ];
+  n14 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Rueckbauverfahren</FONT></TD></TR><TR><TD ALIGN="LEFT">Rueckbauverfahren</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Rueckbauverfahren: Rueckbauverfahren" ];
+  n15 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Wiederverwendungsergebnis</FONT></TD></TR><TR><TD ALIGN="LEFT">Wiederverwendungse<BR ALIGN="LEFT"/>rgebnis</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Wiederverwendungsergebnis: Wiederverwendungsergebnis" ];
+  n16 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauwerk</FONT></TD></TR><TR><TD ALIGN="LEFT">Bauwerk</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauwerk: Bauwerk" ];
+  n17 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Ressourcenquelle</FONT></TD></TR><TR><TD ALIGN="LEFT">Ressourcenquelle</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Ressourcenquelle: Ressourcenquelle" ];
+  n18 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Kennwert</FONT></TD></TR><TR><TD ALIGN="LEFT">Kennwert</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Kennwert: Kennwert" ];
+  n19 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Aufbereitungsverfahren</FONT></TD></TR><TR><TD ALIGN="LEFT">Aufbereitungsverfa<BR ALIGN="LEFT"/>hren</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Aufbereitungsverfahren: Aufbereitungsverfahren" ];
+  n20 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauobjektrolle</FONT></TD></TR><TR><TD ALIGN="LEFT">Bauobjektrolle</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauobjektrolle: Bauobjektrolle" ];
+  n21 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Stadt</FONT></TD></TR><TR><TD ALIGN="LEFT">Stadt</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Stadt: Stadt" ];
+  n22 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Huerde</FONT></TD></TR><TR><TD ALIGN="LEFT">Huerde</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Huerde: Huerde" ];
+  n23 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Methode</FONT></TD></TR><TR><TD ALIGN="LEFT">Methode</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Methode: Methode" ];
+  n24 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">PruefungNachweis</FONT></TD></TR><TR><TD ALIGN="LEFT">PruefungNachweis</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="PruefungNachweis: PruefungNachweis" ];
+  n25 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Nutzung</FONT></TD></TR><TR><TD ALIGN="LEFT">Nutzung</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Nutzung: Nutzung" ];
+  n26 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">BauaufgabeIntervention</FONT></TD></TR><TR><TD ALIGN="LEFT">BauaufgabeInterven<BR ALIGN="LEFT"/>tion</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="BauaufgabeIntervention: BauaufgabeIntervention" ];
+  n27 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Verbindungstechnik</FONT></TD></TR><TR><TD ALIGN="LEFT">Verbindungstechnik</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Verbindungstechnik: Verbindungstechnik" ];
+  n28 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauproduktrecht</FONT></TD></TR><TR><TD ALIGN="LEFT">Bauproduktrecht</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauproduktrecht: Bauproduktrecht" ];
+  n29 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Geschaeftsmodell</FONT></TD></TR><TR><TD ALIGN="LEFT">Geschaeftsmodell</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Geschaeftsmodell: Geschaeftsmodell" ];
+  n30 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">ReuseRule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: ReuseRule" ];
+  n31 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Schadstoff</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Schadstoff" ];
+  n32 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Entwurfsmethodik</FONT></TD></TR><TR><TD ALIGN="LEFT">Entwurfsmethodik</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Entwurfsmethodik: Entwurfsmethodik" ];
+  n33 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Architekturergebnis</FONT></TD></TR><TR><TD ALIGN="LEFT">Architekturergebni<BR ALIGN="LEFT"/>s</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Architekturergebnis: Architekturergebnis" ];
+  n34 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Tragwerksrecht</FONT></TD></TR><TR><TD ALIGN="LEFT">Tragwerksrecht</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Tragwerksrecht: Tragwerksrecht" ];
+  n35 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauweise</FONT></TD></TR><TR><TD ALIGN="LEFT">Bauweise</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauweise: Bauweise" ];
+  n36 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseDokumentationsrecht</FONT></TD></TR><TR><TD ALIGN="LEFT">ReuseDokumentation<BR ALIGN="LEFT"/>srecht</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseDokumentationsrecht: ReuseDokumentationsrecht" ];
+  n37 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Programm</FONT></TD></TR><TR><TD ALIGN="LEFT">Programm</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Programm: Programm" ];
+
+  n0 -> n1 [ color="#7B827D", label="×1431", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n3 [ color="#7B827D", label="×955", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n4 [ color="#7B827D", label="×722", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n5 [ color="#7B827D", label="×680", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n6 [ color="#7B827D", label="×567", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n7 [ color="#7B827D", label="×468", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n8 [ color="#7B827D", label="×465", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n3 [ color="#7B827D", label="×397", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n10 [ color="#7B827D", label="×390", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n9 [ color="#7B827D", label="×377", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n11 [ color="#7B827D", label="×375", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n2 [ color="#7B827D", label="×360", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n12 [ color="#7B827D", label="×337", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n13 [ color="#7B827D", label="×327", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n4 [ color="#7B827D", label="×308", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n14 [ color="#7B827D", label="×305", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n15 [ color="#7B827D", label="×291", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n16 [ color="#7B827D", label="×267", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n17 [ color="#7B827D", label="×256", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n18 [ color="#7B827D", label="×255", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n19 [ color="#7B827D", label="×211", fontcolor="#7B827D", penwidth=2.25 ];
+  n16 -> n20 [ color="#7B827D", label="×199", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n8 [ color="#7B827D", label="×195", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n16 [ color="#7B827D", label="×192", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n16 [ color="#7B827D", label="×176", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n0 [ color="#7B827D", label="×154", fontcolor="#7B827D", penwidth=2.25 ];
+  n16 -> n21 [ color="#7B827D", label="×148", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n22 [ color="#7B827D", label="×144", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n23 [ color="#7B827D", label="×144", fontcolor="#7B827D", penwidth=2.25 ];
+  n24 -> n3 [ color="#7B827D", label="×140", fontcolor="#7B827D", penwidth=2.25 ];
+  n16 -> n13 [ color="#7B827D", label="×136", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n25 [ color="#7B827D", label="×135", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n26 [ color="#7B827D", label="×134", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n6 [ color="#7B827D", label="×112", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n27 [ color="#7B827D", label="×109", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n12 [ color="#7B827D", label="×97", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n22 [ color="#7B827D", label="×93", fontcolor="#7B827D", penwidth=2.25 ];
+  n28 -> n13 [ color="#7B827D", label="×92", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n10 [ color="#7B827D", label="×91", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n29 [ color="#7B827D", label="×90", fontcolor="#7B827D", penwidth=2.25 ];
+  n16 -> n25 [ color="#7B827D", label="×88", fontcolor="#7B827D", penwidth=2.25 ];
+  n30 -> n31 [ color="#7B827D", label="×88", fontcolor="#7B827D", penwidth=2.25 ];
+  n4 -> n3 [ color="#7B827D", label="×87", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n21 [ color="#7B827D", label="×81", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n13 [ color="#7B827D", label="×81", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n23 [ color="#7B827D", label="×80", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n32 [ color="#7B827D", label="×79", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n33 [ color="#7B827D", label="×79", fontcolor="#7B827D", penwidth=2.25 ];
+  n21 -> n13 [ color="#7B827D", label="×74", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n2 [ color="#7B827D", label="×69", fontcolor="#7B827D", penwidth=2.25 ];
+  n34 -> n13 [ color="#7B827D", label="×62", fontcolor="#7B827D", penwidth=2.25 ];
+  n9 -> n7 [ color="#7B827D", label="×60", fontcolor="#7B827D", penwidth=2.25 ];
+  n2 -> n35 [ color="#7B827D", label="×58", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n7 [ color="#7B827D", label="×57", fontcolor="#7B827D", penwidth=2.25 ];
+  n36 -> n13 [ color="#7B827D", label="×51", fontcolor="#7B827D", penwidth=2.25 ];
+  n10 -> n3 [ color="#7B827D", label="×47", fontcolor="#7B827D", penwidth=2.25 ];
+  n16 -> n35 [ color="#7B827D", label="×47", fontcolor="#7B827D", penwidth=2.25 ];
+  n3 -> n28 [ color="#7B827D", label="×45", fontcolor="#7B827D", penwidth=2.25 ];
+  n0 -> n37 [ color="#7B827D", label="×42", fontcolor="#7B827D", penwidth=2.25 ];
+
+  subgraph cluster_legend {
+    label=""; color="#7B827D"; penwidth=0.75; style="solid"; margin=0;
+    legend [ shape=none, margin=0, fillcolor="#F0ECDD", style="filled", fontname="Anta", label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD COLSPAN="2" ALIGN="LEFT" BGCOLOR="#C9C8BD"><FONT POINT-SIZE="7.2" COLOR="#001117">Verzeichnis der Arten</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Akteur</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Akteurrolle</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Akteurtyp</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Architekturergebnis</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Aufbereitungsverfahren</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">BauaufgabeIntervention</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauobjektrolle</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauproduktrecht</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauteilgruppe</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauteiltyp</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauweise</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauwerk</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Beschaffungsweg</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Entwurfsmethodik</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Geschaeftsmodell</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Huerde</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Kennwert</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Land</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Logistik</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Material</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Materialgruppe</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Methode</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Nachweisforderung</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Nutzung</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Programm</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Projekt</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Prozessphase</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">PruefungNachweis</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Regulierungsfrage</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Ressourcenquelle</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">ReuseDokumentationsrecht</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">ReuseRule</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Rueckbauverfahren</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Schadstoff</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Stadt</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Tragwerksrecht</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Verbindungstechnik</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Wiederverwendungsergebnis</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD COLSPAN="2" ALIGN="LEFT"><FONT FACE="Share Tech Mono" POINT-SIZE="7.2" COLOR="#7B827D">mit-bestand · 38 · 59 · 2026-08-05 18:31 UTC</FONT></TD></TR>
+    </TABLE>
+    > ];
+  }
+}

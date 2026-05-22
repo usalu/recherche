@@ -1,0 +1,88 @@
+{
+  "anchor_id": "bauteilnetz_deutschland",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://www.bauteilnetz.de/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "No information available in web extraction; use DBU/Baunetz Wissen secondary sources for role, not for new material claims."
+    },
+    {
+      "url": "https://www.dbu.de/projektbeispiele/das-bauteilnetz-deutschland/",
+      "http_status": null,
+      "first_party": false,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Bauteilnetz aims to return used components to construction; principle: windows, doors or radiators from demolition/conversion are secured, stored and offered via catalogues."
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.dbu.de/projektbeispiele/das-bauteilnetz-deutschland/"
+      ],
+      "evidence_quote": "The DBU description gives the principle: windows, doors or radiators from demolition/conversion are secured and stored until taken up by a buyer.",
+      "confidence": "unsicher",
+      "note": "Third-party project source; appropriate for Bauteilnetz historical scope, not for a current stock claim.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.dbu.de/projektbeispiele/das-bauteilnetz-deutschland/"
+      ],
+      "evidence_quote": "The DBU description gives the principle: windows, doors or radiators from demolition/conversion are secured and stored until taken up by a buyer.",
+      "confidence": "unsicher",
+      "note": "Third-party project source; appropriate for Bauteilnetz historical scope, not for a current stock claim.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.dbu.de/projektbeispiele/das-bauteilnetz-deutschland/"
+      ],
+      "evidence_quote": "The DBU description gives the principle: windows, doors or radiators from demolition/conversion are secured and stored until taken up by a buyer.",
+      "confidence": "unsicher",
+      "note": "Third-party project source; appropriate for Bauteilnetz historical scope, not for a current stock claim.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "first-party line-level material/category page",
+      "reason": "some useful evidence was from search extract or third-party source; keep manual review before automatic import"
+    }
+  ],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "bauteilnetz_deutschland",
+      "claim_type": "Material",
+      "target_id": "ALL_MATERIAL_IDS",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "DBU Bauteilnetz project",
+      "source_url": "https://www.dbu.de/projektbeispiele/das-bauteilnetz-deutschland/",
+      "source_line_ref": "",
+      "source_excerpt_short": "Fenster, Türen oder Heizkörper",
+      "rejection_reason": "Components are named, but no exact material family is named.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

@@ -1,0 +1,418 @@
+{
+  "summary": {
+    "generated_at": "2026-05-31",
+    "scope": "third deeper pass requested by user: focus on what material and bauteiltyp each anchor has; collect history/current sources",
+    "base_previous_zip": "/mnt/data/bauteilboersen_deep_enrichment_results.zip",
+    "anchors_total": 39,
+    "source_register_rows": 168,
+    "anchors_with_material": 30,
+    "anchors_with_bauteiltyp": 36,
+    "material_claims_total": 98,
+    "bauteiltyp_claims_total": 167,
+    "component_material_pair_hints_total": 23,
+    "belegt_material_claims": 45,
+    "belegt_bauteiltyp_claims": 82,
+    "important_caveat": "PruefungNachweis/Aufbereitung/Rueckbau target IDs still need live graph lookup; this rerun did not invent IDs. Material/Bauteiltyp IDs use the closed set from the brief.",
+    "files": [
+      "one *.enrichment.json per anchor",
+      "MATERIAL_BAUTEILTYP_MATRIX.csv",
+      "MATERIAL_BAUTEILTYP_MATRIX.md",
+      "HISTORY_AND_LIVE_SOURCE_REGISTER.csv",
+      "IMPORT_REVIEW_QUEUE.csv",
+      "GRAPH_IMPORT_CYPHER_REVIEW_ONLY.cypher",
+      "README.md"
+    ]
+  },
+  "anchors": [
+    {
+      "anchor_id": "articonnex",
+      "source_count": 3,
+      "materials": 2,
+      "materials_belegt": 0,
+      "bauteiltypen": 2,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "backacia",
+      "source_count": 5,
+      "materials": 2,
+      "materials_belegt": 1,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 3,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "baticycle",
+      "source_count": 3,
+      "materials": 2,
+      "materials_belegt": 0,
+      "bauteiltypen": 4,
+      "bauteiltypen_belegt": 1,
+      "pair_hints": 0,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "batiterre",
+      "source_count": 4,
+      "materials": 4,
+      "materials_belegt": 0,
+      "bauteiltypen": 4,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "batrecup",
+      "source_count": 6,
+      "materials": 2,
+      "materials_belegt": 0,
+      "bauteiltypen": 3,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "baukarussell",
+      "source_count": 5,
+      "materials": 6,
+      "materials_belegt": 5,
+      "bauteiltypen": 11,
+      "bauteiltypen_belegt": 10,
+      "pair_hints": 4,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "bauteilboerse_bremen",
+      "source_count": 5,
+      "materials": 5,
+      "materials_belegt": 2,
+      "bauteiltypen": 8,
+      "bauteiltypen_belegt": 4,
+      "pair_hints": 0,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "bauteilladen_winterthur",
+      "source_count": 4,
+      "materials": 3,
+      "materials_belegt": 0,
+      "bauteiltypen": 9,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "bauteilnetz_deutschland",
+      "source_count": 3,
+      "materials": 2,
+      "materials_belegt": 0,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "building_spares_market",
+      "source_count": 4,
+      "materials": 2,
+      "materials_belegt": 0,
+      "bauteiltypen": 3,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "cornermat_retrival",
+      "source_count": 6,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 1,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "cycle_up",
+      "source_count": 4,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 1,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "cycle_zero",
+      "source_count": 5,
+      "materials": 4,
+      "materials_belegt": 3,
+      "bauteiltypen": 6,
+      "bauteiltypen_belegt": 4,
+      "pair_hints": 4,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "enviromate",
+      "source_count": 3,
+      "materials": 4,
+      "materials_belegt": 0,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "gebruiktebouwmaterialen",
+      "source_count": 4,
+      "materials": 5,
+      "materials_belegt": 4,
+      "bauteiltypen": 6,
+      "bauteiltypen_belegt": 5,
+      "pair_hints": 2,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "genbyg",
+      "source_count": 3,
+      "materials": 3,
+      "materials_belegt": 1,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 4,
+      "pair_hints": 0,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "globechain",
+      "source_count": 4,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 1,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "insert_marketplace",
+      "source_count": 2,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 0,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "loopfront",
+      "source_count": 4,
+      "materials": 1,
+      "materials_belegt": 0,
+      "bauteiltypen": 2,
+      "bauteiltypen_belegt": 1,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "material_index",
+      "source_count": 5,
+      "materials": 4,
+      "materials_belegt": 3,
+      "bauteiltypen": 6,
+      "bauteiltypen_belegt": 6,
+      "pair_hints": 0,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "material_reuse_portal",
+      "source_count": 4,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 0,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "materialenbank_leuven_atelier_circuler",
+      "source_count": 6,
+      "materials": 4,
+      "materials_belegt": 3,
+      "bauteiltypen": 6,
+      "bauteiltypen_belegt": 3,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "materialrest24",
+      "source_count": 4,
+      "materials": 3,
+      "materials_belegt": 0,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "new_horizon",
+      "source_count": 5,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 0,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "r_place",
+      "source_count": 3,
+      "materials": 5,
+      "materials_belegt": 4,
+      "bauteiltypen": 7,
+      "bauteiltypen_belegt": 7,
+      "pair_hints": 0,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "raedificare",
+      "source_count": 4,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 1,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "re_store_harvestmap_vienna",
+      "source_count": 5,
+      "materials": 1,
+      "materials_belegt": 0,
+      "bauteiltypen": 1,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "reempro",
+      "source_count": 5,
+      "materials": 1,
+      "materials_belegt": 0,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 4,
+      "pair_hints": 0,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "resource_marktplaats",
+      "source_count": 2,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 1,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "reuse_and_trade",
+      "source_count": 3,
+      "materials": 2,
+      "materials_belegt": 0,
+      "bauteiltypen": 3,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "rotordc",
+      "source_count": 7,
+      "materials": 4,
+      "materials_belegt": 3,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 5,
+      "pair_hints": 3,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "salvoweb",
+      "source_count": 5,
+      "materials": 3,
+      "materials_belegt": 2,
+      "bauteiltypen": 3,
+      "bauteiltypen_belegt": 2,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "salza",
+      "source_count": 4,
+      "materials": 2,
+      "materials_belegt": 0,
+      "bauteiltypen": 8,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "skop_marketplace",
+      "source_count": 5,
+      "materials": 4,
+      "materials_belegt": 2,
+      "bauteiltypen": 5,
+      "bauteiltypen_belegt": 4,
+      "pair_hints": 3,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "software_restado",
+      "source_count": 7,
+      "materials": 5,
+      "materials_belegt": 4,
+      "bauteiltypen": 8,
+      "bauteiltypen_belegt": 7,
+      "pair_hints": 4,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "surplus_building_and_plumbing_materials",
+      "source_count": 3,
+      "materials": 6,
+      "materials_belegt": 3,
+      "bauteiltypen": 6,
+      "bauteiltypen_belegt": 5,
+      "pair_hints": 3,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "sustainability_yard",
+      "source_count": 4,
+      "materials": 3,
+      "materials_belegt": 2,
+      "bauteiltypen": 4,
+      "bauteiltypen_belegt": 2,
+      "pair_hints": 0,
+      "needs_review": true
+    },
+    {
+      "anchor_id": "useagain_bauteilclick",
+      "source_count": 5,
+      "materials": 4,
+      "materials_belegt": 3,
+      "bauteiltypen": 9,
+      "bauteiltypen_belegt": 5,
+      "pair_hints": 0,
+      "needs_review": false
+    },
+    {
+      "anchor_id": "warp_it",
+      "source_count": 5,
+      "materials": 0,
+      "materials_belegt": 0,
+      "bauteiltypen": 3,
+      "bauteiltypen_belegt": 0,
+      "pair_hints": 0,
+      "needs_review": true
+    }
+  ]
+}

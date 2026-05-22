@@ -1,0 +1,107 @@
+code	name_de	name_en	definition_de
+G	Angebot, Matching & Transaktionskoordination	Supply, matching, and transaction coordination	Hürden bei Sichtbarkeit von Angebot und Nachfrage, Matching und Koordination der Transaktion.
+G1	Angebotssichtbarkeit	Supply visibility	Verfügbare Bauteile sind auf der Plattform nicht oder unvollständig sichtbar.
+G1.1	Produkte nicht inventarisiert	Products not inventoried	Vorhandene Bauteile wurden nicht erfasst und erscheinen daher nicht im Angebot.
+G1.2	Listungen zu spät veröffentlicht	Listings published too late	Angebote werden erst veröffentlicht, wenn der Bedarf bereits gedeckt ist.
+G1.3	Künftige Verfügbarkeit nicht erfasst	Future availability not recorded	Erwartete spätere Verfügbarkeit von Bauteilen wird nicht dokumentiert.
+G1.4	Standort nicht erfasst	Location not recorded	Der Standort der angebotenen Bauteile ist nicht angegeben.
+G1.5	Menge nicht bestätigt	Quantity not confirmed	Die verfügbare Menge ist nicht bestätigt.
+G1.6	Verfügbarkeitsstatus nicht aktualisiert	Availability status not updated	Der Verfügbarkeitsstatus wird nicht auf aktuellem Stand gehalten.
+G2	Nachfragesichtbarkeit	Demand visibility	Der Bedarf der Projekte ist nicht sichtbar oder nicht ausreichend spezifiziert.
+G2.1	Projektanforderungen nicht veröffentlicht	Project requirements not published	Die Anforderungen eines Projekts werden nicht öffentlich gemacht.
+G2.2	Benötigte Mengen nicht spezifiziert	Required quantities not specified	Die benötigten Mengen sind nicht angegeben.
+G2.3	Maßtoleranzen nicht spezifiziert	Dimensional tolerances not specified	Zulässige Maßtoleranzen des Bedarfs sind nicht angegeben.
+G2.4	Technische Kriterien nicht spezifiziert	Technical criteria not specified	Technische Anforderungskriterien sind nicht angegeben.
+G2.5	Benötigte Termine nicht spezifiziert	Required dates not specified	Die benötigten Liefertermine sind nicht angegeben.
+G2.6	Entwurfsflexibilität nicht abgebildet	Design flexibility not represented	Der Spielraum des Entwurfs für Alternativen ist nicht abgebildet.
+G3	Kompatibilitäts-Mismatch	Compatibility mismatch	Angebot und Nachfrage passen in relevanten Eigenschaften nicht zusammen.
+G3.1	Produkttyp-Mismatch	Product-type mismatch	Angebotener und benötigter Produkttyp stimmen nicht überein.
+G3.2	Mengen-Mismatch	Quantity mismatch	Angebotene und benötigte Menge stimmen nicht überein.
+G3.3	Maß-Mismatch	Dimensional mismatch	Abmessungen von Angebot und Bedarf stimmen nicht überein.
+G3.4	Material-Mismatch	Material mismatch	Angebotenes und benötigtes Material stimmen nicht überein.
+G3.5	Leistungs-Mismatch	Performance mismatch	Leistungseigenschaften von Angebot und Bedarf stimmen nicht überein.
+G3.6	Zustands-Mismatch	Condition mismatch	Der Zustand entspricht nicht den Anforderungen des Bedarfs.
+G3.7	Zertifizierungs-Mismatch	Certification mismatch	Vorhandene Zertifizierung entspricht nicht den geforderten Nachweisen.
+G3.8	Standort-Mismatch	Location mismatch	Standort von Angebot und Bedarf passen logistisch nicht zusammen.
+G3.9	Preis-Mismatch	Price mismatch	Angebotspreis und Preisvorstellung des Bedarfs stimmen nicht überein.
+G4	Verfügbarkeitsunsicherheit	Availability uncertainty	Ob gelistete Bauteile tatsächlich verfügbar werden, ist unsicher.
+G4.1	Geschätzter aber unbestätigter Bestand	Estimated but unconfirmed inventory	Der Bestand beruht auf Schätzung und ist nicht bestätigt.
+G4.2	Unsichere Rückgewinnungsausbeute	Uncertain recovery yield	Wie viel beim Rückbau tatsächlich gewonnen wird, ist unsicher.
+G4.3	Abbruchverzögerung	Demolition delay	Verzögerungen beim Abbruch verschieben die Verfügbarkeit.
+G4.4	Eigentumswechsel	Ownership change	Ein Eigentümerwechsel gefährdet die zugesagte Verfügbarkeit.
+G4.5	Projektabsage	Project cancellation	Die Absage des Quellprojekts lässt das Angebot entfallen.
+G4.6	Beschädigung vor Rückgewinnung	Damage before recovery	Bauteile werden vor der Rückgewinnung beschädigt.
+G4.7	Kontamination entdeckt	Contamination discovered	Nachträglich entdeckte Kontamination macht Bauteile unbrauchbar.
+G4.8	Konkurrierende Reservierung	Competing reservation	Eine konkurrierende Reservierung entzieht das Bauteil.
+G5	Zeitliche Diskrepanz	Timing mismatch	Angebot und Nachfrage fallen zeitlich nicht zusammen.
+G5.1	Angebot vor Nachfrage verfügbar	Supply available before demand	Das Bauteil ist verfügbar, bevor der Bedarf entsteht.
+G5.2	Angebot nach Beschaffungsfrist verfügbar	Supply available after procurement deadline	Das Bauteil wird erst nach Ablauf der Beschaffungsfrist verfügbar.
+G5.3	Freigabe zu spät abgeschlossen	Approval completed too late	Die Freigabe erfolgt zu spät für den benötigten Termin.
+G5.4	Reservierungszeitraum zu kurz	Reservation period too short	Der mögliche Reservierungszeitraum ist zu kurz.
+G5.5	Bauprogramm inkompatibel mit Rückgewinnung	Construction programme incompatible with recovery	Der Bauzeitplan passt nicht zum Zeitpunkt der Rückgewinnung.
+G6	Transaktionsvertrauen	Transaction trust	Fehlendes Vertrauen der Parteien behindert die Transaktion.
+G6.1	Misstrauen gegenüber Verkäufer	Distrust of seller	Der Käufer misstraut dem Verkäufer.
+G6.2	Misstrauen gegenüber Plattform	Distrust of platform	Nutzer misstrauen der Plattform als Vermittler.
+G6.3	Misstrauen gegenüber Zustandsangabe	Distrust of condition statement	Die angegebene Zustandsbewertung wird angezweifelt.
+G6.4	Misstrauen gegenüber Leistungsdaten	Distrust of performance data	Die angegebenen Leistungsdaten werden angezweifelt.
+G6.5	Misstrauen gegenüber Zertifizierung	Distrust of certification	Die vorgelegte Zertifizierung wird angezweifelt.
+G6.6	Misstrauen gegenüber künftiger Verfügbarkeit	Distrust of future availability	Die zugesagte künftige Verfügbarkeit wird angezweifelt.
+G7	Transaktionsmanagement-Grenzen	Transaction management limitations	Der Plattform fehlen Funktionen zur Abwicklung der Transaktion.
+G7.1	Kein Reservierungsmechanismus	No reservation mechanism	Es fehlt eine Funktion zum Reservieren von Bauteilen.
+G7.2	Keine bedingte Reservierung	No conditional reservation	Reservierungen unter Vorbehalt sind nicht möglich.
+G7.3	Kein Freigabestatus	No approval status	Ein Status zur technischen Freigabe fehlt.
+G7.4	Kein Substitutionsprozess	No substitution process	Es fehlt ein Prozess für Ersatzbauteile bei Ausfall.
+G7.5	Kein Eigentumsübergangs-Workflow	No ownership-transfer workflow	Ein Ablauf zur Übertragung des Eigentums fehlt.
+G7.6	Kein Streitbeilegungsprozess	No dispute-resolution process	Ein Verfahren zur Beilegung von Streitfällen fehlt.
+G7.7	Keine Erfassung fehlgeschlagener Transaktionen	No failed-transaction recording	Gescheiterte Transaktionen werden nicht erfasst.
+H	Physische Rückgewinnung & Ausführung	Physical recovery and fulfillment	Hürden bei Rückbau, Ausbeute, Aufbereitung, Lagerung, Transport und Einbau der Bauteile.
+H1	Rückgewinnbarkeit durch Konstruktion	Recoverability by design	Die Bauweise erschwert oder verhindert eine zerstörungsfreie Rückgewinnung.
+H1.1	Irreversible Klebeverbindungen	Irreversible adhesives	Verklebungen lassen sich nicht zerstörungsfrei lösen.
+H1.2	Unzugängliche Befestigungsmittel	Inaccessible fasteners	Befestigungsmittel sind für die Demontage nicht erreichbar.
+H1.3	Verbundbauteile	Composite assemblies	Fest verbundene Materialien lassen sich nicht trennen.
+H1.4	Verdeckte Bauteile	Concealed components	Bauteile sind verdeckt und ohne Eingriff nicht zugänglich.
+H1.5	Zerstörende Verbindungen	Destructive connections	Die Verbindung lässt sich nur durch Zerstörung lösen.
+H1.6	Nichtstandardisierte Fügungen	Nonstandard assemblies	Nichtstandardisierte Fügungen erschweren eine geregelte Demontage.
+H2	Demontierbarkeit	Deconstruction feasibility	Der Rückbau der Bauteile ist praktisch aufwändig oder eingeschränkt.
+H2.1	Hoher Arbeitsaufwand	High labor requirement	Die Demontage erfordert einen hohen Arbeitsaufwand.
+H2.2	Lange Demontagedauer	Long dismantling duration	Die Demontage nimmt viel Zeit in Anspruch.
+H2.3	Spezialgerätebedarf	Specialist-equipment requirement	Für die Demontage werden Spezialgeräte benötigt.
+H2.4	Eingeschränkte Baustellenzugänglichkeit	Site-access limitations	Der Zugang zur Baustelle ist für die Demontage eingeschränkt.
+H2.5	Sicherheitsrestriktionen	Safety constraints	Sicherheitsvorgaben schränken die Demontage ein.
+H2.6	Unvollständige Demontageanleitung	Incomplete dismantling instructions	Es fehlt eine vollständige Anleitung für die Demontage.
+H3	Rückgewinnungsausbeute	Recovery yield	Beim Rückbau geht ein Teil der Bauteile verloren oder wird beschädigt.
+H3.1	Beschädigung bei Ausbau	Damage during removal	Bauteile werden beim Ausbau beschädigt.
+H3.2	Geringere Menge als geschätzt	Lower-than-estimated recoverable quantity	Es wird weniger Material gewonnen als geschätzt.
+H3.3	Kontamination	Contamination	Gewonnene Bauteile sind kontaminiert.
+H3.4	Verformung	Deformation	Bauteile sind verformt und dadurch eingeschränkt nutzbar.
+H3.5	Verdeckte Mängel	Hidden defects	Erst nach Ausbau sichtbare Mängel mindern die Ausbeute.
+H3.6	Verlust ergänzender Bauteile	Loss of supporting components	Ergänzende oder verbindende Bauteile gehen verloren.
+H4	Prüf- & Aufbereitungskapazität	Assessment and preparation capacity	Kapazitäten für Prüfung und Aufbereitung der Bauteile fehlen.
+H4.1	Unzureichende Inspektionskapazität	Insufficient inspection capacity	Es fehlt Kapazität für die Inspektion der Bauteile.
+H4.2	Unzureichende Laborkapazität	Insufficient laboratory capacity	Es fehlt Kapazität für Laboruntersuchungen.
+H4.3	Unzureichende Prüfkapazität	Insufficient testing capacity	Es fehlt Kapazität für technische Prüfungen.
+H4.4	Unzureichende Reinigungskapazität	Insufficient cleaning capacity	Es fehlt Kapazität für die Reinigung der Bauteile.
+H4.5	Unzureichende Reparaturkapazität	Insufficient repair capacity	Es fehlt Kapazität für die Reparatur der Bauteile.
+H4.6	Unzureichende Aufarbeitungskapazität	Insufficient refurbishment capacity	Es fehlt Kapazität für die Aufarbeitung der Bauteile.
+H5	Lagerfähigkeit	Storage capability	Die Zwischenlagerung der Bauteile ist begrenzt oder ungeeignet.
+H5.1	Keine Lagerkapazität	No warehouse capacity	Es steht keine Lagerkapazität für die Zwischenlagerung zur Verfügung.
+H5.2	Hohe Lagerkosten	High storage cost	Die Zwischenlagerung verursacht hohe Kosten.
+H5.3	Ungeeignete Lagerbedingungen	Unsuitable storage conditions	Die Lagerbedingungen sind für die Bauteile ungeeignet.
+H5.4	Lange Lagerdauer	Long storage duration	Die Bauteile müssen über lange Zeit gelagert werden.
+H5.5	Erschwerte Bestandskontrolle	Difficult inventory control	Die Bestandskontrolle im Lager ist erschwert.
+H5.6	Handhabungsschäden im Lager	Handling damage in storage	Bei der Handhabung im Lager entstehen Schäden.
+H6	Transport & Handhabung	Transport and handling	Transport und Handhabung der Bauteile sind aufwändig oder schadensträchtig.
+H6.1	Lange Transportdistanz	Long transport distance	Die Transportdistanz zwischen Quelle und Ziel ist groß.
+H6.2	Hohe Transportkosten	High transport cost	Der Transport verursacht hohe Kosten.
+H6.3	Überdimensionierte Bauteile	Oversized components	Übergroße Bauteile erschweren den Transport.
+H6.4	Spezialtransportbedarf	Specialist transport requirements	Der Transport erfordert Spezialfahrzeuge oder -verfahren.
+H6.5	Schutzverpackungsbedarf	Protective-packaging requirements	Für den Transport wird Schutzverpackung benötigt.
+H6.6	Handhabungsschäden	Handling damage	Bei der Handhabung entstehen Schäden an den Bauteilen.
+H6.7	Erschwerte Baustellenanlieferung	Difficult site delivery	Die Anlieferung auf die Zielbaustelle ist erschwert.
+H7	Einbau & Weiternutzung	Installation and continued use	Der Einbau und die Weiternutzung der Bauteile sind erschwert.
+H7.1	Entwurfsanpassungsbedarf	Design adaptation requirement	Der Entwurf muss an das Bauteil angepasst werden.
+H7.2	Erschwerter Einbau	Difficult installation	Der Einbau des Bauteils ist erschwert.
+H7.3	Fehlende Einbauanleitung	Missing installation guidance	Es fehlt eine Anleitung für den Einbau.
+H7.4	Inkompatible Schnittstellen	Incompatible interfaces	Die Schnittstellen passen nicht zur neuen Umgebung.
+H7.5	Fehlender Inbetriebnahmenachweis	Missing commissioning evidence	Ein Nachweis der Inbetriebnahme fehlt.
+H7.6	Keine Lebenszyklus-Aktualisierung nach Einbau	No lifecycle-record update after installation	Nach dem Einbau werden die Lebenszyklusdaten nicht aktualisiert.

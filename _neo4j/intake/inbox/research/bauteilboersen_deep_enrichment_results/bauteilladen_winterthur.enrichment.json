@@ -1,0 +1,150 @@
+{
+  "anchor_id": "bauteilladen_winterthur",
+  "sources_visited": [
+    {
+      "url": "https://bauteilladen.ch/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://bauteilladen.ch/shop/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://bauteilladen.ch/ueber-uns/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/bauteilladen-winterthur/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop categories/product families include timber/wooden building components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop categories include tiles/ceramic-like stock.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop categories include windows/glass components.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop category evidence includes floor components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop category evidence includes wall/panel components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop category evidence includes windows.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop category evidence includes sanitary/technical components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_treppe",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop category evidence includes stairs.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop category evidence includes doors.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_decke",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop/category archive includes ceiling elements.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop/category archive includes roof elements.",
+      "confidence": "unsicher"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://bauteilladen.ch/shop/"
+      ],
+      "evidence_quote": "Shop has interior/fit-out component stock.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Bauteilladen Winterthur",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://bauteilladen.ch/",
+      "https://bauteilladen.ch/shop/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Line-level evidence",
+      "reason": "Shop is browseable but category extraction should be product-page checked before import as belegt."
+    },
+    {
+      "topic": "PruefungNachweis",
+      "reason": "No QA/audit evidence located."
+    }
+  ],
+  "run_notes": []
+}

@@ -1,0 +1,306 @@
+{
+  "confirmation_required": "APPLY phase1_france_marketplace_spine.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2402,
+    "relationships": 15564
+  },
+  "counts_after_expected": {
+    "nodes": 2402,
+    "relationships": 15564
+  },
+  "counts_before": {
+    "nodes": 2402,
+    "relationships": 15529
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:39:45.675877+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_france_reuse_bubble\\patches\\phase1_france_marketplace_spine.patch.jsonl",
+  "records": [
+    {
+      "from": "bellastock",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_bellastock_reemploi"
+    },
+    {
+      "from": "bellastock",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_bellastock_opalis"
+    },
+    {
+      "from": "bellastock",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_bellastock_preuse"
+    },
+    {
+      "from": "bellastock",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_ademe_bellastock"
+    },
+    {
+      "from": "bellastock",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_ademe_repar"
+    },
+    {
+      "from": "bellastock",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "cstb"
+    },
+    {
+      "from": "cstb",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bellastock"
+    },
+    {
+      "from": "opalis",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "backacia"
+    },
+    {
+      "from": "backacia",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "opalis"
+    },
+    {
+      "from": "backacia",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_backacia"
+    },
+    {
+      "from": "backacia",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_opalis_backacia"
+    },
+    {
+      "from": "bellastock",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "backacia"
+    },
+    {
+      "from": "backacia",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bellastock"
+    },
+    {
+      "from": "cycle_up",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_cycleup"
+    },
+    {
+      "from": "cycle_up",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_cycleup_idf"
+    },
+    {
+      "from": "cycle_up",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_fcrbe_cycleup"
+    },
+    {
+      "from": "cycle_up",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "backacia"
+    },
+    {
+      "from": "backacia",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "cycle_up"
+    },
+    {
+      "from": "cycle_up",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "opalis"
+    },
+    {
+      "from": "opalis",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "cycle_up"
+    },
+    {
+      "from": "bellastock",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "cycle_up"
+    },
+    {
+      "from": "cycle_up",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bellastock"
+    },
+    {
+      "from": "mobius_reemploi",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_mobius"
+    },
+    {
+      "from": "mobius_reemploi",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_mobius_idf"
+    },
+    {
+      "from": "mobius_reemploi",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "cstb"
+    },
+    {
+      "from": "cstb",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "mobius_reemploi"
+    },
+    {
+      "from": "cstb",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_cstb_reemploi"
+    },
+    {
+      "from": "mobius_reemploi",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "cycle_up"
+    },
+    {
+      "from": "cycle_up",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "mobius_reemploi"
+    },
+    {
+      "from": "bellastock",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "mobius_reemploi"
+    },
+    {
+      "from": "mobius_reemploi",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bellastock"
+    },
+    {
+      "from": "raedificare",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_raedificare"
+    },
+    {
+      "from": "raedificare",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "backacia"
+    },
+    {
+      "from": "backacia",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "raedificare"
+    },
+    {
+      "from": "opalis",
+      "line": 35,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_ademe_opalis"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 35,
+    "would_create_rel": 35
+  }
+}

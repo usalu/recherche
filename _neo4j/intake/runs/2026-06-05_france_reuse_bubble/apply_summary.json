@@ -1,0 +1,138 @@
+{
+  "run": "2026-06-05_france_reuse_bubble",
+  "commit": true,
+  "database": "mit-bestand",
+  "generated_at_utc": "2026-06-05T22:46:46.261653+00:00",
+  "phases": [
+    {
+      "phase": "phase1c_evidence_hardening.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 47,
+        "load_errors": 0,
+        "would_create": 10,
+        "would_create_rel": 20,
+        "would_delete_rel": 6,
+        "would_update_rel": 11
+      },
+      "counts_after_actual": {
+        "nodes": 2412,
+        "relationships": 15583
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_france_reuse_bubble\\apply_reports\\phase1c_evidence_hardening.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_france_reuse_bubble\\apply_reports\\phase1c_evidence_hardening.patch.apply_report.md"
+      ]
+    }
+  ],
+  "counts_before": {
+    "nodes": 2402,
+    "relationships": 15569
+  },
+  "connectivity_before": {
+    "T0_bellastock_ecosystem_verbunden": {
+      "value": 6,
+      "neighbors": [
+        "cstb",
+        "association_reavie",
+        "opalis",
+        "mobius_reemploi",
+        "backacia",
+        "cycle_up"
+      ]
+    },
+    "T1_opalis_ecosystem_verbunden": {
+      "value": 5,
+      "neighbors": [
+        "bellastock",
+        "Rotor",
+        "rotordc",
+        "backacia",
+        "cycle_up"
+      ]
+    },
+    "T2_cycle_up_spine": [
+      "bellastock",
+      "opalis",
+      "mobius_reemploi",
+      "backacia"
+    ],
+    "T3_backacia_spine": [
+      "bellastock",
+      "opalis",
+      "cycle_up",
+      "raedificare"
+    ],
+    "T4_mobius_spine": [
+      "cstb",
+      "bellastock",
+      "association_reavie",
+      "noe_basch",
+      "cycle_up"
+    ],
+    "T5_opalis_backacia": 2,
+    "T6_mobius_cstb": 2,
+    "T7_association_reavie_bellastock": 2,
+    "T8_bubble_edges": 40,
+    "T9_opalis_reavie": 0,
+    "T10_mineka_spine": []
+  },
+  "counts_after": {
+    "nodes": 2412,
+    "relationships": 15583
+  },
+  "connectivity_after": {
+    "T0_bellastock_ecosystem_verbunden": {
+      "value": 7,
+      "neighbors": [
+        "cstb",
+        "mineka",
+        "association_reavie",
+        "opalis",
+        "mobius_reemploi",
+        "backacia",
+        "cycle_up"
+      ]
+    },
+    "T1_opalis_ecosystem_verbunden": {
+      "value": 7,
+      "neighbors": [
+        "bellastock",
+        "mineka",
+        "association_reavie",
+        "Rotor",
+        "rotordc",
+        "backacia",
+        "cycle_up"
+      ]
+    },
+    "T2_cycle_up_spine": [
+      "bellastock",
+      "mineka",
+      "opalis",
+      "backacia"
+    ],
+    "T3_backacia_spine": [
+      "bellastock",
+      "mineka",
+      "opalis",
+      "cycle_up"
+    ],
+    "T4_mobius_spine": [
+      "cstb",
+      "bellastock",
+      "noe_basch"
+    ],
+    "T5_opalis_backacia": 2,
+    "T6_mobius_cstb": 2,
+    "T7_association_reavie_bellastock": 2,
+    "T8_bubble_edges": 54,
+    "T9_opalis_reavie": 2,
+    "T10_mineka_spine": [
+      "bellastock",
+      "opalis",
+      "backacia",
+      "cycle_up"
+    ]
+  }
+}

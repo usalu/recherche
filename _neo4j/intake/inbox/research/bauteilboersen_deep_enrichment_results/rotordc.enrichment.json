@@ -1,0 +1,170 @@
+{
+  "anchor_id": "rotordc",
+  "sources_visited": [
+    {
+      "url": "https://rotordc.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://rotordc.com/service/depositsale",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://rotordc.com/shop",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://rotordc.com/about-us",
+      "http_status": 200,
+      "first_party": true
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights salvaged cement, zellige and glazed ceramic tiles.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights parquet; about page mentions reprocessing high-quality urban wood.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights large glass windows from CBR building.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://rotordc.com/shop"
+      ],
+      "evidence_quote": "Shop/architectural salvage scope includes stone/natural-stone products; product page spot-check needed.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights final batch of doors & hardware; shop filter includes door rotation.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Tiles and parquet map to floor components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights bathroom accessories and sinks; about page includes repair/transformation of lighting equipment.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Doors & hardware, furniture, building hardware and finishing materials map to Ausbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://rotordc.com/"
+      ],
+      "evidence_quote": "Homepage highlights large glass windows.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "repair",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://rotordc.com/about-us"
+      ],
+      "evidence_quote": "About page lists repair/transformation of lighting equipment, removing mortar from ceramic tiles, reprocessing urban wood, cleaning hardware.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    },
+    {
+      "target_id": null,
+      "lookup_keyword": "cleaning",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://rotordc.com/about-us"
+      ],
+      "evidence_quote": "About page explicitly lists cleaning and preparing for reuse of furniture and building hardware.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [
+    {
+      "target_id": null,
+      "lookup_keyword": "salvage operations",
+      "intended_label": "Rueckbauverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://rotordc.com/about-us"
+      ],
+      "evidence_quote": "About page lists planning and organising salvage operations in large and complicated buildings.",
+      "confidence": "belegt",
+      "note": "Resolve Rueckbauverfahren node ID before import."
+    }
+  ],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_webshop_deposit_sale",
+      "evidence_urls": [
+        "https://rotordc.com/service/depositsale"
+      ],
+      "evidence_quote": "Deposit-sale page offers one-stop shop for sale/purchase of second-hand materials.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Rotor Deconstruction",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://rotordc.com/",
+      "https://rotordc.com/service/depositsale"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Process target IDs",
+      "reason": "Need graph lookup for repair, cleaning, mortar-removal, salvage-operation node IDs."
+    }
+  ],
+  "run_notes": []
+}

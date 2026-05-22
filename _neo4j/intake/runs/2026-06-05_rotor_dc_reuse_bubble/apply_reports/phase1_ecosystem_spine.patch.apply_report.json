@@ -1,0 +1,246 @@
+{
+  "confirmation_required": "APPLY phase1_ecosystem_spine.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2355,
+    "relationships": 15464
+  },
+  "counts_after_expected": {
+    "nodes": 2355,
+    "relationships": 15464
+  },
+  "counts_before": {
+    "nodes": 2354,
+    "relationships": 15451
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:09:45.956631+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\patches\\phase1_ecosystem_spine.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "prog_preuse",
+          "name": "PREUSE",
+          "name_full": "PREUSE — Public Responses to Enable the Use of Salvaged building Elements (Interreg NWE)",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        }
+      },
+      "before": null,
+      "id": "prog_preuse",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "prog_preuse",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_150bfa71ec64ea9192c5252bb7453284"
+    },
+    {
+      "from": "prog_preuse",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_4a94cddf6628f350b982c97040dce9fd"
+    },
+    {
+      "from": "prog_preuse",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_preuse_launch"
+    },
+    {
+      "from": "Rotor",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_preuse"
+    },
+    {
+      "from": "bellastock",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_preuse"
+    },
+    {
+      "from": "city_of_utrecht",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_preuse"
+    },
+    {
+      "from": "brussels_environment",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "prog_preuse"
+    },
+    {
+      "from": "opalis",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "rotordc"
+    },
+    {
+      "from": "rotordc",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "opalis"
+    },
+    {
+      "from": "opalis",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bellastock"
+    },
+    {
+      "from": "bellastock",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "opalis"
+    },
+    {
+      "after_properties": {
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "evidence_basis": "first_party_project_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor led 12 of 37 FCRBE pilot operations",
+        "evidence_source_id": "q_url_new_fcrbe_12_pilots",
+        "evidence_url": "https://rotordb.org/en/projects/12-fcrbe-pilot-operations",
+        "id": "r_Rotor__BETEILIGT_AN__prog_fcrbe",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "id": "r_Rotor__BETEILIGT_AN__prog_fcrbe"
+        },
+        "rel_internal_id": 1166533458558720387,
+        "to": "prog_fcrbe",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Rotor",
+      "line": 13,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "prog_fcrbe",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "evidence_basis": "first_party_about_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Opalis monitored and funded by Brussels Environment",
+        "evidence_source_id": "q_url_new_opalis_about",
+        "evidence_url": "https://opalis.eu/en/about",
+        "id": "r_brussels_environment__BETEILIGT_AN__prog_fcrbe",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "brussels_environment",
+        "properties": {
+          "id": "r_brussels_environment__BETEILIGT_AN__prog_fcrbe"
+        },
+        "rel_internal_id": 1153022659676603107,
+        "to": "prog_fcrbe",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "brussels_environment",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "prog_fcrbe",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "confidence": 0.6,
+        "connection_kind": "colocation_evere",
+        "evidence_basis": "first_party_project_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor offices located literally above RotorDC stocks",
+        "evidence_source_id": "q_url_714d4c31c9d811b5269f20eaf16bb43f",
+        "evidence_url": "https://www.rotordb.org/en/projects/rotor-dc-reuse-made-easy",
+        "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__Rotor"
+        },
+        "rel_internal_id": 1155286554118199684,
+        "to": "Rotor",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "rotordc",
+      "line": 15,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "Rotor",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "from": "opalis",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_opalis_about"
+    },
+    {
+      "from": "opalis",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_opalis_docs"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 17,
+    "would_create": 1,
+    "would_create_rel": 13,
+    "would_update_rel": 3
+  }
+}

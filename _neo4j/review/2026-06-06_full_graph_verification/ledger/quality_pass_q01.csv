@@ -1,0 +1,16 @@
+claim_id,scope,item_type,element_id,prior_verdict,prior_action,new_verdict,new_action,patch_op,status,notes
+A14-RELKEY-002,Q01,rel,bauwerk_role_singleton,SCHEMA_VIOLATION,FIX_PROPERTY,PROVEN,APPLIED,noop_prior_fix_property,APPLIED,Q01: bauwerk_role→role via fix_property.patch.jsonl (prior)
+A14-RELKEY-001,Q01,rel,nutzung_role_offcanonical,SCHEMA_VIOLATION,FIX_PROPERTY,PROVEN,APPLIED,noop_prior_fix_property,APPLIED,Q01: nutzung_role→role via fix_property.patch.jsonl (prior)
+A14-NODEKEY-002,Q01,node,mobius_reemploi,SCHEMA_VIOLATION,FIX_PROPERTY,PROVEN,APPLIED,noop_prior_fix_property,APPLIED,Q01: TODO marker keys removed via fix_property.patch.jsonl (prior)
+09-node-0191,Q01,node,land_liechtenstein,PROVEN,FIX_PROPERTY,PROVEN,APPLIED,noop_prior_fix_property,APPLIED,Q01: country_iso2=LI via fix_property.patch.jsonl (prior)
+09-node-0342,Q01,node,stadt_paso_robles_templeton_gap,PARTIAL,FIX_PROPERTY,PROVEN,APPLIED,noop_prior_fix_property,APPLIED,Q01: lat/lng via fix_property.patch.jsonl (prior)
+EP02-rel-00562,Q01,rel,5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153024858699862970,SCHEMA_VIOLATION,ESCALATE_HUMAN,REMEDIATED,APPLIED,delete_rel,APPLIED,Q01: deleted Stadt-domain HAT_AKTEURTYP edge; canonical on stadt_zuerich_amt_hochbauten (EP02-rel-00563)
+EP08-n-0455,Q01,node,bt_fassadenelement,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node bt_fassadenelement→bt_fassade
+EP08-n-0456,Q01,node,bt_fassadenmodul_mauerwerk,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node bt_fassadenmodul_mauerwerk→bt_fassade
+EP08-n-0460,Q01,node,bt_glasscheibe,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node bt_glasscheibe→bt_verglasung→bt_fenster chain
+EP08-n-0461,Q01,node,bt_hohlkoerperdecke,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node bt_hohlkoerperdecke→bt_decke
+EP08-n-0462,Q01,node,bt_mauerstein,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node bt_mauerstein→bt_fassade
+EP08-n-0469,Q01,node,bt_verglasung,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node bt_verglasung→bt_fenster
+EP08-n-0806,Q01,node,mat_drahtglas,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node mat_drahtglas→mat_glas
+EP08-n-0822,Q01,node,mat_spannbeton,SCHEMA_VIOLATION,DEPRECATE_NODE,REMEDIATED,APPLIED,merge_node,APPLIED,Q01: merge_node mat_spannbeton→mat_beton
+A10-N-058,Q01,node,prog_mas_dfab,PARTIAL,FIX_PROPERTY,PARTIAL,ESCALATE_HUMAN,skipped,DEFERRED,Name/source mismatch (De Wolf course vs MAS DFAB) — not a safe property-only fix

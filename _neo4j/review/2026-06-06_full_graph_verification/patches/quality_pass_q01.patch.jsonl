@@ -1,0 +1,14 @@
+{"op": "delete_rel", "from": "stadt_zuerich", "type": "HAT_AKTEURTYP", "to": "at_oeffentliche_institution", "reason": "Q01 EP02-rel-00562: SCHEMA_VIOLATION Stadt domain on HAT_AKTEURTYP; canonical edge exists on stadt_zuerich_amt_hochbauten"}
+{"op": "merge_node", "from": "bt_glasscheibe", "to": "bt_verglasung", "reason": "Q01 EP08-n-0460 / R05-node-006: identical 7-target regulation subgraph with bt_verglasung"}
+{"op": "merge_node", "from": "bt_fassadenelement", "to": "bt_fassade", "reason": "Q01 EP08-n-0455 / R05-node-004: 100% regulation duplicate of bt_fassade"}
+{"op": "merge_node", "from": "bt_fassadenmodul_mauerwerk", "to": "bt_fassade", "reason": "Q01 EP08-n-0456: orphan vocab stub merged to curated bt_fassade (R05 71% reg overlap)"}
+{"op": "merge_node", "from": "bt_mauerstein", "to": "bt_fassade", "reason": "Q01 EP08-n-0462: orphan vocab stub merged to curated bt_fassade (R05 best sibling)"}
+{"op": "merge_node", "from": "bt_hohlkoerperdecke", "to": "bt_decke", "reason": "Q01 EP08-n-0461: hollow-core slab stub merged to semantic parent bt_decke (R05-node-007)"}
+{"op": "merge_node", "from": "bt_verglasung", "to": "bt_fenster", "reason": "Q01 EP08-n-0469: glazing regulation stub merged to curated bt_fenster (R05 canonical target)"}
+{"op": "merge_node", "from": "mat_drahtglas", "to": "mat_glas", "reason": "Q01 EP08-n-0806: wired-glass stub merged to mat_glas (R05 71% reg overlap)"}
+{"op": "merge_node", "from": "mat_spannbeton", "to": "mat_beton", "reason": "Q01 EP08-n-0822 / R05-node-011: 100% regulation subset of mat_beton"}
+{"op": "noop_reviewed", "id": "A14-RELKEY-001", "reason": "Q01 FIX_PROPERTY: nutzung_role→role applied 2026-06-06 via fix_property.patch.jsonl"}
+{"op": "noop_reviewed", "id": "A14-RELKEY-002", "reason": "Q01 FIX_PROPERTY: bauwerk_role→role applied 2026-06-06 via fix_property.patch.jsonl"}
+{"op": "noop_reviewed", "id": "A14-NODEKEY-002", "reason": "Q01 FIX_PROPERTY: mobius_reemploi marker keys removed via fix_property.patch.jsonl"}
+{"op": "noop_reviewed", "id": "09-node-0191", "reason": "Q01 FIX_PROPERTY: land_liechtenstein country_iso2=LI applied via fix_property.patch.jsonl"}
+{"op": "noop_reviewed", "id": "09-node-0342", "reason": "Q01 FIX_PROPERTY: stadt_paso_robles coords applied via fix_property.patch.jsonl"}

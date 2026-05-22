@@ -1,0 +1,1151 @@
+{
+  "confirmation_required": "APPLY quality_pass_q05.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2264,
+    "relationships": 15064
+  },
+  "counts_after_expected": {
+    "nodes": 2264,
+    "relationships": 15064
+  },
+  "counts_before": {
+    "nodes": 2264,
+    "relationships": 15065
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T17:49:09.863358+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\quality_pass_q05.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "evidence_basis": "web_fetch_q05",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "link present in dossier but source placeholder/empty=''",
+        "evidence_url": "https://www.tu.berlin/",
+        "id": "r_iemb_tu_berlin__BETEILIGT_AN__p_plattenpalast_berlin",
+        "review_run": "quality_pass_q05_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "iemb_tu_berlin",
+        "properties": {
+          "id": "r_iemb_tu_berlin__BETEILIGT_AN__p_plattenpalast_berlin"
+        },
+        "rel_internal_id": 1155274459490292391,
+        "to": "p_plattenpalast_berlin",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "iemb_tu_berlin",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_plattenpalast_berlin",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "web_fetch_q05",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "link present in dossier but source placeholder/empty=''",
+        "evidence_url": "https://www.basel.ch/",
+        "id": "r_pirmin_jung_schweiz_ag__BETEILIGT_AN__p_lysp8_basel",
+        "review_run": "quality_pass_q05_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "pirmin_jung_schweiz_ag",
+        "properties": {
+          "id": "r_pirmin_jung_schweiz_ag__BETEILIGT_AN__p_lysp8_basel"
+        },
+        "rel_internal_id": 1155274459490294106,
+        "to": "p_lysp8_basel",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "pirmin_jung_schweiz_ag",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_lysp8_basel",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "aliases": [
+            "Qflow delivery and waste ticket tracking"
+          ],
+          "id": "software_qflow",
+          "kind": "software",
+          "name": "Qflow",
+          "primary_source_url": "https://qualisflow.com/",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ],
+          "source_urls": [
+            "https://qualisflow.com/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "aliases": [
+            "Qflow delivery and waste ticket tracking"
+          ],
+          "id": "software_qflow",
+          "kind": "software",
+          "name": "Qflow",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ],
+          "source_urls": [
+            "https://qflow.io/",
+            "https://qflow.io/about/"
+          ]
+        }
+      },
+      "id": "software_qflow",
+      "line": 3,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "software_qflow",
+        "properties": {
+          "id": "r_software_qflow__NUTZT_SOFTWARE__software_qflow"
+        },
+        "rel_internal_id": 1157533955885372534,
+        "to": "software_qflow",
+        "type": "NUTZT_SOFTWARE"
+      },
+      "from": "software_qflow",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "software_qflow",
+      "type": "NUTZT_SOFTWARE"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.3",
+        "evidence_basis": "web_fetch_q05",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Elias Knecht - Committee member. ROTO-Reuse",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "the cirkla association - cirkla img:is([sizes=\"auto\" i], [sizes^=\"auto,\" i]) { contain-intrinsic-size: 3",
+        "evidence_url": "https://www.cirkla.ch/en/lassociation-cirkla/",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__wick_reuse_roto_baumarkt",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "dossier_section": "§2.3",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Elias Knecht - Committee member. ROTO-Reuse",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Elias Knecht - Committee member, ROTO-Reuse",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/wiederverwerkle-wick-upcycling-gmbh",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__wick_reuse_roto_baumarkt",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338777618,
+        "to": "wick_reuse_roto_baumarkt",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "wick_reuse_roto_baumarkt",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_ka13_existing_building",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 6917691755361994487,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_ka13_existing_building",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_ka13_existing_building",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 6917691755361994539,
+        "to": "nf_asbest_check",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_ka13_existing_building",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_asbest_check",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_lycee_block_3000",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1155336032141448510,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_lycee_block_3000",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_lycee_block_3000",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153084232327763262,
+        "to": "nf_asbest_check",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_lycee_block_3000",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_asbest_check",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_lycee_block_6000",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1155336032141448511,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_lycee_block_6000",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_lycee_block_6000",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153084232327763263,
+        "to": "nf_asbest_check",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_lycee_block_6000",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_asbest_check",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_multi_brouckere_tower",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1155336032141448593,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_multi_brouckere_tower",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_multi_brouckere_tower",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153084232327763345,
+        "to": "nf_asbest_check",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_multi_brouckere_tower",
+      "line": 13,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_asbest_check",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_rws_districtskantoor_terneuzen",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1155336032141448354,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_rws_districtskantoor_terneuzen",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_rws_districtskantoor_terneuzen",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153084232327763106,
+        "to": "nf_asbest_check",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_rws_districtskantoor_terneuzen",
+      "line": 15,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_asbest_check",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_suutarila_community_centre_donor",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1155336032141448573,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_suutarila_community_centre_donor",
+      "line": 16,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_suutarila_community_centre_donor",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153084232327763325,
+        "to": "nf_asbest_check",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_suutarila_community_centre_donor",
+      "line": 17,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_asbest_check",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_werkhof_moeoeslistrasse",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1155336032141448452,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_werkhof_moeoeslistrasse",
+      "line": 18,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_werkhof_moeoeslistrasse",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153084232327763204,
+        "to": "nf_asbest_check",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "bw_werkhof_moeoeslistrasse",
+      "line": 19,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_asbest_check",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "la_schadstofffreiheit",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153084232327762438,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFORDERT_NACHWEIS"
+      },
+      "from": "la_schadstofffreiheit",
+      "line": 20,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFORDERT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_biozid_screening",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014935,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_biozid_screening",
+      "line": 21,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_chlorid",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014863,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_chlorid",
+      "line": 22,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_pcp_lindan",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014838,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_pcp_lindan",
+      "line": 23,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_schadstoffanalyse",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014791,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_schadstoffanalyse",
+      "line": 24,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_schadstoffanalyse_beschichtung",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014788,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_schadstoffanalyse_beschichtung",
+      "line": 25,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_schadstoffanalyse_holz",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014837,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_schadstoffanalyse_holz",
+      "line": 26,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_schadstoffanalyse_kitt",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014877,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_schadstoffanalyse_kitt",
+      "line": 27,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_schadstoffanalyse_kleber",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014849,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_schadstoffanalyse_kleber",
+      "line": 28,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_staubbewertung",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014908,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_staubbewertung",
+      "line": 29,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_staubschutz",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351014912,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_staubschutz",
+      "line": 30,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_schadstoffpruefung",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351013490,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_schadstoffpruefung",
+      "line": 31,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.9,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_schadstoffscreening",
+        "properties": {
+          "confidence": 0.9,
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153086431351018073,
+        "to": "nf_schadstoffpruefung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_schadstoffscreening",
+      "line": 32,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffpruefung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_ka13_existing_building",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153085331839390943,
+        "to": "rf_schadstoff_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "bw_ka13_existing_building",
+      "line": 33,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rf_schadstoff_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_lycee_block_3000",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153085331839391038,
+        "to": "rf_schadstoff_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "bw_lycee_block_3000",
+      "line": 34,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rf_schadstoff_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_lycee_block_6000",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153085331839391039,
+        "to": "rf_schadstoff_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "bw_lycee_block_6000",
+      "line": 35,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rf_schadstoff_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_multi_brouckere_tower",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153085331839391121,
+        "to": "rf_schadstoff_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "bw_multi_brouckere_tower",
+      "line": 36,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rf_schadstoff_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_rws_districtskantoor_terneuzen",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153085331839390882,
+        "to": "rf_schadstoff_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "bw_rws_districtskantoor_terneuzen",
+      "line": 37,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rf_schadstoff_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_suutarila_community_centre_donor",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153085331839391101,
+        "to": "rf_schadstoff_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "bw_suutarila_community_centre_donor",
+      "line": 38,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rf_schadstoff_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.74,
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Seit dem 31. Oktober 1993 besteht in Deutschland ein Herstellungs-, Inverkehrbringens- und Verwendungsverbot für Asbest",
+        "evidence_url": "https://www.bgbau.de/themen/sicherheit-und-gesundheit/asbest",
+        "review_run": "quality_pass_q05_2026_06_06",
+        "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+        "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+      },
+      "before": {
+        "count": 1,
+        "from": "bw_werkhof_moeoeslistrasse",
+        "properties": {
+          "confidence": 0.74,
+          "source_quote": "Gebaeude vor 31.10.1993: Asbestverdacht; Informationspflicht ueber Gefahrstoffe vor Bau-, Instandhaltungs- oder Rueckbauarbeiten; risikobezogenes Massnahmenkonzept.",
+          "source_url": "https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest"
+        },
+        "rel_internal_id": 1153085331839390980,
+        "to": "rf_schadstoff_frage",
+        "type": "TRIGGERS_REGULIERUNGSFRAGE"
+      },
+      "from": "bw_werkhof_moeoeslistrasse",
+      "line": 39,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rf_schadstoff_frage",
+      "type": "TRIGGERS_REGULIERUNGSFRAGE"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 39,
+    "would_delete_rel": 1,
+    "would_update": 1,
+    "would_update_rel": 37
+  }
+}

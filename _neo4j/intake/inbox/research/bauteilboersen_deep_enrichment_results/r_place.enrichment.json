@@ -1,0 +1,153 @@
+{
+  "anchor_id": "r_place",
+  "sources_visited": [
+    {
+      "url": "https://r-place.fr/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.cycl-op.org/initiative/h/r-place-plateforme-b2b-du-reemploi-des-materiaux-de-construction.html",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.envirobat-oc.fr/R-Place",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Latest listings include rails/profiles, steel sheets, tubes and metal beams.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Latest listings include tuiles and tuiles en verre; ceramic roof tiles should be item-checked.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Latest listings include pierres d’enrochement.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_beton",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Categories include Pierre & béton.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Category list includes Bois.",
+      "confidence": "belegt"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Category list includes CVC, ELEC & luminaires, Plomberie Sanitaires.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Category list includes Revêtement sols plafonds and listings include carrelages.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Category list and latest listings include Tuile / couverture.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Category list includes Porte.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Category list includes Fenêtre.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Latest listings include poutres métalliques.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Categories include equipment/outillage and serrurerie.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://r-place.fr/"
+      ],
+      "evidence_quote": "Header offers Diagnostics PEMD et Ressources, AMO, débouchés & sourcing.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "diagnose",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "R-Place",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://r-place.fr/",
+      "https://www.cycl-op.org/initiative/h/r-place-plateforme-b2b-du-reemploi-des-materiaux-de-construction.html"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "PN target",
+      "reason": "Resolve diagnostic/PEMD node IDs."
+    }
+  ],
+  "run_notes": []
+}

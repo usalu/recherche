@@ -1,0 +1,364 @@
+{
+  "id": "B1_bauteilgruppen_k118",
+  "title": "B1 · Semantische Bauteil-Repräsentation am Beispiel K.118 Winterthur",
+  "caption": "Bauteilgruppen des Projekts K.118 mit Spenderbauwerk, Bauteiltyp, Material und Tragend-Flag (⚙). Beleg, dass Komponenten mit genau jenen Metadatenfeldern semantisch erfasst werden können, die die Plattform-Schnittstelle benötigt.",
+  "stats": {
+    "bauteilgruppen": 3
+  },
+  "graph": {
+    "directed": true,
+    "nodes": [
+      {
+        "id": "p_k118_kopfbau_halle_118_winterthur",
+        "group": "Projekt",
+        "label": "K.118 Winterthur",
+        "color": "#F58518",
+        "size": 1700
+      },
+      {
+        "id": "bg_stahl_mehrere_k118_external_stair",
+        "group": "Bauteilgruppe",
+        "label": "Externe Stahltreppe ⚙",
+        "color": "#72B7B2",
+        "size": 750
+      },
+      {
+        "id": "bw_orion_zuerich_donor",
+        "group": "Spender",
+        "label": "Orion-Bürogebäude Zürich",
+        "color": "#B279A2",
+        "size": 520
+      },
+      {
+        "id": "BT::Gelaender",
+        "group": "Bauteiltyp",
+        "label": "Gelaender",
+        "color": "#4C78A8",
+        "size": 400
+      },
+      {
+        "id": "MAT::Stahl",
+        "group": "Material",
+        "label": "Stahl",
+        "color": "#EECA3B",
+        "size": 400
+      },
+      {
+        "id": "BT::Treppe",
+        "group": "Bauteiltyp",
+        "label": "Treppe",
+        "color": "#4C78A8",
+        "size": 400
+      },
+      {
+        "id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "group": "Bauteilgruppe",
+        "label": "Naturstein-/Granitplatten",
+        "color": "#72B7B2",
+        "size": 750
+      },
+      {
+        "id": "BT::Ausbau",
+        "group": "Bauteiltyp",
+        "label": "Ausbau",
+        "color": "#4C78A8",
+        "size": 400
+      },
+      {
+        "id": "MAT::Holz",
+        "group": "Material",
+        "label": "Holz",
+        "color": "#EECA3B",
+        "size": 400
+      },
+      {
+        "id": "BT::Boden",
+        "group": "Bauteiltyp",
+        "label": "Boden",
+        "color": "#4C78A8",
+        "size": 400
+      },
+      {
+        "id": "BT::Wand",
+        "group": "Bauteiltyp",
+        "label": "Wand",
+        "color": "#4C78A8",
+        "size": 400
+      },
+      {
+        "id": "MAT::Naturstein",
+        "group": "Material",
+        "label": "Naturstein",
+        "color": "#EECA3B",
+        "size": 400
+      },
+      {
+        "id": "MAT::Ziegel",
+        "group": "Material",
+        "label": "Ziegel",
+        "color": "#EECA3B",
+        "size": 400
+      },
+      {
+        "id": "bg_stahl_mehrere_k118_structure",
+        "group": "Bauteilgruppe",
+        "label": "Stahlträger und Stützen… ⚙",
+        "color": "#72B7B2",
+        "size": 750
+      },
+      {
+        "id": "bw_elys_basel_donor",
+        "group": "Spender",
+        "label": "ELYS-Projekt Basel",
+        "color": "#B279A2",
+        "size": 520
+      },
+      {
+        "id": "BT::Stuetze",
+        "group": "Bauteiltyp",
+        "label": "Stuetze",
+        "color": "#4C78A8",
+        "size": 400
+      },
+      {
+        "id": "BT::Traeger",
+        "group": "Bauteiltyp",
+        "label": "Traeger",
+        "color": "#4C78A8",
+        "size": 400
+      }
+    ],
+    "edges": [
+      {
+        "source": "p_k118_kopfbau_halle_118_winterthur",
+        "target": "bg_stahl_mehrere_k118_external_stair",
+        "rel": "HAT_BAUTEILGRUPPE"
+      },
+      {
+        "source": "p_k118_kopfbau_halle_118_winterthur",
+        "target": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "rel": "HAT_BAUTEILGRUPPE"
+      },
+      {
+        "source": "p_k118_kopfbau_halle_118_winterthur",
+        "target": "bg_stahl_mehrere_k118_structure",
+        "rel": "HAT_BAUTEILGRUPPE"
+      },
+      {
+        "source": "bg_stahl_mehrere_k118_external_stair",
+        "target": "BT::Gelaender",
+        "rel": "HAT_BAUTEILTYP"
+      },
+      {
+        "source": "bg_stahl_mehrere_k118_external_stair",
+        "target": "MAT::Stahl",
+        "rel": "NUTZT_MATERIAL"
+      },
+      {
+        "source": "bg_stahl_mehrere_k118_external_stair",
+        "target": "BT::Treppe",
+        "rel": "HAT_BAUTEILTYP"
+      },
+      {
+        "source": "bw_orion_zuerich_donor",
+        "target": "bg_stahl_mehrere_k118_external_stair",
+        "rel": "AUS_SPENDER"
+      },
+      {
+        "source": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "target": "BT::Ausbau",
+        "rel": "HAT_BAUTEILTYP"
+      },
+      {
+        "source": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "target": "MAT::Holz",
+        "rel": "NUTZT_MATERIAL"
+      },
+      {
+        "source": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "target": "BT::Boden",
+        "rel": "HAT_BAUTEILTYP"
+      },
+      {
+        "source": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "target": "BT::Wand",
+        "rel": "HAT_BAUTEILTYP"
+      },
+      {
+        "source": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "target": "MAT::Naturstein",
+        "rel": "NUTZT_MATERIAL"
+      },
+      {
+        "source": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+        "target": "MAT::Ziegel",
+        "rel": "NUTZT_MATERIAL"
+      },
+      {
+        "source": "bg_stahl_mehrere_k118_structure",
+        "target": "BT::Stuetze",
+        "rel": "HAT_BAUTEILTYP"
+      },
+      {
+        "source": "bg_stahl_mehrere_k118_structure",
+        "target": "MAT::Stahl",
+        "rel": "NUTZT_MATERIAL"
+      },
+      {
+        "source": "bg_stahl_mehrere_k118_structure",
+        "target": "BT::Traeger",
+        "rel": "HAT_BAUTEILTYP"
+      },
+      {
+        "source": "bw_elys_basel_donor",
+        "target": "bg_stahl_mehrere_k118_structure",
+        "rel": "AUS_SPENDER"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_stahl_mehrere_k118_external_stair",
+      "bg_name": "Externe Stahltreppe",
+      "tragend": true,
+      "sp_id": "bw_orion_zuerich_donor",
+      "sp_name": "Orion-Bürogebäude Zürich",
+      "bauteiltyp": "Gelaender",
+      "material": "Stahl"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_stahl_mehrere_k118_external_stair",
+      "bg_name": "Externe Stahltreppe",
+      "tragend": true,
+      "sp_id": "bw_orion_zuerich_donor",
+      "sp_name": "Orion-Bürogebäude Zürich",
+      "bauteiltyp": "Treppe",
+      "material": "Stahl"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Ausbau",
+      "material": "Holz"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Boden",
+      "material": "Holz"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Wand",
+      "material": "Holz"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Ausbau",
+      "material": "Naturstein"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Boden",
+      "material": "Naturstein"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Wand",
+      "material": "Naturstein"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Ausbau",
+      "material": "Ziegel"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Boden",
+      "material": "Ziegel"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_mehrere_mehrere_k118_floor_finishes_bricks_panels",
+      "bg_name": "Naturstein-/Granitplatten",
+      "tragend": null,
+      "sp_id": null,
+      "sp_name": null,
+      "bauteiltyp": "Wand",
+      "material": "Ziegel"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_stahl_mehrere_k118_structure",
+      "bg_name": "Stahlträger und Stützen…",
+      "tragend": true,
+      "sp_id": "bw_elys_basel_donor",
+      "sp_name": "ELYS-Projekt Basel",
+      "bauteiltyp": "Stuetze",
+      "material": "Stahl"
+    },
+    {
+      "p_id": "p_k118_kopfbau_halle_118_winterthur",
+      "p_name": "K.118 Winterthur",
+      "bg_id": "bg_stahl_mehrere_k118_structure",
+      "bg_name": "Stahlträger und Stützen…",
+      "tragend": true,
+      "sp_id": "bw_elys_basel_donor",
+      "sp_name": "ELYS-Projekt Basel",
+      "bauteiltyp": "Traeger",
+      "material": "Stahl"
+    }
+  ]
+}

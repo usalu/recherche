@@ -1,0 +1,25 @@
+const cells = [{"row": 2, "col": 0, "rowLabel": "normalisierung", "columnHeading": "Rippenplatte / Spannbeton", "nodeId": "377:3215", "yaml": "length_mm: 6840\nwidth_mm: 1495\nheight_mm: 480\nquantity: 188\nquantity_unit: piece\ncompressive_strength_mpa: 67.4\nmodulus_elasticity_mpa: 42100-50500"}, {"row": 2, "col": 1, "rowLabel": "normalisierung", "columnHeading": "Stahlträger HEB 140", "nodeId": "377:3216", "yaml": "length_mm: 2540\ncomponent_normalized: steel_beam\nprofile_type: HEB\nsection_size: \"140\"\ncondition_normalized: new"}, {"row": 2, "col": 2, "rowLabel": "normalisierung", "columnHeading": "Historische Holzbalken aus Altbausanierung", "nodeId": "377:3217", "yaml": "quantity: 10\nquantity_unit: piece\nlength_min_mm: 1000\nlength_max_mm: 6000\nwidth_min_mm: 180\nwidth_max_mm: 220\nheight_min_mm: 180\nheight_max_mm: 220\nestimated_age_years: 160"}];
+await figma.loadFontAsync({ family: 'Inter', style: 'Regular' });
+function hex(h){const c=h.replace('#','');return{r:parseInt(c.slice(0,2),16)/255,g:parseInt(c.slice(2,4),16)/255,b:parseInt(c.slice(4,6),16)/255};}
+const results=[];
+for (const cell of cells){
+  const old=await figma.getNodeByIdAsync(cell.nodeId);
+  if(!old||!('width' in old)){results.push({nodeId:cell.nodeId,error:'missing'});continue;}
+  const parent=old.parent; const pad=12;
+  const frame=figma.createFrame();
+  frame.name='Cell_'+cell.row+'_'+cell.col;
+  frame.x=old.x; frame.y=old.y; frame.resize(old.width,old.height);
+  frame.fills=[{type:'SOLID',color:hex('1e1e1e')}];
+  frame.strokes=[{type:'SOLID',color:hex('333333')}]; frame.strokeWeight=1; frame.cornerRadius=6; frame.clipsContent=true;
+  const text=figma.createText();
+  text.fontName={family:'Inter',style:'Regular'}; text.fontSize=11;
+  text.lineHeight={unit:'PIXELS',value:14};
+  text.fills=[{type:'SOLID',color:hex('e6e6e6')}];
+  text.characters=cell.yaml; text.textAutoResize='HEIGHT';
+  text.resize(old.width-pad*2,10); text.x=pad; text.y=pad;
+  frame.appendChild(text);
+  frame.resize(old.width, Math.max(old.height, text.height+pad*2));
+  parent.appendChild(frame); old.remove();
+  results.push({nodeId:cell.nodeId,newId:frame.id,row:cell.row,col:cell.col,h:Math.round(frame.height)});
+}
+return results;

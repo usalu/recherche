@@ -1,0 +1,5952 @@
+{
+  "confirmation_required": "APPLY ier_evidence_recovery.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 15060
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-07T09:56:51.203307+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\ier_evidence_recovery.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Zur Erstellung belastbarer Ökobilanzen werden in der Regel Umweltproduktdeklarationen (EPDs) gemäß DIN EN 15804 herangezogen",
+        "evidence_url": "https://www.gebaeudeforum.de/wissen/nachhaltiges-bauen-und-sanieren/lebenszyklusbetrachtung/oekobilanzierung-lca/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_epd_oder_lca_nachweis",
+        "properties": {
+          "evidence_basis": "EN 15804/15978 environmental product declaration or building LCA (EU Taxonomy, national schemes)",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014157,
+        "to": "nf_oekobilanz_epd",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_epd_oder_lca_nachweis",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_oekobilanz_epd",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Technical preparation for the roll-out of the Digital Product Passport (DPP) is already underway by the Commission",
+        "evidence_url": "https://green-forum.ec.europa.eu/implementing-ecodesign-sustainable-products-regulation_en",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_materialpass_oder_dpp",
+        "properties": {
+          "evidence_basis": "Digital product passport / building resource passport (ESPR DPP, Madaster, DGNB Level(s))",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014159,
+        "to": "nf_materialpass_ressourcenpass",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_materialpass_oder_dpp",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_materialpass_ressourcenpass",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Ziel dieser Norm ist die Barrierefreiheit baulicher Anlagen, damit sie für Menschen mit Behinderungen in der allgemein üblichen Weise zugänglich und nutzbar sind",
+        "evidence_url": "https://www.baunormenlexikon.de/norm/din-18040-1/c099c3ee-ecd0-48ed-9d9d-ec0f84970d53",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_barrierefreiheitsaudit",
+        "properties": {
+          "evidence_basis": "Accessibility audit per DIN 18040 / DIN 18065",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014160,
+        "to": "nf_barrierefreiheit_nachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_barrierefreiheitsaudit",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_barrierefreiheit_nachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Die DGUV Vorschrift 3 fordert in § 5 Abs. 1 Nr. 1 grundsätzlich Prüfungen vor der Inbetriebnahme von elektrischen Betriebsmitteln und Anlagen",
+        "evidence_url": "https://www.elektrofachkraft.de/pruefung/elektrotechnische-erstpruefung-wiederholungspruefung",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_elektrosicherheitspruefung",
+        "properties": {
+          "evidence_basis": "Electrical safety initial/repeat inspection (DGUV V3 / VDE)",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014161,
+        "to": "nf_elektrosicherheitsnachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_elektrosicherheitspruefung",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_elektrosicherheitsnachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Ziel der Richtlinienreihe ist es, die einwandfreie Trinkwasserqualität in der Trinkwasser-Installation zu bewahren",
+        "evidence_url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien/unsere-richtlinien-highlights/vdi-6023",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "catalog_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_trinkwasser_hygiene_nachweis",
+        "properties": {
+          "evidence_basis": "Drinking-water hygiene inspection (VDI 6023 / VDI 6022)",
+          "evidence_confidence": "high",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "catalog_extension"
+        },
+        "rel_internal_id": 1153086431351014162,
+        "to": "nf_hygiene_und_reinigungsnachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_trinkwasser_hygiene_nachweis",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_hygiene_und_reinigungsnachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch_partial",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "VDI 6202 Blatt 3 befasst sich mit der Erkundung und Bewertung von Asbest in baulichen und technischen Anlagen, insbesondere im Rahmen von Abbruch",
+        "evidence_url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien/unsere-richtlinien-highlights/vdi-6202",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_dokumentenpruefung_bestand",
+        "properties": {
+          "evidence_basis": "pre-demolition document review / building pollutant register (VDI 6210 / ATV DIN 18459)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164698737,
+        "to": "nf_schadstoffkataster_erkundung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_dokumentenpruefung_bestand",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_schadstoffkataster_erkundung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch_partial",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "Nach Art. 13 sind Hersteller von Produkten, die einer harmonisierten technischen Spezifikation unterliegen, verpflichtet eine Leistungs- und Konformitätserklärung zu erstellen",
+        "evidence_url": "https://www.ressource-deutschland.de/service/rechtlicher-rahmen-zur-ressourceneffizienz/eu-bauprodukte-verordnung-2024/3110/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_approval_process",
+        "properties": {
+          "evidence_basis": "approval / ZIE-ABZ pathway documentation (DIBt Zulassung)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164700106,
+        "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_approval_process",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Tests for anchors on site may be required ... To validate the quality of installation of anchors used on the job, i.e. proof tests",
+        "evidence_url": "https://www.wurth.co.uk/media/downloads/pdf/anchors_2/literature/adm/03_Building_Site_Tests.pdf",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_ankerpruefung",
+        "properties": {
+          "evidence_basis": "anchor pull-out test supports fastening proof (EN 1992-4 / facade anchorage)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164700147,
+        "to": "nf_befestigungsnachweis",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_ankerpruefung",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_befestigungsnachweis",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "es kann bei dem gleichen Hersteller durchaus sein, dass es Schwankungen in der petrografischen Zusammensetzung der RC-Körnung gibt",
+        "evidence_url": "https://www.schwenk.de/recyclingbeton-baustoff-der-zukunft/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pn_petrografie",
+        "properties": {
+          "evidence_basis": "petrographic analysis for recycled aggregate suitability (DAfStb RC concrete)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164700150,
+        "to": "nf_rc_gesteinskoernung_eignung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pn_petrografie",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_rc_gesteinskoernung_eignung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "In der Neuerscheinung sind die Einstufung der RC-Gesteinskörnung in 4 Typen und die werkseigene Produktionskontrolle (WPK) geregelt",
+        "evidence_url": "https://www.schwenk.de/recyclingbeton-baustoff-der-zukunft/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_eignungspruefung_baulehm",
+        "properties": {
+          "evidence_basis": "suitability testing for mineral secondary aggregates / RC materials",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164703318,
+        "to": "nf_rc_gesteinskoernung_eignung",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_eignungspruefung_baulehm",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_rc_gesteinskoernung_eignung",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch_partial",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "Mögliche Anschlussnutzungspfade werden identifiziert und hinsichtlich technischer Machbarkeit, wirtschaftlicher Zumutbarkeit und ökologischem Potenzial bewertet",
+        "evidence_url": "https://concular.de/dinspec91525/",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_zustandsbewertung",
+        "properties": {
+          "evidence_basis": "condition assessment informs remaining service life (DIN SPEC 91525 PUC)",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1155338231164703326,
+        "to": "nf_dauerhaftigkeit_restlebensdauer",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_zustandsbewertung",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_dauerhaftigkeit_restlebensdauer",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "ier_p0_web_fetch",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Der Eignungsnachweis besteht aus der Erstprüfung und der Betriebsbeurteilung",
+        "evidence_url": "https://www.gesetze-im-internet.de/ersatzbaustoffv/__5.html",
+        "review_run": "ier_p0_2026_06_06",
+        "semantic_basis": "method_mapped_partial"
+      },
+      "before": {
+        "count": 1,
+        "from": "pr_eignungspruefung_baulehm",
+        "properties": {
+          "evidence_basis": "EBV Ersatzbaustoff suitability / quality assessment",
+          "evidence_confidence": "medium",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "semantic_basis": "method_mapped_partial"
+        },
+        "rel_internal_id": 1157590030978388566,
+        "to": "nf_mineralische_ersatzbaustoff_guete",
+        "type": "ERFUELLT_NACHWEIS"
+      },
+      "from": "pr_eignungspruefung_baulehm",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "nf_mineralische_ersatzbaustoff_guete",
+      "type": "ERFUELLT_NACHWEIS"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "3xn",
+          "name": "3XN",
+          "primary_source_url": "https://3xn.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "-->\n\t \n\n\t \n\t \n\t \n\t \n         \n\n\t \n\t \n\t \n         \n\n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t \n\t -->\n\t \n\n\t \n\t \n\n\t \n\n\t \n\t \n\n\t \n\n \n \n\n -->"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "3xn",
+          "name": "3XN"
+        }
+      },
+      "id": "3xn",
+      "line": 13,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "51n4e",
+          "name": "51N4E",
+          "primary_source_url": "https://www.51n4e.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "51N4E",
+          "source_titles": [
+            "Recypark_Demets_Anderlec…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "51n4e",
+          "name": "51N4E",
+          "source_titles": [
+            "Recypark_Demets_Anderlec…"
+          ]
+        }
+      },
+      "id": "51n4e",
+      "line": 14,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "CITYFÖRSTER architecture + urbanism"
+          ],
+          "id": "CITYFOERSTER",
+          "metadata_sidecar_key": "node:ak_cityfoerster",
+          "name": "CITYFÖRSTER",
+          "primary_source_url": "https://www.cityfoerster.net/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home - Cityförster"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "CITYFÖRSTER architecture + urbanism"
+          ],
+          "id": "CITYFOERSTER",
+          "metadata_sidecar_key": "node:ak_cityfoerster",
+          "name": "CITYFÖRSTER"
+        }
+      },
+      "id": "CITYFOERSTER",
+      "line": 15,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Lendager Group / Lendager Architects"
+          ],
+          "id": "Lendager",
+          "metadata_sidecar_key": "node:Lendager",
+          "name": "Lendager",
+          "primary_source_url": "https://lendager.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Circular Architecture & Reuse Consultancy | Lendager",
+          "source_titles": [
+            "Resource_Rows_Copenhagen…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Lendager Group / Lendager Architects"
+          ],
+          "id": "Lendager",
+          "metadata_sidecar_key": "node:Lendager",
+          "name": "Lendager",
+          "source_titles": [
+            "Resource_Rows_Copenhagen…"
+          ]
+        }
+      },
+      "id": "Lendager",
+      "line": 16,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "Natural_Building_Lab",
+          "name": "Natural Building Lab",
+          "primary_source_url": "https://www.nbl.berlin/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Lab"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "Natural_Building_Lab",
+          "name": "Natural Building Lab"
+        }
+      },
+      "id": "Natural_Building_Lab",
+      "line": 17,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "abfallwirtschaftsbetriebe_muenster",
+          "name": "Abfallwirtschaftsbetriebe Münster",
+          "primary_source_url": "https://www.awm.stadt-muenster.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Startseite | Abfallwirtschaftsbetriebe Münster",
+          "source_titles": [
+            "AWM_Muenster_Circular_Of…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "abfallwirtschaftsbetriebe_muenster",
+          "name": "Abfallwirtschaftsbetriebe Münster",
+          "source_titles": [
+            "AWM_Muenster_Circular_Of…"
+          ]
+        }
+      },
+      "id": "abfallwirtschaftsbetriebe_muenster",
+      "line": 18,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "abn_amro",
+          "name": "ABN AMRO",
+          "primary_source_url": "https://www.abnamro.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "ABN AMRO"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "abn_amro",
+          "name": "ABN AMRO"
+        }
+      },
+      "id": "abn_amro",
+      "line": 19,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "amstein_walthert",
+          "name": "Amstein+Walthert AG",
+          "primary_source_url": "https://www.amstein-walthert.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Amstein-Walthert"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "amstein_walthert",
+          "name": "Amstein+Walthert AG"
+        }
+      },
+      "id": "amstein_walthert",
+      "line": 20,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "andrea_klinge",
+          "name": "Andrea Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge und Andrea Klinge",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "andrea_klinge",
+          "name": "Andrea Klinge",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "id": "andrea_klinge",
+      "line": 21,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "annette_hillebrandt",
+          "name": "Annette Hillebrandt",
+          "primary_source_url": "https://de.wikipedia.org/wiki/Annette_Hillebrandt",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Annette Hillebrandt",
+          "source_titles": [
+            "Annette Hillebrandt"
+          ],
+          "source_urls": [
+            "https://www.architektur.uni-wuppertal.de/en/people/annette-hillebrandt"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "annette_hillebrandt",
+          "name": "Annette Hillebrandt",
+          "source_titles": [
+            "Annette Hillebrandt"
+          ],
+          "source_urls": [
+            "https://www.architektur.uni-wuppertal.de/en/people/annette-hillebrandt"
+          ]
+        }
+      },
+      "id": "annette_hillebrandt",
+      "line": 22,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Artelia Group"
+          ],
+          "id": "artelia",
+          "metadata_sidecar_key": "node:artelia_group",
+          "name": "Artelia",
+          "primary_source_url": "https://www.arteliagroup.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home Page - Artelia",
+          "source_titles": [
+            "Upcycle_Studios_Copenhag…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Artelia Group"
+          ],
+          "id": "artelia",
+          "metadata_sidecar_key": "node:artelia_group",
+          "name": "Artelia",
+          "source_titles": [
+            "Upcycle_Studios_Copenhag…"
+          ]
+        }
+      },
+      "id": "artelia",
+      "line": 23,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "arup",
+          "name": "Arup",
+          "primary_source_url": "https://www.arup.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Arup",
+          "source_titles": [
+            "BedZED_London_Hackbridge…",
+            "Brent_Cross_Town_Primary…",
+            "Peoples_Pavilion_Eindhov…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "arup",
+          "name": "Arup",
+          "source_titles": [
+            "BedZED_London_Hackbridge…",
+            "Brent_Cross_Town_Primary…",
+            "Peoples_Pavilion_Eindhov…"
+          ]
+        }
+      },
+      "id": "arup",
+      "line": 24,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "asplan_viak",
+          "name": "Asplan Viak",
+          "primary_source_url": "https://www.asplanviak.no/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Asplan Viak",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "asplan_viak",
+          "name": "Asplan Viak",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "id": "asplan_viak",
+      "line": 25,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bakerbrown",
+          "name": "BakerBrown",
+          "primary_source_url": "https://www.bakerbrown.studio/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "BakerBrown"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bakerbrown",
+          "name": "BakerBrown"
+        }
+      },
+      "id": "bakerbrown",
+      "line": 26,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ballast_nedam",
+          "name": "Ballast Nedam",
+          "primary_source_url": "https://www.ballast-nedam.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Ballast Nedam",
+          "source_titles": [
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ballast_nedam",
+          "name": "Ballast Nedam",
+          "source_titles": [
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "id": "ballast_nedam",
+      "line": 27,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "belgian_buildings_agency",
+          "name": "Belgian Buildings Agency / Regie der Gebouwen",
+          "primary_source_url": "https://www.regiedergebouwen.be/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Regie",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "belgian_buildings_agency",
+          "name": "Belgian Buildings Agency / Regie der Gebouwen",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "id": "belgian_buildings_agency",
+      "line": 28,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bennetts_associates",
+          "metadata_sidecar_key": "node:bennetts_associates",
+          "name": "Bennetts Associates",
+          "primary_source_url": "https://www.bennettsassociates.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Bennetts Associates"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bennetts_associates",
+          "metadata_sidecar_key": "node:bennetts_associates",
+          "name": "Bennetts Associates"
+        }
+      },
+      "id": "bennetts_associates",
+      "line": 29,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "big_bundesimmobilien",
+          "name": "BIG (Bundesimmob.)",
+          "primary_source_url": "https://www.big.at/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "wickelt und neue Wege eingeschlagen werden. Hier werden Talente gelebt, Horizonte erweitert und Träume in die Tat umgesetzt. Wir, die Mitarbeiterinnen und Mitarbeiter der Bundesimmobiliengesellschaft,"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "big_bundesimmobilien",
+          "name": "BIG (Bundesimmob.)"
+        }
+      },
+      "id": "big_bundesimmobilien",
+      "line": 30,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "blaf_architecten",
+          "metadata_sidecar_key": "node:blaf_architecten",
+          "name": "BLAF Architecten",
+          "primary_source_url": "https://www.blaf.be/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Blaf"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "blaf_architecten",
+          "metadata_sidecar_key": "node:blaf_architecten",
+          "name": "BLAF Architecten"
+        }
+      },
+      "id": "blaf_architecten",
+      "line": 31,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bopro",
+          "name": "Bopro",
+          "primary_source_url": "https://www.bopro.be/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Bopro",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bopro",
+          "name": "Bopro",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "id": "bopro",
+      "line": 32,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "BTU Cottbus / Dr. Angelika Mettke"
+          ],
+          "id": "btu_cottbus",
+          "name": "BTU Cottbus",
+          "primary_source_url": "https://www.b-tu.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Brandenburgische Technische Universität Cottbus-Senftenberg",
+          "source_titles": [
+            "Haus_HOS_Mehrfamilienhau…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "BTU Cottbus / Dr. Angelika Mettke"
+          ],
+          "id": "btu_cottbus",
+          "name": "BTU Cottbus",
+          "source_titles": [
+            "Haus_HOS_Mehrfamilienhau…"
+          ]
+        }
+      },
+      "id": "btu_cottbus",
+      "line": 33,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "buildwise",
+          "name": "Buildwise",
+          "primary_source_url": "https://www.buildwise.be/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Buildwise"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "buildwise",
+          "name": "Buildwise"
+        }
+      },
+      "id": "buildwise",
+      "line": 34,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bureau_bouwtechniek",
+          "name": "Bureau Bouwtechniek",
+          "primary_source_url": "https://www.b-b.be/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Meaning in every square meter. | Bureau Bouwtechniek",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bureau_bouwtechniek",
+          "name": "Bureau Bouwtechniek",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "id": "bureau_bouwtechniek",
+      "line": 35,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bureau_sla",
+          "name": "bureau SLA",
+          "primary_source_url": "https://www.bureausla.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "home - bureau SLA",
+          "source_titles": [
+            "Peoples_Pavilion_Eindhov…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bureau_sla",
+          "name": "bureau SLA",
+          "source_titles": [
+            "Peoples_Pavilion_Eindhov…"
+          ]
+        }
+      },
+      "id": "bureau_sla",
+      "line": 36,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "buro_happold",
+          "name": "Buro Happold",
+          "primary_source_url": "https://www.burohappold.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Buro Happold",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "buro_happold",
+          "name": "Buro Happold",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "id": "buro_happold",
+      "line": 37,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cbre",
+          "name": "CBRE",
+          "primary_source_url": "https://www.cbre.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Global Commercial Real Estate Services | CBRE",
+          "source_titles": [
+            "55_Great_Suffolk_Street_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cbre",
+          "name": "CBRE",
+          "source_titles": [
+            "55_Great_Suffolk_Street_…"
+          ]
+        }
+      },
+      "id": "cbre",
+      "line": 38,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cepezed",
+          "name": "cepezed",
+          "primary_source_url": "https://www.cepezed.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Details Save Accept All Cepezed",
+          "source_titles": [
+            "Circular_Centre_Netherla…",
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cepezed",
+          "name": "cepezed",
+          "source_titles": [
+            "Circular_Centre_Netherla…",
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "id": "cepezed",
+      "line": 39,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cesare_peeren",
+          "name": "Césare Peeren",
+          "primary_source_url": "https://circularmaterialsystems.com/en/case/villa-welpeloo",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "and resource conservation. Practices Recognising opportunities are basic capabilities for what may become a new profession: the superuse scout. Ed van Hinte, Jan Jongert and Césare Peeren",
+          "source_titles": [
+            "S1 – Superuse Studios: V…",
+            "S3 – Superuse Studios: A…",
+            "S9 – Circular Material S…",
+            "Superuse Studios — Housi…",
+            "Harvest Map/Oogstkaart"
+          ],
+          "source_urls": [
+            "https://www.superuse-studios.com/projectplus/villa-welpeloo",
+            "https://www.superuse-studios.com/about-us",
+            "https://circularmaterialsystems.com/en/case/villa-welpeloo",
+            "https://www.superuse-studios.com/projectplus/woongroep-boschgaard",
+            "https://www.abitare.it/en/architecture/materials-technologies/2018/07/14/harvest-map-recycling-platform"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cesare_peeren",
+          "name": "Césare Peeren",
+          "source_titles": [
+            "S1 – Superuse Studios: V…",
+            "S3 – Superuse Studios: A…",
+            "S9 – Circular Material S…",
+            "Superuse Studios — Housi…",
+            "Harvest Map/Oogstkaart"
+          ],
+          "source_urls": [
+            "https://www.superuse-studios.com/projectplus/villa-welpeloo",
+            "https://www.superuse-studios.com/about-us",
+            "https://circularmaterialsystems.com/en/case/villa-welpeloo",
+            "https://www.superuse-studios.com/projectplus/woongroep-boschgaard",
+            "https://www.abitare.it/en/architecture/materials-technologies/2018/07/14/harvest-map-recycling-platform"
+          ]
+        }
+      },
+      "id": "cesare_peeren",
+      "line": 40,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "charlotte_bofinger",
+          "name": "Charlotte Bofinger",
+          "primary_source_url": "https://zirkular.net/en/contact",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "rio brings his experience and know-how of two worlds – construction and planning-execution – to his job of component hunter. Charlotte Bofinger",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Zirkular Kontakt"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://zirkular.net/en/contact"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "charlotte_bofinger",
+          "name": "Charlotte Bofinger",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Zirkular Kontakt"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://zirkular.net/en/contact"
+          ]
+        }
+      },
+      "id": "charlotte_bofinger",
+      "line": 41,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "christof_ziegert",
+          "name": "Christof Ziegert",
+          "primary_source_url": "https://www.zrs.berlin/en",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "29.04.2026 | NEXT:EARTH 2026 CONFERENCE – RETHINKING EARTH CONSTRUCTION At the next:earth 2026 conference on 29 April 2026 in Pfeffenhausen, Christof Ziegert",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "christof_ziegert",
+          "name": "Christof Ziegert",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation"
+          ]
+        }
+      },
+      "id": "christof_ziegert",
+      "line": 42,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "circular_material_systems",
+          "name": "Circular Material Systems",
+          "primary_source_url": "https://circularmaterialsystems.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Skip to content Circular Material Systems"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "circular_material_systems",
+          "name": "Circular Material Systems"
+        }
+      },
+      "id": "circular_material_systems",
+      "line": 43,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "city_of_boulder",
+          "metadata_sidecar_key": "node:city_of_boulder",
+          "name": "City of Boulder",
+          "primary_source_url": "https://bouldercolorado.gov/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | City of Boulder"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "city_of_boulder",
+          "metadata_sidecar_key": "node:city_of_boulder",
+          "name": "City of Boulder"
+        }
+      },
+      "id": "city_of_boulder",
+      "line": 44,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Claus Asam / IEMB"
+          ],
+          "id": "claus_asam",
+          "metadata_sidecar_key": "node:claus_asam_iemb",
+          "name": "Claus Asam",
+          "primary_source_url": "https://www.tu.berlin/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "bung Master Fristen & Termine Vergabeverfahren für Studienplätze Numerus Clausus",
+          "source_titles": [
+            "Berlin_Schildow_Pilot_Ho…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Claus Asam / IEMB"
+          ],
+          "id": "claus_asam",
+          "metadata_sidecar_key": "node:claus_asam_iemb",
+          "name": "Claus Asam",
+          "source_titles": [
+            "Berlin_Schildow_Pilot_Ho…"
+          ]
+        }
+      },
+      "id": "claus_asam",
+      "line": 45,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "conix_rdbm",
+          "name": "CONIX RDBM",
+          "primary_source_url": "https://www.conixrdbm.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Intro - CONIX RDBM",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "conix_rdbm",
+          "name": "CONIX RDBM",
+          "source_titles": [
+            "Multi_Brussels_Reuse_in_…"
+          ]
+        }
+      },
+      "id": "conix_rdbm",
+      "line": 46,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "daidalos_peutz",
+          "name": "Daidalos Peutz",
+          "primary_source_url": "https://www.daidalospeutz.be/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Homepagina - Daidalos Peutz",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…",
+            "Verbiest_Karreveld_Bruss…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "daidalos_peutz",
+          "name": "Daidalos Peutz",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…",
+            "Verbiest_Karreveld_Bruss…"
+          ]
+        }
+      },
+      "id": "daidalos_peutz",
+      "line": 47,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "davis_partnership_architects",
+          "metadata_sidecar_key": "node:davis_partnership_architects",
+          "name": "Davis Partnership Architects",
+          "primary_source_url": "https://www.davispartnership.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "> Davis Partnership Architects"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "davis_partnership_architects",
+          "metadata_sidecar_key": "node:davis_partnership_architects",
+          "name": "Davis Partnership Architects"
+        }
+      },
+      "id": "davis_partnership_architects",
+      "line": 48,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "de_architekten_cie",
+          "name": "de Architekten Cie.",
+          "primary_source_url": "https://cie.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "de Architekten Cie."
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "de_architekten_cie",
+          "name": "de Architekten Cie."
+        }
+      },
+      "id": "de_architekten_cie",
+      "line": 49,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "deerns",
+          "name": "Deerns",
+          "primary_source_url": "https://www.deerns.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Deerns",
+          "source_titles": [
+            "BioPartner_5_Leiden_Oegs…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "deerns",
+          "name": "Deerns",
+          "source_titles": [
+            "BioPartner_5_Leiden_Oegs…"
+          ]
+        }
+      },
+      "id": "deerns",
+      "line": 50,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "desso_tarkett",
+          "name": "Desso / Tarkett",
+          "primary_source_url": "https://www.tarkett.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Spezialist nachhaltiger Bodenbeläge - Tarkett"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "desso_tarkett",
+          "name": "Desso / Tarkett"
+        }
+      },
+      "id": "desso_tarkett",
+      "line": 51,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "dexia",
+          "name": "Dexia",
+          "primary_source_url": "https://www.dexia.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "| Dexia",
+          "source_titles": [
+            "Lo_Reninge_Town_Hall_Fac…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "dexia",
+          "name": "Dexia",
+          "source_titles": [
+            "Lo_Reninge_Town_Hall_Fac…"
+          ]
+        }
+      },
+      "id": "dexia",
+      "line": 52,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "drmm_architects",
+          "name": "dRMM Architects",
+          "primary_source_url": "https://drmm.co.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Close We use cookies for functional & analytical purposes. Privacy policy . dRMM Architects",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "drmm_architects",
+          "name": "dRMM Architects",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "id": "drmm_architects",
+      "line": 53,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "drz_demontage_recycling",
+          "name": "DRZ",
+          "primary_source_url": "https://www.drz-wien.at/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Herzlich willkommen | Demontage- und Recycling-Zentrum (DRZ)"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "drz_demontage_recycling",
+          "name": "DRZ"
+        }
+      },
+      "id": "drz_demontage_recycling",
+      "line": 54,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "dtu",
+          "metadata_sidecar_key": "node:dtu",
+          "name": "DTU",
+          "primary_source_url": "https://www.dtu.dk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Danmarks Tekniske Universitet - DTU"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "dtu",
+          "metadata_sidecar_key": "node:dtu",
+          "name": "DTU"
+        }
+      },
+      "id": "dtu",
+      "line": 55,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ecovative",
+          "name": "Ecovative",
+          "primary_source_url": "https://www.ecovative.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Ecovative:"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ecovative",
+          "name": "Ecovative"
+        }
+      },
+      "id": "ecovative",
+      "line": 56,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ed_zueblin_ag",
+          "name": "Ed. Züblin AG",
+          "primary_source_url": "https://www.zueblin.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | Ed. Züblin AG"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ed_zueblin_ag",
+          "name": "Ed. Züblin AG"
+        }
+      },
+      "id": "ed_zueblin_ag",
+      "line": 57,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "edith_maryon_stift",
+          "name": "Stiftung Edith Maryon",
+          "primary_source_url": "https://www.maryon.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Startseite – Stiftung Edith Maryon"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "edith_maryon_stift",
+          "name": "Stiftung Edith Maryon"
+        }
+      },
+      "id": "edith_maryon_stift",
+      "line": 58,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eike_roswag_klinge",
+          "name": "Eike Roswag-Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge",
+          "source_titles": [
+            "Natural Building Lab"
+          ],
+          "source_urls": [
+            "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eike_roswag_klinge",
+          "name": "Eike Roswag-Klinge",
+          "source_titles": [
+            "Natural Building Lab"
+          ],
+          "source_urls": [
+            "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "id": "eike_roswag_klinge",
+      "line": 59,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "encore_heureux",
+          "name": "Encore Heureux",
+          "primary_source_url": "https://encoreheureux.org/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Encore Heureux",
+          "source_titles": [
+            "Circular_Pavilion_Paris.…",
+            "Grande_Halle_de_Colombel…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "encore_heureux",
+          "name": "Encore Heureux",
+          "source_titles": [
+            "Circular_Pavilion_Paris.…",
+            "Grande_Halle_de_Colombel…"
+          ]
+        }
+      },
+      "id": "encore_heureux",
+      "line": 60,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "entra_as",
+          "name": "Entra AS",
+          "primary_source_url": "https://entra.no/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "-tag. Needed for the organization number in the footer. --> Entra",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "entra_as",
+          "name": "Entra AS",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "id": "entra_as",
+      "line": 61,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "epfl",
+          "name": "EPFL",
+          "primary_source_url": "https://www.epfl.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "EPFL"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "epfl",
+          "name": "EPFL"
+        }
+      },
+      "id": "epfl",
+      "line": 62,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "erith",
+          "name": "Erith",
+          "primary_source_url": "https://www.erith.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Erith",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "erith",
+          "name": "Erith",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "id": "erith",
+      "line": 63,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "erz_zuerich",
+          "name": "Entsorgung + Recycling Zürich (ERZ)",
+          "primary_source_url": "https://www.stadt-zuerich.ch/erz/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "e vorlesen Entsorgung + Recycling Zürich Entsorgung + Recycling Zürich (ERZ)",
+          "source_titles": [
+            "Juch_Areal_Recyclingzent…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "erz_zuerich",
+          "name": "Entsorgung + Recycling Zürich (ERZ)",
+          "source_titles": [
+            "Juch_Areal_Recyclingzent…"
+          ]
+        }
+      },
+      "id": "erz_zuerich",
+      "line": 64,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eurban",
+          "metadata_sidecar_key": "node:eurban",
+          "name": "Eurban",
+          "primary_source_url": "https://eurban.co.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Eurban"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eurban",
+          "metadata_sidecar_key": "node:eurban",
+          "name": "Eurban"
+        }
+      },
+      "id": "eurban",
+      "line": 65,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "exasun",
+          "name": "Exasun",
+          "primary_source_url": "https://www.exasun.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "www.exasun.com"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "exasun",
+          "name": "Exasun"
+        }
+      },
+      "id": "exasun",
+      "line": 66,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Fabrix London"
+          ],
+          "id": "fabrix",
+          "name": "Fabrix",
+          "primary_source_url": "https://fabrix.co.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Display, interior and fashion fabrics +44 (0)1543 728 499 sales@fabrix.co.uk",
+          "source_titles": [
+            "55_Great_Suffolk_Street_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Fabrix London"
+          ],
+          "id": "fabrix",
+          "name": "Fabrix",
+          "source_titles": [
+            "55_Great_Suffolk_Street_…"
+          ]
+        }
+      },
+      "id": "fabrix",
+      "line": 67,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "galldris_group",
+          "name": "Galldris Group",
+          "primary_source_url": "https://www.galldris.co.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "galldris.co.uk Diversity Modern Slavery Act 2015 Code of Conduct The Galldris Group,",
+          "source_titles": [
+            "Brent_Cross_Town_Primary…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "galldris_group",
+          "name": "Galldris Group",
+          "source_titles": [
+            "Brent_Cross_Town_Primary…"
+          ]
+        }
+      },
+      "id": "galldris_group",
+      "line": 68,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gemeente_kerkrade",
+          "name": "Gemeente Kerkrade",
+          "primary_source_url": "https://www.kerkrade.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | Gemeente Kerkrade",
+          "source_titles": [
+            "Superlocal_Expogebouw_Bl…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gemeente_kerkrade",
+          "name": "Gemeente Kerkrade",
+          "source_titles": [
+            "Superlocal_Expogebouw_Bl…"
+          ]
+        }
+      },
+      "id": "gemeente_kerkrade",
+      "line": 69,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gemeinde_ingersheim",
+          "name": "Gemeinde Ingersheim",
+          "primary_source_url": "https://www.ingersheim.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "sheim schafft Gemeinschaft > Jetzt auch #gemeinschaftsschaffer werden! © Shutterstock (eamesBot) Ingersheim aus der Luft > Willkommen in unserer schönen Gemeinde Ingersheim"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gemeinde_ingersheim",
+          "name": "Gemeinde Ingersheim"
+        }
+      },
+      "id": "gemeinde_ingersheim",
+      "line": 70,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gmp_architekten",
+          "name": "gmp Architekten von Gerkan, Marg und Partner",
+          "primary_source_url": "https://www.gmp.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "gmp Architekten",
+          "source_titles": [
+            "Christ_Pavilion_Volkenro…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gmp_architekten",
+          "name": "gmp Architekten von Gerkan, Marg und Partner",
+          "source_titles": [
+            "Christ_Pavilion_Volkenro…"
+          ]
+        }
+      },
+      "id": "gmp_architekten",
+      "line": 71,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Graber Pulver Architekt:innen"
+          ],
+          "id": "graber_pulver",
+          "name": "Graber Pulver",
+          "primary_source_url": "https://www.graberpulver.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Graber Pulver",
+          "source_titles": [
+            "Juch_Areal_Recyclingzent…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Graber Pulver Architekt:innen"
+          ],
+          "id": "graber_pulver",
+          "name": "Graber Pulver",
+          "source_titles": [
+            "Juch_Areal_Recyclingzent…"
+          ]
+        }
+      },
+      "id": "graber_pulver",
+      "line": 72,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gramazio_kohler_research",
+          "name": "Gramazio Kohler Research",
+          "primary_source_url": "https://gramaziokohler.arch.ethz.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Gramazio Kohler Research"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gramazio_kohler_research",
+          "name": "Gramazio Kohler Research"
+        }
+      },
+      "id": "gramazio_kohler_research",
+      "line": 73,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "grand_huit",
+          "metadata_sidecar_key": "node:grand_huit",
+          "name": "Grand Huit",
+          "primary_source_url": "https://grandhuit.eu/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Grand Huit"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "grand_huit",
+          "metadata_sidecar_key": "node:grand_huit",
+          "name": "Grand Huit"
+        }
+      },
+      "id": "grand_huit",
+      "line": 74,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "grosvenor",
+          "metadata_sidecar_key": "node:grosvenor",
+          "name": "Grosvenor",
+          "primary_source_url": "https://www.grosvenor.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Grosvenor"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "grosvenor",
+          "metadata_sidecar_key": "node:grosvenor",
+          "name": "Grosvenor"
+        }
+      },
+      "id": "grosvenor",
+      "line": 75,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hans_hammink",
+          "name": "Hans Hammink",
+          "primary_source_url": "https://dutcharchitects.org/projects/circl-amsterdam",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "o realise a maximum circular building has led to the ultimate feasible result: Circl has become a beautiful reference point for where we are as regards circularity. Project architect Hans Hammink:",
+          "source_titles": [
+            "Pavilion CIRCL",
+            "Pavilion Circl Amsterdam",
+            "CMS Circl"
+          ],
+          "source_urls": [
+            "https://circularmaterialsystems.com/en/case/03_en_pavilion-circl",
+            "https://www.architectencie.nl/en/project/circl-amsterdam",
+            "https://circularmaterialsystems.com/en/case/pavilion-circl-amsterdam"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hans_hammink",
+          "name": "Hans Hammink",
+          "source_titles": [
+            "Pavilion CIRCL",
+            "Pavilion Circl Amsterdam",
+            "CMS Circl"
+          ],
+          "source_urls": [
+            "https://circularmaterialsystems.com/en/case/03_en_pavilion-circl",
+            "https://www.architectencie.nl/en/project/circl-amsterdam",
+            "https://circularmaterialsystems.com/en/case/pavilion-circl-amsterdam"
+          ]
+        }
+      },
+      "id": "hans_hammink",
+      "line": 76,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hawkins_brown",
+          "name": "Hawkins\\Brown",
+          "primary_source_url": "https://www.hawkinsbrown.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Hawkins\\Brown",
+          "source_titles": [
+            "55_Great_Suffolk_Street_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hawkins_brown",
+          "name": "Hawkins\\Brown",
+          "source_titles": [
+            "55_Great_Suffolk_Street_…"
+          ]
+        }
+      },
+      "id": "hawkins_brown",
+      "line": 77,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "heinrich_boell_stiftung",
+          "name": "Heinrich-Böll-Stiftung",
+          "primary_source_url": "https://www.boell.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Heinrich-Böll-Stiftung"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "heinrich_boell_stiftung",
+          "name": "Heinrich-Böll-Stiftung"
+        }
+      },
+      "id": "heinrich_boell_stiftung",
+      "line": 78,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hft_stuttgart",
+          "name": "HFT Stuttgart",
+          "primary_source_url": "https://www.hft-stuttgart.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | HFT Stuttgart"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hft_stuttgart",
+          "name": "HFT Stuttgart"
+        }
+      },
+      "id": "hft_stuttgart",
+      "line": 79,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hochbauamt_basel_stadt",
+          "name": "Hochbauamt Basel-Stadt",
+          "primary_source_url": "https://www.bs.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Startseite | Kanton Basel-Stadt",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hochbauamt_basel_stadt",
+          "name": "Hochbauamt Basel-Stadt",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "id": "hochbauamt_basel_stadt",
+      "line": 80,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hoffmann_as",
+          "metadata_sidecar_key": "node:hoffmann_as",
+          "name": "Hoffmann A/S",
+          "primary_source_url": "https://www.hoffmann.dk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "sammen med de andre parter omkring bordet, arbejder vi med en helt transparent økonomi. Det er med til at sikre gode og problemfrie projekter.” · Torben Bjørk Nielsen, Adm. direktør, Hoffmann A/S"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "hoffmann_as",
+          "metadata_sidecar_key": "node:hoffmann_as",
+          "name": "Hoffmann A/S"
+        }
+      },
+      "id": "hoffmann_as",
+      "line": 81,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "howells",
+          "name": "Howells",
+          "primary_source_url": "https://howells.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Howells:",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "howells",
+          "name": "Howells",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "id": "howells",
+      "line": 82,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "htwg_konstanz",
+          "name": "HTWG Konstanz",
+          "primary_source_url": "https://www.htwg-konstanz.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Studienkolleg der HTWG Konstanz"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "htwg_konstanz",
+          "name": "HTWG Konstanz"
+        }
+      },
+      "id": "htwg_konstanz",
+      "line": 83,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "husner_ag_holzbau",
+          "name": "HUSNER AG Holzbau",
+          "primary_source_url": "https://www.husner.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "HUSNER AG Holzbau",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "husner_ag_holzbau",
+          "name": "HUSNER AG Holzbau",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "id": "husner_ag_holzbau",
+      "line": 84,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "TU Berlin / IEMB"
+          ],
+          "id": "iemb_tu_berlin",
+          "metadata_sidecar_key": "node:ak_tu_berlin_iemb",
+          "name": "IEMB / TU Berlin",
+          "primary_source_url": "https://www.tu.berlin/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Technische Universität Berlin",
+          "source_titles": [
+            "Berlin_Schildow_Pilot_Ho…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "TU Berlin / IEMB"
+          ],
+          "id": "iemb_tu_berlin",
+          "metadata_sidecar_key": "node:ak_tu_berlin_iemb",
+          "name": "IEMB / TU Berlin",
+          "source_titles": [
+            "Berlin_Schildow_Pilot_Ho…"
+          ]
+        }
+      },
+      "id": "iemb_tu_berlin",
+      "line": 85,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "interreg_nwe",
+          "name": "Interreg NWE",
+          "primary_source_url": "https://www.nweurope.eu/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | Interreg NWE",
+          "source_titles": [
+            "Grande_Halle_de_Colombel…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "interreg_nwe",
+          "name": "Interreg NWE",
+          "source_titles": [
+            "Grande_Halle_de_Colombel…"
+          ]
+        }
+      },
+      "id": "interreg_nwe",
+      "line": 86,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "jan_de_nul",
+          "name": "Jan De Nul",
+          "primary_source_url": "https://www.jandenul.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "World Builders | Jan De Nul",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "jan_de_nul",
+          "name": "Jan De Nul",
+          "source_titles": [
+            "Europa_Building_Brussels…"
+          ]
+        }
+      },
+      "id": "jan_de_nul",
+      "line": 87,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kanton_basel_stadt",
+          "name": "Kanton Basel-Stadt",
+          "primary_source_url": "https://www.bs.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Startseite | Kanton Basel-Stadt"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kanton_basel_stadt",
+          "name": "Kanton Basel-Stadt"
+        }
+      },
+      "id": "kanton_basel_stadt",
+      "line": 88,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kibag",
+          "name": "KIBAG",
+          "primary_source_url": "https://www.kibag.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Patrick --> KIBAG"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kibag",
+          "name": "KIBAG"
+        }
+      },
+      "id": "kibag",
+      "line": 89,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kit",
+          "name": "KIT",
+          "primary_source_url": "https://www.kit.edu/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "KIT"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kit",
+          "name": "KIT"
+        }
+      },
+      "id": "kit",
+      "line": 90,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "klingelhoefer_kroetsch",
+          "name": "Klingelhöfer Krötsch",
+          "primary_source_url": "https://klingelhoefer-kroetsch.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home - Klingelhöfer Krötsch"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "klingelhoefer_kroetsch",
+          "name": "Klingelhöfer Krötsch"
+        }
+      },
+      "id": "klingelhoefer_kroetsch",
+      "line": 91,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kraaijvanger_architects",
+          "metadata_sidecar_key": "node:kraaijvanger_architects",
+          "name": "Kraaijvanger Architects",
+          "primary_source_url": "https://www.kraaijvanger.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Kraaijvanger Projects Office News NL EN Kraaijvanger Architects"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kraaijvanger_architects",
+          "metadata_sidecar_key": "node:kraaijvanger_architects",
+          "name": "Kraaijvanger Architects"
+        }
+      },
+      "id": "kraaijvanger_architects",
+      "line": 92,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "landsec",
+          "metadata_sidecar_key": "node:landsec",
+          "name": "Landsec",
+          "primary_source_url": "https://landsec.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | Landsec"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "landsec",
+          "metadata_sidecar_key": "node:landsec",
+          "name": "Landsec"
+        }
+      },
+      "id": "landsec",
+      "line": 93,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lindner_se",
+          "name": "Lindner SE",
+          "primary_source_url": "https://www.lindner-group.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Lindner"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lindner_se",
+          "name": "Lindner SE"
+        }
+      },
+      "id": "lindner_se",
+      "line": 94,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lionel_devlieger",
+          "name": "Lionel Devlieger",
+          "primary_source_url": "https://rotordb.org/en/projects/reuse-multi-project",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "g collaboration between Whitewood, Conix RDBM and Rotor, and gives an insight in the successes achieved, but also in the many stumbling blocks encountered. Authors Arne Vande Capelle and Lionel",
+          "source_titles": [
+            "[S1] Rotor — „Zinneke - …",
+            "Rotor"
+          ],
+          "source_urls": [
+            "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+            "https://rotordb.org/en/projects/reuse-multi-project",
+            "https://rotordb.org/en/projects/architecture-reuse-brussels",
+            "https://rotordb.org/en"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lionel_devlieger",
+          "name": "Lionel Devlieger",
+          "source_titles": [
+            "[S1] Rotor — „Zinneke - …",
+            "Rotor"
+          ],
+          "source_urls": [
+            "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+            "https://rotordb.org/en/projects/reuse-multi-project",
+            "https://rotordb.org/en/projects/architecture-reuse-brussels",
+            "https://rotordb.org/en"
+          ]
+        }
+      },
+      "id": "lionel_devlieger",
+      "line": 95,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lxsy_architektur",
+          "name": "LXSY Architektur",
+          "primary_source_url": "https://lxsy.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "LXSY ARCHITEKTUR",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "lxsy_architektur",
+          "name": "LXSY Architektur",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ]
+        }
+      },
+      "id": "lxsy_architektur",
+      "line": 96,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mad_arkitekter",
+          "name": "MAD arkitekter / Mad as",
+          "primary_source_url": "https://www.mad.no/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Mad arkitekter",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mad_arkitekter",
+          "name": "MAD arkitekter / Mad as",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "id": "mad_arkitekter",
+      "line": 97,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "magna_glaskeramik",
+          "name": "Magna Glaskeramik",
+          "primary_source_url": "https://www.magna-glaskeramik.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "MAGNA Glaskeramik:"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "magna_glaskeramik",
+          "name": "Magna Glaskeramik"
+        }
+      },
+      "id": "magna_glaskeramik",
+      "line": 98,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "materialrest24",
+          "name": "Materialrest24",
+          "primary_source_url": "https://www.handwerk-magazin.de/materialrest24de-restbestaende-clever-verwerten-183318",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "materialrest24.de:",
+          "source_titles": [
+            "materialrest24"
+          ],
+          "source_urls": [
+            "https://www.handwerk-magazin.de/materialrest24de-restbestaende-clever-verwerten-183318",
+            "https://nachhaltiges-handwerk.de/gute-beispiele/materialrest24",
+            "https://www.instagram.com/materialrest24.de"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "materialrest24",
+          "name": "Materialrest24",
+          "source_titles": [
+            "materialrest24"
+          ],
+          "source_urls": [
+            "https://www.handwerk-magazin.de/materialrest24de-restbestaende-clever-verwerten-183318",
+            "https://nachhaltiges-handwerk.de/gute-beispiele/materialrest24",
+            "https://www.instagram.com/materialrest24.de"
+          ]
+        }
+      },
+      "id": "materialrest24",
+      "line": 99,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mclaren_construction",
+          "name": "McLaren Construction",
+          "primary_source_url": "https://www.mclarengroup.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Development 01 McLaren Property Group Copyright 2025 McLaren Construction",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mclaren_construction",
+          "name": "McLaren Construction",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "id": "mclaren_construction",
+      "line": 100,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "meduni_wien",
+          "name": "MedUni Wien",
+          "primary_source_url": "https://www.meduniwien.ac.at/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | MedUni Wien"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "meduni_wien",
+          "name": "MedUni Wien"
+        }
+      },
+      "id": "meduni_wien",
+      "line": 101,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mehr_als_wohnen",
+          "name": "Baugenossenschaft mehr als wohnen",
+          "primary_source_url": "https://www.mehralswohnen.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home - MEHR ALS WOHNEN Die Baugenossenschaft mehr als wohnen"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mehr_als_wohnen",
+          "name": "Baugenossenschaft mehr als wohnen"
+        }
+      },
+      "id": "mehr_als_wohnen",
+      "line": 102,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "michel_massmuenster",
+          "name": "Michel Massmünster",
+          "primary_source_url": "https://zirkular.net/en/project/building-k-118",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "project team: Marc Angst, Pascal Hentschel, Benjamin Poignon, Michèle",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Kompendium"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://www.park-books.com/produkt/bauteile-wiederverwenden/108"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "michel_massmuenster",
+          "name": "Michel Massmünster",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Kompendium"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://www.park-books.com/produkt/bauteile-wiederverwenden/108"
+          ]
+        }
+      },
+      "id": "michel_massmuenster",
+      "line": 103,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mlr_bw",
+          "name": "MLR BW",
+          "primary_source_url": "https://mlr.baden-wuerttemberg.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Aktuelle Pressemitteilungen Copyright MLR BW"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "mlr_bw",
+          "name": "MLR BW"
+        }
+      },
+      "id": "mlr_bw",
+      "line": 104,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "nina_pawlicki",
+          "name": "Nina Pawlicki",
+          "primary_source_url": "https://www.nbl.berlin",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Lab \n    \n     \n     \n     \n     \n\n     \n     \n     \n     \n    \n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n    \n    \n     \n     \n    \n    \n     \n     \n     \n     \n     \n\n     \n\n     \n    \n    \n\n \n \n \n \n \n \n \n\n \n \n    \n     \n    \n         \n    \n    ",
+          "source_titles": [
+            "NBL"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.nbl.berlin"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "nina_pawlicki",
+          "name": "Nina Pawlicki",
+          "source_titles": [
+            "NBL"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.nbl.berlin"
+          ]
+        }
+      },
+      "id": "nina_pawlicki",
+      "line": 105,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "niras",
+          "name": "NIRAS",
+          "primary_source_url": "https://www.niras.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "NIRAS",
+          "source_titles": [
+            "Svanen_Kindergarten_Glad…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "niras",
+          "name": "NIRAS",
+          "source_titles": [
+            "Svanen_Kindergarten_Glad…"
+          ]
+        }
+      },
+      "id": "niras",
+      "line": 106,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "overtreders_w",
+          "name": "Overtreders W",
+          "primary_source_url": "https://www.overtreders-w.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "work | Overtreders W",
+          "source_titles": [
+            "Peoples_Pavilion_Eindhov…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "overtreders_w",
+          "name": "Overtreders W",
+          "source_titles": [
+            "Peoples_Pavilion_Eindhov…"
+          ]
+        }
+      },
+      "id": "overtreders_w",
+      "line": 107,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "plp_architecture",
+          "name": "PLP Architecture",
+          "primary_source_url": "https://plparchitecture.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "PLP Architecture",
+          "source_titles": [
+            "PLP_London_HQ_Circular_S…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "plp_architecture",
+          "name": "PLP Architecture",
+          "source_titles": [
+            "PLP_London_HQ_Circular_S…"
+          ]
+        }
+      },
+      "id": "plp_architecture",
+      "line": 108,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "provincie_gelderland",
+          "name": "Provincie Gelderland",
+          "primary_source_url": "https://www.gelderland.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Snel naar de thema's Politiek & Bestuur Subsidies Vergunningen Kaarten & Cijfers Op 14 & 15 mei is het Huis der Provincie",
+          "source_titles": [
+            "Circular_Centre_Netherla…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "provincie_gelderland",
+          "name": "Provincie Gelderland",
+          "source_titles": [
+            "Circular_Centre_Netherla…"
+          ]
+        }
+      },
+      "id": "provincie_gelderland",
+      "line": 109,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ramboll",
+          "name": "Ramboll",
+          "primary_source_url": "https://www.ramboll.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Architecture, engineering and consultancy - Ramboll",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ramboll",
+          "name": "Ramboll",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "id": "ramboll",
+      "line": 110,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rapp_ag",
+          "name": "Rapp AG",
+          "primary_source_url": "https://www.rapp.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Generalplanung, Baumanagement und mehr | Rapp AG",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rapp_ag",
+          "name": "Rapp AG",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "id": "rapp_ag",
+      "line": 111,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "recreate_project",
+          "name": "ReCreate project consortium",
+          "primary_source_url": "https://recreate-project.eu/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Other project documents Contact us Reusing precast concrete for a circular economy International ReCreate project"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "recreate_project",
+          "name": "ReCreate project consortium"
+        }
+      },
+      "id": "recreate_project",
+      "line": 112,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "resource_marktplaats",
+          "name": "ReSource Marktplaats",
+          "primary_source_url": "https://apps.apple.com/nl/app/resource-marktplaats/id6743317802",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "‎ReSource Marktplaats-app",
+          "source_titles": [
+            "resource-marktplaats"
+          ],
+          "source_urls": [
+            "https://play.google.com/store/apps/details?id=com.pss.resource",
+            "https://apps.apple.com/nl/app/resource-marktplaats/id6743317802"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "resource_marktplaats",
+          "name": "ReSource Marktplaats",
+          "source_titles": [
+            "resource-marktplaats"
+          ],
+          "source_urls": [
+            "https://play.google.com/store/apps/details?id=com.pss.resource",
+            "https://apps.apple.com/nl/app/resource-marktplaats/id6743317802"
+          ]
+        }
+      },
+      "id": "resource_marktplaats",
+      "line": 113,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rijkswaterstaat",
+          "name": "Rijkswaterstaat",
+          "primary_source_url": "https://www.rijkswaterstaat.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home Rijkswaterstaat",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "rijkswaterstaat",
+          "name": "Rijkswaterstaat",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "id": "rijkswaterstaat",
+      "line": 114,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "scenario_interioerarkitekter",
+          "name": "Scenario Interiørarkitekter",
+          "primary_source_url": "https://www.scenario.no/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Velkommen til Scenario Interiørarkitekter",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "scenario_interioerarkitekter",
+          "name": "Scenario Interiørarkitekter",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "id": "scenario_interioerarkitekter",
+      "line": 115,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sheppard_robson",
+          "name": "Sheppard Robson",
+          "primary_source_url": "https://www.sheppardrobson.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Sheppard Robson",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sheppard_robson",
+          "name": "Sheppard Robson",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "id": "sheppard_robson",
+      "line": 116,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "single_speed_design",
+          "name": "Single Speed Design",
+          "primary_source_url": "https://www.ssdarchitecture.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Recent News SsD Unveils Nature-Infused Museum Hodu in Cheonan “Bearable Lightness of Being”: A Lecture by Jinhee Park at the Design",
+          "source_titles": [
+            "Big_Dig_Building_Boston.…",
+            "Big_Dig_House_Lexington_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "single_speed_design",
+          "name": "Single Speed Design",
+          "source_titles": [
+            "Big_Dig_Building_Boston.…",
+            "Big_Dig_House_Lexington_…"
+          ]
+        }
+      },
+      "id": "single_speed_design",
+      "line": 117,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "socotec",
+          "name": "SOCOTEC",
+          "primary_source_url": "https://www.socotec.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Leader in Testing, Inspection and Certification | SOCOTEC",
+          "source_titles": [
+            "Resilience_La_Ferme_des_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "socotec",
+          "name": "SOCOTEC",
+          "source_titles": [
+            "Resilience_La_Ferme_des_…"
+          ]
+        }
+      },
+      "id": "socotec",
+      "line": 118,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "southwark_council",
+          "name": "Southwark Council",
+          "primary_source_url": "https://www.southwark.gov.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Hello, welcome to Southwark | Southwark Council",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "southwark_council",
+          "name": "Southwark Council",
+          "source_titles": [
+            "Roots_in_the_Sky_Blackfr…"
+          ]
+        }
+      },
+      "id": "southwark_council",
+      "line": 119,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stadt_kassel",
+          "name": "Stadt Kassel",
+          "primary_source_url": "https://baumab-kassel.de/impressum/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Warenkorb Gefördert durch: Stadt Kassel",
+          "source_titles": [
+            "BauMaB Kassel imprint"
+          ],
+          "source_urls": [
+            "https://baumab-kassel.de/impressum/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stadt_kassel",
+          "name": "Stadt Kassel",
+          "source_titles": [
+            "BauMaB Kassel imprint"
+          ],
+          "source_urls": [
+            "https://baumab-kassel.de/impressum/"
+          ]
+        }
+      },
+      "id": "stadt_kassel",
+      "line": 120,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stadt_zuerich_amt_hochbauten",
+          "name": "Stadt Zürich / Amt für Hochbauten / Immobilien Stadt Zürich",
+          "primary_source_url": "https://www.stadt-zuerich.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Startseite | Stadt",
+          "source_titles": [
+            "Kindergarten_Moeoeslistr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stadt_zuerich_amt_hochbauten",
+          "name": "Stadt Zürich / Amt für Hochbauten / Immobilien Stadt Zürich",
+          "source_titles": [
+            "Kindergarten_Moeoeslistr…"
+          ]
+        }
+      },
+      "id": "stadt_zuerich_amt_hochbauten",
+      "line": 121,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stiftung_abendrot",
+          "name": "Stiftung Abendrot / Vorsorgestiftung Abendrot",
+          "primary_source_url": "https://www.abendrot.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Abendrot: Stiftung Abendrot,",
+          "source_titles": [
+            "K118_Kopfbau_Halle_118_W…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stiftung_abendrot",
+          "name": "Stiftung Abendrot / Vorsorgestiftung Abendrot",
+          "source_titles": [
+            "K118_Kopfbau_Halle_118_W…"
+          ]
+        }
+      },
+      "id": "stiftung_abendrot",
+      "line": 122,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stiftung_habitat",
+          "name": "Stiftung Habitat",
+          "primary_source_url": "https://www.stiftung-habitat.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Stiftung Habitat"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stiftung_habitat",
+          "name": "Stiftung Habitat"
+        }
+      },
+      "id": "stiftung_habitat",
+      "line": 123,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stiftung_pwg",
+          "name": "Stiftung PWG",
+          "primary_source_url": "https://www.pwg.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Stiftung PWG"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stiftung_pwg",
+          "name": "Stiftung PWG"
+        }
+      },
+      "id": "stiftung_pwg",
+      "line": 124,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "EPFL Structural Xploration Lab"
+          ],
+          "id": "structural_xploration_lab_epfl",
+          "name": "Structural Xploration Lab / EPFL",
+          "primary_source_url": "https://www.epfl.ch/labs/sxl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Structural Xploration",
+          "source_titles": [
+            "ReCrete_footbridge_reuse…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "EPFL Structural Xploration Lab"
+          ],
+          "id": "structural_xploration_lab_epfl",
+          "name": "Structural Xploration Lab / EPFL",
+          "source_titles": [
+            "ReCrete_footbridge_reuse…"
+          ]
+        }
+      },
+      "id": "structural_xploration_lab_epfl",
+      "line": 125,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "strukton_worksphere",
+          "name": "Strukton Worksphere",
+          "primary_source_url": "https://www.strukton.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Building the Future of Infrastructure - Strukton",
+          "source_titles": [
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "strukton_worksphere",
+          "name": "Strukton Worksphere",
+          "source_titles": [
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "id": "strukton_worksphere",
+      "line": 126,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "studio_pdp",
+          "name": "Studio PDP",
+          "primary_source_url": "https://www.studiopdp.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Studio PDP",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "studio_pdp",
+          "name": "Studio PDP",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "id": "studio_pdp",
+      "line": 127,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sweco_architects",
+          "name": "Sweco / Sweco Architects",
+          "primary_source_url": "https://www.sweco.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "SWECO",
+          "source_titles": [
+            "Svanen_Kindergarten_Glad…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sweco_architects",
+          "name": "Sweco / Sweco Architects",
+          "source_titles": [
+            "Svanen_Kindergarten_Glad…"
+          ]
+        }
+      },
+      "id": "sweco_architects",
+      "line": 128,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "tu_delft",
+          "name": "TU Delft",
+          "primary_source_url": "https://www.tudelft.nl/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "TU Delft"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "tu_delft",
+          "name": "TU Delft"
+        }
+      },
+      "id": "tu_delft",
+      "line": 129,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ucl_circular_economy_lab",
+          "name": "UCL Circular Economy Lab",
+          "primary_source_url": "https://www.ucl.ac.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Welcome to UCL | University College London \n     \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n     \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\n     \n     \n     \n     \n     \n     \n     \n     \n     \n     \n   \n   \n         \n      Skip to main content\n     \n        \n\n       \n    \n\n\n\n\n\n\n",
+          "source_titles": [
+            "CascadeUp_London_seconda…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ucl_circular_economy_lab",
+          "name": "UCL Circular Economy Lab",
+          "source_titles": [
+            "CascadeUp_London_seconda…"
+          ]
+        }
+      },
+      "id": "ucl_circular_economy_lab",
+      "line": 130,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "universitaet_wuppertal",
+          "name": "Universität Wuppertal",
+          "primary_source_url": "https://www.uni-wuppertal.de/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Suche schließen Bergische Universität Wuppertal"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "universitaet_wuppertal",
+          "name": "Universität Wuppertal"
+        }
+      },
+      "id": "universitaet_wuppertal",
+      "line": 131,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "university_of_brighton",
+          "name": "University of Brighton",
+          "primary_source_url": "https://www.brighton.ac.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "University of Brighton",
+          "source_titles": [
+            "Brighton_Waste_House_Bri…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "university_of_brighton",
+          "name": "University of Brighton",
+          "source_titles": [
+            "Brighton_Waste_House_Bri…"
+          ]
+        }
+      },
+      "id": "university_of_brighton",
+      "line": 132,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ville_de_paris",
+          "name": "Ville de Paris",
+          "primary_source_url": "https://www.paris.fr/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Paris.fr, site officiel de la Ville de Paris",
+          "source_titles": [
+            "Maison_des_Canaux_Paris.…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ville_de_paris",
+          "name": "Ville de Paris",
+          "source_titles": [
+            "Maison_des_Canaux_Paris.…"
+          ]
+        }
+      },
+      "id": "ville_de_paris",
+      "line": 133,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "webb_yates_engineers",
+          "name": "Webb Yates Engineers",
+          "primary_source_url": "https://www.webbyates.co.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Webb Yates Engineers",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "webb_yates_engineers",
+          "name": "Webb Yates Engineers",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "id": "webb_yates_engineers",
+      "line": 134,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "whitby_wood",
+          "name": "Whitby Wood",
+          "primary_source_url": "https://www.whitbywood.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Whitby Wood",
+          "source_titles": [
+            "Brent_Cross_Town_Primary…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "whitby_wood",
+          "name": "Whitby Wood",
+          "source_titles": [
+            "Brent_Cross_Town_Primary…"
+          ]
+        }
+      },
+      "id": "whitby_wood",
+      "line": 135,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "willmott_dixon",
+          "name": "Willmott Dixon",
+          "primary_source_url": "https://www.willmottdixon.co.uk/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Building places, building lives; we are Willmott Dixon",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "willmott_dixon",
+          "name": "Willmott Dixon",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "id": "willmott_dixon",
+      "line": 136,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "witteveen_bos",
+          "name": "Witteveen+Bos",
+          "primary_source_url": "https://www.witteveenbos.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Engineering and consultancy firm | Witteveen+Bos",
+          "source_titles": [
+            "Recypark_Demets_Anderlec…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "witteveen_bos",
+          "name": "Witteveen+Bos",
+          "source_titles": [
+            "Recypark_Demets_Anderlec…"
+          ]
+        }
+      },
+      "id": "witteveen_bos",
+      "line": 137,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "yit",
+          "name": "YIT",
+          "primary_source_url": "https://www.yit.fi/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "YIT",
+          "source_titles": [
+            "Melkinlaituri_Primary_Sc…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "yit",
+          "name": "YIT",
+          "source_titles": [
+            "Melkinlaituri_Primary_Sc…"
+          ]
+        }
+      },
+      "id": "yit",
+      "line": 138,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "zhaw",
+          "name": "ZHAW",
+          "primary_source_url": "https://www.zhaw.ch/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Willkommen an der ZHAW"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "zhaw",
+          "name": "ZHAW"
+        }
+      },
+      "id": "zhaw",
+      "line": 139,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "ZRS"
+          ],
+          "id": "zrs_ingenieure",
+          "name": "ZRS Ingenieure",
+          "primary_source_url": "https://www.zrs.berlin/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "PRAKTIKUM IN DER TRAGWERKSPLANUNG | ZRS Ingenieure",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en/contact/",
+            "https://www.zrs.berlin/en"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "ZRS"
+          ],
+          "id": "zrs_ingenieure",
+          "name": "ZRS Ingenieure",
+          "primary_source_url": "https://www.zrs.berlin/en/contact/",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en/contact/",
+            "https://www.zrs.berlin/en"
+          ]
+        }
+      },
+      "id": "zrs_ingenieure",
+      "line": 140,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "zueblin_timber_gmbh",
+          "name": "ZÜBLIN Timber",
+          "primary_source_url": "https://www.zueblin-timber.com/",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Home | ZÜBLIN Timber"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "zueblin_timber_gmbh",
+          "name": "ZÜBLIN Timber"
+        }
+      },
+      "id": "zueblin_timber_gmbh",
+      "line": 141,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "abt",
+          "name": "ABT",
+          "primary_source_url": "https://abt.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "ABT Anwender Beratung Telekommunikation Zum Inhalt springen Suche nach: Home Dienstleistungen Prozesse Technologie Gebühren Allgemein All-IP Analyse Honorar Referenzen Jobs/Karriere Kontakt ABT Home ABT Beratung 2026-04-13T13:20:25+02:00 Herzlich Willkommen Die ABT Anwender Berat",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "abt",
+          "name": "ABT",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "id": "abt",
+      "line": 142,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "architekturbuero_hose",
+          "name": "Architekturbüro Hose",
+          "primary_source_url": "https://architekturbuero-hose.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Wir über uns Personen Service Impressum Kontakt mwm objects architekturbüro hose Start --> 1 | 2 | 3 --> --> Projektentwicklung Architektur Fachplanung Präsentation Design Engagement Wertgutachten Links Wir über uns Unsere Unternehmung zielt darauf ab, Planungsleistungen und dars",
+          "source_titles": [
+            "Haus_HOS_Mehrfamilienhau…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "architekturbuero_hose",
+          "name": "Architekturbüro Hose",
+          "source_titles": [
+            "Haus_HOS_Mehrfamilienhau…"
+          ]
+        }
+      },
+      "id": "architekturbuero_hose",
+      "line": 143,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bluecity",
+          "name": "BlueCity / Blue City 010 BV",
+          "primary_source_url": "https://www.bluecity.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "BlueCity蓝城兄弟_blued",
+          "source_titles": [
+            "BlueCity_Offices_Rotterd…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bluecity",
+          "name": "BlueCity / Blue City 010 BV",
+          "source_titles": [
+            "BlueCity_Offices_Rotterd…"
+          ]
+        }
+      },
+      "id": "bluecity",
+      "line": 144,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bogl",
+          "name": "BOGL",
+          "primary_source_url": "https://www.bogl.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "The domain name BOGL.COM.",
+          "source_titles": [
+            "Upcycle_Studios_Copenhag…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bogl",
+          "name": "BOGL",
+          "source_titles": [
+            "Upcycle_Studios_Copenhag…"
+          ]
+        }
+      },
+      "id": "bogl",
+      "line": 145,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "brandkontrolle",
+          "name": "brandkontrolle",
+          "primary_source_url": "https://brandkontrolle.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "brandkontrolle | Startseite",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "brandkontrolle",
+          "name": "brandkontrolle",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…"
+          ]
+        }
+      },
+      "id": "brandkontrolle",
+      "line": 146,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "burobas",
+          "name": "Burobas",
+          "primary_source_url": "https://www.burobas.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Burobas MENU Homepage Projecten Duurzaamheid Over BuroBas Nieuws Vacatures Contact MISSIE Onze missie is het verhogen van de impact waarmee interieurs bijdragen aan geluk, welzijn en verbinding.",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "burobas",
+          "name": "Burobas",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "id": "burobas",
+      "line": 147,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "commune_de_dilbeek",
+          "name": "Commune de Dilbeek",
+          "primary_source_url": "https://www.dilbeek.be",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Vrije Tijd Sport in Dilbeek Jong in Dilbeek Verenigingen en organisatoren Cultuur in Dilbeek Kind in Dilbeek Zwembad meer...",
+          "source_titles": [
+            "Chiro_d_Itterbeek_Dilbee…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "commune_de_dilbeek",
+          "name": "Commune de Dilbeek",
+          "source_titles": [
+            "Chiro_d_Itterbeek_Dilbee…"
+          ]
+        }
+      },
+      "id": "commune_de_dilbeek",
+      "line": 148,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "fore_partnership",
+          "name": "FORE Partnership",
+          "primary_source_url": "https://www.fore-partnership.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "FORE Partnership | Sustainable Real Estate Investment with Purpose Skip to content ‌ ‌ ‌ About us Approach ESG Portfolio Insight Find us Join Doing well by doing right.",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "fore_partnership",
+          "name": "FORE Partnership",
+          "source_titles": [
+            "House_of_Fraser_318_Oxfo…"
+          ]
+        }
+      },
+      "id": "fore_partnership",
+      "line": 149,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "franck",
+          "name": "Franck",
+          "primary_source_url": "https://www.franck.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "www.franck.com - Coming Soon 🚀 www.franck.com This domain is coming soon.",
+          "source_titles": [
+            "Chiro_d_Itterbeek_Dilbee…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "franck",
+          "name": "Franck",
+          "source_titles": [
+            "Chiro_d_Itterbeek_Dilbee…"
+          ]
+        }
+      },
+      "id": "franck",
+      "line": 150,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "futurebuilt",
+          "name": "FutureBuilt",
+          "primary_source_url": "https://www.futurebuilt.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "futurebuilt.com Diese Domain kaufen.",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "futurebuilt",
+          "name": "FutureBuilt",
+          "source_titles": [
+            "KA13_Kristian_Augusts_ga…"
+          ]
+        }
+      },
+      "id": "futurebuilt",
+      "line": 151,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gain",
+          "metadata_sidecar_key": "node:gain",
+          "name": "a:gain",
+          "primary_source_url": "https://gain.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "GAIN Software | Ihr Partner im Produktdatenmanagement."
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gain",
+          "metadata_sidecar_key": "node:gain",
+          "name": "a:gain"
+        }
+      },
+      "id": "gain",
+      "line": 152,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Bureau Greisch"
+          ],
+          "id": "greisch",
+          "name": "Greisch",
+          "primary_source_url": "https://www.greisch.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "En savoir plus Contactez-nous Suivez-nous Bureau greisch Copyright Bureau Greisch - 2026 Politique de confidentialité Politique de Cookies Dans la presse une réalisation Noomia, Agence web fabriquant des sites sur mesure Gérer le consentement Pour offrir les meilleures expérience",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Bureau Greisch"
+          ],
+          "id": "greisch",
+          "name": "Greisch",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "id": "greisch",
+      "line": 153,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gtd_consulting",
+          "name": "GTD Consulting / GTD Engineering",
+          "primary_source_url": "https://www.gtd-consulting.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "GTD Consulting | The Diamond Valuation and Advisory Experts Your browser is ancient!"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "gtd_consulting",
+          "name": "GTD Consulting / GTD Engineering"
+        }
+      },
+      "id": "gtd_consulting",
+      "line": 154,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "heemwonen",
+          "name": "HEEMwonen",
+          "primary_source_url": "https://www.heemwonen.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Heemwonen.com for sale | Spaceship.com Domain for sale Heemwonen.com Free transaction support Secure payments Spaceship reliability Listed with spaceship.com get this domain Buy now $3,788 Make offer $ Please enter an offer amount up to 9 digits.",
+          "source_titles": [
+            "Superlocal_Expogebouw_Bl…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "heemwonen",
+          "name": "HEEMwonen",
+          "source_titles": [
+            "Superlocal_Expogebouw_Bl…"
+          ]
+        }
+      },
+      "id": "heemwonen",
+      "line": 155,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kahle_acoustics",
+          "name": "Kahle Acoustics",
+          "primary_source_url": "https://www.kahle-acoustics.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Kahle Acoustics | Acoustic Consulting for the Performing Arts Projects Library About Contact DE FR NL Fine acoustics is not there to be seen but should blend into the architecture.",
+          "source_titles": [
+            "Verbiest_Karreveld_Bruss…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kahle_acoustics",
+          "name": "Kahle Acoustics",
+          "source_titles": [
+            "Verbiest_Karreveld_Bruss…"
+          ]
+        }
+      },
+      "id": "kahle_acoustics",
+      "line": 156,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kampstaal",
+          "name": "Kampstaal",
+          "primary_source_url": "https://www.kampstaal.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "State-of-the art, advanced machinery At Kampstaal, we are always looking for ways to improve, which is why we make ongoing investments in our machinery.",
+          "source_titles": [
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kampstaal",
+          "name": "Kampstaal",
+          "source_titles": [
+            "The_Green_House_Utrecht.…"
+          ]
+        }
+      },
+      "id": "kampstaal",
+      "line": 157,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kitajima_corporation",
+          "name": "Kitajima Corporation",
+          "primary_source_url": "https://www.kitajima-corporation.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "959-72-3470 FAX:0959-72-4638 ★ お知らせ 事業紹介 工事の流れ 実績 会社案内 採用情報 ブログ 個人情報保護方針 © 2023 Kitajima Corp.",
+          "source_titles": [
+            "Kamikatsu_Zero_Waste_Cen…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kitajima_corporation",
+          "name": "Kitajima Corporation",
+          "source_titles": [
+            "Kamikatsu_Zero_Waste_Cen…"
+          ]
+        }
+      },
+      "id": "kitajima_corporation",
+      "line": 158,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "klh",
+          "name": "KLH",
+          "primary_source_url": "https://www.klh.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Questions Please contact MarkeTeam West at (657) 233-4100 or infowest@MTFoodservice.com For questions please contact Dave Kuelpman dave@klh.com ABOUT Founded in 1989, we represent the top manufacturers in the foodservice industry, providing commercial operators with up-to-date an",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "klh",
+          "name": "KLH",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "id": "klh",
+      "line": 159,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ligne_be",
+          "name": "Ligne B.E.",
+          "primary_source_url": "https://www.ligne-be.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "--> Bureau d'études structure | Ligne be | Tours top of page ACCUEIL COMPETENCES MOE structure EXE structure Biosourcés BIM DOMAINES Ouvrages Neufs Patrimoine Réhabilitation REALISATIONS Equipement public Scolaire Equipement sportif Patrimoine Santé Bureaux Industriel - Génie civ",
+          "source_titles": [
+            "Grande_Halle_de_Colombel…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ligne_be",
+          "name": "Ligne B.E.",
+          "source_titles": [
+            "Grande_Halle_de_Colombel…"
+          ]
+        }
+      },
+      "id": "ligne_be",
+      "line": 160,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "opera",
+          "metadata_sidecar_key": "node:opera",
+          "name": "Opera",
+          "primary_source_url": "https://www.opera.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Opera Web Browser | Faster, Safer, Smarter | Opera Browsers Opera Browser Updated Opera Air Opera GX Opera Neon New Opera Mini Downloads Features Compare Browsers Privacy & Security About About Opera Opera Blog Help Download now language: Your personal browser Faster, safer and s"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "opera",
+          "metadata_sidecar_key": "node:opera",
+          "name": "Opera"
+        }
+      },
+      "id": "opera",
+      "line": 161,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "paree",
+          "name": "Paree",
+          "primary_source_url": "https://www.paree.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Paree Group consists of the parent company Paree Group and its three subsidiaries: Innokas, Vieser, Cubist and minority-owned Serres.",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "paree",
+          "name": "Paree",
+          "source_titles": [
+            "Jeugdkliniek_Ithaka_Emer…"
+          ]
+        }
+      },
+      "id": "paree",
+      "line": 162,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "pouget_consultants",
+          "metadata_sidecar_key": "node:pouget_consultants",
+          "name": "Pouget Consultants",
+          "primary_source_url": "https://www.pouget-consultants.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Conseil et ingénierie en bâtiment, énergie, environnement | Pouget Consultants Aller au menu de navigation Aller au contenu Aller au pied de page Je suis copropriétaire Nous contacter Nous rejoindre Menu Fermer Clients Pouvoirs Publics Collectivités territoria"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "pouget_consultants",
+          "metadata_sidecar_key": "node:pouget_consultants",
+          "name": "Pouget Consultants"
+        }
+      },
+      "id": "pouget_consultants",
+      "line": 163,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "pro_engineering",
+          "name": "Pro Engineering",
+          "primary_source_url": "https://www.pro-engineering.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "pro-engineering.com :: this domain is for sale pro-engineering.com This domain is for sale If you are interested in purchasing domain name, please submit this form.",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "pro_engineering",
+          "name": "Pro Engineering",
+          "source_titles": [
+            "ELYS_Kultur_Gewerbehaus_…"
+          ]
+        }
+      },
+      "id": "pro_engineering",
+      "line": 164,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "pt_projects",
+          "name": "PT Projects",
+          "primary_source_url": "https://www.pt-projects.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "PT Projects Oy PT Projects Oy Meistä Palvelut Arvot Yhteys PT Projects Oy Luotettava kumppani liiketoiminnan kehittämiseen Ota yhteyttä Keitä olemme PT Projects on asiantuntijayritys, joka keskittyy liiketoiminnan kehittämiseen, projektinhallintaan ja konsultointiin.",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "pt_projects",
+          "name": "PT Projects",
+          "source_titles": [
+            "Hastings_Pier_Visitor_Ce…"
+          ]
+        }
+      },
+      "id": "pt_projects",
+      "line": 165,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "related_argent",
+          "name": "Related Argent",
+          "primary_source_url": "https://www.related-argent.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Related Argent © 2024 Related Argent Limited.",
+          "source_titles": [
+            "Brent_Cross_Town_Primary…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "related_argent",
+          "name": "Related Argent",
+          "source_titles": [
+            "Brent_Cross_Town_Primary…"
+          ]
+        }
+      },
+      "id": "related_argent",
+      "line": 166,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sixco",
+          "name": "Sixco",
+          "primary_source_url": "https://www.sixco.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Six Construct About Sectors Projects Careers Contact EN About Sectors Projects Careers Contact EN Six Construct BESIX and Hitachi Zosen Inova Celebrate the Successful First Fire at Dubai Waste to Energy Facility 14 July 2023 Read more BESIX in the Middle East delivers Atlantis Th",
+          "source_titles": [
+            "Verbiest_Karreveld_Bruss…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sixco",
+          "name": "Sixco",
+          "source_titles": [
+            "Verbiest_Karreveld_Bruss…"
+          ]
+        }
+      },
+      "id": "sixco",
+      "line": 167,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "solares_bauen",
+          "name": "Solares Bauen",
+          "primary_source_url": "https://solares-bauen.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "solares bauen - solaresbauen Frankreich | Deutschland Über uns Geschichte Standorte Team Auszeichnungen Verantwortung Nachhaltigkeit im Unternehmen Leistungen Energiekonzepte & Technisches Monitoring Bauphysik & Simulationen Förderung: BEG, BEW, KfW, BAFA Analyse & Messtechnik Te",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "solares_bauen",
+          "name": "Solares Bauen",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…"
+          ]
+        }
+      },
+      "id": "solares_bauen",
+      "line": 168,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stone22",
+          "name": "STONE22",
+          "primary_source_url": "https://www.stone22.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Home - STONE22 Skip to main content Hit enter to search or ESC to close Search Close Search Menu Home Projecten Expertise Nieuws Over Stone22 Contact linkedin Wij ontwikkelen gebouwen met een verhaal Bekijk project Wij zijn gespecialiseerd in scienceparken & campusontwikkeling Be",
+          "source_titles": [
+            "BioPartner_5_Leiden_Oegs…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "stone22",
+          "name": "STONE22",
+          "source_titles": [
+            "BioPartner_5_Leiden_Oegs…"
+          ]
+        }
+      },
+      "id": "stone22",
+      "line": 169,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "taktyk",
+          "name": "Taktyk",
+          "primary_source_url": "https://www.taktyk.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Taktyk.com is for sale | HugeDomains Skip to main content Search for domains --> Search +1-303-893-0552 Home FAQs About us Contact us My account My favorites Shopping cart Taktyk.com Buy now: $3,195 ▸ Buy now Processing or ▸ Start payment plan Processing Only $133.13/mo.",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "taktyk",
+          "name": "Taktyk",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "id": "taktyk",
+      "line": 170,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "tribu",
+          "name": "TRIBU",
+          "primary_source_url": "https://tribu.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "tribu.de - Diese Website steht zum Verkauf!",
+          "source_titles": [
+            "Circular_Pavilion_Paris.…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "tribu",
+          "name": "TRIBU",
+          "source_titles": [
+            "Circular_Pavilion_Paris.…"
+          ]
+        }
+      },
+      "id": "tribu",
+      "line": 171,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ville_de_mouscron",
+          "name": "Ville de Mouscron",
+          "primary_source_url": "https://www.mouscron.be",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "En savoir plus et personnaliser Accueil https://www.mouscron.be/fr https://www.mouscron.be/@@site-logo/logo.svg Accueil Découvrez Mouscron Une ville à la croisée des cultures et des opportunités alliant qualité de vie et dynamisme.",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ville_de_mouscron",
+          "name": "Ville de Mouscron",
+          "source_titles": [
+            "Musee_de_Folklore_Mouscr…"
+          ]
+        }
+      },
+      "id": "ville_de_mouscron",
+      "line": 172,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "volantis",
+          "name": "Volantis",
+          "primary_source_url": "https://www.volantis.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "--> Volantis Technologies | AI Recruitment Software and Solutions and Talent Sourcing .sWmh0WA{position:relative;width:100%}.sWmh0WA.ovORhXe---imageResize-7-contain.ovORhXe---imageAlignment-6-center img{o",
+          "source_titles": [
+            "Superlocal_Expogebouw_Bl…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "volantis",
+          "name": "Volantis",
+          "source_titles": [
+            "Superlocal_Expogebouw_Bl…"
+          ]
+        }
+      },
+      "id": "volantis",
+      "line": 173,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "workspot",
+          "name": "Workspot",
+          "primary_source_url": "https://www.workspot.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Home | Workspot GUIDE Turn any workflow into an AI agent in minutes.",
+          "source_titles": [
+            "BlueCity_Offices_Rotterd…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "workspot",
+          "name": "Workspot",
+          "source_titles": [
+            "BlueCity_Offices_Rotterd…"
+          ]
+        }
+      },
+      "id": "workspot",
+      "line": 174,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bioregional",
+          "name": "BioRegional",
+          "primary_source_url": "https://www.bioregional.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Purpose-led sustainability consultancy – Bioregional Back to home About About Bioregional About us Careers - we're hiring!",
+          "source_titles": [
+            "BedZED_London_Hackbridge…"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "bioregional",
+          "name": "BioRegional",
+          "source_titles": [
+            "BedZED_London_Hackbridge…"
+          ]
+        }
+      },
+      "id": "bioregional",
+      "line": 175,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "icon_real_estate",
+          "name": "Icon Real Estate",
+          "primary_source_url": "https://www.icon-real-estate.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "ICON Real Estate BUY/RENT/SELL Expert Guidance for Every Step of Your Journey Find Your Dream Property Today!"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "icon_real_estate",
+          "name": "Icon Real Estate"
+        }
+      },
+      "id": "icon_real_estate",
+      "line": 176,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "2hs",
+          "name": "2hs",
+          "primary_source_url": "https://www.2hs.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "2hs.com — This Domain May Be For Sale 2hs.com This Domain Name May Be For Sale!"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "2hs",
+          "name": "2hs"
+        }
+      },
+      "id": "2hs",
+      "line": 177,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "urban_mining_index",
+          "name": "Urban Mining Index",
+          "primary_source_url": "https://urban-mining-index.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Urban Mining Index Home Das ist der Urban Mining Index Systematik Qualitätsstufen Bewertungsebenen Aktuelles Initiative Initiatoren Entwicklung Publikationen Netzwerk Projekte Kontakt EN Seite wählen Der Urban Mining Index verfolgt das Ziel,Baustoffe in möglichst geschlossenen Kr"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "urban_mining_index",
+          "name": "Urban Mining Index"
+        }
+      },
+      "id": "urban_mining_index",
+      "line": 178,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "c_creators",
+          "name": "C-Creators",
+          "primary_source_url": "https://www.c-creators.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "C-creators wil de bouweconomie volledig circulair maken zodat deze dienend is aan onze samenleving."
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "c_creators",
+          "name": "C-Creators"
+        }
+      },
+      "id": "c_creators",
+      "line": 179,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kaufmann_zimmerei",
+          "name": "kaufmann zimmerei",
+          "primary_source_url": "https://kaufmann-zimmerei.de",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Zimmerei Kaufmann e.K."
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "kaufmann_zimmerei",
+          "name": "kaufmann zimmerei"
+        }
+      },
+      "id": "kaufmann_zimmerei",
+      "line": 180,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "nimbus",
+          "name": "Nimbus",
+          "primary_source_url": "https://www.nimbus.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Nimbus investments | Nimbus About Portfolio Team News Contact Investor login The Nimbus way Nimbus is a hands-on investor."
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "nimbus",
+          "name": "Nimbus"
+        }
+      },
+      "id": "nimbus",
+      "line": 181,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "traject",
+          "name": "TRAJECT",
+          "primary_source_url": "https://www.traject.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "361° Gezond Gebouw scan RESULTATEN ACTUEEL Whitepaper: Gezond en duurzaam gebruik van gemeentelijk vastgoed TRAJECT wordt Movares: een stap richting de toekomst Madefor.Paris VACATURES TRAJECT is een onafhankelijk ingenieurs- en adviesbureau."
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "traject",
+          "name": "TRAJECT"
+        }
+      },
+      "id": "traject",
+      "line": 182,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "fagerhult",
+          "name": "Fagerhult",
+          "primary_source_url": "https://www.fagerhult.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "Light for better living - Fagerhult NEWS!"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "fagerhult",
+          "name": "Fagerhult"
+        }
+      },
+      "id": "fagerhult",
+      "line": 183,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "embuild",
+          "name": "Embuild",
+          "primary_source_url": "https://www.embuild.com",
+          "review_run": "ier_c12_2026_06_06",
+          "source_quote": "www.embuild.com - Coming Soon 🚀 www.embuild.com This domain is coming soon."
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "embuild",
+          "name": "Embuild"
+        }
+      },
+      "id": "embuild",
+      "line": 184,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 184,
+    "would_update": 172,
+    "would_update_rel": 12
+  }
+}

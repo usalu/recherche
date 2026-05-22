@@ -1,0 +1,116 @@
+{
+  "anchor_id": "cornermat_retrival",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://www.cornermat.be/-2",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Materials are dismantled by Cornermat/Retrival personnel on strip-out sites; reuse is prioritised over recycling where possible."
+    },
+    {
+      "url": "https://ecosysteme-economiecirculaire.wallonie.be/fr/agenda/cornermat-e-magasin-de-materiaux-de-construction-de-reemploi/",
+      "http_status": null,
+      "first_party": false,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Cornermat storage/store offers wood, sanitaryware, insulation, floor coverings, lighting, partitions, frames and other reused products."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://ecosysteme-economiecirculaire.wallonie.be/fr/agenda/cornermat-e-magasin-de-materiaux-de-construction-de-reemploi/"
+      ],
+      "evidence_quote": "Event page says the Cornermat store contains: “bois, sanitaires, isolants, revêtements de sol, éclairage, cloisons, châssis...”. Matched token: bois.",
+      "confidence": "unsicher",
+      "note": "Third-party but specific to Cornermat; obtain first-party shop/category page before fully automatic import.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://ecosysteme-economiecirculaire.wallonie.be/fr/agenda/cornermat-e-magasin-de-materiaux-de-construction-de-reemploi/"
+      ],
+      "evidence_quote": "Event page says the Cornermat store contains: “bois, sanitaires, isolants, revêtements de sol, éclairage, cloisons, châssis...”. Matched token: isolants.",
+      "confidence": "unsicher",
+      "note": "Third-party but specific to Cornermat; obtain first-party shop/category page before fully automatic import.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://ecosysteme-economiecirculaire.wallonie.be/fr/agenda/cornermat-e-magasin-de-materiaux-de-construction-de-reemploi/"
+      ],
+      "evidence_quote": "Event page says the Cornermat store contains: “bois, sanitaires, isolants, revêtements de sol, éclairage, cloisons, châssis...”. Matched token: sanitaires; éclairage.",
+      "confidence": "unsicher",
+      "note": "Third-party but specific to Cornermat; obtain first-party shop/category page before fully automatic import.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://ecosysteme-economiecirculaire.wallonie.be/fr/agenda/cornermat-e-magasin-de-materiaux-de-construction-de-reemploi/"
+      ],
+      "evidence_quote": "Event page says the Cornermat store contains: “bois, sanitaires, isolants, revêtements de sol, éclairage, cloisons, châssis...”. Matched token: revêtements de sol.",
+      "confidence": "unsicher",
+      "note": "Third-party but specific to Cornermat; obtain first-party shop/category page before fully automatic import.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://ecosysteme-economiecirculaire.wallonie.be/fr/agenda/cornermat-e-magasin-de-materiaux-de-construction-de-reemploi/"
+      ],
+      "evidence_quote": "Event page says the Cornermat store contains: “bois, sanitaires, isolants, revêtements de sol, éclairage, cloisons, châssis...”. Matched token: cloisons.",
+      "confidence": "unsicher",
+      "note": "Third-party but specific to Cornermat; obtain first-party shop/category page before fully automatic import.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://ecosysteme-economiecirculaire.wallonie.be/fr/agenda/cornermat-e-magasin-de-materiaux-de-construction-de-reemploi/"
+      ],
+      "evidence_quote": "Event page says the Cornermat store contains: “bois, sanitaires, isolants, revêtements de sol, éclairage, cloisons, châssis...”. Matched token: châssis.",
+      "confidence": "unsicher",
+      "note": "Third-party but specific to Cornermat; obtain first-party shop/category page before fully automatic import.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [
+    {
+      "target_id": "LOOKUP_REQUIRED_dismantling_by_operator",
+      "evidence_urls": [
+        "https://www.cornermat.be/-2"
+      ],
+      "evidence_quote": "“Nos matériaux sont démontés par notre personnel sur nos chantiers de curage.”",
+      "confidence": "unsicher",
+      "note": "Exact Rueckbauverfahren ID requires graph lookup.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "first-party line-level material/category page",
+      "reason": "some useful evidence was from search extract or third-party source; keep manual review before automatic import"
+    }
+  ],
+  "rejected_or_not_importable": [],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

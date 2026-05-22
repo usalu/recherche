@@ -1,0 +1,154 @@
+{
+  "confirmation_required": "APPLY phase1_ecosystem_spine.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2384,
+    "relationships": 15529
+  },
+  "counts_after_expected": {
+    "nodes": 2384,
+    "relationships": 15529
+  },
+  "counts_before": {
+    "nodes": 2384,
+    "relationships": 15529
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:31:08.098928+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\patches\\phase1_ecosystem_spine.patch.jsonl",
+  "records": [
+    {
+      "from": "concular",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_concular_home"
+    },
+    {
+      "from": "concular",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_concular_urban_mining"
+    },
+    {
+      "from": "software_restado",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_restado_ecesp"
+    },
+    {
+      "from": "circular_structural_design",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_circular_structural_design"
+    },
+    {
+      "from": "madaster",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_madaster_de"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_bauteilboerse_bremen"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_bremen_portal"
+    },
+    {
+      "from": "concular",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_structural_design"
+    },
+    {
+      "from": "circular_structural_design",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "concular"
+    },
+    {
+      "from": "concular",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "madaster"
+    },
+    {
+      "from": "madaster",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "concular"
+    },
+    {
+      "from": "concular",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "madaster_epea"
+    },
+    {
+      "from": "madaster_epea",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "concular"
+    },
+    {
+      "from": "concular",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_bremen"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "concular"
+    },
+    {
+      "from": "circular_structural_design",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_din_91484"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 16,
+    "records": 16
+  }
+}

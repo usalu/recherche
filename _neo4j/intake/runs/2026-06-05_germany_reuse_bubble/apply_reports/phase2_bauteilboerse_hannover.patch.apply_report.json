@@ -1,0 +1,144 @@
+{
+  "confirmation_required": "APPLY phase2_bauteilboerse_hannover.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2384,
+    "relationships": 15531
+  },
+  "counts_after_expected": {
+    "nodes": 2384,
+    "relationships": 15531
+  },
+  "counts_before": {
+    "nodes": 2384,
+    "relationships": 15529
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:31:10.350423+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_germany_reuse_bubble\\patches\\phase2_bauteilboerse_hannover.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "id": "bauteilboerse_hannover",
+          "land": "DE",
+          "name": "Bauteilbörse Hannover",
+          "name_full": "Bauteilbörse Hannover — regional used-component exchange",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "id": "bauteilboerse_hannover",
+          "land": "DE",
+          "name": "Bauteilbörse Hannover",
+          "name_full": "Bauteilbörse Hannover — regional used-component exchange",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        }
+      },
+      "id": "bauteilboerse_hannover",
+      "line": 1,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_bauteilboerse_hannover"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_new_de_restado_hannover"
+    },
+    {
+      "from": "concular",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_hannover"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "concular"
+    },
+    {
+      "from": "software_restado",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_hannover"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_restado"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_hannover"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_bremen"
+    },
+    {
+      "from": "circular_structural_design",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bauteilboerse_hannover"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "circular_structural_design"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing": 1,
+    "noop_existing_rel": 8,
+    "records": 11,
+    "would_create_rel": 2
+  }
+}

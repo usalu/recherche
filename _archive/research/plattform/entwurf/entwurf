@@ -1,0 +1,2453 @@
+# Schritt 1 — Bauteil-Seed
+
+## Einspeiseplattform: Vom realen Stahlbetonbauteil zum generatorfähigen Input
+
+```mermaid
+flowchart TB
+
+BS["1. Bauteil-Seed"]
+
+BS --> EP["Eingabeprozess"]
+EP --> UIp["User Input<br/>(Prompt + Foto / Scan / Interface)"]
+EP --> API["API / Import aus Bauteilbörse<br/>(Listing, Status, Quelle)"]
+
+BS --> UIC["UI Concept"]
+UIC --> MIN["Minimaler Input<br/>(Prompt + wenige Pflichtfelder)"]
+UIC --> KI["KI-Erkennung<br/>(Bildanalyse + kurzer Prompt)"]
+UIC --> FI["Formular-Interface<br/>(Korrigieren, Ergänzen, Bestätigen)"]
+UIC --> NP["Nachweis-Panel<br/>(Dokumente, Materialpass, Prüfstatus)"]
+
+BS --> BD["Bauteil-Daten"]
+BD --> MD["Mindestdaten zum Entwerfen<br/>(Vorplanung)"]
+BD --> ADER["Abgeleitete / angereicherte Daten<br/>(vom Tool berechnet oder geschätzt)"]
+
+BS --> BSO["Output Bauteil-Seed"]
+BSO --> BSO_D["Seed-ID + Typologie + Menge + Geometriehinweis + Material + Quelle + Verfügbarkeit + Zielrolle"]
+```
+
+## 1. Rolle des Bauteil-Seeds
+
+Der Bauteil-Seed bildet die Schnittstelle zwischen physischem Bestand und digitalem Entwurfsprozess.
+
+Er beschreibt ein reales Stahlbetonbauteil mit genau den Informationen, die benötigt werden, um daraus ein planbares digitales Bauteilobjekt zu erzeugen.
+
+Der Seed ist kein vollständiger Nachweis und kein Bauteilpass. Er stellt eine minimale, strukturierte Datengrundlage für die Vorplanung dar.
+
+---
+
+## 2. Eingabeprozess
+
+Der Einstieg erfolgt über eine einfache Kombination aus Bildmaterial, kurzer Beschreibung und wenigen Pflichtangaben.
+
+Beispiel:
+
+> „Das ist eine Stahlbeton-Wandplatte aus einem Rückbau. Es gibt ungefähr 18 Stück. Die Platten sind ca. 3,20 m hoch, 1,20 m breit und 18 cm dick. Sie stammen aus einem Fertigteilbau und könnten als tragende oder raumbildende Elemente im neuen Entwurf geprüft werden.“
+
+Dazu kommt ein Foto, Scan oder Bauteilbörsenbild.
+Das System extrahiert daraus eine erste Lesart: Typologie, Menge, Maße, Materialfamilie, Zustand, Quelle und mögliche Zielrolle.
+
+---
+
+## 3. User Input
+
+Der Input basiert auf drei Informationsquellen:
+
+```text
+1. Bild
+Foto, Scan, Screenshot oder Bauteilbörsenbild
+
+2. Prompt
+Kurze Beschreibung in natürlicher Sprache
+
+3. Pflichtfelder
+Nur Informationen, die nicht automatisch erkannt werden können
+```
+
+Bei Stahlbetonbauteilen liefern Bilder nicht nur visuelle Informationen, sondern auch Hinweise auf Geometrie, Anschlüsse, Öffnungen, Schäden und Schnittflächen.
+
+---
+
+## 4. API / Import aus Bauteilbörsen
+
+Bauteile aus Inventaren oder Bauteilbörsen können direkt übernommen werden.
+
+Importierte Informationen können umfassen:
+
+```text
+- Listing-ID
+- Quelle
+- Standort
+- Menge
+- Status
+- Verfügbarkeit
+```
+
+Der Import reduziert den manuellen Aufwand und stellt gleichzeitig die Verbindung zum realen Bauteil sicher.
+
+---
+
+## 5. UI-Konzept
+
+Die Eingabe erfolgt als geführter Prozess:
+
+```text
+1. Bild hochladen
+2. Bauteil beschreiben
+3. Systemvorschlag prüfen
+4. Fehlende Angaben ergänzen
+5. Seed bestätigen
+```
+
+Der Fokus liegt auf einer niedrigen Einstiegshürde.
+
+Zu Beginn werden keine detaillierten statischen oder bauphysikalischen Nachweise verlangt. Stattdessen stehen grundlegende Fragen im Vordergrund:
+
+```text
+Was ist das Bauteil?
+Wie viele Elemente sind vorhanden?
+Wie groß sind sie?
+Woher stammen sie?
+Wann sind sie verfügbar?
+Welche Rolle könnten sie übernehmen?
+```
+
+---
+
+## 6. Minimaler Input
+
+Für die Vorplanung reichen folgende Informationen aus:
+
+```text
+1. Typologie
+z. B. Wandplatte, Stütze, Balken, Hohlkörperdecke
+
+2. Menge
+Stückzahl oder Schätzung
+
+3. Geometriehinweis
+Foto, Scan oder Hauptabmessungen
+
+4. Materialfamilie
+Stahlbeton, Fertigteil, Ortbeton-Zuschnitt
+
+5. Quelle
+Bauteilbörse, Inventar oder Rückbauprojekt
+
+6. Standort
+
+7. Verfügbarkeit
+
+8. Zielrolle
+tragend, raumbildend, Fassade, Decke usw.
+
+9. Visueller Zustand
+```
+
+Diese Informationen reichen aus, um den Generator zu starten und erste Entwurfsentscheidungen zu ermöglichen.
+
+---
+
+## 7. KI-Erkennung
+
+Auf Basis von Bild und Beschreibung erstellt das System einen ersten Vorschlag.
+
+Mögliche Ergebnisse:
+
+```text
+- Typologie
+- Abmessungen
+- Öffnungen
+- Anschlusszonen
+- Schäden
+- Serienähnlichkeiten
+- Zielrollen
+```
+
+Beispiel:
+
+```text
+Typologie: WallPanel
+Material: ReinforcedConcrete
+Menge: 18
+Geometrie: rechteckige Platte
+Öffnungen: keine sichtbar
+Zustand: Kantenabplatzungen möglich
+Zielrolle: raumbildend / tragend prüfbar
+Datenvertrauen: mittel
+```
+
+Die KI liefert Vorschläge, die anschließend überprüft und bestätigt werden.
+
+---
+
+## 8. Formular-Interface
+
+Das Formular dient der Validierung und Ergänzung der automatisch erkannten Informationen.
+
+Beispiel:
+
+```text
+Typologie: WallPanel
+Material: Stahlbeton
+Menge: 18
+Höhe: 3.20 m
+Breite: 1.20 m
+Dicke: 18 cm
+Quelle: Rückbauprojekt
+Verfügbarkeit: Q2 2027
+Zielrolle: tragend prüfen / raumbildend
+```
+
+Jeder Wert erhält einen Status:
+
+```text
+bestätigt
+geschätzt
+unbekannt
+```
+
+Dadurch bleibt die Qualität der Datengrundlage jederzeit nachvollziehbar.
+
+---
+
+## 9. Nachweis-Panel
+
+Das Nachweis-Panel sammelt vorhandene Dokumente und macht fehlende Informationen sichtbar.
+
+Mögliche Inhalte:
+
+```text
+- Bestandspläne
+- Rückbauinventare
+- Materialpässe
+- Fotos und Scans
+- Bohrkernprüfungen
+- Bewehrungsscans
+- Betondruckfestigkeit
+- Korrosionshinweise
+- Schadstoffanalysen
+- Nutzungshistorie
+```
+
+Diese Informationen sind nicht zwingend für den Seed erforderlich, erhöhen jedoch das Vertrauen in die Datenbasis.
+
+---
+
+## 10. Bauteil-Daten
+
+Der Seed erzeugt zwei Arten von Daten:
+
+```text
+A. Mindestdaten zum Entwerfen
+Daten, die sofort gebraucht werden, damit der Generator ein Vorplanungsobjekt erzeugen kann.
+
+B. Abgeleitete / angereicherte Daten
+Daten, die das Tool aus Mindestdaten berechnet, schätzt oder später ergänzt.
+```
+
+Beispiel:
+
+```text
+Manuell eingegeben:
+Wandplatte, 18 Stück, 3.20 × 1.20 × 0.18 m, Stahlbeton, Quelle Basel, verfügbar Q2 2027
+
+Automatisch abgeleitet:
+Volumen, Masse, Fläche, Transportdistanz, grobe CO₂-Wirkung, mögliche Ports, fehlende Nachweise, ReUse-Reifegrad
+```
+
+---
+
+## 11. Mindestdaten für die Vorplanung
+
+Die Mindestdaten ermöglichen erste Entwurfsfragen:
+
+```text
+Kann das Bauteil ein Raster bilden?
+Reicht die Menge für ein System?
+Kann daraus ein Katalogobjekt erzeugt werden?
+Welche Rolle kann das Bauteil übernehmen?
+Welche Nachweise fehlen noch?
+```
+
+Die Informationen dienen ausschließlich der Vorplanung und ersetzen keine statischen Nachweise.
+
+---
+
+## 12. Abgeleitete Daten
+
+Automatisch erzeugte Informationen können umfassen:
+
+```text
+- Bounding Box
+- Fläche
+- Volumen
+- Masse
+- CO₂-Potenzial
+- Transportdistanz
+- Serienlogik
+- Generatorgrammatik
+- Ports
+- fehlende Strukturinformationen
+- fehlende Energiedaten
+- fehlende Nachweise
+- Datenvertrauen
+- ReUse-Reifegrad
+```
+
+Dadurch wird der manuelle Eingabeaufwand reduziert und die Datenbasis erweitert.
+
+---
+
+## 13. Output: Bauteil-Seed
+
+Das Ergebnis von Schritt 1 ist ein kompakter, generatorfähiger Datensatz.
+
+```json
+{
+  "seed_id": "SEED-RC-WP-001",
+  "typology": "WallPanel",
+  "material_family": "ReinforcedConcrete",
+  "quantity": 18,
+  "geometry_hint": {
+    "mode": "photo_with_manual_dimensions",
+    "height_m": 3.2,
+    "width_m": 1.2,
+    "thickness_m": 0.18
+  },
+  "source": {
+    "type": "demolition_inventory",
+    "location": "Basel",
+    "reference": "source_building_or_listing_id"
+  },
+  "availability": {
+    "status": "available_from",
+    "date": "2027-Q2"
+  },
+  "target_role": [
+    "spatial_partition",
+    "structural_check_possible"
+  ],
+  "condition": {
+    "visual": "usable_with_check",
+    "confidence": "medium"
+  },
+  "missing_evidence": [
+    "reinforcement_layout",
+    "concrete_strength",
+    "connection_detail",
+    "fire_resistance",
+    "pollutant_check"
+  ],
+  "ready_for_generator": true
+}
+```
+
+---
+
+## 14. Beispiel A — Ortbeton-Zuschnitt
+
+Bei Ortbeton entsteht das wiederverwendbare Bauteil häufig erst durch eine gezielte Schnittstrategie.
+
+Beispiel:
+
+```text
+Typologie:
+ColumnBeamSlabAssembly
+
+Material:
+Stahlbeton, Ortbeton-Zuschnitt
+
+Geometrie:
+Stütze mit angeschlossenem Unterzug und Deckenfeld
+
+Quelle:
+Spendergebäude
+
+Zielrolle:
+Primärtragwerk oder Tragstrukturmodul
+
+Besonderheit:
+Zusammenhängendes Stahlbetonfragment
+anstelle einzelner Bauteile
+```
+
+Der Seed beschreibt hier nicht nur einzelne Elemente, sondern größere strukturelle Einheiten, die als Ganzes wiederverwendet werden können.
+
+---
+
+## 15. Beispiel B — Fertigteil
+
+Bei Fertigteilen liegen die Bauteile bereits als klar definierte Elemente vor.
+
+Beispiel:
+
+```text
+Typologie:
+HollowCoreSlab
+Beam
+Column
+FacadeSandwichPanel
+
+Material:
+Stahlbetonfertigteil
+
+Geometrie:
+Abmessungen, Spannrichtung, Raster
+
+Menge:
+Stückzahl je Typ
+
+Quelle:
+Spendergebäude oder Bauteilbörse
+
+Zielrolle:
+Decke
+Träger
+Stütze
+Fassade
+
+Besonderheit:
+Demontierbares und rückverfolgbares Einzelbauteil
+```
+
+Hier stehen Typisierung, Serienlogik und Identität der einzelnen Bauteile im Vordergrund.
+
+---
+
+## 16. Kernaussage
+
+Der Bauteil-Seed ist die kleinste sinnvolle Dateneinheit für den Einstieg eines realen Stahlbetonbauteils in den digitalen Entwurfsprozess.
+
+Er beantwortet die grundlegenden Fragen:
+
+```text
+Was ist das Bauteil?
+Wie viele Elemente sind vorhanden?
+Wie groß sind sie?
+Woraus bestehen sie?
+Woher stammen sie?
+Wann sind sie verfügbar?
+Welche Rolle können sie übernehmen?
+Welche Evidenz liegt vor?
+```
+
+Damit bildet der Bauteil-Seed die Grundlage für die weitere Verarbeitung im Generator und die spätere Integration in den Bauteilkatalog.
+
+
+# Schritt 2 — Generator
+
+## Vom Bauteil-Seed zum planbaren Stahlbeton-Bauteilobjekt
+
+```mermaid
+flowchart TB
+
+G["2. Generator"]
+
+G --> RG["Rolle des Generators"]
+RG --> CON["Konzept<br/>(Seed → planbares Bauteilobjekt)"]
+RG --> GL["Grammatiklogik<br/>(je Typologie eigene Generatorfamilie)"]
+
+G --> KL["Klassifikationslogik"]
+
+KL --> TYPOL["Typologie"]
+TYPOL --> TYPOL_D["Breite Elementfamilie / Grammatik-Kategorie<br/>z. B. Slab, Beam, Column, Wall, Panel, Stair, MushroomColumn, SlabWithBeam"]
+
+KL --> GEN["Generatorgrammatik"]
+GEN --> GEN_D["Konkrete geometrische und konstruktive Erzeugungslogik<br/>z. B. HollowCoreSlabGenerator, RCWallSegmentGenerator, RCBeamGenerator"]
+
+KL --> TYP["Typ"]
+TYP --> TYP_D["Gruppe ähnlicher Pieces mit gemeinsamem Entwurfs- oder Nutzungskontext<br/>z. B. 24 gleiche Hohlkörperdecken aus einem Spendergebäude"]
+
+KL --> PIECE["Piece"]
+PIECE --> PIECE_D["Tatsächliches physisches Bauteil<br/>mit Herkunft, Zustand, Menge, Verfügbarkeit und Unsicherheit"]
+
+G --> BTO["Bauteil-Seed → generiertes Bauteilobjekt"]
+
+BTO --> GPM["Geometrisches Planungsmodell<br/>(saubere 3D-/2D-Geometrie)"]
+BTO --> ASM["Abstraktes Strukturmodell<br/>(Achsen, Auflager, Spannrichtung, Tragrolle)"]
+BTO --> AEM["Abstraktes Energiemodell<br/>(Flächen, Masse, Hülle, CO₂, thermische Relevanz)"]
+BTO --> SM["Semantisches Modell<br/>(Ports, Connectoren, erlaubte Rollen)"]
+BTO --> EV["Evidence Link<br/>(Nachweise, Quelle, Bauteilbörse, Datenvertrauen)"]
+```
+
+## 1. Rolle des Generators
+
+Der Generator bildet die Übersetzungsschicht zwischen Einspeiseplattform und Design Tool.
+
+Ausgehend vom Bauteil-Seed erzeugt er ein digitales Bauteilobjekt, das im Bauteilkatalog gesucht, bewertet, platziert und im Playground mit anderen Bauteilen kombiniert werden kann.
+
+Der Generator modelliert nicht nur die Geometrie eines Bauteils. Er erzeugt mehrere parallele Planungsebenen: Geometrie, Struktur, Energie, Semantik und Evidence-Link.
+
+---
+
+## 2. Konzept: Seed → planbares Bauteilobjekt
+
+Der Bauteil-Seed enthält lediglich die grundlegenden Informationen eines Bauteils: Typologie, Menge, Geometriehinweis, Material, Quelle, Verfügbarkeit und Zielrolle.
+
+Der Generator ergänzt daraus alle Informationen, die für die Vorplanung erforderlich oder ableitbar sind.
+
+Beispiel:
+
+```text
+Input:
+Stahlbeton-Wandplatte, 18 Stück, ca. 3.20 × 1.20 × 0.18 m, aus Rückbau, Zielrolle raumbildend / tragend prüfen.
+
+Generator-Output:
+saubere Wandplatten-Geometrie,
+Fläche,
+Volumen,
+Masse,
+mögliche Auflager- und Anschlusskanten,
+strukturelle Vorprüfung,
+CO₂-Schätzung,
+fehlende Nachweise,
+Ports und Connectoren.
+```
+
+Der Generator ersetzt keine Fachplanung. Er macht das Bauteil jedoch für die Vorplanung unmittelbar nutzbar.
+
+---
+
+## 3. Grammatiklogik
+
+Der Generator arbeitet nicht für alle Bauteile nach derselben Logik. Jede Typologie benötigt eine eigene Generatorgrammatik.
+
+Eine Stahlbetonstütze wird anders erzeugt als eine Hohlkörperdecke, eine Wandplatte oder ein standardisiertes Segment aus einem Bestandsbauteil.
+
+```text
+Typologie bestimmt:
+Welche Geometrie wird erzeugt?
+Welche Maße sind relevant?
+Welche Strukturabstraktion wird benötigt?
+Welche Ports entstehen?
+Welche Nachweise werden voraussichtlich fehlen?
+```
+
+Beispiele für Generatorfamilien:
+
+```text
+HollowCoreSlabGenerator
+für wiederverwendete Hohlkörperdecken
+
+RCWallPanelGenerator
+für Stahlbeton-Wandplatten
+
+RCBeamGenerator
+für Stahlbetonträger
+
+RCColumnGenerator
+für Stahlbetonstützen
+
+RCSlabSegmentGenerator
+für standardisierte Plattensegmente
+
+RCWallSegmentGenerator
+für standardisierte Wandsegmente
+```
+
+---
+
+## 4. Klassifikationslogik
+
+Die Klassifikation bestimmt, wie ein Bauteil erzeugt, gefiltert, bewertet und später mit anderen Bauteilen verbunden wird.
+
+### Typologie
+
+Die Typologie beschreibt die übergeordnete Bauteilfamilie beziehungsweise Grammatik-Kategorie.
+
+Beispiele:
+
+```text
+Slab
+Beam
+Column
+Wall
+Panel
+Stair
+MushroomColumn
+SlabWithBeam
+WallWithOpening
+FacadeSandwichPanel
+```
+
+Die Typologie beantwortet die grundlegende Frage:
+
+„Um welche Art von Bauteil handelt es sich?“
+
+---
+
+### Generatorgrammatik
+
+Die Generatorgrammatik beschreibt die konkrete Erzeugungslogik innerhalb einer Typologie.
+
+Beispiel:
+
+```text
+Typologie:
+Slab
+
+mögliche Generatorgrammatiken:
+- HollowCoreSlabGenerator
+- SolidRCSlabGenerator
+- CutSlabSegmentGenerator
+- SlabWithBeamGenerator
+```
+
+Die Generatorgrammatik definiert, wie ein Bauteil geometrisch, strukturell und semantisch erzeugt wird.
+
+---
+
+### Typ
+
+Der Typ beschreibt eine Gruppe ähnlicher Pieces mit gemeinsamem Entwurfs- oder Nutzungskontext.
+
+Beispiel:
+
+```text
+Typ:
+Hohlkörperdecke 7.20 m × 1.20 m aus Spendergebäude A
+
+Pieces:
+Deckenplatte 001
+Deckenplatte 002
+Deckenplatte 003
+...
+```
+
+Der Typ bildet die Grundlage für Wiederholung, Rasterbildung, Serienlogik und Bauteilpakete.
+
+---
+
+### Piece
+
+Das Piece bezeichnet das tatsächliche physische Bauteil.
+
+Beispiel:
+
+```text
+Piece:
+Hohlkörperdecke Nr. 014
+aus Spendergebäude A
+demontiert / verfügbar / geprüft oder ungeprüft
+```
+
+Das Piece trägt die reale Information eines Bauteils: Herkunft, Zustand, Verfügbarkeit, Unsicherheit und Nachweise.
+
+---
+
+## 5. Standardisierung und Typisierung von Stahlbeton-Bauteilen
+
+Für den Generator ist nicht entscheidend, ob ein Bauteil ursprünglich als Fertigteil vorlag oder durch Zuschnitt aus einem Bestand entstanden ist.
+
+Entscheidend ist, dass das Bauteil nach der Erfassung als standardisiertes und typisiertes Bauteilobjekt behandelt werden kann.
+
+```mermaid
+flowchart TB
+
+RC["Stahlbeton-Bestand"]
+
+RC --> PRE["Fertigteil"]
+RC --> CUT["Zuschnitt aus Bestand"]
+
+PRE --> STD["Standardisiertes Bauteilobjekt"]
+CUT --> STD
+
+STD --> CAT["Typologie + Generatorgrammatik + Piece"]
+```
+
+### Fertigteile
+
+Fertigteile liegen bereits als einzelne Bauteile vor.
+
+Beispiele:
+
+```text
+Hohlkörperdecke
+Stütze
+Träger
+Sandwich-Fassadenelement
+Treppenlauf
+Wandplatte
+```
+
+Der Generator übernimmt Geometrie, Eigenschaften und Identität in das System.
+
+---
+
+### Zuschnitt-Elemente
+
+Zuschnitt-Elemente entstehen durch eine vorgängige Schnitt- oder Rückbaulogik.
+
+Beispiele:
+
+```text
+Plattensegment
+Wandsegment
+Brüstungssegment
+Treppensegment
+Fassadensegment
+```
+
+Sobald ein Segment definiert ist, wird es wie jedes andere Bauteil behandelt.
+
+Der Generator erzeugt daraus ebenfalls ein standardisiertes Bauteilobjekt mit Geometrie, Strukturmodell, Ports, Connectoren und Evidence-Link.
+
+Der Unterschied liegt somit in der Gewinnung des Bauteils und nicht in seiner späteren digitalen Verarbeitung.
+
+---
+
+## 6. Bauteil-Seed → generiertes Bauteilobjekt
+
+Aus dem Seed erzeugt der Generator fünf zentrale Output-Schichten.
+
+```mermaid
+flowchart LR
+
+SEED["Bauteil-Seed"] --> OBJ["Generiertes Bauteilobjekt"]
+
+OBJ --> GEO["Geometrie"]
+OBJ --> STR["Struktur"]
+OBJ --> ENE["Energie / CO₂"]
+OBJ --> SEM["Semantik"]
+OBJ --> EVI["Evidence"]
+```
+
+Diese fünf Ebenen werden gemeinsam gespeichert. Das Bauteil wird dadurch nicht nur zu einem 3D-Objekt, sondern zu einem planbaren ReUse-Objekt.
+
+---
+
+## 7. Geometrisches Planungsmodell
+
+Das geometrische Modell bildet die planungsrelevante Geometrie des Bauteils ab.
+
+Es ist nicht als vollständiges Ausführungsmodell gedacht, sondern als robuste Grundlage für Vorplanung, Platzierung und Katalogisierung.
+
+Beispiele:
+
+```text
+Hohlkörperdecke:
+Länge, Breite, Dicke, Spannrichtung, Hohlräume vereinfacht
+
+Wandplatte:
+Höhe, Breite, Dicke, Öffnungen, Anschlusskanten
+
+Stütze:
+Höhe, Querschnitt, Achse, Kopf- und Fußzone
+
+Träger:
+Länge, Querschnitt, Achse, Auflagerbereiche
+
+Ortbeton-Zuschnitt:
+Schnittkontur, Dicke, Restkanten, mögliche Hebepunkte
+```
+
+Ziel ist nicht maximale Detailtiefe, sondern eine belastbare Geometrie für den Entwurfsprozess.
+
+---
+
+## 8. Abstraktes Strukturmodell
+
+Das Strukturmodell beschreibt die strukturelle Interpretation eines Bauteils in der Vorplanung.
+
+Es enthält keine endgültige statische Bemessung, sondern eine abstrahierte Tragwerkslogik.
+
+Beispiele:
+
+```text
+Stahlbetonträger:
+Achse, Spannrichtung, Auflager links/rechts, mögliche Tragrolle
+
+Hohlkörperdecke:
+Spannrichtung, Auflagerkanten, Plattenrichtung, mögliche Deckennutzung
+
+Stahlbetonstütze:
+Druckachse, Kopf-Port, Fuß-Port, Schlankheitsrisiko
+
+Wandplatte:
+tragend möglich / raumbildend / aussteifend prüfen
+
+Ortbeton-Segment:
+Schnittkanten, unbekannte Bewehrung, strukturelle Unsicherheit
+```
+
+Das Strukturmodell ermöglicht die spätere Prüfung, ob mehrere Bauteile als plausibles System zusammenwirken können.
+
+---
+
+## 9. Abstraktes Energiemodell
+
+Das Energiemodell beschreibt bei Stahlbeton insbesondere Masse, graue Emissionen und thermische Relevanz.
+
+Es dient nicht der detaillierten Simulation einzelner Bauteile, sondern der Einordnung ihrer energetischen Rolle im Entwurf.
+
+Beispiele:
+
+```text
+Stahlbetonplatte im Innenraum:
+Masse, graue Emissionen, Speicherfähigkeit als Hinweis
+
+Stahlbeton-Wand als Außenbauteil:
+Fläche, Dicke, Hüllrelevanz, zusätzlicher Dämmbedarf wahrscheinlich
+
+Fassaden-Sandwichelement:
+Außen-/Innenseite, Schichtlogik, thermische Relevanz
+
+Träger / Stütze:
+keine direkte Hüllfunktion, aber relevant für Masse und CO₂
+```
+
+Auf dieser Grundlage können CO₂-Werte, Masse und energetische Risiken abgeschätzt werden.
+
+---
+
+## 10. Semantisches Modell
+
+Das semantische Modell beschreibt die zulässigen Rollen und Verbindungen eines Bauteils innerhalb eines Entwurfs.
+
+Es speichert Wissen direkt am Bauteilobjekt.
+
+```text
+Ein Bauteil kennt:
+seine Typologie,
+seine möglichen Rollen,
+seine Anschlussmöglichkeiten,
+zulässige Verbindungen,
+erforderliche Nachweise.
+```
+
+---
+
+## 11. Ports
+
+Ports sind semantische Andockstellen eines Bauteils.
+
+Beispiele für Stahlbeton:
+
+```text
+Stütze:
+- Kopf-Port
+- Fuß-Port
+- seitlicher Anschluss-Port
+
+Träger:
+- linker Auflager-Port
+- rechter Auflager-Port
+- oberer Lastaufnahme-Port
+
+Hohlkörperdecke:
+- Auflagerkante links
+- Auflagerkante rechts
+- Längskante
+- Stirnseite
+
+Wandplatte:
+- Bodenanschluss
+- Deckenanschluss
+- Seitenanschluss
+- Öffnungsport
+
+Fassaden-Sandwichelement:
+- Außenfläche
+- Innenfläche
+- vertikale Fuge
+- horizontale Fuge
+```
+
+Ein Port ist mehr als ein geometrischer Punkt. Er beschreibt eine zulässige Anschlussmöglichkeit.
+
+---
+
+## 12. Connectoren
+
+Connectoren entstehen durch die Verbindung kompatibler Ports.
+
+Beispiele:
+
+```text
+Stützenkopf + Trägerauflager
+→ Auflager-Connector
+
+Trägeroberseite + Deckenauflagerkante
+→ Deckenauflager-Connector
+
+Wandöffnung + Fassaden-/Fensterelement
+→ Öffnungs-Connector
+
+Wandplatte + Bodenplatte
+→ Bodenanschluss-Connector
+```
+
+Ein Connector speichert nicht nur die Verbindung selbst, sondern auch deren Prüfstatus.
+
+```text
+Connector:
+geometrisch passend
+semantisch erlaubt
+strukturell prüfbedürftig
+Nachweise fehlen
+Adapter möglich
+```
+
+---
+
+## 13. Evidence Link
+
+Jedes generierte Bauteil bleibt mit seiner realen Herkunft verknüpft.
+
+Dadurch bleibt nachvollziehbar, dass es sich nicht um ein generisches BIM-Objekt handelt, sondern um ein konkretes wiederverwendbares Bauteil.
+
+Der Evidence Link speichert:
+
+```text
+Quelle
+Bauteilbörse / Inventar / Rückbauprojekt
+Piece-ID
+Fotos
+Scans
+Dokumente
+Nachweise
+Datenvertrauen
+Verfügbarkeitsstatus
+Reservierungsstatus
+```
+
+Das Bauteil im Katalog bleibt dadurch jederzeit auf sein reales Gegenstück rückführbar.
+
+---
+
+## 14. Datenvertrauen und fehlende Nachweise
+
+Der Generator kennzeichnet jedes erzeugte Objekt mit einem Grad an Unsicherheit.
+
+Beispiel:
+
+```text
+Geometrie: mittel
+Material: hoch
+Struktur: niedrig
+Energie: mittel
+Verfügbarkeit: hoch
+Nachweise: unvollständig
+```
+
+Für Stahlbeton sind typische fehlende Nachweise:
+
+```text
+Bewehrungslage
+Betondruckfestigkeit
+Karbonatisierung
+Korrosion
+Anschlussdetails
+Brandschutz
+Schadstoffe
+frühere Belastung
+Demontagezustand
+```
+
+Diese Informationen müssen nicht bereits im Seed vorhanden sein, werden jedoch als Prüfbedarf sichtbar gemacht.
+
+---
+
+## 15. Beispiel 1 — Hohlkörperdecke als Fertigteil
+
+```mermaid
+flowchart LR
+
+S["Seed:<br/>Hohlkörperdecke, 35 Stück,<br/>7.20 × 1.20 m,<br/>Stahlbetonfertigteil"] --> G["HollowCoreSlabGenerator"]
+
+G --> GEO["Geometrie:<br/>Platte, Dicke, Spannrichtung"]
+G --> STR["Struktur:<br/>Auflagerkanten, Spannrichtung,<br/>Deckennutzung prüfbar"]
+G --> ENE["Energie / CO₂:<br/>Masse, graue Emissionen,<br/>Transport"]
+G --> SEM["Semantik:<br/>Auflager-Ports,<br/>Kanten-Ports"]
+G --> EVI["Evidence:<br/>Quelle, Piece-ID,<br/>Nachweise offen"]
+```
+
+Eine Hohlkörperdecke ist ein Beispiel für ein bereits standardisiertes Bauteil. Sie besitzt eine eindeutige Spannrichtung, eine klare Auflagerlogik und kann als Serie in den Bauteilkatalog überführt werden.
+
+---
+
+## 16. Beispiel 2 — Ortbeton-Deckenfeld als standardisiertes Segment
+
+```mermaid
+flowchart LR
+
+S["Seed:<br/>Ortbeton-Segment,<br/>Scan + Bestandsmaß"] --> G["RCSlabSegmentGenerator"]
+
+G --> GEO["Geometrie:<br/>Segmentkontur,<br/>Dicke, Bounding Box"]
+G --> STR["Struktur:<br/>Auflagerzonen,<br/>Tragrolle prüfbar"]
+G --> SEM["Semantik:<br/>Ports,<br/>Anschlusskanten"]
+G --> EVI["Evidence:<br/>Scan, Bestandsplan,<br/>fehlende Prüfungen"]
+```
+
+Ein Segment kann ursprünglich aus einem Ortbetonbestand stammen. Nach Definition und Inventarisierung wird es jedoch wie jedes andere Bauteil behandelt und über dieselben Generatorlogiken in den Katalog überführt.
+
+---
+
+## 17. Beispiel 3 — Stahlbeton-Wandplatte
+
+```mermaid
+flowchart LR
+
+S["Seed:<br/>Wandplatte, 18 Stück,<br/>3.20 × 1.20 × 0.18 m"] --> G["RCWallPanelGenerator"]
+
+G --> GEO["Geometrie:<br/>rechteckige Platte,<br/>Öffnungen, Kanten"]
+G --> STR["Struktur:<br/>tragend / aussteifend / raumbildend prüfbar"]
+G --> ENE["Energie:<br/>Fläche, Masse,<br/>Hüllrelevanz falls außen"]
+G --> SEM["Semantik:<br/>Boden-, Decken-, Seitenports"]
+G --> EVI["Evidence:<br/>Quelle, Zustand,<br/>fehlende Nachweise"]
+```
+
+Eine Wandplatte kann gleichzeitig Raumabschluss, Tragstruktur und Oberfläche sein. Der Generator hält deshalb mehrere potenzielle Zielrollen offen, bis die konkrete Verwendung im Entwurfsprozess festgelegt wird.
+
+---
+
+## 18. Kernbotschaft
+
+Der Generator transformiert ein unvollständig dokumentiertes Stahlbetonbauteil in ein planbares ReUse-Objekt.
+
+Er erzeugt nicht nur eine geometrische Repräsentation, sondern gleichzeitig Strukturabstraktion, Energieabstraktion, semantische Ports, mögliche Connectoren und einen Evidence Link zur realen Quelle.
+
+Die zentrale Unterscheidung liegt nicht zwischen Fertigteil und Zuschnitt, sondern zwischen der Herkunft eines Bauteils und seiner digitalen Repräsentation.
+
+```text
+Fertigteil:
+wird direkt als Bauteil erfasst.
+
+Zuschnitt-Element:
+wird zunächst definiert und standardisiert.
+
+Beide:
+werden anschließend als typisierte Bauteilobjekte mit derselben Generatorlogik behandelt.
+```
+
+Der Generator bildet damit die Brücke zwischen Bestand, Bauteilbörse, Bauteilkatalog und Design Playground.
+
+
+# Schritt 3 — Bauteilkatalog
+
+## Vom generierten Stahlbeton-Bauteilobjekt zum auswählbaren Entwurfsbaustein
+
+```mermaid
+flowchart TB
+
+BK["3. Bauteilkatalog"]
+
+BK --> BKARTE["Bauteilkarte"]
+BKARTE --> VE["Visuelle Ebene<br/>(Foto + generierte Geometrie)"]
+BKARTE --> DL["Datenlayer<br/>(Maße, Material, Menge, Quelle, Verfügbarkeit)"]
+BKARTE --> RF["Reifegrad<br/>(Idee → entwurfsfähig → prüfbedürftig → ausschreibungsnah)"]
+BKARTE --> PS["Prüfstatus<br/>(verknüpft mit Nachweis-Panel)"]
+
+BK --> FS["Filterstruktur"]
+FS --> FTYP["Typologie / Typ"]
+FS --> GEO["Geometrie<br/>(Maße, Raster, Spannweite, Öffnungsmaß)"]
+FS --> FUNK["Funktion<br/>(tragend, Decke, Wand, Fassade, Raumabschluss)"]
+FS --> SEM["Semantik / Kompatibilität<br/>(Ports, mögliche Connectoren)"]
+FS --> TRAG["Tragwerk<br/>(Rolle, Vorprüfung, fehlende Statikdaten)"]
+FS --> EN["Energie<br/>(Hülle, thermische Masse, energetische Relevanz)"]
+FS --> VM["Verfügbarkeit / Menge<br/>(Zeitraum, Status, Stückzahl, Paketlogik)"]
+FS --> RIS["Risiko / Nachweise<br/>(Bewehrung, Betondruckfestigkeit, Brand, Schadstoff, Datenvertrauen)"]
+FS --> CO2["CO₂ / Transport<br/>(Masse, ReUse-Effekt, Distanz)"]
+
+BK --> KA["Katalog-Aktionen"]
+KA --> SEL["Auswählen / Vergleichen"]
+KA --> PL["Platzieren im Playground"]
+KA --> RES["Reservieren / Anfrage an Bauteilbörse"]
+```
+
+## 1. Rolle des Bauteilkatalogs
+
+Der Bauteilkatalog ist die erste Ebene des Design Tools.
+
+Er übernimmt die vom Generator erzeugten Stahlbeton-Bauteilobjekte und macht sie für den Entwurf lesbar, filterbar und vergleichbar.
+
+Der Katalog ist keine einfache Bauteilbörse und auch keine neutrale BIM-Bibliothek. Er ist eine kuratierte Sammlung real verfügbarer oder potenziell verfügbarer ReUse-Bauteile, die bereits durch den Generator in planbare Objekte übersetzt wurden.
+
+```text
+Bauteilbörse:
+Wo existiert ein reales Bauteil?
+
+Generator:
+Wie wird daraus ein planbares digitales Bauteilobjekt?
+
+Bauteilkatalog:
+Welche dieser Bauteile sind für meinen Entwurf relevant?
+```
+
+---
+
+## 2. Übergang vom Generator in den Katalog
+
+Aus Schritt 2 kommt ein generiertes Bauteilobjekt mit mehreren Ebenen:
+
+```text
+- geometrisches Planungsmodell
+- abstraktes Strukturmodell
+- abstraktes Energiemodell
+- semantisches Modell mit Ports und Connectoren
+- Evidence Link zu Quelle, Nachweisen und Bauteilbörse
+```
+
+Der Bauteilkatalog zeigt diese Ebenen nicht alle gleichzeitig, sondern organisiert sie als lesbare Bauteilkarte.
+
+Das Ziel ist, dass Planer:innen sehr schnell verstehen:
+
+```text
+Was ist das Bauteil?
+Wie viele gibt es?
+Welche Geometrie hat es?
+Welche Rolle kann es übernehmen?
+Wie sicher sind die Daten?
+Welche Nachweise fehlen?
+Kann ich es im Entwurf verwenden?
+```
+
+---
+
+## 3. Bauteilkarte
+
+Die Bauteilkarte ist die zentrale Darstellung im Katalog.
+
+Sie zeigt ein Stahlbeton-Bauteil nicht als isoliertes Produkt, sondern als ReUse-Objekt mit Herkunft, Menge, Geometrie, Reifegrad und Prüfstatus.
+
+Beispiel:
+
+```text
+Hohlkörperdecke Typ HCS-720
+
+Visuell:
+Foto aus Spendergebäude
+generierte 3D-Geometrie
+vereinfachte Spannrichtung
+
+Daten:
+35 Stück
+7.20 m × 1.20 m
+Stahlbetonfertigteil
+Quelle: Spendergebäude / Bauteilbörse
+Verfügbarkeit: bekannt oder angefragt
+
+Reifegrad:
+entwurfsfähig, prüfbedürftig
+
+Prüfstatus:
+Geometrie plausibel
+Tragrolle prüfbar
+Beton- und Bewehrungsnachweis offen
+Brandschutz offen
+```
+
+---
+
+## 4. Visuelle Ebene
+
+Die visuelle Ebene dient dem schnellen Verständnis.
+
+Sie sollte drei Dinge nebeneinander zeigen:
+
+```text
+1. Foto des realen Bauteils
+2. generierte saubere Geometrie
+3. einfache schematische Abstraktion
+```
+
+Bei Stahlbeton ist diese Dreiteilung wichtig.
+
+Das Foto zeigt Zustand, Oberfläche, Kanten, Schäden und reale Spuren.
+Die generierte Geometrie macht das Bauteil planbar.
+Die schematische Abstraktion zeigt Spannrichtung, Auflager, Ports oder Anschlusskanten.
+
+---
+
+## 5. Datenlayer
+
+Der Datenlayer zeigt die Informationen, die für Vorplanung und Auswahl relevant sind.
+
+Für Stahlbeton-Bauteile sollte er nicht zu tief technisch beginnen, sondern zuerst die entwurfsrelevanten Daten zeigen:
+
+```text
+- Typologie
+- Typ
+- Piece-ID oder Serien-ID
+- Menge
+- Hauptmaße
+- Materialfamilie
+- Quelle
+- Standort
+- Verfügbarkeit
+- Zielrolle
+- Datenvertrauen
+```
+
+Beispiel:
+
+```text
+Typologie:
+ColumnBeamSlabAssembly
+
+Typ:
+Stahlbetonfragment mit Stütze, Unterzug und Deckenfeld
+
+Menge:
+4 Fragmente
+
+Geometrie:
+ca. 3.20 m Höhe, 5.40 m Spannweite, Deckenfeld 2.40 m tief
+
+Zielrolle:
+Primärtragwerk prüfen / räumliches Strukturmodul
+
+Datenvertrauen:
+Geometrie mittel, Struktur niedrig, Quelle hoch
+```
+
+---
+
+## 6. Reifegrad
+
+Der Reifegrad zeigt, wie weit ein Bauteil im ReUse-Prozess verwendbar ist.
+
+Er verhindert, dass ein unsicheres Bauteil wie ein fertig geprüftes Produkt wirkt.
+
+```text
+1. Idee
+Bauteil oder Potenzial ist erkannt, aber Datenlage ist schwach.
+
+2. Entwurfsfähig
+Das Bauteil kann im Entwurf getestet und platziert werden.
+
+3. Prüfbedürftig
+Das Bauteil ist interessant, aber zentrale Nachweise fehlen.
+
+4. Ausschreibungsnah
+Geometrie, Quelle, Verfügbarkeit und wichtige Nachweise sind weitgehend geklärt.
+
+5. Einbaufähig
+Das Bauteil ist geprüft, reserviert und für Umsetzung vorbereitet.
+```
+
+Für die Vorplanung reicht oft der Zustand:
+
+```text
+entwurfsfähig, prüfbedürftig
+```
+
+Das ist kein Problem. Es zeigt nur transparent, dass der Entwurf mit Annahmen arbeitet.
+
+---
+
+## 7. Prüfstatus
+
+Der Prüfstatus ist mit dem Nachweis-Panel aus Schritt 1 verbunden.
+
+Bei Stahlbeton sind besonders relevant:
+
+```text
+- Bewehrungslage
+- Betondruckfestigkeit
+- Zustand der Kanten
+- Anschlussdetails
+- Karbonatisierung / Korrosion
+- Brandschutz
+- Schadstoffe
+- frühere Nutzung
+- Demontagezustand
+```
+
+Der Katalog muss diese Themen nicht final lösen.
+Er muss aber sichtbar machen, welche Nachweise fehlen, bevor das Bauteil in eine verbindlichere Planungsphase übergeht.
+
+Beispiel:
+
+```text
+Prüfstatus Hohlkörperdecke:
+
+Geometrie:
+bestätigt
+
+Menge:
+bestätigt
+
+Spannrichtung:
+bestätigt
+
+Betondruckfestigkeit:
+offen
+
+Bewehrungsinformation:
+offen
+
+Auflagerzustand:
+zu prüfen
+
+Brandschutz:
+offen
+```
+
+---
+
+## 8. Filterstruktur
+
+Die Filterstruktur ist der wichtigste Teil des Katalogs, weil sie aus vielen Bauteilen eine entwurfsfähige Auswahl macht.
+
+Der Katalog sollte nicht nur nach Produktnamen filtern, sondern nach entwurfsrelevanten Kriterien.
+
+---
+
+### 8.1 Typologie / Typ
+
+Dieser Filter ordnet die Bauteile nach Bauteilfamilie und Generatorlogik.
+
+```text
+Typologie:
+Slab
+Beam
+Column
+Wall
+Panel
+Stair
+FacadeSandwichPanel
+ColumnBeamSlabAssembly
+
+Typ:
+Hohlkörperdecke 7.20 × 1.20 m
+Stahlbetonstütze 30 × 30 cm
+Wandplatte 3.20 × 1.20 × 0.18 m
+Stahlbetonfragment aus Stütze, Unterzug und Deckenfeld
+```
+
+Dieser Filter beantwortet:
+
+```text
+Welche Art von Bauteil suche ich?
+Welche Bauteilgrammatik möchte ich im Entwurf verwenden?
+```
+
+---
+
+### 8.2 Geometrie
+
+Geometrie ist für den Entwurf zentral, weil sie Raster, Spannweiten, Öffnungen und Komposition beeinflusst.
+
+```text
+Filter:
+- Länge
+- Breite
+- Höhe
+- Dicke
+- Querschnitt
+- Spannweite
+- Rastermaß
+- Öffnungsmaß
+- Segmentgröße
+- Bounding Box
+```
+
+Beispiele:
+
+```text
+Zeige alle Hohlkörperdecken zwischen 6.00 m und 8.00 m Länge.
+
+Zeige alle Wandplatten mit ca. 3.20 m Höhe.
+
+Zeige alle Stützen mit quadratischem Querschnitt.
+
+Zeige alle Stahlbetonfragmente, die ein Deckenfeld und eine Stütze enthalten.
+```
+
+---
+
+### 8.3 Funktion
+
+Der Funktionsfilter fragt nicht, was ein Bauteil früher war, sondern welche Rolle es im neuen Entwurf übernehmen kann.
+
+```text
+Funktionen:
+- tragend
+- sekundär tragend
+- Decke
+- Wand
+- Fassade
+- Raumabschluss
+- Aussteifung prüfen
+- Oberfläche
+- Strukturmodul
+- nichttragend / raumbildend
+```
+
+Beispiel:
+
+Eine Wandplatte kann als tragende Wand, raumbildendes Element, Fassadenfläche oder robuste Oberfläche erscheinen.
+Welche Rolle sie tatsächlich übernimmt, wird erst im Entwurf und in der Fachprüfung entschieden.
+
+---
+
+### 8.4 Semantik / Kompatibilität
+
+Dieser Filter zeigt, mit welchen anderen Bauteilen ein Element grundsätzlich verbunden werden kann.
+
+```text
+Filter:
+- hat Auflager-Port
+- hat Stützenkopf-Port
+- hat Deckenauflager-Port
+- hat Wandanschluss-Port
+- hat Fugen-Port
+- kompatibel mit Träger
+- kompatibel mit Stütze
+- kompatibel mit Hohlkörperdecke
+- kompatibel mit Wandöffnung
+```
+
+Beispiel:
+
+Wenn der Entwurf bereits Stahlbetonstützen verwendet, kann der Katalog nur Bauteile anzeigen, deren Ports mit Stützenkopf, Auflager oder Trägeranschluss kompatibel sind.
+
+---
+
+### 8.5 Tragwerk
+
+Der Tragwerksfilter zeigt, welche strukturelle Rolle ein Bauteil in der Vorplanung übernehmen kann.
+
+```text
+Filter:
+- primär tragend prüfbar
+- sekundär tragend prüfbar
+- nur raumbildend empfohlen
+- Spannrichtung bekannt
+- Auflagerkanten bekannt
+- Strukturmodell vorhanden
+- Bewehrungsinformation fehlt
+- Betondruckfestigkeit offen
+```
+
+Beispiel:
+
+Eine Hohlkörperdecke mit bekannter Spannrichtung ist als Deckenbauteil leichter vorprüfbar als ein frei gesägtes Ortbetonsegment mit unbekannter Bewehrung.
+
+---
+
+### 8.6 Energie
+
+Bei Stahlbeton ist Energie meist über Masse, graue Emissionen und Hüllrelevanz wichtig.
+
+```text
+Filter:
+- hohe Masse
+- hoher ReUse-CO₂-Effekt
+- als Außenbauteil relevant
+- als Innenbauteil energetisch unkritisch
+- thermische Masse relevant
+- Dämmbedarf wahrscheinlich
+- Fassaden-Sandwichelement
+```
+
+Beispiel:
+
+Eine Stahlbetonstütze ist energetisch vor allem über Masse und CO₂ relevant.
+Ein Fassaden-Sandwichelement ist zusätzlich als Gebäudehülle relevant.
+
+---
+
+### 8.7 Verfügbarkeit / Menge
+
+Dieser Filter ist für ReUse entscheidend, weil Entwerfen mit Einzelstücken anders funktioniert als Entwerfen mit Serien.
+
+```text
+Filter:
+- sofort verfügbar
+- verfügbar ab Datum
+- im Rückbau
+- eingelagert
+- reserviert
+- Menge ausreichend
+- unvollständige Serie
+- Bauteilpaket
+- gleiche Quelle
+```
+
+Beispiel:
+
+```text
+35 Hohlkörperdecken können eine Deckenstrategie erzeugen.
+
+4 Stahlbetonfragmente können ein räumliches Strukturmodul bilden.
+
+18 Wandplatten können eine Wand- oder Fassadenlogik erzeugen.
+
+2 Einzelstücke sind eher Akzent, Sonderfall oder Prototyp.
+```
+
+---
+
+### 8.8 Risiko / Nachweise
+
+Der Risikofilter hilft, zwischen interessanten und belastbaren Bauteilen zu unterscheiden.
+
+```text
+Filter:
+- Datenvertrauen hoch / mittel / niedrig
+- Statikdaten offen
+- Bewehrung offen
+- Betondruckfestigkeit offen
+- Brandschutz offen
+- Schadstoffstatus offen
+- Anschlussdetails offen
+- Zustand nur visuell geprüft
+```
+
+Das Ziel ist nicht, unsichere Bauteile auszuschließen.
+Das Ziel ist, ihre Unsicherheit sichtbar zu machen.
+
+---
+
+### 8.9 CO₂ / Transport
+
+Dieser Filter zeigt die ökologische und logistische Vorwirkung eines Bauteils.
+
+```text
+Filter:
+- hohe Masse
+- hoher potenzieller ReUse-Effekt
+- kurze Distanz
+- regionale Quelle
+- Transportdistanz kritisch
+- Vergleich zu neuem Bauteil
+```
+
+Bei Stahlbeton ist Masse besonders wichtig, weil Volumen, Gewicht, Transport und CO₂ direkt zusammenhängen.
+
+---
+
+## 9. Katalog-Aktionen
+
+Der Katalog ist nicht nur zum Anschauen da.
+Er bereitet den Wechsel in den Playground vor.
+
+### Auswählen / Vergleichen
+
+Planer:innen können mehrere Bauteile oder Bauteilpakete vergleichen.
+
+Vergleichskriterien:
+
+```text
+- Geometrie
+- Menge
+- Zielrolle
+- Reifegrad
+- Prüfstatus
+- CO₂-Potenzial
+- Verfügbarkeit
+- Kompatibilität
+```
+
+Beispiel:
+
+```text
+Option A:
+35 Hohlkörperdecken, hohe Serienlogik, klare Spannrichtung
+
+Option B:
+18 Wandplatten, gut für Raumstruktur, Tragrolle offen
+
+Option C:
+4 ColumnBeamSlabAssemblies, starke strukturelle Wirkung, komplexere Prüfung
+```
+
+---
+
+### Platzieren im Playground
+
+Ausgewählte Bauteile werden in den Playground übergeben.
+
+Dabei gehen nicht nur Geometrien mit, sondern auch:
+
+```text
+- Ports
+- Connector-Möglichkeiten
+- Strukturmodell
+- Energiemodell
+- Menge
+- Verfügbarkeit
+- Prüfstatus
+- Reifegrad
+- Evidence Link
+```
+
+So bleibt das Bauteil auch im Entwurfsraum mit seiner realen Quelle und seinen offenen Nachweisen verbunden.
+
+---
+
+### Reservieren / Anfrage an Bauteilbörse
+
+Wenn ein Bauteil für eine Variante relevant wird, kann aus dem Katalog eine Reservierung oder Anfrage ausgelöst werden.
+
+Der Katalog zeigt dafür:
+
+```text
+- verfügbar
+- angefragt
+- temporär reserviert
+- reserviert
+- nicht mehr verfügbar
+- Alternative suchen
+```
+
+Für die Präsentation ist wichtig:
+Die Reservierung ist keine reine Einkaufsfunktion. Sie ist Teil der Entwurfssicherung, weil der Entwurf sonst auf Bauteilen basiert, die später verschwinden können.
+
+---
+
+## 10. Beispielkarte A — Hohlkörperdecke
+
+```text
+Bauteilkarte:
+Hohlkörperdecke HCS-720
+
+Visuelle Ebene:
+Foto + generierte Platte + Spannrichtung
+
+Datenlayer:
+35 Stück
+7.20 × 1.20 m
+Stahlbetonfertigteil
+Quelle: Spendergebäude
+Verfügbarkeit: bekannt
+
+Reifegrad:
+entwurfsfähig, prüfbedürftig
+
+Prüfstatus:
+Spannrichtung bekannt
+Auflagerlogik bekannt
+Betondruckfestigkeit offen
+Bewehrungsdaten offen
+
+Filterwirkung:
+Typologie: Slab
+Funktion: Decke
+Tragwerk: prüfbar
+Menge: System möglich
+CO₂: hoher ReUse-Effekt durch Masse
+```
+
+---
+
+## 11. Beispielkarte B — Stahlbeton-Wandplatte
+
+```text
+Bauteilkarte:
+RC-Wandplatte 3.20 × 1.20 × 0.18 m
+
+Visuelle Ebene:
+Foto + generierte Wandplatte + Anschlusskanten
+
+Datenlayer:
+18 Stück
+Stahlbeton
+Quelle: Rückbauinventar
+Verfügbarkeit: Q2 2027
+
+Reifegrad:
+entwurfsfähig, prüfbedürftig
+
+Prüfstatus:
+Geometrie plausibel
+Zustand visuell geprüft
+Tragrolle offen
+Bewehrung offen
+Brandschutz offen
+
+Filterwirkung:
+Typologie: WallPanel
+Funktion: raumbildend / tragend prüfen
+Semantik: Boden-, Decken- und Seitenports
+Menge: Wand- oder Fassadensystem möglich
+```
+
+---
+
+## 12. Beispielkarte C — ColumnBeamSlabAssembly
+
+```text
+Bauteilkarte:
+Stahlbetonfragment aus Stütze, Unterzug und Deckenfeld
+
+Visuelle Ebene:
+Scan + generierte Fragmentgeometrie + Strukturdiagramm
+
+Datenlayer:
+4 Stück
+Ortbeton-Zuschnitt
+Quelle: Spendergebäude
+Geometrie aus Scan und Schnittlogik
+
+Reifegrad:
+Idee bis entwurfsfähig, stark prüfbedürftig
+
+Prüfstatus:
+Geometrie mittel
+Tragrolle möglich
+Bewehrung unbekannt
+Anschlussdetails offen
+Demontage- und Schnittkanten zu prüfen
+
+Filterwirkung:
+Typologie: ColumnBeamSlabAssembly
+Funktion: Strukturmodul
+Semantik: Stützenfuß, Deckenrand, Unterzug-Ports
+Menge: eher Modul / Prototyp als vollständiges System
+```
+
+---
+
+## 13. Kernaussage
+
+Der Bauteilkatalog übersetzt generierte Stahlbeton-Bauteilobjekte in eine lesbare Entwurfsbibliothek.
+
+Er zeigt nicht einfach alle Daten, sondern ordnet sie in Schichten:
+
+```text
+visuell,
+geometrisch,
+materiell,
+strukturell,
+energetisch,
+semantisch,
+nachweisbezogen,
+realweltbezogen.
+```
+
+Dadurch wird klar, welche Bauteile sofort als Entwurfsoptionen nutzbar sind, welche nur mit Prüfung weiterverfolgt werden können und welche als Bauteilpakete eine größere Entwurfslogik ermöglichen.
+
+Der Katalog ist damit die Brücke zwischen Generator und Playground.
+
+# Schritt 4 — Playground
+
+## Vom Bauteilkatalog zur komponierbaren Stahlbeton-ReUse-Entwurfsvariante
+
+```mermaid
+flowchart TB
+
+PG["4. Playground"]
+
+PG --> IK["Idee + Komposition"]
+IK --> TARGET["Target-Entwurf<br/>(Entwurfsparameter und Projektziele)"]
+IK --> KOMBI["Kombination mehrerer Bauteile<br/>(vom Einzelbauteil zum Gesamtsystem)"]
+
+PG --> KP["Kompatibilitätsprüfung"]
+KP --> RQ["Regelquellen"]
+
+RQ --> RB["Regelbasiert<br/>(Normen, Zielwerte, Projektanforderungen)"]
+RQ --> ENG["Energetisch<br/>(Hülle, thermische Masse, Dämmbedarf)"]
+RQ --> TRS["Tragwerklich<br/>(Lastabtrag, Auflager, Spannweiten)"]
+RQ --> RWB["Realwelt-basiert<br/>(Verfügbarkeit, Menge, Logistik, Reservierung)"]
+RQ --> SEM2["Semantisch<br/>(Ports, Connectoren, erlaubte Verbindungen)"]
+
+PG --> EF["Entwurfsfeedback"]
+
+EF --> LW["Live-Warnungen"]
+LW --> FN["Fehlende Nachweise"]
+LW --> ZK["Zeitkonflikte"]
+LW --> RV["Riskante Verbindungen"]
+LW --> UM["Unvollständige Mengen"]
+LW --> RIS2["Risiko / Datenvertrauen"]
+
+EF --> VSL["Visuelle Statuslogik<br/>(grün, gelb, orange, rot, grau)"]
+
+EF --> VB["Variantenbewertung"]
+VB --> RA["ReUse-Anteil"]
+VB --> CV["CO₂-Vergleich"]
+VB --> SYS["System-Kompatibilität"]
+VB --> RAV["Regelbasierte Alternativvorschläge"]
+VB --> UM2["Umgang mit unvollständigen Mengen"]
+
+PG --> EX["Export"]
+EX --> EXP_D["Entwurfsvariante + Bauteilliste + offene Nachweise + Prüfpfade + ReUse-/CO₂-Auswertung"]
+```
+
+## 1. Rolle des Playgrounds
+
+Der Playground ist der eigentliche Entwurfsraum des Systems.
+
+Während der Bauteilkatalog einzelne Bauteile sichtbar, filterbar und vergleichbar macht, prüft der Playground, was passiert, wenn diese Bauteile zusammengefügt werden.
+
+Der Fokus verschiebt sich hier:
+
+```text
+vom einzelnen Bauteil
+zum System aus mehreren Bauteilen
+
+vom Katalogobjekt
+zur Entwurfsvariante
+
+von isolierten Daten
+zu Beziehungen, Anschlüssen, Regeln und Kompatibilität
+```
+
+Der Playground ist damit kein neutrales 3D-Modellierwerkzeug.
+Er ist ein regelbasierter ReUse-Entwurfsraum für Stahlbetonbauteile.
+
+---
+
+## 2. Idee + Komposition
+
+Im Playground beginnt der Entwurf mit einer Zielvorstellung.
+
+Diese Zielvorstellung kann unterschiedlich sein:
+
+```text
+- möglichst hoher ReUse-Anteil
+- tragendes System aus wiederverwendeten Stahlbetonbauteilen
+- Fassaden- oder Wandstrategie aus vorhandenen Platten
+- Deckenraster aus Hohlkörperdecken
+- Strukturmodul aus Stütze, Unterzug und Deckenfragment
+- hybride Lösung aus ReUse-Bauteilen und neuen Ergänzungen
+```
+
+Die Designer wählt Bauteile aus dem Katalog und beginnt, sie im Raum zu platzieren.
+
+Beispiel:
+
+```text
+Aus dem Katalog werden ausgewählt:
+
+35 Hohlkörperdecken
+16 Stahlbetonstützen
+8 Stahlbetonträger
+18 Wandplatten
+4 ColumnBeamSlabAssemblies
+```
+
+Der Playground prüft nun nicht nur, ob diese Bauteile geometrisch sichtbar sind, sondern ob sie zusammen eine plausible Entwurfslogik bilden.
+
+---
+
+## 3. Target-Entwurf
+
+Der Begriff Target-Entwurf beschreibt nicht die Zielrolle einzelner Bauteile.
+
+Er beschreibt die Sammlung von Entwurfsparametern, die den Kontext für die gesamte Variante definieren.
+
+Diese Parameter bilden die Grundlage für alle Bewertungen im Playground.
+
+Beispiele für solche Parameter sind:
+
+```text
+Nutzung
+- Wohnen
+- Büro
+- Bildung
+- Industrie
+
+Gebäudetyp
+- Neubau
+- Erweiterung
+- Umbau
+- temporäre Struktur
+
+ReUse-Ziel
+- maximaler Materialerhalt
+- maximaler ReUse-Anteil
+- Fokus auf Tragwerk
+- Fokus auf Gebäudehülle
+
+Tragwerksstrategie
+- Skelettbau
+- Wandbau
+- Hybridstruktur
+- Modulstruktur
+
+Raster und Geometrie
+- Achsabstände
+- Geschosshöhen
+- Spannweiten
+- Gebäudetiefe
+
+Energetische Strategie
+- Innenbauteile
+- thermische Masse
+- Außenhülle
+- Fassadensystem
+
+Projektanforderungen
+- Brandschutz
+- Schallschutz
+- Barrierefreiheit
+- Rückbaubarkeit
+
+Verfügbarkeit
+- verfügbare Mengen
+- Lieferzeitfenster
+- Herkunft der Bauteile
+```
+
+Der Target-Entwurf definiert somit den Rahmen, innerhalb dessen Bauteile kombiniert und bewertet werden.
+
+Beispiel:
+
+```text
+Target-Entwurf:
+
+Nutzung:
+Büro
+
+Tragwerksstrategie:
+Skelettbau
+
+Raster:
+7.2 m
+
+ReUse-Ziel:
+maximaler Tragwerks-ReUse
+
+CO₂-Ziel:
+hohe Einsparung
+
+Verfügbare Bauteile:
+35 Hohlkörperdecken
+16 Stützen
+8 Träger
+```
+
+Der Playground bewertet anschließend, wie gut die ausgewählten Bauteile zu diesen Zielparametern passen.
+
+Nicht das einzelne Bauteil steht im Mittelpunkt, sondern die Übereinstimmung zwischen Entwurfszielen und verfügbaren Bauteilen.
+
+---
+
+## 4. Kombination mehrerer Bauteile
+
+Im Katalog wird ein Bauteil einzeln bewertet.
+Im Playground wird es Teil eines Systems.
+
+Beispiel:
+
+```text
+Hohlkörperdecke allein:
+Spannrichtung bekannt, Auflagerkanten vorhanden, prüfbedürftig.
+
+Hohlkörperdecke im Playground:
+Liegt sie auf passenden Trägern?
+Passt die Spannweite?
+Reicht die Auflagerfläche?
+Ist die Menge ausreichend?
+Entsteht ein sinnvolles Deckenraster?
+```
+
+Der Playground verbindet damit Einzelbauteilwissen mit Systemwissen.
+
+Das ist besonders wichtig bei Stahlbeton, weil Tragfähigkeit, Energie, CO₂ und Menge erst im System wirklich relevant werden.
+
+---
+
+## 5. Kompatibilitätsprüfung
+
+Kompatibilität bedeutet im Playground nicht nur geometrische Passung.
+
+Ein Bauteil ist kompatibel, wenn mehrere Ebenen gleichzeitig plausibel sind:
+
+```text
+1. semantisch
+Dürfen diese Bauteilarten grundsätzlich verbunden werden?
+
+2. geometrisch
+Passen Maße, Achsen, Öffnungen, Auflager und Toleranzen?
+
+3. tragwerklich
+Ist der Lastabtrag plausibel?
+
+4. energetisch
+Ist die Position als Hülle, Innenbauteil oder thermische Masse sinnvoll?
+
+5. realwelt-basiert
+Ist das Bauteil verfügbar, in ausreichender Menge vorhanden und reservierbar?
+
+6. nachweisbezogen
+Sind die fehlenden Nachweise für diese Verwendung akzeptabel oder kritisch?
+```
+
+Der Playground macht diese Ebenen sichtbar und bewertet sie während des Entwerfens.
+
+---
+
+## 6. Regelquellen
+
+Die Regeln im Playground kommen aus verschiedenen Datenebenen.
+
+### Regelbasiert
+
+Diese Ebene umfasst allgemeine Projektanforderungen, Zielwerte und relevante Regelhinweise.
+
+In der Vorplanung geht es nicht um eine finale Genehmigungsprüfung.
+Das Tool zeigt nur, wo Regeln wahrscheinlich relevant werden.
+
+Beispiele:
+
+```text
+tragende Nutzung → statische Prüfung notwendig
+Fassade → bauphysikalische Prüfung notwendig
+Brandabschnitt → Brandschutzstatus relevant
+Innenraum → Schadstoffstatus relevant
+```
+
+---
+
+### Energetisch
+
+Bei Stahlbeton ist die energetische Ebene vor allem mit Masse, CO₂, thermischer Trägheit und Hüllrelevanz verbunden.
+
+Beispiele:
+
+```text
+Stahlbetonplatte im Innenraum:
+CO₂ und thermische Masse relevant
+
+Stahlbetonwand als Außenwand:
+zusätzlicher Dämmbedarf wahrscheinlich
+
+Fassaden-Sandwichelement:
+Hüllfunktion und Schichtaufbau relevant
+
+Stütze oder Träger:
+hauptsächlich Masse und graue Emissionen relevant
+```
+
+Der Playground zeigt, wann ein Bauteil energetisch unkritisch, prüfbedürftig oder problematisch ist.
+
+---
+
+### Tragwerklich
+
+Die tragwerkliche Ebene prüft, ob die Kombination mehrerer Bauteile strukturell plausibel ist.
+
+Beispiele:
+
+```text
+Träger auf Stütze:
+Auflager und Lastabtrag prüfen
+
+Hohlkörperdecke auf Träger:
+Spannrichtung und Auflagerkante prüfen
+
+Wandplatte als tragende Wand:
+Bewehrung, Druckfestigkeit und Anschlussdetails offen
+
+ColumnBeamSlabAssembly:
+Lastabtrag im Fragment und neue Anschlusslogik prüfen
+```
+
+Die Prüfung bleibt eine Vorprüfung.
+Sie ersetzt keine Tragwerksplanung, macht aber frühe Konflikte sichtbar.
+
+---
+
+### Realwelt-basiert
+
+Diese Ebene hält die Verbindung zum realen Bauteil aufrecht.
+
+Geprüft wird:
+
+```text
+- Ist das Bauteil noch verfügbar?
+- Reicht die Menge?
+- Ist das Bauteil reserviert?
+- Passt das Verfügbarkeitsfenster?
+- Kommt es aus derselben Quelle oder aus unterschiedlichen Quellen?
+- Ist ein Bauteilpaket vollständig oder unvollständig?
+```
+
+Das ist wichtig, weil der Entwurf sonst mit Bauteilen arbeitet, die im realen Prozess nicht mehr verfügbar sind.
+
+---
+
+### Semantisch
+
+Die semantische Ebene basiert auf Ports und Connectoren.
+
+```text
+Port:
+zulässige Andockstelle eines Bauteils
+
+Connector:
+Verbindung zwischen zwei kompatiblen Ports
+```
+
+Beispiele:
+
+```text
+Stützenkopf-Port
++ Trägerauflager-Port
+= Auflager-Connector
+
+Trägeroberseite
++ Deckenauflagerkante
+= Deckenauflager-Connector
+
+Wandplatten-Seitenkante
++ Wandplatten-Seitenkante
+= Fugen-Connector
+
+ColumnBeamSlabAssembly
++ neues Stützen-/Trägerelement
+= Hybrid-Connector
+```
+
+Semantik verhindert, dass Bauteile nur deshalb verbunden werden, weil sie geometrisch nahe beieinander liegen.
+
+---
+
+## 7. Entwurfsfeedback
+
+Der Playground gibt während des Entwerfens kontinuierlich Rückmeldung.
+
+Das Feedback ist kein finaler Entscheid, sondern ein Frühwarn- und Orientierungsinstrument.
+
+Es zeigt:
+
+```text
+Was funktioniert?
+Was funktioniert nur mit Prüfung?
+Was ist riskant?
+Was ist blockiert?
+Welche Alternative wäre möglich?
+```
+
+Dadurch wird ReUse nicht erst am Ende geprüft, sondern während der Entwurfsentscheidung begleitet.
+
+---
+
+## 8. Live-Warnungen
+
+Live-Warnungen erscheinen, sobald ein Bauteil platziert, verbunden oder verändert wird.
+
+### Fehlende Nachweise
+
+Beispiel:
+
+```text
+Eine Wandplatte wird als tragende Wand eingesetzt.
+
+Warnung:
+Bewehrung unbekannt.
+Betondruckfestigkeit offen.
+Anschlussdetails fehlen.
+Tragende Nutzung nur als prüfbedürftige Vorplanungsannahme.
+```
+
+---
+
+### Zeitkonflikte
+
+Beispiel:
+
+```text
+Ein Bauteilpaket wird für eine frühe Bauphase verwendet,
+ist aber erst später verfügbar.
+
+Warnung:
+Verfügbarkeitsfenster passt nicht zur Zielphase.
+Reservierung oder Alternative prüfen.
+```
+
+---
+
+### Riskante Verbindungen
+
+Beispiel:
+
+```text
+Eine Hohlkörperdecke wird auf eine ungeeignete Anschlusskante gelegt.
+
+Warnung:
+Auflagergeometrie unsicher.
+Connector nur bedingt erlaubt.
+Tragwerksprüfung erforderlich.
+```
+
+---
+
+### Unvollständige Mengen
+
+Beispiel:
+
+```text
+Der Entwurf benötigt 42 Deckenplatten.
+Im Katalog sind 35 Hohlkörperdecken verfügbar.
+
+Warnung:
+Menge reicht nicht für vollständiges Deckenraster.
+Hybride Lösung oder Rasteranpassung empfohlen.
+```
+
+---
+
+### Risiko / Datenvertrauen
+
+Beispiel:
+
+```text
+Ein ColumnBeamSlabAssembly wird als Primärtragwerk verwendet.
+
+Warnung:
+Geometrie mittel.
+Strukturdaten niedrig.
+Demontage- und Schnittkanten unklar.
+Nur als stark prüfbedürftige Variante bewerten.
+```
+
+---
+
+## 9. Visuelle Statuslogik
+
+Damit die Komplexität lesbar bleibt, arbeitet der Playground mit einfachen visuellen Zuständen.
+
+```text
+Grün:
+plausibel in Vorplanung
+
+Gelb:
+möglich, aber prüfbedürftig
+
+Orange:
+hohes Risiko oder Anpassung nötig
+
+Rot:
+nicht kompatibel oder blockiert
+
+Grau:
+Daten fehlen oder unbekannt
+```
+
+Beispiel:
+
+```text
+Verbindung:
+Hohlkörperdecke auf Stahlbetonträger
+
+Geometrie: grün
+Semantik: grün
+Tragwerk: gelb
+Nachweise: grau
+Menge: grün
+
+Gesamtstatus:
+gelb — entwurfsfähig, prüfbedürftig
+```
+
+---
+
+## 10. Variantenbewertung
+
+Der Playground bewertet nicht nur einzelne Verbindungen, sondern ganze Entwurfsvarianten.
+
+Eine Variante kann beispielsweise lauten:
+
+```text
+Variante A:
+Deckenraster aus Hohlkörperdecken,
+Tragwerk aus wiederverwendeten Stützen und Trägern.
+
+Variante B:
+Wand- und Fassadenlogik aus Wandplatten,
+neues Tragwerk als Ergänzung.
+
+Variante C:
+räumliche Struktur aus ColumnBeamSlabAssemblies,
+ergänzt durch neue Adapter- und Ausgleichselemente.
+```
+
+Bewertet werden kann nach:
+
+```text
+- ReUse-Anteil
+- Anzahl verwendeter Bauteile
+- System-Kompatibilität
+- CO₂-Vergleich
+- Menge und Vollständigkeit
+- offene Nachweise
+- Datenvertrauen
+- Reservierungsstatus
+- notwendige Alternativen
+```
+
+---
+
+## 11. ReUse-Anteil
+
+Der ReUse-Anteil zeigt, wie stark die Variante aus vorhandenen Bauteilen aufgebaut ist.
+
+Er kann nach Masse, Anzahl oder Bauteilgruppen gelesen werden.
+
+Beispiel:
+
+```text
+ReUse nach Masse:
+hoch, weil große Stahlbetonbauteile eingesetzt werden.
+
+ReUse nach Stückzahl:
+mittel, weil einige Bauteilgruppen unvollständig sind.
+
+ReUse nach System:
+hoch, wenn Bauteile nicht nur dekorativ, sondern strukturbildend verwendet werden.
+```
+
+Für Stahlbeton ist die Masse besonders wichtig, weil wenige große Bauteile bereits einen hohen Material- und CO₂-Effekt haben können.
+
+---
+
+## 12. CO₂-Vergleich
+
+Der CO₂-Vergleich zeigt, wie sich eine ReUse-Variante gegenüber einer Variante mit neuen Bauteilen verhält.
+
+Der Playground zeigt dabei keine endgültige Ökobilanz, sondern eine Vorplanungsabschätzung.
+
+Beispiel:
+
+```text
+Variante mit Hohlkörperdecken:
+hoher potenzieller CO₂-Vorteil durch wiederverwendete Masse.
+
+Variante mit Wandplatten:
+mittlerer bis hoher CO₂-Vorteil, abhängig von Transport und Ertüchtigung.
+
+Variante mit ColumnBeamSlabAssemblies:
+hoher Materialerhalt, aber höheres Prüf- und Anpassungsrisiko.
+```
+
+---
+
+## 13. System-Kompatibilität
+
+System-Kompatibilität bewertet, ob die Bauteile zusammen eine kohärente Entwurfslogik bilden.
+
+Beispiele:
+
+```text
+hoch:
+Hohlkörperdecken, Träger und Stützen passen zu einem klaren Raster.
+
+mittel:
+Wandplatten bilden eine räumliche Logik, brauchen aber neue Adapter.
+
+niedrig:
+Bauteile sind einzeln interessant, ergeben aber kein tragfähiges oder räumlich klares System.
+```
+
+Dieser Wert hilft, zwischen Materialansammlung und wirklichem Entwurfssystem zu unterscheiden.
+
+---
+
+## 14. Regelbasierte Alternativvorschläge
+
+Wenn eine Verbindung oder Variante problematisch ist, schlägt der Playground Alternativen vor.
+
+Beispiele:
+
+```text
+Problem:
+Hohlkörperdecken reichen nicht für alle Felder.
+
+Vorschläge:
+- Deckenraster verkleinern
+- nur Teilbereich mit ReUse-Decken ausführen
+- weiteres Bauteilpaket suchen
+- hybride Lösung mit neuen Decken ergänzen
+```
+
+```text
+Problem:
+Wandplatte ist als tragende Wand zu unsicher.
+
+Vorschläge:
+- als nichttragenden Raumabschluss verwenden
+- zusätzliche neue Tragstruktur ergänzen
+- andere Wandplatten mit besseren Nachweisen suchen
+- Nachweispfad für Bewehrung und Betondruckfestigkeit starten
+```
+
+```text
+Problem:
+ColumnBeamSlabAssembly ist komplex als Primärtragwerk.
+
+Vorschläge:
+- als räumliches Modul in Teilbereichen verwenden
+- neue Adapterpunkte definieren
+- Tragfunktion reduzieren
+- Fragment als sichtbares Struktur- oder Raumelement einsetzen
+```
+
+---
+
+## 15. Umgang mit unvollständigen Mengen
+
+Unvollständige Mengen sind kein Fehler, sondern eine zentrale Entwurfsbedingung von ReUse.
+
+Der Playground sollte daher nicht nur warnen, sondern Strategien anbieten.
+
+Beispiele:
+
+```text
+35 Hohlkörperdecken statt 42:
+Teilraster, Hybriddecke oder andere Raumorganisation.
+
+18 Wandplatten:
+Wandlogik für einen Gebäudeteil statt Gesamtgebäude.
+
+4 ColumnBeamSlabAssemblies:
+räumliche Sonderbereiche, Strukturmodule oder Prototypenfelder.
+
+8 Träger:
+sekundäres Tragsystem oder gezielte Spannfelder.
+```
+
+Dadurch wird Materialknappheit zu einem Entwurfsparameter.
+
+---
+
+## 16. Export
+
+Am Ende erzeugt der Playground keine endgültige Ausführungsplanung, sondern eine bewertete Entwurfsvariante.
+
+Der Export enthält:
+
+```text
+- Entwurfsvariante
+- verwendete Bauteile
+- Bauteilliste mit Piece-IDs
+- platzierte Bauteilgruppen
+- Connectoren
+- offene Nachweise
+- Prüfpfade
+- ReUse-Anteil
+- CO₂-Vorabschätzung
+- Verfügbarkeitsstatus
+- Reservierungsstatus
+- Alternativvorschläge
+```
+
+Der Export ist damit eine Übergabe an die nächste Planungsstufe.
+
+Er zeigt nicht nur, wie der Entwurf aussieht, sondern auch, auf welchen realen Bauteilen, Annahmen, Risiken und Prüfbedarfen er basiert.
+
+---
+
+## 17. Beispiel: Bürogebäude aus Hohlkörperdecken, Stützen und Trägern
+
+```mermaid
+flowchart LR
+
+A["Target:<br/>Bürogebäude, Raster 7.2 m"] --> B["35 Hohlkörperdecken"]
+A --> C["16 Stützen"]
+A --> D["8 Träger"]
+
+B --> E["Deckenfelder bilden"]
+C --> F["Stützenraster bilden"]
+D --> G["Träger zwischen Stützen"]
+
+E --> H["Kompatibilitätsprüfung"]
+F --> H
+G --> H
+
+H --> I["Ergebnis:<
+```

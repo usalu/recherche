@@ -1,0 +1,167 @@
+{
+  "anchor_id": "reempro",
+  "sources_visited": [
+    {
+      "url": "https://www.reempro.com/marketplace/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.reempro.com/marketplace-reempro/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current marketplace page: construction materials, furniture, equipment from selective-deconstruction jobsites; controlled/triaged/traceable."
+      ]
+    },
+    {
+      "url": "https://www.reempro.com/on-parle-de-nous-sur-france-3/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://marketplace.skop.app/market-place-reempro",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Skop marketplace page lists categories such as lighting and confirms professional second-life materials."
+      ]
+    },
+    {
+      "url": "https://www.naturamater.eu/reempro",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Secondary profile: diagnostic, selective deconstruction, collection or supply of reused materials/end-of-jobsite stock."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace copy/vendor text mentions céramique in product scope; category pages include sanitary/equipment families.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/",
+        "https://www.reempro.com/marketplace-reempro/"
+      ],
+      "evidence_quote": "Marketplace includes construction materials, furniture and equipment from selective deconstruction; fit-out link likely.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Categories include revêtements et sol.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Categories include toiture et charpente.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/",
+        "https://marketplace.skop.app/market-place-reempro"
+      ],
+      "evidence_quote": "Product categories include équipement sanitaire and equipment families.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Categories include maçonnerie / gros œuvre and second œuvre.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "reconditionnement",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Navigation includes Reconditionnement as a service line.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Réempro",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.reempro.com/marketplace/",
+      "https://www.reempro.com/marketplace-reempro/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material exactness",
+      "reason": "Most categories are component/service classes, not closed-set material names."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/reempro.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "mat_keramik"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_ausbau",
+        "bt_technik",
+        "bt_boden",
+        "bt_dach"
+      ],
+      "wahrscheinlich": [
+        "bt_wand"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

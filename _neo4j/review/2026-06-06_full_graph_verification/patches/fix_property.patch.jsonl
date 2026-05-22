@@ -1,0 +1,16 @@
+{"op": "set_rel_properties", "from": "rotordc", "type": "NUTZT_BAUWERK", "to": "bw_generale_de_banque_brussels", "properties": {"role": "salvage_source"}, "reason": "Agent 14 A14-RELKEY-001: rename nutzung_role to canonical role='salvage_source'"}
+{"op": "remove_rel_properties", "from": "rotordc", "type": "NUTZT_BAUWERK", "to": "bw_generale_de_banque_brussels", "properties": ["nutzung_role"], "reason": "Agent 14 A14-RELKEY-001: drop off-canonical nutzung_role"}
+{"op": "set_rel_properties", "from": "p_multi_brussels_reuse_in_multi", "type": "HAT_BAUWERK", "to": "bw_generale_de_banque_brussels", "properties": {"role": "donor_source"}, "reason": "Agent 14 A14-RELKEY-002: rename bauwerk_role to canonical role='donor_source'"}
+{"op": "remove_rel_properties", "from": "p_multi_brussels_reuse_in_multi", "type": "HAT_BAUWERK", "to": "bw_generale_de_banque_brussels", "properties": ["bauwerk_role"], "reason": "Agent 14 A14-RELKEY-002: drop off-canonical bauwerk_role"}
+{"op": "remove_node_properties", "id": "enviromate", "properties": ["additional_marktmodelle"], "reason": "Agent 14 A14-NODEKEY-001: stray enrichment key not in Akteur schema"}
+{"op": "remove_node_properties", "id": "mobius_reemploi", "properties": ["needs_evidence_urls", "evidence_urls_target"], "reason": "Agent 14 A14-NODEKEY-002: drop TODO-marker keys after evidence resolved on-graph"}
+{"op": "set_node_properties", "id": "bt_fassadenelement", "properties": {"name": "Fassadenelement"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "bt_fassadenmodul_mauerwerk", "properties": {"name": "Fassadenmodul (Mauerwerk)"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "bt_glasscheibe", "properties": {"name": "Glasscheibe"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "bt_hohlkoerperdecke", "properties": {"name": "Hohlkörperdecke"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "bt_mauerstein", "properties": {"name": "Mauerstein"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "bt_verglasung", "properties": {"name": "Verglasung"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "mat_drahtglas", "properties": {"name": "Drahtglas"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "mat_spannbeton", "properties": {"name": "Spannbeton"}, "reason": "Agent 12 vocab stub: set human-readable name (was name==id)"}
+{"op": "set_node_properties", "id": "land_liechtenstein", "properties": {"country_iso2": "LI"}, "reason": "Agent 09 09-node-0191: Liechtenstein country node missing country_iso2"}
+{"op": "set_node_properties", "id": "stadt_paso_robles_templeton_gap", "properties": {"latitude": 35.6245, "longitude": -120.691}, "reason": "Agent 09 09-node-0342: Paso Robles city centroid coords for wine-region Stadt node"}

@@ -1,0 +1,223 @@
+[
+  {
+    "id": "A1_akteurskonstellation",
+    "title": "A1 · Akteurs-Konstellation der Wiederverwendung (alle Länder)",
+    "png": "A1_akteurskonstellation.png",
+    "json": "A1_akteurskonstellation.json",
+    "nodes": 167,
+    "edges": 154,
+    "stats": {
+      "akteure": 167,
+      "verbindungen": 154,
+      "laender": 9
+    }
+  },
+  {
+    "id": "A2_hubs_bruecken",
+    "title": "A2 · Hubs & Brücken – die zentralen Multiplikatoren",
+    "png": "A2_hubs_bruecken.png",
+    "json": "A2_hubs_bruecken.json",
+    "nodes": 57,
+    "edges": 62,
+    "stats": {
+      "top_akteure": 12,
+      "knoten_im_teilnetz": 57,
+      "ranking": [
+        {
+          "akteur": "Cirkla",
+          "grad": 10,
+          "boerse": true
+        },
+        {
+          "akteur": "Zirkular",
+          "grad": 9,
+          "boerse": false
+        },
+        {
+          "akteur": "Opalis",
+          "grad": 8,
+          "boerse": true
+        },
+        {
+          "akteur": "baubüro in situ",
+          "grad": 7,
+          "boerse": false
+        },
+        {
+          "akteur": "RotorDC",
+          "grad": 6,
+          "boerse": false
+        },
+        {
+          "akteur": "Gruner ReUse",
+          "grad": 5,
+          "boerse": false
+        },
+        {
+          "akteur": "Rotor",
+          "grad": 5,
+          "boerse": false
+        },
+        {
+          "akteur": "Matériuum",
+          "grad": 5,
+          "boerse": false
+        },
+        {
+          "akteur": "Sumami",
+          "grad": 4,
+          "boerse": false
+        },
+        {
+          "akteur": "useagain / Bauteilclick",
+          "grad": 4,
+          "boerse": false
+        },
+        {
+          "akteur": "Superuse Studios / 2012Architecten",
+          "grad": 4,
+          "boerse": false
+        },
+        {
+          "akteur": "Concular",
+          "grad": 4,
+          "boerse": true
+        }
+      ]
+    }
+  },
+  {
+    "id": "A3_akteure_nach_land",
+    "title": "A3 · Akteure nach Land",
+    "png": "A3_akteure_nach_land.png",
+    "json": "A3_akteure_nach_land.json",
+    "nodes": 334,
+    "edges": 327,
+    "stats": {
+      "akteure": 322,
+      "laender": 12,
+      "verteilung": {
+        "Schweiz": 111,
+        "Deutschland": 69,
+        "Belgien": 33,
+        "Niederlande": 32,
+        "Frankreich": 31,
+        "Vereinigtes Königreich": 22,
+        "Österreich": 13,
+        "Dänemark": 10,
+        "Liechtenstein": 2,
+        "USA": 2,
+        "Finnland": 1,
+        "Norwegen": 1
+      }
+    }
+  },
+  {
+    "id": "B1_bauteilgruppen_k118",
+    "title": "B1 · Semantische Bauteil-Repräsentation am Beispiel K.118 Winterthur",
+    "png": "B1_bauteilgruppen_k118.png",
+    "json": "B1_bauteilgruppen_k118.json",
+    "nodes": 17,
+    "edges": 17,
+    "stats": {
+      "bauteilgruppen": 3
+    }
+  },
+  {
+    "id": "B2_spender_empfaenger",
+    "title": "B2 · Spender → Empfänger – reale Bauteil-Flüsse (Urban Mining)",
+    "png": "B2_spender_empfaenger.png",
+    "json": "B2_spender_empfaenger.json",
+    "nodes": 142,
+    "edges": 94,
+    "stats": {
+      "flussbeziehungen": 94,
+      "bauteilgruppen_im_fluss": 180,
+      "laenderuebergreifend": 1
+    }
+  },
+  {
+    "id": "B3_bauteiltyp_material",
+    "title": "B3 · Bauteiltyp ↔ Material – das Komponenten-Vokabular",
+    "png": "B3_bauteiltyp_material.png",
+    "json": "B3_bauteiltyp_material.json",
+    "nodes": 36,
+    "edges": 125,
+    "stats": {
+      "bauteiltypen": 16,
+      "materialien": 20,
+      "kanten": 125
+    }
+  },
+  {
+    "id": "C1_normen_nach_land",
+    "title": "C1 · Normen-/Rechtslandschaft nach Land",
+    "png": "C1_normen_nach_land.png",
+    "json": "C1_normen_nach_land.json",
+    "nodes": 20,
+    "edges": 72,
+    "stats": {
+      "laender": 9,
+      "rechtsdomaenen": 11,
+      "normknoten_kanten": 453
+    }
+  },
+  {
+    "id": "C2_regelkette",
+    "title": "C2 · Nachweis-Kette: Bauteil → Frage → Nachweis → Regelwerk → Land",
+    "png": "C2_regelkette.png",
+    "json": "C2_regelkette.json",
+    "nodes": 30,
+    "edges": 76,
+    "stats": {
+      "regulierungsfragen": 2,
+      "nachweisforderungen": 16,
+      "rechtsdomaenen": 10
+    }
+  },
+  {
+    "id": "D1_huerden",
+    "title": "D1 · Wiederverwendungs-Hürden (empirisch)",
+    "png": "D1_huerden.png",
+    "json": "D1_huerden.json",
+    "nodes": 11,
+    "edges": 5,
+    "stats": {
+      "huerden": 11,
+      "top": [
+        {
+          "huerde": "Witterung_Feuchte",
+          "vorkommen": 39
+        },
+        {
+          "huerde": "Verfuegbarkeitsproblem",
+          "vorkommen": 34
+        },
+        {
+          "huerde": "Mengenunsicherheit",
+          "vorkommen": 29
+        },
+        {
+          "huerde": "Entwurfsbindung",
+          "vorkommen": 28
+        },
+        {
+          "huerde": "Heterogenitaet_Chargen",
+          "vorkommen": 25
+        },
+        {
+          "huerde": "Aufbereitungsaufwand",
+          "vorkommen": 22
+        },
+        {
+          "huerde": "Unkonventionelles_Material",
+          "vorkommen": 17
+        },
+        {
+          "huerde": "Terminunsicherheit",
+          "vorkommen": 16
+        }
+      ]
+    }
+  }
+]

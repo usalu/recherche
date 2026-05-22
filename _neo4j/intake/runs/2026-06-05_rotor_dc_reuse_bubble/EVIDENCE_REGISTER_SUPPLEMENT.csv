@@ -1,0 +1,52 @@
+evidence_id,url,source_type,what_it_supports,graph_action,confidence,in_graph_quelle_id
+W01,https://preuse.nweurope.eu/,first_party_homepage,PREUSE programme scope dates outputs,add_node prog_preuse,q_url_150bfa71ec64ea9192c5252bb7453284,belegt
+W02,https://preuse.nweurope.eu/partners,first_party_page,Rotor lead Bellastock partner roster,edges Rotor/bellastock BETEILIGT_AN prog_preuse,q_url_4a94cddf6628f350b982c97040dce9fd,belegt
+W03,https://rotordb.org/en/projects/preuse-interreg-nwe,first_party_project,Rotor leads PREUSE partners budget timeline,edge Rotor BETEILIGT_AN prog_preuse,q_url_714d4c31c9d811b5269f20eaf16bb43f,belegt
+W04,https://opalis.eu/en/about,first_party_about,Opalis Rotor founder Bellastock 2019 FCRBE PREUSE Renolution,edges opalis-bellastock enrich,q_url_new_opalis_about,belegt
+W05,https://opalis.eu/en/dealers/rotor-deconstruction,first_party_dealer,Opalis lists rotordc dealer since 2016 + Generale Bank cases,edge opalis VERBUNDEN rotordc,q_chiro_d_itterbeek_dilbeek_s5,belegt
+W06,https://opalis.eu/en/documentation,first_party_docs,FCRBE documentation hosted on Opalis,enrich opalis prog_fcrbe,q_url_new_opalis_docs,belegt
+W07,https://rotordb.org/en/projects/oxy-centre-monnaie,first_party_project,OXY Rotor design assistance Whitewood Immobel 4-6% reuse,add_node p_oxy_centre_monnaie,q_url_new_oxy_project,belegt
+W08,https://rotordb.org/en/news/works-oxy-well-underway,first_party_news,RotorDC reconverts OXY aluminium profiles to lighting,edge rotordc BETEILIGT_AN p_oxy,q_url_new_oxy_news,belegt
+W09,https://rotordb.org/en/projects/caserne-tresignies-south-wing,first_party_project,Caserne Trésignies Rotor design assistance inventories specs,add_node p_caserne_tresignies,q_url_new_caserne,belegt
+W10,https://rotordb.org/en/projects/boardwalk-reclaimed-tropical-hardwood,first_party_project,Boardwalk 300m2 reclaimed tropical hardwood Minerve,add_node p_boardwalk_tropical_hardwood,q_url_new_boardwalk,belegt
+W11,https://www.minerve.info/nieuws/vlonder/,project_owner_corroboration,Revive Minerve boardwalk via Rotor Opalis azobé,BELEGT_IN p_boardwalk,q_url_new_minerve_vlonder,belegt
+W12,https://rotordb.org/en/projects/multi-de-brouckere-tower,first_party_project,Rotor DC salvaged Generale de Banque granite for Multi,upgrade Multi edges belegt,q_multi_brussels_reuse_in_multi_s5,belegt
+W13,https://www.triodos.be/fr/articles/2025/multi-une-reconversion-pionniere-exemplaire-rotor-construction-circulaire,secondary_corroboration,Multi granite from Generale de Banque via Rotor DC,BELEGT_IN p_multi,q_url_new_triodos_multi,belegt
+W14,https://rotordc.com/about-us,first_party_about,Evere 14000m2 Da Vinci citydev; documents dealers on opalis.eu,add_node bw_rotordc_evere_site,q_url_new_rotordc_about,belegt
+W15,https://rotordc.com/contact,first_party_contact,Da Vinci business park citydev Evere address,BELEGT_IN bw_rotordc_evere,q_url_new_rotordc_contact,belegt
+W16,https://bma.brussels/en/rotor-en/,public_client_erdf,ERDF Circular Hub RTRDC Avenue de Bale 3 Evere,BELEGT_IN bw_rotordc_evere,q_url_new_bma_rotor,belegt
+W17,https://rotordb.org/en/projects/plateforme-reemploi,first_party_project,Atelier 4/5 Opalis content 2017 Plateforme Réemploi,optional atelier edge,q_url_new_plateforme_reemploi,belegt
+W18,https://rotordb.org/en/projects/recypark-anderlecht,first_party_project,Rotor design assistance glulam reuse Recypark,Rotor edge only,q_recypark_demets_anderlecht_s1,belegt
+W19,https://rotordc.com/blog/inspiration-4/recypark-in-anderlecht-brussels-101,first_party_blog,rotordc inspiration post not participation proof,defer rotordc Recypark,q_recypark_demets_anderlecht_s9,teilweise_belegt
+W20,https://www.brusiness.brussels/rotor-dc-pionier-in-hergebruik-von-bouwmaterialen/,secondary_press,citydev erfpacht 14000m2 Evere,secondary BELEGT_IN site,q_url_new_brusiness,teilweise_belegt
+W21,https://opalis.eu/fr/projets/ancien-siege-de-la-generale-de-banque,first_party_case,Generale Bank 66t granite 230t finishes Rotor stock,donor bw_generale + rotordc,q_url_new_opalis_generale,belegt
+W22,https://opalis.eu/nl/projecten/demontage-van-een-unieke-plafond,first_party_case,Generale Bank ceiling demontage rotordc quantities corroboration,BELEGT_IN bw_generale,q_url_new_opalis_ceiling,belegt
+W23,https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72,first_party_blog,230 tonnes salvaged kick-started rotordc 2014,BELEGT_IN bw_generale rotordc,q_url_new_rotordc_generale_blog,belegt
+W24,https://rotordc.com/blog/salvaging-by-rotordc-3/windows-from-cbr-building-by-constantin-brodzki-and-marcel-lambrichs-ca-1970-44,first_party_blog,CBR windows reclaimed during renovation not demolition,add_node bw_cbr_building,q_url_new_rotordc_cbr_blog,belegt
+W25,https://rotordc.com/blog/salvaging-by-rotordc-3/page/2,first_party_blog_index,Borgerstein 700m2 tiles CCN Durobor PointCulture cases,add_node bw_borgerstein bw_ccn,q_url_new_rotordc_salvaging_p2,belegt
+W26,https://rotordc.com/shop/category/per-building-borgerstein-building-sint-katelijne-waver-1936-385,first_party_shop,Borgerstein ceramic tiles product line per-building,BELEGT_IN bw_borgerstein,q_url_new_rotordc_borgerstein_shop,belegt
+W27,https://rotordc.com/about-us,first_party_about,Rotor documents dealers on opalis.eu rotordc side-project,enrich rotordc opalis,q_url_new_rotordc_about,belegt
+W28,https://preuse.nweurope.eu/blog/preuse-news-64/official-launch-of-the-preuse-project-153,first_party_news,PREUSE launch at Rotor offices Brussels lead partner,BELEGT_IN prog_preuse Rotor,q_url_new_preuse_launch,belegt
+W29,https://preuse.nweurope.eu/blog/preuse-news-64/what-s-up-about-pilots-operations-667,first_party_news,PREUSE pilots Utrecht Lorient Roubaix La Fabrique,partner pilot edges,q_url_d2b95610d64f42d1bd97ec02274ee622,belegt
+W30,https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979,first_party_news,Utrecht Trechterweide reuse centre opened Mar 2025,city_of_utrecht BETEILIGT_AN prog_preuse,q_url_new_preuse_utrecht_opening,belegt
+W31,https://preuse.nweurope.eu/blog/preuse-news-64/working-and-making-progress-in-roubaix-1171,first_party_news,Roubaix pilot led by La Fabrique des Quartiers,add la_fabrique_des_quartiers,q_url_new_preuse_roubaix,belegt
+W32,https://www.list.lu/en/environment/project/preuse/,first_party_partner,LIST PREUSE partner list La Fabrique des Quartiers SPLA,add partners LIST Mechelen Wiltz,q_url_new_list_preuse,belegt
+W33,https://rotordb.org/en/projects/12-fcrbe-pilot-operations,first_party_project,Rotor led 12 of 37 FCRBE pilots lists sites,enrich Rotor prog_fcrbe,q_url_new_fcrbe_12_pilots,belegt
+W34,https://vb.nweurope.eu/projects/project-search/fcrbe-facilitating-the-circulation-of-reclaimed-building-elements-in-northwestern-europe/,first_party_program,37 FCRBE pilots 140t reclaimed 186t reused registry,BELEGT_IN prog_fcrbe,q_url_new_fcrbe_interreg,belegt
+W35,https://vb.nweurope.eu/projects/project-search/fcrbe-facilitating-the-circulation-of-reclaimed-building-elements-in-northwestern-europe/,first_party_pilot_registry,FCRBE Dance Center Paris supplier Rotor Déconstruction,rotordc teilweise prog_fcrbe,q_url_new_fcrbe_interreg,teilweise_belegt
+W36,https://rotordb.org/en/projects/oxy-centre-monnaie,first_party_project,Whitewood Immobel commissioners OXY,optional commissioner edges,q_url_new_oxy_project,belegt
+W37,https://rotordb.org/en/news/material-donnerie-oxy-friday-25-november,first_party_news,Rotor Whitewood Immobel second reuse collaboration OXY,BELEGT_IN p_oxy,q_url_new_oxy_donnerie,belegt
+W38,https://rotordc.com/blog/salvaging-by-rotordc-3/douglas-fir-planks-from-the-george-henri-playground-designed-by-suede-36-84,first_party_blog,Georges Henri playground 1000m2 Douglas fir Brussels Environment,add bw_georges_henri_playground,q_url_new_rotordc_georges_henri,belegt
+W39,https://rotordb.org/en/news/reclamation-audit-guide-online,first_party_news,FCRBE audit guide on opalis.eu/documentation,FCRBE opalis link,q_url_new_fcrbe_audit_news,belegt
+W40,https://renolution.brussels/en/node/244,public_program,Renolution lists Opalis reuse documentation centre,BELEGT_IN opalis,q_url_new_renolution_opalis,belegt
+W41,https://rotordb.org/en/projects/reuse-multi-project,first_party_publication,Multi six-year Whitewood Conix Rotor collaboration,BELEGT_IN p_multi,q_url_new_rotor_reuse_multi_pub,belegt
+W42,https://vb.nweurope.eu/projects/project-search/fcrbe-facilitating-the-circulation-of-reclaimed-building-elements-in-northwestern-europe/,first_party_press,Bellastock Topalov Rotor Ghyoot FCRBE Opalis Quimper article,enrich bellastock opalis,q_url_new_fcrbe_interreg,belegt
+W43,https://rotordc.com/blog/salvaging-by-rotordc-3/page/2,first_party_blog_index,CCN Building Groupe Structures Brussels salvaging 2022,add bw_ccn_brussels,q_url_new_rotordc_salvaging_p2,belegt
+W44,https://opalis.eu/en/about,first_party_about,Atelier 4/5 contributed Opalis content 2017 Plateforme Réemploi,optional atelier_4_5,q_url_new_opalis_about,belegt
+W45,https://rotordc.com/about-us,first_party_about,rotordc autonomous side-project from Rotor employee-owned cooperative,enrich rotordc Rotor,q_url_new_rotordc_about,belegt
+W46,https://rotordc.com/service/depositsale,first_party_service,Deposit-sale one-stop shop contractors individuals project owners,BELEGT_IN rotordc,q_url_new_rotordc_depositsale,belegt
+W47,https://rotordc.com/blog/project-design-7/re-tile-a-service-to-remove-mortar-residues-from-reclaimed-floor-tiles-111,first_party_service,RE-TILE mortar cleaning service BeCircular Brussels,BELEGT_IN rotordc,q_url_new_rotordc_retile,belegt
+W48,https://rotordb.org/en/projects/architecture-reuse-brussels,first_party_publication,Rotor on Zinneke Multi Recypark BMA book,upgrade p_architecture_of_reuse_brussels,q_url_new_arch_reuse_brussels,belegt
+W49,https://www.rotordb.org/en/projects/amop-mission,first_party_project,Brussels Environment AMOP 12 pilots Rotor reuse,sidecar only no new node,q_url_new_amop_mission,belegt
+W50,https://www.rotordb.org/en/projects/rotor-dc-reuse-made-easy,first_party_project,Rotor offices above rotordc stocks Evere colocation,enrich rotordc Rotor VERBUNDEN,q_url_714d4c31c9d811b5269f20eaf16bb43f,belegt
+W51,https://circular-cities-and-regions.ec.europa.eu/news/ccri-pilot-flanders-visits-rotor-learn-about-construction-material-reuse,event_corroboration,CCRI visit names FCRBE and PREUSE successor,sidecar corroboration,q_url_new_ccri_rotor,teilweise_belegt

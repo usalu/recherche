@@ -1,0 +1,62 @@
+{
+  "baseline": {
+    "rows": 17323,
+    "proven": 15499,
+    "proven_pct": 89.47
+  },
+  "v2": {
+    "rows": 17109,
+    "proven": 16038,
+    "proven_pct": 93.74
+  },
+  "delta": {
+    "rows": -214,
+    "proven": 539,
+    "proven_pct": 4.27
+  },
+  "expected": {
+    "shard_rows": 1546,
+    "proven_upgrades_mid": 549,
+    "row_removals_mid": 150,
+    "proven_pct_mid": 92.5,
+    "proven_pct_delta_mid": 3.0
+  },
+  "ier_raw_rows": 1520,
+  "ier_unique_rows": 1504,
+  "matched": 1324,
+  "overlays_applied": 1324,
+  "pruned": 214,
+  "gate_fixes": 0,
+  "upgrades": {
+    "to_proven": 542,
+    "me_to_proven": 185,
+    "partial_to_proven": 357
+  },
+  "baseline_verdicts": {
+    "MISSING_EVIDENCE": 877,
+    "PROVEN": 15499,
+    "PARTIAL": 807,
+    "UNVERIFIABLE": 102,
+    "SCHEMA_VIOLATION": 33,
+    "CONTRADICTION": 5
+  },
+  "v2_verdicts": {
+    "MISSING_EVIDENCE": 323,
+    "PROVEN": 16038,
+    "PARTIAL": 316,
+    "UNVERIFIABLE": 357,
+    "SCHEMA_VIOLATION": 33,
+    "CONTRADICTION": 42
+  },
+  "patch_op_counts": {
+    "set_rel_properties": 12,
+    "set_node_properties": 172
+  },
+  "evidence_patch_ops": 184,
+  "delete_patch_ops": 214,
+  "source_patch_op_counts": {
+    "set_rel_properties": 12,
+    "set_node_properties": 172
+  },
+  "dry_run_exit_code": 0
+}

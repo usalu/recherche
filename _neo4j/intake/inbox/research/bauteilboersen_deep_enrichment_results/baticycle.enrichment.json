@@ -1,0 +1,106 @@
+{
+  "anchor_id": "baticycle",
+  "sources_visited": [
+    {
+      "url": "https://baticycle.fr/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://baticycle.fr/materiaux-second-oeuvre/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://marketplace.skop.app/baticycle",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre categories include menuiserie / wood-based interior joinery.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre scope includes revêtements / sanitaryware-like categories where ceramic products appear.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Menuiserie / interior joinery category maps to doors and related fit-out.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre category evidence includes floor coverings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre category evidence includes wall/partition finish families.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Sanitary/equipment evidence maps to building services.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "reconditioned",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://marketplace.skop.app/baticycle"
+      ],
+      "evidence_quote": "Skop lists Bâticycle products among reuse/reconditioned marketplace vendors.",
+      "confidence": "unsicher",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Bâticycle",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://baticycle.fr/",
+      "https://baticycle.fr/materiaux-second-oeuvre/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "PruefungNachweis",
+      "reason": "No audit, CE/CPR, electrical or QA text found in accessible first-party snippets."
+    }
+  ],
+  "run_notes": []
+}

@@ -1,0 +1,99 @@
+{
+  "anchor_id": "reuse_and_trade",
+  "sources_visited": [
+    {
+      "url": "https://www.reuseandtrade.de/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.reuseandtrade.de/artikeluebersicht/Schnaeppchen-fuer-Privatkunden.aspx",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.facebook.com/ReUseandTrade/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://www.reuseandtrade.de/"
+      ],
+      "evidence_quote": "Listings include metal cabinets/shelves and scaffolding/dachrandsicherung-type products.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://www.reuseandtrade.de/"
+      ],
+      "evidence_quote": "Listings include Duschwände; material likely glass but not explicitly proven in accessible text.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.reuseandtrade.de/"
+      ],
+      "evidence_quote": "Homepage lists office/furniture/stock and products like counters, cabinets and doors/shelves.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.reuseandtrade.de/"
+      ],
+      "evidence_quote": "Homepage lists products such as Duschwände, solar lift and technical equipment.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://www.reuseandtrade.de/"
+      ],
+      "evidence_quote": "Homepage lists roof safety/scaffolding products for pitched roof.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_digital_reuse_exchange",
+      "evidence_urls": [
+        "https://www.reuseandtrade.de/"
+      ],
+      "evidence_quote": "Site frames itself as Vermittlungsagentur / sale for firms, buying for everyone.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "ReUse And Trade",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.reuseandtrade.de/",
+      "https://www.reuseandtrade.de/artikeluebersicht/Schnaeppchen-fuer-Privatkunden.aspx"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Type fit",
+      "reason": "Mostly general reuse/furniture/industrial products; verify whether at_materialhub_bauteilboerse still fits."
+    },
+    {
+      "topic": "Material",
+      "reason": "Many products are not construction components; keep closed-set links low-confidence."
+    }
+  ],
+  "run_notes": []
+}

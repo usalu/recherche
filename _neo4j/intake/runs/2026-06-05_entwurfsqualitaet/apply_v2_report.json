@@ -1,0 +1,228 @@
+{
+  "run": "entwurfsqualitaet_v2_2026_06_05",
+  "commit": true,
+  "vokabular_version": "v2",
+  "source": "E:\\recherche\\_neo4j\\intake\\archive\\2026-06-05_entwurfsqualitaet\\designQuality.md",
+  "vocab_seed": "E:\\recherche\\_neo4j\\contracts\\entwurfsqualitaet_vokabular_v2.seed.kg.jsonl",
+  "before": {
+    "nodes": 2287,
+    "rels": 15393,
+    "projekte": 82,
+    "em": 16,
+    "ae": 16
+  },
+  "csv_rows": 96,
+  "matched": 82,
+  "skip_edges": 3,
+  "active_edges": 79,
+  "vocab_nodes_written": 16,
+  "projekte_updated": 82,
+  "em_edges_written": 79,
+  "ae_edges_written": 79,
+  "edges_cleared": 164,
+  "after": {
+    "nodes": 2287,
+    "rels": 15393,
+    "projekte": 82,
+    "em": 16,
+    "ae": 16
+  },
+  "em_distribution": [
+    {
+      "begriff": "Building_Transformation",
+      "beschreibung": "Ein bestehendes Gebaeude auf dem Baugrund wird umgewandelt; tragende Schale oder Struktur des Bestands bleibt aktiv im neuen Entwurf. Adaptive Reuse im Sinne des CBA-AR-Frameworks.",
+      "projekte": 28
+    },
+    {
+      "begriff": "Design_with_Stock",
+      "beschreibung": "Verfuegbarer Bauteilbestand bestimmt Layout, Topologie oder Geometrie des Entwurfs. Umfasst Form Follows Availability und stock-informed design; Scouting, Harvest Map und Materialpass sind Werkzeuge, keine eigene Strategie.",
+      "projekte": 20
+    },
+    {
+      "begriff": "Component_Matchmaking",
+      "beschreibung": "Konkrete Komponenten werden einem Empfaengerprojekt zugeordnet — ueber benanntes Spendergebaeude, digitales Matching oder Spender-Empfaenger-Kette (D5, FCRBE).",
+      "projekte": 7
+    },
+    {
+      "begriff": "Spolia_Design",
+      "beschreibung": "Heterogene architektonische Fragmente unterschiedlicher Herkunft werden zu einem neuen lesbaren Ganzen integriert. Spolia im Sinne von Plevoets/Brooker & Stone.",
+      "projekte": 7
+    },
+    {
+      "begriff": "Typology_Adaptation",
+      "beschreibung": "Serielle oder Praefab-Typologie (z. B. DDR-Plattenbau) wird programmatisch in ein neues Gebaeude uebersetzt. Configuration flexibility als Entwurfslogik.",
+      "projekte": 6
+    },
+    {
+      "begriff": "Circularity_Demonstrator",
+      "beschreibung": "Primaerer Zweck des Projekts ist das Erproben einer ReUse-/Zirkularitaetsmethode in Reallabor, Pilot oder Forschungsdemonstrator.",
+      "projekte": 6
+    },
+    {
+      "begriff": "Design_for_Disassembly",
+      "beschreibung": "Reversible Verbindungen, Kit-Tektonik und Demontierbarkeit sind Gestaltungsbedingungen. Zukunfts-Rueckbau regiert den Entwurf — orthogonal zur Materialbeschaffung.",
+      "projekte": 4
+    },
+    {
+      "begriff": "Material_Bank_Building",
+      "beschreibung": "Das Gebaeude ist temporaere Materialbank: Bauteile sind geliehen und muessen zurueckgegeben werden. Lebensdauer- und Rueckgabezyklus regiert den Entwurf (Project BAMB).",
+      "projekte": 1
+    }
+  ],
+  "ae_distribution": [
+    {
+      "begriff": "Interior_Reuse_Atmosphere",
+      "beschreibung": "Wiederverwendete Oberflaechen, Trennwaende oder Einbauten bestimmen den Raumcharakter als primaerer architektonischer Output.",
+      "projekte": 27
+    },
+    {
+      "begriff": "Exposed_Reuse_Structure",
+      "beschreibung": "Wiederverwendetes Tragwerk praegt und zeigt die Struktur als primaeres architektonisches Bild.",
+      "projekte": 15
+    },
+    {
+      "begriff": "Patchwork_Envelope",
+      "beschreibung": "Fassade oder Gebaeudehuelle entsteht als Materialcollage mit erkennbarem Rhythmus aus wiederverwendeten Bauteilen.",
+      "projekte": 12
+    },
+    {
+      "begriff": "Modular_Grid_Form",
+      "beschreibung": "Modul- oder Feldmassen wiederverwendeter Bauteile bestimmen Raster, Proportion und Detail des Ergebnisses.",
+      "projekte": 9
+    },
+    {
+      "begriff": "Cultural_Continuity_Spolia",
+      "beschreibung": "Gerettete Fragmente vermitteln historische oder ortsspezifische Lesbarkeit — nicht nur Materialwechsel (Plevoets: persistent meaning).",
+      "projekte": 5
+    },
+    {
+      "begriff": "Didactic_Circularity",
+      "beschreibung": "Wiederverwendung wird als oeffentliche oder lehrreiche Botschaft sichtbar gemacht.",
+      "projekte": 5
+    },
+    {
+      "begriff": "Reversible_Tectonics",
+      "beschreibung": "Rueckbaubare System- oder Kit-Bauweise ist architektonisch lesbar und praegt das Erscheinungsbild.",
+      "projekte": 3
+    },
+    {
+      "begriff": "Infrastructural_Spolia",
+      "beschreibung": "Uebergrosse ehemalige Industrie- oder Infrastrukturteile skalieren und dominieren das architektonische Ergebnis.",
+      "projekte": 3
+    }
+  ],
+  "deprecated_orphans": [
+    {
+      "id": "ae_bio_wiederverwendungs_hybrid",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "ae_demontierbares_bausatzsystem",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "ae_industrie_infrastruktur_spolien",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "ae_innenraum_atmosphaere_aus_wiederverwendung",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "ae_modulmassebestimmte_form",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "ae_oeffentliche_wiederverwendungs_identitaet",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "ae_patchwork_fassade",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "ae_sichtbares_wiederverwendetes_tragwerk",
+      "labels": [
+        "Architekturergebnis",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_adaptiver_bestand_mit_bauteiluebernahme",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_bestandsgefuehrte_planung",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_bestandskartierung_urban_mining",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_form_folgt_verfuegbarkeit",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_forschungsdemonstrator",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_rueckbauorientiertes_entwerfen",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_spender_empfaenger_kette",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    },
+    {
+      "id": "em_wiederverbindung_spolien",
+      "labels": [
+        "Entwurfsmethodik",
+        "DEPRECATED"
+      ]
+    }
+  ]
+}

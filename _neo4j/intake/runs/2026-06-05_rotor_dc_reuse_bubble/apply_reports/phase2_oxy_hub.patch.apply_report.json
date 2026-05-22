@@ -1,0 +1,104 @@
+{
+  "confirmation_required": "APPLY phase2_oxy_hub.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2356,
+    "relationships": 15472
+  },
+  "counts_after_expected": {
+    "nodes": 2356,
+    "relationships": 15472
+  },
+  "counts_before": {
+    "nodes": 2355,
+    "relationships": 15465
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:09:50.356761+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\patches\\phase2_oxy_hub.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "p_oxy_centre_monnaie",
+          "name": "OXY Centre Monnaie",
+          "name_full": "OXY — Centre Monnaie Brussels reuse renovation",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        }
+      },
+      "before": null,
+      "id": "p_oxy_centre_monnaie",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "p_oxy_centre_monnaie",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_oxy_project"
+    },
+    {
+      "from": "p_oxy_centre_monnaie",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_oxy_news"
+    },
+    {
+      "from": "p_oxy_centre_monnaie",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_oxy_donnerie"
+    },
+    {
+      "from": "Rotor",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_oxy_centre_monnaie"
+    },
+    {
+      "from": "rotordc",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_oxy_centre_monnaie"
+    },
+    {
+      "from": "whitewood",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_oxy_centre_monnaie"
+    },
+    {
+      "from": "immobel",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "would_create_rel",
+      "to": "p_oxy_centre_monnaie"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 8,
+    "would_create": 1,
+    "would_create_rel": 7
+  }
+}

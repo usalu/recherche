@@ -1,0 +1,201 @@
+{
+  "anchor_id": "backacia",
+  "sources_visited": [
+    {
+      "url": "https://backacia.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current page describes a marketplace for reused construction materials/equipment for BTP professionals."
+      ]
+    },
+    {
+      "url": "https://opalis.eu/en/dealers/backacia",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://app.dealroom.co/companies/backacia",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://opalis.eu/fr/fournisseurs/backacia",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Opalis dealer page gives concrete families: sanitaires, chauffage/climatisation, CHR, floor coverings, joinery, luminaires, wood, electrical equipment."
+      ]
+    },
+    {
+      "url": "https://backacia.com/collections/autres",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Collection text names cloisons, sanitaires, luminaires and other reused construction materials."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://opalis.eu/fr/fournisseurs/backacia"
+      ],
+      "evidence_quote": "Opalis notes Backacia offers materials such as wood/bois alongside floor coverings, joinery, luminaires and electrical equipment.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://opalis.eu/fr/fournisseurs/backacia"
+      ],
+      "evidence_quote": "Sanitary equipment and floor-covering context makes ceramic likely; verify product pages before automatic import.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://backacia.com/collections/autres"
+      ],
+      "evidence_quote": "Backacia collection text names cloisons, sanitaires, luminaires and broader specialized fit-out materials.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://opalis.eu/fr/fournisseurs/backacia"
+      ],
+      "evidence_quote": "Opalis names revêtements de sol / floor coverings.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://opalis.eu/fr/fournisseurs/backacia"
+      ],
+      "evidence_quote": "Concrete families include sanitary, heating/air-conditioning, luminaires and electrical equipment.",
+      "confidence": "belegt",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://opalis.eu/fr/fournisseurs/backacia"
+      ],
+      "evidence_quote": "Menuiseries / joinery is present; map conservatively to doors/interior joinery after product-page check.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://backacia.com/"
+      ],
+      "evidence_quote": "B2B reuse platform scope is broad construction-material exchange; component families are not stable in accessible copy.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://backacia.com/"
+      ],
+      "evidence_quote": "Consulting/audit role indicates diagnostic/resource inventory workflow; resolve against PruefungNachweis nodes.",
+      "confidence": "unsicher",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "diagnose",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_b2b_marketplace",
+      "evidence_urls": [
+        "https://backacia.com/"
+      ],
+      "evidence_quote": "B2B platform/marketplace model for reuse of construction materials.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Backacia",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://backacia.com/",
+      "https://opalis.eu/en/dealers/backacia"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "Accessible pages did not expose stable closed-set material categories."
+    },
+    {
+      "topic": "PruefungNachweis target",
+      "reason": "Needs Cypher lookup for diagnose/audit nodes before import."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/backacia.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_holz"
+      ],
+      "wahrscheinlich": [
+        "mat_keramik"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_technik",
+        "bt_boden",
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_tuer"
+      ],
+      "unsicher": [
+        "bt_mehrere"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

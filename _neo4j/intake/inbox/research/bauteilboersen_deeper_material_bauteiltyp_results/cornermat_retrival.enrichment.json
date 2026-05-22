@@ -1,0 +1,125 @@
+{
+  "anchor_id": "cornermat_retrival",
+  "sources_visited": [
+    {
+      "url": "https://www.cornermat.be/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.cornermat.be/shop",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://advitam-material.be/nl/actor/cornermat/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.cornermat.be/-2",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Current page: Retrival service recovering and reselling quality reclaimed materials; category detail not surfaced in readable snippet."
+      ]
+    },
+    {
+      "url": "https://retrival.be/cornermat",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Retrival Cornermat page confirms digital/physical platform for reuse and recycling chain."
+      ]
+    },
+    {
+      "url": "https://opalis.eu/fr/fournisseurs/retrival-cornermat",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Opalis record: service removes complete interiors and makes reusable elements available."
+      ]
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://opalis.eu/fr/fournisseurs/retrival-cornermat"
+      ],
+      "evidence_quote": "Opalis says Retrival removes complete interiors before demolition and makes reusable elements available; map only to fit-out pending catalogue extraction.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_materialhub",
+      "evidence_urls": [
+        "https://www.cornermat.be/"
+      ],
+      "evidence_quote": "Material exchange/shop framing, but category evidence was thin in browser-readable text.",
+      "confidence": "unsicher"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Cornermat / Retrival",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.cornermat.be/",
+      "https://www.cornermat.be/shop"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material + Bauteiltyp",
+      "reason": "Operator pages did not expose reliable reusable product categories in accessible copy."
+    },
+    {
+      "topic": "Social-enterprise context",
+      "reason": "Secondary actor pages should be checked before operator-chain changes."
+    },
+    {
+      "topic": "Material",
+      "reason": "No concrete source-backed material term was found in operator/current/history sources. Keep material empty rather than infer from generic construction-material wording."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/cornermat_retrival.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "bt_ausbau"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

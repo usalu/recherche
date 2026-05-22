@@ -1,0 +1,110 @@
+{
+  "anchor_id": "globechain",
+  "sources_visited": [
+    {
+      "url": "https://globechain.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current marketplace/ESG source."
+      ]
+    },
+    {
+      "url": "https://marketplace.globechain.com/business/construction",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Construction vertical source."
+      ]
+    },
+    {
+      "url": "https://ukgbc.org/resources/esg-reuse-marketplace/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "UKGBC case/source for reuse marketplace."
+      ]
+    },
+    {
+      "url": "https://www.clustercollaboration.eu/content/online-reuse-platform-globechain",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://marketplace.globechain.com/business/construction"
+      ],
+      "evidence_quote": "Construction vertical exists but accessible copy primarily supports reusable equipment/fit-out/furniture categories.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_esg_reuse_marketplace",
+      "evidence_urls": [
+        "https://globechain.com/"
+      ],
+      "evidence_quote": "ESG reuse marketplace model; construction-specific category needs login/page verification.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Globechain",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://globechain.com/",
+      "https://marketplace.globechain.com/business/construction"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "No closed-set material named in accessible first-party copy."
+    },
+    {
+      "topic": "Construction vertical",
+      "reason": "Need authenticated/JS marketplace view to confirm building-component categories."
+    },
+    {
+      "topic": "Material",
+      "reason": "No concrete source-backed material term was found in operator/current/history sources. Keep material empty rather than infer from generic construction-material wording."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/globechain.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "bt_ausbau"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

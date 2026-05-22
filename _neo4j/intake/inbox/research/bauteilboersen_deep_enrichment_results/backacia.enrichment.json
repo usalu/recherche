@@ -1,0 +1,78 @@
+{
+  "anchor_id": "backacia",
+  "sources_visited": [
+    {
+      "url": "https://backacia.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://opalis.eu/en/dealers/backacia",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://app.dealroom.co/companies/backacia",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://backacia.com/"
+      ],
+      "evidence_quote": "B2B reuse platform scope is broad construction-material exchange; component families are not stable in accessible copy.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://backacia.com/"
+      ],
+      "evidence_quote": "Consulting/audit role indicates diagnostic/resource inventory workflow; resolve against PruefungNachweis nodes.",
+      "confidence": "unsicher",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "diagnose",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_b2b_marketplace",
+      "evidence_urls": [
+        "https://backacia.com/"
+      ],
+      "evidence_quote": "B2B platform/marketplace model for reuse of construction materials.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Backacia",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://backacia.com/",
+      "https://opalis.eu/en/dealers/backacia"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "Accessible pages did not expose stable closed-set material categories."
+    },
+    {
+      "topic": "PruefungNachweis target",
+      "reason": "Needs Cypher lookup for diagnose/audit nodes before import."
+    }
+  ],
+  "run_notes": []
+}

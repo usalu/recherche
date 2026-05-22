@@ -1,0 +1,18 @@
+{"op": "merge_node", "from": "bw_externe_stahl_donor_stockholder", "to": "bw_cleveland_steel_and_tubes_stock", "reason": "Q02-N-004: Externe Stahl-Donorquellen aggregate duplicates R01-sourced bw_cleveland_steel_and_tubes_stock (cleveland-steel.com); redirect AUS_SPENDER/HAT_BAUWERK to canonical depot"}
+{"op": "add_rel", "from": "bg_stahlbeton_mehrere_groeditz_wbs70_precast_panels", "type": "AUS_SPENDER", "to": "bw_school_type_dresden_donor", "properties": {"evidence_basis": "Q02 redirect: sibling BG bg_stahlbeton_mehrere_groeditz_dresden_type_precast_components already AUS_SPENDER bw_school_type_dresden_donor; WBS70 Materialdepot placeholder has no discrete depot", "evidence_confidence": "medium", "review_run": "quality_pass_q02_2026-06-06"}, "reason": "Q02-N-017: redirect AUS_SPENDER from deprecated bw_wbs70_donor_groeditz to donor Bauwerk bw_school_type_dresden_donor (Association house Gröditz topology)"}
+{"op": "delete_node", "id": "bw_berlin_fitout_donor_sources", "reason": "Q02-N-001: aggregate placeholder (Boros/Berghain/other sites); no discrete depot URL — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_chiro_itterbeek_reuse_supply_network", "reason": "Q02-N-002: supply-network abstraction miscast as Materialdepot; no first-party depot — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_donor_gebaudegruppe_resource_rows_mauerwerk", "reason": "Q02-N-003: donor building-group aggregate; no discrete depot — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_holbein_grosvenor_donor_projects", "reason": "Q02-N-005: Grosvenor portfolio aggregate; not a discrete depot — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_lo_reninge_reuse_brick_source", "reason": "Q02-N-006: explicit unknown brick source placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_maison_des_canaux_unspecified_donors", "reason": "Q02-N-007: explicit unknown reuse sources placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_maison_dna_unknown_brick_donor", "reason": "Q02-N-008: explicit unknown brick-donor placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_messebau_lager_hannover", "reason": "Q02-N-009: generic Messebau-Lager label; source cites trade-fair boards from demolition projects, not a named depot — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_p2_massenwohnungsbau_donor_unknown", "reason": "Q02-N-010: explicit unknown P2 mass-housing donor placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_paris_material_sources_circular_pavilion", "reason": "Q02-N-011: aggregated Paris material sources placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_paris_regional_donor_sources_ferme_du_rail", "reason": "Q02-N-012: aggregated Paris/regional reuse sources placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_unbekannte_donor_buildings_zinneke_material_lots", "reason": "Q02-N-013: explicit unknown Zinneke donor buildings placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_unbekanntes_transformationsgebaeude_kellerwaende", "reason": "Q02-N-014: explicit unknown transformation building placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_unknown_brick_donor_sources_gjg", "reason": "Q02-N-015: explicit unknown brick-donor placeholder (GJG) — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_unknown_demolition_wood_streams", "reason": "Q02-N-016: explicit unknown demolition-wood streams placeholder — DEPRECATE_NODE"}
+{"op": "delete_node", "id": "bw_wbs70_donor_groeditz", "reason": "Q02-N-017: WBS70 donor Materialdepot placeholder; AUS_SPENDER redirected to bw_school_type_dresden_donor — DEPRECATE_NODE"}

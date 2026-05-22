@@ -1,0 +1,144 @@
+{
+  "anchor_id": "baticycle",
+  "sources_visited": [
+    {
+      "url": "https://baticycle.fr/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://baticycle.fr/materiaux-second-oeuvre/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Second-oeuvre positioning supports fit-out / internal component categories."
+      ]
+    },
+    {
+      "url": "https://marketplace.skop.app/baticycle",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Skop vendor evidence for Baticycle as a reuse-material seller."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre categories include menuiserie / wood-based interior joinery.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre scope includes revêtements / sanitaryware-like categories where ceramic products appear.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre category evidence includes floor coverings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Sanitary/equipment evidence maps to building services.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Menuiserie / interior joinery category maps to doors and related fit-out.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Second-oeuvre category evidence includes wall/partition finish families.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "reconditioned",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://marketplace.skop.app/baticycle"
+      ],
+      "evidence_quote": "Skop lists Bâticycle products among reuse/reconditioned marketplace vendors.",
+      "confidence": "unsicher",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Bâticycle",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://baticycle.fr/",
+      "https://baticycle.fr/materiaux-second-oeuvre/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "PruefungNachweis",
+      "reason": "No audit, CE/CPR, electrical or QA text found in accessible first-party snippets."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/baticycle.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "mat_holz",
+        "mat_keramik"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_boden"
+      ],
+      "wahrscheinlich": [
+        "bt_tuer",
+        "bt_wand",
+        "bt_technik"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "anchor_id": "materialenbank_leuven_atelier_circuler",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://ateliercirculer.be/catalogus/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Product categories: Hout, Steen, Metaal, Isolatie & akoestiek, Verwarming & Sanitair, Elektriciteit & Verlichting, Ramen & Deuren."
+    },
+    {
+      "url": "https://ateliercirculer.be/materialenbank/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Assortiment omvat gerecupereerde hout- en steenfracties; constructiehout, plaatmaterialen, tropisch/rustiek/lokaal hout; kunst- en natuursteen."
+    },
+    {
+      "url": "https://ateliercirculer.be/catalogus/hout/plaatmaterialen/mdf/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Hout subcategories include Constructie, Plaatmaterialen, Terras & Gevelbekleding, Vloerbekleding; also Steen, Metaal, Isolatie & akoestiek, Verwarming & Sanitair, Ramen & Deuren."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "gerecupereerde hout- en steenfracties; constructiehout, plaatmaterialen, tropisch/rustiek/lokaal hout",
+      "confidence": "belegt",
+      "note": "Direct first-party search extract names wood categories.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "kunst- en natuursteen",
+      "confidence": "belegt",
+      "note": "Direct first-party search extract explicitly names natural stone.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/"
+      ],
+      "evidence_quote": "Isolatie & akoestiek",
+      "confidence": "belegt",
+      "note": "Insulation category supports mat_daemmstoff.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/"
+      ],
+      "evidence_quote": "Ramen & Deuren",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence; use exact category wording in notes.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/"
+      ],
+      "evidence_quote": "Ramen & Deuren",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence; use exact category wording in notes.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/"
+      ],
+      "evidence_quote": "Isolatie & akoestiek",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence; use exact category wording in notes.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/"
+      ],
+      "evidence_quote": "Verwarming & Sanitair; Elektriciteit & Verlichting",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence; use exact category wording in notes.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/hout/plaatmaterialen/mdf/"
+      ],
+      "evidence_quote": "Vloerbekleding",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence; use exact category wording in notes.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_fassade",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/hout/plaatmaterialen/mdf/"
+      ],
+      "evidence_quote": "Terras & Gevelbekleding",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence; use exact category wording in notes.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/hout/plaatmaterialen/mdf/"
+      ],
+      "evidence_quote": "Plaatmaterialen",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence; use exact category wording in notes.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://ateliercirculer.be/catalogus/hout/plaatmaterialen/mdf/"
+      ],
+      "evidence_quote": "Hout subcategory includes “Constructie”.",
+      "confidence": "unsicher",
+      "note": "Potential structural timber, but not explicit beam/joist/träger; keep manual review.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "materialenbank_leuven_atelier_circuler",
+      "claim_type": "Material",
+      "target_id": "mat_stahl",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Atelier Circuler catalog search extract",
+      "source_url": "https://ateliercirculer.be/catalogus/",
+      "source_line_ref": "",
+      "source_excerpt_short": "Metaal (8)",
+      "rejection_reason": "Generic metal is not steel.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

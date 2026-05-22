@@ -1,0 +1,137 @@
+{
+  "anchor_id": "cycle_zero",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://cyclezero.fr/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Application for recovering free construction-site materials; materials referenced in app and collected after reservation."
+    },
+    {
+      "url": "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers",
+      "http_status": null,
+      "first_party": false,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Bois, fenêtres, carrelage, isolants, radiateurs… platform connects companies and individuals to maximise material reuse."
+    },
+    {
+      "url": "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp",
+      "http_status": null,
+      "first_party": false,
+      "retrieval_status": "web.run_search_extract; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "search result extract",
+      "evidence_excerpt": "Bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage, tout y passe."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Third-party article lists: “Bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage”. Matched token: Bois.",
+      "confidence": "unsicher",
+      "note": "Third-party source, useful but keep manual review unless first-party in-app/category export is obtained.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers"
+      ],
+      "evidence_quote": "Article list includes “isolants”.",
+      "confidence": "unsicher",
+      "note": "Third-party source; keep manual review.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Third-party article lists: “Bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage”. Matched token: fenêtres.",
+      "confidence": "unsicher",
+      "note": "Third-party source, useful but keep manual review unless first-party in-app/category export is obtained.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Third-party article lists: “Bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage”. Matched token: portes.",
+      "confidence": "unsicher",
+      "note": "Third-party source, useful but keep manual review unless first-party in-app/category export is obtained.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Third-party article lists: “Bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage”. Matched token: isolants.",
+      "confidence": "unsicher",
+      "note": "Third-party source, useful but keep manual review unless first-party in-app/category export is obtained.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Third-party article lists: “Bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage”. Matched token: radiateurs; tuyauterie.",
+      "confidence": "unsicher",
+      "note": "Third-party source, useful but keep manual review unless first-party in-app/category export is obtained.",
+      "source_line_ref": "search extract"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp"
+      ],
+      "evidence_quote": "Third-party article lists: “Bois, fenêtres, radiateurs, tuyauterie, portes, peinture, carrelage”. Matched token: carrelage.",
+      "confidence": "unsicher",
+      "note": "Third-party source, useful but keep manual review unless first-party in-app/category export is obtained.",
+      "source_line_ref": "search extract"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "first-party line-level material/category page",
+      "reason": "some useful evidence was from search extract or third-party source; keep manual review before automatic import"
+    }
+  ],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "cycle_zero",
+      "claim_type": "Material",
+      "target_id": "mat_keramik",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Île-de-France Cycle Zéro article",
+      "source_url": "https://www.iledefrance.fr/toutes-les-actualites/cycle-zero-la-revolution-numerique-anti-gaspillage-dans-le-btp",
+      "source_line_ref": "",
+      "source_excerpt_short": "carrelage",
+      "rejection_reason": "Do not import ceramic from “carrelage” unless crosswalk explicitly permits; the page does not say céramique.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

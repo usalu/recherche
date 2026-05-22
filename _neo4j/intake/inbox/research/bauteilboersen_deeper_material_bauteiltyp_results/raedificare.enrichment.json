@@ -1,0 +1,148 @@
+{
+  "anchor_id": "raedificare",
+  "sources_visited": [
+    {
+      "url": "https://raedificare.com/marketplace/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Marketplace page for donation/sale of reused BTP materials; materials from jobsites, demolition, surplus."
+      ]
+    },
+    {
+      "url": "https://raedificare.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.climate-chance.org/bonne-pratique/plateforme-raedificare/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Climate Chance source: marketplace with 2,000+ referenced materials and diagnostic/reuse ecosystem context."
+      ]
+    },
+    {
+      "url": "https://raedificare.com/marqueblanche/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "White-label page: materials classified by lot/category/sub-category per BTP nomenclature."
+      ]
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/",
+        "https://raedificare.com/marqueblanche/"
+      ],
+      "evidence_quote": "Marketplace connects deconstructed buildings to future projects; materials are described precisely with visual evidence, but categories are not exposed in the accessible copy.",
+      "confidence": "unsicher",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace says it is compatible with the regulatory diagnostic application and synchronizes with diagnostic PEMD + Ressource.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "diagnose",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://raedificare.com/"
+      ],
+      "evidence_quote": "Diagnostic resource establishes a targeted inventory of reusable materials with photos, quantities, dimensions, location and availability.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace states automatic calculation of avoided carbon impact for each material put online.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "co2",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_b2b_marketplace",
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Professional marketplace for reuse materials with free catalogue navigation.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "RAEDIFICARE",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://raedificare.com/marketplace/",
+      "https://raedificare.com/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Accessible page proves diagnostic/marketplace workflow, not exact closed-set categories."
+    },
+    {
+      "topic": "PN IDs",
+      "reason": "Resolve PEMD/resource diagnostic and carbon/CO2 nodes."
+    },
+    {
+      "topic": "Material",
+      "reason": "No concrete source-backed material term was found in operator/current/history sources. Keep material empty rather than infer from generic construction-material wording."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/raedificare.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "bt_mehrere"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

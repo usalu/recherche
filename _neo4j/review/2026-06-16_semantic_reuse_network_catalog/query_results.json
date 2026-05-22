@@ -1,0 +1,3311 @@
+{
+  "generated_at": "2026-06-16T03:16:11.157912+00:00",
+  "database": "mit-bestand",
+  "queries": {
+    "baseline": {
+      "title": "Graph baseline",
+      "cypher": "MATCH (n)\n            WITH count(n) AS nodes\n            MATCH ()-[r]->()\n            RETURN nodes, count(r) AS rels",
+      "rows": [
+        {
+          "nodes": 2263,
+          "rels": 14571
+        }
+      ],
+      "row_count": 1
+    },
+    "n1_actor_constellation_stats": {
+      "title": "Actor reuse constellation stats",
+      "cypher": "MATCH ()-[r:VERBUNDEN_MIT_AKTEUR]->()\n            WHERE r.review_run IS NOT NULL\n            RETURN count(r) AS directed_tagged,\n                   count(DISTINCT r.review_run) AS review_runs",
+      "rows": [
+        {
+          "directed_tagged": 159,
+          "review_runs": 11
+        }
+      ],
+      "row_count": 1
+    },
+    "n1_actor_by_country_on_network": {
+      "title": "Actors in reuse network by country",
+      "cypher": "MATCH (a:Akteur)-[r:VERBUNDEN_MIT_AKTEUR]-()\n            WHERE r.review_run IS NOT NULL\n            OPTIONAL MATCH (a)-[:LIEGT_IN_LAND]->(l:Land)\n            WITH DISTINCT a, l\n            RETURN coalesce(l.name, '(no country edge)') AS country,\n                   count(DISTINCT a) AS actors\n            ORDER BY actors DESC, country",
+      "rows": [
+        {
+          "country": "Schweiz",
+          "actors": 51
+        },
+        {
+          "country": "Deutschland",
+          "actors": 36
+        },
+        {
+          "country": "(no country edge)",
+          "actors": 27
+        },
+        {
+          "country": "Belgien",
+          "actors": 16
+        },
+        {
+          "country": "Frankreich",
+          "actors": 15
+        },
+        {
+          "country": "Niederlande",
+          "actors": 7
+        },
+        {
+          "country": "Vereinigtes Königreich",
+          "actors": 6
+        },
+        {
+          "country": "Österreich",
+          "actors": 6
+        },
+        {
+          "country": "Dänemark",
+          "actors": 4
+        },
+        {
+          "country": "USA",
+          "actors": 2
+        },
+        {
+          "country": "Finnland",
+          "actors": 1
+        }
+      ],
+      "row_count": 11
+    },
+    "n2_all_actors_by_country": {
+      "title": "All actors by country",
+      "cypher": "MATCH (a:Akteur)\n            OPTIONAL MATCH (a)-[:LIEGT_IN_LAND]->(l:Land)\n            RETURN coalesce(l.name, '(no country edge)') AS country,\n                   count(DISTINCT a) AS actors\n            ORDER BY actors DESC, country",
+      "rows": [
+        {
+          "country": "(no country edge)",
+          "actors": 355
+        },
+        {
+          "country": "Schweiz",
+          "actors": 111
+        },
+        {
+          "country": "Deutschland",
+          "actors": 69
+        },
+        {
+          "country": "Belgien",
+          "actors": 33
+        },
+        {
+          "country": "Niederlande",
+          "actors": 32
+        },
+        {
+          "country": "Frankreich",
+          "actors": 31
+        },
+        {
+          "country": "Vereinigtes Königreich",
+          "actors": 22
+        },
+        {
+          "country": "Österreich",
+          "actors": 13
+        },
+        {
+          "country": "Dänemark",
+          "actors": 10
+        },
+        {
+          "country": "Liechtenstein",
+          "actors": 2
+        },
+        {
+          "country": "USA",
+          "actors": 2
+        },
+        {
+          "country": "Finnland",
+          "actors": 1
+        },
+        {
+          "country": "Norwegen",
+          "actors": 1
+        }
+      ],
+      "row_count": 13
+    },
+    "n3_projects_by_country": {
+      "title": "Projects by country",
+      "cypher": "MATCH (p:Projekt)-[:LIEGT_IN_LAND]->(l:Land)\n            RETURN l.name AS country, count(DISTINCT p) AS projects\n            ORDER BY projects DESC, country",
+      "rows": [
+        {
+          "country": "Deutschland",
+          "projects": 15
+        },
+        {
+          "country": "Belgien",
+          "projects": 12
+        },
+        {
+          "country": "Niederlande",
+          "projects": 12
+        },
+        {
+          "country": "Vereinigtes Königreich",
+          "projects": 11
+        },
+        {
+          "country": "Schweiz",
+          "projects": 10
+        },
+        {
+          "country": "Dänemark",
+          "projects": 5
+        },
+        {
+          "country": "Frankreich",
+          "projects": 5
+        },
+        {
+          "country": "USA",
+          "projects": 4
+        },
+        {
+          "country": "Finnland",
+          "projects": 3
+        },
+        {
+          "country": "Japan",
+          "projects": 1
+        },
+        {
+          "country": "Luxemburg",
+          "projects": 1
+        },
+        {
+          "country": "Norwegen",
+          "projects": 1
+        },
+        {
+          "country": "Österreich",
+          "projects": 1
+        }
+      ],
+      "row_count": 13
+    },
+    "n3_cross_border_actors": {
+      "title": "Actors active in multiple countries via projects",
+      "cypher": "MATCH (a:Akteur)-[:BETEILIGT_AN]->(p:Projekt)-[:LIEGT_IN_LAND]->(l:Land)\n            WITH a, collect(DISTINCT l.name) AS countries, count(DISTINCT p) AS projects\n            WHERE size(countries) > 1\n            RETURN a.id AS actor, a.name AS name, countries, projects\n            ORDER BY size(countries) DESC, projects DESC, actor\n            LIMIT 20",
+      "rows": [
+        {
+          "actor": "arup",
+          "name": "Arup",
+          "countries": [
+            "Vereinigtes Königreich",
+            "Niederlande"
+          ],
+          "projects": 3
+        }
+      ],
+      "row_count": 1
+    },
+    "n3_top_actors_per_country": {
+      "title": "Top actors by project count per country",
+      "cypher": "MATCH (a:Akteur)-[:BETEILIGT_AN]->(p:Projekt)-[:LIEGT_IN_LAND]->(l:Land)\n            WITH l.name AS country, a.id AS actor, a.name AS actor_name, count(DISTINCT p) AS projects\n            ORDER BY country, projects DESC, actor\n            WITH country, collect({actor: actor, name: actor_name, projects: projects})[0..5] AS top5\n            RETURN country, top5\n            ORDER BY country",
+      "rows": [
+        {
+          "country": "Belgien",
+          "top5": [
+            {
+              "actor": "Rotor",
+              "projects": 4,
+              "name": "Rotor"
+            },
+            {
+              "actor": "rotordc",
+              "projects": 3,
+              "name": "RotorDC"
+            },
+            {
+              "actor": "blaf_architecten",
+              "projects": 2,
+              "name": "BLAF Architecten"
+            },
+            {
+              "actor": "daidalos_peutz",
+              "projects": 2,
+              "name": "Daidalos Peutz"
+            },
+            {
+              "actor": "greisch",
+              "projects": 2,
+              "name": "Greisch"
+            }
+          ]
+        },
+        {
+          "country": "Deutschland",
+          "top5": [
+            {
+              "actor": "claus_asam",
+              "projects": 2,
+              "name": "Claus Asam"
+            },
+            {
+              "actor": "iemb_tu_berlin",
+              "projects": 2,
+              "name": "IEMB / TU Berlin"
+            },
+            {
+              "actor": "lxsy_architektur",
+              "projects": 2,
+              "name": "LXSY Architektur"
+            },
+            {
+              "actor": "CITYFOERSTER",
+              "projects": 1,
+              "name": "CITYFÖRSTER"
+            },
+            {
+              "actor": "abfallwirtschaftsbetriebe_muenster",
+              "projects": 1,
+              "name": "Abfallwirtschaftsbetriebe Münster"
+            }
+          ]
+        },
+        {
+          "country": "Dänemark",
+          "top5": [
+            {
+              "actor": "Lendager",
+              "projects": 3,
+              "name": "Lendager"
+            },
+            {
+              "actor": "artelia",
+              "projects": 2,
+              "name": "Artelia"
+            },
+            {
+              "actor": "gain",
+              "projects": 2,
+              "name": "a:gain"
+            },
+            {
+              "actor": "ag_gruppen",
+              "projects": 1,
+              "name": "AG Gruppen"
+            },
+            {
+              "actor": "aksel_v_jensen",
+              "projects": 1,
+              "name": "Aksel V. Jensen A/S"
+            }
+          ]
+        },
+        {
+          "country": "Finnland",
+          "top5": [
+            {
+              "actor": "consolis_parma",
+              "projects": 3,
+              "name": "Consolis Parma"
+            },
+            {
+              "actor": "ramboll_finland",
+              "projects": 3,
+              "name": "Ramboll Finland"
+            },
+            {
+              "actor": "umacon",
+              "projects": 3,
+              "name": "Umacon"
+            },
+            {
+              "actor": "skanska_finland",
+              "projects": 2,
+              "name": "Skanska Finland"
+            },
+            {
+              "actor": "tampere_university",
+              "projects": 2,
+              "name": "Tampere University"
+            }
+          ]
+        },
+        {
+          "country": "Frankreich",
+          "top5": [
+            {
+              "actor": "albert_and_co",
+              "projects": 1,
+              "name": "Albert & Co"
+            },
+            {
+              "actor": "archipel_zero",
+              "projects": 1,
+              "name": "Archipel zéro"
+            },
+            {
+              "actor": "association_reavie",
+              "projects": 1,
+              "name": "Association Réavie"
+            },
+            {
+              "actor": "bonnefrite",
+              "projects": 1,
+              "name": "Bonnefrite"
+            },
+            {
+              "actor": "camping_design",
+              "projects": 1,
+              "name": "Camping Design"
+            }
+          ]
+        },
+        {
+          "country": "Japan",
+          "top5": [
+            {
+              "actor": "hiroshi_nakamura_nap",
+              "projects": 1,
+              "name": "Hiroshi Nakamura & NAP"
+            },
+            {
+              "actor": "kamikatsu_residents",
+              "projects": 1,
+              "name": "Lokale Einwohner Kamikatsu"
+            },
+            {
+              "actor": "kamikatsu_town",
+              "projects": 1,
+              "name": "Kamikatsu Town"
+            },
+            {
+              "actor": "kitajima_corporation",
+              "projects": 1,
+              "name": "Kitajima Corporation"
+            },
+            {
+              "actor": "yamada_noriaki_structural_design",
+              "projects": 1,
+              "name": "Yamada Noriaki Structural Design Office"
+            }
+          ]
+        },
+        {
+          "country": "Luxemburg",
+          "top5": [
+            {
+              "actor": "administration_des_batiments_publics",
+              "projects": 1,
+              "name": "Administration des bâtiments publics"
+            },
+            {
+              "actor": "daedalus_engineering",
+              "projects": 1,
+              "name": "Daedalus Engineering"
+            },
+            {
+              "actor": "schmets_architectes",
+              "projects": 1,
+              "name": "Schmets architectes"
+            }
+          ]
+        },
+        {
+          "country": "Niederlande",
+          "top5": [
+            {
+              "actor": "imd_raadgevende_ingenieurs",
+              "projects": 3,
+              "name": "IMd Raadgevende Ingenieurs"
+            },
+            {
+              "actor": "cepezed",
+              "projects": 2,
+              "name": "cepezed"
+            },
+            {
+              "actor": "abn_amro",
+              "projects": 1,
+              "name": "ABN AMRO"
+            },
+            {
+              "actor": "abt",
+              "projects": 1,
+              "name": "ABT"
+            },
+            {
+              "actor": "adviesbureau_luning",
+              "projects": 1,
+              "name": "Adviesbureau Lüning"
+            }
+          ]
+        },
+        {
+          "country": "Norwegen",
+          "top5": [
+            {
+              "actor": "asplan_viak",
+              "projects": 1,
+              "name": "Asplan Viak"
+            },
+            {
+              "actor": "entra_as",
+              "projects": 1,
+              "name": "Entra AS"
+            },
+            {
+              "actor": "futurebuilt",
+              "projects": 1,
+              "name": "FutureBuilt"
+            },
+            {
+              "actor": "insenti",
+              "projects": 1,
+              "name": "Insenti"
+            },
+            {
+              "actor": "iwg_spaces",
+              "projects": 1,
+              "name": "IWG Group / Spaces"
+            }
+          ]
+        },
+        {
+          "country": "Schweiz",
+          "top5": [
+            {
+              "actor": "zirkular",
+              "projects": 4,
+              "name": "Zirkular"
+            },
+            {
+              "actor": "baubuero_in_situ",
+              "projects": 2,
+              "name": "baubüro in situ"
+            },
+            {
+              "actor": "aik_architektur_ingenieur_kollektiv",
+              "projects": 1,
+              "name": "aik Architektur + Ingenieur Kollektiv"
+            },
+            {
+              "actor": "ak_recrete_forschungsteam",
+              "projects": 1,
+              "name": "Re:Crete Forschungsteam"
+            },
+            {
+              "actor": "bauteilladen_winterthur",
+              "projects": 1,
+              "name": "Bauteilladen Winterthur"
+            }
+          ]
+        },
+        {
+          "country": "USA",
+          "top5": [
+            {
+              "actor": "jinhee_park",
+              "projects": 2,
+              "name": "Jinhee Park"
+            },
+            {
+              "actor": "john_hong",
+              "projects": 2,
+              "name": "John Hong"
+            },
+            {
+              "actor": "paul_pedini",
+              "projects": 2,
+              "name": "Paul Pedini"
+            },
+            {
+              "actor": "single_speed_design",
+              "projects": 2,
+              "name": "Single Speed Design"
+            },
+            {
+              "actor": "city_of_boulder",
+              "projects": 1,
+              "name": "City of Boulder"
+            }
+          ]
+        },
+        {
+          "country": "Vereinigtes Königreich",
+          "top5": [
+            {
+              "actor": "cleveland_steel_tubes",
+              "projects": 5,
+              "name": "Cleveland Steel & Tubes"
+            },
+            {
+              "actor": "akt_ii",
+              "projects": 2,
+              "name": "AKT II"
+            },
+            {
+              "actor": "arup",
+              "projects": 2,
+              "name": "Arup"
+            },
+            {
+              "actor": "fabrix",
+              "projects": 2,
+              "name": "Fabrix"
+            },
+            {
+              "actor": "gardiner_and_theobald",
+              "projects": 2,
+              "name": "Gardiner & Theobald"
+            }
+          ]
+        },
+        {
+          "country": "Österreich",
+          "top5": [
+            {
+              "actor": "baukarussell",
+              "projects": 1,
+              "name": "BauKarussell"
+            },
+            {
+              "actor": "die_kuemmerei",
+              "projects": 1,
+              "name": "Die Kümmerei"
+            },
+            {
+              "actor": "drz_demontage_recycling",
+              "projects": 1,
+              "name": "DRZ"
+            }
+          ]
+        }
+      ],
+      "row_count": 13
+    },
+    "n4_role_frequency": {
+      "title": "Actor role frequency",
+      "cypher": "MATCH (:Akteur)-[:HAT_AKTEURROLLE]->(ar:Akteurrolle)\n            RETURN ar.id AS role_id, ar.name AS role_name, count(*) AS assignments\n            ORDER BY assignments DESC, role_id\n            LIMIT 25",
+      "rows": [
+        {
+          "role_id": "ar_reuse_zirkularitaetsberatung",
+          "role_name": "Reuse_Zirkularitaetsberatung",
+          "assignments": 217
+        },
+        {
+          "role_id": "ar_entwurf_planung",
+          "role_name": "Entwurf_Planung",
+          "assignments": 184
+        },
+        {
+          "role_id": "ar_materiallieferung_markt",
+          "role_name": "Materiallieferung_Markt",
+          "assignments": 147
+        },
+        {
+          "role_id": "ar_forschung_dokumentation",
+          "role_name": "Forschung_Dokumentation",
+          "assignments": 133
+        },
+        {
+          "role_id": "ar_fachplanung_nachweis",
+          "role_name": "Fachplanung_Nachweis",
+          "assignments": 117
+        },
+        {
+          "role_id": "ar_bauherr_auftraggeber",
+          "role_name": "Bauherr_Auftraggeber",
+          "assignments": 84
+        },
+        {
+          "role_id": "ar_projektmanagement_koordination",
+          "role_name": "Projektmanagement_Koordination",
+          "assignments": 79
+        },
+        {
+          "role_id": "ar_rueckbau_bauteilernte_logistik",
+          "role_name": "Rueckbau_Bauteilernte_Logistik",
+          "assignments": 78
+        },
+        {
+          "role_id": "ar_bauausfuehrung_fertigung",
+          "role_name": "Bauausfuehrung_Fertigung",
+          "assignments": 69
+        },
+        {
+          "role_id": "ar_software_digitalisierung",
+          "role_name": "Software_Digitalisierung",
+          "assignments": 67
+        },
+        {
+          "role_id": "ar_materialbroker",
+          "role_name": "Materialbroker / Reuse-Marketplace-Betreiber",
+          "assignments": 66
+        },
+        {
+          "role_id": "ar_aufbereitung_refurbishment",
+          "role_name": "Aufbereitung_Refurbishment",
+          "assignments": 43
+        },
+        {
+          "role_id": "ar_bildung_wissenstransfer",
+          "role_name": "Bildung_Wissenstransfer",
+          "assignments": 37
+        },
+        {
+          "role_id": "ar_betrieb_nutzung",
+          "role_name": "Betrieb_Nutzung",
+          "assignments": 34
+        },
+        {
+          "role_id": "ar_oeffentliche_hand_foerderung",
+          "role_name": "Oeffentliche_Hand_Foerderung",
+          "assignments": 32
+        },
+        {
+          "role_id": "ar_unbestimmt",
+          "role_name": "Unbestimmt",
+          "assignments": 16
+        },
+        {
+          "role_id": "ar_tragwerksplanung",
+          "role_name": "Tragwerksplanung",
+          "assignments": 12
+        },
+        {
+          "role_id": "ar_nachhaltigkeitsberatung",
+          "role_name": "Nachhaltigkeitsberatung",
+          "assignments": 7
+        },
+        {
+          "role_id": "ar_landschaftsplanung",
+          "role_name": "Landschaftsplanung",
+          "assignments": 5
+        },
+        {
+          "role_id": "ar_tga_gebaeudetechnik",
+          "role_name": "TGA_Gebaeudetechnik",
+          "assignments": 2
+        },
+        {
+          "role_id": "ar_fassade",
+          "role_name": "Fassade",
+          "assignments": 1
+        },
+        {
+          "role_id": "ar_kunst_gestaltung",
+          "role_name": "Kunst_Gestaltung",
+          "assignments": 1
+        }
+      ],
+      "row_count": 22
+    },
+    "n4_multi_role_actors": {
+      "title": "Most multi-role actors",
+      "cypher": "MATCH (a:Akteur)-[:HAT_AKTEURROLLE]->(ar:Akteurrolle)\n            WITH a, collect(DISTINCT ar.name) AS roles\n            WHERE size(roles) >= 3\n            RETURN a.id AS actor, a.name AS name, roles, size(roles) AS role_count\n            ORDER BY role_count DESC, actor\n            LIMIT 20",
+      "rows": [
+        {
+          "actor": "baukarussell",
+          "name": "BauKarussell",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Projektmanagement_Koordination",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 8
+        },
+        {
+          "actor": "cleveland_steel_tubes",
+          "name": "Cleveland Steel & Tubes",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Fachplanung_Nachweis",
+            "Bauausfuehrung_Fertigung",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 8
+        },
+        {
+          "actor": "cycle_up",
+          "name": "Cycle Up",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Fachplanung_Nachweis",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 8
+        },
+        {
+          "actor": "mobius_reemploi",
+          "name": "Mobius Réemploi",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Fachplanung_Nachweis",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung",
+            "Nachhaltigkeitsberatung"
+          ],
+          "role_count": 8
+        },
+        {
+          "actor": "re_store_harvestmap_vienna",
+          "name": "re:store / HarvestMAP Vienna",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Forschung_Dokumentation",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 8
+        },
+        {
+          "actor": "refair_bordeaux",
+          "name": "REFAIR Bordeaux",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung",
+            "Nachhaltigkeitsberatung"
+          ],
+          "role_count": 8
+        },
+        {
+          "actor": "rotordc",
+          "name": "RotorDC",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Fachplanung_Nachweis",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Betrieb_Nutzung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 8
+        },
+        {
+          "actor": "Rotor",
+          "name": "Rotor",
+          "roles": [
+            "Forschung_Dokumentation",
+            "Entwurf_Planung",
+            "Fachplanung_Nachweis",
+            "Bauausfuehrung_Fertigung",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "baumab_kassel",
+          "name": "BauMaB Kassel / Bauteilbörse Kassel",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "bauteilboerse_bremen",
+          "name": "Bauteilbörse Bremen",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "bauteilkatalog_immobilien_basel_stadt",
+          "name": "Bauteilkatalog Immobilien Basel-Stadt",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Forschung_Dokumentation",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "concular",
+          "name": "Concular",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Forschung_Dokumentation",
+            "Fachplanung_Nachweis",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung",
+            "Nachhaltigkeitsberatung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "material_index",
+          "name": "Material Index",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Forschung_Dokumentation",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "materiuum",
+          "name": "Matériuum",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "salvoweb",
+          "name": "SalvoWEB",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Forschung_Dokumentation",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Bildung_Wissenstransfer",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 7
+        },
+        {
+          "actor": "backacia",
+          "name": "Backacia",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 6
+        },
+        {
+          "actor": "baticycle",
+          "name": "Bâticycle",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 6
+        },
+        {
+          "actor": "batiterre",
+          "name": "BatiTerre",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 6
+        },
+        {
+          "actor": "bauteilverwertung_koeppel_klein",
+          "name": "Bauteilverwertung Köppel & Klein",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 6
+        },
+        {
+          "actor": "cornermat_retrival",
+          "name": "Cornermat / Retrival",
+          "roles": [
+            "Materialbroker / Reuse-Marketplace-Betreiber",
+            "Aufbereitung_Refurbishment",
+            "Rueckbau_Bauteilernte_Logistik",
+            "Materiallieferung_Markt",
+            "Reuse_Zirkularitaetsberatung",
+            "Software_Digitalisierung"
+          ],
+          "role_count": 6
+        }
+      ],
+      "row_count": 20
+    },
+    "n5_type_role_matrix": {
+      "title": "Actor type x role co-occurrence",
+      "cypher": "MATCH (a:Akteur)-[:HAT_AKTEURTYP]->(at:Akteurtyp),\n                  (a)-[:HAT_AKTEURROLLE]->(ar:Akteurrolle)\n            RETURN at.name AS actor_type, ar.name AS role, count(DISTINCT a) AS actors\n            ORDER BY actors DESC, actor_type, role\n            LIMIT 30",
+      "rows": [
+        {
+          "actor_type": "Unternehmen",
+          "role": "Entwurf_Planung",
+          "actors": 97
+        },
+        {
+          "actor_type": "Person",
+          "role": "Reuse_Zirkularitaetsberatung",
+          "actors": 96
+        },
+        {
+          "actor_type": "Person",
+          "role": "Entwurf_Planung",
+          "actors": 87
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Fachplanung_Nachweis",
+          "actors": 79
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Reuse_Zirkularitaetsberatung",
+          "actors": 66
+        },
+        {
+          "actor_type": "Person",
+          "role": "Forschung_Dokumentation",
+          "actors": 65
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Bauausfuehrung_Fertigung",
+          "actors": 53
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Materiallieferung_Markt",
+          "actors": 53
+        },
+        {
+          "actor_type": "Materialhub_Bauteilboerse",
+          "role": "Materialbroker / Reuse-Marketplace-Betreiber",
+          "actors": 49
+        },
+        {
+          "actor_type": "Materialhub_Bauteilboerse",
+          "role": "Materiallieferung_Markt",
+          "actors": 49
+        },
+        {
+          "actor_type": "Materialhub_Bauteilboerse",
+          "role": "Software_Digitalisierung",
+          "actors": 49
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Projektmanagement_Koordination",
+          "actors": 38
+        },
+        {
+          "actor_type": "Materialhub_Bauteilboerse",
+          "role": "Rueckbau_Bauteilernte_Logistik",
+          "actors": 36
+        },
+        {
+          "actor_type": "Person",
+          "role": "Projektmanagement_Koordination",
+          "actors": 35
+        },
+        {
+          "actor_type": "Forschung_Lehre",
+          "role": "Forschung_Dokumentation",
+          "actors": 34
+        },
+        {
+          "actor_type": "Oeffentliche_Institution",
+          "role": "Oeffentliche_Hand_Foerderung",
+          "actors": 29
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Bauherr_Auftraggeber",
+          "actors": 29
+        },
+        {
+          "actor_type": "Materialhub_Bauteilboerse",
+          "role": "Reuse_Zirkularitaetsberatung",
+          "actors": 28
+        },
+        {
+          "actor_type": "Person",
+          "role": "Fachplanung_Nachweis",
+          "actors": 28
+        },
+        {
+          "actor_type": "Person",
+          "role": "Materiallieferung_Markt",
+          "actors": 24
+        },
+        {
+          "actor_type": "Materialhub_Bauteilboerse",
+          "role": "Aufbereitung_Refurbishment",
+          "actors": 23
+        },
+        {
+          "actor_type": "Oeffentliche_Institution",
+          "role": "Bauherr_Auftraggeber",
+          "actors": 23
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Rueckbau_Bauteilernte_Logistik",
+          "actors": 22
+        },
+        {
+          "actor_type": "Organisation",
+          "role": "Bauherr_Auftraggeber",
+          "actors": 19
+        },
+        {
+          "actor_type": "Forschung_Lehre",
+          "role": "Reuse_Zirkularitaetsberatung",
+          "actors": 16
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Forschung_Dokumentation",
+          "actors": 16
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Unbestimmt",
+          "actors": 16
+        },
+        {
+          "actor_type": "Person",
+          "role": "Rueckbau_Bauteilernte_Logistik",
+          "actors": 14
+        },
+        {
+          "actor_type": "Software_Tool_Anbieter",
+          "role": "Software_Digitalisierung",
+          "actors": 14
+        },
+        {
+          "actor_type": "Unternehmen",
+          "role": "Aufbereitung_Refurbishment",
+          "actors": 14
+        }
+      ],
+      "row_count": 30
+    },
+    "n6_norms_by_country": {
+      "title": "Typed law nodes per country",
+      "cypher": "MATCH (rw)-[:GILT_IN_LAND]->(l:Land)\n            WHERE any(lbl IN labels(rw) WHERE lbl ENDS WITH 'recht')\n            RETURN l.name AS country, count(DISTINCT rw) AS law_nodes\n            ORDER BY law_nodes DESC, country",
+      "rows": [
+        {
+          "country": "Deutschland",
+          "law_nodes": 67
+        },
+        {
+          "country": "Niederlande",
+          "law_nodes": 37
+        },
+        {
+          "country": "Frankreich",
+          "law_nodes": 35
+        },
+        {
+          "country": "Belgien",
+          "law_nodes": 33
+        },
+        {
+          "country": "Österreich",
+          "law_nodes": 33
+        },
+        {
+          "country": "Dänemark",
+          "law_nodes": 32
+        },
+        {
+          "country": "Norwegen",
+          "law_nodes": 32
+        },
+        {
+          "country": "Schweiz",
+          "law_nodes": 6
+        },
+        {
+          "country": "Vereinigtes Königreich",
+          "law_nodes": 6
+        }
+      ],
+      "row_count": 9
+    },
+    "n6_multi_country_norms": {
+      "title": "Standards spanning multiple countries",
+      "cypher": "MATCH (rw)-[:GILT_IN_LAND]->(l:Land)\n            WHERE any(lbl IN labels(rw) WHERE lbl ENDS WITH 'recht')\n            WITH rw, collect(DISTINCT l.name) AS countries\n            WHERE size(countries) > 1\n            RETURN rw.id AS law_id, rw.name AS law_name,\n                   [lbl IN labels(rw) WHERE lbl ENDS WITH 'recht'][0] AS primary_label,\n                   countries, size(countries) AS country_count\n            ORDER BY country_count DESC, law_id\n            LIMIT 20",
+      "rows": [
+        {
+          "law_id": "rw_cen_ts_1090_201",
+          "law_name": "CEN/TS 1090-201:2024",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_cen_ts_17440",
+          "law_name": "CEN/TS 17440 (Bewertung bestehender Tragwerke)",
+          "primary_label": "Tragwerksrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_din_4074_en_14081",
+          "law_name": "DIN 4074 / EN 14081 (Holzsortierung)",
+          "primary_label": "Tragwerksrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_din_en_13501",
+          "law_name": "DIN EN 13501",
+          "primary_label": "Brandschutzrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_1090",
+          "law_name": "EN/DIN EN 1090",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_1090_2_bolts_reuse",
+          "law_name": "EN 1090-2 / EN 14399 (bolt reuse limits)",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_1168",
+          "law_name": "EN 1168 (Hohlplatten/Hollow-core slabs)",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_13162_mineralwolle",
+          "law_name": "EN 13162 (Mineralwolle-Dämmstoffe)",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_13791_12504",
+          "law_name": "EN 13791 / EN 12504 (In-situ Beton)",
+          "primary_label": "Tragwerksrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_13830",
+          "law_name": "EN 13830 (Vorhangfassade/Curtain Walling)",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_14351",
+          "law_name": "EN 14351-1/-2 (Fenster & Türen)",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_15804_15978",
+          "law_name": "EN 15804 / EN 15978 (EPD/LCA)",
+          "primary_label": "UmweltUndOekobilanzrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_1992_4",
+          "law_name": "EN 1992-4 (Befestigungen in Beton)",
+          "primary_label": "Tragwerksrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_408",
+          "law_name": "EN 408 (Holz mechanische Eigenschaften)",
+          "primary_label": "Tragwerksrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_771_reclaimed",
+          "law_name": "EN 771 (reclaimed masonry units)",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_iso_6892",
+          "law_name": "EN ISO 6892-1 (Zugversuch Metalle)",
+          "primary_label": "Tragwerksrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_en_naturstein",
+          "law_name": "EN 1469/12058/1936 (Naturstein-Produktnormen)",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_espr_dpp",
+          "law_name": "ESPR / Digital Product Passport",
+          "primary_label": "Bauproduktrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_eu_cdw_protocol",
+          "law_name": "EU C&D Waste Management Protocol (2024)",
+          "primary_label": "Schadstoffrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        },
+        {
+          "law_id": "rw_eu_cpr_2024_3110",
+          "law_name": "EU CPR 2024/3110",
+          "primary_label": "ReuseDokumentationsrecht",
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ],
+          "country_count": 7
+        }
+      ],
+      "row_count": 20
+    },
+    "n6_norms_by_domain": {
+      "title": "Law nodes by domain label",
+      "cypher": "MATCH (rw)\n            WHERE any(lbl IN labels(rw) WHERE lbl ENDS WITH 'recht')\n            UNWIND [lbl IN labels(rw) WHERE lbl ENDS WITH 'recht'] AS domain\n            RETURN domain, count(DISTINCT rw) AS law_nodes\n            ORDER BY law_nodes DESC, domain",
+      "rows": [
+        {
+          "domain": "Tragwerksrecht",
+          "law_nodes": 26
+        },
+        {
+          "domain": "Bauproduktrecht",
+          "law_nodes": 23
+        },
+        {
+          "domain": "ReuseDokumentationsrecht",
+          "law_nodes": 18
+        },
+        {
+          "domain": "Schadstoffrecht",
+          "law_nodes": 17
+        },
+        {
+          "domain": "RueckbauUndAbbruchrecht",
+          "law_nodes": 16
+        },
+        {
+          "domain": "UmweltUndOekobilanzrecht",
+          "law_nodes": 13
+        },
+        {
+          "domain": "Bauphysikrecht",
+          "law_nodes": 10
+        },
+        {
+          "domain": "Brandschutzrecht",
+          "law_nodes": 8
+        },
+        {
+          "domain": "Genehmigungsrecht",
+          "law_nodes": 7
+        },
+        {
+          "domain": "HygieneElektroFunktionsrecht",
+          "law_nodes": 4
+        },
+        {
+          "domain": "Haftungsrecht",
+          "law_nodes": 3
+        }
+      ],
+      "row_count": 11
+    },
+    "n7_regulation_chain_sample": {
+      "title": "Regulation chain: Bauteilgruppe to law to country (Holbein steel, summarized)",
+      "cypher": "MATCH (bg:Bauteilgruppe {id:'bg_stahl_mehrere_holbein_structural'})\n                  -[:TRIGGERS_REGULIERUNGSFRAGE]->(rf:Regulierungsfrage)\n                  -[:ERFORDERT_NACHWEIS]->(nf:Nachweisforderung)\n                  -[:GESTUETZT_AUF_REGELWERK]->(rw)\n                  -[:GILT_IN_LAND]->(l:Land)\n            RETURN rf.name AS question, nf.name AS proof_required,\n                   count(DISTINCT rw) AS standards, collect(DISTINCT l.name) AS countries\n            ORDER BY question, proof_required",
+      "rows": [
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Bauteilidentifikation",
+          "standards": 7,
+          "countries": [
+            "Belgien",
+            "Deutschland",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Befestigungsnachweis",
+          "standards": 4,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Brandschutznachweis",
+          "standards": 6,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "DauerhaftigkeitRestlebensdauer",
+          "standards": 4,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "GenehmigungsOderZustimmungsbedarf",
+          "standards": 6,
+          "countries": [
+            "Deutschland",
+            "Niederlande",
+            "Österreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "HerkunftsUndRueckbaudokumentation",
+          "standards": 17,
+          "countries": [
+            "Belgien",
+            "Deutschland",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "MaterialpassRessourcenpass",
+          "standards": 4,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Materialpruefung",
+          "standards": 17,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "OekobilanzEPD",
+          "standards": 9,
+          "countries": [
+            "Dänemark",
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Österreich",
+            "Schweiz",
+            "Vereinigtes Königreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "ProduktstatusUndLeistungserklaerung",
+          "standards": 24,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "SicherheitsglasInfo",
+          "standards": 2,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Standsicherheitsnachweis",
+          "standards": 14,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "BauproduktstatusFrage",
+          "proof_required": "U_WertOderEnergieInfo",
+          "standards": 8,
+          "countries": [
+            "Schweiz",
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "AbsturzsicherungNachweis",
+          "standards": 2,
+          "countries": [
+            "Deutschland"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "Befestigungsnachweis",
+          "standards": 4,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "Brandschutznachweis",
+          "standards": 6,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "DauerhaftigkeitRestlebensdauer",
+          "standards": 4,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "Materialpruefung",
+          "standards": 17,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "ProduktstatusUndLeistungserklaerung",
+          "standards": 24,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "RcGesteinskoernungEignung",
+          "standards": 1,
+          "countries": [
+            "Deutschland"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "SicherheitsglasInfo",
+          "standards": 2,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "Standsicherheitsnachweis",
+          "standards": 14,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich",
+            "Schweiz"
+          ]
+        },
+        {
+          "question": "TragwerkssicherheitFrage",
+          "proof_required": "ZustandsUndMassaufnahme",
+          "standards": 7,
+          "countries": [
+            "Deutschland",
+            "Belgien",
+            "Niederlande",
+            "Frankreich",
+            "Norwegen",
+            "Dänemark",
+            "Österreich",
+            "Vereinigtes Königreich",
+            "Schweiz"
+          ]
+        }
+      ],
+      "row_count": 23
+    },
+    "n7_regulation_chain_detail": {
+      "title": "Regulation chain detail sample (Holbein steel, first 15 rows)",
+      "cypher": "MATCH (bg:Bauteilgruppe {id:'bg_stahl_mehrere_holbein_structural'})\n                  -[:TRIGGERS_REGULIERUNGSFRAGE]->(rf:Regulierungsfrage)\n                  -[:ERFORDERT_NACHWEIS]->(nf:Nachweisforderung)\n                  -[:GESTUETZT_AUF_REGELWERK]->(rw)\n                  -[:GILT_IN_LAND]->(l:Land)\n            RETURN bg.name AS component, rf.name AS question, nf.name AS proof_required,\n                   rw.name AS standard, [lbl IN labels(rw) WHERE lbl ENDS WITH 'recht'][0] AS domain,\n                   l.name AS country\n            ORDER BY question, standard, country\n            LIMIT 15",
+      "rows": [
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Bauteilidentifikation",
+          "standard": "Belgian regional rules / Tracimat",
+          "domain": "ReuseDokumentationsrecht",
+          "country": "Belgien"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "HerkunftsUndRueckbaudokumentation",
+          "standard": "Belgian regional rules / Tracimat",
+          "domain": "ReuseDokumentationsrecht",
+          "country": "Belgien"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Befestigungsnachweis",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Belgien"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Materialpruefung",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Belgien"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Standsicherheitsnachweis",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Belgien"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "ProduktstatusUndLeistungserklaerung",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Belgien"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Materialpruefung",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Deutschland"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Standsicherheitsnachweis",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Deutschland"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Befestigungsnachweis",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Deutschland"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "ProduktstatusUndLeistungserklaerung",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Deutschland"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Standsicherheitsnachweis",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Dänemark"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Materialpruefung",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Dänemark"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Befestigungsnachweis",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Dänemark"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "ProduktstatusUndLeistungserklaerung",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Dänemark"
+        },
+        {
+          "component": "Stahlträger un… (Holbein)",
+          "question": "BauproduktstatusFrage",
+          "proof_required": "Materialpruefung",
+          "standard": "CEN/TS 1090-201:2024",
+          "domain": "Bauproduktrecht",
+          "country": "Frankreich"
+        }
+      ],
+      "row_count": 15
+    },
+    "n7_regulation_chain_counts": {
+      "title": "Regulation chain coverage",
+      "cypher": "MATCH (bg:Bauteilgruppe)-[:TRIGGERS_REGULIERUNGSFRAGE]->(:Regulierungsfrage)\n            WITH count(DISTINCT bg) AS bgs_with_questions\n            MATCH (bg:Bauteilgruppe)-[:TRIGGERS_REGULIERUNGSFRAGE]->(:Regulierungsfrage)\n                  -[:ERFORDERT_NACHWEIS]->(:Nachweisforderung)-[:GESTUETZT_AUF_REGELWERK]->(rw)\n            RETURN bgs_with_questions,\n                   count(DISTINCT bg) AS bgs_with_law_links,\n                   count(DISTINCT rw) AS standards_reached",
+      "rows": [
+        {
+          "bgs_with_questions": 284,
+          "bgs_with_law_links": 284,
+          "standards_reached": 91
+        }
+      ],
+      "row_count": 1
+    },
+    "n8_bauteilgruppen_by_project": {
+      "title": "Bauteilgruppen per project (top projects)",
+      "cypher": "MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(bg:Bauteilgruppe)\n            WITH p, count(DISTINCT bg) AS bg_count, collect(bg.name)[0..3] AS sample_bgs\n            RETURN p.id AS project_id, p.name AS project, bg_count, sample_bgs\n            ORDER BY bg_count DESC, project_id\n            LIMIT 20",
+      "rows": [
+        {
+          "project_id": "p_meduni_campus_mariannengasse",
+          "project": "MedUni Campus Wien",
+          "bg_count": 20,
+          "sample_bgs": [
+            "MedUni Paternoster",
+            "MedUni Türen→Wand",
+            "MedUni Fahrradwerkst."
+          ]
+        },
+        {
+          "project_id": "p_k118_kopfbau_halle_118_winterthur",
+          "project": "K.118 Winterthur",
+          "bg_count": 16,
+          "sample_bgs": [
+            "Externe Stahltreppe",
+            "Naturstein-/Granitplatten",
+            "Stahlträger und Stützen…"
+          ]
+        },
+        {
+          "project_id": "p_chiro_d_itterbeek_dilbeek",
+          "project": "Chiro d’Itterbeek",
+          "bg_count": 12,
+          "sample_bgs": [
+            "Außentüren",
+            "Fassadenziegel (Chiro)",
+            "Bodenfliesen"
+          ]
+        },
+        {
+          "project_id": "p_maison_des_canaux_paris",
+          "project": "Maison des Canaux, Paris",
+          "bg_count": 10,
+          "sample_bgs": [
+            "Feste Einbauten",
+            "Türen / Raumabschlüsse",
+            "Boden- und Wandbeläge"
+          ]
+        },
+        {
+          "project_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+          "project": "Grubenstrasse 29",
+          "bg_count": 9,
+          "sample_bgs": [
+            "Blaue Stahlblechfassade",
+            "Dämmplatten",
+            "Außentreppe (Gruben.)"
+          ]
+        },
+        {
+          "project_id": "p_multi_brussels_reuse_in_multi",
+          "project": "Multi Brussels",
+          "bg_count": 9,
+          "sample_bgs": [
+            "Blaustein-Fassadenblöcke…",
+            "Granit- und Natursteinpl…",
+            "Wieder eingebaute…"
+          ]
+        },
+        {
+          "project_id": "p_recyclinghaus_hannover",
+          "project": "Recyclinghaus Hannover",
+          "bg_count": 9,
+          "sample_bgs": [
+            "Abbruchziegel in…",
+            "Aluminiumfenster mit…",
+            "Faserzement-/Eternitplat…"
+          ]
+        },
+        {
+          "project_id": "p_ferme_du_rail_paris",
+          "project": "Ferme du Rail Paris",
+          "bg_count": 8,
+          "sample_bgs": [
+            "Wiederverwendetes Holz…",
+            "Granitbordsteine als…",
+            "Stein- und Bürofußbodenp…"
+          ]
+        },
+        {
+          "project_id": "p_liander_alliander_hq_duiven",
+          "project": "Liander",
+          "bg_count": 8,
+          "sample_bgs": [
+            "bg_reuse_bestand_liander_existing_constructions",
+            "bg_reuse_holz_fassade_liander_waste_wood_facades",
+            "bg_reuse_beton_liander_demolished_concrete"
+          ]
+        },
+        {
+          "project_id": "p_bluecity_offices_rotterdam",
+          "project": "BlueCity Offices…",
+          "bg_count": 7,
+          "sample_bgs": [
+            "Balustraden",
+            "Betonblöcke als Trennwän…",
+            "Stahl im Büroausbau"
+          ]
+        },
+        {
+          "project_id": "p_grande_halle_de_colombelles",
+          "project": "Grande Halle de Colombel…",
+          "bg_count": 7,
+          "sample_bgs": [
+            "Türen und Brandschutztür…",
+            "Außenschreinerei",
+            "Metallträger"
+          ]
+        },
+        {
+          "project_id": "p_impact_hub_berlin_crclr_fitout",
+          "project": "Impact Hub Berlin",
+          "bg_count": 7,
+          "sample_bgs": [
+            "Schwarze MDF-Platten…",
+            "Türen, Fenster und…",
+            "Recycelte Filzpaneele…"
+          ]
+        },
+        {
+          "project_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+          "project": "Kindergarten Mööslistras…",
+          "bg_count": 7,
+          "sample_bgs": [
+            "Akustikelemente",
+            "Außentreppe (Möösli.)",
+            "Werkhofstruktur und…"
+          ]
+        },
+        {
+          "project_id": "p_lycee_michel_lucius_conversion_luxembourg",
+          "project": "Lycée Michel Lucius…",
+          "bg_count": 7,
+          "sample_bgs": [
+            "61 m² Bodenblech als…",
+            "419 m² Gips-Akustikpanee…",
+            "12 Metall-Deckenpaneele"
+          ]
+        },
+        {
+          "project_id": "p_resilience_la_ferme_des_possibles_stains",
+          "project": "Résilience",
+          "bg_count": 7,
+          "sample_bgs": [
+            "BTC-Ziegel Mur Trombe…",
+            "Doppeltverglaste…",
+            "Einfachverglaste…"
+          ]
+        },
+        {
+          "project_id": "p_svanen_kindergarten_gladsaxe",
+          "project": "Svanen",
+          "bg_count": 7,
+          "sample_bgs": [
+            "Beton als Recycling-Zusc…",
+            "Dachziegel (Svanen)",
+            "Holz-Dachbinder"
+          ]
+        },
+        {
+          "project_id": "p_verbiest_karreveld_brussels",
+          "project": "Verbiest + Karreveld",
+          "bg_count": 7,
+          "sample_bgs": [
+            "Geländer aus Charleroi",
+            "Fliesen aus Charleroi",
+            "Steine aus Charleroi"
+          ]
+        },
+        {
+          "project_id": "p_biopartner_5_leiden_oegstgeest",
+          "project": "BioPartner 5",
+          "bg_count": 6,
+          "sample_bgs": [
+            "Abbruchschutt",
+            "Innenwände und Trennwände",
+            "Pflaster-"
+          ]
+        },
+        {
+          "project_id": "p_brighton_waste_house_brighton",
+          "project": "Brighton Waste House",
+          "bg_count": 6,
+          "sample_bgs": [
+            "Betonblöcke",
+            "Denim jeans als Dämm-/Ho…",
+            "Holz und Sperrholz aus…"
+          ]
+        },
+        {
+          "project_id": "p_christ_pavilion_volkenroda",
+          "project": "Christus-Pavillon",
+          "bg_count": 6,
+          "sample_bgs": [
+            "Kreuzgang",
+            "Gesamtes transloziertes…",
+            "Neun kreuzfoermige…"
+          ]
+        }
+      ],
+      "row_count": 20
+    },
+    "n8_bauteilgruppen_by_bauteiltyp": {
+      "title": "Bauteilgruppen by Bauteiltyp",
+      "cypher": "MATCH (bg:Bauteilgruppe)-[:HAT_BAUTEILTYP]->(bt:Bauteiltyp)\n            RETURN bt.name AS bauteiltyp, count(DISTINCT bg) AS bauteilgruppen\n            ORDER BY bauteilgruppen DESC, bauteiltyp\n            LIMIT 20",
+      "rows": [
+        {
+          "bauteiltyp": "Fassade",
+          "bauteilgruppen": 71
+        },
+        {
+          "bauteiltyp": "Wand",
+          "bauteilgruppen": 63
+        },
+        {
+          "bauteiltyp": "Traeger",
+          "bauteilgruppen": 47
+        },
+        {
+          "bauteiltyp": "Ausbau",
+          "bauteilgruppen": 44
+        },
+        {
+          "bauteiltyp": "Boden",
+          "bauteilgruppen": 39
+        },
+        {
+          "bauteiltyp": "Decke",
+          "bauteilgruppen": 36
+        },
+        {
+          "bauteiltyp": "Technik",
+          "bauteilgruppen": 31
+        },
+        {
+          "bauteiltyp": "Fenster",
+          "bauteilgruppen": 27
+        },
+        {
+          "bauteiltyp": "Stuetze",
+          "bauteilgruppen": 27
+        },
+        {
+          "bauteiltyp": "Dach",
+          "bauteilgruppen": 19
+        },
+        {
+          "bauteiltyp": "Tuer",
+          "bauteilgruppen": 18
+        },
+        {
+          "bauteiltyp": "Daemmung",
+          "bauteilgruppen": 13
+        },
+        {
+          "bauteiltyp": "Treppe",
+          "bauteilgruppen": 12
+        },
+        {
+          "bauteiltyp": "Gelaender",
+          "bauteilgruppen": 9
+        },
+        {
+          "bauteiltyp": "Fundament",
+          "bauteilgruppen": 8
+        },
+        {
+          "bauteiltyp": "Mehrere",
+          "bauteilgruppen": 1
+        }
+      ],
+      "row_count": 16
+    },
+    "n9_donor_receiver_chains": {
+      "title": "Donor to receiver flows via Bauteilgruppe and Bauwerk",
+      "cypher": "MATCH (bg:Bauteilgruppe)-[:AUS_SPENDER]->(donor:Bauwerk),\n                  (bg)-[:IN_EMPFANGSOBJEKT]->(recv:Bauwerk)\n            OPTIONAL MATCH (bg)<-[:HAT_BAUTEILGRUPPE]-(p:Projekt)\n            RETURN bg.name AS component, donor.name AS donor_building, recv.name AS receiver_building,\n                   p.name AS project\n            ORDER BY project, component\n            LIMIT 25",
+      "rows": [
+        {
+          "component": "Steel profiles for…",
+          "donor_building": "1 Broadgate, London",
+          "receiver_building": "55 Great Suffolk Street…",
+          "project": "55 Great Suffolk Street"
+        },
+        {
+          "component": "Cable trays as shelves…",
+          "donor_building": "Public building and…",
+          "receiver_building": "AWM Münster administrati…",
+          "project": "AWM Münster – zirkulärer…"
+        },
+        {
+          "component": "Fixed wall cladding…",
+          "donor_building": "Public building and…",
+          "receiver_building": "AWM Münster administrati…",
+          "project": "AWM Münster – zirkulärer…"
+        },
+        {
+          "component": "Glass partitions and…",
+          "donor_building": "Behrensbau Düsseldorf…",
+          "receiver_building": "AWM Münster administrati…",
+          "project": "AWM Münster – zirkulärer…"
+        },
+        {
+          "component": "WC partitions",
+          "donor_building": "Behrensbau Düsseldorf…",
+          "receiver_building": "AWM Münster administrati…",
+          "project": "AWM Münster – zirkulärer…"
+        },
+        {
+          "component": "Wood for fixed built-ins",
+          "donor_building": "Public building and…",
+          "receiver_building": "AWM Münster administrati…",
+          "project": "AWM Münster – zirkulärer…"
+        },
+        {
+          "component": "Fixed secondary componen…",
+          "donor_building": "Local demolition and…",
+          "receiver_building": "BedZED mixed-use quarter",
+          "project": "BedZED"
+        },
+        {
+          "component": "Softwood wall studs",
+          "donor_building": "Local demolition and…",
+          "receiver_building": "BedZED mixed-use quarter",
+          "project": "BedZED"
+        },
+        {
+          "component": "Structural steel frame…",
+          "donor_building": "Local demolition and…",
+          "receiver_building": "BedZED mixed-use quarter",
+          "project": "BedZED"
+        },
+        {
+          "component": "Structural steel frame…",
+          "donor_building": "Brighton Railway…",
+          "receiver_building": "BedZED mixed-use quarter",
+          "project": "BedZED"
+        },
+        {
+          "component": "Zugeschnittene WBS70-Sta…",
+          "donor_building": "Berliner/Marzahner…",
+          "receiver_building": "Schildow Pilotwohnhaus",
+          "project": "Berlin-Schildow Pilot"
+        },
+        {
+          "component": "Betonfertigteil-Paneele…",
+          "donor_building": "Bungalows des Olympische…",
+          "receiver_building": "Bestandverplanzung…",
+          "project": "Bestandverplanzung…"
+        },
+        {
+          "component": "Inverset-Stahlbetonpanee…",
+          "donor_building": "Big Dig (I-93)",
+          "receiver_building": "Big Dig House",
+          "project": "Big Dig House"
+        },
+        {
+          "component": "Ramp-, Pier- und…",
+          "donor_building": "Big Dig (I-93)",
+          "receiver_building": "Big Dig House",
+          "project": "Big Dig House"
+        },
+        {
+          "component": "Stahlträger un… (Big Dig)",
+          "donor_building": "Big Dig (I-93)",
+          "receiver_building": "Big Dig House",
+          "project": "Big Dig House"
+        },
+        {
+          "component": "Abbruchschutt",
+          "donor_building": "Gorlaeus Hochhaus",
+          "receiver_building": "BioPartner 5",
+          "project": "BioPartner 5"
+        },
+        {
+          "component": "Pflaster-",
+          "donor_building": "Gorlaeus (Biopartner)",
+          "receiver_building": "BioPartner 5",
+          "project": "BioPartner 5"
+        },
+        {
+          "component": "Stahlträger (Biopartner)",
+          "donor_building": "Gorlaeus Hochhaus",
+          "receiver_building": "BioPartner 5",
+          "project": "BioPartner 5"
+        },
+        {
+          "component": "Betonblöcke als Trennwän…",
+          "donor_building": "Tropicana Rotterdam",
+          "receiver_building": "BlueCity Offices",
+          "project": "BlueCity Offices…"
+        },
+        {
+          "component": "89 salvaged wide-flange…",
+          "donor_building": "Boulder Community…",
+          "receiver_building": "Fire Station 3 & Fire…",
+          "project": "Boulder FS-3"
+        },
+        {
+          "component": "Boulder Community…",
+          "donor_building": "Boulder Community…",
+          "receiver_building": "Fire Station 3 & Fire…",
+          "project": "Boulder FS-3"
+        },
+        {
+          "component": "Dachtragwerk Christusraum",
+          "donor_building": "Christus-Pavillon EXPO…",
+          "receiver_building": "Christus-Pavillon…",
+          "project": "Christus-Pavillon"
+        },
+        {
+          "component": "Gesamtes transloziertes…",
+          "donor_building": "Christus-Pavillon EXPO…",
+          "receiver_building": "Christus-Pavillon…",
+          "project": "Christus-Pavillon"
+        },
+        {
+          "component": "Kreuzgang",
+          "donor_building": "Christus-Pavillon EXPO…",
+          "receiver_building": "Christus-Pavillon…",
+          "project": "Christus-Pavillon"
+        },
+        {
+          "component": "Marmor-Glas-Wand…",
+          "donor_building": "Christus-Pavillon EXPO…",
+          "receiver_building": "Christus-Pavillon…",
+          "project": "Christus-Pavillon"
+        }
+      ],
+      "row_count": 25
+    },
+    "n9_cross_country_donor_flows": {
+      "title": "Cross-country donor flows via Bauteilgruppe",
+      "cypher": "MATCH (bg:Bauteilgruppe)-[:AUS_SPENDER]->(donor:Bauwerk),\n                  (bg)-[:IN_EMPFANGSOBJEKT]->(recv:Bauwerk)\n            MATCH (donor)-[:LIEGT_IN_LAND]->(dl:Land)\n            MATCH (recv)-[:LIEGT_IN_LAND]->(rl:Land)\n            WHERE dl <> rl\n            OPTIONAL MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(bg)\n            RETURN bg.name AS component, donor.name AS donor_building, dl.name AS from_country,\n                   recv.name AS receiver_building, rl.name AS to_country, p.name AS project\n            ORDER BY from_country, to_country, project\n            LIMIT 20",
+      "rows": [
+        {
+          "component": "UMAR Wabbes Türgriffe",
+          "donor_building": "Gén. de Banque BXL",
+          "from_country": "Belgien",
+          "receiver_building": "UMAR Unit Dübendorf",
+          "to_country": "Schweiz",
+          "project": "UMAR Unit"
+        }
+      ],
+      "row_count": 1
+    },
+    "n10_top_materials": {
+      "title": "Most reused materials across projects",
+      "cypher": "MATCH (p:Projekt)-[:NUTZT_MATERIAL]->(m:Material)\n            RETURN m.name AS material, count(DISTINCT p) AS projects\n            ORDER BY projects DESC, material\n            LIMIT 20",
+      "rows": [
+        {
+          "material": "Holz",
+          "projects": 3
+        },
+        {
+          "material": "Beton",
+          "projects": 2
+        },
+        {
+          "material": "Keramik",
+          "projects": 2
+        },
+        {
+          "material": "Stahl",
+          "projects": 2
+        },
+        {
+          "material": "Ziegel",
+          "projects": 2
+        },
+        {
+          "material": "Daemmstoff",
+          "projects": 1
+        },
+        {
+          "material": "Glas",
+          "projects": 1
+        },
+        {
+          "material": "Naturstein",
+          "projects": 1
+        }
+      ],
+      "row_count": 8
+    },
+    "n10_top_bauteiltypen_projects": {
+      "title": "Most common Bauteiltypen across projects",
+      "cypher": "MATCH (p:Projekt)-[:HAT_BAUTEILGRUPPE]->(bg:Bauteilgruppe)-[:HAT_BAUTEILTYP]->(bt:Bauteiltyp)\n            RETURN bt.name AS bauteiltyp, count(DISTINCT p) AS projects, count(DISTINCT bg) AS bauteilgruppen\n            ORDER BY projects DESC, bauteiltyp\n            LIMIT 20",
+      "rows": [
+        {
+          "bauteiltyp": "Wand",
+          "projects": 47,
+          "bauteilgruppen": 63
+        },
+        {
+          "bauteiltyp": "Fassade",
+          "projects": 44,
+          "bauteilgruppen": 71
+        },
+        {
+          "bauteiltyp": "Traeger",
+          "projects": 34,
+          "bauteilgruppen": 45
+        },
+        {
+          "bauteiltyp": "Boden",
+          "projects": 31,
+          "bauteilgruppen": 39
+        },
+        {
+          "bauteiltyp": "Decke",
+          "projects": 30,
+          "bauteilgruppen": 36
+        },
+        {
+          "bauteiltyp": "Ausbau",
+          "projects": 25,
+          "bauteilgruppen": 44
+        },
+        {
+          "bauteiltyp": "Technik",
+          "projects": 24,
+          "bauteilgruppen": 31
+        },
+        {
+          "bauteiltyp": "Fenster",
+          "projects": 23,
+          "bauteilgruppen": 26
+        },
+        {
+          "bauteiltyp": "Stuetze",
+          "projects": 21,
+          "bauteilgruppen": 27
+        },
+        {
+          "bauteiltyp": "Tuer",
+          "projects": 18,
+          "bauteilgruppen": 18
+        },
+        {
+          "bauteiltyp": "Dach",
+          "projects": 15,
+          "bauteilgruppen": 19
+        },
+        {
+          "bauteiltyp": "Daemmung",
+          "projects": 11,
+          "bauteilgruppen": 13
+        },
+        {
+          "bauteiltyp": "Treppe",
+          "projects": 11,
+          "bauteilgruppen": 12
+        },
+        {
+          "bauteiltyp": "Fundament",
+          "projects": 8,
+          "bauteilgruppen": 8
+        },
+        {
+          "bauteiltyp": "Gelaender",
+          "projects": 8,
+          "bauteilgruppen": 9
+        }
+      ],
+      "row_count": 15
+    },
+    "n11_huerden_by_project": {
+      "title": "Most common reuse barriers (Huerden)",
+      "cypher": "MATCH (p:Projekt)-[:HAT_HUERDE]->(h:Huerde)\n            RETURN h.name AS barrier, count(DISTINCT p) AS projects\n            ORDER BY projects DESC, barrier\n            LIMIT 20",
+      "rows": [
+        {
+          "barrier": "Verfuegbarkeitsproblem",
+          "projects": 16
+        },
+        {
+          "barrier": "Entwurfsbindung",
+          "projects": 12
+        },
+        {
+          "barrier": "Terminunsicherheit",
+          "projects": 11
+        },
+        {
+          "barrier": "Witterung_Feuchte",
+          "projects": 11
+        },
+        {
+          "barrier": "Aufbereitungsaufwand",
+          "projects": 9
+        },
+        {
+          "barrier": "Fehlende_Lagerflaeche",
+          "projects": 8
+        },
+        {
+          "barrier": "Heterogenitaet_Chargen",
+          "projects": 8
+        },
+        {
+          "barrier": "Mengenunsicherheit",
+          "projects": 6
+        },
+        {
+          "barrier": "Unkonventionelles_Material",
+          "projects": 5
+        },
+        {
+          "barrier": "Ausschreibungsproblem",
+          "projects": 4
+        },
+        {
+          "barrier": "Akzeptanzproblem",
+          "projects": 3
+        }
+      ],
+      "row_count": 11
+    },
+    "n11_huerden_by_country": {
+      "title": "Barriers by country",
+      "cypher": "MATCH (p:Projekt)-[:HAT_HUERDE]->(h:Huerde)\n            MATCH (p)-[:LIEGT_IN_LAND]->(l:Land)\n            WITH l.name AS country, h.name AS barrier, count(DISTINCT p) AS projects\n            ORDER BY country, projects DESC\n            WITH country, collect({barrier: barrier, projects: projects})[0..5] AS top_barriers\n            RETURN country, top_barriers\n            ORDER BY country",
+      "rows": [
+        {
+          "country": "Belgien",
+          "top_barriers": [
+            {
+              "barrier": "Witterung_Feuchte",
+              "projects": 3
+            },
+            {
+              "barrier": "Heterogenitaet_Chargen",
+              "projects": 2
+            },
+            {
+              "barrier": "Verfuegbarkeitsproblem",
+              "projects": 2
+            },
+            {
+              "barrier": "Ausschreibungsproblem",
+              "projects": 1
+            },
+            {
+              "barrier": "Fehlende_Lagerflaeche",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Deutschland",
+          "top_barriers": [
+            {
+              "barrier": "Akzeptanzproblem",
+              "projects": 2
+            },
+            {
+              "barrier": "Aufbereitungsaufwand",
+              "projects": 1
+            },
+            {
+              "barrier": "Entwurfsbindung",
+              "projects": 1
+            },
+            {
+              "barrier": "Heterogenitaet_Chargen",
+              "projects": 1
+            },
+            {
+              "barrier": "Mengenunsicherheit",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Dänemark",
+          "top_barriers": [
+            {
+              "barrier": "Entwurfsbindung",
+              "projects": 1
+            },
+            {
+              "barrier": "Witterung_Feuchte",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Finnland",
+          "top_barriers": [
+            {
+              "barrier": "Aufbereitungsaufwand",
+              "projects": 1
+            },
+            {
+              "barrier": "Terminunsicherheit",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Frankreich",
+          "top_barriers": [
+            {
+              "barrier": "Aufbereitungsaufwand",
+              "projects": 2
+            },
+            {
+              "barrier": "Fehlende_Lagerflaeche",
+              "projects": 2
+            },
+            {
+              "barrier": "Heterogenitaet_Chargen",
+              "projects": 2
+            },
+            {
+              "barrier": "Witterung_Feuchte",
+              "projects": 2
+            },
+            {
+              "barrier": "Ausschreibungsproblem",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Japan",
+          "top_barriers": [
+            {
+              "barrier": "Heterogenitaet_Chargen",
+              "projects": 1
+            },
+            {
+              "barrier": "Witterung_Feuchte",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Niederlande",
+          "top_barriers": [
+            {
+              "barrier": "Entwurfsbindung",
+              "projects": 4
+            },
+            {
+              "barrier": "Aufbereitungsaufwand",
+              "projects": 1
+            },
+            {
+              "barrier": "Fehlende_Lagerflaeche",
+              "projects": 1
+            },
+            {
+              "barrier": "Terminunsicherheit",
+              "projects": 1
+            },
+            {
+              "barrier": "Witterung_Feuchte",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Norwegen",
+          "top_barriers": [
+            {
+              "barrier": "Verfuegbarkeitsproblem",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Schweiz",
+          "top_barriers": [
+            {
+              "barrier": "Verfuegbarkeitsproblem",
+              "projects": 6
+            },
+            {
+              "barrier": "Entwurfsbindung",
+              "projects": 5
+            },
+            {
+              "barrier": "Fehlende_Lagerflaeche",
+              "projects": 3
+            },
+            {
+              "barrier": "Terminunsicherheit",
+              "projects": 3
+            },
+            {
+              "barrier": "Aufbereitungsaufwand",
+              "projects": 2
+            }
+          ]
+        },
+        {
+          "country": "USA",
+          "top_barriers": [
+            {
+              "barrier": "Unkonventionelles_Material",
+              "projects": 2
+            },
+            {
+              "barrier": "Aufbereitungsaufwand",
+              "projects": 1
+            },
+            {
+              "barrier": "Verfuegbarkeitsproblem",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Vereinigtes Königreich",
+          "top_barriers": [
+            {
+              "barrier": "Verfuegbarkeitsproblem",
+              "projects": 5
+            },
+            {
+              "barrier": "Mengenunsicherheit",
+              "projects": 3
+            },
+            {
+              "barrier": "Terminunsicherheit",
+              "projects": 3
+            },
+            {
+              "barrier": "Witterung_Feuchte",
+              "projects": 2
+            },
+            {
+              "barrier": "Aufbereitungsaufwand",
+              "projects": 1
+            }
+          ]
+        },
+        {
+          "country": "Österreich",
+          "top_barriers": [
+            {
+              "barrier": "Akzeptanzproblem",
+              "projects": 1
+            },
+            {
+              "barrier": "Ausschreibungsproblem",
+              "projects": 1
+            },
+            {
+              "barrier": "Terminunsicherheit",
+              "projects": 1
+            }
+          ]
+        }
+      ],
+      "row_count": 12
+    },
+    "n12_hub_degree": {
+      "title": "Top reuse actor hubs by partner count",
+      "cypher": "MATCH (n:Akteur)-[r:VERBUNDEN_MIT_AKTEUR]-(m:Akteur)\n            WHERE r.review_run IS NOT NULL\n            RETURN n.id AS actor, n.name AS name, count(DISTINCT m) AS partners\n            ORDER BY partners DESC, actor\n            LIMIT 12",
+      "rows": [
+        {
+          "actor": "cirkla",
+          "name": "Cirkla",
+          "partners": 10
+        },
+        {
+          "actor": "zirkular",
+          "name": "Zirkular",
+          "partners": 9
+        },
+        {
+          "actor": "opalis",
+          "name": "Opalis",
+          "partners": 8
+        },
+        {
+          "actor": "baubuero_in_situ",
+          "name": "baubüro in situ",
+          "partners": 7
+        },
+        {
+          "actor": "rotordc",
+          "name": "RotorDC",
+          "partners": 6
+        },
+        {
+          "actor": "Rotor",
+          "name": "Rotor",
+          "partners": 5
+        },
+        {
+          "actor": "gruner_reuse_platform",
+          "name": "Gruner ReUse",
+          "partners": 5
+        },
+        {
+          "actor": "materiuum",
+          "name": "Matériuum",
+          "partners": 5
+        },
+        {
+          "actor": "concular",
+          "name": "Concular",
+          "partners": 4
+        },
+        {
+          "actor": "haus_der_materialisierung",
+          "name": "Haus der Materialisierung",
+          "partners": 4
+        },
+        {
+          "actor": "klingelhoefer_kroetsch",
+          "name": "Klingelhöfer Krötsch",
+          "partners": 4
+        },
+        {
+          "actor": "sumami",
+          "name": "Sumami",
+          "partners": 4
+        }
+      ],
+      "row_count": 12
+    },
+    "n12_bridge_nodes": {
+      "title": "Bridge nodes spanning multiple review runs",
+      "cypher": "MATCH (n:Akteur)-[r:VERBUNDEN_MIT_AKTEUR]-()\n            WHERE r.review_run IS NOT NULL\n            WITH n, collect(DISTINCT r.review_run) AS bubbles, count(DISTINCT r) AS deg\n            WHERE size(bubbles) > 1\n            RETURN n.id AS actor, n.name AS name, size(bubbles) AS bubbles_spanned,\n                   bubbles, deg AS connections\n            ORDER BY bubbles_spanned DESC, connections DESC, actor\n            LIMIT 15",
+      "rows": [
+        {
+          "actor": "cirkla",
+          "name": "Cirkla",
+          "bubbles_spanned": 4,
+          "bubbles": [
+            "swiss_reuse_bubble_2026_06_05",
+            "cross_bubble_extension_2026_06_06",
+            "post_ier_w3_2026_06_07",
+            "quality_pass_q05_2026_06_06"
+          ],
+          "connections": 12
+        },
+        {
+          "actor": "opalis",
+          "name": "Opalis",
+          "bubbles_spanned": 4,
+          "bubbles": [
+            "cross_bubble_extension_2026_06_06",
+            "rotor_dc_reuse_bubble_2026_06_05",
+            "france_reuse_bubble_2026_06_05",
+            "post_ier_w3_2026_06_07"
+          ],
+          "connections": 8
+        },
+        {
+          "actor": "rotordc",
+          "name": "RotorDC",
+          "bubbles_spanned": 3,
+          "bubbles": [
+            "cross_bubble_extension_2026_06_06",
+            "rotor_dc_reuse_bubble_2026_06_05",
+            "post_ier_w3_2026_06_07"
+          ],
+          "connections": 6
+        },
+        {
+          "actor": "concular",
+          "name": "Concular",
+          "bubbles_spanned": 3,
+          "bubbles": [
+            "germany_reuse_bubble_2026_06_05",
+            "cross_bubble_extension_2026_06_06",
+            "post_ier_w3_2026_06_07"
+          ],
+          "connections": 5
+        },
+        {
+          "actor": "bellastock",
+          "name": "Bellastock",
+          "bubbles_spanned": 3,
+          "bubbles": [
+            "france_reuse_bubble_2026_06_05",
+            "rotor_dc_reuse_bubble_2026_06_05",
+            "post_ier_w3_2026_06_07"
+          ],
+          "connections": 3
+        },
+        {
+          "actor": "zirkular",
+          "name": "Zirkular",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "post_ier_w3_2026_06_07",
+            "swiss_reuse_bubble_2026_06_05"
+          ],
+          "connections": 10
+        },
+        {
+          "actor": "baubuero_in_situ",
+          "name": "baubüro in situ",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "post_ier_w3_2026_06_07",
+            "swiss_reuse_bubble_2026_06_05"
+          ],
+          "connections": 7
+        },
+        {
+          "actor": "Rotor",
+          "name": "Rotor",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "post_ier_w3_2026_06_07",
+            "rotor_dc_reuse_bubble_2026_06_05"
+          ],
+          "connections": 5
+        },
+        {
+          "actor": "gruner_reuse_platform",
+          "name": "Gruner ReUse",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "post_ier_w3_2026_06_07",
+            "swiss_reuse_bubble_2026_06_05"
+          ],
+          "connections": 5
+        },
+        {
+          "actor": "materiuum",
+          "name": "Matériuum",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "post_ier_w3_2026_06_07",
+            "swiss_reuse_bubble_2026_06_05"
+          ],
+          "connections": 5
+        },
+        {
+          "actor": "sumami",
+          "name": "Sumami",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "cross_bubble_extension_2026_06_06",
+            "swiss_reuse_bubble_2026_06_05"
+          ],
+          "connections": 4
+        },
+        {
+          "actor": "superuse_studios_2012architecten",
+          "name": "Superuse Studios / 2012Architecten",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "netherlands_reuse_bubble_2026_06_05",
+            "post_quality_p06_02_2026_06_06"
+          ],
+          "connections": 4
+        },
+        {
+          "actor": "bauteilboerse_bremen",
+          "name": "Bauteilbörse Bremen",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "germany_reuse_bubble_2026_06_05",
+            "post_ier_w3_2026_06_07"
+          ],
+          "connections": 3
+        },
+        {
+          "actor": "bauteilnetz_deutschland",
+          "name": "bauteilnetz Deutschland",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "germany_reuse_bubble_2026_06_05",
+            "post_ier_w3_2026_06_07"
+          ],
+          "connections": 3
+        },
+        {
+          "actor": "madaster",
+          "name": "Madaster",
+          "bubbles_spanned": 2,
+          "bubbles": [
+            "cross_bubble_extension_2026_06_06",
+            "remediation_wave2_r04_2026_06_06"
+          ],
+          "connections": 3
+        }
+      ],
+      "row_count": 15
+    },
+    "n12_connection_mechanisms": {
+      "title": "Connection kinds grouped by mechanism",
+      "cypher": "MATCH ()-[r:VERBUNDEN_MIT_AKTEUR]->()\n            WHERE r.review_run IS NOT NULL\n            WITH r.connection_kind AS k, count(*) AS n\n            RETURN\n              CASE\n                WHEN k CONTAINS 'director' OR k CONTAINS 'listing' OR k CONTAINS 'supplier'\n                  THEN '1. Catalogue / directory'\n                WHEN k CONTAINS 'research' OR k CONTAINS 'consortium' OR k CONTAINS 'programme' OR k CONTAINS 'lab'\n                  THEN '2. Research / standards'\n                WHEN k CONTAINS 'partnership' OR k CONTAINS 'commissioner' OR k CONTAINS 'operator' OR k CONTAINS 'family'\n                  THEN '3. Formal / commercial'\n                WHEN k CONTAINS 'mesh' OR k CONTAINS 'ecosystem' OR k CONTAINS 'network' OR k CONTAINS 'peer'\n                  THEN '4. Ecosystem peer'\n                ELSE '5. Other / lineage'\n              END AS mechanism,\n              sum(n) AS connections\n            ORDER BY connections DESC",
+      "rows": [
+        {
+          "mechanism": "5. Other / lineage",
+          "connections": 114
+        },
+        {
+          "mechanism": "2. Research / standards",
+          "connections": 19
+        },
+        {
+          "mechanism": "1. Catalogue / directory",
+          "connections": 14
+        },
+        {
+          "mechanism": "3. Formal / commercial",
+          "connections": 7
+        },
+        {
+          "mechanism": "4. Ecosystem peer",
+          "connections": 5
+        }
+      ],
+      "row_count": 5
+    },
+    "n12_shortest_path_useagain_cstb": {
+      "title": "Cross-border path useagain to CSTB (if connected)",
+      "cypher": "MATCH (a:Akteur {id:'useagain_bauteilclick'}), (b:Akteur {id:'cstb'})\n            OPTIONAL MATCH p = shortestPath((a)-[:VERBUNDEN_MIT_AKTEUR*..12]-(b))\n            RETURN CASE WHEN p IS NULL THEN '(no path within 12 hops)' ELSE [n IN nodes(p) | n.id] END AS hops,\n                   CASE WHEN p IS NULL THEN null ELSE length(p) END AS distance",
+      "rows": [
+        {
+          "hops": "(no path within 12 hops)",
+          "distance": null
+        }
+      ],
+      "row_count": 1
+    },
+    "n12_useagain_neighbors": {
+      "title": "useagain direct reuse-network neighbors",
+      "cypher": "MATCH (a:Akteur {id:'useagain_bauteilclick'})-[r:VERBUNDEN_MIT_AKTEUR]-(m:Akteur)\n            WHERE r.review_run IS NOT NULL\n            RETURN m.id AS neighbor, r.connection_kind AS kind, r.review_run AS bubble\n            ORDER BY bubble, neighbor",
+      "rows": [
+        {
+          "neighbor": "bauteilboerse_basel_overall",
+          "kind": "supply_chain_roche_resale",
+          "bubble": "swiss_reuse_bubble_2026_06_05"
+        },
+        {
+          "neighbor": "bauteilladen_winterthur",
+          "kind": "network_library_of_reuse",
+          "bubble": "swiss_reuse_bubble_2026_06_05"
+        },
+        {
+          "neighbor": "cirkla",
+          "kind": "directory",
+          "bubble": "swiss_reuse_bubble_2026_06_05"
+        },
+        {
+          "neighbor": "sumami",
+          "kind": "software_development_context",
+          "bubble": "swiss_reuse_bubble_2026_06_05"
+        }
+      ],
+      "row_count": 4
+    },
+    "n12_software_network": {
+      "title": "Software used across projects",
+      "cypher": "MATCH (p:Projekt)-[:NUTZT_SOFTWARE]->(sw)\n            RETURN sw.name AS software, count(DISTINCT p) AS projects\n            ORDER BY projects DESC, software\n            LIMIT 15",
+      "rows": [
+        {
+          "software": "BIM / digitaler Bauteilkatalog",
+          "projects": 2
+        },
+        {
+          "software": "Concular",
+          "projects": 1
+        },
+        {
+          "software": "EcoTool",
+          "projects": 1
+        },
+        {
+          "software": "HTS Reused Steel Stockmatcher",
+          "projects": 1
+        },
+        {
+          "software": "INIES",
+          "projects": 1
+        },
+        {
+          "software": "LLMNT",
+          "projects": 1
+        },
+        {
+          "software": "Oogstkaart / Harvest Map logic",
+          "projects": 1
+        },
+        {
+          "software": "Qflow",
+          "projects": 1
+        },
+        {
+          "software": "RISA-3D",
+          "projects": 1
+        },
+        {
+          "software": "Restado",
+          "projects": 1
+        }
+      ],
+      "row_count": 10
+    },
+    "n12_geschaeftsmodelle": {
+      "title": "Business models across actors (reuse operators)",
+      "cypher": "MATCH (a:Akteur)-[:HAT_GESCHAEFTSMODELL]->(gm:Geschaeftsmodell)\n            RETURN coalesce(gm.name, gm.id) AS model, count(DISTINCT a) AS actors\n            ORDER BY actors DESC, model\n            LIMIT 15",
+      "rows": [
+        {
+          "model": "Urban-Mining-Dienstleister mit Verkaufskanal",
+          "actors": 28
+        },
+        {
+          "model": "Shop mit Eigenstock",
+          "actors": 27
+        },
+        {
+          "model": "Multi-Vendor-Marktplatz",
+          "actors": 26
+        },
+        {
+          "model": "Netzwerk / Aggregator / Redistribution",
+          "actors": 6
+        },
+        {
+          "model": "SaaS-Inventarplattform",
+          "actors": 3
+        }
+      ],
+      "row_count": 5
+    },
+    "swiss_bubble_review_runs": {
+      "title": "Connections per review_run bubble",
+      "cypher": "MATCH ()-[r:VERBUNDEN_MIT_AKTEUR]->()\n            WHERE r.review_run IS NOT NULL\n            RETURN r.review_run AS bubble, count(r) AS connections\n            ORDER BY connections DESC",
+      "rows": [
+        {
+          "bubble": "post_ier_w3_2026_06_07",
+          "connections": 93
+        },
+        {
+          "bubble": "swiss_reuse_bubble_2026_06_05",
+          "connections": 14
+        },
+        {
+          "bubble": "germany_reuse_bubble_2026_06_05",
+          "connections": 13
+        },
+        {
+          "bubble": "cross_bubble_extension_2026_06_06",
+          "connections": 9
+        },
+        {
+          "bubble": "agent_06b_non_bubble_actor_networks_2026_06_06",
+          "connections": 9
+        },
+        {
+          "bubble": "post_quality_p06_02_2026_06_06",
+          "connections": 9
+        },
+        {
+          "bubble": "france_reuse_bubble_2026_06_05",
+          "connections": 6
+        },
+        {
+          "bubble": "rotor_dc_reuse_bubble_2026_06_05",
+          "connections": 3
+        },
+        {
+          "bubble": "netherlands_reuse_bubble_2026_06_05",
+          "connections": 1
+        },
+        {
+          "bubble": "quality_pass_q05_2026_06_06",
+          "connections": 1
+        },
+        {
+          "bubble": "remediation_wave2_r04_2026_06_06",
+          "connections": 1
+        }
+      ],
+      "row_count": 11
+    }
+  }
+}

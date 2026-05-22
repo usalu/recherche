@@ -1,0 +1,465 @@
+{
+  "id": "02_swiss_bubble",
+  "section": "2",
+  "title": "Swiss reuse bubble (Cirkla star)",
+  "cypher": "MATCH (a:Akteur)-[r:VERBUNDEN_MIT_AKTEUR]->(b:Akteur)\nWHERE r.review_run = 'swiss_reuse_bubble_2026_06_05'\nRETURN a, r, b;",
+  "status": "ok",
+  "row_count": 11,
+  "node_count": 10,
+  "relationship_count": 11,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:475",
+      "id": "sumami",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "name": "Sumami",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "id": "sumami",
+        "review_status": "evidence_backed_pending_apply",
+        "source_urls": [
+          "https://www.sumami.ch/",
+          "https://sustainable-digital-construction.ethz.ch/en/reuse"
+        ],
+        "primary_source_url": "https://www.sumami.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "id": "useagain_bauteilclick",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "useagain-bauteilclick"
+        ],
+        "name": "useagain / Bauteilclick",
+        "id": "useagain_bauteilclick",
+        "source_urls": [
+          "https://library-of-reuse.ch/pioneers/useagain",
+          "https://www.useagain.ch/de/"
+        ],
+        "primary_source_url": "https://library-of-reuse.ch/pioneers/useagain"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "id": "baubuero_in_situ",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ELYS_Kultur_Gewerbehaus_…",
+          "Grubenstrasse_29_Werkhof…",
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "baubüro in situ",
+        "id": "baubuero_in_situ",
+        "source_urls": [
+          "https://www.insitu.ch/"
+        ],
+        "primary_source_url": "https://www.insitu.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "id": "cirkla",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Cirkla Profil"
+        ],
+        "name": "Cirkla",
+        "id": "cirkla",
+        "source_urls": [
+          "https://www.cirkla.ch/en/",
+          "https://www.cirkla.ch/en/lassociation-cirkla/",
+          "https://www.cirkla.ch/en/le-reseau-du-reemploi/",
+          "https://www.cirkla.ch/en/publications-outils/"
+        ],
+        "primary_source_url": "https://www.cirkla.ch/en/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "id": "bauteilladen_winterthur",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilladen-winterthur",
+          "Grubenstrasse_29_Werkhof…"
+        ],
+        "name": "Bauteilladen Winterthur",
+        "id": "bauteilladen_winterthur",
+        "source_urls": [
+          "https://bauteilladen.ch/"
+        ],
+        "primary_source_url": "https://bauteilladen.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "id": "materiuum",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Matériuum Team"
+        ],
+        "name": "Matériuum",
+        "id": "materiuum",
+        "source_urls": [
+          "https://materiuum.ch/"
+        ],
+        "primary_source_url": "https://materiuum.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "id": "reuzi_ch",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "REUZI",
+        "id": "reuzi_ch",
+        "source_urls": [
+          "https://reuzi.ch/",
+          "https://reuzi.ch/agora/",
+          "https://www.immobilier.ch/fr/actualite/reuzi-ressource-les-chantiers-avec-du-reemploi-13814"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "id": "gruner_reuse_platform",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Gruner ReUse",
+          "Planen mit ReUse"
+        ],
+        "name": "Gruner ReUse",
+        "id": "gruner_reuse_platform",
+        "source_urls": [
+          "https://www.gruner-reuse.ch",
+          "https://www.gruner-reuse.ch/projekt",
+          "https://www.gruner-reuse.ch/produkte",
+          "https://www.gruner.ch/de/news/alt-wird-neu-zweites-leben-fuer-gebrauchte-bauteile-mit-gruner-reuse"
+        ]
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "id": "salza",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "salza"
+        ],
+        "name": "Salza",
+        "id": "salza",
+        "source_urls": [
+          "https://salza.ch/bauteil-plattform"
+        ],
+        "primary_source_url": "https://salza.ch/bauteil-plattform"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "id": "bauteilboerse_basel_overall",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Bauteilbörse Basel",
+        "id": "bauteilboerse_basel_overall",
+        "source_urls": [
+          "https://bauteilboerse-basel.ch/bauteile/",
+          "https://bauteilboerse-basel.ch/nachhaltigkeit/",
+          "https://bauteilboerse-basel.ch/",
+          "https://bauteilboerse-basel.ch/ueber-uns/"
+        ]
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304508379",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:475",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "sumami",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "first_party_research_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://sustainable-digital-construction.ethz.ch/en/reuse",
+        "connection_kind": "software_development_context",
+        "fact_label": "Fact",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§7",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "developing useagain- the Swiss brokerage and sales platform",
+        "id": "r_sumami__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "As a tool for this, they are developing useagain- the Swiss brokerage and sales platform for the reuse of building components."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:3",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "start_id": "baubuero_in_situ",
+      "end_id": "cirkla",
+      "properties": {
+        "evidence_basis": "first_party_committee_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/comite/benjamin-poignon",
+        "connection_kind": "committee_co_chair_affiliation",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§2.3",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Benjamin Poignon - Co-Chairman, Baubüro in situ",
+        "id": "r_baubuero_in_situ__verbunden_mit_akteur__cirkla",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Benjamin Poignon - Co-Chairman. Baubüro in situ"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118198217",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "cirkla",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/bauteilladen-winterthur",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__cirkla",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1157538353931883465",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "first_party_network_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+        "connection_kind": "network_library_of_reuse",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§5",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "exchange between Bauteilbörse Basel … Bauteilladen Winterthur",
+        "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "useagain promotes direct exchange between various organisations, such as Bauteilbörse Basel, BauTeile Zürich and Bauteilladen Winterthur."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:0",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6631",
+      "start_id": "cirkla",
+      "end_id": "materiuum",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/materiuum",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_cirkla__verbunden_mit_akteur__materiuum",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338777620",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34836",
+      "start_id": "cirkla",
+      "end_id": "reuzi_ch",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/reuzi",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_cirkla__verbunden_mit_akteur__reuzi_ch",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6931153076220889110",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "start_id": "cirkla",
+      "end_id": "gruner_reuse_platform",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/gruner-ag",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "dossier_anchored",
+        "dossier_section": "§2.2",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "id": "r_cirkla__verbunden_mit_akteur__gruner_reuse_platform",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338782326",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39542",
+      "start_id": "cirkla",
+      "end_id": "salza",
+      "properties": {
+        "evidence_basis": "first_party_association_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/lassociation-cirkla/",
+        "connection_kind": "committee_member_affiliation",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§2.3",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Olivier de Perrot - Committee member, Salza",
+        "id": "r_cirkla__verbunden_mit_akteur__salza",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Olivier de Perrot - Committee member. Salza"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6917642277338782330",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6674",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "cirkla",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "cirkla_directory_profile",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/useagain",
+        "connection_kind": "directory",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§5",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "plateforme de mise en relation pour matériaux de construction",
+        "id": "r_cirkla__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Useagain.ch est une plateforme de mise en relation pour matériaux de construction et savoir-faire."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153034754304542737",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34838",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "gruner_reuse_platform",
+      "properties": {
+        "evidence_basis": "first_party_supply_chain_news",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+        "connection_kind": "supply_chain_roche_resale",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§6",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+        "id": "r_bauteilboerse_basel_overall__verbunden_mit_akteur__gruner_reuse_platform",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch."
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155286554118227985",
+      "type": "VERBUNDEN_MIT_AKTEUR",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39546",
+      "start_id": "bauteilboerse_basel_overall",
+      "end_id": "useagain_bauteilclick",
+      "properties": {
+        "evidence_basis": "first_party_supply_chain_news",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+        "connection_kind": "supply_chain_roche_resale",
+        "fact_label": "Fact",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§6",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+        "id": "r_bauteilboerse_basel_overall__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch."
+      }
+    }
+  ]
+}

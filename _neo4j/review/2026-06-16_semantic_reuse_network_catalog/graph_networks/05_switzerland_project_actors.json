@@ -1,0 +1,1331 @@
+{
+  "id": "05_switzerland_project_actors",
+  "section": "5",
+  "title": "Switzerland project × actor subgraph",
+  "cypher": "MATCH (l:Land {name: 'Schweiz'})<-[r2:LIEGT_IN_LAND]-(p:Projekt)<-[r1:BETEILIGT_AN]-(a:Akteur)\nRETURN a, r1, p, r2, l;",
+  "status": "ok",
+  "row_count": 33,
+  "node_count": 39,
+  "relationship_count": 42,
+  "nodes": [
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "id": "zirkular",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ELYS_Kultur_Gewerbehaus_…",
+          "Grubenstrasse_29_Werkhof…",
+          "Juch_Areal_Recyclingzent…",
+          "K118_Kopfbau_Halle_118_W…",
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "Zirkular",
+        "id": "zirkular",
+        "source_urls": [
+          "https://zirkular.net/en/service/",
+          "https://zirkular.net/en/project/building-k-118/"
+        ],
+        "primary_source_url": "https://zirkular.net/en/service/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4955",
+      "id": "p_elys_kultur_gewerbehaus_basel",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "name_full": "ELYS Kultur- und Gewerbehaus Basel",
+        "latitude": 47.5489,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "ELYS Kultur- und…",
+        "adresse": "Elsässerstrasse 215, 4056 Basel, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "ELYS converts former industrial stock into a cultural and commercial environment where reuse is inseparable from atmosphere. Existing structures, reclaimed fit-out pieces and rough material traces produce spaces that feel provisional yet intensely inhabited. The design works by accepting the building’s accumulated layers rather than erasing them. Architectural quality comes from generous industrial rooms, adapted circulation, improvised details and visible material histories that support a mixed cultural programme.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_elys_kultur_gewerbehaus_basel",
+        "id": "p_elys_kultur_gewerbehaus_basel",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 7.6012
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "id": "land_schweiz",
+      "labels": [
+        "Land"
+      ],
+      "properties": {
+        "source_titles": [
+          "ELYS_Kultur_Gewerbehaus_…",
+          "Grubenstrasse_29_Werkhof…",
+          "Juch_Areal_Recyclingzent…",
+          "K118_Kopfbau_Halle_118_W…",
+          "Kindergarten_Moeoeslistr…",
+          "ReCrete_footbridge_reuse…"
+        ],
+        "name": "Schweiz",
+        "akzeptanzfaktoren": [
+          "DGNB"
+        ],
+        "id": "land_schweiz",
+        "typische_bauproduktstatus": [
+          "BauPG (CH)"
+        ],
+        "country_iso2": "CH"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "id": "baubuero_in_situ",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ELYS_Kultur_Gewerbehaus_…",
+          "Grubenstrasse_29_Werkhof…",
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "baubüro in situ",
+        "id": "baubuero_in_situ",
+        "source_urls": [
+          "https://www.insitu.ch/"
+        ],
+        "primary_source_url": "https://www.insitu.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Grubenstrasse 29 / Werkhof 29, Zürich",
+        "year_completed": 2025,
+        "latitude": 47.3612682,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "area_m2_gross": 2600,
+        "name": "Grubenstrasse 29",
+        "adresse": "Grubenstrasse 29, 8045 Zürich, Binz",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "Werkhof 29 is a reuse-driven conversion where the design value lies in the relationship between retained industrial character and newly inserted recovered components. The project should be read through its handling of workshops, circulation, facade pieces and interior fit-out rather than through a single spectacular element. Reused materials help produce a pragmatic urban atmosphere: robust, flexible and slightly rough. The architecture works by letting construction history and new programme remain simultaneously visible.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_grubenstrasse_29_werkhof_29_zuerich",
+        "id": "p_grubenstrasse_29_werkhof_29_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / Vermietung 2025",
+        "status": "Realisiert",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 8.5142622
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5064",
+      "id": "modissa_immobilien_ag",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Grubenstrasse_29_Werkhof…"
+        ],
+        "name": "Modissa Immobilien AG",
+        "id": "modissa_immobilien_ag"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "id": "bauteilladen_winterthur",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "bauteilladen-winterthur",
+          "Grubenstrasse_29_Werkhof…"
+        ],
+        "name": "Bauteilladen Winterthur",
+        "id": "bauteilladen_winterthur",
+        "source_urls": [
+          "https://bauteilladen.ch/"
+        ],
+        "primary_source_url": "https://bauteilladen.ch/"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5066",
+      "id": "tschudin_rueckbau_demontagen",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Grubenstrasse_29_Werkhof…"
+        ],
+        "name": "Tschudin Rückbau und Demontagen GmbH",
+        "id": "tschudin_rueckbau_demontagen"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5308",
+      "id": "erz_zuerich",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "ier_a1_2026_06_06",
+        "source_titles": [
+          "Juch_Areal_Recyclingzent…"
+        ],
+        "name": "Entsorgung + Recycling Zürich (ERZ)",
+        "id": "erz_zuerich",
+        "primary_source_url": "https://www.stadt-zuerich.ch/erz/",
+        "source_quote": "e vorlesen Entsorgung + Recycling Zürich Entsorgung + Recycling Zürich (ERZ)"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "id": "p_juch_areal_recyclingzentrum_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Juch-Areal Recyclingzentrum Zürich",
+        "latitude": 47.393,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager"
+        ],
+        "name": "Juch-Areal Recyclingzent…",
+        "adresse": "Juch-Areal, Zürich-Altstetten, 8048 Zürich, Switzerland",
+        "geo_confidence": "low",
+        "entwurfsbeschreibung": "The recycling centre uses reclaimed components within an infrastructure building that already deals with material flows. This gives the architecture a direct conceptual fit: the place for sorting urban resources is itself designed from recovered parts. The design should be read through robust construction, accessible circulation, weathering surfaces and didactic visibility. Reuse strengthens the building’s public message, turning an operational facility into an architectural demonstration of the city’s circular material metabolism.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_juch_areal_recyclingzentrum_zuerich",
+        "id": "p_juch_areal_recyclingzentrum_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "geplant / Ausführung 2026–2027 vorgesehen",
+        "source_urls": [
+          "https://zirkular.net/de/projekt/erz-juchareal",
+          "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+          "https://www.stadt-zuerich.ch/de/aktuell/medienmitteilungen/2025/07/neubau-recyclingzentrum-juch-areal.html",
+          "https://www.stadt-zuerich.ch/de/aktuell/publikationen/2026/reuse-tragstrukturen-studie.html",
+          "https://www.cirkla.ch/de/le-reseau-du-reemploi/lannuaire/projets/recyclingzentrum-juch-areal",
+          "https://www.perita.ch/de/projekt/recyclingzentrum-juch-areal",
+          "https://www.studioloko.ch/en/projects/recyclingzentrum-juch-areal",
+          "https://www.energiekonzepte.ch/en/current/zirkularitaet-am-bau-innovationsprojekt-recyclingzentrum-juch-areal",
+          "https://eurocodes.jrc.ec.europa.eu/sites/default/files/2021-12/EUR23252EN.pdf",
+          "https://www.baunetzwissen.de/gesund-bauen/fachwissen/regelwerke/normen-fuer-den-lehmbau-3393643"
+        ],
+        "status": "Geplant",
+        "longitude": 8.4885
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5311",
+      "id": "weber_broennimann",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Juch_Areal_Recyclingzent…"
+        ],
+        "name": "Weber + Brönnimann AG",
+        "id": "weber_broennimann"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5312",
+      "id": "manoa_landschaftsarchitekten",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Juch_Areal_Recyclingzent…"
+        ],
+        "name": "manoa Landschaftsarchitekten",
+        "id": "manoa_landschaftsarchitekten"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6249",
+      "id": "graber_pulver",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "aliases": [
+          "Graber Pulver Architekt:innen"
+        ],
+        "review_run": "ier_a1_2026_06_06",
+        "source_titles": [
+          "Juch_Areal_Recyclingzent…"
+        ],
+        "name": "Graber Pulver",
+        "id": "graber_pulver",
+        "primary_source_url": "https://www.graberpulver.ch/",
+        "source_quote": "Graber Pulver"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "id": "p_k118_kopfbau_halle_118_winterthur",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "wirtschaft": [
+          "CapEx vergleichbar mit Neubau",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "K118 Kopfbau Halle 118 Winterthur",
+        "year_completed": 2021,
+        "latitude": 47.4997,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "area_m2_gross": 1100,
+        "entwurfsbeschreibung": "K118 is one of the clearest examples of component-led architecture. Reclaimed steel, windows, facade elements, stairs and interior pieces are composed into an addition whose design was shaped by what could be found, tested and joined. The building does not hide heterogeneity; it turns it into architectural order through careful proportion, exposed assembly and precise detailing. The result is neither nostalgic nor improvised, but a rigorous architecture of visible second-use elements.",
+        "metadata_sidecar_key": "node:p_k118_kopfbau_halle_118_winterthur",
+        "id": "p_k118_kopfbau_halle_118_winterthur",
+        "lca_modules": [
+          "A1-A3 Produkt"
+        ],
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut",
+        "matchingqualitaet_geo": [
+          "Geo: lokal (<50 km)"
+        ],
+        "longitude": 8.7267,
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager",
+          "Temporal: geplant"
+        ],
+        "name": "K.118 Winterthur",
+        "adresse": "Lagerplatz 24, 8400 Winterthur, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "source_urls": [
+          "https://zirkular.net/de/projekt/k-118-kopfbau-halle-118",
+          "https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ",
+          "https://www.galvanizingeurope.org/case_studies/k-118-from-former-factory-to-beacon-of-sustainable-building",
+          "https://www.arch2o.com/k118-kopfbau-halle-118-bauburo-in-situ",
+          "https://zirkular.net/en/project/reuse-in-construction-a-compendium-of-circular-architecture",
+          "https://www.researchgate.net/publication/376148869_Case_Study_K118_-_The_Reuse_of_Building_Components_in_Winterthur_Switzerland",
+          "https://intergalva.com/awards/global-galvanizing-awards-2024/k-118-kopfbau-halle-118",
+          "https://www.lagerplatz.ch/"
+        ],
+        "status": "Realisiert"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5325",
+      "id": "stiftung_abendrot",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "post_ier_2026_06_07",
+        "source_titles": [
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "Stiftung Abendrot / Vorsorgestiftung Abendrot",
+        "id": "stiftung_abendrot",
+        "source_urls": [
+          "https://www.abendrot.ch/"
+        ],
+        "primary_source_url": "https://www.abendrot.ch/",
+        "source_quote": "Abendrot: Stiftung Abendrot, Vorsorge mit Wirkung Aktuell Login D F Arbeitgebende Angebot & Vorteile Prävention & Krankheit Formulare & Reglemente Kursangebot Offerte Versicherte Im Erwerbsleben Pensionierung & Ruhestand Formulare & Reglemente Kursangebot FAQ Anlagen Engagement & Wirkung Anlagestruk"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5326",
+      "id": "zhaw_ike",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "ZHAW IKE",
+        "id": "zhaw_ike"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5327",
+      "id": "oberli_ingenieurbau",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "Oberli Ingenieurbau AG",
+        "id": "oberli_ingenieurbau"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5328",
+      "id": "josef_kolb_ag",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "Josef Kolb AG",
+        "id": "josef_kolb_ag"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5329",
+      "id": "wetter_ag",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "K118_Kopfbau_Halle_118_W…"
+        ],
+        "name": "Wetter AG",
+        "id": "wetter_ag"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5384",
+      "id": "stadt_zuerich_amt_hochbauten",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "post_ier_2026_06_07",
+        "source_titles": [
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "Stadt Zürich / Amt für Hochbauten / Immobilien Stadt Zürich",
+        "id": "stadt_zuerich_amt_hochbauten",
+        "source_urls": [
+          "https://www.stadt-zuerich.ch/"
+        ],
+        "primary_source_url": "https://www.stadt-zuerich.ch/",
+        "source_quote": "Startseite | Stadt Zürich Navigation Sprunglink Zur Bereichsauswahl Zum Inhalt Seite vorlesen Aktuelles Medienmitteilungen Veranstaltungen News Verkehrsmeldungen Publikationen Themen Bildung Volksschule, Aus- und Weiterbildung, Stipendien, Berufs- und Laufbahnberatung Gesundheit Medizinische Versorg"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung",
+          "Spec: Zweckänderung"
+        ],
+        "wirtschaft": [
+          "CapEx vergleichbar mit Neubau"
+        ],
+        "name_full": "Kindergarten Mööslistrasse / Manegg Zürich",
+        "year_completed": 2023,
+        "latitude": 47.3406,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "matchingqualitaet_temporal": [
+          "Temporal: Zwischenlager",
+          "Temporal: unproblematisch"
+        ],
+        "area_m2_gross": 271,
+        "name": "Kindergarten Mööslistras…",
+        "adresse": "Mööslistrasse 8, 8038 Zürich, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "The kindergarten applies reuse to a precise educational building type, where robustness, daylight, scale and atmosphere matter. Reclaimed components must be integrated into a child-friendly environment rather than showcased as raw salvage. The design interest is in how reused elements affect facade rhythm, interior tactility, structural decisions or play-space character while still meeting safety and comfort demands. Its strongest extraction should follow documented components, not a generic claim of circular construction.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_kindergarten_moeoeslistrasse_manegg_zuerich",
+        "id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "gebaut / abgeschlossen 2023",
+        "source_urls": [
+          "https://www.stadt-zuerich.ch/"
+        ],
+        "status": "Realisiert",
+        "longitude": 8.5154
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5386",
+      "id": "meili_partner",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "Meili Partner Baumanagement",
+        "id": "meili_partner"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5387",
+      "id": "heierli_ag",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "Ingenieurbureau Heierli AG",
+        "id": "heierli_ag"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5388",
+      "id": "haerter_partner",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "Haerter + Partner AG",
+        "id": "haerter_partner"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5389",
+      "id": "schmidiger_rosasco",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "Schmidiger + Rosasco AG",
+        "id": "schmidiger_rosasco"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5390",
+      "id": "aik_architektur_ingenieur_kollektiv",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "Kindergarten_Moeoeslistr…"
+        ],
+        "name": "aik Architektur + Ingenieur Kollektiv",
+        "id": "aik_architektur_ingenieur_kollektiv"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5610",
+      "id": "ak_recrete_forschungsteam",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "source_titles": [
+          "ReCrete_footbridge_reuse…"
+        ],
+        "name": "Re:Crete Forschungsteam",
+        "id": "ak_recrete_forschungsteam"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5606",
+      "id": "p_recrete_footbridge_reused_concrete_blocks",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "matchingqualitaet_spec": [
+          "Spec: Anpassung"
+        ],
+        "name_full": "Re:Crete footbridge — reused concrete blocks",
+        "latitude": 46.2264,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "Re:Crete footbridge",
+        "adresse": "Route Cantonale / Route de la Morge, 1964 Conthey, Switzerland",
+        "geo_confidence": "medium",
+        "entwurfsbeschreibung": "Re:Crete makes the structural consequences of reclaimed concrete explicit. Instead of crushing concrete into aggregate, the project stacks or recomposes large blocks into a bridge, so design decisions revolve around compression, geometry, contact surfaces and safe assembly. The architectural output is intentionally direct: a small piece of infrastructure that reveals the mass and previous life of the material. It demonstrates how reclaimed concrete can become form, structure and public object simultaneously.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_recrete_footbridge_reused_concrete_blocks",
+        "id": "p_recrete_footbridge_reused_concrete_blocks",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "Prototyp / Forschungsdemonstrator",
+        "source_urls": [
+          "https://www.construction21.org/articles/h/recrete-footbridge.html"
+        ],
+        "bauobjektklasse": [
+          "Infrastruktur"
+        ],
+        "status": "Prototyp",
+        "longitude": 7.3074
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6437",
+      "id": "structural_xploration_lab_epfl",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "aliases": [
+          "EPFL Structural Xploration Lab"
+        ],
+        "review_run": "post_ier_2026_06_07",
+        "source_titles": [
+          "ReCrete_footbridge_reuse…"
+        ],
+        "name": "Structural Xploration Lab / EPFL",
+        "id": "structural_xploration_lab_epfl",
+        "source_urls": [
+          "https://www.epfl.ch/labs/sxl/"
+        ],
+        "primary_source_url": "https://www.epfl.ch/labs/sxl/",
+        "source_quote": "Structural Xploration Lab ‐ EPFL Skip to content About Education Research Innovation Schools Campus Search on the site Validate Show / hide the search form Search on the site Hide the search form EN Menu ENAC IA Civil engineering and ENAC Construction and sustainable development … Afficher l'intégra"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:710",
+      "id": "rebecca_brandmayer",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Rebecca Brandmayer",
+        "id": "rebecca_brandmayer"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "id": "p_lysp8_basel",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx vergleichbar mit Neubau",
+          "Kostenvergleich",
+          "Lebenszykluskosten"
+        ],
+        "name_full": "LysP8 — LysBüchelStrasse 8 Reuse Pilot Basel (Loeliger Strub / Zirkular / Stiftung Habitat)",
+        "latitude": 47.5726315,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "LYSP8 Basel",
+        "adresse": "Weinlagerstrasse 33, 4056 Basel, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "LysP8 is a practical architecture of many small recovered decisions rather than one heroic reused structure. Kitchens, doors, tiles, facade parts and steel grating steps are worked into a new or transformed building so that reuse influences thresholds, surfaces, circulation and domestic atmosphere. The design quality comes from careful matching: everyday components are given enough order to feel intentional, while their different origins remain readable as part of the building’s circular character.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_lysp8_basel",
+        "id": "p_lysp8_basel",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "completed 02/2025",
+        "longitude": 7.5738216
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:711",
+      "id": "laia_meier",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Laia Meier",
+        "id": "laia_meier"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6052",
+      "id": "stiftung_habitat",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "post_ier_2026_06_07",
+        "name": "Stiftung Habitat",
+        "id": "stiftung_habitat",
+        "source_urls": [
+          "https://www.stiftung-habitat.ch/"
+        ],
+        "primary_source_url": "https://www.stiftung-habitat.ch/",
+        "source_quote": "Stiftung Habitat | Stiftung Habitat search Vermietung Mietangebot Wohnen Mietzinsbeiträge Mietangebot Gewerbe Mietendenportraits Notfälle und Reparaturmeldungen Liegenschaften Übersichtsplan Häuser und Projekte Baurechte Ankäufe Engagement 30 Jahre – 30 Orte Miteinander-Budget Aktivitäten Impulse Po"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6490",
+      "id": "pirmin_jung_schweiz_ag",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "aliases": [
+          "Pirmin Jung CH"
+        ],
+        "name": "PIRMIN JUNG Schweiz AG",
+        "id": "pirmin_jung_schweiz_ag"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:590",
+      "id": "empa",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Empa",
+        "id": "empa"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "id": "p_umar_unit",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Payback über OpEx / LCA",
+          "Geschaeftsmodell",
+          "Lebenszykluskosten",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "UMAR Unit — Urban Mining and Recycling, NEST Empa Dübendorf",
+        "latitude": 47.4023749,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "UMAR Unit",
+        "adresse": "Überlandstrasse 129, 8600 Dübendorf, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "UMAR is a research apartment designed as a catalogue of reversible material cycles. Most components are selected for separability, take-back, reuse, recycling or compostability; reclaimed Jules Wabbes door handles add a small but explicit reused-component layer. The architectural output is a clean demonstrator rather than a salvage collage: dry joints, modular layers, visible systems and controlled material contrasts show how a dwelling can be designed for future disassembly and resource recovery.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_umar_unit",
+        "id": "p_umar_unit",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "active research demonstrator in NEST since 2018",
+        "longitude": 8.6114852
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:686",
+      "id": "lindner_se",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "review_run": "post_ier_2026_06_07",
+        "name": "Lindner SE",
+        "id": "lindner_se",
+        "source_urls": [
+          "https://www.lindner-group.com/"
+        ],
+        "primary_source_url": "https://www.lindner-group.com/",
+        "source_quote": "The Lindner Group is among the Best Managed Companies 2026 The Best Managed Companies Award 2026 recognises the Lindner Group as an exemplary family-run business with a unique range of services."
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:691",
+      "id": "monotti_ingegneri",
+      "labels": [
+        "Akteur"
+      ],
+      "properties": {
+        "name": "Monotti Ingegneri",
+        "id": "monotti_ingegneri"
+      }
+    },
+    {
+      "element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "id": "p_elementa_walkeweg",
+      "labels": [
+        "Projekt"
+      ],
+      "properties": {
+        "entwurfsqualitaet_vokabular_version": "v2",
+        "wirtschaft": [
+          "CapEx höher, Subvention/Förderung deckt Mehrkosten",
+          "CapEx niedriger (direkte Materialersparnis)",
+          "Lebenszykluskosten",
+          "Versteckte Kosten (Lagerung/Prüfung/Logistik)"
+        ],
+        "name_full": "ELEMENTA Walkeweg Basel — Wohnbau mit Wiederverwendung von Bestandskomponenten (Kanton Basel-Stadt Wettbewerb)",
+        "latitude": 47.5388275,
+        "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+        "zertifizierungssysteme": [
+          "EcoTool (ZBS)"
+        ],
+        "entwurfsqualitaet_am_utc": "2026-06-05T19:25:30.538804+00:00",
+        "entwurfsbeschreibung_quelle": "_neo4j/intake/archive/2026-06-05_entwurfsqualitaet/designQuality.md",
+        "name": "ELEMENTA Walkeweg",
+        "adresse": "Emilie Louise Frey-Strasse, 4053 Basel, Switzerland",
+        "geo_confidence": "high",
+        "entwurfsbeschreibung": "ELEMENTA is important as a housing proposal organised around the reuse of substantial existing components. The architectural interest lies in how salvaged concrete and other building elements can discipline a new residential scheme: bay spacing, stair logic, facade rhythm and construction sequence all have to negotiate availability. Because delivery status still needs verification, the description should remain design-focused. It is a project about making component reuse compatible with ordinary collective housing, not about a one-off pavilion gesture.",
+        "entwurfsqualitaet_run": "entwurfsqualitaet_v2_2026_06_05",
+        "metadata_sidecar_key": "node:p_elementa_walkeweg",
+        "id": "p_elementa_walkeweg",
+        "geo_import_run": "2026-06-06_project_bg_geo_extract",
+        "projektstatus_text": "Planung 2023–2025; Realisierung geplant 2027–2029",
+        "longitude": 7.6125448
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:48",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4955",
+      "start_id": "zirkular",
+      "end_id": "p_elys_kultur_gewerbehaus_basel",
+      "properties": {
+        "evidence_basis": "first_party_project_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "fact_label": "Fact",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§4",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "trigger for the foundation of Zirkular",
+        "id": "r_zirkular__beteiligt_an__p_elys_kultur_gewerbehaus_basel",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://zirkular.net/en/project/culture-commercial-center-elys",
+        "evidence_excerpt": "trigger for the foundation of Zirkular by the involved planners"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723118427",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4955",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_elys_kultur_gewerbehaus_basel",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_elys_kultur_gewerbehaus_basel__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155274459490292584",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "start_id": "baubuero_in_situ",
+      "end_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "properties": {
+        "id": "r_baubuero_in_situ__BETEILIGT_AN__p_grubenstrasse_29_werkhof_29_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723118523",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_grubenstrasse_29_werkhof_29_zuerich__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607432",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5064",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "start_id": "modissa_immobilien_ag",
+      "end_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "properties": {
+        "id": "r_modissa_immobilien_ag__BETEILIGT_AN__p_grubenstrasse_29_werkhof_29_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607433",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5065",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "start_id": "bauteilladen_winterthur",
+      "end_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "properties": {
+        "id": "r_bauteilladen_winterthur__BETEILIGT_AN__p_grubenstrasse_29_werkhof_29_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607434",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5066",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "start_id": "tschudin_rueckbau_demontagen",
+      "end_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "properties": {
+        "id": "r_tschudin_rueckbau_demontagen__BETEILIGT_AN__p_grubenstrasse_29_werkhof_29_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155274459490293801",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5051",
+      "start_id": "zirkular",
+      "end_id": "p_grubenstrasse_29_werkhof_29_zuerich",
+      "properties": {
+        "id": "r_zirkular__BETEILIGT_AN__p_grubenstrasse_29_werkhof_29_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607676",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5308",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "start_id": "erz_zuerich",
+      "end_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "properties": {
+        "id": "r_erz_zuerich__BETEILIGT_AN__p_juch_areal_recyclingzentrum_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723118773",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_juch_areal_recyclingzentrum_zuerich__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607679",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5311",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "start_id": "weber_broennimann",
+      "end_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "properties": {
+        "id": "r_weber_broennimann__BETEILIGT_AN__p_juch_areal_recyclingzentrum_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607680",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5312",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "start_id": "manoa_landschaftsarchitekten",
+      "end_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "properties": {
+        "id": "r_manoa_landschaftsarchitekten__BETEILIGT_AN__p_juch_areal_recyclingzentrum_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162029858931349609",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6249",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5301",
+      "start_id": "graber_pulver",
+      "end_id": "p_juch_areal_recyclingzentrum_zuerich",
+      "properties": {
+        "id": "r_graber_pulver__BETEILIGT_AN__p_juch_areal_recyclingzentrum_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:25",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4968",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "start_id": "baubuero_in_situ",
+      "end_id": "p_k118_kopfbau_halle_118_winterthur",
+      "properties": {
+        "evidence_basis": "first_party_project_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "fact_label": "Fact",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§3.1 / §4",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "architecture: baubüro in situ",
+        "id": "r_baubuero_in_situ__beteiligt_an__p_k118_kopfbau_halle_118_winterthur",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://zirkular.net/en/project/building-k-118/",
+        "evidence_excerpt": "architecture: baubüro in situ"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723118791",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_k118_kopfbau_halle_118_winterthur",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_k118_kopfbau_halle_118_winterthur__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607693",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5325",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "start_id": "stiftung_abendrot",
+      "end_id": "p_k118_kopfbau_halle_118_winterthur",
+      "properties": {
+        "id": "r_stiftung_abendrot__BETEILIGT_AN__p_k118_kopfbau_halle_118_winterthur"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607694",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5326",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "start_id": "zhaw_ike",
+      "end_id": "p_k118_kopfbau_halle_118_winterthur",
+      "properties": {
+        "id": "r_zhaw_ike__BETEILIGT_AN__p_k118_kopfbau_halle_118_winterthur"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607695",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5327",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "start_id": "oberli_ingenieurbau",
+      "end_id": "p_k118_kopfbau_halle_118_winterthur",
+      "properties": {
+        "id": "r_oberli_ingenieurbau__BETEILIGT_AN__p_k118_kopfbau_halle_118_winterthur"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607696",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5328",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "start_id": "josef_kolb_ag",
+      "end_id": "p_k118_kopfbau_halle_118_winterthur",
+      "properties": {
+        "id": "r_josef_kolb_ag__BETEILIGT_AN__p_k118_kopfbau_halle_118_winterthur"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607697",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5329",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "start_id": "wetter_ag",
+      "end_id": "p_k118_kopfbau_halle_118_winterthur",
+      "properties": {
+        "id": "r_wetter_ag__BETEILIGT_AN__p_k118_kopfbau_halle_118_winterthur"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:26",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5319",
+      "start_id": "zirkular",
+      "end_id": "p_k118_kopfbau_halle_118_winterthur",
+      "properties": {
+        "evidence_basis": "first_party_project_page",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "fact_label": "Fact",
+        "evidence_origin": "live_url_capture",
+        "dossier_section": "§4",
+        "source_scope": "swiss_reuse_bubble_intake",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "trigger for the foundation of Zirkular",
+        "id": "r_zirkular__beteiligt_an__p_k118_kopfbau_halle_118_winterthur",
+        "review_status": "evidence_backed_pending_apply",
+        "evidence_url": "https://zirkular.net/en/project/building-k-118/",
+        "evidence_excerpt": "trigger for the foundation of Zirkular by the involved planners"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607752",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5384",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "start_id": "stadt_zuerich_amt_hochbauten",
+      "end_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "properties": {
+        "id": "r_stadt_zuerich_amt_hochbauten__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723118851",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_kindergarten_moeoeslistrasse_manegg_zuerich__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607754",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5386",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "start_id": "meili_partner",
+      "end_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "properties": {
+        "id": "r_meili_partner__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607755",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5387",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "start_id": "heierli_ag",
+      "end_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "properties": {
+        "id": "r_heierli_ag__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607756",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5388",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "start_id": "haerter_partner",
+      "end_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "properties": {
+        "id": "r_haerter_partner__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607757",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5389",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "start_id": "schmidiger_rosasco",
+      "end_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "properties": {
+        "id": "r_schmidiger_rosasco__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607758",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5390",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "start_id": "aik_architektur_ingenieur_kollektiv",
+      "end_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "properties": {
+        "id": "r_aik_architektur_ingenieur_kollektiv__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1162029858931349545",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6185",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5379",
+      "start_id": "zirkular",
+      "end_id": "p_kindergarten_moeoeslistrasse_manegg_zuerich",
+      "properties": {
+        "id": "r_zirkular__BETEILIGT_AN__p_kindergarten_moeoeslistrasse_manegg_zuerich"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676607978",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5610",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5606",
+      "start_id": "ak_recrete_forschungsteam",
+      "end_id": "p_recrete_footbridge_reused_concrete_blocks",
+      "properties": {
+        "id": "r_ak_recrete_forschungsteam__BETEILIGT_AN__p_recrete_footbridge_reused_concrete_blocks"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723119078",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5606",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_recrete_footbridge_reused_concrete_blocks",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_recrete_footbridge_reused_concrete_blocks__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676608805",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6437",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5606",
+      "start_id": "structural_xploration_lab_epfl",
+      "end_id": "p_recrete_footbridge_reused_concrete_blocks",
+      "properties": {
+        "id": "r_structural_xploration_lab_epfl__BETEILIGT_AN__p_recrete_footbridge_reused_concrete_blocks"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676603078",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:710",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "start_id": "rebecca_brandmayer",
+      "end_id": "p_lysp8_basel",
+      "properties": {
+        "id": "r_rebecca_brandmayer__BETEILIGT_AN__p_lysp8_basel"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723119654",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_lysp8_basel",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_lysp8_basel__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676603079",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:711",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "start_id": "laia_meier",
+      "end_id": "p_lysp8_basel",
+      "properties": {
+        "id": "r_laia_meier__BETEILIGT_AN__p_lysp8_basel"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155274459490293668",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6052",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "start_id": "stiftung_habitat",
+      "end_id": "p_lysp8_basel",
+      "properties": {
+        "id": "r_stiftung_habitat__BETEILIGT_AN__p_lysp8_basel"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1155274459490294106",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6490",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6182",
+      "start_id": "pirmin_jung_schweiz_ag",
+      "end_id": "p_lysp8_basel",
+      "properties": {
+        "evidence_basis": "web_fetch_p06_04",
+        "review_run": "post_quality_p06_04_2026_06_06",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "on management) pirmin jung (fachplanung holzbau) architecture: loeliger strub architektur credits: martin zeller, loeliger strub archit",
+        "id": "r_pirmin_jung_schweiz_ag__BETEILIGT_AN__p_lysp8_basel",
+        "evidence_url": "https://zirkular.net/en/project/lysp8/"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676602958",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:590",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "start_id": "empa",
+      "end_id": "p_umar_unit",
+      "properties": {
+        "id": "r_empa__BETEILIGT_AN__p_umar_unit"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723119953",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_umar_unit",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_umar_unit__LIEGT_IN_LAND__land_schweiz"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676603054",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:686",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6481",
+      "start_id": "lindner_se",
+      "end_id": "p_umar_unit",
+      "properties": {
+        "id": "r_lindner_se__BETEILIGT_AN__p_umar_unit"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153022659676603059",
+      "type": "BETEILIGT_AN",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:691",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "start_id": "monotti_ingegneri",
+      "end_id": "p_elementa_walkeweg",
+      "properties": {
+        "id": "r_monotti_ingegneri__BETEILIGT_AN__p_elementa_walkeweg"
+      }
+    },
+    {
+      "element_id": "5:5f542910-8dcf-46a9-a77c-dfff0c64ee65:1153027057723120141",
+      "type": "LIEGT_IN_LAND",
+      "start_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6669",
+      "end_element_id": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4954",
+      "start_id": "p_elementa_walkeweg",
+      "end_id": "land_schweiz",
+      "properties": {
+        "id": "r_p_elementa_walkeweg__LIEGT_IN_LAND__land_schweiz"
+      }
+    }
+  ]
+}

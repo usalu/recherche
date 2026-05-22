@@ -1,0 +1,313 @@
+{
+  "run": "property_cleanup_2026_06_05",
+  "commit": true,
+  "phases": {
+    "4b": {
+      "phase": "4b",
+      "relationship_rows": 615,
+      "qa_needs_source_url_review": 353,
+      "by_reltype": {
+        "BETEILIGT_AN": 63,
+        "BETRIEBEN_VON": 3,
+        "ERFORDERT_NACHWEIS": 95,
+        "ERFORDERT_SCHADSTOFFPRUEFUNG": 37,
+        "HAT_AKTEURROLLE": 15,
+        "HAT_BAUTEILTYP": 142,
+        "HAT_BESCHAFFUNGSWEG": 3,
+        "HAT_GESCHAEFTSMODELL": 12,
+        "HAT_SCHADSTOFFRISIKO": 100,
+        "LIEGT_IN_LAND": 9,
+        "NUTZT_MATERIAL": 103,
+        "NUTZT_SOFTWARE": 3,
+        "TRIGGERS_REGULIERUNGSFRAGE": 30
+      },
+      "review_status_rels_after": 0,
+      "evidence_status_rels_after": 0,
+      "review_run_rels_after": 0,
+      "metadata_sidecar_key_rels_after": 615,
+      "regulation_parity": {
+        "gestuetzt_auf_regelwerk": 167,
+        "gilt_in_land": 281,
+        "triggers": 1130,
+        "erfordert": 1578
+      }
+    },
+    "5b": {
+      "phase": "5b",
+      "patterns_loaded": [
+        "*.md",
+        "*_research.md",
+        "=schadstoff_reuse_knowledge_graph_research.md"
+      ],
+      "node_rows": 607,
+      "removed_title_entries": 664,
+      "by_label": {
+        "Akteur": 64,
+        "Aufbereitungsverfahren": 4,
+        "Bauteilgruppe": 236,
+        "Bauteiltyp": 7,
+        "Bauwerk": 25,
+        "Materialdepot": 6,
+        "Kennwert": 23,
+        "Leistungsanforderung": 8,
+        "Land": 7,
+        "Material": 8,
+        "Projekt": 79,
+        "PruefungNachweis": 111,
+        "Schadstoff": 9,
+        "Stadt": 12,
+        "Software": 1,
+        "Verbindungstechnik": 7
+      },
+      "matched_pattern_hits": {
+        "*.md": 664,
+        "*_research.md": 313,
+        "=schadstoff_reuse_knowledge_graph_research.md": 313
+      },
+      "source_titles_nodes_after": 1001,
+      "nodes_with_md_in_source_titles_after": 0,
+      "metadata_sidecar_key_nodes_after": 607,
+      "nodes_with_source_urls_after": 404
+    },
+    "9": {
+      "run": "property_cleanup_2026_06_05",
+      "completed_at_utc": "2026-06-05T20:29:56.228971+00:00",
+      "stats": {
+        "nodes": 2287,
+        "relationships": 15393,
+        "distinct_node_keys": 71,
+        "distinct_rel_keys": 36,
+        "node_property_occurrences": 13006,
+        "rel_property_occurrences": 29798,
+        "avg_node_props": 5.687,
+        "avg_rel_props": 1.936
+      },
+      "acceptance": {
+        "nodes_with_phase_keys": 0,
+        "legacy_internal_provenance_docs": 0,
+        "rf_rechtsgrundlagen": 0,
+        "import_decision_rels": 0,
+        "merged_legacy_rel_ids_rels": 0,
+        "source_scope_nodes": 0,
+        "reuse_rule_nodes": 20,
+        "review_status_rels": 0,
+        "evidence_status_rels": 0,
+        "review_run_rels": 0,
+        "metadata_sidecar_key_nodes": 607,
+        "metadata_sidecar_key_rels": 615,
+        "source_titles_nodes": 1001,
+        "nodes_with_md_in_source_titles": 0,
+        "nodes_with_source_urls": 404,
+        "rels_with_source_url": 3691
+      },
+      "regulation_parity": {
+        "gestuetzt_auf_regelwerk": 167,
+        "gilt_in_land": 281,
+        "triggers": 1130,
+        "erfordert": 1578
+      },
+      "regulation_drift": {
+        "triggers": 30,
+        "erfordert": 95,
+        "gestuetzt_auf_regelwerk": 0,
+        "gilt_in_land": 0
+      }
+    }
+  },
+  "before": {
+    "nodes": 2287,
+    "relationships": 15393,
+    "distinct_node_keys": 70,
+    "distinct_rel_keys": 38,
+    "node_property_occurrences": 13006,
+    "rel_property_occurrences": 30060,
+    "avg_node_props": 5.687,
+    "avg_rel_props": 1.953
+  },
+  "regulation_drift_precapture": {
+    "run": "property_cleanup_2026_06_05",
+    "generated_at_utc": "2026-06-05T20:29:45.343447+00:00",
+    "baseline": {
+      "triggers": 1100,
+      "erfordert": 1483,
+      "gestuetzt_auf_regelwerk": 167,
+      "gilt_in_land": 281
+    },
+    "current": {
+      "gestuetzt_auf_regelwerk": 167,
+      "gilt_in_land": 281,
+      "triggers": 1130,
+      "erfordert": 1578
+    },
+    "delta": {
+      "triggers": 30,
+      "erfordert": 95,
+      "gestuetzt_auf_regelwerk": 0,
+      "gilt_in_land": 0
+    },
+    "by_start_label_with_review_run": [
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_label": "Bauteilgruppe",
+        "c": 95
+      },
+      {
+        "reltype": "TRIGGERS_REGULIERUNGSFRAGE",
+        "from_label": "Bauteilgruppe",
+        "c": 30
+      }
+    ],
+    "sample_paths": [
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_beton_boden_lycee_paving_slabs",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_materialpruefung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_beton_boden_lycee_paving_slabs",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_herkunfts_und_rueckbaudokumentation",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_beton_boden_lycee_paving_slabs",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_produktstatus_und_leistungserklaerung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_beton_mehrere_lycee_precast_channels",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_herkunfts_und_rueckbaudokumentation",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_beton_mehrere_lycee_precast_channels",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_materialpruefung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_beton_mehrere_lycee_precast_channels",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_produktstatus_und_leistungserklaerung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_gusseisen_technik_gussradiatoren_resilience",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_produktstatus_und_leistungserklaerung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_gusseisen_technik_gussradiatoren_resilience",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_materialpruefung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_gusseisen_technik_gussradiatoren_resilience",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_herkunfts_und_rueckbaudokumentation",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_ferme_fixed_cupboards",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_materialpruefung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_ferme_fixed_cupboards",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_produktstatus_und_leistungserklaerung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_ferme_fixed_cupboards",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_holzschutzmittel_check",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_ferme_fixed_cupboards",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_herkunfts_und_rueckbaudokumentation",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_lysp8_kitchens",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_materialpruefung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_lysp8_kitchens",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_produktstatus_und_leistungserklaerung",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_lysp8_kitchens",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_holzschutzmittel_check",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_ausbau_lysp8_kitchens",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_herkunfts_und_rueckbaudokumentation",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_boden_circl_window_frame_floor",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_holzschutzmittel_check",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_boden_circl_window_frame_floor",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_herkunfts_und_rueckbaudokumentation",
+        "to_label": "Nachweisforderung"
+      },
+      {
+        "reltype": "ERFORDERT_NACHWEIS",
+        "from_id": "bg_holz_boden_circl_window_frame_floor",
+        "from_label": "Bauteilgruppe",
+        "to_id": "nf_materialpruefung",
+        "to_label": "Nachweisforderung"
+      }
+    ]
+  },
+  "after": {
+    "nodes": 2287,
+    "relationships": 15393,
+    "distinct_node_keys": 71,
+    "distinct_rel_keys": 36,
+    "node_property_occurrences": 13006,
+    "rel_property_occurrences": 29798,
+    "avg_node_props": 5.687,
+    "avg_rel_props": 1.936
+  }
+}

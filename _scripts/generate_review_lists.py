@@ -33,13 +33,13 @@ def get_projects_context_from_neo4j():
     driver = GraphDatabase.driver(uri, auth=(user, pwd))
     
     query = """
-    MATCH (p:Projekt)
-    WHERE p.name IS NOT NULL
+    MATCH (p)
+    WHERE (p:Projekt OR p:Programm) AND p.name IS NOT NULL
     OPTIONAL MATCH (p)-[:LIEGT_IN_STADT]->(s:Stadt)
     OPTIONAL MATCH (p)-[:LIEGT_IN_LAND]->(l:Land)
     OPTIONAL MATCH (a:Akteur)-[:BETEILIGT_AN]->(p)
     OPTIONAL MATCH (p)-[:HAT_NUTZUNG]->(n:Nutzung)
-    RETURN p.id AS id, p.name AS name, s.name AS city, l.name AS country, 
+    RETURN p.id AS id, p.name AS name, s.name AS city, l.name AS country,
            collect(DISTINCT a.name) AS actors, collect(DISTINCT n.name) AS typologies
     """
     projects = []

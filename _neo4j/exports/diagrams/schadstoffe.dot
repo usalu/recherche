@@ -1,0 +1,304 @@
+// semio-appearance: light
+// semio-tokens: 93453c301839
+digraph recherche {
+  graph [ charset="UTF-8"
+         , size="32.31,22.59"
+         , margin=0.4
+         , fontname="Anta"
+         , overlap="prism", overlap_scaling=-6
+         , sep="+18", esep="+8", K=1.1
+         , start=1
+         , splines="true", concentrate=false, bgcolor="#F0ECDD"
+         , label="Schadstoffe im Bestand\nAlle direkt verbundenen Knoten", labelloc="t", labeljust="l"
+         , fontsize=9.6, fontcolor="#001117"
+  ];
+  node [ shape="box", style="filled", fontname="Anta", fontsize=9.6, penwidth=0.75, margin="0.10,0.05" ];
+  edge [ fontname="Anta", fontsize=7.2, penwidth=0.75, arrowsize=0.6, arrowhead="vee", color="#7B827D" ];
+
+  n0 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Schimmel / mikrobielle<BR ALIGN="LEFT"/>Kontamination</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Schimmel / mikrobielle Kontamination" ];
+  n1 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Nachweisforderung</FONT></TD></TR><TR><TD ALIGN="LEFT">Schadstoffpruefung</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Nachweisforderung: Schadstoffpruefung" ];
+  n2 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Regulierungsfrage</FONT></TD></TR><TR><TD ALIGN="LEFT">SchadstoffFrage</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Regulierungsfrage: SchadstoffFrage" ];
+  n3 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Finnland × Beton /<BR ALIGN="LEFT"/>hollow-core slabs<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Finnland × Beton / hollow-core slabs reuse rule" ];
+  n4 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Deutschland × Holz<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Deutschland × Holz reuse rule" ];
+  n5 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Niederlande × Holz<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Niederlande × Holz reuse rule" ];
+  n6 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Belgien × Holz reuse<BR ALIGN="LEFT"/>rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Belgien × Holz reuse rule" ];
+  n7 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Schweiz × Holz reuse<BR ALIGN="LEFT"/>rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Schweiz × Holz reuse rule" ];
+  n8 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Vereinigtes Königreich<BR ALIGN="LEFT"/>× Holz reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Vereinigtes Königreich × Holz reuse rule" ];
+  n9 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Deutschland × Lehm<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Deutschland × Lehm reuse rule" ];
+  n10 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Chloride</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Chloride" ];
+  n11 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Belgien × Beton reuse<BR ALIGN="LEFT"/>rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Belgien × Beton reuse rule" ];
+  n12 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Niederlande × Beton<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Niederlande × Beton reuse rule" ];
+  n13 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Deutschland × Beton<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Deutschland × Beton reuse rule" ];
+  n14 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Norwegen × Beton /<BR ALIGN="LEFT"/>hollow-core slabs<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Norwegen × Beton / hollow-core slabs reuse rule" ];
+  n15 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Mineraloel-<BR ALIGN="LEFT"/>/Oelkontamination</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Mineraloel-/Oelkontamination" ];
+  n16 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Schweiz × Beton reuse<BR ALIGN="LEFT"/>rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Schweiz × Beton reuse rule" ];
+  n17 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Belgien × Naturstein<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Belgien × Naturstein reuse rule" ];
+  n18 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Schweiz × Naturstein<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Schweiz × Naturstein reuse rule" ];
+  n19 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Salze (bauschaedlich)</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Salze (bauschaedlich)" ];
+  n20 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Deutschland × Ziegel<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Deutschland × Ziegel reuse rule" ];
+  n21 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">KMF — Künstliche<BR ALIGN="LEFT"/>Mineralfasern (alte<BR ALIGN="LEFT"/>Mineralwolle vor<BR ALIGN="LEFT"/>1996/2000)</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: KMF — Künstliche Mineralfasern (alte Mineralwolle vor 1996/2000)" ];
+  n22 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Daemmstoff</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Daemmstoff" ];
+  n23 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">BauwerkEra</FONT></TD></TR><TR><TD ALIGN="LEFT">1970–1990</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="BauwerkEra: 1970–1990" ];
+  n24 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">BauwerkEra</FONT></TD></TR><TR><TD ALIGN="LEFT">1990–2000</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="BauwerkEra: 1990–2000" ];
+  n25 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">K.118 Winterthur</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: K.118 Winterthur", penwidth=2.25 ];
+  n26 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">The Green House<BR ALIGN="LEFT"/>Utrecht</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: The Green House Utrecht", penwidth=2.25 ];
+  n27 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Formaldehyd (MDF /<BR ALIGN="LEFT"/>Spanplatten)</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Formaldehyd (MDF / Spanplatten)" ];
+  n28 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Holz</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Holz" ];
+  n29 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">MDF / mitteldichte<BR ALIGN="LEFT"/>Faserplatte</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: MDF / mitteldichte Faserplatte" ];
+  n30 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">BauwerkEra</FONT></TD></TR><TR><TD ALIGN="LEFT">Nachkrieg 1945–1970</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="BauwerkEra: Nachkrieg 1945–1970" ];
+  n31 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Nachweisforderung</FONT></TD></TR><TR><TD ALIGN="LEFT">FormaldehydOderEmissio<BR ALIGN="LEFT"/>nsnachweis</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Nachweisforderung: FormaldehydOderEmissionsnachweis" ];
+  n32 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">BlueCity Offices…</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: BlueCity Offices…", penwidth=2.25 ];
+  n33 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">House of Fraser</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: House of Fraser", penwidth=2.25 ];
+  n34 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">Liander</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: Liander", penwidth=2.25 ];
+  n35 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">Lo-Reninge Town Hall…</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: Lo-Reninge Town Hall…", penwidth=2.25 ];
+  n36 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">Timber Square London</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: Timber Square London", penwidth=2.25 ];
+  n37 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">UMAR Unit</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: UMAR Unit", penwidth=2.25 ];
+  n38 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Schwermetalle (Pb, Cd,<BR ALIGN="LEFT"/>Hg, Cr) in<BR ALIGN="LEFT"/>Beschichtungen /<BR ALIGN="LEFT"/>Laborbauten</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Schwermetalle (Pb, Cd, Hg, Cr) in Beschichtungen / Laborbauten" ];
+  n39 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Aluminium</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Aluminium" ];
+  n40 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Keramik</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Keramik" ];
+  n41 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Stahl</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Stahl" ];
+  n42 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Nachweisforderung</FONT></TD></TR><TR><TD ALIGN="LEFT">SchwermetallOderBleifa<BR ALIGN="LEFT"/>rbeCheck</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Nachweisforderung: SchwermetallOderBleifarbeCheck" ];
+  n43 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Vereinigtes Königreich<BR ALIGN="LEFT"/>× Stahl reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Vereinigtes Königreich × Stahl reuse rule" ];
+  n44 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Belgien × Stahl reuse<BR ALIGN="LEFT"/>rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Belgien × Stahl reuse rule" ];
+  n45 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Deutschland × Stahl<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Deutschland × Stahl reuse rule" ];
+  n46 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Niederlande × Stahl<BR ALIGN="LEFT"/>reuse rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Niederlande × Stahl reuse rule" ];
+  n47 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">ReuseRule</FONT></TD></TR><TR><TD ALIGN="LEFT">Schweiz × Stahl reuse<BR ALIGN="LEFT"/>rule</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="ReuseRule: Schweiz × Stahl reuse rule" ];
+  n48 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Radon</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Radon" ];
+  n49 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Asbest</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Asbest" ];
+  n50 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Bitumen</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Bitumen" ];
+  n51 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Faserzement / Eternit</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Faserzement / Eternit" ];
+  n52 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Dach</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Dach" ];
+  n53 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Daemmung</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Daemmung" ];
+  n54 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">BauwerkEra</FONT></TD></TR><TR><TD ALIGN="LEFT">1900–1945</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="BauwerkEra: 1900–1945" ];
+  n55 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Nachweisforderung</FONT></TD></TR><TR><TD ALIGN="LEFT">AsbestCheck</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Nachweisforderung: AsbestCheck" ];
+  n56 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">Europa Building<BR ALIGN="LEFT"/>Brussels</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: Europa Building Brussels", penwidth=2.25 ];
+  n57 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">Ferme du Rail Paris</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: Ferme du Rail Paris", penwidth=2.25 ];
+  n58 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">ELEMENTA Walkeweg</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: ELEMENTA Walkeweg", penwidth=2.25 ];
+  n59 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteilgruppe</FONT></TD></TR><TR><TD ALIGN="LEFT">ELEMENTA Baufeld C</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteilgruppe: ELEMENTA Baufeld C" ];
+  n60 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteilgruppe</FONT></TD></TR><TR><TD ALIGN="LEFT">ELEMENTA Baufeld D</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteilgruppe: ELEMENTA Baufeld D" ];
+  n61 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Bleifarbe</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Bleifarbe" ];
+  n62 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Fenster</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Fenster" ];
+  n63 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Traeger</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Traeger" ];
+  n64 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Tuer</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Tuer" ];
+  n65 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">BauwerkEra</FONT></TD></TR><TR><TD ALIGN="LEFT">vor 1900</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="BauwerkEra: vor 1900" ];
+  n66 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">Holzschutzmittel</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: Holzschutzmittel" ];
+  n67 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Nachweisforderung</FONT></TD></TR><TR><TD ALIGN="LEFT">HolzschutzmittelCheck</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Nachweisforderung: HolzschutzmittelCheck" ];
+  n68 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">PAK</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: PAK" ];
+  n69 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Boden</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Boden" ];
+  n70 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Fundament</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Fundament" ];
+  n71 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Schadstoff</FONT></TD></TR><TR><TD ALIGN="LEFT">PCB</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Schadstoff: PCB" ];
+  n72 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Kunststoff</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Kunststoff" ];
+  n73 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Material</FONT></TD></TR><TR><TD ALIGN="LEFT">Stahlbeton</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Material: Stahlbeton" ];
+  n74 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#6B736F">Bauteiltyp</FONT></TD></TR><TR><TD ALIGN="LEFT">Fassade</TD></TR></TABLE>>, fillcolor="#EEEADB", color="#7B827D", fontcolor="#001117", tooltip="Bauteiltyp: Fassade" ];
+  n75 [ label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD ALIGN="LEFT"><FONT POINT-SIZE="7.2" COLOR="#FB9DA0">Projekt</FONT></TD></TR><TR><TD ALIGN="LEFT">Montessori Maassluis</TD></TR></TABLE>>, fillcolor="#FF344F", color="#FF344F", fontcolor="#F7F3E3", tooltip="Projekt: Montessori Maassluis", penwidth=2.25 ];
+
+  n0 -> n1 [ color="#7B827D" ];
+  n0 -> n2 [ color="#7B827D" ];
+  n3 -> n0 [ color="#7B827D" ];
+  n4 -> n0 [ color="#7B827D" ];
+  n5 -> n0 [ color="#7B827D" ];
+  n6 -> n0 [ color="#7B827D" ];
+  n7 -> n0 [ color="#7B827D" ];
+  n8 -> n0 [ color="#7B827D" ];
+  n9 -> n0 [ color="#7B827D" ];
+  n10 -> n1 [ color="#7B827D" ];
+  n10 -> n2 [ color="#7B827D" ];
+  n11 -> n10 [ color="#7B827D" ];
+  n12 -> n10 [ color="#7B827D" ];
+  n13 -> n10 [ color="#7B827D" ];
+  n3 -> n10 [ color="#7B827D" ];
+  n14 -> n10 [ color="#7B827D" ];
+  n15 -> n1 [ color="#7B827D" ];
+  n15 -> n2 [ color="#7B827D" ];
+  n11 -> n15 [ color="#7B827D" ];
+  n12 -> n15 [ color="#7B827D" ];
+  n16 -> n15 [ color="#7B827D" ];
+  n17 -> n15 [ color="#7B827D" ];
+  n18 -> n15 [ color="#7B827D" ];
+  n19 -> n1 [ color="#7B827D" ];
+  n19 -> n2 [ color="#7B827D" ];
+  n17 -> n19 [ color="#7B827D" ];
+  n18 -> n19 [ color="#7B827D" ];
+  n20 -> n19 [ color="#7B827D" ];
+  n9 -> n19 [ color="#7B827D" ];
+  n21 -> n22 [ color="#7B827D" ];
+  n21 -> n23 [ color="#7B827D" ];
+  n21 -> n24 [ color="#7B827D" ];
+  n21 -> n1 [ color="#7B827D" ];
+  n21 -> n2 [ color="#7B827D" ];
+  n25 -> n21 [ color="#7B827D" ];
+  n26 -> n21 [ color="#7B827D" ];
+  n27 -> n28 [ color="#7B827D" ];
+  n27 -> n29 [ color="#7B827D" ];
+  n27 -> n30 [ color="#7B827D" ];
+  n27 -> n31 [ color="#7B827D" ];
+  n27 -> n2 [ color="#7B827D" ];
+  n4 -> n27 [ color="#7B827D" ];
+  n5 -> n27 [ color="#7B827D" ];
+  n7 -> n27 [ color="#7B827D" ];
+  n32 -> n27 [ color="#7B827D" ];
+  n33 -> n27 [ color="#7B827D" ];
+  n34 -> n27 [ color="#7B827D" ];
+  n35 -> n27 [ color="#7B827D" ];
+  n36 -> n27 [ color="#7B827D" ];
+  n37 -> n27 [ color="#7B827D" ];
+  n38 -> n39 [ color="#7B827D" ];
+  n38 -> n28 [ color="#7B827D" ];
+  n38 -> n40 [ color="#7B827D" ];
+  n38 -> n41 [ color="#7B827D" ];
+  n38 -> n42 [ color="#7B827D" ];
+  n38 -> n2 [ color="#7B827D" ];
+  n43 -> n38 [ color="#7B827D" ];
+  n44 -> n38 [ color="#7B827D" ];
+  n45 -> n38 [ color="#7B827D" ];
+  n46 -> n38 [ color="#7B827D" ];
+  n47 -> n38 [ color="#7B827D" ];
+  n48 -> n1 [ color="#7B827D" ];
+  n48 -> n2 [ color="#7B827D" ];
+  n49 -> n22 [ color="#7B827D" ];
+  n49 -> n50 [ color="#7B827D" ];
+  n49 -> n51 [ color="#7B827D" ];
+  n49 -> n52 [ color="#7B827D" ];
+  n49 -> n53 [ color="#7B827D" ];
+  n49 -> n54 [ color="#7B827D" ];
+  n49 -> n30 [ color="#7B827D" ];
+  n49 -> n23 [ color="#7B827D" ];
+  n49 -> n55 [ color="#7B827D" ];
+  n49 -> n2 [ color="#7B827D" ];
+  n56 -> n49 [ color="#7B827D" ];
+  n57 -> n49 [ color="#7B827D" ];
+  n25 -> n49 [ color="#7B827D" ];
+  n26 -> n49 [ color="#7B827D" ];
+  n58 -> n49 [ color="#7B827D" ];
+  n59 -> n49 [ color="#7B827D" ];
+  n60 -> n49 [ color="#7B827D" ];
+  n43 -> n49 [ color="#7B827D" ];
+  n44 -> n49 [ color="#7B827D" ];
+  n45 -> n49 [ color="#7B827D" ];
+  n46 -> n49 [ color="#7B827D" ];
+  n47 -> n49 [ color="#7B827D" ];
+  n11 -> n49 [ color="#7B827D" ];
+  n12 -> n49 [ color="#7B827D" ];
+  n13 -> n49 [ color="#7B827D" ];
+  n16 -> n49 [ color="#7B827D" ];
+  n3 -> n49 [ color="#7B827D" ];
+  n14 -> n49 [ color="#7B827D" ];
+  n4 -> n49 [ color="#7B827D" ];
+  n5 -> n49 [ color="#7B827D" ];
+  n6 -> n49 [ color="#7B827D" ];
+  n7 -> n49 [ color="#7B827D" ];
+  n17 -> n49 [ color="#7B827D" ];
+  n18 -> n49 [ color="#7B827D" ];
+  n8 -> n49 [ color="#7B827D" ];
+  n20 -> n49 [ color="#7B827D" ];
+  n9 -> n49 [ color="#7B827D" ];
+  n61 -> n39 [ color="#7B827D" ];
+  n61 -> n28 [ color="#7B827D" ];
+  n61 -> n41 [ color="#7B827D" ];
+  n61 -> n62 [ color="#7B827D" ];
+  n61 -> n63 [ color="#7B827D" ];
+  n61 -> n64 [ color="#7B827D" ];
+  n61 -> n65 [ color="#7B827D" ];
+  n61 -> n54 [ color="#7B827D" ];
+  n61 -> n42 [ color="#7B827D" ];
+  n61 -> n2 [ color="#7B827D" ];
+  n43 -> n61 [ color="#7B827D" ];
+  n44 -> n61 [ color="#7B827D" ];
+  n45 -> n61 [ color="#7B827D" ];
+  n46 -> n61 [ color="#7B827D" ];
+  n4 -> n61 [ color="#7B827D" ];
+  n5 -> n61 [ color="#7B827D" ];
+  n6 -> n61 [ color="#7B827D" ];
+  n7 -> n61 [ color="#7B827D" ];
+  n8 -> n61 [ color="#7B827D" ];
+  n66 -> n28 [ color="#7B827D" ];
+  n66 -> n30 [ color="#7B827D" ];
+  n66 -> n23 [ color="#7B827D" ];
+  n66 -> n67 [ color="#7B827D" ];
+  n66 -> n2 [ color="#7B827D" ];
+  n4 -> n66 [ color="#7B827D" ];
+  n5 -> n66 [ color="#7B827D" ];
+  n6 -> n66 [ color="#7B827D" ];
+  n7 -> n66 [ color="#7B827D" ];
+  n8 -> n66 [ color="#7B827D" ];
+  n32 -> n66 [ color="#7B827D" ];
+  n33 -> n66 [ color="#7B827D" ];
+  n34 -> n66 [ color="#7B827D" ];
+  n35 -> n66 [ color="#7B827D" ];
+  n36 -> n66 [ color="#7B827D" ];
+  n37 -> n66 [ color="#7B827D" ];
+  n68 -> n28 [ color="#7B827D" ];
+  n68 -> n50 [ color="#7B827D" ];
+  n68 -> n69 [ color="#7B827D" ];
+  n68 -> n52 [ color="#7B827D" ];
+  n68 -> n70 [ color="#7B827D" ];
+  n68 -> n1 [ color="#7B827D" ];
+  n68 -> n2 [ color="#7B827D" ];
+  n32 -> n68 [ color="#7B827D" ];
+  n33 -> n68 [ color="#7B827D" ];
+  n34 -> n68 [ color="#7B827D" ];
+  n35 -> n68 [ color="#7B827D" ];
+  n36 -> n68 [ color="#7B827D" ];
+  n37 -> n68 [ color="#7B827D" ];
+  n58 -> n68 [ color="#7B827D" ];
+  n68 -> n65 [ color="#7B827D" ];
+  n68 -> n54 [ color="#7B827D" ];
+  n68 -> n30 [ color="#7B827D" ];
+  n59 -> n68 [ color="#7B827D" ];
+  n60 -> n68 [ color="#7B827D" ];
+  n43 -> n68 [ color="#7B827D" ];
+  n44 -> n68 [ color="#7B827D" ];
+  n45 -> n68 [ color="#7B827D" ];
+  n46 -> n68 [ color="#7B827D" ];
+  n47 -> n68 [ color="#7B827D" ];
+  n11 -> n68 [ color="#7B827D" ];
+  n12 -> n68 [ color="#7B827D" ];
+  n13 -> n68 [ color="#7B827D" ];
+  n16 -> n68 [ color="#7B827D" ];
+  n3 -> n68 [ color="#7B827D" ];
+  n14 -> n68 [ color="#7B827D" ];
+  n17 -> n68 [ color="#7B827D" ];
+  n18 -> n68 [ color="#7B827D" ];
+  n20 -> n68 [ color="#7B827D" ];
+  n71 -> n72 [ color="#7B827D" ];
+  n71 -> n73 [ color="#7B827D" ];
+  n71 -> n74 [ color="#7B827D" ];
+  n71 -> n62 [ color="#7B827D" ];
+  n71 -> n30 [ color="#7B827D" ];
+  n71 -> n23 [ color="#7B827D" ];
+  n71 -> n1 [ color="#7B827D" ];
+  n71 -> n2 [ color="#7B827D" ];
+  n33 -> n71 [ color="#7B827D" ];
+  n75 -> n71 [ color="#7B827D" ];
+  n36 -> n71 [ color="#7B827D" ];
+  n43 -> n71 [ color="#7B827D" ];
+  n44 -> n71 [ color="#7B827D" ];
+  n45 -> n71 [ color="#7B827D" ];
+  n46 -> n71 [ color="#7B827D" ];
+  n47 -> n71 [ color="#7B827D" ];
+  n11 -> n71 [ color="#7B827D" ];
+  n12 -> n71 [ color="#7B827D" ];
+  n13 -> n71 [ color="#7B827D" ];
+  n16 -> n71 [ color="#7B827D" ];
+  n3 -> n71 [ color="#7B827D" ];
+  n14 -> n71 [ color="#7B827D" ];
+
+  subgraph cluster_legend {
+    label=""; color="#7B827D"; penwidth=0.75; style="solid"; margin=0;
+    legend [ shape=none, margin=0, fillcolor="#F0ECDD", style="filled", fontname="Anta", label=<
+    <TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4">
+      <TR><TD COLSPAN="2" ALIGN="LEFT" BGCOLOR="#C9C8BD"><FONT POINT-SIZE="7.2" COLOR="#001117">Verzeichnis der Arten</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauteilgruppe</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">2</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Bauteiltyp</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">8</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">BauwerkEra</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">5</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Material</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">10</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Nachweisforderung</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">5</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Projekt</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">12</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Regulierungsfrage</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">1</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">ReuseRule</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">20</FONT></TD></TR>
+      <TR><TD ALIGN="LEFT"><FONT COLOR="#001117">Schadstoff</FONT></TD><TD ALIGN="RIGHT"><FONT FACE="Share Tech Mono" COLOR="#7B827D">13</FONT></TD></TR>
+      <TR><TD COLSPAN="2" ALIGN="LEFT"><FONT FACE="Share Tech Mono" POINT-SIZE="7.2" COLOR="#7B827D">mit-bestand · 76 · 190 · 2026-08-05 17:14 UTC</FONT></TD></TR>
+    </TABLE>
+    > ];
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "anchor_id": "gebruiktebouwmaterialen",
+  "sources_visited": [
+    {
+      "url": "https://gebruiktebouwmaterialen.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://gebruiktebouwmaterialen.com/over-ons",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://gebruiktebouwmaterialen.com/assortiment.html",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://madaster.com/inspiration/madaster-and-gebruiktebouwmaterialen-com-collaborate-on-the-reuse-of-building-materials/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Category list explicitly includes Hout, Houten Balken, Planken, Vloerdelen and Dakbeschot.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Front-page categories include Isolatie.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_kunststoff",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Ramen & Kozijnen subcategories include Kunststof.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_aluminium",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Ramen & Kozijnen and door subcategories include Aluminium.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Window and glass-door categories imply glazing; item-level page needed for exact glass material.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Category list explicitly includes Deuren, Buitendeuren, Binnendeuren and doors with frames.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Category list explicitly includes Ramen & Kozijnen.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Category list explicitly includes Isolatie.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Platen & Panelen / Gips categories map to wall/panel components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Dakramen and Dakbeschot categories map to roof/skin components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://gebruiktebouwmaterialen.com/"
+      ],
+      "evidence_quote": "Hang en Sluitwerk and Bevestigingsmaterialen map to interior fit-out/hardware.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://madaster.com/inspiration/madaster-and-gebruiktebouwmaterialen-com-collaborate-on-the-reuse-of-building-materials/"
+      ],
+      "evidence_quote": "Secondary source states Madaster cooperation around reuse/material passports.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "madaster",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Gebruiktebouwmaterialen.com",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://gebruiktebouwmaterialen.com/",
+      "https://gebruiktebouwmaterialen.com/over-ons"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung node",
+      "reason": "Resolve Madaster/material_pass target node before import."
+    }
+  ],
+  "run_notes": []
+}

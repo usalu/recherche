@@ -1,0 +1,422 @@
+{
+  "confirmation_required": "APPLY phase2_new_nodes.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "counts_before": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-06-05T21:36:32.140391+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\patches\\phase2_new_nodes.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "id": "software_planular",
+          "name": "Planular",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "id": "software_planular",
+          "name": "Planular",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "software_planular",
+      "line": 1,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "software_planular",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_b56f2c6f1a86dfe463f893b8fb2d170e"
+    },
+    {
+      "after": {
+        "labels": [
+          "Tool"
+        ],
+        "properties": {
+          "id": "tool_swiss_inv",
+          "name": "Swiss Inv",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Tool"
+        ],
+        "properties": {
+          "id": "tool_swiss_inv",
+          "name": "Swiss Inv",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "tool_swiss_inv",
+      "line": 3,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "tool_swiss_inv",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_11b57832bab34bc803b1c474d947a234"
+    },
+    {
+      "after": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "id": "software_cirkla_scan",
+          "name": "Cirkla-Scan",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Software"
+        ],
+        "properties": {
+          "id": "software_cirkla_scan",
+          "name": "Cirkla-Scan",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "software_cirkla_scan",
+      "line": 5,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "software_cirkla_scan",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_528ffcc17d3c369417c9abab94af6b98"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "id": "prog_swircular",
+          "name": "SWIRCULAR",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "id": "prog_swircular",
+          "name": "SWIRCULAR",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "prog_swircular",
+      "line": 7,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "prog_swircular",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_c39ea839ce817e1f9072b736908392e8"
+    },
+    {
+      "after": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "id": "prog_innosuisse_reuse_legal_framework_ch",
+          "name": "Innosuisse legal framework for reuse (CH)",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Programm"
+        ],
+        "properties": {
+          "id": "prog_innosuisse_reuse_legal_framework_ch",
+          "name": "Innosuisse legal framework for reuse (CH)",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "prog_innosuisse_reuse_legal_framework_ch",
+      "line": 9,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "prog_innosuisse_reuse_legal_framework_ch",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_991a5f7d46f61c5f40b414f95b3ae0ca"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "c33_circular_construction_catalyst",
+          "name": "Circular Construction Catalyst 2033",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "c33_circular_construction_catalyst",
+          "name": "Circular Construction Catalyst 2033",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "c33_circular_construction_catalyst",
+      "line": 11,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "c33_circular_construction_catalyst",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_f80ca2b99c0cb9b46f719fb00ae326a6"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "circular_hub_zurich",
+          "name": "Circular Hub Zürich",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "circular_hub_zurich",
+          "name": "Circular Hub Zürich",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "circular_hub_zurich",
+      "line": 13,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "circular_hub_zurich",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_7c730743b296bdd420bc6620a934abd3"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "circular_economy_switzerland",
+          "name": "Circular Economy Switzerland",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "circular_economy_switzerland",
+          "name": "Circular Economy Switzerland",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "circular_economy_switzerland",
+      "line": 15,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "circular_economy_switzerland",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_c548063354ab44a89c5261a82d0248ff"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sumami",
+          "name": "Sumami",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sumami",
+          "name": "Sumami",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        }
+      },
+      "id": "sumami",
+      "line": 17,
+      "op": "add_node",
+      "status": "noop_existing"
+    },
+    {
+      "from": "sumami",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_cd3db9f4a762545b641a904785da349e"
+    },
+    {
+      "from": "cirkla",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_cirkla_scan"
+    },
+    {
+      "from": "cirkla",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "tool_swiss_inv"
+    },
+    {
+      "from": "zirkular",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_planular"
+    },
+    {
+      "from": "eth_zuerich",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "prog_swircular"
+    },
+    {
+      "from": "zirkular",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "prog_innosuisse_reuse_legal_framework_ch"
+    },
+    {
+      "from": "baubuero_in_situ",
+      "line": 24,
+      "op": "add_rel",
+      "rel_type": "BETEILIGT_AN",
+      "status": "noop_existing_rel",
+      "to": "prog_innosuisse_reuse_legal_framework_ch"
+    },
+    {
+      "from": "sumami",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "noop_existing_rel",
+      "to": "q_url_422166f604d091d32cff814ca59194f2"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing": 9,
+    "noop_existing_rel": 16,
+    "records": 25
+  }
+}

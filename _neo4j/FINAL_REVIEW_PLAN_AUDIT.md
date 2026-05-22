@@ -8,6 +8,15 @@
 - **Raw results:** [stage_4_audit_results.json](intake/runs/2026-05-21_review_based_plan/stage_4_integration/logs/stage_4_audit_results.json)
 - **Verdict:** **PASS WITH RESIDUALS** (8 residual `:DataIssue` kinds, all tracked; tier-1 cohort survived honest gate but with caveats — see §4)
 
+> **2026-06-01 advisory (post project reuse-focus cleanup of 2026-05-31):**
+> project-level entities are now split across `:Projekt` (86 nodes — built
+> reuse projects), `:Programm` (29 nodes — research / funded programmes;
+> gained 6 from a 2026-05-31 `:Projekt` strip), `:Tool` / `:Software`, and
+> `:Marktmodell`. Audit gates that test `MATCH (p:Projekt)` continue to be
+> valid as-is for built-reuse coverage. For programme coverage, run sibling
+> queries with `MATCH (p:Programm)`. Cleanup ledger:
+> [`_neo4j/review/2026-05-31_project_reuse_focus_cleanup/MANUAL_REVIEW_CHECKPOINT.md`](review/2026-05-31_project_reuse_focus_cleanup/MANUAL_REVIEW_CHECKPOINT.md).
+
 ---
 
 ## 0. Headline numbers

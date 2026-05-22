@@ -1,0 +1,203 @@
+{
+  "run": "2026-06-05_swiss_reuse_bubble",
+  "review_run": "swiss_reuse_bubble_2026_06_05",
+  "baseline_source": "2026-06-03_graph_schema_full_export_mit-bestand",
+  "live_neo4j_verified": true,
+  "applied_at_utc": "2026-06-05T21:36:00Z",
+  "note": "Fill after running CONNECTIVITY_TESTS.cypher against mit-bestand",
+  "baseline": {
+    "T0_1_cirkla_verbunden_degree": 2,
+    "T0_1_neighbors": [
+      "urban_bricolage",
+      "pascal_flammer_architekten"
+    ],
+    "T0_2_cirkla_belegt_in_count": 2,
+    "T0_3_k118_baubuero_rel": "BELEGT_IN_only_no_BETEILIGT_AN",
+    "T0_3_k118_zirkular_rel": "STUB_PROJECT_LINK",
+    "T0_3_k118_zirkular_stub_id": "r_zirkular__assoziiert_mit_projekt__p_k118_kopfbau_halle_118_winterthur",
+    "T0_4_elys_zirkular_rel": "STUB_PROJECT_LINK"
+  },
+  "post_phase": {
+    "phase0": null,
+    "phase1": {
+      "target_cirkla_degree_min": 8,
+      "target_k118_beteiligt_an": [
+        "baubuero_in_situ",
+        "zirkular"
+      ]
+    },
+    "phase2": null,
+    "phase3": {
+      "target_gruner_basal_useagain_path": true
+    }
+  },
+  "commit": false,
+  "database": "mit-bestand",
+  "generated_at_utc": "2026-06-05T21:36:22.602399+00:00",
+  "phases": [
+    {
+      "phase": "phase0_sources_and_dossier.patch.jsonl",
+      "dry_run": true,
+      "summary": {
+        "records": 39,
+        "load_errors": 0,
+        "noop_existing": 39
+      },
+      "counts_before": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "counts_after_actual": null,
+      "counts_after_expected": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase1_enrichment_connectivity.patch.jsonl",
+      "dry_run": true,
+      "summary": {
+        "records": 34,
+        "load_errors": 0,
+        "noop_existing_rel": 32,
+        "noop_missing": 2
+      },
+      "counts_before": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "counts_after_actual": null,
+      "counts_after_expected": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase1_enrichment_connectivity.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase1_enrichment_connectivity.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase2_new_nodes.patch.jsonl",
+      "dry_run": true,
+      "summary": {
+        "records": 25,
+        "load_errors": 0,
+        "noop_existing": 9,
+        "noop_existing_rel": 16
+      },
+      "counts_before": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "counts_after_actual": null,
+      "counts_after_expected": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase2_new_nodes.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase2_new_nodes.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase3_supply_chain.patch.jsonl",
+      "dry_run": true,
+      "summary": {
+        "records": 12,
+        "load_errors": 0,
+        "noop_existing_rel": 12
+      },
+      "counts_before": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "counts_after_actual": null,
+      "counts_after_expected": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase3_supply_chain.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\apply_reports\\phase3_supply_chain.patch.apply_report.md"
+      ]
+    }
+  ],
+  "counts_before": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "connectivity_before": {
+    "T0_1_cirkla_degree": {
+      "value": 14,
+      "neighbors": [
+        "c33_circular_construction_catalyst",
+        "circular_hub_zurich",
+        "circular_economy_switzerland",
+        "baubuero_in_situ",
+        "bauteilladen_winterthur",
+        "zirkular",
+        "materiuum",
+        "urban_bricolage",
+        "pascal_flammer_architekten",
+        "wick_reuse_roto_baumarkt",
+        "reuzi_ch",
+        "gruner_reuse_platform",
+        "salza",
+        "useagain_bauteilclick"
+      ]
+    },
+    "T0_2_cirkla_belegt_in": 4,
+    "T1_k118_beteiligt": [
+      "baubuero_in_situ",
+      "stiftung_abendrot",
+      "zhaw_ike",
+      "oberli_ingenieurbau",
+      "josef_kolb_ag",
+      "wetter_ag",
+      "zirkular"
+    ],
+    "T2_gruner_useagain_path": 1,
+    "T3_bubble_edges": 58
+  },
+  "counts_after": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "connectivity_after": {
+    "T0_1_cirkla_degree": {
+      "value": 14,
+      "neighbors": [
+        "c33_circular_construction_catalyst",
+        "circular_hub_zurich",
+        "circular_economy_switzerland",
+        "baubuero_in_situ",
+        "bauteilladen_winterthur",
+        "zirkular",
+        "materiuum",
+        "urban_bricolage",
+        "pascal_flammer_architekten",
+        "wick_reuse_roto_baumarkt",
+        "reuzi_ch",
+        "gruner_reuse_platform",
+        "salza",
+        "useagain_bauteilclick"
+      ]
+    },
+    "T0_2_cirkla_belegt_in": 4,
+    "T1_k118_beteiligt": [
+      "baubuero_in_situ",
+      "stiftung_abendrot",
+      "zhaw_ike",
+      "oberli_ingenieurbau",
+      "josef_kolb_ag",
+      "wetter_ag",
+      "zirkular"
+    ],
+    "T2_gruner_useagain_path": 1,
+    "T3_bubble_edges": 58
+  }
+}

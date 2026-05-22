@@ -1,0 +1,136 @@
+# Candidate list for the 2026-05-31 reuse-project graph cleanup dry run.
+# Resolution order: id → name (case-insensitive) → aliases → fuzzy CONTAINS.
+# `notes` carries the user's stated intent so the decision step can keep it in context.
+
+# ---- Conditional removal candidates ----
+- name: "Circle House"
+  notes: "Remove unless graph evidence proves reclaimed components."
+
+- name: "Eggshell Pavilion ETH MAS DFAB 2022"
+  aliases:
+    - "Eggshell Pavilion"
+    - "MAS DFAB Eggshell"
+  notes: "Remove unless graph evidence proves reclaimed components."
+
+- name: "Granby Workshop Liverpool"
+  aliases:
+    - "Granby Workshop"
+    - "Assemble + Granby 4 Streets CLT"
+    - "Granby 4 Streets"
+  notes: "Remove unless graph evidence proves reclaimed components."
+
+- name: "OBK 27"
+  id: "p_obk_27"
+  notes: "Remove unless graph evidence proves reclaimed components."
+
+- name: "Up Sticks Dundee ETH MAS DFAB 2019"
+  aliases:
+    - "Up Sticks Dundee"
+    - "Up Sticks"
+  notes: "Remove unless graph evidence proves reclaimed components."
+
+# ---- Must-keep candidates (status alone is not a removal reason) ----
+- name: "Big Dig Building"
+  aliases:
+    - "Big Dig Building Boston"
+    - "Big Dig Building Cambridge"
+  notes: "Do NOT remove for planned/proposed status; keep if reclaimed-component intent."
+
+- name: "Roots in the Sky"
+  aliases:
+    - "Blackfriars Crown Court"
+    - "Roots in the Sky Blackfriars"
+  notes: "Do NOT remove for planned/proposed status; keep if reclaimed-component intent."
+
+# ---- Reclassify candidates (programme / tool / method / platform) ----
+- name: "FCRBE"
+  aliases:
+    - "Interreg NWE FCRBE"
+    - "Facilitating the Circulation of Reclaimed Building Elements"
+  notes: "Likely Programm."
+
+- name: "REFAIR Bordeaux"
+  aliases:
+    - "REFAIR"
+    - "REFAIR reuse platform"
+  notes: "Likely platform/tool/programme — Programm if funded, else Tool or Marktmodell."
+
+- name: "RCMI"
+  aliases:
+    - "Concular blueprint"
+    - "Concular"
+  notes: "Likely method/blueprint/process — Methode (label exists)."
+
+- name: "RE-USE Höfe"
+  aliases:
+    - "RE_USE Höfe Wien"
+    - "REUSE Yards"
+    - "RE-USE Hoefe"
+  notes: "Likely pilot/process/research → Programm."
+
+- name: "REBRIDGE"
+  aliases:
+    - "REBRIDGE structural reuse project"
+    - "ReBridge"
+  notes: "Keep as reuse research/prototype; Programm or Projekt."
+
+- name: "MedUni Campus Mariannengasse"
+  aliases:
+    - "MedUni Vienna Campus Mariannengasse"
+    - "Campus Mariannengasse"
+  notes: "Donor-side / pre-demolition harvesting — keep as Projekt (donor building)."
+
+- name: "Stuttgart 210"
+  aliases:
+    - "Stuttgart 21 reuse"
+    - "Stuttgart 210 weiterdenken weiterbauen"
+  notes: "Research/living-lab umbrella → Programm (likely already done)."
+
+- name: "Reallabor B(e) Ware"
+  aliases:
+    - "Reallabor BeWare"
+    - "Reallabor Be Ware"
+    - "Reallabor B e Ware"
+  notes: "Research/living lab → Programm; deduplicate."
+
+- name: "Careno Be.Circular"
+  aliases:
+    - "Careno BeCircular"
+    - "Careno"
+  notes: "Reclaimed-tile product/material R&D. open_decision: Material vs Tool vs keep as Projekt."
+
+- name: "UMAR Unit"
+  aliases:
+    - "UMAR Empa"
+    - "UMAR Werner Sobek"
+  notes: "Keep if graph shows reused components (e.g., Jules Wabbes handles)."
+
+# ---- Merge / de-duplicate candidates ----
+- name: "ETH Circular Construction"
+  aliases:
+    - "ETH Circular Construction student reuse demonstrator"
+    - "ETH Circular Construction news"
+    - "ETH Circular Construction student reuse project"
+  notes: "Dedup: news + student variants → canonical student reuse project."
+
+- name: "LYSP8"
+  aliases:
+    - "LysP8"
+    - "LysBüchelStrasse 8"
+    - "LysBuechelStrasse 8"
+    - "Lys Büchel Strasse 8"
+    - "LysP8 LysBüchelStrasse 8 Reuse Pilot Basel"
+  notes: "Merge variants → canonical LysP8 — LysBüchelStrasse 8 Reuse Pilot Basel."
+
+- name: "Pavilion Circl Amsterdam"
+  aliases:
+    - "Circl Pavilion"
+    - "Circl Amsterdam"
+    - "ABN AMRO Circl"
+  notes: "Merge into Circl / ABN AMRO urban mining context."
+
+- name: "Circl ABN AMRO"
+  aliases:
+    - "Circl"
+    - "ABN AMRO Circl"
+  notes: "Canonical for Pavilion Circl Amsterdam merge target."

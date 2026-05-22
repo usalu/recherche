@@ -1,0 +1,114 @@
+{
+  "anchor_id": "materialrest24",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen",
+      "http_status": null,
+      "first_party": false,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L159-L164",
+      "evidence_excerpt": "Materialrest24 unterteilt 15 Kategorien: Dach, Trockenbau, Befestigungsmaterial, Holz, Baustoffe, Zubehör, Werkzeug & Maschinen, Baustelleneinrichtung, Sanitär & Heizung, Fliesen, Bauelemente, Metallbau, Garten- und Landschaftsbau, Elektronik und Sonstiges."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen"
+      ],
+      "evidence_quote": "Category list includes “Holz”.",
+      "confidence": "unsicher",
+      "note": "Third-party but specific to Materialrest24 category list.",
+      "source_line_ref": "L159-L164"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen"
+      ],
+      "evidence_quote": "Category list includes “Dach”.",
+      "confidence": "unsicher",
+      "note": "Third-party category evidence; first-party source still preferable before final graph import.",
+      "source_line_ref": "L159-L164"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen"
+      ],
+      "evidence_quote": "Category list includes “Trockenbau”.",
+      "confidence": "unsicher",
+      "note": "Third-party category evidence; first-party source still preferable before final graph import.",
+      "source_line_ref": "L159-L164"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen"
+      ],
+      "evidence_quote": "Category list includes “Sanitär & Heizung; Elektronik”.",
+      "confidence": "unsicher",
+      "note": "Third-party category evidence; first-party source still preferable before final graph import.",
+      "source_line_ref": "L159-L164"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen"
+      ],
+      "evidence_quote": "Category list includes “Bauelemente; Befestigungsmaterial”.",
+      "confidence": "unsicher",
+      "note": "Third-party category evidence; first-party source still preferable before final graph import.",
+      "source_line_ref": "L159-L164"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "first-party line-level material/category page",
+      "reason": "some useful evidence was from search extract or third-party source; keep manual review before automatic import"
+    }
+  ],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "materialrest24",
+      "claim_type": "Material",
+      "target_id": "mat_keramik",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Haustec article on Materialrest24 categories",
+      "source_url": "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen",
+      "source_line_ref": "",
+      "source_excerpt_short": "Fliesen",
+      "rejection_reason": "Do not import mat_keramik from “Fliesen” unless strict crosswalk accepts tile=>ceramic; source does not explicitly say Keramik.",
+      "pass_name": "continuation_3_final_evidence_check"
+    },
+    {
+      "anchor_id": "materialrest24",
+      "claim_type": "Material",
+      "target_id": "mat_stahl",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Haustec article on Materialrest24 categories",
+      "source_url": "https://www.haustec.de/management/betriebsfuehrung/wie-sie-materialreste-ueber-das-internet-verwerten-koennen",
+      "source_line_ref": "",
+      "source_excerpt_short": "Metallbau",
+      "rejection_reason": "Generic metal construction does not prove steel.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

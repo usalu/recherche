@@ -1,0 +1,171 @@
+{
+  "anchor_id": "material_index",
+  "sources_visited": [
+    {
+      "url": "https://material-index.co.uk/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://material-index.exchange/edits",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.material-index.co.uk/materials/material-specification",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://asbp.org.uk/member/material-index",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://material-index.exchange/terms-and-conditions",
+      "http_status": 200,
+      "first_party": true
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace categories include Bricks & Stone; recent requests mention heritage bricks and brick pavers.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace category Bricks & Stone supports stone material; item-level pages needed for exact stone type.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Recent requests include timber beams.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Recent requests include Bare Steel Encapsulated Panel.",
+      "confidence": "belegt"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace category list includes Doors & Partitions.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Doors & Partitions / acoustic panels / bricks map to wall and partition components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Furniture & Interiors, Kitchens & Catering, lighting and miscellaneous architectural categories map to Ausbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace categories include Flooring & Carpet and Raised Access Flooring.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Categories include Lighting and MEP.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Recent requests include timber beams.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Site lists pre-demolition audits for planning, BREEAM and GLA compliance.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "audit",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Site references material passports/site assessments in audit contact copy.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "material_pass",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "refurb",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Homepage highlights recertified products and reclaimed material sourcing; exact process ID needs lookup.",
+      "confidence": "wahrscheinlich",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Material Index",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://material-index.co.uk/",
+      "https://material-index.exchange/edits"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung/Aufbereitung IDs",
+      "reason": "Need graph lookup before loading audit/passport/refurb links."
+    }
+  ],
+  "run_notes": []
+}

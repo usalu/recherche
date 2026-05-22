@@ -1,0 +1,129 @@
+{
+  "confirmation_required": "APPLY phase2_repurpose_demand_layer.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2432,
+    "relationships": 15622
+  },
+  "counts_after_expected": {
+    "nodes": 2432,
+    "relationships": 15622
+  },
+  "counts_before": {
+    "nodes": 2431,
+    "relationships": 15612
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:02:11.425599+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\patches\\phase2_repurpose_demand_layer.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "netherlands_reuse_bubble_combined_2026_06_06",
+          "id": "repurpose",
+          "land": "NL",
+          "name": "Repurpose",
+          "name_full": "Repurpose BV — Madopt demand-driven reuse consultancy",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        }
+      },
+      "before": null,
+      "id": "repurpose",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "repurpose",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_repurpose"
+    },
+    {
+      "from": "repurpose",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_nl_madopt"
+    },
+    {
+      "from": "repurpose",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "new_horizon_urban_mining"
+    },
+    {
+      "from": "new_horizon_urban_mining",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "repurpose"
+    },
+    {
+      "from": "repurpose",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "insert_marketplace"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "repurpose"
+    },
+    {
+      "from": "repurpose",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "superuse_studios_2012architecten"
+    },
+    {
+      "from": "superuse_studios_2012architecten",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "repurpose"
+    },
+    {
+      "from": "repurpose",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "madaster"
+    },
+    {
+      "from": "madaster",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "repurpose"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 11,
+    "would_create": 1,
+    "would_create_rel": 10
+  }
+}

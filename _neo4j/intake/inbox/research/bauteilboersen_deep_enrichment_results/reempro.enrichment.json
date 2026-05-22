@@ -1,0 +1,106 @@
+{
+  "anchor_id": "reempro",
+  "sources_visited": [
+    {
+      "url": "https://www.reempro.com/marketplace/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.reempro.com/marketplace-reempro/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.reempro.com/on-parle-de-nous-sur-france-3/",
+      "http_status": 200,
+      "first_party": true
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Marketplace copy/vendor text mentions céramique in product scope; category pages include sanitary/equipment families.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Product categories include mobilier and second œuvre.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Product categories include équipement sanitaire and equipment families.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Categories include revêtements et sol.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Categories include maçonnerie / gros œuvre and second œuvre.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Categories include toiture et charpente.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "reconditionnement",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.reempro.com/marketplace/"
+      ],
+      "evidence_quote": "Navigation includes Reconditionnement as a service line.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Réempro",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.reempro.com/marketplace/",
+      "https://www.reempro.com/marketplace-reempro/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material exactness",
+      "reason": "Most categories are component/service classes, not closed-set material names."
+    }
+  ],
+  "run_notes": []
+}

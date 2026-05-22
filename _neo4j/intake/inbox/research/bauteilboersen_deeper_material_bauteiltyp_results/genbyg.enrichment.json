@@ -1,0 +1,157 @@
+{
+  "anchor_id": "genbyg",
+  "sources_visited": [
+    {
+      "url": "https://genbyg.dk/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current webshop/operator source."
+      ]
+    },
+    {
+      "url": "https://pub.norden.org/temanord2021-508/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Nordic secondary context on Genbyg/reuse model."
+      ]
+    },
+    {
+      "url": "https://www.salvoweb.com/directory/24044-genbyg-as",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Salvo directory cross-check."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Window category includes Enkeltlagsglas.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Category list includes Brugte Døre, Brugte Vinduer and timber-like used components; wood material is explicit in product families on site.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Window category includes Jernvinduer; iron/steel candidate needs material-normalization review.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Door hardware, hinges and accessories map to Ausbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Menu lists Brugte Vinduer with several window subcategories.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Menu includes Lamper & EL / lighting and electrical families.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Menu lists Brugte Døre with exterior, interior, double, fire doors and hinges.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://genbyg.dk/"
+      ],
+      "evidence_quote": "Genbyg reuse catalogue includes flooring/floor elements in overall shop scope.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Genbyg",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://genbyg.dk/",
+      "https://pub.norden.org/temanord2021-508/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung",
+      "reason": "No QA/audit evidence located."
+    },
+    {
+      "topic": "Material exactness",
+      "reason": "Jernvinduer can mean iron/steel; import as steel only after normalization decision."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/genbyg.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_glas"
+      ],
+      "wahrscheinlich": [
+        "mat_holz",
+        "mat_stahl"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_tuer",
+        "bt_fenster",
+        "bt_technik",
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_boden"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

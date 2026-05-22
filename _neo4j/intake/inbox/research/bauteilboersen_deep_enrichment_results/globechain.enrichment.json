@@ -1,0 +1,71 @@
+{
+  "anchor_id": "globechain",
+  "sources_visited": [
+    {
+      "url": "https://globechain.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://marketplace.globechain.com/business/construction",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://ukgbc.org/resources/esg-reuse-marketplace/",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://www.clustercollaboration.eu/content/online-reuse-platform-globechain",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://marketplace.globechain.com/business/construction"
+      ],
+      "evidence_quote": "Construction vertical exists but accessible copy primarily supports reusable equipment/fit-out/furniture categories.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_esg_reuse_marketplace",
+      "evidence_urls": [
+        "https://globechain.com/"
+      ],
+      "evidence_quote": "ESG reuse marketplace model; construction-specific category needs login/page verification.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Globechain",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://globechain.com/",
+      "https://marketplace.globechain.com/business/construction"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material",
+      "reason": "No closed-set material named in accessible first-party copy."
+    },
+    {
+      "topic": "Construction vertical",
+      "reason": "Need authenticated/JS marketplace view to confirm building-component categories."
+    }
+  ],
+  "run_notes": []
+}

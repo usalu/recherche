@@ -1,0 +1,23 @@
+{
+  "backed_up_relationships": 723,
+  "database": "mit-bestand",
+  "migration": "mig_source_status_scope_addendum_2026_05_28",
+  "post_gates": {
+    "all_non_fact_relationships_with_source_status": 0,
+    "anchored_by_needs_source_review": 0,
+    "fact_exact_status_without_url": 0,
+    "fact_url_without_exact_status": 0
+  },
+  "pre_gates": {
+    "all_non_fact_relationships_with_source_status": 723,
+    "anchored_by_needs_source_review": 703,
+    "fact_exact_status_without_url": 0,
+    "fact_url_without_exact_status": 0
+  },
+  "rule": "ANCHORED_BY and HAS_SOURCE_LINK are not fact evidence edges.",
+  "started_at": "2026-05-28T11:20:41.516514+00:00",
+  "stats": {
+    "anchored_by_status_removed": 703,
+    "has_source_link_status_removed": 20
+  }
+}

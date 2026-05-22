@@ -1,0 +1,223 @@
+{
+  "confirmation_required": "APPLY quality_pass_q03.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2289,
+    "relationships": 15324
+  },
+  "counts_after_expected": {
+    "nodes": 2289,
+    "relationships": 15324
+  },
+  "counts_before": {
+    "nodes": 2284,
+    "relationships": 15312
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T17:45:38.314282+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\quality_pass_q03.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "evidence_basis": "EN 15804/15978 environmental product declaration or building LCA (EU Taxonomy, national schemes)",
+          "id": "pn_epd_oder_lca_nachweis",
+          "name": "EPD- oder LCA-Nachweis",
+          "primary_source_url": "https://www.gebaeudeforum.de/wissen/nachhaltiges-bauen-und-sanieren/lebenszyklusbetrachtung/oekobilanzierung-lca/",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "source_scope": "regulation_graph_vocab_extension"
+        }
+      },
+      "before": null,
+      "id": "pn_epd_oder_lca_nachweis",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "pn_epd_oder_lca_nachweis",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_oekobilanz_epd"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "evidence_basis": "Digital product passport / building resource passport (ESPR DPP, Madaster, DGNB Level(s))",
+          "id": "pn_materialpass_oder_dpp",
+          "name": "Materialpass oder DPP",
+          "primary_source_url": "https://green-forum.ec.europa.eu/implementing-ecodesign-sustainable-products-regulation_en",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "source_scope": "regulation_graph_vocab_extension"
+        }
+      },
+      "before": null,
+      "id": "pn_materialpass_oder_dpp",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "pn_materialpass_oder_dpp",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_materialpass_ressourcenpass"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "evidence_basis": "Accessibility audit per DIN 18040 / DIN 18065",
+          "id": "pn_barrierefreiheitsaudit",
+          "name": "Barrierefreiheitsaudit",
+          "primary_source_url": "https://www.baunormenlexikon.de/norm/din-18040-1/c099c3ee-ecd0-48ed-9d9d-ec0f84970d53",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "source_scope": "regulation_graph_vocab_extension"
+        }
+      },
+      "before": null,
+      "id": "pn_barrierefreiheitsaudit",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "pn_barrierefreiheitsaudit",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_barrierefreiheit_nachweis"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "evidence_basis": "Electrical safety initial/repeat inspection (DGUV V3 / VDE)",
+          "id": "pn_elektrosicherheitspruefung",
+          "name": "Elektrosicherheitsprüfung",
+          "primary_source_url": "https://www.elektrofachkraft.de/pruefung/elektrotechnische-erstpruefung-wiederholungspruefung",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "source_scope": "regulation_graph_vocab_extension"
+        }
+      },
+      "before": null,
+      "id": "pn_elektrosicherheitspruefung",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "pn_elektrosicherheitspruefung",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_elektrosicherheitsnachweis"
+    },
+    {
+      "after": {
+        "labels": [
+          "PruefungNachweis"
+        ],
+        "properties": {
+          "evidence_basis": "Drinking-water hygiene inspection (VDI 6023 / VDI 6022)",
+          "id": "pn_trinkwasser_hygiene_nachweis",
+          "name": "Trinkwasser-Hygiene-Nachweis",
+          "primary_source_url": "https://www.vdi.de/mitgliedschaft/vdi-richtlinien/unsere-richtlinien-highlights/vdi-6023",
+          "review_run": "quality_pass_q03_2026-06-06",
+          "source_scope": "regulation_graph_vocab_extension"
+        }
+      },
+      "before": null,
+      "id": "pn_trinkwasser_hygiene_nachweis",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "pn_trinkwasser_hygiene_nachweis",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_hygiene_und_reinigungsnachweis"
+    },
+    {
+      "from": "pn_ankerpruefung",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_befestigungsnachweis"
+    },
+    {
+      "from": "pr_dokumentenpruefung_bestand",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_schadstoffkataster_erkundung"
+    },
+    {
+      "from": "pr_zustandsbewertung",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_dauerhaftigkeit_restlebensdauer"
+    },
+    {
+      "from": "pn_approval_process",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_genehmigungs_oder_zustimmungsbedarf"
+    },
+    {
+      "from": "pn_petrografie",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_rc_gesteinskoernung_eignung"
+    },
+    {
+      "from": "pr_eignungspruefung_baulehm",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_rc_gesteinskoernung_eignung"
+    },
+    {
+      "from": "pr_eignungspruefung_baulehm",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "ERFUELLT_NACHWEIS",
+      "status": "would_create_rel",
+      "to": "nf_mineralische_ersatzbaustoff_guete"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 17,
+    "would_create": 5,
+    "would_create_rel": 12
+  }
+}

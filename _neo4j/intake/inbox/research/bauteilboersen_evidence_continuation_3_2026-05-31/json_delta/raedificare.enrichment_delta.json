@@ -1,0 +1,81 @@
+{
+  "anchor_id": "raedificare",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://raedificare.com/marketplace/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L46-L55; L96-L109; L149-L153; L176-L177; L217-L225",
+      "evidence_excerpt": "Marketplace for reuse materials from demolition/surplus; catalogues classified by technical lot/category/subcategory; includes environmental/carbon reports, second-life attestations, diagnostic PEMD."
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Catalogue resources are classified by technical lot/category/subcategory; platform covers reuse materials from demolition/surplus.",
+      "confidence": "belegt",
+      "note": "Broad classification only; no specific material family on visible page.",
+      "source_line_ref": "L46-L49; L149-L153"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": "LOOKUP_REQUIRED_diagnostic_pemd",
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Synchronization with diagnostic PEMD + Ressource enables automatic publication of materials.",
+      "confidence": "unsicher",
+      "note": "Strong process/evidence candidate; exact PruefungNachweis ID requires graph lookup.",
+      "source_line_ref": "L176-L177; L217-L225"
+    },
+    {
+      "target_id": "LOOKUP_REQUIRED_bilan_carbone",
+      "evidence_urls": [
+        "https://raedificare.com/marketplace/"
+      ],
+      "evidence_quote": "Platform generates environmental balances/waste/reuse/carbon savings and avoided carbon impact per material.",
+      "confidence": "unsicher",
+      "note": "Exact PruefungNachweis ID requires graph lookup.",
+      "source_line_ref": "L107-L109; L176-L177"
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "specific Material IDs",
+      "reason": "visible public source gives broad platform/materials language only; no exact material family from closed set named"
+    }
+  ],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "raedificare",
+      "claim_type": "Material",
+      "target_id": "ALL_MATERIAL_IDS",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "RAEDIFICARE marketplace",
+      "source_url": "https://raedificare.com/marketplace/",
+      "source_line_ref": "",
+      "source_excerpt_short": "matériaux du BTP; matériaux de déconstruction; surplus",
+      "rejection_reason": "No specific closed-set material (wood/brick/steel/etc.) is named on the visible page.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

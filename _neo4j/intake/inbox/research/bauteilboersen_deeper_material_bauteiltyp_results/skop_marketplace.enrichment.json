@@ -1,0 +1,233 @@
+{
+  "anchor_id": "skop_marketplace",
+  "sources_visited": [
+    {
+      "url": "https://marketplace.skop.app/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Marketplace page: materials, reconditioned products and surplus; example products include lavabo, suspended ceiling, parquet underlay, wood offcuts."
+      ]
+    },
+    {
+      "url": "https://www.skop.app/marketplace-materiaux-reemploi",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Skop marketplace page for professional material-reuse sellers."
+      ]
+    },
+    {
+      "url": "https://www.francenum.gouv.fr/activateurs/skop",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://marketplace.skop.app/categories",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Categories page names sanitary equipment, electrical distribution, lighting, floor coverings, furniture, interior joinery."
+      ]
+    },
+    {
+      "url": "https://marketplace.skop.app/categories/materiaux",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Materials category page lists sanitary, lighting, interior joinery/doors, metalwork/hardware, etc."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_daemmstoff",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Boutique category text includes isolant.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Boutique/category text includes Bois d’œuvre and chutes de bois.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Categories/products include appareils sanitaires and revêtements; ceramic-specific product pages should be checked.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Products/categories include fixing brackets and technical/electrical equipment; steel material needs item-page confirmation.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Main categories include Mobilier and Menuiseries intérieures.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Product/category evidence includes parquet underlay and floor/wall coverings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Boutique text includes isolant.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Main categories include Appareils sanitaires, lighting, electrical boards and armoires.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Menuiseries intérieures can include interior doors; needs category detail.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "reconditioned",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Homepage explicitly separates matériaux de réemploi, produits reconditionnés and surplus de chantier.",
+      "confidence": "belegt",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_BEZUG_ZU",
+      "target_id": "baticycle",
+      "evidence_urls": [
+        "https://marketplace.skop.app/"
+      ],
+      "evidence_quote": "Marketplace lists Bâticycle among vendors and product cards.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Skop Marketplace",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://marketplace.skop.app/",
+      "https://www.skop.app/marketplace-materiaux-reemploi"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Process ID",
+      "reason": "Resolve reconditioned/reconditioning node ID."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/skop_marketplace.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_holz",
+        "mat_daemmstoff"
+      ],
+      "wahrscheinlich": [
+        "mat_keramik"
+      ],
+      "unsicher": [
+        "mat_stahl"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_technik",
+        "bt_ausbau",
+        "bt_boden",
+        "bt_daemmung"
+      ],
+      "wahrscheinlich": [
+        "bt_tuer"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [
+      {
+        "bauteiltyp_id": "bt_technik",
+        "material_ids": [
+          "mat_keramik"
+        ],
+        "pair_basis": "lavabo/sanitary equipment category; material often ceramic, verify per product",
+        "evidence_urls": [
+          "https://marketplace.skop.app/"
+        ],
+        "confidence": "wahrscheinlich"
+      },
+      {
+        "bauteiltyp_id": "bt_boden",
+        "material_ids": [
+          "mat_holz"
+        ],
+        "pair_basis": "parquet underlay and wood offcuts examples",
+        "evidence_urls": [
+          "https://marketplace.skop.app/"
+        ],
+        "confidence": "wahrscheinlich"
+      },
+      {
+        "bauteiltyp_id": "bt_tuer",
+        "material_ids": [],
+        "pair_basis": "interior joinery/interior door categories; material varies",
+        "evidence_urls": [
+          "https://marketplace.skop.app/categories/materiaux"
+        ],
+        "confidence": "belegt"
+      }
+    ],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

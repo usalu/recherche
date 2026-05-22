@@ -1,0 +1,1763 @@
+{
+  "confirmation_required": "APPLY ceg_rehunt_4agents.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-06-07T22:23:27.332530+00:00",
+  "patch": "_neo4j\\review\\2026-06-07_clickable_evidence_gate\\patches\\ceg_rehunt_4agents.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "high",
+        "evidence_quote": "fuelle roga, 2017, asuncion (paraguay) – private owner – omcm escritorio de arquitectura y urbanismo, matias ortiz & maria paz chamorro (conception) – photo courtesy of omcm une troisieme facon de reemployer des briques est d’en integrer de facon aleatoire les debris, plus ou moins gros, aux murs et",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://adokin.eu/fr/tag/briques",
+        "id": "r_bg_reuse_mehrere_mehrere_superlocal_beton_wohnungsteile__NUTZT_MATERIAL__mat_beton",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_superlocal_beton_wohnungsteile",
+        "properties": {
+          "evidence_basis": "bg_hunt_alias_match",
+          "evidence_confidence": "high",
+          "evidence_quote": "Drei Beton-Wohnungsteile / Großmodule",
+          "evidence_url": "https://www.kerkrade.nl/superlocal-bleijerheide",
+          "id": "r_bg_reuse_mehrere_mehrere_superlocal_beton_wohnungsteile__NUTZT_MATERIAL__mat_beton",
+          "review_run": "bg_hunt_w2_2026_06_07"
+        },
+        "rel_internal_id": 1153001768955675081,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_mehrere_mehrere_superlocal_beton_wohnungsteile",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "high",
+        "evidence_quote": "Upcycled window elements",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://eumiesawards.com/heritageobject/tr",
+        "id": "r_bg_reuse_glas_fenster_trae_high_rise_aarhus_upcycled_elements__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_glas_fenster_trae_high_rise_aarhus_upcycled_elements",
+        "properties": {
+          "evidence_basis": "bg_hunt_alias_match",
+          "evidence_confidence": "high",
+          "evidence_quote": "Upcycled window elements",
+          "evidence_url": "https://www.lendager.com/projects/trae",
+          "id": "r_bg_reuse_glas_fenster_trae_high_rise_aarhus_upcycled_elements__HAT_BAUTEILTYP__bt_fenster",
+          "review_run": "bg_hunt_w2_2026_06_07"
+        },
+        "rel_internal_id": 1152988574816141795,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_glas_fenster_trae_high_rise_aarhus_upcycled_elements",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "high",
+        "evidence_quote": "floors, walls and facades are made of upcycled discarded wood and offcuts from dinesen's floor production.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.again.dk/project-references/upcycle-studios",
+        "id": "r_bg_reuse_holz_mehrere_upcycle_dinesen_offcuts__HAT_BAUTEILTYP__bt_boden",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_holz_mehrere_upcycle_dinesen_offcuts",
+        "properties": {
+          "evidence_basis": "bg_hunt_alias_match",
+          "evidence_confidence": "high",
+          "evidence_quote": "Dinesen-Offcuts als Böden/Wände/Fassaden",
+          "evidence_url": "https://www.lendager.com/projects/upcycle-studios",
+          "id": "r_bg_reuse_holz_mehrere_upcycle_dinesen_offcuts__HAT_BAUTEILTYP__bt_boden",
+          "review_run": "bg_hunt_w2_2026_06_07"
+        },
+        "rel_internal_id": 1152988574816141797,
+        "to": "bt_boden",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_holz_mehrere_upcycle_dinesen_offcuts",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_boden",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "high",
+        "evidence_quote": "in upcycle studios, 75% of the windows came from public housing in north jutland, 1000 tonnes of the concrete used is cast with aggregate, from the copenhagen metro's concrete waste.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.again.dk/project-references/upcycle-studios",
+        "id": "r_bg_reuse_mehrere_mehrere_upcycle_recyclingbeton_metro__NUTZT_MATERIAL__mat_recyclingbeton",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_upcycle_recyclingbeton_metro",
+        "properties": {
+          "evidence_basis": "bg_hunt_alias_match",
+          "evidence_confidence": "high",
+          "evidence_quote": "Recyclingbeton aus Copenhagen Metro",
+          "evidence_url": "https://www.lendager.com/projects/upcycle-studios",
+          "id": "r_bg_reuse_mehrere_mehrere_upcycle_recyclingbeton_metro__NUTZT_MATERIAL__mat_recyclingbeton",
+          "review_run": "bg_hunt_w2_2026_06_07"
+        },
+        "rel_internal_id": 1155253568769360359,
+        "to": "mat_recyclingbeton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_mehrere_mehrere_upcycle_recyclingbeton_metro",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_recyclingbeton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "in the showroom one finds a nice overview of the materials on stock, as well as a wide range of lighting fixtures and hardware for a 100% reused interior.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://opalis.eu/en/dealers/rotor-deconstruction",
+        "id": "r_bauteilladen_winterthur__HAT_BAUTEILTYP__bt_ausbau",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilladen_winterthur->bt_ausbau",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilladen_winterthur",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Shop has interior/fit-out component stock.",
+          "evidence_url": "https://bauteilladen.ch/shop/",
+          "id": "r_bauteilladen_winterthur__HAT_BAUTEILTYP__bt_ausbau",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilladen_winterthur->bt_ausbau",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1171002973325628361,
+        "to": "bt_ausbau",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bauteilladen_winterthur",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_ausbau",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Shop/category archive includes roof elements.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://bauteilladen.ch/",
+        "id": "r_bauteilladen_winterthur__HAT_BAUTEILTYP__bt_dach",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilladen_winterthur->bt_dach",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilladen_winterthur",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Shop/category archive includes roof elements.",
+          "evidence_url": "https://bauteilladen.ch/shop/",
+          "id": "r_bauteilladen_winterthur__HAT_BAUTEILTYP__bt_dach",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilladen_winterthur->bt_dach",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1168751173511943113,
+        "to": "bt_dach",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bauteilladen_winterthur",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_dach",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "start toggle navigation bauteilborse bremen --> start katalog fenster turen hof & garten boden & treppen wande & innenraum sanitar & heizung elektro schatze & upcycling dach & fassade suche merkzettel die idee uber uns vereine aktuelles film der bundesstiftung bauakademie kontakt merkzettel suche --",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.bauteilboerse-bremen.de/start",
+        "id": "r_deep_bauteilboerse_bremen__HAT_BAUTEILTYP__bt_treppe",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilboerse_bremen->bt_treppe",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_bremen",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Catalogue evidence includes stairs.",
+          "evidence_url": "https://www.bauteilboerse-bremen.de/katalog",
+          "id": "r_deep_bauteilboerse_bremen__HAT_BAUTEILTYP__bt_treppe",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:bauteilboerse_bremen->bt_treppe",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1159743974257203685,
+        "to": "bt_treppe",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bauteilboerse_bremen",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_treppe",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "4.9/5 sur + de 2000 avis articonnex propose des materiaux du batiment dans une approche anti-gaspi au meilleur prix : produits declasses, destockage, issus du reemploi ou en direct usine.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://articonnex.com/collections/reemploi",
+        "id": "r_deep_articonnex__HAT_BAUTEILTYP__bt_ausbau",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:articonnex->bt_ausbau",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "articonnex",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Anti-gaspi DIY/building stock includes finishing and hardware-like product families.",
+          "evidence_url": "https://articonnex.com/collections/reemploi",
+          "id": "r_deep_articonnex__HAT_BAUTEILTYP__bt_ausbau",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:articonnex->bt_ausbau",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1159743974257236573,
+        "to": "bt_ausbau",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "articonnex",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_ausbau",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "environnement cycle zero : des materiaux de chantier gratuits aux particuliers la redaction, le 22 mai 2025 archiver cet article archiver cet article dans votre compte.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers",
+        "id": "r_cycle_zero__HAT_BAUTEILTYP__bt_daemmung",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:cycle_zero->bt_daemmung",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "cycle_zero",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Secondary article lists isolants.",
+          "evidence_url": "https://www.constructionbtp.com/environnement/article/2025/05/22/152917/cycle-zero-des-materiaux-chantier-gratuits-aux-particuliers",
+          "id": "r_cycle_zero__HAT_BAUTEILTYP__bt_daemmung",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:cycle_zero->bt_daemmung",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1157492174443551333,
+        "to": "bt_daemmung",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "cycle_zero",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_daemmung",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "materials bricks solid terracotta bricks also offers slates, roof tiles and wall copings clay wall copings clay roof tiles services transport dismantling operations on products mortar residue cleaning family business franck, currently run by jan and his daughter louise, started in 1973 in the demoli",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://opalis.eu/en/dealers/franck-bricks",
+        "id": "r_deep_enviromate__HAT_BAUTEILTYP__bt_wand",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:enviromate->bt_wand",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+      },
+      "before": {
+        "count": 1,
+        "from": "enviromate",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Bricks/tiles/building materials map to wall components.",
+          "evidence_url": "https://www.enviromate.co.uk/marketplace",
+          "id": "r_deep_enviromate__HAT_BAUTEILTYP__bt_wand",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:enviromate->bt_wand",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Deep pass: added only edges between existing nodes and existing vocabulary target nodes; no new labels or node types."
+        },
+        "rel_internal_id": 1155240374629866086,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "enviromate",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "voir toutes les boutiques batishop les batineurs materiaux de reemploi et equipements professionnels materiaux de reemploi : bois d'œuvre, menuiseries interieures et exterieures, sanitaires, isolant, revetements sols et murs, couverture, quincaillerie, outillage, ...",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://marketplace.skop.app/",
+        "id": "r_skop_marketplace__NUTZT_MATERIAL__mat_daemmstoff",
+        "metadata_sidecar_key": "rel:NUTZT_MATERIAL:skop_marketplace->mat_daemmstoff",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "skop_marketplace",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Boutique category text includes isolant.",
+          "evidence_url": "https://marketplace.skop.app/",
+          "id": "r_skop_marketplace__NUTZT_MATERIAL__mat_daemmstoff",
+          "metadata_sidecar_key": "rel:NUTZT_MATERIAL:skop_marketplace->mat_daemmstoff",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1159757168396769911,
+        "to": "mat_daemmstoff",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "skop_marketplace",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_daemmstoff",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "voir toutes les categories mobilier 206 appareils sanitaires 183 appareils d'eclairage 118 plateau 60 menuiseries interieures 51 revetement des sols 38 materiaux de reemploi decouvrez une selection de materiaux de reemploi prets a etre remis en œuvre, proposes par des vendeurs specialises partout en",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://marketplace.skop.app/",
+        "id": "r_skop_marketplace__HAT_BAUTEILTYP__bt_ausbau",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:skop_marketplace->bt_ausbau",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "skop_marketplace",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Main categories include Mobilier and Menuiseries intérieures.",
+          "evidence_url": "https://marketplace.skop.app/",
+          "id": "r_skop_marketplace__HAT_BAUTEILTYP__bt_ausbau",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:skop_marketplace->bt_ausbau",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1166499373698292343,
+        "to": "bt_ausbau",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "skop_marketplace",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_ausbau",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.4,
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "voir toutes les boutiques batishop les batineurs materiaux de reemploi et equipements professionnels materiaux de reemploi : bois d'œuvre, menuiseries interieures et exterieures, sanitaires, isolant, revetements sols et murs, couverture, quincaillerie, outillage, ...",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://marketplace.skop.app/",
+        "id": "r_skop_marketplace__HAT_BAUTEILTYP__bt_daemmung",
+        "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:skop_marketplace->bt_daemmung",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+      },
+      "before": {
+        "count": 1,
+        "from": "skop_marketplace",
+        "properties": {
+          "confidence": 0.4,
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Boutique text includes isolant.",
+          "evidence_url": "https://marketplace.skop.app/",
+          "id": "r_skop_marketplace__HAT_BAUTEILTYP__bt_daemmung",
+          "metadata_sidecar_key": "rel:HAT_BAUTEILTYP:skop_marketplace->bt_daemmung",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only edges from existing node types and existing vocabulary target nodes; no schema label changes."
+        },
+        "rel_internal_id": 1164247573884607095,
+        "to": "bt_daemmung",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "skop_marketplace",
+      "line": 13,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_daemmung",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "swiss_reuse_media_network",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "circular_hub_use_case",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Circular Hub profiles sumami and useagain.ch Swiss reuse platform",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://sustainable-digital-construction.ethz.ch/en/reuse",
+        "id": "r_circular_hub_zurich__verbunden_mit_akteur__sumami",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_hub_zurich",
+        "properties": {
+          "connection_kind": "swiss_reuse_media_network",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "circular_hub_use_case",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular Hub profiles sumami and useagain.ch Swiss reuse platform",
+          "evidence_url": "https://circularhub.ch/magazin/details/sumami-wiederverwendung-von-schweizer-baumaterialien",
+          "id": "r_circular_hub_zurich__verbunden_mit_akteur__sumami",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1155286554118193621,
+        "to": "sumami",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_hub_zurich",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "sumami",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dbu_research_consortium",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "shared HdM DBU consortium partners",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://circular.berlin/de/",
+        "id": "r_circular_berlin__verbunden_mit_akteur__material_mafia",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_berlin",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "shared HdM DBU consortium partners",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_circular_berlin__verbunden_mit_akteur__material_mafia",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1162041953559249522,
+        "to": "material_mafia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_berlin",
+      "line": 15,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "material_mafia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "publishing & tools cirkla develops and references professional tools for using reused materials in your projects.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.cirkla.ch/en/",
+        "fact_label": "Fact",
+        "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__cirkla",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilladen_winterthur",
+        "properties": {
+          "connection_kind": "directory",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/bauteilladen-winterthur",
+          "fact_label": "Fact",
+          "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118198217,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilladen_winterthur",
+      "line": 16,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "actor_id": "heyne_tillett_steel",
+        "actor_name": "Heyne Tillett Steel / HTS",
+        "basis_project_edge_id": "r_heyne_tillett_steel__BETEILIGT_AN__p_holbein_gardens_london",
+        "basis_project_edge_type": "BETEILIGT_AN",
+        "bauteilgruppe_id": "bg_reuse_stahl_mehrere_holbein_structural",
+        "bauteilgruppe_name": "Stahlträger un… (Holbein)",
+        "confidence": 0.4,
+        "connection_kind": "planning_actor_component_involvement",
+        "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5222|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:358",
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "this case study from heyne tillett steel profiles a project at holbein gardens in london, in which they partnered with cleveland steel, a specialist steel stockist dealing in reclaimed steel.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://globalabc.org/sustainable-materials-hub/resources/steel-reuse-incorporating-reclaimed-steel-holbein-gardens",
+        "id": "r_project_part_actor_heyne_tillett_steel__BETEILIGT_AN__bg_reuse_stahl_mehrere_holbein_structural",
+        "metadata_sidecar_key": "rel:BETEILIGT_AN:heyne_tillett_steel->bg_stahl_mehrere_holbein_structural",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+        "shared_bauteiltyp_ids": [
+          "bt_stuetze",
+          "bt_traeger"
+        ],
+        "shared_material_ids": [
+          "mat_stahl"
+        ]
+      },
+      "before": {
+        "count": 1,
+        "from": "heyne_tillett_steel",
+        "properties": {
+          "actor_id": "heyne_tillett_steel",
+          "actor_name": "Heyne Tillett Steel / HTS",
+          "basis_project_edge_id": "r_heyne_tillett_steel__BETEILIGT_AN__p_holbein_gardens_london",
+          "basis_project_edge_type": "BETEILIGT_AN",
+          "bauteilgruppe_id": "bg_reuse_stahl_mehrere_holbein_structural",
+          "bauteilgruppe_name": "Stahlträger un… (Holbein)",
+          "confidence": 0.4,
+          "connection_kind": "planning_actor_component_involvement",
+          "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5222|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:358",
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Actor/page match (heyne); project/component (holbein)",
+          "evidence_url": "https://globalabc.org/sustainable-materials-hub/resources/steel-reuse-incorporating-reclaimed-steel-holbein-gardens",
+          "id": "r_project_part_actor_heyne_tillett_steel__BETEILIGT_AN__bg_reuse_stahl_mehrere_holbein_structural",
+          "metadata_sidecar_key": "rel:BETEILIGT_AN:heyne_tillett_steel->bg_stahl_mehrere_holbein_structural",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+          "shared_bauteiltyp_ids": [
+            "bt_stuetze",
+            "bt_traeger"
+          ],
+          "shared_material_ids": [
+            "mat_stahl"
+          ]
+        },
+        "rel_internal_id": 6919881982524522854,
+        "to": "bg_stahl_mehrere_holbein_structural",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "heyne_tillett_steel",
+      "line": 17,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_stahl_mehrere_holbein_structural",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "actor_id": "cleveland_steel_tubes",
+        "actor_name": "Cleveland Steel & Tubes",
+        "basis_project_edge_id": "r_cleveland_steel_tubes__BETEILIGT_AN__p_holbein_gardens_london",
+        "basis_project_edge_type": "BETEILIGT_AN",
+        "bauteilgruppe_id": "bg_reuse_stahl_mehrere_holbein_structural",
+        "bauteilgruppe_name": "Stahlträger un… (Holbein)",
+        "confidence": 0.4,
+        "connection_kind": "reuse_supply_or_material_hub_candidate",
+        "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5223|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:358",
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "this case study from heyne tillett steel profiles a project at holbein gardens in london, in which they partnered with cleveland steel, a specialist steel stockist dealing in reclaimed steel.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://globalabc.org/sustainable-materials-hub/resources/steel-reuse-incorporating-reclaimed-steel-holbein-gardens",
+        "id": "r_project_part_actor_cleveland_steel_tubes__BETEILIGT_AN__bg_reuse_stahl_mehrere_holbein_structural",
+        "metadata_sidecar_key": "rel:BETEILIGT_AN:cleveland_steel_tubes->bg_stahl_mehrere_holbein_structural",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+        "shared_bauteiltyp_ids": [
+          "bt_stuetze",
+          "bt_traeger"
+        ],
+        "shared_material_ids": [
+          "mat_stahl"
+        ]
+      },
+      "before": {
+        "count": 1,
+        "from": "cleveland_steel_tubes",
+        "properties": {
+          "actor_id": "cleveland_steel_tubes",
+          "actor_name": "Cleveland Steel & Tubes",
+          "basis_project_edge_id": "r_cleveland_steel_tubes__BETEILIGT_AN__p_holbein_gardens_london",
+          "basis_project_edge_type": "BETEILIGT_AN",
+          "bauteilgruppe_id": "bg_reuse_stahl_mehrere_holbein_structural",
+          "bauteilgruppe_name": "Stahlträger un… (Holbein)",
+          "confidence": 0.4,
+          "connection_kind": "reuse_supply_or_material_hub_candidate",
+          "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5223|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:358",
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Actor/page match (cleveland); project/component (holbein)",
+          "evidence_url": "https://globalabc.org/sustainable-materials-hub/resources/steel-reuse-incorporating-reclaimed-steel-holbein-gardens",
+          "id": "r_project_part_actor_cleveland_steel_tubes__BETEILIGT_AN__bg_reuse_stahl_mehrere_holbein_structural",
+          "metadata_sidecar_key": "rel:BETEILIGT_AN:cleveland_steel_tubes->bg_stahl_mehrere_holbein_structural",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+          "shared_bauteiltyp_ids": [
+            "bt_stuetze",
+            "bt_traeger"
+          ],
+          "shared_material_ids": [
+            "mat_stahl"
+          ]
+        },
+        "rel_internal_id": 6917630182710837606,
+        "to": "bg_stahl_mehrere_holbein_structural",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "cleveland_steel_tubes",
+      "line": 18,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_stahl_mehrere_holbein_structural",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "supplier_listing",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_supplier_directory",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "listed on Opalis supplier directory",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://opalis.eu/en/about",
+        "id": "r_association_reavie__verbunden_mit_akteur__opalis",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "association_reavie",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "listed on Opalis supplier directory",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+          "id": "r_association_reavie__verbunden_mit_akteur__opalis",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164293753372939801,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "association_reavie",
+      "line": 19,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "actor_id": "baukarussell",
+        "actor_name": "BauKarussell",
+        "basis_project_edge_id": "r_baukarussell__BETEILIGT_AN__p_meduni_campus_mariannengasse",
+        "basis_project_edge_type": "BETEILIGT_AN",
+        "bauteilgruppe_id": "bg_reuse_mehrere_technik_medunicampus_paternoster",
+        "bauteilgruppe_name": "MedUni Paternoster",
+        "confidence": 0.4,
+        "connection_kind": "reuse_supply_or_material_hub_candidate",
+        "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:642",
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "„wir freuen uns, dass wir baukarussell als projektpartner beim meduni campus mariannengasse gewinnen konnten.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.medunicampus-mariannengasse.at/ueber-uns/news/aus-alt-wird-neu-big-meduni-wien-und-baukarussell-nutzen-grosses-re-use-potential-beim-meduni-campus-mariannengasse/",
+        "id": "r_project_part_actor_baukarussell__BETEILIGT_AN__bg_reuse_mehrere_technik_medunicampus_paternoster",
+        "metadata_sidecar_key": "rel:BETEILIGT_AN:baukarussell->bg_mehrere_technik_medunicampus_paternoster",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+        "shared_bauteiltyp_ids": [
+          "bt_technik"
+        ],
+        "shared_material_ids": []
+      },
+      "before": {
+        "count": 1,
+        "from": "baukarussell",
+        "properties": {
+          "actor_id": "baukarussell",
+          "actor_name": "BauKarussell",
+          "basis_project_edge_id": "r_baukarussell__BETEILIGT_AN__p_meduni_campus_mariannengasse",
+          "basis_project_edge_type": "BETEILIGT_AN",
+          "bauteilgruppe_id": "bg_reuse_mehrere_technik_medunicampus_paternoster",
+          "bauteilgruppe_name": "MedUni Paternoster",
+          "confidence": 0.4,
+          "connection_kind": "reuse_supply_or_material_hub_candidate",
+          "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:642",
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Actor/page match (BauKarussell+meduni); project/component (meduni+meduni)",
+          "evidence_url": "https://www.medunicampus-mariannengasse.at/ueber-uns/news/aus-alt-wird-neu-big-meduni-wien-und-baukarussell-nutzen-grosses-re-use-potential-beim-meduni-campus-mariannengasse/",
+          "id": "r_project_part_actor_baukarussell__BETEILIGT_AN__bg_reuse_mehrere_technik_medunicampus_paternoster",
+          "metadata_sidecar_key": "rel:BETEILIGT_AN:baukarussell->bg_mehrere_technik_medunicampus_paternoster",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+          "shared_bauteiltyp_ids": [
+            "bt_technik"
+          ],
+          "shared_material_ids": []
+        },
+        "rel_internal_id": 1162029858931349935,
+        "to": "bg_mehrere_technik_medunicampus_paternoster",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "baukarussell",
+      "line": 20,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_mehrere_technik_medunicampus_paternoster",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "actor_id": "baukarussell",
+        "actor_name": "BauKarussell",
+        "basis_project_edge_id": "r_baukarussell__BETEILIGT_AN__p_meduni_campus_mariannengasse",
+        "basis_project_edge_type": "BETEILIGT_AN",
+        "bauteilgruppe_id": "bg_reuse_holz_wand_medunicampus_doors_as_cladding",
+        "bauteilgruppe_name": "MedUni Türen→Wand",
+        "confidence": 0.4,
+        "connection_kind": "reuse_supply_or_material_hub_candidate",
+        "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:643",
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "„wir freuen uns, dass wir baukarussell als projektpartner beim meduni campus mariannengasse gewinnen konnten.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.medunicampus-mariannengasse.at/ueber-uns/news/aus-alt-wird-neu-big-meduni-wien-und-baukarussell-nutzen-grosses-re-use-potential-beim-meduni-campus-mariannengasse/",
+        "id": "r_project_part_actor_baukarussell__BETEILIGT_AN__bg_reuse_holz_wand_medunicampus_doors_as_cladding",
+        "metadata_sidecar_key": "rel:BETEILIGT_AN:baukarussell->bg_holz_wand_medunicampus_doors_as_cladding",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+        "shared_bauteiltyp_ids": [
+          "bt_wand"
+        ],
+        "shared_material_ids": [
+          "mat_holz"
+        ]
+      },
+      "before": {
+        "count": 1,
+        "from": "baukarussell",
+        "properties": {
+          "actor_id": "baukarussell",
+          "actor_name": "BauKarussell",
+          "basis_project_edge_id": "r_baukarussell__BETEILIGT_AN__p_meduni_campus_mariannengasse",
+          "basis_project_edge_type": "BETEILIGT_AN",
+          "bauteilgruppe_id": "bg_reuse_holz_wand_medunicampus_doors_as_cladding",
+          "bauteilgruppe_name": "MedUni Türen→Wand",
+          "confidence": 0.4,
+          "connection_kind": "reuse_supply_or_material_hub_candidate",
+          "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:643",
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Actor/page match (BauKarussell+meduni); project/component (meduni+meduni)",
+          "evidence_url": "https://www.medunicampus-mariannengasse.at/ueber-uns/news/aus-alt-wird-neu-big-meduni-wien-und-baukarussell-nutzen-grosses-re-use-potential-beim-meduni-campus-mariannengasse/",
+          "id": "r_project_part_actor_baukarussell__BETEILIGT_AN__bg_reuse_holz_wand_medunicampus_doors_as_cladding",
+          "metadata_sidecar_key": "rel:BETEILIGT_AN:baukarussell->bg_holz_wand_medunicampus_doors_as_cladding",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+          "shared_bauteiltyp_ids": [
+            "bt_wand"
+          ],
+          "shared_material_ids": [
+            "mat_holz"
+          ]
+        },
+        "rel_internal_id": 1159778059117664687,
+        "to": "bg_holz_wand_medunicampus_doors_as_cladding",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "baukarussell",
+      "line": 21,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_holz_wand_medunicampus_doors_as_cladding",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "publishing & tools cirkla develops and references professional tools for using reused materials in your projects.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.cirkla.ch/en/",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__materiuum",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/materiuum",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__materiuum",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 0,
+        "to": "materiuum",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 22,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "materiuum",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "publishing & tools cirkla develops and references professional tools for using reused materials in your projects.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.cirkla.ch/en/",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__reuzi_ch",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/reuzi",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__reuzi_ch",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338777620,
+        "to": "reuzi_ch",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 23,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "reuzi_ch",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "publishing & tools cirkla develops and references professional tools for using reused materials in your projects.",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.cirkla.ch/en/",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__gruner_reuse_platform",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/gruner-ag",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__gruner_reuse_platform",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6931153076220889110,
+        "to": "gruner_reuse_platform",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 24,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "gruner_reuse_platform",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "evidence_basis": "w3_05_vma_web",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ase gmbh: carla ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.beta-architecture.com/elementa-parabase",
+        "id": "r_carla_ferrando_costansa__VERBUNDEN_MIT_AKTEUR__parabase",
+        "review_run": "post_ier_w3_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "carla_ferrando_costansa",
+        "properties": {
+          "confidence": 0.6,
+          "evidence_basis": "w3_05_vma_web",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "ase gmbh: carla ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario",
+          "evidence_url": "https://www.archdaily.com/1008183/parabase-reuses-prefabricated-concrete-elements-for-a-radical-housing-development-in-basel-switzerland",
+          "id": "r_carla_ferrando_costansa__VERBUNDEN_MIT_AKTEUR__parabase",
+          "review_run": "post_ier_w3_2026_06_07"
+        },
+        "rel_internal_id": 1153034754304514605,
+        "to": "parabase",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "carla_ferrando_costansa",
+      "line": 25,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "parabase",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "evidence_basis": "w3_05_vma_web",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario monotti landscap",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://www.beta-architecture.com/elementa-parabase",
+        "id": "r_pablo_garrido_arnaiz__VERBUNDEN_MIT_AKTEUR__parabase",
+        "review_run": "post_ier_w3_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "pablo_garrido_arnaiz",
+        "properties": {
+          "confidence": 0.6,
+          "evidence_basis": "w3_05_vma_web",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "ferrando, pablo garrido arnaiz structural engineering: monotti ingegneri consulenti sa: mario monotti landscap",
+          "evidence_url": "https://www.archdaily.com/1008183/parabase-reuses-prefabricated-concrete-elements-for-a-radical-housing-development-in-basel-switzerland",
+          "id": "r_pablo_garrido_arnaiz__VERBUNDEN_MIT_AKTEUR__parabase",
+          "review_run": "post_ier_w3_2026_06_07"
+        },
+        "rel_internal_id": 1153034754304514609,
+        "to": "parabase",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "pablo_garrido_arnaiz",
+      "line": 26,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "parabase",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "actor_id": "bauteilboerse_basel_overall",
+        "actor_name": "Bauteilbörse Basel",
+        "basis_project_edge_id": "r_bauteilboerse_basel_overall__BETEILIGT_AN__p_elementa_walkeweg",
+        "basis_project_edge_type": "BETEILIGT_AN",
+        "bauteilgruppe_id": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+        "bauteilgruppe_name": "ELEMENTA Baufeld D",
+        "confidence": 0.4,
+        "connection_kind": "reuse_supply_or_material_hub_candidate",
+        "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:623",
+        "evidence_basis": "r07_web_fetch_confirmed",
+        "evidence_checked_at": "2026-06-07T20:54:09Z",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Actor/page match (Bauteilbörse Basel+elementa); project/component (elementa+elementa)",
+        "evidence_status": "CLICKABLE_VERIFIED",
+        "evidence_url": "https://bauteilboerse-basel.ch/bauteile/",
+        "id": "r_project_part_actor_bauteilboerse_basel_overall__BETEILIGT_AN__bg_reuse_mineralisch_wand_elementa_baufeld_d",
+        "metadata_sidecar_key": "rel:BETEILIGT_AN:bauteilboerse_basel_overall->bg_mineralisch_wand_elementa_baufeld_d",
+        "review_run": "remediation_r07_2026_06_06",
+        "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+        "shared_bauteiltyp_ids": [
+          "bt_wand"
+        ],
+        "shared_material_ids": []
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_basel_overall",
+        "properties": {
+          "actor_id": "bauteilboerse_basel_overall",
+          "actor_name": "Bauteilbörse Basel",
+          "basis_project_edge_id": "r_bauteilboerse_basel_overall__BETEILIGT_AN__p_elementa_walkeweg",
+          "basis_project_edge_type": "BETEILIGT_AN",
+          "bauteilgruppe_id": "bg_reuse_mineralisch_wand_elementa_baufeld_d",
+          "bauteilgruppe_name": "ELEMENTA Baufeld D",
+          "confidence": 0.4,
+          "connection_kind": "reuse_supply_or_material_hub_candidate",
+          "dedupe_key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34833|BETEILIGT_AN|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:623",
+          "evidence_basis": "r07_web_fetch_confirmed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Actor/page match (Bauteilbörse Basel+elementa); project/component (elementa+elementa)",
+          "evidence_url": "https://zirkular.net/de/projekt/bauteilkatalog-immobilien-basel-stadt/",
+          "id": "r_project_part_actor_bauteilboerse_basel_overall__BETEILIGT_AN__bg_reuse_mineralisch_wand_elementa_baufeld_d",
+          "metadata_sidecar_key": "rel:BETEILIGT_AN:bauteilboerse_basel_overall->bg_mineralisch_wand_elementa_baufeld_d",
+          "review_run": "remediation_r07_2026_06_06",
+          "scope_note": "Added only Akteur→Bauteilgruppe BETEILIGT_AN edges between existing nodes; no new nodes or node types. Duplicates by exact source/type/target were skipped.",
+          "shared_bauteiltyp_ids": [
+            "bt_wand"
+          ],
+          "shared_material_ids": []
+        },
+        "rel_internal_id": 1159778059117692945,
+        "to": "bg_mineralisch_wand_elementa_baufeld_d",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "bauteilboerse_basel_overall",
+      "line": 27,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bg_mineralisch_wand_elementa_baufeld_d",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "bauteilboerse_hannover",
+          "land": "DE",
+          "name": "Bauteilbörse Hannover",
+          "name_full": "Bauteilbörse Hannover — regional used-component exchange",
+          "primary_source_url": "https://restado.de/profil/bauteilboerse-hannover/",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake",
+          "source_urls": [
+            "https://bauteilboerse-hannover.de/",
+            "https://restado.de/profil/bauteilboerse-hannover/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_basis": "germany_reuse_bubble_v1_2026_06_05",
+          "id": "bauteilboerse_hannover",
+          "land": "DE",
+          "name": "Bauteilbörse Hannover",
+          "name_full": "Bauteilbörse Hannover — regional used-component exchange",
+          "primary_source_url": "https://bauteilboerse-hannover.de/",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake",
+          "source_urls": [
+            "https://bauteilboerse-hannover.de/",
+            "https://restado.de/profil/bauteilboerse-hannover/"
+          ]
+        }
+      },
+      "id": "bauteilboerse_hannover",
+      "line": 28,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "skanska_finland",
+          "name": "Skanska Finland",
+          "primary_source_url": "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/",
+          "source_titles": [
+            "Harmalanranta_A_Kruunu_R…",
+            "Lokomotion_Technology_Ce…"
+          ],
+          "source_urls": [
+            "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "skanska_finland",
+          "name": "Skanska Finland",
+          "primary_source_url": "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/",
+          "source_titles": [
+            "Harmalanranta_A_Kruunu_R…",
+            "Lokomotion_Technology_Ce…"
+          ],
+          "source_urls": [
+            "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/"
+          ]
+        }
+      },
+      "id": "skanska_finland",
+      "line": 29,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Superuse Studios"
+          ],
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "superuse_studios_2012architecten",
+          "name": "Superuse Studios / 2012Architecten",
+          "primary_source_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "source_titles": [
+            "Villa_Welpeloo_Enschede.…"
+          ],
+          "source_urls": [
+            "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+            "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Superuse Studios"
+          ],
+          "id": "superuse_studios_2012architecten",
+          "name": "Superuse Studios / 2012Architecten",
+          "primary_source_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "source_titles": [
+            "Villa_Welpeloo_Enschede.…"
+          ],
+          "source_urls": [
+            "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+            "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+          ]
+        }
+      },
+      "id": "superuse_studios_2012architecten",
+      "line": 30,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "michel_massmuenster",
+          "name": "Michel Massmünster",
+          "primary_source_url": "https://www.park-books.com/produkt/bauteile-wiederverwenden/108",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "project team: Marc Angst, Pascal Hentschel, Benjamin Poignon, Michèle",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Kompendium"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://www.park-books.com/produkt/bauteile-wiederverwenden/108"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "michel_massmuenster",
+          "name": "Michel Massmünster",
+          "primary_source_url": "https://zirkular.net/en/project/building-k-118",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "project team: Marc Angst, Pascal Hentschel, Benjamin Poignon, Michèle",
+          "source_titles": [
+            "Zirkular – Culture & Commercial Center ELYS",
+            "K.118 Zirkular",
+            "Kompendium"
+          ],
+          "source_urls": [
+            "https://zirkular.net/en/project/culture-commercial-center-elys",
+            "https://zirkular.net/en/project/building-k-118",
+            "https://www.park-books.com/produkt/bauteile-wiederverwenden/108"
+          ]
+        }
+      },
+      "id": "michel_massmuenster",
+      "line": 31,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "eike_roswag_klinge",
+          "name": "Eike Roswag-Klinge",
+          "primary_source_url": "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge",
+          "source_titles": [
+            "Natural Building Lab"
+          ],
+          "source_urls": [
+            "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "eike_roswag_klinge",
+          "name": "Eike Roswag-Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge",
+          "source_titles": [
+            "Natural Building Lab"
+          ],
+          "source_urls": [
+            "https://www.nbl.berlin/persons/prof-eike-roswag-klinge",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "id": "eike_roswag_klinge",
+      "line": 32,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "anders_lendager",
+          "name": "Anders Lendager",
+          "primary_source_url": "https://circularmaterialsystems.com/en/case/02_en_resource-rows",
+          "source_titles": [
+            "https://lendager.com/project/resource-rows/",
+            "Lendager — Upcycle Studi…",
+            "CMS Resource Rows",
+            "DAC Resource Rows"
+          ],
+          "source_urls": [
+            "https://lendager.com/project/resource-rows",
+            "https://lendager.com/project/upcycle-studios",
+            "https://circularmaterialsystems.com/en/case/02_en_resource-rows",
+            "https://dac.dk/en/magazine/places/resource-rows-a-gem-of-upcycling-nestled-between-newbuilds-and-nature-279"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "anders_lendager",
+          "name": "Anders Lendager",
+          "primary_source_url": "https://lendager.com/project/resource-rows",
+          "source_titles": [
+            "https://lendager.com/project/resource-rows/",
+            "Lendager — Upcycle Studi…",
+            "CMS Resource Rows",
+            "DAC Resource Rows"
+          ],
+          "source_urls": [
+            "https://lendager.com/project/resource-rows",
+            "https://lendager.com/project/upcycle-studios",
+            "https://circularmaterialsystems.com/en/case/02_en_resource-rows",
+            "https://dac.dk/en/magazine/places/resource-rows-a-gem-of-upcycling-nestled-between-newbuilds-and-nature-279"
+          ]
+        }
+      },
+      "id": "anders_lendager",
+      "line": 33,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "andrea_klinge",
+          "name": "Andrea Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge und Andrea Klinge",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "andrea_klinge",
+          "name": "Andrea Klinge",
+          "primary_source_url": "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+          "review_run": "ier_a1_2026_06_06",
+          "source_quote": "Natural Building Materials for the Interior Insulation of Historic Buildings Interview (DE) with Prof. Eike Roswag-Klinge und Andrea Klinge",
+          "source_titles": [
+            "ZRS"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en",
+            "https://www.zrs.berlin/en/article/reallabor-lab-be-ware-from-research-straight-to-implementation",
+            "https://www.zrs.berlin/en/article/kickoff-reallabor-be-ware-2"
+          ]
+        }
+      },
+      "id": "andrea_klinge",
+      "line": 34,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "EPFL Structural Xploration Lab"
+          ],
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "structural_xploration_lab_epfl",
+          "name": "Structural Xploration Lab / EPFL",
+          "primary_source_url": "https://www.epfl.ch/labs/sxl/",
+          "review_run": "post_ier_2026_06_07",
+          "source_quote": "Structural Xploration Lab ‐ EPFL Skip to content About Education Research Innovation Schools Campus Search on the site Validate Show / hide the search form Search on the site Hide the search form EN Menu ENAC IA Civil engineering and ENAC Construction and sustainable development … Afficher l'intégra",
+          "source_titles": [
+            "ReCrete_footbridge_reuse…"
+          ],
+          "source_urls": [
+            "https://www.epfl.ch/labs/sxl/"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "EPFL Structural Xploration Lab"
+          ],
+          "id": "structural_xploration_lab_epfl",
+          "name": "Structural Xploration Lab / EPFL",
+          "primary_source_url": "https://www.epfl.ch/labs/sxl/",
+          "review_run": "post_ier_2026_06_07",
+          "source_quote": "Structural Xploration Lab ‐ EPFL Skip to content About Education Research Innovation Schools Campus Search on the site Validate Show / hide the search form Search on the site Hide the search form EN Menu ENAC IA Civil engineering and ENAC Construction and sustainable development … Afficher l'intégra",
+          "source_titles": [
+            "ReCrete_footbridge_reuse…"
+          ],
+          "source_urls": [
+            "https://www.epfl.ch/labs/sxl/"
+          ]
+        }
+      },
+      "id": "structural_xploration_lab_epfl",
+      "line": 35,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "dominik_campanella",
+          "name": "Dominik Campanella",
+          "primary_source_url": "https://www.circularbuildingscoalition.org/blueprint-projects/concular",
+          "source_titles": [
+            "Concular — Reclaimed Construction Material Insurance (RCMI)",
+            "Clean Energy Wire",
+            "Concular"
+          ],
+          "source_urls": [
+            "https://www.circularbuildingscoalition.org/blueprint-projects/concular",
+            "https://www.cleanenergywire.org/circular-economy-construction-europe",
+            "https://concular.de"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "dominik_campanella",
+          "name": "Dominik Campanella",
+          "primary_source_url": "https://www.circularbuildingscoalition.org/blueprint-projects/concular",
+          "source_titles": [
+            "Concular — Reclaimed Construction Material Insurance (RCMI)",
+            "Clean Energy Wire",
+            "Concular"
+          ],
+          "source_urls": [
+            "https://www.circularbuildingscoalition.org/blueprint-projects/concular",
+            "https://www.cleanenergywire.org/circular-economy-construction-europe",
+            "https://concular.de"
+          ]
+        }
+      },
+      "id": "dominik_campanella",
+      "line": 36,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "id": "ggzatwork_laden2_bauteile_zug",
+          "name": "GGZ@WORK Laden 2 Bauteile Zug",
+          "primary_source_url": "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+          "source_urls": [
+            "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+            "https://ggzatwork.ch/auftragskunden/demontage-montage",
+            "https://ggzatwork.ch/auftragskunden/raeumung-entsorgung"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "ggzatwork_laden2_bauteile_zug",
+          "name": "GGZ@WORK Laden 2 Bauteile Zug",
+          "primary_source_url": "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+          "source_urls": [
+            "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+            "https://ggzatwork.ch/auftragskunden/demontage-montage",
+            "https://ggzatwork.ch/auftragskunden/raeumung-entsorgung"
+          ]
+        }
+      },
+      "id": "ggzatwork_laden2_bauteile_zug",
+      "line": 37,
+      "op": "set_node_properties",
+      "status": "would_update"
+    },
+    {
+      "after": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "adresse": "Place de la Monnaie 1, 1000 Brussels, Belgium",
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "evidence_checked_at": "2026-06-07T20:54:09Z",
+          "evidence_status": "CLICKABLE_VERIFIED",
+          "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+          "geo_confidence": "high",
+          "geo_import_run": "2026-06-06_project_bg_geo_extract",
+          "id": "p_oxy_centre_monnaie",
+          "latitude": 50.8492,
+          "longitude": 4.3494,
+          "metadata_sidecar_key": "node:p_oxy_centre_monnaie",
+          "name": "OXY Centre Monnaie",
+          "name_full": "OXY — Centre Monnaie Brussels reuse renovation",
+          "primary_source_url": "https://rotordb.org/en/news/material-donnerie-oxy-friday-25-november",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "source_urls": [
+            "https://rotordb.org/en/news/material-donnerie-oxy-friday-25-november",
+            "https://rotordb.org/en/news/works-oxy-well-underway",
+            "https://rotordb.org/en/projects/oxy-centre-monnaie"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Projekt"
+        ],
+        "properties": {
+          "adresse": "Place de la Monnaie 1, 1000 Brussels, Belgium",
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "geo_aktualisiert_am_utc": "2026-06-05T23:17:08.724300+00:00",
+          "geo_confidence": "high",
+          "geo_import_run": "2026-06-06_project_bg_geo_extract",
+          "id": "p_oxy_centre_monnaie",
+          "latitude": 50.8492,
+          "longitude": 4.3494,
+          "metadata_sidecar_key": "node:p_oxy_centre_monnaie",
+          "name": "OXY Centre Monnaie",
+          "name_full": "OXY — Centre Monnaie Brussels reuse renovation",
+          "primary_source_url": "https://rotordb.org/en/news/material-donnerie-oxy-friday-25-november",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "source_urls": [
+            "https://rotordb.org/en/news/material-donnerie-oxy-friday-25-november",
+            "https://rotordb.org/en/news/works-oxy-well-underway",
+            "https://rotordb.org/en/projects/oxy-centre-monnaie"
+          ]
+        }
+      },
+      "id": "p_oxy_centre_monnaie",
+      "line": 38,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 38,
+    "would_update": 11,
+    "would_update_rel": 27
+  }
+}

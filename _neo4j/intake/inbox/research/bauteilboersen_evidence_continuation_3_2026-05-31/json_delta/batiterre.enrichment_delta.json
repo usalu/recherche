@@ -1,0 +1,205 @@
+{
+  "anchor_id": "batiterre",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://www.batiterre.be/vente-et-preparation-au-reemploi",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L46-L67",
+      "evidence_excerpt": "Stores in Brussels/Liège; available reuse materials; reconditioning processes for sanitaryware, wood and cast-iron radiators."
+    },
+    {
+      "url": "https://www.batiterre.be/shop",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L51-L101; L113-L160; L213-L283; L295-L346",
+      "evidence_excerpt": "Tags include Bois, Carrelage, Châssis et portes extérieures, Cloisons, Électricité, Escaliers et balustrades, HVAC-Chauffage, Isolation, Portes intérieures, Quincaillerie, Revêtements de sol, Sanitaires, Toiture, Verre; product listings include PVC window, glass doors, cast-iron grille/radiator."
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.batiterre.be/vente-et-preparation-au-reemploi"
+      ],
+      "evidence_quote": "Processes for reuse preparation cover “sanitaires, bois radiateurs en fonte, etc.”",
+      "confidence": "belegt",
+      "note": "Direct first-party evidence: bois = wood; fonte = cast iron.",
+      "source_line_ref": "L60-L62"
+    },
+    {
+      "target_id": "mat_gusseisen",
+      "evidence_urls": [
+        "https://www.batiterre.be/vente-et-preparation-au-reemploi"
+      ],
+      "evidence_quote": "Processes for reuse preparation cover “sanitaires, bois radiateurs en fonte, etc.”",
+      "confidence": "belegt",
+      "note": "Direct first-party evidence: bois = wood; fonte = cast iron.",
+      "source_line_ref": "L60-L62"
+    },
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Verre”; product listings include glass doors and stained glass/chassis items.",
+      "confidence": "belegt",
+      "note": "First-party shop names glass as tag and products.",
+      "source_line_ref": "L101; L236-L265"
+    },
+    {
+      "target_id": "mat_kunststoff",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "“Châssis de fenêtre PVC blanc avec vantail fixe”.",
+      "confidence": "belegt",
+      "note": "PVC window frame is explicit plastic material.",
+      "source_line_ref": "L160-L162"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags/listings include “Portes intérieures”, “Porte à panneaux”, “Porte vitrée”, “Porte extérieure”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L89; L113-L137; L219-L242; L334"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags/listing include “Châssis et portes extérieures” and “Châssis de fenêtre PVC”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L65; L160-L162"
+    },
+    {
+      "target_id": "bt_treppe",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Escaliers et balustrades”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L75; L320"
+    },
+    {
+      "target_id": "bt_gelaender",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Escaliers et balustrades”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L75; L320"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include Électricité, HVAC-Chauffage, Luminaires, Sanitaires et Salles de bain.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L73-L81; L95; L318-L340"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Revêtements de sol”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L93; L338"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Cloisons”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L67; L312"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Isolation”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L79; L324"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Toiture”.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L99; L344"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Tags include “Quincaillerie”; listing includes brass handle.",
+      "confidence": "belegt",
+      "note": "Direct first-party shop tag/product evidence.",
+      "source_line_ref": "L91; L213-L215; L336"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": "LOOKUP_REQUIRED_reconditionnement",
+      "evidence_urls": [
+        "https://www.batiterre.be/vente-et-preparation-au-reemploi"
+      ],
+      "evidence_quote": "“Nous avons développé des processus de reconditionnement ... sanitaires, bois radiateurs en fonte, etc.”",
+      "confidence": "unsicher",
+      "note": "Process link is real; exact Aufbereitungsverfahren ID requires live graph lookup.",
+      "source_line_ref": "L60-L62"
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "batiterre",
+      "claim_type": "Material",
+      "target_id": "mat_keramik",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "BatiTerre shop",
+      "source_url": "https://www.batiterre.be/shop",
+      "source_line_ref": "",
+      "source_excerpt_short": "Carrelage; Sanitaires et Salles de bain",
+      "rejection_reason": "The page does not explicitly say céramique/ceramic for these Batiterre items; use item page before material import.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

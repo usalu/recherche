@@ -1,0 +1,463 @@
+{
+  "confirmation_required": "APPLY phase0_sources_and_dossier.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2354,
+    "relationships": 15451
+  },
+  "counts_after_expected": {
+    "nodes": 2354,
+    "relationships": 15451
+  },
+  "counts_before": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:09:43.209150+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\patches\\phase0_sources_and_dossier.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ResearchDocument"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_research_rotor_dc_reuse_bubble_v2_md",
+          "name": "rotor_dc_reuse_bubble_v2.md",
+          "quelltyp": "research_markdown",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_file": "_neo4j\\intake\\inbox\\2026-06-05_rotor_dc_reuse_bubble\\rotor_dc_reuse_bubble_v2.md",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        }
+      },
+      "before": null,
+      "id": "q_research_rotor_dc_reuse_bubble_v2_md",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_150bfa71ec64ea9192c5252bb7453284",
+          "name": "PREUSE homepage",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://preuse.nweurope.eu/"
+        }
+      },
+      "before": null,
+      "id": "q_url_150bfa71ec64ea9192c5252bb7453284",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_4a94cddf6628f350b982c97040dce9fd",
+          "name": "PREUSE partners",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://preuse.nweurope.eu/partners"
+        }
+      },
+      "before": null,
+      "id": "q_url_4a94cddf6628f350b982c97040dce9fd",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_714d4c31c9d811b5269f20eaf16bb43f",
+          "name": "Rotor PREUSE Interreg NWE",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://www.rotordb.org/en/projects/preuse-interreg-nwe"
+        }
+      },
+      "before": null,
+      "id": "q_url_714d4c31c9d811b5269f20eaf16bb43f",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_chiro_d_itterbeek_dilbeek_s5",
+          "name": "Opalis Rotor Deconstruction dealer",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://opalis.eu/en/dealers/rotor-deconstruction"
+        }
+      },
+      "before": null,
+      "id": "q_chiro_d_itterbeek_dilbeek_s5",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_multi_brussels_reuse_in_multi_s5",
+          "name": "Rotor Multi De Brouckere Tower",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordb.org/en/projects/multi-de-brouckere-tower"
+        }
+      },
+      "before": null,
+      "id": "q_multi_brussels_reuse_in_multi_s5",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_opalis_about",
+          "name": "Opalis about",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://opalis.eu/en/about"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_opalis_about",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_opalis_docs",
+          "name": "Opalis documentation",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://opalis.eu/en/documentation"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_opalis_docs",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_oxy_project",
+          "name": "Rotor OXY Centre Monnaie project",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordb.org/en/projects/oxy-centre-monnaie"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_oxy_project",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_oxy_news",
+          "name": "Rotor works OXY underway",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordb.org/en/news/works-oxy-well-underway"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_oxy_news",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_oxy_donnerie",
+          "name": "Rotor OXY material donnerie",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordb.org/en/news/material-donnerie-oxy-friday-25-november"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_oxy_donnerie",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_opalis_generale",
+          "name": "Opalis Generale de Banque case",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://opalis.eu/fr/projets/ancien-siege-de-la-generale-de-banque"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_opalis_generale",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_rotordc_generale_blog",
+          "name": "RotorDC Generale Bank HQ salvage",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordc.com/blog/salvaging-by-rotordc-3/generale-banks-hq-brussels-72"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_rotordc_generale_blog",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_preuse_launch",
+          "name": "PREUSE official launch",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://preuse.nweurope.eu/blog/preuse-news-64/official-launch-of-the-preuse-project-153"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_preuse_launch",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_preuse_utrecht_opening",
+          "name": "PREUSE Utrecht reuse centre opening",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_preuse_utrecht_opening",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_fcrbe_12_pilots",
+          "name": "Rotor 12 FCRBE pilot operations",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordb.org/en/projects/12-fcrbe-pilot-operations"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fcrbe_12_pilots",
+      "line": 16,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_arch_reuse_brussels",
+          "name": "Architecture of Reuse Brussels",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordb.org/en/projects/architecture-reuse-brussels"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_arch_reuse_brussels",
+      "line": 17,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_rotor_reuse_multi_pub",
+          "name": "Rotor Reuse Multi publication",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://rotordb.org/en/projects/reuse-multi-project"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_rotor_reuse_multi_pub",
+      "line": 18,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "rotor_dc_reuse_bubble_v2_2026_06_05",
+          "id": "q_url_new_amop_mission",
+          "name": "Rotor AMOP Mission",
+          "quelltyp": "external_link",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake",
+          "url": "https://www.rotordb.org/en/projects/amop-mission"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_amop_mission",
+      "line": 19,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 19,
+    "would_create": 19
+  }
+}

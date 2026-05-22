@@ -1,0 +1,14 @@
+{
+  "$comment": "Catalogue of LaTeX table fragments, rendered by _scripts/export_neo4j_table.py into semio Table windows. Queries are read-only and must return 'left' and 'right' columns — the semio two-column table API (\\SemioTableTwo) takes exactly two. Use this instead of a diagram when the relationship is a set of numbers: a fan-in from a few sources to many targets reads as a table and as a hairball as a graph.",
+  "database": "mit-bestand",
+  "tables": [
+    {
+      "name": "huerden-traeger",
+      "title": "Träger der Hürden",
+      "headers": ["Hürde", "Bauteilgruppen / Projekte"],
+      "description": "How many Bauteilgruppen and Projekte carry each barrier — the companion to the huerden figure",
+      "$comment": "German naming mirrors the display map in views.json → huerden. Keep the two in step.",
+      "cypher": "MATCH (h:Huerde)\nOPTIONAL MATCH (bg:Bauteilgruppe)-[:HAT_HUERDE]->(h)\nWITH h, count(DISTINCT bg) AS bauteilgruppen\nOPTIONAL MATCH (p:Projekt)-[:HAT_HUERDE]->(h)\nWITH h, bauteilgruppen, count(DISTINCT p) AS projekte\nRETURN CASE h.name\n         WHEN 'Witterung_Feuchte'          THEN 'Witterung / Feuchte'\n         WHEN 'Verfuegbarkeitsproblem'     THEN 'Verfügbarkeitsproblem'\n         WHEN 'Heterogenitaet_Chargen'     THEN 'Heterogenität der Chargen'\n         WHEN 'Unkonventionelles_Material' THEN 'Unkonventionelles Material'\n         WHEN 'Fehlende_Lagerflaeche'      THEN 'Fehlende Lagerfläche'\n         ELSE replace(h.name, '_', ' ') END AS left,\n       toString(bauteilgruppen) + ' / ' + toString(projekte) AS right\nORDER BY bauteilgruppen + projekte DESC"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "anchor_id": "material_reuse_portal",
+  "sources_visited": [
+    {
+      "url": "https://materialreuseportal.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Aggregator page: brings data on available materials from multiple sources."
+      ]
+    },
+    {
+      "url": "https://materialreuseportal.com/About",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "About page."
+      ]
+    },
+    {
+      "url": "https://relondon.gov.uk/built-environment",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://ukgbc.org/resources/aggregated-material-reuse-marketplace/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "UKGBC source: aggregates data from multiple marketplaces for reusable construction materials."
+      ]
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_aggregator",
+      "evidence_urls": [
+        "https://materialreuseportal.com/About"
+      ],
+      "evidence_quote": "Portal is an aggregator / marketplace provider directory rather than a single material stockholder.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Material Reuse Portal",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://materialreuseportal.com/",
+      "https://materialreuseportal.com/About"
+    ]
+  },
+  "new_vocab_candidates": [
+    {
+      "intended_label": "Marktmodell",
+      "intended_id_proposal": "mkt_aggregated_material_reuse_marketplace",
+      "rationale": "Aggregator/portal model differs from direct marketplace or material-hub actor.",
+      "evidence_urls": [
+        "https://ukgbc.org/resources/aggregated-material-reuse-marketplace/"
+      ]
+    }
+  ],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Do not inherit every provider category; no direct material claims should be imported at portal level."
+    },
+    {
+      "topic": "Material",
+      "reason": "No concrete source-backed material term was found in operator/current/history sources. Keep material empty rather than infer from generic construction-material wording."
+    },
+    {
+      "topic": "Bauteiltyp",
+      "reason": "No stable component family was visible in operator/current/history sources; catalogue/login/product pages required."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/material_reuse_portal.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

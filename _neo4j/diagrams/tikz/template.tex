@@ -1,0 +1,19 @@
+% template.tex — copy this to start a new semio TikZ figure.
+% Rename, edit, then:  python _scripts/render_tikz.py <name>
+% Only semio styles/colours are allowed — the gate (validate_semio_tikz.py) enforces it.
+\documentclass[border=6pt]{standalone}
+\usepackage{semio-tikz}
+\begin{document}
+\begin{tikzpicture}[node distance=9mm]
+
+  % A node states its kind as a muted chip above the caption:
+  \node[semio node, text width=40mm] (a) {\SemioNode{Kind}{Caption}};
+  \node[semio node, text width=40mm, below=of a] (b) {\SemioNode{Kind}{Another}};
+  \draw[semio edge] (a) -- (b);          % hairline; use `semio arrow` for direction
+
+  % Reserve `semio focus` for the one focal entity (semio's red accent).
+  % Machine text (ids/counts) uses \semiomonofont. Never write a raw hex or
+  % round a corner — both fail the gate.
+
+\end{tikzpicture}
+\end{document}

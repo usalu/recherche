@@ -1,0 +1,129 @@
+{
+  "confirmation_required": "APPLY phase3_material_path_upgrades.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2356,
+    "relationships": 15477
+  },
+  "counts_after_expected": {
+    "nodes": 2356,
+    "relationships": 15477
+  },
+  "counts_before": {
+    "nodes": 2356,
+    "relationships": 15472
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:09:52.675328+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\patches\\phase3_material_path_upgrades.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "evidence_basis": "first_party_project_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor salvaged Generale de Banque granite for Multi",
+        "evidence_source_id": "q_multi_brussels_reuse_in_multi_s5",
+        "evidence_url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+        "id": "r_Rotor__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "rolle_text": "design assistance / salvage coordination",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "id": "r_Rotor__BETEILIGT_AN__p_multi_brussels_reuse_in_multi"
+        },
+        "rel_internal_id": 1155274459490294147,
+        "to": "p_multi_brussels_reuse_in_multi",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Rotor",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_multi_brussels_reuse_in_multi",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "evidence_basis": "first_party_project_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor DC salvaged 66 tonnes granite from Generale de Banque",
+        "evidence_source_id": "q_multi_brussels_reuse_in_multi_s5",
+        "evidence_url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+        "id": "r_rotordc__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "rolle_text": "salvage operator",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "id": "r_rotordc__BETEILIGT_AN__p_multi_brussels_reuse_in_multi"
+        },
+        "rel_internal_id": 1155274459490294148,
+        "to": "p_multi_brussels_reuse_in_multi",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_multi_brussels_reuse_in_multi",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "from": "p_multi_brussels_reuse_in_multi",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "HAT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_generale_de_banque_brussels"
+    },
+    {
+      "from": "rotordc",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "NUTZT_BAUWERK",
+      "status": "would_create_rel",
+      "to": "bw_generale_de_banque_brussels"
+    },
+    {
+      "from": "rotordc",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_rotordc_generale_blog"
+    },
+    {
+      "from": "p_multi_brussels_reuse_in_multi",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_rotor_reuse_multi_pub"
+    },
+    {
+      "from": "bw_generale_de_banque_brussels",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_opalis_generale"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 7,
+    "would_create_rel": 5,
+    "would_update_rel": 2
+  }
+}

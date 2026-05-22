@@ -1,0 +1,440 @@
+{
+  "confirmation_required": "APPLY phase0_sources_and_dossier.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2402,
+    "relationships": 15529
+  },
+  "counts_after_expected": {
+    "nodes": 2402,
+    "relationships": 15529
+  },
+  "counts_before": {
+    "nodes": 2384,
+    "relationships": 15529
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:39:42.328961+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_france_reuse_bubble\\patches\\phase0_sources_and_dossier.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ResearchDocument"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_research_france_reuse_bubble_combined_md",
+          "name": "france_reuse_bubble_combined.md",
+          "quelltyp": "research_markdown",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_file": "_neo4j\\intake\\inbox\\2026-06-05_france_reuse_bubble\\france_reuse_bubble_combined.md",
+          "source_scope": "france_reuse_bubble_intake"
+        }
+      },
+      "before": null,
+      "id": "q_research_france_reuse_bubble_combined_md",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_cycleup",
+          "name": "Cycle Up concept",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.cycle-up.fr/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_cycleup",
+      "line": 2,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_backacia",
+          "name": "Backacia marketplace",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://backacia.com/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_backacia",
+      "line": 3,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_bellastock_reemploi",
+          "name": "Bellastock réemploi",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.bellastock.com/reemploi/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_bellastock_reemploi",
+      "line": 4,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_bellastock_opalis",
+          "name": "Bellastock Opalis France",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.bellastock.com/projets/opalis-france/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_bellastock_opalis",
+      "line": 5,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_opalis_backacia",
+          "name": "Opalis Backacia supplier",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://opalis.eu/fr/fournisseurs/backacia"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_opalis_backacia",
+      "line": 6,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_cstb_reemploi",
+          "name": "CSTB réemploi SPIROU",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.cstb.fr/nos-offres/toutes-nos-offres/accompagner-developpement-reemploi"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_cstb_reemploi",
+      "line": 7,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_ademe_spirou",
+          "name": "ADEME SPIROU",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://recherche.ademe.fr/spirou-securiser-les-pratiques-innovantes-de-reemploi-une-offre-unifiee"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_ademe_spirou",
+      "line": 8,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_mobius",
+          "name": "Mobius Réemploi",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.mobius-reemploi.fr/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_mobius",
+      "line": 9,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_mobius_idf",
+          "name": "Mobius Bondy IDF",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.iledefrance.fr/tous-les-services/ma-region-pres-de-chez-moi/environnement/economie-circulaire-et-gestion-des-dechets/96425-construction-dune-plateforme-de-reconditionnement-de-materiaux-pour-lentreprise-mobius-reemploi"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_mobius_idf",
+      "line": 10,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_raedificare",
+          "name": "RAEDIFICARE",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://raedificare.com/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_raedificare",
+      "line": 11,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_fcrbe_cycleup",
+          "name": "FCRBE Cycle Up case",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://vb.nweurope.eu/media/21153/fcrbe_cas-cycle-up-final18oct2023_en.pdf"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_fcrbe_cycleup",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_ademe_bellastock",
+          "name": "ADEME Bellastock expert",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://experimentationsurbaines.ademe.fr/blog/ressource/site-de-bellastock-expert-sur-le-reemploi-de-materiaux-de-construction/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_ademe_bellastock",
+      "line": 13,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_ademe_repar",
+          "name": "ADEME REPAR programmes",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://experimentationsurbaines.ademe.fr/blog/ressource/programmes-repar-1-et-2/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_ademe_repar",
+      "line": 14,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_bellastock_preuse",
+          "name": "Bellastock PREUSE",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.bellastock.com/projets/preuse/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_bellastock_preuse",
+      "line": 15,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_ademe_opalis",
+          "name": "ADEME Opalis platform",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://experimentationsurbaines.ademe.fr/blog/ressource/opalis-plateforme-de-reemploi-de-materiaux-de-construction-et-de-renovation/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_ademe_opalis",
+      "line": 16,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_cycleup_idf",
+          "name": "Cycle Up Noisy-le-Sec IDF",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.iledefrance.fr/tous-les-services/ma-region-pres-de-chez-moi/environnement/economie-circulaire-et-gestion-des-dechets/162815-creation-dun-atelier-de-reconditionnement-de-6000-sanitaires-par-et-dautres-materiaux-de-reemploi-pour-cycle"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_cycleup_idf",
+      "line": 17,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "after": {
+        "labels": [
+          "Quelle",
+          "ExternalLink"
+        ],
+        "properties": {
+          "evidence_basis": "france_reuse_bubble_combined_2026_06_05",
+          "id": "q_url_new_fr_bellastock_actlab",
+          "name": "Bellastock Actlab",
+          "quelltyp": "external_link",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake",
+          "url": "https://www.bellastock.com/projets/actlab/"
+        }
+      },
+      "before": null,
+      "id": "q_url_new_fr_bellastock_actlab",
+      "line": 18,
+      "op": "add_node",
+      "status": "would_create"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 18,
+    "would_create": 18
+  }
+}

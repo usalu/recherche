@@ -1,0 +1,476 @@
+{
+  "confirmation_required": "APPLY merge_duplicate_edges_remaining.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15367
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15367
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15390
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:48:41.660547+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\merge_duplicate_edges_remaining.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "lionel_devlieger",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_lionel_devlieger__VERBUNDEN_MIT_AKTEUR__Rotor"
+        },
+        "rel_internal_id": 1153034754304514503,
+        "to": "Rotor",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "lionel_devlieger",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Rotor",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "maarten_gielen",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_maarten_gielen__VERBUNDEN_MIT_AKTEUR__Rotor"
+        },
+        "rel_internal_id": 1153034754304514462,
+        "to": "Rotor",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "maarten_gielen",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Rotor",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_opalis__VERBUNDEN_MIT_AKTEUR__Rotor"
+        },
+        "rel_internal_id": 1153034754304514437,
+        "to": "Rotor",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Rotor",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tristan_boniver",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_tristan_boniver__VERBUNDEN_MIT_AKTEUR__Rotor"
+        },
+        "rel_internal_id": 1153034754304514541,
+        "to": "Rotor",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "tristan_boniver",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "Rotor",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "btu_cottbus",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "consortium_co_membership",
+          "evidence_basis": "recreate_consortium_co_listing",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "professor Angelika Mettke ... would eventually join the leadership here on ReCreate ... BTU Cottbus-Senftenberg",
+          "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+          "id": "r_btu_cottbus__VERBUNDEN_MIT_AKTEUR__angelika_mettke",
+          "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+        },
+        "rel_internal_id": 1155286554118199587,
+        "to": "angelika_mettke",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "btu_cottbus",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "angelika_mettke",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "recreate_project",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "consortium_co_membership",
+          "evidence_basis": "recreate_consortium_co_listing",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "professor Angelika Mettke ... would eventually join the leadership here on ReCreate ... BTU Cottbus-Senftenberg",
+          "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+          "id": "r_recreate_project__VERBUNDEN_MIT_AKTEUR__angelika_mettke",
+          "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+        },
+        "rel_internal_id": 1153034754304514340,
+        "to": "angelika_mettke",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "recreate_project",
+      "line": 6,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "angelika_mettke",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_bremen",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_bauteilboerse_bremen__VERBUNDEN_MIT_AKTEUR__bauteilnetz_deutschland"
+        },
+        "rel_internal_id": 1153034754304514533,
+        "to": "bauteilnetz_deutschland",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_bremen",
+      "line": 7,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilnetz_deutschland",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "eth_zuerich",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_eth_zuerich__VERBUNDEN_MIT_AKTEUR__catherine_de_wolf"
+        },
+        "rel_internal_id": 1153034754304514346,
+        "to": "catherine_de_wolf",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "eth_zuerich",
+      "line": 8,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "catherine_de_wolf",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tu_berlin",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_tu_berlin__VERBUNDEN_MIT_AKTEUR__circular_material_systems"
+        },
+        "rel_internal_id": 1155286554118199681,
+        "to": "circular_material_systems",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "tu_berlin",
+      "line": 9,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_material_systems",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "circular_structural_design",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_circular_structural_design__VERBUNDEN_MIT_AKTEUR__patrick_teuffel"
+        },
+        "rel_internal_id": 1155286554118199591,
+        "to": "patrick_teuffel",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_structural_design",
+      "line": 10,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "patrick_teuffel",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "pascal_flammer_architekten",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_pascal_flammer_architekten__VERBUNDEN_MIT_AKTEUR__cirkla"
+        },
+        "rel_internal_id": 1153034754304514622,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "pascal_flammer_architekten",
+      "line": 11,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "urban_bricolage",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_urban_bricolage__VERBUNDEN_MIT_AKTEUR__cirkla"
+        },
+        "rel_internal_id": 1153034754304514577,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "urban_bricolage",
+      "line": 12,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "eth_zuerich",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_eth_zuerich__VERBUNDEN_MIT_AKTEUR__fabio_gramazio"
+        },
+        "rel_internal_id": 1159790153745570090,
+        "to": "fabio_gramazio",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "eth_zuerich",
+      "line": 13,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "fabio_gramazio",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "eth_zuerich",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_eth_zuerich__VERBUNDEN_MIT_AKTEUR__gramazio_kohler_research"
+        },
+        "rel_internal_id": 1155286554118199594,
+        "to": "gramazio_kohler_research",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "eth_zuerich",
+      "line": 14,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "gramazio_kohler_research",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "eth_zuerich",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_eth_zuerich__VERBUNDEN_MIT_AKTEUR__matthias_kohler"
+        },
+        "rel_internal_id": 1162041953559255338,
+        "to": "matthias_kohler",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "eth_zuerich",
+      "line": 15,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "matthias_kohler",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tu_berlin",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_tu_berlin__VERBUNDEN_MIT_AKTEUR__georg_hubmann"
+        },
+        "rel_internal_id": 1157538353931884929,
+        "to": "georg_hubmann",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "tu_berlin",
+      "line": 16,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "georg_hubmann",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gruner_reuse_platform",
+        "properties": {
+          "confidence": 0.6
+        },
+        "rel_internal_id": 1153034754304542742,
+        "to": "gruner_ag",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gruner_reuse_platform",
+      "line": 17,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "gruner_ag",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gruner_reuse_platform",
+        "properties": {
+          "confidence": 0.6
+        },
+        "rel_internal_id": 1157538353931913238,
+        "to": "nicole_daehn",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gruner_reuse_platform",
+      "line": 18,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "nicole_daehn",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gruner_reuse_platform",
+        "properties": {
+          "confidence": 0.6
+        },
+        "rel_internal_id": 1155286554118227990,
+        "to": "ullrich_dickgiesser",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gruner_reuse_platform",
+      "line": 19,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "ullrich_dickgiesser",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_opalis__VERBUNDEN_MIT_AKTEUR__maarten_gielen"
+        },
+        "rel_internal_id": 1155286554118199685,
+        "to": "maarten_gielen",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 20,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "maarten_gielen",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "materiuum_geneve_ressourcerie",
+        "properties": {
+          "id": "r_materiuum_geneve_ressourcerie__VERBUNDEN_MIT_AKTEUR__materiuum"
+        },
+        "rel_internal_id": 1155286554118227989,
+        "to": "materiuum",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "materiuum_geneve_ressourcerie",
+      "line": 21,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "materiuum",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "ressourcerie_lausanne_materiuum_ruul",
+        "properties": {
+          "id": "r_ressourcerie_lausanne_materiuum_ruul__VERBUNDEN_MIT_AKTEUR__materiuum"
+        },
+        "rel_internal_id": 1155286554118195225,
+        "to": "materiuum",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "ressourcerie_lausanne_materiuum_ruul",
+      "line": 22,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "materiuum",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "recreate_project",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "consortium_co_membership",
+          "evidence_basis": "recreate_consortium_co_listing",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "ReCreate's coordinator and the Finnish cluster's leader, Prof. Satu Huuhka from Tampere University",
+          "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+          "id": "r_recreate_project__VERBUNDEN_MIT_AKTEUR__satu_huuhka",
+          "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+        },
+        "rel_internal_id": 1159790153745570084,
+        "to": "satu_huuhka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "recreate_project",
+      "line": 23,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "satu_huuhka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 23,
+    "would_delete_rel": 23
+  }
+}

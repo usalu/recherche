@@ -1,0 +1,899 @@
+{
+  "id": "C1_normen_nach_land",
+  "title": "C1 · Normen-/Rechtslandschaft nach Land",
+  "caption": "Welche Rechtsdomänen sind je Land dokumentiert (Regelwerk GILT_IN_LAND, Kantenstärke = Anzahl Normknoten). Der länderspezifische Rahmen, den die Nachweis-Funktionen (Tragwerk, Ökobilanz) respektieren müssen.",
+  "stats": {
+    "laender": 9,
+    "rechtsdomaenen": 11,
+    "normknoten_kanten": 453
+  },
+  "graph": {
+    "directed": false,
+    "nodes": [
+      {
+        "id": "L::Deutschland",
+        "group": "Land",
+        "label": "Deutschland (104)",
+        "color": "#54A24B",
+        "size": 5550,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Vereinigtes Königreich",
+        "group": "Land",
+        "label": "Vereinigtes Königreich (10)",
+        "color": "#54A24B",
+        "size": 850,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Belgien",
+        "group": "Land",
+        "label": "Belgien (54)",
+        "color": "#54A24B",
+        "size": 3050,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Niederlande",
+        "group": "Land",
+        "label": "Niederlande (61)",
+        "color": "#54A24B",
+        "size": 3400,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Frankreich",
+        "group": "Land",
+        "label": "Frankreich (58)",
+        "color": "#54A24B",
+        "size": 3250,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Schweiz",
+        "group": "Land",
+        "label": "Schweiz (6)",
+        "color": "#54A24B",
+        "size": 650,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Norwegen",
+        "group": "Land",
+        "label": "Norwegen (52)",
+        "color": "#54A24B",
+        "size": 2950,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Dänemark",
+        "group": "Land",
+        "label": "Dänemark (53)",
+        "color": "#54A24B",
+        "size": 3000,
+        "bipartite": 0
+      },
+      {
+        "id": "L::Österreich",
+        "group": "Land",
+        "label": "Österreich (55)",
+        "color": "#54A24B",
+        "size": 3100,
+        "bipartite": 0
+      },
+      {
+        "id": "D::Schadstoffrecht",
+        "group": "Rechtsdomaene",
+        "label": "Schadstoffrecht",
+        "color": "#B279A2",
+        "size": 1750,
+        "bipartite": 1
+      },
+      {
+        "id": "D::Bauproduktrecht",
+        "group": "Rechtsdomaene",
+        "label": "Bauproduktrecht",
+        "color": "#B279A2",
+        "size": 4390,
+        "bipartite": 1
+      },
+      {
+        "id": "D::Tragwerksrecht",
+        "group": "Rechtsdomaene",
+        "label": "Tragwerksrecht",
+        "color": "#B279A2",
+        "size": 4990,
+        "bipartite": 1
+      },
+      {
+        "id": "D::UmweltUndOekobilanzrecht",
+        "group": "Rechtsdomaene",
+        "label": "UmweltUndOekobilanzrecht",
+        "color": "#B279A2",
+        "size": 1870,
+        "bipartite": 1
+      },
+      {
+        "id": "D::ReuseDokumentationsrecht",
+        "group": "Rechtsdomaene",
+        "label": "ReuseDokumentationsrecht",
+        "color": "#B279A2",
+        "size": 2670,
+        "bipartite": 1
+      },
+      {
+        "id": "D::Genehmigungsrecht",
+        "group": "Rechtsdomaene",
+        "label": "Genehmigungsrecht",
+        "color": "#B279A2",
+        "size": 630,
+        "bipartite": 1
+      },
+      {
+        "id": "D::HygieneElektroFunktionsrecht",
+        "group": "Rechtsdomaene",
+        "label": "HygieneElektroFunktionsrecht",
+        "color": "#B279A2",
+        "size": 510,
+        "bipartite": 1
+      },
+      {
+        "id": "D::Bauphysikrecht",
+        "group": "Rechtsdomaene",
+        "label": "Bauphysikrecht",
+        "color": "#B279A2",
+        "size": 1710,
+        "bipartite": 1
+      },
+      {
+        "id": "D::Brandschutzrecht",
+        "group": "Rechtsdomaene",
+        "label": "Brandschutzrecht",
+        "color": "#B279A2",
+        "size": 1150,
+        "bipartite": 1
+      },
+      {
+        "id": "D::RueckbauUndAbbruchrecht",
+        "group": "Rechtsdomaene",
+        "label": "RueckbauUndAbbruchrecht",
+        "color": "#B279A2",
+        "size": 1830,
+        "bipartite": 1
+      },
+      {
+        "id": "D::Haftungsrecht",
+        "group": "Rechtsdomaene",
+        "label": "Haftungsrecht",
+        "color": "#B279A2",
+        "size": 470,
+        "bipartite": 1
+      }
+    ],
+    "edges": [
+      {
+        "source": "L::Deutschland",
+        "target": "D::Schadstoffrecht",
+        "weight": 16
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::Bauproduktrecht",
+        "weight": 17
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::Tragwerksrecht",
+        "weight": 19
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 8
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 13
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::Genehmigungsrecht",
+        "weight": 5
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::HygieneElektroFunktionsrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::Bauphysikrecht",
+        "weight": 6
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::Brandschutzrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 10
+      },
+      {
+        "source": "L::Deutschland",
+        "target": "D::Haftungsrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Vereinigtes Königreich",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Vereinigtes Königreich",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 1
+      },
+      {
+        "source": "L::Vereinigtes Königreich",
+        "target": "D::Tragwerksrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Vereinigtes Königreich",
+        "target": "D::Bauproduktrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Vereinigtes Königreich",
+        "target": "D::Brandschutzrecht",
+        "weight": 1
+      },
+      {
+        "source": "L::Vereinigtes Königreich",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 1
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 8
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 5
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::Bauproduktrecht",
+        "weight": 13
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::Tragwerksrecht",
+        "weight": 15
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::Brandschutzrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::Bauphysikrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Belgien",
+        "target": "D::Schadstoffrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::Bauproduktrecht",
+        "weight": 15
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::Tragwerksrecht",
+        "weight": 17
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::Brandschutzrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::Bauphysikrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 6
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::Schadstoffrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 9
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Niederlande",
+        "target": "D::Genehmigungsrecht",
+        "weight": 1
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::Bauproduktrecht",
+        "weight": 13
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::Tragwerksrecht",
+        "weight": 15
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::Brandschutzrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::Bauphysikrecht",
+        "weight": 5
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 5
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::Schadstoffrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 8
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 6
+      },
+      {
+        "source": "L::Frankreich",
+        "target": "D::Haftungsrecht",
+        "weight": 1
+      },
+      {
+        "source": "L::Schweiz",
+        "target": "D::Bauphysikrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Schweiz",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 1
+      },
+      {
+        "source": "L::Schweiz",
+        "target": "D::Tragwerksrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Schweiz",
+        "target": "D::Brandschutzrecht",
+        "weight": 1
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::Bauproduktrecht",
+        "weight": 14
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::Tragwerksrecht",
+        "weight": 15
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::Brandschutzrecht",
+        "weight": 2
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::Bauphysikrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::Schadstoffrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 6
+      },
+      {
+        "source": "L::Norwegen",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::Bauproduktrecht",
+        "weight": 14
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::Tragwerksrecht",
+        "weight": 15
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::Brandschutzrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 5
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::Bauphysikrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::Schadstoffrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 6
+      },
+      {
+        "source": "L::Dänemark",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::Bauproduktrecht",
+        "weight": 13
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::Tragwerksrecht",
+        "weight": 15
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::Brandschutzrecht",
+        "weight": 3
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::Bauphysikrecht",
+        "weight": 5
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::UmweltUndOekobilanzrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::Schadstoffrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::ReuseDokumentationsrecht",
+        "weight": 6
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::RueckbauUndAbbruchrecht",
+        "weight": 4
+      },
+      {
+        "source": "L::Österreich",
+        "target": "D::Genehmigungsrecht",
+        "weight": 1
+      }
+    ]
+  },
+  "rows": [
+    {
+      "land": "Deutschland",
+      "domain": "Schadstoffrecht",
+      "n": 16
+    },
+    {
+      "land": "Deutschland",
+      "domain": "Bauproduktrecht",
+      "n": 17
+    },
+    {
+      "land": "Deutschland",
+      "domain": "Tragwerksrecht",
+      "n": 19
+    },
+    {
+      "land": "Deutschland",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 8
+    },
+    {
+      "land": "Deutschland",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 13
+    },
+    {
+      "land": "Deutschland",
+      "domain": "Genehmigungsrecht",
+      "n": 5
+    },
+    {
+      "land": "Deutschland",
+      "domain": "HygieneElektroFunktionsrecht",
+      "n": 4
+    },
+    {
+      "land": "Deutschland",
+      "domain": "Bauphysikrecht",
+      "n": 6
+    },
+    {
+      "land": "Deutschland",
+      "domain": "Brandschutzrecht",
+      "n": 4
+    },
+    {
+      "land": "Deutschland",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 10
+    },
+    {
+      "land": "Deutschland",
+      "domain": "Haftungsrecht",
+      "n": 2
+    },
+    {
+      "land": "Vereinigtes Königreich",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 2
+    },
+    {
+      "land": "Vereinigtes Königreich",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 1
+    },
+    {
+      "land": "Vereinigtes Königreich",
+      "domain": "Tragwerksrecht",
+      "n": 3
+    },
+    {
+      "land": "Vereinigtes Königreich",
+      "domain": "Bauproduktrecht",
+      "n": 2
+    },
+    {
+      "land": "Vereinigtes Königreich",
+      "domain": "Brandschutzrecht",
+      "n": 1
+    },
+    {
+      "land": "Vereinigtes Königreich",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 1
+    },
+    {
+      "land": "Belgien",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 8
+    },
+    {
+      "land": "Belgien",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 5
+    },
+    {
+      "land": "Belgien",
+      "domain": "Bauproduktrecht",
+      "n": 13
+    },
+    {
+      "land": "Belgien",
+      "domain": "Tragwerksrecht",
+      "n": 15
+    },
+    {
+      "land": "Belgien",
+      "domain": "Brandschutzrecht",
+      "n": 2
+    },
+    {
+      "land": "Belgien",
+      "domain": "Bauphysikrecht",
+      "n": 4
+    },
+    {
+      "land": "Belgien",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 4
+    },
+    {
+      "land": "Belgien",
+      "domain": "Schadstoffrecht",
+      "n": 3
+    },
+    {
+      "land": "Niederlande",
+      "domain": "Bauproduktrecht",
+      "n": 15
+    },
+    {
+      "land": "Niederlande",
+      "domain": "Tragwerksrecht",
+      "n": 17
+    },
+    {
+      "land": "Niederlande",
+      "domain": "Brandschutzrecht",
+      "n": 2
+    },
+    {
+      "land": "Niederlande",
+      "domain": "Bauphysikrecht",
+      "n": 4
+    },
+    {
+      "land": "Niederlande",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 6
+    },
+    {
+      "land": "Niederlande",
+      "domain": "Schadstoffrecht",
+      "n": 3
+    },
+    {
+      "land": "Niederlande",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 9
+    },
+    {
+      "land": "Niederlande",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 4
+    },
+    {
+      "land": "Niederlande",
+      "domain": "Genehmigungsrecht",
+      "n": 1
+    },
+    {
+      "land": "Frankreich",
+      "domain": "Bauproduktrecht",
+      "n": 13
+    },
+    {
+      "land": "Frankreich",
+      "domain": "Tragwerksrecht",
+      "n": 15
+    },
+    {
+      "land": "Frankreich",
+      "domain": "Brandschutzrecht",
+      "n": 2
+    },
+    {
+      "land": "Frankreich",
+      "domain": "Bauphysikrecht",
+      "n": 5
+    },
+    {
+      "land": "Frankreich",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 5
+    },
+    {
+      "land": "Frankreich",
+      "domain": "Schadstoffrecht",
+      "n": 3
+    },
+    {
+      "land": "Frankreich",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 8
+    },
+    {
+      "land": "Frankreich",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 6
+    },
+    {
+      "land": "Frankreich",
+      "domain": "Haftungsrecht",
+      "n": 1
+    },
+    {
+      "land": "Schweiz",
+      "domain": "Bauphysikrecht",
+      "n": 2
+    },
+    {
+      "land": "Schweiz",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 1
+    },
+    {
+      "land": "Schweiz",
+      "domain": "Tragwerksrecht",
+      "n": 2
+    },
+    {
+      "land": "Schweiz",
+      "domain": "Brandschutzrecht",
+      "n": 1
+    },
+    {
+      "land": "Norwegen",
+      "domain": "Bauproduktrecht",
+      "n": 14
+    },
+    {
+      "land": "Norwegen",
+      "domain": "Tragwerksrecht",
+      "n": 15
+    },
+    {
+      "land": "Norwegen",
+      "domain": "Brandschutzrecht",
+      "n": 2
+    },
+    {
+      "land": "Norwegen",
+      "domain": "Bauphysikrecht",
+      "n": 4
+    },
+    {
+      "land": "Norwegen",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 4
+    },
+    {
+      "land": "Norwegen",
+      "domain": "Schadstoffrecht",
+      "n": 3
+    },
+    {
+      "land": "Norwegen",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 6
+    },
+    {
+      "land": "Norwegen",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 4
+    },
+    {
+      "land": "Dänemark",
+      "domain": "Bauproduktrecht",
+      "n": 14
+    },
+    {
+      "land": "Dänemark",
+      "domain": "Tragwerksrecht",
+      "n": 15
+    },
+    {
+      "land": "Dänemark",
+      "domain": "Brandschutzrecht",
+      "n": 3
+    },
+    {
+      "land": "Dänemark",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 5
+    },
+    {
+      "land": "Dänemark",
+      "domain": "Bauphysikrecht",
+      "n": 4
+    },
+    {
+      "land": "Dänemark",
+      "domain": "Schadstoffrecht",
+      "n": 3
+    },
+    {
+      "land": "Dänemark",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 6
+    },
+    {
+      "land": "Dänemark",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 3
+    },
+    {
+      "land": "Österreich",
+      "domain": "Bauproduktrecht",
+      "n": 13
+    },
+    {
+      "land": "Österreich",
+      "domain": "Tragwerksrecht",
+      "n": 15
+    },
+    {
+      "land": "Österreich",
+      "domain": "Brandschutzrecht",
+      "n": 3
+    },
+    {
+      "land": "Österreich",
+      "domain": "Bauphysikrecht",
+      "n": 5
+    },
+    {
+      "land": "Österreich",
+      "domain": "UmweltUndOekobilanzrecht",
+      "n": 4
+    },
+    {
+      "land": "Österreich",
+      "domain": "Schadstoffrecht",
+      "n": 4
+    },
+    {
+      "land": "Österreich",
+      "domain": "ReuseDokumentationsrecht",
+      "n": 6
+    },
+    {
+      "land": "Österreich",
+      "domain": "RueckbauUndAbbruchrecht",
+      "n": 4
+    },
+    {
+      "land": "Österreich",
+      "domain": "Genehmigungsrecht",
+      "n": 1
+    }
+  ]
+}

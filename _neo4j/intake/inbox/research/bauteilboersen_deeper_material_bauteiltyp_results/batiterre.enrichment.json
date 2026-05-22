@@ -1,0 +1,188 @@
+{
+  "anchor_id": "batiterre",
+  "sources_visited": [
+    {
+      "url": "https://www.batiterre.be/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.batiterre.be/shop",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Shop/source for reused materials and component stock."
+      ]
+    },
+    {
+      "url": "https://www.batiterre.be/vente-et-preparation-au-reemploi",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Preparation-for-reuse page used for reconditioning/process link."
+      ]
+    },
+    {
+      "url": "https://opalis.eu/fr/fournisseurs/batiterre",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Opalis supplier record used as secondary check for shop + reuse-laden + deconstruction role."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Shop/reuse stock includes wood/joinery families.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Shop/reuse stock includes tiles/sanitary ceramic families.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Shop/reuse stock includes stone/natural-stone material families.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_gusseisen",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Reuse preparation context includes cast-iron radiator stock according to archive/operator scope.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Finishing/interior fit-out material stock in reuse shop.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Floor and tile products in shop categories.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Sanitary/radiator-like service components in shop stock.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.batiterre.be/shop"
+      ],
+      "evidence_quote": "Wall/finish stock in shop categories.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "reconditioned",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.batiterre.be/vente-et-preparation-au-reemploi"
+      ],
+      "evidence_quote": "Operator page title indicates sale and preparation for reuse.",
+      "confidence": "wahrscheinlich",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [
+    {
+      "target_id": null,
+      "lookup_keyword": "demontage",
+      "intended_label": "Rueckbauverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://opalis.eu/fr/fournisseurs/batiterre"
+      ],
+      "evidence_quote": "Supplier profile/brief describes shop plus reuse stores and dismantling.",
+      "confidence": "unsicher",
+      "note": "Resolve Rueckbauverfahren node ID before import."
+    }
+  ],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Batiterre",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.batiterre.be/",
+      "https://www.batiterre.be/shop"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Process IDs",
+      "reason": "Preparation/dismantling node IDs require Cypher lookup."
+    },
+    {
+      "topic": "Material exactness",
+      "reason": "Several material claims need product-page line evidence for belegt confidence."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/batiterre.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "mat_naturstein",
+        "mat_keramik",
+        "mat_holz"
+      ],
+      "unsicher": [
+        "mat_gusseisen"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "bt_boden",
+        "bt_wand",
+        "bt_technik",
+        "bt_ausbau"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

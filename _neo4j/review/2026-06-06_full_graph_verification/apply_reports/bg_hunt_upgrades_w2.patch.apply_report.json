@@ -1,0 +1,413 @@
+{
+  "confirmation_required": "APPLY bg_hunt_upgrades_w2.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "counts_after_expected": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "counts_before": {
+    "nodes": 2263,
+    "relationships": 14571
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-07T14:32:32.253092+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\bg_hunt_upgrades_w2.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Pretty Plastic Schindeln aus Haushaltskunststoff",
+        "evidence_url": "https://overtredersw.nl/projects/peoples-pavilion",
+        "id": "r_bg_reuse_kunststoff_fassade_peoples_pavilion_pretty_plastic_shingles__NUTZT_MATERIAL__mat_kunststoff",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_kunststoff_fassade_peoples_pavilion_pretty_plastic_shingles",
+        "properties": {
+          "id": "r_bg_reuse_kunststoff_fassade_peoples_pavilion_pretty_plastic_shingles__NUTZT_MATERIAL__mat_kunststoff"
+        },
+        "rel_internal_id": 1153001768955675056,
+        "to": "mat_kunststoff",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_kunststoff_fassade_peoples_pavilion_pretty_plastic_shingles",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_kunststoff",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Fenster und Rahmen aus dem Palast der Republik",
+        "id": "r_bg_reuse_mehrere_mehrere_plattenpalast_palast_fenster__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_plattenpalast_palast_fenster",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_plattenpalast_palast_fenster__HAT_BAUTEILTYP__bt_fenster"
+        },
+        "rel_internal_id": 1155240374629826994,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_mehrere_mehrere_plattenpalast_palast_fenster",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "13 WBS70-Wand- und Deckenelemente",
+        "id": "r_bg_reuse_stahlbeton_mehrere_plattenpalast_wbs70_wand_deckenelemente__HAT_BAUTEILTYP__bt_wand",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_stahlbeton_mehrere_plattenpalast_wbs70_wand_deckenelemente",
+        "properties": {
+          "id": "r_bg_reuse_stahlbeton_mehrere_plattenpalast_wbs70_wand_deckenelemente__HAT_BAUTEILTYP__bt_wand"
+        },
+        "rel_internal_id": 1157492174443512243,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_stahlbeton_mehrere_plattenpalast_wbs70_wand_deckenelemente",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Wand- und Fassadenelemente aus Betonfertigteilen",
+        "evidence_url": "https://www.plattenvereinigung.de/project/orte/",
+        "id": "r_bg_reuse_beton_mehrere_plattenvereinigung_wand_fassadenelemente__HAT_BAUTEILTYP__bt_wand",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_beton_mehrere_plattenvereinigung_wand_fassadenelemente",
+        "properties": {
+          "id": "r_bg_reuse_beton_mehrere_plattenvereinigung_wand_fassadenelemente__HAT_BAUTEILTYP__bt_wand"
+        },
+        "rel_internal_id": 1155240374629826999,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_beton_mehrere_plattenvereinigung_wand_fassadenelemente",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "BTC-Ziegel Mur Trombe Résilience",
+        "id": "r_bg_reuse_lehm_mehrere_btc_ziegel_mur_trombe_resilience__HAT_BAUTEILTYP__bt_wand",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_lehm_mehrere_btc_ziegel_mur_trombe_resilience",
+        "properties": {
+          "id": "r_bg_reuse_lehm_mehrere_btc_ziegel_mur_trombe_resilience__HAT_BAUTEILTYP__bt_wand"
+        },
+        "rel_internal_id": 1155240374629826810,
+        "to": "bt_wand",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_lehm_mehrere_btc_ziegel_mur_trombe_resilience",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_wand",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Wetternde Stahl-Offcut-Tore Saxum",
+        "evidence_url": "https://www.saxumvineyards.com/",
+        "id": "r_bg_reuse_stahl_mehrere_wetternde_offcut_tore_saxum__NUTZT_MATERIAL__mat_stahl",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_stahl_mehrere_wetternde_offcut_tore_saxum",
+        "properties": {
+          "id": "r_bg_reuse_stahl_mehrere_wetternde_offcut_tore_saxum__NUTZT_MATERIAL__mat_stahl"
+        },
+        "rel_internal_id": 1153001768955675120,
+        "to": "mat_stahl",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_stahl_mehrere_wetternde_offcut_tore_saxum",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_stahl",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Drei Beton-Wohnungsteile / Großmodule",
+        "evidence_url": "https://www.kerkrade.nl/superlocal-bleijerheide",
+        "id": "r_bg_reuse_mehrere_mehrere_superlocal_beton_wohnungsteile__NUTZT_MATERIAL__mat_beton",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_superlocal_beton_wohnungsteile",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_superlocal_beton_wohnungsteile__NUTZT_MATERIAL__mat_beton"
+        },
+        "rel_internal_id": 1153001768955675081,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_mehrere_mehrere_superlocal_beton_wohnungsteile",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Zerkleinerter Beton als Recycling-Zuschlag",
+        "evidence_url": "https://www.gladsaxe.dk/",
+        "id": "r_bg_reuse_mehrere_mehrere_svanen_beton_recycling_zuschlag__NUTZT_MATERIAL__mat_beton",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_svanen_beton_recycling_zuschlag",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_svanen_beton_recycling_zuschlag__NUTZT_MATERIAL__mat_beton"
+        },
+        "rel_internal_id": 1153001768955675086,
+        "to": "mat_beton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_mehrere_mehrere_svanen_beton_recycling_zuschlag",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_beton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Upcycled window elements",
+        "evidence_url": "https://www.lendager.com/projects/trae",
+        "id": "r_bg_reuse_glas_fenster_trae_high_rise_aarhus_upcycled_elements__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_glas_fenster_trae_high_rise_aarhus_upcycled_elements",
+        "properties": {
+          "id": "r_bg_reuse_glas_fenster_trae_high_rise_aarhus_upcycled_elements__HAT_BAUTEILTYP__bt_fenster"
+        },
+        "rel_internal_id": 1152988574816141795,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_glas_fenster_trae_high_rise_aarhus_upcycled_elements",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Doppelverglaste Fenster",
+        "evidence_url": "https://www.lendager.com/projects/upcycle-studios",
+        "id": "r_bg_reuse_glas_fenster_upcycle_studios_copenhagen_doppelverglaste__HAT_BAUTEILTYP__bt_fenster",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_glas_fenster_upcycle_studios_copenhagen_doppelverglaste",
+        "properties": {
+          "id": "r_bg_reuse_glas_fenster_upcycle_studios_copenhagen_doppelverglaste__HAT_BAUTEILTYP__bt_fenster"
+        },
+        "rel_internal_id": 1152988574816141798,
+        "to": "bt_fenster",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_glas_fenster_upcycle_studios_copenhagen_doppelverglaste",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_fenster",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Dinesen-Offcuts als Böden/Wände/Fassaden",
+        "evidence_url": "https://www.lendager.com/projects/upcycle-studios",
+        "id": "r_bg_reuse_holz_mehrere_upcycle_dinesen_offcuts__HAT_BAUTEILTYP__bt_boden",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_holz_mehrere_upcycle_dinesen_offcuts",
+        "properties": {
+          "id": "r_bg_reuse_holz_mehrere_upcycle_dinesen_offcuts__HAT_BAUTEILTYP__bt_boden"
+        },
+        "rel_internal_id": 1152988574816141797,
+        "to": "bt_boden",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_holz_mehrere_upcycle_dinesen_offcuts",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_boden",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Recyclingbeton aus Copenhagen Metro",
+        "evidence_url": "https://www.lendager.com/projects/upcycle-studios",
+        "id": "r_bg_reuse_mehrere_mehrere_upcycle_recyclingbeton_metro__NUTZT_MATERIAL__mat_recyclingbeton",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_mehrere_mehrere_upcycle_recyclingbeton_metro",
+        "properties": {
+          "id": "r_bg_reuse_mehrere_mehrere_upcycle_recyclingbeton_metro__NUTZT_MATERIAL__mat_recyclingbeton"
+        },
+        "rel_internal_id": 1155253568769360359,
+        "to": "mat_recyclingbeton",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_mehrere_mehrere_upcycle_recyclingbeton_metro",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_recyclingbeton",
+      "type": "NUTZT_MATERIAL"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Verbiest Dach- und Terrassenfliesen",
+        "evidence_url": "https://opalis.eu/fr/projets/verbiest-karreveld",
+        "id": "r_bg_reuse_keramik_mehrere_verbiest_karreveld_dach_terrasse__HAT_BAUTEILTYP__bt_dach",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_keramik_mehrere_verbiest_karreveld_dach_terrasse",
+        "properties": {
+          "id": "r_bg_reuse_keramik_mehrere_verbiest_karreveld_dach_terrasse__HAT_BAUTEILTYP__bt_dach"
+        },
+        "rel_internal_id": 1155240374629827050,
+        "to": "bt_dach",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_keramik_mehrere_verbiest_karreveld_dach_terrasse",
+      "line": 13,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_dach",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "Verbiest Geländer Fliesen und Steine aus Charleroi",
+        "evidence_url": "https://opalis.eu/fr/projets/verbiest-karreveld",
+        "id": "r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_BAUTEILTYP__bt_gelaender",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_stahl_gelaender_verbiest_charleroi",
+        "properties": {
+          "id": "r_bg_reuse_stahl_gelaender_verbiest_charleroi__HAT_BAUTEILTYP__bt_gelaender"
+        },
+        "rel_internal_id": 1152988574816141476,
+        "to": "bt_gelaender",
+        "type": "HAT_BAUTEILTYP"
+      },
+      "from": "bg_stahl_gelaender_verbiest_charleroi",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bt_gelaender",
+      "type": "HAT_BAUTEILTYP"
+    },
+    {
+      "after_properties": {
+        "evidence_basis": "bg_hunt_alias_match",
+        "evidence_confidence": "high",
+        "evidence_quote": "HSB-Holz Balken und Ausbauholz",
+        "evidence_url": "https://www.boschgaard.nl/",
+        "id": "r_bg_reuse_holz_mehrere_boschgaard_hsb_balken_ausbau__NUTZT_MATERIAL__mat_holz",
+        "review_run": "bg_hunt_w2_2026_06_07"
+      },
+      "before": {
+        "count": 1,
+        "from": "bg_holz_mehrere_boschgaard_hsb_balken_ausbau",
+        "properties": {
+          "id": "r_bg_reuse_holz_mehrere_boschgaard_hsb_balken_ausbau__NUTZT_MATERIAL__mat_holz"
+        },
+        "rel_internal_id": 1153001768955675123,
+        "to": "mat_holz",
+        "type": "NUTZT_MATERIAL"
+      },
+      "from": "bg_holz_mehrere_boschgaard_hsb_balken_ausbau",
+      "line": 15,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mat_holz",
+      "type": "NUTZT_MATERIAL"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 15,
+    "would_update_rel": 15
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "before": {
+    "labels": {
+      "Bauproduktstatus": 15,
+      "Geltungsbereich": 6,
+      "LCAModule": 5,
+      "Norm": 103,
+      "Quelle": 0,
+      "RechtlicheBedingung": 16,
+      "Regelwerk": 0,
+      "Zertifizierungssystem": 8
+    },
+    "nodes": 2500,
+    "relationships": 20014,
+    "reltypes": {
+      "BERECHNET_NACH_MODUL": 8,
+      "GILT_IN_LAND": 172,
+      "HAT_BAUPRODUKTSTATUS": 34,
+      "HAT_BAUTEILTYP": 872,
+      "HAT_GELTUNGSBEREICH": 15,
+      "HAT_LEISTUNGSANFORDERUNG": 452,
+      "HAT_METHODE": 232,
+      "HAT_RECHTLICHE_BEDINGUNG": 26,
+      "HAT_TYPISCHEN_BAUPRODUKTSTATUS": 19,
+      "HAT_ZERTIFIZIERUNG": 12,
+      "METHODENGRUNDLAGE_NORM": 8,
+      "REFERENZIERT_NORM": 143,
+      "REGULIERT": 25
+    }
+  },
+  "commit": false,
+  "created_at_utc": "2026-06-05T13:32:08.475864+00:00",
+  "database": "mit-bestand",
+  "phase": "phase3_retire_legacy_regulation",
+  "planned": {
+    "logged_gaps_count": 30,
+    "logged_gaps_preview": [
+      {
+        "from_id": "norm_cen_ts_1090_201_2024",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_cen_ts_europaeisch",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_cen_ts_17440",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_cen_ts_europaeisch",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_1992",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_eurocodes_eu_efta_uk",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_1993",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_eurocodes_eu_efta_uk",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_1995",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_eurocodes_eu_efta_uk",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_1996",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_eurocodes_eu_efta_uk",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_206",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_en_cen_cenelec_mitglieder",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_14081",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_en_cen_cenelec_mitglieder",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_771",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_en_cen_cenelec_mitglieder",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_13162",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_en_cen_cenelec_mitglieder",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "lz_a1_a3",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_din_en_15804",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "lz_a1_a3",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_iso_14040",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "lz_a1_a3",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_iso_14044",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "lz_a4_a5",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_din_en_15978",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "lz_b",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_din_en_15978",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "lz_c",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_din_en_15978",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "lz_d",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_din_en_15804",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "lz_d",
+        "from_labels": [
+          "LCAModule"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "METHODENGRUNDLAGE_NORM",
+        "to_id": "norm_din_en_15978",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "rb_eu_taxonomie",
+        "from_labels": [
+          "RechtlicheBedingung"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_eu_regulierung",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "rb_ce_marking_reused_steel",
+        "from_labels": [
+          "RechtlicheBedingung"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_cpr_eea",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_en_1090",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_en_cen_cenelec_mitglieder",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_sci_p427",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "REFERENZIERT_NORM",
+        "to_id": "norm_sci_p440",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "norm_sci_p440",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "REFERENZIERT_NORM",
+        "to_id": "norm_sci_p427",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "norm_ns_3682",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "REFERENZIERT_NORM",
+        "to_id": "norm_tek_norway",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "norm_tek_norway",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "REFERENZIERT_NORM",
+        "to_id": "norm_ns_3682",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "norm_sia_schweiz",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "REFERENZIERT_NORM",
+        "to_id": "norm_iso_20887",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "norm_en_1168",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "REFERENZIERT_NORM",
+        "to_id": "norm_crow_cur_4_2023",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "norm_en_1168",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_en_cen_cenelec_mitglieder",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      },
+      {
+        "from_id": "norm_crow_cur_4_2023",
+        "from_labels": [
+          "Norm"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "REFERENZIERT_NORM",
+        "to_id": "norm_en_1168",
+        "to_labels": [
+          "Norm"
+        ]
+      },
+      {
+        "from_id": "rb_ukca_marking_reused_steel",
+        "from_labels": [
+          "RechtlicheBedingung"
+        ],
+        "reason": "both endpoints legacy or no stable surviving property target",
+        "reltype": "HAT_GELTUNGSBEREICH",
+        "to_id": "geltungsbereich_ukca_grossbritannien",
+        "to_labels": [
+          "Geltungsbereich"
+        ]
+      }
+    ],
+    "nodes_to_receive_properties": 107,
+    "preservation_counts": {
+      "logged_HAT_GELTUNGSBEREICH": 15,
+      "logged_METHODENGRUNDLAGE_NORM": 8,
+      "logged_REFERENZIERT_NORM": 7,
+      "properties_BERECHNET_NACH_MODUL": 16,
+      "properties_HAT_BAUPRODUKTSTATUS": 34,
+      "properties_HAT_BAUTEILTYP": 1,
+      "properties_HAT_LEISTUNGSANFORDERUNG": 1,
+      "properties_HAT_METHODE": 1,
+      "properties_HAT_RECHTLICHE_BEDINGUNG": 26,
+      "properties_HAT_TYPISCHEN_BAUPRODUKTSTATUS": 19,
+      "properties_HAT_ZERTIFIZIERUNG": 12,
+      "properties_REFERENZIERT_NORM": 136,
+      "properties_REGULIERT": 25
+    },
+    "property_values_to_preserve": 396
+  }
+}

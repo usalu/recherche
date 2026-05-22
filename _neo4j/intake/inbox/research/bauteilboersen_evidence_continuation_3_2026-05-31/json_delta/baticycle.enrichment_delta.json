@@ -1,0 +1,129 @@
+{
+  "anchor_id": "baticycle",
+  "pass": "continuation_3_final_evidence_check",
+  "sources_visited": [
+    {
+      "url": "https://baticycle.fr/materiaux-second-oeuvre/",
+      "http_status": null,
+      "first_party": true,
+      "retrieval_status": "web.run_text_extracted; explicit_HTTP_status_not_returned_by_tool",
+      "line_ref": "L43-L83",
+      "evidence_excerpt": "Categories and text name exterior materials, radiators, CVC, cloisons/blocs-portes, electrical, sanitary, plafonds, sols; products are selected and reconditioned."
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Page is explicitly “Matériaux second oeuvre”.",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence.",
+      "source_line_ref": "L43-L44"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Category “Sols”; text names floor coverings and technical floor slabs.",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence.",
+      "source_line_ref": "L77-L80"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Category “Constructions intérieures” names cloisons.",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence.",
+      "source_line_ref": "L56-L60"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Constructions intérieures names “blocs-portes”.",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence.",
+      "source_line_ref": "L56-L60"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Categories/text name radiateurs, CVC, Electricité, sanitaires, luminaires.",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence.",
+      "source_line_ref": "L51-L70"
+    },
+    {
+      "target_id": "bt_decke",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "Category “Plafonds”; text names dalles de faux-plafonds.",
+      "confidence": "belegt",
+      "note": "Direct first-party category evidence.",
+      "source_line_ref": "L72-L75"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [
+    {
+      "target_id": "LOOKUP_REQUIRED_reconditionnement",
+      "evidence_urls": [
+        "https://baticycle.fr/materiaux-second-oeuvre/"
+      ],
+      "evidence_quote": "“Chaque produit est soigneusement sélectionné pour sa qualité et reconditionné par nos équipes.”",
+      "confidence": "unsicher",
+      "note": "Exact Aufbereitungsverfahren ID requires Cypher lookup.",
+      "source_line_ref": "L81-L83"
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": null,
+    "operator_anchor_id_guess": null,
+    "evidence_urls": []
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [],
+  "rejected_or_not_importable": [
+    {
+      "anchor_id": "baticycle",
+      "claim_type": "Material",
+      "target_id": "mat_keramik",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Bâticycle Matériaux second oeuvre",
+      "source_url": "https://baticycle.fr/materiaux-second-oeuvre/",
+      "source_line_ref": "",
+      "source_excerpt_short": "carrelage appears in external shop/category context",
+      "rejection_reason": "This first-party page supports component categories, not a strict ceramic material claim.",
+      "pass_name": "continuation_3_final_evidence_check"
+    },
+    {
+      "anchor_id": "baticycle",
+      "claim_type": "Material",
+      "target_id": "mat_naturstein",
+      "recommended_action": "DO_NOT_IMPORT_FROM_THIS_SOURCE",
+      "evidence_level": "REJECTED_MISMATCH",
+      "source_title": "Bâticycle Matériaux second oeuvre",
+      "source_url": "https://baticycle.fr/materiaux-second-oeuvre/",
+      "source_line_ref": "",
+      "source_excerpt_short": "pierres, dalles gravillonnées, pavés extérieurs",
+      "rejection_reason": "“Pierres” suggests stone but does not distinguish natural stone from concrete/other paving; keep as candidate only.",
+      "pass_name": "continuation_3_final_evidence_check"
+    }
+  ],
+  "audit_note": "Search-extract evidence is flagged in CSV/JSON; prefer fetched line-level first-party evidence for production import."
+}

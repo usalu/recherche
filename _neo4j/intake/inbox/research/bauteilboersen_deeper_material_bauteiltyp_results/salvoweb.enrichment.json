@@ -1,0 +1,164 @@
+{
+  "anchor_id": "salvoweb",
+  "sources_visited": [
+    {
+      "url": "https://www.salvoweb.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current marketplace/directory for architectural salvage and reclaimed building materials; homepage highlights reclaimed bricks."
+      ]
+    },
+    {
+      "url": "https://www.salvoweb.com/antique-reclaimed",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Antique & reclaimed categories/search source."
+      ]
+    },
+    {
+      "url": "https://www.thehousedirectory.com/salvo-truly-reclaimed-sustainability/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.salvoweb.com/antique-reclaimed/category/timber/location/all",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Timber-specific reclaimed category."
+      ]
+    },
+    {
+      "url": "https://www.salvoweb.com/antique-reclaimed/category/all/location/germany/region/all",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "International directory categories/regions source."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Homepage lists Architectural Stone and limestone flooring listings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Homepage category explicitly includes Reclaimed Bricks.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.salvoweb.com/antique-reclaimed"
+      ],
+      "evidence_quote": "Antique & Reclaimed page covers reclaimed building materials; wood material not explicit in captured lines.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Categories include lighting, fireplaces, furniture/mirrors and fine architectural antiques.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Homepage categories include Flooring and limestone flooring listings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Reclaimed bricks / architectural stone map to wall/facade components when used as such.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_METHODE",
+      "target_id": "methode_architectural_salvage",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Site calls itself an architectural salvage marketplace / directory.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "SalvoWEB",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.salvoweb.com/",
+      "https://www.salvoweb.com/antique-reclaimed"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Operator chain",
+      "reason": "BETRIEBEN_VON salvo_ltd should be retained only if existing node is verified."
+    },
+    {
+      "topic": "Material_holz",
+      "reason": "Needs direct wood/timber category or item page."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/salvoweb.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_ziegel",
+        "mat_naturstein"
+      ],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "mat_holz"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_boden",
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_wand"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

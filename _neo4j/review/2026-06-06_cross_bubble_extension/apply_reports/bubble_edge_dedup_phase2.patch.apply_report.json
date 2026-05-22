@@ -1,0 +1,411 @@
+{
+  "confirmation_required": "APPLY bubble_edge_dedup_phase2.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15486
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15486
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15492
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T00:10:16.482083+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_cross_bubble_extension\\patches\\bubble_edge_dedup_phase2.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "connection_kind": "marketplace_listing",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "restado_profile",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "restado profile for Bauteilbörse Hannover",
+        "evidence_url": "https://restado.de/profil/bauteilboerse-hannover/",
+        "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__software_restado",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_hannover",
+        "properties": {
+          "connection_kind": "marketplace_listing",
+          "evidence_basis": "restado_profile",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "restado profile for Bauteilbörse Hannover",
+          "evidence_url": "https://restado.de/profil/bauteilboerse-hannover/",
+          "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__software_restado",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879010,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_hannover",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "connection_kind": "marketplace_listing",
+          "evidence_basis": "restado_profile",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "restado profile for Bauteilbörse Hannover",
+          "evidence_url": "https://restado.de/profil/bauteilboerse-hannover/",
+          "id": "r_software_restado__verbunden_mit_akteur__bauteilboerse_hannover",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304513167,
+        "to": "bauteilboerse_hannover",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "software_restado",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilboerse_hannover",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "european_reuse_infrastructure_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "european_reuse_platform_peer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "Opalis facilitates reuse across NWE; restado is German marketplace peer on ECESP | ReUse RLP lists opalis.eu dealer directory alongside national reuse platforms",
+        "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/opalis",
+        "id": "r_opalis__verbunden_mit_akteur__software_restado",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "european_reuse_infrastructure_peer",
+          "evidence_basis": "european_reuse_platform_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Opalis facilitates reuse across NWE; restado is German marketplace peer on ECESP",
+          "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/opalis",
+          "id": "r_opalis__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6928901276407174287,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "connection_kind": "european_reuse_infrastructure_peer",
+          "evidence_basis": "european_reuse_platform_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "ReUse RLP lists opalis.eu dealer directory alongside national reuse platforms",
+          "evidence_url": "https://reuse-rlp.de/fachinformationen",
+          "id": "r_software_restado__verbunden_mit_akteur__opalis",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1162041953559254159,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "software_restado",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "marketplace_brand_operator",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "restado_concular_gmbh_brand",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "restado ist eine Marke der Concular GmbH | founders extended restado into Concular circular construction ecosystem",
+        "evidence_url": "https://restado.de/hilfe/impressum/",
+        "id": "r_concular__verbunden_mit_akteur__software_restado",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "marketplace_brand_operator",
+          "evidence_basis": "restado_concular_gmbh_brand",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "restado ist eine Marke der Concular GmbH",
+          "evidence_url": "https://restado.de/hilfe/impressum/",
+          "id": "r_concular__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6919894077152433295,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "connection_kind": "marketplace_brand_operator",
+          "evidence_basis": "restado_concular_gmbh_brand",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "founders extended restado into Concular circular construction ecosystem",
+          "evidence_url": "https://restado.de/ueber-restado/",
+          "id": "r_software_restado__verbunden_mit_akteur__concular",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1159790153745568911,
+        "to": "concular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "software_restado",
+      "line": 6,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "concular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "european_reuse_infrastructure_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "european_reuse_platform_peer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReUse RLP lists cirkla.ch Swiss reuse umbrella alongside European platform directories",
+        "evidence_url": "https://reuse-rlp.de/fachinformationen",
+        "id": "r_cirkla__verbunden_mit_akteur__software_restado",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "european_reuse_infrastructure_peer",
+          "evidence_basis": "european_reuse_platform_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "ReUse RLP lists cirkla.ch Swiss reuse umbrella alongside European platform directories",
+          "evidence_url": "https://reuse-rlp.de/fachinformationen",
+          "id": "r_cirkla__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6935656675848230031,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "connection_kind": "european_reuse_infrastructure_peer",
+          "evidence_basis": "european_reuse_platform_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Swiss Cirkla network and German restado listed as national reuse infrastructure peers",
+          "evidence_url": "https://reuse-rlp.de/fachinformationen",
+          "id": "r_software_restado__verbunden_mit_akteur__cirkla",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1173300952627680399,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "software_restado",
+      "line": 8,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "european_marketplace_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "european_marketplace_peer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "Insert NL marketplace; restado DE marketplace — European reuse exchange peers | German reclaimed-materials marketplace; peer layer to NL Insert marketplace via Madaster partnership mesh",
+        "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+        "id": "r_insert_marketplace__verbunden_mit_akteur__software_restado",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "european_marketplace_peer",
+          "evidence_basis": "european_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Insert NL marketplace; restado DE marketplace — European reuse exchange peers",
+          "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6933404876034544783,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "connection_kind": "european_marketplace_peer",
+          "evidence_basis": "european_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "German reclaimed-materials marketplace; peer layer to NL Insert marketplace via Madaster partnership mesh",
+          "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado",
+          "id": "r_software_restado__verbunden_mit_akteur__insert_marketplace",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1166545553186624655,
+        "to": "insert_marketplace",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "software_restado",
+      "line": 10,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "insert_marketplace",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "european_marketplace_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "european_marketplace_peer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "Swiss useagain and German restado as European reclaimed-materials marketplaces | national reuse marketplaces; useagain.ch CH and restado.de DE listed as peer platforms",
+        "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+        "id": "r_software_restado__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "connection_kind": "european_marketplace_peer",
+          "evidence_basis": "european_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Swiss useagain and German restado as European reclaimed-materials marketplaces",
+          "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+          "id": "r_software_restado__verbunden_mit_akteur__useagain_bauteilclick",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1177804552255050895,
+        "to": "useagain_bauteilclick",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "software_restado",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "useagain_bauteilclick",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "useagain_bauteilclick",
+        "properties": {
+          "connection_kind": "european_marketplace_peer",
+          "evidence_basis": "european_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "national reuse marketplaces; useagain.ch CH and restado.de DE listed as peer platforms",
+          "evidence_url": "https://reuse-rlp.de/fachinformationen",
+          "id": "r_useagain_bauteilclick__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6940160275475600527,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "useagain_bauteilclick",
+      "line": 12,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 12,
+    "would_delete_rel": 6,
+    "would_update_rel": 6
+  }
+}

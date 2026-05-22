@@ -1,0 +1,186 @@
+{
+  "run": "2026-06-05_rotor_dc_reuse_bubble",
+  "commit": true,
+  "database": "mit-bestand",
+  "generated_at_utc": "2026-06-05T22:09:38.843344+00:00",
+  "phases": [
+    {
+      "phase": "phase0_sources_and_dossier.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 19,
+        "load_errors": 0,
+        "would_create": 19
+      },
+      "counts_before": {
+        "nodes": 2335,
+        "relationships": 15451
+      },
+      "counts_after_actual": {
+        "nodes": 2354,
+        "relationships": 15451
+      },
+      "counts_after_expected": {
+        "nodes": 2354,
+        "relationships": 15451
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase1_ecosystem_spine.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 17,
+        "load_errors": 0,
+        "would_create": 1,
+        "would_create_rel": 13,
+        "would_update_rel": 3
+      },
+      "counts_before": {
+        "nodes": 2354,
+        "relationships": 15451
+      },
+      "counts_after_actual": {
+        "nodes": 2355,
+        "relationships": 15464
+      },
+      "counts_after_expected": {
+        "nodes": 2355,
+        "relationships": 15464
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase1_ecosystem_spine.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase1_ecosystem_spine.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase1b_publication_hub.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 3,
+        "load_errors": 0,
+        "would_create_rel": 1,
+        "would_update_rel": 2
+      },
+      "counts_before": {
+        "nodes": 2355,
+        "relationships": 15464
+      },
+      "counts_after_actual": {
+        "nodes": 2355,
+        "relationships": 15465
+      },
+      "counts_after_expected": {
+        "nodes": 2355,
+        "relationships": 15465
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase1b_publication_hub.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase1b_publication_hub.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase2_oxy_hub.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 8,
+        "load_errors": 0,
+        "would_create": 1,
+        "would_create_rel": 7
+      },
+      "counts_before": {
+        "nodes": 2355,
+        "relationships": 15465
+      },
+      "counts_after_actual": {
+        "nodes": 2356,
+        "relationships": 15472
+      },
+      "counts_after_expected": {
+        "nodes": 2356,
+        "relationships": 15472
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase2_oxy_hub.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase2_oxy_hub.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase3_material_path_upgrades.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 7,
+        "load_errors": 0,
+        "would_create_rel": 5,
+        "would_update_rel": 2
+      },
+      "counts_before": {
+        "nodes": 2356,
+        "relationships": 15472
+      },
+      "counts_after_actual": {
+        "nodes": 2356,
+        "relationships": 15477
+      },
+      "counts_after_expected": {
+        "nodes": 2356,
+        "relationships": 15477
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase3_material_path_upgrades.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\apply_reports\\phase3_material_path_upgrades.patch.apply_report.md"
+      ]
+    }
+  ],
+  "counts_before": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "connectivity_before": {
+    "T0_opalis_verbunden_degree": {
+      "value": 2,
+      "neighbors": [
+        "Rotor",
+        "maarten_gielen"
+      ]
+    },
+    "T1_prog_preuse_partners": [],
+    "T2_spine_mesh": 0,
+    "T3_oxy_hub": [],
+    "T4_generale_multi_path": 0,
+    "T5_bubble_edges": 0
+  },
+  "counts_after": {
+    "nodes": 2356,
+    "relationships": 15477
+  },
+  "connectivity_after": {
+    "T0_opalis_verbunden_degree": {
+      "value": 4,
+      "neighbors": [
+        "bellastock",
+        "Rotor",
+        "rotordc",
+        "maarten_gielen"
+      ]
+    },
+    "T1_prog_preuse_partners": [
+      "brussels_environment",
+      "city_of_utrecht",
+      "bellastock",
+      "Rotor"
+    ],
+    "T2_spine_mesh": 8,
+    "T3_oxy_hub": [
+      "whitewood",
+      "immobel",
+      "Rotor",
+      "rotordc"
+    ],
+    "T4_generale_multi_path": 1,
+    "T5_bubble_edges": 33
+  }
+}

@@ -1,0 +1,859 @@
+{
+  "database": "mit-bestand",
+  "nodes": {
+    "concular": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Concular"
+    },
+    "restado": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "circular_structural_design": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Circular Structural Design"
+    },
+    "haus_der_materialisierung": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "material_mafia": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "bauteilboerse_bremen": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Bauteilbörse Bremen"
+    },
+    "bauteilboerse_hannover": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "circular_berlin": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "madaster": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Madaster"
+    },
+    "madaster_epea": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Madaster / EPEA"
+    },
+    "madaster_context": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Madaster / Materialpass-Kontext"
+    },
+    "dgnb": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "resource_stiftung": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "software_concular": {
+      "exists": true,
+      "labels": [
+        "Software"
+      ],
+      "name": "Concular"
+    },
+    "software_restado": {
+      "exists": true,
+      "labels": [
+        "Software"
+      ],
+      "name": "Restado"
+    },
+    "tool_rcmi": {
+      "exists": true,
+      "labels": [
+        "Software"
+      ],
+      "name": "RCMI"
+    },
+    "dominik_campanella": {
+      "exists": true,
+      "labels": [
+        "Akteur"
+      ],
+      "name": "Dominik Campanella"
+    },
+    "p_multi_brussels_reuse_in_multi": {
+      "exists": true,
+      "labels": [
+        "Projekt"
+      ],
+      "name": "Multi Brussels"
+    },
+    "p_thoravej_29_copenhagen": {
+      "exists": true,
+      "labels": [
+        "Projekt"
+      ],
+      "name": "Thoravej 29 Copenhagen"
+    },
+    "prog_din_spec_91484": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "prog_din_spec_91525": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "tool_urban_mining_index": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_berlin_txl": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_rathaus_korbach": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_crclr_house_berlin": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_ice_city_erfurt": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_leipzig_airport_modular": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_forum_koenigsbrunn": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_huthmacher_haus_berlin": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_heidelberg_circular_city": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    },
+    "p_mint_zentrum_bensheim": {
+      "exists": false,
+      "labels": null,
+      "name": null
+    }
+  },
+  "seed_rels": [
+    {
+      "from_id": "concular",
+      "typ": "BETEILIGT_AN",
+      "to_id": "dominik_campanella",
+      "rid": "r_dominik_campanella__BETEILIGT_AN__concular",
+      "conf": null
+    },
+    {
+      "from_id": "concular",
+      "typ": "BETRIEBEN_VON",
+      "to_id": "software_concular",
+      "rid": "r_deeper_software_concular__BETRIEBEN_VON__concular",
+      "conf": null
+    },
+    {
+      "from_id": "concular",
+      "typ": "BETRIEBEN_VON",
+      "to_id": "software_restado",
+      "rid": "r_software_restado__betrieben_von__concular",
+      "conf": null
+    },
+    {
+      "from_id": "concular",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "software_concular",
+      "rid": "r_deep_concular__NUTZT_SOFTWARE__software_concular",
+      "conf": null
+    },
+    {
+      "from_id": "concular",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "tool_rcmi",
+      "rid": "r_concular__NUTZT_SOFTWARE__tool_rcmi",
+      "conf": null
+    },
+    {
+      "from_id": "concular",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "dominik_campanella",
+      "rid": "r_concular__VERBUNDEN_MIT_AKTEUR__dominik_campanella",
+      "conf": null
+    },
+    {
+      "from_id": "dominik_campanella",
+      "typ": "BETEILIGT_AN",
+      "to_id": "concular",
+      "rid": "r_dominik_campanella__BETEILIGT_AN__concular",
+      "conf": null
+    },
+    {
+      "from_id": "dominik_campanella",
+      "typ": "BETEILIGT_AN",
+      "to_id": "tool_rcmi",
+      "rid": "r_dominik_campanella__BETEILIGT_AN__tool_rcmi",
+      "conf": null
+    },
+    {
+      "from_id": "dominik_campanella",
+      "typ": "VERBUNDEN_MIT_AKTEUR",
+      "to_id": "concular",
+      "rid": "r_concular__VERBUNDEN_MIT_AKTEUR__dominik_campanella",
+      "conf": null
+    },
+    {
+      "from_id": "madaster_epea",
+      "typ": "BETEILIGT_AN",
+      "to_id": "p_multi_brussels_reuse_in_multi",
+      "rid": "r_madaster_epea__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null
+    },
+    {
+      "from_id": "p_multi_brussels_reuse_in_multi",
+      "typ": "BETEILIGT_AN",
+      "to_id": "madaster_epea",
+      "rid": "r_madaster_epea__BETEILIGT_AN__p_multi_brussels_reuse_in_multi",
+      "conf": null
+    },
+    {
+      "from_id": "software_concular",
+      "typ": "BETRIEBEN_VON",
+      "to_id": "concular",
+      "rid": "r_deeper_software_concular__BETRIEBEN_VON__concular",
+      "conf": null
+    },
+    {
+      "from_id": "software_concular",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "concular",
+      "rid": "r_deep_concular__NUTZT_SOFTWARE__software_concular",
+      "conf": null
+    },
+    {
+      "from_id": "software_concular",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "software_restado",
+      "rid": "r_software_concular__NUTZT_SOFTWARE__software_restado",
+      "conf": null
+    },
+    {
+      "from_id": "software_concular",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "software_restado",
+      "rid": "r_software_restado__NUTZT_SOFTWARE__software_concular",
+      "conf": null
+    },
+    {
+      "from_id": "software_restado",
+      "typ": "BETRIEBEN_VON",
+      "to_id": "concular",
+      "rid": "r_software_restado__betrieben_von__concular",
+      "conf": null
+    },
+    {
+      "from_id": "software_restado",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "software_concular",
+      "rid": "r_software_restado__NUTZT_SOFTWARE__software_concular",
+      "conf": null
+    },
+    {
+      "from_id": "software_restado",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "software_concular",
+      "rid": "r_software_concular__NUTZT_SOFTWARE__software_restado",
+      "conf": null
+    },
+    {
+      "from_id": "tool_rcmi",
+      "typ": "BETEILIGT_AN",
+      "to_id": "dominik_campanella",
+      "rid": "r_dominik_campanella__BETEILIGT_AN__tool_rcmi",
+      "conf": null
+    },
+    {
+      "from_id": "tool_rcmi",
+      "typ": "NUTZT_SOFTWARE",
+      "to_id": "concular",
+      "rid": "r_concular__NUTZT_SOFTWARE__tool_rcmi",
+      "conf": null
+    }
+  ],
+  "concular_neighborhood": [
+    {
+      "typ": "HAT_BESCHAFFUNGSWEG",
+      "from_id": "concular",
+      "to_id": "bweg_digitale_plattform",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Beschaffungsweg"
+      ],
+      "rid": null
+    },
+    {
+      "typ": "HAT_AKTEURTYP",
+      "from_id": "concular",
+      "to_id": "at_unternehmen",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Akteurtyp"
+      ],
+      "rid": "r_concular__HAT_AKTEURTYP__at_unternehmen"
+    },
+    {
+      "typ": "HAT_AKTEURTYP",
+      "from_id": "concular",
+      "to_id": "at_materialhub_bauteilboerse",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Akteurtyp"
+      ],
+      "rid": "r_concular__HAT_AKTEURTYP__at_materialhub_bauteilboerse"
+    },
+    {
+      "typ": "HAT_AKTEURTYP",
+      "from_id": "concular",
+      "to_id": "at_software_tool_anbieter",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Akteurtyp"
+      ],
+      "rid": "r_concular__HAT_AKTEURTYP__at_software_tool_anbieter"
+    },
+    {
+      "typ": "LIEGT_IN_LAND",
+      "from_id": "concular",
+      "to_id": "land_deutschland",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Land"
+      ],
+      "rid": "r_concular__LIEGT_IN_LAND__land_deutschland"
+    },
+    {
+      "typ": "NUTZT_SOFTWARE",
+      "from_id": "concular",
+      "to_id": "tool_rcmi",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Software"
+      ],
+      "rid": "r_concular__NUTZT_SOFTWARE__tool_rcmi"
+    },
+    {
+      "typ": "NUTZT_SOFTWARE",
+      "from_id": "concular",
+      "to_id": "software_concular",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Software"
+      ],
+      "rid": "r_deep_concular__NUTZT_SOFTWARE__software_concular"
+    },
+    {
+      "typ": "BETRIEBEN_VON",
+      "from_id": "software_concular",
+      "to_id": "concular",
+      "fl": [
+        "Software"
+      ],
+      "tl": [
+        "Akteur"
+      ],
+      "rid": "r_deeper_software_concular__BETRIEBEN_VON__concular"
+    },
+    {
+      "typ": "BETRIEBEN_VON",
+      "from_id": "software_restado",
+      "to_id": "concular",
+      "fl": [
+        "Software"
+      ],
+      "tl": [
+        "Akteur"
+      ],
+      "rid": "r_software_restado__betrieben_von__concular"
+    },
+    {
+      "typ": "HAT_GESCHAEFTSMODELL",
+      "from_id": "concular",
+      "to_id": "gm_shop_eigenstock",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Geschaeftsmodell"
+      ],
+      "rid": "r_deep_concular__HAT_GESCHAEFTSMODELL__gm_shop_eigenstock"
+    },
+    {
+      "typ": "HAT_GESCHAEFTSMODELL",
+      "from_id": "concular",
+      "to_id": "gm_marketplace_vermittlung",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Geschaeftsmodell"
+      ],
+      "rid": null
+    },
+    {
+      "typ": "HAT_GESCHAEFTSMODELL",
+      "from_id": "concular",
+      "to_id": "gm_dienstleistung_urban_mining",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Geschaeftsmodell"
+      ],
+      "rid": "r_deep_concular__HAT_GESCHAEFTSMODELL__gm_dienstleistung_urban_mining"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_ausbau",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_ausbau"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_boden",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_boden"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_dach",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_dach"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_daemmung",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_daemmung"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_decke",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_decke"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_fassade",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_fassade"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_fenster",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_fenster"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_technik",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_technik"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_traeger",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_traeger"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_treppe",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_treppe"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_tuer",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_tuer"
+    },
+    {
+      "typ": "HAT_BAUTEILTYP",
+      "from_id": "concular",
+      "to_id": "bt_wand",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteiltyp"
+      ],
+      "rid": "r_deep_concular__HAT_BAUTEILTYP__bt_wand"
+    },
+    {
+      "typ": "NUTZT_MATERIAL",
+      "from_id": "concular",
+      "to_id": "mat_aluminium",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Material"
+      ],
+      "rid": "r_deep_concular__NUTZT_MATERIAL__mat_aluminium"
+    },
+    {
+      "typ": "NUTZT_MATERIAL",
+      "from_id": "concular",
+      "to_id": "mat_daemmstoff",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Material"
+      ],
+      "rid": "r_deep_concular__NUTZT_MATERIAL__mat_daemmstoff"
+    },
+    {
+      "typ": "NUTZT_MATERIAL",
+      "from_id": "concular",
+      "to_id": "mat_glas",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Material"
+      ],
+      "rid": "r_deep_concular__NUTZT_MATERIAL__mat_glas"
+    },
+    {
+      "typ": "NUTZT_MATERIAL",
+      "from_id": "concular",
+      "to_id": "mat_holz",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Material"
+      ],
+      "rid": "r_deep_concular__NUTZT_MATERIAL__mat_holz"
+    },
+    {
+      "typ": "NUTZT_MATERIAL",
+      "from_id": "concular",
+      "to_id": "mat_keramik",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Material"
+      ],
+      "rid": "r_deep_concular__NUTZT_MATERIAL__mat_keramik"
+    },
+    {
+      "typ": "NUTZT_MATERIAL",
+      "from_id": "concular",
+      "to_id": "mat_kunststoff",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Material"
+      ],
+      "rid": "r_deep_concular__NUTZT_MATERIAL__mat_kunststoff"
+    },
+    {
+      "typ": "NUTZT_MATERIAL",
+      "from_id": "concular",
+      "to_id": "mat_naturstein",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Material"
+      ],
+      "rid": "r_deep_concular__NUTZT_MATERIAL__mat_naturstein"
+    },
+    {
+      "typ": "HAT_METHODE",
+      "from_id": "concular",
+      "to_id": "meth_urban_mining_und_scouting",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Methode"
+      ],
+      "rid": null
+    },
+    {
+      "typ": "HAT_METHODE",
+      "from_id": "concular",
+      "to_id": "meth_bestands_und_reuse_assessment",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Methode"
+      ],
+      "rid": null
+    },
+    {
+      "typ": "HAT_METHODE",
+      "from_id": "concular",
+      "to_id": "meth_dokumentation_und_monitoring",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Methode"
+      ],
+      "rid": null
+    },
+    {
+      "typ": "BETEILIGT_AN",
+      "from_id": "concular",
+      "to_id": "bg_stahl_mehrere_awm_cable_trays_shelves_lights",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteilgruppe"
+      ],
+      "rid": "r_project_part_actor_concular__BETEILIGT_AN__bg_reuse_stahl_mehrere_awm_cable_trays_shelves_lights"
+    },
+    {
+      "typ": "BETEILIGT_AN",
+      "from_id": "concular",
+      "to_id": "bg_glas_mehrere_awm_partitions_doors",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteilgruppe"
+      ],
+      "rid": "r_concular__BETEILIGT_AN__bg_reuse_glas_mehrere_awm_partitions_doors"
+    },
+    {
+      "typ": "BETEILIGT_AN",
+      "from_id": "concular",
+      "to_id": "bg_kunststoff_wand_awm_wc_partitions",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteilgruppe"
+      ],
+      "rid": "r_concular__BETEILIGT_AN__bg_reuse_kunststoff_wand_awm_wc_partitions"
+    },
+    {
+      "typ": "BETEILIGT_AN",
+      "from_id": "concular",
+      "to_id": "bg_holz_ausbau_awm_fixed_builtins",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteilgruppe"
+      ],
+      "rid": "r_project_part_actor_concular__BETEILIGT_AN__bg_reuse_holz_ausbau_awm_fixed_builtins"
+    },
+    {
+      "typ": "BETEILIGT_AN",
+      "from_id": "concular",
+      "to_id": "bg_holz_wand_awm_cladding_old_chairs",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteilgruppe"
+      ],
+      "rid": "r_project_part_actor_concular__BETEILIGT_AN__bg_reuse_holz_wand_awm_cladding_old_chairs"
+    },
+    {
+      "typ": "BETEILIGT_AN",
+      "from_id": "concular",
+      "to_id": "bg_mehrere_fassade_crclr_curtain_wall_sheet_glass",
+      "fl": [
+        "Akteur"
+      ],
+      "tl": [
+        "Bauteilgruppe"
+      ],
+      "rid": "r_project_part_actor_concular__BETEILIGT_AN__bg_reuse_mehrere_fassade_crclr_curtain_wall_sheet_glass"
+    }
+  ],
+  "fuzzy_actors": [
+    {
+      "id": "baumab_kassel",
+      "name": "BauMaB Kassel / Bauteilbörse Kassel",
+      "labels": [
+        "Akteur"
+      ]
+    },
+    {
+      "id": "bauteilboerse_basel_overall",
+      "name": "Bauteilbörse Basel",
+      "labels": [
+        "Akteur"
+      ]
+    },
+    {
+      "id": "bauteilboerse_bremen",
+      "name": "Bauteilbörse Bremen",
+      "labels": [
+        "Akteur"
+      ]
+    },
+    {
+      "id": "concular",
+      "name": "Concular",
+      "labels": [
+        "Akteur"
+      ]
+    },
+    {
+      "id": "resource_marktplaats",
+      "name": "ReSource Marktplaats",
+      "labels": [
+        "Akteur"
+      ]
+    },
+    {
+      "id": "syphon_ag_bauteilboerse_biel_bruegg",
+      "name": "Syphon AG Bauteilbörse Biel-Brügg",
+      "labels": [
+        "Akteur"
+      ]
+    },
+    {
+      "id": "zirkulie_bauteilboerse_triesen",
+      "name": "ZirkuLIE Bauteilbörse Triesen",
+      "labels": [
+        "Akteur"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "confirmation_required": "APPLY post_quality_p06_02.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2264,
+    "relationships": 15063
+  },
+  "counts_after_expected": {
+    "nodes": 2264,
+    "relationships": 15063
+  },
+  "counts_before": {
+    "nodes": 2264,
+    "relationships": 15063
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T18:01:13.419565+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\post_quality_p06_02.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "geschaeftsfuehrung",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Gewerberechtliche Geschäftsführung: Mag. Andrea Kessler; Impressum re:store : HarvestMAP eG – Genossenschaft zur Vermittlung von re:use Bauteilen",
+        "evidence_url": "https://www.restore.or.at/impressum",
+        "id": "r_andrea_kessler__VERBUNDEN_MIT_AKTEUR__re_store_harvestmap_vienna",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "andrea_kessler",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_andrea_kessler__VERBUNDEN_MIT_AKTEUR__re_store_harvestmap_vienna"
+        },
+        "rel_internal_id": 6919894077152467569,
+        "to": "re_store_harvestmap_vienna",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "andrea_kessler",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "re_store_harvestmap_vienna",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "geschaeftsfuehrung",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ZRS Architekten GvA mbH Geschäftsführer: Prof. Andrea Klinge, Dipl.-Ing. Architektin",
+        "evidence_url": "https://www.zrs.berlin/en/contact/",
+        "id": "r_andrea_klinge__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "andrea_klinge",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_andrea_klinge__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure"
+        },
+        "rel_internal_id": 1155286554118199444,
+        "to": "zrs_ingenieure",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "andrea_klinge",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "zrs_ingenieure",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "team_affiliation",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "open source platform created in Holland by the architect Cesar Peeren of Superuse Studios",
+        "evidence_url": "https://www.abitare.it/en/architecture/materials-technologies/2018/07/14/harvest-map-recycling-platform",
+        "id": "r_cesare_peeren__VERBUNDEN_MIT_AKTEUR__superuse_studios_2012architecten",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "cesare_peeren",
+        "properties": {
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_cesare_peeren__VERBUNDEN_MIT_AKTEUR__superuse_studios_2012architecten"
+        },
+        "rel_internal_id": 6931153076220860173,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cesare_peeren",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "geschaeftsfuehrung",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ZRS Ingenieure GmbH Geschäftsführer: Dr.-Ing. Christof Ziegert",
+        "evidence_url": "https://www.zrs.berlin/en/contact/",
+        "id": "r_christof_ziegert__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "christof_ziegert",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_christof_ziegert__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure"
+        },
+        "rel_internal_id": 89,
+        "to": "zrs_ingenieure",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "christof_ziegert",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "zrs_ingenieure",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "geschaeftsfuehrung",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ZRS Architekten GvA mbH Geschäftsführer: Prof. Eike Roswag-Klinge, Dipl.-Ing. Architekt",
+        "evidence_url": "https://www.zrs.berlin/en/contact/",
+        "id": "r_eike_roswag_klinge__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "eike_roswag_klinge",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_eike_roswag_klinge__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure"
+        },
+        "rel_internal_id": 88,
+        "to": "zrs_ingenieure",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "eike_roswag_klinge",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "zrs_ingenieure",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "design_team",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Villa Welpeloo ... Project Credits ... Design team Jan Jongert, Jeroen Bergsma, John Bosma, Frank Feder, Jos de Krieger",
+        "evidence_url": "https://www.superuse-studios.com/projectplus/villa-welpeloo",
+        "id": "r_jan_jongert__VERBUNDEN_MIT_AKTEUR__superuse_studios_2012architecten",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "jan_jongert",
+        "properties": {
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_jan_jongert__VERBUNDEN_MIT_AKTEUR__superuse_studios_2012architecten"
+        },
+        "rel_internal_id": 1155286554118199364,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "jan_jongert",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "design_team",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Villa Welpeloo ... Project Credits ... Design team Jan Jongert, Jeroen Bergsma, John Bosma, Frank Feder, Jos de Krieger",
+        "evidence_url": "https://www.superuse-studios.com/projectplus/villa-welpeloo",
+        "id": "r_jeroen_bergsma__VERBUNDEN_MIT_AKTEUR__superuse_studios_2012architecten",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "jeroen_bergsma",
+        "properties": {
+          "confidence": 0.6,
+          "connection_kind": "context_affiliation_from_actor_list",
+          "id": "r_jeroen_bergsma__VERBUNDEN_MIT_AKTEUR__superuse_studios_2012architecten"
+        },
+        "rel_internal_id": 1155286554118199426,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "jeroen_bergsma",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "platform_operator",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Medieninhaber und Herausgeber: materialnomaden GmbH ... Impressum re:store : HarvestMAP eG – Genossenschaft zur Vermittlung von re:use Bauteilen",
+        "evidence_url": "https://www.restore.or.at/impressum",
+        "id": "r_materialnomaden__VERBUNDEN_MIT_AKTEUR__re_store_harvestmap_vienna",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "materialnomaden",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_materialnomaden__VERBUNDEN_MIT_AKTEUR__re_store_harvestmap_vienna"
+        },
+        "rel_internal_id": 6917642277338782321,
+        "to": "re_store_harvestmap_vienna",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "materialnomaden",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "re_store_harvestmap_vienna",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "geschaeftsfuehrung",
+        "evidence_basis": "p6_02_web_fetch_two_endpoint_gate",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ZRS Ingenieure GmbH Geschäftsführer: Dr.-Ing. Christof Ziegert | Dipl. -Ing. Uwe Seiler",
+        "evidence_url": "https://www.zrs.berlin/en/contact/",
+        "id": "r_uwe_seiler__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure",
+        "review_run": "post_quality_p06_02_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "uwe_seiler",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_uwe_seiler__VERBUNDEN_MIT_AKTEUR__zrs_ingenieure"
+        },
+        "rel_internal_id": 94,
+        "to": "zrs_ingenieure",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "uwe_seiler",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "zrs_ingenieure",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "ZRS"
+          ],
+          "id": "zrs_ingenieure",
+          "name": "ZRS Ingenieure",
+          "primary_source_url": "https://www.zrs.berlin/en/contact/",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ],
+          "source_urls": [
+            "https://www.zrs.berlin/en/contact/",
+            "https://www.zrs.berlin/en"
+          ]
+        }
+      },
+      "before": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "ZRS"
+          ],
+          "id": "zrs_ingenieure",
+          "name": "ZRS Ingenieure",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ]
+        }
+      },
+      "id": "zrs_ingenieure",
+      "line": 10,
+      "op": "set_node_properties",
+      "status": "would_update"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 10,
+    "would_update": 1,
+    "would_update_rel": 9
+  }
+}

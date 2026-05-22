@@ -1,0 +1,53 @@
+{
+  "run": "cross_bubble_extension_2026_06_06",
+  "commit": true,
+  "database": "mit-bestand",
+  "generated_at_utc": "2026-06-05T23:59:01.715142+00:00",
+  "patches": [
+    {
+      "patch": "cross_bubble_extension.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 14,
+        "load_errors": 0,
+        "noop_existing_rel": 11,
+        "noop_same": 1,
+        "noop_same_rel": 2
+      },
+      "counts_before": {
+        "nodes": 2304,
+        "relationships": 15556
+      },
+      "counts_after_actual": {
+        "nodes": 2304,
+        "relationships": 15556
+      }
+    },
+    {
+      "patch": "cross_bubble_extension_phase2.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 20,
+        "load_errors": 0,
+        "noop_existing_rel": 18,
+        "noop_same_rel": 2
+      },
+      "counts_before": {
+        "nodes": 2304,
+        "relationships": 15556
+      },
+      "counts_after_actual": {
+        "nodes": 2304,
+        "relationships": 15556
+      }
+    }
+  ],
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "counts_after": {
+    "nodes": 2304,
+    "relationships": 15556
+  }
+}

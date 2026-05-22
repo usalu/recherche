@@ -1,0 +1,97 @@
+{
+  "confirmation_required": "APPLY phase1b_publication_hub.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2355,
+    "relationships": 15465
+  },
+  "counts_after_expected": {
+    "nodes": 2355,
+    "relationships": 15465
+  },
+  "counts_before": {
+    "nodes": 2355,
+    "relationships": 15464
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:09:48.096824+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_rotor_dc_reuse_bubble\\patches\\phase1b_publication_hub.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "evidence_basis": "first_party_publication",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "features Zinneke, Multi, Recypark reuse projects",
+        "evidence_source_id": "q_url_new_arch_reuse_brussels",
+        "evidence_url": "https://rotordb.org/en/projects/architecture-reuse-brussels",
+        "id": "r_Rotor__BETEILIGT_AN__p_architecture_of_reuse_brussels",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "rolle_text": "research / publication context",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "Rotor",
+        "properties": {
+          "id": "r_Rotor__BETEILIGT_AN__p_architecture_of_reuse_brussels"
+        },
+        "rel_internal_id": 1168785258372405635,
+        "to": "p_architecture_of_reuse_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "Rotor",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_architecture_of_reuse_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "after_properties": {
+        "archive_source_id": "q_research_rotor_dc_reuse_bubble_v2_md",
+        "evidence_basis": "first_party_publication",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "rotordc participant at BMA launch (Olivia Noel)",
+        "evidence_source_id": "q_url_new_arch_reuse_brussels",
+        "evidence_url": "https://rotordb.org/en/projects/architecture-reuse-brussels",
+        "id": "r_rotordc__BETEILIGT_AN__p_architecture_of_reuse_brussels",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "rolle_text": "publication launch participant",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "id": "r_rotordc__BETEILIGT_AN__p_architecture_of_reuse_brussels"
+        },
+        "rel_internal_id": 1164281658745035140,
+        "to": "p_architecture_of_reuse_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "p_architecture_of_reuse_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "from": "p_architecture_of_reuse_brussels",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_arch_reuse_brussels"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 3,
+    "would_create_rel": 1,
+    "would_update_rel": 2
+  }
+}

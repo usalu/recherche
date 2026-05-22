@@ -1,0 +1,38 @@
+{
+  "generated_at_utc": "2026-06-05T23:20:06.162410+00:00",
+  "commit": true,
+  "patch_sync": {},
+  "node_url_targets": 46,
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "apply_reports": [
+    {
+      "patch": "_neo4j\\review\\2026-06-06_reuse_bubble_quelle_cleanup\\patches\\bubble_node_source_urls.patch.jsonl",
+      "summary": {
+        "records": 46,
+        "load_errors": 0,
+        "noop_same": 22,
+        "would_update": 24
+      }
+    },
+    {
+      "patch": "_neo4j\\review\\2026-06-06_reuse_bubble_quelle_cleanup\\patches\\bubble_missing_rels.patch.jsonl",
+      "summary": {
+        "records": 16,
+        "load_errors": 0,
+        "noop_existing_rel": 16
+      }
+    }
+  ],
+  "counts_after": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "verification": {
+    "pointer_props": 0,
+    "rels_missing_evidence": 0,
+    "bubble_nodes_no_urls": 8
+  }
+}

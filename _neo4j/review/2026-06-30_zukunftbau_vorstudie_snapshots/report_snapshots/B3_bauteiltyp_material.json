@@ -1,0 +1,1557 @@
+{
+  "id": "B3_bauteiltyp_material",
+  "title": "B3 · Bauteiltyp ↔ Material – das Komponenten-Vokabular",
+  "caption": "Bipartite Kopplung von Bauteiltyp und Material (Kantenstärke = Anzahl Bauteilgruppen). Dieses Vokabular bildet die Grundlage für Filterung und KI-gestützte Vorschläge.",
+  "stats": {
+    "bauteiltypen": 16,
+    "materialien": 20,
+    "kanten": 125
+  },
+  "graph": {
+    "directed": false,
+    "nodes": [
+      {
+        "id": "T::Decke",
+        "group": "Bauteiltyp",
+        "label": "Decke",
+        "color": "#4C78A8",
+        "size": 2010,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Fenster",
+        "group": "Bauteiltyp",
+        "label": "Fenster",
+        "color": "#4C78A8",
+        "size": 2220,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Fassade",
+        "group": "Bauteiltyp",
+        "label": "Fassade",
+        "color": "#4C78A8",
+        "size": 4110,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Ausbau",
+        "group": "Bauteiltyp",
+        "label": "Ausbau",
+        "color": "#4C78A8",
+        "size": 2570,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Technik",
+        "group": "Bauteiltyp",
+        "label": "Technik",
+        "color": "#4C78A8",
+        "size": 2010,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Mehrere",
+        "group": "Bauteiltyp",
+        "label": "Mehrere",
+        "color": "#4C78A8",
+        "size": 295,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Tuer",
+        "group": "Bauteiltyp",
+        "label": "Tuer",
+        "color": "#4C78A8",
+        "size": 1555,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Traeger",
+        "group": "Bauteiltyp",
+        "label": "Traeger",
+        "color": "#4C78A8",
+        "size": 2080,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Dach",
+        "group": "Bauteiltyp",
+        "label": "Dach",
+        "color": "#4C78A8",
+        "size": 1100,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Fundament",
+        "group": "Bauteiltyp",
+        "label": "Fundament",
+        "color": "#4C78A8",
+        "size": 680,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Wand",
+        "group": "Bauteiltyp",
+        "label": "Wand",
+        "color": "#4C78A8",
+        "size": 3375,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Boden",
+        "group": "Bauteiltyp",
+        "label": "Boden",
+        "color": "#4C78A8",
+        "size": 2115,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Stuetze",
+        "group": "Bauteiltyp",
+        "label": "Stuetze",
+        "color": "#4C78A8",
+        "size": 1380,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Treppe",
+        "group": "Bauteiltyp",
+        "label": "Treppe",
+        "color": "#4C78A8",
+        "size": 785,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Daemmung",
+        "group": "Bauteiltyp",
+        "label": "Daemmung",
+        "color": "#4C78A8",
+        "size": 785,
+        "bipartite": 0
+      },
+      {
+        "id": "T::Gelaender",
+        "group": "Bauteiltyp",
+        "label": "Gelaender",
+        "color": "#4C78A8",
+        "size": 645,
+        "bipartite": 0
+      },
+      {
+        "id": "M::Mehrere",
+        "group": "Material",
+        "label": "Mehrere",
+        "color": "#EECA3B",
+        "size": 505,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Messing",
+        "group": "Material",
+        "label": "Messing",
+        "color": "#EECA3B",
+        "size": 295,
+        "bipartite": 1
+      },
+      {
+        "id": "M::CLT / Brettsperrholz",
+        "group": "Material",
+        "label": "CLT / Brettsperrholz",
+        "color": "#EECA3B",
+        "size": 295,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Aluminium",
+        "group": "Material",
+        "label": "Aluminium",
+        "color": "#EECA3B",
+        "size": 820,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Beton",
+        "group": "Material",
+        "label": "Beton",
+        "color": "#EECA3B",
+        "size": 2325,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Daemmstoff",
+        "group": "Material",
+        "label": "Daemmstoff",
+        "color": "#EECA3B",
+        "size": 1030,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Glas",
+        "group": "Material",
+        "label": "Glas",
+        "color": "#EECA3B",
+        "size": 2535,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Gusseisen",
+        "group": "Material",
+        "label": "Gusseisen",
+        "color": "#EECA3B",
+        "size": 330,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Holz",
+        "group": "Material",
+        "label": "Holz",
+        "color": "#EECA3B",
+        "size": 5195,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Keramik",
+        "group": "Material",
+        "label": "Keramik",
+        "color": "#EECA3B",
+        "size": 1730,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Kunststoff",
+        "group": "Material",
+        "label": "Kunststoff",
+        "color": "#EECA3B",
+        "size": 820,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Lehm",
+        "group": "Material",
+        "label": "Lehm",
+        "color": "#EECA3B",
+        "size": 330,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Naturstein",
+        "group": "Material",
+        "label": "Naturstein",
+        "color": "#EECA3B",
+        "size": 1275,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Recyclingbeton",
+        "group": "Material",
+        "label": "Recyclingbeton",
+        "color": "#EECA3B",
+        "size": 470,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Stahl",
+        "group": "Material",
+        "label": "Stahl",
+        "color": "#EECA3B",
+        "size": 5825,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Stahlbeton",
+        "group": "Material",
+        "label": "Stahlbeton",
+        "color": "#EECA3B",
+        "size": 2255,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Ziegel",
+        "group": "Material",
+        "label": "Ziegel",
+        "color": "#EECA3B",
+        "size": 1555,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Textil",
+        "group": "Material",
+        "label": "Textil",
+        "color": "#EECA3B",
+        "size": 505,
+        "bipartite": 1
+      },
+      {
+        "id": "M::MDF / mitteldichte Faserplatte",
+        "group": "Material",
+        "label": "MDF / mitteldichte Faserplatte",
+        "color": "#EECA3B",
+        "size": 365,
+        "bipartite": 1
+      },
+      {
+        "id": "M::Faserzement / Eternit",
+        "group": "Material",
+        "label": "Faserzement / Eternit",
+        "color": "#EECA3B",
+        "size": 295,
+        "bipartite": 1
+      }
+    ],
+    "edges": [
+      {
+        "source": "T::Decke",
+        "target": "M::Mehrere",
+        "weight": 1
+      },
+      {
+        "source": "T::Decke",
+        "target": "M::Beton",
+        "weight": 12
+      },
+      {
+        "source": "T::Decke",
+        "target": "M::Daemmstoff",
+        "weight": 4
+      },
+      {
+        "source": "T::Decke",
+        "target": "M::Holz",
+        "weight": 6
+      },
+      {
+        "source": "T::Decke",
+        "target": "M::Recyclingbeton",
+        "weight": 1
+      },
+      {
+        "source": "T::Decke",
+        "target": "M::Stahl",
+        "weight": 5
+      },
+      {
+        "source": "T::Decke",
+        "target": "M::Stahlbeton",
+        "weight": 21
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Mehrere",
+        "weight": 1
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Aluminium",
+        "weight": 5
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Beton",
+        "weight": 1
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Daemmstoff",
+        "weight": 1
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Glas",
+        "weight": 24
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Holz",
+        "weight": 14
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Keramik",
+        "weight": 1
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Kunststoff",
+        "weight": 1
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Stahl",
+        "weight": 7
+      },
+      {
+        "source": "T::Fenster",
+        "target": "M::Ziegel",
+        "weight": 1
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Mehrere",
+        "weight": 1
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Aluminium",
+        "weight": 9
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Beton",
+        "weight": 7
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Daemmstoff",
+        "weight": 2
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Glas",
+        "weight": 20
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Holz",
+        "weight": 20
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Keramik",
+        "weight": 5
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Kunststoff",
+        "weight": 4
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Lehm",
+        "weight": 1
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Naturstein",
+        "weight": 4
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Stahl",
+        "weight": 17
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Stahlbeton",
+        "weight": 5
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Ziegel",
+        "weight": 13
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Textil",
+        "weight": 1
+      },
+      {
+        "source": "T::Fassade",
+        "target": "M::Faserzement / Eternit",
+        "weight": 1
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Mehrere",
+        "weight": 2
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Beton",
+        "weight": 2
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Daemmstoff",
+        "weight": 3
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Glas",
+        "weight": 3
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Holz",
+        "weight": 22
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Keramik",
+        "weight": 7
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Kunststoff",
+        "weight": 2
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Naturstein",
+        "weight": 4
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Recyclingbeton",
+        "weight": 1
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Stahl",
+        "weight": 15
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Ziegel",
+        "weight": 2
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::Textil",
+        "weight": 1
+      },
+      {
+        "source": "T::Ausbau",
+        "target": "M::MDF / mitteldichte Faserplatte",
+        "weight": 2
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Mehrere",
+        "weight": 1
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Aluminium",
+        "weight": 1
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Beton",
+        "weight": 1
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Daemmstoff",
+        "weight": 1
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Glas",
+        "weight": 2
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Gusseisen",
+        "weight": 2
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Holz",
+        "weight": 4
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Keramik",
+        "weight": 11
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Kunststoff",
+        "weight": 5
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Stahl",
+        "weight": 21
+      },
+      {
+        "source": "T::Technik",
+        "target": "M::Textil",
+        "weight": 1
+      },
+      {
+        "source": "T::Mehrere",
+        "target": "M::Mehrere",
+        "weight": 1
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Messing",
+        "weight": 1
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Beton",
+        "weight": 1
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Daemmstoff",
+        "weight": 1
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Glas",
+        "weight": 7
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Holz",
+        "weight": 14
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Keramik",
+        "weight": 1
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Naturstein",
+        "weight": 1
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Stahl",
+        "weight": 10
+      },
+      {
+        "source": "T::Tuer",
+        "target": "M::Ziegel",
+        "weight": 1
+      },
+      {
+        "source": "T::Traeger",
+        "target": "M::CLT / Brettsperrholz",
+        "weight": 1
+      },
+      {
+        "source": "T::Traeger",
+        "target": "M::Beton",
+        "weight": 2
+      },
+      {
+        "source": "T::Traeger",
+        "target": "M::Holz",
+        "weight": 17
+      },
+      {
+        "source": "T::Traeger",
+        "target": "M::Stahl",
+        "weight": 31
+      },
+      {
+        "source": "T::Traeger",
+        "target": "M::Stahlbeton",
+        "weight": 1
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Aluminium",
+        "weight": 1
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Beton",
+        "weight": 1
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Glas",
+        "weight": 2
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Holz",
+        "weight": 5
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Keramik",
+        "weight": 2
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Naturstein",
+        "weight": 1
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Stahl",
+        "weight": 7
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Stahlbeton",
+        "weight": 3
+      },
+      {
+        "source": "T::Dach",
+        "target": "M::Ziegel",
+        "weight": 2
+      },
+      {
+        "source": "T::Fundament",
+        "target": "M::Beton",
+        "weight": 6
+      },
+      {
+        "source": "T::Fundament",
+        "target": "M::Naturstein",
+        "weight": 1
+      },
+      {
+        "source": "T::Fundament",
+        "target": "M::Recyclingbeton",
+        "weight": 2
+      },
+      {
+        "source": "T::Fundament",
+        "target": "M::Stahl",
+        "weight": 2
+      },
+      {
+        "source": "T::Fundament",
+        "target": "M::Stahlbeton",
+        "weight": 1
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Beton",
+        "weight": 15
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Daemmstoff",
+        "weight": 2
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Glas",
+        "weight": 5
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Holz",
+        "weight": 16
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Keramik",
+        "weight": 4
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Kunststoff",
+        "weight": 1
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Lehm",
+        "weight": 1
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Naturstein",
+        "weight": 7
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Recyclingbeton",
+        "weight": 1
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Stahl",
+        "weight": 6
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Stahlbeton",
+        "weight": 15
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Ziegel",
+        "weight": 14
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::Textil",
+        "weight": 1
+      },
+      {
+        "source": "T::Wand",
+        "target": "M::MDF / mitteldichte Faserplatte",
+        "weight": 1
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Beton",
+        "weight": 7
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Glas",
+        "weight": 1
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Holz",
+        "weight": 12
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Keramik",
+        "weight": 11
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Naturstein",
+        "weight": 9
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Recyclingbeton",
+        "weight": 1
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Stahl",
+        "weight": 3
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Stahlbeton",
+        "weight": 5
+      },
+      {
+        "source": "T::Boden",
+        "target": "M::Ziegel",
+        "weight": 4
+      },
+      {
+        "source": "T::Stuetze",
+        "target": "M::Beton",
+        "weight": 1
+      },
+      {
+        "source": "T::Stuetze",
+        "target": "M::Glas",
+        "weight": 1
+      },
+      {
+        "source": "T::Stuetze",
+        "target": "M::Holz",
+        "weight": 6
+      },
+      {
+        "source": "T::Stuetze",
+        "target": "M::Naturstein",
+        "weight": 1
+      },
+      {
+        "source": "T::Stuetze",
+        "target": "M::Stahl",
+        "weight": 21
+      },
+      {
+        "source": "T::Stuetze",
+        "target": "M::Stahlbeton",
+        "weight": 2
+      },
+      {
+        "source": "T::Treppe",
+        "target": "M::Beton",
+        "weight": 3
+      },
+      {
+        "source": "T::Treppe",
+        "target": "M::Holz",
+        "weight": 2
+      },
+      {
+        "source": "T::Treppe",
+        "target": "M::Stahl",
+        "weight": 6
+      },
+      {
+        "source": "T::Treppe",
+        "target": "M::Stahlbeton",
+        "weight": 4
+      },
+      {
+        "source": "T::Daemmung",
+        "target": "M::Daemmstoff",
+        "weight": 8
+      },
+      {
+        "source": "T::Daemmung",
+        "target": "M::Holz",
+        "weight": 1
+      },
+      {
+        "source": "T::Daemmung",
+        "target": "M::Kunststoff",
+        "weight": 3
+      },
+      {
+        "source": "T::Daemmung",
+        "target": "M::Textil",
+        "weight": 3
+      },
+      {
+        "source": "T::Gelaender",
+        "target": "M::Holz",
+        "weight": 2
+      },
+      {
+        "source": "T::Gelaender",
+        "target": "M::Naturstein",
+        "weight": 1
+      },
+      {
+        "source": "T::Gelaender",
+        "target": "M::Stahl",
+        "weight": 8
+      }
+    ]
+  },
+  "rows": [
+    {
+      "typ": "Decke",
+      "material": "Mehrere",
+      "n": 1
+    },
+    {
+      "typ": "Fenster",
+      "material": "Mehrere",
+      "n": 1
+    },
+    {
+      "typ": "Fassade",
+      "material": "Mehrere",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Mehrere",
+      "n": 2
+    },
+    {
+      "typ": "Technik",
+      "material": "Mehrere",
+      "n": 1
+    },
+    {
+      "typ": "Mehrere",
+      "material": "Mehrere",
+      "n": 1
+    },
+    {
+      "typ": "Tuer",
+      "material": "Messing",
+      "n": 1
+    },
+    {
+      "typ": "Traeger",
+      "material": "CLT / Brettsperrholz",
+      "n": 1
+    },
+    {
+      "typ": "Fassade",
+      "material": "Aluminium",
+      "n": 9
+    },
+    {
+      "typ": "Fenster",
+      "material": "Aluminium",
+      "n": 5
+    },
+    {
+      "typ": "Dach",
+      "material": "Aluminium",
+      "n": 1
+    },
+    {
+      "typ": "Technik",
+      "material": "Aluminium",
+      "n": 1
+    },
+    {
+      "typ": "Decke",
+      "material": "Beton",
+      "n": 12
+    },
+    {
+      "typ": "Fundament",
+      "material": "Beton",
+      "n": 6
+    },
+    {
+      "typ": "Wand",
+      "material": "Beton",
+      "n": 15
+    },
+    {
+      "typ": "Fassade",
+      "material": "Beton",
+      "n": 7
+    },
+    {
+      "typ": "Boden",
+      "material": "Beton",
+      "n": 7
+    },
+    {
+      "typ": "Traeger",
+      "material": "Beton",
+      "n": 2
+    },
+    {
+      "typ": "Dach",
+      "material": "Beton",
+      "n": 1
+    },
+    {
+      "typ": "Stuetze",
+      "material": "Beton",
+      "n": 1
+    },
+    {
+      "typ": "Treppe",
+      "material": "Beton",
+      "n": 3
+    },
+    {
+      "typ": "Fenster",
+      "material": "Beton",
+      "n": 1
+    },
+    {
+      "typ": "Tuer",
+      "material": "Beton",
+      "n": 1
+    },
+    {
+      "typ": "Technik",
+      "material": "Beton",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Beton",
+      "n": 2
+    },
+    {
+      "typ": "Daemmung",
+      "material": "Daemmstoff",
+      "n": 8
+    },
+    {
+      "typ": "Fassade",
+      "material": "Daemmstoff",
+      "n": 2
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Daemmstoff",
+      "n": 3
+    },
+    {
+      "typ": "Decke",
+      "material": "Daemmstoff",
+      "n": 4
+    },
+    {
+      "typ": "Wand",
+      "material": "Daemmstoff",
+      "n": 2
+    },
+    {
+      "typ": "Technik",
+      "material": "Daemmstoff",
+      "n": 1
+    },
+    {
+      "typ": "Fenster",
+      "material": "Daemmstoff",
+      "n": 1
+    },
+    {
+      "typ": "Tuer",
+      "material": "Daemmstoff",
+      "n": 1
+    },
+    {
+      "typ": "Tuer",
+      "material": "Glas",
+      "n": 7
+    },
+    {
+      "typ": "Wand",
+      "material": "Glas",
+      "n": 5
+    },
+    {
+      "typ": "Fenster",
+      "material": "Glas",
+      "n": 24
+    },
+    {
+      "typ": "Fassade",
+      "material": "Glas",
+      "n": 20
+    },
+    {
+      "typ": "Dach",
+      "material": "Glas",
+      "n": 2
+    },
+    {
+      "typ": "Stuetze",
+      "material": "Glas",
+      "n": 1
+    },
+    {
+      "typ": "Technik",
+      "material": "Glas",
+      "n": 2
+    },
+    {
+      "typ": "Boden",
+      "material": "Glas",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Glas",
+      "n": 3
+    },
+    {
+      "typ": "Technik",
+      "material": "Gusseisen",
+      "n": 2
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Holz",
+      "n": 22
+    },
+    {
+      "typ": "Wand",
+      "material": "Holz",
+      "n": 16
+    },
+    {
+      "typ": "Boden",
+      "material": "Holz",
+      "n": 12
+    },
+    {
+      "typ": "Gelaender",
+      "material": "Holz",
+      "n": 2
+    },
+    {
+      "typ": "Tuer",
+      "material": "Holz",
+      "n": 14
+    },
+    {
+      "typ": "Fassade",
+      "material": "Holz",
+      "n": 20
+    },
+    {
+      "typ": "Stuetze",
+      "material": "Holz",
+      "n": 6
+    },
+    {
+      "typ": "Dach",
+      "material": "Holz",
+      "n": 5
+    },
+    {
+      "typ": "Traeger",
+      "material": "Holz",
+      "n": 17
+    },
+    {
+      "typ": "Decke",
+      "material": "Holz",
+      "n": 6
+    },
+    {
+      "typ": "Fenster",
+      "material": "Holz",
+      "n": 14
+    },
+    {
+      "typ": "Treppe",
+      "material": "Holz",
+      "n": 2
+    },
+    {
+      "typ": "Technik",
+      "material": "Holz",
+      "n": 4
+    },
+    {
+      "typ": "Daemmung",
+      "material": "Holz",
+      "n": 1
+    },
+    {
+      "typ": "Boden",
+      "material": "Keramik",
+      "n": 11
+    },
+    {
+      "typ": "Fassade",
+      "material": "Keramik",
+      "n": 5
+    },
+    {
+      "typ": "Technik",
+      "material": "Keramik",
+      "n": 11
+    },
+    {
+      "typ": "Wand",
+      "material": "Keramik",
+      "n": 4
+    },
+    {
+      "typ": "Fenster",
+      "material": "Keramik",
+      "n": 1
+    },
+    {
+      "typ": "Tuer",
+      "material": "Keramik",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Keramik",
+      "n": 7
+    },
+    {
+      "typ": "Dach",
+      "material": "Keramik",
+      "n": 2
+    },
+    {
+      "typ": "Wand",
+      "material": "Kunststoff",
+      "n": 1
+    },
+    {
+      "typ": "Daemmung",
+      "material": "Kunststoff",
+      "n": 3
+    },
+    {
+      "typ": "Fassade",
+      "material": "Kunststoff",
+      "n": 4
+    },
+    {
+      "typ": "Technik",
+      "material": "Kunststoff",
+      "n": 5
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Kunststoff",
+      "n": 2
+    },
+    {
+      "typ": "Fenster",
+      "material": "Kunststoff",
+      "n": 1
+    },
+    {
+      "typ": "Fassade",
+      "material": "Lehm",
+      "n": 1
+    },
+    {
+      "typ": "Wand",
+      "material": "Lehm",
+      "n": 1
+    },
+    {
+      "typ": "Wand",
+      "material": "Naturstein",
+      "n": 7
+    },
+    {
+      "typ": "Boden",
+      "material": "Naturstein",
+      "n": 9
+    },
+    {
+      "typ": "Gelaender",
+      "material": "Naturstein",
+      "n": 1
+    },
+    {
+      "typ": "Tuer",
+      "material": "Naturstein",
+      "n": 1
+    },
+    {
+      "typ": "Dach",
+      "material": "Naturstein",
+      "n": 1
+    },
+    {
+      "typ": "Fassade",
+      "material": "Naturstein",
+      "n": 4
+    },
+    {
+      "typ": "Stuetze",
+      "material": "Naturstein",
+      "n": 1
+    },
+    {
+      "typ": "Fundament",
+      "material": "Naturstein",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Naturstein",
+      "n": 4
+    },
+    {
+      "typ": "Boden",
+      "material": "Recyclingbeton",
+      "n": 1
+    },
+    {
+      "typ": "Fundament",
+      "material": "Recyclingbeton",
+      "n": 2
+    },
+    {
+      "typ": "Decke",
+      "material": "Recyclingbeton",
+      "n": 1
+    },
+    {
+      "typ": "Wand",
+      "material": "Recyclingbeton",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Recyclingbeton",
+      "n": 1
+    },
+    {
+      "typ": "Gelaender",
+      "material": "Stahl",
+      "n": 8
+    },
+    {
+      "typ": "Stuetze",
+      "material": "Stahl",
+      "n": 21
+    },
+    {
+      "typ": "Traeger",
+      "material": "Stahl",
+      "n": 31
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Stahl",
+      "n": 15
+    },
+    {
+      "typ": "Technik",
+      "material": "Stahl",
+      "n": 21
+    },
+    {
+      "typ": "Boden",
+      "material": "Stahl",
+      "n": 3
+    },
+    {
+      "typ": "Tuer",
+      "material": "Stahl",
+      "n": 10
+    },
+    {
+      "typ": "Decke",
+      "material": "Stahl",
+      "n": 5
+    },
+    {
+      "typ": "Fundament",
+      "material": "Stahl",
+      "n": 2
+    },
+    {
+      "typ": "Wand",
+      "material": "Stahl",
+      "n": 6
+    },
+    {
+      "typ": "Fassade",
+      "material": "Stahl",
+      "n": 17
+    },
+    {
+      "typ": "Fenster",
+      "material": "Stahl",
+      "n": 7
+    },
+    {
+      "typ": "Dach",
+      "material": "Stahl",
+      "n": 7
+    },
+    {
+      "typ": "Treppe",
+      "material": "Stahl",
+      "n": 6
+    },
+    {
+      "typ": "Decke",
+      "material": "Stahlbeton",
+      "n": 21
+    },
+    {
+      "typ": "Fassade",
+      "material": "Stahlbeton",
+      "n": 5
+    },
+    {
+      "typ": "Wand",
+      "material": "Stahlbeton",
+      "n": 15
+    },
+    {
+      "typ": "Boden",
+      "material": "Stahlbeton",
+      "n": 5
+    },
+    {
+      "typ": "Treppe",
+      "material": "Stahlbeton",
+      "n": 4
+    },
+    {
+      "typ": "Fundament",
+      "material": "Stahlbeton",
+      "n": 1
+    },
+    {
+      "typ": "Stuetze",
+      "material": "Stahlbeton",
+      "n": 2
+    },
+    {
+      "typ": "Dach",
+      "material": "Stahlbeton",
+      "n": 3
+    },
+    {
+      "typ": "Traeger",
+      "material": "Stahlbeton",
+      "n": 1
+    },
+    {
+      "typ": "Fassade",
+      "material": "Ziegel",
+      "n": 13
+    },
+    {
+      "typ": "Wand",
+      "material": "Ziegel",
+      "n": 14
+    },
+    {
+      "typ": "Dach",
+      "material": "Ziegel",
+      "n": 2
+    },
+    {
+      "typ": "Boden",
+      "material": "Ziegel",
+      "n": 4
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Ziegel",
+      "n": 2
+    },
+    {
+      "typ": "Fenster",
+      "material": "Ziegel",
+      "n": 1
+    },
+    {
+      "typ": "Tuer",
+      "material": "Ziegel",
+      "n": 1
+    },
+    {
+      "typ": "Daemmung",
+      "material": "Textil",
+      "n": 3
+    },
+    {
+      "typ": "Fassade",
+      "material": "Textil",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "Textil",
+      "n": 1
+    },
+    {
+      "typ": "Technik",
+      "material": "Textil",
+      "n": 1
+    },
+    {
+      "typ": "Wand",
+      "material": "Textil",
+      "n": 1
+    },
+    {
+      "typ": "Ausbau",
+      "material": "MDF / mitteldichte Faserplatte",
+      "n": 2
+    },
+    {
+      "typ": "Wand",
+      "material": "MDF / mitteldichte Faserplatte",
+      "n": 1
+    },
+    {
+      "typ": "Fassade",
+      "material": "Faserzement / Eternit",
+      "n": 1
+    }
+  ]
+}

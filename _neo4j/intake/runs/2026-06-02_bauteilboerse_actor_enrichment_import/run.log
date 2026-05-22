@@ -1,0 +1,33 @@
+Connecting: neo4j://127.0.0.1:7687  db=mit-bestand  user=neo4j
+Source JSON: _neo4j\intake\inbox\research\bauteilboerse_network_2026-06-01_project_part_actor_edges.json
+Selected rows (post-filter): 383
+   142  HAT_BAUTEILTYP
+   103  NUTZT_MATERIAL
+    88  HAT_METHODE
+    15  HAT_AKTEURROLLE
+    12  HAT_GESCHAEFTSMODELL
+    12  LIEGT_IN_LAND
+     5  HAT_MARKTMODELL
+     3  NUTZT_SOFTWARE
+     3  BETRIEBEN_VON
+[OK] All source/target node IDs exist in DB.
+[INFO] 7 singleton-cardinality conflicts detected.
+[INFO] 0 parallel-edge collisions detected.
+[INFO] Survivors after guards: 379 / 383
+[INFO] Wrote 7 skipped rows to _neo4j\intake\runs\2026-06-02_bauteilboerse_actor_enrichment_import\SKIPPED.csv
+  imported    3  BETRIEBEN_VON
+  imported   15  HAT_AKTEURROLLE
+  imported  142  HAT_BAUTEILTYP
+  imported   12  HAT_GESCHAEFTSMODELL
+  imported    4  HAT_MARKTMODELL
+  imported   88  HAT_METHODE
+  imported    9  LIEGT_IN_LAND
+  imported  103  NUTZT_MATERIAL
+  imported    3  NUTZT_SOFTWARE
+[OK] review_run=bauteilboerse_actor_enrichment_import_2026_06_02 -> 379 edges, types=['LIEGT_IN_LAND', 'HAT_AKTEURROLLE', 'HAT_GESCHAEFTSMODELL', 'HAT_MARKTMODELL', 'BETRIEBEN_VON', 'HAT_BAUTEILTYP', 'NUTZT_MATERIAL', 'HAT_METHODE', 'NUTZT_SOFTWARE']
+[SCHEMA] 40/45 touched anchors pass full schema check.
+  [FAIL] akt_ii                              ['Akteur'] typ=1 land=1 mm=0 gm=0 roles=3 ev=2
+  [FAIL] cantillon                           ['Akteur'] typ=1 land=1 mm=0 gm=0 roles=1 ev=1
+  [FAIL] gardiner_and_theobald               ['Akteur'] typ=1 land=1 mm=0 gm=0 roles=2 ev=2
+  [FAIL] heyne_tillett_steel                 ['Akteur'] typ=1 land=1 mm=0 gm=0 roles=3 ev=2
+  [FAIL] symmetrys                           ['Akteur'] typ=1 land=1 mm=0 gm=0 roles=3 ev=2

@@ -1,0 +1,596 @@
+{
+  "confirmation_required": "APPLY remediation_r03_merge_nodes.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2284,
+    "relationships": 15312
+  },
+  "counts_after_expected": {
+    "nodes": 2284,
+    "relationships": 15312
+  },
+  "counts_before": {
+    "nodes": 2295,
+    "relationships": 15340
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:57:39.171511+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\remediation_r03_merge_nodes.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "ZRS Architekten Ingenieure"
+          ],
+          "id": "zrs_ingenieure",
+          "name": "ZRS Ingenieure",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "ZRS_Architekten_Ingenieure",
+            "name": "ZRS Architekten Ingenieure"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "zrs_ingenieure",
+            "name": "ZRS Ingenieure",
+            "source_titles": [
+              "CRCLR_House_Impact_Hub_B…",
+              "Impact_Hub_Berlin_CRCLR_…"
+            ]
+          }
+        }
+      },
+      "from": "ZRS_Architekten_Ingenieure",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 1,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 2,
+      "rel_outbound_to_redirect": 5,
+      "status": "would_merge",
+      "to": "zrs_ingenieure"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "ZRS"
+          ],
+          "id": "zrs_ingenieure",
+          "name": "ZRS Ingenieure",
+          "source_titles": [
+            "CRCLR_House_Impact_Hub_B…",
+            "Impact_Hub_Berlin_CRCLR_…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "zrs",
+            "name": "ZRS"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "zrs_ingenieure",
+            "name": "ZRS Ingenieure",
+            "source_titles": [
+              "CRCLR_House_Impact_Hub_B…",
+              "Impact_Hub_Berlin_CRCLR_…"
+            ]
+          }
+        }
+      },
+      "from": "zrs",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 2,
+      "rel_outbound_to_redirect": 5,
+      "status": "would_merge",
+      "to": "zrs_ingenieure"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "EPFL Structural Xploration Lab"
+          ],
+          "id": "structural_xploration_lab_epfl",
+          "name": "Structural Xploration Lab / EPFL",
+          "source_titles": [
+            "ReCrete_footbridge_reuse…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "ak_epfl_structural_xploration_lab",
+            "name": "EPFL Structural Xploration Lab",
+            "source_titles": [
+              "ReCrete_footbridge_reuse…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "structural_xploration_lab_epfl",
+            "name": "Structural Xploration Lab / EPFL"
+          }
+        }
+      },
+      "from": "ak_epfl_structural_xploration_lab",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "structural_xploration_lab_epfl"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "TU Berlin / IEMB"
+          ],
+          "id": "iemb_tu_berlin",
+          "metadata_sidecar_key": "node:ak_tu_berlin_iemb",
+          "name": "IEMB / TU Berlin",
+          "source_titles": [
+            "Berlin_Schildow_Pilot_Ho…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "ak_tu_berlin_iemb",
+            "metadata_sidecar_key": "node:ak_tu_berlin_iemb",
+            "name": "TU Berlin / IEMB"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "iemb_tu_berlin",
+            "name": "IEMB / TU Berlin",
+            "source_titles": [
+              "Berlin_Schildow_Pilot_Ho…"
+            ]
+          }
+        }
+      },
+      "from": "ak_tu_berlin_iemb",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 4,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "iemb_tu_berlin"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Albert & Compagnie"
+          ],
+          "id": "albert_and_co",
+          "metadata_sidecar_key": "node:albert_et_compagnie",
+          "name": "Albert & Co",
+          "source_titles": [
+            "Grande_Halle_de_Colombel…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "albert_et_compagnie",
+            "metadata_sidecar_key": "node:albert_et_compagnie",
+            "name": "Albert & Compagnie"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "albert_and_co",
+            "name": "Albert & Co",
+            "source_titles": [
+              "Grande_Halle_de_Colombel…"
+            ]
+          }
+        }
+      },
+      "from": "albert_et_compagnie",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 5,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 3,
+      "status": "would_merge",
+      "to": "albert_and_co"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "BTU Cottbus / Dr. Angelika Mettke"
+          ],
+          "id": "btu_cottbus",
+          "name": "BTU Cottbus",
+          "source_titles": [
+            "Haus_HOS_Mehrfamilienhau…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "btu_cottbus_angelika_mettke",
+            "name": "BTU Cottbus / Dr. Angelika Mettke",
+            "source_titles": [
+              "Haus_HOS_Mehrfamilienhau…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "btu_cottbus",
+            "name": "BTU Cottbus"
+          }
+        }
+      },
+      "from": "btu_cottbus_angelika_mettke",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 6,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "btu_cottbus"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Claus Asam / IEMB"
+          ],
+          "id": "claus_asam",
+          "metadata_sidecar_key": "node:claus_asam_iemb",
+          "name": "Claus Asam",
+          "source_titles": [
+            "Berlin_Schildow_Pilot_Ho…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "claus_asam_iemb",
+            "metadata_sidecar_key": "node:claus_asam_iemb",
+            "name": "Claus Asam / IEMB"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "claus_asam",
+            "name": "Claus Asam",
+            "source_titles": [
+              "Berlin_Schildow_Pilot_Ho…"
+            ]
+          }
+        }
+      },
+      "from": "claus_asam_iemb",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 7,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 5,
+      "status": "would_merge",
+      "to": "claus_asam"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Frédéric Denise / Archipel Zéro"
+          ],
+          "id": "archipel_zero",
+          "name": "Archipel zéro",
+          "source_titles": [
+            "Resilience_La_Ferme_des_…"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "frederic_denise_archipel_zero",
+            "name": "Frédéric Denise / Archipel Zéro",
+            "source_titles": [
+              "Resilience_La_Ferme_des_…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "archipel_zero",
+            "name": "Archipel zéro"
+          }
+        }
+      },
+      "from": "frederic_denise_archipel_zero",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 8,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 3,
+      "status": "would_merge",
+      "to": "archipel_zero"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Pirmin Jung CH"
+          ],
+          "id": "pirmin_jung_schweiz_ag",
+          "name": "PIRMIN JUNG Schweiz AG"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "pirmin_jung_schweiz",
+            "name": "Pirmin Jung CH"
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "pirmin_jung_schweiz_ag",
+            "name": "PIRMIN JUNG Schweiz AG"
+          }
+        }
+      },
+      "from": "pirmin_jung_schweiz",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 9,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "pirmin_jung_schweiz_ag"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Tampere University / ReCreate Finnish cluster"
+          ],
+          "id": "tampere_university",
+          "name": "Tampere University",
+          "primary_source_url": "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/",
+          "source_titles": [
+            "Lokomotion_Technology_Ce…"
+          ],
+          "source_urls": [
+            "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "tampere_university_recreate",
+            "name": "Tampere University / ReCreate Finnish cluster",
+            "source_titles": [
+              "Lokomotion_Technology_Ce…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "tampere_university",
+            "name": "Tampere University",
+            "primary_source_url": "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/",
+            "source_urls": [
+              "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/"
+            ]
+          }
+        }
+      },
+      "from": "tampere_university_recreate",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 10,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "tampere_university"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "aliases": [
+            "Tampere University / Satu Huuhka"
+          ],
+          "id": "tampere_university",
+          "name": "Tampere University",
+          "primary_source_url": "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/",
+          "source_titles": [
+            "Harmalanranta_A_Kruunu_R…"
+          ],
+          "source_urls": [
+            "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/"
+          ]
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "tampere_university_satu_huuhka",
+            "name": "Tampere University / Satu Huuhka",
+            "source_titles": [
+              "Harmalanranta_A_Kruunu_R…"
+            ]
+          }
+        },
+        "to": {
+          "labels": [
+            "Akteur"
+          ],
+          "properties": {
+            "id": "tampere_university",
+            "name": "Tampere University",
+            "primary_source_url": "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/",
+            "source_urls": [
+              "https://parma.fi/betonielementtien-uudelleenkayttoa-koeponnistettu-onnistuneesti-recreate-hankkeen-minipiloteissa/"
+            ]
+          }
+        }
+      },
+      "from": "tampere_university_satu_huuhka",
+      "label_union": [
+        "Akteur"
+      ],
+      "line": 11,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "tampere_university"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 11,
+    "would_merge": 11
+  }
+}

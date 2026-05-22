@@ -1,0 +1,34 @@
+% huerden-baum.tex — semio TikZ example: a branch of the Hürden taxonomy.
+% Compile:  python _scripts/render_tikz.py huerden-baum
+% Embed:    inside a \begin{Figure}[title=...]\SemioImage[fit=none]{...huerden-baum.pdf}\end{Figure}
+\documentclass[border=6pt]{standalone}
+\usepackage{semio-tikz}
+\begin{document}
+\begin{tikzpicture}[node distance=9mm]
+
+  % root + one domain branch (H) expanded to a family and two leaves
+  \node[semio hub, text width=52mm] (root)
+    {\SemioNode{Hürdensystem}{Digitale Wiederverwendungs-Hürden}};
+  \node[semio hub, text width=52mm, below=of root] (h)
+    {\SemioNode{H}{Physische Rückgewinnung \& Ausführung}};
+  \node[semio hub, text width=40mm, below=of h] (h5)
+    {\SemioNode{H5}{Lagerfähigkeit}};
+  \node[semio node, text width=34mm, below left=14mm and -6mm of h5] (h51)
+    {\SemioNode{H5.1}{Keine Lagerkapazität}};
+  \node[semio node, text width=34mm, below right=14mm and -6mm of h5] (h53)
+    {\SemioNode{H5.3}{Ungeeignete Lagerbedingungen}};
+
+  \draw[semio edge] (root) -- (h);
+  \draw[semio edge] (h) -- (h5);
+  \draw[semio edge] (h5) -- (h51);
+  \draw[semio edge] (h5) -- (h53);
+
+  % register / legend
+  \node[semio register, text width=44mm, right=16mm of h, anchor=west] (leg)
+    {HAT\_UNTERKATEGORIE ordnet 409 Knoten\\
+     in 8 Bereiche A–H.\\[2pt]
+     {\semiomonofont barriere\_code} als Chip,\\
+     Kategorien heller, Blätter neutral.};
+
+\end{tikzpicture}
+\end{document}

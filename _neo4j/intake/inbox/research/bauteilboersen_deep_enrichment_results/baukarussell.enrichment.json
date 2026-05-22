@@ -1,0 +1,89 @@
+{
+  "anchor_id": "baukarussell",
+  "sources_visited": [
+    {
+      "url": "https://www.baukarussell.at/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.baukarussell.at/services/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.nabe.gv.at/baukarussell-social-urban-mining/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.baukarussell.at/services/"
+      ],
+      "evidence_quote": "Services scope supports pre-demolition/resource assessment before selective recovery.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "audit",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.baukarussell.at/services/"
+      ],
+      "evidence_quote": "Social Urban Mining workflow implies inventory of reusable/recyclable components.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [
+    {
+      "target_id": null,
+      "lookup_keyword": "selektiver rückbau",
+      "intended_label": "Rueckbauverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.baukarussell.at/services/"
+      ],
+      "evidence_quote": "Services are centered on Social Urban Mining and selective dismantling/recovery.",
+      "confidence": "wahrscheinlich",
+      "note": "Resolve Rueckbauverfahren node ID before import."
+    }
+  ],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_METHODE",
+      "target_id": "methode_social_urban_mining",
+      "evidence_urls": [
+        "https://www.nabe.gv.at/baukarussell-social-urban-mining/"
+      ],
+      "evidence_quote": "Public procurement example explicitly frames BauKarussell as Social Urban Mining.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "BauKarussell",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.baukarussell.at/",
+      "https://www.baukarussell.at/services/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Project-specific services; no reusable category catalogue suitable for closed-set import."
+    }
+  ],
+  "run_notes": []
+}

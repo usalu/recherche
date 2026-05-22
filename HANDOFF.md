@@ -24,12 +24,16 @@ The durable distinction is now:
 | Area | Role |
 |---|---|
 | Neo4j database | **Truth** |
+| `_knowledge/` | **human-readable research corpus** (dossiers, themes, synthesis) — read this to learn |
 | `_neo4j/processed/` | cleaned, reproducible import payloads plus provenance |
 | `_neo4j/intake/inbox/` | future raw drops |
 | `_neo4j/intake/archive/` | preserved raw source packages after processing |
 | `_neo4j/intake/runs/` | reports for each processing run |
 | `_neo4j/contracts/` | supported input contracts |
 | `_neo4j/review/` | lineage and trust reviews |
+
+Human-readable knowledge now lives in `_knowledge/`; `_neo4j/` is graph machinery only.
+`_archive/research/` is cold legacy reference and is excluded from `_knowledge/` by design.
 
 Read next:
 

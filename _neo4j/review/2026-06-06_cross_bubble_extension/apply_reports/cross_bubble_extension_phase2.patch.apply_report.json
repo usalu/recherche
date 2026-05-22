@@ -1,0 +1,245 @@
+{
+  "confirmation_required": "APPLY cross_bubble_extension_phase2.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:59:08.342537+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_cross_bubble_extension\\patches\\cross_bubble_extension_phase2.patch.jsonl",
+  "records": [
+    {
+      "from": "sumami",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "cirkla",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "sumami"
+    },
+    {
+      "from": "sumami",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "eth_zuerich"
+    },
+    {
+      "from": "eth_zuerich",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "sumami"
+    },
+    {
+      "from": "sumami",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_hub_zurich"
+    },
+    {
+      "from": "circular_hub_zurich",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "sumami"
+    },
+    {
+      "from": "kunst_stoffe_ev",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "material_mafia"
+    },
+    {
+      "from": "material_mafia",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "kunst_stoffe_ev"
+    },
+    {
+      "from": "kunst_stoffe_ev",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_berlin"
+    },
+    {
+      "from": "circular_berlin",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "kunst_stoffe_ev"
+    },
+    {
+      "from": "rotordc",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "whitewood"
+    },
+    {
+      "from": "whitewood",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "rotordc"
+    },
+    {
+      "from": "rotordc",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "immobel"
+    },
+    {
+      "from": "immobel",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "rotordc"
+    },
+    {
+      "from": "brussels_environment",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "opalis"
+    },
+    {
+      "from": "opalis",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "brussels_environment"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "software_restado"
+    },
+    {
+      "from": "software_restado",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "useagain_bauteilclick"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "municipal_reuse_pilot_mesh",
+        "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Utrecht Trechterweide reuse centre PREUSE pilot; NL material passport and municipal reuse layer",
+        "evidence_url": "https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979",
+        "id": "r_city_of_utrecht__verbunden_mit_akteur__madaster",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "city_of_utrecht",
+        "properties": {
+          "connection_kind": "municipal_reuse_pilot_mesh",
+          "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Utrecht Trechterweide reuse centre PREUSE pilot; NL material passport and municipal reuse layer",
+          "evidence_url": "https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979",
+          "id": "r_city_of_utrecht__verbunden_mit_akteur__madaster",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193892,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "city_of_utrecht",
+      "line": 19,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "municipal_reuse_pilot_mesh",
+        "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Utrecht PREUSE pilot expanding municipal reuse; Madaster NL passport infrastructure peer layer",
+        "evidence_url": "https://www.nweurope.eu/blog/our-projects-2021-2027-90/public-reuse-centres-a-step-towards-circular-construction-771",
+        "id": "r_madaster__verbunden_mit_akteur__city_of_utrecht",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "municipal_reuse_pilot_mesh",
+          "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Utrecht PREUSE pilot expanding municipal reuse; Madaster NL passport infrastructure peer layer",
+          "evidence_url": "https://www.nweurope.eu/blog/our-projects-2021-2027-90/public-reuse-centres-a-step-towards-circular-construction-771",
+          "id": "r_madaster__verbunden_mit_akteur__city_of_utrecht",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743524,
+        "to": "city_of_utrecht",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 20,
+      "op": "set_rel_properties",
+      "status": "noop_same_rel",
+      "to": "city_of_utrecht",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 18,
+    "noop_same_rel": 2,
+    "records": 20
+  }
+}

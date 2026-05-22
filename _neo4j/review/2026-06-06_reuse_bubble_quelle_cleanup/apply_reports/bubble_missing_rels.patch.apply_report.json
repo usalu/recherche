@@ -1,0 +1,154 @@
+{
+  "confirmation_required": "APPLY bubble_missing_rels.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15527
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T23:20:13.072283+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_reuse_bubble_quelle_cleanup\\patches\\bubble_missing_rels.patch.jsonl",
+  "records": [
+    {
+      "from": "kunst_stoffe_ev",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "haus_der_materialisierung"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "kunst_stoffe_ev"
+    },
+    {
+      "from": "bauteilnetz_deutschland",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_hannover"
+    },
+    {
+      "from": "bauteilboerse_hannover",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilnetz_deutschland"
+    },
+    {
+      "from": "bauteilnetz_deutschland",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_bremen"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilnetz_deutschland"
+    },
+    {
+      "from": "material_mafia",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "haus_der_materialisierung"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "material_mafia"
+    },
+    {
+      "from": "material_mafia",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "tu_berlin"
+    },
+    {
+      "from": "tu_berlin",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "material_mafia"
+    },
+    {
+      "from": "circular_berlin",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "haus_der_materialisierung"
+    },
+    {
+      "from": "haus_der_materialisierung",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_berlin"
+    },
+    {
+      "from": "circular_berlin",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "tu_berlin"
+    },
+    {
+      "from": "tu_berlin",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_berlin"
+    },
+    {
+      "from": "circular_berlin",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "material_mafia"
+    },
+    {
+      "from": "material_mafia",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_berlin"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 16,
+    "records": 16
+  }
+}

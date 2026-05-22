@@ -1,0 +1,106 @@
+{
+  "confirmation_required": "APPLY delete_unsupported.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15390
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15390
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15393
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:41:52.781908+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\delete_unsupported.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "evidence_basis": "first_party_publication",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "rotordc participant at BMA launch (Olivia Noel)",
+          "evidence_url": "https://rotordb.org/en/projects/architecture-reuse-brussels",
+          "id": "r_rotordc__BETEILIGT_AN__p_architecture_of_reuse_brussels",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "rolle_text": "publication launch participant",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164281658745035140,
+        "to": "p_architecture_of_reuse_brussels",
+        "type": "BETEILIGT_AN"
+      },
+      "from": "rotordc",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "p_architecture_of_reuse_brussels",
+      "type": "BETEILIGT_AN"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "circular_berlin",
+        "properties": {
+          "connection_kind": "hdm_research_consortium",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "hdm_dbu_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular City and Kunst-Stoffe shared HdM DBU consortium | Circular City and Kunst-Stoffe consortium partners in DBU Reallabor at HdM",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_circular_berlin__verbunden_mit_akteur__kunst_stoffe_ev",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1166545553186620018,
+        "to": "kunst_stoffe_ev",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_berlin",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "kunst_stoffe_ev",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kunst_stoffe_ev",
+        "properties": {
+          "connection_kind": "hdm_research_consortium",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "hdm_dbu_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Kunst-Stoffe and Material Mafia partners in TU Berlin HdM Reallabor | shared HdM DBU Reallabor consortium partners at Haus der Materialisierung",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_kunst_stoffe_ev__verbunden_mit_akteur__material_mafia",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1157538353931884510,
+        "to": "material_mafia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "kunst_stoffe_ev",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "material_mafia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 3,
+    "would_delete_rel": 3
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "anchor_id": "batrecup",
+  "finalest_status": {
+    "anchor_id": "batrecup",
+    "finalest_status": "REVIEW_ONLY_EVIDENCE_AVAILABLE",
+    "pass8_status": "REVIEW_OR_SCOPE_ONLY_NO_STRICT_MATERIAL_BT",
+    "strict_material_count": 0,
+    "strict_bauteiltyp_count": 0,
+    "strict_total_claim_rows": 0,
+    "strict_material_ids": "",
+    "strict_bauteiltyp_ids": "",
+    "review_material_count": 1,
+    "review_bauteiltyp_count": 2,
+    "review_total_claim_rows": 3,
+    "review_material_ids": "mat_holz",
+    "review_bauteiltyp_ids": "bt_fenster;bt_tuer",
+    "scope_evidence_rows": 1,
+    "actor_scope_classification": "CORE_MATERIAL_REUSE_MARKETPLACE_APP",
+    "is_materialboerse_scope": "yes",
+    "needs_followup": "yes",
+    "followup_reason": "only review evidence, not import-safe"
+  },
+  "strict_import_safe_claims": [],
+  "review_only_claims_not_import_safe": [
+    {
+      "anchor_id": "batrecup",
+      "rel_type": "HAT_BAUTEILTYP",
+      "target_id": "bt_fenster",
+      "target_label": "Fenster",
+      "evidence_url": "https://www.batrecup.com/fabriquer-une-serre-a-partir-de-fenetres-et-baies-vitrees-en-reemploi-lart-de-lecologie/",
+      "evidence_quote": "BatRecup article says old windows/baies vitrées can be collected directly on the BatRecup application.",
+      "line_ref": "search result extract",
+      "evidence_basis": "DIRECT_FIRST_PARTY_ARTICLE",
+      "final_decision": "REVIEW_ONLY_SOURCE_EXTRACT_OR_CATEGORY_SCOPE",
+      "source_note": "Confirms material-reuse scope/app use; no public product catalogue row found.",
+      "pass8_action": "ADD_OR_PROMOTE_AFTER_RECLASSIFICATION",
+      "evidence_tier": "REVIEW_ONLY",
+      "finalest_decision": "DO_NOT_IMPORT_REVIEW_ONLY"
+    },
+    {
+      "anchor_id": "batrecup",
+      "rel_type": "HAT_BAUTEILTYP",
+      "target_id": "bt_tuer",
+      "target_label": "Tür",
+      "evidence_url": "https://www.batrecup.com/materiaux-recyclables-et-reemploi/",
+      "evidence_quote": "BatRecup article about reusable materials names portes, fenêtres and bois.",
+      "line_ref": "search result extract",
+      "evidence_basis": "DIRECT_FIRST_PARTY_ARTICLE",
+      "final_decision": "REVIEW_ONLY_SOURCE_EXTRACT_OR_CATEGORY_SCOPE",
+      "source_note": "Confirms material-reuse scope/app use; no public product catalogue row found.",
+      "pass8_action": "ADD_OR_PROMOTE_AFTER_RECLASSIFICATION",
+      "evidence_tier": "REVIEW_ONLY",
+      "finalest_decision": "DO_NOT_IMPORT_REVIEW_ONLY"
+    },
+    {
+      "anchor_id": "batrecup",
+      "rel_type": "NUTZT_MATERIAL",
+      "target_id": "mat_holz",
+      "target_label": "Holz",
+      "evidence_url": "https://www.batrecup.com/materiaux-recyclables-et-reemploi/",
+      "evidence_quote": "BatRecup article about reusable materials names bois.",
+      "line_ref": "search result extract",
+      "evidence_basis": "DIRECT_FIRST_PARTY_ARTICLE",
+      "final_decision": "REVIEW_ONLY_SOURCE_EXTRACT_OR_CATEGORY_SCOPE",
+      "source_note": "Confirms material-reuse scope/app use; no public product catalogue row found.",
+      "pass8_action": "ADD_OR_PROMOTE_AFTER_RECLASSIFICATION",
+      "evidence_tier": "REVIEW_ONLY",
+      "finalest_decision": "DO_NOT_IMPORT_REVIEW_ONLY"
+    }
+  ],
+  "scope_only_actor_evidence": [
+    {
+      "anchor_id": "batrecup",
+      "classification": "CORE_MATERIAL_REUSE_MARKETPLACE_APP",
+      "is_materialboerse": "yes",
+      "evidence_status": "scope_confirmed_no_public_product_catalogue",
+      "evidence_url": "https://www.batrecup.com/",
+      "evidence_quote": "First-party page: “plateforme communautaire pour le réemploi des matériaux”.",
+      "line_ref": "search result extract / first-party page"
+    }
+  ],
+  "method_note": "Use strict_import_safe_claims for graph import. Review-only and scope-only evidence should be cited in research notes but not imported as Material/Bauteiltyp facts without more direct product/category proof."
+}

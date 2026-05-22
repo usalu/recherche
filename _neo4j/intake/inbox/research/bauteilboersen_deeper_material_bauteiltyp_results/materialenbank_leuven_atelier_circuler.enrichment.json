@@ -1,0 +1,206 @@
+{
+  "anchor_id": "materialenbank_leuven_atelier_circuler",
+  "sources_visited": [
+    {
+      "url": "https://ateliercirculer.be/materialenbank/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Operator material-bank page."
+      ]
+    },
+    {
+      "url": "https://ateliercirculer.be/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://ateliercirculer.be/materialenbank/catalogus",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Catalogue source."
+      ]
+    },
+    {
+      "url": "https://www.vvsg.be/kennis/praktijken/praktijkendatabank/materialenbank-leuven",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://pers.leuven.be/de-leuvense-materialenbank-redt-470-ton-materialen-in-2025-recordjaar-voor-circulaire-economie",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Historical/current city press source for volume and circular-economy context."
+      ]
+    },
+    {
+      "url": "https://ecobouwers.be/bouwpartner/aterlier-circuler-materialenbank-leuven",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Secondary profile: recovered/ecological building materials; furniture/pergola/kitchen from reclaimed materials."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Assortiment Stenen includes Tegels and Dakpannen.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Assortiment Stenen includes Natuursteen.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Assortiment Metaal includes stalen geraamtes and H-/I-profielen.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Materialenbank assortment includes wood/timber product families and carpentry stock.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Interieur: tegels and finishing/carpentry categories map to Ausbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Assortiment Stenen includes Dakpannen; metal includes Dak- & Wandpanelen.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Metal category includes H- & I-profielen / beams.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_daemmung",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/catalogus"
+      ],
+      "evidence_quote": "Archive brief and catalogue scope include insulation stock; verify item pages.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/"
+      ],
+      "evidence_quote": "Snelbouwsteen/prefab elements and wall/panel stock map to wall components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://ateliercirculer.be/materialenbank/catalogus"
+      ],
+      "evidence_quote": "Catalogue scope includes sanitary/technical categories in archive; verify item pages.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [
+    {
+      "target_id": null,
+      "lookup_keyword": "demontage",
+      "intended_label": "Rueckbauverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://pers.leuven.be/de-leuvense-materialenbank-redt-470-ton-materialen-in-2025-recordjaar-voor-circulaire-economie"
+      ],
+      "evidence_quote": "Secondary city source indicates the material bank actively saves materials from projects.",
+      "confidence": "unsicher",
+      "note": "Resolve Rueckbauverfahren node ID before import."
+    }
+  ],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Materialenbank Leuven / Atelier Circuler",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://ateliercirculer.be/materialenbank/",
+      "https://ateliercirculer.be/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Rueckbau ID",
+      "reason": "Active dismantling needs exact process node and first-party confirmation."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/materialenbank_leuven_atelier_circuler.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_naturstein",
+        "mat_keramik",
+        "mat_stahl"
+      ],
+      "wahrscheinlich": [
+        "mat_holz"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_traeger",
+        "bt_ausbau",
+        "bt_dach"
+      ],
+      "wahrscheinlich": [
+        "bt_wand",
+        "bt_daemmung"
+      ],
+      "unsicher": [
+        "bt_technik"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

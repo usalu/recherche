@@ -1,0 +1,314 @@
+{
+  "id": "D1_huerden",
+  "title": "D1 · Wiederverwendungs-Hürden (empirisch)",
+  "caption": "Dokumentierte Hürden; Knotengröße/[Zahl] = Häufigkeit der Nennung in Projekten und Bauteilgruppen, Kanten = gemeinsames Auftreten. Empirische Grundlage für die Problemstellung (§4.1/4.2) und die Interview-Leitfäden (§6.2).",
+  "stats": {
+    "huerden": 11,
+    "top": [
+      {
+        "huerde": "Witterung_Feuchte",
+        "vorkommen": 39
+      },
+      {
+        "huerde": "Verfuegbarkeitsproblem",
+        "vorkommen": 34
+      },
+      {
+        "huerde": "Mengenunsicherheit",
+        "vorkommen": 29
+      },
+      {
+        "huerde": "Entwurfsbindung",
+        "vorkommen": 28
+      },
+      {
+        "huerde": "Heterogenitaet_Chargen",
+        "vorkommen": 25
+      },
+      {
+        "huerde": "Aufbereitungsaufwand",
+        "vorkommen": 22
+      },
+      {
+        "huerde": "Unkonventionelles_Material",
+        "vorkommen": 17
+      },
+      {
+        "huerde": "Terminunsicherheit",
+        "vorkommen": 16
+      }
+    ]
+  },
+  "graph": {
+    "directed": false,
+    "nodes": [
+      {
+        "id": "h_witterung_feuchte",
+        "group": "Huerde",
+        "label": "Witterung_Feuchte\n[39]",
+        "color": "#E45756",
+        "size": 1938
+      },
+      {
+        "id": "h_verfuegbarkeitsproblem",
+        "group": "Huerde",
+        "label": "Verfuegbarkeitsproblem\n[34]",
+        "color": "#E45756",
+        "size": 1728
+      },
+      {
+        "id": "h_mengenunsicherheit",
+        "group": "Huerde",
+        "label": "Mengenunsicherheit\n[29]",
+        "color": "#E45756",
+        "size": 1518
+      },
+      {
+        "id": "h_entwurfsbindung",
+        "group": "Huerde",
+        "label": "Entwurfsbindung\n[28]",
+        "color": "#E45756",
+        "size": 1476
+      },
+      {
+        "id": "h_heterogenitaet_chargen",
+        "group": "Huerde",
+        "label": "Heterogenitaet_Chargen\n[25]",
+        "color": "#E45756",
+        "size": 1350
+      },
+      {
+        "id": "h_aufbereitungsaufwand",
+        "group": "Huerde",
+        "label": "Aufbereitungsaufwand\n[22]",
+        "color": "#E45756",
+        "size": 1224
+      },
+      {
+        "id": "h_unkonventionelles_material",
+        "group": "Huerde",
+        "label": "Unkonventionelles_Mater…\n[17]",
+        "color": "#E45756",
+        "size": 1014
+      },
+      {
+        "id": "h_terminunsicherheit",
+        "group": "Huerde",
+        "label": "Terminunsicherheit\n[16]",
+        "color": "#E45756",
+        "size": 972
+      },
+      {
+        "id": "h_fehlende_lagerflaeche",
+        "group": "Huerde",
+        "label": "Fehlende_Lagerflaeche\n[14]",
+        "color": "#E45756",
+        "size": 888
+      },
+      {
+        "id": "h_akzeptanzproblem",
+        "group": "Huerde",
+        "label": "Akzeptanzproblem\n[8]",
+        "color": "#E45756",
+        "size": 636
+      },
+      {
+        "id": "h_ausschreibungsproblem",
+        "group": "Huerde",
+        "label": "Ausschreibungsproblem\n[5]",
+        "color": "#E45756",
+        "size": 510
+      }
+    ],
+    "edges": [
+      {
+        "source": "h_witterung_feuchte",
+        "target": "h_heterogenitaet_chargen",
+        "weight": 8
+      },
+      {
+        "source": "h_verfuegbarkeitsproblem",
+        "target": "h_heterogenitaet_chargen",
+        "weight": 5
+      },
+      {
+        "source": "h_verfuegbarkeitsproblem",
+        "target": "h_mengenunsicherheit",
+        "weight": 5
+      },
+      {
+        "source": "h_verfuegbarkeitsproblem",
+        "target": "h_terminunsicherheit",
+        "weight": 8
+      },
+      {
+        "source": "h_terminunsicherheit",
+        "target": "h_fehlende_lagerflaeche",
+        "weight": 5
+      }
+    ]
+  },
+  "rows": {
+    "incidence": [
+      {
+        "hid": "h_akzeptanzproblem",
+        "huerde": "Akzeptanzproblem",
+        "incidence": 5,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_akzeptanzproblem",
+        "huerde": "Akzeptanzproblem",
+        "incidence": 3,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_aufbereitungsaufwand",
+        "huerde": "Aufbereitungsaufwand",
+        "incidence": 13,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_aufbereitungsaufwand",
+        "huerde": "Aufbereitungsaufwand",
+        "incidence": 9,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_ausschreibungsproblem",
+        "huerde": "Ausschreibungsproblem",
+        "incidence": 1,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_ausschreibungsproblem",
+        "huerde": "Ausschreibungsproblem",
+        "incidence": 4,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_entwurfsbindung",
+        "huerde": "Entwurfsbindung",
+        "incidence": 16,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_entwurfsbindung",
+        "huerde": "Entwurfsbindung",
+        "incidence": 12,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_fehlende_lagerflaeche",
+        "huerde": "Fehlende_Lagerflaeche",
+        "incidence": 6,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_fehlende_lagerflaeche",
+        "huerde": "Fehlende_Lagerflaeche",
+        "incidence": 8,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_heterogenitaet_chargen",
+        "huerde": "Heterogenitaet_Chargen",
+        "incidence": 17,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_heterogenitaet_chargen",
+        "huerde": "Heterogenitaet_Chargen",
+        "incidence": 8,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_mengenunsicherheit",
+        "huerde": "Mengenunsicherheit",
+        "incidence": 23,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_mengenunsicherheit",
+        "huerde": "Mengenunsicherheit",
+        "incidence": 6,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_terminunsicherheit",
+        "huerde": "Terminunsicherheit",
+        "incidence": 5,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_terminunsicherheit",
+        "huerde": "Terminunsicherheit",
+        "incidence": 11,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_unkonventionelles_material",
+        "huerde": "Unkonventionelles_Material",
+        "incidence": 12,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_unkonventionelles_material",
+        "huerde": "Unkonventionelles_Material",
+        "incidence": 5,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_verfuegbarkeitsproblem",
+        "huerde": "Verfuegbarkeitsproblem",
+        "incidence": 18,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_verfuegbarkeitsproblem",
+        "huerde": "Verfuegbarkeitsproblem",
+        "incidence": 16,
+        "quelle": "Projekt"
+      },
+      {
+        "hid": "h_witterung_feuchte",
+        "huerde": "Witterung_Feuchte",
+        "incidence": 28,
+        "quelle": "Bauteilgruppe"
+      },
+      {
+        "hid": "h_witterung_feuchte",
+        "huerde": "Witterung_Feuchte",
+        "incidence": 11,
+        "quelle": "Projekt"
+      }
+    ],
+    "cooccurrence": [
+      {
+        "a": "h_fehlende_lagerflaeche",
+        "b": "h_terminunsicherheit",
+        "w": 5
+      },
+      {
+        "a": "h_mengenunsicherheit",
+        "b": "h_verfuegbarkeitsproblem",
+        "w": 5
+      },
+      {
+        "a": "h_heterogenitaet_chargen",
+        "b": "h_verfuegbarkeitsproblem",
+        "w": 5
+      },
+      {
+        "a": "h_terminunsicherheit",
+        "b": "h_verfuegbarkeitsproblem",
+        "w": 8
+      },
+      {
+        "a": "h_heterogenitaet_chargen",
+        "b": "h_witterung_feuchte",
+        "w": 8
+      }
+    ]
+  }
+}

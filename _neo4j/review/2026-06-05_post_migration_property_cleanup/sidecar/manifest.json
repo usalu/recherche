@@ -1,0 +1,59 @@
+{
+  "run": "property_cleanup_2026_06_05",
+  "updated_at_utc": "2026-06-05T20:29:51.016567+00:00",
+  "entity_metadata_file": "entity_metadata.jsonl",
+  "phase4b": {
+    "export_run": "property_cleanup_2026_06_05_phase4b",
+    "relationship_rows": 615,
+    "qa_needs_source_url_review": 353,
+    "by_reltype": {
+      "BETEILIGT_AN": 63,
+      "BETRIEBEN_VON": 3,
+      "ERFORDERT_NACHWEIS": 95,
+      "ERFORDERT_SCHADSTOFFPRUEFUNG": 37,
+      "HAT_AKTEURROLLE": 15,
+      "HAT_BAUTEILTYP": 142,
+      "HAT_BESCHAFFUNGSWEG": 3,
+      "HAT_GESCHAEFTSMODELL": 12,
+      "HAT_SCHADSTOFFRISIKO": 100,
+      "LIEGT_IN_LAND": 9,
+      "NUTZT_MATERIAL": 103,
+      "NUTZT_SOFTWARE": 3,
+      "TRIGGERS_REGULIERUNGSFRAGE": 30
+    }
+  },
+  "phase5b": {
+    "export_run": "property_cleanup_2026_06_05_phase5b",
+    "drop_list": "E:\\recherche\\_neo4j\\review\\2026-06-05_post_migration_property_cleanup\\source_title_drop_patterns.txt",
+    "patterns_loaded": [
+      "*.md",
+      "*_research.md",
+      "=schadstoff_reuse_knowledge_graph_research.md"
+    ],
+    "node_rows": 607,
+    "removed_title_entries": 664,
+    "by_label": {
+      "Akteur": 64,
+      "Aufbereitungsverfahren": 4,
+      "Bauteilgruppe": 236,
+      "Bauteiltyp": 7,
+      "Bauwerk": 25,
+      "Materialdepot": 6,
+      "Kennwert": 23,
+      "Leistungsanforderung": 8,
+      "Land": 7,
+      "Material": 8,
+      "Projekt": 79,
+      "PruefungNachweis": 111,
+      "Schadstoff": 9,
+      "Stadt": 12,
+      "Software": 1,
+      "Verbindungstechnik": 7
+    },
+    "matched_pattern_hits": {
+      "*.md": 664,
+      "*_research.md": 313,
+      "=schadstoff_reuse_knowledge_graph_research.md": 313
+    }
+  }
+}

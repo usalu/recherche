@@ -1,0 +1,134 @@
+{
+  "anchor_id": "new_horizon",
+  "sources_visited": [
+    {
+      "url": "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Historical/current source for Oogstkaart adoption by New Horizon; platform maps secondary material sources."
+      ]
+    },
+    {
+      "url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Superuse source for harvest/collect/re-use approach."
+      ]
+    },
+    {
+      "url": "https://knowledge-hub.circle-economy.com/article/4067",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.jajo.com/en/companies/new-horizon/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://circle-economy.com/knowledge-hub/article/30046",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Circle Economy source linking Harvest Map to material harvesting/circular construction."
+      ]
+    }
+  ],
+  "materials": [],
+  "bauteiltypen": [],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+      ],
+      "evidence_quote": "Oogstkaart / harvest-map method is an inventory/mapping approach for reusable materials.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [
+    {
+      "target_id": null,
+      "lookup_keyword": "urban mining",
+      "intended_label": "Rueckbauverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://www.jajo.com/en/companies/new-horizon/"
+      ],
+      "evidence_quote": "Secondary company source frames New Horizon around urban mining / harvesting of building materials.",
+      "confidence": "unsicher",
+      "note": "Resolve Rueckbauverfahren node ID before import."
+    }
+  ],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_METHODE",
+      "target_id": "methode_harvest_map",
+      "evidence_urls": [
+        "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/"
+      ],
+      "evidence_quote": "Oogstkaart / Harvest Map method.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "New Horizon / Oogstkaart",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/",
+      "https://www.superuse-studios.com/publication/harvest-collect-re-use/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material/Bauteiltyp",
+      "reason": "Harvest-map method is broad/project-specific; no closed-set material claims loaded."
+    },
+    {
+      "topic": "First-party",
+      "reason": "New Horizon first-party harvest-map page not found in this pass."
+    },
+    {
+      "topic": "Material",
+      "reason": "No concrete source-backed material term was found in operator/current/history sources. Keep material empty rather than infer from generic construction-material wording."
+    },
+    {
+      "topic": "Bauteiltyp",
+      "reason": "No stable component family was visible in operator/current/history sources; catalogue/login/product pages required."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/new_horizon.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "anchor_id": "articonnex",
+  "sources_visited": [
+    {
+      "url": "https://articonnex.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://articonnex.com/collections/reemploi",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.jaimelesstartups.fr/articonnex-economie-circulaire-anti-gaspi-materieux-bricolage/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Réemploi collection includes timber-derived stock such as OSB / contreplaqué / parquet categories.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Reuse catalogue/category evidence includes carrelage / tiling stock.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Reuse collection surfaced flooring/parquet/terrace-type items.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://articonnex.com/collections/reemploi"
+      ],
+      "evidence_quote": "Anti-gaspi DIY/building stock includes finishing and hardware-like product families.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Articonnex",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://articonnex.com/",
+      "https://articonnex.com/collections/reemploi"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "PruefungNachweis",
+      "reason": "No browser-readable operator evidence for audit, passport, CE/CPR or QA workflow."
+    },
+    {
+      "topic": "Rueckbau/Aufbereitung",
+      "reason": "No concrete process or deconstruction service found in accessible copy."
+    }
+  ],
+  "run_notes": [
+    "Depth increased from broad platform classification to timber/flooring/fit-out candidate links, but still needs product-page confirmation."
+  ]
+}

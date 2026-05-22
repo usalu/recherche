@@ -1,0 +1,86 @@
+{
+  "database": "mit-bestand",
+  "by_run": {
+    "swiss_reuse_bubble_2026_06_05": {
+      "rels_in_graph": 37,
+      "rels_missing_in_graph": [],
+      "rels_property_gaps": [],
+      "nodes_url_gaps": [],
+      "nodes_missing_in_graph": [],
+      "orphan_rel_gaps": []
+    },
+    "germany_reuse_bubble_2026_06_05": {
+      "rels_in_graph": 31,
+      "rels_missing_in_graph": [
+        "r_bauteilboerse_bremen__verbunden_mit_akteur__bauteilnetz_deutschland",
+        "r_circular_structural_design__verbunden_mit_akteur__bauteilboerse_hannover",
+        "r_bauteilboerse_hannover__verbunden_mit_akteur__circular_structural_design",
+        "r_haus_der_materialisierung__verbunden_mit_akteur__bauteilboerse_bremen",
+        "r_bauteilboerse_bremen__verbunden_mit_akteur__haus_der_materialisierung",
+        "r_haus_der_materialisierung__verbunden_mit_akteur__bauteilboerse_hannover",
+        "r_bauteilboerse_hannover__verbunden_mit_akteur__haus_der_materialisierung",
+        "r_haus_der_materialisierung__verbunden_mit_akteur__madaster_epea",
+        "r_madaster_epea__verbunden_mit_akteur__haus_der_materialisierung"
+      ],
+      "rels_property_gaps": [],
+      "nodes_url_gaps": [],
+      "nodes_missing_in_graph": [],
+      "orphan_rel_gaps": []
+    },
+    "france_reuse_bubble_2026_06_05": {
+      "rels_in_graph": 28,
+      "rels_missing_in_graph": [
+        "r_mobius_reemploi__verbunden_mit_akteur__cycle_up",
+        "r_cycle_up__verbunden_mit_akteur__mobius_reemploi",
+        "r_raedificare__verbunden_mit_akteur__backacia",
+        "r_backacia__verbunden_mit_akteur__raedificare",
+        "r_association_reavie__verbunden_mit_akteur__mobius_reemploi",
+        "r_mobius_reemploi__verbunden_mit_akteur__association_reavie"
+      ],
+      "rels_property_gaps": [],
+      "nodes_url_gaps": [
+        {
+          "id": "association_reavie",
+          "missing_urls": [
+            "https://www.bellastock.com/reemploi/"
+          ],
+          "expected_urls": [
+            "https://asso-reavie.fr/",
+            "https://opalis.eu/fr/fournisseurs/reavie",
+            "https://seinesaintdenis.fr/actualite/ecologie/transition-ecologique/ReaVie-lassociation-qui-donne-une-seconde-vie-aux-materiaux-du-BTP/",
+            "https://www.bellastock.com/reemploi/"
+          ],
+          "have": [
+            "https://asso-reavie.fr/",
+            "https://opalis.eu/fr/fournisseurs/reavie",
+            "https://seinesaintdenis.fr/actualite/ecologie/transition-ecologique/ReaVie-lassociation-qui-donne-une-seconde-vie-aux-materiaux-du-BTP/"
+          ]
+        }
+      ],
+      "nodes_missing_in_graph": [],
+      "orphan_rel_gaps": []
+    },
+    "netherlands_reuse_bubble_2026_06_05": {
+      "rels_in_graph": 24,
+      "rels_missing_in_graph": [],
+      "rels_property_gaps": [],
+      "nodes_url_gaps": [],
+      "nodes_missing_in_graph": [],
+      "orphan_rel_gaps": []
+    },
+    "rotor_dc_reuse_bubble_2026_06_05": {
+      "rels_in_graph": 14,
+      "rels_missing_in_graph": [],
+      "rels_property_gaps": [],
+      "nodes_url_gaps": [],
+      "nodes_missing_in_graph": [],
+      "orphan_rel_gaps": []
+    }
+  },
+  "totals": {
+    "rels_missing": 15,
+    "rels_property_gaps": 0,
+    "nodes_url_gaps": 1,
+    "orphan_rel_gaps": 0
+  }
+}

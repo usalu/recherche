@@ -1,0 +1,374 @@
+{
+  "confirmation_required": "APPLY agent06b_relabel_connection_kind.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15457
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15457
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15457
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T16:36:26.853978+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\agent06b_relabel_connection_kind.patch.jsonl",
+  "records": [
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "professor Angelika Mettke ... would eventually join the leadership here on ReCreate ... BTU Cottbus-Senftenberg",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_angelika_mettke__VERBUNDEN_MIT_AKTEUR__btu_cottbus",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "angelika_mettke",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_angelika_mettke__VERBUNDEN_MIT_AKTEUR__btu_cottbus"
+        },
+        "rel_internal_id": 1153034754304514363,
+        "to": "btu_cottbus",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "angelika_mettke",
+      "line": 1,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "btu_cottbus",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "professor Angelika Mettke ... would eventually join the leadership here on ReCreate ... BTU Cottbus-Senftenberg",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_angelika_mettke__VERBUNDEN_MIT_AKTEUR__recreate_project",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "angelika_mettke",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_angelika_mettke__VERBUNDEN_MIT_AKTEUR__recreate_project"
+        },
+        "rel_internal_id": 1157538353931884859,
+        "to": "recreate_project",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "angelika_mettke",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "recreate_project",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "professor Angelika Mettke ... would eventually join the leadership here on ReCreate ... BTU Cottbus-Senftenberg",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_btu_cottbus__VERBUNDEN_MIT_AKTEUR__angelika_mettke",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "btu_cottbus",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_btu_cottbus__VERBUNDEN_MIT_AKTEUR__angelika_mettke"
+        },
+        "rel_internal_id": 1155286554118199587,
+        "to": "angelika_mettke",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "btu_cottbus",
+      "line": 3,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "angelika_mettke",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_consolis_parma__VERBUNDEN_MIT_AKTEUR__ramboll_finland",
+        "inference_basis": "shared 3 project(s)",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "consolis_parma",
+        "properties": {
+          "id": "r_consolis_parma__VERBUNDEN_MIT_AKTEUR__ramboll_finland",
+          "inference_basis": "shared 3 project(s)"
+        },
+        "rel_internal_id": 1155286554118198232,
+        "to": "ramboll_finland",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "consolis_parma",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ramboll_finland",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_consolis_parma__VERBUNDEN_MIT_AKTEUR__umacon",
+        "inference_basis": "shared 3 project(s)",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "consolis_parma",
+        "properties": {
+          "id": "r_consolis_parma__VERBUNDEN_MIT_AKTEUR__umacon",
+          "inference_basis": "shared 3 project(s)"
+        },
+        "rel_internal_id": 1153034754304512984,
+        "to": "umacon",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "consolis_parma",
+      "line": 5,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "umacon",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "professor Angelika Mettke ... would eventually join the leadership here on ReCreate ... BTU Cottbus-Senftenberg",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_recreate_project__VERBUNDEN_MIT_AKTEUR__angelika_mettke",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "recreate_project",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_recreate_project__VERBUNDEN_MIT_AKTEUR__angelika_mettke"
+        },
+        "rel_internal_id": 1153034754304514340,
+        "to": "angelika_mettke",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "recreate_project",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "angelika_mettke",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReCreate's coordinator and the Finnish cluster's leader, Prof. Satu Huuhka from Tampere University",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_recreate_project__VERBUNDEN_MIT_AKTEUR__satu_huuhka",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "recreate_project",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_recreate_project__VERBUNDEN_MIT_AKTEUR__satu_huuhka"
+        },
+        "rel_internal_id": 1159790153745570084,
+        "to": "satu_huuhka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "recreate_project",
+      "line": 7,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "satu_huuhka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "confidence": 0.6,
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReCreate's coordinator and the Finnish cluster's leader, Prof. Satu Huuhka from Tampere University",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_satu_huuhka__VERBUNDEN_MIT_AKTEUR__recreate_project",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "satu_huuhka",
+        "properties": {
+          "confidence": 0.6,
+          "id": "r_satu_huuhka__VERBUNDEN_MIT_AKTEUR__recreate_project"
+        },
+        "rel_internal_id": 1157538353931884873,
+        "to": "recreate_project",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "satu_huuhka",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "recreate_project",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "The building was built by Skanska ... The elements ... were quality controlled and factory refurbished in Consolis Parma's factory in Kangasala",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_skanska_finland__VERBUNDEN_MIT_AKTEUR__consolis_parma",
+        "inference_basis": "shared 2 project(s)",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "skanska_finland",
+        "properties": {
+          "id": "r_skanska_finland__VERBUNDEN_MIT_AKTEUR__consolis_parma",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1153034754304512982,
+        "to": "consolis_parma",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "skanska_finland",
+      "line": 9,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "consolis_parma",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_skanska_finland__VERBUNDEN_MIT_AKTEUR__ramboll_finland",
+        "inference_basis": "shared 2 project(s)",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "skanska_finland",
+        "properties": {
+          "id": "r_skanska_finland__VERBUNDEN_MIT_AKTEUR__ramboll_finland",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1157538353931883478,
+        "to": "ramboll_finland",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "skanska_finland",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ramboll_finland",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_skanska_finland__VERBUNDEN_MIT_AKTEUR__umacon",
+        "inference_basis": "shared 2 project(s)",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "skanska_finland",
+        "properties": {
+          "id": "r_skanska_finland__VERBUNDEN_MIT_AKTEUR__umacon",
+          "inference_basis": "shared 2 project(s)"
+        },
+        "rel_internal_id": 1155286554118198230,
+        "to": "umacon",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "skanska_finland",
+      "line": 11,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "umacon",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "consortium_co_membership",
+        "evidence_basis": "recreate_consortium_co_listing",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere",
+        "evidence_url": "https://recreate-project.eu/tag/precast-concrete",
+        "id": "r_umacon__VERBUNDEN_MIT_AKTEUR__ramboll_finland",
+        "inference_basis": "shared 3 project(s)",
+        "review_run": "agent_06b_non_bubble_actor_networks_2026_06_06"
+      },
+      "before": {
+        "count": 1,
+        "from": "umacon",
+        "properties": {
+          "id": "r_umacon__VERBUNDEN_MIT_AKTEUR__ramboll_finland",
+          "inference_basis": "shared 3 project(s)"
+        },
+        "rel_internal_id": 1155286554118198233,
+        "to": "ramboll_finland",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "umacon",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "ramboll_finland",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 12,
+    "would_update_rel": 12
+  }
+}

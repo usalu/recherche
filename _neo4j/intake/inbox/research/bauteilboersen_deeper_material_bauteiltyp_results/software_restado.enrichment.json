@@ -1,0 +1,277 @@
+{
+  "anchor_id": "software_restado",
+  "sources_visited": [
+    {
+      "url": "https://restado.de/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current page lists categories Dach, Fassade, Fenster, Fliesen & Steine, Haustechnik & Sanitär, Innenausbau, Rohbau, Türen & Zargen, Werkzeuge & Maschinen."
+      ]
+    },
+    {
+      "url": "https://restado.de/ueber-restado/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://restado.de/materialreste/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Material leftovers page: thousands of building materials."
+      ]
+    },
+    {
+      "url": "https://restado.de/hilfe/impressum/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://restado.de/haendler-auf-restado-werden/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://restado.de/baustoff-verkaufen/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Sell page: new/used building materials and leftovers."
+      ]
+    },
+    {
+      "url": "https://www.wiebauin.de/marktpl%C3%A4tze/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Secondary overview describes restado as building materials from deconstruction and over-ordering."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_beton",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site mentions Recycling-Beton in Rückbau source section.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site explicitly lists Altholz, alte Balken, Holzbretter and Holzbalken.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site explicitly mentions Verblender Naturstein and Steine.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site explicitly lists alte Ziegel, Klinker and alte Ziegelsteine.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site mentions Fliesen & Steine and roof tiles/Braas Ziegel; ceramic needs category-item review.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Innenausbau, Werkzeuge and material leftovers.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_dach",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Dach and Braas roof tiles.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fassade",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Fassade and Klinker/Verblender.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Fenster and site mentions gebrauchte Fenster.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Haustechnik & Sanitär.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Categories include Türen & Zargen and site notes doors from Rückbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Old bricks, clinker and tiles map to wall/facade components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Fliesen & Steine / Holzbretter can map to floor components when used as flooring.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_b2b_online_shop",
+      "evidence_urls": [
+        "https://restado.de/"
+      ],
+      "evidence_quote": "Site calls restado a B2B online shop for circular building materials.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "restado / Concular",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://restado.de/",
+      "https://restado.de/ueber-restado/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung",
+      "reason": "No proof/QA workflow found in accessible text."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/software_restado.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_ziegel",
+        "mat_holz",
+        "mat_naturstein",
+        "mat_beton"
+      ],
+      "wahrscheinlich": [
+        "mat_keramik"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_tuer",
+        "bt_fenster",
+        "bt_wand",
+        "bt_dach",
+        "bt_fassade",
+        "bt_technik",
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_boden"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [
+      {
+        "bauteiltyp_id": "bt_tuer",
+        "material_ids": [],
+        "pair_basis": "Türen & Zargen category; material varies",
+        "evidence_urls": [
+          "https://restado.de/"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_fenster",
+        "material_ids": [],
+        "pair_basis": "Fenster category; material varies",
+        "evidence_urls": [
+          "https://restado.de/"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_boden",
+        "material_ids": [
+          "mat_keramik",
+          "mat_naturstein"
+        ],
+        "pair_basis": "Fliesen & Steine category plus product pages for fliesen/stone",
+        "evidence_urls": [
+          "https://restado.de/"
+        ],
+        "confidence": "belegt"
+      },
+      {
+        "bauteiltyp_id": "bt_dach",
+        "material_ids": [
+          "mat_keramik"
+        ],
+        "pair_basis": "Dach category and Braas/Ziegel examples",
+        "evidence_urls": [
+          "https://restado.de/"
+        ],
+        "confidence": "wahrscheinlich"
+      }
+    ],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "anchor_id": "building_spares_market",
+  "sources_visited": [
+    {
+      "url": "https://buildingsparesmarket.co.uk/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://buildingsparesmarket.co.uk/about/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "About/operator context."
+      ]
+    },
+    {
+      "url": "https://buildingsparesmarket.co.uk/sell-spare-and-second-hand-building-supplies-uk/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Sell spare and second-hand building supplies page."
+      ]
+    },
+    {
+      "url": "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "General building materials category supports bricks, concrete/blocks and lintels."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_beton",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "General building materials listings include concrete/block/lintel-type stock.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "General building materials category includes bricks / masonry-type items.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "Lintels / load-bearing building spares map to beam/lintel component type.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "Bricks/blocks category maps to wall components.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_fassade",
+      "evidence_urls": [
+        "https://buildingsparesmarket.co.uk/advert-category/general-building-materials/"
+      ],
+      "evidence_quote": "Bricks/facing masonry can map to façade components when listed as such.",
+      "confidence": "unsicher"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Building Spares Market",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://buildingsparesmarket.co.uk/",
+      "https://buildingsparesmarket.co.uk/about/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material exactness",
+      "reason": "Classified-listing categories need item-level pages for belegt confidence."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/building_spares_market.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "mat_ziegel",
+        "mat_beton"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "bt_wand",
+        "bt_traeger"
+      ],
+      "unsicher": [
+        "bt_fassade"
+      ]
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

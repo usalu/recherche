@@ -1,0 +1,240 @@
+
+================================================================================
+BASELINE: How many Bauteilbörse anchors exist?
+================================================================================
+  Anchors with HAT_GESCHAEFTSMODELL: 53
+  Actors with at_materialhub_bauteilboerse: 52
+
+================================================================================
+FLAG 1: GM vs MM logic conflicts
+================================================================================
+  0 conflicts:
+
+================================================================================
+FLAG 2: schema_check failures (every anchor)
+================================================================================
+  4 anchors failing schema_check:
+  - materialnomaden                                    ['Akteur']  issues: ev=1<2
+  - mobius_reemploi                                    ['Akteur']  issues: ev=0<2
+  - new_horizon_urban_mining                           ['Akteur']  issues: ev=0<2
+  - refair_bordeaux                                    ['Akteur']  issues: ev=1<2
+
+================================================================================
+FLAG 3: anchors with NO Material AND NO Bauteiltyp
+================================================================================
+  22 anchors with no Material AND no Bauteiltyp:
+  - {'id': 'articonnex', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'backacia', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'batrecup', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'bauteilboerse_bremen', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'cleveland_steel_tubes', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'concular', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'cycle_up', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'cycle_zero', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'insert_marketplace', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'materialenbank_leuven_atelier_circuler', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'materialnomaden', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'materialrest24', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'mobius_reemploi', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'new_horizon_urban_mining', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'r_place', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'refair_bordeaux', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'salvo_ltd', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'salvoweb', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'salza', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'skop_marketplace', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'surplus_building_and_plumbing_materials', 'n_mat': 0, 'n_bt': 0}
+  - {'id': 'sustainability_yard', 'n_mat': 0, 'n_bt': 0}
+
+================================================================================
+FLAG 4: imbalanced coverage
+================================================================================
+  3 anchors with imbalanced coverage:
+  - {'id': 'gruner_reuse_platform', 'n_mat': 0, 'n_bt': 8}
+  - {'id': 'baticycle', 'n_mat': 0, 'n_bt': 6}
+  - {'id': 'material_index', 'n_mat': 0, 'n_bt': 5}
+
+================================================================================
+FLAG 5: at_materialhub_bauteilboerse actors WITHOUT HAT_GESCHAEFTSMODELL (un-classified)
+================================================================================
+  1 actors:
+  - materiuum                                          lbls=['Akteur']
+
+================================================================================
+FLAG 6: anchors with HAT_GESCHAEFTSMODELL but NOT at_materialhub_bauteilboerse
+================================================================================
+  2 (expected: software_restado + bauteilnetz_deutschland):
+  - bauteilnetz_deutschland                            lbls=['Akteur']
+  - software_restado                                   lbls=['Software']
+
+================================================================================
+FLAG 7: Marktmodell distribution among anchors
+================================================================================
+  {'m.id': 'mm_kauf_gebraucht', 'n': 26}
+  {'m.id': 'mm_plattform_vermittelt', 'n': 25}
+  {'m.id': 'mm_spende', 'n': 2}
+
+================================================================================
+FLAG 8: Geschäftsmodell distribution
+================================================================================
+  {'g.id': 'gm_marketplace_vermittlung', 'n': 25}
+  {'g.id': 'gm_dienstleistung_urban_mining', 'n': 24}
+  {'g.id': 'gm_shop_eigenstock', 'n': 23}
+  {'g.id': 'gm_netzwerk_aggregator', 'n': 3}
+  {'g.id': 'gm_saas_inventar_plattform', 'n': 1}
+
+================================================================================
+FLAG 9: Country distribution
+================================================================================
+  {'l.id': 'land_schweiz', 'n': 18}
+  {'l.id': 'land_frankreich', 'n': 11}
+  {'l.id': 'land_vereinigtes_koenigreich', 'n': 8}
+  {'l.id': 'land_deutschland', 'n': 5}
+  {'l.id': 'land_belgien', 'n': 4}
+  {'l.id': 'land_niederlande', 'n': 3}
+  {'l.id': 'land_oesterreich', 'n': 3}
+  {'l.id': 'land_daenemark', 'n': 1}
+
+================================================================================
+FLAG 10: Akteurrolle universal-coverage check
+================================================================================
+  ar_materialbroker: present on all anchors
+  ar_materiallieferung_markt: present on all anchors
+  ar_software_digitalisierung: missing on 1 anchors
+     - bauteilnetz_deutschland
+
+================================================================================
+FLAG 11: BELEGT_IN under-coverage (anchors with <2 evidence URLs)
+================================================================================
+  2 anchors:
+  - {'id': 'new_horizon_urban_mining', 'n': 0}
+  - {'id': 'mobius_reemploi', 'n': 1}
+
+================================================================================
+FLAG 12: Operator chain (BETRIEBEN_VON)
+================================================================================
+  {'actor': 're_store_harvestmap_vienna', 'operator': 'materialnomaden'}
+  {'actor': 're_store_harvestmap_vienna', 'operator': 'materialnomaden'}
+  {'actor': 'salvoweb', 'operator': 'salvo_ltd'}
+  {'actor': 'salvoweb', 'operator': 'salvo_ltd'}
+  {'actor': 'software_restado', 'operator': 'concular'}
+
+================================================================================
+FLAG 13: VERBUNDEN_MIT_AKTEUR among anchors
+================================================================================
+  {'a': 'bauteilboerse_bremen', 'b': 'bauteilnetz_deutschland'}
+  {'a': 'bauteilboerse_bremen', 'b': 'bauteilnetz_deutschland'}
+
+================================================================================
+FLAG 14: Methode leakage (urban-mining methods on non-urban-mining anchors)
+================================================================================
+
+================================================================================
+FLAG 15: Akteurtyp inventory of anchors (look for unexpected types)
+================================================================================
+  {'id': 'concular', 'types': ['at_unternehmen', 'at_materialhub_bauteilboerse', 'at_software_tool_anbieter']}
+
+================================================================================
+FLAG 16: Material distribution per anchor (top of histogram)
+================================================================================
+  {'m.id': 'mat_holz', 'n': 15}
+  {'m.id': 'mat_keramik', 'n': 10}
+  {'m.id': 'mat_stahl', 'n': 6}
+  {'m.id': 'mat_ziegel', 'n': 6}
+  {'m.id': 'mat_daemmstoff', 'n': 5}
+  {'m.id': 'mat_glas', 'n': 5}
+  {'m.id': 'mat_beton', 'n': 5}
+  {'m.id': 'mat_aluminium', 'n': 3}
+  {'m.id': 'mat_kunststoff', 'n': 3}
+  {'m.id': 'mat_naturstein', 'n': 2}
+  {'m.id': 'mat_lehm', 'n': 1}
+  {'m.id': 'mat_gusseisen', 'n': 1}
+
+================================================================================
+FLAG 17: Bauteiltyp distribution per anchor
+================================================================================
+  {'b.id': 'bt_technik', 'n': 23}
+  {'b.id': 'bt_fenster', 'n': 22}
+  {'b.id': 'bt_boden', 'n': 20}
+  {'b.id': 'bt_tuer', 'n': 20}
+  {'b.id': 'bt_wand', 'n': 13}
+  {'b.id': 'bt_dach', 'n': 10}
+  {'b.id': 'bt_ausbau', 'n': 9}
+  {'b.id': 'bt_traeger', 'n': 8}
+  {'b.id': 'bt_daemmung', 'n': 7}
+  {'b.id': 'bt_decke', 'n': 6}
+  {'b.id': 'bt_treppe', 'n': 5}
+  {'b.id': 'bt_gelaender', 'n': 3}
+  {'b.id': 'bt_fassade', 'n': 2}
+
+================================================================================
+FLAG 18: Materials untouched by any Bauteilbörse
+================================================================================
+  mat_bitumen
+  mat_drahtglas
+  mat_faserzement
+  mat_holz_clt
+  mat_kupfer
+  mat_mdf
+  mat_mehrere
+  mat_messing
+  mat_pcm_phasenwechsel
+  mat_recyclingbeton
+  mat_spannbeton
+  mat_stahlbeton
+  mat_stroh
+  mat_textil
+
+================================================================================
+FLAG 19: Bauteiltypen untouched by any Bauteilbörse
+================================================================================
+  bt_fassadenelement
+  bt_fassadenelement_beton
+  bt_fassadenmodul_mauerwerk
+  bt_fundament
+  bt_glasscheibe
+  bt_hohlkoerperdecke
+  bt_mauerstein
+  bt_mehrere
+  bt_stuetze
+  bt_verglasung
+
+================================================================================
+FLAG 20: Property-level checks on Akteur nodes
+================================================================================
+  {'id': 'archipel_sion_ressourcerie', 'name': 'Archipel Sion Ressourcerie', 'scope': None}
+  {'id': 'articonnex', 'name': 'Articonnex', 'scope': None}
+  {'id': 'backacia', 'name': 'Backacia', 'scope': None}
+  {'id': 'backacia', 'name': 'Backacia', 'scope': None}
+  {'id': 'baticycle', 'name': 'Bâticycle', 'scope': None}
+  {'id': 'baticycle', 'name': 'Bâticycle', 'scope': None}
+  {'id': 'batiterre', 'name': 'BatiTerre', 'scope': None}
+  {'id': 'batiterre', 'name': 'BatiTerre', 'scope': None}
+  {'id': 'batrecup', 'name': 'BatRecup', 'scope': None}
+  {'id': 'baukarussell', 'name': 'BauKarussell', 'scope': None}
+  {'id': 'baumatpool_ch', 'name': 'Baumatpool.ch', 'scope': None}
+  {'id': 'bauteilboerse_basel_overall', 'name': 'Bauteilbörse Basel', 'scope': None}
+  {'id': 'bauteilboerse_bremen', 'name': 'Bauteilbörse Bremen', 'scope': None}
+  {'id': 'bauteilboerse_bremen', 'name': 'Bauteilbörse Bremen', 'scope': None}
+  {'id': 'bauteilladen_winterthur', 'name': 'Bauteilladen Winterthur', 'scope': None}
+  {'id': 'bauteilnetz_deutschland', 'name': 'bauteilnetz Deutschland', 'scope': None}
+  {'id': 'bauteilverwertung_koeppel_klein', 'name': 'Bauteilverwertung Köppel & Klein', 'scope': None}
+  {'id': 'bauteilverwertung_koeppel_klein', 'name': 'Bauteilverwertung Köppel & Klein', 'scope': None}
+  {'id': 'btvz_zuerichsee_oberland', 'name': 'Bauteilvermittlung Zürichsee-Oberland', 'scope': None}
+  {'id': 'building_spares_market', 'name': 'Building Spares Market', 'scope': None}
+  {'id': 'cornermat_retrival', 'name': 'Cornermat / Retrival', 'scope': None}
+  {'id': 'cornermat_retrival', 'name': 'Cornermat / Retrival', 'scope': None}
+  {'id': 'cycle_up', 'name': 'Cycle Up', 'scope': None}
+  {'id': 'cycle_up', 'name': 'Cycle Up', 'scope': None}
+  {'id': 'cycle_zero', 'name': 'Cycle Zéro', 'scope': None}
+  {'id': 'enviromate', 'name': 'Enviromate', 'scope': None}
+  {'id': 'gebruiktebouwmaterialen', 'name': 'Gebruiktebouwmaterialen', 'scope': None}
+  {'id': 'genbyg', 'name': 'Genbyg', 'scope': None}
+  {'id': 'ggzatwork_laden2_bauteile_zug', 'name': 'GGZ@WORK Laden 2 Bauteile Zug', 'scope': None}
+  {'id': 'ggzatwork_laden2_bauteile_zug', 'name': 'GGZ@WORK Laden 2 Bauteile Zug', 'scope': None}
+  {'id': 'gruner_reuse_platform', 'name': 'Gruner ReUse', 'scope': None}
+  {'id': 'hiltbrunner_reuse_riedtwil_wiederverwendung', 'name': 'ReUse Recycling Center Riedtwil / wiederverwendung.ch', 'scope': None}
+  {'id': 'insert_marketplace', 'name': 'Insert Marketplace', 'scope': None}
+  {'id': 'la_ressourcerie_fribourg', 'name': 'La Ressourcerie Fribourg', 'scope': None}
+  {'id': 'material_index', 'name': 'Material Index', 'scope': None}
+  {'id': 'material_index', 

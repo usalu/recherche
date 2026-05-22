@@ -1,0 +1,221 @@
+{
+  "anchor_id": "material_index",
+  "sources_visited": [
+    {
+      "url": "https://material-index.co.uk/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Current business source."
+      ]
+    },
+    {
+      "url": "https://material-index.exchange/edits",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.material-index.co.uk/materials/material-specification",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Material specification/source for audit/specification data requirements."
+      ]
+    },
+    {
+      "url": "https://asbp.org.uk/member/material-index",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "ASBP member page for Material Index role."
+      ]
+    },
+    {
+      "url": "https://material-index.exchange/terms-and-conditions",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Terms source for refund/return/checking context."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Recent requests include timber beams.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Recent requests include Bare Steel Encapsulated Panel.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace categories include Bricks & Stone; recent requests mention heritage bricks and brick pavers.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace category Bricks & Stone supports stone material; item-level pages needed for exact stone type.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Furniture & Interiors, Kitchens & Catering, lighting and miscellaneous architectural categories map to Ausbau.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace categories include Flooring & Carpet and Raised Access Flooring.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Categories include Lighting and MEP.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_traeger",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Recent requests include timber beams.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Marketplace category list includes Doors & Partitions.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Doors & Partitions / acoustic panels / bricks map to wall and partition components.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Site lists pre-demolition audits for planning, BREEAM and GLA compliance.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "audit",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Site references material passports/site assessments in audit contact copy.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "material_pass",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [
+    {
+      "target_id": null,
+      "lookup_keyword": "refurb",
+      "intended_label": "Aufbereitungsverfahren",
+      "requires_cypher_lookup": true,
+      "evidence_urls": [
+        "https://material-index.co.uk/"
+      ],
+      "evidence_quote": "Homepage highlights recertified products and reclaimed material sourcing; exact process ID needs lookup.",
+      "confidence": "wahrscheinlich",
+      "note": "Resolve Aufbereitungsverfahren node ID before import."
+    }
+  ],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Material Index",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://material-index.co.uk/",
+      "https://material-index.exchange/edits"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung/Aufbereitung IDs",
+      "reason": "Need graph lookup before loading audit/passport/refurb links."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/material_index.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_ziegel",
+        "mat_holz",
+        "mat_stahl"
+      ],
+      "wahrscheinlich": [
+        "mat_naturstein"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_tuer",
+        "bt_wand",
+        "bt_ausbau",
+        "bt_boden",
+        "bt_technik",
+        "bt_traeger"
+      ],
+      "wahrscheinlich": [],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

@@ -1,0 +1,458 @@
+{
+  "confirmation_required": "APPLY unsupported_edges_removal.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15470
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15470
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15486
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T14:45:10.193019+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_cross_bubble_extension\\patches\\unsupported_edges_removal.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "european_reuse_infrastructure_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "european_reuse_platform_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "ReUse RLP lists cirkla.ch Swiss reuse umbrella alongside European platform directories",
+          "evidence_url": "https://reuse-rlp.de/fachinformationen",
+          "id": "r_cirkla__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6935656675848230031,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "european_reuse_infrastructure_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "european_reuse_platform_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Opalis facilitates reuse across NWE; restado is German marketplace peer on ECESP | ReUse RLP lists opalis.eu dealer directory alongside national reuse platforms",
+          "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/opalis",
+          "id": "r_opalis__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6928901276407174287,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 2,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "european_marketplace_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "european_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Insert NL marketplace; restado DE marketplace — European reuse exchange peers | German reclaimed-materials marketplace; peer layer to NL Insert marketplace via Madaster partnership mesh",
+          "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__software_restado",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6933404876034544783,
+        "to": "software_restado",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "software_restado",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "connection_kind": "european_marketplace_peer",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "european_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Swiss useagain and German restado as European reclaimed-materials marketplaces | national reuse marketplaces; useagain.ch CH and restado.de DE listed as peer platforms",
+          "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+          "id": "r_software_restado__verbunden_mit_akteur__useagain_bauteilclick",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1177804552255050895,
+        "to": "useagain_bauteilclick",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "software_restado",
+      "line": 4,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "useagain_bauteilclick",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "city_of_utrecht",
+        "properties": {
+          "connection_kind": "municipal_reuse_pilot_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Utrecht Trechterweide reuse centre PREUSE pilot; NL material passport and municipal reuse layer | Utrecht PREUSE pilot expanding municipal reuse; Madaster NL passport infrastructure peer layer",
+          "evidence_url": "https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979",
+          "id": "r_city_of_utrecht__verbunden_mit_akteur__madaster",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193892,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "city_of_utrecht",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "city_of_utrecht",
+        "properties": {
+          "connection_kind": "dutch_reuse_policy_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_reuse_practice_cluster",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch urban mining and municipal reuse pilots | national circular construction and urban mining practice layer",
+          "evidence_url": "https://newhorizon.nl/",
+          "id": "r_city_of_utrecht__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879140,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "city_of_utrecht",
+      "line": 6,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_marketplace_supply_chain",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "urban mining supply meets national circular marketplace | peer Dutch marketplace and urban-mining supply layers",
+          "evidence_url": "https://newhorizon.nl/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304547433,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 7,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch marketplace actors for reclaimed materials | peer national circular construction marketplaces",
+          "evidence_url": "https://www.madopt.nl/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__repurpose",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164293753372973673,
+        "to": "repurpose",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 8,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "repurpose",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_design_marketplace_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch design and marketplace actors | harvest method and national marketplace for reclaimed materials",
+          "evidence_url": "https://www.insert.nl/producten/insert-marktplaats/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__superuse_studios_2012architecten",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118232681,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 9,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_urban_mining_passport_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "shared Dutch circular construction material visibility stack | urban mining supply chain and material passport data infrastructure",
+          "evidence_url": "https://www.circonl.nl/case/urban-mining-new-horizon/",
+          "id": "r_madaster__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 81,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 10,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_market_data_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "demand-driven marketplace and passport documentation layer | marketplace matching and material passport data infrastructure",
+          "evidence_url": "https://www.madopt.nl/",
+          "id": "r_madaster__verbunden_mit_akteur__repurpose",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6931153076220855050,
+        "to": "repurpose",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 11,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "repurpose",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_design_passport_ecosystem",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "harvest-map design culture and material passport infrastructure | Madaster started 2017 Netherlands; design-to-passport reuse loop",
+          "evidence_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "id": "r_madaster__verbunden_mit_akteur__superuse_studios_2012architecten",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6926649476593489677,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 12,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch reuse supply and demand platforms | demand-driven and supply-driven Dutch reuse marketplace layers",
+          "evidence_url": "https://repurpose.nl/",
+          "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__repurpose",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6919894077152428810,
+        "to": "repurpose",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 13,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "repurpose",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "repurpose",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dutch_reuse_practice_mesh",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "shared Dutch harvest and marketplace reuse infrastructure | peer Dutch reuse consultancy and marketplace actors",
+          "evidence_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "id": "r_repurpose__verbunden_mit_akteur__superuse_studios_2012architecten",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745564426,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "repurpose",
+      "line": 14,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "ecosystem_peer_resource_passport",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "dgnb_parallel_passport_providers",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "ecosystem peer passport tools; not formal joint venture",
+          "evidence_url": "https://madaster.de/",
+          "id": "r_concular__verbunden_mit_akteur__madaster",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 66,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 15,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "resource_passport_ecosystem",
+          "dedup_run": "cross_bubble_dedup_2026_06_06",
+          "evidence_basis": "building_resource_passport_cases",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "building-resource passports and circularity documentation",
+          "evidence_url": "https://madaster.de/",
+          "id": "r_concular__verbunden_mit_akteur__madaster_epea",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338748311,
+        "to": "madaster_epea",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 16,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster_epea",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 16,
+    "would_delete_rel": 16
+  }
+}

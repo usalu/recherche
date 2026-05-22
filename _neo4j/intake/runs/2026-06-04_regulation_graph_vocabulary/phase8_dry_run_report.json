@@ -1,0 +1,57 @@
+{
+  "before": {
+    "graph": {
+      "labels": 40,
+      "nodes": 2182,
+      "relationships": 14810,
+      "reltypes": 73
+    },
+    "reltypes": {
+      "ANGEWENDET_AUF": 13,
+      "APPLIES_IN": 20,
+      "APPLIES_TO": 20,
+      "AUS_SPENDER": 0,
+      "BUILT_IN_ERA": 8,
+      "ERFORDERT_SCHADSTOFFPRUEFUNG": 0,
+      "FROM_DONOR": 245,
+      "GEBAUT_IN_ERA": 0,
+      "HAS_BAUWERK": 166,
+      "HAS_RISK_POLLUTANT": 100,
+      "HAT_BAUWERK": 0,
+      "HAT_DEFEKT": 32,
+      "HAT_DEFEKT_BEFUND": 25,
+      "HAT_METHODE": 231,
+      "HAT_SCHADSTOFFRISIKO": 0,
+      "INTO_RECEIVER": 278,
+      "IN_EMPFANGSOBJEKT": 0,
+      "NUTZT_BAUWERK": 27,
+      "RELEVANT_FOR": 100,
+      "REQUIRES_VERIFICATION_FOR": 37
+    }
+  },
+  "commit": false,
+  "created_at_utc": "2026-06-05T14:10:03.333007+00:00",
+  "database": "mit-bestand",
+  "phase": "phase8_reltype_dedup_normalize",
+  "planned": {
+    "ANGEWENDET_AUF_to_HAT_METHODE": 13,
+    "applicability_edges_to_properties": {
+      "APPLIES_IN": 20,
+      "APPLIES_TO": 20,
+      "RELEVANT_FOR": 100
+    },
+    "reuse_rule_property_values": 440,
+    "reuse_rules_to_update": 20,
+    "same_direction_renames": {
+      "BUILT_IN_ERA_to_GEBAUT_IN_ERA": 8,
+      "FROM_DONOR_to_AUS_SPENDER": 245,
+      "HAS_BAUWERK_to_HAT_BAUWERK": 166,
+      "HAS_RISK_POLLUTANT_to_HAT_SCHADSTOFFRISIKO": 100,
+      "HAT_DEFEKT_BEFUND_to_HAT_DEFEKT": 25,
+      "INTO_RECEIVER_to_IN_EMPFANGSOBJEKT": 278,
+      "NUTZT_BAUWERK_to_HAT_BAUWERK": 27,
+      "REQUIRES_VERIFICATION_FOR_to_ERFORDERT_SCHADSTOFFPRUEFUNG": 37
+    },
+    "target_reltype_count_before": 73
+  }
+}

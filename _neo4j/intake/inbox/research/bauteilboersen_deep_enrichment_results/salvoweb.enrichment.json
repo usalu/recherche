@@ -1,0 +1,107 @@
+{
+  "anchor_id": "salvoweb",
+  "sources_visited": [
+    {
+      "url": "https://www.salvoweb.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.salvoweb.com/antique-reclaimed",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.thehousedirectory.com/salvo-truly-reclaimed-sustainability/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_ziegel",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Homepage category explicitly includes Reclaimed Bricks.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_naturstein",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Homepage lists Architectural Stone and limestone flooring listings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.salvoweb.com/antique-reclaimed"
+      ],
+      "evidence_quote": "Antique & Reclaimed page covers reclaimed building materials; wood material not explicit in captured lines.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Homepage categories include Flooring and limestone flooring listings.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Reclaimed bricks / architectural stone map to wall/facade components when used as such.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Categories include lighting, fireplaces, furniture/mirrors and fine architectural antiques.",
+      "confidence": "belegt"
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_METHODE",
+      "target_id": "methode_architectural_salvage",
+      "evidence_urls": [
+        "https://www.salvoweb.com/"
+      ],
+      "evidence_quote": "Site calls itself an architectural salvage marketplace / directory.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "SalvoWEB",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.salvoweb.com/",
+      "https://www.salvoweb.com/antique-reclaimed"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Operator chain",
+      "reason": "BETRIEBEN_VON salvo_ltd should be retained only if existing node is verified."
+    },
+    {
+      "topic": "Material_holz",
+      "reason": "Needs direct wood/timber category or item page."
+    }
+  ],
+  "run_notes": []
+}

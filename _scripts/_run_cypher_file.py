@@ -30,6 +30,25 @@ def split_statements(text: str) -> list[str]:
     return [p for p in parts if p]
 
 
+def format_counters(counters) -> str:
+    parts: list[str] = []
+    if counters.nodes_created:
+        parts.append(f'nodes_created={counters.nodes_created}')
+    if counters.nodes_deleted:
+        parts.append(f'nodes_deleted={counters.nodes_deleted}')
+    if counters.relationships_created:
+        parts.append(f'rels_created={counters.relationships_created}')
+    if counters.relationships_deleted:
+        parts.append(f'rels_deleted={counters.relationships_deleted}')
+    if counters.properties_set:
+        parts.append(f'properties_set={counters.properties_set}')
+    if counters.labels_added:
+        parts.append(f'labels_added={counters.labels_added}')
+    if counters.labels_removed:
+        parts.append(f'labels_removed={counters.labels_removed}')
+    return '  '.join(parts) if parts else 'no_changes'
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument('--cypher', required=True, type=Path)
@@ -52,8 +71,7 @@ def main() -> int:
                     result = session.run(stmt)
                     summary = result.consume()
                     counters = summary.counters
-                    created_rels = counters.relationships_created
-                    print(f'  [{i}/{len(statements)}] OK  rels_created={created_rels}')
+                    print(f'  [{i}/{len(statements)}] OK  {format_counters(counters)}')
                     ok += 1
                 except Exception as exc:
                     err += 1

@@ -1,0 +1,113 @@
+{
+  "run": "2026-06-05_netherlands_reuse_bubble",
+  "commit": true,
+  "database": "mit-bestand",
+  "generated_at_utc": "2026-06-05T23:02:02.064807+00:00",
+  "phases": [
+    {
+      "phase": "phase0_sources_and_dossier.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 19,
+        "load_errors": 0,
+        "would_create": 19
+      },
+      "counts_after_actual": {
+        "nodes": 2431,
+        "relationships": 15583
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\apply_reports\\phase0_sources_and_dossier.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase1_dutch_urban_mining_spine.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 29,
+        "load_errors": 0,
+        "would_create_rel": 29
+      },
+      "counts_after_actual": {
+        "nodes": 2431,
+        "relationships": 15612
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\apply_reports\\phase1_dutch_urban_mining_spine.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\apply_reports\\phase1_dutch_urban_mining_spine.patch.apply_report.md"
+      ]
+    },
+    {
+      "phase": "phase2_repurpose_demand_layer.patch.jsonl",
+      "dry_run": false,
+      "summary": {
+        "records": 11,
+        "load_errors": 0,
+        "would_create": 1,
+        "would_create_rel": 10
+      },
+      "counts_after_actual": {
+        "nodes": 2432,
+        "relationships": 15622
+      },
+      "report_files": [
+        "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\apply_reports\\phase2_repurpose_demand_layer.patch.apply_report.json",
+        "_neo4j\\intake\\runs\\2026-06-05_netherlands_reuse_bubble\\apply_reports\\phase2_repurpose_demand_layer.patch.apply_report.md"
+      ]
+    }
+  ],
+  "counts_before": {
+    "nodes": 2412,
+    "relationships": 15583
+  },
+  "connectivity_before": {
+    "T0_superuse_spine": [],
+    "T1_new_horizon_spine": [],
+    "T2_madaster_dutch_mesh": [],
+    "T3_insert_spine": [],
+    "T4_superuse_new_horizon": 0,
+    "T5_repurpose_spine": [],
+    "T6_bubble_edges": 0
+  },
+  "counts_after": {
+    "nodes": 2432,
+    "relationships": 15622
+  },
+  "connectivity_after": {
+    "T0_superuse_spine": [
+      "new_horizon_urban_mining",
+      "repurpose",
+      "madaster",
+      "insert_marketplace"
+    ],
+    "T1_new_horizon_spine": [
+      "city_of_utrecht",
+      "repurpose",
+      "superuse_studios_2012architecten",
+      "madaster",
+      "insert_marketplace"
+    ],
+    "T2_madaster_dutch_mesh": [
+      "new_horizon_urban_mining",
+      "city_of_utrecht",
+      "repurpose",
+      "superuse_studios_2012architecten",
+      "insert_marketplace"
+    ],
+    "T3_insert_spine": [
+      "new_horizon_urban_mining",
+      "repurpose",
+      "superuse_studios_2012architecten",
+      "madaster"
+    ],
+    "T4_superuse_new_horizon": 2,
+    "T5_repurpose_spine": [
+      "new_horizon_urban_mining",
+      "superuse_studios_2012architecten",
+      "madaster",
+      "insert_marketplace"
+    ],
+    "T6_bubble_edges": 39
+  }
+}

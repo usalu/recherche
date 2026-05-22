@@ -1,0 +1,155 @@
+{
+  "acceptance": {
+    "HAT_BESCHAFFUNGSWEG": 592,
+    "HAT_NUTZUNG": 235,
+    "HAT_STATUS": 0,
+    "Software": 18,
+    "Status": 0,
+    "duplicate_HAT_BESCHAFFUNGSWEG": 0,
+    "nodes_with_status_property": 566,
+    "removed_labels": {
+      "Bauobjektklasse": 0,
+      "Bauteilebene": 0,
+      "Funktionswechsel": 0,
+      "Layer": 0,
+      "Marktmodell": 0,
+      "Status": 0,
+      "Tool": 0,
+      "Tragwerksprinzip": 0,
+      "Wiederverwendungsort": 0
+    },
+    "removed_reltypes": {
+      "HAT_BAUOBJEKTKLASSE": 0,
+      "HAT_BAUTEILEBENE": 0,
+      "HAT_FUNKTIONSWECHSEL": 0,
+      "HAT_MARKTMODELL": 0,
+      "HAT_STATUS": 0,
+      "HAT_TRAGWERKSPRINZIP": 0,
+      "HAT_WIEDERVERWENDUNGSORT": 0,
+      "TEILT_LAYER": 0
+    }
+  },
+  "after": {
+    "labels": {
+      "Bauobjektklasse": 0,
+      "Bauteilebene": 0,
+      "Bauweise": 6,
+      "Beschaffungsweg": 10,
+      "Funktionswechsel": 0,
+      "Layer": 0,
+      "Marktmodell": 0,
+      "Nutzung": 9,
+      "Software": 18,
+      "Status": 0,
+      "Tool": 0,
+      "Tragwerksprinzip": 0,
+      "Wiederverwendungsort": 0
+    },
+    "nodes": 2182,
+    "relationships": 14810,
+    "reltypes": {
+      "HAT_BAUOBJEKTKLASSE": 0,
+      "HAT_BAUTEILEBENE": 0,
+      "HAT_BAUWEISE": 124,
+      "HAT_BESCHAFFUNGSWEG": 592,
+      "HAT_FUNKTIONSWECHSEL": 0,
+      "HAT_MARKTMODELL": 0,
+      "HAT_NUTZUNG": 235,
+      "HAT_STATUS": 0,
+      "HAT_TRAGWERKSPRINZIP": 0,
+      "HAT_WIEDERVERWENDUNGSORT": 0,
+      "TEILT_LAYER": 0
+    }
+  },
+  "applied": {
+    "bauobjektklasse_to_nutzung": {
+      "HAT_NUTZUNG_from_bauobjektklasse_written": 35
+    },
+    "deleted": {
+      "Bauobjektklasse_deleted": 8,
+      "Bauteilebene_deleted": 6,
+      "Funktionswechsel_deleted": 6,
+      "HAT_BAUOBJEKTKLASSE_deleted": 224,
+      "HAT_BAUTEILEBENE_deleted": 289,
+      "HAT_FUNKTIONSWECHSEL_deleted": 251,
+      "HAT_MARKTMODELL_deleted": 0,
+      "HAT_STATUS_deleted": 584,
+      "HAT_TRAGWERKSPRINZIP_deleted": 68,
+      "HAT_WIEDERVERWENDUNGSORT_deleted": 258,
+      "Layer_deleted": 6,
+      "Marktmodell_deleted": 11,
+      "Status_deleted": 9,
+      "TEILT_LAYER_deleted": 15,
+      "Tool_label_removed": 7,
+      "Tragwerksprinzip_deleted": 4,
+      "Wiederverwendungsort_deleted": 6
+    },
+    "marktmodell_rewire": {
+      "HAT_MARKTMODELL_deleted": 370,
+      "rewired_edges": 370,
+      "unknown_only_edges_deleted": 0
+    },
+    "property_demotions": {
+      "nodes_updated": 680,
+      "values_written_after_dedup": 2059
+    }
+  },
+  "before": {
+    "labels": {
+      "Bauobjektklasse": 8,
+      "Bauteilebene": 6,
+      "Bauweise": 6,
+      "Beschaffungsweg": 10,
+      "Funktionswechsel": 6,
+      "Layer": 6,
+      "Marktmodell": 11,
+      "Nutzung": 9,
+      "Software": 18,
+      "Status": 9,
+      "Tool": 7,
+      "Tragwerksprinzip": 4,
+      "Wiederverwendungsort": 6
+    },
+    "nodes": 2238,
+    "relationships": 16505,
+    "reltypes": {
+      "HAT_BAUOBJEKTKLASSE": 224,
+      "HAT_BAUTEILEBENE": 289,
+      "HAT_BAUWEISE": 124,
+      "HAT_BESCHAFFUNGSWEG": 249,
+      "HAT_FUNKTIONSWECHSEL": 251,
+      "HAT_MARKTMODELL": 370,
+      "HAT_NUTZUNG": 214,
+      "HAT_STATUS": 584,
+      "HAT_TRAGWERKSPRINZIP": 68,
+      "HAT_WIEDERVERWENDUNGSORT": 258,
+      "TEILT_LAYER": 15
+    }
+  },
+  "commit": true,
+  "created_at_utc": "2026-06-05T14:06:01.647785+00:00",
+  "database": "mit-bestand",
+  "phase": "phase7_axis_consolidation",
+  "planned": {
+    "bauobjektklasse_to_nutzung_edges": 35,
+    "demotion_stats": {
+      "HAT_BAUOBJEKTKLASSE_values": 224,
+      "HAT_BAUTEILEBENE_values": 289,
+      "HAT_FUNKTIONSWECHSEL_values": 251,
+      "HAT_STATUS_values": 584,
+      "HAT_TRAGWERKSPRINZIP_values": 68,
+      "HAT_WIEDERVERWENDUNGSORT_values": 258,
+      "TEILT_LAYER_values": 15,
+      "legacy_marktmodell_values": 370
+    },
+    "marktmodell_edges": 370,
+    "marktmodell_edges_rewirable": 370,
+    "marktmodell_unknown_only": 0,
+    "property_nodes_to_update": 680,
+    "property_values_to_demote": 2059
+  },
+  "snapshot": {
+    "nodes": 63,
+    "relationships": 4200
+  }
+}

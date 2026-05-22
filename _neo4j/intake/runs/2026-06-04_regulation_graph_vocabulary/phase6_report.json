@@ -1,0 +1,126 @@
+{
+  "acceptance": {
+    "HAT_HUERDE_without_source_or_basis": 0,
+    "Huerde": 11,
+    "Huerde_without_category": 0,
+    "TEIL_VON_KETTE": 0,
+    "Wiederverwendungskette": 0,
+    "direct_reuse_chain_edges": 28,
+    "inferiert_HAT_HUERDE": 0,
+    "removed_labels": {
+      "Akzeptanz": 0,
+      "HuerdeKategorie": 0,
+      "MatchingQualitaet": 0,
+      "OntologyAnchor": 0,
+      "Wirtschaft": 0
+    },
+    "removed_reltypes": {
+      "HAT_MATCHINGQUALITAET": 0,
+      "HAT_WIRTSCHAFT": 0,
+      "HAT_WIRTSCHAFTSASPEKT": 0,
+      "STUB_PROJECT_LINK": 0
+    }
+  },
+  "after": {
+    "labels": {
+      "Akzeptanz": 0,
+      "Huerde": 11,
+      "HuerdeKategorie": 0,
+      "MatchingQualitaet": 0,
+      "OntologyAnchor": 0,
+      "Wiederverwendungskette": 0,
+      "Wirtschaft": 0
+    },
+    "nodes": 2238,
+    "relationships": 16505,
+    "reltypes": {
+      "FROM_DONOR": 245,
+      "HAT_HUERDE": 237,
+      "HAT_HUERDEKATEGORIE": 0,
+      "HAT_MATCHINGQUALITAET": 0,
+      "HAT_WIRTSCHAFT": 0,
+      "HAT_WIRTSCHAFTSASPEKT": 0,
+      "INTO_RECEIVER": 278,
+      "STUB_PROJECT_LINK": 0,
+      "TEIL_VON_KETTE": 0
+    }
+  },
+  "applied": {
+    "huerde": {
+      "kept_huerde_edges_evidenced": 237,
+      "regulatory_huerde_edges_deleted": 693,
+      "regulatory_huerde_nodes_deleted": 17
+    },
+    "property_demotions": {
+      "nodes_updated": 149,
+      "values_written_after_dedup": 372
+    },
+    "reuse_chain_delete": {
+      "TEIL_VON_KETTE_deleted": 14,
+      "Wiederverwendungskette_deleted": 14
+    },
+    "reuse_chain_direct_edges_written": 28,
+    "tier_f_delete": {
+      "Akzeptanz_deleted": 7,
+      "GEHÖRT_ZU_deleted": 55,
+      "HAT_HUERDEKATEGORIE_deleted": 146,
+      "HAT_MATCHINGQUALITAET_deleted": 182,
+      "HAT_WIRTSCHAFTSASPEKT_deleted": 11,
+      "HAT_WIRTSCHAFT_deleted": 41,
+      "HuerdeKategorie_deleted": 10,
+      "MatchingQualitaet_deleted": 9,
+      "STUB_PROJECT_LINK_deleted": 165,
+      "Wirtschaft_deleted": 12
+    }
+  },
+  "before": {
+    "labels": {
+      "Akzeptanz": 7,
+      "Huerde": 28,
+      "HuerdeKategorie": 10,
+      "MatchingQualitaet": 9,
+      "OntologyAnchor": 0,
+      "Wiederverwendungskette": 14,
+      "Wirtschaft": 12
+    },
+    "nodes": 2307,
+    "relationships": 17839,
+    "reltypes": {
+      "FROM_DONOR": 245,
+      "GEHÖRT_ZU": 55,
+      "HAT_HUERDE": 930,
+      "HAT_HUERDEKATEGORIE": 167,
+      "HAT_MATCHINGQUALITAET": 182,
+      "HAT_WIRTSCHAFT": 41,
+      "HAT_WIRTSCHAFTSASPEKT": 11,
+      "INTO_RECEIVER": 278,
+      "STUB_PROJECT_LINK": 165,
+      "TEIL_VON_KETTE": 14
+    }
+  },
+  "commit": true,
+  "created_at_utc": "2026-06-05T13:56:46.379157+00:00",
+  "database": "mit-bestand",
+  "phase": "phase6_huerde_reuse_tierf_cleanup",
+  "planned": {
+    "demotion_stats": {
+      "HAT_WIRTSCHAFTSASPEKT_values": 11,
+      "HAT_WIRTSCHAFT_values": 41,
+      "akzeptanz_values": 6,
+      "legacy_huerde_category_values": 132,
+      "matchingqualitaet_values": 182
+    },
+    "huerde_keep": 11,
+    "property_nodes_to_update": 149,
+    "property_values_to_demote": 372,
+    "reuse_chain_direct_edges_to_merge": 28,
+    "reuse_chain_edges_by_type": {
+      "FROM_DONOR": 14,
+      "INTO_RECEIVER": 14
+    }
+  },
+  "snapshot": {
+    "nodes": 80,
+    "relationships": 4188
+  }
+}

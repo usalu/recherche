@@ -1,0 +1,66 @@
+{
+  "confirmation_required": "APPLY phase2_idf_civic_links.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2402,
+    "relationships": 15569
+  },
+  "counts_after_expected": {
+    "nodes": 2402,
+    "relationships": 15569
+  },
+  "counts_before": {
+    "nodes": 2402,
+    "relationships": 15564
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-05T22:39:47.915360+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_france_reuse_bubble\\patches\\phase2_idf_civic_links.patch.jsonl",
+  "records": [
+    {
+      "from": "association_reavie",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_new_fr_bellastock_reemploi"
+    },
+    {
+      "from": "bellastock",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "association_reavie"
+    },
+    {
+      "from": "association_reavie",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "bellastock"
+    },
+    {
+      "from": "association_reavie",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "mobius_reemploi"
+    },
+    {
+      "from": "mobius_reemploi",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "would_create_rel",
+      "to": "association_reavie"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 5,
+    "would_create_rel": 5
+  }
+}

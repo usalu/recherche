@@ -20,7 +20,9 @@ CHECKS = [
     ('Distinct labels', 'CALL db.labels() YIELD label RETURN count(label) AS c', None),
     ('Distinct rel types', 'CALL db.relationshipTypes() YIELD relationshipType RETURN count(relationshipType) AS c', None),
     # Hygiene (should be 0)
-    ('Nodes missing source_scope', 'MATCH (n) WHERE n.source_scope IS NULL RETURN count(n) AS c', 0),
+    # NOTE: the former 'Nodes missing source_scope' check was retired on 2026-06-01.
+    # source_scope was intentionally dropped from every label during the minimal-
+    # property cleanup (provenance now lives on Quelle nodes + BELEGT_IN edges).
     ('r.id NULL', 'MATCH ()-[r]->() WHERE r.id IS NULL RETURN count(r) AS c', 0),
     ('Case-specific nodes missing BELEGT_IN',
      'MATCH (n) WHERE any(l IN labels(n) WHERE l IN ["Projekt","Bauteilgruppe","Bauwerk","Wiederverwendungskette","Stadt"]) AND NOT EXISTS { (n)-[:BELEGT_IN]->(:Quelle) } RETURN count(n) AS c', 0),
@@ -57,7 +59,8 @@ CHECKS = [
     ('Projekt missing HAT_INTERVENTION', 'MATCH (p:Projekt) WHERE NOT EXISTS { (p)-[:HAT_INTERVENTION]->() } RETURN count(p) AS c', None),
     ('Projekt missing HAT_NUTZUNG', 'MATCH (p:Projekt) WHERE NOT EXISTS { (p)-[:HAT_NUTZUNG]->() } RETURN count(p) AS c', None),
     ('Projekt missing HAT_METHODE', 'MATCH (p:Projekt) WHERE NOT EXISTS { (p)-[:HAT_METHODE]->() } RETURN count(p) AS c', None),
-    ('Projekt missing NUTZT_BAUWERK', 'MATCH (p:Projekt) WHERE NOT EXISTS { (p)-[:NUTZT_BAUWERK]->() } RETURN count(p) AS c', None),
+    ('Programm missing HAT_METHODE', 'MATCH (p:Programm) WHERE NOT EXISTS { (p)-[:HAT_METHODE]->() } RETURN count(p) AS c', None),
+    ('Projekt missing HAS_BAUWERK', 'MATCH (p:Projekt) WHERE NOT EXISTS { (p)-[:HAS_BAUWERK]->(:Bauwerk) } RETURN count(p) AS c', None),
     ('Projekt missing TEIL_VON_PROGRAMM', 'MATCH (p:Projekt) WHERE NOT EXISTS { (p)-[:TEIL_VON_PROGRAMM]->() } RETURN count(p) AS c', None),
     # Akteur
     ('Akteur missing HAT_AKTEURROLLE', 'MATCH (a:Akteur) WHERE NOT EXISTS { (a)-[:HAT_AKTEURROLLE]->() } RETURN count(a) AS c', None),
@@ -71,6 +74,7 @@ CHECKS = [
     ('Programm missing properties (type)', 'MATCH (p:Programm) WHERE p.type IS NULL RETURN count(p) AS c', None),
     # Naming
     ('Projekt name > 25 chars', 'MATCH (p:Projekt) WHERE size(p.name) > 25 RETURN count(p) AS c', None),
+    ('Programm name > 25 chars', 'MATCH (p:Programm) WHERE size(p.name) > 25 RETURN count(p) AS c', None),
     ('Bauwerk name > 25 chars', 'MATCH (bw:Bauwerk) WHERE size(bw.name) > 25 RETURN count(bw) AS c', None),
     ('Bauteilgruppe name > 25 chars', 'MATCH (bg:Bauteilgruppe) WHERE size(bg.name) > 25 RETURN count(bg) AS c', None),
     ('Wiederverwendungskette name > 25 chars', 'MATCH (k:Wiederverwendungskette) WHERE size(k.name) > 25 RETURN count(k) AS c', None),

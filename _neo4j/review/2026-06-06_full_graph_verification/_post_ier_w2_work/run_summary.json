@@ -1,0 +1,100 @@
+{
+  "generated_at": "2026-06-07T11:59:19Z",
+  "graph_counts_start": {
+    "nodes": 2263,
+    "relationships": 14846,
+    "database": "mit-bestand"
+  },
+  "graph_counts_final": {
+    "nodes": 2263,
+    "relationships": 14819,
+    "database": "mit-bestand"
+  },
+  "agents": [
+    {
+      "agent": "W2-01",
+      "scope": 1262,
+      "processed": 300,
+      "proven": 0,
+      "patches_drafted": 0,
+      "patches_applied": 0,
+      "apply_status": "dry-run only"
+    },
+    {
+      "agent": "W2-02",
+      "scope": 215,
+      "processed": 215,
+      "proven": 105,
+      "patches_drafted": 0,
+      "patches_applied": 1,
+      "apply_status": "applied",
+      "apply_result": {
+        "agent": "W2-02",
+        "patch": "_neo4j/review/2026-06-06_full_graph_verification/patches/post_04_missing_evidence.patch.jsonl",
+        "dry_run_ok": true,
+        "applied": true,
+        "error": "",
+        "counts_before": {
+          "nodes": 2263,
+          "relationships": 14846,
+          "database": "mit-bestand"
+        },
+        "counts_after": {
+          "nodes": 2263,
+          "relationships": 14846,
+          "database": "mit-bestand"
+        }
+      }
+    },
+    {
+      "agent": "W2-03",
+      "scope": 42,
+      "processed": 42,
+      "proven": 0,
+      "patches_drafted": 0,
+      "patches_applied": 1,
+      "apply_status": "applied",
+      "apply_result": {
+        "agent": "W2-03",
+        "patch": "_neo4j/review/2026-06-06_full_graph_verification/patches/post_03_geo_fixes.patch.jsonl",
+        "dry_run_ok": true,
+        "applied": true,
+        "error": "",
+        "counts_before": {
+          "nodes": 2263,
+          "relationships": 14846,
+          "database": "mit-bestand"
+        },
+        "counts_after": {
+          "nodes": 2263,
+          "relationships": 14839,
+          "database": "mit-bestand"
+        }
+      }
+    },
+    {
+      "agent": "W2-04",
+      "scope": 334,
+      "processed": 334,
+      "proven": 3,
+      "patches_drafted": 0,
+      "patches_applied": 0,
+      "apply_status": "dry-run or empty"
+    },
+    {
+      "agent": "W2-05",
+      "scope": 17109,
+      "processed": 17081,
+      "proven": 15667,
+      "proven_pct": 91.72179614776653,
+      "v3_proven_pct": 93.30761587468584,
+      "delta_pp": -1.5858197269193113,
+      "patches_drafted": 0,
+      "patches_applied": 1,
+      "stale_pruned": 28
+    }
+  ],
+  "v3_proven_pct": 93.30761587468584,
+  "v4_proven_pct": 91.72179614776653,
+  "delta_pp": -1.5858197269193113
+}

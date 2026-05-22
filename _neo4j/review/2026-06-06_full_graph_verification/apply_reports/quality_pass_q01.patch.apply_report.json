@@ -1,0 +1,492 @@
+{
+  "confirmation_required": "APPLY quality_pass_q01.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2281,
+    "relationships": 15289
+  },
+  "counts_after_expected": {
+    "nodes": 2281,
+    "relationships": 15289
+  },
+  "counts_before": {
+    "nodes": 2289,
+    "relationships": 15324
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T17:45:53.317682+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_full_graph_verification\\patches\\quality_pass_q01.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "stadt_zuerich",
+        "properties": {
+          "id": "r_stadt_zuerich__HAT_AKTEURTYP__at_oeffentliche_institution"
+        },
+        "rel_internal_id": 1153024858699862970,
+        "to": "at_oeffentliche_institution",
+        "type": "HAT_AKTEURTYP"
+      },
+      "from": "stadt_zuerich",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "at_oeffentliche_institution",
+      "type": "HAT_AKTEURTYP"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteiltyp"
+        ],
+        "properties": {
+          "aliases": [
+            "Glasscheibe"
+          ],
+          "id": "bt_verglasung",
+          "metadata_sidecar_key": "node:bt_verglasung",
+          "name": "Verglasung"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "id": "bt_glasscheibe",
+            "metadata_sidecar_key": "node:bt_glasscheibe",
+            "name": "Glasscheibe"
+          }
+        },
+        "to": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "id": "bt_verglasung",
+            "metadata_sidecar_key": "node:bt_verglasung",
+            "name": "Verglasung"
+          }
+        }
+      },
+      "from": "bt_glasscheibe",
+      "label_union": [
+        "Bauteiltyp"
+      ],
+      "line": 2,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 7,
+      "status": "would_merge",
+      "to": "bt_verglasung"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteiltyp"
+        ],
+        "properties": {
+          "aliases": [
+            "Fassadenelement"
+          ],
+          "brand_layer": "skin",
+          "id": "bt_fassade",
+          "layer": [
+            "Skin"
+          ],
+          "metadata_sidecar_key": "node:bt_fassadenelement",
+          "name": "Fassade"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "id": "bt_fassadenelement",
+            "metadata_sidecar_key": "node:bt_fassadenelement",
+            "name": "Fassadenelement"
+          }
+        },
+        "to": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "brand_layer": "skin",
+            "id": "bt_fassade",
+            "layer": [
+              "Skin"
+            ],
+            "name": "Fassade"
+          }
+        }
+      },
+      "from": "bt_fassadenelement",
+      "label_union": [
+        "Bauteiltyp"
+      ],
+      "line": 3,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 5,
+      "status": "would_merge",
+      "to": "bt_fassade"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteiltyp"
+        ],
+        "properties": {
+          "aliases": [
+            "Fassadenmodul (Mauerwerk)"
+          ],
+          "brand_layer": "skin",
+          "id": "bt_fassade",
+          "layer": [
+            "Skin"
+          ],
+          "metadata_sidecar_key": "node:bt_fassadenmodul_mauerwerk",
+          "name": "Fassade"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "id": "bt_fassadenmodul_mauerwerk",
+            "metadata_sidecar_key": "node:bt_fassadenmodul_mauerwerk",
+            "name": "Fassadenmodul (Mauerwerk)"
+          }
+        },
+        "to": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "brand_layer": "skin",
+            "id": "bt_fassade",
+            "layer": [
+              "Skin"
+            ],
+            "name": "Fassade"
+          }
+        }
+      },
+      "from": "bt_fassadenmodul_mauerwerk",
+      "label_union": [
+        "Bauteiltyp"
+      ],
+      "line": 4,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 7,
+      "status": "would_merge",
+      "to": "bt_fassade"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteiltyp"
+        ],
+        "properties": {
+          "aliases": [
+            "Mauerstein"
+          ],
+          "brand_layer": "skin",
+          "id": "bt_fassade",
+          "layer": [
+            "Skin"
+          ],
+          "metadata_sidecar_key": "node:bt_mauerstein",
+          "name": "Fassade"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "id": "bt_mauerstein",
+            "metadata_sidecar_key": "node:bt_mauerstein",
+            "name": "Mauerstein"
+          }
+        },
+        "to": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "brand_layer": "skin",
+            "id": "bt_fassade",
+            "layer": [
+              "Skin"
+            ],
+            "name": "Fassade"
+          }
+        }
+      },
+      "from": "bt_mauerstein",
+      "label_union": [
+        "Bauteiltyp"
+      ],
+      "line": 5,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 4,
+      "status": "would_merge",
+      "to": "bt_fassade"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteiltyp"
+        ],
+        "properties": {
+          "aliases": [
+            "Hohlkörperdecke"
+          ],
+          "brand_layer": "structure",
+          "id": "bt_decke",
+          "layer": [
+            "Structure"
+          ],
+          "metadata_sidecar_key": "node:bt_hohlkoerperdecke",
+          "name": "Decke"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "id": "bt_hohlkoerperdecke",
+            "metadata_sidecar_key": "node:bt_hohlkoerperdecke",
+            "name": "Hohlkörperdecke"
+          }
+        },
+        "to": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "brand_layer": "structure",
+            "id": "bt_decke",
+            "layer": [
+              "Structure"
+            ],
+            "name": "Decke"
+          }
+        }
+      },
+      "from": "bt_hohlkoerperdecke",
+      "label_union": [
+        "Bauteiltyp"
+      ],
+      "line": 6,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 5,
+      "status": "would_merge",
+      "to": "bt_decke"
+    },
+    {
+      "after": {
+        "labels": [
+          "Bauteiltyp"
+        ],
+        "properties": {
+          "aliases": [
+            "Verglasung"
+          ],
+          "brand_layer": "skin",
+          "id": "bt_fenster",
+          "layer": [
+            "Skin"
+          ],
+          "metadata_sidecar_key": "node:bt_fenster",
+          "name": "Fenster"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "id": "bt_verglasung",
+            "metadata_sidecar_key": "node:bt_verglasung",
+            "name": "Verglasung"
+          }
+        },
+        "to": {
+          "labels": [
+            "Bauteiltyp"
+          ],
+          "properties": {
+            "brand_layer": "skin",
+            "id": "bt_fenster",
+            "layer": [
+              "Skin"
+            ],
+            "metadata_sidecar_key": "node:bt_fenster",
+            "name": "Fenster"
+          }
+        }
+      },
+      "from": "bt_verglasung",
+      "label_union": [
+        "Bauteiltyp"
+      ],
+      "line": 7,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 7,
+      "status": "would_merge",
+      "to": "bt_fenster"
+    },
+    {
+      "after": {
+        "labels": [
+          "Material"
+        ],
+        "properties": {
+          "aliases": [
+            "Drahtglas"
+          ],
+          "id": "mat_glas",
+          "metadata_sidecar_key": "node:mat_glas",
+          "name": "Glas"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Material"
+          ],
+          "properties": {
+            "id": "mat_drahtglas",
+            "metadata_sidecar_key": "node:mat_drahtglas",
+            "name": "Drahtglas"
+          }
+        },
+        "to": {
+          "labels": [
+            "Material"
+          ],
+          "properties": {
+            "id": "mat_glas",
+            "metadata_sidecar_key": "node:mat_glas",
+            "name": "Glas"
+          }
+        }
+      },
+      "from": "mat_drahtglas",
+      "label_union": [
+        "Material"
+      ],
+      "line": 8,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 7,
+      "status": "would_merge",
+      "to": "mat_glas"
+    },
+    {
+      "after": {
+        "labels": [
+          "Material"
+        ],
+        "properties": {
+          "aliases": [
+            "Spannbeton"
+          ],
+          "id": "mat_beton",
+          "metadata_sidecar_key": "node:mat_spannbeton",
+          "name": "Beton"
+        }
+      },
+      "before": {
+        "from": {
+          "labels": [
+            "Material"
+          ],
+          "properties": {
+            "id": "mat_spannbeton",
+            "metadata_sidecar_key": "node:mat_spannbeton",
+            "name": "Spannbeton"
+          }
+        },
+        "to": {
+          "labels": [
+            "Material"
+          ],
+          "properties": {
+            "id": "mat_beton",
+            "name": "Beton"
+          }
+        }
+      },
+      "from": "mat_spannbeton",
+      "label_union": [
+        "Material"
+      ],
+      "line": 9,
+      "op": "merge_node",
+      "rel_inbound_to_redirect": 0,
+      "rel_outbound_to_redirect": 5,
+      "status": "would_merge",
+      "to": "mat_beton"
+    },
+    {
+      "id": "A14-RELKEY-001",
+      "line": 10,
+      "op": "noop_reviewed",
+      "reason": "Q01 FIX_PROPERTY: nutzung_role→role applied 2026-06-06 via fix_property.patch.jsonl",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "A14-RELKEY-002",
+      "line": 11,
+      "op": "noop_reviewed",
+      "reason": "Q01 FIX_PROPERTY: bauwerk_role→role applied 2026-06-06 via fix_property.patch.jsonl",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "A14-NODEKEY-002",
+      "line": 12,
+      "op": "noop_reviewed",
+      "reason": "Q01 FIX_PROPERTY: mobius_reemploi marker keys removed via fix_property.patch.jsonl",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "09-node-0191",
+      "line": 13,
+      "op": "noop_reviewed",
+      "reason": "Q01 FIX_PROPERTY: land_liechtenstein country_iso2=LI applied via fix_property.patch.jsonl",
+      "status": "noop_reviewed"
+    },
+    {
+      "id": "09-node-0342",
+      "line": 14,
+      "op": "noop_reviewed",
+      "reason": "Q01 FIX_PROPERTY: stadt_paso_robles coords applied via fix_property.patch.jsonl",
+      "status": "noop_reviewed"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_reviewed": 5,
+    "records": 14,
+    "would_delete_rel": 1,
+    "would_merge": 8
+  }
+}

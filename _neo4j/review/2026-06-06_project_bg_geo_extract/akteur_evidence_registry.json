@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "run": "2026-06-06_akteur_geo_extract",
+    "description": "Evidence-backed actor locations beyond BETEILIGT_AN→Projekt. Sources: official websites, archive case files, graph program links."
+  },
+  "known_offices": {
+    "bluecity": {
+      "address": "Maasboulevard 100, 3063 NS Rotterdam, Netherlands",
+      "latitude": 51.9436,
+      "longitude": 4.5112,
+      "confidence": "high",
+      "source": "bluecity.nl",
+      "source_url": "https://www.bluecity.nl/"
+    },
+    "impact_hub_berlin": {
+      "address": "Rollbergstraße 26, 12053 Berlin, Germany",
+      "latitude": 52.4764,
+      "longitude": 13.4357,
+      "confidence": "high",
+      "source": "CRCLR House / Impact Hub Berlin",
+      "source_url": "https://www.buildingsocialecology.org/projects/crclr-house-berlin/"
+    },
+    "rotordc": {
+      "address": "Rue Beliard 20, 1040 Brussels, Belgium",
+      "latitude": 50.8384,
+      "longitude": 4.3686,
+      "confidence": "medium",
+      "source": "Rotor DC public listings",
+      "source_url": "https://rotordc.com/"
+    },
+    "Rotor": {
+      "address": "Rue Beliard 20, 1040 Brussels, Belgium",
+      "latitude": 50.8384,
+      "longitude": 4.3686,
+      "confidence": "medium",
+      "source": "Rotor Brussels office",
+      "source_url": "https://rotor.org/"
+    },
+    "zirkular": {
+      "address": "Lagerplatz 24, 8400 Winterthur, Switzerland",
+      "latitude": 47.4997,
+      "longitude": 8.7267,
+      "confidence": "medium",
+      "source": "K.118 Winterthur anchor project",
+      "source_url": "https://zirkular.net/en/project/building-k-118/"
+    },
+    "gruner_reuse_platform": {
+      "address": "Weinlagerstrasse 33, 4056 Basel, Switzerland",
+      "latitude": 47.5726315,
+      "longitude": 7.5738216,
+      "confidence": "medium",
+      "source": "Gruner ReUse / LYSP8 Basel",
+      "source_url": "https://www.gruner-reuse.ch/"
+    },
+    "bauteilboerse_basel_overall": {
+      "address": "Weinlagerstrasse 33, 4056 Basel, Switzerland",
+      "latitude": 47.5726315,
+      "longitude": 7.5738216,
+      "confidence": "medium",
+      "source": "Bauteilbörse Basel / LYSP8",
+      "source_url": "https://bauteilboerse.ch/"
+    },
+    "edith_maryon_stift": {
+      "address": "Gerbergasse 30, 4001 Basel, Switzerland",
+      "latitude": 47.5596,
+      "longitude": 7.5886,
+      "confidence": "high",
+      "source": "Stiftung Edith Maryon contact page",
+      "source_url": "https://maryon.ch/en/meta/contact/"
+    },
+    "heinrich_boell_stiftung": {
+      "address": "Schumannstraße 8, 10117 Berlin, Germany",
+      "latitude": 52.5238,
+      "longitude": 13.3849,
+      "confidence": "high",
+      "source": "Heinrich-Böll-Stiftung Berlin HQ",
+      "source_url": "https://www.boell.de/en/contact"
+    },
+    "koimo_development": {
+      "address": "Linienstraße 85, 10119 Berlin, Germany",
+      "latitude": 52.5289,
+      "longitude": 13.4012,
+      "confidence": "high",
+      "source": "Koimo Development GmbH impressum",
+      "source_url": "https://koimo.de/impressum/"
+    },
+    "interreg_nwe": {
+      "address": "15 rue du Palais Rihour, 4e étage, 59800 Lille, France",
+      "latitude": 50.6366,
+      "longitude": 3.0635,
+      "confidence": "high",
+      "source": "Interreg NWE Joint Secretariat",
+      "source_url": "https://www.nweurope.eu/legal-notice-and-privacy-policy"
+    },
+    "superuse_on_site": {
+      "address": "Maasboulevard 100 (BlueCity), 3063 NS Rotterdam, Netherlands",
+      "latitude": 51.9436,
+      "longitude": 4.5112,
+      "confidence": "medium",
+      "source": "Superuse on Site — parent Superuse Rotterdam / project-site model",
+      "source_url": "https://www.superuse-studios.com/contact-us/"
+    },
+    "mamout_architectes": {
+      "address": "Rue Adolphe Lavallée 39, 1080 Molenbeek-Saint-Jean, Belgium",
+      "latitude": 50.8546,
+      "longitude": 4.3386,
+      "confidence": "high",
+      "source": "MAMOUT architectes registered office",
+      "source_url": "https://www.mamout.be/about"
+    },
+    "ld2_architecture": {
+      "address": "Chaussée de la Hulpe 177, boîte 17, 1170 Watermael-Boitsfort, Belgium",
+      "latitude": 50.8015,
+      "longitude": 4.4112,
+      "confidence": "high",
+      "source": "LD2 Architecture contact page",
+      "source_url": "https://www.ld2.eu/contact"
+    },
+    "gillion_construct": {
+      "address": "Rue Saint-Denis 132, 1190 Forest, Brussels, Belgium",
+      "latitude": 50.8172,
+      "longitude": 4.3215,
+      "confidence": "high",
+      "source": "Gillion Construct registered office",
+      "source_url": "https://gillion.be/fr/contact"
+    },
+    "gtd_consulting": {
+      "address": "Rue du Château 6, 6210 Les Bons Villers, Belgium",
+      "latitude": 50.553,
+      "longitude": 4.608,
+      "confidence": "medium",
+      "source": "GTD Engineering SPRL municipal directory",
+      "source_url": "https://www.les-bons-villers.be/annuaire/gtd-engineering-sprl"
+    },
+    "haus_der_materialisierung": {
+      "address": "Berlin, Germany (Haus der Materialisierung civic hub)",
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "confidence": "low",
+      "source": "germany_reuse_bubble intake — city only",
+      "source_url": ""
+    },
+    "material_mafia": {
+      "address": "Berlin, Germany (Haus der Materialisierung warehouse)",
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "confidence": "low",
+      "source": "germany_reuse_bubble intake — city only",
+      "source_url": ""
+    },
+    "circular_berlin": {
+      "address": "Berlin, Germany",
+      "latitude": 52.52,
+      "longitude": 13.405,
+      "confidence": "low",
+      "source": "germany_reuse_bubble intake — city only",
+      "source_url": ""
+    }
+  },
+  "archive_case_sites": {
+    "charles_malis_molenbeek": {
+      "address": "Rue Charles Malis 40, 1080 Molenbeek-Saint-Jean, Brussels, Belgium",
+      "latitude": 50.8546,
+      "longitude": 4.3386,
+      "confidence": "high",
+      "source": "archive:Charles_Malis_Molenbeek.md; igloo project sheet",
+      "source_url": "https://www.igloo.ro/a-favorable-transformation-willocx-ld2-mamout/",
+      "related_projekt_id": "p_verbiest_karreveld_brussels",
+      "actor_ids": [
+        "mamout_architectes",
+        "ld2_architecture",
+        "stephanie_willocx",
+        "mobat_ingenierie",
+        "gtd_consulting",
+        "gillion_construct"
+      ]
+    }
+  },
+  "program_projekt_proxy": {
+    "prog_reallabor_be_ware": {
+      "projekt_ids": ["p_crclr_house_impact_hub_berlin", "p_impact_hub_berlin_crclr_fitout"],
+      "confidence": "medium",
+      "source": "Reallabor B(e) Ware — Berlin Kindl/CRCLR context (archive Kindl_Areal, Be_Ware)"
+    },
+    "prog_interreg_nwe": {
+      "projekt_ids": ["p_grande_halle_de_colombelles"],
+      "confidence": "medium",
+      "source": "TEIL_VON_PROGRAMM in graph; FCRBE/PREUSE NWE programme"
+    },
+    "prog_fcrbe": {
+      "projekt_ids": ["p_grande_halle_de_colombelles"],
+      "confidence": "medium",
+      "source": "TEIL_VON_PROGRAMM in graph"
+    }
+  }
+}

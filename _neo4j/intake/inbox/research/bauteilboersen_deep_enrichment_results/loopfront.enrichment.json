@@ -1,0 +1,107 @@
+{
+  "anchor_id": "loopfront",
+  "sources_visited": [
+    {
+      "url": "https://www.loopfront.com/",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://www.loopfront.com/product",
+      "http_status": 200,
+      "first_party": true
+    },
+    {
+      "url": "https://businessnorway.com/solutions/loopfront-digital-platform-makes-reuse-simple",
+      "http_status": 200,
+      "first_party": false
+    },
+    {
+      "url": "https://ukgbc.org/resources/digital-reuse-platform/",
+      "http_status": 200,
+      "first_party": false
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "External marketplace copy includes building materials and project reuse; material-specific claims require listing-level data.",
+      "confidence": "unsicher"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Platform covers furniture, fixtures and internal marketplace/reuse storage.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_mehrere",
+      "evidence_urls": [
+        "https://www.loopfront.com/product"
+      ],
+      "evidence_quote": "Product page states separate fields for building materials during reuse surveying.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Site says reuse storage keeps control of inventory and reusable assets, and construction projects conduct surveying of building components.",
+      "confidence": "belegt",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "inventory",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Case examples include climate/CO2 and waste reporting outcomes from reuse.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "co2",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_software_platform",
+      "evidence_urls": [
+        "https://www.loopfront.com/"
+      ],
+      "evidence_quote": "Software platform for reuse inventory, marketplace and project surveying.",
+      "confidence": "belegt"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "Loopfront",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.loopfront.com/",
+      "https://www.loopfront.com/product"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material claims",
+      "reason": "Platform-level software evidence does not expose individual closed-set material categories."
+    }
+  ],
+  "run_notes": []
+}

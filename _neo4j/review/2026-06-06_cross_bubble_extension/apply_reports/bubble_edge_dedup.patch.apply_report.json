@@ -1,0 +1,4218 @@
+{
+  "confirmation_required": "APPLY bubble_edge_dedup.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 2304,
+    "relationships": 15492
+  },
+  "counts_after_expected": {
+    "nodes": 2304,
+    "relationships": 15492
+  },
+  "counts_before": {
+    "nodes": 2304,
+    "relationships": 15556
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-06-06T00:08:14.744562+00:00",
+  "patch": "_neo4j\\review\\2026-06-06_cross_bubble_extension\\patches\\bubble_edge_dedup.patch.jsonl",
+  "records": [
+    {
+      "before": {
+        "count": 1,
+        "from": "software_restado",
+        "properties": {
+          "id": "r_software_restado__betrieben_von__concular"
+        },
+        "rel_internal_id": 1153057844048696463,
+        "to": "concular",
+        "type": "BETRIEBEN_VON"
+      },
+      "from": "software_restado",
+      "line": 1,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "concular",
+      "type": "BETRIEBEN_VON"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "opalis_directory_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_directory_maintainer_reavie_listed",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "RéaVie supplier on Opalis maintained by Bellastock and Rotor",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+        "id": "r_association_reavie__verbunden_mit_akteur__bellastock",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "association_reavie",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "evidence_basis": "opalis_directory_maintainer_reavie_listed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "RéaVie supplier on Opalis maintained by Bellastock and Rotor",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+          "id": "r_association_reavie__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118198809,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "association_reavie",
+      "line": 2,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "evidence_basis": "opalis_directory_maintainer_reavie_listed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "RéaVie listed on Opalis France directory co-maintained by Bellastock",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+          "id": "r_bellastock__verbunden_mit_akteur__association_reavie",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338748441,
+        "to": "association_reavie",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 3,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "association_reavie",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "supplier_listing",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_supplier_directory",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "listed on Opalis supplier directory",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+        "id": "r_association_reavie__verbunden_mit_akteur__opalis",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "association_reavie",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "listed on Opalis supplier directory",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+          "id": "r_association_reavie__verbunden_mit_akteur__opalis",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164293753372939801,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "association_reavie",
+      "line": 4,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "RéaVie listed supplier with curage, dépose and RenouVo shops",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/reavie",
+          "id": "r_opalis__verbunden_mit_akteur__association_reavie",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6926649476593489433,
+        "to": "association_reavie",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 5,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "association_reavie",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "opalis_directory_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_france_maintainer_directory",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "shared Opalis France reuse directory infrastructure | Bellastock co-develops Opalis France; Backacia listed supplier",
+        "evidence_url": "https://www.bellastock.com/projets/opalis-france/",
+        "id": "r_backacia__verbunden_mit_akteur__bellastock",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "evidence_basis": "opalis_france_maintainer_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "shared Opalis France reuse directory infrastructure",
+          "evidence_url": "https://www.bellastock.com/projets/opalis-france/",
+          "id": "r_backacia__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745603166,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "backacia",
+      "line": 6,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "evidence_basis": "opalis_france_maintainer_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Bellastock co-develops Opalis France; Backacia listed supplier",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+          "id": "r_bellastock__verbunden_mit_akteur__backacia",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6922145876966152798,
+        "to": "backacia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 7,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "backacia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "opalis_directory_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_directory_peer",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "peer French resellers on Opalis directory | peer resellers in Opalis professional directory",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+        "id": "r_backacia__verbunden_mit_akteur__mineka",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer French resellers on Opalis directory",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+          "id": "r_backacia__verbunden_mit_akteur__mineka",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 80,
+        "to": "mineka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "backacia",
+      "line": 8,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mineka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mineka",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer resellers in Opalis professional directory",
+          "evidence_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "id": "r_mineka__verbunden_mit_akteur__backacia",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 79,
+        "to": "backacia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "mineka",
+      "line": 9,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "backacia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "supplier_listing",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_supplier_directory",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "listed on Opalis supplier directory",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+        "id": "r_backacia__verbunden_mit_akteur__opalis",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "listed on Opalis supplier directory",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+          "id": "r_backacia__verbunden_mit_akteur__opalis",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118232670,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "backacia",
+      "line": 10,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Backacia digital marketplace for reused construction materials",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/backacia",
+          "id": "r_opalis__verbunden_mit_akteur__backacia",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338782302,
+        "to": "backacia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 11,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "backacia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "opalis_directory_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "ademe_fcrbe_opalis_40_resellers",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "peer French resellers in ADEME/FCRBE Opalis study",
+        "evidence_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+        "id": "r_backacia__verbunden_mit_akteur__cycle_up",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "backacia",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "ademe_fcrbe_opalis_40_resellers",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer French resellers in ADEME/FCRBE Opalis study",
+          "evidence_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "id": "r_backacia__verbunden_mit_akteur__cycle_up",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6919894077152467556,
+        "to": "cycle_up",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "backacia",
+      "line": 12,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "cycle_up",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cycle_up",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "ademe_fcrbe_opalis_40_resellers",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "40 professional resellers documented in Opalis directory",
+          "evidence_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "id": "r_cycle_up__verbunden_mit_akteur__backacia",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304547428,
+        "to": "backacia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cycle_up",
+      "line": 13,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "backacia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "committee_co_chair_affiliation",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.3",
+        "evidence_basis": "first_party_committee_page",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Benjamin Poignon - Co-Chairman. Baubüro in situ",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "Benjamin Poignon - Co-Chairman, Baubüro in situ",
+        "evidence_url": "https://www.cirkla.ch/en/comite/benjamin-poignon",
+        "fact_label": "Fact",
+        "id": "r_baubuero_in_situ__verbunden_mit_akteur__cirkla",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "baubuero_in_situ",
+        "properties": {
+          "connection_kind": "committee_co_chair_affiliation",
+          "dossier_section": "§2.3",
+          "evidence_basis": "first_party_committee_page",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Benjamin Poignon - Co-Chairman. Baubüro in situ",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Benjamin Poignon - Co-Chairman, Baubüro in situ",
+          "evidence_url": "https://www.cirkla.ch/en/comite/benjamin-poignon",
+          "fact_label": "Fact",
+          "id": "r_baubuero_in_situ__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 3,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "baubuero_in_situ",
+      "line": 14,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "committee_co_chair_affiliation",
+          "dossier_section": "§2.3",
+          "evidence_basis": "first_party_committee_page",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Benjamin Poignon - Co-Chairman. Baubüro in situ",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Benjamin Poignon - Co-Chairman, Baubüro in situ",
+          "evidence_url": "https://www.cirkla.ch/en/comite/benjamin-poignon",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__baubuero_in_situ",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 2,
+        "to": "baubuero_in_situ",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 15,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "baubuero_in_situ",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "supply_chain_roche_resale",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§6",
+        "evidence_basis": "first_party_supply_chain_news",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch.",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+        "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+        "fact_label": "Fact",
+        "id": "r_bauteilboerse_basel_overall__verbunden_mit_akteur__gruner_reuse_platform",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_basel_overall",
+        "properties": {
+          "connection_kind": "supply_chain_roche_resale",
+          "dossier_section": "§6",
+          "evidence_basis": "first_party_supply_chain_news",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+          "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+          "fact_label": "Fact",
+          "id": "r_bauteilboerse_basel_overall__verbunden_mit_akteur__gruner_reuse_platform",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304542737,
+        "to": "gruner_reuse_platform",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_basel_overall",
+      "line": 16,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "gruner_reuse_platform",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gruner_reuse_platform",
+        "properties": {
+          "connection_kind": "supply_chain_roche_resale",
+          "dossier_section": "§6",
+          "evidence_basis": "first_party_supply_chain_news",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+          "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+          "fact_label": "Fact",
+          "id": "r_gruner_reuse_platform__verbunden_mit_akteur__bauteilboerse_basel_overall",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1171049152814024726,
+        "to": "bauteilboerse_basel_overall",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gruner_reuse_platform",
+      "line": 17,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilboerse_basel_overall",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "supply_chain_roche_resale",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§6",
+        "evidence_basis": "first_party_supply_chain_news",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch.",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+        "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+        "fact_label": "Fact",
+        "id": "r_bauteilboerse_basel_overall__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_basel_overall",
+        "properties": {
+          "connection_kind": "supply_chain_roche_resale",
+          "dossier_section": "§6",
+          "evidence_basis": "first_party_supply_chain_news",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+          "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+          "fact_label": "Fact",
+          "id": "r_bauteilboerse_basel_overall__verbunden_mit_akteur__useagain_bauteilclick",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118227985,
+        "to": "useagain_bauteilclick",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_basel_overall",
+      "line": 18,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "useagain_bauteilclick",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "useagain_bauteilclick",
+        "properties": {
+          "connection_kind": "supply_chain_roche_resale",
+          "dossier_section": "§6",
+          "evidence_basis": "first_party_supply_chain_news",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Bauteilbörse Basel … Weiterverkauf über useagain.ch",
+          "evidence_url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+          "fact_label": "Fact",
+          "id": "r_useagain_bauteilclick__verbunden_mit_akteur__bauteilboerse_basel_overall",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931917946,
+        "to": "bauteilboerse_basel_overall",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "useagain_bauteilclick",
+      "line": 19,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilboerse_basel_overall",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "bauteilnetz_peer_exchange",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "bauteilnetz_partner_listing",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "bremen and hannover listed as partner Bauteilbörsen",
+        "evidence_url": "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html",
+        "id": "r_bauteilboerse_bremen__verbunden_mit_akteur__bauteilboerse_hannover",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_bremen",
+        "properties": {
+          "connection_kind": "bauteilnetz_peer_exchange",
+          "evidence_basis": "bauteilnetz_partner_listing",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "bremen and hannover listed as partner Bauteilbörsen",
+          "evidence_url": "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html",
+          "id": "r_bauteilboerse_bremen__verbunden_mit_akteur__bauteilboerse_hannover",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6924397676779799138,
+        "to": "bauteilboerse_hannover",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_bremen",
+      "line": 20,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bauteilboerse_hannover",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_hannover",
+        "properties": {
+          "connection_kind": "bauteilnetz_peer_exchange",
+          "evidence_basis": "bauteilnetz_partner_listing",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "bremen and hannover listed as partner Bauteilbörsen",
+          "evidence_url": "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html",
+          "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__bauteilboerse_bremen",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1162041953559249506,
+        "to": "bauteilboerse_bremen",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_hannover",
+      "line": 21,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilboerse_bremen",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "digital_physical_exchange_layer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "german_marketplace_layer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "German marketplace for reclaimed building materials",
+        "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado",
+        "id": "r_bauteilboerse_bremen__verbunden_mit_akteur__concular",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_bremen",
+        "properties": {
+          "connection_kind": "digital_physical_exchange_layer",
+          "evidence_basis": "german_marketplace_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "German marketplace for reclaimed building materials",
+          "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado",
+          "id": "r_bauteilboerse_bremen__verbunden_mit_akteur__concular",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 69,
+        "to": "concular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_bremen",
+      "line": 22,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "concular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "digital_physical_exchange_layer",
+          "evidence_basis": "german_marketplace_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "German marketplace for reclaimed building materials",
+          "evidence_url": "https://circulareconomy.europa.eu/platform/en/dialogue/existing-eu-platforms/restado",
+          "id": "r_concular__verbunden_mit_akteur__bauteilboerse_bremen",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 68,
+        "to": "bauteilboerse_bremen",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 23,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilboerse_bremen",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "marketplace_listing",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "restado_marketplace_operator",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "restado lists Bauteilbörse Hannover; restado operated by Concular",
+        "evidence_url": "https://restado.de/profil/bauteilboerse-hannover/",
+        "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__concular",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_hannover",
+        "properties": {
+          "connection_kind": "marketplace_listing",
+          "evidence_basis": "restado_marketplace_operator",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "restado lists Bauteilbörse Hannover; restado operated by Concular",
+          "evidence_url": "https://restado.de/profil/bauteilboerse-hannover/",
+          "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__concular",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193762,
+        "to": "concular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_hannover",
+      "line": 24,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "concular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "marketplace_listing",
+          "evidence_basis": "restado_marketplace_operator",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "restado lists Bauteilbörse Hannover; restado operated by Concular",
+          "evidence_url": "https://restado.de/profil/bauteilboerse-hannover/",
+          "id": "r_concular__verbunden_mit_akteur__bauteilboerse_hannover",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743394,
+        "to": "bauteilboerse_hannover",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 25,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilboerse_hannover",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "network_member",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "bauteilnetz_partner_listing",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "bauteilbörse hannover partner of bauteilnetz Deutschland",
+        "evidence_url": "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html",
+        "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__bauteilnetz_deutschland",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilboerse_hannover",
+        "properties": {
+          "connection_kind": "network_member",
+          "evidence_basis": "bauteilnetz_partner_listing",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "bauteilbörse hannover partner of bauteilnetz Deutschland",
+          "evidence_url": "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html",
+          "id": "r_bauteilboerse_hannover__verbunden_mit_akteur__bauteilnetz_deutschland",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 71,
+        "to": "bauteilnetz_deutschland",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilboerse_hannover",
+      "line": 26,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "bauteilnetz_deutschland",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "bauteilnetz_deutschland",
+        "properties": {
+          "connection_kind": "network_member",
+          "evidence_basis": "bauteilnetz_partner_listing",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "bauteilbörse hannover partner of bauteilnetz Deutschland",
+          "evidence_url": "http://www.bauteilnetz.de/bauteilnetz/website/stdws_adresse/bauteilboersen.html",
+          "id": "r_bauteilnetz_deutschland__verbunden_mit_akteur__bauteilboerse_hannover",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 70,
+        "to": "bauteilboerse_hannover",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilnetz_deutschland",
+      "line": 27,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilboerse_hannover",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/bauteilladen-winterthur",
+        "fact_label": "Fact",
+        "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__cirkla",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilladen_winterthur",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/bauteilladen-winterthur",
+          "fact_label": "Fact",
+          "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118198217,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilladen_winterthur",
+      "line": 28,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/bauteilladen-winterthur",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__bauteilladen_winterthur",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338747849,
+        "to": "bauteilladen_winterthur",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 29,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilladen_winterthur",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "network_library_of_reuse",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§5",
+        "evidence_basis": "first_party_network_profile",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "useagain promotes direct exchange between various organisations, such as Bauteilbörse Basel, BauTeile Zürich and Bauteilladen Winterthur.",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "exchange between Bauteilbörse Basel … Bauteilladen Winterthur",
+        "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+        "fact_label": "Fact",
+        "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bauteilladen_winterthur",
+        "properties": {
+          "connection_kind": "network_library_of_reuse",
+          "dossier_section": "§5",
+          "evidence_basis": "first_party_network_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "useagain promotes direct exchange between various organisations, such as Bauteilbörse Basel, BauTeile Zürich and Bauteilladen Winterthur.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "exchange between Bauteilbörse Basel … Bauteilladen Winterthur",
+          "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+          "fact_label": "Fact",
+          "id": "r_bauteilladen_winterthur__verbunden_mit_akteur__useagain_bauteilclick",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931883465,
+        "to": "useagain_bauteilclick",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bauteilladen_winterthur",
+      "line": 30,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "useagain_bauteilclick",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "useagain_bauteilclick",
+        "properties": {
+          "connection_kind": "network_library_of_reuse",
+          "dossier_section": "§5",
+          "evidence_basis": "first_party_network_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "useagain promotes direct exchange between various organisations, such as Bauteilbörse Basel, BauTeile Zürich and Bauteilladen Winterthur.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "exchange between Bauteilbörse Basel … Bauteilladen Winterthur",
+          "evidence_url": "https://library-of-reuse.ch/pioneers/useagain",
+          "fact_label": "Fact",
+          "id": "r_useagain_bauteilclick__verbunden_mit_akteur__bauteilladen_winterthur",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745603194,
+        "to": "bauteilladen_winterthur",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "useagain_bauteilclick",
+      "line": 31,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bauteilladen_winterthur",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_programme",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "repar_programme_partnership",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "REPAR with Bellastock, ADEME and CSTB",
+        "evidence_url": "https://experimentationsurbaines.ademe.fr/blog/ressource/programmes-repar-1-et-2/",
+        "id": "r_bellastock__verbunden_mit_akteur__cstb",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "research_programme",
+          "evidence_basis": "repar_programme_partnership",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "REPAR with Bellastock, ADEME and CSTB",
+          "evidence_url": "https://experimentationsurbaines.ademe.fr/blog/ressource/programmes-repar-1-et-2/",
+          "id": "r_bellastock__verbunden_mit_akteur__cstb",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743522,
+        "to": "cstb",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 32,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "cstb",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cstb",
+        "properties": {
+          "connection_kind": "research_programme",
+          "evidence_basis": "repar_programme_partnership",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "REPAR with Bellastock, ADEME and CSTB",
+          "evidence_url": "https://experimentationsurbaines.ademe.fr/blog/ressource/programmes-repar-1-et-2/",
+          "id": "r_cstb__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193890,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cstb",
+      "line": 33,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "opalis_directory_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_directory_peer",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Bellastock maintains Opalis listing French resellers including regional actors | peer reseller in Opalis directory co-maintained by Bellastock",
+        "evidence_url": "https://www.lemoniteur.fr/article/missionnaires-du-circulaire.2133509",
+        "id": "r_bellastock__verbunden_mit_akteur__mineka",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Bellastock maintains Opalis listing French resellers including regional actors",
+          "evidence_url": "https://www.lemoniteur.fr/article/missionnaires-du-circulaire.2133509",
+          "id": "r_bellastock__verbunden_mit_akteur__mineka",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6924397676779799282,
+        "to": "mineka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 34,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mineka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mineka",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer reseller in Opalis directory co-maintained by Bellastock",
+          "evidence_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "id": "r_mineka__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879154,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "mineka",
+      "line": 35,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "programme_maintenance_partner",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "first_party_about_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Since 2019 Bellastock joined; maintains French Opalis section",
+        "evidence_url": "https://opalis.eu/en/about",
+        "id": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "programme_maintenance_partner",
+          "evidence_basis": "first_party_about_page",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Since 2019 Bellastock joined; maintains French Opalis section",
+          "evidence_url": "https://opalis.eu/en/about",
+          "id": "r_bellastock__VERBUNDEN_MIT_AKTEUR__opalis",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        },
+        "rel_internal_id": 63,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 36,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "programme_maintenance_partner",
+          "evidence_basis": "first_party_about_page",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Since 2019 Bellastock joined; maintains French Opalis section",
+          "evidence_url": "https://opalis.eu/en/about",
+          "id": "r_opalis__VERBUNDEN_MIT_AKTEUR__bellastock",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        },
+        "rel_internal_id": 62,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 37,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "french_reuse_ecosystem",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "french_reuse_polycentric_layer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "French reuse practice and supply/reconditioning layers in SPIROU ecosystem | shared French reuse research and practice ecosystem",
+        "evidence_url": "https://www.cstb.fr/nos-offres/toutes-nos-offres/accompagner-developpement-reemploi",
+        "id": "r_bellastock__verbunden_mit_akteur__mobius_reemploi",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "french_reuse_ecosystem",
+          "evidence_basis": "french_reuse_polycentric_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "French reuse practice and supply/reconditioning layers in SPIROU ecosystem",
+          "evidence_url": "https://www.cstb.fr/nos-offres/toutes-nos-offres/accompagner-developpement-reemploi",
+          "id": "r_bellastock__verbunden_mit_akteur__mobius_reemploi",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6928901276407175602,
+        "to": "mobius_reemploi",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 38,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mobius_reemploi",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mobius_reemploi",
+        "properties": {
+          "connection_kind": "french_reuse_ecosystem",
+          "evidence_basis": "french_reuse_polycentric_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "shared French reuse research and practice ecosystem",
+          "evidence_url": "https://experimentationsurbaines.ademe.fr/blog/ressource/programmes-repar-1-et-2/",
+          "id": "r_mobius_reemploi__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1166545553186625970,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "mobius_reemploi",
+      "line": 39,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "opalis_directory_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "bellastock_opalis_maintainer_cycle_up_listed",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Bellastock codévelops Opalis France listing Cycle Up among resellers | Cycle Up in Opalis directory maintained with Bellastock",
+        "evidence_url": "https://www.lemoniteur.fr/article/missionnaires-du-circulaire.2133509",
+        "id": "r_bellastock__verbunden_mit_akteur__cycle_up",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "bellastock",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "evidence_basis": "bellastock_opalis_maintainer_cycle_up_listed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Bellastock codévelops Opalis France listing Cycle Up among resellers",
+          "evidence_url": "https://www.lemoniteur.fr/article/missionnaires-du-circulaire.2133509",
+          "id": "r_bellastock__verbunden_mit_akteur__cycle_up",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6926649476593523300,
+        "to": "cycle_up",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "bellastock",
+      "line": 40,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "cycle_up",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "cycle_up",
+        "properties": {
+          "connection_kind": "opalis_directory_mesh",
+          "evidence_basis": "bellastock_opalis_maintainer_cycle_up_listed",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Cycle Up in Opalis directory maintained with Bellastock",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+          "id": "r_cycle_up__verbunden_mit_akteur__bellastock",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164293753372973668,
+        "to": "bellastock",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cycle_up",
+      "line": 41,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "bellastock",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "programme_funder_platform",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "preuse_opalis_funding",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor match-funded by Brussels Environment under Renolution for PREUSE Opalis maintenance",
+        "evidence_url": "https://opalis.eu/en/about",
+        "id": "r_brussels_environment__verbunden_mit_akteur__opalis",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "brussels_environment",
+        "properties": {
+          "connection_kind": "programme_funder_platform",
+          "evidence_basis": "preuse_opalis_funding",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Rotor match-funded by Brussels Environment under Renolution for PREUSE Opalis maintenance",
+          "evidence_url": "https://opalis.eu/en/about",
+          "id": "r_brussels_environment__verbunden_mit_akteur__opalis",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1153034754304508643,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "brussels_environment",
+      "line": 42,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "programme_funder_platform",
+          "evidence_basis": "preuse_opalis_funding",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Brussels Environment funds Rotor PREUSE work maintaining Opalis 2024-2027",
+          "evidence_url": "https://opalis.eu/en/about",
+          "id": "r_opalis__verbunden_mit_akteur__brussels_environment",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6919894077152428771,
+        "to": "brussels_environment",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 43,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "brussels_environment",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dbu_research_consortium",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Circular City partner in DBU Reallabor at Haus der Materialisierung",
+        "evidence_url": "https://hausdermaterialisierung.org/info/",
+        "id": "r_circular_berlin__verbunden_mit_akteur__haus_der_materialisierung",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_berlin",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular City partner in DBU Reallabor at Haus der Materialisierung",
+          "evidence_url": "https://hausdermaterialisierung.org/info/",
+          "id": "r_circular_berlin__verbunden_mit_akteur__haus_der_materialisierung",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304508530,
+        "to": "haus_der_materialisierung",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_berlin",
+      "line": 44,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "haus_der_materialisierung",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "haus_der_materialisierung",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular City partner in DBU Reallabor at Haus der Materialisierung",
+          "evidence_url": "https://hausdermaterialisierung.org/info/",
+          "id": "r_haus_der_materialisierung__verbunden_mit_akteur__circular_berlin",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6919894077152428658,
+        "to": "circular_berlin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "haus_der_materialisierung",
+      "line": 45,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_berlin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dbu_research_consortium",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "shared HdM DBU consortium partners",
+        "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+        "id": "r_circular_berlin__verbunden_mit_akteur__material_mafia",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_berlin",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "shared HdM DBU consortium partners",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_circular_berlin__verbunden_mit_akteur__material_mafia",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1162041953559249522,
+        "to": "material_mafia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_berlin",
+      "line": 46,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "material_mafia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "material_mafia",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "shared HdM DBU consortium partners",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_material_mafia__verbunden_mit_akteur__circular_berlin",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164293753372934769,
+        "to": "circular_berlin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "material_mafia",
+      "line": 47,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_berlin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "hdm_research_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "hdm_dbu_consortium",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Circular City and Kunst-Stoffe shared HdM DBU consortium | Circular City and Kunst-Stoffe consortium partners in DBU Reallabor at HdM",
+        "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+        "id": "r_circular_berlin__verbunden_mit_akteur__kunst_stoffe_ev",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_berlin",
+        "properties": {
+          "connection_kind": "hdm_research_consortium",
+          "evidence_basis": "hdm_dbu_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular City and Kunst-Stoffe shared HdM DBU consortium",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_circular_berlin__verbunden_mit_akteur__kunst_stoffe_ev",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1166545553186620018,
+        "to": "kunst_stoffe_ev",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_berlin",
+      "line": 48,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "kunst_stoffe_ev",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kunst_stoffe_ev",
+        "properties": {
+          "connection_kind": "hdm_research_consortium",
+          "evidence_basis": "hdm_dbu_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular City and Kunst-Stoffe consortium partners in DBU Reallabor at HdM",
+          "evidence_url": "https://hausdermaterialisierung.org/info/",
+          "id": "r_kunst_stoffe_ev__verbunden_mit_akteur__circular_berlin",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1159790153745569758,
+        "to": "circular_berlin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "kunst_stoffe_ev",
+      "line": 49,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_berlin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dbu_research_consortium",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Circular City consortium partner with TU Berlin at HdM",
+        "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+        "id": "r_circular_berlin__verbunden_mit_akteur__tu_berlin",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_berlin",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular City consortium partner with TU Berlin at HdM",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_circular_berlin__verbunden_mit_akteur__tu_berlin",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879026,
+        "to": "tu_berlin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_berlin",
+      "line": 50,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "tu_berlin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tu_berlin",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular City consortium partner with TU Berlin at HdM",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_tu_berlin__verbunden_mit_akteur__circular_berlin",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6924397676779799154,
+        "to": "circular_berlin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "tu_berlin",
+      "line": 51,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_berlin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "swiss_reuse_media_network",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "circular_hub_use_case",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Circular Hub profiles sumami and useagain.ch Swiss reuse platform",
+        "evidence_url": "https://circularhub.ch/magazin/details/sumami-wiederverwendung-von-schweizer-baumaterialien",
+        "id": "r_circular_hub_zurich__verbunden_mit_akteur__sumami",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_hub_zurich",
+        "properties": {
+          "connection_kind": "swiss_reuse_media_network",
+          "evidence_basis": "circular_hub_use_case",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Circular Hub profiles sumami and useagain.ch Swiss reuse platform",
+          "evidence_url": "https://circularhub.ch/magazin/details/sumami-wiederverwendung-von-schweizer-baumaterialien",
+          "id": "r_circular_hub_zurich__verbunden_mit_akteur__sumami",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1155286554118193621,
+        "to": "sumami",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_hub_zurich",
+      "line": 52,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "sumami",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "sumami",
+        "properties": {
+          "connection_kind": "swiss_reuse_media_network",
+          "evidence_basis": "circular_hub_use_case",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "sumami facilitates reuse via useagain.ch; Circular Hub use case profile",
+          "evidence_url": "https://circularhub.ch/magazin/details/sumami-wiederverwendung-von-schweizer-baumaterialien",
+          "id": "r_sumami__verbunden_mit_akteur__circular_hub_zurich",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1164293753372934619,
+        "to": "circular_hub_zurich",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "sumami",
+      "line": 53,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_hub_zurich",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "reuse_matching_pilot",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "green_ai_hub_pilot",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Concular and Circular Structural Design developing matching algorithms",
+        "evidence_url": "https://www.green-ai-hub.de/en/pilot-projects/pilotproject-concular",
+        "id": "r_circular_structural_design__verbunden_mit_akteur__concular",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "circular_structural_design",
+        "properties": {
+          "connection_kind": "reuse_matching_pilot",
+          "evidence_basis": "green_ai_hub_pilot",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Concular and Circular Structural Design developing matching algorithms",
+          "evidence_url": "https://www.green-ai-hub.de/en/pilot-projects/pilotproject-concular",
+          "id": "r_circular_structural_design__verbunden_mit_akteur__concular",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 65,
+        "to": "concular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "circular_structural_design",
+      "line": 54,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "concular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "reuse_matching_pilot",
+          "evidence_basis": "green_ai_hub_pilot",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Concular and Circular Structural Design developing matching algorithms",
+          "evidence_url": "https://www.green-ai-hub.de/en/pilot-projects/pilotproject-concular",
+          "id": "r_concular__verbunden_mit_akteur__circular_structural_design",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 64,
+        "to": "circular_structural_design",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 55,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "circular_structural_design",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "cirkla_directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "sumami listed in Cirkla reuse network directory",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/sumami/",
+        "id": "r_cirkla__verbunden_mit_akteur__sumami",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "cirkla_directory",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "sumami listed in Cirkla reuse network directory",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/sumami/",
+          "id": "r_cirkla__verbunden_mit_akteur__sumami",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6922145876966113755,
+        "to": "sumami",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 56,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "sumami",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "sumami",
+        "properties": {
+          "connection_kind": "cirkla_directory",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "sumami GmbH operates useagain.ch networking platform for reuse actors",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/sumami/",
+          "id": "r_sumami__verbunden_mit_akteur__cirkla",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1155286554118193627,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "sumami",
+      "line": 57,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "ecosystem_practice_triangle",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§1 / §12",
+        "evidence_basis": "interpretive_conclusion_not_sourced_merge",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "architecture: baubüro in situ; trigger for the foundation of Zirkular.",
+        "evidence_url": "https://zirkular.net/en/project/building-k-118/",
+        "fact_label": "Interpretive_conclusion",
+        "id": "r_cirkla__verbunden_mit_akteur__zirkular",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "ecosystem_practice_triangle",
+          "dossier_section": "§1 / §12",
+          "evidence_basis": "interpretive_conclusion_not_sourced_merge",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "architecture: baubüro in situ; trigger for the foundation of Zirkular.",
+          "evidence_url": "https://zirkular.net/en/project/building-k-118/",
+          "fact_label": "Interpretive_conclusion",
+          "id": "r_cirkla__verbunden_mit_akteur__zirkular",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 4,
+        "to": "zirkular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 58,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "zirkular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "zirkular",
+        "properties": {
+          "connection_kind": "ecosystem_practice_triangle",
+          "dossier_section": "§1 / §12",
+          "evidence_basis": "interpretive_conclusion_not_sourced_merge",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "architecture: baubüro in situ; trigger for the foundation of Zirkular.",
+          "evidence_url": "https://zirkular.net/en/project/building-k-118/",
+          "fact_label": "Interpretive_conclusion",
+          "id": "r_zirkular__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 24,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "zirkular",
+      "line": 59,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/materiuum",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__materiuum",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/materiuum",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__materiuum",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 0,
+        "to": "materiuum",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 60,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "materiuum",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "materiuum",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/materiuum",
+          "fact_label": "Fact",
+          "id": "r_materiuum__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "materiuum",
+      "line": 61,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.3",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Elias Knecht - Committee member. ROTO-Reuse",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "Elias Knecht - Committee member, ROTO-Reuse",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/wiederverwerkle-wick-upcycling-gmbh",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__wick_reuse_roto_baumarkt",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.3",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Elias Knecht - Committee member. ROTO-Reuse",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Elias Knecht - Committee member, ROTO-Reuse",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/wiederverwerkle-wick-upcycling-gmbh",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__wick_reuse_roto_baumarkt",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338777618,
+        "to": "wick_reuse_roto_baumarkt",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 62,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "wick_reuse_roto_baumarkt",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "wick_reuse_roto_baumarkt",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.3",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Elias Knecht - Committee member. ROTO-Reuse",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Elias Knecht - Committee member, ROTO-Reuse",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/wiederverwerkle-wick-upcycling-gmbh",
+          "fact_label": "Fact",
+          "id": "r_wick_reuse_roto_baumarkt__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118227986,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "wick_reuse_roto_baumarkt",
+      "line": 63,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/reuzi",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__reuzi_ch",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/reuzi",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__reuzi_ch",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338777620,
+        "to": "reuzi_ch",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 64,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "reuzi_ch",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "reuzi_ch",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/reuzi",
+          "fact_label": "Fact",
+          "id": "r_reuzi_ch__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118227988,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "reuzi_ch",
+      "line": 65,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.2",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+        "evidence_origin": "dossier_anchored",
+        "evidence_quote": "Swiss reuse directory of actors and projects",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/gruner-ag",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__gruner_reuse_platform",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/gruner-ag",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__gruner_reuse_platform",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6931153076220889110,
+        "to": "gruner_reuse_platform",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 66,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "gruner_reuse_platform",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "gruner_reuse_platform",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§2.2",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Swiss reuse directory; includes companies, experts, architects, recycling centers, universities, and projects.",
+          "evidence_origin": "dossier_anchored",
+          "evidence_quote": "Swiss reuse directory of actors and projects",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/gruner-ag",
+          "fact_label": "Fact",
+          "id": "r_gruner_reuse_platform__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1168797353000339478,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "gruner_reuse_platform",
+      "line": 67,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "committee_member_affiliation",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§2.3",
+        "evidence_basis": "first_party_association_page",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Olivier de Perrot - Committee member. Salza",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "Olivier de Perrot - Committee member, Salza",
+        "evidence_url": "https://www.cirkla.ch/en/lassociation-cirkla/",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__salza",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "committee_member_affiliation",
+          "dossier_section": "§2.3",
+          "evidence_basis": "first_party_association_page",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Olivier de Perrot - Committee member. Salza",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Olivier de Perrot - Committee member, Salza",
+          "evidence_url": "https://www.cirkla.ch/en/lassociation-cirkla/",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__salza",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338782326,
+        "to": "salza",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 68,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "salza",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "salza",
+        "properties": {
+          "connection_kind": "committee_member_affiliation",
+          "dossier_section": "§2.3",
+          "evidence_basis": "first_party_association_page",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Olivier de Perrot - Committee member. Salza",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "Olivier de Perrot - Committee member, Salza",
+          "evidence_url": "https://www.cirkla.ch/en/lassociation-cirkla/",
+          "fact_label": "Fact",
+          "id": "r_salza__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118232694,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "salza",
+      "line": 69,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "dossier_section": "§5",
+        "evidence_basis": "cirkla_directory_profile",
+        "evidence_confidence": "belegt",
+        "evidence_excerpt": "Useagain.ch est une plateforme de mise en relation pour matériaux de construction et savoir-faire.",
+        "evidence_origin": "live_url_capture",
+        "evidence_quote": "plateforme de mise en relation pour matériaux de construction",
+        "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/useagain",
+        "fact_label": "Fact",
+        "id": "r_cirkla__verbunden_mit_akteur__useagain_bauteilclick",
+        "review_run": "swiss_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "swiss_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cirkla",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§5",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Useagain.ch est une plateforme de mise en relation pour matériaux de construction et savoir-faire.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "plateforme de mise en relation pour matériaux de construction",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/useagain",
+          "fact_label": "Fact",
+          "id": "r_cirkla__verbunden_mit_akteur__useagain_bauteilclick",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338782330,
+        "to": "useagain_bauteilclick",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cirkla",
+      "line": 70,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "useagain_bauteilclick",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "useagain_bauteilclick",
+        "properties": {
+          "connection_kind": "directory",
+          "dossier_section": "§5",
+          "evidence_basis": "cirkla_directory_profile",
+          "evidence_confidence": "belegt",
+          "evidence_excerpt": "Useagain.ch est une plateforme de mise en relation pour matériaux de construction et savoir-faire.",
+          "evidence_origin": "live_url_capture",
+          "evidence_quote": "plateforme de mise en relation pour matériaux de construction",
+          "evidence_url": "https://www.cirkla.ch/en/le-reseau-du-reemploi/lannuaire/experts/useagain",
+          "fact_label": "Fact",
+          "id": "r_useagain_bauteilclick__verbunden_mit_akteur__cirkla",
+          "review_run": "swiss_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "swiss_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118232698,
+        "to": "cirkla",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "useagain_bauteilclick",
+      "line": 71,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cirkla",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_policy_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_reuse_practice_cluster",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "peer Dutch urban mining and municipal reuse pilots | national circular construction and urban mining practice layer",
+        "evidence_url": "https://newhorizon.nl/",
+        "id": "r_city_of_utrecht__verbunden_mit_akteur__new_horizon_urban_mining",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "city_of_utrecht",
+        "properties": {
+          "connection_kind": "dutch_reuse_policy_mesh",
+          "evidence_basis": "dutch_reuse_practice_cluster",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch urban mining and municipal reuse pilots",
+          "evidence_url": "https://newhorizon.nl/",
+          "id": "r_city_of_utrecht__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879140,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "city_of_utrecht",
+      "line": 72,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "connection_kind": "dutch_reuse_policy_mesh",
+          "evidence_basis": "dutch_reuse_practice_cluster",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "national circular construction and urban mining practice layer",
+          "evidence_url": "https://www.government.nl/topics/sustainable-economy/circular-economy-by-2050",
+          "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__city_of_utrecht",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6924397676779799268,
+        "to": "city_of_utrecht",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 73,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "city_of_utrecht",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "municipal_reuse_pilot_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Utrecht Trechterweide reuse centre PREUSE pilot; NL material passport and municipal reuse layer | Utrecht PREUSE pilot expanding municipal reuse; Madaster NL passport infrastructure peer layer",
+        "evidence_url": "https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979",
+        "id": "r_city_of_utrecht__verbunden_mit_akteur__madaster",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "city_of_utrecht",
+        "properties": {
+          "connection_kind": "municipal_reuse_pilot_mesh",
+          "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Utrecht Trechterweide reuse centre PREUSE pilot; NL material passport and municipal reuse layer",
+          "evidence_url": "https://preuse.nweurope.eu/blog/preuse-news-64/official-opening-of-the-utrecht-reuse-centre-979",
+          "id": "r_city_of_utrecht__verbunden_mit_akteur__madaster",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193892,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "city_of_utrecht",
+      "line": 74,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "municipal_reuse_pilot_mesh",
+          "evidence_basis": "preuse_utrecht_municipal_reuse_pilot",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Utrecht PREUSE pilot expanding municipal reuse; Madaster NL passport infrastructure peer layer",
+          "evidence_url": "https://www.nweurope.eu/blog/our-projects-2021-2027-90/public-reuse-centres-a-step-towards-circular-construction-771",
+          "id": "r_madaster__verbunden_mit_akteur__city_of_utrecht",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743524,
+        "to": "city_of_utrecht",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 75,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "city_of_utrecht",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "resource_passport_ecosystem",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "building_resource_passport_cases",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "building-resource passports and circularity documentation",
+        "evidence_url": "https://madaster.de/",
+        "id": "r_concular__verbunden_mit_akteur__madaster_epea",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "resource_passport_ecosystem",
+          "evidence_basis": "building_resource_passport_cases",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "building-resource passports and circularity documentation",
+          "evidence_url": "https://madaster.de/",
+          "id": "r_concular__verbunden_mit_akteur__madaster_epea",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338748311,
+        "to": "madaster_epea",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 76,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "madaster_epea",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster_epea",
+        "properties": {
+          "connection_kind": "resource_passport_ecosystem",
+          "evidence_basis": "building_resource_passport_cases",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "building-resource passports and circularity documentation",
+          "evidence_url": "https://madaster.de/",
+          "id": "r_madaster_epea__verbunden_mit_akteur__concular",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118198679,
+        "to": "concular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster_epea",
+      "line": 77,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "concular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "ecosystem_peer_resource_passport",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dgnb_parallel_passport_providers",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "ecosystem peer passport tools; not formal joint venture",
+        "evidence_url": "https://madaster.de/",
+        "id": "r_concular__verbunden_mit_akteur__madaster",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "concular",
+        "properties": {
+          "connection_kind": "ecosystem_peer_resource_passport",
+          "evidence_basis": "dgnb_parallel_passport_providers",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "ecosystem peer passport tools; not formal joint venture",
+          "evidence_url": "https://madaster.de/",
+          "id": "r_concular__verbunden_mit_akteur__madaster",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 66,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "concular",
+      "line": 78,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "ecosystem_peer_resource_passport",
+          "evidence_basis": "dgnb_parallel_passport_providers",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "ecosystem peer passport tools; not formal joint venture",
+          "evidence_url": "https://madaster.de/",
+          "id": "r_madaster__verbunden_mit_akteur__concular",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 67,
+        "to": "concular",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 79,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "concular",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "spirou_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "spirou_programme_partner",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "SPIROU partners include Mobius Réemploi",
+        "evidence_url": "https://www.cstb.fr/nos-offres/toutes-nos-offres/accompagner-developpement-reemploi",
+        "id": "r_cstb__verbunden_mit_akteur__mobius_reemploi",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cstb",
+        "properties": {
+          "connection_kind": "spirou_consortium",
+          "evidence_basis": "spirou_programme_partner",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "SPIROU partners include Mobius Réemploi",
+          "evidence_url": "https://www.cstb.fr/nos-offres/toutes-nos-offres/accompagner-developpement-reemploi",
+          "id": "r_cstb__verbunden_mit_akteur__mobius_reemploi",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879138,
+        "to": "mobius_reemploi",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cstb",
+      "line": 80,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mobius_reemploi",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mobius_reemploi",
+        "properties": {
+          "connection_kind": "spirou_consortium",
+          "evidence_basis": "spirou_programme_partner",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Mobius Réemploi listed SPIROU partner with CSTB",
+          "evidence_url": "https://www.cstb.fr/nos-offres/toutes-nos-offres/accompagner-developpement-reemploi",
+          "id": "r_mobius_reemploi__verbunden_mit_akteur__cstb",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304514482,
+        "to": "cstb",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "mobius_reemploi",
+      "line": 81,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cstb",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "opalis_directory_peer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_directory_peer",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "peer French marketplace/reseller actors on Opalis | peer professional resellers in ADEME/FCRBE Opalis study",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+        "id": "r_cycle_up__verbunden_mit_akteur__mineka",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cycle_up",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer French marketplace/reseller actors on Opalis",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+          "id": "r_cycle_up__verbunden_mit_akteur__mineka",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6928901276407169778,
+        "to": "mineka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cycle_up",
+      "line": 82,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "mineka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "mineka",
+        "properties": {
+          "connection_kind": "opalis_directory_peer",
+          "evidence_basis": "opalis_directory_peer",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "peer professional resellers in ADEME/FCRBE Opalis study",
+          "evidence_url": "https://librairie.ademe.fr/economie-circulaire-et-dechets/5516-reemploi-des-materiaux-de-construction.html",
+          "id": "r_mineka__verbunden_mit_akteur__cycle_up",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1162041953559249650,
+        "to": "cycle_up",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "mineka",
+      "line": 83,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cycle_up",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "supplier_listing",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_supplier_directory",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "marketplace and reconditioning workshops listed on Opalis",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+        "id": "r_cycle_up__verbunden_mit_akteur__opalis",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "cycle_up",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "marketplace and reconditioning workshops listed on Opalis",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+          "id": "r_cycle_up__verbunden_mit_akteur__opalis",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931917924,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "cycle_up",
+      "line": 84,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Cycle Up listed on Opalis supplier directory since 2018",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/cycle",
+          "id": "r_opalis__verbunden_mit_akteur__cycle_up",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6924397676779838052,
+        "to": "cycle_up",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 85,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "cycle_up",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_industry_partner",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "eth_reuse_research_collaboration",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "ETH Zurich develops reuse scanning methods with Sumami and useagain tool",
+        "evidence_url": "https://sustainable-digital-construction.ethz.ch/en/reuse",
+        "id": "r_eth_zuerich__verbunden_mit_akteur__sumami",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "eth_zuerich",
+        "properties": {
+          "connection_kind": "research_industry_partner",
+          "evidence_basis": "eth_reuse_research_collaboration",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "ETH Zurich develops reuse scanning methods with Sumami and useagain tool",
+          "evidence_url": "https://sustainable-digital-construction.ethz.ch/en/reuse",
+          "id": "r_eth_zuerich__verbunden_mit_akteur__sumami",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6926649476593484251,
+        "to": "sumami",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "eth_zuerich",
+      "line": 86,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "sumami",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "sumami",
+        "properties": {
+          "connection_kind": "research_industry_partner",
+          "evidence_basis": "eth_reuse_research_collaboration",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Together with ETH Zurich, Sumami develops methods to scan buildings and useagain platform",
+          "evidence_url": "https://sustainable-digital-construction.ethz.ch/en/reuse",
+          "id": "r_sumami__verbunden_mit_akteur__eth_zuerich",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1159790153745564123,
+        "to": "eth_zuerich",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "sumami",
+      "line": 87,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "eth_zuerich",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "hdm_tenant",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "hdm_on_site_initiative",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Material Mafia consortium partner in DBU Reallabor at HdM | on-site MaterialMafia warehouse at Haus der Materialisierung",
+        "evidence_url": "https://hausdermaterialisierung.org/info/",
+        "id": "r_haus_der_materialisierung__verbunden_mit_akteur__material_mafia",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "haus_der_materialisierung",
+        "properties": {
+          "connection_kind": "hdm_tenant",
+          "evidence_basis": "hdm_on_site_initiative",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Material Mafia consortium partner in DBU Reallabor at HdM",
+          "evidence_url": "https://hausdermaterialisierung.org/info/",
+          "id": "r_haus_der_materialisierung__verbunden_mit_akteur__material_mafia",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6919894077152428657,
+        "to": "material_mafia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "haus_der_materialisierung",
+      "line": 88,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "material_mafia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "material_mafia",
+        "properties": {
+          "connection_kind": "hdm_tenant",
+          "evidence_basis": "hdm_on_site_initiative",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "on-site MaterialMafia warehouse at Haus der Materialisierung",
+          "evidence_url": "https://hausdermaterialisierung.org/",
+          "id": "r_material_mafia__verbunden_mit_akteur__haus_der_materialisierung",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304508529,
+        "to": "haus_der_materialisierung",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "material_mafia",
+      "line": 89,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "haus_der_materialisierung",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "hdm_operator",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "hdm_reuse_centre_operator",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Kunst-Stoffe e.V. als Projektleitung des Zentrums für klimaschonende Ressourcennutzung | Projektleitung Zentrum für klimaschonende Ressourcennutzung im HdM",
+        "evidence_url": "https://hausdermaterialisierung.org/info/",
+        "id": "r_haus_der_materialisierung__verbunden_mit_akteur__kunst_stoffe_ev",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "haus_der_materialisierung",
+        "properties": {
+          "connection_kind": "hdm_operator",
+          "evidence_basis": "hdm_reuse_centre_operator",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Kunst-Stoffe e.V. als Projektleitung des Zentrums für klimaschonende Ressourcennutzung",
+          "evidence_url": "https://hausdermaterialisierung.org/info/",
+          "id": "r_haus_der_materialisierung__verbunden_mit_akteur__kunst_stoffe_ev",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6919894077152434142,
+        "to": "kunst_stoffe_ev",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "haus_der_materialisierung",
+      "line": 90,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "kunst_stoffe_ev",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "kunst_stoffe_ev",
+        "properties": {
+          "connection_kind": "hdm_operator",
+          "evidence_basis": "hdm_reuse_centre_operator",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Projektleitung Zentrum für klimaschonende Ressourcennutzung im HdM",
+          "evidence_url": "https://kunst-stoffe-berlin.de/haus-der-materialisierung/",
+          "id": "r_kunst_stoffe_ev__verbunden_mit_akteur__haus_der_materialisierung",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304514014,
+        "to": "haus_der_materialisierung",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "kunst_stoffe_ev",
+      "line": 91,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "haus_der_materialisierung",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_lab",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "university_research_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "real-world laboratory for material reuse structures",
+        "evidence_url": "https://www.tu.berlin/en/circulareconomy/research/hdm",
+        "id": "r_haus_der_materialisierung__verbunden_mit_akteur__tu_berlin",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "haus_der_materialisierung",
+        "properties": {
+          "connection_kind": "research_lab",
+          "evidence_basis": "university_research_page",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "real-world laboratory for material reuse structures",
+          "evidence_url": "https://www.tu.berlin/en/circulareconomy/research/hdm",
+          "id": "r_haus_der_materialisierung__verbunden_mit_akteur__tu_berlin",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193763,
+        "to": "tu_berlin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "haus_der_materialisierung",
+      "line": 92,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "tu_berlin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tu_berlin",
+        "properties": {
+          "connection_kind": "research_lab",
+          "evidence_basis": "university_research_page",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "real-world laboratory for material reuse structures",
+          "evidence_url": "https://www.tu.berlin/en/circulareconomy/research/hdm",
+          "id": "r_tu_berlin__verbunden_mit_akteur__haus_der_materialisierung",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743395,
+        "to": "haus_der_materialisierung",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "tu_berlin",
+      "line": 93,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "haus_der_materialisierung",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "project_commissioner",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "rotor_project_commissioner",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Immobel commissioner; Rotor Deconstruction operator on OXY project",
+        "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "id": "r_immobel__verbunden_mit_akteur__rotordc",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "immobel",
+        "properties": {
+          "connection_kind": "project_commissioner",
+          "evidence_basis": "rotor_project_commissioner",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Immobel commissioner; Rotor Deconstruction operator on OXY project",
+          "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+          "id": "r_immobel__verbunden_mit_akteur__rotordc",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1155286554118198676,
+        "to": "rotordc",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "immobel",
+      "line": 94,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rotordc",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "connection_kind": "project_commissioner",
+          "evidence_basis": "rotor_project_commissioner",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Immobel commissioner on OXY Centre Monnaie deconstruction project",
+          "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+          "id": "r_rotordc__verbunden_mit_akteur__immobel",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6917642277338748308,
+        "to": "immobel",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "rotordc",
+      "line": 95,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "immobel",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_marketplace_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_marketplace_supply_chain",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "urban mining supply meets national circular marketplace | peer Dutch marketplace and urban-mining supply layers",
+        "evidence_url": "https://newhorizon.nl/",
+        "id": "r_insert_marketplace__verbunden_mit_akteur__new_horizon_urban_mining",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_marketplace_supply_chain",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "urban mining supply meets national circular marketplace",
+          "evidence_url": "https://newhorizon.nl/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304547433,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 96,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_marketplace_supply_chain",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch marketplace and urban-mining supply layers",
+          "evidence_url": "https://www.insert.nl/producten/insert-marktplaats/",
+          "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__insert_marketplace",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879002,
+        "to": "insert_marketplace",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 97,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "insert_marketplace",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_marketplace_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_marketplace_peer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "peer Dutch marketplace actors for reclaimed materials | peer national circular construction marketplaces",
+        "evidence_url": "https://www.madopt.nl/",
+        "id": "r_insert_marketplace__verbunden_mit_akteur__repurpose",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch marketplace actors for reclaimed materials",
+          "evidence_url": "https://www.madopt.nl/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__repurpose",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164293753372973673,
+        "to": "repurpose",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 98,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "repurpose",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "repurpose",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer national circular construction marketplaces",
+          "evidence_url": "https://www.insert.nl/producten/insert-marktplaats/",
+          "id": "r_repurpose__verbunden_mit_akteur__insert_marketplace",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879178,
+        "to": "insert_marketplace",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "repurpose",
+      "line": 99,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "insert_marketplace",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_marketplace_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_design_marketplace_layer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "peer Dutch design and marketplace actors | harvest method and national marketplace for reclaimed materials",
+        "evidence_url": "https://www.insert.nl/producten/insert-marktplaats/",
+        "id": "r_insert_marketplace__verbunden_mit_akteur__superuse_studios_2012architecten",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_design_marketplace_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch design and marketplace actors",
+          "evidence_url": "https://www.insert.nl/producten/insert-marktplaats/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__superuse_studios_2012architecten",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118232681,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 100,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "superuse_studios_2012architecten",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_design_marketplace_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "harvest method and national marketplace for reclaimed materials",
+          "evidence_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "id": "r_superuse_studios_2012architecten__verbunden_mit_akteur__insert_marketplace",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931884301,
+        "to": "insert_marketplace",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "superuse_studios_2012architecten",
+      "line": 101,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "insert_marketplace",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "formal_partnership",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "madaster_insert_partner_agreement",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Insert and Madaster Services signed partner agreement; automatic coupling between Madaster and Insert marketplace",
+        "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+        "id": "r_insert_marketplace__verbunden_mit_akteur__madaster",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "insert_marketplace",
+        "properties": {
+          "connection_kind": "formal_partnership",
+          "evidence_basis": "madaster_insert_partner_agreement",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Insert and Madaster Services signed partner agreement; automatic coupling between Madaster and Insert marketplace",
+          "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+          "id": "r_insert_marketplace__verbunden_mit_akteur__madaster",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745603177,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "insert_marketplace",
+      "line": 102,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "formal_partnership",
+          "evidence_basis": "madaster_insert_partner_agreement",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Madaster Platform users to sell registered materials on Insert marketplace",
+          "evidence_url": "https://madaster.com/inspiration/partnership-between-insert-and-madaster/",
+          "id": "r_madaster__verbunden_mit_akteur__insert_marketplace",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6926649476593523305,
+        "to": "insert_marketplace",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 103,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "insert_marketplace",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "hdm_research_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "hdm_dbu_consortium",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Kunst-Stoffe and Material Mafia partners in TU Berlin HdM Reallabor | shared HdM DBU Reallabor consortium partners at Haus der Materialisierung",
+        "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+        "id": "r_kunst_stoffe_ev__verbunden_mit_akteur__material_mafia",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "kunst_stoffe_ev",
+        "properties": {
+          "connection_kind": "hdm_research_consortium",
+          "evidence_basis": "hdm_dbu_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Kunst-Stoffe and Material Mafia partners in TU Berlin HdM Reallabor",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_kunst_stoffe_ev__verbunden_mit_akteur__material_mafia",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1157538353931884510,
+        "to": "material_mafia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "kunst_stoffe_ev",
+      "line": 104,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "material_mafia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "material_mafia",
+        "properties": {
+          "connection_kind": "hdm_research_consortium",
+          "evidence_basis": "hdm_dbu_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "shared HdM DBU Reallabor consortium partners at Haus der Materialisierung",
+          "evidence_url": "https://hausdermaterialisierung.org/info/",
+          "id": "r_material_mafia__verbunden_mit_akteur__kunst_stoffe_ev",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1166545553186620017,
+        "to": "kunst_stoffe_ev",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "material_mafia",
+      "line": 105,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "kunst_stoffe_ev",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_data_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_urban_mining_passport_layer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "shared Dutch circular construction material visibility stack | urban mining supply chain and material passport data infrastructure",
+        "evidence_url": "https://www.circonl.nl/case/urban-mining-new-horizon/",
+        "id": "r_madaster__verbunden_mit_akteur__new_horizon_urban_mining",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "evidence_basis": "dutch_urban_mining_passport_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "shared Dutch circular construction material visibility stack",
+          "evidence_url": "https://www.circonl.nl/case/urban-mining-new-horizon/",
+          "id": "r_madaster__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 81,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 106,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "evidence_basis": "dutch_urban_mining_passport_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "urban mining supply chain and material passport data infrastructure",
+          "evidence_url": "https://madaster.com/material-passport/",
+          "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__madaster",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745564250,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 107,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_data_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_market_data_layer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "demand-driven marketplace and passport documentation layer | marketplace matching and material passport data infrastructure",
+        "evidence_url": "https://www.madopt.nl/",
+        "id": "r_madaster__verbunden_mit_akteur__repurpose",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "evidence_basis": "dutch_market_data_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "demand-driven marketplace and passport documentation layer",
+          "evidence_url": "https://www.madopt.nl/",
+          "id": "r_madaster__verbunden_mit_akteur__repurpose",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6931153076220855050,
+        "to": "repurpose",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 108,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "repurpose",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "repurpose",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "evidence_basis": "dutch_market_data_layer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "marketplace matching and material passport data infrastructure",
+          "evidence_url": "https://madaster.com/material-passport/",
+          "id": "r_repurpose__verbunden_mit_akteur__madaster",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1162041953559249674,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "repurpose",
+      "line": 109,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "platform_family",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "epea_madaster_platform_integration",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "EPEA material database linked to Madaster Platform; Madaster operates in Germany and Netherlands | Madaster international platform with Germany branch; EPEA partnership for material passports",
+        "evidence_url": "https://madaster.com/inspiration/epea-and-madaster-simplify-measuring-circularity-within-the-built-environment/",
+        "id": "r_madaster__verbunden_mit_akteur__madaster_epea",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "platform_family",
+          "evidence_basis": "epea_madaster_platform_integration",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "EPEA material database linked to Madaster Platform; Madaster operates in Germany and Netherlands",
+          "evidence_url": "https://madaster.com/inspiration/epea-and-madaster-simplify-measuring-circularity-within-the-built-environment/",
+          "id": "r_madaster__verbunden_mit_akteur__madaster_epea",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6928901276407174551,
+        "to": "madaster_epea",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 110,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "madaster_epea",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "madaster_epea",
+        "properties": {
+          "connection_kind": "platform_family",
+          "evidence_basis": "epea_madaster_platform_integration",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Madaster international platform with Germany branch; EPEA partnership for material passports",
+          "evidence_url": "https://madaster.de/en/our-purpose/",
+          "id": "r_madaster_epea__verbunden_mit_akteur__madaster",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1166545553186624919,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster_epea",
+      "line": 111,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_data_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_design_passport_ecosystem",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "harvest-map design culture and material passport infrastructure | Madaster started 2017 Netherlands; design-to-passport reuse loop",
+        "evidence_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+        "id": "r_madaster__verbunden_mit_akteur__superuse_studios_2012architecten",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "madaster",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "evidence_basis": "dutch_design_passport_ecosystem",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "harvest-map design culture and material passport infrastructure",
+          "evidence_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "id": "r_madaster__verbunden_mit_akteur__superuse_studios_2012architecten",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6926649476593489677,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "madaster",
+      "line": 112,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "superuse_studios_2012architecten",
+        "properties": {
+          "connection_kind": "dutch_reuse_data_mesh",
+          "evidence_basis": "dutch_design_passport_ecosystem",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "Madaster started 2017 Netherlands; design-to-passport reuse loop",
+          "evidence_url": "https://madaster.de/en/inspiration/position-paper/",
+          "id": "r_superuse_studios_2012architecten__verbunden_mit_akteur__madaster",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745569549,
+        "to": "madaster",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "superuse_studios_2012architecten",
+      "line": 113,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "madaster",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "research_consortium",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dbu_research_consortium",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Material Mafia partner in TU Berlin HdM Reallabor",
+        "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+        "id": "r_material_mafia__verbunden_mit_akteur__tu_berlin",
+        "review_run": "germany_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "germany_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "material_mafia",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Material Mafia partner in TU Berlin HdM Reallabor",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_material_mafia__verbunden_mit_akteur__tu_berlin",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1157538353931879025,
+        "to": "tu_berlin",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "material_mafia",
+      "line": 114,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "tu_berlin",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "tu_berlin",
+        "properties": {
+          "connection_kind": "research_consortium",
+          "evidence_basis": "dbu_research_consortium",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Material Mafia partner in TU Berlin HdM Reallabor",
+          "evidence_url": "https://www.tu.berlin/circulareconomy/forschung/hdm",
+          "id": "r_tu_berlin__verbunden_mit_akteur__material_mafia",
+          "review_run": "germany_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "germany_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6924397676779799153,
+        "to": "material_mafia",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "tu_berlin",
+      "line": 115,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "material_mafia",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "supplier_listing",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "opalis_supplier_directory",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "listed on Opalis supplier directory",
+        "evidence_url": "https://opalis.eu/fr/fournisseurs/mineka",
+        "id": "r_mineka__verbunden_mit_akteur__opalis",
+        "review_run": "france_reuse_bubble_2026_06_05",
+        "review_status": "evidence_hardening_2026_06_06",
+        "source_scope": "france_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "mineka",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "listed on Opalis supplier directory",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/mineka",
+          "id": "r_mineka__verbunden_mit_akteur__opalis",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193906,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "mineka",
+      "line": 116,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "supplier_listing",
+          "evidence_basis": "opalis_supplier_directory",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Minéka listed supplier in Villeurbanne with collecte and Minéstock",
+          "evidence_url": "https://opalis.eu/fr/fournisseurs/mineka",
+          "id": "r_opalis__verbunden_mit_akteur__mineka",
+          "review_run": "france_reuse_bubble_2026_06_05",
+          "review_status": "evidence_hardening_2026_06_06",
+          "source_scope": "france_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6917642277338743538,
+        "to": "mineka",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 117,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "mineka",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_marketplace_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_marketplace_peer",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "peer Dutch reuse supply and demand platforms | demand-driven and supply-driven Dutch reuse marketplace layers",
+        "evidence_url": "https://repurpose.nl/",
+        "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__repurpose",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch reuse supply and demand platforms",
+          "evidence_url": "https://repurpose.nl/",
+          "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__repurpose",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 6919894077152428810,
+        "to": "repurpose",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 118,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "repurpose",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "repurpose",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_marketplace_peer",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "demand-driven and supply-driven Dutch reuse marketplace layers",
+          "evidence_url": "https://www.madopt.nl/",
+          "id": "r_repurpose__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304508682,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "repurpose",
+      "line": 119,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "oogstkaart_lineage",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "oogstkaart_transfer_new_horizon",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "continued Oogstkaart platform from Superuse since 2020",
+        "evidence_url": "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/",
+        "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__superuse_studios_2012architecten",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "new_horizon_urban_mining",
+        "properties": {
+          "connection_kind": "oogstkaart_lineage",
+          "evidence_basis": "oogstkaart_transfer_new_horizon",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "continued Oogstkaart platform from Superuse since 2020",
+          "evidence_url": "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/",
+          "id": "r_new_horizon_urban_mining__verbunden_mit_akteur__superuse_studios_2012architecten",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1155286554118193754,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "new_horizon_urban_mining",
+      "line": 120,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "superuse_studios_2012architecten",
+        "properties": {
+          "connection_kind": "oogstkaart_lineage",
+          "evidence_basis": "oogstkaart_transfer_new_horizon",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Oogstkaart sold to New Horizon; Superuse continues materialization advice",
+          "evidence_url": "https://www.superuse-studios.com/publication/oogstkaart-nl-adopted-by-new-horizon/",
+          "id": "r_superuse_studios_2012architecten__verbunden_mit_akteur__new_horizon_urban_mining",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1153034754304513805,
+        "to": "new_horizon_urban_mining",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "superuse_studios_2012architecten",
+      "line": 121,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "new_horizon_urban_mining",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "directory_dealer",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "first_party_dealer_page",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Rotor Deconstruction listed dealer since 2016",
+        "evidence_url": "https://opalis.eu/en/dealers/rotor-deconstruction",
+        "id": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc",
+        "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "rotor_dc_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "opalis",
+        "properties": {
+          "connection_kind": "directory_dealer",
+          "evidence_basis": "first_party_dealer_page",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Rotor Deconstruction listed dealer since 2016",
+          "evidence_url": "https://opalis.eu/en/dealers/rotor-deconstruction",
+          "id": "r_opalis__VERBUNDEN_MIT_AKTEUR__rotordc",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        },
+        "rel_internal_id": 49,
+        "to": "rotordc",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "opalis",
+      "line": 122,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "rotordc",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "connection_kind": "directory_dealer",
+          "evidence_basis": "first_party_dealer_page",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Rotor Deconstruction listed dealer since 2016",
+          "evidence_url": "https://opalis.eu/en/dealers/rotor-deconstruction",
+          "id": "r_rotordc__VERBUNDEN_MIT_AKTEUR__opalis",
+          "review_run": "rotor_dc_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "rotor_dc_reuse_bubble_intake"
+        },
+        "rel_internal_id": 61,
+        "to": "opalis",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "rotordc",
+      "line": 123,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "opalis",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "dutch_reuse_marketplace_mesh",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "dutch_reuse_practice_mesh",
+        "evidence_confidence": "teilweise_belegt",
+        "evidence_quote": "shared Dutch harvest and marketplace reuse infrastructure | peer Dutch reuse consultancy and marketplace actors",
+        "evidence_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+        "id": "r_repurpose__verbunden_mit_akteur__superuse_studios_2012architecten",
+        "review_run": "netherlands_reuse_bubble_2026_06_05",
+        "review_status": "evidence_backed_pending_apply",
+        "source_scope": "netherlands_reuse_bubble_intake"
+      },
+      "before": {
+        "count": 1,
+        "from": "repurpose",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_reuse_practice_mesh",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "shared Dutch harvest and marketplace reuse infrastructure",
+          "evidence_url": "https://www.superuse-studios.com/publication/harvest-collect-re-use/",
+          "id": "r_repurpose__verbunden_mit_akteur__superuse_studios_2012architecten",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1159790153745564426,
+        "to": "superuse_studios_2012architecten",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "repurpose",
+      "line": 124,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "superuse_studios_2012architecten",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "superuse_studios_2012architecten",
+        "properties": {
+          "connection_kind": "dutch_reuse_marketplace_mesh",
+          "evidence_basis": "dutch_reuse_practice_mesh",
+          "evidence_confidence": "teilweise_belegt",
+          "evidence_quote": "peer Dutch reuse consultancy and marketplace actors",
+          "evidence_url": "https://repurpose.nl/",
+          "id": "r_superuse_studios_2012architecten__verbunden_mit_akteur__repurpose",
+          "review_run": "netherlands_reuse_bubble_2026_06_05",
+          "review_status": "evidence_backed_pending_apply",
+          "source_scope": "netherlands_reuse_bubble_intake"
+        },
+        "rel_internal_id": 1164293753372940045,
+        "to": "repurpose",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "superuse_studios_2012architecten",
+      "line": 125,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "repurpose",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "after_properties": {
+        "connection_kind": "project_commissioner",
+        "dedup_run": "cross_bubble_dedup_2026_06_06",
+        "evidence_basis": "rotor_project_commissioner",
+        "evidence_confidence": "belegt",
+        "evidence_quote": "Whitewood commissioner on OXY Centre Monnaie deconstruction project",
+        "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "id": "r_rotordc__verbunden_mit_akteur__whitewood",
+        "review_run": "cross_bubble_extension_2026_06_06",
+        "review_status": "evidence_on_properties",
+        "source_scope": "cross_bubble_extension"
+      },
+      "before": {
+        "count": 1,
+        "from": "rotordc",
+        "properties": {
+          "connection_kind": "project_commissioner",
+          "evidence_basis": "rotor_project_commissioner",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Whitewood commissioner on OXY Centre Monnaie deconstruction project",
+          "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+          "id": "r_rotordc__verbunden_mit_akteur__whitewood",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 6917642277338748307,
+        "to": "whitewood",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "rotordc",
+      "line": 126,
+      "op": "set_rel_properties",
+      "status": "would_update_rel",
+      "to": "whitewood",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    },
+    {
+      "before": {
+        "count": 1,
+        "from": "whitewood",
+        "properties": {
+          "connection_kind": "project_commissioner",
+          "evidence_basis": "rotor_project_commissioner",
+          "evidence_confidence": "belegt",
+          "evidence_quote": "Whitewood commissioner; Rotor Deconstruction operator on OXY project",
+          "evidence_url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+          "id": "r_whitewood__verbunden_mit_akteur__rotordc",
+          "review_run": "cross_bubble_extension_2026_06_06",
+          "review_status": "evidence_on_properties",
+          "source_scope": "cross_bubble_extension"
+        },
+        "rel_internal_id": 1155286554118198675,
+        "to": "rotordc",
+        "type": "VERBUNDEN_MIT_AKTEUR"
+      },
+      "from": "whitewood",
+      "line": 127,
+      "op": "delete_rel",
+      "status": "would_delete_rel",
+      "to": "rotordc",
+      "type": "VERBUNDEN_MIT_AKTEUR"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "records": 127,
+    "would_delete_rel": 64,
+    "would_update_rel": 63
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "confirmation_required": "APPLY phase3_supply_chain.patch.jsonl TO mit-bestand",
+  "counts_after_actual": null,
+  "counts_after_expected": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "counts_before": {
+    "nodes": 2335,
+    "relationships": 15451
+  },
+  "database": "mit-bestand",
+  "dry_run": true,
+  "generated_at_utc": "2026-06-05T21:36:34.422139+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-06-05_swiss_reuse_bubble\\patches\\phase3_supply_chain.patch.jsonl",
+  "records": [
+    {
+      "from": "gruner_reuse_platform",
+      "line": 1,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_basel_overall"
+    },
+    {
+      "from": "bauteilboerse_basel_overall",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "gruner_reuse_platform"
+    },
+    {
+      "from": "bauteilboerse_basel_overall",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "useagain_bauteilclick"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilboerse_basel_overall"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilladen_winterthur"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "useagain_bauteilclick"
+    },
+    {
+      "from": "cirkla",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "wick_reuse_roto_baumarkt"
+    },
+    {
+      "from": "wick_reuse_roto_baumarkt",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "cirkla"
+    },
+    {
+      "from": "sumami",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "useagain_bauteilclick"
+    },
+    {
+      "from": "cirkla",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "c33_circular_construction_catalyst"
+    },
+    {
+      "from": "cirkla",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_hub_zurich"
+    },
+    {
+      "from": "cirkla",
+      "line": 12,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "circular_economy_switzerland"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 12,
+    "records": 12
+  }
+}

@@ -1,0 +1,3977 @@
+{
+  "confirmation_required": "APPLY bauteilboersen_integration_graph_only.patch.jsonl TO mit-bestand",
+  "counts_after_actual": {
+    "nodes": 39548,
+    "relationships": 81064
+  },
+  "counts_after_expected": {
+    "nodes": 39548,
+    "relationships": 81064
+  },
+  "counts_before": {
+    "nodes": 39517,
+    "relationships": 80675
+  },
+  "database": "mit-bestand",
+  "dry_run": false,
+  "generated_at_utc": "2026-05-28T11:01:55.838446+00:00",
+  "patch": "_neo4j\\intake\\runs\\2026-05-28_bauteilboersen_integration_plan\\patches\\bauteilboersen_integration_graph_only.patch.jsonl",
+  "records": [
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "articonnex",
+          "name": "Articonnex",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "articonnex",
+      "line": 1,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "articonnex",
+      "line": 2,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_67a0d4dca456ad1a9d094ad415a681aa"
+    },
+    {
+      "from": "articonnex",
+      "line": 3,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_3bdd8bc4e41b827718390fcf93ce696f"
+    },
+    {
+      "from": "articonnex",
+      "line": 4,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_71c735d5afac8bba7798c25bebbb2c5b"
+    },
+    {
+      "from": "articonnex",
+      "line": 5,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "articonnex",
+      "line": 6,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "articonnex",
+      "line": 7,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "articonnex",
+      "line": 8,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "articonnex",
+      "line": 9,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "articonnex",
+      "line": 10,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "articonnex",
+      "line": 11,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "backacia",
+          "name": "Backacia",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "backacia",
+      "line": 12,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "backacia",
+      "line": 13,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_5df3110acccc28fd098aef6cce93543d"
+    },
+    {
+      "from": "backacia",
+      "line": 14,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_130dd8a82ba4f12a8084fa54b28b8c14"
+    },
+    {
+      "from": "backacia",
+      "line": 15,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_e9c4fb3b5df0c8b62b0efefed1ea5703"
+    },
+    {
+      "from": "backacia",
+      "line": 16,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "backacia",
+      "line": 17,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "backacia",
+      "line": 18,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "backacia",
+      "line": 19,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "backacia",
+      "line": 20,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "backacia",
+      "line": 21,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "backacia",
+      "line": 22,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "backacia",
+      "line": 23,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "baticycle",
+          "name": "Bâticycle",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "baticycle",
+      "line": 24,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "baticycle",
+      "line": 25,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_e939210c3e57d6c079acb903e26e7ba2"
+    },
+    {
+      "from": "baticycle",
+      "line": 26,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c5c6de54179790be4f455ccc020f5a5a"
+    },
+    {
+      "from": "baticycle",
+      "line": 27,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d3b8605a287b86f308a4fafff3a00470"
+    },
+    {
+      "from": "baticycle",
+      "line": 28,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "baticycle",
+      "line": 29,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "baticycle",
+      "line": 30,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "baticycle",
+      "line": 31,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "baticycle",
+      "line": 32,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "baticycle",
+      "line": 33,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "baticycle",
+      "line": 34,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "batiterre",
+          "name": "BatiTerre",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "batiterre",
+      "line": 35,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "batiterre",
+      "line": 36,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_39e425e88beecf5d7291a1d36d7c8949"
+    },
+    {
+      "from": "batiterre",
+      "line": 37,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_57b119d85a3ef8d46e648fa5bf466f9c"
+    },
+    {
+      "from": "batiterre",
+      "line": 38,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_ed40d43b71092336242782002e63009c"
+    },
+    {
+      "from": "batiterre",
+      "line": 39,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_76daf41e999e41d432822d346b2a44b8"
+    },
+    {
+      "from": "batiterre",
+      "line": 40,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "batiterre",
+      "line": 41,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "batiterre",
+      "line": 42,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "batiterre",
+      "line": 43,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "batiterre",
+      "line": 44,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "batiterre",
+      "line": 45,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "batiterre",
+      "line": 46,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "batiterre",
+      "line": 47,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "batrecup",
+          "name": "BatRecup",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "batrecup",
+      "line": 48,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "batrecup",
+      "line": 49,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_638329b043948dfe2a4cc3c4d18be6e9"
+    },
+    {
+      "from": "batrecup",
+      "line": 50,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_a663be697576f4fee40096bc8e8a9134"
+    },
+    {
+      "from": "batrecup",
+      "line": 51,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_820cae1f5d810029f327b1ade3f5b4dd"
+    },
+    {
+      "from": "batrecup",
+      "line": 52,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "batrecup",
+      "line": 53,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "batrecup",
+      "line": 54,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "batrecup",
+      "line": 55,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_software_tool_anbieter"
+    },
+    {
+      "from": "batrecup",
+      "line": 56,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "batrecup",
+      "line": 57,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "batrecup",
+      "line": 58,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "batrecup",
+      "line": 59,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "baukarussell",
+      "line": 60,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_a5b6b92acb3402c4e3b0ff3593129551"
+    },
+    {
+      "from": "baukarussell",
+      "line": 61,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_fe8a9bd02ee3b50ffe6b9fa4738f8f31"
+    },
+    {
+      "from": "baukarussell",
+      "line": 62,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_7e278b2fabd3288c61885ec3e5ad30e3"
+    },
+    {
+      "from": "baukarussell",
+      "line": 63,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "noop_existing_rel",
+      "to": "land_oesterreich"
+    },
+    {
+      "from": "baukarussell",
+      "line": 64,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "noop_existing_rel",
+      "to": "land_oesterreich"
+    },
+    {
+      "from": "baukarussell",
+      "line": 65,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "noop_existing_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "baukarussell",
+      "line": 66,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "baukarussell",
+      "line": 67,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "baukarussell",
+      "line": 68,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "baukarussell",
+      "line": 69,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "baukarussell",
+      "line": 70,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "baukarussell",
+      "line": 71,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 72,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d6126b71a4f2d5f9fde004f5bb1dd0b2"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 73,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_3d436e1bd389062639d0df754ef8061e"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 74,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_2294d4e43eb0f817669db0c04d01eaa7"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 75,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_b8c5de886fbe9af2918522890aec500f"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 76,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_6139a82373c9fe39348cced2fb478c72"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 77,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "noop_existing_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 78,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "noop_existing_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 79,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "noop_existing_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 80,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 81,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 82,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 83,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 84,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "bauteilboerse_bremen",
+      "line": 85,
+      "op": "add_rel",
+      "rel_type": "VERBUNDEN_MIT_AKTEUR",
+      "status": "noop_existing_rel",
+      "to": "bauteilnetz_deutschland"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 86,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_48e67450f81ae55a6012813987faf31e"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 87,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_5d5a471be5dbcfa0240a86d0a462c4ad"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 88,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_476dc48ab7c9334ff411e0321cb8abbc"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 89,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_52ca58501a20baa4a0cd6a4ef04388ec"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 90,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 91,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 92,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "noop_existing_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 93,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 94,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 95,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "bauteilladen_winterthur",
+      "line": 96,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "bauteilnetz_deutschland",
+      "line": 97,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_1e1ee87087dde663cf87af16eeed773e"
+    },
+    {
+      "from": "bauteilnetz_deutschland",
+      "line": 98,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_bc045342431ab6658a3b25d8136fbb1a"
+    },
+    {
+      "from": "bauteilnetz_deutschland",
+      "line": 99,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_da345ec470e297628f92c9be1aa373b7"
+    },
+    {
+      "from": "bauteilnetz_deutschland",
+      "line": 100,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "noop_existing_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "bauteilnetz_deutschland",
+      "line": 101,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "noop_existing_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "building_spares_market",
+          "name": "Building Spares Market",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "building_spares_market",
+      "line": 102,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 103,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_0587896629994ded4cc0cb504062e04b"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 104,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_22d4b80417e845d3a5e8e00f92abd949"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 105,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_20ac2c3537c9e06f1fd5b8b68f8f918d"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 106,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_287562d9ab2d0c5b40d947507e9892e5"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 107,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 108,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 109,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 110,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 111,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "building_spares_market",
+      "line": 112,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cornermat_retrival",
+          "name": "Cornermat / Retrival",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "cornermat_retrival",
+      "line": 113,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 114,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_4afc879cd07111b942f617f00a043286"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 115,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_900f064de8a6280c080154a18ee611ef"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 116,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_e15fef758f47eb65c316e74b19fbbc6f"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 117,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 118,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 119,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 120,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 121,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "cornermat_retrival",
+      "line": 122,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cycle_up",
+          "name": "Cycle Up",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "cycle_up",
+      "line": 123,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "cycle_up",
+      "line": 124,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_7d4d5ba03c620ee6e661405fa8c7003f"
+    },
+    {
+      "from": "cycle_up",
+      "line": 125,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_675574f4071a7c859955b345325a7c2b"
+    },
+    {
+      "from": "cycle_up",
+      "line": 126,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_b40163ab2d1a8d38f844e498d913fa0e"
+    },
+    {
+      "from": "cycle_up",
+      "line": 127,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c7b82464041996c6e6c65ccd4687f981"
+    },
+    {
+      "from": "cycle_up",
+      "line": 128,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "cycle_up",
+      "line": 129,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "cycle_up",
+      "line": 130,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "cycle_up",
+      "line": 131,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "cycle_up",
+      "line": 132,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "cycle_up",
+      "line": 133,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "cycle_up",
+      "line": 134,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "cycle_up",
+      "line": 135,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "cycle_zero",
+          "name": "Cycle Zéro",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "cycle_zero",
+      "line": 136,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 137,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_1413d3f0cbf9e58a7a960a6a8e9cfad9"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 138,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f32d31b9db611ec54f03cb7ca5a89bbd"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 139,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d570f645e831cf93aadc2917f2aaa5ab"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 140,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 141,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 142,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 143,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_software_tool_anbieter"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 144,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 145,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 146,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "cycle_zero",
+      "line": 147,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "enviromate",
+          "name": "Enviromate",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "enviromate",
+      "line": 148,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "enviromate",
+      "line": 149,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c4092289afa5ca48ece3d11b2c967b30"
+    },
+    {
+      "from": "enviromate",
+      "line": 150,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c43c0ff2caaed951261f37bb46b150bf"
+    },
+    {
+      "from": "enviromate",
+      "line": 151,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_8fd15d5544521fe8dcb9820394f0738f"
+    },
+    {
+      "from": "enviromate",
+      "line": 152,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "enviromate",
+      "line": 153,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "enviromate",
+      "line": 154,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "enviromate",
+      "line": 155,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "enviromate",
+      "line": 156,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "enviromate",
+      "line": 157,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "enviromate",
+      "line": 158,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 159,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d95c0798e3a673b954ccfd739dcdfc5f"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 160,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_a38f86d1072aa10df6e119a4feedd842"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 161,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_6355b8ef104aed3df33972b3000b4929"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 162,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_a61a13ea2baac06cbbd17ab21d62bf67"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 163,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 164,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 165,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "noop_existing_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 166,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 167,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 168,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "gebruiktebouwmaterialen",
+      "line": 169,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "genbyg",
+          "name": "Genbyg",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "genbyg",
+      "line": 170,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "genbyg",
+      "line": 171,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_eed96118b2ce07d457fa4d534e1918cc"
+    },
+    {
+      "from": "genbyg",
+      "line": 172,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_9c3a84d1d96a4ff4c0e888c586d4c31f"
+    },
+    {
+      "from": "genbyg",
+      "line": 173,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_94aa44950a89c1a0c262365ec01af87d"
+    },
+    {
+      "from": "genbyg",
+      "line": 174,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_daenemark"
+    },
+    {
+      "from": "genbyg",
+      "line": 175,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_daenemark"
+    },
+    {
+      "from": "genbyg",
+      "line": 176,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "genbyg",
+      "line": 177,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "genbyg",
+      "line": 178,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "genbyg",
+      "line": 179,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "genbyg",
+      "line": 180,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "globechain",
+          "name": "Globechain",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "globechain",
+      "line": 181,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "globechain",
+      "line": 182,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_bab805b04bfb87d1179147759e81830f"
+    },
+    {
+      "from": "globechain",
+      "line": 183,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_4ace2562acd0670e934e7d8729acc5eb"
+    },
+    {
+      "from": "globechain",
+      "line": 184,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_4f70966f587820302f2b0d9b91b650bd"
+    },
+    {
+      "from": "globechain",
+      "line": 185,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_937ff5505f49cfa1492a55e752518fd4"
+    },
+    {
+      "from": "globechain",
+      "line": 186,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "globechain",
+      "line": 187,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "globechain",
+      "line": 188,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "globechain",
+      "line": 189,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "globechain",
+      "line": 190,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "globechain",
+      "line": 191,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "globechain",
+      "line": 192,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "from": "globechain",
+      "line": 193,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "insert_marketplace",
+          "name": "Insert Marketplace",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "insert_marketplace",
+      "line": 194,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 195,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_9a16d569e0c7b55b5935ee486d52e4ea"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 196,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_88f24d09afe0f415c0fcdd8ea26edd53"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 197,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 198,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 199,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 200,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 201,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 202,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "insert_marketplace",
+      "line": 203,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "loopfront",
+          "name": "Loopfront",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "loopfront",
+      "line": 204,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "loopfront",
+      "line": 205,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f73c39c9000d76dac1ec5fca0eb31489"
+    },
+    {
+      "from": "loopfront",
+      "line": 206,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_fe5231f9045f0204137b90f019eb5492"
+    },
+    {
+      "from": "loopfront",
+      "line": 207,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_837dba35f600a645e52a0ac95b2199a0"
+    },
+    {
+      "from": "loopfront",
+      "line": 208,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_e6fd57b0d39aacc14de7ea466316989c"
+    },
+    {
+      "from": "loopfront",
+      "line": 209,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_19eb70f4bf824cb02b1c0a200afc7143"
+    },
+    {
+      "from": "loopfront",
+      "line": 210,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_norwegen"
+    },
+    {
+      "from": "loopfront",
+      "line": 211,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_norwegen"
+    },
+    {
+      "from": "loopfront",
+      "line": 212,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "loopfront",
+      "line": 213,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "loopfront",
+      "line": 214,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "loopfront",
+      "line": 215,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "loopfront",
+      "line": 216,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "loopfront",
+      "line": 217,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "material_index",
+          "name": "Material Index",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "material_index",
+      "line": 218,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "material_index",
+      "line": 219,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_1fdec6782bfebc0692e032972d002955"
+    },
+    {
+      "from": "material_index",
+      "line": 220,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c44bdb40f60f1dfb46a1204152587eb0"
+    },
+    {
+      "from": "material_index",
+      "line": 221,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_62219abd0009abf5cb3a47469b8dae4a"
+    },
+    {
+      "from": "material_index",
+      "line": 222,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_df9716f7281bd5c21ee21c219edea46a"
+    },
+    {
+      "from": "material_index",
+      "line": 223,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_cc0ace378d64495001aab9ca672fd329"
+    },
+    {
+      "from": "material_index",
+      "line": 224,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "material_index",
+      "line": 225,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "material_index",
+      "line": 226,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "material_index",
+      "line": 227,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "material_index",
+      "line": 228,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "material_index",
+      "line": 229,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "material_index",
+      "line": 230,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "material_index",
+      "line": 231,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "material_index",
+      "line": 232,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "material_reuse_portal",
+          "name": "Material Reuse Portal",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "material_reuse_portal",
+      "line": 233,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 234,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_cdfbb6ba87ca10f94a2e874099d4e5be"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 235,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f80c7ce52b053dd5d17f876e476d9842"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 236,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_ef2f34a3f0f0b22c0eff026705d534e0"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 237,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d77515690848eec24a033b9c4842808d"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 238,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 239,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 240,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 241,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 242,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 243,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "material_reuse_portal",
+      "line": 244,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "materialenbank_leuven_atelier_circuler",
+          "name": "Materialenbank Leuven / Atelier Circuler",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "materialenbank_leuven_atelier_circuler",
+      "line": 245,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 246,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_1cc93cbd77b2e1ab89b75fd7471256f6"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 247,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c3b25c9bbf4754cc3c624016080315c7"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 248,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_5c8e5106ba61c3fecf39f4cc4dd5db52"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 249,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_4f327daf8deee83fa26dbd662dcc259b"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 250,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_23328eb5f9b21e76fcb41a062dfa0236"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 251,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 252,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 253,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 254,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 255,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "materialenbank_leuven_atelier_circuler",
+      "line": 256,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "materialrest24",
+          "name": "Materialrest24",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "materialrest24",
+      "line": 257,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "materialrest24",
+      "line": 258,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_ddc38f48a21117ee01afb8edaa9099e7"
+    },
+    {
+      "from": "materialrest24",
+      "line": 259,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_be58bdbfdb118147b2e4841f3520e4ed"
+    },
+    {
+      "from": "materialrest24",
+      "line": 260,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f078e3df5c010565caf65ede2dcbb91b"
+    },
+    {
+      "from": "materialrest24",
+      "line": 261,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "materialrest24",
+      "line": 262,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "materialrest24",
+      "line": 263,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "materialrest24",
+      "line": 264,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "materialrest24",
+      "line": 265,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "materialrest24",
+      "line": 266,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "materialrest24",
+      "line": 267,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "materialrest24",
+      "line": 268,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "from": "new_horizon",
+      "line": 269,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_2a3e27ee41193278ba8f0f4cfdcf4254"
+    },
+    {
+      "from": "new_horizon",
+      "line": 270,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_75878b98f7d36478f954dd46f09253c4"
+    },
+    {
+      "from": "new_horizon",
+      "line": 271,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_0187c48006cca0aae73c2d60685a2a42"
+    },
+    {
+      "from": "new_horizon",
+      "line": 272,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "noop_existing_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "new_horizon",
+      "line": 273,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "noop_existing_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "new_horizon",
+      "line": 274,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "noop_existing_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "new_horizon",
+      "line": 275,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "new_horizon",
+      "line": 276,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "new_horizon",
+      "line": 277,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "new_horizon",
+      "line": 278,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "new_horizon",
+      "line": 279,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "r_place",
+          "name": "R-Place",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "r_place",
+      "line": 280,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "r_place",
+      "line": 281,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d8fcb54b7a838999065d4a7ea31492f1"
+    },
+    {
+      "from": "r_place",
+      "line": 282,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f088d3b660c7e23be90ab32203bd32f2"
+    },
+    {
+      "from": "r_place",
+      "line": 283,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_70c24cf7222b761f1684812918532b17"
+    },
+    {
+      "from": "r_place",
+      "line": 284,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "r_place",
+      "line": 285,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "r_place",
+      "line": 286,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "r_place",
+      "line": 287,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "r_place",
+      "line": 288,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "r_place",
+      "line": 289,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "raedificare",
+          "name": "RAEDIFICARE",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "raedificare",
+      "line": 290,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "raedificare",
+      "line": 291,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_72580909172af16589f101b759852146"
+    },
+    {
+      "from": "raedificare",
+      "line": 292,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_964761e7ecb4b079cf227b4f77451d42"
+    },
+    {
+      "from": "raedificare",
+      "line": 293,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_8ea1845974db4f43b0b336f1ef0ac985"
+    },
+    {
+      "from": "raedificare",
+      "line": 294,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "raedificare",
+      "line": 295,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "raedificare",
+      "line": 296,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "raedificare",
+      "line": 297,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "raedificare",
+      "line": 298,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "raedificare",
+      "line": 299,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "raedificare",
+      "line": 300,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "re_store_harvestmap_vienna",
+          "name": "re:store / HarvestMAP Vienna",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "re_store_harvestmap_vienna",
+      "line": 301,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 302,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_317570e3c4e0c2be5ef74e07e4819409"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 303,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_6ba146a7d99262a3f8aa5091d6bedc4b"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 304,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_0df3875af8738e05942924b16f4a4e62"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 305,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_oesterreich"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 306,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_oesterreich"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 307,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 308,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 309,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 310,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "re_store_harvestmap_vienna",
+      "line": 311,
+      "op": "add_rel",
+      "rel_type": "BETRIEBEN_VON",
+      "status": "would_create_rel",
+      "to": "materialnomaden"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "reempro",
+          "name": "Réempro",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "reempro",
+      "line": 312,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "reempro",
+      "line": 313,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_e43a8f30e59f518a65c7a216c07bb836"
+    },
+    {
+      "from": "reempro",
+      "line": 314,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_dae42e94a0d6a8a7fe638a8d80876a3a"
+    },
+    {
+      "from": "reempro",
+      "line": 315,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_a98268cac07e42b4f6927b193ae7db7a"
+    },
+    {
+      "from": "reempro",
+      "line": 316,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "reempro",
+      "line": 317,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "reempro",
+      "line": 318,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "reempro",
+      "line": 319,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "reempro",
+      "line": 320,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "reempro",
+      "line": 321,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "reempro",
+      "line": 322,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "resource_marktplaats",
+          "name": "ReSource Marktplaats",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "resource_marktplaats",
+      "line": 323,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 324,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_6f1fca184c37ab2a68325abd0540ca46"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 325,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_810636bbffcf210ce7832ddb6a06f10f"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 326,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 327,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_niederlande"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 328,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 329,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_software_tool_anbieter"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 330,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 331,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 332,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "resource_marktplaats",
+      "line": 333,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "software_restado",
+      "line": 334,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_74e67b64770f2741ee9cce15ef3ac2ad"
+    },
+    {
+      "from": "software_restado",
+      "line": 335,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_8ed7711262fc72b1eb28d846be8981ff"
+    },
+    {
+      "from": "software_restado",
+      "line": 336,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_32f86a870f48e21d1daf42d048a96207"
+    },
+    {
+      "from": "software_restado",
+      "line": 337,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_fc7f92d974b8d75720332cdbc9744048"
+    },
+    {
+      "from": "software_restado",
+      "line": 338,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f306d0d30b5b4a88a2eb959bccbf7682"
+    },
+    {
+      "from": "software_restado",
+      "line": 339,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "software_restado",
+      "line": 340,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "software_restado",
+      "line": 341,
+      "op": "add_rel",
+      "rel_type": "BETRIEBEN_VON",
+      "status": "would_create_rel",
+      "to": "concular"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "reuse_and_trade",
+          "name": "ReUse and Trade",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "reuse_and_trade",
+      "line": 342,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 343,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_7ad22161cd617488413f6ef0173cc7b7"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 344,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_e15f6f43f6b9e32049294f307f1a9b47"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 345,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_ff865fdd3fba8980ddccd53a5474ef32"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 346,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 347,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_deutschland"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 348,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 349,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 350,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 351,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 352,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "reuse_and_trade",
+      "line": 353,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "from": "rotordc",
+      "line": 354,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_6b538764f4099d169bee4f008bf0465e"
+    },
+    {
+      "from": "rotordc",
+      "line": 355,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_5b648a445a5f971b649124973c675642"
+    },
+    {
+      "from": "rotordc",
+      "line": 356,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d1d8f070a16df6919fbc5e969a337122"
+    },
+    {
+      "from": "rotordc",
+      "line": 357,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_1b1e3884632d6e036db3a550e4947b01"
+    },
+    {
+      "from": "rotordc",
+      "line": 358,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "noop_existing_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "rotordc",
+      "line": 359,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "noop_existing_rel",
+      "to": "land_belgien"
+    },
+    {
+      "from": "rotordc",
+      "line": 360,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "noop_existing_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "rotordc",
+      "line": 361,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "rotordc",
+      "line": 362,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "rotordc",
+      "line": 363,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "rotordc",
+      "line": 364,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "rotordc",
+      "line": 365,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "noop_existing_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "salvoweb",
+          "name": "SalvoWEB",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "salvoweb",
+      "line": 366,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "salvoweb",
+      "line": 367,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_35bf8e4ee16b85a593fea9d14d107bff"
+    },
+    {
+      "from": "salvoweb",
+      "line": 368,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_ff360deed151b36a3fafc9cf056a21be"
+    },
+    {
+      "from": "salvoweb",
+      "line": 369,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_92c7f3054a99511d3a70b253b6af02b3"
+    },
+    {
+      "from": "salvoweb",
+      "line": 370,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "salvoweb",
+      "line": 371,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "salvoweb",
+      "line": 372,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "salvoweb",
+      "line": 373,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "salvoweb",
+      "line": 374,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "salvoweb",
+      "line": 375,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "salvoweb",
+      "line": 376,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "salvoweb",
+      "line": 377,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "from": "salvoweb",
+      "line": 378,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "from": "salvoweb",
+      "line": 379,
+      "op": "add_rel",
+      "rel_type": "BETRIEBEN_VON",
+      "status": "would_create_rel",
+      "to": "salvo_ltd"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "salza",
+          "name": "Salza",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "salza",
+      "line": 380,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "salza",
+      "line": 381,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f91b55379ab933d2a2833d301a4296b0"
+    },
+    {
+      "from": "salza",
+      "line": 382,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_45d7c6380377a9cec952dbf6c3f2ba8c"
+    },
+    {
+      "from": "salza",
+      "line": 383,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_bc66d9c23574f1379212619d971fc174"
+    },
+    {
+      "from": "salza",
+      "line": 384,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "salza",
+      "line": 385,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "salza",
+      "line": 386,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "salza",
+      "line": 387,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "salza",
+      "line": 388,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "salza",
+      "line": 389,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "salza",
+      "line": 390,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_reuse_zirkularitaetsberatung"
+    },
+    {
+      "from": "salza",
+      "line": 391,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "salza",
+      "line": 392,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "skop_marketplace",
+          "name": "Skop Marketplace",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "skop_marketplace",
+      "line": 393,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 394,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_d3f45cdab65521719fa6b495a6f2f490"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 395,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c06d87d5a039d12b923ce76898e5d390"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 396,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_8d50f8c2410c3405d1061739e809f79c"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 397,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 398,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_frankreich"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 399,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 400,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 401,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 402,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "skop_marketplace",
+      "line": 403,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "surplus_building_and_plumbing_materials",
+          "name": "Surplus Building & Plumbing Materials",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "surplus_building_and_plumbing_materials",
+      "line": 404,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 405,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_ef33eda839ef52888ba53f91e03b9a3a"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 406,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_f484410354d7ce79f70996eb018b5127"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 407,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_db32d3418b69112061c05bf46cf7693d"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 408,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 409,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 410,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 411,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 412,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "surplus_building_and_plumbing_materials",
+      "line": 413,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "sustainability_yard",
+          "name": "Sustainability Yard",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "sustainability_yard",
+      "line": 414,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 415,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_cd84fb8b41fabfef1a1f658882cafb66"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 416,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_c9eff161be3a560dc03050f744a9a060"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 417,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_a88bbf9fb43daf0087b3e80d3da7785b"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 418,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_b537163324eb0ae80f6b6456f51c115c"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 419,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 420,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 421,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 422,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_software_tool_anbieter"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 423,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 424,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 425,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "sustainability_yard",
+      "line": 426,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "useagain_bauteilclick",
+          "name": "useagain / Bauteilclick",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "useagain_bauteilclick",
+      "line": 427,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 428,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_82ad61e4b3672c05a8fedf46e57faee6"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 429,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_9fce1894aaa7455c757369850397e39f"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 430,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_225c92c71dea6b3b46d7d6b04f19e0a9"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 431,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_db3a5cd5d0c70516ebe4b7800d25da54"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 432,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 433,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_schweiz"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 434,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 435,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 436,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materialbroker"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 437,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "useagain_bauteilclick",
+      "line": 438,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "after": {
+        "labels": [
+          "Akteur"
+        ],
+        "properties": {
+          "id": "warp_it",
+          "name": "Warp It",
+          "review_run": "2026-05-28_bauteilboersen_integration",
+          "review_status": "reviewed_legacy_profile_needs_url_fact_check",
+          "source_scope": "bauteilboerse_legacy_review"
+        }
+      },
+      "before": null,
+      "id": "warp_it",
+      "line": 439,
+      "op": "add_node",
+      "status": "would_create"
+    },
+    {
+      "from": "warp_it",
+      "line": 440,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_03aab46153d4e73307f22b7e67ae96ca"
+    },
+    {
+      "from": "warp_it",
+      "line": 441,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_ef138918e9cb85209dfbc4d43d5e4210"
+    },
+    {
+      "from": "warp_it",
+      "line": 442,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_a9e7f2512b99d907827013ee4c221bbe"
+    },
+    {
+      "from": "warp_it",
+      "line": 443,
+      "op": "add_rel",
+      "rel_type": "BELEGT_IN",
+      "status": "would_create_rel",
+      "to": "q_url_808236a8e34ab2e2de2ade6de83378e4"
+    },
+    {
+      "from": "warp_it",
+      "line": 444,
+      "op": "add_rel",
+      "rel_type": "LIEGT_IN_LAND",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "warp_it",
+      "line": 445,
+      "op": "add_rel",
+      "rel_type": "GEHÖRT_ZU",
+      "status": "would_create_rel",
+      "to": "land_vereinigtes_koenigreich"
+    },
+    {
+      "from": "warp_it",
+      "line": 446,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURTYP",
+      "status": "would_create_rel",
+      "to": "at_materialhub_bauteilboerse"
+    },
+    {
+      "from": "warp_it",
+      "line": 447,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_materiallieferung_markt"
+    },
+    {
+      "from": "warp_it",
+      "line": 448,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_software_digitalisierung"
+    },
+    {
+      "from": "warp_it",
+      "line": 449,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_rueckbau_bauteilernte_logistik"
+    },
+    {
+      "from": "warp_it",
+      "line": 450,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_aufbereitung_refurbishment"
+    },
+    {
+      "from": "warp_it",
+      "line": 451,
+      "op": "add_rel",
+      "rel_type": "HAT_AKTEURROLLE",
+      "status": "would_create_rel",
+      "to": "ar_bildung_wissenstransfer"
+    }
+  ],
+  "summary": {
+    "load_errors": 0,
+    "noop_existing_rel": 31,
+    "records": 451,
+    "would_create": 31,
+    "would_create_rel": 389
+  }
+}

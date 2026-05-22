@@ -1,0 +1,174 @@
+{
+  "anchor_id": "batrecup",
+  "sources_visited": [
+    {
+      "url": "https://www.batrecup.com/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Community platform for construction-material reuse."
+      ]
+    },
+    {
+      "url": "https://www.batrecup.com/batrecup-lappli-cest-parti/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.batrecup",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.batrecup.com/category/materiaux/",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Materials section includes content on timber or metal framing; weak support for materials only."
+      ]
+    },
+    {
+      "url": "https://www.lejournaldesentreprises.com/article/batrecup-cree-une-appli-qui-propose-des-materiaux-issus-de-chantier-2047309",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "Secondary article names around fifteen categories including floor coverings, wall coverings and joinery."
+      ]
+    },
+    {
+      "url": "https://www.mayasquad.com/projet/bat-recup/",
+      "http_status": 200,
+      "first_party": false,
+      "source_kind": "current_or_historical_source_collected_2026_05_31",
+      "evidence_notes": [
+        "App-project page describes a community marketplace for second-hand construction-site materials."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.batrecup.com/category/materiaux/"
+      ],
+      "evidence_quote": "Materials articles include charpente bois, but this is weak marketplace-category evidence.",
+      "confidence": "unsicher",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://www.batrecup.com/category/materiaux/"
+      ],
+      "evidence_quote": "Materials articles compare timber and metal framing; weak support only.",
+      "confidence": "unsicher",
+      "deep_notes": [
+        "Added/confirmed in the deeper material-focused rerun."
+      ]
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.lejournaldesentreprises.com/article/batrecup-cree-une-appli-qui-propose-des-materiaux-issus-de-chantier-2047309"
+      ],
+      "evidence_quote": "Secondary article says categories include menuiserie / joinery; use generic fit-out pending product pages.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.lejournaldesentreprises.com/article/batrecup-cree-une-appli-qui-propose-des-materiaux-issus-de-chantier-2047309"
+      ],
+      "evidence_quote": "Secondary article says app categories include floor coverings.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.lejournaldesentreprises.com/article/batrecup-cree-une-appli-qui-propose-des-materiaux-issus-de-chantier-2047309"
+      ],
+      "evidence_quote": "Secondary article says categories include wall coverings.",
+      "confidence": "wahrscheinlich",
+      "deep_notes": [
+        "Added/confirmed in the deeper bauteiltyp-focused rerun."
+      ]
+    }
+  ],
+  "pruefung": [],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [
+    {
+      "rel_type": "HAT_MARKTMODELL",
+      "target_id": "mkt_p2p_app",
+      "evidence_urls": [
+        "https://www.batrecup.com/batrecup-lappli-cest-parti/"
+      ],
+      "evidence_quote": "Community/app framing indicates a peer-to-peer reuse application.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "operator_chain": {
+    "operator_name": "BatRecup",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.batrecup.com/",
+      "https://www.batrecup.com/batrecup-lappli-cest-parti/"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Material + Bauteiltyp",
+      "reason": "Accessible pages/app listing did not expose stable product categories."
+    },
+    {
+      "topic": "Operator chain",
+      "reason": "App/store details should be rechecked for publisher before BETRIEBEN_VON changes."
+    }
+  ],
+  "run_notes": [],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/batrecup.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [],
+      "unsicher": [
+        "mat_holz",
+        "mat_stahl"
+      ]
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [],
+      "wahrscheinlich": [
+        "bt_boden",
+        "bt_wand",
+        "bt_ausbau"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}

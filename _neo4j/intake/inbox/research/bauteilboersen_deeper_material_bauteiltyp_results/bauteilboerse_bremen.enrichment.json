@@ -1,0 +1,235 @@
+{
+  "anchor_id": "bauteilboerse_bremen",
+  "sources_visited": [
+    {
+      "url": "https://www.bauteilboerse-bremen.de/start",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.bauteilboerse-bremen.de/katalog",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Operator catalogue remains the calibration target for doors, windows, floors, stairs, wall/floor tiles, technical and fit-out items."
+      ]
+    },
+    {
+      "url": "https://www.bauteilboerse-bremen.de/katalog/suche",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url"
+    },
+    {
+      "url": "https://www.bauteilboerse-bremen.de/die-idee",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Idea/process page used for intake/photo and electrical-safety caution notes."
+      ]
+    },
+    {
+      "url": "https://www.bauteilboerse-bremen.de/katalog/tueren",
+      "http_status": 200,
+      "first_party": true,
+      "source_kind": "history_previous_pass_or_brief_url",
+      "evidence_notes": [
+        "Door category supports bt_tuer; product pages should be used to refine wood/glass/steel material pairs."
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "target_id": "mat_glas",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes windows/glass-related building parts.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_holz",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue/category evidence includes wooden doors, floors, stairs and other timber elements.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "mat_gusseisen",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue/archive scope includes cast-iron radiator / technical elements.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_keramik",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes tiles/ceramic surfaces.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "mat_stahl",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes metal/steel fittings, railings or technical parts.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "bauteiltypen": [
+    {
+      "target_id": "bt_ausbau",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes fit-out/hardware/interior components.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_boden",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes floors/tiles/parquet.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_fenster",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue category / product evidence includes windows.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_tuer",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog/tueren"
+      ],
+      "evidence_quote": "Dedicated doors catalogue page.",
+      "confidence": "belegt"
+    },
+    {
+      "target_id": "bt_gelaender",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes railings/banisters.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_technik",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes heating/sanitary/electrical-like technical stock.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_treppe",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes stairs.",
+      "confidence": "wahrscheinlich"
+    },
+    {
+      "target_id": "bt_wand",
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Catalogue evidence includes wall/tiles/panels.",
+      "confidence": "wahrscheinlich"
+    }
+  ],
+  "pruefung": [
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/start"
+      ],
+      "evidence_quote": "Operator intake workflow asks prospective sellers to send photos / item information before listing.",
+      "confidence": "wahrscheinlich",
+      "note": "Target ID must be resolved with MATCH (p:PruefungNachweis) WHERE toLower(p.name) CONTAINS toLower($keyword).",
+      "lookup_keyword": "annahme",
+      "requires_cypher_lookup": true
+    },
+    {
+      "target_id": null,
+      "evidence_urls": [
+        "https://www.bauteilboerse-bremen.de/katalog"
+      ],
+      "evidence_quote": "Electrical/technical items should be flagged: product presence is not proof of electrical safety testing.",
+      "confidence": "unsicher",
+      "note": "Negative QA note: do not infer tested electrical safety from listing.",
+      "lookup_keyword": "elektro",
+      "requires_cypher_lookup": true
+    }
+  ],
+  "aufbereitung": [],
+  "rueckbau": [],
+  "secondary_links": [],
+  "operator_chain": {
+    "operator_name": "Bauteilbörse Bremen",
+    "operator_anchor_id_guess": null,
+    "evidence_urls": [
+      "https://www.bauteilboerse-bremen.de/start",
+      "https://www.bauteilboerse-bremen.de/katalog"
+    ]
+  },
+  "new_vocab_candidates": [],
+  "conflicts_with_archive": [],
+  "gaps": [
+    {
+      "topic": "Pruefung target IDs",
+      "reason": "Need graph lookup for photo/intake QA and electrical-safety negative note."
+    }
+  ],
+  "run_notes": [
+    "This remains the calibration anchor with the highest Material + Bauteiltyp density."
+  ],
+  "rerun_metadata": {
+    "rerun_date": "2026-05-31",
+    "rerun_focus": "deeper per-anchor Material and Bauteiltyp coverage; source collection from prior/history + current web search",
+    "base_previous_result_file": "/mnt/data/bauteilboersen_deep_enrichment_results/bauteilboerse_bremen.enrichment.json",
+    "material_bauteiltyp_rule": "materials are belegt only when a source names the material; component-only mentions stay material-unpaired or likely/unsicher"
+  },
+  "material_bauteiltyp_profile": {
+    "materials_by_confidence": {
+      "belegt": [
+        "mat_holz",
+        "mat_glas"
+      ],
+      "wahrscheinlich": [
+        "mat_stahl",
+        "mat_gusseisen",
+        "mat_keramik"
+      ],
+      "unsicher": []
+    },
+    "bauteiltypen_by_confidence": {
+      "belegt": [
+        "bt_fenster",
+        "bt_tuer",
+        "bt_boden",
+        "bt_ausbau"
+      ],
+      "wahrscheinlich": [
+        "bt_treppe",
+        "bt_wand",
+        "bt_technik",
+        "bt_gelaender"
+      ],
+      "unsicher": []
+    },
+    "component_material_pairs": [],
+    "pairing_note": "Pairs are only included where a source closely ties a named material to a component/use. Otherwise use the separate material and bauteiltyp sets."
+  }
+}
