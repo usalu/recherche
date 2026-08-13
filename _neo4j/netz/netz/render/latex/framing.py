@@ -22,6 +22,8 @@ migration, which is user-gated.
 GRAPH_LEGEND = (r"{\SemioSans\fontsize{7.6pt}{9.5pt}\selectfont Ein Netz je Land \textendash\ "
                 r"alle belegten Verbindungen. "
                 r"\SemioGraphLegend{focal=Projekt, attested=neu recherchiert, hypo=Land erschlossen}. "
+                r"Kr\"aftige Linie = Projektbeteiligung, blasse Linie = Organisationsbindung "
+                r"(Konsortialpartner, Gr\"undung, Konzernbindung u.\,\"a.). "
                 r"Zahl = Zeilennummer der zugeh\"origen Tabelle.\\[2mm]}")
 
 

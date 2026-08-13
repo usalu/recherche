@@ -10,7 +10,7 @@ from .data.prune import load_prune, load_edge_exclude
 from .data.corrections import load_country_overrides
 from .data.strict_review import load_strict_review
 from .model.concepts import build_network
-from .render.latex.graph_tikz import country_figure, load_image_manifest
+from .render.latex.graph_tikz import country_figure, load_image_manifest, load_edge_kinds
 from .render.latex.framing import assemble_graph_fragment, GRAPH_LEGEND
 from .render.latex.table_long import country_table, role_frequency, TABLE_LEGEND
 from .render.latex.framing import assemble_spread_fragment
@@ -22,7 +22,7 @@ GRAPH_SECTION_TITLE = "Akteursnetze nach Land"
 TABLE_SECTION_TITLE = "Akteurstabellen nach Land"
 
 
-def build_graph_fragment(net, out_path: str, images=None, countries=None):
+def build_graph_fragment(net, out_path: str, images=None, countries=None, edge_kinds=None):
     order = [cc for cc in net.countries
              if cc in net.panels and (net.panels[cc].actors or net.panels[cc].projects)]
     if countries:
@@ -31,7 +31,7 @@ def build_graph_fragment(net, out_path: str, images=None, countries=None):
     figures = []
     tot = 0
     for cc in order:
-        r = country_figure(net, cc, images=images)
+        r = country_figure(net, cc, images=images, edge_kinds=edge_kinds)
         if not r:
             continue
         frag, nA, nP, nd, nfill = r
@@ -99,7 +99,8 @@ def main():
         unknown = sorted(set(countries or []) - set(net.panels))
         if unknown:
             ap.error("unknown country panel(s): %s" % ", ".join(unknown))
-        tot, n = build_graph_fragment(net, out, images=images, countries=countries)
+        edge_kinds = load_edge_kinds(DEFAULT.kanten_klassifikation_path, net, DEFAULT.merge_strict_path)
+        tot, n = build_graph_fragment(net, out, images=images, countries=countries, edge_kinds=edge_kinds)
         print(f"wrote {out}: {tot} nodes across {n} country figures")
     elif args.cmd == "tables":
         out = args.out or os.path.join(SP, "figs", "frag_tables_netz.tex")

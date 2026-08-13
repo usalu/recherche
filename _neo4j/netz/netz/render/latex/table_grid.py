@@ -20,7 +20,7 @@ import io
 import json
 
 from ...mechanisms.countries import is_person
-from .escape import esc, esct
+from .escape import esc
 from .vocab import CC_NAME, ROLE_GROUP, GROUP_LABEL
 
 PITCH = 3.35
@@ -29,18 +29,25 @@ PITCH = 3.35
 # needs ~316 mm and cannot share a line at any size down to the 5.4 pt floor.
 # The role therefore prints as its taxonomy group letter (see _rolegroups),
 # which frees ~70 mm and puts Relevanz back on the same line as its actor.
-X_IMG, X_NR, X_NAME, X_CODE, X_REL, X_Q = 0.0, 5.5, 14.0, 71.5, 81.5, 176.0
-NAME_MAX = 34
-REL_MAX = 71
+#
+# Name at 44 chars/6.4 pt = 64.6 mm (was 34/7 pt = 54.6 mm, hard-cutting 82 of
+# 620 names mid-word -- fixed by switching to _clip(), the width increase
+# roughly halves how many still get shortened at all, 82 -> 38). 6.4 pt also
+# matches the header/code size, so node rows stop reading heavier than edge
+# rows (they shared no font size before this).
+X_IMG, X_NR, X_NAME, X_CODE, X_REL, X_Q = 0.0, 5.5, 14.0, 80.5, 91.5, 176.0
+NAME_MAX = 44
+REL_MAX = 60
 ROWS_PER_PAGE = 66
 IMG_MM = 3.6   # Logo-Kantenlaenge in der Zeile; PITCH ist 3.35, also knapp
                # zeilenhoch und damit ohne Zeilenaufweitung.
 
 # 🔗 Beziehungsband je Land. Von/Nach sind dieselben IDs wie in der
 # Knotentabelle und im Diagramm -- die Kante wird ueber die Endknoten
-# gelesen, nicht ueber einen eigenen Schluessel.
-X_VON, X_ART, X_BESCH, X_QK = 5.5, 34.0, 81.5, 176.0
-BESCH_MAX = 71
+# gelesen, nicht ueber einen eigenen Schluessel. X_BESCH == X_REL: beide
+# Baender teilen sich dieselbe Spaltengrenze, damit sie als ein System lesen.
+X_VON, X_ART, X_BESCH, X_QK = 5.5, 34.0, X_REL, 176.0
+BESCH_MAX = REL_MAX
 
 
 def role_frequency(net) -> collections.Counter:
@@ -121,8 +128,8 @@ def _row(net, e, y, kl, qnum, images, dim: bool = False):
     s += [
         r"\node[anchor=base west, font=\SemioMono\fontsize{5.8pt}{6pt}\selectfont, text=%s, "
         r"inner sep=0] at (%.1f,%.2f) {%s};" % (name_col, X_NR, y, esc(net.tid[e])),
-        r"\node[anchor=base west, font=\SemioSans\fontsize{7pt}{7.2pt}\selectfont, text=%s, "
-        r"inner sep=0] at (%.1f,%.2f) {%s};" % (name_col, X_NAME, y, esct(net.raw.name(e), NAME_MAX)),
+        r"\node[anchor=base west, font=\SemioSans\fontsize{6.4pt}{6.6pt}\selectfont, text=%s, "
+        r"inner sep=0] at (%.1f,%.2f) {%s};" % (name_col, X_NAME, y, _clip(net.raw.name(e), NAME_MAX)),
         r"\node[anchor=base west, font=\SemioMono\fontsize{5.8pt}{6pt}\selectfont, "
         r"text=semio-chrome-text-normal, inner sep=0] at (%.1f,%.2f) {%s};" % (X_CODE, y, _code(rec)),
         r"\node[anchor=base west, font=\SemioSans\fontsize{5.8pt}{6pt}\selectfont, "
@@ -135,10 +142,13 @@ def _row(net, e, y, kl, qnum, images, dim: bool = False):
 
 
 def _edge_row(net, kante, y, qnum):
-    """One relationship. The description is printed only where it adds
-    something: for actor-to-building edges the shared thing IS the other
-    endpoint, so `U04 -> P1, Entwurf` already says it and the stored sentence
-    only restates the type (33x "partner of the same consortium" etc.)."""
+    """One relationship, always with its description. A prior version
+    suppressed it for actor-to-building edges on the theory that the shared
+    thing IS the other endpoint (`U04 -> P1, Entwurf`) -- true for most, but
+    not all: 22 of 312 name the specific discipline/component/project that
+    Art and the endpoint alone do not ("Cleveland lieferte wiederverwendeten
+    Stahl für Holbein Gardens"), and those were lost along with the rest.
+    Every one of the 268 drawn edges has a description in the data; print it."""
     a, b = kante["pair"]
     if kante.get("richtung") == "B→A":
         a, b = b, a
@@ -146,7 +156,7 @@ def _edge_row(net, kante, y, qnum):
     # in SemioMono. "--"/"->" are plain text, safe unescaped.
     pfeil = "--" if kante.get("richtung") == "—" else "->"
     paar = "%s %s %s" % (esc(net.tid.get(a, "?")), pfeil, esc(net.tid.get(b, "?")))
-    besch = "" if kante.get("kind") == "AKTEUR-BAUVORHABEN" else kante.get("beschreibung") or ""
+    besch = kante.get("beschreibung") or ""
     q = qnum.get(kante.get("evidence_url") or "", "")
     return [
         r"\node[anchor=base west, font=\SemioMono\fontsize{5.8pt}{6pt}\selectfont, "
@@ -314,14 +324,20 @@ def build_grid_fragment(net, out_path, klassifikation_path=None,
         y = 5.0
         for it in chunk:
             if it[0] in ("head", "band"):
+                # Ueberschriften auf X_NR gesetzt, nicht auf 0 -- jede
+                # Datenspalte beginnt bei X_NR (5.5), eine Ueberschrift bei 0
+                # haengt 5.5 mm links aus dem Raster.
                 s.append(r"\node[anchor=base west, font=\SemioSans\fontsize{7.6pt}{7.8pt}\selectfont, "
-                          r"text=semio-chrome-foreground, inner sep=0] at (0,%.2f) {%s};" % (y, it[1]))
+                          r"text=semio-chrome-foreground, inner sep=0] at (%.1f,%.2f) {%s};" % (X_NR, y, it[1]))
                 s.append(r"\draw[draw=semio-chrome-border-normal, line width=0.5pt] "
                           r"(0,%.2f) -- (181,%.2f);" % (y + 1.0, y + 1.0))
                 y += PITCH + 1.2
-                if it[0] == "band":
-                    s += _hdr(y, EDGE_COLS)
-                    y += PITCH + 0.6
+                # Jeder Block bekommt seinen eigenen Spaltenkopf. Vorher nur
+                # nach "band" gesetzt -- eine Seite, die im Kantenband beginnt
+                # und dann per "head" in ein neues Land wechselt, druckte den
+                # folgenden Knotenblock nie mit Kopf (Seiten 6, 9, 14).
+                s += _hdr(y, EDGE_COLS if it[0] == "band" else NODE_COLS)
+                y += PITCH + 0.6
             elif it[0] == "kante":
                 s += _edge_row(net, it[1], y, qnum)
                 y += PITCH

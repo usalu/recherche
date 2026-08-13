@@ -106,10 +106,42 @@ class FullImageCollectionTests(unittest.TestCase):
 
     def test_final_visual_audit_rejections_stay_withheld(self):
         suggestions = {row["key"]: row for row in load("suggestions.json")["nodes"]}
-        rejected = set(collection.MANUAL_CANDIDATE_REJECTIONS) | set(collection.MANUAL_DOMAIN_REJECTIONS)
-        self.assertTrue(rejected)
-        self.assertTrue(all(suggestions[key]["suggested_result"] == "none" for key in rejected))
-        self.assertTrue(all(suggestions[key]["suggested_candidate_id"] == "" for key in rejected))
+        self.assertTrue(collection.MANUAL_CANDIDATE_REJECTIONS)
+        for key, rules in collection.MANUAL_CANDIDATE_REJECTIONS.items():
+            suggestion = suggestions[key]
+            self.assertTrue(suggestion["suggested_result"] == "none"
+                            or ("*" not in rules and suggestion["suggested_candidate_id"] not in rules))
+        for key in collection.MANUAL_DOMAIN_REJECTIONS:
+            self.assertEqual(suggestions[key]["suggested_result"], "none")
+            self.assertEqual(suggestions[key]["suggested_candidate_id"], "")
+
+    def test_final_suggestion_audit_is_complete_and_clean(self):
+        audit = load("final_review/FINAL_SUGGESTION_AUDIT.json")
+        self.assertEqual(audit["selection_nodes"], 762)
+        self.assertEqual(audit["final_logo_suggestions"] + audit["final_none_suggestions"], 762)
+        self.assertEqual(audit["problems"], [])
+        self.assertTrue(all(audit["checks"].values()))
+
+    def test_bulk_suggestion_review_records_opacity_and_remains_revisable(self):
+        if not (ROOT / "full_asset_review.json").is_file():
+            self.skipTest("bulk acceptance has not been run")
+        review = load("full_asset_review.json")
+        suggestions = {row["key"]: row for row in load("suggestions.json")["nodes"]}
+        self.assertEqual(len(review["nodes"]), 762)
+        self.assertEqual(review["logo_opacity_percent"], 50)
+        self.assertTrue(review["provisional"])
+        for decision in review["nodes"]:
+            suggestion = suggestions[decision["key"]]
+            self.assertEqual(decision["result"], suggestion["suggested_result"])
+            self.assertEqual(decision["candidate_id"], suggestion["suggested_candidate_id"])
+            self.assertEqual(decision["logo_opacity_percent"], 50)
+            self.assertTrue(decision["provisional"])
+
+    def test_logo_opacity_scales_alpha_only(self):
+        canvas = Image.new("RGBA", (2, 1), (20, 40, 60, 200))
+        result = collection.apply_logo_opacity(canvas, 50)
+        self.assertEqual(result.getpixel((0, 0)), (20, 40, 60, 100))
+        self.assertEqual(canvas.getpixel((0, 0)), (20, 40, 60, 200))
 
     def test_visible_header_logo_outranks_an_app_icon(self):
         node = {"name": "Elliott Wood"}
@@ -152,9 +184,19 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertIn('id="logoOpacity" type="range"', html)
         self.assertIn("--logo-opacity", html)
         self.assertIn("akteursnetz.logoOpacity", html)
+        self.assertIn("review_settings?.logo_opacity_percent", html)
+        self.assertIn("n.decision.provisional?'vorläufig':'bestätigt'", html)
+        self.assertIn("logo_opacity_percent:Number($('logoOpacity').value)", html)
         self.assertIn("Nicht vorschlagen", html)
         self.assertIn(".candidate:not(.rejected)", html)
         self.assertNotIn("approveAll", html)
+
+    def test_image_handoff_documents_provisional_boundary(self):
+        handoff = (ROOT.parent / "HANDOFF_BILDER_FULL.md").read_text(encoding="utf-8")
+        self.assertIn("343 `logo`, 419 `none`", handoff)
+        self.assertIn("50 % Logo-Deckkraft", handoff)
+        self.assertIn("kein Neo4j-Write", handoff)
+        self.assertIn("noch nicht ausgeführte schlussstrecke", handoff.lower())
 
     def test_review_state_blocks_rejected_candidates(self):
         state = collection.review_state()

@@ -32,7 +32,15 @@ class Frame:
     margin: float
 
 
-DEFAULT_FRAME = Frame(w=181.0, h=50.0, margin=3.0)   # PANEL_W x (4-per-page height) x SMARGIN
+# h was 50.0 with a comment claiming "4-per-page height" -- measured directly
+# in the built PDF (page 97: panel titles at y=15.5/81.8/148.7mm, a 66.5mm
+# pitch per panel at h=50), only 3 actually fit; the comment was wrong, not
+# the intent. 45.0 gives each panel ~16.5mm of window chrome (title bar,
+# hairlines, inter-figure gap -- also measured, not guessed) within a
+# 4-per-page budget on the A4 spread page. Re-verify by rendering a built
+# page, not by re-deriving this arithmetic -- LaTeX's own page-builder decides
+# the actual break, this module only supplies the box it breaks around.
+DEFAULT_FRAME = Frame(w=181.0, h=45.0, margin=3.0)   # PANEL_W x (4-per-page height) x SMARGIN
 
 
 def force_layout(panel, keep: set, frame: Frame = DEFAULT_FRAME, seed: int = 7):

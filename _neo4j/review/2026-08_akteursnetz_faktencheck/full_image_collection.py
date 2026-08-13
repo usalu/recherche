@@ -91,16 +91,18 @@ NON_ORGANISATION_MARKERS = (
 # deliberately key-specific: a weak or mismatched candidate must not teach the
 # collector a broad rule that could hide a valid logo for another actor.
 MANUAL_CANDIDATE_REJECTIONS = {
-    "GB:M24": "generic cursor/site-builder icon, not The Old Slate Yard's mark",
-    "GB:N01": "asset identifies Abstrakt, not BioRegional",
-    "DE:S01": "product/brochure image, not Concular's mark",
-    "DE:U03": "generic Augsburg sustainability icon, not the actor's mark",
-    "CH:U20": "blurred colour field is not a legible organisational mark",
-    "FR:F01": "BATIPEDIA service mark, not CSTB's organisational mark",
-    "FR:M18": "generic telephone symbol, not Fer et Pierre's mark",
-    "FR:M33": "WordPress platform icon, not the actor's mark",
-    "BE:M19": "flat placeholder rectangle, not Houtenplaten's mark",
-    "DK:M03": "asset identifies Censio, not Bærebyg",
+    "GB:M24": {"c09": "generic cursor/site-builder icon, not The Old Slate Yard's mark"},
+    "GB:N01": {"c19": "asset identifies Abstrakt, not BioRegional"},
+    "DE:S01": {"c11": "product/brochure image, not Concular's mark"},
+    "DE:U03": {"*": "generic Augsburg sustainability icon, not the actor's mark"},
+    "CH:U20": {"*": "blurred colour field is not a legible organisational mark"},
+    "FR:F01": {"c07": "BATIPEDIA service mark, not CSTB's organisational mark"},
+    "FR:M18": {"c10": "generic telephone symbol, not Fer et Pierre's mark"},
+    "FR:M33": {"*": "WordPress platform icon, not the actor's mark"},
+    "BE:M19": {"c05": "flat placeholder rectangle, not Houtenplaten's mark",
+                "c06": "flat placeholder rectangle, not Houtenplaten's mark",
+                "c09": "photo of facade signage, not reusable source artwork"},
+    "DK:M03": {"c08": "asset identifies Censio, not Bærebyg"},
 }
 
 MANUAL_DOMAIN_REJECTIONS = {
@@ -694,19 +696,32 @@ def command_audit_sheets(_args):
                                 for row in nodes.values() if row["cc"] == cc)
         for cc in COUNTRY_ORDER
     }
+    candidate_reason_by_key = {
+        key: "; ".join(sorted(set(rules.values())))
+        for key, rules in MANUAL_CANDIDATE_REJECTIONS.items()
+    }
     manual_rejections = [
         {"key": key, "name": nodes[key]["name"], "reason": reason,
          "suggested_result": suggestions_by_key[key]["suggested_result"]}
-        for key, reason in sorted({**MANUAL_CANDIDATE_REJECTIONS,
+        for key, reason in sorted({**candidate_reason_by_key,
                                     **MANUAL_DOMAIN_REJECTIONS}.items())
     ]
+    blocked_candidates_absent = all(
+        suggestions_by_key[key]["suggested_result"] == "none"
+        or ("*" not in rules and suggestions_by_key[key]["suggested_candidate_id"] not in rules)
+        for key, rules in MANUAL_CANDIDATE_REJECTIONS.items()
+    )
+    rejected_domains_are_none = all(
+        suggestions_by_key[key]["suggested_result"] == "none"
+        for key in MANUAL_DOMAIN_REJECTIONS
+    )
     audit = {
         "schema_version": 1,
         "audited_at": pilot.today(),
         "scope": "all 762 organisation suggestions; projects remain image-free",
         "selection_nodes": len(nodes),
         "initial_logo_suggestions_visually_checked": 352,
-        "manual_mismatches_withheld": len(manual_rejections),
+        "manual_mismatches_corrected": len(manual_rejections),
         "final_logo_suggestions": result_counts["logo"],
         "final_none_suggestions": result_counts["none"],
         "visual_sheet_count": len(pages),
@@ -716,8 +731,8 @@ def command_audit_sheets(_args):
             "all_results_resolved_as_suggestion": set(result_counts) <= {"logo", "none"},
             "no_suggestion_is_user_confirmation": all(not row.get("confirmed") for row in suggestions),
             "all_logo_candidates_pass_identity_and_file_checks": not problems,
-            "all_manual_rejections_are_none": all(row["suggested_result"] == "none"
-                                                    for row in manual_rejections),
+            "no_rejected_candidate_is_suggested": blocked_candidates_absent,
+            "all_rejected_domains_are_none": rejected_domains_are_none,
         },
         "problems": problems,
         "countries": {cc: {"logo": country_counts[cc]["logo"], "none": country_counts[cc]["none"]}
@@ -730,7 +745,7 @@ def command_audit_sheets(_args):
         "# Finaler Vorschlagsaudit der Akteurslogos", "", f"Geprüft: {audit['audited_at']}", "",
         "## Ergebnis", "", "- 762/762 Organisationsknoten strukturell geprüft.",
         f"- 352 ursprüngliche Logo-Vorschläge auf {len(pages)} Prüfbögen vollständig visuell geprüft.",
-        f"- {len(manual_rejections)} Fehlzuordnungen oder unbrauchbare Marken auf `none` zurückgezogen.",
+        f"- {len(manual_rejections)} Fehlzuordnungen oder unbrauchbare Marken korrigiert; sichere Alternativen wurden bevorzugt, sonst `none`.",
         f"- Endstand: {result_counts['logo']} Logo-Vorschläge, {result_counts['none']} `none`-Vorschläge.",
         "- Keine Entscheidung wurde als Benutzerbestätigung gespeichert; keine Neo4j-Schreiboperation erfolgte.",
         "", "## Automatische Gegenprüfung", "",
@@ -758,8 +773,11 @@ def usable_candidates(node):
 
 def candidate_rejection(node, candidate):
     """Reject obvious photos and third-party badges before they become suggestions."""
-    if node.get("key") in MANUAL_CANDIDATE_REJECTIONS:
-        return MANUAL_CANDIDATE_REJECTIONS[node["key"]]
+    manual = MANUAL_CANDIDATE_REJECTIONS.get(node.get("key"), {})
+    if candidate.get("id") in manual:
+        return manual[candidate["id"]]
+    if "*" in manual:
+        return manual["*"]
     url = (candidate.get("final_url") or candidate.get("url") or "").lower()
     decoded_url = urllib.parse.unquote(url)
     if any(marker in decoded_url for marker in SOCIAL_MARKERS):
@@ -871,6 +889,53 @@ def review_document():
     return existing
 
 
+def command_accept_suggestions(args):
+    """Provisionally confirm the complete, audited suggestion set in one reproducible step."""
+    opacity = int(args.opacity)
+    if not 0 <= opacity <= 100:
+        raise ValueError("opacity must be between 0 and 100 percent")
+    nodes = pilot.load_json(SELECTION)["nodes"]
+    suggestions = {row["key"]: row for row in pilot.load_json(SUGGESTIONS)["nodes"]}
+    domains = {row["key"]: row for row in pilot.load_json(DOMAINS)["nodes"]}
+    if len(nodes) != 762 or len(suggestions) != 762:
+        raise ValueError("bulk acceptance requires the complete 762-node suggestion set")
+    confirmed_at = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    decisions = []
+    for node in nodes:
+        key = node["key"]
+        suggestion = suggestions[key]
+        result = suggestion.get("suggested_result")
+        candidate_id, candidate_hash = "", None
+        if result == "logo":
+            if domain_suggestion_rejection(node, domains[key]):
+                raise ValueError(f"{key}: rejected domain cannot be bulk-confirmed")
+            candidate_id = suggestion.get("suggested_candidate_id") or ""
+            candidate = candidate_for(node, candidate_id)
+            rejection = candidate_rejection(node, candidate)
+            if rejection:
+                raise ValueError(f"{key}: rejected candidate cannot be bulk-confirmed: {rejection}")
+            candidate_hash = (candidate.get("preview_sha256")
+                              or pilot.sha256_file(FULL / candidate["preview_path"]))
+        elif result != "none":
+            raise ValueError(f"{key}: unresolved suggestion result {result!r}")
+        decisions.append({
+            "key": key, "result": result, "candidate_id": candidate_id,
+            "candidate_sha256": candidate_hash, "confirmed_at": confirmed_at,
+            "reviewer": "user (bulk suggestion acceptance)",
+            "notes": "Vorläufig aus dem vollständig geprüften Vorschlag übernommen; spätere Einzelprüfung möglich.",
+            "logo_opacity_percent": opacity, "provisional": True,
+        })
+    write_json(REVIEW, {
+        "schema_version": 1, "required": 762, "nodes": decisions,
+        "review_mode": "bulk_suggestion_acceptance_provisional",
+        "logo_opacity_percent": opacity, "provisional": True,
+        "accepted_from_suggestions_at": confirmed_at,
+        "suggestions_sha256": pilot.sha256_file(SUGGESTIONS),
+    })
+    counts = collections.Counter(row["result"] for row in decisions)
+    print(f"accepted 762 provisional suggestions at {opacity}% opacity: {dict(counts)}")
+
+
 def candidate_for(node, candidate_id):
     matches = [c for c in usable_candidates(node) if c.get("id") == candidate_id]
     if len(matches) != 1:
@@ -883,7 +948,8 @@ def review_state():
     domains = {r["key"]: r for r in pilot.load_json(DOMAINS)["nodes"]}
     suggestions = ({r["key"]: r for r in pilot.load_json(SUGGESTIONS)["nodes"]}
                    if SUGGESTIONS.exists() else {})
-    decisions = {r["key"]: r for r in review_document()["nodes"]}
+    review = review_document()
+    decisions = {r["key"]: r for r in review["nodes"]}
     output = []
     for node in nodes:
         domain = dict(domains[node["key"]])
@@ -899,7 +965,11 @@ def review_state():
         output.append({**{k: node.get(k) for k in ("key", "cc", "tid", "eid", "name", "typ", "graph_id")},
                        "domain": domain, "suggestion": suggestions.get(node["key"], {}),
                        "decision": decisions.get(node["key"]), "candidates": candidates})
-    return {"schema_version": 1, "total": len(output), "confirmed": len(decisions), "nodes": output}
+    return {"schema_version": 1, "total": len(output), "confirmed": len(decisions),
+            "review_settings": {"logo_opacity_percent": review.get("logo_opacity_percent", 100),
+                                "provisional": review.get("provisional", False),
+                                "review_mode": review.get("review_mode", "individual")},
+            "nodes": output}
 
 
 class ReviewHandler(http.server.BaseHTTPRequestHandler):
@@ -975,14 +1045,22 @@ class ReviewHandler(http.server.BaseHTTPRequestHandler):
                 if rejection:
                     raise ValueError(f"logo confirmation blocked: {rejection}")
                 candidate_hash = candidate.get("preview_sha256") or pilot.sha256_file(FULL / candidate["preview_path"])
-            decisions = {r["key"]: r for r in review_document()["nodes"]}
+            review = review_document()
+            decisions = {r["key"]: r for r in review["nodes"]}
+            opacity = int(value.get("logo_opacity_percent",
+                                    review.get("logo_opacity_percent", 100)))
+            if not 0 <= opacity <= 100:
+                raise ValueError("opacity must be between 0 and 100 percent")
             decisions[key] = {"key": key, "result": result, "candidate_id": candidate_id,
                               "candidate_sha256": candidate_hash,
                               "confirmed_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
                               "reviewer": (value.get("reviewer") or "user").strip()[:100],
-                              "notes": (value.get("notes") or "").strip()[:2000]}
+                              "notes": (value.get("notes") or "").strip()[:2000],
+                              "logo_opacity_percent": opacity, "provisional": False}
             ordered = [decisions[n["key"]] for n in nodes if n["key"] in decisions]
-            write_json(REVIEW, {"schema_version": 1, "required": 762, "nodes": ordered})
+            review.update({"schema_version": 1, "required": 762, "nodes": ordered,
+                           "logo_opacity_percent": opacity})
+            write_json(REVIEW, review)
             self.send_json({"ok": True, "confirmed": len(ordered), "total": len(nodes),
                             "decision": decisions[key]})
         except Exception as exc:
@@ -1018,6 +1096,14 @@ def complete_review():
     return nodes, decisions
 
 
+def apply_logo_opacity(canvas: Image.Image, percent: int) -> Image.Image:
+    """Apply the approved logo opacity without altering the collected source."""
+    percent = max(0, min(100, int(percent)))
+    output = canvas.convert("RGBA").copy()
+    output.putalpha(output.getchannel("A").point(lambda alpha: round(alpha * percent / 100)))
+    return output
+
+
 def command_finalize(_args):
     nodes, decisions = complete_review()
     rows = []
@@ -1032,7 +1118,9 @@ def command_finalize(_args):
                "retrieved_at": pilot.today(), "license_note": "", "sha256": None,
                "dark_sha256": None,
                "reviewer": decision.get("reviewer", "user"),
-               "confirmed_at": decision.get("confirmed_at"), "review_notes": decision.get("notes", "")}
+               "confirmed_at": decision.get("confirmed_at"), "review_notes": decision.get("notes", ""),
+               "logo_opacity_percent": decision.get("logo_opacity_percent", 100),
+               "provisional_review": bool(decision.get("provisional", False))}
         if result == "logo":
             candidate = candidate_for(node, decision.get("candidate_id") or "")
             source = FULL / candidate["preview_path"]
@@ -1042,11 +1130,13 @@ def command_finalize(_args):
             dest = FINAL / node["cc"] / f"{node['tid']}.png"
             dest.parent.mkdir(parents=True, exist_ok=True)
             canvas, crop_mode = pilot.prepare_node_canvas(source, theme="light")
+            canvas = apply_logo_opacity(canvas, decision.get("logo_opacity_percent", 100))
             canvas.save(dest, "PNG", optimize=True)
             dark_dest = None
             if crop_mode == "neutral_knockout":
                 dark_dest = FINAL / node["cc"] / f"{node['tid']}-dark.png"
                 dark_canvas, dark_mode = pilot.prepare_node_canvas(source, theme="dark")
+                dark_canvas = apply_logo_opacity(dark_canvas, decision.get("logo_opacity_percent", 100))
                 if dark_mode != crop_mode:
                     raise ValueError(f"{node['key']}: theme crop modes differ")
                 dark_canvas.save(dark_dest, "PNG", optimize=True)
@@ -1265,6 +1355,8 @@ def main():
     sub.add_parser("contact").set_defaults(func=contact_sheets)
     sub.add_parser("audit-sheets").set_defaults(func=command_audit_sheets)
     sub.add_parser("suggest").set_defaults(func=command_suggest)
+    accept = sub.add_parser("accept-suggestions"); accept.add_argument("--opacity", type=int, default=50)
+    accept.set_defaults(func=command_accept_suggestions)
     review = sub.add_parser("review-server"); review.add_argument("--host", default="127.0.0.1"); review.add_argument("--port", type=int, default=8765); review.add_argument("--no-open", action="store_true")
     review.set_defaults(func=command_review_server)
     sub.add_parser("finalize").set_defaults(func=command_finalize)

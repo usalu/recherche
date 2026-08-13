@@ -6,8 +6,8 @@ Geprüft: 2026-08-13
 
 - 762/762 Organisationsknoten strukturell geprüft.
 - 352 ursprüngliche Logo-Vorschläge auf 22 Prüfbögen vollständig visuell geprüft.
-- 14 Fehlzuordnungen oder unbrauchbare Marken auf `none` zurückgezogen.
-- Endstand: 338 Logo-Vorschläge, 424 `none`-Vorschläge.
+- 14 Fehlzuordnungen oder unbrauchbare Marken korrigiert; sichere Alternativen wurden bevorzugt, sonst `none`.
+- Endstand: 343 Logo-Vorschläge, 419 `none`-Vorschläge.
 - Keine Entscheidung wurde als Benutzerbestätigung gespeichert; keine Neo4j-Schreiboperation erfolgte.
 
 ## Automatische Gegenprüfung
@@ -17,13 +17,14 @@ Geprüft: 2026-08-13
 - BESTANDEN — all_results_resolved_as_suggestion
 - BESTANDEN — no_suggestion_is_user_confirmation
 - BESTANDEN — all_logo_candidates_pass_identity_and_file_checks
-- BESTANDEN — all_manual_rejections_are_none
+- BESTANDEN — no_rejected_candidate_is_suggested
+- BESTANDEN — all_rejected_domains_are_none
 
 ## Nach Sichtprüfung zurückgezogen
 
 | Knoten | Organisation | Grund |
 |---|---|---|
-| BE:M19 | Houtenplaten | flat placeholder rectangle, not Houtenplaten's mark |
+| BE:M19 | Houtenplaten | flat placeholder rectangle, not Houtenplaten's mark; photo of facade signage, not reusable source artwork |
 | CH:U20 | Pascal Flammer Architekten | blurred colour field is not a legible organisational mark |
 | DE:S01 | Concular | product/brochure image, not Concular's mark |
 | DE:U03 | bauteilbörse augsburg | generic Augsburg sustainability icon, not the actor's mark |
@@ -42,13 +43,13 @@ Geprüft: 2026-08-13
 
 | Land | Logo | none |
 |---|---:|---:|
-| GB | 56 | 59 |
-| DE | 30 | 52 |
+| GB | 57 | 58 |
+| DE | 31 | 51 |
 | NL | 55 | 47 |
 | CH | 33 | 38 |
-| FR | 43 | 59 |
-| BE | 36 | 56 |
-| DK | 21 | 37 |
+| FR | 44 | 58 |
+| BE | 37 | 55 |
+| DK | 22 | 36 |
 | SE | 21 | 23 |
 | FI | 8 | 26 |
 | NO | 23 | 10 |

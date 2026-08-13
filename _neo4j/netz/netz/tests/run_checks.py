@@ -233,6 +233,58 @@ def stage6_token_sync():
           f"sty={m and m.group(1)} python={layout.NODE_R}")
 
 
+def stage8_node_parity():
+    """The drawn nodes must be EXACTLY the strict review's approved set --
+    not a superset (a leaked prune/programme) and not a subset (something
+    silently dropped). Checked once by hand during the fact-check
+    integration (620 == 620, zero leaks); this is that same check made
+    permanent so a future data change can't regress it unnoticed."""
+    from netz.sources import DEFAULT
+    from netz.cli import load_network
+    from netz.data.prune import load_prune
+
+    net = load_network()
+    drawn = set()
+    for pan in net.panels.values():
+        drawn |= set(pan.actors) | set(pan.projects)
+
+    approved = set(json.load(open(DEFAULT.klassifikation_actor_project_path, encoding="utf-8")))
+    programmes = set(json.load(open(DEFAULT.programme_path, encoding="utf-8")))
+    pruned = load_prune(DEFAULT.prune_strict_path) | load_prune(DEFAULT.prune_faktencheck_path)
+
+    check("stage8.nodes.drawn==approved", drawn == approved,
+          f"missing={len(approved - drawn)} extra={len(drawn - approved)}")
+    check("stage8.nodes.no_programme_leak", not (drawn & programmes),
+          f"{len(drawn & programmes)} programme eid(s) drawn")
+    check("stage8.nodes.no_prune_leak", not (drawn & pruned),
+          f"{len(drawn & pruned)} pruned eid(s) drawn")
+
+
+def stage8_table_figure_edge_parity():
+    """The relationship table and the graph figure must show the SAME edges.
+    Found manually by counting both to 268 and still finding a 1-for-1
+    mismatch (a cross-border pair in the table but not the figure, a
+    merge-redirected pair in the figure but not the table) -- the totals
+    agreeing hid it completely, so this checks the actual SET, not the count.
+    Root causes, both fixed in table_grid.load_kanten: edges were checked
+    against `set(net.tid)` (everything the pipeline knows) instead of
+    `net.drawn` (what partition() actually draws across a panel boundary),
+    and eids weren't canonicalized through the strict review's merge
+    redirects before the join."""
+    from netz.sources import DEFAULT
+    from netz.cli import load_network
+    from netz.render.latex.table_grid import load_kanten
+
+    net = load_network()
+    drawn_pairs = {tuple(sorted(p)) for p in net.drawn}
+
+    kanten = load_kanten(DEFAULT.kanten_klassifikation_path, net, DEFAULT.merge_strict_path)
+    table_pairs = {tuple(sorted(k["pair"])) for cc in kanten for k in kanten[cc]}
+
+    check("stage8.edges.table==figure", drawn_pairs == table_pairs,
+          f"in figure only={len(drawn_pairs - table_pairs)} in table only={len(table_pairs - drawn_pairs)}")
+
+
 def main():
     print("=== Stage 0: canonicalization + golden freeze + determinism ===")
     stage0_snapshot_present()
@@ -260,6 +312,11 @@ def main():
     print("=== Stage 6: semio-graph.sty mechanism (network styles + wide-page macros), pixel parity ===")
     stage6_pixel_parity()
     stage6_token_sync()
+
+    print()
+    print("=== Stage 8: akteursnetz fact-check integration -- node/edge set parity ===")
+    stage8_node_parity()
+    stage8_table_figure_edge_parity()
 
     print()
     if FAILS:

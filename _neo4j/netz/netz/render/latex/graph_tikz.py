@@ -17,6 +17,7 @@ from ...model.variants import node_role, PLAIN
 from ...mechanisms.connectivity import drawn_edge_nodes
 from ...mechanisms.layout import force_layout, DEFAULT_FRAME
 from .vocab import CC_NAME
+from .table_grid import load_kanten
 
 
 def load_image_manifest(path):
@@ -44,6 +45,29 @@ def load_image_manifest(path):
     return result
 
 
+def load_edge_kinds(kanten_path, net, redirects_path=None):
+    """(eid, eid) sorted pair -> \\SemioGraphEdge kind for every DRAWN edge.
+
+    Two classes, taken straight from the relationship classification's own
+    `kind` field -- no new judgment made here:
+      AKTEUR-BAUVORHABEN (project role)      -> plain (unchanged, the default)
+      AKTEUR-AKTEUR      (organisational tie) -> muted (semio-graph.sty,
+                                                 already defined, never used)
+
+    Reuses table_grid.load_kanten for the membership test itself: that
+    function is what turned up (and fixed) the case where a "known" edge
+    wasn't actually drawn, so this lookup is built the same way rather than
+    re-deriving drawn-ness a second time.
+    """
+    by_cc = load_kanten(kanten_path, net, redirects_path)
+    kinds = {}
+    for cc in by_cc:
+        for k in by_cc[cc]:
+            if k.get("kind") == "AKTEUR-AKTEUR":
+                kinds[tuple(sorted(k["pair"]))] = "muted"
+    return kinds
+
+
 def node_tikz(net, e, x, y, label=True, images=None):
     role = node_role(net, e)
     options = [] if role is PLAIN else ["state=%s" % role.state]
@@ -55,7 +79,7 @@ def node_tikz(net, e, x, y, label=True, images=None):
     return r"\SemioGraphNode%s{%.2f,%.2f}{%s}" % (opt, x, y, tid)
 
 
-def country_figure(net, cc, frame=DEFAULT_FRAME, images=None):
+def country_figure(net, cc, frame=DEFAULT_FRAME, images=None, edge_kinds=None):
     pan = net.panels[cc]
     nodes = list(pan.actors) + list(pan.projects)
     if not nodes:
@@ -70,7 +94,9 @@ def country_figure(net, cc, frame=DEFAULT_FRAME, images=None):
          % (CC_NAME.get(cc, cc), nA, nP, frame.w, frame.h)]
     for a, b in edges:
         ax, ay = P[a]; bx, by = P[b]
-        s.append(r"\SemioGraphEdge{%.2f,%.2f}{%.2f,%.2f}" % (ax, ay, bx, by))
+        kind = (edge_kinds or {}).get(tuple(sorted((a, b))))
+        opt = "[kind=%s]" % kind if kind else ""
+        s.append(r"\SemioGraphEdge%s{%.2f,%.2f}{%.2f,%.2f}" % (opt, ax, ay, bx, by))
     for e in nodes:
         px, py = P[e]
         # Projects remain image-free even if a malformed manifest contains
