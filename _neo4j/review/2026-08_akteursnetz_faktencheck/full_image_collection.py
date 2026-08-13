@@ -76,6 +76,13 @@ SEARCH_BLOCKED_HOSTS = THIRD_PARTY_HOSTS | {
     "superlocal.eu", "steelconstruction.info", "constructionnews.co.uk",
 }
 SOCIAL_MARKERS = ("facebook", "instagram", "youtube", "linkedin", "pinterest", "twitter", "tiktok")
+NON_ORGANISATION_MARKERS = (
+    "bcorp", "b-corp", "b_corp", "bcorporation", "b-corporation", "nzero",
+    "award", "badge", "certif", "client-logo", "partner-logo", "partner%20logo",
+    "sponsor", "accredit", "webex-logo", "qual-logo", "hunger-logo", "vzug_logo",
+    "france-bleu", "lrqa", "city%20of%20newton", "survuvalkit", "survivalkit",
+    "team-headshot", "headshot", "portrait", "branddr", "brandbild",
+)
 _write_lock = threading.Lock()
 
 
@@ -403,13 +410,22 @@ def harvest_one(node, domain):
             record.update({"final_url": final_url, "content_type": content_type,
                            "format": fmt, "width": im.width, "height": im.height,
                            "retrieved_at": pilot.today(), "source_sha256": pilot.sha256_bytes(data)})
-            if fmt != "svg" and min(im.size) < 128:
+            if im.convert("RGBA").getchannel("A").getbbox() is None:
+                record["reason"] = "image has no visible pixels"
+            elif fmt != "svg" and min(im.size) < 128:
                 record["reason"] = "short edge below 128px"
             else:
                 preview = node_dir / f"{record['id']}_{kind}.png"
                 im.save(preview, "PNG")
-                record.update({"preview_path": str(preview.relative_to(FULL)).replace("\\", "/"),
-                               "preview_sha256": pilot.sha256_file(preview), "status": "candidate"})
+                try:
+                    prepared, _mode = pilot.prepare_node_canvas(preview, theme="light")
+                    if sum(value > 8 for value in prepared.getchannel("A").get_flattened_data()) < 32:
+                        raise ValueError("candidate has insufficient visible foreground")
+                except ValueError as exc:
+                    record["reason"] = str(exc)
+                else:
+                    record.update({"preview_path": str(preview.relative_to(FULL)).replace("\\", "/"),
+                                   "preview_sha256": pilot.sha256_file(preview), "status": "candidate"})
         except Exception as exc:
             record["reason"] = f"{type(exc).__name__}: {exc}"
         meta["candidates"].append(record)
@@ -452,7 +468,7 @@ def discover_media_candidates(official_url, existing):
             for _priority, kind, url in parser.candidates:
                 absolute = urllib.parse.urldefrag(urllib.parse.urljoin(base, url))[0]
                 if absolute not in existing_urls:
-                    output.append((6, "media_logo" if kind == "header_logo" else kind, absolute))
+                    output.append((6, kind, absolute))
                     existing_urls.add(absolute)
             for match in re.finditer(r"<(?:img|source)\b[^>]*(?:src|srcset)=[\"']([^\"' ,]+)",
                                      data.decode("utf-8", errors="replace"), re.I):
@@ -485,7 +501,7 @@ def build_manifest(_args):
         d = domains[node["key"]]
         path = RAW / node["cc"] / node["tid"] / "candidates.json"
         meta = pilot.load_json(path) if path.exists() else {"candidates": []}
-        usable = [c for c in meta.get("candidates", []) if c.get("status") == "candidate"]
+        usable = usable_candidates(node)
         result = ("candidates_collected" if usable else
                   ("no_usable_candidate" if d["status"] == "accepted" else "resolved_none"))
         candidate_transport = [{k: c.get(k) for k in (
@@ -525,8 +541,7 @@ def contact_sheets(_args):
     visible = []
     for node in nodes:
         path = RAW / node["cc"] / node["tid"] / "candidates.json"
-        meta = pilot.load_json(path) if path.exists() else {"candidates": []}
-        usable = [c for c in meta.get("candidates", []) if c.get("status") == "candidate"][:4]
+        usable = usable_candidates(node)[:4]
         if usable:
             visible.append((node, usable))
     CONTACT.mkdir(parents=True, exist_ok=True)
@@ -552,20 +567,74 @@ def usable_candidates(node):
     path = RAW / node["cc"] / node["tid"] / "candidates.json"
     if not path.exists():
         return []
-    return [c for c in pilot.load_json(path).get("candidates", []) if c.get("status") == "candidate"]
+    return [candidate for candidate in pilot.load_json(path).get("candidates", [])
+            if candidate.get("status") == "candidate" and candidate.get("preview_path")]
 
 
-def candidate_rank(candidate):
-    weights = {"apple_touch": 100, "declared_icon": 95, "favicon": 90,
-               "header_logo": 85, "media_logo": 75, "wikimedia": 70, "og_image": 45}
+def candidate_rejection(node, candidate):
+    """Reject obvious photos and third-party badges before they become suggestions."""
     url = (candidate.get("final_url") or candidate.get("url") or "").lower()
-    penalty = 200 if any(marker in url for marker in SOCIAL_MARKERS) else 0
+    decoded_url = urllib.parse.unquote(url)
+    if any(marker in decoded_url for marker in SOCIAL_MARKERS):
+        return "social-media asset"
+    if any(marker in decoded_url for marker in NON_ORGANISATION_MARKERS):
+        return "third-party, certification, partner or portrait asset"
     if any(marker in url for marker in ("no-image", "placeholder", "default-image", "spacer")):
-        penalty += 200
+        return "placeholder asset"
+    kind = candidate.get("kind")
+    logo_words = ("logo", "wordmark", "brandmark", "logotype")
+    if kind == "og_image" and not any(word in decoded_url for word in logo_words):
+        return "unchecked og:image without a logo filename"
+    if kind == "media_logo":
+        split = urllib.parse.urlsplit(decoded_url)
+        asset_tokens = set(tokens(split.path + " " + split.query))
+        name_tokens = {token for token in tokens(node.get("name", "")) if len(token) >= 4}
+        if not any(word in decoded_url for word in logo_words):
+            return "media image without a logo filename"
+        if name_tokens and not (name_tokens & asset_tokens):
+            return "media logo filename does not identify the organisation"
+    return ""
+
+
+def domain_suggestion_rejection(node, domain):
+    """Keep ambiguous automated domain research out of logo suggestions."""
+    if domain.get("status") != "accepted" or not domain.get("official_url"):
+        return "organisation domain is not accepted"
+    basis = domain.get("basis", "")
+    if basis in {"pilot_manual", "manual", "individual_manual_check"}:
+        return ""
+    official_root = root_url(domain["official_url"])
+    title = domain.get("page_title", "")
+    if basis == "individual_official_web_research":
+        selected = next((row for row in domain.get("research_candidates", [])
+                         if root_url(row.get("url", "")) == official_root), None)
+        if not selected:
+            return "automated research result has no matching identity record"
+        title = selected.get("page_title", "")
+    name_tokens = set(tokens(node.get("name", "")))
+    host_tokens = set(tokens(pilot.host_of(official_root)))
+    title_tokens = set(tokens(title))
+    matched = name_tokens & (host_tokens | title_tokens)
+    if basis == "individual_official_web_research":
+        if len(name_tokens) < 2:
+            return "ambiguous one-word organisation from automated domain research"
+        if len(matched) < 2:
+            return "automated domain does not identify enough of the organisation name"
+    elif name_tokens and not matched:
+        return "domain identity does not match the organisation name"
+    return ""
+
+
+def candidate_rank(candidate, node=None):
+    weights = {"header_logo": 130, "structured_logo": 125, "media_logo": 110,
+               "apple_touch": 100, "declared_icon": 95, "favicon": 90,
+               "wikimedia": 80, "og_image": 70}
+    if node is not None and candidate_rejection(node, candidate):
+        return -1000
     w, h = candidate.get("width", 1), candidate.get("height", 1)
     shape_bonus = 8 if 0.65 <= w / max(h, 1) <= 1.55 else 0
     size_bonus = min(8, min(w, h) / 128)
-    return weights.get(candidate.get("kind"), 0) + shape_bonus + size_bonus - penalty
+    return weights.get(candidate.get("kind"), 0) + shape_bonus + size_bonus
 
 
 def command_suggest(_args):
@@ -574,16 +643,23 @@ def command_suggest(_args):
     rows = []
     for node in nodes:
         candidates = usable_candidates(node)
-        ranked = sorted(candidates, key=lambda c: (-candidate_rank(c), c["id"]))
-        best = ranked[0] if ranked and candidate_rank(ranked[0]) > 0 else None
+        domain_rejection = domain_suggestion_rejection(node, domains[node["key"]])
+        ranked = sorted(candidates, key=lambda c: (-candidate_rank(c, node), c["id"]))
+        best = (ranked[0] if not domain_rejection and ranked
+                and candidate_rank(ranked[0], node) > 0 else None)
         if best:
             result, candidate_id = "logo", best["id"]
-            reason = f"Highest-ranked official candidate: {best['kind']}; review is still required."
+            reason = f"Highest-ranked identity-safe official candidate: {best['kind']}; review is still required."
         else:
             result, candidate_id = "none", ""
-            reason = ("No technically usable official candidate was collected."
+            rejected = [candidate_rejection(node, candidate) for candidate in candidates
+                        if candidate_rejection(node, candidate)]
+            reason = (("Domain withheld from suggestion: " + domain_rejection + ".")
+                      if domain_rejection else
+                      (("Candidates were collected but withheld from suggestion: " + "; ".join(sorted(set(rejected))) + ".")
+                      if rejected else ("No technically usable official candidate was collected."
                       if domains[node["key"]].get("status") == "accepted"
-                      else "No verified organisation or parent domain/mark after research.")
+                      else "No verified organisation or parent domain/mark after research.")))
         rows.append({"key": node["key"], "suggested_result": result,
                      "suggested_candidate_id": candidate_id, "reason": reason,
                      "confirmed": False})
@@ -591,22 +667,8 @@ def command_suggest(_args):
     print(f"wrote {SUGGESTIONS}: {collections.Counter(r['suggested_result'] for r in rows)}")
 
 
-def prepared_canvas(source: Path):
-    im = pilot.remove_edge_background(Image.open(source))
-    bbox = im.getchannel("A").getbbox()
-    if not bbox:
-        raise ValueError("candidate has no visible pixels")
-    im = im.crop(bbox)
-    scale = min((pilot.SAFE_RADIUS * 2) / im.width, (pilot.SAFE_RADIUS * 2) / im.height)
-    im = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))), Image.Resampling.LANCZOS)
-    canvas = Image.new("RGBA", (pilot.FINAL_SIZE, pilot.FINAL_SIZE), (0, 0, 0, 0))
-    canvas.alpha_composite(im, ((pilot.FINAL_SIZE - im.width) // 2, (pilot.FINAL_SIZE - im.height) // 2))
-    max_r = pilot.alpha_max_radius(canvas)
-    if max_r > pilot.SAFE_RADIUS:
-        ratio = (pilot.SAFE_RADIUS - 1.0) / max_r
-        im = im.resize((max(1, int(im.width * ratio)), max(1, int(im.height * ratio))), Image.Resampling.LANCZOS)
-        canvas = Image.new("RGBA", (pilot.FINAL_SIZE, pilot.FINAL_SIZE), (0, 0, 0, 0))
-        canvas.alpha_composite(im, ((pilot.FINAL_SIZE - im.width) // 2, (pilot.FINAL_SIZE - im.height) // 2))
+def prepared_canvas(source: Path, theme: str = "light"):
+    canvas, _crop_mode = pilot.prepare_node_canvas(source, theme=theme)
     return canvas
 
 
@@ -632,12 +694,14 @@ def review_state():
     output = []
     for node in nodes:
         candidates = []
-        for candidate in sorted(usable_candidates(node), key=lambda c: (-candidate_rank(c), c["id"])):
+        for candidate in sorted(usable_candidates(node), key=lambda c: (-candidate_rank(c, node), c["id"])):
             candidates.append({k: candidate.get(k) for k in (
                 "id", "kind", "url", "final_url", "width", "height", "format",
                 "preview_path", "preview_sha256", "license_note", "retrieved_at")})
+        domain = dict(domains[node["key"]])
+        domain["suggestion_rejection"] = domain_suggestion_rejection(node, domain)
         output.append({**{k: node.get(k) for k in ("key", "cc", "tid", "eid", "name", "typ", "graph_id")},
-                       "domain": domains[node["key"]], "suggestion": suggestions.get(node["key"], {}),
+                       "domain": domain, "suggestion": suggestions.get(node["key"], {}),
                        "decision": decisions.get(node["key"]), "candidates": candidates})
     return {"schema_version": 1, "total": len(output), "confirmed": len(decisions), "nodes": output}
 
@@ -676,9 +740,12 @@ class ReviewHandler(http.server.BaseHTTPRequestHandler):
             elif parsed.path == "/prepared":
                 key = query.get("key", [""])[0]
                 candidate_id = query.get("candidate", [""])[0]
+                theme = query.get("theme", ["light"])[0]
+                if theme not in {"light", "dark"}:
+                    raise ValueError("theme must be light or dark")
                 node = next(n for n in pilot.load_json(SELECTION)["nodes"] if n["key"] == key)
                 candidate = candidate_for(node, candidate_id)
-                image = prepared_canvas(FULL / candidate["preview_path"])
+                image = prepared_canvas(FULL / candidate["preview_path"], theme=theme)
                 buf = io.BytesIO(); image.save(buf, "PNG", optimize=True)
                 self.send_bytes(buf.getvalue(), "image/png")
             else:
@@ -759,6 +826,7 @@ def command_finalize(_args):
                "result": result, "review_status": "accepted", "asset_path": None,
                "dark_asset_path": None, "source_url": None, "source_kind": None,
                "retrieved_at": pilot.today(), "license_note": "", "sha256": None,
+               "dark_sha256": None,
                "reviewer": decision.get("reviewer", "user"),
                "confirmed_at": decision.get("confirmed_at"), "review_notes": decision.get("notes", "")}
         if result == "logo":
@@ -769,13 +837,25 @@ def command_finalize(_args):
                 raise ValueError(f"{node['key']}: confirmed candidate changed after review")
             dest = FINAL / node["cc"] / f"{node['tid']}.png"
             dest.parent.mkdir(parents=True, exist_ok=True)
-            prepared_canvas(source).save(dest, "PNG", optimize=True)
+            canvas, crop_mode = pilot.prepare_node_canvas(source, theme="light")
+            canvas.save(dest, "PNG", optimize=True)
+            dark_dest = None
+            if crop_mode == "neutral_knockout":
+                dark_dest = FINAL / node["cc"] / f"{node['tid']}-dark.png"
+                dark_canvas, dark_mode = pilot.prepare_node_canvas(source, theme="dark")
+                if dark_mode != crop_mode:
+                    raise ValueError(f"{node['key']}: theme crop modes differ")
+                dark_canvas.save(dark_dest, "PNG", optimize=True)
             row.update({"asset_path": str(dest.relative_to(FULL)).replace("\\", "/"),
+                        "dark_asset_path": (str(dark_dest.relative_to(FULL)).replace("\\", "/")
+                                            if dark_dest else None),
+                        "crop_mode": crop_mode,
                         "source_url": candidate.get("final_url") or candidate.get("url"),
                         "source_kind": candidate.get("kind"),
                         "retrieved_at": candidate.get("retrieved_at") or pilot.today(),
                         "license_note": candidate.get("license_note") or "Official-site mark used for identification; no affiliation implied.",
-                        "sha256": pilot.sha256_file(dest)})
+                        "sha256": pilot.sha256_file(dest),
+                        "dark_sha256": pilot.sha256_file(dark_dest) if dark_dest else None})
         rows.append(row)
     manifest = {"schema_version": 1, "transport_only": True,
                 "canonical_target": "Neo4j node properties after separate approval",
@@ -815,10 +895,28 @@ def validate_final_manifest(manifest):
         with Image.open(path) as image:
             if image.size != (256, 256) or image.mode != "RGBA" or image.format != "PNG":
                 errors.append(f"{key}: expected 256x256 RGBA PNG")
-            if pilot.alpha_max_radius(image.convert("RGBA")) > pilot.SAFE_RADIUS + 0.75:
-                errors.append(f"{key}: visible pixels exceed 93% radial safety zone")
+            max_radius = pilot.alpha_max_radius(image.convert("RGBA"))
+            limit = (pilot.FINAL_SIZE / 2 + 0.75 if row.get("crop_mode") == "circle_cover"
+                     else pilot.SAFE_RADIUS + 0.75)
+            if max_radius > limit:
+                errors.append(f"{key}: visible pixels exceed {row.get('crop_mode') or 'safe'} radial zone")
         if pilot.sha256_file(path) != row.get("sha256"):
             errors.append(f"{key}: final checksum mismatch")
+        dark_rel = row.get("dark_asset_path")
+        if row.get("crop_mode") == "neutral_knockout" and not dark_rel:
+            errors.append(f"{key}: neutral knockout lacks dark asset")
+        if dark_rel:
+            dark_path = FULL / dark_rel
+            if not dark_path.is_file():
+                errors.append(f"{key}: missing dark asset")
+            else:
+                with Image.open(dark_path) as dark_image:
+                    if dark_image.size != (256, 256) or dark_image.mode != "RGBA" or dark_image.format != "PNG":
+                        errors.append(f"{key}: expected 256x256 RGBA dark PNG")
+                    if pilot.alpha_max_radius(dark_image.convert("RGBA")) > limit:
+                        errors.append(f"{key}: dark pixels exceed radial zone")
+                if pilot.sha256_file(dark_path) != row.get("dark_sha256"):
+                    errors.append(f"{key}: dark checksum mismatch")
         if not row.get("source_url") or not row.get("source_kind") or not row.get("license_note"):
             errors.append(f"{key}: incomplete provenance")
     return errors

@@ -4,6 +4,7 @@ interpreting data, e.g. resolving an overlay's cc="BE" to the country the
 raw export calls it by) -- this module is presentation only.
 """
 from ...data._identity import ISO, ROLE_DE
+from ._rolegroups import ROLE_GROUP, GROUP_LABEL, ROLE_GROUPS  # noqa: F401
 
 CC_NAME = {v: k for k, v in ISO.items()}   # ISO2 -> German country name
 

@@ -5,7 +5,7 @@
 - Graph-backed organisations: **412**
 - Overlay organisations: **350**
 - Neo4j writes: **0**
-- Collected candidate files: **1853**
+- Collected candidate files: **1844**
 
 ## Results
 

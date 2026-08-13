@@ -4,10 +4,14 @@ from __future__ import annotations
 
 import json
 import hashlib
+import tempfile
 import unittest
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageDraw
+
+import full_image_collection as collection
+import pilot_images as pilot
 
 
 ROOT = Path(__file__).resolve().parent / "bilder_full"
@@ -82,11 +86,109 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertTrue(all(r["suggested_result"] in {"logo", "none"} for r in suggestions["nodes"]))
         self.assertTrue(all(r["confirmed"] is False for r in suggestions["nodes"]))
 
+    def test_suggestions_exclude_photos_partner_marks_and_wrong_media_logos(self):
+        node = {"name": "FORE Partnership"}
+        self.assertTrue(collection.candidate_rejection(node, {
+            "kind": "media_logo", "url": "https://fore.example/logos/logo_nzero.png"}))
+        self.assertTrue(collection.candidate_rejection(node, {
+            "kind": "og_image", "url": "https://fore.example/team/photo.jpg"}))
+        self.assertTrue(collection.candidate_rejection(node, {
+            "kind": "media_logo", "url": "https://fore.example/logo_other-company.svg"}))
+        self.assertFalse(collection.candidate_rejection(node, {
+            "kind": "media_logo", "url": "https://fore.example/FORE-logo.svg"}))
+
+    def test_visible_header_logo_outranks_an_app_icon(self):
+        node = {"name": "Elliott Wood"}
+        icon = {"kind": "apple_touch", "width": 256, "height": 256, "url": "https://example/icon.png"}
+        header = {"kind": "header_logo", "width": 512, "height": 128, "url": "https://example/elliott.svg"}
+        self.assertGreater(collection.candidate_rank(header, node), collection.candidate_rank(icon, node))
+
+    def test_ambiguous_automated_domains_are_withheld(self):
+        mace = {"name": "Mace"}
+        restaurant = {"status": "accepted", "basis": "individual_official_web_research",
+                      "official_url": "https://mace-restaurant.de/",
+                      "research_candidates": [{"url": "https://mace-restaurant.de/",
+                                                 "page_title": "MACE Restaurant"}]}
+        self.assertTrue(collection.domain_suggestion_rejection(mace, restaurant))
+        fore = {"name": "FORE Partnership"}
+        official = {"status": "accepted", "basis": "individual_identity_check",
+                    "official_url": "https://www.forepartnership.com/",
+                    "page_title": "FORE Partnership | Sustainable Real Estate"}
+        self.assertFalse(collection.domain_suggestion_rejection(fore, official))
+
+    def test_json_ld_organisation_logo_is_discovered(self):
+        parser = pilot.IconParser()
+        parser.feed('<script type="application/ld+json">'
+                    '{"@type":"Organization","name":"FORE Partnership",'
+                    '"logo":{"url":"https://example/FORE-logo.jpg"}}'
+                    '</script>')
+        self.assertIn((4, "structured_logo", "https://example/FORE-logo.jpg"), parser.candidates)
+
+    def test_css_header_mask_logo_is_discovered(self):
+        urls = pilot.css_header_logo_candidates(
+            '.header__logo{mask-image:url("../img/ewood-black.svg")}',
+            'https://example/assets/css/final.css')
+        self.assertEqual(urls, ['https://example/assets/img/ewood-black.svg'])
+
     def test_review_ui_requires_an_explicit_post(self):
         html = (ROOT.parent / "full_image_review.html").read_text(encoding="utf-8")
         self.assertIn("/api/decision", html)
+        self.assertIn("theme=dark", html)
         self.assertIn("Vorschlag", html)
+        self.assertIn('id="logoOpacity" type="range"', html)
+        self.assertIn("--logo-opacity", html)
+        self.assertIn("akteursnetz.logoOpacity", html)
         self.assertNotIn("approveAll", html)
+
+    def test_coloured_rectangle_is_preserved_as_a_full_circle_crop(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "blue-tile.png"
+            image = Image.new("RGBA", (400, 200), (12, 88, 170, 255))
+            ImageDraw.Draw(image).ellipse((180, 80, 220, 120), fill=(255, 255, 255, 255))
+            image.save(source)
+            prepared, mode = pilot.prepare_node_canvas(source)
+
+        self.assertEqual(mode, "circle_cover")
+        self.assertEqual(prepared.size, (256, 256))
+        self.assertGreater(prepared.getpixel((128, 2))[3], 240)
+        self.assertEqual(prepared.getpixel((0, 0))[3], 0)
+        self.assertEqual(prepared.getpixel((255, 255))[3], 0)
+        self.assertEqual(prepared.getpixel((128, 20))[:3], (12, 88, 170))
+
+    def test_freestanding_mark_remains_fully_contained_inside_circle(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "transparent-mark.png"
+            image = Image.new("RGBA", (400, 100), (0, 0, 0, 0))
+            ImageDraw.Draw(image).rectangle((10, 10, 389, 89), fill=(220, 30, 60, 255))
+            image.save(source)
+            prepared, mode = pilot.prepare_node_canvas(source)
+            wrapper_prepared = collection.prepared_canvas(source)
+
+        self.assertEqual(mode, "safe_contain")
+        self.assertLessEqual(pilot.alpha_max_radius(prepared), pilot.SAFE_RADIUS + 0.75)
+        self.assertEqual(prepared.getpixel((0, 0))[3], 0)
+        self.assertEqual(wrapper_prepared.size, (256, 256))
+
+    def test_neutral_rectangle_is_knocked_out_and_ink_is_theme_tokenised(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "wordmark-on-white.png"
+            image = Image.new("RGBA", (400, 160), (255, 255, 255, 255))
+            ImageDraw.Draw(image).rectangle((70, 50, 330, 110), fill=(30, 30, 30, 255))
+            image.save(source)
+            backdrop = pilot.neutral_edge_backdrop(image)
+            light_separated = pilot.neutral_backdrop_to_transparency(image, "light", backdrop)
+            dark_separated = pilot.neutral_backdrop_to_transparency(image, "dark", backdrop)
+            light, light_mode = pilot.prepare_node_canvas(source, theme="light")
+            dark, dark_mode = pilot.prepare_node_canvas(source, theme="dark")
+
+        self.assertIsNotNone(backdrop)
+        self.assertEqual(light_separated.getpixel((10, 10))[3], 0)
+        self.assertEqual(dark_separated.getpixel((10, 10))[3], 0)
+        self.assertEqual(light_separated.getpixel((200, 80))[:3], pilot.SEMIO_DARK)
+        self.assertEqual(dark_separated.getpixel((200, 80))[:3], pilot.SEMIO_LIGHT)
+        self.assertEqual(light_mode, "neutral_knockout")
+        self.assertEqual(dark_mode, "neutral_knockout")
+        self.assertEqual(light.getchannel("A").getbbox(), dark.getchannel("A").getbbox())
 
 
 if __name__ == "__main__":

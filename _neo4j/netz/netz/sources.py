@@ -55,6 +55,15 @@ class Sources:
     klassifikation_final_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/klassifikation_final.json"
     )
+    # Rolle + Relevanz per surviving actor/project, the strict review's own
+    # actor view -- the authority for what the printed table says a node does.
+    klassifikation_actor_project_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/klassifikation_actor_project_final.json"
+    )
+    # Beziehungsart, Richtung, Beschreibung und Beleg je klassifizierter Kante.
+    kanten_klassifikation_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/kanten_klassifikation.json"
+    )
     # Eight strict-review entries that are programmes, not actors -- rendered
     # as their own report block (render.latex.programme_table), never in the
     # actor figures/tables.

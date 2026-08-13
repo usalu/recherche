@@ -24,7 +24,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFont
+import numpy as np
 
 
 BASE = Path(__file__).resolve().parent
@@ -71,6 +72,8 @@ USER_AGENT = "Semio actor-network image pilot/1.0 (research; no affiliation)"
 MAX_DOWNLOAD = 12 * 1024 * 1024
 FINAL_SIZE = 256
 SAFE_RADIUS = 119.0  # 93% of the 128px node radius
+SEMIO_DARK = (0, 17, 23)
+SEMIO_LIGHT = (247, 243, 227)
 NODE_RADIUS_MM = 2.275
 IMAGE_DIAMETER_FRACTION = 1.00
 PILOT_PDFS = {
@@ -275,7 +278,10 @@ class IconParser(html.parser.HTMLParser):
         super().__init__(convert_charrefs=True)
         self.base = ""
         self.candidates = []
+        self.stylesheets = []
         self.header_depth = 0
+        self.json_ld_depth = 0
+        self.json_ld_parts = []
 
     def handle_starttag(self, tag, attrs):
         a = {k.lower(): (v or "") for k, v in attrs}
@@ -286,6 +292,8 @@ class IconParser(html.parser.HTMLParser):
             self.header_depth += 1
         if tag == "link" and a.get("href"):
             rel = set(a.get("rel", "").lower().split())
+            if "stylesheet" in rel:
+                self.stylesheets.append(a["href"])
             if "apple-touch-icon" in rel or "apple-touch-icon-precomposed" in rel:
                 self.candidates.append((1, "apple_touch", a["href"]))
             elif "icon" in rel or "shortcut" in rel:
@@ -298,10 +306,66 @@ class IconParser(html.parser.HTMLParser):
             marker = " ".join((a.get("alt", ""), a.get("class", ""), a.get("id", ""), a["src"])).lower()
             if self.header_depth and any(word in marker for word in ("logo", "brand", "wordmark", "identity")):
                 self.candidates.append((5, "header_logo", a["src"]))
+        if tag == "script" and "ld+json" in a.get("type", "").lower():
+            self.json_ld_depth = 1
+            self.json_ld_parts = []
+
+    def handle_data(self, data):
+        if self.json_ld_depth:
+            self.json_ld_parts.append(data)
 
     def handle_endtag(self, tag):
         if tag.lower() == "header" and self.header_depth:
             self.header_depth -= 1
+        if tag.lower() == "script" and self.json_ld_depth:
+            self.json_ld_depth = 0
+            try:
+                value = json.loads("".join(self.json_ld_parts))
+            except (TypeError, ValueError):
+                return
+            for logo in structured_organisation_logos(value):
+                self.candidates.append((4, "structured_logo", logo))
+
+
+def structured_organisation_logos(value):
+    """Return logo URLs only from JSON-LD organisation records."""
+    output = []
+
+    def visit(item):
+        if isinstance(item, list):
+            for child in item:
+                visit(child)
+            return
+        if not isinstance(item, dict):
+            return
+        kind = item.get("@type", "")
+        kinds = kind if isinstance(kind, list) else [kind]
+        if any(str(entry).lower() in {"organization", "corporation", "governmentorganization"}
+               for entry in kinds):
+            logo = item.get("logo")
+            if isinstance(logo, str):
+                output.append(logo)
+            elif isinstance(logo, dict):
+                for key in ("url", "contentUrl"):
+                    if isinstance(logo.get(key), str):
+                        output.append(logo[key])
+        for child in item.values():
+            if isinstance(child, (dict, list)):
+                visit(child)
+
+    visit(value)
+    return output
+
+
+def css_header_logo_candidates(css_text: str, stylesheet_url: str):
+    """Find image URLs used by header/navigation logo CSS rules."""
+    output = []
+    for match in re.finditer(r"([^{}]*(?:header|nav)[^{}]*logo[^{}]*)\{([^{}]*)\}",
+                             css_text, re.I):
+        declarations = match.group(2)
+        for url_match in re.finditer(r"url\(\s*['\"]?([^)'\"]+)", declarations, re.I):
+            output.append(urllib.parse.urljoin(stylesheet_url, html.unescape(url_match.group(1).strip())))
+    return output
 
 
 def request_bytes(url: str) -> tuple[bytes, str, str]:
@@ -331,6 +395,16 @@ def discover_candidates(official_url: str):
             parser.feed(data.decode("utf-8", errors="replace"))
             base = urllib.parse.urljoin(final_url, parser.base) if parser.base else final_url
             candidates.extend((p, k, urllib.parse.urljoin(base, u)) for p, k, u in parser.candidates)
+            for stylesheet in parser.stylesheets[:6]:
+                stylesheet_url = urllib.parse.urljoin(base, stylesheet)
+                try:
+                    css_data, css_type, css_final = request_bytes(stylesheet_url)
+                    if css_type in {"text/css", "text/plain", "application/octet-stream"} or stylesheet_url.lower().split("?", 1)[0].endswith(".css"):
+                        css_text = css_data.decode("utf-8", errors="replace")
+                        candidates.extend((5, "header_logo", url)
+                                          for url in css_header_logo_candidates(css_text, css_final))
+                except Exception:
+                    continue
     except Exception as exc:
         page_error = f"{type(exc).__name__}: {exc}"
     seen, result = set(), []
@@ -490,38 +564,177 @@ def remove_edge_background(im: Image.Image) -> Image.Image:
     return im
 
 
-def alpha_max_radius(im: Image.Image) -> float:
-    alpha = im.getchannel("A")
-    pixels = alpha.load()
-    cx = (im.width - 1) / 2
-    cy = (im.height - 1) / 2
-    max_r2 = 0.0
-    for y in range(im.height):
-        for x in range(im.width):
-            if pixels[x, y] > 8:
-                max_r2 = max(max_r2, (x - cx) ** 2 + (y - cy) ** 2)
-    return math.sqrt(max_r2)
+def has_flat_opaque_backdrop(im: Image.Image, tolerance: int = 18) -> bool:
+    """Return whether the source has a real, approximately solid rectangular backdrop.
+
+    Such a backdrop is source material, not a synthesized fill.  It should be
+    scaled as a cover image and cropped by the node circle so coloured logo
+    tiles can occupy the complete node.  Transparent/freestanding marks keep
+    the historical contain treatment so their actual artwork is never cut.
+    """
+    im = im.convert("RGBA")
+    if im.width < 2 or im.height < 2:
+        return False
+    corners = [im.getpixel((0, 0)), im.getpixel((im.width - 1, 0)),
+               im.getpixel((0, im.height - 1)), im.getpixel((im.width - 1, im.height - 1))]
+    if any(pixel[3] < 250 for pixel in corners):
+        return False
+    return all(max(pixel[channel] for pixel in corners) - min(pixel[channel] for pixel in corners) <= tolerance
+               for channel in range(3))
 
 
-def prepare_final(source: Path, dest: Path):
-    im = remove_edge_background(Image.open(source))
+def neutral_edge_backdrop(im: Image.Image) -> tuple[str, int] | None:
+    """Detect a dominant light/dark neutral backdrop touching the source edge.
+
+    Border clustering is used instead of corner equality because wide
+    wordmarks may touch two corners, as in the English Salvage source.
+    Coloured tiles are deliberately excluded and continue through circle-cover.
+    """
+    im = im.convert("RGBA")
+    if im.width < 2 or im.height < 2:
+        return None
+    border = ([im.getpixel((x, 0)) for x in range(im.width)] +
+              [im.getpixel((x, im.height - 1)) for x in range(im.width)] +
+              [im.getpixel((0, y)) for y in range(1, im.height - 1)] +
+              [im.getpixel((im.width - 1, y)) for y in range(1, im.height - 1)])
+    neutral_luminances = []
+    buckets = collections.Counter()
+    for r, g, b, a in border:
+        if a < 250 or max(r, g, b) - min(r, g, b) > 20:
+            continue
+        luminance = round((299 * r + 587 * g + 114 * b) / 1000)
+        neutral_luminances.append(luminance)
+        buckets[luminance // 16] += 1
+    if not buckets:
+        return None
+    bucket, count = buckets.most_common(1)[0]
+    if count < max(8, round(len(border) * 0.12)):
+        return None
+    cluster = sorted(value for value in neutral_luminances if abs(value // 16 - bucket) <= 1)
+    backdrop = cluster[len(cluster) // 2]
+    appearance = "light" if backdrop >= 184 else "dark" if backdrop <= 72 else None
+    if appearance is None:
+        return None
+
+    # Require the neutral backdrop to be a material part of the rectangle;
+    # this prevents a pale strip around a photograph from flattening the photo.
+    sample = im.resize((min(128, im.width), min(128, im.height)), Image.Resampling.BILINEAR)
+    sample_pixels = np.asarray(sample, dtype=np.int32)
+    sample_rgb = sample_pixels[:, :, :3]
+    sample_luminance = ((299 * sample_rgb[:, :, 0] + 587 * sample_rgb[:, :, 1] +
+                         114 * sample_rgb[:, :, 2] + 500) // 1000)
+    opaque_mask = sample_pixels[:, :, 3] >= 220
+    neutral_mask = (sample_rgb.max(axis=2) - sample_rgb.min(axis=2) <= 24) & opaque_mask
+    near_mask = neutral_mask & (np.abs(sample_luminance - backdrop) <= 24)
+    total = sample.width * sample.height
+    if int(opaque_mask.sum()) / total < 0.95:
+        return None
+    neutral = int(neutral_mask.sum())
+    near_backdrop = int(near_mask.sum())
+    if neutral / total < 0.55 or near_backdrop / total < 0.18:
+        return None
+    return appearance, backdrop
+
+
+def neutral_backdrop_to_transparency(im: Image.Image, theme: str, backdrop: tuple[str, int]) -> Image.Image:
+    """Knock out a neutral rectangle and tokenise its neutral foreground."""
+    if theme not in {"light", "dark"}:
+        raise ValueError(f"unsupported theme: {theme}")
+    im = im.convert("RGBA")
+    appearance, backdrop_luminance = backdrop
+    pixels = np.array(im, dtype=np.uint8)
+    rgb = pixels[:, :, :3].astype(np.int32)
+    luminance = ((299 * rgb[:, :, 0] + 587 * rgb[:, :, 1] + 114 * rgb[:, :, 2] + 500) // 1000)
+    neutral_mask = ((rgb.max(axis=2) - rgb.min(axis=2)) <= 32) & (pixels[:, :, 3] >= 8)
+    neutral_values = luminance[neutral_mask]
+    if neutral_values.size == 0:
+        raise ValueError("neutral backdrop has no foreground")
+    if appearance == "light":
+        foreground_luminance = int(np.quantile(neutral_values, 0.04, method="nearest"))
+        span = max(48, backdrop_luminance - foreground_luminance)
+    else:
+        foreground_luminance = int(np.quantile(neutral_values, 0.96, method="nearest"))
+        span = max(48, foreground_luminance - backdrop_luminance)
+    token = SEMIO_DARK if theme == "light" else SEMIO_LIGHT
+    output = np.zeros_like(pixels)
+    coloured_mask = (~neutral_mask) & (pixels[:, :, 3] >= 8)
+    output[coloured_mask] = pixels[coloured_mask]
+    output[neutral_mask, :3] = token
+    delta = (backdrop_luminance - luminance if appearance == "light"
+             else luminance - backdrop_luminance)
+    coverage = np.clip(delta.astype(np.float32) / span, 0.0, 1.0)
+    output[:, :, 3][neutral_mask] = np.rint(pixels[:, :, 3][neutral_mask] * coverage[neutral_mask]).astype(np.uint8)
+    return Image.fromarray(output, "RGBA")
+
+
+def apply_circle_crop(im: Image.Image) -> Image.Image:
+    """Mask a 256px node asset to its final circle with antialiased edges."""
+    im = im.convert("RGBA")
+    if im.size != (FINAL_SIZE, FINAL_SIZE):
+        raise ValueError(f"circle crop expects {FINAL_SIZE}x{FINAL_SIZE}, got {im.size}")
+    supersample = 4
+    mask_size = FINAL_SIZE * supersample
+    mask = Image.new("L", (mask_size, mask_size), 0)
+    ImageDraw.Draw(mask).ellipse((0, 0, mask_size - 1, mask_size - 1), fill=255)
+    mask = mask.resize((FINAL_SIZE, FINAL_SIZE), Image.Resampling.LANCZOS)
+    im.putalpha(ImageChops.multiply(im.getchannel("A"), mask))
+    return im
+
+
+def contain_node_artwork(im: Image.Image, mode: str) -> tuple[Image.Image, str]:
+    """Trim and contain already-separated artwork within the radial safety area."""
     bbox = im.getchannel("A").getbbox()
     if not bbox:
         raise ValueError("candidate has no visible pixels")
     im = im.crop(bbox)
     scale = min((SAFE_RADIUS * 2) / im.width, (SAFE_RADIUS * 2) / im.height)
-    size = (max(1, round(im.width * scale)), max(1, round(im.height * scale)))
-    im = im.resize(size, Image.Resampling.LANCZOS)
+    im = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))),
+                   Image.Resampling.LANCZOS)
     canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
     canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
     max_r = alpha_max_radius(canvas)
     if max_r > SAFE_RADIUS:
-        # Leave one pixel of numerical/centering headroom; integer resampling
-        # can otherwise place a surviving antialiased pixel just outside 93%.
         ratio = (SAFE_RADIUS - 1.0) / max_r
-        im = im.resize((max(1, int(im.width * ratio)), max(1, int(im.height * ratio))), Image.Resampling.LANCZOS)
+        im = im.resize((max(1, int(im.width * ratio)), max(1, int(im.height * ratio))),
+                      Image.Resampling.LANCZOS)
         canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
         canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
+    return apply_circle_crop(canvas), mode
+
+
+def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image, str]:
+    """Prepare a node asset using circle-cover or safe contain as appropriate."""
+    original = Image.open(source).convert("RGBA")
+    neutral_backdrop = neutral_edge_backdrop(original)
+    if neutral_backdrop is not None:
+        separated = neutral_backdrop_to_transparency(original, theme, neutral_backdrop)
+        return contain_node_artwork(separated, "neutral_knockout")
+    if has_flat_opaque_backdrop(original):
+        scale = max(FINAL_SIZE / original.width, FINAL_SIZE / original.height)
+        resized = original.resize((max(FINAL_SIZE, round(original.width * scale)),
+                                   max(FINAL_SIZE, round(original.height * scale))),
+                                  Image.Resampling.LANCZOS)
+        left = (resized.width - FINAL_SIZE) // 2
+        top = (resized.height - FINAL_SIZE) // 2
+        canvas = resized.crop((left, top, left + FINAL_SIZE, top + FINAL_SIZE))
+        return apply_circle_crop(canvas), "circle_cover"
+
+    return contain_node_artwork(remove_edge_background(original), "safe_contain")
+
+
+def alpha_max_radius(im: Image.Image) -> float:
+    alpha = np.asarray(im.getchannel("A"))
+    ys, xs = np.nonzero(alpha > 8)
+    if xs.size == 0:
+        return 0.0
+    cx = (im.width - 1) / 2
+    cy = (im.height - 1) / 2
+    max_r2 = np.max((xs - cx) ** 2 + (ys - cy) ** 2)
+    return math.sqrt(float(max_r2))
+
+
+def prepare_final(source: Path, dest: Path):
+    canvas, _crop_mode = prepare_node_canvas(source)
     dest.parent.mkdir(parents=True, exist_ok=True)
     canvas.save(dest, "PNG", optimize=True)
 
