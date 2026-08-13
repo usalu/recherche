@@ -16,6 +16,7 @@ from .render.latex.table_long import country_table, role_frequency, TABLE_LEGEND
 from .render.latex.framing import assemble_spread_fragment
 from .render.latex.fragments import write_fragment
 from .render.latex.table_grid import build_grid_fragment
+from .render.latex.programme_table import build_programme_fragment
 
 GRAPH_SECTION_TITLE = "Akteursnetze nach Land"
 TABLE_SECTION_TITLE = "Akteurstabellen nach Land"
@@ -64,7 +65,8 @@ def load_network():
     )
     exclude = (load_prune(DEFAULT.prune_path) |
                load_prune(DEFAULT.prune_faktencheck_path) |
-               strict.exclude)
+               strict.exclude |
+               strict.programmes)
     edge_exclude = (load_edge_exclude(DEFAULT.unklar_edges_path) |
                     load_edge_exclude(DEFAULT.prune_kanten_final_path))
     country_overrides = load_country_overrides(DEFAULT.latex_country_overrides_path)
@@ -74,13 +76,19 @@ def load_network():
 
 def main():
     ap = argparse.ArgumentParser(prog="netz")
-    ap.add_argument("cmd", choices=["abb", "tables", "tables-grid"])
+    ap.add_argument("cmd", choices=["abb", "tables", "tables-grid", "programme"])
     ap.add_argument("--out", default=None)
     ap.add_argument("--images-manifest", default=None,
                     help="optional accepted pilot-image transport manifest")
     ap.add_argument("--countries", default=None,
                     help="comma-separated ISO2 panel filter (abb only)")
     args = ap.parse_args()
+
+    if args.cmd == "programme":
+        out = args.out or os.path.join(SP, "figs", "frag_programme.tex")
+        n = build_programme_fragment(DEFAULT, out)
+        print(f"wrote {out}: {n} programmes")
+        return
 
     net = load_network()
     if args.cmd == "abb":

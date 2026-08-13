@@ -15,5 +15,12 @@ Neo4j noch die ursprünglichen Klassifikations- oder Faktencheck-Dateien.
    `approved_for_render_prune` erzeugt `finalize_strict_review.py` aktive,
    report-spezifische Artefakte. Ohne Freigabe bricht der Finalizer ab.
 
+Die finale Ausgabe trennt `Programm`-Einträge in
+`programme_strict_final.json` von der Akteurs-/Projektansicht. Die
+gefilterte Akteurs-/Projektdatei ist
+`klassifikation_actor_project_final.json`. Die
+report-spezifische Typkorrektur bleibt zusätzlich in
+`report_overrides_strict.json` und `klassifikation_final.json` erhalten.
+
 `audit_id` ist nur eine menschenlesbare Prüf-ID. Technische Joins verwenden
 ausschließlich `eid`.

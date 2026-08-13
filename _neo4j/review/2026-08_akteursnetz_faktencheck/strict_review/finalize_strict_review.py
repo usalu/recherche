@@ -42,6 +42,8 @@ def main() -> int:
     }
     overrides = {}
     final = {}
+    programmes = {}
+    actor_project = {}
     provenance = []
     for eid, rec in by_eid.items():
         provenance.append(rec)
@@ -59,6 +61,12 @@ def main() -> int:
             "reuse_objects": rec.get("reuse_objects") or [],
             "strict_review": True,
         }
+        if rec.get("corrected_type"):
+            final[eid]["report_entity_type"] = rec["corrected_type"]
+        if rec.get("corrected_type") == "Programm":
+            programmes[eid] = final[eid]
+        else:
+            actor_project[eid] = final[eid]
         override = {
             key: rec.get(key) for key in ("corrected_name", "corrected_type", "corrected_country")
             if rec.get(key)
@@ -71,6 +79,8 @@ def main() -> int:
         "merge_redirects_strict.json": redirects,
         "report_overrides_strict.json": overrides,
         "klassifikation_final.json": final,
+        "programme_strict_final.json": programmes,
+        "klassifikation_actor_project_final.json": actor_project,
         "prune_strict_provenance.json": {
             "schema_version": 1,
             "approved": True,
@@ -79,7 +89,10 @@ def main() -> int:
     }
     for name, data in outputs.items():
         (BASE / name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"final kept={len(final)} removed_or_merged={len(pruned)}")
+    print(
+        f"final kept={len(final)} programmes={len(programmes)} "
+        f"actor_or_project={len(final) - len(programmes)} removed_or_merged={len(pruned)}"
+    )
     return 0
 
 

@@ -5,35 +5,34 @@
 - Graph-backed organisations: **412**
 - Overlay organisations: **350**
 - Neo4j writes: **0**
-- Collected candidate files: **950**
+- Collected candidate files: **1853**
 
 ## Results
 
-- candidates_collected: **366**
-- no_usable_candidate: **81**
-- pending_domain: **315**
+- candidates_collected: **444**
+- no_usable_candidate: **74**
+- resolved_none: **244**
 
 ## Domain review
 
-- accepted: **447**
-- needs_review: **291**
-- no_candidate: **24**
+- accepted: **518**
+- resolved_none: **244**
 
 ## Countries
 
-| Country | candidates collected | no usable candidate | pending domain |
+| Country | candidates collected | no usable candidate | resolved none |
 |---|---:|---:|---:|
-| GB | 58 | 20 | 37 |
-| DE | 29 | 6 | 47 |
-| NL | 59 | 4 | 39 |
-| CH | 32 | 5 | 34 |
-| FR | 50 | 15 | 37 |
-| BE | 40 | 18 | 34 |
-| DK | 27 | 5 | 26 |
-| SE | 25 | 1 | 18 |
-| FI | 10 | 3 | 21 |
-| NO | 22 | 1 | 10 |
-| AT | 14 | 3 | 12 |
+| GB | 77 | 12 | 26 |
+| DE | 41 | 6 | 35 |
+| NL | 64 | 5 | 33 |
+| CH | 42 | 4 | 25 |
+| FR | 55 | 15 | 32 |
+| BE | 50 | 17 | 25 |
+| DK | 30 | 8 | 20 |
+| SE | 29 | 1 | 14 |
+| FI | 14 | 1 | 19 |
+| NO | 26 | 1 | 6 |
+| AT | 16 | 4 | 9 |
 
-`pending_domain` and `no_usable_candidate` are collection states, not final `none` decisions.
+`resolved_none` and `no_usable_candidate` are research/suggestion states; your explicit review is still required.
 Every candidate remains `review_status: pending` until visual and licence review.

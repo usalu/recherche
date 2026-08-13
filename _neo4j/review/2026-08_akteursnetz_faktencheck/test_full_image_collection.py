@@ -37,7 +37,7 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertEqual(set(selected), {row["key"] for row in self.manifest["nodes"]})
 
     def test_domain_states_are_explicit(self):
-        allowed = {"accepted", "needs_review", "no_candidate"}
+        allowed = {"accepted", "needs_review", "no_candidate", "resolved_none"}
         self.assertTrue(all(row["status"] in allowed for row in self.domains["nodes"]))
         self.assertTrue(all(row.get("official_url") for row in self.domains["nodes"] if row["status"] == "accepted"))
 
@@ -73,6 +73,20 @@ class FullImageCollectionTests(unittest.TestCase):
 
     def test_transport_does_not_claim_neo4j_import(self):
         self.assertIs(self.manifest["transport_only"], True)
+
+    def test_suggestions_are_complete_but_never_confirmed(self):
+        suggestions = load("suggestions.json")
+        self.assertEqual(len(suggestions["nodes"]), 762)
+        self.assertEqual({r["key"] for r in suggestions["nodes"]},
+                         {r["key"] for r in self.selection["nodes"]})
+        self.assertTrue(all(r["suggested_result"] in {"logo", "none"} for r in suggestions["nodes"]))
+        self.assertTrue(all(r["confirmed"] is False for r in suggestions["nodes"]))
+
+    def test_review_ui_requires_an_explicit_post(self):
+        html = (ROOT.parent / "full_image_review.html").read_text(encoding="utf-8")
+        self.assertIn("/api/decision", html)
+        self.assertIn("Vorschlag", html)
+        self.assertNotIn("approveAll", html)
 
 
 if __name__ == "__main__":

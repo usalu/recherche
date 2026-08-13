@@ -1,11 +1,14 @@
 # Freigabeliste: Harter Research-only-Cleanup
 
-**Status: geprüft, aber nicht für Semio aktiviert.**
+**Status: für den report-spezifischen Cleanup freigegeben.**
 
-- Behalten: 631
-- Entfernen: 226
-- Zusammenführen: 2
-- Erwarteter finaler Bestand nach Freigabe: 631
+- Behalten: 628
+- Entfernen: 227
+- Zusammenführen: 4
+- Erwarteter finaler Bestand nach Freigabe: 628
+
+- Davon Programme: 8
+- Akteurs-/Projektansicht ohne Programme: 620
 
 ## Ergebnis nach Land
 
@@ -13,14 +16,14 @@
 |---|---:|---:|---:|
 | AT | 21 | 10 | 0 |
 | BE | 64 | 35 | 0 |
-| CH | 72 | 11 | 0 |
+| CH | 70 | 11 | 2 |
 | DE | 70 | 25 | 0 |
 | DK | 49 | 22 | 1 |
 | FI | 32 | 9 | 0 |
 | FR | 97 | 11 | 0 |
 | GB | 80 | 49 | 0 |
 | NL | 75 | 42 | 1 |
-| NO | 32 | 3 | 0 |
+| NO | 31 | 4 | 0 |
 | SE | 39 | 9 | 0 |
 
 ## Behalten
@@ -52,8 +55,8 @@
 | BE:F02 | Buildwise | Qualitätssicherung | Entwickelt Prüfverfahren und Leitlinien zur Freigabe gebrauchter Baustoffe. |
 | BE:F03 | Kamp C | Reuse-Strategie | Entwickelt und demonstriert Strategien für demontierbare, wiederverwendbare Bauteile. |
 | BE:F04 | Laboratory for Green Transformable Buildings (GTB Lab) | Demontagegerechtes Design | Entwickelt, erprobt und demonstriert reversible Bausysteme für wiederholte Nutzung. |
-| BE:F05 | Technische Universität München (TUM) | Angewandte Forschung | Bündelt Forschung und Lehre zu Umnutzung, Reuse und Rückbau im gebauten Umfeld. |
-| BE:F07 | University of Twente | Angewandte Forschung | Entwickelt Informationsmethoden für Bergung, Reuse-Entscheidungen und reversibles Bauen. |
+| BE:F05 | CirculaTUM – TUM Mission Network Circular Economy | Angewandte Forschung | Bündelt Forschung und Lehre zu Umnutzung, Reuse und Rückbau im gebauten Umfeld. |
+| BE:F07 | Construction Management and Engineering / University of Twente | Angewandte Forschung | Entwickelt Informationsmethoden für Bergung, Reuse-Entscheidungen und reversibles Bauen. |
 | BE:F08 | Vlaamse Instelling voor Technologisch Onderzoek (VITO) | Reuse-Beratung | Berät und erforscht Methoden für demontierbare, wiederverwendbare Bauteile. |
 | BE:F09 | Vrije Universiteit Brussel (VUB) – Architectural Engineering | Demontagegerechtes Design / Methodenentwicklung / Angewandte Forschung | Erforscht und entwickelt reversible Lösungen zur Wiederverwendung von Bauteilen. |
 | BE:G01 | ERDF / FEDER Brüssel-Hauptstadt | Fördermittelvergabe | Fördert den Zinneke-Umbau mit Bestandserhalt und zahlreichen gebrauchten Bauteilen. |
@@ -120,16 +123,14 @@
 | BE:U27 | Loeliger Strub | Architektur | Plant LysP8 mit gebrauchten Ziegeln, Dachpfannen, Fassadenplatten und Küchen. |
 | BE:X01 | 2emain.be | Vermittlungsplattform | Vermittelt als Kleinanzeigenplattform gebrauchte Steinplatten für Bauprojekte. |
 | CH:F02 | Circular Engineering for Architecture / ETH Zürich | Datenanalyse / Methodenentwicklung / Angewandte Forschung | Entwickelt digitale Matching-Methoden für Reuse-Materialien und Bauprojekte. |
-| CH:F03 | Empa | Pilotierung / Angewandte Forschung | Erprobt wiederverwendbare Materialien und Technologien im NEST unter realen Bedingungen. |
-| CH:F04 | EPFL | Technologieentwicklung / Pilotierung / Angewandte Forschung | Entwickelt und erprobt zerlegbare Tragwerksysteme für mehrere Wiederverwendungszyklen. |
+| CH:F03 | NEST Research and Innovation Platform / Empa–Eawag | Pilotierung / Angewandte Forschung | Erprobt wiederverwendbare Materialien und Technologien im NEST unter realen Bedingungen. |
 | CH:F06 | Gramazio Kohler Research | Technologieentwicklung / Angewandte Forschung | Erforscht robotische additive Fügeverfahren für wiedergewonnenen Stahl. |
 | CH:F07 | INEB – FHNW (Leitfaden Reuse Stahl/Stahlbeton) | Methodenentwicklung / Angewandte Forschung / Richtlinienentwicklung | Entwickelt einen Leitfaden zur Wiederverwendung tragender Stahl- und Betonteile. |
-| CH:F08 | Structural Xploration Lab / EPFL | Angewandte Forschung / Lehre | Erforscht und lehrt die Wiederverwendung tragender Bauteile im Hochbau. |
+| CH:F08 | Structural Xploration Lab (SXL) / EPFL | Technologieentwicklung / Pilotierung / Angewandte Forschung | Entwickelt und erprobt zerlegbare Tragwerksysteme für wiederholte Nutzung. |
 | CH:F10 | Urban Bricolage | Angewandte Forschung / Wissenstransfer | Erforscht Praktiken und Probleme beim Bauen mit wiederverwendeten Materialien. |
-| CH:F11 | ZHAW | Methodenentwicklung / Angewandte Forschung / Lehre | Erforscht, entwickelt und lehrt Verfahren zur Wiederverwendung von Bauteilen. |
-| CH:F12 | ZHAW IKE | Angewandte Forschung / Lehre / Wissensvermittlung | Erforscht und lehrt Bauteilwiederverwendung und veröffentlicht Praxishilfen. |
+| CH:F12 | Institut Konstruktives Entwerfen (IKE) / ZHAW | Methodenentwicklung / Angewandte Forschung / Lehre | Entwickelt, erforscht und lehrt Verfahren zur Wiederverwendung von Bauteilen. |
 | CH:I01 | Entsorgung + Recycling Zürich (ERZ) | Gebäudeeigentum / Projektentwicklung | Entwickelt als Eigentümervertretung das Reuse-Pilotzentrum gemeinsam mit der Stadt. |
-| CH:I03 | Stadt Zürich / Amt für Hochbauten / Immobilien Stadt Zürich | Gebäudeeigentum / Reuse-Strategie / Potenzialbewertung | Prüft städtische Bauprojekte systematisch auf wiederverwendbare Bauteile. |
+| CH:I03 | Amt für Hochbauten und Immobilien Stadt Zürich | Gebäudeeigentum / Reuse-Strategie / Potenzialbewertung | Prüft städtische Bauprojekte systematisch auf wiederverwendbare Bauteile. |
 | CH:M01 | Archipel Sion Ressourcerie | Selektiver Rückbau / Sortierung / Bauteilhandel | Baut Bauteile schonend aus, sortiert sie und verkauft sie für eine zweite Nutzung. |
 | CH:M02 | Baumatpool.ch | Vermittlungsplattform | Ermöglicht das Finden, Kaufen und Verkaufen gebrauchter Baumaterialien. |
 | CH:M03 | Bauteilbörse Basel | Aufarbeitung / Bauteilhandel | Prüft, reinigt und bereitet demontierte Bauteile auf und verkauft sie. |
@@ -189,17 +190,17 @@
 | CH:U44 | Wetter AG | Bauausführung | Führte den Stahlbau des K.118 mit einem wiederverwendeten Tragwerk aus. |
 | CH:U46 | Zirkular | Bauteilinventarisierung | Katalogisierte Reuse-Bauteile für ein konkretes Bauprojekt. |
 | CH:X03 | Stiftung Habitat | Gebäudeeigentum | Nutzt in einem eigenen Wohnhaus gebrauchte Bauteile und Küchen weiter. |
-| DE:F01 | BTU Cottbus | Umweltbewertung / Angewandte Forschung | Erforscht und bewertet die Wieder- und Weiterverwendung gebrauchter Bauteile. |
+| DE:F01 | Arbeitsgebiet Bauliches Recycling / BTU Cottbus-Senftenberg | Umweltbewertung / Angewandte Forschung | Erforscht und bewertet die Wieder- und Weiterverwendung gebrauchter Bauteile. |
 | DE:F02 | Circular Material Systems | Datenplattform / Wissensvermittlung | Dokumentiert realisierte Zirkularitätsprojekte und vermittelt deren Reuse-Ansätze. |
 | DE:F03 | Claus Asam | Projektentwicklung / Pilotierung | Leitete Reuse-Piloten und erprobte den Wiedereinsatz rückgebauter Betonplatten. |
-| DE:F04 | HFT Stuttgart | Reuse-Planung / Angewandte Forschung / Wissensvermittlung | Erforscht Entwurfsoptionen und vermittelt Erkenntnisse zur Schalungswiederverwendung. |
-| DE:F05 | HTWG Konstanz | Reuse-Planung / Methodenentwicklung / Angewandte Forschung | Erforscht Reuse-Entwürfe und entwickelt eine Bilanzierung für gebrauchte Schalungen. |
-| DE:F07 | KIT | Pilotierung / Angewandte Forschung / Lehre | Erforscht Reuse in Bestandssanierungen und vermittelt zirkuläres Entwerfen. |
+| DE:F04 | Forschungsteam Stuttgart 210 / HFT Stuttgart | Reuse-Planung / Angewandte Forschung / Wissensvermittlung | Erforscht Entwurfsoptionen und vermittelt Erkenntnisse zur Schalungswiederverwendung. |
+| DE:F05 | Forschungsteam Stuttgart 210 / HTWG Konstanz | Reuse-Planung / Methodenentwicklung / Angewandte Forschung | Erforscht Reuse-Entwürfe und entwickelt eine Bilanzierung für gebrauchte Schalungen. |
+| DE:F07 | Professur Nachhaltiges Bauen / KIT | Pilotierung / Angewandte Forschung / Lehre | Erforscht Reuse in Bestandssanierungen und vermittelt zirkuläres Entwerfen. |
 | DE:F08 | Materialprüfanstalt Brandenburg | Zustandsbewertung | Begutachtet geborgenes Material für den Wiedereinsatz in Tragstrukturen. |
 | DE:F09 | Natural Building Lab | Pilotierung / Angewandte Forschung / Lehre | Erforscht, lehrt und erprobt Tragwerke und Sanierungen mit gebrauchten Bauteilen. |
 | DE:F10 | ReCreate project consortium | Reuse-Audit / Selektiver Rückbau / Angewandte Forschung | Entwickelt und erprobt Audit, Rückbau und Wiedereinsatz von Betonfertigteilen. |
 | DE:F13 | TU Berlin Fachgebiet Bauphysik und Baukonstruktionen | Angewandte Forschung / Lehre | Entwickelte das Reuse-Gebäude mit und band Studierende in Lehrbaustellen ein. |
-| DE:F14 | Universität Wuppertal | Lehre | Lehrt den experimentellen Entwurf mit wiederverwendeten Materialien. |
+| DE:F14 | Lehrstuhl TEAMhillebrandt / Bergische Universität Wuppertal | Lehre | Lehrt den experimentellen Entwurf mit wiederverwendeten Materialien. |
 | DE:G01 | Bundeszentrale für politische Bildung (bpb) | Fördermittelvergabe | Förderte das Bildungsprogramm im Gebäude aus wiederverwendeten Betonplatten. |
 | DE:G02 | Deutsche Bundesstiftung Umwelt (DBU) | Fördermittelvergabe | Fördert ein mobiles Bildungsgebäude aus wiederverwendeten Betonplatten. |
 | DE:I01 | Abfallwirtschaftsbetriebe Münster | Bauherrschaft | Beauftragte den Büro-Umbau mit gebrauchten Trennwänden, Verkleidungen und Möbeln. |
@@ -262,7 +263,7 @@
 | DE:U49 | Wiewiorra Hopp Architekten | Architektur / Reuse-Planung | Entwarf den Plattenpalast aus Betonplatten und gebrauchten Fenstern. |
 | DE:U50 | ZIRKULAAR Architektur | Architektur / Reuse-Planung / Vermittlung | Plant und vermittelt gebrauchte Bauteile für wiederverwendbare Architektur. |
 | DE:U51 | ZRS Ingenieure | Tragwerksplanung | Plant Tragwerke mit wiederverwendeten Stahlbauteilen im CRCLR House. |
-| DK:F01 | DTU | Methodenentwicklung | Entwickelt zerstörungsfreie Prüfmethoden für wiederzuverwendende Bauteile. |
+| DK:F01 | DTU Byg – Sektion Materialer og Holdbarhed | Methodenentwicklung | Entwickelt zerstörungsfreie Prüfmethoden für wiederzuverwendende Bauteile. |
 | DK:M01 | Bango A/S | Bauteilhandel | Verkauft gebrauchte Bauteile aus Rückbauprojekten für den erneuten Einsatz. |
 | DK:M05 | Byggeboersen | Vermittlungsplattform | Vermittelt gebrauchte Baustoffe über Suche, Anzeigen und direkten Käuferkontakt. |
 | DK:M06 | Bærebyg | Bauteilhandel | Verkauft geborgene Türen, Fenster und Haustechnik für neue Bauprojekte. |
@@ -306,14 +307,14 @@
 | DK:U31 | Skave Nedbrydning | Transport | Liefert und verkauft Fenster, Türen, Holz und Metall aus Rückbauten. |
 | DK:U33 | Tscherning | Selektiver Rückbau | Demontiert und birgt Bauteile so, dass Qualität und Festigkeit erhalten bleiben. |
 | DK:U34 | Vandkunsten | Methodenentwicklung | Entwickelt Designstrategien für langlebige Gebäude und wiederverwendbare Bauteile. |
-| FI:F01 | Aalto University (Department of Architecture) | Angewandte Forschung | Erforscht im Department of Architecture zirkuläres Bauen und Wiederverwendung. |
-| FI:F02 | Kaakkois-Suomen Ammattikorkeakoulu Oy (Xamk) | Methodenentwicklung / Angewandte Forschung / Monitoring und Evaluation | Entwickelt und erprobt Methoden zur Erfassung wiederverwendbarer Materialströme. |
+| FI:F01 | Housing Design / Department of Architecture / Aalto University | Angewandte Forschung | Erforscht im Department of Architecture zirkuläres Bauen und Wiederverwendung. |
+| FI:F02 | KIELO-Projektteam / Xamk | Methodenentwicklung / Angewandte Forschung / Monitoring und Evaluation | Entwickelt und erprobt Methoden zur Erfassung wiederverwendbarer Materialströme. |
 | FI:F03 | ReCreate Finnish cluster | Pilotierung / Netzwerkkoordination | Koordiniert den finnischen Cluster und realisierte dessen ersten Beton-Reuse-Pilot. |
-| FI:F04 | ReCreate / Tampere University | Pilotierung / Angewandte Forschung | Erforscht und pilotiert Demontage und Wiederverwendung von Betonfertigteilen. |
+| FI:F04 | ReCreate-Koordination / Faculty of Built Environment / Tampere University | Pilotierung / Angewandte Forschung | Erforscht und pilotiert Demontage und Wiederverwendung von Betonfertigteilen. |
 | FI:F05 | VTT – Circularity in the Built Environment | Methodenentwicklung / Angewandte Forschung | Entwickelt Methoden, damit Bauteile über mehrere Lebenszyklen wiederverwendet werden. |
 | FI:G01 | Ekokumppanit (Kiertotalous Pirkanmaa) | Programmmanagement / Methodenentwicklung | Entwickelt und pilotiert ein Modell für Lagerung und Wiederverwendung von Bauteilen. |
 | FI:G02 | SÄILÖ: Purusta säilöön ja kiertoon | Methodenentwicklung | Entwickelt ein Modell für die Wiederverwendung intakt demontierter Bauteile. |
-| FI:I02 | City of Helsinki | Programmmanagement / Öffentliche Beschaffung / Reuse-Strategie | Verankert Bauteilwiederverwendung in Piloten und künftigen Bauanforderungen. |
+| FI:I02 | Urban Environment Division / City of Helsinki | Programmmanagement / Öffentliche Beschaffung / Reuse-Strategie | Verankert Bauteilwiederverwendung in Piloten und künftigen Bauanforderungen. |
 | FI:I05 | Tampereen kaupunki (City of Tampere) | Regulierung / Genehmigung und Aufsicht | Entwickelt Regeln und Genehmigungspraxis für wiederverwendete Bauprodukte. |
 | FI:M02 | Purkutori.fi | Vermittlungsplattform | Macht gebrauchte Bauteile und Anlagen für Kauf und Verkauf auffindbar. |
 | FI:M03 | Spolia | Reuse-Planung / Rückbauplanung / Zulassung und Normenkonformität | Plant Rückbau und Reuse und qualifiziert Bauteile für neue Einsatzorte. |
@@ -515,8 +516,8 @@
 | GB:X01 | Globechain | Rückverfolgbarkeit / Vermittlungsplattform | Direkt belegt im baulichen Reuse-Kontext: Rückverfolgbarkeit, Vermittlungsplattform. |
 | GB:X02 | Studierende, Schulkinder und Freiwillige | Bauausführung | Baut das Waste House aus gebrauchten und überschüssigen Materialien mit. |
 | GB:X03 | Warp It | Vermittlungsplattform | Direkt belegt im baulichen Reuse-Kontext: Vermittlungsplattform. |
-| NL:F01 | Leiden University / Gorlaeus donor source | Weitergabe | Direkt belegt im baulichen Reuse-Kontext: Weitergabe. |
-| NL:F03 | TU Delft | Angewandte Forschung | Direkt belegt im baulichen Reuse-Kontext: Angewandte Forschung. |
+| NL:F01 | Leiden University | Weitergabe | Direkt belegt im baulichen Reuse-Kontext: Weitergabe. |
+| NL:F03 | Circular Built Environment Hub / TU Delft | Angewandte Forschung | Direkt belegt im baulichen Reuse-Kontext: Angewandte Forschung. |
 | NL:F04 | SURD Research Centre / Zuyd | Methodenentwicklung / Angewandte Forschung | Entwickelt und erprobt Methoden für Wiederverwendung und zirkuläre Bautechnologien. |
 | NL:I01 | City of Utrecht | Programmmanagement | Direkt belegt im baulichen Reuse-Kontext: Programmmanagement. |
 | NL:I03 | Provincie Gelderland | Richtlinienentwicklung | Direkt belegt im baulichen Reuse-Kontext: Richtlinienentwicklung. |
@@ -590,7 +591,6 @@
 | NL:U62 | Victory Group | Gebäudeeigentum | Direkt belegt im baulichen Reuse-Kontext: Gebäudeeigentum. |
 | NL:X01 | Repurpose | Reuse-Beratung / Bauteilinventarisierung / Vermittlungsplattform | Scannt Bestandsgebäude und vermittelt wiederverwendbare Bauprodukte in neue Projekte. |
 | NO:F01 | Nordlandsforskning AS | Methodenentwicklung / Angewandte Forschung / Monitoring und Evaluation | Entwickelt Bewertungsrahmen und Indikatoren für kommunale Reuse-Aktivitäten. |
-| NO:F02 | NTNU | Angewandte Forschung | Erforscht im GjenOm-Projekt die Wiederverwendung tragender Betonkonstruktionen. |
 | NO:I01 | Asker kommune – Ombruk | Programmmanagement / Reuse-Strategie | Steuert kommunale Wiederverwendung von Möbeln und Überschuss aus Bauprojekten. |
 | NO:I02 | Bodø Kommune | Methodenentwicklung | Entwickelt im CityLoops-Pilot Werkzeuge für Reuse von Infrastruktur und Konstruktionen. |
 | NO:I03 | Trondheim kommune | Methodenentwicklung / Richtlinienentwicklung | Entwickelt einen Leitfaden zur Wiederverwendung tragender Konstruktionen. |
@@ -621,10 +621,10 @@
 | NO:U09 | Multiconsult | Reuse-Beratung | Berät Bauprojekte durchgängig zur Wiederverwendung von Gebäuden und Materialien. |
 | NO:U11 | Scenario Interiørarkitekter | Innenarchitektur / Reuse-Planung | Plant das Interieur von KA13 weitgehend mit vorhandenen und geborgenen Materialien. |
 | NO:U13 | TOBB | Gebäudeeigentum | Stellt eigene Gebäude für die Erfassung wiederverwendbarer Bauteile bereit. |
-| SE:F01 | KTH Royal Institute of Technology | Bauteilsuche | Direkt belegt im baulichen Reuse-Kontext: Bauteilsuche. |
+| SE:F01 | ReCreate Sweden / KTH Architecture, Technique and Theory | Bauteilsuche | Direkt belegt im baulichen Reuse-Kontext: Bauteilsuche. |
 | SE:F02 | RISE (Research Institutes of Sweden) | Potenzialbewertung / Datenanalyse | Bewertet Produktgruppen und Marktbedingungen für großmaßstäblichen Wiedereinsatz. |
 | SE:I01 | Kv Återbruket, Litteraturgatan/Selma stad, Göteborg | Referenzprojekt | Nutzt Betonhohldielen aus dem früheren IKEA Kållered und weitere Altbauteile. |
-| SE:I02 | Stockholms stad | Weiterbildung | Direkt belegt im baulichen Reuse-Kontext: Weiterbildung. |
+| SE:I02 | Serviceförvaltningen und Miljöförvaltningen / Stockholms stad | Weiterbildung | Direkt belegt im baulichen Reuse-Kontext: Weiterbildung. |
 | SE:I04 | Umeå kommun | Bauteilhandel | Direkt belegt im baulichen Reuse-Kontext: Bauteilhandel. |
 | SE:M01 | Brattöns Återbruk | Lagerung / Bauteilhandel | Lagert und verkauft gebrauchte Bauteile für neue Bau- und Umbauprojekte. |
 | SE:M02 | Bygghubben | Bauteilhandel | Direkt belegt im baulichen Reuse-Kontext: Bauteilhandel. |
@@ -877,6 +877,7 @@
 | NL:U63 | Vintis installatieadviseurs | strict_gate_failed |
 | NL:U64 | Volantis | historical_or_closed_org |
 | NL:U65 | Workspot | cross_review_partner_credit_or_generic_only |
+| NO:F02 | NTNU | ACTOR_SPECIFIC_REUSE_EVIDENCE, APPROVED_GENERIC_PARTNER_ONLY_PRUNE |
 | NO:N02 | CCRI Pilot Asker | cross_review_strict_gate_failed |
 | NO:U06 | IWG Group / Spaces | STRICT_REVIEW_PRUNE |
 | NO:U12 | Sirkula IKS | cross_review_strict_gate_failed |
@@ -894,6 +895,8 @@
 
 | ID | Name | Ziel-EID | Begründung |
 |---|---|---|---|
+| CH:F04 | EPFL | 4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6437 | ACTOR_SPECIFIC_REUSE_EVIDENCE, APPROVED_GENERIC_PARENT_DUPLICATE_MERGE |
+| CH:F11 | ZHAW | 4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5326 | ACTOR_SPECIFIC_REUSE_EVIDENCE, APPROVED_GENERIC_PARENT_DUPLICATE_MERGE |
 | DK:P3 | Resource Rows | 4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5679 | duplicate_entity, canonical_target_retained |
 | NL:P5 | Circl | 4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6570 | duplicate_merge_source |
 
@@ -902,19 +905,32 @@
 | ID | Name | Neuer Name | Typ | Land |
 |---|---|---|---|---|
 | AT:U03 | Ferry-Dusika-Stadion Rückbau |  | Bauvorhaben/Objekt |  |
-| BE:F05 | Technische Universität München (TUM) |  |  | DE |
-| BE:F07 | University of Twente |  |  | NL |
+| BE:F01 | BAMB (Buildings as Material Banks) |  | Programm |  |
+| BE:F05 | Technische Universität München (TUM) | CirculaTUM – TUM Mission Network Circular Economy |  | DE |
+| BE:F07 | University of Twente | Construction Management and Engineering / University of Twente |  | NL |
 | BE:M05 | BauMaB Kassel / Bauteilbörse Kassel |  |  | DE |
 | BE:M30 | La Ressourcerie Fribourg |  |  | CH |
 | BE:N02 | CCRI Pilot Uppsala |  |  | SE |
 | BE:P10 | Musée de Folklore Vie… | Musée de Folklore de Mouscron |  |  |
 | BE:P12 | Plateforme Réemploi | AD VITAM MATERIAL (ehem. Plateforme Réemploi) | NGO_Verband_Netzwerk |  |
-| BE:S01 | Madaster / EPEA | Madaster |  |  |
+| BE:S01 | Madaster / EPEA | Madaster |  | BE |
 | BE:S03 | Sundahus |  |  | SE |
 | BE:U27 | Loeliger Strub |  |  | CH |
+| CH:F03 | Empa | NEST Research and Innovation Platform / Empa–Eawag |  |  |
+| CH:F08 | Structural Xploration Lab / EPFL | Structural Xploration Lab (SXL) / EPFL |  |  |
+| CH:F10 | Urban Bricolage |  | Programm |  |
+| CH:F12 | ZHAW IKE | Institut Konstruktives Entwerfen (IKE) / ZHAW |  |  |
+| CH:I03 | Stadt Zürich / Amt für Hochbauten / Immobilien Stadt Zürich | Amt für Hochbauten und Immobilien Stadt Zürich |  |  |
 | CH:P2 | ELYS Kultur- und… | ELYS Kultur- und Gewerbezentrum Basel |  |  |
 | CH:P4 | Juch-Areal Recyclingzent… | Recyclingzentrum Juch-Areal |  |  |
 | CH:P7 | Kindergarten Mööslistras… | Kindergarten Mööslistrasse |  |  |
+| DE:F01 | BTU Cottbus | Arbeitsgebiet Bauliches Recycling / BTU Cottbus-Senftenberg |  |  |
+| DE:F02 | Circular Material Systems |  | Programm |  |
+| DE:F04 | HFT Stuttgart | Forschungsteam Stuttgart 210 / HFT Stuttgart |  |  |
+| DE:F05 | HTWG Konstanz | Forschungsteam Stuttgart 210 / HTWG Konstanz |  |  |
+| DE:F07 | KIT | Professur Nachhaltiges Bauen / KIT |  |  |
+| DE:F10 | ReCreate project consortium |  | Programm |  |
+| DE:F14 | Universität Wuppertal | Lehrstuhl TEAMhillebrandt / Bergische Universität Wuppertal |  |  |
 | DE:I03 | Høje-Taastrup Kommune |  |  | DK |
 | DE:I06 | Roskilde Kommune |  |  | DK |
 | DE:N04 | Gate 21 |  |  | DK |
@@ -923,9 +939,14 @@
 | DE:P4 | CIRCOFIN (Circular Construction Finance) |  | Programm |  |
 | DE:U24 | Greater Copenhagen Area (CirCoFin pilot) |  |  | DK |
 | DE:U39 | Region Hovedstaden |  |  | DK |
+| DK:F01 | DTU | DTU Byg – Sektion Materialer og Holdbarhed |  |  |
 | DK:M07 | Carlsberg | Carlsberg Byen P/S | Unternehmen |  |
-| FI:F04 | Tampere University | ReCreate / Tampere University |  |  |
+| FI:F01 | Aalto University (Department of Architecture) | Housing Design / Department of Architecture / Aalto University |  |  |
+| FI:F02 | Kaakkois-Suomen Ammattikorkeakoulu Oy (Xamk) | KIELO-Projektteam / Xamk |  |  |
+| FI:F03 | ReCreate Finnish cluster |  | Programm |  |
+| FI:F04 | Tampere University | ReCreate-Koordination / Faculty of Built Environment / Tampere University |  |  |
 | FI:F05 | VTT (Technical Research Centre of Finland) | VTT – Circularity in the Built Environment |  |  |
+| FI:I02 | City of Helsinki | Urban Environment Division / City of Helsinki |  |  |
 | FI:P5 | Lokomotion Technology… | Lokomotion Technology Center |  |  |
 | FI:P6 | Melkinlaituri Primary… | Melkinlaituri Primary School and Daycare Centre |  |  |
 | FR:F02 | FCRBE (Facilitating the Circulation of Reclaimed Building Elements) |  | Programm |  |
@@ -935,18 +956,23 @@
 | GB:P11 | PLP London HQ circular… | PLP Architecture London Studio Circular Fit-out |  |  |
 | GB:P8 | Hastings Pier Visitor… | Hastings Pier Visitor Centre |  |  |
 | GB:U46 | Opera | Opera Property & Asset Management | Unternehmen |  |
+| GB:U64 | Whitby Wood |  |  | GB |
+| NL:F01 | Leiden University / Gorlaeus donor source | Leiden University |  |  |
+| NL:F03 | TU Delft | Circular Built Environment Hub / TU Delft |  |  |
 | NL:F04 | Zuyd Hogeschool | SURD Research Centre / Zuyd |  |  |
+| NL:I03 | Provincie Gelderland |  |  | NL |
 | NL:M01 | Baars & Bloemhoff |  | Unternehmen |  |
 | NL:P16 | Woongroep Boschgaard… | Woongroep Boschgaard |  |  |
 | NL:P3 | BlueCity Offices… | BlueCity Offices |  |  |
+| NL:U35 | Lagemaat Heerde |  |  | NL |
 | NL:U42 | Pieters Bouwtechniek | Pieters |  |  |
-| NL:U48 | Stiho group | Stiho |  |  |
+| NL:U48 | Stiho group | Stiho |  | NL |
 | NO:I01 | Asker kommune | Asker kommune – Ombruk |  |  |
 | NO:N04 | Ombruk i nord (Remiks) | ProffRebell / Remiks |  |  |
-| SE:I01 | Kv Återbruket, Litteraturgatan/Selma stad, Göteborg |  | Bauvorhaben |  |
+| SE:F01 | KTH Royal Institute of Technology | ReCreate Sweden / KTH Architecture, Technique and Theory |  |  |
+| SE:I01 | Kv Återbruket, Litteraturgatan/Selma stad, Göteborg |  | Bauvorhaben | SE |
+| SE:I02 | Stockholms stad | Serviceförvaltningen und Miljöförvaltningen / Stockholms stad |  |  |
 
 ## Freigaberegel
 
-Erst nach ausdrücklicher Freigabe wird `approved_for_render_prune` aktiviert. 
-Danach erzeugt der Finalizer die report-spezifische Prune-Liste, finale Klassifikation, 
-Merge-Weiterleitungen und Semio-Overrides. Neo4j bleibt unverändert.
+`approved_for_render_prune` ist aktiviert. Der Finalizer darf die report-spezifische Prune-Liste, finale Klassifikation, Programm-Kategorie, Merge-Weiterleitungen und Semio-Overrides erzeugen. Neo4j bleibt unverändert.

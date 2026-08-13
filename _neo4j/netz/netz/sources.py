@@ -55,6 +55,12 @@ class Sources:
     klassifikation_final_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/klassifikation_final.json"
     )
+    # Eight strict-review entries that are programmes, not actors -- rendered
+    # as their own report block (render.latex.programme_table), never in the
+    # actor figures/tables.
+    programme_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/programme_strict_final.json"
+    )
 
 
 DEFAULT = Sources()

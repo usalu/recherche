@@ -1,3 +1,9 @@
+# VERALTET — durch `HANDOFF_STRICT_SEMIO_FINAL.md` ersetzt
+
+Dieser Handoff dokumentiert die Kantenprüfung vor dem harten Knoten-Cleanup.
+Seine 859-Knoten-/477-Kanten-Renderzahlen sind nicht mehr aktuell. Für die
+Semio-Übergabe gilt ausschließlich `HANDOFF_STRICT_SEMIO_FINAL.md`.
+
 # Handoff: finaler LaTeX-Akteursgraph
 
 Stand: 2026-08-13

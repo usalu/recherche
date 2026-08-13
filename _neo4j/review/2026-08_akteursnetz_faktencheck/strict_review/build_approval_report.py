@@ -27,6 +27,12 @@ def main() -> None:
         raise SystemExit("Cross-review is incomplete")
 
     counts = Counter(r["decision"] for r in records)
+    manifest = json.loads((HERE / "input_manifest.json").read_text(encoding="utf-8"))
+    approved = bool(manifest.get("approved_for_render_prune"))
+    programme_count = sum(
+        r["decision"] == "keep" and r.get("corrected_type") == "Programm"
+        for r in records
+    )
     by_country = defaultdict(Counter)
     for r in records:
         country = r.get("corrected_country") or r["audit_id"].split(":", 1)[0]
@@ -34,11 +40,17 @@ def main() -> None:
 
     lines = [
         "# Freigabeliste: Harter Research-only-Cleanup", "",
-        "**Status: geprüft, aber nicht für Semio aktiviert.**", "",
+        (
+            "**Status: für den report-spezifischen Cleanup freigegeben.**"
+            if approved else
+            "**Status: geprüft, aber nicht für Semio aktiviert.**"
+        ), "",
         f"- Behalten: {counts['keep']}",
         f"- Entfernen: {counts['prune']}",
         f"- Zusammenführen: {counts['merge']}",
         f"- Erwarteter finaler Bestand nach Freigabe: {counts['keep']}", "",
+        f"- Davon Programme: {programme_count}",
+        f"- Akteurs-/Projektansicht ohne Programme: {counts['keep'] - programme_count}", "",
         "## Ergebnis nach Land", "",
         "| Land | Behalten | Entfernen | Zusammenführen |", "|---|---:|---:|---:|",
     ]
@@ -92,16 +104,23 @@ def main() -> None:
 
     lines.extend([
         "", "## Freigaberegel", "",
-        "Erst nach ausdrücklicher Freigabe wird `approved_for_render_prune` aktiviert. ",
-        "Danach erzeugt der Finalizer die report-spezifische Prune-Liste, finale Klassifikation, ",
-        "Merge-Weiterleitungen und Semio-Overrides. Neo4j bleibt unverändert.", "",
+        (
+            "`approved_for_render_prune` ist aktiviert. Der Finalizer darf die report-spezifische "
+            "Prune-Liste, finale Klassifikation, Programm-Kategorie, Merge-Weiterleitungen und "
+            "Semio-Overrides erzeugen. Neo4j bleibt unverändert."
+            if approved else
+            "Erst nach ausdrücklicher Freigabe wird `approved_for_render_prune` aktiviert. "
+            "Danach erzeugt der Finalizer die report-spezifischen Artefakte. Neo4j bleibt unverändert."
+        ), "",
     ])
     (HERE / "APPROVAL_REVIEW.md").write_text("\n".join(lines), encoding="utf-8")
     summary = {
-        "approved_for_render_prune": False,
+        "approved_for_render_prune": approved,
         "records": len(records),
         "decisions": dict(counts),
         "expected_final_nodes": counts["keep"],
+        "programmes": programme_count,
+        "actor_or_project_nodes": counts["keep"] - programme_count,
         "countries": {cc: dict(c) for cc, c in sorted(by_country.items())},
     }
     (HERE / "approval_summary.json").write_text(

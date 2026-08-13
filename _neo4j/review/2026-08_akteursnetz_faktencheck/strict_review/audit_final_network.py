@@ -36,11 +36,13 @@ def main() -> int:
     if not manifest.get("approved_for_render_prune"):
         print("REFUSED: strict review is not approved")
         return 2
-    final_path = BASE / "klassifikation_final.json"
+    final_path = BASE / "klassifikation_actor_project_final.json"
+    programme_path = BASE / "programme_strict_final.json"
     if not final_path.exists():
         print("REFUSED: run finalize_strict_review.py first")
         return 2
     classification = json.loads(final_path.read_text(encoding="utf-8"))
+    programmes = json.loads(programme_path.read_text(encoding="utf-8"))
     net = load_network()
     per_country = {}
     actors = projects = edges = 0
@@ -69,6 +71,7 @@ def main() -> int:
         "projects": projects,
         "nodes": actors + projects,
         "edges": edges,
+        "programmes": len(programmes),
     }
     audit = {
         "baseline": BASELINE,
@@ -87,6 +90,7 @@ def main() -> int:
     ]
     for key in ("organizations", "projects", "nodes", "edges"):
         lines.append(f"| {key} | {BASELINE[key]} | {final_counts[key]} | {audit['delta'][key]:+d} |")
+    lines.append(f"| programmes (separate category) | 0 | {len(programmes)} | +{len(programmes)} |")
     lines.extend(["", "## Länder", "", "| Land | Organisationen | Projekte | Knoten | Kanten |", "|---|---:|---:|---:|---:|"])
     for cc, counts in sorted(per_country.items()):
         lines.append(

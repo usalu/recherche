@@ -17,6 +17,7 @@ from ._identity import ISO_INV
 class StrictReviewBundle:
     active: bool = False
     exclude: frozenset = frozenset()
+    programmes: frozenset = frozenset()
     redirects: dict = field(default_factory=dict)
     overrides: dict = field(default_factory=dict)
     classification: dict = field(default_factory=dict)
@@ -45,11 +46,22 @@ def load_strict_review(manifest_path: str, prune_path: str, redirects_path: str,
     redirects = _load(redirects_path)
     overrides = _load(overrides_path)
     classification = _load(classification_path)
+    programmes = frozenset(
+        eid for eid, row in classification.items()
+        if row.get("report_entity_type") == "Programm"
+    )
     if set(redirects) - exclude:
         raise RuntimeError("every merge source must also be excluded")
     if set(classification) & exclude:
         raise RuntimeError("strict classification contains excluded EIDs")
-    return StrictReviewBundle(True, exclude, redirects, overrides, classification)
+    return StrictReviewBundle(
+        active=True,
+        exclude=exclude,
+        programmes=programmes,
+        redirects=redirects,
+        overrides=overrides,
+        classification=classification,
+    )
 
 
 def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> None:
@@ -147,3 +159,10 @@ def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> N
             raw.peers[eid].discard(source)
         raw.peers.pop(source, None)
         raw.part.pop(source, None)
+
+    # Fail closed: the approved classification is the complete report
+    # universe. Legacy graph nodes not represented there (for example a
+    # partner-list-only Arup node) must not leak back into the actor view.
+    allowed = set(bundle.classification)
+    raw.actors = [actor for actor in raw.actors if actor["eid"] in allowed]
+    raw.projects = [eid for eid in raw.projects if eid in allowed]

@@ -29,6 +29,28 @@ class StrictReviewActivationTests(unittest.TestCase):
             with self.assertRaises(RuntimeError):
                 load_strict_review(str(manifest), "x", "y", "z", "k")
 
+    def test_approved_programmes_are_separate_from_actors(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            manifest = root / "manifest.json"
+            prune = root / "prune.json"
+            redirects = root / "redirects.json"
+            overrides = root / "overrides.json"
+            classification = root / "classification.json"
+            manifest.write_text(json.dumps({"approved_for_render_prune": True}), encoding="utf-8")
+            prune.write_text("[]", encoding="utf-8")
+            redirects.write_text("{}", encoding="utf-8")
+            overrides.write_text("{}", encoding="utf-8")
+            classification.write_text(json.dumps({
+                "actor": {"report_entity_type": "Organisation"},
+                "programme": {"report_entity_type": "Programm"},
+            }), encoding="utf-8")
+            bundle = load_strict_review(
+                str(manifest), str(prune), str(redirects), str(overrides), str(classification)
+            )
+        self.assertTrue(bundle.active)
+        self.assertEqual(bundle.programmes, frozenset({"programme"}))
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -237,18 +237,21 @@ alle **762 Organisationen** des finalen 859er-Netzes ausgedehnt; die **97 Projek
 bildlos. Diese Stufe ist weiterhin Transport und Review, kein Rendering-Rollout und kein
 Neo4j-Import.
 
-* 447 Organisationsdomains einzeln bestätigt (47 Pilotentscheidungen, 400 dokumentierte
-  Identitätsprüfungen); 291 Domainfälle bleiben offen, 24 haben keinen Domainkandidaten.
-* 950 technisch zulässige Bildkandidaten für 366 Organisationen gesammelt; 81 bestätigte
-  Domains lieferten in der festgelegten Kandidatenkette keinen zulässigen Treffer.
+* 518 Organisations- oder Trägerdomains einzeln bestätigt; die übrigen 244 Fälle wurden
+  nach dokumentierter Einzelrecherche als `resolved_none` abgeschlossen. Es gibt keine
+  offene Domainwarteschlange mehr.
+* 1.853 technisch zulässige Bildkandidaten für 444 Organisationen gesammelt; 74 bestätigte
+  Domains lieferten auch nach Prüfung des offiziellen Medien-/Pressebereichs keinen
+  zulässigen Treffer.
 * SVG-Dateien sind unabhängig von einer gerenderten Mindestkante zulässig; Rasterbilder
   benötigen mindestens 128 px an der kürzesten Kante.
 * Alle Kandidaten führen Quelle, Quellenart, Abrufdatum, Lizenznotiz, Reviewstatus sowie
   SHA-256 von Quelldatei und PNG-Vorschau.
-* `pending_domain` und `no_usable_candidate` sind Sammlungszustände, keine endgültigen
-  `none`-Entscheidungen. Jedes Bild bleibt bis zur visuellen und rechtlichen Einzelprüfung
-  `review_status: pending`.
+* Die klickbare lokale Galerie führt für alle 762 Knoten einen Vorschlag (`logo` oder
+  `none`), zählt ihn aber erst nach einem ausdrücklichen Prüferklick als bestätigt. Das
+  Finalisieren bleibt bis 762/762 gesperrt.
 
 Artefakte: `bilder_full/selection.json`, `bilder_full/domains_review.json`,
-`bilder_full/collection_manifest.json`, `bilder_full/contact_sheets/` und
+`bilder_full/collection_manifest.json`, `bilder_full/suggestions.json`,
+`full_image_review.html`, `bilder_full/contact_sheets/` und
 `bilder_full/COLLECTION_REPORT.md`.
