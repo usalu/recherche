@@ -1,0 +1,273 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for GB",
+  "agentCount": 1,
+  "logs": [
+    "GB: 1 packets, 5 nodes, 0 edges",
+    "GB: 5 Knotenurteile, 0 Kantenurteile, 0 ungeprueft",
+    "GB: kern=3 bezug=2 ohne_beleg=0"
+  ],
+  "result": {
+    "ccs": [
+      "GB"
+    ],
+    "packets": [
+      {
+        "packet_id": "GB-s05",
+        "nodes": [
+          {
+            "tid": "M10",
+            "name": "Enviromate",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.enviromate.co.uk/",
+            "beleg_zitat": "The award winning closed loop marketplace where people connect to buy, sell or donate leftover building materials.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.enviromate.co.uk/"
+            ],
+            "begruendung": "Eigene, dauerhaft platzierte Startseite beschreibt den Betrieb eines Bauteil-Wiederverwendungsmarktplatzes als Kerngeschaeft. Grad kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "X01",
+            "name": "Globechain",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.bluepatch.org/directory/globechain/",
+            "beleg_zitat": "Our marketplace allows businesses to effortlessly manage and track their items, reduce costs, increase transparency and generate ESG data for your reporting.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Globechain reuse marketplace donate surplus furniture"
+            ],
+            "geprueft_urls": [
+              "https://globechain.com/",
+              "https://marketplace.globechain.com/findoutmore",
+              "https://globechain.com/about-us/",
+              "https://www.bluepatch.org/directory/globechain/"
+            ],
+            "begruendung": "Eigene Domaene globechain.com und Unterseiten liefern durchgehend HTTP 403 (Bot-Block), daher nicht direkt pruefbar. Dritte Seite (Blue Patch-Verzeichniseintrag mit inhaltlicher Beschreibung, nicht reine Listung) bestaetigt den Reuse-Marktplatz als Kerngeschaeft -> Grad bezug, da eigene Seite fuer 'kern' nicht oeffenbar war. Mehrere weitere unabhaengige Drittquellen (UKGBC, Unreasonable Group, Changeworks) stuetzen dieselbe Einordnung.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://globechain.com/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M14",
+            "name": "Material Index",
+            "actor_degree": "kern",
+            "beleg_url": "https://material-index.co.uk/",
+            "beleg_zitat": "Material Index is the UK's circular construction platform: a reclaimed materials marketplace, pre-demolition audit service and digital platform.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://material-index.co.uk/"
+            ],
+            "begruendung": "Eigene Startseite stellt reclaimed-materials-Marktplatz und Rueckbau-Audit als dauerhaftes Kerngeschaeft dar. Grad kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M22",
+            "name": "Surplus Building & Plumbing Materials",
+            "actor_degree": "kern",
+            "beleg_url": "https://surplusbuildingsupplies.co.uk/",
+            "beleg_zitat": "The Marketplace for Surplus Building & Plumbing Materials",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://surplusbuildingsupplies.co.uk/"
+            ],
+            "begruendung": "Eigene Seite fuehrt Reclaimed-Materials-Kategorien (Ziegel, Blocksteine, Dachprodukte) als dauerhaften Marktplatzbetrieb. Grad kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "S02",
+            "name": "Sustainability Yard",
+            "actor_degree": "bezug",
+            "beleg_url": "https://ukgbc.org/resources/marketplace-for-reusable-building-materials/",
+            "beleg_zitat": "A marketplace platform for anyone in the construction industry to buy, sell or give away their excess (reusable) building materials.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Sustainability Yard\" reclaimed building materials marketplace"
+            ],
+            "geprueft_urls": [
+              "https://sustainabilityyard.com/",
+              "https://sustainabilityyard.com/docs/sell-on-sustainability-yard",
+              "https://sustainabilityyard.com/docs/sell-on-sustainability-yard-business",
+              "https://ukgbc.org/resources/marketplace-for-reusable-building-materials/"
+            ],
+            "begruendung": "Eigene Domaene sustainabilityyard.com liefert auf Root- und Doc-Unterseiten durchgehend HTTP 403 (Bot-Block), inhaltlich nicht pruefbar. UKGBC-Ressourcenseite (inhaltliche Beschreibung, keine reine Verzeichnislistung) nennt die Organisation namentlich in ihrer Reuse-Marktplatz-Funktion -> Grad bezug.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://sustainabilityyard.com/"
+              }
+            ],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 13,
+        "kappe_erreicht": false,
+        "cc": "GB",
+        "assigned_nodes": [
+          "M10",
+          "X01",
+          "M14",
+          "M22",
+          "S02"
+        ],
+        "assigned_edges": []
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "M10",
+        "name": "Enviromate",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.enviromate.co.uk/",
+        "beleg_zitat": "The award winning closed loop marketplace where people connect to buy, sell or donate leftover building materials.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.enviromate.co.uk/"
+        ],
+        "begruendung": "Eigene, dauerhaft platzierte Startseite beschreibt den Betrieb eines Bauteil-Wiederverwendungsmarktplatzes als Kerngeschaeft. Grad kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "GB",
+        "packet_id": "GB-s05"
+      },
+      {
+        "tid": "X01",
+        "name": "Globechain",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.bluepatch.org/directory/globechain/",
+        "beleg_zitat": "Our marketplace allows businesses to effortlessly manage and track their items, reduce costs, increase transparency and generate ESG data for your reporting.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Globechain reuse marketplace donate surplus furniture"
+        ],
+        "geprueft_urls": [
+          "https://globechain.com/",
+          "https://marketplace.globechain.com/findoutmore",
+          "https://globechain.com/about-us/",
+          "https://www.bluepatch.org/directory/globechain/"
+        ],
+        "begruendung": "Eigene Domaene globechain.com und Unterseiten liefern durchgehend HTTP 403 (Bot-Block), daher nicht direkt pruefbar. Dritte Seite (Blue Patch-Verzeichniseintrag mit inhaltlicher Beschreibung, nicht reine Listung) bestaetigt den Reuse-Marktplatz als Kerngeschaeft -> Grad bezug, da eigene Seite fuer 'kern' nicht oeffenbar war. Mehrere weitere unabhaengige Drittquellen (UKGBC, Unreasonable Group, Changeworks) stuetzen dieselbe Einordnung.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://globechain.com/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "GB",
+        "packet_id": "GB-s05"
+      },
+      {
+        "tid": "M14",
+        "name": "Material Index",
+        "actor_degree": "kern",
+        "beleg_url": "https://material-index.co.uk/",
+        "beleg_zitat": "Material Index is the UK's circular construction platform: a reclaimed materials marketplace, pre-demolition audit service and digital platform.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://material-index.co.uk/"
+        ],
+        "begruendung": "Eigene Startseite stellt reclaimed-materials-Marktplatz und Rueckbau-Audit als dauerhaftes Kerngeschaeft dar. Grad kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "GB",
+        "packet_id": "GB-s05"
+      },
+      {
+        "tid": "M22",
+        "name": "Surplus Building & Plumbing Materials",
+        "actor_degree": "kern",
+        "beleg_url": "https://surplusbuildingsupplies.co.uk/",
+        "beleg_zitat": "The Marketplace for Surplus Building & Plumbing Materials",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://surplusbuildingsupplies.co.uk/"
+        ],
+        "begruendung": "Eigene Seite fuehrt Reclaimed-Materials-Kategorien (Ziegel, Blocksteine, Dachprodukte) als dauerhaften Marktplatzbetrieb. Grad kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "GB",
+        "packet_id": "GB-s05"
+      },
+      {
+        "tid": "S02",
+        "name": "Sustainability Yard",
+        "actor_degree": "bezug",
+        "beleg_url": "https://ukgbc.org/resources/marketplace-for-reusable-building-materials/",
+        "beleg_zitat": "A marketplace platform for anyone in the construction industry to buy, sell or give away their excess (reusable) building materials.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Sustainability Yard\" reclaimed building materials marketplace"
+        ],
+        "geprueft_urls": [
+          "https://sustainabilityyard.com/",
+          "https://sustainabilityyard.com/docs/sell-on-sustainability-yard",
+          "https://sustainabilityyard.com/docs/sell-on-sustainability-yard-business",
+          "https://ukgbc.org/resources/marketplace-for-reusable-building-materials/"
+        ],
+        "begruendung": "Eigene Domaene sustainabilityyard.com liefert auf Root- und Doc-Unterseiten durchgehend HTTP 403 (Bot-Block), inhaltlich nicht pruefbar. UKGBC-Ressourcenseite (inhaltliche Beschreibung, keine reine Verzeichnislistung) nennt die Organisation namentlich in ihrer Reuse-Marktplatz-Funktion -> Grad bezug.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://sustainabilityyard.com/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "GB",
+        "packet_id": "GB-s05"
+      }
+    ],
+    "edges": [],
+    "ungeprueft": [],
+    "ausgefallen": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-GB"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "GB:GB-s05",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-GB",
+      "agentId": "a0520afcedd5427c6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786561933065,
+      "queuedAt": 1786561930726,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "GB-s05",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786562056605,
+      "tokens": 58191,
+      "toolCalls": 15,
+      "durationMs": 123540,
+      "resultPreview": "{\"packet_id\":\"GB-s05\",\"nodes\":[{\"tid\":\"M10\",\"name\":\"Enviromate\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.enviromate.co.uk/\",\"beleg_zitat\":\"The award winning closed loop marketplace where people connect to buy, sell or donate leftover building materials.\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[],\"geprueft_urls\":[\"https://www.enviromate.co.uk/\"],\"begruendung\":\"Eigene, dauerhaft platzierte …"
+    }
+  ],
+  "totalTokens": 58191,
+  "totalToolCalls": 15
+}

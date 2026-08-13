@@ -1,0 +1,1181 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for NL",
+  "agentCount": 5,
+  "logs": [
+    "NL: 5 packets, 35 nodes, 31 edges",
+    "[NL:NL-c07] failed: You've hit your session limit · resets 1:40am (Europe/Berlin)",
+    "[NL:NL-c10] failed: You've hit your session limit · resets 1:40am (Europe/Berlin)",
+    "[NL:NL-c08] failed: You've hit your session limit · resets 1:40am (Europe/Berlin)",
+    "AUSGEFALLEN (kein Ergebnis): NL-c07, NL-c08, NL-c10 -- 20 Knoten bleiben ungeprueft",
+    "NL: 15 Knotenurteile, 13 Kantenurteile, 20 ungeprueft",
+    "NL: kern=6 bezug=9 ohne_beleg=0"
+  ],
+  "result": {
+    "ccs": [
+      "NL"
+    ],
+    "packets": [
+      {
+        "packet_id": "NL-c06",
+        "tool_calls_used": 15,
+        "kappe_erreicht": false,
+        "ungeprueft_tids": [],
+        "nodes": [
+          {
+            "tid": "I05",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+            "beleg_zitat": "Het kantoor van Rijkswaterstaat in Terneuzen...is afgebroken en zoveel mogelijk materialen zijn hergebruikt voor de nieuwbouw van deze kliniek.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Rijkswaterstaat\" hergebruik bouwmaterialen",
+              "Rijkswaterstaat Terneuzen kantoor hergebruikt Emergis"
+            ],
+            "geprueft_urls": [
+              "https://www.rijkswaterstaat.nl/",
+              "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp"
+            ],
+            "begruendung": "Eigene Seite (rijkswaterstaat.nl) zeigt keine Reuse-Linie -> nicht kern. Als ehemaliger Gebaeudeeigentuemer wird RWS auf burobas.nl namentlich mit der Materialentnahme fuer die Kliniek genannt -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P8",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+            "beleg_zitat": "Het kantoor van Rijkswaterstaat in Terneuzen...is afgebroken en zoveel mogelijk materialen zijn hergebruikt voor de nieuwbouw van deze kliniek.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Jeugdkliniek Ithaka Emergis hergebruik",
+              "Ithaka Emergis circulair bouwen"
+            ],
+            "geprueft_urls": [
+              "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+              "https://www.paree.nl/project/ithaka-emergis-kloetinge"
+            ],
+            "begruendung": "Projektknoten: das Bauvorhaben dokumentiert Bauteil-Wiederverwendung (Kozijnen, Balken, Deuren, hardhouten shingles aus dem ehem. RWS-Buero) auf mehreren unabhaengigen Projektseiten -> als kern behandelt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U03",
+            "actor_degree": "kern",
+            "beleg_url": "https://abt.eu",
+            "beleg_zitat": "Losmaakbaarheid: van beoordelingscriterium naar effectief circulair stuurmiddel",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "ABT circulair bouwen losmaakbaarheid",
+              "ABT ingenieursbureau hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://abt.eu"
+            ],
+            "begruendung": "Eigene Seite fuehrt 'Circulaire gebouwen en infrastructuur' als dauerhaften Impact-/Leistungsbereich inkl. Losmaakbaarheid (Bauteil-Demontierbarkeit) -> kern. Gespeicherte URL abt.de war falsch, korrekt abt.eu.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U04",
+            "actor_degree": "kern",
+            "beleg_url": "https://luning.nl/",
+            "beleg_zitat": "Wij zijn een ontwerpend constructeur met een scherp profiel in moderne, circulaire houtbouw.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Adviesbureau Lüning circulaire houtbouw",
+              "Adviesbureau Lüning Ithaka Emergis"
+            ],
+            "geprueft_urls": [
+              "https://luning.nl/",
+              "https://luning.nl/projecten/zorgkliniek-emergis-kloetinge/"
+            ],
+            "begruendung": "Eigene Startseite fuehrt 'moderne, circulaire houtbouw' dauerhaft als Kernprofil des Unternehmens -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U14",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+            "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Burobas circulair bouwen",
+              "Burobas hergebruik bouwdelen"
+            ],
+            "geprueft_urls": [
+              "https://www.burobas.nl/",
+              "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp"
+            ],
+            "begruendung": "Homepage burobas.nl zeigt Reuse nicht als dauerhafte Leistungslinie (Fokus auf zorgen/werken/leren), nur die einzelne Projektseite behandelt Circulariteit -> bezug, nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U23",
+            "actor_degree": "kern",
+            "beleg_url": "https://dwtgroep.nl/innovatie/circulair",
+            "beleg_zitat": "Als partner van Urban Mining hebben we de toegang tot een uitgebreide database circulaire materialen, welke wekelijks wordt aangevuld.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "DWT Groep circulair urban mining",
+              "DWT Groep Ithaka Emergis Kloetinge"
+            ],
+            "geprueft_urls": [
+              "https://dwtgroep.nl/",
+              "https://dwtgroep.nl/innovatie/circulair",
+              "https://demakersvanmorgen.com/ithaka-kliniek-circulair-en-energieneutraal/"
+            ],
+            "begruendung": "Eigene dauerhafte Unterseite 'Innovatie > Circulair' beschreibt institutionalisierte Materialwiederverwendung (Urban-Mining-Partnerschaft) als Teil des Unternehmensangebots -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U26",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+            "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Emergis circulair bouwen Ithaka",
+              "Emergis.nl hergebruik bouwmaterialen"
+            ],
+            "geprueft_urls": [
+              "https://emergis.nl/",
+              "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp"
+            ],
+            "begruendung": "Eigene Seite emergis.nl zeigt keine Reuse-Linie. Als Auftraggeberin wird Emergis namentlich in der benannten Reuse-Sache Ithaka auf Drittseiten (burobas.nl u.a.) gefuehrt -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U41",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.paree.nl/project/ithaka-emergis-kloetinge",
+            "beleg_zitat": "Het zo veel mogelijk voorkomen van het verspillen van materialen die nog voldoen",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Paree circulair materialen hergebruik",
+              "Paree Ithaka Emergis Kloetinge"
+            ],
+            "geprueft_urls": [
+              "https://www.paree.nl/project/ithaka-emergis-kloetinge",
+              "https://www.paree.nl/over-paree"
+            ],
+            "begruendung": "Ueber-uns-Seite (paree.nl/over-paree) zeigt Reuse nicht als dauerhafte Leistungslinie, nur die Projektseite zur Ithaka-Kliniek nennt Materialwiederverwendung -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U46",
+            "actor_degree": "kern",
+            "beleg_url": "https://rothuizen-architecten.nl/",
+            "beleg_zitat": "Wij geloven dat architecten een cruciale bijdrage kunnen leveren aan het wereldwijde duurzaamheidsvraagstuk. Dit doen we door hergebruik van materialen",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Rothuizen architecten circulair bouwen",
+              "Taco Tuinhof Ithaka Emergis"
+            ],
+            "geprueft_urls": [
+              "https://rothuizen-architecten.nl/",
+              "https://rothuizen-architecten.nl/project/circulair-gebouw-voor-kind-en-jeugdkliniek/"
+            ],
+            "begruendung": "Eigene Startseite fuehrt dauerhaften Bereich 'Circulair Bouwen' mit eigener Visie-Unterseite und Hergebruik von Materialien als Kernthema -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "U26|P8",
+            "a_tid": "U26",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Bauherr/Auftraggeber der Kliniek Ithaka",
+            "relation_soll": "",
+            "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+            "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U46|P8",
+            "a_tid": "U46",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Architect/Ontwerper der Kliniek Ithaka",
+            "relation_soll": "",
+            "beleg_url": "https://rothuizen-architecten.nl/project/circulair-gebouw-voor-kind-en-jeugdkliniek/",
+            "beleg_zitat": "Architect - Partner Taco Tuinhof",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U14|P8",
+            "a_tid": "U14",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Entwurf/Interieurontwerp der Kliniek Ithaka",
+            "relation_soll": "",
+            "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+            "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U03|P8",
+            "a_tid": "U03",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Constructeur draagconstructie Kliniek Ithaka (samen met Lüning)",
+            "relation_soll": "",
+            "beleg_url": "https://luning.nl/projecten/zorgkliniek-emergis-kloetinge/",
+            "beleg_zitat": "Houtconstructeur - ABT en Adviesbureau Lüning ontwierpen samen de hergebruikte houten draagconstructie voor de Emergis-kliniek.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U04|P8",
+            "a_tid": "U04",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Houtconstructeur van de Kliniek Ithaka",
+            "relation_soll": "",
+            "beleg_url": "https://luning.nl/projecten/zorgkliniek-emergis-kloetinge/",
+            "beleg_zitat": "Houtconstructeur - Adviesbureau Lüning ontwierp de hergebruikte houten draagconstructie voor Zorgkliniek Emergis Kloetinge.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "I05|P8",
+            "a_tid": "I05",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Herkomstgebouw des Wiederverwendungsmaterials fuer Kliniek Ithaka",
+            "relation_soll": "",
+            "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+            "beleg_zitat": "Het kantoor van Rijkswaterstaat in Terneuzen...is afgebroken en zoveel mogelijk materialen zijn hergebruikt voor de nieuwbouw van deze kliniek.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U41|P8",
+            "a_tid": "U41",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Installateur elektrotechniek/communicatie/beveiliging Kliniek Ithaka",
+            "relation_soll": "",
+            "beleg_url": "https://www.paree.nl/project/ithaka-emergis-kloetinge",
+            "beleg_zitat": "De materialen van het voormalige districtskantoor van Rijkswaterstaat in Terneuzen zijn hergebruikt bij de nieuw te (ver)bouwen kinder- en jeugdkliniek in Kloetinge.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U23|P8",
+            "a_tid": "U23",
+            "b_tid": "P8",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "relation_ist": "Installatietechniek uitvoerende partij Kliniek Ithaka",
+            "relation_soll": "",
+            "beleg_url": "https://demakersvanmorgen.com/ithaka-kliniek-circulair-en-energieneutraal/",
+            "beleg_zitat": "Aan DWT Groep werd gevraagd dit op te pakken.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          }
+        ],
+        "cc": "NL",
+        "assigned_nodes": [
+          "I05",
+          "P8",
+          "U03",
+          "U04",
+          "U14",
+          "U23",
+          "U26",
+          "U41",
+          "U46"
+        ],
+        "assigned_edges": [
+          "U26|P8",
+          "U46|P8",
+          "U14|P8",
+          "U03|P8",
+          "U04|P8",
+          "I05|P8",
+          "U41|P8",
+          "U23|P8"
+        ]
+      },
+      {
+        "packet_id": "NL-c09",
+        "nodes": [
+          {
+            "tid": "O01",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.crowdbuilding.com/d/initiatieven/boschgaard",
+            "beleg_zitat": "het initiatief volledig bij de toekomstige bewoners vandaan komt",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Bewonersinitiatief Boschgaard\" OR \"Bewoners initiatief Boschgaard\"",
+              "Boschgaard bewonersinitiatief Den Bosch"
+            ],
+            "geprueft_urls": [
+              "https://www.crowdbuilding.com/d/initiatieven/boschgaard",
+              "https://www.cooplink.nl/initiatief/boschgaard/",
+              "https://boschgaard.nl/wat-is-boschgaard/"
+            ],
+            "begruendung": "Kein eigener Webauftritt der Bewohnerinitiative als Organisation; Drittquelle (crowdbuilding.com) und die Projektseite selbst beschreiben, dass die Initiative vollstaendig von den kuenftigen Bewohnern ausging und sie das Projekt bis heute selbst verwalten -> bezug, nicht kern (kein eigenes dauerhaftes Leistungsangebot ausserhalb des Projekts P16).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "O08",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.zayaz.nl/boschgaard",
+            "beleg_zitat": "Zayaz ondersteunt en faciliteert hen hierin. En blijft eigenaar van het gebouw",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Zayaz Boschgaard",
+              "Zayaz woningcorporatie circulair hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://www.zayaz.nl/boschgaard"
+            ],
+            "begruendung": "Zayaz.nl zeigt keine dauerhafte eigene Reuse-Leistungslinie (allgemeine Wohnungskorporation); Bezug besteht ausschliesslich ueber das benannte Projekt Boschgaard, in dem Zayaz als Eigentuemerin/Auftraggeberin auftritt -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P16",
+            "actor_degree": "kern",
+            "beleg_url": "https://boschgaard.nl/circulariteit",
+            "beleg_zitat": "de ontwerpen van architect Superuse Studios, die gespecialiseerd zijn in hergebruik",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://boschgaard.nl/circulariteit",
+              "https://boschgaard.nl/wat-is-boschgaard/",
+              "https://boschgaard.nl/partners/",
+              "https://boschgaard.nl/duurzaam-bouwen"
+            ],
+            "begruendung": "Projektknoten (is_project=true): das Bauvorhaben Boschgaard dokumentiert Bauteil-Wiederverwendung dauerhaft und umfassend auf eigener Domain (Materialherkunft, 84-90% wiederverwendete Baustoffe, eigene Unterseiten zu Circulariteit/Gevel/Dakspanten) -> kern-aequivalente Einstufung nach D9.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U11",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.versteegden.nl/koninklijk-bezoek/",
+            "beleg_zitat": "Bouwbedrijf Versteegden bouwt in opdracht van woningcorporatie Zayaz in Den Bosch aan een voor Nederland uniek circulair woonproject.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Boschgaard Versteegden bouwbedrijf hergebruik",
+              "versteegden.nl duurzaamheid circulair bouwen hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://www.versteegden.nl/koninklijk-bezoek/"
+            ],
+            "begruendung": "Gefundene Seite ist ein News-/Projektartikel ueber den koniglichen Besuch bei Boschgaard, keine dauerhafte eigene Reuse-Leistungsseite von Versteegden -> bezug ueber das benannte Projekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U54",
+            "actor_degree": "bezug",
+            "beleg_url": "https://boschgaard.nl/transfarmers/",
+            "beleg_zitat": "Transfarmers is meer dan gewoon een partner. We kunnen zeker zeggen dat Boschgaard er niet geweest was als Transfarmers niet bestaan had.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Boschgaard Transfarmers",
+              "Transfarmers Den Bosch officiele website"
+            ],
+            "geprueft_urls": [
+              "https://boschgaard.nl/transfarmers/",
+              "https://transfarmers.nl/",
+              "https://knowledge-hub.circle-economy.com/article/30010"
+            ],
+            "begruendung": "Transfarmers.nl fokussiert auf Stadtlandwirtschaft/Buurtprojekte, nicht auf Bauteil-Wiederverwendung als eigene Leistungslinie -> bezug ueber die namentliche, ausfuehrlich beschriebene Partnerschaft mit Boschgaard.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U58",
+            "actor_degree": "bezug",
+            "beleg_url": "https://boschgaard.nl/van-nimwegen/",
+            "beleg_zitat": "Warren van Hoof, van adviesbureau VanNimwegen, is onder andere op het gebied van wooncoöperaties onze adviseur.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Boschgaard VanNimwegen",
+              "VanNimwegen adviesbureau wooncooperaties circulair hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://boschgaard.nl/van-nimwegen/",
+              "https://www.vannimwegen.nl/expertises/communicatie-en-participatie/gemeenschappelijk-wonen"
+            ],
+            "begruendung": "VanNimwegen ist ein allgemeines Advies-/Interimbureau fuer Wohnungskorporationen (Wohnkooperationen, Partizipation), keine eigene Reuse-Leistungslinie -> bezug ueber die namentliche Nennung als Berater im Boschgaard-Projekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "O01|P16",
+            "a_tid": "O01",
+            "b_tid": "P16",
+            "edge_degree": "belegt",
+            "relation_ist": "Bewohnerinitiative gruendete und verwaltet das Wohnprojekt Boschgaard",
+            "relation_soll": "PROJEKT_PARTNER",
+            "unklar_grund": "",
+            "beleg_url": "https://www.crowdbuilding.com/d/initiatieven/boschgaard",
+            "beleg_zitat": "het initiatief volledig bij de toekomstige bewoners vandaan komt",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "O08|P16",
+            "a_tid": "O08",
+            "b_tid": "P16",
+            "edge_degree": "belegt",
+            "relation_ist": "Zayaz ist Bauherrin/Eigentuemerin von Boschgaard",
+            "relation_soll": "PROJEKT_PARTNER",
+            "unklar_grund": "",
+            "beleg_url": "https://www.zayaz.nl/boschgaard",
+            "beleg_zitat": "Zayaz ondersteunt en faciliteert hen hierin. En blijft eigenaar van het gebouw",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U11|P16",
+            "a_tid": "U11",
+            "b_tid": "P16",
+            "edge_degree": "belegt",
+            "relation_ist": "Versteegden ist ausfuehrendes Bauunternehmen im Auftrag von Zayaz fuer Boschgaard",
+            "relation_soll": "PROJEKT_PARTNER",
+            "unklar_grund": "",
+            "beleg_url": "https://www.versteegden.nl/koninklijk-bezoek/",
+            "beleg_zitat": "Bouwbedrijf Versteegden bouwt in opdracht van woningcorporatie Zayaz in Den Bosch aan een voor Nederland uniek circulair woonproject.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U54|P16",
+            "a_tid": "U54",
+            "b_tid": "P16",
+            "edge_degree": "belegt",
+            "relation_ist": "Transfarmers ist zentraler Partner von Boschgaard, Nutzer der Gemeinschaftsraeume",
+            "relation_soll": "PROJEKT_PARTNER",
+            "unklar_grund": "",
+            "beleg_url": "https://boschgaard.nl/transfarmers/",
+            "beleg_zitat": "Transfarmers is meer dan gewoon een partner. We kunnen zeker zeggen dat Boschgaard er niet geweest was als Transfarmers niet bestaan had.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U58|P16",
+            "a_tid": "U58",
+            "b_tid": "P16",
+            "edge_degree": "belegt",
+            "relation_ist": "VanNimwegen ist Berater fuer die Wooncooperatie Boschgaard",
+            "relation_soll": "PROJEKT_PARTNER",
+            "unklar_grund": "",
+            "beleg_url": "https://boschgaard.nl/van-nimwegen/",
+            "beleg_zitat": "Warren van Hoof, van adviesbureau VanNimwegen, is onder andere op het gebied van wooncoöperaties onze adviseur.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 20,
+        "kappe_erreicht": false,
+        "cc": "NL",
+        "assigned_nodes": [
+          "O01",
+          "O08",
+          "P16",
+          "U11",
+          "U54",
+          "U58"
+        ],
+        "assigned_edges": [
+          "O01|P16",
+          "O08|P16",
+          "U11|P16",
+          "U54|P16",
+          "U58|P16"
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "I05",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+        "beleg_zitat": "Het kantoor van Rijkswaterstaat in Terneuzen...is afgebroken en zoveel mogelijk materialen zijn hergebruikt voor de nieuwbouw van deze kliniek.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Rijkswaterstaat\" hergebruik bouwmaterialen",
+          "Rijkswaterstaat Terneuzen kantoor hergebruikt Emergis"
+        ],
+        "geprueft_urls": [
+          "https://www.rijkswaterstaat.nl/",
+          "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp"
+        ],
+        "begruendung": "Eigene Seite (rijkswaterstaat.nl) zeigt keine Reuse-Linie -> nicht kern. Als ehemaliger Gebaeudeeigentuemer wird RWS auf burobas.nl namentlich mit der Materialentnahme fuer die Kliniek genannt -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "P8",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+        "beleg_zitat": "Het kantoor van Rijkswaterstaat in Terneuzen...is afgebroken en zoveel mogelijk materialen zijn hergebruikt voor de nieuwbouw van deze kliniek.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Jeugdkliniek Ithaka Emergis hergebruik",
+          "Ithaka Emergis circulair bouwen"
+        ],
+        "geprueft_urls": [
+          "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+          "https://www.paree.nl/project/ithaka-emergis-kloetinge"
+        ],
+        "begruendung": "Projektknoten: das Bauvorhaben dokumentiert Bauteil-Wiederverwendung (Kozijnen, Balken, Deuren, hardhouten shingles aus dem ehem. RWS-Buero) auf mehreren unabhaengigen Projektseiten -> als kern behandelt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "U03",
+        "actor_degree": "kern",
+        "beleg_url": "https://abt.eu",
+        "beleg_zitat": "Losmaakbaarheid: van beoordelingscriterium naar effectief circulair stuurmiddel",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "ABT circulair bouwen losmaakbaarheid",
+          "ABT ingenieursbureau hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://abt.eu"
+        ],
+        "begruendung": "Eigene Seite fuehrt 'Circulaire gebouwen en infrastructuur' als dauerhaften Impact-/Leistungsbereich inkl. Losmaakbaarheid (Bauteil-Demontierbarkeit) -> kern. Gespeicherte URL abt.de war falsch, korrekt abt.eu.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "U04",
+        "actor_degree": "kern",
+        "beleg_url": "https://luning.nl/",
+        "beleg_zitat": "Wij zijn een ontwerpend constructeur met een scherp profiel in moderne, circulaire houtbouw.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Adviesbureau Lüning circulaire houtbouw",
+          "Adviesbureau Lüning Ithaka Emergis"
+        ],
+        "geprueft_urls": [
+          "https://luning.nl/",
+          "https://luning.nl/projecten/zorgkliniek-emergis-kloetinge/"
+        ],
+        "begruendung": "Eigene Startseite fuehrt 'moderne, circulaire houtbouw' dauerhaft als Kernprofil des Unternehmens -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "U14",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+        "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Burobas circulair bouwen",
+          "Burobas hergebruik bouwdelen"
+        ],
+        "geprueft_urls": [
+          "https://www.burobas.nl/",
+          "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp"
+        ],
+        "begruendung": "Homepage burobas.nl zeigt Reuse nicht als dauerhafte Leistungslinie (Fokus auf zorgen/werken/leren), nur die einzelne Projektseite behandelt Circulariteit -> bezug, nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "U23",
+        "actor_degree": "kern",
+        "beleg_url": "https://dwtgroep.nl/innovatie/circulair",
+        "beleg_zitat": "Als partner van Urban Mining hebben we de toegang tot een uitgebreide database circulaire materialen, welke wekelijks wordt aangevuld.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "DWT Groep circulair urban mining",
+          "DWT Groep Ithaka Emergis Kloetinge"
+        ],
+        "geprueft_urls": [
+          "https://dwtgroep.nl/",
+          "https://dwtgroep.nl/innovatie/circulair",
+          "https://demakersvanmorgen.com/ithaka-kliniek-circulair-en-energieneutraal/"
+        ],
+        "begruendung": "Eigene dauerhafte Unterseite 'Innovatie > Circulair' beschreibt institutionalisierte Materialwiederverwendung (Urban-Mining-Partnerschaft) als Teil des Unternehmensangebots -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "U26",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+        "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Emergis circulair bouwen Ithaka",
+          "Emergis.nl hergebruik bouwmaterialen"
+        ],
+        "geprueft_urls": [
+          "https://emergis.nl/",
+          "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp"
+        ],
+        "begruendung": "Eigene Seite emergis.nl zeigt keine Reuse-Linie. Als Auftraggeberin wird Emergis namentlich in der benannten Reuse-Sache Ithaka auf Drittseiten (burobas.nl u.a.) gefuehrt -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "U41",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.paree.nl/project/ithaka-emergis-kloetinge",
+        "beleg_zitat": "Het zo veel mogelijk voorkomen van het verspillen van materialen die nog voldoen",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Paree circulair materialen hergebruik",
+          "Paree Ithaka Emergis Kloetinge"
+        ],
+        "geprueft_urls": [
+          "https://www.paree.nl/project/ithaka-emergis-kloetinge",
+          "https://www.paree.nl/over-paree"
+        ],
+        "begruendung": "Ueber-uns-Seite (paree.nl/over-paree) zeigt Reuse nicht als dauerhafte Leistungslinie, nur die Projektseite zur Ithaka-Kliniek nennt Materialwiederverwendung -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "U46",
+        "actor_degree": "kern",
+        "beleg_url": "https://rothuizen-architecten.nl/",
+        "beleg_zitat": "Wij geloven dat architecten een cruciale bijdrage kunnen leveren aan het wereldwijde duurzaamheidsvraagstuk. Dit doen we door hergebruik van materialen",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Rothuizen architecten circulair bouwen",
+          "Taco Tuinhof Ithaka Emergis"
+        ],
+        "geprueft_urls": [
+          "https://rothuizen-architecten.nl/",
+          "https://rothuizen-architecten.nl/project/circulair-gebouw-voor-kind-en-jeugdkliniek/"
+        ],
+        "begruendung": "Eigene Startseite fuehrt dauerhaften Bereich 'Circulair Bouwen' mit eigener Visie-Unterseite und Hergebruik von Materialien als Kernthema -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "tid": "O01",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.crowdbuilding.com/d/initiatieven/boschgaard",
+        "beleg_zitat": "het initiatief volledig bij de toekomstige bewoners vandaan komt",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Bewonersinitiatief Boschgaard\" OR \"Bewoners initiatief Boschgaard\"",
+          "Boschgaard bewonersinitiatief Den Bosch"
+        ],
+        "geprueft_urls": [
+          "https://www.crowdbuilding.com/d/initiatieven/boschgaard",
+          "https://www.cooplink.nl/initiatief/boschgaard/",
+          "https://boschgaard.nl/wat-is-boschgaard/"
+        ],
+        "begruendung": "Kein eigener Webauftritt der Bewohnerinitiative als Organisation; Drittquelle (crowdbuilding.com) und die Projektseite selbst beschreiben, dass die Initiative vollstaendig von den kuenftigen Bewohnern ausging und sie das Projekt bis heute selbst verwalten -> bezug, nicht kern (kein eigenes dauerhaftes Leistungsangebot ausserhalb des Projekts P16).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "tid": "O08",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.zayaz.nl/boschgaard",
+        "beleg_zitat": "Zayaz ondersteunt en faciliteert hen hierin. En blijft eigenaar van het gebouw",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Zayaz Boschgaard",
+          "Zayaz woningcorporatie circulair hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://www.zayaz.nl/boschgaard"
+        ],
+        "begruendung": "Zayaz.nl zeigt keine dauerhafte eigene Reuse-Leistungslinie (allgemeine Wohnungskorporation); Bezug besteht ausschliesslich ueber das benannte Projekt Boschgaard, in dem Zayaz als Eigentuemerin/Auftraggeberin auftritt -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "tid": "P16",
+        "actor_degree": "kern",
+        "beleg_url": "https://boschgaard.nl/circulariteit",
+        "beleg_zitat": "de ontwerpen van architect Superuse Studios, die gespecialiseerd zijn in hergebruik",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://boschgaard.nl/circulariteit",
+          "https://boschgaard.nl/wat-is-boschgaard/",
+          "https://boschgaard.nl/partners/",
+          "https://boschgaard.nl/duurzaam-bouwen"
+        ],
+        "begruendung": "Projektknoten (is_project=true): das Bauvorhaben Boschgaard dokumentiert Bauteil-Wiederverwendung dauerhaft und umfassend auf eigener Domain (Materialherkunft, 84-90% wiederverwendete Baustoffe, eigene Unterseiten zu Circulariteit/Gevel/Dakspanten) -> kern-aequivalente Einstufung nach D9.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "tid": "U11",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.versteegden.nl/koninklijk-bezoek/",
+        "beleg_zitat": "Bouwbedrijf Versteegden bouwt in opdracht van woningcorporatie Zayaz in Den Bosch aan een voor Nederland uniek circulair woonproject.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Boschgaard Versteegden bouwbedrijf hergebruik",
+          "versteegden.nl duurzaamheid circulair bouwen hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://www.versteegden.nl/koninklijk-bezoek/"
+        ],
+        "begruendung": "Gefundene Seite ist ein News-/Projektartikel ueber den koniglichen Besuch bei Boschgaard, keine dauerhafte eigene Reuse-Leistungsseite von Versteegden -> bezug ueber das benannte Projekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "tid": "U54",
+        "actor_degree": "bezug",
+        "beleg_url": "https://boschgaard.nl/transfarmers/",
+        "beleg_zitat": "Transfarmers is meer dan gewoon een partner. We kunnen zeker zeggen dat Boschgaard er niet geweest was als Transfarmers niet bestaan had.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Boschgaard Transfarmers",
+          "Transfarmers Den Bosch officiele website"
+        ],
+        "geprueft_urls": [
+          "https://boschgaard.nl/transfarmers/",
+          "https://transfarmers.nl/",
+          "https://knowledge-hub.circle-economy.com/article/30010"
+        ],
+        "begruendung": "Transfarmers.nl fokussiert auf Stadtlandwirtschaft/Buurtprojekte, nicht auf Bauteil-Wiederverwendung als eigene Leistungslinie -> bezug ueber die namentliche, ausfuehrlich beschriebene Partnerschaft mit Boschgaard.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "tid": "U58",
+        "actor_degree": "bezug",
+        "beleg_url": "https://boschgaard.nl/van-nimwegen/",
+        "beleg_zitat": "Warren van Hoof, van adviesbureau VanNimwegen, is onder andere op het gebied van wooncoöperaties onze adviseur.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Boschgaard VanNimwegen",
+          "VanNimwegen adviesbureau wooncooperaties circulair hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://boschgaard.nl/van-nimwegen/",
+          "https://www.vannimwegen.nl/expertises/communicatie-en-participatie/gemeenschappelijk-wonen"
+        ],
+        "begruendung": "VanNimwegen ist ein allgemeines Advies-/Interimbureau fuer Wohnungskorporationen (Wohnkooperationen, Partizipation), keine eigene Reuse-Leistungslinie -> bezug ueber die namentliche Nennung als Berater im Boschgaard-Projekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "U26|P8",
+        "a_tid": "U26",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Bauherr/Auftraggeber der Kliniek Ithaka",
+        "relation_soll": "",
+        "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+        "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "U46|P8",
+        "a_tid": "U46",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Architect/Ontwerper der Kliniek Ithaka",
+        "relation_soll": "",
+        "beleg_url": "https://rothuizen-architecten.nl/project/circulair-gebouw-voor-kind-en-jeugdkliniek/",
+        "beleg_zitat": "Architect - Partner Taco Tuinhof",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "U14|P8",
+        "a_tid": "U14",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Entwurf/Interieurontwerp der Kliniek Ithaka",
+        "relation_soll": "",
+        "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+        "beleg_zitat": "Circulaire kliniek GGZ Emergis Ithaka voor jeugdpsychiatrie",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "U03|P8",
+        "a_tid": "U03",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Constructeur draagconstructie Kliniek Ithaka (samen met Lüning)",
+        "relation_soll": "",
+        "beleg_url": "https://luning.nl/projecten/zorgkliniek-emergis-kloetinge/",
+        "beleg_zitat": "Houtconstructeur - ABT en Adviesbureau Lüning ontwierpen samen de hergebruikte houten draagconstructie voor de Emergis-kliniek.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "U04|P8",
+        "a_tid": "U04",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Houtconstructeur van de Kliniek Ithaka",
+        "relation_soll": "",
+        "beleg_url": "https://luning.nl/projecten/zorgkliniek-emergis-kloetinge/",
+        "beleg_zitat": "Houtconstructeur - Adviesbureau Lüning ontwierp de hergebruikte houten draagconstructie voor Zorgkliniek Emergis Kloetinge.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "I05|P8",
+        "a_tid": "I05",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Herkomstgebouw des Wiederverwendungsmaterials fuer Kliniek Ithaka",
+        "relation_soll": "",
+        "beleg_url": "https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp",
+        "beleg_zitat": "Het kantoor van Rijkswaterstaat in Terneuzen...is afgebroken en zoveel mogelijk materialen zijn hergebruikt voor de nieuwbouw van deze kliniek.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "U41|P8",
+        "a_tid": "U41",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Installateur elektrotechniek/communicatie/beveiliging Kliniek Ithaka",
+        "relation_soll": "",
+        "beleg_url": "https://www.paree.nl/project/ithaka-emergis-kloetinge",
+        "beleg_zitat": "De materialen van het voormalige districtskantoor van Rijkswaterstaat in Terneuzen zijn hergebruikt bij de nieuw te (ver)bouwen kinder- en jeugdkliniek in Kloetinge.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "U23|P8",
+        "a_tid": "U23",
+        "b_tid": "P8",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "relation_ist": "Installatietechniek uitvoerende partij Kliniek Ithaka",
+        "relation_soll": "",
+        "beleg_url": "https://demakersvanmorgen.com/ithaka-kliniek-circulair-en-energieneutraal/",
+        "beleg_zitat": "Aan DWT Groep werd gevraagd dit op te pakken.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c06"
+      },
+      {
+        "edge_id": "O01|P16",
+        "a_tid": "O01",
+        "b_tid": "P16",
+        "edge_degree": "belegt",
+        "relation_ist": "Bewohnerinitiative gruendete und verwaltet das Wohnprojekt Boschgaard",
+        "relation_soll": "PROJEKT_PARTNER",
+        "unklar_grund": "",
+        "beleg_url": "https://www.crowdbuilding.com/d/initiatieven/boschgaard",
+        "beleg_zitat": "het initiatief volledig bij de toekomstige bewoners vandaan komt",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "edge_id": "O08|P16",
+        "a_tid": "O08",
+        "b_tid": "P16",
+        "edge_degree": "belegt",
+        "relation_ist": "Zayaz ist Bauherrin/Eigentuemerin von Boschgaard",
+        "relation_soll": "PROJEKT_PARTNER",
+        "unklar_grund": "",
+        "beleg_url": "https://www.zayaz.nl/boschgaard",
+        "beleg_zitat": "Zayaz ondersteunt en faciliteert hen hierin. En blijft eigenaar van het gebouw",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "edge_id": "U11|P16",
+        "a_tid": "U11",
+        "b_tid": "P16",
+        "edge_degree": "belegt",
+        "relation_ist": "Versteegden ist ausfuehrendes Bauunternehmen im Auftrag von Zayaz fuer Boschgaard",
+        "relation_soll": "PROJEKT_PARTNER",
+        "unklar_grund": "",
+        "beleg_url": "https://www.versteegden.nl/koninklijk-bezoek/",
+        "beleg_zitat": "Bouwbedrijf Versteegden bouwt in opdracht van woningcorporatie Zayaz in Den Bosch aan een voor Nederland uniek circulair woonproject.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "edge_id": "U54|P16",
+        "a_tid": "U54",
+        "b_tid": "P16",
+        "edge_degree": "belegt",
+        "relation_ist": "Transfarmers ist zentraler Partner von Boschgaard, Nutzer der Gemeinschaftsraeume",
+        "relation_soll": "PROJEKT_PARTNER",
+        "unklar_grund": "",
+        "beleg_url": "https://boschgaard.nl/transfarmers/",
+        "beleg_zitat": "Transfarmers is meer dan gewoon een partner. We kunnen zeker zeggen dat Boschgaard er niet geweest was als Transfarmers niet bestaan had.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      },
+      {
+        "edge_id": "U58|P16",
+        "a_tid": "U58",
+        "b_tid": "P16",
+        "edge_degree": "belegt",
+        "relation_ist": "VanNimwegen ist Berater fuer die Wooncooperatie Boschgaard",
+        "relation_soll": "PROJEKT_PARTNER",
+        "unklar_grund": "",
+        "beleg_url": "https://boschgaard.nl/van-nimwegen/",
+        "beleg_zitat": "Warren van Hoof, van adviesbureau VanNimwegen, is onder andere op het gebied van wooncoöperaties onze adviseur.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NL",
+        "packet_id": "NL-c09"
+      }
+    ],
+    "ungeprueft": [
+      "P9",
+      "S01",
+      "U05",
+      "U45",
+      "U55",
+      "M01",
+      "N03",
+      "O04",
+      "P11",
+      "U13",
+      "U29",
+      "U31",
+      "U38",
+      "U40",
+      "U48",
+      "O03",
+      "P3",
+      "U10",
+      "U16",
+      "U65"
+    ],
+    "ausgefallen": [
+      "NL-c07",
+      "NL-c08",
+      "NL-c10"
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-NL"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "NL:NL-c06",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-NL",
+      "agentId": "a3d2a1ade9bfcfb04",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786571363685,
+      "queuedAt": 1786571359640,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NL-c06",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786571598976,
+      "tokens": 69070,
+      "toolCalls": 23,
+      "durationMs": 235291,
+      "resultPreview": "{\"packet_id\":\"NL-c06\",\"tool_calls_used\":15,\"kappe_erreicht\":false,\"ungeprueft_tids\":[],\"nodes\":[{\"tid\":\"I05\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://www.burobas.nl/project/emergis-ithaka-circulariteit-duurzaamheid-healing-environment-ontwerp\",\"beleg_zitat\":\"Het kantoor van Rijkswaterstaat in Terneuzen...is afgebroken en zoveel mogelijk materialen zijn hergebruikt voor de nieuwbouw van deze kli…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "NL:NL-c07",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-NL",
+      "agentId": "a0d7a8f9acd78ff08",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1786571367556,
+      "queuedAt": 1786571359640,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "Quote a sentence describing Madaster's own service related …",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786571579940,
+      "error": "You've hit your session limit · resets 1:40am (Europe/Berlin)",
+      "tokens": 67621,
+      "toolCalls": 23,
+      "durationMs": 212384
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "NL:NL-c08",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-NL",
+      "agentId": "adf34f58c75da5e61",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1786571369242,
+      "queuedAt": 1786571359641,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "Quote a short sentence describing New Horizon's core busine…",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786571593919,
+      "error": "You've hit your session limit · resets 1:40am (Europe/Berlin)",
+      "tokens": 73961,
+      "toolCalls": 27,
+      "durationMs": 224676
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "NL:NL-c09",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-NL",
+      "agentId": "a7741eb40e0e89fb2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786571366585,
+      "queuedAt": 1786571359641,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NL-c09",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786571600838,
+      "tokens": 69310,
+      "toolCalls": 23,
+      "durationMs": 234252,
+      "resultPreview": "{\"packet_id\":\"NL-c09\",\"nodes\":[{\"tid\":\"O01\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://www.crowdbuilding.com/d/initiatieven/boschgaard\",\"beleg_zitat\":\"het initiatief volledig bij de toekomstige bewoners vandaan komt\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"\\\"Bewonersinitiatief Boschgaard\\\" OR \\\"Bewoners initiatief Boschgaard\\\"\",\"Boschgaard bewonersinitiatief Den Bosch\"],\"geprueft_urls\":[\"http…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "NL:NL-c10",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-NL",
+      "agentId": "a975f45134e69befe",
+      "model": "claude-sonnet-5",
+      "state": "error",
+      "startedAt": 1786571365313,
+      "queuedAt": 1786571359642,
+      "attempt": 1,
+      "lastToolName": "WebFetch",
+      "lastToolSummary": "Quote the sentence describing what BlueCity does regarding …",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786571588264,
+      "error": "You've hit your session limit · resets 1:40am (Europe/Berlin)",
+      "tokens": 69203,
+      "toolCalls": 26,
+      "durationMs": 222950
+    }
+  ],
+  "totalTokens": 349165,
+  "totalToolCalls": 122
+}

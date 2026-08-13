@@ -1,0 +1,1664 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for FR",
+  "agentCount": 3,
+  "logs": [
+    "FR: 3 packets, 23 nodes, 20 edges",
+    "FR: 23 Knotenurteile, 20 Kantenurteile, 0 ungeprueft",
+    "FR: kern=14 bezug=8 ohne_beleg=1"
+  ],
+  "result": {
+    "ccs": [
+      "FR"
+    ],
+    "packets": [
+      {
+        "packet_id": "FR-c01",
+        "nodes": [
+          {
+            "tid": "O05",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.travailetvie.org/batiment",
+            "beleg_zitat": "Dépose sélective & logistique réemploi",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Travail et Vie\" association réemploi Paris",
+              "travailetvie.org réemploi bâtiment circulaire activité"
+            ],
+            "geprueft_urls": [
+              "https://www.travailetvie.org/",
+              "https://www.travailetvie.org/batiment"
+            ],
+            "begruendung": "Eigene, dauerhafte Bâtiment-Seite listet 'Dépose sélective & logistique réemploi' als Leistungslinie der Entreprise d'insertion -- nicht News/Einzelprojekt, sondern Angebotsseite. Grad kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P2",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+            "beleg_zitat": "La Ferme du Rail a été conçue à partir de 90% de matériaux biosourcés (bois, paille) et/ou réemployés",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Ferme du Rail\" Paris réemploi matériaux projet"
+            ],
+            "geprueft_urls": [
+              "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+              "https://grandhuit.eu/projet/ferme-du-rail/",
+              "https://www.scoping.fr/projet/construction-dun-batiment-dagriculture-urbaine-la-ferme-du-rail/"
+            ],
+            "begruendung": "Projektknoten: Bauvorhaben dokumentiert Bauteil-/Materialwiederverwendung ausfuehrlich auf Drittseiten (Ekopolis, Grand Huit); eigene Projektseite fermedurail.org aktuell nicht erreichbar (DNS tot), daher bezug statt kern.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "beleg_url": "https://www.fermedurail.org/",
+                "hindernis": "dns_tot"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U01",
+            "actor_degree": "kern",
+            "beleg_url": "https://albert-and-co.fr/references/reemploi/",
+            "beleg_zitat": "Mise en place et fabrication du mobilier urbain avec des matériaux récupérés de monuments",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "albert-and-co.fr réemploi économie circulaire AMO"
+            ],
+            "geprueft_urls": [
+              "https://albert-and-co.fr/2023/07/19/ferme-du-rail-paris-19eme/",
+              "https://albert-and-co.fr/references/reemploi/"
+            ],
+            "begruendung": "Eigene Referenzen-Kategorie 'reemploi' dauerhaft im Menü platziert (nicht Einzelprojekt/News), zeigt mehrere Reuse-Referenzen. Grad kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U11",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.pouget-consultants.eu/fabrique/",
+            "beleg_zitat": "Économie circulaire & réemploi ... diagnostics PEMD, diagnostics ressources, intégration du réemploi dès la phase conception, accompagnement AMO & MOE",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"pouget consultants\" réemploi matériaux économie circulaire"
+            ],
+            "geprueft_urls": [
+              "https://www.pouget-consultants.eu/a-propos/",
+              "https://www.pouget-consultants.eu/fabrique/"
+            ],
+            "begruendung": "Eigene 'Fabrique'-Expertiseseite fuehrt 'Économie circulaire & réemploi' dauerhaft als Kompetenzfeld. Grad kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U12",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+            "beleg_zitat": "La maîtrise d'ouvrage privée Réhabail a été un acteur moteur et volontaire dans la démarche de réemploi",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Réhabail\" Ferme du Rail Paris bailleur",
+              "\"Réhabail\" site officiel bailleur social insertion"
+            ],
+            "geprueft_urls": [
+              "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail"
+            ],
+            "begruendung": "Keine eigene erreichbare Website gefunden (D2 zweifach erfolglos). Namentlich als treibende Bauherrin in der Reuse-Sache Ferme du Rail auf Drittseite genannt. Grad bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U13",
+            "actor_degree": "bezug",
+            "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+            "beleg_zitat": "Grand Huit avec Albert et cie (AMO), Scoping (BET TCE), Gamba (BET acoustique) et Toreana, Pouget (BE thermique), Mélanie Drevet paysagiste",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Scoping\" bureau études fluides \"Ferme du Rail\"",
+              "scoping.fr expertise économie circulaire réemploi bureau études"
+            ],
+            "geprueft_urls": [
+              "https://www.scoping.fr/projet/construction-dun-batiment-dagriculture-urbaine-la-ferme-du-rail/",
+              "https://www.scoping.fr/",
+              "https://www.scoping.fr/nos-metiers-expertises/moe-deconstruction-depollution/",
+              "https://www.scoping.fr/nos-services/services-aux-promoteurs-investisseurs-et-gestionnaires/amo-depollution-deconstruction/"
+            ],
+            "begruendung": "Keine eigene dauerhafte Reuse-Leistungsseite gefunden (Deconstruction/Depollution-Seiten nennen 'réemploi' nicht explizit). Als BET TCE namentlich im Team der Reuse-Sache Ferme du Rail genannt (Drittquelle Grand Huit). Grad bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "O05|P2",
+            "a_tid": "O05",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+            "beleg_zitat": "Dans les entreprises : Apijbat et Travail et Vie",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "ausfuehrendes_unternehmen_reuse_massnahmen",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U12|P2",
+            "a_tid": "U12",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+            "beleg_zitat": "La maîtrise d'ouvrage privée Réhabail a été un acteur moteur et volontaire dans la démarche de réemploi",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "Bauherr_Auftraggeber",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U11|P2",
+            "a_tid": "U11",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+            "beleg_zitat": "Grand Huit avec Albert et cie (AMO), Scoping (BET TCE), Gamba (BET acoustique) et Toreana, Pouget (BE thermique), Mélanie Drevet paysagiste",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "BE_thermique_Fachplaner",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U13|P2",
+            "a_tid": "U13",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+            "beleg_zitat": "Grand Huit avec Albert et cie (AMO), Scoping (BET TCE), Gamba (BET acoustique) et Toreana, Pouget (BE thermique), Mélanie Drevet paysagiste",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "BET_TCE_Fachplaner",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U01|P2",
+            "a_tid": "U01",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+            "beleg_zitat": "rand huit avec albert et cie (amo), scoping (bet tce), gamba (bet acoustique) et toreana, pouget (be thermique), melanie drevet paysagi",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "AMO_generaliste",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 25,
+        "kappe_erreicht": false,
+        "cc": "FR",
+        "assigned_nodes": [
+          "O05",
+          "P2",
+          "U01",
+          "U11",
+          "U12",
+          "U13"
+        ],
+        "assigned_edges": [
+          "O05|P2",
+          "U12|P2",
+          "U11|P2",
+          "U13|P2",
+          "U01|P2"
+        ]
+      },
+      {
+        "packet_id": "FR-c02",
+        "tool_calls_used": 31,
+        "kappe_erreicht": false,
+        "ungeprueft_tids": [],
+        "nodes": [
+          {
+            "tid": "N01",
+            "actor_degree": "kern",
+            "beleg_url": "https://asso-reavie.fr/",
+            "beleg_zitat": "tonnes de matériaux sauvées de la benne",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "asso-reavie.fr direct fetch"
+            ],
+            "geprueft_urls": [
+              "https://asso-reavie.fr/"
+            ],
+            "begruendung": "Eigene Seite (asso-reavie.fr) stellt Plateformes Solid-R (Diagnostic/AMO, Déconstruction, Logistique de plateforme, Conception/Réalisation) als dauerhaftes eigenes Programm der Bauteilwiederverwendung dar -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "O03",
+            "actor_degree": "bezug",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "Le gisement a été inventoriée par Bellastock dans le cadre du projet « Métabolisme urbain »",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Métabolisme Urbain\" réemploi matériaux",
+              "\"Métabolisme Urbain\" Résilience Novaedia Ferme des Possibles"
+            ],
+            "geprueft_urls": [
+              "https://plainecommune.fr/metabolisme-urbain/",
+              "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles",
+              "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/"
+            ],
+            "begruendung": "Kein eigener Auftritt als Organisation; 'Métabolisme Urbain' ist ein Programm von Plaine Commune (EPT), wird aber auf mehreren oeffentlichen Seiten namentlich in der benannten Reuse-Sache 'Résilience' genannt (Materialgisement-Inventur) -> bezug, nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "O04",
+            "actor_degree": "bezug",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "Le bâtiment accueillera en mars 2020 le siège social et les ateliers de Novaedia, coopérative à but d'insertion sociale",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Novaedia\" OR \"Novædia\" Stains coopérative réemploi",
+              "novaedia.fr réemploi matériaux Résilience"
+            ],
+            "geprueft_urls": [
+              "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+              "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles"
+            ],
+            "begruendung": "Novaedia ist Ernährungs-/Insertionsgenossenschaft; eigene Wiederverwendungslinie nicht gefunden (kein Reuse-Kerngeschaeft). Namentlich als Bauherrin/Betreiberin des Reuse-Gebaeudes Résilience genannt -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P5",
+            "actor_degree": "kern",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "L'association Réavie a préparé et livré des éléments tels que des WC, des luminaires, des poignées de portes, des mitigeurs",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+              "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles",
+              "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/"
+            ],
+            "begruendung": "Bauvorhaben Résilience (Sitz Novaedia, Stains) dokumentiert Bauteilwiederverwendung umfassend und dauerhaft ueber mehrere unabhaengige Quellen (Fenster, Sanitaer, Erdziegel-Wiederverwendung) -> kern-Grad fuer das Projekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U02",
+            "actor_degree": "kern",
+            "beleg_url": "https://archipelzero.wixsite.com/archipelzero",
+            "beleg_zitat": "Architecture frugale - bois, paille, terre crue, réemploi",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Archipel zéro\" architectes réemploi Paris",
+              "\"archipel zéro\" site officiel réemploi architecture"
+            ],
+            "geprueft_urls": [
+              "https://archipelzero.wixsite.com/archipelzero"
+            ],
+            "begruendung": "Eigene Seite stellt Réemploi als dauerhaften Bestandteil der architektonischen Praxis dar (bioklimatische, low-tech Architektur mit Wiederverwendungsmaterialien) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U07",
+            "actor_degree": "bezug",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "Les châssis ont été déposés, transportés et retravaillés dans les ateliers de l'entreprise de menuiseries Depuis1920",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Depuis 1920\" entreprise réemploi matériaux BTP",
+              "\"Depuis 1920\" architecture matériaux anciens récupération entreprise",
+              "\"Résilience\" Stains \"Depuis 1920\""
+            ],
+            "geprueft_urls": [
+              "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/"
+            ],
+            "begruendung": "Kein eigener Web-Auftritt der Tischlerei 'Depuis 1920' gefunden; Namensnennung mit konkreter Reuse-Taetigkeit (Wiederaufarbeitung von Fensterrahmen) fuer Projekt Résilience -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U14",
+            "actor_degree": "bezug",
+            "beleg_url": "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/",
+            "beleg_zitat": "contrôleur technique : SOCOTEC",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.socotec.com/",
+              "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/"
+            ],
+            "begruendung": "socotec.com zeigt generische Ingenieur-/Pruefdienstleistungen ohne eigene Reuse-Leistungslinie (analog CBRE-Kalibrierung); Bezug nur ueber Projektrolle als Controleur technique bei Résilience -> bezug, nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U17",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Terraterre\" réemploi matériaux",
+              "terraterre.fr matériaux terre",
+              "Terraterre Liffol-le-Petit paille terre entreprise construction site officiel",
+              "\"Résilience\" Stains \"Terraterre\" briques terre crue façade réemploi"
+            ],
+            "geprueft_urls": [
+              "http://terraterre-hautemarne.fr/",
+              "https://terraterre-hautemarne.fr/?page_id=5"
+            ],
+            "begruendung": "SARL Terraterre (Liffol-le-Petit, Haute-Marne) identifiziert, aber Domain terraterre-hautemarne.fr durchgehend DNS-tot (Root und Unterseite). Verfahren D3 durchlaufen (Root probiert, D2-Suche nach Umzug ohne Treffer). Keine oeffnbare Seite mit Reuse-Bezug gefunden -> ohne_beleg + Flag nicht_pruefbar/dns_tot.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "dns_tot",
+                "beleg_url": "http://terraterre-hautemarne.fr/",
+                "beleg_zitat": ""
+              }
+            ],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "O04|P5",
+            "a_tid": "O04",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "Le bâtiment accueillera en mars 2020 le siège social et les ateliers de Novaedia, coopérative à but d'insertion sociale",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "Novaedia ist Bauherrin/Nutzerin des Gebaeudes Résilience (Sitz + Werkstaetten)",
+            "relation_soll": "BETREIBER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U14|P5",
+            "a_tid": "U14",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/",
+            "beleg_zitat": "contrôleur technique : SOCOTEC",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "SOCOTEC als technischer Kontrolleur des Projekts Résilience",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U07|P5",
+            "a_tid": "U07",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "Les châssis ont été déposés, transportés et retravaillés dans les ateliers de l'entreprise de menuiseries Depuis1920",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "Depuis 1920 als ausfuehrende Tischlerei fuer wiederverwendete Fensterrahmen bei Résilience",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U17|P5",
+            "a_tid": "U17",
+            "b_tid": "P5",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "",
+            "relation_soll": "",
+            "beide_genannt": false,
+            "budget_erschoepft": true
+          },
+          {
+            "edge_id": "N01|P5",
+            "a_tid": "N01",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "L'association Réavie a préparé et livré des éléments tels que des WC, des luminaires, des poignées de portes, des mitigeurs",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "Réavie als Materiallieferant (sanitaere/elektrische Wiederverwendungselemente) fuer Résilience",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "O03|P5",
+            "a_tid": "O03",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "Le gisement a été inventoriée par Bellastock dans le cadre du projet « Métabolisme urbain »",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "Materialgisement fuer Résilience im Rahmen des Programms Métabolisme Urbain (Plaine Commune) inventarisiert",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U02|P5",
+            "a_tid": "U02",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+            "beleg_zitat": "Conçu par l'agence d'architecture Frédéric Denise – Archipel Zéro, le projet illustre l'engagement de la maîtrise d'ouvrage",
+            "abrufdatum": "2026-08-12",
+            "relation_ist": "Archipel zéro als entwerfende Architekturagentur des Projekts Résilience",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          }
+        ],
+        "cc": "FR",
+        "assigned_nodes": [
+          "N01",
+          "O03",
+          "O04",
+          "P5",
+          "U02",
+          "U07",
+          "U14",
+          "U17"
+        ],
+        "assigned_edges": [
+          "O04|P5",
+          "U14|P5",
+          "U07|P5",
+          "U17|P5",
+          "N01|P5",
+          "O03|P5",
+          "U02|P5"
+        ]
+      },
+      {
+        "packet_id": "FR-c03",
+        "nodes": [
+          {
+            "tid": "M18",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.cycle-up.fr/",
+            "beleg_zitat": "économiser les ressources et réduire les déchets du bâtiment au travers du réemploi des matériaux",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.cycle-up.fr/",
+              "https://site.cycle-up.fr/annonceurs-partenaires/"
+            ],
+            "begruendung": "Eigene Domain, Marktplatz für Bauteil-Wiederverwendung als Kerngeschäft (gegründet 2017), dauerhaft platziert.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M37",
+            "actor_degree": "kern",
+            "beleg_url": "https://maisoncarrelle.com/",
+            "beleg_zitat": "Nous donnons une seconde vie aux carreaux en leur offrant une nouvelle place dans vos intérieurs",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Maison Carrelle\" réemploi matériaux",
+              "\"Maison Carrelle\" France reclaimed"
+            ],
+            "geprueft_urls": [
+              "https://maisoncarrelle.com/",
+              "https://site.cycle-up.fr/maison-carrelle/"
+            ],
+            "begruendung": "Eigene Domain, Handel mit Wiederverwendungs-Fliesen (carrelage de réemploi) ist alleiniger Geschäftszweck.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M45",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.metamo.fr/",
+            "beleg_zitat": "Spécialistes du réemploi d'éléments métalliques, nous donnons une seconde vie au métal",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Metamo\" réemploi France matériaux construction",
+              "Metamo métal réemploi Toulouse"
+            ],
+            "geprueft_urls": [
+              "https://www.metamo.fr/",
+              "https://site.cycle-up.fr/annonceurs-partenaires/"
+            ],
+            "begruendung": "Eigene Domain, industrialisierte Wiederverwendung/Aufbereitung von Stahl-/Metallbauteilen als Kerngeschäft.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M46",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.mobius-reemploi.fr/en",
+            "beleg_zitat": "Mobius specialises in reuse consulting and in the production of reconditioned building materials.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Mobious mobilier réemploi site officiel",
+              "Mobius réemploi construction France"
+            ],
+            "geprueft_urls": [
+              "https://www.mobius-reemploi.fr/en",
+              "https://site.cycle-up.fr/annonceurs-partenaires/"
+            ],
+            "begruendung": "Eigene Domain (Schreibweise dort 'Mobius', im Datensatz 'MOBIOUS' -- gleiche Organisation, Cycle-Up-Partnerlisting bestaetigt), Wiederverwendungsberatung und Aufbereitung von Baustoffen als Kerngeschaeft.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M47",
+            "actor_degree": "kern",
+            "beleg_url": "https://orak.pro/",
+            "beleg_zitat": "La demande pour des dalles de moquette de réemploi est en croissance constante. Nous proposons des dalles de seconde main en excellent état.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Orak sols textiles réemploi site officiel",
+              "Orak moquette réemploi France"
+            ],
+            "geprueft_urls": [
+              "https://orak.pro/",
+              "https://site.cycle-up.fr/annonceur-plus-orak/"
+            ],
+            "begruendung": "Eigene Domain, Wiederverwendung von Textilbelaegen (Teppichfliesen) als dauerhaft angebotene eigene Leistung, nicht nur ueber Cycle-Up-Partnerschaft.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M53",
+            "actor_degree": "kern",
+            "beleg_url": "https://proclus.eco/",
+            "beleg_zitat": "we have for mission to give a second life to electrical technical equipment of buildings through preserving removal and careful reconditioning",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Proclus équipements électriques reconditionnés site officiel",
+              "Proclus réemploi électrique France"
+            ],
+            "geprueft_urls": [
+              "https://proclus.eco/",
+              "https://site.cycle-up.fr/annonceurs-partenaires/"
+            ],
+            "begruendung": "Eigene Domain, Reconditionierung/Wiederverwendung elektrotechnischer Gebaeudeausruestung als Kerngeschaeft (gegruendet 2022).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M70",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.upcyfloor.fr/",
+            "beleg_zitat": "Upcyfloor vous propose un large choix de moquette ou de PVC en réemploi",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Textifloor revêtements sols réemploi site officiel",
+              "Textifloor Upcyfloor réemploi"
+            ],
+            "geprueft_urls": [
+              "https://www.upcyfloor.fr/",
+              "https://site.cycle-up.fr/textifloor-annonceurplus/"
+            ],
+            "begruendung": "Upcyfloor ist die eigene Wiederverwendungsmarke von Textifloor, dauerhaft als Bodenbelag-Reuse-Angebot platziert.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N07",
+            "actor_degree": "bezug",
+            "beleg_url": "https://institut-economie-circulaire.fr/evenement-construction-circulaire-paris/",
+            "beleg_zitat": "La première partie, se concentrera sur les enjeux de commande publique circulaire et de réemploi",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Institut National Économie Circulaire \"Cycle Up\"",
+              "INEC réemploi construction"
+            ],
+            "geprueft_urls": [
+              "https://institut-economie-circulaire.fr/",
+              "https://institut-economie-circulaire.fr/evenement-construction-circulaire-paris/"
+            ],
+            "begruendung": "INEC-Hauptseite praesentiert Zirkularitaet branchenuebergreifend (Landwirtschaft, Industrie, Bau) ohne dauerhafte Bauteil-Reuse-Linie; Bauteilbezug nur ueber ein konkretes, benanntes Einzelevent zu réemploi/commande publique circulaire -> bezug statt kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U15",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.soprema-entreprises.fr/gestion-durable-dechets-btp-recyclage-reemploi/",
+            "beleg_zitat": "SOPREMA Entreprises se mobilise également, notamment à travers la rédaction de cahiers des charges dédiés à certains matériaux (bardages, gravillons, éléments de toiture).",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Soprema réemploi Cycle Up isolant OR matériaux",
+              "Soprema BTP recyclage réemploi"
+            ],
+            "geprueft_urls": [
+              "https://www.soprema-entreprises.fr/gestion-durable-dechets-btp-recyclage-reemploi/",
+              "https://www.soprema.fr/"
+            ],
+            "begruendung": "Eigene Konzern-Domain (soprema-entreprises.fr) stellt Wiederverwendung/Recycling von Bauteilen (Bardage, Dacheindeckung) dauerhaft als Teil des eigenen Leistungsangebots dar.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "M18|N07",
+            "a_tid": "M18",
+            "b_tid": "N07",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://institut-economie-circulaire.fr/evenement-construction-circulaire-paris/",
+            "beleg_zitat": "CYCLE UP représenté par Hugo Bonnet, Directeur Général et Associé",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Cycle Up nimmt als Projekttraeger/Pitch-Teilnehmer an einer von INEC organisierten Veranstaltung zu réemploi/commande publique circulaire teil",
+            "relation_soll": ""
+          },
+          {
+            "edge_id": "M18|M37",
+            "a_tid": "M18",
+            "b_tid": "M37",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://site.cycle-up.fr/maison-carrelle/",
+            "beleg_zitat": "Maison Carrelle – partenaire annonceur de Cycle Up",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Maison Carrelle ist annonceur-partenaire (Werbe-/Handelspartner) auf Cycle Ups Marktplatz",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "M18|M45",
+            "a_tid": "M18",
+            "b_tid": "M45",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://site.cycle-up.fr/annonceurs-partenaires/",
+            "beleg_zitat": "METAMO - Réemploi et l'upcycling d'éléments métalliques à destination du BTP et des collectivités locales",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Metamo in Cycle Ups Partner-/Anbieterverzeichnis 'Nos annonceurs partenaires' gelistet",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "M18|M46",
+            "a_tid": "M18",
+            "b_tid": "M46",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://site.cycle-up.fr/annonceurs-partenaires/",
+            "beleg_zitat": "MOBIOUS - Artisan du bois et de l'acier, propose des lignes de mobiliers contemporaines et intemporelles à base de matériaux réutilisés",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Mobious in Cycle Ups Partner-/Anbieterverzeichnis 'Nos annonceurs partenaires' gelistet",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "M18|M47",
+            "a_tid": "M18",
+            "b_tid": "M47",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://site.cycle-up.fr/annonceur-plus-orak/",
+            "beleg_zitat": "Aujourd'hui Orak propose, en partenariat avec Cycle Up, une solution globale pour dalles textiles neuves ou réemployées",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Orak steht in dokumentiertem partenariat mit Cycle Up fuer Textilboden-Reuse-Loesung",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "M18|M53",
+            "a_tid": "M18",
+            "b_tid": "M53",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://site.cycle-up.fr/annonceurs-partenaires/",
+            "beleg_zitat": "PROCLUS - Spécialiste des équipements électriques techniques du bâtiment 100% reconditionnés et garantis",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Proclus in Cycle Ups Partner-/Anbieterverzeichnis 'Nos annonceurs partenaires' gelistet",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "M18|U15",
+            "a_tid": "M18",
+            "b_tid": "U15",
+            "edge_degree": "unklar",
+            "unklar_grund": "abgeleitet",
+            "beleg_url": "https://www.soprema-entreprises.fr/gestion-durable-dechets-btp-recyclage-reemploi/",
+            "beleg_zitat": "Ces démarches s'appuient sur des structures existantes, elles-mêmes émergentes, comme les banques de matériaux ou les plateformes de type Cycle Up.",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Soprema nennt 'Cycle Up' nur als generisches Beispiel eines Plattform-Typs, keine belegte konkrete Partnerschaft/Auftragsbeziehung gefunden",
+            "relation_soll": ""
+          },
+          {
+            "edge_id": "M18|M70",
+            "a_tid": "M18",
+            "b_tid": "M70",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://site.cycle-up.fr/textifloor-annonceurplus/",
+            "beleg_zitat": "le partenariat Cycle Up X Textifloor a pour objectif de contribuer à l'amélioration de la chaine de valeur",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Dokumentierter partenariat Cycle Up x Textifloor zur Verbesserung der Wertschoepfungskette bei Bodenbelag-Reuse",
+            "relation_soll": "PROJEKT_PARTNER"
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 28,
+        "kappe_erreicht": false,
+        "cc": "FR",
+        "assigned_nodes": [
+          "M18",
+          "M37",
+          "M45",
+          "M46",
+          "M47",
+          "M53",
+          "M70",
+          "N07",
+          "U15"
+        ],
+        "assigned_edges": [
+          "M18|N07",
+          "M18|M37",
+          "M18|M45",
+          "M18|M46",
+          "M18|M47",
+          "M18|M53",
+          "M18|U15",
+          "M18|M70"
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "O05",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.travailetvie.org/batiment",
+        "beleg_zitat": "Dépose sélective & logistique réemploi",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Travail et Vie\" association réemploi Paris",
+          "travailetvie.org réemploi bâtiment circulaire activité"
+        ],
+        "geprueft_urls": [
+          "https://www.travailetvie.org/",
+          "https://www.travailetvie.org/batiment"
+        ],
+        "begruendung": "Eigene, dauerhafte Bâtiment-Seite listet 'Dépose sélective & logistique réemploi' als Leistungslinie der Entreprise d'insertion -- nicht News/Einzelprojekt, sondern Angebotsseite. Grad kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "tid": "P2",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+        "beleg_zitat": "La Ferme du Rail a été conçue à partir de 90% de matériaux biosourcés (bois, paille) et/ou réemployés",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Ferme du Rail\" Paris réemploi matériaux projet"
+        ],
+        "geprueft_urls": [
+          "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+          "https://grandhuit.eu/projet/ferme-du-rail/",
+          "https://www.scoping.fr/projet/construction-dun-batiment-dagriculture-urbaine-la-ferme-du-rail/"
+        ],
+        "begruendung": "Projektknoten: Bauvorhaben dokumentiert Bauteil-/Materialwiederverwendung ausfuehrlich auf Drittseiten (Ekopolis, Grand Huit); eigene Projektseite fermedurail.org aktuell nicht erreichbar (DNS tot), daher bezug statt kern.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "beleg_url": "https://www.fermedurail.org/",
+            "hindernis": "dns_tot"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "tid": "U01",
+        "actor_degree": "kern",
+        "beleg_url": "https://albert-and-co.fr/references/reemploi/",
+        "beleg_zitat": "Mise en place et fabrication du mobilier urbain avec des matériaux récupérés de monuments",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "albert-and-co.fr réemploi économie circulaire AMO"
+        ],
+        "geprueft_urls": [
+          "https://albert-and-co.fr/2023/07/19/ferme-du-rail-paris-19eme/",
+          "https://albert-and-co.fr/references/reemploi/"
+        ],
+        "begruendung": "Eigene Referenzen-Kategorie 'reemploi' dauerhaft im Menü platziert (nicht Einzelprojekt/News), zeigt mehrere Reuse-Referenzen. Grad kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "tid": "U11",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.pouget-consultants.eu/fabrique/",
+        "beleg_zitat": "Économie circulaire & réemploi ... diagnostics PEMD, diagnostics ressources, intégration du réemploi dès la phase conception, accompagnement AMO & MOE",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"pouget consultants\" réemploi matériaux économie circulaire"
+        ],
+        "geprueft_urls": [
+          "https://www.pouget-consultants.eu/a-propos/",
+          "https://www.pouget-consultants.eu/fabrique/"
+        ],
+        "begruendung": "Eigene 'Fabrique'-Expertiseseite fuehrt 'Économie circulaire & réemploi' dauerhaft als Kompetenzfeld. Grad kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "tid": "U12",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+        "beleg_zitat": "La maîtrise d'ouvrage privée Réhabail a été un acteur moteur et volontaire dans la démarche de réemploi",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Réhabail\" Ferme du Rail Paris bailleur",
+          "\"Réhabail\" site officiel bailleur social insertion"
+        ],
+        "geprueft_urls": [
+          "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail"
+        ],
+        "begruendung": "Keine eigene erreichbare Website gefunden (D2 zweifach erfolglos). Namentlich als treibende Bauherrin in der Reuse-Sache Ferme du Rail auf Drittseite genannt. Grad bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "tid": "U13",
+        "actor_degree": "bezug",
+        "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+        "beleg_zitat": "Grand Huit avec Albert et cie (AMO), Scoping (BET TCE), Gamba (BET acoustique) et Toreana, Pouget (BE thermique), Mélanie Drevet paysagiste",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Scoping\" bureau études fluides \"Ferme du Rail\"",
+          "scoping.fr expertise économie circulaire réemploi bureau études"
+        ],
+        "geprueft_urls": [
+          "https://www.scoping.fr/projet/construction-dun-batiment-dagriculture-urbaine-la-ferme-du-rail/",
+          "https://www.scoping.fr/",
+          "https://www.scoping.fr/nos-metiers-expertises/moe-deconstruction-depollution/",
+          "https://www.scoping.fr/nos-services/services-aux-promoteurs-investisseurs-et-gestionnaires/amo-depollution-deconstruction/"
+        ],
+        "begruendung": "Keine eigene dauerhafte Reuse-Leistungsseite gefunden (Deconstruction/Depollution-Seiten nennen 'réemploi' nicht explizit). Als BET TCE namentlich im Team der Reuse-Sache Ferme du Rail genannt (Drittquelle Grand Huit). Grad bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "tid": "N01",
+        "actor_degree": "kern",
+        "beleg_url": "https://asso-reavie.fr/",
+        "beleg_zitat": "tonnes de matériaux sauvées de la benne",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "asso-reavie.fr direct fetch"
+        ],
+        "geprueft_urls": [
+          "https://asso-reavie.fr/"
+        ],
+        "begruendung": "Eigene Seite (asso-reavie.fr) stellt Plateformes Solid-R (Diagnostic/AMO, Déconstruction, Logistique de plateforme, Conception/Réalisation) als dauerhaftes eigenes Programm der Bauteilwiederverwendung dar -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "O03",
+        "actor_degree": "bezug",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "Le gisement a été inventoriée par Bellastock dans le cadre du projet « Métabolisme urbain »",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Métabolisme Urbain\" réemploi matériaux",
+          "\"Métabolisme Urbain\" Résilience Novaedia Ferme des Possibles"
+        ],
+        "geprueft_urls": [
+          "https://plainecommune.fr/metabolisme-urbain/",
+          "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles",
+          "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/"
+        ],
+        "begruendung": "Kein eigener Auftritt als Organisation; 'Métabolisme Urbain' ist ein Programm von Plaine Commune (EPT), wird aber auf mehreren oeffentlichen Seiten namentlich in der benannten Reuse-Sache 'Résilience' genannt (Materialgisement-Inventur) -> bezug, nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "O04",
+        "actor_degree": "bezug",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "Le bâtiment accueillera en mars 2020 le siège social et les ateliers de Novaedia, coopérative à but d'insertion sociale",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Novaedia\" OR \"Novædia\" Stains coopérative réemploi",
+          "novaedia.fr réemploi matériaux Résilience"
+        ],
+        "geprueft_urls": [
+          "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+          "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles"
+        ],
+        "begruendung": "Novaedia ist Ernährungs-/Insertionsgenossenschaft; eigene Wiederverwendungslinie nicht gefunden (kein Reuse-Kerngeschaeft). Namentlich als Bauherrin/Betreiberin des Reuse-Gebaeudes Résilience genannt -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "P5",
+        "actor_degree": "kern",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "L'association Réavie a préparé et livré des éléments tels que des WC, des luminaires, des poignées de portes, des mitigeurs",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+          "https://www.ekopolis.fr/operations-batiment/resilience-la-ferme-des-possibles",
+          "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/"
+        ],
+        "begruendung": "Bauvorhaben Résilience (Sitz Novaedia, Stains) dokumentiert Bauteilwiederverwendung umfassend und dauerhaft ueber mehrere unabhaengige Quellen (Fenster, Sanitaer, Erdziegel-Wiederverwendung) -> kern-Grad fuer das Projekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "U02",
+        "actor_degree": "kern",
+        "beleg_url": "https://archipelzero.wixsite.com/archipelzero",
+        "beleg_zitat": "Architecture frugale - bois, paille, terre crue, réemploi",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Archipel zéro\" architectes réemploi Paris",
+          "\"archipel zéro\" site officiel réemploi architecture"
+        ],
+        "geprueft_urls": [
+          "https://archipelzero.wixsite.com/archipelzero"
+        ],
+        "begruendung": "Eigene Seite stellt Réemploi als dauerhaften Bestandteil der architektonischen Praxis dar (bioklimatische, low-tech Architektur mit Wiederverwendungsmaterialien) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "U07",
+        "actor_degree": "bezug",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "Les châssis ont été déposés, transportés et retravaillés dans les ateliers de l'entreprise de menuiseries Depuis1920",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Depuis 1920\" entreprise réemploi matériaux BTP",
+          "\"Depuis 1920\" architecture matériaux anciens récupération entreprise",
+          "\"Résilience\" Stains \"Depuis 1920\""
+        ],
+        "geprueft_urls": [
+          "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/"
+        ],
+        "begruendung": "Kein eigener Web-Auftritt der Tischlerei 'Depuis 1920' gefunden; Namensnennung mit konkreter Reuse-Taetigkeit (Wiederaufarbeitung von Fensterrahmen) fuer Projekt Résilience -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "U14",
+        "actor_degree": "bezug",
+        "beleg_url": "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/",
+        "beleg_zitat": "contrôleur technique : SOCOTEC",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.socotec.com/",
+          "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/"
+        ],
+        "begruendung": "socotec.com zeigt generische Ingenieur-/Pruefdienstleistungen ohne eigene Reuse-Leistungslinie (analog CBRE-Kalibrierung); Bezug nur ueber Projektrolle als Controleur technique bei Résilience -> bezug, nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "U17",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Terraterre\" réemploi matériaux",
+          "terraterre.fr matériaux terre",
+          "Terraterre Liffol-le-Petit paille terre entreprise construction site officiel",
+          "\"Résilience\" Stains \"Terraterre\" briques terre crue façade réemploi"
+        ],
+        "geprueft_urls": [
+          "http://terraterre-hautemarne.fr/",
+          "https://terraterre-hautemarne.fr/?page_id=5"
+        ],
+        "begruendung": "SARL Terraterre (Liffol-le-Petit, Haute-Marne) identifiziert, aber Domain terraterre-hautemarne.fr durchgehend DNS-tot (Root und Unterseite). Verfahren D3 durchlaufen (Root probiert, D2-Suche nach Umzug ohne Treffer). Keine oeffnbare Seite mit Reuse-Bezug gefunden -> ohne_beleg + Flag nicht_pruefbar/dns_tot.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "dns_tot",
+            "beleg_url": "http://terraterre-hautemarne.fr/",
+            "beleg_zitat": ""
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "tid": "M18",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.cycle-up.fr/",
+        "beleg_zitat": "économiser les ressources et réduire les déchets du bâtiment au travers du réemploi des matériaux",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.cycle-up.fr/",
+          "https://site.cycle-up.fr/annonceurs-partenaires/"
+        ],
+        "begruendung": "Eigene Domain, Marktplatz für Bauteil-Wiederverwendung als Kerngeschäft (gegründet 2017), dauerhaft platziert.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "M37",
+        "actor_degree": "kern",
+        "beleg_url": "https://maisoncarrelle.com/",
+        "beleg_zitat": "Nous donnons une seconde vie aux carreaux en leur offrant une nouvelle place dans vos intérieurs",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Maison Carrelle\" réemploi matériaux",
+          "\"Maison Carrelle\" France reclaimed"
+        ],
+        "geprueft_urls": [
+          "https://maisoncarrelle.com/",
+          "https://site.cycle-up.fr/maison-carrelle/"
+        ],
+        "begruendung": "Eigene Domain, Handel mit Wiederverwendungs-Fliesen (carrelage de réemploi) ist alleiniger Geschäftszweck.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "M45",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.metamo.fr/",
+        "beleg_zitat": "Spécialistes du réemploi d'éléments métalliques, nous donnons une seconde vie au métal",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Metamo\" réemploi France matériaux construction",
+          "Metamo métal réemploi Toulouse"
+        ],
+        "geprueft_urls": [
+          "https://www.metamo.fr/",
+          "https://site.cycle-up.fr/annonceurs-partenaires/"
+        ],
+        "begruendung": "Eigene Domain, industrialisierte Wiederverwendung/Aufbereitung von Stahl-/Metallbauteilen als Kerngeschäft.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "M46",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.mobius-reemploi.fr/en",
+        "beleg_zitat": "Mobius specialises in reuse consulting and in the production of reconditioned building materials.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Mobious mobilier réemploi site officiel",
+          "Mobius réemploi construction France"
+        ],
+        "geprueft_urls": [
+          "https://www.mobius-reemploi.fr/en",
+          "https://site.cycle-up.fr/annonceurs-partenaires/"
+        ],
+        "begruendung": "Eigene Domain (Schreibweise dort 'Mobius', im Datensatz 'MOBIOUS' -- gleiche Organisation, Cycle-Up-Partnerlisting bestaetigt), Wiederverwendungsberatung und Aufbereitung von Baustoffen als Kerngeschaeft.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "M47",
+        "actor_degree": "kern",
+        "beleg_url": "https://orak.pro/",
+        "beleg_zitat": "La demande pour des dalles de moquette de réemploi est en croissance constante. Nous proposons des dalles de seconde main en excellent état.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Orak sols textiles réemploi site officiel",
+          "Orak moquette réemploi France"
+        ],
+        "geprueft_urls": [
+          "https://orak.pro/",
+          "https://site.cycle-up.fr/annonceur-plus-orak/"
+        ],
+        "begruendung": "Eigene Domain, Wiederverwendung von Textilbelaegen (Teppichfliesen) als dauerhaft angebotene eigene Leistung, nicht nur ueber Cycle-Up-Partnerschaft.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "M53",
+        "actor_degree": "kern",
+        "beleg_url": "https://proclus.eco/",
+        "beleg_zitat": "we have for mission to give a second life to electrical technical equipment of buildings through preserving removal and careful reconditioning",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Proclus équipements électriques reconditionnés site officiel",
+          "Proclus réemploi électrique France"
+        ],
+        "geprueft_urls": [
+          "https://proclus.eco/",
+          "https://site.cycle-up.fr/annonceurs-partenaires/"
+        ],
+        "begruendung": "Eigene Domain, Reconditionierung/Wiederverwendung elektrotechnischer Gebaeudeausruestung als Kerngeschaeft (gegruendet 2022).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "M70",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.upcyfloor.fr/",
+        "beleg_zitat": "Upcyfloor vous propose un large choix de moquette ou de PVC en réemploi",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Textifloor revêtements sols réemploi site officiel",
+          "Textifloor Upcyfloor réemploi"
+        ],
+        "geprueft_urls": [
+          "https://www.upcyfloor.fr/",
+          "https://site.cycle-up.fr/textifloor-annonceurplus/"
+        ],
+        "begruendung": "Upcyfloor ist die eigene Wiederverwendungsmarke von Textifloor, dauerhaft als Bodenbelag-Reuse-Angebot platziert.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "N07",
+        "actor_degree": "bezug",
+        "beleg_url": "https://institut-economie-circulaire.fr/evenement-construction-circulaire-paris/",
+        "beleg_zitat": "La première partie, se concentrera sur les enjeux de commande publique circulaire et de réemploi",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Institut National Économie Circulaire \"Cycle Up\"",
+          "INEC réemploi construction"
+        ],
+        "geprueft_urls": [
+          "https://institut-economie-circulaire.fr/",
+          "https://institut-economie-circulaire.fr/evenement-construction-circulaire-paris/"
+        ],
+        "begruendung": "INEC-Hauptseite praesentiert Zirkularitaet branchenuebergreifend (Landwirtschaft, Industrie, Bau) ohne dauerhafte Bauteil-Reuse-Linie; Bauteilbezug nur ueber ein konkretes, benanntes Einzelevent zu réemploi/commande publique circulaire -> bezug statt kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "tid": "U15",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.soprema-entreprises.fr/gestion-durable-dechets-btp-recyclage-reemploi/",
+        "beleg_zitat": "SOPREMA Entreprises se mobilise également, notamment à travers la rédaction de cahiers des charges dédiés à certains matériaux (bardages, gravillons, éléments de toiture).",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Soprema réemploi Cycle Up isolant OR matériaux",
+          "Soprema BTP recyclage réemploi"
+        ],
+        "geprueft_urls": [
+          "https://www.soprema-entreprises.fr/gestion-durable-dechets-btp-recyclage-reemploi/",
+          "https://www.soprema.fr/"
+        ],
+        "begruendung": "Eigene Konzern-Domain (soprema-entreprises.fr) stellt Wiederverwendung/Recycling von Bauteilen (Bardage, Dacheindeckung) dauerhaft als Teil des eigenen Leistungsangebots dar.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "O05|P2",
+        "a_tid": "O05",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+        "beleg_zitat": "Dans les entreprises : Apijbat et Travail et Vie",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "ausfuehrendes_unternehmen_reuse_massnahmen",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "edge_id": "U12|P2",
+        "a_tid": "U12",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.ekopolis.fr/operations-batiment/la-ferme-du-rail",
+        "beleg_zitat": "La maîtrise d'ouvrage privée Réhabail a été un acteur moteur et volontaire dans la démarche de réemploi",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "Bauherr_Auftraggeber",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "edge_id": "U11|P2",
+        "a_tid": "U11",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+        "beleg_zitat": "Grand Huit avec Albert et cie (AMO), Scoping (BET TCE), Gamba (BET acoustique) et Toreana, Pouget (BE thermique), Mélanie Drevet paysagiste",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "BE_thermique_Fachplaner",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "edge_id": "U13|P2",
+        "a_tid": "U13",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+        "beleg_zitat": "Grand Huit avec Albert et cie (AMO), Scoping (BET TCE), Gamba (BET acoustique) et Toreana, Pouget (BE thermique), Mélanie Drevet paysagiste",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "BET_TCE_Fachplaner",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "edge_id": "U01|P2",
+        "a_tid": "U01",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://grandhuit.eu/projet/ferme-du-rail/",
+        "beleg_zitat": "rand huit avec albert et cie (amo), scoping (bet tce), gamba (bet acoustique) et toreana, pouget (be thermique), melanie drevet paysagi",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "AMO_generaliste",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c01"
+      },
+      {
+        "edge_id": "O04|P5",
+        "a_tid": "O04",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "Le bâtiment accueillera en mars 2020 le siège social et les ateliers de Novaedia, coopérative à but d'insertion sociale",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "Novaedia ist Bauherrin/Nutzerin des Gebaeudes Résilience (Sitz + Werkstaetten)",
+        "relation_soll": "BETREIBER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "edge_id": "U14|P5",
+        "a_tid": "U14",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://topophile.net/faire/la-ferme-des-possibles-ou-de-la-serendipite/",
+        "beleg_zitat": "contrôleur technique : SOCOTEC",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "SOCOTEC als technischer Kontrolleur des Projekts Résilience",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "edge_id": "U07|P5",
+        "a_tid": "U07",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "Les châssis ont été déposés, transportés et retravaillés dans les ateliers de l'entreprise de menuiseries Depuis1920",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "Depuis 1920 als ausfuehrende Tischlerei fuer wiederverwendete Fensterrahmen bei Résilience",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "edge_id": "U17|P5",
+        "a_tid": "U17",
+        "b_tid": "P5",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "",
+        "relation_soll": "",
+        "beide_genannt": false,
+        "budget_erschoepft": true,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "edge_id": "N01|P5",
+        "a_tid": "N01",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "L'association Réavie a préparé et livré des éléments tels que des WC, des luminaires, des poignées de portes, des mitigeurs",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "Réavie als Materiallieferant (sanitaere/elektrische Wiederverwendungselemente) fuer Résilience",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "edge_id": "O03|P5",
+        "a_tid": "O03",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "Le gisement a été inventoriée par Bellastock dans le cadre du projet « Métabolisme urbain »",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "Materialgisement fuer Résilience im Rahmen des Programms Métabolisme Urbain (Plaine Commune) inventarisiert",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "edge_id": "U02|P5",
+        "a_tid": "U02",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "http://materiauxreemploi.com/visite-de-chantier-resilience-la-ferme-des-possibles-a-stains/",
+        "beleg_zitat": "Conçu par l'agence d'architecture Frédéric Denise – Archipel Zéro, le projet illustre l'engagement de la maîtrise d'ouvrage",
+        "abrufdatum": "2026-08-12",
+        "relation_ist": "Archipel zéro als entwerfende Architekturagentur des Projekts Résilience",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "FR",
+        "packet_id": "FR-c02"
+      },
+      {
+        "edge_id": "M18|N07",
+        "a_tid": "M18",
+        "b_tid": "N07",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://institut-economie-circulaire.fr/evenement-construction-circulaire-paris/",
+        "beleg_zitat": "CYCLE UP représenté par Hugo Bonnet, Directeur Général et Associé",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Cycle Up nimmt als Projekttraeger/Pitch-Teilnehmer an einer von INEC organisierten Veranstaltung zu réemploi/commande publique circulaire teil",
+        "relation_soll": "",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "edge_id": "M18|M37",
+        "a_tid": "M18",
+        "b_tid": "M37",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://site.cycle-up.fr/maison-carrelle/",
+        "beleg_zitat": "Maison Carrelle – partenaire annonceur de Cycle Up",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Maison Carrelle ist annonceur-partenaire (Werbe-/Handelspartner) auf Cycle Ups Marktplatz",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "edge_id": "M18|M45",
+        "a_tid": "M18",
+        "b_tid": "M45",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://site.cycle-up.fr/annonceurs-partenaires/",
+        "beleg_zitat": "METAMO - Réemploi et l'upcycling d'éléments métalliques à destination du BTP et des collectivités locales",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Metamo in Cycle Ups Partner-/Anbieterverzeichnis 'Nos annonceurs partenaires' gelistet",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "edge_id": "M18|M46",
+        "a_tid": "M18",
+        "b_tid": "M46",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://site.cycle-up.fr/annonceurs-partenaires/",
+        "beleg_zitat": "MOBIOUS - Artisan du bois et de l'acier, propose des lignes de mobiliers contemporaines et intemporelles à base de matériaux réutilisés",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Mobious in Cycle Ups Partner-/Anbieterverzeichnis 'Nos annonceurs partenaires' gelistet",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "edge_id": "M18|M47",
+        "a_tid": "M18",
+        "b_tid": "M47",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://site.cycle-up.fr/annonceur-plus-orak/",
+        "beleg_zitat": "Aujourd'hui Orak propose, en partenariat avec Cycle Up, une solution globale pour dalles textiles neuves ou réemployées",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Orak steht in dokumentiertem partenariat mit Cycle Up fuer Textilboden-Reuse-Loesung",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "edge_id": "M18|M53",
+        "a_tid": "M18",
+        "b_tid": "M53",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://site.cycle-up.fr/annonceurs-partenaires/",
+        "beleg_zitat": "PROCLUS - Spécialiste des équipements électriques techniques du bâtiment 100% reconditionnés et garantis",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Proclus in Cycle Ups Partner-/Anbieterverzeichnis 'Nos annonceurs partenaires' gelistet",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "edge_id": "M18|U15",
+        "a_tid": "M18",
+        "b_tid": "U15",
+        "edge_degree": "unklar",
+        "unklar_grund": "abgeleitet",
+        "beleg_url": "https://www.soprema-entreprises.fr/gestion-durable-dechets-btp-recyclage-reemploi/",
+        "beleg_zitat": "Ces démarches s'appuient sur des structures existantes, elles-mêmes émergentes, comme les banques de matériaux ou les plateformes de type Cycle Up.",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Soprema nennt 'Cycle Up' nur als generisches Beispiel eines Plattform-Typs, keine belegte konkrete Partnerschaft/Auftragsbeziehung gefunden",
+        "relation_soll": "",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      },
+      {
+        "edge_id": "M18|M70",
+        "a_tid": "M18",
+        "b_tid": "M70",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://site.cycle-up.fr/textifloor-annonceurplus/",
+        "beleg_zitat": "le partenariat Cycle Up X Textifloor a pour objectif de contribuer à l'amélioration de la chaine de valeur",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Dokumentierter partenariat Cycle Up x Textifloor zur Verbesserung der Wertschoepfungskette bei Bodenbelag-Reuse",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "FR",
+        "packet_id": "FR-c03"
+      }
+    ],
+    "ungeprueft": [],
+    "ausgefallen": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-FR"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "FR:FR-c01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FR",
+      "agentId": "a35581335d17a7d04",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786562417307,
+      "queuedAt": 1786562413781,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "FR-c01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786562714879,
+      "tokens": 78842,
+      "toolCalls": 31,
+      "durationMs": 297572,
+      "resultPreview": "{\"packet_id\":\"FR-c01\",\"nodes\":[{\"tid\":\"O05\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.travailetvie.org/batiment\",\"beleg_zitat\":\"Dépose sélective & logistique réemploi\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"\\\"Travail et Vie\\\" association réemploi Paris\",\"travailetvie.org réemploi bâtiment circulaire activité\"],\"geprueft_urls\":[\"https://www.travailetvie.org/\",\"https://www.travailetvie.org…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "FR:FR-c02",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FR",
+      "agentId": "a8b15e848c5475a4c",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786562417043,
+      "queuedAt": 1786562413782,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "FR-c02",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786562815630,
+      "tokens": 85070,
+      "toolCalls": 34,
+      "durationMs": 398587,
+      "resultPreview": "{\"packet_id\":\"FR-c02\",\"tool_calls_used\":31,\"kappe_erreicht\":false,\"ungeprueft_tids\":[],\"nodes\":[{\"tid\":\"N01\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://asso-reavie.fr/\",\"beleg_zitat\":\"tonnes de matériaux sauvées de la benne\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"asso-reavie.fr direct fetch\"],\"geprueft_urls\":[\"https://asso-reavie.fr/\"],\"begruendung\":\"Eigene Seite (asso-reavie.fr) stellt Plate…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "FR:FR-c03",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FR",
+      "agentId": "ad7a447ac985ddec1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786562416852,
+      "queuedAt": 1786562413782,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "FR-c03",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786562744703,
+      "tokens": 84083,
+      "toolCalls": 30,
+      "durationMs": 327849,
+      "resultPreview": "{\"packet_id\":\"FR-c03\",\"nodes\":[{\"tid\":\"M18\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.cycle-up.fr/\",\"beleg_zitat\":\"économiser les ressources et réduire les déchets du bâtiment au travers du réemploi des matériaux\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[],\"geprueft_urls\":[\"https://www.cycle-up.fr/\",\"https://site.cycle-up.fr/annonceurs-partenaires/\"],\"begruendung\":\"Eigene Domain, Marktplatz…"
+    }
+  ],
+  "totalTokens": 247995,
+  "totalToolCalls": 95
+}

@@ -1,0 +1,2792 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for BE",
+  "agentCount": 8,
+  "logs": [
+    "BE: 8 packets, 58 nodes, 3 edges",
+    "BE: 58 Knotenurteile, 3 Kantenurteile, 0 ungeprueft",
+    "BE: kern=36 bezug=12 ohne_beleg=10"
+  ],
+  "result": {
+    "ccs": [
+      "BE"
+    ],
+    "packets": [
+      {
+        "packet_id": "BE-c09",
+        "nodes": [
+          {
+            "tid": "I03",
+            "actor_degree": "bezug",
+            "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+            "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Lo-Reninge town council\" Belgium",
+              "\"Lo-Reninge\" gemeente reuse OR hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall"
+            ],
+            "begruendung": "Kein eigener Kanal des Gemeinderats zu Bauteil-Wiederverwendung gefunden; namentlich als Auftraggeber auf der noAarchitecten-Projektseite genannt, die Wiederverwendung von recyceltem Ziegel im Bauvorhaben dokumentiert -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P6",
+            "actor_degree": "bezug",
+            "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+            "beleg_zitat": "We used recycled brick whose shades of colour, form and size relate to the brick of the convent.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall"
+            ],
+            "begruendung": "Projektseite dokumentiert Wiederverwendung von recyceltem Ziegel als Teil des Bauvorhabens.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U13",
+            "actor_degree": "bezug",
+            "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+            "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Dexia\" Lo-Reninge town hall client"
+            ],
+            "geprueft_urls": [
+              "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+              "https://www.dexia.com/"
+            ],
+            "begruendung": "dexia.com zeigt keine eigene Reuse-Linie; Dexia wird namentlich als Mit-Auftraggeber des Lo-Reninge-Rathausprojekts genannt, dessen Bauvorhaben Bauteil/Material-Wiederverwendung (recycelter Ziegel) dokumentiert -> bezug ueber die Projektsache.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U29",
+            "actor_degree": "bezug",
+            "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+            "beleg_zitat": "Restoration and extension of a former convent to create a town hall",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "noAarchitecten hergebruik materialen reuse"
+            ],
+            "geprueft_urls": [
+              "https://noaarchitecten.net/",
+              "https://noaarchitecten.net/info",
+              "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall"
+            ],
+            "begruendung": "noaarchitecten.net/info (Ueber-uns) stellt Wiederverwendung/Zirkularitaet nicht als dauerhafte Leistungslinie dar (nur allgemeine Aussage zu Kontinuitaet von Stadt/Architektur). Die Projektseite zum Rathaus Lo-Reninge dokumentiert jedoch namentlich ein einzelnes Reuse-Projekt (recycelter Ziegel) -> bezug, nicht kern (einzelnes Projekt als einzige Fundstelle ist fuer kern ausgeschlossen).",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "U29|P6",
+            "a_tid": "U29",
+            "b_tid": "P6",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+            "beleg_zitat": "Restoration and extension of a former convent to create a town hall",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Entwurf/Architekt des Projekts, dokumentiert auf noAarchitecten's eigener Projektportfolioseite",
+            "relation_soll": ""
+          },
+          {
+            "edge_id": "I03|P6",
+            "a_tid": "I03",
+            "b_tid": "P6",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+            "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Lo-Reninge town council als Auftraggeber/Bauherr des Rathausprojekts",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "U13|P6",
+            "a_tid": "U13",
+            "b_tid": "P6",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+            "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+            "abrufdatum": "2026-08-12",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Dexia als Mit-Auftraggeber des Rathausprojekts",
+            "relation_soll": "PROJEKT_PARTNER"
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 6,
+        "kappe_erreicht": false,
+        "cc": "BE",
+        "assigned_nodes": [
+          "I03",
+          "P6",
+          "U13",
+          "U29"
+        ],
+        "assigned_edges": [
+          "U29|P6",
+          "I03|P6",
+          "U13|P6"
+        ]
+      },
+      {
+        "packet_id": "BE-s01",
+        "nodes": [
+          {
+            "tid": "M01",
+            "actor_degree": "kern",
+            "beleg_url": "https://anresto.com/product-categorie/bouw-antiek/",
+            "beleg_zitat": "Bouw antiek",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Antiek Anresto\" Lommel Belgium",
+              "\"Antiek Anresto\" reuse OR reclaimed OR Wiederverwendung"
+            ],
+            "geprueft_urls": [
+              "https://opalis.eu/en/dealers/antiek-anresto",
+              "https://anresto.com/",
+              "https://anresto.com/product-categorie/bouw-antiek/"
+            ],
+            "begruendung": "Eigene Website (anresto.com) fuehrt 'Bouw antiek' (Architecturaal antiek) als dauerhafte, eigenstaendige Produktkategorie mit Unterkategorien wie Balken & Plafonds, Haard stukken, Schouwmantels -- Handel mit historischen/gesalvagten Bauelementen ist Kerngeschaeft, nicht Einzelprojekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M02",
+            "actor_degree": "kern",
+            "beleg_url": "https://antiquefireplacesfirst.com/",
+            "beleg_zitat": "At Antique Fireplaces First, we have over 30 years' experience dealing in fine and prestigious antique fireplaces.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Antique Fireplaces First\" Belgium",
+              "\"Antique Fireplaces First\" site"
+            ],
+            "geprueft_urls": [
+              "https://www.proantic.com/en/galerie/antique-fireplaces-first/",
+              "https://opalis.eu/en/dealers/antique-fireplaces-first",
+              "https://antiquefireplacesfirst.com/"
+            ],
+            "begruendung": "Eigene Website zeigt dauerhaften Handel mit antiken (aus Gebaeuden geborgenen) Kaminen als Kerngeschaeft inkl. eigener Restaurierungswerkstatt -- nicht nur einzelnes Reuse-Projekt oder Fremdverzeichnis.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M03",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.rikstorms.be/nl/voorstelling/",
+            "beleg_zitat": "Door de jaren heen ging Rik Storms zich ook bezighouden met de verkoop van oude en antieke bouwmaterialen die hij met veel zorg en kennis voor het vak restaureerde.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Authentieke Bouwmaterialen Storms\" Belgium",
+              "\"Rik Storms\" antieke bouwmaterialen"
+            ],
+            "geprueft_urls": [
+              "https://www.stonecontact.com/suppliers-127216/rik-storms-antieke-bouwmaterialen-nv",
+              "https://opalis.eu/en/dealers/authentieke-bouwmaterialen-storms-nv",
+              "https://www.rikstorms.be/nl/voorstelling/"
+            ],
+            "begruendung": "Eigene Website (rikstorms.be) stellt Verkauf alter/antiker Bauteile (Steinelemente, Boeden, Dachziegel) als dauerhafte Ueber-uns-Leistungslinie dar, seit 1974 Familienbetrieb.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M06",
+            "actor_degree": "kern",
+            "beleg_url": "https://boisantique.be/bois-antique/",
+            "beleg_zitat": "Bois Antique est un importateur de vieux bois en provenance d'anciennes granges et fermes européennes.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Bois Antique\" Belgique matériaux",
+              "\"Bois Antique\" vieux bois import"
+            ],
+            "geprueft_urls": [
+              "https://www.europages.fr/BOIS-ANTIQUE-SRL/00000004525652-328595001.html",
+              "https://boisantique.be/",
+              "https://boisantique.be/bois-antique/"
+            ],
+            "begruendung": "Eigene Website beschreibt dauerhaftes Kerngeschaeft als Importeur von reclaimed/altem Bauholz (Bardagen, Boeden, Balken) aus europaeischen Scheunen und Bauernhoefen.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P1",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/bric/",
+            "beleg_zitat": "The first construction set-up in 2018 (BRIC 1), tested the capacity of a wooden construction to integrate reclaimed materials, applying reversible solutions that minimise the waste during transformations.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Build Reversible In Conception\" B.R.I.C. project reuse Belgium"
+            ],
+            "geprueft_urls": [
+              "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/bric/",
+              "https://ecobuild.brussels/projet-bric/",
+              "https://guidebatimentdurable.brussels/bric"
+            ],
+            "begruendung": "BRIC ist ein dediziertes Pilotbauvorhaben (EFP Bruessel, mit Karbon' architecture, im Rahmen von BAMB), dessen dauerhaft dokumentierter Kern die Integration wiederverwendeter Bauteile und reversible Konstruktion ist -- Bauteil-Wiederverwendung ist zentraler Gegenstand des Projekts.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P3",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/retrofit-lab/",
+            "beleg_zitat": "The pilot project tested and implemented different scenarios for the reuse and refurbishment of the VUB Campus' prefabricated student housing, without generating a large amount of waste.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Circular Retrofit Lab\" project Belgium reuse"
+            ],
+            "geprueft_urls": [
+              "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/retrofit-lab/",
+              "https://www.vlaanderen-circulair.be/en/node/58/circular-retrofit-lab",
+              "https://www.circubuild.be/nl/nieuws/casestudy-circular-retrofit-lab-brussel/"
+            ],
+            "begruendung": "Circular Retrofit Lab ist ein dediziertes VUB-Pilotprojekt (BAMB), das die Wiederverwendung/Refurbishment bestehender praefabrizierter Studentenwohnmodule zum zentralen, dauerhaft dokumentierten Gegenstand hat.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M07",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Bouwmaterialen De Leyn\" tweedehands OR hergebruik",
+              "\"De Leyn\" bouwmaterialen Belgium"
+            ],
+            "geprueft_urls": [
+              "http://bouwmaterialendeleyn.be/",
+              "https://www.bouwmaterialendeleyn.be/",
+              "https://opalis.eu/en/dealers/bouwmaterialen-de-leyn",
+              "https://www.openingsurengids.be/bouwmaterialen-de-leyn/damme/1"
+            ],
+            "begruendung": "Eigene Domain (bouwmaterialendeleyn.be, mit/ohne www) ist DNS-tot, kein Umzug auffindbar. Einzige inhaltliche Beschreibung (Handel mit gebrauchten Ziegeln/Dachziegeln) stammt ausschliesslich von Opalis (Fremdverzeichnis) -- fuer kern und bezug ausdruecklich ausgeschlossen. Generische Branchenverzeichnisse (openingsurengids, goudengids) liefern nur Adresse/Telefonnummer ohne inhaltliche Beschreibung. Verfahren vollstaendig durchlaufen, keine zulaessige Quelle gefunden.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "dns_tot",
+                "beleg_url": "http://bouwmaterialendeleyn.be/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M08",
+            "actor_degree": "kern",
+            "beleg_url": "https://blog.composil.eu/en/sustainable-building-materials-reused-carpets",
+            "beleg_zitat": "At Composil, we offer a more sustainable solution: our reuse and recycling program is not only eco-friendly but also economically advantageous compared to incineration.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Composil\" bouwmaterialen hergebruik België",
+              "Composil ReUse tapijt hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://www.vlaanderen-circulair.be/nl/doeners/composil-reuse-een-tweede-leven-voor-tapijten",
+              "https://blog.composil.eu/en/sustainable-building-materials-reused-carpets"
+            ],
+            "begruendung": "Eigene (Marken-)Website blog.composil.eu beschreibt dauerhaftes 'Composil ReUse'-Programm fuer Teppiche/Bodenbelaege als festen Bestandteil des Geschaeftsmodells (Use-Reuse-Recycle), nicht Einzelprojekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 29,
+        "kappe_erreicht": false,
+        "cc": "BE",
+        "assigned_nodes": [
+          "M01",
+          "M02",
+          "M03",
+          "M06",
+          "M07",
+          "P1",
+          "P3",
+          "M08"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "BE-s02",
+        "nodes": [
+          {
+            "tid": "M10",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.degroenepoort.com/en/about-us",
+            "beleg_zitat": "You will discover the most original furniture and treasures in De Groene Poort: seventeenth-century prison doors, wood from wreckages to incorporate in your catering business, cupboards made from old doors, shutters, windows",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"De Groene Poort\" bouwmaterialen hergebruik België"
+            ],
+            "geprueft_urls": [
+              "https://www.degroenepoort.com/en/about-us"
+            ],
+            "begruendung": "Eigene, dauerhafte About-us-Seite stellt An- und Verkauf sowie Aufbereitung alter Bauteile (Türen, Fenster, Fensterläden) als Kerngeschäft dar, nicht als Einzelprojekt oder Presseartikel.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M11",
+            "actor_degree": "kern",
+            "beleg_url": "https://de-oude-dakpan.be/",
+            "beleg_zitat": "Oude dakpannen zijn niet alleen een esthetische verrijking voor uw dak, maar bieden ook een duurzame en milieuvriendelijke oplossing.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"De Oude Dakpan\" tweedehands dakpannen België"
+            ],
+            "geprueft_urls": [
+              "https://de-oude-dakpan.be/"
+            ],
+            "begruendung": "Eigene Website mit dauerhaften Rubriken zu An- und Verkauf gebrauchter/antiker Dachziegel (u.a. Ankaufsseite 'Uw dakpannen verkopen'); Wiederverwendung ist der Geschaeftszweck, nicht Einzelreferenz.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M12",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.2dehandsbouwmarkt.be",
+            "beleg_zitat": "Specialist in nieuwe stock ramen en 2de handse ramen & deuren",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Doehetzelf\" \"2dehands\" bouwmarkt België"
+            ],
+            "geprueft_urls": [
+              "https://www.2dehandsbouwmarkt.be"
+            ],
+            "begruendung": "Eigene Website nennt Handel mit gebrauchten Fenstern/Tueren, aus Baustellen geborgen oder demontiert, dauerhaft als Geschaeftsfeld ('Specialist in ... 2de handse ramen & deuren').",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M13",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"E.L.S. Garden\" België tuin materialen"
+            ],
+            "geprueft_urls": [
+              "https://www.els-garden.be/"
+            ],
+            "begruendung": "Eigene Website zeigt E.L.S. Garden als Grosshandel fuer NEUE Gartenmaterialien und Naturstein aus Steinbruechen; kein Hinweis auf Wiederverwendung/Zirkularitaet auf der eigenen Seite gefunden. Kein Drittfund innerhalb des Budgets.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "beleg_url": "https://www.els-garden.be/",
+                "beleg_zitat": "importing only natural stone from the best quarries",
+                "typ_ist": "Neumaterial-Grosshandel (Naturstein/Gartenmaterialien)",
+                "typ_soll": "Materialhub_Bauteilboerse"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P4",
+            "actor_degree": "bezug",
+            "beleg_url": "https://guidebatimentdurable.brussels/construction-dun-batiment-circulaire-evolutif-reversible-projet-bric",
+            "beleg_zitat": "Le réemploi, l'approvisionnement local en matériaux ... ont aussi été étudiés avec attention.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"EFP\" \"Espace Formation PME\" Bruxelles réemploi construction"
+            ],
+            "geprueft_urls": [
+              "https://guidebatimentdurable.brussels/construction-dun-batiment-circulaire-evolutif-reversible-projet-bric"
+            ],
+            "begruendung": "Der offizielle Brussels-Guide-Batiment-Durable-Eintrag zum Bauvorhaben BRIC nennt EFP (Espace Formation PME, Rue de Stalle 292B, Uccle) als Standort und beschreibt Réemploi/Wiederverwendung als untersuchten Bestandteil des Bauvorhabens. Nennung erfolgt auf Drittseite (offizieller Bau-Guide), nicht auf einer eigenen dauerhaften Leistungsseite von EFP selbst -> bezug, nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M14",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.verhofstede.be/",
+            "beleg_zitat": "And naturally we present to you 'Eeuwenhout', a collection wood of the best quality from long gone times that we breathe new life into for you.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Eeuwenhout\" \"Antoine Verhofstede\" hout"
+            ],
+            "geprueft_urls": [
+              "https://www.verhofstede.be/"
+            ],
+            "begruendung": "Eigene Firmenseite (Verhofstede, Betreiber der Marke Eeuwenhout) fuehrt eeuwenaltes, aus abgebauten Scheunen (u.a. Amish-Gemeinden USA) gewonnenes Altholz dauerhaft als eigene Produktlinie/Rubrik, nicht als Einzelprojekt-Referenz.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M15",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.facebook.com/FrynsBoret/",
+            "beleg_zitat": "Antieke bouwmaterialen Fryns - Boret",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Fryns-Boret\" bouwmaterialen"
+            ],
+            "geprueft_urls": [
+              "https://www.facebook.com/FrynsBoret/",
+              "https://www.salvoweb.com/directory/26959-fryns-boret",
+              "http://fryns-boret.be/over-ons",
+              "http://fryns-boret.be/diensten/antieke-en-rustieke-bouwmaterialen"
+            ],
+            "begruendung": "Eigene Unternehmensseite (Facebook, da fryns-boret.be technisch nicht erreichbar) fuehrt das Geschaeft dauerhaft als 'Antieke bouwmaterialen Fryns - Boret'; Drittquelle SalvoWEB-Verzeichnis bestaetigt zusaetzlich Antike/rustikale Bauteile plus Abbrucharbeiten als Geschaeftsfeld (nur ergaenzend, nicht alleiniger Beleg, da Verzeichnis).",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_5xx",
+                "beleg_url": "http://fryns-boret.be/",
+                "beleg_zitat": "Hostname/IP does not match certificate's altnames: Host: fryns-boret.be. is not in the cert's altnames: DNS:*.dropsolid.com"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M17",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.gunter-bosmans.be/",
+            "beleg_zitat": "Gunter Bosmans BV is met zijn bedrijf in recuperatiestenen in Antwerpen gestart in 2005",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Gunter Bosmans\" bouwmaterialen tweedehands"
+            ],
+            "geprueft_urls": [
+              "https://www.gunter-bosmans.be/"
+            ],
+            "begruendung": "Eigene Website stellt Handel mit recuperatiestenen (Kopfsteine, Naturstein, geborgene Steine) als Kerngeschaeft seit Gruendung 2005 dar, dauerhaft platziert, nicht als Einzelprojekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 20,
+        "kappe_erreicht": false,
+        "cc": "BE",
+        "assigned_nodes": [
+          "M10",
+          "M11",
+          "M12",
+          "M13",
+          "P4",
+          "M14",
+          "M15",
+          "M17"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "edges": [],
+        "kappe_erreicht": false,
+        "nodes": [
+          {
+            "tid": "M18",
+            "actor_degree": "kern",
+            "beleg_url": "https://arduinen-hoekje.be/",
+            "beleg_zitat": "Een goed adres wanneer uw hart uitgaat naar bouwantiek en antieke tuindecoratie.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Het arduinen hoekje\" Belgium"
+            ],
+            "geprueft_urls": [
+              "https://arduinen-hoekje.be/"
+            ],
+            "begruendung": "Eigene, dauerhaft betriebene Website mit vollem Sortiment an antiken/gebrauchten arduinen (Belgischer Blaustein) Bauelementen (Gootstenen, Trappen, Tuinbanken) als eigentliches Geschaeft, nicht News/Einzelprojekt -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M19",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Heumatop Belgium",
+              "Heumatop gerecupereerde bakstenen eigen site",
+              "bmb-group.com heumatop reclaimed reuse bricks",
+              "heumatop.be"
+            ],
+            "geprueft_urls": [
+              "https://www.heumatop.be/",
+              "https://opalis.eu/en/dealers/heumatop",
+              "https://www.made-in.be/kempen/pieter-tops-zet-heumatop-als-familiebedrijf-al-10-jaar-succesvol-verder/"
+            ],
+            "begruendung": "Eigene Domain heumatop.be zeigt heute fremden, branchenfremden Content (vermutlich Domain-Uebernahme) und ist damit nicht als Beleg nutzbar. Die einzige inhaltliche Reuse-Beschreibung (Recuperatie-Ziegel) stammt ausschliesslich aus dem Opalis-Verzeichnis (ausgeschlossen als Fremdverzeichnis). Ein unabhaengiger Presseartikel (made-in.be) beschreibt nur das allgemeine Bauhandel-Sortiment ohne jeden Reuse-Bezug. Kein eigenstaendiger, nicht-verzeichnisbasierter Beleg gefunden -> ohne_beleg.",
+            "flags": [
+              {
+                "flag": "defunkt",
+                "beleg_url": "https://www.heumatop.be/",
+                "beleg_zitat": "",
+                "stand_jahr": "2026",
+                "hindernis": ""
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M20",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.deluyckenaar.be/mei-2022-stenen-voor-funderingsmuurtjes-werden-geleverd/",
+            "beleg_zitat": "De firma Heyns Recycling heeft ons goed bijgestaan bij onze zoektocht naar oude en karaktervolle bakstenen.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Heyns Recycling\"",
+              "Heyns Recycling reclaimed OR reuse OR Wiederverwendung"
+            ],
+            "geprueft_urls": [
+              "http://heynsrecycling.be/",
+              "http://www.heynsrecycling.com/",
+              "https://www.deluyckenaar.be/mei-2022-stenen-voor-funderingsmuurtjes-werden-geleverd/"
+            ],
+            "begruendung": "Eigene Domains (heynsrecycling.be und .com) liefern beim Abruf einen TLS-Zertifikatsfehler (fremdes Zertifikat *.axc.eu) und sind technisch nicht pruefbar. Eine unabhaengige Drittquelle (Bauprojekt-Blog De Luyckenaar, Mai 2022) nennt Heyns Recycling namentlich als Lieferant alter, karaktervolle Bakstenen fuer ein konkretes Bauvorhaben (funderingsmuurtjes) -> bezug ueber diese benannte Reuse-Sache.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_5xx",
+                "beleg_url": "http://heynsrecycling.be/",
+                "beleg_zitat": ""
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M21",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Hispantics Belgium reuse building materials",
+              "\"Hispantics\" \"old building materials\" OR \"oude bouwmaterialen\" antwerpen",
+              "Hispantics Antwerp bouwmaterialen brocante Kloosterstraat officiele website"
+            ],
+            "geprueft_urls": [
+              "https://www.hispantics.be/",
+              "https://hispantics.be/",
+              "https://www.facebook.com/hispantics/"
+            ],
+            "begruendung": "Keine erreichbare eigene Website (DNS loest fuer hispantics.be nicht auf); Facebook-Seite lieferte keinen zugaenglichen Beschreibungstext. Alle Angaben zu 'oude bouwmaterialen' stammen ausschliesslich aus Fremdverzeichnissen (goudengids, openingsurengids, Opalis) -> verzeichnis_only, kein verwertbarer eigenstaendiger Beleg -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M22",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.hofman.be/producten/",
+            "beleg_zitat": "Recuperatie platines",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Hofman NV\" OR \"Hofman SA\" Belgium sloopmaterialen"
+            ],
+            "geprueft_urls": [
+              "https://www.hofman.be/producten/"
+            ],
+            "begruendung": "Eigene Produktseite fuehrt 'Recuperatie'-Kategorien (Platinen, Boordstenen) als dauerhafte Sortimentslinie neben Neuware -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M23",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.houtenplaten.be/oud-hout/",
+            "beleg_zitat": "Bij ons vindt u een compleet aanbod aan oud hout terug.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Houtenplaten.be reuse tweedehands hout"
+            ],
+            "geprueft_urls": [
+              "https://www.houtenplaten.be/oud-hout/"
+            ],
+            "begruendung": "Eigene, dauerhafte Produktkategorie 'oud hout' mit vollstaendigem Sortiment an wiederverwendetem/barnwood Holz -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M24",
+            "actor_degree": "kern",
+            "beleg_url": "https://jefstone.be/",
+            "beleg_zitat": "Gerecupereerde bouwmaterialen die de tand des tijds perfect hebben getrotseerd vinden vandaag hun weg naar tal van nieuwe en gerenoveerde woningen.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Jef Stone\" Belgium natuursteen tweedehands"
+            ],
+            "geprueft_urls": [
+              "https://jefstone.be/"
+            ],
+            "begruendung": "Eigene Startseite stellt gerecupereerde Baumaterialien (u.a. Beerse steen, klampsteen) als Kerngeschaeft dar -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M25",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.vanapers.be/en/over-van-apers",
+            "beleg_zitat": "We have a large stock of recovered building materials and unique architectural elements.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Joris Van Apers\" Belgium",
+              "Joris Van Apers vanapers.be OR jorisvanapers.be site"
+            ],
+            "geprueft_urls": [
+              "https://www.vanapers.be/en/over-van-apers"
+            ],
+            "begruendung": "Eigene 'Over ons'-Seite (vanapers.be) fuehrt grossen Bestand an geborgenen Baumaterialien/architektonischen Elementen als dauerhaften Geschaeftsbereich -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "packet_id": "BE-s03",
+        "tool_calls_used": 27,
+        "ungeprueft_tids": [],
+        "cc": "BE",
+        "assigned_nodes": [
+          "M18",
+          "M19",
+          "M20",
+          "M21",
+          "M22",
+          "M23",
+          "M24",
+          "M25"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "BE-s04",
+        "nodes": [
+          {
+            "tid": "U23",
+            "name": "Kaderstudio",
+            "actor_degree": "kern",
+            "beleg_url": "https://kaderstudio.eu/about/",
+            "beleg_zitat": "From research to building – A matter of transformation, adaptability and reuse strategy.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Kaderstudio\" Belgium reuse OR hergebruik OR circulair"
+            ],
+            "geprueft_urls": [
+              "https://kaderstudio.eu/about/",
+              "https://kaderstudio.eu/"
+            ],
+            "begruendung": "Eigene, dauerhafte About-Seite eines Brusseler Architekturbueros fuehrt Transformation/Adaptability/Reuse-Strategie explizit als Praxislinie, nicht als Einzelprojekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F03",
+            "name": "Kamp C",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.kampc.be/nieuws/circulair-bouwen",
+            "beleg_zitat": "Kamp C wil de bouwsector helpen om te verduurzamen. Op Kamp C ontdek je tal van inspirerende demonstraties",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Kamp C\" Belgium circulair bouwen materialen hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://www.kampc.be/nieuws/circulair-bouwen"
+            ],
+            "begruendung": "Kamp C ist das Centrum voor Duurzaamheid en Innovatie in de Bouw; eigene, dauerhafte Programmseite stellt zirkulaeres/demontierbares Bauen inkl. Materialwiederverwendung als institutionellen Kernauftrag dar (z.B. 't Centrum-Gebaeude aus wiederverwendeten Bauteilen).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M26",
+            "name": "Kasseien Goyens",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Kasseien Goyens\"",
+              "\"Kasseien Goyens\" reuse OR reclaimed OR hergebruik"
+            ],
+            "geprueft_urls": [
+              "http://www.kasseiengoyens.be/",
+              "http://www.kasseiengoyens.be/kasseien.asp"
+            ],
+            "begruendung": "Eigene Domain (www.kasseiengoyens.be) liess sich trotz mehrfachem Versuch nicht abrufen (endlose 302-Umleitung auf sich selbst); nur Drittverzeichnisse (Opalis, Europages, Cylex, Wegenbouw.be, Companyweb) verfuegbar, die als Verzeichnis ausgeschlossen sind. Kein selbst geoeffneter, inhaltlicher Beleg gefunden.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "timeout",
+                "beleg_url": "http://www.kasseiengoyens.be/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M27",
+            "name": "Kasseien Kindt",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.kasseienkindt.be/nl/over-ons",
+            "beleg_zitat": "Bij heel wat bouwprojecten of bij de heraanleg van oude hoeves en tuinen stoot men al eens op een oude kasseiweg of een hoop losliggende kasseien.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Kasseien Kindt\""
+            ],
+            "geprueft_urls": [
+              "https://www.kasseienkindt.be/nl/over-ons"
+            ],
+            "begruendung": "Eigene, dauerhafte Ueber-uns-Seite beschreibt den Ankauf/Handel alter, wiedergewonnener Kasseien als festen Geschaeftsbestandteil (seit 1979), nicht als Einzelprojekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M28",
+            "name": "Kassico",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Kassico\" Belgium",
+              "kassico.be kasseien"
+            ],
+            "geprueft_urls": [
+              "https://www.kassico.be/"
+            ],
+            "begruendung": "Eigene Seite kassico.be positioniert sich als allgemeiner Haendler fuer neue/diverse Kasseien und Natuursteen; 'oude kleiklinkers' erscheint nur als eines von ca. 13 Sortimentselementen ohne eigene Wiederverwendungs-/Zirkularitaetslinie. Verfahren (Eigenseite + 2 Suchen) durchlaufen, kein qualifizierender Beleg gefunden.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U26",
+            "name": "Kempens Landschap (Kempens' Landscape)",
+            "actor_degree": "bezug",
+            "beleg_url": "https://vb.nweurope.eu/projects/project-search/digital-deconstruction/?tab=,,,,&page=1",
+            "beleg_zitat": "Kempens' Landscape",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Kempens Landschap\" hergebruik OR circulair OR materialen",
+              "\"Kempens Landschap\" \"Digital Deconstruction\""
+            ],
+            "geprueft_urls": [
+              "https://www.kempenslandschap.be/nl/over-kempens-landschap/europese-projecten/interreg",
+              "https://vb.nweurope.eu/projects/project-search/digital-deconstruction/?tab=,,,,&page=1"
+            ],
+            "begruendung": "Die offizielle Interreg-NWE-Projektseite des benannten Bauteilwiederverwendungs-Projekts 'Digital Deconstruction' fuehrt Kempens' Landschap mit Adresse/Kontakt als Konsortialpartner. Die eigene Website ist derzeit auf ein anderes (Aquathermie-)Projekt fokussiert und nennt Digital Deconstruction nicht mehr aktiv, daher Einstufung ueber die Projektseite als bezug, nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M29",
+            "name": "Kempische Bouwmaterialen",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.kempischebouwmaterialen.be/en/home/",
+            "beleg_zitat": "The range today mainly consists of a large range of old (aged) building material.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Kempische Bouwmaterialen\""
+            ],
+            "geprueft_urls": [
+              "https://www.kempischebouwmaterialen.be/en/home/"
+            ],
+            "begruendung": "Eigene, dauerhafte Homepage beschreibt den Handel mit altem/wiedergewonnenem Baumaterial (seit 1930) als Kerngeschaeft, nicht als Einzelreferenz.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M31",
+            "name": "Labeur Atelier - Labeur",
+            "actor_degree": "kern",
+            "beleg_url": "https://labeur.be/over-labeur/",
+            "beleg_zitat": "we verzamelen van resthout en afgeschreven materialen, die we selecteren en bewerken",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Labeur Atelier\" OR \"Atelier Labeur\" hergebruik OR reuse materialen",
+              "Labeur Atelier Recup Design site:labeur.be"
+            ],
+            "geprueft_urls": [
+              "https://labeur.be/",
+              "https://labeur.be/over-labeur/",
+              "https://labeur.be/collectie/",
+              "https://labeur.be/bouw-renovatie/"
+            ],
+            "begruendung": "Eigene, dauerhafte 'Over Labeur'-Seite des sozialen Werkbetriebs (Atelier Labeur, vormals Recup Design) beschreibt das Sammeln und Verarbeiten von Restholz/ausgemusterten Materialien zu neuen Moebeln als festen Teil des Betriebs.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 28,
+        "kappe_erreicht": false,
+        "cc": "BE",
+        "assigned_nodes": [
+          "U23",
+          "F03",
+          "M26",
+          "M27",
+          "M28",
+          "U26",
+          "M29",
+          "M31"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "BE-s05",
+        "nodes": [
+          {
+            "tid": "U27",
+            "name": "Loeliger Strub",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.espazium.ch/de/aktuelles/loeliger-strub-lysp8-basel",
+            "beleg_zitat": "Loeliger Strub Architektur realisieren mit LysP8 auf dem Basler Lysbüchel-Areal Wohnungen aus wiederverwendeten Bauteilen",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Loeliger Strub\" Schweiz",
+              "\"Loeliger Strub\" reuse OR reclaimed OR salvage OR réemploi"
+            ],
+            "geprueft_urls": [
+              "https://loeligerstrub.ch/",
+              "https://www.espazium.ch/de/aktuelles/loeliger-strub-lysp8-basel"
+            ],
+            "sprache": "de",
+            "sprachrisiko": false,
+            "begruendung": "Eigene Website (loeligerstrub.ch) zeigt Wiederverwendung nicht als dauerhafte Leistungslinie, daher kein kern. Fachartikel (espazium.ch) nennt Loeliger Strub namentlich im benannten Reuse-Projekt LysP8 -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M33",
+            "name": "MVV Afbraakwerken Martin",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.mvvafbraak.be/",
+            "beleg_zitat": "Verkoop van recuperatiebouwmaterialen (na afspraak)",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"MVV Afbraakwerken Martin\" hergebruik OR reuse",
+              "\"MVV Afbraakwerken Martin\""
+            ],
+            "geprueft_urls": [
+              "https://www.mvvafbraak.be/",
+              "https://www.mvvafbraak.be/diensten/"
+            ],
+            "sprache": "nl",
+            "sprachrisiko": true,
+            "begruendung": "Eigene Firmenseite fuehrt Verkauf von Recuperatiebouwmaterialen als dauerhaften Bestandteil des Angebots (neben Abbruch) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N04",
+            "name": "Metabolism of Cities",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Metabolism of Cities\" reuse OR circular OR Wiederverwendung",
+              "\"Metabolism of Cities\" Bauteil OR building component reuse"
+            ],
+            "geprueft_urls": [
+              "https://metabolismofcities.org",
+              "https://www.metabolismofcities.org/about"
+            ],
+            "sprache": "en",
+            "sprachrisiko": false,
+            "begruendung": "Organisation befasst sich mit staedtischem Materialstoffwechsel allgemein; eigene Seite zeigt keinen Bezug speziell zu Bauteil-Wiederverwendung. /about gab 404. Verfahren durchlaufen, kein Fund -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "I05",
+            "name": "OVAM (Openbare Vlaamse Afvalstoffenmaatschappij)",
+            "actor_degree": "kern",
+            "beleg_url": "https://ovam.vlaanderen.be/circulair-materialenbeheer",
+            "beleg_zitat": "Circulair materialenbeheer wil de milieu-impact verkleinen van materialen die gebruikt worden of vrijkomen bij bouwen, renoveren en slopen.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "OVAM Openbare Vlaamse Afvalstoffenmaatschappij circulair bouwen hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://ovam.vlaanderen.be/circulair-materialenbeheer"
+            ],
+            "sprache": "nl",
+            "sprachrisiko": false,
+            "begruendung": "OVAM-eigene Seite widmet dauerhaft einen Programmbereich (Circulair materialenbeheer / Circulair Bouwen) der Wiederverwendung von Bouwmaterialen -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "I04",
+            "name": "Openbare Vlaamse Afvalstoffenmaatschappij (OVAM)",
+            "actor_degree": "kern",
+            "beleg_url": "https://ovam.vlaanderen.be/circulair-materialenbeheer",
+            "beleg_zitat": "Circulair materialenbeheer wil de milieu-impact verkleinen van materialen die gebruikt worden of vrijkomen bij bouwen, renoveren en slopen.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "OVAM Openbare Vlaamse Afvalstoffenmaatschappij circulair bouwen hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://ovam.vlaanderen.be/circulair-materialenbeheer"
+            ],
+            "sprache": "nl",
+            "sprachrisiko": false,
+            "begruendung": "Identische Organisation wie I05 (nur andere Namensreihenfolge). Gleicher Beleg wie I05; als Duplikat markiert, I05 als zu behaltende tid.",
+            "flags": [
+              {
+                "flag": "duplikat",
+                "duplikat_von": "I05",
+                "beleg_url": "https://ovam.vlaanderen.be/circulair-materialenbeheer",
+                "beleg_zitat": "Openbare Vlaamse Afvalstoffenmaatschappij (OVAM) ist dieselbe Institution wie tid I05, nur mit vertauschter Namensreihenfolge."
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U30",
+            "name": "Orbix Productions",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Orbix Productions\" reuse OR hergebruik OR circular",
+              "\"Orbix\" bouwmaterialen hergebruik afbraak sloop bouwelementen"
+            ],
+            "geprueft_urls": [
+              "https://www.orbix.be/en",
+              "https://www.orbix.be/en/about-orbix"
+            ],
+            "sprache": "en",
+            "sprachrisiko": false,
+            "begruendung": "Orbix verwertet industrielle Reststroeme (Metallschlacke, CO2) zu neuen Baustoffen (Carbstone) -- Rezyklat-/Reststoffverwertung ohne Bauteilbezug, keine Wiederverwendung von Bauteilen gefunden -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U31",
+            "name": "Ouest Architecture",
+            "actor_degree": "bezug",
+            "beleg_url": "https://ouest.be/projet/destruction-reemploi-dans-le-processus-participatif/",
+            "beleg_zitat": "Conférence Rotor / Ouest architecture / Zinneke asbl",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Ouest Architecture\" réemploi Belgique",
+              "site:ouest.be reuse OR réemploi"
+            ],
+            "geprueft_urls": [
+              "https://ouest.be/",
+              "https://ouest.be/projet/destruction-reemploi-dans-le-processus-participatif/",
+              "https://ouest.be/projet/rec/"
+            ],
+            "sprache": "fr",
+            "sprachrisiko": false,
+            "begruendung": "Eigene Website fuehrt 'Reuse' als Navigationskategorie, jedoch primaer fuer Gebaeude-/Areal-Wiedernutzung (Recyclart etc.), nicht klar als Bauteil-Leistungslinie beschrieben -> kein kern. Eigene Seite nennt Ouest Architecture namentlich in einer benannten Reuse-Sache (Konferenz mit Rotor/Zinneke zu Abbruch & Réemploi) -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P12",
+            "name": "Plateforme Réemploi",
+            "actor_degree": "bezug",
+            "beleg_url": "https://rotordb.org/en/projects/plateforme-reemploi",
+            "beleg_zitat": "a public platform for all actors involved in reuse",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "\"Plateforme Réemploi\" Belgique bâtiment"
+            ],
+            "geprueft_urls": [
+              "https://rotordb.org/en/projects/plateforme-reemploi"
+            ],
+            "sprache": "en",
+            "sprachrisiko": false,
+            "begruendung": "Als 'Projekt' markierter Knoten ist tatsaechlich eine Netzwerk-Plattform (getragen von Rotor, CCB-C, Atelier 4/5), kein Bauvorhaben -> falscher_typ. Lief 2017 mit Foerderung der Region Bruessel-Hauptstadt, seither zu AD VITAM MATERIAL geworden (Nachfolger nicht im Panel) -> defunkt. Rotor-Seite belegt Reuse-Plattform namentlich -> bezug.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "typ_ist": "Netzwerk_Plattform",
+                "typ_soll": "Projekt",
+                "beleg_url": "https://rotordb.org/en/projects/plateforme-reemploi",
+                "beleg_zitat": "a public platform for all actors involved in reuse"
+              },
+              {
+                "flag": "defunkt",
+                "stand_jahr": "2017",
+                "beleg_url": "https://ecobuild.brussels/la-plateforme-reemploi-bruxelles-devient-ad-vitam-material/",
+                "beleg_zitat": "La Plateforme Réemploi Bruxelles devient AD VITAM MATERIAL"
+              }
+            ],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 18,
+        "kappe_erreicht": false,
+        "cc": "BE",
+        "assigned_nodes": [
+          "U27",
+          "M33",
+          "N04",
+          "I05",
+          "I04",
+          "U30",
+          "U31",
+          "P12"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "edges": [],
+        "kappe_erreicht": false,
+        "nodes": [
+          {
+            "tid": "S02",
+            "name": "Preuse",
+            "actor_degree": "kern",
+            "beleg_url": "https://preuse.nweurope.eu/",
+            "beleg_zitat": "PREUSE is an international research project that aims to help local and regional public authorities improve the management of their material resources and implement solutions within their territory to reclaim and reuse building materials.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Preuse Belgium reuse software building materials",
+              "\"Preuse\" tool app software building component reuse tracking"
+            ],
+            "geprueft_urls": [
+              "https://preuse.nweurope.eu/"
+            ],
+            "begruendung": "Eigene Projektseite (Interreg NWE, 2024-2028) stellt Reuse von Bauteilen/Baumaterialien dauerhaft als Zweck dar (9 Partner, u.a. Rotor, Stadt Mechelen). Kein Beleg fuer 'Preuse' als Software-Tool-Anbieter gefunden -- der gespeicherte Typ passt nicht zur tatsaechlichen Rechtsform (Foerderprojekt/Netzwerk, keine Software-Firma).",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "beleg_url": "https://preuse.nweurope.eu/",
+                "beleg_zitat": "PREUSE is an international research project that aims to help local and regional public authorities...",
+                "typ_ist": "Projekt_Netzwerk (Interreg-NWE-Foerderprojekt)",
+                "typ_soll": "Software_Tool_Anbieter"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M34",
+            "name": "Recupan bvba",
+            "actor_degree": "kern",
+            "beleg_url": "http://www.recupan.be/",
+            "beleg_zitat": "Aan- en verkoop van recuperatie dakpannen",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Recupan bvba Belgium bouwmaterialen hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://opalis.eu/en/dealers/recupan-bvba",
+              "http://www.recupan.be/"
+            ],
+            "begruendung": "Eigene Seite recupan.be stellt An- und Verkauf gebrauchter Dachziegel/-pfannen dauerhaft als Kerngeschaeft dar (Slogan im Hauptmenue). Opalis-Eintrag lieferte nur Adresse und Weiterleitung zur eigenen Domain.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U32",
+            "name": "Roosens Bétons SA",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Roosens Bétons SA Belgium",
+              "Roosens Bétons réemploi matériaux circularité béton recyclé"
+            ],
+            "geprueft_urls": [
+              "https://roosensbetons.be/notre-histoire/",
+              "https://roosensbetons.be/"
+            ],
+            "begruendung": "Eigene Seite (403 bei Direktzugriff, Inhalt aber ueber Suchtreffer und Drittquelle Circular Wallonia erschlossen) beschreibt ausschliesslich Rezyklat-Beton aus eigener Produktion (Produkt 'Clayton', Recycling von Produktionsabfaellen) und Ruecknahme eigener Betonprodukte -- kein Bauteil-Wiederverwendungsbezug (Recycling/Rezyklat ohne Bauteilbezug ist laut Kalibrierung ausgeschlossen). Keine Reuse-Sache mit Bauteilbezug gefunden.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U33",
+            "name": "Salvage Architecture",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Salvage Architecture Belgium reuse",
+              "\"Salvage Architecture\" company Belgium office reclaimed materials",
+              "\"Salvage Architecture\" bvba OR bv Belgium architect firm reclaimed",
+              "\"Salvage Architecture\" Antwerp OR Brussels office design studio réemploi"
+            ],
+            "geprueft_urls": [],
+            "begruendung": "Vier gezielte Suchen ergaben keinen plausiblen Treffer fuer eine Organisation namens 'Salvage Architecture' in Belgien -- nur historische Forschung ueber den Architekten Marcel Raymaekers ('Ad Hoc Baroque: Marcel Raymaekers' Salvage Architecture in Postwar Belgium', ein akademischer Buchtitel, keine Firma) sowie Treffer zu Rotor. Name und Ort passen bei keinem Treffer zu einer eigenstaendigen Organisation.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M36",
+            "name": "Stadshout.be",
+            "actor_degree": "bezug",
+            "beleg_url": "https://belgiumisdesign.be/designers/stadshout",
+            "beleg_zitat": "rescue city trees, destined to be cut down, and convert them into furniture instead of firewood",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Stadshout.be hergebruikt hout Belgium"
+            ],
+            "geprueft_urls": [
+              "https://stadshout.be/",
+              "https://stadshout.be/missie/",
+              "https://opalis.eu/en/dealers/stadshoutbe",
+              "https://belgiumisdesign.be/designers/stadshout"
+            ],
+            "begruendung": "Eigene Domain stadshout.be blockte den Zugriff (403) trotz zweier Versuche (Startseite, /missie/). Drittquelle belgiumisdesign.be (Design-Verzeichnis, kein Reuse-Fremdverzeichnis) nennt die Organisation namentlich mit einer benannten Reuse-Sache (Rettung von Stadtbaeumen zu Moebeln) und verlinkt auf stadshout.be als eigene Seite -- daher bezug statt kern, da die eigene Seite nicht direkt eingesehen werden konnte.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://stadshout.be/",
+                "beleg_zitat": ""
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N09",
+            "name": "Tracimat vzw",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.tracimat.be/over-ons/",
+            "beleg_zitat": "materialen uit sloop en renovatie zo zuiver mogelijk vrijkomen. Zo kunnen ze maximaal en op hoogwaardige wijze worden hergebruikt of gerecycleerd.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Tracimat vzw sloopopvolging hergebruik"
+            ],
+            "geprueft_urls": [
+              "https://www.tracimat.be/over-ons/"
+            ],
+            "begruendung": "Eigene Seite tracimat.be/over-ons stellt Foerderung von Bauteil-/Materialwiederverwendung als dauerhaften Kernauftrag der als Sloopbeheerorganisatie erkannten vzw dar (Rueckverfolgung von Sloopmaterial zur Ermoeglichung von hergebruik).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M37",
+            "name": "Van Dijck",
+            "actor_degree": "kern",
+            "beleg_url": "http://www.van-dijck.be",
+            "beleg_zitat": "pavés de réemploi entiers, recyclés ou sciés",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Van Dijck bouwmaterialen tweedehands hergebruik Belgium",
+              "\"Van Dijck\" Perk bouwmaterialen recuperatie afbraak",
+              "\"Van Dijck\" oude bouwmaterialen afbraakmaterialen opalis"
+            ],
+            "geprueft_urls": [
+              "https://opalis.eu/en/dealers/van-dijck",
+              "http://www.van-dijck.be"
+            ],
+            "begruendung": "Eigene Seite van-dijck.be (Milmort/Herstal, Pflastersteine/Bordsteine) fuehrt 'pavés de réemploi' dauerhaft als Produktkategorie neben Neuware. Hinweis: nicht zu verwechseln mit der gleichnamigen, zum 1.5.2025 geschlossenen Beton Van Dijck in Steenokkerzeel/Perk (reiner Neubeton-Haendler ohne Reuse-Bezug) -- diese Recherche bezieht sich auf die richtige, aktive Van Dijck (Milmort) mit Reuse-Sortiment laut Opalis-Adresse und eigener Website.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M38",
+            "name": "Van Huele",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.vanhuele.be/",
+            "beleg_zitat": "Al onze oude recuperatie bouwmaterialen zijn origine en authentiek: wij verkopen uitsluitend gerecupereerde bouwmaterialen uit afbraak",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [
+              "Van Huele oude bouwmaterialen Belgium"
+            ],
+            "geprueft_urls": [
+              "https://www.vanhuele.be/"
+            ],
+            "begruendung": "Eigene Seite vanhuele.be stellt ausschliesslichen Handel mit gerecuperierten Abbruch-Baumaterialien (Balken, Vloerdelen, Dakpannen, Gevelsteen) als alleiniges, dauerhaftes Geschaeftsmodell dar.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "packet_id": "BE-s06",
+        "tool_calls_used": 23,
+        "ungeprueft_tids": [],
+        "cc": "BE",
+        "assigned_nodes": [
+          "S02",
+          "M34",
+          "U32",
+          "U33",
+          "M36",
+          "N09",
+          "M37",
+          "M38"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "BE-s07",
+        "nodes": [
+          {
+            "tid": "M32",
+            "actor_degree": "kern",
+            "beleg_url": "https://ateliercirculer.be/materialenbank",
+            "beleg_zitat": "Hout, Stenen, Metaal, Isolatie, Verwarming & Sanitair, Elektriciteit & Verlichting, Ramen & Deuren, Afgewerkte Producten",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://ateliercirculer.be/materialenbank",
+              "https://ateliercirculer.be/materialenbank/catalogus",
+              "https://ateliercirculer.be/",
+              "https://www.vvsg.be/kennis/praktijken/praktijkendatabank/materialenbank-leuven"
+            ],
+            "begruendung": "Eigene Seite ateliercirculer.be/materialenbank zeigt eine dauerhafte Materialkatalogstruktur (Kategorien Hout, Stenen, Metaal, Isolatie usw.) sowie ein Formular zur Materialanmeldung; die Seite befindet sich im Umzug/Umbau, ist aber die reguläre Betriebsseite der Materialenbank, kein einzelnes Projekt. VVSG-Praktijkendatabank bestätigt zusätzlich, dass Atelier Circuler vzw diese Materialenbank betreibt. -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M04",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.batiterre.be/",
+            "beleg_zitat": "BATITERRE DONNE UNE SECONDE VIE AUX MATÉRIAUX DE CONSTRUCTION",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.batiterre.be/"
+            ],
+            "begruendung": "Eigene, dauerhafte Startseite stellt Wiederverwendung von Baumaterialien (\"Vente et Préparation au réemploi\") als Kernangebot dar, kein Einzelprojekt. -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M05",
+            "actor_degree": "kern",
+            "beleg_url": "https://baumab-kassel.de/",
+            "beleg_zitat": "Gebrauchte Baumaterialien und Baustoffe kaufen und verkaufen – das macht unsere Plattform möglich",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://baumab-kassel.de/",
+              "https://baumab-kassel.de/impressum/"
+            ],
+            "begruendung": "Eigene Startseite stellt Ankauf/Verkauf gebrauchter Baumaterialien inkl. physischem Standort und Online-Shop als dauerhaftes Kerngeschäft dar. -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "I06",
+            "actor_degree": "bezug",
+            "beleg_url": "https://baumab-kassel.de/impressum/",
+            "beleg_zitat": "Gefördert durch: Stadt Kassel",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://baumab-kassel.de/impressum/"
+            ],
+            "begruendung": "Stadt Kassel wird auf der Impressum-Seite der Bauteilbörse BauMaB Kassel als Fördergeber genannt, damit namentlich in einer benannten Reuse-Sache verortet. Stadt Kassel hat selbst keine eigene Reuse-Leistungsseite gefunden. -> bezug (nicht kern, da kein eigenes dauerhaftes Angebot der Stadt selbst geprüft wurde).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M09",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.cornermat.be/",
+            "beleg_zitat": "Votre fournisseur de matériaux de réemploi",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.cornermat.be/"
+            ],
+            "begruendung": "Eigene Startseite mit Tagline \"Votre fournisseur de matériaux de réemploi\" und dauerhaftem Online-Shop für wiederverwendete Baumaterialien nach Kategorien (Bodenbeläge, Türen, Holz, Naturstein usw.). -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M30",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.la-ressourcerie.ch/",
+            "beleg_zitat": "Le magasin de la Ressourcerie propose aux particuliers et aux professionnels un lieu où se fournir en matériaux de construction à moindre coût et de manière durable.",
+            "abrufdatum": "2026-08-12",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.la-ressourcerie.ch/"
+            ],
+            "begruendung": "Eigene, dauerhafte Startseite stellt den Verkauf gebrauchter/geretteter Baumaterialien im eigenen Magasin als Kerngeschäft dar (keine Einzelprojekt- oder Verzeichnisseite). -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 11,
+        "kappe_erreicht": false,
+        "cc": "BE",
+        "assigned_nodes": [
+          "M32",
+          "M04",
+          "M05",
+          "I06",
+          "M09",
+          "M30"
+        ],
+        "assigned_edges": []
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "I03",
+        "actor_degree": "bezug",
+        "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Lo-Reninge town council\" Belgium",
+          "\"Lo-Reninge\" gemeente reuse OR hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall"
+        ],
+        "begruendung": "Kein eigener Kanal des Gemeinderats zu Bauteil-Wiederverwendung gefunden; namentlich als Auftraggeber auf der noAarchitecten-Projektseite genannt, die Wiederverwendung von recyceltem Ziegel im Bauvorhaben dokumentiert -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-c09"
+      },
+      {
+        "tid": "P6",
+        "actor_degree": "bezug",
+        "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "beleg_zitat": "We used recycled brick whose shades of colour, form and size relate to the brick of the convent.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall"
+        ],
+        "begruendung": "Projektseite dokumentiert Wiederverwendung von recyceltem Ziegel als Teil des Bauvorhabens.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-c09"
+      },
+      {
+        "tid": "U13",
+        "actor_degree": "bezug",
+        "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Dexia\" Lo-Reninge town hall client"
+        ],
+        "geprueft_urls": [
+          "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+          "https://www.dexia.com/"
+        ],
+        "begruendung": "dexia.com zeigt keine eigene Reuse-Linie; Dexia wird namentlich als Mit-Auftraggeber des Lo-Reninge-Rathausprojekts genannt, dessen Bauvorhaben Bauteil/Material-Wiederverwendung (recycelter Ziegel) dokumentiert -> bezug ueber die Projektsache.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-c09"
+      },
+      {
+        "tid": "U29",
+        "actor_degree": "bezug",
+        "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "beleg_zitat": "Restoration and extension of a former convent to create a town hall",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "noAarchitecten hergebruik materialen reuse"
+        ],
+        "geprueft_urls": [
+          "https://noaarchitecten.net/",
+          "https://noaarchitecten.net/info",
+          "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall"
+        ],
+        "begruendung": "noaarchitecten.net/info (Ueber-uns) stellt Wiederverwendung/Zirkularitaet nicht als dauerhafte Leistungslinie dar (nur allgemeine Aussage zu Kontinuitaet von Stadt/Architektur). Die Projektseite zum Rathaus Lo-Reninge dokumentiert jedoch namentlich ein einzelnes Reuse-Projekt (recycelter Ziegel) -> bezug, nicht kern (einzelnes Projekt als einzige Fundstelle ist fuer kern ausgeschlossen).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-c09"
+      },
+      {
+        "tid": "M01",
+        "actor_degree": "kern",
+        "beleg_url": "https://anresto.com/product-categorie/bouw-antiek/",
+        "beleg_zitat": "Bouw antiek",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Antiek Anresto\" Lommel Belgium",
+          "\"Antiek Anresto\" reuse OR reclaimed OR Wiederverwendung"
+        ],
+        "geprueft_urls": [
+          "https://opalis.eu/en/dealers/antiek-anresto",
+          "https://anresto.com/",
+          "https://anresto.com/product-categorie/bouw-antiek/"
+        ],
+        "begruendung": "Eigene Website (anresto.com) fuehrt 'Bouw antiek' (Architecturaal antiek) als dauerhafte, eigenstaendige Produktkategorie mit Unterkategorien wie Balken & Plafonds, Haard stukken, Schouwmantels -- Handel mit historischen/gesalvagten Bauelementen ist Kerngeschaeft, nicht Einzelprojekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "M02",
+        "actor_degree": "kern",
+        "beleg_url": "https://antiquefireplacesfirst.com/",
+        "beleg_zitat": "At Antique Fireplaces First, we have over 30 years' experience dealing in fine and prestigious antique fireplaces.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Antique Fireplaces First\" Belgium",
+          "\"Antique Fireplaces First\" site"
+        ],
+        "geprueft_urls": [
+          "https://www.proantic.com/en/galerie/antique-fireplaces-first/",
+          "https://opalis.eu/en/dealers/antique-fireplaces-first",
+          "https://antiquefireplacesfirst.com/"
+        ],
+        "begruendung": "Eigene Website zeigt dauerhaften Handel mit antiken (aus Gebaeuden geborgenen) Kaminen als Kerngeschaeft inkl. eigener Restaurierungswerkstatt -- nicht nur einzelnes Reuse-Projekt oder Fremdverzeichnis.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "M03",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.rikstorms.be/nl/voorstelling/",
+        "beleg_zitat": "Door de jaren heen ging Rik Storms zich ook bezighouden met de verkoop van oude en antieke bouwmaterialen die hij met veel zorg en kennis voor het vak restaureerde.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Authentieke Bouwmaterialen Storms\" Belgium",
+          "\"Rik Storms\" antieke bouwmaterialen"
+        ],
+        "geprueft_urls": [
+          "https://www.stonecontact.com/suppliers-127216/rik-storms-antieke-bouwmaterialen-nv",
+          "https://opalis.eu/en/dealers/authentieke-bouwmaterialen-storms-nv",
+          "https://www.rikstorms.be/nl/voorstelling/"
+        ],
+        "begruendung": "Eigene Website (rikstorms.be) stellt Verkauf alter/antiker Bauteile (Steinelemente, Boeden, Dachziegel) als dauerhafte Ueber-uns-Leistungslinie dar, seit 1974 Familienbetrieb.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "M06",
+        "actor_degree": "kern",
+        "beleg_url": "https://boisantique.be/bois-antique/",
+        "beleg_zitat": "Bois Antique est un importateur de vieux bois en provenance d'anciennes granges et fermes européennes.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Bois Antique\" Belgique matériaux",
+          "\"Bois Antique\" vieux bois import"
+        ],
+        "geprueft_urls": [
+          "https://www.europages.fr/BOIS-ANTIQUE-SRL/00000004525652-328595001.html",
+          "https://boisantique.be/",
+          "https://boisantique.be/bois-antique/"
+        ],
+        "begruendung": "Eigene Website beschreibt dauerhaftes Kerngeschaeft als Importeur von reclaimed/altem Bauholz (Bardagen, Boeden, Balken) aus europaeischen Scheunen und Bauernhoefen.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "P1",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/bric/",
+        "beleg_zitat": "The first construction set-up in 2018 (BRIC 1), tested the capacity of a wooden construction to integrate reclaimed materials, applying reversible solutions that minimise the waste during transformations.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Build Reversible In Conception\" B.R.I.C. project reuse Belgium"
+        ],
+        "geprueft_urls": [
+          "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/bric/",
+          "https://ecobuild.brussels/projet-bric/",
+          "https://guidebatimentdurable.brussels/bric"
+        ],
+        "begruendung": "BRIC ist ein dediziertes Pilotbauvorhaben (EFP Bruessel, mit Karbon' architecture, im Rahmen von BAMB), dessen dauerhaft dokumentierter Kern die Integration wiederverwendeter Bauteile und reversible Konstruktion ist -- Bauteil-Wiederverwendung ist zentraler Gegenstand des Projekts.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "P3",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/retrofit-lab/",
+        "beleg_zitat": "The pilot project tested and implemented different scenarios for the reuse and refurbishment of the VUB Campus' prefabricated student housing, without generating a large amount of waste.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Circular Retrofit Lab\" project Belgium reuse"
+        ],
+        "geprueft_urls": [
+          "https://www.bamb2020.eu/topics/pilot-cases-in-bamb/retrofit-lab/",
+          "https://www.vlaanderen-circulair.be/en/node/58/circular-retrofit-lab",
+          "https://www.circubuild.be/nl/nieuws/casestudy-circular-retrofit-lab-brussel/"
+        ],
+        "begruendung": "Circular Retrofit Lab ist ein dediziertes VUB-Pilotprojekt (BAMB), das die Wiederverwendung/Refurbishment bestehender praefabrizierter Studentenwohnmodule zum zentralen, dauerhaft dokumentierten Gegenstand hat.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "M07",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Bouwmaterialen De Leyn\" tweedehands OR hergebruik",
+          "\"De Leyn\" bouwmaterialen Belgium"
+        ],
+        "geprueft_urls": [
+          "http://bouwmaterialendeleyn.be/",
+          "https://www.bouwmaterialendeleyn.be/",
+          "https://opalis.eu/en/dealers/bouwmaterialen-de-leyn",
+          "https://www.openingsurengids.be/bouwmaterialen-de-leyn/damme/1"
+        ],
+        "begruendung": "Eigene Domain (bouwmaterialendeleyn.be, mit/ohne www) ist DNS-tot, kein Umzug auffindbar. Einzige inhaltliche Beschreibung (Handel mit gebrauchten Ziegeln/Dachziegeln) stammt ausschliesslich von Opalis (Fremdverzeichnis) -- fuer kern und bezug ausdruecklich ausgeschlossen. Generische Branchenverzeichnisse (openingsurengids, goudengids) liefern nur Adresse/Telefonnummer ohne inhaltliche Beschreibung. Verfahren vollstaendig durchlaufen, keine zulaessige Quelle gefunden.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "dns_tot",
+            "beleg_url": "http://bouwmaterialendeleyn.be/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "M08",
+        "actor_degree": "kern",
+        "beleg_url": "https://blog.composil.eu/en/sustainable-building-materials-reused-carpets",
+        "beleg_zitat": "At Composil, we offer a more sustainable solution: our reuse and recycling program is not only eco-friendly but also economically advantageous compared to incineration.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Composil\" bouwmaterialen hergebruik België",
+          "Composil ReUse tapijt hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://www.vlaanderen-circulair.be/nl/doeners/composil-reuse-een-tweede-leven-voor-tapijten",
+          "https://blog.composil.eu/en/sustainable-building-materials-reused-carpets"
+        ],
+        "begruendung": "Eigene (Marken-)Website blog.composil.eu beschreibt dauerhaftes 'Composil ReUse'-Programm fuer Teppiche/Bodenbelaege als festen Bestandteil des Geschaeftsmodells (Use-Reuse-Recycle), nicht Einzelprojekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s01"
+      },
+      {
+        "tid": "M10",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.degroenepoort.com/en/about-us",
+        "beleg_zitat": "You will discover the most original furniture and treasures in De Groene Poort: seventeenth-century prison doors, wood from wreckages to incorporate in your catering business, cupboards made from old doors, shutters, windows",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"De Groene Poort\" bouwmaterialen hergebruik België"
+        ],
+        "geprueft_urls": [
+          "https://www.degroenepoort.com/en/about-us"
+        ],
+        "begruendung": "Eigene, dauerhafte About-us-Seite stellt An- und Verkauf sowie Aufbereitung alter Bauteile (Türen, Fenster, Fensterläden) als Kerngeschäft dar, nicht als Einzelprojekt oder Presseartikel.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "M11",
+        "actor_degree": "kern",
+        "beleg_url": "https://de-oude-dakpan.be/",
+        "beleg_zitat": "Oude dakpannen zijn niet alleen een esthetische verrijking voor uw dak, maar bieden ook een duurzame en milieuvriendelijke oplossing.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"De Oude Dakpan\" tweedehands dakpannen België"
+        ],
+        "geprueft_urls": [
+          "https://de-oude-dakpan.be/"
+        ],
+        "begruendung": "Eigene Website mit dauerhaften Rubriken zu An- und Verkauf gebrauchter/antiker Dachziegel (u.a. Ankaufsseite 'Uw dakpannen verkopen'); Wiederverwendung ist der Geschaeftszweck, nicht Einzelreferenz.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "M12",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.2dehandsbouwmarkt.be",
+        "beleg_zitat": "Specialist in nieuwe stock ramen en 2de handse ramen & deuren",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Doehetzelf\" \"2dehands\" bouwmarkt België"
+        ],
+        "geprueft_urls": [
+          "https://www.2dehandsbouwmarkt.be"
+        ],
+        "begruendung": "Eigene Website nennt Handel mit gebrauchten Fenstern/Tueren, aus Baustellen geborgen oder demontiert, dauerhaft als Geschaeftsfeld ('Specialist in ... 2de handse ramen & deuren').",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "M13",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"E.L.S. Garden\" België tuin materialen"
+        ],
+        "geprueft_urls": [
+          "https://www.els-garden.be/"
+        ],
+        "begruendung": "Eigene Website zeigt E.L.S. Garden als Grosshandel fuer NEUE Gartenmaterialien und Naturstein aus Steinbruechen; kein Hinweis auf Wiederverwendung/Zirkularitaet auf der eigenen Seite gefunden. Kein Drittfund innerhalb des Budgets.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "beleg_url": "https://www.els-garden.be/",
+            "beleg_zitat": "importing only natural stone from the best quarries",
+            "typ_ist": "Neumaterial-Grosshandel (Naturstein/Gartenmaterialien)",
+            "typ_soll": "Materialhub_Bauteilboerse"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "P4",
+        "actor_degree": "bezug",
+        "beleg_url": "https://guidebatimentdurable.brussels/construction-dun-batiment-circulaire-evolutif-reversible-projet-bric",
+        "beleg_zitat": "Le réemploi, l'approvisionnement local en matériaux ... ont aussi été étudiés avec attention.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"EFP\" \"Espace Formation PME\" Bruxelles réemploi construction"
+        ],
+        "geprueft_urls": [
+          "https://guidebatimentdurable.brussels/construction-dun-batiment-circulaire-evolutif-reversible-projet-bric"
+        ],
+        "begruendung": "Der offizielle Brussels-Guide-Batiment-Durable-Eintrag zum Bauvorhaben BRIC nennt EFP (Espace Formation PME, Rue de Stalle 292B, Uccle) als Standort und beschreibt Réemploi/Wiederverwendung als untersuchten Bestandteil des Bauvorhabens. Nennung erfolgt auf Drittseite (offizieller Bau-Guide), nicht auf einer eigenen dauerhaften Leistungsseite von EFP selbst -> bezug, nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "M14",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.verhofstede.be/",
+        "beleg_zitat": "And naturally we present to you 'Eeuwenhout', a collection wood of the best quality from long gone times that we breathe new life into for you.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Eeuwenhout\" \"Antoine Verhofstede\" hout"
+        ],
+        "geprueft_urls": [
+          "https://www.verhofstede.be/"
+        ],
+        "begruendung": "Eigene Firmenseite (Verhofstede, Betreiber der Marke Eeuwenhout) fuehrt eeuwenaltes, aus abgebauten Scheunen (u.a. Amish-Gemeinden USA) gewonnenes Altholz dauerhaft als eigene Produktlinie/Rubrik, nicht als Einzelprojekt-Referenz.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "M15",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.facebook.com/FrynsBoret/",
+        "beleg_zitat": "Antieke bouwmaterialen Fryns - Boret",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Fryns-Boret\" bouwmaterialen"
+        ],
+        "geprueft_urls": [
+          "https://www.facebook.com/FrynsBoret/",
+          "https://www.salvoweb.com/directory/26959-fryns-boret",
+          "http://fryns-boret.be/over-ons",
+          "http://fryns-boret.be/diensten/antieke-en-rustieke-bouwmaterialen"
+        ],
+        "begruendung": "Eigene Unternehmensseite (Facebook, da fryns-boret.be technisch nicht erreichbar) fuehrt das Geschaeft dauerhaft als 'Antieke bouwmaterialen Fryns - Boret'; Drittquelle SalvoWEB-Verzeichnis bestaetigt zusaetzlich Antike/rustikale Bauteile plus Abbrucharbeiten als Geschaeftsfeld (nur ergaenzend, nicht alleiniger Beleg, da Verzeichnis).",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_5xx",
+            "beleg_url": "http://fryns-boret.be/",
+            "beleg_zitat": "Hostname/IP does not match certificate's altnames: Host: fryns-boret.be. is not in the cert's altnames: DNS:*.dropsolid.com"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "M17",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.gunter-bosmans.be/",
+        "beleg_zitat": "Gunter Bosmans BV is met zijn bedrijf in recuperatiestenen in Antwerpen gestart in 2005",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Gunter Bosmans\" bouwmaterialen tweedehands"
+        ],
+        "geprueft_urls": [
+          "https://www.gunter-bosmans.be/"
+        ],
+        "begruendung": "Eigene Website stellt Handel mit recuperatiestenen (Kopfsteine, Naturstein, geborgene Steine) als Kerngeschaeft seit Gruendung 2005 dar, dauerhaft platziert, nicht als Einzelprojekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s02"
+      },
+      {
+        "tid": "M18",
+        "actor_degree": "kern",
+        "beleg_url": "https://arduinen-hoekje.be/",
+        "beleg_zitat": "Een goed adres wanneer uw hart uitgaat naar bouwantiek en antieke tuindecoratie.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Het arduinen hoekje\" Belgium"
+        ],
+        "geprueft_urls": [
+          "https://arduinen-hoekje.be/"
+        ],
+        "begruendung": "Eigene, dauerhaft betriebene Website mit vollem Sortiment an antiken/gebrauchten arduinen (Belgischer Blaustein) Bauelementen (Gootstenen, Trappen, Tuinbanken) als eigentliches Geschaeft, nicht News/Einzelprojekt -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "M19",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Heumatop Belgium",
+          "Heumatop gerecupereerde bakstenen eigen site",
+          "bmb-group.com heumatop reclaimed reuse bricks",
+          "heumatop.be"
+        ],
+        "geprueft_urls": [
+          "https://www.heumatop.be/",
+          "https://opalis.eu/en/dealers/heumatop",
+          "https://www.made-in.be/kempen/pieter-tops-zet-heumatop-als-familiebedrijf-al-10-jaar-succesvol-verder/"
+        ],
+        "begruendung": "Eigene Domain heumatop.be zeigt heute fremden, branchenfremden Content (vermutlich Domain-Uebernahme) und ist damit nicht als Beleg nutzbar. Die einzige inhaltliche Reuse-Beschreibung (Recuperatie-Ziegel) stammt ausschliesslich aus dem Opalis-Verzeichnis (ausgeschlossen als Fremdverzeichnis). Ein unabhaengiger Presseartikel (made-in.be) beschreibt nur das allgemeine Bauhandel-Sortiment ohne jeden Reuse-Bezug. Kein eigenstaendiger, nicht-verzeichnisbasierter Beleg gefunden -> ohne_beleg.",
+        "flags": [
+          {
+            "flag": "defunkt",
+            "beleg_url": "https://www.heumatop.be/",
+            "beleg_zitat": "",
+            "stand_jahr": "2026",
+            "hindernis": ""
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "M20",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.deluyckenaar.be/mei-2022-stenen-voor-funderingsmuurtjes-werden-geleverd/",
+        "beleg_zitat": "De firma Heyns Recycling heeft ons goed bijgestaan bij onze zoektocht naar oude en karaktervolle bakstenen.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Heyns Recycling\"",
+          "Heyns Recycling reclaimed OR reuse OR Wiederverwendung"
+        ],
+        "geprueft_urls": [
+          "http://heynsrecycling.be/",
+          "http://www.heynsrecycling.com/",
+          "https://www.deluyckenaar.be/mei-2022-stenen-voor-funderingsmuurtjes-werden-geleverd/"
+        ],
+        "begruendung": "Eigene Domains (heynsrecycling.be und .com) liefern beim Abruf einen TLS-Zertifikatsfehler (fremdes Zertifikat *.axc.eu) und sind technisch nicht pruefbar. Eine unabhaengige Drittquelle (Bauprojekt-Blog De Luyckenaar, Mai 2022) nennt Heyns Recycling namentlich als Lieferant alter, karaktervolle Bakstenen fuer ein konkretes Bauvorhaben (funderingsmuurtjes) -> bezug ueber diese benannte Reuse-Sache.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_5xx",
+            "beleg_url": "http://heynsrecycling.be/",
+            "beleg_zitat": ""
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "M21",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Hispantics Belgium reuse building materials",
+          "\"Hispantics\" \"old building materials\" OR \"oude bouwmaterialen\" antwerpen",
+          "Hispantics Antwerp bouwmaterialen brocante Kloosterstraat officiele website"
+        ],
+        "geprueft_urls": [
+          "https://www.hispantics.be/",
+          "https://hispantics.be/",
+          "https://www.facebook.com/hispantics/"
+        ],
+        "begruendung": "Keine erreichbare eigene Website (DNS loest fuer hispantics.be nicht auf); Facebook-Seite lieferte keinen zugaenglichen Beschreibungstext. Alle Angaben zu 'oude bouwmaterialen' stammen ausschliesslich aus Fremdverzeichnissen (goudengids, openingsurengids, Opalis) -> verzeichnis_only, kein verwertbarer eigenstaendiger Beleg -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "M22",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.hofman.be/producten/",
+        "beleg_zitat": "Recuperatie platines",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Hofman NV\" OR \"Hofman SA\" Belgium sloopmaterialen"
+        ],
+        "geprueft_urls": [
+          "https://www.hofman.be/producten/"
+        ],
+        "begruendung": "Eigene Produktseite fuehrt 'Recuperatie'-Kategorien (Platinen, Boordstenen) als dauerhafte Sortimentslinie neben Neuware -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "M23",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.houtenplaten.be/oud-hout/",
+        "beleg_zitat": "Bij ons vindt u een compleet aanbod aan oud hout terug.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Houtenplaten.be reuse tweedehands hout"
+        ],
+        "geprueft_urls": [
+          "https://www.houtenplaten.be/oud-hout/"
+        ],
+        "begruendung": "Eigene, dauerhafte Produktkategorie 'oud hout' mit vollstaendigem Sortiment an wiederverwendetem/barnwood Holz -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "M24",
+        "actor_degree": "kern",
+        "beleg_url": "https://jefstone.be/",
+        "beleg_zitat": "Gerecupereerde bouwmaterialen die de tand des tijds perfect hebben getrotseerd vinden vandaag hun weg naar tal van nieuwe en gerenoveerde woningen.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Jef Stone\" Belgium natuursteen tweedehands"
+        ],
+        "geprueft_urls": [
+          "https://jefstone.be/"
+        ],
+        "begruendung": "Eigene Startseite stellt gerecupereerde Baumaterialien (u.a. Beerse steen, klampsteen) als Kerngeschaeft dar -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "M25",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.vanapers.be/en/over-van-apers",
+        "beleg_zitat": "We have a large stock of recovered building materials and unique architectural elements.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Joris Van Apers\" Belgium",
+          "Joris Van Apers vanapers.be OR jorisvanapers.be site"
+        ],
+        "geprueft_urls": [
+          "https://www.vanapers.be/en/over-van-apers"
+        ],
+        "begruendung": "Eigene 'Over ons'-Seite (vanapers.be) fuehrt grossen Bestand an geborgenen Baumaterialien/architektonischen Elementen als dauerhaften Geschaeftsbereich -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s03"
+      },
+      {
+        "tid": "U23",
+        "name": "Kaderstudio",
+        "actor_degree": "kern",
+        "beleg_url": "https://kaderstudio.eu/about/",
+        "beleg_zitat": "From research to building – A matter of transformation, adaptability and reuse strategy.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Kaderstudio\" Belgium reuse OR hergebruik OR circulair"
+        ],
+        "geprueft_urls": [
+          "https://kaderstudio.eu/about/",
+          "https://kaderstudio.eu/"
+        ],
+        "begruendung": "Eigene, dauerhafte About-Seite eines Brusseler Architekturbueros fuehrt Transformation/Adaptability/Reuse-Strategie explizit als Praxislinie, nicht als Einzelprojekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "F03",
+        "name": "Kamp C",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.kampc.be/nieuws/circulair-bouwen",
+        "beleg_zitat": "Kamp C wil de bouwsector helpen om te verduurzamen. Op Kamp C ontdek je tal van inspirerende demonstraties",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Kamp C\" Belgium circulair bouwen materialen hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://www.kampc.be/nieuws/circulair-bouwen"
+        ],
+        "begruendung": "Kamp C ist das Centrum voor Duurzaamheid en Innovatie in de Bouw; eigene, dauerhafte Programmseite stellt zirkulaeres/demontierbares Bauen inkl. Materialwiederverwendung als institutionellen Kernauftrag dar (z.B. 't Centrum-Gebaeude aus wiederverwendeten Bauteilen).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "M26",
+        "name": "Kasseien Goyens",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Kasseien Goyens\"",
+          "\"Kasseien Goyens\" reuse OR reclaimed OR hergebruik"
+        ],
+        "geprueft_urls": [
+          "http://www.kasseiengoyens.be/",
+          "http://www.kasseiengoyens.be/kasseien.asp"
+        ],
+        "begruendung": "Eigene Domain (www.kasseiengoyens.be) liess sich trotz mehrfachem Versuch nicht abrufen (endlose 302-Umleitung auf sich selbst); nur Drittverzeichnisse (Opalis, Europages, Cylex, Wegenbouw.be, Companyweb) verfuegbar, die als Verzeichnis ausgeschlossen sind. Kein selbst geoeffneter, inhaltlicher Beleg gefunden.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "timeout",
+            "beleg_url": "http://www.kasseiengoyens.be/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "M27",
+        "name": "Kasseien Kindt",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.kasseienkindt.be/nl/over-ons",
+        "beleg_zitat": "Bij heel wat bouwprojecten of bij de heraanleg van oude hoeves en tuinen stoot men al eens op een oude kasseiweg of een hoop losliggende kasseien.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Kasseien Kindt\""
+        ],
+        "geprueft_urls": [
+          "https://www.kasseienkindt.be/nl/over-ons"
+        ],
+        "begruendung": "Eigene, dauerhafte Ueber-uns-Seite beschreibt den Ankauf/Handel alter, wiedergewonnener Kasseien als festen Geschaeftsbestandteil (seit 1979), nicht als Einzelprojekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "M28",
+        "name": "Kassico",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Kassico\" Belgium",
+          "kassico.be kasseien"
+        ],
+        "geprueft_urls": [
+          "https://www.kassico.be/"
+        ],
+        "begruendung": "Eigene Seite kassico.be positioniert sich als allgemeiner Haendler fuer neue/diverse Kasseien und Natuursteen; 'oude kleiklinkers' erscheint nur als eines von ca. 13 Sortimentselementen ohne eigene Wiederverwendungs-/Zirkularitaetslinie. Verfahren (Eigenseite + 2 Suchen) durchlaufen, kein qualifizierender Beleg gefunden.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "U26",
+        "name": "Kempens Landschap (Kempens' Landscape)",
+        "actor_degree": "bezug",
+        "beleg_url": "https://vb.nweurope.eu/projects/project-search/digital-deconstruction/?tab=,,,,&page=1",
+        "beleg_zitat": "Kempens' Landscape",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Kempens Landschap\" hergebruik OR circulair OR materialen",
+          "\"Kempens Landschap\" \"Digital Deconstruction\""
+        ],
+        "geprueft_urls": [
+          "https://www.kempenslandschap.be/nl/over-kempens-landschap/europese-projecten/interreg",
+          "https://vb.nweurope.eu/projects/project-search/digital-deconstruction/?tab=,,,,&page=1"
+        ],
+        "begruendung": "Die offizielle Interreg-NWE-Projektseite des benannten Bauteilwiederverwendungs-Projekts 'Digital Deconstruction' fuehrt Kempens' Landschap mit Adresse/Kontakt als Konsortialpartner. Die eigene Website ist derzeit auf ein anderes (Aquathermie-)Projekt fokussiert und nennt Digital Deconstruction nicht mehr aktiv, daher Einstufung ueber die Projektseite als bezug, nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "M29",
+        "name": "Kempische Bouwmaterialen",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.kempischebouwmaterialen.be/en/home/",
+        "beleg_zitat": "The range today mainly consists of a large range of old (aged) building material.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Kempische Bouwmaterialen\""
+        ],
+        "geprueft_urls": [
+          "https://www.kempischebouwmaterialen.be/en/home/"
+        ],
+        "begruendung": "Eigene, dauerhafte Homepage beschreibt den Handel mit altem/wiedergewonnenem Baumaterial (seit 1930) als Kerngeschaeft, nicht als Einzelreferenz.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "M31",
+        "name": "Labeur Atelier - Labeur",
+        "actor_degree": "kern",
+        "beleg_url": "https://labeur.be/over-labeur/",
+        "beleg_zitat": "we verzamelen van resthout en afgeschreven materialen, die we selecteren en bewerken",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Labeur Atelier\" OR \"Atelier Labeur\" hergebruik OR reuse materialen",
+          "Labeur Atelier Recup Design site:labeur.be"
+        ],
+        "geprueft_urls": [
+          "https://labeur.be/",
+          "https://labeur.be/over-labeur/",
+          "https://labeur.be/collectie/",
+          "https://labeur.be/bouw-renovatie/"
+        ],
+        "begruendung": "Eigene, dauerhafte 'Over Labeur'-Seite des sozialen Werkbetriebs (Atelier Labeur, vormals Recup Design) beschreibt das Sammeln und Verarbeiten von Restholz/ausgemusterten Materialien zu neuen Moebeln als festen Teil des Betriebs.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s04"
+      },
+      {
+        "tid": "U27",
+        "name": "Loeliger Strub",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.espazium.ch/de/aktuelles/loeliger-strub-lysp8-basel",
+        "beleg_zitat": "Loeliger Strub Architektur realisieren mit LysP8 auf dem Basler Lysbüchel-Areal Wohnungen aus wiederverwendeten Bauteilen",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Loeliger Strub\" Schweiz",
+          "\"Loeliger Strub\" reuse OR reclaimed OR salvage OR réemploi"
+        ],
+        "geprueft_urls": [
+          "https://loeligerstrub.ch/",
+          "https://www.espazium.ch/de/aktuelles/loeliger-strub-lysp8-basel"
+        ],
+        "sprache": "de",
+        "sprachrisiko": false,
+        "begruendung": "Eigene Website (loeligerstrub.ch) zeigt Wiederverwendung nicht als dauerhafte Leistungslinie, daher kein kern. Fachartikel (espazium.ch) nennt Loeliger Strub namentlich im benannten Reuse-Projekt LysP8 -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "M33",
+        "name": "MVV Afbraakwerken Martin",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.mvvafbraak.be/",
+        "beleg_zitat": "Verkoop van recuperatiebouwmaterialen (na afspraak)",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"MVV Afbraakwerken Martin\" hergebruik OR reuse",
+          "\"MVV Afbraakwerken Martin\""
+        ],
+        "geprueft_urls": [
+          "https://www.mvvafbraak.be/",
+          "https://www.mvvafbraak.be/diensten/"
+        ],
+        "sprache": "nl",
+        "sprachrisiko": true,
+        "begruendung": "Eigene Firmenseite fuehrt Verkauf von Recuperatiebouwmaterialen als dauerhaften Bestandteil des Angebots (neben Abbruch) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "N04",
+        "name": "Metabolism of Cities",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Metabolism of Cities\" reuse OR circular OR Wiederverwendung",
+          "\"Metabolism of Cities\" Bauteil OR building component reuse"
+        ],
+        "geprueft_urls": [
+          "https://metabolismofcities.org",
+          "https://www.metabolismofcities.org/about"
+        ],
+        "sprache": "en",
+        "sprachrisiko": false,
+        "begruendung": "Organisation befasst sich mit staedtischem Materialstoffwechsel allgemein; eigene Seite zeigt keinen Bezug speziell zu Bauteil-Wiederverwendung. /about gab 404. Verfahren durchlaufen, kein Fund -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "I05",
+        "name": "OVAM (Openbare Vlaamse Afvalstoffenmaatschappij)",
+        "actor_degree": "kern",
+        "beleg_url": "https://ovam.vlaanderen.be/circulair-materialenbeheer",
+        "beleg_zitat": "Circulair materialenbeheer wil de milieu-impact verkleinen van materialen die gebruikt worden of vrijkomen bij bouwen, renoveren en slopen.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "OVAM Openbare Vlaamse Afvalstoffenmaatschappij circulair bouwen hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://ovam.vlaanderen.be/circulair-materialenbeheer"
+        ],
+        "sprache": "nl",
+        "sprachrisiko": false,
+        "begruendung": "OVAM-eigene Seite widmet dauerhaft einen Programmbereich (Circulair materialenbeheer / Circulair Bouwen) der Wiederverwendung von Bouwmaterialen -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "I04",
+        "name": "Openbare Vlaamse Afvalstoffenmaatschappij (OVAM)",
+        "actor_degree": "kern",
+        "beleg_url": "https://ovam.vlaanderen.be/circulair-materialenbeheer",
+        "beleg_zitat": "Circulair materialenbeheer wil de milieu-impact verkleinen van materialen die gebruikt worden of vrijkomen bij bouwen, renoveren en slopen.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "OVAM Openbare Vlaamse Afvalstoffenmaatschappij circulair bouwen hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://ovam.vlaanderen.be/circulair-materialenbeheer"
+        ],
+        "sprache": "nl",
+        "sprachrisiko": false,
+        "begruendung": "Identische Organisation wie I05 (nur andere Namensreihenfolge). Gleicher Beleg wie I05; als Duplikat markiert, I05 als zu behaltende tid.",
+        "flags": [
+          {
+            "flag": "duplikat",
+            "duplikat_von": "I05",
+            "beleg_url": "https://ovam.vlaanderen.be/circulair-materialenbeheer",
+            "beleg_zitat": "Openbare Vlaamse Afvalstoffenmaatschappij (OVAM) ist dieselbe Institution wie tid I05, nur mit vertauschter Namensreihenfolge."
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "U30",
+        "name": "Orbix Productions",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Orbix Productions\" reuse OR hergebruik OR circular",
+          "\"Orbix\" bouwmaterialen hergebruik afbraak sloop bouwelementen"
+        ],
+        "geprueft_urls": [
+          "https://www.orbix.be/en",
+          "https://www.orbix.be/en/about-orbix"
+        ],
+        "sprache": "en",
+        "sprachrisiko": false,
+        "begruendung": "Orbix verwertet industrielle Reststroeme (Metallschlacke, CO2) zu neuen Baustoffen (Carbstone) -- Rezyklat-/Reststoffverwertung ohne Bauteilbezug, keine Wiederverwendung von Bauteilen gefunden -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "U31",
+        "name": "Ouest Architecture",
+        "actor_degree": "bezug",
+        "beleg_url": "https://ouest.be/projet/destruction-reemploi-dans-le-processus-participatif/",
+        "beleg_zitat": "Conférence Rotor / Ouest architecture / Zinneke asbl",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Ouest Architecture\" réemploi Belgique",
+          "site:ouest.be reuse OR réemploi"
+        ],
+        "geprueft_urls": [
+          "https://ouest.be/",
+          "https://ouest.be/projet/destruction-reemploi-dans-le-processus-participatif/",
+          "https://ouest.be/projet/rec/"
+        ],
+        "sprache": "fr",
+        "sprachrisiko": false,
+        "begruendung": "Eigene Website fuehrt 'Reuse' als Navigationskategorie, jedoch primaer fuer Gebaeude-/Areal-Wiedernutzung (Recyclart etc.), nicht klar als Bauteil-Leistungslinie beschrieben -> kein kern. Eigene Seite nennt Ouest Architecture namentlich in einer benannten Reuse-Sache (Konferenz mit Rotor/Zinneke zu Abbruch & Réemploi) -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "P12",
+        "name": "Plateforme Réemploi",
+        "actor_degree": "bezug",
+        "beleg_url": "https://rotordb.org/en/projects/plateforme-reemploi",
+        "beleg_zitat": "a public platform for all actors involved in reuse",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "\"Plateforme Réemploi\" Belgique bâtiment"
+        ],
+        "geprueft_urls": [
+          "https://rotordb.org/en/projects/plateforme-reemploi"
+        ],
+        "sprache": "en",
+        "sprachrisiko": false,
+        "begruendung": "Als 'Projekt' markierter Knoten ist tatsaechlich eine Netzwerk-Plattform (getragen von Rotor, CCB-C, Atelier 4/5), kein Bauvorhaben -> falscher_typ. Lief 2017 mit Foerderung der Region Bruessel-Hauptstadt, seither zu AD VITAM MATERIAL geworden (Nachfolger nicht im Panel) -> defunkt. Rotor-Seite belegt Reuse-Plattform namentlich -> bezug.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "typ_ist": "Netzwerk_Plattform",
+            "typ_soll": "Projekt",
+            "beleg_url": "https://rotordb.org/en/projects/plateforme-reemploi",
+            "beleg_zitat": "a public platform for all actors involved in reuse"
+          },
+          {
+            "flag": "defunkt",
+            "stand_jahr": "2017",
+            "beleg_url": "https://ecobuild.brussels/la-plateforme-reemploi-bruxelles-devient-ad-vitam-material/",
+            "beleg_zitat": "La Plateforme Réemploi Bruxelles devient AD VITAM MATERIAL"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s05"
+      },
+      {
+        "tid": "S02",
+        "name": "Preuse",
+        "actor_degree": "kern",
+        "beleg_url": "https://preuse.nweurope.eu/",
+        "beleg_zitat": "PREUSE is an international research project that aims to help local and regional public authorities improve the management of their material resources and implement solutions within their territory to reclaim and reuse building materials.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Preuse Belgium reuse software building materials",
+          "\"Preuse\" tool app software building component reuse tracking"
+        ],
+        "geprueft_urls": [
+          "https://preuse.nweurope.eu/"
+        ],
+        "begruendung": "Eigene Projektseite (Interreg NWE, 2024-2028) stellt Reuse von Bauteilen/Baumaterialien dauerhaft als Zweck dar (9 Partner, u.a. Rotor, Stadt Mechelen). Kein Beleg fuer 'Preuse' als Software-Tool-Anbieter gefunden -- der gespeicherte Typ passt nicht zur tatsaechlichen Rechtsform (Foerderprojekt/Netzwerk, keine Software-Firma).",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "beleg_url": "https://preuse.nweurope.eu/",
+            "beleg_zitat": "PREUSE is an international research project that aims to help local and regional public authorities...",
+            "typ_ist": "Projekt_Netzwerk (Interreg-NWE-Foerderprojekt)",
+            "typ_soll": "Software_Tool_Anbieter"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "M34",
+        "name": "Recupan bvba",
+        "actor_degree": "kern",
+        "beleg_url": "http://www.recupan.be/",
+        "beleg_zitat": "Aan- en verkoop van recuperatie dakpannen",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Recupan bvba Belgium bouwmaterialen hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://opalis.eu/en/dealers/recupan-bvba",
+          "http://www.recupan.be/"
+        ],
+        "begruendung": "Eigene Seite recupan.be stellt An- und Verkauf gebrauchter Dachziegel/-pfannen dauerhaft als Kerngeschaeft dar (Slogan im Hauptmenue). Opalis-Eintrag lieferte nur Adresse und Weiterleitung zur eigenen Domain.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "U32",
+        "name": "Roosens Bétons SA",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Roosens Bétons SA Belgium",
+          "Roosens Bétons réemploi matériaux circularité béton recyclé"
+        ],
+        "geprueft_urls": [
+          "https://roosensbetons.be/notre-histoire/",
+          "https://roosensbetons.be/"
+        ],
+        "begruendung": "Eigene Seite (403 bei Direktzugriff, Inhalt aber ueber Suchtreffer und Drittquelle Circular Wallonia erschlossen) beschreibt ausschliesslich Rezyklat-Beton aus eigener Produktion (Produkt 'Clayton', Recycling von Produktionsabfaellen) und Ruecknahme eigener Betonprodukte -- kein Bauteil-Wiederverwendungsbezug (Recycling/Rezyklat ohne Bauteilbezug ist laut Kalibrierung ausgeschlossen). Keine Reuse-Sache mit Bauteilbezug gefunden.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "U33",
+        "name": "Salvage Architecture",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Salvage Architecture Belgium reuse",
+          "\"Salvage Architecture\" company Belgium office reclaimed materials",
+          "\"Salvage Architecture\" bvba OR bv Belgium architect firm reclaimed",
+          "\"Salvage Architecture\" Antwerp OR Brussels office design studio réemploi"
+        ],
+        "geprueft_urls": [],
+        "begruendung": "Vier gezielte Suchen ergaben keinen plausiblen Treffer fuer eine Organisation namens 'Salvage Architecture' in Belgien -- nur historische Forschung ueber den Architekten Marcel Raymaekers ('Ad Hoc Baroque: Marcel Raymaekers' Salvage Architecture in Postwar Belgium', ein akademischer Buchtitel, keine Firma) sowie Treffer zu Rotor. Name und Ort passen bei keinem Treffer zu einer eigenstaendigen Organisation.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "M36",
+        "name": "Stadshout.be",
+        "actor_degree": "bezug",
+        "beleg_url": "https://belgiumisdesign.be/designers/stadshout",
+        "beleg_zitat": "rescue city trees, destined to be cut down, and convert them into furniture instead of firewood",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Stadshout.be hergebruikt hout Belgium"
+        ],
+        "geprueft_urls": [
+          "https://stadshout.be/",
+          "https://stadshout.be/missie/",
+          "https://opalis.eu/en/dealers/stadshoutbe",
+          "https://belgiumisdesign.be/designers/stadshout"
+        ],
+        "begruendung": "Eigene Domain stadshout.be blockte den Zugriff (403) trotz zweier Versuche (Startseite, /missie/). Drittquelle belgiumisdesign.be (Design-Verzeichnis, kein Reuse-Fremdverzeichnis) nennt die Organisation namentlich mit einer benannten Reuse-Sache (Rettung von Stadtbaeumen zu Moebeln) und verlinkt auf stadshout.be als eigene Seite -- daher bezug statt kern, da die eigene Seite nicht direkt eingesehen werden konnte.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://stadshout.be/",
+            "beleg_zitat": ""
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "N09",
+        "name": "Tracimat vzw",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.tracimat.be/over-ons/",
+        "beleg_zitat": "materialen uit sloop en renovatie zo zuiver mogelijk vrijkomen. Zo kunnen ze maximaal en op hoogwaardige wijze worden hergebruikt of gerecycleerd.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Tracimat vzw sloopopvolging hergebruik"
+        ],
+        "geprueft_urls": [
+          "https://www.tracimat.be/over-ons/"
+        ],
+        "begruendung": "Eigene Seite tracimat.be/over-ons stellt Foerderung von Bauteil-/Materialwiederverwendung als dauerhaften Kernauftrag der als Sloopbeheerorganisatie erkannten vzw dar (Rueckverfolgung von Sloopmaterial zur Ermoeglichung von hergebruik).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "M37",
+        "name": "Van Dijck",
+        "actor_degree": "kern",
+        "beleg_url": "http://www.van-dijck.be",
+        "beleg_zitat": "pavés de réemploi entiers, recyclés ou sciés",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Van Dijck bouwmaterialen tweedehands hergebruik Belgium",
+          "\"Van Dijck\" Perk bouwmaterialen recuperatie afbraak",
+          "\"Van Dijck\" oude bouwmaterialen afbraakmaterialen opalis"
+        ],
+        "geprueft_urls": [
+          "https://opalis.eu/en/dealers/van-dijck",
+          "http://www.van-dijck.be"
+        ],
+        "begruendung": "Eigene Seite van-dijck.be (Milmort/Herstal, Pflastersteine/Bordsteine) fuehrt 'pavés de réemploi' dauerhaft als Produktkategorie neben Neuware. Hinweis: nicht zu verwechseln mit der gleichnamigen, zum 1.5.2025 geschlossenen Beton Van Dijck in Steenokkerzeel/Perk (reiner Neubeton-Haendler ohne Reuse-Bezug) -- diese Recherche bezieht sich auf die richtige, aktive Van Dijck (Milmort) mit Reuse-Sortiment laut Opalis-Adresse und eigener Website.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "M38",
+        "name": "Van Huele",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.vanhuele.be/",
+        "beleg_zitat": "Al onze oude recuperatie bouwmaterialen zijn origine en authentiek: wij verkopen uitsluitend gerecupereerde bouwmaterialen uit afbraak",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [
+          "Van Huele oude bouwmaterialen Belgium"
+        ],
+        "geprueft_urls": [
+          "https://www.vanhuele.be/"
+        ],
+        "begruendung": "Eigene Seite vanhuele.be stellt ausschliesslichen Handel mit gerecuperierten Abbruch-Baumaterialien (Balken, Vloerdelen, Dakpannen, Gevelsteen) als alleiniges, dauerhaftes Geschaeftsmodell dar.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s06"
+      },
+      {
+        "tid": "M32",
+        "actor_degree": "kern",
+        "beleg_url": "https://ateliercirculer.be/materialenbank",
+        "beleg_zitat": "Hout, Stenen, Metaal, Isolatie, Verwarming & Sanitair, Elektriciteit & Verlichting, Ramen & Deuren, Afgewerkte Producten",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://ateliercirculer.be/materialenbank",
+          "https://ateliercirculer.be/materialenbank/catalogus",
+          "https://ateliercirculer.be/",
+          "https://www.vvsg.be/kennis/praktijken/praktijkendatabank/materialenbank-leuven"
+        ],
+        "begruendung": "Eigene Seite ateliercirculer.be/materialenbank zeigt eine dauerhafte Materialkatalogstruktur (Kategorien Hout, Stenen, Metaal, Isolatie usw.) sowie ein Formular zur Materialanmeldung; die Seite befindet sich im Umzug/Umbau, ist aber die reguläre Betriebsseite der Materialenbank, kein einzelnes Projekt. VVSG-Praktijkendatabank bestätigt zusätzlich, dass Atelier Circuler vzw diese Materialenbank betreibt. -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s07"
+      },
+      {
+        "tid": "M04",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.batiterre.be/",
+        "beleg_zitat": "BATITERRE DONNE UNE SECONDE VIE AUX MATÉRIAUX DE CONSTRUCTION",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.batiterre.be/"
+        ],
+        "begruendung": "Eigene, dauerhafte Startseite stellt Wiederverwendung von Baumaterialien (\"Vente et Préparation au réemploi\") als Kernangebot dar, kein Einzelprojekt. -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s07"
+      },
+      {
+        "tid": "M05",
+        "actor_degree": "kern",
+        "beleg_url": "https://baumab-kassel.de/",
+        "beleg_zitat": "Gebrauchte Baumaterialien und Baustoffe kaufen und verkaufen – das macht unsere Plattform möglich",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://baumab-kassel.de/",
+          "https://baumab-kassel.de/impressum/"
+        ],
+        "begruendung": "Eigene Startseite stellt Ankauf/Verkauf gebrauchter Baumaterialien inkl. physischem Standort und Online-Shop als dauerhaftes Kerngeschäft dar. -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s07"
+      },
+      {
+        "tid": "I06",
+        "actor_degree": "bezug",
+        "beleg_url": "https://baumab-kassel.de/impressum/",
+        "beleg_zitat": "Gefördert durch: Stadt Kassel",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://baumab-kassel.de/impressum/"
+        ],
+        "begruendung": "Stadt Kassel wird auf der Impressum-Seite der Bauteilbörse BauMaB Kassel als Fördergeber genannt, damit namentlich in einer benannten Reuse-Sache verortet. Stadt Kassel hat selbst keine eigene Reuse-Leistungsseite gefunden. -> bezug (nicht kern, da kein eigenes dauerhaftes Angebot der Stadt selbst geprüft wurde).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s07"
+      },
+      {
+        "tid": "M09",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.cornermat.be/",
+        "beleg_zitat": "Votre fournisseur de matériaux de réemploi",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.cornermat.be/"
+        ],
+        "begruendung": "Eigene Startseite mit Tagline \"Votre fournisseur de matériaux de réemploi\" und dauerhaftem Online-Shop für wiederverwendete Baumaterialien nach Kategorien (Bodenbeläge, Türen, Holz, Naturstein usw.). -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s07"
+      },
+      {
+        "tid": "M30",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.la-ressourcerie.ch/",
+        "beleg_zitat": "Le magasin de la Ressourcerie propose aux particuliers et aux professionnels un lieu où se fournir en matériaux de construction à moindre coût et de manière durable.",
+        "abrufdatum": "2026-08-12",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.la-ressourcerie.ch/"
+        ],
+        "begruendung": "Eigene, dauerhafte Startseite stellt den Verkauf gebrauchter/geretteter Baumaterialien im eigenen Magasin als Kerngeschäft dar (keine Einzelprojekt- oder Verzeichnisseite). -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "BE",
+        "packet_id": "BE-s07"
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "U29|P6",
+        "a_tid": "U29",
+        "b_tid": "P6",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "beleg_zitat": "Restoration and extension of a former convent to create a town hall",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Entwurf/Architekt des Projekts, dokumentiert auf noAarchitecten's eigener Projektportfolioseite",
+        "relation_soll": "",
+        "cc": "BE",
+        "packet_id": "BE-c09"
+      },
+      {
+        "edge_id": "I03|P6",
+        "a_tid": "I03",
+        "b_tid": "P6",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Lo-Reninge town council als Auftraggeber/Bauherr des Rathausprojekts",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "BE",
+        "packet_id": "BE-c09"
+      },
+      {
+        "edge_id": "U13|P6",
+        "a_tid": "U13",
+        "b_tid": "P6",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "beleg_zitat": "Client Dexia / Lo-Reninge town council",
+        "abrufdatum": "2026-08-12",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Dexia als Mit-Auftraggeber des Rathausprojekts",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "BE",
+        "packet_id": "BE-c09"
+      }
+    ],
+    "ungeprueft": [],
+    "ausgefallen": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-BE"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "BE:BE-c09",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "a389f0cdbf2a87316",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563095851,
+      "queuedAt": 1786563092799,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-c09",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563204278,
+      "tokens": 56281,
+      "toolCalls": 9,
+      "durationMs": 108426,
+      "resultPreview": "{\"packet_id\":\"BE-c09\",\"nodes\":[{\"tid\":\"I03\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall\",\"beleg_zitat\":\"Client Dexia / Lo-Reninge town council\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"\\\"Lo-Reninge town council\\\" Belgium\",\"\\\"Lo-Reninge\\\" gemeente reuse OR hergebruik\"],\"geprueft_urls\":[\"https://noaarchitecten.net/projects/1/046-lo-reninge-to…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "BE:BE-s01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "a90f427728c9ec926",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563096023,
+      "queuedAt": 1786563092800,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-s01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563315048,
+      "tokens": 75168,
+      "toolCalls": 32,
+      "durationMs": 219025,
+      "resultPreview": "{\"packet_id\":\"BE-s01\",\"nodes\":[{\"tid\":\"M01\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://anresto.com/product-categorie/bouw-antiek/\",\"beleg_zitat\":\"Bouw antiek\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"\\\"Antiek Anresto\\\" Lommel Belgium\",\"\\\"Antiek Anresto\\\" reuse OR reclaimed OR Wiederverwendung\"],\"geprueft_urls\":[\"https://opalis.eu/en/dealers/antiek-anresto\",\"https://anresto.com/\",\"https://anrest…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "BE:BE-s02",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "ad0004d2c16ab0114",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563095604,
+      "queuedAt": 1786563092800,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-s02",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563313387,
+      "tokens": 67695,
+      "toolCalls": 22,
+      "durationMs": 217782,
+      "resultPreview": "{\"packet_id\":\"BE-s02\",\"nodes\":[{\"tid\":\"M10\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.degroenepoort.com/en/about-us\",\"beleg_zitat\":\"You will discover the most original furniture and treasures in De Groene Poort: seventeenth-century prison doors, wood from wreckages to incorporate in your catering business, cupboards made from old doors, shutters, windows\",\"abrufdatum\":\"2026-08-12\",\"such_begri…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "BE:BE-s03",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "ad0386e33e67562e6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563096453,
+      "queuedAt": 1786563092800,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-s03",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563365669,
+      "tokens": 76852,
+      "toolCalls": 33,
+      "durationMs": 269216,
+      "resultPreview": "{\"edges\":[],\"kappe_erreicht\":false,\"nodes\":[{\"tid\":\"M18\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://arduinen-hoekje.be/\",\"beleg_zitat\":\"Een goed adres wanneer uw hart uitgaat naar bouwantiek en antieke tuindecoratie.\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"\\\"Het arduinen hoekje\\\" Belgium\"],\"geprueft_urls\":[\"https://arduinen-hoekje.be/\"],\"begruendung\":\"Eigene, dauerhaft betriebene Website mit …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "BE:BE-s04",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "a95c9a6451da2a6ca",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563096034,
+      "queuedAt": 1786563092801,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-s04",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563403092,
+      "tokens": 83280,
+      "toolCalls": 35,
+      "durationMs": 307058,
+      "resultPreview": "{\"packet_id\":\"BE-s04\",\"nodes\":[{\"tid\":\"U23\",\"name\":\"Kaderstudio\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://kaderstudio.eu/about/\",\"beleg_zitat\":\"From research to building – A matter of transformation, adaptability and reuse strategy.\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"\\\"Kaderstudio\\\" Belgium reuse OR hergebruik OR circulair\"],\"geprueft_urls\":[\"https://kaderstudio.eu/about/\",\"https://kad…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "BE:BE-s05",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "a921708673055218c",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563095642,
+      "queuedAt": 1786563092801,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-s05",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563337373,
+      "tokens": 75797,
+      "toolCalls": 28,
+      "durationMs": 241731,
+      "resultPreview": "{\"packet_id\":\"BE-s05\",\"nodes\":[{\"tid\":\"U27\",\"name\":\"Loeliger Strub\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://www.espazium.ch/de/aktuelles/loeliger-strub-lysp8-basel\",\"beleg_zitat\":\"Loeliger Strub Architektur realisieren mit LysP8 auf dem Basler Lysbüchel-Areal Wohnungen aus wiederverwendeten Bauteilen\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[\"\\\"Loeliger Strub\\\" Schweiz\",\"\\\"Loeliger Strub\\\" r…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "BE:BE-s06",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "a90702397d78e7c1f",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563095598,
+      "queuedAt": 1786563092801,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-s06",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563342889,
+      "tokens": 79553,
+      "toolCalls": 33,
+      "durationMs": 247290,
+      "resultPreview": "{\"edges\":[],\"kappe_erreicht\":false,\"nodes\":[{\"tid\":\"S02\",\"name\":\"Preuse\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://preuse.nweurope.eu/\",\"beleg_zitat\":\"PREUSE is an international research project that aims to help local and regional public authorities improve the management of their material resources and implement solutions within their territory to reclaim and reuse building materials.\",\"abrufda…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "BE:BE-s07",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-BE",
+      "agentId": "ac9d2aa10a8914fc3",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786563096028,
+      "queuedAt": 1786563092802,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "BE-s07",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786563217441,
+      "tokens": 57457,
+      "toolCalls": 13,
+      "durationMs": 121413,
+      "resultPreview": "{\"packet_id\":\"BE-s07\",\"nodes\":[{\"tid\":\"M32\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://ateliercirculer.be/materialenbank\",\"beleg_zitat\":\"Hout, Stenen, Metaal, Isolatie, Verwarming & Sanitair, Elektriciteit & Verlichting, Ramen & Deuren, Afgewerkte Producten\",\"abrufdatum\":\"2026-08-12\",\"such_begriffe\":[],\"geprueft_urls\":[\"https://ateliercirculer.be/materialenbank\",\"https://ateliercirculer.be/materia…"
+    }
+  ],
+  "totalTokens": 572083,
+  "totalToolCalls": 205
+}
