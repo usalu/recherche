@@ -1,0 +1,1539 @@
+% !TEX program = tectonic
+% !TEX root = zwischenbericht.tex
+\documentclass[type=zwischenbericht]{zukunftbau}
+
+\usepackage{xurl}
+% LR-019: biblatex justifies bibliography entries; its \biburlsetup sets
+% \Urlmuskip=0mu plus 3mu, so every URL breakpoint stretches to fill the line
+% and URLs render with visible gaps ("www . baunetzwissen . de"). Reset the
+% muskip after biblatex's setup so URLs stay continuous (xurl still allows the
+% breaks, just without stretch).
+\usepackage{etoolbox}
+\appto\biburlsetup{\Urlmuskip=0mu\relax}
+\addbibresource{references.bib}
+
+% LR-020: this is a digital deliverable; drop the print-signature padding so
+% the PDF ends right after the bibliography instead of on trailing blank pages.
+\SemioSignaturePadding{false}
+% Digital deliverable: no recto-forcing blank versos before appendix chapters.
+\SemioOpenAny{true}
+
+\counterwithin{section}{part}
+\renewcommand{\thepart}{\arabic{part}}
+
+\title{Entwerfen mit Bestand}
+\subtitle{Eine offene Plattform für einen KI-unterstützten, performance-optimierten und integrativen Entwurfsprozess mit wiederverwendeten Baukomponenten}
+\antragstellendeinstitution{%
+  \AddressOrg{%
+    Leibniz Universität Hannover\\
+    Fakultät für Architektur und Landschaft\\
+    Institut für Entwerfen und Konstruieren\\
+    Abteilung Nachhaltige Gebäudesysteme%
+  }%
+  \AddressPeople{%
+    Institutsleitung: Prof. Dr.-Ing. Philipp Geyer\\
+    Projektleitung: Ueli Saluz\\
+    Weitere Bearbeitung: Nikolaus Möllenhof%
+  }%
+}
+\kooperationspartner{%
+  \AddressOrg{%
+    Universität der Künste Berlin\\
+    Fakultät für Architektur\\
+    Institut für Architektur und Städtebau\\
+    Konstruktives Entwerfen und Tragwerksplanung%
+  }%
+  \AddressPeople{%
+    Institutsleitung: Prof. Dr.-Ing. Christoph Gengnagel\\
+    Bearbeitung: Kinan Sarakbi%
+  }%
+}
+\aktenzeichen{10.08.18.7-25.06}
+\berichtszeitraum{01.01.2026-10.07.2026}
+\foerderzeitraum{03.11.2025-02.05.2027}
+\footerauthors{Ueli Saluz, Kinan Sarakbi}
+\footerlogos{asset/logo/luh.png, asset/logo/udk.png}
+\makeatletter
+\renewcommand{\semio@cover@zukunftbau@logo}{asset/logo/zukunft-bau.png}
+\renewcommand{\semio@cover@bbsr@logo}{asset/logo/bbsr.png}
+\renewcommand{\semio@cover@bundesministerium@logo}{asset/logo/gefördert-durch-bmwsb.png}
+\renewcommand{\semio@cover@arbeitsprobe@image}{asset/demonstrator/aggegator.png}
+\makeatother
+\kurzfassung{%
+  Entwerfen mit wiederverwendeten Baukomponenten ist ästhetisch, historisch und ökologisch reizvoll, aber entwurfstechnisch anspruchsvoll und komplex, da funktionale, konstruktive und qualitative Abhängigkeiten direkt beim Entwerfen berücksichtigt werden müssen.
+  Die im Projekt entwickelte End-To-End-Plattform, welche gleichzeitig Katalog-, Entwurfs- und Leistungsbewertungs-Tool beinhaltet, ermöglicht es, in dieser Situation effektiv Lösungen zu entwickeln.
+  Das Performance-Assessment hinsichtlich Energie und Tragwerk erlaubt frühe multidisziplinäre Optimierung.
+  Mithilfe einer KI-Assistenz können auch große Bestandspools, in welchen es explosionsartig viele Kombinationsmöglichkeiten gibt, im Entwurfsprozess berücksichtigt werden.
+  Die Assistenz schlägt für die jeweilige Entwurfssituation passende Baukomponenten und Verknüpfungen vor.
+  Basierend auf einer semantischen Repräsentation der Baukomponenten und des komponentenbasierten Entwurfes wird die generative Stärke der vortrainierten Large-Language-Models direkt für den Entwurf genutzt.
+  Über eine Framework-unabhängige Schnittstellendefinition wird es bestehenden Bauteilbörsen ermöglicht, ihre Baukomponenten nahtlos maschinenlesbar zu veröffentlichen, sodass die Integrierbarkeit in die Plattform gewährleistet ist.
+  Das Schema dieser Schnittstellendefinition beinhaltet neben Fotos und den üblichen Metadaten wie Ort und Preis auch 3D-Modelle und Performance-Kennwerte wie das Treibhauspotential, welche direkt von den Tools verwendet werden.
+  Ein Modellierungstool, welches moderne Bild-zu-3D-KI-Modelle benutzt, reduziert den Aufbereitungsaufwand der Bauteilbörsen.
+  Durch die open-source Veröffentlichung der gesamten Plattform, deren Dokumentation und den Aufbau einer Community werden die Langlebigkeit und das Vertrauen gestärkt.
+  Das Self-Hosting ermöglicht einerseits eine Breitenwirkung, wodurch der zukünftige Unterhalt und neue Featureentwicklung effizient geteilt wird.
+  Andererseits bleibt die Datensouveränität gewährleistet.%
+}
+
+\ExplSyntaxOn
+% LR-2.16: runs under \ExplSyntaxOn where the space char is catcode 9 (ignored),
+% so plain spaces are eaten and the header renders "VerwendungimBericht". Use
+% explicit ~ space tokens so the words stay separated.
+\cs_set:Npn \semio_glossary_header_definition: { Verwendung~im~Bericht }
+\ExplSyntaxOff
+
+\GlossaryDefine{Baukomponente}{Physisches Bauteil oder zusammengehörige Gruppe von Bauteilen, die im Entwurf als eine Einheit betrachtet und wiederverwendet wird, etwa eine Stütze, eine Decke oder ein Rahmenelement.}
+\GlossaryDefine{Entwurfsrolle}{Funktion, die eine Baukomponente in einem neuen Entwurf übernehmen soll. Sie kann von der ursprünglichen Verwendung abweichen, etwa wenn ein Träger als Stütze eingesetzt wird.}
+\GlossaryDefine{Bestandsquelle}{Ort oder Kanal, aus dem wiederverwendbare Baukomponenten stammen, etwa eine Bauteilbörse, ein Rückbauinventar oder eine direkte Bestandsaufnahme vor Ort.}
+\GlossaryDefine{Bauteilbörse}{Organisation, Lager oder digitaler Angebotskanal, über den wiederverwendbare Baukomponenten dokumentiert, vermittelt oder verkauft werden.}
+\GlossaryDefine{Qualifizierung}{Schrittweise Erfassung, Prüfung und nachvollziehbare Ergänzung von Bauteilinformationen, bis sie für Entwurf und Bewertung nutzbar sind.}
+\GlossaryDefine{Typologiefamilie}{Ordnung von Baukomponenten nach ihrer geometrisch-konstruktiven Grundform: lineare und flächige Elemente, Knoten- und Übergangselemente sowie Rahmen- und Systemelemente.}
+\GlossaryDefine{Nachweiszustände}{Kennzeichnung, wie belastbar eine einzelne Angabe ist: vorhanden, abgeleitet, angenommen oder noch offen.}
+\GlossaryDefine{Leistungsbewertung}{Einschätzung ausgewählter Eigenschaften oder Auswirkungen einer Entwurfsvariante auf Grundlage der verfügbaren Informationen, etwa zu Energie oder Tragwerk.}
+\GlossaryDefine{Vorbewertung}{Frühe, vereinfachte Leistungsbewertung, die im Entwurf der Orientierung dient und keine vollständige fachliche Prüfung ersetzt.}
+\GlossaryDefine{Bauteilobjekt}{Digitales Modell einer Baukomponente, das Geometrie und zugehörige fachliche Angaben in einer gemeinsamen Struktur bündelt.}
+\GlossaryDefine{Generator}{Automatisches Verfahren, das aus erfassten Bauteilangaben ein digitales Bauteilobjekt mit den benötigten geometrischen Darstellungen erzeugt.}
+\GlossaryDefine{Einspeiseplattform}{Digitaler Eingangsbereich der Plattform aus Bauteilportal und Wizard, in dem Bestandsdaten erfasst, übernommen und aufbereitet werden.}
+\GlossaryDefine{Entwurfswerkzeug}{Digitaler Arbeitsbereich aus Bauteilkatalog, Entwurfsumgebung und Konfigurator zur Auswahl, Kombination und Bewertung von Baukomponenten.}
+\GlossaryDefine{Bauteilportal}{Weboberfläche zur manuellen Erfassung, Übernahme und Qualifizierung von Bestandsdaten als Grundlage für digitale Bauteilobjekte.}
+\GlossaryDefine{Wizard}{Benutzeroberfläche für einen geleiteten Abfrageprozess, mit der unvollständige oder unstrukturierte Bauteildaten Schritt für Schritt erfasst und ergänzt werden.}
+\GlossaryDefine{Bauteilkatalog}{Übersichts- und Suchbereich des Entwurfswerkzeugs, in dem verfügbare Baukomponenten und ihre Angaben gefunden und ausgewählt werden.}
+\GlossaryDefine{Entwurfsumgebung}{Arbeitsbereich des Entwurfswerkzeugs, in dem Baukomponenten räumlich angeordnet, kombiniert und zu Entwurfsvarianten weiterentwickelt werden.}
+\GlossaryDefine{Konfigurator}{Austauschbereich des Entwurfswerkzeugs für den Kontakt mit Bauteilbörsen, etwa für Anfragen, Reservierungen, Statusänderungen und projektspezifische Angaben.}
+\GlossaryDefine{semio}{Quelloffenes Software-Toolkit zur Beschreibung, Verknüpfung und räumlichen Anordnung digitaler Baukomponenten; technische Grundlage des Entwurfswerkzeugs.}
+\GlossaryDefine{Human-Interface-Design}{Gestaltung der Bedienoberflächen und Interaktionsabläufe zwischen Nutzenden und der digitalen Arbeitsumgebung.}
+\GlossaryDefine{User-Experience}{Wahrnehmung und Einbindung der digitalen Arbeitsumgebung in den tatsächlichen Arbeitsablauf der Nutzenden.}
+\GlossaryDefine{Entwurfsgrammatik}{Regelwerk des Projekts dafür, wie Entwurfsvarianten gebildet, verändert und auf Zulässigkeit geprüft werden.}
+\GlossaryDefine{Test-Case}{Realer oder realitätsnaher Anwendungsfall, an dem die digitale Werkzeugkette schrittweise entwickelt und geprüft wird.}
+
+\AbbreviationDefine{AP}{Arbeitspaket}{Klar abgegrenzter Teilbereich des Projekts mit eigenen Zielen und Aufgaben.}
+\AbbreviationDefine{API}{Application Programming Interface}{Festgelegte Programmierschnittstelle, über die zwei Computerprogramme Daten austauschen.}
+\AbbreviationDefine{KI}{Künstliche Intelligenz}{Oberbegriff für Computerprogramme, die Aufgaben lösen, für die normalerweise menschliches Denken nötig ist.}
+\AbbreviationDefine{LLM}{Large-Language-Model}{Mit sehr großen Textmengen trainiertes Computerprogramm, das Texte verstehen, beantworten und formulieren kann.}
+\AbbreviationDefine{HID}{Human Interface Design}{Gestaltung, wie Menschen ein Computerprogramm bedienen und mit ihm interagieren.}
+\AbbreviationDefine{REST}{Representational State Transfer}{Verbreitetes technisches Verfahren, mit dem Computerprogramme über das Internet standardisiert Daten austauschen.}
+\AbbreviationDefine{NGS}{Nachhaltige Gebäudesysteme}{Am Projekt beteiligte Abteilung der Leibniz Universität Hannover.}
+\AbbreviationDefine{KET}{Konstruktives Entwerfen und Tragwerksplanung}{Am Projekt beteiligte Abteilung der Universität der Künste Berlin.}
+\AbbreviationDefine{BBSR}{Bundesinstitut für Bau-, Stadt- und Raumforschung}{Bundesbehörde, die dieses Forschungsvorhaben fördert.}
+
+% Reset bold to normal (scoped to this document): the table header cells get a
+% synthetic FakeBold via \SemioSansBold (defined in semio-window.sty). Redefine it
+% here — after the class/window.sty have loaded — to the plain Regular face so
+% header rows (Plattform, Land, …) render at normal weight without touching the
+% shared style files or any other report.
+\makeatletter
+\renewfontfamily\SemioSansBold[Path=\semio@font@root anta/]{Anta-Regular.ttf}
+\makeatother
+
+% Anlage SK — Systemkarte plus konsolidierte TikZ-Stile für Karte und
+% Prüftabellen. tikz wird bereits von semio-window.sty geladen; hier nur
+% zusätzliche Bibliotheken und die Zeichenstile.
+\usetikzlibrary{matrix,positioning,fit,calc}
+\makeatletter
+\tikzset{
+  semio/.style={every node/.append style={outer sep=0pt}},
+  semio cell/.style={
+    draw=semio-chrome-border-normal, line width=\semio@stroke@hairline,
+    fill=semio-chrome-canvas, align=left, anchor=center,
+    inner xsep=0.55em, inner ysep=0.34em,
+    font=\SemioSans\fontsize{7.2pt}{9.4pt}\selectfont,
+    text=semio-chrome-text-normal},
+  semio module/.style={semio cell, fill=semio-chrome-window, text=semio-chrome-foreground},
+  semio band/.style={draw=semio-chrome-border-emphasized,
+    line width=\semio@stroke@default, fill=none},
+  semio chip/.style={draw=semio-chrome-border-normal,
+    line width=\semio@stroke@hairline, fill=semio-chrome-panel,
+    text=semio-chrome-foreground,
+    font=\SemioMono\fontsize{7.2pt}{8.4pt}\selectfont,
+    inner xsep=0.4em, inner ysep=0.2em},
+  semio edge/.style={draw=semio-chrome-border-emphasized,
+    line width=\semio@stroke@hairline, -latex},
+  semio edge synth/.style={semio edge, dash pattern=on 2.25pt off 1.5pt},
+  semio bar/.style={draw=semio-chrome-border-normal,
+    line width=\semio@stroke@hairline, fill=semio-chrome-panel},
+}
+\makeatother
+% Hürden-Baum (Anlage HW): eigener Mechanismus semio-tree.sty (SemioTree /
+% SemioTreeGroup / SemioTreeLeaf), von semio.cls geladen wie semio-graph.sty --
+% keine Diagramm-Vokabel lebt im Dokument-Preamble.
+
+\begin{document}
+\ExplSyntaxOn
+\ProvideDocumentCommand \SemioCellList { O{;} m }
+  {
+    \seq_set_split:Nnn \l_tmpa_seq {#1} {#2}
+    \int_zero:N \l_tmpa_int
+    \seq_map_inline:Nn \l_tmpa_seq
+      {
+        \int_incr:N \l_tmpa_int
+        \int_compare:nNnT \l_tmpa_int > 1 { \par \noindent }
+        \hangindent=0.8em \hangafter=1
+        \textcolor{semio-chrome-border-normal}{\textendash}~%
+        \tl_trim_spaces:n {##1}%
+      }
+  }
+\ProvideDocumentCommand \SemioCellListInline { O{;} m }
+  {
+    \seq_set_split:Nnn \l_tmpa_seq {#1} {#2}
+    \int_zero:N \l_tmpa_int
+    \seq_map_inline:Nn \l_tmpa_seq
+      {
+        \int_incr:N \l_tmpa_int
+        \int_compare:nNnT \l_tmpa_int > 1
+          { \textcolor{semio-chrome-border-normal}{~\textperiodcentered}~ }
+        \tl_trim_spaces:n {##1}%
+      }
+  }
+\ExplSyntaxOff
+\makemainmatter
+\part{Anlage BT}
+\section{Akteursnetze nach Land}
+{\SemioSans\fontsize{7.6pt}{9.5pt}\selectfont Ein Netz je Land \textendash\ nur zusammenh\"angende Cluster ab drei Knoten. \SemioGraphLegend{focal=Projekt, attested=neu recherchiert, hypo=Land erschlossen}. Zahl = Zeilennummer der zugeh\"origen Tabelle.\\[2mm]}
+\begin{GraphSpread}
+\begin{GraphFigure}[title={Vereinigtes Königreich \textperiodcentered\ 115 Organisationen \textperiodcentered\ 14 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{114.96,24.49}{113.56,18.44}
+\SemioGraphEdge{95.97,20.43}{79.96,22.99}
+\SemioGraphEdge{95.97,20.43}{113.56,18.44}
+\SemioGraphEdge{119.43,18.85}{113.56,18.44}
+\SemioGraphEdge{37.48,25.62}{30.91,29.72}
+\SemioGraphEdge{31.97,35.40}{30.91,29.72}
+\SemioGraphEdge{121.61,37.10}{113.86,37.68}
+\SemioGraphEdge{107.91,35.23}{113.86,37.68}
+\SemioGraphEdge{120.12,42.24}{113.86,37.68}
+\SemioGraphEdge{118.88,32.51}{113.86,37.68}
+\SemioGraphEdge{104.08,40.30}{96.75,34.73}
+\SemioGraphEdge{104.08,40.30}{113.86,37.68}
+\SemioGraphEdge{109.89,44.08}{113.86,37.68}
+\SemioGraphEdge{115.23,44.40}{113.86,37.68}
+\SemioGraphEdge{34.16,15.25}{29.22,10.76}
+\SemioGraphEdge{36.04,6.52}{41.49,6.55}
+\SemioGraphEdge{36.04,6.52}{29.22,10.76}
+\SemioGraphEdge{22.52,7.13}{29.22,10.76}
+\SemioGraphEdge{26.70,17.10}{29.22,10.76}
+\SemioGraphEdge{56.15,10.65}{52.26,16.58}
+\SemioGraphEdge{45.68,21.56}{52.26,16.58}
+\SemioGraphEdge{44.69,14.77}{52.26,16.58}
+\SemioGraphEdge{57.80,21.31}{52.26,16.58}
+\SemioGraphEdge{59.29,15.90}{52.26,16.58}
+\SemioGraphEdge{52.13,24.21}{52.26,16.58}
+\SemioGraphEdge{49.87,10.23}{52.26,16.58}
+\SemioGraphEdge{86.28,43.35}{96.39,40.07}
+\SemioGraphEdge{91.02,45.84}{96.39,40.07}
+\SemioGraphEdge{102.22,34.57}{104.56,27.73}
+\SemioGraphEdge{102.22,34.57}{96.75,34.73}
+\SemioGraphEdge{102.22,34.57}{96.39,40.07}
+\SemioGraphEdge{104.56,27.73}{111.79,29.63}
+\SemioGraphEdge{104.56,27.73}{98.22,28.43}
+\SemioGraphEdge{104.56,27.73}{113.86,37.68}
+\SemioGraphEdge{104.56,27.73}{96.39,40.07}
+\SemioGraphEdge{104.56,27.73}{103.22,16.64}
+\SemioGraphEdge{104.56,27.73}{113.56,18.44}
+\SemioGraphEdge{101.39,45.14}{96.39,40.07}
+\SemioGraphEdge{96.29,46.74}{96.39,40.07}
+\SemioGraphEdge{89.09,38.22}{96.39,40.07}
+\SemioGraphEdge{88.60,20.09}{85.02,24.87}
+\SemioGraphEdge{90.12,14.96}{85.02,24.87}
+\SemioGraphEdge{80.98,29.47}{85.02,24.87}
+\SemioGraphEdge{84.08,13.24}{85.02,24.87}
+\SemioGraphEdge{90.27,29.95}{96.75,34.73}
+\SemioGraphEdge{90.27,29.95}{85.02,24.87}
+\SemioGraphEdge{81.30,17.81}{85.02,24.87}
+\SemioGraphEdge{91.30,24.70}{85.02,24.87}
+\SemioGraphEdge{86.17,33.38}{80.00,34.74}
+\SemioGraphEdge{86.17,33.38}{96.75,34.73}
+\SemioGraphEdge{86.17,33.38}{85.02,24.87}
+\SemioGraphEdge{80.00,34.74}{85.02,24.87}
+\SemioGraphEdge{55.64,30.72}{51.64,37.63}
+\SemioGraphEdge{55.64,30.72}{49.17,32.50}
+\SemioGraphEdge{41.66,33.75}{51.64,37.63}
+\SemioGraphEdge{41.66,33.75}{49.17,32.50}
+\SemioGraphEdge{57.12,36.32}{51.64,37.63}
+\SemioGraphEdge{57.12,36.32}{49.17,32.50}
+\SemioGraphEdge{44.63,40.61}{51.64,37.63}
+\SemioGraphEdge{44.63,40.61}{49.17,32.50}
+\SemioGraphEdge{111.36,12.61}{118.88,12.18}
+\SemioGraphEdge{124.20,7.09}{118.88,12.18}
+\SemioGraphEdge{124.14,13.18}{118.88,12.18}
+\SemioGraphEdge{124.14,13.18}{113.56,18.44}
+\SemioGraphEdge{118.61,6.04}{118.88,12.18}
+\SemioGraphEdge{118.61,6.04}{113.56,18.44}
+\SemioGraphEdge{107.92,6.32}{118.88,12.18}
+\SemioGraphEdge{107.92,6.32}{103.22,16.64}
+\SemioGraphEdge{126.18,18.12}{118.88,12.18}
+\SemioGraphEdge{105.14,10.90}{103.22,16.64}
+\SemioGraphEdge{96.32,14.81}{103.22,16.64}
+\SemioGraphEdge{96.79,9.48}{103.22,16.64}
+\SemioGraphEdge{102.04,22.25}{103.22,16.64}
+\SemioGraphEdge{107.71,22.11}{103.22,16.64}
+\SemioGraphEdge{107.71,22.11}{113.56,18.44}
+\SemioGraphEdge{102.09,6.34}{103.22,16.64}
+\SemioGraphEdge{120.31,24.13}{113.56,18.44}
+\SemioGraphEdge{113.26,5.95}{118.88,12.18}
+\SemioGraphEdge{113.26,5.95}{113.56,18.44}
+\SemioGraphEdge{72.86,18.23}{79.96,22.99}
+\SemioGraphEdge{71.52,23.94}{79.96,22.99}
+\SemioGraphEdge{77.22,13.88}{79.96,22.99}
+\SemioGraphEdge{74.05,28.93}{79.96,22.99}
+\SemioGraphEdge{96.75,34.73}{98.22,28.43}
+\SemioGraphNode[state=hypo]{114.96,24.49}{U13}
+\SemioGraphNode{95.97,20.43}{U29}
+\SemioGraphNode{119.43,18.85}{U12}
+\SemioGraphNode{65.22,21.59}{M04}
+\SemioGraphNode{156.20,47.00}{M09}
+\SemioGraphNode{143.26,3.00}{X01}
+\SemioGraphNode{138.13,11.72}{M13}
+\SemioGraphNode{72.47,8.94}{S01}
+\SemioGraphNode{64.00,40.95}{M19}
+\SemioGraphNode{75.13,47.00}{M21}
+\SemioGraphNode{68.41,47.00}{S02}
+\SemioGraphNode{12.62,43.32}{X03}
+\SemioGraphNode[state=hypo]{37.48,25.62}{F02}
+\SemioGraphNode[state=hypo]{31.97,35.40}{U59}
+\SemioGraphNode[state=hypo]{121.61,37.10}{O01}
+\SemioGraphNode[state=hypo]{107.91,35.23}{U48}
+\SemioGraphNode[state=hypo]{120.12,42.24}{I01}
+\SemioGraphNode[state=hypo]{118.88,32.51}{U36}
+\SemioGraphNode[state=hypo]{104.08,40.30}{U62}
+\SemioGraphNode[state=hypo]{109.89,44.08}{U10}
+\SemioGraphNode[state=hypo]{115.23,44.40}{U28}
+\SemioGraphNode[state=hypo]{34.16,15.25}{N02}
+\SemioGraphNode[state=hypo]{36.04,6.52}{U41}
+\SemioGraphNode[state=hypo]{22.52,7.13}{F01}
+\SemioGraphNode[state=hypo]{26.70,17.10}{X02}
+\SemioGraphNode[state=hypo]{56.15,10.65}{U19}
+\SemioGraphNode[state=hypo]{45.68,21.56}{O03}
+\SemioGraphNode[state=hypo]{44.69,14.77}{U47}
+\SemioGraphNode[state=hypo]{57.80,21.31}{U46}
+\SemioGraphNode[state=hypo]{59.29,15.90}{U37}
+\SemioGraphNode[state=hypo]{52.13,24.21}{N04}
+\SemioGraphNode[state=hypo]{49.87,10.23}{G02}
+\SemioGraphNode[state=hypo]{86.28,43.35}{U31}
+\SemioGraphNode[state=hypo]{91.02,45.84}{U05}
+\SemioGraphNode{102.22,34.57}{U33}
+\SemioGraphNode{104.56,27.73}{U17}
+\SemioGraphNode[state=hypo]{101.39,45.14}{U24}
+\SemioGraphNode[state=hypo]{96.29,46.74}{U56}
+\SemioGraphNode[state=hypo]{89.09,38.22}{U09}
+\SemioGraphNode[state=hypo]{88.60,20.09}{U26}
+\SemioGraphNode[state=hypo]{90.12,14.96}{U63}
+\SemioGraphNode[state=hypo]{80.98,29.47}{U52}
+\SemioGraphNode[state=hypo]{84.08,13.24}{U20}
+\SemioGraphNode[state=hypo]{90.27,29.95}{U61}
+\SemioGraphNode[state=hypo]{81.30,17.81}{U27}
+\SemioGraphNode[state=hypo]{91.30,24.70}{U40}
+\SemioGraphNode[state=hypo]{86.17,33.38}{U16}
+\SemioGraphNode[state=hypo]{80.00,34.74}{U53}
+\SemioGraphNode[state=hypo]{55.64,30.72}{U42}
+\SemioGraphNode[state=hypo]{41.66,33.75}{U18}
+\SemioGraphNode[state=hypo]{57.12,36.32}{U51}
+\SemioGraphNode[state=hypo]{44.63,40.61}{U30}
+\SemioGraphNode[state=hypo]{111.36,12.61}{U54}
+\SemioGraphNode[state=hypo]{124.20,7.09}{U49}
+\SemioGraphNode{124.14,13.18}{U01}
+\SemioGraphNode{118.61,6.04}{U55}
+\SemioGraphNode[state=hypo]{107.92,6.32}{U39}
+\SemioGraphNode[state=hypo]{126.18,18.12}{U23}
+\SemioGraphNode[state=hypo]{105.14,10.90}{U38}
+\SemioGraphNode[state=hypo]{96.32,14.81}{U07}
+\SemioGraphNode[state=hypo]{96.79,9.48}{U34}
+\SemioGraphNode[state=hypo]{102.04,22.25}{U02}
+\SemioGraphNode[state=hypo]{107.71,22.11}{U44}
+\SemioGraphNode[state=hypo]{102.09,6.34}{U35}
+\SemioGraphNode[state=hypo]{120.31,24.13}{U32}
+\SemioGraphNode[state=hypo]{113.26,5.95}{U25}
+\SemioGraphNode[state=hypo]{72.86,18.23}{N01}
+\SemioGraphNode[state=hypo]{71.52,23.94}{O04}
+\SemioGraphNode[state=hypo]{77.22,13.88}{U08}
+\SemioGraphNode{61.22,47.00}{U04}
+\SemioGraphNode{41.49,6.55}{F03}
+\SemioGraphNode{73.50,40.79}{O02}
+\SemioGraphNode{51.64,37.63}{U45}
+\SemioGraphNode[state=hypo]{74.05,28.93}{U22}
+\SemioGraphNode{152.79,3.00}{N06}
+\SemioGraphNode[state=attested]{90.68,3.00}{G01}
+\SemioGraphNode[state=attested]{152.15,35.09}{M01}
+\SemioGraphNode[state=attested]{97.07,3.00}{U03}
+\SemioGraphNode[state=attested]{178.00,47.00}{M02}
+\SemioGraphNode[state=attested]{16.24,25.46}{M03}
+\SemioGraphNode[state=attested]{65.38,10.05}{U06}
+\SemioGraphNode[state=attested]{81.49,47.00}{U11}
+\SemioGraphNode[state=attested]{111.79,29.63}{U14}
+\SemioGraphNode[state=attested]{84.98,3.00}{U15}
+\SemioGraphNode[state=attested]{50.49,3.00}{M06}
+\SemioGraphNode[state=attested]{147.70,16.30}{M10}
+\SemioGraphNode[state=attested]{155.84,24.92}{N03}
+\SemioGraphNode[state=attested]{144.60,29.25}{M11}
+\SemioGraphNode[state=attested]{68.66,34.81}{M12}
+\SemioGraphNode[state=attested]{133.48,30.13}{M14}
+\SemioGraphNode[state=attested]{174.32,3.00}{U43}
+\SemioGraphNode[state=attested]{63.88,29.34}{M15}
+\SemioGraphNode[state=attested]{28.66,47.00}{M16}
+\SemioGraphNode[state=attested]{166.21,47.00}{G03}
+\SemioGraphNode[state=attested]{54.28,47.00}{M17}
+\SemioGraphNode[state=attested]{128.73,47.00}{M18}
+\SemioGraphNode[state=attested]{164.14,33.75}{U50}
+\SemioGraphNode[state=attested]{66.05,3.00}{M20}
+\SemioGraphNode[state=attested]{138.33,21.60}{M22}
+\SemioGraphNode[state=attested]{20.54,47.00}{M23}
+\SemioGraphNode[state=attested]{158.75,14.34}{U57}
+\SemioGraphNode[state=attested]{96.75,34.73}{U58}
+\SemioGraphNode[state=attested]{137.33,47.00}{M24}
+\SemioGraphNode[state=attested]{138.57,37.94}{M25}
+\SemioGraphNode[state=attested]{3.00,27.33}{F04}
+\SemioGraphNode[state=attested]{168.03,21.34}{M26}
+\SemioGraphNode[state=attested]{36.84,47.00}{M29}
+\SemioGraphNode[state=attested]{79.28,3.00}{M05}
+\SemioGraphNode[state=attested]{46.19,47.00}{M07}
+\SemioGraphNode[state=attested]{98.22,28.43}{U21}
+\SemioGraphNode[state=attested]{133.65,3.00}{M08}
+\SemioGraphNode[state=attested]{178.00,14.60}{N05}
+\SemioGraphNode[state=attested]{73.11,3.00}{U60}
+\SemioGraphNode[state=attested]{162.65,3.00}{M27}
+\SemioGraphNode[state=attested]{59.20,3.00}{M28}
+\SemioGraphNode[state=focal]{30.91,29.72}{P5}
+\SemioGraphNode[state=focal]{113.86,37.68}{P3}
+\SemioGraphNode[state=focal]{29.22,10.76}{P4}
+\SemioGraphNode[state=focal]{52.26,16.58}{P8}
+\SemioGraphNode[state=focal]{96.39,40.07}{P9}
+\SemioGraphNode[state=focal]{85.02,24.87}{P10}
+\SemioGraphNode[state=focal]{79.96,22.99}{P2}
+\SemioGraphNode[state=focal]{49.17,32.50}{P11}
+\SemioGraphNode[state=focal]{118.88,12.18}{P13}
+\SemioGraphNode[state=focal]{103.22,16.64}{P14}
+\SemioGraphNode[state=focal]{113.56,18.44}{P1}
+\SemioGraphNode[state=focal]{3.00,47.00}{P6}
+\SemioGraphNode[state=focal]{147.01,47.00}{P7}
+\SemioGraphNode[state=focal]{178.00,31.83}{P12}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Deutschland \textperiodcentered\ 82 Organisationen \textperiodcentered\ 18 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{116.51,26.93}{112.65,21.02}
+\SemioGraphEdge{144.31,6.84}{143.98,14.69}
+\SemioGraphEdge{144.31,6.84}{136.71,6.45}
+\SemioGraphEdge{133.96,16.97}{143.98,14.69}
+\SemioGraphEdge{133.96,16.97}{127.18,20.72}
+\SemioGraphEdge{150.37,13.84}{143.98,14.69}
+\SemioGraphEdge{154.37,32.26}{148.08,29.72}
+\SemioGraphEdge{154.03,42.98}{148.23,43.66}
+\SemioGraphEdge{139.74,43.84}{148.23,43.66}
+\SemioGraphEdge{151.49,23.98}{148.08,29.72}
+\SemioGraphEdge{125.84,26.54}{127.18,20.72}
+\SemioGraphEdge{86.23,38.27}{89.64,31.13}
+\SemioGraphEdge{82.94,30.91}{89.64,31.13}
+\SemioGraphEdge{89.54,24.59}{89.64,31.13}
+\SemioGraphEdge{96.60,36.00}{89.64,31.13}
+\SemioGraphEdge{69.14,26.74}{72.64,19.56}
+\SemioGraphEdge{80.41,21.38}{72.64,19.56}
+\SemioGraphEdge{75.71,13.90}{72.64,19.56}
+\SemioGraphEdge{141.91,23.84}{148.08,29.72}
+\SemioGraphEdge{138.21,30.17}{148.08,29.72}
+\SemioGraphEdge{66.71,16.69}{72.64,19.56}
+\SemioGraphEdge{142.38,36.32}{148.23,43.66}
+\SemioGraphEdge{142.38,36.32}{148.08,29.72}
+\SemioGraphEdge{119.26,16.68}{112.65,21.02}
+\SemioGraphEdge{100.78,13.60}{103.64,20.08}
+\SemioGraphEdge{109.76,26.89}{112.65,21.02}
+\SemioGraphEdge{109.78,13.23}{112.65,21.02}
+\SemioGraphEdge{103.64,20.08}{101.00,26.35}
+\SemioGraphEdge{103.64,20.08}{97.49,19.20}
+\SemioGraphEdge{103.64,20.08}{112.65,21.02}
+\SemioGraphEdge{129.92,6.47}{124.58,6.75}
+\SemioGraphEdge{116.87,6.45}{124.58,6.75}
+\SemioGraphNode{46.52,24.48}{M06}
+\SemioGraphNode{72.63,37.16}{U34}
+\SemioGraphNode[state=hypo]{116.51,26.93}{I01}
+\SemioGraphNode[state=hypo]{144.31,6.84}{F03}
+\SemioGraphNode[state=hypo]{133.96,16.97}{F06}
+\SemioGraphNode[state=hypo]{150.37,13.84}{U02}
+\SemioGraphNode{154.37,32.26}{U43}
+\SemioGraphNode[state=hypo]{154.03,42.98}{U36}
+\SemioGraphNode[state=hypo]{139.74,43.84}{U17}
+\SemioGraphNode[state=hypo]{3.00,3.00}{U35}
+\SemioGraphNode[state=hypo]{151.49,23.98}{O01}
+\SemioGraphNode[state=hypo]{125.84,26.54}{U41}
+\SemioGraphNode[state=hypo]{86.23,38.27}{O03}
+\SemioGraphNode[state=hypo]{82.94,30.91}{F13}
+\SemioGraphNode[state=hypo]{89.54,24.59}{G02}
+\SemioGraphNode[state=hypo]{96.60,36.00}{G01}
+\SemioGraphNode[state=hypo]{69.14,26.74}{U22}
+\SemioGraphNode[state=hypo]{80.41,21.38}{U15}
+\SemioGraphNode[state=hypo]{75.71,13.90}{U23}
+\SemioGraphNode{68.59,3.00}{I02}
+\SemioGraphNode{17.09,33.71}{F04}
+\SemioGraphNode[state=hypo]{141.91,23.84}{O02}
+\SemioGraphNode[state=hypo]{138.21,30.17}{U14}
+\SemioGraphNode{87.87,11.36}{F05}
+\SemioGraphNode{13.08,47.00}{U28}
+\SemioGraphNode{14.33,19.58}{F09}
+\SemioGraphNode{66.71,16.69}{U11}
+\SemioGraphNode{3.00,25.06}{U31}
+\SemioGraphNode{142.38,36.32}{U29}
+\SemioGraphNode{119.26,16.68}{U39}
+\SemioGraphNode{178.00,12.34}{F01}
+\SemioGraphNode{40.02,33.82}{F10}
+\SemioGraphNode{100.78,13.60}{U10}
+\SemioGraphNode{109.76,26.89}{U32}
+\SemioGraphNode{109.78,13.23}{U37}
+\SemioGraphNode{84.76,3.00}{F07}
+\SemioGraphNode{24.49,24.94}{U40}
+\SemioGraphNode{60.91,3.00}{S03}
+\SemioGraphNode{132.78,47.00}{F14}
+\SemioGraphNode{127.92,37.11}{F02}
+\SemioGraphNode{160.04,3.00}{F12}
+\SemioGraphNode{103.64,20.08}{S01}
+\SemioGraphNode{55.25,47.00}{U38}
+\SemioGraphNode{93.20,3.00}{M02}
+\SemioGraphNode{164.22,47.00}{N02}
+\SemioGraphNode{100.20,47.00}{U42}
+\SemioGraphNode{178.00,21.47}{U16}
+\SemioGraphNode{24.74,3.00}{U18}
+\SemioGraphNode{44.42,3.00}{S02}
+\SemioGraphNode[state=attested]{101.00,26.35}{U01}
+\SemioGraphNode[state=attested]{76.76,3.00}{U03}
+\SemioGraphNode[state=attested]{108.02,47.00}{M01}
+\SemioGraphNode[state=attested]{14.42,3.00}{U04}
+\SemioGraphNode[state=attested]{22.81,47.00}{U05}
+\SemioGraphNode[state=attested]{52.89,3.00}{U06}
+\SemioGraphNode[state=attested]{42.16,13.70}{U07}
+\SemioGraphNode[state=attested]{25.65,13.85}{U08}
+\SemioGraphNode[state=attested]{62.53,47.00}{U09}
+\SemioGraphNode[state=attested]{29.67,35.13}{N03}
+\SemioGraphNode[state=attested]{106.56,38.36}{U12}
+\SemioGraphNode[state=attested]{57.26,24.37}{U13}
+\SemioGraphNode[state=attested]{31.92,47.00}{U19}
+\SemioGraphNode[state=attested]{92.62,47.00}{N04}
+\SemioGraphNode[state=attested]{168.44,3.00}{U20}
+\SemioGraphNode[state=attested]{101.57,3.00}{U21}
+\SemioGraphNode[state=attested]{124.45,47.00}{I03}
+\SemioGraphNode[state=attested]{178.00,38.94}{U24}
+\SemioGraphNode[state=attested]{35.03,3.00}{U25}
+\SemioGraphNode[state=attested]{84.77,47.00}{U26}
+\SemioGraphNode[state=attested]{115.89,47.00}{U27}
+\SemioGraphNode[state=attested]{110.01,3.00}{F08}
+\SemioGraphNode[state=attested]{47.70,47.00}{U30}
+\SemioGraphNode[state=attested]{51.14,35.14}{M07}
+\SemioGraphNode[state=attested]{35.30,22.20}{U33}
+\SemioGraphNode[state=attested]{3.00,35.88}{I05}
+\SemioGraphNode[state=attested]{69.63,47.00}{F11}
+\SemioGraphNode[state=attested]{177.99,30.17}{N01}
+\SemioGraphNode[state=attested]{61.80,34.31}{M03}
+\SemioGraphNode[state=attested]{129.92,6.47}{M04}
+\SemioGraphNode[state=attested]{116.87,6.45}{M05}
+\SemioGraphNode[state=attested]{97.49,19.20}{I04}
+\SemioGraphNode[state=attested]{124.58,6.75}{N05}
+\SemioGraphNode[state=focal]{143.98,14.69}{P3}
+\SemioGraphNode[state=focal]{148.23,43.66}{P6}
+\SemioGraphNode[state=focal]{53.88,13.92}{P8}
+\SemioGraphNode[state=focal]{148.08,29.72}{P10}
+\SemioGraphNode[state=focal]{136.71,6.45}{P12}
+\SemioGraphNode[state=focal]{127.18,20.72}{P13}
+\SemioGraphNode[state=focal]{89.64,31.13}{P14}
+\SemioGraphNode[state=focal]{72.64,19.56}{P17}
+\SemioGraphNode[state=focal]{151.76,3.00}{P11}
+\SemioGraphNode[state=focal]{112.65,21.02}{P2}
+\SemioGraphNode[state=focal]{164.33,23.33}{P1}
+\SemioGraphNode[state=focal]{118.17,38.42}{P4}
+\SemioGraphNode[state=focal]{178.00,47.00}{P5}
+\SemioGraphNode[state=focal]{40.09,47.00}{P7}
+\SemioGraphNode[state=focal]{77.25,47.00}{P9}
+\SemioGraphNode[state=focal]{178.00,3.00}{P15}
+\SemioGraphNode[state=focal]{3.00,47.00}{P16}
+\SemioGraphNode[state=focal]{3.00,14.09}{P18}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Niederlande \textperiodcentered\ 102 Organisationen \textperiodcentered\ 15 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{120.35,18.88}{125.54,24.11}
+\SemioGraphEdge{120.35,18.88}{130.25,20.03}
+\SemioGraphEdge{137.25,24.11}{125.54,24.11}
+\SemioGraphEdge{137.25,24.11}{130.25,20.03}
+\SemioGraphEdge{137.25,24.11}{149.24,23.27}
+\SemioGraphEdge{125.63,15.75}{130.25,20.03}
+\SemioGraphEdge{134.44,14.59}{130.25,20.03}
+\SemioGraphEdge{135.42,33.38}{130.25,20.03}
+\SemioGraphEdge{135.42,33.38}{124.16,36.86}
+\SemioGraphEdge{135.42,33.38}{147.40,40.13}
+\SemioGraphEdge{129.20,11.77}{130.25,20.03}
+\SemioGraphEdge{125.37,45.07}{124.16,36.86}
+\SemioGraphEdge{119.88,44.26}{124.16,36.86}
+\SemioGraphEdge{117.16,34.38}{124.16,36.86}
+\SemioGraphEdge{122.05,30.80}{124.16,36.86}
+\SemioGraphEdge{128.43,32.39}{124.16,36.86}
+\SemioGraphEdge{116.27,40.12}{124.16,36.86}
+\SemioGraphEdge{130.63,42.74}{124.16,36.86}
+\SemioGraphEdge{59.43,18.98}{61.19,12.56}
+\SemioGraphEdge{65.89,16.88}{61.19,12.56}
+\SemioGraphEdge{55.81,6.98}{61.19,12.56}
+\SemioGraphEdge{67.33,10.43}{61.19,12.56}
+\SemioGraphEdge{34.58,13.84}{42.02,13.39}
+\SemioGraphEdge{37.16,19.60}{42.02,13.39}
+\SemioGraphEdge{36.20,7.69}{42.02,13.39}
+\SemioGraphEdge{50.54,13.12}{42.02,13.39}
+\SemioGraphEdge{43.29,21.96}{42.02,13.39}
+\SemioGraphEdge{41.71,6.70}{42.02,13.39}
+\SemioGraphEdge{49.24,19.53}{42.02,13.39}
+\SemioGraphEdge{48.43,7.18}{42.02,13.39}
+\SemioGraphEdge{151.36,11.61}{157.48,7.42}
+\SemioGraphEdge{151.60,3.63}{157.48,7.42}
+\SemioGraphEdge{146.63,6.76}{157.48,7.42}
+\SemioGraphEdge{154.82,36.16}{147.40,40.13}
+\SemioGraphEdge{145.00,45.79}{147.40,40.13}
+\SemioGraphEdge{143.16,35.01}{147.40,40.13}
+\SemioGraphEdge{151.94,45.87}{147.40,40.13}
+\SemioGraphEdge{157.37,42.93}{147.40,40.13}
+\SemioGraphEdge{139.76,44.74}{147.40,40.13}
+\SemioGraphEdge{140.10,39.40}{147.40,40.13}
+\SemioGraphEdge{55.40,35.66}{46.56,38.17}
+\SemioGraphEdge{46.59,44.38}{46.56,38.17}
+\SemioGraphEdge{53.46,42.86}{46.56,38.17}
+\SemioGraphEdge{38.03,43.56}{33.30,35.54}
+\SemioGraphEdge{38.03,43.56}{46.56,38.17}
+\SemioGraphEdge{88.89,36.73}{94.89,30.59}
+\SemioGraphEdge{94.60,24.16}{94.89,30.59}
+\SemioGraphEdge{89.48,25.73}{94.89,30.59}
+\SemioGraphEdge{101.78,30.13}{94.89,30.59}
+\SemioGraphEdge{100.67,37.19}{94.89,30.59}
+\SemioGraphEdge{94.81,38.90}{94.89,30.59}
+\SemioGraphEdge{100.37,24.97}{94.89,30.59}
+\SemioGraphEdge{87.09,31.39}{94.89,30.59}
+\SemioGraphEdge{142.45,20.56}{149.24,23.27}
+\SemioGraphEdge{158.93,22.82}{149.24,23.27}
+\SemioGraphEdge{142.79,26.21}{149.24,23.27}
+\SemioGraphEdge{148.69,30.45}{149.24,23.27}
+\SemioGraphEdge{156.49,28.91}{149.24,23.27}
+\SemioGraphEdge{154.34,17.52}{149.24,23.27}
+\SemioGraphEdge{146.22,16.77}{149.24,23.27}
+\SemioGraphEdge{108.93,35.18}{109.42,26.97}
+\SemioGraphEdge{108.93,35.18}{108.17,41.19}
+\SemioGraphEdge{80.61,23.25}{77.33,29.45}
+\SemioGraphEdge{80.61,23.25}{82.94,18.30}
+\SemioGraphEdge{95.89,10.73}{101.94,14.11}
+\SemioGraphEdge{101.75,7.96}{101.94,14.11}
+\SemioGraphEdge{95.70,16.64}{101.94,14.11}
+\SemioGraphEdge{109.50,11.23}{101.94,14.11}
+\SemioGraphEdge{108.20,19.00}{101.94,14.11}
+\SemioGraphEdge{125.54,24.11}{117.00,23.20}
+\SemioGraphEdge{117.00,23.20}{109.42,26.97}
+\SemioGraphEdge{41.13,37.87}{46.56,38.17}
+\SemioGraphEdge{50.25,30.42}{46.56,38.17}
+\SemioGraphEdge{41.23,31.15}{33.30,35.54}
+\SemioGraphEdge{41.23,31.15}{46.56,38.17}
+\SemioGraphEdge{163.70,8.63}{157.48,7.42}
+\SemioGraphEdge{29.80,30.10}{33.30,35.54}
+\SemioGraphNode{131.59,3.00}{M11}
+\SemioGraphNode{72.86,39.44}{S02}
+\SemioGraphNode[state=hypo]{120.35,18.88}{U33}
+\SemioGraphNode[state=hypo]{137.25,24.11}{U15}
+\SemioGraphNode[state=hypo]{125.63,15.75}{I03}
+\SemioGraphNode[state=hypo]{134.44,14.59}{F02}
+\SemioGraphNode[state=hypo]{135.42,33.38}{U30}
+\SemioGraphNode[state=hypo]{129.20,11.77}{U24}
+\SemioGraphNode[state=hypo]{125.37,45.07}{O02}
+\SemioGraphNode[state=hypo]{119.88,44.26}{U41}
+\SemioGraphNode[state=hypo]{117.16,34.38}{U19}
+\SemioGraphNode[state=hypo]{122.05,30.80}{U56}
+\SemioGraphNode[state=hypo]{128.43,32.39}{U20}
+\SemioGraphNode[state=hypo]{116.27,40.12}{U46}
+\SemioGraphNode[state=hypo]{130.63,42.74}{F01}
+\SemioGraphNode[state=hypo]{59.43,18.98}{O03}
+\SemioGraphNode[state=hypo]{65.89,16.88}{U16}
+\SemioGraphNode[state=hypo]{55.81,6.98}{U60}
+\SemioGraphNode[state=hypo]{67.33,10.43}{U10}
+\SemioGraphNode[state=hypo]{34.58,13.84}{U25}
+\SemioGraphNode[state=hypo]{37.16,19.60}{U44}
+\SemioGraphNode[state=hypo]{36.20,7.69}{U14}
+\SemioGraphNode[state=hypo]{50.54,13.12}{U03}
+\SemioGraphNode[state=hypo]{43.29,21.96}{U04}
+\SemioGraphNode[state=hypo]{41.71,6.70}{I05}
+\SemioGraphNode[state=hypo]{49.24,19.53}{U39}
+\SemioGraphNode[state=hypo]{48.43,7.18}{U23}
+\SemioGraphNode[state=hypo]{151.36,11.61}{U05}
+\SemioGraphNode[state=hypo]{151.60,3.63}{U51}
+\SemioGraphNode[state=hypo]{146.63,6.76}{S01}
+\SemioGraphNode[state=hypo]{154.82,36.16}{U32}
+\SemioGraphNode[state=hypo]{145.00,45.79}{O07}
+\SemioGraphNode[state=hypo]{143.16,35.01}{U06}
+\SemioGraphNode[state=hypo]{151.94,45.87}{U58}
+\SemioGraphNode[state=hypo]{157.37,42.93}{U55}
+\SemioGraphNode[state=hypo]{139.76,44.74}{U53}
+\SemioGraphNode[state=hypo]{140.10,39.40}{U01}
+\SemioGraphNode[state=hypo]{55.40,35.66}{O04}
+\SemioGraphNode[state=hypo]{46.59,44.38}{U27}
+\SemioGraphNode[state=hypo]{53.46,42.86}{U29}
+\SemioGraphNode[state=hypo]{38.03,43.56}{U45}
+\SemioGraphNode[state=hypo]{88.89,36.73}{O05}
+\SemioGraphNode[state=hypo]{94.60,24.16}{I02}
+\SemioGraphNode[state=hypo]{89.48,25.73}{O06}
+\SemioGraphNode[state=hypo]{101.78,30.13}{U35}
+\SemioGraphNode[state=hypo]{100.67,37.19}{U59}
+\SemioGraphNode[state=hypo]{94.81,38.90}{U22}
+\SemioGraphNode[state=hypo]{100.37,24.97}{U12}
+\SemioGraphNode[state=hypo]{87.09,31.39}{F04}
+\SemioGraphNode[state=hypo]{142.45,20.56}{I04}
+\SemioGraphNode[state=hypo]{158.93,22.82}{U42}
+\SemioGraphNode[state=hypo]{142.79,26.21}{U40}
+\SemioGraphNode[state=hypo]{148.69,30.45}{U47}
+\SemioGraphNode[state=hypo]{156.49,28.91}{U08}
+\SemioGraphNode[state=hypo]{154.34,17.52}{U31}
+\SemioGraphNode[state=hypo]{146.22,16.77}{U18}
+\SemioGraphNode{108.93,35.18}{U02}
+\SemioGraphNode{81.11,3.00}{U09}
+\SemioGraphNode{109.81,47.00}{F03}
+\SemioGraphNode{80.61,23.25}{U48}
+\SemioGraphNode[state=hypo]{95.89,10.73}{O01}
+\SemioGraphNode[state=hypo]{101.75,7.96}{O08}
+\SemioGraphNode[state=hypo]{95.70,16.64}{U11}
+\SemioGraphNode[state=hypo]{109.50,11.23}{U50}
+\SemioGraphNode[state=hypo]{108.20,19.00}{U54}
+\SemioGraphNode{77.33,29.45}{U37}
+\SemioGraphNode{125.54,24.11}{U34}
+\SemioGraphNode{117.00,23.20}{U28}
+\SemioGraphNode{86.24,10.05}{U21}
+\SemioGraphNode{16.50,11.53}{U17}
+\SemioGraphNode{41.13,37.87}{U38}
+\SemioGraphNode{50.25,30.42}{U13}
+\SemioGraphNode{96.00,47.00}{N01}
+\SemioGraphNode{41.23,31.15}{U36}
+\SemioGraphNode{163.70,8.63}{U43}
+\SemioGraphNode{80.68,38.76}{U49}
+\SemioGraphNode{19.75,47.00}{U26}
+\SemioGraphNode{109.42,26.97}{U57}
+\SemioGraphNode{63.67,47.00}{S03}
+\SemioGraphNode{89.46,47.00}{I01}
+\SemioGraphNode{87.88,3.00}{X01}
+\SemioGraphNode[state=attested]{70.10,47.00}{U07}
+\SemioGraphNode[state=attested]{29.80,30.10}{M01}
+\SemioGraphNode[state=attested]{77.14,11.05}{M02}
+\SemioGraphNode[state=attested]{64.13,37.73}{M04}
+\SemioGraphNode[state=attested]{117.87,8.37}{M05}
+\SemioGraphNode[state=attested]{177.05,3.00}{M06}
+\SemioGraphNode[state=attested]{83.12,47.00}{M07}
+\SemioGraphNode[state=attested]{114.26,3.00}{M08}
+\SemioGraphNode[state=attested]{67.49,3.00}{M10}
+\SemioGraphNode[state=attested]{70.35,31.62}{M14}
+\SemioGraphNode[state=attested]{139.28,3.00}{M15}
+\SemioGraphNode[state=attested]{65.27,26.76}{M17}
+\SemioGraphNode[state=attested]{76.69,47.00}{N02}
+\SemioGraphNode[state=attested]{33.30,35.54}{N03}
+\SemioGraphNode[state=attested]{57.38,27.75}{M18}
+\SemioGraphNode[state=attested]{10.57,30.58}{M03}
+\SemioGraphNode[state=attested]{74.62,3.00}{M09}
+\SemioGraphNode[state=attested]{59.99,3.00}{M12}
+\SemioGraphNode[state=attested]{95.28,3.00}{M13}
+\SemioGraphNode[state=attested]{107.00,3.00}{M16}
+\SemioGraphNode[state=attested]{73.58,19.81}{U52}
+\SemioGraphNode[state=focal]{130.25,20.03}{P5}
+\SemioGraphNode[state=focal]{124.16,36.86}{P1}
+\SemioGraphNode[state=focal]{61.19,12.56}{P2}
+\SemioGraphNode[state=focal]{42.02,13.39}{P7}
+\SemioGraphNode[state=focal]{157.48,7.42}{P8}
+\SemioGraphNode[state=focal]{147.40,40.13}{P9}
+\SemioGraphNode[state=focal]{46.56,38.17}{P10}
+\SemioGraphNode[state=focal]{94.89,30.59}{P12}
+\SemioGraphNode[state=focal]{149.24,23.27}{P13}
+\SemioGraphNode[state=focal]{82.94,18.30}{P14}
+\SemioGraphNode[state=focal]{101.94,14.11}{P15}
+\SemioGraphNode[state=focal]{108.17,41.19}{P3}
+\SemioGraphNode[state=focal]{102.39,47.00}{P4}
+\SemioGraphNode[state=focal]{57.20,47.00}{P6}
+\SemioGraphNode[state=focal]{123.26,3.00}{P11}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Schweiz \textperiodcentered\ 71 Organisationen \textperiodcentered\ 10 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{90.04,13.37}{86.99,21.58}
+\SemioGraphEdge{90.04,13.37}{82.45,11.46}
+\SemioGraphEdge{86.99,21.58}{90.85,26.06}
+\SemioGraphEdge{82.45,11.46}{74.63,8.97}
+\SemioGraphEdge{35.47,13.56}{32.57,23.13}
+\SemioGraphEdge{35.47,13.56}{30.78,5.75}
+\SemioGraphEdge{35.47,13.56}{25.55,16.24}
+\SemioGraphEdge{35.47,13.56}{51.49,16.48}
+\SemioGraphEdge{20.59,20.96}{25.55,16.24}
+\SemioGraphEdge{21.40,10.05}{25.55,16.24}
+\SemioGraphEdge{121.98,25.08}{130.07,21.64}
+\SemioGraphEdge{126.84,15.71}{130.07,21.64}
+\SemioGraphEdge{131.08,30.40}{130.07,21.64}
+\SemioGraphEdge{62.46,16.32}{51.49,16.48}
+\SemioGraphEdge{60.99,10.41}{51.49,16.48}
+\SemioGraphEdge{60.91,22.38}{51.49,16.48}
+\SemioGraphEdge{54.55,23.99}{51.49,16.48}
+\SemioGraphEdge{54.74,8.80}{51.49,16.48}
+\SemioGraphEdge{45.86,25.17}{46.01,30.92}
+\SemioGraphEdge{37.73,31.16}{46.01,30.92}
+\SemioGraphEdge{46.85,41.35}{46.01,30.92}
+\SemioGraphEdge{40.12,38.93}{46.01,30.92}
+\SemioGraphEdge{52.81,38.05}{46.01,30.92}
+\SemioGraphEdge{55.50,31.51}{46.01,30.92}
+\SemioGraphEdge{73.47,40.49}{66.85,35.44}
+\SemioGraphEdge{114.38,11.65}{110.28,16.11}
+\SemioGraphEdge{80.60,32.43}{75.34,29.20}
+\SemioGraphEdge{11.28,42.37}{15.21,37.33}
+\SemioGraphEdge{40.27,17.58}{39.61,8.08}
+\SemioGraphEdge{40.27,17.58}{32.57,23.13}
+\SemioGraphEdge{40.27,17.58}{46.89,6.59}
+\SemioGraphEdge{40.27,17.58}{44.33,14.02}
+\SemioGraphEdge{40.27,17.58}{25.55,16.24}
+\SemioGraphEdge{40.27,17.58}{51.49,16.48}
+\SemioGraphEdge{40.27,17.58}{46.01,30.92}
+\SemioGraphEdge{136.70,20.05}{130.07,21.64}
+\SemioGraphEdge{65.41,44.26}{66.85,35.44}
+\SemioGraphEdge{23.57,34.62}{15.21,37.33}
+\SemioGraphEdge{75.80,21.31}{75.34,29.20}
+\SemioGraphEdge{109.96,24.56}{110.28,16.11}
+\SemioGraphEdge{54.93,3.00}{46.89,6.59}
+\SemioGraphNode{129.12,3.00}{M02}
+\SemioGraphNode{132.79,47.00}{M12}
+\SemioGraphNode{56.44,47.00}{M08}
+\SemioGraphNode{90.04,13.37}{M03}
+\SemioGraphNode{178.00,32.10}{M16}
+\SemioGraphNode{160.49,15.99}{M06}
+\SemioGraphNode{103.28,37.37}{S04}
+\SemioGraphNode{139.88,3.00}{M11}
+\SemioGraphNode{86.99,21.58}{S02}
+\SemioGraphNode{150.97,3.00}{U24}
+\SemioGraphNode{34.31,47.00}{M13}
+\SemioGraphNode{117.11,3.00}{M07}
+\SemioGraphNode{98.47,47.00}{M01}
+\SemioGraphNode{160.36,31.04}{M14}
+\SemioGraphNode{118.42,47.00}{S05}
+\SemioGraphNode{82.45,11.46}{M15}
+\SemioGraphNode{150.24,22.96}{X01}
+\SemioGraphNode{88.16,47.00}{X02}
+\SemioGraphNode{35.47,13.56}{U04}
+\SemioGraphNode[state=hypo]{20.59,20.96}{U15}
+\SemioGraphNode{74.63,8.97}{M05}
+\SemioGraphNode[state=hypo]{21.40,10.05}{U25}
+\SemioGraphNode[state=hypo]{121.98,25.08}{I01}
+\SemioGraphNode[state=hypo]{126.84,15.71}{U26}
+\SemioGraphNode[state=hypo]{131.08,30.40}{U13}
+\SemioGraphNode[state=hypo]{62.46,16.32}{O02}
+\SemioGraphNode[state=hypo]{60.99,10.41}{F11}
+\SemioGraphNode[state=hypo]{60.91,22.38}{U18}
+\SemioGraphNode[state=hypo]{54.55,23.99}{U11}
+\SemioGraphNode[state=hypo]{54.74,8.80}{U27}
+\SemioGraphNode[state=hypo]{45.86,25.17}{I03}
+\SemioGraphNode[state=hypo]{37.73,31.16}{U14}
+\SemioGraphNode[state=hypo]{46.85,41.35}{U10}
+\SemioGraphNode[state=hypo]{40.12,38.93}{U09}
+\SemioGraphNode[state=hypo]{52.81,38.05}{U22}
+\SemioGraphNode[state=hypo]{55.50,31.51}{U01}
+\SemioGraphNode[state=hypo]{73.47,40.49}{O01}
+\SemioGraphNode{78.72,47.00}{F08}
+\SemioGraphNode{114.38,11.65}{F02}
+\SemioGraphNode{80.60,32.43}{I02}
+\SemioGraphNode{165.71,47.00}{N03}
+\SemioGraphNode[state=hypo]{11.28,42.37}{X03}
+\SemioGraphNode{40.27,17.58}{U28}
+\SemioGraphNode{136.70,20.05}{U07}
+\SemioGraphNode{100.85,12.12}{U05}
+\SemioGraphNode{39.61,8.08}{U23}
+\SemioGraphNode{65.41,44.26}{F07}
+\SemioGraphNode{142.66,47.00}{F03}
+\SemioGraphNode{91.71,38.44}{F01}
+\SemioGraphNode{82.78,3.00}{F04}
+\SemioGraphNode{90.85,26.06}{U08}
+\SemioGraphNode{23.57,34.62}{U21}
+\SemioGraphNode{75.80,21.31}{F10}
+\SemioGraphNode{105.00,3.00}{F05}
+\SemioGraphNode{153.95,47.00}{M10}
+\SemioGraphNode{32.57,23.13}{N02}
+\SemioGraphNode{114.52,35.65}{U17}
+\SemioGraphNode{69.28,3.00}{F09}
+\SemioGraphNode{178.00,3.00}{N01}
+\SemioGraphNode{100.68,26.38}{U19}
+\SemioGraphNode{163.72,3.00}{S03}
+\SemioGraphNode{30.78,5.75}{U20}
+\SemioGraphNode{178.00,18.53}{U02}
+\SemioGraphNode{109.96,24.56}{U12}
+\SemioGraphNode{93.62,3.00}{U06}
+\SemioGraphNode{178.00,47.00}{U16}
+\SemioGraphNode{145.21,34.58}{U03}
+\SemioGraphNode{54.93,3.00}{S01}
+\SemioGraphNode{46.89,6.59}{M04}
+\SemioGraphNode[state=attested]{23.28,47.00}{M09}
+\SemioGraphNode[state=attested]{75.34,29.20}{F06}
+\SemioGraphNode[state=focal]{44.33,14.02}{P2}
+\SemioGraphNode[state=focal]{25.55,16.24}{P3}
+\SemioGraphNode[state=focal]{130.07,21.64}{P4}
+\SemioGraphNode[state=focal]{51.49,16.48}{P6}
+\SemioGraphNode[state=focal]{46.01,30.92}{P7}
+\SemioGraphNode[state=focal]{66.85,35.44}{P9}
+\SemioGraphNode[state=focal]{15.21,37.33}{P8}
+\SemioGraphNode[state=focal]{110.28,16.11}{P10}
+\SemioGraphNode[state=focal]{108.59,47.00}{P1}
+\SemioGraphNode[state=focal]{126.06,40.92}{P5}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Frankreich \textperiodcentered\ 102 Organisationen \textperiodcentered\ 6 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{155.92,28.33}{150.01,23.41}
+\SemioGraphEdge{155.92,28.33}{151.32,34.75}
+\SemioGraphEdge{129.57,26.04}{123.83,26.35}
+\SemioGraphEdge{46.03,37.84}{39.04,37.85}
+\SemioGraphEdge{33.45,43.44}{39.04,37.85}
+\SemioGraphEdge{42.65,31.91}{39.04,37.85}
+\SemioGraphEdge{42.31,43.66}{39.04,37.85}
+\SemioGraphEdge{140.51,32.78}{137.44,38.24}
+\SemioGraphEdge{128.34,39.59}{137.44,38.24}
+\SemioGraphEdge{133.40,45.10}{137.44,38.24}
+\SemioGraphEdge{131.33,33.08}{137.44,38.24}
+\SemioGraphEdge{141.37,42.90}{137.44,38.24}
+\SemioGraphEdge{24.50,20.99}{23.30,14.88}
+\SemioGraphEdge{28.54,8.32}{33.26,12.55}
+\SemioGraphEdge{28.54,8.32}{23.30,14.88}
+\SemioGraphEdge{116.59,31.24}{110.13,32.48}
+\SemioGraphEdge{105.17,25.66}{110.13,32.48}
+\SemioGraphEdge{106.21,37.96}{110.13,32.48}
+\SemioGraphEdge{113.85,37.76}{110.13,32.48}
+\SemioGraphEdge{112.16,24.26}{110.13,32.48}
+\SemioGraphEdge{101.83,32.08}{110.13,32.48}
+\SemioGraphEdge{32.01,32.91}{35.51,25.56}
+\SemioGraphEdge{32.01,32.91}{39.04,37.85}
+\SemioGraphEdge{127.95,12.70}{135.34,16.83}
+\SemioGraphEdge{135.34,16.83}{144.05,15.46}
+\SemioGraphEdge{135.34,16.83}{141.30,7.39}
+\SemioGraphEdge{135.34,16.83}{134.53,8.17}
+\SemioGraphEdge{135.34,16.83}{138.42,22.27}
+\SemioGraphEdge{135.34,16.83}{125.97,18.91}
+\SemioGraphEdge{144.05,15.46}{141.30,7.39}
+\SemioGraphEdge{117.83,17.96}{125.97,18.91}
+\SemioGraphEdge{125.97,18.91}{123.83,26.35}
+\SemioGraphNode{151.63,3.00}{M02}
+\SemioGraphNode{125.17,47.00}{M03}
+\SemioGraphNode{85.10,23.49}{M11}
+\SemioGraphNode{42.34,3.00}{S01}
+\SemioGraphNode{155.92,28.33}{M12}
+\SemioGraphNode{110.20,47.00}{S02}
+\SemioGraphNode{100.97,18.65}{M47}
+\SemioGraphNode{149.73,47.00}{X01}
+\SemioGraphNode{129.57,26.04}{M52}
+\SemioGraphNode{15.48,3.00}{M54}
+\SemioGraphNode[state=hypo]{46.03,37.84}{U17}
+\SemioGraphNode[state=hypo]{33.45,43.44}{U04}
+\SemioGraphNode[state=hypo]{42.65,31.91}{I04}
+\SemioGraphNode[state=hypo]{42.31,43.66}{I02}
+\SemioGraphNode[state=hypo]{140.51,32.78}{O05}
+\SemioGraphNode[state=hypo]{128.34,39.59}{U12}
+\SemioGraphNode[state=hypo]{133.40,45.10}{U11}
+\SemioGraphNode[state=hypo]{131.33,33.08}{U13}
+\SemioGraphNode[state=hypo]{62.61,29.73}{O02}
+\SemioGraphNode[state=hypo]{141.37,42.90}{U01}
+\SemioGraphNode[state=hypo]{24.50,20.99}{N07}
+\SemioGraphNode[state=hypo]{28.54,8.32}{I03}
+\SemioGraphNode[state=hypo]{116.59,31.24}{O04}
+\SemioGraphNode[state=hypo]{105.17,25.66}{U14}
+\SemioGraphNode[state=hypo]{106.21,37.96}{U07}
+\SemioGraphNode[state=hypo]{113.85,37.76}{N01}
+\SemioGraphNode[state=hypo]{112.16,24.26}{O03}
+\SemioGraphNode{178.00,47.00}{I01}
+\SemioGraphNode{14.29,47.00}{U09}
+\SemioGraphNode{101.83,32.08}{U02}
+\SemioGraphNode{32.01,32.91}{U08}
+\SemioGraphNode{127.95,12.70}{U10}
+\SemioGraphNode{43.48,20.51}{U05}
+\SemioGraphNode{95.45,38.74}{M50}
+\SemioGraphNode{169.83,26.20}{U03}
+\SemioGraphNode{80.43,47.00}{U06}
+\SemioGraphNode{135.34,16.83}{F01}
+\SemioGraphNode{144.05,15.46}{N02}
+\SemioGraphNode[state=attested]{79.57,18.25}{M01}
+\SemioGraphNode[state=attested]{64.11,21.76}{M04}
+\SemioGraphNode[state=attested]{56.44,19.06}{M05}
+\SemioGraphNode[state=attested]{73.80,3.00}{M06}
+\SemioGraphNode[state=attested]{112.83,3.00}{M07}
+\SemioGraphNode[state=attested]{87.81,47.00}{M08}
+\SemioGraphNode[state=attested]{77.48,29.76}{M09}
+\SemioGraphNode[state=attested]{3.00,47.00}{M10}
+\SemioGraphNode[state=attested]{158.67,47.00}{M13}
+\SemioGraphNode[state=attested]{49.94,47.00}{M15}
+\SemioGraphNode[state=attested]{60.58,40.34}{M14}
+\SemioGraphNode[state=attested]{72.92,47.00}{M16}
+\SemioGraphNode[state=attested]{3.00,16.78}{M17}
+\SemioGraphNode[state=attested]{108.47,12.14}{N04}
+\SemioGraphNode[state=attested]{141.30,7.39}{F02}
+\SemioGraphNode[state=attested]{134.53,8.17}{N05}
+\SemioGraphNode[state=attested]{178.00,3.00}{M18}
+\SemioGraphNode[state=attested]{81.90,3.00}{M20}
+\SemioGraphNode[state=attested]{117.77,47.00}{M21}
+\SemioGraphNode[state=attested]{138.42,22.27}{N06}
+\SemioGraphNode[state=attested]{76.42,38.65}{M22}
+\SemioGraphNode[state=attested]{77.80,9.90}{M23}
+\SemioGraphNode[state=attested]{105.33,3.00}{M25}
+\SemioGraphNode[state=attested]{162.05,3.00}{M26}
+\SemioGraphNode[state=attested]{89.71,3.00}{M24}
+\SemioGraphNode[state=attested]{130.76,3.00}{M27}
+\SemioGraphNode[state=attested]{50.79,3.00}{M28}
+\SemioGraphNode[state=attested]{161.31,15.13}{M29}
+\SemioGraphNode[state=attested]{178.00,33.85}{M30}
+\SemioGraphNode[state=attested]{16.10,31.74}{M31}
+\SemioGraphNode[state=attested]{98.71,10.29}{M32}
+\SemioGraphNode[state=attested]{58.39,3.00}{M33}
+\SemioGraphNode[state=attested]{51.72,11.92}{M34}
+\SemioGraphNode[state=attested]{3.00,3.00}{M35}
+\SemioGraphNode[state=attested]{51.23,25.12}{M37}
+\SemioGraphNode[state=attested]{33.38,3.00}{M38}
+\SemioGraphNode[state=attested]{66.60,3.00}{M39}
+\SemioGraphNode[state=attested]{150.01,23.41}{M40}
+\SemioGraphNode[state=attested]{54.93,33.25}{M41}
+\SemioGraphNode[state=attested]{117.34,9.00}{M42}
+\SemioGraphNode[state=attested]{85.86,39.25}{M43}
+\SemioGraphNode[state=attested]{33.26,12.55}{S03}
+\SemioGraphNode[state=attested]{3.00,29.36}{M44}
+\SemioGraphNode[state=attested]{122.31,3.00}{M45}
+\SemioGraphNode[state=attested]{94.27,27.19}{M46}
+\SemioGraphNode[state=attested]{167.89,47.00}{M48}
+\SemioGraphNode[state=attested]{102.48,47.00}{M51}
+\SemioGraphNode[state=attested]{69.90,14.54}{M53}
+\SemioGraphNode[state=attested]{72.21,23.98}{U15}
+\SemioGraphNode[state=attested]{95.16,47.00}{M55}
+\SemioGraphNode[state=attested]{178.00,15.86}{U16}
+\SemioGraphNode[state=attested]{151.32,34.75}{M56}
+\SemioGraphNode[state=attested]{42.89,11.35}{M58}
+\SemioGraphNode[state=attested]{62.08,10.26}{M59}
+\SemioGraphNode[state=attested]{68.54,36.08}{M60}
+\SemioGraphNode[state=attested]{86.74,31.41}{M61}
+\SemioGraphNode[state=attested]{117.83,17.96}{U18}
+\SemioGraphNode[state=attested]{125.97,18.91}{O01}
+\SemioGraphNode[state=attested]{123.83,26.35}{N03}
+\SemioGraphNode[state=attested]{57.24,47.00}{M19}
+\SemioGraphNode[state=attested]{92.02,18.37}{M36}
+\SemioGraphNode[state=attested]{97.33,3.00}{M49}
+\SemioGraphNode[state=attested]{35.51,25.56}{N08}
+\SemioGraphNode[state=attested]{87.57,10.86}{M57}
+\SemioGraphNode[state=focal]{39.04,37.85}{P1}
+\SemioGraphNode[state=focal]{137.44,38.24}{P2}
+\SemioGraphNode[state=focal]{24.07,47.00}{P3}
+\SemioGraphNode[state=focal]{23.30,14.88}{P4}
+\SemioGraphNode[state=focal]{110.13,32.48}{P5}
+\SemioGraphNode[state=focal]{65.85,47.00}{P6}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Belgien \textperiodcentered\ 92 Organisationen \textperiodcentered\ 14 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{102.12,42.71}{95.88,36.32}
+\SemioGraphEdge{104.99,36.00}{95.88,36.32}
+\SemioGraphEdge{95.48,44.68}{95.88,36.32}
+\SemioGraphEdge{146.64,12.13}{143.15,16.83}
+\SemioGraphEdge{140.78,25.00}{143.15,16.83}
+\SemioGraphEdge{135.03,17.43}{143.15,16.83}
+\SemioGraphEdge{119.83,17.71}{114.32,14.05}
+\SemioGraphEdge{113.24,21.05}{114.32,14.05}
+\SemioGraphEdge{110.27,6.95}{114.32,14.05}
+\SemioGraphEdge{118.32,7.08}{114.32,14.05}
+\SemioGraphEdge{101.86,20.80}{94.20,17.32}
+\SemioGraphEdge{101.86,20.80}{94.60,23.04}
+\SemioGraphEdge{101.63,26.15}{94.60,23.04}
+\SemioGraphEdge{97.80,10.47}{94.20,17.32}
+\SemioGraphEdge{82.48,5.07}{89.75,9.80}
+\SemioGraphEdge{88.84,3.19}{89.75,9.80}
+\SemioGraphEdge{87.83,16.94}{89.75,9.80}
+\SemioGraphEdge{87.83,16.94}{91.94,27.68}
+\SemioGraphEdge{95.71,4.35}{89.75,9.80}
+\SemioGraphEdge{97.32,30.63}{91.94,27.68}
+\SemioGraphEdge{50.60,28.79}{48.39,21.79}
+\SemioGraphEdge{46.44,13.06}{48.39,21.79}
+\SemioGraphEdge{43.96,27.43}{48.39,21.79}
+\SemioGraphEdge{54.83,23.87}{48.39,21.79}
+\SemioGraphEdge{40.37,20.02}{48.39,21.79}
+\SemioGraphEdge{54.26,15.80}{48.39,21.79}
+\SemioGraphEdge{69.20,24.40}{71.20,18.55}
+\SemioGraphEdge{63.93,21.17}{71.20,18.55}
+\SemioGraphEdge{69.01,10.16}{71.20,18.55}
+\SemioGraphEdge{75.99,23.12}{71.20,18.55}
+\SemioGraphEdge{63.21,13.84}{71.20,18.55}
+\SemioGraphEdge{101.16,14.63}{94.20,17.32}
+\SemioGraphEdge{82.53,19.83}{86.60,28.01}
+\SemioGraphEdge{82.53,19.83}{82.73,14.17}
+\SemioGraphEdge{82.53,19.83}{77.00,12.91}
+\SemioGraphEdge{82.53,19.83}{94.20,17.32}
+\SemioGraphEdge{82.53,19.83}{91.94,27.68}
+\SemioGraphEdge{82.53,19.83}{94.60,23.04}
+\SemioGraphEdge{82.53,19.83}{71.20,18.55}
+\SemioGraphEdge{86.60,28.01}{95.88,36.32}
+\SemioGraphEdge{86.60,28.01}{94.20,17.32}
+\SemioGraphEdge{86.60,28.01}{94.60,23.04}
+\SemioGraphEdge{83.59,47.00}{76.02,47.00}
+\SemioGraphEdge{87.41,35.40}{87.77,42.75}
+\SemioGraphEdge{87.77,42.75}{78.04,37.22}
+\SemioGraphEdge{76.02,47.00}{70.48,37.89}
+\SemioGraphEdge{70.48,37.89}{60.88,42.49}
+\SemioGraphEdge{70.48,37.89}{61.80,35.93}
+\SemioGraphEdge{70.48,37.89}{65.88,45.42}
+\SemioGraphEdge{70.48,37.89}{79.01,42.48}
+\SemioGraphEdge{70.48,37.89}{66.70,31.51}
+\SemioGraphEdge{70.48,37.89}{74.24,32.45}
+\SemioGraphEdge{70.48,37.89}{78.04,37.22}
+\SemioGraphEdge{77.00,12.91}{74.78,4.85}
+\SemioGraphEdge{72.87,42.68}{78.04,37.22}
+\SemioGraphNode{3.00,32.16}{M04}
+\SemioGraphNode{119.30,30.24}{M08}
+\SemioGraphNode{30.30,34.94}{M26}
+\SemioGraphNode[state=hypo]{102.12,42.71}{I02}
+\SemioGraphNode[state=hypo]{104.99,36.00}{U07}
+\SemioGraphNode[state=hypo]{95.48,44.68}{U14}
+\SemioGraphNode{34.12,47.00}{M14}
+\SemioGraphNode[state=hypo]{27.39,14.42}{N04}
+\SemioGraphNode[state=hypo]{52.97,47.00}{U04}
+\SemioGraphNode[state=hypo]{146.64,12.13}{U26}
+\SemioGraphNode[state=hypo]{140.78,25.00}{I03}
+\SemioGraphNode[state=hypo]{135.03,17.43}{U12}
+\SemioGraphNode[state=hypo]{119.83,17.71}{U22}
+\SemioGraphNode[state=hypo]{113.24,21.05}{U03}
+\SemioGraphNode[state=hypo]{110.27,6.95}{U15}
+\SemioGraphNode[state=hypo]{118.32,7.08}{X01}
+\SemioGraphNode[state=hypo]{101.86,20.80}{U29}
+\SemioGraphNode[state=hypo]{101.63,26.15}{U18}
+\SemioGraphNode[state=hypo]{97.80,10.47}{U09}
+\SemioGraphNode[state=hypo]{178.00,18.58}{S01}
+\SemioGraphNode[state=hypo]{82.48,5.07}{I06}
+\SemioGraphNode[state=hypo]{88.84,3.19}{U06}
+\SemioGraphNode[state=hypo]{87.83,16.94}{U16}
+\SemioGraphNode[state=hypo]{95.71,4.35}{U28}
+\SemioGraphNode[state=hypo]{97.32,30.63}{U01}
+\SemioGraphNode[state=hypo]{50.60,28.79}{U02}
+\SemioGraphNode[state=hypo]{46.44,13.06}{U13}
+\SemioGraphNode[state=hypo]{43.96,27.43}{U19}
+\SemioGraphNode[state=hypo]{54.83,23.87}{U21}
+\SemioGraphNode[state=hypo]{40.37,20.02}{U11}
+\SemioGraphNode[state=hypo]{54.26,15.80}{O01}
+\SemioGraphNode[state=hypo]{69.20,24.40}{N10}
+\SemioGraphNode[state=hypo]{63.93,21.17}{U25}
+\SemioGraphNode[state=hypo]{69.01,10.16}{U10}
+\SemioGraphNode[state=hypo]{75.99,23.12}{U05}
+\SemioGraphNode[state=hypo]{63.21,13.84}{G01}
+\SemioGraphNode{15.26,20.24}{M24}
+\SemioGraphNode{27.34,24.30}{U24}
+\SemioGraphNode{27.79,3.00}{U27}
+\SemioGraphNode{101.16,14.63}{U08}
+\SemioGraphNode{82.53,19.83}{N06}
+\SemioGraphNode{86.60,28.01}{M29}
+\SemioGraphNode{83.59,47.00}{N05}
+\SemioGraphNode{87.41,35.40}{N03}
+\SemioGraphNode{87.77,42.75}{F02}
+\SemioGraphNode{76.02,47.00}{I01}
+\SemioGraphNode{105.01,3.00}{M05}
+\SemioGraphNode{13.60,47.00}{I05}
+\SemioGraphNode[state=attested]{3.00,3.00}{M02}
+\SemioGraphNode[state=attested]{149.31,32.88}{M03}
+\SemioGraphNode[state=attested]{70.48,37.89}{F01}
+\SemioGraphNode[state=attested]{121.86,47.00}{M06}
+\SemioGraphNode[state=attested]{82.73,14.17}{N01}
+\SemioGraphNode[state=attested]{77.00,12.91}{N02}
+\SemioGraphNode[state=attested]{42.64,3.00}{M10}
+\SemioGraphNode[state=attested]{18.01,33.50}{M12}
+\SemioGraphNode[state=attested]{72.87,42.68}{U17}
+\SemioGraphNode[state=attested]{65.14,3.00}{M15}
+\SemioGraphNode[state=attested]{57.37,3.00}{M16}
+\SemioGraphNode[state=attested]{50.06,3.00}{M17}
+\SemioGraphNode[state=attested]{153.49,47.00}{M18}
+\SemioGraphNode[state=attested]{135.58,3.00}{M20}
+\SemioGraphNode[state=attested]{110.80,47.00}{M21}
+\SemioGraphNode[state=attested]{128.27,37.04}{U20}
+\SemioGraphNode[state=attested]{44.79,47.00}{F03}
+\SemioGraphNode[state=attested]{24.02,47.00}{M22}
+\SemioGraphNode[state=attested]{40.81,38.86}{U23}
+\SemioGraphNode[state=attested]{162.41,25.67}{M23}
+\SemioGraphNode[state=attested]{156.87,3.00}{M25}
+\SemioGraphNode[state=attested]{125.80,3.00}{F04}
+\SemioGraphNode[state=attested]{178.00,3.00}{M27}
+\SemioGraphNode[state=attested]{139.27,37.31}{I04}
+\SemioGraphNode[state=attested]{178.00,47.00}{S02}
+\SemioGraphNode[state=attested]{60.88,42.49}{N07}
+\SemioGraphNode[state=attested]{128.83,11.22}{M30}
+\SemioGraphNode[state=attested]{61.80,35.93}{S03}
+\SemioGraphNode[state=attested]{65.88,45.42}{F05}
+\SemioGraphNode[state=attested]{145.80,3.00}{N08}
+\SemioGraphNode[state=attested]{74.78,4.85}{N09}
+\SemioGraphNode[state=attested]{79.01,42.48}{F06}
+\SemioGraphNode[state=attested]{66.70,31.51}{F07}
+\SemioGraphNode[state=attested]{3.00,47.00}{M31}
+\SemioGraphNode[state=attested]{166.93,3.00}{M32}
+\SemioGraphNode[state=attested]{74.24,32.45}{F08}
+\SemioGraphNode[state=attested]{78.04,37.22}{F09}
+\SemioGraphNode[state=attested]{19.67,3.00}{M01}
+\SemioGraphNode[state=attested]{132.43,47.00}{M07}
+\SemioGraphNode[state=attested]{129.11,26.72}{M09}
+\SemioGraphNode[state=attested]{161.08,15.68}{M11}
+\SemioGraphNode[state=attested]{178.00,31.78}{M13}
+\SemioGraphNode[state=attested]{160.27,35.62}{M19}
+\SemioGraphNode[state=attested]{116.71,39.46}{M28}
+\SemioGraphNode[state=focal]{95.88,36.32}{P2}
+\SemioGraphNode[state=focal]{143.15,16.83}{P5}
+\SemioGraphNode[state=focal]{143.24,47.00}{P6}
+\SemioGraphNode[state=focal]{114.32,14.05}{P7}
+\SemioGraphNode[state=focal]{94.20,17.32}{P8}
+\SemioGraphNode[state=focal]{89.75,9.80}{P9}
+\SemioGraphNode[state=focal]{91.94,27.68}{P12}
+\SemioGraphNode[state=focal]{94.60,23.04}{P10}
+\SemioGraphNode[state=focal]{48.39,21.79}{P13}
+\SemioGraphNode[state=focal]{71.20,18.55}{P14}
+\SemioGraphNode[state=focal]{164.99,47.00}{P1}
+\SemioGraphNode[state=focal]{11.28,3.00}{P3}
+\SemioGraphNode[state=focal]{3.00,18.52}{P4}
+\SemioGraphNode[state=focal]{35.31,3.00}{P11}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Dänemark \textperiodcentered\ 58 Organisationen \textperiodcentered\ 7 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{89.06,41.75}{80.76,43.16}
+\SemioGraphEdge{89.06,41.75}{94.72,34.77}
+\SemioGraphEdge{94.86,42.49}{94.72,34.77}
+\SemioGraphEdge{101.42,41.81}{94.72,34.77}
+\SemioGraphEdge{83.54,27.87}{77.04,18.73}
+\SemioGraphEdge{83.54,27.87}{94.72,34.77}
+\SemioGraphEdge{102.75,35.16}{94.72,34.77}
+\SemioGraphEdge{52.53,14.89}{45.64,20.49}
+\SemioGraphEdge{45.55,26.60}{45.64,20.49}
+\SemioGraphEdge{116.06,21.61}{108.41,14.33}
+\SemioGraphEdge{119.10,14.53}{108.41,14.33}
+\SemioGraphEdge{101.51,6.46}{108.41,14.33}
+\SemioGraphEdge{101.51,6.46}{100.45,17.35}
+\SemioGraphEdge{108.07,4.77}{108.41,14.33}
+\SemioGraphEdge{93.26,8.35}{100.45,17.35}
+\SemioGraphEdge{106.75,22.79}{100.45,17.35}
+\SemioGraphEdge{100.06,24.95}{100.45,17.35}
+\SemioGraphEdge{115.71,6.96}{108.41,14.33}
+\SemioGraphEdge{94.37,21.45}{86.64,16.03}
+\SemioGraphEdge{94.37,21.45}{94.72,34.77}
+\SemioGraphEdge{94.37,21.45}{108.41,14.33}
+\SemioGraphEdge{68.68,15.22}{77.04,18.73}
+\SemioGraphEdge{77.04,18.73}{78.71,8.69}
+\SemioGraphEdge{77.04,18.73}{73.15,24.28}
+\SemioGraphNode{3.00,17.57}{M08}
+\SemioGraphNode[state=hypo]{89.06,41.75}{I02}
+\SemioGraphNode[state=hypo]{94.86,42.49}{U31}
+\SemioGraphNode[state=hypo]{101.42,41.81}{U21}
+\SemioGraphNode[state=hypo]{83.54,27.87}{U32}
+\SemioGraphNode[state=hypo]{102.75,35.16}{U06}
+\SemioGraphNode[state=hypo]{178.00,3.00}{U04}
+\SemioGraphNode[state=hypo]{52.53,14.89}{U11}
+\SemioGraphNode[state=hypo]{45.55,26.60}{F01}
+\SemioGraphNode[state=hypo]{116.06,21.61}{U14}
+\SemioGraphNode[state=hypo]{119.10,14.53}{U26}
+\SemioGraphNode[state=hypo]{101.51,6.46}{U02}
+\SemioGraphNode[state=hypo]{108.07,4.77}{U07}
+\SemioGraphNode[state=hypo]{93.26,8.35}{U23}
+\SemioGraphNode[state=hypo]{106.75,22.79}{U03}
+\SemioGraphNode[state=hypo]{100.06,24.95}{U18}
+\SemioGraphNode[state=hypo]{115.71,6.96}{U05}
+\SemioGraphNode{164.82,3.00}{U33}
+\SemioGraphNode{94.37,21.45}{U17}
+\SemioGraphNode{3.00,3.00}{U27}
+\SemioGraphNode{52.04,38.19}{U10}
+\SemioGraphNode{3.00,47.00}{U01}
+\SemioGraphNode[state=attested]{80.76,43.16}{I01}
+\SemioGraphNode[state=attested]{151.00,47.00}{M02}
+\SemioGraphNode[state=attested]{36.85,47.00}{M04}
+\SemioGraphNode[state=attested]{68.68,15.22}{M05}
+\SemioGraphNode[state=attested]{178.00,47.00}{N02}
+\SemioGraphNode[state=attested]{30.04,3.00}{S02}
+\SemioGraphNode[state=attested]{18.22,27.21}{U19}
+\SemioGraphNode[state=attested]{159.10,18.92}{U22}
+\SemioGraphNode[state=attested]{67.69,36.91}{M12}
+\SemioGraphNode[state=attested]{139.30,3.00}{U24}
+\SemioGraphNode[state=attested]{128.30,3.00}{U28}
+\SemioGraphNode[state=attested]{3.00,31.33}{F02}
+\SemioGraphNode[state=attested]{58.77,27.10}{S03}
+\SemioGraphNode[state=attested]{68.73,3.00}{M03}
+\SemioGraphNode[state=attested]{60.56,47.00}{M01}
+\SemioGraphNode[state=attested]{43.24,3.00}{M06}
+\SemioGraphNode[state=attested]{178.00,23.68}{M07}
+\SemioGraphNode[state=attested]{164.44,47.00}{U08}
+\SemioGraphNode[state=attested]{126.83,47.00}{U09}
+\SemioGraphNode[state=attested]{77.04,18.73}{S01}
+\SemioGraphNode[state=attested]{14.89,47.00}{N01}
+\SemioGraphNode[state=attested]{124.89,35.91}{M09}
+\SemioGraphNode[state=attested]{47.33,47.00}{M10}
+\SemioGraphNode[state=attested]{56.41,3.00}{U12}
+\SemioGraphNode[state=attested]{26.15,16.24}{M11}
+\SemioGraphNode[state=attested]{114.85,47.00}{U13}
+\SemioGraphNode[state=attested]{78.71,8.69}{U15}
+\SemioGraphNode[state=attested]{147.65,29.83}{U16}
+\SemioGraphNode[state=attested]{16.86,3.00}{U20}
+\SemioGraphNode[state=attested]{133.51,27.23}{M13}
+\SemioGraphNode[state=attested]{73.15,24.28}{U25}
+\SemioGraphNode[state=attested]{164.43,31.15}{M14}
+\SemioGraphNode[state=attested]{30.46,30.00}{N03}
+\SemioGraphNode[state=attested]{139.05,47.00}{U29}
+\SemioGraphNode[state=attested]{71.89,47.00}{U30}
+\SemioGraphNode[state=attested]{141.52,16.68}{M15}
+\SemioGraphNode[state=focal]{86.64,16.03}{P2}
+\SemioGraphNode[state=focal]{94.72,34.77}{P4}
+\SemioGraphNode[state=focal]{45.64,20.49}{P5}
+\SemioGraphNode[state=focal]{108.41,14.33}{P6}
+\SemioGraphNode[state=focal]{100.45,17.35}{P7}
+\SemioGraphNode[state=focal]{26.44,47.00}{P1}
+\SemioGraphNode[state=focal]{151.54,3.00}{P3}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Schweden \textperiodcentered\ 44 Organisationen \textperiodcentered\ 2 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{111.80,32.76}{122.34,31.69}
+\SemioGraphEdge{78.72,19.50}{69.50,25.22}
+\SemioGraphEdge{78.72,19.50}{89.54,21.97}
+\SemioGraphEdge{78.72,19.50}{83.47,13.29}
+\SemioGraphEdge{78.72,19.50}{78.38,31.80}
+\SemioGraphEdge{78.72,19.50}{77.66,9.86}
+\SemioGraphEdge{45.16,16.88}{37.39,16.52}
+\SemioGraphEdge{82.02,43.71}{86.57,33.57}
+\SemioGraphEdge{130.74,29.61}{122.34,31.69}
+\SemioGraphEdge{122.34,31.69}{125.96,21.20}
+\SemioGraphEdge{122.34,31.69}{118.55,40.14}
+\SemioGraphEdge{122.34,31.69}{126.92,38.51}
+\SemioGraphEdge{122.34,31.69}{115.49,21.86}
+\SemioGraphEdge{20.28,8.81}{24.99,14.38}
+\SemioGraphEdge{51.96,4.75}{61.73,5.08}
+\SemioGraphEdge{51.96,4.75}{44.15,6.44}
+\SemioGraphEdge{61.73,5.08}{60.58,16.65}
+\SemioGraphEdge{89.54,21.97}{96.16,12.00}
+\SemioGraphEdge{89.54,21.97}{99.01,23.31}
+\SemioGraphEdge{89.54,21.97}{86.57,33.57}
+\SemioGraphEdge{50.60,33.93}{44.77,27.00}
+\SemioGraphEdge{50.60,33.93}{55.65,42.38}
+\SemioGraphEdge{44.77,27.00}{37.39,16.52}
+\SemioGraphEdge{68.24,10.92}{60.58,16.65}
+\SemioGraphEdge{92.54,42.02}{86.57,33.57}
+\SemioGraphEdge{33.74,6.37}{37.39,16.52}
+\SemioGraphEdge{86.57,33.57}{78.38,31.80}
+\SemioGraphEdge{44.15,6.44}{37.39,16.52}
+\SemioGraphEdge{32.42,26.06}{30.74,36.36}
+\SemioGraphEdge{32.42,26.06}{37.39,16.52}
+\SemioGraphEdge{37.39,16.52}{24.99,14.38}
+\SemioGraphNode[state=attested]{111.80,32.76}{U25}
+\SemioGraphNode[state=attested]{78.72,19.50}{U02}
+\SemioGraphNode[state=attested]{45.16,16.88}{U03}
+\SemioGraphNode[state=attested]{37.79,47.00}{M09}
+\SemioGraphNode[state=attested]{82.02,43.71}{U04}
+\SemioGraphNode[state=attested]{130.74,29.61}{U05}
+\SemioGraphNode[state=attested]{69.50,25.22}{U06}
+\SemioGraphNode[state=attested]{67.69,47.00}{U07}
+\SemioGraphNode[state=attested]{15.29,47.00}{M04}
+\SemioGraphNode[state=attested]{122.34,31.69}{M02}
+\SemioGraphNode[state=attested]{20.28,8.81}{U08}
+\SemioGraphNode[state=attested]{51.96,4.75}{U09}
+\SemioGraphNode[state=attested]{61.73,5.08}{M05}
+\SemioGraphNode[state=attested]{125.96,21.20}{U10}
+\SemioGraphNode[state=attested]{89.54,21.97}{N01}
+\SemioGraphNode[state=attested]{50.60,33.93}{U11}
+\SemioGraphNode[state=attested]{96.16,12.00}{U12}
+\SemioGraphNode[state=attested]{44.77,27.00}{F01}
+\SemioGraphNode[state=attested]{3.00,35.31}{U15}
+\SemioGraphNode[state=attested]{68.24,10.92}{U16}
+\SemioGraphNode[state=attested]{60.58,16.65}{M07}
+\SemioGraphNode[state=attested]{118.55,40.14}{U17}
+\SemioGraphNode[state=attested]{99.01,23.31}{U18}
+\SemioGraphNode[state=attested]{92.54,42.02}{I02}
+\SemioGraphNode[state=attested]{55.65,42.38}{U19}
+\SemioGraphNode[state=attested]{33.74,6.37}{N02}
+\SemioGraphNode[state=attested]{126.92,38.51}{U20}
+\SemioGraphNode[state=attested]{83.47,13.29}{I03}
+\SemioGraphNode[state=attested]{157.19,26.19}{I04}
+\SemioGraphNode[state=attested]{86.57,33.57}{U21}
+\SemioGraphNode[state=attested]{78.38,31.80}{U22}
+\SemioGraphNode[state=attested]{115.49,21.86}{U23}
+\SemioGraphNode[state=attested]{44.15,6.44}{U24}
+\SemioGraphNode[state=attested]{177.92,3.00}{U01}
+\SemioGraphNode[state=attested]{178.00,35.72}{M01}
+\SemioGraphNode[state=attested]{150.37,47.00}{M03}
+\SemioGraphNode[state=attested]{113.90,3.00}{S01}
+\SemioGraphNode[state=attested]{32.42,26.06}{I01}
+\SemioGraphNode[state=attested]{30.74,36.36}{U13}
+\SemioGraphNode[state=attested]{37.39,16.52}{U14}
+\SemioGraphNode[state=attested]{104.59,47.00}{M06}
+\SemioGraphNode[state=attested]{77.66,9.86}{S02}
+\SemioGraphNode[state=attested]{24.99,14.38}{F02}
+\SemioGraphNode[state=attested]{152.37,3.00}{M08}
+\SemioGraphNode[state=focal]{3.00,3.00}{P2}
+\SemioGraphNode[state=focal]{134.83,3.00}{P1}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Finnland \textperiodcentered\ 34 Organisationen \textperiodcentered\ 7 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{108.88,38.87}{100.90,34.15}
+\SemioGraphEdge{94.27,23.55}{98.85,20.78}
+\SemioGraphEdge{94.27,23.55}{87.88,14.03}
+\SemioGraphEdge{94.27,23.55}{89.17,20.83}
+\SemioGraphEdge{94.27,23.55}{93.56,11.99}
+\SemioGraphEdge{94.27,23.55}{100.90,34.15}
+\SemioGraphEdge{94.27,23.55}{98.20,15.43}
+\SemioGraphEdge{98.85,20.78}{87.88,14.03}
+\SemioGraphEdge{98.85,20.78}{89.17,20.83}
+\SemioGraphEdge{98.85,20.78}{107.92,9.55}
+\SemioGraphEdge{98.85,20.78}{93.56,11.99}
+\SemioGraphEdge{98.85,20.78}{100.90,34.15}
+\SemioGraphEdge{98.85,20.78}{98.20,15.43}
+\SemioGraphEdge{98.85,20.78}{86.56,32.68}
+\SemioGraphEdge{87.88,14.03}{89.17,20.83}
+\SemioGraphEdge{87.88,14.03}{93.56,11.99}
+\SemioGraphEdge{87.88,14.03}{98.20,15.43}
+\SemioGraphEdge{89.17,20.83}{74.21,19.26}
+\SemioGraphEdge{89.17,20.83}{93.56,11.99}
+\SemioGraphEdge{89.17,20.83}{100.90,34.15}
+\SemioGraphEdge{89.17,20.83}{98.20,15.43}
+\SemioGraphEdge{89.17,20.83}{86.56,32.68}
+\SemioGraphEdge{100.44,42.46}{100.90,34.15}
+\SemioGraphEdge{98.64,4.12}{98.20,15.43}
+\SemioGraphEdge{75.65,39.50}{68.96,42.86}
+\SemioGraphEdge{75.65,39.50}{86.56,32.68}
+\SemioGraphEdge{86.76,40.96}{86.56,32.68}
+\SemioGraphEdge{109.58,17.14}{121.48,16.09}
+\SemioGraphEdge{109.58,17.14}{93.56,11.99}
+\SemioGraphEdge{109.58,17.14}{98.20,15.43}
+\SemioGraphEdge{74.21,19.26}{65.62,16.89}
+\SemioGraphEdge{132.18,16.09}{121.48,16.09}
+\SemioGraphEdge{124.04,8.48}{121.48,16.09}
+\SemioGraphEdge{125.15,27.15}{121.48,16.09}
+\SemioGraphEdge{48.58,18.08}{55.22,21.17}
+\SemioGraphEdge{55.22,21.17}{65.62,16.89}
+\SemioGraphEdge{64.97,6.88}{65.62,16.89}
+\SemioGraphNode[state=hypo]{108.88,38.87}{U02}
+\SemioGraphNode[state=hypo]{94.27,23.55}{U18}
+\SemioGraphNode[state=hypo]{98.85,20.78}{U03}
+\SemioGraphNode[state=hypo]{87.88,14.03}{U19}
+\SemioGraphNode[state=hypo]{89.17,20.83}{U16}
+\SemioGraphNode[state=hypo]{100.44,42.46}{U09}
+\SemioGraphNode[state=hypo]{98.64,4.12}{U11}
+\SemioGraphNode[state=hypo]{75.65,39.50}{I02}
+\SemioGraphNode[state=hypo]{86.76,40.96}{U20}
+\SemioGraphNode[state=hypo]{43.45,47.00}{F03}
+\SemioGraphNode{109.58,17.14}{F04}
+\SemioGraphNode[state=attested]{134.39,47.00}{F01}
+\SemioGraphNode[state=attested]{168.73,3.00}{U01}
+\SemioGraphNode[state=attested]{74.21,19.26}{I01}
+\SemioGraphNode[state=attested]{132.18,16.09}{I03}
+\SemioGraphNode[state=attested]{124.04,8.48}{I04}
+\SemioGraphNode[state=attested]{168.45,47.00}{U04}
+\SemioGraphNode[state=attested]{125.15,27.15}{G01}
+\SemioGraphNode[state=attested]{16.91,47.00}{U05}
+\SemioGraphNode[state=attested]{30.61,47.00}{U06}
+\SemioGraphNode[state=attested]{55.66,47.00}{U07}
+\SemioGraphNode[state=attested]{48.58,18.08}{F02}
+\SemioGraphNode[state=attested]{68.96,42.86}{U08}
+\SemioGraphNode[state=attested]{39.26,3.00}{U10}
+\SemioGraphNode[state=attested]{55.22,21.17}{U12}
+\SemioGraphNode[state=attested]{107.92,9.55}{U13}
+\SemioGraphNode[state=attested]{64.97,6.88}{M01}
+\SemioGraphNode[state=attested]{121.48,16.09}{G02}
+\SemioGraphNode[state=attested]{3.00,24.17}{U17}
+\SemioGraphNode[state=attested]{151.95,34.46}{M02}
+\SemioGraphNode[state=attested]{3.00,3.00}{F05}
+\SemioGraphNode[state=attested]{22.25,3.00}{U14}
+\SemioGraphNode[state=attested]{65.62,16.89}{U15}
+\SemioGraphNode[state=attested]{93.56,11.99}{I05}
+\SemioGraphNode[state=focal]{100.90,34.15}{P4}
+\SemioGraphNode[state=focal]{98.20,15.43}{P5}
+\SemioGraphNode[state=focal]{86.56,32.68}{P6}
+\SemioGraphNode[state=focal]{149.89,3.00}{P1}
+\SemioGraphNode[state=focal]{178.00,22.61}{P2}
+\SemioGraphNode[state=focal]{28.88,24.87}{P3}
+\SemioGraphNode[state=focal]{3.00,47.00}{P7}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Norwegen \textperiodcentered\ 33 Organisationen \textperiodcentered\ 2 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{115.20,14.48}{107.31,16.85}
+\SemioGraphEdge{70.27,6.39}{66.58,18.46}
+\SemioGraphEdge{60.75,7.04}{66.58,18.46}
+\SemioGraphEdge{75.70,22.85}{66.58,18.46}
+\SemioGraphEdge{68.31,27.87}{66.58,18.46}
+\SemioGraphEdge{59.73,24.70}{66.58,18.46}
+\SemioGraphEdge{55.86,16.14}{66.58,18.46}
+\SemioGraphEdge{77.77,12.95}{66.58,18.46}
+\SemioGraphEdge{118.98,26.05}{127.62,24.29}
+\SemioGraphEdge{118.98,26.05}{107.31,16.85}
+\SemioGraphEdge{118.98,26.05}{119.81,34.29}
+\SemioGraphEdge{96.90,10.31}{107.31,16.85}
+\SemioGraphEdge{96.31,21.87}{107.31,16.85}
+\SemioGraphEdge{107.31,16.85}{104.82,6.14}
+\SemioGraphEdge{107.31,16.85}{105.15,28.28}
+\SemioGraphEdge{104.82,6.14}{115.18,3.35}
+\SemioGraphNode{115.20,14.48}{S02}
+\SemioGraphNode[state=hypo]{70.27,6.39}{U03}
+\SemioGraphNode[state=hypo]{60.75,7.04}{U08}
+\SemioGraphNode[state=hypo]{75.70,22.85}{N03}
+\SemioGraphNode[state=hypo]{68.31,27.87}{U01}
+\SemioGraphNode[state=hypo]{59.73,24.70}{U05}
+\SemioGraphNode[state=hypo]{55.86,16.14}{U10}
+\SemioGraphNode[state=hypo]{77.77,12.95}{U06}
+\SemioGraphNode[state=attested]{118.98,26.05}{I01}
+\SemioGraphNode[state=attested]{147.44,3.00}{I02}
+\SemioGraphNode[state=attested]{127.62,24.29}{N02}
+\SemioGraphNode[state=attested]{3.00,3.71}{U04}
+\SemioGraphNode[state=attested]{96.90,10.31}{U09}
+\SemioGraphNode[state=attested]{104.77,47.00}{F01}
+\SemioGraphNode[state=attested]{96.31,21.87}{F02}
+\SemioGraphNode[state=attested]{107.31,16.85}{N06}
+\SemioGraphNode[state=attested]{51.78,47.00}{M05}
+\SemioGraphNode[state=attested]{19.68,47.00}{U11}
+\SemioGraphNode[state=attested]{104.82,6.14}{U12}
+\SemioGraphNode[state=attested]{105.15,28.28}{I03}
+\SemioGraphNode[state=attested]{178.00,47.00}{U02}
+\SemioGraphNode[state=attested]{136.90,47.00}{S01}
+\SemioGraphNode[state=attested]{24.09,21.24}{M01}
+\SemioGraphNode[state=attested]{178.00,3.00}{N01}
+\SemioGraphNode[state=attested]{153.31,20.22}{M02}
+\SemioGraphNode[state=attested]{88.32,47.00}{U07}
+\SemioGraphNode[state=attested]{71.98,47.00}{M03}
+\SemioGraphNode[state=attested]{32.64,3.00}{N04}
+\SemioGraphNode[state=attested]{155.25,47.00}{N05}
+\SemioGraphNode[state=attested]{178.00,23.90}{M04}
+\SemioGraphNode[state=attested]{115.18,3.35}{S03}
+\SemioGraphNode[state=attested]{119.81,34.29}{S04}
+\SemioGraphNode[state=attested]{3.00,47.00}{M06}
+\SemioGraphNode[state=focal]{66.58,18.46}{P2}
+\SemioGraphNode[state=focal]{36.11,47.00}{P1}
+\end{GraphFigure}
+
+\begin{GraphFigure}[title={Österreich \textperiodcentered\ 29 Organisationen \textperiodcentered\ 2 Projekte}, width=181.00, height=50.00]
+\SemioGraphEdge{99.53,10.05}{107.54,21.89}
+\SemioGraphEdge{92.53,17.87}{107.54,21.89}
+\SemioGraphEdge{126.96,21.65}{120.26,36.14}
+\SemioGraphEdge{126.96,21.65}{115.47,13.45}
+\SemioGraphEdge{118.03,46.43}{120.26,36.14}
+\SemioGraphEdge{107.54,21.89}{112.53,31.49}
+\SemioGraphEdge{107.54,21.89}{125.82,8.79}
+\SemioGraphEdge{107.54,21.89}{120.26,36.14}
+\SemioGraphEdge{107.54,21.89}{92.98,25.76}
+\SemioGraphEdge{107.54,21.89}{102.86,39.90}
+\SemioGraphEdge{107.54,21.89}{116.74,25.79}
+\SemioGraphEdge{107.54,21.89}{103.21,29.93}
+\SemioGraphEdge{107.54,21.89}{106.64,6.41}
+\SemioGraphEdge{107.54,21.89}{115.47,13.45}
+\SemioGraphEdge{119.09,3.00}{125.82,8.79}
+\SemioGraphEdge{119.09,3.00}{106.64,6.41}
+\SemioGraphEdge{127.06,46.36}{120.26,36.14}
+\SemioGraphEdge{112.53,31.49}{120.26,36.14}
+\SemioGraphEdge{125.82,8.79}{137.71,6.03}
+\SemioGraphEdge{120.26,36.14}{102.86,39.90}
+\SemioGraphEdge{120.26,36.14}{116.74,25.79}
+\SemioGraphEdge{120.26,36.14}{127.70,29.99}
+\SemioGraphEdge{120.26,36.14}{133.64,44.87}
+\SemioGraphEdge{120.26,36.14}{111.01,45.16}
+\SemioGraphEdge{120.26,36.14}{103.21,29.93}
+\SemioGraphEdge{120.26,36.14}{135.97,35.78}
+\SemioGraphNode{66.35,47.00}{S02}
+\SemioGraphNode{99.53,10.05}{I01}
+\SemioGraphNode{92.53,17.87}{F02}
+\SemioGraphNode{126.96,21.65}{N02}
+\SemioGraphNode{118.03,46.43}{N01}
+\SemioGraphNode{178.00,32.62}{N04}
+\SemioGraphNode{178.00,3.00}{U07}
+\SemioGraphNode{107.54,21.89}{M01}
+\SemioGraphNode{119.09,3.00}{F03}
+\SemioGraphNode{127.06,46.36}{U09}
+\SemioGraphNode{112.53,31.49}{N03}
+\SemioGraphNode[state=attested]{125.82,8.79}{U01}
+\SemioGraphNode[state=attested]{178.00,47.00}{M02}
+\SemioGraphNode[state=attested]{178.00,17.16}{M04}
+\SemioGraphNode[state=attested]{120.26,36.14}{U03}
+\SemioGraphNode[state=attested]{92.98,25.76}{U04}
+\SemioGraphNode[state=attested]{61.12,3.00}{U05}
+\SemioGraphNode[state=attested]{102.86,39.90}{U06}
+\SemioGraphNode[state=attested]{116.74,25.79}{U08}
+\SemioGraphNode[state=attested]{127.70,29.99}{U10}
+\SemioGraphNode[state=attested]{133.64,44.87}{U11}
+\SemioGraphNode[state=attested]{111.01,45.16}{U12}
+\SemioGraphNode[state=attested]{103.21,29.93}{U13}
+\SemioGraphNode[state=attested]{135.97,35.78}{I03}
+\SemioGraphNode[state=attested]{156.52,3.00}{M03}
+\SemioGraphNode[state=attested]{158.13,47.00}{U02}
+\SemioGraphNode[state=attested]{106.64,6.41}{F01}
+\SemioGraphNode[state=attested]{137.71,6.03}{S01}
+\SemioGraphNode[state=attested]{29.01,8.26}{I02}
+\SemioGraphNode[state=focal]{115.47,13.45}{P2}
+\SemioGraphNode[state=focal]{34.92,47.00}{P1}
+\end{GraphFigure}
+
+\end{GraphSpread}\end{document}

@@ -122,9 +122,9 @@
 - Knoten B: Baukreisel e.V.  [NGO/Verband/Netzwerk]
 - Land: DE
 - Belegstatus: GEPRUEFT
-- Beleg-URL (MUSS geoeffnet werden): https://baukreisel.org/info
+- Beleg-URL (MUSS geoeffnet werden): https://nb.ieb.kit.edu/index.php/ausbau-stegreif-konrad-kocher-schule-kitzingen/
 - Bisherige Beschreibung (Altdaten, nur Hinweis): Baukreisel fuehrte Gastvortrag/Workshop am KIT durch (Lehre/Vortraege), nur auf Baukreisels eigener Seite dokumentiert
-- Gespeichertes Belegzitat (Nachweis-Schnipsel): ""Ausbauworkshop Ditzingen" - "Stegreif" - "KIT" (2022)"
+- Gespeichertes Belegzitat (Nachweis-Schnipsel): "Als freies Kollektiv für zirkuläres Bauen ruft der Baukreisel gemeinsam mit dem Lehrstuhl für Nachhaltiges Bauen am KIT einen Ausbau Stegreif aus."
 
 ### DE:K034
 - Kantenart: AKTEUR-AKTEUR

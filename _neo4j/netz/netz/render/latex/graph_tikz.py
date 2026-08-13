@@ -71,6 +71,9 @@ def country_figure(net, cc, frame=DEFAULT_FRAME, images=None):
         s.append(r"\SemioGraphEdge{%.2f,%.2f}{%.2f,%.2f}" % (ax, ay, bx, by))
     for e in nodes:
         px, py = P[e]
-        s.append(node_tikz(net, e, px, py, label=True, images=images))
+        # Projects remain image-free even if a malformed manifest contains
+        # their eid. Only organisation rows may activate the optional key.
+        node_images = images if e in pan.actors else None
+        s.append(node_tikz(net, e, px, py, label=True, images=node_images))
     s.append(r"\end{GraphFigure}")
     return "\n".join(s), nA, nP, len(nodes), 0

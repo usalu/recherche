@@ -538,9 +538,9 @@ Für jede Kante:
 - Knoten B: JZH & Partners  [Unternehmen]
 - Land: BE
 - Belegstatus: GEPRUEFT
-- Beleg-URL (MUSS geoeffnet werden): https://brusselsarchitectureprize.be/en/project/esp-karreveld/
+- Beleg-URL (MUSS geoeffnet werden): https://bma.brussels/app/uploads/2023/03/A276_NL_48-52_Agwa_-School-Karreveld.pdf
 - Bisherige Beschreibung (Altdaten, nur Hinweis): Stabilitaets-/Technikingenieur des Projekts
-- Gespeichertes Belegzitat (Nachweis-Schnipsel): "JZH&Partners"
+- Gespeichertes Belegzitat (Nachweis-Schnipsel): "Structural engineering: JZH & partners; Services engineering: JZH & partners"
 
 ### BE:K034
 - Kantenart: AKTEUR-BAUVORHABEN
@@ -568,9 +568,9 @@ Für jede Kante:
 - Knoten B: Pouvoir Organisateur Pluriel / POP  [Organisation]
 - Land: BE
 - Belegstatus: GEPRUEFT
-- Beleg-URL (MUSS geoeffnet werden): https://brusselsarchitectureprize.be/en/project/esp-karreveld/
+- Beleg-URL (MUSS geoeffnet werden): https://bma.brussels/app/uploads/2023/03/A276_NL_48-52_Agwa_-School-Karreveld.pdf
 - Bisherige Beschreibung (Altdaten, nur Hinweis): Bauherr/Auftraggeber (Client)
-- Gespeichertes Belegzitat (Nachweis-Schnipsel): "asbl Pouvoir Organisateur Pluriel"
+- Gespeichertes Belegzitat (Nachweis-Schnipsel): "Client: POP (Pouvoir Organisateur Pluriel); Official project name: ESP Karreveld"
 
 ### BE:K037
 - Kantenart: AKTEUR-BAUVORHABEN

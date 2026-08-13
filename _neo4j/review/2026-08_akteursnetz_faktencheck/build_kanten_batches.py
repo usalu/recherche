@@ -15,7 +15,7 @@ Two things this pass has to carry that the actor pass did not:
   * Coverage. Only 445 of the 570 drawn edges were ever graded. The other 125
     entered the drawing from a database relation or a research overlay and
     carry no source at all -- they are marked UNGEPRUEFT and need research from
-    scratch. 66 of them hang off directory hubs (Opalis, bauteilnetz, SalvoWEB,
+    scratch. 63 of them hang off directory hubs (Opalis, bauteilnetz, SalvoWEB,
     Bolius, byggogbevar), which the project rules exclude as relationships.
 
 Deliberately NOT passed to the classifier:
@@ -33,6 +33,7 @@ OUTDIR = os.path.join(BASE, "kanten_batches")
 BATCH_SIZE = 20
 REVIEW_RUN = "2026-08_akteursnetz_faktencheck_kanten"
 NODE_KIND_OVERRIDES = "kanten_node_kind_overrides.json"
+EVIDENCE_REPLACEMENTS = "kanten_evidence_replacements.json"
 
 sys.path.insert(0, NETZ)
 from netz.sources import DEFAULT                              # noqa: E402
@@ -107,6 +108,7 @@ def main():
                         edge_exclude=load_edge_exclude(DEFAULT.unklar_edges_path))
 
     V, W = load("verdicts.json"), load("worklist.json")
+    evidence_replacements = load(EVIDENCE_REPLACEMENTS)
     override_rows = load(NODE_KIND_OVERRIDES).get("overrides", [])
     overrides = {row["eid"]: row for row in override_rows}
     if len(overrides) != len(override_rows):
@@ -171,6 +173,18 @@ def main():
             "zitat": (g or {}).get("beleg_zitat", ""),
         })
 
+    emitted_ids = {r["id"] for rows in by_cc.values() for r in rows}
+    unknown_replacements = sorted(set(evidence_replacements) - emitted_ids)
+    if unknown_replacements:
+        print(f"ABBRUCH: unbekannte IDs in {EVIDENCE_REPLACEMENTS}: {unknown_replacements}")
+        return 1
+    for rows in by_cc.values():
+        for row in rows:
+            replacement = evidence_replacements.get(row["id"])
+            if replacement:
+                row["beleg_url"] = replacement["evidence_url"]
+                row["zitat"] = replacement["evidence_quote"]
+
     if kind_errors:
         print("ABBRUCH: Kantenart nicht eindeutig:")
         for msg in kind_errors[:20]:
@@ -208,12 +222,16 @@ def main():
         DEFAULT.prune_path, DEFAULT.prune_faktencheck_path, DEFAULT.unklar_edges_path,
         os.path.join(BASE, "verdicts.json"), os.path.join(BASE, "worklist.json"),
         os.path.join(BASE, NODE_KIND_OVERRIDES),
+        os.path.join(BASE, EVIDENCE_REPLACEMENTS),
         os.path.join(BASE, "KANTEN_TAXONOMIE.md"),
         os.path.join(BASE, "build_kanten_batches.py"),
         os.path.join(BASE, "assemble_kanten_prompt.py"),
         os.path.join(BASE, "validate_kanten.py"),
         os.path.join(BASE, "merge_kanten.py"),
         os.path.join(BASE, "preflight_kanten.py"),
+        os.path.join(BASE, "recheck_kanten_sources.py"),
+        os.path.join(BASE, "build_kanten_review_inventory.py"),
+        os.path.join(BASE, "build_kanten_results.py"),
         os.path.join(NETZ, "netz", "data", "overlays.py"),
     ]
     export_meta = json.load(open(DEFAULT.export_path, encoding="utf-8")).get("meta", {})

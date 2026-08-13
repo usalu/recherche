@@ -4,6 +4,7 @@ import os
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 from unittest import mock
 
 from netz.render.latex import graph_tikz
@@ -13,6 +14,7 @@ REPO = Path(__file__).resolve().parents[4]
 PILOT_DIR = REPO / "_neo4j" / "review" / "2026-08_akteursnetz_faktencheck"
 MANIFEST = PILOT_DIR / "bilder_pilot" / "pilot_transport_manifest.json"
 SCRIPT = PILOT_DIR / "pilot_images.py"
+SEMIO_GRAPH = Path(r"E:\semio\print\tex\semio-graph.sty")
 
 
 def load_pilot_module():
@@ -42,6 +44,33 @@ class GraphImageRendererTests(unittest.TestCase):
             r"\SemioGraphNode[image={E:/assets/U01.png}]{1.25,2.50}{U01}",
         )
 
+    def test_image_keeps_each_existing_node_state(self):
+        for state in ("focal", "attested", "hypo"):
+            with self.subTest(state=state), mock.patch.object(
+                graph_tikz, "node_role", return_value=SimpleNamespace(state=state)
+            ):
+                got = graph_tikz.node_tikz(
+                    FakeNet(), "e1", 1.25, 2.5, images={"e1": "E:/assets/U01.png"}
+                )
+            self.assertIn(f"[state={state},image={{E:/assets/U01.png}}]", got)
+            self.assertTrue(got.endswith("{U01}"))
+
+    def test_country_figure_never_assigns_an_image_to_a_project(self):
+        panel = SimpleNamespace(actors=["a"], projects=["p"])
+        net = SimpleNamespace(
+            panels={"AT": panel}, tid={"a": "U01", "p": "P1"}
+        )
+        positions = {"a": (1.0, 2.0), "p": (3.0, 4.0)}
+        with mock.patch.object(graph_tikz, "drawn_edge_nodes", return_value=set()), \
+             mock.patch.object(graph_tikz, "force_layout", return_value=(positions, [])), \
+             mock.patch.object(graph_tikz, "node_role", return_value=graph_tikz.PLAIN):
+            tex, *_ = graph_tikz.country_figure(
+                net, "AT", images={"a": "E:/assets/U01.png", "p": "E:/assets/P1.png"}
+            )
+        self.assertIn(r"\SemioGraphNode[image={E:/assets/U01.png}]{1.00,2.00}{U01}", tex)
+        self.assertIn(r"\SemioGraphNode{3.00,4.00}{P1}", tex)
+        self.assertNotIn("P1.png", tex)
+
     def test_manifest_loader_uses_only_existing_accepted_logos(self):
         with tempfile.TemporaryDirectory() as td:
             td = Path(td)
@@ -60,6 +89,19 @@ class GraphImageRendererTests(unittest.TestCase):
         self.assertEqual(set(got), {"yes"})
         self.assertTrue(got["yes"].replace("\\", "/").endswith("/ok.png"))
 
+    def test_semio_clip_contour_and_label_order(self):
+        sty = SEMIO_GRAPH.read_text(encoding="utf-8")
+        image_fn = sty.index(r"\cs_new_protected:Npn \semio_graph_node_image_draw:nn")
+        clip = sty.index(r"\clip (#1) circle", image_fn)
+        graphic = sty.index(r"\includegraphics", clip)
+        draw_fn = sty.index(r"\cs_new_protected:Npn \semio_graph_node_draw:nnn", graphic)
+        image_call = sty.index(r"\semio_graph_node_image_draw:nn", draw_fn)
+        contour = sty.index("fill=none", image_call)
+        label = sty.index(r"\node [ semio~graph~label", contour)
+        self.assertLess(clip, graphic)
+        self.assertLess(image_call, contour)
+        self.assertLess(contour, label)
+
 
 class PilotArtifactTests(unittest.TestCase):
     @classmethod
@@ -69,6 +111,21 @@ class PilotArtifactTests(unittest.TestCase):
 
     def test_manifest_passes_asset_validator(self):
         self.assertEqual(self.pilot.validate_manifest(self.manifest), [])
+
+    def test_rendered_pdf_keeps_colored_logo_inside_circle(self):
+        report = self.pilot.validate_rendered_pdfs(self.manifest)
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["result"], "PASS")
+        self.assertEqual(report["logo_count"], 11)
+        for theme in ("light", "dark"):
+            self.assertEqual(len(report["themes"][theme]), 11)
+            for image in report["themes"][theme]:
+                self.assertGreater(
+                    image["square_corner_radius_pt"], report["circle_radius_pt"]
+                )
+                self.assertLessEqual(
+                    image["visible_radius_pt"], report["circle_radius_pt"] * 0.94
+                )
 
     def test_fixed_pilot_distribution_and_outcomes(self):
         rows = self.manifest["nodes"]

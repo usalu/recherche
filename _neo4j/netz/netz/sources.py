@@ -32,6 +32,11 @@ class Sources:
     unklar_edges_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/unklar_edges_final.json"
     )
+    # Final keep/remove campaign for the 570 relationships drawn by the
+    # LaTeX actor graph.  This is an edge-pair list, not a Neo4j writeback.
+    prune_kanten_final_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/prune_kanten_final.json"
+    )
     strict_manifest_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/strict_review/input_manifest.json"
     )

@@ -64,7 +64,8 @@ def load_network():
     exclude = (load_prune(DEFAULT.prune_path) |
                load_prune(DEFAULT.prune_faktencheck_path) |
                strict.exclude)
-    edge_exclude = load_edge_exclude(DEFAULT.unklar_edges_path)
+    edge_exclude = (load_edge_exclude(DEFAULT.unklar_edges_path) |
+                    load_edge_exclude(DEFAULT.prune_kanten_final_path))
     return build_network(DEFAULT, exclude=exclude, edge_exclude=edge_exclude,
                          strict_review=strict)
 

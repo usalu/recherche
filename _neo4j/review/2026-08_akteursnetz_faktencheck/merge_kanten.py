@@ -9,7 +9,7 @@ rather than inferred from an earlier graph grade:
   R-V  `Verzeichniseintrag`            -- a shared listing in a directory is not
        a relationship between the listed actors. This is the fixed directory
        rule the plan states ("directory-only ties EXCLUDED -- same bar we used
-       to remove the fan-boxes"), and it is why 64 of the 125 unverified drawn
+       to remove the fan-boxes"), and it is why 63 of the 125 unverified drawn
        edges hang off Opalis, bauteilnetz, SalvoWEB, Bolius and byggogbevar.
   R-K  `Kein Beleg für eine Beziehung` -- research ran and found no source that
        names both nodes in a described connection. Same standard that removed
@@ -163,7 +163,7 @@ def main():
             "beschreibung": r["beschreibung"], "beleg": r["beleg"],
             "evidence_url": (r["beleg"] if r["beleg"].startswith(("http://", "https://"))
                              else e.get("evidence_url") or None),
-            "evidence_quote": (r["belegzitat"] if not entfernen else
+            "evidence_quote": (r["belegzitat"] if r["belegzitat"] != "—" else
                                e.get("evidence_quote") or None),
             "evidence_confidence": ("belegt" if not entfernen else "unklar"),
             "edge_degree_faktencheck": deg,

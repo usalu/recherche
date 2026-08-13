@@ -1,0 +1,22 @@
+| ID | Beziehungsart | Richtung | Beschreibung | Beleg | Belegzitat |
+|---|---|---|---|---|---|
+| FI:K001 | Bauherrschaft | B→A | Der Akteur verantwortete das Vorhaben als Bauherr. | vorhanden | The building was built by Skanska for the client, affordable rental housing company A-Kruunu |
+| FI:K002 | Bauausführung | B→A | Der Akteur führte benannte Bauleistungen aus. | vorhanden | The building was built by Skanska for the client, affordable rental housing company A-Kruunu |
+| FI:K003 | Aufarbeitung | B→A | Der Akteur arbeitete wiederverwendete Bauteile auf. | vorhanden | were quality controlled and factory refurbished in Consolis Parma's factory in Kangasala |
+| FI:K004 | Fachplanung | B→A | Der Akteur übernahm eine benannte Fachplanung. | vorhanden | we at Ramboll developed designing the refurbishment of the reclaimed elements in collaboration with the factory |
+| FI:K005 | Entwurf | B→A | Der Akteur übernahm den architektonischen Entwurf. | vorhanden | Liike Oy Arkkitehtistudio – Architect |
+| FI:K006 | Kein Beleg für eine Beziehung | — | Keine Quelle nennt beide Knoten in einer beschriebenen Verbindung. | — | — |
+| FI:K007 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |
+| FI:K008 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |
+| FI:K009 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |
+| FI:K010 | Bauausführung | A→B | Der Akteur führte benannte Bauleistungen aus. | vorhanden | In the ReCreate research project, companies have participated in Skanska's building projects, which serve as the study's minipilots. |
+| FI:K011 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |
+| FI:K012 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |
+| FI:K013 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | Consolis Parma used Ramboll's help determine suitable refurbishment measures |
+| FI:K014 | Aufarbeitung | A→B | Der Akteur arbeitete wiederverwendete Bauteile auf. | vorhanden | In the ReCreate research project, companies have participated in Skanska's building projects, which serve as the study's minipilots. |
+| FI:K015 | Aufarbeitung | A→B | Der Akteur arbeitete wiederverwendete Bauteile auf. | vorhanden | Slabs were transported to Consolis Parma's Nummela factory, where the refurbishment of the elements could begin |
+| FI:K016 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | We implemented a pilot project at the end of 2021...to prove that the connecting technology between load-bearing structures enables easy dismantling and reassembly. |
+| FI:K017 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |
+| FI:K018 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |
+| FI:K019 | Rückbau | A→B | Der Akteur führte den selektiven Rückbau aus. | vorhanden | In the ReCreate research project, companies have participated in Skanska's building projects, which serve as the study's minipilots. |
+| FI:K020 | Konsortialpartner | — | Beide sind als Partner desselben Konsortiums belegt. | vorhanden | ReCreate's Finnish cluster is formed by Tampere University, Skanska, Consolis Parma, Ramboll Finland, Umacon, LIIKE architects, and the City of Tampere. |

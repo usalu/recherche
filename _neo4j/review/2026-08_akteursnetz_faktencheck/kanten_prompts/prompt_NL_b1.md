@@ -594,7 +594,7 @@ Für jede Kante:
 - Belegstatus: GEPRUEFT
 - Beleg-URL (MUSS geoeffnet werden): https://www.universiteitleiden.nl/en/news/2020/11/gorlaeus-highrise-lives-on-in-two-new-buildings-in-leiden
 - Bisherige Beschreibung (Altdaten, nur Hinweis): Donor-Stahlquelle (Gorlaeus-Gebaeude der Universiteit Leiden) fuer das Donorskelet von BioPartner 5
-- Gespeichertes Belegzitat (Nachweis-Schnipsel): "The metal was processed on our campus and then used as a 'donor skeleton' for BioPartner's fifth building."
+- Gespeichertes Belegzitat (Nachweis-Schnipsel): "The same beams have also been used for the circular construction of BioPartner 5 at the Leiden Bio Science Park."
 
 ### NL:K020
 - Kantenart: AKTEUR-BAUVORHABEN

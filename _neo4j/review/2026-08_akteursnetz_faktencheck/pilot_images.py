@@ -41,6 +41,7 @@ ASSET_DECISIONS = BASE / "pilot_asset_decisions.json"
 MANIFEST = PILOT / "pilot_transport_manifest.json"
 PATCH = PILOT / "pilot_image_property_patch.json"
 PATCH_REPORT = PILOT / "pilot_image_property_patch_report.md"
+RENDER_CONTAINMENT_REPORT = PILOT / "render_containment_report.json"
 WORKLIST = BASE / "worklist.json"
 VERDICTS = BASE / "verdicts.json"
 EXPORT = REPO / "actors_network.json"
@@ -70,6 +71,12 @@ USER_AGENT = "Semio actor-network image pilot/1.0 (research; no affiliation)"
 MAX_DOWNLOAD = 12 * 1024 * 1024
 FINAL_SIZE = 256
 SAFE_RADIUS = 119.0  # 93% of the 128px node radius
+NODE_RADIUS_MM = 2.275
+IMAGE_DIAMETER_FRACTION = 1.00
+PILOT_PDFS = {
+    "light": NETZ_ROOT / "figs" / "_abb_pilot_light_fitted.pdf",
+    "dark": NETZ_ROOT / "figs" / "_abb_pilot_dark_fitted.pdf",
+}
 
 
 def load_json(path: Path):
@@ -614,6 +621,61 @@ def command_validate(_args):
     print(f"PASS: 48 reviewed nodes; {logos} logos; {48 - logos} unchanged ID-only nodes")
 
 
+def validate_rendered_pdfs(manifest):
+    """Measure embedded PDF image squares and visible alpha against the node."""
+    import fitz
+
+    logos = [r for r in manifest["nodes"] if r["result"] == "logo"]
+    alpha_r = max(
+        alpha_max_radius(Image.open(PILOT / r["asset_path"]).convert("RGBA"))
+        for r in logos
+    )
+    node_r = NODE_RADIUS_MM * 72.0 / 25.4
+    expected_side = 2.0 * node_r * IMAGE_DIAMETER_FRACTION
+    errors, themes = [], {}
+    for theme, path in PILOT_PDFS.items():
+        if not path.is_file():
+            errors.append(f"{theme}: missing PDF")
+            continue
+        doc = fitz.open(path)
+        infos = [i for i in doc[1].get_image_info(xrefs=True) if i.get("has-mask")]
+        if len(infos) != len(logos):
+            errors.append(f"{theme}: expected {len(logos)} images, got {len(infos)}")
+        measured = []
+        for n, info in enumerate(infos):
+            x0, y0, x1, y1 = info["bbox"]
+            w, h = x1 - x0, y1 - y0
+            corner_r = math.hypot(w, h) / 2.0
+            visible_r = alpha_r * max(w, h) / FINAL_SIZE
+            measured.append({"index": n, "width_pt": round(w, 5),
+                             "height_pt": round(h, 5),
+                             "square_corner_radius_pt": round(corner_r, 5),
+                             "visible_radius_pt": round(visible_r, 5)})
+            if abs(w - h) > 0.02 or abs(w - expected_side) > 0.08:
+                errors.append(f"{theme} image {n}: wrong PDF dimensions {w:.3f}x{h:.3f}pt")
+            if visible_r > node_r * 0.94:
+                errors.append(f"{theme} image {n}: visible logo reaches circle clip")
+        themes[theme] = measured
+        doc.close()
+    return {"schema_version": 1, "node_radius_mm": NODE_RADIUS_MM,
+            "image_diameter_fraction": IMAGE_DIAMETER_FRACTION,
+            "logo_count": len(logos), "circle_radius_pt": round(node_r, 5),
+            "inscribed_square_side_pt": round(node_r * math.sqrt(2), 5),
+            "expected_image_side_pt": round(expected_side, 5),
+            "max_source_alpha_radius_px": round(alpha_r, 5),
+            "themes": themes, "errors": errors,
+            "result": "PASS" if not errors else "FAIL"}
+
+
+def command_validate_render(_args):
+    report = validate_rendered_pdfs(load_json(MANIFEST))
+    write_json(RENDER_CONTAINMENT_REPORT, report)
+    print(f"{report['result']}: {report['logo_count']} logos, light + dark")
+    if report["errors"]:
+        print("\n".join(" - " + e for e in report["errors"]))
+        raise SystemExit(1)
+
+
 def live_counts(graph_ids: list[str]):
     scripts = REPO / "_scripts"
     sys.path.insert(0, str(scripts))
@@ -706,6 +768,7 @@ def main():
     sub.add_parser("contact").set_defaults(func=command_contact)
     sub.add_parser("finalize").set_defaults(func=command_finalize)
     sub.add_parser("validate").set_defaults(func=command_validate)
+    sub.add_parser("validate-render").set_defaults(func=command_validate_render)
     patch = sub.add_parser("patch")
     patch.add_argument("--live", action="store_true", help="read-only match validation against mit-bestand")
     patch.set_defaults(func=command_patch)

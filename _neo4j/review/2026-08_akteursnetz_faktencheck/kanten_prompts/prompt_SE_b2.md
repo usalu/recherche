@@ -513,8 +513,8 @@ Für jede Kante:
 - Gespeichertes Belegzitat (Nachweis-Schnipsel): "Partners: NCC, RISE, Stockholms stad, Vasakronan, Fabege, Atrium Ljungberg, Contiga, Zengun, Anthesis, Svensk Betong, Ramboll och KTH"
 
 ### SE:K031
-- Kantenart: AKTEUR-AKTEUR
-- Knoten A: Kv Återbruket, Litteraturgatan/Selma stad, Göteborg  [Öffentliche Institution]
+- Kantenart: AKTEUR-BAUVORHABEN
+- Knoten A: Kv Återbruket, Litteraturgatan/Selma stad, Göteborg  [Bauvorhaben/Objekt]
 - Knoten B: Liljewall Arkitekter  [Unternehmen]
 - Land: SE
 - Belegstatus: GEPRUEFT
@@ -523,8 +523,8 @@ Für jede Kante:
 - Gespeichertes Belegzitat (Nachweis-Schnipsel): "Kv Återbruket ‹ Liljewall Arkitekter – Göteborg, Stockholm & Malmö (eigene Projektseite)"
 
 ### SE:K032
-- Kantenart: AKTEUR-AKTEUR
-- Knoten A: Kv Återbruket, Litteraturgatan/Selma stad, Göteborg  [Öffentliche Institution]
+- Kantenart: AKTEUR-BAUVORHABEN
+- Knoten A: Kv Återbruket, Litteraturgatan/Selma stad, Göteborg  [Bauvorhaben/Objekt]
 - Knoten B: NCC  [Unternehmen]
 - Land: SE
 - Belegstatus: GEPRUEFT

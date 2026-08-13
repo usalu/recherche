@@ -1,4 +1,4 @@
-# Plan: Bilder für alle Knoten des Akteursnetzes
+# Druckpilot für Bilder im Akteursnetz
 
 Ordner: `E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck\`
 
@@ -20,7 +20,7 @@ Daraus folgt hart:
   für gute Fotos — es ist eine Frage der Fläche, nicht der Qualität.
 * **Wortmarken scheiden aus.** „Gardiner & Theobald“ als Schriftzug bei 3,2 mm ist eine
   Schmutzlinie. Auch zweizeilige Logos mit Claim fallen weg.
-* **Es funktionieren nur einfache Bildmarken:** Signet, Monogramm, Wappen, Piktogramm —
+* **Es funktionieren nur einfache Bildmarken:** Signet, Wappen, Piktogramm —
   hoher Kontrast, wenige Formen, keine Feinlinien, kein Farbverlauf.
 
 Das ist keine Einschränkung, die sich wegarbeiten lässt: Das Web hat für genau diese Größe
@@ -110,7 +110,8 @@ Wasserfall, in dieser Reihenfolge:
 5. **Logo aus dem Seitenkopf**, per Hand identifiziert (`<img>` im `<header>`).
 6. **Presse-/Downloadbereich** der Organisation („Logo“, „Presse“, „Media Kit“) — liefert
    meist eine saubere SVG/EPS-Fassung.
-7. **Wikipedia/Wikidata** bei öffentlichen Stellen — Wappen liegen dort frei und sauber vor.
+7. **Lizenzierte Wikimedia-Datei** bei öffentlichen Stellen, sofern Quelle und Lizenz
+   einzeln geprüft wurden.
 8. **ID-only** (Abschnitt 2).
 
 Schritte 1–4 laufen nur auf den einzeln bestätigten Domains. Jeder Kandidat bleibt bis zur
@@ -129,7 +130,8 @@ oft veraltete Marken. Immer von der Domain des Eigentümers.
 * Quadratisch oder auf quadratisch beschneidbar.
 * Möglichst mit transparentem oder einfarbigem Hintergrund.
 
-Alles unter 64 px verwerfen und zum Monogramm greifen — Hochskalieren erzeugt nur Matsch.
+Alles unter 128 px kürzester Kante verwerfen und bei der unveränderten ID-only-Darstellung
+bleiben — Hochskalieren erzeugt nur Matsch.
 
 ### Aufbereitung (verbindlich, für alle gleich)
 
@@ -148,6 +150,11 @@ und lässt Reserve, falls der Knoten später wächst.
 5. **Transparenz behalten.** Der Theme-Hintergrund wird nicht ins PNG eingebrannt.
 6. **Kontrastprüfung.** Marken müssen unverändert in Hell- und Dunkelfassung funktionieren.
    Bei zu geringem Kontrast bleibt der Knoten ID-only; Logos werden nicht umgefärbt.
+
+Im Knoten wird das 256-px-Asset mit **100 % des Kreisdurchmessers** dargestellt (Faktor
+1,43 gegenüber der ersten korrigierten 70-%-Probe). Die sichtbaren Farbpixel sind im Asset
+radial auf höchstens 93 % begrenzt und bleiben deshalb vollständig innerhalb der Kontur;
+die Kreismaske bleibt zusätzlich aktiv. Die unveränderte ID liegt weiterhin mittig darüber.
 
 Werkzeug: **Pillow 12.1** und **CairoSVG 2.9**. ImageMagick wird nicht verwendet.
 
@@ -171,8 +178,8 @@ Der Bericht wird veröffentlicht. Das ist kein Nebenaspekt:
   Behörden Quelle und Lizenz notieren.
 * **Fotos gar nicht erst aufnehmen** — sie scheitern ohnehin an Abschnitt 0, und ihre
   Rechtelage ist ungleich schwieriger als die von Marken.
-* Jede Quelle wird in `_quellen.json` mitgeführt, damit die Herkunft jedes Bildes
-  nachweisbar bleibt. Ohne belastbare Quelle: Monogramm.
+* Jede Quelle wird ausschließlich im nicht-kanonischen Transportmanifest mit Abrufdatum,
+  Quellenart, Lizenzhinweis und SHA-256 geführt. Ohne belastbare Quelle: ID-only.
 
 ---
 
@@ -182,7 +189,7 @@ Der Bericht wird veröffentlicht. Das ist kein Nebenaspekt:
                              apple-touch-icon, <link rel=icon>, favicon.ico, og:image
                              -> bilder_kandidaten/<tid>/*.png + Metadaten
 
-    2. Automatisch sichten   verwerfen: < 64 px, nicht quadratisierbar,
+    2. Automatisch sichten   verwerfen: < 128 px kürzester Kante, nicht quadratisierbar,
                              Kontrast zu gering, offensichtliches Foto
                              -> Rest geht in die Einzelentscheidung
 
@@ -204,8 +211,17 @@ Knoten, die Schritt 2 nicht schon entschieden hat.
 
     Pilot: 48 Organisationen
       GB 16 · NL 16 · AT 16
+      GB/NL je 12 graphgestützt + 4 Overlay
+      AT 11 graphgestützt + 5 Overlay
       47 bestätigte Domains · 1 ohne belastbare aktuelle Domain
-      Ergebnis: Logo oder unveränderter ID-only-Knoten
+      Ergebnis nach 600-dpi-Druckprüfung: 11 Logo · 37 unveränderte ID-only-Knoten
+      Patchstatus: 35 graphgestützt · 13 Overlay-only · nicht angewendet
+
+Die Auswahl stammt aus dem final beschnittenen 859er-Netz; Projekte sind ausgeschlossen.
+Innerhalb jedes Landes und Stratum rotiert die Auswahl nach Knotentyp, alterniert
+URL-vorhanden/URL-fehlt soweit verfügbar und verwendet SHA-256 über `LAND:tid` als
+stabile Sortierung. Das Auswahlmanifest hält diese Policy und den Hash des Graph-Exports
+fest.
 
 ## 8. Was zuerst zu klären ist
 

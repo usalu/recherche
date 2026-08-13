@@ -2,6 +2,14 @@
 
 Ordner: `E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck\`
 
+## Abschlussstatus
+
+**Vollständig ausgeführt am 2026-08-13 für den LaTeX-Graphen.** Alle 570 Kanten wurden
+entschieden: 477 behalten, 93 entfernt. Keep und Remove bilden eine vollständige,
+disjunkte Partition. Die Entfernungsliste ist im LaTeX-Loader aktiviert, das Fragment wurde
+neu erzeugt und als PDF kompiliert. Es erfolgte kein Neo4j-Writeback. Siehe
+`KANTEN_ABSCHLUSSBERICHT.md` und `KANTEN_LATEX_AUDIT.md`.
+
 ## Auftrag
 
 570 gezeichnete Verbindungen bekommen je **Beziehungsart**, **Richtung** und eine kurze
@@ -72,14 +80,14 @@ reicht nicht für KEEP.
 
 Die Kantenart steht in jedem Block. Sie entscheidet, welches Vokabular gilt:
 
-**`AKTEUR-BAUVORHABEN`** (316 Kanten) — was hat der Akteur *an diesem Vorhaben* getan:
+**`AKTEUR-BAUVORHABEN`** (318 Kanten) — was hat der Akteur *an diesem Vorhaben* getan:
 `Bauherrschaft`, `Entwurf`, `Fachplanung`, `Reuse-Konzept`, `Bauteilinventarisierung`,
 `Rückbau`, `Bauteillieferung`, `Aufarbeitung`, `Logistik`, `Bauausführung`,
 `Prüfung und Nachweis`, `Forschungsbegleitung`, `Förderung`, `Betrieb`.
 Falls die Beteiligung sicher, aber die konkrete Aufgabe nicht bestimmbar ist:
 `Projektbeteiligung, Aufgabe unklar`.
 
-**`AKTEUR-AKTEUR`** (254 Kanten) — welches organisatorische Verhältnis:
+**`AKTEUR-AKTEUR`** (252 Kanten) — welches organisatorische Verhältnis:
 `Konsortialpartner`, `Kooperationsvereinbarung`, `Gemeinsames Bauvorhaben`, `Gründung`,
 `Übernahme`, `Konzernbindung`, `Betreiberschaft`, `Mitgliedschaft`, `Trägerschaft`,
 `Lieferbeziehung`, `Dienstleistungsbeziehung`, `Personelle Verflechtung`,
@@ -106,7 +114,7 @@ benannten Konsortiums oder Projekts ausgewiesen sind. Die Beweislast liegt immer
 **125 Kanten haben keine bereits geprüfte Quelle.** Sie sind als `UNGEPRUEFT` markiert. Sie kamen
 über eine Datenbankbeziehung oder einen Rechercheüberlauf in die Zeichnung und wurden nie
 einzeln geprüft. Hier muss aktiv gesucht werden; findet sich nichts, gilt `Kein Beleg für
-eine Beziehung`. Das ist ein erwartetes Ergebnis, kein Fehler — **64 dieser 125 hängen an
+eine Beziehung`. Das ist ein erwartetes Ergebnis, kein Fehler — **63 dieser 125 hängen an
 den Verzeichnis-Hubs**.
 
 **Richtung angeben.** Die Zeichnung ist ungerichtet, `Übernahme`, `Gründung`,
@@ -160,8 +168,8 @@ Verzeichnisse sind kein ausreichender Beleg.
 ## Umfang
 
     570 gezeichnete Kanten
-      Akteur–Bauvorhaben  316   (291 geprüft · 25 ungeprüft)
-      Akteur–Akteur       254   (154 geprüft · 100 ungeprüft)
+      Akteur–Bauvorhaben  318   (293 geprüft · 25 ungeprüft)
+      Akteur–Akteur       252   (152 geprüft · 100 ungeprüft)
 
     AT 30 · BE 86 · CH 46 · DE 49 · DK 42 · FI 40 · FR 44 · GB 95 · NL 78 · NO 27 · SE 33
 
@@ -179,11 +187,14 @@ Bauvorhaben. Ein expliziter, review-lokaler Override in
 `kanten_node_kind_overrides.json` ordnet deshalb seine 12 gezeichneten Kanten dem
 Akteur–Bauvorhaben-Vokabular zu. Er verändert weder Neo4j noch die Legacy-Zeichnungsquelle.
 
-Damit verschiebt sich nur die Aufteilung: 316 statt 304 Akteur–Bauvorhaben und 254 statt
+Ein zweiter Override korrigiert `Kv Återbruket, Litteraturgatan/Selma stad, Göteborg`
+ebenfalls als Bauvorhaben. Seine beiden Kanten bezeichnen Entwurf und Bauausführung.
+
+Damit verschiebt sich nur die Aufteilung: 318 statt 304 Akteur–Bauvorhaben und 252 statt
 266 Akteur–Akteur. Die Gesamtzahl und die Faktenprüfungsabdeckung bleiben unverändert:
 445 geprüft, 125 ungeprüft.
 
-Dass die größten ungeprüften Bündel an Opalis (26), Bolius (15),
+Dass die größten ungeprüften Bündel an Opalis (25), Bolius (15),
 bauteilnetz (11), SalvoWEB (9) und byggogbevar (3) hängen, ist der Grund, diese Lücke jetzt
 zu schließen: Verzeichniskanten sind nach den Projektregeln ausgeschlossen, sind aber
 mangels Prüfung bisher in der Zeichnung geblieben.
@@ -194,19 +205,17 @@ mangels Prüfung bisher in der Zeichnung geblieben.
     python assemble_kanten_prompt.py --all # kanten_prompts/ aus Taxonomie + batches
     python preflight_kanten.py              # Hashes, Vokabular, IDs, Typen, Prompts
 
-## Neo4j und Provenienz
+## LaTeX-Anwendung und Provenienz
 
-Die Markdown-Ergebnisse und die erzeugten JSON-Dateien sind **Review-/Transportartefakte**,
-nicht die Quelle der Wahrheit. `merge_kanten.py` trägt Lauf, Snapshot, Quelldatei,
-Merge-Art, Review-Status sowie Evidenzfelder in die Klassifikation ein. Eine spätere
-Übernahme in Neo4j muss diese Angaben auf den betroffenen Beziehungen als
-`evidence_url`, `evidence_quote`, `evidence_confidence`, `evidence_basis` und `review_run`
-schreiben. Erst nach diesem geprüften Writeback ist die Klassifikation kanonisch.
+Die Markdown-Ergebnisse und erzeugten JSON-Dateien dokumentieren den geprüften
+LaTeX-Zeichnungsstand. `merge_kanten.py` trägt Lauf, Snapshot, Quelldatei, Merge-Art,
+Review-Status und Evidenzfelder in die Klassifikation ein.
 
-Für die Anwendung gilt: `keep_kanten_final.json` ist die vollständige, belegte Positivliste
-des geprüften 570-Kanten-Snapshots. `prune_kanten_final.json` ist ihr vollständiges
-Komplement. Vor dem Neo4j-Writeback muss gelten: Keep und Prune sind disjunkt und ergeben
-zusammen exakt alle 570 geprüften Kanten.
+`keep_kanten_final.json` ist die vollständige, belegte Positivliste des geprüften
+570-Kanten-Snapshots. `prune_kanten_final.json` ist ihr vollständiges Komplement und wird
+vom LaTeX-Loader als Ausschlussliste verwendet. Keep und Remove sind disjunkt und ergeben
+zusammen exakt alle 570 geprüften Kanten. Neo4j ist für diesen Auftrag außerhalb des
+Umfangs; es wurde nicht verändert.
 
 ## Dateien
 
@@ -223,3 +232,5 @@ zusammen exakt alle 570 geprüften Kanten.
 | `keep_kanten_final.json` | vollständige Positivliste: nur belegte Beziehungen |
 | `prune_kanten_final.json` | vollständiges Komplement: alle unbelegten Kandidaten |
 | `kanten_konflikte.md` | frühere positive Grade, die trotzdem entfernt werden |
+| `KANTEN_ABSCHLUSSBERICHT.md` | alle Ergebnisse, Deutschland vollständig, alle 93 Entfernungen |
+| `KANTEN_LATEX_AUDIT.md` | maschinelle Mengen- und LaTeX-Endkontrolle |

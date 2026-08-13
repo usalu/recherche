@@ -76,9 +76,9 @@
 - Knoten B: Alinea / T+T Alinea  [Unternehmen]
 - Land: GB
 - Belegstatus: GEPRUEFT
-- Beleg-URL (MUSS geoeffnet werden): https://www.ttalinea.com/news/timber-square-reaches-practical-completion/
+- Beleg-URL (MUSS geoeffnet werden): https://www.bennettsassociates.com/projects/timber-square/
 - Bisherige Beschreibung (Altdaten, nur Hinweis): Quantity Surveyor / Cost Management
-- Gespeichertes Belegzitat (Nachweis-Schnipsel): "Since 2018, we have provided full cost management services through to completion"
+- Gespeichertes Belegzitat (Nachweis-Schnipsel): "T+T Alinea — Quantity Surveyor"
 
 ### GB:K090
 - Kantenart: AKTEUR-BAUVORHABEN

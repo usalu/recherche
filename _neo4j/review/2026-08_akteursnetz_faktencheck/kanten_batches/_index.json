@@ -1,6 +1,6 @@
 {
   "review_run": "2026-08_akteursnetz_faktencheck_kanten",
-  "generated_at": "2026-08-13T11:43:24.312241+00:00",
+  "generated_at": "2026-08-13T12:15:14.580612+00:00",
   "source_snapshot": {
     "snapshot_id": "actors_network_2026-08-10",
     "neo4j_exported_at": "2026-08-10",
@@ -58,8 +58,13 @@
       },
       {
         "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/kanten_node_kind_overrides.json",
-        "sha256": "293b66436e669787e198a4c2bd80d08ead5bbad66b601712c9aed96e1511d6fb",
-        "bytes": 494
+        "sha256": "e67a7470dce6b0234f4386847802acd79d4e0a4d9a3c427525cfc5a89426f9ec",
+        "bytes": 820
+      },
+      {
+        "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/kanten_evidence_replacements.json",
+        "sha256": "74d6564bf74051cdd436f44338980388dba0f4a2a2b3bfb0c6bb1712473d671c",
+        "bytes": 1204
       },
       {
         "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/KANTEN_TAXONOMIE.md",
@@ -68,8 +73,8 @@
       },
       {
         "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/build_kanten_batches.py",
-        "sha256": "7d9bf6b9c992fd406f8986b354536a0e5871052a73b3c267e7f1acb313d2c3d2",
-        "bytes": 10190
+        "sha256": "6690062908172e6922f109459eb9e344cadd9e395215cb4b61f05ad5b07f8e51",
+        "bytes": 11090
       },
       {
         "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/assemble_kanten_prompt.py",
@@ -83,13 +88,28 @@
       },
       {
         "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/merge_kanten.py",
-        "sha256": "c8af165d22e8c5483fe7b7f69d81a0cba097365d0b140ccc05ef1bd2b85793dd",
-        "bytes": 9720
+        "sha256": "cc7ccc101ee1740d0afcc576f65b2125d8714daa8b51dd18f1fd6cec39a7e420",
+        "bytes": 9731
       },
       {
         "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/preflight_kanten.py",
         "sha256": "acdceb03a7ebe97fc47b4de257ea32a20c2a38f36934d812c86f27e67494068e",
         "bytes": 5570
+      },
+      {
+        "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/recheck_kanten_sources.py",
+        "sha256": "de16bfd44b416888f55b09948bbce4030f9e9322f7e9d727fd01b95db96c22ed",
+        "bytes": 5219
+      },
+      {
+        "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/build_kanten_review_inventory.py",
+        "sha256": "7bcbcbef37095fb27113ff3e4db599ef9e034e53a1c520ff9114e39f863bb1aa",
+        "bytes": 4318
+      },
+      {
+        "path": "_neo4j/review/2026-08_akteursnetz_faktencheck/build_kanten_results.py",
+        "sha256": "3b57d3e8d2f8eb0183dc38dceb42cf2d7318464c1b833952cfa61034cab83a22",
+        "bytes": 32225
       },
       {
         "path": "_neo4j/netz/netz/data/overlays.py",
@@ -943,8 +963,8 @@
           "status": "GEPRUEFT",
           "a_is_project": true,
           "b_is_project": false,
-          "evidence_url": "https://brusselsarchitectureprize.be/en/project/esp-karreveld/",
-          "evidence_quote": "JZH&Partners"
+          "evidence_url": "https://bma.brussels/app/uploads/2023/03/A276_NL_48-52_Agwa_-School-Karreveld.pdf",
+          "evidence_quote": "Structural engineering: JZH & partners; Services engineering: JZH & partners"
         },
         {
           "id": "BE:K034",
@@ -982,8 +1002,8 @@
           "status": "GEPRUEFT",
           "a_is_project": true,
           "b_is_project": false,
-          "evidence_url": "https://brusselsarchitectureprize.be/en/project/esp-karreveld/",
-          "evidence_quote": "asbl Pouvoir Organisateur Pluriel"
+          "evidence_url": "https://bma.brussels/app/uploads/2023/03/A276_NL_48-52_Agwa_-School-Karreveld.pdf",
+          "evidence_quote": "Client: POP (Pouvoir Organisateur Pluriel); Official project name: ESP Karreveld"
         },
         {
           "id": "BE:K037",
@@ -2715,8 +2735,8 @@
           "status": "GEPRUEFT",
           "a_is_project": false,
           "b_is_project": false,
-          "evidence_url": "https://baukreisel.org/info",
-          "evidence_quote": "\"Ausbauworkshop Ditzingen\" - \"Stegreif\" - \"KIT\" (2022)"
+          "evidence_url": "https://nb.ieb.kit.edu/index.php/ausbau-stegreif-konrad-kocher-schule-kitzingen/",
+          "evidence_quote": "Als freies Kollektiv für zirkuläres Bauen ruft der Baukreisel gemeinsam mit dem Lehrstuhl für Nachhaltiges Bauen am KIT einen Ausbau Stegreif aus."
         },
         {
           "id": "DE:K034",
@@ -5816,8 +5836,8 @@
           "status": "GEPRUEFT",
           "a_is_project": true,
           "b_is_project": false,
-          "evidence_url": "https://www.ttalinea.com/news/timber-square-reaches-practical-completion/",
-          "evidence_quote": "Since 2018, we have provided full cost management services through to completion"
+          "evidence_url": "https://www.bennettsassociates.com/projects/timber-square/",
+          "evidence_quote": "T+T Alinea — Quantity Surveyor"
         },
         {
           "id": "GB:K090",
@@ -6149,7 +6169,7 @@
           "a_is_project": true,
           "b_is_project": false,
           "evidence_url": "https://www.universiteitleiden.nl/en/news/2020/11/gorlaeus-highrise-lives-on-in-two-new-buildings-in-leiden",
-          "evidence_quote": "The metal was processed on our campus and then used as a 'donor skeleton' for BioPartner's fifth building."
+          "evidence_quote": "The same beams have also been used for the circular construction of BioPartner 5 at the Leiden Bio Science Park."
         },
         {
           "id": "NL:K020",
@@ -7714,9 +7734,9 @@
             "NEW:kvaterbruketlitteraturgatanselmastadgoteborg",
             "NEW:liljewallarkitekter"
           ],
-          "kind": "AKTEUR-AKTEUR",
+          "kind": "AKTEUR-BAUVORHABEN",
           "status": "GEPRUEFT",
-          "a_is_project": false,
+          "a_is_project": true,
           "b_is_project": false,
           "evidence_url": "https://www.liljewall.se/projekt/kv-aterbruket/",
           "evidence_quote": "Kv Återbruket ‹ Liljewall Arkitekter – Göteborg, Stockholm & Malmö (eigene Projektseite)"
@@ -7727,9 +7747,9 @@
             "NEW:kvaterbruketlitteraturgatanselmastadgoteborg",
             "NEW:ncc"
           ],
-          "kind": "AKTEUR-AKTEUR",
+          "kind": "AKTEUR-BAUVORHABEN",
           "status": "GEPRUEFT",
-          "a_is_project": false,
+          "a_is_project": true,
           "b_is_project": false,
           "evidence_url": "https://www.ncc.se/vara-projekt/hyresratter-kvarteret-aterbruket-goteborg/",
           "evidence_quote": "Hyresrätter Kvarteret Återbruket, Göteborg | NCC (eigene Projektseite, NCC als ausführendes Bauunternehmen)"
