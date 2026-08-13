@@ -67,10 +67,15 @@ class CountryResolution:
     unplaced: list              # sorted(aset - cc.keys())
 
 
-def resolve_countries(raw, aset: set, new_proj_cc: dict) -> CountryResolution:
-    proj_cc = {e: cc_from_text(raw.by[e]["properties"].get("adresse", "")) for e in raw.projects}
+def resolve_countries(raw, aset: set, new_proj_cc: dict, exclude: frozenset = frozenset()) -> CountryResolution:
+    # `exclude` is the same prune list `aset` is filtered by -- projects never
+    # went through that filter (raw.projects has no aset-equivalent), so a
+    # pruned project eid would otherwise still get a country and be drawn.
+    proj_cc = {e: cc_from_text(raw.by[e]["properties"].get("adresse", ""))
+               for e in raw.projects if e not in exclude}
     for e, cc in new_proj_cc.items():
-        proj_cc[e] = cc
+        if e not in exclude:
+            proj_cc[e] = cc
 
     # stated: ISO.get(land-name, "--") for every aset member with a land entry
     # ("--" for an unmapped land name is a legacy quirk, preserved for parity
@@ -109,12 +114,17 @@ class Panel:
     edges: list        # [(a, b), ...] canonically ordered, globally de-duplicated
 
 
-def partition(raw, res: CountryResolution, countries: list, aset: set) -> dict:
+def partition(raw, res: CountryResolution, countries: list, aset: set,
+              edge_exclude: frozenset = frozenset()) -> dict:
     """Builds one Panel per whitelisted country. Edges are globally
     de-duplicated across ALL panels via a shared `drawn` set -- an edge whose
     both endpoints could belong to more than one panel (should not normally
     happen, since an actor has one country) is claimed by whichever panel is
-    built first, in `countries` order."""
+    built first, in `countries` order.
+
+    `edge_exclude` holds normalized (min-eid, max-eid) pairs -- e.g. fact-check
+    `unklar` edges -- to drop regardless of which side of the pair is the
+    peer/participation endpoint."""
     panels = {}
     drawn = set()
     for c in countries:
@@ -126,12 +136,12 @@ def partition(raw, res: CountryResolution, countries: list, aset: set) -> dict:
             for q in sorted(raw.peers[e]):
                 if q in inside and q in aset:
                     k = (min(e, q), max(e, q))
-                    if k not in drawn:
+                    if k not in drawn and k not in edge_exclude:
                         drawn.add(k); E.append(k)
             for x in sorted(raw.part[e]):
                 if x in inside:
                     k = (e, x)
-                    if k not in drawn:
+                    if k not in drawn and (min(e, x), max(e, x)) not in edge_exclude:
                         drawn.add(k); E.append(k)
         panels[c] = Panel(country=c, actors=A, projects=P, edges=E)
     return panels, drawn

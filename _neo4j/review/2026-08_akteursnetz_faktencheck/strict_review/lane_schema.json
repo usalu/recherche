@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Strict review lane",
+  "type": "object",
+  "required": ["schema_version", "lane", "records"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "lane": {"enum": ["A", "B", "C"]},
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "eid", "audit_id", "current_name", "decision", "merge_target_eid",
+          "reason_codes", "corrected_name", "corrected_type", "corrected_country",
+          "current_status", "reuse_scope", "roles", "relevance", "reuse_objects",
+          "evidence", "primary_reviewer", "verified_by", "review_status"
+        ],
+        "properties": {
+          "eid": {"type": "string", "minLength": 1},
+          "audit_id": {"type": "string", "pattern": "^[A-Z]{2}:[A-Z][0-9]{1,2}$"},
+          "current_name": {"type": "string", "minLength": 1},
+          "decision": {"enum": ["keep", "prune", "merge"]},
+          "merge_target_eid": {"type": ["string", "null"]},
+          "reason_codes": {"type": "array", "items": {"type": "string"}},
+          "corrected_name": {"type": ["string", "null"]},
+          "corrected_type": {"type": ["string", "null"]},
+          "corrected_country": {"type": ["string", "null"], "pattern": "^[A-Z]{2}$"},
+          "current_status": {"enum": ["active", "historical", "project"]},
+          "reuse_scope": {"enum": ["actual_reuse", "direct_enabler", "none", "future_design_only"]},
+          "roles": {"type": "array", "maxItems": 3, "items": {"type": "string"}},
+          "relevance": {"type": "string", "maxLength": 90},
+          "reuse_objects": {"type": "array", "items": {"type": "string"}},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["url", "quote", "supports_roles", "accessed_at"],
+              "properties": {
+                "url": {"type": "string", "minLength": 1},
+                "quote": {"type": "string", "minLength": 1},
+                "supports_roles": {"type": "array", "items": {"type": "string"}},
+                "accessed_at": {"type": "string", "format": "date"}
+              }
+            }
+          },
+          "primary_reviewer": {"enum": ["A", "B", "C"]},
+          "verified_by": {"type": ["string", "null"]},
+          "review_status": {"enum": ["primary_complete", "cross_review_complete"]}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

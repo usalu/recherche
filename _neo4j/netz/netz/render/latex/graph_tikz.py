@@ -10,20 +10,52 @@ netz/tests/golden/frag_abb_stage3_reference.tex for the frozen Stage 3 proof
 that the underlying model/mechanism pipeline was already byte-exact before
 Stage 4/6's renderer changes).
 """
+import json
+import os
+
 from ...model.variants import node_role, PLAIN
 from ...mechanisms.connectivity import drawn_edge_nodes
 from ...mechanisms.layout import force_layout, DEFAULT_FRAME
 from .vocab import CC_NAME
 
 
-def node_tikz(net, e, x, y, label=True):
+def load_image_manifest(path):
+    """Return accepted, existing pilot assets keyed by eid.
+
+    The transport manifest is deliberately optional. Invalid or incomplete
+    rows never change the historical rendering path; they are ignored here
+    and reported by the dedicated pilot validator instead.
+    """
+    if not path:
+        return {}
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    base = os.path.dirname(os.path.abspath(path))
+    result = {}
+    for row in data.get("nodes", []):
+        if row.get("review_status") != "accepted" or row.get("result") != "logo":
+            continue
+        asset = row.get("asset_path") or ""
+        if not asset:
+            continue
+        resolved = asset if os.path.isabs(asset) else os.path.join(base, asset)
+        if os.path.isfile(resolved) and row.get("eid"):
+            result[row["eid"]] = os.path.abspath(resolved).replace("\\", "/")
+    return result
+
+
+def node_tikz(net, e, x, y, label=True, images=None):
     role = node_role(net, e)
-    opt = "" if role is PLAIN else "[state=%s]" % role.state
+    options = [] if role is PLAIN else ["state=%s" % role.state]
+    image = (images or {}).get(e)
+    if image:
+        options.append("image={%s}" % image)
+    opt = "[%s]" % ",".join(options) if options else ""
     tid = net.tid[e] if label else ""
     return r"\SemioGraphNode%s{%.2f,%.2f}{%s}" % (opt, x, y, tid)
 
 
-def country_figure(net, cc, frame=DEFAULT_FRAME):
+def country_figure(net, cc, frame=DEFAULT_FRAME, images=None):
     pan = net.panels[cc]
     nodes = list(pan.actors) + list(pan.projects)
     if not nodes:
@@ -39,6 +71,6 @@ def country_figure(net, cc, frame=DEFAULT_FRAME):
         s.append(r"\SemioGraphEdge{%.2f,%.2f}{%.2f,%.2f}" % (ax, ay, bx, by))
     for e in nodes:
         px, py = P[e]
-        s.append(node_tikz(net, e, px, py, label=True))
+        s.append(node_tikz(net, e, px, py, label=True, images=images))
     s.append(r"\end{GraphFigure}")
     return "\n".join(s), nA, nP, len(nodes), 0

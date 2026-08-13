@@ -29,6 +29,24 @@ class Sources:
     prune_faktencheck_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/prune_faktencheck_final.json"
     )
+    unklar_edges_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/unklar_edges_final.json"
+    )
+    strict_manifest_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/strict_review/input_manifest.json"
+    )
+    prune_strict_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/prune_strict_final.json"
+    )
+    merge_strict_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/merge_redirects_strict.json"
+    )
+    report_overrides_strict_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/report_overrides_strict.json"
+    )
+    klassifikation_final_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/klassifikation_final.json"
+    )
 
 
 DEFAULT = Sources()

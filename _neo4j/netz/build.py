@@ -5,8 +5,14 @@ SP = r"E:/recherche/_neo4j/netz"
 def read(p):
     return io.open(p, encoding="utf-8").read()
 
-def build(out_name, frags, extra_preamble=None):
+def build(out_name, frags, extra_preamble=None, theme="light"):
     head = read(SP + "/head.tex")
+    if theme == "dark":
+        head = head.replace(
+            r"\documentclass[type=zwischenbericht]{zukunftbau}",
+            r"\documentclass[type=zwischenbericht,theme=dark]{zukunftbau}",
+            1,
+        )
     if extra_preamble:
         marker = chr(92) + "begin{document}"
         head = head.replace(marker, read(SP + "/" + extra_preamble) + marker, 1)
@@ -19,10 +25,15 @@ def build(out_name, frags, extra_preamble=None):
 if __name__ == "__main__":
     out = sys.argv[1]
     extra = None
+    theme = "light"
     frags = []
     for a in sys.argv[2:]:
         if a.startswith("+"):
             extra = a[1:]
+        elif a.startswith("--theme="):
+            theme = a.split("=", 1)[1]
+            if theme not in {"light", "dark"}:
+                raise SystemExit("--theme must be light or dark")
         else:
             frags.append(a)
-    build(out, frags, extra)
+    build(out, frags, extra, theme)

@@ -8,6 +8,7 @@ from dataclasses import dataclass
 from ..data.neo4j_export import load_export, RawGraph
 from ..data.overlays import apply_overlays
 from ..data.audit_edges import load_peer_edges
+from ..data.strict_review import StrictReviewBundle, apply_strict_review
 from ..mechanisms.countries import (
     resolve_countries, whitelist_countries, partition, cross_border_edges,
     is_person, CountryResolution, Panel,
@@ -32,9 +33,13 @@ class Network:
     overlay_reports: list                   # per-overlay OverlayReport
 
 
-def build_network(sources, exclude: frozenset = frozenset()) -> Network:
+def build_network(sources, exclude: frozenset = frozenset(),
+                   edge_exclude: frozenset = frozenset(),
+                   strict_review: StrictReviewBundle | None = None) -> Network:
+    strict_review = strict_review or StrictReviewBundle()
     raw = load_export(sources.export_path)
     new_eids, new_proj_cc, overlay_reports = apply_overlays(raw, sources.overlay_paths)
+    apply_strict_review(raw, new_proj_cc, strict_review)
 
     # known<->known peer edges (second-audit findings) -- existence-filtered,
     # exactly like netplate.Model's `extra_peers` handling.
@@ -47,9 +52,9 @@ def build_network(sources, exclude: frozenset = frozenset()) -> Network:
 
     aset = {a["eid"] for a in raw.actors if a["eid"] not in exclude}
 
-    res = resolve_countries(raw, aset, new_proj_cc)
+    res = resolve_countries(raw, aset, new_proj_cc, exclude)
     countries = whitelist_countries(res)
-    panels, drawn = partition(raw, res, countries, aset)
+    panels, drawn = partition(raw, res, countries, aset, edge_exclude)
     cross = cross_border_edges(raw, aset, res, drawn)
 
     num = assign_num(raw, panels)

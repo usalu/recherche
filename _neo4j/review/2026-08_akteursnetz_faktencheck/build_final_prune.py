@@ -12,9 +12,15 @@ candidates, i.e. R2 requires ohne_beleg + structural isolation) -- the user's
 rule has no isolation requirement, so all 86 ohne_beleg nodes are included
 regardless of whether they carry a drawn edge.
 
-Input: verdicts.json, prune_faktencheck_provenance.json (both in this folder)
+Also emits the edge-side counterpart: every `unklar`-graded edge, as a
+normalized (min-eid, max-eid) pair, for netz's `partition()` `edge_exclude`
+param -- "only evidence-packed stuff stays" applies to edges the same way.
+
+Input: verdicts.json, prune_faktencheck_provenance.json, worklist.json (all
+in this folder)
 Output: prune_faktencheck_final.json -- plain array of eids, drops into
 netz/data/prune.py's load_prune() unchanged.
+Output: unklar_edges_final.json -- array of [eid_a, eid_b] pairs.
 """
 import json, os
 
@@ -26,9 +32,40 @@ def load(name):
         return json.load(f)
 
 
+def build_node_meta(wl):
+    node_meta = {}
+    for pkt in wl["packets"]:
+        cc = pkt["cc"]
+        for n in pkt.get("nodes", []):
+            node_meta[(cc, n["tid"])] = n["eid"]
+    return node_meta
+
+
 def main():
     v = load("verdicts.json")
     prov = load("prune_faktencheck_provenance.json")
+    wl = load("worklist.json")
+    node_meta = build_node_meta(wl)
+
+    unklar_pairs = set()
+    unklar_missing = []
+    for e in v["edges"]:
+        if e.get("edge_degree") != "unklar":
+            continue
+        cc = e["cc"]
+        ea, eb = node_meta.get((cc, e["a_tid"])), node_meta.get((cc, e["b_tid"]))
+        if not ea or not eb:
+            unklar_missing.append((cc, e["a_tid"], e["b_tid"]))
+            continue
+        unklar_pairs.add(tuple(sorted((ea, eb))))
+
+    edges_out_path = os.path.join(BASE, "unklar_edges_final.json")
+    with open(edges_out_path, "w", encoding="utf-8") as f:
+        json.dump(sorted(unklar_pairs), f, indent=2, ensure_ascii=False)
+    print(f"unklar edges: {sum(1 for e in v['edges'] if e.get('edge_degree') == 'unklar')}")
+    print(f"resolved eid pairs: {len(unklar_pairs)}"
+          + (f"  ! {len(unklar_missing)} unresolved: {unklar_missing}" if unklar_missing else ""))
+    print(f"Written: {edges_out_path}")
 
     eids = set()
     no_eid = []

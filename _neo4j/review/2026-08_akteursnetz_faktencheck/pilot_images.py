@@ -1,0 +1,717 @@
+# -*- coding: utf-8 -*-
+"""Reproducible 48-node image pilot for the printed actor network.
+
+The script never writes to Neo4j.  Its final ``patch`` command emits a
+reviewable property patch and can optionally validate its match keys against
+the live ``mit-bestand`` database in read-only mode.
+"""
+from __future__ import annotations
+
+import argparse
+import collections
+import datetime as dt
+import hashlib
+import html.parser
+import io
+import json
+import math
+import mimetypes
+import os
+import re
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
+
+
+BASE = Path(__file__).resolve().parent
+REPO = BASE.parents[2]
+NETZ_ROOT = REPO / "_neo4j" / "netz"
+PILOT = BASE / "bilder_pilot"
+RAW = PILOT / "kandidaten"
+FINAL = PILOT / "bilder"
+SELECTION = PILOT / "selection.json"
+DOMAINS = PILOT / "domains_review.json"
+DOMAIN_DECISIONS = BASE / "pilot_domain_decisions.json"
+REVIEW = PILOT / "asset_review.json"
+ASSET_DECISIONS = BASE / "pilot_asset_decisions.json"
+MANIFEST = PILOT / "pilot_transport_manifest.json"
+PATCH = PILOT / "pilot_image_property_patch.json"
+PATCH_REPORT = PILOT / "pilot_image_property_patch_report.md"
+WORKLIST = BASE / "worklist.json"
+VERDICTS = BASE / "verdicts.json"
+EXPORT = REPO / "actors_network.json"
+
+COUNTRY_TARGETS = {
+    "GB": {"graph": 12, "overlay": 4},
+    "NL": {"graph": 12, "overlay": 4},
+    "AT": {"graph": 11, "overlay": 5},
+}
+TYPE_ORDER = (
+    "Software_Tool_Anbieter",
+    "Oeffentliche_Institution",
+    "Forschung_Lehre",
+    "NGO_Verband_Netzwerk",
+    "Materialhub_Bauteilboerse",
+    "Unternehmen",
+    "Foerdergeber_Programmtraeger",
+    "Organisation",
+    "Unbekannt",
+)
+BLOCKED_SUGGESTION_HOSTS = {
+    "wikipedia.org", "wikimedia.org", "linkedin.com", "facebook.com",
+    "instagram.com", "youtube.com", "vimeo.com", "researchgate.net",
+    "archdaily.com", "dezeen.com", "springer.com", "mdpi.com",
+}
+USER_AGENT = "Semio actor-network image pilot/1.0 (research; no affiliation)"
+MAX_DOWNLOAD = 12 * 1024 * 1024
+FINAL_SIZE = 256
+SAFE_RADIUS = 119.0  # 93% of the 128px node radius
+
+
+def load_json(path: Path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def write_json(path: Path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def today():
+    return dt.date.today().isoformat()
+
+
+def sha256_bytes(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def sha256_file(path: Path) -> str:
+    return sha256_bytes(path.read_bytes())
+
+
+def stable_key(value: str) -> str:
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
+def normalized_type(value) -> str:
+    return value if value in TYPE_ORDER else "Unbekannt"
+
+
+def node_key(cc: str, tid: str) -> str:
+    return f"{cc}:{tid}"
+
+
+def host_of(url: str) -> str:
+    try:
+        host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    except ValueError:
+        return ""
+    return host[4:] if host.startswith("www.") else host
+
+
+def host_is_blocked(host: str) -> bool:
+    return any(host == h or host.endswith("." + h) for h in BLOCKED_SUGGESTION_HOSTS)
+
+
+def final_network():
+    sys.path.insert(0, str(NETZ_ROOT))
+    from netz.sources import DEFAULT
+    from netz.data.prune import load_prune, load_edge_exclude
+    from netz.model.concepts import build_network
+
+    exclude = load_prune(DEFAULT.prune_path) | load_prune(DEFAULT.prune_faktencheck_path)
+    edge_exclude = load_edge_exclude(DEFAULT.unklar_edges_path)
+    return build_network(DEFAULT, exclude=exclude, edge_exclude=edge_exclude)
+
+
+def round_robin(rows: list[dict], count: int) -> list[dict]:
+    """Rotate types and alternate URL-present/URL-missing inside each type."""
+    buckets = {}
+    for typ in TYPE_ORDER:
+        typed = [r for r in rows if normalized_type(r.get("typ")) == typ]
+        if not typed:
+            continue
+        buckets[typ] = {
+            True: collections.deque(sorted(
+                (r for r in typed if r["url_present"]),
+                key=lambda r: stable_key(r["key"]),
+            )),
+            False: collections.deque(sorted(
+                (r for r in typed if not r["url_present"]),
+                key=lambda r: stable_key(r["key"]),
+            )),
+            "prefer": True,
+        }
+
+    chosen = []
+    while len(chosen) < count:
+        progressed = False
+        for typ in TYPE_ORDER:
+            if typ not in buckets or len(chosen) >= count:
+                continue
+            b = buckets[typ]
+            pref = b["prefer"]
+            queue = b[pref] if b[pref] else b[not pref]
+            if queue:
+                chosen.append(queue.popleft())
+                b["prefer"] = not pref
+                progressed = True
+        if not progressed:
+            break
+    if len(chosen) != count:
+        raise RuntimeError(f"selection requested {count}, only {len(chosen)} available")
+    return chosen
+
+
+def command_select(_args):
+    net = final_network()
+    total = sum(len(p.actors) + len(p.projects) for p in net.panels.values())
+    if total != 859:
+        raise RuntimeError(f"final network drift: expected 859 drawn nodes, got {total}")
+
+    work = load_json(WORKLIST)
+    by_eid = {}
+    for packet in work["packets"]:
+        for row in packet.get("nodes", []):
+            by_eid[row["eid"]] = row
+    verdict_by_eid = {r["eid"]: r for r in load_json(VERDICTS)["nodes"] if r.get("eid")}
+
+    selected = []
+    for cc, targets in COUNTRY_TARGETS.items():
+        rows = []
+        for eid in net.panels[cc].actors:
+            w = by_eid.get(eid, {})
+            raw = net.raw.by.get(eid, {})
+            props = raw.get("properties", {})
+            sources = [u for u in ([w.get("primary_source_url")] + list(w.get("source_urls") or [])) if u]
+            graph_backed = eid not in net.new_eids
+            rows.append({
+                "key": node_key(cc, net.tid[eid]),
+                "cc": cc,
+                "tid": net.tid[eid],
+                "eid": eid,
+                "graph_id": props.get("id") if graph_backed else None,
+                "graph_backed": graph_backed,
+                "name": net.raw.name(eid),
+                "typ": normalized_type(w.get("typ")),
+                "url_present": bool(sources),
+                "source_urls": sources,
+                "evidence_url": verdict_by_eid.get(eid, {}).get("beleg_url", ""),
+            })
+        graph_rows = [r for r in rows if r["graph_backed"]]
+        overlay_rows = [r for r in rows if not r["graph_backed"]]
+        if cc == "AT" and len(graph_rows) != 11:
+            raise RuntimeError(f"AT graph-backed drift: expected 11, got {len(graph_rows)}")
+        chosen = round_robin(graph_rows, targets["graph"])
+        chosen += round_robin(overlay_rows, targets["overlay"])
+        for r in chosen:
+            r["selection_stratum"] = "graph" if r["graph_backed"] else "overlay"
+        selected.extend(chosen)
+
+    selected.sort(key=lambda r: (r["cc"], r["tid"]))
+    if len(selected) != 48:
+        raise AssertionError(len(selected))
+    data = {
+        "schema_version": 1,
+        "created_at": today(),
+        "graph_export": str(EXPORT.relative_to(REPO)).replace("\\", "/"),
+        "graph_export_sha256": sha256_file(EXPORT),
+        "drawn_network_nodes": total,
+        "selection_policy": "GB/NL 12 graph + 4 overlay; AT 11 graph + 5 overlay; type round-robin; URL alternating; SHA-256 stable order",
+        "nodes": selected,
+    }
+    write_json(SELECTION, data)
+    print(f"wrote {SELECTION}: {len(selected)} nodes")
+
+
+def suggested_official_url(row: dict) -> tuple[str, str]:
+    for url in row.get("source_urls", []):
+        host = host_of(url)
+        if host and not host_is_blocked(host):
+            root = urllib.parse.urlunsplit((urllib.parse.urlsplit(url).scheme or "https", host, "/", "", ""))
+            return root, "worklist_source_candidate"
+    return "", "manual_research_required"
+
+
+def command_domains(_args):
+    selection = load_json(SELECTION)
+    existing = {}
+    if DOMAINS.exists():
+        existing = {r["key"]: r for r in load_json(DOMAINS).get("nodes", [])}
+    decisions = load_json(DOMAIN_DECISIONS) if DOMAIN_DECISIONS.exists() else {}
+    rows = []
+    for node in selection["nodes"]:
+        url, basis = suggested_official_url(node)
+        row = existing.get(node["key"], {
+            "key": node["key"],
+            "name": node["name"],
+            "official_url": url,
+            "status": "needs_review",
+            "basis": basis,
+            "notes": "",
+        })
+        if node["key"] in decisions:
+            row.update(decisions[node["key"]])
+            row["key"] = node["key"]
+            row["name"] = node["name"]
+        rows.append(row)
+    write_json(DOMAINS, {"schema_version": 1, "nodes": rows})
+    print(f"wrote {DOMAINS}: {len(rows)} domain rows")
+
+
+class IconParser(html.parser.HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.base = ""
+        self.candidates = []
+        self.header_depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        a = {k.lower(): (v or "") for k, v in attrs}
+        tag = tag.lower()
+        if tag == "base" and a.get("href"):
+            self.base = a["href"]
+        if tag == "header":
+            self.header_depth += 1
+        if tag == "link" and a.get("href"):
+            rel = set(a.get("rel", "").lower().split())
+            if "apple-touch-icon" in rel or "apple-touch-icon-precomposed" in rel:
+                self.candidates.append((1, "apple_touch", a["href"]))
+            elif "icon" in rel or "shortcut" in rel:
+                self.candidates.append((2, "declared_icon", a["href"]))
+        if tag == "meta" and a.get("content"):
+            prop = (a.get("property") or a.get("name") or "").lower()
+            if prop == "og:image":
+                self.candidates.append((4, "og_image", a["content"]))
+        if tag == "img" and a.get("src"):
+            marker = " ".join((a.get("alt", ""), a.get("class", ""), a.get("id", ""))).lower()
+            if self.header_depth or "logo" in marker or "brand" in marker:
+                self.candidates.append((5, "header_logo", a["src"]))
+
+    def handle_endtag(self, tag):
+        if tag.lower() == "header" and self.header_depth:
+            self.header_depth -= 1
+
+
+def request_bytes(url: str) -> tuple[bytes, str, str]:
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "image/*,text/html;q=0.9,*/*;q=0.5"})
+    with urllib.request.urlopen(req, timeout=20) as response:
+        content_type = response.headers.get_content_type()
+        final_url = response.geturl()
+        data = response.read(MAX_DOWNLOAD + 1)
+    if len(data) > MAX_DOWNLOAD:
+        raise ValueError("download exceeds 12 MiB")
+    return data, content_type, final_url
+
+
+def discover_candidates(official_url: str):
+    split = urllib.parse.urlsplit(official_url)
+    root = urllib.parse.urlunsplit((split.scheme or "https", split.netloc, "/", "", ""))
+    candidates = [
+        (1, "apple_touch", urllib.parse.urljoin(root, "/apple-touch-icon.png")),
+        (1, "apple_touch", urllib.parse.urljoin(root, "/apple-touch-icon-precomposed.png")),
+        (3, "favicon", urllib.parse.urljoin(root, "/favicon.ico")),
+    ]
+    page_error = ""
+    try:
+        data, content_type, final_url = request_bytes(official_url)
+        if content_type == "text/html" or b"<html" in data[:1000].lower():
+            parser = IconParser()
+            parser.feed(data.decode("utf-8", errors="replace"))
+            base = parser.base or final_url
+            candidates.extend((p, k, urllib.parse.urljoin(base, u)) for p, k, u in parser.candidates)
+    except Exception as exc:
+        page_error = f"{type(exc).__name__}: {exc}"
+    seen, result = set(), []
+    for priority, kind, url in sorted(candidates, key=lambda x: x[0]):
+        clean = urllib.parse.urldefrag(url)[0]
+        if clean and clean not in seen:
+            seen.add(clean)
+            result.append((priority, kind, clean))
+    return result, page_error
+
+
+def rasterize(data: bytes, content_type: str, source_url: str) -> tuple[Image.Image, str]:
+    is_svg = content_type == "image/svg+xml" or source_url.lower().endswith(".svg") or data.lstrip().startswith(b"<svg")
+    if is_svg:
+        try:
+            import cairosvg
+        except ImportError as exc:
+            raise RuntimeError("SVG candidate requires cairosvg") from exc
+        data = cairosvg.svg2png(bytestring=data, output_width=512, output_height=512)
+        return Image.open(io.BytesIO(data)).convert("RGBA"), "svg"
+    im = Image.open(io.BytesIO(data))
+    best = None
+    for i in range(getattr(im, "n_frames", 1)):
+        im.seek(i)
+        frame = im.convert("RGBA")
+        if best is None or frame.width * frame.height > best.width * best.height:
+            best = frame.copy()
+    return best, (im.format or mimetypes.guess_type(source_url)[0] or "raster").lower()
+
+
+def safe_slug(key: str) -> str:
+    return re.sub(r"[^A-Za-z0-9_.-]+", "_", key)
+
+
+def command_harvest(args):
+    selection = {r["key"]: r for r in load_json(SELECTION)["nodes"]}
+    domains = {r["key"]: r for r in load_json(DOMAINS)["nodes"]}
+    keys = sorted(selection)
+    if args.key:
+        keys = [args.key]
+    for pos, key in enumerate(keys, 1):
+        domain = domains[key]
+        node_dir = RAW / selection[key]["cc"] / selection[key]["tid"]
+        node_dir.mkdir(parents=True, exist_ok=True)
+        meta = {"key": key, "official_url": domain.get("official_url", ""), "page_error": "", "candidates": []}
+        if domain.get("status") != "accepted" or not domain.get("official_url"):
+            meta["page_error"] = "domain not accepted"
+            write_json(node_dir / "candidates.json", meta)
+            print(f"[{pos}/{len(keys)}] {key}: no accepted domain")
+            continue
+        candidates, page_error = discover_candidates(domain["official_url"])
+        meta["page_error"] = page_error
+        for idx, (priority, kind, url) in enumerate(candidates, 1):
+            record = {"id": f"c{idx:02d}", "priority": priority, "kind": kind, "url": url, "status": "rejected", "reason": ""}
+            try:
+                data, content_type, final_url = request_bytes(url)
+                im, fmt = rasterize(data, content_type, final_url)
+                record.update({"final_url": final_url, "content_type": content_type, "format": fmt,
+                               "width": im.width, "height": im.height})
+                if min(im.size) < 128:
+                    record["reason"] = "short edge below 128px"
+                else:
+                    preview = node_dir / f"{record['id']}_{kind}.png"
+                    im.save(preview, "PNG")
+                    record["preview_path"] = str(preview.relative_to(PILOT)).replace("\\", "/")
+                    record["status"] = "candidate"
+                    record["reason"] = ""
+            except Exception as exc:
+                record["reason"] = f"{type(exc).__name__}: {exc}"
+            meta["candidates"].append(record)
+        write_json(node_dir / "candidates.json", meta)
+        good = sum(r["status"] == "candidate" for r in meta["candidates"])
+        print(f"[{pos}/{len(keys)}] {key}: {good}/{len(meta['candidates'])} usable candidates")
+
+
+def font(size=18):
+    for path in (Path("C:/Windows/Fonts/arial.ttf"), Path("C:/Windows/Fonts/segoeui.ttf")):
+        if path.exists():
+            return ImageFont.truetype(str(path), size)
+    return ImageFont.load_default()
+
+
+def command_contact(_args):
+    selection = load_json(SELECTION)["nodes"]
+    review_rows = []
+    sheets = []
+    for page_no, start in enumerate(range(0, len(selection), 12), 1):
+        page = Image.new("RGB", (4 * 260, 12 * 190), "#f7f3e3")
+        draw = ImageDraw.Draw(page)
+        for row_no, node in enumerate(selection[start:start + 12]):
+            meta_path = RAW / node["cc"] / node["tid"] / "candidates.json"
+            meta = load_json(meta_path) if meta_path.exists() else {"candidates": []}
+            candidates = [c for c in meta["candidates"] if c.get("status") == "candidate"][:4]
+            review_rows.append({"key": node["key"], "result": "pending", "candidate_id": "", "notes": ""})
+            y = row_no * 190
+            draw.text((4, y + 4), f"{node['key']}  {node['name'][:31]}", fill="#001117", font=font(16))
+            for col in range(4):
+                x = col * 260
+                if col >= len(candidates):
+                    draw.rectangle((x + 55, y + 34, x + 205, y + 184), outline="#7b827d")
+                    continue
+                c = candidates[col]
+                path = PILOT / c["preview_path"]
+                im = Image.open(path).convert("RGBA")
+                im.thumbnail((140, 120), Image.Resampling.LANCZOS)
+                tile = Image.new("RGBA", (150, 125), "white")
+                tile.alpha_composite(im, ((150 - im.width) // 2, (125 - im.height) // 2))
+                page.paste(tile.convert("RGB"), (x + 55, y + 34))
+                draw.text((x + 58, y + 160), f"{c['id']} {c['kind']}", fill="#001117", font=font(14))
+        out = PILOT / f"contact_sheet_{page_no}.png"
+        page.save(out)
+        sheets.append(out)
+    existing = {}
+    if REVIEW.exists():
+        existing = {r["key"]: r for r in load_json(REVIEW).get("nodes", [])}
+    decisions = load_json(ASSET_DECISIONS) if ASSET_DECISIONS.exists() else {}
+    for row in review_rows:
+        if row["key"] in existing:
+            row.update(existing[row["key"]])
+        if row["key"] in decisions:
+            row.update(decisions[row["key"]])
+    write_json(REVIEW, {"schema_version": 1, "nodes": review_rows})
+    print("wrote contact sheets: " + ", ".join(str(p) for p in sheets))
+    print(f"wrote {REVIEW}")
+
+
+def remove_edge_background(im: Image.Image) -> Image.Image:
+    im = im.convert("RGBA")
+    if im.getbbox() is None:
+        return im
+    corners = [im.getpixel((0, 0)), im.getpixel((im.width - 1, 0)),
+               im.getpixel((0, im.height - 1)), im.getpixel((im.width - 1, im.height - 1))]
+    if any(a < 250 for _, _, _, a in corners):
+        return im
+    bg = tuple(sum(p[i] for p in corners) // 4 for i in range(3))
+    pix = im.load()
+    queue = collections.deque()
+    seen = set()
+    for x in range(im.width):
+        queue.append((x, 0)); queue.append((x, im.height - 1))
+    for y in range(im.height):
+        queue.append((0, y)); queue.append((im.width - 1, y))
+    while queue:
+        x, y = queue.popleft()
+        if (x, y) in seen:
+            continue
+        seen.add((x, y))
+        r, g, b, a = pix[x, y]
+        if a < 8 or max(abs(r - bg[0]), abs(g - bg[1]), abs(b - bg[2])) <= 8:
+            pix[x, y] = (r, g, b, 0)
+            if x: queue.append((x - 1, y))
+            if y: queue.append((x, y - 1))
+            if x + 1 < im.width: queue.append((x + 1, y))
+            if y + 1 < im.height: queue.append((x, y + 1))
+    return im
+
+
+def alpha_max_radius(im: Image.Image) -> float:
+    alpha = im.getchannel("A")
+    pixels = alpha.load()
+    cx = (im.width - 1) / 2
+    cy = (im.height - 1) / 2
+    max_r2 = 0.0
+    for y in range(im.height):
+        for x in range(im.width):
+            if pixels[x, y] > 8:
+                max_r2 = max(max_r2, (x - cx) ** 2 + (y - cy) ** 2)
+    return math.sqrt(max_r2)
+
+
+def prepare_final(source: Path, dest: Path):
+    im = remove_edge_background(Image.open(source))
+    bbox = im.getchannel("A").getbbox()
+    if not bbox:
+        raise ValueError("candidate has no visible pixels")
+    im = im.crop(bbox)
+    scale = min((SAFE_RADIUS * 2) / im.width, (SAFE_RADIUS * 2) / im.height)
+    size = (max(1, round(im.width * scale)), max(1, round(im.height * scale)))
+    im = im.resize(size, Image.Resampling.LANCZOS)
+    canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
+    canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
+    max_r = alpha_max_radius(canvas)
+    if max_r > SAFE_RADIUS:
+        # Leave one pixel of numerical/centering headroom; integer resampling
+        # can otherwise place a surviving antialiased pixel just outside 93%.
+        ratio = (SAFE_RADIUS - 1.0) / max_r
+        im = im.resize((max(1, int(im.width * ratio)), max(1, int(im.height * ratio))), Image.Resampling.LANCZOS)
+        canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
+        canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    canvas.save(dest, "PNG", optimize=True)
+
+
+def command_finalize(_args):
+    selection = {r["key"]: r for r in load_json(SELECTION)["nodes"]}
+    domains = {r["key"]: r for r in load_json(DOMAINS)["nodes"]}
+    decisions = {r["key"]: r for r in load_json(REVIEW)["nodes"]}
+    if ASSET_DECISIONS.exists():
+        for key, decision in load_json(ASSET_DECISIONS).items():
+            decisions[key].update(decision)
+    rows = []
+    for key in sorted(selection):
+        node = selection[key]
+        decision = decisions[key]
+        if decision.get("result") not in {"logo", "none"}:
+            raise ValueError(f"{key}: unresolved review result {decision.get('result')!r}")
+        row = {
+            "key": key, "cc": node["cc"], "tid": node["tid"], "eid": node["eid"],
+            "graph_id": node.get("graph_id"), "name": node["name"],
+            "result": decision["result"], "review_status": "accepted",
+            "asset_path": None, "source_url": None, "source_kind": None,
+            "retrieved_at": today(), "license_note": decision.get("license_note", ""),
+            "sha256": None, "review_notes": decision.get("notes", ""),
+        }
+        if decision["result"] == "logo":
+            candidate_id = decision.get("candidate_id")
+            meta = load_json(RAW / node["cc"] / node["tid"] / "candidates.json")
+            matches = [c for c in meta["candidates"] if c["id"] == candidate_id and c.get("status") == "candidate"]
+            if len(matches) != 1:
+                raise ValueError(f"{key}: accepted candidate {candidate_id!r} not found")
+            candidate = matches[0]
+            source = PILOT / candidate["preview_path"]
+            dest = FINAL / node["cc"] / f"{node['tid']}.png"
+            prepare_final(source, dest)
+            row.update({
+                "asset_path": str(dest.relative_to(PILOT)).replace("\\", "/"),
+                "source_url": candidate.get("final_url") or candidate["url"],
+                "source_kind": candidate["kind"],
+                "sha256": sha256_file(dest),
+                "license_note": decision.get("license_note") or "official-site mark; identification in research figure; no affiliation implied",
+            })
+        rows.append(row)
+    manifest = {
+        "schema_version": 1,
+        "transport_only": True,
+        "canonical_target": "Neo4j node properties after separate approval",
+        "database": "mit-bestand",
+        "created_at": today(),
+        "graph_export_sha256": load_json(SELECTION)["graph_export_sha256"],
+        "nodes": rows,
+    }
+    write_json(MANIFEST, manifest)
+    print(f"wrote {MANIFEST}: {len(rows)} reviewed nodes")
+
+
+def validate_manifest(manifest):
+    errors = []
+    rows = manifest.get("nodes", [])
+    if len(rows) != 48:
+        errors.append(f"expected 48 rows, got {len(rows)}")
+    counts = collections.Counter(r.get("cc") for r in rows)
+    if counts != collections.Counter({"GB": 16, "NL": 16, "AT": 16}):
+        errors.append(f"country counts wrong: {dict(counts)}")
+    for row in rows:
+        key = row.get("key", "?")
+        if row.get("review_status") != "accepted" or row.get("result") not in {"logo", "none"}:
+            errors.append(f"{key}: unresolved outcome")
+            continue
+        if row["result"] == "none":
+            if row.get("asset_path"):
+                errors.append(f"{key}: none row has asset")
+            continue
+        path = PILOT / row["asset_path"]
+        if not path.is_file():
+            errors.append(f"{key}: missing {path}")
+            continue
+        im = Image.open(path)
+        if im.size != (FINAL_SIZE, FINAL_SIZE) or im.mode != "RGBA":
+            errors.append(f"{key}: expected 256x256 RGBA, got {im.size} {im.mode}")
+        if alpha_max_radius(im) > SAFE_RADIUS + 0.75:
+            errors.append(f"{key}: visible pixels exceed radial safe zone")
+        if sha256_file(path) != row.get("sha256"):
+            errors.append(f"{key}: checksum mismatch")
+        if not row.get("source_url") or not row.get("source_kind"):
+            errors.append(f"{key}: missing source provenance")
+    return errors
+
+
+def command_validate(_args):
+    manifest = load_json(MANIFEST)
+    errors = validate_manifest(manifest)
+    if errors:
+        print("FAIL")
+        for error in errors:
+            print(" - " + error)
+        raise SystemExit(1)
+    logos = sum(r["result"] == "logo" for r in manifest["nodes"])
+    print(f"PASS: 48 reviewed nodes; {logos} logos; {48 - logos} unchanged ID-only nodes")
+
+
+def live_counts(graph_ids: list[str]):
+    scripts = REPO / "_scripts"
+    sys.path.insert(0, str(scripts))
+    from neo4j_env import resolve_connection
+    from neo4j import GraphDatabase, READ_ACCESS
+    uri, user, password, _database = resolve_connection()
+    driver = GraphDatabase.driver(uri, auth=(user, password))
+    try:
+        with driver.session(database="mit-bestand", default_access_mode=READ_ACCESS) as session:
+            rows = session.run(
+                "UNWIND $ids AS id OPTIONAL MATCH (n {id:id}) RETURN id, count(n) AS matches",
+                ids=graph_ids,
+            )
+            return {r["id"]: r["matches"] for r in rows}
+    finally:
+        driver.close()
+
+
+def command_patch(args):
+    manifest = load_json(MANIFEST)
+    errors = validate_manifest(manifest)
+    if errors:
+        raise ValueError("manifest invalid; run validate first")
+    export = load_json(EXPORT)
+    by_id = collections.Counter(
+        n.get("properties", {}).get("id") for n in export["nodes"] if n.get("properties", {}).get("id")
+    )
+    patch_rows, blocked, match_errors = [], [], []
+    for row in manifest["nodes"]:
+        if not row.get("graph_id"):
+            blocked.append({"key": row["key"], "eid": row["eid"], "reason": "overlay node has no canonical graph id"})
+            continue
+        if by_id[row["graph_id"]] != 1:
+            match_errors.append(f"{row['key']}: graph id {row['graph_id']!r} matches {by_id[row['graph_id']]} export nodes")
+            continue
+        props = {
+            "image_result": row["result"],
+            "image_review_status": "pilot_accepted",
+            "image_retrieved_at": row["retrieved_at"],
+        }
+        if row["result"] == "logo":
+            props.update({
+                "image_asset_path": str((PILOT / row["asset_path"]).relative_to(REPO)).replace("\\", "/"),
+                "image_source_url": row["source_url"],
+                "image_source_kind": row["source_kind"],
+                "image_license_note": row["license_note"],
+                "image_sha256": row["sha256"],
+            })
+        patch_rows.append({"match": {"id": row["graph_id"]}, "set": props, "audit": {"key": row["key"], "eid": row["eid"]}})
+    live = None
+    if args.live:
+        counts = live_counts([r["match"]["id"] for r in patch_rows])
+        live = {"database": "mit-bestand", "read_only": True, "counts": counts}
+        match_errors.extend(f"live {gid!r}: {count} matches" for gid, count in counts.items() if count != 1)
+    patch = {
+        "schema_version": 1,
+        "database": "mit-bestand",
+        "dry_run_only": True,
+        "match_property": "id",
+        "forbidden_side_effects": ["create :Quelle nodes", "create BELEGT_IN relationships", "write metadata_sidecar_key"],
+        "rows": patch_rows,
+        "blocked_overlay_nodes": blocked,
+        "validation": {"export": str(EXPORT), "live": live, "errors": match_errors},
+    }
+    write_json(PATCH, patch)
+    report = [
+        "# Pilot image property patch report", "",
+        f"- Patch rows: **{len(patch_rows)}**", f"- Overlay-only, not importable: **{len(blocked)}**",
+        f"- Export match errors: **{len(match_errors)}**", f"- Live validation: **{'run' if args.live else 'not run'}**", "",
+        "No write was performed against Neo4j.", "",
+    ]
+    if blocked:
+        report += ["## Overlay-only nodes", ""] + [f"- `{r['key']}` — {r['reason']}" for r in blocked] + [""]
+    if match_errors:
+        report += ["## Match errors", ""] + [f"- {e}" for e in match_errors] + [""]
+    PATCH_REPORT.write_text("\n".join(report), encoding="utf-8")
+    print(f"wrote {PATCH} and {PATCH_REPORT}")
+    if match_errors:
+        raise SystemExit(1)
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    sub = ap.add_subparsers(dest="command", required=True)
+    sub.add_parser("select").set_defaults(func=command_select)
+    sub.add_parser("domains").set_defaults(func=command_domains)
+    harvest = sub.add_parser("harvest")
+    harvest.add_argument("--key", help="harvest one LAND:tid row")
+    harvest.set_defaults(func=command_harvest)
+    sub.add_parser("contact").set_defaults(func=command_contact)
+    sub.add_parser("finalize").set_defaults(func=command_finalize)
+    sub.add_parser("validate").set_defaults(func=command_validate)
+    patch = sub.add_parser("patch")
+    patch.add_argument("--live", action="store_true", help="read-only match validation against mit-bestand")
+    patch.set_defaults(func=command_patch)
+    args = ap.parse_args()
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

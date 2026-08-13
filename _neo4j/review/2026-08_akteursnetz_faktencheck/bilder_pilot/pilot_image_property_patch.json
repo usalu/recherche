@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "database": "mit-bestand",
+  "dry_run_only": true,
+  "match_property": "id",
+  "forbidden_side_effects": [
+    "create :Quelle nodes",
+    "create BELEGT_IN relationships",
+    "write metadata_sidecar_key"
+  ],
+  "rows": [
+    {
+      "match": {
+        "id": "meduni_wien"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:F02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:587"
+      }
+    },
+    {
+      "match": {
+        "id": "oekologie_institut"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:F03",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6576"
+      }
+    },
+    {
+      "match": {
+        "id": "big_bundesimmobilien"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:I01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:586"
+      }
+    },
+    {
+      "match": {
+        "id": "baukarussell"
+      },
+      "set": {
+        "image_result": "logo",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13",
+        "image_asset_path": "_neo4j/review/2026-08_akteursnetz_faktencheck/bilder_pilot/bilder/AT/M01.png",
+        "image_source_url": "https://www.baukarussell.at/wp-content/uploads/2024/04/cropped-BK_Website-Icon-180x180.png",
+        "image_source_kind": "apple_touch",
+        "image_license_note": "official-site mark; identification in research figure; no affiliation implied",
+        "image_sha256": "e788762dfe4ae28710152ca7872513682391f8a26656befe0e981ddbd151a686"
+      },
+      "audit": {
+        "key": "AT:M01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575"
+      }
+    },
+    {
+      "match": {
+        "id": "die_kuemmerei"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:N01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:607"
+      }
+    },
+    {
+      "match": {
+        "id": "drz_demontage_recycling"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:N02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:606"
+      }
+    },
+    {
+      "match": {
+        "id": "re_use_austria"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:N03",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6625"
+      }
+    },
+    {
+      "match": {
+        "id": "wiener_aufzugmuseum"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:N04",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:608"
+      }
+    },
+    {
+      "match": {
+        "id": "re_store_harvestmap_vienna"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:S02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537"
+      }
+    },
+    {
+      "match": {
+        "id": "materialnomaden"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:U07",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6571"
+      }
+    },
+    {
+      "match": {
+        "id": "romm_zt"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "AT:U09",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6624"
+      }
+    },
+    {
+      "match": {
+        "id": "greater_brighton_metropolitan_college"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:F01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5173"
+      }
+    },
+    {
+      "match": {
+        "id": "university_of_brighton"
+      },
+      "set": {
+        "image_result": "logo",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13",
+        "image_asset_path": "_neo4j/review/2026-08_akteursnetz_faktencheck/bilder_pilot/bilder/GB/F03.png",
+        "image_source_url": "https://www.brighton.ac.uk/apple-touch-icon.png",
+        "image_source_kind": "apple_touch",
+        "image_license_note": "official-site mark; identification in research figure; no affiliation implied",
+        "image_sha256": "017534d33a4e06f2517c468bc13684d978694383cc0134cee0b7f04f27217f19"
+      },
+      "audit": {
+        "key": "GB:F03",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6299"
+      }
+    },
+    {
+      "match": {
+        "id": "national_lottery_heritage_fund"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:G02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5194"
+      }
+    },
+    {
+      "match": {
+        "id": "london_borough_of_barnet"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:I01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5150"
+      }
+    },
+    {
+      "match": {
+        "id": "salvoweb"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:M19",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39541"
+      }
+    },
+    {
+      "match": {
+        "id": "hastings_bexhill_wood_recycling"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:N04",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5193"
+      }
+    },
+    {
+      "match": {
+        "id": "salvo_ltd"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:N06",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:735"
+      }
+    },
+    {
+      "match": {
+        "id": "granby_workshop"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:O02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6396"
+      }
+    },
+    {
+      "match": {
+        "id": "material_reuse_portal"
+      },
+      "set": {
+        "image_result": "logo",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13",
+        "image_asset_path": "_neo4j/review/2026-08_akteursnetz_faktencheck/bilder_pilot/bilder/GB/S01.png",
+        "image_source_url": "https://materialreuseportal.com/apple-touch-icon.png",
+        "image_source_kind": "apple_touch",
+        "image_license_note": "official-site mark; identification in research figure; no affiliation implied",
+        "image_sha256": "0f71a9f66715795c3766fe3f6c8b4e6f4def1c4baf07984f48cb8e17a2fbddde"
+      },
+      "audit": {
+        "key": "GB:S01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39532"
+      }
+    },
+    {
+      "match": {
+        "id": "sustainability_yard"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:S02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39545"
+      }
+    },
+    {
+      "match": {
+        "id": "studio_pdp"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:U53",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5248"
+      }
+    },
+    {
+      "match": {
+        "id": "globechain"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "GB:X01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39528"
+      }
+    },
+    {
+      "match": {
+        "id": "recreate_dutch_cluster"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:F02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4911"
+      }
+    },
+    {
+      "match": {
+        "id": "tu_delft"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:F03",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:585"
+      }
+    },
+    {
+      "match": {
+        "id": "city_of_utrecht"
+      },
+      "set": {
+        "image_result": "logo",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13",
+        "image_asset_path": "_neo4j/review/2026-08_akteursnetz_faktencheck/bilder_pilot/bilder/NL/I01.png",
+        "image_source_url": "https://www.utrecht.nl/alternet_sitepackage/Images/icons/apple-touch-icon-144x144.png",
+        "image_source_kind": "apple_touch",
+        "image_license_note": "official-site mark; identification in research figure; no affiliation implied",
+        "image_sha256": "b701b9cd780f3fcd61436cc7004a2f9ac73b1766064a58530c46b4f23246886e"
+      },
+      "audit": {
+        "key": "NL:I01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:740"
+      }
+    },
+    {
+      "match": {
+        "id": "rijksvastgoedbedrijf"
+      },
+      "set": {
+        "image_result": "logo",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13",
+        "image_asset_path": "_neo4j/review/2026-08_akteursnetz_faktencheck/bilder_pilot/bilder/NL/I04.png",
+        "image_source_url": "https://www.rijksvastgoedbedrijf.nl/apple-touch-icon.png",
+        "image_source_kind": "apple_touch",
+        "image_license_note": "official-site mark; identification in research figure; no affiliation implied",
+        "image_sha256": "89ee2afec1e76368bc3bfba6ed3821756e4dc62dd0c9219824b9f239b4c1b132"
+      },
+      "audit": {
+        "key": "NL:I04",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5770"
+      }
+    },
+    {
+      "match": {
+        "id": "insert_marketplace"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:M11",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39529"
+      }
+    },
+    {
+      "match": {
+        "id": "c_creators"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:N01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6530"
+      }
+    },
+    {
+      "match": {
+        "id": "bluecity"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:O03",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5114"
+      }
+    },
+    {
+      "match": {
+        "id": "resource_marktplaats"
+      },
+      "set": {
+        "image_result": "logo",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13",
+        "image_asset_path": "_neo4j/review/2026-08_akteursnetz_faktencheck/bilder_pilot/bilder/NL/S02.png",
+        "image_source_url": "https://play-lh.googleusercontent.com/vpHfdKRrcvsfxpYl0x7Kc-IyWfRFV8UwFDseYt4efPDTIRkPd2uhVqCnZxZZgO-GC11VNs8Vh18r2EIXRDEIfQ",
+        "image_source_kind": "og_image",
+        "image_license_note": "official-site mark; identification in research figure; no affiliation implied",
+        "image_sha256": "d28530750d9851fb0605bf4df9acf1b9a0616c59327bb0f7bb9d20f815bff865"
+      },
+      "audit": {
+        "key": "NL:S02",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39539"
+      }
+    },
+    {
+      "match": {
+        "id": "ter_velde_den_besten"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:S03",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:723"
+      }
+    },
+    {
+      "match": {
+        "id": "stiho_group"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:U45",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5556"
+      }
+    },
+    {
+      "match": {
+        "id": "volantis"
+      },
+      "set": {
+        "image_result": "none",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13"
+      },
+      "audit": {
+        "key": "NL:U59",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5735"
+      }
+    },
+    {
+      "match": {
+        "id": "repurpose"
+      },
+      "set": {
+        "image_result": "logo",
+        "image_review_status": "pilot_accepted",
+        "image_retrieved_at": "2026-08-13",
+        "image_asset_path": "_neo4j/review/2026-08_akteursnetz_faktencheck/bilder_pilot/bilder/NL/X01.png",
+        "image_source_url": "https://repurpose.nl/wp-content/themes/repurpose/images/favicon.png",
+        "image_source_kind": "declared_icon",
+        "image_license_note": "official-site mark; identification in research figure; no affiliation implied",
+        "image_sha256": "12f856aeaf16a2bb465582bf665cfd768ce5eeb16ef65491f3cdb6352ee3bd48"
+      },
+      "audit": {
+        "key": "NL:X01",
+        "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:778"
+      }
+    }
+  ],
+  "blocked_overlay_nodes": [
+    {
+      "key": "AT:F01",
+      "eid": "NEW:iboosterrinstitutfurbauenundokologie",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "AT:I02",
+      "eid": "NEW:viecycledotankcircularcitywien20202030",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "AT:M03",
+      "eid": "NEW:bauteilborse",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "AT:S01",
+      "eid": "NEW:madasteraustria",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "AT:U01",
+      "eid": "NEW:H:atpsustain",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "GB:F04",
+      "eid": "NEW:H:universityofeastanglia",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "GB:M14",
+      "eid": "NEW:H:miltonkeynesantiquesandarchitecturalsalvage",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "GB:N05",
+      "eid": "NEW:reusefully",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "GB:U21",
+      "eid": "NEW:elliottwood",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "NL:M06",
+      "eid": "NEW:H:gpgrootrecycling",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "NL:N02",
+      "eid": "NEW:H:staedion",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "NL:N03",
+      "eid": "NEW:H:urbanminingcollective",
+      "reason": "overlay node has no canonical graph id"
+    },
+    {
+      "key": "NL:U07",
+      "eid": "NEW:H:avecodebondt",
+      "reason": "overlay node has no canonical graph id"
+    }
+  ],
+  "validation": {
+    "export": "E:\\recherche\\actors_network.json",
+    "live": null,
+    "errors": []
+  }
+}
