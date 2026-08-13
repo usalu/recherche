@@ -229,3 +229,26 @@ fest.
 2. **Knotenradius:** 2,275 mm bleibt unverändert.
 3. **Fallback:** keine Monogramme; unbrauchbare oder unbelegte Bilder ergeben ID-only.
 4. **Rollout:** zuerst 48er-Druckpilot; kein automatischer Vollrollout auf 762 Organisationen.
+
+## 9. Vollsammlung nach Pilotfreigabe (2026-08-13)
+
+Auf ausdrückliche Erweiterung des Arbeitsumfangs wurde die reine Kandidatensammlung auf
+alle **762 Organisationen** des finalen 859er-Netzes ausgedehnt; die **97 Projekte** bleiben
+bildlos. Diese Stufe ist weiterhin Transport und Review, kein Rendering-Rollout und kein
+Neo4j-Import.
+
+* 447 Organisationsdomains einzeln bestätigt (47 Pilotentscheidungen, 400 dokumentierte
+  Identitätsprüfungen); 291 Domainfälle bleiben offen, 24 haben keinen Domainkandidaten.
+* 950 technisch zulässige Bildkandidaten für 366 Organisationen gesammelt; 81 bestätigte
+  Domains lieferten in der festgelegten Kandidatenkette keinen zulässigen Treffer.
+* SVG-Dateien sind unabhängig von einer gerenderten Mindestkante zulässig; Rasterbilder
+  benötigen mindestens 128 px an der kürzesten Kante.
+* Alle Kandidaten führen Quelle, Quellenart, Abrufdatum, Lizenznotiz, Reviewstatus sowie
+  SHA-256 von Quelldatei und PNG-Vorschau.
+* `pending_domain` und `no_usable_candidate` sind Sammlungszustände, keine endgültigen
+  `none`-Entscheidungen. Jedes Bild bleibt bis zur visuellen und rechtlichen Einzelprüfung
+  `review_status: pending`.
+
+Artefakte: `bilder_full/selection.json`, `bilder_full/domains_review.json`,
+`bilder_full/collection_manifest.json`, `bilder_full/contact_sheets/` und
+`bilder_full/COLLECTION_REPORT.md`.

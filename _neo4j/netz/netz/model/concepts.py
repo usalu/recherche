@@ -14,6 +14,7 @@ from ..mechanisms.countries import (
     is_person, CountryResolution, Panel,
 )
 from ..mechanisms.identity import assign_num, assign_ids
+from ..data._identity import ISO_INV
 
 
 @dataclass
@@ -35,10 +36,20 @@ class Network:
 
 def build_network(sources, exclude: frozenset = frozenset(),
                    edge_exclude: frozenset = frozenset(),
-                   strict_review: StrictReviewBundle | None = None) -> Network:
+                   strict_review: StrictReviewBundle | None = None,
+                   country_overrides: dict | None = None) -> Network:
     strict_review = strict_review or StrictReviewBundle()
     raw = load_export(sources.export_path)
     new_eids, new_proj_cc, overlay_reports = apply_overlays(raw, sources.overlay_paths)
+    for eid, country in (country_overrides or {}).items():
+        if eid not in raw.by:
+            raise RuntimeError(f"country override EID absent: {eid}")
+        if country not in ISO_INV:
+            raise RuntimeError(f"unsupported country override {country!r} for {eid}")
+        if eid in raw.projects:
+            new_proj_cc[eid] = country
+        else:
+            raw.land[eid] = ISO_INV[country]
     apply_strict_review(raw, new_proj_cc, strict_review)
 
     # known<->known peer edges (second-audit findings) -- existence-filtered,

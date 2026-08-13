@@ -9,9 +9,13 @@ Stand: 2026-08-13
 - Entfernungsliste: **93** Kandidaten.
 - Mengenprüfung: Keep und Remove sind disjunkt und ergeben genau 570.
 - LaTeX-Netzmodell: **477** Kanten; es ist mengenidentisch mit der positiven Liste.
-- LaTeX-Fragment: **455** sichtbare Kanten in **11** Länderabbildungen.
-- **22** belegte Kanten bleiben im Netzmodell, werden aber von der bestehenden
-  Darstellungsregel „nur zusammenhängende Cluster ab drei Knoten“ nicht gezeichnet.
+- LaTeX-Fragment: **477** sichtbare Kanten in **11** Länderabbildungen.
+- Sichtbare Beziehungen: **477 von 477**. Auch alle
+  Zweierkomponenten werden gezeichnet.
+- Sichtbare Knoten: **859**. Darunter bleiben **354 isolierte
+  Knoten** wie angeordnet sichtbar.
+- Explizit freigegebene Knotenentfernungen: **93**; davon noch in einem
+  LaTeX-Länderpanel vorhanden: **0**.
 - Entfernte Kante noch im LaTeX-Netzmodell: **0**.
 - Geprüfte Belegseiten: **220 von 220 erreichbar**.
 - Kompilierte PDF-Endkontrolle: vorhanden, lesbar und visuell auf allen vier Seiten geprüft.

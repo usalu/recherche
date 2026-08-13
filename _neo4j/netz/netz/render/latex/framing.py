@@ -20,7 +20,7 @@ migration, which is user-gated.
 # framing sentences either side (which cluster gets drawn, what the number
 # means) are not part of the state vocabulary, so they stay hand-written.
 GRAPH_LEGEND = (r"{\SemioSans\fontsize{7.6pt}{9.5pt}\selectfont Ein Netz je Land \textendash\ "
-                r"nur zusammenh\"angende Cluster ab drei Knoten. "
+                r"alle belegten Verbindungen. "
                 r"\SemioGraphLegend{focal=Projekt, attested=neu recherchiert, hypo=Land erschlossen}. "
                 r"Zahl = Zeilennummer der zugeh\"origen Tabelle.\\[2mm]}")
 

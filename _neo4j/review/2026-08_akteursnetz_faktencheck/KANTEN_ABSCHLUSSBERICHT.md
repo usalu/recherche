@@ -9,10 +9,10 @@ Der LaTeX-Graph verwendet jetzt eine strikte Positivliste: **477 belegt und beha
 **93 entfernt**. Von den 93 Entfernungen sind **68 bloße Verzeichniseinträge** und
 **25 Fälle ohne Beleg für eine Beziehung**.
 
-Im LaTeX-Netzmodell sind exakt 477 Kanten. Das erzeugte Fragment zeichnet 455;
-die übrigen 22 belegten Kanten liegen in Zweierkomponenten und werden durch die
-bestehende Regel ‚nur zusammenhängende Cluster ab drei Knoten‘ nicht sichtbar ausgegeben.
-Sie sind nicht gelöscht.
+Im LaTeX-Netzmodell sind exakt 477 Kanten. Das erzeugte Fragment zeichnet alle 477.
+Auch belegte Zweierkomponenten bleiben sichtbar; keine belegte Beziehung wird ausgeblendet.
+Alle 354 verbleibenden isolierten Knoten bleiben ebenfalls sichtbar.
+Die 93 explizit freigegebenen Knotenentfernungen sind nicht mehr in den LaTeX-Panels.
 
 Es wurden keine Daten nach Neo4j geschrieben.
 

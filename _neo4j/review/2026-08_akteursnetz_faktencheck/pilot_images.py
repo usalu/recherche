@@ -295,8 +295,8 @@ class IconParser(html.parser.HTMLParser):
             if prop == "og:image":
                 self.candidates.append((4, "og_image", a["content"]))
         if tag == "img" and a.get("src"):
-            marker = " ".join((a.get("alt", ""), a.get("class", ""), a.get("id", ""))).lower()
-            if self.header_depth or "logo" in marker or "brand" in marker:
+            marker = " ".join((a.get("alt", ""), a.get("class", ""), a.get("id", ""), a["src"])).lower()
+            if self.header_depth and any(word in marker for word in ("logo", "brand", "wordmark", "identity")):
                 self.candidates.append((5, "header_logo", a["src"]))
 
     def handle_endtag(self, tag):
@@ -329,7 +329,7 @@ def discover_candidates(official_url: str):
         if content_type == "text/html" or b"<html" in data[:1000].lower():
             parser = IconParser()
             parser.feed(data.decode("utf-8", errors="replace"))
-            base = parser.base or final_url
+            base = urllib.parse.urljoin(final_url, parser.base) if parser.base else final_url
             candidates.extend((p, k, urllib.parse.urljoin(base, u)) for p, k, u in parser.candidates)
     except Exception as exc:
         page_error = f"{type(exc).__name__}: {exc}"
@@ -349,7 +349,9 @@ def rasterize(data: bytes, content_type: str, source_url: str) -> tuple[Image.Im
             import cairosvg
         except ImportError as exc:
             raise RuntimeError("SVG candidate requires cairosvg") from exc
-        data = cairosvg.svg2png(bytestring=data, output_width=512, output_height=512)
+        # Supplying both dimensions would stretch non-square wordmarks.  One
+        # target dimension keeps the SVG's intrinsic aspect ratio intact.
+        data = cairosvg.svg2png(bytestring=data, output_width=512)
         return Image.open(io.BytesIO(data)).convert("RGBA"), "svg"
     im = Image.open(io.BytesIO(data))
     best = None
@@ -390,7 +392,7 @@ def command_harvest(args):
                 im, fmt = rasterize(data, content_type, final_url)
                 record.update({"final_url": final_url, "content_type": content_type, "format": fmt,
                                "width": im.width, "height": im.height})
-                if min(im.size) < 128:
+                if fmt != "svg" and min(im.size) < 128:
                     record["reason"] = "short edge below 128px"
                 else:
                     preview = node_dir / f"{record['id']}_{kind}.png"

@@ -1,0 +1,3600 @@
+{
+  "schema_version": 1,
+  "reviewer": "root-final-delete-audit",
+  "policy": "research-only; direct actor/project evidence; conservative prune",
+  "pre_audit_prunes": 269,
+  "restored": 43,
+  "confirmed_prunes": 226,
+  "final_decisions": {
+    "prune": 226,
+    "keep": 631,
+    "merge": 2
+  },
+  "countries": {
+    "AT": {
+      "prune": 10,
+      "keep": 21
+    },
+    "BE": {
+      "keep": 64,
+      "prune": 35
+    },
+    "CH": {
+      "keep": 72,
+      "prune": 11
+    },
+    "DE": {
+      "keep": 70,
+      "prune": 25
+    },
+    "DK": {
+      "prune": 22,
+      "keep": 49,
+      "merge": 1
+    },
+    "FI": {
+      "keep": 32,
+      "prune": 9
+    },
+    "FR": {
+      "keep": 97,
+      "prune": 11
+    },
+    "GB": {
+      "prune": 49,
+      "keep": 80
+    },
+    "NL": {
+      "keep": 75,
+      "prune": 42,
+      "merge": 1
+    },
+    "NO": {
+      "keep": 32,
+      "prune": 3
+    },
+    "SE": {
+      "keep": 39,
+      "prune": 9
+    }
+  },
+  "audit": [
+    {
+      "eid": "NEW:H:atpsustain",
+      "audit_id": "AT:U01",
+      "name": "ATP sustain GmbH",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:dreesandsommer",
+      "audit_id": "AT:U02",
+      "name": "Drees & Sommer (Österreich)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:gesagemeinnutzigesanierungsundbeschaftigungs",
+      "audit_id": "AT:U04",
+      "name": "Gesa – Gemeinnützige Sanierungs- und Beschäftigungs GmbH",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:iboosterrinstitutfurbauenundokologie",
+      "audit_id": "AT:F01",
+      "name": "IBO – Österr. Institut für Bauen und Ökologie (BuildReUse)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6624",
+      "audit_id": "AT:U09",
+      "name": "Romm ZT",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:schindelundholz",
+      "audit_id": "AT:U10",
+      "name": "Schindel und Holz",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "PARTNER_LIST_ONLY"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:teawork",
+      "audit_id": "AT:U11",
+      "name": "TEAWork",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:vereinissba",
+      "audit_id": "AT:U12",
+      "name": "Verein ISSBA",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "PARTNER_LIST_ONLY"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:viecycledotankcircularcitywien20202030",
+      "audit_id": "AT:I02",
+      "name": "VIE.CYCLE / DoTank Circular City Wien 2020–2030 (Stadt Wien, Stabsstelle SRN)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Programmmanagement",
+        "Reuse-Strategie"
+      ],
+      "evidence_urls": [
+        "https://viecycle.wien.gv.at/documents/1555117/1742684/dtcc30-kurzbeschreibung.pdf/a5d3f629-03bc-dac2-65cf-fae951a9c704?t=1641381863187"
+      ]
+    },
+    {
+      "eid": "NEW:H:volkshilfewien",
+      "audit_id": "AT:U13",
+      "name": "Volkshilfe Wien",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6576",
+      "audit_id": "AT:F03",
+      "name": "Ökologie-Institut",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:700",
+      "audit_id": "CH:U06",
+      "name": "Anima Engineering AG",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34842",
+      "audit_id": "CH:M01",
+      "name": "Archipel Sion Ressourcerie",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Selektiver Rückbau",
+        "Sortierung",
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://archipelsion.ch/ressourcerie/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:34841",
+      "audit_id": "CH:M07",
+      "name": "Bauteilverwertung Köppel & Klein",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Demontage",
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://www.bauteilverwertung.ch/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:460",
+      "audit_id": "CH:X01",
+      "name": "Circular Construction Catalyst 2033",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:470",
+      "audit_id": "CH:X02",
+      "name": "Circular Economy Switzerland",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:690",
+      "audit_id": "CH:U11",
+      "name": "Desso / Tarkett",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6442",
+      "audit_id": "CH:F05",
+      "name": "ETH Zürich",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6486",
+      "audit_id": "CH:U14",
+      "name": "Gruner AG",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5388",
+      "audit_id": "CH:U16",
+      "name": "Haerter + Partner AG",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:historischesbauteillagerostschweiz",
+      "audit_id": "CH:M09",
+      "name": "Historisches Bauteillager Ostschweiz (Denkmal Stiftung Thurgau)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Demontage",
+        "Lagerung",
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://www.historisches-bauteillager.ch/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:592",
+      "audit_id": "CH:I02",
+      "name": "Kanton Basel-Stadt",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "ENTITY_MISMATCH"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_identity_or_entity_unresolved",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5386",
+      "audit_id": "CH:U24",
+      "name": "Meili Partner Baumanagement",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5610",
+      "audit_id": "CH:O01",
+      "name": "Re:Crete Forschungsteam",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:36966",
+      "audit_id": "CH:M15",
+      "name": "Stiftung Chance BauTeile Zürich / Glattbrugg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Demontage"
+      ],
+      "evidence_urls": [
+        "https://www.chance.ch/dienstleistungen/bauteile"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:589",
+      "audit_id": "CH:F09",
+      "name": "Univ. Fribourg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:archenaturhaus",
+      "audit_id": "DE:P1",
+      "name": "Arche Naturhaus",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "PARTNER_LIST_ONLY"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4776",
+      "audit_id": "DE:U02",
+      "name": "Architekturbüro Conclus",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bauteilborseaugsburg",
+      "audit_id": "DE:U04",
+      "name": "bauteilbörse augsburg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bauteilborsegiessen",
+      "audit_id": "DE:U05",
+      "name": "bauteilbörse giessen",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bauteilborseherzogenrath",
+      "audit_id": "DE:U07",
+      "name": "bauteilbörse herzogenrath",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bauteilborsekoln",
+      "audit_id": "DE:U08",
+      "name": "bauteilbörse köln",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bauteilborsenordhausen",
+      "audit_id": "DE:U09",
+      "name": "bauteilbörse nordhausen",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bauteilborseoldenburg",
+      "audit_id": "DE:U10",
+      "name": "bauteilbörse oldenburg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bauteilborseweissenburg",
+      "audit_id": "DE:U11",
+      "name": "bauteilbörse weißenburg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bygherreforeningenidanmark",
+      "audit_id": "DE:N03",
+      "name": "Bygherreforeningen i Danmark (BID)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6439",
+      "audit_id": "DE:U13",
+      "name": "Circular Structural Design",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Tragwerksplanung",
+        "Reuse-Audit",
+        "Potenzialbewertung"
+      ],
+      "evidence_urls": [
+        "https://circular-structural-design.eu/en/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6250",
+      "audit_id": "DE:U14",
+      "name": "CITYFÖRSTER",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Architektur",
+        "Reuse-Beratung"
+      ],
+      "evidence_urls": [
+        "https://www.cityfoerster.net/expertise/re_use-622-2.html"
+      ]
+    },
+    {
+      "eid": "NEW:H:consolisdwsystembau",
+      "audit_id": "DE:P5",
+      "name": "Consolis DW Systembau",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "FUTURE_ONLY"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_future_or_design_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5622",
+      "audit_id": "DE:U19",
+      "name": "DREWES + SPETH Beratende Ingenieure",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:712",
+      "audit_id": "DE:U20",
+      "name": "Ed. Züblin AG",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:edgesuedkreuzberlin",
+      "audit_id": "DE:P7",
+      "name": "EDGE Suedkreuz Berlin",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4949",
+      "audit_id": "DE:U21",
+      "name": "eZeit",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:gabbgebrauchtbaumarktsaarbrucken",
+      "audit_id": "DE:U23",
+      "name": "gabb-GebrauchtBauMarkt Saarbrücken",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:heidelbergcement",
+      "audit_id": "DE:P9",
+      "name": "HeidelbergCement",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "PARTNER_LIST_ONLY"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4775",
+      "audit_id": "DE:F06",
+      "name": "IEMB / TU Berlin",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5264",
+      "audit_id": "DE:O01",
+      "name": "Impact Hub Berlin",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "NO_DIRECT_REUSE_ROLE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_direct_reuse_role",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6191",
+      "audit_id": "DE:U33",
+      "name": "Klingelhöfer Krötsch",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:roskildeuniversitet",
+      "audit_id": "DE:F11",
+      "name": "Roskilde Universitet",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:saintgobain",
+      "audit_id": "DE:P18",
+      "name": "Saint-Gobain (Germany)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "PARTNER_LIST_ONLY"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4948",
+      "audit_id": "DE:U43",
+      "name": "Solares Bauen",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:924",
+      "audit_id": "DE:S02",
+      "name": "SURAP GmbH",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Umweltbewertung",
+        "Softwareentwicklung"
+      ],
+      "evidence_urls": [
+        "https://www.surap.de/service/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6452",
+      "audit_id": "DE:U44",
+      "name": "Sven Urselmann",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6186",
+      "audit_id": "DE:O02",
+      "name": "TRNSFRM eG",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6529",
+      "audit_id": "DE:F12",
+      "name": "TU Berlin",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6434",
+      "audit_id": "DE:U47",
+      "name": "Urselmann Interior",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "HISTORICAL_CLOSED"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Innenarchitektur",
+        "Reuse-Planung",
+        "Fertigung mit Reuse-Material"
+      ],
+      "evidence_urls": [
+        "https://www.urselmann-interior.de/zirkul%C3%A4res-handwerk"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5581",
+      "audit_id": "DE:O03",
+      "name": "zukunftsgeraeusche GbR",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:aaltouniversity",
+      "audit_id": "FI:F01",
+      "name": "Aalto University (Department of Architecture)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Angewandte Forschung"
+      ],
+      "evidence_urls": [
+        "https://www.aalto.fi/en/housing-design"
+      ]
+    },
+    {
+      "eid": "NEW:H:anttilehto",
+      "audit_id": "FI:P1",
+      "name": "Antti Lehto",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "NO_DIRECT_REUSE_ROLE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_direct_reuse_role",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:circulardrifterdemohouse",
+      "audit_id": "FI:P2",
+      "name": "Circular Drifter Demo House",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "FUTURE_ONLY"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_future_or_design_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:cityofespoo",
+      "audit_id": "FI:I01",
+      "name": "City of Espoo",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:cityofnokia",
+      "audit_id": "FI:I03",
+      "name": "City of Nokia (Nokian kaupunki)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:cityoforivesi",
+      "audit_id": "FI:I04",
+      "name": "City of Orivesi (Oriveden kaupunki)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:ekokumppanit",
+      "audit_id": "FI:G01",
+      "name": "Ekokumppanit (Kiertotalous Pirkanmaa)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Programmmanagement",
+        "Methodenentwicklung"
+      ],
+      "evidence_urls": [
+        "https://ekokumppanit.fi/projektit/sailo/"
+      ]
+    },
+    {
+      "eid": "NEW:H:johannasaarela",
+      "audit_id": "FI:U09",
+      "name": "Johanna Saarela",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5083",
+      "audit_id": "FI:U11",
+      "name": "LIIKE Oy Arkkitehtistudio",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5418",
+      "audit_id": "FI:U13",
+      "name": "Metso Oyj",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6440",
+      "audit_id": "FI:F04",
+      "name": "Tampere University",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Pilotierung",
+        "Angewandte Forschung"
+      ],
+      "evidence_urls": [
+        "https://www.tuni.fi/en/tau/research/recreate"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5081",
+      "audit_id": "FI:U23",
+      "name": "Umacon",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:vtt",
+      "audit_id": "FI:F05",
+      "name": "VTT (Technical Research Centre of Finland)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Methodenentwicklung",
+        "Angewandte Forschung"
+      ],
+      "evidence_urls": [
+        "https://www.vttresearch.com/en/ourservices/circularity-built-environment"
+      ]
+    },
+    {
+      "eid": "NEW:H:askerkommune",
+      "audit_id": "NO:I01",
+      "name": "Asker kommune",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Programmmanagement",
+        "Reuse-Strategie"
+      ],
+      "evidence_urls": [
+        "https://www.asker.kommune.no/klima-og-miljo/ombruk/"
+      ]
+    },
+    {
+      "eid": "NEW:H:ccripilotasker",
+      "audit_id": "NO:N02",
+      "name": "CCRI Pilot Asker",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:irisombrukssentralsaltnesombruk",
+      "audit_id": "NO:M03",
+      "name": "Iris Ombrukssentral / Saltnes ombruk",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Lagerung",
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://iris-ombruksentral.no/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5350",
+      "audit_id": "NO:U06",
+      "name": "IWG Group / Spaces",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "STRICT_REVIEW_PRUNE"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:jcs",
+      "audit_id": "NO:U07",
+      "name": "JCS AS",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Demontage",
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://www.jcs-as.no/materialbank"
+      ]
+    },
+    {
+      "eid": "NEW:ombrukinord",
+      "audit_id": "NO:N04",
+      "name": "Ombruk i nord (Remiks)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Rücknahme",
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://remiks.no/rebell/proffrebell/"
+      ]
+    },
+    {
+      "eid": "NEW:H:sirkulaiks",
+      "audit_id": "NO:U12",
+      "name": "Sirkula IKS",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:sirkulaerressurssentral",
+      "audit_id": "NO:M07",
+      "name": "Sirkulær Ressurssentral",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_strict_gate_failed"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Methodenentwicklung",
+        "Wissenstransfer",
+        "Netzwerkkoordination"
+      ],
+      "evidence_urls": [
+        "https://www.ressurssentral.no/"
+      ]
+    },
+    {
+      "eid": "NEW:H:universidadedominho",
+      "audit_id": "BE:F06",
+      "name": "Universidade do Minho (UMinho)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:vrijeuniversiteitbrusselarchitecturalengineering",
+      "audit_id": "BE:F09",
+      "name": "Vrije Universiteit Brussel (VUB) – Architectural Engineering",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Demontagegerechtes Design",
+        "Methodenentwicklung",
+        "Angewandte Forschung"
+      ],
+      "evidence_urls": [
+        "https://www.vub.be/arch/page/circulardesign"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4867",
+      "audit_id": "BE:I02",
+      "name": "Commune de Dilbeek",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5430",
+      "audit_id": "BE:I03",
+      "name": "Lo-Reninge town council",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5537",
+      "audit_id": "BE:I07",
+      "name": "Ville de Mouscron",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:stadshoutbe",
+      "audit_id": "BE:M36",
+      "name": "Stadshout.be",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:ccripilotflanders",
+      "audit_id": "BE:N01",
+      "name": "CCRI Pilot Flanders",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:sarajevogreendesignfoundation",
+      "audit_id": "BE:N08",
+      "name": "Sarajevo Green Design Foundation",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:twgcircularconstructionandbuildings",
+      "audit_id": "BE:N10",
+      "name": "TWG Circular Construction and Buildings (CCRI)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5880",
+      "audit_id": "BE:O01",
+      "name": "Pouvoir Organisateur Pluriel / POP",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:568",
+      "audit_id": "BE:P11",
+      "name": "OXY Centre Monnaie",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4850",
+      "audit_id": "BE:P2",
+      "name": "Chiro d’Itterbeek",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Referenzprojekt"
+      ],
+      "evidence_urls": [
+        "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro"
+      ]
+    },
+    {
+      "eid": "NEW:H:efp",
+      "audit_id": "BE:P4",
+      "name": "EFP (Espace Formation PME / Brussels training centre)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5424",
+      "audit_id": "BE:P6",
+      "name": "Lo-Reninge Town Hall…",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5520",
+      "audit_id": "BE:P9",
+      "name": "Multi Brussels",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5527",
+      "audit_id": "BE:S01",
+      "name": "Madaster / EPEA",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Materialpass",
+        "Bauteilkataster",
+        "Datenplattform"
+      ],
+      "evidence_urls": [
+        "https://madaster.be/en/platform/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5874",
+      "audit_id": "BE:U02",
+      "name": "AgwA",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5478",
+      "audit_id": "BE:U03",
+      "name": "BESP Stoffel & Partners / Pierre Stoffel",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5960",
+      "audit_id": "BE:U05",
+      "name": "Brudex",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4869",
+      "audit_id": "BE:U07",
+      "name": "CC Autrement",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6393",
+      "audit_id": "BE:U08",
+      "name": "CONIX RDBM",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5526",
+      "audit_id": "BE:U09",
+      "name": "Cordeel",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5959",
+      "audit_id": "BE:U11",
+      "name": "De Coninck",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5879",
+      "audit_id": "BE:U12",
+      "name": "Denis Dujardin",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5431",
+      "audit_id": "BE:U13",
+      "name": "Dexia",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5875",
+      "audit_id": "BE:U15",
+      "name": "Evelia Macal",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5541",
+      "audit_id": "BE:U19",
+      "name": "Greisch",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:groepvanroey",
+      "audit_id": "BE:U20",
+      "name": "Groep Van Roey",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5524",
+      "audit_id": "BE:U21",
+      "name": "Immobel",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5876",
+      "audit_id": "BE:U22",
+      "name": "JZH & Partners",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5878",
+      "audit_id": "BE:U24",
+      "name": "Kahle Acoustics",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5477",
+      "audit_id": "BE:U25",
+      "name": "Karbon’ architecture & urbanisme",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:kempenslandschap",
+      "audit_id": "BE:U26",
+      "name": "Kempens Landschap (Kempens' Landscape)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5958",
+      "audit_id": "BE:U28",
+      "name": "Matriciel",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5429",
+      "audit_id": "BE:U29",
+      "name": "noAarchitecten",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6347",
+      "audit_id": "BE:U31",
+      "name": "Ouest Architecture",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5543",
+      "audit_id": "BE:U35",
+      "name": "Taktyk",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5523",
+      "audit_id": "BE:U38",
+      "name": "Whitewood",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:sbiaalborguniversity",
+      "audit_id": "DK:F02",
+      "name": "SBi (Statens Byggeforskningsinstitut), Aalborg University",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:aarhuskommune",
+      "audit_id": "DK:I01",
+      "name": "Aarhus Kommune",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5750",
+      "audit_id": "DK:I02",
+      "name": "Gladsaxe Kommune / Gladsaxe Municipality",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:hverringecentrumforrestaurering",
+      "audit_id": "DK:M12",
+      "name": "Hverringe Centrum for Restaurering",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:lejerbo",
+      "audit_id": "DK:N02",
+      "name": "Lejerbo",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:circlehouse",
+      "audit_id": "DK:P1",
+      "name": "Circle House",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "future_only_no_actual_reuse"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_future_or_design_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6678",
+      "audit_id": "DK:U01",
+      "name": "3XN",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5854",
+      "audit_id": "DK:U03",
+      "name": "AG Gruppen",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5756",
+      "audit_id": "DK:U04",
+      "name": "Aksel V. Jensen A/S",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5755",
+      "audit_id": "DK:U06",
+      "name": "Ason A/S",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6677",
+      "audit_id": "DK:U11",
+      "name": "GXN",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "final_consistency_generic_or_credit_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5789",
+      "audit_id": "DK:U12",
+      "name": "Hoffmann A/S",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5824",
+      "audit_id": "DK:U15",
+      "name": "Kilden & Hindby",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5855",
+      "audit_id": "DK:U19",
+      "name": "MOE",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5753",
+      "audit_id": "DK:U22",
+      "name": "NIRAS",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:nkrdemolitiongroup",
+      "audit_id": "DK:U23",
+      "name": "NKR Demolition Group",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5853",
+      "audit_id": "DK:U24",
+      "name": "NREP",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:orbicon",
+      "audit_id": "DK:U25",
+      "name": "Orbicon",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5825",
+      "audit_id": "DK:U27",
+      "name": "PFA Ejendomme",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5752",
+      "audit_id": "DK:U32",
+      "name": "Sweco / Sweco Architects",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4932",
+      "audit_id": "FR:I02",
+      "name": "Technische Dienste der Stadt Paris",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4931",
+      "audit_id": "FR:I04",
+      "name": "Ville de Paris – Pavillon de l Arsenal",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:demolitionwilliamperreault",
+      "audit_id": "FR:M21",
+      "name": "Démolition William Perreault",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://demolition-perreault.fr/"
+      ]
+    },
+    {
+      "eid": "NEW:H:lievalandfilslesvieillespierres",
+      "audit_id": "FR:M36",
+      "name": "Lieval & Fils - Les Vieilles Pierres",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:materiauxdantan",
+      "audit_id": "FR:M44",
+      "name": "Matériaux d'Antan",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Aufarbeitung",
+        "Bauteilhandel",
+        "Wiedereinbau"
+      ],
+      "evidence_urls": [
+        "https://materiauxdantan.fr/fr/"
+      ]
+    },
+    {
+      "eid": "NEW:H:pescetailledepierres",
+      "audit_id": "FR:M48",
+      "name": "Pesce Taille de Pierres",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:quercyperigordmateriauxanciens",
+      "audit_id": "FR:M56",
+      "name": "Quercy Périgord Matériaux Anciens",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:federationfrancaisedubtimentetdestravauxpublicsdehautegaronne",
+      "audit_id": "FR:N06",
+      "name": "Fédération Française du Bâtiment et des Travaux publics de Haute-Garonne (FFB 31)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6676",
+      "audit_id": "FR:U03",
+      "name": "Barrault-Pressacco",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4930",
+      "audit_id": "FR:U04",
+      "name": "Camping Design",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5013",
+      "audit_id": "FR:U13",
+      "name": "Scoping",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4928",
+      "audit_id": "FR:U18",
+      "name": "TRIBU",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:vilogia",
+      "audit_id": "FR:U19",
+      "name": "Vilogia",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "credit_partner_or_ambiguous_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5173",
+      "audit_id": "GB:F01",
+      "name": "Greater Brighton Metropolitan College",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:adaptlowcarbon",
+      "audit_id": "GB:G01",
+      "name": "Adapt Low Carbon",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5150",
+      "audit_id": "GB:I01",
+      "name": "London Borough of Barnet",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:djgilesbrickandtilemerchant",
+      "audit_id": "GB:M07",
+      "name": "D.J Giles Brick & Tile Merchant",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6014",
+      "audit_id": "GB:N01",
+      "name": "BioRegional",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5193",
+      "audit_id": "GB:N04",
+      "name": "Hastings & Bexhill Wood Recycling",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed_org"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5148",
+      "audit_id": "GB:O01",
+      "name": "Brent Cross South Limited Partnership",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6396",
+      "audit_id": "GB:O02",
+      "name": "Granby Workshop",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5189",
+      "audit_id": "GB:O03",
+      "name": "Hastings Pier Charity",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6015",
+      "audit_id": "GB:O04",
+      "name": "Peabody Trust",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5138",
+      "audit_id": "GB:P3",
+      "name": "Brent Cross Town",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:circularbuilding",
+      "audit_id": "GB:P6",
+      "name": "Circular Building",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "future_design_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_future_or_design_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5806",
+      "audit_id": "GB:U02",
+      "name": "Alinea / T+T Alinea",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:architype",
+      "audit_id": "GB:U03",
+      "name": "Architype",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5221",
+      "audit_id": "GB:U05",
+      "name": "Barr Gazetas",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5804",
+      "audit_id": "GB:U07",
+      "name": "Bennetts Associates",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:62",
+      "audit_id": "GB:U08",
+      "name": "Bill Dunster / ZEDfactory",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5226",
+      "audit_id": "GB:U09",
+      "name": "Blenheim House",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed_org"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5154",
+      "audit_id": "GB:U10",
+      "name": "Bourne Special Projects / Bourne Group",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bsria",
+      "audit_id": "GB:U11",
+      "name": "BSRIA",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:19",
+      "audit_id": "GB:U12",
+      "name": "Cantillon",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed_org"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:16",
+      "audit_id": "GB:U13",
+      "name": "CBRE",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:channelprojects",
+      "audit_id": "GB:U14",
+      "name": "Channel Projects",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:churchmanlandscapearchitects",
+      "audit_id": "GB:U15",
+      "name": "Churchman Landscape Architects",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5223",
+      "audit_id": "GB:U17",
+      "name": "Cleveland Steel & Tubes",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://cleveland-steel.com/we-want-buy-steel-reuse"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5597",
+      "audit_id": "GB:U18",
+      "name": "Contrax Furniture",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5188",
+      "audit_id": "GB:U19",
+      "name": "dRMM Architects",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5243",
+      "audit_id": "GB:U20",
+      "name": "ECE Architecture",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:elliottwood",
+      "audit_id": "GB:U21",
+      "name": "Elliott Wood",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Tragwerksplanung",
+        "Beschaffungsplanung"
+      ],
+      "evidence_urls": [
+        "https://www.elliottwood.co.uk/latest/180-piccadilly-londons-largest-steel-reuse-project"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:65",
+      "audit_id": "GB:U22",
+      "name": "Ellis & Moore Consulting Engineers",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5699",
+      "audit_id": "GB:U23",
+      "name": "Erith",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5224",
+      "audit_id": "GB:U24",
+      "name": "Eurban",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5982",
+      "audit_id": "GB:U25",
+      "name": "Fabrix",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5155",
+      "audit_id": "GB:U28",
+      "name": "Galldris Group",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5220",
+      "audit_id": "GB:U31",
+      "name": "Grosvenor",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5222",
+      "audit_id": "GB:U33",
+      "name": "Heyne Tillett Steel / HTS",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Tragwerksplanung",
+        "Bauteilsuche",
+        "Softwareentwicklung"
+      ],
+      "evidence_urls": [
+        "https://hts.uk.com/research-innovation/stockmatcher/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5805",
+      "audit_id": "GB:U34",
+      "name": "Hoare Lea",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5809",
+      "audit_id": "GB:U36",
+      "name": "Hybrid Structures",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5151",
+      "audit_id": "GB:U37",
+      "name": "IF_DO",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5192",
+      "audit_id": "GB:U39",
+      "name": "KLH",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5803",
+      "audit_id": "GB:U40",
+      "name": "Landsec",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5698",
+      "audit_id": "GB:U41",
+      "name": "Mace",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5246",
+      "audit_id": "GB:U42",
+      "name": "McLaren Construction",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5172",
+      "audit_id": "GB:U43",
+      "name": "Mears Group",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5191",
+      "audit_id": "GB:U48",
+      "name": "PT Projects",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5190",
+      "audit_id": "GB:U49",
+      "name": "Ramboll",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5149",
+      "audit_id": "GB:U50",
+      "name": "Related Argent",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5695",
+      "audit_id": "GB:U51",
+      "name": "Sheppard Robson",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5598",
+      "audit_id": "GB:U53",
+      "name": "Solus",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5242",
+      "audit_id": "GB:U54",
+      "name": "Stiff + Trevillion",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5694",
+      "audit_id": "GB:U56",
+      "name": "Studio RHE",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5697",
+      "audit_id": "GB:U57",
+      "name": "Symmetrys",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5225",
+      "audit_id": "GB:U58",
+      "name": "TFT Consultants",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Reuse-Beratung",
+        "Reuse-Planung",
+        "Umweltbewertung"
+      ],
+      "evidence_urls": [
+        "https://www.tftconsultants.com/services/circular-economy"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5241",
+      "audit_id": "GB:U65",
+      "name": "Willmott Dixon",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Projektsteuerung",
+        "Reuse-Planung",
+        "Bauausführung"
+      ],
+      "evidence_urls": [
+        "https://www.willmottdixon.co.uk/now-or-never/case-studies/tower-bridge-court-sets-standard-for-reuse-of-building-materials"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4911",
+      "audit_id": "NL:F02",
+      "name": "ReCreate Dutch cluster",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5738",
+      "audit_id": "NL:F04",
+      "name": "Zuyd Hogeschool",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Methodenentwicklung",
+        "Angewandte Forschung"
+      ],
+      "evidence_urls": [
+        "https://surd.nl/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5732",
+      "audit_id": "NL:I02",
+      "name": "Gemeente Kerkrade",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5770",
+      "audit_id": "NL:I04",
+      "name": "Rijksvastgoedbedrijf / Central Government Real Estate Agency",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:baarsandbloemhoff",
+      "audit_id": "NL:M01",
+      "name": "Baars & Bloemhoff",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Materialberatung",
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://www.baars-bloemhoff.nl/new-horizon-interieurmaterialen-uit-urban-mining-cms-newhorizon-materialen-urbanmining"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6530",
+      "audit_id": "NL:N01",
+      "name": "C-Creators",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:urbanminingcollective",
+      "audit_id": "NL:N03",
+      "name": "Urban Mining Collective",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5096",
+      "audit_id": "NL:O02",
+      "name": "BioPartner Center Leiden",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5114",
+      "audit_id": "NL:O03",
+      "name": "BlueCity / Blue City 010 BV",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5552",
+      "audit_id": "NL:O04",
+      "name": "Dutch Design Foundation",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5512",
+      "audit_id": "NL:O07",
+      "name": "Stichting Montessorischolen Monton",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5547",
+      "audit_id": "NL:P11",
+      "name": "People’s Pavilion",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_project_actual_reuse_not_proven"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:superlocal",
+      "audit_id": "NL:P12",
+      "name": "SUPERLOCAL",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_project_actual_reuse_not_proven",
+        "future_only_or_unbuilt"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Referenzprojekt"
+      ],
+      "evidence_urls": [
+        "https://www.superlocal.eu/superlocal/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4901",
+      "audit_id": "NL:P6",
+      "name": "Circular Centre Netherlands",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_project_actual_reuse_not_proven",
+        "future_only_or_unbuilt"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_future_or_design_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5517",
+      "audit_id": "NL:U01",
+      "name": "A. de Jong Groep",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5288",
+      "audit_id": "NL:U04",
+      "name": "Adviesbureau Lüning",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5513",
+      "audit_id": "NL:U06",
+      "name": "Anculus B.V.",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:584",
+      "audit_id": "NL:U09",
+      "name": "BAM Bouw + Techniek",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5119",
+      "audit_id": "NL:U10",
+      "name": "Bik Bouw",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5931",
+      "audit_id": "NL:U11",
+      "name": "Bouwbedrijf Versteegden",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5286",
+      "audit_id": "NL:U14",
+      "name": "Burobas",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5116",
+      "audit_id": "NL:U16",
+      "name": "COUP",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6389",
+      "audit_id": "NL:U17",
+      "name": "de Architekten Cie.",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5098",
+      "audit_id": "NL:U19",
+      "name": "De Vries en Verburg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5100",
+      "audit_id": "NL:U20",
+      "name": "Deerns",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:605",
+      "audit_id": "NL:U21",
+      "name": "Donkergroen",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5291",
+      "audit_id": "NL:U23",
+      "name": "DWT Groep",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Beschaffungsplanung"
+      ],
+      "evidence_urls": [
+        "https://dwtgroep.nl/innovatie/circulair"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4913",
+      "audit_id": "NL:U24",
+      "name": "Dycore",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5284",
+      "audit_id": "NL:U26",
+      "name": "Emergis",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:720",
+      "audit_id": "NL:U27",
+      "name": "Exasun",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5553",
+      "audit_id": "NL:U29",
+      "name": "Ham & Sybesma",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:604",
+      "audit_id": "NL:U30",
+      "name": "Icon Real Estate",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5555",
+      "audit_id": "NL:U31",
+      "name": "IJB groep",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4912",
+      "audit_id": "NL:U32",
+      "name": "IMd Raadgevende Ingenieurs",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Tragwerksplanung",
+        "Demontagegerechtes Design",
+        "Normung"
+      ],
+      "evidence_urls": [
+        "https://imdbv.nl/expertises"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5775",
+      "audit_id": "NL:U33",
+      "name": "Kampstaal",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:603",
+      "audit_id": "NL:U36",
+      "name": "lcp-circulair",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Projektentwicklung"
+      ],
+      "evidence_urls": [
+        "https://lcp-circulair.nl/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6577",
+      "audit_id": "NL:U38",
+      "name": "New Horizon",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Reuse-Beratung",
+        "Bauteilinventarisierung",
+        "Wertermittlung"
+      ],
+      "evidence_urls": [
+        "https://newhorizon.nl/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5290",
+      "audit_id": "NL:U41",
+      "name": "Paree",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5097",
+      "audit_id": "NL:U43",
+      "name": "Popma ter Steege Architecten / PTSA",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Wissensvermittlung"
+      ],
+      "evidence_urls": [
+        "https://ptsa.nl/reuse-to-reduce/"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5771",
+      "audit_id": "NL:U44",
+      "name": "R Creators",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5556",
+      "audit_id": "NL:U48",
+      "name": "Stiho group",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed_org"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Bauteilhandel"
+      ],
+      "evidence_urls": [
+        "https://www.stiho.nl/duurzaamheid/circulair"
+      ]
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5101",
+      "audit_id": "NL:U49",
+      "name": "STONE22",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5773",
+      "audit_id": "NL:U50",
+      "name": "Strukton Worksphere",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5932",
+      "audit_id": "NL:U54",
+      "name": "Transfarmers",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5406",
+      "audit_id": "NL:U55",
+      "name": "Turntoo / Circularity-Kontext",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5516",
+      "audit_id": "NL:U57",
+      "name": "Van Dijk Maasland B.V.",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5933",
+      "audit_id": "NL:U58",
+      "name": "VanNimwegen",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5515",
+      "audit_id": "NL:U60",
+      "name": "VIA Landscape",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5514",
+      "audit_id": "NL:U63",
+      "name": "Vintis installatieadviseurs",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5735",
+      "audit_id": "NL:U64",
+      "name": "Volantis",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "historical_or_closed_org"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_historical_or_closed",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5117",
+      "audit_id": "NL:U65",
+      "name": "Workspot",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:778",
+      "audit_id": "NL:X01",
+      "name": "Repurpose",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Reuse-Beratung",
+        "Bauteilinventarisierung",
+        "Vermittlungsplattform"
+      ],
+      "evidence_urls": [
+        "https://repurpose.nl/"
+      ]
+    },
+    {
+      "eid": "NEW:H:tyresokommun",
+      "audit_id": "SE:I03",
+      "name": "Tyresö kommun",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:aterbygget",
+      "audit_id": "SE:M10",
+      "name": "Återbygget",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:akademiskahus",
+      "audit_id": "SE:U02",
+      "name": "Akademiska Hus",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Gebäudeeigentum"
+      ],
+      "evidence_urls": [
+        "https://www.akademiskahus.se/om-oss/aktuellt/Nyheter/2023/december/samverkan-for-aterbruk-av-lastbarande-konstruktionsdelar/"
+      ]
+    },
+    {
+      "eid": "NEW:H:anthesis",
+      "audit_id": "SE:U03",
+      "name": "Anthesis",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Umweltbewertung",
+        "Datenanalyse",
+        "Methodenentwicklung"
+      ],
+      "evidence_urls": [
+        "https://www.anthesisgroup.com/se/referensprojekt/aterbruk-i-byggsektorn/"
+      ]
+    },
+    {
+      "eid": "NEW:H:atriumljungberg",
+      "audit_id": "SE:U04",
+      "name": "Atrium Ljungberg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:bcbygg",
+      "audit_id": "SE:U05",
+      "name": "BC-bygg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:contiga",
+      "audit_id": "SE:U09",
+      "name": "Contiga",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Demontage",
+        "Anpassung",
+        "Wiedereinbau"
+      ],
+      "evidence_urls": [
+        "https://www.precastcontiga.heidelbergmaterials.se/sv/contiga-deltar-i-innovationsprojekt-for-aterbruk-av-tunga-byggnadsdelar"
+      ]
+    },
+    {
+      "eid": "NEW:H:hagarot",
+      "audit_id": "SE:U10",
+      "name": "Haga Rot",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:helsingborgshem",
+      "audit_id": "SE:U11",
+      "name": "Helsingborgshem",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Gebäudeeigentum",
+        "Pilotierung"
+      ],
+      "evidence_urls": [
+        "https://helsingborgshem.se/artikel/vart-miljoarbete"
+      ]
+    },
+    {
+      "eid": "NEW:H:hsbgoteborg",
+      "audit_id": "SE:U12",
+      "name": "HSB Göteborg",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:qpgarkitektur",
+      "audit_id": "SE:U15",
+      "name": "QPG Arkitektur",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:rp",
+      "audit_id": "SE:U17",
+      "name": "RP (Bygghubben member)",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_partner_credit_or_generic_only",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:sernekesverige",
+      "audit_id": "SE:U18",
+      "name": "Serneke Sverige AB",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "strict_gate_failed"
+      ],
+      "final_check": "confirm_prune",
+      "final_reason_code": "confirmed_no_concrete_reuse_evidence",
+      "rationale": "No actor-specific, concrete and role-bearing reuse evidence survived the final gate."
+    },
+    {
+      "eid": "NEW:H:wiklundsakeri",
+      "audit_id": "SE:U22",
+      "name": "Wiklunds Åkeri",
+      "decision_before": "prune",
+      "previous_reason_codes": [
+        "cross_review_partner_credit_or_generic_only"
+      ],
+      "final_check": "restore_keep",
+      "final_reason_code": "direct_actor_specific_reuse_evidence",
+      "rationale": "The source explicitly documents the actor's own reuse activity or enabling task.",
+      "final_roles": [
+        "Demontage",
+        "Zwischenlagerung",
+        "Transport"
+      ],
+      "evidence_urls": [
+        "https://www.wiklunds.se/affarsomraden/cirkulart-byggande/"
+      ]
+    }
+  ]
+}

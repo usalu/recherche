@@ -2,26 +2,26 @@
 
 **Status: geprüft, aber nicht für Semio aktiviert.**
 
-- Behalten: 588
-- Entfernen: 269
+- Behalten: 631
+- Entfernen: 226
 - Zusammenführen: 2
-- Erwarteter finaler Bestand nach Freigabe: 588
+- Erwarteter finaler Bestand nach Freigabe: 631
 
 ## Ergebnis nach Land
 
 | Land | Behalten | Entfernen | Zusammenführen |
 |---|---:|---:|---:|
-| AT | 20 | 11 | 0 |
-| BE | 61 | 38 | 0 |
-| CH | 68 | 15 | 0 |
-| DE | 66 | 29 | 0 |
+| AT | 21 | 10 | 0 |
+| BE | 64 | 35 | 0 |
+| CH | 72 | 11 | 0 |
+| DE | 70 | 25 | 0 |
 | DK | 49 | 22 | 1 |
-| FI | 28 | 13 | 0 |
-| FR | 95 | 13 | 0 |
-| GB | 75 | 54 | 0 |
-| NL | 65 | 52 | 1 |
-| NO | 27 | 8 | 0 |
-| SE | 34 | 14 | 0 |
+| FI | 32 | 9 | 0 |
+| FR | 97 | 11 | 0 |
+| GB | 80 | 49 | 0 |
+| NL | 75 | 42 | 1 |
+| NO | 32 | 3 | 0 |
+| SE | 39 | 9 | 0 |
 
 ## Behalten
 
@@ -29,6 +29,7 @@
 |---|---|---|---|
 | AT:F02 | MedUni Wien | Bauherrschaft | Verankert Reuse und Ressourcenschonung als Ziel beim neuen Universitätscampus. |
 | AT:I01 | BIG (Bundesimmob.) | Bauherrschaft / Gebäudeeigentum | Beauftragt Reuse-Rückbau und erhält Bestandsgebäude in Hochschulprojekten. |
+| AT:I02 | VIE.CYCLE / DoTank Circular City Wien 2020–2030 (Stadt Wien, Stabsstelle SRN) | Programmmanagement / Reuse-Strategie | Steuert Wiens Programm für zirkuläres Bauen und die Wiederverwendung von Bauteilen. |
 | AT:I03 | WSE Wiener Standortentwicklung GmbH | Projektsteuerung | Steuert das Stadionprojekt mit Social Urban Mining und vermittelten Reuse-Bauteilen. |
 | AT:M01 | BauKarussell | Potenzialbewertung / Selektiver Rückbau / Vermittlung | Bewertet Reuse-Potenziale, demontiert selektiv und vermittelt geborgene Bauteile. |
 | AT:M02 | Baustoffmanufaktur (DN das Nord GmbH) | Bauteilhandel | Verkauft historische Holzböden und alte Baustoffe zur erneuten Verwendung. |
@@ -54,6 +55,7 @@
 | BE:F05 | Technische Universität München (TUM) | Angewandte Forschung | Bündelt Forschung und Lehre zu Umnutzung, Reuse und Rückbau im gebauten Umfeld. |
 | BE:F07 | University of Twente | Angewandte Forschung | Entwickelt Informationsmethoden für Bergung, Reuse-Entscheidungen und reversibles Bauen. |
 | BE:F08 | Vlaamse Instelling voor Technologisch Onderzoek (VITO) | Reuse-Beratung | Berät und erforscht Methoden für demontierbare, wiederverwendbare Bauteile. |
+| BE:F09 | Vrije Universiteit Brussel (VUB) – Architectural Engineering | Demontagegerechtes Design / Methodenentwicklung / Angewandte Forschung | Erforscht und entwickelt reversible Lösungen zur Wiederverwendung von Bauteilen. |
 | BE:G01 | ERDF / FEDER Brüssel-Hauptstadt | Fördermittelvergabe | Fördert den Zinneke-Umbau mit Bestandserhalt und zahlreichen gebrauchten Bauteilen. |
 | BE:I01 | Brussels Environment | Programmmanagement | Koordiniert das BAMB-Programm mit Materialpässen, Pilotbauten und Partnern. |
 | BE:I05 | OVAM (Openbare Vlaamse Afvalstoffenmaatschappij) | Reuse-Strategie | Entwickelt Strategien, Werkzeuge und Richtlinien zur Wiederverwendung von Bauteilen. |
@@ -102,9 +104,11 @@
 | BE:P13 | Recypark Demets | Referenzprojekt | Integriert 20 demontierte Brettschichtholzbögen eines früheren Reitzentrums. |
 | BE:P14 | Verbiest + Karreveld | Referenzprojekt | Erhält Bestandsstrukturen und verwendet Ziegel, Fliesen und Steine weiter. |
 | BE:P15 | Zinneke | Referenzprojekt | Erhält 94 Prozent des Bestands und ergänzt den Umbau mit gebrauchten Bauteilen. |
+| BE:P2 | Chiro d’Itterbeek | Referenzprojekt | Verbaut geborgene Ziegel, Schulfliesen, Sanitärteile, Leuchten und Spiegel erneut. |
 | BE:P3 | Circular Retrofit Lab | Referenzprojekt | Erprobt demontierbare und wiederverwendbare Bauteile in sanierten Wohnmodulen. |
 | BE:P7 | Maison DnA | Referenzprojekt | Verwendet 50 Kubikmeter geprüfte Altziegel als tragende Außenfassade. |
 | BE:P8 | Maison Vignette | Referenzprojekt | Verbaut gebrauchte Ziegel, Fliesen, Blausteinplatten und Sanitärobjekte. |
+| BE:S01 | Madaster | Materialpass / Bauteilkataster / Datenplattform | Registriert Bauprodukte digital und macht Wiederverwendbarkeit und Restwert sichtbar. |
 | BE:S02 | Preuse | Programmmanagement | Entwickelt und erprobt kommunale Strategien für Bergung und Bauteilwiederverwendung. |
 | BE:S03 | Sundahus | Bestandsdatenmanagement | Dokumentiert Bauprodukte über die Zeit und unterstützt ihre spätere Wiederverwendung. |
 | BE:U01 | 51N4E | Architektur | Plant den Recypark um 20 geborgene Brettschichtholzbögen aus einer Reithalle. |
@@ -126,16 +130,20 @@
 | CH:F12 | ZHAW IKE | Angewandte Forschung / Lehre / Wissensvermittlung | Erforscht und lehrt Bauteilwiederverwendung und veröffentlicht Praxishilfen. |
 | CH:I01 | Entsorgung + Recycling Zürich (ERZ) | Gebäudeeigentum / Projektentwicklung | Entwickelt als Eigentümervertretung das Reuse-Pilotzentrum gemeinsam mit der Stadt. |
 | CH:I03 | Stadt Zürich / Amt für Hochbauten / Immobilien Stadt Zürich | Gebäudeeigentum / Reuse-Strategie / Potenzialbewertung | Prüft städtische Bauprojekte systematisch auf wiederverwendbare Bauteile. |
+| CH:M01 | Archipel Sion Ressourcerie | Selektiver Rückbau / Sortierung / Bauteilhandel | Baut Bauteile schonend aus, sortiert sie und verkauft sie für eine zweite Nutzung. |
 | CH:M02 | Baumatpool.ch | Vermittlungsplattform | Ermöglicht das Finden, Kaufen und Verkaufen gebrauchter Baumaterialien. |
 | CH:M03 | Bauteilbörse Basel | Aufarbeitung / Bauteilhandel | Prüft, reinigt und bereitet demontierte Bauteile auf und verkauft sie. |
 | CH:M04 | Bauteilkatalog Immobilien Basel-Stadt | Vermittlungsplattform / Bauteilkataster | Katalogisiert verfügbare Reuse-Bauteile und stellt sie Bauprojekten bereit. |
 | CH:M05 | Bauteilladen Winterthur | Bauteilhandel / Vermittlung | Verkauft Secondhand-Bauteile und vermittelt Such- und Verkaufsanfragen. |
 | CH:M06 | Bauteilvermittlung Zürichsee-Oberland | Vermittlung | Vermittelt angebotene gebrauchte Bauteile. |
+| CH:M07 | Bauteilverwertung Köppel & Klein | Demontage / Bauteilhandel | Demontiert gebrauchte Bauteile und vermittelt sie für neue Anwendungen. |
 | CH:M08 | GGZ@WORK Laden 2 Bauteile Zug | Bauteilhandel | Verkauft gut erhaltene gebrauchte Bauteile. |
+| CH:M09 | Historisches Bauteillager Ostschweiz (Denkmal Stiftung Thurgau) | Demontage / Lagerung / Bauteilhandel | Baut historische Bauteile aus, lagert sie und gibt sie für neue Einbauten weiter. |
 | CH:M10 | Matériuum | Reuse-Beratung / Bauteilinventarisierung / Weiterbildung | Berät Reuse-Projekte, inventarisiert Bauteile und bietet Schulungen zur Wiederverwendung. |
 | CH:M11 | Matériuum Genève Ressourcerie | Bergung | Bergt wiederverwendbare Szenografieelemente für ein zweites Leben. |
 | CH:M13 | Ressourcerie Lausanne / Matériuum / R-UUL | Aufarbeitung / Lagerung / Bauteilhandel | Bereitet Bauteile auf, lagert sie und verkauft sie in der Ressourcerie und online. |
 | CH:M14 | ReUse Recycling Center Riedtwil / wiederverwendung.ch | Bauteilhandel | Verkauft wiederverwendbare Gebrauchtwaren und Baumaterialien im Zentrum und online. |
+| CH:M15 | Stiftung Chance BauTeile Zürich / Glattbrugg | Demontage | Demontiert Bauteile und Baumaterial ausdrücklich für ihre Wiederverwendung. |
 | CH:M16 | useagain / Bauteilclick | Vermittlungsplattform | Vermittelt gebrauchte Bauteile, Materialien und Möbel über eine Plattform. |
 | CH:M17 | Wick ReUse / ROTO Baumarkt | Bauteilhandel | Verkauft gebrauchte Maschinen, Werkzeuge, Materialien und Bauteile. |
 | CH:N01 | Cirkla | Wissensvermittlung / Netzwerkkoordination / Veranstaltungsorganisation | Vernetzt Reuse-Akteure und verbreitet Wissen zu gebrauchter Bauteilnutzung. |
@@ -224,8 +232,11 @@
 | DE:P6 | CRCLR House | Referenzprojekt | Nutzt Stahlpfetten des Hallendachs als tragende Treppenwangen erneut. |
 | DE:P8 | Haus HOS | Referenzprojekt | Besteht im Rohbau zu 75 Prozent aus gebrauchten Stahlbeton-Plattenbauteilen. |
 | DE:S01 | Concular | Bauteilinventarisierung / Reuse-Audit / Vermittlungsplattform | Erfasst, bewertet und vermittelt Bauteile für Rückbau und Wiedereinbau. |
+| DE:S02 | SURAP GmbH | Umweltbewertung / Softwareentwicklung | Liefert LCA-Daten und Software-Schnittstellen für Bauteilbörsen und Reuse-Plattformen. |
 | DE:S03 | Urban Mining Index | Potenzialbewertung / Wirtschaftlichkeitsbewertung / Methodenentwicklung | Bewertet Rückbau, Restwert und Reuse-Potenzial von Baukonstruktionen quantitativ. |
 | DE:U01 | ALBA Berlin | Zwischenlagerung / Transport | Stellt Fläche und Logistik für die Lagerung und Verteilung geborgener Bauteile bereit. |
+| DE:U13 | Circular Structural Design | Tragwerksplanung / Reuse-Audit / Potenzialbewertung | Plant Tragwerke und bewertet Bestandsbauteile für Demontage und Wiedereinbau. |
+| DE:U14 | CITYFÖRSTER | Architektur / Reuse-Beratung | Plant Reuse-Projekte und berät Bauherren zur Wiederverwendbarkeit von Bauteilen. |
 | DE:U15 | Cubus Projekt | Fertigung mit Reuse-Material | Verarbeitet im Reallabor geborgenes Material zu Bauteilen für Tragstrukturen. |
 | DE:U17 | DARE GmbH | Selektiver Rückbau | Baut Materialquellen für die spätere Wiederverwendung zerstörungsarm zurück. |
 | DE:U18 | Die Zusammenarbeiter | Architektur | Wirkt als planender Architekt an einem konkreten Reuse-Bauprojekt mit. |
@@ -246,6 +257,7 @@
 | DE:U40 | ReUse and Trade | Vermittlungsplattform | Vermittelt Restbestände und Bauprodukte zur weiteren Nutzung an neue Käufer. |
 | DE:U41 | Seidl + Seidl Architekten | Architektur | Plant ein Haus aus wiederverwendeten Betonfertigteilen. |
 | DE:U46 | TOMAS | Projektentwicklung / Bestandsentwicklung / Umnutzungsplanung | Entwickelt neue Nutzungen für leer stehende Gebäude und erhält deren Bestand. |
+| DE:U47 | Urselmann Interior | Innenarchitektur / Reuse-Planung / Fertigung mit Reuse-Material | Plant und fertigt Innenausbau mit geernteten und bereits gebrauchten Bauteilen. |
 | DE:U48 | Werner Sobek | Architektur / Reuse-Planung / Demontagegerechtes Design | Entwarf die UMAR-Einheit für Bauteilentnahme und künftige Wiederverwendung. |
 | DE:U49 | Wiewiorra Hopp Architekten | Architektur / Reuse-Planung | Entwarf den Plattenpalast aus Betonplatten und gebrauchten Fenstern. |
 | DE:U50 | ZIRKULAAR Architektur | Architektur / Reuse-Planung / Vermittlung | Plant und vermittelt gebrauchte Bauteile für wiederverwendbare Architektur. |
@@ -294,8 +306,12 @@
 | DK:U31 | Skave Nedbrydning | Transport | Liefert und verkauft Fenster, Türen, Holz und Metall aus Rückbauten. |
 | DK:U33 | Tscherning | Selektiver Rückbau | Demontiert und birgt Bauteile so, dass Qualität und Festigkeit erhalten bleiben. |
 | DK:U34 | Vandkunsten | Methodenentwicklung | Entwickelt Designstrategien für langlebige Gebäude und wiederverwendbare Bauteile. |
+| FI:F01 | Aalto University (Department of Architecture) | Angewandte Forschung | Erforscht im Department of Architecture zirkuläres Bauen und Wiederverwendung. |
 | FI:F02 | Kaakkois-Suomen Ammattikorkeakoulu Oy (Xamk) | Methodenentwicklung / Angewandte Forschung / Monitoring und Evaluation | Entwickelt und erprobt Methoden zur Erfassung wiederverwendbarer Materialströme. |
 | FI:F03 | ReCreate Finnish cluster | Pilotierung / Netzwerkkoordination | Koordiniert den finnischen Cluster und realisierte dessen ersten Beton-Reuse-Pilot. |
+| FI:F04 | ReCreate / Tampere University | Pilotierung / Angewandte Forschung | Erforscht und pilotiert Demontage und Wiederverwendung von Betonfertigteilen. |
+| FI:F05 | VTT – Circularity in the Built Environment | Methodenentwicklung / Angewandte Forschung | Entwickelt Methoden, damit Bauteile über mehrere Lebenszyklen wiederverwendet werden. |
+| FI:G01 | Ekokumppanit (Kiertotalous Pirkanmaa) | Programmmanagement / Methodenentwicklung | Entwickelt und pilotiert ein Modell für Lagerung und Wiederverwendung von Bauteilen. |
 | FI:G02 | SÄILÖ: Purusta säilöön ja kiertoon | Methodenentwicklung | Entwickelt ein Modell für die Wiederverwendung intakt demontierter Bauteile. |
 | FI:I02 | City of Helsinki | Programmmanagement / Öffentliche Beschaffung / Reuse-Strategie | Verankert Bauteilwiederverwendung in Piloten und künftigen Bauanforderungen. |
 | FI:I05 | Tampereen kaupunki (City of Tampere) | Regulierung / Genehmigung und Aufsicht | Entwickelt Regeln und Genehmigungspraxis für wiederverwendete Bauprodukte. |
@@ -340,6 +356,7 @@
 | FR:M18 | Cycle Up | Reuse-Beratung | Berät, bewertet Reuse-Potenziale und vermittelt gebrauchte Bauteile digital. |
 | FR:M19 | DELAN PATRICK - Antiquaires | Bauteilhandel | Restauriert und verkauft historische Türen, Möbel und weitere Bauteile. |
 | FR:M20 | Dussel Matériaux Anciens | Bauteilhandel | Lagert, bearbeitet und verkauft geborgene Bauteile aus Abbruchvorhaben. |
+| FR:M21 | Démolition William Perreault | Bauteilhandel | Verkauft geborgene Baustoffe aus dem eigenen Rückbaugeschäft zur erneuten Nutzung. |
 | FR:M22 | EKO reemploi | Bauteilhandel | Ein direkter Reuse-Bezug ist belegt, die konkrete Funktion bleibt jedoch unklar. |
 | FR:M23 | Enfin!Réemploi | Reuse-Beratung | Berät, sammelt und vermittelt gebrauchte Baustoffe für eine weitere Nutzung. |
 | FR:M24 | Fer et Pierre | Bauteilhandel | Aus den Informationen ist kein direkter Beitrag zur Wiederverwendung ableitbar. |
@@ -360,6 +377,7 @@
 | FR:M40 | Matériaux Anciens du Nord | Bauteilhandel | Reinigt, lagert und verkauft historische Fliesen und weitere gebrauchte Bauteile. |
 | FR:M41 | Matériaux Anciens du Pays d'Auge | Bauteilhandel | Verkauft geborgene Kamine, Böden, Türen und weitere historische Bauteile. |
 | FR:M42 | Matériaux Anciens du Sud | Bauteilhandel | Lagert, verkauft und vermittelt historische Baustoffe und Bauteile. |
+| FR:M44 | Matériaux d'Antan | Aufarbeitung / Bauteilhandel / Wiedereinbau | Birgt, restauriert, verkauft und montiert historische Bauteile für neue Projekte. |
 | FR:M45 | METAMO | Bauteilhandel | Qualifiziert Metallbauteile, bereitet sie auf und liefert sie für neue Projekte. |
 | FR:M46 | MOBIOUS | Bauteilhandel | Inventarisiert Bauteile, bereitet sie auf und liefert sie für Bauprojekte. |
 | FR:M47 | ORAK | Zustandsbewertung | Bewertet, pflegt und bereitet Teppichfliesen für eine erneute Nutzung auf. |
@@ -472,31 +490,38 @@
 | GB:U04 | BakerBrown | Architektur / Reuse-Beratung | Plant adaptive Wiederverwendung und erstellt Ressourcenkarten für nutzbare Bauteile. |
 | GB:U06 | BDP | Architektur | Direkt belegt im baulichen Reuse-Kontext: Architektur. |
 | GB:U16 | Civic Engineers | Reuse-Strategie | Direkt belegt im baulichen Reuse-Kontext: Reuse-Strategie. |
+| GB:U17 | Cleveland Steel & Tubes | Bauteilhandel | Kauft und verkauft überschüssigen Stahl für die erneute Nutzung in Bauprojekten. |
+| GB:U21 | Elliott Wood | Tragwerksplanung / Beschaffungsplanung | Plant Tragwerke mit wiedergewonnenem Stahl und organisiert dessen Einsatz. |
 | GB:U26 | FORE Partnership | Projektentwicklung | Direkt belegt im baulichen Reuse-Kontext: Projektentwicklung. |
 | GB:U27 | Four Bay Structures | Zertifizierung / Aufarbeitung / Baustellenlogistik | Zertifiziert, überarbeitet und liefert gebrauchten Stahl zur Baustelle. |
 | GB:U29 | Gardiner & Theobald | Projektsteuerung | Steuert die Initiative zur Beschaffung und Integration wiederverwendeter Stahlbauteile. |
 | GB:U30 | Grants of Shoreditch | Bergung / Wiedereinbau | Bergt Naturstein aus Bestandsfassaden und setzt ihn in neuen Fassaden wieder ein. |
 | GB:U32 | Hawkins\Brown | Architektur / Materialpass | Direkt belegt im baulichen Reuse-Kontext: Architektur, Materialpass. |
+| GB:U33 | Heyne Tillett Steel / HTS | Tragwerksplanung / Bauteilsuche / Softwareentwicklung | Entwickelt Stockmatcher, um verfügbaren Baustahl für Wiederverwendung zuzuordnen. |
 | GB:U44 | Method | Reuse-Beratung | Berät zur Auswahl langlebiger Möbel und zu ihrer Weiternutzung bei Büroumzügen. |
 | GB:U45 | Morgan Sindall | Reuse-Audit | Führt Rückbauaudits durch, um Bauteile für Wiederverwendung zu identifizieren. |
 | GB:U46 | Opera Property & Asset Management | Projektsteuerung | Steuert die Sanierung mit Bestandserhalt und einem Tragwerk aus gebrauchtem Stahl. |
 | GB:U47 | PLP Architecture | Bauherrschaft / Innenarchitektur | Direkt belegt im baulichen Reuse-Kontext: Bauherrschaft, Innenarchitektur. |
 | GB:U52 | Simple Works | Wissensvermittlung | Direkt belegt im baulichen Reuse-Kontext: Wissensvermittlung. |
 | GB:U55 | Studio PDP | Reuse-Planung | Direkt belegt im baulichen Reuse-Kontext: Reuse-Planung. |
+| GB:U58 | TFT Consultants | Reuse-Beratung / Reuse-Planung / Umweltbewertung | Berät Bauprojekte zu Wiederverwendung und bewertet Material- und Kohlenstoffwirkungen. |
 | GB:U59 | The Built Environment Trust | Pilotierung | Erprobte mit Projektpartnern die Anwendung zirkulärer Prinzipien im Hochbau. |
 | GB:U60 | The Engineers Reuse Collective (TERC) | Netzwerkkoordination | Direkt belegt im baulichen Reuse-Kontext: Netzwerkkoordination. |
 | GB:U61 | UK CLT | Fertigung mit Reuse-Material | Direkt belegt im baulichen Reuse-Kontext: Fertigung mit Reuse-Material. |
 | GB:U62 | Urban Miners | Demontage / Bauteilhandel | Direkt belegt im baulichen Reuse-Kontext: Demontage, Bauteilhandel. |
 | GB:U63 | Webb Yates Engineers | Reuse-Planung / Tragwerksplanung | Plant die tragwerksgerechte Integration gebrauchter Stahlträger in den Umbau. |
 | GB:U64 | Whitby Wood | Netzwerkkoordination | Direkt belegt im baulichen Reuse-Kontext: Netzwerkkoordination. |
+| GB:U65 | Willmott Dixon | Projektsteuerung / Reuse-Planung / Bauausführung | Identifiziert Reuse-Bauteile und verbaut Ziegel, Stahl und Ausstattung erneut. |
 | GB:X01 | Globechain | Rückverfolgbarkeit / Vermittlungsplattform | Direkt belegt im baulichen Reuse-Kontext: Rückverfolgbarkeit, Vermittlungsplattform. |
 | GB:X02 | Studierende, Schulkinder und Freiwillige | Bauausführung | Baut das Waste House aus gebrauchten und überschüssigen Materialien mit. |
 | GB:X03 | Warp It | Vermittlungsplattform | Direkt belegt im baulichen Reuse-Kontext: Vermittlungsplattform. |
 | NL:F01 | Leiden University / Gorlaeus donor source | Weitergabe | Direkt belegt im baulichen Reuse-Kontext: Weitergabe. |
 | NL:F03 | TU Delft | Angewandte Forschung | Direkt belegt im baulichen Reuse-Kontext: Angewandte Forschung. |
+| NL:F04 | SURD Research Centre / Zuyd | Methodenentwicklung / Angewandte Forschung | Entwickelt und erprobt Methoden für Wiederverwendung und zirkuläre Bautechnologien. |
 | NL:I01 | City of Utrecht | Programmmanagement | Direkt belegt im baulichen Reuse-Kontext: Programmmanagement. |
 | NL:I03 | Provincie Gelderland | Richtlinienentwicklung | Direkt belegt im baulichen Reuse-Kontext: Richtlinienentwicklung. |
 | NL:I05 | Rijkswaterstaat | Weitergabe | Direkt belegt im baulichen Reuse-Kontext: Weitergabe. |
+| NL:M01 | Baars & Bloemhoff | Materialberatung / Bauteilhandel | Berät zu zirkulären Innenräumen und bietet Urban-Mining-Materialien an. |
 | NL:M02 | Bork (Stuifzand) | Bergung / Weitergabe | Direkt belegt im baulichen Reuse-Kontext: Bergung, Weitergabe. |
 | NL:M04 | Buurman | Bauteilhandel / Weiterbildung | Verkauft gebrauchtes Holz und vermittelt Wiederverwendung in Kursen und Workshops. |
 | NL:M05 | DuSpot | Vermittlungsplattform | Erfasst und vermittelt Angebot und Nachfrage nach gebrauchten Baustoffen digital. |
@@ -520,6 +545,7 @@
 | NL:O06 | IBA Parkstad | Projektsteuerung | Steuert gemeinsam die Reuse-Ziele und Grundsätze des SUPERLOCAL-Expogebäudes. |
 | NL:O08 | Zayaz | Gebäudeeigentum | Bleibt Eigentümerin und ermöglicht den gemeinschaftlich organisierten Reuse-Umbau. |
 | NL:P10 | Montessori Maassluis | Referenzprojekt | Verwendet gebrauchte Betonhohldielen in der hybriden Schulkonstruktion. |
+| NL:P12 | SUPERLOCAL | Referenzprojekt | Nutzt Bauteile aus bestehenden Wohnblöcken für neue Häuser und Teilwiederaufbau. |
 | NL:P13 | SUPERLOCAL Expogebouw | Referenzprojekt | Besteht zu 95 Prozent aus Bauteilen einer rückgebauten Wohnhochhausanlage. |
 | NL:P14 | The Green House Utrecht | Referenzprojekt | Nutzt Fassadenplatten der früheren Knoopkaserne und weitere gebrauchte Bauteile. |
 | NL:P15 | Villa Welpeloo Enschede | Referenzprojekt | Besteht zu 60 Prozent aus geborgenen Materialien, darunter Stahl und Fassadenholz. |
@@ -543,29 +569,40 @@
 | NL:U15 | cepezed | Architektur | Direkt belegt im baulichen Reuse-Kontext: Architektur. |
 | NL:U18 | De Groot & Visser | Modulare Systeme | Direkt belegt im baulichen Reuse-Kontext: Modulare Systeme. |
 | NL:U22 | Dusseldorp | Bauteilhandel | Direkt belegt im baulichen Reuse-Kontext: Bauteilhandel. |
+| NL:U23 | DWT Groep | Beschaffungsplanung | Prüft verfügbare zirkuläre Materialien früh und plant ihren Einsatz im Projekt. |
+| NL:U32 | IMd Raadgevende Ingenieurs | Tragwerksplanung / Demontagegerechtes Design / Normung | Plant Reuse-Tragwerke, lösbare Verbindungen und wirkt an der NTA 8713 mit. |
 | NL:U34 | Kraaijvanger Architects | Architektur | Direkt belegt im baulichen Reuse-Kontext: Architektur. |
 | NL:U35 | Lagemaat Heerde | Selektiver Rückbau | Direkt belegt im baulichen Reuse-Kontext: Selektiver Rückbau. |
+| NL:U36 | lcp-circulair | Projektentwicklung | Entwickelt Projekte zur hochwertigen Wiederverwendung geborgener Bauteile. |
 | NL:U37 | Maurer United | Architektur / Reuse-Planung | Entwirft das Expogebäude konsequent anhand verfügbarer gebrauchter Bauteile. |
+| NL:U38 | New Horizon | Reuse-Beratung / Bauteilinventarisierung / Wertermittlung | Scannt Gebäude und bewertet Bauteile und Materialwerte für Wiederverwendung. |
 | NL:U39 | New Horizon UM | Bauteilinventarisierung | Direkt belegt im baulichen Reuse-Kontext: Bauteilinventarisierung. |
 | NL:U40 | Overtreders W | Architektur / Demontagegerechtes Design | Direkt belegt im baulichen Reuse-Kontext: Architektur, Demontagegerechtes Design. |
 | NL:U42 | Pieters | Tragwerksplanung / Demontagegerechtes Design | Plant Tragwerke mit demontierbaren Verbindungen für eine spätere Wiederverwendung. |
+| NL:U43 | Popma ter Steege Architecten / PTSA | Wissensvermittlung | Vermittelt praxiserprobtes Wissen zum Entwerfen mit wiederverwendeten Bauteilen. |
 | NL:U45 | RAU | Architektur / Materialpass | Direkt belegt im baulichen Reuse-Kontext: Architektur, Materialpass. |
 | NL:U46 | Rothuizen Architecten / Taco Tuinhof | Architektur | Direkt belegt im baulichen Reuse-Kontext: Architektur. |
+| NL:U48 | Stiho | Bauteilhandel | Verkauft gebrauchte Fenster, Beschläge und Holzprodukte als Urban-Mining-Materialien. |
 | NL:U51 | Superuse Studios / 2012Architecten | Architektur | Direkt belegt im baulichen Reuse-Kontext: Architektur. |
 | NL:U53 | TRAJECT | Reuse-Beratung | Berät zu Rücknahme und langfristiger Aufwertung von Bauprodukten. |
 | NL:U56 | Van der Wal Sloopwerken | Bauteilhandel | Direkt belegt im baulichen Reuse-Kontext: Bauteilhandel. |
 | NL:U61 | Vic Obdam Staalbouw | Fertigung mit Reuse-Material | Direkt belegt im baulichen Reuse-Kontext: Fertigung mit Reuse-Material. |
 | NL:U62 | Victory Group | Gebäudeeigentum | Direkt belegt im baulichen Reuse-Kontext: Gebäudeeigentum. |
+| NL:X01 | Repurpose | Reuse-Beratung / Bauteilinventarisierung / Vermittlungsplattform | Scannt Bestandsgebäude und vermittelt wiederverwendbare Bauprodukte in neue Projekte. |
 | NO:F01 | Nordlandsforskning AS | Methodenentwicklung / Angewandte Forschung / Monitoring und Evaluation | Entwickelt Bewertungsrahmen und Indikatoren für kommunale Reuse-Aktivitäten. |
 | NO:F02 | NTNU | Angewandte Forschung | Erforscht im GjenOm-Projekt die Wiederverwendung tragender Betonkonstruktionen. |
+| NO:I01 | Asker kommune – Ombruk | Programmmanagement / Reuse-Strategie | Steuert kommunale Wiederverwendung von Möbeln und Überschuss aus Bauprojekten. |
 | NO:I02 | Bodø Kommune | Methodenentwicklung | Entwickelt im CityLoops-Pilot Werkzeuge für Reuse von Infrastruktur und Konstruktionen. |
 | NO:I03 | Trondheim kommune | Methodenentwicklung / Richtlinienentwicklung | Entwickelt einen Leitfaden zur Wiederverwendung tragender Konstruktionen. |
 | NO:M01 | FornyBygg | Lagerung / Bauteilhandel | Lagert und verkauft gebrauchte Baustoffe und Überschussmaterialien. |
+| NO:M03 | Iris Ombrukssentral / Saltnes ombruk | Lagerung / Bauteilhandel | Lagert und verkauft gebrauchte Baustoffe für neue Bauvorhaben. |
 | NO:M04 | Materialbanken for bygningsvern | Bauteilhandel | Verkauft historische Türen, Fenster, Dachziegel und weitere gebrauchte Bauteile. |
 | NO:M05 | OMBYGG | Lagerung / Bauteilhandel | Lagert wiederverwendbare Bauwaren und verkauft sie aus der Ombrukszentrale. |
 | NO:M06 | Resirkula | Vermittlung / Wissenstransfer | Vermittelt gebrauchte Ausstattung und gibt Reuse-Erfahrungen durch Führungen weiter. |
+| NO:M07 | Sirkulær Ressurssentral | Methodenentwicklung / Wissenstransfer / Netzwerkkoordination | Entwickelt Reuse-Strukturen und leitet eine nationale Wissensarena für Bauprodukte. |
 | NO:N01 | byggogbevar directory | Wissensvermittlung | Vermittelt Regeln, Verfahren und Beispiele für Erhalt und Wiederverwendung. |
 | NO:N03 | FutureBuilt | Programmmanagement / Pilotierung / Richtlinienentwicklung | Steuert Pilotprojekte und Kriterien für zirkuläre Gebäude und Quartiere. |
+| NO:N04 | ProffRebell / Remiks | Rücknahme / Bauteilhandel | Nimmt gebrauchte Bauwaren und Restposten an und verkauft sie erneut. |
 | NO:N05 | Ombruks-HUB Sørlandet AS | Zwischenlagerung / Vermittlung | Organisiert Zwischenlagerung und Verteilung demontierter Bauteile. |
 | NO:N06 | Regionalt ombruksnettverk for byggematerialer (Oslo-Trondheim) | Netzwerkkoordination | Vernetzt Eigentümer für Erfassung und Austausch wiederverwendbarer Bauteile. |
 | NO:P1 | B-camp | Referenzprojekt | Nutzt ausrangierte Offshore-Wohnmodule als Wohnungen und später als Surfhotel. |
@@ -579,6 +616,7 @@
 | NO:U03 | Entra AS | Bauherrschaft / Projektentwicklung | Entwickelt und beauftragt KA13 mit Bestandserhalt und hohem Reuse-Anteil. |
 | NO:U04 | Helen & Hard | Architektur / Reuse-Planung | Entwirft Gebäude und Wohnungen mit erhaltenen Strukturen und gebrauchten Modulen. |
 | NO:U05 | Insenti | Projektsteuerung / Reuse-Beratung / Baustellenkoordination | Steuert KA13 und koordiniert Planung, Baustelle und Wiederverwendung. |
+| NO:U07 | JCS AS | Demontage / Bauteilhandel | Gewinnt gebrauchte Baustoffe aus Gebäuden und stellt sie über eine Materialbank bereit. |
 | NO:U08 | MAD arkitekter / Mad as | Architektur | Ist als Architekt des realisierten Reuse-Projekts KA13 belegt. |
 | NO:U09 | Multiconsult | Reuse-Beratung | Berät Bauprojekte durchgängig zur Wiederverwendung von Gebäuden und Materialien. |
 | NO:U11 | Scenario Interiørarkitekter | Innenarchitektur / Reuse-Planung | Plant das Interieur von KA13 weitgehend mit vorhandenen und geborgenen Materialien. |
@@ -603,15 +641,20 @@
 | SE:S01 | CCBuild (IVL) | Vermittlungsplattform / Wissensvermittlung | Direkt belegt im baulichen Reuse-Kontext: Vermittlungsplattform, Wissensvermittlung. |
 | SE:S02 | Palats | Digitale Bestandserfassung / Datenplattform | Direkt belegt im baulichen Reuse-Kontext: Digitale Bestandserfassung, Datenplattform. |
 | SE:U01 | AIX Arkitekter | Architektur | Direkt belegt im baulichen Reuse-Kontext: Architektur. |
+| SE:U02 | Akademiska Hus | Gebäudeeigentum | Stellt ein eigenes Rückbaugebäude als großmaßstäblichen Reuse-Demonstrator bereit. |
+| SE:U03 | Anthesis | Umweltbewertung / Datenanalyse / Methodenentwicklung | Entwickelt ein Klimamodell für inventarisierte, wiederverwendete Bauprodukte. |
 | SE:U06 | Bjerking | Reuse-Beratung / Potenzialbewertung | Direkt belegt im baulichen Reuse-Kontext: Reuse-Beratung, Potenzialbewertung. |
 | SE:U07 | Business Region Göteborg | Netzwerkkoordination | Koordiniert Eigentümer beim Aufbau eines regionalen Marktes für gebrauchte Bauteile. |
 | SE:U08 | Codesign Sweden AB | Projektsteuerung | Direkt belegt im baulichen Reuse-Kontext: Projektsteuerung. |
+| SE:U09 | Contiga | Demontage / Anpassung / Wiedereinbau | Demontiert, passt Hohlplatten an und montiert sie in einem neuen Gebäude erneut. |
+| SE:U11 | Helsingborgshem | Gebäudeeigentum / Pilotierung | Erprobt den Ausbau und Wiedereinbau gebrauchter Betontragteile im ReCreate-Pilot. |
 | SE:U13 | Liljewall Arkitekter | Architektur | Direkt belegt im baulichen Reuse-Kontext: Architektur. |
 | SE:U14 | NCC | Reuse-Planung | Direkt belegt im baulichen Reuse-Kontext: Reuse-Planung. |
 | SE:U16 | Ragn-Sells | Qualitätsprüfung | Direkt belegt im baulichen Reuse-Kontext: Qualitätsprüfung. |
 | SE:U19 | Strängbetong | Weitergabe | Direkt belegt im baulichen Reuse-Kontext: Weitergabe. |
 | SE:U20 | Teknikbyggarna | Investor | Investiert als Miteigentümer in den regionalen Handel mit gebrauchten Baustoffen. |
 | SE:U21 | Vasakronan | Gebäudeeigentum | Direkt belegt im baulichen Reuse-Kontext: Gebäudeeigentum. |
+| SE:U22 | Wiklunds Åkeri | Demontage / Zwischenlagerung / Transport | Demontiert, lagert und liefert gebrauchte Baustoffe für neue Bauprojekte. |
 | SE:U23 | Wilzéns | Investor | Investiert als Mitgründer in den regionalen Handel mit gebrauchten Baustoffen. |
 | SE:U24 | Zengun | Beschaffung | Direkt belegt im baulichen Reuse-Kontext: Beschaffung. |
 | SE:U25 | Åhlin & Ekeroth | Investor | Investiert als Mitinitiator in den regionalen Handel mit gebrauchten Baustoffen. |
@@ -622,7 +665,6 @@
 |---|---|---|
 | AT:F01 | IBO – Österr. Institut für Bauen und Ökologie (BuildReUse) | cross_review_strict_gate_failed |
 | AT:F03 | Ökologie-Institut | cross_review_strict_gate_failed |
-| AT:I02 | VIE.CYCLE / DoTank Circular City Wien 2020–2030 (Stadt Wien, Stabsstelle SRN) | cross_review_strict_gate_failed |
 | AT:U01 | ATP sustain GmbH | final_consistency_generic_or_credit_only |
 | AT:U02 | Drees & Sommer (Österreich) | cross_review_strict_gate_failed |
 | AT:U04 | Gesa – Gemeinnützige Sanierungs- und Beschäftigungs GmbH | cross_review_strict_gate_failed |
@@ -632,7 +674,6 @@
 | AT:U12 | Verein ISSBA | PARTNER_LIST_ONLY |
 | AT:U13 | Volkshilfe Wien | cross_review_strict_gate_failed |
 | BE:F06 | Universidade do Minho (UMinho) | credit_partner_or_ambiguous_only |
-| BE:F09 | Vrije Universiteit Brussel (VUB) – Architectural Engineering | credit_partner_or_ambiguous_only |
 | BE:I02 | Commune de Dilbeek | credit_partner_or_ambiguous_only |
 | BE:I03 | Lo-Reninge town council | credit_partner_or_ambiguous_only |
 | BE:I07 | Ville de Mouscron | credit_partner_or_ambiguous_only |
@@ -642,11 +683,9 @@
 | BE:N10 | TWG Circular Construction and Buildings (CCRI) | credit_partner_or_ambiguous_only |
 | BE:O01 | Pouvoir Organisateur Pluriel / POP | credit_partner_or_ambiguous_only |
 | BE:P11 | OXY Centre Monnaie | credit_partner_or_ambiguous_only |
-| BE:P2 | Chiro d’Itterbeek | credit_partner_or_ambiguous_only |
 | BE:P4 | EFP (Espace Formation PME / Brussels training centre) | credit_partner_or_ambiguous_only |
 | BE:P6 | Lo-Reninge Town Hall… | credit_partner_or_ambiguous_only |
 | BE:P9 | Multi Brussels | credit_partner_or_ambiguous_only |
-| BE:S01 | Madaster / EPEA | credit_partner_or_ambiguous_only |
 | BE:U02 | AgwA | credit_partner_or_ambiguous_only |
 | BE:U03 | BESP Stoffel & Partners / Pierre Stoffel | credit_partner_or_ambiguous_only |
 | BE:U05 | Brudex | credit_partner_or_ambiguous_only |
@@ -672,10 +711,6 @@
 | CH:F05 | ETH Zürich | cross_review_strict_gate_failed |
 | CH:F09 | Univ. Fribourg | STRICT_REVIEW_PRUNE |
 | CH:I02 | Kanton Basel-Stadt | ENTITY_MISMATCH |
-| CH:M01 | Archipel Sion Ressourcerie | cross_review_strict_gate_failed |
-| CH:M07 | Bauteilverwertung Köppel & Klein | cross_review_strict_gate_failed |
-| CH:M09 | Historisches Bauteillager Ostschweiz (Denkmal Stiftung Thurgau) | cross_review_strict_gate_failed |
-| CH:M15 | Stiftung Chance BauTeile Zürich / Glattbrugg | cross_review_strict_gate_failed |
 | CH:O01 | Re:Crete Forschungsteam | cross_review_strict_gate_failed |
 | CH:U06 | Anima Engineering AG | cross_review_strict_gate_failed |
 | CH:U11 | Desso / Tarkett | STRICT_REVIEW_PRUNE |
@@ -696,7 +731,6 @@
 | DE:P5 | Consolis DW Systembau | FUTURE_ONLY |
 | DE:P7 | EDGE Suedkreuz Berlin | STRICT_REVIEW_PRUNE |
 | DE:P9 | HeidelbergCement | PARTNER_LIST_ONLY |
-| DE:S02 | SURAP GmbH | cross_review_strict_gate_failed |
 | DE:U02 | Architekturbüro Conclus | HISTORICAL_CLOSED |
 | DE:U04 | bauteilbörse augsburg | HISTORICAL_CLOSED |
 | DE:U05 | bauteilbörse giessen | HISTORICAL_CLOSED |
@@ -705,8 +739,6 @@
 | DE:U09 | bauteilbörse nordhausen | HISTORICAL_CLOSED |
 | DE:U10 | bauteilbörse oldenburg | HISTORICAL_CLOSED |
 | DE:U11 | bauteilbörse weißenburg | HISTORICAL_CLOSED |
-| DE:U13 | Circular Structural Design | cross_review_strict_gate_failed |
-| DE:U14 | CITYFÖRSTER | cross_review_strict_gate_failed |
 | DE:U19 | DREWES + SPETH Beratende Ingenieure | final_consistency_generic_or_credit_only |
 | DE:U20 | Ed. Züblin AG | STRICT_REVIEW_PRUNE |
 | DE:U21 | eZeit | STRICT_REVIEW_PRUNE |
@@ -714,7 +746,6 @@
 | DE:U33 | Klingelhöfer Krötsch | final_consistency_generic_or_credit_only |
 | DE:U43 | Solares Bauen | STRICT_REVIEW_PRUNE |
 | DE:U44 | Sven Urselmann | cross_review_strict_gate_failed |
-| DE:U47 | Urselmann Interior | HISTORICAL_CLOSED |
 | DK:F02 | SBi (Statens Byggeforskningsinstitut), Aalborg University | historical_or_closed |
 | DK:I01 | Aarhus Kommune | credit_partner_or_ambiguous_only |
 | DK:I02 | Gladsaxe Kommune / Gladsaxe Municipality | credit_partner_or_ambiguous_only |
@@ -735,10 +766,6 @@
 | DK:U25 | Orbicon | historical_or_closed |
 | DK:U27 | PFA Ejendomme | credit_partner_or_ambiguous_only |
 | DK:U32 | Sweco / Sweco Architects | credit_partner_or_ambiguous_only |
-| FI:F01 | Aalto University (Department of Architecture) | cross_review_strict_gate_failed |
-| FI:F04 | Tampere University | final_consistency_generic_or_credit_only |
-| FI:F05 | VTT (Technical Research Centre of Finland) | final_consistency_generic_or_credit_only |
-| FI:G01 | Ekokumppanit (Kiertotalous Pirkanmaa) | cross_review_strict_gate_failed |
 | FI:I01 | City of Espoo | final_consistency_generic_or_credit_only |
 | FI:I03 | City of Nokia (Nokian kaupunki) | final_consistency_generic_or_credit_only |
 | FI:I04 | City of Orivesi (Oriveden kaupunki) | cross_review_strict_gate_failed |
@@ -750,9 +777,7 @@
 | FI:U23 | Umacon | cross_review_strict_gate_failed |
 | FR:I02 | Technische Dienste der Stadt Paris | credit_partner_or_ambiguous_only |
 | FR:I04 | Ville de Paris – Pavillon de l Arsenal | credit_partner_or_ambiguous_only |
-| FR:M21 | Démolition William Perreault | credit_partner_or_ambiguous_only |
 | FR:M36 | Lieval & Fils - Les Vieilles Pierres | credit_partner_or_ambiguous_only |
-| FR:M44 | Matériaux d'Antan | credit_partner_or_ambiguous_only |
 | FR:M48 | Pesce Taille de Pierres | credit_partner_or_ambiguous_only |
 | FR:M56 | Quercy Périgord Matériaux Anciens | credit_partner_or_ambiguous_only |
 | FR:N06 | Fédération Française du Bâtiment et des Travaux publics de Haute-Garonne (FFB 31) | credit_partner_or_ambiguous_only |
@@ -785,18 +810,15 @@
 | GB:U13 | CBRE | strict_gate_failed |
 | GB:U14 | Channel Projects | cross_review_partner_credit_or_generic_only |
 | GB:U15 | Churchman Landscape Architects | strict_gate_failed |
-| GB:U17 | Cleveland Steel & Tubes | cross_review_partner_credit_or_generic_only |
 | GB:U18 | Contrax Furniture | strict_gate_failed |
 | GB:U19 | dRMM Architects | cross_review_partner_credit_or_generic_only |
 | GB:U20 | ECE Architecture | strict_gate_failed |
-| GB:U21 | Elliott Wood | cross_review_partner_credit_or_generic_only |
 | GB:U22 | Ellis & Moore Consulting Engineers | strict_gate_failed |
 | GB:U23 | Erith | strict_gate_failed |
 | GB:U24 | Eurban | strict_gate_failed |
 | GB:U25 | Fabrix | cross_review_partner_credit_or_generic_only |
 | GB:U28 | Galldris Group | strict_gate_failed |
 | GB:U31 | Grosvenor | cross_review_partner_credit_or_generic_only |
-| GB:U33 | Heyne Tillett Steel / HTS | cross_review_partner_credit_or_generic_only |
 | GB:U34 | Hoare Lea | strict_gate_failed |
 | GB:U36 | Hybrid Structures | cross_review_partner_credit_or_generic_only |
 | GB:U37 | IF_DO | strict_gate_failed |
@@ -813,13 +835,9 @@
 | GB:U54 | Stiff + Trevillion | cross_review_partner_credit_or_generic_only |
 | GB:U56 | Studio RHE | cross_review_partner_credit_or_generic_only |
 | GB:U57 | Symmetrys | strict_gate_failed |
-| GB:U58 | TFT Consultants | cross_review_partner_credit_or_generic_only |
-| GB:U65 | Willmott Dixon | cross_review_partner_credit_or_generic_only |
 | NL:F02 | ReCreate Dutch cluster | cross_review_partner_credit_or_generic_only |
-| NL:F04 | Zuyd Hogeschool | cross_review_partner_credit_or_generic_only |
 | NL:I02 | Gemeente Kerkrade | cross_review_partner_credit_or_generic_only |
 | NL:I04 | Rijksvastgoedbedrijf / Central Government Real Estate Agency | cross_review_partner_credit_or_generic_only |
-| NL:M01 | Baars & Bloemhoff | cross_review_partner_credit_or_generic_only |
 | NL:N01 | C-Creators | cross_review_partner_credit_or_generic_only |
 | NL:N03 | Urban Mining Collective | cross_review_partner_credit_or_generic_only |
 | NL:O02 | BioPartner Center Leiden | cross_review_partner_credit_or_generic_only |
@@ -827,7 +845,6 @@
 | NL:O04 | Dutch Design Foundation | cross_review_partner_credit_or_generic_only |
 | NL:O07 | Stichting Montessorischolen Monton | cross_review_partner_credit_or_generic_only |
 | NL:P11 | People’s Pavilion | cross_review_project_actual_reuse_not_proven |
-| NL:P12 | SUPERLOCAL | cross_review_project_actual_reuse_not_proven, future_only_or_unbuilt |
 | NL:P6 | Circular Centre Netherlands | cross_review_project_actual_reuse_not_proven, future_only_or_unbuilt |
 | NL:U01 | A. de Jong Groep | strict_gate_failed |
 | NL:U04 | Adviesbureau Lüning | strict_gate_failed |
@@ -841,21 +858,15 @@
 | NL:U19 | De Vries en Verburg | cross_review_partner_credit_or_generic_only |
 | NL:U20 | Deerns | strict_gate_failed |
 | NL:U21 | Donkergroen | strict_gate_failed |
-| NL:U23 | DWT Groep | cross_review_partner_credit_or_generic_only |
 | NL:U24 | Dycore | strict_gate_failed |
 | NL:U26 | Emergis | cross_review_partner_credit_or_generic_only |
 | NL:U27 | Exasun | cross_review_partner_credit_or_generic_only |
 | NL:U29 | Ham & Sybesma | cross_review_partner_credit_or_generic_only |
 | NL:U30 | Icon Real Estate | cross_review_partner_credit_or_generic_only |
 | NL:U31 | IJB groep | cross_review_partner_credit_or_generic_only |
-| NL:U32 | IMd Raadgevende Ingenieurs | cross_review_partner_credit_or_generic_only |
 | NL:U33 | Kampstaal | cross_review_partner_credit_or_generic_only |
-| NL:U36 | lcp-circulair | cross_review_partner_credit_or_generic_only |
-| NL:U38 | New Horizon | cross_review_partner_credit_or_generic_only |
 | NL:U41 | Paree | cross_review_partner_credit_or_generic_only |
-| NL:U43 | Popma ter Steege Architecten / PTSA | cross_review_partner_credit_or_generic_only |
 | NL:U44 | R Creators | cross_review_partner_credit_or_generic_only |
-| NL:U48 | Stiho group | historical_or_closed_org |
 | NL:U49 | STONE22 | cross_review_partner_credit_or_generic_only |
 | NL:U50 | Strukton Worksphere | strict_gate_failed |
 | NL:U54 | Transfarmers | strict_gate_failed |
@@ -866,29 +877,18 @@
 | NL:U63 | Vintis installatieadviseurs | strict_gate_failed |
 | NL:U64 | Volantis | historical_or_closed_org |
 | NL:U65 | Workspot | cross_review_partner_credit_or_generic_only |
-| NL:X01 | Repurpose | cross_review_partner_credit_or_generic_only |
-| NO:I01 | Asker kommune | cross_review_strict_gate_failed |
-| NO:M03 | Iris Ombrukssentral / Saltnes ombruk | cross_review_strict_gate_failed |
-| NO:M07 | Sirkulær Ressurssentral | cross_review_strict_gate_failed |
 | NO:N02 | CCRI Pilot Asker | cross_review_strict_gate_failed |
-| NO:N04 | Ombruk i nord (Remiks) | cross_review_strict_gate_failed |
 | NO:U06 | IWG Group / Spaces | STRICT_REVIEW_PRUNE |
-| NO:U07 | JCS AS | cross_review_strict_gate_failed |
 | NO:U12 | Sirkula IKS | cross_review_strict_gate_failed |
 | SE:I03 | Tyresö kommun | strict_gate_failed |
 | SE:M10 | Återbygget | cross_review_partner_credit_or_generic_only |
-| SE:U02 | Akademiska Hus | cross_review_partner_credit_or_generic_only |
-| SE:U03 | Anthesis | cross_review_partner_credit_or_generic_only |
 | SE:U04 | Atrium Ljungberg | cross_review_partner_credit_or_generic_only |
 | SE:U05 | BC-bygg | cross_review_partner_credit_or_generic_only |
-| SE:U09 | Contiga | cross_review_partner_credit_or_generic_only |
 | SE:U10 | Haga Rot | cross_review_partner_credit_or_generic_only |
-| SE:U11 | Helsingborgshem | cross_review_partner_credit_or_generic_only |
 | SE:U12 | HSB Göteborg | strict_gate_failed |
 | SE:U15 | QPG Arkitektur | cross_review_partner_credit_or_generic_only |
 | SE:U17 | RP (Bygghubben member) | cross_review_partner_credit_or_generic_only |
 | SE:U18 | Serneke Sverige AB | strict_gate_failed |
-| SE:U22 | Wiklunds Åkeri | cross_review_partner_credit_or_generic_only |
 
 ## Zusammenführen
 
@@ -909,6 +909,7 @@
 | BE:N02 | CCRI Pilot Uppsala |  |  | SE |
 | BE:P10 | Musée de Folklore Vie… | Musée de Folklore de Mouscron |  |  |
 | BE:P12 | Plateforme Réemploi | AD VITAM MATERIAL (ehem. Plateforme Réemploi) | NGO_Verband_Netzwerk |  |
+| BE:S01 | Madaster / EPEA | Madaster |  |  |
 | BE:S03 | Sundahus |  |  | SE |
 | BE:U27 | Loeliger Strub |  |  | CH |
 | CH:P2 | ELYS Kultur- und… | ELYS Kultur- und Gewerbezentrum Basel |  |  |
@@ -923,6 +924,8 @@
 | DE:U24 | Greater Copenhagen Area (CirCoFin pilot) |  |  | DK |
 | DE:U39 | Region Hovedstaden |  |  | DK |
 | DK:M07 | Carlsberg | Carlsberg Byen P/S | Unternehmen |  |
+| FI:F04 | Tampere University | ReCreate / Tampere University |  |  |
+| FI:F05 | VTT (Technical Research Centre of Finland) | VTT – Circularity in the Built Environment |  |  |
 | FI:P5 | Lokomotion Technology… | Lokomotion Technology Center |  |  |
 | FI:P6 | Melkinlaituri Primary… | Melkinlaituri Primary School and Daycare Centre |  |  |
 | FR:F02 | FCRBE (Facilitating the Circulation of Reclaimed Building Elements) |  | Programm |  |
@@ -932,9 +935,14 @@
 | GB:P11 | PLP London HQ circular… | PLP Architecture London Studio Circular Fit-out |  |  |
 | GB:P8 | Hastings Pier Visitor… | Hastings Pier Visitor Centre |  |  |
 | GB:U46 | Opera | Opera Property & Asset Management | Unternehmen |  |
+| NL:F04 | Zuyd Hogeschool | SURD Research Centre / Zuyd |  |  |
+| NL:M01 | Baars & Bloemhoff |  | Unternehmen |  |
 | NL:P16 | Woongroep Boschgaard… | Woongroep Boschgaard |  |  |
 | NL:P3 | BlueCity Offices… | BlueCity Offices |  |  |
 | NL:U42 | Pieters Bouwtechniek | Pieters |  |  |
+| NL:U48 | Stiho group | Stiho |  |  |
+| NO:I01 | Asker kommune | Asker kommune – Ombruk |  |  |
+| NO:N04 | Ombruk i nord (Remiks) | ProffRebell / Remiks |  |  |
 | SE:I01 | Kv Återbruket, Litteraturgatan/Selma stad, Göteborg |  | Bauvorhaben |  |
 
 ## Freigaberegel

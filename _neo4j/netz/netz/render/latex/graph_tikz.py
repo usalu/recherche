@@ -60,7 +60,9 @@ def country_figure(net, cc, frame=DEFAULT_FRAME, images=None):
     nodes = list(pan.actors) + list(pan.projects)
     if not nodes:
         return None
-    keep = drawn_edge_nodes(pan)
+    # The reviewed LaTeX graph is evidence-complete: a valid relationship is
+    # visible even when it forms only a two-node component.
+    keep = drawn_edge_nodes(pan, min_comp=2)
     P, edges = force_layout(pan, keep, frame)
     nA = len(pan.actors)
     nP = len(pan.projects)

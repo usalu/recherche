@@ -52,6 +52,7 @@ def main():
     keep = {norm(pair) for pair in load("keep_kanten_final.json")}
     prune = {norm(pair) for pair in load("prune_kanten_final.json")}
     source_check = load("kanten_source_recheck.json")
+    country_corrections = load("latex_country_overrides.json")["overrides"]
 
     assert len(records) == len(classes) == 570
     assert set(records) == set(classes)
@@ -67,19 +68,34 @@ def main():
     assert model_edges == keep
     assert not model_edges & prune
 
+    panel_nodes = set()
+    incident_nodes = set()
+    for panel in network.panels.values():
+        panel_nodes.update(panel.actors)
+        panel_nodes.update(panel.projects)
+        for a, b in panel.edges:
+            incident_nodes.update((a, b))
+    isolated_nodes = panel_nodes - incident_nodes
+    node_prune = set(load("prune_faktencheck_final.json"))
+    assert not node_prune & panel_nodes
+    for eid, row in country_corrections.items():
+        assert network.res.cc[eid] == row["country"]
+
     rendered_pairs = set()
     for panel in network.panels.values():
-        visible_nodes = drawn_edge_nodes(panel)
+        visible_nodes = drawn_edge_nodes(panel, min_comp=2)
         _, edges = force_layout(panel, visible_nodes, DEFAULT_FRAME)
         rendered_pairs.update(norm(pair) for pair in edges)
-    assert rendered_pairs <= keep
+    assert rendered_pairs == keep
 
     fragment = NETZ_ROOT / "figs" / "frag_abb_netz.tex"
     fragment_text = fragment.read_text(encoding="utf-8")
     fragment_edge_count = len(re.findall(r"^\\SemioGraphEdge", fragment_text, re.M))
+    fragment_node_count = len(re.findall(r"^\\SemioGraphNode", fragment_text, re.M))
     assert fragment_edge_count == len(rendered_pairs)
+    assert fragment_node_count == len(panel_nodes)
     assert len(re.findall(r"^\\begin\{GraphFigure\}", fragment_text, re.M)) == 11
-    pdf = NETZ_ROOT / "figs" / "_akteursnetz_final.pdf"
+    pdf = NETZ_ROOT / "figs" / "akteursnetz_faktencheck_final.pdf"
     assert pdf.is_file() and pdf.stat().st_size > 10_000
     assert pdf.read_bytes()[:5] == b"%PDF-"
 
@@ -104,8 +120,14 @@ Stand: 2026-08-13
 - Mengenprüfung: Keep und Remove sind disjunkt und ergeben genau 570.
 - LaTeX-Netzmodell: **477** Kanten; es ist mengenidentisch mit der positiven Liste.
 - LaTeX-Fragment: **{fragment_edge_count}** sichtbare Kanten in **11** Länderabbildungen.
-- **{len(hidden_kept)}** belegte Kanten bleiben im Netzmodell, werden aber von der bestehenden
-  Darstellungsregel „nur zusammenhängende Cluster ab drei Knoten“ nicht gezeichnet.
+- Sichtbare Beziehungen: **{len(rendered_pairs)} von {len(keep)}**. Auch alle
+  Zweierkomponenten werden gezeichnet.
+- Sichtbare Knoten: **{fragment_node_count}**. Darunter bleiben **{len(isolated_nodes)} isolierte
+  Knoten** wie angeordnet sichtbar.
+- Explizit freigegebene Knotenentfernungen: **{len(node_prune)}**; davon noch in einem
+  LaTeX-Länderpanel vorhanden: **0**.
+- LaTeX-spezifische Länderkorrekturen: **{len(country_corrections)} Knoten**. BauMaB Kassel
+  und Stadt Kassel stehen nun im Deutschland- statt im Belgien-Panel.
 - Entfernte Kante noch im LaTeX-Netzmodell: **0**.
 - Geprüfte Belegseiten: **220 von 220 erreichbar**.
 - Kompilierte PDF-Endkontrolle: vorhanden, lesbar und visuell auf allen vier Seiten geprüft.
@@ -115,9 +137,9 @@ Stand: 2026-08-13
 - `keep_kanten_final.json`: vollständige Positivliste.
 - `prune_kanten_final.json`: vollständige Entfernungsliste.
 - `figs/frag_abb_netz.tex`: neu erzeugtes LaTeX-Fragment.
-- `figs/_akteursnetz_final.pdf`: kompilierte Endkontrolle.
+- `figs/akteursnetz_faktencheck_final.pdf`: kompilierte Endkontrolle.
 """
-    (HERE / "KANTEN_LATEX_AUDIT.md").write_text(audit, encoding="utf-8", newline="\n")
+    (HERE / "KANTEN_LATEX_AUDIT_FINAL.md").write_text(audit, encoding="utf-8", newline="\n")
 
     lines = [
         "# Abschlussbericht: Faktencheck der LaTeX-Graphkanten",
@@ -131,14 +153,17 @@ Stand: 2026-08-13
         "**93 entfernt**. Von den 93 Entfernungen sind **68 bloße Verzeichniseinträge** und",
         "**25 Fälle ohne Beleg für eine Beziehung**.",
         "",
-        f"Im LaTeX-Netzmodell sind exakt 477 Kanten. Das erzeugte Fragment zeichnet {fragment_edge_count};",
-        f"die übrigen {len(hidden_kept)} belegten Kanten liegen in Zweierkomponenten und werden durch die",
-        "bestehende Regel ‚nur zusammenhängende Cluster ab drei Knoten‘ nicht sichtbar ausgegeben.",
-        "Sie sind nicht gelöscht.",
+        f"Im LaTeX-Netzmodell sind exakt 477 Kanten. Das erzeugte Fragment zeichnet alle {fragment_edge_count}.",
+        "Auch belegte Zweierkomponenten bleiben sichtbar; keine belegte Beziehung wird ausgeblendet.",
+        f"Alle {len(isolated_nodes)} verbleibenden isolierten Knoten bleiben ebenfalls sichtbar.",
+        f"Die {len(node_prune)} explizit freigegebenen Knotenentfernungen sind nicht mehr in den LaTeX-Panels.",
         "",
         "Es wurden keine Daten nach Neo4j geschrieben.",
         "",
-        "## Ergebnis nach Land",
+        "## Ergebnis nach Land im Review-Snapshot",
+        "",
+        "Die stabilen Review-IDs behalten ihre ursprüngliche Länderkennung. Die später erkannte",
+        "Fehlzuordnung `BE:K075` wird im LaTeX-Graphen nach Deutschland verschoben.",
         "",
         "| Land | geprüft | behalten | entfernt |",
         "|---|---:|---:|---:|",
@@ -159,13 +184,14 @@ Stand: 2026-08-13
 
     lines += [
         "",
-        "## Deutschland: alle 49 Entscheidungen",
+        "## Deutschland: alle 49 Review-Entscheidungen plus Kassel-Korrektur",
         "",
         "| ID | Knoten A | Knoten B | Entscheidung | Beziehungsart/Grund | Konkreter Befund | Beleg |",
         "|---|---|---|---|---|---|---|",
     ]
     for edge_id in sorted(key for key in records if key.startswith("DE:")):
         lines.append(decision_row(records[edge_id], classes[edge_id]))
+    lines.append(decision_row(records["BE:K075"], classes["BE:K075"]))
 
     lines += [
         "",
@@ -188,13 +214,13 @@ Stand: 2026-08-13
         "bewusst entfernt. Eine spätere Wiederaufnahme ist nur mit einer zugänglichen Quelle möglich,",
         "die beide Endpunkte nennt und genau ihre Beziehung beschreibt.",
     ]
-    (HERE / "KANTEN_ABSCHLUSSBERICHT.md").write_text(
+    (HERE / "KANTEN_ABSCHLUSSBERICHT_FINAL.md").write_text(
         "\n".join(lines) + "\n", encoding="utf-8", newline="\n"
     )
 
     print(f"PASS: 570 = {len(keep)} keep + {len(prune)} remove")
     print(f"PASS: LaTeX model {len(model_edges)}; fragment {fragment_edge_count}; hidden keep {len(hidden_kept)}")
-    print("wrote KANTEN_LATEX_AUDIT.md and KANTEN_ABSCHLUSSBERICHT.md")
+    print("wrote KANTEN_LATEX_AUDIT_FINAL.md and KANTEN_ABSCHLUSSBERICHT_FINAL.md")
 
 
 if __name__ == "__main__":

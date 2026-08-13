@@ -7,6 +7,7 @@ SP = r"E:/recherche/_neo4j/netz"
 
 from .sources import DEFAULT
 from .data.prune import load_prune, load_edge_exclude
+from .data.corrections import load_country_overrides
 from .data.strict_review import load_strict_review
 from .model.concepts import build_network
 from .render.latex.graph_tikz import country_figure, load_image_manifest
@@ -66,8 +67,9 @@ def load_network():
                strict.exclude)
     edge_exclude = (load_edge_exclude(DEFAULT.unklar_edges_path) |
                     load_edge_exclude(DEFAULT.prune_kanten_final_path))
+    country_overrides = load_country_overrides(DEFAULT.latex_country_overrides_path)
     return build_network(DEFAULT, exclude=exclude, edge_exclude=edge_exclude,
-                         strict_review=strict)
+                         strict_review=strict, country_overrides=country_overrides)
 
 
 def main():

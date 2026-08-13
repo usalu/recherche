@@ -7,8 +7,11 @@ Ordner: `E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck\`
 **Vollständig ausgeführt am 2026-08-13 für den LaTeX-Graphen.** Alle 570 Kanten wurden
 entschieden: 477 behalten, 93 entfernt. Keep und Remove bilden eine vollständige,
 disjunkte Partition. Die Entfernungsliste ist im LaTeX-Loader aktiviert, das Fragment wurde
-neu erzeugt und als PDF kompiliert. Es erfolgte kein Neo4j-Writeback. Siehe
-`KANTEN_ABSCHLUSSBERICHT.md` und `KANTEN_LATEX_AUDIT.md`.
+neu erzeugt und als PDF kompiliert. Jede der 570 Kanten besitzt genau eine validierte
+Beziehungsart, Richtung und Kurzbeschreibung; positive Kanten besitzen zusätzlich URL und
+Belegzitat. Isolierte Knoten bleiben sichtbar. Es erfolgte kein Neo4j-Writeback. Siehe die
+kanonischen Enddateien `KANTEN_ABSCHLUSSBERICHT_FINAL.md`,
+`KANTEN_LATEX_AUDIT_FINAL.md` und `HANDOFF_KANTEN_LATEX.md`.
 
 ## Auftrag
 
@@ -232,5 +235,6 @@ Umfangs; es wurde nicht verändert.
 | `keep_kanten_final.json` | vollständige Positivliste: nur belegte Beziehungen |
 | `prune_kanten_final.json` | vollständiges Komplement: alle unbelegten Kandidaten |
 | `kanten_konflikte.md` | frühere positive Grade, die trotzdem entfernt werden |
-| `KANTEN_ABSCHLUSSBERICHT.md` | alle Ergebnisse, Deutschland vollständig, alle 93 Entfernungen |
-| `KANTEN_LATEX_AUDIT.md` | maschinelle Mengen- und LaTeX-Endkontrolle |
+| `KANTEN_ABSCHLUSSBERICHT_FINAL.md` | alle Ergebnisse, Deutschland vollständig, alle 93 Entfernungen |
+| `KANTEN_LATEX_AUDIT_FINAL.md` | maschinelle Mengen- und LaTeX-Endkontrolle |
+| `HANDOFF_KANTEN_LATEX.md` | verbindliche Übergabe für den nächsten Agenten |
