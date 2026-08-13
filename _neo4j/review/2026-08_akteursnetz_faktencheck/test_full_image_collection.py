@@ -97,6 +97,20 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertFalse(collection.candidate_rejection(node, {
             "kind": "media_logo", "url": "https://fore.example/FORE-logo.svg"}))
 
+    def test_media_logo_identity_comes_from_filename_not_parent_path(self):
+        node = {"name": "BioRegional"}
+        self.assertTrue(collection.candidate_rejection(node, {
+            "kind": "media_logo",
+            "url": "https://storage.example/www.bioregional.com/Abstrakt-Logo.svg",
+        }))
+
+    def test_final_visual_audit_rejections_stay_withheld(self):
+        suggestions = {row["key"]: row for row in load("suggestions.json")["nodes"]}
+        rejected = set(collection.MANUAL_CANDIDATE_REJECTIONS) | set(collection.MANUAL_DOMAIN_REJECTIONS)
+        self.assertTrue(rejected)
+        self.assertTrue(all(suggestions[key]["suggested_result"] == "none" for key in rejected))
+        self.assertTrue(all(suggestions[key]["suggested_candidate_id"] == "" for key in rejected))
+
     def test_visible_header_logo_outranks_an_app_icon(self):
         node = {"name": "Elliott Wood"}
         icon = {"kind": "apple_touch", "width": 256, "height": 256, "url": "https://example/icon.png"}
@@ -138,7 +152,17 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertIn('id="logoOpacity" type="range"', html)
         self.assertIn("--logo-opacity", html)
         self.assertIn("akteursnetz.logoOpacity", html)
+        self.assertIn("Nicht vorschlagen", html)
+        self.assertIn(".candidate:not(.rejected)", html)
         self.assertNotIn("approveAll", html)
+
+    def test_review_state_blocks_rejected_candidates(self):
+        state = collection.review_state()
+        by_key = {row["key"]: row for row in state["nodes"]}
+        fore = by_key["GB:U26"]
+        self.assertFalse(next(row for row in fore["candidates"] if row["id"] == "c04")["suggestion_rejection"])
+        self.assertTrue(next(row for row in fore["candidates"] if row["id"] == "c05")["suggestion_rejection"])
+        self.assertTrue(all(row["suggestion_rejection"] for row in by_key["GB:U39"]["candidates"]))
 
     def test_coloured_rectangle_is_preserved_as_a_full_circle_crop(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -189,6 +213,21 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertEqual(light_mode, "neutral_knockout")
         self.assertEqual(dark_mode, "neutral_knockout")
         self.assertEqual(light.getchannel("A").getbbox(), dark.getchannel("A").getbbox())
+
+    def test_transparent_white_mark_is_visible_in_both_themes(self):
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "white-wordmark.png"
+            image = Image.new("RGBA", (400, 100), (0, 0, 0, 0))
+            ImageDraw.Draw(image).rectangle((20, 20, 380, 80), fill=(255, 255, 255, 255))
+            image.save(source)
+            light, _ = pilot.prepare_node_canvas(source, theme="light")
+            dark, _ = pilot.prepare_node_canvas(source, theme="dark")
+        light_colours = {rgba[:3] for _count, rgba in light.getcolors(light.width * light.height)
+                         if rgba[3] > 240}
+        dark_colours = {rgba[:3] for _count, rgba in dark.getcolors(dark.width * dark.height)
+                        if rgba[3] > 240}
+        self.assertIn(pilot.SEMIO_DARK, light_colours)
+        self.assertIn(pilot.SEMIO_LIGHT, dark_colours)
 
 
 if __name__ == "__main__":

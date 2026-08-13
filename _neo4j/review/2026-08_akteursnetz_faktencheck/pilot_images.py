@@ -667,6 +667,24 @@ def neutral_backdrop_to_transparency(im: Image.Image, theme: str, backdrop: tupl
     return Image.fromarray(output, "RGBA")
 
 
+def tokenise_transparent_neutral_mark(im: Image.Image, theme: str) -> Image.Image:
+    """Theme-tokenise a predominantly neutral mark on transparency."""
+    if theme not in {"light", "dark"}:
+        raise ValueError(f"unsupported theme: {theme}")
+    pixels = np.array(im.convert("RGBA"), dtype=np.uint8)
+    visible = pixels[:, :, 3] >= 8
+    if not visible.any():
+        return im.convert("RGBA")
+    rgb = pixels[:, :, :3].astype(np.int32)
+    neutral = visible & ((rgb.max(axis=2) - rgb.min(axis=2)) <= 32)
+    if int(neutral.sum()) / int(visible.sum()) < 0.85:
+        return im.convert("RGBA")
+    token = SEMIO_DARK if theme == "light" else SEMIO_LIGHT
+    output = pixels.copy()
+    output[neutral, :3] = token
+    return Image.fromarray(output, "RGBA")
+
+
 def apply_circle_crop(im: Image.Image) -> Image.Image:
     """Mask a 256px node asset to its final circle with antialiased edges."""
     im = im.convert("RGBA")
@@ -719,7 +737,8 @@ def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image
         canvas = resized.crop((left, top, left + FINAL_SIZE, top + FINAL_SIZE))
         return apply_circle_crop(canvas), "circle_cover"
 
-    return contain_node_artwork(remove_edge_background(original), "safe_contain")
+    separated = tokenise_transparent_neutral_mark(remove_edge_background(original), theme)
+    return contain_node_artwork(separated, "safe_contain")
 
 
 def alpha_max_radius(im: Image.Image) -> float:

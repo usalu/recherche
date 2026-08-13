@@ -80,10 +80,17 @@ def _clip(s: str, maxlen: int) -> str:
 
 
 def _hdr(y, cols):
+    # Column labels are project-owned constants, already print-ready -- never
+    # esc() them. esc() is for DATA fields only; running it over a label that
+    # already carries a LaTeX macro or an intentional separator corrupts the
+    # macro (the exact roles_str trap the module docstring warns about --
+    # here it turned "Von -> Nach" into a broken \textbackslash{}-strewn
+    # mess). If a label ever needs a literal &, %, _ etc., escape it by hand
+    # at the point it's written into NODE_COLS/EDGE_COLS, not here.
     s = []
     for x, t in cols:
         s.append(r"\node[anchor=base west, font=\SemioMono\fontsize{6.4pt}{6.6pt}\selectfont, "
-                  r"text=semio-chrome-foreground, inner sep=0] at (%.1f,%.2f) {%s};" % (x, y, esc(t)))
+                  r"text=semio-chrome-foreground, inner sep=0] at (%.1f,%.2f) {%s};" % (x, y, t))
     s.append(r"\draw[draw=semio-chrome-border-emphasized, line width=0.75pt] (0,%.2f) -- (181,%.2f);"
               % (y + 1.3, y + 1.3))
     return s
@@ -91,7 +98,11 @@ def _hdr(y, cols):
 
 NODE_COLS = [(X_NR, "ID"), (X_NAME, "Name"), (X_CODE, "Rolle"),
              (X_REL, "Relevanz für Wiederverwendung"), (X_Q, "Q")]
-EDGE_COLS = [(X_VON, "Von \\textrightarrow{} Nach"), (X_ART, "Art"),
+# ASCII arrow, not \textrightarrow{}: ShareTechMono (SemioMono, the font this
+# header and the Von/Nach data cells are set in) has no U+2192 glyph -- the
+# build fails with "could not represent character" once the macro itself
+# renders correctly. Plain "->"/"--" need no glyph and match the mono ID font.
+EDGE_COLS = [(X_VON, "Von -> Nach"), (X_ART, "Art"),
              (X_BESCH, "Beschreibung"), (X_QK, "Q")]
 
 
@@ -131,7 +142,9 @@ def _edge_row(net, kante, y, qnum):
     a, b = kante["pair"]
     if kante.get("richtung") == "B→A":
         a, b = b, a
-    pfeil = r"\textendash{}" if kante.get("richtung") == "—" else r"\textrightarrow{}"
+    # ASCII, same reason as EDGE_COLS above: \textrightarrow{} has no glyph
+    # in SemioMono. "--"/"->" are plain text, safe unescaped.
+    pfeil = "--" if kante.get("richtung") == "—" else "->"
     paar = "%s %s %s" % (esc(net.tid.get(a, "?")), pfeil, esc(net.tid.get(b, "?")))
     besch = "" if kante.get("kind") == "AKTEUR-BAUVORHABEN" else kante.get("beschreibung") or ""
     q = qnum.get(kante.get("evidence_url") or "", "")
@@ -154,21 +167,48 @@ def _legend() -> str:
     return r" \textperiodcentered\ ".join(parts)
 
 
-def load_kanten(path, net):
-    """cc -> [relationship], only those whose BOTH endpoints are still drawn.
-    An edge whose partner was pruned by the strict review has nothing to point
-    at in this country's node band, so it is not listed here."""
+def load_kanten(path, net, redirects_path=None):
+    """cc -> [relationship], only those whose BOTH endpoints are actually
+    DRAWN -- not just known to the pipeline.
+
+    Two ways a "known" edge can still not be drawn, both found by counting
+    net.drawn against this function's own output on the same run and getting
+    268 != 268 despite matching totals:
+
+      1. Cross-border. partition() only draws an edge whose two endpoints
+         share a panel; an edge between e.g. a BE actor and an SE project is
+         a real classified relationship but is never drawn anywhere. Checking
+         against `set(net.tid)` (every node the pipeline knows) missed this --
+         it has to be `net.drawn`.
+      2. Merge redirects. The strict review merged duplicate eids
+         (merge_redirects_strict.json); a classification written against the
+         PRE-merge eid otherwise joins against nothing once the drawn graph
+         only knows the canonical one.
+
+    Fixing both together: canonicalize eids through the redirect map BEFORE
+    membership-testing against net.drawn, whose keys are already canonical.
+    """
     if not path:
         return {}
     with io.open(path, encoding="utf-8") as f:
         data = json.load(f)
-    drawn = set(net.tid)
+    redirects = {}
+    if redirects_path:
+        with io.open(redirects_path, encoding="utf-8") as f:
+            redirects = json.load(f)
+
+    def canon(eid):
+        return redirects.get(eid, eid)
+
+    drawn_pairs = {tuple(sorted(pair)) for pair in net.drawn}
     by_cc = collections.defaultdict(list)
     for k in data.values():
         if k.get("entfernen"):
             continue
         a, b = k.get("pair", (None, None))
-        if a in drawn and b in drawn:
+        a, b = canon(a), canon(b)
+        if tuple(sorted((a, b))) in drawn_pairs:
+            k = dict(k, pair=[a, b])
             by_cc[k["cc"]].append(k)
     for cc in by_cc:
         by_cc[cc].sort(key=lambda k: (net.tid.get(k["pair"][0], ""), net.tid.get(k["pair"][1], "")))
@@ -176,9 +216,9 @@ def load_kanten(path, net):
 
 
 def build_grid_fragment(net, out_path, klassifikation_path=None,
-                        kanten_path=None, images=None):
+                        kanten_path=None, images=None, merge_redirects_path=None):
     kl = load_klassifikation(klassifikation_path) if klassifikation_path else {}
-    kanten = load_kanten(kanten_path, net)
+    kanten = load_kanten(kanten_path, net, merge_redirects_path)
     items = []   # ("head"|"band", label, cc) | ("row", eid, is_person) | ("kante", k)
     quellen = []  # (cc, [urls in print order])
     qnum = {}     # url -> number, restarted per country

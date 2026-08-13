@@ -52,6 +52,9 @@ FINAL_REPORT = FULL / "FINAL_IMAGE_REPORT.md"
 PATCH = FULL / "full_image_property_patch.json"
 PATCH_REPORT = FULL / "full_image_property_patch_report.md"
 RENDER = FULL / "render"
+FINAL_REVIEW = FULL / "final_review"
+FINAL_AUDIT_JSON = FINAL_REVIEW / "FINAL_SUGGESTION_AUDIT.json"
+FINAL_AUDIT_REPORT = FINAL_REVIEW / "FINAL_SUGGESTION_AUDIT.md"
 REVIEW_HTML = BASE / "full_image_review.html"
 PILOT_DECISIONS = BASE / "pilot_domain_decisions.json"
 NETZ = REPO / "_neo4j" / "netz"
@@ -83,6 +86,29 @@ NON_ORGANISATION_MARKERS = (
     "france-bleu", "lrqa", "city%20of%20newton", "survuvalkit", "survivalkit",
     "team-headshot", "headshot", "portrait", "branddr", "brandbild",
 )
+
+# Findings from the complete 2026-08-13 visual identity audit. These are
+# deliberately key-specific: a weak or mismatched candidate must not teach the
+# collector a broad rule that could hide a valid logo for another actor.
+MANUAL_CANDIDATE_REJECTIONS = {
+    "GB:M24": "generic cursor/site-builder icon, not The Old Slate Yard's mark",
+    "GB:N01": "asset identifies Abstrakt, not BioRegional",
+    "DE:S01": "product/brochure image, not Concular's mark",
+    "DE:U03": "generic Augsburg sustainability icon, not the actor's mark",
+    "CH:U20": "blurred colour field is not a legible organisational mark",
+    "FR:F01": "BATIPEDIA service mark, not CSTB's organisational mark",
+    "FR:M18": "generic telephone symbol, not Fer et Pierre's mark",
+    "FR:M33": "WordPress platform icon, not the actor's mark",
+    "BE:M19": "flat placeholder rectangle, not Houtenplaten's mark",
+    "DK:M03": "asset identifies Censio, not Bærebyg",
+}
+
+MANUAL_DOMAIN_REJECTIONS = {
+    "GB:U44": "opera.com identifies the Opera browser, not this construction actor",
+    "DE:U08": "oldenburger-onlinezeitung.de does not identify Bauteilbörse Oldenburg",
+    "DK:U02": "gain.de does not identify the Danish a:gain actor",
+    "SE:U12": "businessregiongoteborg.se does not identify HSB Göteborg",
+}
 _write_lock = threading.Lock()
 
 
@@ -563,6 +589,165 @@ def contact_sheets(_args):
     print(f"wrote {len(list(CONTACT.glob('contact_*.png')))} contact sheets for {len(visible)} organisations")
 
 
+def audit_node_preview(candidate, tid, theme):
+    """Render the gallery's image/border/ID order for a compact audit sheet."""
+    size = 112
+    tile = Image.new("RGBA", (size, size), "#d8d2c0" if theme == "light" else "#344b50")
+    prepared = prepared_canvas(FULL / candidate["preview_path"], theme=theme)
+    prepared = prepared.resize((size, size), Image.Resampling.LANCZOS)
+    tile.alpha_composite(prepared)
+    draw = ImageDraw.Draw(tile)
+    colour = "#001117" if theme == "light" else "#ffffff"
+    stroke = "#ffffff" if theme == "light" else "#001117"
+    draw.ellipse((1, 1, size - 2, size - 2), outline=colour, width=3)
+    label_font = pilot.font(18)
+    box = draw.textbbox((0, 0), tid, font=label_font, stroke_width=2)
+    draw.text(((size - (box[2] - box[0])) / 2, (size - (box[3] - box[1])) / 2 - box[1]),
+              tid, font=label_font, fill=colour, stroke_width=2, stroke_fill=stroke)
+    return tile
+
+
+def command_audit_sheets(_args):
+    nodes = {row["key"]: row for row in pilot.load_json(SELECTION)["nodes"]}
+    domains = {row["key"]: row for row in pilot.load_json(DOMAINS)["nodes"]}
+    suggestions = pilot.load_json(SUGGESTIONS)["nodes"]
+    rows = []
+    hash_counts = collections.Counter()
+    for suggestion in suggestions:
+        if suggestion["suggested_result"] != "logo":
+            continue
+        node = nodes[suggestion["key"]]
+        candidate = candidate_for(node, suggestion["suggested_candidate_id"])
+        rows.append((node, candidate, domains[node["key"]]))
+        hash_counts[candidate.get("preview_sha256")] += 1
+    FINAL_REVIEW.mkdir(parents=True, exist_ok=True)
+    for old in FINAL_REVIEW.glob("suggestions_*.png"):
+        old.unlink()
+    pages = []
+    columns, rows_per_page = 4, 4
+    cell_w, cell_h = 480, 355
+    for page_no, start in enumerate(range(0, len(rows), columns * rows_per_page), 1):
+        batch = rows[start:start + columns * rows_per_page]
+        sheet = Image.new("RGB", (columns * cell_w, rows_per_page * cell_h), "#f7f3e3")
+        draw = ImageDraw.Draw(sheet)
+        page_keys = []
+        for pos, (node, candidate, domain) in enumerate(batch):
+            col, row = pos % columns, pos // columns
+            x, y = col * cell_w, row * cell_h
+            page_keys.append(node["key"])
+            draw.rectangle((x, y, x + cell_w - 2, y + cell_h - 2), outline="#9d988b", width=2)
+            draw.text((x + 12, y + 10), f"{node['key']}  {node['name'][:38]}",
+                      fill="#001117", font=pilot.font(18))
+            source = Image.open(FULL / candidate["preview_path"]).convert("RGBA")
+            source.thumbnail((210, 145), Image.Resampling.LANCZOS)
+            source_tile = Image.new("RGBA", (220, 155), "white")
+            source_tile.alpha_composite(source, ((220 - source.width) // 2, (155 - source.height) // 2))
+            sheet.paste(source_tile.convert("RGB"), (x + 12, y + 50))
+            light = audit_node_preview(candidate, node["tid"], "light")
+            dark = audit_node_preview(candidate, node["tid"], "dark")
+            sheet.paste(light.convert("RGB"), (x + 244, y + 52))
+            sheet.paste(dark.convert("RGB"), (x + 360, y + 52))
+            draw.text((x + 270, y + 168), "Hell", fill="#001117", font=pilot.font(13))
+            draw.text((x + 386, y + 168), "Dunkel", fill="#001117", font=pilot.font(13))
+            duplicate = hash_counts[candidate.get("preview_sha256", "")]
+            details = [f"{candidate['id']} · {candidate['kind']} · {candidate['width']}×{candidate['height']}",
+                       pilot.host_of(domain.get("official_url", ""))[:54],
+                       (candidate.get("final_url") or candidate.get("url") or "")[:64]]
+            if duplicate > 1:
+                details.append(f"GLEICHE DATEI: {duplicate} Knoten")
+            for line_no, line in enumerate(details):
+                draw.text((x + 12, y + 218 + 27 * line_no), line, fill="#001117", font=pilot.font(14))
+        target = FINAL_REVIEW / f"suggestions_{page_no:02d}.png"
+        sheet.save(target)
+        pages.append({"page": page_no, "path": str(target.relative_to(FULL)).replace("\\", "/"),
+                      "keys": page_keys, "sha256": pilot.sha256_file(target)})
+    write_json(FINAL_REVIEW / "index.json", {"schema_version": 1, "logo_suggestions": len(rows),
+                                              "page_count": len(pages), "pages": pages})
+
+    suggestions_by_key = {row["key"]: row for row in suggestions}
+    problems = []
+    for suggestion in suggestions:
+        if suggestion["suggested_result"] != "logo":
+            continue
+        key = suggestion["key"]
+        node, domain = nodes[key], domains[key]
+        try:
+            candidate = candidate_for(node, suggestion["suggested_candidate_id"])
+        except (ValueError, OSError) as exc:
+            problems.append(f"{key}: {exc}")
+            continue
+        rejection = candidate_rejection(node, candidate)
+        domain_rejection = domain_suggestion_rejection(node, domain)
+        preview = FULL / candidate["preview_path"]
+        if rejection:
+            problems.append(f"{key}: rejected candidate was suggested: {rejection}")
+        if domain_rejection:
+            problems.append(f"{key}: rejected domain was suggested: {domain_rejection}")
+        if not preview.is_file():
+            problems.append(f"{key}: preview file is missing")
+        elif pilot.sha256_file(preview) != candidate.get("preview_sha256"):
+            problems.append(f"{key}: preview checksum drift")
+
+    result_counts = collections.Counter(row["suggested_result"] for row in suggestions)
+    country_counts = {
+        cc: collections.Counter(suggestions_by_key[row["key"]]["suggested_result"]
+                                for row in nodes.values() if row["cc"] == cc)
+        for cc in COUNTRY_ORDER
+    }
+    manual_rejections = [
+        {"key": key, "name": nodes[key]["name"], "reason": reason,
+         "suggested_result": suggestions_by_key[key]["suggested_result"]}
+        for key, reason in sorted({**MANUAL_CANDIDATE_REJECTIONS,
+                                    **MANUAL_DOMAIN_REJECTIONS}.items())
+    ]
+    audit = {
+        "schema_version": 1,
+        "audited_at": pilot.today(),
+        "scope": "all 762 organisation suggestions; projects remain image-free",
+        "selection_nodes": len(nodes),
+        "initial_logo_suggestions_visually_checked": 352,
+        "manual_mismatches_withheld": len(manual_rejections),
+        "final_logo_suggestions": result_counts["logo"],
+        "final_none_suggestions": result_counts["none"],
+        "visual_sheet_count": len(pages),
+        "checks": {
+            "unique_selection_keys": len(nodes) == 762,
+            "unique_suggestion_keys": len(suggestions_by_key) == 762,
+            "all_results_resolved_as_suggestion": set(result_counts) <= {"logo", "none"},
+            "no_suggestion_is_user_confirmation": all(not row.get("confirmed") for row in suggestions),
+            "all_logo_candidates_pass_identity_and_file_checks": not problems,
+            "all_manual_rejections_are_none": all(row["suggested_result"] == "none"
+                                                    for row in manual_rejections),
+        },
+        "problems": problems,
+        "countries": {cc: {"logo": country_counts[cc]["logo"], "none": country_counts[cc]["none"]}
+                      for cc in COUNTRY_ORDER},
+        "withheld_after_visual_audit": manual_rejections,
+        "neo4j_writes": 0,
+    }
+    write_json(FINAL_AUDIT_JSON, audit)
+    report = [
+        "# Finaler Vorschlagsaudit der Akteurslogos", "", f"Geprüft: {audit['audited_at']}", "",
+        "## Ergebnis", "", "- 762/762 Organisationsknoten strukturell geprüft.",
+        f"- 352 ursprüngliche Logo-Vorschläge auf {len(pages)} Prüfbögen vollständig visuell geprüft.",
+        f"- {len(manual_rejections)} Fehlzuordnungen oder unbrauchbare Marken auf `none` zurückgezogen.",
+        f"- Endstand: {result_counts['logo']} Logo-Vorschläge, {result_counts['none']} `none`-Vorschläge.",
+        "- Keine Entscheidung wurde als Benutzerbestätigung gespeichert; keine Neo4j-Schreiboperation erfolgte.",
+        "", "## Automatische Gegenprüfung", "",
+    ]
+    for check, passed in audit["checks"].items():
+        report.append(f"- {'BESTANDEN' if passed else 'FEHLER'} — {check}")
+    report += ["", "## Nach Sichtprüfung zurückgezogen", "",
+               "| Knoten | Organisation | Grund |", "|---|---|---|"]
+    for row in manual_rejections:
+        report.append(f"| {row['key']} | {row['name']} | {row['reason']} |")
+    report += ["", "## Länderstand", "", "| Land | Logo | none |", "|---|---:|---:|"]
+    for cc in COUNTRY_ORDER:
+        report.append(f"| {cc} | {country_counts[cc]['logo']} | {country_counts[cc]['none']} |")
+    FINAL_AUDIT_REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
+    print(f"wrote {len(pages)} final-review sheets for {len(rows)} logo suggestions")
+
+
 def usable_candidates(node):
     path = RAW / node["cc"] / node["tid"] / "candidates.json"
     if not path.exists():
@@ -573,6 +758,8 @@ def usable_candidates(node):
 
 def candidate_rejection(node, candidate):
     """Reject obvious photos and third-party badges before they become suggestions."""
+    if node.get("key") in MANUAL_CANDIDATE_REJECTIONS:
+        return MANUAL_CANDIDATE_REJECTIONS[node["key"]]
     url = (candidate.get("final_url") or candidate.get("url") or "").lower()
     decoded_url = urllib.parse.unquote(url)
     if any(marker in decoded_url for marker in SOCIAL_MARKERS):
@@ -587,7 +774,11 @@ def candidate_rejection(node, candidate):
         return "unchecked og:image without a logo filename"
     if kind == "media_logo":
         split = urllib.parse.urlsplit(decoded_url)
-        asset_tokens = set(tokens(split.path + " " + split.query))
+        # Only the asset filename may identify a media logo. Parent directory
+        # names can contain the organisation's domain while the file itself is
+        # an unrelated partner logo (the BioRegional/Abstrakt false positive).
+        asset_name = split.path.rstrip("/").rsplit("/", 1)[-1]
+        asset_tokens = set(tokens(asset_name))
         name_tokens = {token for token in tokens(node.get("name", "")) if len(token) >= 4}
         if not any(word in decoded_url for word in logo_words):
             return "media image without a logo filename"
@@ -598,6 +789,8 @@ def candidate_rejection(node, candidate):
 
 def domain_suggestion_rejection(node, domain):
     """Keep ambiguous automated domain research out of logo suggestions."""
+    if node.get("key") in MANUAL_DOMAIN_REJECTIONS:
+        return MANUAL_DOMAIN_REJECTIONS[node["key"]]
     if domain.get("status") != "accepted" or not domain.get("official_url"):
         return "organisation domain is not accepted"
     basis = domain.get("basis", "")
@@ -693,13 +886,16 @@ def review_state():
     decisions = {r["key"]: r for r in review_document()["nodes"]}
     output = []
     for node in nodes:
-        candidates = []
-        for candidate in sorted(usable_candidates(node), key=lambda c: (-candidate_rank(c, node), c["id"])):
-            candidates.append({k: candidate.get(k) for k in (
-                "id", "kind", "url", "final_url", "width", "height", "format",
-                "preview_path", "preview_sha256", "license_note", "retrieved_at")})
         domain = dict(domains[node["key"]])
         domain["suggestion_rejection"] = domain_suggestion_rejection(node, domain)
+        candidates = []
+        for candidate in sorted(usable_candidates(node), key=lambda c: (-candidate_rank(c, node), c["id"])):
+            candidate_row = {k: candidate.get(k) for k in (
+                "id", "kind", "url", "final_url", "width", "height", "format",
+                "preview_path", "preview_sha256", "license_note", "retrieved_at")}
+            candidate_row["suggestion_rejection"] = (
+                domain["suggestion_rejection"] or candidate_rejection(node, candidate))
+            candidates.append(candidate_row)
         output.append({**{k: node.get(k) for k in ("key", "cc", "tid", "eid", "name", "typ", "graph_id")},
                        "domain": domain, "suggestion": suggestions.get(node["key"], {}),
                        "decision": decisions.get(node["key"]), "candidates": candidates})
@@ -769,7 +965,15 @@ class ReviewHandler(http.server.BaseHTTPRequestHandler):
             candidate_id, candidate_hash = "", None
             if result == "logo":
                 candidate_id = value.get("candidate_id") or ""
-                candidate = candidate_for(by_key[key], candidate_id)
+                node = by_key[key]
+                domains = {row["key"]: row for row in pilot.load_json(DOMAINS)["nodes"]}
+                domain_rejection = domain_suggestion_rejection(node, domains[key])
+                if domain_rejection:
+                    raise ValueError(f"logo confirmation blocked: {domain_rejection}")
+                candidate = candidate_for(node, candidate_id)
+                rejection = candidate_rejection(node, candidate)
+                if rejection:
+                    raise ValueError(f"logo confirmation blocked: {rejection}")
                 candidate_hash = candidate.get("preview_sha256") or pilot.sha256_file(FULL / candidate["preview_path"])
             decisions = {r["key"]: r for r in review_document()["nodes"]}
             decisions[key] = {"key": key, "result": result, "candidate_id": candidate_id,
@@ -1059,6 +1263,7 @@ def main():
     harvest.set_defaults(func=harvest_all)
     sub.add_parser("manifest").set_defaults(func=build_manifest)
     sub.add_parser("contact").set_defaults(func=contact_sheets)
+    sub.add_parser("audit-sheets").set_defaults(func=command_audit_sheets)
     sub.add_parser("suggest").set_defaults(func=command_suggest)
     review = sub.add_parser("review-server"); review.add_argument("--host", default="127.0.0.1"); review.add_argument("--port", type=int, default=8765); review.add_argument("--no-open", action="store_true")
     review.set_defaults(func=command_review_server)

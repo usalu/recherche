@@ -109,7 +109,8 @@ def main():
         out = args.out or os.path.join(SP, "figs", "frag_tables_grid.tex")
         n_items, n_pages = build_grid_fragment(
             net, out, DEFAULT.klassifikation_actor_project_path,
-            DEFAULT.kanten_klassifikation_path, load_image_manifest(args.images_manifest))
+            DEFAULT.kanten_klassifikation_path, load_image_manifest(args.images_manifest),
+            DEFAULT.merge_strict_path)
         print(f"wrote {out}: {n_items} rows/headers across {n_pages} pages")
 
 
