@@ -1,0 +1,444 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for FI-NO",
+  "agentCount": 3,
+  "logs": [
+    "FI-NO: 3 packets, 6 nodes, 2 edges",
+    "FI-NO: 6 Knotenurteile, 2 Kantenurteile, 0 ungeprueft",
+    "FI-NO: kern=4 bezug=2 ohne_beleg=0"
+  ],
+  "result": {
+    "ccs": [
+      "FI",
+      "NO"
+    ],
+    "packets": [
+      {
+        "packet_id": "NO-c04",
+        "nodes": [
+          {
+            "tid": "S03",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.rehub.no/ombruk-i-byggebransjen",
+            "beleg_zitat": "Ombruk i byggebransjen: Slik får du oversikt, sparer penger og bygger mer bærekraftig",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Rehub Norge ombruk byggevarer plattform"
+            ],
+            "geprueft_urls": [
+              "https://www.rehub.no/ombruk-i-byggebransjen",
+              "https://norskbyggebransje.no/nyheter/sorger-mer-ombruk-i-byggebransjen"
+            ],
+            "begruendung": "Rehub.no ist eine eigene, dauerhaft betriebene Web-Plattform (Marktplatz), deren gesamter Zweck die Vermittlung von wiederverwendbaren Baumaterialien in Norwegen ist (rehub.no/ombruk-i-byggebransjen, How to Rehub). Reuse ist nicht Nebenprojekt, sondern das Kerngeschaeft -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U10",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.resirqel.no/raadgivning",
+            "beleg_zitat": "Resirqel er Norges første spesialiserte selskap innen ombrukrådgivning.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Resirqel Norge ombruk rådgivning"
+            ],
+            "geprueft_urls": [
+              "https://www.resirqel.no/raadgivning",
+              "https://www.resirqel.no/",
+              "https://norskbyggebransje.no/nyheter/sorger-mer-ombruk-i-byggebransjen"
+            ],
+            "begruendung": "resirqel.no/raadgivning ist die eigene Leistungsseite des Unternehmens; Ombrukrådgivning (Wiederverwendungsberatung) inkl. Ombrukskartlegging, Rueckbauplanung und Logistik ist als dauerhaftes Leistungsangebot dargestellt, seit 2013 -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "S03|U10",
+            "a_tid": "S03",
+            "b_tid": "U10",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://norskbyggebransje.no/nyheter/sorger-mer-ombruk-i-byggebransjen",
+            "beleg_zitat": "Aktørene har nå inngått en avtale hvor Resirqel gjør materialer tilgjengelig i den digitale løsningen Rehub.",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Vertragspartner / Materialzulieferer in Rehubs digitaler Loesung (Resirqel stellt Ombruk-Materialien in Rehub bereit)",
+            "relation_soll": "PROJEKT_PARTNER"
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 5,
+        "kappe_erreicht": false,
+        "cc": "NO",
+        "assigned_nodes": [
+          "S03",
+          "U10"
+        ],
+        "assigned_edges": [
+          "S03|U10"
+        ]
+      },
+      {
+        "packet_id": "NO-c05",
+        "nodes": [
+          {
+            "tid": "F01",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops",
+            "beleg_zitat": "Nordlandsforskning har ansvar for å utvikle rammeverk og indikatorer for å evaluere aktivitetene i alle byene.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Nordlandsforskning AS ombruk bygg",
+              "Nordlandsforskning gjenbruk byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://www.nordlandsforskning.no/nb/news/2020/bygger-ny-i-stormen",
+              "https://www.nordlandsforskning.no/en/project/cityloops",
+              "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops"
+            ],
+            "begruendung": "Keine eigene dauerhafte Reuse-/Zirkularitaets-Leistungsseite gefunden. Auf der eigenen Projektseite zum EU-Horizon2020-Projekt CityLoops (Bodo/Roskilde/Porto u.a.) wird Nordlandsforskning namentlich mit Verantwortung fuer Rahmenwerk/Indikatoren zur Bewertung von Ressourcenzirkulation (Wiederverwendung/Recycling von Ressourcen aus dem alten Flughafenareal) genannt. Da CityLoops die einzige Fundstelle als benanntes Projekt ist (kein dauerhafter Leistungsbereich 'Ombruk' auf der Institutsseite), Grad bezug statt kern.",
+            "flags": [],
+            "sprache": "no",
+            "sprachrisiko": true,
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "I02",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops",
+            "beleg_zitat": "I Bodø er det sirkulering av ressursene på det militære flyplassområdet som er i fokus.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Bodø Kommune sirkulær økonomi ombruk",
+              "Bodø kommune CityLoops gjenbruk byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://bodo.kommune.no/aktuelt/vi-skal-3d-visualisere-bodo",
+              "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops",
+              "https://cityloops.metabolismofcities.org/city/bodo/uca-report/",
+              "https://cityloops.metabolismofcities.org/city/bodo/"
+            ],
+            "begruendung": "Keine eigene dauerhafte Reuse-Leistungsseite von bodo.kommune.no gefunden (Hauptseite zu Vi-skal-3D-visualisere-Bodo nicht mehr erreichbar/404). Bodø wird jedoch als Demonstrationsstadt im benannten EU-Projekt CityLoops mit Fokus auf Ressourcenzirkulation/Wiederverwendung von Material des alten Militaerflughafens genannt (Konsortialpartner laut cityloops.metabolismofcities.org/partners/, Rollenbeschreibung ueber Drittquellen als 'demonstration manager'). Grad bezug.",
+            "flags": [],
+            "sprache": "no",
+            "sprachrisiko": true,
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "I02|F01",
+            "a_tid": "I02",
+            "b_tid": "F01",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.an.no/bodo-en-barekraftig-og-samskapende-by/o/5-4-1367256",
+            "beleg_zitat": "Bodø kommune i samarbeid med Nordlandsforskning, Nord universitet, Nordland fylkeskommune, Bodø/Glimt og Bodø Røde Kors utforske hvordan det kan gjøres.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "relation_ist": "samarbeid (gemeinsames mehrjaehriges Kooperationsprojekt zu buergerbeteiligter Stadtentwicklung, in dem auch das CityLoops-Ressourcenzirkulations-Vorhaben verortet ist)",
+            "relation_soll": "PROJEKT_PARTNER",
+            "budget_erschoepft": false
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 24,
+        "kappe_erreicht": false,
+        "cc": "NO",
+        "assigned_nodes": [
+          "F01",
+          "I02"
+        ],
+        "assigned_edges": [
+          "I02|F01"
+        ]
+      },
+      {
+        "packet_id": "NO-s01",
+        "nodes": [
+          {
+            "tid": "P1",
+            "actor_degree": "kern",
+            "beleg_url": "https://helenhard.no/work/b-camp/",
+            "beleg_zitat": "The project repurposes discarded modules from an offshore accommodation barge to create affordable rental units.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"B-camp\" Stavanger gjenbruk building project",
+              "\"B-camp\" Helen Hard reuse offshore modules"
+            ],
+            "geprueft_urls": [
+              "https://helenhard.no/work/b-camp/"
+            ],
+            "begruendung": "Eigene Helen & Hard Werkseite zu B-camp beschreibt dauerhaft die Wiederverwendung ausrangierter Module einer Offshore-Wohnbarkasse als Kern des Bauvorhabens -> kern (D9: Bauvorhaben dokumentiert Bauteil-Wiederverwendung).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U04",
+            "actor_degree": "kern",
+            "beleg_url": "https://helenhard.no/work/",
+            "beleg_zitat": "150 apartments recycled from temporary dwelling modules",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Helen & Hard architects reuse circular Norway",
+              "\"Helen & Hard\" Wiederverwendung Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://helenhard.no/about/",
+              "https://helenhard.no/work/",
+              "https://helenhard.no/work/b-camp/"
+            ],
+            "begruendung": "Eigene, dauerhafte Work/Portfolio-Seite von Helen & Hard zeigt mehrere Projekte (Innoasis, Kommandoerveien, Bore Surf Hostel, B-camp), deren Beschreibungen Wiederverwendung/Recycling von Bauteilen als wiederkehrendes Praxismerkmal ausweisen -- kein Einzelprojekt als einzige Fundstelle, sondern durchgaengiges Portfolio-Muster -> kern. Die separate About-Seite selbst nennt Reuse nicht explizit, ist aber nicht die tragende Quelle.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 6,
+        "kappe_erreicht": false,
+        "cc": "NO",
+        "assigned_nodes": [
+          "P1",
+          "U04"
+        ],
+        "assigned_edges": []
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "S03",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.rehub.no/ombruk-i-byggebransjen",
+        "beleg_zitat": "Ombruk i byggebransjen: Slik får du oversikt, sparer penger og bygger mer bærekraftig",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Rehub Norge ombruk byggevarer plattform"
+        ],
+        "geprueft_urls": [
+          "https://www.rehub.no/ombruk-i-byggebransjen",
+          "https://norskbyggebransje.no/nyheter/sorger-mer-ombruk-i-byggebransjen"
+        ],
+        "begruendung": "Rehub.no ist eine eigene, dauerhaft betriebene Web-Plattform (Marktplatz), deren gesamter Zweck die Vermittlung von wiederverwendbaren Baumaterialien in Norwegen ist (rehub.no/ombruk-i-byggebransjen, How to Rehub). Reuse ist nicht Nebenprojekt, sondern das Kerngeschaeft -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c04"
+      },
+      {
+        "tid": "U10",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.resirqel.no/raadgivning",
+        "beleg_zitat": "Resirqel er Norges første spesialiserte selskap innen ombrukrådgivning.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Resirqel Norge ombruk rådgivning"
+        ],
+        "geprueft_urls": [
+          "https://www.resirqel.no/raadgivning",
+          "https://www.resirqel.no/",
+          "https://norskbyggebransje.no/nyheter/sorger-mer-ombruk-i-byggebransjen"
+        ],
+        "begruendung": "resirqel.no/raadgivning ist die eigene Leistungsseite des Unternehmens; Ombrukrådgivning (Wiederverwendungsberatung) inkl. Ombrukskartlegging, Rueckbauplanung und Logistik ist als dauerhaftes Leistungsangebot dargestellt, seit 2013 -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c04"
+      },
+      {
+        "tid": "F01",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops",
+        "beleg_zitat": "Nordlandsforskning har ansvar for å utvikle rammeverk og indikatorer for å evaluere aktivitetene i alle byene.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Nordlandsforskning AS ombruk bygg",
+          "Nordlandsforskning gjenbruk byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://www.nordlandsforskning.no/nb/news/2020/bygger-ny-i-stormen",
+          "https://www.nordlandsforskning.no/en/project/cityloops",
+          "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops"
+        ],
+        "begruendung": "Keine eigene dauerhafte Reuse-/Zirkularitaets-Leistungsseite gefunden. Auf der eigenen Projektseite zum EU-Horizon2020-Projekt CityLoops (Bodo/Roskilde/Porto u.a.) wird Nordlandsforskning namentlich mit Verantwortung fuer Rahmenwerk/Indikatoren zur Bewertung von Ressourcenzirkulation (Wiederverwendung/Recycling von Ressourcen aus dem alten Flughafenareal) genannt. Da CityLoops die einzige Fundstelle als benanntes Projekt ist (kein dauerhafter Leistungsbereich 'Ombruk' auf der Institutsseite), Grad bezug statt kern.",
+        "flags": [],
+        "sprache": "no",
+        "sprachrisiko": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c05"
+      },
+      {
+        "tid": "I02",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops",
+        "beleg_zitat": "I Bodø er det sirkulering av ressursene på det militære flyplassområdet som er i fokus.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Bodø Kommune sirkulær økonomi ombruk",
+          "Bodø kommune CityLoops gjenbruk byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://bodo.kommune.no/aktuelt/vi-skal-3d-visualisere-bodo",
+          "https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops",
+          "https://cityloops.metabolismofcities.org/city/bodo/uca-report/",
+          "https://cityloops.metabolismofcities.org/city/bodo/"
+        ],
+        "begruendung": "Keine eigene dauerhafte Reuse-Leistungsseite von bodo.kommune.no gefunden (Hauptseite zu Vi-skal-3D-visualisere-Bodo nicht mehr erreichbar/404). Bodø wird jedoch als Demonstrationsstadt im benannten EU-Projekt CityLoops mit Fokus auf Ressourcenzirkulation/Wiederverwendung von Material des alten Militaerflughafens genannt (Konsortialpartner laut cityloops.metabolismofcities.org/partners/, Rollenbeschreibung ueber Drittquellen als 'demonstration manager'). Grad bezug.",
+        "flags": [],
+        "sprache": "no",
+        "sprachrisiko": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c05"
+      },
+      {
+        "tid": "P1",
+        "actor_degree": "kern",
+        "beleg_url": "https://helenhard.no/work/b-camp/",
+        "beleg_zitat": "The project repurposes discarded modules from an offshore accommodation barge to create affordable rental units.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"B-camp\" Stavanger gjenbruk building project",
+          "\"B-camp\" Helen Hard reuse offshore modules"
+        ],
+        "geprueft_urls": [
+          "https://helenhard.no/work/b-camp/"
+        ],
+        "begruendung": "Eigene Helen & Hard Werkseite zu B-camp beschreibt dauerhaft die Wiederverwendung ausrangierter Module einer Offshore-Wohnbarkasse als Kern des Bauvorhabens -> kern (D9: Bauvorhaben dokumentiert Bauteil-Wiederverwendung).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-s01"
+      },
+      {
+        "tid": "U04",
+        "actor_degree": "kern",
+        "beleg_url": "https://helenhard.no/work/",
+        "beleg_zitat": "150 apartments recycled from temporary dwelling modules",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Helen & Hard architects reuse circular Norway",
+          "\"Helen & Hard\" Wiederverwendung Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://helenhard.no/about/",
+          "https://helenhard.no/work/",
+          "https://helenhard.no/work/b-camp/"
+        ],
+        "begruendung": "Eigene, dauerhafte Work/Portfolio-Seite von Helen & Hard zeigt mehrere Projekte (Innoasis, Kommandoerveien, Bore Surf Hostel, B-camp), deren Beschreibungen Wiederverwendung/Recycling von Bauteilen als wiederkehrendes Praxismerkmal ausweisen -- kein Einzelprojekt als einzige Fundstelle, sondern durchgaengiges Portfolio-Muster -> kern. Die separate About-Seite selbst nennt Reuse nicht explizit, ist aber nicht die tragende Quelle.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-s01"
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "S03|U10",
+        "a_tid": "S03",
+        "b_tid": "U10",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://norskbyggebransje.no/nyheter/sorger-mer-ombruk-i-byggebransjen",
+        "beleg_zitat": "Aktørene har nå inngått en avtale hvor Resirqel gjør materialer tilgjengelig i den digitale løsningen Rehub.",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Vertragspartner / Materialzulieferer in Rehubs digitaler Loesung (Resirqel stellt Ombruk-Materialien in Rehub bereit)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "NO",
+        "packet_id": "NO-c04"
+      },
+      {
+        "edge_id": "I02|F01",
+        "a_tid": "I02",
+        "b_tid": "F01",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.an.no/bodo-en-barekraftig-og-samskapende-by/o/5-4-1367256",
+        "beleg_zitat": "Bodø kommune i samarbeid med Nordlandsforskning, Nord universitet, Nordland fylkeskommune, Bodø/Glimt og Bodø Røde Kors utforske hvordan det kan gjøres.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "relation_ist": "samarbeid (gemeinsames mehrjaehriges Kooperationsprojekt zu buergerbeteiligter Stadtentwicklung, in dem auch das CityLoops-Ressourcenzirkulations-Vorhaben verortet ist)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c05"
+      }
+    ],
+    "ungeprueft": [],
+    "ausgefallen": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-FI-NO"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "FI-NO:NO-c04",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "aa0568b790b449d49",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582887000,
+      "queuedAt": 1786582886965,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NO-c04",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582935027,
+      "tokens": 53850,
+      "toolCalls": 7,
+      "durationMs": 48027,
+      "resultPreview": "{\"packet_id\":\"NO-c04\",\"nodes\":[{\"tid\":\"S03\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.rehub.no/ombruk-i-byggebransjen\",\"beleg_zitat\":\"Ombruk i byggebransjen: Slik får du oversikt, sparer penger og bygger mer bærekraftig\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"Rehub Norge ombruk byggevarer plattform\"],\"geprueft_urls\":[\"https://www.rehub.no/ombruk-i-byggebransjen\",\"https://norskbyggebransj…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "FI-NO:NO-c05",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "a62fff8e45be8a57d",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582887003,
+      "queuedAt": 1786582886965,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NO-c05",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583109951,
+      "tokens": 70620,
+      "toolCalls": 28,
+      "durationMs": 222948,
+      "resultPreview": "{\"packet_id\":\"NO-c05\",\"nodes\":[{\"tid\":\"F01\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://www.nordlandsforskning.no/prosjekter/2019/09/30/nb-project-cityloops\",\"beleg_zitat\":\"Nordlandsforskning har ansvar for å utvikle rammeverk og indikatorer for å evaluere aktivitetene i alle byene.\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"Nordlandsforskning AS ombruk bygg\",\"Nordlandsforskning gjenbruk byggema…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "FI-NO:NO-s01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "acbe47281c06e6c39",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582887004,
+      "queuedAt": 1786582886966,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NO-s01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582947367,
+      "tokens": 54371,
+      "toolCalls": 8,
+      "durationMs": 60363,
+      "resultPreview": "{\"packet_id\":\"NO-s01\",\"nodes\":[{\"tid\":\"P1\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://helenhard.no/work/b-camp/\",\"beleg_zitat\":\"The project repurposes discarded modules from an offshore accommodation barge to create affordable rental units.\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"\\\"B-camp\\\" Stavanger gjenbruk building project\",\"\\\"B-camp\\\" Helen Hard reuse offshore modules\"],\"geprueft_urls\":[\"…"
+    }
+  ],
+  "totalTokens": 178841,
+  "totalToolCalls": 43
+}

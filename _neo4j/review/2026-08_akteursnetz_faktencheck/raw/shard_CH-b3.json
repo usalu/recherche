@@ -1,0 +1,2285 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for CH",
+  "agentCount": 7,
+  "logs": [
+    "CH: 7 packets, 50 nodes, 2 edges",
+    "CH: 50 Knotenurteile, 2 Kantenurteile, 0 ungeprueft",
+    "CH: kern=22 bezug=8 ohne_beleg=20"
+  ],
+  "result": {
+    "ccs": [
+      "CH"
+    ],
+    "packets": [
+      {
+        "packet_id": "CH-c07",
+        "nodes": [
+          {
+            "tid": "F08",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.epfl.ch/labs/sxl/",
+            "beleg_zitat": "we are paving the way for the upcycling reuse of load-bearing components in buildings, hence contributing to the adoption of a circular economy by the construction industry",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.epfl.ch/labs/sxl/"
+            ],
+            "begruendung": "Eigene, dauerhaft platzierte Institutsseite (Leistungslinie) des EPFL-Labors beschreibt Bauteil-Wiederverwendung als zentralen Forschungsschwerpunkt, nicht als Einzelprojekt-Referenz -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "O01",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.smartlivinglab.ch/en/projects/recrete-reused-of-cut-concrete/",
+            "beleg_zitat": "Brütting, Jan; Bastien-Masse Maléna; Devènes, Julie; Grangeot, Maxence; Küpfer, Célia; Fivet, Corentin",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Re:Crete\" research team Switzerland concrete reuse",
+              "\"Re:Crete\" équipe recherche EPFL réemploi béton"
+            ],
+            "geprueft_urls": [
+              "https://www.smartlivinglab.ch/en/projects/recrete-reused-of-cut-concrete/",
+              "https://www.epfl.ch/schools/enac/recrete/",
+              "https://www.sciencedirect.com/science/article/pii/S2352012422005720",
+              "https://www.construction21.org/france/case-studies/h/re-crete-footbridge-en.html"
+            ],
+            "begruendung": "Keine eigene Seite des Forschungsteams als Organisation; die Smart-Living-Lab-Projektseite zum RE:CRETE-Bauteil-Wiederverwendungsprojekt nennt die Teammitglieder namentlich unter der Rubrik 'Team' -> Namentliche Nennung in einer benannten Reuse-Sache = bezug. ScienceDirect- und Construction21-Quellen waren per 403 nicht abrufbar (Flag nicht_pruefbar).",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://www.sciencedirect.com/science/article/pii/S2352012422005720"
+              },
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://www.construction21.org/france/case-studies/h/re-crete-footbridge-en.html"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P9",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.epfl.ch/schools/enac/recrete/",
+            "beleg_zitat": "To demonstrate this, the Sructural Xploration Lab (SXL) has built the RE:CRETE prototype, a footbridge built from 25 reused concrete blocks.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.epfl.ch/schools/enac/recrete/"
+            ],
+            "begruendung": "Projektknoten: die eigene ENAC/EPFL-Projektseite dokumentiert die Bauteil-Wiederverwendung (25 wiederverwendete Betonblöcke aus einem Rückbau, zu einer vorgespannten Bogenbrücke zusammengesetzt) als zentralen Gegenstand des Bauvorhabens -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "O01|P9",
+            "a_tid": "O01",
+            "b_tid": "P9",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.smartlivinglab.ch/en/projects/recrete-reused-of-cut-concrete/",
+            "beleg_zitat": "Team: Brütting, Jan; Bastien-Masse Maléna; Devènes, Julie; Grangeot, Maxence; Küpfer, Célia; Fivet, Corentin",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Forschungsteam als Team-Sektion der RE:CRETE-Projektseite (ausführendes Team des Projekts)",
+            "relation_soll": ""
+          },
+          {
+            "edge_id": "F08|P9",
+            "a_tid": "F08",
+            "b_tid": "P9",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.epfl.ch/schools/enac/recrete/",
+            "beleg_zitat": "the Sructural Xploration Lab (SXL) has built the RE:CRETE prototype, a footbridge built from 25 reused concrete blocks",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "SXL hat die RE:CRETE-Fussgängerbrücke entworfen und gebaut (ausführend)",
+            "relation_soll": ""
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 9,
+        "kappe_erreicht": false,
+        "cc": "CH",
+        "assigned_nodes": [
+          "F08",
+          "O01",
+          "P9"
+        ],
+        "assigned_edges": [
+          "O01|P9",
+          "F08|P9"
+        ]
+      },
+      {
+        "packet_id": "CH-s01",
+        "nodes": [
+          {
+            "tid": "U02",
+            "name": "AFC Basel",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"AFC Basel\" Schweiz",
+              "\"AFC Basel\" reuse OR Wiederverwendung OR Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://www.afc.ch/"
+            ],
+            "begruendung": "AFC AG (Bauphysik/Brandschutz/Energieeffizienz, Sitz Zürich/Basel) zeigt auf afc.ch keine Reuse-/Kreislaufwirtschafts-Leistungslinie; Suche nach Bezug zu Bauteil-Wiederverwendung ergab keinen Treffer zu dieser Organisation, nur allgemeine Basel-Circular-Ergebnisse. Kein plausibler Reuse-Bezug gefunden.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U03",
+            "name": "AG Landschaftsarch.",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"AG Landschaftsarch.\" Schweiz",
+              "\"AG für Landschaft\" Landschaftsarchitekten Zürich Wiederverwendung"
+            ],
+            "geprueft_urls": [],
+            "begruendung": "Name zu generisch, um ohne Ortsangabe eindeutig einer Organisation zugeordnet zu werden (mehrere Schweizer Landschaftsarchitektur-AGs moeglich: AG fuer Landschaft, NOA, Studio Leaf, gruenwerk1, vetschpartner, Ganz, manoa u.a.). Name allein traegt kein Urteil (Regel 3); kein plausibler eindeutiger Treffer, keine Reuse-Belege identifizierbar.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U06",
+            "name": "Anima Engineering AG",
+            "actor_degree": "kern",
+            "beleg_url": "https://anima.engineering/nachhaltigkeit",
+            "beleg_zitat": "Wir testen neue Materialen und stehen für den sinnvollen Umgang mit den Themen Kreislaufwirtschaft und ReUse ein.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Anima Engineering AG Schweiz",
+              "\"Anima Engineering\" Wiederverwendung OR Reuse OR Kreislaufwirtschaft Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://anima.engineering/",
+              "https://anima.engineering/nachhaltigkeit"
+            ],
+            "begruendung": "Eigene Nachhaltigkeits-Seite von Anima Engineering AG (HLKKSE-Planungsbuero Basel) nennt Kreislaufwirtschaft und ReUse dauerhaft als Teil des eigenen Leistungsverstaendnisses, nicht als Einzelprojekt oder Fremdverzeichnis.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U07",
+            "name": "Balzer Ingenieure AG",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Balzer Ingenieure AG Schweiz Wiederverwendung Bauteile",
+              "\"Balzer Ingenieure\" \"Wiederverwendung\" OR \"Reuse\" OR \"Bauteile\" site:balzer-ingenieure.ch"
+            ],
+            "geprueft_urls": [],
+            "begruendung": "Balzer Ingenieure AG (Gebaeudetechnik/HLKS, Chur/Winterthur, seit 2024 Teil der BKW) zeigt in den durchsuchten Ergebnissen keine Reuse- oder Bauteil-Wiederverwendungs-Inhalte. Kein Treffer zu Wiederverwendung/Bauteile auf der eigenen Domain.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U09",
+            "name": "Bischof Föhn Architektur",
+            "actor_degree": "bezug",
+            "beleg_url": "https://meter-magazin.ch/ch/architektur/19924-aus-wohnungen-wird-ein-kindergarten",
+            "beleg_zitat": "Mit dem Umbauprojekt wollten sie ein Pionierprojekt der Kreislaufwirtschaft schaffen. Der Einsatz von möglichst vielen Re-Use-Bauteilen war dabei entscheidend.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Bischof Föhn\" Architektur Basel Wiederverwendung Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://www.bf-architekten.ch/",
+              "https://www.bf-architekten.ch/info",
+              "https://meter-magazin.ch/ch/architektur/19924-aus-wohnungen-wird-ein-kindergarten"
+            ],
+            "begruendung": "Auf der eigenen Seite bf-architekten.ch findet sich keine dauerhafte Reuse-Leistungslinie (Navigation nur Projekte/News/Info, keine Re-Use-Erwaehnung) -> kein kern. Das Fachmagazin meter-magazin.ch nennt Bischof Föhn jedoch namentlich als beauftragtes Buero fuer das benannte Reuse-Pilotprojekt Kindergarten (Umnutzung, Re-Use-Bauteile) -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U10",
+            "name": "Caretta+Weidmann",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Caretta+Weidmann\" Fassade Wiederverwendung Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://caretta-weidmann.ch/en/overall-services/"
+            ],
+            "begruendung": "Caretta Weidmann Baumanagement AG (Zuerich/Basel/St. Moritz) beschreibt auf der Leistungsseite Generalplanung/Baumanagement ohne Erwaehnung von Reuse, Kreislaufwirtschaft oder Bauteil-Wiederverwendung.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F01",
+            "name": "Circular Construction Lab",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Circular Construction Lab\" Schweiz",
+              "\"Circular Construction Lab\" Bauteile Wiederverwendung -site:cea.ibi.ethz.ch",
+              "\"Circular Construction Lab\" Zürich OR Basel OR Schweiz -Cornell"
+            ],
+            "geprueft_urls": [],
+            "begruendung": "Unter dem exakten Namen 'Circular Construction Lab' findet sich in der Schweiz keine eigenstaendige Organisation; das einzige Ergebnis mit diesem Namen ist das Circular Construction Lab von Felix Heisel an der Cornell University (USA). Ohne bestaetigten CH-Bezug wird keine Identitaet mit einer US-Organisation unterstellt (Regel 3) -> ohne_beleg statt spekulativer falsches_land-Zuordnung.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F02",
+            "name": "Circular Engineering for Architecture / ETH Zürich",
+            "actor_degree": "kern",
+            "beleg_url": "https://cea.ibi.ethz.ch/about_us.html",
+            "beleg_zitat": "The Chair of Circular Engineering for Architecture (CEA) develops research on matching reused architectural materials & projects through digitalization for circularity.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Circular Engineering for Architecture\" ETH Zürich"
+            ],
+            "geprueft_urls": [
+              "https://cea.ibi.ethz.ch/",
+              "https://cea.ibi.ethz.ch/about_us.html"
+            ],
+            "begruendung": "Eigene ETH-Lehrstuhlseite (Prof. Catherine De Wolf) stellt Reuse/Zirkularitaet von Bauteilen dauerhaft als Kern des Forschungsprogramms dar (About-us-Seite, nicht News/Einzelreferenz).",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 19,
+        "kappe_erreicht": false,
+        "cc": "CH",
+        "assigned_nodes": [
+          "U02",
+          "U03",
+          "U06",
+          "U07",
+          "U09",
+          "U10",
+          "F01",
+          "F02"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "CH-s02",
+        "nodes": [
+          {
+            "tid": "P1",
+            "name": "ELEMENTA Walkeweg",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.bs.ch/medienmitteilungen/fd/2023-entwicklungsareal-walkeweg-kanton-baut-ueber-100-preisguenstige-wohnungen-unter-einsatz-von-wiederverwendeten-bauteilen",
+            "beleg_zitat": "Indem Bauteile aus rückgebauten kantonalen Liegenschaften wiederverwendet werden, wird sogenannte «graue Energie» eingespart",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"ELEMENTA\" \"Walkeweg\" Wiederverwendung",
+              "Walkeweg Basel Wettbewerb Bauteil-Wiederverwendung Re-Use"
+            ],
+            "geprueft_urls": [
+              "https://www.bs.ch/medienmitteilungen/fd/2023-entwicklungsareal-walkeweg-kanton-baut-ueber-100-preisguenstige-wohnungen-unter-einsatz-von-wiederverwendeten-bauteilen",
+              "https://architekturbasel.ch/nemausus-effekt-dank-zeichenhaftem-reuse-am-walkeweg-alle-rangierten-projekte-im-ueberblick/"
+            ],
+            "begruendung": "Kantonales Wettbewerbsprojekt Basel-Stadt (Baufeld C+D) mit Bauteil-Wiederverwendung als explizitem Wettbewerbsthema; Kanton bestaetigt auf eigener, dauerhafter Regierungsseite, dass Bauteile aus rueckgebauten kantonalen Liegenschaften (Parkhaus Lysbuechel) fuer Tragwerk und Fassade wiederverwendet werden. Projektknoten (D9): Bauvorhaben dokumentiert Reuse -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U15",
+            "name": "GTI Engineering",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"GTI Engineering\" Schweiz Gebäudetechnik",
+              "\"GTI Engineering\" reuse OR Wiederverwendung OR Kreislaufwirtschaft Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://gtiag.ch/",
+              "https://gtiag.ch/dienstleistungen"
+            ],
+            "begruendung": "GTI Engineering AG (Bern/Zuerich) ist ein HLKSE-Gebaeudetechnikplaner. Eigene Leistungsseite (gtiag.ch/dienstleistungen) nennt Heizung, Lueftung, Klima, Kaelte, Sanitaer, Elektro, Gebaeudeautomation, Photovoltaik -- keine Erwaehnung von Bauteil-Wiederverwendung oder Zirkularitaet. Zwei Suchen ohne plausiblen Reuse-Treffer -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M09",
+            "name": "Historisches Bauteillager Ostschweiz (Denkmal Stiftung Thurgau)",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.historisches-bauteillager.ch/",
+            "beleg_zitat": "Die Wiederverwendung von historischen Bauteilen gewinnt im Sinne einer nachhaltigen Baukultur an Bedeutung.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Historisches Bauteillager Ostschweiz\" Denkmalpflege Thurgau",
+              "Historisches Bauteillager Ostschweiz Wiederverwendung"
+            ],
+            "geprueft_urls": [
+              "https://www.historisches-bauteillager.ch/",
+              "https://www.denkmalstiftung-thurgau.ch/bauteillager.html"
+            ],
+            "begruendung": "Von der Denkmal Stiftung Thurgau betriebenes Bauteillager in Schoenenberg an der Thur; eigene Seite stellt Rettung und Wiederverwendung historischer Bauteile dauerhaft als Betriebszweck dar (Depot, seit 2005 in Betrieb, seit 2017 auch mit Denkmalpflege SG). Klarer kern-Fall analog SalvoWEB-Kalibrierung.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P5",
+            "name": "K.118 (Kopfbau Halle 118)",
+            "actor_degree": "kern",
+            "beleg_url": "https://insitu.ch/projekte/196-k118-kopfbau-halle-118",
+            "beleg_zitat": "Die Tragstruktur stammt von einem rückgebauten Stahlskelettbau aus Basel",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"K.118\" \"Kopfbau Halle 118\" Winterthur Wiederverwendung Bauteile",
+              "K.118 Winterthur reuse building components"
+            ],
+            "geprueft_urls": [
+              "https://insitu.ch/projekte/196-k118-kopfbau-halle-118",
+              "https://zirkular.net/de/projekt/k-118-kopfbau-halle-118/"
+            ],
+            "begruendung": "Vielfach dokumentiertes Referenzprojekt fuer zirkulaeres Bauen (baubuero in situ, 2021): Tragstruktur, Fassade, Fenster und Bodenbelag ueberwiegend aus wiederverwendeten Bauteilen (Rueckbau Stahlskelettbau Basel, Bueroturm Zuerich, Sulzer-Werk 1). Projektknoten (D9): Bauvorhaben dokumentiert Reuse zentral -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U26",
+            "name": "Monotti Ingegneri",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.metalocus.es/en/news/parabase-wins-competition-residential-development-reuse-building-elements-areal-walkeweg-nord-basel",
+            "beleg_zitat": "Structural Engineering.- Monotti Ingegneri Consulenti SA: Mario Monotti.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Monotti\" Ingegneri Bauteil Wiederverwendung Tragwerk Schweiz reuse",
+              "\"Walkeweg\" Parabase Bauingenieur Tragwerksplaner Team Wettbewerb"
+            ],
+            "geprueft_urls": [
+              "https://www.metalocus.es/en/news/parabase-wins-competition-residential-development-reuse-building-elements-areal-walkeweg-nord-basel",
+              "https://competitions.espazium.ch/de/wettbewerbe/decides/wohnuberbauung-baufelder-c-d-mit-bauteil-wiederverwendung-areal-walkeweg-nord-basel"
+            ],
+            "begruendung": "Monotti Ingegneri Consulenti SA war Tragwerksplaner im mit Parabase siegreichen Team fuer den Wettbewerb 'Wohnueberbauung Baufelder C+D mit Bauteil-Wiederverwendung (Re-Use), Areal Walkeweg Nord Basel' (Projekt ELEMENTA) -- benannte Reuse-Sache mit Namensnennung -> bezug. Keine eigene Reuse-Leistungslinie auf einer Monotti-eigenen Seite gefunden, daher nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U30",
+            "name": "Oxara AG",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Oxara\" AG Baustoff Lehm reuse Wiederverwendung",
+              "\"Oxara\" \"K.118\" OR \"Walkeweg\" reuse"
+            ],
+            "geprueft_urls": [
+              "https://oxara.earth/de-ch/home.html",
+              "https://circularhub.ch/magazin/details/oxara-bauabfaelle-als-ressource"
+            ],
+            "begruendung": "Oxara stellt zementfreie Bindemittel her, die Aushub- und Mischabbruchmaterial (Abfall) zu neuem Baustoff verarbeiten -- eigene Seite spricht von 'ressourcenschonender Nutzung von Abfallmaterialien aus der Bauindustrie', nicht von Bauteil-Wiederverwendung. Gemaess Regelwerk ist Recycling/Rezyklat/Abfall ohne Bauteilbezug von kern ausgeschlossen. Keine Nennung in einer benannten Bauteil-Reuse-Sache (K.118, Walkeweg) gefunden -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U34",
+            "name": "Pérez Schmidlin",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "https://www.northdata.de/P%C3%A9rez+Schmidlin+Bauingenieure+GmbH,+Z%C3%BCrich/CHE-340.053.754",
+            "beleg_zitat": "Liquidation · Präsident des Verwaltungsrats: Placido Perez · Liquidator: Placido Perez",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Pérez\" \"Schmidlin\" Ingenieure Tragwerksplanung reuse Bauteilwiederverwendung",
+              "\"Pérez Schmidlin\" Ingenieure Bauingenieurbüro Zürich"
+            ],
+            "geprueft_urls": [
+              "https://www.perezschmidlin.ch/unternehmen/",
+              "https://www.northdata.de/P%C3%A9rez+Schmidlin+Bauingenieure+GmbH,+Z%C3%BCrich/CHE-340.053.754"
+            ],
+            "begruendung": "Perez Schmidlin Bauingenieure GmbH (Zuerich, gegruendet 2015) wurde per Beschluss vom 06.10.2023 liquidiert und am 05.09.2025 aus dem Handelsregister geloescht; eigene Domain perezschmidlin.ch ist nicht mehr erreichbar (DNS tot, D3 gepr. Domain-Wurzel ebenfalls tot). Keine Reuse-Bezuege in Drittquellen (K.118, Walkeweg) gefunden -> ohne_beleg mit Flag defunkt.",
+            "flags": [
+              {
+                "flag": "defunkt",
+                "beleg_url": "https://www.northdata.de/P%C3%A9rez+Schmidlin+Bauingenieure+GmbH,+Z%C3%BCrich/CHE-340.053.754",
+                "beleg_zitat": "Löschung: 05.09.2025",
+                "stand_jahr": "2025",
+                "nachfolger_tid": ""
+              },
+              {
+                "flag": "nicht_pruefbar",
+                "beleg_url": "https://www.perezschmidlin.ch/",
+                "beleg_zitat": "",
+                "hindernis": "dns_tot"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U35",
+            "name": "Repoxit AG",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Repoxit AG\" Wiederverwendung Bauteile",
+              "\"Repoxit\" \"K.118\" OR \"Kopfbau Halle 118\" Winterthur"
+            ],
+            "geprueft_urls": [
+              "https://www.repoxit.com/de/",
+              "https://de.kompass.com/c/repoxit-ag/ch021785/"
+            ],
+            "begruendung": "Repoxit AG (Effretikon) ist Anbieterin fugenloser Bodenbelaege (Beton-, Kunstharz-, Designbelaege). Eigene Seite repoxit.com nennt keine Bauteil-Wiederverwendung oder Kreislaufwirtschaft. Keine Nennung im Kontext K.118 oder anderer Reuse-Projekte gefunden -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 30,
+        "kappe_erreicht": false,
+        "cc": "CH",
+        "assigned_nodes": [
+          "P1",
+          "U15",
+          "M09",
+          "P5",
+          "U26",
+          "U30",
+          "U34",
+          "U35"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "CH-s03",
+        "nodes": [
+          {
+            "tid": "U37",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "https://www.moneyhouse.ch/en/company/senn-technology-ag-21385217851",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Senn Technology AG\" Schweiz",
+              "\"Senn Technology\" OR \"Senn AG\" Wiederverwendung Bauteile reuse",
+              "\"Senn Technology AG\" zefix St. Gallen"
+            ],
+            "geprueft_urls": [
+              "https://www.swiss-arc.ch/de/anbieter/senn-ag/41096660",
+              "https://www.moneyhouse.ch/en/company/senn-technology-ag-21385217851"
+            ],
+            "begruendung": "Kein Treffer, der Senn Technology AG (St. Gallen, CHE-328.619.260) selbst mit Bauteil-Wiederverwendung verbindet. Suchtreffer zu Kreislaufbauen/HORTUS betreffen SENN Gruppe (senn.com) bzw. SENN AG Oftringen (Stahl-/Metallbau) -- andere Rechtstraeger, nicht namensgleich mit dem hier gefuehrten tid; kein Rueckschluss zulaessig (Regel 3). Moneyhouse-Detailseite mit Fusions-/Loeschungsangabe lieferte 403 und konnte nicht selbst verifiziert werden, daher kein Zitat.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "login",
+                "beleg_url": "https://www.moneyhouse.ch/en/company/senn-technology-ag-21385217851"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U41",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"USUS Landschaftsarchitekten\"",
+              "USUS Landschaftsarchitektur Wiederverwendung reuse Materialien",
+              "thisisusus.com about reuse circular materials landscape"
+            ],
+            "geprueft_urls": [
+              "https://thisisusus.com/About-1",
+              "https://thisisusus.com/",
+              "https://archello.com/de/brand/usus-landschaftsarchitektur-ag"
+            ],
+            "begruendung": "Eigene Seite thisisusus.com (About und Startseite) lieferte wiederholt HTTP 503 und konnte nicht geoeffnet werden; Drittquelle archello.com lieferte 403. Allgemeine Suche zeigt USUS als Landschaftsarchitekturbuero in Zuerich ohne auffindbaren Reuse-/Zirkularitaets-Bezug in Suchausschnitten. Verfahren durchlaufen, kein pruefbarer Beleg gefunden.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_5xx",
+                "beleg_url": "https://thisisusus.com/About-1"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F09",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.epfl.ch/labs/sxl/",
+            "beleg_zitat": "The Structural Xploration Lab is also an integral member of the Smart Living Lab, a joint facility between EPFL, UniFr, and HEIA-FR, in Fribourg, Switzerland.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Université de Fribourg\" OR \"Universität Freiburg\" Bauteil Wiederverwendung Réemploi Forschung"
+            ],
+            "geprueft_urls": [
+              "https://www.epfl.ch/labs/sxl/"
+            ],
+            "begruendung": "Univ. Fribourg (UniFr) wird namentlich als Traegerinstitution des Smart Living Lab genannt, das das Structural Xploration Lab (SXL) beherbergt -- ein Forschungsprogramm mit dokumentierter Bauteil-Wiederverwendung (u.a. Wiederverwendung von Betonelementen, Fussgaengerbruecke 2021, Pavillon 'rebuiLT'). Keine eigene Leistungsseite der Universitaet zu Reuse gefunden, daher bezug statt kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N03",
+            "actor_degree": "kern",
+            "beleg_url": "https://re-win.ch/verein/ueber/",
+            "beleg_zitat": "Der Verein RE-WIN will einerseits eine Kultur der Wiederverwendung von Bauteilen sowohl in den Architektur- und Planungsbueros als auch in der Bauwirtschaft selber foerdern.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Verein RE-WIN\" Wiederverwendung Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://re-win.ch/verein/ueber/"
+            ],
+            "begruendung": "Eigene, dauerhafte Ueber-uns-Seite des Vereins beschreibt Foerderung einer Kultur der Bauteil-Wiederverwendung als zentralen Vereinszweck (nicht Einzelprojekt/News); Vereinsname bereits das Kernprogramm.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U43",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Weber Energie\" Bauphysik Schweiz",
+              "\"Weber Energie und Bauphysik\" Wiederverwendung reuse Bauteile Kreislauf"
+            ],
+            "geprueft_urls": [
+              "https://www.weberbauphysik.ch/"
+            ],
+            "begruendung": "Eigene Website (Bern) selbst geoeffnet: Fokus auf Bauphysik, Energieeffizienz, Holzbau-Fachwissen; keine Erwaehnung von Bauteil-Wiederverwendung oder Kreislaufwirtschaft. Suchtreffer zu 'weber.therm circle' betreffen den Baustoffhersteller Saint-Gobain Weber, nicht Weber Energie und Bauphysik AG -- andere Organisation, kein Rueckschluss zulaessig.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U45",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Zehnder Holz und Bau\" Winterthur",
+              "\"Zehnder Holz\" Wiederverwendung reuse Bauteile Kreislaufwirtschaft"
+            ],
+            "geprueft_urls": [
+              "https://zehnder-holz.ch/"
+            ],
+            "begruendung": "Eigene Website selbst geoeffnet: Holzbau-Generalunternehmen mit Fokus auf 'Gemeinsam Bauen mit Holz'; keine Erwaehnung von Bauteil-Wiederverwendung oder Kreislaufwirtschaft.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U01",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"2hs\" reuse Wiederverwendung Bauteile Zirkularität site:2hs.com",
+              "2hs.com Zirkularität Wiederverwendung Reuse Architektur Basel",
+              "\"2hs\" Architektur Basel Wiederverwendung reuse Büro"
+            ],
+            "geprueft_urls": [
+              "https://www.2hs.com",
+              "https://2hs.com/"
+            ],
+            "begruendung": "Gespeicherte primary_source_url (www.2hs.com) und Domain-Wurzel (2hs.com) liefern beide HTTP 404. Anschliessende D2-Suchen ergaben keinen plausiblen Treffer, der Name und Ort/Taetigkeit von 2hs eindeutig zuordnet. Kein Nachweis einer Einstellung (kein Nachfolger gefunden), daher nicht_pruefbar statt defunkt.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_404",
+                "beleg_url": "https://2hs.com/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U05",
+            "actor_degree": "bezug",
+            "beleg_url": "https://amstein-walthert.ch/de/blog/graue-energie-im-fokus-wie-die-kreislaufwirtschaft-das-bauen-verandert/",
+            "beleg_zitat": "Kreislaufgerechte Bauplanung: Beratung und Planung nach Prinzipien des zirkulaeren Bauens - z.B. Entwicklung von Rueckbau- und Wiederverwendungskonzepten",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Amstein+Walthert Kreislaufwirtschaft Wiederverwendung Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://www.amstein-walthert.ch/",
+              "https://amstein-walthert.ch/de/blog/graue-energie-im-fokus-wie-die-kreislaufwirtschaft-das-bauen-verandert/",
+              "https://amstein-walthert.ch/de/kompetenzen/"
+            ],
+            "begruendung": "Startseite und Kompetenzen-Seite nennen Bauteil-Wiederverwendung nicht explizit (daher kein kern). Ein Blogbeitrag der eigenen Domain beschreibt jedoch konkret die eigene Dienstleistung 'Kreislaufgerechte Bauplanung' inkl. Rueckbau- und Wiederverwendungskonzepten -- als News/Blog-Fundstelle laut Kalibrierung nicht kern-faehig, aber ausreichend fuer bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 31,
+        "kappe_erreicht": false,
+        "cc": "CH",
+        "assigned_nodes": [
+          "U37",
+          "U41",
+          "F09",
+          "N03",
+          "U43",
+          "U45",
+          "U01",
+          "U05"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "CH-s04",
+        "nodes": [
+          {
+            "tid": "M01",
+            "name": "Archipel Sion Ressourcerie",
+            "actor_degree": "kern",
+            "beleg_url": "https://archipelsion.ch/ressourcerie/inventaire/",
+            "beleg_zitat": "Inventaire • L'archipel · Tiers-lieu · Sion",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://archipelsion.ch/ressourcerie/inventaire/"
+            ],
+            "begruendung": "Eigene, dauerhaft gefuehrte Seite 'Ressourcerie/Inventaire' listet gebrauchte Baumaterialien (Fenster, Parkett, Sanitaer etc.) in Qualitaetsstufen zum Verkauf -- Reuse ist als dauerhafte Leistungslinie dargestellt, nicht als Einzelprojekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M02",
+            "name": "Baumatpool.ch",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.baumatpool.ch/de/",
+            "beleg_zitat": "Die Schweizer Materialbörse – Baumaterialien und Restposten einfach finden, kaufen und verkaufen.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.baumatpool.ch/de/"
+            ],
+            "begruendung": "Startseite positioniert die Plattform dauerhaft als Materialboerse fuer Baumaterialien/Restposten -- Betrieb der Boerse ist der Geschaeftszweck selbst.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M07",
+            "name": "Bauteilverwertung Köppel & Klein",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.bauteilverwertung.ch/",
+            "beleg_zitat": "Aus alt mach neu – Gebrauchte Bauteile und was daraus wieder gemacht wurde",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.bauteilverwertung.ch/"
+            ],
+            "begruendung": "Startseite zeigt Rettung und Wiedereinbau alter Bauteile (Balken, Gelaender, Tueren, Tore, Fachwerkhaeuser) als Kerngeschaeft -- dauerhafte Leistungslinie.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M06",
+            "name": "Bauteilvermittlung Zürichsee-Oberland",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.btvz.ch/angebote/",
+            "beleg_zitat": "Angebotene Bauteile",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.btvz.ch/angebote/"
+            ],
+            "begruendung": "Eigene Angebotsseite listet gebrauchte Bauteile aus Abbruch/Sanierung (Kuechen, Baeder, Fenster, Treppen) als dauerhaftes Angebot der Bauteilvermittlung.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M15",
+            "name": "Stiftung Chance BauTeile Zürich / Glattbrugg",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.chance.ch/dienstleistungen/bauteile",
+            "beleg_zitat": "Bauteile und Baumaterial im Kreislauf behalten – Ökologisch und wirtschaftlich vorteilhaft",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.chance.ch/dienstleistungen/bauteile"
+            ],
+            "begruendung": "Dedizierte Dienstleistungsseite 'Bauteile' beschreibt Demontage aller Bauteile/Baumaterial fuer die Wiederverwendung als dauerhafte Leistungslinie der Stiftung.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "X02",
+            "name": "Circular Economy Switzerland",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.circular-economy-switzerland.ch/en",
+            "beleg_zitat": "AKB | CES Circle Bern @ TecLab Burgdorf \"Zirkuläres Weiterbauen\"",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.circular-economy-switzerland.ch/en"
+            ],
+            "begruendung": "CES ist ein sektorenuebergreifendes Kreislaufwirtschafts-Netzwerk ohne eigene dauerhafte Bauteil-Reuse-Leistungslinie; Baubezug erscheint nur ueber ein benanntes Einzelevent ('Zirkulaeres Weiterbauen') und einen CAS-Kurs zu Reemploi -- daher bezug statt kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "X01",
+            "name": "Circular Construction Catalyst 2033",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.circularconstructioncatalyst.ch/",
+            "beleg_zitat": "zirkuläres Bauen und Bewirtschaften im Hoch- und Tiefbau in der Schweiz bis 2033 als das „neue Normal\" zu etablieren",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.circularconstructioncatalyst.ch/"
+            ],
+            "begruendung": "Eigene Ueber-uns-Seite definiert die Etablierung von zirkulaerem Bauen (inkl. Bauteil-/Ressourcenkreislauf) bis 2033 als alleinigen, dauerhaften Daseinszweck der Koordinationsstelle.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "S03",
+            "name": "Madaster",
+            "actor_degree": "kern",
+            "beleg_url": "https://madaster.ch/en/",
+            "beleg_zitat": "It also enables determining whether materials and products can be reused after disassemblage.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://madaster.ch/en/"
+            ],
+            "begruendung": "Eigene Schweizer Madaster-Seite stellt die Materialpass-Plattform dar, die Wiederverwendbarkeit von Bauteilen nach Rueckbau feststellt -- dauerhafte Kernleistung, nicht Einzelprojekt.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 13,
+        "kappe_erreicht": false,
+        "cc": "CH",
+        "assigned_nodes": [
+          "M01",
+          "M02",
+          "M07",
+          "M06",
+          "M15",
+          "X02",
+          "X01",
+          "S03"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "CH-s05",
+        "nodes": [
+          {
+            "tid": "U12",
+            "name": "Ecovative",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.ecovative.com/"
+            ],
+            "begruendung": "Eigene Seite beschreibt Umwandlung von Holz-/Sojaabfaellen in Mycel-Materialien (Verpackung, Textil) und Kompostierbarkeit. Kein Bauteilbezug, kein Baukontext, keine Wiederverwendung von Bauteilen -- reine Rohstoffverwertung. Faellt unter 'Recycling/Rezyklat/Abfall ohne Bauteilbezug' und ist damit von kern ausgeschlossen; auch kein benanntes Reuse-Projekt mit Partnern fuer bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F04",
+            "name": "EPFL",
+            "actor_degree": "kern",
+            "beleg_url": "https://epfl.ch/labs/sxl/index-html/research/ready-for-reuse",
+            "beleg_zitat": "we are paving the way for the upcycling reuse of load-bearing components in buildings",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"EPFL\" building component reuse OR \"réemploi\" circular construction program"
+            ],
+            "geprueft_urls": [
+              "https://www.epfl.ch/",
+              "https://epfl.ch/labs/sxl/index-html/research/ready-for-reuse"
+            ],
+            "begruendung": "Der urspruengliche Stammlink (epfl.ch Hauptseite) ist zu generisch, daher gezielte Suche. Die Structural Xploration Lab (SXL) ist ein EPFL-Labor mit dauerhaft platzierter Forschungslinie 'Ready for Reuse' auf epfl.ch-Subdomain (nicht News/Einzelprojekt, sondern institutionelle Forschungslinie inkl. Kurs AR-497 und mehreren Projekten). Erfuellt kern-Kriterium.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F05",
+            "name": "ETH Zürich",
+            "actor_degree": "bezug",
+            "beleg_url": "https://swircular.ethz.ch/",
+            "beleg_zitat": "Homepage – SWIRCULAR Project | ETH Zurich",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://ethz.ch/en.html",
+              "https://swircular.ethz.ch/the-project.html",
+              "https://swircular.ethz.ch/"
+            ],
+            "begruendung": "swircular.ethz.ch beschreibt ein von Innosuisse gefoerdertes Konsortialprojekt zu hoeherwertigen Circular-Strategien (reuse, repair, refuse) im Bauwesen; Kontaktperson ist ETH-Lecturer, Seitentitel nennt 'SWIRCULAR Project | ETH Zurich'. Da dies ein einzelnes, benanntes Konsortialprojekt ist (nicht eine dauerhafte institutionelle Leistungslinie von ETH als Ganzes), gilt bezug statt kern (Ausschlusskriterium 'einzelnes Reuse-Projekt als einzige Fundstelle'). Partnerlogos ohne Text wurden nicht als Zitat verwendet.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M08",
+            "name": "GGZ@WORK Laden 2 Bauteile Zug",
+            "actor_degree": "kern",
+            "beleg_url": "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+            "beleg_zitat": "im LADEN 2 - Bauteile im 1. OG finden Sie eine grosse Auswahl an gut erhaltenen Occasionsbauteilen",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile"
+            ],
+            "begruendung": "Eigene, dauerhaft platzierte Ladenseite fuer gebrauchte/aufbereitete Bauteile aus Rueckbau/Renovation (Kuechen, Fenster, Tueren, Sanitaer). Eindeutig kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F06",
+            "name": "Gramazio Kohler Research",
+            "actor_degree": "bezug",
+            "beleg_url": "https://gramaziokohler.arch.ethz.ch/",
+            "beleg_zitat": "Lost and Bound: Adaptive Detailing with Robotic Additive Joining for Reclaimed Steel",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://gramaziokohler.arch.ethz.ch/"
+            ],
+            "begruendung": "Auf der eigenen Seite ist unter Publikationen (RobArch 2024) ein einzelner Beitrag zu wiederverwendetem/reclaimed Stahl gelistet, mit Gramazio Kohler Research als Autorenschaft genannt. Kein dauerhafter Programm-/Leistungsbereich zu Reuse, sondern einzelne benannte Publikation/Projekt -> bezug, nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U19",
+            "name": "kaufmann zimmerei",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://kaufmann-zimmerei.de",
+              "https://neu2024.kaufmann-zimmerei.de/"
+            ],
+            "begruendung": "Gespeicherte primary_source_url leitet (301) auf neu2024.kaufmann-zimmerei.de weiter (kein Ausfall, nur Domainumzug, daher kein Flag defunkt). Seite beschreibt Zimmereileistungen (Holzbau, Hallenbau, Dachausbau, Sanierung) ohne jeden Hinweis auf Wiederverwendung von Bauteilen/Materialien.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U20",
+            "name": "KIBAG",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"KIBAG\" Wiederverwendung Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://www.kibag.ch/"
+            ],
+            "begruendung": "Eigene Seite und Suchtreffer zeigen ausschliesslich Recyclingbeton/Recyclingbaustoffe und mineralische Rueckbau-/Aushubmaterial-Verwertung (Kreislaufwirtschaft bei Baustoffen), aber keinen Bauteilbezug (keine Wiederverwendung ganzer Bauteile wie Fenster, Tueren etc.). Faellt unter 'Recycling/Rezyklat/Abfall ohne Bauteilbezug' -> ausgeschlossen von kern; kein benanntes Reuse-Projekt mit Partnern fuer bezug gefunden.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U22",
+            "name": "Magna Glaskeramik",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.magna-glaskeramik.de/"
+            ],
+            "begruendung": "Eigene Seite beschreibt Glaskeramik-Produkte, die zu 100% aus recyceltem Altglas (Solarzellenreste, Flaschenglas) hergestellt werden ('konsequentes Upcycling'). Dies ist Materialrecycling/Upcycling von Glas zu neuen Produkten, kein Bauteilbezug (keine Wiederverwendung bestehender Bauteile). Faellt unter Ausschlusskriterium 'Recycling/Rezyklat/Abfall ohne Bauteilbezug'.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 15,
+        "kappe_erreicht": false,
+        "cc": "CH",
+        "assigned_nodes": [
+          "U12",
+          "F04",
+          "F05",
+          "M08",
+          "F06",
+          "U19",
+          "U20",
+          "U22"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "CH-s06",
+        "nodes": [
+          {
+            "tid": "U27",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Nimbus\" Schweiz Bauteile",
+              "\"Nimbus\" Bauteile Wiederverwendung Schweiz",
+              "\"nimbus.com\" company what"
+            ],
+            "geprueft_urls": [
+              "https://www.nimbus.com"
+            ],
+            "begruendung": "Gespeicherte primary_source_url https://www.nimbus.com liefert wiederholt HTTP 403, daher nicht direkt einsehbar. Zwei Suchen nach einem Schweizer Bauteil-/Reuse-Unternehmen namens 'Nimbus' ergaben keinen plausiblen Treffer (Ort/Bezug fehlt im Datensatz, gefundene Nimbus-Firmen sind eine Investmentgesellschaft, ein Leuchtenhersteller und ein Bootshersteller, keiner mit Bauteil-Wiederverwendungsbezug). Kein Verfahrensschritt ergab einen belastbaren Fund -> ohne_beleg.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://www.nimbus.com"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U28",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.nomol.ag/uber-uns",
+            "beleg_zitat": "Sie entwickelt und betreibt innovative, kreislaufwirtschaftliche Geschäftsmodelle und Prozesse zur Rückgewinnung, Aufbereitung und Wiederverwendung von Baukomponenten",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.nomol.ag/uber-uns"
+            ],
+            "begruendung": "Gespeicherte Ueber-uns-Seite beschreibt Wiederverwendung von Baukomponenten explizit und dauerhaft als Kerngeschaeft (Geschaeftsmodell, nicht News/Einzelprojekt) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U31",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.parabase.eu/",
+            "beleg_zitat": "Areal Walkeweg Nord Basel «Re-use» Competition, 2023. 1st Prize. Ongoing",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "PARABASE.ch Zürich Architektur Reuse"
+            ],
+            "geprueft_urls": [
+              "https://www.parabase.ch",
+              "https://www.parabase.eu/",
+              "https://www.parabase.eu/about"
+            ],
+            "begruendung": "Gespeicherte Domain parabase.ch ist DNS-tot; Domainwurzel-Recherche (D3) fuehrte zu parabase.eu, der aktuellen Studio-Seite. Die permanente Projektliste des Studios zeigt mehrere namentlich benannte Reuse-Wettbewerbsprojekte (u.a. 'Re-use'-Wettbewerb Walkeweg Nord, 1. Preis) als durchgehende Praxislinie, nicht als News/Einzelreferenz -> kern. Die separate About-Seite enthaelt kein explizites Missionsstatement, die Projektseite selbst traegt aber das Urteil.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "O03",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Stiftung PWG\" Wiederverwendung Bauteile Projekt",
+              "\"PWG\" Zürich Wiederverwendung Bauteile Projekt Rückbau"
+            ],
+            "geprueft_urls": [
+              "https://www.pwg.ch/",
+              "https://www.pwg.ch/bauprojekte",
+              "https://www.pwg.ch/wir-fuer-sie",
+              "https://www.pwg.ch/fileadmin/user_upload/PDF/4_Stiftung/PWG_GB_25_doppel.pdf"
+            ],
+            "begruendung": "Startseite, Bauprojekte-Seite, Wir-fuer-Sie-Seite und der Geschaeftsbericht 2025 (PDF, technisch nicht textdurchsuchbar) wurden gepruft; keine davon enthaelt eine woertlich belegbare Aussage zu Bauteil-Wiederverwendung oder ein benanntes Reuse-Projekt der Stiftung. Verfahren vollstaendig durchlaufen -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U39",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.syphon.ch/",
+            "beleg_zitat": "Wir sind spezialisiert auf die Beurteilung, die Erfassung, den Ausbau, die Aufbereitung und den Verkauf von wiederverwendbaren Materialen und Bauteilen.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.syphon.ch/"
+            ],
+            "begruendung": "Gespeicherte Seite beschreibt Bauteil-Wiederverwendung (Erfassung, Ausbau, Aufbereitung, Verkauf wiederverwendbarer Bauteile) explizit als dauerhaften Betriebszweck inkl. eigenem Bauteilladen -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U11",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.tarkett-group.com/en/climate-circular-economy/circular-economy/",
+            "beleg_zitat": "It all starts with the collection of end-of-use flooring for recycling. Once sorted, these used floors are processed using unique technologies that separate the components and remove the adhesive.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Tarkett ReStart take-back recycling circularity flooring"
+            ],
+            "geprueft_urls": [
+              "https://www.tarkett.com/",
+              "https://www.tarkett.de/",
+              "https://www.tarkett-group.com/en/climate-circular-economy/circular-economy/",
+              "https://commercial.tarkett.com/sustainability/restart"
+            ],
+            "begruendung": "Gespeicherte primary_source_url leitet auf tarkett.de weiter, das keine Circularity-Inhalte auf der Startseite zeigt. Die konzernweite Circular-Economy-Seite (tarkett-group.com) beschreibt das dauerhafte ReStart-Ruecknahme- und Recyclingprogramm fuer Bodenbelaege als festen Bestandteil des Geschaeftsmodells -> kern. Die produktspezifische ReStart-Unterseite war per HTTP 403 nicht direkt abrufbar (Flag).",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://commercial.tarkett.com/sustainability/restart"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M14",
+            "actor_degree": "kern",
+            "beleg_url": "https://hiltbrunnerag.ch/reuse-recycling.html",
+            "beleg_zitat": "ReUse - direkte Wiederverwendung: Verkauf von wiederverwendbaren Gebrauchtwaren und Baumaterialien",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.wiederverwendung.ch/",
+              "https://hiltbrunnerag.ch/reuse-recycling.html"
+            ],
+            "begruendung": "Gespeicherte URL wiederverwendung.ch leitet dauerhaft (301) auf die Betreiberseite hiltbrunnerag.ch/reuse-recycling.html weiter, die das 'ReUse-Recycling-Center Riedtwil' (Hopferenstrasse 2, 3475 Riedtwil) samt Online-Shop wiederverwendung.ch fuer gebrauchte Bauteile/Baumaterialien als dauerhaftes Geschaeftsangebot beschreibt -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 24,
+        "kappe_erreicht": false,
+        "cc": "CH",
+        "assigned_nodes": [
+          "U27",
+          "U28",
+          "U31",
+          "O03",
+          "U39",
+          "U11",
+          "M14"
+        ],
+        "assigned_edges": []
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "F08",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.epfl.ch/labs/sxl/",
+        "beleg_zitat": "we are paving the way for the upcycling reuse of load-bearing components in buildings, hence contributing to the adoption of a circular economy by the construction industry",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.epfl.ch/labs/sxl/"
+        ],
+        "begruendung": "Eigene, dauerhaft platzierte Institutsseite (Leistungslinie) des EPFL-Labors beschreibt Bauteil-Wiederverwendung als zentralen Forschungsschwerpunkt, nicht als Einzelprojekt-Referenz -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-c07"
+      },
+      {
+        "tid": "O01",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.smartlivinglab.ch/en/projects/recrete-reused-of-cut-concrete/",
+        "beleg_zitat": "Brütting, Jan; Bastien-Masse Maléna; Devènes, Julie; Grangeot, Maxence; Küpfer, Célia; Fivet, Corentin",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Re:Crete\" research team Switzerland concrete reuse",
+          "\"Re:Crete\" équipe recherche EPFL réemploi béton"
+        ],
+        "geprueft_urls": [
+          "https://www.smartlivinglab.ch/en/projects/recrete-reused-of-cut-concrete/",
+          "https://www.epfl.ch/schools/enac/recrete/",
+          "https://www.sciencedirect.com/science/article/pii/S2352012422005720",
+          "https://www.construction21.org/france/case-studies/h/re-crete-footbridge-en.html"
+        ],
+        "begruendung": "Keine eigene Seite des Forschungsteams als Organisation; die Smart-Living-Lab-Projektseite zum RE:CRETE-Bauteil-Wiederverwendungsprojekt nennt die Teammitglieder namentlich unter der Rubrik 'Team' -> Namentliche Nennung in einer benannten Reuse-Sache = bezug. ScienceDirect- und Construction21-Quellen waren per 403 nicht abrufbar (Flag nicht_pruefbar).",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://www.sciencedirect.com/science/article/pii/S2352012422005720"
+          },
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://www.construction21.org/france/case-studies/h/re-crete-footbridge-en.html"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-c07"
+      },
+      {
+        "tid": "P9",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.epfl.ch/schools/enac/recrete/",
+        "beleg_zitat": "To demonstrate this, the Sructural Xploration Lab (SXL) has built the RE:CRETE prototype, a footbridge built from 25 reused concrete blocks.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.epfl.ch/schools/enac/recrete/"
+        ],
+        "begruendung": "Projektknoten: die eigene ENAC/EPFL-Projektseite dokumentiert die Bauteil-Wiederverwendung (25 wiederverwendete Betonblöcke aus einem Rückbau, zu einer vorgespannten Bogenbrücke zusammengesetzt) als zentralen Gegenstand des Bauvorhabens -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-c07"
+      },
+      {
+        "tid": "U02",
+        "name": "AFC Basel",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"AFC Basel\" Schweiz",
+          "\"AFC Basel\" reuse OR Wiederverwendung OR Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://www.afc.ch/"
+        ],
+        "begruendung": "AFC AG (Bauphysik/Brandschutz/Energieeffizienz, Sitz Zürich/Basel) zeigt auf afc.ch keine Reuse-/Kreislaufwirtschafts-Leistungslinie; Suche nach Bezug zu Bauteil-Wiederverwendung ergab keinen Treffer zu dieser Organisation, nur allgemeine Basel-Circular-Ergebnisse. Kein plausibler Reuse-Bezug gefunden.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "U03",
+        "name": "AG Landschaftsarch.",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"AG Landschaftsarch.\" Schweiz",
+          "\"AG für Landschaft\" Landschaftsarchitekten Zürich Wiederverwendung"
+        ],
+        "geprueft_urls": [],
+        "begruendung": "Name zu generisch, um ohne Ortsangabe eindeutig einer Organisation zugeordnet zu werden (mehrere Schweizer Landschaftsarchitektur-AGs moeglich: AG fuer Landschaft, NOA, Studio Leaf, gruenwerk1, vetschpartner, Ganz, manoa u.a.). Name allein traegt kein Urteil (Regel 3); kein plausibler eindeutiger Treffer, keine Reuse-Belege identifizierbar.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "U06",
+        "name": "Anima Engineering AG",
+        "actor_degree": "kern",
+        "beleg_url": "https://anima.engineering/nachhaltigkeit",
+        "beleg_zitat": "Wir testen neue Materialen und stehen für den sinnvollen Umgang mit den Themen Kreislaufwirtschaft und ReUse ein.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Anima Engineering AG Schweiz",
+          "\"Anima Engineering\" Wiederverwendung OR Reuse OR Kreislaufwirtschaft Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://anima.engineering/",
+          "https://anima.engineering/nachhaltigkeit"
+        ],
+        "begruendung": "Eigene Nachhaltigkeits-Seite von Anima Engineering AG (HLKKSE-Planungsbuero Basel) nennt Kreislaufwirtschaft und ReUse dauerhaft als Teil des eigenen Leistungsverstaendnisses, nicht als Einzelprojekt oder Fremdverzeichnis.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "U07",
+        "name": "Balzer Ingenieure AG",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Balzer Ingenieure AG Schweiz Wiederverwendung Bauteile",
+          "\"Balzer Ingenieure\" \"Wiederverwendung\" OR \"Reuse\" OR \"Bauteile\" site:balzer-ingenieure.ch"
+        ],
+        "geprueft_urls": [],
+        "begruendung": "Balzer Ingenieure AG (Gebaeudetechnik/HLKS, Chur/Winterthur, seit 2024 Teil der BKW) zeigt in den durchsuchten Ergebnissen keine Reuse- oder Bauteil-Wiederverwendungs-Inhalte. Kein Treffer zu Wiederverwendung/Bauteile auf der eigenen Domain.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "U09",
+        "name": "Bischof Föhn Architektur",
+        "actor_degree": "bezug",
+        "beleg_url": "https://meter-magazin.ch/ch/architektur/19924-aus-wohnungen-wird-ein-kindergarten",
+        "beleg_zitat": "Mit dem Umbauprojekt wollten sie ein Pionierprojekt der Kreislaufwirtschaft schaffen. Der Einsatz von möglichst vielen Re-Use-Bauteilen war dabei entscheidend.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Bischof Föhn\" Architektur Basel Wiederverwendung Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://www.bf-architekten.ch/",
+          "https://www.bf-architekten.ch/info",
+          "https://meter-magazin.ch/ch/architektur/19924-aus-wohnungen-wird-ein-kindergarten"
+        ],
+        "begruendung": "Auf der eigenen Seite bf-architekten.ch findet sich keine dauerhafte Reuse-Leistungslinie (Navigation nur Projekte/News/Info, keine Re-Use-Erwaehnung) -> kein kern. Das Fachmagazin meter-magazin.ch nennt Bischof Föhn jedoch namentlich als beauftragtes Buero fuer das benannte Reuse-Pilotprojekt Kindergarten (Umnutzung, Re-Use-Bauteile) -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "U10",
+        "name": "Caretta+Weidmann",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Caretta+Weidmann\" Fassade Wiederverwendung Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://caretta-weidmann.ch/en/overall-services/"
+        ],
+        "begruendung": "Caretta Weidmann Baumanagement AG (Zuerich/Basel/St. Moritz) beschreibt auf der Leistungsseite Generalplanung/Baumanagement ohne Erwaehnung von Reuse, Kreislaufwirtschaft oder Bauteil-Wiederverwendung.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "F01",
+        "name": "Circular Construction Lab",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Circular Construction Lab\" Schweiz",
+          "\"Circular Construction Lab\" Bauteile Wiederverwendung -site:cea.ibi.ethz.ch",
+          "\"Circular Construction Lab\" Zürich OR Basel OR Schweiz -Cornell"
+        ],
+        "geprueft_urls": [],
+        "begruendung": "Unter dem exakten Namen 'Circular Construction Lab' findet sich in der Schweiz keine eigenstaendige Organisation; das einzige Ergebnis mit diesem Namen ist das Circular Construction Lab von Felix Heisel an der Cornell University (USA). Ohne bestaetigten CH-Bezug wird keine Identitaet mit einer US-Organisation unterstellt (Regel 3) -> ohne_beleg statt spekulativer falsches_land-Zuordnung.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "F02",
+        "name": "Circular Engineering for Architecture / ETH Zürich",
+        "actor_degree": "kern",
+        "beleg_url": "https://cea.ibi.ethz.ch/about_us.html",
+        "beleg_zitat": "The Chair of Circular Engineering for Architecture (CEA) develops research on matching reused architectural materials & projects through digitalization for circularity.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Circular Engineering for Architecture\" ETH Zürich"
+        ],
+        "geprueft_urls": [
+          "https://cea.ibi.ethz.ch/",
+          "https://cea.ibi.ethz.ch/about_us.html"
+        ],
+        "begruendung": "Eigene ETH-Lehrstuhlseite (Prof. Catherine De Wolf) stellt Reuse/Zirkularitaet von Bauteilen dauerhaft als Kern des Forschungsprogramms dar (About-us-Seite, nicht News/Einzelreferenz).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s01"
+      },
+      {
+        "tid": "P1",
+        "name": "ELEMENTA Walkeweg",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.bs.ch/medienmitteilungen/fd/2023-entwicklungsareal-walkeweg-kanton-baut-ueber-100-preisguenstige-wohnungen-unter-einsatz-von-wiederverwendeten-bauteilen",
+        "beleg_zitat": "Indem Bauteile aus rückgebauten kantonalen Liegenschaften wiederverwendet werden, wird sogenannte «graue Energie» eingespart",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"ELEMENTA\" \"Walkeweg\" Wiederverwendung",
+          "Walkeweg Basel Wettbewerb Bauteil-Wiederverwendung Re-Use"
+        ],
+        "geprueft_urls": [
+          "https://www.bs.ch/medienmitteilungen/fd/2023-entwicklungsareal-walkeweg-kanton-baut-ueber-100-preisguenstige-wohnungen-unter-einsatz-von-wiederverwendeten-bauteilen",
+          "https://architekturbasel.ch/nemausus-effekt-dank-zeichenhaftem-reuse-am-walkeweg-alle-rangierten-projekte-im-ueberblick/"
+        ],
+        "begruendung": "Kantonales Wettbewerbsprojekt Basel-Stadt (Baufeld C+D) mit Bauteil-Wiederverwendung als explizitem Wettbewerbsthema; Kanton bestaetigt auf eigener, dauerhafter Regierungsseite, dass Bauteile aus rueckgebauten kantonalen Liegenschaften (Parkhaus Lysbuechel) fuer Tragwerk und Fassade wiederverwendet werden. Projektknoten (D9): Bauvorhaben dokumentiert Reuse -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "U15",
+        "name": "GTI Engineering",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"GTI Engineering\" Schweiz Gebäudetechnik",
+          "\"GTI Engineering\" reuse OR Wiederverwendung OR Kreislaufwirtschaft Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://gtiag.ch/",
+          "https://gtiag.ch/dienstleistungen"
+        ],
+        "begruendung": "GTI Engineering AG (Bern/Zuerich) ist ein HLKSE-Gebaeudetechnikplaner. Eigene Leistungsseite (gtiag.ch/dienstleistungen) nennt Heizung, Lueftung, Klima, Kaelte, Sanitaer, Elektro, Gebaeudeautomation, Photovoltaik -- keine Erwaehnung von Bauteil-Wiederverwendung oder Zirkularitaet. Zwei Suchen ohne plausiblen Reuse-Treffer -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "M09",
+        "name": "Historisches Bauteillager Ostschweiz (Denkmal Stiftung Thurgau)",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.historisches-bauteillager.ch/",
+        "beleg_zitat": "Die Wiederverwendung von historischen Bauteilen gewinnt im Sinne einer nachhaltigen Baukultur an Bedeutung.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Historisches Bauteillager Ostschweiz\" Denkmalpflege Thurgau",
+          "Historisches Bauteillager Ostschweiz Wiederverwendung"
+        ],
+        "geprueft_urls": [
+          "https://www.historisches-bauteillager.ch/",
+          "https://www.denkmalstiftung-thurgau.ch/bauteillager.html"
+        ],
+        "begruendung": "Von der Denkmal Stiftung Thurgau betriebenes Bauteillager in Schoenenberg an der Thur; eigene Seite stellt Rettung und Wiederverwendung historischer Bauteile dauerhaft als Betriebszweck dar (Depot, seit 2005 in Betrieb, seit 2017 auch mit Denkmalpflege SG). Klarer kern-Fall analog SalvoWEB-Kalibrierung.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "P5",
+        "name": "K.118 (Kopfbau Halle 118)",
+        "actor_degree": "kern",
+        "beleg_url": "https://insitu.ch/projekte/196-k118-kopfbau-halle-118",
+        "beleg_zitat": "Die Tragstruktur stammt von einem rückgebauten Stahlskelettbau aus Basel",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"K.118\" \"Kopfbau Halle 118\" Winterthur Wiederverwendung Bauteile",
+          "K.118 Winterthur reuse building components"
+        ],
+        "geprueft_urls": [
+          "https://insitu.ch/projekte/196-k118-kopfbau-halle-118",
+          "https://zirkular.net/de/projekt/k-118-kopfbau-halle-118/"
+        ],
+        "begruendung": "Vielfach dokumentiertes Referenzprojekt fuer zirkulaeres Bauen (baubuero in situ, 2021): Tragstruktur, Fassade, Fenster und Bodenbelag ueberwiegend aus wiederverwendeten Bauteilen (Rueckbau Stahlskelettbau Basel, Bueroturm Zuerich, Sulzer-Werk 1). Projektknoten (D9): Bauvorhaben dokumentiert Reuse zentral -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "U26",
+        "name": "Monotti Ingegneri",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.metalocus.es/en/news/parabase-wins-competition-residential-development-reuse-building-elements-areal-walkeweg-nord-basel",
+        "beleg_zitat": "Structural Engineering.- Monotti Ingegneri Consulenti SA: Mario Monotti.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Monotti\" Ingegneri Bauteil Wiederverwendung Tragwerk Schweiz reuse",
+          "\"Walkeweg\" Parabase Bauingenieur Tragwerksplaner Team Wettbewerb"
+        ],
+        "geprueft_urls": [
+          "https://www.metalocus.es/en/news/parabase-wins-competition-residential-development-reuse-building-elements-areal-walkeweg-nord-basel",
+          "https://competitions.espazium.ch/de/wettbewerbe/decides/wohnuberbauung-baufelder-c-d-mit-bauteil-wiederverwendung-areal-walkeweg-nord-basel"
+        ],
+        "begruendung": "Monotti Ingegneri Consulenti SA war Tragwerksplaner im mit Parabase siegreichen Team fuer den Wettbewerb 'Wohnueberbauung Baufelder C+D mit Bauteil-Wiederverwendung (Re-Use), Areal Walkeweg Nord Basel' (Projekt ELEMENTA) -- benannte Reuse-Sache mit Namensnennung -> bezug. Keine eigene Reuse-Leistungslinie auf einer Monotti-eigenen Seite gefunden, daher nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "U30",
+        "name": "Oxara AG",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Oxara\" AG Baustoff Lehm reuse Wiederverwendung",
+          "\"Oxara\" \"K.118\" OR \"Walkeweg\" reuse"
+        ],
+        "geprueft_urls": [
+          "https://oxara.earth/de-ch/home.html",
+          "https://circularhub.ch/magazin/details/oxara-bauabfaelle-als-ressource"
+        ],
+        "begruendung": "Oxara stellt zementfreie Bindemittel her, die Aushub- und Mischabbruchmaterial (Abfall) zu neuem Baustoff verarbeiten -- eigene Seite spricht von 'ressourcenschonender Nutzung von Abfallmaterialien aus der Bauindustrie', nicht von Bauteil-Wiederverwendung. Gemaess Regelwerk ist Recycling/Rezyklat/Abfall ohne Bauteilbezug von kern ausgeschlossen. Keine Nennung in einer benannten Bauteil-Reuse-Sache (K.118, Walkeweg) gefunden -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "U34",
+        "name": "Pérez Schmidlin",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "https://www.northdata.de/P%C3%A9rez+Schmidlin+Bauingenieure+GmbH,+Z%C3%BCrich/CHE-340.053.754",
+        "beleg_zitat": "Liquidation · Präsident des Verwaltungsrats: Placido Perez · Liquidator: Placido Perez",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Pérez\" \"Schmidlin\" Ingenieure Tragwerksplanung reuse Bauteilwiederverwendung",
+          "\"Pérez Schmidlin\" Ingenieure Bauingenieurbüro Zürich"
+        ],
+        "geprueft_urls": [
+          "https://www.perezschmidlin.ch/unternehmen/",
+          "https://www.northdata.de/P%C3%A9rez+Schmidlin+Bauingenieure+GmbH,+Z%C3%BCrich/CHE-340.053.754"
+        ],
+        "begruendung": "Perez Schmidlin Bauingenieure GmbH (Zuerich, gegruendet 2015) wurde per Beschluss vom 06.10.2023 liquidiert und am 05.09.2025 aus dem Handelsregister geloescht; eigene Domain perezschmidlin.ch ist nicht mehr erreichbar (DNS tot, D3 gepr. Domain-Wurzel ebenfalls tot). Keine Reuse-Bezuege in Drittquellen (K.118, Walkeweg) gefunden -> ohne_beleg mit Flag defunkt.",
+        "flags": [
+          {
+            "flag": "defunkt",
+            "beleg_url": "https://www.northdata.de/P%C3%A9rez+Schmidlin+Bauingenieure+GmbH,+Z%C3%BCrich/CHE-340.053.754",
+            "beleg_zitat": "Löschung: 05.09.2025",
+            "stand_jahr": "2025",
+            "nachfolger_tid": ""
+          },
+          {
+            "flag": "nicht_pruefbar",
+            "beleg_url": "https://www.perezschmidlin.ch/",
+            "beleg_zitat": "",
+            "hindernis": "dns_tot"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "U35",
+        "name": "Repoxit AG",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Repoxit AG\" Wiederverwendung Bauteile",
+          "\"Repoxit\" \"K.118\" OR \"Kopfbau Halle 118\" Winterthur"
+        ],
+        "geprueft_urls": [
+          "https://www.repoxit.com/de/",
+          "https://de.kompass.com/c/repoxit-ag/ch021785/"
+        ],
+        "begruendung": "Repoxit AG (Effretikon) ist Anbieterin fugenloser Bodenbelaege (Beton-, Kunstharz-, Designbelaege). Eigene Seite repoxit.com nennt keine Bauteil-Wiederverwendung oder Kreislaufwirtschaft. Keine Nennung im Kontext K.118 oder anderer Reuse-Projekte gefunden -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s02"
+      },
+      {
+        "tid": "U37",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "https://www.moneyhouse.ch/en/company/senn-technology-ag-21385217851",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Senn Technology AG\" Schweiz",
+          "\"Senn Technology\" OR \"Senn AG\" Wiederverwendung Bauteile reuse",
+          "\"Senn Technology AG\" zefix St. Gallen"
+        ],
+        "geprueft_urls": [
+          "https://www.swiss-arc.ch/de/anbieter/senn-ag/41096660",
+          "https://www.moneyhouse.ch/en/company/senn-technology-ag-21385217851"
+        ],
+        "begruendung": "Kein Treffer, der Senn Technology AG (St. Gallen, CHE-328.619.260) selbst mit Bauteil-Wiederverwendung verbindet. Suchtreffer zu Kreislaufbauen/HORTUS betreffen SENN Gruppe (senn.com) bzw. SENN AG Oftringen (Stahl-/Metallbau) -- andere Rechtstraeger, nicht namensgleich mit dem hier gefuehrten tid; kein Rueckschluss zulaessig (Regel 3). Moneyhouse-Detailseite mit Fusions-/Loeschungsangabe lieferte 403 und konnte nicht selbst verifiziert werden, daher kein Zitat.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "login",
+            "beleg_url": "https://www.moneyhouse.ch/en/company/senn-technology-ag-21385217851"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "U41",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"USUS Landschaftsarchitekten\"",
+          "USUS Landschaftsarchitektur Wiederverwendung reuse Materialien",
+          "thisisusus.com about reuse circular materials landscape"
+        ],
+        "geprueft_urls": [
+          "https://thisisusus.com/About-1",
+          "https://thisisusus.com/",
+          "https://archello.com/de/brand/usus-landschaftsarchitektur-ag"
+        ],
+        "begruendung": "Eigene Seite thisisusus.com (About und Startseite) lieferte wiederholt HTTP 503 und konnte nicht geoeffnet werden; Drittquelle archello.com lieferte 403. Allgemeine Suche zeigt USUS als Landschaftsarchitekturbuero in Zuerich ohne auffindbaren Reuse-/Zirkularitaets-Bezug in Suchausschnitten. Verfahren durchlaufen, kein pruefbarer Beleg gefunden.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_5xx",
+            "beleg_url": "https://thisisusus.com/About-1"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "F09",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.epfl.ch/labs/sxl/",
+        "beleg_zitat": "The Structural Xploration Lab is also an integral member of the Smart Living Lab, a joint facility between EPFL, UniFr, and HEIA-FR, in Fribourg, Switzerland.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Université de Fribourg\" OR \"Universität Freiburg\" Bauteil Wiederverwendung Réemploi Forschung"
+        ],
+        "geprueft_urls": [
+          "https://www.epfl.ch/labs/sxl/"
+        ],
+        "begruendung": "Univ. Fribourg (UniFr) wird namentlich als Traegerinstitution des Smart Living Lab genannt, das das Structural Xploration Lab (SXL) beherbergt -- ein Forschungsprogramm mit dokumentierter Bauteil-Wiederverwendung (u.a. Wiederverwendung von Betonelementen, Fussgaengerbruecke 2021, Pavillon 'rebuiLT'). Keine eigene Leistungsseite der Universitaet zu Reuse gefunden, daher bezug statt kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "N03",
+        "actor_degree": "kern",
+        "beleg_url": "https://re-win.ch/verein/ueber/",
+        "beleg_zitat": "Der Verein RE-WIN will einerseits eine Kultur der Wiederverwendung von Bauteilen sowohl in den Architektur- und Planungsbueros als auch in der Bauwirtschaft selber foerdern.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Verein RE-WIN\" Wiederverwendung Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://re-win.ch/verein/ueber/"
+        ],
+        "begruendung": "Eigene, dauerhafte Ueber-uns-Seite des Vereins beschreibt Foerderung einer Kultur der Bauteil-Wiederverwendung als zentralen Vereinszweck (nicht Einzelprojekt/News); Vereinsname bereits das Kernprogramm.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "U43",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Weber Energie\" Bauphysik Schweiz",
+          "\"Weber Energie und Bauphysik\" Wiederverwendung reuse Bauteile Kreislauf"
+        ],
+        "geprueft_urls": [
+          "https://www.weberbauphysik.ch/"
+        ],
+        "begruendung": "Eigene Website (Bern) selbst geoeffnet: Fokus auf Bauphysik, Energieeffizienz, Holzbau-Fachwissen; keine Erwaehnung von Bauteil-Wiederverwendung oder Kreislaufwirtschaft. Suchtreffer zu 'weber.therm circle' betreffen den Baustoffhersteller Saint-Gobain Weber, nicht Weber Energie und Bauphysik AG -- andere Organisation, kein Rueckschluss zulaessig.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "U45",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Zehnder Holz und Bau\" Winterthur",
+          "\"Zehnder Holz\" Wiederverwendung reuse Bauteile Kreislaufwirtschaft"
+        ],
+        "geprueft_urls": [
+          "https://zehnder-holz.ch/"
+        ],
+        "begruendung": "Eigene Website selbst geoeffnet: Holzbau-Generalunternehmen mit Fokus auf 'Gemeinsam Bauen mit Holz'; keine Erwaehnung von Bauteil-Wiederverwendung oder Kreislaufwirtschaft.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "U01",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"2hs\" reuse Wiederverwendung Bauteile Zirkularität site:2hs.com",
+          "2hs.com Zirkularität Wiederverwendung Reuse Architektur Basel",
+          "\"2hs\" Architektur Basel Wiederverwendung reuse Büro"
+        ],
+        "geprueft_urls": [
+          "https://www.2hs.com",
+          "https://2hs.com/"
+        ],
+        "begruendung": "Gespeicherte primary_source_url (www.2hs.com) und Domain-Wurzel (2hs.com) liefern beide HTTP 404. Anschliessende D2-Suchen ergaben keinen plausiblen Treffer, der Name und Ort/Taetigkeit von 2hs eindeutig zuordnet. Kein Nachweis einer Einstellung (kein Nachfolger gefunden), daher nicht_pruefbar statt defunkt.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_404",
+            "beleg_url": "https://2hs.com/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "U05",
+        "actor_degree": "bezug",
+        "beleg_url": "https://amstein-walthert.ch/de/blog/graue-energie-im-fokus-wie-die-kreislaufwirtschaft-das-bauen-verandert/",
+        "beleg_zitat": "Kreislaufgerechte Bauplanung: Beratung und Planung nach Prinzipien des zirkulaeren Bauens - z.B. Entwicklung von Rueckbau- und Wiederverwendungskonzepten",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Amstein+Walthert Kreislaufwirtschaft Wiederverwendung Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://www.amstein-walthert.ch/",
+          "https://amstein-walthert.ch/de/blog/graue-energie-im-fokus-wie-die-kreislaufwirtschaft-das-bauen-verandert/",
+          "https://amstein-walthert.ch/de/kompetenzen/"
+        ],
+        "begruendung": "Startseite und Kompetenzen-Seite nennen Bauteil-Wiederverwendung nicht explizit (daher kein kern). Ein Blogbeitrag der eigenen Domain beschreibt jedoch konkret die eigene Dienstleistung 'Kreislaufgerechte Bauplanung' inkl. Rueckbau- und Wiederverwendungskonzepten -- als News/Blog-Fundstelle laut Kalibrierung nicht kern-faehig, aber ausreichend fuer bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s03"
+      },
+      {
+        "tid": "M01",
+        "name": "Archipel Sion Ressourcerie",
+        "actor_degree": "kern",
+        "beleg_url": "https://archipelsion.ch/ressourcerie/inventaire/",
+        "beleg_zitat": "Inventaire • L'archipel · Tiers-lieu · Sion",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://archipelsion.ch/ressourcerie/inventaire/"
+        ],
+        "begruendung": "Eigene, dauerhaft gefuehrte Seite 'Ressourcerie/Inventaire' listet gebrauchte Baumaterialien (Fenster, Parkett, Sanitaer etc.) in Qualitaetsstufen zum Verkauf -- Reuse ist als dauerhafte Leistungslinie dargestellt, nicht als Einzelprojekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "M02",
+        "name": "Baumatpool.ch",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.baumatpool.ch/de/",
+        "beleg_zitat": "Die Schweizer Materialbörse – Baumaterialien und Restposten einfach finden, kaufen und verkaufen.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.baumatpool.ch/de/"
+        ],
+        "begruendung": "Startseite positioniert die Plattform dauerhaft als Materialboerse fuer Baumaterialien/Restposten -- Betrieb der Boerse ist der Geschaeftszweck selbst.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "M07",
+        "name": "Bauteilverwertung Köppel & Klein",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.bauteilverwertung.ch/",
+        "beleg_zitat": "Aus alt mach neu – Gebrauchte Bauteile und was daraus wieder gemacht wurde",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.bauteilverwertung.ch/"
+        ],
+        "begruendung": "Startseite zeigt Rettung und Wiedereinbau alter Bauteile (Balken, Gelaender, Tueren, Tore, Fachwerkhaeuser) als Kerngeschaeft -- dauerhafte Leistungslinie.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "M06",
+        "name": "Bauteilvermittlung Zürichsee-Oberland",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.btvz.ch/angebote/",
+        "beleg_zitat": "Angebotene Bauteile",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.btvz.ch/angebote/"
+        ],
+        "begruendung": "Eigene Angebotsseite listet gebrauchte Bauteile aus Abbruch/Sanierung (Kuechen, Baeder, Fenster, Treppen) als dauerhaftes Angebot der Bauteilvermittlung.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "M15",
+        "name": "Stiftung Chance BauTeile Zürich / Glattbrugg",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.chance.ch/dienstleistungen/bauteile",
+        "beleg_zitat": "Bauteile und Baumaterial im Kreislauf behalten – Ökologisch und wirtschaftlich vorteilhaft",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.chance.ch/dienstleistungen/bauteile"
+        ],
+        "begruendung": "Dedizierte Dienstleistungsseite 'Bauteile' beschreibt Demontage aller Bauteile/Baumaterial fuer die Wiederverwendung als dauerhafte Leistungslinie der Stiftung.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "X02",
+        "name": "Circular Economy Switzerland",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.circular-economy-switzerland.ch/en",
+        "beleg_zitat": "AKB | CES Circle Bern @ TecLab Burgdorf \"Zirkuläres Weiterbauen\"",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.circular-economy-switzerland.ch/en"
+        ],
+        "begruendung": "CES ist ein sektorenuebergreifendes Kreislaufwirtschafts-Netzwerk ohne eigene dauerhafte Bauteil-Reuse-Leistungslinie; Baubezug erscheint nur ueber ein benanntes Einzelevent ('Zirkulaeres Weiterbauen') und einen CAS-Kurs zu Reemploi -- daher bezug statt kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "X01",
+        "name": "Circular Construction Catalyst 2033",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.circularconstructioncatalyst.ch/",
+        "beleg_zitat": "zirkuläres Bauen und Bewirtschaften im Hoch- und Tiefbau in der Schweiz bis 2033 als das „neue Normal\" zu etablieren",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.circularconstructioncatalyst.ch/"
+        ],
+        "begruendung": "Eigene Ueber-uns-Seite definiert die Etablierung von zirkulaerem Bauen (inkl. Bauteil-/Ressourcenkreislauf) bis 2033 als alleinigen, dauerhaften Daseinszweck der Koordinationsstelle.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "S03",
+        "name": "Madaster",
+        "actor_degree": "kern",
+        "beleg_url": "https://madaster.ch/en/",
+        "beleg_zitat": "It also enables determining whether materials and products can be reused after disassemblage.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://madaster.ch/en/"
+        ],
+        "begruendung": "Eigene Schweizer Madaster-Seite stellt die Materialpass-Plattform dar, die Wiederverwendbarkeit von Bauteilen nach Rueckbau feststellt -- dauerhafte Kernleistung, nicht Einzelprojekt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s04"
+      },
+      {
+        "tid": "U12",
+        "name": "Ecovative",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.ecovative.com/"
+        ],
+        "begruendung": "Eigene Seite beschreibt Umwandlung von Holz-/Sojaabfaellen in Mycel-Materialien (Verpackung, Textil) und Kompostierbarkeit. Kein Bauteilbezug, kein Baukontext, keine Wiederverwendung von Bauteilen -- reine Rohstoffverwertung. Faellt unter 'Recycling/Rezyklat/Abfall ohne Bauteilbezug' und ist damit von kern ausgeschlossen; auch kein benanntes Reuse-Projekt mit Partnern fuer bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "F04",
+        "name": "EPFL",
+        "actor_degree": "kern",
+        "beleg_url": "https://epfl.ch/labs/sxl/index-html/research/ready-for-reuse",
+        "beleg_zitat": "we are paving the way for the upcycling reuse of load-bearing components in buildings",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"EPFL\" building component reuse OR \"réemploi\" circular construction program"
+        ],
+        "geprueft_urls": [
+          "https://www.epfl.ch/",
+          "https://epfl.ch/labs/sxl/index-html/research/ready-for-reuse"
+        ],
+        "begruendung": "Der urspruengliche Stammlink (epfl.ch Hauptseite) ist zu generisch, daher gezielte Suche. Die Structural Xploration Lab (SXL) ist ein EPFL-Labor mit dauerhaft platzierter Forschungslinie 'Ready for Reuse' auf epfl.ch-Subdomain (nicht News/Einzelprojekt, sondern institutionelle Forschungslinie inkl. Kurs AR-497 und mehreren Projekten). Erfuellt kern-Kriterium.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "F05",
+        "name": "ETH Zürich",
+        "actor_degree": "bezug",
+        "beleg_url": "https://swircular.ethz.ch/",
+        "beleg_zitat": "Homepage – SWIRCULAR Project | ETH Zurich",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://ethz.ch/en.html",
+          "https://swircular.ethz.ch/the-project.html",
+          "https://swircular.ethz.ch/"
+        ],
+        "begruendung": "swircular.ethz.ch beschreibt ein von Innosuisse gefoerdertes Konsortialprojekt zu hoeherwertigen Circular-Strategien (reuse, repair, refuse) im Bauwesen; Kontaktperson ist ETH-Lecturer, Seitentitel nennt 'SWIRCULAR Project | ETH Zurich'. Da dies ein einzelnes, benanntes Konsortialprojekt ist (nicht eine dauerhafte institutionelle Leistungslinie von ETH als Ganzes), gilt bezug statt kern (Ausschlusskriterium 'einzelnes Reuse-Projekt als einzige Fundstelle'). Partnerlogos ohne Text wurden nicht als Zitat verwendet.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "M08",
+        "name": "GGZ@WORK Laden 2 Bauteile Zug",
+        "actor_degree": "kern",
+        "beleg_url": "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile",
+        "beleg_zitat": "im LADEN 2 - Bauteile im 1. OG finden Sie eine grosse Auswahl an gut erhaltenen Occasionsbauteilen",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://ggzatwork.ch/gaeste/laden2/laden-2-bauteile"
+        ],
+        "begruendung": "Eigene, dauerhaft platzierte Ladenseite fuer gebrauchte/aufbereitete Bauteile aus Rueckbau/Renovation (Kuechen, Fenster, Tueren, Sanitaer). Eindeutig kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "F06",
+        "name": "Gramazio Kohler Research",
+        "actor_degree": "bezug",
+        "beleg_url": "https://gramaziokohler.arch.ethz.ch/",
+        "beleg_zitat": "Lost and Bound: Adaptive Detailing with Robotic Additive Joining for Reclaimed Steel",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://gramaziokohler.arch.ethz.ch/"
+        ],
+        "begruendung": "Auf der eigenen Seite ist unter Publikationen (RobArch 2024) ein einzelner Beitrag zu wiederverwendetem/reclaimed Stahl gelistet, mit Gramazio Kohler Research als Autorenschaft genannt. Kein dauerhafter Programm-/Leistungsbereich zu Reuse, sondern einzelne benannte Publikation/Projekt -> bezug, nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "U19",
+        "name": "kaufmann zimmerei",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://kaufmann-zimmerei.de",
+          "https://neu2024.kaufmann-zimmerei.de/"
+        ],
+        "begruendung": "Gespeicherte primary_source_url leitet (301) auf neu2024.kaufmann-zimmerei.de weiter (kein Ausfall, nur Domainumzug, daher kein Flag defunkt). Seite beschreibt Zimmereileistungen (Holzbau, Hallenbau, Dachausbau, Sanierung) ohne jeden Hinweis auf Wiederverwendung von Bauteilen/Materialien.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "U20",
+        "name": "KIBAG",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"KIBAG\" Wiederverwendung Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://www.kibag.ch/"
+        ],
+        "begruendung": "Eigene Seite und Suchtreffer zeigen ausschliesslich Recyclingbeton/Recyclingbaustoffe und mineralische Rueckbau-/Aushubmaterial-Verwertung (Kreislaufwirtschaft bei Baustoffen), aber keinen Bauteilbezug (keine Wiederverwendung ganzer Bauteile wie Fenster, Tueren etc.). Faellt unter 'Recycling/Rezyklat/Abfall ohne Bauteilbezug' -> ausgeschlossen von kern; kein benanntes Reuse-Projekt mit Partnern fuer bezug gefunden.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "U22",
+        "name": "Magna Glaskeramik",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.magna-glaskeramik.de/"
+        ],
+        "begruendung": "Eigene Seite beschreibt Glaskeramik-Produkte, die zu 100% aus recyceltem Altglas (Solarzellenreste, Flaschenglas) hergestellt werden ('konsequentes Upcycling'). Dies ist Materialrecycling/Upcycling von Glas zu neuen Produkten, kein Bauteilbezug (keine Wiederverwendung bestehender Bauteile). Faellt unter Ausschlusskriterium 'Recycling/Rezyklat/Abfall ohne Bauteilbezug'.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s05"
+      },
+      {
+        "tid": "U27",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Nimbus\" Schweiz Bauteile",
+          "\"Nimbus\" Bauteile Wiederverwendung Schweiz",
+          "\"nimbus.com\" company what"
+        ],
+        "geprueft_urls": [
+          "https://www.nimbus.com"
+        ],
+        "begruendung": "Gespeicherte primary_source_url https://www.nimbus.com liefert wiederholt HTTP 403, daher nicht direkt einsehbar. Zwei Suchen nach einem Schweizer Bauteil-/Reuse-Unternehmen namens 'Nimbus' ergaben keinen plausiblen Treffer (Ort/Bezug fehlt im Datensatz, gefundene Nimbus-Firmen sind eine Investmentgesellschaft, ein Leuchtenhersteller und ein Bootshersteller, keiner mit Bauteil-Wiederverwendungsbezug). Kein Verfahrensschritt ergab einen belastbaren Fund -> ohne_beleg.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://www.nimbus.com"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s06"
+      },
+      {
+        "tid": "U28",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.nomol.ag/uber-uns",
+        "beleg_zitat": "Sie entwickelt und betreibt innovative, kreislaufwirtschaftliche Geschäftsmodelle und Prozesse zur Rückgewinnung, Aufbereitung und Wiederverwendung von Baukomponenten",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.nomol.ag/uber-uns"
+        ],
+        "begruendung": "Gespeicherte Ueber-uns-Seite beschreibt Wiederverwendung von Baukomponenten explizit und dauerhaft als Kerngeschaeft (Geschaeftsmodell, nicht News/Einzelprojekt) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s06"
+      },
+      {
+        "tid": "U31",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.parabase.eu/",
+        "beleg_zitat": "Areal Walkeweg Nord Basel «Re-use» Competition, 2023. 1st Prize. Ongoing",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "PARABASE.ch Zürich Architektur Reuse"
+        ],
+        "geprueft_urls": [
+          "https://www.parabase.ch",
+          "https://www.parabase.eu/",
+          "https://www.parabase.eu/about"
+        ],
+        "begruendung": "Gespeicherte Domain parabase.ch ist DNS-tot; Domainwurzel-Recherche (D3) fuehrte zu parabase.eu, der aktuellen Studio-Seite. Die permanente Projektliste des Studios zeigt mehrere namentlich benannte Reuse-Wettbewerbsprojekte (u.a. 'Re-use'-Wettbewerb Walkeweg Nord, 1. Preis) als durchgehende Praxislinie, nicht als News/Einzelreferenz -> kern. Die separate About-Seite enthaelt kein explizites Missionsstatement, die Projektseite selbst traegt aber das Urteil.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s06"
+      },
+      {
+        "tid": "O03",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Stiftung PWG\" Wiederverwendung Bauteile Projekt",
+          "\"PWG\" Zürich Wiederverwendung Bauteile Projekt Rückbau"
+        ],
+        "geprueft_urls": [
+          "https://www.pwg.ch/",
+          "https://www.pwg.ch/bauprojekte",
+          "https://www.pwg.ch/wir-fuer-sie",
+          "https://www.pwg.ch/fileadmin/user_upload/PDF/4_Stiftung/PWG_GB_25_doppel.pdf"
+        ],
+        "begruendung": "Startseite, Bauprojekte-Seite, Wir-fuer-Sie-Seite und der Geschaeftsbericht 2025 (PDF, technisch nicht textdurchsuchbar) wurden gepruft; keine davon enthaelt eine woertlich belegbare Aussage zu Bauteil-Wiederverwendung oder ein benanntes Reuse-Projekt der Stiftung. Verfahren vollstaendig durchlaufen -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s06"
+      },
+      {
+        "tid": "U39",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.syphon.ch/",
+        "beleg_zitat": "Wir sind spezialisiert auf die Beurteilung, die Erfassung, den Ausbau, die Aufbereitung und den Verkauf von wiederverwendbaren Materialen und Bauteilen.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.syphon.ch/"
+        ],
+        "begruendung": "Gespeicherte Seite beschreibt Bauteil-Wiederverwendung (Erfassung, Ausbau, Aufbereitung, Verkauf wiederverwendbarer Bauteile) explizit als dauerhaften Betriebszweck inkl. eigenem Bauteilladen -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s06"
+      },
+      {
+        "tid": "U11",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.tarkett-group.com/en/climate-circular-economy/circular-economy/",
+        "beleg_zitat": "It all starts with the collection of end-of-use flooring for recycling. Once sorted, these used floors are processed using unique technologies that separate the components and remove the adhesive.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Tarkett ReStart take-back recycling circularity flooring"
+        ],
+        "geprueft_urls": [
+          "https://www.tarkett.com/",
+          "https://www.tarkett.de/",
+          "https://www.tarkett-group.com/en/climate-circular-economy/circular-economy/",
+          "https://commercial.tarkett.com/sustainability/restart"
+        ],
+        "begruendung": "Gespeicherte primary_source_url leitet auf tarkett.de weiter, das keine Circularity-Inhalte auf der Startseite zeigt. Die konzernweite Circular-Economy-Seite (tarkett-group.com) beschreibt das dauerhafte ReStart-Ruecknahme- und Recyclingprogramm fuer Bodenbelaege als festen Bestandteil des Geschaeftsmodells -> kern. Die produktspezifische ReStart-Unterseite war per HTTP 403 nicht direkt abrufbar (Flag).",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://commercial.tarkett.com/sustainability/restart"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s06"
+      },
+      {
+        "tid": "M14",
+        "actor_degree": "kern",
+        "beleg_url": "https://hiltbrunnerag.ch/reuse-recycling.html",
+        "beleg_zitat": "ReUse - direkte Wiederverwendung: Verkauf von wiederverwendbaren Gebrauchtwaren und Baumaterialien",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.wiederverwendung.ch/",
+          "https://hiltbrunnerag.ch/reuse-recycling.html"
+        ],
+        "begruendung": "Gespeicherte URL wiederverwendung.ch leitet dauerhaft (301) auf die Betreiberseite hiltbrunnerag.ch/reuse-recycling.html weiter, die das 'ReUse-Recycling-Center Riedtwil' (Hopferenstrasse 2, 3475 Riedtwil) samt Online-Shop wiederverwendung.ch fuer gebrauchte Bauteile/Baumaterialien als dauerhaftes Geschaeftsangebot beschreibt -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "CH",
+        "packet_id": "CH-s06"
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "O01|P9",
+        "a_tid": "O01",
+        "b_tid": "P9",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.smartlivinglab.ch/en/projects/recrete-reused-of-cut-concrete/",
+        "beleg_zitat": "Team: Brütting, Jan; Bastien-Masse Maléna; Devènes, Julie; Grangeot, Maxence; Küpfer, Célia; Fivet, Corentin",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Forschungsteam als Team-Sektion der RE:CRETE-Projektseite (ausführendes Team des Projekts)",
+        "relation_soll": "",
+        "cc": "CH",
+        "packet_id": "CH-c07"
+      },
+      {
+        "edge_id": "F08|P9",
+        "a_tid": "F08",
+        "b_tid": "P9",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.epfl.ch/schools/enac/recrete/",
+        "beleg_zitat": "the Sructural Xploration Lab (SXL) has built the RE:CRETE prototype, a footbridge built from 25 reused concrete blocks",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "SXL hat die RE:CRETE-Fussgängerbrücke entworfen und gebaut (ausführend)",
+        "relation_soll": "",
+        "cc": "CH",
+        "packet_id": "CH-c07"
+      }
+    ],
+    "ungeprueft": [],
+    "ausgefallen": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-CH"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "CH:CH-c07",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-CH",
+      "agentId": "a96aac46f27028460",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786581940350,
+      "queuedAt": 1786581940320,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "CH-c07",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582078371,
+      "tokens": 62740,
+      "toolCalls": 15,
+      "durationMs": 138020,
+      "resultPreview": "{\"packet_id\":\"CH-c07\",\"nodes\":[{\"tid\":\"F08\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.epfl.ch/labs/sxl/\",\"beleg_zitat\":\"we are paving the way for the upcycling reuse of load-bearing components in buildings, hence contributing to the adoption of a circular economy by the construction industry\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[],\"geprueft_urls\":[\"https://www.epfl.ch/labs/sxl/\"],\"begru…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "CH:CH-s01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-CH",
+      "agentId": "adf47427e149383bc",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786581940353,
+      "queuedAt": 1786581940320,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "CH-s01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582111296,
+      "tokens": 74724,
+      "toolCalls": 26,
+      "durationMs": 170943,
+      "resultPreview": "{\"packet_id\":\"CH-s01\",\"nodes\":[{\"tid\":\"U02\",\"name\":\"AFC Basel\",\"actor_degree\":\"ohne_beleg\",\"beleg_url\":\"\",\"beleg_zitat\":\"\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"\\\"AFC Basel\\\" Schweiz\",\"\\\"AFC Basel\\\" reuse OR Wiederverwendung OR Bauteile\"],\"geprueft_urls\":[\"https://www.afc.ch/\"],\"begruendung\":\"AFC AG (Bauphysik/Brandschutz/Energieeffizienz, Sitz Zürich/Basel) zeigt auf afc.ch keine Reuse-/Kre…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "CH:CH-s02",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-CH",
+      "agentId": "a700e18eea8465dab",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786581940354,
+      "queuedAt": 1786581940321,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "CH-s02",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582180427,
+      "tokens": 81062,
+      "toolCalls": 32,
+      "durationMs": 240073,
+      "resultPreview": "{\"packet_id\":\"CH-s02\",\"nodes\":[{\"tid\":\"P1\",\"name\":\"ELEMENTA Walkeweg\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.bs.ch/medienmitteilungen/fd/2023-entwicklungsareal-walkeweg-kanton-baut-ueber-100-preisguenstige-wohnungen-unter-einsatz-von-wiederverwendeten-bauteilen\",\"beleg_zitat\":\"Indem Bauteile aus rückgebauten kantonalen Liegenschaften wiederverwendet werden, wird sogenannte «graue Energie» …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "CH:CH-s03",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-CH",
+      "agentId": "aac8df6fe0e12b463",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786581940355,
+      "queuedAt": 1786581940321,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "CH-s03",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582175773,
+      "tokens": 77712,
+      "toolCalls": 33,
+      "durationMs": 235418,
+      "resultPreview": "{\"packet_id\":\"CH-s03\",\"nodes\":[{\"tid\":\"U37\",\"actor_degree\":\"ohne_beleg\",\"beleg_url\":\"https://www.moneyhouse.ch/en/company/senn-technology-ag-21385217851\",\"beleg_zitat\":\"\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"\\\"Senn Technology AG\\\" Schweiz\",\"\\\"Senn Technology\\\" OR \\\"Senn AG\\\" Wiederverwendung Bauteile reuse\",\"\\\"Senn Technology AG\\\" zefix St. Gallen\"],\"geprueft_urls\":[\"https://www.swiss-arc.c…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "CH:CH-s04",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-CH",
+      "agentId": "a00e9a7a3722e960e",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786581940356,
+      "queuedAt": 1786581940321,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "CH-s04",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582050875,
+      "tokens": 62482,
+      "toolCalls": 15,
+      "durationMs": 110519,
+      "resultPreview": "{\"packet_id\":\"CH-s04\",\"nodes\":[{\"tid\":\"M01\",\"name\":\"Archipel Sion Ressourcerie\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://archipelsion.ch/ressourcerie/inventaire/\",\"beleg_zitat\":\"Inventaire • L'archipel · Tiers-lieu · Sion\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[],\"geprueft_urls\":[\"https://archipelsion.ch/ressourcerie/inventaire/\"],\"begruendung\":\"Eigene, dauerhaft gefuehrte Seite 'Ressourceri…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "CH:CH-s05",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-CH",
+      "agentId": "aeac7e3bf25e2f0a1",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786581940357,
+      "queuedAt": 1786581940322,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "CH-s05",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582080286,
+      "tokens": 61938,
+      "toolCalls": 16,
+      "durationMs": 139929,
+      "resultPreview": "{\"packet_id\":\"CH-s05\",\"nodes\":[{\"tid\":\"U12\",\"name\":\"Ecovative\",\"actor_degree\":\"ohne_beleg\",\"beleg_url\":\"\",\"beleg_zitat\":\"\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[],\"geprueft_urls\":[\"https://www.ecovative.com/\"],\"begruendung\":\"Eigene Seite beschreibt Umwandlung von Holz-/Sojaabfaellen in Mycel-Materialien (Verpackung, Textil) und Kompostierbarkeit. Kein Bauteilbezug, kein Baukontext, keine Wied…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "CH:CH-s06",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-CH",
+      "agentId": "a9cf838dc9225670f",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786581940358,
+      "queuedAt": 1786581940322,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "CH-s06",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786582171065,
+      "tokens": 75785,
+      "toolCalls": 27,
+      "durationMs": 230707,
+      "resultPreview": "{\"packet_id\":\"CH-s06\",\"nodes\":[{\"tid\":\"U27\",\"actor_degree\":\"ohne_beleg\",\"beleg_url\":\"\",\"beleg_zitat\":\"\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"\\\"Nimbus\\\" Schweiz Bauteile\",\"\\\"Nimbus\\\" Bauteile Wiederverwendung Schweiz\",\"\\\"nimbus.com\\\" company what\"],\"geprueft_urls\":[\"https://www.nimbus.com\"],\"begruendung\":\"Gespeicherte primary_source_url https://www.nimbus.com liefert wiederholt HTTP 403, dah…"
+    }
+  ],
+  "totalTokens": 496443,
+  "totalToolCalls": 164
+}

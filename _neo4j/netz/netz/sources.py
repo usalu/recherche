@@ -23,6 +23,12 @@ class Sources:
     )
     audit_edges_path: str = f"{_SP}/audit2_peer_edges.json"
     prune_path: str = f"{_SP}/prune_eids.json"
+    # 2026-08-13 fact-check (E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck):
+    # all ohne_beleg nodes + the R1/R3 removal candidates, kept as a separate,
+    # separately-auditable list from the legacy FR/BE de-dup prune above.
+    prune_faktencheck_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/prune_faktencheck_final.json"
+    )
 
 
 DEFAULT = Sources()

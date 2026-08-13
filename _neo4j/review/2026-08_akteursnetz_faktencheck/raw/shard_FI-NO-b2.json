@@ -1,0 +1,3286 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for FI-NO",
+  "agentCount": 6,
+  "logs": [
+    "FI-NO: 6 packets, 51 nodes, 31 edges",
+    "FI-NO: 51 Knotenurteile, 31 Kantenurteile, 0 ungeprueft",
+    "FI-NO: kern=30 bezug=16 ohne_beleg=5"
+  ],
+  "result": {
+    "ccs": [
+      "FI",
+      "NO"
+    ],
+    "packets": [
+      {
+        "packet_id": "FI-s01",
+        "nodes": [
+          {
+            "tid": "U01",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.ains.fi/palvelut",
+            "beleg_zitat": "Uudelleenkäytettävien rakennustuotteiden tuotekelpoisuus",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"A-Insinöörit\" reuse OR uudelleenkäyttö OR kiertotalous rakenneosat"
+            ],
+            "geprueft_urls": [
+              "https://www.ains.fi/artikkelit/purkukartoitus-4-purkumateriaaliselvityksella-rakennustuotteet-uudelleenkayttoon",
+              "https://www.ains.fi/palvelut"
+            ],
+            "begruendung": "ains.fi/palvelut listet 'Purkukartoitus ja -suunnittelu' und 'Uudelleenkäytettävien rakennustuotteiden tuotekelpoisuus' als dauerhafte Leistungsangebote (nicht Blog/News). Damit ist Wiederverwendung von Bauteilen fester Teil des Leistungsangebots -> kern. Zusätzlich als ausführender Partner (Baumanagement) im Closing Loops-Projekt genannt (aalto.fi/en/housing-design/closing-loops).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F01",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.aalto.fi/en/housing-design",
+            "beleg_zitat": "The research and design efforts concentrate on two main areas: housing design quality and circular construction",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Aalto University Department of Architecture building component reuse research"
+            ],
+            "geprueft_urls": [
+              "https://www.aalto.fi/en/department-of-architecture/research-at-the-department-of-architecture",
+              "https://www.aalto.fi/en/housing-design"
+            ],
+            "begruendung": "Housing Design ist eine dauerhafte Professur/Programmlinie der Aalto-Architekturfakultät mit circular construction als einem von zwei Kernfoki -- Institutslinie, nicht News -> kern. Die Department-Forschungsseite selbst nennt reuse nur ueber zeitgebundene Projekte (Closing Loops, ReType), die Housing-Design-Programmseite traegt den Grad.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P1",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.aalto.fi/en/housing-design",
+            "beleg_zitat": "The professorship has been led by Assistant Professor Antti Lehto since 2022.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Antti Lehto\" architect reuse circular Finland"
+            ],
+            "geprueft_urls": [
+              "https://people.aalto.fi/antti.lehto",
+              "https://www.aalto.fi/en/housing-design",
+              "https://www.aalto.fi/en/housing-design/circular-drifter",
+              "https://www.aalto.fi/en/housing-design/closing-loops"
+            ],
+            "begruendung": "tid ist als Projekt markiert (is_project=true), tatsaechlich handelt es sich um eine PERSON (Antti Lehto, Assistant Professor an der Aalto-Universitaet) -> Flag falscher_typ. Als Akteur bewertet: er leitet dauerhaft die Housing-Design-Professur, deren Kernfokus circular construction ist, und fuehrt zusaetzlich Closing Loops und Circular Drifter als Projektleiter -> kern.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "beleg_url": "https://www.aalto.fi/en/housing-design",
+                "typ_ist": "Person",
+                "typ_soll": "Projekt"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U03",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Arkkitehdit LSV\" kiertotalous uudelleenkäyttö rakennus"
+            ],
+            "geprueft_urls": [
+              "https://arkkitehditlsv.fi/kestavarakentaminen/"
+            ],
+            "begruendung": "Eigene Seite kestavarakentaminen behandelt Kiertotalous nur als allgemeines Zukunftsthema ('Kiertotalous on tulevaisuuden ekologisen kestävyyden teema...'), ohne konkreten Bauteilbezug und ohne benannte Reuse-Sache -> weder kern (kein Leistungslinien-Bauteilbezug) noch bezug (keine benannte Reuse-Sache). Verfahren durchlaufen, kein passender Beleg gefunden.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U04",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Aulis Lundell\" kiertotalous purku uudelleenkäyttö"
+            ],
+            "geprueft_urls": [
+              "https://www.aulislundell.com/naytasivu/lundell-zero",
+              "https://www.aulislundell.com/kiertotalous",
+              "https://www.aulislundell.com/naytasivu/kohti-kiertotaloutta"
+            ],
+            "begruendung": "Aulis Lundell zeigt Kiertotalous-Inhalte (Lundell Zero, Kohti kiertotaloutta), diese betreffen jedoch Stahlrecycling/Materialkreislauf in der Herstellung, nicht Wiederverwendung von Bauteilen -> nach Regel 'Recycling/Rezyklat/Abfall ohne Bauteilbezug' ausgeschlossen von kern. Keine benannte Reuse-Sache mit Bauteilbezug gefunden -> ohne_beleg.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P2",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.aalto.fi/en/housing-design/circular-drifter",
+            "beleg_zitat": "a concept design for a pioneering building designed for disassembly and material reuse, acting as a laboratory for circular solutions for its entire lifecycle",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Circular Drifter\" demo house Finland reuse"
+            ],
+            "geprueft_urls": [
+              "https://www.aalto.fi/en/housing-design/circular-drifter"
+            ],
+            "begruendung": "Projektknoten: dauerhafte Aalto-Projektseite dokumentiert das Bauvorhaben als fuer Demontage und Materialwiederverwendung konzipiert, Traeger Aalto University und VTT -> kern (Bauteil-/Materialwiederverwendung dauerhaft dokumentiert, kein einzelner News-Post).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P3",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.aalto.fi/en/housing-design/closing-loops",
+            "beleg_zitat": "Nearly all materials for the building, apart from foundations, are sourced from demolition sites",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Closing Loops\" Mustikkamaa pilot project Helsinki reuse"
+            ],
+            "geprueft_urls": [
+              "https://www.aalto.fi/en/housing-design/closing-loops",
+              "https://testbed.hel.fi/en/circular-economy/storage-and-maintenance-building-made-from-reused-construction-products/"
+            ],
+            "begruendung": "Projektknoten: dauerhafte Aalto-Projektseite dokumentiert Mustikkamaa-Bauvorhaben als fast vollstaendig aus wiederverwendeten Bauteilen/Materialien von Abbruchstellen errichtet, Traeger Aalto University und Stadt Helsinki, Partner u.a. A-Insinöörit, Sitowise, Sweco, Spolia -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U06",
+            "actor_degree": "bezug",
+            "beleg_url": "https://durat.fi/en/pages/circular-service",
+            "beleg_zitat": "We commit to buy back all old Durat furniture at around five per cent of the purchase price.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Durat reuse recycled material circular"
+            ],
+            "geprueft_urls": [
+              "https://durat.fi/en/pages/circular-service",
+              "https://circularmateriallibrary.org/material/durat/"
+            ],
+            "begruendung": "Durat betreibt eine dauerhafte Circular-Service-Seite mit Ruecknahme/Wiederverwendung von Material (Rueckkauf alter Moebel/Verschnitt fuer Wiederverarbeitung). Da es sich primaer um Materialkreislauf eines Verbundwerkstoffs (Solid-Surface-Platten) handelt und nicht eindeutig um Wiederverwendung von Bauteilen im engeren Sinn (Fenster/Traeger etc.), vorsichtshalber bezug statt kern vergeben.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 17,
+        "kappe_erreicht": false,
+        "cc": "FI",
+        "assigned_nodes": [
+          "U01",
+          "F01",
+          "P1",
+          "U03",
+          "U04",
+          "P2",
+          "P3",
+          "U06"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "FI-s02",
+        "nodes": [
+          {
+            "tid": "M01",
+            "name": "Ekomatti",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.ekomatti.fi/rakentaminen.html",
+            "beleg_zitat": "Ovet alk. 15e, ikkunat alk. 5e, kattotiilet, pesuhuonekalusteet, lautatavaraa, lukkoja ja saranoita",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Ekomatti Suomi kierrätys rakennusmateriaali",
+              "Ekomatti rakentaminen kierrätyskeskus"
+            ],
+            "geprueft_urls": [
+              "https://www.ekomatti.fi/rakentaminen.html"
+            ],
+            "begruendung": "Kierrätyskeskus Ekomatti betreibt auf eigener, dauerhaft erreichbarer Unterseite 'Rakentaminen' einen Verkauf von gebrauchten Bauteilen (Türen, Fenster, Dachziegel, Sanitärmöbel, Bauholz, Beschläge) als Teil des Kerngeschäfts -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U07",
+            "name": "Havu Järvelä",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.safa.fi/arkkitehtiuutiset/diplomityo-purkujatetta-voitaisiin-hyodyntaa-uudisrakentamisessa-jos-vaan-tahtoa-olisi-kierratetyn-kerrostalon-suunnittelussa-suurin-haaste-liittyi-estetiikkaan/",
+            "beleg_zitat": "Havu Järvelä tutki Aalto-yliopiston arkkitehtuurin diplomityössään, kuinka kierrätettyjä rakennusosia voidaan hyödyntää uudisrakentamisessa.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Havu Järvelä\" Finland",
+              "\"Havu Järvelä\" Aalto kierrätetty kerrostalo diplomityö"
+            ],
+            "geprueft_urls": [
+              "https://www.safa.fi/arkkitehtiuutiset/diplomityo-purkujatetta-voitaisiin-hyodyntaa-uudisrakentamisessa-jos-vaan-tahtoa-olisi-kierratetyn-kerrostalon-suunnittelussa-suurin-haaste-liittyi-estetiikkaan/",
+              "https://www.aalto.fi/en/campus/havu-jarvela"
+            ],
+            "begruendung": "Havu Järvelä ist Person, nicht Unternehmen (typ falsch gefuehrt), namentlich genannt in Fachartikel (SAFA) zu seiner benannten Diplomarbeit 'Kierrätetty kerrostalo' ueber Wiederverwendung von Bauteilen aus Abbruch -> benannte Reuse-Sache, kein eigenes dauerhaftes Leistungsangebot -> bezug.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "typ_ist": "Unternehmen",
+                "typ_soll": "Person",
+                "beleg_url": "https://www.safa.fi/arkkitehtiuutiset/diplomityo-purkujatetta-voitaisiin-hyodyntaa-uudisrakentamisessa-jos-vaan-tahtoa-olisi-kierratetyn-kerrostalon-suunnittelussa-suurin-haaste-liittyi-estetiikkaan/",
+                "beleg_zitat": "Havu Järvelä tutki Aalto-yliopiston arkkitehtuurin diplomityössään"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U08",
+            "name": "Joensuun Rakennuspurku ja Timanttiurakointi Oy",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.joensuunrakennuspurku.fi/",
+            "beleg_zitat": "Puretun tavaran kierrätys ja myynti",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Joensuun Rakennuspurku ja Timanttiurakointi Oy",
+              "Joensuun Rakennuspurku kierrätys myynti"
+            ],
+            "geprueft_urls": [
+              "https://www.joensuunrakennuspurku.fi/"
+            ],
+            "begruendung": "Eigene Website fuehrt 'Puretun tavaran kierrätys ja myynti' (Recycling und Verkauf von Abbruchmaterial) als dauerhafte Leistungslinie neben Abbruch/Timanttiurakointi -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U09",
+            "name": "Johanna Saarela",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+            "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Johanna Saarela\" rakennus purku",
+              "Johanna Saarela Mustikkamaa kierrätetty varasto"
+            ],
+            "geprueft_urls": [
+              "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi"
+            ],
+            "begruendung": "Person, namentlich genannt (mit Bruder Markus Saarela) als Gewinnerin des benannten Wettbewerbs/Projekts fuer ein Lagergebaeude aus wiederverwendeten Baumaterialien in Mustikkamaa, Helsinki -> bezug.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "typ_ist": "Unternehmen",
+                "typ_soll": "Person",
+                "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+                "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U12",
+            "name": "Markus Saarela",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+            "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Markus Saarela\" rakennus purku",
+              "Markus Saarela Mustikkamaa kierrätetty varasto"
+            ],
+            "geprueft_urls": [
+              "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi"
+            ],
+            "begruendung": "Person, namentlich genannt (mit Schwester Johanna Saarela) als Gewinner des benannten Wettbewerbs/Projekts fuer ein Lagergebaeude aus wiederverwendeten Baumaterialien in Mustikkamaa, Helsinki -> bezug.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "typ_ist": "Unternehmen",
+                "typ_soll": "Person",
+                "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+                "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U16",
+            "name": "Purkukolmio Oy",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.purkukolmio.fi/purkukolmio-yrityksena",
+            "beleg_zitat": "Purkukolmio on perheyritys, joka myy vanhaa tavaraa uusiokäyttöön.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Purkukolmio Oy kierrätys uudelleenkäyttö",
+              "Purkukolmio Oy yrityksenä"
+            ],
+            "geprueft_urls": [
+              "https://www.purkukolmio.fi/purkukolmio-yrityksena",
+              "https://www.purkukolmio.fi/"
+            ],
+            "begruendung": "Eigene, dauerhaft erreichbare Unternehmensseite stellt Verkauf gebrauchter Bauteile/Gegenstaende zur Wiederverwendung als Kerngeschaeft dar -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U18",
+            "name": "Rakennustoimisto K. Tervo Oy",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Rakennustoimisto K. Tervo Oy\"",
+              "\"K. Tervo\" kiertotalous OR uudelleenkäyttö OR purkumateriaali"
+            ],
+            "geprueft_urls": [
+              "https://www.rakentajatervo.fi/yritys",
+              "https://www.rakentajatervo.fi/"
+            ],
+            "begruendung": "Eigene Unternehmensseite (Yritys) nennt Qualitaetszertifikate, Referenzen, allgemeine Bautaetigkeit, aber keinerlei Bauteil-Wiederverwendung/Kreislaufwirtschaft. Zweite Suche nach Kiertotalous/Uudelleenkäyttö im Zusammenhang mit dem Namen ergab keinen Treffer -> ohne_beleg (Verfahren D2 vollstaendig durchlaufen, kein Fund).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P7",
+            "name": "Rovastinkangas School Expansion",
+            "actor_degree": "kern",
+            "beleg_url": "https://orivesi.fi/rovastinkankaan-koulun-laajennusosaan-750-nelion-monitoimitila-uudisrakentamisessa-hyodynnetaan-poikkeuksellisella-tavalla-kiertotaloutta/",
+            "beleg_zitat": "Tiilet välivarastoidaan ja niitä tullaan käyttämään uuden laajennusosan rakentamisessa.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Rovastinkangas School Expansion reuse reclaimed",
+              "Rovastinkankaan koulun laajennus kiertotalous tiilet"
+            ],
+            "geprueft_urls": [
+              "https://orivesi.fi/rovastinkankaan-koulun-laajennusosaan-750-nelion-monitoimitila-uudisrakentamisessa-hyodynnetaan-poikkeuksellisella-tavalla-kiertotaloutta/"
+            ],
+            "begruendung": "Projektknoten: Offizielle Stadt-Orivesi-Seite dokumentiert, dass ca. 40.000 Ziegel aus dem Abbruch des alten Berufsschulgebaeudes fuer den Neubau der Schulerweiterung wiederverwendet werden -> Bauvorhaben dokumentiert Bauteil-Wiederverwendung -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 18,
+        "kappe_erreicht": false,
+        "cc": "FI",
+        "assigned_nodes": [
+          "M01",
+          "U07",
+          "U08",
+          "U09",
+          "U12",
+          "U16",
+          "U18",
+          "P7"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "FI-s03",
+        "nodes": [
+          {
+            "tid": "U22",
+            "name": "SSAB",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "SSAB Finland kiertotalous rakennusosien uudelleenkäyttö",
+              "SSAB circular economy steel reuse buildings components"
+            ],
+            "geprueft_urls": [
+              "https://www.ssab.fi/ssab-konserni/kestava-kehitys/kestava-tuotevalikoima/ssab-kiertotaloudessa",
+              "https://www.ssab.com/en/company/sustainability/circular-economy"
+            ],
+            "begruendung": "SSAB ist ein Stahlkonzern; die auffindbaren Kiertotalous-Seiten (ssab.fi) waren technisch nicht abrufbar (SSL-Fehler), eine alternative ssab.com-Seite lieferte 404. Die Suchtreffer beziehen sich durchgehend auf Stahlrecycling/Schrottkreislauf allgemein, nicht auf Bauteil-Wiederverwendung im engeren Sinn (ganze Bauelemente). Kein plausibler Treffer zu Bauteil-Reuse als eigenes Angebot gefunden -> ohne_beleg gemaess D2.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "dns_tot",
+                "beleg_url": "https://www.ssab.fi/ssab-konserni/kestava-kehitys/kestava-tuotevalikoima/ssab-kiertotaloudessa"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U20",
+            "name": "Sitowise",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.ttl.fi/tutkimus/hankkeet/uudelleenkaytettavien-rakennusosien-kayton-edistaminen-talonrakentamisessa-uuraket",
+            "beleg_zitat": "Osatoteuttajat: Aalto-yliopisto, AFRY Buildings Finland Oy, A-insinöörit, Eurofins Expert Services Oy, Ideastructura Oy, Sitowise Oy, Työterveyslaitos ja Ytekki Oy",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Sitowise kiertotalous rakennusosien uudelleenkäyttö",
+              "Sitowise \"kiertotalous\" palvelu site:sitowise.com"
+            ],
+            "geprueft_urls": [
+              "https://www.sitowise.com/fi/vastuullisuuspalvelut/kiertotaloudella-kestavaa-kehitysta",
+              "https://www.sitowise.com/fi/referenssit/kieppi-kiertotalouden-kumppanuusmalli",
+              "https://www.ttl.fi/tutkimus/hankkeet/uudelleenkaytettavien-rakennusosien-kayton-edistaminen-talonrakentamisessa-uuraket"
+            ],
+            "begruendung": "Sitowises eigene Kiertotalous-Servicepage nennt Bauteil-Wiederverwendung nicht als dauerhafte eigene Leistungslinie (nur Rueckbau/Massenmanagement/Beratung allgemein) -> kein kern. Das UURAKET-Projekt (Trager: Tyoterveyslaitos) zur Foerderung der Wiederverwendung von Bauteilen im Hochbau nennt Sitowise Oy namentlich als Osatoteuttaja (Konsortialmitglied) -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M03",
+            "name": "Spolia",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.spolia.fi/",
+            "beleg_zitat": "Spolia Design Oy on purettujen materiaalien uudelleen käyttöön erikoistunut asiantuntija-organisaatio, joka suunnittelee cleantech-rakennushankkeita.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Spolia Finland rakennusosien uudelleenkäyttö materiaalipankki"
+            ],
+            "geprueft_urls": [
+              "https://www.spolia.fi/",
+              "https://www.spolia.fi/spolia-ii/"
+            ],
+            "begruendung": "Eigene, dauerhaft platzierte Seite (spolia.fi) beschreibt Bauteil-/Materialwiederverwendung als Kerngeschaeft: Showroom, Webshop (store.spolia.fi), Produktlager in Nurmijaervi, Kiertotalouskauppa in Helsinki-Vallila und Betrieb der Uusimaa-Rakennusosapankki. Erfuellt kern-Kriterium (Shop/Depot/Programm dauerhaft, nicht News-Einzelprojekt).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "F05",
+            "name": "VTT (Technical Research Centre of Finland)",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.vttresearch.com/en/ourservices/circularity-built-environment",
+            "beleg_zitat": "Instead of generating waste, the built environment becomes a bank of resources designed to be reused, repurposed and refurbished over multiple lifecycles.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "VTT Technical Research Centre Finland construction component reuse circularity"
+            ],
+            "geprueft_urls": [
+              "https://www.vttresearch.com/en/ourservices/circularity-built-environment"
+            ],
+            "begruendung": "Eigene, dauerhaft platzierte Leistungsseite 'Circularity services for the built environment' stellt Bauteil-/Materialwiederverwendung explizit als Teil des Forschungs-/Dienstleistungsangebots von VTT dar (Institutslinie) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 15,
+        "kappe_erreicht": false,
+        "cc": "FI",
+        "assigned_nodes": [
+          "U22",
+          "U20",
+          "M03",
+          "F05"
+        ],
+        "assigned_edges": []
+      },
+      {
+        "packet_id": "NO-c01",
+        "tool_calls_used": 31,
+        "kappe_erreicht": false,
+        "ungeprueft_tids": [],
+        "nodes": [
+          {
+            "tid": "M01",
+            "actor_degree": "kern",
+            "beleg_url": "https://sites.google.com/fornybygg.no/ombruksglede/meny/om-oss",
+            "beleg_zitat": "FornyBygg selger brukte byggevarer og overskuddsmaterialer gjennom vårt lager på Stjørdal, via facebook og her.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "FornyBygg ombruk Norge",
+              "FornyBygg Stjørdal reuse OR reclaimed OR salvage OR Wiederverwendung"
+            ],
+            "geprueft_urls": [
+              "https://sites.google.com/fornybygg.no/ombruksglede/meny/om-oss",
+              "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/"
+            ],
+            "begruendung": "Eigene Seite (Google Sites unter fornybygg.no) stellt Verkauf gebrauchter Bauteile/Überschussmaterial als dauerhaften Betriebszweck dar -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M02",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Grønne Byggevarer\" Storkaas ombruk",
+              "\"Grønne Byggevarer\" Gvarv reuse OR reclaimed OR salvage OR gjenbruk"
+            ],
+            "geprueft_urls": [
+              "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+              "https://www.facebook.com/people/Gr%C3%B8nne-Byggevarer/100076296634017/",
+              "https://www.finn.no/214022724",
+              "https://www.monter.no/byggevarehus/monter-storkaas"
+            ],
+            "begruendung": "Nur Verzeichniseintrag (byggogbevar) und generische Ladenseite (Monter Storkaas) gefunden; die eigene Facebook-Seite lieferte beim Abruf keinen prüfbaren Beschreibungstext (Login/eingeschränkter Inhalt). Kein eigener, inhaltlich prüfbarer Reuse-Auftritt gefunden -> ohne_beleg.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "login",
+                "beleg_url": "https://www.facebook.com/people/Gr%C3%B8nne-Byggevarer/100076296634017/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M03",
+            "actor_degree": "kern",
+            "beleg_url": "https://iris-ombruksentral.no/",
+            "beleg_zitat": "Vi vi gjør det enkelt å velge brukt når du skal bygge noe nytt.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Iris Ombrukssentral\" Saltnes ombruk",
+              "Iris Ombrukssentral Bodø reuse OR reclaimed OR salvage OR ombruk"
+            ],
+            "geprueft_urls": [
+              "https://iris-ombruksentral.no/",
+              "https://byggogbevar.no/ressurser/forhandlere-ombruk/saltnes-ombruk/"
+            ],
+            "begruendung": "Eigene, dauerhafte Betriebsseite mit Marktplatz-/Depot-Funktion fuer gebrauchte Baumaterialien -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M04",
+            "actor_degree": "kern",
+            "beleg_url": "https://materialbankenforbygningsvern.no/dette-er-materialbanken/",
+            "beleg_zitat": "I Materialbanken finner du alt fra gamle dører og vinduer, brukte takstein i alle varianter, stokker, gulvbord til pyntegjenstander!",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Materialbanken for bygningsvern\" Norge",
+              "Materialbanken for bygningsvern Vanse Farsund reuse OR reclaimed OR salvage"
+            ],
+            "geprueft_urls": [
+              "https://materialbankenforbygningsvern.no/",
+              "https://materialbankenforbygningsvern.no/om-oss/",
+              "https://materialbankenforbygningsvern.no/dette-er-materialbanken/"
+            ],
+            "begruendung": "Eigene Depot-/Verkaufsseite mit dauerhaftem Warenangebot gebrauchter Bauteile vor 1940 -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M06",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.resirkula.no/om-resirkula/",
+            "beleg_zitat": "Resirkula er et gjenbrukskjøpesenter i kretsløpsparken ved Hamar og er Sirkula IKS sin satsing på ombruk, avfallsreduksjon og sirkulærøkonomi.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Resirkula ombruk bygningsmaterialer",
+              "Resirkula Hamar reuse OR reclaimed OR salvage OR gjenbruk"
+            ],
+            "geprueft_urls": [
+              "https://www.resirkula.no/om-resirkula/",
+              "https://www.sirkula.no/ombruk/"
+            ],
+            "begruendung": "Eigenes, dauerhaftes Gjenbrukskjøpesenter (Depot/Markt) fuer Wiederverwendung -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N01",
+            "actor_degree": "kern",
+            "beleg_url": "https://byggogbevar.no/ombruk/",
+            "beleg_zitat": "Råd og tips om regelverk, praktisk ombruk og ny bruk i eksisterende bygg",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "byggogbevar.no ombruk forhandlere",
+              "byggogbevar directory reuse OR reclaimed OR salvage OR ombruk"
+            ],
+            "geprueft_urls": [
+              "https://byggogbevar.no/ombruk/",
+              "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/"
+            ],
+            "begruendung": "\"Ombruk og ny bruk\" ist eine dauerhafte thematische Hauptsektion der eigenen Seite mit Ratgeber- und Haendlerverzeichnisfunktion -> kern (die Organisation selbst betreibt das Verzeichnis).",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N05",
+            "actor_degree": "kern",
+            "beleg_url": "https://bolgenbks.no/ombruks-hub",
+            "beleg_zitat": "demontering, frakt, mellomlagring og distribusjon",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Ombruks-HUB Sørlandet\" AS",
+              "Ombruks-HUB Sørlandet Kristiansand reuse OR reclaimed OR salvage OR ombruk"
+            ],
+            "geprueft_urls": [
+              "https://bolgenbks.no/ombruks-hub",
+              "https://byggogbevar.no/ressurser/forhandlere-ombruk/ombruks-hub-soerlandet-as/"
+            ],
+            "begruendung": "Dedizierte, dauerhafte eigene Praesentationsseite (Team, Kontakt, Lager) mit Reuse-Kernleistungen (Demontage, Zwischenlagerung, Distribution) als Betriebszweck -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "S01",
+            "actor_degree": "kern",
+            "beleg_url": "https://donorbygg.no",
+            "beleg_zitat": "synliggjør ombruksmaterialer for verdikjeden",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "donorbygg.no",
+              "OmbrukNå Donorbygg nettside plattform sirken"
+            ],
+            "geprueft_urls": [
+              "https://donorbygg.no",
+              "https://byggogbevar.no/ressurser/forhandlere-ombruk/donorbygg/"
+            ],
+            "begruendung": "Eigene, dauerhaft betriebene digitale Plattform, deren Kernzweck die Sichtbarmachung von Ombruksmaterialien ist -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U02",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.urbanreuse.ngnordic.com/",
+            "beleg_zitat": "Bevar builds the new with the old, offering consulting and specialist expertise in groundwork, demolition, and the construction of new steel and concrete structures within existing buildings",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Bevar Urban Reuse NG Group ombruk",
+              "Urban Reuse Norway reclaimed OR salvage OR ombruk"
+            ],
+            "geprueft_urls": [
+              "https://www.urbanreuse.ngnordic.com/",
+              "https://byggogbevar.no/ressurser/forhandlere-ombruk/bevar/"
+            ],
+            "begruendung": "Eigene Markenseite (urbanreuse.ngnordic.com) stellt Reuse/Bauteil-Wiederverwendung als dauerhafte Leistungslinie dar -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U07",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.jcs-as.no/materialbank",
+            "beleg_zitat": "MaterialBanken er eit konsept som fyst ble utvikla av Materialbanken for Bygningsvern i Vanse.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "JCS AS Norge rivning ombruk byggematerialer",
+              "JCS AS Voss reuse OR reclaimed OR salvage OR materialbank"
+            ],
+            "geprueft_urls": [
+              "https://www.jcs-as.no/",
+              "https://www.jcs-as.no/materialbank"
+            ],
+            "begruendung": "Eigene dauerhafte Seite mit Materialbank/Shop fuer wiederverwendetes Bauholz aus eigenem Rueckbau -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U12",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.sirkula.no/ombruk/",
+            "beleg_zitat": "De brukbare tingene du ikke trenger lenger, kan andre ha glede av.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Sirkula IKS ombruk bygningsmaterialer",
+              "Sirkula IKS Hamar reuse OR reclaimed OR salvage OR ombruk"
+            ],
+            "geprueft_urls": [
+              "https://www.sirkula.no/ombruk/",
+              "https://www.sirkula.no/om-sirkula/"
+            ],
+            "begruendung": "Eigene dauerhafte Sektion \"Ombruk\" beschreibt Betrieb von Resirkula/Ombruk als Teil des Kerngeschaefts -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "M06|U12",
+            "a_tid": "M06",
+            "b_tid": "U12",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.resirkula.no/om-resirkula/",
+            "beleg_zitat": "Resirkula er et gjenbrukskjøpesenter i kretsløpsparken ved Hamar og er Sirkula IKS sin satsing på ombruk, avfallsreduksjon og sirkulærøkonomi.",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "BETREIBER (Sirkula IKS betreibt Resirkula als eigene Satsing)",
+            "relation_soll": "BETREIBER",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "M06|N01",
+            "a_tid": "M06",
+            "b_tid": "N01",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "",
+            "relation_soll": "",
+            "beide_genannt": false,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U02|N01",
+            "a_tid": "U02",
+            "b_tid": "N01",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "Plattformen «Urban Reuse», er en partner for bærekraftig ombruk av bygg og infrastruktur i Norge.",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "S01|N01",
+            "a_tid": "S01",
+            "b_tid": "N01",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "Donorbygg er en nettside hvor du kan finne bygg som har ombruksmaterialer.",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "M01|N01",
+            "a_tid": "M01",
+            "b_tid": "N01",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "FornyBygg selger brukte byggevarer og overskuddsmaterialer",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "M02|N01",
+            "a_tid": "M02",
+            "b_tid": "N01",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "Utsalgssted for brukte byggevarer i tilknytning til byggevarehuset Monter Storkaas",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N01|M03",
+            "a_tid": "N01",
+            "b_tid": "M03",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "Iris Ombrukssentral er etablert i samarbeid av Iris Produksjon og Retura Iris, og er en m",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N01|U07",
+            "a_tid": "N01",
+            "b_tid": "U07",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "Bedriften kan demontere byggget for deg. Det blir lagra i MaterialBanken, restaurert om det trengst",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N01|M04",
+            "a_tid": "N01",
+            "b_tid": "M04",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "Materialbanken for bygningsvern er en ombrukssentral som omsetter brukte byggevarer produsert før 1940.",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N01|N05",
+            "a_tid": "N01",
+            "b_tid": "N05",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+            "beleg_zitat": "Ombruks-HUB Sørlandet AS ble grunnlagt av Bølgen bærekraftsenter med et klart mål: å fremme ombrukspraksis",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+            "relation_soll": "VERZEICHNIS",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U07|M04",
+            "a_tid": "U07",
+            "b_tid": "M04",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.jcs-as.no/materialbank",
+            "beleg_zitat": "MaterialBanken er eit konsept som fyst ble utvikla av Materialbanken for Bygningsvern i Vanse.",
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Konzept-Vorbild (JCS uebernahm das MaterialBank-Konzept von Materialbanken for Bygningsvern)",
+            "relation_soll": "",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          }
+        ],
+        "cc": "NO",
+        "assigned_nodes": [
+          "M01",
+          "M02",
+          "M03",
+          "M04",
+          "M06",
+          "N01",
+          "N05",
+          "S01",
+          "U02",
+          "U07",
+          "U12"
+        ],
+        "assigned_edges": [
+          "M06|U12",
+          "M06|N01",
+          "U02|N01",
+          "S01|N01",
+          "M01|N01",
+          "M02|N01",
+          "N01|M03",
+          "N01|U07",
+          "N01|M04",
+          "N01|N05",
+          "U07|M04"
+        ]
+      },
+      {
+        "packet_id": "NO-c02",
+        "nodes": [
+          {
+            "tid": "M05",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.ressurssentral.no/",
+            "beleg_zitat": "I teltet tilbyr driftsselskapet Ombygg ombruksvarer av høy kvalitet og utleie av lagerplass til ombruksvarer.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "OMBYGG Norge ombruk byggevarer",
+              "\"OMBYGG\" (reuse OR reclaimed OR salvage OR Wiederverwendung)"
+            ],
+            "geprueft_urls": [
+              "https://www.ombygg.no/om-ombygg",
+              "https://www.ombygg.no/",
+              "https://www.ombygg.no/byggevarer",
+              "https://www.ombygg.no/levere",
+              "https://www.ressurssentral.no/"
+            ],
+            "begruendung": "Eigene Domain ombygg.no lieferte bei vier Abrufversuchen keinen Inhalt (vermutlich JS-Rendering/Bot-Schutz), daher kein kern-Beleg von der eigenen Seite moeglich. Sirkulaer Ressurssentral (Betreiber-Partner) nennt Ombygg namentlich als Betriebsgesellschaft des Wiederverwendungs-Zentrums mit konkreter Reuse-Taetigkeit -> bezug.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "bot_block",
+                "beleg_url": "https://www.ombygg.no/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M07",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.ressurssentral.no/",
+            "beleg_zitat": "Sirkulær Ressurssentral skal bidra til økt ombruk av byggevarer.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Sirkulær Ressurssentral\" ombruk"
+            ],
+            "geprueft_urls": [
+              "https://www.ressurssentral.no/",
+              "https://www.ressurssentral.no/prosjekter",
+              "https://www.ressurssentral.no/samarbeidspartnere"
+            ],
+            "begruendung": "Eigene Domain ressurssentral.no stellt Wiederverwendung von Bauteilen dauerhaft als Kernauftrag dar (eigener Betrieb eines Ombruk-Zentrums) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N03",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.futurebuilt.no/om-oss",
+            "beleg_zitat": "sirkulære bygg og bydeler",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "FutureBuilt sirkulær ombruk"
+            ],
+            "geprueft_urls": [
+              "https://www.futurebuilt.com",
+              "https://www.futurebuilt.no/om-oss",
+              "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+            ],
+            "begruendung": "Gespeicherte primary_source_url futurebuilt.com ist nicht erreichbar (Verbindungsfehler); die tatsaechliche Organisation firmiert unter futurebuilt.no. Dort ist Zirkularitaet/sirkulaere Bauteile als dauerhaftes Kriterienprogramm (eigene Ueber-uns-Seite) dargestellt -> kern. url_korrigiert: futurebuilt.no.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "dns_tot",
+                "beleg_url": "https://www.futurebuilt.com"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N04",
+            "actor_degree": "kern",
+            "beleg_url": "https://remiks.no/nyheter/bedrift/",
+            "beleg_zitat": "Ombruk og gjenbruk med Remiks",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Ombruk i nord\" Remiks",
+              "Remiks ombruk byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://remiks.no/nyheter/bedrift/",
+              "https://www.klimapartnere.no/ombruk-i-nord-samarbeid-om-gjenbruk-av-materialer/"
+            ],
+            "begruendung": "Remiks eigene Seite fuehrt Wiederverwendung/Ombruk (ueber Rebell/ProffRebell) als dauerhafte Leistungslinie -> kern. Das konkrete Projekt 'Ombruk i Nord' selbst ist auf klimapartnere.no (Drittseite) mit Remiks als Traeger und Lagerpartner beschrieben.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P2",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Kristian Augusts gate relates to FutureBuilt's criteria for circular buildings.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "KA13 prosjekt ombruk Entra"
+            ],
+            "geprueft_urls": [
+              "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+              "https://www.entra.no/vare-eiendommer/alle-eiendommer/kristian-augusts-gate-13"
+            ],
+            "begruendung": "Projektknoten (is_project=true): das Bauvorhaben KA13 dokumentiert Bauteil-Wiederverwendung als zentrales, dauerhaft dargestelltes Merkmal (FutureBuilt-Forbildeprosjekt-Seite mit vollstaendigem Team, Entra-eigene Projektseite) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U01",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Landscape Architect: Asplan Viak / Environmental Consultant: Asplan Viak AS",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Asplan Viak KA13 Kristian Augusts gate 13"
+            ],
+            "geprueft_urls": [
+              "https://www.asplanviak.no/prosjekt/13298/",
+              "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+            ],
+            "begruendung": "Eigene Seite asplanviak.no/prosjekt/13298/ lieferte beim Abruf keinen KA13-Inhalt (moeglw. dynamisches Laden). Namentliche Nennung in benannter Reuse-Sache (KA13) auf futurebuilt.no -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U03",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Developer: Entra",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "KA13 prosjekt ombruk Entra"
+            ],
+            "geprueft_urls": [
+              "https://www.entra.no/vare-eiendommer/alle-eiendommer/kristian-augusts-gate-13",
+              "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+            ],
+            "begruendung": "entra.no zeigt KA13 als einzelnes Referenzprojekt, keine eigene dauerhafte Reuse-Leistungslinie fuer den Konzern gefunden -> bezug ueber benannte Reuse-Sache KA13.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U05",
+            "actor_degree": "bezug",
+            "beleg_url": "https://insenti.no/prosjekt/kristian-augusts-gate-13-ka13/",
+            "beleg_zitat": "Insenti er engasjert av Entra som byggherrens representant med byggeledelse, prosjektledelse, prosjekteringsgruppeledelse, miljørådgiving og ombrukskoordinering.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Insenti prosjektledelse ombruk"
+            ],
+            "geprueft_urls": [
+              "https://insenti.no/prosjekt/kristian-augusts-gate-13-ka13/"
+            ],
+            "begruendung": "Eigene Projektseite von Insenti nennt Ombrukskoordinering als Teil ihres Auftrags im KA13-Projekt, jedoch als Einzelprojekt-Referenz, keine dauerhafte Reuse-Leistungsseite -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U06",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Entra in close collaboration with IWG Group and their Spaces concept",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"IWG Group\" OR Spaces KA13 Kristian Augusts gate"
+            ],
+            "geprueft_urls": [
+              "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+            ],
+            "begruendung": "Namentliche Nennung als Mieter/Kollaborationspartner in der benannten Reuse-Sache KA13 auf futurebuilt.no -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U08",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Architect: Mad",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Mad arkitekter KA13"
+            ],
+            "geprueft_urls": [
+              "https://www.mad.no/nyheter/ka13-findings-report-now-available-in-english",
+              "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+            ],
+            "begruendung": "mad.no/nyheter-Seite zu KA13 nicht erreichbar (404); Nennung als Architekt im benannten Reuse-Projekt KA13 auf futurebuilt.no -> bezug.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_404",
+                "beleg_url": "https://www.mad.no/nyheter/ka13-findings-report-now-available-in-english"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U11",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.scenario.no/prosjekter/ka13-tullinlokka",
+            "beleg_zitat": "Her har Scenario hatt ansvar for interiøret i kontorbyggets åtte etasjer.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Scenario Interiørarkitekter KA13 Kristian Augusts gate 13"
+            ],
+            "geprueft_urls": [
+              "https://www.scenario.no/prosjekter/ka13-tullinlokka"
+            ],
+            "begruendung": "Eigene Projektseite (Portfolio-Einzelprojekt), keine dauerhafte Reuse-Leistungslinie fuer die gesamte Organisation -> bezug (analog Gardiner&Theobald-Kalibrierung).",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "U03|M05",
+            "a_tid": "U03",
+            "b_tid": "M05",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "https://www.ressurssentral.no/",
+            "beleg_zitat": "",
+            "relation_ist": "",
+            "relation_soll": "",
+            "beide_genannt": false,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U03|P2",
+            "a_tid": "U03",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Developer: Entra",
+            "relation_ist": "Bauherr/Entwickler von KA13",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U08|P2",
+            "a_tid": "U08",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Architect: Mad",
+            "relation_ist": "Architekt von KA13",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N03|M05",
+            "a_tid": "N03",
+            "b_tid": "M05",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "https://www.ressurssentral.no/",
+            "beleg_zitat": "",
+            "relation_ist": "",
+            "relation_soll": "",
+            "beide_genannt": false,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N03|M07",
+            "a_tid": "N03",
+            "b_tid": "M07",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "https://www.ressurssentral.no/",
+            "beleg_zitat": "",
+            "relation_ist": "FutureBuilt nur als Logo unter Samarbeidspartnere gelistet, kein Fliesstext",
+            "relation_soll": "",
+            "beide_genannt": false,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N03|P2",
+            "a_tid": "N03",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Kristian Augusts gate relates to FutureBuilt's criteria for circular buildings.",
+            "relation_ist": "KA13 ist FutureBuilt-Forbildeprosjekt",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U01|N04",
+            "a_tid": "U01",
+            "b_tid": "N04",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.klimapartnere.no/ombruk-i-nord-samarbeid-om-gjenbruk-av-materialer/",
+            "beleg_zitat": "Prosjekt ombruk har fått til en avtale med Remiks, som har satt av 500 m2 til mellom-lagring",
+            "relation_ist": "Beide auf derselben Drittseite als Akteure im Projekt Ombruk i Nord genannt, kein einzelner Satz mit explizitem Beziehungswort zwischen beiden",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U01|P2",
+            "a_tid": "U01",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Landscape Architect: Asplan Viak / Environmental Consultant: Asplan Viak AS",
+            "relation_ist": "Landschaftsarchitekt/Umweltberater von KA13",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U05|P2",
+            "a_tid": "U05",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://insenti.no/prosjekt/kristian-augusts-gate-13-ka13/",
+            "beleg_zitat": "Insenti er engasjert av Entra som byggherrens representant med byggeledelse, prosjektledelse, prosjekteringsgruppeledelse, miljørådgiving og ombrukskoordinering.",
+            "relation_ist": "Prosjektledelse/Ombrukskoordinering fuer KA13",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U11|P2",
+            "a_tid": "U11",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.scenario.no/prosjekter/ka13-tullinlokka",
+            "beleg_zitat": "Her har Scenario hatt ansvar for interiøret i kontorbyggets åtte etasjer.",
+            "relation_ist": "Interiørarkitekt fuer KA13",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U06|P2",
+            "a_tid": "U06",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+            "beleg_zitat": "Entra in close collaboration with IWG Group and their Spaces concept",
+            "relation_ist": "Mieter/Kollaborationspartner in KA13",
+            "relation_soll": "PROJEKT_PARTNER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "M05|M07",
+            "a_tid": "M05",
+            "b_tid": "M07",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.ressurssentral.no/",
+            "beleg_zitat": "I teltet tilbyr driftsselskapet Ombygg ombruksvarer av høy kvalitet og utleie av lagerplass til ombruksvarer.",
+            "relation_ist": "Ombygg als Driftsselskap innerhalb der Sirkulær Ressurssentral-Anlage",
+            "relation_soll": "BETREIBER",
+            "beide_genannt": true,
+            "abrufdatum": "2026-08-13",
+            "budget_erschoepft": false
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 33,
+        "kappe_erreicht": true,
+        "cc": "NO",
+        "assigned_nodes": [
+          "M05",
+          "M07",
+          "N03",
+          "N04",
+          "P2",
+          "U01",
+          "U03",
+          "U05",
+          "U06",
+          "U08",
+          "U11"
+        ],
+        "assigned_edges": [
+          "U03|M05",
+          "U03|P2",
+          "U08|P2",
+          "N03|M05",
+          "N03|M07",
+          "N03|P2",
+          "U01|N04",
+          "U01|P2",
+          "U05|P2",
+          "U11|P2",
+          "U06|P2",
+          "M05|M07"
+        ]
+      },
+      {
+        "packet_id": "NO-c03",
+        "nodes": [
+          {
+            "tid": "F02",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+            "beleg_zitat": "GjenOm er et forskningsprosjekt ledet av Trondheim kommune, i samarbeid med SINTEF, NTNU, Asplan Viak og Loopfront.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "NTNU ombruk byggematerialer forskning bærekraft",
+              "Regionalt ombruksnettverk byggematerialer Oslo Trondheim"
+            ],
+            "geprueft_urls": [
+              "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+              "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+              "https://www.ntnu.no/iv/forskning-bygg"
+            ],
+            "begruendung": "NTNU wird namentlich als Partner im vom Trondheim kommune geleiteten Forschungsprojekt GjenOm genannt (mit SINTEF, Asplan Viak, Loopfront) sowie als Teilnehmer im Multiconsult-Ombruksnettverk. Eigene NTNU-Forschungsseite (ntnu.no/iv/forskning-bygg) nennt Ombruk nicht explizit als dauerhafte Linie -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "I01",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.asker.kommune.no/klima-og-miljo/ombruk/",
+            "beleg_zitat": "Asker kommune jobber for å redusere avfall og forbruket av knappe naturressurser.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "CCRI Asker kommune ombruk pilot Circular Construction Regions Initiative",
+              "Asker kommune ombruk byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://www.asker.kommune.no/klima-og-miljo/ombruk/",
+              "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/"
+            ],
+            "begruendung": "Asker kommune betreibt eine eigene dauerhafte Ombruk-Seite mit mehreren permanenten Angeboten (Ombruksbutikken, Ombruksbua, Sirken-Test, CCRI-Pilotstatus) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "I03",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+            "beleg_zitat": "GjenOm Veileder - for gjenbruk av bærende konstruksjoner, skal hjelpe bygningseiere med å vurdere ombruk, tekniske vurderinger og klimatiltak",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Trondheim kommune ombruk byggematerialer nettverk",
+              "Trondheim kommune ombruk byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+              "https://www.trondheim.kommune.no/gjenbrukshuset/"
+            ],
+            "begruendung": "Trondheim kommune betreibt mit dem GjenOm-Veileder ein dauerhaftes eigenes digitales Werkzeug zur Bauteil-Wiederverwendung (bærende konstruksjoner) auf der eigenen Domain -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N02",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+            "beleg_zitat": "I 2022 ble Asker kommune valgt som én av 12 piloter i EU-kommisjonens program European Circular Cities and Regions Initiative (CCRI).",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "CCRI Asker kommune ombruk pilot Circular Construction Regions Initiative",
+              "CCRI Pilot Asker Norway circular"
+            ],
+            "geprueft_urls": [
+              "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+              "https://circular-cities-and-regions.ec.europa.eu/node/1800"
+            ],
+            "begruendung": "CCRI Pilot Asker wird als benanntes EU-Programm-Pilotvorhaben auf Askers eigener Seite genannt; keine eigene Betreiberseite des Pilotprogramms mit dauerhafter, spezifisch fuer Asker gestalteter Reuse-Linie gefunden -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N06",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "Loopfront og Multiconsult etablerer nå nettverk for ombruk av byggematerialer.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Regionalt ombruksnettverk byggematerialer Oslo Trondheim",
+              "regional ombruksnettverk byggematerialer Norge"
+            ],
+            "geprueft_urls": [
+              "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/"
+            ],
+            "begruendung": "Das Netzwerk wird auf Multiconsults Seite als benanntes Vorhaben mit Mitgliedspflichten (Gebaeudekartierung durch teilnehmende Eigentuemer) beschrieben; keine eigene Netzwerk-Domain gefunden -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "S02",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.loopfront.com/",
+            "beleg_zitat": "Loopfront's digital platform makes it easy for companies to save costs, CO2 and waste by reusing furniture, building materials and more",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.loopfront.com/"
+            ],
+            "begruendung": "Gespeicherte primary_source_url abgerufen (D1): eigene Seite stellt Wiederverwendung von Bauteilen/Moebeln dauerhaft als Kerngeschaeft dar -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "S04",
+            "actor_degree": "kern",
+            "beleg_url": "https://sirken.no/",
+            "beleg_zitat": "Norges markedsplass for sirkulære byggematerialer. Kjøp brukte byggevarer og bidra til en grønnere fremtid.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Sirken ombruk Asker kommune container gjenbruk"
+            ],
+            "geprueft_urls": [
+              "https://sirken.no/"
+            ],
+            "begruendung": "Sirken.no praesentiert sich auf eigener Domain dauerhaft als Marktplatz fuer wiederverwendete Baumaterialien -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U09",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.multiconsult.no/tjenester/bygg-og-eiendom/fag-og-tjenester/ombruksradgivning-fra-a-til-a/",
+            "beleg_zitat": "Multiconsult tilbyr helhetlig ombruksrådgivning for prosjekter med ombruk av bygg og materialer gjennom alle faser.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Multiconsult ombruk sirkulær rådgivning tjenester",
+              "multiconsult.no ombruk tjenester sirkulærøkonomi rådgivning"
+            ],
+            "geprueft_urls": [
+              "https://www.multiconsult.no/tjenester/bygg-og-eiendom/fag-og-tjenester/ombruksradgivning-fra-a-til-a/",
+              "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/"
+            ],
+            "begruendung": "Multiconsult fuehrt auf eigener Domain eine dauerhafte Leistungsseite 'Ombruksrådgivning' als feste Fachlinie (nicht News/Blog) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U13",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "TOBB Trondheim boligbyggelag ombruk byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/"
+            ],
+            "begruendung": "TOBB wird namentlich als Teilnehmer im benannten regionalen Ombruksnettverk-Vorhaben genannt (Gebaeude zur Kartierung eingebracht); keine eigene TOBB-Reuse-Leistungsseite gefunden -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "S02|N06",
+            "a_tid": "S02",
+            "b_tid": "N06",
+            "edge_degree": "belegt",
+            "relation_ist": "Loopfront ist gemeinsam mit Multiconsult Mitbegruender/Betreiber der digitalen Plattform des regionalen Ombruksnettverks",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "Loopfront og Multiconsult etablerer nå nettverk for ombruk av byggematerialer.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "I01|N02",
+            "a_tid": "I01",
+            "b_tid": "N02",
+            "edge_degree": "belegt",
+            "relation_ist": "Asker kommune ist die ausgewaehlte Pilotkommune im CCRI-Programm",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+            "beleg_zitat": "I 2022 ble Asker kommune valgt som én av 12 piloter i EU-kommisjonens program European Circular Cities and Regions Initiative (CCRI).",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "I01|N06",
+            "a_tid": "I01",
+            "b_tid": "N06",
+            "edge_degree": "belegt",
+            "relation_ist": "Asker kommune ist teilnehmender Gebaeudeeigentuemer im regionalen Ombruksnettverk",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "I01|S04",
+            "a_tid": "I01",
+            "b_tid": "S04",
+            "edge_degree": "belegt",
+            "relation_ist": "Asker kommune testet Sirken als Selbstbedienungscontainer fuer Baumaterial-Wiederverwendung",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+            "beleg_zitat": "Kommunen tester ut Sirken, en selvbetjent butikk i kontainer, som gjør materialer fra rivingsprosjekter, og overskudd fra byggeprosjekter tilgjengelige.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "U09|N06",
+            "a_tid": "U09",
+            "b_tid": "N06",
+            "edge_degree": "belegt",
+            "relation_ist": "Multiconsult ist Mitbegruender/Berater des regionalen Ombruksnettverks",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "Loopfront og Multiconsult etablerer nå nettverk for ombruk av byggematerialer.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "F02|N06",
+            "a_tid": "F02",
+            "b_tid": "N06",
+            "edge_degree": "belegt",
+            "relation_ist": "NTNU ist teilnehmender Gebaeudeeigentuemer/Institution im regionalen Ombruksnettverk",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N06|U13",
+            "a_tid": "N06",
+            "b_tid": "U13",
+            "edge_degree": "belegt",
+            "relation_ist": "TOBB ist teilnehmender Gebaeudeeigentuemer im regionalen Ombruksnettverk",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          },
+          {
+            "edge_id": "N06|I03",
+            "a_tid": "N06",
+            "b_tid": "I03",
+            "edge_degree": "belegt",
+            "relation_ist": "Trondheim kommune ist teilnehmender Gebaeudeeigentuemer im regionalen Ombruksnettverk",
+            "relation_soll": "",
+            "unklar_grund": "",
+            "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+            "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 23,
+        "kappe_erreicht": false,
+        "cc": "NO",
+        "assigned_nodes": [
+          "F02",
+          "I01",
+          "I03",
+          "N02",
+          "N06",
+          "S02",
+          "S04",
+          "U09",
+          "U13"
+        ],
+        "assigned_edges": [
+          "S02|N06",
+          "I01|N02",
+          "I01|N06",
+          "I01|S04",
+          "U09|N06",
+          "F02|N06",
+          "N06|U13",
+          "N06|I03"
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "U01",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.ains.fi/palvelut",
+        "beleg_zitat": "Uudelleenkäytettävien rakennustuotteiden tuotekelpoisuus",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"A-Insinöörit\" reuse OR uudelleenkäyttö OR kiertotalous rakenneosat"
+        ],
+        "geprueft_urls": [
+          "https://www.ains.fi/artikkelit/purkukartoitus-4-purkumateriaaliselvityksella-rakennustuotteet-uudelleenkayttoon",
+          "https://www.ains.fi/palvelut"
+        ],
+        "begruendung": "ains.fi/palvelut listet 'Purkukartoitus ja -suunnittelu' und 'Uudelleenkäytettävien rakennustuotteiden tuotekelpoisuus' als dauerhafte Leistungsangebote (nicht Blog/News). Damit ist Wiederverwendung von Bauteilen fester Teil des Leistungsangebots -> kern. Zusätzlich als ausführender Partner (Baumanagement) im Closing Loops-Projekt genannt (aalto.fi/en/housing-design/closing-loops).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "F01",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.aalto.fi/en/housing-design",
+        "beleg_zitat": "The research and design efforts concentrate on two main areas: housing design quality and circular construction",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Aalto University Department of Architecture building component reuse research"
+        ],
+        "geprueft_urls": [
+          "https://www.aalto.fi/en/department-of-architecture/research-at-the-department-of-architecture",
+          "https://www.aalto.fi/en/housing-design"
+        ],
+        "begruendung": "Housing Design ist eine dauerhafte Professur/Programmlinie der Aalto-Architekturfakultät mit circular construction als einem von zwei Kernfoki -- Institutslinie, nicht News -> kern. Die Department-Forschungsseite selbst nennt reuse nur ueber zeitgebundene Projekte (Closing Loops, ReType), die Housing-Design-Programmseite traegt den Grad.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "P1",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.aalto.fi/en/housing-design",
+        "beleg_zitat": "The professorship has been led by Assistant Professor Antti Lehto since 2022.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Antti Lehto\" architect reuse circular Finland"
+        ],
+        "geprueft_urls": [
+          "https://people.aalto.fi/antti.lehto",
+          "https://www.aalto.fi/en/housing-design",
+          "https://www.aalto.fi/en/housing-design/circular-drifter",
+          "https://www.aalto.fi/en/housing-design/closing-loops"
+        ],
+        "begruendung": "tid ist als Projekt markiert (is_project=true), tatsaechlich handelt es sich um eine PERSON (Antti Lehto, Assistant Professor an der Aalto-Universitaet) -> Flag falscher_typ. Als Akteur bewertet: er leitet dauerhaft die Housing-Design-Professur, deren Kernfokus circular construction ist, und fuehrt zusaetzlich Closing Loops und Circular Drifter als Projektleiter -> kern.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "beleg_url": "https://www.aalto.fi/en/housing-design",
+            "typ_ist": "Person",
+            "typ_soll": "Projekt"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "U03",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Arkkitehdit LSV\" kiertotalous uudelleenkäyttö rakennus"
+        ],
+        "geprueft_urls": [
+          "https://arkkitehditlsv.fi/kestavarakentaminen/"
+        ],
+        "begruendung": "Eigene Seite kestavarakentaminen behandelt Kiertotalous nur als allgemeines Zukunftsthema ('Kiertotalous on tulevaisuuden ekologisen kestävyyden teema...'), ohne konkreten Bauteilbezug und ohne benannte Reuse-Sache -> weder kern (kein Leistungslinien-Bauteilbezug) noch bezug (keine benannte Reuse-Sache). Verfahren durchlaufen, kein passender Beleg gefunden.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "U04",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Aulis Lundell\" kiertotalous purku uudelleenkäyttö"
+        ],
+        "geprueft_urls": [
+          "https://www.aulislundell.com/naytasivu/lundell-zero",
+          "https://www.aulislundell.com/kiertotalous",
+          "https://www.aulislundell.com/naytasivu/kohti-kiertotaloutta"
+        ],
+        "begruendung": "Aulis Lundell zeigt Kiertotalous-Inhalte (Lundell Zero, Kohti kiertotaloutta), diese betreffen jedoch Stahlrecycling/Materialkreislauf in der Herstellung, nicht Wiederverwendung von Bauteilen -> nach Regel 'Recycling/Rezyklat/Abfall ohne Bauteilbezug' ausgeschlossen von kern. Keine benannte Reuse-Sache mit Bauteilbezug gefunden -> ohne_beleg.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "P2",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.aalto.fi/en/housing-design/circular-drifter",
+        "beleg_zitat": "a concept design for a pioneering building designed for disassembly and material reuse, acting as a laboratory for circular solutions for its entire lifecycle",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Circular Drifter\" demo house Finland reuse"
+        ],
+        "geprueft_urls": [
+          "https://www.aalto.fi/en/housing-design/circular-drifter"
+        ],
+        "begruendung": "Projektknoten: dauerhafte Aalto-Projektseite dokumentiert das Bauvorhaben als fuer Demontage und Materialwiederverwendung konzipiert, Traeger Aalto University und VTT -> kern (Bauteil-/Materialwiederverwendung dauerhaft dokumentiert, kein einzelner News-Post).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "P3",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.aalto.fi/en/housing-design/closing-loops",
+        "beleg_zitat": "Nearly all materials for the building, apart from foundations, are sourced from demolition sites",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Closing Loops\" Mustikkamaa pilot project Helsinki reuse"
+        ],
+        "geprueft_urls": [
+          "https://www.aalto.fi/en/housing-design/closing-loops",
+          "https://testbed.hel.fi/en/circular-economy/storage-and-maintenance-building-made-from-reused-construction-products/"
+        ],
+        "begruendung": "Projektknoten: dauerhafte Aalto-Projektseite dokumentiert Mustikkamaa-Bauvorhaben als fast vollstaendig aus wiederverwendeten Bauteilen/Materialien von Abbruchstellen errichtet, Traeger Aalto University und Stadt Helsinki, Partner u.a. A-Insinöörit, Sitowise, Sweco, Spolia -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "U06",
+        "actor_degree": "bezug",
+        "beleg_url": "https://durat.fi/en/pages/circular-service",
+        "beleg_zitat": "We commit to buy back all old Durat furniture at around five per cent of the purchase price.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Durat reuse recycled material circular"
+        ],
+        "geprueft_urls": [
+          "https://durat.fi/en/pages/circular-service",
+          "https://circularmateriallibrary.org/material/durat/"
+        ],
+        "begruendung": "Durat betreibt eine dauerhafte Circular-Service-Seite mit Ruecknahme/Wiederverwendung von Material (Rueckkauf alter Moebel/Verschnitt fuer Wiederverarbeitung). Da es sich primaer um Materialkreislauf eines Verbundwerkstoffs (Solid-Surface-Platten) handelt und nicht eindeutig um Wiederverwendung von Bauteilen im engeren Sinn (Fenster/Traeger etc.), vorsichtshalber bezug statt kern vergeben.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s01"
+      },
+      {
+        "tid": "M01",
+        "name": "Ekomatti",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.ekomatti.fi/rakentaminen.html",
+        "beleg_zitat": "Ovet alk. 15e, ikkunat alk. 5e, kattotiilet, pesuhuonekalusteet, lautatavaraa, lukkoja ja saranoita",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Ekomatti Suomi kierrätys rakennusmateriaali",
+          "Ekomatti rakentaminen kierrätyskeskus"
+        ],
+        "geprueft_urls": [
+          "https://www.ekomatti.fi/rakentaminen.html"
+        ],
+        "begruendung": "Kierrätyskeskus Ekomatti betreibt auf eigener, dauerhaft erreichbarer Unterseite 'Rakentaminen' einen Verkauf von gebrauchten Bauteilen (Türen, Fenster, Dachziegel, Sanitärmöbel, Bauholz, Beschläge) als Teil des Kerngeschäfts -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "U07",
+        "name": "Havu Järvelä",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.safa.fi/arkkitehtiuutiset/diplomityo-purkujatetta-voitaisiin-hyodyntaa-uudisrakentamisessa-jos-vaan-tahtoa-olisi-kierratetyn-kerrostalon-suunnittelussa-suurin-haaste-liittyi-estetiikkaan/",
+        "beleg_zitat": "Havu Järvelä tutki Aalto-yliopiston arkkitehtuurin diplomityössään, kuinka kierrätettyjä rakennusosia voidaan hyödyntää uudisrakentamisessa.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Havu Järvelä\" Finland",
+          "\"Havu Järvelä\" Aalto kierrätetty kerrostalo diplomityö"
+        ],
+        "geprueft_urls": [
+          "https://www.safa.fi/arkkitehtiuutiset/diplomityo-purkujatetta-voitaisiin-hyodyntaa-uudisrakentamisessa-jos-vaan-tahtoa-olisi-kierratetyn-kerrostalon-suunnittelussa-suurin-haaste-liittyi-estetiikkaan/",
+          "https://www.aalto.fi/en/campus/havu-jarvela"
+        ],
+        "begruendung": "Havu Järvelä ist Person, nicht Unternehmen (typ falsch gefuehrt), namentlich genannt in Fachartikel (SAFA) zu seiner benannten Diplomarbeit 'Kierrätetty kerrostalo' ueber Wiederverwendung von Bauteilen aus Abbruch -> benannte Reuse-Sache, kein eigenes dauerhaftes Leistungsangebot -> bezug.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "typ_ist": "Unternehmen",
+            "typ_soll": "Person",
+            "beleg_url": "https://www.safa.fi/arkkitehtiuutiset/diplomityo-purkujatetta-voitaisiin-hyodyntaa-uudisrakentamisessa-jos-vaan-tahtoa-olisi-kierratetyn-kerrostalon-suunnittelussa-suurin-haaste-liittyi-estetiikkaan/",
+            "beleg_zitat": "Havu Järvelä tutki Aalto-yliopiston arkkitehtuurin diplomityössään"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "U08",
+        "name": "Joensuun Rakennuspurku ja Timanttiurakointi Oy",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.joensuunrakennuspurku.fi/",
+        "beleg_zitat": "Puretun tavaran kierrätys ja myynti",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Joensuun Rakennuspurku ja Timanttiurakointi Oy",
+          "Joensuun Rakennuspurku kierrätys myynti"
+        ],
+        "geprueft_urls": [
+          "https://www.joensuunrakennuspurku.fi/"
+        ],
+        "begruendung": "Eigene Website fuehrt 'Puretun tavaran kierrätys ja myynti' (Recycling und Verkauf von Abbruchmaterial) als dauerhafte Leistungslinie neben Abbruch/Timanttiurakointi -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "U09",
+        "name": "Johanna Saarela",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+        "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Johanna Saarela\" rakennus purku",
+          "Johanna Saarela Mustikkamaa kierrätetty varasto"
+        ],
+        "geprueft_urls": [
+          "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi"
+        ],
+        "begruendung": "Person, namentlich genannt (mit Bruder Markus Saarela) als Gewinnerin des benannten Wettbewerbs/Projekts fuer ein Lagergebaeude aus wiederverwendeten Baumaterialien in Mustikkamaa, Helsinki -> bezug.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "typ_ist": "Unternehmen",
+            "typ_soll": "Person",
+            "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+            "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "U12",
+        "name": "Markus Saarela",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+        "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Markus Saarela\" rakennus purku",
+          "Markus Saarela Mustikkamaa kierrätetty varasto"
+        ],
+        "geprueft_urls": [
+          "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi"
+        ],
+        "begruendung": "Person, namentlich genannt (mit Schwester Johanna Saarela) als Gewinner des benannten Wettbewerbs/Projekts fuer ein Lagergebaeude aus wiederverwendeten Baumaterialien in Mustikkamaa, Helsinki -> bezug.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "typ_ist": "Unternehmen",
+            "typ_soll": "Person",
+            "beleg_url": "https://www.sttinfo.fi/tiedote/70138735/mustikkamaalle-varasto-kierratetyista-rakennusmateriaaleista?publisherId=60577852&lang=fi",
+            "beleg_zitat": "Suunnittelukilpailun voitti sisarusparin Johanna ja Markus Saarelan kilpailutyö"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "U16",
+        "name": "Purkukolmio Oy",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.purkukolmio.fi/purkukolmio-yrityksena",
+        "beleg_zitat": "Purkukolmio on perheyritys, joka myy vanhaa tavaraa uusiokäyttöön.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Purkukolmio Oy kierrätys uudelleenkäyttö",
+          "Purkukolmio Oy yrityksenä"
+        ],
+        "geprueft_urls": [
+          "https://www.purkukolmio.fi/purkukolmio-yrityksena",
+          "https://www.purkukolmio.fi/"
+        ],
+        "begruendung": "Eigene, dauerhaft erreichbare Unternehmensseite stellt Verkauf gebrauchter Bauteile/Gegenstaende zur Wiederverwendung als Kerngeschaeft dar -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "U18",
+        "name": "Rakennustoimisto K. Tervo Oy",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Rakennustoimisto K. Tervo Oy\"",
+          "\"K. Tervo\" kiertotalous OR uudelleenkäyttö OR purkumateriaali"
+        ],
+        "geprueft_urls": [
+          "https://www.rakentajatervo.fi/yritys",
+          "https://www.rakentajatervo.fi/"
+        ],
+        "begruendung": "Eigene Unternehmensseite (Yritys) nennt Qualitaetszertifikate, Referenzen, allgemeine Bautaetigkeit, aber keinerlei Bauteil-Wiederverwendung/Kreislaufwirtschaft. Zweite Suche nach Kiertotalous/Uudelleenkäyttö im Zusammenhang mit dem Namen ergab keinen Treffer -> ohne_beleg (Verfahren D2 vollstaendig durchlaufen, kein Fund).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "P7",
+        "name": "Rovastinkangas School Expansion",
+        "actor_degree": "kern",
+        "beleg_url": "https://orivesi.fi/rovastinkankaan-koulun-laajennusosaan-750-nelion-monitoimitila-uudisrakentamisessa-hyodynnetaan-poikkeuksellisella-tavalla-kiertotaloutta/",
+        "beleg_zitat": "Tiilet välivarastoidaan ja niitä tullaan käyttämään uuden laajennusosan rakentamisessa.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Rovastinkangas School Expansion reuse reclaimed",
+          "Rovastinkankaan koulun laajennus kiertotalous tiilet"
+        ],
+        "geprueft_urls": [
+          "https://orivesi.fi/rovastinkankaan-koulun-laajennusosaan-750-nelion-monitoimitila-uudisrakentamisessa-hyodynnetaan-poikkeuksellisella-tavalla-kiertotaloutta/"
+        ],
+        "begruendung": "Projektknoten: Offizielle Stadt-Orivesi-Seite dokumentiert, dass ca. 40.000 Ziegel aus dem Abbruch des alten Berufsschulgebaeudes fuer den Neubau der Schulerweiterung wiederverwendet werden -> Bauvorhaben dokumentiert Bauteil-Wiederverwendung -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s02"
+      },
+      {
+        "tid": "U22",
+        "name": "SSAB",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "SSAB Finland kiertotalous rakennusosien uudelleenkäyttö",
+          "SSAB circular economy steel reuse buildings components"
+        ],
+        "geprueft_urls": [
+          "https://www.ssab.fi/ssab-konserni/kestava-kehitys/kestava-tuotevalikoima/ssab-kiertotaloudessa",
+          "https://www.ssab.com/en/company/sustainability/circular-economy"
+        ],
+        "begruendung": "SSAB ist ein Stahlkonzern; die auffindbaren Kiertotalous-Seiten (ssab.fi) waren technisch nicht abrufbar (SSL-Fehler), eine alternative ssab.com-Seite lieferte 404. Die Suchtreffer beziehen sich durchgehend auf Stahlrecycling/Schrottkreislauf allgemein, nicht auf Bauteil-Wiederverwendung im engeren Sinn (ganze Bauelemente). Kein plausibler Treffer zu Bauteil-Reuse als eigenes Angebot gefunden -> ohne_beleg gemaess D2.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "dns_tot",
+            "beleg_url": "https://www.ssab.fi/ssab-konserni/kestava-kehitys/kestava-tuotevalikoima/ssab-kiertotaloudessa"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s03"
+      },
+      {
+        "tid": "U20",
+        "name": "Sitowise",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.ttl.fi/tutkimus/hankkeet/uudelleenkaytettavien-rakennusosien-kayton-edistaminen-talonrakentamisessa-uuraket",
+        "beleg_zitat": "Osatoteuttajat: Aalto-yliopisto, AFRY Buildings Finland Oy, A-insinöörit, Eurofins Expert Services Oy, Ideastructura Oy, Sitowise Oy, Työterveyslaitos ja Ytekki Oy",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Sitowise kiertotalous rakennusosien uudelleenkäyttö",
+          "Sitowise \"kiertotalous\" palvelu site:sitowise.com"
+        ],
+        "geprueft_urls": [
+          "https://www.sitowise.com/fi/vastuullisuuspalvelut/kiertotaloudella-kestavaa-kehitysta",
+          "https://www.sitowise.com/fi/referenssit/kieppi-kiertotalouden-kumppanuusmalli",
+          "https://www.ttl.fi/tutkimus/hankkeet/uudelleenkaytettavien-rakennusosien-kayton-edistaminen-talonrakentamisessa-uuraket"
+        ],
+        "begruendung": "Sitowises eigene Kiertotalous-Servicepage nennt Bauteil-Wiederverwendung nicht als dauerhafte eigene Leistungslinie (nur Rueckbau/Massenmanagement/Beratung allgemein) -> kein kern. Das UURAKET-Projekt (Trager: Tyoterveyslaitos) zur Foerderung der Wiederverwendung von Bauteilen im Hochbau nennt Sitowise Oy namentlich als Osatoteuttaja (Konsortialmitglied) -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s03"
+      },
+      {
+        "tid": "M03",
+        "name": "Spolia",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.spolia.fi/",
+        "beleg_zitat": "Spolia Design Oy on purettujen materiaalien uudelleen käyttöön erikoistunut asiantuntija-organisaatio, joka suunnittelee cleantech-rakennushankkeita.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Spolia Finland rakennusosien uudelleenkäyttö materiaalipankki"
+        ],
+        "geprueft_urls": [
+          "https://www.spolia.fi/",
+          "https://www.spolia.fi/spolia-ii/"
+        ],
+        "begruendung": "Eigene, dauerhaft platzierte Seite (spolia.fi) beschreibt Bauteil-/Materialwiederverwendung als Kerngeschaeft: Showroom, Webshop (store.spolia.fi), Produktlager in Nurmijaervi, Kiertotalouskauppa in Helsinki-Vallila und Betrieb der Uusimaa-Rakennusosapankki. Erfuellt kern-Kriterium (Shop/Depot/Programm dauerhaft, nicht News-Einzelprojekt).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s03"
+      },
+      {
+        "tid": "F05",
+        "name": "VTT (Technical Research Centre of Finland)",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.vttresearch.com/en/ourservices/circularity-built-environment",
+        "beleg_zitat": "Instead of generating waste, the built environment becomes a bank of resources designed to be reused, repurposed and refurbished over multiple lifecycles.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "VTT Technical Research Centre Finland construction component reuse circularity"
+        ],
+        "geprueft_urls": [
+          "https://www.vttresearch.com/en/ourservices/circularity-built-environment"
+        ],
+        "begruendung": "Eigene, dauerhaft platzierte Leistungsseite 'Circularity services for the built environment' stellt Bauteil-/Materialwiederverwendung explizit als Teil des Forschungs-/Dienstleistungsangebots von VTT dar (Institutslinie) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "FI",
+        "packet_id": "FI-s03"
+      },
+      {
+        "tid": "M01",
+        "actor_degree": "kern",
+        "beleg_url": "https://sites.google.com/fornybygg.no/ombruksglede/meny/om-oss",
+        "beleg_zitat": "FornyBygg selger brukte byggevarer og overskuddsmaterialer gjennom vårt lager på Stjørdal, via facebook og her.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "FornyBygg ombruk Norge",
+          "FornyBygg Stjørdal reuse OR reclaimed OR salvage OR Wiederverwendung"
+        ],
+        "geprueft_urls": [
+          "https://sites.google.com/fornybygg.no/ombruksglede/meny/om-oss",
+          "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/"
+        ],
+        "begruendung": "Eigene Seite (Google Sites unter fornybygg.no) stellt Verkauf gebrauchter Bauteile/Überschussmaterial als dauerhaften Betriebszweck dar -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "M02",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Grønne Byggevarer\" Storkaas ombruk",
+          "\"Grønne Byggevarer\" Gvarv reuse OR reclaimed OR salvage OR gjenbruk"
+        ],
+        "geprueft_urls": [
+          "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+          "https://www.facebook.com/people/Gr%C3%B8nne-Byggevarer/100076296634017/",
+          "https://www.finn.no/214022724",
+          "https://www.monter.no/byggevarehus/monter-storkaas"
+        ],
+        "begruendung": "Nur Verzeichniseintrag (byggogbevar) und generische Ladenseite (Monter Storkaas) gefunden; die eigene Facebook-Seite lieferte beim Abruf keinen prüfbaren Beschreibungstext (Login/eingeschränkter Inhalt). Kein eigener, inhaltlich prüfbarer Reuse-Auftritt gefunden -> ohne_beleg.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "login",
+            "beleg_url": "https://www.facebook.com/people/Gr%C3%B8nne-Byggevarer/100076296634017/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "M03",
+        "actor_degree": "kern",
+        "beleg_url": "https://iris-ombruksentral.no/",
+        "beleg_zitat": "Vi vi gjør det enkelt å velge brukt når du skal bygge noe nytt.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Iris Ombrukssentral\" Saltnes ombruk",
+          "Iris Ombrukssentral Bodø reuse OR reclaimed OR salvage OR ombruk"
+        ],
+        "geprueft_urls": [
+          "https://iris-ombruksentral.no/",
+          "https://byggogbevar.no/ressurser/forhandlere-ombruk/saltnes-ombruk/"
+        ],
+        "begruendung": "Eigene, dauerhafte Betriebsseite mit Marktplatz-/Depot-Funktion fuer gebrauchte Baumaterialien -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "M04",
+        "actor_degree": "kern",
+        "beleg_url": "https://materialbankenforbygningsvern.no/dette-er-materialbanken/",
+        "beleg_zitat": "I Materialbanken finner du alt fra gamle dører og vinduer, brukte takstein i alle varianter, stokker, gulvbord til pyntegjenstander!",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Materialbanken for bygningsvern\" Norge",
+          "Materialbanken for bygningsvern Vanse Farsund reuse OR reclaimed OR salvage"
+        ],
+        "geprueft_urls": [
+          "https://materialbankenforbygningsvern.no/",
+          "https://materialbankenforbygningsvern.no/om-oss/",
+          "https://materialbankenforbygningsvern.no/dette-er-materialbanken/"
+        ],
+        "begruendung": "Eigene Depot-/Verkaufsseite mit dauerhaftem Warenangebot gebrauchter Bauteile vor 1940 -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "M06",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.resirkula.no/om-resirkula/",
+        "beleg_zitat": "Resirkula er et gjenbrukskjøpesenter i kretsløpsparken ved Hamar og er Sirkula IKS sin satsing på ombruk, avfallsreduksjon og sirkulærøkonomi.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Resirkula ombruk bygningsmaterialer",
+          "Resirkula Hamar reuse OR reclaimed OR salvage OR gjenbruk"
+        ],
+        "geprueft_urls": [
+          "https://www.resirkula.no/om-resirkula/",
+          "https://www.sirkula.no/ombruk/"
+        ],
+        "begruendung": "Eigenes, dauerhaftes Gjenbrukskjøpesenter (Depot/Markt) fuer Wiederverwendung -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "N01",
+        "actor_degree": "kern",
+        "beleg_url": "https://byggogbevar.no/ombruk/",
+        "beleg_zitat": "Råd og tips om regelverk, praktisk ombruk og ny bruk i eksisterende bygg",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "byggogbevar.no ombruk forhandlere",
+          "byggogbevar directory reuse OR reclaimed OR salvage OR ombruk"
+        ],
+        "geprueft_urls": [
+          "https://byggogbevar.no/ombruk/",
+          "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/"
+        ],
+        "begruendung": "\"Ombruk og ny bruk\" ist eine dauerhafte thematische Hauptsektion der eigenen Seite mit Ratgeber- und Haendlerverzeichnisfunktion -> kern (die Organisation selbst betreibt das Verzeichnis).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "N05",
+        "actor_degree": "kern",
+        "beleg_url": "https://bolgenbks.no/ombruks-hub",
+        "beleg_zitat": "demontering, frakt, mellomlagring og distribusjon",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Ombruks-HUB Sørlandet\" AS",
+          "Ombruks-HUB Sørlandet Kristiansand reuse OR reclaimed OR salvage OR ombruk"
+        ],
+        "geprueft_urls": [
+          "https://bolgenbks.no/ombruks-hub",
+          "https://byggogbevar.no/ressurser/forhandlere-ombruk/ombruks-hub-soerlandet-as/"
+        ],
+        "begruendung": "Dedizierte, dauerhafte eigene Praesentationsseite (Team, Kontakt, Lager) mit Reuse-Kernleistungen (Demontage, Zwischenlagerung, Distribution) als Betriebszweck -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "S01",
+        "actor_degree": "kern",
+        "beleg_url": "https://donorbygg.no",
+        "beleg_zitat": "synliggjør ombruksmaterialer for verdikjeden",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "donorbygg.no",
+          "OmbrukNå Donorbygg nettside plattform sirken"
+        ],
+        "geprueft_urls": [
+          "https://donorbygg.no",
+          "https://byggogbevar.no/ressurser/forhandlere-ombruk/donorbygg/"
+        ],
+        "begruendung": "Eigene, dauerhaft betriebene digitale Plattform, deren Kernzweck die Sichtbarmachung von Ombruksmaterialien ist -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "U02",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.urbanreuse.ngnordic.com/",
+        "beleg_zitat": "Bevar builds the new with the old, offering consulting and specialist expertise in groundwork, demolition, and the construction of new steel and concrete structures within existing buildings",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Bevar Urban Reuse NG Group ombruk",
+          "Urban Reuse Norway reclaimed OR salvage OR ombruk"
+        ],
+        "geprueft_urls": [
+          "https://www.urbanreuse.ngnordic.com/",
+          "https://byggogbevar.no/ressurser/forhandlere-ombruk/bevar/"
+        ],
+        "begruendung": "Eigene Markenseite (urbanreuse.ngnordic.com) stellt Reuse/Bauteil-Wiederverwendung als dauerhafte Leistungslinie dar -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "U07",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.jcs-as.no/materialbank",
+        "beleg_zitat": "MaterialBanken er eit konsept som fyst ble utvikla av Materialbanken for Bygningsvern i Vanse.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "JCS AS Norge rivning ombruk byggematerialer",
+          "JCS AS Voss reuse OR reclaimed OR salvage OR materialbank"
+        ],
+        "geprueft_urls": [
+          "https://www.jcs-as.no/",
+          "https://www.jcs-as.no/materialbank"
+        ],
+        "begruendung": "Eigene dauerhafte Seite mit Materialbank/Shop fuer wiederverwendetes Bauholz aus eigenem Rueckbau -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "U12",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.sirkula.no/ombruk/",
+        "beleg_zitat": "De brukbare tingene du ikke trenger lenger, kan andre ha glede av.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Sirkula IKS ombruk bygningsmaterialer",
+          "Sirkula IKS Hamar reuse OR reclaimed OR salvage OR ombruk"
+        ],
+        "geprueft_urls": [
+          "https://www.sirkula.no/ombruk/",
+          "https://www.sirkula.no/om-sirkula/"
+        ],
+        "begruendung": "Eigene dauerhafte Sektion \"Ombruk\" beschreibt Betrieb von Resirkula/Ombruk als Teil des Kerngeschaefts -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "tid": "M05",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.ressurssentral.no/",
+        "beleg_zitat": "I teltet tilbyr driftsselskapet Ombygg ombruksvarer av høy kvalitet og utleie av lagerplass til ombruksvarer.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "OMBYGG Norge ombruk byggevarer",
+          "\"OMBYGG\" (reuse OR reclaimed OR salvage OR Wiederverwendung)"
+        ],
+        "geprueft_urls": [
+          "https://www.ombygg.no/om-ombygg",
+          "https://www.ombygg.no/",
+          "https://www.ombygg.no/byggevarer",
+          "https://www.ombygg.no/levere",
+          "https://www.ressurssentral.no/"
+        ],
+        "begruendung": "Eigene Domain ombygg.no lieferte bei vier Abrufversuchen keinen Inhalt (vermutlich JS-Rendering/Bot-Schutz), daher kein kern-Beleg von der eigenen Seite moeglich. Sirkulaer Ressurssentral (Betreiber-Partner) nennt Ombygg namentlich als Betriebsgesellschaft des Wiederverwendungs-Zentrums mit konkreter Reuse-Taetigkeit -> bezug.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "bot_block",
+            "beleg_url": "https://www.ombygg.no/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "M07",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.ressurssentral.no/",
+        "beleg_zitat": "Sirkulær Ressurssentral skal bidra til økt ombruk av byggevarer.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Sirkulær Ressurssentral\" ombruk"
+        ],
+        "geprueft_urls": [
+          "https://www.ressurssentral.no/",
+          "https://www.ressurssentral.no/prosjekter",
+          "https://www.ressurssentral.no/samarbeidspartnere"
+        ],
+        "begruendung": "Eigene Domain ressurssentral.no stellt Wiederverwendung von Bauteilen dauerhaft als Kernauftrag dar (eigener Betrieb eines Ombruk-Zentrums) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "N03",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.futurebuilt.no/om-oss",
+        "beleg_zitat": "sirkulære bygg og bydeler",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "FutureBuilt sirkulær ombruk"
+        ],
+        "geprueft_urls": [
+          "https://www.futurebuilt.com",
+          "https://www.futurebuilt.no/om-oss",
+          "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+        ],
+        "begruendung": "Gespeicherte primary_source_url futurebuilt.com ist nicht erreichbar (Verbindungsfehler); die tatsaechliche Organisation firmiert unter futurebuilt.no. Dort ist Zirkularitaet/sirkulaere Bauteile als dauerhaftes Kriterienprogramm (eigene Ueber-uns-Seite) dargestellt -> kern. url_korrigiert: futurebuilt.no.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "dns_tot",
+            "beleg_url": "https://www.futurebuilt.com"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "N04",
+        "actor_degree": "kern",
+        "beleg_url": "https://remiks.no/nyheter/bedrift/",
+        "beleg_zitat": "Ombruk og gjenbruk med Remiks",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Ombruk i nord\" Remiks",
+          "Remiks ombruk byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://remiks.no/nyheter/bedrift/",
+          "https://www.klimapartnere.no/ombruk-i-nord-samarbeid-om-gjenbruk-av-materialer/"
+        ],
+        "begruendung": "Remiks eigene Seite fuehrt Wiederverwendung/Ombruk (ueber Rebell/ProffRebell) als dauerhafte Leistungslinie -> kern. Das konkrete Projekt 'Ombruk i Nord' selbst ist auf klimapartnere.no (Drittseite) mit Remiks als Traeger und Lagerpartner beschrieben.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "P2",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Kristian Augusts gate relates to FutureBuilt's criteria for circular buildings.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "KA13 prosjekt ombruk Entra"
+        ],
+        "geprueft_urls": [
+          "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+          "https://www.entra.no/vare-eiendommer/alle-eiendommer/kristian-augusts-gate-13"
+        ],
+        "begruendung": "Projektknoten (is_project=true): das Bauvorhaben KA13 dokumentiert Bauteil-Wiederverwendung als zentrales, dauerhaft dargestelltes Merkmal (FutureBuilt-Forbildeprosjekt-Seite mit vollstaendigem Team, Entra-eigene Projektseite) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "U01",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Landscape Architect: Asplan Viak / Environmental Consultant: Asplan Viak AS",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Asplan Viak KA13 Kristian Augusts gate 13"
+        ],
+        "geprueft_urls": [
+          "https://www.asplanviak.no/prosjekt/13298/",
+          "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+        ],
+        "begruendung": "Eigene Seite asplanviak.no/prosjekt/13298/ lieferte beim Abruf keinen KA13-Inhalt (moeglw. dynamisches Laden). Namentliche Nennung in benannter Reuse-Sache (KA13) auf futurebuilt.no -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "U03",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Developer: Entra",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "KA13 prosjekt ombruk Entra"
+        ],
+        "geprueft_urls": [
+          "https://www.entra.no/vare-eiendommer/alle-eiendommer/kristian-augusts-gate-13",
+          "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+        ],
+        "begruendung": "entra.no zeigt KA13 als einzelnes Referenzprojekt, keine eigene dauerhafte Reuse-Leistungslinie fuer den Konzern gefunden -> bezug ueber benannte Reuse-Sache KA13.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "U05",
+        "actor_degree": "bezug",
+        "beleg_url": "https://insenti.no/prosjekt/kristian-augusts-gate-13-ka13/",
+        "beleg_zitat": "Insenti er engasjert av Entra som byggherrens representant med byggeledelse, prosjektledelse, prosjekteringsgruppeledelse, miljørådgiving og ombrukskoordinering.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Insenti prosjektledelse ombruk"
+        ],
+        "geprueft_urls": [
+          "https://insenti.no/prosjekt/kristian-augusts-gate-13-ka13/"
+        ],
+        "begruendung": "Eigene Projektseite von Insenti nennt Ombrukskoordinering als Teil ihres Auftrags im KA13-Projekt, jedoch als Einzelprojekt-Referenz, keine dauerhafte Reuse-Leistungsseite -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "U06",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Entra in close collaboration with IWG Group and their Spaces concept",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"IWG Group\" OR Spaces KA13 Kristian Augusts gate"
+        ],
+        "geprueft_urls": [
+          "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+        ],
+        "begruendung": "Namentliche Nennung als Mieter/Kollaborationspartner in der benannten Reuse-Sache KA13 auf futurebuilt.no -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "U08",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Architect: Mad",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Mad arkitekter KA13"
+        ],
+        "geprueft_urls": [
+          "https://www.mad.no/nyheter/ka13-findings-report-now-available-in-english",
+          "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo"
+        ],
+        "begruendung": "mad.no/nyheter-Seite zu KA13 nicht erreichbar (404); Nennung als Architekt im benannten Reuse-Projekt KA13 auf futurebuilt.no -> bezug.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_404",
+            "beleg_url": "https://www.mad.no/nyheter/ka13-findings-report-now-available-in-english"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "U11",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.scenario.no/prosjekter/ka13-tullinlokka",
+        "beleg_zitat": "Her har Scenario hatt ansvar for interiøret i kontorbyggets åtte etasjer.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Scenario Interiørarkitekter KA13 Kristian Augusts gate 13"
+        ],
+        "geprueft_urls": [
+          "https://www.scenario.no/prosjekter/ka13-tullinlokka"
+        ],
+        "begruendung": "Eigene Projektseite (Portfolio-Einzelprojekt), keine dauerhafte Reuse-Leistungslinie fuer die gesamte Organisation -> bezug (analog Gardiner&Theobald-Kalibrierung).",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "tid": "F02",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+        "beleg_zitat": "GjenOm er et forskningsprosjekt ledet av Trondheim kommune, i samarbeid med SINTEF, NTNU, Asplan Viak og Loopfront.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "NTNU ombruk byggematerialer forskning bærekraft",
+          "Regionalt ombruksnettverk byggematerialer Oslo Trondheim"
+        ],
+        "geprueft_urls": [
+          "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+          "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+          "https://www.ntnu.no/iv/forskning-bygg"
+        ],
+        "begruendung": "NTNU wird namentlich als Partner im vom Trondheim kommune geleiteten Forschungsprojekt GjenOm genannt (mit SINTEF, Asplan Viak, Loopfront) sowie als Teilnehmer im Multiconsult-Ombruksnettverk. Eigene NTNU-Forschungsseite (ntnu.no/iv/forskning-bygg) nennt Ombruk nicht explizit als dauerhafte Linie -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "I01",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.asker.kommune.no/klima-og-miljo/ombruk/",
+        "beleg_zitat": "Asker kommune jobber for å redusere avfall og forbruket av knappe naturressurser.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "CCRI Asker kommune ombruk pilot Circular Construction Regions Initiative",
+          "Asker kommune ombruk byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://www.asker.kommune.no/klima-og-miljo/ombruk/",
+          "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/"
+        ],
+        "begruendung": "Asker kommune betreibt eine eigene dauerhafte Ombruk-Seite mit mehreren permanenten Angeboten (Ombruksbutikken, Ombruksbua, Sirken-Test, CCRI-Pilotstatus) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "I03",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+        "beleg_zitat": "GjenOm Veileder - for gjenbruk av bærende konstruksjoner, skal hjelpe bygningseiere med å vurdere ombruk, tekniske vurderinger og klimatiltak",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Trondheim kommune ombruk byggematerialer nettverk",
+          "Trondheim kommune ombruk byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/",
+          "https://www.trondheim.kommune.no/gjenbrukshuset/"
+        ],
+        "begruendung": "Trondheim kommune betreibt mit dem GjenOm-Veileder ein dauerhaftes eigenes digitales Werkzeug zur Bauteil-Wiederverwendung (bærende konstruksjoner) auf der eigenen Domain -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "N02",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+        "beleg_zitat": "I 2022 ble Asker kommune valgt som én av 12 piloter i EU-kommisjonens program European Circular Cities and Regions Initiative (CCRI).",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "CCRI Asker kommune ombruk pilot Circular Construction Regions Initiative",
+          "CCRI Pilot Asker Norway circular"
+        ],
+        "geprueft_urls": [
+          "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+          "https://circular-cities-and-regions.ec.europa.eu/node/1800"
+        ],
+        "begruendung": "CCRI Pilot Asker wird als benanntes EU-Programm-Pilotvorhaben auf Askers eigener Seite genannt; keine eigene Betreiberseite des Pilotprogramms mit dauerhafter, spezifisch fuer Asker gestalteter Reuse-Linie gefunden -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "N06",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "Loopfront og Multiconsult etablerer nå nettverk for ombruk av byggematerialer.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Regionalt ombruksnettverk byggematerialer Oslo Trondheim",
+          "regional ombruksnettverk byggematerialer Norge"
+        ],
+        "geprueft_urls": [
+          "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/"
+        ],
+        "begruendung": "Das Netzwerk wird auf Multiconsults Seite als benanntes Vorhaben mit Mitgliedspflichten (Gebaeudekartierung durch teilnehmende Eigentuemer) beschrieben; keine eigene Netzwerk-Domain gefunden -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "S02",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.loopfront.com/",
+        "beleg_zitat": "Loopfront's digital platform makes it easy for companies to save costs, CO2 and waste by reusing furniture, building materials and more",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.loopfront.com/"
+        ],
+        "begruendung": "Gespeicherte primary_source_url abgerufen (D1): eigene Seite stellt Wiederverwendung von Bauteilen/Moebeln dauerhaft als Kerngeschaeft dar -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "S04",
+        "actor_degree": "kern",
+        "beleg_url": "https://sirken.no/",
+        "beleg_zitat": "Norges markedsplass for sirkulære byggematerialer. Kjøp brukte byggevarer og bidra til en grønnere fremtid.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Sirken ombruk Asker kommune container gjenbruk"
+        ],
+        "geprueft_urls": [
+          "https://sirken.no/"
+        ],
+        "begruendung": "Sirken.no praesentiert sich auf eigener Domain dauerhaft als Marktplatz fuer wiederverwendete Baumaterialien -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "U09",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.multiconsult.no/tjenester/bygg-og-eiendom/fag-og-tjenester/ombruksradgivning-fra-a-til-a/",
+        "beleg_zitat": "Multiconsult tilbyr helhetlig ombruksrådgivning for prosjekter med ombruk av bygg og materialer gjennom alle faser.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Multiconsult ombruk sirkulær rådgivning tjenester",
+          "multiconsult.no ombruk tjenester sirkulærøkonomi rådgivning"
+        ],
+        "geprueft_urls": [
+          "https://www.multiconsult.no/tjenester/bygg-og-eiendom/fag-og-tjenester/ombruksradgivning-fra-a-til-a/",
+          "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/"
+        ],
+        "begruendung": "Multiconsult fuehrt auf eigener Domain eine dauerhafte Leistungsseite 'Ombruksrådgivning' als feste Fachlinie (nicht News/Blog) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "tid": "U13",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "TOBB Trondheim boligbyggelag ombruk byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/"
+        ],
+        "begruendung": "TOBB wird namentlich als Teilnehmer im benannten regionalen Ombruksnettverk-Vorhaben genannt (Gebaeude zur Kartierung eingebracht); keine eigene TOBB-Reuse-Leistungsseite gefunden -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "M06|U12",
+        "a_tid": "M06",
+        "b_tid": "U12",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.resirkula.no/om-resirkula/",
+        "beleg_zitat": "Resirkula er et gjenbrukskjøpesenter i kretsløpsparken ved Hamar og er Sirkula IKS sin satsing på ombruk, avfallsreduksjon og sirkulærøkonomi.",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "BETREIBER (Sirkula IKS betreibt Resirkula als eigene Satsing)",
+        "relation_soll": "BETREIBER",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "M06|N01",
+        "a_tid": "M06",
+        "b_tid": "N01",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "",
+        "relation_soll": "",
+        "beide_genannt": false,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "U02|N01",
+        "a_tid": "U02",
+        "b_tid": "N01",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "Plattformen «Urban Reuse», er en partner for bærekraftig ombruk av bygg og infrastruktur i Norge.",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "S01|N01",
+        "a_tid": "S01",
+        "b_tid": "N01",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "Donorbygg er en nettside hvor du kan finne bygg som har ombruksmaterialer.",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "M01|N01",
+        "a_tid": "M01",
+        "b_tid": "N01",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "FornyBygg selger brukte byggevarer og overskuddsmaterialer",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "M02|N01",
+        "a_tid": "M02",
+        "b_tid": "N01",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "Utsalgssted for brukte byggevarer i tilknytning til byggevarehuset Monter Storkaas",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "N01|M03",
+        "a_tid": "N01",
+        "b_tid": "M03",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "Iris Ombrukssentral er etablert i samarbeid av Iris Produksjon og Retura Iris, og er en m",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "N01|U07",
+        "a_tid": "N01",
+        "b_tid": "U07",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "Bedriften kan demontere byggget for deg. Det blir lagra i MaterialBanken, restaurert om det trengst",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "N01|M04",
+        "a_tid": "N01",
+        "b_tid": "M04",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "Materialbanken for bygningsvern er en ombrukssentral som omsetter brukte byggevarer produsert før 1940.",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "N01|N05",
+        "a_tid": "N01",
+        "b_tid": "N05",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://byggogbevar.no/ombruk/forhandlere-og-raadgivere/",
+        "beleg_zitat": "Ombruks-HUB Sørlandet AS ble grunnlagt av Bølgen bærekraftsenter med et klart mål: å fremme ombrukspraksis",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Verzeichniseintrag (Haendler/Ratgeber-Liste)",
+        "relation_soll": "VERZEICHNIS",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "U07|M04",
+        "a_tid": "U07",
+        "b_tid": "M04",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.jcs-as.no/materialbank",
+        "beleg_zitat": "MaterialBanken er eit konsept som fyst ble utvikla av Materialbanken for Bygningsvern i Vanse.",
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Konzept-Vorbild (JCS uebernahm das MaterialBank-Konzept von Materialbanken for Bygningsvern)",
+        "relation_soll": "",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c01"
+      },
+      {
+        "edge_id": "U03|M05",
+        "a_tid": "U03",
+        "b_tid": "M05",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "https://www.ressurssentral.no/",
+        "beleg_zitat": "",
+        "relation_ist": "",
+        "relation_soll": "",
+        "beide_genannt": false,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "U03|P2",
+        "a_tid": "U03",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Developer: Entra",
+        "relation_ist": "Bauherr/Entwickler von KA13",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "U08|P2",
+        "a_tid": "U08",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Architect: Mad",
+        "relation_ist": "Architekt von KA13",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "N03|M05",
+        "a_tid": "N03",
+        "b_tid": "M05",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "https://www.ressurssentral.no/",
+        "beleg_zitat": "",
+        "relation_ist": "",
+        "relation_soll": "",
+        "beide_genannt": false,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "N03|M07",
+        "a_tid": "N03",
+        "b_tid": "M07",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "https://www.ressurssentral.no/",
+        "beleg_zitat": "",
+        "relation_ist": "FutureBuilt nur als Logo unter Samarbeidspartnere gelistet, kein Fliesstext",
+        "relation_soll": "",
+        "beide_genannt": false,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "N03|P2",
+        "a_tid": "N03",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Kristian Augusts gate relates to FutureBuilt's criteria for circular buildings.",
+        "relation_ist": "KA13 ist FutureBuilt-Forbildeprosjekt",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "U01|N04",
+        "a_tid": "U01",
+        "b_tid": "N04",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.klimapartnere.no/ombruk-i-nord-samarbeid-om-gjenbruk-av-materialer/",
+        "beleg_zitat": "Prosjekt ombruk har fått til en avtale med Remiks, som har satt av 500 m2 til mellom-lagring",
+        "relation_ist": "Beide auf derselben Drittseite als Akteure im Projekt Ombruk i Nord genannt, kein einzelner Satz mit explizitem Beziehungswort zwischen beiden",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "U01|P2",
+        "a_tid": "U01",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Landscape Architect: Asplan Viak / Environmental Consultant: Asplan Viak AS",
+        "relation_ist": "Landschaftsarchitekt/Umweltberater von KA13",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "U05|P2",
+        "a_tid": "U05",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://insenti.no/prosjekt/kristian-augusts-gate-13-ka13/",
+        "beleg_zitat": "Insenti er engasjert av Entra som byggherrens representant med byggeledelse, prosjektledelse, prosjekteringsgruppeledelse, miljørådgiving og ombrukskoordinering.",
+        "relation_ist": "Prosjektledelse/Ombrukskoordinering fuer KA13",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "U11|P2",
+        "a_tid": "U11",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.scenario.no/prosjekter/ka13-tullinlokka",
+        "beleg_zitat": "Her har Scenario hatt ansvar for interiøret i kontorbyggets åtte etasjer.",
+        "relation_ist": "Interiørarkitekt fuer KA13",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "U06|P2",
+        "a_tid": "U06",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.futurebuilt.no/forbildeprosjekter/kristian-augusts-gate-13-oslo",
+        "beleg_zitat": "Entra in close collaboration with IWG Group and their Spaces concept",
+        "relation_ist": "Mieter/Kollaborationspartner in KA13",
+        "relation_soll": "PROJEKT_PARTNER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "M05|M07",
+        "a_tid": "M05",
+        "b_tid": "M07",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.ressurssentral.no/",
+        "beleg_zitat": "I teltet tilbyr driftsselskapet Ombygg ombruksvarer av høy kvalitet og utleie av lagerplass til ombruksvarer.",
+        "relation_ist": "Ombygg als Driftsselskap innerhalb der Sirkulær Ressurssentral-Anlage",
+        "relation_soll": "BETREIBER",
+        "beide_genannt": true,
+        "abrufdatum": "2026-08-13",
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c02"
+      },
+      {
+        "edge_id": "S02|N06",
+        "a_tid": "S02",
+        "b_tid": "N06",
+        "edge_degree": "belegt",
+        "relation_ist": "Loopfront ist gemeinsam mit Multiconsult Mitbegruender/Betreiber der digitalen Plattform des regionalen Ombruksnettverks",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "Loopfront og Multiconsult etablerer nå nettverk for ombruk av byggematerialer.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "edge_id": "I01|N02",
+        "a_tid": "I01",
+        "b_tid": "N02",
+        "edge_degree": "belegt",
+        "relation_ist": "Asker kommune ist die ausgewaehlte Pilotkommune im CCRI-Programm",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+        "beleg_zitat": "I 2022 ble Asker kommune valgt som én av 12 piloter i EU-kommisjonens program European Circular Cities and Regions Initiative (CCRI).",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "edge_id": "I01|N06",
+        "a_tid": "I01",
+        "b_tid": "N06",
+        "edge_degree": "belegt",
+        "relation_ist": "Asker kommune ist teilnehmender Gebaeudeeigentuemer im regionalen Ombruksnettverk",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "edge_id": "I01|S04",
+        "a_tid": "I01",
+        "b_tid": "S04",
+        "edge_degree": "belegt",
+        "relation_ist": "Asker kommune testet Sirken als Selbstbedienungscontainer fuer Baumaterial-Wiederverwendung",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.asker.kommune.no/klima-og-natur/siste-nytt-om-klima-og-natur/tre-ar-med-sirkulare-fremskritt/",
+        "beleg_zitat": "Kommunen tester ut Sirken, en selvbetjent butikk i kontainer, som gjør materialer fra rivingsprosjekter, og overskudd fra byggeprosjekter tilgjengelige.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "edge_id": "U09|N06",
+        "a_tid": "U09",
+        "b_tid": "N06",
+        "edge_degree": "belegt",
+        "relation_ist": "Multiconsult ist Mitbegruender/Berater des regionalen Ombruksnettverks",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "Loopfront og Multiconsult etablerer nå nettverk for ombruk av byggematerialer.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "edge_id": "F02|N06",
+        "a_tid": "F02",
+        "b_tid": "N06",
+        "edge_degree": "belegt",
+        "relation_ist": "NTNU ist teilnehmender Gebaeudeeigentuemer/Institution im regionalen Ombruksnettverk",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "edge_id": "N06|U13",
+        "a_tid": "N06",
+        "b_tid": "U13",
+        "edge_degree": "belegt",
+        "relation_ist": "TOBB ist teilnehmender Gebaeudeeigentuemer im regionalen Ombruksnettverk",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      },
+      {
+        "edge_id": "N06|I03",
+        "a_tid": "N06",
+        "b_tid": "I03",
+        "edge_degree": "belegt",
+        "relation_ist": "Trondheim kommune ist teilnehmender Gebaeudeeigentuemer im regionalen Ombruksnettverk",
+        "relation_soll": "",
+        "unklar_grund": "",
+        "beleg_url": "https://www.multiconsult.no/etablerer-nettverk-for-mer-ombruk-av-byggematerialer/",
+        "beleg_zitat": "deltar med bygg som skal kartlegges, blant annet Oslo Areal, Omsorgsbygg Oslo KF, Asker kommune, Trondheim kommune, TOBB, NTNU og SINTEF",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "cc": "NO",
+        "packet_id": "NO-c03"
+      }
+    ],
+    "ungeprueft": [],
+    "ausgefallen": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-FI-NO"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "FI-NO:FI-s01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "a7bfc629c6e8fa5d4",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786583559569,
+      "queuedAt": 1786583559539,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "FI-s01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583742890,
+      "tokens": 74154,
+      "toolCalls": 25,
+      "durationMs": 183320,
+      "resultPreview": "{\"packet_id\":\"FI-s01\",\"nodes\":[{\"tid\":\"U01\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.ains.fi/palvelut\",\"beleg_zitat\":\"Uudelleenkäytettävien rakennustuotteiden tuotekelpoisuus\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"\\\"A-Insinöörit\\\" reuse OR uudelleenkäyttö OR kiertotalous rakenneosat\"],\"geprueft_urls\":[\"https://www.ains.fi/artikkelit/purkukartoitus-4-purkumateriaaliselvityksella-rakennu…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "FI-NO:FI-s02",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "a981b6e0f16f63a80",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786583559571,
+      "queuedAt": 1786583559540,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "FI-s02",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583729318,
+      "tokens": 75725,
+      "toolCalls": 21,
+      "durationMs": 169746,
+      "resultPreview": "{\"packet_id\":\"FI-s02\",\"nodes\":[{\"tid\":\"M01\",\"name\":\"Ekomatti\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.ekomatti.fi/rakentaminen.html\",\"beleg_zitat\":\"Ovet alk. 15e, ikkunat alk. 5e, kattotiilet, pesuhuonekalusteet, lautatavaraa, lukkoja ja saranoita\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"Ekomatti Suomi kierrätys rakennusmateriaali\",\"Ekomatti rakentaminen kierrätyskeskus\"],\"geprueft_urls…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "FI-NO:FI-s03",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "a982f5463e7109cb0",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786583559572,
+      "queuedAt": 1786583559540,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "FI-s03",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583693753,
+      "tokens": 64551,
+      "toolCalls": 18,
+      "durationMs": 134180,
+      "resultPreview": "{\"packet_id\":\"FI-s03\",\"nodes\":[{\"tid\":\"U22\",\"name\":\"SSAB\",\"actor_degree\":\"ohne_beleg\",\"beleg_url\":\"\",\"beleg_zitat\":\"\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"SSAB Finland kiertotalous rakennusosien uudelleenkäyttö\",\"SSAB circular economy steel reuse buildings components\"],\"geprueft_urls\":[\"https://www.ssab.fi/ssab-konserni/kestava-kehitys/kestava-tuotevalikoima/ssab-kiertotaloudessa\",\"https://…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "FI-NO:NO-c01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "af088403941ce70fc",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786583559573,
+      "queuedAt": 1786583559540,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NO-c01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583877949,
+      "tokens": 85809,
+      "toolCalls": 33,
+      "durationMs": 318376,
+      "resultPreview": "{\"packet_id\":\"NO-c01\",\"tool_calls_used\":31,\"kappe_erreicht\":false,\"ungeprueft_tids\":[],\"nodes\":[{\"tid\":\"M01\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://sites.google.com/fornybygg.no/ombruksglede/meny/om-oss\",\"beleg_zitat\":\"FornyBygg selger brukte byggevarer og overskuddsmaterialer gjennom vårt lager på Stjørdal, via facebook og her.\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"FornyBygg ombruk Nor…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "FI-NO:NO-c02",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "a76846f20006882ec",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786583559574,
+      "queuedAt": 1786583559541,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NO-c02",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583903588,
+      "tokens": 81268,
+      "toolCalls": 35,
+      "durationMs": 344014,
+      "resultPreview": "{\"packet_id\":\"NO-c02\",\"nodes\":[{\"tid\":\"M05\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://www.ressurssentral.no/\",\"beleg_zitat\":\"I teltet tilbyr driftsselskapet Ombygg ombruksvarer av høy kvalitet og utleie av lagerplass til ombruksvarer.\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"OMBYGG Norge ombruk byggevarer\",\"\\\"OMBYGG\\\" (reuse OR reclaimed OR salvage OR Wiederverwendung)\"],\"geprueft_urls\":[\"ht…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "FI-NO:NO-c03",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-FI-NO",
+      "agentId": "a4871e53b49da7835",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786583559575,
+      "queuedAt": 1786583559541,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "NO-c03",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583853077,
+      "tokens": 74086,
+      "toolCalls": 25,
+      "durationMs": 293501,
+      "resultPreview": "{\"packet_id\":\"NO-c03\",\"nodes\":[{\"tid\":\"F02\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://www.trondheim.kommune.no/tema/klima-miljo-og-naring/miljo/gjenom-veileder/\",\"beleg_zitat\":\"GjenOm er et forskningsprosjekt ledet av Trondheim kommune, i samarbeid med SINTEF, NTNU, Asplan Viak og Loopfront.\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"NTNU ombruk byggematerialer forskning bærekraft\",\"Regionalt …"
+    }
+  ],
+  "totalTokens": 455593,
+  "totalToolCalls": 157
+}

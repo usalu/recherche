@@ -1,0 +1,1806 @@
+{
+  "summary": "Adversarial re-check of kern verdicts and belegt edges: does the cited quote actually stand on the cited page?",
+  "agentCount": 11,
+  "logs": [
+    "Verify: 11 Scheiben, 165 Belege insgesamt",
+    "Verify: 165 Belege geprueft",
+    "  bestaetigt=131 sinngemaess=34 zitat_nicht_gefunden=0 seite_nicht_erreichbar=0",
+    "  Zitat-Reproduktionsrate (nur erreichbare Seiten): 79.4%"
+  ],
+  "result": {
+    "checks": [
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6576|NEW:iboosterrinstitutfurbauenundokologie",
+        "cc": "AT",
+        "url": "https://www.ibo.at/en/research/reference-projects/data/build-re-use",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Unter der Überschrift \"Project team\" (vertikale Liste, kein \"Partners:\"-Satz): AEE intec (Projektleitung), FH Salzburg GmbH, IBO – Österreichisches Institut für Baubiologie und -ökologie, Österreichisches Ökologie Institut, Spar GmbH, Steiermärkische Krankenanstaltengesellschaft m. b. H., ATP sustain GmbH.",
+        "bemerkung": "Alle genannten Organisationen stehen auf der Seite und sind tatsaechlich Projektpartner, aber es gibt keine Zeile \"Partners: ...\" als zusammenhaengenden Kommasatz -- das ist eine vertikale Listendarstellung unter \"Project team\". Zudem heisst der IBO-Eintrag ausgeschrieben \"IBO – Oesterreichisches Institut fuer Baubiologie und -oekologie\", nicht blosses \"IBO\". Aussage stimmt sinngemaess, ist aber aus mehreren Listeneintraegen zu einem Satz zusammengezogen."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:587|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+        "cc": "AT",
+        "url": "https://www.meduniwien.ac.at/web/ueber-uns/news/detailseite/2019/news-im-dezember-2020/aus-alt-wird-neu-big-meduni-wien-und-baukarussell-nutzen-grosses-re-use-potential-beim-meduni-campus-mariannengasse/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Wir freuen uns, dass wir BauKarussell als Projektpartner beim MedUni Campus Mariannengasse gewinnen konnten.\"",
+        "bemerkung": "Zitat woertlich auf der Seite gefunden (Aussage von Hans-Peter Weiss, BIG-Geschaeftsfuehrer)."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:586|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/meduni-campus-mariannengasse-wien/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Zwischen Oktober 2019 und Juli 2020 führte BauKarussell im Auftrag der Bundesimmobiliengesellschaft (BIG) Social Urban Mining in Wien Alsergrund durch.\"",
+        "bemerkung": "Nur triviale Abweichung: 'fuehrte' statt 'führte' (Umlaut-Umschrift), sonst identisch."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:NEW:H:ferrydusikastadionruckbau|NEW:H:wsewienerstandortentwicklung",
+        "cc": "AT",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Umgesetzt wird das Projekt vom Bauprojektmanagement-Team der WSE Wiener Standortentwicklung, einem Unternehmen der Wien Holding, im Auftrag der Stadt Wien MA 51 – Sport Wien.\"",
+        "bemerkung": "Die ersten 10 Woerter des Zitats sind woertlich identisch, aber das Zitat endet mit einem Punkt direkt nach 'WSE', waehrend der Originalsatz dort ohne Punkt weiterlaeuft ('WSE Wiener Standortentwicklung, einem Unternehmen der Wien Holding, ...'). Kein '...' zur Kennzeichnung der Kuerzung -- die Aussage stimmt inhaltlich, ist aber nicht als eigenstaendiger Satz so vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6625",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/genossenschaft/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Als Gründungsmitglied von BauKarussell ist es Re-Use Austria ein besonderes Anliegen, sozialwirtschaftlichen Re-Use-Betrieben von Anfang an eine starke Position bei der gerade beginnenden zirkulären Transformation des Bausektors zu sichern\" (Zitat Matthias Neitsch)",
+        "bemerkung": "Die '...'-Ausslassungen im Beleg-Zitat markieren korrekt die ausgelassenen Textteile ('von Anfang an' bzw. 'bei der gerade ... zu sichern'); Umlaut-Umschrift (Gruendungsmitglied statt Gründungsmitglied) ist trivial. Zitat bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/meduni-campus-mariannengasse-wien/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Zwischen Oktober 2019 und Juli 2020 führte BauKarussell im Auftrag der Bundesimmobiliengesellschaft (BIG) Social Urban Mining in Wien Alsergrund durch.\"",
+        "bemerkung": "Identisch zu Eintrag I01-M01; nur triviale Umlaut-Umschrift (fuehrte/führte)."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|NEW:H:atpsustain",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/genossenschaft/",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Im Rahmen der Mitgliedschaft bei BauKarussell freut es uns besonders, einerseits sehr nahe an der tatsächlichen Umsetzung von vorbildlichen Rückbauprojekten im Sinne von ReUse / ReCycling / Sozialer Nachhaltigkeit zu sein\" (Zitat Michael Haugeneder, ATP sustain)",
+        "bemerkung": "Das erste '...' im Beleg-Zitat markiert korrekt die Auslassung von 'einerseits sehr'. Das Zitat endet aber unmarkiert mit einem Punkt direkt nach 'Rueckbauprojekten', waehrend der Originalsatz dort ohne Punkt weiterlaeuft ('... im Sinne von ReUse / ReCycling / Sozialer Nachhaltigkeit zu sein'). Die Aussage stimmt, der Satzschluss ist aber nicht so vorhanden wie zitiert."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|NEW:H:ferrydusikastadionruckbau",
+        "cc": "AT",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"... war zwischen Juni und September 2021 BauKarussell mit seinen Partnern im Stadion am Werk\"",
+        "bemerkung": "Zitierte Wortfolge ist exakter Teilstring des Satzes, ohne beanspruchten Satzschluss."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|NEW:H:gesagemeinnutzigesanierungsundbeschaftigungs",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/genossenschaft/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Mit dem BauKarussell verbinden wir unsere Kräfte für mehr Wiederverwendung von Baumaterialien.\" (Zitat Matthias Zuser, Gesa)",
+        "bemerkung": "Vollstaendiger Satz identisch, nur Umlaut-Umschrift (Kraefte/fuer statt Kräfte/für)."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|NEW:H:jobtransfairgemeinnutzige",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/genossenschaft/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Label \"Thomas Rihl / Geschäftsführer / Job-TransFair GmbH\" unmittelbar gefolgt vom Zitat \"Wir sind schon lange mit Leidenschaft dabei, weil wir dadurch die Chance sehen, unseren Transitarbeitskräften sehr gute Chancen in einem zukunftsträchtigen Beschäftigungsfeld zu eröffnen.\"",
+        "bemerkung": "Beleg-Zitat verbindet mit '...' die Rollen-Kennzeichnung 'Geschaeftsfuehrer Job-TransFair GmbH' (steht unmittelbar vor dem Zitat) mit dem eigentlichen Satz und laesst mit weiterem '...' den Einschub 'in einem zukunftstraechtigen Beschaeftigungsfeld' aus; Satzende 'zu eroeffnen.' entspricht dem tatsaechlichen Satzende. Alle Ausslassungen korrekt markiert."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|NEW:H:pulswerk",
+        "cc": "AT",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Das BauKarussell-Team setzt sich aus Partnern von pulswerk GmbH, Romm ZT und RepaNet\"",
+        "bemerkung": "Exaktes Zitat auf der Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6575|NEW:H:volkshilfewien",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/genossenschaft/",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Als Volkshilfe Wien unterstützen wir seit vielen Jahren die Kreislaufwirtschaft und die integrative Beschäftigung von Personen mit Benachteiligung.\" (Zitat Tanja Wehsely)",
+        "bemerkung": "Beleg-Zitat entspricht woertlich dem Satzanfang, endet aber unmarkiert mit Punkt nach 'Beschaeftigung', waehrend der Originalsatz mit 'von Personen mit Benachteiligung.' weiterlaeuft. Aussage stimmt, Satzschluss so nicht vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:607|NEW:H:ferrydusikastadionruckbau",
+        "cc": "AT",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Die KÜMMEREI (Trägerin: BFI Wien/Job-TransFair)\"",
+        "bemerkung": "Nur triviale Umlaut-Umschrift (KUEMMEREI/Traegerin statt KÜMMEREI/Trägerin), sonst identisch."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:606|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6568",
+        "cc": "AT",
+        "url": "https://www.baukarussell.at/vom-luster-bis-zum-kupferkabel/",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Operative Partner sind das Demontage- und Recyclingzentrum DRZ Wien und die Caritas SÖB.\"",
+        "bemerkung": "Zitierte Wortfolge ist exakter Satzanfang, aber das Zitat endet unmarkiert mit Punkt nach 'DRZ Wien', waehrend der Originalsatz mit 'und die Caritas SOEB.' weiterlaeuft. Aussage stimmt, Satzschluss so nicht vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:606|NEW:H:ferrydusikastadionruckbau",
+        "cc": "AT",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Zu den lokalen Partnerbetrieben zählen das Demontage- und Recycling-Zentrum DRZ der Wiener Volkshochschulen GmbH, die Caritas SÖB, Die KÜMMEREI (Trägerin: BFI Wien/Job-TransFair), FAB, TEAMwork, Volkshilfe Arbeitswelt, Schindel und Holz und der Verein ISSBA.\"",
+        "bemerkung": "Der Satz 'Operative Partner sind das Demontage- und Recyclingzentrum DRZ Wien.' steht auf DIESER Seite nicht -- diese exakte Formulierung findet sich stattdessen auf https://www.baukarussell.at/vom-luster-bis-zum-kupferkabel/ (siehe Eintrag N02-P2). Auf der ots.at-Seite wird DRZ nur als 'lokaler Partnerbetrieb' unter anderem Namen ('DRZ der Wiener Volkshochschulen GmbH') gefuehrt. Die Aussage (DRZ als Partner beim Projekt) ist sinngemaess gedeckt, aber das Zitat selbst scheint von der falschen/anderen URL zu stammen."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6625|NEW:H:ferrydusikastadionruckbau",
+        "cc": "AT",
+        "name": "N03-U03",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Das BauKarussell-Team setzt sich aus Partnern von pulswerk GmbH, Romm ZT und RepaNet – Re-Use- und Reparaturnetzwerk Österreich und zusammen.",
+        "bemerkung": "Zitat ist woertliche (leicht gekuerzte) Teilsequenz des tatsaechlichen Satzes; exakter Wortlaut bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:NEW:dreesandsommer|NEW:madasteraustria",
+        "cc": "AT",
+        "name": "U02-S01",
+        "url": "https://madaster.at/neuigkeiten/1625/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Die Firmen ATP sustain, Delta, Dietrich Untertrifaller, Drees & Sommer, GF Piping Systems, HNP architects, iC Consulenten, PORR, SIGNA, Value One und WICONA vervollständigen das Partner-Portfolio von Madaster in Österreich.",
+        "bemerkung": "Zitat exakt auf der Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:39537|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6571",
+        "cc": "AT",
+        "name": "S02-U07",
+        "url": "https://www.restore.or.at/impressum",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Medieninhaber und Herausgeber: materialnomaden GmbH",
+        "bemerkung": "Zitat exakt (Fettformatierung des Labels im Original, inhaltlich identisch)."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:NEW:H:ferrydusikastadionruckbau|NEW:H:jobtransfairgemeinnutzige",
+        "cc": "AT",
+        "name": "U03-U06",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Die KÜMMEREI (Trägerin: BFI Wien/Job-TransFair)",
+        "bemerkung": "Nur Umlaut-Umschrift ue/ae abweichend (Kuemmerei/Traegerin vs. Küммerei/Trägerin), sonst identisch."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:NEW:H:ferrydusikastadionruckbau|NEW:H:pulswerk",
+        "cc": "AT",
+        "name": "U03-U08",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Das BauKarussell-Team setzt sich aus Partnern von pulswerk GmbH, Romm ZT und RepaNet – Re-Use- und Reparaturnetzwerk Österreich und zusammen.",
+        "bemerkung": "Wie Eintrag zu N03-U03, dieselbe Quelle/Satz."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6624|NEW:H:ferrydusikastadionruckbau",
+        "cc": "AT",
+        "name": "U09-U03",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Das BauKarussell-Team setzt sich aus Partnern von pulswerk GmbH, Romm ZT und RepaNet – Re-Use- und Reparaturnetzwerk Österreich und zusammen.",
+        "bemerkung": "Wie Eintrag zu N03-U03, dieselbe Quelle/Satz."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:NEW:H:ferrydusikastadionruckbau|NEW:H:schindelundholz",
+        "cc": "AT",
+        "name": "U03-U10",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Zu den lokalen Partnerbetrieben zählen das Demontage- und Recycling-Zentrum DRZ der Wiener Volkshochschulen GmbH, die Caritas SÖB, Die KÜMMEREI (Trägerin: BFI Wien/Job-TransFair), FAB, TEAMwork, Volkshilfe Arbeitswelt, Schindel und Holz und der Verein ISSBA.",
+        "bemerkung": "Zitat nutzt erlaubte ...-Auslassung fuer den mittleren Teil der Aufzaehlung; zaehlen/zählen nur Umlaut-Umschrift."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:NEW:H:ferrydusikastadionruckbau|NEW:H:vereinissba",
+        "cc": "AT",
+        "name": "U03-U12",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Zu den lokalen Partnerbetrieben zählen das Demontage- und Recycling-Zentrum DRZ der Wiener Volkshochschulen GmbH, die Caritas SÖB, Die KÜMMEREI (Trägerin: BFI Wien/Job-TransFair), FAB, TEAMwork, Volkshilfe Arbeitswelt, Schindel und Holz und der Verein ISSBA.",
+        "bemerkung": "Gleicher Satz wie U10-Eintrag; ...-Auslassung erlaubt, endet korrekt mit 'Verein ISSBA'."
+      },
+      {
+        "kind": "edge",
+        "ref": "AT:NEW:H:ferrydusikastadionruckbau|NEW:H:volkshilfewien",
+        "cc": "AT",
+        "name": "U03-U13",
+        "url": "https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "So gingen etwa 100 Stühle an das Start-up treecycle, das sie unter anderem als Outdoor-Bestuhlung für ein „fliegendes Klassenzimmer\" am Parkplatz der Jobfabrik der Volkshilfe Wien einsetzen wird.",
+        "bemerkung": "Zitat mit erlaubter ...-Auslassung des Mittelteils; Umlaut-Umschrift Stuehle/Stühle."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|F05",
+        "cc": "BE",
+        "name": "F01-F05",
+        "url": "https://www.bamb2020.eu/partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.",
+        "bemerkung": "Zitat ist woertlicher Satzanfang, exakt bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|F06",
+        "cc": "BE",
+        "name": "F01-F06",
+        "url": "https://www.bamb2020.eu/partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.",
+        "bemerkung": "Gleiche Quelle/Zitat wie F01-F05."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|F07",
+        "cc": "BE",
+        "name": "F01-F07",
+        "url": "https://www.bamb2020.eu/partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.",
+        "bemerkung": "Gleiche Quelle/Zitat wie F01-F05."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|F08",
+        "cc": "BE",
+        "name": "F01-F08",
+        "url": "https://www.bamb2020.eu/partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.",
+        "bemerkung": "Gleiche Quelle/Zitat wie F01-F05."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|F09",
+        "cc": "BE",
+        "name": "F01-F09",
+        "url": "https://www.bamb2020.eu/partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.",
+        "bemerkung": "Gleiche Quelle/Zitat wie F01-F05."
+      },
+      {
+        "kind": "edge",
+        "ref": "I01|F01",
+        "cc": "BE",
+        "name": "I01-F01",
+        "url": "https://cordis.europa.eu/project/id/642384",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Coordinated by BRUXELLES ENVIRONNEMENT - LEEFMILIEU BRUSSEL Belgium",
+        "bemerkung": "Nur Gross-/Kleinschreibung des ersten Buchstabens (coordinated/Coordinated) abweichend, trivial."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|N08",
+        "cc": "BE",
+        "url": "https://www.bamb2020.eu/partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.",
+        "bemerkung": "Zitat wortgleich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|S03",
+        "cc": "BE",
+        "url": "https://www.bamb2020.eu/partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.",
+        "bemerkung": "Gleiche Quelle/Zitat wie F01|N08, ebenfalls bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "N03|F02",
+        "cc": "BE",
+        "url": "https://www.embuildvlaanderen.be/press-room/circulair-gebouwd/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Embuild Vlaanderen en Buildwise hebben op 6 december op de actiedag van de Green Deal Circulair Bouwen in Brugge de nieuwe tool 'Circulair Gebouwd' voorgesteld.",
+        "bemerkung": "Zitat (leicht gekuerzt aus dem Volltextsatz) wortgleich enthalten."
+      },
+      {
+        "kind": "edge",
+        "ref": "U20|F09",
+        "cc": "BE",
+        "url": "https://press.vub.ac.be/europese-primeur-voor-vub-eerste-circulaire-renovatieproject-circular-retrofit-lab-feestelijk-ingehuldigd",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Algemeen aannemer Groep Van Roey leidde de coördinatie van het volledige project in goede banen, Kaderstudio en MK Engineering hielpen met het architecturale ontwerp en de technieken.",
+        "bemerkung": "Zitat ist woertlicher Teilsatz aus diesem Satz."
+      },
+      {
+        "kind": "edge",
+        "ref": "G01|P15",
+        "cc": "BE",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "This project was made possible thanks to an ERDF subvention from the Brussels-Capital Region.",
+        "bemerkung": "Zitat wortgleich vorhanden (Teil des Textes ist als Link auf 'ERDF subvention' verlinkt, aendert den Wortlaut nicht)."
+      },
+      {
+        "kind": "edge",
+        "ref": "I02|P2",
+        "cc": "BE",
+        "url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Feld-Label/Wert-Paar auf der Seite: 'Project owner' / 'Municipality of Dilbeek' (Label zuerst, Wert darunter).",
+        "bemerkung": "Die Aussage stimmt inhaltlich, aber das Zitat 'Municipality of Dilbeek listed as Project owner' ist keine woertliche Wiedergabe -- auf der Seite steht das Label 'Project owner' VOR dem Wert 'Municipality of Dilbeek', nicht als zusammenhaengender Satz in der zitierten Reihenfolge/Formulierung."
+      },
+      {
+        "kind": "edge",
+        "ref": "I03|P6",
+        "cc": "BE",
+        "url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Label 'Client' unmittelbar gefolgt vom Wert 'Dexia / Lo-Reninge town council'.",
+        "bemerkung": "Nur triviale Layout-Trennung (Label/Wert statt Fliesstext), Inhalt stimmt woertlich ueberein."
+      },
+      {
+        "kind": "edge",
+        "ref": "I07|P10",
+        "cc": "BE",
+        "url": "https://cellule.archi/fr/integration-oeuvres-art/musee-du-folklore-de-mouscron",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Maître d'ouvrage\nVille de Mouscron",
+        "bemerkung": "Label/Wert-Paar mit Zeilenumbruch statt Schraegstrich -- triviale Abweichung, Inhalt identisch."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|M35",
+        "cc": "BE",
+        "url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Are you looking for construction materials to buy? Please check our spin-off RotorDC's website.",
+        "bemerkung": "Zitat wortgleich vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "M35|P11",
+        "cc": "BE",
+        "url": "https://rotordb.org/en/news/works-oxy-well-underway",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "300 running meters of original aluminium facade profiles which will be reconverted to lighting fixtures by RotorDC",
+        "bemerkung": "Zitat wortgleich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "M35|P2",
+        "cc": "BE",
+        "url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The interior of the sanitary block is mainly made of reuse materials sold by RotorDC.",
+        "bemerkung": "Zitat wortgleich vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "M35|P9",
+        "cc": "BE",
+        "url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Flamed granite flooring, salvaged by Rotor DC from the Generale de Banque, is placed on the public staircase's landing giving to the outdoor terrace on the third floor.",
+        "bemerkung": "Zitierter Teilsatz ist woertlicher Anfang dieses laengeren Satzes."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|N01",
+        "cc": "BE",
+        "url": "https://circular-cities-and-regions.ec.europa.eu/news/ccri-pilot-flanders-visits-rotor-learn-about-construction-material-reuse",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "On 25 March, representatives from CCRI Pilot Flanders visited Rotor, a pioneering marketplace for salvaged building materials located in Brussels.",
+        "bemerkung": "Zitat ist woertlicher Teil dieses Satzes (nur Datumsangabe vorangestellt)."
+      },
+      {
+        "kind": "edge",
+        "ref": "N02|N10",
+        "cc": "BE",
+        "url": "https://circular-cities-and-regions.ec.europa.eu/twg-circular-construction-and-buildings",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Pilots: Asker, Roubaix, Flanders, Tampere region, Helsinki-Uusimaa, Uppsala (Liste mit 6 Eintraegen).",
+        "bemerkung": "Uppsala steht als einer von sechs Listenpunkten unter 'Pilots:', aber die Zeichenkette 'Pilots: Uppsala' als zusammenhaengender Ausdruck steht nicht auf der Seite -- fuenf weitere Staedte stehen dazwischen, ohne Auslassungszeichen im Zitat markiert."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P11",
+        "cc": "BE",
+        "url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Early in the design phase, Rotor was asked to join the project team to help define a circular approach to the project, integrate reuse principles into the design and translate these decisions into tender documents.",
+        "bemerkung": "Zitierter Teilsatz ist woertlicher Anfang dieses laengeren Satzes."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P13",
+        "url": "https://rotordb.org/en/projects/recypark-anderlecht",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "51N4E, Witteveen&Bos and Rotor joined forces and won the competition with a project that focused on reusing an existing structure, in line with Bruxelles Proprete's desire to promote reuse in the city.",
+        "bemerkung": "Zitat ist woertlich (als Teilsatz) auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P15",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In 2015, Zinneke invited Rotor to join the long-term project for the renovation of their 4.000 m² new facilities at Place Masui.",
+        "bemerkung": "Exakter Wortlaut bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P2",
+        "url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "This small sanitary block project is located next to the old farmhouse housing the Chiro d'Itterbeek, a youth organisation.",
+        "bemerkung": "Exakter Wortlaut bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P9",
+        "url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In september 2016, Conix RDBM and Whitewood invited Rotor to be involved in the Multi project.",
+        "bemerkung": "Zitat ist der woertliche Endteil dieses Satzes (Seite fuegt vorn nur die Datumsangabe hinzu)."
+      },
+      {
+        "kind": "edge",
+        "ref": "N11|P15",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In 2015, Zinneke invited Rotor to join the long-term project for the renovation of their 4.000 m² new facilities at Place Masui.",
+        "bemerkung": "Exakter Wortlaut bestaetigt (gleiche Seite wie N07|P15)."
+      },
+      {
+        "kind": "edge",
+        "ref": "O01|P14",
+        "url": "https://brusselsarchitectureprize.be/en/project/esp-karreveld/",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Client: asbl Pouvoir Organisateur Pluriel",
+        "bemerkung": "Steht woertlich als Client-Angabe auf der Seite."
+      },
+      {
+        "kind": "edge",
+        "ref": "U06|P10",
+        "url": "https://www.architectura.be/fr/actualite/un-nouvel-ecrin-pour-le-musee-de-folklore-de-mouscron",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "L'équipe formée par V+ (architecture), Projectiles (architecture, muséographie), Taktyk (paysage), Greisch, Daidalos Peutz et Bureau Bouwtechniek (bureaux d'études) vient de livrer la rénovation et extension du Musée de Folklore de Mouscron.",
+        "bemerkung": "Exakter Wortlaut bestaetigt; 'V+' ist auf der Seite verlinkt, Text identisch."
+      },
+      {
+        "kind": "edge",
+        "ref": "U19|P10",
+        "url": "https://www.architectura.be/fr/actualite/un-nouvel-ecrin-pour-le-musee-de-folklore-de-mouscron",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "L'équipe formée par V+ (architecture), Projectiles (architecture, muséographie), Taktyk (paysage), Greisch, Daidalos Peutz et Bureau Bouwtechniek (bureaux d'études) vient de livrer la rénovation et extension du Musée de Folklore de Mouscron.",
+        "bemerkung": "Exakter Wortlaut bestaetigt (gleiche Seite wie U06|P10)."
+      },
+      {
+        "kind": "edge",
+        "ref": "U35|P10",
+        "url": "https://www.architectura.be/fr/actualite/un-nouvel-ecrin-pour-le-musee-de-folklore-de-mouscron",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "L'équipe formée par V+ (architecture), Projectiles (architecture, muséographie), Taktyk (paysage), Greisch, Daidalos Peutz et Bureau Bouwtechniek (bureaux d'études) vient de livrer la rénovation et extension du Musée de Folklore de Mouscron.",
+        "bemerkung": "Exakter Wortlaut bestaetigt (gleiche Seite wie U06|P10)."
+      },
+      {
+        "kind": "edge",
+        "ref": "U21|P11",
+        "url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "cc": "BE",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Commissioner: Whitewood, Immobel",
+        "bemerkung": "Auf der Seite stehen beide Commissioner in einer gemeinsamen Aufzaehlung ('Commissioner: Whitewood, Immobel'); die isolierte Formulierung 'Commissioner: Immobel' ist so nicht woertlich vorhanden, die Aussage (Immobel ist Commissioner) ist aber eindeutig getragen."
+      },
+      {
+        "kind": "edge",
+        "ref": "U38|P11",
+        "url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Commissioner: Whitewood, Immobel",
+        "bemerkung": "'Commissioner: Whitewood' ist woertlicher Anfangsteil dieser Aufzaehlung."
+      },
+      {
+        "kind": "edge",
+        "ref": "U01|P13",
+        "url": "https://rotordb.org/en/projects/recypark-anderlecht",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "51N4E, Witteveen&Bos and Rotor joined forces and won the competition with a project that focused on reusing an existing structure, in line with Bruxelles Proprete's desire to promote reuse in the city.",
+        "bemerkung": "Zitat ist woertlich (als Teilsatz) auf der Seite vorhanden (gleiche Seite wie N07|P13)."
+      },
+      {
+        "kind": "edge",
+        "ref": "U02|P14",
+        "url": "https://www.jzh.be/karreveld/",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Le projet d'AgwA repose sur une analyse approfondie de la situation actuelle (…).",
+        "bemerkung": "Zitat entspricht woertlich dem auf der Seite sichtbaren (dort selbst mit Auslassungszeichen endenden) Satz."
+      },
+      {
+        "kind": "edge",
+        "ref": "U12|P14",
+        "url": "http://www.agwa.be/en/projects/1811_KARREVELD/212/",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Subcontractors: JZH&Partners, Kahle acoustics, Denis Dujardin",
+        "bemerkung": "Exakter Wortlaut bestaetigt, steht unter 'Subcontractors' (Pruefung betrifft nur das Zitat, nicht die Rollenzuordnung 'Landschaftsarchitekt')."
+      },
+      {
+        "kind": "edge",
+        "ref": "U15|P14",
+        "url": "https://www.agwa.be/en/projects/1718_verbiest/201/",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Team : AgwA + Evelia Macal",
+        "bemerkung": "Exakter Wortlaut bestaetigt als Teil der Team-Angabe."
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P13",
+        "url": "https://rotordb.org/en/projects/recypark-anderlecht",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "51N4E, Witteveen&Bos and Rotor joined forces and won the competition with a project that focused on reusing an existing structure",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P15",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In 2015, Zinneke invited Rotor to join the long-term project for the renovation of their 4.000 m² new facilities at Place Masui.",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P2",
+        "url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "This small sanitary block project is located next to the old farmhouse housing the Chiro d'Itterbeek, a youth organisation.",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "N07|P9",
+        "url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In september 2016, Conix RDBM and Whitewood invited Rotor to be involved in the Multi project.",
+        "bemerkung": "Zitat ist woertliche Teilphrase des vollstaendigen Satzes auf der Seite (Anfang 'In september 2016,' im Zitat weggelassen).",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "N11|P15",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In 2015, Zinneke invited Rotor to join the long-term project for the renovation of their 4.000 m² new facilities at Place Masui.",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden (identische Quelle wie N07|P15).",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "O01|P14",
+        "url": "https://brusselsarchitectureprize.be/en/project/esp-karreveld/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Client: asbl Pouvoir Organisateur Pluriel",
+        "bemerkung": "Zitat wortgleich unter der Rubrik 'Client' auf der Seite gefunden.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U06|P10",
+        "url": "https://www.architectura.be/fr/actualite/un-nouvel-ecrin-pour-le-musee-de-folklore-de-mouscron",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "L'équipe formée par V+ (architecture), Projectiles (architecture, muséographie), Taktyk (paysage), Greisch, Daidalos Peutz et Bureau Bouwtechniek (bureaux d'études) vient de livrer la rénovation et extension du Musée de Folklore de Mouscron.",
+        "bemerkung": "Zitat ist woertliche Teilphrase (Satzanfang) des vollstaendigen Satzes auf der Seite.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U19|P10",
+        "url": "https://www.architectura.be/fr/actualite/un-nouvel-ecrin-pour-le-musee-de-folklore-de-mouscron",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "L'équipe formée par V+ (architecture), Projectiles (architecture, muséographie), Taktyk (paysage), Greisch, Daidalos Peutz et Bureau Bouwtechniek (bureaux d'études) vient de livrer la rénovation et extension du Musée de Folklore de Mouscron.",
+        "bemerkung": "Zitat ist woertliche Teilphrase (Satzanfang) des vollstaendigen Satzes auf der Seite (identische Quelle wie U06|P10).",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U35|P10",
+        "url": "https://www.architectura.be/fr/actualite/un-nouvel-ecrin-pour-le-musee-de-folklore-de-mouscron",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "L'équipe formée par V+ (architecture), Projectiles (architecture, muséographie), Taktyk (paysage), Greisch, Daidalos Peutz et Bureau Bouwtechniek (bureaux d'études) vient de livrer la rénovation et extension du Musée de Folklore de Mouscron.",
+        "bemerkung": "Zitat ist woertliche Teilphrase (Satzanfang) des vollstaendigen Satzes auf der Seite (identische Quelle wie U06|P10).",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U21|P11",
+        "url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Commissioner: Whitewood, Immobel",
+        "bemerkung": "Auf der Seite steht 'Commissioner: Whitewood, Immobel' -- Immobel wird tatsaechlich als (Mit-)Commissioner genannt, aber die zitierte Zeichenkette 'Commissioner: Immobel' kommt so nicht zusammenhaengend vor, da Whitewood zuerst genannt wird.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U38|P11",
+        "url": "https://rotordb.org/en/projects/oxy-centre-monnaie",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Commissioner: Whitewood, Immobel",
+        "bemerkung": "Zitat 'Commissioner: Whitewood' ist woertlicher Anfang der Zeile auf der Seite.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U01|P13",
+        "url": "https://rotordb.org/en/projects/recypark-anderlecht",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "51N4E, Witteveen&Bos and Rotor joined forces and won the competition with a project that focused on reusing an existing structure",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden (identische Quelle wie N07|P13).",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U02|P14",
+        "url": "https://www.jzh.be/karreveld/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Le projet d'AgwA repose sur une analyse approfondie de la situation actuelle",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U12|P14",
+        "url": "http://www.agwa.be/en/projects/1811_KARREVELD/212/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Subcontractors : JZH&Partners, Kahle acoustics, Denis Dujardin",
+        "bemerkung": "Zitat ist woertliche Teilphrase der Zeile 'Subcontractors : JZH&Partners, Kahle acoustics, Denis Dujardin' auf der Seite.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U15|P14",
+        "url": "https://www.agwa.be/en/projects/1718_verbiest/201/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Team : AgwA + Evelia Macal",
+        "bemerkung": "Zitat wortgleich in der Rubrik 'Team' auf der Seite gefunden.",
+        "cc": "BE"
+      },
+      {
+        "kind": "edge",
+        "ref": "U17|P8",
+        "url": "https://opalis.eu/fr/projets/maison-vignette-karbon-architecture-et-urbanisme",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Brique: Grote Boomse Steen, provenant de chez Franck (205 x 55 x 100 mm).",
+        "bemerkung": "Zitat exakt vorhanden (Franck als Link markiert, Klammerzusatz mit Massangabe folgt)."
+      },
+      {
+        "kind": "edge",
+        "ref": "U25|P8",
+        "url": "https://opalis.eu/fr/projets/maison-vignette-karbon-architecture-et-urbanisme",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Conception: Karbon' architecture & Urbanisme",
+        "bemerkung": "Zitat wortgleich auf der Seite."
+      },
+      {
+        "kind": "edge",
+        "ref": "X01|P8",
+        "url": "https://opalis.eu/fr/projets/maison-vignette-karbon-architecture-et-urbanisme",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Dalles en pierre bleue pour le revêtement du hall d'entrée et de la terrasse. 40m² trouvées sur le site de petites annonces 2emain.be.",
+        "bemerkung": "Zitat exakt vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U08|P9",
+        "url": "https://rotordb.org/en/projects/reuse-multi-project",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "six-year long collaboration between Whitewood, Conix RDBM and Rotor",
+        "bemerkung": "Zitat exakt vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U09|P9",
+        "url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Contractor: Cordeel",
+        "bemerkung": "Zitat exakt in den Projektangaben vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U38|P9",
+        "url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+        "cc": "BE",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Commissioner: Whitewood",
+        "bemerkung": "Zitat exakt in den Projektangaben vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "F03|P10",
+        "url": "https://www.db-bauzeitung.de/db/heizung-klima-lueftung/forschungsmodul/",
+        "cc": "CH",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In der NEST-Unit »UMAR« (Urban Mining & Recycling) wohnen und arbeiten seit Mai zwei Studenten, um sich regelmäßig mit den Wissenschaftlern der Empa über ihre Erfahrungen auszutauschen.",
+        "bemerkung": "Zitiertes Teilstueck ist exakter Anfang dieses Satzes."
+      },
+      {
+        "kind": "edge",
+        "ref": "F11|F07",
+        "url": "https://www.fhnw.ch/de/die-fhnw/hochschulen/architektur-bau-geomatik/institute/ineb/ineb-forschung/ressourceneffizientes-und-zirkulaeres-bauen/leitfaden-reuse-stahl-und-stahlbetonbauteilen",
+        "cc": "CH",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Zwei Institute – das Institut Nachhaltigkeit und Energie am Bau (INEB) der FHNW und das Institut Konstruktives Entwerfen (IKE) der ZHAW – untersuchen im Rahmen eines Projekts die Wiederverwendung von Beton- und Stahlstrukturen anhand zweier realer Bauvorhaben.",
+        "bemerkung": "Aussage steht sinngemaess da, aber die Institutsnamen sind im Original ausgeschrieben (nicht nur 'INEB der FHNW und IKE der ZHAW') und der Satz geht ueber 'Wiederverwendung' hinaus weiter; Zitat ist ohne Auslassungszeichen verkuerzt/umformuliert, also nicht woertlich."
+      },
+      {
+        "kind": "edge",
+        "ref": "I02|F07",
+        "url": "https://www.fhnw.ch/de/architektur-bau-geomatik/forschung-dienstleistungen/forschung/projekte/leitfaden-reuse-stahl-und-stahlbetonbauteile",
+        "cc": "CH",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Projektpartner*innen: ZHAW, Intep, F. Hoffmann - La Roche Ltd., Immobilien Basel-Stadt",
+        "bemerkung": "Zitat nutzt zulaessige '...'-Auslassung fuer die mittleren Partner; einzige Abweichung ist die weggelassene Gender-Endung '*innen', inhaltlich unveraendert."
+      },
+      {
+        "kind": "edge",
+        "ref": "F08|P9",
+        "url": "https://www.epfl.ch/schools/enac/recrete/",
+        "cc": "CH",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "To demonstrate this, the Sructural Xploration Lab (SXL) has built the RE:CRETE prototype, a footbridge built from 25 reused concrete blocks.",
+        "bemerkung": "Zitat ist exaktes zusammenhaengendes Teilstueck dieses Satzes (inkl. Tippfehler 'Sructural' im Original)."
+      },
+      {
+        "kind": "edge",
+        "ref": "F12|P6",
+        "url": "https://www.zhaw.ch/de/forschung/projekt/71771",
+        "cc": "CH",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "mit dem Projekt K.118 den derzeit grössten Neubau der Schweiz, der zu grossen Teilen aus wiederverwendeten Bauteilen konzipiert ist",
+        "bemerkung": "Zitat wortgleich auf der Seite."
+      },
+      {
+        "kind": "edge",
+        "ref": "I01|P4",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+        "cc": "CH",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Eigentümervertretung Entsorgung + Recycling Zürich (ERZ)",
+        "bemerkung": "Entspricht Bullet-Listenformat der Seite (fettes Label direkt gefolgt vom Wert, ohne Doppelpunkt) - Zitat gibt das korrekt wieder."
+      },
+      {
+        "kind": "edge",
+        "ref": "I03|P7",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "cc": "CH",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Bauherrschaft Stadt Zürich / Eigentümervertretung Immobilien Stadt Zürich / Bauherrenvertretung Amt für Hochbauten (als separate Bulletpoints ohne Doppelpunkte)",
+        "bemerkung": "Inhalt korrekt, aber die Seite listet dies als drei separate Bulletpoints ohne Doppelpunkte; das Zitat fuegt Doppelpunkte ein und verbindet die drei Punkte mit Kommas zu einem Satz - das ist eine Umformatierung, keine woertliche Wiedergabe."
+      },
+      {
+        "kind": "edge",
+        "ref": "M03|M16",
+        "url": "https://www.gruner.ch/de/news/bauteile-aus-rueckbauten-jetzt-imeshop-von-grunerreuse-live",
+        "cc": "CH",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Nach dem Ausbau übernimmt die Bauteilbörse Basel die Lagerung und den Weiterverkauf über useagain.ch.",
+        "bemerkung": "Zitat wortgleich auf der Seite."
+      },
+      {
+        "kind": "edge",
+        "ref": "S01|M04",
+        "url": "https://bauteile-ibs.ch/contact",
+        "cc": "CH",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Programmierung: digvis GmbH Industriestrasse 59 8152 Glattbrugg",
+        "bemerkung": "Zitat entspricht dem Adressblock auf der Kontaktseite (Zeilenumbrueche als Leerzeichen wiedergegeben)."
+      },
+      {
+        "kind": "edge",
+        "ref": "U46|M04",
+        "cc": "CH",
+        "url": "https://zirkular.net/de/projekt/bauteilkatalog-immobilien-basel-stadt/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Im Rahmen der Projektwettbewerbe «Walkeweg» und «Schliengerweg» katalogisierte Zirkular die Re-Use-Bauteile für den «Bauteilkatalog zur Wiederverwendung»",
+        "bemerkung": "Zitat exakt als Satzanfang auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "M16|M05",
+        "cc": "CH",
+        "url": "https://library-of-reuse.ch/pioneers/useagain",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "useagain promotes direct exchange between various organisations, such as Bauteilbörse Basel, BauTeile Zürich and Bauteilladen Winterthur.",
+        "bemerkung": "Wortlaut stimmt exakt (Zitat ist Teilsatz ohne führendes Subjekt)."
+      },
+      {
+        "kind": "edge",
+        "ref": "M13|M10",
+        "cc": "CH",
+        "url": "https://materiuum.ch/ressourcerie-lausanne-magasin-shop/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "la Ressourcerie Matériuum Lausanne (RUUL) permet de stocker et de prolonger la durée de vie d'une grande quantité de matières.",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U46|N02",
+        "cc": "CH",
+        "url": "https://re-win.ch/supporters/baubuero-in-situ-ag-und-zirkular-gmbh/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Das Baubüro in situ hat zusammen mit der Zirkular GmbH die erste Fenster-Sammelaktion gestartet und den ersten LKW Transport in die Ukraine bezahlt.",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "O01|P9",
+        "cc": "CH",
+        "url": "https://www.smartlivinglab.ch/en/projects/recrete-reused-of-cut-concrete/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Team\nBrütting, Jan; Bastien-Masse Maléna; Devènes, Julie; Grangeot, Maxence; Küpfer, Célia; Fivet, Corentin",
+        "bemerkung": "Namensliste exakt; Label auf Seite ohne Doppelpunkt und in eigener Zeile (triviale Formatierungsabweichung)."
+      },
+      {
+        "kind": "edge",
+        "ref": "O02|P6",
+        "cc": "CH",
+        "url": "https://zirkular.net/en/project/building-k-118/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "client:\nStiftung Abendrot",
+        "bemerkung": "Label klein geschrieben und Wert in eigener Zeile (triviale Abweichung: Gross-/Kleinschreibung + Zeilenumbruch)."
+      },
+      {
+        "kind": "edge",
+        "ref": "U21|P10",
+        "cc": "CH",
+        "url": "https://www.lindner-group.com/de/referenzen/nest-unit-umar",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Lindner realisierte dort speziell entwickelte Plafotherm® Heiz-/Kühldecken.",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U46|P2",
+        "cc": "CH",
+        "url": "https://zirkular.net/en/project/culture-commercial-center-elys",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "They received a lot of attention and were the trigger for the foundation of Zirkular by the involved planners.",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U25|P3",
+        "cc": "CH",
+        "url": "https://zirkular.net/de/projekt/grubenstrasse-29/",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Auftraggeber*in:\nModissa Immobilien AG",
+        "bemerkung": "Seite verwendet 'Auftraggeber*in', nicht 'Auftraggeber (Client)'. Aussage stimmt inhaltlich, Label ist keine triviale Abweichung."
+      },
+      {
+        "kind": "edge",
+        "ref": "U40|P3",
+        "cc": "CH",
+        "url": "https://zirkular.net/de/projekt/grubenstrasse-29/",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Lieferanten wiederverwendete Bauteile:\nBauteilladen Winterthur\nTschudin Rückbau und Demontagen GmbH",
+        "bemerkung": "Firma und Wert stimmen, aber Label 'Material Suppliers (Wiederverwendete Bauteile)' ist eine Uebersetzung, die so nicht auf der Seite steht; zudem steht der Eintrag unter 'Partner', nicht als eigenes Feld."
+      },
+      {
+        "kind": "edge",
+        "ref": "U46|P3",
+        "cc": "CH",
+        "url": "https://zirkular.net/de/projekt/grubenstrasse-29/",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Projekt Team:\nMarc Angst\nLeonard Schönfelder",
+        "bemerkung": "Namen stimmen exakt, aber Label lautet 'Projekt Team', nicht 'Zirkular Projektteam' - das Wort 'Zirkular' steht dort nicht."
+      },
+      {
+        "kind": "edge",
+        "ref": "U13|P4",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Generalplanung und Architektur Graber Pulver Architekt:innen AG, Zürich",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U23|P4",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Landschaftsarchitektur manoa Landschaftsarchitekten GmbH, Meilen",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U42|P4",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/projekte-und-ausschreibungen/hochbauvorhaben/planung-ausfuehrung/recyclingzentrum-juch-areal.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Bauingenieurwesen Weber + Brönnimann AG, Bern",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U18|P6",
+        "cc": "CH",
+        "url": "https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Timber Engineering: Josef Kolb AG",
+        "bemerkung": "Wortlaut stimmt exakt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U29|P6",
+        "cc": "CH",
+        "url": "https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Civil engineer: Oberli Ingenieurbau AG",
+        "bemerkung": "Zitat exakt im Credits-Abschnitt der ArchDaily-Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U44|P6",
+        "cc": "CH",
+        "url": "https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Steel Construction: Wetter AG",
+        "bemerkung": "Zitat exakt im Credits-Abschnitt der ArchDaily-Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U46|P6",
+        "cc": "CH",
+        "url": "https://zirkular.net/de/projekt/k-118-kopfbau-halle-118/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Sie erhielten viel Aufmerksamkeit und waren Auslöser der Gründung von Zirkular durch die involvierten Planenden.",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U04|P7",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Bauphysik: aik, Architektur + Ingenieur Kollektiv, Zürich",
+        "bemerkung": "Seite ist rein deutschsprachig; der englische Klammerzusatz '(Building Physics)' im Zitat steht nicht auf der Seite. Die Zuordnung selbst (Firma zur Rolle Bauphysik) ist aber belegt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U16|P7",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "HLKS-Planung: Haerter + Partner AG, Zürich",
+        "bemerkung": "Seite ist rein deutschsprachig; englischer Klammerzusatz '(Building Systems Planning)' im Zitat nicht vorhanden, Kernaussage aber belegt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U17|P7",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Bauingenieurwesen: Ingenieurbureau Heierli AG, Zürich",
+        "bemerkung": "Seite ist rein deutschsprachig; englischer Klammerzusatz '(Structural Engineering)' im Zitat nicht vorhanden, Kernaussage aber belegt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U24|P7",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Baumanagement: Meili Partner Baumanagement, Zürich",
+        "bemerkung": "Seite ist rein deutschsprachig; englischer Klammerzusatz '(Construction Management)' im Zitat nicht vorhanden, Kernaussage aber belegt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U36|P7",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Elektroplanung: Schmidiger + Rosasco AG, Zürich",
+        "bemerkung": "Seite ist rein deutschsprachig; englischer Klammerzusatz '(Electrical Planning)' im Zitat nicht vorhanden, Kernaussage aber belegt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U46|P7",
+        "cc": "CH",
+        "url": "https://www.stadt-zuerich.ch/de/planen-und-bauen/portfolio/bauten-anlagen/schulbauten/kindergarten-moeoeslistrasse.html",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Landschaftsarchitektur Planung Re-Use: Zirkular GmbH, Zürich",
+        "bemerkung": "Zitat ist eine englische Uebersetzung/Umformulierung; die Seite selbst ist rein deutschsprachig und traegt die Aussage nur sinngemaess."
+      },
+      {
+        "kind": "edge",
+        "ref": "U33|P8",
+        "cc": "CH",
+        "url": "https://zirkular.net/en/project/lysp8/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Pirmin Jung (Fachplanung Holzbau)",
+        "bemerkung": "Zitat exakt in der Partnerliste gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "X03|P8",
+        "cc": "CH",
+        "url": "https://www.stiftung-habitat.ch/sh/liegenschaften/haeuser-und-projekte/wohnhaus-weinlagerstrasse-33.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Entstanden ist hier ein weiteres Wohnhaus der Stiftung Habitat.",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U08|U32",
+        "cc": "CH",
+        "url": "https://www.espazium.ch/de/aktuelles/winterthur-hobelwerk-architektur-reuse-flammerarchitkten-nettonull",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "untersuchten in situ und PFA 60 Elemente, aus denen schlussendlich 21 für Erwerb und Einbau ausgewählt wurden",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U46|U38",
+        "cc": "CH",
+        "url": "https://zirkular.net/de/projekt/schaerenmoosstrasse/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Nach dem Wettbewerbsgewinn wurde Zirkular mit in das Projektteam geholt.",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|F10",
+        "cc": "DE",
+        "url": "https://recreate-project.eu/the-partners/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Role in the project: Partner, leader in WP6",
+        "bemerkung": "Zitat exakt gefunden, im Partnerabschnitt (BTU) der Seite."
+      },
+      {
+        "kind": "edge",
+        "ref": "F03|P12",
+        "cc": "DE",
+        "url": "https://www.baulinks.de/webplugin/2005/1177.php4",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "sagt Dipl.-Ing. Claus Asam vom IEMB, der das Projekt leitete und maßgeblich mitinitiierte",
+        "bemerkung": "Zitat wortgleich im Artikel gefunden."
+      },
+      {
+        "kind": "edge",
+        "ref": "F06|P13",
+        "name": "F06 -> P13",
+        "cc": "DE",
+        "url": "https://wwstudio.de/projects/plattenpalst",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Der Plattenpalast besteht aus demontierten Großflächenplatten des Plattenbautyps WBS 70 und wurde als Forschungsprojekt der TU Berlin unter der Leitung von Claus Asam vom IEMB in Zusammenarbeit mit dem Berliner Architekturbüro wiewiorra hopp architekten als Prototyp entwickelt.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden (als Teilsatz)."
+      },
+      {
+        "kind": "edge",
+        "ref": "F13|P14",
+        "name": "F13 -> P14",
+        "cc": "DE",
+        "url": "https://www.tu.berlin/en/bauphysik/research/past-projects/projekt-plattenvereinigung",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "The building was developed in partnership with the Chair of Building Physics and Building Constructions at TU Berlin.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "S03|F14",
+        "name": "S03 -> F14",
+        "cc": "DE",
+        "url": "https://urban-mining-index.de/initiative/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Die Bergische Universität Wuppertal hat den „UMI“ zu einer anwenderfreundlichen Software weiterentwickelt und im Urban Solar Decathlon 2021 eingesetzt.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "G01|P14",
+        "name": "G01 -> P14",
+        "cc": "DE",
+        "url": "https://www.plattenvereinigung.de/project/",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "Im Mai 2011 wurde das Gebäude auf dem Tempelhofer Feld (ehemals Flughafen Tempelhof) in Berlin umgesetzt, wo das Projekt bis Ende Oktober 2011 mit einem vielfältigen Programm stattfand, das ebenso von der Bundeszentrale für politische Bildung (bpb) gefördert wurde.",
+        "bemerkung": "Das Zitat 'Das vielfältige Programm wurde ebenso von der Bundeszentrale für politische Bildung (bpb) gefördert.' ist keine woertliche Wiedergabe: im Original ist 'das' ein Relativpronomen bezogen auf 'Programm' innerhalb eines laengeren Satzes, und die Wortstellung 'gefoerdert wurde' vs. 'wurde ... gefoerdert' ist umgedreht. Aussage ist inhaltlich korrekt, aber umformuliert."
+      },
+      {
+        "kind": "edge",
+        "ref": "G02|P14",
+        "name": "G02 -> P14",
+        "cc": "DE",
+        "url": "https://www.plattenvereinigung.de/project/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Plattenvereinigung wird durch die Deutsche Bundesstiftung Umwelt (DBU) als Projekt für „Berufsbildung und öffentlichen Diskurs zum Ressourcenschutz am Beispiel eines modellhaften mobilen Recyclinggebäudes in Berlin“ gefördert und von einer Vielzahl engagierter und renommierter Projektpartner unterstützt.",
+        "bemerkung": "Zitat stimmt woertlich bis 'Recyclinggebaeudes' ueberein; im Original folgen vor dem eigentlichen Anfuehrungszeichen noch die Woerter 'in Berlin', die im Pruefzitat fehlen (Schliess-Anfuehrungszeichen zu frueh gesetzt, keine Auslassung mit '...' markiert). Inhaltlich unveraendert, daher als bestaetigt gewertet."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:47|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6000",
+        "name": "I01 -> P2",
+        "cc": "DE",
+        "url": "https://awm.stadt-muenster.de/aktuelles/newsdetail/moderne-arbeitswelt-aus-gebrauchten-materialien",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In Zusammenarbeit mit dem Düsseldorfer Unternehmen Urselmann interior, das sich auf Innenausbau nach dem Prinzip cradle-to-cradle spezialisiert hat, ist auf 250 m2 eine moderne Arbeitswelt mit festen und mobilen Büroarbeitsplätzen sowie Workshop- und Besprechungsräumen entstanden.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden (erster Fetch-Versuch scheiterte an Domainpruefung, zweiter Versuch erfolgreich)."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573|NEW:munchenbauteilborse",
+        "name": "S01 -> I05",
+        "cc": "DE",
+        "url": "https://concular.de/regionale-knotenpunkte-fuer-ganz-deutschland/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Im Rahmen des europäischen CIRCOFIN-Projekts entwickelt Concular gemeinsam mit der Stadt München eine digitale und physische Bauteilbörse.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "M05|N06",
+        "name": "M05 -> N06",
+        "cc": "DE",
+        "url": "https://www.historische-baustoffe.de/en/the-dealers/list-of-dealers/elias/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Historische Bauelemente - Olaf Elias e.K. ... Latest news about this member:",
+        "bemerkung": "Firmenname und Ueberschrift 'Latest news about this member:' beide auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "M06|N06",
+        "name": "M06 -> N06",
+        "cc": "DE",
+        "url": "https://www.historische-baustoffe.de/en/the-dealers/list-of-dealers/hbostalb/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Historische Baustoffe Ostalb ... Latest news about this member: ... Members from this region: Baden-Wuerttemberg",
+        "bemerkung": "Alle drei Textbausteine wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5264|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+        "name": "O01 -> P10",
+        "cc": "DE",
+        "url": "https://www.buildingsocialecology.org/projects/crclr-house-berlin/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "As soon as the building is finalized, the Impact Hub Berlin will move in and offer co-working spaces, lab facilities and an event program.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6186|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+        "name": "O02 -> P10",
+        "cc": "DE",
+        "url": "https://www.dbz.de/artikel/crclr-house-berlin-3945221.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "die TRNSFRM eG, zuständig für das partizipative Quartierskonzept, errichtete in experimenteller Holz-Hybridbauweise einen Neubau mit dem Namen ALLTAG",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "O03|P14",
+        "name": "O03 -> P14",
+        "cc": "DE",
+        "url": "https://www.plattenvereinigung.de/imprint/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Plattenvereinigung ist ein Projekt der zukunftsgeraeusche GbR",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden (Schreibweise ohne Umlaut deckt sich mit Original)."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6187|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+        "name": "U18 -> P10",
+        "cc": "DE",
+        "url": "https://www.dbz.de/artikel/crclr-house-berlin-3945221.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Christian Schöningh ist Teil der TRNSFRM eG und mit „Die Zusammenarbeiter“ einer der planenden Architekten vor Ort.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6391|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5250",
+        "name": "U34 -> P10",
+        "cc": "DE",
+        "url": "https://lxsy.de/projekte/impact-hub-berlin-at-crclr-house",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Rund 70% der verwendeten Materialien und Produkte sind recycelt oder nachhaltig.",
+        "bemerkung": "Zitat wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "U49|P13",
+        "name": "U49 -> P13",
+        "cc": "DE",
+        "url": "https://wwstudio.de/projects/plattenpalst",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Der Plattenpalast besteht aus demontierten Großflächenplatten des Plattenbautyps WBS 70 und wurde als Forschungsprojekt der TU Berlin unter der Leitung von Claus Asam vom IEMB in Zusammenarbeit mit dem Berliner Architekturbüro wiewiorra hopp architekten als Prototyp entwickelt.",
+        "bemerkung": "Identisches Zitat und Ziel-URL wie bei F06|P13; wortwoertlich auf der Seite vorhanden."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6250|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5614",
+        "cc": "DE",
+        "url": "https://www.aknds.de/architektur-baukultur/staatspreis-2020/engere-wahl-2020/recyclinghaus-hannover-kronsberg-hannover",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "ENTWURFSVERFASSER CITYFÖRSTER architecture + urbanism, Hannover, Architekt Dipl.-Ing. Nils Nolting, Architektin Dr.-Ing. Verena Brehm",
+        "bemerkung": "Name/Rolle stimmen, aber die Seite fuehrt CITYFÖRSTER unter der Rubrik 'ENTWURFSVERFASSER', nicht unter dem im Zitat behaupteten Label 'Architekten (Design):'. Das ist keine triviale Abweichung, sondern eine andere Beschriftung."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5622|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5614",
+        "cc": "DE",
+        "url": "https://www.aknds.de/architektur-baukultur/staatspreis-2020/engere-wahl-2020/recyclinghaus-hannover-kronsberg-hannover",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "DREWES + SPETH Beratende Ingenieure im Bauwesen Partnerschaftsgesellschaft mbB, Hannover (Statik)",
+        "bemerkung": "Firma und Ort stimmen exakt, aber auf der Seite steht kein Label 'Tragwerksplanung:' vor dem Namen -- die Rolle ist stattdessen als '(Statik)' hinter dem Namen unter der Rubrik 'WEITERE BETEILIGTE' vermerkt."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5621|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5614",
+        "cc": "DE",
+        "url": "https://www.aknds.de/architektur-baukultur/staatspreis-2020/engere-wahl-2020/recyclinghaus-hannover-kronsberg-hannover",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "BAUHERRIN Gundlach GmbH & Co. KG Wohnungsunternehmen, Hannover",
+        "bemerkung": "Firma stimmt exakt; 'BAUHERRIN' vs. 'Bauherrin' waere trivial, aber der Zusatz '(Client):' inkl. Doppelpunkt steht so nicht auf der Seite -- dort folgt der Firmenname direkt und ohne Satzzeichen auf das Label."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5623|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5614",
+        "cc": "DE",
+        "url": "https://www.aknds.de/architektur-baukultur/staatspreis-2020/engere-wahl-2020/recyclinghaus-hannover-kronsberg-hannover",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "H2A – v. Heeren Habibi Architekt und Ingenieur PartGmbB, Hannover (Bauphysik)",
+        "bemerkung": "Firma stimmt exakt, aber 'Bauphysik' steht auf der Seite als Klammerzusatz HINTER dem Namen, nicht als vorangestelltes Label 'Bauphysik:' wie im Zitat behauptet."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6000",
+        "cc": "DE",
+        "url": "https://concular.de/bueroetage-muenster/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "hat urselmann interior eng mit Concular zusammengearbeit – sowohl bei der Beschaffung der zirkulären Materialien als auch bei der Auswertung des Impacts über die zirkuläre Ökobilanzierung.",
+        "bemerkung": "Zitat woertlich auf der Seite gefunden (Rohtext per curl geladen, WebFetch verweigerte den Domainzugriff)."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6449|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6000",
+        "cc": "DE",
+        "url": "https://www.jablonicka.com/work/95,6%25-circular-reconstruction-of-offices-for-awm-m%C3%BCnster-",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "For this project Petra Jablonická (Architect), Thorsten Gambalat (product design) and Sven Urselmann (carpenter & circularity expert), craftsmen, and many professionals in building and interior sector cooperated. [Seitentitel: 95,6% circular reconstruction of offices for AWM Münster | Petra's Portfolio]",
+        "bemerkung": "Petra Jablonicka wird im Fliesstext als Architect fuer dieses Projekt genannt, und der Projektname erscheint im Seitentitel -- aber das Zitat 'Name (Rolle) — Projekttitel' ist keine zusammenhaengende woertliche Textstelle auf der Seite, sondern eine Montage aus Fliesstext und Titel."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6452|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6000",
+        "cc": "DE",
+        "url": "https://www.jablonicka.com/work/95,6%25-circular-reconstruction-of-offices-for-awm-m%C3%BCnster-",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "For this project Petra Jablonická (Architect), Thorsten Gambalat (product design) and Sven Urselmann (carpenter & circularity expert), craftsmen, and many professionals in building and interior sector cooperated. [Seitentitel: 95,6% circular reconstruction of offices for AWM Münster | Petra's Portfolio]",
+        "bemerkung": "Gleicher Befund wie beim vorigen Eintrag: Sven Urselmann wird im Fliesstext als 'carpenter & circularity expert' genannt, der Projekttitel steht separat im <title>-Tag; das Zitat ist eine Montage, keine zusammenhaengende Stelle."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6434|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6000",
+        "cc": "DE",
+        "url": "https://awm.stadt-muenster.de/aktuelles/newsdetail/moderne-arbeitswelt-aus-gebrauchten-materialien",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "In Zusammenarbeit mit dem Düsseldorfer Unternehmen Urselmann interior, das sich auf Innenausbau nach dem Prinzip cradle-to-cradle spezialisiert hat, ist auf 250 m2 eine moderne Arbeitswelt mit festen und mobilen Büroarbeitsplätzen sowie Workshop- und Besprechungsräumen entstanden.",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U02|P3",
+        "cc": "DE",
+        "url": "https://taz.de/Die-Wiedergeburt-der-Platte/!493469/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Bei dem Wohnhaus, das er in Schildow betreut, soll es auch Solarzellen geben auf dem Dach.",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4949|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4934",
+        "cc": "DE",
+        "url": "https://www.dbz.de/artikel/crclr-house-berlin-3945221.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Energieberatung / Energiezentrale: eZeit Ingenieure GmbH, Berlin, www.ezeit-ingenieure.de",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6391|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4934",
+        "cc": "DE",
+        "url": "https://lxsy.de/projekte/impact-hub-berlin-at-crclr-house",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Rund 70% der verwendeten Materialien und Produkte sind recycelt oder nachhaltig.",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4948|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4934",
+        "cc": "DE",
+        "url": "https://www.dbz.de/artikel/crclr-house-berlin-3945221.html",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "TGA-Planung: Solares Bauen GmbH, Freiburg, www.solares-bauen.de",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573|NEW:H:albaberlin",
+        "cc": "DE",
+        "url": "https://www.alba.info/unternehmen/newsroom/pressemitteilungen/detail/urban-mining-hub-berlin-gekommen-um-zu-bleiben/",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "ALBA Berlin versteht sich in diesem Projekt als einer dieser starken Partner, der neben der benötigten Fläche auch effektive Logistikdienstleistungen anbietet.",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6439|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6573",
+        "cc": "DE",
+        "url": "https://www.green-ai-hub.de/en/pilot-projects/pilotproject-concular",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "Together with its partner Circular Structural Design from Berlin, matching algorithms are being developed within the AI pilot project with the Green-AI Hub Mittelstand in order to consider reusable components when planning new buildings.",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "F01|P5",
+        "cc": "DK",
+        "url": "https://dac.dk/en/magazine/places/thoravej-29-what-can-be-reused-must-be-reused-376",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "A report from the Technical University of Denmark (DTU) on the Thoravej 29 project shows that compared to constructing an entirely new building, CO2 emissions from the project were 3 to 9 times lower.",
+        "bemerkung": "Zitat woertlich bestaetigt."
+      },
+      {
+        "kind": "edge",
+        "ref": "U22|P14",
+        "url": "https://brusselsarchitectureprize.be/en/project/esp-karreveld/",
+        "cc": "BE",
+        "name": "U22-P14",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Stability engineer / JZH&Partners\", \"Technical engineer / JZH&Partners\", \"Sustainability / JZH&Partners\" (drei separate Credit-Zeilen)",
+        "bemerkung": "Zitat 'JZH&Partners' erscheint woertlich mehrfach in der Credits-Liste, u.a. bei 'Stability engineer' und 'Technical engineer' -- deckt relation_ist 'Stabilitaets-/Technikingenieur'.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U24|P14",
+        "url": "http://www.agwa.be/en/projects/1811_KARREVELD/212/",
+        "cc": "BE",
+        "name": "U24-P14",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Subcontractors :\\nJZH&Partners, Kahle acoustics, Denis Dujardin\"",
+        "bemerkung": "Zitat exakt so unter der Rubrik 'Subcontractors' gefunden.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U05|P15",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "cc": "BE",
+        "name": "U05-P15",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Contractors: De Coninck, Brudex.\"",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U11|P15",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "cc": "BE",
+        "name": "U11-P15",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Contractors: De Coninck, Brudex.\"",
+        "bemerkung": "Gleiche Seite/Zitat wie U05|P15, wortgleich bestaetigt.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U28|P15",
+        "url": "https://rotordb.org/en/projects/zinneke-feder-masui4ever",
+        "cc": "BE",
+        "name": "U28-P15",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"In 2016, Ouest architecture and Matriciel were selected to join the project.\"",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U07|P2",
+        "url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+        "cc": "BE",
+        "name": "U07-P2",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Contractors\\n\\nCoopérative construction AUTREMENT\" -- Ueberschrift 'Contractors' und darunter als Listeneintrag 'Coopérative construction AUTREMENT', ohne verbindenden Satz.",
+        "bemerkung": "Das angegebene 'Zitat' ('... listed under Contractors') ist keine woertliche Wiedergabe, sondern eine Paraphrase/Beschreibung der Tabellenstruktur (Label + separater Listeneintrag). Die Aussage stimmt inhaltlich, ist aber nicht als zusammenhaengender Satz auf der Seite vorhanden.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U16|P2",
+        "url": "https://rotordb.org/en/projects/sanitary-block-itterbeek-chiro",
+        "cc": "BE",
+        "name": "U16-P2",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"The facade, for example, is entirely made of reusable bricks provided by Jan Franck.\"",
+        "bemerkung": "Zitat wortgleich auf der Seite gefunden.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U04|P5",
+        "url": "https://www.archdaily.com/951845/gjg-house-blaf-architecten",
+        "cc": "BE",
+        "name": "U04-P5",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Architects: BLAF Architecten\" (Label im Plural, ohne Klammerzusatz)",
+        "bemerkung": "Auf der Seite steht 'Architects:' (Plural), nicht 'Architect:' (Singular) wie im Zitat. Der Klammerzusatz '(gjG House project credits)' ist ein redaktioneller Zusatz und steht nicht auf der Seite. Kein trivialer Unterschied, aber Aussage inhaltlich gedeckt.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U18|P5",
+        "url": "https://www.archdaily.com/951845/gjg-house-blaf-architecten",
+        "cc": "BE",
+        "name": "U18-P5",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Structural Work: G-build\"",
+        "bemerkung": "Zitat exakt in den Project Specifications gefunden (zweifach unabhaengig geprueft).",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U36|P5",
+        "url": "https://www.archdaily.com/951845/gjg-house-blaf-architecten",
+        "cc": "BE",
+        "name": "U36-P5",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Stability: Tecclem\"",
+        "bemerkung": "Auf der Seite steht nur 'Stability: Tecclem', nicht 'Stability Engineer: Tecclem'. Das Wort 'Engineer' ist im Zitat hinzugefuegt und nicht auf der Seite vorhanden -- kein trivialer Unterschied, Aussage aber inhaltlich gedeckt.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U37|P5",
+        "url": "https://www.archdaily.com/951845/gjg-house-blaf-architecten",
+        "cc": "BE",
+        "name": "U37-P5",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Carpentry: Vlieghe\"",
+        "bemerkung": "Auf der Seite steht 'Carpentry: Vlieghe', nicht 'Carpenter: Vlieghe' wie im Zitat. Wortaenderung ist kein trivialer Unterschied, Aussage aber inhaltlich gedeckt.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U13|P6",
+        "url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "cc": "BE",
+        "name": "U13-P6",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Client\" gefolgt von \"Dexia / Lo-Reninge town council\" (Label und Wert stehen strukturell getrennt, ohne Doppelpunkt)",
+        "bemerkung": "Inhalt und Wortfolge stimmen; Layout-Trennung (Zeilenumbruch statt Leerzeichen) ist trivial.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U29|P6",
+        "url": "https://noaarchitecten.net/projects/1/046-lo-reninge-town-hall",
+        "cc": "BE",
+        "name": "U29-P6",
+        "ergebnis": "bestaetigt",
+        "gefundene_stelle": "\"Restoration and extension of a former convent to create a town hall\"",
+        "bemerkung": "Zitat wortgleich als Projektbeschreibung auf der Seite gefunden.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U04|P7",
+        "url": "https://www.archdaily.com/423660/dna-house-blaf-architecten",
+        "cc": "BE",
+        "name": "U04-P7",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "H1-Titel: \"dnA House / BLAF Architecten\"; Credit-Zeile: \"Architects: BLAF Architecten\"",
+        "bemerkung": "Der erste Teil des Zitats ('dnA House / BLAF Architecten') stimmt wortgleich mit dem Seitentitel. Der Klammerzusatz '(Architekt: BLAF Architecten)' steht aber nicht so auf der Seite -- dort heisst es englisch 'Architects: BLAF Architecten' (Plural), nicht deutsch 'Architekt'. Aussage inhaltlich klar gedeckt, Zitat aber nicht durchgehend woertlich.",
+        "hindernis": ""
+      },
+      {
+        "kind": "edge",
+        "ref": "U03|P8",
+        "url": "https://opalis.eu/fr/projets/maison-vignette-karbon-architecture-et-urbanisme",
+        "cc": "BE",
+        "name": "U03-P8",
+        "ergebnis": "sinngemaess",
+        "gefundene_stelle": "\"Technique / Stabilité\" und \"Pierre Stoffel\" stehen als getrennte Zeilen/Absaetze ohne Doppelpunkt dazwischen.",
+        "bemerkung": "Zwei unabhaengige Pruefungen bestaetigen: kein Doppelpunkt zwischen Label und Name auf der Seite, sondern strukturelle Trennung (eigene Zeile). Das im Zitat eingefuegte ':' ist eine Interpretation der Tabellenstruktur, nicht woertlich vorhanden. Inhalt (Pierre Stoffel = Technik/Stabilitaet) ist eindeutig gedeckt.",
+        "hindernis": ""
+      }
+    ],
+    "summe": 165,
+    "bestaetigt": 131,
+    "sinngemaess": 34,
+    "zitat_nicht_gefunden": 0,
+    "seite_nicht_erreichbar": 0,
+    "reproduktionsrate_erreichbare": 0.793939393939394,
+    "ausgefallen": 0
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "verify:edge:0-15",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a81262e16c2048abb",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214285,
+      "queuedAt": 1786606214261,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:0-15",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606536459,
+      "tokens": 84703,
+      "toolCalls": 17,
+      "durationMs": 322174,
+      "resultPreview": "{\"slice\":\"edge:0-15\",\"geprueft\":15,\"kappe_erreicht\":false,\"checks\":[{\"kind\":\"edge\",\"ref\":\"AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6576|NEW:iboosterrinstitutfurbauenundokologie\",\"cc\":\"AT\",\"url\":\"https://www.ibo.at/en/research/reference-projects/data/build-re-use\",\"ergebnis\":\"sinngemaess\",\"gefundene_stelle\":\"Unter der Überschrift \\\"Project team\\\" (vertikale Liste, kein \\\"Partners:\\\"-Satz): AEE int…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "verify:edge:15-30",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a578b13bd863a2d11",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214287,
+      "queuedAt": 1786606214262,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:15-30",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606330017,
+      "tokens": 59128,
+      "toolCalls": 14,
+      "durationMs": 115730,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"AT:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6625|NEW:H:ferrydusikastadionruckbau\",\"cc\":\"AT\",\"name\":\"N03-U03\",\"url\":\"https://www.ots.at/presseaussendung/OTS_20211014_OTS0116/ferry-dusika-stadion-erfolg-fuer-kreislaufwirtschaftliches-rueckbauprojekt\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"Das BauKarussell-Team setzt sich aus Partnern von pulswerk GmbH, Romm ZT und…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "verify:edge:30-45",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a844e6801d4fb9190",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214289,
+      "queuedAt": 1786606214262,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:30-45",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606328685,
+      "tokens": 62843,
+      "toolCalls": 22,
+      "durationMs": 114396,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"F01|N08\",\"cc\":\"BE\",\"url\":\"https://www.bamb2020.eu/partners/\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"The BAMB project brings 15 partners from 7 European countries, and different places in the value chain, together for one mission – to move the building industry towards a circular economy.\",\"bemerkung\":\"Zitat wortgleich auf der Seite vorhanden.\"},{\"kind\":\"edge\",…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "verify:edge:45-60",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a3b036fb874bd0985",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214290,
+      "queuedAt": 1786606214262,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:45-60",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606307083,
+      "tokens": 57326,
+      "toolCalls": 16,
+      "durationMs": 92793,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"N07|P13\",\"url\":\"https://rotordb.org/en/projects/recypark-anderlecht\",\"cc\":\"BE\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"51N4E, Witteveen&Bos and Rotor joined forces and won the competition with a project that focused on reusing an existing structure, in line with Bruxelles Proprete's desire to promote reuse in the city.\",\"bemerkung\":\"Zitat ist woertlich (als Tei…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "verify:edge:60-75",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a020903687cfa2b02",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214292,
+      "queuedAt": 1786606214262,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:60-75",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606304171,
+      "tokens": 57632,
+      "toolCalls": 15,
+      "durationMs": 89879,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"N07|P13\",\"url\":\"https://rotordb.org/en/projects/recypark-anderlecht\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"51N4E, Witteveen&Bos and Rotor joined forces and won the competition with a project that focused on reusing an existing structure\",\"bemerkung\":\"Zitat wortgleich auf der Seite gefunden.\",\"cc\":\"BE\"},{\"kind\":\"edge\",\"ref\":\"N07|P15\",\"url\":\"https://rotordb.org…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "verify:edge:75-90",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "abc82036b9b66ae02",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214293,
+      "queuedAt": 1786606214262,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:75-90",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606359361,
+      "tokens": 65408,
+      "toolCalls": 20,
+      "durationMs": 145068,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"U17|P8\",\"url\":\"https://opalis.eu/fr/projets/maison-vignette-karbon-architecture-et-urbanisme\",\"cc\":\"BE\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"Brique: Grote Boomse Steen, provenant de chez Franck (205 x 55 x 100 mm).\",\"bemerkung\":\"Zitat exakt vorhanden (Franck als Link markiert, Klammerzusatz mit Massangabe folgt).\"},{\"kind\":\"edge\",\"ref\":\"U25|P8\",\"url\":\"https:…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "verify:edge:90-105",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "aa67b76b9d038abc6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214295,
+      "queuedAt": 1786606214262,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:90-105",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606386468,
+      "tokens": 63380,
+      "toolCalls": 23,
+      "durationMs": 172173,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"U46|M04\",\"cc\":\"CH\",\"url\":\"https://zirkular.net/de/projekt/bauteilkatalog-immobilien-basel-stadt/\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"Im Rahmen der Projektwettbewerbe «Walkeweg» und «Schliengerweg» katalogisierte Zirkular die Re-Use-Bauteile für den «Bauteilkatalog zur Wiederverwendung»\",\"bemerkung\":\"Zitat exakt als Satzanfang auf der Seite vorhanden.\"},{\"k…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "verify:edge:105-120",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a427a2dfb8d602dd2",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214297,
+      "queuedAt": 1786606214262,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:105-120",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606361510,
+      "tokens": 70461,
+      "toolCalls": 20,
+      "durationMs": 147213,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"U29|P6\",\"cc\":\"CH\",\"url\":\"https://www.archdaily.com/968958/k118-kopfbau-halle-118-hauburo-in-situ\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"Civil engineer: Oberli Ingenieurbau AG\",\"bemerkung\":\"Zitat exakt im Credits-Abschnitt der ArchDaily-Seite gefunden.\"},{\"kind\":\"edge\",\"ref\":\"U44|P6\",\"cc\":\"CH\",\"url\":\"https://www.archdaily.com/968958/k118-kopfbau-halle-118-haub…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "verify:edge:120-135",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a6b3489ad1c130b7b",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214298,
+      "queuedAt": 1786606214263,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:120-135",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606414023,
+      "tokens": 67612,
+      "toolCalls": 26,
+      "durationMs": 199725,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"F06|P13\",\"name\":\"F06 -> P13\",\"cc\":\"DE\",\"url\":\"https://wwstudio.de/projects/plattenpalst\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"Der Plattenpalast besteht aus demontierten Großflächenplatten des Plattenbautyps WBS 70 und wurde als Forschungsprojekt der TU Berlin unter der Leitung von Claus Asam vom IEMB in Zusammenarbeit mit dem Berliner Architekturbüro wiewior…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "verify:edge:135-150",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "a70eea9d0a0ee5ee6",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214300,
+      "queuedAt": 1786606214263,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:135-150",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606444000,
+      "tokens": 75824,
+      "toolCalls": 26,
+      "durationMs": 229700,
+      "resultPreview": "{\"checks\":[{\"kind\":\"edge\",\"ref\":\"DE:4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:6250|4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5614\",\"cc\":\"DE\",\"url\":\"https://www.aknds.de/architektur-baukultur/staatspreis-2020/engere-wahl-2020/recyclinghaus-hannover-kronsberg-hannover\",\"ergebnis\":\"sinngemaess\",\"gefundene_stelle\":\"ENTWURFSVERFASSER CITYFÖRSTER architecture + urbanism, Hannover, Architekt Dipl.-Ing. Nils No…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 11,
+      "label": "verify:edge:150-165",
+      "phaseIndex": 1,
+      "phaseTitle": "Verify",
+      "agentId": "abe2e624a585b51a8",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786606214301,
+      "queuedAt": 1786606214263,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "edge:150-165",
+      "promptPreview": "Du bist die adversariale Gegenprobe eines Faktenchecks zum europaeischen Akteursnetz\nder Bauteil-Wiederverwendung.\n\nSETUP:\n 1. Rufe ToolSearch mit query \"select:Read,WebFetch,WebSearch\" auf, um Datei- und\n    Web-Werkzeuge zu laden.\n 2. Lies die Datei:\n    E:\\recherche\\_neo4j\\review\\2026-08_akteursnetz_faktencheck\\verdicts.json\n    Sie enthaelt zwei Listen: \"nodes\" und \"edges\".\n 3. DEINE SCHEIBE: …",
+      "lastProgressAt": 1786606383219,
+      "tokens": 64178,
+      "toolCalls": 20,
+      "durationMs": 168918,
+      "resultPreview": "{\"slice\":\"edge:150-165\",\"geprueft\":15,\"kappe_erreicht\":false,\"checks\":[{\"kind\":\"edge\",\"ref\":\"U22|P14\",\"url\":\"https://brusselsarchitectureprize.be/en/project/esp-karreveld/\",\"cc\":\"BE\",\"name\":\"U22-P14\",\"ergebnis\":\"bestaetigt\",\"gefundene_stelle\":\"\\\"Stability engineer / JZH&Partners\\\", \\\"Technical engineer / JZH&Partners\\\", \\\"Sustainability / JZH&Partners\\\" (drei separate Credit-Zeilen)\",\"bemerkung\":\"…"
+    }
+  ],
+  "totalTokens": 728495,
+  "totalToolCalls": 219
+}

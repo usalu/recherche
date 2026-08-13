@@ -1,0 +1,39 @@
+{
+  "_comment": "Manual disposition of the adversarial verify pass (verify_all_checks.json), 2026-08-13. Two categories from that pass needed human resolution: 4 zitat_nicht_gefunden (cited quote not found on the cited page at all) and 24 seite_nicht_erreichbar (citation page unreachable at re-check time). merge_verdicts.py applies 'demote' entries before rule computation; 'reconcile' entries are recorded for the review file only and do not change actor_degree.",
+  "demote": [
+    {"cc": "BE", "tid": "P5", "from_degree": "kern", "to_degree": "ohne_beleg",
+     "reason": "verify: zitat_nicht_gefunden — cited archdaily.com page describes BLAF's general 'Brick Wall City' research, not that gjG House itself was built from reused brick/metal/wood; checked three times incl. full-text search."},
+    {"cc": "FI", "tid": "M01", "from_degree": "kern", "to_degree": "ohne_beleg",
+     "reason": "verify: zitat_nicht_gefunden — cited quote does not exist as a contiguous passage on ekomatti.fi; assembled from non-adjacent list categories, some terms not present on the page at all."},
+    {"cc": "NO", "tid": "U10", "from_degree": "kern", "to_degree": "ohne_beleg",
+     "reason": "verify: zitat_nicht_gefunden — resirqel.no/raadgivning describes their consulting services but nowhere states Resirqel is Norway's first specialised ombruk consultancy, checked via WebFetch and full browser render."},
+    {"cc": "SE", "tid": "M06", "from_degree": "kern", "to_degree": "ohne_beleg",
+     "reason": "verify: zitat_nicht_gefunden — kompanjonen.se now redirects to dackeconsulting.com, which carries neither the name 'Kompanjonen' nor the cited Swedish phrasing; only the 'Dacke.Online' keyword and a similar tagline fragment survive."}
+  ],
+  "reconcile": [
+    {"cc": "BE", "tid": "M08", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://blog.composil.eu/en/sustainable-building-materials-reused-carpets"},
+    {"cc": "BE", "tid": "M09", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.cornermat.be/"},
+    {"cc": "BE", "tid": "M10", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.degroenepoort.com/en/about-us"},
+    {"cc": "BE", "tid": "M11", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://de-oude-dakpan.be/"},
+    {"cc": "BE", "tid": "M12", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.2dehandsbouwmarkt.be"},
+    {"cc": "BE", "tid": "N08", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://sarajevogreendesign.com/"},
+    {"cc": "BE", "tid": "N09", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.tracimat.be/over-ons/"},
+    {"cc": "BE", "tid": "P10", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://cellule.archi/fr/integration-oeuvres-art/musee-du-folklore-de-mouscron"},
+    {"cc": "BE", "tid": "P11", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://rotordb.org/en/projects/oxy-centre-monnaie"},
+    {"cc": "BE", "tid": "P13", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://rotordb.org/en/projects/recypark-anderlecht"},
+    {"cc": "DK", "tid": "U13", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://j-jensen.com/kompetencer/genbrugssalg/"},
+    {"cc": "DK", "tid": "U14", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.kc-nedbrydning.dk/vi-tilbyder/genbrugsmateriale/"},
+    {"cc": "DK", "tid": "U16", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://kingo.biz/genbrug/"},
+    {"cc": "DK", "tid": "U17", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://klassiske-vinduer.dk/"},
+    {"cc": "DK", "tid": "U18", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://lendager.com/project/trae"},
+    {"cc": "DK", "tid": "U20", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://mth.dk/ydelser/renovering/bevaringsvaerdige-og-fredede-bygninger"},
+    {"cc": "DK", "tid": "U21", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://nssf.dk/nedrivning/"},
+    {"cc": "DK", "tid": "U26", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://pogenbrug.dk/"},
+    {"cc": "DK", "tid": "U28", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://pihlmann.dk/info"},
+    {"cc": "DK", "tid": "U30", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://fliser-tagsten.dk/brugte-fliser-2l/"},
+    {"cc": "DK", "tid": "U31", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.dba.dk/shop/skave-nedbrydning"},
+    {"cc": "FI", "tid": "F01", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.aalto.fi/en/housing-design"},
+    {"cc": "FI", "tid": "F04", "note": "verify: page unreachable at re-check, reconfirmed live on manual retry — https://www.tuni.fi/en/tau/research/recreate"},
+    {"cc": "GB", "tid": "M04", "note": "verify: buildingsparesmarket.co.uk still fails DNS in this environment; corroborated via Wayback availability API (200 snapshot, 2026-05-14) plus current live search indexing of multiple site subpages and an active associated Facebook business page"}
+  ]
+}

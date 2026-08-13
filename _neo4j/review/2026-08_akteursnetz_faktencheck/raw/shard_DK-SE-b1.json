@@ -1,0 +1,2833 @@
+{
+  "summary": "Live re-verification of drawn actor-network nodes/edges for DK-SE",
+  "agentCount": 5,
+  "logs": [
+    "DK-SE: 5 packets, 41 nodes, 30 edges",
+    "DK-SE: 41 Knotenurteile, 30 Kantenurteile, 0 ungeprueft",
+    "DK-SE: kern=22 bezug=16 ohne_beleg=3"
+  ],
+  "result": {
+    "ccs": [
+      "DK",
+      "SE"
+    ],
+    "packets": [
+      {
+        "packet_id": "DK-c01",
+        "tool_calls_used": 23,
+        "kappe_erreicht": false,
+        "ungeprueft_tids": [],
+        "nodes": [
+          {
+            "tid": "I01",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.erhvervsby.dk/byggegruppen/",
+            "beleg_zitat": "Projektpartnerne er Gladsaxe Kommune og Gladsaxe Erhvervsby ... Aarhus Kommune, WeBuildDenmark, Pihl Holdings og Danske Regioner",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Aarhus Kommune\" \"Gladsaxe Kommune\" samarbejde OR partnerskab"
+            ],
+            "geprueft_urls": [
+              "https://www.erhvervsby.dk/byggegruppen/"
+            ],
+            "begruendung": "Aarhus Kommune wird als Projektpartner im BygCirkulaert-Portalprojekt genannt (benannte Reuse-Sache, kein Verzeichnis) -> bezug. Keine eigene dauerhafte Reuse-Leistungsseite gepruoft.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "I02",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+            "beleg_zitat": "Bygherre (Client): Gladsaxe Kommune",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Tscherning \"Svanen\" Gladsaxe børnehus genbrug"
+            ],
+            "geprueft_urls": [
+              "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+              "https://www.erhvervsby.dk/byggegruppen/",
+              "https://gladsaxe.dk/kommunen/borger/miljoe-og-klima/klimavenlig-by/klimavenlig-bolig-og-byggeri/svanemaerkede-boernehuse"
+            ],
+            "begruendung": "Gladsaxe Kommune als Bygherre von Svanen belegt und als Projektpartner im BygCirkulaert-Portal genannt. Eigene dauerhafte Programmseite (svanemaerkede-boernehuse) 404, daher keine kern-Einstufung, sondern bezug ueber benannte Reuse-Projekte.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_404",
+                "beleg_url": "https://gladsaxe.dk/kommunen/borger/miljoe-og-klima/klimavenlig-by/klimavenlig-bolig-og-byggeri/svanemaerkede-boernehuse"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P2",
+            "actor_degree": "kern",
+            "beleg_url": "https://circularmaterialsystems.com/en/case/02_en_resource-rows/",
+            "beleg_zitat": "In an intensive cooperation between the client and the team of Lendager Group, Resource Rows proves that ... upcycling building materials is possible.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Resource Rows\" Lendager project reuse bricks Copenhagen"
+            ],
+            "geprueft_urls": [
+              "https://dac.dk/en/magazine/resource-rows",
+              "https://circularmaterialsystems.com/en/case/02_en_resource-rows/",
+              "https://www.ribaj.com/spec/recycled-brick-cladding-panels-lendager-group-resource-rows-apartment-copenhagen-denmark/"
+            ],
+            "begruendung": "Bauvorhaben dokumentiert Bauteil-/Materialwiederverwendung (Ziegel, Holz, Beton) als zentrales Projektmerkmal, mehrfach unabhaengig belegt.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_404",
+                "beleg_url": "https://dac.dk/en/magazine/resource-rows"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P4",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+            "beleg_zitat": "materials from the existing school are carefully dismantled, sorted, and stored before being reintroduced into the new architecture",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://gladsaxe.dk/svanen",
+              "https://lendager.com/project/the-swan",
+              "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+              "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/"
+            ],
+            "begruendung": "Svanen ist als weltweit erstes zirkulaeres Kita-Gebaeude dokumentiert, Wiederverwendung von Abbruchmaterial der alten Schule ist zentrales, mehrfach belegtes Projektmerkmal.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P6",
+            "actor_degree": "kern",
+            "beleg_url": "https://lendager.com/project/trae",
+            "beleg_zitat": "TRAE ... is a 78-meter beacon of circular construction, showing that large-scale architecture can combine reused materials, biogenic resources",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://lendager.com/project/trae",
+              "https://dovista.com/krone-brandcase"
+            ],
+            "begruendung": "TRAE High-Rise dokumentiert Wiederverwendung (u.a. Aluminiumfassade, Windkraftfluegel, Upcycling-Fenster) als konstitutives Projektmerkmal.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U04",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.avj.dk/",
+            "beleg_zitat": "Boernehuset Svanen",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Aksel V. Jensen\" Svanen Gladsaxe",
+              "\"Aksel V. Jensen\" Svanen Gladsaxe ingeniør statiker konstruktion"
+            ],
+            "geprueft_urls": [
+              "https://avj.dk/svanen-et-cirkulaert-svanemaerket-byggeri-for-gladsaxe-kommune/",
+              "https://www.avj.dk/",
+              "https://www.niras.dk/projekter/raadgiver-paa-verdens-foerste-cirkulaere-boernehus/"
+            ],
+            "begruendung": "Svanen erscheint als Fallstudien-Link auf der eigenen AVJ-Seite (Referenzliste), keine ausformulierte Rollenbeschreibung auffindbar (Projektseite 404). Named in benannter Reuse-Sache -> bezug.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "http_404",
+                "beleg_url": "https://avj.dk/svanen-et-cirkulaert-svanemaerket-byggeri-for-gladsaxe-kommune/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U06",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+            "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/"
+            ],
+            "begruendung": "Ason A/S als Entreprenoer von Svanen namentlich in benannter Reuse-Sache genannt.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U08",
+            "actor_degree": "bezug",
+            "beleg_url": "https://dovista.com/krone-brandcase",
+            "beleg_zitat": "KRONE supplied all the windows to the building, including the upcycled windows.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://dovista.com/krone-brandcase"
+            ],
+            "begruendung": "KRONE/DOVISTA liefert namentlich belegt Upcycling-Fenster fuer TRAE, benannte Reuse-Sache.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U15",
+            "actor_degree": "bezug",
+            "beleg_url": "https://lendager.com/project/trae",
+            "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://lendager.com/project/trae"
+            ],
+            "begruendung": "Kilden & Hindby als Bauherr/Client von TRAE namentlich genannt, benannte Reuse-Sache.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U18",
+            "actor_degree": "kern",
+            "beleg_url": "https://lendager.com/project/trae",
+            "beleg_zitat": "large-scale architecture can combine reused materials, biogenic resources ... facades made from salvaged aluminium sheets",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://lendager.com/",
+              "https://lendager.com/project/trae",
+              "https://lendager.com/project/the-swan"
+            ],
+            "begruendung": "Lendagers eigene Seite (lendager.com) praesentiert Wiederverwendung/Zirkularitaet dauerhaft als Kern des eigenen Portfolios/Programms ueber mehrere eigene Projektseiten -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U22",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+            "beleg_zitat": "NIRAS har forestaaet raadgivning for nedrivningen af den gamle skole og for miljoekortlaegningen",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+              "https://www.niras.dk/projekter/raadgiver-paa-verdens-foerste-cirkulaere-boernehus/"
+            ],
+            "begruendung": "NIRAS als Abbruch-/Umweltberater von Svanen namentlich belegt (Projektreferenz), keine eigene dauerhafte Reuse-Leistungsseite gepruoft -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U27",
+            "actor_degree": "bezug",
+            "beleg_url": "https://lendager.com/project/trae",
+            "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://lendager.com/project/trae"
+            ],
+            "begruendung": "PFA Ejendomme als Bauherr/Client von TRAE namentlich genannt, benannte Reuse-Sache.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U32",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+            "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+              "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen"
+            ],
+            "begruendung": "Sweco als Beraterin von Ason bei Svanen namentlich belegt (Projektreferenz), keine eigene dauerhafte Reuse-Leistungsseite gepruoft -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U33",
+            "actor_degree": "bezug",
+            "beleg_url": "https://vaerdibyg.dk/case/svanen-i-gladsaxe-cirkulaer-nedrivning/",
+            "beleg_zitat": "For entreprenoeren Tscherning har udfordringen vaeret, at man normalt kan nedrive meget med maskine",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Tscherning Svanen Gladsaxe entreprenoer OR nedrivning OR bygningsdele"
+            ],
+            "geprueft_urls": [
+              "https://vaerdibyg.dk/case/svanen-i-gladsaxe-cirkulaer-nedrivning/"
+            ],
+            "begruendung": "Tscherning als Abbruchunternehmer von Svanen namentlich belegt, benannte Reuse-Sache.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "I02|I01",
+            "a_tid": "I02",
+            "b_tid": "I01",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.erhvervsby.dk/byggegruppen/",
+            "beleg_zitat": "Projektpartnerne er Gladsaxe Kommune og Gladsaxe Erhvervsby ... Aarhus Kommune, WeBuildDenmark, Pihl Holdings og Danske Regioner",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Gemeinsame Projektpartner im BygCirkulaert-Portalprojekt (Verzeichnis fuer gebrauchte Bauteile)"
+          },
+          {
+            "edge_id": "I02|P4",
+            "a_tid": "I02",
+            "b_tid": "P4",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+            "beleg_zitat": "Builder: Gladsaxe Kommune Ejendomscenteret",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Gladsaxe Kommune ist Bauherr des Svanen-Projekts"
+          },
+          {
+            "edge_id": "U32|P4",
+            "a_tid": "U32",
+            "b_tid": "P4",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+            "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Sweco als Berater des Entreprenoers Ason bei Svanen"
+          },
+          {
+            "edge_id": "U22|P4",
+            "a_tid": "U22",
+            "b_tid": "P4",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+            "beleg_zitat": "NIRAS har forestaaet raadgivning for nedrivningen af den gamle skole og for miljoekortlaegningen",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "NIRAS als Abbruch-/Umweltberater von Svanen"
+          },
+          {
+            "edge_id": "U33|P4",
+            "a_tid": "U33",
+            "b_tid": "P4",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://vaerdibyg.dk/case/svanen-i-gladsaxe-cirkulaer-nedrivning/",
+            "beleg_zitat": "For entreprenoeren Tscherning har udfordringen vaeret, at man normalt kan nedrive meget med maskine",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Tscherning als Abbruchunternehmer von Svanen"
+          },
+          {
+            "edge_id": "U06|P4",
+            "a_tid": "U06",
+            "b_tid": "P4",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+            "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Ason als Hauptentreprenoer von Svanen"
+          },
+          {
+            "edge_id": "U04|P4",
+            "a_tid": "U04",
+            "b_tid": "P4",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.avj.dk/",
+            "beleg_zitat": "Boernehuset Svanen",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Nur Referenzlisten-Nennung auf eigener AVJ-Seite, keine ausformulierte Rollenbeschreibung (Projektunterseite 404)"
+          },
+          {
+            "edge_id": "U15|P6",
+            "a_tid": "U15",
+            "b_tid": "P6",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://lendager.com/project/trae",
+            "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Kilden & Hindby als Bauherr/Client von TRAE"
+          },
+          {
+            "edge_id": "U27|P6",
+            "a_tid": "U27",
+            "b_tid": "P6",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://lendager.com/project/trae",
+            "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "PFA Ejendomme als Bauherr/Client von TRAE"
+          },
+          {
+            "edge_id": "U08|P6",
+            "a_tid": "U08",
+            "b_tid": "P6",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://dovista.com/krone-brandcase",
+            "beleg_zitat": "KRONE supplied all the windows to the building, including the upcycled windows.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "DOVISTA/KRONE als Fensterlieferant (Upcycling-Fenster) fuer TRAE"
+          },
+          {
+            "edge_id": "U18|P2",
+            "a_tid": "U18",
+            "b_tid": "P2",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://circularmaterialsystems.com/en/case/02_en_resource-rows/",
+            "beleg_zitat": "In an intensive cooperation between the client and the team of Lendager Group, Resource Rows proves that ... upcycling ... is possible.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Lendager Group als Entwurfs-/Upcycling-Team von Resource Rows"
+          },
+          {
+            "edge_id": "U18|P4",
+            "a_tid": "U18",
+            "b_tid": "P4",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+            "beleg_zitat": "Architects: Lendager Arkitekter ApS / SWECO architects",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Lendager als Architekt von Svanen"
+          },
+          {
+            "edge_id": "U18|P6",
+            "a_tid": "U18",
+            "b_tid": "P6",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://lendager.com/project/trae",
+            "beleg_zitat": "TRAE ... a 78-meter beacon of circular construction, showing that large-scale architecture can combine reused materials",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_soll": "PROJEKT_PARTNER",
+            "relation_ist": "Lendager als Entwurfsteam von TRAE, dokumentiert auf eigener Projektseite"
+          }
+        ],
+        "cc": "DK",
+        "assigned_nodes": [
+          "I01",
+          "I02",
+          "P2",
+          "P4",
+          "P6",
+          "U04",
+          "U06",
+          "U08",
+          "U15",
+          "U18",
+          "U22",
+          "U27",
+          "U32",
+          "U33"
+        ],
+        "assigned_edges": [
+          "I02|I01",
+          "I02|P4",
+          "U32|P4",
+          "U22|P4",
+          "U33|P4",
+          "U06|P4",
+          "U04|P4",
+          "U15|P6",
+          "U27|P6",
+          "U08|P6",
+          "U18|P2",
+          "U18|P4",
+          "U18|P6"
+        ]
+      },
+      {
+        "packet_id": "DK-c02",
+        "tool_calls_used": 30,
+        "kappe_erreicht": false,
+        "ungeprueft_tids": [],
+        "nodes": [
+          {
+            "tid": "P7",
+            "name": "Upcycle Studios Copenhagen",
+            "actor_degree": "kern",
+            "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+            "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Upcycle Studios Ørestad Lendager NREP AG Gruppen genbrug materialer",
+              "\"Upcycle Studios\" reuse reclaimed salvage Wiederverwendung"
+            ],
+            "geprueft_urls": [
+              "https://nrep.com/project/upcycle-studios/",
+              "https://urban.partners/project/upcycle-studios/",
+              "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+              "https://www.danskeark.com/content/upcycle-studios",
+              "https://medium.works/upcycle-studios",
+              "https://theupcyclestudios.com/"
+            ],
+            "begruendung": "Das Bauvorhaben (20 Reihenhäuser in Ørestad Syd, Kopenhagen) ist durchgängig als Referenzprojekt für Bauteil-/Materialwiederverwendung dokumentiert (upcyclede byggematerialer aus Metro-Beton, Dinesen-Holzresten, Fensterglas aus Nordjütland). Projektteam laut danskeark.com: Architekt Lendager Group, Bygherre NREP, Ingeniør MOE (Norrecco), Entreprenør AG-Gruppen. nrep.com leitet permanent (308) auf urban.partners weiter (Rebranding NREP -> Urban Partners), Inhalt dort inhaltlich fortgesetzt.",
+            "flags": [
+              {
+                "flag": "defunkt",
+                "beleg_url": "https://nrep.com/project/upcycle-studios/",
+                "beleg_zitat": "308 Permanent Redirect to https://urban.partners/project/upcycle-studios/",
+                "stand_jahr": "2026",
+                "nachfolger_tid": ""
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U02",
+            "name": "a:gain",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.again.dk",
+            "beleg_zitat": "We take discarded materials and remanufacture them into new, standardised building products that meet the same performance and compliance requirements as conventional alternatives.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "a:gain gain.de Wiederverwendung Bauteile",
+              "a:gain again.dk Bauteil reuse Denmark"
+            ],
+            "geprueft_urls": [
+              "https://gain.de",
+              "https://www.again.dk",
+              "https://www.again.dk/project-references/upcycle-studios"
+            ],
+            "begruendung": "Der gespeicherte primary_source_url (https://gain.de) fuehrt zu einem voellig anderen, deutschen PDM/PLM-Softwareunternehmen ohne jeden Bauteilbezug -- keine Verbindung zum Reuse-Akteur. Die tatsaechlich gemeinte Organisation ist das daenische a:gain (again.dk), dessen Kerngeschaeft die Aufbereitung/Remanufacturing gebrauchter Bauteile zu zertifizierten Neuprodukten ist, dauerhaft als Leistungslinie dargestellt -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U03",
+            "name": "AG Gruppen",
+            "actor_degree": "bezug",
+            "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+            "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Arkitektgruppen\" AG Gruppen Danmark entreprenør Upcycle Studios",
+              "AG Gruppen reuse Wiederverwendung Bauteile"
+            ],
+            "geprueft_urls": [
+              "https://www.mynewsdesk.com/dk/ag-gruppen/pressreleases/20-raekkehuse-bygget-af-upcyclede-materialer-paa-vej-i-oerestad-syd-2380409",
+              "https://www.danskeark.com/content/upcycle-studios"
+            ],
+            "begruendung": "AG Gruppen (Marktname 'Arkitektgruppen') wird namentlich in einer benannten Reuse-Sache (Upcycle Studios, Entreprenoer laut danskeark.com) genannt, auch auf eigener Pressemitteilung (mynewsdesk). Keine dauerhafte eigene Reuse-Leistungsseite gefunden (allgemeiner Bautraeger/Entwickler) -> bezug statt kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U05",
+            "name": "Artelia",
+            "actor_degree": "kern",
+            "beleg_url": "https://arteliagroup.dk/en/services/reuse-and-recycling/",
+            "beleg_zitat": "Reuse and recycling of construction materials",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [],
+            "geprueft_urls": [
+              "https://www.arteliagroup.com/",
+              "https://arteliagroup.dk/en/services/reuse-and-recycling/",
+              "https://vcob.dk/vcob/community/medlemmer/artelia-raadgivende-ingenioerer/"
+            ],
+            "begruendung": "arteliagroup.dk (Artelia Daenemark) fuehrt eine dauerhafte, eigene Leistungsseite 'Reuse and recycling of construction materials'; Artelia ist zudem als Mitglied im Videncenter for Cirkulaer Oekonomi i Byggeriet (VCOB) gelistet -> kern. Die globale arteliagroup.com-Startseite selbst zeigt Reuse nicht prominent, die laenderspezifische Seite jedoch schon.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U07",
+            "name": "BOGL",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"BOGL\" landscape architects official website UK",
+              "BOGL landskabsarkitekter København hjemmeside reuse Wiederverwendung"
+            ],
+            "geprueft_urls": [
+              "https://www.bogl.com",
+              "https://landezine.com/office-profile-bogl/",
+              "https://bogl.dk/projekter/"
+            ],
+            "begruendung": "Der gespeicherte primary_source_url (bogl.com) ist ein Domainhaendler-Angebot, voellig unabhaengig von der Landschaftsarchitektur-Organisation. Die tatsaechliche Firma (bogl.dk, Kopenhagen/Oslo) wurde gefunden; deren Projektliste sowie ein Drittprofil (Landezine) zeigen allgemeine Nachhaltigkeit als Treiber, aber keine dauerhafte Bauteil-Wiederverwendungs-Leistungslinie und keine Nennung in einer benannten Reuse-Sache -> ohne_beleg (Rechercheergebnis, keine Aussage ueber tatsaechliche Praxis).",
+            "flags": [],
+            "budget_erschoepft": true
+          },
+          {
+            "tid": "U19",
+            "name": "MOE",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.danskeark.com/content/upcycle-studios",
+            "beleg_zitat": "Engineer: MOE, Norrecco",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "MOE ingeniør cirkulær økonomi genbrug bæredygtighed moe.dk"
+            ],
+            "geprueft_urls": [
+              "https://www.danskeark.com/content/upcycle-studios",
+              "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/"
+            ],
+            "begruendung": "MOE wird namentlich als Ingenieur des benannten Reuse-Projekts Upcycle Studios gefuehrt (danskeark.com Projektcredits; ebenso estatemedia.dk). moe.global zeigt eine generische Sustainability/Zertifizierungs-Seite (DGNB/LEED/BREEAM) ohne erkennbare dauerhafte Bauteil-Wiederverwendungs-Leistungslinie -> bezug statt kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U24",
+            "name": "NREP",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.danskeark.com/content/upcycle-studios",
+            "beleg_zitat": "Client: NREP",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "NREP OR \"urban.partners\" circular economy reuse building materials program"
+            ],
+            "geprueft_urls": [
+              "https://www.danskeark.com/content/upcycle-studios",
+              "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/"
+            ],
+            "begruendung": "NREP (heute Urban Partners) wird als Bauherr/Bygherre des benannten Reuse-Projekts Upcycle Studios gefuehrt. nrep.com leitet permanent auf urban.partners weiter (Rebranding). Eine dauerhafte, spezifisch auf Bauteil-Wiederverwendung fokussierte eigene Leistungsseite von Urban Partners wurde nicht verifiziert (Redirect-Loop verhinderte direkten Abruf) -> bezug statt kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "U02|P7",
+            "a_tid": "U02",
+            "b_tid": "P7",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.again.dk/project-references/upcycle-studios",
+            "beleg_zitat": "In Upcycle Studios, 75% of the windows came from public housing in North Jutland",
+            "beide_genannt": false,
+            "budget_erschoepft": false,
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "Projektreferenz auf a:gains eigener Seite (Reference-Liste); konkrete Lieferrolle nicht spezifiziert",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "U24|P7",
+            "a_tid": "U24",
+            "b_tid": "P7",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+            "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "NREP als Bauherr/Bygherre von Upcycle Studios (bestaetigt zusaetzlich durch danskeark.com Projektcredits: Client NREP)",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "U03|P7",
+            "a_tid": "U03",
+            "b_tid": "P7",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+            "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "AG Gruppen (Arkitektgruppen) als Entreprenoer/Baupartner von Upcycle Studios (bestaetigt zusaetzlich durch danskeark.com: Entrepreneur AG-Gruppen)",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "U19|P7",
+            "a_tid": "U19",
+            "b_tid": "P7",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+            "beleg_zitat": "Lendager Arkitekter har tegnet byggeriet, Lendager Up har udviklet og produceret de upcyclede byggematerialer og MOE er rådgivende ingeniør.",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "MOE als raadgivende ingenioer (Fachplanung) fuer das Upcycle-Studios-Bauvorhaben, bestaetigt auch durch danskeark.com Projektcredits",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "U05|P7",
+            "a_tid": "U05",
+            "b_tid": "P7",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "beide_genannt": false,
+            "budget_erschoepft": true,
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "",
+            "relation_soll": ""
+          },
+          {
+            "edge_id": "U07|P7",
+            "a_tid": "U07",
+            "b_tid": "P7",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "beide_genannt": false,
+            "budget_erschoepft": true,
+            "abrufdatum": "2026-08-13",
+            "relation_ist": "",
+            "relation_soll": ""
+          }
+        ],
+        "cc": "DK",
+        "assigned_nodes": [
+          "P7",
+          "U02",
+          "U03",
+          "U05",
+          "U07",
+          "U19",
+          "U24"
+        ],
+        "assigned_edges": [
+          "U02|P7",
+          "U24|P7",
+          "U03|P7",
+          "U19|P7",
+          "U05|P7",
+          "U07|P7"
+        ]
+      },
+      {
+        "packet_id": "DK-c03",
+        "nodes": [
+          {
+            "tid": "M02",
+            "name": "Bergsten ApS",
+            "actor_degree": "kern",
+            "beleg_url": "https://tegllageret.dk/om-os/",
+            "beleg_zitat": "Jakobsen Tegl voksede og købte Bergsten Tegl ApS som lå på savværket i Tureby",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Bergsten ApS genbrug materialer Danmark",
+              "\"Bergsten ApS\" byggeaffald OR nedrivning OR genbrug"
+            ],
+            "geprueft_urls": [
+              "https://tegllageret.dk/om-os/"
+            ],
+            "begruendung": "Bergsten Tegl ApS (Tureby) wurde laut der gemeinsamen Seite tegllageret.dk von Jakobsen Tegl übernommen; diese dauerhafte 'Om os'-Seite (Tegllageret for Jakobsen Tegl og Bergsten Tegl) führt Sammlung/Sortierung/Verkauf gebrauchter Dachsteine und Mauersteine als Kerngeschäft -> kern. Da Nachfolger M13 im Panel ist, zusätzlich Flag duplikat gesetzt.",
+            "flags": [
+              {
+                "flag": "duplikat",
+                "duplikat_von": "M13",
+                "beleg_url": "https://tegllageret.dk/om-os/",
+                "beleg_zitat": "Jakobsen Tegl voksede og købte Bergsten Tegl ApS som lå på savværket i Tureby"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M08",
+            "name": "Circue",
+            "actor_degree": "kern",
+            "beleg_url": "https://circue.dk",
+            "beleg_zitat": "Use Circue's free platform to browse reused materials available in the market now.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Circue genbrug byggematerialer",
+              "Circue.dk digital børs genbrugte byggematerialer platform"
+            ],
+            "geprueft_urls": [
+              "https://circue.dk",
+              "https://realdania.dk/nyheder/2025/08/circue-lancerer-ny-digital-boers",
+              "https://www.strateginetvaerket.dk/case-circue-digital-platform-baner-vejen-for-cirkulaert-byggeri-og-baeredygtig-transformation/"
+            ],
+            "begruendung": "Circue betreibt auf eigener Domain (circue.dk / exchange.circue.dk) eine dauerhafte digitale Materialbörse für wiederverwendete Bauteile als Kerngeschäft -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M12",
+            "name": "Hverringe Centrum for Restaurering",
+            "actor_degree": "bezug",
+            "beleg_url": "https://realdania.dk/projekter/hverringe",
+            "beleg_zitat": "Støttebeløb 6,7 mio. kr.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Hverringe Centrum for Restaurering",
+              "Realdania Hverringe Centrum for Restaurering støtte",
+              "Hverringe Centrum for Restaurering lukket OR nyt websted 2024 2025"
+            ],
+            "geprueft_urls": [
+              "https://realdania.dk/projekter/hverringe",
+              "https://www.bygningsbevaring.dk/gl-brolykke-abner-som-restaurerings-centrum",
+              "https://byggeri-arkitektur.dk/Centrum-for-restaurering--Vi-kan-laere-af-de-gamle-byggemetoder-",
+              "https://hverringe.dk/om-os/",
+              "https://hverringe.dk/"
+            ],
+            "begruendung": "Eigene Seite hverringe.dk/hverringe.dk/om-os war zweimal nicht erreichbar (Connection refused). Dritt-/eigene Realdania-Projektseite benennt Hverringe namentlich als gefördertes Restaurierungsprojekt (6,7 Mio. kr., 2008-2014, Teil der Kampagne 'Fremtidens Herregård') -> bezug. Ein dauerhafter Reuse-Leistungsnachweis auf einer eigenen erreichbaren Seite konnte nicht verifiziert werden.",
+            "flags": [
+              {
+                "flag": "nicht_pruefbar",
+                "hindernis": "dns_tot",
+                "beleg_url": "https://hverringe.dk/"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M13",
+            "name": "Jakobsen Tegl ApS",
+            "actor_degree": "kern",
+            "beleg_url": "https://tegllageret.dk/om-os/",
+            "beleg_zitat": "at købe og sælge brugte bygningsmaterialer især brugte tagsten og mursten",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Jakobsen Tegl ApS genbrugstegl",
+              "\"Jakobsen Tegl\" hjemmeside brugte tagsten butik"
+            ],
+            "geprueft_urls": [
+              "https://tegllageret.dk/om-os/"
+            ],
+            "begruendung": "Eigene/gemeinsame Seite tegllageret.dk beschreibt dauerhaft den Kernbetrieb: Ankauf und Verkauf gebrauchter Dachsteine und Mauersteine -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "N01",
+            "name": "Bolius genbrugsmaterialer directory",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+            "beleg_zitat": "Videncentret Bolius har samlet en liste af byggemarkeder med brugte byggematerialer i Danmark.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Bolius genbrugsmaterialer directory",
+              "her kan du købe genbrugsmaterialer bolius"
+            ],
+            "geprueft_urls": [
+              "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121"
+            ],
+            "begruendung": "Bolius unterhält auf eigener Domain einen dauerhaften Ratgeber zu Bezugsquellen für Wiederverwendungs-Baumaterialien als Teil seines Wissenscenter-Angebots -> kern für Bolius selbst (Reuse_Zirkularitaetsberatung). Die dort gelisteten Drittorganisationen bleiben reine Verzeichnisbindungen.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "S01",
+            "name": "GreenDozer ApS",
+            "actor_degree": "kern",
+            "beleg_url": "https://greendozer.com/byggematerialer",
+            "beleg_zitat": "Hos GreenDozer har vi et stort udvalg af både genbrugte byggematerialer og overskudsvarer",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "GreenDozer ApS reuse marketplace byggematerialer",
+              "GreenDozer genbrug byggematerialer online"
+            ],
+            "geprueft_urls": [
+              "https://greendozer.com/byggematerialer",
+              "https://greendozer.com/nyt-samarbejde-fremmer-genbrug-af-byggematerialer",
+              "https://b2b.greendozer.com/"
+            ],
+            "begruendung": "GreenDozer betreibt eine eigene digitale Marktplatz-Plattform für gebrauchte/überschüssige Baumaterialien als dauerhaftes Kerngeschäft -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U16",
+            "name": "Kingo (Kingo Karlsen A/S)",
+            "actor_degree": "kern",
+            "beleg_url": "https://kingo.biz/genbrug/",
+            "beleg_zitat": "Kingo er født ud af tanken med genbrug og grundlagt i en tid, hvor alle byggematerialer i en bygning blev genbrugt som en selvfølge",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Kingo Karlsen A/S genbrug nedrivning",
+              "Kingo genbrug byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://kingo.biz/genbrug/",
+              "https://kingo.biz/om-kingo/",
+              "https://kingo.biz/nyheder/2024/over-70-reduktion-af-affald-med-direkte-genbrug/"
+            ],
+            "begruendung": "Eigene Leistungsseite kingo.biz/genbrug/ beschreibt Wiederverwendung als dauerhaften Unternehmenskern (inkl. eigenem Genbrugskonsulent) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U26",
+            "name": "P. Olesen / PO Genbrug",
+            "actor_degree": "kern",
+            "beleg_url": "https://pogenbrug.dk/",
+            "beleg_zitat": "P. Olesen genbrug – Salg af genbrugs byggematerialer",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"PO Genbrug\" OR \"P. Olesen\" genbrug byggematerialer"
+            ],
+            "geprueft_urls": [
+              "https://pogenbrug.dk/",
+              "https://hsfo.dk/horsens/byggematerialer-skal-genbruges-i-stor-skala-p-olesen-faar-selskab-af-yderligere-to-store-aktoerer-paa-markedet"
+            ],
+            "begruendung": "Eigene Domain pogenbrug.dk zeigt Verkauf gebrauchter Baumaterialien als dauerhaftes Kerngeschäft -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U29",
+            "name": "Realdania",
+            "actor_degree": "bezug",
+            "beleg_url": "https://realdania.dk/nyheder/2025/08/circue-lancerer-ny-digital-boers",
+            "beleg_zitat": "Realdania har støttet Circue-projektet og udviklingen af børsen",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Realdania Hverringe Centrum for Restaurering støtte",
+              "Circue.dk digital børs genbrugte byggematerialer platform"
+            ],
+            "geprueft_urls": [
+              "https://realdania.dk/nyheder/2025/08/circue-lancerer-ny-digital-boers",
+              "https://realdania.dk/projekter/hverringe"
+            ],
+            "begruendung": "Realdania.dk zeigt keine eigene Reuse-Leistungslinie (philanthropische Förderorganisation), wird aber namentlich als Förderer konkreter Reuse-Vorhaben genannt (Circue-Materialbörse, Hverringe-Restaurierungsprojekt) -> bezug.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "M08|S01",
+            "a_tid": "M08",
+            "b_tid": "S01",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.strateginetvaerket.dk/case-circue-digital-platform-baner-vejen-for-cirkulaert-byggeri-og-baeredygtig-transformation/",
+            "beleg_zitat": "Den digitale materialebørs gør det muligt at eksportere genbrugsmaterialer fra markedspladser som Genbyg, J Jensen og Greendozer ind i Revit",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Datenintegrations-/Marktplatz-Partner (Export von GreenDozer-Materialien über Circues Designtool)",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "U29|M12",
+            "a_tid": "U29",
+            "b_tid": "M12",
+            "edge_degree": "teilweise_belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://realdania.dk/projekter/hverringe",
+            "beleg_zitat": "Støttebeløb 6,7 mio. kr.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Foerderer (Realdanias eigene Projektseite zu Hverringe, Projektfakten nennen Förderbetrag/-zeitraum, aber kein einzelner Satz nennt beide Namen zusammen)",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "M02|N01",
+            "a_tid": "M02",
+            "b_tid": "N01",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": false,
+            "budget_erschoepft": false,
+            "relation_ist": "",
+            "relation_soll": "VERZEICHNIS"
+          },
+          {
+            "edge_id": "M02|M13",
+            "a_tid": "M02",
+            "b_tid": "M13",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://tegllageret.dk/om-os/",
+            "beleg_zitat": "Jakobsen Tegl voksede og købte Bergsten Tegl ApS som lå på savværket i Tureby",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Übernahme (Jakobsen Tegl kaufte Bergsten Tegl ApS)",
+            "relation_soll": "UEBERNAHME"
+          },
+          {
+            "edge_id": "S01|U16",
+            "a_tid": "S01",
+            "b_tid": "U16",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://greendozer.com/nyt-samarbejde-fremmer-genbrug-af-byggematerialer",
+            "beleg_zitat": "Senest har tre store nedrivningsvirksomheder, P. Olesen, Kingo og Tscherning, investeret i virksomheden",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Investor (Kingo investierte in GreenDozer)",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "S01|U26",
+            "a_tid": "S01",
+            "b_tid": "U26",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://greendozer.com/nyt-samarbejde-fremmer-genbrug-af-byggematerialer",
+            "beleg_zitat": "Senest har tre store nedrivningsvirksomheder, P. Olesen, Kingo og Tscherning, investeret i virksomheden",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Investor (P. Olesen investierte in GreenDozer)",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "N01|M12",
+            "a_tid": "N01",
+            "b_tid": "M12",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": false,
+            "budget_erschoepft": false,
+            "relation_ist": "",
+            "relation_soll": "VERZEICHNIS"
+          },
+          {
+            "edge_id": "N01|M13",
+            "a_tid": "N01",
+            "b_tid": "M13",
+            "edge_degree": "unklar",
+            "unklar_grund": "kein_fund",
+            "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": false,
+            "budget_erschoepft": false,
+            "relation_ist": "",
+            "relation_soll": "VERZEICHNIS"
+          },
+          {
+            "edge_id": "N01|U26",
+            "a_tid": "N01",
+            "b_tid": "U26",
+            "edge_degree": "unklar",
+            "unklar_grund": "verzeichnis_only",
+            "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+            "beleg_zitat": "Salg af brugte byggematerialer. Her finder du fx indvendige og udvendige døre, gamle og nyere vinduer, gulvbrædder, gammelt glas, tagsten og tagplader.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Verzeichniseintrag (Bolius listet PO Genbrug als Bezugsquelle)",
+            "relation_soll": "VERZEICHNIS"
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 31,
+        "kappe_erreicht": false,
+        "cc": "DK",
+        "assigned_nodes": [
+          "M02",
+          "M08",
+          "M12",
+          "M13",
+          "N01",
+          "S01",
+          "U16",
+          "U26",
+          "U29"
+        ],
+        "assigned_edges": [
+          "M08|S01",
+          "U29|M12",
+          "M02|N01",
+          "M02|M13",
+          "S01|U16",
+          "S01|U26",
+          "N01|M12",
+          "N01|M13",
+          "N01|U26"
+        ]
+      },
+      {
+        "packet_id": "DK-c04",
+        "nodes": [
+          {
+            "tid": "F01",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.dtu.dk/forskning/omraader/byggeri/cirkulaert-byggeri",
+            "beleg_zitat": "Ved at genbruge hele bygningsdele bevarer byggeriet de økonomiske værdier og den energi, der er brugt til at bearbejde råmaterialer og fremstille de enkelte bygningsdelene.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "site:dtu.dk cirkulær genanvendelse byggematerialer OR bygningsdele"
+            ],
+            "geprueft_urls": [
+              "https://www.dtu.dk/forskning/omraader/byggeri/cirkulaert-byggeri"
+            ],
+            "begruendung": "DTU zeigt auf einer eigenen, dauerhaft platzierten Forschungsseite (dtu.dk/forskning/.../cirkulaert-byggeri) Wiederverwendung ganzer Bauteile als Teil des eigenen Forschungsprogramms -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P5",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+            "beleg_zitat": "Hoffmann skal renovere Bikubenfondens nyerhvervede bygning, ud fra et princip om at bygningen skal genanvende sig selv",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Thoravej 29\" Hoffmann DTU genbrug",
+              "\"Thoravej 29\" København cirkulær genbrug byggeri"
+            ],
+            "geprueft_urls": [
+              "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+              "https://www.thoravej29.dk/da/om-thoravej-29",
+              "https://dac.dk/en/magazine/places/thoravej-29-what-can-be-reused-must-be-reused-376"
+            ],
+            "begruendung": "Projektknoten: Das Bauvorhaben Thoravej 29 dokumentiert Bauteil-Wiederverwendung als zentrales Gestaltungsprinzip (95% Materialwiederverwendung, Decke wird Treppe, Fassade wird Boden) auf mehreren unabhaengigen Quellen (Hoffmann, DAC, thoravej29.dk) -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "U12",
+            "actor_degree": "bezug",
+            "beleg_url": "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+            "beleg_zitat": "Hoffmann har sammen med Pihlmann Architects og ABC Rådgivende Ingeniører vundet totalentreprisen på udviklingen af Bikubenfondens nyerhvervede bygning.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "site:hoffmann.dk baeredygtighed genbrug cirkulaer"
+            ],
+            "geprueft_urls": [
+              "https://www.hoffmann.dk/esg/",
+              "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/"
+            ],
+            "begruendung": "hoffmann.dk/esg/ nennt Genanvendelse nur ueber das Einzelprojekt Thoravej 29 (kein eigenstaendiger, dauerhaft platzierter Reuse-Leistungsbereich gefunden) -> bezug ueber die benannte Reuse-Sache Thoravej 29, nicht kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [
+          {
+            "edge_id": "U12|P5",
+            "a_tid": "U12",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+            "beleg_zitat": "Hoffmann har sammen med Pihlmann Architects og ABC Rådgivende Ingeniører vundet totalentreprisen på udviklingen af Bikubenfondens nyerhvervede bygning.",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "Totalentreprenoer/Bauausfuehrender fuer das Projekt Thoravej 29",
+            "relation_soll": "PROJEKT_PARTNER"
+          },
+          {
+            "edge_id": "F01|P5",
+            "a_tid": "F01",
+            "b_tid": "P5",
+            "edge_degree": "belegt",
+            "unklar_grund": "",
+            "beleg_url": "https://dac.dk/en/magazine/places/thoravej-29-what-can-be-reused-must-be-reused-376",
+            "beleg_zitat": "A report from the Technical University of Denmark (DTU) on the Thoravej 29 project shows that compared to constructing an entirely new building, CO2 emissions",
+            "abrufdatum": "2026-08-13",
+            "beide_genannt": true,
+            "budget_erschoepft": false,
+            "relation_ist": "DTU erstellte Analysebericht (CO2-Einsparung) zum Projekt Thoravej 29",
+            "relation_soll": "PROJEKT_PARTNER"
+          }
+        ],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 13,
+        "kappe_erreicht": false,
+        "cc": "DK",
+        "assigned_nodes": [
+          "F01",
+          "P5",
+          "U12"
+        ],
+        "assigned_edges": [
+          "U12|P5",
+          "F01|P5"
+        ]
+      },
+      {
+        "packet_id": "DK-s01",
+        "nodes": [
+          {
+            "tid": "M01",
+            "name": "Bango A/S",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.bango.dk/tilbud/genbrug/",
+            "beleg_zitat": "Her finder du alle Bango brugte vare",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Bango A/S\" Danmark bygningsdele",
+              "\"Bango A/S\" reuse OR reclaimed OR genbrug"
+            ],
+            "geprueft_urls": [
+              "https://www.bango.dk/ombango/",
+              "https://www.bango.dk/tilbud/genbrug/"
+            ],
+            "begruendung": "Eigene, dauerhaft platzierte Shop-Rubrik 'Genbrug' auf bango.dk fuehrt gebrauchte Tueren/Fenster als festen Teil des Sortiments -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M03",
+            "name": "Bregnebjerggaard Grusgrav",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Bregnebjerggaard Grusgrav\" Danmark",
+              "\"Bregnebjerggaard Grusgrav\" reuse OR reclaimed OR genbrug"
+            ],
+            "geprueft_urls": [
+              "https://bregnebjerggaard-grusgrav.webnode.page/",
+              "https://www.proff.dk/firma/bregnebjergg%C3%A5rds-grusgrav.-kurt-s%C3%B8rensen-aps/lynge/udvindelse-af-bjergv%C3%A6rksdrift/GKYGDHI10MA/"
+            ],
+            "begruendung": "Betrieb ist Kies-/Sandgrube mit Bauabfall-Annahme und Deponie; keine Bauteil-Wiederverwendung auf eigener Seite oder Drittquelle gefunden. Typ passt nicht zum Datensatz-Typ Materialhub_Bauteilboerse.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "typ_ist": "Kies-/Sandgrube und Deponie/Abfallsortierung",
+                "typ_soll": "Materialhub_Bauteilboerse",
+                "beleg_url": "https://bregnebjerggaard-grusgrav.webnode.page/about-us/",
+                "beleg_zitat": "Affaldsbehandling og Deponi"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M04",
+            "name": "Brugte Mursten",
+            "actor_degree": "ohne_beleg",
+            "beleg_url": "",
+            "beleg_zitat": "",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Brugte Mursten\" Danmark bygningsdele",
+              "\"Brugte Mursten\" reuse OR reclaimed OR genbrug"
+            ],
+            "geprueft_urls": [],
+            "begruendung": "Keine eigenstaendige Organisation namens 'Brugte Mursten' mit eigener Seite auffindbar; Treffer betreffen andere, anders benannte Anbieter (Genbyg, Gamle Mursten, Genbrugsmursten, Skave Nedbrydning/brugtemursten.dk). Kein plausibler Name-Treffer -> ohne_beleg gemaess D2.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M05",
+            "name": "Byggeboersen",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.xn--byggebrsen-5cb.dk/",
+            "beleg_zitat": "Vi fungerer som en søgemaskine, der hjælper private med at finde genbrugsmaterialer hurtigere.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Byggebørsen\" Danmark bygningsdele",
+              "\"Byggebørsen\" reuse OR reclaimed OR genbrug"
+            ],
+            "geprueft_urls": [
+              "https://www.xn--byggebrsen-5cb.dk/"
+            ],
+            "begruendung": "Eigene Plattform, deren dauerhafter Betriebszweck die Vermittlung/Auffindung von Genbrugsmaterialer ist -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M06",
+            "name": "Bærebyg",
+            "actor_degree": "kern",
+            "beleg_url": "https://baerebyg.dk/",
+            "beleg_zitat": "Vi tilbyder et bredt udvalg af genbrugte byggematerialer – fra døre, vinduer og køkkener til VVS-dele og el-artikler",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Bærebyg\" Danmark bygningsdele",
+              "\"Bærebyg\" reuse OR reclaimed OR genbrug"
+            ],
+            "geprueft_urls": [
+              "https://baerebyg.dk/",
+              "https://baerebyg.dk/baerebyg/",
+              "https://baerebyg.dk/historik/"
+            ],
+            "begruendung": "Eigene Startseite beschreibt dauerhaft ein breites Angebot an gebrauchten Baumaterialien als Kerngeschaeft -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M07",
+            "name": "Carlsberg",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.carlsbergbyen.dk/om-carlsberg-byen/historie/transformation-af-bygninger",
+            "beleg_zitat": "gamle mursten fra Søndermarkshuset er blevet genanvendt for at genskabe",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Carlsberg Byen genbrug bygningsdele materialer",
+              "Carlsberg Byen reuse OR reclaimed OR genbrug"
+            ],
+            "geprueft_urls": [
+              "https://www.carlsbergbyen.dk/om-carlsberg-byen/historie/transformation-af-bygninger",
+              "https://www.csr.dk/carlsberg-byen-genanvender-gamle-mursten"
+            ],
+            "begruendung": "Eigene, dauerhafte 'Historie/Transformation'-Seite von carlsbergbyen.dk beschreibt Wiederverwendung alter Baustoffe (Mursten, Hestetrug) als festen Bestandteil der Transformationsstrategie -> kern als Akteur. Der Datensatz-Typ 'Materialhub_Bauteilboerse' passt jedoch nicht: Carlsberg Byen ist ein Stadtentwicklungs-/Bauherrenprojekt, kein Materialhub/Boerse.",
+            "flags": [
+              {
+                "flag": "falscher_typ",
+                "typ_ist": "Stadtentwicklungsareal / Bauherrenprojekt",
+                "typ_soll": "Materialhub_Bauteilboerse",
+                "beleg_url": "https://www.carlsbergbyen.dk/om-carlsberg-byen/historie/transformation-af-bygninger",
+                "beleg_zitat": "gamle mursten fra Søndermarkshuset er blevet genanvendt for at genskabe"
+              }
+            ],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "P1",
+            "name": "Circle House",
+            "actor_degree": "kern",
+            "beleg_url": "https://www.lejerbo.dk/om-dab-lejerbo/byggeri/om-circle-house",
+            "beleg_zitat": "90 % af de materialer, som bruges til at bygge Circle House, kan genanvendes stort set uden at tabe værdi.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "Circle House Lisbjerg genbrug cirkulaert byggeri",
+              "Circle House reuse OR reclaimed OR disassembly"
+            ],
+            "geprueft_urls": [
+              "https://www.lejerbo.dk/om-dab-lejerbo/byggeri/om-circle-house"
+            ],
+            "begruendung": "Projektknoten: eigene, dauerhafte Projektbeschreibung des Bauherrn (Lejerbo/DAB) dokumentiert Design-for-Disassembly mit dem Ziel, 90% der Materialien wiederzuverwenden -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          },
+          {
+            "tid": "M09",
+            "name": "Dem fra Nordlunde",
+            "actor_degree": "kern",
+            "beleg_url": "https://demfranordlunde.dk/shop/254-brugt-marked",
+            "beleg_zitat": "Vi har altid er godt udvalg i brugte byggematerialer fra vores nedrivning, og fra opkøb.",
+            "abrufdatum": "2026-08-13",
+            "such_begriffe": [
+              "\"Dem fra Nordlunde\" genbrug bygningsdele",
+              "\"Dem fra Nordlunde\" reuse OR reclaimed OR salvage"
+            ],
+            "geprueft_urls": [
+              "https://demfranordlunde.dk/",
+              "https://demfranordlunde.dk/shop/254-brugt-marked"
+            ],
+            "begruendung": "Eigene, dauerhaft betriebene Shop-Rubrik 'Brugt Marked' mit Unterkategorien (Mursten, Tagsten, Vinduer/Doere) und eigener Beschreibung des staendigen Angebots an gebrauchten Baumaterialien aus eigenem Abriss und Ankauf -> kern.",
+            "flags": [],
+            "budget_erschoepft": false
+          }
+        ],
+        "edges": [],
+        "ungeprueft_tids": [],
+        "tool_calls_used": 19,
+        "kappe_erreicht": false,
+        "cc": "DK",
+        "assigned_nodes": [
+          "M01",
+          "M03",
+          "M04",
+          "M05",
+          "M06",
+          "M07",
+          "P1",
+          "M09"
+        ],
+        "assigned_edges": []
+      }
+    ],
+    "nodes": [
+      {
+        "tid": "I01",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.erhvervsby.dk/byggegruppen/",
+        "beleg_zitat": "Projektpartnerne er Gladsaxe Kommune og Gladsaxe Erhvervsby ... Aarhus Kommune, WeBuildDenmark, Pihl Holdings og Danske Regioner",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Aarhus Kommune\" \"Gladsaxe Kommune\" samarbejde OR partnerskab"
+        ],
+        "geprueft_urls": [
+          "https://www.erhvervsby.dk/byggegruppen/"
+        ],
+        "begruendung": "Aarhus Kommune wird als Projektpartner im BygCirkulaert-Portalprojekt genannt (benannte Reuse-Sache, kein Verzeichnis) -> bezug. Keine eigene dauerhafte Reuse-Leistungsseite gepruoft.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "I02",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+        "beleg_zitat": "Bygherre (Client): Gladsaxe Kommune",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Tscherning \"Svanen\" Gladsaxe børnehus genbrug"
+        ],
+        "geprueft_urls": [
+          "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+          "https://www.erhvervsby.dk/byggegruppen/",
+          "https://gladsaxe.dk/kommunen/borger/miljoe-og-klima/klimavenlig-by/klimavenlig-bolig-og-byggeri/svanemaerkede-boernehuse"
+        ],
+        "begruendung": "Gladsaxe Kommune als Bygherre von Svanen belegt und als Projektpartner im BygCirkulaert-Portal genannt. Eigene dauerhafte Programmseite (svanemaerkede-boernehuse) 404, daher keine kern-Einstufung, sondern bezug ueber benannte Reuse-Projekte.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_404",
+            "beleg_url": "https://gladsaxe.dk/kommunen/borger/miljoe-og-klima/klimavenlig-by/klimavenlig-bolig-og-byggeri/svanemaerkede-boernehuse"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "P2",
+        "actor_degree": "kern",
+        "beleg_url": "https://circularmaterialsystems.com/en/case/02_en_resource-rows/",
+        "beleg_zitat": "In an intensive cooperation between the client and the team of Lendager Group, Resource Rows proves that ... upcycling building materials is possible.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Resource Rows\" Lendager project reuse bricks Copenhagen"
+        ],
+        "geprueft_urls": [
+          "https://dac.dk/en/magazine/resource-rows",
+          "https://circularmaterialsystems.com/en/case/02_en_resource-rows/",
+          "https://www.ribaj.com/spec/recycled-brick-cladding-panels-lendager-group-resource-rows-apartment-copenhagen-denmark/"
+        ],
+        "begruendung": "Bauvorhaben dokumentiert Bauteil-/Materialwiederverwendung (Ziegel, Holz, Beton) als zentrales Projektmerkmal, mehrfach unabhaengig belegt.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_404",
+            "beleg_url": "https://dac.dk/en/magazine/resource-rows"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "P4",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+        "beleg_zitat": "materials from the existing school are carefully dismantled, sorted, and stored before being reintroduced into the new architecture",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://gladsaxe.dk/svanen",
+          "https://lendager.com/project/the-swan",
+          "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+          "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/"
+        ],
+        "begruendung": "Svanen ist als weltweit erstes zirkulaeres Kita-Gebaeude dokumentiert, Wiederverwendung von Abbruchmaterial der alten Schule ist zentrales, mehrfach belegtes Projektmerkmal.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "P6",
+        "actor_degree": "kern",
+        "beleg_url": "https://lendager.com/project/trae",
+        "beleg_zitat": "TRAE ... is a 78-meter beacon of circular construction, showing that large-scale architecture can combine reused materials, biogenic resources",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://lendager.com/project/trae",
+          "https://dovista.com/krone-brandcase"
+        ],
+        "begruendung": "TRAE High-Rise dokumentiert Wiederverwendung (u.a. Aluminiumfassade, Windkraftfluegel, Upcycling-Fenster) als konstitutives Projektmerkmal.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U04",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.avj.dk/",
+        "beleg_zitat": "Boernehuset Svanen",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Aksel V. Jensen\" Svanen Gladsaxe",
+          "\"Aksel V. Jensen\" Svanen Gladsaxe ingeniør statiker konstruktion"
+        ],
+        "geprueft_urls": [
+          "https://avj.dk/svanen-et-cirkulaert-svanemaerket-byggeri-for-gladsaxe-kommune/",
+          "https://www.avj.dk/",
+          "https://www.niras.dk/projekter/raadgiver-paa-verdens-foerste-cirkulaere-boernehus/"
+        ],
+        "begruendung": "Svanen erscheint als Fallstudien-Link auf der eigenen AVJ-Seite (Referenzliste), keine ausformulierte Rollenbeschreibung auffindbar (Projektseite 404). Named in benannter Reuse-Sache -> bezug.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "http_404",
+            "beleg_url": "https://avj.dk/svanen-et-cirkulaert-svanemaerket-byggeri-for-gladsaxe-kommune/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U06",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+        "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/"
+        ],
+        "begruendung": "Ason A/S als Entreprenoer von Svanen namentlich in benannter Reuse-Sache genannt.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U08",
+        "actor_degree": "bezug",
+        "beleg_url": "https://dovista.com/krone-brandcase",
+        "beleg_zitat": "KRONE supplied all the windows to the building, including the upcycled windows.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://dovista.com/krone-brandcase"
+        ],
+        "begruendung": "KRONE/DOVISTA liefert namentlich belegt Upcycling-Fenster fuer TRAE, benannte Reuse-Sache.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U15",
+        "actor_degree": "bezug",
+        "beleg_url": "https://lendager.com/project/trae",
+        "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://lendager.com/project/trae"
+        ],
+        "begruendung": "Kilden & Hindby als Bauherr/Client von TRAE namentlich genannt, benannte Reuse-Sache.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U18",
+        "actor_degree": "kern",
+        "beleg_url": "https://lendager.com/project/trae",
+        "beleg_zitat": "large-scale architecture can combine reused materials, biogenic resources ... facades made from salvaged aluminium sheets",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://lendager.com/",
+          "https://lendager.com/project/trae",
+          "https://lendager.com/project/the-swan"
+        ],
+        "begruendung": "Lendagers eigene Seite (lendager.com) praesentiert Wiederverwendung/Zirkularitaet dauerhaft als Kern des eigenen Portfolios/Programms ueber mehrere eigene Projektseiten -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U22",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+        "beleg_zitat": "NIRAS har forestaaet raadgivning for nedrivningen af den gamle skole og for miljoekortlaegningen",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+          "https://www.niras.dk/projekter/raadgiver-paa-verdens-foerste-cirkulaere-boernehus/"
+        ],
+        "begruendung": "NIRAS als Abbruch-/Umweltberater von Svanen namentlich belegt (Projektreferenz), keine eigene dauerhafte Reuse-Leistungsseite gepruoft -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U27",
+        "actor_degree": "bezug",
+        "beleg_url": "https://lendager.com/project/trae",
+        "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://lendager.com/project/trae"
+        ],
+        "begruendung": "PFA Ejendomme als Bauherr/Client von TRAE namentlich genannt, benannte Reuse-Sache.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U32",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+        "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+          "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen"
+        ],
+        "begruendung": "Sweco als Beraterin von Ason bei Svanen namentlich belegt (Projektreferenz), keine eigene dauerhafte Reuse-Leistungsseite gepruoft -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "U33",
+        "actor_degree": "bezug",
+        "beleg_url": "https://vaerdibyg.dk/case/svanen-i-gladsaxe-cirkulaer-nedrivning/",
+        "beleg_zitat": "For entreprenoeren Tscherning har udfordringen vaeret, at man normalt kan nedrive meget med maskine",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Tscherning Svanen Gladsaxe entreprenoer OR nedrivning OR bygningsdele"
+        ],
+        "geprueft_urls": [
+          "https://vaerdibyg.dk/case/svanen-i-gladsaxe-cirkulaer-nedrivning/"
+        ],
+        "begruendung": "Tscherning als Abbruchunternehmer von Svanen namentlich belegt, benannte Reuse-Sache.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "tid": "P7",
+        "name": "Upcycle Studios Copenhagen",
+        "actor_degree": "kern",
+        "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+        "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Upcycle Studios Ørestad Lendager NREP AG Gruppen genbrug materialer",
+          "\"Upcycle Studios\" reuse reclaimed salvage Wiederverwendung"
+        ],
+        "geprueft_urls": [
+          "https://nrep.com/project/upcycle-studios/",
+          "https://urban.partners/project/upcycle-studios/",
+          "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+          "https://www.danskeark.com/content/upcycle-studios",
+          "https://medium.works/upcycle-studios",
+          "https://theupcyclestudios.com/"
+        ],
+        "begruendung": "Das Bauvorhaben (20 Reihenhäuser in Ørestad Syd, Kopenhagen) ist durchgängig als Referenzprojekt für Bauteil-/Materialwiederverwendung dokumentiert (upcyclede byggematerialer aus Metro-Beton, Dinesen-Holzresten, Fensterglas aus Nordjütland). Projektteam laut danskeark.com: Architekt Lendager Group, Bygherre NREP, Ingeniør MOE (Norrecco), Entreprenør AG-Gruppen. nrep.com leitet permanent (308) auf urban.partners weiter (Rebranding NREP -> Urban Partners), Inhalt dort inhaltlich fortgesetzt.",
+        "flags": [
+          {
+            "flag": "defunkt",
+            "beleg_url": "https://nrep.com/project/upcycle-studios/",
+            "beleg_zitat": "308 Permanent Redirect to https://urban.partners/project/upcycle-studios/",
+            "stand_jahr": "2026",
+            "nachfolger_tid": ""
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "tid": "U02",
+        "name": "a:gain",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.again.dk",
+        "beleg_zitat": "We take discarded materials and remanufacture them into new, standardised building products that meet the same performance and compliance requirements as conventional alternatives.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "a:gain gain.de Wiederverwendung Bauteile",
+          "a:gain again.dk Bauteil reuse Denmark"
+        ],
+        "geprueft_urls": [
+          "https://gain.de",
+          "https://www.again.dk",
+          "https://www.again.dk/project-references/upcycle-studios"
+        ],
+        "begruendung": "Der gespeicherte primary_source_url (https://gain.de) fuehrt zu einem voellig anderen, deutschen PDM/PLM-Softwareunternehmen ohne jeden Bauteilbezug -- keine Verbindung zum Reuse-Akteur. Die tatsaechlich gemeinte Organisation ist das daenische a:gain (again.dk), dessen Kerngeschaeft die Aufbereitung/Remanufacturing gebrauchter Bauteile zu zertifizierten Neuprodukten ist, dauerhaft als Leistungslinie dargestellt -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "tid": "U03",
+        "name": "AG Gruppen",
+        "actor_degree": "bezug",
+        "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+        "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Arkitektgruppen\" AG Gruppen Danmark entreprenør Upcycle Studios",
+          "AG Gruppen reuse Wiederverwendung Bauteile"
+        ],
+        "geprueft_urls": [
+          "https://www.mynewsdesk.com/dk/ag-gruppen/pressreleases/20-raekkehuse-bygget-af-upcyclede-materialer-paa-vej-i-oerestad-syd-2380409",
+          "https://www.danskeark.com/content/upcycle-studios"
+        ],
+        "begruendung": "AG Gruppen (Marktname 'Arkitektgruppen') wird namentlich in einer benannten Reuse-Sache (Upcycle Studios, Entreprenoer laut danskeark.com) genannt, auch auf eigener Pressemitteilung (mynewsdesk). Keine dauerhafte eigene Reuse-Leistungsseite gefunden (allgemeiner Bautraeger/Entwickler) -> bezug statt kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "tid": "U05",
+        "name": "Artelia",
+        "actor_degree": "kern",
+        "beleg_url": "https://arteliagroup.dk/en/services/reuse-and-recycling/",
+        "beleg_zitat": "Reuse and recycling of construction materials",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [],
+        "geprueft_urls": [
+          "https://www.arteliagroup.com/",
+          "https://arteliagroup.dk/en/services/reuse-and-recycling/",
+          "https://vcob.dk/vcob/community/medlemmer/artelia-raadgivende-ingenioerer/"
+        ],
+        "begruendung": "arteliagroup.dk (Artelia Daenemark) fuehrt eine dauerhafte, eigene Leistungsseite 'Reuse and recycling of construction materials'; Artelia ist zudem als Mitglied im Videncenter for Cirkulaer Oekonomi i Byggeriet (VCOB) gelistet -> kern. Die globale arteliagroup.com-Startseite selbst zeigt Reuse nicht prominent, die laenderspezifische Seite jedoch schon.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "tid": "U07",
+        "name": "BOGL",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"BOGL\" landscape architects official website UK",
+          "BOGL landskabsarkitekter København hjemmeside reuse Wiederverwendung"
+        ],
+        "geprueft_urls": [
+          "https://www.bogl.com",
+          "https://landezine.com/office-profile-bogl/",
+          "https://bogl.dk/projekter/"
+        ],
+        "begruendung": "Der gespeicherte primary_source_url (bogl.com) ist ein Domainhaendler-Angebot, voellig unabhaengig von der Landschaftsarchitektur-Organisation. Die tatsaechliche Firma (bogl.dk, Kopenhagen/Oslo) wurde gefunden; deren Projektliste sowie ein Drittprofil (Landezine) zeigen allgemeine Nachhaltigkeit als Treiber, aber keine dauerhafte Bauteil-Wiederverwendungs-Leistungslinie und keine Nennung in einer benannten Reuse-Sache -> ohne_beleg (Rechercheergebnis, keine Aussage ueber tatsaechliche Praxis).",
+        "flags": [],
+        "budget_erschoepft": true,
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "tid": "U19",
+        "name": "MOE",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.danskeark.com/content/upcycle-studios",
+        "beleg_zitat": "Engineer: MOE, Norrecco",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "MOE ingeniør cirkulær økonomi genbrug bæredygtighed moe.dk"
+        ],
+        "geprueft_urls": [
+          "https://www.danskeark.com/content/upcycle-studios",
+          "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/"
+        ],
+        "begruendung": "MOE wird namentlich als Ingenieur des benannten Reuse-Projekts Upcycle Studios gefuehrt (danskeark.com Projektcredits; ebenso estatemedia.dk). moe.global zeigt eine generische Sustainability/Zertifizierungs-Seite (DGNB/LEED/BREEAM) ohne erkennbare dauerhafte Bauteil-Wiederverwendungs-Leistungslinie -> bezug statt kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "tid": "U24",
+        "name": "NREP",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.danskeark.com/content/upcycle-studios",
+        "beleg_zitat": "Client: NREP",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "NREP OR \"urban.partners\" circular economy reuse building materials program"
+        ],
+        "geprueft_urls": [
+          "https://www.danskeark.com/content/upcycle-studios",
+          "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/"
+        ],
+        "begruendung": "NREP (heute Urban Partners) wird als Bauherr/Bygherre des benannten Reuse-Projekts Upcycle Studios gefuehrt. nrep.com leitet permanent auf urban.partners weiter (Rebranding). Eine dauerhafte, spezifisch auf Bauteil-Wiederverwendung fokussierte eigene Leistungsseite von Urban Partners wurde nicht verifiziert (Redirect-Loop verhinderte direkten Abruf) -> bezug statt kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "tid": "M02",
+        "name": "Bergsten ApS",
+        "actor_degree": "kern",
+        "beleg_url": "https://tegllageret.dk/om-os/",
+        "beleg_zitat": "Jakobsen Tegl voksede og købte Bergsten Tegl ApS som lå på savværket i Tureby",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Bergsten ApS genbrug materialer Danmark",
+          "\"Bergsten ApS\" byggeaffald OR nedrivning OR genbrug"
+        ],
+        "geprueft_urls": [
+          "https://tegllageret.dk/om-os/"
+        ],
+        "begruendung": "Bergsten Tegl ApS (Tureby) wurde laut der gemeinsamen Seite tegllageret.dk von Jakobsen Tegl übernommen; diese dauerhafte 'Om os'-Seite (Tegllageret for Jakobsen Tegl og Bergsten Tegl) führt Sammlung/Sortierung/Verkauf gebrauchter Dachsteine und Mauersteine als Kerngeschäft -> kern. Da Nachfolger M13 im Panel ist, zusätzlich Flag duplikat gesetzt.",
+        "flags": [
+          {
+            "flag": "duplikat",
+            "duplikat_von": "M13",
+            "beleg_url": "https://tegllageret.dk/om-os/",
+            "beleg_zitat": "Jakobsen Tegl voksede og købte Bergsten Tegl ApS som lå på savværket i Tureby"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "M08",
+        "name": "Circue",
+        "actor_degree": "kern",
+        "beleg_url": "https://circue.dk",
+        "beleg_zitat": "Use Circue's free platform to browse reused materials available in the market now.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Circue genbrug byggematerialer",
+          "Circue.dk digital børs genbrugte byggematerialer platform"
+        ],
+        "geprueft_urls": [
+          "https://circue.dk",
+          "https://realdania.dk/nyheder/2025/08/circue-lancerer-ny-digital-boers",
+          "https://www.strateginetvaerket.dk/case-circue-digital-platform-baner-vejen-for-cirkulaert-byggeri-og-baeredygtig-transformation/"
+        ],
+        "begruendung": "Circue betreibt auf eigener Domain (circue.dk / exchange.circue.dk) eine dauerhafte digitale Materialbörse für wiederverwendete Bauteile als Kerngeschäft -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "M12",
+        "name": "Hverringe Centrum for Restaurering",
+        "actor_degree": "bezug",
+        "beleg_url": "https://realdania.dk/projekter/hverringe",
+        "beleg_zitat": "Støttebeløb 6,7 mio. kr.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Hverringe Centrum for Restaurering",
+          "Realdania Hverringe Centrum for Restaurering støtte",
+          "Hverringe Centrum for Restaurering lukket OR nyt websted 2024 2025"
+        ],
+        "geprueft_urls": [
+          "https://realdania.dk/projekter/hverringe",
+          "https://www.bygningsbevaring.dk/gl-brolykke-abner-som-restaurerings-centrum",
+          "https://byggeri-arkitektur.dk/Centrum-for-restaurering--Vi-kan-laere-af-de-gamle-byggemetoder-",
+          "https://hverringe.dk/om-os/",
+          "https://hverringe.dk/"
+        ],
+        "begruendung": "Eigene Seite hverringe.dk/hverringe.dk/om-os war zweimal nicht erreichbar (Connection refused). Dritt-/eigene Realdania-Projektseite benennt Hverringe namentlich als gefördertes Restaurierungsprojekt (6,7 Mio. kr., 2008-2014, Teil der Kampagne 'Fremtidens Herregård') -> bezug. Ein dauerhafter Reuse-Leistungsnachweis auf einer eigenen erreichbaren Seite konnte nicht verifiziert werden.",
+        "flags": [
+          {
+            "flag": "nicht_pruefbar",
+            "hindernis": "dns_tot",
+            "beleg_url": "https://hverringe.dk/"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "M13",
+        "name": "Jakobsen Tegl ApS",
+        "actor_degree": "kern",
+        "beleg_url": "https://tegllageret.dk/om-os/",
+        "beleg_zitat": "at købe og sælge brugte bygningsmaterialer især brugte tagsten og mursten",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Jakobsen Tegl ApS genbrugstegl",
+          "\"Jakobsen Tegl\" hjemmeside brugte tagsten butik"
+        ],
+        "geprueft_urls": [
+          "https://tegllageret.dk/om-os/"
+        ],
+        "begruendung": "Eigene/gemeinsame Seite tegllageret.dk beschreibt dauerhaft den Kernbetrieb: Ankauf und Verkauf gebrauchter Dachsteine und Mauersteine -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "N01",
+        "name": "Bolius genbrugsmaterialer directory",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+        "beleg_zitat": "Videncentret Bolius har samlet en liste af byggemarkeder med brugte byggematerialer i Danmark.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Bolius genbrugsmaterialer directory",
+          "her kan du købe genbrugsmaterialer bolius"
+        ],
+        "geprueft_urls": [
+          "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121"
+        ],
+        "begruendung": "Bolius unterhält auf eigener Domain einen dauerhaften Ratgeber zu Bezugsquellen für Wiederverwendungs-Baumaterialien als Teil seines Wissenscenter-Angebots -> kern für Bolius selbst (Reuse_Zirkularitaetsberatung). Die dort gelisteten Drittorganisationen bleiben reine Verzeichnisbindungen.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "S01",
+        "name": "GreenDozer ApS",
+        "actor_degree": "kern",
+        "beleg_url": "https://greendozer.com/byggematerialer",
+        "beleg_zitat": "Hos GreenDozer har vi et stort udvalg af både genbrugte byggematerialer og overskudsvarer",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "GreenDozer ApS reuse marketplace byggematerialer",
+          "GreenDozer genbrug byggematerialer online"
+        ],
+        "geprueft_urls": [
+          "https://greendozer.com/byggematerialer",
+          "https://greendozer.com/nyt-samarbejde-fremmer-genbrug-af-byggematerialer",
+          "https://b2b.greendozer.com/"
+        ],
+        "begruendung": "GreenDozer betreibt eine eigene digitale Marktplatz-Plattform für gebrauchte/überschüssige Baumaterialien als dauerhaftes Kerngeschäft -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "U16",
+        "name": "Kingo (Kingo Karlsen A/S)",
+        "actor_degree": "kern",
+        "beleg_url": "https://kingo.biz/genbrug/",
+        "beleg_zitat": "Kingo er født ud af tanken med genbrug og grundlagt i en tid, hvor alle byggematerialer i en bygning blev genbrugt som en selvfølge",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Kingo Karlsen A/S genbrug nedrivning",
+          "Kingo genbrug byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://kingo.biz/genbrug/",
+          "https://kingo.biz/om-kingo/",
+          "https://kingo.biz/nyheder/2024/over-70-reduktion-af-affald-med-direkte-genbrug/"
+        ],
+        "begruendung": "Eigene Leistungsseite kingo.biz/genbrug/ beschreibt Wiederverwendung als dauerhaften Unternehmenskern (inkl. eigenem Genbrugskonsulent) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "U26",
+        "name": "P. Olesen / PO Genbrug",
+        "actor_degree": "kern",
+        "beleg_url": "https://pogenbrug.dk/",
+        "beleg_zitat": "P. Olesen genbrug – Salg af genbrugs byggematerialer",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"PO Genbrug\" OR \"P. Olesen\" genbrug byggematerialer"
+        ],
+        "geprueft_urls": [
+          "https://pogenbrug.dk/",
+          "https://hsfo.dk/horsens/byggematerialer-skal-genbruges-i-stor-skala-p-olesen-faar-selskab-af-yderligere-to-store-aktoerer-paa-markedet"
+        ],
+        "begruendung": "Eigene Domain pogenbrug.dk zeigt Verkauf gebrauchter Baumaterialien als dauerhaftes Kerngeschäft -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "U29",
+        "name": "Realdania",
+        "actor_degree": "bezug",
+        "beleg_url": "https://realdania.dk/nyheder/2025/08/circue-lancerer-ny-digital-boers",
+        "beleg_zitat": "Realdania har støttet Circue-projektet og udviklingen af børsen",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Realdania Hverringe Centrum for Restaurering støtte",
+          "Circue.dk digital børs genbrugte byggematerialer platform"
+        ],
+        "geprueft_urls": [
+          "https://realdania.dk/nyheder/2025/08/circue-lancerer-ny-digital-boers",
+          "https://realdania.dk/projekter/hverringe"
+        ],
+        "begruendung": "Realdania.dk zeigt keine eigene Reuse-Leistungslinie (philanthropische Förderorganisation), wird aber namentlich als Förderer konkreter Reuse-Vorhaben genannt (Circue-Materialbörse, Hverringe-Restaurierungsprojekt) -> bezug.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "tid": "F01",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.dtu.dk/forskning/omraader/byggeri/cirkulaert-byggeri",
+        "beleg_zitat": "Ved at genbruge hele bygningsdele bevarer byggeriet de økonomiske værdier og den energi, der er brugt til at bearbejde råmaterialer og fremstille de enkelte bygningsdelene.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "site:dtu.dk cirkulær genanvendelse byggematerialer OR bygningsdele"
+        ],
+        "geprueft_urls": [
+          "https://www.dtu.dk/forskning/omraader/byggeri/cirkulaert-byggeri"
+        ],
+        "begruendung": "DTU zeigt auf einer eigenen, dauerhaft platzierten Forschungsseite (dtu.dk/forskning/.../cirkulaert-byggeri) Wiederverwendung ganzer Bauteile als Teil des eigenen Forschungsprogramms -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c04"
+      },
+      {
+        "tid": "P5",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+        "beleg_zitat": "Hoffmann skal renovere Bikubenfondens nyerhvervede bygning, ud fra et princip om at bygningen skal genanvende sig selv",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Thoravej 29\" Hoffmann DTU genbrug",
+          "\"Thoravej 29\" København cirkulær genbrug byggeri"
+        ],
+        "geprueft_urls": [
+          "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+          "https://www.thoravej29.dk/da/om-thoravej-29",
+          "https://dac.dk/en/magazine/places/thoravej-29-what-can-be-reused-must-be-reused-376"
+        ],
+        "begruendung": "Projektknoten: Das Bauvorhaben Thoravej 29 dokumentiert Bauteil-Wiederverwendung als zentrales Gestaltungsprinzip (95% Materialwiederverwendung, Decke wird Treppe, Fassade wird Boden) auf mehreren unabhaengigen Quellen (Hoffmann, DAC, thoravej29.dk) -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c04"
+      },
+      {
+        "tid": "U12",
+        "actor_degree": "bezug",
+        "beleg_url": "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+        "beleg_zitat": "Hoffmann har sammen med Pihlmann Architects og ABC Rådgivende Ingeniører vundet totalentreprisen på udviklingen af Bikubenfondens nyerhvervede bygning.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "site:hoffmann.dk baeredygtighed genbrug cirkulaer"
+        ],
+        "geprueft_urls": [
+          "https://www.hoffmann.dk/esg/",
+          "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/"
+        ],
+        "begruendung": "hoffmann.dk/esg/ nennt Genanvendelse nur ueber das Einzelprojekt Thoravej 29 (kein eigenstaendiger, dauerhaft platzierter Reuse-Leistungsbereich gefunden) -> bezug ueber die benannte Reuse-Sache Thoravej 29, nicht kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-c04"
+      },
+      {
+        "tid": "M01",
+        "name": "Bango A/S",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.bango.dk/tilbud/genbrug/",
+        "beleg_zitat": "Her finder du alle Bango brugte vare",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Bango A/S\" Danmark bygningsdele",
+          "\"Bango A/S\" reuse OR reclaimed OR genbrug"
+        ],
+        "geprueft_urls": [
+          "https://www.bango.dk/ombango/",
+          "https://www.bango.dk/tilbud/genbrug/"
+        ],
+        "begruendung": "Eigene, dauerhaft platzierte Shop-Rubrik 'Genbrug' auf bango.dk fuehrt gebrauchte Tueren/Fenster als festen Teil des Sortiments -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      },
+      {
+        "tid": "M03",
+        "name": "Bregnebjerggaard Grusgrav",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Bregnebjerggaard Grusgrav\" Danmark",
+          "\"Bregnebjerggaard Grusgrav\" reuse OR reclaimed OR genbrug"
+        ],
+        "geprueft_urls": [
+          "https://bregnebjerggaard-grusgrav.webnode.page/",
+          "https://www.proff.dk/firma/bregnebjergg%C3%A5rds-grusgrav.-kurt-s%C3%B8rensen-aps/lynge/udvindelse-af-bjergv%C3%A6rksdrift/GKYGDHI10MA/"
+        ],
+        "begruendung": "Betrieb ist Kies-/Sandgrube mit Bauabfall-Annahme und Deponie; keine Bauteil-Wiederverwendung auf eigener Seite oder Drittquelle gefunden. Typ passt nicht zum Datensatz-Typ Materialhub_Bauteilboerse.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "typ_ist": "Kies-/Sandgrube und Deponie/Abfallsortierung",
+            "typ_soll": "Materialhub_Bauteilboerse",
+            "beleg_url": "https://bregnebjerggaard-grusgrav.webnode.page/about-us/",
+            "beleg_zitat": "Affaldsbehandling og Deponi"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      },
+      {
+        "tid": "M04",
+        "name": "Brugte Mursten",
+        "actor_degree": "ohne_beleg",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Brugte Mursten\" Danmark bygningsdele",
+          "\"Brugte Mursten\" reuse OR reclaimed OR genbrug"
+        ],
+        "geprueft_urls": [],
+        "begruendung": "Keine eigenstaendige Organisation namens 'Brugte Mursten' mit eigener Seite auffindbar; Treffer betreffen andere, anders benannte Anbieter (Genbyg, Gamle Mursten, Genbrugsmursten, Skave Nedbrydning/brugtemursten.dk). Kein plausibler Name-Treffer -> ohne_beleg gemaess D2.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      },
+      {
+        "tid": "M05",
+        "name": "Byggeboersen",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.xn--byggebrsen-5cb.dk/",
+        "beleg_zitat": "Vi fungerer som en søgemaskine, der hjælper private med at finde genbrugsmaterialer hurtigere.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Byggebørsen\" Danmark bygningsdele",
+          "\"Byggebørsen\" reuse OR reclaimed OR genbrug"
+        ],
+        "geprueft_urls": [
+          "https://www.xn--byggebrsen-5cb.dk/"
+        ],
+        "begruendung": "Eigene Plattform, deren dauerhafter Betriebszweck die Vermittlung/Auffindung von Genbrugsmaterialer ist -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      },
+      {
+        "tid": "M06",
+        "name": "Bærebyg",
+        "actor_degree": "kern",
+        "beleg_url": "https://baerebyg.dk/",
+        "beleg_zitat": "Vi tilbyder et bredt udvalg af genbrugte byggematerialer – fra døre, vinduer og køkkener til VVS-dele og el-artikler",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Bærebyg\" Danmark bygningsdele",
+          "\"Bærebyg\" reuse OR reclaimed OR genbrug"
+        ],
+        "geprueft_urls": [
+          "https://baerebyg.dk/",
+          "https://baerebyg.dk/baerebyg/",
+          "https://baerebyg.dk/historik/"
+        ],
+        "begruendung": "Eigene Startseite beschreibt dauerhaft ein breites Angebot an gebrauchten Baumaterialien als Kerngeschaeft -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      },
+      {
+        "tid": "M07",
+        "name": "Carlsberg",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.carlsbergbyen.dk/om-carlsberg-byen/historie/transformation-af-bygninger",
+        "beleg_zitat": "gamle mursten fra Søndermarkshuset er blevet genanvendt for at genskabe",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Carlsberg Byen genbrug bygningsdele materialer",
+          "Carlsberg Byen reuse OR reclaimed OR genbrug"
+        ],
+        "geprueft_urls": [
+          "https://www.carlsbergbyen.dk/om-carlsberg-byen/historie/transformation-af-bygninger",
+          "https://www.csr.dk/carlsberg-byen-genanvender-gamle-mursten"
+        ],
+        "begruendung": "Eigene, dauerhafte 'Historie/Transformation'-Seite von carlsbergbyen.dk beschreibt Wiederverwendung alter Baustoffe (Mursten, Hestetrug) als festen Bestandteil der Transformationsstrategie -> kern als Akteur. Der Datensatz-Typ 'Materialhub_Bauteilboerse' passt jedoch nicht: Carlsberg Byen ist ein Stadtentwicklungs-/Bauherrenprojekt, kein Materialhub/Boerse.",
+        "flags": [
+          {
+            "flag": "falscher_typ",
+            "typ_ist": "Stadtentwicklungsareal / Bauherrenprojekt",
+            "typ_soll": "Materialhub_Bauteilboerse",
+            "beleg_url": "https://www.carlsbergbyen.dk/om-carlsberg-byen/historie/transformation-af-bygninger",
+            "beleg_zitat": "gamle mursten fra Søndermarkshuset er blevet genanvendt for at genskabe"
+          }
+        ],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      },
+      {
+        "tid": "P1",
+        "name": "Circle House",
+        "actor_degree": "kern",
+        "beleg_url": "https://www.lejerbo.dk/om-dab-lejerbo/byggeri/om-circle-house",
+        "beleg_zitat": "90 % af de materialer, som bruges til at bygge Circle House, kan genanvendes stort set uden at tabe værdi.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "Circle House Lisbjerg genbrug cirkulaert byggeri",
+          "Circle House reuse OR reclaimed OR disassembly"
+        ],
+        "geprueft_urls": [
+          "https://www.lejerbo.dk/om-dab-lejerbo/byggeri/om-circle-house"
+        ],
+        "begruendung": "Projektknoten: eigene, dauerhafte Projektbeschreibung des Bauherrn (Lejerbo/DAB) dokumentiert Design-for-Disassembly mit dem Ziel, 90% der Materialien wiederzuverwenden -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      },
+      {
+        "tid": "M09",
+        "name": "Dem fra Nordlunde",
+        "actor_degree": "kern",
+        "beleg_url": "https://demfranordlunde.dk/shop/254-brugt-marked",
+        "beleg_zitat": "Vi har altid er godt udvalg i brugte byggematerialer fra vores nedrivning, og fra opkøb.",
+        "abrufdatum": "2026-08-13",
+        "such_begriffe": [
+          "\"Dem fra Nordlunde\" genbrug bygningsdele",
+          "\"Dem fra Nordlunde\" reuse OR reclaimed OR salvage"
+        ],
+        "geprueft_urls": [
+          "https://demfranordlunde.dk/",
+          "https://demfranordlunde.dk/shop/254-brugt-marked"
+        ],
+        "begruendung": "Eigene, dauerhaft betriebene Shop-Rubrik 'Brugt Marked' mit Unterkategorien (Mursten, Tagsten, Vinduer/Doere) und eigener Beschreibung des staendigen Angebots an gebrauchten Baumaterialien aus eigenem Abriss und Ankauf -> kern.",
+        "flags": [],
+        "budget_erschoepft": false,
+        "cc": "DK",
+        "packet_id": "DK-s01"
+      }
+    ],
+    "edges": [
+      {
+        "edge_id": "I02|I01",
+        "a_tid": "I02",
+        "b_tid": "I01",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.erhvervsby.dk/byggegruppen/",
+        "beleg_zitat": "Projektpartnerne er Gladsaxe Kommune og Gladsaxe Erhvervsby ... Aarhus Kommune, WeBuildDenmark, Pihl Holdings og Danske Regioner",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Gemeinsame Projektpartner im BygCirkulaert-Portalprojekt (Verzeichnis fuer gebrauchte Bauteile)",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "I02|P4",
+        "a_tid": "I02",
+        "b_tid": "P4",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+        "beleg_zitat": "Builder: Gladsaxe Kommune Ejendomscenteret",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Gladsaxe Kommune ist Bauherr des Svanen-Projekts",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U32|P4",
+        "a_tid": "U32",
+        "b_tid": "P4",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+        "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Sweco als Berater des Entreprenoers Ason bei Svanen",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U22|P4",
+        "a_tid": "U22",
+        "b_tid": "P4",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+        "beleg_zitat": "NIRAS har forestaaet raadgivning for nedrivningen af den gamle skole og for miljoekortlaegningen",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "NIRAS als Abbruch-/Umweltberater von Svanen",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U33|P4",
+        "a_tid": "U33",
+        "b_tid": "P4",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://vaerdibyg.dk/case/svanen-i-gladsaxe-cirkulaer-nedrivning/",
+        "beleg_zitat": "For entreprenoeren Tscherning har udfordringen vaeret, at man normalt kan nedrive meget med maskine",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Tscherning als Abbruchunternehmer von Svanen",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U06|P4",
+        "a_tid": "U06",
+        "b_tid": "P4",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.danskindustri.dk/synligbeton.dk/projekter/byggeri/bornehuset-svanen/",
+        "beleg_zitat": "Entrepenoer: Ason (med SWECO som raadgivere)",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Ason als Hauptentreprenoer von Svanen",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U04|P4",
+        "a_tid": "U04",
+        "b_tid": "P4",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.avj.dk/",
+        "beleg_zitat": "Boernehuset Svanen",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Nur Referenzlisten-Nennung auf eigener AVJ-Seite, keine ausformulierte Rollenbeschreibung (Projektunterseite 404)",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U15|P6",
+        "a_tid": "U15",
+        "b_tid": "P6",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://lendager.com/project/trae",
+        "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Kilden & Hindby als Bauherr/Client von TRAE",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U27|P6",
+        "a_tid": "U27",
+        "b_tid": "P6",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://lendager.com/project/trae",
+        "beleg_zitat": "Client Kilden & Hindby [and] PFA Ejendomme",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "PFA Ejendomme als Bauherr/Client von TRAE",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U08|P6",
+        "a_tid": "U08",
+        "b_tid": "P6",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://dovista.com/krone-brandcase",
+        "beleg_zitat": "KRONE supplied all the windows to the building, including the upcycled windows.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "DOVISTA/KRONE als Fensterlieferant (Upcycling-Fenster) fuer TRAE",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U18|P2",
+        "a_tid": "U18",
+        "b_tid": "P2",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://circularmaterialsystems.com/en/case/02_en_resource-rows/",
+        "beleg_zitat": "In an intensive cooperation between the client and the team of Lendager Group, Resource Rows proves that ... upcycling ... is possible.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Lendager Group als Entwurfs-/Upcycling-Team von Resource Rows",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U18|P4",
+        "a_tid": "U18",
+        "b_tid": "P4",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.troldtekt.com/references/children-and-youth/boernehuset-svanen",
+        "beleg_zitat": "Architects: Lendager Arkitekter ApS / SWECO architects",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Lendager als Architekt von Svanen",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U18|P6",
+        "a_tid": "U18",
+        "b_tid": "P6",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://lendager.com/project/trae",
+        "beleg_zitat": "TRAE ... a 78-meter beacon of circular construction, showing that large-scale architecture can combine reused materials",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_soll": "PROJEKT_PARTNER",
+        "relation_ist": "Lendager als Entwurfsteam von TRAE, dokumentiert auf eigener Projektseite",
+        "cc": "DK",
+        "packet_id": "DK-c01"
+      },
+      {
+        "edge_id": "U02|P7",
+        "a_tid": "U02",
+        "b_tid": "P7",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.again.dk/project-references/upcycle-studios",
+        "beleg_zitat": "In Upcycle Studios, 75% of the windows came from public housing in North Jutland",
+        "beide_genannt": false,
+        "budget_erschoepft": false,
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "Projektreferenz auf a:gains eigener Seite (Reference-Liste); konkrete Lieferrolle nicht spezifiziert",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "edge_id": "U24|P7",
+        "a_tid": "U24",
+        "b_tid": "P7",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+        "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "NREP als Bauherr/Bygherre von Upcycle Studios (bestaetigt zusaetzlich durch danskeark.com Projektcredits: Client NREP)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "edge_id": "U03|P7",
+        "a_tid": "U03",
+        "b_tid": "P7",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+        "beleg_zitat": "NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd, nemlig byggeriet af 20 rækkehuse under navnet Upcycle Studios.",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "AG Gruppen (Arkitektgruppen) als Entreprenoer/Baupartner von Upcycle Studios (bestaetigt zusaetzlich durch danskeark.com: Entrepreneur AG-Gruppen)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "edge_id": "U19|P7",
+        "a_tid": "U19",
+        "b_tid": "P7",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/",
+        "beleg_zitat": "Lendager Arkitekter har tegnet byggeriet, Lendager Up har udviklet og produceret de upcyclede byggematerialer og MOE er rådgivende ingeniør.",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "MOE als raadgivende ingenioer (Fachplanung) fuer das Upcycle-Studios-Bauvorhaben, bestaetigt auch durch danskeark.com Projektcredits",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "edge_id": "U05|P7",
+        "a_tid": "U05",
+        "b_tid": "P7",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "beide_genannt": false,
+        "budget_erschoepft": true,
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "",
+        "relation_soll": "",
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "edge_id": "U07|P7",
+        "a_tid": "U07",
+        "b_tid": "P7",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "",
+        "beleg_zitat": "",
+        "beide_genannt": false,
+        "budget_erschoepft": true,
+        "abrufdatum": "2026-08-13",
+        "relation_ist": "",
+        "relation_soll": "",
+        "cc": "DK",
+        "packet_id": "DK-c02"
+      },
+      {
+        "edge_id": "M08|S01",
+        "a_tid": "M08",
+        "b_tid": "S01",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.strateginetvaerket.dk/case-circue-digital-platform-baner-vejen-for-cirkulaert-byggeri-og-baeredygtig-transformation/",
+        "beleg_zitat": "Den digitale materialebørs gør det muligt at eksportere genbrugsmaterialer fra markedspladser som Genbyg, J Jensen og Greendozer ind i Revit",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Datenintegrations-/Marktplatz-Partner (Export von GreenDozer-Materialien über Circues Designtool)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "U29|M12",
+        "a_tid": "U29",
+        "b_tid": "M12",
+        "edge_degree": "teilweise_belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://realdania.dk/projekter/hverringe",
+        "beleg_zitat": "Støttebeløb 6,7 mio. kr.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Foerderer (Realdanias eigene Projektseite zu Hverringe, Projektfakten nennen Förderbetrag/-zeitraum, aber kein einzelner Satz nennt beide Namen zusammen)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "M02|N01",
+        "a_tid": "M02",
+        "b_tid": "N01",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": false,
+        "budget_erschoepft": false,
+        "relation_ist": "",
+        "relation_soll": "VERZEICHNIS",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "M02|M13",
+        "a_tid": "M02",
+        "b_tid": "M13",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://tegllageret.dk/om-os/",
+        "beleg_zitat": "Jakobsen Tegl voksede og købte Bergsten Tegl ApS som lå på savværket i Tureby",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Übernahme (Jakobsen Tegl kaufte Bergsten Tegl ApS)",
+        "relation_soll": "UEBERNAHME",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "S01|U16",
+        "a_tid": "S01",
+        "b_tid": "U16",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://greendozer.com/nyt-samarbejde-fremmer-genbrug-af-byggematerialer",
+        "beleg_zitat": "Senest har tre store nedrivningsvirksomheder, P. Olesen, Kingo og Tscherning, investeret i virksomheden",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Investor (Kingo investierte in GreenDozer)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "S01|U26",
+        "a_tid": "S01",
+        "b_tid": "U26",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://greendozer.com/nyt-samarbejde-fremmer-genbrug-af-byggematerialer",
+        "beleg_zitat": "Senest har tre store nedrivningsvirksomheder, P. Olesen, Kingo og Tscherning, investeret i virksomheden",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Investor (P. Olesen investierte in GreenDozer)",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "N01|M12",
+        "a_tid": "N01",
+        "b_tid": "M12",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": false,
+        "budget_erschoepft": false,
+        "relation_ist": "",
+        "relation_soll": "VERZEICHNIS",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "N01|M13",
+        "a_tid": "N01",
+        "b_tid": "M13",
+        "edge_degree": "unklar",
+        "unklar_grund": "kein_fund",
+        "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+        "beleg_zitat": "",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": false,
+        "budget_erschoepft": false,
+        "relation_ist": "",
+        "relation_soll": "VERZEICHNIS",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "N01|U26",
+        "a_tid": "N01",
+        "b_tid": "U26",
+        "edge_degree": "unklar",
+        "unklar_grund": "verzeichnis_only",
+        "beleg_url": "https://www.bolius.dk/her-kan-du-koebe-genbrugsmaterialer-10121",
+        "beleg_zitat": "Salg af brugte byggematerialer. Her finder du fx indvendige og udvendige døre, gamle og nyere vinduer, gulvbrædder, gammelt glas, tagsten og tagplader.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Verzeichniseintrag (Bolius listet PO Genbrug als Bezugsquelle)",
+        "relation_soll": "VERZEICHNIS",
+        "cc": "DK",
+        "packet_id": "DK-c03"
+      },
+      {
+        "edge_id": "U12|P5",
+        "a_tid": "U12",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://www.hoffmann.dk/projekter/thoravej-29-fokus-paa-baeredygtighed/",
+        "beleg_zitat": "Hoffmann har sammen med Pihlmann Architects og ABC Rådgivende Ingeniører vundet totalentreprisen på udviklingen af Bikubenfondens nyerhvervede bygning.",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "Totalentreprenoer/Bauausfuehrender fuer das Projekt Thoravej 29",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c04"
+      },
+      {
+        "edge_id": "F01|P5",
+        "a_tid": "F01",
+        "b_tid": "P5",
+        "edge_degree": "belegt",
+        "unklar_grund": "",
+        "beleg_url": "https://dac.dk/en/magazine/places/thoravej-29-what-can-be-reused-must-be-reused-376",
+        "beleg_zitat": "A report from the Technical University of Denmark (DTU) on the Thoravej 29 project shows that compared to constructing an entirely new building, CO2 emissions",
+        "abrufdatum": "2026-08-13",
+        "beide_genannt": true,
+        "budget_erschoepft": false,
+        "relation_ist": "DTU erstellte Analysebericht (CO2-Einsparung) zum Projekt Thoravej 29",
+        "relation_soll": "PROJEKT_PARTNER",
+        "cc": "DK",
+        "packet_id": "DK-c04"
+      }
+    ],
+    "ungeprueft": [],
+    "ausgefallen": []
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Shard-DK-SE"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "DK-SE:DK-c01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-DK-SE",
+      "agentId": "a7522da31860e1f10",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582965632,
+      "queuedAt": 1786582965604,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "DK-c01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583332131,
+      "tokens": 78240,
+      "toolCalls": 25,
+      "durationMs": 366499,
+      "resultPreview": "{\"packet_id\":\"DK-c01\",\"tool_calls_used\":23,\"kappe_erreicht\":false,\"ungeprueft_tids\":[],\"nodes\":[{\"tid\":\"I01\",\"actor_degree\":\"bezug\",\"beleg_url\":\"https://www.erhvervsby.dk/byggegruppen/\",\"beleg_zitat\":\"Projektpartnerne er Gladsaxe Kommune og Gladsaxe Erhvervsby ... Aarhus Kommune, WeBuildDenmark, Pihl Holdings og Danske Regioner\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"\\\"Aarhus Kommune\\\" \\\"Glad…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "DK-SE:DK-c02",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-DK-SE",
+      "agentId": "a4122f26c6daae2ba",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582965634,
+      "queuedAt": 1786582965605,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "DK-c02",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583302878,
+      "tokens": 79410,
+      "toolCalls": 32,
+      "durationMs": 337244,
+      "resultPreview": "{\"packet_id\":\"DK-c02\",\"tool_calls_used\":30,\"kappe_erreicht\":false,\"ungeprueft_tids\":[],\"nodes\":[{\"tid\":\"P7\",\"name\":\"Upcycle Studios Copenhagen\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://estatemedia.dk/dk/2017/08/30/nrep-arkitektgruppen-bygger-20-raekkehuse-upcyclede-materialer-oerestad-syd/\",\"beleg_zitat\":\"NREP og Arkitektgruppen har netop taget første spadestik på endnu et byggeri i Ørestad Syd,…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "DK-SE:DK-c03",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-DK-SE",
+      "agentId": "a42f3b65f7d7eff94",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582965635,
+      "queuedAt": 1786582965605,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "DK-c03",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583473276,
+      "tokens": 92083,
+      "toolCalls": 39,
+      "durationMs": 507641,
+      "resultPreview": "{\"packet_id\":\"DK-c03\",\"nodes\":[{\"tid\":\"M02\",\"name\":\"Bergsten ApS\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://tegllageret.dk/om-os/\",\"beleg_zitat\":\"Jakobsen Tegl voksede og købte Bergsten Tegl ApS som lå på savværket i Tureby\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"Bergsten ApS genbrug materialer Danmark\",\"\\\"Bergsten ApS\\\" byggeaffald OR nedrivning OR genbrug\"],\"geprueft_urls\":[\"https://teglla…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "DK-SE:DK-c04",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-DK-SE",
+      "agentId": "a6cd0c7b9cb02550b",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582965636,
+      "queuedAt": 1786582965605,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "DK-c04",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583129490,
+      "tokens": 62699,
+      "toolCalls": 15,
+      "durationMs": 163854,
+      "resultPreview": "{\"packet_id\":\"DK-c04\",\"nodes\":[{\"tid\":\"F01\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.dtu.dk/forskning/omraader/byggeri/cirkulaert-byggeri\",\"beleg_zitat\":\"Ved at genbruge hele bygningsdele bevarer byggeriet de økonomiske værdier og den energi, der er brugt til at bearbejde råmaterialer og fremstille de enkelte bygningsdelene.\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"site:dtu.dk cirkulær g…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "DK-SE:DK-s01",
+      "phaseIndex": 1,
+      "phaseTitle": "Shard-DK-SE",
+      "agentId": "aa75135f526697ea9",
+      "model": "claude-sonnet-5",
+      "state": "done",
+      "startedAt": 1786582965638,
+      "queuedAt": 1786582965605,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "DK-s01",
+      "promptPreview": "Du pruefst einen Ausschnitt eines europaeischen Akteursnetzes zur Bauteil-Wiederverwendung live\nim Web nach. Ausschliesslich oeffentliche Quellen. Erhebungsstand: heutiges Datum.\n\nSETUP: rufe ToolSearch mit query \"select:WebSearch,WebFetch\" auf, um die Web-Werkzeuge zu laden.\n\nGRADE (Akteure) -- in dieser Reihenfolge anwenden, beim ersten Treffer stoppen:\n  kern       Die Organisation stellt auf e…",
+      "lastProgressAt": 1786583141306,
+      "tokens": 71815,
+      "toolCalls": 23,
+      "durationMs": 175668,
+      "resultPreview": "{\"packet_id\":\"DK-s01\",\"nodes\":[{\"tid\":\"M01\",\"name\":\"Bango A/S\",\"actor_degree\":\"kern\",\"beleg_url\":\"https://www.bango.dk/tilbud/genbrug/\",\"beleg_zitat\":\"Her finder du alle Bango brugte vare\",\"abrufdatum\":\"2026-08-13\",\"such_begriffe\":[\"\\\"Bango A/S\\\" Danmark bygningsdele\",\"\\\"Bango A/S\\\" reuse OR reclaimed OR genbrug\"],\"geprueft_urls\":[\"https://www.bango.dk/ombango/\",\"https://www.bango.dk/tilbud/genbru…"
+    }
+  ],
+  "totalTokens": 384247,
+  "totalToolCalls": 134
+}

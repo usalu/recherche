@@ -50,7 +50,7 @@ def build_table_fragment(net, out_path: str):
 
 
 def load_network():
-    exclude = load_prune(DEFAULT.prune_path)
+    exclude = load_prune(DEFAULT.prune_path) | load_prune(DEFAULT.prune_faktencheck_path)
     return build_network(DEFAULT, exclude=exclude)
 
 
