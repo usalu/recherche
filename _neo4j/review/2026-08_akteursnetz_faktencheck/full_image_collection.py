@@ -28,7 +28,7 @@ import urllib.request
 import webbrowser
 import xml.etree.ElementTree as ET
 from difflib import SequenceMatcher
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 from PIL import Image, ImageDraw
 
@@ -1305,15 +1305,29 @@ def command_render(_args):
     image_fragment = RENDER / "frag_images.tex"
     control_fragment = RENDER / "frag_control.tex"
     base_cmd = [sys.executable, "-m", "netz.cli", "abb"]
-    for out, extra in ((image_fragment, ["--images-manifest", str(FINAL_MANIFEST)]),
+    # --image-paths absolute: netz emits report-relative `asset/akteur/...`
+    # paths by default, because that is what the Zwischenbericht's own TeX run
+    # resolves. This render compiles standalone in RENDER/, where that prefix
+    # means nothing, so it asks for the review-workspace path instead.
+    for out, extra in ((image_fragment, ["--images-manifest", str(FINAL_MANIFEST),
+                                         "--image-paths", "absolute"]),
                        (control_fragment, [])):
         result = subprocess.run(base_cmd + ["--out", str(out)] + extra, cwd=NETZ, capture_output=True, text=True)
         if result.returncode:
             raise RuntimeError((result.stdout + result.stderr)[-3000:])
-    logo_count = sum(r["result"] == "logo" for r in manifest["nodes"])
-    source = image_fragment.read_text(encoding="utf-8")
-    if source.count("image={") != logo_count:
-        raise ValueError(f"render fragment has {source.count('image={')} images, expected {logo_count}")
+    # Not `== logo_count`: the manifest covers all 762 reviewed organisations,
+    # the drawn network is the strict-review subset and carries fewer of them.
+    # What must hold is that every image the fragment names is a manifest logo
+    # asset -- no stray path, no silently dropped column.
+    assets = {(row["cc"], row["tid"]) for row in manifest["nodes"] if row["result"] == "logo"}
+    drawn = re.findall(r"image=\{([^}]*)\}", image_fragment.read_text(encoding="utf-8"))
+    stray = [p for p in drawn
+             if (PurePosixPath(p).parent.name, PurePosixPath(p).stem) not in assets]
+    if stray:
+        raise ValueError(f"render fragment names {len(stray)} non-manifest images, e.g. {stray[0]}")
+    if not drawn:
+        raise ValueError("render fragment contains no images at all")
+    print(f"render: {len(drawn)} of {len(assets)} reviewed logos are drawn by the network")
     pdfs = {}
     for theme in ("light", "dark"):
         for label, fragment in (("images", image_fragment), ("control", control_fragment)):

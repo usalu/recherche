@@ -39,8 +39,15 @@ X_IMG, X_NR, X_NAME, X_CODE, X_REL, X_Q = 0.0, 5.5, 14.0, 80.5, 91.5, 176.0
 NAME_MAX = 44
 REL_MAX = 60
 ROWS_PER_PAGE = 66
-IMG_MM = 3.6   # Logo-Kantenlaenge in der Zeile; PITCH ist 3.35, also knapp
-               # zeilenhoch und damit ohne Zeilenaufweitung.
+# 3.0, nicht 3.6: bei PITCH 3.35 stossen zwei Logos in aufeinanderfolgenden
+# Zeilen sonst aneinander (gemessen an SOCOTEC/Soprema auf der FR-Seite).
+IMG_MM = 3.0
+# Versatz der optischen Zeilenmitte gegen die Grundlinie. NEGATIV, weil y in
+# diesem Raster nach unten waechst: die Versalhoehe von 6,4 pt liegt rund
+# 0,8 mm ueber der Grundlinie, also bei y - 0,8. Beide Vorzeichen wurden im
+# gebauten PDF nachgemessen (Bildmitte gegen Textgrundlinie derselben Zeile),
+# nicht hergeleitet -- +0.8 setzte das Logo sichtbar in die naechste Zeile.
+IMG_MID = -0.8
 
 # 🔗 Beziehungsband je Land. Von/Nach sind dieselben IDs wie in der
 # Knotentabelle und im Diagramm -- die Kante wird ueber die Endknoten
@@ -120,11 +127,12 @@ def _row(net, e, y, kl, qnum, images, dim: bool = False):
     s = []
     img = (images or {}).get(e)
     if img:
-        # Baseline-anchored like every other cell, so the logo sits on the
-        # text baseline instead of floating between two rows.
-        s.append(r"\node[anchor=base west, inner sep=0] at (%.1f,%.2f) "
-                 r"{\includegraphics[width=%.2fmm, height=%.2fmm]{%s}};"
-                 % (X_IMG, y + 0.3, IMG_MM, IMG_MM, img))
+        # \SemioLogoFit statt \includegraphics: derselbe Resolver wie bei jedem
+        # anderen Logo im Bericht, also -dark-Variante im Dark-Build und ein
+        # leerer Platzhalter statt eines TeX-Fehlers, wenn die Datei fehlt.
+        s.append(r"\node[anchor=west, inner sep=0] at (%.1f,%.2f) "
+                 r"{\SemioLogoFit{%.2fmm}{%.2fmm}{%s}};"
+                 % (X_IMG, y + IMG_MID, IMG_MM, IMG_MM, img))
     s += [
         r"\node[anchor=base west, font=\SemioMono\fontsize{5.8pt}{6pt}\selectfont, text=%s, "
         r"inner sep=0] at (%.1f,%.2f) {%s};" % (name_col, X_NR, y, esc(net.tid[e])),

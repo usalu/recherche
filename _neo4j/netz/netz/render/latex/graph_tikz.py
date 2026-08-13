@@ -20,27 +20,49 @@ from .vocab import CC_NAME
 from .table_grid import load_kanten
 
 
-def load_image_manifest(path):
-    """Return accepted, existing pilot assets keyed by eid.
+def manifest_rows(path):
+    """Accepted logo rows of the transport manifest, in file order.
+
+    Split out of load_image_manifest so the copy step (cli.sync-images) and
+    the renderers agree on WHICH rows count as shipped without either one
+    re-deriving the rule.
+    """
+    if not path:
+        return []
+    with open(path, encoding="utf-8") as f:
+        data = json.load(f)
+    return [r for r in data.get("nodes", [])
+            if r.get("review_status") == "accepted" and r.get("result") == "logo"
+            and r.get("asset_path") and r.get("eid")]
+
+
+def load_image_manifest(path, asset_root=None, asset_ref=None):
+    """Return accepted, existing assets keyed by eid.
 
     The transport manifest is deliberately optional. Invalid or incomplete
     rows never change the historical rendering path; they are ignored here
     and reported by the dedicated pilot validator instead.
+
+    With asset_root/asset_ref the emitted path is the one the REPORT uses --
+    `asset/akteur/FR/M47.png`, resolved by the TeX run against its own
+    working directory, exactly like `asset/projekt/...` and `asset/logo/...`
+    already are. Existence is then checked against the copy under
+    asset_root, not against the review workspace: a fragment must never name
+    a file that only exists on the machine that generated it. Without them
+    the historical absolute path into the review workspace is emitted, which
+    is what the pilot's own imageless/rendered control runs still expect.
     """
-    if not path:
-        return {}
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
-    base = os.path.dirname(os.path.abspath(path))
     result = {}
-    for row in data.get("nodes", []):
-        if row.get("review_status") != "accepted" or row.get("result") != "logo":
-            continue
-        asset = row.get("asset_path") or ""
-        if not asset:
+    base = os.path.dirname(os.path.abspath(path)) if path else ""
+    for row in manifest_rows(path):
+        asset = row["asset_path"]
+        if asset_root and asset_ref:
+            rel = "%s/%s.png" % (row.get("cc"), row.get("tid"))
+            if os.path.isfile(os.path.join(asset_root, *rel.split("/"))):
+                result[row["eid"]] = "%s/%s" % (asset_ref.rstrip("/"), rel)
             continue
         resolved = asset if os.path.isabs(asset) else os.path.join(base, asset)
-        if os.path.isfile(resolved) and row.get("eid"):
+        if os.path.isfile(resolved):
             result[row["eid"]] = os.path.abspath(resolved).replace("\\", "/")
     return result
 

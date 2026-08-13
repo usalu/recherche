@@ -196,7 +196,12 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertIn("343 `logo`, 419 `none`", handoff)
         self.assertIn("50 % Logo-Deckkraft", handoff)
         self.assertIn("kein Neo4j-Write", handoff)
-        self.assertIn("noch nicht ausgeführte schlussstrecke", handoff.lower())
+        # finalize/validate sind am 13.08.2026 gelaufen, render/patch nicht.
+        # Geprueft wird deshalb nicht mehr eine Ueberschrift, sondern dass die
+        # Grenze selbst dokumentiert bleibt: was noch aussteht und dass die
+        # Gesamtuebernahme vorlaeufig ist.
+        self.assertIn("**noch nicht gelaufen:**", handoff.lower())
+        self.assertIn("bulk_suggestion_acceptance_provisional", handoff)
 
     def test_review_state_blocks_rejected_candidates(self):
         state = collection.review_state()

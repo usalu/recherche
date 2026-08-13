@@ -564,6 +564,38 @@ def remove_edge_background(im: Image.Image) -> Image.Image:
     return im
 
 
+def is_opaque_tile(im: Image.Image) -> bool:
+    """Return whether the artwork is a solid square tile, corners aside.
+
+    The corner test in `has_flat_opaque_backdrop` misses two very common tile
+    shapes: a rounded-corner app icon (its four corners are transparent, so the
+    alpha check rejects it) and a tile whose corners carry different colours
+    (so the tolerance check rejects it).  Both then went through `safe_contain`,
+    which shrinks the artwork inside the node circle -- and a shrunk tile reads
+    as a rectangular plate floating in the node, which is exactly what a node
+    logo must never look like.  Measured on the 2026-08 set: 14 of 343.
+
+    Deliberately narrow.  A freestanding wordmark or emblem never fills 92 % of
+    a near-square bounding box that itself covers 90 % of the frame; those keep
+    the contain treatment so their artwork is never cut.  This test is reached
+    only after `neutral_edge_backdrop`, so a white/black backdrop still goes
+    through the knockout branch and keeps its light/dark tokenisation.
+    """
+    im = im.convert("RGBA")
+    if im.width < 2 or im.height < 2:
+        return False
+    alpha = np.asarray(im.getchannel("A"))
+    ys, xs = np.nonzero(alpha > 24)
+    if xs.size == 0:
+        return False
+    x0, x1, y0, y1 = int(xs.min()), int(xs.max()), int(ys.min()), int(ys.max())
+    width, height = x1 - x0 + 1, y1 - y0 + 1
+    covers_frame = (width * height) / (im.width * im.height) >= 0.90
+    fills_box = float((alpha[y0:y1 + 1, x0:x1 + 1] > 24).mean()) >= 0.92
+    near_square = max(width, height) / min(width, height) <= 1.15
+    return bool(covers_frame and fills_box and near_square)
+
+
 def has_flat_opaque_backdrop(im: Image.Image, tolerance: int = 18) -> bool:
     """Return whether the source has a real, approximately solid rectangular backdrop.
 
@@ -571,16 +603,20 @@ def has_flat_opaque_backdrop(im: Image.Image, tolerance: int = 18) -> bool:
     scaled as a cover image and cropped by the node circle so coloured logo
     tiles can occupy the complete node.  Transparent/freestanding marks keep
     the historical contain treatment so their actual artwork is never cut.
+
+    Two acceptance paths: the historical four-corner test, and `is_opaque_tile`
+    for the rounded/multi-coloured tiles that test cannot see.
     """
     im = im.convert("RGBA")
     if im.width < 2 or im.height < 2:
         return False
     corners = [im.getpixel((0, 0)), im.getpixel((im.width - 1, 0)),
                im.getpixel((0, im.height - 1)), im.getpixel((im.width - 1, im.height - 1))]
-    if any(pixel[3] < 250 for pixel in corners):
-        return False
-    return all(max(pixel[channel] for pixel in corners) - min(pixel[channel] for pixel in corners) <= tolerance
-               for channel in range(3))
+    if all(pixel[3] >= 250 for pixel in corners) and all(
+            max(pixel[channel] for pixel in corners) - min(pixel[channel] for pixel in corners) <= tolerance
+            for channel in range(3)):
+        return True
+    return is_opaque_tile(im)
 
 
 def neutral_edge_backdrop(im: Image.Image) -> tuple[str, int] | None:
@@ -720,13 +756,48 @@ def contain_node_artwork(im: Image.Image, mode: str) -> tuple[Image.Image, str]:
     return apply_circle_crop(canvas), mode
 
 
+def is_solid_colour_block(im: Image.Image) -> bool:
+    """Return whether the opaque artwork is one solid, saturated square block.
+
+    Used to tell a coloured brand tile that merely sits on a white page margin
+    from a wordmark that sits on a white background.  Once the neutral margin is
+    knocked out, the tile leaves a filled square and the wordmark leaves
+    letterforms, so the fill ratio of the bounding box separates them cleanly:
+    measured on the 2026-08 set, the one tile scores 0.99 fill / 1.00 chroma and
+    the next candidate 0.75 fill / 0.00 chroma.  Nothing sits in between.
+    """
+    im = im.convert("RGBA")
+    array = np.asarray(im)
+    alpha = array[:, :, 3]
+    ys, xs = np.nonzero(alpha > 24)
+    if xs.size == 0:
+        return False
+    x0, x1, y0, y1 = int(xs.min()), int(xs.max()), int(ys.min()), int(ys.max())
+    width, height = x1 - x0 + 1, y1 - y0 + 1
+    if max(width, height) / min(width, height) > 1.15:
+        return False
+    if float((alpha[y0:y1 + 1, x0:x1 + 1] > 24).mean()) < 0.92:
+        return False
+    rgb = array[:, :, :3][alpha > 24].astype(np.int32)
+    saturation = rgb.max(axis=1) - rgb.min(axis=1)
+    return bool(float(np.mean(saturation > 40)) >= 0.5)
+
+
 def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image, str]:
     """Prepare a node asset using circle-cover or safe contain as appropriate."""
     original = Image.open(source).convert("RGBA")
     neutral_backdrop = neutral_edge_backdrop(original)
     if neutral_backdrop is not None:
         separated = neutral_backdrop_to_transparency(original, theme, neutral_backdrop)
-        return contain_node_artwork(separated, "neutral_knockout")
+        # A coloured tile on a white page margin is NOT a neutral-backdrop mark.
+        # Knocking it out contains the tile inside the circle (a rectangular
+        # plate) and runs the brand colours through the light/dark tokeniser,
+        # which recolours them -- R-Place shipped indigo/orange as
+        # periwinkle/salmon in light and navy/brown in dark.  Fall through to
+        # circle-cover instead: the colours stay exactly as the source has them
+        # and both themes show the same tile.
+        if not is_solid_colour_block(separated):
+            return contain_node_artwork(separated, "neutral_knockout")
     if has_flat_opaque_backdrop(original):
         scale = max(FINAL_SIZE / original.width, FINAL_SIZE / original.height)
         resized = original.resize((max(FINAL_SIZE, round(original.width * scale)),
