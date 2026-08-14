@@ -1131,7 +1131,7 @@ def command_finalize(_args):
             dest.parent.mkdir(parents=True, exist_ok=True)
             canvas, crop_mode = pilot.prepare_node_canvas(source, theme="light")
             canvas = apply_logo_opacity(canvas, decision.get("logo_opacity_percent", 100))
-            canvas.save(dest, "PNG", optimize=True)
+            pilot.save_png(canvas, dest)
             dark_dest = None
             if crop_mode == "neutral_knockout":
                 dark_dest = FINAL / node["cc"] / f"{node['tid']}-dark.png"
@@ -1139,7 +1139,7 @@ def command_finalize(_args):
                 dark_canvas = apply_logo_opacity(dark_canvas, decision.get("logo_opacity_percent", 100))
                 if dark_mode != crop_mode:
                     raise ValueError(f"{node['key']}: theme crop modes differ")
-                dark_canvas.save(dark_dest, "PNG", optimize=True)
+                pilot.save_png(dark_canvas, dark_dest)
             row.update({"asset_path": str(dest.relative_to(FULL)).replace("\\", "/"),
                         "dark_asset_path": (str(dark_dest.relative_to(FULL)).replace("\\", "/")
                                             if dark_dest else None),

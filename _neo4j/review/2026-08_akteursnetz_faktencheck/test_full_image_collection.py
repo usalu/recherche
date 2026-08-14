@@ -128,13 +128,19 @@ class FullImageCollectionTests(unittest.TestCase):
         review = load("full_asset_review.json")
         suggestions = {row["key"]: row for row in load("suggestions.json")["nodes"]}
         self.assertEqual(len(review["nodes"]), 762)
-        self.assertEqual(review["logo_opacity_percent"], 50)
+        # Not a fixed number: the print opacity was raised from 50 to 100 on
+        # 2026-08-13 because at 50 % every mark blends with the page and reads
+        # differently in light and dark. What must hold is that the header and
+        # every row agree, and that raising it changed nothing else -- same
+        # candidate, same result, still provisional.
+        opacity = review["logo_opacity_percent"]
+        self.assertIn(opacity, range(1, 101))
         self.assertTrue(review["provisional"])
         for decision in review["nodes"]:
             suggestion = suggestions[decision["key"]]
             self.assertEqual(decision["result"], suggestion["suggested_result"])
             self.assertEqual(decision["candidate_id"], suggestion["suggested_candidate_id"])
-            self.assertEqual(decision["logo_opacity_percent"], 50)
+            self.assertEqual(decision["logo_opacity_percent"], opacity)
             self.assertTrue(decision["provisional"])
 
     def test_logo_opacity_scales_alpha_only(self):

@@ -18,6 +18,7 @@ import math
 import mimetypes
 import os
 import re
+import time
 import sys
 import urllib.error
 import urllib.parse
@@ -576,10 +577,17 @@ def is_opaque_tile(im: Image.Image) -> bool:
     logo must never look like.  Measured on the 2026-08 set: 14 of 343.
 
     Deliberately narrow.  A freestanding wordmark or emblem never fills 92 % of
-    a near-square bounding box that itself covers 90 % of the frame; those keep
-    the contain treatment so their artwork is never cut.  This test is reached
-    only after `neutral_edge_backdrop`, so a white/black backdrop still goes
-    through the knockout branch and keeps its light/dark tokenisation.
+    a bounding box that itself covers 90 % of the frame; those keep the contain
+    treatment so their artwork is never cut.  This test is reached only after
+    `neutral_edge_backdrop`, so a white/black backdrop still goes through the
+    knockout branch and keeps its light/dark tokenisation.
+
+    Aspect ratio is deliberately NOT part of the test.  A wide banner of solid
+    brand colour is the same defect as a square one -- 7 further sources are
+    exactly that, and requiring a near-square box left them contained.  A banner
+    cover-cropped to the circle loses the ends of its wordmark, but a wordmark is
+    unreadable at 4.55 mm either way, and a clean brand-coloured disc is what the
+    node is meant to show.
     """
     im = im.convert("RGBA")
     if im.width < 2 or im.height < 2:
@@ -590,10 +598,13 @@ def is_opaque_tile(im: Image.Image) -> bool:
         return False
     x0, x1, y0, y1 = int(xs.min()), int(xs.max()), int(ys.min()), int(ys.max())
     width, height = x1 - x0 + 1, y1 - y0 + 1
+    # 0.88, not 0.92: a squircle app icon fills about 0.90 of its box, and at
+    # 0.92 the one squircle in this set stayed contained.  A true circle fills
+    # 0.785 and needs no cover treatment, so the band between is empty --
+    # measured: 0.900, then 0.842, 0.803, then a cluster at 0.785.
     covers_frame = (width * height) / (im.width * im.height) >= 0.90
-    fills_box = float((alpha[y0:y1 + 1, x0:x1 + 1] > 24).mean()) >= 0.92
-    near_square = max(width, height) / min(width, height) <= 1.15
-    return bool(covers_frame and fills_box and near_square)
+    fills_box = float((alpha[y0:y1 + 1, x0:x1 + 1] > 24).mean()) >= 0.88
+    return bool(covers_frame and fills_box)
 
 
 def has_flat_opaque_backdrop(im: Image.Image, tolerance: int = 18) -> bool:
@@ -756,6 +767,40 @@ def contain_node_artwork(im: Image.Image, mode: str) -> tuple[Image.Image, str]:
     return apply_circle_crop(canvas), mode
 
 
+def save_png(canvas: Image.Image, dest: Path, attempts: int = 6):
+    """Write a PNG, tolerating a transient lock on the destination.
+
+    finalize writes ~420 files back to back; on this Windows box a real-time
+    scanner intermittently still holds the file it just saw, and the next
+    `open(..., "w+b")` fails with EINVAL.  The failing name moved from run to
+    run, which is what rules out a bad image and rules in the scanner.  Writing
+    to a sibling temp file and renaming keeps the destination valid at every
+    moment, and the short backoff covers the scan window.
+    """
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    tmp = dest.with_name(dest.name + ".part")
+    last = None
+    for attempt in range(attempts):
+        try:
+            canvas.save(tmp, "PNG", optimize=True)
+            os.replace(tmp, dest)
+            return
+        except OSError as error:
+            last = error
+            time.sleep(0.05 * (attempt + 1))
+    tmp.unlink(missing_ok=True)
+    raise OSError(f"{dest}: still unwritable after {attempts} attempts ({last})")
+
+
+def _opaque_bounds(im: Image.Image) -> tuple[int, int, int, int]:
+    """(left, upper, right, lower) of the visibly opaque artwork, PIL-crop style."""
+    alpha = np.asarray(im.convert("RGBA"))[:, :, 3]
+    ys, xs = np.nonzero(alpha > 24)
+    if xs.size == 0:
+        return (0, 0, im.width, im.height)
+    return (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+
+
 def is_solid_colour_block(im: Image.Image) -> bool:
     """Return whether the opaque artwork is one solid, saturated square block.
 
@@ -798,6 +843,11 @@ def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image
         # and both themes show the same tile.
         if not is_solid_colour_block(separated):
             return contain_node_artwork(separated, "neutral_knockout")
+        # Cover the circle with the TILE, not with the page it sits on. The
+        # knockout has already found the tile's edge, so reuse that bounding box
+        # -- covering the untrimmed source would just centre the plate on a
+        # white disc, which is the same defect one step later.
+        original = original.crop(_opaque_bounds(separated))
     if has_flat_opaque_backdrop(original):
         scale = max(FINAL_SIZE / original.width, FINAL_SIZE / original.height)
         resized = original.resize((max(FINAL_SIZE, round(original.width * scale)),
