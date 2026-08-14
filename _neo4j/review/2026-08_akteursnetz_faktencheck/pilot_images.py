@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import collections
 import datetime as dt
+import gzip
 import hashlib
 import html.parser
 import io
@@ -69,7 +70,13 @@ BLOCKED_SUGGESTION_HOSTS = {
     "instagram.com", "youtube.com", "vimeo.com", "researchgate.net",
     "archdaily.com", "dezeen.com", "springer.com", "mdpi.com",
 }
-USER_AGENT = "Semio actor-network image pilot/1.0 (research; no affiliation)"
+# A number of official public-sector sites reject non-browser tokens before
+# serving even their public HTML and logo files. Keep the project identifier
+# while using a browser-compatible prefix so the reproducible collector sees
+# the same public page as the human reviewer.
+USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+              "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0 Safari/537.36 "
+              "Semio-actor-network-image-review/1.0")
 MAX_DOWNLOAD = 12 * 1024 * 1024
 FINAL_SIZE = 256
 SAFE_RADIUS = 119.0  # 93% of the 128px node radius
@@ -280,7 +287,9 @@ class IconParser(html.parser.HTMLParser):
         self.base = ""
         self.candidates = []
         self.stylesheets = []
+        self.manifests = []
         self.header_depth = 0
+        self.nav_depth = 0
         self.json_ld_depth = 0
         self.json_ld_parts = []
 
@@ -291,22 +300,32 @@ class IconParser(html.parser.HTMLParser):
             self.base = a["href"]
         if tag == "header":
             self.header_depth += 1
+        if tag == "nav":
+            self.nav_depth += 1
         if tag == "link" and a.get("href"):
             rel = set(a.get("rel", "").lower().split())
             if "stylesheet" in rel:
                 self.stylesheets.append(a["href"])
+            if "manifest" in rel:
+                self.manifests.append(a["href"])
             if "apple-touch-icon" in rel or "apple-touch-icon-precomposed" in rel:
                 self.candidates.append((1, "apple_touch", a["href"]))
-            elif "icon" in rel or "shortcut" in rel:
+            elif "icon" in rel or "shortcut" in rel or "mask-icon" in rel:
                 self.candidates.append((2, "declared_icon", a["href"]))
         if tag == "meta" and a.get("content"):
             prop = (a.get("property") or a.get("name") or "").lower()
             if prop == "og:image":
                 self.candidates.append((4, "og_image", a["content"]))
-        if tag == "img" and a.get("src"):
-            marker = " ".join((a.get("alt", ""), a.get("class", ""), a.get("id", ""), a["src"])).lower()
-            if self.header_depth and any(word in marker for word in ("logo", "brand", "wordmark", "identity")):
-                self.candidates.append((5, "header_logo", a["src"]))
+            if prop in {"twitter:image", "twitter:image:src", "msapplication-tileimage"}:
+                self.candidates.append((4, "declared_icon", a["content"]))
+        if tag in {"img", "source", "object", "embed"}:
+            urls = [a.get(key, "") for key in ("src", "data-src", "data-lazy-src", "data-original", "data")]
+            for srcset in (a.get("srcset", ""), a.get("data-srcset", "")):
+                urls.extend(part.strip().split()[0] for part in srcset.split(",") if part.strip())
+            marker = " ".join(a.values()).lower()
+            identified = any(word in marker for word in ("logo", "brand", "wordmark", "logotype", "identity"))
+            if identified or ((self.header_depth or self.nav_depth) and tag == "img"):
+                self.candidates.extend((5, "header_logo", url) for url in urls if url)
         if tag == "script" and "ld+json" in a.get("type", "").lower():
             self.json_ld_depth = 1
             self.json_ld_parts = []
@@ -318,6 +337,8 @@ class IconParser(html.parser.HTMLParser):
     def handle_endtag(self, tag):
         if tag.lower() == "header" and self.header_depth:
             self.header_depth -= 1
+        if tag.lower() == "nav" and self.nav_depth:
+            self.nav_depth -= 1
         if tag.lower() == "script" and self.json_ld_depth:
             self.json_ld_depth = 0
             try:
@@ -361,22 +382,35 @@ def structured_organisation_logos(value):
 def css_header_logo_candidates(css_text: str, stylesheet_url: str):
     """Find image URLs used by header/navigation logo CSS rules."""
     output = []
-    for match in re.finditer(r"([^{}]*(?:header|nav)[^{}]*logo[^{}]*)\{([^{}]*)\}",
-                             css_text, re.I):
-        declarations = match.group(2)
+    # Parse one flat rule at a time. The former unbounded selector regex could
+    # backtrack quadratically on multi-megabyte minified bundles.
+    for match in re.finditer(r"([^{}]{0,4096})\{([^{}]{0,131072})\}", css_text):
+        selector, declarations = match.groups()
+        if not re.search(r"logo|wordmark|brandmark", selector, re.I):
+            continue
         for url_match in re.finditer(r"url\(\s*['\"]?([^)'\"]+)", declarations, re.I):
             output.append(urllib.parse.urljoin(stylesheet_url, html.unescape(url_match.group(1).strip())))
     return output
 
 
 def request_bytes(url: str) -> tuple[bytes, str, str]:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "image/*,text/html;q=0.9,*/*;q=0.5"})
+    split = urllib.parse.urlsplit(url)
+    referer = urllib.parse.urlunsplit((split.scheme or "https", split.netloc, "/", "", ""))
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT,
+                                               "Accept": "image/*,text/html;q=0.9,*/*;q=0.5",
+                                               "Accept-Encoding": "gzip",
+                                               "Referer": referer})
     with urllib.request.urlopen(req, timeout=20) as response:
         content_type = response.headers.get_content_type()
         final_url = response.geturl()
         data = response.read(MAX_DOWNLOAD + 1)
+        content_encoding = response.headers.get("Content-Encoding", "").lower()
     if len(data) > MAX_DOWNLOAD:
         raise ValueError("download exceeds 12 MiB")
+    if content_encoding == "gzip" or data.startswith(b"\x1f\x8b"):
+        data = gzip.decompress(data)
+        if len(data) > MAX_DOWNLOAD:
+            raise ValueError("decompressed download exceeds 12 MiB")
     return data, content_type, final_url
 
 
@@ -386,6 +420,8 @@ def discover_candidates(official_url: str):
     candidates = [
         (1, "apple_touch", urllib.parse.urljoin(root, "/apple-touch-icon.png")),
         (1, "apple_touch", urllib.parse.urljoin(root, "/apple-touch-icon-precomposed.png")),
+        (2, "declared_icon", urllib.parse.urljoin(root, "/logo.svg")),
+        (2, "declared_icon", urllib.parse.urljoin(root, "/logo.png")),
         (3, "favicon", urllib.parse.urljoin(root, "/favicon.ico")),
     ]
     page_error = ""
@@ -393,15 +429,31 @@ def discover_candidates(official_url: str):
         data, content_type, final_url = request_bytes(official_url)
         if content_type == "text/html" or b"<html" in data[:1000].lower():
             parser = IconParser()
-            parser.feed(data.decode("utf-8", errors="replace"))
+            # Headers, declared icons and manifests live at the beginning of
+            # the document. Bounding parser input prevents modern sites with
+            # multi-megabyte hydration payloads from stalling a batch.
+            parser.feed(data[:3_000_000].decode("utf-8", errors="replace"))
             base = urllib.parse.urljoin(final_url, parser.base) if parser.base else final_url
             candidates.extend((p, k, urllib.parse.urljoin(base, u)) for p, k, u in parser.candidates)
+            manifests = list(parser.manifests) + ["/site.webmanifest", "/manifest.json"]
+            for manifest in manifests:
+                try:
+                    manifest_data, _, manifest_final = request_bytes(urllib.parse.urljoin(base, manifest))
+                    manifest_value = json.loads(manifest_data.decode("utf-8", errors="replace"))
+                    for icon in manifest_value.get("icons", []):
+                        if isinstance(icon, dict) and icon.get("src"):
+                            candidates.append((2, "declared_icon", urllib.parse.urljoin(manifest_final, icon["src"])))
+                except Exception:
+                    continue
             for stylesheet in parser.stylesheets[:6]:
                 stylesheet_url = urllib.parse.urljoin(base, stylesheet)
                 try:
                     css_data, css_type, css_final = request_bytes(stylesheet_url)
                     if css_type in {"text/css", "text/plain", "application/octet-stream"} or stylesheet_url.lower().split("?", 1)[0].endswith(".css"):
-                        css_text = css_data.decode("utf-8", errors="replace")
+                        # Logo rules are normally in the primary application
+                        # bundle. A deterministic bound keeps minified vendor
+                        # CSS from dominating collection time and memory.
+                        css_text = css_data[:2_000_000].decode("utf-8", errors="replace")
                         candidates.extend((5, "header_logo", url)
                                           for url in css_header_logo_candidates(css_text, css_final))
                 except Exception:
@@ -563,6 +615,235 @@ def remove_edge_background(im: Image.Image) -> Image.Image:
             if x + 1 < im.width: queue.append((x + 1, y))
             if y + 1 < im.height: queue.append((x, y + 1))
     return im
+
+
+# Tuned against the real 2026-08 circle_cover set (56 assets), not guessed.
+# Each value is named because the classification moves under small changes to
+# any of them -- two assets sit within 1% of the tolerance-14 boundary alone.
+EXTEND_FLOOD_TOLERANCE = 14     # Chebyshev RGB step, LOCAL per BFS hop
+EXTEND_WORKING_SIZE = 256       # long edge of the downsampled copy the flood
+                                # runs on; mirrors neutral_edge_backdrop's own
+                                # 128px sample, both for speed (a Python BFS
+                                # over BOBI Réemploi's 2314x1000 source took
+                                # 5.7s; this pipeline calls the same
+                                # computation once per browser request in the
+                                # review server) and to blur past JPEG noise
+EXTEND_MARGIN = 0.96            # target radius = 128 * this; leaves ~5px so
+                                # an antialiased mark edge doesn't graze the
+                                # circle's own antialiasing
+EXTEND_MAX_FOREGROUND = 0.85    # above this fraction the flood never
+                                # travelled -- it did not find a backdrop, it
+                                # found almost the whole tile (measured:
+                                # Allibert Matériaux Anciens reaches 0.966)
+EXTEND_CLEAN_ALPHA = 250        # what counts as "opaque" when hunting for a
+                                # replicable edge pixel, matching the alpha
+                                # threshold has_flat_opaque_backdrop already
+                                # uses for its four-corner test
+
+
+def _flood_background_mask(im: Image.Image, tolerance: int = EXTEND_FLOOD_TOLERANCE,
+                            working_size: int = EXTEND_WORKING_SIZE) -> "np.ndarray":
+    """Boolean mask, `im`-sized, of pixels reachable from the border by LOCAL
+    colour similarity -- the actual background, not just "far from one fixed
+    reference colour".
+
+    A neighbour joins the background if it is transparent (alpha<24) or its
+    RGB is within `tolerance` of the ALREADY-background pixel it was reached
+    from, not of a single global reference. That local chaining is what lets
+    a two-tone tile (one colour band over a second, e.g. Van der Wal
+    Sloopwerken's red-over-yellow) register as background end to end --
+    `remove_edge_background` above compares every pixel against one fixed
+    corner-mean colour with tolerance 8 and would only ever knock out ONE of
+    the two bands.
+
+    Vectorised as a fixed-point iteration (repeated one-pixel shifts, ORed
+    in) rather than a Python queue: a pure-Python BFS is the actual bottleneck
+    on a multi-megapixel source and this function also runs live from the
+    review server's HTTP handler. Runs on a downsampled working copy (long
+    edge `working_size`) and the mask is upsampled back with nearest-neighbour
+    so it stays a hard boolean, then resized to the input's exact size.
+    """
+    original_size = im.size
+    scale = min(1.0, working_size / max(original_size))
+    work = im.resize((max(1, round(original_size[0] * scale)),
+                      max(1, round(original_size[1] * scale))),
+                     Image.Resampling.LANCZOS) if scale < 1.0 else im
+    array = np.asarray(work.convert("RGBA"))
+    height, width = array.shape[:2]
+    rgb = array[:, :, :3].astype(np.int16)
+    transparent = array[:, :, 3] < 24
+    background = transparent.copy()
+    background[0, :] = True
+    background[-1, :] = True
+    background[:, 0] = True
+    background[:, -1] = True
+
+    for _ in range(height + width):  # worst case: a single-pixel-wide chain
+        grew = False
+        for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            src = np.roll(background, (dy, dx), axis=(0, 1))
+            base = np.roll(rgb, (dy, dx), axis=(0, 1))
+            close = (np.abs(rgb - base).max(axis=2) <= tolerance) & src & ~background
+            close |= transparent & ~background
+            if close.any():
+                background |= close
+                grew = True
+        if not grew:
+            break
+
+    if work is not im:
+        mask_image = Image.fromarray(background.astype(np.uint8) * 255, "L")
+        mask_image = mask_image.resize(original_size, Image.Resampling.NEAREST)
+        background = np.asarray(mask_image) > 0
+    return background
+
+
+def _extend_geometry(im: Image.Image, background: "np.ndarray",
+                      margin: float = EXTEND_MARGIN) -> float | None:
+    """Fit-scale for `im` given its background mask, or None if extending is
+    not safe -- callers keep the historical cover crop in every None case.
+
+    None covers every way the flood mask fails to mean "the mark": no
+    foreground at all (the mark touches the frame and floods away with it --
+    e.g. Provincie Gelderland), or near-total foreground (the flood never
+    left the border -- e.g. Allibert Matériaux Anciens at 96.6%, which is a
+    "no real backdrop found" result, not a "the whole tile is the mark"
+    result). Measured against the mark's own bounding radius from the image
+    centre, never against the tile's background -- a square brand tile must
+    not shrink by root two just to tuck its own coloured CORNERS inside the
+    circle, only as far as its lettering actually demands.
+    """
+    foreground = ~background
+    total = foreground.size
+    if total == 0:
+        return None
+    coverage = float(foreground.sum()) / total
+    if coverage <= 0.0 or coverage > EXTEND_MAX_FOREGROUND:
+        return None
+    ys, xs = np.nonzero(foreground)
+    cy, cx = (im.height - 1) / 2.0, (im.width - 1) / 2.0
+    radius = float(np.hypot(xs - cx, ys - cy).max())
+    if radius <= 0:
+        return None
+    return (FINAL_SIZE / 2.0 * margin) / radius
+
+
+def _clean_edge_line(background: "np.ndarray", alpha: "np.ndarray", axis: int,
+                      from_start: bool) -> "np.ndarray | None":
+    """Per row (axis=0) or column (axis=1), the first pixel INDEX walking
+    inward from that edge that is both background-classified and opaque
+    (alpha >= EXTEND_CLEAN_ALPHA) -- or None if any row/column has no such
+    pixel at all.
+
+    `_opaque_bounds` only guarantees ONE opaque pixel per boundary line, not
+    the whole line: measured on the real set, 14 of 56 circle_cover sources
+    still carry a partly transparent outer ring after that crop, five of them
+    (including Allibert and DRZ) fully transparent along an entire edge.
+    Replicating that literal edge with `np.pad(mode="edge")` was the first
+    version of this function and it produced exactly the artefact this whole
+    change exists to prevent: a 72-column alpha-11 wedge on one asset, a
+    translucent alpha 179-217 ring on another -- the report's node fill
+    showing through what should be a solid disc. Walking inward to a genuinely
+    opaque background pixel is what "replicated" is allowed to mean.
+    """
+    h, w = background.shape
+    length = h if axis == 1 else w
+    depth = w if axis == 1 else h
+    opaque = alpha >= EXTEND_CLEAN_ALPHA
+    clean = background & opaque
+    order = clean if from_start else np.flip(clean, axis=axis)
+    first = np.argmax(order, axis=axis)
+    found = np.take_along_axis(order, np.expand_dims(first, axis), axis=axis).squeeze(axis)
+    if not bool(found.all()):
+        return None
+    if not from_start:
+        first = depth - 1 - first
+    return first
+
+
+def _running_median(values: "np.ndarray", window: int = 9) -> "np.ndarray":
+    """Odd-window running median along a 1-D (or last-axis) array, edges held
+    by clamped padding. Kills single-pixel JPEG/dither outliers in a
+    replicated edge line without smearing an intentional gradient -- BOBI
+    Réemploi's backdrop is one, and a median (unlike a mean) does not blur it."""
+    pad = window // 2
+    padded = np.pad(values, [(0, 0)] * (values.ndim - 1) + [(pad, pad)], mode="edge")
+    stack = np.stack([padded[..., i:i + values.shape[-1]] for i in range(window)], axis=-1)
+    return np.median(stack, axis=-1)
+
+
+def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
+                                scale: float) -> Image.Image | None:
+    """Scale `im` by `scale`, then bring it to exactly FINAL_SIZE x FINAL_SIZE
+    by replicating a CLEAN (opaque, background-classified, median-smoothed)
+    edge line outward on any side that still falls short -- never a foreign
+    fill colour, never the raw possibly-translucent border. Centre-crops any
+    side that already exceeds FINAL_SIZE (`_extend_geometry` guarantees only
+    background can still overhang there, never the mark). Returns None if any
+    side needing extension has no clean edge at all -- caller falls back to
+    the historical cover crop for that source.
+    """
+    new_size = (max(1, round(im.width * scale)), max(1, round(im.height * scale)))
+    resized = im.resize(new_size, Image.Resampling.LANCZOS)
+    mask = _flood_background_mask(resized)
+    array = np.asarray(resized.convert("RGBA")).astype(np.int32)
+
+    def extend_rows(a, m, depth, at_top):
+        """Add `depth` replicated rows at the top or bottom of `a`."""
+        row = _clean_edge_line(m, a[:, :, 3], axis=0, from_start=at_top)  # one index per COLUMN
+        if row is None:
+            return None, None
+        cols = np.arange(a.shape[1])
+        edge = _running_median(a[row, cols, :].astype(np.float64).T).T
+        edge[:, 3] = 255  # a translucent ring is worse than none
+        band = np.broadcast_to(edge.astype(np.int32)[None, :, :], (depth, a.shape[1], 4)).copy()
+        mask_band = np.ones((depth, a.shape[1]), dtype=bool)  # replicated pixels ARE background
+        return ((np.concatenate([band, a], axis=0), np.concatenate([mask_band, m], axis=0)) if at_top
+                else (np.concatenate([a, band], axis=0), np.concatenate([m, mask_band], axis=0)))
+
+    def extend_cols(a, m, depth, at_left):
+        """Add `depth` replicated columns at the left or right of `a`."""
+        col = _clean_edge_line(m, a[:, :, 3], axis=1, from_start=at_left)  # one index per ROW
+        if col is None:
+            return None, None
+        rows = np.arange(a.shape[0])
+        edge = _running_median(a[rows, col, :].astype(np.float64).T).T
+        edge[:, 3] = 255
+        band = np.broadcast_to(edge.astype(np.int32)[:, None, :], (a.shape[0], depth, 4)).copy()
+        mask_band = np.ones((a.shape[0], depth), dtype=bool)
+        return ((np.concatenate([band, a], axis=1), np.concatenate([mask_band, m], axis=1)) if at_left
+                else (np.concatenate([a, band], axis=1), np.concatenate([m, mask_band], axis=1)))
+
+    def fit(a, m, axis, extend_before, extend_after):
+        current = a.shape[axis]
+        if current > FINAL_SIZE:
+            start = (current - FINAL_SIZE) // 2
+            index = [slice(None)] * a.ndim
+            index[axis] = slice(start, start + FINAL_SIZE)
+            return a[tuple(index)], m[tuple(index[:2])]
+        if current == FINAL_SIZE:
+            return a, m
+        before = (FINAL_SIZE - current) // 2
+        after = FINAL_SIZE - current - before
+        if before:
+            a, m = extend_before(a, m, before)
+            if a is None:
+                return None, None
+        if after:
+            a, m = extend_after(a, m, after)
+            if a is None:
+                return None, None
+        return a, m
+
+    array, mask = fit(array, mask, 0, lambda a, m, d: extend_rows(a, m, d, True),
+                      lambda a, m, d: extend_rows(a, m, d, False))
+    if array is None:
+        return None
+    array, mask = fit(array, mask, 1, lambda a, m, d: extend_cols(a, m, d, True),
+                      lambda a, m, d: extend_cols(a, m, d, False))
+    if array is None:
+        return None
+    return Image.fromarray(array.astype(np.uint8), "RGBA")
 
 
 def is_opaque_tile(im: Image.Image) -> bool:
@@ -732,6 +1013,32 @@ def tokenise_transparent_neutral_mark(im: Image.Image, theme: str) -> Image.Imag
     return Image.fromarray(output, "RGBA")
 
 
+def blacken_to_ink(im: Image.Image, ink: tuple[int, int, int] = SEMIO_DARK,
+                    luminance_max: int = 70, chroma_max: int = 40) -> Image.Image:
+    """Recolour only near-black pixels to `ink`; every other pixel is untouched.
+
+    Unlike `tokenise_transparent_neutral_mark`, this is unconditional and
+    per-pixel -- it does not require 85% of the mark to be neutral before it
+    acts.  That gate exists so a genuinely coloured logo is never recoloured
+    wholesale; this function is for the opposite case, where a logo is MOSTLY
+    saturated brand colour but carries a thin black tagline or icon stroke
+    that the 85% rule correctly leaves alone.  Only used together with a baked
+    light backdrop (see `prepare_light_backdrop_canvas`): once the backdrop no
+    longer depends on the report's theme, black elements just need to read as
+    ink, not be inverted per theme the way `tokenise_transparent_neutral_mark`
+    inverts a fully neutral mark.
+    """
+    pixels = np.array(im.convert("RGBA"), dtype=np.uint8)
+    visible = pixels[:, :, 3] >= 8
+    rgb = pixels[:, :, :3].astype(np.int32)
+    luminance = 0.299 * rgb[:, :, 0] + 0.587 * rgb[:, :, 1] + 0.114 * rgb[:, :, 2]
+    chroma = rgb.max(axis=2) - rgb.min(axis=2)
+    near_black = visible & (luminance <= luminance_max) & (chroma <= chroma_max)
+    output = pixels.copy()
+    output[near_black, :3] = ink
+    return Image.fromarray(output, "RGBA")
+
+
 def apply_circle_crop(im: Image.Image) -> Image.Image:
     """Mask a 256px node asset to its final circle with antialiased edges."""
     im = im.convert("RGBA")
@@ -746,8 +1053,17 @@ def apply_circle_crop(im: Image.Image) -> Image.Image:
     return im
 
 
-def contain_node_artwork(im: Image.Image, mode: str) -> tuple[Image.Image, str]:
-    """Trim and contain already-separated artwork within the radial safety area."""
+def contain_node_artwork(im: Image.Image, mode: str,
+                          backdrop: tuple[int, int, int] | None = None) -> tuple[Image.Image, str]:
+    """Trim and contain already-separated artwork within the radial safety area.
+
+    `backdrop`, when given, fills the canvas opaquely before the artwork is
+    composited on top -- used by `prepare_light_backdrop_canvas` so the disc
+    is opaque light in both light and dark builds, rather than transparent
+    and dependent on whatever the node fill happens to be.  `apply_circle_crop`
+    still clears everything outside the circle to alpha 0 regardless, since it
+    multiplies the existing alpha by the mask rather than assuming it.
+    """
     bbox = im.getchannel("A").getbbox()
     if not bbox:
         raise ValueError("candidate has no visible pixels")
@@ -755,14 +1071,15 @@ def contain_node_artwork(im: Image.Image, mode: str) -> tuple[Image.Image, str]:
     scale = min((SAFE_RADIUS * 2) / im.width, (SAFE_RADIUS * 2) / im.height)
     im = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))),
                    Image.Resampling.LANCZOS)
-    canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
+    fill = (backdrop + (255,)) if backdrop else (0, 0, 0, 0)
+    canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), fill)
     canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
     max_r = alpha_max_radius(canvas)
     if max_r > SAFE_RADIUS:
         ratio = (SAFE_RADIUS - 1.0) / max_r
         im = im.resize((max(1, int(im.width * ratio)), max(1, int(im.height * ratio))),
                       Image.Resampling.LANCZOS)
-        canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
+        canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), fill)
         canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
     return apply_circle_crop(canvas), mode
 
@@ -828,12 +1145,51 @@ def is_solid_colour_block(im: Image.Image) -> bool:
     return bool(float(np.mean(saturation > 40)) >= 0.5)
 
 
+def prepare_light_backdrop_canvas(source: Path) -> Image.Image:
+    """Bake a permanent light backdrop behind a mark that reads poorly on the
+    report's dark-theme node canvas, and recolour only its near-black pixels.
+
+    Used exclusively for the fixed override list in `dark_backdrop_overrides
+    .json`: marks whose own colours are dark enough that neither automatic
+    path gets them right. `safe_contain` never generates a dark variant at
+    all -- the light file is reused unchanged in the dark build, so a dark
+    logo simply disappears against the near-black canvas. `neutral_knockout`
+    does generate one, but `neutral_backdrop_to_transparency` only recolours
+    the neutral (grayscale) part of a mark; any dark SATURATED brand colour
+    is passed through unchanged in `coloured_mask` and is just as invisible.
+
+    Baking a light disc sidesteps the theme dependency entirely instead of
+    trying to out-guess it per mark: the resulting file is correct in both
+    builds, so `command_finalize` does not generate a `-dark` sibling for it.
+    """
+    original = Image.open(source).convert("RGBA")
+    neutral_backdrop = neutral_edge_backdrop(original)
+    if neutral_backdrop is not None:
+        separated = neutral_backdrop_to_transparency(original, "light", neutral_backdrop)
+        if is_solid_colour_block(separated):
+            original = original.crop(_opaque_bounds(separated))
+            separated = remove_edge_background(original)
+    else:
+        separated = remove_edge_background(original)
+    separated = blacken_to_ink(separated)
+    canvas, _ = contain_node_artwork(separated, "light_backdrop", backdrop=SEMIO_LIGHT)
+    return canvas
+
+
 def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image, str]:
     """Prepare a node asset using circle-cover or safe contain as appropriate."""
     original = Image.open(source).convert("RGBA")
     neutral_backdrop = neutral_edge_backdrop(original)
     if neutral_backdrop is not None:
-        separated = neutral_backdrop_to_transparency(original, theme, neutral_backdrop)
+        # The solid-colour-block DECISION and its crop bounds are always taken
+        # against the light rendering, regardless of which theme was actually
+        # requested: light and dark calls must land on the same branch here or
+        # `command_finalize` raises "theme crop modes differ" mid-run, having
+        # already written some of 343 files. R-Place is currently the one
+        # asset that reaches this sub-path at all; its light/dark separations
+        # happen to already agree, which is luck, not a guarantee -- this
+        # makes the agreement structural instead.
+        reference = neutral_backdrop_to_transparency(original, "light", neutral_backdrop)
         # A coloured tile on a white page margin is NOT a neutral-backdrop mark.
         # Knocking it out contains the tile inside the circle (a rectangular
         # plate) and runs the brand colours through the light/dark tokeniser,
@@ -841,15 +1197,34 @@ def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image
         # periwinkle/salmon in light and navy/brown in dark.  Fall through to
         # circle-cover instead: the colours stay exactly as the source has them
         # and both themes show the same tile.
-        if not is_solid_colour_block(separated):
+        if not is_solid_colour_block(reference):
+            separated = (reference if theme == "light"
+                        else neutral_backdrop_to_transparency(original, theme, neutral_backdrop))
             return contain_node_artwork(separated, "neutral_knockout")
         # Cover the circle with the TILE, not with the page it sits on. The
         # knockout has already found the tile's edge, so reuse that bounding box
         # -- covering the untrimmed source would just centre the plate on a
         # white disc, which is the same defect one step later.
-        original = original.crop(_opaque_bounds(separated))
+        original = original.crop(_opaque_bounds(reference))
     if has_flat_opaque_backdrop(original):
-        scale = max(FINAL_SIZE / original.width, FINAL_SIZE / original.height)
+        cover_scale = max(FINAL_SIZE / original.width, FINAL_SIZE / original.height)
+        # Do not cut the MARK (text/icon) to cover the frame -- shrink just
+        # far enough that the mark itself fits, and replicate the tile's own
+        # background outward to refill the disc. Measured against the mark
+        # alone, never the background: a square tile must not shrink by root
+        # two just to tuck its own coloured corners inside the circle.
+        background = _flood_background_mask(original)
+        fit_scale = _extend_geometry(original, background)
+        if fit_scale is not None and cover_scale > fit_scale:
+            extended = _extend_backdrop_to_canvas(original, background, fit_scale)
+            if extended is not None:
+                return apply_circle_crop(extended), "circle_extend"
+        # Historical cover crop -- unreachable geometry, or `_extend_geometry`
+        # found no plausible mark (touches the frame, or the flood never left
+        # the border), or extending would need a clean edge line that doesn't
+        # exist (a still-transparent ring after `_opaque_bounds`). Every one
+        # of those keeps the tile exactly as it always rendered.
+        scale = cover_scale
         resized = original.resize((max(FINAL_SIZE, round(original.width * scale)),
                                    max(FINAL_SIZE, round(original.height * scale))),
                                   Image.Resampling.LANCZOS)
@@ -871,6 +1246,27 @@ def alpha_max_radius(im: Image.Image) -> float:
     cy = (im.height - 1) / 2
     max_r2 = np.max((xs - cx) ** 2 + (ys - cy) ** 2)
     return math.sqrt(float(max_r2))
+
+
+def inner_disc_min_alpha(im: Image.Image, radius: float = 110.0) -> int:
+    """Lowest alpha value found within `radius` of a 256x256 canvas's centre.
+
+    The permanent guard for the exact defect the first version of
+    `_extend_backdrop_to_canvas` produced: `np.pad(mode="edge")` on a still-
+    partly-transparent border replicated a wedge of alpha 11 into one asset
+    and a translucent alpha 179-217 ring into another -- the node's own fill
+    colour showing through what must be a solid disc. A well-formed
+    `circle_cover`/`circle_extend`/`light_backdrop` asset is fully opaque
+    everywhere well inside the outer contour; 110 leaves clearance before the
+    antialiased circle edge itself starts falling off.
+    """
+    alpha = np.asarray(im.convert("RGBA"))[:, :, 3]
+    yy, xx = np.mgrid[0:im.height, 0:im.width]
+    cx, cy = (im.width - 1) / 2.0, (im.height - 1) / 2.0
+    inside = ((xx - cx) ** 2 + (yy - cy) ** 2) <= radius ** 2
+    if not inside.any():
+        return 255
+    return int(alpha[inside].min())
 
 
 def prepare_final(source: Path, dest: Path):

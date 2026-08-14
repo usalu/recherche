@@ -64,7 +64,7 @@ class Sources:
     kanten_klassifikation_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/kanten_klassifikation.json"
     )
-    # Eight strict-review entries that are programmes, not actors -- rendered
+    # Nine strict-review entries that are programmes, not actors -- rendered
     # as their own report block (render.latex.programme_table), never in the
     # actor figures/tables.
     programme_path: str = (

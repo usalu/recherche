@@ -1,0 +1,26 @@
+{
+  "backup_format": "neo4j-logical-jsonl-v1",
+  "checksums_sha256": {
+    "checksums.sha256": "26e9baedac965656d0c6b17943d2d3e253296bbb0b4188d229dbbd166e479a43",
+    "counts.json": "e3b0d317f26f5d6583184f910307ab7a6432933ebc3fa2b1a3e6623f9a8d35e5",
+    "live_graph.backup.jsonl": "7df4abd8b8f4ab70d3501b85ca8e38d5f27aead045a349a55f76c7b496403f31",
+    "schema_snapshot.json": "dfa65dd864baf5e94197827d657c1bbaa9077383166053c675d516f381610109"
+  },
+  "connection": {
+    "uri": "bolt://localhost:7687",
+    "user": "neo4j"
+  },
+  "counts": {
+    "nodes": 2909,
+    "relationships": 15000
+  },
+  "created_at_utc": "2026-08-14T09:47:20.798440+00:00",
+  "database": "mit-bestand",
+  "files": {
+    "checksums": "checksums.sha256",
+    "counts": "counts.json",
+    "graph": "live_graph.backup.jsonl",
+    "schema": "schema_snapshot.json"
+  },
+  "restore_confirmation": "RESTORE mit-bestand FROM backup_post_apply_pre_repair"
+}

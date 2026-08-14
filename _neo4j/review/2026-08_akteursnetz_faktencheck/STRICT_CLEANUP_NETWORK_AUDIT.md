@@ -3,22 +3,22 @@
 | Kennzahl | Vorher | Nachher | Delta |
 |---|---:|---:|---:|
 | organizations | 762 | 541 | -221 |
-| projects | 97 | 79 | -18 |
-| nodes | 859 | 620 | -239 |
+| projects | 97 | 78 | -19 |
+| nodes | 859 | 619 | -240 |
 | edges | 570 | 268 | -302 |
-| programmes (separate category) | 0 | 8 | +8 |
+| programmes (separate category) | 0 | 9 | +9 |
 
 ## Länder
 
 | Land | Organisationen | Projekte | Knoten | Kanten |
 |---|---:|---:|---:|---:|
-| AT | 19 | 2 | 21 | 15 |
-| BE | 52 | 10 | 62 | 16 |
+| AT | 18 | 3 | 21 | 15 |
+| BE | 52 | 9 | 61 | 16 |
 | CH | 59 | 10 | 69 | 39 |
 | DE | 56 | 12 | 68 | 26 |
 | DK | 44 | 5 | 49 | 13 |
 | FI | 26 | 5 | 31 | 27 |
-| FR | 89 | 6 | 95 | 26 |
+| FR | 90 | 5 | 95 | 26 |
 | GB | 68 | 12 | 80 | 35 |
 | NL | 63 | 12 | 75 | 31 |
 | NO | 29 | 2 | 31 | 15 |

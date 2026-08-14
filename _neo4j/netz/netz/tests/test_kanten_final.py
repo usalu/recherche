@@ -4,6 +4,7 @@ import unittest
 from netz.cli import load_network
 from netz.mechanisms.connectivity import drawn_edge_nodes
 from netz.mechanisms.layout import DEFAULT_FRAME, force_layout
+from netz.render.latex.table_grid import load_kanten
 from netz.sources import DEFAULT
 
 
@@ -13,21 +14,29 @@ def _pairs(path):
 
 
 class FinalKantenActivationTests(unittest.TestCase):
-    def test_final_positive_list_is_the_latex_model_edge_set(self):
-        keep_path = DEFAULT.prune_kanten_final_path.replace(
-            "prune_kanten_final.json", "keep_kanten_final.json"
-        )
-        keep = _pairs(keep_path)
+    def test_strict_classification_is_the_latex_model_edge_set(self):
+        # The old 477-edge positive list predates the strict node cleanup.
+        # The final relationship classification plus strict endpoint set is
+        # now authoritative; five relationships exposed only by reviewed
+        # project->actor re-types are explicitly pruned as well.
         prune = _pairs(DEFAULT.prune_kanten_final_path)
-
-        self.assertEqual(570, len(keep | prune))
-        self.assertFalse(keep & prune)
-        self.assertEqual(477, len(keep))
-        self.assertEqual(93, len(prune))
+        with open(DEFAULT.kanten_klassifikation_path, encoding="utf-8") as handle:
+            reviewed = json.load(handle)
+        self.assertEqual(570, len(reviewed))
+        self.assertEqual(98, len(prune))
 
         network = load_network()
         drawn = {tuple(sorted(pair)) for pair in network.drawn}
-        self.assertEqual(keep, drawn)
+        classified = load_kanten(
+            DEFAULT.kanten_klassifikation_path, network, DEFAULT.merge_strict_path
+        )
+        visible_reviewed = {
+            tuple(sorted(edge["pair"]))
+            for rows in classified.values()
+            for edge in rows
+        }
+        self.assertEqual(268, len(drawn))
+        self.assertEqual(visible_reviewed, drawn)
         self.assertFalse(prune & drawn)
 
         visible = set()
@@ -35,7 +44,7 @@ class FinalKantenActivationTests(unittest.TestCase):
             nodes = drawn_edge_nodes(panel, min_comp=2)
             _, edges = force_layout(panel, nodes, DEFAULT_FRAME)
             visible.update(tuple(sorted(pair)) for pair in edges)
-        self.assertEqual(keep, visible)
+        self.assertEqual(drawn, visible)
 
     def test_kassel_country_correction_is_active_in_latex_only(self):
         network = load_network()

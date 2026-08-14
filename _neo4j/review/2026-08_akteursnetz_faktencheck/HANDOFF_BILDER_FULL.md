@@ -104,7 +104,8 @@ Die vollständige Liste steht in
 | `bilder_full/domains_review.json` | recherchierte Domain- und Identitätsstände |
 | `bilder_full/kandidaten/<LAND>/<TID>/` | Kandidaten und Abrufmetadaten |
 | `bilder_full/suggestions.json` | aktueller Vorschlag für alle 762 Knoten |
-| `bilder_full/full_asset_review.json` | vorläufiger 762/762-Reviewstand bei 50 % |
+| `bilder_full/full_asset_review.json` | vorläufiger 762/762-Reviewstand, Deckkraft 100 % (Sicherung des 50-%-Stands als `.bak-opacity50`) |
+| `dark_backdrop_overrides.json` | 75 Logos mit hellem Backdrop statt Theme-Umfärbung, je mit gemessenem Grund |
 | `bilder_full/final_review/index.json` | Index der 22 visuellen Prüfbögen |
 | `bilder_full/final_review/FINAL_SUGGESTION_AUDIT.md` | menschenlesbarer Vollaudit |
 | `bilder_full/final_review/FINAL_SUGGESTION_AUDIT.json` | maschinenlesbarer Vollaudit |
@@ -225,6 +226,58 @@ python -m netz.cli sync-fragments    # -> ...\zwischenbericht\anhang\akteursnetz
   beide waren unlesbar. Die Prüfung bleibt die Quelle dafür, **welches** Logo
   erscheint — nicht wie kräftig.
 
+## Deckkraft und Dunkel-auf-Dunkel (2026-08-14)
+
+Zwei Korrekturen an der Druckdarstellung, ausdrücklich vom Benutzer angewiesen,
+beide nur an der Zeichnung/Auslieferung — keine Logoentscheidung, keine
+Kandidatenwahl, kein Quellen- oder Neo4j-Bezug verändert.
+
+**Deckkraft 50 % → 100 %.** `full_asset_review.json` trug `logo_opacity_percent:
+50`; jede Marke mischte sich damit mit dem Seitenhintergrund und erschien in
+Light und Dark unterschiedlich eingefärbt. Kopfwert und alle 762 Zeilen auf 100
+gesetzt, Kandidaten-ID, SHA-256 und `provisional: true` unverändert. Sicherung
+des alten Stands liegt als `full_asset_review.json.bak-opacity50` daneben.
+
+**Dunkel-auf-Dunkel behoben, 75 Logos.** Zwei getrennte Ursachen, ein
+gemeinsamer Befund: bei voller Deckkraft verschwanden manche Marken im
+Dark-Build, weil ihre eigene Farbe zu dunkel gegen den fast schwarzen
+Knoten-Canvas war.
+
+- **Bugfix, 91 Logos:** `crop_mode=safe_contain` erzeugte noch nie eine
+  `-dark`-Datei — die vorhandene Theme-Umfärbung (`tokenise_transparent_
+  neutral_mark`) hätte bei überwiegend neutralen (schwarz/grau) Marken
+  funktioniert, wurde aber nie mit `theme="dark"` aufgerufen. `command_finalize`
+  vergleicht jetzt Light- gegen Dark-Rendering vor jeder Deckkraftanwendung und
+  schreibt die `-dark`-Datei, sobald sie sich unterscheidet — nicht mehr nur
+  bei `neutral_knockout`.
+- **Neuer Pfad, 75 Logos, `dark_backdrop_overrides.json`:** Marken, deren
+  eigene Farbe gesättigt, aber zu dunkel ist (z. B. Navy, Tannengrün) — die
+  Theme-Umfärbung fasst sie absichtlich nicht an, sonst ginge die Markenfarbe
+  verloren. `prepare_light_backdrop_canvas` (`pilot_images.py`) backt
+  stattdessen eine feste helle Kreisscheibe hinter die Marke und färbt nur
+  echte Schwarztöne pixelweise auf das Ink-Token um (`blacken_to_ink`) — jede
+  andere Farbe bleibt exakt wie in der Quelle. Ein Ergebnis für beide Themes,
+  keine `-dark`-Datei nötig. 62 der 75 kamen aus `safe_contain` (dunkel und
+  nicht neutral genug für die alte Umfärbung), 13 aus `neutral_knockout` (der
+  neutrale Teil war schon richtig umgefärbt, ein gesättigter dunkler Rest
+  aber nicht).
+
+Geprüft am gebauten PDF, nicht nur an der Asset-Datei: 75 Logos auf simuliertem
+Light- und Dark-Canvas kontrolliert (alle lesbar, Markenfarbe erhalten),
+anschließend Diagrammknoten UND Tabellenspalte im tatsächlich kompilierten PDF
+stichprobenartig verglichen (`M13`, `U12`, `M15`, `M43`, `G01`, `S02`, `M05`,
+`I03` sowie zwei Bugfix-Fälle) — Farben identisch zwischen Light und Dark, wie
+beabsichtigt. `dark_backdrop_overrides.json` dokumentiert jeden Eintrag mit dem
+gemessenen Grund (Median-Leuchtdichte, Neutralanteil bzw. Farbanteil im
+Dark-Rest). 24 + 9 Tests weiterhin grün.
+
+**Offen, nicht Teil dieser Korrektur:** die Deckkraftfläche hinter der
+Knoten-ID im Diagramm (`\semio@graph@node@label@plate@radius/@opacity` in
+`semio-graph.sty`) deckt bei radius=1.0 den ganzen Knoten ab und dämpft damit
+auch bei kräftigen Marken das Logo insgesamt — ein separater, dem Benutzer
+bereits vorgelegter Zielkonflikt zwischen voller ID-Lesbarkeit und voller
+Markenfarbe, noch ohne Entscheidung.
+
 Vor dieser Schlussstrecke muss der Benutzer ausdrücklich entscheiden, ob die
 vorläufige Gesamtübernahme als Druckfreigabe genügt oder zuerst weitere Einzelfälle
 nachgeprüft werden. Die ursprüngliche Planfassung verlangte Einzelbestätigung; der
@@ -251,3 +304,28 @@ Scope gezielt auswählen.
 - 24 Tests grün;
 - kein Neo4j-Write;
 - keine finale Asset-, Render- oder Patchfreigabe behauptet.
+
+## Nachtrag 14.08.2026 – aktuelles 619-Knoten-Netz
+
+Die damalige 762er-Auswahl bleibt unverändert als eingefrorener Transportstand.
+Der aktuelle Semio-Export wurde separat ausgewertet und enthält 619 Knoten:
+541 Organisationen und 78 weiterhin bildlose Projekte.
+
+- 277 Organisationsknoten besitzen bereits ein Logo im aktuellen Bestand.
+- Für die 264 bildlosen Organisationen wurden Domains erneut einzeln geprüft,
+  offizielle Haupt-, Medien-, Marken- und Trägerseiten tiefer durchsucht und
+  browserkomprimierte bzw. webgeschützte Seiten technisch besser erschlossen.
+- Der read-only Tiefenlauf ergibt 116 neue identitätsgefilterte Vorschläge und
+  148 `none`-Fälle. Maximal erreichbar nach visueller Bestätigung: 393/541.
+- Von den 148 `none`-Fällen haben 76 noch keine ausreichend bestätigte bzw.
+  freigegebene Organisationsdomain; 72 besitzen eine bestätigte Domain, aber
+  keine sichere, drucklesbare und zulässig belegte Marke.
+- Klare Fehlzuordnungen (u. a. CSTB-Untermarken, UEA-Fotos, BDP-Farbfläche,
+  Google-Play-Grafik, Deutsche-Bahn-Partnerlogo bei Madaster/EPEA) bleiben
+  gesperrt. Empa bleibt wegen der dokumentierten Genehmigungspflicht `none`.
+- Die klickbare, read-only Galerie liegt unter
+  `bilder_full/current_deep_review/index.html`; sie zeigt Hell/Dunkel,
+  Kreisclip, unveränderte ID, Land-/Statusfilter und offizielle Quellen.
+- Alle 116 neuen Vorschläge sind unbestätigt. Es gab keinen Neo4j-Write und
+  keine Übertragung in `mit-bestand`.
+- 32 Integritäts- und Regressionstests sind grün.

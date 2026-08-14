@@ -1,14 +1,14 @@
 {
   "key": "DK:F01",
-  "official_url": "https://www.dtu-kalender.de/",
-  "domain_basis": "individual_official_web_research",
+  "official_url": "https://www.dtu.dk/",
+  "domain_basis": "individual_official_domain_override",
   "page_error": "",
   "candidates": [
     {
       "id": "c01",
       "priority": 1,
       "kind": "apple_touch",
-      "url": "https://www.dtu-kalender.de/apple-touch-icon.png",
+      "url": "https://www.dtu.dk/apple-touch-icon-precomposed.png",
       "status": "rejected",
       "review_status": "pending",
       "retrieved_at": "",
@@ -21,7 +21,7 @@
       "id": "c02",
       "priority": 1,
       "kind": "apple_touch",
-      "url": "https://www.dtu-kalender.de/apple-touch-icon-precomposed.png",
+      "url": "https://www.dtu.dk/apple-touch-icon.png",
       "status": "rejected",
       "review_status": "pending",
       "retrieved_at": "",
@@ -32,16 +32,47 @@
     },
     {
       "id": "c03",
-      "priority": 3,
-      "kind": "favicon",
-      "url": "https://www.dtu-kalender.de/favicon.ico",
+      "priority": 2,
+      "kind": "declared_icon",
+      "url": "https://www.dtu.dk/logo.png",
       "status": "rejected",
       "review_status": "pending",
       "retrieved_at": "",
       "license_note": "Official-site candidate; usage rights require final review.",
       "source_sha256": "",
       "preview_sha256": "",
-      "reason": "UnidentifiedImageError: cannot identify image file <_io.BytesIO object at 0x0000022A1C383600>"
+      "reason": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "id": "c04",
+      "priority": 2,
+      "kind": "declared_icon",
+      "url": "https://www.dtu.dk/logo.svg",
+      "status": "rejected",
+      "review_status": "pending",
+      "retrieved_at": "",
+      "license_note": "Official-site candidate; usage rights require final review.",
+      "source_sha256": "",
+      "preview_sha256": "",
+      "reason": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "id": "c05",
+      "priority": 3,
+      "kind": "favicon",
+      "url": "https://www.dtu.dk/favicon.ico",
+      "status": "rejected",
+      "review_status": "pending",
+      "retrieved_at": "2026-08-14",
+      "license_note": "Official-site candidate; usage rights require final review.",
+      "source_sha256": "902a5e7e2f6781b042bc4ddb75dbfb9859f1c269b38005f7cd9154ae3c1df475",
+      "preview_sha256": "",
+      "reason": "short edge below 128px",
+      "final_url": "https://www.dtu.dk/favicon.ico",
+      "content_type": "image/x-icon",
+      "format": "ico",
+      "width": 16,
+      "height": 16
     }
   ]
 }

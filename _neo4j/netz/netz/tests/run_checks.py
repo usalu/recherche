@@ -237,7 +237,7 @@ def stage8_node_parity():
     """The drawn nodes must be EXACTLY the strict review's approved set --
     not a superset (a leaked prune/programme) and not a subset (something
     silently dropped). Checked once by hand during the fact-check
-    integration (620 == 620, zero leaks); this is that same check made
+    integration (619 == 619, zero leaks); this is that same check made
     permanent so a future data change can't regress it unnoticed."""
     from netz.sources import DEFAULT
     from netz.cli import load_network

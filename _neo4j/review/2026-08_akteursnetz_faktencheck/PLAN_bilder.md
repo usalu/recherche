@@ -2,6 +2,13 @@
 
 Ordner: `E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck\`
 
+> **Aktueller Scope am 14.08.2026:** Das tatsächlich gerenderte Semio-Netz hat
+> **619 Knoten = 541 Organisationen + 78 bildlose Projekte**. Die frühere
+> 762er-Organisationsauswahl bleibt als eingefrorener Transport- und
+> Reproduktionsstand erhalten, ist aber nicht mehr die aktuelle Netzmenge.
+> Für die aktuelle Tiefenprüfung sind `bilder_full/CURRENT_SCOPE_COVERAGE.*`
+> und `bilder_full/current_deep_review/` maßgeblich.
+
 ## 0. Die bestimmende Größe — bitte zuerst lesen
 
 Alles an diesem Plan hängt an einer Zahl, die aus dem Stylesheet kommt, nicht aus einer

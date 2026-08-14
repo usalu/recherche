@@ -7,8 +7,8 @@
 - Zusammenführen: 4
 - Erwarteter finaler Bestand nach Freigabe: 628
 
-- Davon Programme: 8
-- Akteurs-/Projektansicht ohne Programme: 620
+- Davon Programme: 9
+- Akteurs-/Projektansicht ohne Programme: 619
 
 ## Ergebnis nach Land
 
@@ -914,6 +914,7 @@
 | BE:P10 | Musée de Folklore Vie… | Musée de Folklore de Mouscron |  |  |
 | BE:P12 | Plateforme Réemploi | AD VITAM MATERIAL (ehem. Plateforme Réemploi) | NGO_Verband_Netzwerk |  |
 | BE:S01 | Madaster / EPEA | Madaster |  | BE |
+| BE:S02 | Preuse |  | Programm |  |
 | BE:S03 | Sundahus |  |  | SE |
 | BE:U27 | Loeliger Strub |  |  | CH |
 | CH:F03 | Empa | NEST Research and Innovation Platform / Empa–Eawag |  |  |

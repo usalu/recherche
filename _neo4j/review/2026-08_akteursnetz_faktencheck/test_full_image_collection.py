@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import json
 import hashlib
+import gzip
 import tempfile
 import unittest
 from pathlib import Path
 
+import numpy as np
 from PIL import Image, ImageDraw
 
 import full_image_collection as collection
@@ -32,6 +34,21 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertEqual(self.selection["drawn_network_nodes"], 859)
         self.assertEqual(self.selection["organisation_nodes"], 762)
         self.assertEqual(self.selection["project_nodes_excluded"], 97)
+
+    def test_current_network_partition_and_deep_review_boundary(self):
+        current = load("CURRENT_SCOPE_COVERAGE.json")
+        deep = load("current_deep_review/manifest.json")
+        self.assertEqual(current["network_nodes"], 619)
+        self.assertEqual(current["organisation_nodes"], 541)
+        self.assertEqual(current["project_nodes"], 78)
+        self.assertEqual(current["logo_nodes"], 277)
+        self.assertEqual(current["none_nodes"], 264)
+        self.assertEqual(len(deep["nodes"]), 264)
+        self.assertEqual(sum(deep["counts"].values()), 264)
+        self.assertTrue(all(row["confirmed"] is False for row in deep["nodes"]))
+        gallery = ROOT / "current_deep_review" / "index.html"
+        self.assertTrue(gallery.is_file())
+        self.assertIn("541 Organisationen", gallery.read_text(encoding="utf-8"))
 
     def test_all_transport_keys_are_unique_and_complete(self):
         selected = [row["key"] for row in self.selection["nodes"]]
@@ -155,6 +172,44 @@ class FullImageCollectionTests(unittest.TestCase):
         header = {"kind": "header_logo", "width": 512, "height": 128, "url": "https://example/elliott.svg"}
         self.assertGreater(collection.candidate_rank(header, node), collection.candidate_rank(icon, node))
 
+    def test_header_photos_and_generic_interface_icons_are_withheld(self):
+        node = {"name": "Bureau Bouwtechniek"}
+        self.assertTrue(collection.candidate_rejection(node, {
+            "kind": "header_logo", "final_url": "https://b-b.be/Portretten/AlexanderS.jpg"}))
+        self.assertTrue(collection.candidate_rejection(node, {
+            "kind": "header_logo", "final_url": "https://b-b.be/assets/user.svg"}))
+
+    def test_app_store_assets_and_salvo_subbrand_are_withheld(self):
+        self.assertTrue(collection.candidate_rejection(
+            {"key": "NL:S02", "name": "ReSource Marktplaats"},
+            {"id": "c01", "kind": "declared_icon",
+             "url": "https://play-lh.googleusercontent.com/icon.png"}))
+        self.assertTrue(collection.candidate_rejection(
+            {"key": "GB:M19", "name": "SalvoWEB"},
+            {"id": "c01", "kind": "header_logo",
+             "url": "https://www.salvoweb.com/assets/tr-logo.svg"}))
+
+    def test_print_unidentifiable_visual_audit_cases_are_withheld(self):
+        for key, name in (
+            ("FR:F01", "CSTB"),
+            ("FR:M19", "Gauthey Cheminées"),
+            ("GB:F04", "University of East Anglia"),
+            ("GB:U06", "BDP"),
+            ("FI:U04", "Durat"),
+        ):
+            self.assertTrue(collection.candidate_rejection(
+                {"key": key, "name": name},
+                {"id": "c99", "kind": "favicon", "url": "https://example.org/favicon.png"}))
+
+    def test_filename_identified_logo_outranks_unidentified_svg(self):
+        node = {"name": "Tscherning"}
+        exact = {"kind": "header_logo", "width": 800, "height": 200,
+                 "url": "https://tscherning.dk/assets/tscherning-logo.svg"}
+        generic = {"kind": "header_logo", "width": 800, "height": 200,
+                   "url": "https://tscherning.dk/assets/asset-1.svg"}
+        self.assertGreater(collection.candidate_rank(exact, node),
+                           collection.candidate_rank(generic, node))
+
     def test_ambiguous_automated_domains_are_withheld(self):
         mace = {"name": "Mace"}
         restaurant = {"status": "accepted", "basis": "individual_official_web_research",
@@ -181,6 +236,28 @@ class FullImageCollectionTests(unittest.TestCase):
             '.header__logo{mask-image:url("../img/ewood-black.svg")}',
             'https://example/assets/css/final.css')
         self.assertEqual(urls, ['https://example/assets/img/ewood-black.svg'])
+
+    def test_lazy_nav_logo_and_manifest_are_discovered(self):
+        parser = pilot.IconParser()
+        parser.feed('<link rel="manifest" href="/site.webmanifest">'
+                    '<nav><img class="site-brand" data-src="/img/mark.svg" '
+                    'srcset="/img/mark-small.png 1x, /img/mark-large.png 2x"></nav>')
+        self.assertEqual(parser.manifests, ["/site.webmanifest"])
+        self.assertIn((5, "header_logo", "/img/mark.svg"), parser.candidates)
+        self.assertIn((5, "header_logo", "/img/mark-large.png"), parser.candidates)
+
+    def test_browser_gzip_pages_can_be_parsed_for_declared_icons(self):
+        payload = gzip.compress(b'<html><head><link rel="icon" href="/brand.png"></head></html>')
+        self.assertTrue(payload.startswith(b"\x1f\x8b"))
+        parser = pilot.IconParser()
+        parser.feed(gzip.decompress(payload).decode("utf-8"))
+        self.assertIn((2, "declared_icon", "/brand.png"), parser.candidates)
+
+    def test_logo_css_does_not_require_header_selector(self):
+        urls = pilot.css_header_logo_candidates(
+            '.site-brandmark{background-image:url("/img/brand.svg")}',
+            'https://example/assets/app.css')
+        self.assertEqual(urls, ['https://example/img/brand.svg'])
 
     def test_review_ui_requires_an_explicit_post(self):
         html = (ROOT.parent / "full_image_review.html").read_text(encoding="utf-8")
@@ -231,6 +308,35 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertEqual(prepared.getpixel((0, 0))[3], 0)
         self.assertEqual(prepared.getpixel((255, 255))[3], 0)
         self.assertEqual(prepared.getpixel((128, 20))[:3], (12, 88, 170))
+
+    def test_wide_tile_is_extended_not_cut(self):
+        # A Van der Wal Sloopwerken analogue: a wide two-tone (red-over-yellow)
+        # brand tile whose wordmark reaches almost to both edges. Cover-crop's
+        # centred 256x256 window on an 800x200 source keeps only original
+        # x=[300,500] -- both marks below sit entirely outside that window and
+        # would previously vanish without a trace, not just get thinner.
+        with tempfile.TemporaryDirectory() as folder:
+            source = Path(folder) / "wide-two-tone.png"
+            image = Image.new("RGBA", (800, 200), (0, 0, 0, 0))
+            draw = ImageDraw.Draw(image)
+            draw.rectangle((0, 0, 799, 99), fill=(210, 30, 30, 255))
+            draw.rectangle((0, 100, 799, 199), fill=(230, 200, 40, 255))
+            draw.rectangle((30, 70, 170, 130), fill=(10, 10, 10, 255))    # far-left mark
+            draw.rectangle((630, 70, 770, 130), fill=(10, 10, 10, 255))  # far-right mark
+            image.save(source)
+            prepared, mode = pilot.prepare_node_canvas(source)
+
+        self.assertEqual(mode, "circle_extend")
+        self.assertEqual(prepared.size, (256, 256))
+        array = np.asarray(prepared)
+        dark = ((array[:, :, 0] < 60) & (array[:, :, 1] < 60)
+                & (array[:, :, 2] < 60) & (array[:, :, 3] > 200))
+        columns_with_dark = np.nonzero(dark.any(axis=0))[0]
+        self.assertGreater(columns_with_dark.size, 0, "no surviving mark pixels at all")
+        self.assertTrue((columns_with_dark < 85).any(), "left mark was cut")
+        self.assertTrue((columns_with_dark > 170).any(), "right mark was cut")
+        self.assertLessEqual(pilot.alpha_max_radius(prepared), pilot.FINAL_SIZE / 2 + 0.75)
+        self.assertGreaterEqual(pilot.inner_disc_min_alpha(prepared), 250)
 
     def test_freestanding_mark_remains_fully_contained_inside_circle(self):
         with tempfile.TemporaryDirectory() as folder:

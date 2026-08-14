@@ -34,6 +34,7 @@ RENAME = {
 
 
 PROGRAMMES = {
+    "BE:S02",
     "BE:F01",
     "CH:F10",
     "DE:F02",

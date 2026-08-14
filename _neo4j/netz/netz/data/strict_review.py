@@ -1,8 +1,8 @@
-"""Inactive-by-default loader and applier for the report-only strict review.
+"""Inactive-by-default loader and in-memory applier for the strict review.
 
-Neo4j remains untouched.  The layer becomes active only when the frozen
-review manifest explicitly contains ``approved_for_render_prune: true`` and
-all finalized artifacts exist.
+This renderer layer never writes to Neo4j. It becomes active only when the
+frozen review manifest explicitly contains ``approved_for_render_prune: true``
+and all finalized artifacts exist.
 """
 from __future__ import annotations
 
@@ -104,7 +104,10 @@ def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> N
         corrected_type_raw = (override.get("corrected_type") or "").strip()
         corrected_type = corrected_type_raw.lower()
         is_actor = any(a["eid"] == eid for a in raw.actors)
-        is_project = eid in raw.projects
+        # Overlay projects can be represented only by ``new_proj_cc``. Treat
+        # that mapping as project identity too, otherwise a reviewed re-type
+        # remains in the project panel even after its actor label is applied.
+        is_project = eid in raw.projects or eid in new_proj_cc
         actor_type = None
         if corrected_type_raw in {
             "Unternehmen", "Materialhub_Bauteilboerse", "Forschung_Lehre",
@@ -116,7 +119,9 @@ def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> N
         if (corrected_type in {"actor", "akteur", "organisation", "organization"}
                 or actor_type) and is_project:
             raw.projects = [x for x in raw.projects if x != eid]
-            raw.actors.append(raw.by[eid])
+            new_proj_cc.pop(eid, None)
+            if not is_actor:
+                raw.actors.append(raw.by[eid])
             raw.by[eid]["labels"] = ["Akteur"]
             # Former incoming project participation becomes an actor tie.
             for actor in raw.actors:
@@ -128,7 +133,9 @@ def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> N
                         raw.peers[eid].add(aid)
         if actor_type:
             raw.types[eid] = actor_type
-        elif corrected_type in {"project", "projekt", "bauvorhaben", "objekt"} and is_actor:
+        elif corrected_type in {
+            "project", "projekt", "bauvorhaben", "objekt", "bauvorhaben/objekt"
+        } and is_actor:
             peers = set(raw.peers.get(eid, ()))
             for peer in peers:
                 raw.peers[peer].discard(eid)
@@ -139,6 +146,11 @@ def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> N
             raw.actors = [a for a in raw.actors if a["eid"] != eid]
             raw.projects = sorted(set(raw.projects) | {eid}, key=lambda x: (raw.name(x), x))
             raw.by[eid]["labels"] = ["Projekt"]
+            # A converted actor has no project address to resolve its panel.
+            # The approved classification already carries the reviewed ISO2.
+            reviewed_cc = (bundle.classification.get(eid) or {}).get("cc")
+            if reviewed_cc:
+                new_proj_cc[eid] = reviewed_cc
 
         corrected_country = override.get("corrected_country")
         if corrected_country:

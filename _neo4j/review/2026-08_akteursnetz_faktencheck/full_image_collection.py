@@ -58,6 +58,11 @@ FINAL_AUDIT_REPORT = FINAL_REVIEW / "FINAL_SUGGESTION_AUDIT.md"
 REVIEW_HTML = BASE / "full_image_review.html"
 PILOT_DECISIONS = BASE / "pilot_domain_decisions.json"
 NETZ = REPO / "_neo4j" / "netz"
+DARK_BACKDROP_OVERRIDES = BASE / "dark_backdrop_overrides.json"
+CURRENT_DOMAIN_OVERRIDES = BASE / "current_domain_overrides.json"
+CURRENT_SCOPE_JSON = FULL / "CURRENT_SCOPE_COVERAGE.json"
+CURRENT_SCOPE_REPORT = FULL / "CURRENT_SCOPE_COVERAGE.md"
+CURRENT_DEEP = FULL / "current_deep_review"
 EXPORT = pilot.EXPORT
 TECTONIC = Path(r"E:\semio\.repo\cache\tectonic\0.16.9\tectonic.exe")
 
@@ -78,14 +83,31 @@ SEARCH_BLOCKED_HOSTS = THIRD_PARTY_HOSTS | {
     "mynewsdesk.com", "sttinfo.fi", "businessregiongoteborg.se", "futurebuilt.no",
     "superlocal.eu", "steelconstruction.info", "constructionnews.co.uk",
 }
-SOCIAL_MARKERS = ("facebook", "instagram", "youtube", "linkedin", "pinterest", "twitter", "tiktok")
+SOCIAL_MARKERS = (
+    "facebook", "instagram", "youtube", "linkedin", "pinterest", "twitter", "tiktok",
+    "socialmedia", "social-media", "f_logo", "insta_", "insta-", "xlogo.svg",
+)
 NON_ORGANISATION_MARKERS = (
     "bcorp", "b-corp", "b_corp", "bcorporation", "b-corporation", "nzero",
     "award", "badge", "certif", "client-logo", "partner-logo", "partner%20logo",
+    "/partners/", "/partner/", "styles/partners", "styles/partner",
     "sponsor", "accredit", "webex-logo", "qual-logo", "hunger-logo", "vzug_logo",
     "france-bleu", "lrqa", "city%20of%20newton", "survuvalkit", "survivalkit",
     "team-headshot", "headshot", "portrait", "branddr", "brandbild",
+    "google-play", "gstatic.com", "play-lh.googleusercontent.com", "sdg_icons", "mywebsitebuilder", "icon-close",
+    "icon-nav", "/flags/", "-flag-", "burger.svg", "menu.svg", "close.svg",
+    "sponsorlogo", "vlaio_combilogo", "dachverbandlogo", "logo_ams_wien",
+    "somfy%20logo", "preuse_logo", "banner_logos", "driveway-icon",
 )
+
+# Individually verified official files that are published outside the page's
+# machine-readable icon/header declarations. They remain ordinary pending
+# candidates with source URL, retrieval date and checksums.
+MANUAL_OFFICIAL_CANDIDATE_URLS = {
+    "DE:U33": [
+        (2, "header_logo", "https://www.regionh.dk/til-fagfolk/Om-Region-H/regionens-design/logo-og-grundelementer/logo-til-print-og-web/PublishingImages/RegionH%20logo_negativ.png"),
+    ],
+}
 
 # Findings from the complete 2026-08-13 visual identity audit. These are
 # deliberately key-specific: a weak or mismatched candidate must not teach the
@@ -103,6 +125,43 @@ MANUAL_CANDIDATE_REJECTIONS = {
                 "c06": "flat placeholder rectangle, not Houtenplaten's mark",
                 "c09": "photo of facade signage, not reusable source artwork"},
     "DK:M03": {"c08": "asset identifies Censio, not Bærebyg"},
+}
+MANUAL_CANDIDATE_REJECTIONS.update({
+    "GB:U01": {"c11": "temporary Envelopes anniversary mark, not the core AKT II identity"},
+    "NL:U56": {"c20": "PC brandmark does not identify Vic Obdam"},
+    "NL:M10": {"c09": "Keten Plus campaign mark, not the Hoogeboom identity",
+                "c08": "site search icon"},
+    "DE:G02": {"c18": "DBU Naturerbe is a sub-brand; the main DBU mark is available"},
+    "DE:U40": {**{f"c{i:02d}": "third-party CTBUH or DGNB mark" for i in range(10, 21)}},
+    "SE:U09": {"c10": "editorial employee photograph, not the Contiga identity"},
+    "DK:U30": {**{f"c{i:02d}": "promotional badge or editorial photograph" for i in (9, 10, 11, 16, 19, 20)}},
+    "FI:U02": {"c11": "Green Office badge, not the A-Kruunu identity"},
+    "FI:F02": {"c11": "decorative campaign graphic; the compact Xamk wordmark is available"},
+    "AT:I03": {"c13": "Wien Holding parent mark; the WSE mark is available"},
+    "CH:U27": {**{f"c{i:02d}": "C&A partner logo, not the Wetter Gruppe identity"
+                    for i in range(13, 20)}},
+    "FR:F01": {"*": "collected files are BDNB/BATIPEDIA or partner marks and photos, not a clean CSTB identity"},
+    "FR:M19": {"*": "only a fireplace photo and promotional installer badge were collected, not a clean Gauthey identity"},
+    "GB:F04": {"*": "only editorial, event and campus photographs were collected, not the UEA identity"},
+    "GB:U06": {"*": "plain colour favicon and editorial photograph do not visibly identify BDP at print size"},
+    "FI:U04": {"*": "official vertical lockup becomes illegible at the fixed printed node size"},
+    "BE:S01": {"*": "deep scan found Madaster customer/partner marks and editorial graphics, not the Madaster/EPEA identity"},
+    "CH:F02": {"*": "Empa permits third-party logo use only with prior authorisation; no reusable authorised asset is documented"},
+})
+
+# URL fragments remain stable when a deeper harvest changes candidate IDs.
+MANUAL_CANDIDATE_URL_REJECTIONS = {
+    "GB:U04": ("/uploads/general/", "/img/riba.svg"),
+    "GB:M07": ("/totalLogo.png",),
+    "GB:M19": ("tr-logo.svg",),
+    "BE:F07": ("/sdg_icons/",),
+    "BE:N04": ("footer-logo-feder",),
+    "BE:N05": ("PREUSE_logo", "banner_logos"),
+    "BE:F02": ("sponsorlogo", "vlaio_combilogo", "header-new.jpg"),
+    "DK:M01": ("bango.dk/", "bango.b-cdn.net/"),
+    "AT:I02": ("/icons/raw/",),
+    "AT:N01": ("dachverbandLogo", "Logo_AMS_Wien", "hunger-logo", "/erfolgsgeschichten/logos/"),
+    "AT:U06": ("dachverbandLogo", "Logo_AMS_Wien", "hunger-logo"),
 }
 
 MANUAL_DOMAIN_REJECTIONS = {
@@ -415,8 +474,105 @@ def research_domains(args):
     print("research status:", collections.Counter(r["status"] for r in merged))
 
 
-def harvest_one(node, domain):
-    node_dir = RAW / node["cc"] / node["tid"]
+def apply_domain_overrides(_args):
+    """Apply individually verified official-domain corrections.
+
+    This deliberately updates the transport review only.  It neither changes
+    the frozen 762-node selection nor writes anything to Neo4j.
+    """
+    payload = pilot.load_json(CURRENT_DOMAIN_OVERRIDES)
+    overrides = payload.get("overrides", [])
+    rows = pilot.load_json(DOMAINS)["nodes"]
+    by_key = {row["key"]: dict(row) for row in rows}
+    errors = []
+    for override in overrides:
+        key = override.get("key", "")
+        official_url = root_url(override.get("official_url", ""))
+        if key not in by_key:
+            # The current 619-node scope contains two actors that were not in
+            # the frozen 762 transport. They are documented by the current
+            # scope report and handled by its report-scoped manifest.
+            if override.get("current_scope_only"):
+                continue
+            errors.append(f"unknown transport key: {key}")
+            continue
+        if not official_url or blocked_host(pilot.host_of(official_url)):
+            errors.append(f"{key}: invalid or blocked official URL")
+            continue
+        row = by_key[key]
+        row.update({
+            "official_url": official_url,
+            "status": "accepted",
+            "basis": "individual_official_domain_override",
+            "notes": override.get("notes", "Individually verified official or parent organisation domain."),
+            "identity_source_url": override.get("identity_source_url", override.get("official_url", "")),
+            "identity_checked_at": override.get("checked_at", pilot.today()),
+        })
+        row.pop("candidate_url", None)
+        row.pop("check_error", None)
+        by_key[key] = row
+    if errors:
+        raise RuntimeError("domain override validation failed:\n" + "\n".join(errors))
+    merged = [by_key[row["key"]] for row in rows]
+    write_json(DOMAINS, {"schema_version": 3, "nodes": merged})
+    print(f"applied {sum(o.get('key') in by_key for o in overrides)} verified domain overrides")
+
+
+def current_scope_coverage(_args):
+    """Report image coverage for the current 619-node / 541-actor net."""
+    sys.path.insert(0, str(NETZ))
+    from netz.cli import load_network
+
+    net = load_network()
+    final = pilot.load_json(FINAL_MANIFEST)
+    by_eid = {row.get("eid"): row for row in final["nodes"] if row.get("eid")}
+    selection = {row["eid"]: row for row in pilot.load_json(SELECTION)["nodes"]}
+    domains = {row["key"]: row for row in pilot.load_json(DOMAINS)["nodes"]}
+    override_by_eid = {row.get("eid"): row for row in pilot.load_json(CURRENT_DOMAIN_OVERRIDES).get("overrides", [])
+                       if row.get("eid")}
+    actors, projects, rows = 0, 0, []
+    for cc, panel in net.panels.items():
+        projects += len(panel.projects)
+        for eid in panel.actors:
+            actors += 1
+            selected = selection.get(eid)
+            legacy = by_eid.get(eid, {})
+            key = selected["key"] if selected else override_by_eid.get(eid, {}).get("key", f"CURRENT:{eid}")
+            domain = domains.get(key, override_by_eid.get(eid, {}))
+            result = "logo" if legacy.get("result") == "logo" else "none"
+            rows.append({
+                "cc": cc, "tid": net.tid[eid], "eid": eid, "key": key,
+                "name": net.raw.name(eid), "result": result,
+                "official_url": domain.get("official_url", ""),
+                "domain_status": domain.get("status", "current_scope_only" if not selected else "unknown"),
+                "legacy_manifest_match": bool(legacy),
+            })
+    nodes = actors + projects
+    if (nodes, actors, projects) != (619, 541, 78):
+        raise RuntimeError(f"current net drift: got {nodes}/{actors}/{projects}, expected 619/541/78")
+    counts = collections.Counter(row["result"] for row in rows)
+    payload = {
+        "schema_version": 1, "created_at": pilot.today(), "network_nodes": nodes,
+        "organisation_nodes": actors, "project_nodes": projects,
+        "logo_nodes": counts["logo"], "none_nodes": counts["none"], "nodes": rows,
+    }
+    write_json(CURRENT_SCOPE_JSON, payload)
+    lines = [
+        "# Current 619-node image coverage", "",
+        f"- Network nodes: **{nodes}**", f"- Organisations: **{actors}**",
+        f"- Projects (kept image-free): **{projects}**", f"- Current logos: **{counts['logo']}**",
+        f"- Current organisation nodes without a logo: **{counts['none']}**", "",
+        "This report is scoped to the current Semio network. The frozen 762-node transport remains unchanged.", "",
+        "## Missing logos", "",
+    ]
+    lines.extend(f"- `{row['cc']}:{row['tid']}` — {row['name']} — {row['official_url'] or 'domain unresolved'}"
+                 for row in rows if row["result"] == "none")
+    CURRENT_SCOPE_REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"wrote {CURRENT_SCOPE_JSON} and {CURRENT_SCOPE_REPORT}: {dict(counts)}")
+
+
+def harvest_one(node, domain, node_dir=None, deep=False):
+    node_dir = node_dir or (RAW / node["cc"] / node["tid"])
     node_dir.mkdir(parents=True, exist_ok=True)
     meta = {"key": node["key"], "official_url": domain.get("official_url", ""),
             "domain_basis": domain.get("basis", ""), "page_error": "", "candidates": []}
@@ -425,9 +581,17 @@ def harvest_one(node, domain):
         write_json(node_dir / "candidates.json", meta)
         return node["key"], 0, 0
     candidates, page_error = pilot.discover_candidates(domain["official_url"])
-    candidates.extend(discover_media_candidates(domain["official_url"], candidates))
+    candidates.extend(discover_media_candidates(domain["official_url"], candidates, deep=deep))
+    candidates.extend(MANUAL_OFFICIAL_CANDIDATE_URLS.get(node["key"], ()))
+    deduped = {}
+    for priority, kind, url in candidates:
+        clean = urllib.parse.urldefrag(url)[0]
+        if clean not in deduped or priority < deduped[clean][0]:
+            deduped[clean] = (priority, kind, clean)
+    candidates = sorted(deduped.values(), key=lambda row: (row[0], row[1], row[2]))
     meta["page_error"] = page_error
-    for idx, (priority, kind, url) in enumerate(candidates[:20], 1):
+    candidate_limit = 40 if deep else 20
+    for idx, (priority, kind, url) in enumerate(candidates[:candidate_limit], 1):
         record = {"id": f"c{idx:02d}", "priority": priority, "kind": kind,
                   "url": url, "status": "rejected", "review_status": "pending",
                   "retrieved_at": "", "license_note": "Official-site candidate; usage rights require final review.",
@@ -462,7 +626,37 @@ def harvest_one(node, domain):
     return node["key"], good, len(meta["candidates"])
 
 
-def discover_media_candidates(official_url, existing):
+def harvest_current_only(_args):
+    """Harvest the two actors added after the frozen 762 transport scope."""
+    scope = {row["eid"]: row for row in pilot.load_json(CURRENT_SCOPE_JSON)["nodes"]}
+    overrides = [row for row in pilot.load_json(CURRENT_DOMAIN_OVERRIDES)["overrides"]
+                 if row.get("current_scope_only")]
+    for override in overrides:
+        current = scope[override["eid"]]
+        node = {"key": override["key"], "cc": current["cc"], "tid": current["tid"],
+                "eid": current["eid"], "name": current["name"], "typ": "Organisation"}
+        domain = {**override, "status": "accepted", "basis": "individual_official_domain_override"}
+        destination = CURRENT_DEEP / "current_only" / current["cc"] / current["tid"]
+        key, good, total = harvest_one(node, domain, destination)
+        print(f"{key}: {good}/{total} usable")
+
+
+def request_deep_page(url, timeout=6):
+    """Fetch a bounded secondary HTML page without long dead-path waits."""
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": pilot.USER_AGENT, "Accept": "text/html,application/xml;q=0.9,*/*;q=0.3"},
+    )
+    with urllib.request.urlopen(req, timeout=timeout) as response:
+        content_type = response.headers.get_content_type()
+        final_url = response.geturl()
+        data = response.read(3_000_001)
+    if len(data) > 3_000_000:
+        data = data[:3_000_000]
+    return data, content_type, final_url
+
+
+def discover_media_candidates(official_url, existing, deep=False):
     """Search a small set of official brand/media/about pages for a mark."""
     existing_urls = {urllib.parse.urldefrag(row[2])[0] for row in existing}
     root_host = pilot.host_of(official_url)
@@ -471,7 +665,7 @@ def discover_media_candidates(official_url, existing):
         data, content_type, final_url = pilot.request_bytes(official_url)
         if content_type != "text/html" and b"<html" not in data[:1500].lower():
             return []
-        text = data.decode("utf-8", errors="replace")
+        text = data[:3_000_000].decode("utf-8", errors="replace")
         for match in re.finditer(r"<a\b[^>]*href=[\"']([^\"']+)[\"'][^>]*>(.*?)</a>", text, re.I | re.S):
             href = urllib.parse.urljoin(final_url, html.unescape(match.group(1)))
             label = norm(re.sub(r"<[^>]+>", " ", match.group(2)) + " " + href)
@@ -481,17 +675,40 @@ def discover_media_candidates(official_url, existing):
                 page_links.append(href)
     except Exception:
         return []
+    if deep:
+        split = urllib.parse.urlsplit(official_url)
+        root = urllib.parse.urlunsplit((split.scheme or "https", split.netloc, "/", "", ""))
+        try:
+            sitemap_data, _, sitemap_final = request_deep_page(urllib.parse.urljoin(root, "sitemap.xml"))
+            sitemap_text = sitemap_data[:3_000_000].decode("utf-8", errors="replace")
+            for loc in re.findall(r"<loc>\s*([^<]+)\s*</loc>", sitemap_text, re.I):
+                loc = html.unescape(loc.strip())
+                marker = norm(loc)
+                if pilot.host_of(loc) == root_host and any(word in marker for word in (
+                    "brand", "logo", "media", "press", "presse", "download",
+                    "about", "uber uns", "over ons", "om oss", "a propos",
+                )):
+                    page_links.append(loc)
+        except Exception:
+            pass
+        if len(set(page_links)) < 4:
+            page_links.extend(urllib.parse.urljoin(root, path) for path in (
+                "about", "press", "media", "brand",
+            ))
     output, seen_pages = [], set()
+    page_limit = 8 if deep else 5
     for page_url in page_links:
         clean_page = urllib.parse.urldefrag(page_url)[0]
-        if clean_page in seen_pages or len(seen_pages) >= 5:
+        if clean_page in seen_pages or len(seen_pages) >= page_limit:
             continue
         seen_pages.add(clean_page)
         try:
-            data, content_type, final_url = pilot.request_bytes(clean_page)
+            fetch = request_deep_page if deep else pilot.request_bytes
+            data, content_type, final_url = fetch(clean_page)
             if content_type != "text/html" and b"<html" not in data[:1500].lower():
                 continue
-            parser = pilot.IconParser(); parser.feed(data.decode("utf-8", errors="replace"))
+            page_text = data[:3_000_000].decode("utf-8", errors="replace")
+            parser = pilot.IconParser(); parser.feed(page_text)
             base = urllib.parse.urljoin(final_url, parser.base) if parser.base else final_url
             for _priority, kind, url in parser.candidates:
                 absolute = urllib.parse.urldefrag(urllib.parse.urljoin(base, url))[0]
@@ -499,7 +716,7 @@ def discover_media_candidates(official_url, existing):
                     output.append((6, kind, absolute))
                     existing_urls.add(absolute)
             for match in re.finditer(r"<(?:img|source)\b[^>]*(?:src|srcset)=[\"']([^\"' ,]+)",
-                                     data.decode("utf-8", errors="replace"), re.I):
+                                     page_text, re.I):
                 absolute = urllib.parse.urldefrag(urllib.parse.urljoin(final_url, html.unescape(match.group(1))))[0]
                 if absolute not in existing_urls and any(word in absolute.lower() for word in ("logo", "brand", "wordmark")):
                     output.append((6, "media_logo", absolute)); existing_urls.add(absolute)
@@ -511,7 +728,12 @@ def discover_media_candidates(official_url, existing):
 def harvest_all(args):
     nodes = {r["key"]: r for r in pilot.load_json(SELECTION)["nodes"]}
     domains = {r["key"]: r for r in pilot.load_json(DOMAINS)["nodes"]}
-    todo = [nodes[k] for k in sorted(nodes) if domains[k]["status"] == "accepted"]
+    selected_keys = set(args.key or [])
+    todo = [nodes[k] for k in sorted(nodes)
+            if domains[k]["status"] == "accepted" and (not selected_keys or k in selected_keys)]
+    unknown = selected_keys - set(nodes)
+    if unknown:
+        raise RuntimeError("unknown harvest keys: " + ", ".join(sorted(unknown)))
     if args.limit:
         todo = todo[:args.limit]
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
@@ -519,6 +741,28 @@ def harvest_all(args):
         for pos, future in enumerate(concurrent.futures.as_completed(futures), 1):
             key, good, total = future.result()
             print(f"[{pos}/{len(todo)}] {key}: {good}/{total} usable")
+
+
+def deep_harvest_empty(args):
+    """Probe official secondary pages only for current-scope unresolved marks."""
+    review = {row["key"]: row for row in pilot.load_json(CURRENT_DEEP / "manifest.json")["nodes"]}
+    nodes = {row["key"]: row for row in pilot.load_json(SELECTION)["nodes"]}
+    domains = {row["key"]: row for row in pilot.load_json(DOMAINS)["nodes"]}
+    selected_keys = set(args.key or [])
+    unknown = selected_keys - set(nodes)
+    if unknown:
+        raise RuntimeError("unknown deep-harvest keys: " + ", ".join(sorted(unknown)))
+    todo = [nodes[key] for key in sorted(nodes)
+            if key in review and review[key]["suggested_result"] == "none"
+            and not review[key]["candidates"] and domains[key]["status"] == "accepted"
+            and (not selected_keys or key in selected_keys)]
+    if args.limit:
+        todo = todo[:args.limit]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futures = [pool.submit(harvest_one, node, domains[node["key"]], None, True) for node in todo]
+        for pos, future in enumerate(concurrent.futures.as_completed(futures), 1):
+            key, good, total = future.result()
+            print(f"[{pos}/{len(todo)}] {key}: {good}/{total} usable (deep)")
 
 
 def build_manifest(_args):
@@ -780,6 +1024,9 @@ def candidate_rejection(node, candidate):
         return manual["*"]
     url = (candidate.get("final_url") or candidate.get("url") or "").lower()
     decoded_url = urllib.parse.unquote(url)
+    if any(fragment.lower() in decoded_url
+           for fragment in MANUAL_CANDIDATE_URL_REJECTIONS.get(node.get("key"), ())):
+        return "key-specific third-party, interface or editorial asset"
     if any(marker in decoded_url for marker in SOCIAL_MARKERS):
         return "social-media asset"
     if any(marker in decoded_url for marker in NON_ORGANISATION_MARKERS):
@@ -788,16 +1035,36 @@ def candidate_rejection(node, candidate):
         return "placeholder asset"
     kind = candidate.get("kind")
     logo_words = ("logo", "wordmark", "brandmark", "logotype")
+    split = urllib.parse.urlsplit(decoded_url)
+    asset_name = split.path.rstrip("/").rsplit("/", 1)[-1]
+    asset_tokens = set(tokens(asset_name))
+    name_tokens = set(tokens(node.get("name", "")))
+    identity_in_filename = bool(name_tokens & asset_tokens) or any(word in asset_name for word in logo_words)
+    unconditional_photo_markers = (
+        "portrait", "headshot", "getty", "samtalebilleder", "csm_",
+        "verwaltungsgebaeude", "verwaltungsgebäude", "team-headshot",
+    )
+    photo_markers = (
+        "portrait", "headshot", "banner", "keyvisual", "flyer", "building", "gebouw",
+        "team", "people", "getty", "samtalebilleder", "header-", "header_", "csm_",
+        "processed", "uploads/keyvisual", "formidlingscenter", "mesinfos",
+    )
+    generic_icon_markers = ("user.svg", "account.svg", "search.svg", "menu.svg", "glyph-logo")
+    if any(marker in decoded_url for marker in generic_icon_markers):
+        return "generic interface or social icon"
+    if any(marker in decoded_url for marker in unconditional_photo_markers):
+        return "photo or editorial image rather than an organisation mark"
+    if any(marker in decoded_url for marker in photo_markers) and not identity_in_filename:
+        return "photo, banner or editorial image rather than an organisation mark"
+    suffix = PurePosixPath(split.path).suffix.lower()
+    if kind == "header_logo" and suffix in {".jpg", ".jpeg", ".webp", ".avif"} and not identity_in_filename:
+        return "unidentified header raster; likely editorial photography"
     if kind == "og_image" and not any(word in decoded_url for word in logo_words):
         return "unchecked og:image without a logo filename"
     if kind == "media_logo":
-        split = urllib.parse.urlsplit(decoded_url)
         # Only the asset filename may identify a media logo. Parent directory
         # names can contain the organisation's domain while the file itself is
         # an unrelated partner logo (the BioRegional/Abstrakt false positive).
-        asset_name = split.path.rstrip("/").rsplit("/", 1)[-1]
-        asset_tokens = set(tokens(asset_name))
-        name_tokens = {token for token in tokens(node.get("name", "")) if len(token) >= 4}
         if not any(word in decoded_url for word in logo_words):
             return "media image without a logo filename"
         if name_tokens and not (name_tokens & asset_tokens):
@@ -807,12 +1074,14 @@ def candidate_rejection(node, candidate):
 
 def domain_suggestion_rejection(node, domain):
     """Keep ambiguous automated domain research out of logo suggestions."""
-    if node.get("key") in MANUAL_DOMAIN_REJECTIONS:
+    if (node.get("key") in MANUAL_DOMAIN_REJECTIONS
+            and domain.get("basis") != "individual_official_domain_override"):
         return MANUAL_DOMAIN_REJECTIONS[node["key"]]
     if domain.get("status") != "accepted" or not domain.get("official_url"):
         return "organisation domain is not accepted"
     basis = domain.get("basis", "")
-    if basis in {"pilot_manual", "manual", "individual_manual_check"}:
+    if basis in {"pilot_manual", "manual", "individual_manual_check",
+                 "individual_official_domain_override"}:
         return ""
     official_root = root_url(domain["official_url"])
     title = domain.get("page_title", "")
@@ -845,7 +1114,172 @@ def candidate_rank(candidate, node=None):
     w, h = candidate.get("width", 1), candidate.get("height", 1)
     shape_bonus = 8 if 0.65 <= w / max(h, 1) <= 1.55 else 0
     size_bonus = min(8, min(w, h) / 128)
-    return weights.get(candidate.get("kind"), 0) + shape_bonus + size_bonus
+    identity_bonus = 0
+    if node is not None:
+        url = urllib.parse.unquote((candidate.get("final_url") or candidate.get("url") or "").lower())
+        asset_name = urllib.parse.urlsplit(url).path.rstrip("/").rsplit("/", 1)[-1]
+        asset_tokens = set(tokens(asset_name))
+        name_tokens = set(tokens(node.get("name", "")))
+        if name_tokens & asset_tokens:
+            identity_bonus += 24
+        if any(word in asset_name for word in ("logo", "wordmark", "brandmark", "logotype")):
+            identity_bonus += 18
+        if candidate.get("kind") == "header_logo" and not (name_tokens & asset_tokens):
+            # A broad header scan also sees sponsors and programme badges. A
+            # generic filename containing only "logo" is not enough to beat an
+            # organisation-identified favicon or declared icon.
+            identity_bonus -= 28
+    return weights.get(candidate.get("kind"), 0) + shape_bonus + size_bonus + identity_bonus
+
+
+def command_current_deep_review(_args):
+    """Create a non-confirming review manifest and contact sheets for new finds."""
+    scope = pilot.load_json(CURRENT_SCOPE_JSON)["nodes"]
+    selection = {row["key"]: row for row in pilot.load_json(SELECTION)["nodes"]}
+    domains = {row["key"]: row for row in pilot.load_json(DOMAINS)["nodes"]}
+    overrides = {row["key"]: row for row in pilot.load_json(CURRENT_DOMAIN_OVERRIDES)["overrides"]}
+    rows = []
+    for current in scope:
+        if current["result"] == "logo":
+            continue
+        node = selection.get(current["key"])
+        if node:
+            candidates = usable_candidates(node)
+            domain = domains[node["key"]]
+            domain_rejection = domain_suggestion_rejection(node, domain)
+        else:
+            override = overrides.get(current["key"], {})
+            node = {"key": current["key"], "cc": current["cc"], "tid": current["tid"],
+                    "eid": current["eid"], "name": current["name"], "typ": "Organisation"}
+            meta_path = CURRENT_DEEP / "current_only" / current["cc"] / current["tid"] / "candidates.json"
+            meta = pilot.load_json(meta_path) if meta_path.exists() else {"candidates": []}
+            candidates = [candidate for candidate in meta.get("candidates", [])
+                          if candidate.get("status") == "candidate" and candidate.get("preview_path")]
+            domain = {**override, "status": "accepted", "basis": "individual_official_domain_override"}
+            domain_rejection = "" if override else "current-scope actor has no verified domain"
+        safe = [candidate for candidate in candidates if not candidate_rejection(node, candidate)]
+        safe.sort(key=lambda candidate: (-candidate_rank(candidate, node), candidate["id"]))
+        best = safe[0] if safe and not domain_rejection else None
+        rows.append({
+            "key": node["key"], "cc": current["cc"], "tid": current["tid"],
+            "eid": current["eid"], "name": node["name"],
+            "official_url": domain.get("official_url", ""),
+            "suggested_result": "logo" if best else "none",
+            "suggested_candidate_id": best["id"] if best else "",
+            "confirmed": False, "review_status": "pending_deep_review",
+            "reason": ("Identity-filtered official candidate; visual review required."
+                       if best else (domain_rejection or "No identity-safe candidate collected.")),
+            "candidates": [{k: candidate.get(k) for k in (
+                "id", "kind", "url", "final_url", "preview_path", "preview_sha256",
+                "width", "height", "format", "source_sha256", "retrieved_at"
+            )} for candidate in safe[:4]],
+        })
+    CURRENT_DEEP.mkdir(parents=True, exist_ok=True)
+    counts = collections.Counter(row["suggested_result"] for row in rows)
+    write_json(CURRENT_DEEP / "manifest.json", {
+        "schema_version": 1, "created_at": pilot.today(), "scope_organisations": 541,
+        "existing_logo_nodes": 277, "missing_nodes_reviewed": len(rows),
+        "counts": counts, "confirmation_boundary": "No row is confirmed by this command.",
+        "nodes": rows,
+    })
+
+    visible = [row for row in rows if row["candidates"]]
+    for old in CURRENT_DEEP.glob("review_*.png"):
+        old.unlink()
+    for page, start in enumerate(range(0, len(visible), 8), 1):
+        sheet = Image.new("RGB", (1600, 1500), "#f7f3e3")
+        draw = ImageDraw.Draw(sheet)
+        draw.text((30, 22), f"Aktuelles Netz: neue Logo-Kandidaten — Seite {page}",
+                  fill="#001117", font=pilot.font(30))
+        for slot, row in enumerate(visible[start:start + 8]):
+            col, local_row = slot % 2, slot // 2
+            x, y = 25 + col * 790, 80 + local_row * 350
+            draw.rounded_rectangle((x, y, x + 760, y + 325), 16, fill="#fffdf4", outline="#9e9b8f", width=2)
+            draw.text((x + 18, y + 14), f"{row['key']} · {row['name'][:58]}",
+                      fill="#001117", font=pilot.font(21))
+            for idx, candidate in enumerate(row["candidates"]):
+                preview = FULL / candidate["preview_path"]
+                try:
+                    node_preview, _ = pilot.prepare_node_canvas(preview, theme="light")
+                    thumb = node_preview.resize((150, 150), Image.Resampling.LANCZOS)
+                    sheet.paste(thumb.convert("RGB"), (x + 18 + idx * 182, y + 62))
+                except Exception:
+                    draw.rectangle((x + 18 + idx * 182, y + 62, x + 168 + idx * 182, y + 212),
+                                   fill="#ddd8c7")
+                label = f"{candidate['id']} · {candidate['kind']}"
+                draw.text((x + 18 + idx * 182, y + 220), label[:22], fill="#001117", font=pilot.font(14))
+                filename = urllib.parse.urlsplit(candidate.get("final_url") or candidate.get("url") or "").path.rsplit("/", 1)[-1]
+                draw.text((x + 18 + idx * 182, y + 244), urllib.parse.unquote(filename)[:20],
+                          fill="#394b50", font=pilot.font(12))
+            draw.text((x + 18, y + 286), f"Quelle: {row['official_url'][:88]}",
+                      fill="#394b50", font=pilot.font(13))
+        sheet.save(CURRENT_DEEP / f"review_{page:02d}.png")
+
+    # A small self-contained browser gallery avoids the earlier problem of
+    # review sheets being hard to open or zoom. It is deliberately read-only:
+    # current-scope suggestions are not confirmations.
+    preview_dir = CURRENT_DEEP / "previews"
+    preview_dir.mkdir(parents=True, exist_ok=True)
+    gallery_cards = []
+    for row in rows:
+        preview_rel = ""
+        if row["suggested_result"] == "logo" and row["candidates"]:
+            candidate = next((candidate for candidate in row["candidates"]
+                              if candidate["id"] == row["suggested_candidate_id"]), None)
+            if candidate:
+                source = FULL / candidate["preview_path"]
+                pair = Image.new("RGBA", (232, 116), (0, 0, 0, 0))
+                pair.alpha_composite(audit_node_preview(candidate, row["tid"], "light"), (2, 2))
+                pair.alpha_composite(audit_node_preview(candidate, row["tid"], "dark"), (118, 2))
+                filename = re.sub(r"[^A-Za-z0-9_.-]+", "_", row["key"]) + ".png"
+                target = preview_dir / filename
+                pair.save(target)
+                preview_rel = "previews/" + filename
+        source_link = (f'<a href="{html.escape(row["official_url"], quote=True)}" target="_blank" '
+                       f'rel="noreferrer">offizielle Quelle öffnen</a>' if row["official_url"] else
+                       "keine bestätigte Domain")
+        image = (f'<img src="{preview_rel}" alt="Hell- und Dunkelvorschau">' if preview_rel else
+                 '<div class="empty">ID-Knoten bleibt unverändert</div>')
+        gallery_cards.append(
+            f'<article class="card" data-cc="{row["cc"]}" data-result="{row["suggested_result"]}" '
+            f'data-search="{html.escape((row["key"] + " " + row["name"]).lower(), quote=True)}">'
+            f'<h2>{html.escape(row["name"])}</h2><div class="meta">{html.escape(row["key"])} · '
+            f'{html.escape(row["cc"] + ":" + row["tid"])}</div>{image}'
+            f'<p><strong>{row["suggested_result"]}</strong> · noch nicht bestätigt</p>'
+            f'<p>{source_link}</p></article>'
+        )
+    country_options = "".join(f'<option value="{cc}">{cc}</option>' for cc in COUNTRY_ORDER)
+    gallery_html = f'''<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aktuelles Akteursnetz – Logo-Tiefenprüfung</title>
+<style>
+body{{margin:0;background:#f7f3e3;color:#001117;font:16px system-ui,sans-serif}}header{{position:sticky;top:0;z-index:2;background:#f7f3e3ee;backdrop-filter:blur(12px);padding:18px 24px;border-bottom:1px solid #b7b19f}}h1{{font-size:24px;margin:0 0 8px}}.summary{{margin:0 0 12px}}.filters{{display:flex;gap:10px;flex-wrap:wrap}}input,select{{font:inherit;padding:8px 10px;border:1px solid #7d827e;border-radius:8px;background:#fffdf4}}main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:14px;padding:18px}}.card{{background:#fffdf4;border:1px solid #b7b19f;border-radius:14px;padding:14px;min-height:280px}}h2{{font-size:18px;min-height:44px;margin:0 0 4px}}.meta{{color:#4c5b5f;font-size:13px;margin-bottom:10px}}.card img{{display:block;width:232px;height:116px;margin:8px auto;image-rendering:auto}}.empty{{height:116px;display:grid;place-items:center;color:#697579;border:1px dashed #a7a496;border-radius:58px;margin:8px 0}}a{{color:#006b73}}.hidden{{display:none}}
+</style></head><body><header><h1>Aktuelles Akteursnetz: Logo-Tiefenprüfung</h1>
+<p class="summary">541 Organisationen · 277 vorhandene Logos · {counts['logo']} neue Vorschläge · {counts['none']} ohne Vorschlag · 0 Bestätigungen</p>
+<div class="filters"><input id="q" type="search" placeholder="Name oder ID"><select id="cc"><option value="">alle Länder</option>{country_options}</select><select id="result"><option value="">logo + none</option><option>logo</option><option>none</option></select></div></header>
+<main>{''.join(gallery_cards)}</main><script>
+const cards=[...document.querySelectorAll('.card')]; function filter(){{const q=document.querySelector('#q').value.toLowerCase(),cc=document.querySelector('#cc').value,r=document.querySelector('#result').value;for(const c of cards)c.classList.toggle('hidden',!!((q&&!c.dataset.search.includes(q))||(cc&&c.dataset.cc!==cc)||(r&&c.dataset.result!==r)));}} for(const e of document.querySelectorAll('input,select'))e.addEventListener('input',filter);
+</script></body></html>'''
+    (CURRENT_DEEP / "index.html").write_text(gallery_html, encoding="utf-8")
+
+    unresolved_domains = sum(row["suggested_result"] == "none" and
+                             ("domain" in row["reason"].lower() or "opera.com" in row["reason"])
+                             for row in rows)
+    verified_without_logo = counts["none"] - unresolved_domains
+    report = [
+        "# Current deep image review", "", f"- Current organisations: **541**",
+        "- Existing logos preserved: **277**", f"- Missing organisations inspected: **{len(rows)}**",
+        f"- New identity-filtered logo suggestions: **{counts['logo']}**",
+        f"- Provisional maximum coverage after review: **{277 + counts['logo']}/541**",
+        f"- Still none: **{counts['none']}**",
+        f"- Of those, unresolved/withheld domains: **{unresolved_domains}**",
+        f"- Verified domains without a safe printable logo: **{verified_without_logo}**",
+        f"- Review sheets: **{(len(visible) + 7) // 8}**",
+        "- Browser gallery: **index.html**", "- Confirmations written: **0**", "",
+        "Every suggested candidate remains pending visual review. Neo4j writes: 0.",
+    ]
+    (CURRENT_DEEP / "REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
+    print(f"wrote current deep review: {dict(counts)}, sheets={(len(visible) + 7) // 8}")
 
 
 def command_suggest(_args):
@@ -1106,6 +1540,8 @@ def apply_logo_opacity(canvas: Image.Image, percent: int) -> Image.Image:
 
 def command_finalize(_args):
     nodes, decisions = complete_review()
+    dark_backdrop_keys = ({e["key"] for e in pilot.load_json(DARK_BACKDROP_OVERRIDES)["entries"]}
+                          if DARK_BACKDROP_OVERRIDES.is_file() else set())
     rows = []
     for node in nodes:
         decision = decisions[node["key"]]
@@ -1129,17 +1565,36 @@ def command_finalize(_args):
                 raise ValueError(f"{node['key']}: confirmed candidate changed after review")
             dest = FINAL / node["cc"] / f"{node['tid']}.png"
             dest.parent.mkdir(parents=True, exist_ok=True)
-            canvas, crop_mode = pilot.prepare_node_canvas(source, theme="light")
-            canvas = apply_logo_opacity(canvas, decision.get("logo_opacity_percent", 100))
-            pilot.save_png(canvas, dest)
             dark_dest = None
-            if crop_mode == "neutral_knockout":
-                dark_dest = FINAL / node["cc"] / f"{node['tid']}-dark.png"
+            if node["key"] in dark_backdrop_keys:
+                # Dark-on-dark override (dark_backdrop_overrides.json): bake a
+                # light disc instead of trying to theme-swap a mark whose own
+                # colours are too dark against the report's dark node canvas.
+                # No -dark sibling: the one file is correct in both builds.
+                crop_mode = "light_backdrop"
+                canvas = pilot.prepare_light_backdrop_canvas(source)
+                canvas = apply_logo_opacity(canvas, decision.get("logo_opacity_percent", 100))
+                pilot.save_png(canvas, dest)
+            else:
+                canvas, crop_mode = pilot.prepare_node_canvas(source, theme="light")
+                # neutral_knockout always needs its theme-swapped sibling. A
+                # safe_contain mark ALSO needs one exactly when its content is
+                # neutral enough that tokenise_transparent_neutral_mark (inside
+                # prepare_node_canvas) actually recoloured it for "dark" --
+                # compare the two renders BEFORE opacity is applied (opacity
+                # scales alpha uniformly and would otherwise make an
+                # unchanged, non-neutral mark look "different"), so this can
+                # never drift from what the tokeniser itself decided.
                 dark_canvas, dark_mode = pilot.prepare_node_canvas(source, theme="dark")
-                dark_canvas = apply_logo_opacity(dark_canvas, decision.get("logo_opacity_percent", 100))
                 if dark_mode != crop_mode:
                     raise ValueError(f"{node['key']}: theme crop modes differ")
-                pilot.save_png(dark_canvas, dark_dest)
+                needs_dark = crop_mode == "neutral_knockout" or dark_canvas.tobytes() != canvas.tobytes()
+                canvas = apply_logo_opacity(canvas, decision.get("logo_opacity_percent", 100))
+                pilot.save_png(canvas, dest)
+                if needs_dark:
+                    dark_dest = FINAL / node["cc"] / f"{node['tid']}-dark.png"
+                    dark_canvas = apply_logo_opacity(dark_canvas, decision.get("logo_opacity_percent", 100))
+                    pilot.save_png(dark_canvas, dark_dest)
             row.update({"asset_path": str(dest.relative_to(FULL)).replace("\\", "/"),
                         "dark_asset_path": (str(dark_dest.relative_to(FULL)).replace("\\", "/")
                                             if dark_dest else None),
@@ -1190,10 +1645,20 @@ def validate_final_manifest(manifest):
             if image.size != (256, 256) or image.mode != "RGBA" or image.format != "PNG":
                 errors.append(f"{key}: expected 256x256 RGBA PNG")
             max_radius = pilot.alpha_max_radius(image.convert("RGBA"))
-            limit = (pilot.FINAL_SIZE / 2 + 0.75 if row.get("crop_mode") == "circle_cover"
+            # circle_cover, circle_extend AND light_backdrop all fill the disc
+            # with an opaque backdrop out to the full radius (a page-colour
+            # margin for the first two, a baked SEMIO_LIGHT disc for the
+            # third) -- only a transparent-surround mode (safe_contain,
+            # neutral_knockout) is held to the tighter safety radius.
+            limit = (pilot.FINAL_SIZE / 2 + 0.75
+                     if row.get("crop_mode") in {"circle_cover", "circle_extend", "light_backdrop"}
                      else pilot.SAFE_RADIUS + 0.75)
             if max_radius > limit:
                 errors.append(f"{key}: visible pixels exceed {row.get('crop_mode') or 'safe'} radial zone")
+            if row.get("crop_mode") in {"circle_cover", "circle_extend", "light_backdrop"}:
+                min_inner = pilot.inner_disc_min_alpha(image.convert("RGBA"))
+                if min_inner < 250:
+                    errors.append(f"{key}: translucent ring inside disc (min alpha {min_inner})")
         if pilot.sha256_file(path) != row.get("sha256"):
             errors.append(f"{key}: final checksum mismatch")
         dark_rel = row.get("dark_asset_path")
@@ -1363,8 +1828,19 @@ def main():
     confirm.set_defaults(func=confirm_domains)
     research = sub.add_parser("research"); research.add_argument("--workers", type=int, default=8); research.add_argument("--limit", type=int)
     research.set_defaults(func=research_domains)
+    sub.add_parser("apply-domain-overrides").set_defaults(func=apply_domain_overrides)
+    sub.add_parser("current-scope").set_defaults(func=current_scope_coverage)
     harvest = sub.add_parser("harvest"); harvest.add_argument("--workers", type=int, default=10); harvest.add_argument("--limit", type=int)
+    harvest.add_argument("--key", action="append", help="harvest only this LAND:tid transport key (repeatable)")
     harvest.set_defaults(func=harvest_all)
+    deep = sub.add_parser("deep-harvest-empty")
+    deep.add_argument("--workers", type=int, default=8)
+    deep.add_argument("--limit", type=int)
+    deep.add_argument("--key", action="append",
+                      help="deep-harvest only this LAND:tid transport key (repeatable)")
+    deep.set_defaults(func=deep_harvest_empty)
+    sub.add_parser("harvest-current-only").set_defaults(func=harvest_current_only)
+    sub.add_parser("current-deep-review").set_defaults(func=command_current_deep_review)
     sub.add_parser("manifest").set_defaults(func=build_manifest)
     sub.add_parser("contact").set_defaults(func=contact_sheets)
     sub.add_parser("audit-sheets").set_defaults(func=command_audit_sheets)
