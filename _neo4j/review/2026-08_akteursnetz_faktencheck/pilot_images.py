@@ -19,6 +19,7 @@ import math
 import mimetypes
 import os
 import re
+import ssl
 import time
 import sys
 import urllib.error
@@ -28,9 +29,11 @@ from pathlib import Path
 
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 import numpy as np
+import certifi
 
 
 BASE = Path(__file__).resolve().parent
+SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 REPO = BASE.parents[2]
 NETZ_ROOT = REPO / "_neo4j" / "netz"
 PILOT = BASE / "bilder_pilot"
@@ -400,7 +403,7 @@ def request_bytes(url: str) -> tuple[bytes, str, str]:
                                                "Accept": "image/*,text/html;q=0.9,*/*;q=0.5",
                                                "Accept-Encoding": "gzip",
                                                "Referer": referer})
-    with urllib.request.urlopen(req, timeout=20) as response:
+    with urllib.request.urlopen(req, timeout=20, context=SSL_CONTEXT) as response:
         content_type = response.headers.get_content_type()
         final_url = response.geturl()
         data = response.read(MAX_DOWNLOAD + 1)
@@ -639,6 +642,56 @@ EXTEND_CLEAN_ALPHA = 250        # what counts as "opaque" when hunting for a
                                 # replicable edge pixel, matching the alpha
                                 # threshold has_flat_opaque_backdrop already
                                 # uses for its four-corner test
+EXTEND_EDGE_SAMPLES = 5          # how many clean pixels, walking inward, get
+                                # averaged into one edge colour -- not just
+                                # the nearest one. Some source icons carry a
+                                # thin, fully OPAQUE halo/shadow ring baked
+                                # around their shape (a squircle app-icon
+                                # export artefact); the nearest-pixel version
+                                # of this function picked that ring's colour
+                                # up as "the background" and the replicated
+                                # band read as a faint ghost of the icon's own
+                                # outline (measured on Entra AS: the true fill
+                                # is a dark forest green, the ring sampled was
+                                # RGB 77,126,107 -- a washed-out grey-green).
+                                # A few pixels deep is enough for the true
+                                # fill, which extends far past any such ring,
+                                # to outvote it.
+EXTEND_SEAM_MARGIN = 3           # background pixels this deep into the
+                                # ORIGINAL resized content, right where a new
+                                # padding band attaches, are repainted with
+                                # that band's own colour instead of kept as
+                                # literal source pixels. The median-of-samples
+                                # fix above only cleans the ring inside the
+                                # NEW band; it does nothing for the source's
+                                # own last row/column, which can carry the
+                                # exact same ring pixel unmodified and sit
+                                # right against the (now-clean) band -- one
+                                # stray RGB(77,126,107) pixel among a uniform
+                                # (1,60,38) fill, on Entra AS. The historical
+                                # cover crop never showed this because it
+                                # threw that edge away; extending keeps it.
+                                # Only ever touches pixels the flood mask
+                                # already calls background -- a mark that
+                                # reaches the edge (BOBI Réemploi's wordmark
+                                # spans nearly the full source width) is never
+                                # repainted, regardless of position.
+EXTEND_DENSITY_HALF = 3          # 7x7 window for the mark-vs-halo density
+                                # filter below (49 cells)
+EXTEND_DENSITY_MIN_FRACTION = 0.5  # a pixel only counts toward the mark's
+                                # radius if at least half its 7x7 window is
+                                # also foreground. Tuned on Entra AS: raw
+                                # foreground includes scattered single-pixel
+                                # corner-halo scraps that inflate the radius
+                                # to 123.8 (of a possible 127.3) and trigger
+                                # an unneeded extend, whose cover crop was
+                                # already visually correct; at this window/
+                                # fraction the halo drops out and the genuine
+                                # leaf-and-square mark measures 57.6. Checked
+                                # against real wordmarks (Van der Wal, BOBI
+                                # Réemploi, Icon Real Estate): unchanged to
+                                # within a pixel -- a real mark is never this
+                                # sparse.
 
 
 def _flood_background_mask(im: Image.Image, tolerance: int = EXTEND_FLOOD_TOLERANCE,
@@ -698,6 +751,40 @@ def _flood_background_mask(im: Image.Image, tolerance: int = EXTEND_FLOOD_TOLERA
     return background
 
 
+def _box_density(mask: "np.ndarray", half: int) -> "np.ndarray":
+    """For every pixel, the count of True neighbours in its (2*half+1)^2
+    window -- a fast integral-image box sum, no scipy (kept out of this
+    reproducibility-critical pipeline's dependencies on purpose).
+    """
+    cumulative = np.pad(np.cumsum(np.cumsum(mask.astype(np.int32), axis=0), axis=1), ((1, 0), (1, 0)))
+    height, width = mask.shape
+    y0 = np.clip(np.arange(height) - half, 0, height)
+    y1 = np.clip(np.arange(height) + half + 1, 0, height)
+    x0 = np.clip(np.arange(width) - half, 0, width)
+    x1 = np.clip(np.arange(width) + half + 1, 0, width)
+    yy1, xx1 = np.meshgrid(y1, x1, indexing="ij")
+    yy0b, xx1b = np.meshgrid(y0, x1, indexing="ij")
+    yy1b, xx0b = np.meshgrid(y1, x0, indexing="ij")
+    yy0, xx0 = np.meshgrid(y0, x0, indexing="ij")
+    return cumulative[yy1, xx1] - cumulative[yy0b, xx1b] - cumulative[yy1b, xx0b] + cumulative[yy0, xx0]
+
+
+def _dense_foreground(foreground: "np.ndarray", half: int = EXTEND_DENSITY_HALF,
+                       min_fraction: float = EXTEND_DENSITY_MIN_FRACTION) -> "np.ndarray":
+    """`foreground`, with sparse/isolated pixels dropped -- a genuine mark
+    (lettering, an icon) is a solid, densely-connected region; a thin fully
+    opaque halo/shadow ring at a rounded corner (see EXTEND_EDGE_SAMPLES) is
+    a scattering of near-isolated pixels that happen to fall on the
+    foreground side of the colour test. Measured on Entra AS: raw foreground
+    reaches radius 123.8 from a lone corner pixel; the genuine leaf-and-square
+    mark's own radius is 57.6. Measured on real wordmarks (Van der Wal, BOBI
+    Réemploi): unchanged to within a pixel, since a real mark's pixels are
+    never isolated at this window size.
+    """
+    window = (2 * half + 1) ** 2
+    return foreground & (_box_density(foreground, half) >= min_fraction * window)
+
+
 def _extend_geometry(im: Image.Image, background: "np.ndarray",
                       margin: float = EXTEND_MARGIN) -> float | None:
     """Fit-scale for `im` given its background mask, or None if extending is
@@ -705,13 +792,16 @@ def _extend_geometry(im: Image.Image, background: "np.ndarray",
 
     None covers every way the flood mask fails to mean "the mark": no
     foreground at all (the mark touches the frame and floods away with it --
-    e.g. Provincie Gelderland), or near-total foreground (the flood never
-    left the border -- e.g. Allibert Matériaux Anciens at 96.6%, which is a
-    "no real backdrop found" result, not a "the whole tile is the mark"
-    result). Measured against the mark's own bounding radius from the image
-    centre, never against the tile's background -- a square brand tile must
-    not shrink by root two just to tuck its own coloured CORNERS inside the
-    circle, only as far as its lettering actually demands.
+    e.g. Provincie Gelderland), near-total foreground (the flood never left
+    the border -- e.g. Allibert Matériaux Anciens at 96.6%, which is a "no
+    real backdrop found" result, not a "the whole tile is the mark" result),
+    or no DENSE foreground once isolated halo/corner pixels are dropped (see
+    `_dense_foreground`) -- Entra AS's cover crop was already correct; this
+    is what stops a lone stray pixel from triggering an unneeded, and then
+    visibly seamed, extend. Measured against the mark's own bounding radius
+    from the image centre, never against the tile's background -- a square
+    brand tile must not shrink by root two just to tuck its own coloured
+    CORNERS inside the circle, only as far as its lettering actually demands.
     """
     foreground = ~background
     total = foreground.size
@@ -720,7 +810,10 @@ def _extend_geometry(im: Image.Image, background: "np.ndarray",
     coverage = float(foreground.sum()) / total
     if coverage <= 0.0 or coverage > EXTEND_MAX_FOREGROUND:
         return None
-    ys, xs = np.nonzero(foreground)
+    dense = _dense_foreground(foreground)
+    ys, xs = np.nonzero(dense)
+    if xs.size == 0:
+        return None
     cy, cx = (im.height - 1) / 2.0, (im.width - 1) / 2.0
     radius = float(np.hypot(xs - cx, ys - cy).max())
     if radius <= 0:
@@ -728,37 +821,38 @@ def _extend_geometry(im: Image.Image, background: "np.ndarray",
     return (FINAL_SIZE / 2.0 * margin) / radius
 
 
-def _clean_edge_line(background: "np.ndarray", alpha: "np.ndarray", axis: int,
-                      from_start: bool) -> "np.ndarray | None":
-    """Per row (axis=0) or column (axis=1), the first pixel INDEX walking
-    inward from that edge that is both background-classified and opaque
-    (alpha >= EXTEND_CLEAN_ALPHA) -- or None if any row/column has no such
-    pixel at all.
+def _edge_fill_line(background: "np.ndarray", alpha: "np.ndarray", rgb: "np.ndarray",
+                     axis: int, from_start: bool,
+                     samples: int = EXTEND_EDGE_SAMPLES) -> "np.ndarray | None":
+    """Per row (axis=0) or column (axis=1), the MEDIAN colour of the first
+    `samples` background-classified, opaque (alpha >= EXTEND_CLEAN_ALPHA)
+    pixels found walking inward from that edge -- or None if any row/column
+    has none at all. Shape (length, 3).
+
+    Deliberately several samples, not the nearest one (see EXTEND_EDGE_SAMPLES
+    for why), and deliberately LOCAL to the edge being extended rather than a
+    line-wide median -- a two-tone tile (Van der Wal Sloopwerken's red band
+    over a yellow band) must keep its top edge red and its bottom edge
+    yellow, not blend into a single line-wide colour.
 
     `_opaque_bounds` only guarantees ONE opaque pixel per boundary line, not
     the whole line: measured on the real set, 14 of 56 circle_cover sources
     still carry a partly transparent outer ring after that crop, five of them
-    (including Allibert and DRZ) fully transparent along an entire edge.
-    Replicating that literal edge with `np.pad(mode="edge")` was the first
-    version of this function and it produced exactly the artefact this whole
-    change exists to prevent: a 72-column alpha-11 wedge on one asset, a
-    translucent alpha 179-217 ring on another -- the report's node fill
-    showing through what should be a solid disc. Walking inward to a genuinely
-    opaque background pixel is what "replicated" is allowed to mean.
+    (including Allibert and DRZ) fully transparent along an entire edge --
+    the None return is what sends those back to the historical cover crop
+    instead of replicating a translucent ring into the disc.
     """
-    h, w = background.shape
-    length = h if axis == 1 else w
-    depth = w if axis == 1 else h
     opaque = alpha >= EXTEND_CLEAN_ALPHA
     clean = background & opaque
     order = clean if from_start else np.flip(clean, axis=axis)
-    first = np.argmax(order, axis=axis)
-    found = np.take_along_axis(order, np.expand_dims(first, axis), axis=axis).squeeze(axis)
-    if not bool(found.all()):
+    order_rgb = rgb if from_start else np.flip(rgb, axis=axis)
+    cumulative = np.cumsum(order, axis=axis)
+    within = order & (cumulative <= samples)
+    if not bool((within.sum(axis=axis) > 0).all()):
         return None
-    if not from_start:
-        first = depth - 1 - first
-    return first
+    masked = np.where(within[:, :, None], order_rgb, np.nan)
+    with np.errstate(invalid="ignore"):
+        return np.nanmedian(masked, axis=axis)
 
 
 def _running_median(values: "np.ndarray", window: int = 9) -> "np.ndarray":
@@ -770,6 +864,33 @@ def _running_median(values: "np.ndarray", window: int = 9) -> "np.ndarray":
     padded = np.pad(values, [(0, 0)] * (values.ndim - 1) + [(pad, pad)], mode="edge")
     stack = np.stack([padded[..., i:i + values.shape[-1]] for i in range(window)], axis=-1)
     return np.median(stack, axis=-1)
+
+
+def _resize_straight_alpha(im: Image.Image, size: tuple) -> Image.Image:
+    """LANCZOS-resize an RGBA image via PREMULTIPLIED alpha.
+
+    Plain `Image.resize` on straight-alpha RGBA lets a fully-transparent
+    pixel's arbitrary, meaningless RGB bleed into a neighbouring OPAQUE
+    pixel once they land in the same resize kernel window -- a well-known
+    Pillow pitfall. Measured consequence here: a single stray pixel, RGB
+    (77,126,107), sitting alone amid a uniform (1,60,38) fill at the exact
+    last column of a resized icon (Entra AS) -- not anywhere in the padding
+    logic, in the resize itself. The historical cover crop never showed this
+    because it throws away most of the resized image's own edge; extending
+    keeps far more of it, so the artefact surfaces. Premultiplying first
+    makes a transparent pixel's contribution exactly zero regardless of its
+    stored RGB, which is what "transparent" is supposed to mean.
+    """
+    array = np.asarray(im.convert("RGBA")).astype(np.float64)
+    alpha = array[:, :, 3:4] / 255.0
+    premultiplied = np.concatenate([array[:, :, :3] * alpha, array[:, :, 3:4]], axis=2)
+    resized = Image.fromarray(premultiplied.astype(np.uint8), "RGBA").resize(size, Image.Resampling.LANCZOS)
+    resized_array = np.asarray(resized).astype(np.float64)
+    resized_alpha = resized_array[:, :, 3:4] / 255.0
+    with np.errstate(invalid="ignore", divide="ignore"):
+        straight_rgb = np.where(resized_alpha > 0, resized_array[:, :, :3] / np.maximum(resized_alpha, 1e-6), 0)
+    result = np.concatenate([np.clip(straight_rgb, 0, 255), resized_array[:, :, 3:4]], axis=2)
+    return Image.fromarray(result.astype(np.uint8), "RGBA")
 
 
 def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
@@ -784,32 +905,44 @@ def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
     the historical cover crop for that source.
     """
     new_size = (max(1, round(im.width * scale)), max(1, round(im.height * scale)))
-    resized = im.resize(new_size, Image.Resampling.LANCZOS)
+    resized = _resize_straight_alpha(im, new_size)
     mask = _flood_background_mask(resized)
     array = np.asarray(resized.convert("RGBA")).astype(np.int32)
 
     def extend_rows(a, m, depth, at_top):
         """Add `depth` replicated rows at the top or bottom of `a`."""
-        row = _clean_edge_line(m, a[:, :, 3], axis=0, from_start=at_top)  # one index per COLUMN
-        if row is None:
+        edge = _edge_fill_line(m, a[:, :, 3], a[:, :, :3], axis=0, from_start=at_top)  # one colour per COLUMN
+        if edge is None:
             return None, None
-        cols = np.arange(a.shape[1])
-        edge = _running_median(a[row, cols, :].astype(np.float64).T).T
-        edge[:, 3] = 255  # a translucent ring is worse than none
-        band = np.broadcast_to(edge.astype(np.int32)[None, :, :], (depth, a.shape[1], 4)).copy()
+        edge = _running_median(edge.T).T
+        edge_rgba = np.concatenate([edge, np.full((edge.shape[0], 1), 255.0)], axis=1)  # opaque, not a translucent ring
+        edge_rgba = edge_rgba.astype(np.int32)
+        margin = min(EXTEND_SEAM_MARGIN, a.shape[0])
+        seam_rows = range(margin) if at_top else range(a.shape[0] - margin, a.shape[0])
+        a = a.copy()
+        for r in seam_rows:
+            touch = m[r]
+            a[r][touch] = edge_rgba[touch]
+        band = np.broadcast_to(edge_rgba[None, :, :], (depth, a.shape[1], 4)).copy()
         mask_band = np.ones((depth, a.shape[1]), dtype=bool)  # replicated pixels ARE background
         return ((np.concatenate([band, a], axis=0), np.concatenate([mask_band, m], axis=0)) if at_top
                 else (np.concatenate([a, band], axis=0), np.concatenate([m, mask_band], axis=0)))
 
     def extend_cols(a, m, depth, at_left):
         """Add `depth` replicated columns at the left or right of `a`."""
-        col = _clean_edge_line(m, a[:, :, 3], axis=1, from_start=at_left)  # one index per ROW
-        if col is None:
+        edge = _edge_fill_line(m, a[:, :, 3], a[:, :, :3], axis=1, from_start=at_left)  # one colour per ROW
+        if edge is None:
             return None, None
-        rows = np.arange(a.shape[0])
-        edge = _running_median(a[rows, col, :].astype(np.float64).T).T
-        edge[:, 3] = 255
-        band = np.broadcast_to(edge.astype(np.int32)[:, None, :], (a.shape[0], depth, 4)).copy()
+        edge = _running_median(edge.T).T
+        edge_rgba = np.concatenate([edge, np.full((edge.shape[0], 1), 255.0)], axis=1)
+        edge_rgba = edge_rgba.astype(np.int32)
+        margin = min(EXTEND_SEAM_MARGIN, a.shape[1])
+        seam_cols = range(margin) if at_left else range(a.shape[1] - margin, a.shape[1])
+        a = a.copy()
+        for c in seam_cols:
+            touch = m[:, c]
+            a[:, c][touch] = edge_rgba[touch]
+        band = np.broadcast_to(edge_rgba[:, None, :], (a.shape[0], depth, 4)).copy()
         mask_band = np.ones((a.shape[0], depth), dtype=bool)
         return ((np.concatenate([band, a], axis=1), np.concatenate([mask_band, m], axis=1)) if at_left
                 else (np.concatenate([a, band], axis=1), np.concatenate([m, mask_band], axis=1)))
@@ -884,8 +1017,23 @@ def is_opaque_tile(im: Image.Image) -> bool:
     # 0.785 and needs no cover treatment, so the band between is empty --
     # measured: 0.900, then 0.842, 0.803, then a cluster at 0.785.
     covers_frame = (width * height) / (im.width * im.height) >= 0.90
-    fills_box = float((alpha[y0:y1 + 1, x0:x1 + 1] > 24).mean()) >= 0.88
-    return bool(covers_frame and fills_box)
+    box = alpha[y0:y1 + 1, x0:x1 + 1]
+    fills_box = float((box > 24).mean()) >= 0.88
+    # ...und der Kasten muss WIRKLICH DECKEND sein, nicht bloss nicht-
+    # transparent.  `> 24` zaehlt einen weichen Schlagschatten als gefuellt
+    # mit: DK:U29 (Apple-Touch-Icon mit Schatten) ist zu 0.959 nicht-
+    # transparent, aber nur zu 0.638 deckend.  Cover-Crop macht daraus eine
+    # randlose Scheibe, in der genau dieser Teilalphabereich als
+    # durchsichtiger Ring im Kreis sichtbar wird -- vom Manifestpruefer
+    # (inner_disc_min_alpha) korrekt als Fehler gemeldet.  Diese Kachel gehoert
+    # in den contain-Zweig, nicht in den Cover-Zweig.
+    # 0.80: ueber ALLE 190 heute angenommenen Kacheln gemessen liegt der Anteil
+    # deckender Pixel bei 0.638 (nur DK:U29), dann erst wieder bei 0.888
+    # (TRAJECT) und danach dicht bei 1.000.  0.80 liegt mitten in dieser leeren
+    # Bandbreite und haelt zu beiden Seiten Abstand -- die 0.88 von fills_box
+    # waeren fuer TRAJECT nur 0.008 Luft.
+    box_is_opaque = float((box >= 250).mean()) >= 0.80
+    return bool(covers_frame and fills_box and box_is_opaque)
 
 
 def has_flat_opaque_backdrop(im: Image.Image, tolerance: int = 18) -> bool:
@@ -898,16 +1046,28 @@ def has_flat_opaque_backdrop(im: Image.Image, tolerance: int = 18) -> bool:
 
     Two acceptance paths: the historical four-corner test, and `is_opaque_tile`
     for the rounded/multi-coloured tiles that test cannot see.
+
+    Matching corners alone do not prove a real backdrop -- a thin decorative
+    FRAME around an otherwise transparent interior also has four uniform
+    opaque corners. Gate 21's source is a yellow outline with 72% of its
+    canvas transparent inside it; the corner test alone waved it through as
+    circle_cover and it rendered as a mostly-invisible disc, caught only once
+    `inner_disc_min_alpha` existed to check for it. The corner path now also
+    requires the canvas to actually BE mostly opaque, at the same floor
+    `is_opaque_tile` already applies to its own bounding box.
     """
     im = im.convert("RGBA")
     if im.width < 2 or im.height < 2:
         return False
     corners = [im.getpixel((0, 0)), im.getpixel((im.width - 1, 0)),
                im.getpixel((0, im.height - 1)), im.getpixel((im.width - 1, im.height - 1))]
-    if all(pixel[3] >= 250 for pixel in corners) and all(
-            max(pixel[channel] for pixel in corners) - min(pixel[channel] for pixel in corners) <= tolerance
-            for channel in range(3)):
-        return True
+    corners_uniform_opaque = all(pixel[3] >= 250 for pixel in corners) and all(
+        max(pixel[channel] for pixel in corners) - min(pixel[channel] for pixel in corners) <= tolerance
+        for channel in range(3))
+    if corners_uniform_opaque:
+        array = np.asarray(im)
+        if float((array[:, :, 3] >= 250).mean()) >= 0.85:
+            return True
     return is_opaque_tile(im)
 
 
@@ -996,7 +1156,15 @@ def neutral_backdrop_to_transparency(im: Image.Image, theme: str, backdrop: tupl
 
 
 def tokenise_transparent_neutral_mark(im: Image.Image, theme: str) -> Image.Image:
-    """Theme-tokenise a predominantly neutral mark on transparency."""
+    """Theme-tokenise neutral ink while preserving genuine brand colours.
+
+    A fully neutral mark is converted as a unit, as before.  Coloured marks
+    may still contain white or black lettering intended for a contrasting
+    brand plate; once that plate is removed those letters would disappear on
+    one of the node themes.  Map only near-white/near-black neutral pixels in
+    such mixed marks to the theme's contrast token and leave coloured pixels
+    untouched.
+    """
     if theme not in {"light", "dark"}:
         raise ValueError(f"unsupported theme: {theme}")
     pixels = np.array(im.convert("RGBA"), dtype=np.uint8)
@@ -1005,11 +1173,15 @@ def tokenise_transparent_neutral_mark(im: Image.Image, theme: str) -> Image.Imag
         return im.convert("RGBA")
     rgb = pixels[:, :, :3].astype(np.int32)
     neutral = visible & ((rgb.max(axis=2) - rgb.min(axis=2)) <= 32)
-    if int(neutral.sum()) / int(visible.sum()) < 0.85:
-        return im.convert("RGBA")
+    luminance = ((299 * rgb[:, :, 0] + 587 * rgb[:, :, 1] +
+                  114 * rgb[:, :, 2] + 500) // 1000)
+    if int(neutral.sum()) / int(visible.sum()) >= 0.85:
+        replace = neutral
+    else:
+        replace = neutral & ((luminance <= 80) | (luminance >= 175))
     token = SEMIO_DARK if theme == "light" else SEMIO_LIGHT
     output = pixels.copy()
-    output[neutral, :3] = token
+    output[replace, :3] = token
     return Image.fromarray(output, "RGBA")
 
 

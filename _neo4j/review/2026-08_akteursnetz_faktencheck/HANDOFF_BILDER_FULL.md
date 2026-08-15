@@ -315,10 +315,11 @@ Der aktuelle Semio-Export wurde separat ausgewertet und enthält 619 Knoten:
 - Für die 264 bildlosen Organisationen wurden Domains erneut einzeln geprüft,
   offizielle Haupt-, Medien-, Marken- und Trägerseiten tiefer durchsucht und
   browserkomprimierte bzw. webgeschützte Seiten technisch besser erschlossen.
-- Der read-only Tiefenlauf ergibt 116 neue identitätsgefilterte Vorschläge und
-  148 `none`-Fälle. Maximal erreichbar nach visueller Bestätigung: 393/541.
-- Von den 148 `none`-Fällen haben 76 noch keine ausreichend bestätigte bzw.
-  freigegebene Organisationsdomain; 72 besitzen eine bestätigte Domain, aber
+- Der abschließende read-only Tiefenlauf ergibt 133 neue identitätsgefilterte
+  Vorschläge und 131 `none`-Fälle. Maximal erreichbar nach visueller
+  Bestätigung: 410/541.
+- Von den 131 `none`-Fällen haben 52 noch keine ausreichend bestätigte bzw.
+  freigegebene Organisationsdomain; 79 besitzen eine bestätigte Domain, aber
   keine sichere, drucklesbare und zulässig belegte Marke.
 - Klare Fehlzuordnungen (u. a. CSTB-Untermarken, UEA-Fotos, BDP-Farbfläche,
   Google-Play-Grafik, Deutsche-Bahn-Partnerlogo bei Madaster/EPEA) bleiben
@@ -326,6 +327,195 @@ Der aktuelle Semio-Export wurde separat ausgewertet und enthält 619 Knoten:
 - Die klickbare, read-only Galerie liegt unter
   `bilder_full/current_deep_review/index.html`; sie zeigt Hell/Dunkel,
   Kreisclip, unveränderte ID, Land-/Statusfilter und offizielle Quellen.
-- Alle 116 neuen Vorschläge sind unbestätigt. Es gab keinen Neo4j-Write und
+- Der letzte Einzelfall-Dig bestätigte 24 weitere Organisations- oder
+  Trägerdomains. Vier zusätzliche offizielle Dateien wurden als Vorschläge
+  aufgenommen (Madaster CH, Travail & Vie, Toit de Paris, Overtreders W).
+  Der falsche HRK-Re-Audit-Treffer für BTU wurde dauerhaft gesperrt; BTU bleibt
+  wegen der dokumentierten Nutzungsgenehmigung und fehlender freigegebener
+  Datei `none`. Textifloor bleibt wegen nur 124×71 px unter der Mindestkante
+  ebenfalls `none`.
+- Alle 133 neuen Vorschläge sind unbestätigt. Es gab keinen Neo4j-Write und
   keine Übertragung in `mit-bestand`.
-- 32 Integritäts- und Regressionstests sind grün.
+- Alte Vorschaudateien werden beim Galerie-Neuaufbau entfernt, sodass ein
+  nachträglich verworfener Treffer nicht weiter sichtbar bleibt.
+- 34 Integritäts- und Regressionstests sind grün.
+
+## Nachtrag 14.08.2026 – circle_extend statt Beschnitt der Marke
+
+Im Modus `circle_cover` wurde jede Kachel formatfüllend skaliert und kreisförmig
+beschnitten; bei breiten oder randnahen Marken schnitt das die Wortmarke am
+Kreisrand ab. Bestätigt im gebauten PDF: BOBI Réemploi (FR:M07) verlor beide
+Enden ihrer Wortmarke, Van der Wal (NL:U28/U52) hatte „VAN DER WAL" links und
+rechts angeschnitten.
+
+Neuer Modus `circle_extend`: statt die Marke zu beschneiden, wird sie so weit
+verkleinert, dass sie vollständig in den Kreis passt, und der vorhandene
+Kachel-Hintergrund per Flutfüllungsmaske nach außen verlängert, bis der Kreis
+wieder randlos gefüllt ist. Maßgeblich für den Skalierungsfaktor ist
+ausdrücklich nur die Marke (Schrift/Icon) — der Hintergrund selbst darf nicht
+schrumpfen, nur weil seine Ecken sonst vom Kreis gekappt würden (Nutzervorgabe).
+Kein Beschnittlimit für sehr breite Marken (Nutzerentscheidung); bei 4,55 mm
+Knotendurchmesser ohnehin nicht lesbar, aber die Marke bleibt unversehrt.
+
+Umgesetzt in `pilot_images.py`: `_flood_background_mask` (lokale
+Chebyshev-Toleranz je Nachbarpixel, damit zweifarbige Kacheln wie Van der Wals
+rot-über-gelb funktionieren), `_extend_geometry` (Skalierungsfaktor aus der
+**dichten** Vordergrundmaske, siehe unten), `_edge_fill_line` (Medianfarbe aus
+mehreren Randpixeln statt nur dem nächsten, gegen ausgeblichene Halo-/
+Schlagschattenringe), `_running_median` (glättet die Randfarblinie gegen
+JPEG-Rauschen/Verläufe), `_extend_backdrop_to_canvas` (Resize+Pad),
+`_box_density`/`_dense_foreground` (7×7-Dichtefilter, verwirft vereinzelte
+Halo-Pixel, die sonst den gemessenen Markenradius künstlich aufblähen — ohne
+diesen Filter hätte ein Squircle-App-Icon mit Eckartefakt fälschlich
+`circle_extend` statt des bereits korrekten `circle_cover` ausgelöst).
+`has_flat_opaque_backdrop` zusätzlich verschärft: der 4-Ecken-Pfad verlangt
+jetzt auch ≥85 % Gesamtdeckkraft der Kachel, weil ein dünner dekorativer Rahmen
+mit vier deckenden Ecken, aber zu 72 % transparenter Mitte (DE:N04, „Gate 21")
+sonst fälschlich als deckende Vollkachel durchging und eine fast unsichtbare
+Scheibe erzeugte — dieser eine Fund war der einzige betroffene Fall unter allen
+131 vollflächigen Zeilen, kein systematisches Problem. Neuer permanenter Helfer
+`inner_disc_min_alpha`, sowohl live als Entscheidungsgrundlage als auch als
+dauerhafte Prüfung in `validate_final_manifest` für alle drei vollflächigen
+Modi verankert, damit ein künftiger durchsichtiger Ring sofort auffällt.
+
+`full_image_collection.py`: `validate_final_manifest`-Radiuslimit auf
+`circle_extend` erweitert plus die neue Ringprüfung; `command_finalize`
+erzeugt jetzt auch für `safe_contain` ein Dark-Geschwister, sobald sich Hell-
+und Dunkel-Rendering tatsächlich unterscheiden (vorher nur bei
+`neutral_knockout`) — behebt nebenbei 91 zuvor dunkel-auf-dunkel gerenderte
+Logos aus der vorigen Phase.
+
+Ergebnis nach vollem `finalize` → `validate` (762/762 grün) →
+`sync-images` → Berichtsbau (Hell+Dunkel, `--skip-nx-cache`):
+von den ursprünglich 56 `circle_cover`-Assets wechseln 22 zu `circle_extend`
+(vollständige Marke, kein Beschnitt), 33 bleiben unverändert `circle_cover`
+(bytegleich, keine Marke betroffen), 1 (DE:N04) wechselt durch den
+`has_flat_opaque_backdrop`-Bugfix nach `safe_contain`. Manifestverteilung:
+`{safe_contain: 147, light_backdrop: 75, neutral_knockout: 66,
+circle_extend: 22, circle_cover: 33}`.
+
+Geprüft: Byte-Hash-Vergleich vor/nach `finalize` bestätigt 324 bytegleiche
+Zeilen und genau erklärt jede der übrigen Änderungen; `inner_disc_min_alpha`
+über alle 22 `circle_extend`-Assets ≥250 (kein Ring); Kontaktbogen aller 22
+visuell geprüft; die beiden vom Benutzer genannten Fälle (BOBI/FR:M07,
+Van der Wal/NL:U28) sowie die als korrekt bestätigten Gegenfälle
+(TRAJECT/NL:U49, R-Place/FR:M47) direkt im kompilierten PDF bei 600–1200 dpi
+gerendert und angesehen, Hell und Dunkel — Wortmarken vollständig und
+unbeschnitten. 34 + 9 Tests grün, neuer Test
+`test_wide_tile_is_extended_not_cut` (zweifarbige Kachel mit randständigen
+Marken links und rechts) ergänzt. Logoentscheidungen, Kandidaten, Quellen und
+Neo4j unverändert.
+
+## Nachtrag 14.08.2026 – letzter Quellen- und Vorschlagsaudit im 619er Netz
+
+Der Nutzer verlangte einen weiteren tiefen Lauf mit möglichst hoher sicherer
+Abdeckung. Die 541 Organisationen des aktuellen Netzes blieben die feste
+Grundgesamtheit; die 78 Projekte bleiben bildlos. Der Lauf hat die 264 noch
+bildlosen Organisationen erneut gegen offizielle Organisations-, Träger-, Presse-
+und Medienseiten geprüft und alle verbleibenden Vorschläge in Hell/Dunkel angesehen.
+
+- 39 zusätzliche Organisations- oder Trägerdomains wurden einzeln bestätigt.
+- 157 neue, identitätsgeprüfte Logovorschläge bleiben übrig; 107 Fälle sind `none`.
+- Zusammen mit 277 vorhandenen Logos ergibt das nach Nutzerbestätigung maximal
+  434/541 beziehungsweise 80,2 % Abdeckung.
+- Alle 157 Vorschläge wurden im Quellenkontext und auf den 20 Hell-/Dunkel-
+  Prüfbögen visuell auditiert. Sie bleiben bewusst `confirmed: false` und sind
+  keine stillschweigende Nutzerfreigabe.
+- Entfernt wurden unter anderem Skanska-Projektfotografie, La-Fab-Appkachel,
+  Brussels/EU-Förderzeichen, eine EU-Flagge bei Maison du Réemploi, eine
+  Menükachel bei Matériaux d’Antan sowie Foto-/Webshop-Treffer bei
+  wiederverwendung.ch, B3 Kolb und Saint Emilion Matériaux.
+- Neue exakte offizielle Dateien stammen aus den Marken-/Medienbereichen von DTU,
+  Helsinki, University of Twente und Realdania. Realdania wird reproduzierbar aus
+  dem benannten PNG-Mitglied der offiziellen ZIP-Logopakke geholt.
+- OVAM bleibt `none`: das offizielle Header-Raster unterschreitet die festgelegte
+  128-px-Mindestkante; die übrigen Treffer sind Fotos.
+- Der abschließende Restlauf ergänzte Depuis 1920, Mobius Réemploi, Upcylight und
+  die eindeutig dokumentierte Aalto-Trägeridentität für Havu Järvelä und Markus
+  Saarela. Pierres & Jardins d'Autrefois blieb nach Sichtprüfung `none`, weil nur
+  ein Webseiten-Fotoscreenshot die Mindestgröße bestand.
+- TLS-Abrufe verwenden jetzt explizit das mitgelieferte CA-Bundle. Dadurch werden
+  Zertifikate weiter geprüft, aber lokale Python-CA-Lücken erzeugen keine falschen
+  Negativergebnisse mehr.
+- Dauerhafter Auditnachweis:
+  `bilder_full/current_deep_review/AGENT_VISUAL_AUDIT.md`; auditiertes Manifest
+  SHA-256 `fd5a25beb15fc3e77e5e33f08b712e5a93de9ba9c551c6c1e4e4ae0068e25ef4`.
+- 35 Integritäts- und Regressionstests sind grün. Neo4j-Schreiboperationen: 0.
+
+## Nachtrag 14.08.2026 – weiterer Hunt auf eingebettete Marken
+
+Der Restbestand wurde nochmals auf offizielle Header-Marken untersucht, insbesondere
+auf SVGs, die nicht als eigene Bild-URL vorliegen. Der Sammler kann nun pro geprüftem
+Knoten eine exakte Inline-SVG-Marke aus dem offiziellen Seitenkopf extrahieren. Die
+extrahierten Originalbytes, die offizielle Quellseite und der SHA-256 bleiben im
+Kandidatenmanifest nachvollziehbar; es findet kein Nachzeichnen oder Umfärben statt.
+
+- Zehn neue, visuell geprüfte Vorschläge: B3/Josef Kolb, Madaster/EPEA, UEA,
+  Rothuizen, Rotor, Opalis, FutureBuilt, BDP, Grand Huit und Gate 21 als expliziter
+  Träger des Greater-Copenhagen-CirCoFin-Piloten.
+- Neuer Stand: 277 bestehende Logos + 167 unbestätigte sichere Vorschläge = maximal
+  444/541 Organisationen (82,1 %); 97 bleiben `none`.
+- Die zehn neuen Karten wurden im echten Kreisrender in Hell und Dunkel bei 50 %
+  Logo-Deckkraft kontrolliert. Marke vollständig im Kreis, ID unverändert lesbar.
+- Die Galerie unter `http://127.0.0.1:8766/` wurde auf 21 Prüfbögen aktualisiert.
+- Auditmanifest SHA-256:
+  `011e2f403b74f37e43de0fe52563058528a9e31bf74063ffa8e0aec02d8b0f21`.
+- 35 Integritäts- und Regressionstests grün; Neo4j-Schreiboperationen: 0.
+
+## Nachtrag 15.08.2026 – Bildrechte-Audit
+
+Für alle 453 im aktuellen Netz nutzbaren Logo-Datensätze (277 vorhandene Assets
+und 176 Vorschläge) wurde ein konservativer Rechte-Datensatz erzeugt. Jeder
+Datensatz enthält die exakte Bildquelle, einen Rechtehinweis, einen Status, den
+Rechte-/Kontaktweg und die druckbezogene Freigabegrenze.
+
+- 453/453 Datensätze vollständig dokumentiert; keine fehlenden Quellen oder
+  Rechtehinweise.
+- 1 bedingt lizenzierter Fall: RISE unter CC BY-SA 4.0 mit Namensnennung,
+  Lizenzlink, Änderungshinweis und Share-Alike-Prüfung.
+- 451 Fälle sind bis zu einer schriftlichen Nutzungs- oder Markenfreigabe für den
+  konkreten Hell-/Dunkel-Kreisrender gesperrt.
+- 1 Fall (Region Hovedstaden, PD-textlogo) benötigt noch eine gesonderte
+  Markenrechtsprüfung.
+- Explizite Restriktionen wurden unter anderem für Buildwise, BTU, Skanska,
+  Helsinki und Stadt Wien dokumentiert. Besonders wichtig: Helsinkis Vorgaben
+  untersagen Modifikation und Teilintensität; die 50-%-Vorschau ist daher ohne
+  Ausnahmegenehmigung nicht markenkonform.
+- Es wurden keine Organisationen kontaktiert und keine Genehmigungen fingiert.
+  Wird eine Erlaubnis verweigert oder nicht erteilt, muss ausschließlich der
+  betroffene Knoten auf `none` gesetzt werden.
+
+Artefakte:
+
+- `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.md`
+- `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.json`
+- `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.csv`
+- Audit-SHA-256:
+  `f99c83f89ca01e0df72ae53d50c18a788e050c1240ca4c35087c946a027d788f`
+- 36 Integritäts- und Regressionstests grün; Neo4j-Schreiboperationen: 0.
+
+## Nachtrag 15.08.2026 – zusätzlicher offizieller Quellenlauf
+
+Die verbleibenden `none`-Fälle wurden erneut einzeln auf versteckte Header-SVGs,
+offizielle Presse-/Markenpakete und – nur bei öffentlichen Einrichtungen –
+lizenzierte Wikimedia-Dateien geprüft. Dabei kamen neun weitere, visuell geprüfte
+Vorschläge hinzu:
+
+- La Fab Bordeaux, Les Chutes de la Dore und Synéthic aus ihren offiziellen
+  Webauftritten;
+- BTU Cottbus–Senftenberg, RISE und Region Hovedstaden aus eindeutig zugeordneten,
+  lizenzierten Wikimedia-Dateien;
+- Skanska Finland und die Stadt-Wien-Trägermarke für VIE.CYCLE aus exakten
+  Inline-SVGs der offiziellen Seiten;
+- Buildwise aus dem offiziellen Presse-ZIP, einschließlich der dort bereitgestellten
+  Negativvariante für das dunkle Theme.
+
+Neuer Stand: 277 bestehende Logos + 176 unbestätigte sichere Vorschläge = maximal
+453/541 Organisationen (83,7 %); 88 bleiben nach diesem Lauf `none`. Alle neun neuen
+Karten wurden in Hell und Dunkel bei 50 % Logo-Deckkraft im echten Kreisrender
+kontrolliert. Es wurde nichts automatisch bestätigt und `mit-bestand` nicht verändert.
+
+- Galerie: `http://127.0.0.1:8766/` (22 Prüfbögen)
+- Auditmanifest SHA-256:
+  `20280b3b0ddd6e2d8e3f8cf0479864acccefd7a38ed1ea550274677e9c4d5217`
+- 35 Integritäts- und Regressionstests grün; Neo4j-Schreiboperationen: 0.

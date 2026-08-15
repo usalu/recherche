@@ -49,6 +49,101 @@ class FullImageCollectionTests(unittest.TestCase):
         gallery = ROOT / "current_deep_review" / "index.html"
         self.assertTrue(gallery.is_file())
         self.assertIn("541 Organisationen", gallery.read_text(encoding="utf-8"))
+        preview_dir = ROOT / "current_deep_review" / "previews"
+        for row in deep["nodes"]:
+            preview = preview_dir / (row["key"].replace(":", "_") + ".png")
+            self.assertEqual(preview.is_file(), row["suggested_result"] == "logo", row["key"])
+
+    def test_current_logo_rights_audit_is_complete_and_conservative(self):
+        deep = load("current_deep_review/manifest.json")
+        for row in deep["nodes"]:
+            if row["suggested_result"] != "logo":
+                continue
+            candidate = next(c for c in row["candidates"]
+                             if c["id"] == row["suggested_candidate_id"])
+            self.assertTrue(candidate["license_note"], row["key"])
+
+        audit = load("CURRENT_IMAGE_RIGHTS_AUDIT.json")
+        self.assertEqual(audit["counts"]["rows"], 453)
+        self.assertEqual(len(audit["nodes"]), 453)
+        self.assertEqual(len({row["eid"] for row in audit["nodes"]}), 453)
+        self.assertTrue(all(row["source_url"] for row in audit["nodes"]))
+        self.assertTrue(all(row["rights_source_url"] for row in audit["nodes"]))
+        self.assertTrue(all(row["license_note"] for row in audit["nodes"]))
+        self.assertTrue(all(row["print_clearance"] != "cleared" for row in audit["nodes"]))
+        self.assertEqual(sum(audit["counts"]["print_clearance"].values()), 453)
+
+    def test_last_deep_dig_uses_only_verified_marks(self):
+        deep = {row["key"]: row for row in load("current_deep_review/manifest.json")["nodes"]}
+        expected = {
+            "CH:S03": "Madaster-BrandmarkLogo-RGB.png",
+            "FR:O05": "e755c5_7e60158d97e14b94a7e7ccdbb5ce1022~mv2.png",
+            "FR:M57": "cbe7f0_4798aa34439643d0a0e7a89a9a3e91f3~mv2.png",
+            "NL:U38": "d312e0_0ba87a49968b437c961f72de0a561fb5~mv2.png",
+        }
+        for key, source_name in expected.items():
+            row = deep[key]
+            self.assertEqual(row["suggested_result"], "logo")
+            candidate = next(c for c in row["candidates"]
+                             if c["id"] == row["suggested_candidate_id"])
+            self.assertTrue(candidate["url"].endswith(source_name), key)
+            if candidate["format"] != "svg":
+                self.assertGreaterEqual(min(candidate["width"], candidate["height"]), 128)
+        self.assertEqual(deep["DE:F01"]["suggested_result"], "logo")
+        btu = next(c for c in deep["DE:F01"]["candidates"]
+                   if c["id"] == deep["DE:F01"]["suggested_candidate_id"])
+        self.assertIn("Brandenburgische_Technische_Universit", btu["url"])
+        self.assertEqual(btu["format"], "svg")
+
+    def test_final_official_media_pass_keeps_exact_sources_and_rejects_weak_substitutes(self):
+        deep = {row["key"]: row for row in load("current_deep_review/manifest.json")["nodes"]}
+        expected_sources = {
+            "DK:F01": "media.adm.dtu.dk/designguide/",
+            "FI:I02": "makasiini.hel.fi/helsinki-logos/",
+            "BE:F07": "www.utwente.nl/.wh/",
+            "DK:U28": "logopakke_realdania_100mm.zip#",
+            "FR:M32": "reciprocite.fr/images/reciprocite.svg",
+            "FR:M37": "materiauxdantan.fr/img/logo-",
+            "FR:U07": "depuis1920.fr/",
+            "FR:M39": "e4556a_ec866f8a133b4cb791f901e87ebc3fe3",
+            "FR:M60": "45669a_8dd327e12a3a4082bd3525b868955246",
+            "FI:U05": "aalto.fi/sites/default/files/favicons/",
+            "FI:U10": "aalto.fi/sites/default/files/favicons/",
+            "CH:U11": "b-3.ch/userdata/assets/logo/b3-logo-rgb.svg",
+            "BE:S01": "madaster.com/app/uploads/sites/6/2023/09/madaster-brandmarklogo-rgb.png",
+            "GB:F04": "inline+https://www.uea.ac.uk/",
+            "NL:U44": "inline+https://rothuizen-architecten.nl/",
+            "BE:N06": "inline+https://rotordb.org/",
+            "BE:N05": "inline+https://opalis.eu/en",
+            "NO:N03": "inline+https://www.futurebuilt.no/",
+            "GB:U06": "inline+https://www.bdp.com/",
+            "FR:U09": "grandhuit.eu/wp-content/themes/g8/images/l5.png",
+            "DE:U20": "gate21-header.png",
+            "FR:I01": "logo-lafab.svg",
+            "FR:M33": "logo_final_transp_vect-2.png",
+            "FR:U16": "3376b6_1903d6f0f4ce4ff28d4c2803593652de",
+            "DE:F01": "brandenburgische_technische_universit",
+            "SE:F02": "rise-logo-black.svg",
+            "DE:U33": "danish_region_hovedstaden_logo.svg",
+            "FI:U18": "inline+https://www.skanska.com/fi/fi",
+            "AT:I02": "inline+https://viecycle.wien.gv.at/",
+            "BE:F02": "buildwise.zip#svg/buildwise_verticaal_1.svg",
+        }
+        for key, source_part in expected_sources.items():
+            row = deep[key]
+            self.assertEqual(row["suggested_result"], "logo", key)
+            candidate = next(c for c in row["candidates"]
+                             if c["id"] == row["suggested_candidate_id"])
+            self.assertIn(source_part, candidate["url"].lower(), key)
+            if candidate["format"] != "svg":
+                self.assertGreaterEqual(min(candidate["width"], candidate["height"]), 128, key)
+        buildwise = next(c for c in deep["BE:F02"]["candidates"]
+                         if c["id"] == deep["BE:F02"]["suggested_candidate_id"])
+        self.assertTrue(buildwise["dark_preview_path"].endswith("_dark.png"))
+        self.assertIn("_neg.svg", buildwise["dark_final_url"])
+        for key in ("BE:I04", "BE:G01", "CH:M13",
+                    "FR:M42", "FR:M53"):
+            self.assertEqual(deep[key]["suggested_result"], "none", key)
 
     def test_all_transport_keys_are_unique_and_complete(self):
         selected = [row["key"] for row in self.selection["nodes"]]
@@ -193,8 +288,6 @@ class FullImageCollectionTests(unittest.TestCase):
         for key, name in (
             ("FR:F01", "CSTB"),
             ("FR:M19", "Gauthey Cheminées"),
-            ("GB:F04", "University of East Anglia"),
-            ("GB:U06", "BDP"),
             ("FI:U04", "Durat"),
         ):
             self.assertTrue(collection.candidate_rejection(

@@ -3,274 +3,103 @@
 - Network nodes: **619**
 - Organisations: **541**
 - Projects (kept image-free): **78**
-- Current logos: **277**
-- Current organisation nodes without a logo: **264**
+- Current logos: **456**
+- Current organisation nodes without a logo: **85**
 
 This report is scoped to the current Semio network. The frozen 762-node transport remains unchanged.
 
+## Pending research overlay
+
+- Identity-filtered suggestions awaiting confirmation: **184**
+- Potential coverage after confirmation: **640/541 (118.3%)**
+- Cases still resolved as `none`: **80**
+
+These suggestions are not counted as current logos and have not been written to Neo4j.
+
 ## Missing logos
 
-- `FR:M03` — Backacia — https://backacia.com/
-- `FR:M12` — Cycle Up — https://cycle-up.fr/
 - `FR:S02` — Cycle Zéro — https://cyclezero.fr/
-- `FR:O04` — Travail & Vie — domain unresolved
 - `FR:U10` — Réhabail — domain unresolved
 - `FR:O02` — Le WIP — https://www.le-wip.com/
-- `FR:U01` — Albert & Co — https://albert-and-co.fr/
-- `FR:O03` — Novaedia / Novædia — domain unresolved
-- `FR:U05` — Depuis 1920 — domain unresolved
-- `FR:I01` — La Fab Bordeaux — https://www.lafab-bm.fr/
-- `FR:U07` — Grand Huit — https://grandhuit.eu/
 - `FR:U02` — Archipel zéro — https://archipelzero.wixsite.com/
-- `FR:U08` — Mobius Réemploi — https://www.mobius-reemploi.fr/
-- `FR:M47` — REFAIR Bordeaux — domain unresolved
 - `FR:F01` — CSTB — https://www.cstb.fr/
 - `FR:N02` — Bellastock — https://www.bellastock.com/
-- `FR:M04` — Baignoires Anciennes — domain unresolved
 - `FR:M05` — Bathestia Recup — https://bathestia.fr/
-- `FR:M08` — Bourgogne Matériaux Anciens — domain unresolved
+- `FR:M08` — Bourgogne Matériaux Anciens — https://www.bourgogne-materiaux-anciens.fr/
 - `FR:M09` — Broc'Antique — domain unresolved
-- `FR:M17` — Enfin!Réemploi — domain unresolved
+- `FR:M17` — Enfin!Réemploi — https://enfin-reemploi.fr/
 - `FR:M21` — Guérin Cheminées — https://www.guerin-cheminees.com/
-- `FR:M22` — La Bois'Cyclerie — https://www.laboiscyclerie.fr/
 - `FR:M25` — Labrouche Antiquaire de Matériaux — https://antiquairedemateriaux.com/
-- `FR:M26` — Labrouche Matériaux Anciens — domain unresolved
 - `FR:M28` — Lascombes Matériaux Anciens Sud-Ouest — https://www.lascombes-sud-ouest.fr/
-- `FR:M31` — Maison du Réemploi — domain unresolved
-- `FR:M32` — Matériauthèque les Chutes de la Dore — https://leschutesdeladore63.wordpress.com/
-- `FR:M33` — Matériaux Anciens du Nord — https://www.materiauxanciensdunord.com/
-- `FR:M36` — Matériaux d'Antan — domain unresolved
-- `FR:M38` — MOBIOUS — domain unresolved
-- `FR:M40` — Pierres & Jardins d'Autrefois — domain unresolved
+- `FR:M40` — Pierres & Jardins d'Autrefois — https://www.pierres-et-jardins.com/
 - `FR:M43` — Provence Vieux Matériaux Brachet — https://www.brachet-anciensmateriaux.fr/
-- `FR:M48` — Rewood — https://rewood.fr/
-- `FR:M50` — Saint Emilion Matériaux — domain unresolved
-- `FR:M52` — Steel Alive — https://steelalive.co/
-- `FR:U13` — Synéthic — domain unresolved
-- `FR:M53` — TEXTIFLOOR — domain unresolved
+- `FR:M50` — Saint Emilion Matériaux — https://pierredetaille-gironde.fr/
+- `FR:M53` — TEXTIFLOOR — https://www.textifloor.com/
 - `FR:M55` — Tonner Matériaux Anciens — https://www.tonner-materiaux-anciens.fr/
 - `FR:I02` — Toulouse Métropole — https://metropole.toulouse.fr/
 - `FR:M56` — Trost Carrelages Anciens — http://www.materiaux-anciens49.com/
-- `FR:M57` — Upcylight — domain unresolved
 - `FR:M58` — Vieux Granits — https://www.vieuxgranits.com/
 - `FR:O01` — Booster du Réemploi (A4MT) — https://www.looping.immo/
 - `FR:M19` — Gauthey Cheminées — https://cheminees-gauthey.fr/
 - `FR:M35` — Matériaux Anciens du Sud — https://www.materiauxanciensdusud.com/
 - `FR:M46` — Reemployez.fr — https://reemployez.fr/
-- `FR:M54` — Toit de Paris — domain unresolved
 - `GB:M04` — Building Spares Market — https://buildingsparesmarket.co.uk/
-- `GB:X01` — Globechain — https://globechain.com/
-- `GB:M18` — SalvoWEB — https://www.salvoweb.com/
+- `GB:M08` — Enviromate — https://www.enviromate.co.uk/
+- `GB:M20` — Surplus Building & Plumbing Materials — https://surplusbuildingsupplies.co.uk/
 - `GB:X03` — Warp It — https://www.warp-it.co.uk/
-- `GB:F01` — UCL Circular Economy Lab — https://www.ucl.ac.uk/
-- `GB:U22` — UK CLT — https://ukclt.com/
-- `GB:N01` — Cat Fletcher / Freegle — https://www.ilovefreegle.org/
 - `GB:X02` — Studierende, Schulkinder und Freiwillige — domain unresolved
-- `GB:U05` — Cleveland Steel & Tubes — https://cleveland-steel.com/
-- `GB:U08` — Four Bay Structures — domain unresolved
+- `GB:U08` — Four Bay Structures — https://www.4bay.co.uk/
 - `GB:U10` — Grants of Shoreditch — https://www.grantsint.com/
-- `GB:U01` — AKT II — https://www.akt-uk.com/
-- `GB:U15` — Opera Property & Asset Management — https://www.opera.com/
 - `GB:U02` — BakerBrown — https://bakerbrown.studio/
 - `GB:M01` — Antique Wooden Floors — https://www.antiquewoodenfloors.co.uk/
-- `GB:M02` — Arc Reclamation Ltd — https://www.arcreclamation.com/
-- `GB:U03` — BDP — https://www.bdp.com/
-- `GB:M09` — Frome Reclamation Ltd — https://www.fromerec.co.uk/
-- `GB:M11` — London Reclamation and Salvage Ltd — https://www.londonreclamation.net/
 - `GB:M13` — Milton Keynes Antiques & Architectural Salvage — https://www.mkantiquesandsalvage.co.uk/
 - `GB:M16` — Romsey Reclamation — https://www.romseyreclamation.com/
-- `GB:U20` — The Built Environment Trust — https://www.buildingcentre.co.uk/
 - `GB:M23` — The Old Slate Yard — https://theoldslateyard.co.uk/
-- `GB:F03` — University of East Anglia — https://www.uea.ac.uk/
-- `GB:M28` — Womack Building Supplies — https://www.womackbuildingsupplies.co.uk/
 - `GB:M06` — E&A Reclamation — https://www.eandareclamation.com/
-- `GB:M07` — English Salvage — https://www.englishsalvage.co.uk/
-- `GB:N03` — Reusefully — https://www.reusefully.co.uk/
-- `NL:S02` — ReSource Marktplaats — https://play.google.com/store/apps/details?id=com.pss.resource
 - `NL:U15` — Lagemaat Heerde — https://lagemaat-heerde.nl/
-- `NL:U13` — IMd Raadgevende Ingenieurs — https://imdbv.nl/
-- `NL:U29` — Vic Obdam Staalbouw — https://vicobdam.nl/
-- `NL:U24` — Rothuizen Architecten / Taco Tuinhof — https://rothuizen-architecten.nl/
-- `NL:U02` — ABT — https://abt.eu/
-- `NL:O02` — HEEMwonen — https://heemwonen.nl/
-- `NL:O03` — IBA Parkstad — https://www.iba-parkstad.nl/
-- `NL:U17` — Maurer United — https://maurerunited.com/
-- `NL:F04` — SURD Research Centre / Zuyd — https://www.zuyd.nl/
-- `NL:O01` — Bewohnerinitiative Boschgaard — https://boschgaard.nl/
-- `NL:U20` — Overtreders W — https://www.overtreders-w.nl/
-- `NL:U18` — New Horizon — https://newhorizon.nl/
-- `NL:U23` — RAU — https://www.rau.eu/
-- `NL:U30` — Victory Group — https://victorygroup.com/
 - `NL:S03` — Ter Velde & Den Besten — https://terveldedenbesten.nl/
-- `NL:M01` — Bork (Stuifzand) — https://www.borkgroep.nl/
-- `NL:M03` — DuSpot — https://www.duspot.nl/
-- `NL:M09` — Hoogeboom — https://www.hoogeboom.nl/
-- `NL:M13` — Sagro used product shop ('s-Heerenhoek) — https://bouwmarkt.sagro.nl/
-- `NL:M14` — Snellen (Rijsbergen) — domain unresolved
-- `NL:F02` — Construction Management and Engineering / University of Twente — https://research.utwente.nl/
-- `NL:M08` — Handelsonderneming Klepper — domain unresolved
+- `NL:M14` — Snellen (Rijsbergen) — https://snellen.nl/
+- `NL:M08` — Handelsonderneming Klepper — https://woodfarm.nl/
 - `NL:M12` — Regts - Antieke Tegels — https://www.antieketegel.nl/
-- `CH:M06` — Bauteilvermittlung Zürichsee-Oberland — domain unresolved
-- `CH:S04` — REUZI — https://reuzi.ch/
-- `CH:U20` — Syphon AG Bauteilbörse Biel-Brügg — domain unresolved
-- `CH:M14` — ReUse Recycling Center Riedtwil / wiederverwendung.ch — domain unresolved
+- `CH:U20` — Syphon AG Bauteilbörse Biel-Brügg — https://stiftung-suedkurve.ch/
+- `CH:M14` — ReUse Recycling Center Riedtwil / wiederverwendung.ch — https://www.wiederverwendung.ch/
 - `CH:M07` — Bauteilverwertung Köppel & Klein — https://www.bauteilverwertung.ch/
-- `CH:S05` — Salza — https://salza.ch/
-- `CH:M16` — useagain / Bauteilclick — domain unresolved
-- `CH:U03` — baubüro in situ — https://www.insitu.ch/
+- `CH:U03` — baubüro in situ — https://insitu.ch/
 - `CH:U11` — Modissa Immobilien AG — domain unresolved
 - `CH:U21` — Tschudin Rückbau und Demontagen GmbH — https://www.tschudin-rueckbau.ch/
-- `CH:U22` — Weber + Brönnimann AG — https://www.webroe.ch/
-- `CH:U10` — manoa Landschaftsarchitekten — domain unresolved
 - `CH:U14` — Oberli Ingenieurbau AG — domain unresolved
-- `CH:U07` — Josef Kolb AG — domain unresolved
-- `CH:U23` — Wetter AG — https://www.wetter-ag.ch/
-- `CH:U06` — Ingenieurbureau Heierli AG — https://www.heierli.ch/
 - `CH:U18` — Schmidiger + Rosasco AG — https://srzh.ch/
 - `CH:U01` — aik Architektur + Ingenieur Kollektiv — domain unresolved
-- `CH:F05` — NEST Research and Innovation Platform / Empa–Eawag — https://www.empa.ch/
-- `CH:M10` — La Ressourcerie Fribourg — domain unresolved
-- `CH:N03` — Verein RE-WIN — https://re-win.ch/
-- `CH:U04` — Bischof Föhn Architektur — domain unresolved
-- `CH:U09` — Loeliger Strub — domain unresolved
-- `CH:U19` — Studio Trachsler Hoffmann — domain unresolved
-- `CH:N02` — RE-WIN — https://re-win.ch/
-- `CH:U15` — PARABASE — domain unresolved
-- `CH:S03` — Madaster — https://docs.madaster.com/
+- `CH:U04` — Bischof Föhn Architektur — https://www.bf-architekten.ch/
+- `CH:U19` — Studio Trachsler Hoffmann — https://trachslerhoffmann.ch/
 - `CH:U16` — Pascal Flammer Architekten — https://www.pascalflammer.com/
-- `CH:U12` — Monotti Ingegneri — domain unresolved
-- `CH:S01` — Digvis GmbH — domain unresolved
-- `CH:M04` — Bauteilkatalog Immobilien Basel-Stadt — domain unresolved
-- `CH:M09` — Historisches Bauteillager Ostschweiz (Denkmal Stiftung Thurgau) — https://www.historisches-bauteillager.ch/
-- `DE:M07` — Materialrest24 — domain unresolved
-- `DE:I01` — Abfallwirtschaftsbetriebe Münster — https://awm.stadt-muenster.de/
+- `CH:M04` — Bauteilkatalog Immobilien Basel-Stadt — https://www.bs.ch/
+- `DE:M07` — Materialrest24 — https://www.materialrest24.de/
 - `DE:F03` — Claus Asam — domain unresolved
 - `DE:U24` — Wiewiorra Hopp Architekten — domain unresolved
-- `DE:G02` — Deutsche Bundesstiftung Umwelt (DBU) — https://www.dbu.de/
-- `DE:U09` — Gundlach GmbH & Co. KG Wohnungsunternehmen — https://www.gundlach-bau.de/
-- `DE:U10` — H2A — https://h-2-a.com/
 - `DE:U06` — Die Zusammenarbeiter — https://zusammenarbeiter.de/
-- `DE:U03` — CITYFÖRSTER — https://www.cityfoerster.net/
-- `DE:F01` — Arbeitsgebiet Bauliches Recycling / BTU Cottbus-Senftenberg — https://www.b-tu.de/
 - `DE:U18` — Petra Jablonická — domain unresolved
-- `DE:F09` — Professur Nachhaltiges Bauen / KIT — https://bewerbung.studium.kit.edu/
-- `DE:U23` — Werner Sobek — https://www.wernersobek.com/
-- `DE:U21` — TOMAS — domain unresolved
-- `DE:M03` — Bauteilbörse Bremen — https://www.bauteilboerse-bremen.de/
 - `DE:N02` — bauteilnetz Deutschland — http://www.bauteilnetz.de/
-- `DE:U07` — Faltlhauser Krapf — https://fk-ing.com/
-- `DE:S02` — SURAP GmbH — https://www.surap.de/
-- `DE:U04` — Cubus Projekt — https://www.cubus-projekt.com/
-- `DE:U05` — DARE GmbH — domain unresolved
-- `DE:U08` — GSE – Gesellschaft für Stadtentwicklung gGmbH — https://www.gse-essen.de/
-- `DE:U11` — Holzbau Matthé — domain unresolved
-- `DE:U12` — Holzwerke Bullinger — domain unresolved
+- `DE:U05` — DARE GmbH — https://www.dare-gmbh.de/
 - `DE:U14` — Ingenieurbüro Fechner — domain unresolved
-- `DE:F07` — Materialprüfanstalt Brandenburg — https://www.mpaew.de/
-- `DE:U16` — Max Holzbau — domain unresolved
-- `DE:M08` — MÖWE gGmbH (Möwe Altmaterialverwendung) — domain unresolved
-- `DE:F02` — CirculaTUM – TUM Mission Network Circular Economy — https://www.mission-networks.tum.de/
-- `DE:M05` — Historische Bauelemente (Marwitz) — https://www.historische-bauelemente.com/
-- `DE:I03` — München Bauteilbörse (CirCoFin pilot) — domain unresolved
-- `BE:U04` — Franck — https://www.franck.eu/
-- `BE:N03` — Namur Croisade pauvreté — https://www.namur.be/
-- `BE:X01` — 2emain.be — https://www.2ememain.be/
-- `BE:S01` — Madaster — https://madaster.de/
-- `BE:U03` — Bureau Bouwtechniek — https://b-b.be/
-- `BE:N07` — Zinneke asbl — https://www.zinneke.org/
 - `BE:G01` — ERDF / FEDER Brüssel-Hauptstadt — https://erdf.brussels/
-- `BE:N05` — Rotor — https://rotordb.org/
-- `BE:N04` — Opalis — https://opalis.eu/
-- `BE:N02` — Embuild — https://www.embuild.be/
-- `BE:F01` — Buildwise — https://www.buildwise.be/
 - `BE:M02` — Antique Fireplaces First — https://antiquefireplacesfirst.com/
-- `BE:M03` — Authentieke Bouwmaterialen Storms nv — https://www.rikstorms.be/
-- `BE:M09` — De Oude Dakpan — https://de-oude-dakpan.be/
 - `BE:M11` — Eeuwenhout Antoine Verhofstede — https://www.verhofstede.be/
 - `BE:M15` — Het arduinen hoekje — https://arduinen-hoekje.be/
-- `BE:M16` — Heyns Recycling — domain unresolved
+- `BE:M16` — Heyns Recycling — https://heynsrecycling.be/
 - `BE:M17` — Hofman NV - SA — https://www.hofman.be/
-- `BE:U06` — Kaderstudio — https://kaderstudio.eu/
 - `BE:M25` — MVV Afbraakwerken Martin — https://www.mvvafbraak.be/
 - `BE:I02` — OVAM (Openbare Vlaamse Afvalstoffenmaatschappij) — https://ovam.vlaanderen.be/
 - `BE:N01` — AD VITAM MATERIAL (ehem. Plateforme Réemploi) — https://advitam-material.be/
 - `BE:M29` — Van Huele — https://www.vanhuele.be/
-- `BE:F05` — Vrije Universiteit Brussel (VUB) – Architectural Engineering — https://www.vub.be/
-- `BE:M01` — Antiek Anresto — https://anresto.com/
-- `BE:M08` — De Groene Poort — https://www.degroenepoort.com/
-- `BE:M10` — Doehetzelf 2dehands bouwmarkt — https://www.2dehandsbouwmarkt.be/
-- `BE:M12` — Fryns-Boret — domain unresolved
 - `BE:M26` — Recupan bvba — http://www.recupan.be/
-- `DK:U21` — Tscherning — https://tscherning.dk/
-- `DK:F01` — DTU Byg – Sektion Materialer og Holdbarhed — https://www.dtu.dk/
-- `DK:U01` — a:gain — https://www.again.dk/
 - `DK:M02` — Byggeboersen — domain unresolved
-- `DK:U03` — Carlsberg Byen P/S — https://www.carlsbergbyen.dk/
-- `DK:U07` — Greater Copenhagen Area (CirCoFin pilot) — domain unresolved
-- `DK:I01` — Høje-Taastrup Kommune — https://www.htk.dk/
-- `DK:U13` — MT Højgaard — https://mth.dk/
 - `DK:M10` — OKpriser.dk A/S — https://okpriser.dk/
-- `DK:U17` — Realdania — https://realdania.dk/
-- `DK:U18` — Region Hovedstaden — https://www.regionh.dk/
 - `DK:M01` — Bango A/S — https://www.bango.dk/
-- `DK:M05` — Dem fra Nordlunde — https://demfranordlunde.dk/
-- `DK:M06` — Den Grønne Genbrugshal — domain unresolved
-- `DK:M08` — Jakobsen Tegl ApS — https://tegllageret.dk/
-- `DK:U09` — KC Nedbrydning A/S — https://www.kc-nedbrydning.dk/
 - `DK:U11` — Klassiske Vinduer — https://klassiske-vinduer.dk/
-- `DK:U14` — Nedrivningsselskabet Falster — https://nssf.dk/
-- `DK:M11` — PlusByg — https://affaldplus.dk/
-- `DK:U19` — Sanderum-Otterup Murerforretning — domain unresolved
-- `DK:U20` — Skave Nedbrydning — https://www.skave-nedbrydning.dk/
-- `DK:M13` — Sydhavn Genbrugscenter — domain unresolved
-- `SE:N01` — CCRI Pilot Uppsala — https://www.uppsala.se/
-- `SE:U06` — Codesign Sweden AB — domain unresolved
-- `SE:U07` — Contiga — https://www.precastcontiga.heidelbergmaterials.se/
-- `SE:N02` — Handslag för cirkulärt byggande — domain unresolved
-- `SE:F01` — ReCreate Sweden / KTH Architecture, Technique and Theory — https://www.kth.se/
-- `SE:U11` — Ragn-Sells — https://www.ragnsells.se/
-- `SE:M07` — Reboost — domain unresolved
-- `SE:I01` — Serviceförvaltningen und Miljöförvaltningen / Stockholms stad — https://start.stockholm/
-- `SE:U12` — Strängbetong — https://strangbetong.se/
-- `SE:N03` — Svensk Betong — https://www.svenskbetong.se/
+- `SE:S03` — Sundahus — https://sundahus.se/
 - `SE:U13` — Teknikbyggarna — https://teknikbyggarna.se/
-- `SE:U01` — AIX Arkitekter — https://www.aix.se/
-- `SE:M01` — Brattöns Återbruk — https://www.brattonsaterbruk.se/
-- `SE:U10` — NCC — https://www.ncc.se/
-- `SE:F02` — RISE (Research Institutes of Sweden) — https://www.ri.se/
-- `NO:N02` — FutureBuilt — https://www.futurebuilt.com/
-- `NO:I02` — Bodø Kommune — https://bodo.kommune.no/
 - `NO:N05` — Regionalt ombruksnettverk for byggematerialer (Oslo-Trondheim) — domain unresolved
-- `NO:U10` — TOBB — https://tobb.no/
-- `NO:M01` — FornyBygg — domain unresolved
-- `NO:U06` — JCS AS — https://www.jcs-as.no/
-- `NO:N03` — Ombruks-HUB Sørlandet AS — https://www.ombrukshubsor.no/
-- `NO:M04` — OMBYGG — https://www.ombygg.no/
-- `FI:U02` — A-Kruunu — https://www.a-kruunu.fi/
-- `FI:U15` — Skanska Finland — https://www.skanska.com/
-- `FI:U03` — Consolis Parma — https://parma.fi/
-- `FI:U13` — Ramboll Finland — https://www.ramboll.com/
-- `FI:I02` — Urban Environment Division / City of Helsinki — https://www.hel.fi/
-- `FI:U16` — YIT — https://www.yit.fi/
-- `FI:F03` — ReCreate-Koordination / Faculty of Built Environment / Tampere University — https://www.tuni.fi/
-- `FI:U01` — A-Insinöörit — https://www.ains.fi/
+- `NO:M01` — FornyBygg — https://fornybygg.no/
 - `FI:U04` — Durat — https://durat.fi/
-- `FI:U05` — Havu Järvelä — domain unresolved
 - `FI:U06` — Joensuun Rakennuspurku ja Timanttiurakointi Oy — https://www.joensuunrakennuspurku.fi/
-- `FI:F02` — KIELO-Projektteam / Xamk — https://www.xamk.fi/
-- `FI:U08` — Markus Saarela — domain unresolved
-- `FI:U09` — Mikkelin Kehitysyhtiö Miksei Oy — https://mikseimikkeli.fi/
-- `FI:G02` — SÄILÖ: Purusta säilöön ja kiertoon — domain unresolved
-- `FI:U14` — Sitowise — https://www.sitowise.com/
-- `FI:U11` — Purkukolmio Oy — https://www.purkukolmio.fi/
-- `FI:U12` — Purkupiha — https://www.purkupiha.fi/
-- `FI:I01` — Tampereen kaupunki (City of Tampere) — https://www.tampere.fi/
-- `AT:N01` — Die Kümmerei — https://www.die-kuemmerei.at/
-- `AT:M04` — CIRCON — domain unresolved
-- `AT:U01` — Hohensinn Architektur — https://www.hohensinn-architektur.at/
-- `AT:U02` — Job-TransFair gemeinnützige GmbH — https://www.jobtransfair.at/
-- `AT:U04` — pulswerk GmbH — https://www.pulswerk.at/
-- `AT:I03` — WSE Wiener Standortentwicklung GmbH — https://wse.at/
-- `AT:M03` — Bauteilbörse (bauteilboerse.at) — https://www.bauteilboerse.at/
-- `AT:S01` — Madaster Austria GmbH — https://madaster.at/
-- `AT:I02` — VIE.CYCLE / DoTank Circular City Wien 2020–2030 (Stadt Wien, Stabsstelle SRN) — https://viecycle.wien.gv.at/

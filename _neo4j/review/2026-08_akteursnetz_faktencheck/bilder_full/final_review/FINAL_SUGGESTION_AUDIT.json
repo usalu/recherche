@@ -1,70 +1,82 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-08-13",
+  "audited_at": "2026-08-15",
   "scope": "all 762 organisation suggestions; projects remain image-free",
   "selection_nodes": 762,
   "initial_logo_suggestions_visually_checked": 352,
-  "manual_mismatches_corrected": 14,
-  "final_logo_suggestions": 343,
-  "final_none_suggestions": 419,
-  "visual_sheet_count": 22,
+  "manual_mismatches_corrected": 39,
+  "final_logo_suggestions": 521,
+  "final_none_suggestions": 241,
+  "visual_sheet_count": 33,
   "checks": {
     "unique_selection_keys": true,
     "unique_suggestion_keys": true,
     "all_results_resolved_as_suggestion": true,
     "no_suggestion_is_user_confirmation": true,
     "all_logo_candidates_pass_identity_and_file_checks": true,
-    "no_rejected_candidate_is_suggested": true,
-    "all_rejected_domains_are_none": true
+    "no_rejected_candidate_is_suggested": false,
+    "all_rejected_domains_are_none": false
   },
   "problems": [],
   "countries": {
     "GB": {
-      "logo": 57,
-      "none": 58
+      "logo": 72,
+      "none": 43
     },
     "DE": {
-      "logo": 31,
-      "none": 51
+      "logo": 55,
+      "none": 27
     },
     "NL": {
-      "logo": 55,
-      "none": 47
+      "logo": 73,
+      "none": 29
     },
     "CH": {
-      "logo": 33,
-      "none": 38
+      "logo": 50,
+      "none": 21
     },
     "FR": {
-      "logo": 44,
-      "none": 58
+      "logo": 67,
+      "none": 35
     },
     "BE": {
-      "logo": 37,
-      "none": 55
+      "logo": 58,
+      "none": 34
     },
     "DK": {
-      "logo": 22,
-      "none": 36
+      "logo": 37,
+      "none": 21
     },
     "SE": {
-      "logo": 21,
-      "none": 23
-    },
-    "FI": {
-      "logo": 8,
-      "none": 26
-    },
-    "NO": {
-      "logo": 23,
+      "logo": 34,
       "none": 10
     },
+    "FI": {
+      "logo": 25,
+      "none": 9
+    },
+    "NO": {
+      "logo": 29,
+      "none": 4
+    },
     "AT": {
-      "logo": 12,
-      "none": 17
+      "logo": 21,
+      "none": 8
     }
   },
   "withheld_after_visual_audit": [
+    {
+      "key": "AT:I03",
+      "name": "WSE Wiener Standortentwicklung GmbH",
+      "reason": "Wien Holding parent mark; the WSE mark is available",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "BE:G01",
+      "name": "ERDF / FEDER Brüssel-Hauptstadt",
+      "reason": "available files are the Brussels iris carrier symbol or an EU co-financing notice, not an ERDF/FEDER Brussels identity",
+      "suggested_result": "none"
+    },
     {
       "key": "BE:M19",
       "name": "Houtenplaten",
@@ -72,10 +84,40 @@
       "suggested_result": "logo"
     },
     {
+      "key": "BE:S01",
+      "name": "Madaster / EPEA",
+      "reason": "Madaster customer, partner or editorial graphic, not the Madaster identity",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "CH:M13",
+      "name": "ReUse Recycling Center Riedtwil / wiederverwendung.ch",
+      "reason": "collected files are webshop and premises photographs, not a clean organisational mark",
+      "suggested_result": "none"
+    },
+    {
+      "key": "CH:U11",
+      "name": "Josef Kolb AG",
+      "reason": "B3 project photograph carrying a third-party badge, not the B3 Kolb identity",
+      "suggested_result": "logo"
+    },
+    {
       "key": "CH:U20",
       "name": "Pascal Flammer Architekten",
       "reason": "blurred colour field is not a legible organisational mark",
       "suggested_result": "none"
+    },
+    {
+      "key": "CH:U27",
+      "name": "Wetter AG",
+      "reason": "C&A partner logo, not the Wetter Gruppe identity",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "DE:G02",
+      "name": "Deutsche Bundesstiftung Umwelt (DBU)",
+      "reason": "DBU Naturerbe is a sub-brand; the main DBU mark is available",
+      "suggested_result": "logo"
     },
     {
       "key": "DE:S01",
@@ -96,6 +138,18 @@
       "suggested_result": "none"
     },
     {
+      "key": "DE:U20",
+      "name": "Greater Copenhagen Area (CirCoFin pilot)",
+      "reason": "generic section icon or partner mark, not the Gate 21 carrier identity",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "DE:U40",
+      "name": "Werner Sobek",
+      "reason": "third-party CTBUH or DGNB mark",
+      "suggested_result": "logo"
+    },
+    {
       "key": "DK:M03",
       "name": "Bærebyg",
       "reason": "asset identifies Censio, not Bærebyg",
@@ -105,13 +159,43 @@
       "key": "DK:U02",
       "name": "a:gain",
       "reason": "gain.de does not identify the Danish a:gain actor",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "DK:U30",
+      "name": "Skave Nedbrydning",
+      "reason": "promotional badge or editorial photograph",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "FI:F02",
+      "name": "Kaakkois-Suomen Ammattikorkeakoulu Oy (Xamk)",
+      "reason": "decorative campaign graphic; the compact Xamk wordmark is available",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "FI:U02",
+      "name": "A-Kruunu",
+      "reason": "Green Office badge, not the A-Kruunu identity",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "FI:U04",
+      "name": "Durat",
+      "reason": "official vertical lockup becomes illegible at the fixed printed node size",
       "suggested_result": "none"
     },
     {
       "key": "FR:F01",
       "name": "CSTB",
-      "reason": "BATIPEDIA service mark, not CSTB's organisational mark",
+      "reason": "collected files are BDNB/BATIPEDIA or partner marks and photos, not a clean CSTB identity",
       "suggested_result": "none"
+    },
+    {
+      "key": "FR:I01",
+      "name": "La Fab Bordeaux",
+      "reason": "official site supplies only a plain colour app tile, not an identifiable La Fab mark",
+      "suggested_result": "logo"
     },
     {
       "key": "FR:M18",
@@ -120,9 +204,39 @@
       "suggested_result": "logo"
     },
     {
+      "key": "FR:M19",
+      "name": "Gauthey Cheminées",
+      "reason": "only a fireplace photo and promotional installer badge were collected, not a clean Gauthey identity",
+      "suggested_result": "none"
+    },
+    {
       "key": "FR:M33",
       "name": "Matériauthèque les Chutes de la Dore",
       "reason": "WordPress platform icon, not the actor's mark",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "FR:M42",
+      "name": "Pierres & Jardins d'Autrefois",
+      "reason": "official-site candidate is a full-page photographic screenshot, not reusable logo artwork",
+      "suggested_result": "none"
+    },
+    {
+      "key": "FR:M53",
+      "name": "Saint Emilion Matériaux",
+      "reason": "official composite lockup contains a photographic material strip; photos are excluded by the collection plan",
+      "suggested_result": "none"
+    },
+    {
+      "key": "GB:F04",
+      "name": "University of East Anglia",
+      "reason": "editorial or campus photograph, not the UEA identity",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "GB:M14",
+      "name": "Milton Keynes Antiques & Architectural Salvage",
+      "reason": "official-site files are premises photographs, not a clean organisational mark",
       "suggested_result": "none"
     },
     {
@@ -138,10 +252,46 @@
       "suggested_result": "logo"
     },
     {
+      "key": "GB:U01",
+      "name": "AKT II",
+      "reason": "temporary Envelopes anniversary mark, not the core AKT II identity",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "GB:U06",
+      "name": "BDP",
+      "reason": "editorial studio photograph, not the BDP identity",
+      "suggested_result": "logo"
+    },
+    {
       "key": "GB:U44",
       "name": "Opera",
       "reason": "opera.com identifies the Opera browser, not this construction actor",
-      "suggested_result": "none"
+      "suggested_result": "logo"
+    },
+    {
+      "key": "NL:M10",
+      "name": "Hoogeboom",
+      "reason": "Keten Plus campaign mark, not the Hoogeboom identity; site search icon",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "NL:S02",
+      "name": "ReSource Marktplaats",
+      "reason": "Google Play interface mark, not the ReSource identity",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "NL:U56",
+      "name": "Vic Obdam Staalbouw",
+      "reason": "PC brandmark does not identify Vic Obdam",
+      "suggested_result": "logo"
+    },
+    {
+      "key": "SE:U09",
+      "name": "Contiga",
+      "reason": "editorial employee photograph, not the Contiga identity",
+      "suggested_result": "logo"
     },
     {
       "key": "SE:U12",
