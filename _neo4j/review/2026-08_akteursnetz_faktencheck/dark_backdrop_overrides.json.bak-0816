@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-14",
+  "purpose": "Logos routed through prepare_light_backdrop_canvas instead of the theme-dependent safe_contain/neutral_knockout path, because their own colours are dark enough to read poorly against the dark-theme node canvas and are not (fully) neutral, so the existing per-theme tokenisers do not fix them. A baked light disc removes the theme dependency; only near-black pixels are additionally recoloured to ink (blacken_to_ink), every other colour is left exactly as the source has it. No -dark sibling is generated for these: the one file is correct in both builds.",
+  "count": 75,
+  "entries": [
+    {
+      "key": "AT:F01",
+      "cc": "AT",
+      "tid": "F01",
+      "name": "IBO – Österr. Institut für Bauen und Ökologie (BuildReUse)",
+      "reason": "neutral_knockout, 0.37 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "AT:S02",
+      "cc": "AT",
+      "tid": "S02",
+      "name": "re:store / HarvestMAP Vienna",
+      "reason": "safe_contain, median luminance 0 (<90), neutral fraction 0.79 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "AT:U01",
+      "cc": "AT",
+      "tid": "U01",
+      "name": "ATP sustain GmbH",
+      "reason": "safe_contain, median luminance 21 (<90), neutral fraction 0.61 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "BE:F08",
+      "cc": "BE",
+      "tid": "F08",
+      "name": "Vlaamse Instelling voor Technologisch Onderzoek (VITO)",
+      "reason": "safe_contain, median luminance 37 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "BE:I02",
+      "cc": "BE",
+      "tid": "I02",
+      "name": "Commune de Dilbeek",
+      "reason": "neutral_knockout, 0.38 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "BE:I06",
+      "cc": "BE",
+      "tid": "I06",
+      "name": "Ville de Mouscron",
+      "reason": "safe_contain, median luminance 73 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "BE:M26",
+      "cc": "BE",
+      "tid": "M26",
+      "name": "Materialenbank Leuven / Atelier Circuler",
+      "reason": "safe_contain, median luminance 72 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "BE:S02",
+      "cc": "BE",
+      "tid": "S02",
+      "name": "Preuse",
+      "reason": "neutral_knockout, 0.29 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "BE:U04",
+      "cc": "BE",
+      "tid": "U04",
+      "name": "BLAF Architecten",
+      "reason": "safe_contain, median luminance 65 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "CH:F03",
+      "cc": "CH",
+      "tid": "F03",
+      "name": "EPFL",
+      "reason": "safe_contain, median luminance 76 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "CH:F07",
+      "cc": "CH",
+      "tid": "F07",
+      "name": "Structural Xploration Lab / EPFL",
+      "reason": "safe_contain, median luminance 76 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "CH:I01",
+      "cc": "CH",
+      "tid": "I01",
+      "name": "Entsorgung + Recycling Zürich (ERZ)",
+      "reason": "neutral_knockout, 0.65 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "CH:I03",
+      "cc": "CH",
+      "tid": "I03",
+      "name": "Stadt Zürich / Amt für Hochbauten / Immobilien Stadt Zürich",
+      "reason": "neutral_knockout, 0.65 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "CH:M03",
+      "cc": "CH",
+      "tid": "M03",
+      "name": "Bauteilbörse Basel",
+      "reason": "safe_contain, median luminance 76 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "CH:M08",
+      "cc": "CH",
+      "tid": "M08",
+      "name": "GGZ@WORK Laden 2 Bauteile Zug",
+      "reason": "safe_contain, median luminance 79 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "CH:M14",
+      "cc": "CH",
+      "tid": "M14",
+      "name": "Stiftung Chance BauTeile Zürich / Glattbrugg",
+      "reason": "safe_contain, median luminance 87 (<90), neutral fraction 0.10 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "CH:X03",
+      "cc": "CH",
+      "tid": "X03",
+      "name": "Stiftung Habitat",
+      "reason": "safe_contain, median luminance 40 (<90), neutral fraction 0.24 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DE:F06",
+      "cc": "DE",
+      "tid": "F06",
+      "name": "IEMB / TU Berlin",
+      "reason": "safe_contain, median luminance 71 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DE:F12",
+      "cc": "DE",
+      "tid": "F12",
+      "name": "TU Berlin",
+      "reason": "safe_contain, median luminance 71 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DE:F13",
+      "cc": "DE",
+      "tid": "F13",
+      "name": "TU Berlin Fachgebiet Bauphysik und Baukonstruktionen",
+      "reason": "safe_contain, median luminance 71 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DE:G01",
+      "cc": "DE",
+      "tid": "G01",
+      "name": "Bundeszentrale für politische Bildung (bpb)",
+      "reason": "neutral_knockout, 0.86 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "DE:M03",
+      "cc": "DE",
+      "tid": "M03",
+      "name": "Bauteilbörse Bremerhaven (Förderwerk Bremerhaven)",
+      "reason": "safe_contain, median luminance 30 (<90), neutral fraction 0.76 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DE:M07",
+      "cc": "DE",
+      "tid": "M07",
+      "name": "MÖWE gGmbH (Möwe Altmaterialverwendung)",
+      "reason": "safe_contain, 1.00 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- die Ortszeile „Osnabrueck“ ist dunkel gesetzt und faellt im Dunkelbild weg, waehrend nur das rote Signet bleibt."
+    },
+    {
+      "key": "DE:U36",
+      "cc": "DE",
+      "tid": "U36",
+      "name": "Solares Bauen",
+      "reason": "safe_contain, median luminance 71 (<90), neutral fraction 0.44 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DK:S01",
+      "cc": "DK",
+      "tid": "S01",
+      "name": "GreenDozer ApS",
+      "reason": "safe_contain, median luminance 49 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DK:S03",
+      "cc": "DK",
+      "tid": "S03",
+      "name": "UpcyclingForum",
+      "reason": "safe_contain, median luminance 35 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DK:U05",
+      "cc": "DK",
+      "tid": "U05",
+      "name": "Artelia",
+      "reason": "safe_contain, median luminance 41 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "DK:U33",
+      "cc": "DK",
+      "tid": "U33",
+      "name": "Vandkunsten",
+      "reason": "neutral_knockout, 0.20 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "FI:G01",
+      "cc": "FI",
+      "tid": "G01",
+      "name": "Ekokumppanit (Kiertotalous Pirkanmaa)",
+      "reason": "safe_contain, median luminance 42 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FI:I01",
+      "cc": "FI",
+      "tid": "I01",
+      "name": "City of Espoo",
+      "reason": "safe_contain, median luminance 69 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FI:U08",
+      "cc": "FI",
+      "tid": "U08",
+      "name": "Kiilto Family",
+      "reason": "safe_contain, median luminance 48 (<90), neutral fraction 0.14 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:I03",
+      "cc": "FR",
+      "tid": "I03",
+      "name": "Ville de Paris",
+      "reason": "neutral_knockout, 0.59 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "FR:M14",
+      "cc": "FR",
+      "tid": "M14",
+      "name": "Dussel Matériaux Anciens",
+      "reason": "safe_contain, median luminance 73 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:M20",
+      "cc": "FR",
+      "tid": "M20",
+      "name": "Grayo tailleur de pierre",
+      "reason": "safe_contain, median luminance 79 (<90), neutral fraction 0.48 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:M23",
+      "cc": "FR",
+      "tid": "M23",
+      "name": "La brocante du Bâtiment (entreprise DRS)",
+      "reason": "safe_contain, median luminance 76 (<90), neutral fraction 0.11 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:M31",
+      "cc": "FR",
+      "tid": "M31",
+      "name": "MAISON CARRELLE",
+      "reason": "safe_contain, median luminance 70 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:M34",
+      "cc": "FR",
+      "tid": "M34",
+      "name": "Matériaux Anciens du Nord",
+      "reason": "neutral_knockout, 0.79 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- dunkelroter Kreisschriftzug, dessen Aussenring im Dunkelbild mit dem Knotengrund verschmilzt."
+    },
+    {
+      "key": "FR:M37",
+      "cc": "FR",
+      "tid": "M37",
+      "name": "Matériaux d'Antan",
+      "reason": "safe_contain, 0.98 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- dunkelrote Strichzeichnung mit feiner Serifenschrift, die im Dunkelbild fast vollstaendig verschwindet."
+    },
+    {
+      "key": "FR:M39",
+      "cc": "FR",
+      "tid": "M39",
+      "name": "MOBIOUS",
+      "reason": "neutral_knockout, 0.83 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- dunkles Navy-Rund; die Binnenzeichnung der Wortmarke ist im Dunkelbild nicht mehr zu unterscheiden."
+    },
+    {
+      "key": "FR:M43",
+      "cc": "FR",
+      "tid": "M43",
+      "name": "Plateau Circulaire",
+      "reason": "safe_contain, median luminance 41 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:M44",
+      "cc": "FR",
+      "tid": "M44",
+      "name": "PROCLUS",
+      "reason": "safe_contain, median luminance 69 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:N07",
+      "cc": "FR",
+      "tid": "N07",
+      "name": "Les Canaux",
+      "reason": "safe_contain, median luminance 33 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "FR:O05",
+      "cc": "FR",
+      "tid": "O05",
+      "name": "Travail & Vie",
+      "reason": "safe_contain, 1.00 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- duenne, dunkelblaue Konturkreise -- im Dunkelbild bleibt nur noch ein schwacher Umriss stehen."
+    },
+    {
+      "key": "FR:S03",
+      "cc": "FR",
+      "tid": "S03",
+      "name": "Plateforme de réemploi des matériaux de voirie de la Ville de Paris",
+      "reason": "neutral_knockout, 0.59 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "FR:U10",
+      "cc": "FR",
+      "tid": "U10",
+      "name": "Mobius Réemploi",
+      "reason": "neutral_knockout, 0.83 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- dunkles Navy-Rund; die Binnenzeichnung der Wortmarke ist im Dunkelbild nicht mehr zu unterscheiden."
+    },
+    {
+      "key": "FR:U11",
+      "cc": "FR",
+      "tid": "U11",
+      "name": "Pouget Consultants",
+      "reason": "neutral_knockout, 0.33 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "GB:M03",
+      "cc": "GB",
+      "tid": "M03",
+      "name": "Ashwells Reclaimed Timber",
+      "reason": "safe_contain, median luminance 67 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:M05",
+      "cc": "GB",
+      "tid": "M05",
+      "name": "CS Architectural Salvage",
+      "reason": "neutral_knockout, 0.26 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "GB:M13",
+      "cc": "GB",
+      "tid": "M13",
+      "name": "Material Index",
+      "reason": "safe_contain, median luminance 0 (<90), neutral fraction 0.74 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:M15",
+      "cc": "GB",
+      "tid": "M15",
+      "name": "Reclaimed Brick Company",
+      "reason": "safe_contain, median luminance 65 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:M20",
+      "cc": "GB",
+      "tid": "M20",
+      "name": "Stax Reclamation",
+      "reason": "safe_contain, median luminance 55 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:M21",
+      "cc": "GB",
+      "tid": "M21",
+      "name": "Surplus Building & Plumbing Materials",
+      "reason": "safe_contain, median luminance 74 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:M25",
+      "cc": "GB",
+      "tid": "M25",
+      "name": "The Reclaimed Company",
+      "reason": "safe_contain, median luminance 57 (<90), neutral fraction 0.14 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:M26",
+      "cc": "GB",
+      "tid": "M26",
+      "name": "Watling Reclamation Yard",
+      "reason": "safe_contain, median luminance 73 (<90), neutral fraction 0.45 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:U10",
+      "cc": "GB",
+      "tid": "U10",
+      "name": "Bourne Special Projects / Bourne Group",
+      "reason": "safe_contain, median luminance 27 (<90), neutral fraction 0.01 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:U17",
+      "cc": "GB",
+      "tid": "U17",
+      "name": "Cleveland Steel & Tubes",
+      "reason": "safe_contain, 0.83 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- dunkelblaues CST-Monogramm mit feiner Unterzeile, im Dunkelbild nahezu unsichtbar."
+    },
+    {
+      "key": "GB:U28",
+      "cc": "GB",
+      "tid": "U28",
+      "name": "Galldris Group",
+      "reason": "neutral_knockout, 0.62 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "GB:U29",
+      "cc": "GB",
+      "tid": "U29",
+      "name": "Gardiner & Theobald",
+      "reason": "safe_contain, median luminance 76 (<90), neutral fraction 0.10 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "GB:U48",
+      "cc": "GB",
+      "tid": "U48",
+      "name": "Related Argent",
+      "reason": "safe_contain, median luminance 54 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:I01",
+      "cc": "NL",
+      "tid": "I01",
+      "name": "City of Utrecht",
+      "reason": "safe_contain, median luminance 62 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:I05",
+      "cc": "NL",
+      "tid": "I05",
+      "name": "Rijkswaterstaat",
+      "reason": "neutral_knockout, 0.49 of the dark variant's visible area is dark saturated colour that neutral_backdrop_to_transparency passes through unchanged (only the neutral/grayscale part of the mark is theme-recoloured) -- still low-contrast against the dark node canvas."
+    },
+    {
+      "key": "NL:M06",
+      "cc": "NL",
+      "tid": "M06",
+      "name": "GP Groot recycling (Heiloo)",
+      "reason": "safe_contain, median luminance 84 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:M07",
+      "cc": "NL",
+      "tid": "M07",
+      "name": "Gubbels (Helvoirt)",
+      "reason": "safe_contain, median luminance 81 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:M08",
+      "cc": "NL",
+      "tid": "M08",
+      "name": "GWW Circulair (Broek op Langedijk)",
+      "reason": "safe_contain, median luminance 59 (<90), neutral fraction 0.19 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:M11",
+      "cc": "NL",
+      "tid": "M11",
+      "name": "Insert Marketplace",
+      "reason": "safe_contain, median luminance 67 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:N02",
+      "cc": "NL",
+      "tid": "N02",
+      "name": "Staedion",
+      "reason": "safe_contain, median luminance 66 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:S01",
+      "cc": "NL",
+      "tid": "S01",
+      "name": "Madaster / Materialpass-Kontext",
+      "reason": "safe_contain, median luminance 54 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:U02",
+      "cc": "NL",
+      "tid": "U02",
+      "name": "ABN AMRO",
+      "reason": "safe_contain, median luminance 56 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:U04",
+      "cc": "NL",
+      "tid": "U04",
+      "name": "Adviesbureau Lüning",
+      "reason": "safe_contain, median luminance 82 (<90), neutral fraction 0.63 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:U07",
+      "cc": "NL",
+      "tid": "U07",
+      "name": "Aveco de Bondt",
+      "reason": "safe_contain, median luminance 50 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:U12",
+      "cc": "NL",
+      "tid": "U12",
+      "name": "Bouwbedrijven Jongen",
+      "reason": "safe_contain, median luminance 0 (<90), neutral fraction 0.57 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:U23",
+      "cc": "NL",
+      "tid": "U23",
+      "name": "DWT Groep",
+      "reason": "safe_contain, median luminance 37 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:U44",
+      "cc": "NL",
+      "tid": "U44",
+      "name": "Rothuizen Architecten / Taco Tuinhof",
+      "reason": "safe_contain, 1.00 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- die rechte Haelfte der Wortmarke steht dunkelviolett auf Weiss; ohne den weissen Traeger faellt „UIZEN“ im Dunkelbild aus."
+    },
+    {
+      "key": "NL:U46",
+      "cc": "NL",
+      "tid": "U46",
+      "name": "STONE22",
+      "reason": "safe_contain, median luminance 87 (<90), neutral fraction 0.52 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:U47",
+      "cc": "NL",
+      "tid": "U47",
+      "name": "Strukton Worksphere",
+      "reason": "safe_contain, median luminance 34 (<90), neutral fraction 0.58 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NL:X01",
+      "cc": "NL",
+      "tid": "X01",
+      "name": "Repurpose",
+      "reason": "safe_contain, median luminance 70 (<90), neutral fraction 0.08 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NO:M03",
+      "cc": "NO",
+      "tid": "M03",
+      "name": "Materialbanken for bygningsvern",
+      "reason": "safe_contain, median luminance 78 (<90), neutral fraction 0.58 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NO:S02",
+      "cc": "NO",
+      "tid": "S02",
+      "name": "Loopfront",
+      "reason": "safe_contain, median luminance 85 (<90), neutral fraction 0.80 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "NO:U07",
+      "cc": "NO",
+      "tid": "U07",
+      "name": "JCS AS",
+      "reason": "safe_contain, 0.83 der sichtbaren Marke liegt im Dunkelrender unter Luma 70 -- dunkelgruene Kontur plus dunkler Schriftzug; beide sinken im Dunkelbild in den Knotengrund ein."
+    },
+    {
+      "key": "SE:M02",
+      "cc": "SE",
+      "tid": "M02",
+      "name": "Bygghubben",
+      "reason": "safe_contain, median luminance 85 (<90), neutral fraction 0.10 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "SE:S02",
+      "cc": "SE",
+      "tid": "S02",
+      "name": "Palats",
+      "reason": "safe_contain, median luminance 64 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "SE:U07",
+      "cc": "SE",
+      "tid": "U07",
+      "name": "Business Region Göteborg",
+      "reason": "safe_contain, median luminance 82 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "SE:U23",
+      "cc": "SE",
+      "tid": "U23",
+      "name": "Wilzéns",
+      "reason": "safe_contain, median luminance 73 (<90), neutral fraction 0.00 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    },
+    {
+      "key": "SE:U25",
+      "cc": "SE",
+      "tid": "U25",
+      "name": "Åhlin & Ekeroth",
+      "reason": "safe_contain, median luminance 78 (<90), neutral fraction 0.56 (<0.85, so the theme tokeniser does not touch it) -- dark and coloured, invisible against the dark node canvas with no dark sibling generated today."
+    }
+  ]
+}

@@ -1711,7 +1711,44 @@ def candidate_rejection(node, candidate):
             return "media image without a logo filename"
         if name_tokens and not (name_tokens & asset_tokens):
             return "media logo filename does not identify the organisation"
+    if not preview_has_opaque_pixels(candidate):
+        return "preview rasterised without any opaque pixel"
     return ""
+
+
+# Gemessene Vorschau-Deckkraft je Kandidat; der Cache haengt am
+# preview_sha256, ist also stabil, solange die Datei stabil ist.
+_PREVIEW_MAX_ALPHA: dict[str, int] = {}
+
+
+def preview_has_opaque_pixels(candidate) -> bool:
+    """Ob die Vorschau ueberhaupt einen deckenden Pixel enthaelt.
+
+    Eine SVG, deren Fuellung an CSS oder einer Maske haengt, rastert
+    gelegentlich zu einem praktisch leeren Bild -- IMd Raadgevende Ingenieurs
+    (NL:U30) lieferte so ein `logo.svg` mit Maximalalpha 30. Als
+    `header_logo` stand es in der Rangfolge ueber vier einwandfreien
+    offiziellen Icons desselben Hauses, wurde ausgewaehlt und lief unbemerkt
+    bis in einen bereits visuell abgenommenen Identitaetsaudit durch: im
+    Knoten war schlicht nichts zu sehen.
+
+    Maximalalpha trennt das sauber ab, der Anteil deckender Pixel nicht: ueber
+    alle 525 angenommenen Logos gemessen liegt das Maximum 524-mal bei exakt
+    255 und einmal bei 30. Der Deckungsanteil dagegen faellt bei duennen
+    Wortmarken legitim bis 0,009 (ZRS Ingenieure) und taugt nicht als Grenze.
+    """
+    rel = candidate.get("preview_path")
+    if not rel:
+        return True
+    key = candidate.get("preview_sha256") or rel
+    if key not in _PREVIEW_MAX_ALPHA:
+        path = FULL / rel
+        if not path.is_file():
+            _PREVIEW_MAX_ALPHA[key] = 255
+        else:
+            with Image.open(path) as image:
+                _PREVIEW_MAX_ALPHA[key] = int(image.convert("RGBA").getchannel("A").getextrema()[1])
+    return _PREVIEW_MAX_ALPHA[key] >= 250
 
 
 def domain_suggestion_rejection(node, domain):
@@ -2147,7 +2184,12 @@ def command_current_finalize(_args):
     rights_by_eid = {row.get("eid"): row for row in rights.get("nodes", []) if row.get("eid")}
     review = pilot.load_json(REVIEW)
     confirmed_at = review.get("accepted_from_suggestions_at") or dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
-    opacity = int(review.get("logo_opacity_percent", 50))
+    # Rueckfallwert 100, nicht 50 -- gleiche Begruendung wie beim
+    # --opacity-Default von accept-suggestions: bei 50 % mischt sich die Marke
+    # mit dem Seitenhintergrund und sieht in Hell und Dunkel verschieden aus.
+    # Der Wert wird hier in die Assets eingebrannt, ist also nicht nachtraeglich
+    # korrigierbar, ohne neu zu rendern.
+    opacity = int(review.get("logo_opacity_percent", 100))
     rows = []
     for current in scope["nodes"]:
         eid = current["eid"]

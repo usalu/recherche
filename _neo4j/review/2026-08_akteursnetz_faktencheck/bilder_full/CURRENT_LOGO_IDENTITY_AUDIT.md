@@ -1,4 +1,4 @@
-# Current 619-node logo identity audit — 2026-08-15
+# Current 619-node logo identity audit — 2026-08-16
 
 ## Result
 
@@ -10,7 +10,7 @@ Every current organisation now has a provisional, reviewed outcome: an exact off
 - Exact official logo outcomes: **476**
 - Explicit `none` outcomes: **65**
 - Open identity reviews: **0**
-- Review opacity: **50%**
+- Review opacity: **100%**
 
 ## Publication rights
 
