@@ -1,4 +1,4 @@
-# Current deep image review — 2026-08-15
+# Current deep image review — 2026-08-16
 
 ## Result
 
@@ -24,7 +24,7 @@ Toulouse Métropole and AD VITAM MATERIAL are the two current actors outside the
 - Circular crop and unchanged centred ID checked for every new addition
 - Integrity and regression tests: **38/38 passed**
 - Neo4j writes: **0**
-- Manifest SHA-256: `f1e7bbb18f800ec2a6db98e69da3825fcdd9f277c9fb5245c4150d6bc26bb0cd`
+- Manifest SHA-256: `76ab59db8c0fbaf4c3b699f08f974b85bc91055a2f9cb0719d1cbf2cecdffa6d`
 
 Every suggested candidate remains `confirmed: false`. The gallery is a research and visual-review overlay; it does not change the frozen transport manifest or `mit-bestand`.
 

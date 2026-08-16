@@ -170,3 +170,52 @@ python full_image_collection.py review-server --host 127.0.0.1 --port 8765 --no-
 Eine spätere Einzelentscheidung ersetzt nur den betreffenden Knoten. Den Bulk-Befehl
 `accept-suggestions` nur erneut ausführen, wenn alle Einzelkorrekturen bewusst wieder
 überschrieben werden sollen.
+
+## Nachtrag 16.08.2026 – Entscheidungen dokumentiert, Neo4j ausgesetzt
+
+Die getroffenen Entscheidungen zu Deckkraft, Beschnitt, Dunkelbild,
+Sperrlisten, Fragmenterzeugung und Prüfdokumenten stehen jetzt gesammelt in
+**`ENTSCHEIDUNGEN.md`** — mit Begründung, weil mehrere davon schon einmal
+korrekt waren und später still zurückgefallen sind. Wer dort einen Wert
+ändert, ändert eine Entscheidung und muss die Begründung mitändern.
+
+Kurzfassung der wichtigsten Punkte:
+
+- **Deckkraft 100 %**, nie 50 %. Zwei Vorgabewerte (`accept-suggestions
+  --opacity`, `command_current_finalize`) standen auf 50 und haben den Fehler
+  nach jeder Korrektur erneut eingeschleppt; beide stehen jetzt auf 100.
+  Fertiges Asset muss `max(alpha) == 255` haben.
+- **`circle_extend` statt Beschnitt**: Hintergrund nach außen verlängern, die
+  Marke nie abschneiden. Nur die Marke bestimmt die Skalierung, nicht der
+  Hintergrund.
+- **`is_opaque_tile`** verlangt zusätzlich echte Deckung (≥ 0,80 mit
+  `alpha >= 250`), sonst entstand aus einem weichen Schlagschatten ein
+  durchsichtiger Ring in der Scheibe.
+- **`candidate_rejection`** verwirft Vorschauen mit `max(alpha) < 250`. Eine
+  zu einem praktisch leeren Bild gerasterte SVG (`NL:U30`) stand sonst in der
+  Rangfolge über vier einwandfreien offiziellen Icons und lief bis in einen
+  bereits abgenommenen Identitätsaudit durch.
+- **Dunkelbild**: `light_backdrop` nur, wo tatsächlich Inhalt ausfällt. Die
+  Luma-Messung ist ein Suchfilter, keine Entscheidung — vor jeder Aufnahme das
+  gerenderte Bild ansehen. Aktuell 86 Overrides.
+- **Sperrlisten** sperren die konkrete Datei, nicht den Akteur; eine Sperre auf
+  eine Fremddomain ist gegenstandslos, sobald dem Knoten die richtige Domain
+  zugeordnet ist.
+- **Fragmente immer mit `--images-manifest`.** Das Flag hat bewusst keinen
+  Vorgabewert; ohne es entstehen klaglos Fragmente ganz ohne Logos.
+- **Rendermanifest** aus `build_report_manifest.py`, abgeleitet aus dem
+  aktuellen Identitätsaudit — die 762er Auswahl deckt das aktuelle Netz nicht
+  vollständig ab.
+
+**Neo4j ist vorerst nicht Teil der Aufgabe.** Der Property-Patch wird nicht
+ausgeführt, auch nicht probeweise. Der vorbereitete Stand bleibt unangetastet
+liegen (`full_image_property_patch.json`, `dry_run_only: true`, 412 Zeilen,
+350 Overlay-Knoten ausgenommen, 0 Zuordnungsfehler, nie angewandt); gelöscht
+ist nichts, damit später ohne Neuaufbau daran angeknüpft werden kann.
+
+Aktueller Stand des Berichts: 476 der 541 Organisationen des aktuellen
+619-Knoten-Netzes tragen ein Logo (88 %), Abbildungen und Tabellen
+übereinstimmend; `validate` 762/762 grün; beide PDFs neu gebaut. Offen bleiben
+die Bildrechte (474 der 476 warten auf schriftliche Genehmigung, 1 auf
+markenrechtliche Prüfung, 1 bedingt lizenziert) — das ist derzeit die
+eigentliche Grenze, nicht die Bildqualität.

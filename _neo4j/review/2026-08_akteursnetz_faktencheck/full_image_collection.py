@@ -452,8 +452,6 @@ MANUAL_CANDIDATE_REJECTIONS = {
     "GB:M24": {"c09": "generic cursor/site-builder icon, not The Old Slate Yard's mark"},
     "GB:N01": {"c19": "asset identifies Abstrakt, not BioRegional"},
     "DE:S01": {"c11": "product/brochure image, not Concular's mark"},
-    "DE:U03": {"*": "generic Augsburg sustainability icon, not the actor's mark"},
-    "CH:U20": {"*": "blurred colour field is not a legible organisational mark"},
     "FR:F01": {"c07": "BATIPEDIA service mark, not CSTB's organisational mark"},
     "FR:M18": {"c10": "generic telephone symbol, not Fer et Pierre's mark"},
     # Frueher {"*": ...}: damals war der WordPress-Plattform-Icon der einzige
@@ -469,7 +467,6 @@ MANUAL_CANDIDATE_REJECTIONS = {
     "DK:M03": {"c08": "asset identifies Censio, not Bærebyg"},
 }
 MANUAL_CANDIDATE_REJECTIONS.update({
-    "GB:M14": {"*": "official-site files are premises photographs, not a clean organisational mark"},
     "NL:S02": {"c03": "Google Play interface mark, not the ReSource identity"},
     "DE:U20": {**{f"c{i:02d}": "generic section icon or partner mark, not the Gate 21 carrier identity"
                     for i in (10, 13, 14, 15, 16, 17, 18, 19, 20)}},
@@ -478,12 +475,8 @@ MANUAL_CANDIDATE_REJECTIONS.update({
     # gesperrt ("/lafab2020/images/apple-icon"), und seit dem 15.08.2026 liegt
     # zusaetzlich die echte Wortmarke logo-lafab.svg vor. Die pauschale Regel
     # war damit doppelt und haette nur noch die richtige Datei blockiert.
-    "FR:M53": {"*": "official composite lockup contains a photographic material strip; photos are excluded by the collection plan"},
-    "FR:M42": {"*": "official-site candidate is a full-page photographic screenshot, not reusable logo artwork"},
-    "CH:M13": {"*": "collected files are webshop and premises photographs, not a clean organisational mark"},
     "CH:U11": {**{f"c{i:02d}": "B3 project photograph carrying a third-party badge, not the B3 Kolb identity"
                     for i in range(8, 12)}},
-    "BE:G01": {"*": "available files are the Brussels iris carrier symbol or an EU co-financing notice, not an ERDF/FEDER Brussels identity"},
     "GB:U01": {"c11": "temporary Envelopes anniversary mark, not the core AKT II identity"},
     "NL:U56": {"c20": "PC brandmark does not identify Vic Obdam"},
     "NL:M10": {"c09": "Keten Plus campaign mark, not the Hoogeboom identity",
@@ -497,12 +490,9 @@ MANUAL_CANDIDATE_REJECTIONS.update({
     "AT:I03": {"c13": "Wien Holding parent mark; the WSE mark is available"},
     "CH:U27": {**{f"c{i:02d}": "C&A partner logo, not the Wetter Gruppe identity"
                     for i in range(13, 20)}},
-    "FR:F01": {"*": "collected files are BDNB/BATIPEDIA or partner marks and photos, not a clean CSTB identity"},
-    "FR:M19": {"*": "only a fireplace photo and promotional installer badge were collected, not a clean Gauthey identity"},
     "GB:F04": {**{f"c{i:02d}": "editorial or campus photograph, not the UEA identity"
                     for i in (8, 10, 11)}},
     "GB:U06": {"c07": "editorial studio photograph, not the BDP identity"},
-    "FI:U04": {"*": "official vertical lockup becomes illegible at the fixed printed node size"},
     "BE:S01": {**{f"c{i:02d}": "Madaster customer, partner or editorial graphic, not the Madaster identity"
                     for i in range(7, 17)}},
 })
@@ -520,7 +510,6 @@ MANUAL_CANDIDATE_URL_REJECTIONS = {
     # ausliefert, nicht die Marke dieses Akteurs. Sein eigenes hochgeladenes
     # Vektorlogo unter wp-content/uploads bleibt zulaessig.
     "FR:M33": ("s2.wp.com/i/webclip",),
-    "BE:G01": ("cropped-logo-iris",),
     "FR:M32": ("Flag_of_Europe",),
     "FR:M37": ("menu_red_materiaux",),
     "GB:U04": ("/uploads/general/", "/img/riba.svg"),
@@ -529,6 +518,80 @@ MANUAL_CANDIDATE_URL_REJECTIONS = {
     "BE:N04": ("footer-logo-feder",),
     "BE:N05": ("PREUSE_logo", "banner_logos"),
     "BE:F02": ("sponsorlogo", "vlaio_combilogo", "header-new.jpg"),
+    # Former node-wide locks, narrowed to the files inspected in the visual
+    # audit.  A later harvest can therefore admit a clean actor logo without
+    # silently re-admitting any of these known photographs, carrier marks,
+    # partner marks or print-illegible lockups.
+    "DE:U03": (
+        "apple-touch-icon-180x180-precomposed.png",
+        "apple-touch-icon-152x152-precomposed.png",
+        "touch-icon-192x192.png",
+    ),
+    "CH:U20": (
+        "apple-touch-icon.891ee2c70a35.png",
+        "safari-pinned-tab.27edf2e61b13.svg",
+    ),
+    "GB:M14": ("42a2c7_0379c69025a2408d8e068e4cd94ff355", "/favicon.ico"),
+    "FR:M53": (
+        "cropped-logo-saint-emilion-materiaux-negoce-vente-pierre-naturelle-neuf-ancien",
+        "logo-saint-emilion-materiaux-negoce-vente-pierre-naturelle-neuf-ancien",
+        "pour-enveloppe.png",
+        "/2025/02/b1-logo-",
+        "travertin-dallage-pierre-parement-gironde-materiaux-grande.webp",
+    ),
+    "FR:M42": ("56fc97_4e030451fc834b63a170aa3c9a75a48a.jpg",),
+    "CH:M13": (
+        "onlineshop_wiederverwendung.ch.jpg",
+        "rrc-riedtwil_hiltbrunner_ag.jpg",
+        "reuse-recycling.jpg",
+        "reuse_und_recycling.jpg",
+        "rrc_riedtwil_slider.jpg",
+        "reuse_recycling_wiederverwendung.ch.jpg",
+        "header-bg.png",
+    ),
+    "BE:G01": (
+        "cropped-logo-iris",
+        "bi-uk-logo-white",
+        "medegefinancierd-door-de-europese-unie",
+        "co-funded-by-the-eu",
+        "01-citydev-logo_0.jpg",
+        "logo-cpas-color-high-def.jpg",
+        "logo_medtech_r_sans_lifetech.png",
+        "pole-culturel-aby_logo.jpg",
+        "schaerbeek-1030-logo-1024x783-1.jpg",
+        "vub-logo-rgb.jpg",
+        "cpas_schaerbeek_logo_creche_courte_echelle_def_v.jpg",
+        "logo-oncotrabru.png",
+        "logo_cycloparking.png",
+        "logo_erasmus_0.jpg",
+        "logo_zinneke-1.jpg",
+    ),
+    "FR:F01": (
+        "centre-scientifique-technique-batiment-home.jpg",
+        "logo_batipedia_540x390.jpg",
+        "projets-recherche.jpg",
+        "bdd_540x390.jpg",
+        "rejoindre-cstb.jpg",
+        "bdd_540x390_fond.jpg",
+        "bdnb.jpg",
+        "logo_orange.png",
+        "logo_arcora.png",
+        "logo_ademe_rf_partenariat.jpg",
+        "logo_oid.png",
+        "cstb_logo-bdnb.gif",
+        "efficacity_logo_2025.jpg",
+        "cstb-communique-presse.jpg",
+        "mediaroom-cstb.jpg",
+    ),
+    # c01 is the official Gauthey wordmark and must remain admissible.  Only
+    # the fireplace photograph and the two unrelated installer/product marks
+    # from the same site are locked.
+    "FR:M19": (
+        "1.-fire-line-automatic-3-trussardi-in-trend-luxury-living-group-showroom-beirut-lebanon.jpg",
+        "logo-ecc.jpg",
+        "saey-logo-e1543329494186.png",
+    ),
+    "FI:U04": ("durat_shareimage.png", "durat_logo_1200_x_3390_px_3.png"),
     "DK:M01": ("bango.dk/", "bango.b-cdn.net/"),
     "AT:I02": ("/icons/raw/",),
     "AT:N01": ("dachverbandLogo", "Logo_AMS_Wien", "hunger-logo", "/erfolgsgeschichten/logos/"),
@@ -1906,7 +1969,16 @@ def command_current_deep_review(_args):
                 try:
                     node_preview, _ = pilot.prepare_node_canvas(preview, theme="light")
                     thumb = node_preview.resize((150, 150), Image.Resampling.LANCZOS)
-                    sheet.paste(thumb.convert("RGB"), (x + 18 + idx * 182, y + 62))
+                    # Auf die Kartenfarbe komponieren, NICHT .convert("RGB").
+                    # convert() wirft den Alphakanal weg und malt jeden
+                    # transparenten Pixel schwarz -- bei safe_contain und
+                    # neutral_knockout ist das die gesamte Umgebung der Marke.
+                    # Der Bogen zeigte deshalb schwarze Kacheln, in denen jede
+                    # dunkle Marke unsichtbar war, und stellte damit genau das
+                    # falsch dar, was er zu pruefen vorgibt.
+                    card = Image.new("RGBA", thumb.size, (255, 253, 244, 255))
+                    card.alpha_composite(thumb.convert("RGBA"))
+                    sheet.paste(card.convert("RGB"), (x + 18 + idx * 182, y + 62))
                 except Exception:
                     draw.rectangle((x + 18 + idx * 182, y + 62, x + 168 + idx * 182, y + 212),
                                    fill="#ddd8c7")

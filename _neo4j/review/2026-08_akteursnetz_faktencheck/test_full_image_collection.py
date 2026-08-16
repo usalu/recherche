@@ -122,8 +122,15 @@ class FullImageCollectionTests(unittest.TestCase):
         for key, source in expected.items():
             self.assertEqual(final[key]["result"], "logo", key)
             self.assertIn(source.lower(), final[key]["source_url"].lower(), key)
-        for key in ("GB:M09", "BE:S02", "BE:S03"):
-            self.assertEqual(final[key]["result"], "none", key)
+        current_verified = {
+            "FR:M19": "logo-transparent-chemin",
+            "GB:M09": "enviromate_logo_header_2x.png",
+            "BE:S03": "sundahus-horisontell-2.png",
+        }
+        for key, source in current_verified.items():
+            self.assertEqual(final[key]["result"], "logo", key)
+            self.assertIn(source, final[key]["source_url"].lower(), key)
+        self.assertEqual(final["BE:S02"]["result"], "none")
 
     def test_last_deep_dig_uses_only_verified_marks(self):
         final = {row["key"]: row for row in load("final_image_manifest.json")["nodes"]}
@@ -259,10 +266,12 @@ class FullImageCollectionTests(unittest.TestCase):
     def test_final_visual_audit_rejections_stay_withheld(self):
         suggestions = {row["key"]: row for row in load("suggestions.json")["nodes"]}
         self.assertTrue(collection.MANUAL_CANDIDATE_REJECTIONS)
+        self.assertFalse(any("*" in rules
+                             for rules in collection.MANUAL_CANDIDATE_REJECTIONS.values()))
         for key, rules in collection.MANUAL_CANDIDATE_REJECTIONS.items():
             suggestion = suggestions[key]
             self.assertTrue(suggestion["suggested_result"] == "none"
-                            or ("*" not in rules and suggestion["suggested_candidate_id"] not in rules))
+                            or suggestion["suggested_candidate_id"] not in rules)
         for key in collection.MANUAL_DOMAIN_REJECTIONS:
             self.assertEqual(suggestions[key]["suggested_result"], "none")
             self.assertEqual(suggestions[key]["suggested_candidate_id"], "")
@@ -324,15 +333,25 @@ class FullImageCollectionTests(unittest.TestCase):
             {"id": "c01", "kind": "header_logo",
              "url": "https://www.salvoweb.com/assets/tr-logo.svg"}))
 
-    def test_print_unidentifiable_visual_audit_cases_are_withheld(self):
-        for key, name in (
-            ("FR:F01", "CSTB"),
-            ("FR:M19", "Gauthey Cheminées"),
-            ("FI:U04", "Durat"),
-        ):
+    def test_print_unidentifiable_visual_audit_files_are_withheld(self):
+        rejected = (
+            ("FR:F01", "CSTB",
+             "https://www.cstb.fr/getmedia/x/Logo_BATIPEDIA_540x390.jpg"),
+            ("FR:M19", "Gauthey Cheminées",
+             "https://cheminees-gauthey.fr/wp-content/uploads/2020/06/logo-ECC.jpg"),
+            ("FI:U04", "Durat",
+             "https://durat.fi/cdn/shop/files/Durat_logo_1200_x_3390_px_3.png"),
+        )
+        for key, name, url in rejected:
             self.assertTrue(collection.candidate_rejection(
                 {"key": key, "name": name},
-                {"id": "c99", "kind": "favicon", "url": "https://example.org/favicon.png"}))
+                {"id": "c99", "kind": "header_logo", "url": url}))
+
+        self.assertFalse(collection.candidate_rejection(
+            {"key": "FR:M19", "name": "Gauthey Cheminées"},
+            {"id": "c01", "kind": "header_logo",
+             "url": "https://cheminees-gauthey.fr/wp-content/uploads/2017/03/"
+                    "logo-transparent-chemin%65%CC%81es-gauthey.png"}))
 
     def test_filename_identified_logo_outranks_unidentified_svg(self):
         node = {"name": "Tscherning"}
