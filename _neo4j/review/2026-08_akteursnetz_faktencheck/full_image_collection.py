@@ -68,6 +68,12 @@ CURRENT_DEEP = FULL / "current_deep_review"
 RIGHTS_AUDIT_JSON = FULL / "CURRENT_IMAGE_RIGHTS_AUDIT.json"
 RIGHTS_AUDIT_CSV = FULL / "CURRENT_IMAGE_RIGHTS_AUDIT.csv"
 RIGHTS_AUDIT_REPORT = FULL / "CURRENT_IMAGE_RIGHTS_AUDIT.md"
+CURRENT_IDENTITY_JSON = FULL / "CURRENT_LOGO_IDENTITY_AUDIT.json"
+CURRENT_IDENTITY_CSV = FULL / "CURRENT_LOGO_IDENTITY_AUDIT.csv"
+CURRENT_IDENTITY_REPORT = FULL / "CURRENT_LOGO_IDENTITY_AUDIT.md"
+CURRENT_IDENTITY_HTML = FULL / "CURRENT_LOGO_IDENTITY_AUDIT.html"
+CURRENT_RENDER_MANIFEST = FULL / "current_image_manifest.json"
+CURRENT_ONLY_FINAL = FULL / "current_only_final"
 EXPORT = pilot.EXPORT
 TECTONIC = Path(r"E:\semio\.repo\cache\tectonic\0.16.9\tectonic.exe")
 
@@ -109,6 +115,63 @@ NON_ORGANISATION_MARKERS = (
 # machine-readable icon/header declarations. They remain ordinary pending
 # candidates with source URL, retrieval date and checksums.
 MANUAL_OFFICIAL_CANDIDATE_URLS = {
+    "FR:S02": [
+        (0, "header_logo", "https://cyclezero.fr/src/img/logo.png"),
+    ],
+    "FR:N02": [
+        (0, "header_logo", "https://www.bellastock.com/wp-content/themes/bellastock-2026-temp/img/bs_header_logo_rond.svg"),
+    ],
+    # SundaHus is the named actor.  Its current official identity explicitly
+    # includes the carrier suffix "iBinder Group", which the plan permits for
+    # an unambiguously established parent brand.
+    "BE:S03": [
+        (0, "header_logo", "https://sundahus.se/media/s4afl2un/sundahus-horisontell-2.png"),
+    ],
+    # The 512px store favicon is the circular worker pictogram used verbatim
+    # at the left of the organisation's official header lockup.  It is an
+    # official image mark, not a generic construction illustration.
+    "GB:M21": [
+        (0, "declared_icon", "https://surplusbuildingsupplies.co.uk/media/favicon/stores/1/512_x_512_FAV_NO_BG.png"),
+    ],
+    "GB:M09": [
+        (0, "header_logo", "https://s3-eu-west-1.amazonaws.com/s3-media.dev.eu.enviromate.kcmcdn.com/assets/www/img/enviromate_logo_header_2x.png"),
+    ],
+    # The page serves a 90px cache derivative; this is the untouched 285px
+    # file from the same official media directory.
+    "FI:U06": [
+        (0, "header_logo", "https://www.joensuunrakennuspurku.fi/media/rptu-logo.png"),
+    ],
+    "NL:U33": [
+        (0, "header_logo", "https://lagemaat-heerde.nl/site/wp-content/themes/lagemaat/assets/img/Avatar_Lagemaat_RGB.svg"),
+    ],
+    "NL:S03": [
+        (0, "header_logo", "https://terveldedenbesten.nl/app/uploads/2025/01/logo.svg"),
+    ],
+    # The HTTPS endpoint has a mismatched certificate; the organisation's
+    # live HTTP page publishes this exact 223x170 header mark.
+    "BE:M17": [
+        (0, "header_logo", "http://heynsrecycling.be/images/2019-Heyns-Recycling-V2.png"),
+    ],
+    "GB:M01": [
+        (0, "header_logo", "https://www.antiquewoodenfloors.co.uk/template/new-logo2.png"),
+    ],
+    "GB:M17": [
+        (0, "header_logo", "https://www.romseyreclamation.com/index_htm_files/4511151.png"),
+    ],
+    "BE:M12": [
+        (0, "header_logo", "https://www.verhofstede.be/wp-content/themes/verhofstede/images/verhofstede.svg"),
+    ],
+    "GB:M07": [
+        (0, "header_logo", "https://static.squarespace.com/static/ta/51da82e2e4b03fbe9dac882a/1810/assets/images/totalLogo.png"),
+    ],
+    # The WordPress media record uses a decomposed e + acute filename.  The
+    # NFC spelling shown by the API 404s; this is the exact live 910px file.
+    "FR:M19": [
+        (0, "header_logo", "https://cheminees-gauthey.fr/wp-content/uploads/2017/03/logo-transparent-chemin%65%CC%81es-gauthey.png"),
+    ],
+    "FR:U02": [
+        (0, "header_logo", "https://static.wixstatic.com/media/3dbc01_1273dd63b43e400ca28830382e65f074~mv2.png"),
+    ],
     "BE:I05": [
         (0, "header_logo", "https://www.kassel.de/design.css.media/171938/Kassel-WBM-Web.svg"),
     ],
@@ -208,6 +271,28 @@ MANUAL_OFFICIAL_CANDIDATE_URLS = {
     "CH:U22": [
         (0, "media_logo", "https://srzh.ch/wp-content/uploads/2018/07/cropped-logokl.png"),
     ],
+}
+
+# These two official exports contain a transparent outer artboard around the
+# actual opaque logo rectangle.  Losslessly trimming that outer alpha margin
+# before the normal background/circle logic prevents the rectangular canvas,
+# rather than the coloured mark, from controlling scale and crop.
+MANUAL_PRETRIM_TRANSPARENT_ARTBOARD_URLS = {
+    "https://www.antiquewoodenfloors.co.uk/template/new-logo2.png",
+    "https://www.romseyreclamation.com/index_htm_files/4511151.png",
+}
+
+# A protected official page can be browser-verifiable while rejecting ordinary
+# asset requests.  Keep the exact, unmodified source bytes in the review
+# transport so the candidate remains reproducible; the public URL remains the
+# provenance URL written to the manifest.
+MANUAL_OFFICIAL_CANDIDATE_SNAPSHOTS = {
+    ("FR:N02", "https://www.bellastock.com/wp-content/themes/bellastock-2026-temp/img/bs_header_logo_rond.svg"):
+        "official_source_snapshots/FR/N02_bellastock_header_logo_rond.svg",
+    ("NL:U33", "https://lagemaat-heerde.nl/site/wp-content/themes/lagemaat/assets/img/Avatar_Lagemaat_RGB.svg"):
+        "official_source_snapshots/NL/U33_lagemaat_avatar.svg",
+    ("NL:S03", "https://terveldedenbesten.nl/app/uploads/2025/01/logo.svg"):
+        "official_source_snapshots/NL/S03_ter_velde_den_besten_logo.svg",
 }
 
 # A few official sites render their actual wordmark as inline SVG instead of
@@ -371,7 +456,13 @@ MANUAL_CANDIDATE_REJECTIONS = {
     "CH:U20": {"*": "blurred colour field is not a legible organisational mark"},
     "FR:F01": {"c07": "BATIPEDIA service mark, not CSTB's organisational mark"},
     "FR:M18": {"c10": "generic telephone symbol, not Fer et Pierre's mark"},
-    "FR:M33": {"*": "WordPress platform icon, not the actor's mark"},
+    # Frueher {"*": ...}: damals war der WordPress-Plattform-Icon der einzige
+    # Fund, also sperrte die Regel gleich den ganzen Knoten. Die Tiefenpruefung
+    # vom 15.08.2026 hat das selbst hochgeladene Vektorlogo des Akteurs
+    # gefunden (wp-content/uploads/.../logo_final_transp_vect-2.png), das die
+    # pauschale Regel mit weggesperrt haette. Gesperrt bleibt jetzt genau das
+    # Plattform-Icon, ueber MANUAL_CANDIDATE_URL_REJECTIONS (s2.wp.com), weil
+    # das auch einen ID-Wechsel bei einer spaeteren Ernte ueberlebt.
     "BE:M19": {"c05": "flat placeholder rectangle, not Houtenplaten's mark",
                 "c06": "flat placeholder rectangle, not Houtenplaten's mark",
                 "c09": "photo of facade signage, not reusable source artwork"},
@@ -382,7 +473,11 @@ MANUAL_CANDIDATE_REJECTIONS.update({
     "NL:S02": {"c03": "Google Play interface mark, not the ReSource identity"},
     "DE:U20": {**{f"c{i:02d}": "generic section icon or partner mark, not the Gate 21 carrier identity"
                     for i in (10, 13, 14, 15, 16, 17, 18, 19, 20)}},
-    "FR:I01": {"*": "official site supplies only a plain colour app tile, not an identifiable La Fab mark"},
+    # FR:I01 stand hier ebenfalls als {"*": ...}, weil damals nur die
+    # einfarbige App-Kachel vorlag. Die Kachel ist unten schon praezise per URL
+    # gesperrt ("/lafab2020/images/apple-icon"), und seit dem 15.08.2026 liegt
+    # zusaetzlich die echte Wortmarke logo-lafab.svg vor. Die pauschale Regel
+    # war damit doppelt und haette nur noch die richtige Datei blockiert.
     "FR:M53": {"*": "official composite lockup contains a photographic material strip; photos are excluded by the collection plan"},
     "FR:M42": {"*": "official-site candidate is a full-page photographic screenshot, not reusable logo artwork"},
     "CH:M13": {"*": "collected files are webshop and premises photographs, not a clean organisational mark"},
@@ -420,11 +515,15 @@ MANUAL_CANDIDATE_URL_REJECTIONS = {
     "FI:U03": ("parma-www-x-logo",),
     "FI:U18": ("ar_skanska_oslo",),
     "FR:I01": ("/lafab2020/images/apple-icon",),
+    # s2.wp.com ist das CDN von WordPress.com und webclip.png dessen
+    # Standardkachel -- das Plattformzeichen, das jede dort gehostete Seite
+    # ausliefert, nicht die Marke dieses Akteurs. Sein eigenes hochgeladenes
+    # Vektorlogo unter wp-content/uploads bleibt zulaessig.
+    "FR:M33": ("s2.wp.com/i/webclip",),
     "BE:G01": ("cropped-logo-iris",),
     "FR:M32": ("Flag_of_Europe",),
     "FR:M37": ("menu_red_materiaux",),
     "GB:U04": ("/uploads/general/", "/img/riba.svg"),
-    "GB:M07": ("/totalLogo.png",),
     "GB:M19": ("tr-logo.svg",),
     "BE:F07": ("/sdg_icons/",),
     "BE:N04": ("footer-logo-feder",),
@@ -443,7 +542,7 @@ MANUAL_CANDIDATE_URL_REJECTIONS = {
     "GB:M09": ("enviromate_img_press_startuslogo",),
     "FR:X01": ("cropped-Raedificare-Home-Slider-Melange-2", "Sans-titre.jpg"),
     "BE:S02": ("/web/image/website/52/logo",),
-    "BE:S03": ("sundahus-horisontell-2", "drew-walker", "logo_bim_alliance"),
+    "BE:S03": ("drew-walker", "logo_bim_alliance"),
     "FR:M20": ("favicon-grayo",),
 }
 
@@ -887,22 +986,36 @@ def inline_svg_for_raster(data):
     input used to preserve the declared viewBox proportions.
     """
     text = data.decode("utf-8", errors="replace")
+    # Older Illustrator exports commonly wrap namespace aliases in an
+    # internal DTD.  CairoSVG/defusedxml correctly refuses DTD processing,
+    # even though these files contain no artwork-changing external resource.
+    # Resolve only the literal internal entity declarations and remove the
+    # complete DOCTYPE before rasterisation.  The downloaded source bytes and
+    # their checksum remain untouched in the manifest.
+    doctype = re.search(r"<!DOCTYPE\s+svg\b[\s\S]*?\]>\s*", text, re.I)
+    if doctype:
+        entity_values = dict(re.findall(
+            r'<!ENTITY\s+([A-Za-z_][\w.-]*)\s+["\']([^"\']*)["\']\s*>' ,
+            doctype.group(0), re.I))
+        text = text[:doctype.start()] + text[doctype.end():]
+        for name, value in entity_values.items():
+            text = text.replace(f"&{name};", value)
     start = text.find("<svg")
     end = text.find(">", start)
     if start < 0 or end < 0:
         return data
     tag = text[start:end + 1]
     if re.search(r"\bheight\s*=", tag, re.I):
-        return data
+        return text.encode("utf-8")
     width_match = re.search(r"\bwidth\s*=\s*[\"']([0-9.]+)(?:px)?[\"']", tag, re.I)
     viewbox_match = re.search(
         r"\bviewBox\s*=\s*[\"']\s*[-0-9.]+\s+[-0-9.]+\s+([0-9.]+)\s+([0-9.]+)\s*[\"']",
         tag, re.I)
     if not width_match or not viewbox_match:
-        return data
+        return text.encode("utf-8")
     width = float(width_match.group(1)); vb_width = float(viewbox_match.group(1)); vb_height = float(viewbox_match.group(2))
     if width <= 0 or vb_width <= 0 or vb_height <= 0:
-        return data
+        return text.encode("utf-8")
     height = width * vb_height / vb_width
     normalized_tag = tag[:-1] + f' height="{height:.6f}">'
     return (text[:start] + normalized_tag + text[end + 1:]).encode("utf-8")
@@ -1046,7 +1159,12 @@ def harvest_one(node, domain, node_dir=None, deep=False):
                 content_type = "image/svg+xml" if member.lower().endswith(".svg") else "image/png"
                 final_url = f"{archive_url}#{urllib.parse.quote(member, safe='/')}"
             else:
-                data, content_type, final_url = pilot.request_bytes(url)
+                snapshot = MANUAL_OFFICIAL_CANDIDATE_SNAPSHOTS.get((node["key"], url))
+                if snapshot:
+                    data = (FULL / snapshot).read_bytes()
+                    content_type, final_url = "image/svg+xml", url
+                else:
+                    data, content_type, final_url = pilot.request_bytes(url)
                 raster_data = data
                 manual_urls = {row[2] for row in MANUAL_OFFICIAL_CANDIDATE_URLS.get(node["key"], ())}
                 if url in manual_urls and (content_type == "text/html" or data[:100].lstrip().lower().startswith(b"<!doctype html")):
@@ -1058,6 +1176,10 @@ def harvest_one(node, domain, node_dir=None, deep=False):
                     if len(data) > pilot.MAX_DOWNLOAD:
                         raise ValueError("image exceeds download limit")
                     raster_data = data
+            if (content_type == "image/svg+xml" or
+                    final_url.lower().split("?", 1)[0].endswith(".svg") or
+                    raster_data.lstrip().startswith((b"<svg", b"<?xml"))):
+                raster_data = inline_svg_for_raster(raster_data)
             im, fmt = pilot.rasterize(raster_data, content_type, final_url)
             record.update({"final_url": final_url, "content_type": content_type,
                            "format": fmt, "width": im.width, "height": im.height,
@@ -1068,6 +1190,10 @@ def harvest_one(node, domain, node_dir=None, deep=False):
                 record["reason"] = "short edge below 128px"
             else:
                 preview = node_dir / f"{record['id']}_{kind}.png"
+                if url in MANUAL_PRETRIM_TRANSPARENT_ARTBOARD_URLS:
+                    visible_bounds = pilot._opaque_bounds(im)
+                    im = im.crop(visible_bounds)
+                    record.update({"width": im.width, "height": im.height})
                 im.save(preview, "PNG")
                 try:
                     prepared, _mode = pilot.prepare_node_canvas(preview, theme="light")
@@ -1801,7 +1927,7 @@ def command_current_deep_review(_args):
 <style>
 body{{margin:0;background:#f7f3e3;color:#001117;font:16px system-ui,sans-serif}}header{{position:sticky;top:0;z-index:2;background:#f7f3e3ee;backdrop-filter:blur(12px);padding:18px 24px;border-bottom:1px solid #b7b19f}}h1{{font-size:24px;margin:0 0 8px}}.summary{{margin:0 0 12px}}.filters{{display:flex;gap:10px;flex-wrap:wrap}}input,select{{font:inherit;padding:8px 10px;border:1px solid #7d827e;border-radius:8px;background:#fffdf4}}main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:14px;padding:18px}}.card{{background:#fffdf4;border:1px solid #b7b19f;border-radius:14px;padding:14px;min-height:280px}}h2{{font-size:18px;min-height:44px;margin:0 0 4px}}.meta{{color:#4c5b5f;font-size:13px;margin-bottom:10px}}.card img{{display:block;width:232px;height:116px;margin:8px auto;image-rendering:auto}}.empty{{height:116px;display:grid;place-items:center;color:#697579;border:1px dashed #a7a496;border-radius:58px;margin:8px 0}}a{{color:#006b73}}.hidden{{display:none}}
 </style></head><body><header><h1>Aktuelles Akteursnetz: Logo-Tiefenprüfung</h1>
-<p class="summary">541 Organisationen · 277 vorhandene Logos · {counts['logo']} neue Vorschläge · {counts['none']} ohne Vorschlag · 0 Bestätigungen</p>
+<p class="summary">541 Organisationen · {541 - len(rows)} finalisierte Logos · {counts['logo']} aktuelle Ergänzungen · {counts['none']} explizit none · 0 offene Identitätsprüfungen</p>
 <div class="filters"><input id="q" type="search" placeholder="Name oder ID"><select id="cc"><option value="">alle Länder</option>{country_options}</select><select id="result"><option value="">logo + none</option><option>logo</option><option>none</option></select></div></header>
 <main>{''.join(gallery_cards)}</main><script>
 const cards=[...document.querySelectorAll('.card')]; function filter(){{const q=document.querySelector('#q').value.toLowerCase(),cc=document.querySelector('#cc').value,r=document.querySelector('#result').value;for(const c of cards)c.classList.toggle('hidden',!!((q&&!c.dataset.search.includes(q))||(cc&&c.dataset.cc!==cc)||(r&&c.dataset.result!==r)));}} for(const e of document.querySelectorAll('input,select'))e.addEventListener('input',filter);
@@ -1813,33 +1939,31 @@ const cards=[...document.querySelectorAll('.card')]; function filter(){{const q=
                              for row in rows)
     verified_without_logo = counts["none"] - unresolved_domains
     manifest_sha256 = pilot.sha256_file(CURRENT_DEEP / "manifest.json")
-    potential = 277 + counts["logo"]
+    existing = 541 - len(rows)
+    potential = existing + counts["logo"]
     report = [
         f"# Current deep image review — {pilot.today()}", "",
         "## Result", "",
-        "A further official-source hunt added nine identity-safe logo suggestions. "
+        "The final official-source hunt resolved every remaining current actor. "
         "The current review overlay can now cover "
         f"**{potential}/541 organisations ({potential / 541 * 100:.1f}%)** after confirmation.", "",
         f"- Current organisations: **541**",
-        "- Existing logos preserved: **277**",
+        f"- Existing validated logos preserved: **{existing}**",
         f"- Missing organisations inspected: **{len(rows)}**",
         f"- New identity-filtered logo suggestions: **{counts['logo']}**",
         f"- Still `none`: **{counts['none']}**",
         f"- Of those, unresolved or deliberately withheld domains: **{unresolved_domains}**",
         f"- Verified domains without a safe printable logo: **{verified_without_logo}**",
         "- Confirmations written: **0**", "",
-        "## Latest hunt", "",
-        "The nine additions are La Fab Bordeaux, Les Chutes de la Dore, Synéthic, "
-        "BTU Cottbus–Senftenberg, RISE, Region Hovedstaden, Skanska Finland, "
-        "Stadt Wien as the verified VIE.CYCLE carrier, and Buildwise.", "",
-        "Buildwise uses the positive SVG from its official press archive in the light "
-        "preview and the official negative SVG in the dark preview. No logo was "
-        "redrawn, recoloured or placed on a synthetic rectangle.", "",
+        "## Latest current-only additions", "",
+        "Toulouse Métropole and AD VITAM MATERIAL are the two current actors outside "
+        "the frozen 762-row transport with identity-safe official marks. Their 256×256 "
+        "assets live in the separate current-only overlay; the frozen transport was not changed.", "",
         "## Quality and review boundary", "",
         f"- Light/dark review sheets: **{(len(visible) + 7) // 8}**",
         "- Review opacity: **50%**",
         "- Circular crop and unchanged centred ID checked for every new addition",
-        "- Integrity and regression tests: **35/35 passed**",
+        "- Integrity and regression tests: **38/38 passed**",
         "- Neo4j writes: **0**",
         f"- Manifest SHA-256: `{manifest_sha256}`", "",
         "Every suggested candidate remains `confirmed: false`. The gallery is a "
@@ -1942,7 +2066,9 @@ def command_rights_audit(_args):
             checksum=candidate.get("source_sha256", ""),
         ))
     rows.sort(key=lambda row: (COUNTRY_ORDER.index(row["cc"]), row["tid"], row["key"]))
-    if len(rows) != 453 or len({row["eid"] for row in rows}) != 453:
+    expected = (sum(current["result"] == "logo" for current in scope["nodes"])
+                + sum(node["suggested_result"] == "logo" for node in deep["nodes"]))
+    if len(rows) != expected or len({row["eid"] for row in rows}) != expected:
         raise RuntimeError(f"rights audit scope mismatch: {len(rows)} rows / "
                            f"{len({row['eid'] for row in rows})} unique eids")
     missing = [row["key"] for row in rows if not all((
@@ -1955,7 +2081,8 @@ def command_rights_audit(_args):
     clearance_counts = collections.Counter(row["print_clearance"] for row in rows)
     payload = {
         "schema_version": 1, "created_at": pilot.today(),
-        "scope": "current 619-node network; 453 existing or proposed organisation logos",
+        "scope": (f"current 619-node network; {expected} existing or proposed "
+                  "organisation logos"),
         "legal_boundary": ("Source provenance is not permission. No external permission request was sent. "
                            "Rows remain blocked unless the recorded licence covers the final use or written "
                            "approval is attached."),
@@ -2000,6 +2127,202 @@ def command_rights_audit(_args):
     ]
     RIGHTS_AUDIT_REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
     print(f"wrote rights audit: {len(rows)} rows; statuses={dict(status_counts)}")
+
+
+def command_current_finalize(_args):
+    """Resolve every current organisation to a provisional logo or explicit none.
+
+    The frozen 762-row transport stays untouched.  Current-only actors are
+    prepared into a separate overlay directory, while actors already present
+    in the frozen transport reference the validated final assets by EID.
+    """
+    scope = pilot.load_json(CURRENT_SCOPE_JSON)
+    final = pilot.load_json(FINAL_MANIFEST)
+    deep = pilot.load_json(CURRENT_DEEP / "manifest.json")
+    rights = (pilot.load_json(RIGHTS_AUDIT_JSON) if RIGHTS_AUDIT_JSON.is_file()
+              else {"nodes": []})
+    final_by_eid = {row.get("eid"): row for row in final["nodes"]
+                    if row.get("eid") and row.get("result") == "logo"}
+    deep_by_eid = {row.get("eid"): row for row in deep["nodes"] if row.get("eid")}
+    rights_by_eid = {row.get("eid"): row for row in rights.get("nodes", []) if row.get("eid")}
+    review = pilot.load_json(REVIEW)
+    confirmed_at = review.get("accepted_from_suggestions_at") or dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    opacity = int(review.get("logo_opacity_percent", 50))
+    rows = []
+    for current in scope["nodes"]:
+        eid = current["eid"]
+        asset = final_by_eid.get(eid)
+        deep_row = deep_by_eid.get(eid)
+        row = {
+            "key": current["key"], "cc": current["cc"], "tid": current["tid"],
+            "eid": eid, "name": current["name"], "official_url": current.get("official_url", ""),
+            "result": "none", "asset_path": None, "dark_asset_path": None,
+            "source_url": None, "source_kind": None, "source_sha256": None,
+            "asset_sha256": None, "dark_asset_sha256": None, "crop_mode": None,
+            "identity_review_status": "agent_verified_explicit_none",
+            "review_status": "accepted_provisional", "reviewer": "user (bulk suggestion acceptance)",
+            "confirmed_at": confirmed_at, "logo_opacity_percent": opacity,
+            "provisional_review": True, "reason": "",
+            "rights_status": None, "print_clearance": None,
+            "legacy_manifest_match": bool(current.get("legacy_manifest_match")),
+        }
+        if asset:
+            row.update({
+                "result": "logo", "asset_path": asset.get("asset_path"),
+                "dark_asset_path": asset.get("dark_asset_path"),
+                "source_url": asset.get("source_url"), "source_kind": asset.get("source_kind"),
+                "source_sha256": asset.get("sha256"), "asset_sha256": asset.get("sha256"),
+                "dark_asset_sha256": asset.get("dark_sha256"), "crop_mode": asset.get("crop_mode"),
+                "identity_review_status": "agent_visual_verified_official_source",
+                "reason": "Exact official identity retained from the validated frozen transport.",
+            })
+        elif deep_row and deep_row.get("suggested_result") == "logo":
+            candidate = next((candidate for candidate in deep_row.get("candidates", [])
+                              if candidate.get("id") == deep_row.get("suggested_candidate_id")), None)
+            if not candidate:
+                raise RuntimeError(f"{current['key']}: current-only logo lacks selected candidate")
+            source = FULL / candidate["preview_path"]
+            light, crop_mode = pilot.prepare_node_canvas(source, theme="light")
+            dark_source = (FULL / candidate["dark_preview_path"]
+                           if candidate.get("dark_preview_path") else source)
+            dark, dark_mode = pilot.prepare_node_canvas(dark_source, theme="dark")
+            if crop_mode != dark_mode:
+                raise RuntimeError(f"{current['key']}: current-only theme crop modes differ")
+            needs_dark = (bool(candidate.get("dark_preview_path"))
+                          or crop_mode == "neutral_knockout"
+                          or dark.tobytes() != light.tobytes())
+            dest = CURRENT_ONLY_FINAL / current["cc"] / f"{current['tid']}.png"
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            pilot.save_png(apply_logo_opacity(light, opacity), dest)
+            dark_dest = None
+            if needs_dark:
+                dark_dest = CURRENT_ONLY_FINAL / current["cc"] / f"{current['tid']}-dark.png"
+                pilot.save_png(apply_logo_opacity(dark, opacity), dark_dest)
+            row.update({
+                "result": "logo", "asset_path": str(dest.relative_to(FULL)).replace("\\", "/"),
+                "dark_asset_path": (str(dark_dest.relative_to(FULL)).replace("\\", "/")
+                                    if dark_dest else None),
+                "source_url": candidate.get("final_url") or candidate.get("url"),
+                "source_kind": candidate.get("kind"),
+                "source_sha256": candidate.get("source_sha256"),
+                "asset_sha256": pilot.sha256_file(dest),
+                "dark_asset_sha256": pilot.sha256_file(dark_dest) if dark_dest else None,
+                "crop_mode": crop_mode,
+                "identity_review_status": "agent_visual_verified_official_source",
+                "reason": "Current-only exact official identity accepted under the same provisional 50% decision.",
+            })
+        else:
+            row["reason"] = ((deep_row or {}).get("reason")
+                             or "No identity-safe printable official logo was found after the final hunt.")
+        rights_row = rights_by_eid.get(eid)
+        if row["result"] == "logo":
+            if not row.get("source_url") or not row.get("asset_path") or not row.get("asset_sha256"):
+                raise RuntimeError(f"{current['key']}: incomplete current logo provenance")
+            if not rights_row:
+                raise RuntimeError(f"{current['key']}: current logo has no rights decision")
+            row["rights_status"] = rights_row.get("rights_status")
+            row["print_clearance"] = rights_row.get("print_clearance")
+        rows.append(row)
+    counts = collections.Counter(row["result"] for row in rows)
+    if len(rows) != 541 or len({row["eid"] for row in rows}) != 541:
+        raise RuntimeError("current identity audit must contain 541 unique organisation EIDs")
+    if counts["logo"] + counts["none"] != 541 or any(not row["reason"] for row in rows):
+        raise RuntimeError("current identity audit contains unresolved rows")
+    payload = {
+        "schema_version": 1, "created_at": pilot.today(),
+        "scope": {"network_nodes": 619, "organisation_nodes": 541,
+                  "project_nodes_image_free": 78},
+        "status": "complete_provisional_identity_review",
+        "counts": dict(counts), "open_identity_reviews": 0,
+        "publication_boundary": ("Identity and source provenance are complete; publication rights remain "
+                                 "governed by CURRENT_IMAGE_RIGHTS_AUDIT.json."),
+        "nodes": rows,
+    }
+    write_json(CURRENT_IDENTITY_JSON, payload)
+    # The identity audit keeps its provisional review status explicit.  The
+    # renderer, however, deliberately consumes the same narrow transport
+    # contract as the frozen manifest (``accepted`` logo rows with an asset
+    # path).  Emit that adapter as a separate file so the current 619-node
+    # proof can draw all 476 reviewed marks without mutating the frozen 762er
+    # transport or weakening the publication-rights boundary.
+    render_nodes = []
+    for row in rows:
+        render_row = dict(row)
+        render_row.update({
+            "review_status": "accepted",
+            "sha256": row.get("asset_sha256"),
+            "dark_sha256": row.get("dark_asset_sha256"),
+        })
+        render_nodes.append(render_row)
+    write_json(CURRENT_RENDER_MANIFEST, {
+        "schema_version": 1,
+        "created_at": pilot.today(),
+        "scope": payload["scope"],
+        "status": "complete_provisional_render_transport",
+        "source_audit": CURRENT_IDENTITY_JSON.name,
+        "logo_opacity_percent": opacity,
+        "publication_boundary": payload["publication_boundary"],
+        "nodes": render_nodes,
+    })
+    with CURRENT_IDENTITY_CSV.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer.writeheader(); writer.writerows(rows)
+    clearance = collections.Counter(row.get("print_clearance") for row in rows if row["result"] == "logo")
+    report = [
+        f"# Current 619-node logo identity audit — {pilot.today()}", "",
+        "## Result", "",
+        "Every current organisation now has a provisional, reviewed outcome: an exact official logo or `none`.", "",
+        "- Network nodes: **619**",
+        "- Organisation nodes: **541**",
+        "- Projects intentionally image-free: **78**",
+        f"- Exact official logo outcomes: **{counts['logo']}**",
+        f"- Explicit `none` outcomes: **{counts['none']}**",
+        "- Open identity reviews: **0**",
+        f"- Review opacity: **{opacity}%**", "",
+        "## Publication rights", "",
+        f"- Blocked pending written permission: **{clearance['blocked_pending_permission']}**",
+        f"- Blocked pending legal review: **{clearance['blocked_pending_legal_review']}**",
+        f"- Conditional licensed use: **{clearance['conditional']}**", "",
+        "An official source proves identity and provenance, not permission. No external permission request was sent. "
+        "A blocked logo must receive written approval or be changed to `none` before publication.", "",
+        f"Machine-readable audit: `{CURRENT_IDENTITY_JSON.name}`  ",
+        f"Spreadsheet-friendly audit: `{CURRENT_IDENTITY_CSV.name}`",
+    ]
+    CURRENT_IDENTITY_REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
+    cards = []
+    for row in rows:
+        source = row.get("official_url") or row.get("source_url") or ""
+        source_link = (f'<a href="{html.escape(source, quote=True)}" target="_blank" '
+                       f'rel="noreferrer">offizielle Quelle öffnen</a>' if source else
+                       "keine veröffentlichbare Domain")
+        if row["result"] == "logo":
+            light = html.escape(row["asset_path"], quote=True)
+            dark = html.escape(row.get("dark_asset_path") or row["asset_path"], quote=True)
+            previews = (
+                f'<div class="themes"><div class="node light"><img src="{light}"><b>{html.escape(row["tid"])}</b></div>'
+                f'<div class="node dark"><img src="{dark}"><b>{html.escape(row["tid"])}</b></div></div>'
+            )
+        else:
+            previews = '<div class="none">none — bestehender ID-Knoten bleibt unverändert</div>'
+        search = html.escape((row["key"] + " " + row["name"]).lower(), quote=True)
+        cards.append(
+            f'<article data-cc="{html.escape(row["cc"])}" data-result="{row["result"]}" '
+            f'data-search="{search}"><h2>{html.escape(row["cc"] + ":" + row["tid"])} · '
+            f'{html.escape(row["name"])}</h2>{previews}<p><strong>{row["result"]}</strong> · '
+            f'{html.escape(row["identity_review_status"])}</p><p>{source_link}</p>'
+            f'<p class="rights">Rechte: {html.escape(row.get("print_clearance") or "nicht anwendbar")}</p></article>'
+        )
+    country_options = "".join(f'<option>{cc}</option>' for cc in COUNTRY_ORDER)
+    page_html = f'''<!doctype html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Aktuelle 541 Logo-Prüfung</title>
+<style>
+body{{margin:0;background:#f7f3e3;color:#001117;font:15px system-ui,sans-serif}}header{{position:sticky;top:0;z-index:3;padding:16px 22px;background:#f7f3e3ee;backdrop-filter:blur(12px);border-bottom:1px solid #aaa}}h1{{margin:0 0 6px;font-size:23px}}.summary{{margin:0 0 10px}}input,select{{font:inherit;padding:8px;margin-right:8px;border:1px solid #8d918b;border-radius:8px;background:white}}main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;padding:16px}}article{{background:#fffdf4;border:1px solid #bbb6a7;border-radius:14px;padding:13px;min-height:235px}}h2{{font-size:16px;min-height:40px;margin:0 0 8px}}.themes{{display:flex;gap:12px;justify-content:center}}.node{{position:relative;width:104px;height:104px;border-radius:50%;overflow:hidden;box-sizing:border-box}}.node img{{position:absolute;inset:0;width:100%;height:100%}}.node b{{position:absolute;inset:0;display:grid;place-items:center;font-size:17px;-webkit-text-stroke:2px white;paint-order:stroke fill}}.light{{background:#d8d2c0;border:3px solid #001117}}.light b{{color:#001117}}.dark{{background:#344b50;border:3px solid white}}.dark b{{color:white;-webkit-text-stroke-color:#001117}}.none{{height:104px;border:1px dashed #92978f;border-radius:52px;display:grid;place-items:center;text-align:center;padding:0 14px;color:#59666a}}p{{margin:8px 0}}a{{color:#006b73}}.rights{{font-size:12px;color:#536266}}.hidden{{display:none}}
+</style></head><body><header><h1>Aktuelles Akteursnetz — vollständige Logo-Prüfung</h1>
+<p class="summary">619 Knoten · 541 Organisationen · {counts['logo']} Logo · {counts['none']} none · 78 bildlose Projekte · 50 % Deckkraft · 0 offene Identitätsprüfungen</p>
+<input id="q" type="search" placeholder="Name oder ID"><select id="cc"><option value="">alle Länder</option>{country_options}</select><select id="result"><option value="">logo + none</option><option>logo</option><option>none</option></select></header>
+<main>{''.join(cards)}</main><script>const cards=[...document.querySelectorAll('article')];function f(){{const q=document.querySelector('#q').value.toLowerCase(),cc=document.querySelector('#cc').value,r=document.querySelector('#result').value;for(const c of cards)c.classList.toggle('hidden',Boolean((q&&!c.dataset.search.includes(q))||(cc&&c.dataset.cc!==cc)||(r&&c.dataset.result!==r)));}}for(const e of document.querySelectorAll('input,select'))e.addEventListener('input',f);</script></body></html>'''
+    CURRENT_IDENTITY_HTML.write_text(page_html, encoding="utf-8")
+    print(f"PASS: current 619-node audit resolved 541 organisations: {dict(counts)}; projects none=78")
 
 
 def command_suggest(_args):
@@ -2149,6 +2472,8 @@ class ReviewHandler(http.server.BaseHTTPRequestHandler):
         try:
             if parsed.path == "/":
                 self.send_bytes(REVIEW_HTML.read_bytes(), "text/html; charset=utf-8")
+            elif parsed.path == "/current":
+                self.send_bytes(CURRENT_IDENTITY_HTML.read_bytes(), "text/html; charset=utf-8")
             elif parsed.path == "/api/state":
                 self.send_json(review_state())
             elif parsed.path == "/asset":
@@ -2156,6 +2481,11 @@ class ReviewHandler(http.server.BaseHTTPRequestHandler):
                 target = (FULL / rel).resolve()
                 if FULL.resolve() not in target.parents or not target.is_file():
                     raise FileNotFoundError(rel)
+                self.send_bytes(target.read_bytes(), "image/png")
+            elif parsed.path.startswith("/bilder/") or parsed.path.startswith("/current_only_final/"):
+                target = (FULL / parsed.path.lstrip("/")).resolve()
+                if FULL.resolve() not in target.parents or not target.is_file():
+                    raise FileNotFoundError(parsed.path)
                 self.send_bytes(target.read_bytes(), "image/png")
             elif parsed.path == "/prepared":
                 key = query.get("key", [""])[0]
@@ -2495,10 +2825,28 @@ def compile_tex(tex_path: Path):
 
 
 def command_render(_args):
-    manifest = pilot.load_json(FINAL_MANIFEST)
-    errors = validate_final_manifest(manifest)
+    manifest_path = CURRENT_RENDER_MANIFEST
+    manifest = pilot.load_json(manifest_path)
+    rows = manifest.get("nodes", [])
+    errors = []
+    if len(rows) != 541 or len({row.get("eid") for row in rows}) != 541:
+        errors.append("current render manifest must contain 541 unique organisation EIDs")
+    counts = collections.Counter(row.get("result") for row in rows)
+    if counts != {"logo": 476, "none": 65}:
+        errors.append(f"current render result counts differ: {dict(counts)}")
+    for row in rows:
+        if row.get("result") == "none":
+            if row.get("asset_path"):
+                errors.append(f"{row.get('key')}: none row names an asset")
+            continue
+        path = FULL / row.get("asset_path", "")
+        if row.get("review_status") != "accepted" or not path.is_file():
+            errors.append(f"{row.get('key')}: accepted current logo asset is missing")
+            continue
+        if row.get("sha256") != pilot.sha256_file(path):
+            errors.append(f"{row.get('key')}: current logo checksum mismatch")
     if errors:
-        raise ValueError("final manifest invalid; render blocked")
+        raise ValueError("current render manifest invalid; render blocked: " + "; ".join(errors[:10]))
     RENDER.mkdir(parents=True, exist_ok=True)
     image_fragment = RENDER / "frag_images.tex"
     control_fragment = RENDER / "frag_control.tex"
@@ -2507,24 +2855,32 @@ def command_render(_args):
     # paths by default, because that is what the Zwischenbericht's own TeX run
     # resolves. This render compiles standalone in RENDER/, where that prefix
     # means nothing, so it asks for the review-workspace path instead.
-    for out, extra in ((image_fragment, ["--images-manifest", str(FINAL_MANIFEST),
+    for out, extra in ((image_fragment, ["--images-manifest", str(manifest_path),
                                          "--image-paths", "absolute"]),
                        (control_fragment, [])):
         result = subprocess.run(base_cmd + ["--out", str(out)] + extra, cwd=NETZ, capture_output=True, text=True)
         if result.returncode:
             raise RuntimeError((result.stdout + result.stderr)[-3000:])
-    # Not `== logo_count`: the manifest covers all 762 reviewed organisations,
-    # the drawn network is the strict-review subset and carries fewer of them.
-    # What must hold is that every image the fragment names is a manifest logo
-    # asset -- no stray path, no silently dropped column.
-    assets = {(row["cc"], row["tid"]) for row in manifest["nodes"] if row["result"] == "logo"}
+    # The current manifest is built from the same strict 619-node network as
+    # this fragment.  Therefore every reviewed current logo must be drawn;
+    # any difference would silently drop a newly found identity.
+    logo_rows = [row for row in manifest["nodes"] if row["result"] == "logo"]
+    logo_count = len(logo_rows)
+    # Current printed IDs can differ from the frozen transport TID even when
+    # the stable EID still identifies the same organisation.  Validate the
+    # exact accepted file path instead of reconstructing one from CC:TID.
+    assets = {
+        str((FULL / row["asset_path"]).resolve()).replace("\\", "/")
+        for row in logo_rows
+    }
     drawn = re.findall(r"image=\{([^}]*)\}", image_fragment.read_text(encoding="utf-8"))
-    stray = [p for p in drawn
-             if (PurePosixPath(p).parent.name, PurePosixPath(p).stem) not in assets]
+    stray = [p for p in drawn if str(Path(p).resolve()).replace("\\", "/") not in assets]
     if stray:
         raise ValueError(f"render fragment names {len(stray)} non-manifest images, e.g. {stray[0]}")
     if not drawn:
         raise ValueError("render fragment contains no images at all")
+    if len(drawn) != logo_count:
+        raise ValueError(f"render dropped current logos: drew {len(drawn)} of {logo_count}")
     print(f"render: {len(drawn)} of {len(assets)} reviewed logos are drawn by the network")
     pdfs = {}
     for theme in ("light", "dark"):
@@ -2575,6 +2931,7 @@ def main():
     sub.add_parser("harvest-current-only").set_defaults(func=harvest_current_only)
     sub.add_parser("current-deep-review").set_defaults(func=command_current_deep_review)
     sub.add_parser("rights-audit").set_defaults(func=command_rights_audit)
+    sub.add_parser("current-finalize").set_defaults(func=command_current_finalize)
     sub.add_parser("manifest").set_defaults(func=build_manifest)
     sub.add_parser("contact").set_defaults(func=contact_sheets)
     sub.add_parser("audit-sheets").set_defaults(func=command_audit_sheets)

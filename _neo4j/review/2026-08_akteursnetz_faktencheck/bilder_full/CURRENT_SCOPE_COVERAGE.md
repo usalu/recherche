@@ -3,16 +3,16 @@
 - Network nodes: **619**
 - Organisations: **541**
 - Projects (kept image-free): **78**
-- Current logos: **456**
-- Current organisation nodes without a logo: **85**
+- Current logos: **460**
+- Current organisation nodes without a logo: **81**
 
 This report is scoped to the current Semio network. The frozen 762-node transport remains unchanged.
 
 ## Pending research overlay
 
-- Identity-filtered suggestions awaiting confirmation: **184**
-- Potential coverage after confirmation: **640/541 (118.3%)**
-- Cases still resolved as `none`: **80**
+- Identity-filtered suggestions awaiting confirmation: **2**
+- Potential coverage after confirmation: **462/541 (85.4%)**
+- Cases still resolved as `none`: **79**
 
 These suggestions are not counted as current logos and have not been written to Neo4j.
 
@@ -68,7 +68,6 @@ These suggestions are not counted as current logos and have not been written to 
 - `CH:U11` — Modissa Immobilien AG — domain unresolved
 - `CH:U21` — Tschudin Rückbau und Demontagen GmbH — https://www.tschudin-rueckbau.ch/
 - `CH:U14` — Oberli Ingenieurbau AG — domain unresolved
-- `CH:U18` — Schmidiger + Rosasco AG — https://srzh.ch/
 - `CH:U01` — aik Architektur + Ingenieur Kollektiv — domain unresolved
 - `CH:U04` — Bischof Föhn Architektur — https://www.bf-architekten.ch/
 - `CH:U19` — Studio Trachsler Hoffmann — https://trachslerhoffmann.ch/
@@ -80,15 +79,12 @@ These suggestions are not counted as current logos and have not been written to 
 - `DE:U06` — Die Zusammenarbeiter — https://zusammenarbeiter.de/
 - `DE:U18` — Petra Jablonická — domain unresolved
 - `DE:N02` — bauteilnetz Deutschland — http://www.bauteilnetz.de/
-- `DE:U05` — DARE GmbH — https://www.dare-gmbh.de/
 - `DE:U14` — Ingenieurbüro Fechner — domain unresolved
 - `BE:G01` — ERDF / FEDER Brüssel-Hauptstadt — https://erdf.brussels/
 - `BE:M02` — Antique Fireplaces First — https://antiquefireplacesfirst.com/
 - `BE:M11` — Eeuwenhout Antoine Verhofstede — https://www.verhofstede.be/
 - `BE:M15` — Het arduinen hoekje — https://arduinen-hoekje.be/
 - `BE:M16` — Heyns Recycling — https://heynsrecycling.be/
-- `BE:M17` — Hofman NV - SA — https://www.hofman.be/
-- `BE:M25` — MVV Afbraakwerken Martin — https://www.mvvafbraak.be/
 - `BE:I02` — OVAM (Openbare Vlaamse Afvalstoffenmaatschappij) — https://ovam.vlaanderen.be/
 - `BE:N01` — AD VITAM MATERIAL (ehem. Plateforme Réemploi) — https://advitam-material.be/
 - `BE:M29` — Van Huele — https://www.vanhuele.be/

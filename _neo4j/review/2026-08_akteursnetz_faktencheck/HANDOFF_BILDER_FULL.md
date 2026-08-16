@@ -1,521 +1,172 @@
-# Übergabe: vollständige Bildprüfung im Akteursnetz
+# Übergabe: Logos im Akteursnetz
 
-**Stand:** 2026-08-13  
-**Arbeitsbereich:** `_neo4j/review/2026-08_akteursnetz_faktencheck/`  
-**Status:** 762 Vorschläge vorläufig übernommen, finalisiert und validiert;
-343 Logos in den Zwischenbericht ausgeliefert (Knoten und Tabelle). `render`
-und `patch` sind nicht gelaufen, nach Neo4j wurde nichts geschrieben.
+**Stand:** 2026-08-16
 
-## Kurzfassung
+**Status:** Identitätsprüfung vollständig; Veröffentlichung rechtlich noch nicht freigegeben.
 
-Der Bildworkflow für das final beschnittene 859er Akteursnetz ist implementiert. Die
-97 Bauvorhaben bleiben bildlos. Für alle 762 Organisationsknoten liegt ein eindeutiger
-Vorschlag `logo` oder `none` vor. Alle Vorschläge wurden am 13. August 2026
-strukturell geprüft; die ursprünglich 352 Logo-Vorschläge wurden zusätzlich vollständig
-auf 22 Prüfbögen in Hell und Dunkel angesehen.
+**Sicherheitsgrenze:** `mit-bestand` blieb unverändert. Es gab keinen Neo4j-Write.
 
-Der Benutzer hat anschließend angewiesen, **alle aktuellen Vorschläge mit 50 %
-Logo-Deckkraft vorläufig zu übernehmen**, weil eine spätere erneute Einzelprüfung
-möglich bleiben soll. Der Reviewstand lautet:
+## Zweite Vollprüfung 2026-08-16
 
-| Zustand | Anzahl |
+Alle 33 Prüfbögen und damit alle 476 aktuell verwendeten Logos wurden ein zweites
+Mal visuell kontrolliert. Die 20 in den letzten drei Arbeitssitzungen ergänzten
+Logos wurden zusätzlich einzeln gegen die aktuellen offiziellen Organisations-
+oder eindeutig belegten Trägerseiten geprüft. Ergebnis: **20/20 richtig**, keine
+Ersetzung erforderlich, keine offene Identitätsprüfung. Die 13 Gruppen identischer
+Quelldateien sind vollständig erklärte Organisations-, Untereinheits- oder
+Trägermarken und keine zufälligen Dubletten.
+
+Der technische Gegenlauf prüfte 757 Basis- und Dunkelassets auf Vorhandensein,
+SHA-256, PNG/RGBA, 256×256 und Kreisbegrenzung. Es gab null Fehler; 41/41 Tests
+bestanden. Der ausführliche Nachweis liegt in
+`bilder_full/CURRENT_LOGO_REVERIFICATION_2026-08-16.md`.
+
+## Ergebnis
+
+Der eingefrorene 859er Transport enthält 762 Organisationen und 97 bildlose Projekte.
+Alle 762 Organisationen sind vorläufig mit genau einem Ergebnis abgeschlossen:
+
+| Ergebnis | Anzahl |
 |---|---:|
-| Organisationen insgesamt | 762 |
-| vorläufig übernommene Logos | 343 |
-| vorläufig übernommenes `none` | 419 |
-| Graph-konsistente Organisationen | 412 |
-| Overlay-Organisationen ohne Graph-ID | 350 |
-| bildlose Projekte | 97 |
-| Logo-Deckkraft | 50 % |
-| offene Reviewzeilen | 0 |
-| Neo4j-Schreiboperationen | 0 |
+| `logo` | 525 |
+| `none` | 237 |
+| offene Reviews | 0 |
+| Deckkraft | 50 % |
 
-`none` ist vollständig: Der bisherige ID-Knoten bleibt unverändert.
+Das aktuelle Netz ist kleiner und umfasst 619 Knoten:
 
-## Verbindliche Sicherheitsgrenze
+| Aktueller Stand | Anzahl |
+|---|---:|
+| Organisationen | 541 |
+| Projekte, absichtlich bildlos | 78 |
+| korrekte offizielle Logo-Ergebnisse | 476 |
+| begründete `none`-Ergebnisse | 65 |
+| offene Identitätsprüfungen | 0 |
 
-- **Neo4j ist die Quelle der Wahrheit.** Dieser Ordner ist nur Transport und Review.
-- `mit-bestand` wurde nicht verändert.
-- Es wurden keine `:Quelle`-Knoten, `BELEGT_IN`-Kanten oder Sidecar-Verweise erzeugt.
-- Das finale Manifest und die finalen 256×256-Assets sind erzeugt und in den
-  Zwischenbericht kopiert. Länder-PDFs (`render`) und der Property-Patch
-  (`patch`) wurden bewusst **noch nicht** erzeugt.
-- `full_asset_review.json` ist ein vorläufiger Arbeitsstand, keine kanonische
-  Graphfreigabe.
-- Vor einem Patch muss jeder der 412 graphgestützten Datensätze über `id` exakt
-  einen Knoten treffen. Die 350 Overlays bleiben vom Patch ausgeschlossen.
+Die aktuelle Fassung ergänzt 16 recherchierte Logos als eigenen Render-Overlay
+unter `bilder_full/current_only_final/`. Darunter sind Toulouse Métropole und
+AD VITAM MATERIAL als zwei Organisationen außerhalb des alten 762er-Freeze;
+14 weitere waren im Freeze noch `none`. Der eingefrorene Transport wurde dafür
+nicht umgedeutet oder erweitert.
 
-## Was implementiert wurde
+## Letzte Restjagd und Korrekturen
 
-### Sammlung und Vorschläge
+Der letzte Lauf prüfte alle 81 noch bildlosen aktuellen Organisationen erneut in
+offiziellen Headern, Medienbereichen, CSS-/SVG-Quellen und WordPress-Medien. 16
+eindeutige Marken wurden übernommen: Archipel zéro, Bellastock, Toulouse Métropole,
+Gauthey Cheminées, Enviromate, Surplus Building & Plumbing Materials, Antique
+Wooden Floors, Romsey Reclamation, E&A Reclamation, Lagemaat Heerde, Ter Velde &
+Den Besten, Eeuwenhout Antoine Verhofstede, Heyns Recycling, AD VITAM MATERIAL,
+Sundahus sowie Joensuun Rakennuspurku ja Timanttiurakointi Oy.
 
-`full_image_collection.py` unterstützt:
+Zusätzlich wurden die letzten Fehlzuordnungen entfernt:
 
-- die eingefrorene 762er Organisationsauswahl aus dem 859er Netz;
-- Domainprüfung und Kandidatensammlung von offiziellen Seiten;
-- Apple-Touch-Icons, deklarierte Icons, Favicons, geprüfte Header-/Medienmarken,
-  strukturierte Logos und eng geprüfte `og:image`-Treffer;
-- 128-px-Mindestkante für Rasterbilder und SVG;
-- Sperren für Fotos, Social-Media-Zeichen, Partner-/Zertifikatslogos, Platzhalter
-  und bekannte Identitätsfehler;
-- stabile Vorschläge mit Kandidaten-ID und Kandidaten-SHA-256;
-- eine lokale Review-Galerie mit Land-/Statusfilter, Suche, Hell-/Dunkelvorschau,
-  Kreisclip, unveränderter ID und Deckkraftregler;
-- vorläufige Gesamtübernahme über `accept-suggestions --opacity 50`;
-- spätere Einzelkorrektur, ohne die übrigen vorläufigen Zeilen zu verändern;
-- Finalisierung und Manifestprüfung (gelaufen) sowie Rendering und trockenen
-  Patch (nicht gelaufen) als getrennte Schritte.
+- Enviromate: StartUs-Logo verworfen → exaktes offizielles Enviromate-Wortzeichen
+- RAEDIFICARE: Baustellenfoto verworfen → offizielles Wortzeichen
+- Grayo: Fototextur verworfen → offizielles Wortzeichen
+- Sundahus: Sundahus/iBinder-Kombinationslogo verworfen → exaktes offizielles Sundahus-Logo
+- PREUSE: Interreg-/EU-Förderlockup verworfen → `none`
+- Empa: generisches App-Symbol verworfen → offizielles Empa-Wortzeichen
+- FORE Partnership und Elliott Wood: gegen die offizielle Seite gegengeprüft
 
-### Darstellung und Deckkraft
+Fotos, Social-Media-Symbole, Partner-/Zertifikatslogos, Förderlockups und zu kleine
+Rasterdateien bleiben ausgeschlossen. `none` ist ein vollständiges Ergebnis und
+lässt den bisherigen ID-Knoten unverändert.
 
-- Logos werden vollständig innerhalb des Knotens vorbereitet. Flächige rechteckige
-  Hintergründe werden kreisfüllend zugeschnitten und kreisförmig maskiert.
-- Neutrale weiße/schwarze Flächen werden für Hell/Dunkel tokenisiert; Farbanteile
-  bleiben erhalten.
-- Reihenfolge: Kreisfüllung, Logo, Zustandskontur, unveränderte ID.
-- Der Galerie-Regler steht bei 50 %. Der Wert ist in jeder Reviewzeile gespeichert
-  und wird bei späterer Finalisierung auf die Asset-Alphaebene angewendet. Die
-  gesammelte Quelldatei wird nicht verändert.
-- Ohne Bildmanifest bleibt der historische Renderer bildlos.
+## Darstellung
 
-### Korrekturen aus dem Vollaudit
+- Assetformat: 256×256 PNG, RGBA
+- sichtbare Pixel kreisförmig begrenzt
+- farbige Rechteckmarken kreisfüllend beschnitten, nicht künstlich aufgefüllt
+- freistehende Marken vollständig innerhalb des Kreises
+- neutrale Schwarz-/Weißanteile themefähig; Markenfarben bleiben erhalten
+- Reihenfolge: Knotenfüllung, Logo, Kontur/Zustand, unveränderte zentrierte ID
+- vorläufige Logo-Deckkraft: 50 %
 
-14 Organisationen hatten einen falschen oder unbrauchbaren Spitzenkandidaten. Gute
-offizielle Alternativen wurden bevorzugt; ohne sichere Alternative wurde `none`
-gesetzt. Beispiele:
+Die 33 Prüfbögen enthalten alle 525 Vorschläge in Hell und Dunkel. Die Vorschläge
+sind weiterhin später einzeln revidierbar.
 
-- BioRegional: fremdes Abstrakt-Logo gesperrt, offizielles App-Icon gewählt.
-- Concular: Brandschutztürfoto gesperrt, offizielles Wortzeichen gewählt.
-- Fer et Pierre: Telefonsymbol gesperrt, offizielles Wort-/Bildzeichen gewählt.
-- Houtenplaten: Platzhalter und Fassadenfoto gesperrt, offizielles HP-Zeichen gewählt.
-- Bærebyg: Censio-Logo gesperrt, offizielles Bærebyg-Zeichen gewählt.
-- Ohne sichere Alternative `none`: Opera/Opera-Browser, CSTB/BATIPEDIA,
-  Bauteilbörse Oldenburg/OOZ, a:gain/GAIN, HSB Göteborg/Business Region Göteborg,
-  The Old Slate Yard/Websitebuilder und Matériauthèque/WordPress.
+## Bildrechte
 
-Die vollständige Liste steht in
-`bilder_full/final_review/FINAL_SUGGESTION_AUDIT.md`.
+Für alle 476 aktuell verwendbaren Logos sind Quelle, Kontaktweg, Rechteentscheidung
+und Druckfreigabestatus dokumentiert. Herkunft ist jedoch keine Nutzungserlaubnis:
+
+| Rechtegate | Anzahl |
+|---|---:|
+| schriftliche Erlaubnis erforderlich | 474 |
+| juristische/Markenprüfung erforderlich | 1 |
+| bedingt lizenziert | 1 |
+| externe Erlaubnisanfragen versendet | 0 |
+
+Vor Veröffentlichung muss für jede blockierte Marke eine schriftliche Freigabe
+abgelegt oder ausschließlich dieser Knoten auf `none` gesetzt werden. Details:
+`bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.md` und `.csv`.
 
 ## Maßgebliche Dateien
 
-| Datei/Ordner | Bedeutung |
+| Datei | Zweck |
 |---|---|
-| `bilder_full/selection.json` | eingefrorene 762er Auswahl samt Graph-/Overlay-Zuordnung |
-| `bilder_full/domains_review.json` | recherchierte Domain- und Identitätsstände |
-| `bilder_full/kandidaten/<LAND>/<TID>/` | Kandidaten und Abrufmetadaten |
-| `bilder_full/suggestions.json` | aktueller Vorschlag für alle 762 Knoten |
-| `bilder_full/full_asset_review.json` | vorläufiger 762/762-Reviewstand, Deckkraft 100 % (Sicherung des 50-%-Stands als `.bak-opacity50`) |
-| `dark_backdrop_overrides.json` | 75 Logos mit hellem Backdrop statt Theme-Umfärbung, je mit gemessenem Grund |
-| `bilder_full/final_review/index.json` | Index der 22 visuellen Prüfbögen |
-| `bilder_full/final_review/FINAL_SUGGESTION_AUDIT.md` | menschenlesbarer Vollaudit |
-| `bilder_full/final_review/FINAL_SUGGESTION_AUDIT.json` | maschinenlesbarer Vollaudit |
-| `full_image_collection.py` | Sammlung, Review, Finalisierung, Validierung, Rendering, Patch |
-| `full_image_review.html` | lokale Einzelabnahme |
-| `pilot_images.py` | Bildaufbereitung, Crop, Themes und Assetprüfungen |
-| `test_full_image_collection.py` | Integritäts- und Regressionstests |
-| `bilder_full/final_image_manifest.json` | finales 762er Manifest mit Assetpfad und SHA-256 |
-| `bilder_full/bilder/<LAND>/<TID>.png` | finale 256×256-RGBA-Assets, `-dark` wo nötig |
-| `_neo4j/netz/netz/sources.py` | Manifest-, Asset- und Fragmentziele des Berichts |
-| `_neo4j/netz/netz/cli.py` | `--images-manifest`, `--image-paths`, `sync-images`, `sync-fragments` |
-| `_neo4j/netz/netz/render/latex/graph_tikz.py` | Bilder nur für akzeptierte Organisationen |
-| `_neo4j/netz/netz/render/latex/table_grid.py` | Logospalte der Tabelle (`\SemioLogoFit`) |
-| `semio: print/tex/semio-logo.sty` | Pfadauflösung inkl. `-dark`, `\SemioLogoFit` |
-| `semio: print/tex/semio-graph.sty` | `\semio@graph@node@image@opacity` |
+| `bilder_full/CURRENT_LOGO_IDENTITY_AUDIT.json` | vollständiger 541er Identitätsnachweis |
+| `bilder_full/CURRENT_LOGO_IDENTITY_AUDIT.csv` | prüfbare Tabellenfassung |
+| `bilder_full/CURRENT_LOGO_IDENTITY_AUDIT.html` | klickbare Galerie aller 541 Organisationen |
+| `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.json` | Rechtegate für 476 Logos |
+| `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.csv` | Kontakt-/Freigabewarteschlange |
+| `bilder_full/final_image_manifest.json` | validierter eingefrorener 762er Transport |
+| `bilder_full/current_image_manifest.json` | Rendertransport für 541 aktuelle Organisationen |
+| `bilder_full/final_review/index.json` | Index der 33 Prüfbögen |
+| `bilder_full/final_review/FINAL_SUGGESTION_AUDIT.json` | maschineller Vollaudit |
+| `bilder_full/full_image_property_patch.json` | trockener Property-Patch, 412 Graphzeilen |
+| `bilder_full/full_image_property_patch_report.md` | Match-/Overlaybericht, 350 Overlays |
+| `bilder_full/render/render_report.json` | bestandener Druckrender-Nachweis |
+| `bilder_full/render/akteursnetz_images_light.pdf` | Netz mit Logos, hell |
+| `bilder_full/render/akteursnetz_images_dark.pdf` | Netz mit Logos, dunkel |
+| `bilder_full/render/akteursnetz_control_light.pdf` | bildlose Kontrolle, hell |
+| `bilder_full/render/akteursnetz_control_dark.pdf` | bildlose Kontrolle, dunkel |
+| `bilder_full/bilder/<LAND>/<TID>.png` | finale Freeze-Assets |
+| `bilder_full/current_only_final/` | 16 aktuelle Overlay-Assets |
+| `full_image_collection.py` | Sammlung, Review, Finalisierung, Validierung |
+| `pilot_images.py` | Crop, Kreisbegrenzung, Themebehandlung |
 
-## Review wieder aufnehmen
-
-Die Galerie läuft lokal unter `http://127.0.0.1:8765/`.
-
-Falls der Server nicht mehr läuft:
+## Reproduzierbare Abschlussbefehle
 
 ```powershell
 Set-Location E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck
+python full_image_collection.py suggest
+python full_image_collection.py accept-suggestions --opacity 50
+python full_image_collection.py finalize
+python full_image_collection.py validate
+python full_image_collection.py current-scope
+python full_image_collection.py current-deep-review
+python full_image_collection.py rights-audit
+python full_image_collection.py current-finalize
+python full_image_collection.py render
+python full_image_collection.py patch
+python -m unittest -v test_full_image_collection.py test_current_image_render.py
+```
+
+Aktueller Prüfstand: **41/41 Tests bestanden** und
+`PASS: 762/762 explicitly confirmed; assets and provenance valid`.
+
+Der vollständige `render`-Lauf ist bestanden: alle 476 Logos des aktuellen Netzes
+werden gezeichnet; Hell, Dunkel sowie beide bildlosen
+Kontrollfassungen umfassen je vier Seiten. Alle 16 Seiten wurden bei 600 dpi
+gerastert und mit SHA-256 im Renderbericht dokumentiert. Der trockene `patch`-Lauf
+ist ebenfalls bestanden: 412 Graphzeilen und 350 dokumentierte Overlays, null
+Schreiboperationen. Eine Datenbankänderung benötigt weiterhin eine separate Freigabe.
+
+Die visuelle Endkontrolle der Hell-/Dunkelfassungen und der bildlosen Kontrollen
+zeigt keine abgeschnittenen Rahmen, Logos außerhalb des Kreisclips oder fehlenden
+Glyphen. Die unveränderten IDs liegen weiterhin lesbar über den Bildmarken.
+
+## Review öffnen
+
+Die bestehende lokale Galerie läuft unter `http://127.0.0.1:8765/`. Falls sie
+neu gestartet werden muss:
+
+```powershell
 python full_image_collection.py review-server --host 127.0.0.1 --port 8765 --no-open
 ```
 
-Die Galerie startet bei 762/762 und Filter `Alle`. Jeder Eintrag trägt zunächst
-`vorläufig: logo` oder `vorläufig: none`. Für eine Einzelkorrektur:
-
-1. Organisation suchen oder nach Land filtern.
-2. Bei einem Logo einen nicht gesperrten Kandidaten anklicken.
-3. `Ausgewähltes Logo bestätigen` oder `none bestätigen` wählen.
-4. Nur diese Zeile wird individuell bestätigt (`provisional: false`).
-
-Den Bulk-Schritt nur wiederholen, wenn wirklich alle späteren Einzeländerungen
-überschrieben werden sollen:
-
-```powershell
-python full_image_collection.py accept-suggestions --opacity 50
-```
-
-## Prüfungen
-
-Aktueller Teststand: **24 Tests bestanden**.
-
-```powershell
-Set-Location E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck
-python -m unittest test_full_image_collection.py
-```
-
-Prüfbögen und Audit neu erzeugen:
-
-```powershell
-python full_image_collection.py audit-sheets
-```
-
-`suggest` erzeugt Vorschläge neu, bestätigt aber nichts. `accept-suggestions`
-übernimmt alle aktuellen Vorschläge und überschreibt spätere Einzelkorrekturen.
-
-## Schlussstrecke
-
-**Am 13. August 2026 gelaufen, auf Anweisung des Benutzers, die Bilder in Knoten
-und Tabelle des Zwischenberichts zu übernehmen:**
-
-```powershell
-python full_image_collection.py finalize   # 343 logo, 419 none
-python full_image_collection.py validate   # PASS: 762/762
-```
-
-1. `finalize` erzeugte 256×256-RGBA-PNGs unter `bilder_full/bilder/<LAND>/<TID>.png`
-   und `final_image_manifest.json`. Die 50 % Deckkraft stecken in der Alphaebene.
-2. `validate` prüfte Format, Abmessungen, radialen Sicherheitsbereich,
-   Checksummen, Reviewnachweis sowie 412 Graphknoten und 350 Overlays.
-
-**Noch nicht gelaufen:**
-
-```powershell
-python full_image_collection.py render
-python full_image_collection.py patch
-```
-
-3. `render` erzeugt alle elf Länder in Hell/Dunkel sowie bildlose Kontrollen
-   und prüft bei 600 dpi. Ruft `netz.cli abb` jetzt mit `--image-paths absolute`
-   auf, weil netz standardmäßig berichtsrelative Pfade schreibt (siehe unten).
-   Die frühere Zusicherung `Bilder im Fragment == Logos im Manifest` ist
-   ersetzt: das gezeichnete Netz ist die strengere Teilmenge und trägt 278 der
-   343 Logos. Geprüft wird stattdessen, dass **jedes** Bild im Fragment ein
-   Manifestasset ist.
-4. `patch` erzeugt nur einen trockenen Property-Patch und Bericht.
-   **Kein Neo4j-Write.** `patch --live` prüft read-only die exakten
-   `id`-Treffer gegen `mit-bestand`.
-
-## Auslieferung in den Zwischenbericht
-
-Die Assets liegen **im Berichtsrepo**, nicht mehr nur hier. Ein gesetztes
-Fragment darf keinen `E:/recherche`-Pfad tragen — es würde nur auf der Maschine
-bauen, die es erzeugt hat.
-
-```powershell
-Set-Location E:\recherche\_neo4j\netz
-python -m netz.cli sync-images       # -> E:\semio\...\zwischenbericht\asset\akteur\<LAND>\<TID>.png
-python -m netz.cli abb          --images-manifest <FINAL_MANIFEST>
-python -m netz.cli tables-grid   --images-manifest <FINAL_MANIFEST>
-python -m netz.cli sync-fragments    # -> ...\zwischenbericht\anhang\akteursnetz-*.tex
-```
-
-- `sync-images` kopiert Logo und `-dark`-Nachbar unter dem **Manifest-TID**,
-  nicht unter der gedruckten ID: Prüfbögen und SHA-256-Liste sind über TID
-  geführt, die gedruckte ID wandert bei jeder Neubelegung des Netzes. Der
-  Schritt ist idempotent und räumt Dateien weg, die das Manifest nicht mehr nennt.
-- Die Fragmente nennen die Bilder als `asset/akteur/<LAND>/<TID>.png`, also so,
-  wie der Bericht seine übrigen Bilder nennt. `semio-logo.sty` löst daraus im
-  Dark-Build selbst die `-dark`-Datei auf.
-- Die Deckkraft im **Diagramm** setzt der Bericht, nicht die Bildprüfung:
-  `\semio@graph@node@image@opacity` in `print/tex/semio-graph.sty`. Bei den 50 %
-  aus der Prüfung lagen Logo und ID im selben 4,55-mm-Kreis übereinander und
-  beide waren unlesbar. Die Prüfung bleibt die Quelle dafür, **welches** Logo
-  erscheint — nicht wie kräftig.
-
-## Deckkraft und Dunkel-auf-Dunkel (2026-08-14)
-
-Zwei Korrekturen an der Druckdarstellung, ausdrücklich vom Benutzer angewiesen,
-beide nur an der Zeichnung/Auslieferung — keine Logoentscheidung, keine
-Kandidatenwahl, kein Quellen- oder Neo4j-Bezug verändert.
-
-**Deckkraft 50 % → 100 %.** `full_asset_review.json` trug `logo_opacity_percent:
-50`; jede Marke mischte sich damit mit dem Seitenhintergrund und erschien in
-Light und Dark unterschiedlich eingefärbt. Kopfwert und alle 762 Zeilen auf 100
-gesetzt, Kandidaten-ID, SHA-256 und `provisional: true` unverändert. Sicherung
-des alten Stands liegt als `full_asset_review.json.bak-opacity50` daneben.
-
-**Dunkel-auf-Dunkel behoben, 75 Logos.** Zwei getrennte Ursachen, ein
-gemeinsamer Befund: bei voller Deckkraft verschwanden manche Marken im
-Dark-Build, weil ihre eigene Farbe zu dunkel gegen den fast schwarzen
-Knoten-Canvas war.
-
-- **Bugfix, 91 Logos:** `crop_mode=safe_contain` erzeugte noch nie eine
-  `-dark`-Datei — die vorhandene Theme-Umfärbung (`tokenise_transparent_
-  neutral_mark`) hätte bei überwiegend neutralen (schwarz/grau) Marken
-  funktioniert, wurde aber nie mit `theme="dark"` aufgerufen. `command_finalize`
-  vergleicht jetzt Light- gegen Dark-Rendering vor jeder Deckkraftanwendung und
-  schreibt die `-dark`-Datei, sobald sie sich unterscheidet — nicht mehr nur
-  bei `neutral_knockout`.
-- **Neuer Pfad, 75 Logos, `dark_backdrop_overrides.json`:** Marken, deren
-  eigene Farbe gesättigt, aber zu dunkel ist (z. B. Navy, Tannengrün) — die
-  Theme-Umfärbung fasst sie absichtlich nicht an, sonst ginge die Markenfarbe
-  verloren. `prepare_light_backdrop_canvas` (`pilot_images.py`) backt
-  stattdessen eine feste helle Kreisscheibe hinter die Marke und färbt nur
-  echte Schwarztöne pixelweise auf das Ink-Token um (`blacken_to_ink`) — jede
-  andere Farbe bleibt exakt wie in der Quelle. Ein Ergebnis für beide Themes,
-  keine `-dark`-Datei nötig. 62 der 75 kamen aus `safe_contain` (dunkel und
-  nicht neutral genug für die alte Umfärbung), 13 aus `neutral_knockout` (der
-  neutrale Teil war schon richtig umgefärbt, ein gesättigter dunkler Rest
-  aber nicht).
-
-Geprüft am gebauten PDF, nicht nur an der Asset-Datei: 75 Logos auf simuliertem
-Light- und Dark-Canvas kontrolliert (alle lesbar, Markenfarbe erhalten),
-anschließend Diagrammknoten UND Tabellenspalte im tatsächlich kompilierten PDF
-stichprobenartig verglichen (`M13`, `U12`, `M15`, `M43`, `G01`, `S02`, `M05`,
-`I03` sowie zwei Bugfix-Fälle) — Farben identisch zwischen Light und Dark, wie
-beabsichtigt. `dark_backdrop_overrides.json` dokumentiert jeden Eintrag mit dem
-gemessenen Grund (Median-Leuchtdichte, Neutralanteil bzw. Farbanteil im
-Dark-Rest). 24 + 9 Tests weiterhin grün.
-
-**Offen, nicht Teil dieser Korrektur:** die Deckkraftfläche hinter der
-Knoten-ID im Diagramm (`\semio@graph@node@label@plate@radius/@opacity` in
-`semio-graph.sty`) deckt bei radius=1.0 den ganzen Knoten ab und dämpft damit
-auch bei kräftigen Marken das Logo insgesamt — ein separater, dem Benutzer
-bereits vorgelegter Zielkonflikt zwischen voller ID-Lesbarkeit und voller
-Markenfarbe, noch ohne Entscheidung.
-
-Vor dieser Schlussstrecke muss der Benutzer ausdrücklich entscheiden, ob die
-vorläufige Gesamtübernahme als Druckfreigabe genügt oder zuerst weitere Einzelfälle
-nachgeprüft werden. Die ursprüngliche Planfassung verlangte Einzelbestätigung; der
-Benutzer hat später die vorläufige Gesamtübernahme angeordnet. Diese Differenz ist
-in `full_asset_review.json` als
-`review_mode: bulk_suggestion_acceptance_provisional` und `provisional: true`
-sichtbar und darf nicht als endgültige Freigabe umgedeutet werden.
-
-## Arbeitsbaum und Fremdänderungen
-
-Der Arbeitsbaum ist nicht sauber. Neben den Bilddateien bestehen weitere Änderungen
-am Akteursnetz, unter anderem Tabellen-/Kantenrendering und
-`kanten_klassifikation.json`. Diese können aus paralleler Arbeit stammen und dürfen
-nicht pauschal zurückgesetzt oder gemeinsam committed werden. Vor einem Commit den
-Scope gezielt auswählen.
-
-## Definition des aktuellen Abschlusses
-
-- 762/762 Entscheidungen vorhanden;
-- 343 `logo`, 419 `none`;
-- 50 % Logo-Deckkraft überall gespeichert;
-- 343 Logoentscheidungen mit Kandidaten-ID und Kandidaten-SHA-256;
-- spätere Einzelkorrektur möglich;
-- 24 Tests grün;
-- kein Neo4j-Write;
-- keine finale Asset-, Render- oder Patchfreigabe behauptet.
-
-## Nachtrag 14.08.2026 – aktuelles 619-Knoten-Netz
-
-Die damalige 762er-Auswahl bleibt unverändert als eingefrorener Transportstand.
-Der aktuelle Semio-Export wurde separat ausgewertet und enthält 619 Knoten:
-541 Organisationen und 78 weiterhin bildlose Projekte.
-
-- 277 Organisationsknoten besitzen bereits ein Logo im aktuellen Bestand.
-- Für die 264 bildlosen Organisationen wurden Domains erneut einzeln geprüft,
-  offizielle Haupt-, Medien-, Marken- und Trägerseiten tiefer durchsucht und
-  browserkomprimierte bzw. webgeschützte Seiten technisch besser erschlossen.
-- Der abschließende read-only Tiefenlauf ergibt 133 neue identitätsgefilterte
-  Vorschläge und 131 `none`-Fälle. Maximal erreichbar nach visueller
-  Bestätigung: 410/541.
-- Von den 131 `none`-Fällen haben 52 noch keine ausreichend bestätigte bzw.
-  freigegebene Organisationsdomain; 79 besitzen eine bestätigte Domain, aber
-  keine sichere, drucklesbare und zulässig belegte Marke.
-- Klare Fehlzuordnungen (u. a. CSTB-Untermarken, UEA-Fotos, BDP-Farbfläche,
-  Google-Play-Grafik, Deutsche-Bahn-Partnerlogo bei Madaster/EPEA) bleiben
-  gesperrt. Empa bleibt wegen der dokumentierten Genehmigungspflicht `none`.
-- Die klickbare, read-only Galerie liegt unter
-  `bilder_full/current_deep_review/index.html`; sie zeigt Hell/Dunkel,
-  Kreisclip, unveränderte ID, Land-/Statusfilter und offizielle Quellen.
-- Der letzte Einzelfall-Dig bestätigte 24 weitere Organisations- oder
-  Trägerdomains. Vier zusätzliche offizielle Dateien wurden als Vorschläge
-  aufgenommen (Madaster CH, Travail & Vie, Toit de Paris, Overtreders W).
-  Der falsche HRK-Re-Audit-Treffer für BTU wurde dauerhaft gesperrt; BTU bleibt
-  wegen der dokumentierten Nutzungsgenehmigung und fehlender freigegebener
-  Datei `none`. Textifloor bleibt wegen nur 124×71 px unter der Mindestkante
-  ebenfalls `none`.
-- Alle 133 neuen Vorschläge sind unbestätigt. Es gab keinen Neo4j-Write und
-  keine Übertragung in `mit-bestand`.
-- Alte Vorschaudateien werden beim Galerie-Neuaufbau entfernt, sodass ein
-  nachträglich verworfener Treffer nicht weiter sichtbar bleibt.
-- 34 Integritäts- und Regressionstests sind grün.
-
-## Nachtrag 14.08.2026 – circle_extend statt Beschnitt der Marke
-
-Im Modus `circle_cover` wurde jede Kachel formatfüllend skaliert und kreisförmig
-beschnitten; bei breiten oder randnahen Marken schnitt das die Wortmarke am
-Kreisrand ab. Bestätigt im gebauten PDF: BOBI Réemploi (FR:M07) verlor beide
-Enden ihrer Wortmarke, Van der Wal (NL:U28/U52) hatte „VAN DER WAL" links und
-rechts angeschnitten.
-
-Neuer Modus `circle_extend`: statt die Marke zu beschneiden, wird sie so weit
-verkleinert, dass sie vollständig in den Kreis passt, und der vorhandene
-Kachel-Hintergrund per Flutfüllungsmaske nach außen verlängert, bis der Kreis
-wieder randlos gefüllt ist. Maßgeblich für den Skalierungsfaktor ist
-ausdrücklich nur die Marke (Schrift/Icon) — der Hintergrund selbst darf nicht
-schrumpfen, nur weil seine Ecken sonst vom Kreis gekappt würden (Nutzervorgabe).
-Kein Beschnittlimit für sehr breite Marken (Nutzerentscheidung); bei 4,55 mm
-Knotendurchmesser ohnehin nicht lesbar, aber die Marke bleibt unversehrt.
-
-Umgesetzt in `pilot_images.py`: `_flood_background_mask` (lokale
-Chebyshev-Toleranz je Nachbarpixel, damit zweifarbige Kacheln wie Van der Wals
-rot-über-gelb funktionieren), `_extend_geometry` (Skalierungsfaktor aus der
-**dichten** Vordergrundmaske, siehe unten), `_edge_fill_line` (Medianfarbe aus
-mehreren Randpixeln statt nur dem nächsten, gegen ausgeblichene Halo-/
-Schlagschattenringe), `_running_median` (glättet die Randfarblinie gegen
-JPEG-Rauschen/Verläufe), `_extend_backdrop_to_canvas` (Resize+Pad),
-`_box_density`/`_dense_foreground` (7×7-Dichtefilter, verwirft vereinzelte
-Halo-Pixel, die sonst den gemessenen Markenradius künstlich aufblähen — ohne
-diesen Filter hätte ein Squircle-App-Icon mit Eckartefakt fälschlich
-`circle_extend` statt des bereits korrekten `circle_cover` ausgelöst).
-`has_flat_opaque_backdrop` zusätzlich verschärft: der 4-Ecken-Pfad verlangt
-jetzt auch ≥85 % Gesamtdeckkraft der Kachel, weil ein dünner dekorativer Rahmen
-mit vier deckenden Ecken, aber zu 72 % transparenter Mitte (DE:N04, „Gate 21")
-sonst fälschlich als deckende Vollkachel durchging und eine fast unsichtbare
-Scheibe erzeugte — dieser eine Fund war der einzige betroffene Fall unter allen
-131 vollflächigen Zeilen, kein systematisches Problem. Neuer permanenter Helfer
-`inner_disc_min_alpha`, sowohl live als Entscheidungsgrundlage als auch als
-dauerhafte Prüfung in `validate_final_manifest` für alle drei vollflächigen
-Modi verankert, damit ein künftiger durchsichtiger Ring sofort auffällt.
-
-`full_image_collection.py`: `validate_final_manifest`-Radiuslimit auf
-`circle_extend` erweitert plus die neue Ringprüfung; `command_finalize`
-erzeugt jetzt auch für `safe_contain` ein Dark-Geschwister, sobald sich Hell-
-und Dunkel-Rendering tatsächlich unterscheiden (vorher nur bei
-`neutral_knockout`) — behebt nebenbei 91 zuvor dunkel-auf-dunkel gerenderte
-Logos aus der vorigen Phase.
-
-Ergebnis nach vollem `finalize` → `validate` (762/762 grün) →
-`sync-images` → Berichtsbau (Hell+Dunkel, `--skip-nx-cache`):
-von den ursprünglich 56 `circle_cover`-Assets wechseln 22 zu `circle_extend`
-(vollständige Marke, kein Beschnitt), 33 bleiben unverändert `circle_cover`
-(bytegleich, keine Marke betroffen), 1 (DE:N04) wechselt durch den
-`has_flat_opaque_backdrop`-Bugfix nach `safe_contain`. Manifestverteilung:
-`{safe_contain: 147, light_backdrop: 75, neutral_knockout: 66,
-circle_extend: 22, circle_cover: 33}`.
-
-Geprüft: Byte-Hash-Vergleich vor/nach `finalize` bestätigt 324 bytegleiche
-Zeilen und genau erklärt jede der übrigen Änderungen; `inner_disc_min_alpha`
-über alle 22 `circle_extend`-Assets ≥250 (kein Ring); Kontaktbogen aller 22
-visuell geprüft; die beiden vom Benutzer genannten Fälle (BOBI/FR:M07,
-Van der Wal/NL:U28) sowie die als korrekt bestätigten Gegenfälle
-(TRAJECT/NL:U49, R-Place/FR:M47) direkt im kompilierten PDF bei 600–1200 dpi
-gerendert und angesehen, Hell und Dunkel — Wortmarken vollständig und
-unbeschnitten. 34 + 9 Tests grün, neuer Test
-`test_wide_tile_is_extended_not_cut` (zweifarbige Kachel mit randständigen
-Marken links und rechts) ergänzt. Logoentscheidungen, Kandidaten, Quellen und
-Neo4j unverändert.
-
-## Nachtrag 14.08.2026 – letzter Quellen- und Vorschlagsaudit im 619er Netz
-
-Der Nutzer verlangte einen weiteren tiefen Lauf mit möglichst hoher sicherer
-Abdeckung. Die 541 Organisationen des aktuellen Netzes blieben die feste
-Grundgesamtheit; die 78 Projekte bleiben bildlos. Der Lauf hat die 264 noch
-bildlosen Organisationen erneut gegen offizielle Organisations-, Träger-, Presse-
-und Medienseiten geprüft und alle verbleibenden Vorschläge in Hell/Dunkel angesehen.
-
-- 39 zusätzliche Organisations- oder Trägerdomains wurden einzeln bestätigt.
-- 157 neue, identitätsgeprüfte Logovorschläge bleiben übrig; 107 Fälle sind `none`.
-- Zusammen mit 277 vorhandenen Logos ergibt das nach Nutzerbestätigung maximal
-  434/541 beziehungsweise 80,2 % Abdeckung.
-- Alle 157 Vorschläge wurden im Quellenkontext und auf den 20 Hell-/Dunkel-
-  Prüfbögen visuell auditiert. Sie bleiben bewusst `confirmed: false` und sind
-  keine stillschweigende Nutzerfreigabe.
-- Entfernt wurden unter anderem Skanska-Projektfotografie, La-Fab-Appkachel,
-  Brussels/EU-Förderzeichen, eine EU-Flagge bei Maison du Réemploi, eine
-  Menükachel bei Matériaux d’Antan sowie Foto-/Webshop-Treffer bei
-  wiederverwendung.ch, B3 Kolb und Saint Emilion Matériaux.
-- Neue exakte offizielle Dateien stammen aus den Marken-/Medienbereichen von DTU,
-  Helsinki, University of Twente und Realdania. Realdania wird reproduzierbar aus
-  dem benannten PNG-Mitglied der offiziellen ZIP-Logopakke geholt.
-- OVAM bleibt `none`: das offizielle Header-Raster unterschreitet die festgelegte
-  128-px-Mindestkante; die übrigen Treffer sind Fotos.
-- Der abschließende Restlauf ergänzte Depuis 1920, Mobius Réemploi, Upcylight und
-  die eindeutig dokumentierte Aalto-Trägeridentität für Havu Järvelä und Markus
-  Saarela. Pierres & Jardins d'Autrefois blieb nach Sichtprüfung `none`, weil nur
-  ein Webseiten-Fotoscreenshot die Mindestgröße bestand.
-- TLS-Abrufe verwenden jetzt explizit das mitgelieferte CA-Bundle. Dadurch werden
-  Zertifikate weiter geprüft, aber lokale Python-CA-Lücken erzeugen keine falschen
-  Negativergebnisse mehr.
-- Dauerhafter Auditnachweis:
-  `bilder_full/current_deep_review/AGENT_VISUAL_AUDIT.md`; auditiertes Manifest
-  SHA-256 `fd5a25beb15fc3e77e5e33f08b712e5a93de9ba9c551c6c1e4e4ae0068e25ef4`.
-- 35 Integritäts- und Regressionstests sind grün. Neo4j-Schreiboperationen: 0.
-
-## Nachtrag 14.08.2026 – weiterer Hunt auf eingebettete Marken
-
-Der Restbestand wurde nochmals auf offizielle Header-Marken untersucht, insbesondere
-auf SVGs, die nicht als eigene Bild-URL vorliegen. Der Sammler kann nun pro geprüftem
-Knoten eine exakte Inline-SVG-Marke aus dem offiziellen Seitenkopf extrahieren. Die
-extrahierten Originalbytes, die offizielle Quellseite und der SHA-256 bleiben im
-Kandidatenmanifest nachvollziehbar; es findet kein Nachzeichnen oder Umfärben statt.
-
-- Zehn neue, visuell geprüfte Vorschläge: B3/Josef Kolb, Madaster/EPEA, UEA,
-  Rothuizen, Rotor, Opalis, FutureBuilt, BDP, Grand Huit und Gate 21 als expliziter
-  Träger des Greater-Copenhagen-CirCoFin-Piloten.
-- Neuer Stand: 277 bestehende Logos + 167 unbestätigte sichere Vorschläge = maximal
-  444/541 Organisationen (82,1 %); 97 bleiben `none`.
-- Die zehn neuen Karten wurden im echten Kreisrender in Hell und Dunkel bei 50 %
-  Logo-Deckkraft kontrolliert. Marke vollständig im Kreis, ID unverändert lesbar.
-- Die Galerie unter `http://127.0.0.1:8766/` wurde auf 21 Prüfbögen aktualisiert.
-- Auditmanifest SHA-256:
-  `011e2f403b74f37e43de0fe52563058528a9e31bf74063ffa8e0aec02d8b0f21`.
-- 35 Integritäts- und Regressionstests grün; Neo4j-Schreiboperationen: 0.
-
-## Nachtrag 15.08.2026 – Bildrechte-Audit
-
-Für alle 453 im aktuellen Netz nutzbaren Logo-Datensätze (277 vorhandene Assets
-und 176 Vorschläge) wurde ein konservativer Rechte-Datensatz erzeugt. Jeder
-Datensatz enthält die exakte Bildquelle, einen Rechtehinweis, einen Status, den
-Rechte-/Kontaktweg und die druckbezogene Freigabegrenze.
-
-- 453/453 Datensätze vollständig dokumentiert; keine fehlenden Quellen oder
-  Rechtehinweise.
-- 1 bedingt lizenzierter Fall: RISE unter CC BY-SA 4.0 mit Namensnennung,
-  Lizenzlink, Änderungshinweis und Share-Alike-Prüfung.
-- 451 Fälle sind bis zu einer schriftlichen Nutzungs- oder Markenfreigabe für den
-  konkreten Hell-/Dunkel-Kreisrender gesperrt.
-- 1 Fall (Region Hovedstaden, PD-textlogo) benötigt noch eine gesonderte
-  Markenrechtsprüfung.
-- Explizite Restriktionen wurden unter anderem für Buildwise, BTU, Skanska,
-  Helsinki und Stadt Wien dokumentiert. Besonders wichtig: Helsinkis Vorgaben
-  untersagen Modifikation und Teilintensität; die 50-%-Vorschau ist daher ohne
-  Ausnahmegenehmigung nicht markenkonform.
-- Es wurden keine Organisationen kontaktiert und keine Genehmigungen fingiert.
-  Wird eine Erlaubnis verweigert oder nicht erteilt, muss ausschließlich der
-  betroffene Knoten auf `none` gesetzt werden.
-
-Artefakte:
-
-- `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.md`
-- `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.json`
-- `bilder_full/CURRENT_IMAGE_RIGHTS_AUDIT.csv`
-- Audit-SHA-256:
-  `f99c83f89ca01e0df72ae53d50c18a788e050c1240ca4c35087c946a027d788f`
-- 36 Integritäts- und Regressionstests grün; Neo4j-Schreiboperationen: 0.
-
-## Nachtrag 15.08.2026 – zusätzlicher offizieller Quellenlauf
-
-Die verbleibenden `none`-Fälle wurden erneut einzeln auf versteckte Header-SVGs,
-offizielle Presse-/Markenpakete und – nur bei öffentlichen Einrichtungen –
-lizenzierte Wikimedia-Dateien geprüft. Dabei kamen neun weitere, visuell geprüfte
-Vorschläge hinzu:
-
-- La Fab Bordeaux, Les Chutes de la Dore und Synéthic aus ihren offiziellen
-  Webauftritten;
-- BTU Cottbus–Senftenberg, RISE und Region Hovedstaden aus eindeutig zugeordneten,
-  lizenzierten Wikimedia-Dateien;
-- Skanska Finland und die Stadt-Wien-Trägermarke für VIE.CYCLE aus exakten
-  Inline-SVGs der offiziellen Seiten;
-- Buildwise aus dem offiziellen Presse-ZIP, einschließlich der dort bereitgestellten
-  Negativvariante für das dunkle Theme.
-
-Neuer Stand: 277 bestehende Logos + 176 unbestätigte sichere Vorschläge = maximal
-453/541 Organisationen (83,7 %); 88 bleiben nach diesem Lauf `none`. Alle neun neuen
-Karten wurden in Hell und Dunkel bei 50 % Logo-Deckkraft im echten Kreisrender
-kontrolliert. Es wurde nichts automatisch bestätigt und `mit-bestand` nicht verändert.
-
-- Galerie: `http://127.0.0.1:8766/` (22 Prüfbögen)
-- Auditmanifest SHA-256:
-  `20280b3b0ddd6e2d8e3f8cf0479864acccefd7a38ed1ea550274677e9c4d5217`
-- 35 Integritäts- und Regressionstests grün; Neo4j-Schreiboperationen: 0.
+Eine spätere Einzelentscheidung ersetzt nur den betreffenden Knoten. Den Bulk-Befehl
+`accept-suggestions` nur erneut ausführen, wenn alle Einzelkorrekturen bewusst wieder
+überschrieben werden sollen.

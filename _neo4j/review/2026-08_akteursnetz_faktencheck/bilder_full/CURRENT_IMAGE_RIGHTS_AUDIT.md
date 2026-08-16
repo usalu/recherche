@@ -2,12 +2,12 @@
 
 ## Outcome
 
-Exact source provenance and a rights decision are now present for all **453** currently usable logo records. This does **not** mean that all logos are cleared for publication: an official download is not a reuse licence.
+Exact source provenance and a rights decision are now present for all **476** currently usable logo records. This does **not** mean that all logos are cleared for publication: an official download is not a reuse licence.
 
-- Existing logo assets: **277**
-- Pending logo suggestions: **176**
+- Existing logo assets: **460**
+- Pending logo suggestions: **16**
 - Conditional licensed use: **1**
-- Blocked pending written permission: **451**
+- Blocked pending written permission: **474**
 - Blocked pending trademark/legal review: **1**
 - Missing source URLs, rights notes or contacts: **0**
 - External permission requests sent: **0**

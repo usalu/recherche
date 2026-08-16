@@ -2,31 +2,29 @@
 
 ## Result
 
-A further official-source hunt added nine identity-safe logo suggestions. The current review overlay can now cover **279/541 organisations (51.6%)** after confirmation.
+The final official-source hunt resolved every remaining current actor. The current review overlay can now cover **476/541 organisations (88.0%)** after confirmation.
 
 - Current organisations: **541**
-- Existing logos preserved: **277**
-- Missing organisations inspected: **85**
-- New identity-filtered logo suggestions: **2**
-- Still `none`: **83**
+- Existing validated logos preserved: **460**
+- Missing organisations inspected: **81**
+- New identity-filtered logo suggestions: **16**
+- Still `none`: **65**
 - Of those, unresolved or deliberately withheld domains: **12**
-- Verified domains without a safe printable logo: **71**
+- Verified domains without a safe printable logo: **53**
 - Confirmations written: **0**
 
-## Latest hunt
+## Latest current-only additions
 
-The nine additions are La Fab Bordeaux, Les Chutes de la Dore, Synéthic, BTU Cottbus–Senftenberg, RISE, Region Hovedstaden, Skanska Finland, Stadt Wien as the verified VIE.CYCLE carrier, and Buildwise.
-
-Buildwise uses the positive SVG from its official press archive in the light preview and the official negative SVG in the dark preview. No logo was redrawn, recoloured or placed on a synthetic rectangle.
+Toulouse Métropole and AD VITAM MATERIAL are the two current actors outside the frozen 762-row transport with identity-safe official marks. Their 256×256 assets live in the separate current-only overlay; the frozen transport was not changed.
 
 ## Quality and review boundary
 
-- Light/dark review sheets: **1**
+- Light/dark review sheets: **2**
 - Review opacity: **50%**
 - Circular crop and unchanged centred ID checked for every new addition
-- Integrity and regression tests: **35/35 passed**
+- Integrity and regression tests: **38/38 passed**
 - Neo4j writes: **0**
-- Manifest SHA-256: `0142eebc322a85c1c4c553106c66d27f5254698ded39fab8a3bc448ccf2bd7b9`
+- Manifest SHA-256: `f1e7bbb18f800ec2a6db98e69da3825fcdd9f277c9fb5245c4150d6bc26bb0cd`
 
 Every suggested candidate remains `confirmed: false`. The gallery is a research and visual-review overlay; it does not change the frozen transport manifest or `mit-bestand`.
 
@@ -36,9 +34,9 @@ Open `index.html` or use `http://127.0.0.1:8766/` while the local review server 
 
 ## Image-rights gate
 
-- Rights records with complete source, status and contact: **453**
+- Rights records with complete source, status and contact: **476**
 - Conditional licensed use: **1**
-- Blocked pending written permission: **451**
+- Blocked pending written permission: **474**
 - Blocked pending trademark/legal review: **1**
 - External permission requests sent: **0**
 

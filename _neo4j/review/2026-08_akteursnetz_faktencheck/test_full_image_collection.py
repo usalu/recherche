@@ -41,10 +41,10 @@ class FullImageCollectionTests(unittest.TestCase):
         self.assertEqual(current["network_nodes"], 619)
         self.assertEqual(current["organisation_nodes"], 541)
         self.assertEqual(current["project_nodes"], 78)
-        self.assertEqual(current["logo_nodes"], 277)
-        self.assertEqual(current["none_nodes"], 264)
-        self.assertEqual(len(deep["nodes"]), 264)
-        self.assertEqual(sum(deep["counts"].values()), 264)
+        self.assertEqual(current["logo_nodes"] + current["none_nodes"], 541)
+        self.assertGreaterEqual(current["logo_nodes"], 460)
+        self.assertEqual(len(deep["nodes"]), current["none_nodes"])
+        self.assertEqual(sum(deep["counts"].values()), current["none_nodes"])
         self.assertTrue(all(row["confirmed"] is False for row in deep["nodes"]))
         gallery = ROOT / "current_deep_review" / "index.html"
         self.assertTrue(gallery.is_file())
@@ -64,17 +64,69 @@ class FullImageCollectionTests(unittest.TestCase):
             self.assertTrue(candidate["license_note"], row["key"])
 
         audit = load("CURRENT_IMAGE_RIGHTS_AUDIT.json")
-        self.assertEqual(audit["counts"]["rows"], 453)
-        self.assertEqual(len(audit["nodes"]), 453)
-        self.assertEqual(len({row["eid"] for row in audit["nodes"]}), 453)
+        current = load("CURRENT_SCOPE_COVERAGE.json")
+        expected = current["logo_nodes"] + deep["counts"]["logo"]
+        self.assertEqual(audit["counts"]["rows"], expected)
+        self.assertEqual(len(audit["nodes"]), expected)
+        self.assertEqual(len({row["eid"] for row in audit["nodes"]}), expected)
         self.assertTrue(all(row["source_url"] for row in audit["nodes"]))
         self.assertTrue(all(row["rights_source_url"] for row in audit["nodes"]))
         self.assertTrue(all(row["license_note"] for row in audit["nodes"]))
         self.assertTrue(all(row["print_clearance"] != "cleared" for row in audit["nodes"]))
-        self.assertEqual(sum(audit["counts"]["print_clearance"].values()), 453)
+        self.assertEqual(sum(audit["counts"]["print_clearance"].values()), expected)
+
+    def test_current_541_identity_audit_is_complete_and_assets_are_bounded(self):
+        audit = load("CURRENT_LOGO_IDENTITY_AUDIT.json")
+        self.assertEqual(audit["scope"], {
+            "network_nodes": 619,
+            "organisation_nodes": 541,
+            "project_nodes_image_free": 78,
+        })
+        self.assertEqual(len(audit["nodes"]), 541)
+        self.assertEqual(len({row["eid"] for row in audit["nodes"]}), 541)
+        self.assertEqual(sum(audit["counts"].values()), 541)
+        self.assertEqual(audit["open_identity_reviews"], 0)
+        self.assertTrue(all(row["result"] in {"logo", "none"} for row in audit["nodes"]))
+        self.assertTrue(all(row["reason"] for row in audit["nodes"]))
+        gallery = ROOT / "CURRENT_LOGO_IDENTITY_AUDIT.html"
+        self.assertTrue(gallery.is_file())
+        gallery_text = gallery.read_text(encoding="utf-8")
+        self.assertIn("541 Organisationen", gallery_text)
+        self.assertEqual(gallery_text.count("<article "), 541)
+        for row in audit["nodes"]:
+            if row["result"] == "none":
+                self.assertIsNone(row["asset_path"])
+                continue
+            path = ROOT / row["asset_path"]
+            self.assertTrue(path.is_file(), row["key"])
+            with Image.open(path) as image:
+                self.assertEqual((image.format, image.mode, image.size),
+                                 ("PNG", "RGBA", (256, 256)), row["key"])
+                self.assertLessEqual(pilot.alpha_max_radius(image.convert("RGBA")),
+                                     pilot.FINAL_SIZE / 2 + 0.75, row["key"])
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),
+                             row["asset_sha256"], row["key"])
+            self.assertTrue(row["source_url"], row["key"])
+            self.assertTrue(row["rights_status"], row["key"])
+
+    def test_last_hunt_exact_marks_and_wrong_assets(self):
+        final = {row["key"]: row for row in load("final_image_manifest.json")["nodes"]}
+        expected = {
+            "DE:U13": "dare-gmbh.de",
+            "BE:M18": "hofman.be",
+            "BE:M27": "mvvafbraak.be",
+            "CH:U22": "srzh.ch",
+            "FR:X01": "raedificare.com/wp-content/uploads/2026/04/logo.png",
+            "FR:M20": "tailleurdepierre-bretagne.fr/wp-content/uploads/2020/10/logo_grayo2.png",
+        }
+        for key, source in expected.items():
+            self.assertEqual(final[key]["result"], "logo", key)
+            self.assertIn(source.lower(), final[key]["source_url"].lower(), key)
+        for key in ("GB:M09", "BE:S02", "BE:S03"):
+            self.assertEqual(final[key]["result"], "none", key)
 
     def test_last_deep_dig_uses_only_verified_marks(self):
-        deep = {row["key"]: row for row in load("current_deep_review/manifest.json")["nodes"]}
+        final = {row["key"]: row for row in load("final_image_manifest.json")["nodes"]}
         expected = {
             "CH:S03": "Madaster-BrandmarkLogo-RGB.png",
             "FR:O05": "e755c5_7e60158d97e14b94a7e7ccdbb5ce1022~mv2.png",
@@ -82,21 +134,13 @@ class FullImageCollectionTests(unittest.TestCase):
             "NL:U38": "d312e0_0ba87a49968b437c961f72de0a561fb5~mv2.png",
         }
         for key, source_name in expected.items():
-            row = deep[key]
-            self.assertEqual(row["suggested_result"], "logo")
-            candidate = next(c for c in row["candidates"]
-                             if c["id"] == row["suggested_candidate_id"])
-            self.assertTrue(candidate["url"].endswith(source_name), key)
-            if candidate["format"] != "svg":
-                self.assertGreaterEqual(min(candidate["width"], candidate["height"]), 128)
-        self.assertEqual(deep["DE:F01"]["suggested_result"], "logo")
-        btu = next(c for c in deep["DE:F01"]["candidates"]
-                   if c["id"] == deep["DE:F01"]["suggested_candidate_id"])
-        self.assertIn("Brandenburgische_Technische_Universit", btu["url"])
-        self.assertEqual(btu["format"], "svg")
+            row = final[key]
+            self.assertEqual(row["result"], "logo")
+            self.assertTrue(row["source_url"].endswith(source_name), key)
+        self.assertIn("Brandenburgische_Technische_Universit", final["DE:F01"]["source_url"])
 
     def test_final_official_media_pass_keeps_exact_sources_and_rejects_weak_substitutes(self):
-        deep = {row["key"]: row for row in load("current_deep_review/manifest.json")["nodes"]}
+        final = {row["key"]: row for row in load("final_image_manifest.json")["nodes"]}
         expected_sources = {
             "DK:F01": "media.adm.dtu.dk/designguide/",
             "FI:I02": "makasiini.hel.fi/helsinki-logos/",
@@ -130,17 +174,13 @@ class FullImageCollectionTests(unittest.TestCase):
             "BE:F02": "buildwise.zip#svg/buildwise_verticaal_1.svg",
         }
         for key, source_part in expected_sources.items():
-            row = deep[key]
-            self.assertEqual(row["suggested_result"], "logo", key)
-            candidate = next(c for c in row["candidates"]
-                             if c["id"] == row["suggested_candidate_id"])
-            self.assertIn(source_part, candidate["url"].lower(), key)
-            if candidate["format"] != "svg":
-                self.assertGreaterEqual(min(candidate["width"], candidate["height"]), 128, key)
-        buildwise = next(c for c in deep["BE:F02"]["candidates"]
-                         if c["id"] == deep["BE:F02"]["suggested_candidate_id"])
-        self.assertTrue(buildwise["dark_preview_path"].endswith("_dark.png"))
-        self.assertIn("_neg.svg", buildwise["dark_final_url"])
+            row = final[key]
+            self.assertEqual(row["result"], "logo", key)
+            self.assertIn(source_part, row["source_url"].lower(), key)
+        buildwise = final["BE:F02"]
+        self.assertTrue(buildwise["dark_asset_path"].endswith("-dark.png"))
+        self.assertIn("_neg.svg", buildwise["dark_source_url"])
+        deep = {row["key"]: row for row in load("current_deep_review/manifest.json")["nodes"]}
         for key in ("BE:I04", "BE:G01", "CH:M13",
                     "FR:M42", "FR:M53"):
             self.assertEqual(deep[key]["suggested_result"], "none", key)
@@ -369,15 +409,36 @@ class FullImageCollectionTests(unittest.TestCase):
 
     def test_image_handoff_documents_provisional_boundary(self):
         handoff = (ROOT.parent / "HANDOFF_BILDER_FULL.md").read_text(encoding="utf-8")
-        self.assertIn("343 `logo`, 419 `none`", handoff)
-        self.assertIn("50 % Logo-Deckkraft", handoff)
-        self.assertIn("kein Neo4j-Write", handoff)
-        # finalize/validate sind am 13.08.2026 gelaufen, render/patch nicht.
-        # Geprueft wird deshalb nicht mehr eine Ueberschrift, sondern dass die
-        # Grenze selbst dokumentiert bleibt: was noch aussteht und dass die
-        # Gesamtuebernahme vorlaeufig ist.
-        self.assertIn("**noch nicht gelaufen:**", handoff.lower())
-        self.assertIn("bulk_suggestion_acceptance_provisional", handoff)
+        self.assertIn("| `logo` | 525 |", handoff)
+        self.assertIn("| korrekte offizielle Logo-Ergebnisse | 476 |", handoff)
+        self.assertIn("| begründete `none`-Ergebnisse | 65 |", handoff)
+        self.assertIn("| Deckkraft | 50 % |", handoff)
+        self.assertIn("keinen Neo4j-Write", handoff)
+        self.assertIn("trockene `patch`-Lauf", handoff)
+        self.assertIn("412 Graphzeilen und 350 dokumentierte Overlays", handoff)
+        self.assertIn("vollständige `render`-Lauf ist bestanden", handoff)
+        self.assertIn("Alle 16 Seiten wurden bei 600 dpi", handoff)
+        self.assertIn("41/41 Tests bestanden", handoff)
+        self.assertIn("schriftliche Erlaubnis erforderlich | 474", handoff)
+
+    def test_completed_render_report_covers_all_variants(self):
+        report = json.loads((ROOT / "render" / "render_report.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["result"], "PASS")
+        self.assertEqual(report["logo_count"], 476)
+        self.assertEqual(report["countries"], list(collection.COUNTRY_ORDER))
+        self.assertEqual(set(report["renders"]), {
+            "images_light", "images_dark", "control_light", "control_dark",
+        })
+        self.assertTrue(all(item["page_count"] == 4 for item in report["renders"].values()))
+        pages = [page for item in report["renders"].values() for page in item["pages"]]
+        self.assertEqual(len(pages), 16)
+        self.assertTrue(all(len(page["sha256"]) == 64 for page in pages))
+        for item in report["renders"].values():
+            self.assertTrue((ROOT / item["pdf"]).is_file())
+        for page in pages:
+            path = ROOT / page["png"]
+            self.assertTrue(path.is_file())
+            self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), page["sha256"])
 
     def test_review_state_blocks_rejected_candidates(self):
         state = collection.review_state()
