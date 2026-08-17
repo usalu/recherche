@@ -972,6 +972,47 @@ def apply_domain_overrides(_args):
     print(f"applied {sum(o.get('key') in by_key for o in overrides)} verified domain overrides")
 
 
+def current_graph_render_facts(rows):
+    """eid -> {printed_id, state} exactly as the current build draws it.
+
+    Used by the identity gallery so a reviewer sees the same node the
+    diagram prints -- not a re-derived approximation. The live network
+    renumbers `tid` relative to the frozen 762-row transport (Bellastock
+    prints as N02, its manifest row still says N02 too in this case, but
+    several others drift -- Houtenplaten M18 vs manifest M19, Nomol U13 vs
+    manifest U17), so the gallery's own `row["tid"]` cannot be trusted for
+    display; only `net.tid[eid]` matches the printed page.
+
+    `load_network()` reads only local export/review JSON (see its body in
+    netz/cli.py) -- no Neo4j connection, no write, same as the read-only
+    `current_scope_coverage` command already calls it for. `node_role` covers
+    every node (organisation or project, logo or none) via its eid, which is
+    why this is used instead of grepping the generated .tex fragment for
+    `image=` lines -- that would only reveal facts for the 476 logo rows and
+    leave the 65 `none` rows with no printed state or ID at all.
+
+    Returns {} (not raises) if the export cannot be loaded, so a reviewer
+    still gets a gallery -- degraded to the manifest's own tid and a
+    generic outline -- instead of no gallery at all.
+    """
+    try:
+        sys.path.insert(0, str(NETZ))
+        from netz.cli import load_network
+        from netz.model.variants import node_role
+        net = load_network()
+    except Exception as exc:  # pragma: no cover - defensive, reported not raised
+        print(f"warning: could not load the live network for the identity gallery ({exc}); "
+              f"falling back to manifest tids and a generic outline")
+        return {}
+    facts = {}
+    for row in rows:
+        eid = row.get("eid")
+        if not eid or eid not in net.tid:
+            continue
+        facts[row["key"]] = {"printed_id": net.tid[eid], "state": node_role(net, eid).state or "plain"}
+    return facts
+
+
 def current_scope_coverage(_args):
     """Report image coverage for the current 619-node / 541-actor net."""
     sys.path.insert(0, str(NETZ))
@@ -2403,38 +2444,155 @@ def command_current_finalize(_args):
         f"Spreadsheet-friendly audit: `{CURRENT_IDENTITY_CSV.name}`",
     ]
     CURRENT_IDENTITY_REPORT.write_text("\n".join(report) + "\n", encoding="utf-8")
+    # eid -> {printed_id, state} exactly as the current build's diagram draws
+    # it (see current_graph_render_facts' docstring for why this has to come
+    # from the live network rather than the manifest's own, possibly
+    # renumbered, tid).
+    graph_facts = current_graph_render_facts(rows)
+    matched_live = sum(1 for row in rows if row["key"] in graph_facts)
+    fallback_note = "" if matched_live else " · Hinweis: Live-Netz nicht geladen, zeige Manifest-IDs"
+
     cards = []
     for row in rows:
-        source = row.get("official_url") or row.get("source_url") or ""
-        source_link = (f'<a href="{html.escape(source, quote=True)}" target="_blank" '
-                       f'rel="noreferrer">offizielle Quelle öffnen</a>' if source else
-                       "keine veröffentlichbare Domain")
-        if row["result"] == "logo":
-            light = html.escape(row["asset_path"], quote=True)
-            dark = html.escape(row.get("dark_asset_path") or row["asset_path"], quote=True)
-            previews = (
-                f'<div class="themes"><div class="node light"><img src="{light}"><b>{html.escape(row["tid"])}</b></div>'
-                f'<div class="node dark"><img src="{dark}"><b>{html.escape(row["tid"])}</b></div></div>'
+        node_facts = graph_facts.get(row["key"]) or {"printed_id": row["tid"], "state": "plain"}
+        printed_id = html.escape(node_facts["printed_id"])
+        state = node_facts["state"]
+        node_htmls = []
+        for theme in ("light", "dark"):
+            if row["result"] == "logo":
+                asset = row["asset_path"] if theme == "light" else (row.get("dark_asset_path") or row["asset_path"])
+                mark = f'<img class="mark" src="{html.escape(asset, quote=True)}" alt="">'
+                plate = '<div class="plate"></div>'
+            else:
+                mark = plate = ""
+            node_htmls.append(
+                f'<div class="node {theme} state-{state}"><div class="disc">{mark}{plate}'
+                f'<div class="id">{printed_id}</div></div>'
+                f'<svg class="ring" viewBox="0 0 1 1"><circle cx=".5" cy=".5" r=".4709"/></svg></div>'
             )
-        else:
-            previews = '<div class="none">none — bestehender ID-Knoten bleibt unverändert</div>'
+        themes = f'<div class="themes">{"".join(node_htmls)}</div>'
+
+        links = []
+        if row.get("source_url"):
+            links.append(f'<a href="{html.escape(row["source_url"], quote=True)}" target="_blank" '
+                         f'rel="noreferrer">Quelldatei</a>')
+        if row.get("official_url"):
+            links.append(f'<a href="{html.escape(row["official_url"], quote=True)}" target="_blank" '
+                         f'rel="noreferrer">offizielle Seite</a>')
+        link_line = " · ".join(links) if links else "keine Quelle hinterlegt"
+        if row["result"] != "logo" and row.get("reason"):
+            link_line += f'<br><span class="reason">{html.escape(row["reason"])}</span>'
+
         search = html.escape((row["key"] + " " + row["name"]).lower(), quote=True)
+        mode = row.get("crop_mode") or ""
+        key_attr = html.escape(row["key"], quote=True)
         cards.append(
             f'<article data-cc="{html.escape(row["cc"])}" data-result="{row["result"]}" '
-            f'data-search="{search}"><h2>{html.escape(row["cc"] + ":" + row["tid"])} · '
-            f'{html.escape(row["name"])}</h2>{previews}<p><strong>{row["result"]}</strong> · '
-            f'{html.escape(row["identity_review_status"])}</p><p>{source_link}</p>'
-            f'<p class="rights">Rechte: {html.escape(row.get("print_clearance") or "nicht anwendbar")}</p></article>'
+            f'data-state="{state}" data-mode="{html.escape(mode)}" data-search="{search}">'
+            f'<h2>{html.escape(row["key"])} · {html.escape(row["name"])}</h2>'
+            f'{themes}'
+            f'<p class="links">{link_line}</p>'
+            f'<label class="seen"><input type="checkbox" data-review="{key_attr}"> angesehen</label>'
+            f'</article>'
         )
+
     country_options = "".join(f'<option>{cc}</option>' for cc in COUNTRY_ORDER)
+    mode_options = "".join(f'<option>{m}</option>' for m in
+                           sorted({row.get("crop_mode") for row in rows if row.get("crop_mode")}))
+
+    # CSS reproduces print/tex/semio-graph.sty's node exactly, proportion for
+    # proportion, so a reviewer judges the same circle the report prints, not
+    # an approximation: diameter <-> \semio@graph@node@radius*2 (4.55mm),
+    # contour <-> \semio@stroke@hairline (0.75pt, ratio .0582 -- plain,
+    # attested AND hypo all draw at hairline width; only the never-imaged
+    # `focal`/project state thickens it), label <-> \semio@graph@label@size
+    # (5.2pt, ratio .403), the translucent plate <-> node@label@plate@radius
+    # 1.0 / @opacity 0.60 (always canvas-tinted, independent of the node's
+    # own fill -- that is what dims a strong mark under the ID). Colour
+    # values from print/tex/semio-tokens.sty, cross-checked by sampling the
+    # actually built PDF (panel measured #efebdd light / #0b1c20 dark, within
+    # antialiasing of the #ebe8d9/#0c1c21 tokens below).
+    node_css = """
+.themes{display:flex;gap:14px;justify-content:center;margin:10px 0}
+.node{position:relative;width:var(--d);height:var(--d);flex:0 0 auto;border-radius:50%}
+.node.light{--canvas:#f0ecdd;--window:#ebe8d9;--border-normal:#7b827d;--border-emph:#001117;--text-normal:#7b827d;--fg:#001117}
+.node.dark{--canvas:#0c1c21;--window:#07181d;--border-normal:#7b827d;--border-emph:#f7f3e3;--text-normal:#7b827d;--fg:#f7f3e3}
+.disc{position:absolute;inset:0;border-radius:50%;overflow:hidden;background:var(--canvas)}
+.node.state-attested .disc{background:var(--window)}
+.mark{position:absolute;inset:0;width:100%;height:100%}
+.plate{position:absolute;inset:0;background:var(--canvas);opacity:.6}
+.id{position:absolute;inset:0;display:grid;place-items:center;font:calc(var(--d)*.403)/1.04 "Share Tech Mono",ui-monospace,monospace;color:var(--text-normal);letter-spacing:-.02em}
+.node.state-attested .id{color:var(--fg)}
+.ring{position:absolute;inset:0;width:100%;height:100%;fill:none;pointer-events:none}
+.ring circle{stroke:var(--border-normal);stroke-width:.0582}
+.node.state-attested .ring circle{stroke:var(--border-emph)}
+.node.state-hypo .ring circle{stroke-dasharray:.175 .116}
+"""
+    gallery_js = """
+const cards=[...document.querySelectorAll('article')];
+const STORE='identity-gallery:';
+function updateSeen(){
+  document.querySelector('#seenCount').textContent =
+    document.querySelectorAll('[data-review]:checked').length;
+}
+for(const box of document.querySelectorAll('[data-review]')){
+  box.checked = localStorage.getItem(STORE+box.dataset.review)==='1';
+  box.addEventListener('change', ()=>{
+    localStorage.setItem(STORE+box.dataset.review, box.checked?'1':'0');
+    updateSeen();
+  });
+}
+function filter(){
+  const q=document.querySelector('#q').value.toLowerCase();
+  const cc=document.querySelector('#cc').value;
+  const r=document.querySelector('#result').value;
+  const st=document.querySelector('#state').value;
+  const md=document.querySelector('#mode').value;
+  for(const c of cards){
+    const hide = (q && !c.dataset.search.includes(q))
+      || (cc && c.dataset.cc!==cc)
+      || (r && c.dataset.result!==r)
+      || (st && c.dataset.state!==st)
+      || (md && c.dataset.mode!==md);
+    c.classList.toggle('hidden', Boolean(hide));
+  }
+}
+for(const e of document.querySelectorAll('input,select')) e.addEventListener('input', filter);
+filter(); updateSeen();
+"""
     page_html = f'''<!doctype html><html lang="de"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Aktuelle 541 Logo-Prüfung</title>
 <style>
-body{{margin:0;background:#f7f3e3;color:#001117;font:15px system-ui,sans-serif}}header{{position:sticky;top:0;z-index:3;padding:16px 22px;background:#f7f3e3ee;backdrop-filter:blur(12px);border-bottom:1px solid #aaa}}h1{{margin:0 0 6px;font-size:23px}}.summary{{margin:0 0 10px}}input,select{{font:inherit;padding:8px;margin-right:8px;border:1px solid #8d918b;border-radius:8px;background:white}}main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;padding:16px}}article{{background:#fffdf4;border:1px solid #bbb6a7;border-radius:14px;padding:13px;min-height:235px}}h2{{font-size:16px;min-height:40px;margin:0 0 8px}}.themes{{display:flex;gap:12px;justify-content:center}}.node{{position:relative;width:104px;height:104px;border-radius:50%;overflow:hidden;box-sizing:border-box}}.node img{{position:absolute;inset:0;width:100%;height:100%}}.node b{{position:absolute;inset:0;display:grid;place-items:center;font-size:17px;-webkit-text-stroke:2px white;paint-order:stroke fill}}.light{{background:#d8d2c0;border:3px solid #001117}}.light b{{color:#001117}}.dark{{background:#344b50;border:3px solid white}}.dark b{{color:white;-webkit-text-stroke-color:#001117}}.none{{height:104px;border:1px dashed #92978f;border-radius:52px;display:grid;place-items:center;text-align:center;padding:0 14px;color:#59666a}}p{{margin:8px 0}}a{{color:#006b73}}.rights{{font-size:12px;color:#536266}}.hidden{{display:none}}
-</style></head><body><header><h1>Aktuelles Akteursnetz — vollständige Logo-Prüfung</h1>
-<p class="summary">619 Knoten · 541 Organisationen · {counts['logo']} Logo · {counts['none']} none · 78 bildlose Projekte · 50 % Deckkraft · 0 offene Identitätsprüfungen</p>
-<input id="q" type="search" placeholder="Name oder ID"><select id="cc"><option value="">alle Länder</option>{country_options}</select><select id="result"><option value="">logo + none</option><option>logo</option><option>none</option></select></header>
-<main>{''.join(cards)}</main><script>const cards=[...document.querySelectorAll('article')];function f(){{const q=document.querySelector('#q').value.toLowerCase(),cc=document.querySelector('#cc').value,r=document.querySelector('#result').value;for(const c of cards)c.classList.toggle('hidden',Boolean((q&&!c.dataset.search.includes(q))||(cc&&c.dataset.cc!==cc)||(r&&c.dataset.result!==r)));}}for(const e of document.querySelectorAll('input,select'))e.addEventListener('input',f);</script></body></html>'''
+:root{{--d:118px}}
+body{{margin:0;background:#f7f3e3;color:#001117;font:15px system-ui,sans-serif}}
+header{{position:sticky;top:0;z-index:3;padding:16px 22px;background:#f7f3e3ee;backdrop-filter:blur(12px);border-bottom:1px solid #aaa}}
+h1{{margin:0 0 6px;font-size:23px}}.summary{{margin:0 0 10px}}.progress{{margin:0;font-size:13px;color:#536266}}
+.filters{{display:flex;gap:8px;flex-wrap:wrap}}
+input,select{{font:inherit;padding:8px;border:1px solid #8d918b;border-radius:8px;background:white}}
+main{{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;padding:16px}}
+article{{background:#fffdf4;border:1px solid #bbb6a7;border-radius:14px;padding:13px;min-height:260px}}
+h2{{font-size:15px;min-height:36px;margin:0 0 4px}}
+{node_css}
+.links{{margin:8px 0 4px;font-size:13px}}a{{color:#006b73}}
+.reason{{font-size:12px;color:#71685a}}
+.seen{{display:flex;align-items:center;gap:6px;font-size:12px;color:#536266}}
+.hidden{{display:none}}
+</style></head><body><header>
+<h1>Aktuelles Akteursnetz — vollständige Logo-Prüfung</h1>
+<p class="summary">619 Knoten · 541 Organisationen · {counts['logo']} Logo · {counts['none']} none · 78 bildlose Projekte · '''\
+f'''{opacity} % Deckkraft · 0 offene Identitätsprüfungen{fallback_note}</p>
+<div class="filters">
+<input id="q" type="search" placeholder="Name oder ID">
+<select id="cc"><option value="">alle Länder</option>{country_options}</select>
+<select id="result"><option value="">logo + none</option><option>logo</option><option>none</option></select>
+<select id="state"><option value="">alle Zustände</option><option value="plain">plain</option><option value="attested">attested</option><option value="hypo">hypo</option></select>
+<select id="mode"><option value="">alle Darstellungsmodi</option>{mode_options}</select>
+</div>
+<p class="progress"><span id="seenCount">0</span> von 541 angesehen</p>
+</header>
+<main>{''.join(cards)}</main>
+<script>{gallery_js}</script>
+</body></html>'''
     CURRENT_IDENTITY_HTML.write_text(page_html, encoding="utf-8")
     print(f"PASS: current 619-node audit resolved 541 organisations: {dict(counts)}; projects none=78")
 

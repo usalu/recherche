@@ -82,7 +82,14 @@ USER_AGENT = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "Semio-actor-network-image-review/1.0")
 MAX_DOWNLOAD = 12 * 1024 * 1024
 FINAL_SIZE = 256
-SAFE_RADIUS = 119.0  # 93% of the 128px node radius
+# 108, not 119: the printed contour ring is drawn CENTRED at r=0.4709*d with
+# stroke-width 0.0582*d (semio-graph.sty's node radius/hairline), so its
+# INNER edge sits at (0.4709-0.0291)*256 = 113.1px, not at the 128px canvas
+# edge. A mark scaled all the way to 119 ends up partly UNDER the ring --
+# invisible on wide wordmarks (REFAIR, SYNETHIC) and ring-shaped marks
+# (RotorDC), even though a compact block (Wiklunds) hid the same overlap.
+# 108 leaves ~5px of clear air inside the ring's inner edge.
+SAFE_RADIUS = 108.0
 SEMIO_DARK = (0, 17, 23)
 SEMIO_LIGHT = (247, 243, 227)
 NODE_RADIUS_MM = 2.275
@@ -631,13 +638,29 @@ EXTEND_WORKING_SIZE = 256       # long edge of the downsampled copy the flood
                                 # 5.7s; this pipeline calls the same
                                 # computation once per browser request in the
                                 # review server) and to blur past JPEG noise
-EXTEND_MARGIN = 0.96            # target radius = 128 * this; leaves ~5px so
-                                # an antialiased mark edge doesn't graze the
-                                # circle's own antialiasing
+EXTEND_MARGIN = 0.86            # target radius = 128 * this = 110px, clear of
+                                # the printed contour ring's inner edge at
+                                # 113.1px (see SAFE_RADIUS) -- was 0.96 (123px),
+                                # which sat the mark half UNDER the ring
 EXTEND_MAX_FOREGROUND = 0.85    # above this fraction the flood never
                                 # travelled -- it did not find a backdrop, it
                                 # found almost the whole tile (measured:
                                 # Allibert Matériaux Anciens reaches 0.966)
+# A SINGLE, near-solidly-filled blob that covers most of the tile is the
+# tile's own coloured background (a rounded-square app icon, say), not a
+# mark -- extending would then shrink the background itself and stretch its
+# transparent corners outward (Freegle: fit_scale 1.17 on a squircle covering
+# 74% of the tile, corners transparent so the flood only strips those,
+# leaving a "solid disc counted as mark" reading). Measured across all 30
+# circle_extend sources in the 2026-08-17 set: every genuine mark's dense
+# foreground fills at most 0.79 of its own bounding box (BOBI/FR:M47 is an
+# outlier at 1.00 but only 0.24 of the tile -- a small dense wordmark, not a
+# tile-filling blob); Freegle alone reaches 0.99 fill at 0.74 of the tile.
+# Both gates are required so a small-but-solid glyph (a filled letter, full
+# bbox fill but tiny tile fraction) is not mistaken for a background tile.
+EXTEND_TILE_FILL_MIN = 0.90     # dense foreground's fill ratio in its own
+                                # bounding box
+EXTEND_TILE_AREA_MIN = 0.55     # ...AND this fraction of the whole tile
 EXTEND_CLEAN_ALPHA = 250        # what counts as "opaque" when hunting for a
                                 # replicable edge pixel, matching the alpha
                                 # threshold has_flat_opaque_backdrop already

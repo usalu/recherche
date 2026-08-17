@@ -51,9 +51,16 @@ IMG_MID = -0.8
 
 # 🔗 Beziehungsband je Land. Von/Nach sind dieselben IDs wie in der
 # Knotentabelle und im Diagramm -- die Kante wird ueber die Endknoten
-# gelesen, nicht ueber einen eigenen Schluessel. X_BESCH == X_REL: beide
-# Baender teilen sich dieselbe Spaltengrenze, damit sie als ein System lesen.
-X_VON, X_ART, X_BESCH, X_QK = 5.5, 34.0, X_REL, 176.0
+# gelesen, nicht ueber einen eigenen Schluessel.
+#
+# Keine eigene Art-Spalte mehr: die Beschreibung selbst traegt jetzt die Rolle
+# ("Fachplanung.", "Entwurf.", statt "Übernahm die Fachplanung für Zinneke.")
+# -- eine Art-Spalte daneben haette bei rund einem Fuenftel der Zeilen exakt
+# dasselbe Wort zweimal nebeneinander gezeigt (z. B. "Fachplanung" | "Fachplanung.").
+# Beschreibung ruemckt deshalb an die alte Art-Position (34,0 statt 91,5) und
+# ist mit 142 mm gut 1,7-mal so breit wie vorher -- `beziehungsart` bleibt in
+# den Daten unveraendert erhalten, sie wird nur nicht mehr gedruckt.
+X_VON, X_BESCH, X_QK = 5.5, 34.0, 176.0
 BESCH_MAX = REL_MAX
 
 
@@ -116,8 +123,7 @@ NODE_COLS = [(X_NR, "ID"), (X_NAME, "Name"), (X_CODE, "Rolle"),
 # header and the Von/Nach data cells are set in) has no U+2192 glyph -- the
 # build fails with "could not represent character" once the macro itself
 # renders correctly. Plain "->"/"--" need no glyph and match the mono ID font.
-EDGE_COLS = [(X_VON, "Von -> Nach"), (X_ART, "Art"),
-             (X_BESCH, "Beschreibung"), (X_QK, "Q")]
+EDGE_COLS = [(X_VON, "Von -> Nach"), (X_BESCH, "Beschreibung"), (X_QK, "Q")]
 
 
 def _row(net, e, y, kl, qnum, images, dim: bool = False):
@@ -154,9 +160,12 @@ def _edge_row(net, kante, y, qnum):
     suppressed it for actor-to-building edges on the theory that the shared
     thing IS the other endpoint (`U04 -> P1, Entwurf`) -- true for most, but
     not all: 22 of 312 name the specific discipline/component/project that
-    Art and the endpoint alone do not ("Cleveland lieferte wiederverwendeten
-    Stahl für Holbein Gardens"), and those were lost along with the rest.
-    Every one of the 268 drawn edges has a description in the data; print it."""
+    the endpoint alone does not ("Cleveland lieferte wiederverwendeten Stahl
+    für Holbein Gardens"), and those were lost along with the rest.
+    Every one of the drawn edges has a description in the data; print it.
+
+    No separate Art node anymore -- the description itself now carries the
+    role (see the module-level comment by X_BESCH)."""
     a, b = kante["pair"]
     if kante.get("richtung") == "B→A":
         a, b = b, a
@@ -169,9 +178,6 @@ def _edge_row(net, kante, y, qnum):
     return [
         r"\node[anchor=base west, font=\SemioMono\fontsize{5.8pt}{6pt}\selectfont, "
         r"text=semio-chrome-foreground, inner sep=0] at (%.1f,%.2f) {%s};" % (X_VON, y, paar),
-        r"\node[anchor=base west, font=\SemioSans\fontsize{5.8pt}{6pt}\selectfont, "
-        r"text=semio-chrome-text-normal, inner sep=0] at (%.1f,%.2f) {%s};"
-        % (X_ART, y, esc(kante.get("beziehungsart") or "")),
         r"\node[anchor=base west, font=\SemioSans\fontsize{5.8pt}{6pt}\selectfont, "
         r"text=semio-chrome-text-normal, inner sep=0] at (%.1f,%.2f) {%s};"
         % (X_BESCH, y, _clip(besch, BESCH_MAX)),
