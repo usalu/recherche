@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import collections
 import datetime as dt
+import functools
 import gzip
 import hashlib
 import html.parser
@@ -47,6 +48,7 @@ ASSET_DECISIONS = BASE / "pilot_asset_decisions.json"
 MANIFEST = PILOT / "pilot_transport_manifest.json"
 PATCH = PILOT / "pilot_image_property_patch.json"
 PATCH_REPORT = PILOT / "pilot_image_property_patch_report.md"
+CROP_OVERRIDES_PATH = BASE / "bilder_full" / "crop_overrides.json"
 RENDER_CONTAINMENT_REPORT = PILOT / "render_containment_report.json"
 WORKLIST = BASE / "worklist.json"
 VERDICTS = BASE / "verdicts.json"
@@ -715,6 +717,103 @@ EXTEND_DENSITY_MIN_FRACTION = 0.5  # a pixel only counts toward the mark's
                                 # Réemploi, Icon Real Estate): unchanged to
                                 # within a pixel -- a real mark is never this
                                 # sparse.
+DISC_FILL_MAX = 12               # disc_fill_consistency() threshold. Measured
+                                # across all 140 full-bleed 2026-08-17 assets:
+                                # the four genuine defects sit at 13.6-362.7,
+                                # the other 136 top out at 4.1 -- 12 sits in
+                                # the gap, so it is a measured line, not a
+                                # guess.
+EXTEND_EDGE_SAMPLES_DEEP = 30    # retry depth for _edge_fill_line when the
+                                # default EXTEND_EDGE_SAMPLES=5 lands in a
+                                # source's own gradient border rather than its
+                                # interior fill (Démolition William
+                                # Perreault's tile darkens from RGB
+                                # ~225,3,3 at the very edge to a stable
+                                # ~237,50,41 by ~row 25 of 192). Measured by
+                                # sweeping 5..80: disc_fill_consistency first
+                                # drops under DISC_FILL_MAX at 30 and stays
+                                # there (2.2-5.0 through 45, 1.0-1.4 from 50
+                                # on) -- 30 is the first value with real
+                                # margin, not the bare minimum.
+TRIM_UNIFORM_BORDER_TOLERANCE = 14  # colour tolerance for
+                                # _trim_uniform_opaque_border's "is this row/
+                                # column still part of the border" test --
+                                # matches EXTEND_FLOOD_TOLERANCE's Chebyshev
+                                # step so both use the same notion of "close
+                                # enough to call the same colour".
+GEOMETRY_BBOX_RATIO_MIN = 0.25  # _geometry_bbox_ratio() floor for using
+                                # _flood_background_mask's own result as-is.
+                                # Measured across all 66 circle_extend/
+                                # circle_cover sources: three fall under 0.21
+                                # (Gunter Bosmans BE:M15 0.20, NO:U03 0.08,
+                                # GB:U01 0.05), then a gap to CH:M02 at 0.39
+                                # and a second gap up to 0.95 where the other
+                                # 61 sources sit -- 0.25 is in the empty band
+                                # between the three and everything else.
+GEOMETRY_RAW_FOREGROUND_MIN = 500  # a low GEOMETRY_BBOX_RATIO_MIN score is
+                                # ALSO exactly what `_dense_foreground`
+                                # produces when it is working correctly, on a
+                                # tile whose only "foreground" is a lone
+                                # isolated noise scrap -- the very case that
+                                # filter exists to reject (see its own
+                                # docstring, Entra AS). Measured: GB:F02's raw
+                                # flood foreground is 217px total (2 stray
+                                # pixels' worth after antialiasing), its
+                                # already-correct cover crop needlessly
+                                # reclassified as extend when the strict-mask
+                                # retry fired on ratio alone. Gunter Bosmans'
+                                # own genuinely swallowed mark is 6784px raw;
+                                # GB:U01 and NO:U03 (real, if partly swallowed,
+                                # marks) are 1472 and 3455 -- 500 sits under
+                                # all three genuine cases and clear of 217.
+EXTEND_UNIFORM_TOLERANCE = 24    # Chebyshev tolerance for
+                                # _uniform_backdrop_colour's "close to the
+                                # modal background colour" test.
+EXTEND_UNIFORM_MIN_FRACTION = 0.65  # a tile's background counts as flat
+                                # enough to fill as ONE colour (band and
+                                # interior alike) only above this fraction.
+                                # Measured across all 38 circle_extend
+                                # sources at tolerance 24: a genuine two-tone
+                                # tile (Van der Wal Sloopwerken, NL:U52,
+                                # red-over-yellow) sits at 0.46, the next
+                                # highest (CH:U11) at 0.58, then a gap to
+                                # Démolition William Perreault (FR:M15,
+                                # the reported seam) at 0.73 -- 0.65 is
+                                # measured in that gap, not guessed.
+
+
+def _uniform_backdrop_colour(array: "np.ndarray", mask: "np.ndarray") -> tuple[int, int, int] | None:
+    """Modal RGB of the background-classified, opaque pixels in `array` (an
+    already-resized RGBA int array) via `mask`, or None if the background is
+    not effectively one flat colour.
+
+    Modal, not mean/median, via 16-level quantisation and the median of the
+    single most populous bin -- the same technique as `disc_fill_consistency`,
+    for the same reason: a plain median mixes antialiased mark-edge bleed
+    into the estimate.
+
+    When the fraction of qualifying pixels within `EXTEND_UNIFORM_TOLERANCE`
+    of that mode clears `EXTEND_UNIFORM_MIN_FRACTION`, the caller
+    (`_extend_backdrop_to_canvas`) fills the WHOLE background region -- the
+    seam AND the new padding -- with this single colour, so no band-vs-
+    interior seam can exist by construction (Démolition William Perreault,
+    band vs. interior colour distance measured at 17.9 before this existed).
+    A genuinely two-tone or gradient background (Van der Wal Sloopwerken's
+    red-over-yellow) fails the fraction test and keeps the historical local
+    edge-replication path untouched.
+    """
+    opaque = mask & (array[:, :, 3] >= EXTEND_CLEAN_ALPHA)
+    if not opaque.any():
+        return None
+    rgb = array[:, :, :3][opaque]
+    bins = rgb // 16
+    _uniq, inverse, counts = np.unique(bins, axis=0, return_inverse=True, return_counts=True)
+    top = counts.argmax()
+    mode_rgb = np.median(rgb[inverse == top], axis=0)
+    within = np.abs(rgb.astype(np.int32) - mode_rgb).max(axis=1) <= EXTEND_UNIFORM_TOLERANCE
+    if float(within.mean()) < EXTEND_UNIFORM_MIN_FRACTION:
+        return None
+    return tuple(int(round(c)) for c in mode_rgb)
 
 
 def _flood_background_mask(im: Image.Image, tolerance: int = EXTEND_FLOOD_TOLERANCE,
@@ -774,6 +873,102 @@ def _flood_background_mask(im: Image.Image, tolerance: int = EXTEND_FLOOD_TOLERA
     return background
 
 
+def _flood_background_mask_strict(im: Image.Image, tolerance: int = EXTEND_FLOOD_TOLERANCE,
+                                   working_size: int = EXTEND_WORKING_SIZE) -> "np.ndarray":
+    """Boolean mask, `im`-sized, of pixels reachable from the border through a
+    SINGLE fixed reference colour (the border's own median RGB) -- unlike
+    `_flood_background_mask`, a candidate pixel is tested against that one
+    reference, never against the varying colour of the neighbour it was
+    reached from, so it cannot be walked step by step across an antialiased
+    edge into an unrelated colour.
+
+    Gunter Bosmans (BE:M15) is why this exists: the "G" is solid opaque
+    black, yet `_flood_background_mask` classifies most of its interior as
+    background -- the letterform's own curved outline gives the local-
+    tolerance walk enough gradual intermediate steps, spread around the
+    curve rather than along one straight line, to cross from white all the
+    way to black over the iteration. A fixed reference cannot be walked
+    around this way: every pixel is tested against the SAME colour, so the
+    walk only ever reaches pixels that are themselves close to the border.
+
+    Used only as a fallback in `_extend_or_cover`, gated by
+    `_geometry_bbox_ratio` on the SAME tile's standard mask -- never the
+    default, since it cannot follow a genuine two-tone backdrop end to end
+    (see `_flood_background_mask`'s own docstring for that case).
+    """
+    original_size = im.size
+    scale = min(1.0, working_size / max(original_size))
+    work = im.resize((max(1, round(original_size[0] * scale)),
+                      max(1, round(original_size[1] * scale))),
+                     Image.Resampling.LANCZOS) if scale < 1.0 else im
+    array = np.asarray(work.convert("RGBA"))
+    height, width = array.shape[:2]
+    rgb = array[:, :, :3].astype(np.int16)
+    transparent = array[:, :, 3] < 24
+    border_rgb = np.concatenate([rgb[0, :], rgb[-1, :], rgb[:, 0], rgb[:, -1]])
+    reference = np.median(border_rgb, axis=0)
+    eligible = transparent | (np.abs(rgb - reference).max(axis=2) <= tolerance)
+
+    background = np.zeros((height, width), dtype=bool)
+    background[0, :] = True
+    background[-1, :] = True
+    background[:, 0] = True
+    background[:, -1] = True
+
+    for _ in range(height + width):
+        grew = False
+        for dy, dx in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            src = np.roll(background, (dy, dx), axis=(0, 1))
+            close = eligible & src & ~background
+            if close.any():
+                background |= close
+                grew = True
+        if not grew:
+            break
+
+    if work is not im:
+        mask_image = Image.fromarray(background.astype(np.uint8) * 255, "L")
+        mask_image = mask_image.resize(original_size, Image.Resampling.NEAREST)
+        background = np.asarray(mask_image) > 0
+    return background
+
+
+def _geometry_bbox_ratio(background: "np.ndarray") -> float:
+    """Dense-foreground bounding-box area over raw-foreground bounding-box
+    area, both from the same background mask. Low values mean
+    `_dense_foreground`'s sparse-pixel filter dropped most of what the raw
+    flood already called foreground -- evidence that the flood mask itself,
+    not the density filter, mis-classified real mark content as background
+    (see `_flood_background_mask_strict`). A genuinely sparse/noisy raw
+    foreground (Entra AS's lone corner-halo pixel) never has this shape: it
+    is sparse everywhere, so raw and dense bounding boxes stay close in size.
+    """
+    foreground = ~background
+    ys, xs = np.nonzero(foreground)
+    if xs.size == 0:
+        return 1.0
+    raw_area = (xs.max() - xs.min() + 1) * (ys.max() - ys.min() + 1)
+    if raw_area <= 0:
+        return 1.0
+    dense = _dense_foreground(foreground)
+    ys2, xs2 = np.nonzero(dense)
+    if xs2.size == 0:
+        return 0.0
+    dense_area = (xs2.max() - xs2.min() + 1) * (ys2.max() - ys2.min() + 1)
+    return dense_area / raw_area
+
+
+def _raw_foreground_count(background: "np.ndarray") -> int:
+    """Total pixel count of `~background` -- the absolute-size counterpart to
+    `_geometry_bbox_ratio`'s shape-based ratio. A low ratio is ALSO exactly
+    what a working `_dense_foreground` produces on a tile whose only
+    "foreground" is a lone isolated noise scrap (see
+    GEOMETRY_RAW_FOREGROUND_MIN); this distinguishes that case, where the raw
+    count itself is tiny, from a genuinely swallowed mark, where it is not.
+    """
+    return int((~background).sum())
+
+
 def _box_density(mask: "np.ndarray", half: int) -> "np.ndarray":
     """For every pixel, the count of True neighbours in its (2*half+1)^2
     window -- a fast integral-image box sum, no scipy (kept out of this
@@ -809,22 +1004,33 @@ def _dense_foreground(foreground: "np.ndarray", half: int = EXTEND_DENSITY_HALF,
 
 
 def _extend_geometry(im: Image.Image, background: "np.ndarray",
-                      margin: float = EXTEND_MARGIN) -> float | None:
-    """Fit-scale for `im` given its background mask, or None if extending is
-    not safe -- callers keep the historical cover crop in every None case.
+                      margin: float = EXTEND_MARGIN):
+    """(fit_scale, mark_cx, mark_cy) for `im` given its background mask, or
+    None if extending is not safe -- callers keep the historical cover crop
+    in every None case. The centre is in `im`'s own (unscaled) pixel space.
 
     None covers every way the flood mask fails to mean "the mark": no
     foreground at all (the mark touches the frame and floods away with it --
     e.g. Provincie Gelderland), near-total foreground (the flood never left
     the border -- e.g. Allibert Matériaux Anciens at 96.6%, which is a "no
     real backdrop found" result, not a "the whole tile is the mark" result),
-    or no DENSE foreground once isolated halo/corner pixels are dropped (see
+    no DENSE foreground once isolated halo/corner pixels are dropped (see
     `_dense_foreground`) -- Entra AS's cover crop was already correct; this
     is what stops a lone stray pixel from triggering an unneeded, and then
-    visibly seamed, extend. Measured against the mark's own bounding radius
-    from the image centre, never against the tile's background -- a square
-    brand tile must not shrink by root two just to tuck its own coloured
-    CORNERS inside the circle, only as far as its lettering actually demands.
+    visibly seamed, extend -- or the dense foreground being one near-solid
+    blob covering most of the tile (see EXTEND_TILE_FILL_MIN/AREA_MIN): that
+    is the tile's own coloured background, not a mark, and shrinking it
+    (Freegle) turns a full-bleed icon into a stamp floating in white.
+
+    Radius, and the returned centre, are measured against the mark's OWN
+    bounding-box centre, never the image centre and never the tile's
+    background -- a square brand tile must not shrink by root two just to
+    tuck its own coloured CORNERS inside the circle, only as far as its
+    lettering actually demands, and an off-centre mark (Kingo, sitting in the
+    tile's lower-left) must not be measured as if it were centred, which
+    would both overstate the required shrink AND leave it off-centre in the
+    finished disc -- `_extend_backdrop_to_canvas` uses this same centre to
+    pad asymmetrically instead of splitting the border 50/50.
     """
     foreground = ~background
     total = foreground.size
@@ -837,11 +1043,17 @@ def _extend_geometry(im: Image.Image, background: "np.ndarray",
     ys, xs = np.nonzero(dense)
     if xs.size == 0:
         return None
-    cy, cx = (im.height - 1) / 2.0, (im.width - 1) / 2.0
-    radius = float(np.hypot(xs - cx, ys - cy).max())
+    bbox_fill = float(dense[ys.min():ys.max() + 1, xs.min():xs.max() + 1].mean())
+    tile_area = float(dense.mean())
+    if bbox_fill >= EXTEND_TILE_FILL_MIN and tile_area >= EXTEND_TILE_AREA_MIN:
+        return None  # the "mark" is the tile's own filled background shape
+    mark_cx = (xs.min() + xs.max()) / 2.0
+    mark_cy = (ys.min() + ys.max()) / 2.0
+    radius = float(np.hypot(xs - mark_cx, ys - mark_cy).max())
     if radius <= 0:
         return None
-    return (FINAL_SIZE / 2.0 * margin) / radius
+    fit_scale = (FINAL_SIZE / 2.0 * margin) / radius
+    return fit_scale, mark_cx, mark_cy
 
 
 def _edge_fill_line(background: "np.ndarray", alpha: "np.ndarray", rgb: "np.ndarray",
@@ -917,7 +1129,9 @@ def _resize_straight_alpha(im: Image.Image, size: tuple) -> Image.Image:
 
 
 def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
-                                scale: float) -> Image.Image | None:
+                                scale: float, mark_cx: float, mark_cy: float,
+                                edge_samples: int = EXTEND_EDGE_SAMPLES,
+                                mask_fn=None) -> Image.Image | None:
     """Scale `im` by `scale`, then bring it to exactly FINAL_SIZE x FINAL_SIZE
     by replicating a CLEAN (opaque, background-classified, median-smoothed)
     edge line outward on any side that still falls short -- never a foreign
@@ -926,15 +1140,57 @@ def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
     background can still overhang there, never the mark). Returns None if any
     side needing extension has no clean edge at all -- caller falls back to
     the historical cover crop for that source.
+
+    `mark_cx`/`mark_cy` are the mark's own bounding-box centre in `im`'s
+    unscaled pixel space (from `_extend_geometry`) -- padding is split so
+    THAT point, not the tile's own centre, lands on the final canvas centre.
+    An off-centre mark padded 50/50 would still end up off-centre; this is
+    what fixes it (Kingo).
+
+    `edge_samples` overrides EXTEND_EDGE_SAMPLES: the default 5 pixels can
+    still land in a source's own gradient border rather than its interior
+    fill (Démolition William Perreault: the outermost rows sample a darker
+    red than the tile's own body, so the replicated band visibly bands
+    against it). `prepare_node_canvas` retries once with a deeper sample
+    only when the shallow one fails `disc_fill_consistency`, so this never
+    changes an already-correct result.
+
+    `background` is the caller's mask of `im` at its OWN resolution -- it
+    cannot be reused directly here because the edge-fill sampling below
+    needs a mask of the RESIZED array, so this recomputes one instead of
+    scaling `background` up. `mask_fn` controls which flood function that
+    recompute uses (default `_flood_background_mask`); pass
+    `_flood_background_mask_strict` when `background` itself came from the
+    strict fallback (see `_extend_or_cover`) -- otherwise the resized-mask
+    recompute falls straight back into the same local-chain misclassification
+    the strict mask was chosen to avoid (measured: Gunter Bosmans BE:M15,
+    a false solid-black vertical band top and bottom, the resized mask
+    treating the "G" as background again).
     """
+    mask_fn = mask_fn or _flood_background_mask
     new_size = (max(1, round(im.width * scale)), max(1, round(im.height * scale)))
     resized = _resize_straight_alpha(im, new_size)
-    mask = _flood_background_mask(resized)
+    mask = mask_fn(resized)
     array = np.asarray(resized.convert("RGBA")).astype(np.int32)
+    # If the tile's own background is effectively one flat colour, repaint
+    # every background-classified pixel to it BEFORE the row/column
+    # extension below -- `_edge_fill_line`'s local samples then all agree
+    # with the new padding by construction, so seam repaint and the new
+    # band both land on the exact same colour as the tile's own interior.
+    # Left alone (a two-tone or gradient background), extension below is
+    # unchanged from before this existed.
+    uniform = _uniform_backdrop_colour(array, mask)
+    if uniform is not None:
+        array[mask] = (*uniform, 255)
+    # Where the mark's own centre lands in THIS resized array -- computed
+    # once, before either axis is padded/cropped, since padding one axis
+    # never shifts the other axis's coordinate.
+    center_x, center_y = mark_cx * scale, mark_cy * scale
 
     def extend_rows(a, m, depth, at_top):
         """Add `depth` replicated rows at the top or bottom of `a`."""
-        edge = _edge_fill_line(m, a[:, :, 3], a[:, :, :3], axis=0, from_start=at_top)  # one colour per COLUMN
+        edge = _edge_fill_line(m, a[:, :, 3], a[:, :, :3], axis=0, from_start=at_top,
+                               samples=edge_samples)  # one colour per COLUMN
         if edge is None:
             return None, None
         edge = _running_median(edge.T).T
@@ -953,7 +1209,8 @@ def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
 
     def extend_cols(a, m, depth, at_left):
         """Add `depth` replicated columns at the left or right of `a`."""
-        edge = _edge_fill_line(m, a[:, :, 3], a[:, :, :3], axis=1, from_start=at_left)  # one colour per ROW
+        edge = _edge_fill_line(m, a[:, :, 3], a[:, :, :3], axis=1, from_start=at_left,
+                               samples=edge_samples)  # one colour per ROW
         if edge is None:
             return None, None
         edge = _running_median(edge.T).T
@@ -970,16 +1227,34 @@ def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
         return ((np.concatenate([band, a], axis=1), np.concatenate([mask_band, m], axis=1)) if at_left
                 else (np.concatenate([a, band], axis=1), np.concatenate([m, mask_band], axis=1)))
 
-    def fit(a, m, axis, extend_before, extend_after):
+    def fit(a, m, axis, center, extend_before, extend_after):
+        """Bring `a` to exactly FINAL_SIZE along `axis` so that `center`
+        (the mark's own position, in `a`'s current coordinates) lands on
+        the final FINAL_SIZE/2 -- not by choosing "pad" XOR "crop" from
+        `current` vs FINAL_SIZE, but by placing a FINAL_SIZE window at
+        [center-FINAL_SIZE/2, center+FINAL_SIZE/2) and cropping/padding
+        whichever ends of THAT window fall outside/short of the array.
+
+        Splitting padding 50/50 (or picking a single crop start) only
+        recentres a mark whose required shift is smaller than the total
+        pad/crop budget (current vs FINAL_SIZE). Kingo's mark centre sat at
+        row 186.5 of a 240-tall resized tile: the padding budget was only
+        16px, nowhere near the ~58px shift needed, so a pure pad-split left
+        it jammed low. The fix needs BOTH at once on the same axis: crop the
+        ~58px of empty tile above the mark, pad ~74px of background below --
+        exactly what this window placement does by construction.
+        """
         current = a.shape[axis]
-        if current > FINAL_SIZE:
-            start = (current - FINAL_SIZE) // 2
+        window_start = center - FINAL_SIZE / 2.0
+        crop_lo = max(0, int(round(window_start)))
+        crop_hi = min(current, crop_lo + FINAL_SIZE)
+        if crop_lo > 0 or crop_hi < current:
             index = [slice(None)] * a.ndim
-            index[axis] = slice(start, start + FINAL_SIZE)
-            return a[tuple(index)], m[tuple(index[:2])]
-        if current == FINAL_SIZE:
-            return a, m
-        before = (FINAL_SIZE - current) // 2
+            index[axis] = slice(crop_lo, crop_hi)
+            a, m = a[tuple(index)], m[tuple(index[:2])]
+            current = a.shape[axis]
+        before = max(0, -int(round(window_start)))
+        before = min(before, FINAL_SIZE - current)
         after = FINAL_SIZE - current - before
         if before:
             a, m = extend_before(a, m, before)
@@ -991,11 +1266,11 @@ def _extend_backdrop_to_canvas(im: Image.Image, background: "np.ndarray",
                 return None, None
         return a, m
 
-    array, mask = fit(array, mask, 0, lambda a, m, d: extend_rows(a, m, d, True),
+    array, mask = fit(array, mask, 0, center_y, lambda a, m, d: extend_rows(a, m, d, True),
                       lambda a, m, d: extend_rows(a, m, d, False))
     if array is None:
         return None
-    array, mask = fit(array, mask, 1, lambda a, m, d: extend_cols(a, m, d, True),
+    array, mask = fit(array, mask, 1, center_x, lambda a, m, d: extend_cols(a, m, d, True),
                       lambda a, m, d: extend_cols(a, m, d, False))
     if array is None:
         return None
@@ -1178,7 +1453,34 @@ def neutral_backdrop_to_transparency(im: Image.Image, theme: str, backdrop: tupl
     return Image.fromarray(output, "RGBA")
 
 
-def tokenise_transparent_neutral_mark(im: Image.Image, theme: str) -> Image.Image:
+BIMODAL_STENCIL_KEYS = frozenset({"FR:M18"})  # explicit allowlist, not a
+                                # general heuristic gate, for
+                                # tokenise_transparent_neutral_mark's
+                                # dark-ink/light-hole stencil treatment.
+                                # Measured attempt at a general >=90%-of-
+                                # neutral-area rule (see that function's own
+                                # docstring) correctly excluded Historisches
+                                # Bauteillager Ostschweiz (CH:M09, a real
+                                # three-band composition) but still broke two
+                                # OTHER assets it did not exclude: AT:M03 (a
+                                # solid icon whose own outline became a
+                                # broken dashed ring) and DE:M04 (an
+                                # icon+label row that disappeared entirely,
+                                # not a letterform counter). Both passed the
+                                # >=90% and >=10% numeric floors while still
+                                # being visually wrong -- the failure mode is
+                                # a judgement call ("is the light cluster
+                                # really a stencil hole, or a separate real
+                                # element") a pixel-population measurement
+                                # cannot make reliably. Only Fer et Pierre
+                                # (FR:M18) was individually confirmed correct
+                                # in both themes; add to this set only after
+                                # the same individual confirmation, never by
+                                # loosening the numeric gate again.
+
+
+def tokenise_transparent_neutral_mark(im: Image.Image, theme: str,
+                                       allow_bimodal_stencil: bool = False) -> Image.Image:
     """Theme-tokenise neutral ink while preserving genuine brand colours.
 
     A fully neutral mark is converted as a unit, as before.  Coloured marks
@@ -1187,6 +1489,34 @@ def tokenise_transparent_neutral_mark(im: Image.Image, theme: str) -> Image.Imag
     one of the node themes.  Map only near-white/near-black neutral pixels in
     such mixed marks to the theme's contrast token and leave coloured pixels
     untouched.
+
+    A mark that is itself >=85% neutral can STILL be two-tone -- white
+    lettering on a black (or near-black) plate, with no genuine brand colour
+    anywhere for the "mixed mark" branch below to preserve. Fer et Pierre
+    (FR:M18) is exactly this: a near-black wavy banner with white serif
+    lettering, measured 100% neutral. Painting every neutral pixel to the
+    SAME token (the old unconditional behaviour) erases the one contrast
+    that made the letters readable -- band and lettering both become the
+    same flat colour. When the neutral pixels are BIMODAL (a dark cluster
+    and a light cluster each covering >=10% of the visible mark, AND the two
+    together cover >=90% of the neutral area -- see `dark_neutral`/
+    `light_neutral` below), the dark cluster becomes the ink token and the
+    LIGHT cluster is cut to transparent instead of tokenised -- a
+    counter/letterform hole through the ink, exactly like a stencil, rather
+    than a second flat colour. That still inverts correctly per theme (dark
+    theme -> the ink token is light, so the banner reads light-on-dark and
+    the letters remain a hole), the same theme-swap this function already
+    does for a genuinely single-tone mark.
+
+    The 90%-of-neutral floor matters as much as the 10% cluster floors:
+    Historisches Bauteillager Ostschweiz (CH:M09, an asset this round must
+    not touch) looked bimodal by the 10% floors alone (dark 64%, light 13%)
+    but is really THREE bands stacked -- a near-black "DENKMAL" band, a
+    middle-GREY "STIFTUNG" band, "THURGAU" text below -- and dark+light
+    covers only 77% of its neutral area, against 98% for Fer et Pierre's
+    genuine two-tone mark. Cutting the middle band's own lettering to
+    transparent under the two-cluster rule would have erased content this
+    asset already renders correctly.
     """
     if theme not in {"light", "dark"}:
         raise ValueError(f"unsupported theme: {theme}")
@@ -1198,11 +1528,24 @@ def tokenise_transparent_neutral_mark(im: Image.Image, theme: str) -> Image.Imag
     neutral = visible & ((rgb.max(axis=2) - rgb.min(axis=2)) <= 32)
     luminance = ((299 * rgb[:, :, 0] + 587 * rgb[:, :, 1] +
                   114 * rgb[:, :, 2] + 500) // 1000)
+    token = SEMIO_DARK if theme == "light" else SEMIO_LIGHT
     if int(neutral.sum()) / int(visible.sum()) >= 0.85:
+        dark_neutral = neutral & (luminance <= 80)
+        light_neutral = neutral & (luminance >= 175)
+        visible_count = int(visible.sum())
+        neutral_count = int(neutral.sum())
+        cluster_count = int(dark_neutral.sum()) + int(light_neutral.sum())
+        if (allow_bimodal_stencil
+                and int(dark_neutral.sum()) / visible_count >= 0.10
+                and int(light_neutral.sum()) / visible_count >= 0.10
+                and cluster_count / neutral_count >= 0.90):
+            output = pixels.copy()
+            output[dark_neutral, :3] = token
+            output[light_neutral, 3] = 0
+            return Image.fromarray(output, "RGBA")
         replace = neutral
     else:
         replace = neutral & ((luminance <= 80) | (luminance >= 175))
-    token = SEMIO_DARK if theme == "light" else SEMIO_LIGHT
     output = pixels.copy()
     output[replace, :3] = token
     return Image.fromarray(output, "RGBA")
@@ -1248,17 +1591,102 @@ def apply_circle_crop(im: Image.Image) -> Image.Image:
     return im
 
 
+def _drop_faint_edge_bands(im: Image.Image, faint_alpha_max: int = 160,
+                            gap_rows: int = 3, gap_alpha_max: int = 8,
+                            ink_alpha_min: int = 200) -> Image.Image:
+    """`im` with any outermost content band, on any of its four edges,
+    zeroed to alpha 0 -- but only when that band never exceeds
+    `faint_alpha_max`, AND it is followed by a run of at least `gap_rows`
+    rows/columns at alpha <= `gap_alpha_max` before real ink (alpha >=
+    `ink_alpha_min`) begins.
+
+    A genuine mark's outermost edge is its own antialiasing directly against
+    its own high-alpha ink -- there is never a gap between "the edge of the
+    mark" and "the mark". A gap this shape is a scanning/compression
+    artefact that survived a knockout with partial alpha: BCA Matériaux
+    Anciens (FR:M06)'s source JPEG carries a grey crop-boundary remnant at
+    row 0 (alpha 118) and row 1 (alpha 15), then 17 near-empty rows, before
+    the tile's own ink begins at row 19 -- that artefact gets scaled and
+    positioned along with the real mark and shows up as a spurious line
+    inside the finished disc. A row/column that starts at alpha 0 (no
+    artefact at all) or that jumps straight past `faint_alpha_max` into real
+    content is left untouched; so is a genuine antialiased edge, since there
+    the very next row is already real ink with no gap to satisfy `gap_rows`.
+
+    Runs before the bounding-box measurement in `contain_node_artwork`, so a
+    trimmed band never enters the fit/scale calculation at all.
+    """
+    a = np.asarray(im.convert("RGBA")).copy()
+    alpha = a[:, :, 3]
+    h, w = alpha.shape
+
+    def edge_depth(profile: "np.ndarray", total: int) -> int:
+        i = 0
+        while i < total and 0 < profile[i] <= faint_alpha_max:
+            i += 1
+        band_end = i
+        if band_end == 0:
+            return 0
+        j = band_end
+        while j < total and profile[j] <= gap_alpha_max:
+            j += 1
+        if j - band_end < gap_rows:
+            return 0
+        # Real ink does not have to appear on the row immediately after the
+        # gap -- antialiasing ramps up gradually (measured on FR:M06: rows
+        # 16-18 climb 5, 12, 37 before row 19 reaches 228). Confirm ink
+        # appears somewhere ahead instead of requiring an instant jump,
+        # while the gap_rows run above still rules out a genuine antialiased
+        # edge, which never has a multi-row near-zero gap to begin with.
+        if not (profile[j:] >= ink_alpha_min).any():
+            return 0
+        return band_end
+
+    row_max = alpha.max(axis=1)
+    col_max = alpha.max(axis=0)
+    top = edge_depth(row_max, h)
+    bottom = edge_depth(row_max[::-1], h)
+    left = edge_depth(col_max, w)
+    right = edge_depth(col_max[::-1], w)
+    if top:
+        alpha[:top, :] = 0
+    if bottom:
+        alpha[h - bottom:, :] = 0
+    if left:
+        alpha[:, :left] = 0
+    if right:
+        alpha[:, w - right:] = 0
+    a[:, :, 3] = alpha
+    return Image.fromarray(a, "RGBA")
+
+
 def contain_node_artwork(im: Image.Image, mode: str,
                           backdrop: tuple[int, int, int] | None = None) -> tuple[Image.Image, str]:
     """Trim and contain already-separated artwork within the radial safety area.
 
-    `backdrop`, when given, fills the canvas opaquely before the artwork is
-    composited on top -- used by `prepare_light_backdrop_canvas` so the disc
-    is opaque light in both light and dark builds, rather than transparent
-    and dependent on whatever the node fill happens to be.  `apply_circle_crop`
-    still clears everything outside the circle to alpha 0 regardless, since it
-    multiplies the existing alpha by the mask rather than assuming it.
+    `backdrop`, when given, fills the canvas opaquely BEHIND the finished,
+    already-verified artwork -- used by `prepare_light_backdrop_canvas` so
+    the disc is opaque light in both light and dark builds, rather than
+    transparent and dependent on whatever the node fill happens to be.
+    `apply_circle_crop` still clears everything outside the circle to alpha 0
+    regardless, since it multiplies the existing alpha by the mask rather
+    than assuming it.
+
+    Measurement and the correction loop below run on a TRANSPARENT canvas
+    even when `backdrop` is set, and the backdrop is painted in only once,
+    after the loop exits. Painting it in earlier (the previous version filled
+    the canvas with `backdrop` before ever measuring) made every pixel of the
+    256x256 canvas opaque before a single artwork pixel was placed --
+    `alpha_max_radius` on that empty-but-opaque canvas is a constant 180.31
+    (its own corner-to-centre distance), always > SAFE_RADIUS, so the loop
+    ran its full 5 iterations on EVERY `light_backdrop` asset regardless of
+    the artwork's real size: (SAFE_RADIUS-1)/180.31 compounded 5 times is
+    0.0736 -- measured on the shipped assets, all 74 `light_backdrop` logos
+    had shrunk to a true mark radius of 6.5-9.9px against a 108px budget.
+    `safe_contain`/`neutral_knockout` never had `backdrop`, so `fill` was
+    already `(0,0,0,0)` for them and this bug could not reach them.
     """
+    im = _drop_faint_edge_bands(im)
     bbox = im.getchannel("A").getbbox()
     if not bbox:
         raise ValueError("candidate has no visible pixels")
@@ -1266,16 +1694,31 @@ def contain_node_artwork(im: Image.Image, mode: str,
     scale = min((SAFE_RADIUS * 2) / im.width, (SAFE_RADIUS * 2) / im.height)
     im = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))),
                    Image.Resampling.LANCZOS)
-    fill = (backdrop + (255,)) if backdrop else (0, 0, 0, 0)
-    canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), fill)
+    canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
     canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
-    max_r = alpha_max_radius(canvas)
-    if max_r > SAFE_RADIUS:
+    # A single un-verified correction pass can still land a fraction of a
+    # pixel over SAFE_RADIUS: `int()` truncation on the corrective resize
+    # (vs `round()` on the first one) and LANCZOS/antialiasing both shift the
+    # measured bbox slightly, and the result was never re-measured to
+    # confirm the ratio actually worked. Harmless at the old SAFE_RADIUS=119
+    # (plenty of slack before the +0.75 validate limit), but at 108 two real
+    # sources (FI:F04, FI:U06) landed at 108.92/109.03 against a 108.75
+    # limit -- a genuine latent bug the tighter radius exposed, not a new
+    # one. Loop until verified instead of trusting one pass; capped so a
+    # pathological source can't spin forever.
+    for _ in range(5):
+        max_r = alpha_max_radius(canvas)
+        if max_r <= SAFE_RADIUS:
+            break
         ratio = (SAFE_RADIUS - 1.0) / max_r
         im = im.resize((max(1, int(im.width * ratio)), max(1, int(im.height * ratio))),
                       Image.Resampling.LANCZOS)
-        canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), fill)
+        canvas = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), (0, 0, 0, 0))
         canvas.alpha_composite(im, ((FINAL_SIZE - im.width) // 2, (FINAL_SIZE - im.height) // 2))
+    if backdrop is not None:
+        filled = Image.new("RGBA", (FINAL_SIZE, FINAL_SIZE), backdrop + (255,))
+        filled.alpha_composite(canvas)
+        canvas = filled
     return apply_circle_crop(canvas), mode
 
 
@@ -1311,6 +1754,48 @@ def _opaque_bounds(im: Image.Image) -> tuple[int, int, int, int]:
     if xs.size == 0:
         return (0, 0, im.width, im.height)
     return (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+
+
+def _trim_uniform_opaque_border(im: Image.Image, tolerance: int = TRIM_UNIFORM_BORDER_TOLERANCE) -> Image.Image | None:
+    """`im` with a uniform, OPAQUE, same-colour margin stripped from all four
+    sides, or None if no such margin exists on every side.
+
+    Distinct from `_opaque_bounds` (trims TRANSPARENT margin) -- this is for
+    a tile whose margin is itself fully opaque and a single flat colour, so
+    `_flood_background_mask`'s foreground/background split cannot tell it
+    from the mark by transparency at all. Freegle (GB:N02): a 180x180 tile
+    that is 41% pure white (a ~13px border on every side) around a bright
+    green rounded-square mark. `has_flat_opaque_backdrop` correctly routes
+    this tile into cover-crop (it IS a flat opaque backdrop by that test's
+    own definition), but cover-crop then fills the WHOLE disc with that
+    white border out to the edge -- the green mark shrinks to a
+    rounded-square silhouette floating in white. Only called as a retry when
+    the untrimmed result already failed `disc_fill_consistency`, so a tile
+    that renders correctly without this (any of the other 39 tiles that also
+    happen to carry a uniform border, e.g. R-Place) is never touched by it.
+    """
+    a = np.asarray(im.convert("RGBA"))
+    if not bool((a[:, :, 3] >= 250).all()):
+        return None  # not fully opaque; _opaque_bounds' own path handles that case
+    h, w = a.shape[:2]
+    corner = a[0, 0, :3].astype(int)
+    rgb = a[:, :, :3].astype(int)
+
+    def uniform_depth(line_at):
+        depth = 0
+        limit = min(h, w) // 2 - 1
+        while depth < limit and np.abs(line_at(depth) - corner).max() <= tolerance:
+            depth += 1
+        return depth
+
+    top = uniform_depth(lambda d: rgb[d, :])
+    bottom = uniform_depth(lambda d: rgb[h - 1 - d, :])
+    left = uniform_depth(lambda d: rgb[:, d])
+    right = uniform_depth(lambda d: rgb[:, w - 1 - d])
+    pad = min(top, bottom, left, right)
+    if pad < max(3, round(0.03 * min(w, h))):
+        return None  # no meaningful uniform border on every side
+    return im.crop((pad, pad, w - pad, h - pad))
 
 
 def is_solid_colour_block(im: Image.Image) -> bool:
@@ -1371,9 +1856,163 @@ def prepare_light_backdrop_canvas(source: Path) -> Image.Image:
     return canvas
 
 
-def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image, str]:
-    """Prepare a node asset using circle-cover or safe contain as appropriate."""
+def _patch_small_alpha_pinholes(im: Image.Image, half: int = 4,
+                                 min_neighbour_fraction: float = 0.55,
+                                 passes: int = 3) -> Image.Image:
+    """`im` with any pixel below alpha 250 raised to 255 if its
+    (2*half+1)^2 neighbourhood is mostly (>= min_neighbour_fraction) already
+    opaque, repeated `passes` times so the fill closes in from a hole's own
+    edge inward -- closes a pinhole left by the SOURCE's own alpha channel (a
+    rounded badge corner, measured on Gunter Bosmans BE:M15: a diagonal
+    wedge, alpha 0-249 across roughly 15x18 px, right at the "BOSMANS"
+    pill's own rounded corner) without touching a real transparent margin or
+    ring feather, which is never this locally isolated -- both span the full
+    edge, not a patch this size surrounded on 55%+ of sides by opaque
+    pixels.
+
+    Only ever called on the full-bleed circle_extend/circle_cover path,
+    where the finished disc must be fully opaque everywhere inside its
+    contour by definition (see `inner_disc_min_alpha`) -- there is no mode
+    here where a small interior hole is ever the intended result.
+    """
+    a = np.asarray(im.convert("RGBA")).copy()
+    alpha = a[:, :, 3]
+    window = (2 * half + 1) ** 2
+    for _ in range(passes):
+        opaque = alpha >= 250
+        if opaque.all():
+            break
+        density = _box_density(opaque, half)
+        holes = ~opaque & (density >= min_neighbour_fraction * window)
+        if not holes.any():
+            break
+        alpha = np.where(holes, 255, alpha)
+    a[:, :, 3] = alpha
+    return Image.fromarray(a, "RGBA")
+
+
+def _extend_or_cover(tile: Image.Image, edge_samples: int) -> tuple[Image.Image, str]:
+    """The full-bleed decision for an already-opaque `tile`: extend if a
+    plausible mark and a safe geometry exist, cover-crop otherwise. Always
+    returns something -- cover-crop needs no clean edge or foreground at
+    all, so it is the unconditional last resort.
+
+    Split out of `prepare_node_canvas` so its caller can run it more than
+    once (default edge-sample depth, then a deeper one, then again on a
+    border-trimmed tile) without duplicating the extend/cover decision
+    itself -- see `disc_fill_consistency`'s use at the call site.
+    """
+    cover_scale = max(FINAL_SIZE / tile.width, FINAL_SIZE / tile.height)
+    # Do not cut the MARK (text/icon) to cover the frame -- shrink just far
+    # enough that the mark itself fits, and replicate the tile's own
+    # background outward to refill the disc. Measured against the mark
+    # alone, never the background: a square tile must not shrink by root
+    # two just to tuck its own coloured corners inside the circle.
+    background = _flood_background_mask(tile)
+    mask_fn = None
+    if (_geometry_bbox_ratio(background) < GEOMETRY_BBOX_RATIO_MIN
+            and _raw_foreground_count(background) >= GEOMETRY_RAW_FOREGROUND_MIN):
+        # The local-chain flood swallowed real mark content (see
+        # _flood_background_mask_strict) -- retry with the fixed-reference
+        # mask and keep it only if it actually recovers more of the tile's
+        # own already-detected extent, never on the strength of this check
+        # alone. `mask_fn` carries the same choice into
+        # `_extend_backdrop_to_canvas`'s own internal resized-mask recompute
+        # below -- passing only `background` there is not enough, since that
+        # function never reuses it directly (see its own docstring).
+        #
+        # The raw-count floor matters just as much as the ratio: a low ratio
+        # is ALSO what `_dense_foreground` correctly produces on a lone
+        # isolated noise scrap (GB:F02, 217px raw foreground, already a
+        # correct cover crop) -- without it, this retry needlessly touched
+        # an asset nobody flagged, swapping a fine cover crop for an extend.
+        strict = _flood_background_mask_strict(tile)
+        if _geometry_bbox_ratio(strict) > _geometry_bbox_ratio(background):
+            background = strict
+            mask_fn = _flood_background_mask_strict
+    geometry = _extend_geometry(tile, background)
+    if geometry is not None:
+        fit_scale, mark_cx, mark_cy = geometry
+        if cover_scale > fit_scale:
+            # Recentring on the mark's own centre (not the tile's) can
+            # demand padding from a side that has no clean background --
+            # its wordmark runs close to that edge of the tile (measured:
+            # Gunter Bosmans, BE:M15, a 278x140 header logo whose text sits
+            # right-biased). Try the full recentre first; if THAT fails,
+            # retry once at the tile's own centre -- the pre-recentring
+            # behaviour that already shipped this same asset correctly
+            # (just off-centre) before recentring existed. Only if even
+            # that fails does this asset fall back to the historical cover
+            # crop, which cuts the mark's ends -- worse than either extend,
+            # so it is the last resort, not the first.
+            tile_cx, tile_cy = (tile.width - 1) / 2.0, (tile.height - 1) / 2.0
+            for cx, cy in ((mark_cx, mark_cy), (tile_cx, tile_cy)):
+                extended = _extend_backdrop_to_canvas(tile, background, fit_scale, cx, cy,
+                                                       edge_samples=edge_samples, mask_fn=mask_fn)
+                if extended is None:
+                    continue
+                cropped = _patch_small_alpha_pinholes(apply_circle_crop(extended))
+                # An off-centre mark's recentring window can crop right up
+                # to the tile's OWN rounded corner (a squircle-shaped
+                # source): the seam-repaint only cleans the padding side,
+                # never a raw crop edge, so that corner's own transparency
+                # can survive into the visible disc (measured: NL:U05, min
+                # alpha 40). Verified here with the same check
+                # `validate_final_manifest` runs permanently, rather than
+                # shipping a result only that later pass would catch -- on
+                # any doubt, try the next centre, and if none work, fall
+                # through to the historical cover crop for this tile.
+                if inner_disc_min_alpha(cropped) >= 250:
+                    return cropped, "circle_extend"
+                if (mark_cx, mark_cy) == (tile_cx, tile_cy):
+                    break  # mark is already centred; retrying at the same point can't differ
+    # Historical cover crop -- unreachable geometry, or `_extend_geometry`
+    # found no plausible mark (touches the frame, the flood never left the
+    # border, or the dense foreground was the tile's own filled background
+    # shape), or extending would need a clean edge line that doesn't exist
+    # (a still-transparent ring after `_opaque_bounds`). Every one of those
+    # keeps the tile exactly as it always rendered.
+    scale = cover_scale
+    resized = tile.resize((max(FINAL_SIZE, round(tile.width * scale)),
+                           max(FINAL_SIZE, round(tile.height * scale))),
+                          Image.Resampling.LANCZOS)
+    left = (resized.width - FINAL_SIZE) // 2
+    top = (resized.height - FINAL_SIZE) // 2
+    canvas = resized.crop((left, top, left + FINAL_SIZE, top + FINAL_SIZE))
+    return apply_circle_crop(canvas), "circle_cover"
+
+
+@functools.lru_cache(maxsize=1)
+def _crop_overrides() -> dict:
+    """`{key: [left, top, right, bottom]}` from `crop_overrides.json`, or {}
+    if the file doesn't exist. A manual, reviewable escape hatch for the one
+    kind of decision no measurement can make reliably -- which PART of a
+    multi-element source is "the mark" -- kept in its own small file instead
+    of a heuristic, so a one-off case (Matériaux Anciens du Pays d'Auge,
+    FR:M35: keep only the "M" symbol, drop the wordmark beside it) survives
+    every future rebuild without being reasoned about again. Applied to the
+    SOURCE, before any other separation/contain step, so everything
+    downstream sees only the cropped region and needs no awareness of it.
+    """
+    if not CROP_OVERRIDES_PATH.exists():
+        return {}
+    return {row["key"]: row["crop"] for row in load_json(CROP_OVERRIDES_PATH)}
+
+
+def prepare_node_canvas(source: Path, theme: str = "light",
+                         key: str | None = None) -> tuple[Image.Image, str]:
+    """Prepare a node asset using circle-cover or safe contain as appropriate.
+
+    `key`, when given, enables the dark-ink/light-hole stencil treatment in
+    `tokenise_transparent_neutral_mark` for the individually-confirmed
+    assets in `BIMODAL_STENCIL_KEYS` -- see that constant for why this is an
+    explicit allowlist rather than always-on -- and applies this key's own
+    manual rectangle from `crop_overrides.json`, if one exists, before any
+    other processing.
+    """
     original = Image.open(source).convert("RGBA")
+    if key in _crop_overrides():
+        original = original.crop(tuple(_crop_overrides()[key]))
     neutral_backdrop = neutral_edge_backdrop(original)
     if neutral_backdrop is not None:
         # The solid-colour-block DECISION and its crop bounds are always taken
@@ -1402,33 +2041,39 @@ def prepare_node_canvas(source: Path, theme: str = "light") -> tuple[Image.Image
         # white disc, which is the same defect one step later.
         original = original.crop(_opaque_bounds(reference))
     if has_flat_opaque_backdrop(original):
-        cover_scale = max(FINAL_SIZE / original.width, FINAL_SIZE / original.height)
-        # Do not cut the MARK (text/icon) to cover the frame -- shrink just
-        # far enough that the mark itself fits, and replicate the tile's own
-        # background outward to refill the disc. Measured against the mark
-        # alone, never the background: a square tile must not shrink by root
-        # two just to tuck its own coloured corners inside the circle.
-        background = _flood_background_mask(original)
-        fit_scale = _extend_geometry(original, background)
-        if fit_scale is not None and cover_scale > fit_scale:
-            extended = _extend_backdrop_to_canvas(original, background, fit_scale)
-            if extended is not None:
-                return apply_circle_crop(extended), "circle_extend"
-        # Historical cover crop -- unreachable geometry, or `_extend_geometry`
-        # found no plausible mark (touches the frame, or the flood never left
-        # the border), or extending would need a clean edge line that doesn't
-        # exist (a still-transparent ring after `_opaque_bounds`). Every one
-        # of those keeps the tile exactly as it always rendered.
-        scale = cover_scale
-        resized = original.resize((max(FINAL_SIZE, round(original.width * scale)),
-                                   max(FINAL_SIZE, round(original.height * scale))),
-                                  Image.Resampling.LANCZOS)
-        left = (resized.width - FINAL_SIZE) // 2
-        top = (resized.height - FINAL_SIZE) // 2
-        canvas = resized.crop((left, top, left + FINAL_SIZE, top + FINAL_SIZE))
-        return apply_circle_crop(canvas), "circle_cover"
+        result, mode = _extend_or_cover(original, EXTEND_EDGE_SAMPLES)
+        # `disc_fill_consistency` catches a defect `inner_disc_min_alpha`
+        # structurally cannot: a disc that is fully opaque everywhere but
+        # whose corner fill doesn't match its edge fill (Freegle: a bright
+        # green mark on a fully-opaque WHITE tile border, cover-cropped to a
+        # green-on-white silhouette; Démolition William Perreault: the
+        # replicated band samples the tile's own darker gradient rim instead
+        # of its stable interior colour). Only measured, and only retried,
+        # when the default pass fails it -- 136 of 140 full-bleed assets
+        # pass on the first try and this changes nothing about how they were
+        # generated; the ladder below only ever REPLACES `result` with
+        # something that measurably passes, never with something untested,
+        # so the worst case is exactly today's behaviour.
+        if disc_fill_consistency(result) > DISC_FILL_MAX:
+            deep, deep_mode = _extend_or_cover(original, EXTEND_EDGE_SAMPLES_DEEP)
+            if disc_fill_consistency(deep) <= DISC_FILL_MAX:
+                result, mode = deep, deep_mode
+            else:
+                # The tile itself carries a uniform OPAQUE margin (not a
+                # transparent one -- `_opaque_bounds` already handles that
+                # case) that neither retry above can see past, because
+                # nothing in the flood/extend machinery treats "this colour
+                # never changes for 13 rows" as a boundary. Strip it and
+                # redo the whole extend-then-cover attempt on what's left.
+                trimmed = _trim_uniform_opaque_border(original)
+                if trimmed is not None:
+                    t_result, t_mode = _extend_or_cover(trimmed, EXTEND_EDGE_SAMPLES)
+                    if disc_fill_consistency(t_result) <= DISC_FILL_MAX:
+                        result, mode = t_result, t_mode
+        return result, mode
 
-    separated = tokenise_transparent_neutral_mark(remove_edge_background(original), theme)
+    separated = tokenise_transparent_neutral_mark(remove_edge_background(original), theme,
+                                                  allow_bimodal_stencil=key in BIMODAL_STENCIL_KEYS)
     return contain_node_artwork(separated, "safe_contain")
 
 
@@ -1462,6 +2107,116 @@ def inner_disc_min_alpha(im: Image.Image, radius: float = 110.0) -> int:
     if not inside.any():
         return 255
     return int(alpha[inside].min())
+
+
+def disc_fill_consistency(im: Image.Image) -> float:
+    """Euclidean RGB distance between the disc's diagonal (corner) fill and
+    its axis (edge-midpoint) fill, in the ring r=96..122 -- the guard
+    `inner_disc_min_alpha` cannot provide for a full-bleed disc, because
+    that defect is never a hole. Freegle (GB:N02) is fully opaque to
+    r<=126 (`inner_disc_min_alpha` reports 255) while still showing a
+    visibly wrong rounded-square silhouette: a bright-green squircle sits
+    inside a white cover-crop fill, because the source tile is 41% opaque
+    WHITE border around the mark, and cover-crop faithfully reproduces
+    that border out to the disc edge. A hole check cannot see a colour
+    that is simply wrong.
+
+    Diagonal vs axis, not inner-vs-outer, because inner-vs-outer conflates
+    "tile edge doesn't match tile centre" (the real defect) with "the mark
+    is a different colour from its own uniform surround" (completely
+    normal -- measured on the full 2026-08 set, an inner/outer test flagged
+    22 assets and nearly all were exactly this: Leiden University's white
+    crest on navy, DRZ's white mark on red). A tile-shape artefact reads as
+    a difference between the ring's DIAGONAL wedges (where a square tile's
+    rounded corner sits, cut off short of the disc edge) and its AXIS
+    wedges (where the tile still reaches all the way out) -- the disc
+    itself is circularly symmetric, so a genuine full-bleed fill has none
+    of this by construction, regardless of what colour the central mark is.
+
+    Modal colour, not median: the median mixes mark pixels into the
+    background estimate. Measured on R-Place (a clean, correctly-extended
+    navy disc with an off-centre orange "R"): the median-based version of
+    this test reported 155 (false positive, picking up the mark); modal
+    reports 0.1 (correct -- the fill really is uniform).
+
+    Threshold: measured across all 140 full-bleed 2026-08-17 assets, this
+    is 4 (Freegle 362.6, DWP FR:M15 62.4, DE:M05 29.3, NL:U05 20.9) then a
+    genuine gap down to <=4.1 for the other 136 -- 12 sits in that gap.
+    """
+    a = np.asarray(im.convert("RGBA"))
+    h, w = a.shape[:2]
+    cx, cy = (w - 1) / 2.0, (h - 1) / 2.0
+    yy, xx = np.mgrid[0:h, 0:w]
+    r = np.hypot(xx - cx, yy - cy)
+    ring = (r >= 96) & (r <= 122) & (a[:, :, 3] >= 250)
+    if not ring.any():
+        return 0.0
+    theta = np.degrees(np.arctan2(yy - cy, xx - cx)) % 90.0
+    folded = np.minimum(theta, 90.0 - theta)  # 0 = on-axis, 45 = on-diagonal
+    axis = ring & (folded <= 22)
+    diagonal = ring & (folded >= 23)
+
+    def modal_rgb(mask):
+        if not mask.any():
+            return None
+        rgb = a[:, :, :3][mask]
+        bins = rgb // 16
+        _uniq, inverse, counts = np.unique(bins, axis=0, return_inverse=True, return_counts=True)
+        top = counts.argmax()
+        return np.median(rgb[inverse == top], axis=0)
+
+    axis_rgb, diag_rgb = modal_rgb(axis), modal_rgb(diagonal)
+    if axis_rgb is None or diag_rgb is None:
+        return 0.0
+    return float(np.linalg.norm(axis_rgb - diag_rgb))
+
+
+def radial_fill_delta(im: Image.Image) -> float:
+    """Euclidean RGB distance between the disc's modal fill colour close to
+    its own centre (r < 80) and near its own edge (r 110..125) -- a region
+    `disc_fill_consistency` never measures: that check's ring sits at
+    r=96..122, entirely OUTSIDE where a tile's true interior fill lives, and
+    compares two wedges of that SAME ring to each other, never to the
+    centre. Démolition William Perreault (FR:M15) is the proof the two
+    checks watch different things: this measures 17.9 here (replicated band
+    227,42,29 vs. interior 238,50,41) while `disc_fill_consistency` reports
+    2.24 on the same asset, because that ring straddles both regions almost
+    evenly and the dominant colour bin wins on both sides.
+
+    Modal, not mean/median, for the same reason as `disc_fill_consistency`:
+    a plain average pulls the mark's own pixels into the estimate. Unlike
+    that function's ring wedges (circularly symmetric, so a mark is always a
+    minority there), r<80 can be MOSTLY mark when the mark is large and
+    centred -- Freegle's "freegle" wordmark covers 74% of its own inner
+    region, modal white at only a 26% plurality. Each region's modal colour
+    is only trusted when it is a real majority (>=0.5) of that region's
+    pixels; otherwise this returns 0.0 ("can't tell"), not a false alarm.
+    Measured: DWP's inner fill is a clean 62% majority, Freegle's a 26%
+    plurality -- the guard is what separates a genuine seam from a large mark.
+    """
+    a = np.asarray(im.convert("RGBA"))
+    h, w = a.shape[:2]
+    cx, cy = (w - 1) / 2.0, (h - 1) / 2.0
+    yy, xx = np.mgrid[0:h, 0:w]
+    r = np.hypot(xx - cx, yy - cy)
+    inner = (r < 80) & (a[:, :, 3] >= 250)
+    outer = (r >= 110) & (r <= 125) & (a[:, :, 3] >= 250)
+
+    def modal_rgb(mask):
+        if not mask.any():
+            return None
+        rgb = a[:, :, :3][mask]
+        bins = rgb // 16
+        _uniq, inverse, counts = np.unique(bins, axis=0, return_inverse=True, return_counts=True)
+        top = counts.argmax()
+        if counts[top] / mask.sum() < 0.5:
+            return None
+        return np.median(rgb[inverse == top], axis=0)
+
+    inner_rgb, outer_rgb = modal_rgb(inner), modal_rgb(outer)
+    if inner_rgb is None or outer_rgb is None:
+        return 0.0
+    return float(np.linalg.norm(inner_rgb - outer_rgb))
 
 
 def prepare_final(source: Path, dest: Path):

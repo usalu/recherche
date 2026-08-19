@@ -91,6 +91,16 @@ def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> N
                 if eid != target:
                     raw.peers[eid].add(target)
                     raw.peers[target].add(eid)
+        # The loops above only rewire references TO source found inside some
+        # OTHER eid's set (source used as a project value, or as a peer).
+        # `raw.part` is keyed by actor, so if source is itself an actor with
+        # its own participations (raw.part[source]), those are a different
+        # direction entirely and were never touched -- popping source below
+        # would silently drop them. Found merging Franck/Franck Bricks: Franck
+        # Bricks' own edge to Maison Vignette (raw.part[FB] = {MV}) vanished
+        # because only the "source referenced elsewhere" direction was wired.
+        if source in raw.part:
+            raw.part.setdefault(target, set()).update(raw.part[source])
         raw.peers.pop(source, None)
         raw.part.pop(source, None)
 

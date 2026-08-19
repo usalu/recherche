@@ -1921,6 +1921,46 @@ def candidate_rank(candidate, node=None):
     return weights.get(candidate.get("kind"), 0) + shape_bonus + size_bonus + identity_bonus
 
 
+# `candidate_rank`'s own size_bonus caps at 8 points -- nowhere near enough to
+# close the 30-point gap between kinds (e.g. apple_touch 100 vs og_image 70),
+# so a 180px icon can outrank a 2036px official transparent logo of a lower-
+# weighted kind and get upscaled until it visibly pixelates (measured: Seidl
+# + Seidl Architekten, DE:U35 -- a 180x180 apple-touch icon beat a 2036x338
+# og_image logo). A blanket resolution reweight fixes that but is far too
+# blunt: simulated across all 476 shipped logos, it swaps the file for 95 of
+# them -- including ones already confirmed correct (Roskilde Kommune,
+# DE:I05) -- turning a pixelation fix into a fifth of the bestand needing a
+# fresh identity check. This rule only overrides when the CURRENT pick is
+# genuinely small (short edge < 200px, i.e. likely to visibly pixelate once
+# placed in a 256px disc) AND a same-eligible alternative is drastically
+# bigger (>=10x the pixel count, not just "somewhat more"). Measured: 11 of
+# 476 nodes meet both conditions; DE:U35 is one, DE:I05 (233x233, already
+# well above the 200px floor) is not.
+CANDIDATE_SHARPNESS_MIN_EDGE = 200
+CANDIDATE_SHARPNESS_MIN_RATIO = 10
+
+
+def prefer_sharper_candidate(chosen, candidates, node=None):
+    """`chosen`, or a drastically higher-resolution alternative from the same
+    already-ranked, already-identity-safe `candidates` list -- see
+    CANDIDATE_SHARPNESS_MIN_EDGE/RATIO above for why the bar is this high.
+    """
+    if chosen is None:
+        return chosen
+    chosen_edge = min(chosen.get("width") or 1, chosen.get("height") or 1)
+    if chosen_edge >= CANDIDATE_SHARPNESS_MIN_EDGE:
+        return chosen
+    chosen_px = (chosen.get("width") or 1) * (chosen.get("height") or 1)
+    sharper = [c for c in candidates
+              if c["id"] != chosen["id"]
+              and (node is None or candidate_rank(c, node) > -1000)  # still identity-safe
+              and (c.get("width") or 1) * (c.get("height") or 1) >= CANDIDATE_SHARPNESS_MIN_RATIO * chosen_px]
+    if not sharper:
+        return chosen
+    sharper.sort(key=lambda c: (-(c.get("width") or 1) * (c.get("height") or 1), c["id"]))
+    return sharper[0]
+
+
 def current_candidate_transport(node, candidate):
     """Keep source and rights metadata in the compact current-review manifest."""
     value = {k: candidate.get(k) for k in (
@@ -1970,6 +2010,7 @@ def command_current_deep_review(_args):
         safe = [candidate for candidate in candidates if not candidate_rejection(node, candidate)]
         safe.sort(key=lambda candidate: (-candidate_rank(candidate, node), candidate["id"]))
         best = safe[0] if safe and not domain_rejection else None
+        best = prefer_sharper_candidate(best, safe, node)
         rows.append({
             "key": node["key"], "cc": current["cc"], "tid": current["tid"],
             "eid": current["eid"], "name": node["name"],
@@ -2337,10 +2378,10 @@ def command_current_finalize(_args):
             if not candidate:
                 raise RuntimeError(f"{current['key']}: current-only logo lacks selected candidate")
             source = FULL / candidate["preview_path"]
-            light, crop_mode = pilot.prepare_node_canvas(source, theme="light")
+            light, crop_mode = pilot.prepare_node_canvas(source, theme="light", key=current["key"])
             dark_source = (FULL / candidate["dark_preview_path"]
                            if candidate.get("dark_preview_path") else source)
-            dark, dark_mode = pilot.prepare_node_canvas(dark_source, theme="dark")
+            dark, dark_mode = pilot.prepare_node_canvas(dark_source, theme="dark", key=current["key"])
             if crop_mode != dark_mode:
                 raise RuntimeError(f"{current['key']}: current-only theme crop modes differ")
             needs_dark = (bool(candidate.get("dark_preview_path"))
@@ -2542,6 +2583,15 @@ for(const box of document.querySelectorAll('[data-review]')){
     updateSeen();
   });
 }
+const idToggle=document.querySelector('#idToggle');
+function setHideIds(hide){
+  document.body.classList.toggle('hide-ids', hide);
+  idToggle.classList.toggle('on', hide);
+  idToggle.textContent = hide ? 'IDs einblenden' : 'IDs ausblenden';
+  localStorage.setItem(STORE+'hide-ids', hide?'1':'0');
+}
+idToggle.addEventListener('click', ()=> setHideIds(!document.body.classList.contains('hide-ids')));
+setHideIds(localStorage.getItem(STORE+'hide-ids')==='1');
 function filter(){
   const q=document.querySelector('#q').value.toLowerCase();
   const cc=document.querySelector('#cc').value;
@@ -2577,6 +2627,9 @@ h2{{font-size:15px;min-height:36px;margin:0 0 4px}}
 .reason{{font-size:12px;color:#71685a}}
 .seen{{display:flex;align-items:center;gap:6px;font-size:12px;color:#536266}}
 .hidden{{display:none}}
+#idToggle{{font:inherit;padding:8px 12px;border:1px solid #8d918b;border-radius:8px;background:white;cursor:pointer}}
+#idToggle.on{{background:#001117;color:#f7f3e3;border-color:#001117}}
+body.hide-ids .plate,body.hide-ids .id{{display:none}}
 </style></head><body><header>
 <h1>Aktuelles Akteursnetz — vollständige Logo-Prüfung</h1>
 <p class="summary">619 Knoten · 541 Organisationen · {counts['logo']} Logo · {counts['none']} none · 78 bildlose Projekte · '''\
@@ -2587,6 +2640,7 @@ f'''{opacity} % Deckkraft · 0 offene Identitätsprüfungen{fallback_note}</p>
 <select id="result"><option value="">logo + none</option><option>logo</option><option>none</option></select>
 <select id="state"><option value="">alle Zustände</option><option value="plain">plain</option><option value="attested">attested</option><option value="hypo">hypo</option></select>
 <select id="mode"><option value="">alle Darstellungsmodi</option>{mode_options}</select>
+<button id="idToggle" type="button">IDs ausblenden</button>
 </div>
 <p class="progress"><span id="seenCount">0</span> von 541 angesehen</p>
 </header>
@@ -2607,6 +2661,7 @@ def command_suggest(_args):
         ranked = sorted(candidates, key=lambda c: (-candidate_rank(c, node), c["id"]))
         best = (ranked[0] if not domain_rejection and ranked
                 and candidate_rank(ranked[0], node) > 0 else None)
+        best = prefer_sharper_candidate(best, ranked, node)
         if best:
             result, candidate_id = "logo", best["id"]
             reason = f"Highest-ranked identity-safe official candidate: {best['kind']}; review is still required."
@@ -2898,7 +2953,7 @@ def command_finalize(_args):
                 canvas = apply_logo_opacity(canvas, decision.get("logo_opacity_percent", 100))
                 pilot.save_png(canvas, dest)
             else:
-                canvas, crop_mode = pilot.prepare_node_canvas(source, theme="light")
+                canvas, crop_mode = pilot.prepare_node_canvas(source, theme="light", key=node["key"])
                 # neutral_knockout always needs its theme-swapped sibling. A
                 # safe_contain mark ALSO needs one exactly when its content is
                 # neutral enough that tokenise_transparent_neutral_mark (inside
@@ -2909,7 +2964,7 @@ def command_finalize(_args):
                 # never drift from what the tokeniser itself decided.
                 dark_source = (FULL / candidate["dark_preview_path"]
                                if candidate.get("dark_preview_path") else source)
-                dark_canvas, dark_mode = pilot.prepare_node_canvas(dark_source, theme="dark")
+                dark_canvas, dark_mode = pilot.prepare_node_canvas(dark_source, theme="dark", key=node["key"])
                 if dark_mode != crop_mode:
                     raise ValueError(f"{node['key']}: theme crop modes differ")
                 needs_dark = (bool(candidate.get("dark_preview_path"))
@@ -2928,6 +2983,13 @@ def command_finalize(_args):
                         "source_url": candidate.get("final_url") or candidate.get("url"),
                         "dark_source_url": candidate.get("dark_final_url"),
                         "source_kind": candidate.get("kind"),
+                        # Recorded so validate can warn on a heavy upscale
+                        # (see CANDIDATE_SHARPNESS_MIN_EDGE/RATIO) without
+                        # having to re-open the candidate pool at validate
+                        # time -- this row is the only place that still has
+                        # the chosen candidate's own dimensions in hand.
+                        "source_width": candidate.get("width"),
+                        "source_height": candidate.get("height"),
                         "retrieved_at": candidate.get("retrieved_at") or pilot.today(),
                         "license_note": candidate.get("license_note") or "Official-site mark used for identification; no affiliation implied.",
                         "sha256": pilot.sha256_file(dest),
@@ -2947,7 +3009,7 @@ def command_finalize(_args):
 
 
 def validate_final_manifest(manifest):
-    errors, rows = [], manifest.get("nodes", [])
+    errors, warnings, rows = [], [], manifest.get("nodes", [])
     selection = pilot.load_json(SELECTION)["nodes"]
     if len(rows) != 762:
         errors.append(f"expected 762 rows, got {len(rows)}")
@@ -2994,6 +3056,22 @@ def validate_final_manifest(manifest):
                 min_inner = pilot.inner_disc_min_alpha(image.convert("RGBA"))
                 if min_inner < 250:
                     errors.append(f"{key}: translucent ring inside disc (min alpha {min_inner})")
+                # Non-blocking: `inner_disc_min_alpha` is provably blind to a
+                # whole defect class -- a disc that is fully opaque everywhere
+                # but whose corner fill colour doesn't match its edge fill
+                # (Freegle, GB:N02, measured 255 alpha throughout r<=126
+                # despite a visibly wrong rounded-square silhouette). Only
+                # `disc_fill_consistency` (diagonal-vs-axis modal colour, see
+                # pilot_images.py) can see this. Warning, not an error,
+                # because the fix ladder in `prepare_node_canvas` already
+                # resolves every case measured under DISC_FILL_MAX at
+                # generation time -- this only catches a FUTURE source that
+                # slips past that ladder, so a human looks at it rather than
+                # the build silently regressing to the old alpha-only guard.
+                fill_gap = pilot.disc_fill_consistency(image.convert("RGBA"))
+                if fill_gap > pilot.DISC_FILL_MAX:
+                    warnings.append(f"{key}: disc fill colour disagrees corner-vs-edge "
+                                   f"(distance {fill_gap:.1f}) -- check for a swallowed mark")
         if pilot.sha256_file(path) != row.get("sha256"):
             errors.append(f"{key}: final checksum mismatch")
         dark_rel = row.get("dark_asset_path")
@@ -3013,21 +3091,46 @@ def validate_final_manifest(manifest):
                     errors.append(f"{key}: dark checksum mismatch")
         if not row.get("source_url") or not row.get("source_kind") or not row.get("license_note"):
             errors.append(f"{key}: incomplete provenance")
-    return errors
+        # Non-blocking: a heavily upscaled source visibly pixelates (Seidl +
+        # Seidl Architekten, DE:U35, was 180px selected over a 2036px file --
+        # see prefer_sharper_candidate). This does not fail validate; it only
+        # surfaces a future case for a human to look at, the same principle
+        # as ENTSCHEIDUNGEN.md's "the measurement searches, the eye decides".
+        sw, sh = row.get("source_width"), row.get("source_height")
+        if sw and sh:
+            # `contain_node_artwork` scales by min(target/w, target/h) --
+            # i.e. by the LARGER source dimension, the one that constrains
+            # fitting inside the target box. A wide banner (512x131) has its
+            # 512px width shrunk to fit; only its unremarkable 131px height
+            # grows, well inside the box. Comparing against the SMALLER
+            # source edge (as an earlier version of this check did) reads
+            # that as an 8x "upscale" and fires on ordinary wide wordmarks --
+            # measured: 68 false positives, none of them upscaled at all.
+            # The real constraining edge is the LARGER one; only when even
+            # that is smaller than the target does the source truly upscale.
+            source_long_edge = max(sw, sh)
+            target_edge = pilot.SAFE_RADIUS * 2  # what safe_contain/neutral_knockout target
+            if source_long_edge > 0 and target_edge / source_long_edge >= 1.5:
+                warnings.append(f"{key}: source is only {sw}x{sh}px, "
+                               f"upscaled {target_edge / source_long_edge:.1f}x -- check for pixelation")
+    return errors, warnings
 
 
 def command_validate(_args):
     if not FINAL_MANIFEST.exists():
         raise FileNotFoundError("final manifest does not exist; complete review and run finalize")
-    errors = validate_final_manifest(pilot.load_json(FINAL_MANIFEST))
+    errors, warnings = validate_final_manifest(pilot.load_json(FINAL_MANIFEST))
     if errors:
         print("FAIL\n" + "\n".join(" - " + e for e in errors)); raise SystemExit(1)
-    print("PASS: 762/762 explicitly confirmed; assets and provenance valid")
+    if warnings:
+        print("PASS with warnings:\n" + "\n".join(" - " + w for w in warnings))
+    else:
+        print("PASS: 762/762 explicitly confirmed; assets and provenance valid")
 
 
 def command_patch(args):
     manifest = pilot.load_json(FINAL_MANIFEST)
-    errors = validate_final_manifest(manifest)
+    errors, _warnings = validate_final_manifest(manifest)
     if errors:
         raise ValueError("final manifest invalid; run validate first")
     export = pilot.load_json(EXPORT)
