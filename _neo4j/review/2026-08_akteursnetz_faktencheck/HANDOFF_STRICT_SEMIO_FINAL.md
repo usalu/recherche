@@ -1,5 +1,32 @@
 # Finaler Handoff: Strict Research-only Cleanup → Neo4j und Semio
 
+## Verbindliches Update 20.08.2026: Beziehungsprofil
+
+Dieser Abschnitt ersetzt alle später im Dokument genannten Angaben zur
+`Beziehungsdauer` und zur Zahl von 264 sichtbaren Kanten.
+
+- Aktueller LaTeX-Bestand: **618 sichtbare Knoten / 262 sichtbare Kanten**.
+- Entfernt: **AT:K004** und **NL:K019**, weil die konkrete Beziehung nicht
+  belegt ist. Die vier Endknoten bleiben sichtbar.
+- Jede verbleibende Kante besitzt Belegzitat, URL, Beschreibung und ein
+  freigegebenes `Beziehungsprofil`.
+- Hauptklassen: **Projektübergreifend** und **Vorhabenspezifisch**.
+- Verteilung: 39 institutionell, 7 strategisch, 5 operativ, 199 Vorhaben,
+  8 Leistungen, 4 Ereignisse.
+- Die Tabellenspalte heißt `Beziehungsprofil`; `Beziehungsdauer` entfällt.
+- Neo4j wurde nicht beschrieben.
+- Die 71-Projekte-Erweiterung darf nur mit den Korrekturen aus
+  `beziehungsprofil_review/ERWEITERUNG_KORREKTUREN_FREIGEGEBEN.json`
+  übernommen werden.
+- Fertiges Tabellenfragment:
+  `E:/recherche/_neo4j/netz/figs/frag_tables_grid.tex`.
+- Visuell geprüfte Forschungsbericht-QA:
+  `E:/recherche/output/pdf/akteursnetz_beziehungsprofil_qa.pdf`.
+
+Die Synchronisierung in `E:/semio` bleibt dem dort vorgeschriebenen
+Ticket-/Nx-Ablauf vorbehalten. Keine direkte unprotokollierte Semio-Änderung
+wurde vorgenommen.
+
 Stand: 2026-08-14  
 Status: fachlich abgeschlossen, in `mit-bestand` angewendet und validiert
 
@@ -92,9 +119,9 @@ Zusätzliche Sicherung vor der abschließenden Typreparatur:
 
 Sie enthalten 540 Akteure, 78 Projekte und 9 getrennte Programme. Die
 Akteurs-/Projektansicht enthält exakt 264 freigegebene Kanten. Jede sichtbare
-Kante trägt eine einzeln geprüfte Laufzeit; die Beziehungstabelle zeigt sie in
-der Spalte `Dauer` (40 dauerhaft, 32 befristeter Verbund, 173 projektgebunden,
-19 einmalig, 0 unklar).
+Kante trägt eine einzeln geprüfte Laufzeit; die Tabelle `Akteursbeziehungen`
+zeigt sie in der Spalte `Beziehungsdauer` (40 dauerhaft, 32 befristeter
+Verbund, 173 projektgebunden, 19 einmalig, 0 unklar).
 
 ## Auftrag für den nächsten Semio-Agenten
 

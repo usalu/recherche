@@ -20,6 +20,7 @@ class FinalKantenActivationTests(unittest.TestCase):
         # now authoritative; five relationships exposed only by reviewed
         # project->actor re-types are explicitly pruned as well.
         prune = _pairs(DEFAULT.prune_kanten_final_path)
+        profile_prune = _pairs(DEFAULT.prune_beziehungsprofil_final_path)
         with open(DEFAULT.kanten_klassifikation_path, encoding="utf-8") as handle:
             reviewed = json.load(handle)
         self.assertEqual(472, len(reviewed))
@@ -35,9 +36,11 @@ class FinalKantenActivationTests(unittest.TestCase):
             for rows in classified.values()
             for edge in rows
         }
-        self.assertEqual(264, len(drawn))
+        self.assertEqual(262, len(drawn))
         self.assertEqual(visible_reviewed, drawn)
         self.assertFalse(prune & drawn)
+        self.assertEqual(2, len(profile_prune))
+        self.assertFalse(profile_prune & drawn)
 
         visible = set()
         for panel in network.panels.values():

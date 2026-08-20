@@ -58,10 +58,10 @@ IMG_MID = -0.8
 # -- eine Art-Spalte daneben haette bei rund einem Fuenftel der Zeilen exakt
 # dasselbe Wort zweimal nebeneinander gezeigt (z. B. "Fachplanung" | "Fachplanung.").
 # Beschreibung rueckt deshalb an die alte Art-Position (34,0 statt 91,5).
-# Die einzeln belegte Dauer ist eine eigene Aussage und steht sichtbar rechts
-# daneben. 114 mm fuer 60 Zeichen Beschreibung und 28 mm fuer die laengste
-# Dauerbezeichnung passen bei 5,8 pt ohne Ueberlappung.
-X_VON, X_BESCH, X_DAUER, X_QK = 5.5, 34.0, 148.0, 176.0
+# Das normalisierte Beziehungsprofil steht rechts daneben. 102 mm fuer die
+# maximal 60 Zeichen lange Beschreibung und 40 mm fuer die zweistufige
+# Profilbezeichnung passen bei 5,8 pt ohne Ueberlappung.
+X_VON, X_BESCH, X_PROFILE, X_QK = 5.5, 34.0, 136.0, 176.0
 BESCH_MAX = REL_MAX
 
 
@@ -125,7 +125,7 @@ NODE_COLS = [(X_NR, "ID"), (X_NAME, "Name"), (X_CODE, "Rolle"),
 # build fails with "could not represent character" once the macro itself
 # renders correctly. Plain "->"/"--" need no glyph and match the mono ID font.
 EDGE_COLS = [(X_VON, "Von -> Nach"), (X_BESCH, "Beschreibung"),
-             (X_DAUER, "Dauer"), (X_QK, "Q")]
+             (X_PROFILE, "Beziehungsprofil"), (X_QK, "Q")]
 
 
 def _row(net, e, y, kl, qnum, images, dim: bool = False):
@@ -176,9 +176,11 @@ def _edge_row(net, kante, y, qnum):
     pfeil = "--" if kante.get("richtung") == "—" else "->"
     paar = "%s %s %s" % (esc(net.tid.get(a, "?")), pfeil, esc(net.tid.get(b, "?")))
     besch = kante.get("beschreibung") or ""
-    dauer = kante.get("dauer") or ""
-    if not dauer:
-        raise RuntimeError(f"sichtbare Kante {kante.get('id')} hat keine Dauer")
+    profile = kante.get("beziehungsprofil") or ""
+    if not profile:
+        raise RuntimeError(
+            f"sichtbare Kante {kante.get('id')} hat kein Beziehungsprofil"
+        )
     q = qnum.get(kante.get("evidence_url") or "", "")
     return [
         r"\node[anchor=base west, font=\SemioMono\fontsize{5.8pt}{6pt}\selectfont, "
@@ -188,7 +190,7 @@ def _edge_row(net, kante, y, qnum):
         % (X_BESCH, y, _clip(besch, BESCH_MAX)),
         r"\node[anchor=base west, font=\SemioSans\fontsize{5.8pt}{6pt}\selectfont, "
         r"text=semio-chrome-text-normal, inner sep=0] at (%.1f,%.2f) {%s};"
-        % (X_DAUER, y, _clip(dauer, 22)),
+        % (X_PROFILE, y, _clip(profile, 40)),
         r"\node[anchor=base west, font=\SemioMono\fontsize{5.8pt}{6pt}\selectfont, "
         r"text=semio-chrome-border-normal, inner sep=0] at (%.1f,%.2f) {%s};" % (X_QK, y, q),
     ]
@@ -294,7 +296,7 @@ def build_grid_fragment(net, out_path, klassifikation_path=None,
             for k in ks:
                 items.append(("kante", k, cc))
 
-    out = [r"\section{Akteurstabellen nach Land}", "",
+    out = [r"\section{Akteursbeziehungen}", "",
            r"{\SemioSans\fontsize{7.6pt}{9.5pt}\selectfont ID = Typ-Buchstabe + laufende Nummer je Land "
            r"(z.\,B. \textbf{M07}) \textendash\ identisch mit der Kreis-Beschriftung im zugeh\"origen "
            r"Netzdiagramm (Kap. Akteursnetze). "

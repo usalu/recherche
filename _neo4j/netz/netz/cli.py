@@ -20,7 +20,7 @@ from .render.latex.table_grid import build_grid_fragment
 from .render.latex.programme_table import build_programme_fragment
 
 GRAPH_SECTION_TITLE = "Akteursnetze nach Land"
-TABLE_SECTION_TITLE = "Akteurstabellen nach Land"
+TABLE_SECTION_TITLE = "Akteursbeziehungen"
 
 
 def build_graph_fragment(net, out_path: str, images=None, countries=None, edge_kinds=None):
@@ -69,7 +69,8 @@ def load_network():
                strict.exclude |
                strict.programmes)
     edge_exclude = (load_edge_exclude(DEFAULT.unklar_edges_path) |
-                    load_edge_exclude(DEFAULT.prune_kanten_final_path))
+                    load_edge_exclude(DEFAULT.prune_kanten_final_path) |
+                    load_edge_exclude(DEFAULT.prune_beziehungsprofil_final_path))
     country_overrides = load_country_overrides(DEFAULT.latex_country_overrides_path)
     return build_network(DEFAULT, exclude=exclude, edge_exclude=edge_exclude,
                          strict_review=strict, country_overrides=country_overrides)

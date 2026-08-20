@@ -37,6 +37,12 @@ class Sources:
     prune_kanten_final_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/prune_kanten_final.json"
     )
+    # User-approved evidence gate for the LaTeX relationship review.  These
+    # pairs remain as visible endpoint nodes, but the unsupported relationship
+    # itself is not drawn or printed.
+    prune_beziehungsprofil_final_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/prune_beziehungsprofil_final.json"
+    )
     latex_country_overrides_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/latex_country_overrides.json"
     )

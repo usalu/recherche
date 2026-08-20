@@ -32,8 +32,8 @@ vollständige Bericht mit Begründung und Quelle je Kante steht in
 `KANTEN_DAUER_FINAL.md`, `kanten_dauer_final.csv` und
 `kanten_dauer_final.json`. Fünf dabei sichtbare Typkonflikte wurden korrigiert;
 die früheren Werte bleiben direkt an den betroffenen Kanten als Provenienz
-erhalten. Die LaTeX-Beziehungstabelle zeigt die Klassifikation in der neuen
-Spalte `Dauer`.
+erhalten. Die LaTeX-Tabelle `Akteursbeziehungen` zeigt die Klassifikation in
+der Spalte `Beziehungsdauer`.
 
 Die Graph-Topologie bleibt 618/264; kein Neo4j-Schreibzugriff.
 
@@ -290,3 +290,24 @@ Neo4j bleibt die Quelle der Wahrheit; dieser Ordner ist Transport und Review.
 5. Bericht mit `--skip-nx-cache` gebaut, beide PDFs neuer als der Asset-Sync
 6. Stichprobe im gebauten PDF angesehen, **hell und dunkel**
 7. Kein Neo4j-Write
+
+## 13. Beziehungsprofil statt Beziehungsdauer (20.08.2026)
+
+Verbindliche Hauptklassen:
+
+- `Projektübergreifend`: Beziehung gilt über mehrere Projekte oder eine
+  formale gemeinsame Struktur hinweg.
+- `Vorhabenspezifisch`: Beziehung gilt nur für ein konkretes Projekt, einen
+  Auftrag oder ein Ereignis.
+
+Unterklassen: `institutionell`, `strategisch`, `operativ`, `Vorhaben`,
+`Leistung`, `Ereignis`. Laufend/beendet und eine zeitliche Dauer werden nicht
+klassifiziert.
+
+Aktueller LaTeX-Stand nach Anwendung: **618 Knoten / 262 Kanten**. AT:K004 und
+NL:K019 wurden als unbelegt entfernt; alle Endknoten bleiben sichtbar. Jede
+verbleibende Kante besitzt mindestens eine Quellen-URL und ein Belegzitat.
+
+Die neun Sonderentscheidungen und die verbindlichen Korrekturen der
+71-Projekte-Erweiterung stehen unter
+`beziehungsprofil_review/ERWEITERUNG_KORREKTUREN_FREIGEGEBEN.json`.

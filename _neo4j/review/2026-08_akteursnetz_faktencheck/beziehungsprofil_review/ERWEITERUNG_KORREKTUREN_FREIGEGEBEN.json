@@ -1,0 +1,115 @@
+{
+  "decision_date": "2026-08-20",
+  "approved": true,
+  "scope": "LaTeX actor-network expansion; no Neo4j write",
+  "taxonomy": {
+    "column": "Beziehungsprofil",
+    "primary_classes": [
+      "Projektübergreifend",
+      "Vorhabenspezifisch"
+    ],
+    "allowed_values": [
+      "Projektübergreifend / institutionell",
+      "Projektübergreifend / strategisch",
+      "Projektübergreifend / operativ",
+      "Vorhabenspezifisch / Vorhaben",
+      "Vorhabenspezifisch / Leistung",
+      "Vorhabenspezifisch / Ereignis"
+    ]
+  },
+  "edge_actions": [
+    {
+      "key": "candidate-edge:proposal:proj:108:B:3",
+      "action": "remove",
+      "reason": "Norsk Folkemuseum ist nicht als Beteiligter am Spenderprojekt Nedre Sem belegt."
+    },
+    {
+      "key": "candidate-edge:proposal:proj:104:A:1",
+      "action": "remove",
+      "reason": "Die Liljewall-Quelle belegt nicht dieselbe Peab-Etappe wie die übrigen Ekebäckshöjd-Kanten."
+    },
+    {
+      "key": "candidate-edge:proposal:proj:115:A:1",
+      "action": "remove",
+      "reason": "Das Fallbeispiel belegt keine Forschungsbegleitung durch die BTU."
+    },
+    {
+      "key": "proposal:proj:106:B:4",
+      "action": "add",
+      "source_actor": "Brukspecialisten",
+      "target_project": "Borås nya tingsrätt",
+      "relationship_type": "Bauteillieferung",
+      "description": "Lieferte 2.700 m² wiederverwendete Ziegel.",
+      "profile": "Vorhabenspezifisch / Vorhaben",
+      "evidence_url": "https://brukspecialisten.se/projekt-post-type/boras-nya-tingsratt/"
+    },
+    {
+      "key": "replacement:tradlab-tre:norsk-folkemuseum",
+      "action": "add",
+      "source_actor": "Norsk Folkemuseum",
+      "target_project": "TradLab TRE",
+      "relationship_type": "Bauteileinbau",
+      "description": "Verbaute Holz aus der Nedre-Sem-Låve.",
+      "profile": "Vorhabenspezifisch / Vorhaben",
+      "evidence_url": "https://norskfolkemuseum.no/handverkstunet"
+    },
+    {
+      "key": "candidate-edge:proposal:rejected:P41-B03",
+      "action": "replace_evidence",
+      "relationship_type": "Entwurf",
+      "description": "Plante den Einbau wiederverwendeter Materialien.",
+      "profile": "Vorhabenspezifisch / Vorhaben",
+      "evidence_url": "https://rotordb.org/en/projects/multi-de-brouckere-tower",
+      "evidence_quote": "Rotor assisted Whitewood and CONIX RDBM during design and construction."
+    }
+  ],
+  "node_actions": [
+    {
+      "key": "proj:95",
+      "action": "rename",
+      "name": "La Caserne de Reuilly"
+    },
+    {
+      "source_name": "Royal BAM Group / BAM Bouw en Techniek",
+      "action": "merge",
+      "target_name": "BAM Bouw en Techniek"
+    },
+    {
+      "names": [
+        "Dura Vermeer",
+        "Dura Vermeer Bouw Zuid"
+      ],
+      "action": "keep_separate"
+    },
+    {
+      "names": [
+        "IMd Raadgevende Ingenieurs",
+        "Van Rossum Raadgevende Ingenieurs"
+      ],
+      "action": "keep_separate"
+    }
+  ],
+  "baseline_edge_actions": {
+    "remove": [
+      "AT:K004",
+      "NL:K019"
+    ],
+    "keep_with_correction": [
+      "AT:K023",
+      "CH:K007",
+      "CH:K026",
+      "CH:K036",
+      "DE:K002",
+      "DE:K005",
+      "SE:K023",
+      "SE:K025"
+    ]
+  },
+  "hard_gate": {
+    "remove_without_source_url": true,
+    "remove_without_relationship_evidence": true,
+    "description_max_characters": 60,
+    "isolated_nodes_remain_visible": true,
+    "profile_required_for_every_visible_edge": true
+  }
+}
