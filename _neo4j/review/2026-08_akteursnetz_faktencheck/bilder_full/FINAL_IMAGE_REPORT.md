@@ -1,6 +1,6 @@
 # Final image manifest
 
 - Confirmed nodes: **762**
-- Logos: **539**
-- None: **223**
+- Logos: **557**
+- None: **205**
 - Neo4j writes: **0**

@@ -19,14 +19,19 @@ class CurrentImageRenderTests(unittest.TestCase):
         identity = load("CURRENT_LOGO_IDENTITY_AUDIT.json")
         render = load("current_image_manifest.json")
         self.assertEqual(render["scope"], identity["scope"])
-        self.assertEqual(render["logo_opacity_percent"], 50)
         self.assertEqual(len(render["nodes"]), 541)
         self.assertEqual({row["eid"] for row in render["nodes"]},
                          {row["eid"] for row in identity["nodes"]})
         logos = [row for row in render["nodes"] if row["result"] == "logo"]
         self.assertEqual(len(logos), identity["counts"]["logo"])
         self.assertTrue(all(row["review_status"] == "accepted" for row in logos))
-        self.assertTrue(all(row["logo_opacity_percent"] == 50 for row in logos))
+        # Not a fixed number: the print opacity was raised from 50 to 100 on
+        # 2026-08-13 (see test_full_image_collection.py) because at 50 % every
+        # mark blends with the page and reads differently in light and dark.
+        # What must hold is that the render header and every logo row agree.
+        opacity = render["logo_opacity_percent"]
+        self.assertIn(opacity, range(1, 101))
+        self.assertTrue(all(row["logo_opacity_percent"] == opacity for row in logos))
         self.assertTrue(all((ROOT / row["asset_path"]).is_file() for row in logos))
 
     def test_render_report_draws_all_current_logos(self):

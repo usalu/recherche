@@ -2739,7 +2739,8 @@
       "decision": "keep",
       "merge_target_eid": null,
       "reason_codes": [
-        "actor_specific_reuse_evidence"
+        "actor_specific_reuse_evidence",
+        "merge_target_of_be_u17"
       ],
       "corrected_name": null,
       "corrected_type": null,
@@ -2747,45 +2748,11 @@
       "current_status": "active",
       "reuse_scope": "direct_enabler",
       "roles": [
-        "Bergung"
-      ],
-      "relevance": "Birgt und verkauft wiedergewonnene Fassadenziegel für neue Bauprojekte.",
-      "reuse_objects": [],
-      "evidence": [
-        {
-          "url": "https://www.franck.be/en/about-us",
-          "quote": "the production and trade of unique roof tiles, new and reclaimed facade bricks",
-          "supports_roles": [
-            "Bergung"
-          ],
-          "accessed_at": "2026-08-13"
-        }
-      ],
-      "primary_reviewer": "B",
-      "verified_by": "A",
-      "review_status": "cross_review_complete"
-    },
-    {
-      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5480",
-      "audit_id": "BE:U17",
-      "current_name": "Franck Bricks",
-      "decision": "keep",
-      "merge_target_eid": null,
-      "reason_codes": [
-        "actor_specific_reuse_evidence",
-        "cross_review_role_correction"
-      ],
-      "corrected_name": null,
-      "corrected_type": null,
-      "corrected_country": null,
-      "current_status": "active",
-      "reuse_scope": "actual_reuse",
-      "roles": [
-        "Rücknahme",
+        "Bergung",
         "Aufarbeitung",
         "Bauteilhandel"
       ],
-      "relevance": "Übernimmt Fassadenziegel, reinigt sie und verkauft sie für neue Bauprojekte.",
+      "relevance": "Birgt Fassadenziegel, arbeitet sie auf und verkauft sie für neue Bauprojekte.",
       "reuse_objects": [
         "Fassadenziegel"
       ],
@@ -2794,7 +2761,7 @@
           "url": "https://www.franck.be/en/collection-of-bricks",
           "quote": "If you carry out the demolition work yourself, we will be happy to collect your facing bricks for recovery. We ensure that the facing bricks are cleaned and counted.",
           "supports_roles": [
-            "Rücknahme",
+            "Bergung",
             "Aufarbeitung"
           ],
           "accessed_at": "2026-08-13"
@@ -2808,6 +2775,29 @@
           "accessed_at": "2026-08-13"
         }
       ],
+      "primary_reviewer": "B",
+      "verified_by": "A",
+      "review_status": "cross_review_complete"
+    },
+    {
+      "eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:5480",
+      "audit_id": "BE:U17",
+      "current_name": "Franck Bricks",
+      "decision": "merge",
+      "merge_target_eid": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:4871",
+      "reason_codes": [
+        "duplicate_entity",
+        "same_company_two_nodes"
+      ],
+      "corrected_name": null,
+      "corrected_type": null,
+      "corrected_country": null,
+      "current_status": "active",
+      "reuse_scope": "actual_reuse",
+      "roles": [],
+      "relevance": "Doppelter Knoten fuer dieselbe Firma (franck.be); der kanonische Franck-Knoten (BE:U04, eid ...4871) bleibt erhalten und traegt beide Rollen.",
+      "reuse_objects": [],
+      "evidence": [],
       "primary_reviewer": "B",
       "verified_by": "A",
       "review_status": "cross_review_complete"

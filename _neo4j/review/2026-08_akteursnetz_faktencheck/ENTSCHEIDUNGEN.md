@@ -1,7 +1,13 @@
 # Entscheidungen: Knotenlogos, Dunkelbild und Prüfdokumente
 
-**Stand:** 2026-08-16 · Gilt für den Akteursnetz-Anhang des Zwischenberichts
-(Abbildungen AN.1, Tabellen AN.2, Programme AN.3).
+**Stand:** 2026-08-16 · Gilt für den Akteursnetz-Anhang.
+
+**Nachtrag 2026-08-19:** der Anhang steht inzwischen im **Forschungsbericht**,
+nicht mehr im Zwischenbericht (`netz/sources.py:report_anhang_root`
+entsprechend umgestellt). Nach der Beziehungstext-Kürzung und der
+Franck/Franck-Bricks-Zusammenführung: **618 Knoten, 264 gezeichnete Kanten**
+(vorher 619/268) — Zahlen unten, die das noch als 619/268 nennen, beschreiben
+den damaligen Stand ihrer jeweiligen Messung, nicht mehr den aktuellen.
 
 Dieses Dokument hält fest, **was entschieden ist und warum**. Wer hier etwas
 ändert, ändert eine bereits getroffene Entscheidung — dann bitte die Begründung

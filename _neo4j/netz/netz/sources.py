@@ -85,8 +85,13 @@ class Sources:
     # Arbeitsverzeichnis das Berichtsverzeichnis ist (`asset/projekt/...`,
     # `asset/logo/...` -- die Fragmente reihen sich hier ein statt absolute
     # E:/recherche-Pfade in einen anderen Repostand zu schreiben).
+    #
+    # Wie `report_anhang_root` unten: der Akteursnetz-Anhang ist auf den
+    # Forschungsbericht umgezogen (Stand 2026-08-19); ein Ziel auf
+    # zwischenbericht/asset traegt keine der Bilder mehr, auf die die dort
+    # inzwischen fehlenden Fragmente verweisen wuerden.
     report_asset_root: str = (
-        r"E:/semio/mit-bestand/bericht/zwischenbericht/asset/akteur"
+        r"E:/semio/mit-bestand/bericht/forschungsbericht/asset/akteur"
     )
     report_asset_ref: str = "asset/akteur"
     # Wohin die erzeugten Fragmente im Bericht gehoeren. Es gibt keinen
@@ -94,8 +99,13 @@ class Sources:
     # und ein vergessener Handgriff laesst den Bericht stillschweigend einen
     # alten Stand drucken, ohne dass irgendein Check anschlaegt.
     # `netz.cli sync-fragments` macht daraus einen benannten Schritt.
+    #
+    # Der Akteursnetz-Anhang ist auf den Forschungsbericht umgezogen (Stand
+    # 2026-08-19). Ein Ziel auf zwischenbericht/anhang traegt kein Fragment
+    # mehr und liesse den Forschungsbericht still veralten, ohne dass ein
+    # Check anschlaegt -- genau der Fehler, den der Kommentar oben beschreibt.
     report_anhang_root: str = (
-        r"E:/semio/mit-bestand/bericht/zwischenbericht/anhang"
+        r"E:/semio/mit-bestand/bericht/forschungsbericht/anhang"
     )
     report_fragments: tuple = (
         ("frag_abb_netz.tex", "akteursnetz-figuren.tex"),

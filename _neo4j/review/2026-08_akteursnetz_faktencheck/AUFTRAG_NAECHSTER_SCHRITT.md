@@ -9,12 +9,19 @@ Prüfen auffällt — dort gemeldet, nicht selbst geändert. (Offen und dort
 gemeldet: die Spaltenüberschrift steht am Kopf der AN.2-Seiten doppelt.)
 
 Arbeitsordner: `E:\recherche\_neo4j\review\2026-08_akteursnetz_faktencheck`
-Bericht: `E:\semio\mit-bestand\bericht\zwischenbericht`
+Bericht: `E:\semio\mit-bestand\bericht\forschungsbericht` (**Nachtrag
+2026-08-19:** umgezogen vom Zwischenbericht; `netz/sources.py:report_anhang_root`
+entsprechend angepasst)
 
 **Vor dem ersten Eingriff `ENTSCHEIDUNGEN.md` lesen.** Dort stehen die
 getroffenen Entscheidungen mit Begründung — Deckkraft, Beschnitt, Dunkelbild,
 Sperrlisten, Fragmenterzeugung, Prüfdisziplin. Wer dort einen Wert ändert,
 ändert eine Entscheidung und muss die Begründung mitändern.
+
+**Nachtrag 2026-08-19:** Beziehungstexte gekürzt, Art-Spalte entfernt,
+Franck/Franck Bricks zusammengeführt. Aktueller Stand: **618 Knoten,
+264 gezeichnete Kanten** (nicht mehr 619/268 wie unten an einigen Stellen
+noch genannt).
 
 Stand 16.08.2026, alles gebaut und grün: 476 der 541 Organisationen tragen ein
 Logo (88 %), Abbildungen und Tabellen übereinstimmend, `validate` 762/762 PASS,

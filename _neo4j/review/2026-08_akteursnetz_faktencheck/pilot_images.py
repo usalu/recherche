@@ -392,16 +392,27 @@ def structured_organisation_logos(value):
 
 
 def css_header_logo_candidates(css_text: str, stylesheet_url: str):
-    """Find image URLs used by header/navigation logo CSS rules."""
+    """Find image URLs used by header/navigation logo CSS rules.
+
+    A rule counts if EITHER the selector OR the declaration's own url(...)
+    contains logo|wordmark|brandmark -- the selector alone missed TEXTIFLOOR
+    (FR:M56): its real logo is `#main > header { background:
+    url('img/logo.png') ... }`, a selector naming the layout region, not the
+    image. The URL is the half that actually says "logo" in that case, and
+    checking only the selector discarded it, leaving the node with zero
+    header-logo candidates at all.
+    """
     output = []
     # Parse one flat rule at a time. The former unbounded selector regex could
     # backtrack quadratically on multi-megabyte minified bundles.
     for match in re.finditer(r"([^{}]{0,4096})\{([^{}]{0,131072})\}", css_text):
         selector, declarations = match.groups()
-        if not re.search(r"logo|wordmark|brandmark", selector, re.I):
-            continue
+        selector_hit = bool(re.search(r"logo|wordmark|brandmark", selector, re.I))
         for url_match in re.finditer(r"url\(\s*['\"]?([^)'\"]+)", declarations, re.I):
-            output.append(urllib.parse.urljoin(stylesheet_url, html.unescape(url_match.group(1).strip())))
+            raw_url = url_match.group(1).strip()
+            if not selector_hit and not re.search(r"logo|wordmark|brandmark", raw_url, re.I):
+                continue
+            output.append(urllib.parse.urljoin(stylesheet_url, html.unescape(raw_url)))
     return output
 
 
@@ -1642,12 +1653,76 @@ def _drop_faint_edge_bands(im: Image.Image, faint_alpha_max: int = 160,
             return 0
         return band_end
 
+    def edge_depth_uniform(lines: "np.ndarray", fraction_min: float = 0.8,
+                            max_depth: int = 10) -> int:
+        """Fallback for a band with NO gap at all before ink (`edge_depth`
+        above always returns 0 there). `lines` is pre-oriented so index 0 of
+        each row is the edge itself and increasing index moves inward --
+        one line per row (right/left edges) or per column (top/bottom
+        edges), matching how `edge_depth` above is fed pre-reversed profiles
+        at each of its own four call sites.
+
+        A genuine mark's own antialiasing only appears LOCALLY, where its
+        silhouette happens to cross that edge, so depth varies line to line
+        and most lines have none at all. A source's own baked-in edge
+        fringe instead sits at a near-CONSTANT depth across nearly every
+        line, because it belongs to the file's own border, not the mark's
+        shape. Measured on Romsey Reclamation (GB:M17): the right edge's
+        faint band is depth exactly 4 on 328 of 334 rows (98%) with zero
+        gap before real ink on any of them -- `edge_depth` never trims it,
+        `contain_node_artwork` then centres on a bounding box the width of
+        the whole 1118px source instead of the ~450px mark, pushing the
+        intact logo 56px off-centre. `fraction_min` 0.8 sits well under
+        that 0.98 with real margin, and well over what a genuine varying
+        silhouette edge would show.
+
+        `max_depth` rules out the OTHER thing that can look "near-constant
+        across nearly every line": a deliberate soft drop-shadow. Measured
+        on DK:U29 (a red icon tile with its own cast shadow): the shadow's
+        uniform-looking depth pegs the 40px scan limit on 412 of 512 rows --
+        not a thin fringe at all, just a gradient too smooth to ever cross
+        `faint_alpha_max` within the scan window, and trimming it visibly
+        notched the shadow's own edge. 10 sits well above GB:M17's 4px with
+        real margin, and well below where a scan-limited gradient shows up.
+
+        A `mode_depth` of exactly 1 is excluded outright: a single
+        near-uniform edge pixel is ordinary JPEG/resize noise, not a
+        distinct baked-in fringe -- measured on the 335-asset
+        `safe_contain`/`neutral_knockout` corpus, four assets (including
+        Historisches Bauteillager Ostschweiz, CH:M09, an asset a previous
+        round explicitly required to stay untouched) had exactly this, and
+        trimming it changed nothing visible, only technically.
+        """
+        depths = np.zeros(lines.shape[0], dtype=int)
+        limit = min(lines.shape[1], 40)
+        for k in range(lines.shape[0]):
+            line = lines[k]
+            i = 0
+            while i < limit and 0 < line[i] <= faint_alpha_max:
+                i += 1
+            depths[k] = i
+        nonzero = depths[depths > 0]
+        if nonzero.size < 0.5 * lines.shape[0]:
+            return 0
+        values, counts = np.unique(nonzero, return_counts=True)
+        mode_index = counts.argmax()
+        if counts[mode_index] / lines.shape[0] < fraction_min:
+            return 0
+        mode_depth = int(values[mode_index])
+        if mode_depth < 2 or mode_depth > max_depth:
+            return 0
+        # Still require real ink somewhere past the trimmed depth, same
+        # safety condition as edge_depth's own final check.
+        if not (lines[:, mode_depth:] >= ink_alpha_min).any():
+            return 0
+        return mode_depth
+
     row_max = alpha.max(axis=1)
     col_max = alpha.max(axis=0)
-    top = edge_depth(row_max, h)
-    bottom = edge_depth(row_max[::-1], h)
-    left = edge_depth(col_max, w)
-    right = edge_depth(col_max[::-1], w)
+    top = edge_depth(row_max, h) or edge_depth_uniform(alpha.T)
+    bottom = edge_depth(row_max[::-1], h) or edge_depth_uniform(alpha.T[:, ::-1])
+    left = edge_depth(col_max, w) or edge_depth_uniform(alpha)
+    right = edge_depth(col_max[::-1], w) or edge_depth_uniform(alpha[:, ::-1])
     if top:
         alpha[:top, :] = 0
     if bottom:
@@ -2217,6 +2292,40 @@ def radial_fill_delta(im: Image.Image) -> float:
     if inner_rgb is None or outer_rgb is None:
         return 0.0
     return float(np.linalg.norm(inner_rgb - outer_rgb))
+
+
+LIGHT_BACKDROP_MARK_RADIUS_MIN = 60  # permanent validator floor for
+                                # light_backdrop_mark_radius(). The
+                                # contain_node_artwork bug this round shrank
+                                # every one of the 74 shipped light_backdrop
+                                # marks to a true radius of 6.5-9.9px against
+                                # a 108px budget -- 60 sits far above that
+                                # failure band and comfortably below a
+                                # correctly fitted mark (measured 100-107px
+                                # across the corrected set), so a future
+                                # regression of the same shape is caught long
+                                # before it reaches anything like the old
+                                # ~8px failure state.
+
+
+def light_backdrop_mark_radius(im: Image.Image) -> float:
+    """Farthest-from-centre pixel, in a `light_backdrop` disc, whose colour
+    differs from `SEMIO_LIGHT` by at least 30 (Chebyshev) at alpha >= 200 --
+    the actual visible MARK, as opposed to `alpha_max_radius`, which reports
+    a constant ~128 for every `light_backdrop` asset regardless of the mark's
+    real size (the whole disc is opaque by construction). This is the
+    measurement that would have caught this round's `contain_node_artwork`
+    regression directly: the mark radius, not the disc's own opacity.
+    """
+    a = np.asarray(im.convert("RGBA"))
+    h, w = a.shape[:2]
+    cx, cy = (w - 1) / 2.0, (h - 1) / 2.0
+    ref = np.array(SEMIO_LIGHT)
+    is_mark = (np.abs(a[:, :, :3].astype(int) - ref).max(axis=2) >= 30) & (a[:, :, 3] >= 200)
+    ys, xs = np.nonzero(is_mark)
+    if xs.size == 0:
+        return 0.0
+    return float(np.hypot(xs - cx, ys - cy).max())
 
 
 def prepare_final(source: Path, dest: Path):

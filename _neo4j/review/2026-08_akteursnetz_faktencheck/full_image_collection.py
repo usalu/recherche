@@ -445,6 +445,14 @@ MANUAL_NODE_RIGHTS = {
     },
 }
 
+# Candidate kinds sourced from the site's OWN declared identity markers --
+# <link rel=icon/apple-touch-icon>, a JSON-LD Organization.logo, or a mark
+# found inside a <header>/<nav> element -- as opposed to og_image/media_logo,
+# which can just as easily be editorial or third-party content. Used to scope
+# the long-edge short-edge-floor exception below to shapes that can only be
+# the site's own mark, never a photo.
+STRUCTURAL_IDENTITY_KINDS = {"declared_icon", "header_logo", "structured_logo"}
+
 # Findings from the complete 2026-08-13 visual identity audit. These are
 # deliberately key-specific: a weak or mismatched candidate must not teach the
 # collector a broad rule that could hide a valid logo for another actor.
@@ -591,7 +599,12 @@ MANUAL_CANDIDATE_URL_REJECTIONS = {
         "logo-ecc.jpg",
         "saey-logo-e1543329494186.png",
     ),
-    "FI:U04": ("durat_shareimage.png", "durat_logo_1200_x_3390_px_3.png"),
+    # "durat_logo_1200_x_3390_px_3.png" used to be blacklisted here alongside
+    # the share-image below -- wrongly: it is Durat's own full-resolution
+    # logo (reads "DURAT" plus the Finnish Avainlippu/Key-Flag mark), not a
+    # third-party asset. Removed; only the genuine social-share image stays
+    # locked.
+    "FI:U04": ("durat_shareimage.png",),
     "DK:M01": ("bango.dk/", "bango.b-cdn.net/"),
     "AT:I02": ("/icons/raw/",),
     "AT:N01": ("dachverbandLogo", "Logo_AMS_Wien", "hunger-logo", "/erfolgsgeschichten/logos/"),
@@ -1290,7 +1303,20 @@ def harvest_one(node, domain, node_dir=None, deep=False):
                            "retrieved_at": pilot.today(), "source_sha256": pilot.sha256_bytes(data)})
             if im.convert("RGBA").getchannel("A").getbbox() is None:
                 record["reason"] = "image has no visible pixels"
-            elif fmt != "svg" and min(im.size) < 128:
+            elif (fmt != "svg" and min(im.size) < 128
+                  and not (kind in STRUCTURAL_IDENTITY_KINDS and max(im.size) >= 128)):
+                # The short-edge floor alone systematically punishes the most
+                # common logo shape there is -- a wide, thin wordmark (CSTB
+                # 230x71, bauteilnetz Deutschland 384x88, Durat 140x66) --
+                # and was the single largest cause of a real, harvested,
+                # correctly-identified own logo being discarded (measured:
+                # 37 of 65 "none" nodes this round, all with a real logo
+                # sitting in their own <header>/<link rel=icon>/JSON-LD, not
+                # an editorial photo). `kind` is restricted to the
+                # structural/declared-identity kinds on purpose: og_image,
+                # media_logo, and editorial photography keep the short-edge
+                # floor unchanged, since THEY are exactly the class this
+                # floor was built to keep out.
                 record["reason"] = "short edge below 128px"
             else:
                 preview = node_dir / f"{record['id']}_{kind}.png"
@@ -3072,6 +3098,35 @@ def validate_final_manifest(manifest):
                 if fill_gap > pilot.DISC_FILL_MAX:
                     warnings.append(f"{key}: disc fill colour disagrees corner-vs-edge "
                                    f"(distance {fill_gap:.1f}) -- check for a swallowed mark")
+                # Non-blocking, same reasoning as disc_fill_consistency above
+                # but for the OTHER axis that check cannot see: its ring sits
+                # at r=96..122, entirely outside a tile's true interior fill
+                # (r<80). Démolition William Perreault measured 17.9 here
+                # while disc_fill_consistency reported 2.24 on the same
+                # asset -- proof the two watch different regions. Only makes
+                # sense for circle_cover/circle_extend, where the WHOLE disc
+                # is meant to be one uniform tile colour -- light_backdrop
+                # deliberately shows a mark near its centre against
+                # SEMIO_LIGHT near its edge, so the same centre-vs-edge gap
+                # there is the intended picture, not a seam (measured:
+                # GB:M25 reads 321 here for a perfectly correct disc).
+                if row.get("crop_mode") in {"circle_cover", "circle_extend"}:
+                    fill_delta = pilot.radial_fill_delta(image.convert("RGBA"))
+                    if fill_delta > pilot.DISC_FILL_MAX:
+                        warnings.append(f"{key}: disc fill colour disagrees centre-vs-edge "
+                                       f"(distance {fill_delta:.1f}) -- check the extend seam")
+                # Non-blocking: `alpha_max_radius` cannot see a `light_backdrop`
+                # regression at all -- the whole disc is opaque by
+                # construction, so it always reports ~128 regardless of how
+                # small the actual mark is. This round's contain_node_artwork
+                # bug shrank every one of 74 shipped light_backdrop marks to
+                # a true radius of 6.5-9.9px; light_backdrop_mark_radius is
+                # the check that would have caught it directly.
+                if row.get("crop_mode") == "light_backdrop":
+                    mark_r = pilot.light_backdrop_mark_radius(image.convert("RGBA"))
+                    if mark_r < pilot.LIGHT_BACKDROP_MARK_RADIUS_MIN:
+                        warnings.append(f"{key}: light_backdrop mark radius only {mark_r:.1f}px "
+                                       "-- check for a shrunk/missing mark")
         if pilot.sha256_file(path) != row.get("sha256"):
             errors.append(f"{key}: final checksum mismatch")
         dark_rel = row.get("dark_asset_path")

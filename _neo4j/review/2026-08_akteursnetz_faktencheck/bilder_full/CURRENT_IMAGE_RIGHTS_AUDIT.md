@@ -1,4 +1,4 @@
-# Current image-rights audit — 2026-08-15
+# Current image-rights audit — 2026-08-19
 
 ## Outcome
 

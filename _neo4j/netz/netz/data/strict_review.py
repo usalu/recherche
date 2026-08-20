@@ -99,8 +99,16 @@ def apply_strict_review(raw, new_proj_cc: dict, bundle: StrictReviewBundle) -> N
         # would silently drop them. Found merging Franck/Franck Bricks: Franck
         # Bricks' own edge to Maison Vignette (raw.part[FB] = {MV}) vanished
         # because only the "source referenced elsewhere" direction was wired.
+        #
+        # `- {target}` guards a self-loop: every sibling rewire above checks
+        # `eid != target` before adding, this one didn't. If source ever
+        # participates in a project that is itself the merge target, this
+        # would otherwise put target in raw.part[target] -- and
+        # mechanisms/countries.py builds k = (e, x) with no e != x check, so
+        # partition() would draw it as a real T -> T edge. Not reachable with
+        # today's 5 redirects, but one redirect away.
         if source in raw.part:
-            raw.part.setdefault(target, set()).update(raw.part[source])
+            raw.part.setdefault(target, set()).update(raw.part[source] - {target})
         raw.peers.pop(source, None)
         raw.part.pop(source, None)
 
