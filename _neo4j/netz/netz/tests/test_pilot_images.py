@@ -14,6 +14,10 @@ REPO = Path(__file__).resolve().parents[4]
 PILOT_DIR = REPO / "_neo4j" / "review" / "2026-08_akteursnetz_faktencheck"
 MANIFEST = PILOT_DIR / "bilder_pilot" / "pilot_transport_manifest.json"
 SCRIPT = PILOT_DIR / "pilot_images.py"
+MISSING_DIR = PILOT_DIR / "bilder_full" / "harvest_missing"
+MISSING_SELECTION = MISSING_DIR / "selection.json"
+MISSING_MANIFEST = MISSING_DIR / "manifest.json"
+MISSING_FREEZE = MISSING_DIR / "freeze_lock.json"
 SEMIO_GRAPH = Path(r"E:\semio\print\tex\semio-graph.sty")
 
 
@@ -137,6 +141,65 @@ class PilotArtifactTests(unittest.TestCase):
         self.assertEqual(sum(r["result"] == "logo" for r in rows), 11)
         self.assertEqual(sum(r["result"] == "none" for r in rows), 37)
         self.assertTrue(all(r["review_status"] == "accepted" for r in rows))
+
+
+class MissingHarvestArtifactTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.selection = json.loads(MISSING_SELECTION.read_text(encoding="utf-8"))
+        cls.manifest = json.loads(MISSING_MANIFEST.read_text(encoding="utf-8"))
+        cls.freeze = json.loads(MISSING_FREEZE.read_text(encoding="utf-8"))
+
+    def test_fixed_186_actor_scope(self):
+        rows = self.selection["nodes"]
+        self.assertEqual(len(rows), 186)
+        self.assertEqual(len({row["eid"] for row in rows}), 186)
+        self.assertEqual(
+            {origin: sum(row["queue_origin"] == origin for row in rows)
+             for origin in ("existing_none", "new_actor")},
+            {"existing_none": 65, "new_actor": 121},
+        )
+
+    def test_current_logo_assets_are_frozen(self):
+        self.assertEqual(self.freeze["logo_rows"], 476)
+        self.assertEqual(self.freeze["none_rows"], 65)
+        self.assertEqual(self.freeze["light_assets"], 476)
+        self.assertEqual(self.freeze["dark_assets"], 276)
+        self.assertEqual(self.freeze["logo_opacity_percent"], 100)
+        self.assertEqual(len(self.freeze["files"]), 755)
+
+    def test_every_actor_has_a_terminal_harvest_outcome(self):
+        rows = self.manifest["nodes"]
+        self.assertEqual(len(rows), 186)
+        self.assertEqual(
+            {row["verification_result"] for row in rows},
+            {"verified_candidates", "none_found"},
+        )
+        self.assertFalse(any(row["verification_result"] == "manual_check" for row in rows))
+        self.assertTrue(all(row.get("identity_review_basis") for row in rows if row["verification_result"] == "none_found"))
+        self.assertEqual(self.manifest.get("validation"), "PASS")
+
+    def test_transport_is_compact_and_contains_no_acceptance(self):
+        for row in self.manifest["nodes"]:
+            candidates = row.get("verified_candidates", []) + row.get("manual_candidates", [])
+            self.assertLessEqual(len(candidates), 3, row["name"])
+            self.assertFalse(
+                {"preferred_candidate", "suggested_candidate_id", "accepted_candidate_id"} & set(row),
+                row["name"],
+            )
+            for candidate in candidates:
+                source = PILOT_DIR / "bilder_full" / candidate["source_path"]
+                preview = PILOT_DIR / "bilder_full" / candidate["preview_path"]
+                self.assertTrue(source.is_file(), source)
+                self.assertTrue(preview.is_file(), preview)
+
+    def test_candidate_dossiers_are_compacted(self):
+        dossiers = list((MISSING_DIR / "candidates").rglob("candidates.json"))
+        self.assertEqual(len(dossiers), 177)
+        for path in dossiers:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            self.assertTrue(payload.get("transport_compacted"), path)
+            self.assertLessEqual(len(payload.get("candidates", [])), 3, path)
 
 
 if __name__ == "__main__":

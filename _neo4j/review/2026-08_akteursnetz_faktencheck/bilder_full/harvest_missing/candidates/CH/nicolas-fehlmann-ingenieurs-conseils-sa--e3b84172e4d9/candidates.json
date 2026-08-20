@@ -7,16 +7,33 @@
   "deep": true,
   "source_bytes_preserved": true,
   "transport_compacted": true,
-  "retained_candidate_count": 0,
-  "discarded_candidate_count": 12,
+  "retained_candidate_count": 1,
+  "discarded_candidate_count": 0,
   "discarded_reasons": {
-    "HTTPError: HTTP Error 404: Not Found": 4,
-    "duplicate or excess plausible delivery variants": 0,
     "duplicate or excess verified delivery variants": 0,
-    "image has no visible pixels": 2,
-    "media logo filename does not identify the organisation": 4,
-    "short edge below 128px": 1,
-    "unchecked og:image without a logo filename": 1
+    "plausible candidates superseded by verified identity files": 0
   },
-  "candidates": []
+  "candidates": [
+    {
+      "id": "c01",
+      "priority": 0,
+      "kind": "header_logo",
+      "url": "https://www.nfic.ch/wp-content/themes/nicolas-fehlmann/assets/img/logo.svg",
+      "status": "candidate",
+      "review_status": "pending",
+      "retrieved_at": "2026-08-20",
+      "license_note": "Official-site candidate; usage rights require final review.",
+      "rights_source_url": "",
+      "source_sha256": "e6c2f276ca6ecd69920bb7341a86b6884a21576573439e8a8ee07905d818fc13",
+      "preview_sha256": "e3cb63f079676c1f3502f2c4f633472c2dbfc8dd81072386f5d064b51712e411",
+      "reason": "",
+      "final_url": "https://www.nfic.ch/wp-content/themes/nicolas-fehlmann/assets/img/logo.svg",
+      "content_type": "image/svg+xml",
+      "format": "svg",
+      "width": 512,
+      "height": 228,
+      "source_path": "harvest_missing/candidates/CH/nicolas-fehlmann-ingenieurs-conseils-sa--e3b84172e4d9/c01_header_logo_source_e6c2f276ca6e.svg",
+      "preview_path": "harvest_missing/candidates/CH/nicolas-fehlmann-ingenieurs-conseils-sa--e3b84172e4d9/c01_header_logo.png"
+    }
+  ]
 }

@@ -19,6 +19,7 @@ import io
 import json
 import os
 import re
+import ssl
 import subprocess
 import sys
 import threading
@@ -79,6 +80,8 @@ MISSING_FREEZE = MISSING / "freeze_lock.json"
 MISSING_SELECTION = MISSING / "selection.json"
 MISSING_DOMAINS = MISSING / "domains.json"
 MISSING_DOMAIN_OVERRIDES = MISSING / "domain_overrides.json"
+MISSING_IDENTITY_OVERRIDES = MISSING / "identity_overrides.json"
+MISSING_CANDIDATE_OVERRIDES = MISSING / "candidate_overrides.json"
 MISSING_RAW = MISSING / "candidates"
 MISSING_MANIFEST = MISSING / "manifest.json"
 MISSING_REPORT = MISSING / "HARVEST_REPORT.md"
@@ -1130,19 +1133,27 @@ def inline_svg_for_raster(data):
     if start < 0 or end < 0:
         return data
     tag = text[start:end + 1]
+    # HTML parsers serialise SVG's case-sensitive ``viewBox`` attribute as
+    # ``viewbox``.  Canonicalise only the rasterisation copy; source bytes and
+    # their checksum remain untouched beside the preview.
+    tag = re.sub(r"\bviewbox\s*=", "viewBox=", tag, flags=re.I)
     if re.search(r"\bheight\s*=", tag, re.I):
-        return text.encode("utf-8")
+        return (text[:start] + tag + text[end + 1:]).encode("utf-8")
     width_match = re.search(r"\bwidth\s*=\s*[\"']([0-9.]+)(?:px)?[\"']", tag, re.I)
     viewbox_match = re.search(
         r"\bviewBox\s*=\s*[\"']\s*[-0-9.]+\s+[-0-9.]+\s+([0-9.]+)\s+([0-9.]+)\s*[\"']",
         tag, re.I)
-    if not width_match or not viewbox_match:
+    if not viewbox_match:
         return text.encode("utf-8")
-    width = float(width_match.group(1)); vb_width = float(viewbox_match.group(1)); vb_height = float(viewbox_match.group(2))
+    vb_width = float(viewbox_match.group(1)); vb_height = float(viewbox_match.group(2))
+    width = float(width_match.group(1)) if width_match else vb_width
     if width <= 0 or vb_width <= 0 or vb_height <= 0:
         return text.encode("utf-8")
     height = width * vb_height / vb_width
-    normalized_tag = tag[:-1] + f' height="{height:.6f}">'
+    dimensions = f' height="{height:.6f}"'
+    if not width_match:
+        dimensions += f' width="{width:.6f}"'
+    normalized_tag = tag[:-1] + dimensions + ">"
     return (text[:start] + normalized_tag + text[end + 1:]).encode("utf-8")
 
 
@@ -1195,7 +1206,8 @@ def discover_inline_identity_svgs(node, official_url):
     return found, payloads, ""
 
 
-def harvest_one(node, domain, node_dir=None, deep=False, preserve_source=False):
+def harvest_one(node, domain, node_dir=None, deep=False, preserve_source=False,
+                extra_candidates=(), legacy_tls_urls=frozenset()):
     node_dir = node_dir or (RAW / node["cc"] / node["tid"])
     node_dir.mkdir(parents=True, exist_ok=True)
     meta = {"key": node["key"], "official_url": domain.get("official_url", ""),
@@ -1207,6 +1219,7 @@ def harvest_one(node, domain, node_dir=None, deep=False, preserve_source=False):
     candidates, page_error = pilot.discover_candidates(domain["official_url"])
     candidates.extend(discover_media_candidates(domain["official_url"], candidates, deep=deep))
     candidates.extend(MANUAL_OFFICIAL_CANDIDATE_URLS.get(node["key"], ()))
+    candidates.extend(extra_candidates)
     inline_svgs = {}
     if deep:
         inline_candidates, automatic_inline_svgs, inline_error = discover_inline_identity_svgs(
@@ -1288,6 +1301,23 @@ def harvest_one(node, domain, node_dir=None, deep=False, preserve_source=False):
                 if snapshot:
                     data = (FULL / snapshot).read_bytes()
                     content_type, final_url = "image/svg+xml", url
+                elif url in legacy_tls_urls:
+                    # A handful of still-official legacy sites expose their
+                    # identity file through an obsolete certificate/DH setup.
+                    # This narrowly scoped transport exception downloads only
+                    # an explicitly reviewed public image URL; no credentials,
+                    # cookies or form data are ever sent.
+                    context = ssl.create_default_context()
+                    context.check_hostname = False
+                    context.verify_mode = ssl.CERT_NONE
+                    context.set_ciphers("DEFAULT:@SECLEVEL=0")
+                    request = urllib.request.Request(url, headers={"User-Agent": pilot.USER_AGENT})
+                    with urllib.request.urlopen(request, timeout=30, context=context) as response:
+                        data = response.read(pilot.MAX_DOWNLOAD + 1)
+                        content_type = response.headers.get_content_type()
+                        final_url = response.geturl()
+                    if len(data) > pilot.MAX_DOWNLOAD:
+                        raise ValueError("image exceeds download limit")
                 else:
                     data, content_type, final_url = pilot.request_bytes(url)
                 raster_data = data
@@ -3586,12 +3616,33 @@ def command_missing_collect(args):
     missing_assert_frozen()
     nodes = {row["key"]: row for row in pilot.load_json(MISSING_SELECTION)["nodes"]}
     domains = {row["key"]: row for row in pilot.load_json(MISSING_DOMAINS)["nodes"]}
+    candidate_overrides = {}
+    if MISSING_CANDIDATE_OVERRIDES.exists():
+        by_name = {norm(node["name"]): node["key"] for node in nodes.values()}
+        for override in pilot.load_json(MISSING_CANDIDATE_OVERRIDES).get("overrides", []):
+            key = by_name.get(norm(override["name"]))
+            if not key:
+                raise RuntimeError(f"unknown missing-candidate override: {override['name']}")
+            candidate_overrides[key] = {
+                "candidates": tuple(
+                    (int(candidate.get("priority", 0)), candidate.get("kind", "media_logo"), candidate["url"])
+                    for candidate in override.get("candidates", [])
+                ),
+                "legacy_tls_urls": frozenset(
+                    candidate["url"] for candidate in override.get("candidates", [])
+                    if candidate.get("legacy_tls")
+                ),
+            }
     todo = [node for node in nodes.values() if domains[node["key"]].get("status") == "accepted"]
     todo = missing_selected(args, todo)
     if not args.refresh:
         todo = [node for node in todo if not missing_candidate_transport_intact(node)]
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(harvest_one, node, domains[node["key"]], missing_candidate_dir(node), True, True): node
+        futures = {pool.submit(
+            harvest_one, node, domains[node["key"]], missing_candidate_dir(node), True, True,
+            candidate_overrides.get(node["key"], {}).get("candidates", ()),
+            candidate_overrides.get(node["key"], {}).get("legacy_tls_urls", frozenset()),
+        ): node
                    for node in todo}
         for pos, future in enumerate(concurrent.futures.as_completed(futures), 1):
             key, good, total = future.result()
@@ -3769,6 +3820,14 @@ def command_missing_verify(args):
     selected = missing_selected(args, list(nodes.values()))
     previous = ({row["key"]: row for row in pilot.load_json(MISSING_MANIFEST).get("nodes", [])}
                 if MISSING_MANIFEST.exists() else {})
+    identity_overrides = {}
+    if MISSING_IDENTITY_OVERRIDES.exists():
+        by_name = {norm(node["name"]): node["key"] for node in nodes.values()}
+        for override in pilot.load_json(MISSING_IDENTITY_OVERRIDES).get("overrides", []):
+            key = by_name.get(norm(override["name"]))
+            if not key:
+                raise RuntimeError(f"unknown missing-identity override: {override['name']}")
+            identity_overrides[key] = override
     rights = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = {pool.submit(missing_rights_probe, domains[node["key"]]): node["key"] for node in selected}
@@ -3776,6 +3835,8 @@ def command_missing_verify(args):
             rights[futures[future]] = future.result()
     for node in selected:
         domain = domains[node["key"]]
+        identity_override = identity_overrides.get(node["key"], {})
+        candidate_decisions = identity_override.get("candidate_decisions", {})
         metadata = missing_candidate_dir(node) / "candidates.json"
         candidates = pilot.load_json(metadata).get("candidates", []) if metadata.exists() else []
         verified_pool, ambiguous_pool = [], []
@@ -3784,10 +3845,20 @@ def command_missing_verify(args):
             if candidate.get("status") != "candidate" or not candidate.get("source_path"):
                 rejection_counts[candidate.get("reason") or "collector_rejected"] += 1
                 continue
-            accepted, basis = missing_candidate_verification(
-                {**node, "parent_brand": domain.get("parent_brand", ""),
-                 "official_url": domain.get("official_url", "")}, candidate
-            )
+            decision = candidate_decisions.get(candidate.get("id"), {})
+            if decision.get("result") == "verified":
+                accepted = True
+                basis = decision.get(
+                    "basis", "Identity visually checked against the official organisation website."
+                )
+            elif decision.get("result") == "rejected":
+                accepted = False
+                basis = decision.get("basis", "Manual identity review rejected this candidate.")
+            else:
+                accepted, basis = missing_candidate_verification(
+                    {**node, "parent_brand": domain.get("parent_brand", ""),
+                     "official_url": domain.get("official_url", "")}, candidate
+                )
             candidate_with_basis = {**candidate, "identity_basis": basis}
             if accepted:
                 verified_pool.append(candidate_with_basis)
@@ -3817,12 +3888,31 @@ def command_missing_verify(args):
         missing_compact_node_transport(
             node, {row["id"] for row in verified_rows + ambiguous_rows}, rejection_counts
         )
+        explicit_none = identity_override.get("result") == "none_found"
+        if explicit_none:
+            rejection_counts[identity_override.get(
+                "basis", "Manual identity review found no usable official organisation mark."
+            )] += len(ambiguous)
+            ambiguous = []
+            missing_compact_node_transport(node, set(), rejection_counts)
         if verified:
             result = "verified_candidates"
+        elif explicit_none:
+            result = "none_found"
         elif domain.get("status") == "accepted" and metadata.exists() and not ambiguous:
             result = "none_found"
         else:
             result = "manual_check"
+        review_basis = identity_override.get("basis", "")
+        if result == "none_found" and not review_basis:
+            if domain.get("status") == "accepted":
+                review_basis = (
+                    "The verified official domain was searched through declared icons, structured "
+                    "identity fields, header/media assets and checked Open Graph images; no standalone "
+                    "organisation mark meeting the frozen source-quality and identity rules was found."
+                )
+            else:
+                review_basis = domain.get("notes") or domain.get("basis", "No verified identity source exists.")
         previous[node["key"]] = {
             **{key: node.get(key) for key in ("key", "eid", "cc", "name", "typ", "storage_id", "queue_origin", "legacy_key")},
             "official_url": domain.get("official_url", ""),
@@ -3832,6 +3922,7 @@ def command_missing_verify(args):
             "identity_source_url": domain.get("identity_source_url", ""),
             "identity_verification": domain.get("identity_verification", ""),
             "verification_result": result,
+            "identity_review_basis": review_basis,
             "verified_candidates": verified,
             "manual_candidates": ambiguous,
             "discarded_candidate_count": sum(rejection_counts.values()),

@@ -7,14 +7,33 @@
   "deep": true,
   "source_bytes_preserved": true,
   "transport_compacted": true,
-  "retained_candidate_count": 0,
-  "discarded_candidate_count": 7,
+  "retained_candidate_count": 1,
+  "discarded_candidate_count": 0,
   "discarded_reasons": {
-    "HTTPError: HTTP Error 404: Not Found": 5,
-    "duplicate or excess plausible delivery variants": 0,
     "duplicate or excess verified delivery variants": 0,
-    "short edge below 128px": 1,
-    "unchecked og:image without a logo filename": 1
+    "plausible candidates superseded by verified identity files": 0
   },
-  "candidates": []
+  "candidates": [
+    {
+      "id": "c07",
+      "priority": 4,
+      "kind": "og_image",
+      "url": "https://bcarchitects.org/sites/default/files/bc-architects.jpg",
+      "status": "candidate",
+      "review_status": "pending",
+      "retrieved_at": "2026-08-20",
+      "license_note": "Official-site candidate; usage rights require final review.",
+      "rights_source_url": "",
+      "source_sha256": "f7639d188fd0338b1d756a8564d7a785f1140bb99a2f13807aadabf24491819a",
+      "preview_sha256": "bd2ca940a522321b66b4b1d478a3442358875d011d975d936fd5b602246fe30e",
+      "reason": "",
+      "final_url": "https://bcarchitects.org/sites/default/files/bc-architects.jpg",
+      "content_type": "image/jpeg",
+      "format": "jpeg",
+      "width": 1200,
+      "height": 630,
+      "source_path": "harvest_missing/candidates/BE/bc-architects-studies--39b6388ed29c/c07_og_image_source_f7639d188fd0.jpg",
+      "preview_path": "harvest_missing/candidates/BE/bc-architects-studies--39b6388ed29c/c07_og_image.png"
+    }
+  ]
 }

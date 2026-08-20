@@ -1,22 +1,39 @@
 {
   "key": "4:5f542910-8dcf-46a9-a77c-dfff0c64ee65:894",
   "official_url": "https://www.bs.ch/",
-  "domain_basis": "frozen_individually_verified_domain",
+  "domain_basis": "individually_verified_harvest_override",
   "page_error": "",
   "collection_complete_at": "2026-08-20",
   "deep": true,
   "source_bytes_preserved": true,
   "transport_compacted": true,
-  "retained_candidate_count": 0,
-  "discarded_candidate_count": 20,
+  "retained_candidate_count": 1,
+  "discarded_candidate_count": 0,
   "discarded_reasons": {
-    "HTTPError: HTTP Error 404: Page not found": 4,
-    "InvalidURL: URL can't contain control characters. 'www.bs.chStadt im Hintergrund.\" ' (found at least ' ')": 1,
-    "duplicate or excess plausible delivery variants": 0,
     "duplicate or excess verified delivery variants": 0,
-    "short edge below 128px": 1,
-    "unchecked og:image without a logo filename": 2,
-    "unidentified header raster; likely editorial photography": 12
+    "plausible candidates superseded by verified identity files": 0
   },
-  "candidates": []
+  "candidates": [
+    {
+      "id": "c01",
+      "priority": 0,
+      "kind": "parent_brand_logo",
+      "url": "https://media.bs.ch/dynamic/noop//2dcb2b9a363cad1629db665c6b069439d588e186/image.jpg",
+      "status": "candidate",
+      "review_status": "pending",
+      "retrieved_at": "2026-08-20",
+      "license_note": "Official-site candidate; usage rights require final review.",
+      "rights_source_url": "",
+      "source_sha256": "1a66314eb8e40fbd94c10a38e6aec50c12c7ee7080ebb9ec2e6c518ea39e8e56",
+      "preview_sha256": "d48487c08b1a6a3ad9afae10a758f859f432b9b5cde47f95f6a44e34bbbe522a",
+      "reason": "",
+      "final_url": "https://media.bs.ch/dynamic/noop//2dcb2b9a363cad1629db665c6b069439d588e186/image.jpg",
+      "content_type": "image/jpeg",
+      "format": "jpeg",
+      "width": 497,
+      "height": 223,
+      "source_path": "harvest_missing/candidates/CH/bauteilkatalog-immobilien-basel-stadt--332e9ebefb3f/c01_parent_brand_logo_source_1a66314eb8e4.jpg",
+      "preview_path": "harvest_missing/candidates/CH/bauteilkatalog-immobilien-basel-stadt--332e9ebefb3f/c01_parent_brand_logo.png"
+    }
+  ]
 }
