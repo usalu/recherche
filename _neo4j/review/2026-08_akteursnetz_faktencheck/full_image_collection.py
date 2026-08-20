@@ -74,6 +74,14 @@ CURRENT_IDENTITY_REPORT = FULL / "CURRENT_LOGO_IDENTITY_AUDIT.md"
 CURRENT_IDENTITY_HTML = FULL / "CURRENT_LOGO_IDENTITY_AUDIT.html"
 CURRENT_RENDER_MANIFEST = FULL / "current_image_manifest.json"
 CURRENT_ONLY_FINAL = FULL / "current_only_final"
+MISSING = FULL / "harvest_missing"
+MISSING_FREEZE = MISSING / "freeze_lock.json"
+MISSING_SELECTION = MISSING / "selection.json"
+MISSING_DOMAINS = MISSING / "domains.json"
+MISSING_DOMAIN_OVERRIDES = MISSING / "domain_overrides.json"
+MISSING_RAW = MISSING / "candidates"
+MISSING_MANIFEST = MISSING / "manifest.json"
+MISSING_REPORT = MISSING / "HARVEST_REPORT.md"
 EXPORT = pilot.EXPORT
 TECTONIC = Path(r"E:\semio\.repo\cache\tectonic\0.16.9\tectonic.exe")
 
@@ -1187,7 +1195,7 @@ def discover_inline_identity_svgs(node, official_url):
     return found, payloads, ""
 
 
-def harvest_one(node, domain, node_dir=None, deep=False):
+def harvest_one(node, domain, node_dir=None, deep=False, preserve_source=False):
     node_dir = node_dir or (RAW / node["cc"] / node["tid"])
     node_dir.mkdir(parents=True, exist_ok=True)
     meta = {"key": node["key"], "official_url": domain.get("official_url", ""),
@@ -1301,6 +1309,14 @@ def harvest_one(node, domain, node_dir=None, deep=False):
             record.update({"final_url": final_url, "content_type": content_type,
                            "format": fmt, "width": im.width, "height": im.height,
                            "retrieved_at": pilot.today(), "source_sha256": pilot.sha256_bytes(data)})
+            if preserve_source:
+                extension = "svg" if fmt == "svg" else {"jpeg": "jpg"}.get(fmt.lower(), fmt.lower() or "bin")
+                source = node_dir / f"{record['id']}_{kind}_source_{record['source_sha256'][:12]}.{extension}"
+                if source.exists() and pilot.sha256_file(source) != record["source_sha256"]:
+                    raise ValueError("stored source checksum differs")
+                if not source.exists():
+                    source.write_bytes(data)
+                record["source_path"] = str(source.relative_to(FULL)).replace("\\", "/")
             if im.convert("RGBA").getchannel("A").getbbox() is None:
                 record["reason"] = "image has no visible pixels"
             elif (fmt != "svg" and min(im.size) < 128
@@ -1320,14 +1336,27 @@ def harvest_one(node, domain, node_dir=None, deep=False):
                 record["reason"] = "short edge below 128px"
             else:
                 preview = node_dir / f"{record['id']}_{kind}.png"
-                if url in MANUAL_PRETRIM_TRANSPARENT_ARTBOARD_URLS:
+                if not preserve_source and url in MANUAL_PRETRIM_TRANSPARENT_ARTBOARD_URLS:
                     visible_bounds = pilot._opaque_bounds(im)
                     im = im.crop(visible_bounds)
                     record.update({"width": im.width, "height": im.height})
-                im.save(preview, "PNG")
+                preview_image = im
+                if preserve_source:
+                    # A transport preview is deliberately neutral: no crop,
+                    # colour, theme, opacity or node treatment.  It is only
+                    # bounded for safe browser/Pillow inspection while the
+                    # exact original bytes stay beside it.
+                    preview_image = im.copy()
+                    preview_image.thumbnail((1024, 1024), Image.Resampling.LANCZOS)
+                    preview_image.info.clear()
+                preview_image.save(preview, "PNG")
                 try:
-                    prepared, _mode = pilot.prepare_node_canvas(preview, theme="light")
-                    if sum(value > 8 for value in prepared.getchannel("A").get_flattened_data()) < 32:
+                    if preserve_source:
+                        visible = sum(value > 8 for value in preview_image.convert("RGBA").getchannel("A").get_flattened_data())
+                    else:
+                        prepared, _mode = pilot.prepare_node_canvas(preview, theme="light")
+                        visible = sum(value > 8 for value in prepared.getchannel("A").get_flattened_data())
+                    if visible < 32:
                         raise ValueError("candidate has insufficient visible foreground")
                 except ValueError as exc:
                     record["reason"] = str(exc)
@@ -1357,6 +1386,9 @@ def harvest_one(node, domain, node_dir=None, deep=False):
         except Exception as exc:
             record["reason"] = f"{type(exc).__name__}: {exc}"
         meta["candidates"].append(record)
+    meta["collection_complete_at"] = pilot.today()
+    meta["deep"] = bool(deep)
+    meta["source_bytes_preserved"] = bool(preserve_source)
     write_json(node_dir / "candidates.json", meta)
     good = sum(c["status"] == "candidate" for c in meta["candidates"])
     return node["key"], good, len(meta["candidates"])
@@ -3338,6 +3370,468 @@ def command_render(_args):
     print(f"PASS: rendered {logo_count} logos in light/dark plus controls at 600 dpi")
 
 
+#region Missing-logo harvest
+def missing_storage_id(eid: str, name: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", norm(name)).strip("-")[:48] or "actor"
+    return f"{slug}--{hashlib.sha256(eid.encode('utf-8')).hexdigest()[:12]}"
+
+
+def missing_candidate_dir(node: dict) -> Path:
+    target = MISSING_RAW / node["cc"] / node["storage_id"]
+    if not target.resolve().is_relative_to(MISSING.resolve()):
+        raise RuntimeError(f"harvest path escapes isolated root: {target}")
+    return target
+
+
+def missing_freeze_snapshot() -> dict:
+    manifest = pilot.load_json(CURRENT_RENDER_MANIFEST)
+    logo_rows = [row for row in manifest["nodes"] if row.get("result") == "logo"]
+    none_rows = [row for row in manifest["nodes"] if row.get("result") == "none"]
+    light = sorted({row["asset_path"] for row in logo_rows})
+    dark = sorted({row["dark_asset_path"] for row in logo_rows if row.get("dark_asset_path")})
+    if (len(logo_rows), len(none_rows), len(light), len(dark)) != (476, 65, 476, 276):
+        raise RuntimeError("frozen image scope drifted from 476 logo / 65 none / 276 dark")
+    paths = [CURRENT_RENDER_MANIFEST, FULL / "crop_overrides.json", DARK_BACKDROP_OVERRIDES]
+    paths.extend(FULL / rel for rel in light + dark)
+    missing = [str(path) for path in paths if not path.is_file()]
+    if missing:
+        raise RuntimeError("missing frozen files:\n" + "\n".join(missing))
+    return {
+        "schema_version": 1,
+        "logo_rows": 476,
+        "none_rows": 65,
+        "light_assets": 476,
+        "dark_assets": 276,
+        "logo_opacity_percent": manifest.get("logo_opacity_percent"),
+        "files": [{"path": str(path.relative_to(BASE)).replace("\\", "/"),
+                   "sha256": pilot.sha256_file(path)} for path in sorted(paths)],
+    }
+
+
+def missing_assert_frozen(create=False) -> dict:
+    current = missing_freeze_snapshot()
+    if not MISSING_FREEZE.exists():
+        if not create:
+            raise RuntimeError("missing freeze lock; run missing-prepare first")
+        write_json(MISSING_FREEZE, {**current, "created_at": pilot.today()})
+        return current
+    locked = pilot.load_json(MISSING_FREEZE)
+    comparable = {key: locked.get(key) for key in current}
+    if comparable != current:
+        raise RuntimeError("frozen logo system changed; harvest aborted")
+    return current
+
+
+def missing_network_rows() -> list[dict]:
+    sys.path.insert(0, str(NETZ))
+    from netz.cli import load_network
+
+    net = load_network()
+    current = {row.get("eid"): row for row in pilot.load_json(CURRENT_RENDER_MANIFEST)["nodes"]
+               if row.get("eid")}
+    cc_by_eid = {eid: cc for cc, panel in net.panels.items() for eid in panel.actors}
+    rows = []
+    for eid in sorted(net.aset, key=lambda value: (COUNTRY_ORDER.index(cc_by_eid[value]), norm(net.raw.name(value)), value)):
+        old = current.get(eid)
+        if old and old.get("result") == "logo":
+            continue
+        raw = net.raw.by.get(eid, {})
+        props = raw.get("properties", {})
+        name = net.raw.name(eid)
+        cc = cc_by_eid[eid]
+        rows.append({
+            "key": eid,
+            "eid": eid,
+            "cc": cc,
+            "name": name,
+            "typ": net.raw.types.get(eid, ""),
+            "storage_id": missing_storage_id(eid, name),
+            "queue_origin": "existing_none" if old else "new_actor",
+            "legacy_key": old.get("key") if old else None,
+            "primary_source_url": props.get("primary_source_url", ""),
+            "source_urls": list(props.get("source_urls") or []),
+            "evidence_url": props.get("evidence_url", ""),
+        })
+    counts = collections.Counter(row["queue_origin"] for row in rows)
+    if len(net.aset) != 661 or len(rows) != 186 or counts != {"existing_none": 65, "new_actor": 121}:
+        raise RuntimeError(f"missing-harvest scope drift: actors={len(net.aset)} queue={len(rows)} origins={dict(counts)}")
+    return rows
+
+
+def command_missing_prepare(_args):
+    freeze = missing_assert_frozen(create=True)
+    rows = missing_network_rows()
+    write_json(MISSING_SELECTION, {
+        "schema_version": 1,
+        "created_at": pilot.today(),
+        "network_actors": 661,
+        "queue_count": 186,
+        "existing_none": 65,
+        "new_actors": 121,
+        "freeze_lock_sha256": pilot.sha256_file(MISSING_FREEZE),
+        "nodes": rows,
+    })
+    legacy_domains = ({row["key"]: row for row in pilot.load_json(DOMAINS).get("nodes", [])}
+                      if DOMAINS.exists() else {})
+    existing = ({row["key"]: row for row in pilot.load_json(MISSING_DOMAINS).get("nodes", [])}
+                if MISSING_DOMAINS.exists() else {})
+    domains = []
+    for node in rows:
+        old = existing.get(node["key"])
+        if old:
+            domains.append(old)
+            continue
+        legacy = legacy_domains.get(node.get("legacy_key"), {})
+        if legacy.get("status") == "accepted" and legacy.get("official_url"):
+            domains.append({**legacy, "key": node["key"], "name": node["name"],
+                            "basis": "frozen_individually_verified_domain",
+                            "legacy_key": node.get("legacy_key")})
+        else:
+            domains.append(initial_domain_row(node, {}))
+    write_json(MISSING_DOMAINS, {"schema_version": 1, "nodes": domains})
+    print(f"prepared isolated harvest: 186 actors; freeze={len(freeze['files'])} files")
+
+
+def missing_selected(args, rows: list[dict]) -> list[dict]:
+    selected = set(args.key or [])
+    known = {row["key"] for row in rows}
+    unknown = selected - known
+    if unknown:
+        raise RuntimeError("unknown missing-harvest EIDs: " + ", ".join(sorted(unknown)))
+    result = [row for row in rows if not selected or row["key"] in selected]
+    return result[:args.limit] if args.limit else result
+
+
+def missing_save_domain(rows_by_key: dict, ordered_keys: list[str]):
+    write_json(MISSING_DOMAINS, {"schema_version": 2, "nodes": [rows_by_key[key] for key in ordered_keys]})
+
+
+def missing_transport_path(relative: str, label: str) -> Path:
+    path = (FULL / relative).resolve()
+    root = MISSING.resolve()
+    if path != root and root not in path.parents:
+        raise RuntimeError(f"{label} escapes isolated harvest directory: {relative}")
+    return path
+
+
+def missing_candidate_transport_intact(node: dict) -> bool:
+    metadata = missing_candidate_dir(node) / "candidates.json"
+    if not metadata.exists():
+        return False
+    payload = pilot.load_json(metadata)
+    for candidate in payload.get("candidates", []):
+        for field, hash_field in (("source_path", "source_sha256"), ("preview_path", "preview_sha256")):
+            relative = candidate.get(field)
+            expected = candidate.get(hash_field)
+            if not relative:
+                continue
+            path = missing_transport_path(relative, f"{node['key']}/{candidate.get('id')}/{field}")
+            if not expected or not path.is_file() or pilot.sha256_file(path) != expected:
+                raise RuntimeError(
+                    f"existing candidate transport checksum mismatch: {node['key']}/{candidate.get('id')}/{field}"
+                )
+    return True
+
+
+def command_missing_research(args):
+    missing_assert_frozen()
+    nodes = {row["key"]: row for row in pilot.load_json(MISSING_SELECTION)["nodes"]}
+    rows = pilot.load_json(MISSING_DOMAINS)["nodes"]
+    by_key = {row["key"]: row for row in rows}
+    ordered = [row["key"] for row in rows]
+    if MISSING_DOMAIN_OVERRIDES.exists():
+        by_name = {norm(node["name"]): node["key"] for node in nodes.values()}
+        for override in pilot.load_json(MISSING_DOMAIN_OVERRIDES).get("overrides", []):
+            key = by_name.get(norm(override["name"]))
+            if not key:
+                raise RuntimeError(f"unknown missing-domain override: {override['name']}")
+            row = dict(by_key[key])
+            row.update({
+                "official_url": root_url(override["official_url"]),
+                "status": "accepted",
+                "basis": "individually_verified_harvest_override",
+                "identity_source_url": override.get("identity_source_url", override["official_url"]),
+                "identity_verification": "verified_official_or_parent_domain",
+                "parent_brand": override.get("parent_brand", ""),
+                "research_checked_at": override.get("checked_at", pilot.today()),
+                "notes": override.get("notes", "Official or unambiguous parent domain individually verified."),
+            })
+            by_key[key] = row
+        for key, row in list(by_key.items()):
+            if row.get("status") != "accepted":
+                continue
+            normalized = dict(row)
+            normalized.setdefault("identity_source_url", normalized.get("official_url", ""))
+            normalized.setdefault("identity_verification", "verified_official_or_parent_domain")
+            normalized.setdefault("parent_brand", "")
+            normalized.setdefault("research_checked_at", pilot.today())
+            by_key[key] = normalized
+        missing_save_domain(by_key, ordered)
+    todo = [nodes[row["key"]] for row in rows
+            if (args.retry or not row.get("research_checked_at")) and row.get("status") != "accepted"]
+    todo = missing_selected(args, todo)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futures = {pool.submit(research_one, node, by_key[node["key"]]): node["key"] for node in todo}
+        for pos, future in enumerate(concurrent.futures.as_completed(futures), 1):
+            row = future.result()
+            row["identity_verification"] = ("verified_official_domain" if row.get("status") == "accepted"
+                                            else "no_verified_domain")
+            by_key[row["key"]] = row
+            missing_save_domain(by_key, ordered)
+            print(f"[{pos}/{len(todo)}] {row['name']}: {row['status']}")
+    print("missing research:", collections.Counter(row["status"] for row in by_key.values()))
+
+
+def command_missing_collect(args):
+    missing_assert_frozen()
+    nodes = {row["key"]: row for row in pilot.load_json(MISSING_SELECTION)["nodes"]}
+    domains = {row["key"]: row for row in pilot.load_json(MISSING_DOMAINS)["nodes"]}
+    todo = [node for node in nodes.values() if domains[node["key"]].get("status") == "accepted"]
+    todo = missing_selected(args, todo)
+    if not args.refresh:
+        todo = [node for node in todo if not missing_candidate_transport_intact(node)]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futures = {pool.submit(harvest_one, node, domains[node["key"]], missing_candidate_dir(node), True, True): node
+                   for node in todo}
+        for pos, future in enumerate(concurrent.futures.as_completed(futures), 1):
+            key, good, total = future.result()
+            print(f"[{pos}/{len(todo)}] {nodes[key]['name']}: {good}/{total} usable")
+
+
+def missing_rights_probe(domain: dict) -> dict:
+    official = domain.get("official_url", "")
+    default = {
+        "rights_status": "no_explicit_reuse_terms_found",
+        "rights_source_url": official,
+        "rights_contact": official,
+        "license_note": "Official-site identity candidate; no explicit publication reuse licence was identified during harvest. Permission and legal review remain required.",
+    }
+    if not official:
+        return {**default, "rights_status": "domain_unresolved", "rights_source_url": "", "rights_contact": ""}
+    try:
+        data, content_type, final_url = pilot.request_bytes(official)
+        if content_type != "text/html" and b"<html" not in data[:1500].lower():
+            return default
+        page = data.decode("utf-8", errors="replace")
+        links = []
+        for href, label in re.findall(r"<a\b[^>]*href=[\"']([^\"']+)[\"'][^>]*>(.*?)</a>", page, re.I | re.S):
+            absolute = urllib.parse.urldefrag(urllib.parse.urljoin(final_url, html.unescape(href)))[0]
+            text = norm(re.sub(r"<[^>]+>", " ", html.unescape(label)) + " " + absolute)
+            if any(word in text for word in ("logo", "brand", "media", "press", "copyright", "legal", "terms", "impressum", "trademark")):
+                links.append((0, absolute))
+            elif any(word in text for word in ("contact", "kontakt", "contatto", "contactez")):
+                links.append((1, absolute))
+        rights = next((url for priority, url in links if priority == 0), "")
+        contact = next((url for priority, url in links if priority == 1), official)
+        if rights:
+            return {
+                "rights_status": "terms_discovered_unreviewed",
+                "rights_source_url": rights,
+                "rights_contact": contact,
+                "license_note": "Official legal, brand or media terms page discovered during harvest; no publication clearance or permission is inferred.",
+            }
+        return {**default, "rights_contact": contact}
+    except Exception as exc:
+        return {**default, "rights_probe_error": f"{type(exc).__name__}: {exc}"}
+
+
+def missing_candidate_verification(node: dict, candidate: dict) -> tuple[bool, str]:
+    check_node = dict(node)
+    check_node["key"] = node.get("legacy_key") or node["key"]
+    rejection = candidate_rejection(check_node, candidate)
+    if rejection:
+        return False, rejection
+    kind = candidate.get("kind", "")
+    url = urllib.parse.unquote(candidate.get("final_url") or candidate.get("url") or "").lower()
+    official_host = urllib.parse.urlsplit(node.get("official_url", "")).hostname or ""
+    candidate_host = urllib.parse.urlsplit(url.removeprefix("inline+")).hostname or ""
+    official_host = official_host.lower().removeprefix("www.")
+    candidate_host = candidate_host.lower().removeprefix("www.")
+    same_host = bool(official_host and (
+        candidate_host == official_host or candidate_host.endswith("." + official_host)
+    ))
+    trusted_cdn = any(candidate_host == host or candidate_host.endswith("." + host) for host in (
+        "wixstatic.com", "squarespace-cdn.com", "onecdn.io", "cdnsw.com", "cloudfront.net",
+        "cloudinary.com", "wp.com",
+    ))
+    if url.startswith("inline+") and kind == "header_logo" and same_host:
+        return True, "Inline mark used by the official site's header."
+    filename = Path(urllib.parse.urlsplit(url).path).name
+    stop = {
+        "architect", "architects", "architecture", "architecten", "architectes", "ingenieur",
+        "ingenieure", "company", "group", "limited", "partnership", "gmbh", "mbh", "b", "v",
+        "ag", "sa", "sas", "stadt", "stad", "kommune", "gemeente", "immobilien", "sverige",
+    }
+    brand_names = [node.get("name", ""), node.get("parent_brand", "")]
+    tokens = {
+        token for brand in brand_names for token in re.findall(r"[a-z0-9]+", norm(brand))
+        if len(token) >= 4 and token not in stop
+    }
+    identified = any(token in filename for token in tokens)
+    identity_marker = any(marker in filename for marker in ("logo", "brand", "wordmark"))
+    disqualifying = any(marker in url for marker in (
+        "partner", "partenaire", "sponsor", "member", "mitglied", "client", "customer",
+        "supplier", "vendor", "certif", "award", "badge", "social", "instagram", "linkedin",
+        "facebook", "youtube", "twitter", "pictogram", "telephone", "generic-imagery",
+        "press-photo", "press_photo", "pressebilde", "hero-image", "hero_image",
+        "formes-graphiques", "top-barre", "granitor_systems", "logo-mennesker",
+        "wynne-futures", "faculte_", "faculty_", "-interior", "advisors-logo",
+        "airlink-logo", "charity_trust", "paris_habitat_2030",
+    ))
+    declared_marker = any(marker in url for marker in (
+        "favicon", "apple-touch", "/icons/", "/icon-", "logo", "wordmark", "brandmark",
+    ))
+    if (kind in {"declared_icon", "apple_touch", "favicon"} and (same_host or trusted_cdn)
+            and declared_marker and not disqualifying):
+        return True, "Declared identity asset collected from the verified official domain."
+    if kind in {"structured_logo", "jsonld_logo"} and (same_host or trusted_cdn) and not disqualifying:
+        if identity_marker or (identified and str(candidate.get("format", "")).lower() == "svg"):
+            return True, "Structured identity field on the verified official domain identifies a logo asset."
+    width, height = int(candidate.get("width") or 0), int(candidate.get("height") or 0)
+    wide_identity = min(width, height) > 0 and max(width, height) / min(width, height) >= 2
+    if (kind == "header_logo" and (same_host or trusted_cdn) and identified and not disqualifying
+            and (identity_marker or str(candidate.get("format", "")).lower() == "svg" or wide_identity)):
+        return True, "Header identity filename identifies the organisation or verified parent brand."
+    if (kind in {"media_logo", "og_image"} and (same_host or trusted_cdn)
+            and identified and identity_marker and not disqualifying):
+        return True, "Explicit identity filename on the verified official domain identifies the organisation."
+    return False, "Candidate identity is plausible but not structurally declared; manual check retained."
+
+
+def command_missing_verify(args):
+    missing_assert_frozen()
+    nodes = {row["key"]: row for row in pilot.load_json(MISSING_SELECTION)["nodes"]}
+    domains = {row["key"]: row for row in pilot.load_json(MISSING_DOMAINS)["nodes"]}
+    selected = missing_selected(args, list(nodes.values()))
+    previous = ({row["key"]: row for row in pilot.load_json(MISSING_MANIFEST).get("nodes", [])}
+                if MISSING_MANIFEST.exists() else {})
+    rights = {}
+    with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
+        futures = {pool.submit(missing_rights_probe, domains[node["key"]]): node["key"] for node in selected}
+        for future in concurrent.futures.as_completed(futures):
+            rights[futures[future]] = future.result()
+    for node in selected:
+        domain = domains[node["key"]]
+        metadata = missing_candidate_dir(node) / "candidates.json"
+        candidates = pilot.load_json(metadata).get("candidates", []) if metadata.exists() else []
+        verified, ambiguous = [], []
+        for candidate in candidates:
+            if candidate.get("status") != "candidate" or not candidate.get("source_path"):
+                continue
+            accepted, basis = missing_candidate_verification(
+                {**node, "parent_brand": domain.get("parent_brand", ""),
+                 "official_url": domain.get("official_url", "")}, candidate
+            )
+            transport = {key: candidate.get(key) for key in (
+                "id", "kind", "url", "final_url", "retrieved_at", "content_type", "format",
+                "width", "height", "source_path", "source_sha256", "preview_path", "preview_sha256")}
+            transport["identity_basis"] = basis
+            (verified if accepted else ambiguous).append(transport)
+        if verified:
+            result = "verified_candidates"
+        elif domain.get("status") == "accepted" and metadata.exists() and not ambiguous:
+            result = "none_found"
+        else:
+            result = "manual_check"
+        previous[node["key"]] = {
+            **{key: node.get(key) for key in ("key", "eid", "cc", "name", "typ", "storage_id", "queue_origin", "legacy_key")},
+            "official_url": domain.get("official_url", ""),
+            "parent_brand": domain.get("parent_brand", ""),
+            "domain_status": domain.get("status", "unresolved"),
+            "domain_basis": domain.get("basis", ""),
+            "identity_source_url": domain.get("identity_source_url", ""),
+            "identity_verification": domain.get("identity_verification", ""),
+            "verification_result": result,
+            "verified_candidates": verified,
+            "manual_candidates": ambiguous,
+            **rights[node["key"]],
+            "verified_at": pilot.today(),
+        }
+    ordered = [previous[key] for key in sorted(previous, key=lambda key: (COUNTRY_ORDER.index(previous[key]["cc"]), norm(previous[key]["name"]), key))]
+    write_json(MISSING_MANIFEST, {"schema_version": 1, "harvest_only": True, "nodes": ordered})
+    print("missing verification:", collections.Counter(row["verification_result"] for row in ordered))
+
+
+def command_missing_validate(_args):
+    freeze = missing_assert_frozen()
+    selection = pilot.load_json(MISSING_SELECTION)["nodes"]
+    domains = pilot.load_json(MISSING_DOMAINS)["nodes"]
+    manifest = pilot.load_json(MISSING_MANIFEST)
+    rows = manifest["nodes"]
+    errors = []
+    origins = collections.Counter(row["queue_origin"] for row in selection)
+    if len(selection) != 186 or origins != {"existing_none": 65, "new_actor": 121}:
+        errors.append(f"selection drift: {len(selection)} {dict(origins)}")
+    if len(domains) != 186 or len(rows) != 186:
+        errors.append(f"incomplete transport: domains={len(domains)} manifest={len(rows)}")
+    for domain in domains:
+        if not domain.get("research_checked_at"):
+            errors.append(f"{domain['key']}: domain research has no completion date")
+        if domain.get("status") == "accepted":
+            if not domain.get("official_url") or not domain.get("identity_source_url"):
+                errors.append(f"{domain['key']}: accepted domain lacks official identity provenance")
+            if not domain.get("identity_verification"):
+                errors.append(f"{domain['key']}: accepted domain lacks identity verification")
+    allowed = {"verified_candidates", "none_found", "manual_check"}
+    if any(row.get("verification_result") not in allowed for row in rows):
+        errors.append("unresearched or invalid verification result")
+    for row in rows:
+        if any(key in row for key in ("preferred_candidate", "suggested_candidate_id", "accepted_candidate_id")):
+            errors.append(f"{row['key']}: harvest contains a ranking/acceptance field")
+        metadata = missing_candidate_dir(row) / "candidates.json"
+        harvested = pilot.load_json(metadata).get("candidates", []) if metadata.exists() else []
+        for candidate in harvested:
+            if not candidate.get("source_path"):
+                continue
+            source = missing_transport_path(candidate.get("source_path", ""), f"{row['key']}/{candidate.get('id')}/source")
+            if not source.is_file() or pilot.sha256_file(source) != candidate.get("source_sha256"):
+                errors.append(f"{row['key']}/{candidate.get('id')}: source checksum mismatch")
+            preview_relative = candidate.get("preview_path", "")
+            if candidate.get("status") == "candidate" and not preview_relative:
+                errors.append(f"{row['key']}/{candidate.get('id')}: usable source lacks neutral preview")
+            if preview_relative:
+                preview = missing_transport_path(preview_relative, f"{row['key']}/{candidate.get('id')}/preview")
+                if not preview.is_file() or pilot.sha256_file(preview) != candidate.get("preview_sha256"):
+                    errors.append(f"{row['key']}/{candidate.get('id')}: preview checksum mismatch")
+                try:
+                    with Image.open(preview) as image:
+                        if image.width < 1 or image.height < 1:
+                            raise ValueError("empty image")
+                except Exception as exc:
+                    errors.append(f"{row['key']}/{candidate.get('id')}: unreadable preview ({exc})")
+            if candidate.get("status") == "candidate":
+                width, height = int(candidate.get("width") or 0), int(candidate.get("height") or 0)
+                structural_wordmark = (candidate.get("kind") in STRUCTURAL_IDENTITY_KINDS
+                                       and max(width, height) >= 128)
+                if (str(candidate.get("format", "")).lower() != "svg"
+                        and min(width, height) < 128 and not structural_wordmark):
+                    errors.append(f"{row['key']}/{candidate.get('id')}: raster source below 128 px shortest edge")
+    current = pilot.load_json(CURRENT_RENDER_MANIFEST)["nodes"]
+    current_counts = collections.Counter(row["result"] for row in current)
+    if current_counts != {"logo": 476, "none": 65}:
+        errors.append(f"current manifest changed: {dict(current_counts)}")
+    if errors:
+        raise RuntimeError("missing harvest validation failed:\n" + "\n".join(errors[:100]))
+    counts = collections.Counter(row["verification_result"] for row in rows)
+    candidates = sum(len(row.get("verified_candidates", [])) for row in rows)
+    write_json(MISSING_MANIFEST, {**manifest, "validated_at": pilot.today(), "validation": "PASS",
+                                  "counts": dict(counts), "verified_candidate_files": candidates,
+                                  "freeze_file_count": len(freeze["files"])})
+    lines = [
+        "# Harvest-only missing-logo report", "",
+        "- Queue: **186 organisations** (65 existing `none`, 121 new actors)",
+        f"- Verified candidate files: **{candidates}**",
+        f"- Verified candidates: **{counts['verified_candidates']} organisations**",
+        f"- No official candidate found: **{counts['none_found']} organisations**",
+        f"- Manual identity/domain check retained: **{counts['manual_check']} organisations**", "",
+        "The existing 476 accepted logos, 276 dark variants, visual settings, manifests, Semio and Neo4j were not changed.",
+        "No candidate is ranked, accepted or publication-cleared by this transport.", "",
+    ]
+    MISSING_REPORT.write_text("\n".join(lines), encoding="utf-8")
+    print(f"PASS: missing harvest validated ({dict(counts)}, candidates={candidates})")
+#endregion Missing-logo harvest
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     sub = ap.add_subparsers(dest="command", required=True)
@@ -3380,6 +3874,25 @@ def main():
     sub.add_parser("finalize").set_defaults(func=command_finalize)
     sub.add_parser("validate").set_defaults(func=command_validate)
     sub.add_parser("render").set_defaults(func=command_render)
+    sub.add_parser("missing-prepare").set_defaults(func=command_missing_prepare)
+    missing_research = sub.add_parser("missing-research")
+    missing_research.add_argument("--workers", type=int, default=8)
+    missing_research.add_argument("--limit", type=int)
+    missing_research.add_argument("--key", action="append", help="research only this stable actor eid")
+    missing_research.add_argument("--retry", action="store_true")
+    missing_research.set_defaults(func=command_missing_research)
+    missing_collect = sub.add_parser("missing-collect")
+    missing_collect.add_argument("--workers", type=int, default=8)
+    missing_collect.add_argument("--limit", type=int)
+    missing_collect.add_argument("--key", action="append", help="collect only this stable actor eid")
+    missing_collect.add_argument("--refresh", action="store_true")
+    missing_collect.set_defaults(func=command_missing_collect)
+    missing_verify = sub.add_parser("missing-verify")
+    missing_verify.add_argument("--workers", type=int, default=8)
+    missing_verify.add_argument("--limit", type=int)
+    missing_verify.add_argument("--key", action="append", help="verify only this stable actor eid")
+    missing_verify.set_defaults(func=command_missing_verify)
+    sub.add_parser("missing-validate").set_defaults(func=command_missing_validate)
     patch = sub.add_parser("patch"); patch.add_argument("--live", action="store_true", help="read-only exact-id validation against mit-bestand")
     patch.set_defaults(func=command_patch)
     args = ap.parse_args(); args.func(args)
