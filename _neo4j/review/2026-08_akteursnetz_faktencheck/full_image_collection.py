@@ -3698,6 +3698,70 @@ def missing_candidate_verification(node: dict, candidate: dict) -> tuple[bool, s
     return False, "Candidate identity is plausible but not structurally declared; manual check retained."
 
 
+MISSING_PLAUSIBLE_BASIS = "Candidate identity is plausible but not structurally declared; manual check retained."
+
+
+def missing_candidate_family(candidate: dict) -> str:
+    """Collapse delivery-size variants without declaring a preferred logo."""
+    url = urllib.parse.unquote(candidate.get("final_url") or candidate.get("url") or "").lower()
+    split = urllib.parse.urlsplit(url.removeprefix("inline+"))
+    filename = Path(split.path).name
+    stem = Path(filename).stem
+    stem = re.sub(r"(?:[-_](?:\d{2,4}x\d{2,4}|\d{2,4}|scaled|small|medium|large|xlg|lg|md|sm|2x))+$", "", stem)
+    stem = re.sub(r"[-_][0-9a-f]{8,}$", "", stem)
+    stem = re.sub(r"[-_]+", "-", stem).strip("-")
+    if url.startswith("inline+"):
+        stem = "inline-header"
+    return f"{split.hostname or ''}/{stem or filename}/{candidate.get('kind', '')}"
+
+
+def missing_compact_pool(candidates: list[dict], limit: int = 3) -> tuple[list[dict], int]:
+    families: dict[str, list[dict]] = collections.defaultdict(list)
+    for candidate in candidates:
+        families[missing_candidate_family(candidate)].append(candidate)
+
+    def quality(candidate: dict) -> tuple:
+        fmt = str(candidate.get("format", "")).lower()
+        width, height = int(candidate.get("width") or 0), int(candidate.get("height") or 0)
+        return (fmt == "svg", min(width, height), width * height, -int(candidate.get("priority") or 99))
+
+    representatives = [max(rows, key=quality) for rows in families.values()]
+    kind_order = {
+        "apple_touch": 0, "declared_icon": 1, "favicon": 2, "structured_logo": 3,
+        "jsonld_logo": 3, "header_logo": 4, "og_image": 5, "media_logo": 6,
+    }
+    representatives.sort(key=lambda row: (
+        int(row.get("priority") or 99), kind_order.get(row.get("kind", ""), 99), row.get("id", "")
+    ))
+    retained = representatives[:limit]
+    return retained, len(candidates) - len(retained)
+
+
+def missing_compact_node_transport(node: dict, retained_ids: set[str], rejection_counts: collections.Counter):
+    directory = missing_candidate_dir(node)
+    metadata = directory / "candidates.json"
+    if not metadata.exists():
+        return
+    payload = pilot.load_json(metadata)
+    retained_records = [row for row in payload.get("candidates", []) if row.get("id") in retained_ids]
+    referenced = {metadata.resolve()}
+    for row in retained_records:
+        for field in ("source_path", "preview_path"):
+            if row.get(field):
+                referenced.add(missing_transport_path(row[field], f"{node['key']}/{row.get('id')}/{field}"))
+    for path in directory.iterdir():
+        if path.is_file() and path.resolve() not in referenced:
+            path.unlink()
+    write_json(metadata, {
+        **{key: value for key, value in payload.items() if key != "candidates"},
+        "transport_compacted": True,
+        "retained_candidate_count": len(retained_records),
+        "discarded_candidate_count": sum(rejection_counts.values()),
+        "discarded_reasons": dict(sorted(rejection_counts.items())),
+        "candidates": retained_records,
+    })
+
+
 def command_missing_verify(args):
     missing_assert_frozen()
     nodes = {row["key"]: row for row in pilot.load_json(MISSING_SELECTION)["nodes"]}
@@ -3714,19 +3778,45 @@ def command_missing_verify(args):
         domain = domains[node["key"]]
         metadata = missing_candidate_dir(node) / "candidates.json"
         candidates = pilot.load_json(metadata).get("candidates", []) if metadata.exists() else []
-        verified, ambiguous = [], []
+        verified_pool, ambiguous_pool = [], []
+        rejection_counts = collections.Counter()
         for candidate in candidates:
             if candidate.get("status") != "candidate" or not candidate.get("source_path"):
+                rejection_counts[candidate.get("reason") or "collector_rejected"] += 1
                 continue
             accepted, basis = missing_candidate_verification(
                 {**node, "parent_brand": domain.get("parent_brand", ""),
                  "official_url": domain.get("official_url", "")}, candidate
             )
-            transport = {key: candidate.get(key) for key in (
+            candidate_with_basis = {**candidate, "identity_basis": basis}
+            if accepted:
+                verified_pool.append(candidate_with_basis)
+            elif basis == MISSING_PLAUSIBLE_BASIS:
+                ambiguous_pool.append(candidate_with_basis)
+            else:
+                rejection_counts[basis] += 1
+
+        verified_rows, verified_dropped = missing_compact_pool(verified_pool)
+        if verified_rows:
+            ambiguous_rows = []
+            rejection_counts["plausible candidates superseded by verified identity files"] += len(ambiguous_pool)
+        else:
+            ambiguous_rows, ambiguous_dropped = missing_compact_pool(ambiguous_pool)
+            rejection_counts["duplicate or excess plausible delivery variants"] += ambiguous_dropped
+        rejection_counts["duplicate or excess verified delivery variants"] += verified_dropped
+
+        def transport(candidate: dict) -> dict:
+            row = {key: candidate.get(key) for key in (
                 "id", "kind", "url", "final_url", "retrieved_at", "content_type", "format",
                 "width", "height", "source_path", "source_sha256", "preview_path", "preview_sha256")}
-            transport["identity_basis"] = basis
-            (verified if accepted else ambiguous).append(transport)
+            row["identity_basis"] = candidate.get("identity_basis", "")
+            return row
+
+        verified = [transport(row) for row in verified_rows]
+        ambiguous = [transport(row) for row in ambiguous_rows]
+        missing_compact_node_transport(
+            node, {row["id"] for row in verified_rows + ambiguous_rows}, rejection_counts
+        )
         if verified:
             result = "verified_candidates"
         elif domain.get("status") == "accepted" and metadata.exists() and not ambiguous:
@@ -3744,6 +3834,8 @@ def command_missing_verify(args):
             "verification_result": result,
             "verified_candidates": verified,
             "manual_candidates": ambiguous,
+            "discarded_candidate_count": sum(rejection_counts.values()),
+            "discarded_reasons": dict(sorted(rejection_counts.items())),
             **rights[node["key"]],
             "verified_at": pilot.today(),
         }
