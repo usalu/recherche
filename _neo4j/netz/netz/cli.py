@@ -199,7 +199,12 @@ def main():
         unknown = sorted(set(countries or []) - set(net.panels))
         if unknown:
             ap.error("unknown country panel(s): %s" % ", ".join(unknown))
-        edge_kinds = load_edge_kinds(DEFAULT.kanten_klassifikation_path, net, DEFAULT.merge_strict_path)
+        edge_kinds = load_edge_kinds(
+            DEFAULT.kanten_klassifikation_path,
+            net,
+            DEFAULT.merge_strict_path,
+            DEFAULT.expansion_kanten_path,
+        )
         tot, n = build_graph_fragment(net, out, images=images, countries=countries, edge_kinds=edge_kinds)
         print(f"wrote {out}: {tot} nodes across {n} country figures")
     elif args.cmd == "tables":
@@ -212,7 +217,9 @@ def main():
             net, out, DEFAULT.klassifikation_actor_project_path,
             DEFAULT.kanten_klassifikation_path,
             load_image_manifest(args.images_manifest, *_asset_mode(args)),
-            DEFAULT.merge_strict_path)
+            DEFAULT.merge_strict_path,
+            DEFAULT.expansion_klassifikation_path,
+            DEFAULT.expansion_kanten_path)
         print(f"wrote {out}: {n_items} rows/headers across {n_pages} pages")
 
 

@@ -1,11 +1,11 @@
 # Entscheidungsliste Akteursnetz
 
-Status: **Entschieden am 20.08.2026. Anwendung auf den aktuellen LaTeX-Bestand abgeschlossen.**
+Status: **Entschieden und lokal auf LaTeX angewendet am 20.08.2026.**
 
 ## Warum diese Entscheidungen nötig sind
 
-Der aktuelle Bestand hat **618 Knoten und 264 Kanten**. Der ungeprüfte
-Erweiterungsentwurf enthält **801 Knoten und 447 Kanten**.
+Der bereinigte Bestand hat **618 Knoten und 262 Kanten**. Mit der geprüften
+Erweiterung enthält das lokale LaTeX-Netz **809 Knoten und 452 Kanten**.
 
 Kritisch bedeutet hier mindestens eines davon:
 
@@ -40,7 +40,7 @@ nicht relevant. Relevant ist: **mehrere Vorhaben oder nur ein Fall?**
 
 ## 2. Neun Sonderfälle
 
-Alle neun Empfehlungen sind freigegeben. Ergebnis: falsche oder nicht
+Alle Sonderfälle sind entschieden. Ergebnis: falsche oder nicht
 hinreichend belegte Kanten entfernen; belegte Ersatzkanten, Quellenkorrekturen,
 Umbenennung und Identitätsentscheidungen anwenden.
 
@@ -56,11 +56,10 @@ Umbenennung und Identitätsentscheidungen anwenden.
 ### 2.2 Brukspecialisten - Borås nya tingsrätt
 
 - **Aktuell:** Im Text als belegt beschrieben, in FINAL-DATA aber entfernt.
-- **Belegt:** Brukspecialisten nennt 2.700 m² wiederverwendete Ziegel.
-- **Kritisch:** Eine eindeutig belegte Lieferung fehlt wegen eines internen
-  Widerspruchs.
-- **Entscheidung:** Kante `Bauteillieferung` wieder aufnehmen.
-- **Entschieden:** **Aufnehmen.**
+- **Belegt:** Die Quelle nennt Projekt und wiederverwendete Ziegel.
+- **Nicht belegt:** Die genaue Lieferrolle von Brukspecialisten.
+- **Entscheidung:** Ohne relationsspezifischen Beleg keine Kante.
+- **Entschieden:** **Nicht aufnehmen.**
 
 ### 2.3 CONIX RDBM - MULTI Brussels
 
@@ -146,35 +145,35 @@ einer Kantenentfernung sichtbar.
 | SE:K023 | Helsingborgshem ist Hauptpartner im schwedischen Pilot; KTH nimmt teil. | **Behalten:** gemeinsamer ReCreate-Pilot belegt. |
 | SE:K025 | Quelle nennt Återhus-Partner, nicht eindeutig ReCreate Sweden. | **Behalten:** gemeinsame Återhus-Partnerschaft belegt. |
 
-## 4. Pflichtprüfungen vor Anwendung
+## 4. Abgeschlossene Pflichtprüfungen
 
 ### Quellen
 
-- **193 neue Kanten:** Prüfnotizen durch echte Quellenzitate ersetzen.
-- Grund: `URL erreichbar` beschreibt keine Beziehung.
+- **190 neue Kanten:** alle besitzen URL und relationsspezifisches Zitat oder
+  eine gespeicherte Prüfnotiz.
 
 ### Beschreibungen
 
-- **177 neue Beschreibungen:** auf höchstens 60 Zeichen kürzen.
-- Grund: Sonst werden sie in LaTeX abgeschnitten.
+- **190 neue Beschreibungen:** alle höchstens 60 Zeichen.
 
 ### Datenintegration
 
-- Richtung, Kantenart, ID und Provenienz ins kanonische Schema übertragen.
-- Bestand aus den kanonischen 264 Kanten übernehmen, nicht aus FINAL-DATA.
-- Grund: FINAL-DATA ersetzt Bestandsarten durch generische Texte und lässt zehn
-  Kanten aus.
+- Richtung, Kantenart, ID und Provenienz wurden in getrennte lokale
+  Erweiterungsartefakte übertragen.
+- Der bereinigte 262-Kanten-Bestand bleibt kanonische LaTeX-Basis; FINAL-DATA
+  ersetzt ihn nicht.
 
 ### Abschlusskontrolle
 
-- neue Gesamtzahlen berechnen;
-- jeden Länderblock prüfen;
-- jede sichtbare Kante muss Profil, Beschreibung und Quelle besitzen;
-- isolierte Knoten müssen sichtbar bleiben;
-- erst danach LaTeX synchronisieren.
+- Gesamtstand geprüft: **809 Knoten / 452 Kanten / 11 Länder**.
+- Alle 31 PDF-Seiten und alle Länderblöcke visuell geprüft.
+- Jede sichtbare Kante besitzt Profil, Beschreibung und Quelle.
+- Isolierte Knoten bleiben sichtbar.
+- Keine Synchronisierung nach `E:\semio`; kein Git und kein Ticket.
 
 ## Was jetzt entschieden werden soll
 
-Alle vier Entscheidungen wurden getroffen. Der aktuelle LaTeX-Bestand wurde
-angewendet und geprüft. Die Erweiterungskorrekturen stehen verbindlich in
-`ERWEITERUNG_KORREKTUREN_FREIGEGEBEN.json`.
+Alle Entscheidungen wurden getroffen. Der lokale LaTeX-Bestand wurde erzeugt
+und geprüft. Die Erweiterungskorrekturen stehen verbindlich in
+`ERWEITERUNG_KORREKTUREN_FREIGEGEBEN.json`; das angewendete Ergebnis steht in
+`erweiterung_final/akteursnetz_erweiterung_final.json`.

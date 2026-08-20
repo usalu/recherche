@@ -70,6 +70,20 @@ class Sources:
     kanten_klassifikation_path: str = (
         r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/kanten_klassifikation.json"
     )
+    # Evidence-gated extension of the LaTeX graph. These derived files are
+    # built from the approved review document; they never write to Neo4j.
+    expansion_final_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/"
+        r"beziehungsprofil_review/erweiterung_final/akteursnetz_erweiterung_final.json"
+    )
+    expansion_klassifikation_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/"
+        r"beziehungsprofil_review/erweiterung_final/erweiterung_klassifikation.json"
+    )
+    expansion_kanten_path: str = (
+        r"E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck/"
+        r"beziehungsprofil_review/erweiterung_final/erweiterung_kanten.json"
+    )
     # Nine strict-review entries that are programmes, not actors -- rendered
     # as their own report block (render.latex.programme_table), never in the
     # actor figures/tables.

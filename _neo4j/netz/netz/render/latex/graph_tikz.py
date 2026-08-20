@@ -67,7 +67,7 @@ def load_image_manifest(path, asset_root=None, asset_ref=None):
     return result
 
 
-def load_edge_kinds(kanten_path, net, redirects_path=None):
+def load_edge_kinds(kanten_path, net, redirects_path=None, extra_path=None):
     """(eid, eid) sorted pair -> \\SemioGraphEdge kind for every DRAWN edge.
 
     Two classes, taken straight from the relationship classification's own
@@ -81,7 +81,7 @@ def load_edge_kinds(kanten_path, net, redirects_path=None):
     wasn't actually drawn, so this lookup is built the same way rather than
     re-deriving drawn-ness a second time.
     """
-    by_cc = load_kanten(kanten_path, net, redirects_path)
+    by_cc = load_kanten(kanten_path, net, redirects_path, extra_path)
     kinds = {}
     for cc in by_cc:
         for k in by_cc[cc]:

@@ -41,7 +41,7 @@ class CurrentKantenProfileTests(unittest.TestCase):
             rid for rid, row in canonical.items() if "beziehungsprofil" in row
         }
 
-        self.assertEqual(262, len(network.drawn))
+        self.assertEqual(452, len(network.drawn))
         self.assertEqual(262, len(visible))
         self.assertEqual(set(visible), profile_ids)
         self.assertTrue(all(

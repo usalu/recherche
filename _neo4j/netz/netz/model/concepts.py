@@ -9,6 +9,7 @@ from ..data.neo4j_export import load_export, RawGraph
 from ..data.overlays import apply_overlays
 from ..data.audit_edges import load_peer_edges
 from ..data.strict_review import StrictReviewBundle, apply_strict_review
+from ..data.expansion import apply_expansion
 from ..mechanisms.countries import (
     resolve_countries, whitelist_countries, partition, cross_border_edges,
     is_person, CountryResolution, Panel,
@@ -51,6 +52,11 @@ def build_network(sources, exclude: frozenset = frozenset(),
         else:
             raw.land[eid] = ISO_INV[country]
     apply_strict_review(raw, new_proj_cc, strict_review)
+    # The expansion belongs to the approved strict LaTeX model. Historical
+    # parity tests that intentionally build the pre-review graph remain
+    # unchanged when no strict bundle is active.
+    if strict_review.active:
+        new_eids |= apply_expansion(raw, new_proj_cc, sources.expansion_final_path)
 
     # known<->known peer edges (second-audit findings) -- existence-filtered,
     # exactly like netplate.Model's `extra_peers` handling.

@@ -13,8 +13,12 @@ Stand: 20.08.2026
 
 ## Aktueller LaTeX-Bestand
 
-- 618 sichtbare Knoten
-- 262 belegte Kanten
+- 809 sichtbare Knoten
+- 452 belegte Kanten
+- davon Bestand: 618 Knoten / 262 Kanten
+- davon Erweiterung: 191 Knoten / 190 Kanten
+  - 121 neue Akteure
+  - 70 neue Projekte
 - entfernt: AT:K004 und NL:K019
 - alle übrigen acht kritischen Bestandskanten präzisiert und behalten
 - jede sichtbare Kante besitzt ein freigegebenes Beziehungsprofil
@@ -23,11 +27,12 @@ Stand: 20.08.2026
 
 - falsche Norsk-Folkemuseum-Kante entfernen
 - Norsk Folkemuseum mit TradLab TRE verbinden
-- Brukspecialisten mit Borås nya tingsrätt verbinden
+- Brukspecialisten–Borås nicht aufnehmen: Lieferrolle nicht eindeutig belegt
 - CONIX behalten und Rotor-Quelle verwenden
 - Liljewall-Kante an der Peab-Etappe Ekebäckshöjd entfernen
 - `La Caserne de Reuilly` als Projektname verwenden
 - unbelegte BTU-Kante Hohenmölsen entfernen
+- unbelegte Cleveland-Kante entfernen
 - beide BAM-Namen zu `BAM Bouw en Techniek` zusammenführen
 - Dura Vermeer und Dura Vermeer Bouw Zuid getrennt lassen
 - IMd und Van Rossum getrennt lassen
@@ -44,4 +49,5 @@ Stand: 20.08.2026
   `output/pdf/akteursnetz_beziehungsprofil_qa.pdf`
 
 Neo4j wurde nicht geändert. Die Synchronisierung in den Forschungsbericht
-muss im Semio-Ticket mit dem bestehenden Nx-/Launch-Ablauf erfolgen.
+wurde auf Wunsch nicht ausgeführt. Git und Ticket wurden ebenfalls nicht
+verwendet.

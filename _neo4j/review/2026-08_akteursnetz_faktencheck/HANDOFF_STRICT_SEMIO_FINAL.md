@@ -1,31 +1,51 @@
-# Finaler Handoff: Strict Research-only Cleanup → Neo4j und Semio
+# Finaler Handoff: lokales LaTeX-Akteursnetz
 
-## Verbindliches Update 20.08.2026: Beziehungsprofil
+## Verbindlicher Endstand 20.08.2026
 
-Dieser Abschnitt ersetzt alle später im Dokument genannten Angaben zur
-`Beziehungsdauer` und zur Zahl von 264 sichtbaren Kanten.
+Dieser Abschnitt ersetzt **alle später im Dokument genannten Zahlen,
+Laufzeitklassen und Arbeitsaufträge**. Die folgenden älteren Abschnitte bleiben
+nur als Verlauf erhalten.
 
-- Aktueller LaTeX-Bestand: **618 sichtbare Knoten / 262 sichtbare Kanten**.
+- Lokales LaTeX-Netz: **809 sichtbare Knoten / 452 sichtbare Kanten / 11 Länder**.
+- Bereinigte Basis: **618 Knoten / 262 Kanten**.
+- Geprüfte Erweiterung: **191 Knoten / 190 Kanten**.
+  Davon **121 Akteure und 70 Projekte**.
 - Entfernt: **AT:K004** und **NL:K019**, weil die konkrete Beziehung nicht
   belegt ist. Die vier Endknoten bleiben sichtbar.
+- Aus der Erweiterung wurden vier falsche oder unbelegte Kanten entfernt;
+  Brukspecialisten–Borås wurde wegen unklarer Lieferrolle nicht ergänzt.
+- Norsk Folkemuseum wurde mit **TradLab TRE** statt mit dem Spenderprojekt
+  Nedre Sem verbunden.
 - Jede verbleibende Kante besitzt Belegzitat, URL, Beschreibung und ein
   freigegebenes `Beziehungsprofil`.
 - Hauptklassen: **Projektübergreifend** und **Vorhabenspezifisch**.
-- Verteilung: 39 institutionell, 7 strategisch, 5 operativ, 199 Vorhaben,
+- Verteilung: 39 institutionell, 7 strategisch, 5 operativ, 389 Vorhaben,
   8 Leistungen, 4 Ereignisse.
 - Die Tabellenspalte heißt `Beziehungsprofil`; `Beziehungsdauer` entfällt.
 - Neo4j wurde nicht beschrieben.
-- Die 71-Projekte-Erweiterung darf nur mit den Korrekturen aus
-  `beziehungsprofil_review/ERWEITERUNG_KORREKTUREN_FREIGEGEBEN.json`
-  übernommen werden.
+- `E:/semio` wurde nicht verändert oder synchronisiert.
+- Git und Ticket wurden auf Nutzerwunsch nicht verwendet.
+- Angewendete Erweiterung:
+  `beziehungsprofil_review/erweiterung_final/akteursnetz_erweiterung_final.json`.
+- Abschlussbericht: `E:/recherche/AKTEURSNETZ_ERWEITERUNG_ABSCHLUSS.md`.
 - Fertiges Tabellenfragment:
   `E:/recherche/_neo4j/netz/figs/frag_tables_grid.tex`.
+- Fertiges Graphfragment:
+  `E:/recherche/_neo4j/netz/figs/frag_abb_netz.tex`.
 - Visuell geprüfte Forschungsbericht-QA:
   `E:/recherche/output/pdf/akteursnetz_beziehungsprofil_qa.pdf`.
 
-Die Synchronisierung in `E:/semio` bleibt dem dort vorgeschriebenen
-Ticket-/Nx-Ablauf vorbehalten. Keine direkte unprotokollierte Semio-Änderung
-wurde vorgenommen.
+Beziehungs- und Erweiterungstests bestehen. Der vollständige Testlauf hat nur
+den unabhängigen, bereits vorhandenen Logo-Sicherheitsabstandstest als offenen
+Fehler. Die 31-seitige QA-PDF wurde vollständig visuell geprüft.
+
+Für eine spätere Veröffentlichung nach `E:/semio` ist ein eigener Auftrag
+erforderlich. Diese Übergabe führt weder Synchronisierung noch Ticketarbeit
+vorweg.
+
+---
+
+## Historischer Verlauf – nicht als aktueller Auftrag verwenden
 
 Stand: 2026-08-14  
 Status: fachlich abgeschlossen, in `mit-bestand` angewendet und validiert
@@ -111,19 +131,20 @@ Zusätzliche Sicherung vor der abschließenden Typreparatur:
 
 `E:/recherche/_neo4j/intake/runs/2026-08-14_akteursnetz_strict_cleanup/backup_post_apply_pre_repair`
 
-## Fertige Semio-Fragmente
+## Historischer Fragmentstand vom 14.08.2026 – ersetzt
 
 - `E:/recherche/_neo4j/netz/figs/frag_abb_netz.tex`
 - `E:/recherche/_neo4j/netz/figs/frag_tables_grid.tex`
 - `E:/recherche/_neo4j/netz/figs/frag_programme.tex`
 
-Sie enthalten 540 Akteure, 78 Projekte und 9 getrennte Programme. Die
-Akteurs-/Projektansicht enthält exakt 264 freigegebene Kanten. Jede sichtbare
-Kante trägt eine einzeln geprüfte Laufzeit; die Tabelle `Akteursbeziehungen`
-zeigt sie in der Spalte `Beziehungsdauer` (40 dauerhaft, 32 befristeter
-Verbund, 173 projektgebunden, 19 einmalig, 0 unklar).
+Diese Dateien enthielten damals 540 Akteure, 78 Projekte und 264 Kanten. Diese
+Zahlen und die damalige Spalte `Beziehungsdauer` sind ersetzt. Maßgeblich ist
+nur der Endstand am Anfang dieses Dokuments.
 
-## Auftrag für den nächsten Semio-Agenten
+## Historischer Semio-Auftrag – nicht ausführen
+
+Die folgende Liste dokumentiert den damaligen Ablauf. Sie ist kein aktueller
+Auftrag und enthält ersetzte Zahlen.
 
 1. Zuerst `E:/semio/AGENTS.md` lesen.
 2. Das vorgeschriebene Semio-Ticket öffnen oder wiedereröffnen; ohne Ticket
@@ -141,7 +162,7 @@ Verbund, 173 projektgebunden, 19 einmalig, 0 unklar).
    und beide Style-Dateien visuell prüfen.
 8. Das Ticket mit Build- und Sichtprüfungsnachweis schließen.
 
-## Harte Abnahmebedingungen
+## Historische Abnahmebedingungen
 
 - Resource Rows und Circl erscheinen jeweils nur einmal.
 - Keine dänischen Einträge stehen im deutschen Länderblock.
@@ -150,10 +171,10 @@ Verbund, 173 projektgebunden, 19 einmalig, 0 unklar).
 - Keine Fallback-Rolle und kein Fallback-Standardsatz wird ausgegeben.
 - Jede sichtbare Rolle, jedes Projekt und jede Kante besitzt konkrete
   Reuse-Evidenz.
-- Semio zeigt exakt dieselben freigegebenen Typen, Laufzeiten und Kanten wie
+- Semio zeigte exakt dieselben freigegebenen Typen, Laufzeiten und Kanten wie
   die geprüfte LaTeX-Klassifikation.
 
-## Reproduzierbare Prüfung
+## Historische reproduzierbare Prüfung
 
 ```text
 cd E:/recherche/_neo4j/review/2026-08_akteursnetz_faktencheck
@@ -172,8 +193,7 @@ nodes=619 edges=268 errors=0
 strict nodes=628 actors=541 projects=78 programmes=9 relationships=278 errors=0
 ```
 
-## Schlussregel
+## Historische Schlussregel
 
-Für Neo4j und Semio gelten nur dieser Handoff und die oben genannten finalen
-Artefakte. Frühere Handoffs mit 859 Knoten / 570 Kanten oder 620 Knoten /
-8 Programmen sind superseded und dürfen nicht mehr verwendet werden.
+Diese frühere Schlussregel ist durch den Abschnitt `Verbindlicher Endstand
+20.08.2026` ersetzt.

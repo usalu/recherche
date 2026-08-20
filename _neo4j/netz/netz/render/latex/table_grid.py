@@ -72,12 +72,20 @@ def role_frequency(net) -> collections.Counter:
     return rf
 
 
-def load_klassifikation(path):
+def load_klassifikation(path, extra_path=None):
     """eid -> {rolle, rollen[], relevanz, beleg_url}. The strict review's
     actor/project file is the authority for what a node *does*; net.raw.roles
     is the superseded 31-category export scheme and is no longer printed."""
     with io.open(path, encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    if extra_path:
+        with io.open(extra_path, encoding="utf-8") as f:
+            extra = json.load(f)
+        overlap = set(data) & set(extra)
+        if overlap:
+            raise RuntimeError(f"duplicate node classifications: {sorted(overlap)}")
+        data.update(extra)
+    return data
 
 
 def _code(rec) -> str:
@@ -201,7 +209,7 @@ def _legend() -> str:
     return r" \textperiodcentered\ ".join(parts)
 
 
-def load_kanten(path, net, redirects_path=None):
+def load_kanten(path, net, redirects_path=None, extra_path=None):
     """cc -> [relationship], only those whose BOTH endpoints are actually
     DRAWN -- not just known to the pipeline.
 
@@ -226,6 +234,13 @@ def load_kanten(path, net, redirects_path=None):
         return {}
     with io.open(path, encoding="utf-8") as f:
         data = json.load(f)
+    if extra_path:
+        with io.open(extra_path, encoding="utf-8") as f:
+            extra = json.load(f)
+        overlap = set(data) & set(extra)
+        if overlap:
+            raise RuntimeError(f"duplicate relationship classifications: {sorted(overlap)}")
+        data.update(extra)
     redirects = {}
     if redirects_path:
         with io.open(redirects_path, encoding="utf-8") as f:
@@ -250,9 +265,11 @@ def load_kanten(path, net, redirects_path=None):
 
 
 def build_grid_fragment(net, out_path, klassifikation_path=None,
-                        kanten_path=None, images=None, merge_redirects_path=None):
-    kl = load_klassifikation(klassifikation_path) if klassifikation_path else {}
-    kanten = load_kanten(kanten_path, net, merge_redirects_path)
+                        kanten_path=None, images=None, merge_redirects_path=None,
+                        extra_klassifikation_path=None, extra_kanten_path=None):
+    kl = (load_klassifikation(klassifikation_path, extra_klassifikation_path)
+          if klassifikation_path else {})
+    kanten = load_kanten(kanten_path, net, merge_redirects_path, extra_kanten_path)
     items = []   # ("head"|"band", label, cc) | ("row", eid, is_person) | ("kante", k)
     quellen = []  # (cc, [urls in print order])
     qnum = {}     # url -> number, restarted per country

@@ -15,27 +15,23 @@ mit ändern, nicht nur den Wert. Mehrere dieser Punkte waren schon einmal
 korrekt und sind später still wieder zurückgefallen; die Begründungen stehen
 deshalb auch als Kommentar im Code, wo der jeweilige Wert gesetzt wird.
 
-## Nachtrag 20.08.2026: Dauer der aktuellen Beziehungen
+## Nachtrag 20.08.2026: Beziehungsprofil ersetzt Beziehungsdauer
 
-Die Dauer wurde für die **264 tatsächlich gezeichneten Kanten** einzeln gegen
-den gespeicherten Beleg geprüft; die alte 268-Zeilen-Tabelle war nur pauschal
-aus der Beziehungsart abgeleitet und ist historisch. Aktueller Stand:
+`Beziehungsdauer` entfällt. Ob etwas noch läuft, ist für diese Auswertung nicht
+entscheidend. Die LaTeX-Tabelle `Akteursbeziehungen` zeigt stattdessen das
+`Beziehungsprofil`:
 
-- 40 dauerhaft
-- 32 befristeter Verbund
-- 173 projektgebunden
-- 19 einmalig
-- 0 unklar
+- `Projektübergreifend`: über mehrere Projekte oder institutionell angelegt.
+- `Vorhabenspezifisch`: auf ein Projekt, einen Auftrag oder ein Ereignis begrenzt.
 
-Maßgeblich sind die `dauer_*`-Felder in `kanten_klassifikation.json`. Der
-vollständige Bericht mit Begründung und Quelle je Kante steht in
-`KANTEN_DAUER_FINAL.md`, `kanten_dauer_final.csv` und
-`kanten_dauer_final.json`. Fünf dabei sichtbare Typkonflikte wurden korrigiert;
-die früheren Werte bleiben direkt an den betroffenen Kanten als Provenienz
-erhalten. Die LaTeX-Tabelle `Akteursbeziehungen` zeigt die Klassifikation in
-der Spalte `Beziehungsdauer`.
+Die zweite Ebene lautet `institutionell`, `strategisch`, `operativ`,
+`Vorhaben`, `Leistung` oder `Ereignis`. Sie wiederholt nicht die konkrete
+Beschreibung, sondern ordnet deren Reichweite allgemein ein.
 
-Die Graph-Topologie bleibt 618/264; kein Neo4j-Schreibzugriff.
+Nach Quellenbereinigung und Erweiterung umfasst das lokale LaTeX-Netz
+**809 sichtbare Knoten und 452 belegte Kanten**. Jede sichtbare Kante besitzt
+Beschreibung, Beleg und Profil. Isolierte Knoten bleiben sichtbar. Neo4j,
+`E:\semio`, Git und Ticket wurden für diesen Abschluss nicht verändert.
 
 ---
 

@@ -249,6 +249,7 @@ def stage8_node_parity():
         drawn |= set(pan.actors) | set(pan.projects)
 
     approved = set(json.load(open(DEFAULT.klassifikation_actor_project_path, encoding="utf-8")))
+    approved |= set(json.load(open(DEFAULT.expansion_klassifikation_path, encoding="utf-8")))
     programmes = set(json.load(open(DEFAULT.programme_path, encoding="utf-8")))
     pruned = load_prune(DEFAULT.prune_strict_path) | load_prune(DEFAULT.prune_faktencheck_path)
 
@@ -278,7 +279,12 @@ def stage8_table_figure_edge_parity():
     net = load_network()
     drawn_pairs = {tuple(sorted(p)) for p in net.drawn}
 
-    kanten = load_kanten(DEFAULT.kanten_klassifikation_path, net, DEFAULT.merge_strict_path)
+    kanten = load_kanten(
+        DEFAULT.kanten_klassifikation_path,
+        net,
+        DEFAULT.merge_strict_path,
+        DEFAULT.expansion_kanten_path,
+    )
     table_pairs = {tuple(sorted(k["pair"])) for cc in kanten for k in kanten[cc]}
 
     check("stage8.edges.table==figure", drawn_pairs == table_pairs,

@@ -29,14 +29,15 @@ class FinalKantenActivationTests(unittest.TestCase):
         network = load_network()
         drawn = {tuple(sorted(pair)) for pair in network.drawn}
         classified = load_kanten(
-            DEFAULT.kanten_klassifikation_path, network, DEFAULT.merge_strict_path
+            DEFAULT.kanten_klassifikation_path, network, DEFAULT.merge_strict_path,
+            DEFAULT.expansion_kanten_path,
         )
         visible_reviewed = {
             tuple(sorted(edge["pair"]))
             for rows in classified.values()
             for edge in rows
         }
-        self.assertEqual(262, len(drawn))
+        self.assertEqual(452, len(drawn))
         self.assertEqual(visible_reviewed, drawn)
         self.assertFalse(prune & drawn)
         self.assertEqual(2, len(profile_prune))
