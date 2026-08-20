@@ -90,8 +90,11 @@ Zusätzliche Sicherung vor der abschließenden Typreparatur:
 - `E:/recherche/_neo4j/netz/figs/frag_tables_grid.tex`
 - `E:/recherche/_neo4j/netz/figs/frag_programme.tex`
 
-Sie enthalten 541 Akteure, 78 Projekte und 9 getrennte Programme. Die
-Akteurs-/Projektansicht enthält exakt 268 freigegebene Kanten.
+Sie enthalten 540 Akteure, 78 Projekte und 9 getrennte Programme. Die
+Akteurs-/Projektansicht enthält exakt 264 freigegebene Kanten. Jede sichtbare
+Kante trägt eine einzeln geprüfte Laufzeit; die Beziehungstabelle zeigt sie in
+der Spalte `Dauer` (40 dauerhaft, 32 befristeter Verbund, 173 projektgebunden,
+19 einmalig, 0 unklar).
 
 ## Auftrag für den nächsten Semio-Agenten
 
@@ -104,8 +107,9 @@ Akteurs-/Projektansicht enthält exakt 268 freigegebene Kanten.
    - `frag_abb_netz.tex` → `anhang/akteursnetz-figuren.tex`
    - `frag_tables_grid.tex` → `anhang/akteursnetz-tabellen.tex`
    - `frag_programme.tex` → `anhang/akteursnetz-programme.tex`
-5. Berichtszahlen auf **619 Knoten, 268 Kanten, 9 Programme** setzen.
-6. Den Zwischenbericht einmal über die vorgesehene Launch-/Nx-Struktur bauen.
+5. Berichtszahlen auf **618 Knoten, 264 Kanten, 9 Programme** setzen.
+6. Den Forschungsbericht über die vorgesehene Launch-/Nx-Struktur bauen
+   (`📦build🏚️mitbestand📕forschungsbericht` bzw. dessen Nx-Ziel).
 7. Alle elf Länderblöcke, den Programmblock, Tabellenumbrüche, Quellenlisten
    und beide Style-Dateien visuell prüfen.
 8. Das Ticket mit Build- und Sichtprüfungsnachweis schließen.
@@ -119,7 +123,8 @@ Akteurs-/Projektansicht enthält exakt 268 freigegebene Kanten.
 - Keine Fallback-Rolle und kein Fallback-Standardsatz wird ausgegeben.
 - Jede sichtbare Rolle, jedes Projekt und jede Kante besitzt konkrete
   Reuse-Evidenz.
-- Semio zeigt exakt dieselben freigegebenen Typen und Kanten wie Neo4j.
+- Semio zeigt exakt dieselben freigegebenen Typen, Laufzeiten und Kanten wie
+  die geprüfte LaTeX-Klassifikation.
 
 ## Reproduzierbare Prüfung
 

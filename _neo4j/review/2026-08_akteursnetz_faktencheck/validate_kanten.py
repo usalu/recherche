@@ -34,7 +34,7 @@ SYMMETRISCH = {
 GERICHTET_AKTEUR_AKTEUR = {
     "Gründung", "Übernahme", "Konzernbindung", "Betreiberschaft",
     "Mitgliedschaft", "Trägerschaft", "Lieferbeziehung",
-    "Dienstleistungsbeziehung",
+    "Dienstleistungsbeziehung", "Regulatorische Anerkennung",
 }
 
 

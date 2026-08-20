@@ -66,8 +66,8 @@ UNCHECKED = {
     "BE:K075": d("Trägerschaft", "B→A", "Die Stadt Kassel initiierte BauMaB im Rahmen ihrer Klimastrategie.",
         "https://baumab-kassel.de/konzept/", "Das Projekt wurde im Rahmen der Klimaschutzstrategie der Stadt Kassel initiiert."),
     "BE:K083": no_evidence(),
-    "BE:K086": d("Zusammenarbeit, Art unklar", "—", "OVAM und Tracimat arbeiten bei der Abbruchnachverfolgung zusammen.",
-        "https://ovam.vlaanderen.be/bouw-sloopopvolging", "Voor de sloopopvolging worden de standaarddocumenten van Tracimat gebruikt."),
+    "BE:K086": d("Regulatorische Anerkennung", "A→B", "Erkannte Tracimat als Sloopbeheerorganisation an.",
+        "https://ovam.vlaanderen.be/bouw-sloopopvolging", "Tracimat is momenteel de enige erkende sloopbeheerorganisatie."),
 
     "CH:K004": d("Dienstleistungsbeziehung", "B→A", "Stiftung Chance übernimmt Prüfung, Ausbau und Transport für die BTVZ.",
         "https://www.btvz.ch/portraet/", "Fachleute der Stiftung Chance prüfen die Bauteile, demontieren sie und übernehmen den Transport."),
@@ -246,7 +246,7 @@ CHECKED = {
     "GB:K073": ("Gemeinsames Bauvorhaben", "—"), "GB:K074": ("Lieferbeziehung", "A→B"),
     "GB:K075": ("Lieferbeziehung", "A→B"),
     "NL:K007": ("Gründung", "A→B"), "NL:K008": NO_EVIDENCE[:2],
-    "NL:K034": ("Bauteilinventarisierung", "B→A"),
+    "NL:K034": ("Bauteilinventarisierung", "B→A"), "NL:K066": ("Bauherrschaft", "A→B"),
     "NL:K067": ("Zusammenarbeit, Art unklar", "—"),
     "NL:K069": ("Kooperationsvereinbarung", "—"), "NL:K075": ("Dienstleistungsbeziehung", "A→B"),
     "NL:K077": ("Betreiberschaft", "A→B"),
@@ -257,11 +257,22 @@ CHECKED = {
     "NO:K018": ("Mitgliedschaft", "B→A"), "NO:K019": ("Mitgliedschaft", "B→A"),
     "NO:K020": ("Betreiberschaft", "B→A"), "NO:K026": NO_EVIDENCE[:2],
     "NO:K027": ("Betreiberschaft", "A→B"),
-    "SE:K001": ("Gründung", "A→B"), "SE:K008": ("Konsortialpartner", "—"),
+    "SE:K001": ("Konzernbindung", "A→B"), "SE:K008": ("Konsortialpartner", "—"),
     "SE:K009": ("Gründung", "A→B"), "SE:K010": NO_EVIDENCE[:2],
     "SE:K012": ("Gründung", "B→A"), "SE:K013": ("Gründung", "B→A"),
-    "SE:K014": ("Gründung", "B→A"), "SE:K015": ("Gründung", "B→A"),
+    "SE:K014": ("Konzernbindung", "B→A"), "SE:K015": ("Konzernbindung", "B→A"),
     "SE:K026": ("Betreiberschaft", "A→B"), "SE:K027": ("Konsortialpartner", "—"),
+}
+
+
+# Evidence-specific descriptions for corrected checked records. These must not
+# fall back to DESCRIPTION: doing so would recreate the generic wording and
+# silently discard the reviewed statement on the next result build.
+CHECKED_DESCRIPTION = {
+    "NL:K066": "Entwickelte und baute Circl.",
+    "SE:K001": "Ist Miteigentümerin von Bygghubben.",
+    "SE:K014": "Ist Miteigentümerin von Bygghubben.",
+    "SE:K015": "Ist Miteigentümerin und Mitgründerin von Bygghubben.",
 }
 
 
@@ -413,7 +424,8 @@ def checked_decision(record):
 
     if art == NO_EVIDENCE[0]:
         return no_evidence()
-    return d(art, direction, DESCRIPTION[art], "vorhanden", short_quote(record["evidence_quote"]))
+    description = CHECKED_DESCRIPTION.get(rid, DESCRIPTION[art])
+    return d(art, direction, description, "vorhanden", short_quote(record["evidence_quote"]))
 
 
 def expand_directory_decisions():

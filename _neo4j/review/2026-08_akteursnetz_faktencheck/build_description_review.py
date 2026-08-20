@@ -46,7 +46,8 @@ ACTOR_ACTOR_TYPES = {
     "Konsortialpartner", "Kooperationsvereinbarung",
     "Gemeinsames Bauvorhaben", "Gründung", "Übernahme", "Konzernbindung",
     "Betreiberschaft", "Mitgliedschaft", "Trägerschaft", "Lieferbeziehung",
-    "Dienstleistungsbeziehung", "Personelle Verflechtung",
+    "Dienstleistungsbeziehung", "Regulatorische Anerkennung",
+    "Personelle Verflechtung",
     "Zusammenarbeit, Art unklar", "Verzeichniseintrag",
     "Kein Beleg für eine Beziehung", "Beziehung nicht prüfbar",
 }

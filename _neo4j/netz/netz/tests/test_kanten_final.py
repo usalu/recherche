@@ -22,8 +22,8 @@ class FinalKantenActivationTests(unittest.TestCase):
         prune = _pairs(DEFAULT.prune_kanten_final_path)
         with open(DEFAULT.kanten_klassifikation_path, encoding="utf-8") as handle:
             reviewed = json.load(handle)
-        self.assertEqual(570, len(reviewed))
-        self.assertEqual(98, len(prune))
+        self.assertEqual(472, len(reviewed))
+        self.assertEqual(103, len(prune))
 
         network = load_network()
         drawn = {tuple(sorted(pair)) for pair in network.drawn}
@@ -35,7 +35,7 @@ class FinalKantenActivationTests(unittest.TestCase):
             for rows in classified.values()
             for edge in rows
         }
-        self.assertEqual(268, len(drawn))
+        self.assertEqual(264, len(drawn))
         self.assertEqual(visible_reviewed, drawn)
         self.assertFalse(prune & drawn)
 

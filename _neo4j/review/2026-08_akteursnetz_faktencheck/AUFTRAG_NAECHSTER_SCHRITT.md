@@ -144,7 +144,9 @@ python -m netz.cli abb          --images-manifest "$M"
 python -m netz.cli tables-grid  --images-manifest "$M"
 python -m netz.cli sync-fragments
 
-cd E:/semio && bun run build:mit-bestand:zwischenbericht --skip-nx-cache
+Den in `E:/semio/.vscode/launch.json` registrierten Build
+`📦build🏚️mitbestand📕forschungsbericht` ausführen. Er ruft das Nx-Ziel
+`@semio-tech/mit-bestand-bericht:build-forschungsbericht` auf.
 ```
 
 Danach prüfen:

@@ -16,3 +16,10 @@ Stand: `kanten_klassifikation.json` selbst, plus
 
 Maßgeblich: **472** Beziehungen (98 gelöscht), Art-Spalte entfernt,
 **264** gezeichnete Kanten, **618** Knoten (Franck/Franck Bricks gemergt).
+
+Auch `KANTEN_ENTSCHEIDUNG.csv` und `KANTEN_ENTSCHEIDUNG.md` sind historisch:
+Sie enthalten noch 268 Kanten und ordneten die Dauer pauschal nach
+Beziehungsart zu. Die aktuelle Einzelprüfung der 264 tatsächlich gezeichneten
+Kanten steht in `../kanten_dauer_final.json`, `../kanten_dauer_final.csv` und
+`../KANTEN_DAUER_FINAL.md`; die Werte selbst stehen dauerhaft in
+`../kanten_klassifikation.json`.

@@ -15,6 +15,28 @@ mit ändern, nicht nur den Wert. Mehrere dieser Punkte waren schon einmal
 korrekt und sind später still wieder zurückgefallen; die Begründungen stehen
 deshalb auch als Kommentar im Code, wo der jeweilige Wert gesetzt wird.
 
+## Nachtrag 20.08.2026: Dauer der aktuellen Beziehungen
+
+Die Dauer wurde für die **264 tatsächlich gezeichneten Kanten** einzeln gegen
+den gespeicherten Beleg geprüft; die alte 268-Zeilen-Tabelle war nur pauschal
+aus der Beziehungsart abgeleitet und ist historisch. Aktueller Stand:
+
+- 40 dauerhaft
+- 32 befristeter Verbund
+- 173 projektgebunden
+- 19 einmalig
+- 0 unklar
+
+Maßgeblich sind die `dauer_*`-Felder in `kanten_klassifikation.json`. Der
+vollständige Bericht mit Begründung und Quelle je Kante steht in
+`KANTEN_DAUER_FINAL.md`, `kanten_dauer_final.csv` und
+`kanten_dauer_final.json`. Fünf dabei sichtbare Typkonflikte wurden korrigiert;
+die früheren Werte bleiben direkt an den betroffenen Kanten als Provenienz
+erhalten. Die LaTeX-Beziehungstabelle zeigt die Klassifikation in der neuen
+Spalte `Dauer`.
+
+Die Graph-Topologie bleibt 618/264; kein Neo4j-Schreibzugriff.
+
 ---
 
 ## 1. Deckkraft: immer 100 %, nie 50 %

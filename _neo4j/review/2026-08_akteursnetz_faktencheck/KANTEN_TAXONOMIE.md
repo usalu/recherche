@@ -243,6 +243,12 @@ Nicht verwenden für zwei Akteure, die lediglich beide Mitglied desselben Dritte
 
 Der eine Akteur trägt, finanziert oder verantwortet den anderen institutionell — etwa eine Kommune gegenüber einer von ihr getragenen Einrichtung. **Gerichtet.**
 
+### `Regulatorische Anerkennung`
+
+Eine Behörde erkennt den anderen Akteur formell als zuständige oder
+zugelassene Stelle an. Die Anerkennung muss aus einer amtlichen Quelle
+hervorgehen. **Gerichtet von der anerkennenden Behörde zur anerkannten Stelle.**
+
 ### `Lieferbeziehung`
 
 Der eine Akteur liefert dem anderen regelmäßig Bauteile oder Material. **Gerichtet.**
@@ -296,16 +302,17 @@ Trifft mehr als eine Art zu, nimm die strukturell stärkste. Vorrang von oben na
 2. `Konzernbindung`
 3. `Gründung`
 4. `Trägerschaft`
-5. `Betreiberschaft`
-6. `Personelle Verflechtung`
-7. `Konsortialpartner`
-8. `Gemeinsames Bauvorhaben`
-9. `Kooperationsvereinbarung`
-10. `Lieferbeziehung`
-11. `Dienstleistungsbeziehung`
-12. `Mitgliedschaft`
-13. `Zusammenarbeit, Art unklar`
-14. `Verzeichniseintrag`
+5. `Regulatorische Anerkennung`
+6. `Betreiberschaft`
+7. `Personelle Verflechtung`
+8. `Konsortialpartner`
+9. `Gemeinsames Bauvorhaben`
+10. `Kooperationsvereinbarung`
+11. `Lieferbeziehung`
+12. `Dienstleistungsbeziehung`
+13. `Mitgliedschaft`
+14. `Zusammenarbeit, Art unklar`
+15. `Verzeichniseintrag`
 
 Beispiel: Sind zwei Akteure Konsortialpartner **und** steht der eine im Anbieterverzeichnis des anderen, gilt `Konsortialpartner`. Eine dauerhafte Struktur schlägt eine punktuelle.
 
